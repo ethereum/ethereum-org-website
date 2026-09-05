@@ -18,7 +18,7 @@ Minh họa trực quan của Anders Brownworth về cách công nghệ chuỗi k
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=_160oMzblY8) được xuất bản bởi Anders Brownworth. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Mã băm SHA-256 (0:01) {#sha-256-hash-001}
+### Mã băm SHA-256 (0:01) {#sha-256-hash-001}
 
 Đây là một bản demo về chuỗi khối. Chúng ta sẽ thực hiện điều này theo một cách rất trực quan — chúng ta sẽ làm cho nó trở nên rất dễ hiểu bằng cách đi qua từng thành phần chính tạo nên một chuỗi khối.
 
@@ -28,7 +28,7 @@ Vậy đây là mã băm của cái tên "Anders", tất cả đều viết thư
 
 Tôi có thể gõ bất cứ thứ gì tôi muốn. Bạn có thể không gõ gì cả — `e3b0` — đó là mã băm của khoảng trống. Hoặc bạn có thể gõ vô số thứ. Thực tế là, bạn có thể đưa toàn bộ Thư viện Quốc hội vào đây và bạn sẽ nhận được một mã băm. Điều thú vị là, bất kể có một lượng nhỏ thông tin, không có thông tin nào, hay toàn bộ Thư viện Quốc hội, bạn sẽ luôn nhận được một mã băm có độ dài như thế này. Bạn sẽ không thể đoán trước được nó là gì — bạn gần như phải đưa dữ liệu vào để tìm ra mã băm là gì, nhưng bạn sẽ luôn nhận được chính xác cùng một mã băm bất kể bạn đưa chính xác cùng một thông tin vào bao nhiêu lần.
 
-#### Khối (2:10) {#block-210}
+### Khối (2:10) {#block-210}
 
 Những gì tôi sẽ làm là mở rộng ý tưởng về mã băm này thành một thứ mà chúng ta sẽ gọi là một khối. Một khối hoàn toàn giống như mã băm, nhưng phần dữ liệu đã được chia thành ba phần: một phần gọi là "khối" — chỉ là một con số, đây là khối số 1 — một "nonce", cũng chỉ là một con số khác, và sau đó là một số dữ liệu giống như chúng ta đã có trước đây.
 
@@ -40,7 +40,7 @@ Mã băm của tất cả thông tin này nằm ở dưới đây, và nó bắt
 
 Nó đã dừng lại ở 59.396 — và con số đó tình cờ băm ra một thứ bắt đầu bằng bốn số không. Nó thỏa mãn định nghĩa của tôi về một khối đã được ký là gì.
 
-#### Chuỗi khối (5:16) {#blockchain-516}
+### Chuỗi khối (5:16) {#blockchain-516}
 
 Vậy bạn có thể cho tôi biết chuỗi khối là gì không? Nó có lẽ chỉ là một chuỗi các khối này. Đây là chuỗi khối của tôi — khối số một có một nonce giống như trước, một vùng dữ liệu, nhưng sau đó nó có trường "trước đó" này là một dãy các số không. Tiếp tục, đây là khối hai, khối ba, khối bốn — chuỗi khối này có năm khối trên đó.
 
@@ -50,7 +50,7 @@ Trường "trước đó" cho mỗi khối là mã băm của khối trước n�
 
 Nếu tôi đi và thay đổi khối cuối cùng, tất cả những gì tôi phải làm là khai thác lại khối đó. Nếu tôi quay ngược thời gian và thực hiện một thay đổi, tôi phải khai thác khối này, khối này, khối này và khối này. Càng nhiều khối trôi qua, việc thực hiện thay đổi càng trở nên khó khăn hơn. Đó là cách một chuỗi khối chống lại sự đột biến — chống lại sự thay đổi.
 
-#### Chuỗi khối phân tán (9:18) {#distributed-blockchain-918}
+### Chuỗi khối phân tán (9:18) {#distributed-blockchain-918}
 
 Vậy làm sao tôi biết liệu chuỗi khối của mình đã được khai thác lại hay chưa? Bây giờ chúng ta có một chuỗi khối phân tán. Nó trông hoàn toàn giống như chuỗi khối trước đó, nhưng đây là Nút ngang hàng A. Nếu bạn đi xuống đây, bạn có thể thấy Nút ngang hàng B, và nó có một bản sao chính xác của chuỗi khối. Ngoài ra còn có Nút ngang hàng C — điều này có thể tiếp diễn mãi mãi. Có rất nhiều nút ngang hàng trên internet, và tất cả chúng đều có một bản sao hoàn chỉnh của chuỗi khối.
 
@@ -60,7 +60,7 @@ Vì vậy, tôi biết chỉ bằng cách liếc nhìn vào một mã băm nhỏ
 
 Các chuỗi khối có thể có 400.000 hoặc 500.000 khối rất dễ dàng. Thay vì kiểm tra qua tất cả chúng, tất cả những gì bạn thực sự phải làm là nhìn vào mã băm của khối gần đây nhất, và bạn có thể xem liệu có bất cứ điều gì trong quá khứ đã bị thay đổi hay không.
 
-#### Token (12:17) {#tokens-1217}
+### Token (12:17) {#tokens-1217}
 
 Đó là toàn bộ vấn đề — không có gì hơn thế nữa. Nhưng nó có vẻ không thực sự hữu ích vì chúng ta không có bất cứ thứ gì trong vùng dữ liệu có ý nghĩa. Những gì chúng ta thực sự muốn là một token.
 
@@ -70,7 +70,7 @@ Bây giờ tôi có những token này — hoàn toàn tùy ý, tôi gọi chún
 
 Một điều tôi muốn đề cập: chúng ta không liệt kê "Darcy có một trăm đô la và anh ấy đang đưa 25 cho Bingley." Chúng ta chỉ ghi nhớ các luồng di chuyển tiền, không phải số dư tài khoản ngân hàng. Điều này đặt ra câu hỏi — Darcy có 25 đô la không?
 
-#### Giao dịch Coinbase (14:34) {#coinbase-transaction-1434}
+### Giao dịch Coinbase (14:34) {#coinbase-transaction-1434}
 
 Chúng ta có một vấn đề trong phiên bản chuỗi khối này: chúng ta thực sự không biết liệu Darcy có 25 đô la hay không. Vì vậy, hãy xem xét một giao dịch Coinbase. Chúng ta thêm một giao dịch Coinbase vào các khối của mình — nó nói rằng chúng ta sẽ tạo ra một trăm đô la từ hư không và đưa nó cho Anders. Không có giao dịch nào khác trong khối này vì không ai có tiền trước đó.
 
@@ -80,7 +80,7 @@ Bạn cộng tất cả những thứ này lại và chúng không vượt quá 
 
 Nếu chúng ta tua nhanh thời gian, chúng ta thấy rằng Jackson đang đưa cho Alexa hai đô la. Jackson có thực sự có hai đô la không? Chúng ta quay lại một khối và thấy rằng Emily đã nhận được mười đô la từ Anders và đưa mười đô la cho Jackson. Vì vậy, Jackson thực sự có tiền. Chúng ta có thể quay ngược lại và tìm ra điều đó — đó là một trong những lợi ích của việc có trường "trước đó".
 
-#### Lời kết (16:30) {#closing-1630}
+### Lời kết (16:30) {#closing-1630}
 
 Đó là một chuỗi khối cơ bản chạy một loại tiền tệ trên đó. Như bạn đã biết, các chuỗi khối có nhiều bản sao — mọi người đều có một bản sao. Nếu chúng ta làm đột biến một cái gì đó và biến nó thành sáu đô la, các khối sẽ trở nên không hợp lệ và không khớp với các bản sao khác. Điều này chống lại sự giả mạo, đó là những gì bạn muốn cho một loại tiền tệ. Nó hoạt động rất tốt cho những thứ nhỏ và mang tính giao dịch.
 

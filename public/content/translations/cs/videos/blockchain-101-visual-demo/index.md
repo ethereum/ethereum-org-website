@@ -18,7 +18,7 @@ Vizuální ukázka Anderse Brownwortha o tom, jak funguje technologie blockchain
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=_160oMzblY8), který zveřejnil Anders Brownworth. Byl lehce upraven pro lepší čitelnost.*
 
-#### Hash SHA-256 (0:01) {#sha-256-hash-001}
+### Hash SHA-256 (0:01) {#sha-256-hash-001}
 
 Toto je ukázka blockchainu. Uděláme to velmi vizuálním způsobem – usnadníme pochopení tím, že si projdeme klíčové části toho, co to blockchain je.
 
@@ -28,7 +28,7 @@ Takže toto je hash jména „Anders“, vše malými písmeny – začíná na 
 
 Můžu napsat, co chci. Nemusíte tam mít nic – `e3b0` – to je hash ničeho. Nebo byste mohli napsat tuny a tuny věcí. Vlastně byste sem mohli vložit celou Kongresovou knihovnu a získali byste hash. Zajímavé je, že bez ohledu na to, zda je tam nepatrné množství informací, žádné informace, nebo celá Kongresová knihovna, vždy získáte hash, který je takto dlouhý. Nebudete schopni předem uhodnout, jaký bude – musíte data vložit, abyste zjistili, jaký je to hash, ale vždy získáte naprosto stejný hash bez ohledu na to, kolikrát vložíte naprosto stejné informace.
 
-#### Blok (2:10) {#block-210}
+### Blok (2:10) {#block-210}
 
 Nyní tuto myšlenku hashe rozšířím na něco, čemu budeme říkat blok. Blok je přesně jako hash, ale datová část byla rozdělena do tří sekcí: jedna se jmenuje „blok“ – jen číslo, toto je blok číslo 1 – „nonce“, což je jen další číslo, a pak nějaká data, přesně jako jsme měli předtím.
 
@@ -40,7 +40,7 @@ A tady přichází na řadu nonce. Nonce je jen číslo, které můžete nastavi
 
 Zastavilo se to na 59 396 – a to shodou okolností vytvoří hash, který začíná čtyřmi nulami. Splňuje to mou definici toho, co je podepsaný blok.
 
-#### Blockchain (5:16) {#blockchain-516}
+### Blockchain (5:16) {#blockchain-516}
 
 Takže, můžete mi říct, co je to blockchain? Je to pravděpodobně jen řetězec těchto bloků. Tady je můj blockchain – blok číslo jedna má nonce stejně jako předtím, datovou oblast, ale pak má toto pole „předchozí“ (previous), což je hromada nul. Když se posuneme dál, toto je blok dva, blok tři, blok čtyři – tento blockchain má pět bloků.
 
@@ -50,7 +50,7 @@ Co se stane, když zde změním nějaké informace? Změní to hash tohoto bloku
 
 Pokud půjdu a změním poslední blok, vše, co musím udělat, je znovu vytěžit tento jeden blok. Pokud se vrátím hluboko do minulosti a provedu změnu, musím vytěžit tento, tento, tento a tento. Čím více bloků uplyne, tím těžší a těžší je provést změnu. Takto blockchain odolává mutacím – odolává změnám.
 
-#### Distribuovaný blockchain (9:18) {#distributed-blockchain-918}
+### Distribuovaný blockchain (9:18) {#distributed-blockchain-918}
 
 Jak bych tedy poznal, že můj blockchain byl znovu vytěžen? Nyní tu máme distribuovaný blockchain. Vypadá přesně jako ten předchozí blockchain, ale toto je Peer A. Pokud půjdete dolů, uvidíte Peera B a ten má přesnou kopii blockchainu. Je tu také Peer C – takto by to mohlo pokračovat donekonečna. Na internetu je mnoho peerů a všichni mají kompletní kopii blockchainu.
 
@@ -60,7 +60,7 @@ Takže jen letmým pohledem na tento jeden malý hash vím, že v tomto blockcha
 
 Blockchainy mohou mít velmi snadno 400 000 nebo 500 000 bloků. Místo toho, abyste je všechny kontrolovali, stačí se podívat na hash toho nejnovějšího a hned vidíte, zda bylo v minulosti něco změněno.
 
-#### Tokeny (12:17) {#tokens-1217}
+### Tokeny (12:17) {#tokens-1217}
 
 To je celá věc – nic víc v tom není. Ale není to tak úplně užitečné, protože v datové oblasti nemáme nic, co by něco znamenalo. To, co opravdu chceme, je token.
 
@@ -70,7 +70,7 @@ Zde je důležitá neměnnost. Pokud zde něco změním, hash se bude lišit od 
 
 Jednu věc bych rád zmínil: neuvádíme, že „Darcy má sto dolarů a dává 25 Bingleymu“. Pamatujeme si pouze pohyby peněz, nikoli zůstatky na bankovních účtech. To vyvolává otázku – má Darcy 25 dolarů?
 
-#### Transakce Coinbase (14:34) {#coinbase-transaction-1434}
+### Transakce Coinbase (14:34) {#coinbase-transaction-1434}
 
 V této verzi blockchainu máme problém: vlastně nevíme, jestli má Darcy 25 dolarů. Podívejme se tedy na transakci Coinbase. Přidáme do našich bloků transakci Coinbase – ta říká, že ze vzduchu vytvoříme sto dolarů a dáme je Andersovi. V tomto bloku nejsou žádné další transakce, protože předtím nikdo žádné peníze neměl.
 
@@ -80,7 +80,7 @@ Když to všechno sečtete, nepřesáhne to stovku. Řídí se to základním pr
 
 Pokud se posuneme v čase dopředu, vidíme, že Jackson dává Alexe dva dolary. Má Jackson skutečně dva dolary? Vrátíme se o blok zpět a vidíme, že Emily dostala deset dolarů od Anderse a dala deset Jacksonovi. Takže Jackson ty peníze má. Můžeme jít zpět a zjistit to – to je jedna z výhod pole „předchozí“.
 
-#### Závěr (16:30) {#closing-1630}
+### Závěr (16:30) {#closing-1630}
 
 To je základní blockchain, na kterém běží měna. Jak víte, blockchainy mají mnoho kopií – každý má kopii. Pokud něco zmutujeme a uděláme z toho šest dolarů, bloky se stanou neplatnými a nebudou se shodovat s ostatními kopiemi. To odolává manipulaci, což je přesně to, co u měny chcete. Funguje to velmi dobře pro věci, které jsou malé a transakční.
 

@@ -19,7 +19,7 @@ Một video giải thích của **Finematics** bao gồm cách thức hoạt đ�
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=RwwU3P9n3uo) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Chuỗi Beacon (0:31) {#the-beacon-chain-031}
+### Chuỗi Beacon (0:31) {#the-beacon-chain-031}
 
 Với bản nâng cấp Thượng Hải/Capella đang đến gần, có rất nhiều cuộc thảo luận về việc rút tiền đặt cọc trên Ethereum và ý nghĩa của điều này đối với toàn bộ hệ sinh thái Ethereum.
 
@@ -35,7 +35,7 @@ Bước tiến lớn tiếp theo, The Merge, đã hợp nhất lớp đồng thu
 
 Để giảm thiểu rủi ro, phạm vi của The Merge đã được thu hẹp và không có tính năng nào khác — ngoài việc chuyển đổi từ Bằng chứng công việc (PoW) sang Bằng chứng cổ phần (PoS) — được đưa vào như một phần của bản nâng cấp. Sự "cắt giảm" lớn nhất phải thực hiện đã ảnh hưởng đến việc rút tiền, điều này đã trở thành trọng tâm của bản nâng cấp Thượng Hải/Capella sắp tới.
 
-#### Rút tiền (2:09) {#withdrawals-209}
+### Rút tiền (2:09) {#withdrawals-209}
 
 Việc rút tiền đặt cọc, đúng như tên gọi, sẽ cho phép những người đặt cọc rút số ETH đã bị khóa của họ. Có hai loại rút tiền: "một phần" và "toàn bộ".
 
@@ -47,7 +47,7 @@ Sau khi được kích hoạt, việc rút tiền đặt cọc sẽ được t�
 
 Để bắt đầu rút phần thưởng đặt cọc của mình, một trình xác thực sẽ chỉ phải cung cấp địa chỉ rút tiền của họ một lần duy nhất. Do việc rút tiền ảnh hưởng đến cả lớp đồng thuận và lớp thực thi của Ethereum, cả hai phần của mạng lưới đều phải được cập nhật. "Thượng Hải" là tên của bản nâng cấp lớp thực thi chứa tính năng rút tiền, được chỉ định trong EIP-4895. "Capella" là tên của bản nâng cấp lớp đồng thuận tương ứng, được kích hoạt cùng lúc. Hai bản nâng cấp này đôi khi cũng được gọi chung là "Shapella".
 
-#### Cơ chế (3:40) {#mechanics-340}
+### Cơ chế (3:40) {#mechanics-340}
 
 Trong hệ sinh thái Ethereum, mỗi trình xác thực có một số chỉ số tương ứng. Ngoài ra, họ cũng có hai loại thông tin xác thực rút tiền, được xác định là `0x00` hoặc `0x01`.
 
@@ -77,7 +77,7 @@ Khi xây dựng hoặc xử lý một khối, các máy khách lớp thực thi 
 
 Thiết kế của việc rút tiền rất đơn giản nhưng cực kỳ mạnh mẽ.
 
-#### Những hiểu lầm (6:30) {#misconceptions-630}
+### Những hiểu lầm (6:30) {#misconceptions-630}
 
 Hiểu lầm đầu tiên cho rằng khi xử lý rút tiền, có sự khác biệt giữa rút tiền "toàn bộ" và "một phần" về mức độ ưu tiên hoặc thứ tự. Cả việc rút tiền toàn bộ và một phần đều xảy ra khi quá trình quét tuyến tính qua tập hợp trình xác thực đạt đến chỉ số của một trình xác thực. Điểm khác biệt duy nhất là trong trường hợp rút tiền toàn bộ, một trình xác thực phải rời khỏi hàng đợi thoát và đạt đến "Kỷ nguyên có thể rút" trước khi quá trình quét tuyến tính có thể chọn nó.
 
@@ -93,7 +93,7 @@ Thứ hai, để đảm bảo rằng cơ chế đồng thuận Bằng chứng c�
 
 Lần quét rút tiền đầu tiên sẽ rút rất nhiều phần thưởng đã tích lũy — về cơ bản là kể từ khi Chuỗi Beacon ra đời. Tuy nhiên, những lần quét tiếp theo sẽ xử lý một lượng ETH nhỏ hơn nhiều.
 
-#### Ý nghĩa (8:39) {#implications-839}
+### Ý nghĩa (8:39) {#implications-839}
 
 Việc kích hoạt rút tiền sẽ tạo ra một luồng đặt cọc hai chiều, cởi mở. Hiện tại, luồng đặt cọc chỉ có một chiều — ETH chỉ có thể chảy vào mạng lưới và không bao giờ thoát ra. Thú vị là, việc kích hoạt rút tiền có thể khuyến khích nhiều người hơn nữa tham gia đặt cọc, vì họ sẽ biết rằng họ luôn có thể rút ETH của mình nếu cần cho việc khác.
 
@@ -103,7 +103,7 @@ Việc rút tiền cũng sẽ tác động đến các công cụ phái sinh đ�
 
 Những người tiên phong trong lĩnh vực đặt cọc thanh khoản và đặt cọc tập trung đã chiếm được phần lớn thị trường vì họ không có nhiều sự cạnh tranh. Tuy nhiên, thị phần của những người chơi hiện tại này có thể chứng kiến một sự thay đổi lớn sau khi việc rút tiền được kích hoạt, đặc biệt nếu họ không đưa ra một tỷ lệ cạnh tranh. Khả năng chuyển đổi tự do giữa các nhà cung cấp dịch vụ đặt cọc sẽ mang lại lợi ích cho thị trường đặt cọc ETH.
 
-#### Tóm tắt (10:01) {#summary-1001}
+### Tóm tắt (10:01) {#summary-1001}
 
 Việc kích hoạt rút tiền đặt cọc là một trong những bản nâng cấp được mong đợi nhất đối với Ethereum. Sẽ cực kỳ quan trọng để đảm bảo sự thay đổi này được thực hiện một cách suôn sẻ. Để hỗ trợ việc thử nghiệm, các trình xác thực sẽ có sẵn một số devnet và testnet để chạy qua quy trình và giải quyết bất kỳ vấn đề tiềm ẩn nào trước khi chính thức hoạt động trên Mạng chính.
 

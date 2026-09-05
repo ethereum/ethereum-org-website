@@ -19,7 +19,7 @@ Wasilisho la **Linda Xie** kwenye Devconnect kuhusu mitandao ya kijamii iliyogat
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=4vl8eZEOwqk) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Tatizo la mitandao ya kijamii iliyowekwa kati (0:00) {#the-problem-with-centralized-social-000}
+### Tatizo la mitandao ya kijamii iliyowekwa kati (0:00) {#the-problem-with-centralized-social-000}
 
 Nimekuwa nikifanya kazi katika nyanja ya kripto kwa miaka 11 sasa na kwenye timu ya Farcaster. Kabla ya hapo, nilikuwa mjenzi kwenye Farcaster. Kwa hivyo nina shauku kubwa kuhusu kripto na mitandao ya kijamii iliyogatuliwa na kile inachoweza kuifanyia jamii.
 
@@ -27,7 +27,7 @@ Nadhani inasaidia sana kwanza kuweka wazi matatizo ya mitandao ya kijamii ya kit
 
 Na mwisho, ikiwa akaunti na data zinamilikiwa na jukwaa, hiyo inamaanisha mara tu kampuni yenyewe inapofungwa, hutaweza kufikia taarifa hizo. Tumeona hilo mara kwa mara. Nchini Marekani, tulikuwa na uwezekano wa TikTok kupigwa marufuku na tumekuwa na wabunifu wengi wakihofia hilo. Kuna nchi nyingi ambapo mengi ya majukwaa haya yanajipiga marufuku yenyewe. Kwa hivyo hili ni tatizo ambalo watu wanakumbana nalo kila siku.
 
-#### Grafu wazi za kijamii (1:30) {#open-social-graphs-130}
+### Grafu wazi za kijamii (1:30) {#open-social-graphs-130}
 
 Moja ya faida za mitandao ya kijamii iliyogatuliwa inamaanisha kuwa unaweza kufikia grafu ya kijamii wakati wowote. Hakuna ruhusa unayohitaji ili kutumia data hii. Kitu kizuri sana ni kwamba unaona hapa chini kuna grafu wazi ya kijamii. Data hii yote inaweza kuvutwa na mteja yeyote, msanidi programu yeyote, jukwaa lolote, na unaweza kutumia data hii kujenga juu ya jukwaa hili.
 
@@ -35,7 +35,7 @@ Mfano mzuri — una programu ya Farcaster na kisha pia una programu ya Base iliy
 
 Unapoamua kutumia jukwaa hili, hulazimiki tena kuanza upya. Unaweza kuweka hadhira yako mwenyewe. Unachapisha mara moja na kisha unaweza kupata usambazaji kwa wateja wengi kwenye mtandao. Unaweza kuwa mtumiaji wa Farcaster na bado ukapata usambazaji zaidi kupitia programu ya Base wanapoendelea na uingizaji wa watumiaji na wabunifu zaidi. Huu hatimaye ndio uzoefu bora zaidi wa mtumiaji. Na wateja sasa wanashindania watumiaji hawa kwa sababu gharama ya kubadili ni ndogo sana — hulazimiki kuanza upya, unabaki na hadhira yako, na hivyo wateja wanapaswa kushindana ili kujenga uzoefu bora wa watumiaji.
 
-#### Faida kwa wajenzi (3:13) {#benefits-for-builders-313}
+### Faida kwa wajenzi (3:13) {#benefits-for-builders-313}
 
 Kisha pia una upande wa mjenzi, ambapo wajenzi wanaondolewa mara kwa mara kwenye majukwaa. Tumeona hilo kwa Twitter — inaondoa programu nyingi za kripto na wajenzi, na hiyo ni hatari ya kutegemea sehemu moja (single point of failure) kwa kampuni zao. Hivi karibuni Bankr katika siku hiyo hiyo iliondolewa kwenye Twitter na Telegram. Kwa bahati nzuri waliweza kurudishwa siku chache baadaye, lakini inaonyesha kweli kuna hizi hatari za kutegemea sehemu moja. Ikiwa wewe ni mjenzi unayetumia muda wako wote na rasilimali kujaribu kujenga programu yako, ni uzoefu unaoumiza sana kukatiwa usambazaji wako mara moja.
 
@@ -45,7 +45,7 @@ Kitu kimoja ambacho ni cha kushangaza sana kuhusu mitandao ya kijamii iliyogatul
 
 Unaweza kuona hapa — nilichapisha fumbo la maneno linaloitwa Miniword. Kila siku watu hushindana kwenye hili kama fumbo la maneno la New York Times. Nilichapisha mara moja kwenye Farcaster, pia inaenda kwenye programu ya Base na wateja wengine wote. Unaweza kupata ongezeko hilo la usambazaji kama mjenzi. Nikigusa ili kufungua programu ndogo, ninaweza kuanza kuingiliana nayo, na kwa sababu data ya kijamii ni bila ruhusa kutumia, unaweza kuvuta nyakati zote za watu tofauti kwenye mtandao na watu wanaweza kushindania alama bora. Inakuwa zaidi uzoefu wa kijamii dhidi ya kufanya fumbo peke yako tu, na unaweza kupata usambazaji wa haraka zaidi (virality) kwa kutumia grafu ya kijamii.
 
-#### Kripto na mikoba iliyopachikwa (6:30) {#crypto-and-embedded-wallets-630}
+### Kripto na mikoba iliyopachikwa (6:30) {#crypto-and-embedded-wallets-630}
 
 Mitandao ya kijamii iliyogatuliwa ipo — tumeiona kwa Bluesky na wamefanya kazi nzuri ya kuvutia watumiaji wakati majukwaa yanapigwa marufuku katika nchi tofauti. Hata hivyo, jambo la kipekee sana ni unapounganisha kripto na mitandao ya kijamii iliyogatuliwa, kwa sababu sasa unaunda uzoefu ambao usingeweza kuupata kwenye jukwaa la kitamaduni. Hili ni jambo ambalo timu yetu inalipa kipaumbele sana.
 
@@ -55,7 +55,7 @@ Watumiaji wanaweza pia kuingiliana na programu ndogo mnyororoni kwa sababu wana 
 
 Unaweza pia kuwa na mawakala (agents) wanaoingiliana kwenye mlisho (feed). Ikiwa unaamini kweli katika mustakabali huu wa mawakala ambapo kuna mawakala wengi wanaoingiliana, kripto ndio chanzo asilia wanachotumia kutumiana fedha. Hulazimiki kuratibu anwani au jinsi mtu anavyolipwa — unajua anwani ya mtumiaji kiotomatiki, una taarifa zote, haijalishi wanaishi wapi duniani. Unaweza kuingiliana nao moja kwa moja. Ninaamini kweli kwamba kripto na mawakala na grafu wazi za kijamii zitakuwa na jukumu kubwa zaidi.
 
-#### Kutoa bakshishi ndogo (8:36) {#micro-tipping-836}
+### Kutoa bakshishi ndogo (8:36) {#micro-tipping-836}
 
 Moja ya mifano ninayoipenda zaidi ya kile ambacho ni cha kipekee sana kuhusu grafu wazi za kijamii katika kripto ni kutoa bakshishi ndogo. Katika siku za mwanzo kabisa za kripto, watu walikuwa wakizungumza kila wakati kuhusu jinsi ingekuwa nzuri kutoa bakshishi ndogo — ikiwa wewe ni mbunifu unayechapisha maudhui mazuri sana, kuweza kutuma kiasi kidogo sana cha fedha kwa mbunifu huyo. Ningetumia programu hizi za mapema za kutoa bakshishi za Bitcoin. Lakini tatizo katika siku za mwanzo lilikuwa kwamba ilikuwa polepole sana na ghali kutuma kiasi kidogo sana cha fedha.
 
@@ -63,11 +63,11 @@ Sasa una uwezo wa kutuma miamala ambayo ni senti moja au hata chini zaidi kwa sa
 
 Unaweza kuona historia ya shughuli za mkoba wangu — ninatuma fedha kwa watumiaji wengine kwenye mtandao na pia ninapokea fedha kutoka kwa watumiaji wengine ambao wameweka vibali hivi. Kuna hata miamala ya chini ya senti moja, ambayo ni dhana ya kushangaza sana. Hawa ni watu wanaoishi kote duniani. Ikiwa wewe ni mgeni kabisa kwenye kripto na unajiunga na Farcaster, una mkoba kwa chaguo-msingi. Mara tu unapoanza kuchapisha maudhui ya ubora wa juu, watu wanaweza tu kuanza kukupa bakshishi kiotomatiki na unaweza kujenga salio bila hata kulazimika kununua kripto. Nimezungumza na watumiaji wengi sana ambao walisema hii ilikuwa kripto ya kwanza waliyopata kwa kuunda maudhui au kuingiliana na programu ndogo.
 
-#### Programu ndogo na zana za ubunifu (11:01) {#mini-apps-and-creative-tools-1101}
+### Programu ndogo na zana za ubunifu (11:01) {#mini-apps-and-creative-tools-1101}
 
 Moja ya programu ndogo ninazozipenda zinazoonyesha matumizi ya mkoba uliopachikwa, miamala ya kripto, na grafu wazi ya kijamii vizuri sana ni Emerge, iliyojengwa na Atown na timu. Inawezesha wabunifu kuweka pamoja kidokezo (prompt) kinachobadilisha picha yako ya wasifu kuwa toleo fulani la kidokezo hicho. Huu hapa ni mfano — Peachy, mbunifu maarufu sana kwenye mtandao, aliandika kidokezo cha kubadilisha picha za wasifu kuwa kadi za tarot. Niliweza kuzalisha picha nikitumia picha yangu ya wasifu na kushiriki programu ndogo ili wengine wanaovutiwa waweze kuzalisha zao. Kuna mbao za wanaoongoza za vidokezo vipi vimefanya vizuri sana. Ikiwa wewe ni mtu mbunifu, unaweza kuunda vidokezo vyako mwenyewe na kuanza kupata mapato — nililipa senti 25 kwa muamala huu wa kidokezo, na watumiaji wengine 418 pia walikizalisha, kwa hivyo Peachy anapata mapato kwa kuunda maudhui haya, na inaweza kusambaa kwa haraka kwenye mlisho.
 
-#### Tukio la Warplet (12:41) {#the-warplet-phenomenon-1241}
+### Tukio la Warplet (12:41) {#the-warplet-phenomenon-1241}
 
 Kwa kweli tulikuwa na moja ya siku zetu zenye watumiaji wengi zaidi wanaofanya kazi kila siku kwenye Farcaster kwa sababu ya usambazaji wa haraka uliotokea hivi karibuni. Kwanza, tuna kinyago hiki kisicho rasmi cha Farcaster kinachoitwa Warplet. Dan, mwanzilishi mwenza wa Farcaster, alikiunda. Timu — nikiwemo mimi — labda haikufikiri kilikuwa kizuri zaidi kuwa kinyago rasmi, kwa hivyo alikiachilia kwa jamii na kusema watu wanaweza kufanya chochote wanachotaka nacho.
 
@@ -75,13 +75,13 @@ Msanidi programu anayeitwa Angel alichukua hicho na kuamua kujenga programu ndog
 
 Kitu ambacho pia kilikuwa kizuri sana kuona kilikuwa utamaduni tofauti wa kuchanganya upya (remix). Wajenzi walikuwa wakisema, "Sawa, kila mmoja wenu ana Warplet zake sasa, kwa hivyo tujenge michezo na uzoefu wa kufurahisha juu yake." Kulikuwa na viwango vya "Warplet ipi ni mbaya zaidi?" na "mtoto wa Warplet angeonekanaje ukichanganya hizi mbili?" Michezo hii yote ya kufurahisha iliundwa kwenye mtandao, ambayo inaonyesha kwamba unapotumia grafu ya kijamii, unaweza kufanya uzoefu unaoshirikisha zaidi kama msanidi programu.
 
-#### Programu ndogo kwa manufaa ya kijamii (15:02) {#mini-apps-for-social-good-1502}
+### Programu ndogo kwa manufaa ya kijamii (15:02) {#mini-apps-for-social-good-1502}
 
 Huu hapa ni mfano wa programu ndogo — kwa kweli Horsefax alijenga hii kwenye timu. Nadhani hii ni muhimu sana — unaweza kusaidia mfuko wa utetezi wa kisheria wa Roman Storm. Tulitumia Daimo Pay, na unaweza kulipa kwa tokeni yoyote na kuchangia kwenye mfuko wa utetezi wa kisheria. Kwa sababu ni mkoba uliopachikwa, hutolewi nje ili kutumia programu nyingine. Unaweza kushiriki hilo mara moja ndani ya mlisho wako ukiwaambia wafuasi wako ulichangia. Wanaweza kisha kugundua programu hii na kuendelea kuchangia pia. Huu ni utaratibu wa kushiriki zaidi programu ndani ya wafuasi na hadhira ambayo kila mtu amejijengea mwenyewe.
 
 Huu hapa ni mfano mwingine sawa — uchangiaji wa umati (crowdfund) uliojengwa na Nicholas katika Seed Club, kama jukwaa la GoFundMe au Kickstarter. Unaweza kuona watumiaji tofauti ambao wamechangia. Unaweza kugusa kwenye mkoba wako uliopachikwa na kuchangia fedha moja kwa moja kupitia programu ya Farcaster. Hulazimiki kamwe kutolewa nje. Mbunifu aliweza kukusanya zaidi ya lengo lake, na unaweza kushiriki hilo kwenye mlisho wako ili wafuasi wako wote waweze kugundua programu ndogo pia.
 
-#### Changamoto za mitandao ya kijamii iliyogatuliwa (16:41) {#challenges-of-decentralized-social-1641}
+### Changamoto za mitandao ya kijamii iliyogatuliwa (16:41) {#challenges-of-decentralized-social-1641}
 
 Haya yote ni mazuri sana, na mitandao ya kijamii iliyogatuliwa inasikika vizuri, lakini ninataka kuwa mkweli sana kuhusu changamoto. Jambo moja la kuzingatia ni kwamba ni ndogo — ndogo sana ikilinganishwa na majukwaa haya yote makubwa ya kijamii ya kitamaduni yenye watumiaji mabilioni na mamia ya mamilioni.
 
@@ -93,7 +93,7 @@ Taka (Spam) pia ni tatizo. Hili lipo kwenye majukwaa ya kijamii yaliyowekwa kati
 
 Na kisha usimamizi (moderation) — pia ni tatizo na changamoto ndani ya majukwaa ya kijamii ya kitamaduni ya kuhakikisha watumiaji wanapata uzoefu mzuri na kugundua maudhui wanayovutiwa nayo kweli. Haya ni mambo ambayo tunaendelea kuyafanyia kazi kila wakati.
 
-#### Kwa nini sasa? (19:48) {#why-now-1948}
+### Kwa nini sasa? (19:48) {#why-now-1948}
 
 Mitandao ya kijamii iliyogatuliwa imekuwepo kwa muda, lakini kwa nini sasa? Nadhani ni misingi hii yote inayokuja pamoja. Kwanza, una grafu wazi za kijamii ambazo mtu yeyote anaweza kutumia na kunufaika nazo. Ninazungumza na timu kila wakati ambazo hata sikuzijua hapo awali — walikuwa tu wakijenga programu ndogo za Farcaster kwa sababu wanaweza kutumia data bila sisi.
 
@@ -105,7 +105,7 @@ Jinsi haya yote yatakavyokuwa — nadhani barua pepe ni mlinganisho mzuri sana. 
 
 Farcaster inazidi kutumia muda mwingi kwenye vipengele vya biashara; ikiwa hupendezwi na hilo, programu ya Base na Uno ni nzuri sana katika kuonyesha vipengele vya kijamii. Hivyo ndivyo mitandao ya kijamii inavyopaswa kuwa kwa muda mrefu. Tuna safari ndefu, lakini ninafikiri kweli huu ndio mustakabali wa wapi mitandao ya kijamii inapaswa kuelekea.
 
-#### Maswali na Majibu (23:47) {#qa-2347}
+### Maswali na Majibu (23:47) {#qa-2347}
 
 **Mwezeshaji:** Asante sana, Linda. Tuna baadhi ya maswali kutoka kwa hadhira. Nadhani kitu kizuri sana ni kwamba katika ulimwengu wa kweli, ninaweza kwenda nje katika mtaa wangu na kuna mambo mengi ninaweza kufanya kwa uhuru. Mitaa ya kidijitali si mara zote inakuwa sawa, ndiyo maana nadharia ya mitandao ya kijamii iliyogatuliwa inashawishi sana, hasa kadiri maisha yetu mengi yanavyohamia mtandaoni. Kuna mabadiliko ya sasa ambapo watu kwenye majukwaa ya mitandao ya kijamii yaliyowekwa kati wanahitaji kuhamia kwenye majukwaa ya mitandao ya kijamii iliyogatuliwa. Kutokana na uzoefu wako, tunawezaje kurahisisha uhamiaji huo?
 

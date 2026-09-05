@@ -20,7 +20,7 @@ Một video giải thích của **Finematics** bao quát về bản cuộn như 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=7pWxCklcNsU) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Lớp 2 (1:17) {#layer-2-117}
+### Lớp 2 (1:17) {#layer-2-117}
 
 Việc mở rộng quy mô Ethereum đã là một trong những chủ đề được thảo luận nhiều nhất trong lĩnh vực tiền mã hóa. Cuộc tranh luận về mở rộng quy mô thường nóng lên trong những giai đoạn hoạt động mạng lưới tăng cao như cơn sốt CryptoKitties vào năm 2017, Mùa hè tài chính phi tập trung (DeFi) năm 2020, hoặc thị trường giá lên của tiền mã hóa vào đầu năm 2021. Trong những giai đoạn này, nhu cầu chưa từng có đối với mạng lưới Ethereum đã dẫn đến phí Gas cực kỳ cao, khiến người dùng thông thường phải trả chi phí đắt đỏ cho các giao dịch của họ.
 
@@ -28,7 +28,7 @@ Việc mở rộng quy mô Ethereum đã là một trong những chủ đề đ�
 
 Nhìn chung, có ba cách chính để mở rộng quy mô Ethereum — hoặc thực tế là hầu hết các Chuỗi khối khác: mở rộng quy mô chính Chuỗi khối đó (mở rộng quy mô lớp 1 (l1)), xây dựng trên cùng của lớp 1 (mở rộng quy mô lớp 2 (l2)), và xây dựng bên cạnh lớp 1 (chuỗi phụ).
 
-#### Bên ngoài lớp 1 (1:58) {#outside-of-layer-1-158}
+### Bên ngoài lớp 1 (1:58) {#outside-of-layer-1-158}
 
 Khi nói đến lớp 1 (l1), Eth2 là giải pháp được chọn để mở rộng quy mô Chuỗi khối Ethereum. Eth2 đề cập đến một tập hợp các thay đổi liên kết với nhau như việc chuyển đổi sang Bằng chứng cổ phần (PoS), hợp nhất trạng thái của Chuỗi khối Bằng chứng công việc (PoW) vào Chuỗi Bằng chứng cổ phần (PoS) mới, và phân mảnh. Phân mảnh, nói riêng, có thể làm tăng đáng kể thông lượng của mạng lưới Ethereum, đặc biệt là khi kết hợp với bản cuộn.
 
@@ -42,7 +42,7 @@ Rollup là một loại giải pháp mở rộng quy mô hoạt động bằng c
 
 Mỗi Rollup triển khai một tập hợp các hợp đồng thông minh trên lớp 1 (l1) chịu trách nhiệm xử lý các khoản tiền gửi và rút tiền cũng như xác minh các bằng chứng. Bằng chứng cũng là nơi xuất hiện sự khác biệt chính giữa các loại bản cuộn khác nhau. Rollup lạc quan sử dụng bằng chứng gian lận, trong khi ZK rollup sử dụng bằng chứng tính hợp lệ.
 
-#### Rollup lạc quan (4:26) {#optimistic-rollups-426}
+### Rollup lạc quan (4:26) {#optimistic-rollups-426}
 
 Rollup lạc quan đăng tải dữ liệu lên lớp 1 (l1) và giả định rằng nó chính xác — do đó có tên là "lạc quan". Nếu dữ liệu được đăng tải là hợp lệ, chúng ta đang đi trên con đường suôn sẻ và không cần phải làm gì thêm. Rollup lạc quan được hưởng lợi từ việc không phải làm thêm bất kỳ công việc nào trong kịch bản lạc quan.
 
@@ -58,7 +58,7 @@ Hệ thống có thể hoạt động như mong đợi và phát hiện gian l�
 
 Khi nói đến ZK rollup, hoàn toàn không có việc giải quyết tranh chấp. Điều này có thể thực hiện được bằng cách tận dụng một phần thông minh của mật mã học được gọi là bằng chứng không tri thức — do đó có tên là ZK rollup. Trong mô hình này, mỗi lô được đăng tải lên lớp 1 (l1) bao gồm một bằng chứng mật mã học được gọi là ZK-SNARK. Bằng chứng này có thể được xác minh nhanh chóng bởi hợp đồng lớp 1 (l1) khi lô giao dịch được gửi, và các lô không hợp lệ có thể bị từ chối ngay lập tức.
 
-#### Những khác biệt khác (7:28) {#other-differences-728}
+### Những khác biệt khác (7:28) {#other-differences-728}
 
 Do bản chất của quá trình giải quyết tranh chấp, Rollup lạc quan phải dành đủ thời gian cho tất cả những người tham gia mạng lưới để gửi bằng chứng gian lận trước khi hoàn tất một giao dịch trên lớp 1 (l1). Khoảng thời gian này thường khá dài — để đảm bảo rằng ngay cả trong kịch bản tồi tệ nhất, các giao dịch gian lận vẫn có thể bị tranh chấp. Điều này khiến cho việc rút tiền từ Rollup lạc quan diễn ra khá lâu, vì người dùng phải đợi tới một hoặc hai tuần để có thể rút tiền của họ về lại lớp 1 (l1).
 
@@ -70,7 +70,7 @@ Tuy nhiên, ZK rollup cũng đi kèm với những hạn chế riêng. Do sự p
 
 Rollup lạc quan có phần dễ dàng hơn với khả năng tương thích EVM. Chúng vẫn phải chạy phiên bản EVM của riêng mình với một vài sửa đổi, nhưng 99% các hợp đồng có thể được chuyển đổi mà không cần thực hiện bất kỳ thay đổi nào. ZK rollup cũng đòi hỏi tính toán nặng nề hơn nhiều so với Rollup lạc quan, có nghĩa là các nút tính toán bằng chứng ZK phải là những cỗ máy có cấu hình cao, khiến cho những người dùng khác khó có thể chạy chúng.
 
-#### Những cải tiến về mở rộng quy mô (9:32) {#scaling-improvements-932}
+### Những cải tiến về mở rộng quy mô (9:32) {#scaling-improvements-932}
 
 Khi nói đến những cải tiến về mở rộng quy mô, cả hai loại bản cuộn đều có khả năng mở rộng quy mô Ethereum từ khoảng 15–45 giao dịch mỗi giây (tùy thuộc vào loại giao dịch) lên tới 1.000–4.000 giao dịch mỗi giây. Đáng chú ý là có thể xử lý nhiều giao dịch hơn nữa mỗi giây bằng cách cung cấp thêm không gian cho các lô Rollup trên lớp 1 (l1).
 
@@ -84,7 +84,7 @@ Mặc dù cả Arbitrum và Optimism đều cố gắng đạt được cùng m�
 
 Một khác biệt lớn khác là cách tiếp cận để xử lý việc sắp xếp thứ tự giao dịch và MEV. Arbitrum ban đầu sẽ chạy một bộ sắp xếp chịu trách nhiệm sắp xếp các giao dịch, nhưng họ muốn phi tập trung hóa nó về lâu dài. Optimism thích một cách tiếp cận khác, nơi việc sắp xếp các giao dịch — và do đó là MEV — có thể được bán đấu giá cho các bên khác trong một khoảng thời gian nhất định.
 
-#### ZK rollup (13:10) {#zk-rollups-1310}
+### ZK rollup (13:10) {#zk-rollups-1310}
 
 Mặc dù có vẻ như cộng đồng Ethereum đang chủ yếu tập trung vào Rollup lạc quan — ít nhất là trong ngắn hạn — các dự án làm việc trên ZK rollup cũng đang tiến triển cực kỳ nhanh chóng.
 
@@ -92,11 +92,11 @@ Loopring sử dụng công nghệ ZK rollup để mở rộng quy mô Giao thứ
 
 Các bản cuộn dựa trên StarkWare đã được sử dụng rộng rãi bởi các dự án như DeversiFi, Immutable X, và dYdX. Như đã đề cập trước đó, zkSync đang làm việc trên một máy ảo tương thích với EVM sẽ có khả năng hỗ trợ đầy đủ bất kỳ hợp đồng thông minh tùy ý nào được viết bằng Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Bản cuộn cũng sẽ có tác động lớn đến tài chính phi tập trung (DeFi). Những người dùng trước đây không thể giao dịch trên Ethereum do phí giao dịch cao sẽ có thể ở lại trong hệ sinh thái vào lần tới khi hoạt động mạng lưới tăng cao. Bản cuộn cũng sẽ cho phép một thế hệ ứng dụng mới yêu cầu các giao dịch rẻ hơn và thời gian xác nhận nhanh hơn — tất cả trong khi được bảo mật hoàn toàn bởi sự đồng thuận của Ethereum. Có vẻ như bản cuộn có thể kích hoạt một giai đoạn tăng trưởng cao khác cho DeFi.
 
-#### Những thách thức (14:29) {#challenges-1429}
+### Những thách thức (14:29) {#challenges-1429}
 
 Tuy nhiên, có một vài thách thức khi nói đến bản cuộn. Khả năng kết hợp là một trong số đó — để kết hợp một giao dịch sử dụng nhiều Giao thức, tất cả chúng sẽ phải được triển khai trên cùng một Rollup.
 
@@ -104,7 +104,7 @@ Một thách thức khác là Thanh khoản bị phân mảnh. Nếu không có 
 
 Điều này cũng có nghĩa là theo lẽ tự nhiên sẽ có người thắng và kẻ thua. Hiện tại, hệ sinh thái Ethereum hiện có không đủ lớn để tận dụng tất cả các giải pháp mở rộng quy mô. Điều này có thể — và có lẽ sẽ — thay đổi về lâu dài, nhưng trong ngắn hạn, chúng ta có thể thấy một số bản cuộn và các giải pháp mở rộng quy mô khác trở thành những thị trấn ma. Trong tương lai, chúng ta cũng có thể thấy người dùng sống hoàn toàn trong một hệ sinh thái Rollup và không tương tác với Chuỗi Ethereum chính cũng như các giải pháp mở rộng quy mô khác trong thời gian dài.
 
-#### Mối đe dọa đối với chuỗi phụ (15:44) {#threat-to-sidechains-1544}
+### Mối đe dọa đối với chuỗi phụ (15:44) {#threat-to-sidechains-1544}
 
 Một câu hỏi rất thường xuyên được đặt ra khi thảo luận về bản cuộn là liệu chúng có phải là mối đe dọa đối với chuỗi phụ hay không. Chuỗi phụ vẫn sẽ có vị trí của chúng trong hệ sinh thái Ethereum. Mặc dù chi phí giao dịch trên lớp 2 (l2) sẽ thấp hơn nhiều so với trên lớp 1 (l1), nhưng rất có thể nó vẫn sẽ đủ cao để loại bỏ một số loại ứng dụng nhất định như trò chơi và các ứng dụng có khối lượng lớn khác. Điều này có thể thay đổi khi Ethereum giới thiệu phân mảnh, nhưng đến lúc đó chuỗi phụ có thể tạo ra đủ hiệu ứng mạng lưới để tồn tại lâu dài.
 

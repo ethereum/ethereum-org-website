@@ -21,7 +21,7 @@ Materiał wyjaśniający od **Finematics** omawiający mechanikę niewymiennych 
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=Xdkkux6OxfM) opublikowanego przez Finematics. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Zamienne a niewymienne (0:00) {#fungible-vs-non-fungible-000}
+### Zamienne a niewymienne (0:00) {#fungible-vs-non-fungible-000}
 
 Zacznijmy od słowa „zamienny” (ang. fungible). Zamienność oznacza, że poszczególne jednostki aktywa są wymienne i nieodróżnialne od siebie. Dobrym przykładem zamiennego aktywa jest waluta. Banknot pięciodolarowy ma zawsze taką samą wartość jak każdy inny banknot pięciodolarowy. Tak naprawdę nie obchodzi cię, który konkretnie banknot otrzymasz, ponieważ wszystkie są warte tyle samo.
 
@@ -29,7 +29,7 @@ Jeśli jednak chodzi o aktywa niewymienne, każda jednostka jest unikalna i nie 
 
 Innym przykładem są karty kolekcjonerskie. Mimo że mogą wyglądać podobnie, każda karta ma inne atrybuty. Czynniki takie jak rok produkcji lub stan zachowania karty mogą robić różnicę. Skrajnym przykładem czegoś niewymiennego jest dzieło sztuki — na przykład obraz zazwyczaj powstaje tylko w jednym oryginalnym egzemplarzu.
 
-#### Właściwości NFT (2:13) {#properties-of-nfts-213}
+### Właściwości NFT (2:13) {#properties-of-nfts-213}
 
 Skoro wiemy już, co oznacza „niewymienny”, przyjrzyjmy się najczęstszym właściwościom NFT.
 
@@ -39,7 +39,7 @@ Skoro wiemy już, co oznacza „niewymienny”, przyjrzyjmy się najczęstszym w
 
 Podobnie jak standardowe tokeny, NFT również gwarantują własność aktywa, są łatwe do przetransferowania i odporne na oszustwa.
 
-#### Standardy tokenów: ERC-20, ERC-721 i ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
+### Standardy tokenów: ERC-20, ERC-721 i ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
 
 Chociaż NFT mogą być zaimplementowane na dowolnym blockchainie obsługującym programowanie inteligentnych kontraktów, najbardziej godnymi uwagi standardami są ERC-721 i ERC-1155 na Ethereum. Zanim zagłębimy się w standardy NFT, zróbmy krótkie podsumowanie ERC-20, ponieważ będzie to przydatne do porównania.
 
@@ -49,7 +49,7 @@ Chociaż NFT mogą być zaimplementowane na dowolnym blockchainie obsługującym
 
 **ERC-1155** to kolejny krok w tworzeniu niewymiennych tokenów. Ten standard pozwala na tworzenie kontraktów, które obsługują zarówno tokeny zamienne, jak i niewymienne. Został stworzony przez Enjin, projekt skupiający się na grach opartych na blockchainie. W wielu grach, takich jak World of Warcraft, gracz może posiadać zarówno przedmioty niewymienne — miecze, tarcze, zbroje — jak i przedmioty zamienne, takie jak złoto czy strzały. ERC-1155 pozwala deweloperom zdefiniować zarówno tokeny zamienne, jak i niewymienne oraz zdecydować, ile z nich powinno istnieć.
 
-#### Przypadki użycia NFT (5:28) {#nft-use-cases-528}
+### Przypadki użycia NFT (5:28) {#nft-use-cases-528}
 
 Oprócz CryptoKitties istnieje kilka innych popularnych gier wykorzystujących NFT, takich jak Gods Unchained i Decentraland. Decentraland jest interesującym przykładem, ponieważ gracze mogą kupować parcele cyfrowej ziemi, które mogą być później odsprzedane lub nawet wykorzystane jako przestrzeń reklamowa w grze.
 
@@ -57,7 +57,7 @@ Inne przykłady obejmują rynki sztuki cyfrowej, takie jak Rarible i SuperRare, 
 
 Niektóre NFT mogą być niezwykle kosztowne. Najdroższy CryptoKitty, Dragon, został sprzedany za 600 ETH pod koniec 2017 roku — co w tamtym czasie było warte około stu siedemdziesięciu tysięcy dolarów. Rzadkie nazwy domen, takie jak exchange.eth, mogą być warte ponad pięćset tysięcy dolarów.
 
-#### NFT jako zabezpieczenie w DeFi (6:48) {#nfts-as-collateral-in-defi-648}
+### NFT jako zabezpieczenie w DeFi (6:48) {#nfts-as-collateral-in-defi-648}
 
 Jeśli chodzi o DeFi, NFT mogą uwolnić jeszcze większy potencjał dla zdecentralizowanych finansów. Obecnie zdecydowana większość protokołów pożyczkowych DeFi wymaga zabezpieczenia. Jednym z najciekawszych pomysłów jest wykorzystanie NFT jako zabezpieczenia. Oznacza to, że mógłbyś dostarczyć NFT reprezentujący dzieło sztuki, cyfrową ziemię, a nawet stokenizowane nieruchomości jako zabezpieczenie i pożyczyć pod nie pieniądze.
 
@@ -67,12 +67,12 @@ Aby lepiej zrozumieć ten problem, wyobraź sobie, że ktoś kupuje rzadkiego Cr
 
 Właśnie dlatego niektóre projekty oferujące pożyczki zabezpieczone NFT wykorzystują nieco inny model: pożyczki peer-to-peer. W tym modelu rynkowym pożyczkobiorcy mogą oferować swoje NFT jako zabezpieczenie, a pożyczkodawcy mogą wybrać, które NFT są skłonni zaakceptować przed zainicjowaniem pożyczki. NFT użyte jako zabezpieczenie jest przechowywane w kontrakcie depozytowym (escrow), a jeśli pożyczkobiorca nie wywiąże się ze zobowiązania, nie spłacając pożyczonej kwoty wraz z odsetkami na czas, NFT jest transferowane do pożyczkodawcy. Ta przestrzeń jest nowa, ale jedną z firm, która wykorzystuje ten model, jest NFTfi.
 
-#### NFT jako produkty finansowe (9:32) {#nfts-as-financial-products-932}
+### NFT jako produkty finansowe (9:32) {#nfts-as-financial-products-932}
 
 Oprócz wykorzystania jako zabezpieczenie, NFT mogą również reprezentować bardziej złożone produkty finansowe, takie jak ubezpieczenia, obligacje czy opcje. Yinsure od Yearn Finance jest dobrym przykładem wykorzystania NFT w przestrzeni ubezpieczeniowej. W Yinsure każdy kontrakt ubezpieczeniowy jest reprezentowany jako NFT, którym można również handlować na rynku wtórnym, takim jak Rarible.
 
 Ostatnio zaczęliśmy również dostrzegać natywne dla DeFi koncepcje, takie jak kopanie płynności, wykorzystywane przez projekty NFT. Rarible na przykład zaczęło nagradzać swoich użytkowników tokenami zarządzania RARI za tworzenie, kupowanie i sprzedawanie NFT na ich platformie.
 
-#### Rosnący rynek NFT (10:30) {#the-growing-nft-market-1030}
+### Rosnący rynek NFT (10:30) {#the-growing-nft-market-1030}
 
 Z ponad 100 milionami dolarów w obrocie NFT i 6 milionami dolarów tylko w ostatnim miesiącu, przestrzeń NFT jest jedną z najszybciej rosnących nisz w krypto. Ma ogromny potencjał, począwszy od cyfrowych kotków, a skończywszy na złożonych produktach finansowych.

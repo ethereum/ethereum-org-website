@@ -18,7 +18,7 @@ Một cuộc phỏng vấn Offstage tại Devconnect, nơi người dẫn chươ
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=EWe-cjT9IQs) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Lớn lên ở Phần Lan (0:28) {#growing-up-in-finland-028}
+### Lớn lên ở Phần Lan (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Vậy, chúng ta sẽ chơi Jenga ở đây. Có một số câu hỏi đi kèm với nó. Nếu bạn muốn đi nước đầu tiên, chúng ta có thể bắt đầu.
 
@@ -48,7 +48,7 @@ Một cuộc phỏng vấn Offstage tại Devconnect, nơi người dẫn chươ
 
 **Stani Kulechov:** Bố tôi luôn muốn tôi theo đuổi công nghệ vì ông thấy được tầm quan trọng của máy tính. Internet lúc đó đang bắt đầu phát triển. Các thư viện thường có máy tính — đó là nơi đầu tiên tôi tiếp xúc. Thành thật mà nói, họ thực sự rất ủng hộ.
 
-#### Có chiếc máy tính đầu tiên (3:00) {#getting-the-first-computer-300}
+### Có chiếc máy tính đầu tiên (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Bạn giải thích cho họ về công việc của mình như thế nào? Bây giờ họ đã quen với DeFi chưa?
 
@@ -58,7 +58,7 @@ Một cuộc phỏng vấn Offstage tại Devconnect, nơi người dẫn chươ
 
 **Stani Kulechov:** Hoàn toàn đúng. Internet và máy tính đã mang lại khả năng tiếp cận thông tin — bạn không cần phải đến thư viện để học một điều gì đó hay hỏi bố mẹ hoặc bạn bè nữa. Và tôi nghĩ theo một cách tương tự, DeFi và tiền mã hóa đang mang lại khả năng tiếp cận các công cụ tài chính. Đó là điều thực sự thúc đẩy tôi. Nó mang tính cá nhân vì tôi đã trực tiếp thấy được nó có thể hữu ích như thế nào.
 
-#### Khám phá Ethereum (5:30) {#discovering-ethereum-530}
+### Khám phá Ethereum (5:30) {#discovering-ethereum-530}
 
 **Binji:** Làm thế nào mà bạn lại quyết định bỏ trường luật và tham gia vào Ethereum?
 
@@ -70,7 +70,7 @@ Tôi bắt đầu phát triển các hợp đồng thông minh và làm tất c�
 
 **Stani Kulechov:** Chúng tôi tin vào sự tự do và những gì tài chính phi tập trung có thể làm cho nhiều người — trao quyền cho họ. Việc xây dựng xung quanh một cộng đồng gồm những cá nhân có cùng chí hướng thực sự gắn kết mọi thứ lại với nhau.
 
-#### Xây dựng ETHLend và đặt tên Aave (9:00) {#building-ethlend-and-naming-aave-900}
+### Xây dựng ETHLend và đặt tên Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Cái tên Aave bắt nguồn từ đâu?
 
@@ -82,7 +82,7 @@ Chúng tôi sẽ trở nên lớn mạnh hơn JPMorgan và tất cả các ngân
 
 **Stani Kulechov:** Đúng vậy. Và xuất thân từ một thị trấn nhỏ ở Phần Lan, điều tôi nhận ra là có rất nhiều người thực sự đang tìm kiếm những gì chúng tôi đang xây dựng — cả ở trong và ngoài lĩnh vực của chúng ta.
 
-#### Aave so với tài chính truyền thống (12:00) {#aave-vs-traditional-finance-1200}
+### Aave so với tài chính truyền thống (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** Bạn phân biệt giữa JPMorgan và Aave như thế nào?
 
@@ -90,7 +90,7 @@ Chúng tôi sẽ trở nên lớn mạnh hơn JPMorgan và tất cả các ngân
 
 Tôi đã chia sẻ nó trên Reddit của Ethereum vào năm 2017 và nhận được rất nhiều sự hào hứng từ cộng đồng ngay từ những ngày đầu. Đó là cách cộng đồng tiền mã hóa hoạt động. Bạn không cần một kế hoạch kinh doanh hay một bài thuyết trình gọi vốn. Bạn chỉ cần cho mọi người thấy một thứ gì đó mà họ có thể xây dựng dựa trên đó.
 
-#### Bảo mật và trải nghiệm người dùng (14:30) {#security-and-user-experience-1430}
+### Bảo mật và trải nghiệm người dùng (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Khả năng tiếp cận tốt hơn cũng đồng nghĩa với bảo mật tốt hơn. Làm thế nào để bạn đảm bảo rằng người dùng không bị xâm phạm bởi các nỗ lực lừa đảo, và làm thế nào để chúng ta làm điều đó tốt hơn so với thế giới internet truyền thống? Việc giải quyết vấn đề này rất quan trọng vì chúng ta không thể dựa vào một quy trình mà người dùng đang đánh mất những gì họ có, đúng không? Tôi nghĩ điều phổ biến nhất là lừa đảo. Trải nghiệm người dùng (UX) khi tương tác với một chuỗi khối không có sự xác thực.
 
@@ -102,7 +102,7 @@ Tôi đã chia sẻ nó trên Reddit của Ethereum vào năm 2017 và nhận đ
 
 **Stani Kulechov:** Đôi khi ý tưởng không được kiểm chứng. Đôi khi ý tưởng có thể được kiểm chứng nhưng khâu thực thi lại kém. Vì vậy, có những thành phần khác nhau đều quan trọng. Tôi chỉ tiếp tục suy nghĩ, tiếp tục cải thiện sản phẩm, và tôi nghĩ đó là con đường đúng đắn.
 
-#### Đầu tư thiên thần (17:00) {#angel-investing-1700}
+### Đầu tư thiên thần (17:00) {#angel-investing-1700}
 
 **Binji:** Bạn là một nhà đầu tư thiên thần năng suất. Bạn tìm kiếm điều gì khi đánh giá những nhà xây dựng mới?
 
@@ -112,7 +112,7 @@ Tôi đã chia sẻ nó trên Reddit của Ethereum vào năm 2017 và nhận đ
 
 **Stani Kulechov:** Không hẳn, vì luôn có một giá trị nào đó. Bạn học được khá nhiều, bạn thúc đẩy không gian này phát triển. Và thông thường bạn tạo ra rất nhiều nhân tài như một kết quả đầu ra. Đôi khi khoản đầu tư không hiệu quả, nhưng sau đó chính đội ngũ ấy có thể đi và thành lập một công ty khác, nơi họ có nhiều kinh nghiệm hơn và có thể thành công hơn. Một số thành công hơn những người khác, nhưng nhìn chung tất cả đều là những vụ đặt cược mà chúng tôi tự tin.
 
-#### Giữ chân so với thu hút người dùng (19:00) {#retention-vs-acquisition-1900}
+### Giữ chân so với thu hút người dùng (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Số liệu nào bạn quan tâm trong lĩnh vực tiền mã hóa?
 
@@ -122,7 +122,7 @@ Tôi đã chia sẻ nó trên Reddit của Ethereum vào năm 2017 và nhận đ
 
 **Stani Kulechov:** Thông thường hiện nay, về khía cạnh thu hút, mọi người nghĩ nhiều về việc giữ chân hơn là thu hút. Nó làm nổi bật lý do tại sao mọi người không tham gia nhiều hơn — thường là do thiếu sản phẩm có thể hấp dẫn đối với những người dùng này. Chúng ta đã tập trung một thập kỷ vào cơ sở hạ tầng. Tôi nghĩ lớp ứng dụng sẽ là trọng tâm của thập kỷ tiếp theo, và điều đó sẽ giúp chúng ta mở rộng quy mô cơ sở người dùng.
 
-#### Sự biến động của tiền mã hóa và tài sản tổ chức (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Sự biến động của tiền mã hóa và tài sản tổ chức (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Tiền mã hóa liên tục bị coi là một thứ đầy biến động — thị trường gấu, thị trường bò. Aave giống như một sự đối lập với điều đó, đúng không? Nó chỉ luôn ổn định xuyên suốt.
 
@@ -132,7 +132,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 Điều này rất tuyệt vời cho người vay vì họ có thể tiếp cận thanh khoản bất cứ lúc nào. Nó cũng tuyệt vời cho người cho vay vì họ có thể cho vay dựa trên các tài sản truyền thống nhưng thực hiện điều đó trên chuỗi với stablecoin. Tôi nghĩ đối với các tổ chức, việc nhận ra lợi ích của stablecoin và tài sản được mã hóa giúp họ suy nghĩ vượt ra ngoài sự biến động — và ngừng nghĩ rằng tiền mã hóa hoàn toàn chỉ là về sự biến động.
 
-#### Ethereum như một lớp niềm tin (22:00) {#ethereum-as-a-trust-layer-2200}
+### Ethereum như một lớp niềm tin (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** Đối với Ethereum, một trong những điều tôi cảm thấy khá đam mê là nó đóng vai trò như một lớp niềm tin. Các giao thức như Aave cho thấy niềm tin đang hoạt động trong thế giới thực. Đó là cho vay, vay mượn, được hỗ trợ bởi an ninh kinh tế và sức nặng của niềm tin đi kèm với các nền tảng này.
 
@@ -142,7 +142,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 **Stani Kulechov:** Rõ ràng là nó không thấy được khối lượng công việc mà chúng tôi làm hàng ngày. Rất nhiều thứ chỉ được nhìn nhận qua vẻ bề ngoài. Nhưng tôi nghĩ đó phải là một quá trình thú vị. Việc xây dựng phải là một quá trình thú vị. Bạn không nên ở đây nếu nó quá sức chịu đựng. Bạn nên ở đây để tận hưởng những gì bạn làm.
 
-#### Tận hưởng niềm vui trong khi xây dựng (24:00) {#having-fun-while-building-2400}
+### Tận hưởng niềm vui trong khi xây dựng (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave là một ví dụ tuyệt vời về cách tận hưởng niềm vui. Thật khó tin đối với tôi khi cùng một đội ngũ đang thay đổi diện mạo của nền tài chính hiện đại — gì cơ, ngân hàng lớn thứ 30 trên thế giới nếu không tính đến việc thế chấp hóa, có lẽ còn cao hơn — cũng đang làm GrAave. Điều đó chứng tỏ các bạn đang mang văn hóa tiền mã hóa vào thế hệ tài chính tiếp theo mà không từ bỏ cộng đồng và văn hóa đã đưa các bạn đến với thế giới này.
 
@@ -152,7 +152,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 **Stani Kulechov:** Tôi nghĩ là ứng dụng Aave. Chỉ tập trung vào sự đơn giản. Sự đơn giản giúp mở rộng quy mô. Chúng tôi rất hào hứng với hướng đi đó — đưa DeFi đến với dòng chính nhiều hơn và thực hiện nó đúng cách, nơi mọi thứ được trừu tượng hóa, trở nên đơn giản và dễ sử dụng.
 
-#### Điều gì khiến bạn cảm thấy tràn đầy sức sống nhất (26:00) {#what-makes-you-feel-most-alive-2600}
+### Điều gì khiến bạn cảm thấy tràn đầy sức sống nhất (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** Điều gì khiến bạn cảm thấy tràn đầy sức sống nhất?
 
@@ -166,7 +166,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 **Stani Kulechov:** Tôi chỉ không thích yếu tố nghiêm túc thái quá. Tôi thích sự nghiêm túc trong việc hoàn thành công việc, nhưng tôi thích thực tế là bạn phải có niềm vui trong cuộc sống, niềm vui trong công việc. Tôi đã có rất nhiều sự tự do khi lớn lên, và điều đó đã tạo ra những trải nghiệm mà nếu không có nó, tôi sẽ không bao giờ có được.
 
-#### Tại sao lại là London (28:30) {#why-london-2830}
+### Tại sao lại là London (28:30) {#why-london-2830}
 
 **Binji:** Các bạn đã chọn đặt trụ sở tại London như một trong những trụ sở chính của mình. Tại sao lại là London?
 
@@ -176,7 +176,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 **Stani Kulechov:** Gần đây thì có, đúng vậy.
 
-#### Nguồn cảm hứng và việc suýt bỏ cuộc (30:00) {#inspiration-and-almost-quitting-3000}
+### Nguồn cảm hứng và việc suýt bỏ cuộc (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Ai là người ngoài lĩnh vực tiền mã hóa và công nghệ đã truyền cảm hứng cho bạn, cho dù đó là phong cách lãnh đạo của bạn hay khi bạn mới bắt đầu sự nghiệp?
 
@@ -186,7 +186,7 @@ Với các tài sản tổ chức như thị trường Horizon mà chúng tôi �
 
 **Stani Kulechov:** Có chứ, đôi khi. Nhưng nó giống như là bỏ cuộc trong ngày hôm đó thôi. Bạn chỉ bỏ cuộc trong ngày để nghỉ ngơi và luôn có ngày hôm sau. Đặc biệt là nếu bạn gặp phải một vấn đề khó giải quyết — giống như trò xếp gỗ ở đây vậy.
 
-#### Các sản phẩm dành cho người dùng cuối và cộng đồng Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Các sản phẩm dành cho người dùng cuối và cộng đồng Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Điều quan trọng nhất mà chúng ta cần làm với tư cách là cộng đồng Ethereum là gì?
 
@@ -198,7 +198,7 @@ Việc tìm ra cách chúng ta có thể định hướng nguồn năng lượng
 
 **Stani Kulechov:** Chắc chắn rồi. Chúng ta đã xây dựng cơ sở hạ tầng tuyệt vời này trên lớp mạng lưới, trên lớp DeFi, và bây giờ lớp tiếp theo về cơ bản là xây dựng những gì hiệu quả và phân phối nó cho mọi người. DeFi cho mọi người.
 
-#### Lời kết (36:00) {#closing-3600}
+### Lời kết (36:00) {#closing-3600}
 
 **Binji:** Tôi nghĩ phần lớn những người khám phá ra Ethereum sẽ khám phá nó thông qua những bề mặt này.
 

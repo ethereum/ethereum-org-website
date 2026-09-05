@@ -18,7 +18,7 @@ Démonstration visuelle d'Anders Brownworth sur le fonctionnement de la technolo
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=_160oMzblY8) publiée par Anders Brownworth. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Hash SHA-256 (0:01) {#sha-256-hash-001}
+### Hash SHA-256 (0:01) {#sha-256-hash-001}
 
 Ceci est une démo de la chaîne de blocs. Nous allons procéder de manière très visuelle — nous allons rendre cela très facile à comprendre en passant en revue les éléments clés de ce qu'est une chaîne de blocs.
 
@@ -28,7 +28,7 @@ Voici donc le hash du nom « Anders », tout en minuscules — il commence par `
 
 Je peux taper tout ce que je veux. Vous pouvez n'avoir rien — `e3b0` — c'est le hash de rien. Ou vous pourriez taper des tonnes et des tonnes de choses. En fait, vous pourriez y mettre la Bibliothèque du Congrès et vous obtiendriez un hash. Ce qui est intéressant, c'est que, qu'il y ait une infime quantité d'informations, aucune information ou toute la Bibliothèque du Congrès, vous obtiendrez toujours un hash de cette longueur. Vous ne pourrez pas deviner à l'avance ce que c'est — vous devez en quelque sorte entrer les données pour découvrir quel est le hash, mais vous obtiendrez toujours exactement le même hash, quel que soit le nombre de fois où vous entrez exactement les mêmes informations.
 
-#### Bloc (2:10) {#block-210}
+### Bloc (2:10) {#block-210}
 
 Ce que je vais faire, c'est étendre cette idée de hash à quelque chose que nous allons appeler un bloc. Un bloc est exactement comme le hash, mais la section des données a été divisée en trois parties : l'une appelée « bloc » — juste un numéro, c'est le bloc numéro 1 —, un « nonce », qui est juste un autre numéro, et ensuite des données, tout comme nous l'avions auparavant.
 
@@ -40,7 +40,7 @@ C'est là qu'intervient le nonce. Le nonce est juste un nombre que vous pouvez d
 
 Il s'est arrêté à 59 396 — et il se trouve que celui-ci produit un hash qui commence par quatre zéros. Il satisfait ma définition de ce qu'est un bloc signé.
 
-#### Chaîne de blocs (5:16) {#blockchain-516}
+### Chaîne de blocs (5:16) {#blockchain-516}
 
 Alors, pouvez-vous me dire ce qu'est une chaîne de blocs ? C'est probablement juste une chaîne de ces blocs. Voici ma chaîne de blocs — le bloc numéro un a un nonce comme avant, une zone de données, mais il a ensuite ce champ « précédent » qui est une série de zéros. En avançant, voici le bloc deux, le bloc trois, le bloc quatre — cette chaîne de blocs compte cinq blocs.
 
@@ -50,7 +50,7 @@ Que se passe-t-il si je modifie certaines informations ici ? Cela va changer le 
 
 Si je vais modifier le dernier bloc, tout ce que j'ai à faire est de miner à nouveau ce seul bloc. Si je remonte loin dans le temps et que je fais un changement, je dois miner celui-ci, celui-ci, celui-ci et celui-ci. Plus il y a de blocs qui passent, plus il est difficile d'apporter une modification. C'est ainsi qu'une chaîne de blocs résiste à la mutation — résiste au changement.
 
-#### Chaîne de blocs distribuée (9:18) {#distributed-blockchain-918}
+### Chaîne de blocs distribuée (9:18) {#distributed-blockchain-918}
 
 Alors, comment saurais-je si ma chaîne de blocs a été minée à nouveau ? Maintenant, nous avons une chaîne de blocs distribuée. Elle ressemble exactement à la dernière chaîne de blocs, mais voici le Pair A. Si vous descendez ici, vous pouvez voir le Pair B, et il possède une copie exacte de la chaîne de blocs. Il y a aussi un Pair C — cela pourrait continuer indéfiniment. Il y a de nombreux pairs sur Internet, et ils ont tous une copie complète de la chaîne de blocs.
 
@@ -60,7 +60,7 @@ Je sais donc, rien qu'en jetant un coup d'œil à ce petit hash, que quelque cho
 
 Les chaînes de blocs peuvent très facilement avoir 400 000 ou 500 000 blocs. Plutôt que de tous les vérifier, tout ce que vous avez vraiment à faire est de regarder le hash du plus récent, et vous pouvez voir si quelque chose dans le passé a été altéré.
 
-#### Jetons (12:17) {#tokens-1217}
+### Jetons (12:17) {#tokens-1217}
 
 C'est tout — il n'y a rien de plus que cela. Mais ce n'est pas vraiment utile car nous n'avons rien dans la zone de données qui signifie quoi que ce soit. Ce que nous voulons vraiment, c'est un jeton.
 
@@ -70,7 +70,7 @@ C'est ici que l'immuabilité est importante. Si je modifie quelque chose ici, le
 
 Une chose que je voudrais mentionner : nous ne listons pas « Darcy a cent dollars et il en donne 25 à Bingley ». Nous ne nous souvenons que des mouvements d'argent, pas des soldes des comptes bancaires. Cela soulève la question : Darcy a-t-il 25 $ ?
 
-#### Transaction Coinbase (14:34) {#coinbase-transaction-1434}
+### Transaction Coinbase (14:34) {#coinbase-transaction-1434}
 
 Nous avons un problème dans cette version de la chaîne de blocs : nous ne savons pas vraiment si Darcy a 25 $. Regardons donc une transaction Coinbase. Nous ajoutons une transaction Coinbase à nos blocs — elle dit que nous allons inventer cent dollars à partir de rien et les donner à Anders. Il n'y a pas d'autres transactions dans ce bloc car personne n'avait d'argent avant cela.
 
@@ -80,7 +80,7 @@ Vous additionnez tout cela et ça ne dépasse pas cent. Cela suit une règle de 
 
 Si nous avançons dans le temps, nous voyons que Jackson donne deux dollars à Alexa. Jackson a-t-il vraiment deux dollars ? Nous reculons d'un bloc et voyons qu'Emily avait reçu dix dollars d'Anders et en a donné dix à Jackson. Jackson a donc bien l'argent. Nous pouvons revenir en arrière et le découvrir — c'est l'un des avantages d'avoir le champ « précédent ».
 
-#### Conclusion (16:30) {#closing-1630}
+### Conclusion (16:30) {#closing-1630}
 
 C'est une chaîne de blocs de base sur laquelle fonctionne une monnaie. Comme vous le savez, les chaînes de blocs ont de nombreuses copies — tout le monde en a une copie. Si nous mutons quelque chose et que nous le passons à six dollars, les blocs deviennent invalides et ne correspondent plus aux autres copies. Cela résiste à la falsification, ce qui est ce que vous voulez pour une monnaie. Cela fonctionne très bien pour les choses qui sont petites et transactionnelles.
 

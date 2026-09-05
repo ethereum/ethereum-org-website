@@ -19,7 +19,7 @@ Wyjaśnienie autorstwa **Finematics** opisujące, jak działają wypłaty ze sta
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=RwwU3P9n3uo) opublikowanego przez Finematics. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Beacon Chain (0:31) {#the-beacon-chain-031}
+### Beacon Chain (0:31) {#the-beacon-chain-031}
 
 Wraz z szybko zbliżającą się aktualizacją Szanghaj/Capella, toczy się wiele dyskusji na temat wypłat ze stakingu w Ethereum i tego, co to oznacza dla całego ekosystemu Ethereum.
 
@@ -35,7 +35,7 @@ Kolejny duży krok, The Merge, połączył warstwę konsensusu opartą na dowodz
 
 Aby zminimalizować ryzyko, zakres The Merge został zmniejszony i żadne inne funkcje — poza przejściem z dowodu pracy na dowód stawki — nie zostały uwzględnione w ramach tej aktualizacji. Największe „cięcie”, jakiego trzeba było dokonać, dotyczyło wypłat, które stały się głównym celem nadchodzącej aktualizacji Szanghaj/Capella.
 
-#### Wypłaty (2:09) {#withdrawals-209}
+### Wypłaty (2:09) {#withdrawals-209}
 
 Wypłaty ze stakingu, jak sama nazwa wskazuje, pozwolą stakującym na wypłatę ich zablokowanego ETH. Istnieją dwa rodzaje wypłat: „częściowe” i „pełne”.
 
@@ -47,7 +47,7 @@ Po włączeniu, wypłaty ze stakingu będą automatycznie dystrybuowane co kilka
 
 Aby rozpocząć wypłacanie swoich nagród ze stakingu, walidator będzie musiał podać swój adres wypłaty tylko raz. Biorąc pod uwagę, że wypłaty wpływają zarówno na warstwę konsensusu, jak i warstwę wykonawczą Ethereum, obie części sieci muszą zostać zaktualizowane. „Szanghaj” to nazwa aktualizacji warstwy wykonawczej zawierającej wypłaty, które są określone w EIP-4895. „Capella” to nazwa odpowiedniej aktualizacji warstwy konsensusu, aktywowanej w tym samym czasie. Te dwie aktualizacje są czasami określane wspólnie jako „Shapella”.
 
-#### Mechanika (3:40) {#mechanics-340}
+### Mechanika (3:40) {#mechanics-340}
 
 W ekosystemie Ethereum każdy walidator ma odpowiadający mu numer indeksu. Ponadto posiadają oni również dwa rodzaje danych uwierzytelniających wypłaty, zdefiniowane jako `0x00` lub `0x01`.
 
@@ -77,7 +77,7 @@ Podczas budowania lub przetwarzania bloku, klienci warstwy wykonawczej stosują 
 
 Projekt wypłat jest prosty, a jednocześnie niezwykle solidny.
 
-#### Błędne przekonania (6:30) {#misconceptions-630}
+### Błędne przekonania (6:30) {#misconceptions-630}
 
 Pierwsze błędne przekonanie głosi, że podczas przetwarzania wypłat istnieje różnica między „pełną” a „częściową” wypłatą pod względem priorytetu lub kolejności. Zarówno pełne, jak i częściowe wypłaty mają miejsce, gdy skanowanie liniowe zestawu walidatorów dotrze do indeksu walidatora. Jedyną różnicą jest to, że w przypadku pełnych wypłat walidator musi opuścić kolejkę wyjścia i osiągnąć „epokę gotowości do wypłaty” (withdrawable epoch), zanim skanowanie liniowe będzie mogło go uwzględnić.
 
@@ -93,7 +93,7 @@ Po drugie, aby zapewnić stabilność mechanizmu konsensusu opartego na dowodzie
 
 Pierwsze skanowanie wypłat wypłaci wiele zgromadzonych nagród — w zasadzie od momentu powstania Beacon Chain. Jednak kolejne będą przetwarzać znacznie mniejszą ilość ETH.
 
-#### Implikacje (8:39) {#implications-839}
+### Implikacje (8:39) {#implications-839}
 
 Włączenie wypłat stworzy otwarty, dwustronny przepływ stakingu. Obecnie przepływ stakingu jest jednostronny — ETH może tylko wpływać do sieci i nigdy jej nie opuszczać. Co ciekawe, włączenie wypłat może zachęcić jeszcze więcej osób do stakingu, ponieważ będą wiedzieć, że zawsze mogą wypłacić swoje ETH, jeśli będą go potrzebować do czegoś innego.
 
@@ -103,7 +103,7 @@ Wypłaty wpłyną również na instrumenty pochodne płynnego stakingu, takie ja
 
 Wcześni użytkownicy płynnego stakingu i scentralizowanego stakingu zdobyli zdecydowaną większość rynku, ponieważ nie mieli dużej konkurencji. Jednak udział w rynku tych zasiedziałych graczy może ulec poważnej zmianie po włączeniu wypłat, zwłaszcza jeśli nie zaoferują oni konkurencyjnej stopy zwrotu. Możliwość swobodnego przechodzenia między dostawcami stakingu przyniesie korzyści rynkowi stakingu ETH.
 
-#### Podsumowanie (10:01) {#summary-1001}
+### Podsumowanie (10:01) {#summary-1001}
 
 Włączenie wypłat ze stakingu jest jedną z najbardziej oczekiwanych aktualizacji Ethereum. Niezwykle ważne będzie upewnienie się, że ta zmiana zostanie przeprowadzona płynnie. Aby pomóc w testowaniu, walidatorzy będą mieli do dyspozycji kilka sieci deweloperskich (devnets) i testowych (testnets), aby przejść przez ten proces i wyeliminować wszelkie potencjalne problemy przed uruchomieniem w Sieci głównej.
 

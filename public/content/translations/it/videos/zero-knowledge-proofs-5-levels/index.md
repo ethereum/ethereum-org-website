@@ -19,13 +19,13 @@ L'informatico **Amit Sahai**, professore presso la UCLA Samueli School of Engine
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=fOGdb1CTu5c) pubblicata da WIRED. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione (0:00) {#introduction-000}
+### Introduzione (0:00) {#introduction-000}
 
 **Amit Sahai:** Ciao, mi chiamo Amit Sahai e sono un professore di informatica alla UCLA Samueli School of Engineering. Oggi mi è stato chiesto di spiegare le prove a conoscenza zero in cinque livelli di complessità crescente.
 
 Una prova a conoscenza zero è un modo per un prover di convincere un verificatore che una certa affermazione è vera, senza tuttavia rivelare alcuna informazione aggiuntiva oltre al fatto che l'affermazione sia vera. Le prove a conoscenza zero vengono utilizzate nelle blockchain e nelle criptovalute. I crittografi sono entusiasti della conoscenza zero per le sue incredibili proprietà matematiche, ma anche per la sua incredibile applicabilità a tantissimi scenari diversi.
 
-#### Livello 1: bambino (0:41) {#level-1-child-041}
+### Livello 1: bambino (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Qual è la tua materia preferita?
 
@@ -55,7 +55,7 @@ Quindi Chelsea, con parole tue, cos'è una prova a conoscenza zero?
 
 **Chelsea:** La prova a conoscenza zero è la prova di un'affermazione. Non mostri loro il perché o il cosa. Mostri solo un piccolo segmento, o fai una specie di strano trucco di magia che non è un vero trucco di magia, e loro si convinceranno. E non hai mostrato loro il perché, o niente del genere.
 
-#### Livello 2: adolescente (3:31) {#level-2-teen-331}
+### Livello 2: adolescente (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Quindi, hai mai sentito il termine prova a conoscenza zero prima d'ora?
 
@@ -85,7 +85,7 @@ Quindi, in base a ciò di cui abbiamo discusso oggi, con parole tue, cos'è una 
 
 **Teen:** È come se avessi questo segreto davvero importante che vuoi che qualcuno conosca, ma non vuoi dirgli tutto. Puoi usare una prova a conoscenza zero per dimostrargli quel segreto, ma senza svelarlo tutto.
 
-#### Livello 3: studente universitario (6:13) {#level-3-college-student-613}
+### Livello 3: studente universitario (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Cosa studi?
 
@@ -131,7 +131,7 @@ Puoi scegliere due paesi a caso, e riveleremo di nuovo due dei colori.
 
 **Amit Sahai:** Un ottimo esempio sono le elezioni. Se potessi dimostrare che un'elezione è stata condotta correttamente (che ogni voto è stato contato e che tutto ha portato alla vittoria di una persona con un determinato totale) a conoscenza zero, allora non devi rinunciare ai voti effettivi di nessuna persona. Eppure tutti potrebbero vedere che è stato fatto correttamente.
 
-#### Livello 4: dottorando (11:59) {#level-4-grad-student-1159}
+### Livello 4: dottorando (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** È fantastico averti qui e parlare con te, Eli. Puoi parlarmi un po' della tua ricerca?
 
@@ -165,7 +165,7 @@ Puoi scegliere due paesi a caso, e riveleremo di nuovo due dei colori.
 
 **Eli:** Penso che sia uno dei motivi per cui sono stato così attratto dal calcolo multi-partecipante. Uno dei problemi più importanti al mondo è il fatto che così tante persone non si fidano l'una dell'altra. Essere in grado di usare la matematica per creare una tecnologia che consenta alle persone di lavorare insieme senza doversi fidare l'una dell'altra è una missione davvero fantastica e incredibile.
 
-#### Livello 5: esperto (17:10) {#level-5-expert-1710}
+### Livello 5: esperto (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, è così bello rivederti. Penso che l'ultima volta che ci siamo incontrati sia stato nel 2017 o giù di lì.
 

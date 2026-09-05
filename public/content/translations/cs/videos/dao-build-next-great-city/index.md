@@ -18,7 +18,7 @@ Prezentace TED od experimentálního urbanisty **Scotta Fitsimonese** o tom, jak
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=zTStDvUtQWc) zveřejněného organizací TED. Byl lehce upraven pro lepší čitelnost.*
 
-#### Založení města z tweetu (0:04) {#starting-a-city-from-a-tweet-004}
+### Založení města z tweetu (0:04) {#starting-a-city-from-a-tweet-004}
 
 Jak založíte nové město? Ukazuje se, že to není snadné. Musíte prozkoumat terén, získat povolení od státu, koupit pozemek a přesvědčit lidi, aby se tam přestěhovali. A dokud nás Elon Musk nedostane na Mars, půda je omezený zdroj – a ta dobrá místa jsou už pravděpodobně všechna zabraná.
 
@@ -26,7 +26,7 @@ Ale co kdybychom mohli začít v menším, jako opravdu v malém? A prostě jen 
 
 Nyní jsme měli kus půdy, společné peníze a spoustu rozhodnutí, která jsme museli dělat kolektivně. Proto jsme se rozhodli založit DAO – decentralizovanou autonomní organizaci – s názvem CityDAO.
 
-#### Co je to DAO? (1:15) {#what-is-a-dao-115}
+### Co je to DAO? (1:15) {#what-is-a-dao-115}
 
 DAO je internetová, blockchainem spravovaná a kolektivně vlastněná organizace, která pracuje na sdílené misi. Většina DAO shromažďuje kryptoměnu v pokladně, kde členové hlasují o tom, jak bude využita.
 
@@ -34,7 +34,7 @@ V tradiční společnosti spolupracuje generální ředitel s vedením na stanov
 
 Pokud uspěje tradiční společnost, většina bohatství připadne několika zakladatelům, některým prvním zaměstnancům a investorům, kteří už obecně mají vyšší čisté jmění. DAO je jakési krypto družstvo, které dává širší skupině lidí příležitost vlastnit podíl, podílet se na správě a sdílet potenciální zisky.
 
-#### CityDAO a onchain města (2:28) {#citydao-and-onchain-cities-228}
+### CityDAO a onchain města (2:28) {#citydao-and-onchain-cities-228}
 
 CityDAO vzešlo z mé frustrace při jednání s městskou byrokracií a úředním šimlem během budování startupu, který pomáhá městům lépe využívat jejich prázdná parkoviště. Trvalo nám více než tři měsíce získat povolení jen k prodeji parkování v San Franciscu a byla to archaická byrokratická noční můra. Věci jako lepší a efektivnější využití parkoviště – vybudování parku pro food trucky, logistického centra, možná i nového bydlení nebo farmářského trhu – jsou zdlouhavé, mohou trvat měsíce nebo roky, nebo dokonce mohou být nelegální kvůli zákonům o územním plánování.
 
@@ -42,7 +42,7 @@ CityDAO patřilo mezi první DAO, která měla dost odvahy na to, aby koupila po
 
 V CityDAO si představujeme onchain město, kde jsou věci jako povolování, rozpočty, zákony, listiny a záznamy transparentní na blockchainu a chytré kontrakty mohou urychlit transakce a snížit byrokracii. Věci, které dříve trvaly týdny – jako nákup nebo prodej pozemku, nebo vzetí půjčky proti vaší nemovitosti – by se mohly stát během několika sekund prostřednictvím chytrého kontraktu.
 
-#### Jak se DAO organizují (3:49) {#how-daos-organize-349}
+### Jak se DAO organizují (3:49) {#how-daos-organize-349}
 
 DAO jsou finanční flash moby, které se často zorganizují zdánlivě přes noc za účelem realizace nějakého nápadu. Obvykle začínají jako pár lidí, kteří mají velkou vizi, ale uvědomují si, že k jejímu uskutečnění bude zapotřebí velkého kolektivního úsilí.
 
@@ -50,7 +50,7 @@ Komunitu obvykle zakládají na serveru pro skupinový chat, přičemž nejběž
 
 Lidé mohou do DAO přispívat na plný úvazek, na částečný úvazek, ale jedním z nejběžnějších způsobů je prostřednictvím odměn (bounties) – kdy do DAO naskočíte a zase vyskočíte, přebíráte malé úkoly a přispíváte tam, kde můžete.
 
-#### Správa a financování (4:39) {#governance-and-funding-439}
+### Správa a financování (4:39) {#governance-and-funding-439}
 
 Většina DAO získává počáteční financování prodejem tokenu správy, který dává držitelům hlasovací práva ohledně aktivit DAO. Tyto tokeny si můžete buď koupit na otevřeném trhu pomocí kryptoměny, jako je Ethereum, nebo je můžete získat tím, že do DAO přispějete – například návrhem loga, výzkumem nebo napsáním nějakého kódu.
 
@@ -60,7 +60,7 @@ DAO se někdy označují jako skupinové chaty s bankovním účtem. A já vím,
 
 Prostředky se nacházejí ve veřejné blockchainové pokladně, kde může kdokoli auditovat příjmy a výdaje. Kdykoli jde o výdaje nebo převody peněz, DAO to schvaluje prostřednictvím návrhu. Návrh, který obvykle píše člen DAO, začíná jako nápad, o kterém se debatuje a o kterém se dá hlasovat držitelům tokenů.
 
-#### Nákup Parcely 0 (5:53) {#buying-parcel-0-553}
+### Nákup Parcely 0 (5:53) {#buying-parcel-0-553}
 
 Jedním z prvních návrhů v CityDAO samozřejmě bylo, jaký pozemek koupit. DAO debatovalo o tom, co je nezbytné a co by bylo hezké mít, a přispěvatelé DAO prohledali nabídky pozemků ve Wyomingu a zúžili výběr na tři nejlepší, přičemž nastínili pro a proti každého z nich a předložili konečný návrh DAO k hlasování.
 
@@ -68,7 +68,7 @@ Hlasovali jsme pro získání Parcely 0 poblíž Cody ve Wyomingu – vybrané p
 
 Dalšími kroky v CityDAO jsou věci jako hlasování o tom, co se na pozemku postaví a kdo ho bude moci kdy využívat. Některé další návrhy, které kolují, jsou věci jako nákup kusu půdy v Amazonii za účelem ochrany přírody, nebo vybudování sítě prostorů vlastněných DAO, které mohou občané kdykoli navštívit – možná takové decentralizované město.
 
-#### DAO v akci (7:11) {#daos-in-action-711}
+### DAO v akci (7:11) {#daos-in-action-711}
 
 Dnes vidíme, jak DAO společně dělají nejrůznější opravdu zajímavé věci. Budují produkty, investují do startupů, kupují umění a aktiva, financují výzkum a vybírají peníze.
 
@@ -78,7 +78,7 @@ PleasrDAO sbírá umění a digitální aktiva, jako jsou NFT. Nedávno zakoupil
 
 V DAO jako MetaCartel a Seed Club členové posuzují příspěvky od slibných startupů a projektů a rozhodují o tom, které z nich budou financovat. VitaDAO financuje výzkum a nedávno UkraineDAO vybralo přes šest milionů dolarů, které darovalo na ukrajinské obranné úsilí.
 
-#### Výzvy a budoucnost (8:40) {#challenges-and-the-future-840}
+### Výzvy a budoucnost (8:40) {#challenges-and-the-future-840}
 
 Pro DAO je stále brzy a rozhodně nejsou pro všechno. Vyžadují určitou úroveň budování konsensu a mohou se pohybovat pomaleji než společnost, která má šéfa, jenž může prostě rozhodovat. Koneckonců, ConstitutionDAO bylo v aukční síni Sotheby's přeplaceno generálním ředitelem společnosti Citadel a někteří říkají, že transparentnost a decentralizace ztížily DAO koordinaci a výhru v aukci.
 

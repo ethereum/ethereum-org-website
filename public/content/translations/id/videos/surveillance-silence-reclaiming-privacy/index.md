@@ -18,11 +18,11 @@ Sebuah pidato utama oleh **Naomi Brockwell** di EthBoulder 2026 tentang pengikis
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=nvJSFR1Q_JE) yang diterbitkan oleh EthBoulder. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pembicaraan dua bagian: peringatan + solusi (00:00) {#two-part-talk-warning-solution-0000}
+### Pembicaraan dua bagian: peringatan + solusi (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Luar biasa. Selamat datang semuanya. Terima kasih sudah hadir di sini. Jadi, ini akan menjadi pembicaraan dua bagian. di bagian pertama, mungkin akan terasa sedikit intens. Saya dikenal cukup intens ketika membahas tentang privasi dan pengawasan. bagian kedua akan memiliki nada yang sedikit berbeda. Jadi di bagian pertama saya akan menceritakan sebuah kisah dan di bagian kedua kita akan menyelamatkan dunia. Jadi jika kalian semua setuju dengan itu, kita bisa mulai.
 
-#### Pakaian baru kaisar (00:44) {#the-emperors-new-clothes-0044}
+### Pakaian baru kaisar (00:44) {#the-emperors-new-clothes-0044}
 
 Jadi babak pertama. Mari kita mulai dengan babak pertama dari cerita kita. Mantra. Pada suatu ketika ada seorang kaisar yang dijual seperangkat pakaian baru yang luar biasa. Penjual itu memberitahunya, "Pakaian ini istimewa. Hanya orang yang cerdas dan berbudi luhur yang bisa melihatnya, dan siapa pun yang tidak pantas untuk posisi mereka tidak akan melihat apa-apa." Kaisar tidak bisa melihat pakaian apa pun, tetapi dia takut untuk mengakuinya. Mengatakan hal itu berarti mengakui bahwa dia tidak layak untuk memerintah, jadi dia tidak mengatakan apa-apa. Dan ketika kaisar muncul di depan umum berparade di jalan-jalan, tidak ada orang lain yang bisa melihat pakaian itu juga. 
 
@@ -32,7 +32,7 @@ Jadi, pada intinya, mari kita kembali ke sini. Pada intinya, cerita ini bukan te
 
 Nah, dalam cerita kita, setiap orang berpikir bahwa mungkin merekalah masalahnya. Jadi, mereka mengikuti tetangga mereka dan berasumsi bahwa jika ada sesuatu yang benar-benar salah, orang lain pasti sudah angkat bicara lebih dulu. Semua orang tunduk pada kebijaksanaan orang banyak. Dan ini adalah strategi yang buruk karena orang banyak itu salah. Kaisar itu telanjang. Dan karena semua orang tetap diam, konsensus menggantikan kebenaran. Keheningan orang banyak menjadi bukti bahwa semuanya baik-baik saja. Nah, inilah tepatnya bagaimana privasi runtuh di dunia modern.
 
-#### Mesin (02:46) {#the-machine-0246}
+### Mesin (02:46) {#the-machine-0246}
 
 Jadi, babak kedua, mesin. Inilah versi modern dari cerita tersebut. Kita hidup di bawah rezim pengumpulan data terbesar dalam sejarah manusia. Kita telah membangun dan terus memberi makan infrastruktur pengawasan yang tidak seperti apa pun yang pernah dilihat dunia sebelumnya. dan lintasan arah tujuan kita adalah resep untuk sebuah bencana. Sekarang, mengapa demikian? Karena saat ini, satu-satunya cara agar hal ini berakhir dengan baik adalah jika kita dapat menjamin bahwa orang jahat tidak akan pernah mendapatkan kendali atas sistem ini. Namun, jika orang jahat pada akhirnya mendapatkan kendali, ini ibarat senjata atom dengan energi potensial yang dipenuhi dengan semua bahan yang dibutuhkan untuk mengendalikan suatu populasi sepenuhnya. 
 
@@ -42,13 +42,13 @@ Rasanya tidak nyaman, bukan? Dan kita merasakannya ketika sebuah aplikasi memint
 
 Kita merasa ada yang salah ketika kita membaca sekilas kebijakan privasi dan kita tahu bahwa kita seharusnya membacanya dengan saksama. Mungkin ada beberapa hal penting di dalamnya. Dan sebenarnya tertulis jelas di sana hitam di atas putih bahwa ya, mereka benar-benar akan membagikan data intim ini dan kita bahkan tidak tahu dengan siapa, tetapi kita tetap mengeklik terima karena lagipula itu tidak mungkin seburuk itu, atau menerima hal-hal ini tidak akan menjadi status quo, bukan? Jika memang seburuk itu, tidak mungkin semua orang akan melakukannya begitu saja.
 
-#### Seberapa burukkah status quo saat ini? (05:12) {#how-bad-is-the-status-quo-0512}
+### Seberapa burukkah status quo saat ini? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Jadi, seberapa burukkah status quo saat ini? Seberapa buruk sebenarnya hal ini? Atau mungkin kita harus membicarakan hal ini karena beberapa orang berpikir bahwa ini hanyalah masalah perusahaan yang mencoba menjual sepasang sepatu yang lebih baik kepada kita. Ini hanya seperti urusan konsumen saja, bukan? Atau mungkin ini hanya tentang perusahaan media sosial yang mempelajari kita untuk membuat algoritma yang lebih disesuaikan, bukan? Itu sepertinya tidak terlalu gawat. Apa masalahnya dengan semua itu?
 
 Namun saat ini, kita semua menyetujui mesin pengawasan yang tersebar luas yang secara diam-diam menyerang setiap area privat dalam hidup kita. Sekarang, di beberapa tempat seperti rezim otoriter, mesin ini digunakan untuk mengendalikan pembangkangan sebelum terjadi dengan menandai orang-orang yang berpotensi bermasalah sebagai orang yang lebih mungkin untuk bergabung dengan gerakan protes dan kemudian menargetkan orang-orang tersebut. Terkadang mesin ini digunakan untuk membentuk sentimen publik atau memengaruhi opini atau memengaruhi pemilihan umum atau membuat seluruh populasi membenci jenis orang tertentu dengan meyakinkan mereka bahwa kelompok tersebut membenci mereka. Dan kemudian ada negara-negara yang secara publik menyiarkan informasi tentang warga negara yang skor kredit sosialnya telah turun dan kemudian mereka menggunakan skor tersebut untuk membatasi perjalanan, membatasi pekerjaan mereka, memblokir anak-anak mereka dari sekolah tertentu, atau memutus mereka dari kesempatan sama sekali.
 
-#### Pengumpulan data pada skala triliunan dolar (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Pengumpulan data pada skala triliunan dolar (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Dan sekarang dengan revolusi AI, mesin tersebut berhenti menjadi sekadar catatan hidup Anda dan berubah menjadi mesin prediksi. Inilah mengapa hal ini penting. Jadi saya ingin membuatnya konkret untuk Anda. Jadi saya akan membahas kondisi pengawasan saat ini. 
  
@@ -56,7 +56,7 @@ Saya akan memecah mesin ini menjadi tiga bagian. Pertama, yang dikumpulkan. Baga
  
 Namun katakanlah Anda benar-benar beruntung dan Anda terhindar dari penargetan sistem ini. Namun anak-anak Anda mungkin tidak akan terhindar darinya, dan Anda tidak tahu apakah mereka akan terhindar atau tidak. Dan mesin yang Anda setujui hari ini, tidak akan hilang. Anda tidak tahu siapa yang akan berkuasa besok.
 
-#### Bagaimana informasi ini bocor (08:03) {#how-this-information-is-leaked-0803}
+### Bagaimana informasi ini bocor (08:03) {#how-this-information-is-leaked-0803}
  
 Jadi, bagian kedua adalah bagaimana informasi ini kemudian bocor. Setiap tahun, jumlah pelanggaran data mencapai rekor tertinggi baru. Membocorkan segala macam informasi yang seharusnya tidak pernah dikumpulkan oleh perusahaan sejak awal. Seperti riwayat lokasi dan rekam medis, data keuangan, pesan pribadi, dan informasi ini tersebar luas, dan semuanya berakhir di dark web untuk digunakan oleh kartel terorganisir, geng kriminal, dan peretas yang didukung negara. 
 
@@ -68,7 +68,7 @@ Namun, perusahaan tetap memutuskan untuk mengumpulkan semua data yang tidak perl
  
 Jadi, ini seperti kerumunan yang bertepuk tangan di parade, bukan? Bukan karena kita yakin bahwa setiap klik dan setiap persetujuan itu aman. Itu karena angkat bicara dan memilih keluar atau beralih alat terasa lebih sulit daripada sekadar ikut-ikutan.
 
-#### Backdoor & penyadapan pemerintah (09:33) {#backdoors-government-interception-0933}
+### Backdoor & penyadapan pemerintah (09:33) {#backdoors-government-interception-0933}
  
 Jadi sekarang mari kita bahas tentang kategori ketiga ini, yaitu yang dijadikan senjata. Operasi intelijen asing yang bermusuhan telah menyusup ke infrastruktur komunikasi inti. Saya baru saja mengobrol dengan orang-orang tentang Salt Typhoon, kan? Tiongkok, misalnya, telah menyadap panggilan dan pesan kita dalam skala besar. 
 
@@ -78,7 +78,7 @@ Kita tahu bahwa tidak mungkin bagi pemerintah untuk memastikan bahwa hanya merek
 
 Kita tahu tentang salah satunya, Salt Typhoon, tetapi kita tidak tahu siapa lagi yang telah mengumpulkan komunikasi kita yang sensitif dan intim di dalam infrastruktur yang sangat kita andalkan ini.
 
-#### Mengapa pengawasan lebih jarang terjadi daripada yang Anda kira (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Mengapa pengawasan lebih jarang terjadi daripada yang Anda kira (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Jadi, sang kaisar telanjang dan satu-satunya alasan semua ini terus berlanjut adalah karena kerumunan terus bertepuk tangan. Namun, ada alasan lain mengapa kerumunan terus bertepuk tangan. 
  
@@ -112,7 +112,7 @@ Jadi, berapa ratus juta orang yang menggunakan produk Apple dan satu orang memut
 
 Ada presentasi lain di mana ayah seseorang membawa pulang salah satu perangkat *home hub* tersebut, bukan? Dia memutuskan untuk melakukan beberapa penyelidikan. Terkadang dia bermain dengan berbagai alat di rumah dan dia ingin mencari tahu bagaimana cara kerjanya. Dan ternyata perangkat konsumen populer yang bisa dibeli siapa saja ini digunakan sebagai hub dalam botnet Tiongkok yang masif. Lalu FBI melihat presentasi tersebut. Mereka akhirnya menurunkan presentasi tersebut dari internet dan menjadikan penyelidikan tersebut rahasia. Mereka tidak tahu hal ini sedang terjadi, tetapi dialah yang menarik perhatian mereka hanya dengan memberikan presentasi ini seperti, "Hai teman-teman, saya menemukan hal aneh ini sedang terjadi." Dan begitulah cara kita mengetahui bahwa botnet Tiongkok yang masif sedang menyerang semua rumah kita melalui satu perangkat khusus ini. Bagaimana dengan semua perangkat lain di rumah kita yang belum ada seorang pun yang repot-repot melihatnya?
 
-#### Masalah kebungkaman & konsensus palsu (16:30) {#the-silence-problem-false-consensus-1630}
+### Masalah kebungkaman & konsensus palsu (16:30) {#the-silence-problem-false-consensus-1630}
 
 Jadi, di situlah posisi kita saat ini. Pengawasan saat ini tersebar luas, tidak terlihat, dinormalisasi, dan terjustifikasi, serta kita menganggapnya sebagai standar industri. Dan di situlah posisi kita saat ini.
 
@@ -134,7 +134,7 @@ Jadi Eric Schmidt dari Google, dia memiliki kutipan kejam yang terkenal ini di m
 
 Jadi, perhatikan apa yang sedang terjadi. Privasi telah dibingkai sebagai rasa bersalah dan kepatuhan telah dibingkai sebagai kebajikan. Orang baik adalah mereka yang menyerah pada akses dan orang yang mencurigakan adalah mereka yang mengajukan pertanyaan. Dan sekarang melawan menjadi mahal secara sosial. Begitu Anda menyematkan label moral itu pada kebungkaman, parade itu akan berjalan dengan sendirinya.
 
-#### Bagaimana kita menghentikan parade sang kaisar? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Bagaimana kita menghentikan parade sang kaisar? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Mari kita kembali ke cerita kita. Pakaian baru sang kaisar. Saat sang kaisar berbaris menyusuri jalan dengan pakaian barunya, kerumunan orang bertepuk tangan. Mereka mengagumi keahlian pembuatannya. Mereka memuji keanggunannya. Mereka mengomentari potongan dan kainnya serta bagaimana pakaian itu memantulkan cahaya. Dan mereka bersaing untuk terdengar paling terkesan. Dan para abdi dalem mencondongkan tubuh ke depan dan mereka sangat ingin terlihat setuju, dan para pejabat mengangguk dengan khidmat, dan para penasihat menambahkan pujian teknis yang berbunga-bunga dan mereka mengarang detail untuk membuktikan bahwa mereka memahami apa yang mereka lihat, dan beberapa berbicara dengan lantang berharap untuk didengar, dan yang lain tersenyum dan tidak mengatakan apa-apa, berhati-hati agar tidak terlihat bingung. Dan tidak ada yang ingin menjadi orang pertama yang ragu, dan tidak ada yang ingin menjadi orang yang mengajukan pertanyaan yang sudah jelas, dan dengan setiap pujian, kebohongan itu menjadi semakin sulit untuk dibatalkan. 
 
@@ -158,7 +158,7 @@ Jadi, cara hal ini berubah bukanlah dengan menunggu sang kaisar berhenti. Melain
 
 Sekarang, ketika orang-orang, ketika cukup banyak orang berhenti bertepuk tangan, parade itu tidak dapat dilanjutkan. Dan itulah bagian dari cerita yang masih kita tulis di sini. Jadi, ini bukan tentang apakah sang kaisar tidak memakai baju. Kita semua tahu bahwa dia tidak memakai baju apa pun. Satu-satunya pertanyaan yang tersisa adalah apakah kita terus berjalan di sampingnya, berpura-pura bahwa semuanya baik-baik saja.
 
-#### Bagian dua: mari kita selamatkan dunia (25:22) {#part-two-lets-save-the-world-2522}
+### Bagian dua: mari kita selamatkan dunia (25:22) {#part-two-lets-save-the-world-2522}
 
 Jadi dengan catatan yang cukup suram itu, bagian dua: mari kita selamatkan dunia. Siapa yang menginginkan masa depan yang lebih baik? Siapa yang menginginkan masa depan yang lebih baik untuk generasi mendatang, untuk anak-anak mereka? Siapa yang ingin mengubah keadaan? Karena kita sepenuhnya berdaya untuk membuat perbedaan. 
 
@@ -312,7 +312,7 @@ Jadi setiap kali Anda berada di titik itu, coba saja lihat apakah itu sesuatu ya
 
 Selain itu, jika legislator melarang hal-hal ini hingga tidak ada lagi, karena tidak ada yang memperjuangkannya, karena kita semua berkata, "Yah, saya tidak punya apa-apa untuk disembunyikan." Hal-hal ini akan hilang.
 
-#### Pilihan yang harus kita buat tentang masa depan yang ingin kita lihat (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Pilihan yang harus kita buat tentang masa depan yang ingin kita lihat (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Jadi, saya akan mengakhiri dengan pesan ini karena sepertinya waktu kita sudah hampir habis. Saat ini, kita berada di persimpangan jalan di mana kita harus membuat beberapa pilihan tentang dunia yang ingin kita lihat. Dan saya tahu ada banyak orang yang merasa direpotkan oleh sistem-sistem ini dan tampaknya butuh banyak usaha untuk beralih. 
 

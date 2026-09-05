@@ -19,7 +19,7 @@ Offchain Labs ve Prysm'den **Preston Van Loon**'un ETHDenver'da yaptığı bir s
 
 *Bu döküm, ETHDenver tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=GgKveVMLnoo) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:07) {#introduction-007}
+### Giriş (0:07) {#introduction-007}
 
 **Sunucu:** Pekâlâ millet. Hız kesmeden devam ediyoruz. Preston Van Loon ile Ethereum'un evrimi hakkında konuşacağız. Söz sende.
 
@@ -29,7 +29,7 @@ Muhtemelen daha önce duyduğunuz bir anlatı var: Ethereum ürün çıkarmada �
 
 Prysm fikir birliği istemcisi üzerinde çalışıyorum. Bu, Ethereum işaret zincirinin temel bileşenlerinden biridir. Ve en son güncellemeler için — Pectra, Fusaka için — cephedeydim. İçeriden gördüğüm kadarıyla bu, insanların yıllardır Ethereum için iddia ettiği yavaş işleyen bir bürokrasi değildi. Aslında, Ethereum tarihinde şimdiye kadar gördüğümüz en büyük yükseltmelerden bazılarını sunan, yüksek hızlı ve iyi işleyen bir makineydi.
 
-#### Bir yılda üç yükseltme yayımlamak (1:18) {#shipping-three-upgrades-in-one-year-118}
+### Bir yılda üç yükseltme yayımlamak (1:18) {#shipping-three-upgrades-in-one-year-118}
 
 2025'te yayımladığımız şey, bir yıl içinde üç büyük güncellemeydi. İlk olarak, Mayıs 2025'te Pectra. Bu, yerleşik hesap soyutlama, birleştirmelere olanak tanıyan doğrulayıcı maksimum etkin bakiye artışı ve on adet daha EIP getirdi. Mayıs ayında bu, EIP'ler açısından Ethereum'un şimdiye kadar gördüğü en büyük yükseltmeydi.
 
@@ -37,7 +37,7 @@ Ancak sadece yedi ay sonra, EIP'ler açısından daha da büyük bir yükseltme 
 
 Bu, Ethereum'un ürün çıkarma becerisinin bir kanıtıdır. Bu; beş veya altı fikir birliği istemcisi, beş yürütme istemcisi, birçok araştırmacı — Ethereum'un çekirdek geliştirmesine dahil olan yüzden fazla kişi — arasındaki bir iş birliğidir ve hepsi aynı anda koordineli bir şekilde ürün yayımlıyor.
 
-#### PeerDAS ölçeklendirmesi (2:22) {#peerdas-scaling-222}
+### PeerDAS ölçeklendirmesi (2:22) {#peerdas-scaling-222}
 
 Fusaka'nın başrol oyuncusuna bir göz atalım: PeerDAS. PeerDAS çok harika bir ölçeklendirme çözümüdür. PeerDAS'tan önce Pectra vardı ve Pectra ile — bir düğüm operatörü veya doğrulayıcı olarak — bir blok ile gelen her blob'u indirmek zorundaydınız. Bu, blok başına altı blob'u hedefliyordu. Herkesin bunu indirmesi gerekiyordu ve bu gerçekten bir ölçeklendirme darboğazıdır. Bunu artırmak isterseniz, düğüm operatörlerinden blob'lar için bant genişliği kullanımlarını orantılı olarak artırmalarını istemiş olursunuz.
 
@@ -47,7 +47,7 @@ Rakamlara bakacak olursak: Pectra için 36 milyonluk bir gaz limiti ile altı he
 
 Ve sonra, altı blob hedefi olan her bloğun artık bir doğrulayıcının depolaması gereken sadece 96 kilobaytlık blob verisi olduğu o büyük bant genişliği düşüşünü elde ettik. Sonra yine sadece blob parametrelerini içeren çatallanma olan BPO1 ile hedefi 10'a ve maksimumu 15'e çıkardık. Sadece bir ay sonra gerçekleşen BPO2, 14 ve 21'e çıktı — bu Pectra'da sahip olduğumuzun iki katı, ancak bireysel stake edenler için blob'larda hala %71 daha az bant genişliği kullanımı anlamına geliyor.
 
-#### Glamsterdam'da neler geliyor (4:30) {#whats-coming-in-glamsterdam-430}
+### Glamsterdam'da neler geliyor (4:30) {#whats-coming-in-glamsterdam-430}
 
 Glamsterdam'da sırada ne var? Gerçekten kilit öneme sahip üç şey ve hala aktif araştırma aşamasında olan bir şey var.
 
@@ -57,7 +57,7 @@ Sahip olduğumuz bir sonraki şey blok düzeyinde erişim listeleridir. Bu, her 
 
 Üçüncü şey gaz yeniden fiyatlandırmasıdır. Bu EIP aracılığıyla bazı işlem kodlarının aşırı fiyatlandırıldığını, bazılarının ise düşük fiyatlandırıldığını gösteren kıyaslamalar yapıldı. Şimdi, Ethereum'u daha güvenli ve daha verimli hale getirmek için her bir işlem kodu için ödediğiniz ücretleri gerçeği yansıtacak şekilde güncelleyeceğiz.
 
-#### Katman 2 (L2)'lerin evrilen rolü (6:14) {#the-evolving-role-of-l2s-614}
+### Katman 2 (L2)'lerin evrilen rolü (6:14) {#the-evolving-role-of-l2s-614}
 
 Vitalik'in yakın zamanda bahsettiği bir şey hakkında konuşmak istiyorum. Birkaç hafta önce attığı bir tweet'te, katman 2 (L2)'lerin orijinal vizyonunun ve Ethereum'daki rollerinin artık mantıklı olmadığını söyledi. Bu çok fazla manşet oldu ve bence birçok insan bundan yanlış bir sonuç çıkardı.
 
@@ -65,7 +65,7 @@ Vitalik'in yakın zamanda bahsettiği bir şey hakkında konuşmak istiyorum. Bi
 
 Dolayısıyla, genel amaçlı L2'lere ihtiyacımız olduğu fikri — yani, katman 1 (L1)'de sahip olduğumuz aynı EVM olan, sadece birkaç kez kopyalayıp yapıştırdığımız ve tek yaptıkları daha hızlı gitmek olan L2'ler — artık vizyonumuz bu değil. Bu L2'ler uzmanlaşarak gelişecekler. Bazıları gizlilik, oyun, merkeziyetsiz finans (DeFi) içindeki belirli alanlar veya EVM'nin uzantıları gibi şeyleri hedefleyecek. Ancak sadece L1'in klonlanmış bir kopyası iseler, L2'ler aracılığıyla bu tür parçalanmış bir paradigmayı ilk başta hayal ettiğimiz yol haritasının bir parçası değillerdir.
 
-#### FOCIL: protokol düzeyinde sansür direnci (7:25) {#focil-protocol-level-censorship-resistance-725}
+### FOCIL: protokol düzeyinde sansür direnci (7:25) {#focil-protocol-level-censorship-resistance-725}
 
 Glamsterdam'ın ötesinde, aktif geliştirme ve araştırma aşamasında olan gerçekten harika üç şey var. Birincisi FOCIL — Çatallanma Seçimi ile Zorunlu Kılınan Dahil Etme Listeleri.
 
@@ -75,23 +75,23 @@ FOCIL güç dinamiğini değiştiriyor. Blok oluşturucuların bir bloktaki tüm
 
 Bu, çatallanma seçimi yoluyla zorunlu kılınır. Bir bloğu gören doğrulayıcılar, altına eklenmiş bir dahil etme listesi olmadığı sürece ona onay vermeyecektir. Listesi olmayan bir blok görürlerse, o bloğu geçersiz sayacak ve görmezden geleceklerdir — onu yaymayacaklar, üzerine oy vermeyecekler. Bu, bazı parametreleri hala kararlaştırılmakta olan aktif bir araştırmadır, ancak yön açıktır: Ethereum, protokol düzeyinde sansür direncini içerecektir.
 
-#### Daha kısa slot süreleri (9:24) {#shorter-slot-times-924}
+### Daha kısa slot süreleri (9:24) {#shorter-slot-times-924}
 
 Bir sonraki gerçekten heyecan verici olan şey daha kısa slot süreleridir. Glamsterdam'dan sonraki çatallanma olan Hegata ile, daha kısa slot sürelerini veya hızlı slotları dahil edip edemeyeceğimizi değerlendiriyoruz. Bu, doğrudan altı saniyelik slotlara veya daha da hızlısına atlayacağımız anlamına gelmiyor, ancak bunu mümkün kılacak altyapıyı inşa ediyoruz.
 
 Kulağa gerçekten basit geliyor — "hadi daha hızlı gidelim" gibi. Ancak ağ yayılımını, gerçekleştirmek için sınırlı bir süreleri olan doğrulayıcı onay görevlerini ve ardından ekonomiyi düşünmeniz gerekir. Bunu ilk denediğimde, sadece 12'yi 6 olarak değiştirdim ve aniden herkes iki kat daha fazla ihraç — iki kat daha fazla para — kazanmaya başladı, ki bu daha kısa slot sürelerinin arkasındaki asıl niyet değildir. Amaç daha hızlı gitmek ama her şeyi eşit tutmaktır. Yani bu çok karmaşık bir şey, ancak oyunun sonunda oraya kademeli olarak ulaşma olasılığı var.
 
-#### Daha hızlı kesinlik (10:20) {#faster-finality-1020}
+### Daha hızlı kesinlik (10:20) {#faster-finality-1020}
 
 Üçüncü şey daha hızlı kesinliktir. Bu gerçekten önemlidir çünkü Ethereum her iki dönemde bir — her 13 dakikada bir — kesinleşir ve şu soruyu sormaya gerçekten bağlı olan uygulamalar vardır: işlemim kalıcı mı? İşlem kesinleşmiş bir dönemde yer almadıysa, cevap hayırdır — yeniden organize edilerek (reorg) ortadan kalkma ve işlemin tekrar gönderilmesi gerekme ihtimali küçüktür.
 
 Şimdi, eğer hızlı kesinliğe sahip olursak, borsalar, köprüler veya herhangi bir uygulama bir işlemin kesin olduğundan emin olabilir. İlk olarak, kesinlik için iki dönem yerine bunu bir dönemde yapalım. Sonra 32 slot uzunluğundaki dönemler yerine, bunları dört slota kısaltalım diyebiliriz. Şimdi, bunu altı saniyelik slot süreleriyle birleştirirseniz, 30 saniyeden daha kısa sürede kesinlikten bahsediyorsunuz demektir. Bu gerçekten harika bir nihai hedeftir.
 
-#### Kutup yıldızı (11:15) {#the-north-star-1115}
+### Kutup yıldızı (11:15) {#the-north-star-1115}
 
 Tüm bunlar, katman 1 (L1)'in saniyeler içinde kesinleşme ile hızlı olduğunu söylediğimiz kutup yıldızına (nihai hedefe) entegre edilmiştir. Oraya nasıl ulaşırız? İlk olarak, halihazırda yayımlanmış olan PeerDAS ile başlıyoruz. Bu bize veri kullanılabilirliği için ölçeklenebilir bir katman sağladı. Sırada, çoğunlukla teklifçi-oluşturucu ayrımı (PBS) için temiz bir uygulama olan ve FOCIL gibi şeyleri daha etkili hale getiren ePBS'yi içeren Glamsterdam var. FOCIL, ePBS ile çok uyumlu olan sansür direnci ile devreye giriyor. Daha hızlı slotlarla, daha hızlı slot süreleri daha hızlı kesinliği daha da etkili hale getirir. Sonra saniyeler içinde kesinleşmiş hızlı işlemlere gerçekten sahip olduğumuz bu nihai hedefe ulaşıyoruz.
 
-#### Kapanış (12:02) {#closing-1202}
+### Kapanış (12:02) {#closing-1202}
 
 İki yıl sonra hayatın nasıl olacağını hayal etmenizi istiyorum. Kripto çok hızlı ilerlediği için düşünmesi biraz zor. Sadece iki yıl içinde şunlar gerçek olabilir: dört veya altı saniyelik işlem onay süreleri; dakikalarla değil saniyelerle ölçülen kesinlik; sansür direnci için protokol düzeyinde yaptırım; kuantum sonrası kriptografiye karşı korumalar; ve sadece daha hızlı gitmekle kalmayıp özellikler ve yeni inovasyonlar üzerinde rekabet eden katman 2 (L2)'ler. Tüm bunlar olurken, evde tam düğüm çalıştırmak için tüketici sınıfı bir dizüstü bilgisayar veya donanım kullanabilme erdemi de korunacak. Ethereum erişilebilirdir ve gelecekte de herkes için erişilebilir kalacaktır.
 

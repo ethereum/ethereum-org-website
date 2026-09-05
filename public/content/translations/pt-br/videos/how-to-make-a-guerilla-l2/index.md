@@ -20,13 +20,13 @@ breadcrumb: "L2 de guerrilha"
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=WlsICV2OPAE) publicada pela Web3Privacy Now. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução e filosofia anarquista (0:05) {#introduction-and-anarchist-philosophy-005}
+### Introdução e filosofia anarquista (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Aplausos] Bem, obrigada por estarem aqui. Eu sei que o Vitalik está falando agora. É realmente uma honra ter alguns de vocês aqui e não na fila do matcha ali. Vamos ter uma conversa hoje sobre l2s de guerrilha, e acho que vamos chegar lá, mas apresento a vocês Melanie Premsyl, filósofa francesa e anarquista, que nos dá a honra de se juntar a nós aqui. Você quer fazer uma pequena introdução sobre si mesma?
 
 **Melanie Premsyl:** Sim. Olá a todos. Então, sou uma filósofa francesa. Estou estudando anarquia e tecnologia, e no começo eu estava mais do lado do território. Como no centro da França, por exemplo, não sei se vocês conhecem Tarnac, ou todo esse tipo de grupo que é mais violento. O principal problema que encontrei foi que precisamos estar conectados com outras pessoas no mundo, e muitos grupos anarquistas são muito limitados. Precisamos de uma maneira de nos comunicar com mais pessoas da América ou da América do Sul. E é por isso que agora estamos tentando criar uma ponte com cripto e com todos que estão tentando encontrar novas maneiras de lutar contra a falta de privacidade, a falta de liberdade e a violência do estado.
 
-#### O julgamento dos irmãos MEV (1:52) {#the-mev-brothers-trial-152}
+### O julgamento dos irmãos MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Incrível. Então, basicamente, nos conhecemos há algumas semanas em Nova York. Nós duas estávamos participando de um julgamento que estava acontecendo em Manhattan, onde esses dois irmãos, conhecidos como os irmãos MEV, estavam sendo processados porque fizeram um ataque sanduíche em alguns bots de sanduíche. Fui ao tribunal para assistir ao julgamento e vi essa pessoa aqui lendo Spinoza em francês, e fiquei muito curiosa sobre o que estava acontecendo. Não havia ninguém na plateia além de nós duas! Então fiquei muito curiosa sobre o que levou você, antes de tudo uma anarquista e filósofa em vez de uma tecnóloga, a basicamente vir assistir a este julgamento específico, mas também a pensar sobre a governança do Ethereum e todo o sistema de validação e o julgamento que estava acontecendo em Nova York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "L2 de guerrilha"
 
 **Fatemeh Fannizadeh:** Certo. Sim, é justo. Então, para aqueles que não acompanharam o julgamento, depois de umas três ou quatro semanas, foi anulado. O júri não conseguiu chegar a um veredicto unânime e decidir se esses dois irmãos eram culpados ou não de violar as regras da blockchain — o que é um resultado meio positivo, eu acho, para cripto, que um tribunal ou um júri não decida o que é certo e o que é errado onchain. 
 
-#### Criando pontes entre a blockchain e outras comunidades (4:06) {#bridging-blockchain-with-other-communities-406}
+### Criando pontes entre a blockchain e outras comunidades (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Mas tudo bem, se dermos um passo atrás sobre o que você disse dos anarquistas analisando essa tecnologia para basicamente criar uma ponte entre diferentes grupos. 
 
@@ -48,7 +48,7 @@ breadcrumb: "L2 de guerrilha"
 
 **Melanie Premsyl:** Sim, eu gostaria de dizer isso, mas não tenho certeza, porque você sabe que há muitas pessoas que precisam ganhar dinheiro, então esse é o propósito principal também. Mas acho que poderíamos apenas usá-lo como uma rede comunista, que apenas uma parte poderia ser esse tipo de sonho. Acho que é um bolo dos sonhos que pode ser feito, mas precisamos ter ferramentas e design que ajudem as pessoas a sair do pensamento técnico, muito voltado para a engenharia, para entender como é.
 
-#### Descentralização e camadas 2 (6:55) {#decentralization-and-layer-2s-655}
+### Descentralização e camadas 2 (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Isso me lembra muito as DAOs alguns anos atrás. Não sei quanto a vocês, mas eu estava muito animada, achava que as DAOs estavam revolucionando a maneira como nos organizamos como grupos e comunidades onchain e a liberdade que temos. E no final, tudo isso simplesmente não deu em nada. Não acho que se manifestou de forma alguma. Tornou-se mais sobre o sistema de votação, não é realmente democrático, é tudo sobre obter lucro. Toda essa ideia que tínhamos das DAOs como uma ferramenta social não se manifestou de verdade. 
 
@@ -56,7 +56,7 @@ breadcrumb: "L2 de guerrilha"
 
 **Melanie Premsyl:** Então, eu sou francesa. Isso é um grande problema. Sendo franceses, somos uma nação muito voltada para o estado. Então, estou sempre pensando de uma maneira pedagógica e muito de cima para baixo. E acho que a l2 cria uma maneira de que todos possam criar mini blockchains, e elas são protegidas pela camada 1 (l1). Eu gostaria de ver se as pessoas podem criar ajuda pedagógica para todos para algo que é gratuito. Acho que muitos grupos, como associações, poderiam criar sua própria blockchain, e seria uma maneira — como você sabe, o federalismo é o grande assunto principal do anarquismo. Como as pessoas podem conseguir se odiar, talvez, mas falar umas com as outras. Então precisamos ter esse tipo de federalismo na blockchain. Todo mundo tem uma camada 2 (l2) com seu próprio valor, e assim falamos com a mesma infraestrutura. 
 
-#### Anarquia, liberdade e construção de ferramentas (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarquia, liberdade e construção de ferramentas (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Sim, eu realmente gosto do que você disse sobre basicamente nos odiarmos, mas ainda assim nos comunicarmos, como não sermos tóxicos apesar de nossas diferenças. E o fato de haver apenas uma l1 neste cenário, que seria o Ethereum, também é frequentemente dito como fascista porque todos nós precisamos concordar com este único conjunto de regras. Então é este sistema único que é igual para todos, e você tem que basicamente se submeter a esta l1 ou pode se afastar, essa é uma outra questão. Mas se pudermos descentralizar isso em um ecossistema variado de pequenos rollups e l2s, então podemos trazer de volta a dissonância e a discordância dentro dessa infraestrutura comum. 
 

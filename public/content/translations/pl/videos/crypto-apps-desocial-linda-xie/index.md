@@ -19,7 +19,7 @@ Prezentacja **Lindy Xie** na Devconnect na temat zdecentralizowanych mediów spo
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=4vl8eZEOwqk) opublikowanego przez Fundację Ethereum. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Problem ze scentralizowanymi mediami społecznościowymi (0:00) {#the-problem-with-centralized-social-000}
+### Problem ze scentralizowanymi mediami społecznościowymi (0:00) {#the-problem-with-centralized-social-000}
 
 Pracuję w przestrzeni krypto od 11 lat, a obecnie w zespole Farcastera. Wcześniej budowałam rozwiązania oparte na Farcasterze. Więc jestem naprawdę pasjonatką krypto i zdecentralizowanych mediów społecznościowych oraz tego, co mogą one zrobić dla społeczeństwa.
 
@@ -27,7 +27,7 @@ Myślę, że na początku bardzo pomocne będzie nakreślenie problemów z trady
 
 I wreszcie, jeśli konto i dane są własnością platformy, oznacza to, że gdy sama firma zostanie zamknięta, nie będziesz miał dostępu do tych informacji. Widzieliśmy to wielokrotnie. W USA mieliśmy sytuację, w której TikTok mógł zostać zbanowany, co zaniepokoiło wielu twórców. Jest wiele krajów, w których wiele z tych platform wycofuje się z rynku. Więc jest to problem, z którym ludzie faktycznie spotykają się na co dzień.
 
-#### Otwarte grafy społeczne (1:30) {#open-social-graphs-130}
+### Otwarte grafy społeczne (1:30) {#open-social-graphs-130}
 
 Jedną z korzyści zdecentralizowanych mediów społecznościowych jest to, że w dowolnym momencie masz dostęp do grafu społecznego. Nie potrzebujesz żadnego pozwolenia, aby korzystać z tych danych. To, co jest naprawdę świetne, to fakt, że na dole widać otwarty graf społeczny. Wszystkie te dane mogą zostać pobrane przez dowolnego klienta, dowolnego programistę, dowolną platformę i możesz ich użyć do budowania na tej platformie.
 
@@ -35,7 +35,7 @@ Jedną z korzyści zdecentralizowanych mediów społecznościowych jest to, że 
 
 Kiedy decydujesz się na korzystanie z tej platformy, nie musisz już zaczynać od zera. Jesteś w stanie zatrzymać własną publiczność. Publikujesz raz, a następnie możesz uzyskać dystrybucję u wielu klientów w sieci. Możesz być użytkownikiem Farcastera i nadal zyskiwać większą dystrybucję dzięki aplikacji Base, ponieważ przeprowadzają oni onboarding kolejnych użytkowników i twórców. To ostatecznie najlepsze doświadczenie użytkownika. A klienci rywalizują teraz o tych użytkowników, ponieważ koszt zmiany jest naprawdę niski — nie musisz zaczynać od zera, zatrzymujesz swoją publiczność, więc klienci muszą konkurować, aby budować lepsze doświadczenia użytkowników.
 
-#### Korzyści dla budowniczych (3:13) {#benefits-for-builders-313}
+### Korzyści dla budowniczych (3:13) {#benefits-for-builders-313}
 
 Z drugiej strony mamy budowniczych, którzy są nieustannie wyrzucani z platform. Widzieliśmy to na przykładzie Twittera — wyrzuca on wiele aplikacji krypto i budowniczych, co stanowi pojedynczy punkt awarii dla ich firm. Bankr niedawno tego samego dnia został wyrzucony z Twittera i Telegrama. Na szczęście kilka dni później udało im się przywrócić konta, ale to naprawdę pokazuje, że istnieją te pojedyncze punkty awarii. Jeśli jesteś budowniczym, który poświęca cały swój czas i zasoby na próbę zbudowania swojej aplikacji, to niezwykle bolesne doświadczenie, gdy twoja dystrybucja zostaje natychmiast odcięta.
 
@@ -45,7 +45,7 @@ Jedną z naprawdę niesamowitych rzeczy w zdecentralizowanych mediach społeczno
 
 Możesz zobaczyć tutaj — opublikowałam krzyżówkę o nazwie Miniword. Każdego dnia ludzie rywalizują w niej jak w krzyżówce New York Timesa. Opublikowałam raz na Farcasterze, a to trafia również do aplikacji Base i wszystkich innych klientów. Jako budowniczy jesteś w stanie uzyskać ten wzrost dystrybucji. Jeśli dotknę, aby otworzyć miniaplikację, mogę zacząć z nią wchodzić w interakcję, a ponieważ dane społecznościowe można wykorzystywać bez pozwoleń, możesz pobrać wszystkie czasy różnych osób w sieci, a ludzie mogą rywalizować o najlepszy wynik. Staje się to bardziej doświadczeniem społecznościowym w porównaniu do samodzielnego rozwiązywania łamigłówki, a dzięki wykorzystaniu grafu społecznego możesz uzyskać większą wiralność.
 
-#### Krypto i wbudowane portfele (6:30) {#crypto-and-embedded-wallets-630}
+### Krypto i wbudowane portfele (6:30) {#crypto-and-embedded-wallets-630}
 
 Zdecentralizowane media społecznościowe istnieją — widzieliśmy to na przykładzie Bluesky, które wykonało świetną robotę, przyciągając użytkowników, gdy platformy są banowane w różnych krajach. Jednak to, co jest naprawdę wyjątkowe, to połączenie krypto i zdecentralizowanych mediów społecznościowych, ponieważ tworzysz teraz doświadczenia, których nigdy nie uzyskałbyś na tradycyjnej platformie. To jest coś, na czym nasz zespół naprawdę się skupia.
 
@@ -55,7 +55,7 @@ Użytkownicy mogą również wchodzić w interakcje z miniaplikacjami onchain, p
 
 Możesz również mieć agentów wchodzących w interakcje w kanale. Jeśli naprawdę wierzysz w tę przyszłość opartą na agentach, w której wielu agentów wchodzi ze sobą w interakcje, krypto jest naturalnym źródłem, którego używają do wysyłania sobie nawzajem środków. Nie musisz koordynować adresów ani tego, jak ktoś otrzymuje zapłatę — automatycznie znasz adres użytkownika, masz wszystkie informacje, nie ma znaczenia, gdzie na świecie mieszka. Jesteś w stanie wchodzić z nimi w bezpośrednie interakcje. Naprawdę wierzę, że krypto, agenci i otwarte grafy społeczne będą odgrywać znacznie większą rolę.
 
-#### Mikronapiwki (8:36) {#micro-tipping-836}
+### Mikronapiwki (8:36) {#micro-tipping-836}
 
 Jednym z moich ulubionych przykładów tego, co jest naprawdę unikalne w otwartych grafach społecznych w krypto, są mikronapiwki. W bardzo wczesnych dniach krypto ludzie zawsze mówili o tym, jak niesamowite byłoby dawanie mikronapiwków — jeśli jesteś twórcą publikującym naprawdę świetne treści, możliwość wysłania mu bardzo małej kwoty środków. Używałam tych wczesnych aplikacji do dawania napiwków w Bitcoinie. Ale problemem w tamtych czasach było to, że wysyłanie naprawdę małych kwot było w rzeczywistości dość powolne i drogie.
 
@@ -63,11 +63,11 @@ Teraz masz możliwość wysyłania transakcji o wartości jednego centa lub nawe
 
 Możesz zobaczyć historię aktywności mojego portfela — wysyłam środki do innych użytkowników w sieci, a także otrzymuję środki od innych użytkowników, którzy ustawili te limity wydatków. Zdarzają się nawet transakcje poniżej jednego centa, co jest dość szalonym konceptem. To są ludzie, którzy mieszkają na całym świecie. Jeśli jesteś zupełnie nowy w krypto i dołączasz do Farcastera, domyślnie masz portfel. Gdy zaczniesz publikować wysokiej jakości treści, ludzie mogą po prostu zacząć automatycznie dawać ci napiwki, a ty możesz zbudować saldo bez konieczności kupowania krypto. Rozmawiałam z tak wieloma użytkownikami, którzy powiedzieli, że to było właściwie pierwsze krypto, jakie zarobili za tworzenie treści lub interakcję z miniaplikacjami.
 
-#### Miniaplikacje i narzędzia kreatywne (11:01) {#mini-apps-and-creative-tools-1101}
+### Miniaplikacje i narzędzia kreatywne (11:01) {#mini-apps-and-creative-tools-1101}
 
 Jedną z moich ulubionych miniaplikacji, która naprawdę dobrze pokazuje wykorzystanie wbudowanego portfela, transakcji krypto i otwartego grafu społecznego, jest Emerge, zbudowana przez Atown i zespół. Umożliwia ona twórcom ułożenie promptu, który przekształca twoje zdjęcie profilowe w jakąś wersję tego promptu. Oto przykład — Peachy, bardzo popularna twórczyni w sieci, napisała prompt, aby przekształcić zdjęcia profilowe w karty tarota. Byłam w stanie wygenerować obraz przy użyciu mojego zdjęcia profilowego i udostępnić miniaplikację, aby inni zainteresowani mogli wygenerować własne. Istnieją tabele wyników pokazujące, które prompty poradziły sobie naprawdę dobrze. Jeśli jesteś osobą kreatywną, możesz tworzyć własne prompty i zacząć zarabiać — zapłaciłam 25 centów za tę transakcję promptu, a 418 innych użytkowników również go wygenerowało, więc Peachy zarabia na tworzeniu tych treści, a to może stać się wiralem w feedzie.
 
-#### Fenomen Warpleta (12:41) {#the-warplet-phenomenon-1241}
+### Fenomen Warpleta (12:41) {#the-warplet-phenomenon-1241}
 
 Właściwie mieliśmy jeden z dni z najwyższą liczbą aktywnych użytkowników dziennie na Farcasterze z powodu wiralu, który miał miejsce niedawno. Po pierwsze, mamy tę nieoficjalną maskotkę Farcastera o nazwie Warplet. Stworzył ją Dan, współzałożyciel Farcastera. Zespół — w tym ja — być może nie uważał, że jest najsłodsza, by być oficjalną maskotką, więc wypuścił ją do społeczności i powiedział, że ludzie mogą z nią robić, co chcą.
 
@@ -75,13 +75,13 @@ Programista o imieniu Angel wziął to i postanowił zbudować miniaplikację, w
 
 To, co było również naprawdę fajne do zobaczenia, to inna kultura remiksowania. Budowniczowie mówili: „Okej, każdy z was ma teraz swoje Warplety, więc zbudujmy na nich gry i fajne doświadczenia”. Pojawiły się rankingi „jaki jest najbrzydszy Warplet?” i „jak wyglądałoby dziecko Warpleta, gdyby połączyć te dwa?”. Wszystkie te zabawne gry zostały stworzone w sieci, co pokazuje, że kiedy wykorzystujesz graf społeczny, możesz stworzyć znacznie bardziej angażujące doświadczenie jako twórca aplikacji.
 
-#### Miniaplikacje dla dobra społecznego (15:02) {#mini-apps-for-social-good-1502}
+### Miniaplikacje dla dobra społecznego (15:02) {#mini-apps-for-social-good-1502}
 
 Oto przykład miniaplikacji — właściwie zbudował ją Horsefax z zespołu. Myślę, że to naprawdę ważne — możesz wesprzeć fundusz obrony prawnej Romana Storma. Użyliśmy Daimo Pay i możesz zapłacić dowolnym tokenem oraz dorzucić się do funduszu obrony prawnej. Ponieważ jest to wbudowany portfel, nigdy nie zostajesz wyrzucony, aby użyć innej aplikacji. Możesz natychmiast udostępnić to w swoim feedzie, mówiąc swoim obserwującym, że się dorzuciłeś. Mogą oni wtedy odkryć tę aplikację i również kontynuować przekazywanie darowizn. Jest to mechanizm dalszego udostępniania aplikacji wśród obserwujących i publiczności, którą każdy sam zbudował.
 
 Oto kolejny podobny przykład — zbiórka społecznościowa (crowdfund) zbudowana przez Nicholasa w Seed Club, podobna do platformy GoFundMe lub Kickstarter. Możesz zobaczyć różnych użytkowników, którzy się dorzucili. Możesz kliknąć w swoim wbudowanym portfelu i wpłacić środki bezpośrednio przez aplikację Farcaster. Nigdy nie musisz być z niej wyrzucany. Twórca był w stanie zebrać znacznie więcej niż zakładał jego cel, a ty możesz udostępnić to w swoim feedzie, aby wszyscy twoi obserwujący również mogli odkryć tę miniaplikację.
 
-#### Wyzwania zdecentralizowanych mediów społecznościowych (16:41) {#challenges-of-decentralized-social-1641}
+### Wyzwania zdecentralizowanych mediów społecznościowych (16:41) {#challenges-of-decentralized-social-1641}
 
 Wszystko to jest naprawdę niesamowite, a zdecentralizowane media społecznościowe brzmią świetnie, ale chcę być naprawdę szczera w kwestii wyzwań. Należy zauważyć, że jest to małe — bardzo małe w stosunku do wszystkich tych głównych tradycyjnych platform społecznościowych z użytkownikami liczonymi w miliardach i setkach milionów.
 
@@ -93,7 +93,7 @@ Spam to również problem. Istnieje to również na scentralizowanych platformac
 
 A potem moderacja — to również problem i wyzwanie w tradycyjnych platformach społecznościowych, aby upewnić się, że użytkownicy mają dobre doświadczenia i odkrywają treści, którymi są faktycznie zainteresowani. To są rzeczy, nad którymi nieustannie pracujemy.
 
-#### Dlaczego teraz? (19:48) {#why-now-1948}
+### Dlaczego teraz? (19:48) {#why-now-1948}
 
 Zdecentralizowane media społecznościowe istnieją już od jakiegoś czasu, ale dlaczego teraz? Myślę, że to wszystkie te prymitywy łączące się w całość. Po pierwsze, masz otwarte grafy społeczne, z których każdy może korzystać i które może wykorzystywać. Cały czas rozmawiam z zespołami, których wcześniej nawet nie znałam — po prostu budowały miniaplikacje na Farcasterze, ponieważ są w stanie wykorzystać dane bez nas.
 
@@ -105,7 +105,7 @@ Jak to wszystko się rozwinie — myślę, że e-mail jest naprawdę dobrą anal
 
 Farcaster poświęca coraz więcej czasu na funkcje handlowe; jeśli cię to nie interesuje, aplikacje Base i Uno są naprawdę świetne w prezentowaniu funkcji społecznościowych. Tak właśnie mają wyglądać media społecznościowe na dłuższą metę. Przed nami długa droga, ale naprawdę myślę, że to jest przyszłość, w kierunku której powinny zmierzać media społecznościowe.
 
-#### Pytania i odpowiedzi (23:47) {#qa-2347}
+### Pytania i odpowiedzi (23:47) {#qa-2347}
 
 **Moderator:** Bardzo dziękuję, Lindo. Mamy kilka pytań od publiczności. Myślę, że to, co jest naprawdę fajne, to fakt, że w prawdziwym świecie mogę wyjść na zewnątrz w mojej okolicy i jest tak wiele rzeczy, które mogę robić swobodnie. Cyfrowe sąsiedztwa nie zawsze są takie same, dlatego teza o zdecentralizowanych mediach społecznościowych jest bardzo przekonująca, zwłaszcza że coraz więcej naszego życia przenosi się do sieci. Obecnie następuje zmiana, w której ludzie ze scentralizowanych platform mediów społecznościowych muszą przenieść się na zdecentralizowane platformy mediów społecznościowych. Z twojego doświadczenia, jak możemy ułatwić tę migrację?
 

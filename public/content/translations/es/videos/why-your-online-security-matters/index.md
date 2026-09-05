@@ -17,7 +17,7 @@ Un breve video explicativo animado de **Amnistía Internacional** sobre por qué
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=5GTD14irFvQ) publicada por Amnistía Internacional. Ha sido ligeramente editada para facilitar su lectura, y se han añadido etiquetas para los hablantes.*
 
-#### "No tienes nada que ocultar, ¿verdad?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "No tienes nada que ocultar, ¿verdad?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agente:** No te importa la seguridad digital, ¿verdad?
 
@@ -79,7 +79,7 @@ Un breve video explicativo animado de **Amnistía Internacional** sobre por qué
 
 **Ciudadano:** Sí lo hago.
 
-#### El derecho a la privacidad (1:30) {#the-right-to-privacy-130}
+### El derecho a la privacidad (1:30) {#the-right-to-privacy-130}
 
 **Ciudadano:** Y mi país está formado por personas. Personas con derecho a su propia privacidad. Si los gobiernos quieren recopilar indiscriminadamente todos tus datos (correos electrónicos, llamadas telefónicas, imágenes de cámaras web y búsquedas en internet), eso no está bien.
 

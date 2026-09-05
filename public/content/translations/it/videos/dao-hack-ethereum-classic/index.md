@@ -19,7 +19,7 @@ Una spiegazione di **Junion** che racconta la storia dell'hack della DAO nel 201
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=rNeLuBOVe8A) pubblicata da Junion. È stata leggermente modificata per facilitarne la lettura.*
 
-#### La scoperta (0:00) {#the-discovery-000}
+### La scoperta (0:00) {#the-discovery-000}
 
 È lunedì 13 giugno 2016. Un professore di informatica della Cornell sta esaminando il codice della DAO, uno dei progetti più ambiziosi nello spazio cripto. Per mesi aveva sostenuto che il progetto dovesse essere messo in pausa, poiché riteneva ci fossero alcune falle che avrebbero potuto mettere a repentaglio l'intera operazione. Ma oggi trova una grave vulnerabilità: un bug alla riga 666.
 
@@ -33,7 +33,7 @@ Proprio come l'hack di SWIFT da 81 milioni di dollari ha reso pubbliche le falle
 
 Questa è la storia di uno dei più grandi furti digitali di sempre e dell'audace tentativo di riscrivere la storia in modo che non fosse mai nemmeno accaduto.
 
-#### Cos'era la DAO? (2:00) {#what-was-the-dao-200}
+### Cos'era la DAO? (2:00) {#what-was-the-dao-200}
 
 Entra in scena la DAO, abbreviazione di organizzazione autonoma decentralizzata (DAO). L'idea era ispirata al crowdfunding. Invece di fondi multipli per progetti diversi, ci sarebbe stato un unico fondo per dominarli tutti, e non c'era modo migliore per farlo se non con una DAO.
 
@@ -45,7 +45,7 @@ Quando il periodo di voto scadeva e veniva raggiunto un quorum del 20% di tutti 
 
 Tuttavia, c'era ancora bisogno di un modo per proteggere la minoranza dall'essere oppressa dalla maggioranza. Se un gruppo di minoranza era in forte disaccordo con una proposta che non poteva sconfiggere ai voti, invece di votare no, poteva richiamare una funzione di split (divisione) e spostare i propri ether dalla DAO principale a una DAO figlia, dividendo essenzialmente la DAO in due. Questa funzione di split sarà molto importante in seguito.
 
-#### Il crowdfunding (4:01) {#the-crowdfund-401}
+### Il crowdfunding (4:01) {#the-crowdfund-401}
 
 La DAO è stato il più grande progetto di crowdfunding di sempre, raccogliendo 12,7 milioni di ether, del valore di 150 milioni di dollari all'epoca. Ha avuto luogo durante la prima era di Ethereum, in cui il progetto era soggetto a un'enorme quantità di clamore e FOMO da parte degli investitori.
 
@@ -53,7 +53,7 @@ Prima di questo, i progetti Ethereum erano stati principalmente delle proof of c
 
 Si trattava di codice immutabile ospitato sul computer più sicuro al mondo, il che garantiva le proprietà chiave di una DAO: un'organizzazione completamente decentralizzata e autonoma. Una volta che i contratti furono distribuiti il 30 aprile, nessuna singola entità, nemmeno Slock.it, poteva apportare modifiche al protocollo o fermarne l'esistenza. Il suo codice era stato controllato innumerevoli volte da vari sviluppatori di Ethereum ed era visibile a tutti per la revisione.
 
-#### L'hack (5:02) {#the-hack-502}
+### L'hack (5:02) {#the-hack-502}
 
 "Lonely, so lonely" (Solo, così solo): il nome della Proposta DAO #59. È solo una normale proposta di split, ma in realtà è qui che inizia l'hack. Dopo che l'hacker ha presentato la proposta, c'è un periodo di dibattito standard di sette giorni in cui chiunque è libero di unirsi. Tuttavia, nessuno si unisce a questo split.
 
@@ -65,7 +65,7 @@ Ricordi quella correzione del bug avvenuta quattro giorni fa? È un peccato che 
 
 Ma senza questa correzione, chiunque poteva richiamare ripetutamente la funzione per prelevare ether prima che il contratto aggiornasse il proprio saldo. È come un bancomat che non modifica il tuo saldo finché non ti ha dato i soldi. "Posso prelevare dieci dollari? Aspetta, prima di questo, posso prelevare dieci dollari? Aspetta, prima di questo..."
 
-#### Il gruppo Robin Hood (6:55) {#the-robin-hood-group-655}
+### Il gruppo Robin Hood (6:55) {#the-robin-hood-group-655}
 
 I detentori di token DAO guardavano mentre i loro investimenti venivano lentamente prosciugati dalla DAO principale alla DAO figlia, nota anche come dark DAO. Inoltre, il prezzo di Ethereum subì un crollo improvviso da 20 a 15 dollari in seguito alla notizia. Bisognava fare qualcosa, e l'unico modo era prosciugare il resto prima che lo facesse l'hacker. E così iniziò la corsa allo svuotamento.
 
@@ -79,13 +79,13 @@ Nel frattempo, Alex si stava preparando a lanciare l'attacco white-hat per mette
 
 La mattina successiva, Alex cercò di riunire il gruppo per infiltrarsi in un'altra proposta di split, ma gli altri erano occupati. "Ci sentivamo come i peggiori hacker della storia. Siamo stati sventati da una cattiva connessione internet e da impegni familiari."
 
-#### La corsa allo svuotamento (9:10) {#the-race-to-empty-910}
+### La corsa allo svuotamento (9:10) {#the-race-to-empty-910}
 
 Quattro giorni dopo l'attacco iniziale, la DAO era di nuovo sotto attacco. Si stava prosciugando lentamente, pochi ether per round, ma aveva già accumulato qualche migliaio di dollari. Sembrava provenire da un aggressore che stava sondando il terreno. A questo punto, Robin Hood doveva fare qualcosa.
 
 Scelsero di infiltrarsi nello Split #78 perché avevano identificato il curatore della proposta e stava per terminare. Contattarono alcune balene che furono felici di donare i loro token DAO, consentendo al team di assicurarsi sei milioni di token. Più token aveva il contratto Robin, più velocemente poteva sifonare ether. L'aggressore accelerò il passo e altri aggressori si unirono. Ma grazie alle donazioni, Robin Hood fu in grado di superarli. Questo permise loro di mettere al sicuro 7,2 milioni di ether: il 55% della DAO.
 
-#### Il fork (10:08) {#the-fork-1008}
+### Il fork (10:08) {#the-fork-1008}
 
 La DAO principale era ora stata prosciugata e tutti i fondi erano distribuiti su diverse DAO figlie: le due principali erano la DAO white-hat e la dark DAO. Ma tutto il denaro era bloccato a tempo. Nessuna proposta poteva essere portata avanti sotto una DAO figlia fino al termine di un periodo di attesa di 27 giorni. E anche dopo, l'invio di fondi a un indirizzo esterno richiedeva la presentazione di una proposta e un'attesa di due settimane. In sostanza, c'erano ancora 41 giorni prima che l'hacker potesse incassare quello che equivaleva al 5% dell'offerta totale di Ethereum.
 
@@ -93,7 +93,7 @@ Ma l'hacker non sarebbe mai riuscito a toccare i suoi Ethereum. Quello che accad
 
 Una blockchain è come un elenco di transazioni che continua a crescere con ogni blocco minato. Ogni transazione è radicata nella blockchain per sempre. Ma se oltre il 50% dei miner collude, possono alterare falsamente la blockchain, riscrivendo la storia come vogliono. Di solito questo è chiamato un attacco del 51%. Ma non c'era nulla di dannoso in questo fork: la community stava solo reclamando il denaro che le era stato rubato.
 
-#### Il codice è legge (11:48) {#code-is-law-1148}
+### Il codice è legge (11:48) {#code-is-law-1148}
 
 Tuttavia, non tutti erano d'accordo con il fork proposto. Sostenevano che il codice è legge. In quest'ottica, l'aggressore era meno un hacker e più un avvocato intelligente che aveva letto attentamente i termini di un contratto. Pertanto, nessun fondo era stato effettivamente rubato e avrebbero dovuto avere legittimamente diritto agli ether della dark DAO.
 
@@ -107,7 +107,7 @@ A un esame più attento, le persone si resero conto che la firma non era valida,
 
 D'altra parte, i sostenitori sostenevano che "il codice è legge" fosse un'affermazione troppo drastica e che gli esseri umani dovessero avere l'ultima parola attraverso il consenso sociale. All'hacker non dovrebbe essere consentito di trarre profitto dall'exploit poiché è eticamente sbagliato e molto probabilmente illegale. Ma soprattutto, la DAO era semplicemente troppo grande per fallire. Deteneva circa il 15% dell'offerta totale di ether.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 In un evento che riecheggiava la crisi finanziaria del 2008, gli sviluppatori di Ethereum salvarono la DAO. Vitalik Buterin, il creatore e sviluppatore principale di Ethereum, non si scusò per aver spinto per un fork. In un'intervista, in seguito disse: "Alcuni utenti Bitcoin vedono l'hard fork come una violazione in qualche modo dei loro valori più fondamentali. Personalmente penso che questi valori fondamentali, spinti a tali estremi, siano sciocchi."
 
@@ -117,7 +117,7 @@ Ma non finisce qui. La blockchain originale di Ethereum, quella con l'hack della
 
 Se detenevi ether prima del fork, ora avresti un Ethereum e un Ethereum Classic. Se detenevi un ether nella DAO, saresti stato in grado di prelevare un Ethereum dal contratto di rimborso. E se avessi appena hackerato la DAO, avresti fatto una discreta fortuna in Ethereum Classic: circa sette milioni di dollari.
 
-#### L'eredità della DAO (16:14) {#legacy-of-the-dao-1614}
+### L'eredità della DAO (16:14) {#legacy-of-the-dao-1614}
 
 Inizialmente, Ethereum Classic guadagnò slancio come alternativa, con una forte community di fondamentalisti della blockchain che non erano d'accordo con il salvataggio. Ma da allora, Ethereum Classic non è riuscito a prendere piede ed esiste davvero solo come un'idea con scarsa utilità. Mentre Ethereum ospita migliaia di protocolli, Ethereum Classic ne ha solo alcuni di base. È chiaro che il fork aveva vinto.
 
@@ -125,7 +125,7 @@ Due mesi dopo, Robin Hood trasferì 2,9 milioni dei propri Ethereum Classic su P
 
 Per quanto riguarda l'hacker, se ne andò con 3,6 milioni di Ethereum Classic, del valore di 150 milioni di dollari oggi. Ma se non ci fosse stato alcun fork, quei 3,6 milioni di Ethereum varrebbero oggi oltre sette miliardi di dollari.
 
-#### L'impatto duraturo della DAO (17:26) {#the-daos-lasting-impact-1726}
+### L'impatto duraturo della DAO (17:26) {#the-daos-lasting-impact-1726}
 
 È importante notare che la DAO è ora comunemente chiamata Genesis DAO per evitare confusione, perché è stata la prima DAO ma sicuramente non l'ultima. Nonostante le battute d'arresto iniziali, le DAO sono diventate sempre più popolari. MakerDAO governa la stablecoin DAI, e i protocolli di finanza decentralizzata (DeFi) come Uniswap con il suo token UNI di solito hanno una DAO di governance. Tutte queste DAO si sono basate sulle esperienze dei progetti precedenti per creare organizzazioni ancora più versatili e di successo.
 

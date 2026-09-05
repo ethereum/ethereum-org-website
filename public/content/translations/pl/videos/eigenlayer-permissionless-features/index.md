@@ -19,17 +19,17 @@ Prezentacja badawcza **Sreerama Kannana** (University of Washington / EigenLayer
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=-V-fG4J1N_M) opublikowanego przez a16z krypto. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 Dzisiaj opowiem o jednym z produktów, które budujemy, będącym również ideą o nazwie EigenLayer. Nazywamy EigenLayer kolektywem restakingu, ale to, co on robi, to umożliwienie każdemu dodawania nowych funkcji do Ethereum.
 
 Jak przedstawił mnie Tim, jestem profesorem nadzwyczajnym na University of Washington w Seattle, gdzie przez ostatnie cztery i pół roku pracowaliśmy nad blockchainami, konsensusem i innymi obszarami. Przez ostatni rok zakładałem startup EigenLayer Labs. Wykonaliśmy wiele pracy nad protokołami konsensusu — opublikowaliśmy artykuł zatytułowany „Everything is a Race”, który analizuje warunki, w jakich protokoły typu najdłuższego łańcucha oparte na dowodzie pracy (PoW), dowodzie stawki (PoS) i dowodzie przestrzeni są bezpieczne. Zbudowaliśmy na podstawie części tego zrozumienia — na przykład artykuł zatytułowany Prism, który jest protokołem dowodu pracy o bardzo niskim opóźnieniu. Pracowaliśmy również nad PoSAT, dotyczącym tego, jak stworzyć dynamicznie dostępny protokół dowodu stawki, w którym protokół nadal działa przy zmiennym udziale.
 
-#### Kiedy blockchainy są rozliczalne (1:31) {#when-are-blockchains-accountable-131}
+### Kiedy blockchainy są rozliczalne (1:31) {#when-are-blockchains-accountable-131}
 
 Badaliśmy również, kiedy blockchainy są rozliczalne. Jedną z heurystyk jest to, że gdy masz kwora i podpisy, jeśli grupa stakujących podwójnie podpisze blok, te blockchainy są rozliczalne. Istnieją jednak subtelności — na przykład protokół taki jak Algorand, który również używa kworów, nie jest rozliczalny, ponieważ opiera się na założeniach czasowych, w których można stworzyć naruszenia bezpieczeństwa, nic nie mówiąc.
 
-#### Konsensus wielozasobowy (2:11) {#multi-resource-consensus-211}
+### Konsensus wielozasobowy (2:11) {#multi-resource-consensus-211}
 
 Dwie najnowsze prace dotyczą konsensusu wielozasobowego — przypuśćmy, że chcesz zbudować protokół, który wykorzystuje dowód stawki, dowód przestrzeni i dowód pracy połączone w jeden protokół. Chcesz, aby działał, nawet jeśli większość kopiących w dowodzie pracy jest złośliwa, o ile bardzo mały ułamek kopiących w dowodzie stawki jest uczciwy. Scharakteryzowaliśmy obszary kompromisów dla wielu zasobów.
 
@@ -39,7 +39,7 @@ Oprócz konsensusu istnieją rozwiązania skalujące, takie jak sharding. Mieli�
 
 Jedną z rzeczy, którą uznaliśmy za główne tarcie w blockchainie, jest to, że tempo innowacji w warstwach podstawowych — w konsensusie, shardingu czy peer-to-peer — jest znacznie niższe niż tempo innowacji w warstwie aplikacji. Aplikacje można wdrożyć w sposób niewymagający pozwoleń — każdy może wdrożyć aplikację na istniejącym blockchainie, takim jak Ethereum. Z kolei aktualizacje podstawowego protokołu są wymagające zezwolenia w bardzo głębokim sensie. To dość mocno zahamowało naszą przestrzeń.
 
-#### Oddzielenie zaufania od innowacji (8:30) {#decoupling-trust-and-innovation-830}
+### Oddzielenie zaufania od innowacji (8:30) {#decoupling-trust-and-innovation-830}
 
 Cofając się do lat 2008–2009: Bitcoin zapoczątkował zdecentralizowane zaufanie poprzez kopanie w oparciu o dowód pracy. Oprócz kopania istnieje protokół konsensusu — najdłuższego łańcucha lub najcięższego łańcucha — który decyduje o prawidłowym łańcuchu. Ponadto Bitcoin Script określa semantykę wykonania. Mamy więc warstwę zaufania u podstaw, warstwę konsensusu powyżej i warstwę wykonawczą na samej górze.
 
@@ -47,7 +47,7 @@ Ale Bitcoin był również blockchainem specyficznym dla aplikacji — zaprojekt
 
 Główną ideą zbudowaną przez Ethereum było oddzielenie zaufania od innowacji. Wzięli warstwę skryptową Bitcoina i zastąpili ją warstwą programowania ogólnego przeznaczenia, kompletną w sensie Turinga — Maszyną Wirtualną Ethereum (EVM). W podstawowym sensie była to niewielka aktualizacja techniczna, ale to, co stworzyła, to modułowość zaufania. Teraz każdy może przyjść i budować zdecentralizowane aplikacje (dapps) w tym systemie. Osoba, która zbudowała ENS, nie miała nic wspólnego z siecią zaufania. Zaufanie sieci Ethereum stało się modułem, który można dostarczyć do dowolnej rozproszonej aplikacji.
 
-#### Otwarte innowacje (10:23) {#open-innovation-1023}
+### Otwarte innowacje (10:23) {#open-innovation-1023}
 
 Doprowadziło to do ogromnego przyspieszenia pseudonimowej gospodarki. Każdy, kto tworzy te aplikacje — sam w sobie nie jest obdarzony zaufaniem, po prostu wnosi innowacje. Wpadasz na pomysł, możesz być nikim, nie musisz cieszyć się zaufaniem, po prostu piszesz swój kod, umieszczasz go na Ethereum, a wszyscy ufają, że Ethereum będzie nadal wykonywać warunki zgodnie z ustaleniami.
 
@@ -59,7 +59,7 @@ Ten obraz wygląda dokładnie tak samo jak obraz Bitcoina i Namecoina z 2011 rok
 
 Co więcej, Ethereum dostarcza zaufanie dappom tylko do tworzenia bloków — porządkowania transakcji i wykonywania transakcji. To wszystko. Jeśli dappy chciałyby zaufania do czegokolwiek innego — odczytywania danych z internetu, odczytywania danych z innego blockchaina, uruchamiania innego silnika wykonawczego, uruchamiania silnika gier, uruchamiania systemu uwierzytelniania — muszą stworzyć własną sieć zaufania. Chainlink jest świetnym przykładem: to protokół wyroczni, który pomaga pobierać dane z internetu do blockchaina, ale Chainlink ma własną sieć zaufania. Jego zaufanie nie jest pożyczane od stakujących w Ethereum.
 
-#### Problem mikroekonomiczny (16:28) {#microeconomic-problem-1628}
+### Problem mikroekonomiczny (16:28) {#microeconomic-problem-1628}
 
 Problem mikroekonomiczny: jeśli prowadzisz oprogramowanie pośredniczące (middleware) — powiedzmy, system przechowywania danych — musisz stworzyć własny mechanizm stakingu. Potrzebujesz wysokiego bezpieczeństwa ekonomicznego, co oznacza dużo stakowanego kapitału, a do tego dochodzi koszt alternatywny kapitału. Na przykład chcesz, aby w twojej warstwie przechowywania danych stakowano 10 miliardów dolarów. Musisz zapłacić 5% lub 10% rocznej stopy zwrotu od tego kapitału w niespekulacyjnym świecie. Dominującym kosztem nie jest koszt operacyjny przechowywania danych — jest nim koszt utrzymania ogromnej bazy kapitału ekonomicznego.
 
@@ -67,11 +67,11 @@ Spójrz na dowolny ekosystem dowodu stawki (PoS): 94% nagród trafia do osoby, k
 
 Jeśli jesteś dappem, problem mikroekonomiczny polega na tym, że płacisz bardzo wysoką opłatę dużej sieci zaufania, takiej jak Ethereum, ale jesteś ograniczony przez najsłabsze zaufanie, od którego zależysz. Jeśli miałbyś wyrocznię lub most, który nie jest tak zaufany, mógłbyś zostać tam wykorzystany. Twoje bezpieczeństwo jest zawsze najmniejszym wspólnym mianownikiem.
 
-#### Problem ekonomiczny (19:52) {#economic-problem-1952}
+### Problem ekonomiczny (19:52) {#economic-problem-1952}
 
 W przypadku głównego blockchaina, jeśli podstawową propozycją wartości jest zapewnienie zdecentralizowanego zaufania i czerpanie z niego przychodów, Ethereum jest w stanie zapewnić zdecentralizowane zaufanie tylko w zakresie tworzenia bloków — a nie we wszystkich innych rzeczach wymaganych do uruchomienia zdecentralizowanej usługi. Wyspy zdecentralizowanego zaufania są tworzone przez inne oprogramowanie pośredniczące i zamiast łączyć przychody i tworzyć ogromną sieć zaufania, przychody ulegają fragmentacji na mniejsze wyspy.
 
-#### EigenLayer (20:44) {#eigenlayer-2044}
+### EigenLayer (20:44) {#eigenlayer-2044}
 
 To w rzeczywistości absurdalnie prosty pomysł, który rozwiązuje wszystkie te problemy naraz.
 
@@ -81,7 +81,7 @@ Czym jest restaking? W Ethereum opartym na dowodzie stawki kilkadziesiąt miliar
 
 Właściwość, której pragniemy: ta sama stawka podejmuje dodatkowe ryzyko. Dodatkowe ryzyko na co? Na świadczenie wszelkich nowych usług, które zostały zbudowane na EigenLayer — ktoś chce zbudować wyrocznię, most, warstwę dostępności danych, nowy protokół konsensusu. Każda z tych rzeczy może zostać zbudowana na EigenLayer. Jeśli jesteś stakującym, który decyduje się na udział (opt-in), określasz również, do jakiego podzbioru usług dołączasz — zyskując w ten sposób przychody, a jednocześnie podejmując dodatkowe ryzyko cięcia.
 
-#### Jak EigenLayer dostosowuje ekosystem (23:50) {#how-eigenlayer-aligns-the-ecosystem-2350}
+### Jak EigenLayer dostosowuje ekosystem (23:50) {#how-eigenlayer-aligns-the-ecosystem-2350}
 
 Dla oprogramowania pośredniczącego: jeśli stakujący, który już stakuje w Ethereum, zdecyduje się również świadczyć usługi dla wyroczni, nie ponosi dodatkowego kosztu kapitału. Już stakuje na Ethereum i zarabia APR. Decydując się na EigenLayer, krańcowy koszt kapitału jest albo bardzo mały, albo teoretycznie zerowy. Jeśli wiesz, że jako uczciwy węzeł nigdy nie zostaniesz ścięty, ryzyko jest zminimalizowane. Równanie staje się następujące: czy koszt operacyjny jest uzasadniony przez przychody? Struktura kosztów oprogramowania pośredniczącego nagle przekształca się z ograniczonej kapitałem na ograniczoną kosztami operacyjnymi.
 
@@ -91,7 +91,7 @@ Jest to również dostosowane pod względem wartości do głównego ekosystemu. 
 
 EigenLayer to dwustronny rynek. Z jednej strony są stakujący, którzy decyduują się na udział. Z drugiej strony są oprogramowania pośredniczące i usługi zbudowane na EigenLayer, które decydują się na korzystanie z tych stakujących.
 
-#### Nadmierne lewarowanie i zarządzanie ryzykiem (33:00) {#over-leveraging-and-risk-management-3300}
+### Nadmierne lewarowanie i zarządzanie ryzykiem (33:00) {#over-leveraging-and-risk-management-3300}
 
 **Pytanie z widowni:** Co jeśli stawka jest nadmiernie lewarowana?
 
@@ -99,7 +99,7 @@ Powiedzmy, że istnieje dziesięć różnych dappów uruchamiających własne ł
 
 Jeśli system staje się nadmiernie lewarowany, opłaty rosną, więcej osób dołącza, a system ponownie staje się niedolewarowany. W miarę uruchamiania kolejnych usług rosną możliwości zysku i więcej kapitału zostaje zablokowane — zamiast 5% stakowanego ETH, możesz mieć 50%.
 
-#### Ekonomia przestrzeni blokowej (43:58) {#block-space-economics-4358}
+### Ekonomia przestrzeni blokowej (43:58) {#block-space-economics-4358}
 
 Przestrzeń blokowa jest określana przez limit bloku — maksymalny rozmiar, jaki blok może pomieścić. Wszystkie systemy blockchain mają samoregulującą się ekonomię, w której w miarę jak rozmiar bloku zbliża się do limitu bloku, ceny zaczynają gwałtownie rosnąć.
 
@@ -107,23 +107,23 @@ Limit bloku jest ustalany przez infrastrukturę najsłabszego węzła. Filozofi�
 
 EigenLayer automatycznie rozwiązuje ten problem, tworząc wolny rynek, na którym ci stakujący mogą wypożyczać swoją dodatkową przestrzeń blokową dla innych usług. Ktoś mógłby zbudować kolejny łańcuch z 15 giga-gazu na blok zamiast 15 milionów gazu. Otrzymujesz coś w rodzaju 60% bezpieczeństwa Ethereum — a to już wystarczająco dużo.
 
-#### Heterogeniczność stakujących (48:57) {#staker-heterogeneity-4857}
+### Heterogeniczność stakujących (48:57) {#staker-heterogeneity-4857}
 
 Heterogeniczność stakujących wykracza poza możliwości obliczeniowe. Stakujący są wysoce heterogeniczni pod względem preferencji dotyczących ryzyka i nagród. Ty i ja możemy się zgodzić, że zostaniemy ścięci, jeśli będziemy się różnić od danych wyjściowych API Coinbase, ale dla kogoś innego jest to całkowicie nie do przyjęcia. Tego nigdy nie da się znormalizować w podstawowym protokole, ale można to uzewnętrznić w warstwie opcjonalnej (opt-in).
 
 Stakujący są również heterogeniczni pod względem preferencji dotyczących nagród. W Ethereum przestrzeń blokowa jest wielkością bezbarwną — wszystkie transakcje są równe, a jedynym sygnałem pozwalającym je odróżnić jest cena. Bardzo trudno jest zbudować sieć społecznościową na Ethereum, ponieważ każda transakcja w sieci społecznościowej konkuruje z transakcją zdecentralizowanych finansów (DeFi), która jest znacznie bardziej opłacalna w ujęciu jednostkowym. Nasze rozwiązanie: stakujący dołączają do różnych podłańcuchów, w których mają różne preferencje dotyczące nagród.
 
-#### Demokratyczne i zwinne innowacje (51:01) {#democratic-and-agile-innovation-5101}
+### Demokratyczne i zwinne innowacje (51:01) {#democratic-and-agile-innovation-5101}
 
 EigenLayer rozwiązuje problem tego, jak zaprojektować blockchain, który jest zarówno demokratyczny, jak i zwinny w innowacjach. Ethereum jest zarządzane bardzo demokratycznie, ale też bardzo wolno reaguje. Wszystkie dzisiejsze protokoły idą na kompromis między zwinnością a demokratycznym zarządzaniem. Ethereum plus EigenLayer czerpie to, co najlepsze z obu światów: warstwę podstawową, która jest demokratyczna i powoli aktualizowana, na której EigenLayer pozwala ludziom budować innowacje szybko reagujące na wymagania rynku w sposób całkowicie niewymagający pozwoleń.
 
-#### EigenDA i zakończenie (52:56) {#eigenda-and-closing-5256}
+### EigenDA i zakończenie (52:56) {#eigenda-and-closing-5256}
 
 Badamy budowę mostów, automatyzację opartą na zdarzeniach, usługi uczciwego porządkowania, łańcuchy poboczne i integrację MEV — wszystko to na EigenLayer. EigenLayer działa już w wewnętrznych sieciach testowych. Zbudowaliśmy już pierwszy przypadek użycia: hiperskalowalną warstwę dostępności danych dla Ethereum o nazwie EigenDA. Jest to warstwa dostępności danych, która łączy w sobie najlepsze pomysły z zakresu kodowania wymazań i zobowiązań wielomianowych. W naszej sieci testowej prędkość, z jaką można zapisywać dane, wynosi 12,4 megabajta na sekundę — 10 razy więcej niż to, co ma zostać dostarczone w Ethereum 2.0.
 
 Kluczowym spostrzeżeniem jest to, że dzięki kodowaniu wymazań całkowity koszt przechowywania pliku nie zależy od liczby węzłów, które dołączyły. Ale cena, którą możesz pobrać, zależy od liczby węzłów, ponieważ zapewniasz większe bezpieczeństwo ekonomiczne. Istnieje samo-skalująca się ekonomia, w której coraz więcej węzłów będzie dołączać, ponieważ mogą pobierać premię za bezpieczeństwo bez zwiększania kosztów operacyjnych. Kodowanie wymazań przełamuje kompromis między skalowalnością a decentralizacją — zyskujesz pełną decentralizację i pełną skalowalność jednocześnie.
 
-#### Najważniejsze pytania i odpowiedzi (58:00) {#qa-highlights-5800}
+### Najważniejsze pytania i odpowiedzi (58:00) {#qa-highlights-5800}
 
 **O audytach oprogramowania pośredniczącego:** Podobnie jak istnieje ekosystem audytów inteligentnych kontraktów, potrzebujemy ekosystemów audytów oprogramowania pośredniczącego. Audyt inteligentnych kontraktów służy użytkownikom, którzy z założenia nic nie wiedzą. Audyt oprogramowania pośredniczącego służy stakującym, którzy z założenia powinni coś wiedzieć. Jeśli nie uda nam się sprawić, by audyty oprogramowania pośredniczącego działały, nie powinniśmy tak naprawdę ufać również audytom inteligentnych kontraktów.
 

@@ -19,7 +19,7 @@ Sebuah wawancara dengan **Danny Ryan**, salah satu pendiri Etherealize dan manta
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=GZPLTF5ds2A) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah disunting sedikit agar lebih mudah dibaca.*
 
-#### Menemukan internet dan rasa ingin tahu awal (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### Menemukan internet dan rasa ingin tahu awal (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Host:** Bagaimana kabarnya? Kapan terakhir kali Anda bermain Jenga?
 
@@ -37,7 +37,7 @@ Sebuah wawancara dengan **Danny Ryan**, salah satu pendiri Etherealize dan manta
 
 **Danny Ryan:** Saya selalu menjadi orang yang bisa memperbaiki berbagai hal. Kakek-nenek saya selalu mengutip kata-kata saya — saat itu saya mungkin berumur sekitar tujuh tahun — saya akan membantu mereka dengan komputer mereka, dan suatu kali saya berkata, "Terkadang Anda hanya perlu mematikannya dan menyalakannya kembali." Mereka mengutip kata-kata saya itu selamanya.
 
-#### Dari teknik mesin ke perangkat lunak (5:02) {#from-mechanical-engineering-to-software-502}
+### Dari teknik mesin ke perangkat lunak (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Host:** Apakah ada momen "aha" atau seorang mentor yang membuat Anda mengikuti jalur tertentu?
 
@@ -47,7 +47,7 @@ Saya selalu agak menyukai komputer karena ada di sekitar saya, tapi saya bukan s
 
 Saya bukan tipe orang yang "memprogram sejak usia enam tahun". Saya bukan pemrogram yang gila, bukan ahli matematika yang gila. Saya hanya pandai melihat masalah dan merangkainya bersama-sama.
 
-#### Kehidupan pekerja lepas di Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
+### Kehidupan pekerja lepas di Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Host:** Apa yang Anda lakukan setelah kuliah?
 
@@ -59,7 +59,7 @@ Saya bukan tipe orang yang "memprogram sejak usia enam tahun". Saya bukan pemrog
 
 Saya juga memulai bisnis sablon di sekolah menengah. Sudah berjalan 20 tahun sekarang. Sahabat dan mitra saya yang menjalankannya — namanya Girraphic. Kami mulai melakukannya untuk band kami, lalu mulai membuat semua kaus untuk sekolah menengah kami.
 
-#### Peretasan DAO dan jatuh ke dalam Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### Peretasan DAO dan jatuh ke dalam Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** Pada tahun 2016, seorang teman saya mengirimi saya artikel New York Times tentang DAO. Itu telah mengumpulkan, entahlah, 120 juta dolar — urun dana terbesar dalam sejarah. Saya sudah tahu tentang Bitcoin. Saya pernah bertransaksi Bitcoin. Saya mungkin kehilangan uang di Bitcoin. Itu belum benar-benar menarik minat saya.
 
@@ -73,7 +73,7 @@ Pada hari pertama, saya berpikir, "Oke, saya akan pergi ke pertemuan Ethereum Ne
 
 Saya belajar tentang Bukti Kepemilikan (PoS) dan saya berpikir, "Itu tidak masuk akal." Kemudian saya terus belajar, dan berpikir, "Mungkin ini masuk akal. Mungkin saya bisa membuat pool staking atau semacamnya." Saya mendengar Casper akan datang — begitulah Bukti Kepemilikan (PoS) disebut — jadi saya mulai membaca kodenya. Saya berpikir, "Oh, mereka bisa melakukan beberapa pengujian lagi." Saya menulis beberapa pengujian. Pada akhir tahun 2017, tim riset bertanya, "Hei, apakah Anda mau pekerjaan?" Saya jawab, "Oke."
 
-#### Menemukan komunitas di sumber terbuka (14:35) {#finding-community-in-open-source-1435}
+### Menemukan komunitas di sumber terbuka (14:35) {#finding-community-in-open-source-1435}
 
 **Host:** Bagaimana Anda menemukan komunitas dan orang-orang Anda? Bagaimana Anda membangun kepercayaan diri?
 
@@ -81,7 +81,7 @@ Saya belajar tentang Bukti Kepemilikan (PoS) dan saya berpikir, "Itu tidak masuk
 
 Pintunya terbuka sangat lebar. Saya sudah lama tidak harus berjalan melewati pintu itu, tapi saya membayangkan untuk banyak bagian Ethereum, pintunya cukup terbuka lebar mengingat sifat pekerjaannya yang terbuka.
 
-#### Memimpin The Merge (16:58) {#leading-the-merge-1658}
+### Memimpin The Merge (16:58) {#leading-the-merge-1658}
 
 **Host:** Seorang pria yang tidak suka bermain gim karena dia sibuk mengobrol dengan perempuan, berada di sebuah band, memulai bisnis sablon, mendanai peretasan DAO — akhirnya bergabung dengan yayasan ini dengan awalnya menjadi orang yang membantu, dan pada akhirnya pada dasarnya mengarsiteki salah satu pencapaian rekayasa paling gila sepanjang masa. Bagaimana Anda melakukan The Merge?
 
@@ -89,7 +89,7 @@ Pintunya terbuka sangat lebar. Saya sudah lama tidak harus berjalan melewati pin
 
 Yang mana merupakan representasi dari betapa berharganya waktu dan perhatian orang-orang seperti Vitalik — dia fokus pada hal-hal lain. Dan saya menyadari bahwa saya bisa melakukan pekerjaan itu tetapi saya juga bisa melakukan hal-hal yang tidak dilakukan orang lain. Saya bisa mencari tahu apa yang perlu terjadi untuk memajukan semua ini. Pikiran orang-orang melayang tinggi, mereka mengerjakan hal-hal yang sangat kompleks dan sulit. Kerangka berpikir saya selalu, "Apa yang bisa saya lakukan untuk mewujudkan ini?" Terkadang saya melakukan riset, terkadang saya menulis spesifikasi, dan semakin lama menjadi berkomunikasi dan berkoordinasi di seluruh proyek yang sangat kompleks.
 
-#### Keseimbangan kehidupan kerja dan mengelola stres (18:07) {#work-life-balance-and-managing-stress-1807}
+### Keseimbangan kehidupan kerja dan mengelola stres (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Host:** Bagaimana Anda mengelola stres?
 
@@ -99,7 +99,7 @@ Saya cukup tersita oleh pekerjaan saya — saya banyak memikirkannya. Tapi saya 
 
 Masalah teknis tidak pernah menjadi masalah yang membuat stres. Lingkup teknopolitik yang komplekslah yang membuatnya demikian. Orang-orang adalah bagian yang sulit.
 
-#### Turut mendirikan Etherealize (20:02) {#co-founding-etherealize-2002}
+### Turut mendirikan Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Host:** Anda baru-baru ini turut mendirikan Etherealize. Dari mana minat Anda terhadap hal itu muncul? Apa yang membuat Anda tetap bersemangat tentang hal itu, dan mengapa menurut Anda pekerjaan itu penting?
 
@@ -117,7 +117,7 @@ Anda belajar bahwa itu adalah organisasi sipil, jadi hal terburuk yang bisa mere
 
 Kemudian saya kembali ke Yayasan Ethereum (EF), lalu pergi. Kemudian Trump meluncurkan memecoin — benar-benar perubahan yang mengejutkan. Kemudian saya mempertimbangkan untuk kembali ke Yayasan Ethereum (EF), dan kami menutup pintu itu. Hal menarik pertama yang mendarat di depan saya adalah mendapatkan perkenalan dengan Vivek. Saya berpikir, "Oh — selama jendela waktu ini, kita mungkin benar-benar bisa membuat Ethereum diadopsi." Vivek memiliki energi yang sangat melengkapi, latar belakang yang melengkapi dari TradFi. Saya hanya berkata, "Oke, mari kita lakukan. Mari kita lakukan orientasi kepada dunia."
 
-#### Mengapa dunia membutuhkan Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
+### Mengapa dunia membutuhkan Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Host:** Mengapa dunia membutuhkan Ethereum?
 
@@ -125,7 +125,7 @@ Kemudian saya kembali ke Yayasan Ethereum (EF), lalu pergi. Kemudian Trump melun
 
 Vivek mengalami momen "aha" pada tahun 2020, meninggalkan Wall Street, belajar tentang Ethereum — "Oh, semua pasar modal harus ditingkatkan dengan Ethereum." Dan dia benar. Dan ini sudah waktunya.
 
-#### Alasan untuk desentralisasi (25:47) {#the-case-for-decentralization-2547}
+### Alasan untuk desentralisasi (25:47) {#the-case-for-decentralization-2547}
 
 **Host:** Ethereum sangat fokus pada desentralisasi, pada menjadi netral secara kredibel. Ada kritik bahwa Anda bisa mengorbankan desentralisasi demi efisiensi, melakukan orientasi lebih banyak orang hari ini. Apa bantahan Anda?
 
@@ -135,13 +135,13 @@ Itu akan sangat berarti bagi bank dan lembaga keuangan. Dan itu akan sangat bera
 
 Kita memiliki sedikit pekerjaan yang harus dilakukan dalam hal skala — meskipun Pectra sedang diluncurkan dan itu akan membuka jalan bagi jumlah skala yang masif, bersama dengan lapisan 2 (l2). Kita juga memiliki pekerjaan yang harus dilakukan untuk berkembang sehingga hal-hal ini bukan hanya protokol terdesentralisasi yang sangat baik, tetapi produk yang sangat baik — produk yang aman, produk yang mudah digunakan. Saat kita melakukan transisi ini, Ethereum sebenarnya adalah jawaban terbaik untuk melakukan orientasi kepada dunia.
 
-#### Berharap orang-orang lebih baik (27:38) {#wishing-people-were-nicer-2738}
+### Berharap orang-orang lebih baik (27:38) {#wishing-people-were-nicer-2738}
 
 **Host:** Apa yang Anda harapkan lebih banyak disadari oleh orang-orang — bahkan tidak harus tentang kripto — di dunia saat ini?
 
 **Danny Ryan:** Saya berharap orang-orang sedikit lebih baik satu sama lain. Dan juga menyadari bahwa seluruh hal gila dari masyarakat modern ini — berhati-hatilah dan perlakukan dengan hati-hati. Ini kompleks. Ini telah berada dalam keseimbangan yang cukup stabil. Saya pikir kita bisa terus memperbaikinya dan seharusnya begitu, tetapi kita tidak boleh membuang semuanya begitu saja.
 
-#### Transisi kepemimpinan Yayasan Ethereum (EF) dan mengambil sikap (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Transisi kepemimpinan Yayasan Ethereum (EF) dan mengambil sikap (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Host:** Awal tahun ini, ketika Yayasan Ethereum (EF) akan mengalami perubahan, Anda didorong ke dalam sorotan ini. Apa reaksi Anda?
 
@@ -149,7 +149,7 @@ Kita memiliki sedikit pekerjaan yang harus dilakukan dalam hal skala — meskipu
 
 Saya sangat menghormati Aya. Kami adalah teman dekat, dan kami bekerja sama secara erat untuk waktu yang lama. Banyak keputusan yang dia buat, saya bantu buat dan dukung serta jalankan. Jadi lucu rasanya diadu domba dengannya di arena publik ketika saya tidak memiliki perbedaan filosofis yang mendalam dengannya. Saya suka bersikap baik. Saya suka memperlakukan orang dengan hormat, terutama di forum publik. Dia sangat terluka, dan itu sama sekali bukan yang saya inginkan. Sejujurnya, kejadian itu mungkin menjadi pukulan telak bagi saya untuk tidak kembali — yang mana merupakan kebalikan dari apa yang diinginkan oleh massa.
 
-#### Kota masa depan dan menjadi manusia di era AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Kota masa depan dan menjadi manusia di era AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Saya baru ingat — di kelas delapan, saya mengerjakan proyek Kota Masa Depan ini. Guru bahasa Inggris saya akan memilih satu pemenang dari kelas dan bekerja dengan mereka sampai ke tingkat nasional. Kami membuat model besar, merencanakan seluruh kota, membaca banyak riset, mengarang masyarakat masa depan. Kami pergi ke tingkat nasional. Mungkin itu sedikit pertanda.
 
@@ -159,7 +159,7 @@ Saya sangat menghormati Aya. Kami adalah teman dekat, dan kami bekerja sama seca
 
 Itulah mengapa saya optimis tentang hal-hal yang sedang saya kerjakan — melakukan orientasi modal institusional ke dalam Ethereum, membuat pasar-pasar ini menjadi lebih baik. Tapi saya tidak memiliki optimisme tak terkendali bahwa "jika Anda hanya membangun teknologi luar biasa yang terdesentralisasi, dunia akan menjadi lebih baik."
 
-#### Anak-anak dan masa depan (39:00) {#kids-and-the-future-3900}
+### Anak-anak dan masa depan (39:00) {#kids-and-the-future-3900}
 
 **Host:** Anda punya anak. Katakanlah maju cepat dua puluh tahun — hal-hal yang Anda yakini telah berhasil. Bagaimana hal itu mengubah kehidupan anak-anak Anda?
 
@@ -167,7 +167,7 @@ Itulah mengapa saya optimis tentang hal-hal yang sedang saya kerjakan — melaku
 
 Semoga setidaknya kita memiliki masyarakat yang adil, terbuka, dan bebas, sebagian karena kita dapat mengarsiteki sistem yang baik di atas kripto. Tetapi AI adalah faktor yang memperumit pertanyaan "apa artinya menjadi manusia?"
 
-#### Nilai-nilai dan berbicara dengan institusi (42:34) {#values-and-speaking-to-institutions-4234}
+### Nilai-nilai dan berbicara dengan institusi (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Host:** Apa satu nilai yang tidak akan pernah Anda kompromikan?
 
@@ -181,7 +181,7 @@ Semoga setidaknya kita memiliki masyarakat yang adil, terbuka, dan bebas, sebagi
 
 **Danny Ryan:** Saya tidak punya andalan. Saya sangat dinamis. Saya membaca bahasa mereka, memahami apa kebutuhan mereka, memahami apa yang membuat mereka penasaran, dan mencari tahu titik masuk dan metafora yang tepat. Saya bukan perencana yang hebat.
 
-#### Kehidupan di luar kripto (45:12) {#life-outside-crypto-4512}
+### Kehidupan di luar kripto (45:12) {#life-outside-crypto-4512}
 
 **Host:** Apa yang Anda kagumi di luar teknologi dan kripto?
 
@@ -191,7 +191,7 @@ Semoga setidaknya kita memiliki masyarakat yang adil, terbuka, dan bebas, sebagi
 
 **Danny Ryan:** Saya berkumpul dengan keluarga saya. Saya berolahraga dan bermain di luar. Saya bermain piano. Dan saya melakukan pekerjaan saya.
 
-#### Kisah asal usul host — meninggalkan Optimism demi Yayasan Ethereum (EF) (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Kisah asal usul host — meninggalkan Optimism demi Yayasan Ethereum (EF) (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Host:** Mengapa Anda meninggalkan Optimism?
 
@@ -203,7 +203,7 @@ Saya bergabung dengan Coinbase sebagai manajer produk setelah kuliah. Keluar del
 
 Saya pikir alasan saya pergi adalah saya merasa seperti saya telah melakukan semua yang bisa saya lakukan di sana. Yayasan Ethereum (EF) sangat unik karena telah melakukan banyak hal — mendapat banyak kecaman karenanya, tetapi telah melakukan banyak hal untuk melindungi netralitasnya, untuk melindungi nilai-nilainya. Ketika saya pergi berbicara dengan seseorang, mereka tidak berpikir saya menginginkan sesuatu dari mereka karena Yayasan Ethereum (EF) bukanlah sebuah perusahaan rintisan. Dan saya membutuhkan tantangan baru.
 
-#### Mengamankan masa depan Ethereum (59:26) {#securing-ethereums-future-5926}
+### Mengamankan masa depan Ethereum (59:26) {#securing-ethereums-future-5926}
 
 **Host:** Bagaimana kita memastikan bahwa Ethereum tidak kalah? Apa pandangan paling kontroversial yang Anda miliki untuk mengamankan masa depan Ethereum?
 

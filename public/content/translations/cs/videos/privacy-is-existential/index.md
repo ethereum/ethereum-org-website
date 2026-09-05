@@ -18,7 +18,7 @@ Prezentace **Petera Van Valkenburgha**, výkonného ředitele Coin Center, na Et
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=GQML0c1_4Gs) zveřejněného Nadací Ethereum. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 Tohle je velké pódium s dlouhým příchodem a obávám se, že jsem ze staré školy, takže mám projev napsaný, ale doufám, že se vám bude líbit. Takže, děkuji za pozvání. Coin Center, moje organizace, existuje už 11 let. Ve Washingtonu D.C. bráníme vývojáře a uživatele Bitcoinu, Etherea a následných kryptoměnových technologií před nevhodnými vládními regulacemi. Když vidíme hrozbu, poznáme ji. Takže, je to něco málo přes 9 let, co jsem stál na pódiu v Šanghaji na druhém DevConu Etherea a varoval před nebezpečími spojenými s ICO. Byla to vlastně úvodní prezentace na druhém DevConu. Píše se rok 2016. Je to přesně na začátku takzvaného ICO boomu. Bylo to dávno předtím, než byl Gary Gensler v SEC. Bylo to předtím, než kdokoli obdržel oznámení Wells (Wells notice). Bylo to dokonce před hackem The DAO, který, pokud si pamatujete nebo jste u toho tehdy byli, spustil zprávu o DAO od SEC na začátku jejich vyšetřování a stíhání lidí v kryptu.
 
@@ -28,7 +28,7 @@ Američané mohou tuto technologii používat. A co je možná ještě důležit
 
 Je to softwarový vývojář. A žaluje ministerstvo spravedlnosti u texaského soudu, aby získal deklaratorní rozsudek, že publikování softwaru pro soukromí není zločin a nevyžaduje ve Spojených státech licenci. Takže, možná toho o mně moc nevíte nebo
 
-#### Soukromí je existenciální (3:15) {#privacy-is-existential-315}
+### Soukromí je existenciální (3:15) {#privacy-is-existential-315}
 
 o Coin Center, ale doufám, že víte, že byste mi měli věřit, když biji na poplach, když je poplach na místě. Pokud máme uspět v budování a udržování svobodné a otevřené finanční infrastruktury, musíme postupovat opatrně. A proto chci dnes mluvit o soukromí. Soukromí je pro Ethereum existenciální. Soukromí není regulační útočnou plochou. Nebudu tu stát a říkat vám, abyste nebudovali soukromí, tak jako jsem vám v roce 2016 říkal, abyste nedělali ICO.
 
@@ -36,7 +36,7 @@ Soukromí je ve skutečnosti způsob, jak útočnou plochu zúžit. A stíhání
 
 A abych vám to dokázal, případ, na který chci dnes upozornit, není stíháním podle zákona o cenných papírech. Není to dokonce ani stíhání za praní špinavých peněz nebo nezákonné financování. Je to o maximální vytěžitelné hodnotě (MEV). Ale než se k tomu dostaneme, pojďme si krátce promluvit o Frankensteinovi. Jak řekl dobrý doktor: „Jak nebezpečné je nabývání vědomostí a o co šťastnější je člověk, který věří, že jeho rodné město je celým světem, než ten, kdo touží stát se větším, než mu jeho přirozenost dovolí.“
 
-#### Mary Shelleyová a jednosměrná západka poznání (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelleyová a jednosměrná západka poznání (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Tady je to, co si myslím, že Mary Shelleyová v tom románu říká. Soukromí není jen o lidské důstojnosti. Je o efektivní absenci poznání. Stejně jako by bylo těžké žít svůj život pod neustálým drobnohledem, kdy by každý neustále narušoval vaše soukromí, bylo by také těžké žít svůj život s neustálou intimní znalostí soukromých záležitostí všech ostatních. Kdybyste vy neustále narušovali soukromí všech ostatních. Proč tomu tak je? Protože stát se vševědoucím bez všemohoucnosti, vidět všechno, aniž byste měli schopnost všechno napravit, dohání lidi k šílenství. Ničí to naši lidskost starostmi, arogancí a snahou o kontrolu nad nekontrolovatelným.
 
@@ -46,7 +46,7 @@ Není to o důkazu prací (PoW). Není to o blockchainech, což je slovo, které
 
 Náklady na zprostředkování zvyšují transakční náklady, omezují minimální praktickou velikost transakce a odřezávají možnost malých příležitostných transakcí. A je tu i širší náklad, ztráta schopnosti provádět nevratné platby za nevratné služby. S možností vrácení se šíří potřeba důvěry. Takže Satoshiho cílem byla ve skutečnosti neutralita stejně jako nevratnost. Schopnost vracet transakce je pro něj původem obrovských transakčních nákladů spojených s důvěrou. Neřekl to ve whitepaperu přímo,
 
-#### Náklady na zprostředkování sporů (7:50) {#the-cost-of-mediating-disputes-750}
+### Náklady na zprostředkování sporů (7:50) {#the-cost-of-mediating-disputes-750}
 
 ale myslím si, že tím, co myslí zprostředkováním sporů, je také potírání podvodů, zastavování zločinu, dodržování zákonů a pravomocí národních států a kontrolování lidí. Často mluvíme o tom, jak jsou blockchainy výpočetně neefektivní, a ony jsou. Že i to monumentální výpočetní úsilí globálního ověřování digitálních podpisů bez paralelizace bledne ve srovnání s neefektivitou, která je vlastní lidskému sporu o morální hodnotu každé transakce a o to, zda by měla být zahrnuta do řetězce.
 
@@ -58,7 +58,7 @@ Je lepší, když si svou moc ani nemohou uvědomit. Mnohem lepší je, když js
 
 Ne. Nejlepším argumentem pro soukromí je, že na něm závisí neutralita validátorů, protože neutralita prostřednictvím decentralizace nikdy nebude stačit. Neutralita vyžaduje slepotu. Pokorně bych navrhl, že existují
 
-#### Dvě pravidla poznání a moci (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Dvě pravidla poznání a moci (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 dvě základní pravidla poznání a moci v blockchainech. První pravidlo: nic transparentního nezůstane neutrální. Viditelná účetní kniha se stane zprostředkovanou účetní knihou. Bude zprostředkována vlastním zájmem mocných validátorů prostřednictvím zištné manipulace, jako je maximální vytěžitelná hodnota (MEV). Bude zprostředkována offchain tlakem mocných entit, jako jsou korporace a národní státy, prostřednictvím ukládání právních povinností a odpovědnosti za nedodržení těchto povinností. Pokud má validátor byť jen malou moc, bude donucen tuto moc využít. Zmapovaný svět je svět, který bude rozparcelován.
 
@@ -70,7 +70,7 @@ Ano, moje organizace, Coin Center, tu vždy bude, aby bojovala proti nerozumným
 
 Pooly soukromí (privacy pools) jsou moudrým přístupem k omezení této hrozby. Snažte se co nejlépe odepřít nesprávným lidem přístup k dobrému neutrálnímu nástroji, ale uvědomte si, že nástroj přestává být neutrální. A i tak se někdy stane, že ten, kdo poskytuje množinu anonymity pro tento pool, nedokáže odepřít špatným lidem přístup k tomuto nástroji. A onboarding transakce těchto špatných lidí zůstane viditelná na vrstvě 1 (L1). A to bude silná munice pro naše oponenty.
 
-#### Případ Pereira Bueno a MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Případ Pereira Bueno a MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Ale případ, který mě skutečně přesvědčuje o naléhavé potřebě soukromí na základní vrstvě, není Tornado Cash. Je to jiný případ v Jižním obvodu New Yorku, případ Pereira Bueno. Dva bratři jsou obviněni z trestného činu elektronického podvodu (wire fraud). Našli způsob, jak využít software MEV-Boost k provedení sendvičového útoku na další uživatele MEV-Boost, kteří sami prováděli sendvičové útoky na běžné uživatele Etherea. Vydělali si tím přes 20 milionů dolarů. Nikomu nelhali ani se nevydávali za někoho jiného před žádnými fiduciárními nebo smluvními partnery. Přesto si žalobci z Jižního obvodu New Yorku myslí, že jsou vinni z elektronického podvodu, což je federální zločin, protože nejsou, cituji, „poctivým validátorem“.
 
@@ -78,7 +78,7 @@ Když se tento termín „poctivá validace“ a „poctivý validátor“ objev
 
 Maximální vytěžitelná hodnota (MEV) je nechutnou realitou Etherea. I ona má svůj původ v nedostatku soukromí. Je to veřejná povaha transakcí na DEXech, která umožňuje, aby na ně validátoři snadno prováděli sendvičový útok. Je mnohem těžší, pravděpodobně ne nemožné, ale mnohem těžší provést sendvičový útok na transakce, pokud nevidíte jejich ekonomické základy. Ale já nechci soukromí na základní vrstvě jen jako způsob, jak odradit od MEV. Chci ho jako způsob, jak bránit validátory.
 
-#### Právně vymahatelné povinnosti validátorů (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Právně vymahatelné povinnosti validátorů (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Větším tahem ministerstva spravedlnosti (DOJ) v případu Pereira Bueno je to, že validátoři mají vůči sobě navzájem právně vymahatelné povinnosti kvůli veřejné povaze transakcí, které validují. A pokud jsou tyto povinnosti porušeny, validátoři by se, myslím, že si to myslí, měli navzájem žalovat. A pokud tak neučiní, stát, Jižní obvod New Yorku, by měl stíhat nepoctivé validátory za zločiny. A to nekončí jen u elektronického podvodu. Pokud vidíte transakci praní špinavých peněz nebo jste ji mohli vidět pomocí analýzy blockchainu, jak to, že nejste spolupachateli tohoto praní špinavých peněz?
 
@@ -86,7 +86,7 @@ Pokud stavíte na verzi řetězce, která obsahuje sankcionované transakce, nej
 
 Úmyslná slepota není obhajobou, ale skutečná slepota ano. Takže pokud opravdu chcete bezdůvěrnost, pokud skutečně chcete neutrální infrastrukturu, pokud chcete „hloupé trubky“ (dumb pipes), pak tyto trubky musí být skutečně slepé k tomu, co jimi protéká.
 
-#### Tradiční finanční kanály a SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Tradiční finanční kanály a SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Nyní, jako dobrou kritiku toho všeho byste mohli říct: Petere, my už máme „hloupé trubky“ v tradičním finančním průmyslu, v tradičním globálním finančním systému, a provozovatelé těchto hloupých trubek nejsou kryptograficky slepí k ekonomické realitě a kriminálním aspektům transakcí, které vkládají do svých účetních knih. Ta největší z těchto trubek se jmenuje SWIFT. A to je silný argument proti tomu, co jsem právě říkal.
 
@@ -102,7 +102,7 @@ A konečně, i když SWIFT přežije současnou pomalu se vyvíjející krizi s 
 
 Jsme tu vlastně pro „hloupé trubky“?
 
-#### Závěry a obrana neutrální infrastruktury (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Závěry a obrana neutrální infrastruktury (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Závěrem, Coin Center nikam neodchází a vždy tu budeme, abychom pomohli bránit vývojáře protokolů a infrastrukturu před nespravedlivým stíháním a příliš širokými regulacemi. Ale bez skutečného soukromí je tento boj stále těžší a těžší. Co můžeme dělat? Za prvé, věřím, že Ethereum by mělo mít soukromí na základní vrstvě nebo se alespoň stát kořenovou účetní knihou pro L2, které mají slepé a skutečně decentralizované sekvencery.
 
@@ -112,7 +112,7 @@ A máme nově oznámený projekt John Hancock, který hledá způsoby, jak minim
 
 Soukromí je existenciální. Děkuji.
 
-#### Otázky a odpovědi (24:21) {#qa-session-2421}
+### Otázky a odpovědi (24:21) {#qa-session-2421}
 
 **Moderátor:** Děkuji. Sdílíte podle mě zdaleka jedno z nejdůležitějších témat naší doby. Myslím, že naše první otázka se vlastně týká toho — jak se díváte na vysvětlování soukromí novým lidem? Koncept soukromí byl tak dlouho zahalen do představy utajování — že je to pro lidi v kápích atd. Jak velkou překážku v tom vidíte, zvláště když přemýšlíte o lobbistickém úsilí? Potřebujete, aby i běžný člověk cítil, že je to něco pro něj. Cítíte, že je to velký boj? Jak to můžeme zmírnit?
 

@@ -19,11 +19,11 @@ Một bài thuyết trình của **Christine Kim** tại Devcon SEA bao gồm c�
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=ufIDBCgdGwY) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Chúng ta sẽ nói về tất cả các EIP sẽ có trong bản nâng cấp Pectra. Một tuyên bố miễn trừ trách nhiệm nhanh trước khi tôi bắt đầu: mọi thứ tôi sắp nói đều mang tính thông tin — vì mục đích cung cấp thông tin — và không nên được hiểu là lời khuyên tài chính hoặc đầu tư.
 
-#### Khi nào Pectra lên Mạng chính (0:23) {#when-is-pectra-mainnet-023}
+### Khi nào Pectra lên Mạng chính (0:23) {#when-is-pectra-mainnet-023}
 
 Trước khi chúng ta đi sâu vào những gì sẽ có trong Pectra, câu hỏi mà tôi được hỏi nhiều nhất là "khi nào Pectra sẽ lên Mạng chính?" Vì vậy, tôi sẽ trả lời câu hỏi đó trước để chúng ta có thể đi vào các vấn đề kỹ thuật.
 
@@ -43,7 +43,7 @@ Về mặt lịch sử, các nhà phát triển đã dự trù khoảng hai tu�
 
 Dựa trên tất cả thông tin tôi biết hiện tại và tiến độ mà các nhà phát triển đã đạt được cho đến nay đối với Pectra, phân tích và dự đoán tốt nhất của tôi là Mạng chính Pectra sẽ diễn ra một cách thực tế vào tháng 4 năm 2025 tới. Một lần nữa, điều này rất dự kiến vì nhiều thứ có thể thay đổi. Quá trình phát triển diễn ra hàng tuần — các nhà phát triển tham gia các cuộc gọi ACD này để nói về lỗi mà họ không ngờ tới trong EIP này hoặc EIP mới này mà họ muốn thêm vào Pectra.
 
-#### Các EIP của lớp thực thi (6:23) {#execution-layer-eips-623}
+### Các EIP của lớp thực thi (6:23) {#execution-layer-eips-623}
 
 Hãy chuyển sang phần chính của bài nói chuyện này — những gì sẽ có trong bản nâng cấp Pectra. Có mười EIP sẽ có trong Pectra và bốn trong số đó tập trung vào lớp thực thi.
 
@@ -55,7 +55,7 @@ Hãy chuyển sang phần chính của bài nói chuyện này — những gì s
 
 **EIP-7702** — thiết lập mã cho các tài khoản thuộc sở hữu bên ngoài. Một loại giao dịch mới sắp xuất hiện trên Ethereum. Loại giao dịch này sẽ tạm thời cho phép một EOA có tính linh hoạt cao hơn, kích hoạt các tính năng như gom lô giao dịch, giao dịch được tài trợ, giao dịch có điều kiện và bảo mật được ủy quyền. Bạn có thể đang nghĩ, "đây có phải là tầm nhìn trừu tượng hóa tài khoản đang trở thành hiện thực trên Ethereum không?" Không, không phải vậy — đó là một bước đi nhỏ. Đó là một bước đầu để xem lộ trình thực sự hướng tới trừu tượng hóa tài khoản gốc thực sự có thể trông như thế nào trên Ethereum. Đã có khá nhiều cuộc tranh luận về cách các nhà phát triển nên thực hiện bước đầu tiên đó, và rất nhiều tranh cãi xung quanh việc EIP này được đưa vào cũng như thiết kế của nó — nhưng nó đã được đưa vào.
 
-#### Các EIP của lớp đồng thuận (12:00) {#consensus-layer-eips-1200}
+### Các EIP của lớp đồng thuận (12:00) {#consensus-layer-eips-1200}
 
 Có sáu EIP khác — đây là các EIP của lớp đồng thuận.
 
@@ -69,11 +69,11 @@ Có sáu EIP khác — đây là các EIP của lớp đồng thuận.
 
 **EIP-7549** — di chuyển chỉ số ủy ban ra ngoài chứng thực. Đây là việc tái cấu trúc và cấu trúc lại cách các chứng thực được tổng hợp để giảm tải mạng trên Ethereum và tiết kiệm băng thông của nút. Khi các nhà phát triển đưa điều này vào Pectra, họ nghĩ rằng đó là một thay đổi tuyệt vời với những lợi ích tuyệt vời và dễ dàng — nhưng trong thực tế, nó hóa ra khó triển khai hơn nhiều so với dự kiến.
 
-#### Tóm tắt (17:19) {#summary-1719}
+### Tóm tắt (17:19) {#summary-1719}
 
 Pectra là một tập hợp các bản cập nhật hỗn hợp. Nó sẽ làm ba điều: thứ nhất, khắc phục những thiếu sót nghiêm trọng của Ethereum với tư cách là một Chuỗi khối Bằng chứng cổ phần (PoS) — hãy nghĩ về MaxEB, đó là một bản sửa lỗi quan trọng vì quy mô tập hợp trình xác thực có thể tiếp tục tăng lên mà không được kiểm soát. Thứ hai, cải thiện trải nghiệm người dùng — loại giao dịch mới, thiết kế linh hoạt hơn, một số cải tiến cho các thiết kế không cần tin cậy hơn cho các nhóm đặt cọc. Và thứ ba, tăng Tính khả dụng của dữ liệu của Ethereum — điều đó chưa được chính thức đưa vào Pectra nhưng có vẻ rất khả thi.
 
-#### Các EIP đã bị loại khỏi Pectra (18:02) {#eips-removed-from-pectra-1802}
+### Các EIP đã bị loại khỏi Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Dưới đây là tất cả các EIP đã bị loại khỏi Pectra. Đây là lần đầu tiên một bản nâng cấp có nhiều EIP bị loại bỏ như vậy.
 
@@ -83,7 +83,7 @@ Dưới đây là tất cả các EIP đã bị loại khỏi Pectra. Đây là 
 
 Những thứ này hiện đã được chuyển sang Fusaka. Verkle ban đầu được dự kiến cho Fusaka nhưng kể từ đó đã bị trì hoãn thêm. EOF và PeerDAS hiện đang ở trong Fusaka. Có những EIP khác mà các nhà phát triển sẽ xem xét lại để đưa vào Fusaka — quá trình chuyển đổi SSZ, danh sách bao gồm, các thay đổi đối với việc phát hành, hết hạn lịch sử, ePBS và hướng đi của trừu tượng hóa tài khoản.
 
-#### Hỏi & Đáp (22:02) {#qa-2202}
+### Hỏi & Đáp (22:02) {#qa-2202}
 
 **Người dẫn chương trình:** Khi nào có EOF?
 

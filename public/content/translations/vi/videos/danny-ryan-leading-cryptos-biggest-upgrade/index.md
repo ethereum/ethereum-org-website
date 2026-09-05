@@ -19,7 +19,7 @@ Một cuộc phỏng vấn với **Danny Ryan**, người đồng sáng lập Et
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=GZPLTF5ds2A) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Khám phá internet và sự tò mò thuở ban đầu (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### Khám phá internet và sự tò mò thuở ban đầu (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Người dẫn chương trình:** Mọi chuyện thế nào rồi? Lần cuối cùng anh chơi Jenga là khi nào?
 
@@ -37,7 +37,7 @@ Một cuộc phỏng vấn với **Danny Ryan**, người đồng sáng lập Et
 
 **Danny Ryan:** Tôi luôn là người có thể sửa chữa mọi thứ. Ông bà tôi luôn trích dẫn câu nói của tôi — lúc đó tôi khoảng bảy tuổi — tôi thường giúp họ sửa máy tính, và có một lần tôi nói, "Đôi khi ông bà chỉ cần tắt đi và bật lại thôi." Họ cứ nhắc đi nhắc lại câu đó mãi.
 
-#### Từ kỹ thuật cơ khí đến phần mềm (5:02) {#from-mechanical-engineering-to-software-502}
+### Từ kỹ thuật cơ khí đến phần mềm (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Người dẫn chương trình:** Có khoảnh khắc "aha" nào hay một người cố vấn nào đã khiến anh đi theo một con đường nhất định không?
 
@@ -47,7 +47,7 @@ Tôi luôn có chút hứng thú với máy tính vì chúng luôn ở xung quan
 
 Tôi không phải là kiểu người "lập trình từ năm sáu tuổi". Tôi không phải là một lập trình viên điên rồ, cũng không phải là một nhà toán học điên rồ. Tôi chỉ giỏi trong việc nhìn nhận các vấn đề và xâu chuỗi chúng lại với nhau.
 
-#### Cuộc sống làm nghề tự do ở Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
+### Cuộc sống làm nghề tự do ở Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Người dẫn chương trình:** Anh làm gì sau khi tốt nghiệp đại học?
 
@@ -59,7 +59,7 @@ Tôi không phải là kiểu người "lập trình từ năm sáu tuổi". Tô
 
 Tôi cũng bắt đầu một công việc kinh doanh in lụa từ hồi trung học. Nó đã hoạt động được 20 năm rồi. Người bạn thân nhất và cũng là đối tác của tôi đang điều hành nó — tên là Girraphic. Chúng tôi bắt đầu làm áo cho ban nhạc của mình, sau đó bắt đầu làm tất cả áo thun cho trường trung học của chúng tôi.
 
-#### Vụ hack DAO và cơ duyên đến với Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### Vụ hack DAO và cơ duyên đến với Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** Vào năm 2016, một người bạn đã gửi cho tôi một bài báo trên New York Times về DAO. Nó đã huy động được, tôi không nhớ rõ, 120 triệu đô la — đợt huy động vốn cộng đồng lớn nhất trong lịch sử. Tôi đã biết về Bitcoin. Tôi đã giao dịch Bitcoin. Tôi có lẽ đã mất tiền vì Bitcoin. Nó chưa thực sự thu hút tôi.
 
@@ -73,7 +73,7 @@ Vào ngày đầu tiên, tôi kiểu như, "Được rồi, tôi sẽ đến bu�
 
 Tôi đã tìm hiểu về Bằng chứng cổ phần (PoS) và tôi kiểu như, "Điều đó chẳng có ý nghĩa gì cả." Sau đó tôi tiếp tục tìm hiểu, và nghĩ rằng, "Có lẽ điều này có ý nghĩa đấy. Có lẽ tôi có thể tạo ra một nhóm đặt cọc hay gì đó." Tôi nghe nói Casper sắp ra mắt — đó là tên gọi của Bằng chứng cổ phần — vì vậy tôi bắt đầu đọc mã. Tôi kiểu như, "Ồ, họ có thể làm thêm vài bài kiểm thử nữa." Tôi đã viết một số bài kiểm thử. Vào cuối năm 2017, nhóm nghiên cứu đã hỏi, "Này, anh có muốn một công việc không?" Tôi đáp, "Được thôi."
 
-#### Tìm kiếm cộng đồng trong mã nguồn mở (14:35) {#finding-community-in-open-source-1435}
+### Tìm kiếm cộng đồng trong mã nguồn mở (14:35) {#finding-community-in-open-source-1435}
 
 **Người dẫn chương trình:** Anh đã tìm thấy cộng đồng và những người cùng chí hướng với mình như thế nào? Làm thế nào anh xây dựng được sự tự tin?
 
@@ -81,7 +81,7 @@ Tôi đã tìm hiểu về Bằng chứng cổ phần (PoS) và tôi kiểu như
 
 Những cánh cửa mở rộng một cách hài hước. Đã lâu rồi tôi không phải bước qua những cánh cửa đó, nhưng tôi tưởng tượng đối với nhiều bộ phận của Ethereum, các cánh cửa khá rộng mở do bản chất của công việc là công khai.
 
-#### Dẫn dắt the merge (16:58) {#leading-the-merge-1658}
+### Dẫn dắt the merge (16:58) {#leading-the-merge-1658}
 
 **Người dẫn chương trình:** Một anh chàng không thích chơi game vì bận nói chuyện với các cô gái, tham gia một ban nhạc, bắt đầu công việc kinh doanh in lụa, tài trợ cho vụ hack DAO — cuối cùng lại gia nhập tổ chức này nhờ sự hữu ích ban đầu, và về cơ bản đã trở thành kiến trúc sư cho một trong những kỳ tích kỹ thuật điên rồ nhất mọi thời đại. Anh đã thực hiện The Merge như thế nào?
 
@@ -89,7 +89,7 @@ Những cánh cửa mở rộng một cách hài hước. Đã lâu rồi tôi k
 
 Điều đó cho thấy thời gian và sự chú ý của những người như Vitalik quý giá đến mức nào — anh ấy đang tập trung vào những thứ khác. Và tôi nhận ra mình có thể làm công việc đó nhưng tôi cũng có thể làm những việc mà người khác không làm. Tôi có thể tìm ra những gì cần phải xảy ra để thúc đẩy tất cả những điều này tiến lên. Đầu óc mọi người đang ở trên mây, họ đang làm việc với những thứ vô cùng phức tạp và khó khăn. Suy nghĩ của tôi luôn là, "Tôi có thể làm gì để biến điều này thành hiện thực?" Đôi khi tôi làm nghiên cứu, đôi khi tôi viết các thông số kỹ thuật, và ngày càng nhiều hơn, nó trở thành việc giao tiếp và điều phối trong một dự án rất phức tạp.
 
-#### Cân bằng công việc-cuộc sống và quản lý căng thẳng (18:07) {#work-life-balance-and-managing-stress-1807}
+### Cân bằng công việc-cuộc sống và quản lý căng thẳng (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Người dẫn chương trình:** Anh đã quản lý căng thẳng như thế nào?
 
@@ -99,7 +99,7 @@ Tôi khá say mê công việc của mình — tôi nghĩ về nó rất nhiều
 
 Các vấn đề kỹ thuật không bao giờ là những vấn đề gây căng thẳng. Chính lĩnh vực chính trị-công nghệ phức tạp mới là vấn đề. Con người mới là phần khó khăn.
 
-#### Đồng sáng lập Etherealize (20:02) {#co-founding-etherealize-2002}
+### Đồng sáng lập Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Người dẫn chương trình:** Gần đây anh đã đồng sáng lập Etherealize. Sự quan tâm của anh đối với điều đó bắt nguồn từ đâu? Điều gì khiến anh luôn hào hứng với nó, và tại sao anh nghĩ công việc đó lại quan trọng?
 
@@ -117,7 +117,7 @@ Bạn biết đấy, đó là một tổ chức dân sự, vì vậy điều t�
 
 Sau đó tôi quay lại Tổ chức Ethereum, rồi lại rời đi. Rồi Trump ra mắt một memecoin — thực sự là một cú sốc. Sau đó tôi cân nhắc việc quay lại Tổ chức Ethereum, và chúng tôi đã đóng cánh cửa đó lại. Điều thú vị đầu tiên xuất hiện trước mắt tôi là được giới thiệu với Vivek. Tôi kiểu như, "Ồ — trong khoảng thời gian này, chúng ta thực sự có thể giúp Ethereum được tiếp nhận." Vivek có một nguồn năng lượng rất bổ sung, một nền tảng bổ sung từ tài chính truyền thống (TradFi). Tôi chỉ nói, "Được rồi, làm thôi. Hãy tiếp nhận người dùng trên toàn thế giới."
 
-#### Tại sao thế giới cần Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
+### Tại sao thế giới cần Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Người dẫn chương trình:** Tại sao thế giới lại cần Ethereum?
 
@@ -125,7 +125,7 @@ Sau đó tôi quay lại Tổ chức Ethereum, rồi lại rời đi. Rồi Trum
 
 Vivek đã có khoảnh khắc "aha" vào năm 2020, khi rời Phố Wall, tìm hiểu về Ethereum — "Ồ, tất cả các thị trường vốn nên được nâng cấp bằng Ethereum." Và anh ấy đã đúng. Và đã đến lúc rồi.
 
-#### Lập luận cho sự phi tập trung (25:47) {#the-case-for-decentralization-2547}
+### Lập luận cho sự phi tập trung (25:47) {#the-case-for-decentralization-2547}
 
 **Người dẫn chương trình:** Ethereum tập trung rất nhiều vào sự phi tập trung, vào việc trung lập một cách đáng tin cậy. Có một lời chỉ trích rằng anh có thể từ bỏ sự phi tập trung để đổi lấy hiệu quả, tiếp nhận người dùng nhiều hơn ngay hôm nay. Lời phản bác của anh là gì?
 
@@ -135,13 +135,13 @@ Vivek đã có khoảnh khắc "aha" vào năm 2020, khi rời Phố Wall, tìm 
 
 Chúng ta có một chút việc phải làm về mặt quy mô — mặc dù Pectra sắp ra mắt và nó sẽ tạo tiền đề cho quy mô khổng lồ, cùng với các lớp 2 (l2). Chúng ta cũng có việc phải làm để phát triển sao cho những thứ này không chỉ là các giao thức phi tập trung xuất sắc, mà còn là các sản phẩm xuất sắc — sản phẩm an toàn, sản phẩm dễ sử dụng. Khi chúng ta thực hiện quá trình chuyển đổi này, Ethereum thực sự là câu trả lời tốt nhất để tiếp nhận người dùng trên toàn thế giới.
 
-#### Mong mọi người tử tế hơn (27:38) {#wishing-people-were-nicer-2738}
+### Mong mọi người tử tế hơn (27:38) {#wishing-people-were-nicer-2738}
 
 **Người dẫn chương trình:** Anh mong muốn nhiều người nhận thức được điều gì hơn — thậm chí không cần phải là về tiền mã hóa — trong thế giới ngày nay?
 
 **Danny Ryan:** Tôi ước mọi người tử tế với nhau hơn một chút. Và cũng nhận ra rằng toàn bộ thứ điên rồ này của xã hội hiện đại — hãy cẩn thận và đối xử với nó một cách cẩn trọng. Nó rất phức tạp. Nó đã ở trong một trạng thái cân bằng tương đối ổn định. Tôi nghĩ chúng ta có thể tiếp tục cải thiện nó và nên làm như vậy, nhưng chúng ta không nên vứt bỏ tất cả.
 
-#### Sự chuyển giao lãnh đạo của Tổ chức Ethereum và việc đưa ra lập trường (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Sự chuyển giao lãnh đạo của Tổ chức Ethereum và việc đưa ra lập trường (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Người dẫn chương trình:** Đầu năm nay, khi Tổ chức Ethereum chuẩn bị trải qua những thay đổi, anh đã bị đẩy vào tâm điểm chú ý này. Phản ứng của anh là gì?
 
@@ -149,7 +149,7 @@ Chúng ta có một chút việc phải làm về mặt quy mô — mặc dù Pe
 
 Tôi dành sự tôn trọng rất lớn cho Aya. Chúng tôi là bạn thân, và chúng tôi đã làm việc chặt chẽ với nhau trong một thời gian dài. Rất nhiều quyết định mà cô ấy đưa ra, tôi đã giúp đưa ra, hỗ trợ và thực thi. Vì vậy, thật nực cười khi bị đặt vào thế đối đầu với cô ấy trên một diễn đàn công khai trong khi tôi không hề có sự khác biệt sâu sắc về mặt triết lý với cô ấy. Tôi thích sự tử tế. Tôi thích đối xử tôn trọng với mọi người, đặc biệt là trên các diễn đàn công khai. Cô ấy đã rất tổn thương, và đó hoàn toàn không phải là điều tôi muốn. Thành thật mà nói, việc đó xảy ra có lẽ là giọt nước tràn ly khiến tôi không quay lại — điều này trái ngược với những gì đám đông mong muốn.
 
-#### Các thành phố tương lai và việc làm người trong thời đại AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Các thành phố tương lai và việc làm người trong thời đại AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Tôi chợt nhớ ra — hồi lớp tám, tôi đã làm dự án Thành phố Tương lai này. Giáo viên tiếng Anh của tôi sẽ chọn một người chiến thắng từ lớp và làm việc với họ cho đến tận vòng quốc gia. Chúng tôi đã làm một mô hình lớn, quy hoạch toàn bộ một thành phố, đọc rất nhiều nghiên cứu, bịa ra một xã hội tương lai. Chúng tôi đã lọt vào vòng quốc gia. Có lẽ đó là một chút điềm báo.
 
@@ -159,7 +159,7 @@ Tôi dành sự tôn trọng rất lớn cho Aya. Chúng tôi là bạn thân, v
 
 Đó là lý do tại sao tôi lạc quan về những thứ tôi đang làm — tiếp nhận nguồn vốn từ các tổ chức vào Ethereum, làm cho các thị trường này tốt hơn. Nhưng tôi không có sự lạc quan vô bờ bến kiểu "nếu bạn chỉ cần xây dựng công nghệ phi tập trung tuyệt vời, thế giới sẽ tự động trở nên tốt đẹp hơn."
 
-#### Trẻ em và tương lai (39:00) {#kids-and-the-future-3900}
+### Trẻ em và tương lai (39:00) {#kids-and-the-future-3900}
 
 **Người dẫn chương trình:** Anh có con. Giả sử tua nhanh hai mươi năm nữa — những điều anh tin tưởng đã thành công. Điều đó thay đổi cuộc sống của các con anh như thế nào?
 
@@ -167,7 +167,7 @@ Tôi dành sự tôn trọng rất lớn cho Aya. Chúng tôi là bạn thân, v
 
 Hy vọng ít nhất chúng ta có một xã hội công bằng, cởi mở và tự do, một phần vì chúng ta có thể kiến trúc các hệ thống tốt trên nền tảng tiền mã hóa. Nhưng AI là một yếu tố gây phức tạp cho câu hỏi "làm người là như thế nào?"
 
-#### Các giá trị và việc trò chuyện với các tổ chức (42:34) {#values-and-speaking-to-institutions-4234}
+### Các giá trị và việc trò chuyện với các tổ chức (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Người dẫn chương trình:** Một giá trị mà anh sẽ không bao giờ thỏa hiệp là gì?
 
@@ -181,7 +181,7 @@ Hy vọng ít nhất chúng ta có một xã hội công bằng, cởi mở và 
 
 **Danny Ryan:** Tôi không có một cách quen thuộc nào cả. Tôi rất linh hoạt. Tôi đọc ngôn ngữ của họ, hiểu nhu cầu của họ là gì, hiểu họ tò mò về điều gì, và tìm ra các điểm tiếp cận cũng như phép ẩn dụ phù hợp. Tôi không phải là người hay lên kế hoạch chi tiết.
 
-#### Cuộc sống bên ngoài tiền mã hóa (45:12) {#life-outside-crypto-4512}
+### Cuộc sống bên ngoài tiền mã hóa (45:12) {#life-outside-crypto-4512}
 
 **Người dẫn chương trình:** Anh ngưỡng mộ điều gì bên ngoài lĩnh vực công nghệ và tiền mã hóa?
 
@@ -191,7 +191,7 @@ Hy vọng ít nhất chúng ta có một xã hội công bằng, cởi mở và 
 
 **Danny Ryan:** Tôi dành thời gian cho gia đình. Tôi tập thể dục và chơi ngoài trời. Tôi chơi piano. Và tôi làm công việc của mình.
 
-#### Câu chuyện khởi nguồn của người dẫn chương trình — rời Optimism để đến với Tổ chức Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Câu chuyện khởi nguồn của người dẫn chương trình — rời Optimism để đến với Tổ chức Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Người dẫn chương trình:** Tại sao anh lại rời Optimism?
 
@@ -203,7 +203,7 @@ Tôi gia nhập Coinbase với tư cách là giám đốc sản phẩm sau khi t
 
 Tôi nghĩ lý do tôi rời đi là vì tôi cảm thấy mình đã làm mọi thứ có thể làm ở đó. Tổ chức Ethereum rất độc đáo ở chỗ nó đã làm rất nhiều — nó đã nhận nhiều chỉ trích vì điều đó, nhưng nó đã làm rất nhiều để bảo vệ sự trung lập của mình, để bảo vệ các giá trị của mình. Khi tôi đi nói chuyện với ai đó, họ không nghĩ rằng tôi muốn bất cứ điều gì từ họ vì Tổ chức Ethereum không phải là một công ty khởi nghiệp. Và tôi cần một thử thách mới.
 
-#### Đảm bảo tương lai của Ethereum (59:26) {#securing-ethereums-future-5926}
+### Đảm bảo tương lai của Ethereum (59:26) {#securing-ethereums-future-5926}
 
 **Người dẫn chương trình:** Làm thế nào để chúng ta đảm bảo rằng Ethereum không thất bại? Quan điểm gây tranh cãi nhất mà anh có để đảm bảo tương lai của Ethereum là gì?
 

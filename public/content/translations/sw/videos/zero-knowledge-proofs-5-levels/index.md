@@ -19,13 +19,13 @@ Mwanasayansi wa kompyuta **Amit Sahai**, profesa katika Shule ya Uhandisi ya UCL
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=fOGdb1CTu5c) iliyochapishwa na WIRED. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 **Amit Sahai:** Hujambo, jina langu ni Amit Sahai, na mimi ni profesa wa sayansi ya kompyuta katika Shule ya Uhandisi ya UCLA Samueli. Leo, nimeombwa kufafanua uthibitisho wa maarifa-sifuri katika viwango vitano vya ugumu unaoongezeka.
 
 Uthibitisho wa maarifa-sifuri ni njia ya mthibitishaji kumshawishi mhakiki kwamba kauli fulani ni ya kweli, na bado asifichue taarifa yoyote ya ziada zaidi ya ukweli kwamba kauli hiyo ni ya kweli. Uthibitisho wa maarifa-sifuri unatumiwa katika mnyororo wa vitalu na sarafu-fiche. Wataalamu wa kriptografia wanafurahishwa na sifuri-maarifa kwa sababu ya sifa zake za kushangaza za kihisabati, lakini pia kwa sababu ya uwezo wake wa ajabu wa kutumika katika matukio mengi tofauti.
 
-#### Kiwango cha 1: mtoto (0:41) {#level-1-child-041}
+### Kiwango cha 1: mtoto (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Somo lako unalopenda zaidi ni lipi?
 
@@ -55,7 +55,7 @@ Kwa hivyo Chelsea, kwa maneno yako mwenyewe, uthibitisho wa maarifa-sifuri ni ni
 
 **Chelsea:** Uthibitisho wa maarifa-sifuri ni uthibitisho wa kauli. Huwaonyeshi kwa nini au nini. Unawaonyesha tu sehemu ndogo, au kufanya tu aina fulani ya mazingaombwe ya ajabu ambayo si mazingaombwe kweli, na watashawishika. Na hukuwaonyesha kwa nini, au chochote kama hicho.
 
-#### Kiwango cha 2: kijana (3:31) {#level-2-teen-331}
+### Kiwango cha 2: kijana (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Kwa hivyo umewahi kusikia neno uthibitisho wa maarifa-sifuri hapo awali?
 
@@ -85,7 +85,7 @@ Kwa hivyo kulingana na kile tumejadili leo, kwa maneno yako mwenyewe, uthibitish
 
 **Kijana:** Ni kama ikiwa una siri hii muhimu sana ambayo unataka mtu aijue, lakini hutaki kumwambia kila kitu. Unaweza kutumia uthibitisho wa maarifa-sifuri kuthibitisha kwao siri hiyo, lakini usitoe yote.
 
-#### Kiwango cha 3: mwanafunzi wa chuo (6:13) {#level-3-college-student-613}
+### Kiwango cha 3: mwanafunzi wa chuo (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Unasomea nini?
 
@@ -131,7 +131,7 @@ Je, unaweza kuchagua nchi mbili kwa unasibu, na tutafichua rangi mbili tena.
 
 **Amit Sahai:** Mfano mmoja mzuri ni chaguzi. Ikiwa ungeweza kuthibitisha kwamba uchaguzi ulifanyika kwa usahihi — kwamba kila kura ilihesabiwa na yote ilijumlishwa kwa mtu mmoja kushinda kwa jumla fulani — katika sifuri-maarifa, basi si lazima utoe kura halisi za mtu yeyote. Na bado kila mtu angeweza kuona kwamba ilifanywa kwa usahihi.
 
-#### Kiwango cha 4: mwanafunzi wa uzamili (11:59) {#level-4-grad-student-1159}
+### Kiwango cha 4: mwanafunzi wa uzamili (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Ni vizuri sana kuwa nawe hapa na kuzungumza nawe, Eli. Je, unaweza kuniambia kidogo kuhusu utafiti wako?
 
@@ -165,7 +165,7 @@ Je, unaweza kuchagua nchi mbili kwa unasibu, na tutafichua rangi mbili tena.
 
 **Eli:** Ninafikiri hiyo ni moja ya sababu nilivutiwa sana na ukokotoaji wa pande nyingi. Moja ya matatizo muhimu zaidi duniani ni ukweli kwamba watu wengi sana hawaaminiani. Kuweza kutumia hisabati kuunda teknolojia inayoruhusu watu kufanya kazi pamoja bila kulazimika kuaminiana ni dhamira nzuri na ya kushangaza sana.
 
-#### Kiwango cha 5: mtaalamu (17:10) {#level-5-expert-1710}
+### Kiwango cha 5: mtaalamu (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, ni vizuri sana kukuona tena. Ninafikiri mara ya mwisho tulipokutana ilikuwa mwaka wa 2017 au kitu kama hicho.
 

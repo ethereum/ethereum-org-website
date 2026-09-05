@@ -20,13 +20,13 @@ breadcrumb: "Guerilla-L2"
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=WlsICV2OPAE), das von Web3Privacy Now veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung und anarchistische Philosophie (0:05) {#introduction-and-anarchist-philosophy-005}
+### Einführung und anarchistische Philosophie (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Applaus] Nun, danke, dass ihr hier seid. Ich weiß, dass Vitalik gerade spricht. Es ist wirklich eine Ehre, ein paar von euch hier zu haben und nicht drüben in der Matcha-Schlange. Wir werden heute ein Gespräch über Guerilla-L2s führen, und ich denke, wir werden gleich darauf eingehen, aber ich präsentiere euch Melanie Premsyl, eine französische Philosophin und Anarchistin, die uns die Ehre erweist, hier bei uns zu sein. Möchtest du dich kurz vorstellen?
 
 **Melanie Premsyl:** Ja. Hallo zusammen. Ich bin eine französische Philosophin. Ich studiere Anarchie und Technologie, und anfangs war ich eher auf der territorialen Seite. Wie zum Beispiel im Zentrum von Frankreich, ich weiß nicht, ob ihr Tarnac kennt, oder all diese Gruppen, die eher gewaltbereit sind. Das Hauptproblem, auf das ich stieß, war, dass wir mit anderen Menschen auf der Welt vernetzt sein müssen, und viele anarchistische Gruppen sind sehr eingeschränkt. Wir brauchen einen Weg, um mit mehr Menschen aus Amerika oder Südamerika kommunizieren zu können. Und deshalb versuchen wir jetzt, eine Brücke zu Krypto und zu allen zu schlagen, die versuchen, neue Wege zu finden, um gegen den Mangel an Privatsphäre, den Mangel an Freiheit und die Gewalt des Staates zu kämpfen.
 
-#### Der Prozess gegen die MEV-Brüder (1:52) {#the-mev-brothers-trial-152}
+### Der Prozess gegen die MEV-Brüder (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Großartig. Also im Grunde haben wir uns vor ein paar Wochen in New York getroffen. Wir haben beide an einem Prozess in Manhattan teilgenommen, bei dem diese beiden Brüder, bekannt als die MEV-Brüder, angeklagt wurden, weil sie einige Sandwich-Bots gesandwicht haben. Ich ging zum Gericht, um mir den Prozess anzusehen, und sah diese Person hier, die Spinoza auf Französisch las, und ich war wirklich neugierig, was da vor sich ging. Es war niemand im Publikum außer uns beiden! Ich war also wirklich neugierig, was dich, in erster Linie eine Anarchistin und Philosophin und keine Technologin, dazu gebracht hat, an diesem speziellen Prozess teilzunehmen, aber auch über die Governance von Ethereum und das gesamte Validierungssystem sowie den Prozess in New York nachzudenken. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Guerilla-L2"
 
 **Fatemeh Fannizadeh:** Okay. Ja, das ist ein fairer Punkt. Für diejenigen, die den Prozess nicht verfolgt haben: Nach etwa drei oder vier Wochen wurde er ergebnislos abgebrochen (Mistrial). Die Geschworenen konnten zu keinem einstimmigen Urteil kommen und nicht entscheiden, ob diese beiden Brüder schuldig waren, die Regeln der Blockchain verletzt zu haben oder nicht – was meiner Meinung nach ein ziemlich positives Ergebnis für Krypto ist, dass ein Gericht oder eine Jury nicht darüber entscheidet, was Onchain richtig und was falsch ist. 
 
-#### Die Blockchain mit anderen Gemeinschaften verbinden (4:06) {#bridging-blockchain-with-other-communities-406}
+### Die Blockchain mit anderen Gemeinschaften verbinden (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Aber okay, wenn wir noch einmal einen Schritt zurückgehen zu dem, was du darüber gesagt hast, dass Anarchisten sich diese Technologie ansehen, um im Grunde eine Brücke zwischen verschiedenen Gruppen zu schlagen. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Guerilla-L2"
 
 **Melanie Premsyl:** Ja, das würde ich gerne sagen, aber ich bin mir nicht sicher, denn du weißt, dass es viele Leute gibt, die Geld verdienen müssen, also ist das auch der Hauptzweck davon. Aber ich denke, wir könnten es einfach wie ein kommunistisches Netz nutzen, sodass zumindest ein Teil davon dieser Traum sein könnte. Ich denke, es ist ein Traum, der verwirklicht werden kann, aber wir brauchen Werkzeuge und ein Design, die den Menschen helfen, aus diesem technischen, sehr ingenieurmäßigen Denken herauszukommen, um zu verstehen, wie es wirklich ist.
 
-#### Dezentralisierung und Layer 2s (6:55) {#decentralization-and-layer-2s-655}
+### Dezentralisierung und Layer 2s (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Das erinnert mich sehr an DAOs vor ein paar Jahren. Ich weiß nicht, wie es euch allen geht, aber ich war wirklich begeistert. Ich dachte, dass DAOs die Art und Weise revolutionieren, wie wir uns als Gruppen und Gemeinschaften Onchain organisieren, und die Freiheit, die wir haben. Und am Ende ist all das einfach im Sande verlaufen. Ich glaube nicht, dass es sich überhaupt manifestiert hat. Es ging nur noch um das Abstimmungssystem, es ist nicht wirklich demokratisch, es geht nur darum, Profit zu machen. Diese ganze Idee, die wir von DAOs als soziales Werkzeug hatten, hat sich nicht wirklich verwirklicht. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Guerilla-L2"
 
 **Melanie Premsyl:** Also, ich bin Französin. Das ist ein großes Problem. Als Franzosen sind wir eine sehr staatszentrierte Nation. Deshalb denke ich immer auf eine pädagogische und sehr Top-down-orientierte Weise. Und ich denke, das L2 schafft eine Möglichkeit, dass jeder Mini-Blockchains erstellen kann, und diese werden durch den Layer 1 gesichert. Ich würde gerne sehen, ob Menschen pädagogische Hilfen für alle für etwas Kostenloses erstellen können. Ich denke, viele Gruppen, wie Vereine, könnten ihre eigene Blockchain erstellen, und es wäre ein Weg – wie du weißt, ist Föderalismus das große Hauptthema des Anarchismus. Wie Menschen es schaffen können, sich vielleicht zu hassen, aber trotzdem miteinander zu sprechen. Wir brauchen also diese Art von Föderalismus in der Blockchain. Jeder hat ein Layer 2 mit seinem eigenen Wert, und so sprechen wir über dieselbe Infrastruktur. 
 
-#### Anarchie, Freiheit und die Entwicklung von Werkzeugen (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarchie, Freiheit und die Entwicklung von Werkzeugen (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Ja, mir gefällt wirklich, was du darüber gesagt hast, sich im Grunde zu hassen, aber trotzdem zu kommunizieren, also trotz unserer Unterschiede nicht toxisch zu sein. Und die Tatsache, dass es in diesem Szenario quasi ein Layer 1 (L1) gibt, was Ethereum wäre, wird auch oft als faschistisch bezeichnet, weil wir uns alle auf dieses eine Regelwerk einigen müssen. Es ist also dieses eine System, das für alle gleich ist, und man muss sich diesem L1 im Grunde unterwerfen oder man kann abwandern, das ist eine ganz andere Frage. Aber wenn wir das in ein Ökosystem aus verschiedenen winzigen Rollup-L2s dezentralisieren können, dann können wir Dissonanz und Meinungsverschiedenheiten innerhalb dieser gemeinsamen Infrastruktur zurückbringen. 
 

@@ -19,7 +19,7 @@ Mjadala kati ya **Lyn Alden** na **Justin Drake** kuhusu faida na hasara za kims
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=1m12zgJ42dI) iliyochapishwa na Bankless. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Karibu Bankless, ambapo tunachunguza Eneo Jipya la pesa za mtandaoni na fedha za mtandaoni. Huyu ni Ryan Sean Adams, niko hapa na David Hoffman, na tuko hapa kukusaidia kuwa bankless zaidi (kutotegemea benki). Jamani, leo mna bahati. Tuna wataalamu wawili wa Uthibitisho wa Dau (PoS) na Uthibitisho wa Kazi (PoW), na wanajadili ni upi ulio bora zaidi kwa kuunda mfumo wa pesa wa kimataifa — mfumo wa pesa wa kripto — Uthibitisho wa Kazi au Uthibitisho wa Dau. Lyn Alden na Justin Drake kwenye kipindi cha leo. Tutazungumzia mambo machache. Namba moja: ni upi unaotoa usalama mkubwa zaidi wa kiuchumi, Uthibitisho wa Kazi au Uthibitisho wa Dau? Namba mbili: ni upi unaotoa kizuizi na uwezo bora wa kupona mbele ya shambulio la asilimia 51 linalohofiwa? Namba tatu: ni upi unaopunguza nguvu za utawala kwa wasomi — ni upi unaotoa "nguvu zaidi kwa watu"? Namba nne: ni mfumo upi ulio wa haki zaidi kiuchumi kushiriki? Na namba tano — hili ndilo ninalolipenda zaidi binafsi — mazungumzo haya kuhusu Uthibitisho wa Kazi kuwa pesa ya bidhaa zaidi na Uthibitisho wa Dau kuwa pesa ya hisa zaidi.
 
@@ -29,7 +29,7 @@ Mjadala kati ya **Lyn Alden** na **Justin Drake** kuhusu faida na hasara za kims
 
 **Justin Drake:** Ninaendelea vizuri, asanteni tena kwa kunialika, jamani.
 
-#### Kuweka msingi wa mjadala: thamani ya ziada ya kifedha (7:30) {#framing-the-debate-monetary-premium-730}
+### Kuweka msingi wa mjadala: thamani ya ziada ya kifedha (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Nataka kuanza na swali kubwa. Nadhani tunajaribu kujibu swali kuu la kama Uthibitisho wa Kazi au Uthibitisho wa Dau unafaa zaidi kwa ulimbikizaji wa thamani ya ziada ya kifedha — kimsingi ni ipi kati ya itifaki hizo mbili za mwafaka inafaa zaidi kuifanya sarafu-fiche kuwa pesa. Justin, unakubali huu ndio msingi sahihi?
 
@@ -41,7 +41,7 @@ Mjadala kati ya **Lyn Alden** na **Justin Drake** kuhusu faida na hasara za kims
 
 **Justin Drake:** Nataka kuingilia kati na kujenga hoja kwa nini mlinganisho huu wa hisa na Uthibitisho wa Dau labda ni mlinganisho mbaya. Katika muktadha wa hisa, una haki ya kupiga kura kwa chochote — unaweza kubadilisha kabisa sheria za kampuni. Katika mwafaka wa Uthibitisho wa Dau, washiriki wa mwafaka hawawezi tu kubadilisha sheria kiholela. Hawawezi kusema "tutajipa tu ETH elfu moja kila mmoja" — huo utakuwa muamala batili. Hatimaye washiriki wa mwafaka wanawajibika kwa jamii, na hiyo ni tofauti kubwa ikilinganishwa na hisa.
 
-#### Pesa ya bidhaa dhidi ya pesa ya hisa (10:06) {#commodity-money-vs-equity-money-1006}
+### Pesa ya bidhaa dhidi ya pesa ya hisa (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, unataka kuendelea na mazungumzo hayo kuhusu Uthibitisho wa Kazi kama bidhaa na Uthibitisho wa Dau kama hisa?
 
@@ -53,7 +53,7 @@ Mjadala kati ya **Lyn Alden** na **Justin Drake** kuhusu faida na hasara za kims
 
 **Lyn Alden:** Nadhani kuna kiwango fulani cha wigo, lakini kwa sehemu kubwa ni njia ya mwelekeo mmoja. Kuna njia nyingi za kuwa hisa lakini njia chache sana za kuwa bidhaa. Bidhaa kwa asili yake ni adimu kwa kiasi fulani na isiyobadilika. Njia za kuunda bidhaa ya kweli katika ulimwengu wa kidijitali ni chache sana.
 
-#### Mashambulio ya asilimia 51: kizuizi na kupona (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Mashambulio ya asilimia 51: kizuizi na kupona (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Nataka kulinganisha Uthibitisho wa Kazi na Uthibitisho wa Dau kuhusu ni upi ulio katika hatari ndogo zaidi ya mashambulio ya udhibiti. Moja ya faida kubwa za Uthibitisho wa Dau ni kwamba tabaka la kijamii lina zana za kuingilia kati. Katika Uthibitisho wa Kazi, ikiwa mshambuliaji wa asilimia 51 ataingia, anakusanya kila kipande cha tuzo, kila kipande cha utoaji, kila ada ya muamala. Wachimbaji waaminifu wanazima kwa sababu haina maana kutumia umeme bila mapato. Kisha wanataka kufilisi, wakiuza vifaa vyao. Mshambuliaji anaweza kununua vifaa hivi kwa bei rahisi sana na kujiimarisha. Hata kama jamii itafanikiwa kufanya shambulio la kupinga, itachukua miezi kama si miaka kupanga.
 
@@ -65,7 +65,7 @@ Linapokuja suala la usalama, si tu kuhusu mashambulio ya asilimia 51 — pia ina
 
 Kwa kupona kutokana na mashambulio ya asilimia 51: njia pekee katika Uthibitisho wa Dau ni kufanya mchepuo laini na kuchukua mtaji wa watu. Ukiieleza kama kuchukua mtaji wa mshambuliaji, inasikika sawa. Lakini mshambuliaji anaweza kuwa mtunzaji anayedhibitiwa — unachukua mtaji kutoka kwa watu ambao hawakuwa na uhusiano wowote na shambulio hilo.
 
-#### Ugumu, hitilafu, na anuwai ya wateja (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Ugumu, hitilafu, na anuwai ya wateja (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Ugumu si lazima uwe mbaya. Ubinadamu unastawi kupitia hilo. Kwa upande wa ugumu wa Uthibitisho wa Dau — ndiyo, ni mgumu zaidi, angalau mara 10, labda mara 100. Lakini ni ugumu ambao kwa sasa tumeudhibiti. Tuna wateja watano tofauti ambao wametekeleza itifaki, kila mmoja akiwa na timu ndogo za watu watano hadi kumi. Anuwai ya wateja inaiwezesha jamii kununua bima dhidi ya hitilafu.
 
@@ -75,7 +75,7 @@ Kuhusu mada ya kuwa mtandaoni kila wakati — kile tunachokiita udhanifu dhaifu 
 
 Ukiangalia mwelekeo wa Uthibitisho wa Kazi kwa muda mrefu, utaona muunganiko unaoongezeka kati ya wachimbaji na wazalishaji wa nishati. Gredi ya umeme kwa asili inabidi izalishe umeme kupita kiasi. Mifumo ya Uthibitisho wa Kazi ni kisawazishaji kizuri sana cha mzigo kwa nishati iliyokwama. Chanzo cha bei nafuu zaidi cha umeme ni nishati iliyokwama ambayo karibu haina gharama. Sasa hivi kituo kikubwa zaidi cha uchimbaji wa Bitcoin duniani kina takriban 1% ya jumla ya kasi ya heshi — tayari kimegatuliwa kimuundo.
 
-#### Usawa na hoja ya "matajiri wanazidi kutajirika" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Usawa na hoja ya "matajiri wanazidi kutajirika" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Katika Uthibitisho wa Dau, una usawa kamili — unaweka kitengo kimoja cha mtaji na kupata kiasi sawa cha tuzo bila kujali ni kikubwa au kidogo kiasi gani. Katika Uthibitisho wa Kazi, samaki wakubwa wana faida zisizo za haki. Ikiwa wewe ni mchimbaji wa rejareja unayenunua mtambo mmoja, unalipa zaidi kwa mara 2, 3, 4, 5 ikilinganishwa na wachimbaji wa kitaalamu wanaonunua kwa wingi. Kwa sababu ya sheria ya Moore, washambuliaji wanaotaka kushambulia wana faida — wanaweza kuchagua vifaa vya kisasa zaidi, vya hali ya juu kabisa. Kwao, bei ya umeme kwa kiasi kikubwa haina umuhimu, kwa sababu shambulio la asilimia 51 linahitaji tu kufanya kazi kwa siku moja au wiki moja. 99% ya gharama iko kwenye mitambo na miundombinu, si umeme.
 
@@ -85,7 +85,7 @@ Ukweli kwamba Uthibitisho wa Kazi kwa asili si wa haki unaunda faida kwa mshambu
 
 Katika Uthibitisho wa Kazi, kimsingi unakodisha uwezo wako wa kutawala mfumo. Mashine zako zinachakaa, chanzo chako cha nishati kinaweza kuwa na ufanisi mdogo, vifaa vyako vinakuwa si vya kisasa tena. Ni mfululizo wa mara kwa mara wa maamuzi badala ya mfumo ambao kwa asili unawanufaisha watu walionunua kwanza. Haijalishi Michael Saylor ana Bitcoin ngapi, hana udhibiti wowote juu ya miamala ipi inachakatwa.
 
-#### Uthibitisho wa kazi kama "uthibitisho wa dau wenye hatua za ziada" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Uthibitisho wa kazi kama "uthibitisho wa dau wenye hatua za ziada" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Simjui mtu yeyote — na nimekuwa katika nafasi hii kwa karibu muongo mmoja — ambaye anachimba Bitcoin kama mtu binafsi kwa sasa. Yote ni ya kiviwanda. Kwa upande mwingine, na Uthibitisho wa Dau, kila mtu kwenye simu hii — labda isipokuwa wewe, Lyn — wanaweka dhamana kama watu binafsi. Anuwai kwenye Uthibitisho wa Dau ni kubwa zaidi sana. Kikwazo cha kuingia ni cha chini sana — kimsingi unahitaji tu kompyuta inayofanya kazi 24/7.
 
@@ -97,11 +97,11 @@ Kuhusu hoja ya "matajiri wanazidi kutajirika" katika Uthibitisho wa Dau: Ninaion
 
 Kuhusu anuwai ya wateja — angalau mara ya mwisho nilipoangalia, mteja mkubwa zaidi ana takriban 84% ya wateja wa Ethereum. Una kiwango fulani cha utofauti, lakini pia ni udanganyifu wa kiasi. Kwa vitendo, moja ya mambo muhimu yanayolinda dhidi ya hitilafu ni kuwa na msingi rahisi zaidi wa msimbo unaowezekana.
 
-#### NIST, kwanta, na misingi ya muda mrefu (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, kwanta, na misingi ya muda mrefu (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Ikiwa tunataka kuwa mtandao wa pesa, tunahitaji kipimo cha muda kwa kiwango cha mtandao wenyewe — miongo kama si karne. Ugumu ni kitu ambacho kina nusu-maisha ya labda mwaka mmoja — kinaweza kudhibitiwa na kuimarishwa. Kadiri muda unavyopita, huku thamani kubwa ikilindwa, mifumo inaweza kuaminika. Hitilafu zitarekebishwa, mfumo utaimarika. Kile tunachopaswa kuangalia ni misingi ya muda mrefu. Inaonekana kwamba Uthibitisho wa Kazi utavurugwa kabisa na kompyuta za kwanta katika miaka 20 hadi 30 ijayo. Ndiyo, kuna wasiwasi wa muda mfupi kuhusu ugumu, lakini ukipanua mtazamo na kuzingatia misingi, kuna sababu za kimsingi za kuwa na mtazamo hasi (bearish) juu ya Uthibitisho wa Kazi.
 
-#### Hoja ya kihistoria ya pesa ya bidhaa (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Hoja ya kihistoria ya pesa ya bidhaa (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, umechukua uongozi kama mchambuzi mkuu anayezingatia masoko ya bidhaa. Wafuasi wa Bitcoin huwa wanazingatia sifa za bidhaa na jinsi Bitcoin inavyotumia nishati kama bidhaa. Je, hii ni kwa kiasi fulani hoja ya kimaadili — kwamba pesa ya bidhaa ni pesa inayofaa zaidi kwa ulimwengu?
 
@@ -113,13 +113,13 @@ Kadiri muda unavyopita, hiyo inaelekea kwenye uwekaji kati. Kadiri deni linavyoj
 
 **Lyn Alden:** Binafsi ninalikaribia kutoka kwa mtazamo wa hatari ya kimbinu. Ni mfumo upi ulio na uwezekano mdogo zaidi wa kuwa na hatari za mkia (tail risks)? Ni nini kilichoboreshwa kwa kile kinachojaribu kufanya? Linapokuja suala la hoja ya usawa, kwa kiasi fulani hiyo inachanganywa na mambo tofauti — Uthibitisho wa Kazi dhidi ya Uthibitisho wa Dau ikiwa ni kipengele kimoja, na uhaba wa tokeni ukiwa mwingine.
 
-#### Injini ya uhaba dhidi ya injini ya ukwasi (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Injini ya uhaba dhidi ya injini ya ukwasi (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Uthibitisho wa Kazi na Uthibitisho wa Dau kutoka kwa mtazamo wa meme ni karibu kinyume kabisa. Kwa Uthibitisho wa Dau, una kile ninachokiita injini ya uhaba — utaratibu wa kugeuza ETH yenye ukwasi kuwa ETH iliyogandishwa inayotumika kama dhamana. Makadirio yangu yanasema takriban nusu ya usambazaji wote wa ETH hatimaye itawekwa dhamana. Kwa Uthibitisho wa Kazi, ni kinyume chake — utoaji na ada za muamala ambazo wachimbaji wanapata zinahitaji kuuzwa ili kufidia gharama za umeme na vifaa. Umeunda injini ya ukwasi, inayotupa sokoni kila wakati. Ukiuliza ni mfumo upi ulio bora zaidi kuunda pesa kwa ajili ya mtandao — ule unaotupa kila wakati au ule unaohimiza watu kushikilia — nadhani ni wazi ni upi wenye thamani zaidi kutoka kwa mtazamo wa meme.
 
 **Lyn Alden:** Kadiri mfumo unavyojaribu kufanya mambo mengi, ndivyo utakavyokuwa mbaya zaidi katika jambo lolote moja. Wakati Ethereum imejaribu kuimarisha sera yake ya kifedha, inaweza kujadiliwa kuwa imepoteza sehemu ya soko katika fedha zilizogatuliwa (DeFi) — kutoka 97% ya jumla ya thamani iliyofungwa (tvl) mwishoni mwa 2020 hadi 55% sasa. Kufikia sasa, Bitcoin kwa kweli haina ushindani kutoka kwa mifumo mingine. Vipindi vifupi vya ushindani — meme za Dogecoin, Bitcoin Cash — vinafifia kadiri muda unavyopita. Ulimwengu mmoja unategemea utawala na kufanya mfumo wako wa ikolojia uvutie. Mwingine unakuja kwenye ni upi ulio mgumu zaidi — ni nini kilicho bora zaidi katika kuwa pesa.
 
-#### Utawala, tabia isiyobadilika, na mamlaka binafsi (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Utawala, tabia isiyobadilika, na mamlaka binafsi (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Kwa uchache, mfumo wa Uthibitisho wa Dau unawapa wamiliki wa vitengo sauti zaidi juu ya miamala ipi inachakatwa na ipi inadhibitiwa. Lakini nani anapata kubadilisha itifaki na vipi — hiyo inaenda nje ya mjadala wa Uthibitisho wa Kazi dhidi ya Uthibitisho wa Dau. Unaweza kuwa na mifumo ya Uthibitisho wa Kazi inayoonekana zaidi kama hisa — yenye mabomu ya ugumu au vitalu vikubwa sana ili watu wasiweze kuendesha nodi zao wenyewe.
 
@@ -129,13 +129,13 @@ Meme ya Bitcoin ni mamlaka binafsi. Unaendesha nodi yako mwenyewe, nodi ni ndogo
 
 **Lyn Alden:** Kwa pesa za bidhaa, wazalishaji mara chache huwa na udhibiti mkubwa. Dhahabu ina uwiano wa juu sana wa akiba kwa mtiririko (stock-to-flow) — wachimbaji wa dhahabu karibu hawana udhibiti wowote juu ya mfumo. Hiyo imekuwa kweli katika mfumo wa ikolojia wa Bitcoin. Wakati wa vita vya ukubwa wa kitalu, idadi kubwa ya wachimbaji walipendelea ongezeko la kitalu na bado hawakuweza kulipitisha. Waendeshaji wa nodi walilikataa. Mchanganyiko huo wa mgawanyo wa madaraka — ambapo unaweza tu kuendesha nodi na kuwa na mamlaka binafsi, na kando uchimbaji unakupa uwezo wa muda wa kupanga miamala lakini hakuna mgao wa kudumu — ndio unaodumisha mfumo uliogatuliwa.
 
-#### Kukanusha "matajiri wanazidi kutajirika" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Kukanusha "matajiri wanazidi kutajirika" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Kuhusu "matajiri wanazidi kutajirika" katika Uthibitisho wa Dau — ninaiona kama uhifadhi wa utajiri, si kuzidisha utajiri. Unapoweka dhamana, unalipa gharama ya fursa ya takriban 3% na kulipwa fidia. Kwa ujumla, unafanya uhifadhi wa utajiri. Wachimbaji wa kitaalamu wanafanya kitu kile kile — wanajikinga na hatari kwa mikataba ya baadaye, wakifunga faida inayolingana takriban na gharama ya fursa. Kwa kweli, Uthibitisho wa Kazi ni Uthibitisho wa Dau tu wenye hatua za ziada. Hatari inaweza kuondolewa kwa bidhaa za kifedha, na mwisho wa siku kimsingi una bidhaa sawa ya kifedha.
 
 **Lyn Alden:** Kinachofanya mfumo wa bidhaa uwe uliogatuliwa ni mchanganyiko wa nodi ndogo na uchimbaji tofauti. Haijalishi mtu anashikilia Bitcoin ngapi, hana udhibiti wowote juu ya upangaji wa miamala. Huo ndio mgawanyo wa madaraka. Ikiwa unakwenda kukaribia tabia isiyobadilika katika ulimwengu wa kidijitali iwezekanavyo, unaunda mfumo ambao umejatuliwa sana, mgumu sana kulazimisha mabadiliko, ukiwa na ama hakuna mabadiliko au mabadiliko ya hiari. Chochote kinachokengeuka kutoka kwa mtindo huo — ununuzi wa lazima unaoendelea kutoka kwa timu ndogo ya watengenezaji, vituo vya maendeleo, taasisi — kwa asili kinafanana zaidi na hisa bila kujali utaratibu wa makubaliano.
 
-#### Hoja za kufunga (1:30:42) {#closing-arguments-13042}
+### Hoja za kufunga (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Haya yamekuwa mazungumzo mazuri sana. Haya labda yamekuwa mazungumzo bora zaidi ya Uthibitisho wa Dau dhidi ya Uthibitisho wa Kazi katika historia. Wakati wa hoja za kufunga. Justin, kwa nini Uthibitisho wa Dau ni njia bora zaidi ya kuunda pesa ya kripto?
 
@@ -151,7 +151,7 @@ Kama ungekuwa unaunda mnyororo wa vitalu ili kuongeza sifa za kifedha, ungetenge
 
 Linapokuja suala la pesa inayofaa kuweka hazina ya shirika lako, kutenga sehemu ya wakfu wako, au kushikilia 10% au zaidi ya thamani yako halisi — au kusimamia akiba za kitaifa zinazowakilisha miongo kadhaa ya ziada ya biashara iliyokusanywa — kihistoria bora zaidi imekuwa dhahabu. Sasa tuna washindani wapya. Ungechagua iliyogatuliwa zaidi, isiyobadilika zaidi, ile isiyotoa dhabihu yoyote ya sifa hizo. Hiyo haimaanishi mifumo mingine haina thamani — kwa sababu tu dhahabu ina thamani haimaanishi hisa za Tesla hazina. Ni vitu tofauti vinavyofanya mambo tofauti. Pesa kamili iko tayari kutoa dhabihu karibu kila kitu kingine ili kuwa na sifa kamili za pesa — ambayo madhumuni yake makuu ni kushikiliwa na mara kwa mara kufanyiwa miamala, ikilinganishwa na kitu kinachojaribu kuwa kisu cha Jeshi la Uswisi (Swiss Army knife).
 
-#### Hitimisho (1:40:14) {#wrap-up-14014}
+### Hitimisho (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Nataka kuwashukuru tena Lyn Alden na Justin Drake kwa kujiunga nasi na kuwa na mjadala bora zaidi ambao nimewahi kusikia kuhusu Uthibitisho wa Kazi dhidi ya Uthibitisho wa Dau. Pia shukrani za kipekee kwa Lyn kwa kuja katika kile ambacho baadhi wanaweza kukichukulia kama "timu ya ugenini."
 

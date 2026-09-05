@@ -19,7 +19,7 @@ Krótka prezentacja (lightning talk), którą wygłosił **jseam** na Devcon SEA
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=k9Dfg19JPEw) opublikowanego przez Fundację Ethereum. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Dlaczego mikrokropki? (0:00) {#why-microdots-000}
+### Dlaczego mikrokropki? (0:00) {#why-microdots-000}
 
 Cześć wszystkim, witajcie w Tajlandii. W mojej prezentacji opowiem o mikrokropkach — czym dokładnie są, dlaczego moglibyście ich potrzebować i jak właściwie można je zrobić. Mam kilka próbek, więc po prezentacji będziecie mogli je obejrzeć.
 
@@ -27,13 +27,13 @@ Pojawia się wiele pytań o OpSec (bezpieczeństwo operacyjne) i o to, jak możn
 
 Spójrzcie na ten wykres: mamy teraz epidemię samotności. Więc przechowywanie kluczy i odzyskiwanie społecznościowe będą ogromnymi problemami. Co, jeśli istnieją fizyczne podejścia do ukrywania informacji?
 
-#### Historia steganografii mikrokropek (2:00) {#the-history-of-microdot-steganography-200}
+### Historia steganografii mikrokropek (2:00) {#the-history-of-microdot-steganography-200}
 
 To technika steganograficzna zwana mikrokropkami. Powodem, dla którego pokazuję to dzisiaj, jest fakt, że historycznie była ona używana w szpiegostwie. Celem jest w zasadzie ukrycie wiadomości na widoku.
 
 Cała dokumentacja na ten temat jest bardzo ograniczona. Prawdopodobnie pytacie Claude'a, a on odpowiada: „Przepraszam, brak informacji”. Sam odtwarzałem te informacje metodą inżynierii wstecznej. Slajdy dokumentują wszystko. Nie będę w stanie omówić każdego szczegółu, ale przejdę przez najciekawsze części. Stworzyłem również repozytorium na GitHubie dokumentujące te procesy.
 
-#### Fotografia analogowa dla bezpieczeństwa (3:30) {#analog-photography-for-security-330}
+### Fotografia analogowa dla bezpieczeństwa (3:30) {#analog-photography-for-security-330}
 
 Wskrzesimy fotografię analogową dla tego przypadku użycia. Dlaczego analogową? W zasadzie nie ma szans, aby ktoś zhakował aparat analogowy, chyba że fizycznie ci go ukradnie.
 
@@ -41,19 +41,19 @@ Jednym z głównych problemów z fotografią analogową jest ISO. W aparacie cyf
 
 Są dwie fazy. Najpierw robisz zdjęcie, wywołujesz je i utrwalasz. Druga faza to ta, w której zamiast powiększać obraz, robimy coś odwrotnego — pomniejszamy go do mikroskopijnej skali.
 
-#### Proces brytyjski (5:00) {#the-british-process-500}
+### Proces brytyjski (5:00) {#the-british-process-500}
 
 Oto jak to zrobić. Zapisujesz swoją frazę odzyskiwania. Zazwyczaj poradnik MetaMask prosi o zapisanie frazy odzyskiwania — ale gdzie ją potem umieścić? To jest jeden ze sposobów: robisz zdjęcie frazy odzyskiwania, zwijasz kliszę, wywołujesz ją. Co ciekawe — to wszystko są metale ciężkie, srebro. Nie powinieneś wylewać ich do toalety. Ja przypadkowo wlałem trochę do swojej, więc mogłem popełnić pewne wykroczenia przeciwko środowisku. W najgorszym razie prawdopodobnie skoroduje mi to rury.
 
 Robisz zdjęcie ponownie i tada — masz tę malutką kropkę. Nazywa się to procesem brytyjskim.
 
-#### Proces dwuchromianowy (7:00) {#the-dichromated-process-700}
+### Proces dwuchromianowy (7:00) {#the-dichromated-process-700}
 
 Kolejnym, jeszcze bardziej ekstremalnym procesem jest proces dwuchromianowy. W ten sposób można uzyskać mikroskopijne powiększenia, takie jak 1000x. Celem jest znalezienie do tego podłoża chemicznego i tu wkracza to, co nazywam „Zakazanym Sokiem Pomarańczowym” — dwuchromian amonu. Jest bardzo toksyczny. Rozlałem trochę i prawie umarłem, gdy wdychałem pył. Prawdopodobnie będę musiał po tym pójść na badania przesiewowe w kierunku raka.
 
 Wyświetlasz obraz i otrzymujesz te malutkie kropki na kartce papieru. Kropki są tak małe, że zdecydowanie potrzebujesz mikroskopu. Tę wykonaną w procesie brytyjskim można zobaczyć gołym okiem, ale proces dwuchromianowy tworzy coś naprawdę maleńkiego — bez mikroskopu nie jestem nawet pewien, czy to w ogóle jest obraz.
 
-#### Pytania i odpowiedzi (8:00) {#qa-800}
+### Pytania i odpowiedzi (8:00) {#qa-800}
 
 Jak małe są mikrokropki? Tę wykonaną w procesie brytyjskim można zobaczyć gołym okiem, ale proces dwuchromianowy tworzy coś naprawdę maleńkiego — zdecydowanie potrzebujesz mikroskopu. Trudno powiedzieć, czy bez niego to w ogóle jest obraz.
 

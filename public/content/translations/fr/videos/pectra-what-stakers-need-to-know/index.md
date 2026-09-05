@@ -19,11 +19,11 @@ Un webinaire organisé par **Blockdaemon** avec l'ingénieure en chaîne de bloc
 
 *Cette transcription est une copie accessible de la [transcription vidéo originale](https://www.youtube.com/watch?v=_UpAFpC7X6Y) publiée par Blockdaemon. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 **Animateur :** Bonjour et bienvenue à ce webinaire organisé par Blockdaemon, consacré à la prochaine mise à jour Pectra d'Ethereum. Nous accueillons aujourd'hui Julia Schmidt, ingénieure en chaîne de blocs chez Alluvial, et Freddy Tänzer, responsable de l'écosystème Ethereum chez Blockdaemon, pour discuter de la manière dont les changements de Pectra impacteront le staking d'ETH, le réseau dans son ensemble, les services de staking liquide, et bien plus encore. Pour commencer, Freddy — pourriez-vous nous donner un bref aperçu de la mise à jour Pectra et de son impact sur les stakers ?
 
-#### Qu'est-ce que Pectra (1:28) {#what-is-pectra-128}
+### Qu'est-ce que Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer :** Pectra est donc une mise à jour d'Ethereum prévue pour la fin du premier trimestre 2025 — vers mars, cela pourrait être légèrement repoussé, peut-être en avril environ. Au départ, cela devait être un petit fork, puis de plus en plus d'éléments ont été ajoutés, de sorte qu'ils l'ont maintenant divisé en deux.
 
@@ -33,7 +33,7 @@ Le premier est le fait que vous pouvez déclencher des retraits et des sorties d
 
 Il y en a aussi un plus petit qui fait que les dépôts sont beaucoup plus rapides — enregistrés onchain en moins d'une heure au lieu d'environ 14 heures — mais je pense que ces deux-là sont les plus pertinents pour notre discussion ici.
 
-#### EIP-7002 : sorties déclenchables depuis la couche d'exécution (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002 : sorties déclenchables depuis la couche d'exécution (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Animateur :** Pour le premier changement majeur, Julia, pourriez-vous expliquer comment le processus post-Pectra va changer par rapport aux méthodes actuelles d'initiation des retraits dans l'écosystème de staking d'Ethereum ?
 
@@ -49,7 +49,7 @@ Lors de la dernière mise à jour Dencun, une nouvelle EIP a modifié le délai 
 
 Ce problème est désormais résolu avec l'EIP-7002, qui permet à la fois à la clé de validateur et à la clé de retrait de déclencher la sortie depuis la couche d'exécution — simplement en envoyant une transaction à un contrat de retrait spécial où vous envoyez une demande de retrait et spécifiez soit une sortie complète du validateur, soit un retrait partiel du solde staké.
 
-#### EIP-7251 : solde effectif maximum (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251 : solde effectif maximum (4:15) {#eip-7251-max-effective-balance-415}
 
 **Animateur :** Freddy, pourriez-vous nous donner un aperçu du solde effectif maximum à partir de Pectra, et comment cela impactera les personnes qui stakent actuellement ?
 
@@ -69,7 +69,7 @@ Il y a aussi de bonnes nouvelles concernant la réduction : la pénalité de ré
 
 L'avantage de la composition automatique profite principalement aux plus petits montants de mise. Si vous avez mille validateurs, vous pourriez en lancer un nouveau manuellement chaque mois. Mais si vous n'avez qu'un seul validateur, vous devriez pratiquement attendre 32 ans pour composer.
 
-#### Implications du staking liquide (11:25) {#liquid-staking-implications-1125}
+### Implications du staking liquide (11:25) {#liquid-staking-implications-1125}
 
 **Animateur :** Julia, comment la consolidation de validateurs plus importants se compare-t-elle aux avantages du staking liquide ? Comment ces décisions pèseront-elles dans l'esprit d'un staker après Pectra ?
 
@@ -79,7 +79,7 @@ Le fait que la pénalité de réduction initiale ait été abaissée réduit le 
 
 Du côté de l'utilité, un jeton de staking liquide (LST) ajoute évidemment de la liquidité — même avec des retraits partiels depuis la couche d'exécution, ce ne sera pas instantané. Vous soumettez la transaction, elle est mise en file d'attente, puis il y a l'époque de sortie et l'époque de retrait. Les jetons de staking liquide offrent toujours une liquidité instantanée que les retraits partiels ne peuvent pas offrir.
 
-#### Prochaines étapes pour les stakers (16:20) {#next-steps-for-stakers-1620}
+### Prochaines étapes pour les stakers (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer :** Ce que nous constatons, c'est que les institutions financières stakent généralement entre 65 % et 85 % de leurs ETH sous garde, car elles ont besoin du reste comme réserve de liquidité pour les rachats. Avec le staking liquide, vous pouvez potentiellement augmenter la quantité d'ETH stakés, ce qui génère des récompenses plus élevées.
 
@@ -89,7 +89,7 @@ Les deux parties bénéficient de Pectra — le staking liquide obtient l'option
 
 Un avantage clé que je n'ai pas encore abordé concerne les retraits partiels — maintenant que vous pouvez retirer des ETH stakés depuis la couche d'exécution, cela ouvre de nouvelles voies pour des protocoles tels qu'EigenLayer afin de déclencher des retraits et des sorties. Il y a une énorme augmentation des fonctionnalités et de l'interopérabilité que la finance décentralisée (DeFi) peut désormais mieux intégrer dans le cycle de vie complet du validateur, du dépôt à la sortie. En tant qu'ingénieure en chaîne de blocs, il est passionnant de pouvoir automatiser l'ensemble du flux de travail.
 
-#### Conclusion (19:50) {#closing-1950}
+### Conclusion (19:50) {#closing-1950}
 
 **Animateur :** Julia, où les gens peuvent-ils aller pour en savoir plus sur Liquid Collective et Alluvial ?
 

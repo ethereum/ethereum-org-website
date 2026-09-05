@@ -19,13 +19,13 @@ Esta apresentação explora os tipos de reorganizações de blocos possíveis na
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=xcPxwhrg3Ao) publicada pela LisCon. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução e contexto (0:03) {#introduction-and-background-003}
+### Introdução e contexto (0:03) {#introduction-and-background-003}
 
 Sejam bem-vindos. Hoje vou falar sobre as reorgs que são possíveis na Prova de Participação (PoS) do Ethereum.
 
 Recentemente, entrei para a Fundação Ethereum, em particular para o Robust Incentives Group. Basicamente, somos uma equipe de pesquisa focada em tudo relacionado a incentivos. Vou ser breve — esta palestra está cheia de conteúdo e você pode encontrar a maior parte do nosso trabalho no GitHub.
 
-#### Dois tipos de reorgs (0:44) {#two-types-of-reorgs-044}
+### Dois tipos de reorgs (0:44) {#two-types-of-reorgs-044}
 
 Hoje quero falar sobre reorgs e, em particular, quero esboçar dois tipos diferentes de reorgs que são possíveis no âmbito da Prova de Participação (PoS) do Ethereum.
 
@@ -37,7 +37,7 @@ Agora, as reorgs ex-ante são um pouco diferentes. A ideia é que o invasor prec
 
 Você pode se perguntar por que alguém iria querer fazer esse tipo de reorg. Bem, ainda há MEV a ser capturado. Se você tiver sorte, o bloco N+2 tem muito MEV — você pode capturar isso apenas copiando e colando o que quer que seja esse bloco. No pior dos casos, você tem basicamente dois slots de transações para escutar.
 
-#### Reorgs ex-post na Prova de Trabalho (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Reorgs ex-post na Prova de Trabalho (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Antes de mergulhar nas reorgs ex-ante, que é o tópico principal desta palestra, deixe-me recapitular brevemente as reorgs ex-post e, especialmente, começar com o contexto da Prova de Trabalho (PoW).
 
@@ -45,7 +45,7 @@ Basicamente, é uma recapitulação da postagem do blog dos suspeitos de sempre 
 
 Em resumo, na Prova de Trabalho (PoW) do Ethereum, as reorgs ex-post são difíceis, mas não são inviáveis. Um minerador com 10% tem uma chance relativamente boa de minerar alguns blocos seguidos e, se o incentivo for alto o suficiente — imagine que haja um bloco com 100 ETH em MEV para capturar —, então talvez uma taxa de sucesso de um por cento possa ser suficiente para fazer valer a pena tentar reorganizar.
 
-#### Reorgs ex-post na Prova de Participação (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Reorgs ex-post na Prova de Participação (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Na Prova de Participação (PoS), a história é completamente diferente. Estamos falando de uma quantidade absurda de stake necessária. Vou mostrar como alguém poderia fazer isso apenas para enfatizar o quão ridiculamente difícil é.
 
@@ -63,7 +63,7 @@ Se somarmos isso — o bloco N+1 tem atestações no valor de um terço mais um 
 
 Para dar uma ideia de quão ridículas são essas suposições — mesmo se você tivesse um staker com 65%, para controlar dois terços do comitê em qualquer slot, você tem uma probabilidade de 0,05%. Isso mostra que o poder das atestações paralelas é real — as reorgs ex-post são incrivelmente difíceis, se não virtualmente impossíveis, na Prova de Participação (PoS) do Ethereum.
 
-#### Mecânica do ataque de reorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mecânica do ataque de reorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Agora vou falar sobre as reorgs ex-ante. Esse ataque é baseado em um artigo de Neuder e outros. Recentemente, melhoramos esse ataque de forma significativa. Também escrevemos um artigo sobre ele e conseguimos enviá-lo para o arXiv bem a tempo.
 
@@ -75,7 +75,7 @@ O que acontece é que as pessoas honestas não veem o bloco N+1, então elas ate
 
 Vamos supor latência zero por enquanto. No slot N+2, o que fazemos como invasores é liberar o bloco N+1 e a atestação privada, tudo ao mesmo tempo. Os validadores honestos no slot N+2 precisam atestar um bloco. Do ponto de vista deles, eles veem o bloco N+2 e o bloco N+1 com essa única atestação privada. Se eles executarem a escolha de bifurcação, descobrirão que o bloco N+1 tem mais peso que o bloco N+2, porque o N+1 tem a atestação privada que o N+2 não tem. Até mesmo todos os validadores honestos atestarão efetivamente o bloco N+1. No N+3, trivialmente, o N+1 será visto como o topo da cadeia.
 
-#### Latência da rede e o ataque (10:25) {#network-latency-and-the-attack-1025}
+### Latência da rede e o ataque (10:25) {#network-latency-and-the-attack-1025}
 
 Eu presumi latência zero, o que obviamente não é como funciona. Existe latência — leva tempo para propagar blocos e mensagens na camada P2P.
 
@@ -83,7 +83,7 @@ A maneira como um invasor ainda pode realizar esse tipo de ataque é tendo muito
 
 Para enfatizar novamente o que está acontecendo aqui: temos um proponente com um único atestador conseguindo realizar uma reorg de um bloco. Nada ideal, para dizer o mínimo.
 
-#### Estratégias de balanceamento para reorgs mais longas (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Estratégias de balanceamento para reorgs mais longas (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Se você quiser ser sofisticado, pode realizar reorgs mais longas usando uma estratégia de balanceamento. A ideia é dividir o comitê honesto em diferentes visões da cadeia.
 
@@ -97,7 +97,7 @@ Para finalizar uma reorg de dois blocos: o bloco N+3 é proposto, você o ouve c
 
 Se você pensar bem, é relativamente barato fazer essas reorgs sob essas suposições. Mesmo que você não tenha divisões perfeitas, como a camada P2P é muito grande, você tem uma distribuição de probabilidade que pode ser direcionada de modo que o custo do ataque cresça na raiz quadrada do tamanho do comitê.
 
-#### Mitigação de impulso do proponente (15:17) {#proposer-boost-mitigation-1517}
+### Mitigação de impulso do proponente (15:17) {#proposer-boost-mitigation-1517}
 
 Vamos falar sobre a mitigação. Qual é a ideia básica? Vamos dar um pouco mais de poder ao proponente. Se um bloco válido chegar a tempo, vamos impulsionar o peso desse bloco pela duração do slot. Depois que esse slot terminar, retomamos a pontuação LMD-GHOST usual e tudo volta ao normal.
 
@@ -107,7 +107,7 @@ A questão do balanceamento também não funciona mais porque você tem uma divi
 
 A ideia é que, com essa mitigação em vigor, as atestações do adversário tenham que competir com o impulso para convencer os validadores honestos a votar de acordo com sua preferência. Isso quebra as estratégias de balanceamento e proíbe basicamente todas as reorgs por completo. Boas notícias — há um PR aberto, então basicamente ele será integrado antes do The Merge.
 
-#### Principais conclusões (16:48) {#key-takeaways-1648}
+### Principais conclusões (16:48) {#key-takeaways-1648}
 
 Algumas conclusões principais. Falei sobre as diferenças entre as reorgs ex-post e ex-ante. Esbocei brevemente os diferentes cenários para reorgs na Prova de Trabalho (PoW) em comparação com a Prova de Participação (PoS). Mostrei como realizar uma reorg ex-ante, mas também, e mais importante, como corrigi-la.
 

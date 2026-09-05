@@ -19,7 +19,7 @@ Một video giải thích của **Junion** kể về câu chuyện của vụ ha
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=rNeLuBOVe8A) được xuất bản bởi Junion. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Sự khám phá (0:00) {#the-discovery-000}
+### Sự khám phá (0:00) {#the-discovery-000}
 
 Hôm nay là thứ Hai, ngày 13 tháng 6 năm 2016. Một giáo sư khoa học máy tính tại Cornell đang kiểm tra mã nguồn của DAO, một trong những dự án tham vọng nhất trong không gian tiền mã hóa. Trong nhiều tháng, ông đã ủng hộ việc tạm dừng dự án, vì ông tin rằng có những lỗ hổng nhất định có thể gây nguy hiểm cho toàn bộ hệ thống. Nhưng hôm nay ông phát hiện ra một lỗ hổng nghiêm trọng: một lỗi ở dòng 666.
 
@@ -33,7 +33,7 @@ Giống như vụ hack SWIFT trị giá 81 triệu đô la đã công khai nhữ
 
 Đây là câu chuyện về một trong những vụ trộm kỹ thuật số lớn nhất từ trước đến nay và nỗ lực táo bạo nhằm viết lại lịch sử để nó chưa từng xảy ra.
 
-#### DAO là gì? (2:00) {#what-was-the-dao-200}
+### DAO là gì? (2:00) {#what-was-the-dao-200}
 
 Hãy đến với DAO — viết tắt của tổ chức tự trị phi tập trung (decentralized autonomous organization). Ý tưởng này được lấy cảm hứng từ việc gọi vốn cộng đồng. Thay vì nhiều quỹ cho các dự án khác nhau, sẽ có một quỹ duy nhất để quản lý tất cả, và không có cách nào tốt hơn để làm điều này ngoài một DAO.
 
@@ -45,7 +45,7 @@ Khi thời gian bỏ phiếu kết thúc và đạt đủ túc số 20% của t�
 
 Tuy nhiên, vẫn cần có một cách để bảo vệ thiểu số khỏi sự áp bức của đa số. Nếu một nhóm thiểu số kịch liệt phản đối một đề xuất mà họ không thể thắng thế trong cuộc bỏ phiếu, thay vì bỏ phiếu không, họ có thể gọi một hàm tách (split) và chuyển ether của họ từ DAO chính sang một DAO con, về cơ bản là chia DAO làm hai. Hàm tách này sẽ rất quan trọng về sau.
 
-#### Gọi vốn cộng đồng (4:01) {#the-crowdfund-401}
+### Gọi vốn cộng đồng (4:01) {#the-crowdfund-401}
 
 DAO là dự án gọi vốn cộng đồng lớn nhất từ trước đến nay, huy động được 12,7 triệu ether — trị giá 150 triệu đô la vào thời điểm đó. Nó diễn ra trong kỷ nguyên sơ khai của Ethereum, nơi dự án phải chịu một lượng lớn sự cường điệu và tâm lý sợ bỏ lỡ (FOMO) của nhà đầu tư.
 
@@ -53,7 +53,7 @@ Trước đó, các dự án Ethereum chủ yếu chỉ là các bằng chứng 
 
 Đây là mã nguồn bất biến được lưu trữ trên máy tính an toàn nhất thế giới, đảm bảo các thuộc tính chính của một DAO: một tổ chức hoàn toàn phi tập trung và tự trị. Khi các hợp đồng được triển khai vào ngày 30 tháng 4, không một thực thể đơn lẻ nào — kể cả Slock.it — có thể thực hiện các thay đổi đối với Giao thức hoặc ngăn chặn sự tồn tại của nó. Mã nguồn của nó đã được kiểm toán vô số lần bởi nhiều nhà phát triển Ethereum khác nhau và mọi người đều có thể xem để đánh giá.
 
-#### Vụ hack (5:02) {#the-hack-502}
+### Vụ hack (5:02) {#the-hack-502}
 
 "Lonely, so lonely" — tên của Đề xuất DAO #59. Nó chỉ là một đề xuất tách bình thường, nhưng thực chất đó là nơi vụ hack bắt đầu. Sau khi hacker gửi đề xuất, có một khoảng thời gian tranh luận tiêu chuẩn kéo dài bảy ngày, nơi bất kỳ ai cũng có thể tự do tham gia. Tuy nhiên, không ai tham gia vào đợt tách này.
 
@@ -65,7 +65,7 @@ Bạn còn nhớ bản sửa lỗi diễn ra bốn ngày trước không? Thật
 
 Nhưng nếu không có bản sửa lỗi này, bất kỳ ai cũng có thể liên tục gọi hàm để rút ether trước khi hợp đồng cập nhật số dư của họ. Nó giống như một máy ATM không thay đổi số dư của bạn cho đến khi nó đưa tiền cho bạn. "Tôi có thể rút mười đô la không? Khoan đã, trước đó, tôi có thể rút mười đô la không? Khoan đã, trước đó..."
 
-#### Nhóm Robin Hood (6:55) {#the-robin-hood-group-655}
+### Nhóm Robin Hood (6:55) {#the-robin-hood-group-655}
 
 Những người nắm giữ token DAO chứng kiến các khoản đầu tư của họ đang dần bị rút cạn từ DAO chính sang DAO con, còn được gọi là dark DAO (DAO hắc ám). Ngoài ra, giá của Ethereum đã sụp đổ chớp nhoáng từ 20 đô la xuống còn 15 đô la sau tin tức này. Cần phải làm điều gì đó, và cách duy nhất là rút cạn phần còn lại trước khi hacker làm điều đó. Và thế là cuộc đua rút cạn bắt đầu.
 
@@ -79,13 +79,13 @@ Trong khi đó, Alex vừa chuẩn bị khởi động cuộc tấn công mũ tr
 
 Sáng hôm sau, Alex cố gắng tập hợp lại nhóm để xâm nhập vào một đề xuất tách khác, nhưng những người khác đều bận. "Chúng tôi cảm thấy mình giống như những hacker tồi tệ nhất trong lịch sử. Chúng tôi đã bị cản trở bởi internet kém và các cam kết gia đình."
 
-#### Cuộc đua rút cạn (9:10) {#the-race-to-empty-910}
+### Cuộc đua rút cạn (9:10) {#the-race-to-empty-910}
 
 Bốn ngày sau cuộc tấn công ban đầu, DAO lại bị tấn công. Nó đang bị rút cạn từ từ — vài ether mỗi vòng — nhưng nó đã tích lũy được vài nghìn đô la. Có vẻ như đây là từ một kẻ tấn công đang thử nghiệm. Tại thời điểm này, Robin Hood cần phải làm điều gì đó.
 
 Họ chọn xâm nhập vào Đợt tách #78 vì họ đã xác định được người quản lý của đề xuất và nó sắp kết thúc. Họ đã liên hệ với một số cá voi (whale), những người rất sẵn lòng quyên góp token DAO của họ, cho phép nhóm đảm bảo được sáu triệu token. Hợp đồng Robin càng có nhiều token, nó càng có thể hút ether nhanh hơn. Kẻ tấn công đã tăng tốc và những kẻ tấn công khác cũng tham gia. Nhưng nhờ các khoản quyên góp, Robin Hood đã có thể vượt qua họ. Điều này cho phép họ bảo vệ được 7,2 triệu ether — 55% của DAO.
 
-#### Phân nhánh (10:08) {#the-fork-1008}
+### Phân nhánh (10:08) {#the-fork-1008}
 
 DAO chính hiện đã bị rút cạn và tất cả số tiền được phân bổ trên một số DAO con — hai DAO chính là DAO mũ trắng và dark DAO. Nhưng tất cả số tiền đều bị khóa theo thời gian. Không có đề xuất nào có thể được đưa ra dưới một DAO con cho đến khi thời gian chờ 27 ngày kết thúc. Và ngay cả sau đó, việc gửi tiền đến một Địa chỉ bên ngoài yêu cầu phải gửi đề xuất và chờ đợi trong hai tuần. Về cơ bản, vẫn còn 41 ngày cho đến khi hacker có thể rút ra số tiền tương đương với 5% tổng nguồn cung của Ethereum.
 
@@ -93,7 +93,7 @@ Nhưng hacker sẽ không bao giờ được chạm vào số Ethereum của mì
 
 Một Chuỗi khối giống như một danh sách các giao dịch tiếp tục phát triển với mỗi khối được khai thác. Mọi giao dịch đều được khắc sâu vào Chuỗi khối mãi mãi. Nhưng nếu hơn 50% thợ đào thông đồng, họ có thể thay đổi sai lệch Chuỗi khối, viết lại lịch sử theo bất kỳ cách nào họ muốn. Thông thường, điều này được gọi là cuộc tấn công 51%. Nhưng không có gì ác ý về đợt Phân nhánh này — cộng đồng chỉ đang đòi lại số tiền đã bị đánh cắp từ họ.
 
-#### Mã nguồn là luật (11:48) {#code-is-law-1148}
+### Mã nguồn là luật (11:48) {#code-is-law-1148}
 
 Tuy nhiên, không phải ai cũng đồng tình với đợt Phân nhánh được đề xuất. Họ lập luận rằng mã nguồn là luật. Theo quan điểm này, kẻ tấn công không giống một hacker mà giống một luật sư thông minh đã đọc kỹ các điều khoản của một hợp đồng. Do đó, không có khoản tiền nào thực sự bị đánh cắp và họ hoàn toàn có quyền hợp pháp đối với số ether từ dark DAO.
 
@@ -107,7 +107,7 @@ Sau khi kiểm tra kỹ hơn, mọi người nhận ra rằng chữ ký không h
 
 Mặt khác, những người ủng hộ lập luận rằng "mã nguồn là luật" là một tuyên bố quá quyết liệt và con người nên có tiếng nói cuối cùng thông qua sự đồng thuận xã hội. Hacker không được phép trục lợi từ việc khai thác vì điều đó là sai trái về mặt đạo đức và rất có thể là bất hợp pháp. Nhưng quan trọng nhất, DAO đơn giản là quá lớn để có thể sụp đổ. Nó nắm giữ khoảng 15% tổng nguồn cung của ether.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 Trong một sự kiện gợi nhớ đến cuộc khủng hoảng tài chính năm 2008, các nhà phát triển Ethereum đã giải cứu DAO. Vitalik Buterin, người sáng tạo và nhà phát triển chính của Ethereum, đã không hề hối lỗi về việc thúc đẩy một đợt Phân nhánh. Trong một cuộc phỏng vấn, sau này anh nói: "Một số người dùng Bitcoin coi Phân nhánh cứng theo một cách nào đó là vi phạm các giá trị cơ bản nhất của họ. Cá nhân tôi nghĩ rằng những giá trị cơ bản này, khi bị đẩy đến mức cực đoan như vậy, thật là ngớ ngẩn."
 
@@ -117,7 +117,7 @@ Nhưng mọi chuyện không kết thúc ở đó. Chuỗi khối Ethereum ban �
 
 Nếu bạn nắm giữ ether trước đợt Phân nhánh, bây giờ bạn sẽ có một Ethereum và một Ethereum Classic. Nếu bạn nắm giữ một ether trong DAO, bạn sẽ có thể rút một Ethereum từ hợp đồng hoàn tiền. Và nếu bạn vừa hack DAO, bạn sẽ kiếm được một gia tài kha khá bằng Ethereum Classic — khoảng bảy triệu đô la.
 
-#### Di sản của DAO (16:14) {#legacy-of-the-dao-1614}
+### Di sản của DAO (16:14) {#legacy-of-the-dao-1614}
 
 Ban đầu, Ethereum Classic đã đạt được động lực như một giải pháp thay thế, với một cộng đồng vững mạnh gồm những người theo chủ nghĩa cơ bản về Chuỗi khối, những người không đồng ý với gói cứu trợ. Nhưng kể từ đó, Ethereum Classic đã không thể thu hút được sự chú ý và chỉ thực sự tồn tại như một ý tưởng với ít tiện ích. Trong khi Ethereum là ngôi nhà của hàng ngàn Giao thức, Ethereum Classic chỉ có một vài Giao thức cơ bản. Rõ ràng là đợt Phân nhánh đã chiến thắng.
 
@@ -125,7 +125,7 @@ Hai tháng sau, Robin Hood đã chuyển 2,9 triệu Ethereum Classic của họ
 
 Về phần hacker, họ đã rời đi với 3,6 triệu Ethereum Classic — trị giá 150 triệu đô la ngày nay. Nhưng nếu không có đợt Phân nhánh, 3,6 triệu Ethereum đó sẽ trị giá hơn bảy tỷ đô la ngày nay.
 
-#### Tác động lâu dài của DAO (17:26) {#the-daos-lasting-impact-1726}
+### Tác động lâu dài của DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Điều quan trọng cần lưu ý là DAO hiện nay thường được gọi là Genesis DAO để tránh nhầm lẫn, vì nó là DAO đầu tiên nhưng chắc chắn không phải là DAO cuối cùng. Bất chấp những thất bại ban đầu, các DAO ngày càng trở nên phổ biến hơn. MakerDAO Quản trị stablecoin DAI, và các Giao thức tài chính phi tập trung (DeFi) như Uniswap với token UNI của nó thường có một DAO Quản trị. Tất cả các DAO này đều được xây dựng từ kinh nghiệm của các dự án trước đó để tạo ra các tổ chức linh hoạt và thành công hơn nữa.
 

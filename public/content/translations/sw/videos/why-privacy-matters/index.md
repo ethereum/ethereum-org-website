@@ -17,7 +17,7 @@ Mazungumzo ya TED na **Glenn Greenwald**, mmoja wa waandishi wa habari wa kwanza
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=pcSlowAhvUk) iliyochapishwa na TED. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Uzoefu ambao kila mtu amewahi kuwa nao (0:12) {#an-experience-everyone-has-had-012}
+### Uzoefu ambao kila mtu amewahi kuwa nao (0:12) {#an-experience-everyone-has-had-012}
 
 Kuna aina nzima ya video za YouTube zilizotengwa kwa ajili ya uzoefu ambao nina uhakika kwamba kila mtu katika chumba hiki amewahi kuwa nao. Inahusisha mtu ambaye, akifikiri yuko peke yake, anajihusisha na tabia fulani ya kujieleza—kuimba kwa nguvu, kucheza kwa kuzunguka, shughuli fulani ndogo ya ngono—na kugundua kwamba, kwa kweli, hayuko peke yake, kwamba kuna mtu anayetazama na kujificha, ugunduzi ambao unawafanya waache mara moja kile walichokuwa wakifanya kwa hofu. 
 
@@ -25,7 +25,7 @@ Hisia ya aibu na udhalilishaji usoni mwao inaonekana wazi. Ni hisia ya, "Hili ni
 
 Hili ndilo kiini cha kazi ambayo nimekuwa nikiangazia pekee kwa miezi 16 iliyopita: swali la kwa nini faragha ni muhimu, swali ambalo limeibuka katika muktadha wa mjadala wa kimataifa, uliowezeshwa na ufichuzi wa Edward Snowden kwamba Marekani na washirika wake, bila ulimwengu mzima kujua, wamebadilisha Mtandao, ambao hapo awali ulitangazwa kama zana isiyo na kifani ya ukombozi na demokrasia, kuwa eneo lisilo na kifani la ufuatiliaji wa watu wengi, bila ubaguzi.
 
-#### Hoja ya "hakuna cha kuficha" (1:29) {#the-nothing-to-hide-argument-129}
+### Hoja ya "hakuna cha kuficha" (1:29) {#the-nothing-to-hide-argument-129}
 
 Kuna hisia ya kawaida sana inayoibuka katika mjadala huu, hata miongoni mwa watu ambao hawafurahishwi na ufuatiliaji wa watu wengi, ambayo inasema kwamba hakuna madhara ya kweli yanayotokana na uvamizi huu mkubwa kwa sababu ni watu tu wanaojihusisha na vitendo vibaya ndio wana sababu ya kutaka kuficha na kujali kuhusu faragha yao.
 
@@ -37,7 +37,7 @@ Lakini kinyume chake, watu wazuri ni watu wanaoenda kazini, kurudi nyumbani, kul
 
 Watu ambao kwa kweli wanasema hivyo wanajihusisha na kitendo kibaya sana cha kujidharau. Kile wanachosema hasa ni, "Nimekubali kujifanya mtu asiye na madhara na asiyetisha na asiyevutia kiasi kwamba kwa kweli siogopi serikali kujua kile ninachofanya."
 
-#### Hata wakosoaji wa faragha hawaamini wanachosema (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Hata wakosoaji wa faragha hawaamini wanachosema (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Mtazamo huu umepata kile ninachofikiri ni udhihirisho wake safi zaidi katika mahojiano ya mwaka 2009 na Mkurugenzi Mtendaji wa muda mrefu wa Google, Eric Schmidt, ambaye, alipoulizwa kuhusu njia zote tofauti ambazo kampuni yake inasababisha uvamizi wa faragha kwa mamia ya mamilioni ya watu duniani kote, alisema hivi: "Ikiwa unafanya jambo ambalo hutaki watu wengine wajue, labda hupaswi kuwa unalifanya hapo kwanza."
 
@@ -49,7 +49,7 @@ Huyo huyo Eric Schmidt, Mkurugenzi Mtendaji wa Google, aliwaamuru wafanyakazi wa
 
 Mgawanyiko huu huu unaweza kuonekana kwa Mkurugenzi Mtendaji wa Facebook, Mark Zuckerberg, ambaye katika mahojiano maarufu mwaka 2010 alitangaza kwamba faragha si "kawaida ya kijamii" tena. Mwaka jana, Mark Zuckerberg na mke wake mpya walinunua si tu nyumba yao wenyewe bali pia nyumba zote nne zilizo karibu huko Palo Alto kwa jumla ya dola milioni 30 ili kuhakikisha kwamba wanafurahia eneo la faragha ambalo linazuia watu wengine kufuatilia kile wanachofanya katika maisha yao ya kibinafsi.
 
-#### Changamoto ya nywila ya barua pepe (4:51) {#the-email-password-challenge-451}
+### Changamoto ya nywila ya barua pepe (4:51) {#the-email-password-challenge-451}
 
 Katika kipindi cha miezi 16 iliyopita, nilipokuwa nikijadili suala hili duniani kote, kila wakati mtu aliponiambia, "Kwa kweli siogopi uvamizi wa faragha kwa sababu sina cha kuficha," mimi huwaambia jambo lile lile kila wakati. 
 
@@ -65,7 +65,7 @@ Kuna sababu kwa nini tunatafuta hilo, na sababu yetu ni kwamba sisi sote, si tu 
 
 Tunafanya maamuzi kila siku kuhusu aina ya mambo tunayosema na kufikiri na kufanya ambayo tuko tayari watu wengine wajue, na aina ya mambo tunayosema na kufikiri na kufanya ambayo hatutaki mtu mwingine yeyote ajue. Watu wanaweza kudai kwa urahisi sana kwa maneno kwamba hawathamini faragha yao, lakini vitendo vyao vinapinga ukweli wa imani hiyo.
 
-#### Kutazamwa kunabadilisha tabia yetu (7:02) {#being-watched-changes-our-behavior-702}
+### Kutazamwa kunabadilisha tabia yetu (7:02) {#being-watched-changes-our-behavior-702}
 
 Sasa, kuna sababu kwa nini faragha inatamaniwa sana ulimwenguni kote na kwa asili. Sio tu harakati ya kiotomatiki kama kupumua hewa au kunywa maji. Sababu ni kwamba tunapokuwa katika hali ambapo tunaweza kufuatiliwa, ambapo tunaweza kutazamwa, tabia yetu inabadilika sana. 
 
@@ -73,7 +73,7 @@ Aina mbalimbali za chaguzi za kitabia ambazo tunazingatia tunapofikiri tunatazam
 
 Aibu ya binadamu ni kichocheo chenye nguvu sana, kama ilivyo hamu ya kuiepuka, na hiyo ndiyo sababu watu, wanapokuwa katika hali ya kutazamwa, hufanya maamuzi ambayo si matokeo ya utashi wao wenyewe bali yanahusu matarajio ambayo wengine wanayo kwao au maagizo ya imani za kawaida za jamii.
 
-#### Panopticon ya Bentham (8:09) {#benthams-panopticon-809}
+### Panopticon ya Bentham (8:09) {#benthams-panopticon-809}
 
 Utambuzi huu ulitumiwa kwa nguvu zaidi kwa malengo ya kiutendaji na mwanafalsafa wa karne ya 18 Jeremy Bentham, ambaye alidhamiria kutatua tatizo muhimu lililoletwa na enzi ya viwanda, ambapo, kwa mara ya kwanza, taasisi zilikuwa kubwa sana na za kati kiasi kwamba hazikuweza tena kufuatilia na kwa hivyo kudhibiti kila mmoja wa wanachama wao binafsi. 
 
@@ -81,7 +81,7 @@ Na suluhisho alilobuni lilikuwa muundo wa usanifu uliokusudiwa awali kutekelezwa
 
 Mwanafalsafa wa Kifaransa wa karne ya 20 Michel Foucault aligundua kwamba mfano huo ungeweza kutumika si tu kwa magereza bali kwa kila taasisi inayotafuta kudhibiti tabia ya binadamu: shule, hospitali, viwanda, sehemu za kazi. Na kile alichosema ni kwamba mtazamo huu, mfumo huu uliogunduliwa na Bentham, ulikuwa njia kuu ya udhibiti wa jamii kwa jamii za kisasa za Magharibi, ambazo hazihitaji tena silaha za wazi za udhalimu—kuadhibu au kufunga au kuua wapinzani, au kulazimisha kisheria uaminifu kwa chama fulani—kwa sababu ufuatiliaji wa watu wengi unaunda gereza akilini ambalo ni njia ya hila zaidi ingawa yenye ufanisi zaidi ya kukuza utii kwa kanuni za kijamii au kwa imani za kawaida za kijamii, yenye ufanisi zaidi kuliko nguvu za kikatili zingeweza kuwa.
 
-#### Orwell, dini, na gereza akilini (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, dini, na gereza akilini (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Kazi maarufu zaidi ya fasihi kuhusu ufuatiliaji na faragha ni riwaya ya George Orwell *1984*, ambayo sote tunajifunza shuleni, na kwa hivyo imekuwa karibu kama msemo wa kawaida. Kwa kweli, kila unapoiibua katika mjadala kuhusu ufuatiliaji, watu huipuuza mara moja kama isiyotumika, na kile wanachosema ni, "Oh, vizuri katika *1984*, kulikuwa na vifaa vya kufuatilia katika nyumba za watu, walikuwa wakitazamwa kila wakati, na hiyo haina uhusiano wowote na hali ya ufuatiliaji tunayokabiliana nayo." 
 
@@ -93,7 +93,7 @@ Kile ambacho kazi hizi zote zinazoonekana tofauti zinatambua, hitimisho ambalo z
 
 Kinyume chake, na muhimu zaidi, ni eneo la faragha, uwezo wa kwenda mahali ambapo tunaweza kufikiri na kujadiliana na kutangamana na kuzungumza bila macho ya kuhukumu ya wengine kututazama, ambamo ubunifu na uchunguzi na upinzani hukaa pekee, na hiyo ndiyo sababu kwa nini, tunaporuhusu jamii kuwepo ambamo tunakabiliwa na ufuatiliaji wa mara kwa mara, tunaruhusu kiini cha uhuru wa binadamu kulemazwa sana.
 
-#### Mafunzo mawili yenye kuharibu (12:30) {#two-destructive-lessons-1230}
+### Mafunzo mawili yenye kuharibu (12:30) {#two-destructive-lessons-1230}
 
 Jambo la mwisho ninalotaka kuzingatia kuhusu mtazamo huu, wazo kwamba ni watu tu wanaofanya jambo baya ndio wana mambo ya kuficha na kwa hivyo sababu za kujali kuhusu faragha, ni kwamba inaimarisha jumbe mbili zenye kuharibu sana, mafunzo mawili yenye kuharibu. La kwanza ni kwamba watu pekee wanaojali kuhusu faragha, watu pekee watakaotafuta faragha, kwa asili ni watu wabaya. 
 
@@ -111,7 +111,7 @@ Mwanaharakati maarufu wa kisoshalisti Rosa Luxemburg aliwahi kusema, "Yule asiye
 
 Asanteni sana. (Makofi)
 
-#### Maswali na Majibu na Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Maswali na Majibu na Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, asante. Hoja inashawishi sana, lazima niseme, lakini nataka kukurudisha kwenye miezi 16 iliyopita na kwa Edward Snowden kwa maswali machache, ikiwa hutajali. La kwanza ni la kibinafsi kwako. Sote tumesoma kuhusu kukamatwa kwa mwenzako, David Miranda, huko London, na matatizo mengine, lakini nadhani kwamba kwa upande wa ushiriki wa kibinafsi na hatari, kwamba shinikizo kwako si rahisi kuchukua dhidi ya mashirika makubwa zaidi huru duniani. Tuambie kidogo kuhusu hilo.
 

@@ -18,7 +18,7 @@ Prezentacja **Juana Beneta**, założyciela Protocol Labs oraz twórcy IPFS i Fi
 
 *Ten transkrypt jest przystępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=zkXM9H90g_E) opublikowanego przez EthCC. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie do nauki i postępu (0:10) {#introduction-to-science-and-progress-010}
+### Wprowadzenie do nauki i postępu (0:10) {#introduction-to-science-and-progress-010}
 
 W porządku, witam wszystkich. Nazywam się Juan. Jestem tu, aby porozmawiać o zdecentralizowanej nauce (DeSci). Chcę opowiedzieć o tym, jak możemy wykorzystać DeSci do finansowania, organizowania i otwierania nauki. Na początek, oto o czym będziemy rozmawiać: przez chwilę opowiem o nauce w ogóle, potem o tym, czym jest ruch DeSci, a następnie o tym, jak możemy finansować dobra wspólne w nauce. Potem o tym, jak DeSci organizuje ludzi, projekty i prace wokół nauki. Następnie chcę powiedzieć trochę o otwartym dostępie i powtarzalnej nauce, a na koniec chcę wezwać do działania. Będzie to więc dość szybkie. Mamy wiele do omówienia, więc będę się streszczał.
 
@@ -34,7 +34,7 @@ Nauka ma jednak mnóstwo problemów. Z przedsięwzięciem naukowym wiążą się
 
 Kiedy badania zostaną już przeprowadzone i opublikowane, tylko ułamek z nich daje się powtórzyć. Istnieje więc mnóstwo badań naukowych, które zostały opublikowane, zaakceptowane i uznane za poprawne, tylko po to, by później odkryć, że ogromnej ich części nie da się w rzeczywistości odtworzyć. Mamy więc do czynienia z ogromnym kryzysem powtarzalności. Zdarzają się nawet odkrycia naukowe, których artefakty giną. Pomyśl o rzeczywistych artykułach, kodzie lub danych związanych z jakimś wynikiem, które znikają z naszych banków wiedzy. Istnieje więc wiele problemów związanych z nauką, które należy naprawić, i to jest część tego, o co chodzi w DeSci. Chodzi o rozwiązanie szeregu tych problemów, nie hurtowo, nie całkowicie, ale społeczność DeSci stara się zająć wieloma z tych kwestii.
 
-#### Ruch DeSci (5:11) {#the-desci-movement-511}
+### Ruch DeSci (5:11) {#the-desci-movement-511}
 
 Czym więc jest DeSci? DeSci to ruch mający na celu ulepszenie nauki za pomocą technologii i narzędzi Web3. Pomyśl o możliwości wykorzystania całej magii łączenia za pomocą hasha, blockchainów i inteligentnych kontraktów do tworzenia systemów i struktur, które mogą poprawić sposób, w jaki uprawiamy naukę w różnych dziedzinach na całym świecie.
 
@@ -46,7 +46,7 @@ Obecnie istnieje kilka grup zajmujących się zdecentralizowanym finansowaniem b
 
 Obecnie odbywa się również wiele różnych spotkań i konferencji, które gromadzą te społeczności. Wydarzenia takie jak DeSci Day, DeSci Berlin, Schelling Point od społeczności Gitcoin oraz Funding the Commons. Konferencje te gromadzą wiele dyskusji wokół DeSci.
 
-#### Finansowanie dóbr wspólnych (10:40) {#funding-the-commons-1040}
+### Finansowanie dóbr wspólnych (10:40) {#funding-the-commons-1040}
 
 Porozmawiajmy o finansowaniu dóbr wspólnych. Być może niektórzy z was widzieli ten diagram, którego używałem w przeszłości w kontekście przepaści innowacyjnej. W przekładzie nauki na technologię, część DeSci skupia się głównie na lewej stronie – samej nauce – próbując wymyślić lepsze struktury zachęt i lepsze sposoby koordynowania grup w celu uzyskania lepszych wyników naukowych. Warto zauważyć, że całkowite globalne finansowanie badań i rozwoju jest z jednej strony ogromne, ale z innej perspektywy nie tak duże i nie zmieniło się zbytnio w ciągu ostatnich kilku dekad, mimo że przepustowość i wyniki technologii, którą budujemy, ogromnie wzrosły.
 
@@ -64,7 +64,7 @@ Na przykład grupy takie jak VitaDAO tworzą strukturę danych, przyznając gran
 
 Certyfikaty wpływu to kolejna fascynująca struktura reprezentująca finansowanie z mocą wsteczną. Umożliwiają one uczestnikom, po osiągnięciu pewnego wpływu, wybijać certyfikat związany z tym wpływem i sprzedawać go na rynku każdemu, kto chce zgłosić roszczenie do tego wpływu. Umożliwia to powstanie rynku spekulacyjnego, zamykając pętlę w czasie w celu wstecznego finansowania niezwykle ważnej pracy. Jest to kluczowe, ponieważ często zdajesz sobie sprawę z tego, jak cenne jest coś, długo po wykonaniu pracy.
 
-#### Organizowanie ludzi i Data DAO (15:28) {#organizing-people-and-data-daos-1528}
+### Organizowanie ludzi i Data DAO (15:28) {#organizing-people-and-data-daos-1528}
 
 Teraz kilka krótkich przemyśleń na temat organizowania ludzi. W przeszłości GitHub odnosił ogromne sukcesy w pomaganiu w organizowaniu odkrywania naukowego. Całe podręczniki i dziedziny rozwinęły się dzięki GitHubowi. Wiele grup wykorzystywało podstawowe prymitywy GitHuba dotyczące zgłoszeń (issues), współpracy nad kodem i kontroli wersji do organizowania społeczności praktyków i naukowców. Ale to, co nie jest tam kompletne, to brak możliwości tworzenia organizacji, które prowadzą badania, obracają kapitałem lub płacą współtwórcom.
 
@@ -78,7 +78,7 @@ Możesz pomyśleć o połączeniu tego rodzaju aktywności i generowania danych 
 
 Kilka uwag końcowych na temat otwartego dostępu i powtarzalnej nauki. IPFS był już wielokrotnie wykorzystywany do wielu rodzajów otwartych prac naukowych. Już teraz spełnia marzenie o otwarciu dostępu do dużej części nauki, wspierając rozproszone kopie Wikipedii, ogromne archiwa artykułów i zbiory danych.
 
-#### Otwarty dostęp, powtarzalna nauka i wezwanie do działania (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Otwarty dostęp, powtarzalna nauka i wezwanie do działania (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Nie jesteśmy jeszcze na etapie pełnej powtarzalności. Jest to obszar, który wymaga więcej pracy, ale wiele osób już nad tym myślało. Istnieją naprawdę dobre specyfikacje i pomysły dotyczące wykorzystania standardowej powtarzalności z IPFS w celu zamrożenia wszystkich zasobów i zbudowania w pełni powtarzalnego potoku. Możesz przywołać konkretne eksperymenty z przeszłości, przywrócić całkowicie zamrożone maszyny wirtualne (VM) lub kontenery, ponownie uruchomić wszystkie potoki danych i zweryfikować, czy eksperymenty są poprawne.
 

@@ -20,7 +20,7 @@ Esta entrevista aborda o recurso de espaço de blob do Ethereum, introduzido com
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=dFjyUY3e53Q) publicada pelo Bankless. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução ao espaço de blob (0:00) {#introduction-to-blob-space-000}
+### Introdução ao espaço de blob (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Bem-vindo ao Bankless, onde exploramos a fronteira do dinheiro e das finanças da internet. É aqui que você aprende como começar, como melhorar e como se antecipar às oportunidades. Estou aqui com David Hoffman, e estamos aqui para ajudá-lo a se tornar mais *bankless*. Sabe como dizemos que as blockchains vendem blocos? Bem, em breve o Ethereum venderá mais do que apenas blocos — ele também venderá blobs.
 
@@ -38,7 +38,7 @@ O que isso significa para o ether? O que isso significa para os mercados que sur
 
 Vamos trazer nosso convidado, Dom, também conhecido como Domothy. Ele é um pesquisador da Fundação Ethereum trabalhando na pesquisa e desenvolvimento das principais atualizações do Ethereum que estão por vir, incluindo a EIP-4844 (o assunto de hoje), o danksharding completo e a queima de MEV.
 
-#### A história do roteiro centrado em rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### A história do roteiro centrado em rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Então, Dom, para entender completamente como chegamos ao espaço de blob, acho que vale a pena voltar no tempo para entender a totalidade do roteiro do Ethereum, porque ele chegou a uma conclusão muito lógica de blobs e espaço de blob. Você pode nos levar de volta? Porque em um determinado momento, o roteiro centrado em rollups do Ethereum não existia. Tínhamos essa coisa chamada fragmentação de execução, que na verdade nunca tivemos. Onde na história do roteiro do Ethereum é apropriado para realmente entender o contexto completo do espaço de blob?
 
@@ -58,7 +58,7 @@ Agora, o que estamos fazendo com o roteiro centrado em rollups é fragmentar a e
 
 No final de 2020, as pessoas perceberam que os rollups estavam começando a se tornar incrivelmente bons e populares, e eles resolveram nosso problema de escalabilidade de execução sem a necessidade de fragmentação de execução. Ao optar por um ecossistema de rollups em vez de tentar ser algum maximalista da camada 1 (l1), os rollups podem fazer seus próprios trade-offs, criar suas próprias blockchains e experimentar coisas novas. O Ethereum lida com a verificação — esse é o núcleo do que é uma blockchain.
 
-#### O que é o espaço de blob? (30:00) {#what-is-blob-space-3000}
+### O que é o espaço de blob? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Agora nos leve ao estado atual, Dom. Temos muitos rollups usando o espaço de bloco da camada 1 (l1) do Ethereum, pagando altas taxas de gás para postar seus dados de estado para que qualquer um possa verificá-los. Então, Dom, o que é um blob?
 
@@ -72,7 +72,7 @@ A restrição de design crucial aqui é que a EVM (Ethereum Virtual Machine) da 
 
 **Domothy:** Exatamente. E outra propriedade crítica dos blobs é que eles são podados automaticamente após um período de tempo — atualmente em torno de 18 dias. A razão pela qual eles são podados é que, para garantir uma verificação sem necessidade de confiança, os indivíduos só precisam desses dados disponíveis para provar a finalidade e o consenso sobre o estado do rollup dentro de uma janela específica de desafio. Você não precisa de mil nós mantendo blobs de dois anos atrás para verificar sua transação hoje. Quando a janela expira, você não os obterá mais de um nó do Ethereum; você os obtém de provedores de histórico, indexadores ou dos exploradores de blocos nativos do rollup. O armazenamento no Ethereum é insanamente caro para sempre. Eliminar o requisito de armazenamento nos permite escalar a vazão de blobs sem destruir os discos rígidos dos operadores de nós.
 
-#### Economia e danksharding completo (55:00) {#economics-and-full-danksharding-5500}
+### Economia e danksharding completo (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Sabemos que a 4844 é o primeiro passo — o que chamamos de Proto-Danksharding. Ela estabelece o formato do blob e o mercado de taxas isolado, mas o número alvo real de blobs por bloco é restrito inicialmente para ser bastante seguro. Como isso se parece escalando em direção ao danksharding completo?
 
@@ -86,7 +86,7 @@ Com um mercado de taxas bidimensional — essencialmente uma estrada isolada sep
 
 **Domothy:** Sim, eles estão totalmente desconectados. E o inverso é verdadeiro. Se a vazão da camada 2 (l2) disparar imensamente e milhares de rollups operarem e congestionarem o espaço de blob, o pico resultante nas taxas básicas de blob não afetará o custo de fazer uma transação simples na Rede Principal do Ethereum. A taxa básica de blob opera exatamente como a taxa básica da EIP-1559, mas em sua própria dimensão. E sobre a sua pergunta anterior sobre a queima — sim, a taxa de blob gera ETH queimado para pagar pela inclusão de dados no espaço de blob, totalmente separado da queima da taxa básica do espaço de bloco.
 
-#### O futuro da escalabilidade do Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### O futuro da escalabilidade do Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Quero chegar ao que acontece especificamente no lançamento da 4844. Inicialmente, há obviamente uma expectativa muito alta de que, quando a capacidade do blob for desbloqueada de repente, não haverá demanda de rollup suficiente naquele exato microssegundo para preenchê-la completamente. O espaço de blob será quase comicamente barato no lançamento. Mas não existe a lei da demanda induzida? Se você tem recursos incrivelmente baratos, os aplicativos que consomem esses recursos explodem em volume.
 

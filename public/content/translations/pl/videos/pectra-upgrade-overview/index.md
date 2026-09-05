@@ -19,11 +19,11 @@ Prezentacja **Christine Kim** na Devcon SEA omawiająca EIP zawarte w aktualizac
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=ufIDBCgdGwY) opublikowanego przez Fundację Ethereum. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 Porozmawiamy o wszystkich EIP, które wejdą w skład aktualizacji Pectra. Szybkie zastrzeżenie, zanim zacznę: wszystko, co zamierzam powiedzieć, ma charakter wyłącznie informacyjny — w celach informacyjnych — i nie powinno być interpretowane jako porada finansowa lub inwestycyjna.
 
-#### Kiedy Pectra trafi do Sieci głównej (0:23) {#when-is-pectra-mainnet-023}
+### Kiedy Pectra trafi do Sieci głównej (0:23) {#when-is-pectra-mainnet-023}
 
 Zanim przejdziemy do tego, co wejdzie w skład Pectra, najczęściej zadawane mi pytanie brzmi: „kiedy Pectra trafi do Sieci głównej?”. Więc po prostu miejmy to z głowy, abyśmy mogli przejść do kwestii technicznych.
 
@@ -43,7 +43,7 @@ Historycznie rzecz biorąc, deweloperzy przeznaczali około dwóch tygodni międ
 
 Biorąc pod uwagę wszystkie informacje, które posiadam w tej chwili, oraz postępy, jakie deweloperzy poczynili do tej pory w pracach nad Pectra, moja najlepsza analiza i przypuszczenie jest takie, że Pectra w Sieci głównej pojawi się realnie w kwietniu 2025 roku. Ponownie, jest to bardzo wstępne, ponieważ wiele może się zmienić. Rozwój odbywa się z tygodnia na tydzień — deweloperzy uczestniczą w spotkaniach ACD, rozmawiając o błędzie, którego się nie spodziewali w danym EIP, lub o nowym EIP, które chcą dodać do Pectra.
 
-#### EIP warstwy wykonawczej (6:23) {#execution-layer-eips-623}
+### EIP warstwy wykonawczej (6:23) {#execution-layer-eips-623}
 
 Przejdźmy do sedna tej prezentacji — co wejdzie w skład aktualizacji Pectra. Do Pectra wejdzie dziesięć EIP, a cztery z nich koncentrują się na warstwie wykonawczej.
 
@@ -55,7 +55,7 @@ Przejdźmy do sedna tej prezentacji — co wejdzie w skład aktualizacji Pectra.
 
 **EIP-7702** — ustawienie kodu dla kont posiadanych zewnętrznie (EOA). Do Ethereum wchodzi nowy typ transakcji. Ten typ transakcji tymczasowo pozwoli EOA na większą elastyczność, umożliwiając funkcje takie jak wsadowanie transakcji, transakcje sponsorowane, transakcje warunkowe i delegowane bezpieczeństwo. Możesz pomyśleć: „czy to wizja abstrakcji konta ożywa w Ethereum?”. Nie, to nie to — to mały krok. To wczesny krok, aby zobaczyć, jak mogłaby wyglądać prawdziwa mapa drogowa do prawdziwej natywnej abstrakcji konta w Ethereum. Było sporo dyskusji na temat tego, jak deweloperzy powinni zrobić ten pierwszy krok, i wiele kontrowersji wokół jego włączenia i projektu — ale jest w środku.
 
-#### EIP warstwy konsensusu (12:00) {#consensus-layer-eips-1200}
+### EIP warstwy konsensusu (12:00) {#consensus-layer-eips-1200}
 
 Jest jeszcze sześć innych — to są EIP warstwy konsensusu.
 
@@ -69,11 +69,11 @@ Jest jeszcze sześć innych — to są EIP warstwy konsensusu.
 
 **EIP-7549** — przeniesienie indeksu komitetu poza poświadczenie. Jest to restrukturyzacja i refaktoryzacja sposobu agregacji poświadczeń w celu zmniejszenia obciążenia sieci w Ethereum i zaoszczędzenia przepustowości węzłów. Kiedy deweloperzy włączali to do Pectra, myśleli, że to świetna zmiana ze wspaniałymi korzyściami i łatwa do wprowadzenia — ale w praktyce okazała się znacznie trudniejsza do wdrożenia, niż oczekiwano.
 
-#### Podsumowanie (17:19) {#summary-1719}
+### Podsumowanie (17:19) {#summary-1719}
 
 Pectra to mieszanka różnych aktualizacji. Zrobi trzy rzeczy: po pierwsze, naprawi krytyczne niedociągnięcia Ethereum jako blockchaina opartego na dowodzie stawki (PoS) — pomyśl o MaxEB, to krytyczna poprawka, ponieważ rozmiar zestawu walidatorów może nadal rosnąć w niekontrolowany sposób. Po drugie, poprawi doświadczenie użytkownika — nowy typ transakcji, bardziej elastyczne projekty, pewne ulepszenia dla bardziej niewymagających zaufania projektów dla puli stakingowych. I po trzecie, zwiększy pojemność dostępności danych w Ethereum — nie zostało to formalnie włączone do Pectra, ale wydaje się prawdopodobne.
 
-#### EIP usunięte z Pectra (18:02) {#eips-removed-from-pectra-1802}
+### EIP usunięte z Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Oto wszystkie EIP, które zostały usunięte z Pectra. To w pewnym sensie pierwszy raz, kiedy z aktualizacji usunięto tak wiele EIP.
 
@@ -83,7 +83,7 @@ Oto wszystkie EIP, które zostały usunięte z Pectra. To w pewnym sensie pierws
 
 Zostały one teraz przeniesione do Fusaka. Verkle początkowo planowano dla Fusaka, ale od tego czasu zostało to jeszcze bardziej opóźnione. EOF i PeerDAS są na razie w Fusaka. Istnieją inne EIP, które deweloperzy ponownie rozważą pod kątem włączenia do Fusaka — przejście na SSZ, listy włączeń, zmiany w emisji, wygasanie historii, ePBS i kierunek abstrakcji konta.
 
-#### Pytania i odpowiedzi (22:02) {#qa-2202}
+### Pytania i odpowiedzi (22:02) {#qa-2202}
 
 **Prowadzący:** Kiedy EOF?
 

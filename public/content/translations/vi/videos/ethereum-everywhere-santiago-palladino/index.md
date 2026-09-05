@@ -19,7 +19,7 @@ Một bài phát biểu của **Santiago Palladino** tại Ethereum Day trong kh
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=FzJBV3oSUns) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Lớn lên ở một nơi xa xôi (0:07) {#growing-up-far-away-007}
+### Lớn lên ở một nơi xa xôi (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Cảm ơn Binji. Cảm ơn tất cả các bạn đã có mặt ở đây. Thật là một vinh dự tuyệt đối khi được đứng trên sân khấu này và còn vinh dự hơn nữa khi Devconnect được tổ chức tại Buenos Aires.
 
@@ -39,13 +39,13 @@ Mô-típ lặp đi lặp lại mà chúng ta thường thấy là Argentina như
 
 Câu trích dẫn đó là từ một tập phim Dexter nhiều năm trước. Tôi thực sự đã vào wiki của Dexter để cố gắng tìm nó và tìm thấy mô tả tuyệt đẹp này: "Argentina là một địa điểm trong một chương trình." Ồ, và nhân tiện, nó cũng là một nơi có thật—chỉ để các bạn biết thôi.
 
-#### Sự phi tập trung như một tính năng (4:47) {#decentralization-as-a-feature-447}
+### Sự phi tập trung như một tính năng (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Vì vậy, chúng tôi ở rất xa, chúng tôi bị cắt đứt. Và xa xôi ở đây tôi không chỉ có ý nói về mặt địa lý—như hầu hết các bạn đã đi du lịch đến đây đã phải chịu đựng trên máy bay. Này, đến lúc trả đũa rồi—chúng tôi luôn phải đối phó với điều này khi đi đến một nơi khác.
 
 Ý tôi là: ở quá xa, quá tách biệt với phần còn lại của thế giới, tôi nghĩ không có gì ngạc nhiên khi chúng tôi tìm thấy một công nghệ mà sự phi tập trung không phải là một lỗi mà là một tính năng—rằng nó là một tài sản—chúng tôi đã lao vào nó.
 
-#### Một thập kỷ tiền mã hóa của Argentina (5:27) {#a-decade-of-argentine-crypto-527}
+### Một thập kỷ tiền mã hóa của Argentina (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Bây giờ tôi đã cung cấp cho bạn một số bối cảnh về nơi tôi xuất thân, tôi muốn nói về hai điều. Một là, quảng bá những gì người Argentina đã làm trong lĩnh vực tiền mã hóa trong mười năm qua hoặc hơn thế nữa. Và cũng điểm qua những con người khác nhau, hồ sơ khác nhau, nền tảng khác nhau mà chúng ta cần để xây dựng Ethereum. Điểm tôi muốn nhấn mạnh là: chúng ta cần sự đa dạng trong Ethereum. Chúng ta cần sự đa dạng về địa lý. Chúng ta cần các lĩnh vực chuyên môn khác nhau, các miền khác nhau. Chúng ta cần càng nhiều người tham gia để xây dựng những gì chúng ta muốn xây dựng.
 
@@ -59,7 +59,7 @@ Từ Voltaire, một số dự án dễ nhận biết nhất của Argentina đ�
 
 Tỷ lệ nhà phát triển Web3 so với Web2 ở Argentina gần gấp ba lần so với Mỹ. Ngay cả tại Aztec Labs, cứ sáu kỹ sư thì có một người Argentina—và tôi đang nói về một công ty được thành lập ở Anh. Chúng tôi yêu Web3. Chúng tôi bị thu hút bởi nó một cách tự nhiên. Tôi nghĩ lý do là một nửa những gì Isabelle đã đề cập trong bài nói chuyện của cô ấy trong sự kiện này, và cũng là cảm giác bị cắt đứt này và tìm thấy ở Ethereum một nơi mà chúng tôi có thể xây dựng, nơi chúng tôi có thể phát triển và nơi chúng tôi được chào đón.
 
-#### Thâm nhập vào hệ sinh thái (9:37) {#infiltrating-the-ecosystem-937}
+### Thâm nhập vào hệ sinh thái (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Hãy để tôi chia sẻ thêm một vài giai thoại—một lần nữa, không phải về tiền bạc, mà là về những thứ mà những người Argentina đã thâm nhập vào hệ sinh thái Web3 này đang xây dựng. Đối với tôi, trải nghiệm đầu tiên của tôi trong Web3 là kiểm toán một ngôn ngữ hợp đồng thông minh—Serpent. Nếu bạn chưa nghe nói về nó, đó là vì chúng tôi đã phá hủy nó.
 
@@ -67,7 +67,7 @@ Tỷ lệ nhà phát triển Web3 so với Web2 ở Argentina gần gấp ba l�
 
 Cộng đồng bảo mật ở Argentina thật đáng kinh ngạc. Đã có những lỗ hổng nghiêm trọng lớn được người Argentina phát hiện trong ENS—lỗ hổng đó là từ Red Guild, một trong những đội ngũ bị đánh giá thấp nhất về bảo mật trong toàn bộ hệ sinh thái, nếu bạn hỏi tôi. Những anh chàng này thật tuyệt vời. Ngoài ra, người Argentina cũng phát hiện ra các cuộc tấn công nghiêm trọng vào MakerDAO, hoặc thậm chí là một cuộc tấn công chuỗi cung ứng trên SMS dẫn đến việc đánh cắp hàng trăm tài khoản Telegram. Nhân tiện—nhắc nhở hàng ngày: đừng sử dụng SMS cho 2FA.
 
-#### Tiêu chuẩn và cơ sở hạ tầng (11:17) {#standards-and-infrastructure-1117}
+### Tiêu chuẩn và cơ sở hạ tầng (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Chúng tôi cũng đã đóng góp rất nhiều cho các tiêu chuẩn. Năm năm đầu tiên của tôi trong lĩnh vực tiền mã hóa là tại OpenZeppelin. Tôi đã có cơ hội xây dựng hợp đồng ERC-721 cùng với một anh chàng đang ngồi ngay đằng kia, và cả Facu nữa. Đoạn mã đó cuối cùng sẽ cung cấp sức mạnh cho cơn sốt NFT vài năm sau đó—nó được viết từ đây.
 
@@ -83,7 +83,7 @@ Tất cả những điều này được tổng hợp trong một sáng kiến t
 
 Họ cũng đang có những đóng góp lớn. Tôi muốn dừng lại ở một điểm. Hôm qua đã có Đại hội Ethereum Cypherpunk về quyền riêng tư. Trên sân khấu chính, Vitalik đang trình diễn Kohaku, Ví quyền riêng tư mới. Một giờ sau, trên sân khấu phụ—gần như bị ẩn trên tầng cao nhất—có một hội thảo bao gồm một trong những nhà phát triển thực sự đang xây dựng Kohaku, người Argentina và làm việc cách đây vài dãy nhà.
 
-#### Mang Ethereum về nhà (15:07) {#bringing-ethereum-home-1507}
+### Mang Ethereum về nhà (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Nhưng tất cả những đóng góp này, tất cả những điều mà Argentina mang lại cho Web3—chúng vẫn chưa đủ. Chúng tôi muốn làm nhiều hơn nữa. Chúng tôi muốn mang Ethereum đến đây. Và tiết lộ trước nhé, vì bạn đang ngồi đây—vâng, chúng tôi đã thành công.
 
@@ -91,13 +91,13 @@ Tất cả bắt đầu vào năm 2018 với ETH Buenos Aires, cuộc thi hackat
 
 Và vâng, cuối cùng điều này đã dẫn đến một bài nói chuyện của Mariano tại Devcon 5. Bài nói chuyện có tựa đề "Sống nhờ tài chính phi tập trung (DeFi)—Cách chúng tôi sống sót qua lạm phát 50% của Argentina." Con số đó có vẻ dễ thương sau khi đã trải qua lạm phát 300%. Bạn đã thấy bức ảnh đó trong bài thuyết trình của Mariano. Điều anh ấy không cho thấy là tôi vẫn còn giữ chiếc áo phông. Chúng tôi thực sự đã in những chiếc áo phông có dòng chữ "Devcon Buenos Aires 2020" để cố gắng biến điều đó thành hiện thực thông qua meme. Tôi đã giữ nó trong hơn năm năm. Tôi tự hào được khoe nó bây giờ.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Chúng tôi đã làm được. Tôi không thể giải thích được mình tự hào, vinh dự như thế nào khi Devconnect cuối cùng cũng đến đây. Nó gần như là một giấc mơ trở thành hiện thực.
 
 Tôi nghĩ điều đó có ý nghĩa—không chỉ vì tôi yêu đất nước này, mà vì nó thực sự cho thấy Ethereum đang đặt hội nghị của họ ở nơi họ đã cam kết. Tất cả những đặc tính về sự phi tập trung này thực sự đang được hành động bằng cách tổ chức hội nghị ở đây, tận dụng tài năng hiện có—mà hy vọng tôi đã thuyết phục được bạn là có tồn tại—và cũng dựa trên cơ sở người dùng hiện có. Gần như cứ năm người Argentina thì có một người nắm giữ tiền mã hóa, phi tập trung hoặc tập trung. Chúng ta có thể tranh luận rất lâu về việc liệu nắm giữ tiền mã hóa trên một sàn giao dịch tập trung có thực sự là nắm giữ tiền mã hóa hay không, nhưng đây là những người đã có nó, những người đã tiếp xúc với nó. Có một cơ sở người dùng hiện có để bạn khai thác và cố gắng tung ra những thứ mới, sản phẩm mới và xem những gì có thể được xây dựng.
 
-#### Ethereum cho mọi người (17:46) {#ethereum-for-everyone-1746}
+### Ethereum cho mọi người (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Hãy để tôi chuyển hướng một chút. Tôi biết tôi đã quảng bá Argentina tuyệt vời như thế nào để tổ chức một sự kiện, về tài năng địa phương, về mọi thứ. Nhưng điểm tôi thực sự muốn nói là nếu Ethereum hoạt động ở đây—ở góc này của thế giới, cách xa nhau—nó có thể hoạt động ở mọi nơi. Argentina chỉ là một ví dụ cho thấy Ethereum là một công nghệ thực sự không biên giới và có thể hoạt động ở bất kỳ góc nào trên thế giới.
 
@@ -125,7 +125,7 @@ Các nhà điều hành nút chạy mạng lưới, thực sự thực thi phầ
 
 Tất cả những điều này được thúc đẩy bởi một nhóm người rất đa dạng. Nếu bạn chỉ chọn một nhóm các nhà phát triển—và bản thân tôi cũng là một nhà phát triển—chúng ta không thể xây dựng điều này.
 
-#### The Aleph (23:59) {#the-aleph-2359}
+### The Aleph (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** Tôi biết điều này có lẽ không phổ biến để nói tại một hội nghị có tên là Devconnect, nhưng ý tôi là: Ethereum là một công nghệ được thiết kế để chạy ở mọi nơi và dành cho mọi người—được xây dựng bởi mọi người, từ mọi nền tảng, từ mọi nơi trên thế giới.
 
@@ -133,7 +133,7 @@ Với một phút còn lại, tôi muốn chọn một câu trích dẫn từ Jo
 
 Điều tôi yêu cầu bạn làm trong những ngày này là kết nối với những người khác. Thu thập phản hồi về những gì bạn đang xây dựng. Cố gắng tìm kiếm đối tác, nhà xây dựng, người dùng, nhà đầu tư. Hãy bước ra khỏi bong bóng của bạn, ra khỏi vùng an toàn của bạn và nói chuyện với càng nhiều người càng tốt. Gặp gỡ những người mới, tương tác với những người mới. Hãy nhớ rằng sự đổi mới phát triển mạnh nhờ sự đa dạng—cho dù đó là về mặt địa lý, từ nền tảng hay từ hệ tư tưởng. Hãy kết nối, cùng nhau xây dựng và tận hưởng tuần này. Cảm ơn bạn.
 
-#### Hỏi & Đáp (25:35) {#qa-2535}
+### Hỏi & Đáp (25:35) {#qa-2535}
 
 **Binji:** Thật không thể tin được. Cảm ơn bạn rất nhiều. Tôi nghĩ bạn đã đề cập đến hầu hết mọi thứ xung quanh Ethereum—văn hóa, các thuộc tính kỹ thuật—tất cả trong một bài nói chuyện. Điều đó rất ấn tượng. Tôi không nghĩ mình đã từng thấy ai làm tất cả những điều đó trong một lần. Vì vậy, có một vài câu hỏi. Câu hỏi mà tôi thấy thú vị nhất—đặc biệt là khi bạn nói về các trường hợp sử dụng—bạn muốn thấy điều gì được xây dựng trên Ethereum mà chưa được xây dựng?
 

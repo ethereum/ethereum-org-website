@@ -18,7 +18,7 @@ breadcrumb: "Ethereum en 30 minutes"
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=ei3tDRMjw6k) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:02) {#introduction-002}
+### Introduction (0:02) {#introduction-002}
 
 Super, donc Ethereum en 30 minutes. C'est une présentation que j'ai donnée à pratiquement chaque Devcon depuis le lancement. Ce qui est intéressant, c'est de voir comment, à mesure que l'écosystème Ethereum change, que le protocole Ethereum change et que les temps changent, le contenu finit également par beaucoup changer. Si vous remontez à l'équivalent de cette présentation en 2015, vous entendrez beaucoup parler des blocs oncles. Bien sûr, les blocs oncles sont une caractéristique de la preuve de travail (PoW). Maintenant, nous avons la preuve d'enjeu (PoS), et nous n'avons donc plus de blocs oncles. Ethereum a aussi bien sûr maintenant des couches 2 (l2), et à l'époque, cela ne contiendrait pas du tout de couches 2 (l2). Maintenant, nous savons que les couches 2 (l2) représentent la moitié de l'histoire. Ethereum est avant tout un écosystème en évolution, et le contenu de ceci va continuer à changer à mesure que la technologie évolue, et aussi à mesure que l'accent de l'écosystème passe de la construction d'une infrastructure de base à une concentration énorme sur les applications.
 
@@ -30,7 +30,7 @@ Comment fonctionne l'ordinateur mondial ? La façon dont je vois les choses est 
 
 La couche 2 (l2) est le GPU. La couche 2 (l2), c'est vous tous dans la salle qui faites partie de n'importe quelle couche 2 (l2). Qui ici fait partie d'une couche 2 (l2) ? Ouais. Qui ici a utilisé une couche 2 (l2) ? Qui ici a utilisé la couche 1 (l1) ? Bien, nous sommes tous des utilisateurs ici. Il y a beaucoup de ces différents GPU, et l'ordinateur mondial Ethereum est capable de tenir ensemble parce que chacun de ces GPU est connecté à la machine de confiance par le biais de systèmes de preuves optimistes, de preuves à divulgation nulle de connaissance, de SNARK, de STARK, de plonk, ou quels que soient les mots à la mode. Tous ces systèmes garantissent que la couche 1 (l1) est capable de vérifier sans confiance ce qui se passe à l'intérieur des couches 2 (l2), et les couches 2 (l2) sont également capables de lire sans confiance ce qui se passe sur la couche 1 (l1).
 
-#### Décentralisation et diversité (5:11) {#decentralization-and-diversity-511}
+### Décentralisation et diversité (5:11) {#decentralization-and-diversity-511}
 
 Il y a une interaction importante entre ces deux composants, et ensemble, ils forment l'Ethereum qui est là aujourd'hui. Qu'est-ce que la L1 ? C'est une chaîne. Elle fonctionne avec la preuve d'enjeu (PoS). Elle ne se casse pas. Qu'est-ce que cela signifie ? La L1 d'Ethereum est une chaîne qui existe dans son ensemble depuis plus de neuf ans maintenant, et elle existe dans sa forme actuelle de preuve d'enjeu (PoS) depuis un peu plus de deux ans. L'une des choses vraiment importantes pour une couche de base est d'avoir la preuve claire que vous construisez sur une couche de base qui est décentralisée, ouverte, robuste et susceptible de conserver ces caractéristiques à l'avenir. 
 
@@ -42,7 +42,7 @@ Ensuite, nous avons « non identifié ». Non identifié n'est pas un acteur, to
 
 Une propriété qui s'est en fait beaucoup améliorée est la diversité des clients. Il y a environ cinq ans, Ethereum n'était pratiquement que Geth. Lorsque vous avez un écosystème dominé par un seul client, cela devient en soi un point de défaillance central. Qui ici se souvient des attaques DoS de 2016 ? Vous vous réveillez à 5h17 du matin, recevez un appel de réveil de style militaire, descendez dans la salle de crise, et quelqu'un a découvert un bug dans le client. La chaîne entière s'arrête. Nous le corrigeons, puis deux ou trois jours plus tard, quelqu'un trouve un autre bug. Cela continue pendant tout un mois jusqu'à ce que nous devions finalement faire un hard fork. Mais pendant cette période, la capacité d'Ethereum à avoir deux clients différents — à l'époque, c'étaient Geth et Parity — a essentiellement sauvé la chaîne. Il y a eu des moments où un bug touchait Geth mais pas Parity, et des moments où un bug touchait Parity mais pas Geth. Ethereum a beaucoup gagné à avoir de multiples implémentations logicielles, et c'est quelque chose qui, en 2024, est probablement à son meilleur niveau dans l'histoire d'Ethereum.
 
-#### Clients multiples et robustesse (10:40) {#multiple-clients-and-robustness-1040}
+### Clients multiples et robustesse (10:40) {#multiple-clients-and-robustness-1040}
 
 Si nous regardons les clients de consensus, qui gèrent la partie preuve d'enjeu (PoS) d'Ethereum, et les clients d'exécution, qui gèrent la partie EVM d'Ethereum, nous pouvons voir que le client unique avec la part de marché la plus élevée est Geth, qui se situe autour de 50 %. Que se passe-t-il s'il y a un bug dans n'importe quel client Ethereum littéralement aujourd'hui, en ce moment même ? Vérifiez si Ethereum fonctionne toujours. Je suppose que oui — je parierais à 99,99 % sur PolyMarket. 
 
@@ -56,7 +56,7 @@ Il y a deux ans, ce graphique était pire. La décentralisation d'Ethereum est n
 
 Si vous avez 32 ETH, ou moins si vous rejoignez un pool, il y a de plus en plus d'options de pool vraiment intéressantes qui apparaissent — comme le staking en équipe d'Obol, qui vous permet de créer de plus petits pools avec vos amis. Il y a beaucoup de façons différentes pour vous de devenir un staker, et si vous le faites, vous devenez membre de ce réseau de nœuds sécurisant la chaîne de blocs Ethereum.
 
-#### Vérification des nœuds et mise à l'échelle (15:06) {#node-verification-and-scale-1506}
+### Vérification des nœuds et mise à l'échelle (15:06) {#node-verification-and-scale-1506}
 
 Je suppose que c'est ainsi que la propagande de la fondation le décrit — il y a un éléphant mignon. Alors bravo pour l'éléphant ! Vous aussi, vous pouvez rejoindre le réseau et aider à le sécuriser. Même si vous n'êtes pas un staker, vous pouvez également exécuter un nœud Ethereum sur votre ordinateur et vérifier volontairement la chaîne. 
 
@@ -70,7 +70,7 @@ Faire du staking avec moins d'ETH est également une exigence de recherche très
 
 Qu'est-ce qui fonctionne sur la L1 d'Ethereum ? Certaines applications de grande valeur. Une grande partie de la finance décentralisée (DeFi) de grande valeur fonctionne sur la L1. L'ENS est actuellement sur la L1, bien qu'il fasse de plus en plus de choses avec les couches 2 (l2). Les gens détiennent des actifs sur la couche 1 (l1). De plus, la couche 1 (l1) gère les racines de bloc, les racines d'état et les systèmes de preuve pour les couches 2 (l2). Elle sécurise les couches 2 (l2). La couche 1 (l1) doit être suffisamment puissante pour gérer les opérations inter-couches, en particulier dans le cas où une couche 2 (l2) échoue. La différence entre une couche 2 (l2) et une chaîne indépendante est que même si votre couche 2 (l2) subit une attaque des 51 % ou que l'équipe ferme ses portes, la couche 1 (l1) est toujours là pour protéger les utilisateurs. Les utilisateurs sont capables de prouver leur propriété et leur état à l'intérieur de la couche 2 (l2) et de les migrer vers la couche 1 (l1). 
 
-#### Vitesses des L2 et feuilles de route (20:33) {#l2-speeds-and-roadmaps-2033}
+### Vitesses des L2 et feuilles de route (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Récemment, il y a eu une expérience en direct avec cela. dYdX v3 a fermé récemment, et les gens de L2Beat ont écrit leur propre implémentation de logiciel de mécanisme de retrait d'urgence. Sans aucune implication de l'équipe d'dYdX, les utilisateurs ont pu prendre tous les actifs qu'ils avaient à l'intérieur de dYdX v3 et les ramener sur la L1 d'Ethereum. Quitter une couche 2 (l2) sans l'implication de l'équipe n'est pas seulement de la théorie, c'est la réalité.
 
@@ -82,7 +82,7 @@ Ensuite, La Fusion. En raison d'une particularité mathématique intéressante, 
 
 L'histoire d'Ethereum : novembre 2013 était le livre blanc. Juillet 2015 était le lancement. Vers 2018, Ethereum s'est arrêté sur sa conception approximative pour la preuve d'enjeu (PoS) et l'échantillonnage de la disponibilité des données. J'ai écrit les articles originaux pour l'échantillonnage de la disponibilité des données et le codage d'effacement en 2017. 
 
-#### Casper et mise à l'échelle des rollups (25:27) {#casper-and-rollup-scaling-2527}
+### Casper et mise à l'échelle des rollups (25:27) {#casper-and-rollup-scaling-2527}
 
 Si vous fouillez dans GitHub, vous pouvez rechercher le répertoire appelé `simple_casper` et trouver des contrats écrits en Serpent. Qui ici se souvient de Serpent ? Qui ici utilise Serpent ? Je veux dire, je pense que Python est vraiment magnifique, mais si vous voulez cela, vous devriez coder en Vyper. Vyper est en fait génial et a continué à s'améliorer pas mal. À l'intérieur de ce dépôt en 2017, nous avons tenté de faire une abstraction complète et d'écrire la logique de la preuve d'enjeu (PoS) directement comme un contrat intelligent. Nous avons lancé une démo à 23h20, heure de Bangkok, le 31 décembre 2017 — nous voulions sortir quelque chose avant le Nouvel An — et la démo a fini par se casser assez rapidement. C'était les premiers jours.
 

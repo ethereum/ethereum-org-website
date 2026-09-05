@@ -17,7 +17,7 @@ Tập đầu tiên của loạt phim *Community.eth* của **Optimist**. Để k
 
 *Bản ghi lời thoại này là một bản sao có thể truy cập của [video gốc](https://www.youtube.com/watch?v=onCwaj1FM-4) do Optimist xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn. Các diễn giả là thành viên của cộng đồng Ethereum và không phải tất cả đều được xác định danh tính riêng trong video.*
 
-#### Ethereum là gì? (0:00) {#what-is-ethereum-000}
+### Ethereum là gì? (0:00) {#what-is-ethereum-000}
 
 **Người 1:** Ethereum là gì?
 
@@ -29,7 +29,7 @@ Tập đầu tiên của loạt phim *Community.eth* của **Optimist**. Để k
 
 **Người 4:** Ethereum là rất nhiều thứ đối với rất nhiều người.
 
-#### Điều gì làm cho nó trở nên mạnh mẽ (0:40) {#what-makes-it-powerful-040}
+### Điều gì làm cho nó trở nên mạnh mẽ (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Tiềm năng mà Ethereum có là rất lớn vì chúng ta thậm chí không thể định nghĩa được nó. Và tôi nghĩ điều đó rất mạnh mẽ.
 
@@ -43,7 +43,7 @@ Tập đầu tiên của loạt phim *Community.eth* của **Optimist**. Để k
 
 **Simona Pop:** Ethereum, đối với tôi, là giai đoạn tiếp theo trong quá trình tiến hóa của internet.
 
-#### Tại sao chúng tôi xây dựng (2:00) {#why-we-build-200}
+### Tại sao chúng tôi xây dựng (2:00) {#why-we-build-200}
 
 **Simona Pop:** Vâng, tất nhiên là có sự xôn xao khi giá tăng, nhưng những người và những tín đồ thực sự vẫn ở đó khi nó giảm, khi nó tăng—điều đó không thực sự quan trọng. Chúng tôi làm điều đó vì chúng tôi thực sự tin tưởng vào những gì chúng tôi đang xây dựng.
 
@@ -51,7 +51,7 @@ Tập đầu tiên của loạt phim *Community.eth* của **Optimist**. Để k
 
 **Alexis Ohanian:** Chúng ta có cơ hội hình dung lại rất nhiều thể chế của xã hội với quyền sở hữu thực sự, với khả năng thực sự để tích lũy giá trị cho phần còn lại của cuộc đời bạn, cho nhiều thế hệ—về cơ bản là đến vô tận. Tôi thực sự rất muốn thấy điều đó được mở khóa.
 
-#### Cộng đồng (3:00) {#the-community-300}
+### Cộng đồng (3:00) {#the-community-300}
 
 **Amber Baldet:** Một điều thực sự làm cho cộng đồng Ethereum trở nên khác biệt ngay từ đầu là họ không ngại tỏ ra hơi ngớ ngẩn một chút. Bạn thấy điều đó ở những con kỳ lân, những màu sắc cầu vồng ngớ ngẩn, những điệu nhảy và những bài hát—và sự ngớ ngẩn đó là thứ mang lại cho toàn bộ hệ sinh thái một cảm giác hy vọng. Và một điều mà mọi người thực sự cần ngày nay là hy vọng.
 

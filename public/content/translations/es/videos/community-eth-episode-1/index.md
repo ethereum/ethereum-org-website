@@ -17,7 +17,7 @@ El primer episodio de la serie *Community.eth* de **Optimist**. Para celebrar el
 
 *Esta transcripción es una copia accesible del [video original](https://www.youtube.com/watch?v=onCwaj1FM-4) publicado por Optimist. Ha sido ligeramente editada para facilitar su lectura. Los oradores son miembros de la comunidad de Ethereum y no todos fueron identificados individualmente en el video.*
 
-#### ¿Qué es Ethereum? (0:00) {#what-is-ethereum-000}
+### ¿Qué es Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Persona 1:** ¿Qué es Ethereum?
 
@@ -29,7 +29,7 @@ El primer episodio de la serie *Community.eth* de **Optimist**. Para celebrar el
 
 **Persona 4:** Ethereum es muchas cosas para muchas personas.
 
-#### Lo que lo hace poderoso (0:40) {#what-makes-it-powerful-040}
+### Lo que lo hace poderoso (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** El potencial que tiene Ethereum es enorme porque ni siquiera podemos definirlo. Y creo que eso es muy poderoso.
 
@@ -43,7 +43,7 @@ El primer episodio de la serie *Community.eth* de **Optimist**. Para celebrar el
 
 **Simona Pop:** Ethereum, para mí, es la siguiente etapa en la evolución de internet.
 
-#### Por qué construimos (2:00) {#why-we-build-200}
+### Por qué construimos (2:00) {#why-we-build-200}
 
 **Simona Pop:** Sí, por supuesto que hay entusiasmo cuando el precio sube, pero las personas y los verdaderos creyentes están ahí cuando baja, cuando sube; en realidad no importa. Lo hacemos porque creemos genuinamente en lo que estamos construyendo.
 
@@ -51,7 +51,7 @@ El primer episodio de la serie *Community.eth* de **Optimist**. Para celebrar el
 
 **Alexis Ohanian:** Tenemos la oportunidad de reimaginar muchas instituciones de la sociedad con verdadera propiedad, con la capacidad real de acumular valor por el resto de tu vida, por generaciones; hasta el infinito, básicamente. Realmente deseo con desesperación ver que eso se desbloquee.
 
-#### La comunidad (3:00) {#the-community-300}
+### La comunidad (3:00) {#the-community-300}
 
 **Amber Baldet:** Una cosa que realmente distingue a la comunidad de Ethereum ha sido, desde el principio, que no tienen miedo de hacer un poco el tonto. Lo ves en los unicornios y los divertidos colores del arcoíris y los bailes y las canciones; y esa actitud lúdica es lo que le da a todo el ecosistema un sentido de esperanza. Y una cosa que la gente realmente necesita en estos días es esperanza.
 
