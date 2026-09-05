@@ -24,9 +24,25 @@ test.describe("pageRankForSlug", () => {
   })
 
   test("ranks the homepage with the landing pages", () => {
-    // It arrives as `[""]` rather than an empty array, which used to make its rank an
-    // accident of `slug.length === 1` rather than a decision.
+    // It arrives as `[""]` rather than an empty array. Counted naively that reads as
+    // depth 1 and scores it above every other page, so empty segments are dropped.
     expect(pageRankForSlug([""])).toBe(PAGE_RANK.beginner)
+  })
+
+  test("prefers the shallower page when both are below a root", () => {
+    // The reported case: "issuance of eth" put /roadmap/merge/issuance above /eth/supply
+    // because a flat model scored every non-root page the same.
+    expect(pageRankForSlug(["eth", "supply"])).toBeGreaterThan(
+      pageRankForSlug(["roadmap", "merge", "issuance"])
+    )
+  })
+
+  test("decays with depth and stops at the floor", () => {
+    expect(pageRankForSlug(["eth"])).toBe(10)
+    expect(pageRankForSlug(["eth", "supply"])).toBe(8)
+    expect(pageRankForSlug(["roadmap", "merge", "issuance"])).toBe(6)
+    // Deeper pages settle at the floor rather than sinking under tutorials and videos.
+    expect(pageRankForSlug(["a", "b", "c", "d", "e"])).toBe(PAGE_RANK.default)
   })
 
   test("orders the buckets beginner > guide > docs > supplemental > tutorial > lowest", () => {
@@ -64,11 +80,15 @@ test.describe("pageRankForSlug", () => {
     )
   })
 
-  test("leaves nested pages at the default", () => {
-    expect(pageRankForSlug(["roadmap", "merge"])).toBe(PAGE_RANK.default)
+  test("holds developer docs at their own rank, whatever their depth", () => {
+    // Docs are deliberately exempt from the decay: nesting there is organisational,
+    // not a signal that the page is more specific than a reader wanted.
     expect(pageRankForSlug(["developers", "docs", "blocks"])).toBe(
-      PAGE_RANK.default
+      PAGE_RANK.docs
     )
+    expect(
+      pageRankForSlug(["developers", "docs", "scaling", "optimistic-rollups"])
+    ).toBe(PAGE_RANK.docs)
   })
 })
 
