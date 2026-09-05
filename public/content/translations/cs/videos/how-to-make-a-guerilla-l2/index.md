@@ -20,13 +20,13 @@ breadcrumb: "Guerillová vrstva 2 (l2)"
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=WlsICV2OPAE), který zveřejnila iniciativa Web3Privacy Now. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod a anarchistická filozofie (0:05) {#introduction-and-anarchist-philosophy-005}
+### Úvod a anarchistická filozofie (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Potlesk] Děkuji, že jste tady. Vím, že teď mluví Vitalik. Je to pro mě opravdu čest, že je tu pár z vás a nestojíte tamhle ve frontě na matchu. Dnes se budeme bavit o guerillových vrstvách 2 (l2) a myslím, že se k tomu dostaneme, ale nejprve vám představuji Melanii Premsyl, francouzskou filozofku a anarchistku, která nám prokázala tu čest a připojila se k nám. Chtěla by ses na úvod trochu představit?
 
 **Melanie Premsyl:** Jasně. Ahoj všichni. Jsem francouzská filozofka. Studuji anarchii a technologie a na začátku jsem se zaměřovala spíše na území. Jako například ve střední Francii, nevím, jestli znáte Tarnac, nebo všechny tyhle skupiny, které jsou spíše násilné. Hlavní problém, na který jsem narazila, byl ten, že potřebujeme být ve spojení s dalšími lidmi ve světě, a spousta anarchistických skupin je velmi omezená. Potřebujeme způsob, jak komunikovat s více lidmi z Ameriky nebo Jižní Ameriky. A to je důvod, proč se teď snažíme vytvořit most s kryptem a všemi, kteří se snaží najít nové způsoby, jak bojovat proti nedostatku soukromí, nedostatku svobody a násilí ze strany státu.
 
-#### Soudní proces s bratry MEV (1:52) {#the-mev-brothers-trial-152}
+### Soudní proces s bratry MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Úžasné. Takže v podstatě jsme se potkaly před pár týdny v New Yorku. Obě jsme se účastnily soudního procesu, který probíhal na Manhattanu, kde byli tito dva bratři, známí jako bratři MEV, stíháni za to, že provedli sandwich útok na nějaké sandwich boty. Šla jsem k soudu sledovat proces a viděla jsem tady tu osobu, jak čte Spinozu ve francouzštině, a byla jsem opravdu zvědavá, co se děje. V publiku nebyl nikdo jiný než my dvě! Takže mě opravdu zajímalo, co tě, v první řadě anarchistku a filozofku spíše než technoložku, přimělo v podstatě přijít na tento konkrétní proces, ale také přemýšlet o správě Etherea a celém validačním systému a procesu, který se konal v New Yorku. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Guerillová vrstva 2 (l2)"
 
 **Fatemeh Fannizadeh:** Dobře. Jo, to dává smysl. Takže pro ty, kteří proces nesledovali, po asi třech nebo čtyřech týdnech byl zrušen pro zmatečnost (mistrial). Porota nedokázala dospět k jednomyslnému verdiktu a rozhodnout, zda jsou tito dva bratři vinni z porušení pravidel blockchainu, nebo ne – což je podle mě pro krypto docela pozitivní výsledek, že soud nebo porota nerozhoduje o tom, co je onchain správné a co špatné. 
 
-#### Propojování blockchainu s dalšími komunitami (4:06) {#bridging-blockchain-with-other-communities-406}
+### Propojování blockchainu s dalšími komunitami (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Ale dobře, když se vrátíme o krok zpět k tomu, co jsi říkala o anarchistech, kteří zkoumají tuto technologii, aby v podstatě vytvořili most mezi různými skupinami. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Guerillová vrstva 2 (l2)"
 
 **Melanie Premsyl:** Jo, ráda bych to řekla, ale nejsem si jistá, protože víš, je tu spousta lidí, kteří potřebují vydělávat peníze, takže to je taky hlavní účel. Ale myslím, že bychom to mohli prostě použít jako komunistickou síť, že by jen jedna část mohla být takovým snem. Myslím, že je to vysněný dort, který se dá upéct, ale potřebujeme mít nástroje a design, které pomohou lidem vymanit se z technického, velmi inženýrského způsobu myšlení, aby pochopili, jaké to je.
 
-#### Decentralizace a vrstvy 2 (6:55) {#decentralization-and-layer-2s-655}
+### Decentralizace a vrstvy 2 (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** To mi hodně připomíná decentralizované autonomní organizace (DAO) před několika lety. Nevím jak vy všichni, ale já jsem byla opravdu nadšená, myslela jsem si, že DAO přinášejí revoluci do způsobu, jakým se organizujeme jako skupiny a komunity onchain, a do svobody, kterou máme. A nakonec to všechno prostě vyšumělo. Nemyslím si, že se to vůbec projevilo. Stalo se to spíše o hlasovacím systému, není to ve skutečnosti demokratické, jde jen o vytváření zisku. Tahle celá představa, kterou jsme měli o DAO jako o sociálním nástroji, se vlastně nenaplnila. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Guerillová vrstva 2 (l2)"
 
 **Melanie Premsyl:** Jsem Francouzka. To je velký problém. Jako Francouzi jsme velmi státní národ. Takže vždycky přemýšlím pedagogicky a velmi stylem shora dolů. A myslím, že vrstva 2 (l2) vytváří způsob, jak si každý může vytvořit mini blockchainy, které jsou zabezpečeny vrstvou 1 (l1). Ráda bych viděla, jestli lidé dokážou vytvořit pedagogickou pomoc pro všechny ohledně něčeho, co je svobodné. Myslím, že spousta skupin, jako jsou spolky, by si mohla vytvořit vlastní blockchain, a byl by to způsob – jak víš, federalismus je velkým hlavním tématem anarchismu. Jak lidé dokážou zvládnout to, že se možná nenávidí, ale přesto spolu mluví. Takže potřebujeme mít tento druh federalismu v blockchainu. Každý má vrstvu 2 (l2) s vlastní hodnotou, a tak mluvíme pomocí stejné infrastruktury. 
 
-#### Anarchie, svoboda a budování nástrojů (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarchie, svoboda a budování nástrojů (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Jo, moc se mi líbí, co jsi řekla o tom, že se v podstatě nenávidíme, ale přesto spolu komunikujeme, jako že nejsme toxičtí navzdory našim rozdílům. A fakt, že v tomto scénáři existuje jedna vrstva 1 (l1), což by bylo Ethereum, je také často označován za fašistický, protože všichni musíme souhlasit s tímto jedním souborem pravidel. Takže je to jeden systém, který je stejný pro všechny, a vy se v podstatě musíte této vrstvě 1 (l1) podřídit, nebo můžete odejít, to je úplně jiná otázka. Ale pokud to dokážeme decentralizovat do ekosystému různých druhů malých rollupů a vrstev 2 (l2), pak můžeme do této společné infrastruktury vrátit nesoulad a neshody. 
 

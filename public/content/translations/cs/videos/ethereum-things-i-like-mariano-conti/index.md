@@ -18,7 +18,7 @@ Osobní přednáška původního (OG) vývojáře Etherea **Mariana Contiho** na
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=S0-oO_4ZRfs) zveřejněného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:08) {#introduction-008}
+### Úvod (0:08) {#introduction-008}
 
 **Mariano Conti:** Buenos Aires. Dobrý večer všem. Chci začít omluvou. Posledních pár let jsem se v ekosystému moc nepohyboval. Takže když mi organizátoři řekli, že chtějí, abych měl přednášku, zpočátku jsem odmítl, protože jsem byl od určitých věcí tak daleko, že jsem občas opravdu zapomněl, proč tu jsme a proč děláme to, co děláme. V určitých ohledech jsem se stal trochu cyničtějším a v jiných optimističtějším. Každopádně mám 15 minut na to, abych s vámi o tom všem mluvil, tak pojďme na to.
 
@@ -26,23 +26,23 @@ Jak vždycky říkám, jako Argentinec miluji terapii. Tohle bude pravděpodobn�
 
 Takže tohle jsem já, rok 2015 — začal jsem kupovat ether. Velmi skromně vypadající chlapík. A teď rok 2025, po 10 letech, to je ta zlomená tělesná schránka muže, kterého dnes vidíte stát před sebou, s obdobím bezhlavého nakupování tokenů během DeFi léta, že? A pro ty z vás, kteří to nevědí, strávil jsem několik let v Makeru. Pomáhal jsem vydat single a multicollateral DAI, což byl pravděpodobně první decentralizovaný stablecoin na Ethereu. Vytvořil jsem první decentralizovaná orákula na Ethereu. To vše z bytu v Almagru — samozřejmě jako součást mnohem, mnohem větší skupiny — ale řekl bych, že mé zkušenosti v Ethereu byly poměrně rozsáhlé a většinou velmi obohacující.
 
-#### Devcon v Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
+### Devcon v Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti:** A v roce 2019, jsem si jistý, že jste tento obrázek už párkrát viděli. A vidím tu některé lidi, kteří se mnou byli na pódiu v Ósace v roce 2019. Tehdy jsme opravdu začali s velkým tlakem na to, abychom jednu z těchto akcí Devcon měli tady v Buenos Aires, že? A pravděpodobně člověk, který pro to udělal nejméně, jsem já. V podstatě jsem si jen oblékl tričko a párkrát tweetoval. Všichni tam pracovali stokrát víc a lidé, kteří přišli po nich, pracovali tisíckrát víc. Takže ještě jednou, je mi neuvěřitelnou, neuvěřitelnou ctí, že tu v Argentině máme Devconnect.
 
 A škrtl jsem „příliš pozdě“ a napsal „později“. Chvíli jsem byl velmi, velmi zahořklý, že jsme to nemohli mít tehdy, kdy jsme řekli — že to bude mít největší dopad. A v určitém smyslu je to pravda a v jiném ne. Zaprvé, kdybychom měli Devcon — vím, že v roce 2020 se vlastně nekonal kvůli COVIDu — ale možná v roce 2021, nebyl by tak velký. Technologie by nebyla tak zakořeněná v naší komunitě, v naší společnosti, jako je teď. Lidé, když přijedou do Argentiny poprvé, stále žasnou nad tím, jak moc využíváme stablecoiny — ať už v době, kdy jsme měli kapitálové kontroly, nebo když je nemáme, a kdekoli mezi tím. Argentinci mají kulturu zkoušení nových věcí a neustálé ochrany svých investic. O tom jsem mluvil obšírně. Takže jsem opět tak šťastný, že je Devcon konečně tady.
 
-#### Věci, které mám na Ethereu rád (4:28) {#things-i-like-about-ethereum-428}
+### Věci, které mám na Ethereu rád (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti:** A zbývají mi už jen tři snímky. Takže budu mluvit trochu o věcech, které mám na Ethereu rád. A miluji, že je tu stále i po více než 10 letech. A dostupnost (uptime) je 100 %. Je to opravdu technologie, na které můžete stavět a můžete se spolehnout, že bude důvěryhodná — že odešlete transakci a nakonec projde, ať se děje cokoli, přes RPC uzel až na druhý konec světa, pak se replikuje na tisících počítačích po celém světě — doufejme, že spousta z nich je v domovech lidí a ne jen v datových centrech — a že cokoli jste odeslali nebo s čím jste interagovali, bude zakořeněno v bloku, doufejme, že navždy.
 
 Když jsem začal tuto cestu, byl jsem to jen já. Moje žena — teď už je to skoro rok — jsme měli dítě. Moje dítě má ENS. Je to součást toho, kým jsme a čím jsme v naší rodině, že nám Ethereum umožnilo tolik věcí, že mám vždycky pocit, že jsem to nikdy dostatečně nevrátil. A to je také jeden z důvodů, proč si na určité věci tolik stěžuji.
 
-#### Komunita (5:25) {#the-community-525}
+### Komunita (5:25) {#the-community-525}
 
 **Mariano Conti:** Je to proto, že nechci přejít k věcem, které nemám rád, tak brzy. Takže mi dovolte přeskočit k pár dalším, které rád mám — komunita, obzvláště ta argentinská, a vidět tu tolik přátel, jak z Argentiny, z Latinské Ameriky, tak z celého světa. Je šílené, že sem přijeli na týden nebo dva nebo na událost, která nás všechny spojuje v naší lásce a respektu k — říkám lásce, a je to zvláštní. My, alespoň lidé za mých časů — nevím, jestli to platí pro nováčky — jsme k této technologii nepřistupovali jen jako k další minci nebo další akcii, kterou byste si koupili a zkoušeli sledovat, jestli šla nahoru nebo dolů. Cena nás samozřejmě ovlivňuje, ale vždy nás více ovlivňovalo vidět, že to, co budujeme, má smysl, a že s tou technologií děláme něco smysluplného, abychom umožnili zcela nové případy užití, ať už jde o financování, sběratelské předměty nebo decentralizované finance (DeFi).
 
-#### Věci, které nemám rád (7:00) {#things-i-dont-like-700}
+### Věci, které nemám rád (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti:** A tak se s tímto oslím můstkem přesunu k některým věcem, které nemám rád — ne nutně jen na Ethereu, ale na ekosystému.
 
@@ -52,7 +52,7 @@ Dlouho se mi nelíbilo, že Nadace Ethereum vypadala, jako by stagnovala, a že 
 
 Podobně jako před pár lety jsme s Ericem Connorem založili tuto malou webovou stránku s názvem „Pump the Gas“, která spoustu lidí popudila. Chtěli jsme jen, aby širší komunita a hlavní vývojáři uznali, že možná nastal čas trochu zvýšit limit plynu v blocích. A v té době to bylo kontroverzní, ale nakonec se to stalo něčím, co bylo přijato a začalo se to dít s pravidelnou kadencí. A teď máme dokonce EIP — Fusaka bude vyžadovat zvýšení na 60 milionů — a pak jsou tu dokonce EIP, které chtějí nuceně zvyšovat limit plynu s každou další iterací. Takže jsem opravdu rád, že se to stalo.
 
-#### Výzvy k akci (10:24) {#calls-to-action-1024}
+### Výzvy k akci (10:24) {#calls-to-action-1024}
 
 **Mariano Conti:** A myslím, že se příliš rozepisuji a dochází mi čas. Takže jen řeknu své výzvy k akci. Mám vlastně jen dvě, možná třetí, která prošla přes cenzory, ale to se uvidí.
 
@@ -62,7 +62,7 @@ Návrat na vrstvu 1 (l1). I když miluji L2 a znám spoustu lidí, kteří na ni
 
 No, nevím — tohle tam možná nemělo být, ale věřím, že to je vše, co jsem chtěl říct. Chci vám poděkovat — nebo se omlouvám, podle toho, jak to dopadlo — a chci se omluvit, že obvykle mívám na srdci víc věcí. A možná, pokud budeme mít malé Q&A, tak je řeknu. Jak jsem řekl, posledních pár let jsem byl na okraji, ale nikdy jsem neztratil ze zřetele, na čem lidé v Ethereu pracují, a vždy to bude součástí mého života. A znovu, jsem tak šťastný, že máme Devcon v Buenos Aires.
 
-#### Otázky a odpovědi (12:10) {#qa-session-1210}
+### Otázky a odpovědi (12:10) {#qa-session-1210}
 
 **Moderátor:** Moc vám děkuji. Zaprvé, mohu se s vámi seznámit?
 
@@ -90,7 +90,7 @@ Jak moc jste teď nadšený? Jste tu už nějakou dobu, věci se mění. Z čeho
 
 **Mariano Conti:** Hádám, že to, co mě teď nejvíc vzrušuje, je štíhlé Ethereum (lean Ethereum) — pravděpodobně další krok k tomu, aby vrstva 1 (l1) Etherea opravdu, ale opravdu přijala důkazy s nulovým vědomím, všechny ty věci, které přicházejí s — no, ještě předtím — Fusaka provádějící oddělení dokazovatelů (provers) s uzly, s hledači (searchers), se staviteli (builders). Nevím, jestli dokážu vypíchnout jen jednu věc. Těším se na další hard fork. Je šílené, že budeme mít dva za rok, když jsme v poslední době měli možná jeden za tři roky. Takže jsem nadšený, že se z nějakého důvodu věci daly do pohybu a všichni jsme se rozhodli, že teď můžeme dělat věci rychleji.
 
-#### Cypherpunkový étos a rady (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Cypherpunkový étos a rady (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Moderátor:** Z čeho máte radost, že jsme se toho z těch starých (OG) časů v kryptu jako celku zbavili, a co byste si přál, abychom si zachovali?
 

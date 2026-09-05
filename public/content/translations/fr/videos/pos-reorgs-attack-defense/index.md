@@ -19,13 +19,13 @@ Cette présentation explore les types de réorganisations de blocs possibles dan
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=xcPxwhrg3Ao) publiée par LisCon. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction et contexte (0:03) {#introduction-and-background-003}
+### Introduction et contexte (0:03) {#introduction-and-background-003}
 
 Bienvenue. Aujourd'hui, je vais vous parler des réorgs qui sont possibles dans l'Ethereum en preuve d'enjeu.
 
 J'ai récemment rejoint la Fondation Ethereum, plus particulièrement le Robust Incentives Group. En gros, nous sommes une équipe de recherche qui se concentre sur tout ce qui touche aux incitations. Je vais faire court — cette présentation est dense et vous pouvez trouver la majeure partie de notre travail sur GitHub.
 
-#### Deux types de réorgs (0:44) {#two-types-of-reorgs-044}
+### Deux types de réorgs (0:44) {#two-types-of-reorgs-044}
 
 Aujourd'hui, je veux parler des réorgs, et en particulier je souhaite esquisser deux types différents de réorgs qui sont possibles dans le domaine de l'Ethereum en preuve d'enjeu.
 
@@ -37,7 +37,7 @@ Les réorgs ex-ante sont légèrement différentes. L'idée est que l'attaquant 
 
 Vous vous demandez peut-être pourquoi on voudrait faire ce genre de réorg. Eh bien, il y a toujours de la MEV à capturer. Si vous avez de la chance, le bloc N+2 contient beaucoup de MEV — vous pouvez la capturer en copiant-collant simplement le contenu de ce bloc. Dans le pire des cas, vous avez essentiellement l'équivalent de deux créneaux de transactions à écouter.
 
-#### Les réorgs ex-post dans la preuve de travail (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Les réorgs ex-post dans la preuve de travail (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Avant de plonger dans les réorgs ex-ante, qui sont le sujet principal de cette présentation, permettez-moi de récapituler brièvement les réorgs ex-post et de commencer en particulier par le contexte de la preuve de travail.
 
@@ -45,7 +45,7 @@ En gros, c'est un résumé de l'article de blog rédigé par les suspects habitu
 
 En résumé, dans l'Ethereum en preuve de travail, les réorgs ex-post sont difficiles mais pas irréalisables. Un mineur possédant 10 % de la puissance de hachage a de relativement bonnes chances de miner quelques blocs d'affilée, et si l'incitation est suffisamment élevée — imaginez qu'il y ait un bloc avec 100 ETH de MEV à capturer — alors un taux de réussite de un pour cent peut en fait suffire pour que cela vaille la peine d'essayer de réorganiser.
 
-#### Les réorgs ex-post dans la preuve d'enjeu (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Les réorgs ex-post dans la preuve d'enjeu (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Dans la preuve d'enjeu, c'est une toute autre histoire. Nous parlons d'une quantité absurde de mise requise. Je vais vous expliquer comment on pourrait s'y prendre, juste pour souligner à quel point c'est ridiculement difficile.
 
@@ -63,7 +63,7 @@ Si nous faisons le compte — le bloc N+1 a des attestations valant un tiers plu
 
 Pour vous donner une idée du ridicule de ces hypothèses — même si vous étiez un staker à 65 %, pour contrôler les deux tiers du comité dans un créneau donné, vous avez une probabilité de 0,05 %. Cela montre bien que la puissance des attestations parallèles est réelle — les réorgs ex-post sont incroyablement difficiles, voire virtuellement impossibles, dans l'Ethereum en preuve d'enjeu.
 
-#### Mécanique de l'attaque par réorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mécanique de l'attaque par réorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Maintenant, je vais parler des réorgs ex-ante. Cette attaque est basée sur un article de Neuder et d'autres. Nous avons récemment amélioré cette attaque de manière significative. Nous avons également rédigé un article à ce sujet et réussi à le télécharger sur arXiv juste à temps.
 
@@ -75,7 +75,7 @@ Ce qui se passe, c'est que les personnes honnêtes ne voient pas le bloc N+1, el
 
 Supposons une latence nulle pour le moment. Dans le créneau N+2, ce que nous faisons en tant qu'attaquant, c'est publier le bloc N+1 et l'attestation privée en même temps. Les validateurs honnêtes dans le créneau N+2 doivent attester d'un bloc. De leur point de vue, ils voient le bloc N+2 et le bloc N+1 avec cette unique attestation privée. S'ils exécutent le choix de fork, ils trouveront que le bloc N+1 a plus de poids que le bloc N+2, car N+1 a l'attestation privée que N+2 n'a pas. Même tous les validateurs honnêtes attesteront en fait du bloc N+1. Dans N+3, de manière triviale, N+1 sera considéré comme la tête de la chaîne.
 
-#### La latence du réseau et l'attaque (10:25) {#network-latency-and-the-attack-1025}
+### La latence du réseau et l'attaque (10:25) {#network-latency-and-the-attack-1025}
 
 J'ai supposé une latence nulle, ce qui n'est évidemment pas la façon dont cela fonctionne. Il y a de la latence — il faut du temps pour propager les blocs et les messages sur la couche P2P.
 
@@ -83,7 +83,7 @@ La façon dont un attaquant peut tout de même réussir ce genre d'attaque est d
 
 Pour souligner à nouveau ce qui se passe ici : nous avons un proposant avec un seul attestateur qui parvient à réaliser une réorg d'un bloc. Ce n'est pas idéal, c'est le moins qu'on puisse dire.
 
-#### Stratégies d'équilibrage pour des réorgs plus longues (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Stratégies d'équilibrage pour des réorgs plus longues (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Si vous voulez faire les choses en grand, vous pouvez réaliser des réorgs plus longues en utilisant une stratégie d'équilibrage. L'idée est de diviser le comité honnête en différentes vues de la chaîne.
 
@@ -97,7 +97,7 @@ Pour mettre fin à une réorg de deux blocs : le bloc N+3 est proposé, vous l'e
 
 Si vous y réfléchissez, il est relativement peu coûteux de faire ces réorgs sous ces hypothèses. Même si vous n'avez pas de divisions parfaites, parce que la couche P2P est si grande, vous avez une distribution de probabilité que vous pouvez cibler de sorte que le coût de l'attaque croît selon la racine carrée de la taille du comité.
 
-#### Atténuation par le boost du proposeur (15:17) {#proposer-boost-mitigation-1517}
+### Atténuation par le boost du proposeur (15:17) {#proposer-boost-mitigation-1517}
 
 Parlons de l'atténuation. Quelle est l'idée de base ? Nous allons donner un peu plus de pouvoir au proposant. Si un bloc valide arrive à temps, augmentons le poids de ce bloc pour la durée du créneau. Une fois ce créneau terminé, nous reprenons le score LMD-GHOST habituel et tout redevient normal.
 
@@ -107,7 +107,7 @@ Les histoires d'équilibrage ne fonctionnent plus non plus car vous avez une div
 
 L'idée est qu'avec cette atténuation en place, les attestations de l'adversaire doivent rivaliser avec le boost pour convaincre les validateurs honnêtes de voter selon leurs souhaits. Cela brise les stratégies d'équilibrage et interdit fondamentalement toutes les réorgs. Bonne nouvelle — il y a une PR ouverte, donc en gros, elle sera fusionnée avant La Fusion.
 
-#### Points clés à retenir (16:48) {#key-takeaways-1648}
+### Points clés à retenir (16:48) {#key-takeaways-1648}
 
 Quelques points clés à retenir. J'ai parlé des différences entre les réorgs ex-post et ex-ante. J'ai brièvement esquissé les différents paysages pour les réorgs dans la preuve de travail par rapport à la preuve d'enjeu. Je vous ai montré comment réaliser une réorg ex-ante mais aussi, et c'est important, comment y remédier.
 

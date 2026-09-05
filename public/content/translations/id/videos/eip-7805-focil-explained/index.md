@@ -19,7 +19,7 @@ Episode 141 dari **PEEPanEIP** oleh Ethereum Cat Herders. Tuan rumah Pooja Ranja
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=cUGyLx-mf6I) yang dipublikasikan oleh Ethereum Cat Herders. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:35) {#introduction-035}
+### Pengantar (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Halo dan selamat datang di PEEPanEIP, satu-satunya acara di mana kita membahas secara mendalam tentang Ethereum Improvement Proposals dan mengeksplorasi dampaknya pada ekosistem. Ini adalah episode 141, dipersembahkan oleh Ethereum Cat Herders. Saya pembawa acara Anda, Pooja Ranjan, dan hari ini kita akan membahas tentang EIP-7805, Fork-choice enforced Inclusion Lists.
 
@@ -33,7 +33,7 @@ Dalam episode ini, kita akan mengeksplorasi detail dari EIP-7805, implikasinya, 
 
 **Pooja Ranjan:** Kami sangat antusias untuk mempelajari gambaran umum dari proposal ini, statusnya saat ini, dan seberapa cepat kita dapat melihatnya di Mainnet Ethereum. Namun sebelum kita mulai, komunitas kami senang mengenal para peneliti dan pengembang di balik karya tersebut. Bisakah Anda berbagi sedikit tentang diri Anda, proyek yang sedang Anda ikuti saat ini, dan perjalanan Anda di dalam ekosistem Ethereum?
 
-#### Perkenalan tamu (2:14) {#guest-introductions-214}
+### Perkenalan tamu (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Tentu, saya bisa memulainya. Saya Julian, seorang peneliti di Robust Incentives Group, sama seperti Thomas, di Yayasan Ethereum. Robust Incentives Group berkaitan dengan ekonomi protokol secara sangat luas. Beberapa dari kami telah meneliti mekanisme biaya transaksi, seperti EIP-1559, dan yang lainnya telah meneliti serangan lapisan konsensus, sebagian besar yang dimotivasi oleh insentif ekonomi.
 
@@ -45,7 +45,7 @@ Saya telah mengerjakan topik-topik serupa. MEV cukup besar ketika saya bergabung
 
 **Pooja Ranjan:** Terima kasih telah berbagi. Selalu menginspirasi untuk mengetahui latar belakang para pengembang. Sangat menarik melihat bahwa mereka berasal dari domain yang berbeda dan pada akhirnya berkontribusi pada ekosistem Ethereum. Saya mengerti kita memiliki presentasi di sini hari ini. Jadi tanpa basa-basi lagi, mari kita lihat.
 
-#### Presentasi: tujuan FOCIL (5:16) {#presentation-goals-of-focil-516}
+### Presentasi: tujuan FOCIL (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Sempurna, terima kasih banyak. Saya ingin memulai dengan presentasi singkat tentang bagaimana EIP-7805, atau FOCIL, bekerja dan mengapa tepatnya kita ingin melakukannya. Ini dimaksudkan untuk memulai percakapan, jadi tidak akan terlalu mendalam, untuk menyisakan ruang bagi diskusi setelahnya.
 
@@ -53,7 +53,7 @@ Tujuan utama FOCIL adalah untuk meningkatkan netralitas yang kredibel dari Ether
 
 Tujuan tingkat yang lebih tinggi adalah untuk mengejar properti yang kita sebut netralitas rantai, yang berarti setiap transaksi tertunda yang membayar biaya harus disertakan jika tersedia dan jika ada ruang untuk menyertakannya secara onchain. Kami percaya bahwa jika properti ini cukup terpenuhi, maka kita meningkatkan netralitas yang kredibel dari Ethereum.
 
-#### Mengapa kita membutuhkan FOCIL, dan mengapa sekarang? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Mengapa kita membutuhkan FOCIL, dan mengapa sekarang? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Mengapa kita membutuhkan sesuatu seperti ini? Saat ini hampir semua validator mengalihdayakan konstruksi blok ke MEV-Boost, yang merupakan pasar di luar protokol tempat para pembangun menawar hak konstruksi blok. Di pasar ini hanya ada dua entitas yang benar-benar mendominasi, dan ini berarti 90% blok dibangun oleh hanya dua entitas.
 
@@ -65,7 +65,7 @@ Kemudian, based rollup menjadi lebih populer akhir-akhir ini, dan mereka akan me
 
 Dan berpotensi FOCIL dapat membantu penskalaan, tergantung pada siapa Anda bertanya. Saat ini Ethereum masih memperoleh ketahanan penyensorannya dari pembangunan blok lokal. Jika Ethereum dapat memperoleh ketahanan penyensoran dari tempat lain, misalnya melalui FOCIL, maka mungkin kita dapat meningkatkan ekspektasi yang kita miliki terhadap pembangun blok dan mengizinkan, misalnya, lebih banyak blob. Namun berpotensi hal ini juga dapat dilakukan tanpa FOCIL. Oleh karena itu, FOCIL telah diusulkan untuk diimplementasikan di Fusaka.
 
-#### Cara kerja FOCIL (8:10) {#how-focil-works-810}
+### Cara kerja FOCIL (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Sekarang saya akan memandu Anda tentang cara kerja FOCIL. Kita akan mulai dengan dasar-dasarnya dan membahasnya selangkah demi selangkah hingga kita mendapatkan mekanisme lengkapnya, lalu mengeksplorasi bagaimana mekanisme lengkap ini memenuhi properti yang kita inginkan.
 
@@ -79,7 +79,7 @@ Kemudian kita menuju ke langkah terakhir, yaitu penegakan. Seperti yang saya kat
 
 Untuk merangkum mekanisme lengkapnya: di setiap slot, 16 anggota komite dipilih sebagai anggota komite daftar inklusi. Mereka mengamati mempool dan menyusun objek daftar inklusi yang mereka distribusikan melalui topik global sebelum tenggat waktu, dalam hal ini detik ke-9. Pembangun mengamati daftar inklusi ini dan menyertakan semua transaksi yang telah dilihatnya ke dalam bloknya. Pemberi atestasi kemudian memeriksa apakah semua transaksi yang telah mereka lihat sebelum detik ke-9 dalam daftar inklusi memang ada di dalam blok. Jika pemeriksaan ini berhasil, mereka memberikan suara untuk blok tersebut, dan kita beralih ke slot berikutnya, di mana pengaturan yang sama terjadi lagi.
 
-#### IL Boost dan uncrowdability (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost dan uncrowdability (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Salah satu kekhawatiran besar tentang daftar inklusi, yang disuarakan untuk EIP sebelumnya dari Mike dan selama pengembangan setelahnya, adalah "IL Boost," atau uncrowdability. Hal ini merujuk pada fakta bahwa pengusul daftar inklusi mungkin ingin menjual hak mereka untuk membangun daftar inklusi. Ini adalah kekhawatiran yang sangat logis, karena kita melihat hal ini terjadi pada konstruksi blok: menjual hak ini mengarah pada pasar terpusat dari para pembangun yang canggih.
 
@@ -93,7 +93,7 @@ Dan terakhir, daftar inklusi ini dibuat 3 detik sebelum produsen blok bertindak.
 
 Karena alasan-alasan ini, kami percaya bahwa tidak ada individu pengusul daftar inklusi yang memiliki kekuatan inklusi, pengurutan, atau eksklusi, yang merupakan definisi mendasar dari MEV. Oleh karena itu, daftar inklusi seharusnya tidak tunduk pada MEV.
 
-#### Ringkasan presentasi (13:09) {#summary-of-the-presentation-1309}
+### Ringkasan presentasi (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Untuk meringkas presentasi singkat ini: FOCIL memungkinkan beberapa validator untuk berkontribusi pada konstruksi blok, mencegah monopoli inklusi dari satu pengusul dan meningkatkan netralitas Ethereum yang kredibel. Kami percaya bahwa FOCIL perlu diimplementasikan sekarang karena saat ini hanya ada dua pembangun dominan yang dapat mulai melakukan penyensoran kapan saja, dan ini bisa jadi karena alasan ekonomi yang mungkin menguntungkan mereka. Pembangunan blok bisa menanggung beban yang lebih berat karena based rollup akan ingin menggunakan properti pengurutan Ethereum. FOCIL akan diluncurkan dengan jauh lebih lancar ketika hanya ada sedikit pihak yang menyensor: pertama, karena ini berarti sudah menjadi bawaan bagi validator untuk membangun daftar inklusi, dan kedua, karena ini berarti ada lebih sedikit ketidakstabilan pasar antara pembangun yang menyensor dan pembangun yang tidak. Dan terakhir, FOCIL berpotensi membantu penskalaan, yang mungkin merupakan topik yang bisa kita bahas lebih dalam.
 
@@ -101,7 +101,7 @@ Terima kasih atas waktu yang diberikan untuk menyampaikan presentasi kecil ini. 
 
 **Pooja Ranjan:** Terima kasih banyak atas presentasi singkat ini dan gambaran umum dari proposal tersebut.
 
-#### Tanya Jawab: apa perbedaan EIP-7805 dengan EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Tanya Jawab: apa perbedaan EIP-7805 dengan EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Saya ingin memulai sesi Tanya Jawab dengan pertanyaan pertama, tentang proposal sebelumnya yang juga disebutkan dalam presentasi Anda: proposal 7547, daftar inklusi (inclusion list), oleh Mike Neuder. Saya ingin memahami perbedaan mendasar antara proposal tersebut dan FOCIL yang kita miliki pada 7805. Anda sempat menyinggung sebagian dalam presentasi Anda mengenai IL Boost dan ketidakpadatan (uncrowdability). Apakah Anda mungkin ingin menjelaskannya sedikit lebih lanjut?
 
@@ -115,7 +115,7 @@ Dan kemudian beberapa detail teknis lainnya: ada beberapa ketidakcocokan dengan 
 
 **Pooja Ranjan:** Terima kasih banyak. Bagi orang-orang yang ingin mempelajari lebih lanjut tentang proposal 7547, kami memiliki rekaman episode dengan Mike Neuder, episode 130 dari PEEPanEIP, yang memberikan gambaran umum tingkat tinggi. Saya selalu senang melihat proposal yang bersaing, karena saya tahu itu demi kebaikan ekosistem dan rantai. Saya melihat di obrolan ada beberapa pertanyaan. Mungkin saya ingin mengundang Kataya untuk membagikan pertanyaannya.
 
-#### Apakah pengusul harus memasukkan semua 16 daftar? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Apakah pengusul harus memasukkan semua 16 daftar? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Halo, terima kasih. Pertanyaan saya adalah: apakah pengusul blok mendapatkan 16 daftar inklusi, masing-masing dari satu anggota komite, dan apakah ia harus memasukkan semua transaksi dari daftar-daftar ini?
 
@@ -123,7 +123,7 @@ Dan kemudian beberapa detail teknis lainnya: ada beberapa ketidakcocokan dengan 
 
 **Pooja Ranjan:** Pertanyaan selanjutnya di obrolan adalah dari Justin. Justin, apakah Anda ingin membacakan pertanyaan Anda untuk para tamu?
 
-#### Transaksi mempool privat dalam daftar inklusi (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Transaksi mempool privat dalam daftar inklusi (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Saya sudah mengajukan begitu banyak pertanyaan. Saya ingin bertanya apa yang mencegah dimasukkannya transaksi dari mempool privat ke dalam daftar inklusi, dan saya rasa itu sudah dijawab dengan cukup jelas. Sepertinya itu sama sekali tidak masalah, mengingat pembangun pada dasarnya akan mengurutkannya sesuai keinginan mereka, dan transaksi Anda menjadi publik saat masuk ke IL (daftar inklusi) juga. Jadi saya rasa itu masuk akal. Terima kasih.
 
@@ -133,7 +133,7 @@ Jadi, entah Anda memiliki transaksi publik, dan Anda mungkin hanya mengirimkanny
 
 **Pooja Ranjan:** Terima kasih telah berbagi. Saya melihat pertanyaan berikutnya adalah dari Ladislaus.
 
-#### FOCIL dan penskalaan (21:41) {#focil-and-scaling-2141}
+### FOCIL dan penskalaan (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Hai teman-teman. Ini merujuk pada poin yang Anda kemukakan terkait FOCIL dan penskalaan. Saya telah melihat beberapa diskusi akhir-akhir ini, seperti yang kita semua lihat, tentang penskalaan Ethereum, dan seperti yang Anda sebutkan dengan tepat, ada hambatan dari beberapa pembangun di luar sana. Secara pribadi, saya suka menganggap FOCIL sebagai pemberdayaan kembali pembangunan lokal, dan saya melihatnya sebagai suatu keharusan untuk diabadikan dalam protokol sebelum kita meningkatkan persyaratan bandwidth, atau persyaratan node secara umum. Mungkin Anda bisa menguraikan bagaimana pendapat Anda tentang hal ini, dan juga potensi cara lain untuk melakukan penskalaan, mungkin tanpa FOCIL, seperti yang Anda sebutkan.
 
@@ -151,7 +151,7 @@ Jadi kita benar-benar ingin mempertahankan staker rumahan dan pembangun blok lok
 
 **Pooja Ranjan:** Terima kasih banyak. Saya rasa pertanyaan selanjutnya adalah dari Luis.
 
-#### Kriteria untuk memilih transaksi (26:46) {#criteria-for-selecting-transactions-2646}
+### Kriteria untuk memilih transaksi (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Saya bergabung beberapa menit setelah dimulai, tetapi bagi saya ini terlihat seperti mendesentralisasi pemilihan transaksi di jaringan secara keseluruhan. Menurut saya itu sangat bagus; ini melawan MEV dan penyensoran. Dan saya sangat menyukai bagian di mana pemberi atestasi melakukan pekerjaan ini, karena di masa depan mereka akan memiliki persyaratan perangkat keras yang lebih rendah daripada pembangun, terlebih lagi dengan ketiadaan state dan klien tanpa state. Karena Anda akan dapat menjalankan ini dengan perangkat keras yang sangat rendah, ini membuat segalanya menjadi sangat terdesentralisasi. Saya rasa tantangan utamanya di sini adalah menentukan kriteria untuk pemilihan transaksi dari daftar inklusi ini, apakah Anda menggunakan biaya prioritas atau jumlah blob; ada begitu banyak variabel. Apakah Anda telah menetapkan serangkaian kriteria yang ingin Anda terapkan?
 
@@ -165,7 +165,7 @@ Kemudian, untuk aturan inklusi, itu adalah pertanyaan yang sangat bagus. Kami cu
 
 **Luis Pinto:** Oke, terima kasih.
 
-#### Kompatibilitas dengan EIP-7702, ePBS, dan PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### Kompatibilitas dengan EIP-7702, ePBS, dan PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Terima kasih banyak. Sejauh yang saya pahami, proposal ini sudah diusulkan untuk peningkatan setelah Pectra, yaitu Fusaka. Dan mengingat Fusaka mungkin atau mungkin tidak menyertakan beberapa EIP lain yang sedang dalam proses, saya ingin tahu bagaimana status kompatibilitas FOCIL terhadap proposal seperti 7702, yang ditujukan untuk abstraksi akun, ePBS, dan PeerDAS.
 
@@ -175,7 +175,7 @@ Kami sangat yakin, karena kami juga telah berbicara dengan tim abstraksi akun, d
 
 **Pooja Ranjan:** Senang mendengarnya. Saya perhatikan Jihoon juga membagikan HackMD, yang akan kami tambahkan ke sumber daya, bagi orang-orang yang ingin mempelajari lebih lanjut tentang kompatibilitas dengan ePBS secara khusus. Dan ya, saya ingat dari percakapan terakhir dengan Mike, saya rasa proposal tersebut tidak disertakan karena inkompatibilitas abstraksi akun. Jadi, senang mengetahui bahwa hal ini sudah ditangani.
 
-#### FOCIL dan MEV multi-slot (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL dan MEV multi-slot (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** Saya sedang membaca dokumen dan detail yang ditambahkan ke situs web FOCIL, meetfocil.eth.limo, dan mempelajari tentang istilah yang disebut MEV multi-slot. Julian juga menyebutkan bahwa MEV-Boost pada umumnya menguntungkan, terlepas dari keinginan dan upaya yang dilakukan oleh para pengembang untuk menjaganya tetap setara. Saya ingin tahu bagaimana FOCIL akan mencegah hal ini.
 
@@ -191,7 +191,7 @@ Jadi FOCIL memecahkan bagian dari MEV multi-slot di mana transaksi tidak mengala
 
 **Pooja Ranjan:** Baiklah, terima kasih banyak telah membagikan hal tersebut. Saya mengerti ada banyak penelitian yang sedang berlangsung untuk mengatasi masalah MEV, jadi senang mengetahui bahwa setidaknya pada prinsipnya ini akan lebih membantu daripada skenario saat ini.
 
-#### Kompromi dan tantangan (36:44) {#trade-offs-and-challenges-3644}
+### Kompromi dan tantangan (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Saya punya satu pertanyaan terkait dengan apa yang disebutkan Thomas sebelumnya tentang ekivokasi IL. Saya perhatikan bahwa di bagian pertimbangan keamanan dari proposal, ada lumayan banyak poin yang disebutkan, seperti kelangsungan konsensus, ekivokasi IL, dan konstruksi muatan. Apa yang Anda anggap sebagai kompromi terbesar, atau sesuatu yang mungkin memerlukan lebih banyak penelitian dan dapat mencegah proposal ini masuk ke peningkatan berikutnya apa adanya?
 
@@ -203,7 +203,7 @@ Saya mungkin bias, tetapi saya tidak melihat kompromi yang besar. Saya pikir ini
 
 **Pooja Ranjan:** Senang mengetahuinya. Di sebagian besar proposal, kami menemukan bahwa bagian pertimbangan keamanan tidak memiliki informasi sama sekali atau hanya memiliki sedikit informasi, jadi senang mengetahui bahwa penelitian telah dilakukan pada bagian tersebut dan kami menyadari kemungkinan pertimbangan keamanan. Senang mengetahui bahwa ini bukan penghalang atau potensi tantangan untuk implementasi dan adopsi di masa depan.
 
-#### Mekanisme biaya transaksi untuk daftar inklusi (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Mekanisme biaya transaksi untuk daftar inklusi (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Saya punya pertanyaan tentang beberapa pertanyaan terbuka yang saya temukan di situs web itu sendiri, mengenai mekanisme biaya transaksi. Saya ingin tahu apakah ada pembaruan, atau apakah Anda ingin berbagi lebih banyak tentang cara terbaik untuk membebankan biaya dan mendistribusikan biaya ini untuk inklusi dalam daftar inklusi.
 
@@ -219,7 +219,7 @@ Terkait poin Luis sebelumnya, pemberian insentif sangat berkaitan dengan bagaima
 
 **Pooja Ranjan:** Oh, itu menarik. Jadi kita harus menantikan beberapa proposal tambahan di masa mendatang untuk meningkatkan fitur FOCIL saat ini.
 
-#### Ukuran daftar inklusi (44:16) {#inclusion-list-size-4416}
+### Ukuran daftar inklusi (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Saya punya pertanyaan lain. Saya tidak yakin apakah ini harus menjadi bagian dari proposal saat ini, tetapi saya penasaran untuk mengetahui apakah ada pembaruan tentang ukuran IL. Daftar inklusi kemungkinan besar harus dibatasi ukurannya untuk mencegah penggunaan bandwidth yang berlebihan. Apakah kita memiliki penelitian atau pembaruan lebih lanjut tentang bagaimana ukuran optimal dari daftar inklusi dapat ditentukan?
 
@@ -229,7 +229,7 @@ Saya tidak tahu apakah ada terlalu banyak penelitian yang harus dilakukan mengen
 
 Untuk ke depannya, Anda bisa meningkatkan ukuran IL, tetapi Anda juga bisa mempertimbangkan untuk menambah jumlah anggota komite IL. Hal itu memungkinkan Anda untuk memiliki lebih banyak peluang mendapatkan satu anggota komite IL yang jujur jika sebagian besar jaringan memutuskan untuk mulai melakukan penyensoran. Jadi itu juga sesuatu yang bisa kita lakukan. Untuk saat ini, sepertinya 16 sudah sangat baik dan cukup, tetapi Anda pasti bisa mengutak-atik parameter ini di masa depan jika penyensoran menjadi sangat gila, atau jika kita perlu mengambil lebih banyak tindakan.
 
-#### Metrik untuk melacak adopsi (46:39) {#metrics-to-track-adoption-4639}
+### Metrik untuk melacak adopsi (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Sekadar tindak lanjut di sini: apakah Anda memiliki metrik yang dapat kita lacak untuk memahami adopsi atau keberhasilan proposal ini?
 
@@ -241,7 +241,7 @@ Saya pikir ini adalah poin yang sangat penting sehingga penting untuk segera men
 
 **Pooja Ranjan:** Sangat menarik. Jadi mungkin ini adalah sesuatu bagi para peneliti: semacam daftar keinginan untuk peningkatan, bahwa dasbor dan pelacak metrik harus dibagikan oleh pengembang untuk sebuah proposal setiap kali proposal tersebut disertakan dalam peningkatan jaringan.
 
-#### Status implementasi klien (49:11) {#client-implementation-status-4911}
+### Status implementasi klien (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Seperti yang disebutkan Julian, proposal ini mungkin perlu diimplementasikan sesegera mungkin. Saya penasaran ingin memahami sejauh mana progres kita pada implementasi klien, karena saya ingat pada panggilan testnet terakhir Paritosh menyebutkan penambahan beberapa dukungan dengan devnet. Jadi, sudah sejauh mana kita dalam hal itu?
 
@@ -253,7 +253,7 @@ Secara keseluruhan, kita mendapatkan semakin banyak devnet yang siap dan aktif, 
 
 **Pooja Ranjan:** Terima kasih telah membagikan hal itu. Saya menantikan untuk mengikuti pembaruan pada devnet tersebut. Saya tidak yakin akan ada berapa banyak iterasi dari devnet ini, tetapi saya sangat antusias melihat perkembangannya. Saya melihat Justin memiliki pertanyaan di sini. Justin, silakan.
 
-#### FOCIL di Fusaka atau Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL di Fusaka atau Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Oke, bersiaplah untuk yang satu ini. Anda menyampaikan poin yang sangat bagus bahwa waktu terbaik untuk mengatasi penyensoran adalah sebelum penyensoran itu terjadi, bukan? Jadi: FOCIL di Fusaka, atau bisakah menunggu hingga Glamsterdam? Dan mana yang harus saya dukung sebagai pengembang?
 
@@ -265,7 +265,7 @@ Hal lain yang ingin saya sebutkan, karena saya pikir ini penting: jika kita berg
 
 **Pooja Ranjan:** Terkadang menyedihkan melihat ketika proposal tidak terpilih untuk peningkatan berikutnya atau yang terdekat, tetapi hanya ada sejumlah proposal yang dapat disertakan dalam satu peningkatan. Saya sangat menghargai semua kerja keras yang dilakukan di balik pengajuan proposal, kesiapan proposal, serta pengujian yang menyertainya. Jadi, terima kasih banyak atas semua pekerjaan yang Anda lakukan untuk ekosistem Ethereum.
 
-#### Tanya jawab cepat (55:18) {#rapid-fire-5518}
+### Tanya jawab cepat (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Sebelum kita akhiri, kita ada sesi tanya jawab cepat. Satu-satunya syarat adalah jawabannya harus satu kata atau satu kalimat, dan kita akan mencoba menggunakan pengatur waktu, mungkin masing-masing 30 detik. Jika Anda siap, mari kita mulai dengan Julian. Apa masalah tersulit dalam penelitian rantai blok saat ini?
 
@@ -317,7 +317,7 @@ Hal lain yang ingin saya sebutkan, karena saya pikir ini penting: jika kita berg
 
 **Pooja Ranjan:** Sangat baik, terima kasih banyak, Thomas. Terima kasih telah menjawab semua pertanyaan ini. Saat kita mengakhiri, saya ingin memberikan kesempatan ini kepada Anda: jika Anda memiliki pesan untuk komunitas tentang proposal ini, atau untuk komunitas Ethereum pada umumnya.
 
-#### Pesan untuk komunitas (58:08) {#messages-to-the-community-5808}
+### Pesan untuk komunitas (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Sebenarnya, itu hal yang sangat penting, karena kami selalu melakukan diskusi aktif, dan semuanya bersifat publik di Discord. Ada dorongan pada awalnya untuk membuat semuanya menjadi publik, dan orang-orang benar-benar melakukannya, jadi saya sangat senang. Anda dapat mengikuti diskusi dan perkembangannya di Discord publik Eth R&D, pada saluran inclusion-list. Pada dasarnya di situlah semuanya terjadi saat ini. Kemudian Anda dapat menghubungi kami di Twitter, Telegram, di mana saja. Jangan ragu.
 
@@ -325,6 +325,6 @@ Semakin banyak orang yang kami ajak bicara dan terlibat, akan semakin baik desai
 
 **Julian Ma:** Hanya untuk menambahkan, saya harap kami membuat beberapa orang antusias dengan FOCIL. Jika Anda antusias, beri tahu kami. Dan jika masih ada beberapa pertanyaan yang Anda miliki, kami akan dengan senang hati menjawabnya, dan semoga kami dapat meyakinkan Anda bahwa FOCIL memang jalan yang harus ditempuh. Terima kasih banyak. Sungguh menyenangkan bisa berada di sini, dan terima kasih telah menyelenggarakan sesi ini. Dan tentu saja, terima kasih juga kepada semua orang yang telah hadir.
 
-#### Kata penutup (59:52) {#closing-words-5952}
+### Kata penutup (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Terima kasih. Selesai sudah acara kita. Terima kasih yang sebesar-besarnya kepada Thomas dan Julian karena telah bergabung dengan kami hari ini dan membagikan wawasan mereka tentang EIP-7805. Terima kasih kepada seluruh peserta; pertanyaan-pertanyaan Anda sangat memotivasi dan informatif. Terima kasih telah menyaksikan. Jika Anda menikmati percakapan ini, pastikan untuk menyukai, berlangganan, dan membagikan episode ini kepada sesama penggemar Ethereum. Kami akan menghadirkan lebih banyak EIP dan perkembangan riset di PEEPanEIP. Sampai jumpa di lain waktu, teruslah mendengkur dengan pengetahuan dan menjelajahi Ethereum bersama Ethereum Cat Herders. Semoga sisa hari Anda menyenangkan.

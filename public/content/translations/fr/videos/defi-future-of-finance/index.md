@@ -18,7 +18,7 @@ Une explication par **Finematics** couvrant l'avenir de la finance décentralis�
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=H-O3r2YMWJ4) publiée par Finematics. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Un siècle d'innovation financière (0:00) {#a-century-of-financial-innovation-000}
+### Un siècle d'innovation financière (0:00) {#a-century-of-financial-innovation-000}
 
 Le système financier que nous connaissons aujourd'hui a traversé des décennies d'avancées technologiques. Les premières tentatives pour rendre la finance plus efficace ont commencé dès les années 1920 avec l'introduction des machines comptables et des cartes perforées. Cela a été suivi par l'essor des ordinateurs centraux qui ont considérablement accéléré le système bancaire dans les années 1950 et au-delà.
 
@@ -28,7 +28,7 @@ La révolution suivante a été l'invention des distributeurs automatiques de bi
 
 Vient ensuite la révolution de la fintech. PayPal, Robinhood, TransferWise, Revolut et d'autres startups de la fintech ont compris l'approche axée sur la technologie connue d'autres entreprises technologiques non financières et ont offert à leurs utilisateurs un accès fluide aux services financiers — une expérience complètement différente par rapport aux interfaces utilisateur bancaires maladroites.
 
-#### Les problèmes de la finance traditionnelle (2:09) {#problems-in-traditional-finance-209}
+### Les problèmes de la finance traditionnelle (2:09) {#problems-in-traditional-finance-209}
 
 Malgré un siècle d'innovations, le système financier est loin d'être parfait :
 
@@ -44,7 +44,7 @@ L'ensemble de l'infrastructure financière se compose de systèmes en silo const
 
 C'est exactement pourquoi nous avons besoin de quelque chose de nouveau — quelque chose de meilleur qui puisse résoudre certains de ces problèmes.
 
-#### Qu'est-ce que la DeFi ? (3:58) {#what-is-defi-358}
+### Qu'est-ce que la DeFi ? (3:58) {#what-is-defi-358}
 
 C'est là que la finance décentralisée (DeFi) entre en jeu. Au lieu de s'appuyer sur une infrastructure ancienne et inefficace, la DeFi tire parti de la puissance de la cryptographie, de la décentralisation et de la chaîne de blocs pour construire un nouveau système financier. Un système qui peut fournir un accès à des services financiers bien connus tels que les paiements, le prêt, l'emprunt et le trading de manière plus efficace, équitable et ouverte.
 
@@ -54,7 +54,7 @@ C'est là que la finance décentralisée (DeFi) entre en jeu. Au lieu de s'appuy
 
 Tout cela est possible grâce à l'invention de Bitcoin et d'Ethereum et de leurs technologies sous-jacentes. En particulier, Ethereum, en tant que plateforme de contrats intelligents, permet de créer n'importe quelle application financière arbitraire. En raison de ces caractéristiques, Ethereum est devenu la chaîne de blocs de référence pour la grande majorité des activités DeFi.
 
-#### Indicateurs de croissance de la DeFi (6:18) {#defi-growth-metrics-618}
+### Indicateurs de croissance de la DeFi (6:18) {#defi-growth-metrics-618}
 
 La finance décentralisée (DeFi) a récemment connu une croissance fulgurante. Voici quelques-uns des indicateurs clés :
 
@@ -66,7 +66,7 @@ La finance décentralisée (DeFi) a récemment connu une croissance fulgurante. 
 
 Cela ne se limite pas seulement aux cryptomonnaies, qui peuvent être assez volatiles. Les stablecoins qui suivent la valeur des monnaies fiduciaires telles que le dollar américain ont également connu une croissance fulgurante dans l'écosystème DeFi. La capitalisation boursière de l'USDC, un stablecoin populaire dans la DeFi, est passée de moins d'un milliard de dollars en avril 2020 à plus de six milliards de dollars en 2021. Le DAI est passé de moins de 100 millions de dollars en avril 2020 à près de deux milliards de dollars en 2021.
 
-#### Les problèmes du monde réel que la DeFi résout (8:00) {#real-world-problems-defi-solves-800}
+### Les problèmes du monde réel que la DeFi résout (8:00) {#real-world-problems-defi-solves-800}
 
 Pour comprendre encore mieux la proposition de valeur de la finance décentralisée (DeFi), passons en revue quelques problèmes courants de la finance traditionnelle et voyons comment ils peuvent être résolus dans la DeFi.
 
@@ -80,7 +80,7 @@ Comptabilité — chaque enregistrement est publiquement disponible sur la chaî
 
 Accès égal aux services financiers — un protocole DeFi ne se soucie pas de qui vous êtes. Il suit simplement des règles prédéfinies qui sont exactement les mêmes pour tout le monde.
 
-#### Les défis de la DeFi (10:48) {#challenges-of-defi-1048}
+### Les défis de la DeFi (10:48) {#challenges-of-defi-1048}
 
 Bien que la DeFi nous présente une proposition de valeur unique, elle s'accompagne de ses propres défis. Elle apporte plus de responsabilités aux utilisateurs, qui possèdent désormais véritablement leurs actifs et doivent s'assurer de les stocker de manière sécurisée. Il n'y a pas beaucoup d'accompagnement ici, surtout lors de l'interaction avec de nouveaux protocoles DeFi.
 
@@ -92,7 +92,7 @@ Les piratages sont un autre défi de l'espace DeFi, rendant certains protocoles 
 
 Les prêts non garantis et les prêts hypothécaires sont de grands domaines de la finance traditionnelle qui sont légèrement plus difficiles à mettre en œuvre dans la DeFi. Heureusement, il existe déjà des protocoles comme Aave qui explorent différentes possibilités, telles que la délégation de crédit et les prêts hypothécaires tokenisés.
 
-#### L'avenir de la finance (12:38) {#the-future-of-finance-1238}
+### L'avenir de la finance (12:38) {#the-future-of-finance-1238}
 
 Malgré les défis, la DeFi est une innovation unique de zéro à un, et résoudre certains de ces défis n'est qu'une question de temps. Alors, qu'arrivera-t-il à la finance traditionnelle si la DeFi continue d'innover et de croître à ce rythme effréné ?
 

@@ -19,7 +19,7 @@ Une vidéo explicative de **Junion** racontant l'histoire du piratage de la DAO 
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=rNeLuBOVe8A) publiée par Junion. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### La découverte (0:00) {#the-discovery-000}
+### La découverte (0:00) {#the-discovery-000}
 
 Nous sommes le lundi 13 juin 2016. Un professeur d'informatique de Cornell examine le code de la DAO, l'un des projets les plus ambitieux de l'espace crypto. Depuis des mois, il plaidait pour que le projet soit suspendu, car il pensait qu'il y avait certaines failles qui pourraient mettre l'ensemble en péril. Mais aujourd'hui, il découvre une grave vulnérabilité : un bug à la ligne 666.
 
@@ -33,7 +33,7 @@ Tout comme le piratage de SWIFT de 81 millions de dollars a rendu publiques les 
 
 C'est l'histoire de l'un des plus grands braquages numériques de tous les temps et de la tentative audacieuse de réécrire l'histoire pour qu'il n'ait jamais eu lieu.
 
-#### Qu'était la DAO ? (2:00) {#what-was-the-dao-200}
+### Qu'était la DAO ? (2:00) {#what-was-the-dao-200}
 
 Voici la DAO — l'abréviation d'organisation autonome décentralisée (decentralized autonomous organization). L'idée a été inspirée par le financement participatif. Au lieu de multiples fonds pour différents projets, il y aurait un seul fonds pour les gouverner tous, et il n'y avait pas de meilleure façon de le faire qu'avec une DAO.
 
@@ -45,7 +45,7 @@ Lorsque la période de vote était terminée et qu'un quorum de 20 % de tous les
 
 Cependant, il fallait tout de même un moyen de protéger la minorité contre l'oppression de la majorité. Si un groupe minoritaire était fortement en désaccord avec une proposition qu'il ne pouvait pas rejeter par le vote, au lieu de voter non, il pouvait appeler une fonction de séparation (split) et déplacer son ether de la DAO principale vers une DAO enfant, divisant essentiellement la DAO en deux. Cette fonction de séparation sera très importante par la suite.
 
-#### Le financement participatif (4:01) {#the-crowdfund-401}
+### Le financement participatif (4:01) {#the-crowdfund-401}
 
 La DAO a été le plus grand projet de financement participatif de tous les temps, récoltant 12,7 millions d'ether — d'une valeur de 150 millions de dollars à l'époque. Cela s'est déroulé au début de l'ère d'Ethereum, où le projet faisait l'objet d'un énorme engouement et du FOMO des investisseurs.
 
@@ -53,7 +53,7 @@ Avant cela, les projets Ethereum étaient principalement des preuves de concept 
 
 Il s'agissait d'un code immuable hébergé sur l'ordinateur le plus sécurisé au monde, ce qui garantissait les propriétés clés d'une DAO : une organisation totalement décentralisée et autonome. Une fois les contrats déployés le 30 avril, aucune entité unique — pas même Slock.it — ne pouvait apporter de modifications au protocole ou mettre fin à son existence. Son code avait été audité d'innombrables fois par divers développeurs Ethereum et était consultable par tous pour examen.
 
-#### Le piratage (5:02) {#the-hack-502}
+### Le piratage (5:02) {#the-hack-502}
 
 « Lonely, so lonely » — le nom de la proposition DAO n° 59. Il s'agit juste d'une proposition de séparation normale, mais c'est en fait là que le piratage commence. Après que le pirate a soumis la proposition, il y a une période de débat standard de sept jours où n'importe qui est libre de se joindre. Cependant, personne ne rejoint cette séparation.
 
@@ -65,7 +65,7 @@ Vous vous souvenez de ce correctif de bug qui a eu lieu il y a quatre jours ? Il
 
 Mais sans ce correctif, n'importe qui pouvait appeler la fonction à plusieurs reprises pour retirer de l'ether avant que le contrat ne mette à jour son solde. C'est comme un distributeur automatique qui ne modifie pas votre solde tant qu'il ne vous a pas donné l'argent. « Puis-je retirer dix dollars ? Attendez, avant ça, puis-je retirer dix dollars ? Attendez, avant ça… »
 
-#### Le groupe Robin des Bois (6:55) {#the-robin-hood-group-655}
+### Le groupe Robin des Bois (6:55) {#the-robin-hood-group-655}
 
 Les détenteurs de jetons DAO ont regardé leurs investissements être lentement siphonnés de la DAO principale vers la DAO enfant, également connue sous le nom de dark DAO. De plus, le prix d'Ethereum a subi un krach éclair, passant de 20 $ à 15 $ suite à la nouvelle. Il fallait faire quelque chose, et le seul moyen était de vider le reste avant que le pirate ne le fasse. Et c'est ainsi qu'a commencé la course pour vider les fonds.
 
@@ -79,13 +79,13 @@ Pendant ce temps, Alex se préparait tout juste à lancer l'attaque éthique pou
 
 Le lendemain matin, Alex a essayé de réunir à nouveau le groupe pour infiltrer une autre proposition de séparation, mais les autres étaient occupés. « Nous nous sentions comme les pires pirates de l'histoire. Nous avons été déjoués par une mauvaise connexion Internet et des obligations familiales. »
 
-#### La course pour vider les fonds (9:10) {#the-race-to-empty-910}
+### La course pour vider les fonds (9:10) {#the-race-to-empty-910}
 
 Quatre jours après l'attaque initiale, la DAO était à nouveau attaquée. Elle se vidait lentement — quelques ethers par tour — mais elle avait déjà amassé quelques milliers de dollars. Il semblait s'agir d'un attaquant tâtant le terrain. À ce stade, Robin des Bois devait faire quelque chose.
 
 Ils ont choisi d'infiltrer la séparation n° 78 car ils avaient identifié le curateur de la proposition et elle se terminait bientôt. Ils ont contacté quelques baleines (whales) qui étaient heureuses de faire don de leurs jetons DAO, permettant à l'équipe de sécuriser six millions de jetons. Plus le contrat Robin avait de jetons, plus il pouvait siphonner d'ether rapidement. L'attaquant a accéléré le rythme et d'autres attaquants se sont joints à lui. Mais grâce aux dons, Robin des Bois a pu les devancer. Cela leur a permis de sécuriser 7,2 millions d'ether — 55 % de la DAO.
 
-#### Le fork (10:08) {#the-fork-1008}
+### Le fork (10:08) {#the-fork-1008}
 
 La DAO principale avait maintenant été vidée et tous les fonds étaient répartis entre plusieurs DAO enfants — les deux principales étant la DAO éthique (white-hat) et la dark DAO. Mais tout l'argent était verrouillé dans le temps. Aucune proposition ne pouvait être présentée dans le cadre d'une DAO enfant avant la fin d'une période d'attente de 27 jours. Et même après cela, l'envoi de fonds à une adresse externe nécessitait de soumettre une proposition et d'attendre deux semaines. Essentiellement, il restait encore 41 jours avant que le pirate ne puisse encaisser ce qui équivalait à 5 % de l'offre totale d'Ethereum.
 
@@ -93,7 +93,7 @@ Mais le pirate ne pourrait jamais toucher à son Ethereum. Ce qui s'est passé e
 
 Une chaîne de blocs est comme une liste de transactions qui ne cesse de s'allonger avec chaque bloc miné. Chaque transaction est enracinée dans la chaîne de blocs pour toujours. Mais si plus de 50 % des mineurs s'entendent, ils peuvent faussement altérer la chaîne de blocs, réécrivant l'histoire comme ils le souhaitent. Habituellement, cela s'appelle une attaque des 51 %. Mais il n'y avait rien de malveillant dans ce fork — la communauté ne faisait que récupérer l'argent qui lui avait été volé.
 
-#### Le code fait loi (11:48) {#code-is-law-1148}
+### Le code fait loi (11:48) {#code-is-law-1148}
 
 Pourtant, tout le monde n'était pas d'accord avec le fork proposé. Ils soutenaient que le code fait loi (code is law). Dans cette optique, l'attaquant était moins un pirate qu'un avocat intelligent qui a lu attentivement les termes d'un contrat. Par conséquent, aucun fonds n'a été réellement volé et il devrait avoir légitimement droit à l'ether de la dark DAO.
 
@@ -107,7 +107,7 @@ Après une inspection plus approfondie, les gens se sont rendu compte que la sig
 
 D'un autre côté, les partisans ont fait valoir que « le code fait loi » est une déclaration trop radicale et que les humains devraient avoir le dernier mot par le biais d'un consensus social. Le pirate ne devrait pas être autorisé à profiter de l'exploit car c'est éthiquement répréhensible et très probablement illégal. Mais plus important encore, la DAO était tout simplement trop grosse pour faire faillite (too big to fail). Elle détenait environ 15 % de l'offre totale d'ether.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 Dans un événement qui a fait écho à la crise financière de 2008, les développeurs d'Ethereum ont renfloué la DAO. Vitalik Buterin, le créateur et développeur principal d'Ethereum, n'a pas hésité à faire pression pour un fork. Dans une interview, il a déclaré plus tard : « Certains utilisateurs de Bitcoin considèrent que le hard fork viole d'une certaine manière leurs valeurs les plus fondamentales. Je pense personnellement que ces valeurs fondamentales, poussées à de tels extrêmes, sont stupides. »
 
@@ -117,7 +117,7 @@ Mais cela ne s'arrête pas là. La chaîne de blocs Ethereum d'origine — celle
 
 Si vous déteniez de l'ether avant le fork, vous auriez maintenant un Ethereum et un Ethereum Classic. Si vous déteniez un ether dans la DAO, vous pourriez retirer un Ethereum du contrat de remboursement. Et si vous veniez de pirater la DAO, vous auriez fait une belle fortune en Ethereum Classic — environ sept millions de dollars.
 
-#### L'héritage de la DAO (16:14) {#legacy-of-the-dao-1614}
+### L'héritage de la DAO (16:14) {#legacy-of-the-dao-1614}
 
 Initialement, Ethereum Classic a pris de l'ampleur en tant qu'alternative, avec une forte communauté de fondamentalistes de la chaîne de blocs qui n'étaient pas d'accord avec le renflouement. Mais depuis lors, Ethereum Classic n'a pas réussi à s'imposer et n'existe vraiment qu'en tant qu'idée avec peu d'utilité. Alors qu'Ethereum abrite des milliers de protocoles, Ethereum Classic n'en compte que quelques-uns de base. Il est clair que le fork a gagné.
 
@@ -125,7 +125,7 @@ Deux mois plus tard, Robin des Bois a transféré 2,9 millions de ses Ethereum C
 
 Quant au pirate, il est reparti avec 3,6 millions d'Ethereum Classic — d'une valeur de 150 millions de dollars aujourd'hui. Mais s'il n'y avait pas eu de fork, ces 3,6 millions d'Ethereum vaudraient plus de sept milliards de dollars aujourd'hui.
 
-#### L'impact durable de la DAO (17:26) {#the-daos-lasting-impact-1726}
+### L'impact durable de la DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Il est important de noter que la DAO est maintenant communément appelée la Genesis DAO pour éviter toute confusion, car c'était la première DAO mais certainement pas la dernière. Malgré les revers initiaux, les DAO n'ont fait que gagner en popularité. MakerDAO gouverne le stablecoin DAI, et les protocoles de finance décentralisée (DeFi) tels qu'Uniswap avec son jeton UNI ont généralement une DAO de gouvernance. Ces DAO se sont toutes construites à partir des expériences de projets antérieurs pour créer des organisations encore plus polyvalentes et performantes.
 

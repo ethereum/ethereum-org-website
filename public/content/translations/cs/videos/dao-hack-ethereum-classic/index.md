@@ -19,7 +19,7 @@ Vysvětlující video od **Junion**, které vypráví příběh hacknutí DAO v 
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=rNeLuBOVe8A), které zveřejnil Junion. Byl lehce upraven pro lepší čitelnost.*
 
-#### Objevování (0:00) {#the-discovery-000}
+### Objevování (0:00) {#the-discovery-000}
 
 Je pondělí 13. června 2016. Profesor informatiky na Cornellově univerzitě zkoumá kód DAO, jednoho z nejambicióznějších projektů v krypto prostoru. Celé měsíce prosazoval, aby byl projekt pozastaven, protože věřil, že obsahuje určité nedostatky, které by mohly ohrozit celou věc. Dnes ale nachází vážnou zranitelnost: chybu na řádku 666.
 
@@ -33,7 +33,7 @@ Stejně jako hacknutí sítě SWIFT o 81 milionů dolarů zveřejnilo díry v ce
 
 Toto je příběh jedné z největších digitálních loupeží vůbec a odvážného pokusu přepsat historii tak, aby se to nikdy nestalo.
 
-#### Co bylo DAO? (2:00) {#what-was-the-dao-200}
+### Co bylo DAO? (2:00) {#what-was-the-dao-200}
 
 Přichází DAO – zkratka pro decentralizovanou autonomní organizaci. Myšlenka byla inspirována crowdfundingem. Místo mnoha fondů pro různé projekty by existoval jeden fond, který by vládl všem, a neexistoval lepší způsob, jak toho dosáhnout, než pomocí DAO.
 
@@ -45,7 +45,7 @@ Když období hlasování skončilo a bylo dosaženo kvóra 20 % všech tokenů,
 
 Stále však musel existovat způsob, jak ochránit menšinu před útlakem ze strany většiny. Pokud menšinová skupina silně nesouhlasila s návrhem, který nemohla přehlasovat, místo hlasování proti mohla zavolat funkci rozdělení (split) a přesunout svůj ether z hlavního DAO do dceřiného DAO, čímž by se DAO v podstatě rozdělilo na dvě části. Tato funkce rozdělení bude později velmi důležitá.
 
-#### Crowdfunding (4:01) {#the-crowdfund-401}
+### Crowdfunding (4:01) {#the-crowdfund-401}
 
 DAO bylo největším crowdfundingovým projektem vůbec, vybralo 12,7 milionu etherů – v té době v hodnotě 150 milionů dolarů. Odehrálo se to v rané éře Etherea, kdy byl projekt vystaven obrovskému množství humbuku a investorského FOMO.
 
@@ -53,7 +53,7 @@ Předtím byly projekty na Ethereu převážně jen libovolnými proof of concep
 
 Šlo o neměnný kód hostovaný na nejbezpečnějším počítači na světě, což zajišťovalo klíčové vlastnosti DAO: organizace, která je zcela decentralizovaná a autonomní. Jakmile byly kontrakty 30. dubna nasazeny, žádná jediná entita – dokonce ani Slock.it – nemohla provádět změny v protokolu nebo zastavit jeho existenci. Jeho kód byl nesčetněkrát auditován různými vývojáři Etherea a byl všem přístupný k přezkoumání.
 
-#### Hacknutí (5:02) {#the-hack-502}
+### Hacknutí (5:02) {#the-hack-502}
 
 „Lonely, so lonely“ – název návrhu DAO č. 59. Je to jen normální návrh na rozdělení, ale ve skutečnosti právě zde začíná hacknutí. Poté, co hacker předložil návrh, následuje standardní sedmidenní období pro debatu, do kterého se může kdokoli svobodně zapojit. K tomuto rozdělení se však nikdo nepřipojí.
 
@@ -65,7 +65,7 @@ Pamatujete si na tu opravu chyby, která proběhla před čtyřmi dny? Je škoda
 
 Ale bez této opravy mohl kdokoli opakovaně volat funkci pro výběr etheru, než kontrakt aktualizoval jeho zůstatek. Je to jako bankomat, který nezmění váš zůstatek, dokud vám nevydá peníze. „Můžu si vybrat deset dolarů? Počkat, předtím, můžu si vybrat deset dolarů? Počkat, předtím…“
 
-#### Skupina Robin Hood (6:55) {#the-robin-hood-group-655}
+### Skupina Robin Hood (6:55) {#the-robin-hood-group-655}
 
 Držitelé DAO tokenů sledovali, jak jsou jejich investice pomalu odčerpávány z hlavního DAO do dceřiného DAO, známého také jako temné DAO (dark DAO). Navíc cena Etherea po těchto zprávách bleskově spadla z 20 na 15 dolarů. Bylo potřeba něco udělat a jediným způsobem bylo odčerpat zbytek dříve, než to udělá hacker. A tak začal závod o vyprázdnění.
 
@@ -79,13 +79,13 @@ Mezitím se Alex právě chystal spustit white-hat útok, aby zajistil zbývají
 
 Následující ráno se Alex pokusil znovu svolat skupinu, aby infiltrovali další návrh na rozdělení, ale ostatní byli zaneprázdněni. „Cítili jsme se jako nejhorší hackeři v historii. Překazil nám to špatný internet a rodinné povinnosti.“
 
-#### Závod o vyprázdnění (9:10) {#the-race-to-empty-910}
+### Závod o vyprázdnění (9:10) {#the-race-to-empty-910}
 
 Čtyři dny po počátečním útoku bylo DAO znovu pod útokem. Odčerpávalo se pomalu – několik etherů za kolo – ale už nashromáždilo několik tisíc dolarů. Zdálo se, že jde o útočníka, který testuje terén. V tuto chvíli musel Robin Hood něco udělat.
 
 Rozhodli se infiltrovat rozdělení č. 78, protože identifikovali kurátora návrhu a brzy končilo. Kontaktovali některé velryby, které rády darovaly své DAO tokeny, což týmu umožnilo zajistit šest milionů tokenů. Čím více tokenů kontrakt Robin měl, tím rychleji mohl odčerpávat ether. Útočník zrychlil tempo a přidali se další útočníci. Ale díky darům je Robin Hood dokázal předstihnout. To jim umožnilo zajistit 7,2 milionu etherů – 55 % DAO.
 
-#### Fork (10:08) {#the-fork-1008}
+### Fork (10:08) {#the-fork-1008}
 
 Hlavní DAO bylo nyní vyprázdněno a všechny prostředky byly rozděleny mezi několik dceřiných DAO – dvěma hlavními byly white-hat DAO a temné DAO. Všechny peníze však byly časově uzamčeny. Žádný návrh nemohl být v rámci dceřiného DAO předložen, dokud neuplynula 27denní čekací lhůta. A i poté vyžadovalo odeslání prostředků na externí adresu předložení návrhu a čekání dva týdny. V podstatě zbývalo ještě 41 dní, než si hacker mohl vybrat to, co se rovnalo 5 % celkové nabídky Etherea.
 
@@ -93,7 +93,7 @@ Hacker se ale ke svému Ethereu nikdy nedostal. To, co se stalo potom, je jednou
 
 Blockchain je jako seznam transakcí, který neustále roste s každým vytěženým blokem. Každá transakce je v blockchainu navždy zakořeněna. Ale pokud se více než 50 % těžařů domluví, mohou falešně pozměnit blockchain a přepsat historii, jakkoli chtějí. Obvykle se tomu říká 51% útok. Na tomto forku ale nebylo nic zlomyslného – komunita pouze získávala zpět peníze, které jí byly ukradeny.
 
-#### Kód je zákon (11:48) {#code-is-law-1148}
+### Kód je zákon (11:48) {#code-is-law-1148}
 
 Přesto ne všichni s navrhovaným forkem souhlasili. Tvrdili, že kód je zákon. Z tohoto pohledu byl útočník méně hackerem a více chytrým právníkem, který si pečlivě přečetl podmínky kontraktu. Proto nebyly ve skutečnosti ukradeny žádné prostředky a měl by mít právoplatný nárok na ether z temného DAO.
 
@@ -107,7 +107,7 @@ Při bližším zkoumání si lidé uvědomili, že podpis byl neplatný, takže
 
 Na druhou stranu zastánci tvrdili, že „kód je zákon“ je příliš drastické prohlášení a že lidé by měli mít konečné slovo prostřednictvím sociálního konsensu. Hackerovi by nemělo být dovoleno profitovat ze zneužití, protože je to eticky špatné a s největší pravděpodobností nezákonné. Ale co je nejdůležitější, DAO bylo prostě příliš velké na to, aby padlo. Drželo přibližně 15 % celkové nabídky etheru.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 V události, která připomínala finanční krizi z roku 2008, vývojáři Etherea zachránili DAO. Vitalik Buterin, tvůrce a hlavní vývojář Etherea, se neomlouval za to, že prosazoval fork. V jednom rozhovoru později řekl: „Někteří uživatelé Bitcoinu vidí hard fork jako něco, co určitým způsobem porušuje jejich nejzákladnější hodnoty. Osobně si myslím, že tyto základní hodnoty, dohnané do takových extrémů, jsou hloupé.“
 
@@ -117,7 +117,7 @@ Tím to ale nekončí. Původní blockchain Etherea – ten s hacknutím DAO –
 
 Pokud jste drželi ether před forkem, měli byste nyní jedno Ethereum a jedno Ethereum Classic. Pokud jste drželi jeden ether v DAO, mohli byste si vybrat jedno Ethereum z refundovacího kontraktu. A pokud byste právě hacknuli DAO, vydělali byste slušné jmění v Ethereu Classic – kolem sedmi milionů dolarů.
 
-#### Odkaz DAO (16:14) {#legacy-of-the-dao-1614}
+### Odkaz DAO (16:14) {#legacy-of-the-dao-1614}
 
 Zpočátku Ethereum Classic získalo na síle jako alternativa se silnou komunitou blockchainových fundamentalistů, kteří nesouhlasili se záchranou. Od té doby se však Ethereu Classic nepodařilo získat trakci a ve skutečnosti existuje pouze jako myšlenka s malým využitím. Zatímco Ethereum je domovem tisíců protokolů, Ethereum Classic má jen několik základních. Je jasné, že fork vyhrál.
 
@@ -125,7 +125,7 @@ O dva měsíce později Robin Hood převedl 2,9 milionu svého Etherea Classic n
 
 Pokud jde o hackera, odešel s 3,6 miliony Etherea Classic – dnes v hodnotě 150 milionů dolarů. Ale kdyby k žádnému forku nedošlo, těch 3,6 milionu Etherea by dnes mělo hodnotu přes sedm miliard dolarů.
 
-#### Trvalý dopad DAO (17:26) {#the-daos-lasting-impact-1726}
+### Trvalý dopad DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Je důležité poznamenat, že DAO se nyní běžně označuje jako Genesis DAO, aby se předešlo zmatkům, protože to bylo první DAO, ale rozhodně ne poslední. Navzdory počátečním nezdarům se DAO stávají stále populárnějšími. MakerDAO spravuje stablecoin DAI a protokoly decentralizovaných financí (DeFi), jako je Uniswap se svým tokenem UNI, mají obvykle DAO pro správu. Všechna tato DAO staví na zkušenostech z předchozích projektů, aby vytvořila ještě všestrannější a úspěšnější organizace.
 

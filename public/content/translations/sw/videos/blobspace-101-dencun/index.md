@@ -20,7 +20,7 @@ Mahojiano haya yanahusu rasilimali ya nafasi ya blobu ya Ethereum, iliyoletwa na
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=dFjyUY3e53Q) iliyochapishwa na Bankless. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi wa nafasi ya blobu (0:00) {#introduction-to-blob-space-000}
+### Utangulizi wa nafasi ya blobu (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Karibu Bankless, ambapo tunachunguza Eneo Jipya la pesa za mtandaoni na fedha za mtandaoni. Hivi ndivyo jinsi ya kuanza, jinsi ya kuwa bora, jinsi ya kutangulia fursa. Niko hapa na David Hoffman, na tuko hapa kukusaidia kuwa bankless zaidi. Unajua jinsi tunavyosema minyororo ya vitalu inauza vitalu? Kweli, hivi karibuni Ethereum itakuwa inauza zaidi ya vitalu tu — itakuwa inauza mablobu pia.
 
@@ -38,7 +38,7 @@ Hiyo inamaanisha nini kwa Etha? Hiyo inamaanisha nini kwa masoko yanayoibuka kar
 
 Tumlete mgeni wetu, Dom, anayejulikana pia kama Domothy. Yeye ni mtafiti katika Taasisi ya Ethereum anayefanya kazi kwenye utafiti na maendeleo ya maboresho muhimu ya Ethereum yanayokuja, ikiwa ni pamoja na EIP-4844 (mada ya leo), danksharding kamili, na uteketezaji wa MEV.
 
-#### Historia ya ramani ya njia inayozingatia rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Historia ya ramani ya njia inayozingatia rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Kwa hivyo Dom, ili kuelewa kikamilifu jinsi tulivyofika kwenye nafasi ya blobu, nadhani inafaa kurudi nyuma kukumbuka ili kuelewa ukamilifu wa ramani ya njia ya Ethereum, kwa sababu ilifikia hitimisho la kimantiki sana la mablobu na nafasi ya blobu. Unaweza kuturudisha nyuma? Kwa sababu wakati fulani, ramani ya njia ya Ethereum inayozingatia rollup haikuwepo. Tulikuwa na kitu hiki kinachoitwa shadi ya utekelezaji, ambacho hatukuwahi kukipata. Ni wapi katika historia ya ramani ya njia ya Ethereum inafaa kuelewa kikamilifu muktadha kamili wa nafasi ya blobu?
 
@@ -58,7 +58,7 @@ Sasa kile tunachofanya na ramani ya njia inayozingatia rollup ni kwamba tunateng
 
 Mwishoni mwa mwaka 2020, watu waligundua mikusanyiko ilikuwa inaanza kuwa nzuri sana na maarufu, na ilitatua suala letu la kuongeza uwezo wa utekelezaji bila hitaji la shadi ya utekelezaji. Kwa kwenda na mfumo wa ikolojia wa mikusanyiko badala ya kujaribu kuwa msimamo mkali wa tabaka la 1 (l1), mikusanyiko inaweza kufanya mabadilishano yao wenyewe, kuanzisha minyororo yao ya vitalu, na kufanya majaribio ya mambo mapya. Ethereum inashughulikia uhakiki — huo ndio msingi wa mnyororo wa vitalu ni nini.
 
-#### Nafasi ya blobu ni nini? (30:00) {#what-is-blob-space-3000}
+### Nafasi ya blobu ni nini? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Sasa tupeleke kwenye hali ya sasa, Dom. Tuna mikusanyiko mingi inayotumia nafasi ya kitalu ya tabaka la 1 (l1) la Ethereum, ikilipa ada kubwa za gesi kutuma data zao za hali ili mtu yeyote aweze kuzihakiki. Kwa hivyo, Dom, blobu ni nini?
 
@@ -72,7 +72,7 @@ Kimsingi ni kifurushi kilichofungwa. Tabaka la 1 (l1) linaichukua, linahakikisha
 
 **Domothy:** Ndiyo kabisa. Na sifa nyingine muhimu ya mablobu ni kwamba hupunguzwa kiotomatiki baada ya muda fulani — kwa sasa karibu siku 18. Sababu ya kupunguzwa ni kwamba ili kuhakikisha uhakiki bila hitaji la uaminifu, watu binafsi wanahitaji tu data hiyo ipatikane ili kuthibitisha ukamilifu na mwafaka juu ya hali ya rollup ndani ya dirisha maalum la changamoto. Huhitaji nodi elfu moja zinazoshikilia mablobu kutoka miaka miwili iliyopita ili kuhakiki muamala wako leo. Dirisha linapoisha, hutaipata kutoka kwa nodi ya Ethereum tena; unaipata kutoka kwa watoa huduma wa historia, waorodheshaji, au wachunguzi wa kitalu asili wa rollup. Uhifadhi kwenye Ethereum ni ghali sana milele. Kuondoa hitaji la uhifadhi kunaturuhusu kuongeza uwezo wa upitishaji wa blobu bila kuharibu diski kuu za waendeshaji wa nodi.
 
-#### Uchumi na danksharding kamili (55:00) {#economics-and-full-danksharding-5500}
+### Uchumi na danksharding kamili (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Tunajua kwamba 4844 ni hatua ya kwanza — kile tunachokiita Proto-Danksharding. Inaanzisha muundo wa blobu na soko la ada lililotengwa, lakini idadi halisi inayolengwa ya mablobu kwa kila kitalu inazuiwa mwanzoni ili iwe salama kabisa. Hii inaonekanaje ikiongeza uwezo kuelekea danksharding kamili?
 
@@ -86,7 +86,7 @@ Kwa soko la ada la pande mbili — kimsingi barabara tofauti iliyotengwa kwa mab
 
 **Domothy:** Ndiyo, zimetenganishwa kabisa. Na kinyume chake ni kweli. Ikiwa uwezo wa upitishaji wa tabaka la 2 (l2) unapanda sana na maelfu ya mikusanyiko inafanya kazi na kusongamana kwenye nafasi ya blobu, kupanda kwa ada ya msingi ya blobu hakutaathiri gharama ya kufanya muamala rahisi kwenye Mtandao Mkuu wa Ethereum. Ada ya msingi ya blobu inafanya kazi sawa na ada ya msingi ya EIP-1559, lakini kwa mwelekeo wake yenyewe. Na kwa swali lako la awali kuhusu uteketezaji — ndiyo, ada ya blobu inazalisha ETH iliyoteketezwa ili kulipia ujumuishaji wa data ya nafasi ya blobu, tofauti kabisa na uteketezaji wa ada ya msingi ya nafasi ya kitalu.
 
-#### Mustakabali wa uwezo wa kuongezeka kwa Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### Mustakabali wa uwezo wa kuongezeka kwa Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Nataka kufikia kile kinachotokea haswa wakati wa kutolewa kwa 4844. Mwanzoni, ni wazi kuna matarajio makubwa sana kwamba wakati uwezo wa blobu unapofunguka ghafla, hakutakuwa na mahitaji ya kutosha ya rollup katika sekunde hiyo ndogo ili kuijaza kikamilifu. Nafasi ya blobu itakuwa nafuu sana wakati wa uzinduzi. Lakini je, hakuna sheria ya mahitaji yaliyochochewa? Ikiwa una rasilimali za bei nafuu sana, programu zinazotumia rasilimali hizo zinalipuka kwa kiasi.
 

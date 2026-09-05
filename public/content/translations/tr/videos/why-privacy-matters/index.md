@@ -17,7 +17,7 @@ Edward Snowden dosyalarını gören ve hakkında yazan ilk muhabirlerden biri ol
 
 *Bu transkript, TED tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=pcSlowAhvUk) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Herkesin yaşadığı bir deneyim (0:12) {#an-experience-everyone-has-had-012}
+### Herkesin yaşadığı bir deneyim (0:12) {#an-experience-everyone-has-had-012}
 
 YouTube'da, bu odadaki herkesin yaşadığına emin olduğum bir deneyime adanmış koca bir video türü var. Bu tür, yalnız olduğunu sanarak kendini ifade eden bazı davranışlarda bulunan (çılgınca şarkı söylemek, dönerek dans etmek, hafif cinsel aktiviteler) bir bireyin, aslında yalnız olmadığını, onu izleyen ve gizlice gözetleyen birinin olduğunu keşfetmesini ve bu keşfin dehşet içinde yaptıklarını anında bırakmasına neden olmasını konu alıyor. 
 
@@ -25,7 +25,7 @@ Yüzlerindeki utanç ve aşağılanma hissi elle tutulur cinstendir. Bu, "Bunu y
 
 Son 16 aydır tek odak noktam olan çalışmanın özü budur: gizliliğin neden önemli olduğu sorusu. Bu soru, Edward Snowden'ın ifşalarıyla başlayan küresel bir tartışma bağlamında ortaya çıktı. Bu ifşalar, Amerika Birleşik Devletleri ve ortaklarının, tüm dünyanın haberi olmadan, bir zamanlar eşi benzeri görülmemiş bir özgürleşme ve demokratikleşme aracı olarak müjdelenen İnternet'i, eşi benzeri görülmemiş bir kitlesel ve ayrım gözetmeyen gözetim alanına dönüştürdüğünü ortaya koydu.
 
-#### "Saklayacak hiçbir şeyim yok" argümanı (1:29) {#the-nothing-to-hide-argument-129}
+### "Saklayacak hiçbir şeyim yok" argümanı (1:29) {#the-nothing-to-hide-argument-129}
 
 Bu tartışmada, kitlesel gözetimden rahatsız olan insanlar arasında bile ortaya çıkan çok yaygın bir düşünce var: Bu büyük çaplı ihlalin gerçek bir zararı yoktur, çünkü yalnızca kötü işlere bulaşan kişilerin saklanmak ve gizliliklerini umursamak için bir nedeni vardır.
 
@@ -37,7 +37,7 @@ Buna karşılık iyi insanlar ise işe giden, eve gelen, çocuklarını yetişti
 
 Bunu söyleyen insanlar aslında çok aşırı bir kendini küçümseme eylemi içindedirler. Gerçekte söyledikleri şudur: "Kendimi o kadar zararsız, tehdit oluşturmayan ve ilgi çekici olmayan bir insan yapmayı kabul ettim ki, hükümetin ne yaptığımı bilmesinden aslında korkmuyorum."
 
-#### Gizliliği eleştirenler bile söylediklerine inanmıyor (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Gizliliği eleştirenler bile söylediklerine inanmıyor (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Bence bu zihniyet en saf ifadesini, Google'ın uzun süredir CEO'su olan Eric Schmidt ile 2009 yılında yapılan bir röportajda buldu. Şirketinin dünya çapında yüz milyonlarca insanın gizliliğini ihlal etmesine neden olan tüm farklı yollar sorulduğunda şunları söyledi: "Eğer başka insanların bilmesini istemediğiniz bir şey yapıyorsanız, belki de en başta bunu yapmamalısınız."
 
@@ -49,7 +49,7 @@ Aynı Eric Schmidt, Google'ın CEO'su, CNET'in tamamen Google aramaları ve diğ
 
 Aynı çelişki, 2010 yılındaki kötü şöhretli bir röportajda gizliliğin artık "sosyal bir norm" olmadığını ilan eden Facebook CEO'su Mark Zuckerberg'de de görülebilir. Geçen yıl, Mark Zuckerberg ve yeni eşi, kişisel yaşamlarında ne yaptıklarını diğer insanların izlemesini engelleyen bir gizlilik alanına sahip olduklarından emin olmak için Palo Alto'da sadece kendi evlerini değil, aynı zamanda bitişikteki dört evin tamamını toplam 30 milyon dolara satın aldılar.
 
-#### E-posta şifresi meydan okuması (4:51) {#the-email-password-challenge-451}
+### E-posta şifresi meydan okuması (4:51) {#the-email-password-challenge-451}
 
 Son 16 ay boyunca, bu konuyu dünya çapında tartışırken, ne zaman biri bana "Gizlilik ihlalleri konusunda pek endişelenmiyorum çünkü saklayacak hiçbir şeyim yok" dese, onlara hep aynı şeyi söylerim. 
 
@@ -65,7 +65,7 @@ Bunu aramamızın bir nedeni var ve nedenimiz şu ki, sadece teröristler ve su�
 
 Her gün, söylediğimiz, düşündüğümüz ve yaptığımız şeylerden hangilerini diğer insanların bilmesini istediğimize ve hangilerini kimsenin bilmesini istemediğimize dair kararlar veririz. İnsanlar sözleriyle gizliliklerine değer vermediklerini çok kolay bir şekilde iddia edebilirler, ancak eylemleri bu inancın gerçekliğini çürütür.
 
-#### İzlenmek davranışlarımızı değiştirir (7:02) {#being-watched-changes-our-behavior-702}
+### İzlenmek davranışlarımızı değiştirir (7:02) {#being-watched-changes-our-behavior-702}
 
 Gizliliğin evrensel ve içgüdüsel olarak bu kadar çok arzulanmasının bir nedeni var. Bu sadece hava solumak veya su içmek gibi refleksif bir hareket değildir. Nedeni şudur: İzlenebileceğimiz, gözetlenebileceğimiz bir durumda olduğumuzda, davranışlarımız önemli ölçüde değişir. 
 
@@ -73,7 +73,7 @@ Gizliliğin evrensel ve içgüdüsel olarak bu kadar çok arzulanmasının bir n
 
 İnsani utanç, ondan kaçınma arzusu gibi çok güçlü bir motive edicidir ve insanların izlenme durumundayken kendi iradelerinin bir yan ürünü olan kararlar değil, başkalarının onlardan beklentileri veya toplumsal geleneklerin dayatmalarıyla ilgili kararlar almalarının nedeni budur.
 
-#### Bentham'ın panoptikonu (8:09) {#benthams-panopticon-809}
+### Bentham'ın panoptikonu (8:09) {#benthams-panopticon-809}
 
 Bu farkındalık, pragmatik amaçlar için en güçlü şekilde 18. yüzyıl filozofu Jeremy Bentham tarafından kullanıldı. Bentham, sanayi çağının getirdiği önemli bir sorunu çözmek için yola çıkmıştı; bu çağda kurumlar ilk kez o kadar büyük ve merkezi hale gelmişti ki, artık bireysel üyelerinin her birini izleyemiyor ve dolayısıyla kontrol edemiyorlardı. 
 
@@ -81,7 +81,7 @@ Ve onun bulduğu çözüm, başlangıçta hapishanelerde uygulanması amaçlanan
 
 20. yüzyıl Fransız filozofu Michel Foucault, bu modelin sadece hapishaneler için değil, insan davranışını kontrol etmeyi amaçlayan her kurum için kullanılabileceğini fark etti: okullar, hastaneler, fabrikalar, işyerleri. Ve onun söylediği şey, Bentham tarafından keşfedilen bu zihniyetin, bu çerçevenin, artık zorbalığın açık silahlarına (muhalifleri cezalandırmak, hapsetmek veya öldürmek ya da belirli bir partiye yasal olarak sadakat dayatmak) ihtiyaç duymayan modern, Batılı toplumlar için toplumsal kontrolün temel aracı olduğuydu. Çünkü kitlesel gözetim, zihinde bir hapishane yaratır ve bu, sosyal normlara veya toplumsal geleneklere uyumu teşvik etmenin çok daha ince ama çok daha etkili bir yoludur; kaba kuvvetin olabileceğinden çok daha etkilidir.
 
-#### Orwell, din ve zihindeki hapishane (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, din ve zihindeki hapishane (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Gözetim ve gizlilik hakkındaki en ikonik edebi eser, hepimizin okulda öğrendiği ve bu nedenle neredeyse bir klişe haline gelen George Orwell'in *1984* romanıdır. Aslında, gözetimle ilgili bir tartışmada bunu ne zaman gündeme getirseniz, insanlar anında uygulanamaz diyerek reddederler ve şöyle derler: "Ah, *1984*'te insanların evlerinde monitörler vardı, her an izleniyorlardı ve bunun karşı karşıya olduğumuz gözetim devletiyle hiçbir ilgisi yok." 
 
@@ -93,7 +93,7 @@ Görünüşte birbirinden farklı olan tüm bu eserlerin kabul ettiği, hepsinin
 
 Aksine ve daha da önemlisi, yaratıcılığın, keşfin ve muhalefetin barındığı tek yer, başkalarının yargılayıcı gözleri üzerimizde olmadan düşünebileceğimiz, akıl yürütebileceğimiz, etkileşimde bulunabileceğimiz ve konuşabileceğimiz bir yere gitme yeteneği olan gizlilik alanıdır. Ve işte bu yüzden, sürekli izlenmeye maruz kaldığımız bir toplumun var olmasına izin verdiğimizde, insan özgürlüğünün özünün ciddi şekilde sakatlanmasına da izin vermiş oluruz.
 
-#### İki yıkıcı ders (12:30) {#two-destructive-lessons-1230}
+### İki yıkıcı ders (12:30) {#two-destructive-lessons-1230}
 
 Bu zihniyet, yani yalnızca yanlış bir şey yapan kişilerin saklayacak şeyleri olduğu ve dolayısıyla gizliliği umursamak için nedenleri olduğu fikri hakkında belirtmek istediğim son nokta, bunun iki çok yıkıcı mesajı, iki yıkıcı dersi yerleştirmesidir. Bunlardan ilki, gizliliği umursayan tek insanların, gizliliği arayacak tek insanların tanım gereği kötü insanlar olduğudur. 
 
@@ -111,7 +111,7 @@ Ancak en önemli neden, kitlesel bir gözetim sisteminin kendi özgürlüğümü
 
 Çok teşekkür ederim. (Alkışlar)
 
-#### Bruno Giussani ile Soru-Cevap (15:25) {#qa-with-bruno-giussani-1525}
+### Bruno Giussani ile Soru-Cevap (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, teşekkürler. Söylemeliyim ki argümanların oldukça ikna edici, ancak sakıncası yoksa birkaç soru için seni son 16 aya ve Edward Snowden'a geri götürmek istiyorum. İlki seninle ilgili kişisel bir soru. Hepimiz partnerin David Miranda'nın Londra'da tutuklanmasını ve diğer zorlukları okuduk, ancak kişisel katılım ve risk açısından, dünyanın en büyük egemen örgütlerini karşına almanın üzerindeki baskısının o kadar da kolay olmadığını varsayıyorum. Bize biraz bundan bahset.
 

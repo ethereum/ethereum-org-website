@@ -20,7 +20,7 @@ Wasilisho na **Nixo Rokish** kutoka Taasisi ya Ethereum kwenye ETHBoulder, linal
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=ghyY_cRqd54) iliyochapishwa na EthBoulder. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:12) {#introduction-012}
+### Utangulizi (0:12) {#introduction-012}
 
 Asante kwa marafiki zangu wote sita waliojitokeza. Sawa. Ninazungumza nanyi leo kuhusu utawala wa msingi wa Ethereum. Jina langu ni Nixo. Ninaongoza timu ya usaidizi wa itifaki katika Taasisi ya Ethereum (EF). Miongoni mwa majukumu yetu yote, moja ya majukumu yetu ni kufanya mchakato wa utawala uwe wazi zaidi na rahisi kuabiri kwa kila mtu mwingine anayeshiriki katika mambo haya kwa sababu Ethereum inajumuisha mambo mengi zaidi ya wasanidi wake wa msingi tu.
 
@@ -36,7 +36,7 @@ Kwa hivyo mwaka jana kulikuwa na jambo lenye utata sana lililotokea. Huenda umes
 
 Kwa hivyo hilo lilikuwa kama jambo la mwisho lililoharibu mpango wa EOF na ikaishia kuondolewa kwenye mchepuo. Jambo lingine ambalo inabidi walizingatie ni kwamba inabidi iandikwe na kujaribiwa kwa kina katika lugha sita tofauti kwa sababu wateja hawa wameandikwa katika lugha sita tofauti. Kwa hivyo hiyo ni matrix kubwa sana ya majaribio kwao kufanya nayo kazi. Na kwa sababu hiyo kila chaguo dogo la muundo linajadiliwa bila mamlaka ya kutatua kutokubaliana. Kwa hivyo swali linaloibuka ni nani anaamua — ambalo ndilo kiini cha utawala.
 
-#### Dhana potofu (5:23) {#misconceptions-523}
+### Dhana potofu (5:23) {#misconceptions-523}
 
 Kwa hivyo hiyo inatuleta kwenye dhana potofu na tutashughulikia baadhi ya hizi. Moja ni kwamba Vitalik anaamua nini kinaingia kwenye itifaki ya Ethereum. Ugani wa hilo ni kwamba Taasisi ya Ethereum inadhibiti kila kitu. Na ya tatu ni kwamba yote ni makubaliano ya siri — watu wa ndani, wakongwe (OGs) wanafanya maamuzi haya.
 
@@ -52,13 +52,13 @@ Na ninapenda tweet hii ya kijinga niliyopiga picha hapa kwa sababu ni kama chomb
 
 Yote ni makubaliano ya siri, watu wa ndani, wakongwe — ninaelewa kidogo zaidi kwa nini hii ni dhana potofu kwa sababu kimsingi unakuja kwenye simu hizi za utawala, kuna watu mia moja kwenye simu hizi za utawala. Inaonekana kama wote wako vizuri sana na kile kinachoendelea. Umepotea. Hujui kabisa jinsi maamuzi haya yanafanywa. Unakuwa kama, "Je, ni zamu yangu ya kuzungumza bado?" Na inahisi kama watu wanawasikiliza watu 10 wale wale kufanya maamuzi haya.
 
-#### Meritokrasia na takwimu za ushiriki (10:18) {#meritocracy-and-participation-stats-1018}
+### Meritokrasia na takwimu za ushiriki (10:18) {#meritocracy-and-participation-stats-1018}
 
 Lakini ukweli ni kwamba uundaji wa Ethereum ni meritokrasia zaidi kuliko nilivyowahi kuona katika uundaji mwingi wa programu. Watu hawa wote kwenye picha hii ya skrini — hii ni moja ya tatu katika simu hii ya ACD niliyoamua kupiga picha — hakuna hata mmoja wa watu hawa aliyeteuliwa kuwa hapa. Kila mtu ni kama tu watu waliojitokeza. Ni wasanidi ambao wametumia muda mwingi na itifaki hii. Ndio ambao watu wamewatambua kama wasanidi wenye vipaji katika nafasi hii wanaofanya maamuzi mazuri mara kwa mara, na hakuna mtu katika hili aliyeteuliwa kuwa hapa.
 
 Kwa hivyo nilijiunga na EF zaidi ya mwaka mmoja uliopita. Nilichukua takwimu hizi. Zinarudi nyuma hadi Machi 2025 tu. Kwa hivyo chini ya mwaka mmoja. Wastani wa wahudhuriaji wa Wasanidi Wote wa Msingi (All Core Dev) — hizo ni simu za utawala — ni 98. Kwa hivyo kwa wastani kuna watu 98 kwenye simu hizi. Wahudhuriaji wengi zaidi katika simu moja tangu wakati huo walikuwa 153. Nadhani hiyo ilikuwa siku tuliyokuwa tukiamua tarehe ya Mtandao Mkuu wa Pectra. Na jumla ya wahudhuriaji wa kipekee ni 567 katika mwaka uliopita tu. Ninapenda sana kipimo hicho kwa sababu kinaonyesha kuwa si watu 100 wale wale wanaoenda kwenye simu hizi kila wakati. Wasanidi hawa wa programu, watafiti, mtu anasikia kuhusu kipengele fulani kinachojadiliwa, wanajitokeza kutoa sauti ya kupinga au kuunga mkono na kisha hawaji kwenye simu nyingine.
 
-#### Jinsi mchakato wa utawala unavyofanya kazi (11:52) {#how-the-governance-process-works-1152}
+### Jinsi mchakato wa utawala unavyofanya kazi (11:52) {#how-the-governance-process-works-1152}
 
 Kwa hivyo hii ni slaidi kavu kidogo lakini nadhani ni muhimu kuipitia — hivi ndivyo utawala wa Ethereum unavyofanya kazi kwa sasa. Kwa hivyo wakati mmoja wa michepuo hii unajadiliwa jambo la kwanza linalotokea ni watu wakati wa dirisha hili la muda uliotengwa wanaweza kuwasilisha pendekezo lao kuu. Pendekezo kuu ni kipengele kikuu ambacho tunataka watu waunge mkono kwa mchepuo huu. Huyu anaweza kuwa mwanajamii, mtafiti, msanidi wa msingi — kwa kweli mtu yeyote anayewasilisha moja ya mapendekezo haya makuu. Kisha dirisha linaisha na kwenye simu za utawala tunajadili ni ipi kati ya hizi inaleta maana. Watu wanatoa hoja zao, watu wanabishana na kuna mwafaka kuhusu ipi tunapaswa kuchagua kwa mchepuo huo ujao.
 
@@ -68,7 +68,7 @@ Kwa hivyo baada ya idadi ya mitandao ya wasanidi — inaweza kuwa miwili, inawez
 
 Na kisha mara tu mtandao wa majaribio bila ruhusa unapokuwa thabiti, tarehe ya Mtandao Mkuu inachaguliwa. Kufuatia hilo, kuna muda wa ziada wa siku 30. Muda huu wa ziada wa siku 30 upo kwa sababu L2 na itifaki zimeomba hili ili kujiandaa kwa mchepuo. Kwa hivyo hiyo ni angalau siku 30 na kisha mchepuo unatokea.
 
-#### Muundo wa simu na uratibu (15:01) {#call-structure-and-coordination-1501}
+### Muundo wa simu na uratibu (15:01) {#call-structure-and-coordination-1501}
 
 Wakati huu wote kuna mfululizo wa simu kuu zinazofanyika. Hizi zote ni simu za umma zinazopeperushwa moja kwa moja kwenye YouTube. Zile kuu ni ACDE na ACDC. E ni kwa ajili ya tabaka la utekelezaji — hayo ni mambo kama miamala, usambazaji wa mkataba mahiri, usimamizi wa mempool. ACDC ni tabaka la mwafaka — kwa hivyo hayo ni mambo ya mthibitishaji kama usimamizi wa mthibitishaji, ukataji. Na hizo zinapokezana Alhamisi. Kwa hivyo kuna ACD kila Alhamisi na moja wapo ni ACDE na kisha inayofuata ni ACDC, ikiendelea hivyo.
 
@@ -76,7 +76,7 @@ Simu za ACDE na ACDC zinaangazia mchepuo tunaoufanya kwa sasa na michepuo tunayo
 
 Na kisha kuna simu za vikundi vidogo. Simu za vikundi vidogo ni wanajamii, watafiti, wasanidi wakisema, "Hei, nina kipengele ambacho ninataka kukiingiza kwenye Ethereum michepuo miwili kuanzia sasa." Na kwa hivyo wanaandaa simu hizi za kila wiki, kila mwezi, au kila baada ya miezi miwili ambapo wanajadili maelezo ya utekelezaji, kubadilisha na kurudia kwenye vipimo, na kwa ujumla kushughulikia maswali yote ambayo watu wanayo, mambo yote yasiyojulikana yanayojulikana ili kuhakikisha kuwa iko mahali pazuri iwezekanavyo kujumuishwa kwenye mchepuo michepuo miwili kuanzia sasa. Na hizo zinaweza kupangwa wakati wowote mwezeshaji anapoamua.
 
-#### Mchakato unaobadilika (15:29) {#an-evolving-process-1529}
+### Mchakato unaobadilika (15:29) {#an-evolving-process-1529}
 
 Kwa hivyo jambo moja ninalotaka kusisitiza kwa kila mtu ni kwamba mchakato huu si tuli hata kidogo. Mchakato huu niliokuelezea sasa hivi umekuwa ukitumika kwa chini ya mwaka mmoja. Ethereum imekuwa ikitumika kwa miaka 10. Lakini inabadilika kila wakati na sababu inabadilika kila wakati ni kwa sababu hakuna anayesimamia. Na mchakato huu unabadilika ili kujua njia bora zaidi ya kufanya kazi. Na kama ninavyosema bora, lakini sifa ambayo utawala wa Ethereum unayo ni kuwa palepale sana, ngumu kupitisha mambo, inachanganya — na hiyo ni kwa sababu unapokuwa na watu 100 hadi 500 wanaofanya maamuzi, kwa kweli ninavutiwa kwamba hii inafanya kazi hata kidogo.
 
@@ -88,7 +88,7 @@ Kwa hivyo picha nyingine ya skrini juu ni Tim akipendekeza ufafanuzi wa hatua za
 
 Jambo la tatu ni ahadi kwa muda kwenye Forkcast. Forkcast ni bidhaa ya timu yangu, na Wolfram Mark, mtu kwenye timu yangu ambaye aliunda hii katikati ya mwaka jana wakati timu yangu katika muundo wake wa sasa ilipoundwa. Na imekuwa rasilimali muhimu sana kwa watu kutumia kuingiliana na mchepuo, kuona nini kinaingia kwenye mchepuo na jinsi inavyowaathiri. Mambo haya yote yana umri wa chini ya miaka miwili. Kwa hivyo jambo ninalosema ni kwamba mchakato huu unabadilika sana. Si tuli hata kidogo. Si urasimu ulioganda ambao ni mgumu kuingia.
 
-#### Mifumo ya utawala inayolinganishwa (20:21) {#comparable-governance-systems-2021}
+### Mifumo ya utawala inayolinganishwa (20:21) {#comparable-governance-systems-2021}
 
 Kwa hivyo kwa haraka nilitaka kugusia mifumo ya utawala iliyogatuliwa inayofanana zaidi ninayoweza kuona na utawala wa Ethereum. Na jambo ninalojaribu kusema hapa ni kwamba hii ni endelevu — ingawa inashangaza kwamba watu 100 hadi 500 wanaweza kufanya maamuzi, ni endelevu katika ulimwengu wa kweli. Tunaona mifano ya hili likifanya kazi.
 
@@ -96,13 +96,13 @@ IETF ni Kikosi Kazi cha Uhandisi wa Mtandao. Ni shirika la viwango linaloendeshw
 
 Mambo ambayo hii haifanani nayo: minyororo ya vitalu mingine ambayo ina upigaji kura wa tokeni mnyororoni. Ethereum huepuka haswa aina yoyote ya utaratibu wa kupiga kura kwa sababu kwa maoni yangu hiyo inasababisha njia za kutekwa na inaondoa motisha ya kufanya mambo kuwa meritokrasia ambapo watu wanawaamini tu watu wanaoandika msimbo bora zaidi. Na kisha kuna L2. Wana saini nyingi. Wana mabaraza ya usalama. Hizi ni kama nafasi zilizoteuliwa zinazofanya maamuzi haya. Na hiyo ina faida na hasara zake. Imejikita zaidi. Inasonga haraka ingawa.
 
-#### Kwa nini wajenzi wanajali (22:38) {#why-builders-care-2238}
+### Kwa nini wajenzi wanajali (22:38) {#why-builders-care-2238}
 
 Kwa hivyo kwa nini wajenzi wanajali kuhusu utawala? Kwa sababu wajenzi ndio hasa ambao Ethereum imeundwa kwa ajili yao. Ethereum haikuundwa kwa ajili ya wasanidi wa msingi. Haikuundwa kwa ajili ya wathibitishaji. Wakati mwingine watu hawa wanachanganyikiwa kuhusu hilo. Wasanidi wa msingi wa Ethereum na wathibitishaji wanatumikia Ethereum ambayo inatumikia wajenzi na watumiaji.
 
 Na kila mtu amekuwa na wakati huo na AI ambapo unaingia ndani sana na inajaribu kurekebisha jambo hili dogo na inashindwa kurudi nyuma na kuangalia madhumuni yote ya mradi. Na wasanidi wa msingi wanaweza kuwa hivyo ambapo wanajaribu kukamilisha mchakato wa uundaji wa msingi. Na ni muhimu sana katika kesi hiyo kwamba wajenzi waingie kwa sababu uundaji wa msingi unachukua muda mwingi sana kiasi kwamba hawajengi pia juu ya Ethereum wakati mwingi. Wanahusika sana katika uundaji wa msingi. Inachukua muda wao wote. Na kwa hivyo wajenzi wa programu inabidi wafanye juhudi kuingia na kusema, "Hei, tunahitaji hili. Hili ni muhimu kwa Ethereum." Ili tu kuhakikisha kuwa mtazamo upo na kwamba hawawekwi tu kwenye kundi la kufanya kazi kwa ajili ya wasanidi wa msingi.
 
-#### Jinsi ya kushiriki (24:40) {#how-to-participate-2440}
+### Jinsi ya kushiriki (24:40) {#how-to-participate-2440}
 
 Kwa hivyo unashirikije au kuingiza kipengele chako? Huu ni ushauri wa jumla, lakini nadhani ni bora zaidi. Paza sauti kuhusu changamoto zako. Nenda kwenye Twitter, andika machapisho ya blogu, tambua suluhu za changamoto zako. Kisia mambo ambayo yanaweza kukusaidia. Ukipata watu wengine ambao wana changamoto hizo hizo, kwa ujumla unaweza kupata EIP ambayo ipo kushughulikia changamoto hiyo au kupata mtu wa kukusaidia kuandika EIP inayofanya hivyo.
 

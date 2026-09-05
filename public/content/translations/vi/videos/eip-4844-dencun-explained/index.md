@@ -21,13 +21,13 @@ Một video giải thích của **Finematics** về EIP-4844 (Proto-Danksharding
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=HT9PHWloIiU) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Khả năng mở rộng của Ethereum đã là một chủ đề được tranh luận sôi nổi trong một thời gian. Các giải pháp lớp 2 (L2) đã đi đầu trong cuộc chiến này, cung cấp một cách để xử lý các giao dịch bên ngoài Chuỗi chính nhằm giảm bớt tắc nghẽn và giảm phí. Nhưng có một vấn đề — ngay cả các L2 cũng phải đối mặt với những hạn chế cản trở hiệu quả và khả năng mở rộng của chúng. EIP-4844 là bước tiếp theo trong việc gia tăng tiềm năng của L2 và điều chỉnh Ethereum phù hợp với lộ trình mở rộng của nó.
 
 Vậy, EIP-4844 là gì? Chính xác thì nó giúp mở rộng các L2 như thế nào? Nó mở ra những khả năng mới nào? Và có đúng là nó có thể giảm phí giao dịch trên các L2 hơn 90% không?
 
-#### EIP-4844 và Proto-Danksharding là gì (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### EIP-4844 và Proto-Danksharding là gì (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Xin nhắc lại, EIP là viết tắt của Đề xuất cải tiến Ethereum (Ethereum Improvement Proposal), một quy trình mà qua đó các nhà phát triển có thể đề xuất các thay đổi đối với Giao thức Ethereum. Cụ thể, EIP-4844 đề xuất một loại giao dịch mới có thể tăng cường đáng kể cách dữ liệu được xử lý và giải quyết trên Ethereum. Bạn cũng có thể đã nghe đến cái tên "Proto-Danksharding", hiện được sử dụng thay thế cho EIP-4844.
 
@@ -39,7 +39,7 @@ Hãy tưởng tượng việc thực hiện một giao dịch hoán đổi trên
 
 EIP-4844 cùng với một vài EIP khác sẽ được đưa vào bản nâng cấp Dencun sắp tới của mạng lưới.
 
-#### Chi tiết kỹ thuật (2:50) {#technical-details-250}
+### Chi tiết kỹ thuật (2:50) {#technical-details-250}
 
 Bây giờ, hãy cùng xem xét kỹ hơn cách EIP-4844 hoạt động.
 
@@ -65,7 +65,7 @@ Trong trường hợp của các bản cuộn lạc quan (optimistic rollup) nh�
 
 Các bản cuộn không tri thức (ZK rollup) sẽ cung cấp hai cam kết cho dữ liệu giao dịch hoặc dữ liệu delta trạng thái của chúng: cam kết khối dữ liệu và cam kết riêng của ZK rollup bằng cách sử dụng bất kỳ hệ thống bằng chứng nào mà Rollup đó sử dụng nội bộ. Chúng cũng sẽ sử dụng một Giao thức bằng chứng tương đương, sử dụng hợp đồng tiền biên dịch đánh giá điểm đã đề cập trước đó, để chứng minh rằng hai cam kết này tham chiếu đến cùng một dữ liệu.
 
-#### Tác động (6:25) {#impact-625}
+### Tác động (6:25) {#impact-625}
 
 Tác động của EIP-4844 đối với hệ sinh thái Ethereum là vô cùng to lớn. Trước hết, nó cải thiện đáng kể khả năng mở rộng của các giải pháp lớp 2, giảm chi phí hoạt động của chúng và làm cho chúng cạnh tranh hơn với các Chuỗi khối thay thế, giá rẻ khác. Việc giảm chi phí hoạt động là khả thi vì phần lớn chi phí hiện tại mà các bản cuộn phải chịu là do phí trả cho dữ liệu lệnh gọi.
 
@@ -77,7 +77,7 @@ Khi nói đến việc giảm chi phí giao dịch trên các bản cuộn, đư
 
 Có một điều chắc chắn — ngay cả khi kết quả chính là sự gia tăng thông lượng giao dịch và chi phí giao dịch vẫn giữ nguyên, EIP-4844 vẫn đặt nền móng cho khả năng mở rộng thậm chí còn lớn hơn trong tương lai, điều cuối cùng sẽ mang lại các giao dịch rẻ hơn cho người dùng.
 
-#### Tóm tắt (8:04) {#summary-804}
+### Tóm tắt (8:04) {#summary-804}
 
 Cộng đồng Ethereum đã hoàn tất việc thử nghiệm EIP-4844 trên nhiều mạng thử nghiệm khác nhau, với việc ra mắt trên Mạng chính dự kiến vào ngày 13 tháng 3. Đây là một bước tiến hoành tráng hướng tới việc đạt được khả năng mở rộng vô song cho Ethereum. Chúng ta đã có thể thấy hầu hết các L2 lớn cam kết bắt đầu sử dụng không gian khối dữ liệu mới ngay khi bản nâng cấp Dencun diễn ra.
 

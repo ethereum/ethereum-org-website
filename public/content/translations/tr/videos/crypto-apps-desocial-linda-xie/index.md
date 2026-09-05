@@ -19,7 +19,7 @@ Devconnect'te **Linda Xie** tarafından merkeziyetsiz sosyal medya üzerine yap�
 
 *Bu transkript, Ethereum Vakfı tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=4vl8eZEOwqk) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Merkezi sosyal medyanın sorunu (0:00) {#the-problem-with-centralized-social-000}
+### Merkezi sosyal medyanın sorunu (0:00) {#the-problem-with-centralized-social-000}
 
 Şu an Farcaster ekibindeyim ve 11 yıldır kripto alanında çalışıyorum. Bundan önce Farcaster üzerinde geliştirmeler yapıyordum. Bu yüzden kripto, merkeziyetsiz sosyal medya ve bunun toplum için yapabilecekleri konusunda gerçekten tutkuluyum.
 
@@ -27,7 +27,7 @@ Bence öncelikle geleneksel sosyal medyanın şu anki sorunlarını ortaya koyma
 
 Ve son olarak, eğer bir hesap ve veriler platforma aitse, bu, şirketin kendisi kapandığında o bilgilere erişemeyeceğiniz anlamına gelir. Bunu defalarca gördük. ABD'de TikTok'un yasaklanma ihtimali gündeme geldi ve birçok içerik oluşturucu bundan endişe duydu. Bu platformların birçoğunun kendi faaliyetlerini durdurduğu pek çok ülke var. Yani bu, insanların aslında günden güne yaşadığı bir sorundur.
 
-#### Açık sosyal grafikler (1:30) {#open-social-graphs-130}
+### Açık sosyal grafikler (1:30) {#open-social-graphs-130}
 
 Merkeziyetsiz sosyal medyanın faydalarından biri, sosyal grafiğe dilediğiniz zaman erişebilmenizdir. Bu verileri kullanmak için herhangi bir izne ihtiyacınız yoktur. Gerçekten harika olan şey, burada alt kısımda açık bir sosyal grafik görmenizdir. Tüm bu veriler herhangi bir istemci, herhangi bir geliştirici, herhangi bir platform tarafından çekilebilir ve bu verileri bu platformun üzerinde bir şeyler oluşturmak için kullanabilirsiniz.
 
@@ -35,7 +35,7 @@ Harika bir örnek — Farcaster uygulaması var ve ayrıca Coinbase tarafından 
 
 Bu platformu kullanmaya karar verdiğinizde artık sıfırdan başlamak zorunda değilsiniz. Kendi kitlenizi koruyabilirsiniz. Bir kez gönderi paylaşırsınız ve ardından ağ üzerindeki birden fazla istemcide dağıtım elde edebilirsiniz. Bir Farcaster kullanıcısı olabilir ve Base uygulaması daha fazla kullanıcı ve içerik oluşturucunun sisteme katılımını sağladıkça bu uygulama üzerinden daha fazla dağıtım elde edebilirsiniz. Bu, nihayetinde en iyi kullanıcı deneyimidir. Ve istemciler artık bu kullanıcılar için rekabet ediyor çünkü geçiş maliyeti gerçekten çok düşük — sıfırdan başlamak zorunda değilsiniz, kitlenizi koruyorsunuz ve bu yüzden istemciler daha iyi kullanıcı deneyimleri oluşturmak için rekabet etmek zorunda.
 
-#### Oluşturucular için faydalar (3:13) {#benefits-for-builders-313}
+### Oluşturucular için faydalar (3:13) {#benefits-for-builders-313}
 
 Bir de oluşturucu tarafı var; oluşturucular sürekli olarak platformlardan atılıyor. Bunu Twitter'da gördük — birçok kripto uygulamasını ve oluşturucuyu atıyor ve bu, şirketleri için tek bir hata noktası oluşturuyor. Bankr yakın zamanda aynı gün içinde hem Twitter'dan hem de Telegram'dan atıldı. Neyse ki birkaç gün sonra hesaplarını geri alabildiler, ancak bu gerçekten de bu tür tekil hata noktalarının var olduğunu gösteriyor. Eğer tüm zamanınızı ve kaynaklarınızı uygulamanızı oluşturmaya harcayan bir oluşturucuysanız, dağıtımınızın aniden kesilmesi son derece acı verici bir deneyimdir.
 
@@ -45,7 +45,7 @@ Merkeziyetsiz sosyal medya hakkında gerçekten şaşırtıcı olan bir şey, bi
 
 Burada görebilirsiniz — Miniword adında bir bulmaca paylaştım. Her gün insanlar New York Times bulmacası gibi bunda yarışıyor. Farcaster'da bir kez paylaştım, aynı zamanda Base uygulamasına ve diğer tüm istemcilere de gidiyor. Bir oluşturucu olarak bu dağıtım artışını elde edebilirsiniz. Mini uygulamayı açmak için dokunursam, onunla etkileşime girmeye başlayabilirim ve sosyal verilerden yararlanmak izinsiz olduğu için, ağdaki farklı kişilerin tüm sürelerini çekebilirsiniz ve insanlar en iyi puan için rekabet edebilir. Sadece kendi başınıza bir bulmaca çözmek yerine daha çok sosyal bir deneyim haline gelir ve sosyal grafikten yararlanarak daha fazla virallik elde edebilirsiniz.
 
-#### Kripto ve gömülü cüzdanlar (6:30) {#crypto-and-embedded-wallets-630}
+### Kripto ve gömülü cüzdanlar (6:30) {#crypto-and-embedded-wallets-630}
 
 Merkeziyetsiz sosyal medya mevcut — bunu Bluesky ile gördük ve platformlar farklı ülkelerde yasaklandıkça kullanıcıları çekme konusunda harika bir iş çıkardılar. Ancak asıl özel olan şey, kripto ile merkeziyetsiz sosyal medyayı birleştirdiğiniz zamandır, çünkü artık geleneksel bir platformda asla elde edemeyeceğiniz deneyimler yaratıyorsunuz. Bu, ekibimizin gerçekten üzerine eğildiği bir konu.
 
@@ -55,7 +55,7 @@ Kullanıcılar ayrıca gömülü cüzdanları olduğu için mini uygulamalarla z
 
 Akışta etkileşime giren ajanlara da sahip olabilirsiniz. Birbirleriyle etkileşime giren birçok ajanın olduğu bu ajan odaklı geleceğe gerçekten inanıyorsanız, kripto, birbirlerine fon göndermek için kullandıkları doğal kaynaktır. Adresleri veya birinin nasıl ödeme alacağını koordine etmenize gerek yoktur — bir kullanıcının adresini otomatik olarak bilirsiniz, tüm bilgilere sahipsinizdir, dünyada nerede yaşadıkları önemli değildir. Onlarla doğrudan etkileşime girebilirsiniz. Kripto, ajanlar ve açık sosyal grafiklerin çok daha büyük bir rol oynayacağına gerçekten inanıyorum.
 
-#### Mikro bahşiş verme (8:36) {#micro-tipping-836}
+### Mikro bahşiş verme (8:36) {#micro-tipping-836}
 
 Kriptodaki açık sosyal grafiklerin gerçekten benzersiz olan yanlarına dair en sevdiğim örneklerden biri mikro bahşiş vermedir. Kriptonun ilk günlerinde insanlar her zaman mikro bahşiş vermenin ne kadar harika olacağından bahsederdi — eğer gerçekten harika içerikler paylaşan bir içerik oluşturucuysanız, o kişiye çok küçük miktarda fon gönderebilmek. Ben bu ilk Bitcoin bahşiş uygulamalarını kullanırdım. Ancak ilk günlerdeki sorun, gerçekten küçük miktarlarda fon göndermenin aslında oldukça yavaş ve pahalı olmasıydı.
 
@@ -63,11 +63,11 @@ Artık L2'ler ve bunların ne kadar ucuz ve hızlı olması sayesinde bir sent v
 
 Cüzdan etkinlik geçmişimi görebilirsiniz — ağdaki diğer kullanıcılara fon gönderiyorum ve ayrıca bu harcama izinlerini ayarlayan diğer kullanıcılardan da fon alıyorum. Bir sentin altında işlemler bile var ki bu oldukça çılgınca bir kavram. Bunlar dünyanın her yerinde yaşayan insanlar. Kriptoda yepyeniyseniz ve Farcaster'a katılırsanız, varsayılan olarak bir cüzdanınız olur. Yüksek kaliteli içerik paylaşmaya başladığınızda, insanlar size otomatik olarak bahşiş vermeye başlayabilir ve hiç kripto satın almak zorunda kalmadan bir bakiye oluşturabilirsiniz. Bunun aslında içerik oluşturarak veya mini uygulamalarla etkileşime girerek kazandıkları ilk kripto olduğunu söyleyen pek çok kullanıcıyla konuştum.
 
-#### Mini uygulamalar ve yaratıcı araçlar (11:01) {#mini-apps-and-creative-tools-1101}
+### Mini uygulamalar ve yaratıcı araçlar (11:01) {#mini-apps-and-creative-tools-1101}
 
 Gömülü cüzdan, kripto işlemleri ve açık sosyal grafiğin kullanımını gerçekten iyi sergileyen en sevdiğim mini uygulamalardan biri, Atown ve ekibi tarafından oluşturulan Emerge'dir. İçerik oluşturucuların, profil resminizi istemin bir versiyonuna dönüştüren bir istem hazırlamasına olanak tanır. İşte bir örnek — ağda çok popüler bir içerik oluşturucu olan Peachy, profil resimlerini tarot kartlarına dönüştürmek için bir istem yazdı. Profil resmimi kullanarak bir görsel oluşturabildim ve ilgilenen diğer kişilerin de kendi görsellerini oluşturabilmesi için mini uygulamayı paylaştım. Hangi istemlerin gerçekten iyi performans gösterdiğine dair liderlik tabloları var. Eğer yaratıcı biriyseniz, kendi istemlerinizi oluşturabilir ve kazanmaya başlayabilirsiniz — bu istem işlemi için 25 sent ödedim ve 418 diğer kullanıcı da bunu oluşturdu, bu yüzden Peachy bu içeriği oluşturduğu için kazanıyor ve bu akışta viral hale gelebiliyor.
 
-#### Warplet fenomeni (12:41) {#the-warplet-phenomenon-1241}
+### Warplet fenomeni (12:41) {#the-warplet-phenomenon-1241}
 
 Yakın zamanda yaşanan bir virallik nedeniyle Farcaster'da en yüksek günlük aktif kullanıcı günlerimizden birini yaşadık. İlk olarak, Farcaster'ın Warplet adında resmi olmayan bir maskotu var. Farcaster'ın kurucu ortağı Dan bunu yaratmıştı. Benim de dahil olduğum ekip, resmi maskot olmak için en sevimli şey olmadığını düşünmüş olabilir, bu yüzden onu topluluğa sundu ve insanların onunla istediklerini yapabileceklerini söyledi.
 
@@ -75,13 +75,13 @@ Angel adında bir geliştirici bunu aldı ve bu Warplet yaratığının kendi pr
 
 Görmesi gerçekten harika olan bir diğer şey de farklı remiks kültürüydü. Oluşturucular, "Tamam, artık her birinizin kendi Warplet'i var, o halde bunun üzerine oyunlar ve eğlenceli deneyimler inşa edelim" diyorlardı. "En çirkin Warplet hangisi?" ve "Bu ikisini birleştirirseniz yavru bir Warplet neye benzerdi?" gibi sıralamalar vardı. Tüm bu eğlenceli oyunlar ağ üzerinde oluşturuldu; bu da sosyal grafikten yararlandığınızda bir uygulama geliştiricisi olarak çok daha ilgi çekici bir deneyim sunabileceğinizi gösteriyor.
 
-#### Sosyal fayda için mini uygulamalar (15:02) {#mini-apps-for-social-good-1502}
+### Sosyal fayda için mini uygulamalar (15:02) {#mini-apps-for-social-good-1502}
 
 İşte bir mini uygulama örneği — aslında bunu ekipteki Horsefax oluşturdu. Bunun gerçekten önemli olduğunu düşünüyorum — Roman Storm'un yasal savunma fonunu destekleyebilirsiniz. Daimo Pay'i kullandık ve herhangi bir Token ile ödeme yapabilir ve yasal savunma fonuna katkıda bulunabilirsiniz. Gömülü bir cüzdan olduğu için, başka bir uygulamayı kullanmak üzere asla dışarı atılmazsınız. Bunu hemen akışınızda paylaşarak takipçilerinize katkıda bulunduğunuzu söyleyebilirsiniz. Onlar da daha sonra bu uygulamayı keşfedebilir ve bağış yapmaya devam edebilirler. Bu, uygulamaları herkesin kendi oluşturduğu takipçi ve kitle içinde daha fazla paylaşmak için bir mekanizmadır.
 
 İşte benzer bir örnek daha — Seed Club'da Nicholas tarafından oluşturulan, GoFundMe veya Kickstarter platformu gibi bir kitle fonlaması. Katkıda bulunan farklı kullanıcıları görebilirsiniz. Gömülü cüzdanınıza dokunabilir ve doğrudan Farcaster uygulaması üzerinden fon katkısında bulunabilirsiniz. Asla dışarı atılmak zorunda kalmazsınız. İçerik oluşturucu hedefini çok aşan bir miktar toplayabildi ve bunu akışınızda paylaşabilirsiniz, böylece tüm takipçileriniz de mini uygulamayı keşfedebilir.
 
-#### Merkeziyetsiz sosyal medyanın zorlukları (16:41) {#challenges-of-decentralized-social-1641}
+### Merkeziyetsiz sosyal medyanın zorlukları (16:41) {#challenges-of-decentralized-social-1641}
 
 Tüm bunlar gerçekten harika ve merkeziyetsiz sosyal medya kulağa harika geliyor, ancak zorluklar konusunda gerçekten dürüst olmak istiyorum. Belirtilmesi gereken bir şey, bunun küçük olmasıdır — milyarlarca ve yüz milyonlarca kullanıcısı olan tüm bu büyük geleneksel sosyal platformlara kıyasla çok küçük.
 
@@ -93,7 +93,7 @@ Spam de bir sorundur. Bu, merkezi sosyal platformlarda da mevcuttur — muhtemel
 
 Ve ardından moderasyon — kullanıcıların iyi bir deneyim yaşamasını ve gerçekten ilgilendikleri içerikleri keşfetmesini sağlamak, geleneksel sosyal platformlarda da bir sorun ve zorluktur. Bunlar her zaman üzerinde çalışmaya devam ettiğimiz şeylerdir.
 
-#### Neden şimdi? (19:48) {#why-now-1948}
+### Neden şimdi? (19:48) {#why-now-1948}
 
 Merkeziyetsiz sosyal medya bir süredir var, ama neden şimdi? Bence tüm bu temel yapı taşlarının bir araya gelmesiyle ilgili. İlk olarak, herkesin kullanabileceği ve yararlanabileceği açık sosyal grafikleriniz var. Daha önce hiç tanımadığım ekiplerle sürekli konuşuyorum — sadece Farcaster mini uygulamaları geliştiriyorlardı çünkü verilerden biz olmadan da yararlanabiliyorlar.
 
@@ -105,7 +105,7 @@ Tüm bunların nereye varacağı konusunda — bence e-posta gerçekten iyi bir 
 
 Farcaster giderek daha fazla zamanını alım satım özelliklerine harcıyor; eğer bununla ilgilenmiyorsanız, Base uygulaması ve Uno sosyal özellikleri sergileme konusunda gerçekten harika. Uzun vadede sosyal medyanın olması gereken şekli budur. Gidecek çok yolumuz var ama sosyal medyanın yönelmesi gereken geleceğin gerçekten bu olduğunu düşünüyorum.
 
-#### Soru-Cevap (23:47) {#qa-2347}
+### Soru-Cevap (23:47) {#qa-2347}
 
 **Moderatör:** Çok teşekkürler, Linda. İzleyicilerden bazı sorularımız var. Bence gerçekten harika olan şey, gerçek dünyada mahallemde dışarı çıkabilmem ve özgürce yapabileceğim pek çok şeyin olması. Dijital mahalleler her zaman aynı değildir, bu nedenle merkeziyetsiz sosyal medya tezi, özellikle hayatımızın daha büyük bir kısmı çevrim içi hale geldikçe çok ilgi çekicidir. Şu anda merkezi sosyal medya platformlarındaki insanların merkeziyetsiz sosyal medya platformlarına geçmesi gereken bir değişim yaşanıyor. Deneyiminize göre, bu geçişi nasıl kolaylaştırabiliriz?
 

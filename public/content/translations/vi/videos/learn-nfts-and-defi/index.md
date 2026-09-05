@@ -21,7 +21,7 @@ Một video giải thích của **Finematics** bao gồm cơ chế của các to
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=Xdkkux6OxfM) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Có thể thay thế và không thể thay thế (0:00) {#fungible-vs-non-fungible-000}
+### Có thể thay thế và không thể thay thế (0:00) {#fungible-vs-non-fungible-000}
 
 Hãy bắt đầu với từ "có thể thay thế" (fungible). Có thể thay thế có nghĩa là các đơn vị riêng lẻ của một tài sản có thể hoán đổi cho nhau và không thể phân biệt được với nhau. Một ví dụ điển hình về tài sản có thể thay thế là tiền tệ. Một tờ năm đô la luôn có giá trị bằng với bất kỳ tờ năm đô la nào khác. Bạn không thực sự quan tâm mình nhận được tờ năm đô la cụ thể nào vì tất cả chúng đều có giá trị như nhau.
 
@@ -29,7 +29,7 @@ Tuy nhiên, khi nói đến các tài sản không thể thay thế, mỗi đơn
 
 Một ví dụ khác là thẻ giao dịch (trading cards). Mặc dù chúng có thể trông giống nhau, nhưng mỗi thẻ có các thuộc tính khác nhau. Các yếu tố như năm sản xuất hoặc cách bảo quản thẻ có thể tạo ra sự khác biệt. Một ví dụ cực đoan về một thứ không thể thay thế là một tác phẩm nghệ thuật — ví dụ, một bức tranh thường chỉ được tạo ra dưới dạng một bản gốc duy nhất.
 
-#### Các thuộc tính của NFT (2:13) {#properties-of-nfts-213}
+### Các thuộc tính của NFT (2:13) {#properties-of-nfts-213}
 
 Bây giờ chúng ta đã biết "không thể thay thế" có nghĩa là gì, hãy cùng xem xét các thuộc tính phổ biến nhất của NFT.
 
@@ -39,7 +39,7 @@ Bây giờ chúng ta đã biết "không thể thay thế" có nghĩa là gì, h
 
 Tương tự như các token tiêu chuẩn, NFT cũng đảm bảo quyền sở hữu tài sản, dễ dàng chuyển nhượng và chống gian lận.
 
-#### Các tiêu chuẩn token: ERC-20, ERC-721 và ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
+### Các tiêu chuẩn token: ERC-20, ERC-721 và ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
 
 Mặc dù NFT có thể được triển khai trên bất kỳ Chuỗi khối nào hỗ trợ lập trình hợp đồng thông minh, các tiêu chuẩn đáng chú ý nhất là ERC-721 và ERC-1155 trên Ethereum. Trước khi chúng ta đi sâu vào các tiêu chuẩn NFT, hãy tóm tắt nhanh về ERC-20, vì nó sẽ hữu ích cho việc so sánh.
 
@@ -49,7 +49,7 @@ Mặc dù NFT có thể được triển khai trên bất kỳ Chuỗi khối n�
 
 **ERC-1155** là bước tiếp theo trong việc tạo token không thể thay thế. Tiêu chuẩn này cho phép tạo ra các hợp đồng hỗ trợ cả token có thể thay thế và không thể thay thế. Nó được tạo ra bởi Enjin, một dự án tập trung vào trò chơi dựa trên Chuỗi khối. Trong nhiều trò chơi như World of Warcraft, người chơi có thể giữ cả các vật phẩm không thể thay thế — kiếm, khiên, áo giáp — và các vật phẩm có thể thay thế như vàng hoặc mũi tên. ERC-1155 cho phép các nhà phát triển định nghĩa cả token có thể thay thế và không thể thay thế, đồng thời quyết định số lượng của mỗi loại nên tồn tại.
 
-#### Các trường hợp sử dụng NFT (5:28) {#nft-use-cases-528}
+### Các trường hợp sử dụng NFT (5:28) {#nft-use-cases-528}
 
 Bên cạnh CryptoKitties, có một số trò chơi phổ biến khác tận dụng NFT, chẳng hạn như Gods Unchained và Decentraland. Decentraland là một ví dụ thú vị vì người chơi có thể mua các mảnh đất kỹ thuật số mà sau này có thể được bán lại hoặc thậm chí được sử dụng làm không gian quảng cáo trong trò chơi.
 
@@ -57,7 +57,7 @@ Các ví dụ khác bao gồm các thị trường nghệ thuật kỹ thuật s
 
 Một số NFT có thể cực kỳ đắt đỏ. CryptoKitty đắt nhất, Dragon, đã được bán với giá 600 ETH vào cuối năm 2017 — trị giá khoảng một trăm bảy mươi nghìn đô la vào thời điểm đó. Các tên miền khan hiếm như exchange.eth có thể trị giá lên tới hơn năm trăm nghìn đô la.
 
-#### NFT như tài sản thế chấp trong DeFi (6:48) {#nfts-as-collateral-in-defi-648}
+### NFT như tài sản thế chấp trong DeFi (6:48) {#nfts-as-collateral-in-defi-648}
 
 Khi nói đến DeFi, NFT có thể mở khóa nhiều tiềm năng hơn nữa cho tài chính phi tập trung. Hiện tại, phần lớn các giao thức cho vay DeFi đều được thế chấp. Một trong những ý tưởng thú vị nhất là sử dụng NFT làm tài sản thế chấp. Điều này có nghĩa là bạn có thể cung cấp một NFT đại diện cho một tác phẩm nghệ thuật, đất kỹ thuật số hoặc thậm chí là bất động sản được token hóa làm tài sản thế chấp, và vay tiền dựa trên nó.
 
@@ -67,12 +67,12 @@ Khi nói đến DeFi, NFT có thể mở khóa nhiều tiềm năng hơn nữa c
 
 Đây là lý do tại sao một số dự án cung cấp các khoản vay thế chấp bằng NFT sử dụng một mô hình hơi khác: các khoản vay ngang hàng. Trong mô hình thị trường này, người vay có thể cung cấp NFT của họ làm tài sản thế chấp, và người cho vay có thể chọn NFT nào họ sẵn sàng chấp nhận trước khi khởi tạo một khoản vay. NFT được sử dụng làm tài sản thế chấp được giữ trong một hợp đồng ký quỹ (escrow contract), và nếu người vay vỡ nợ do không hoàn trả số tiền đã vay cộng với tiền lãi đúng hạn, NFT sẽ được chuyển cho người cho vay. Không gian này còn mới, nhưng một trong những công ty sử dụng mô hình này là NFTfi.
 
-#### NFT như các sản phẩm tài chính (9:32) {#nfts-as-financial-products-932}
+### NFT như các sản phẩm tài chính (9:32) {#nfts-as-financial-products-932}
 
 Bên cạnh việc được sử dụng làm tài sản thế chấp, NFT cũng có thể đại diện cho các sản phẩm tài chính phức tạp hơn như bảo hiểm, trái phiếu hoặc quyền chọn. Yinsure từ Yearn Finance là một ví dụ điển hình về việc sử dụng NFT trong không gian bảo hiểm. Trong Yinsure, mỗi hợp đồng bảo hiểm được đại diện dưới dạng một NFT cũng có thể được giao dịch trên thị trường thứ cấp như Rarible.
 
 Gần đây, chúng ta cũng bắt đầu thấy các khái niệm gốc của DeFi như khai thác Thanh khoản được sử dụng bởi các dự án NFT. Ví dụ, Rarible đã bắt đầu thưởng cho người dùng của mình bằng các token Quản trị RARI cho việc tạo, mua và bán NFT trên nền tảng của họ.
 
-#### Thị trường NFT đang phát triển (10:30) {#the-growing-nft-market-1030}
+### Thị trường NFT đang phát triển (10:30) {#the-growing-nft-market-1030}
 
 Với hơn 100 triệu đô la giá trị NFT được giao dịch và 6 triệu đô la chỉ riêng trong tháng gần đây nhất, không gian NFT là một trong những ngách phát triển nhanh nhất trong tiền mã hóa. Nó có tiềm năng to lớn trải dài từ những chú mèo con kỹ thuật số đến các sản phẩm tài chính phức tạp.

@@ -19,13 +19,13 @@ Ilmuwan komputer **Amit Sahai**, seorang profesor di UCLA Samueli School of Engi
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=fOGdb1CTu5c) yang diterbitkan oleh WIRED. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 **Amit Sahai:** Hai, nama saya Amit Sahai, dan saya adalah profesor ilmu komputer di UCLA Samueli School of Engineering. Hari ini, saya diminta untuk menjelaskan bukti tanpa pengetahuan dalam lima tingkat kompleksitas yang meningkat.
 
 Bukti tanpa pengetahuan adalah cara bagi seorang pembukti untuk meyakinkan pemverifikasi bahwa suatu pernyataan adalah benar, namun tidak mengungkapkan informasi tambahan apa pun di luar fakta bahwa pernyataan tersebut benar. Bukti tanpa pengetahuan sedang digunakan dalam rantai blok dan mata uang kripto. Para ahli kriptografi sangat antusias dengan zero-knowledge karena sifat matematisnya yang menakjubkan, tetapi juga karena penerapannya yang luar biasa pada begitu banyak skenario yang berbeda.
 
-#### Tingkat 1: anak-anak (0:41) {#level-1-child-041}
+### Tingkat 1: anak-anak (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Apa mata pelajaran favoritmu?
 
@@ -55,7 +55,7 @@ Jadi Chelsea, dengan kata-katamu sendiri, apa itu bukti tanpa pengetahuan?
 
 **Chelsea:** Bukti tanpa pengetahuan adalah bukti untuk sebuah pernyataan. Kamu tidak menunjukkan kepada mereka mengapa atau apa. Kamu hanya menunjukkan kepada mereka segmen kecil, atau hanya melakukan semacam trik sulap aneh yang sebenarnya bukan trik sulap, dan mereka akan yakin. Dan kamu tidak menunjukkan kepada mereka alasannya, atau hal semacam itu.
 
-#### Tingkat 2: remaja (3:31) {#level-2-teen-331}
+### Tingkat 2: remaja (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Jadi, apakah kamu pernah mendengar istilah bukti tanpa pengetahuan sebelumnya?
 
@@ -85,7 +85,7 @@ Jadi berdasarkan apa yang telah kita diskusikan hari ini, dengan kata-katamu sen
 
 **Remaja:** Ini seperti jika kamu memiliki rahasia yang sangat penting yang ingin kamu beri tahukan kepada seseorang, tetapi kamu tidak ingin memberi tahu mereka semuanya. Kamu bisa menggunakan bukti tanpa pengetahuan untuk membuktikan rahasia itu kepada mereka, tetapi tidak memberikan semuanya.
 
-#### Tingkat 3: mahasiswa (6:13) {#level-3-college-student-613}
+### Tingkat 3: mahasiswa (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Apa yang sedang kamu pelajari?
 
@@ -131,7 +131,7 @@ Bisakah kamu memilih dua negara secara acak, dan kita akan mengungkapkan dua war
 
 **Amit Sahai:** Salah satu contoh yang bagus adalah pemilihan umum. Jika kamu bisa membuktikan bahwa pemilihan umum dilakukan dengan benar — bahwa setiap suara dihitung dan semuanya dijumlahkan menjadi satu orang yang menang dengan total tertentu — dalam zero-knowledge, maka kamu tidak perlu menyerahkan suara aktual dari siapa pun. Namun semua orang bisa melihat bahwa itu dilakukan dengan benar.
 
-#### Tingkat 4: mahasiswa pascasarjana (11:59) {#level-4-grad-student-1159}
+### Tingkat 4: mahasiswa pascasarjana (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Sangat menyenangkan kamu ada di sini dan berbicara denganmu, Eli. Bisakah kamu ceritakan sedikit tentang penelitianmu?
 
@@ -165,7 +165,7 @@ Bisakah kamu memilih dua negara secara acak, dan kita akan mengungkapkan dua war
 
 **Eli:** Saya pikir itu salah satu alasan saya sangat tertarik pada komputasi multi-pihak. Salah satu masalah terpenting di dunia adalah kenyataan bahwa begitu banyak orang tidak saling percaya. Mampu menggunakan matematika untuk menciptakan teknologi yang memungkinkan orang bekerja sama tanpa harus saling percaya adalah misi yang sangat keren dan luar biasa.
 
-#### Tingkat 5: ahli (17:10) {#level-5-expert-1710}
+### Tingkat 5: ahli (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, sangat senang bertemu denganmu lagi. Saya pikir terakhir kali kita bertemu adalah pada tahun 2017 atau semacamnya.
 

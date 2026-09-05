@@ -19,13 +19,13 @@ UCLA Samueli Mühendislik Okulu'nda profesör olan bilgisayar bilimcisi **Amit S
 
 *Bu döküm, WIRED tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=fOGdb1CTu5c) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 **Amit Sahai:** Merhaba, benim adım Amit Sahai ve UCLA Samueli Mühendislik Okulu'nda bilgisayar bilimi profesörüyüm. Bugün benden sıfır bilgi ispatlarını giderek artan beş karmaşıklık seviyesinde açıklamam istendi.
 
 Sıfır bilgi ispatı, bir kanıtlayıcının bir doğrulayıcıyı bir ifadenin doğru olduğuna ikna etmesinin, ancak ifadenin doğru olduğu gerçeğinin ötesinde hiçbir ek bilgi ifşa etmemesinin bir yoludur. Sıfır bilgi ispatları Blokzincirlerde ve kripto paralarda kullanılıyor. Kriptograflar, şaşırtıcı matematiksel özellikleri ve aynı zamanda pek çok farklı senaryoya inanılmaz uygulanabilirliği nedeniyle sıfır bilgi konusunda heyecan duyuyorlar.
 
-#### Seviye 1: çocuk (0:41) {#level-1-child-041}
+### Seviye 1: çocuk (0:41) {#level-1-child-041}
 
 **Amit Sahai:** En sevdiğin ders nedir?
 
@@ -55,7 +55,7 @@ Peki Chelsea, kendi kelimelerinle, sıfır bilgi ispatı nedir?
 
 **Chelsea:** Sıfır bilgi ispatı, bir ifadenin kanıtıdır. Onlara nedenini veya ne olduğunu göstermezsin. Sadece küçük bir bölümünü gösterirsin veya aslında sihir numarası olmayan garip bir sihir numarası yaparsın ve ikna olurlar. Ve onlara nedenini veya buna benzer bir şeyi göstermemiş olursun.
 
-#### Seviye 2: genç (3:31) {#level-2-teen-331}
+### Seviye 2: genç (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Daha önce hiç sıfır bilgi ispatı terimini duymuş muydun?
 
@@ -85,7 +85,7 @@ Peki bugün tartıştıklarımıza dayanarak, kendi kelimelerinle, sıfır bilgi
 
 **Genç:** Birinin bilmesini istediğin gerçekten önemli bir sırrın varsa ama onlara her şeyi anlatmak istemiyorsan kullanabileceğin bir şey gibi. Onlara bu sırrı kanıtlamak için sıfır bilgi ispatını kullanabilirsin, ancak tamamını ele vermezsin.
 
-#### Seviye 3: üniversite öğrencisi (6:13) {#level-3-college-student-613}
+### Seviye 3: üniversite öğrencisi (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Ne okuyorsun?
 
@@ -131,7 +131,7 @@ Rastgele iki ülke seçebilir misin, böylece iki rengi tekrar ortaya çıkaraca
 
 **Amit Sahai:** Harika bir örnek seçimlerdir. Bir seçimin doğru bir şekilde yürütüldüğünü, yani her Oyun sayıldığını ve hepsinin belirli bir toplamla bir kişinin kazanmasını sağladığını sıfır bilgi ile kanıtlayabilseydiniz, o zaman herhangi bir kişinin gerçek Oylarından vazgeçmek zorunda kalmazdınız. Ve yine de herkes bunun doğru bir şekilde yapıldığını görebilirdi.
 
-#### Seviye 4: yüksek lisans öğrencisi (11:59) {#level-4-grad-student-1159}
+### Seviye 4: yüksek lisans öğrencisi (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Senin burada olman ve seninle konuşmak çok harika, Eli. Bana biraz araştırmandan bahsedebilir misin?
 
@@ -165,7 +165,7 @@ Rastgele iki ülke seçebilir misin, böylece iki rengi tekrar ortaya çıkaraca
 
 **Eli:** Sanırım çok partili hesaplamaya bu kadar ilgi duymamın nedenlerinden biri de bu. Dünyadaki en önemli sorunlardan biri, pek çok insanın birbirine güvenmemesi gerçeğidir. İnsanların birbirlerine güvenmek zorunda kalmadan birlikte çalışmasına olanak tanıyan bir teknoloji yaratmak için matematiği kullanabilmek gerçekten harika ve muazzam bir görev.
 
-#### Seviye 5: uzman (17:10) {#level-5-expert-1710}
+### Seviye 5: uzman (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, seni tekrar görmek çok güzel. Sanırım en son 2017'de falan görüşmüştük.
 

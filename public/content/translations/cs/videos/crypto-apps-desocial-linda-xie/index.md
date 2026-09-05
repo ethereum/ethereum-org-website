@@ -19,7 +19,7 @@ Prezentace **Lindy Xie** na Devconnectu o decentralizovaných sociálních médi
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=4vl8eZEOwqk) vydaného Nadací Ethereum. Byl lehce upraven pro lepší čitelnost.*
 
-#### Problém s centralizovanými sociálními sítěmi (0:00) {#the-problem-with-centralized-social-000}
+### Problém s centralizovanými sociálními sítěmi (0:00) {#the-problem-with-centralized-social-000}
 
 V krypto prostoru pracuji už 11 let a nyní jsem v týmu Farcaster. Předtím jsem na Farcasteru stavěla. Jsem tedy opravdu nadšená do krypta a decentralizovaných sociálních sítí a do toho, co mohou přinést společnosti.
 
@@ -27,7 +27,7 @@ Myslím, že je velmi užitečné nejprve nastínit problémy současných tradi
 
 A konečně, pokud účet a data vlastní platforma, znamená to, že jakmile samotná společnost ukončí činnost, nebudete mít k těmto informacím přístup. To jsme viděli už mnohokrát. V USA hrozil zákaz TikToku a mnoho tvůrců z toho mělo obavy. Existuje spousta zemí, kde se mnohé z těchto platforem zakazují samy. Takže to je problém, se kterým se lidé skutečně potýkají každý den.
 
-#### Otevřené sociální grafy (1:30) {#open-social-graphs-130}
+### Otevřené sociální grafy (1:30) {#open-social-graphs-130}
 
 Jednou z výhod decentralizovaných sociálních sítí je, že máte k sociálnímu grafu přístup kdykoli. K použití těchto dat nepotřebujete žádné povolení. Co je opravdu skvělé, je to, že tady dole vidíte otevřený sociální graf. Všechna tato data si může stáhnout jakýkoli klient, jakýkoli vývojář, jakákoli platforma a můžete je použít k budování na této platformě.
 
@@ -35,7 +35,7 @@ Skvělý příklad — máte aplikaci Farcaster a pak máte také aplikaci Base 
 
 Když se rozhodnete tuto platformu používat, už nemusíte začínat od nuly. Můžete si ponechat své vlastní publikum. Zveřejníte příspěvek jednou a získáte distribuci napříč více klienty v síti. Můžete být uživatelem Farcasteru a přesto získat větší distribuci prostřednictvím aplikace Base, protože provádějí onboarding dalších uživatelů a tvůrců. To je nakonec ta nejlepší uživatelská zkušenost. A klienti nyní o tyto uživatele soutěží, protože náklady na přechod jsou opravdu nízké — nemusíte začínat od nuly, publikum vám zůstává, a tak klienti musí soutěžit ve vytváření lepších uživatelských zážitků.
 
-#### Výhody pro tvůrce (3:13) {#benefits-for-builders-313}
+### Výhody pro tvůrce (3:13) {#benefits-for-builders-313}
 
 Pak tu máte také stranu tvůrců, kde jsou tvůrci neustále vyhazováni z platforem. Viděli jsme to u Twitteru — vyhazuje spoustu krypto aplikací a tvůrců, a to je pro jejich společnosti jediný bod selhání. Bankr byl nedávno ve stejný den vyhozen z Twitteru i Telegramu. Naštěstí se jim podařilo o několik dní později účty obnovit, ale opravdu to ukazuje, že tyto jediné body selhání existují. Pokud jste tvůrce, který tráví veškerý svůj čas a zdroje snahou vybudovat svou aplikaci, je to extrémně bolestivá zkušenost, když vám okamžitě odříznou distribuci.
 
@@ -45,7 +45,7 @@ Jedna věc, která je na decentralizovaných sociálních sítích opravdu úža
 
 Tady můžete vidět — zveřejnila jsem křížovku s názvem Miniword. Každý den v ní lidé soutěží jako v křížovce New York Times. Zveřejnila jsem ji jednou na Farcasteru a dostala se i do aplikace Base a ke všem ostatním klientům. Jako tvůrce tak získáte obrovskou podporu distribuce. Když klepnutím otevřu mini aplikaci, mohu s ní začít interagovat, a protože využití sociálních dat je nevyžadující povolení, můžete načíst všechny časy různých lidí v síti a lidé mohou soutěžit o nejlepší skóre. Stává se z toho spíše společenský zážitek, než abyste luštili křížovku sami, a využitím sociálního grafu můžete dosáhnout větší virality.
 
-#### Krypto a integrované peněženky (6:30) {#crypto-and-embedded-wallets-630}
+### Krypto a integrované peněženky (6:30) {#crypto-and-embedded-wallets-630}
 
 Decentralizované sociální sítě existují — viděli jsme to u Bluesky, kteří odvedli skvělou práci při získávání uživatelů, když byly platformy v různých zemích zakázány. Opravdu výjimečné to ale je, když zkombinujete krypto a decentralizované sociální sítě, protože tím vytváříte zážitky, které byste na tradiční platformě nikdy nezískali. To je něco, do čeho se náš tým opravdu opírá.
 
@@ -55,7 +55,7 @@ Uživatelé mohou také interagovat s mini aplikacemi onchain, protože mají sv
 
 Ve feedu mohou také interagovat agenti. Pokud opravdu věříte v tuto budoucnost plnou agentů, kde spolu interaguje spousta agentů, krypto je přirozeným zdrojem, který používají k vzájemnému posílání prostředků. Nemusíte koordinovat adresy nebo to, jak někdo dostane zaplaceno — automaticky znáte adresu uživatele, máte všechny informace a nezáleží na tom, kde na světě žije. Můžete s nimi interagovat přímo. Opravdu věřím, že krypto, agenti a otevřené sociální grafy budou hrát mnohem větší roli.
 
-#### Mikrospropitné (8:36) {#micro-tipping-836}
+### Mikrospropitné (8:36) {#micro-tipping-836}
 
 Jedním z mých oblíbených příkladů toho, co je na otevřených sociálních grafech v kryptu opravdu unikátní, je mikrospropitné. V úplných začátcích krypta lidé vždy mluvili o tom, jak by bylo úžasné dávat mikrospropitné — pokud jste tvůrce, který zveřejňuje opravdu skvělý obsah, mít možnost poslat mu opravdu malou částku. Sama jsem tyto rané aplikace pro posílání spropitného v Bitcoinu používala. Problém v těch raných dobách ale byl, že posílat opravdu malé částky bylo ve skutečnosti docela pomalé a drahé.
 
@@ -63,11 +63,11 @@ Nyní máte možnost posílat transakce v hodnotě jednoho centu nebo i méně d
 
 Můžete vidět historii aktivity mé peněženky — posílám prostředky dalším uživatelům v síti a také přijímám prostředky od jiných uživatelů, kteří si tyto povolené limity nastavili. Existují dokonce transakce pod jeden cent, což je docela šílený koncept. Jsou to lidé, kteří žijí po celém světě. Pokud jste v kryptu úplní nováčci a připojíte se k Farcasteru, máte peněženku ve výchozím nastavení. Jakmile začnete zveřejňovat vysoce kvalitní obsah, lidé vám mohou začít automaticky posílat spropitné a vy si můžete vybudovat zůstatek, aniž byste si kdy museli nějaké krypto koupit. Mluvila jsem s mnoha uživateli, kteří říkali, že to bylo vlastně první krypto, které si vydělali za tvorbu obsahu nebo interakci s mini aplikacemi.
 
-#### Mini aplikace a kreativní nástroje (11:01) {#mini-apps-and-creative-tools-1101}
+### Mini aplikace a kreativní nástroje (11:01) {#mini-apps-and-creative-tools-1101}
 
 Jednou z mých oblíbených mini aplikací, která opravdu dobře ukazuje využití integrované peněženky, krypto transakcí a otevřeného sociálního grafu, je Emerge, kterou vytvořil Atown a jeho tým. Umožňuje tvůrcům sestavit prompt, který transformuje vaši profilovou fotku do nějaké verze tohoto promptu. Tady je příklad — Peachy, velmi populární tvůrce v síti, napsal prompt pro transformaci profilových fotek na tarotové karty. Mohla jsem si vygenerovat obrázek pomocí své profilové fotky a sdílet mini aplikaci, aby si ostatní zájemci mohli vygenerovat svůj vlastní. Existují žebříčky toho, které prompty si vedly opravdu dobře. Pokud jste kreativní člověk, můžete vytvářet vlastní prompty a začít vydělávat — za tuto transakci s promptem jsem zaplatila 25 centů a vygenerovalo si ho i 418 dalších uživatelů, takže Peachy vydělává na tvorbě tohoto obsahu a ve feedu se to může stát virálním.
 
-#### Fenomén Warplet (12:41) {#the-warplet-phenomenon-1241}
+### Fenomén Warplet (12:41) {#the-warplet-phenomenon-1241}
 
 Vlastně jsme na Farcasteru měli jeden z dnů s nejvyšším počtem denně aktivních uživatelů díky viralitě, ke které nedávno došlo. Zaprvé, máme tohoto neoficiálního maskota Farcasteru jménem Warplet. Vytvořil ho Dan, spoluzakladatel Farcasteru. Tým — včetně mě — si možná nemyslel, že je to to nejroztomilejší pro oficiálního maskota, a tak ho vypustil do komunity a řekl, že si s ním lidé mohou dělat, co chtějí.
 
@@ -75,13 +75,13 @@ Vývojář jménem Angel to vzal a rozhodl se vytvořit mini aplikaci, kde můž
 
 Co bylo také opravdu skvělé vidět, byla různá kultura remixování. Tvůrci říkali: „Dobře, teď máte každý svého Warpleta, tak na tom pojďme postavit hry a zábavné zážitky.“ Objevilo se hodnocení „jaký je nejošklivější Warplet?“ a „jak by vypadalo mládě Warpleta, kdybyste zkombinovali tyto dva?“ Všechny tyto zábavné hry byly vytvořeny v síti, což ukazuje, že když využijete sociální graf, můžete jako vývojář aplikací vytvořit mnohem poutavější zážitek.
 
-#### Mini aplikace pro společenské dobro (15:02) {#mini-apps-for-social-good-1502}
+### Mini aplikace pro společenské dobro (15:02) {#mini-apps-for-social-good-1502}
 
 Tady je příklad mini aplikace — vlastně ji v týmu vytvořil Horsefax. Myslím, že je to opravdu důležité — můžete podpořit fond na právní obhajobu Romana Storma. Použili jsme Daimo Pay a vy můžete zaplatit jakýmkoli tokenem a přispět do fondu na právní obhajobu. Protože se jedná o integrovanou peněženku, nikdy vás to nevyhodí do jiné aplikace. Můžete to okamžitě sdílet ve svém feedu a říct svým sledujícím, že jste přispěli. Ti pak mohou tuto aplikaci objevit a také pokračovat v přispívání. Je to mechanismus pro další sdílení aplikací mezi sledujícími a publikem, které si každý sám vybudoval.
 
 Tady je další podobný příklad — crowdfunding vytvořený Nicholasem v Seed Clubu, něco jako platforma GoFundMe nebo Kickstarter. Můžete vidět různé uživatele, kteří přispěli. Můžete klepnout ve své integrované peněžence a přispět prostředky přímo přes aplikaci Farcaster. Nikdy nemusíte aplikaci opustit. Tvůrci se podařilo vybrat mnohem více, než byl jeho cíl, a vy to můžete sdílet ve svém feedu, aby tuto mini aplikaci mohli objevit i všichni vaši sledující.
 
-#### Výzvy decentralizovaných sociálních sítí (16:41) {#challenges-of-decentralized-social-1641}
+### Výzvy decentralizovaných sociálních sítí (16:41) {#challenges-of-decentralized-social-1641}
 
 Tohle všechno je opravdu úžasné a decentralizované sociální sítě znějí skvěle, ale chci být opravdu upřímná ohledně výzev. Jedna věc, kterou je třeba zmínit, je, že jsou malé — velmi malé v porovnání se všemi těmi velkými tradičními sociálními platformami s uživateli v řádech miliard a stovek milionů.
 
@@ -93,7 +93,7 @@ Problémem je také spam. Ten existuje i na centralizovaných sociálních platf
 
 A pak moderování — to je také problém a výzva v rámci tradičních sociálních platforem, jak zajistit, aby uživatelé měli dobrý zážitek a objevovali obsah, který je skutečně zajímá. To jsou věci, na kterých neustále pracujeme.
 
-#### Proč právě teď? (19:48) {#why-now-1948}
+### Proč právě teď? (19:48) {#why-now-1948}
 
 Decentralizované sociální sítě existují už nějakou dobu, ale proč právě teď? Myslím, že je to tím, že se všechny tyto primitivy spojují dohromady. Zaprvé máte otevřené sociální grafy, které může kdokoli používat a využívat. Neustále mluvím s týmy, které jsem předtím ani neznala — prostě stavěly mini aplikace pro Farcaster, protože mohou využívat data i bez nás.
 
@@ -105,7 +105,7 @@ Kam to všechno směřuje — myslím, že e-mail je opravdu dobrá analogie. Kd
 
 Farcaster tráví stále více času funkcemi pro obchodování; pokud vás to nezajímá, aplikace Base a Uno jsou opravdu skvělé v prezentaci sociálních funkcí. Tak by měly sociální sítě z dlouhodobého hlediska vypadat. Máme před sebou ještě dlouhou cestu, ale opravdu si myslím, že toto je budoucnost, kam by měly sociální sítě směřovat.
 
-#### Otázky a odpovědi (23:47) {#qa-2347}
+### Otázky a odpovědi (23:47) {#qa-2347}
 
 **Moderátor:** Moc děkuji, Lindo. Máme tu nějaké dotazy z publika. Myslím, že je opravdu skvělé, že ve skutečném světě můžu jít ven do svého sousedství a je tam tolik věcí, které můžu dělat svobodně. Digitální sousedství nejsou vždy stejná, a proto je teze o decentralizovaných sociálních sítích velmi přesvědčivá, zvláště když se stále větší část našich životů přesouvá na internet. V současné době dochází k posunu, kdy se lidé z centralizovaných platforem sociálních médií potřebují přesunout na decentralizované platformy sociálních médií. Jak můžeme z vaší zkušenosti tuto migraci usnadnit?
 

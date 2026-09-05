@@ -19,7 +19,7 @@ Un video explicativo de **Junion** que cuenta la historia del hackeo de The DAO 
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=rNeLuBOVe8A) publicada por Junion. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### El descubrimiento (0:00) {#the-discovery-000}
+### El descubrimiento (0:00) {#the-discovery-000}
 
 Es lunes, 13 de junio de 2016. Un profesor de informática en Cornell está examinando el código de The DAO, uno de los proyectos más ambiciosos en el espacio cripto. Durante meses había estado abogando por que el proyecto se pusiera en pausa, ya que creía que había ciertos fallos que podrían poner todo en peligro. Pero hoy encuentra una vulnerabilidad grave: un error en la línea 666.
 
@@ -33,7 +33,7 @@ Al igual que el hackeo de 81 millones de dólares a SWIFT hizo públicos los agu
 
 Esta es la historia de uno de los mayores robos digitales de la historia y el audaz intento de reescribir la historia para que nunca hubiera sucedido.
 
-#### ¿Qué era The DAO? (2:00) {#what-was-the-dao-200}
+### ¿Qué era The DAO? (2:00) {#what-was-the-dao-200}
 
 Entra en escena The DAO, abreviatura de organización autónoma descentralizada (DAO, por sus siglas en inglés). La idea se inspiró en el micromecenazgo (crowdfunding). En lugar de múltiples fondos para diferentes proyectos, habría un solo fondo para gobernarlos a todos, y no había mejor manera de hacerlo que con una DAO.
 
@@ -45,7 +45,7 @@ Cuando terminaba el período de votación y se alcanzaba un cuórum del 20 % de 
 
 Sin embargo, todavía se necesitaba una forma de proteger a la minoría de ser oprimida por la mayoría. Si un grupo minoritario estaba en fuerte desacuerdo con una propuesta que no podían superar en votos, en lugar de votar que no, podían llamar a una función de división (split) y mover su ether de la DAO principal a una DAO secundaria, dividiendo esencialmente la DAO en dos. Esta función de división será muy importante más adelante.
 
-#### El micromecenazgo (4:01) {#the-crowdfund-401}
+### El micromecenazgo (4:01) {#the-crowdfund-401}
 
 The DAO fue el proyecto de micromecenazgo más grande de la historia, recaudando 12,7 millones de ether, con un valor de 150 millones de dólares en ese momento. Tuvo lugar durante la era temprana de Ethereum, donde el proyecto estuvo sujeto a una gran cantidad de entusiasmo y FOMO (miedo a quedarse fuera) por parte de los inversores.
 
@@ -53,7 +53,7 @@ Antes de esto, los proyectos de Ethereum habían sido principalmente pruebas de 
 
 Este era un código inmutable alojado en la computadora más segura del mundo, lo que garantizaba las propiedades clave de una DAO: una organización que es completamente descentralizada y autónoma. Una vez que los contratos se implementaron el 30 de abril, ninguna entidad individual, ni siquiera Slock.it, podía realizar cambios en el protocolo o detener su existencia. Su código había sido auditado innumerables veces por varios desarrolladores de Ethereum y estaba visible para que todos lo revisaran.
 
-#### El hackeo (5:02) {#the-hack-502}
+### El hackeo (5:02) {#the-hack-502}
 
 "Lonely, so lonely" (Solo, tan solo): el nombre de la Propuesta #59 de The DAO. Es solo una propuesta de división normal, pero en realidad es donde comienza el hackeo. Después de que el hacker enviara la propuesta, hay un período de debate estándar de siete días en el que cualquiera es libre de unirse. Sin embargo, nadie se une a esta división.
 
@@ -65,7 +65,7 @@ Sin embargo, a medida que se llama a la función de división, la comunidad se d
 
 Pero sin esta corrección, cualquiera podía llamar repetidamente a la función para retirar ether antes de que el contrato actualizara su saldo. Es como un cajero automático que no cambia tu saldo hasta que te ha dado el dinero. "¿Puedo retirar diez dólares? Espera, antes de eso, ¿puedo retirar diez dólares? Espera, antes de eso...".
 
-#### El grupo Robin Hood (6:55) {#the-robin-hood-group-655}
+### El grupo Robin Hood (6:55) {#the-robin-hood-group-655}
 
 Los poseedores de tokens DAO observaban cómo sus inversiones se drenaban lentamente de la DAO principal a la DAO secundaria, también conocida como la DAO oscura (dark DAO). Además, el precio de Ethereum sufrió una caída repentina de 20 a 15 dólares tras las noticias. Había que hacer algo, y la única forma era drenar el resto antes de que lo hiciera el hacker. Y así comenzó la carrera por vaciarla.
 
@@ -79,13 +79,13 @@ Mientras tanto, Alex se estaba preparando para lanzar el ataque de sombrero blan
 
 A la mañana siguiente, Alex intentó reunir al grupo para infiltrarse en otra propuesta de división, pero los demás estaban ocupados. "Nos sentimos como los peores hackers de la historia. Fuimos frustrados por un mal internet y compromisos familiares".
 
-#### La carrera por vaciarla (9:10) {#the-race-to-empty-910}
+### La carrera por vaciarla (9:10) {#the-race-to-empty-910}
 
 Cuatro días después del ataque inicial, The DAO estaba bajo ataque nuevamente. Se estaba drenando lentamente (unos pocos ether por ronda), pero ya había acumulado unos miles de dólares. Parecía ser de un atacante tanteando el terreno. En este punto, Robin Hood necesitaba hacer algo.
 
 Eligieron infiltrarse en la División #78 porque habían identificado al curador de la propuesta y estaba terminando pronto. Se pusieron en contacto con algunas ballenas que estuvieron felices de donar sus tokens DAO, lo que permitió al equipo asegurar seis millones de tokens. Cuantos más tokens tuviera el contrato de Robin, más rápido podría desviar ether. El atacante aceleró el ritmo y otros atacantes se unieron. Pero gracias a las donaciones, Robin Hood pudo superarlos. Esto les permitió asegurar 7,2 millones de ether: el 55 % de The DAO.
 
-#### La bifurcación (10:08) {#the-fork-1008}
+### La bifurcación (10:08) {#the-fork-1008}
 
 La DAO principal ahora había sido drenada y todos los fondos estaban distribuidos en varias DAO secundarias, siendo las dos principales la DAO de sombrero blanco y la DAO oscura. Pero todo el dinero estaba bloqueado por tiempo. No se podía presentar ninguna propuesta bajo una DAO secundaria hasta que terminara un período de espera de 27 días. E incluso después de eso, enviar fondos a una dirección externa requería enviar una propuesta y esperar dos semanas. Esencialmente, todavía faltaban 41 días para que el hacker pudiera retirar lo que equivalía al 5 % del suministro total de Ethereum.
 
@@ -93,7 +93,7 @@ Pero el hacker nunca llegaría a tocar su Ethereum. Lo que sucedió a continuaci
 
 Una cadena de bloques es como una lista de transacciones que sigue creciendo con cada bloque minado. Cada transacción queda arraigada en la cadena de bloques para siempre. Pero si más del 50 % de los mineros se confabulan, pueden alterar falsamente la cadena de bloques, reescribiendo la historia como quieran. Por lo general, esto se llama un ataque del 51%. Pero no había nada malicioso en esta bifurcación: la comunidad solo estaba reclamando el dinero que les había sido robado.
 
-#### El código es la ley (11:48) {#code-is-law-1148}
+### El código es la ley (11:48) {#code-is-law-1148}
 
 Aun así, no todos estaban de acuerdo con la bifurcación propuesta. Argumentaban que el código es la ley. Desde este punto de vista, el atacante era menos un hacker y más un abogado inteligente que leyó cuidadosamente los términos de un contrato. Por lo tanto, en realidad no se robaron fondos y deberían tener derecho legítimo al ether de la DAO oscura.
 
@@ -107,7 +107,7 @@ Tras una inspección más profunda, la gente se dio cuenta de que la firma era i
 
 Por otro lado, los defensores argumentaban que "el código es la ley" es una declaración demasiado drástica y que los humanos deberían tener la última palabra a través del consenso social. No se le debería permitir al hacker beneficiarse del exploit, ya que es éticamente incorrecto y muy probablemente ilegal. Pero lo más importante, The DAO era simplemente demasiado grande para caer. Poseía alrededor del 15 % del suministro total de ether.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 En un evento que se hizo eco de la crisis financiera de 2008, los desarrolladores de Ethereum rescataron a The DAO. Vitalik Buterin, el creador y desarrollador principal de Ethereum, no se disculpó por presionar a favor de una bifurcación. En una entrevista, dijo más tarde: "Algunos usuarios de Bitcoin ven la bifurcación dura como una violación de sus valores más fundamentales de alguna manera. Personalmente, creo que estos valores fundamentales, llevados a tales extremos, son una tontería".
 
@@ -117,7 +117,7 @@ Pero no termina ahí. La cadena de bloques original de Ethereum, la que tenía e
 
 Si tenías ether antes de la bifurcación, ahora tendrías un Ethereum y un Ethereum Classic. Si tenías un ether en The DAO, podrías retirar un Ethereum del contrato de reembolso. Y si acababas de hackear The DAO, habrías hecho una fortuna decente en Ethereum Classic: alrededor de siete millones de dólares.
 
-#### El legado de The DAO (16:14) {#legacy-of-the-dao-1614}
+### El legado de The DAO (16:14) {#legacy-of-the-dao-1614}
 
 Inicialmente, Ethereum Classic ganó impulso como una alternativa, con una fuerte comunidad de fundamentalistas de la cadena de bloques que no estaban de acuerdo con el rescate. Pero desde entonces, Ethereum Classic no ha logrado ganar tracción y solo existe realmente como una idea con poca utilidad. Mientras que Ethereum alberga miles de protocolos, Ethereum Classic solo tiene unos pocos básicos. Está claro que la bifurcación había ganado.
 
@@ -125,7 +125,7 @@ Dos meses después, Robin Hood transfirió 2,9 millones de su Ethereum Classic a
 
 En cuanto al hacker, se fue con 3,6 millones de Ethereum Classic, con un valor de 150 millones de dólares en la actualidad. Pero si no hubiera habido una bifurcación, esos 3,6 millones de Ethereum valdrían más de siete mil millones de dólares en la actualidad.
 
-#### El impacto duradero de The DAO (17:26) {#the-daos-lasting-impact-1726}
+### El impacto duradero de The DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Es importante tener en cuenta que The DAO ahora se conoce comúnmente como Genesis DAO para evitar confusiones, porque fue la primera DAO, pero definitivamente no la última. A pesar de los contratiempos iniciales, las DAO solo se han vuelto más populares. MakerDAO gobierna la moneda estable DAI, y los protocolos de finanzas descentralizadas (DeFi) como Uniswap con su token UNI generalmente tienen una DAO de gobernanza. Todas estas DAO se construyeron a partir de las experiencias de proyectos anteriores para crear organizaciones aún más versátiles y exitosas.
 

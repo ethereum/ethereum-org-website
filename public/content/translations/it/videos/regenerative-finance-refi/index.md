@@ -18,25 +18,25 @@ Un video esplicativo di **CNBC Television** che esplora il movimento della finan
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=La52dDzBt2k) pubblicata da CNBC Television. È stata leggermente modificata per migliorarne la leggibilità.*
 
-#### Cos'è la finanza rigenerativa? (0:00) {#what-is-regenerative-finance-000}
+### Cos'è la finanza rigenerativa? (0:00) {#what-is-regenerative-finance-000}
 
 Cosa ti viene in mente quando senti il termine "ReFi"? Se sei proprietario di una casa, potresti pensare al rifinanziamento del mutuo. Ma per le cripto, ha assunto un significato completamente nuovo. La finanza rigenerativa è stata descritta come l'intersezione tra cripto e clima. È un modello finanziario che incentiva le azioni della comunità per aiutare a risolvere problemi sistemici come il riscaldamento globale e la gestione dei rifiuti.
 
 **Nirvaan Ranganathan:** La ReFi combina davvero il meglio della finanza decentralizzata (DeFi) con i concetti dell'economia rigenerativa, e fondamentalmente fornisce un set di strumenti che crea strumenti finanziari, mercati finanziari e un sistema economico che ha esternalità positive, portando benefici alle persone, alle loro comunità e, in ultima analisi, al pianeta.
 
-#### Il problema energetico delle cripto (0:48) {#cryptos-energy-problem-048}
+### Il problema energetico delle cripto (0:48) {#cryptos-energy-problem-048}
 
 Le cripto si sono guadagnate la reputazione di essere dannose per il pianeta, poiché è noto che gli asset digitali richiedono un elevato consumo di elettricità, il che può comportare emissioni di gas serra, specialmente nelle comunità vicine agli impianti di minaggio. Nell'agosto dello scorso anno, la Casa Bianca ha stimato che il consumo globale totale di elettricità per i cripto-asset fosse compreso tra 120 e 240 miliardi di chilowattora all'anno, un intervallo che supera il consumo totale annuo di elettricità di paesi come Argentina e Australia.
 
 Da allora, Ethereum è passato dalla Prova di lavoro (PoW) alla Proof-of-Stake (PoS), riducendo drasticamente il suo consumo energetico. Ma Bitcoin è ancora un divoratore di energia: uno studio più recente ha rilevato che il minaggio di Bitcoin ha utilizzato 95,58 terawattora all'anno.
 
-#### Blockchain carbon-negative (1:31) {#carbon-negative-blockchains-131}
+### Blockchain carbon-negative (1:31) {#carbon-negative-blockchains-131}
 
 Celo, un protocollo blockchain lanciato durante la Giornata della Terra tre anni fa, fa parte di un movimento in crescita che spera di cambiare questa narrazione. I suoi fondatori definiscono Celo "la casa della ReFi".
 
 **Nirvaan Ranganathan:** Celo è carbon-negative, e questo perché anni fa la comunità ha approvato una proposta di governance che ha deciso di compensare il carbonio prodotto dalla rete. Da allora, acquista automaticamente crediti di compensazione del carbonio letteralmente ogni giorno per compensare in realtà più del carbonio che emette, motivo per cui diciamo che è carbon-negative. Celo è stata davvero la prima rete a farlo, il che ha spianato la strada per aiutare a cambiare la narrazione attorno alle blockchain e se possano essere una vera forza positiva per l'ambiente.
 
-#### Progetti ReFi in azione (2:16) {#refi-projects-in-action-216}
+### Progetti ReFi in azione (2:16) {#refi-projects-in-action-216}
 
 Un esempio di ReFi in azione: un progetto chiamato Silvi, che sta aiutando a sostenere gli sforzi di rimboschimento in una foresta pluviale in Kenya. Hanno creato un sistema che incentiva a basso costo le persone a piantare alberi, e poi altri ad andare a verificare che quegli alberi siano lì, semplicemente usando i loro telefoni, scattando foto agli alberi e usando il GPS del telefono come modo per fornire prove.
 
@@ -44,7 +44,7 @@ Un esempio di ReFi in azione: un progetto chiamato Silvi, che sta aiutando a sos
 
 Un altro progetto è il Collectivo Guilder, una valuta comunitaria a Curaçao nei Caraibi. Stanno incentivando la spesa locale attraverso una valuta comunitaria, ma la valuta stessa è anche supportata da alberi e altri asset ReFi sull'isola. Questo incentiva la piantagione di alberi a Curaçao oltre a incentivare la spesa locale: un progetto ReFi avvincente che fa bene sia alle comunità che al clima.
 
-#### Slancio in crescita (3:50) {#growing-momentum-350}
+### Slancio in crescita (3:50) {#growing-momentum-350}
 
 Il movimento ReFi sta guadagnando terreno. Ad aprile, diverse centinaia di persone hanno partecipato a un Blockchain Climate Summit tenuto da Celo in quella che è stata chiamata la "ReFi House" ad Austin, in Texas. Si è svolto nello stesso periodo e nella stessa città di una delle più grandi conferenze cripto al mondo, Consensus 2023. L'obiettivo principale era creare uno spazio per i costruttori ReFi e i "Regens" — come amano definirsi — per riunirsi, condividere idee e parlare del lavoro che stanno svolgendo. Lì sono nate molte collaborazioni.
 
@@ -52,7 +52,7 @@ Il movimento ReFi sta guadagnando terreno. Ad aprile, diverse centinaia di perso
 
 Pitchbook ha monitorato il capitale investito nella ReFi, con un picco di attività nel terzo trimestre dello scorso anno, quando il mercato cripto in generale era ancora fiorente. Tuttavia, quest'anno, nel mezzo dell'attuale flessione, gli investimenti e il numero di accordi sono diminuiti.
 
-#### Le prospettive per la ReFi (5:15) {#the-outlook-for-refi-515}
+### Le prospettive per la ReFi (5:15) {#the-outlook-for-refi-515}
 
 **Analista:** Adoro il concetto. Che si tratti di un'industria a sé stante, sono sempre dell'idea: "Aspettiamo e vediamo come si evolve". Ma penso che la maggiore trasparenza che la blockchain può fornire abbia sempre offerto un meccanismo per una maggiore responsabilità, che si tratti di responsabilità nelle catene di approvvigionamento, di come gestiamo i rifiuti, della creazione di modelli di comportamento sostenibili o dell'impegno in diversi tipi di attività di rete, cosa che stiamo già vedendo.
 

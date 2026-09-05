@@ -19,7 +19,7 @@ Mahojiano na **Danny Ryan**, mwanzilishi mwenza wa Etherealize na aliyekuwa mrat
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=GZPLTF5ds2A) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Kugundua intaneti na udadisi wa mapema (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### Kugundua intaneti na udadisi wa mapema (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Mwenyeji:** Mambo vipi? Ni lini mara ya mwisho ulicheza Jenga?
 
@@ -37,7 +37,7 @@ Mahojiano na **Danny Ryan**, mwanzilishi mwenza wa Etherealize na aliyekuwa mrat
 
 **Danny Ryan:** Siku zote nilikuwa mtu wa kurekebisha vitu. Babu na bibi yangu walikuwa wakinukuu kila mara — labda nilikuwa na umri wa miaka saba — ningewasaidia na kompyuta yao, na wakati mmoja nilisema, "Wakati mwingine inabidi uizime tu na kuiwasha tena." Walininukuu kwa hilo milele.
 
-#### Kutoka uhandisi wa mitambo hadi programu (5:02) {#from-mechanical-engineering-to-software-502}
+### Kutoka uhandisi wa mitambo hadi programu (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Mwenyeji:** Je, kulikuwa na wakati wa "aha" au mshauri aliyekufanya ufuate njia fulani?
 
@@ -47,7 +47,7 @@ Siku zote nilikuwa nikipenda kompyuta kwa sababu zilikuwepo, lakini sikuwa kama 
 
 Mimi si mmoja wa wale wa aina ya "kuandika programu tangu nikiwa na miaka sita". Mimi si mtunzi wa programu wa kutisha, si mwanahisabati wa kutisha. Mimi ni mzuri tu katika kuona matatizo na kuyaunganisha pamoja.
 
-#### Maisha ya mfanyakazi huru huko Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
+### Maisha ya mfanyakazi huru huko Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Mwenyeji:** Ulifanya nini baada ya chuo?
 
@@ -59,7 +59,7 @@ Mimi si mmoja wa wale wa aina ya "kuandika programu tangu nikiwa na miaka sita".
 
 Pia nilianzisha biashara ya uchapishaji wa skrini nikiwa shule ya sekondari. Imekuwa ikiendelea kwa miaka 20 sasa. Rafiki yangu wa karibu na mbia wangu anaiendesha — inaitwa Girraphic. Tulianza kuifanya kwa ajili ya bendi yetu, kisha tukaanza kutengeneza mashati yote kwa ajili ya shule yetu ya sekondari.
 
-#### Udukuzi wa DAO na kuingia kwenye Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### Udukuzi wa DAO na kuingia kwenye Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** Mnamo 2016, rafiki yangu alinitumia makala ya New York Times kuhusu DAO. Ilikuwa imekusanya, sijui, dola milioni 120 — uchangiaji mkubwa zaidi wa umma katika historia. Nilikuwa naijua Bitcoin. Nilikuwa nimefanya muamala wa Bitcoin. Labda nilipoteza pesa kwenye Bitcoin. Haikunieleweka vizuri.
 
@@ -73,7 +73,7 @@ Siku ya kwanza, nilisema, "Sawa, nitaenda kwenye mkutano wa Ethereum wa New Orle
 
 Nilijifunza kuhusu Uthibitisho wa Dau (PoS) na nikasema, "Hiyo haina maana yoyote." Kisha nikaendelea kujifunza, na nikasema, "Labda hii ina maana. Labda ningeweza kutengeneza bwawa la uwekaji dhamana au kitu kama hicho." Nilisikia Casper inakuja — hivyo ndivyo Uthibitisho wa Dau ulivyoitwa — kwa hivyo nikaanza kusoma msimbo. Nikasema, "Oh, wangeweza kufanya majaribio zaidi." Niliandika baadhi ya majaribio. Mwishoni mwa 2017, timu ya utafiti ikasema, "Hei, unataka kazi?" Nikasema, "Sawa."
 
-#### Kupata jamii katika programu huria (14:35) {#finding-community-in-open-source-1435}
+### Kupata jamii katika programu huria (14:35) {#finding-community-in-open-source-1435}
 
 **Mwenyeji:** Ulipataje jamii yako na watu wako? Ulijengaje ujasiri?
 
@@ -81,7 +81,7 @@ Nilijifunza kuhusu Uthibitisho wa Dau (PoS) na nikasema, "Hiyo haina maana yoyot
 
 Milango ilikuwa wazi kwa njia ya kuchekesha. Sijahitaji kupitia milango hiyo kwa muda mrefu, lakini ninafikiria kwa sehemu nyingi za Ethereum, milango iko wazi sana kutokana na asili ya kazi kuwa wazi.
 
-#### Kuongoza unganisho (16:58) {#leading-the-merge-1658}
+### Kuongoza unganisho (16:58) {#leading-the-merge-1658}
 
 **Mwenyeji:** Jamaa ambaye hakuwa anapenda michezo ya kompyuta kwa sababu alikuwa akiongea na wasichana, alikuwa kwenye bendi, alianzisha biashara ya uchapishaji wa skrini, alifadhili udukuzi wa DAO — aliishia kujiunga na taasisi hii kwa kuwa msaada mwanzoni, na aliishia kimsingi kusanifu labda moja ya mafanikio ya kihandisi ya kushangaza zaidi ya wakati wote. Ulifanyaje Unganisho?
 
@@ -89,7 +89,7 @@ Milango ilikuwa wazi kwa njia ya kuchekesha. Sijahitaji kupitia milango hiyo kwa
 
 Ambayo ilikuwa kiwakilishi cha jinsi muda na umakini wa watu kama Vitalik ulivyo wa thamani — amejikita kwenye mambo mengine. Na niligundua ningeweza kufanya kazi lakini pia ningeweza kufanya mambo ambayo watu wengine hawakuwa wakifanya. Ningeweza kugundua nini kinahitaji kufanyika ili kusogeza haya yote mbele. Vichwa vya watu viko mawinguni, wanafanya kazi kwenye mambo magumu na tata sana. Mtazamo wangu ulikuwa daima, "Ninaweza kufanya nini ili kufanya hili kuwa kweli?" Wakati mwingine nilikuwa nikifanya utafiti, wakati mwingine nilikuwa nikiandika vipimo, na inazidi kuwa kuwasiliana na kuratibu katika mradi mgumu sana.
 
-#### Usawa wa maisha ya kazi na kudhibiti msongo wa mawazo (18:07) {#work-life-balance-and-managing-stress-1807}
+### Usawa wa maisha ya kazi na kudhibiti msongo wa mawazo (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Mwenyeji:** Ulidhibitije msongo wa mawazo?
 
@@ -99,7 +99,7 @@ Nimezama sana kwenye kazi yangu — ninaifikiria sana. Lakini pia najua kwamba k
 
 Matatizo ya kiufundi kamwe si matatizo yanayoleta msongo wa mawazo. Ni nyanja tata ya siasa za kiteknolojia. Watu ndio sehemu ngumu.
 
-#### Kuanzisha Etherealize (20:02) {#co-founding-etherealize-2002}
+### Kuanzisha Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Mwenyeji:** Hivi karibuni ulianzisha Etherealize. Maslahi yako kwa hilo yalitoka wapi? Nini kinakufanya uendelee kufurahishwa nayo, na kwa nini unafikiri kazi hiyo ni muhimu?
 
@@ -117,7 +117,7 @@ Unajifunza kuwa ni shirika la kiraia, kwa hivyo jambo baya zaidi wanaloweza kufa
 
 Kisha nilirudi kwenye Taasisi ya Ethereum, kisha nikaondoka. Kisha Trump akazindua memecoin — mabadiliko ya ghafla kabisa. Kisha nikafikiria kurudi kwenye Taasisi ya Ethereum, na tukafunga mlango huo. Jambo la kwanza la kuvutia lililotua mbele yangu lilikuwa kupata utambulisho kwa Vivek. Nikasema, "Oh — wakati wa dirisha hili, tunaweza kweli kufanya Ethereum ipitishwe." Vivek ana nishati inayokamilishana sana, historia inayokamilishana kutoka kwenye Fedha za Kijadi (TradFi). Nilisema tu, "Sawa, tuifanye. Tufanye uingizaji wa ulimwengu."
 
-#### Kwa nini ulimwengu unahitaji Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
+### Kwa nini ulimwengu unahitaji Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Mwenyeji:** Kwa nini ulimwengu unahitaji Ethereum?
 
@@ -125,7 +125,7 @@ Kisha nilirudi kwenye Taasisi ya Ethereum, kisha nikaondoka. Kisha Trump akazind
 
 Vivek alikuwa na wakati wa "aha" mnamo 2020, akiondoka Wall Street, akijifunza kuhusu Ethereum — "Oh, masoko yote ya mitaji yanapaswa kuboreshwa na Ethereum." Na yuko sahihi. Na ni wakati muafaka.
 
-#### Hoja ya ugatuzi (25:47) {#the-case-for-decentralization-2547}
+### Hoja ya ugatuzi (25:47) {#the-case-for-decentralization-2547}
 
 **Mwenyeji:** Ethereum imejikita sana kwenye ugatuzi, katika kuwa na msimamo wa kati unaoaminika. Kuna ukosoaji huu kwamba unaweza kuacha ugatuzi kwa ajili ya ufanisi, kufanya uingizaji wa watu wengi zaidi leo. Nini majibu yako?
 
@@ -135,13 +135,13 @@ Hiyo itamaanisha mengi kwa benki na taasisi za kifedha. Na itamaanisha mengi kwa
 
 Tuna kazi kidogo ya kufanya kwa upande wa ukubwa — ingawa Pectra inazinduliwa na itaweka msingi wa viwango vikubwa vya ukubwa, pamoja na tabaka la 2 (l2). Pia tuna kazi ya kufanya kubadilika ili mambo haya yasiwe tu itifaki bora zilizogatuliwa, bali bidhaa bora — bidhaa salama, bidhaa rahisi kutumia. Tunapofanya mpito huu, Ethereum kwa kweli ndilo jibu bora la kufanya uingizaji wa ulimwengu.
 
-#### Kutamani watu wawe wema zaidi (27:38) {#wishing-people-were-nicer-2738}
+### Kutamani watu wawe wema zaidi (27:38) {#wishing-people-were-nicer-2738}
 
 **Mwenyeji:** Unatamani watu wengi zaidi wafahamu nini — hata si lazima iwe jambo la kripto — katika ulimwengu wa leo?
 
 **Danny Ryan:** Natamani watu wangekuwa wema kidogo kwa kila mmoja. Na pia kutambua kwamba jambo hili lote la ajabu la jamii ya kisasa — kuwa mwangalifu na kulishughulikia kwa uangalifu. Ni gumu. Limekuwa katika usawa thabiti kiasi. Nafikiri tunaweza kuendelea kuiboresha na tunapaswa, lakini hatupaswi kuitupa yote.
 
-#### Mpito wa uongozi wa Taasisi ya Ethereum na kuchukua msimamo (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Mpito wa uongozi wa Taasisi ya Ethereum na kuchukua msimamo (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Mwenyeji:** Mapema mwaka huu, wakati Taasisi ya Ethereum ilipokuwa karibu kufanyiwa mabadiliko, ulitupwa kwenye uangalizi huu. Nini kilikuwa mmenyuko wako?
 
@@ -149,7 +149,7 @@ Tuna kazi kidogo ya kufanya kwa upande wa ukubwa — ingawa Pectra inazinduliwa 
 
 Nina heshima kubwa sana kwa Aya. Sisi ni marafiki wa karibu, na tulifanya kazi kwa karibu pamoja kwa muda mrefu. Maamuzi mengi aliyoyafanya, nilisaidia kufanya na kuunga mkono na kutekeleza. Kwa hivyo inachekesha kushindanishwa naye katika uwanja wa umma wakati siko tofauti sana naye kifalsafa. Napenda kuwa mkarimu. Napenda kuwatendea watu kwa heshima, hasa katika majukwaa ya umma. Aliumia sana, na hilo si kile nilichotaka kabisa. Kusema kweli, hilo kutokea labda lilikuwa msumari wa mwisho kwenye jeneza kwangu kutorudi — ambayo ni kinyume na kile kundi la watu lililokusudia.
 
-#### Miji ya baadaye na kuwa binadamu katika enzi ya AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Miji ya baadaye na kuwa binadamu katika enzi ya AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Nimekumbuka tu — nikiwa darasa la nane, nilifanya kazi kwenye mradi huu wa Miji ya Baadaye. Mwalimu wangu wa Kiingereza angemchagua mshindi mmoja kutoka darasani na kufanya kazi naye hadi ngazi ya kitaifa. Tulitengeneza mfano mkubwa, tukapanga jiji zima, tukasoma tafiti nyingi, tukaunda jamii ya baadaye. Tulienda ngazi ya kitaifa. Labda hiyo ilikuwa dalili kidogo ya yajayo.
 
@@ -159,7 +159,7 @@ Nina heshima kubwa sana kwa Aya. Sisi ni marafiki wa karibu, na tulifanya kazi k
 
 Ndiyo maana nina matumaini kuhusu mambo ninayofanyia kazi — uingizaji wa mtaji wa taasisi kwenye Ethereum, kufanya masoko haya kuwa bora. Lakini sina matumaini yasiyozuilika ya "ikiwa utajenga tu teknolojia nzuri iliyogatuliwa, ulimwengu utakuwa bora tu."
 
-#### Watoto na siku zijazo (39:00) {#kids-and-the-future-3900}
+### Watoto na siku zijazo (39:00) {#kids-and-the-future-3900}
 
 **Mwenyeji:** Una watoto. Tuseme tusonge mbele miaka ishirini — mambo unayoyaamini yamefanikiwa. Hilo linabadilishaje maisha ya watoto wako?
 
@@ -167,7 +167,7 @@ Ndiyo maana nina matumaini kuhusu mambo ninayofanyia kazi — uingizaji wa mtaji
 
 Tunatumai angalau tuna jamii yenye haki na wazi na huru, kwa kiasi kwa sababu tunaweza kusanifu mifumo mizuri juu ya kripto. Lakini AI ni sababu inayoleta ugumu katika "inakuwaje kuwa binadamu?"
 
-#### Maadili na kuzungumza na taasisi (42:34) {#values-and-speaking-to-institutions-4234}
+### Maadili na kuzungumza na taasisi (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Mwenyeji:** Ni thamani gani moja ambayo hutawahi kulegeza msimamo?
 
@@ -181,7 +181,7 @@ Tunatumai angalau tuna jamii yenye haki na wazi na huru, kwa kiasi kwa sababu tu
 
 **Danny Ryan:** Sina maelezo maalum. Mimi ni mwepesi kubadilika. Ninasoma lugha yao, ninaelewa mahitaji yao ni nini, ninaelewa wanachotaka kujua, na kugundua sehemu sahihi za kuanzia na mifano. Mimi si mpangaji mkubwa.
 
-#### Maisha nje ya kripto (45:12) {#life-outside-crypto-4512}
+### Maisha nje ya kripto (45:12) {#life-outside-crypto-4512}
 
 **Mwenyeji:** Unatazamia nini nje ya teknolojia na kripto?
 
@@ -191,7 +191,7 @@ Tunatumai angalau tuna jamii yenye haki na wazi na huru, kwa kiasi kwa sababu tu
 
 **Danny Ryan:** Ninatumia muda na familia yangu. Ninafanya mazoezi na kucheza nje. Ninapiga kinanda. Na ninafanya kazi yangu.
 
-#### Hadithi ya asili ya mwenyeji — kuacha Optimism kwa ajili ya Taasisi ya Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Hadithi ya asili ya mwenyeji — kuacha Optimism kwa ajili ya Taasisi ya Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Mwenyeji:** Kwa nini uliacha Optimism?
 
@@ -203,7 +203,7 @@ Nilijiunga na Coinbase kama meneja wa bidhaa baada ya chuo. Niliondoka miezi min
 
 Nafikiri sababu iliyonifanya niondoke ni kwamba nilihisi kama nilifanya kila nilichoweza kufanya pale. Taasisi ya Ethereum ni ya kipekee sana kwa kuwa imefanya mengi — imepata ukosoaji mwingi kwa hilo, lakini imefanya mengi kulinda msimamo wake wa kati, kulinda maadili yake. Ninapoenda kuzungumza na mtu, hawafikirii nataka chochote kutoka kwao kwa sababu Taasisi ya Ethereum si kampuni changa. Na nilihitaji changamoto mpya.
 
-#### Kulinda mustakabali wa Ethereum (59:26) {#securing-ethereums-future-5926}
+### Kulinda mustakabali wa Ethereum (59:26) {#securing-ethereums-future-5926}
 
 **Mwenyeji:** Tunahakikishaje kwamba Ethereum haishindwi? Ni mtazamo gani wenye utata zaidi ulionao ili kulinda mustakabali wa Ethereum?
 

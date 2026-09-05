@@ -18,11 +18,11 @@ Uma palestra de **Naomi Brockwell** na EthBoulder 2026 sobre a erosão da privac
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=nvJSFR1Q_JE) publicada pela EthBoulder. Ela foi levemente editada para facilitar a leitura.*
 
-#### Palestra em duas partes: aviso + solução (00:00) {#two-part-talk-warning-solution-0000}
+### Palestra em duas partes: aviso + solução (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Maravilha. Sejam todos bem-vindos. Obrigada por estarem aqui. Então, esta será uma palestra em duas partes. Na primeira parte, pode ficar um pouco intenso. Eu sou conhecida por ficar bem intensa quando se trata de palestras sobre privacidade e vigilância. A segunda parte terá um tom um pouco diferente. Então, na primeira parte, vou contar uma história e, na segunda parte, vamos salvar o mundo. Então, se todos estiverem de acordo com isso, podemos começar.
 
-#### A roupa nova do imperador (00:44) {#the-emperors-new-clothes-0044}
+### A roupa nova do imperador (00:44) {#the-emperors-new-clothes-0044}
 
 Então, ato um. Vamos começar com o ato um da nossa história. O feitiço. Era uma vez um imperador a quem venderam um magnífico conjunto de roupas novas. O vendedor lhe disse: "Essas vestes são especiais. Apenas os inteligentes e virtuosos podem vê-las, e qualquer um que não seja adequado para sua posição não verá absolutamente nada." O imperador não conseguia ver roupa alguma, mas teve medo de admitir. Dizer isso significaria confessar que ele não era digno de governar, então ele não disse nada. E quando o imperador apareceu em público desfilando pelas ruas, ninguém mais conseguia ver as roupas também. 
 
@@ -32,7 +32,7 @@ Então, em sua essência, vamos voltar aqui. Em sua essência, essa história n�
 
 Agora, na nossa história, cada pessoa pensou que talvez ela fosse o problema. Então, eles se submeteram aos seus vizinhos e presumiram que, se algo estivesse realmente errado, outra pessoa teria se manifestado primeiro. Todos se submeteram à sabedoria da multidão. E essa foi uma péssima estratégia porque a multidão estava errada. O imperador estava nu. E como todos permaneceram em silêncio, o consenso substituiu a verdade. O silêncio da multidão se tornou a prova de que tudo estava bem. Agora, é exatamente assim que a privacidade entra em colapso no mundo moderno.
 
-#### A máquina (02:46) {#the-machine-0246}
+### A máquina (02:46) {#the-machine-0246}
 
 Então, ato dois, a máquina. Aqui está a versão moderna da história. Vivemos sob o maior regime de coleta de dados da história humana. Construímos e continuamos a alimentar uma infraestrutura de vigilância diferente de tudo que o mundo já viu antes. E a trajetória para onde estamos indo é uma receita para o desastre. Agora, por que isso? Porque, neste momento, a única maneira de isso terminar bem é se pudermos garantir que alguém mal-intencionado nunca assumirá o controle desse sistema. Mas se alguém mal-intencionado eventualmente assumir o controle, isso é como uma arma atômica de energia potencial cheia de todos os ingredientes necessários para controlar completamente uma população. 
 
@@ -42,13 +42,13 @@ Dá uma sensação de desconforto, certo? E sentimos isso quando um aplicativo p
 
 Sentimos que algo está errado quando lemos por cima uma política de privacidade e sabemos que deveríamos lê-la com cuidado. Provavelmente tem algumas coisas importantes lá. E, na verdade, diz bem ali, preto no branco, que sim, eles com certeza vão compartilhar esses dados íntimos e nós nem sabemos com quem, mas clicamos em aceitar de qualquer maneira porque, afinal, não pode ser tão ruim assim, ou aceitar essas coisas não seria o status quo, certo? Se fosse tão ruim, nem todo mundo estaria simplesmente fazendo isso.
 
-#### Quão ruim é o status quo? (05:12) {#how-bad-is-the-status-quo-0512}
+### Quão ruim é o status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Então, quão ruim é o status quo? Quão ruim é isso tudo, de verdade? Ou talvez devêssemos falar sobre isso porque algumas pessoas acham que se trata apenas de empresas tentando nos vender um par de sapatos melhor. Isso é apenas uma coisa de consumidor, certo? Ou talvez seja apenas sobre empresas de mídia social aprendendo sobre nós para criar um algoritmo mais bem ajustado, certo? Isso não parece tão terrível. Qual é o problema com tudo isso?
 
 Mas, neste momento, estamos todos consentindo com uma máquina de vigilância generalizada que está invadindo silenciosamente todas as áreas privadas de nossas vidas. Agora, em alguns lugares como regimes autoritários, essa máquina é usada para controlar a dissidência antes que ela aconteça, sinalizando pessoas potencialmente problemáticas como mais propensas a se juntar a um movimento de protesto e, em seguida, visando essas pessoas. Às vezes, essa máquina é usada para moldar o sentimento público, influenciar opiniões, manipular eleições ou fazer com que populações inteiras odeiem certos tipos de pessoas, convencendo-as de que esses grupos as odeiam. E então há países que transmitem publicamente informações sobre cidadãos cujas pontuações de crédito social caíram e, em seguida, usam essas pontuações para restringir viagens, limitar seus empregos, bloquear seus filhos de certas escolas ou cortá-los totalmente de oportunidades.
 
-#### Coleta de dados em escala de trilhões de dólares (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Coleta de dados em escala de trilhões de dólares (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 E agora, com a revolução da IA, a máquina deixa de ser apenas um registro da sua vida e se torna um mecanismo de previsão. Então é por isso que isso é importante. Então eu quero tornar isso concreto para você. Então, vou apenas dar uma repassada neste estado de vigilância agora. 
  
@@ -56,7 +56,7 @@ Vou dividir a máquina em três partes. A primeira é a coleta. Como essa inform
  
 Mas digamos que você seja muito sortudo e evite ser alvo desse sistema. Mas seus filhos provavelmente não evitarão, e você não tem ideia se eles vão ou não. E essa maquinaria com a qual você está consentindo hoje, ela não desaparece. Você não sabe quem estará no comando amanhã.
 
-#### Como essas informações são vazadas (08:03) {#how-this-information-is-leaked-0803}
+### Como essas informações são vazadas (08:03) {#how-this-information-is-leaked-0803}
  
 Então, o segundo ponto é como essas informações são vazadas. Todos os anos, o número de violações de dados atinge um novo recorde. Vazando todos os tipos de informações que as empresas nunca deveriam ter coletado em primeiro lugar. Como históricos de localização e registros médicos, dados financeiros, mensagens privadas, e essas informações são expostas na internet, e tudo acaba na dark web para ser usado por cartéis organizados, gangues criminosas e hackers de estados-nação. 
 
@@ -68,7 +68,7 @@ E, no entanto, as empresas ainda decidem coletar todos esses dados desnecessári
  
 Então, esta é a multidão aplaudindo no desfile, certo? Não é porque temos certeza de que cada clique e cada "aceitar" é seguro. É porque se manifestar e optar por não participar ou trocar de ferramentas parece mais difícil do que simplesmente seguir o fluxo.
 
-#### Backdoors e interceptação governamental (09:33) {#backdoors-government-interception-0933}
+### Backdoors e interceptação governamental (09:33) {#backdoors-government-interception-0933}
  
 Então, agora vamos falar sobre esta terceira categoria, a de uso como arma. Operações de inteligência estrangeira hostis já se infiltraram na infraestrutura central de comunicação. Eu estava conversando antes com as pessoas sobre o Salt Typhoon, certo? A China, por exemplo, tem interceptado nossas chamadas e mensagens em grande escala. 
 
@@ -78,7 +78,7 @@ Sabemos que não é possível para os governos garantir que sejam os únicos a a
 
 Sabemos de uma delas, o Salt Typhoon, mas não fazemos ideia de quem tem coletado nossas comunicações sensíveis e íntimas nessa mesma infraestrutura da qual dependemos.
 
-#### Por que a supervisão é mais rara do que você imagina (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Por que a supervisão é mais rara do que você imagina (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Então, o imperador está nu e a única razão pela qual tudo isso persiste é porque a multidão continua aplaudindo. Mas há outra razão pela qual a multidão continua aplaudindo. 
  
@@ -112,7 +112,7 @@ Então, quantas centenas de milhões de pessoas estão usando produtos da Apple 
 
 Há outra apresentação em que o pai de alguém trouxe para casa um daqueles hubs domésticos, certo? Ela decidiu fazer algumas sondagens. Às vezes ela brinca com as diferentes ferramentas da casa e queria descobrir como funciona. E acontece que esse dispositivo de consumo popular que qualquer um poderia comprar estava sendo usado como um hub em uma enorme botnet chinesa. Então o FBI vê uma apresentação. Eles acabam tirando a apresentação do ar e classificando a investigação como sigilosa. Eles não sabiam que isso estava acontecendo, mas foi ela quem chamou a atenção deles apenas fazendo essa apresentação do tipo: "Ei pessoal, encontrei essas coisas estranhas acontecendo". E é assim que descobrimos que uma enorme botnet chinesa está invadindo todas as nossas casas através deste dispositivo específico. E quanto a todos os outros dispositivos em nossa casa que ninguém se deu ao trabalho de sequer olhar ainda?
 
-#### O problema do silêncio e o falso consenso (16:30) {#the-silence-problem-false-consensus-1630}
+### O problema do silêncio e o falso consenso (16:30) {#the-silence-problem-false-consensus-1630}
 
 Então, é exatamente aí que estamos no momento. A vigilância hoje é generalizada, invisível, normalizada e justificada, e nós a consideramos o padrão da indústria. E é exatamente aí que estamos agora.
 
@@ -134,7 +134,7 @@ Então, Eric Schmidt, do Google, tem esta famosa e atroz citação onde ele diz 
 
 Então, observe o que está acontecendo. A privacidade passou a ser enquadrada como culpa e a conformidade passou a ser enquadrada como virtude. As pessoas boas são aquelas que se rendem ao acesso e as pessoas suspeitas são aquelas que fazem as perguntas. E agora, resistir se torna socialmente custoso. Uma vez que você anexa esse rótulo moral ao silêncio, o desfile simplesmente anda sozinho.
 
-#### Como paramos o desfile do imperador? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Como paramos o desfile do imperador? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Vamos voltar à nossa história. A roupa nova do imperador. Enquanto o imperador marcha pela rua com suas roupas novas, a multidão aplaude. Eles admiram o trabalho artesanal. Eles elogiam a elegância. Eles comentam sobre os cortes, o tecido e a maneira como as roupas captam a luz. E eles competem para parecer os mais impressionados. E os cortesãos se inclinam para frente, ansiosos para serem vistos concordando, e os oficiais acenam solenemente com a cabeça, e os conselheiros adicionam floreios de elogios técnicos e inventam detalhes para provar que entendem o que estão vendo, e alguns falam alto esperando serem ouvidos, e outros sorriem e não dizem nada, cuidadosos para não parecerem confusos. E ninguém quer ser o primeiro a hesitar, e ninguém quer ser aquele que faz perguntas óbvias, e a cada elogio a mentira se torna mais difícil de desfazer. 
 
@@ -158,7 +158,7 @@ Então, a maneira como isso muda não é esperando que o imperador pare. É a mu
 
 Agora, quando as pessoas, quando um número suficiente de pessoas parar de aplaudir, o desfile não poderá continuar. E essa é a parte da história que ainda estamos escrevendo aqui. Então, não se trata de saber se o imperador está sem roupas. Todos nós sabemos que ele não tem nenhuma roupa. A única questão que resta é se continuaremos caminhando ao lado dele, fingindo que está tudo bem.
 
-#### Parte dois: vamos salvar o mundo (25:22) {#part-two-lets-save-the-world-2522}
+### Parte dois: vamos salvar o mundo (25:22) {#part-two-lets-save-the-world-2522}
 
 Então, com esse tom meio sombrio, parte dois: vamos salvar o mundo. Quem quer um futuro melhor? Quem quer um futuro melhor para as próximas gerações, para seus filhos? Quem quer mudar as coisas? Porque estamos totalmente capacitados para fazer a diferença. 
 
@@ -312,7 +312,7 @@ Então, toda vez que você estiver nessa encruzilhada, apenas tente ver se é al
 
 Além disso, se os legisladores banirem essas coisas da existência, porque ninguém está lutando por elas, porque todos nós estamos dizendo: "Bem, não tenho nada a esconder." Essas coisas desaparecerão.
 
-#### As escolhas que temos que fazer sobre o futuro que queremos ver (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### As escolhas que temos que fazer sobre o futuro que queremos ver (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Então, vou deixar vocês com essa reflexão, porque acho que nosso tempo está acabando aqui. Neste momento, estamos naquela encruzilhada onde temos que fazer algumas escolhas sobre o mundo que queremos ver. E eu sei que há muitas pessoas que se sentem incomodadas por esses sistemas e parece dar muito trabalho migrar as coisas. 
 

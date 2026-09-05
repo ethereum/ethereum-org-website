@@ -19,13 +19,13 @@ L'informaticien **Amit Sahai**, professeur à la Samueli School of Engineering d
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=fOGdb1CTu5c) publiée par WIRED. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 **Amit Sahai :** Bonjour, je m'appelle Amit Sahai et je suis professeur d'informatique à la Samueli School of Engineering de l'UCLA. Aujourd'hui, on m'a demandé d'expliquer les preuves à divulgation nulle de connaissance en cinq niveaux de complexité croissante.
 
 Une preuve à divulgation nulle de connaissance est un moyen pour un prouveur de convaincre un vérificateur qu'une affirmation est vraie, sans pour autant révéler d'informations supplémentaires au-delà du fait que l'affirmation est vraie. Les preuves à divulgation nulle de connaissance sont utilisées dans les chaînes de blocs et les cryptomonnaies. Les experts en cryptographie sont enthousiasmés par la divulgation nulle de connaissance en raison de ses propriétés mathématiques étonnantes, mais aussi de son incroyable applicabilité à de très nombreux scénarios différents.
 
-#### Niveau 1 : enfant (0:41) {#level-1-child-041}
+### Niveau 1 : enfant (0:41) {#level-1-child-041}
 
 **Amit Sahai :** Quelle est ta matière préférée ?
 
@@ -55,7 +55,7 @@ Alors Chelsea, avec tes propres mots, qu'est-ce qu'une preuve à divulgation nul
 
 **Chelsea :** La preuve à divulgation nulle de connaissance est la preuve d'une affirmation. Vous ne leur montrez pas pourquoi ni quoi. Vous leur montrez juste un tout petit segment, ou vous faites juste une sorte de tour de magie bizarre qui n'est pas vraiment un tour de magie, et ils seront convaincus. Et vous ne leur avez pas montré pourquoi, ni rien de ce genre.
 
-#### Niveau 2 : adolescent (3:31) {#level-2-teen-331}
+### Niveau 2 : adolescent (3:31) {#level-2-teen-331}
 
 **Amit Sahai :** Alors, as-tu déjà entendu l'expression preuve à divulgation nulle de connaissance auparavant ?
 
@@ -85,7 +85,7 @@ Donc, d'après ce dont nous avons discuté aujourd'hui, avec tes propres mots, q
 
 **Teen :** C'est comme si vous aviez un secret très important que vous voulez que quelqu'un connaisse, mais que vous ne voulez pas tout lui dire. Vous pouvez utiliser une preuve à divulgation nulle de connaissance pour lui prouver ce secret, mais sans tout dévoiler.
 
-#### Niveau 3 : étudiant d'université (6:13) {#level-3-college-student-613}
+### Niveau 3 : étudiant d'université (6:13) {#level-3-college-student-613}
 
 **Amit Sahai :** Qu'est-ce que tu étudies ?
 
@@ -131,7 +131,7 @@ Peux-tu choisir deux pays au hasard, et nous révélerons à nouveau deux des co
 
 **Amit Sahai :** Les élections en sont un excellent exemple. Si tu pouvais prouver qu'une élection s'est déroulée correctement (que chaque vote a été compté et que le tout a abouti à la victoire d'une personne avec un total particulier) à divulgation nulle de connaissance, alors tu n'as pas à révéler les votes réels de qui que ce soit. Et pourtant, tout le monde pourrait voir que cela a été fait correctement.
 
-#### Niveau 4 : étudiant de troisième cycle (11:59) {#level-4-grad-student-1159}
+### Niveau 4 : étudiant de troisième cycle (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai :** C'est tellement génial de t'avoir ici et de discuter avec toi, Eli. Peux-tu m'en dire un peu plus sur tes recherches ?
 
@@ -165,7 +165,7 @@ Peux-tu choisir deux pays au hasard, et nous révélerons à nouveau deux des co
 
 **Eli :** Je pense que c'est l'une des raisons pour lesquelles j'ai été si attiré par le calcul multiparti. L'un des problèmes les plus importants au monde est le fait que tant de gens ne se font pas confiance. Pouvoir utiliser les mathématiques pour créer une technologie qui permet aux gens de travailler ensemble sans avoir à se faire confiance est une mission vraiment cool et géniale.
 
-#### Niveau 5 : expert (17:10) {#level-5-expert-1710}
+### Niveau 5 : expert (17:10) {#level-5-expert-1710}
 
 **Amit Sahai :** Shang-Hua, c'est tellement génial de te revoir. Je crois que la dernière fois que nous nous sommes rencontrés, c'était en 2017 ou quelque chose comme ça.
 

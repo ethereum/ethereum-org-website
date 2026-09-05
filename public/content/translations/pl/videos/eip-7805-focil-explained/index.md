@@ -19,7 +19,7 @@ Odcinek 141 **PEEPanEIP** przygotowany przez Ethereum Cat Herders. Do prowadząc
 
 *Ten transkrypt jest przystępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=cUGyLx-mf6I) opublikowanego przez Ethereum Cat Herders. Został on poddany lekkiej redakcji w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:35) {#introduction-035}
+### Wprowadzenie (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Witajcie w PEEPanEIP, jedynym w swoim rodzaju programie, w którym szczegółowo omawiamy Propozycje Ulepszeń Ethereum i badamy ich wpływ na ekosystem. To jest odcinek 141, przygotowany przez Ethereum Cat Herders. Jestem waszą prowadzącą, Pooja Ranjan, a dzisiaj rozmawiamy o EIP-7805, czyli listach włączeń wymuszanych przez wybór rozwidlenia (Fork-choice enforced Inclusion Lists).
 
@@ -33,7 +33,7 @@ W tym odcinku przyjrzymy się szczegółom EIP-7805, jego implikacjom oraz poten
 
 **Pooja Ranjan:** Jesteśmy podekscytowani, mogąc poznać ogólny zarys tej propozycji, jej obecny status oraz to, jak szybko będziemy mogli zobaczyć ją w sieci głównej Ethereum. Zanim jednak zaczniemy, nasza społeczność uwielbia poznawać badaczy i deweloperów stojących za tą pracą. Czy moglibyście opowiedzieć trochę o sobie, projekcie, w który jesteście obecnie zaangażowani, oraz waszej drodze w ekosystemie Ethereum?
 
-#### Przedstawienie gości (2:14) {#guest-introductions-214}
+### Przedstawienie gości (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Jasne, mogę zacząć. Jestem Julian, badacz w Robust Incentives Group, podobnie jak Thomas, w Fundacji Ethereum. Robust Incentives Group zajmuje się bardzo szeroko pojętą ekonomią protokołu. Niektórzy z nas przyglądali się mechanizmom opłat transakcyjnych, takim jak EIP-1559, a inni badali ataki na warstwę konsensusu, głównie te motywowane zachętami ekonomicznymi.
 
@@ -45,7 +45,7 @@ Pracowałem nad podobnymi tematami. Kiedy dołączyłem, temat MEV był dość g
 
 **Pooja Ranjan:** Dziękuję za podzielenie się tym z nami. Poznawanie historii deweloperów jest zawsze inspirujące. To ciekawe, że wywodzą się z różnych dziedzin, a ostatecznie wnoszą wkład w ekosystem Ethereum. Rozumiem, że mamy dzisiaj prezentację. Więc bez zbędnych ceregieli, rzućmy na nią okiem.
 
-#### Prezentacja: cele FOCIL (5:16) {#presentation-goals-of-focil-516}
+### Prezentacja: cele FOCIL (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Doskonale, bardzo dziękuję. Chciałbym zacząć od krótkiej prezentacji na temat tego, jak działa EIP-7805, czyli FOCIL, i dlaczego dokładnie chcemy to wdrożyć. Ma to na celu rozpoczęcie rozmowy, więc nie będę wchodził w zbytnie szczegóły, aby zostawić trochę miejsca na późniejszą dyskusję.
 
@@ -53,7 +53,7 @@ Głównym celem FOCIL jest zwiększenie wiarygodnej neutralności Ethereum. FOCI
 
 Celem wyższego rzędu jest dążenie do właściwości, którą nazywamy neutralnością łańcucha, co oznacza, że każda oczekująca transakcja uiszczająca opłatę powinna zostać włączona, jeśli jest dostępna i jeśli jest na nią miejsce onchain. Wierzymy, że jeśli ta właściwość zostanie w wystarczającym stopniu spełniona, to zwiększymy wiarygodną neutralność Ethereum.
 
-#### Dlaczego potrzebujemy FOCIL i dlaczego właśnie teraz? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Dlaczego potrzebujemy FOCIL i dlaczego właśnie teraz? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Dlaczego potrzebujemy czegoś takiego? Obecnie prawie wszystkie walidatory zlecają budowę bloków do MEV-Boost, który jest rynkiem poza protokołem, gdzie budowniczowie licytują prawa do budowy bloków. Na tym rynku dominują tak naprawdę tylko dwa podmioty, co oznacza, że 90% bloków jest budowanych przez zaledwie dwa podmioty.
 
@@ -65,7 +65,7 @@ Ponadto, based rollupy stają się obecnie coraz bardziej popularne i będą one
 
 Potencjalnie FOCIL mógłby również pomóc w skalowaniu, w zależności od tego, kogo zapytasz. Obecnie Ethereum wciąż czerpie swoją odporność na cenzurę z lokalnego budowania bloków. Jeśli Ethereum będzie mogło czerpać odporność na cenzurę z innego źródła, na przykład poprzez FOCIL, to być może będziemy mogli zwiększyć oczekiwania wobec budowniczych bloków i pozwolić na przykład na więcej blobów. Ale potencjalnie można by to zrobić również bez FOCIL. Dlatego zaproponowano wdrożenie FOCIL w aktualizacji Fusaka.
 
-#### Jak działa FOCIL (8:10) {#how-focil-works-810}
+### Jak działa FOCIL (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Teraz opowiem wam, jak działa FOCIL. Zaczniemy od podstaw i krok po kroku przejdziemy do pełnego mechanizmu, a następnie zbadamy, w jaki sposób ten pełny mechanizm spełnia pożądane przez nas właściwości.
 
@@ -79,7 +79,7 @@ Następnie przechodzimy do ostatniego kroku, którym jest egzekwowanie. Jak już
 
 Podsumowując cały mechanizm: w każdym slocie 16 członków komitetu jest wybieranych jako członkowie komitetu listy inkluzji. Obserwują oni mempool i konstruują obiekty list inkluzji, które rozpowszechniają w globalnym temacie przed upływem terminu, w tym przypadku 9. sekundy. Budowniczy obserwuje te listy inkluzji i włącza wszystkie transakcje, które widział, do swojego bloku. Następnie atestatorzy sprawdzają, czy wszystkie transakcje, które widzieli przed 9. sekundą na listach inkluzji, rzeczywiście znajdują się w bloku. Jeśli to sprawdzenie przebiegnie pomyślnie, głosują na blok i przechodzimy do następnego slotu, gdzie cała procedura powtarza się od nowa.
 
-#### IL Boost i niepodatność na wypychanie (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost i niepodatność na wypychanie (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Jedną z głównych obaw dotyczących list włączeń, wyrażaną w odniesieniu do poprzedniego EIP od Mike'a oraz podczas późniejszych prac rozwojowych, jest „IL Boost”, czyli niepodatność na wypychanie (uncrowdability). Odnosi się to do faktu, że proponujący listy włączeń mogliby chcieć sprzedawać swoje prawa do jej budowania. Jest to bardzo logiczna obawa, ponieważ widzimy, że dzieje się tak w przypadku konstrukcji bloków: sprzedaż tego prawa prowadzi do scentralizowanego rynku zaawansowanych budowniczych.
 
@@ -93,7 +93,7 @@ I wreszcie, te listy włączeń są tworzone na 3 sekundy przed działaniem prod
 
 Z tych powodów uważamy, że żaden pojedynczy proponujący listę włączeń nie ma władzy włączania, porządkowania ani wykluczania, co jest podstawową definicją MEV. Dlatego listy włączeń nie powinny podlegać MEV.
 
-#### Podsumowanie prezentacji (13:09) {#summary-of-the-presentation-1309}
+### Podsumowanie prezentacji (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Podsumowując tę krótką prezentację: FOCIL pozwala wielu walidatorom na udział w budowaniu bloków, zapobiegając monopolowi na włączanie transakcji przez pojedynczego proponującego i wzmacniając wiarygodną neutralność Ethereum. Uważamy, że wdrożenie FOCIL jest teraz konieczne, ponieważ obecnie istnieje tylko dwóch dominujących budowniczych, którzy mogliby w każdej chwili zacząć cenzurować, a mogłoby to wynikać z przyczyn ekonomicznych, z których mogliby czerpać korzyści. Budowanie bloków może nieść ze sobą większy ciężar, ponieważ bazowe rollupy będą chciały korzystać z właściwości sekwencjonowania Ethereum. Wprowadzenie FOCIL przebiegnie znacznie płynniej, gdy będzie niewiele cenzurujących stron: po pierwsze dlatego, że oznacza to, iż domyślnym działaniem dla walidatorów jest tworzenie list włączeń, a po drugie dlatego, że oznacza to mniejszą niestabilność rynku między budowniczymi, którzy cenzurują, a tymi, którzy tego nie robią. I wreszcie, FOCIL może potencjalnie pomóc w skalowaniu, co jest być może tematem, w który możemy zagłębić się bardziej.
 
@@ -101,7 +101,7 @@ Dziękuję za czas na przedstawienie tej krótkiej prezentacji. Chciałem tylko 
 
 **Pooja Ranjan:** Bardzo dziękuję za tę krótką prezentację i omówienie propozycji.
 
-#### Q&A: czym EIP-7805 różni się od EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Q&A: czym EIP-7805 różni się od EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Chciałabym rozpocząć sekcję Q&A od pierwszego pytania, dotyczącego wcześniejszej propozycji, która również została wspomniana w waszej prezentacji: propozycja 7547, listy włączeń (inclusion lists), autorstwa Mike'a Neudera. Chcę zrozumieć podstawową różnicę między tamtą propozycją a FOCIL, który mamy w 7805. W swojej prezentacji częściowo poruszyliście temat IL Boost i uncrowdability (braku możliwości wypychania). Czy moglibyście wyjaśnić to trochę bardziej?
 
@@ -115,7 +115,7 @@ A następnie kilka bardziej technicznych szczegółów: istniały pewne niezgodn
 
 **Pooja Ranjan:** Bardzo dziękuję. Dla osób, które chciałyby dowiedzieć się więcej o propozycji 7547, mamy nagrany odcinek z Mikiem Neuderem, odcinek 130 PEEPanEIP, który zapewnia ogólny przegląd. Zawsze uwielbiam widzieć konkurujące ze sobą propozycje, ponieważ wiem, że służy to poprawie ekosystemu i łańcucha. Widzę na czacie, że jest kilka pytań. Chciałabym zaprosić Katayę do podzielenia się swoim pytaniem.
 
-#### Czy proponujący musi uwzględnić wszystkie 16 list? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Czy proponujący musi uwzględnić wszystkie 16 list? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Witam, dziękuję. Moje pytanie brzmiało: czy proponujący blok otrzymuje 16 list włączeń, po jednej od każdego członka komitetu, i czy musi uwzględnić wszystkie transakcje z tych list?
 
@@ -123,7 +123,7 @@ A następnie kilka bardziej technicznych szczegółów: istniały pewne niezgodn
 
 **Pooja Ranjan:** Następne pytanie na czacie pochodzi od Justina. Justin, czy chciałbyś przeczytać swoje pytanie naszym gościom?
 
-#### Prywatne transakcje z mempoola na listach włączeń (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Prywatne transakcje z mempoola na listach włączeń (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Zadaję tak wiele pytań. Chciałem zapytać, co stoi na przeszkodzie, aby umieścić transakcję z prywatnego mempoola na liście włączeń, i myślę, że to zostało dość dobrze wyjaśnione. Wygląda na to, że jest to całkowicie w porządku, biorąc pod uwagę, że budowniczy i tak uporządkuje je tak, jak uzna to za stosowne, a twoja transakcja staje się publiczna, gdy trafia na listę włączeń (IL). Myślę więc, że ma to sens. Dziękuję.
 
@@ -133,7 +133,7 @@ Więc albo masz publiczną transakcję i możesz po prostu przesłać ją do pub
 
 **Pooja Ranjan:** Dziękuję za podzielenie się tym. Widzę, że kolejne pytanie ma Ladislaus.
 
-#### FOCIL i skalowanie (21:41) {#focil-and-scaling-2141}
+### FOCIL i skalowanie (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Cześć wszystkim. Odnoszę się do kwestii, którą poruszyliście w kontekście FOCIL i skalowania. Ostatnio, jak my wszyscy, widziałem trochę dyskusji na temat skalowania Ethereum i, jak słusznie zauważyliście, istnieje to wąskie gardło w postaci zaledwie kilku budowniczych. Osobiście lubię myśleć o FOCIL jako o ponownym wzmocnieniu lokalnego budowania i uważam, że konieczne jest zapisanie tego w protokole, zanim zwiększymy wymagania dotyczące przepustowości lub ogólne wymagania dla węzłów. Może moglibyście rozwinąć, co o tym myślicie, a także omówić potencjalne inne sposoby na skalowanie, być może bez FOCIL, o czym wspomnieliście.
 
@@ -151,7 +151,7 @@ Dlatego naprawdę chcemy zatrzymać domowych stakerów i lokalnych budowniczych 
 
 **Pooja Ranjan:** Bardzo dziękuję. Myślę, że kolejne pytanie ma Luis.
 
-#### Kryteria wyboru transakcji (26:46) {#criteria-for-selecting-transactions-2646}
+### Kryteria wyboru transakcji (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Dołączyłem kilka minut po rozpoczęciu, ale wygląda mi na to, że to decentralizuje wybór transakcji w sieci jako całości. Moim zdaniem to bardzo dobrze; walczy to z MEV i cenzurą. I zdecydowanie podoba mi się część, w której atestatorzy wykonują to zadanie, ponieważ w przyszłości będą mieli niższe wymagania sprzętowe niż budowniczowie, a tym bardziej dzięki bezstanowości i klientom bezstanowym. Ponieważ będzie można to uruchomić na bardzo słabym sprzęcie, czyni to wszystko bardzo zdecentralizowanym. Myślę, że głównym wyzwaniem jest tutaj zdefiniowanie kryteriów wyboru transakcji dla tych list inkluzji, niezależnie od tego, czy wybierze się opłaty priorytetowe, czy liczbę blobów; jest tak wiele zmiennych. Czy ustaliliście już zestaw kryteriów, które zamierzacie egzekwować?
 
@@ -165,7 +165,7 @@ Jeśli chodzi o regułę inkluzji, to bardzo dobre pytanie. Sporo o tym myśleli
 
 **Luis Pinto:** Okej, dziękuję.
 
-#### Kompatybilność z EIP-7702, ePBS i PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### Kompatybilność z EIP-7702, ePBS i PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Bardzo dziękuję. Z tego, co rozumiem, ta propozycja jest już proponowana do aktualizacji po Pectra, czyli Fusaka. A biorąc pod uwagę, że Fusaka może, ale nie musi, obejmować inne EIP, które są w toku, zastanawiam się, jaki jest status kompatybilności FOCIL w odniesieniu do propozycji takich jak 7702, która dotyczy abstrakcji konta, ePBS i PeerDAS.
 
@@ -175,7 +175,7 @@ Jesteśmy bardzo pewni swego, ponieważ rozmawialiśmy również z zespołami za
 
 **Pooja Ranjan:** Dobrze wiedzieć. Zauważyłam, że Jihoon udostępnił również dokument HackMD, który dodamy do zasobów dla osób, które chciałyby dowiedzieć się więcej o kompatybilności konkretnie z ePBS. I tak, pamiętam z ostatniej rozmowy z Mikiem, że propozycja nie została włączona z powodu braku kompatybilności z abstrakcją konta. Więc dobrze wiedzieć, że to zostało już załatwione.
 
-#### FOCIL i wieloslotowe MEV (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL i wieloslotowe MEV (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** Przeglądałam dokumenty i szczegóły dodane na stronę internetową FOCIL, meetfocil.eth.limo, i dowiedziałam się o terminie zwanym wieloslotowym MEV. Julian wspomniał również, że MEV-Boost ogólnie jest opłacalne, pomimo chęci i wysiłków podejmowanych przez deweloperów, aby utrzymać je na zrównoważonym poziomie. Zastanawiam się, jak FOCIL temu zapobiegnie.
 
@@ -191,7 +191,7 @@ Więc FOCIL rozwiązuje te części wieloslotowego MEV, w których transakcje ni
 
 **Pooja Ranjan:** Bardzo dobrze, dziękuję bardzo za podzielenie się tym. Rozumiem, że trwają intensywne badania mające na celu rozwiązanie kwestii MEV, więc dobrze wiedzieć, że przynajmniej w teorii pomoże to bardziej niż w obecnym scenariuszu.
 
-#### Kompromisy i wyzwania (36:44) {#trade-offs-and-challenges-3644}
+### Kompromisy i wyzwania (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Mam jedno pytanie związane z tym, o czym Thomas wspomniał wcześniej w kontekście ekwiwokacji IL. Zauważyłam, że w sekcji dotyczącej kwestii bezpieczeństwa tej propozycji wymieniono całkiem sporo punktów, takich jak żywotność konsensusu, ekwiwokacja IL oraz konstrukcja ładunku. Co uznałbyś za największy kompromis lub coś, co może wymagać dalszych badań i potencjalnie powstrzymać tę propozycję przed wejściem do kolejnej aktualizacji w obecnej formie?
 
@@ -203,7 +203,7 @@ Mogę być nieobiektywny, ale nie widzę tu dużych kompromisów. Uważam jednak
 
 **Pooja Ranjan:** Dobrze to wiedzieć. W większości propozycji zauważamy, że sekcja dotycząca kwestii bezpieczeństwa nie zawiera żadnych lub zawiera bardzo mało informacji, więc dobrze wiedzieć, że przeprowadzono badania w tym zakresie i jesteśmy świadomi potencjalnych kwestii bezpieczeństwa. Cieszę się, że nie jest to blokada ani potencjalne wyzwanie dla wdrożenia i adopcji w przyszłości.
 
-#### Mechanizmy opłat transakcyjnych dla list włączeń (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Mechanizmy opłat transakcyjnych dla list włączeń (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Mam pytanie dotyczące kilku otwartych kwestii, które znalazłam na samej stronie internetowej, a mianowicie mechanizmu opłat transakcyjnych. Zastanawiam się, czy są jakieś nowości, albo czy chcielibyście podzielić się czymś więcej na temat najlepszego sposobu pobierania opłat i ich dystrybucji za włączenie do listy włączeń.
 
@@ -219,7 +219,7 @@ Nawiązując do wcześniejszej uwagi Luisa, zachęcanie w dużej mierze dotyczy 
 
 **Pooja Ranjan:** Och, to interesujące. Powinniśmy więc z niecierpliwością czekać na pewne dodatkowe propozycje w przyszłości, które ulepszą obecne funkcje FOCIL.
 
-#### Rozmiar listy włączeń (44:16) {#inclusion-list-size-4416}
+### Rozmiar listy włączeń (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Mam jeszcze jedno pytanie. Nie jestem pewna, czy powinno to być częścią obecnej propozycji, ale jestem ciekawa, czy są jakieś nowości dotyczące rozmiaru IL. Listy włączeń prawdopodobnie muszą mieć ograniczony rozmiar, aby zapobiec nadmiernemu zużyciu przepustowości. Czy mamy jakieś dalsze badania lub aktualizacje na temat tego, jak można określić optymalny rozmiar listy włączeń?
 
@@ -229,7 +229,7 @@ Nie wiem, czy jest potrzeba prowadzenia zbyt wielu badań nad dokładnym optymal
 
 W przyszłości można by zwiększyć rozmiar IL, ale można by również rozważyć zwiększenie liczby członków komitetu IL. Pozwala to na jeszcze większe szanse na uzyskanie jednego uczciwego członka komitetu IL, jeśli większość sieci zdecyduje się rozpocząć cenzurowanie. Więc to również jest coś, co moglibyśmy zrobić. Na razie wydaje się, że 16 będzie w zupełności w porządku i wystarczy, ale zdecydowanie można bawić się tymi parametrami w przyszłości, jeśli cenzura stanie się bardzo szalona lub jeśli będziemy musieli podjąć więcej działań.
 
-#### Metryki do śledzenia adopcji (46:39) {#metrics-to-track-adoption-4639}
+### Metryki do śledzenia adopcji (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Mam tu tylko dodatkowe pytanie: czy macie na myśli jakieś metryki, które możemy śledzić, aby zrozumieć adopcję lub sukces tej propozycji?
 
@@ -241,7 +241,7 @@ Myślę, że to tak ważna kwestia, że istotne jest, aby wdrożyć FOCIL wkrót
 
 **Pooja Ranjan:** Bardzo ciekawe. Więc może to coś dla badaczy: potencjalna lista życzeń dla aktualizacji, aby dashboardy i narzędzia do śledzenia metryk były udostępniane przez deweloperów dla danej propozycji, za każdym razem, gdy jest ona włączana do aktualizacji sieci.
 
-#### Status implementacji klienta (49:11) {#client-implementation-status-4911}
+### Status implementacji klienta (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Jak wspomniał Julian, ta propozycja może wymagać wdrożenia tak szybko, jak to możliwe. Jestem ciekawa, na jakim etapie jesteśmy z implementacją w klientach, ponieważ pamiętam, że podczas ostatniego spotkania dotyczącego sieci testowej Paritosh wspomniał o dodaniu pewnego wsparcia dla sieci deweloperskich (devnetów). Więc jak to u nas wygląda?
 
@@ -253,7 +253,7 @@ Ogólnie rzecz biorąc, mamy coraz więcej gotowych i działających sieci dewel
 
 **Pooja Ranjan:** Dziękuję, że się tym podzieliłeś. Z niecierpliwością czekam na kolejne aktualizacje dotyczące sieci deweloperskich. Nie jestem pewna, ile iteracji tego devnetu powstanie, ale cieszę się, że to nadchodzi. Widzę, że Justin ma tutaj pytanie. Justin, proszę, mów.
 
-#### FOCIL w Fusace czy Glamsterdamie? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL w Fusace czy Glamsterdamie? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Okej, zapnijcie pasy. Zwróciłeś uwagę na bardzo ważną rzecz, że najlepszym czasem na rozwiązanie problemu cenzury jest czas, zanim ona w ogóle nastąpi, prawda? Zatem: FOCIL w Fusace, czy może poczekać na Glamsterdam? I za czym powinienem się opowiadać jako deweloper?
 
@@ -265,7 +265,7 @@ Inna rzecz, o której chcę wspomnieć, ponieważ uważam ją za ważną: jeśli
 
 **Pooja Ranjan:** Czasami smutno jest patrzeć, gdy propozycje nie zostają wybrane do następnej lub najbliższej aktualizacji, ale w jednej aktualizacji można uwzględnić tylko ograniczoną liczbę propozycji. Naprawdę doceniam całą ciężką pracę włożoną w zgłoszenie propozycji, jej gotowość, a także testy, które się z tym wiążą. Bardzo dziękuję za całą pracę, którą wykonujecie dla ekosystemu Ethereum.
 
-#### Szybka runda (55:18) {#rapid-fire-5518}
+### Szybka runda (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Zanim skończymy, mamy szybką rundę pytań. Jedynym warunkiem jest to, że odpowiedź powinna składać się z jednego słowa lub jednego zdania, i postaramy się to zrobić z zegarkiem w ręku, może po 30 sekund na każde. Jeśli jesteście gotowi, zacznijmy od Juliana. Jaki jest obecnie najtrudniejszy problem w badaniach nad blockchainem?
 
@@ -317,7 +317,7 @@ Inna rzecz, o której chcę wspomnieć, ponieważ uważam ją za ważną: jeśli
 
 **Pooja Ranjan:** Bardzo dobrze, dziękuję ci bardzo, Thomas. Dziękuję za odpowiedzi na wszystkie te pytania. Zbliżając się do końca, chciałabym dać wam tę możliwość: czy macie jakąś wiadomość dla społeczności na temat tej propozycji, lub ogólnie dla społeczności Ethereum.
 
-#### Wiadomości dla społeczności (58:08) {#messages-to-the-community-5808}
+### Wiadomości dla społeczności (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Właściwie to bardzo ważna kwestia, ponieważ cały czas prowadzimy aktywne dyskusje i wszystko jest publicznie dostępne na Discordzie. Na początku był nacisk, aby wszystko było publiczne, i ludzie faktycznie to robią, z czego bardzo się cieszę. Możecie śledzić dyskusje i postępy na publicznym Discordzie Eth R&D, na kanale inclusion-list. To w zasadzie tam wszystko się teraz dzieje. Możecie też skontaktować się z nami na Twitterze, Telegramie, gdziekolwiek. Śmiało.
 
@@ -325,6 +325,6 @@ Im z większą liczbą osób porozmawiamy i im więcej zaangażujemy, tym lepszy
 
 **Julian Ma:** Dodam tylko, że mam nadzieję, iż udało nam się wzbudzić w niektórych entuzjazm do FOCIL. Jeśli jesteście entuzjastycznie nastawieni, dajcie nam znać. A jeśli nadal macie jakieś pytania, z przyjemnością na nie odpowiemy i mamy nadzieję, że uda nam się was przekonać, że FOCIL to rzeczywiście właściwa droga. Bardzo dziękuję. To była prawdziwa przyjemność tu być i dziękuję za poprowadzenie tej sesji. I oczywiście dziękuję również wszystkim za obecność.
 
-#### Słowa końcowe (59:52) {#closing-words-5952}
+### Słowa końcowe (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Dziękuję. To by było na tyle. Ogromne podziękowania dla Thomasa i Juliana za dołączenie do nas dzisiaj i podzielenie się swoimi spostrzeżeniami na temat EIP-7805. Dziękuję wszystkim uczestnikom; wasze pytania są budujące i pouczające. Dziękujemy za uwagę. Jeśli podobała wam się ta rozmowa, pamiętajcie, aby polubić, zasubskrybować i udostępnić ten odcinek innym entuzjastom Ethereum. W programie PEEPanEIP będziemy wam przybliżać kolejne propozycje EIP i postępy w badaniach. Do zobaczenia następnym razem, mruczcie z zadowolenia ze zdobytej wiedzy i grasujcie po Ethereum razem z Ethereum Cat Herders. Życzę wspaniałej reszty dnia.

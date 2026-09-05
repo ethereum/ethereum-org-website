@@ -20,7 +20,7 @@ Một cuộc thảo luận nhóm với **Benjamin Life** và **Sarah Johnstone**
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=I4xb0rst6SQ) được xuất bản bởi EthBoulder. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu về Chủ nghĩa địa phương Ethereum (0:12) {#introduction-to-ethereum-localism-012}
+### Giới thiệu về Chủ nghĩa địa phương Ethereum (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Xin chào. Các bạn có nghe thấy chúng tôi không? Tuyệt vời. Thật sự rất hào hứng khi được ở đây. Hãy bắt đầu với một vài lời giới thiệu. Tôi là Sarah Johnstone. Tôi là một chuyên gia về nông nghiệp vĩnh cửu, một người ủng hộ vùng sinh học và là một thành viên tích cực của Ethereum. Và tôi thực sự đam mê cộng đồng chủ nghĩa địa phương Ethereum. Tôi rất vui mừng được ở đây cùng Benjamin.
 
@@ -30,7 +30,7 @@ Một cuộc thảo luận nhóm với **Benjamin Life** và **Sarah Johnstone**
 
 **Benjamin Life:** Vâng, thật tuyệt vời khi có một số nhân tố xúc tác của GEL — theo như tên viết tắt — và phong trào chủ nghĩa địa phương Ethereum ở đây. Tôi muốn gửi lời cảm ơn đến Christy và James cùng một vài thành viên khác trong nhóm của họ ở Portland, những người đã tập hợp một nhóm chúng tôi lại với nhau lần đầu tiên. Đó thực sự là nơi tôi gặp Kevin Owocki lần đầu, mặc dù cả hai chúng tôi đều sống ở Boulder. Nó đã xúc tác một lượng lớn và tạo ra một tiền lệ cho cộng đồng chủ nghĩa địa phương Ethereum là gì và những giá trị chung là gì. Nó thực sự đã tập hợp một nhóm những người theo khuynh hướng cánh tả trong lĩnh vực tiền mã hóa, nhưng cũng là một nhóm nhỏ trong cộng đồng Web3 có sự liên kết rõ ràng hơn về các giá trị, mà tôi nghĩ rằng bằng cách đặt cho nó một cái tên và một không gian đã thực sự giúp nhiều người trong chúng ta tìm thấy nhau.
 
-#### Các giá trị và Sự căng thẳng giữa Toàn cầu và Địa phương (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Các giá trị và Sự căng thẳng giữa Toàn cầu và Địa phương (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** Và bạn có phiền khi nói về một số giá trị mà chúng ta nắm giữ trong hệ sinh thái không?
 
@@ -40,7 +40,7 @@ Những người trong chúng ta bước vào không gian này vì các giá tr�
 
 Chủ nghĩa địa phương Ethereum phần nào nằm ở trung tâm của sự mâu thuẫn đó. Thay vì nói rằng đó là cái này hay cái kia — nó không chỉ là siêu địa phương, mặc kệ tài sản chung toàn cầu, cũng không cố gắng tạo ra một lớp điều phối toàn cầu trừu tượng mà không thực sự kết nối một cách có ý nghĩa với cuộc sống thực tế hàng ngày của mọi người. Bằng cách điều hướng sự căng thẳng đó, chúng ta tìm kiếm nơi mà chúng ta có thể đoàn kết toàn cầu. Những gì nhẹ nhàng nên mang tính toàn cầu và được chia sẻ, và những gì nặng nề nên mang tính địa phương và tự quản trị. Chúng ta đang chia sẻ kiến thức và phần mềm mã nguồn mở của mình, nhưng đảm bảo rằng quyền tự quyết của địa phương và các sáng kiến do cộng đồng dẫn dắt đang quản lý cách các giao thức đó được áp dụng ở cấp địa phương.
 
-#### Quỹ Localism và Việc củng cố các giá trị (5:27) {#the-localism-fund-and-consolidating-values-527}
+### Quỹ Localism và Việc củng cố các giá trị (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Vì vậy, tôi rất muốn nghe — năm ngoái chúng ta đã tập hợp vài trăm người trong hai ngày và đó là những cuộc thảo luận rất năng động, sôi nổi. Tôi cảm thấy như có một số phong trào thú vị đã diễn ra ngay lập tức với ETHDenver và sự hình thành của nhóm Region Commons. Bạn nghĩ chúng ta đang làm thế nào với tư cách là một phong trào? Tôi biết bạn đã có một cột mốc quan trọng với Localism Fund.
 
@@ -50,7 +50,7 @@ Tôi nghĩ chủ nghĩa địa phương Ethereum là một nỗ lực để tr�
 
 Về mặt tích cực, chúng tôi vừa phân bổ 150.000 đô la cho 12 chương trình tài trợ địa phương khác nhau đang thử nghiệm một loạt các cơ chế đa dạng, và đó là nhờ Gitcoin và Celo Public Goods. Những câu chuyện đó thực sự thú vị vì chúng ta có các cộng đồng thực tế trên hầu hết mọi lục địa. Chúng ta có một cơ sở khai thác tiền mã hóa bằng năng lượng mặt trời ở Nigeria tài trợ cho giáo dục. Chúng ta có một mạng lưới các doanh nghiệp hợp tác ở Barcelona tạo ra toàn bộ một nền kinh tế và hệ thống tiền tệ song song. Chúng ta có những người ở Colombia đang thực hiện Thu nhập cơ bản vô điều kiện (UBI) tuyệt vời, tạo ra các trung tâm cộng đồng đang phân phát tiền cho những người sống dưới mức nghèo khổ.
 
-#### Tính minh bạch và Phân bổ vốn (10:01) {#transparency-and-allocating-capital-1001}
+### Tính minh bạch và Phân bổ vốn (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** Và ở đây trong không gian này, chúng ta đang làm gì ở Boulder?
 
@@ -64,7 +64,7 @@ Cuối cùng, chúng tôi đã làm việc với layer labs và Jake Hartnell đ
 
 Chúng tôi sử dụng cùng một thuật toán mà Google sử dụng để xếp hạng các trang web dựa trên sức mạnh của các liên kết của chúng để đưa ra một biểu diễn bằng số về tổng lượng niềm tin mà nút đó có trong mạng lưới. Chúng tôi đã có hơn 100 người thực hiện hơn 1.000 chứng thực, và từ đó chúng tôi có thể rút ra 30 người được tin tưởng nhất trong mạng lưới này. Những người đó trở thành người đánh giá các chương trình tài trợ địa phương đã nộp đơn. Mỗi người đánh giá đã xem xét theo các tiêu chí và tổng điểm đã xác định tỷ lệ đối ứng của họ. Vì vậy, chúng tôi đã sử dụng mạng lưới niềm tin dựa trên chứng thực này để phân phối tiền theo ý muốn của mạng lưới các chuyên gia này.
 
-#### Giao thức Ngầm và Công nghệ Xã hội (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### Giao thức Ngầm và Công nghệ Xã hội (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Cảm ơn. Tôi muốn mở rộng cho cả nhóm. Tôi thấy rất nhiều gương mặt quen thuộc ở đây và những người có lẽ đồng cảm với phong trào. Tôi rất muốn nghe từ những người trong khán giả có thể muốn chia sẻ. Có ai từ nhóm đã đưa ra bản tuyên ngôn hôm nay muốn nói một chút về nó không?
 
@@ -86,13 +86,13 @@ Chủ nghĩa địa phương Ethereum là nơi mà những người quan tâm đ
 
 **Benjamin Life:** Đúng vậy. Các công nghệ xã hội.
 
-#### Quyết định xây dựng gì cho tác động toàn cầu (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Quyết định xây dựng gì cho tác động toàn cầu (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **Khán giả:** Xin lỗi, tôi vừa mới vào. Nhưng tôi muốn hiểu, làm thế nào bạn quyết định xây dựng công nghệ mở nào? Con người có thời gian hạn hẹp — làm thế nào bạn quyết định những gì sẽ được xây dựng?
 
 **Sarah Johnstone:** Một trong những lĩnh vực tôi đang dành thời gian hiện nay là bối cảnh viện trợ nhân đạo, bởi vì tình trạng cắt giảm tài trợ viện trợ quốc tế là cực kỳ cấp bách và có hại. Khoảng tám tháng qua, tôi đã nghiên cứu sâu để cố gắng hiểu không gian đó, và thực sự khá hy vọng khi thấy công nghệ từ hệ sinh thái Ethereum và các hệ sinh thái khác được áp dụng vào các bối cảnh thực tế như dân tị nạn và các cộng đồng bị di dời hoặc các khu vực xung đột với thanh toán xuyên biên giới và stablecoin. Tôi cảm thấy khá hy vọng về điều đó. Đối với tôi, đó là những gì tôi đang chọn để dành thời gian của mình.
 
-#### Tính trung lập đáng tin cậy và nguyên tắc bổ trợ (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Tính trung lập đáng tin cậy và nguyên tắc bổ trợ (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Tôi muốn trả lời những gì bạn đã hỏi. Một thứ mà tôi gọi là "tính trung lập đáng tin cậy thông qua thiết kế cơ chế." Tôi thực sự đang làm việc về cách chúng ta có thể phi tập trung hóa các quyết định nhị phân cá nhân — những loại quyết định phá vỡ các cộng đồng khi bạn không thể đạt được đồng thuận và bạn phải phân nhánh hoặc giải tán. Thông thường các nhóm kết thúc ở một trong những lựa chọn đó, và rất hiếm khi một nhóm có hệ thống trao đổi chất hoặc hệ miễn dịch để liên tục đánh giá lại sự liên kết của nó với các giá trị đã nêu của chính nó.
 
@@ -102,7 +102,7 @@ Một trong những cách tôi nghĩ chúng ta có thể làm cho nó dễ dàng
 
 **Benjamin Life:** Hoàn toàn đúng, và điều đó đưa ra một ý tưởng quan trọng khác trong không gian chủ nghĩa địa phương Ethereum, đó là nguyên tắc bổ trợ — ý tưởng này cho rằng việc ra quyết định nên được lồng ghép ở cấp độ địa phương nhất nơi quyết định đó có tác động. Một phần lý do Localism Fund tài trợ cho các chương trình tài trợ thay vì trao các khoản tài trợ trực tiếp cho các dự án là chúng tôi muốn trao 20.000 đô la cho Regenerate Cascadia, một tổ chức phi lợi nhuận có mạng lưới riêng với các quốc gia bản địa và cộng đồng địa phương, và thay vì chúng tôi chọn những dự án nào nên được tài trợ ở đó, hãy trao cho họ toàn quyền tự chủ để xác định cách phân phối những nguồn lực đó. Đó không phải là đùn đẩy trách nhiệm; đó là phân phối quyền tự quyết.
 
-#### Dòng giá trị và Chân lý phổ quát trong Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Dòng giá trị và Chân lý phổ quát trong Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **Khán giả:** Có một chân lý trung tâm nào ở cốt lõi của Ethereum mà tất cả các bạn đang theo đuổi không? Dường như không có sự liên kết về một chân lý phổ quát đằng sau Ethereum so với hệ thống tiền tệ hiện tại. Điều đó có hợp lý không?
 
@@ -116,7 +116,7 @@ Một trong những cách tôi nghĩ chúng ta có thể làm cho nó dễ dàng
 
 Scott Morris, người đã có mặt tại tất cả các sự kiện GEL, là một trong những chuyên gia hàng đầu thế giới về vấn đề này và đã xác định các cách để lách các hạn chế về quy định khi tiền tệ cộng đồng chỉ được gọi là "phiếu giảm giá" (coupon) — nó không phải là tiền, nó chỉ là một phiếu giảm giá. Bạn vẫn có thể có một token đại diện cho một phiếu giảm giá. Tôi không biết liệu lỗ hổng pháp lý đó có đứng vững trước tòa hay không — tôi không phải là luật sư — nhưng có một số câu chuyện thành công về tiền tệ cộng đồng thực sự giữ cho giá trị lưu thông trong cộng đồng địa phương của họ. Tôi rất muốn thấy ai đó thực sự nhận lấy trọng trách đó và tạo ra "Salesforce" của không gian tiền tệ thuộc sở hữu cộng đồng phi tập trung, bởi vì chính sự dễ dàng trong việc tiếp nhận người dùng và tạo ra quản trị xung quanh token đã là một quá trình học hỏi. Tôi coi đó là một trong những điều có đòn bẩy cao nhất mà chúng ta có thể làm, nhưng tôi thực sự không biết ai đang thực sự thúc đẩy nó tiến lên theo cách mà tôi nghĩ nó nên như vậy.
 
-#### Công dân Toàn cầu với Trách nhiệm Địa phương (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Công dân Toàn cầu với Trách nhiệm Địa phương (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **Khán giả:** Rút ra một số ý từ xuyên suốt cuộc trò chuyện — sự căng thẳng giữa giao thức toàn cầu và mạng lưới địa phương. Chúng ta có bạn bè và gia đình phân bố ở các vùng sinh học khác nhau chiếm trọn trái tim chúng ta. Bạn nghĩ thế nào về thực tế là chúng ta di động hơn bao giờ hết, muốn trở thành những người theo chủ nghĩa địa phương, nhưng lại tham gia vào các mạng lưới không phải tất cả đều ở cùng một nơi?
 

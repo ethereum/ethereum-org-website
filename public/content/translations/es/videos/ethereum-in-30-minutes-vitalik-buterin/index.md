@@ -18,7 +18,7 @@ breadcrumb: "Ethereum en 30 minutos"
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=ei3tDRMjw6k) publicada por la Fundación Ethereum. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:02) {#introduction-002}
+### Introducción (0:02) {#introduction-002}
 
 Genial, así que Ethereum en 30 minutos. Esta es una presentación que he dado en básicamente cada Devcon desde el lanzamiento. Lo interesante es cómo, a medida que el ecosistema de Ethereum cambia, y a medida que el protocolo de Ethereum cambia, conforme cambian los tiempos, los contenidos también terminan cambiando bastante. Si retrocedes al equivalente de esto en 2015, escucharás mucho sobre los bloques tío (uncle blocks). Por supuesto, los bloques tío son una característica de la prueba de trabajo (PoW). Ahora tenemos la prueba de participación (PoS), por lo que ya no tenemos bloques tío. Por supuesto, Ethereum ahora también tiene capas 2 (l2), y en aquel entonces esto no contendría capas 2 en absoluto. Ahora sabemos que las capas 2 son la mitad de la historia. Ethereum es, ante todo, un ecosistema en evolución, y los contenidos de esto van a seguir cambiando a medida que cambie la tecnología, y también a medida que el énfasis del ecosistema pase de construir infraestructura básica a poner una gran cantidad de enfoque en las aplicaciones.
 
@@ -30,7 +30,7 @@ Además de esto, Ethereum es una economía en cadena increíblemente grande y di
 
 La capa 2 es la GPU. La capa 2 son todos ustedes en la sala que forman parte de cualquier capa 2. ¿Quién aquí es parte de una capa 2? ¡Yupi! ¿Quién aquí ha usado una capa 2? ¿Quién aquí ha usado la capa 1? Bien, todos somos usuarios aquí. Hay muchas de estas diferentes GPU, y Ethereum, la computadora mundial, es capaz de mantenerse unida porque todas y cada una de estas GPU están conectadas a la máquina de confianza a través de sistemas de pruebas optimistas, pruebas de conocimiento cero, SNARKs, STARKs, plonk, o cualesquiera que sean las palabras de moda. Todos estos sistemas garantizan que la capa 1 sea capaz de verificar sin confianza lo que sucede dentro de las capas 2, y las capas 2 también son capaces de leer sin confianza lo que sucede en la capa 1.
 
-#### Descentralización y diversidad (5:11) {#decentralization-and-diversity-511}
+### Descentralización y diversidad (5:11) {#decentralization-and-diversity-511}
 
 Hay una interacción importante entre estos dos componentes, y juntos conforman el Ethereum que está aquí hoy. ¿Qué es la l1? Es una cadena. Ejecuta la prueba de participación. No se rompe. ¿Qué significa esto? La l1 de Ethereum es una cadena que ha existido en total durante más de nueve años, y ha existido en su forma actual de prueba de participación durante un poco más de dos años. Una de las cosas realmente importantes que debe tener una capa base es evidencia clara de que estás construyendo sobre una capa base que es descentralizada, abierta, robusta y que probablemente mantendrá esos rasgos en el futuro. 
 
@@ -42,7 +42,7 @@ Luego tenemos a los "no identificados". Los no identificados no son un actor, al
 
 Una propiedad que en realidad ha mejorado mucho es la diversidad de clientes. Ethereum hace unos cinco años era básicamente solo Go Ethereum (Geth). Cuando tienes un ecosistema que está dominado por un solo cliente, eso en sí mismo se convierte en un punto central de falla. ¿Quién aquí recuerda los ataques DoS de 2016? Te despiertas a las 5:17 a. m., recibes una llamada de atención al estilo militar, bajas a la sala de guerra y alguien descubrió un error en el cliente. Toda la cadena se detiene. Lo arreglamos, y luego dos o tres días después alguien encuentra otro error. Eso continúa durante todo un mes hasta que finalmente tenemos que hacer una bifurcación dura. Pero durante ese período, la capacidad de Ethereum de tener dos clientes diferentes (en ese momento eran Geth y Parity) básicamente salvó la cadena. Hubo momentos en que un error afectaba a Geth pero no a Parity, y momentos en que un error afectaba a Parity pero no a Geth. Ethereum ganó mucho al tener múltiples implementaciones de software, y esto es algo que a partir de 2024 probablemente esté en su mejor momento en la historia de Ethereum.
 
-#### Múltiples clientes y robustez (10:40) {#multiple-clients-and-robustness-1040}
+### Múltiples clientes y robustez (10:40) {#multiple-clients-and-robustness-1040}
 
 Si observamos los clientes de consenso, que manejan la parte de prueba de participación de Ethereum, y los clientes de ejecución, que manejan la parte de la EVM de Ethereum, podemos ver que el cliente individual con la mayor cuota de mercado es Geth, que ronda el 50 %. ¿Qué pasa si hay un error en cualquier cliente de Ethereum literalmente hoy, en este momento? Comprueba si Ethereum sigue funcionando. Supongo que sí; apostaría un 99,99 % en PolyMarket. 
 
@@ -56,7 +56,7 @@ Hace dos años, este gráfico era peor. La descentralización de Ethereum no sol
 
 Si tienes 32 ETH, o menos si te unes a un grupo, cada vez aparecen más opciones de grupos realmente interesantes, como el staking en escuadrón de Obol, que te permite crear grupos más pequeños con tus amigos. Hay muchas formas diferentes de convertirte en un staker, y si lo haces, pasas a formar parte de esta red de nodos que aseguran la cadena de bloques de Ethereum.
 
-#### Verificación de nodos y escala (15:06) {#node-verification-and-scale-1506}
+### Verificación de nodos y escala (15:06) {#node-verification-and-scale-1506}
 
 Supongo que así es como lo describe la propaganda de la fundación: tiene un lindo elefante. ¡Así que un aplauso para el elefante! Tú también puedes unirte a la red y ayudar a asegurarla. Incluso si no eres un staker, también puedes ejecutar un nodo de Ethereum en tu computadora y verificar voluntariamente la cadena. 
 
@@ -70,7 +70,7 @@ Hacer staking con menos ETH también es un requisito de investigación muy activ
 
 ¿Qué se ejecuta en la l1 de Ethereum? Algunas aplicaciones de alto valor. Muchas finanzas descentralizadas (DeFi) de alto valor se ejecutan en la l1. ENS se encuentra actualmente en la l1, aunque cada vez hace más con las capas 2. Las personas mantienen activos en la capa 1. Además, la capa 1 gestiona las raíces de los bloques, las raíces de estado y los sistemas de prueba para las capas 2. Asegura las capas 2. La capa 1 debe ser lo suficientemente potente como para manejar operaciones entre capas, especialmente en el caso de que falle una capa 2. La diferencia entre una capa 2 y una cadena independiente es que incluso si tu capa 2 sufre un ataque del 51 % o el equipo cierra, la capa 1 sigue ahí para proteger a los usuarios. Los usuarios pueden demostrar su propiedad y estado dentro de la capa 2 y migrarlo de regreso a la capa 1. 
 
-#### Velocidades de l2 y hojas de ruta (20:33) {#l2-speeds-and-roadmaps-2033}
+### Velocidades de l2 y hojas de ruta (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Recientemente, hubo un experimento en vivo con esto. dYdX v3 cerró recientemente, y la gente de L2Beat escribió su propia implementación de software de mecanismo de salida. Sin ninguna participación del equipo de dYdX, los usuarios pudieron tomar cualquier activo que tuvieran dentro de dYdX v3 y llevarlo de regreso a la l1 de Ethereum. Salir de una capa 2 sin la participación del equipo no es solo teoría, es una realidad.
 
@@ -82,7 +82,7 @@ Luego La Fusión. Debido a una interesante peculiaridad matemática, aunque el t
 
 La historia de Ethereum: noviembre de 2013 fue el documento técnico. Julio de 2015 fue el lanzamiento. Alrededor de 2018, Ethereum se decidió por su diseño aproximado para la prueba de participación y el muestreo de disponibilidad de datos. Los artículos originales sobre el muestreo de disponibilidad de datos y la codificación de borrado los escribí en 2017. 
 
-#### Casper y escalado de rollups (25:27) {#casper-and-rollup-scaling-2527}
+### Casper y escalado de rollups (25:27) {#casper-and-rollup-scaling-2527}
 
 Si indagas en GitHub, puedes buscar el directorio llamado `simple_casper` y encontrar contratos escritos en Serpent. ¿Quién aquí recuerda a Serpent? ¿Quién aquí usa Serpent? Quiero decir, creo que Python es realmente hermoso, pero si quieres eso, deberías programar en Vyper. Vyper es realmente genial y ha seguido mejorando bastante. Dentro de ese repositorio en 2017, intentamos hacer una abstracción completa y escribir la lógica de la prueba de participación directamente como un contrato inteligente. Lanzamos una demostración a las 11:20 p. m., hora de Bangkok, el 31 de diciembre de 2017 (queríamos sacar algo antes de Año Nuevo) y la demostración terminó rompiéndose bastante rápido. Eran los primeros días.
 

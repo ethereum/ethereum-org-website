@@ -18,7 +18,7 @@ Ufafanuzi na **Finematics** unaoangazia mustakabali wa fedha zilizogatuliwa (DeF
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=H-O3r2YMWJ4) iliyochapishwa na Finematics. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Karne ya uvumbuzi wa kifedha (0:00) {#a-century-of-financial-innovation-000}
+### Karne ya uvumbuzi wa kifedha (0:00) {#a-century-of-financial-innovation-000}
 
 Mfumo wa kifedha tunaoujua leo ulipitia miongo kadhaa ya maendeleo ya kiteknolojia. Majaribio ya awali ya kufanya fedha ziwe na ufanisi zaidi yalianza mapema miaka ya 1920 kwa kuanzishwa kwa mashine za uhasibu na kadi za kutoboa (punch cards). Hili lilifuatiwa na kuibuka kwa kompyuta kuu (mainframe computers) ambazo ziliharakisha sana mfumo wa kibenki katika miaka ya 1950 na kuendelea.
 
@@ -28,7 +28,7 @@ Kuanzia miaka ya 1990, kutokana na kuongezeka kwa matumizi ya intaneti, uwekaji 
 
 Kisha yakaja mapinduzi ya teknolojia ya kifedha (fintech). PayPal, Robinhood, TransferWise, Revolut, na kampuni nyingine changa za fintech zilielewa mbinu ya kutanguliza teknolojia inayojulikana kutoka kwa kampuni nyingine za teknolojia zisizo za kifedha na kuwapa watumiaji wao ufikiaji usio na mshikemshike wa huduma za kifedha — uzoefu tofauti kabisa ukilinganishwa na miingiliano mibovu ya watumiaji wa benki.
 
-#### Matatizo katika fedha za jadi (2:09) {#problems-in-traditional-finance-209}
+### Matatizo katika fedha za jadi (2:09) {#problems-in-traditional-finance-209}
 
 Licha ya karne ya uvumbuzi, mfumo wa kifedha uko mbali na kuwa mkamilifu:
 
@@ -44,7 +44,7 @@ Miundombinu yote ya kifedha inajumuisha mifumo iliyotengwa iliyojengwa kwa tekno
 
 Hii ndiyo sababu hasa tunahitaji kitu kipya — kitu bora zaidi kinachoweza kushughulikia baadhi ya matatizo haya.
 
-#### DeFi ni nini? (3:58) {#what-is-defi-358}
+### DeFi ni nini? (3:58) {#what-is-defi-358}
 
 Hapa ndipo fedha zilizogatuliwa (DeFi) zinapoingia. Badala ya kutegemea miundombinu ya zamani na isiyo na ufanisi, DeFi hutumia nguvu ya kriptografia, ugatuzi, na mnyororo wa vitalu kujenga mfumo mpya wa kifedha. Mfumo unaoweza kutoa ufikiaji wa huduma za kifedha zinazojulikana sana kama vile malipo, ukopeshaji, ukopaji, na biashara kwa njia yenye ufanisi zaidi, ya haki, na iliyo wazi.
 
@@ -54,7 +54,7 @@ Hapa ndipo fedha zilizogatuliwa (DeFi) zinapoingia. Badala ya kutegemea miundomb
 
 Yote haya yanawezekana kutokana na uvumbuzi wa Bitcoin na Ethereum na teknolojia zao za msingi. Hasa, Ethereum kama jukwaa la mkataba mahiri inaruhusu kuunda programu zozote za kifedha. Kwa sababu ya sifa hizi, Ethereum ikawa mnyororo wa vitalu unaotegemewa kwa idadi kubwa ya shughuli za DeFi.
 
-#### Vipimo vya ukuaji wa DeFi (6:18) {#defi-growth-metrics-618}
+### Vipimo vya ukuaji wa DeFi (6:18) {#defi-growth-metrics-618}
 
 Fedha zilizogatuliwa hivi karibuni zimekuwa zikipata ukuaji mkubwa. Baadhi ya vipimo muhimu:
 
@@ -66,7 +66,7 @@ Fedha zilizogatuliwa hivi karibuni zimekuwa zikipata ukuaji mkubwa. Baadhi ya vi
 
 Hili halikomei tu kwa sarafu za kripto, ambazo zinaweza kubadilikabadilika sana. Sarafu thabiti zinazofuatilia thamani ya sarafu za fiat kama vile dola ya Marekani pia zilipata ukuaji mkubwa katika mfumo ikolojia wa DeFi. Mtaji wa soko wa USDC, sarafu thabiti maarufu katika DeFi, ulitoka chini ya dola bilioni moja mnamo Aprili 2020 hadi zaidi ya dola bilioni sita mnamo 2021. DAI ilitoka chini ya dola milioni 100 mnamo Aprili 2020 hadi karibu dola bilioni mbili mnamo 2021.
 
-#### Matatizo ya ulimwengu halisi ambayo DeFi inasuluhisha (8:00) {#real-world-problems-defi-solves-800}
+### Matatizo ya ulimwengu halisi ambayo DeFi inasuluhisha (8:00) {#real-world-problems-defi-solves-800}
 
 Ili kuelewa pendekezo la thamani la fedha zilizogatuliwa vizuri zaidi, hebu tupitie matatizo machache ya kawaida katika fedha za jadi na tuone jinsi yanavyoweza kushughulikiwa katika DeFi.
 
@@ -80,7 +80,7 @@ Uhasibu — kila rekodi inapatikana hadharani kwenye mnyororo wa vitalu, kwa hiv
 
 Ufikiaji sawa wa huduma za kifedha — itifaki ya DeFi haijali wewe ni nani. Inafuata tu sheria zilizobainishwa mapema ambazo ni sawa kabisa kwa kila mtu.
 
-#### Changamoto za DeFi (10:48) {#challenges-of-defi-1048}
+### Changamoto za DeFi (10:48) {#challenges-of-defi-1048}
 
 Ingawa DeFi inatupa pendekezo la kipekee la thamani, inakuja na changamoto zake. Inaleta jukumu zaidi kwa watumiaji, ambao sasa wanamiliki mali zao kikweli na wanapaswa kuhakikisha wanazihifadhi kwa njia salama. Hakuna msaada mwingi hapa, hasa wakati wa kuingiliana na itifaki mpya za DeFi.
 
@@ -92,7 +92,7 @@ Udukuzi ni changamoto nyingine ya nafasi ya DeFi, na kufanya itifaki fulani — 
 
 Mikopo isiyo na dhamana na rehani ni maeneo makubwa ya fedha za jadi ambayo ni magumu kidogo kutekeleza katika DeFi. Kwa bahati nzuri, tayari kuna itifaki kama Aave zinazochunguza uwezekano tofauti, kama vile ukaimishaji wa mkopo na rehani zilizowekwa kwenye tokeni.
 
-#### Mustakabali wa fedha (12:38) {#the-future-of-finance-1238}
+### Mustakabali wa fedha (12:38) {#the-future-of-finance-1238}
 
 Licha ya changamoto, DeFi ni uvumbuzi wa kipekee wa kuanzia sifuri hadi moja (zero-to-one), na kutatua baadhi ya changamoto hizi ni suala la muda tu. Kwa hivyo nini kitatokea kwa fedha za jadi ikiwa DeFi itaendelea kuvumbua na kukua kwa kasi hii kubwa?
 

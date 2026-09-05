@@ -19,7 +19,7 @@ Um debate entre **Lyn Alden** e **Justin Drake** sobre as compensações fundame
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=1m12zgJ42dI) publicada pelo Bankless. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução (0:00) {#introduction-000}
+### Introdução (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Bem-vindos ao Bankless, onde exploramos a Frontier do dinheiro da internet e das finanças da internet. Aqui é Ryan Sean Adams, estou aqui com David Hoffman, e estamos aqui para ajudá-lo a se tornar mais bankless. Pessoal, vocês vão adorar o programa de hoje. Temos dois especialistas em Prova de Participação (PoS) e Prova de Trabalho (PoW), e eles estão debatendo qual é melhor para criar um sistema monetário global — um sistema de criptomoeda — Prova de Trabalho (PoW) ou Prova de Participação (PoS). Lyn Alden e Justin Drake no episódio de hoje. Vamos falar sobre algumas coisas. Número um: qual oferece a maior segurança econômica, Prova de Trabalho (PoW) ou Prova de Participação (PoS)? Número dois: qual oferece a melhor dissuasão e capacidade de recuperação diante do temido ataque de 51%? Número três: qual minimiza o poder de governança para as elites — qual é mais "poder para o povo"? Número quatro: qual é o sistema economicamente mais justo para se participar? E número cinco — este é pessoalmente o meu favorito — esta conversa sobre a Prova de Trabalho (PoW) ser mais um dinheiro de commodity e a Prova de Participação (PoS) ser mais um dinheiro de patrimônio (equity).
 
@@ -29,7 +29,7 @@ Um debate entre **Lyn Alden** e **Justin Drake** sobre as compensações fundame
 
 **Justin Drake:** Estou ótimo, obrigado novamente por me receberem, pessoal.
 
-#### Enquadrando o debate: prêmio monetário (7:30) {#framing-the-debate-monetary-premium-730}
+### Enquadrando o debate: prêmio monetário (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Quero começar com a grande questão. Acho que estamos tentando responder à meta-questão de se a Prova de Trabalho (PoW) ou a Prova de Participação (PoS) é mais favorável ao acúmulo de prêmio monetário — basicamente qual desses dois protocolos de consenso é mais favorável para tornar uma criptomoeda um dinheiro. Justin, você concorda que este é o enquadramento correto?
 
@@ -41,7 +41,7 @@ Um debate entre **Lyn Alden** e **Justin Drake** sobre as compensações fundame
 
 **Justin Drake:** Quero intervir e argumentar por que essa analogia com ações (equity) e Prova de Participação (PoS) talvez seja uma analogia ruim. No contexto de ações, você tem o direito de voto em qualquer coisa — você pode mudar completamente as regras da empresa. No consenso de Prova de Participação (PoS), os participantes do consenso não podem simplesmente mudar as regras arbitrariamente. Eles não podem dizer "vamos simplesmente dar a nós mesmos mil ETH cada" — isso seria uma transação inválida. Em última análise, os participantes do consenso estão subordinados à comunidade, e essa é uma enorme diferença em relação às ações.
 
-#### Dinheiro de commodity vs. dinheiro de patrimônio (10:06) {#commodity-money-vs-equity-money-1006}
+### Dinheiro de commodity vs. dinheiro de patrimônio (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, você quer continuar com essa conversa sobre a Prova de Trabalho (PoW) como commodity e a Prova de Participação (PoS) como patrimônio (equity)?
 
@@ -53,7 +53,7 @@ Um debate entre **Lyn Alden** e **Justin Drake** sobre as compensações fundame
 
 **Lyn Alden:** Acho que há algum grau de espectro, mas na maior parte é uma rua de mão única. Existem várias maneiras de se tornar uma ação, mas muito poucas maneiras de se tornar uma commodity. As commodities, por sua natureza, são um tanto raras e imutáveis. As maneiras de criar uma verdadeira commodity no mundo digital são extremamente limitadas.
 
-#### Ataques de 51%: dissuasão e recuperação (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Ataques de 51%: dissuasão e recuperação (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Quero comparar a Prova de Trabalho (PoW) e a Prova de Participação (PoS) sobre qual é menos suscetível a ataques de censura. Uma das enormes vantagens da Prova de Participação (PoS) é que a camada social tem ferramentas para intervir. Na Prova de Trabalho (PoW), se um invasor de ataque de 51% entra, ele coleta cada pedaço de recompensa, cada pedaço de emissão, cada taxa de transação. Os mineradores honestos desligam porque não faz sentido gastar eletricidade sem renda. Então eles querem liquidar, vendendo seu hardware. O invasor pode comprar esse hardware a preço de banana e se reforçar. Mesmo que a comunidade consiga um contra-ataque, levaria meses, senão anos, para se organizar.
 
@@ -65,7 +65,7 @@ Quando se trata de segurança, não se trata apenas de ataques de 51% — trata-
 
 Para se recuperar de ataques de 51%: a única maneira na Prova de Participação (PoS) é fazer uma bifurcação leve (soft fork) e tomar o capital das pessoas. Se você formular isso como tomar o capital do invasor, parece bom. Mas o invasor pode ser um custodiante regulamentado — você está tomando capital de pessoas que não tiveram nada a ver com o ataque.
 
-#### Complexidade, bugs e diversidade de clientes (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Complexidade, bugs e diversidade de clientes (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** A complexidade não é necessariamente um mal. A humanidade prospera com ela. Em termos de complexidade da Prova de Participação (PoS) — sim, é mais complexa, pelo menos 10x, talvez 100x. Mas é uma complexidade que a este ponto nós domamos. Temos cinco clientes diferentes que implementaram o protocolo, cada um com pequenas equipes de cinco a dez pessoas. A diversidade de clientes permite que a comunidade compre um seguro contra bugs.
 
@@ -75,7 +75,7 @@ Sobre o tópico de estar continuamente online — o que chamamos de subjetividad
 
 Olhando para a direção da Prova de Trabalho (PoW) a longo prazo, você verá uma integração crescente entre mineradores e produtores de energia. A rede elétrica naturalmente tem que superproduzir eletricidade. Os sistemas de Prova de Trabalho (PoW) são um balanceador de carga muito bom para energia ociosa. A fonte de eletricidade mais barata é a energia ociosa de custo virtualmente zero. Neste momento, a maior instalação de mineração de Bitcoin do mundo tem cerca de 1% da taxa de hash total — já é estruturalmente descentralizada.
 
-#### Justiça e o argumento "os ricos ficam mais ricos" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Justiça e o argumento "os ricos ficam mais ricos" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Na Prova de Participação (PoS), você tem justiça perfeita — você coloca uma unidade de capital e recebe exatamente a mesma quantidade de recompensas, não importa quão grande ou pequeno seja. Na Prova de Trabalho (PoW), os peixes grandes têm vantagens injustas. Se você é um minerador de varejo comprando uma máquina, você está pagando 2x, 3x, 4x, 5x a mais em relação aos mineradores profissionais que compram no atacado. Por causa da lei de Moore, os invasores que querem atacar têm uma vantagem — eles podem escolher o hardware mais recente e de ponta. Para eles, o preço da eletricidade é amplamente irrelevante, porque um ataque de 51% só precisa ser executado por um dia ou uma semana. 99% do custo está nas máquinas e na infraestrutura, não na eletricidade.
 
@@ -85,7 +85,7 @@ O fato de a Prova de Trabalho (PoW) ser inerentemente injusta cria vantagens par
 
 Na Prova de Trabalho (PoW), você está essencialmente alugando sua capacidade de governar o sistema. Suas máquinas se degradam, sua fonte de energia pode se tornar menos eficiente, seu hardware se torna menos de ponta. É uma série constante de decisões, em vez de um sistema que beneficia inerentemente as pessoas que compraram primeiro. Não importa quanto Bitcoin Michael Saylor tenha, ele tem zero controle sobre quais transações são processadas.
 
-#### Prova de Trabalho como "Prova de Participação com etapas extras" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Prova de Trabalho como "Prova de Participação com etapas extras" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Não conheço ninguém — e estou neste espaço há quase uma década — que minere Bitcoin como indivíduo a esta altura. É tudo industrial. Por outro lado, com a Prova de Participação (PoS), todos nesta chamada — talvez exceto você, Lyn — estão fazendo staking como indivíduos. A diversidade na Prova de Participação (PoS) é muito, muito maior. A barreira de entrada é muito menor — você basicamente só precisa de um computador funcionando 24 horas por dia, 7 dias por semana.
 
@@ -97,11 +97,11 @@ Sobre o argumento "os ricos ficam mais ricos" na Prova de Participação (PoS): 
 
 Sobre a diversidade de clientes — pelo menos da última vez que verifiquei, o maior cliente tem cerca de 84% dos clientes Ethereum. Você tem algum grau de diversificação, mas também é uma ilusão parcial. Na prática, uma das principais coisas que protege contra bugs é ter a base de código mais simples possível.
 
-#### NIST, quântica e fundamentos de longo prazo (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, quântica e fundamentos de longo prazo (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Se queremos ser a internet do dinheiro, precisamos de uma escala de tempo na ordem da própria internet — décadas, senão séculos. A complexidade é algo que tem uma meia-vida de talvez um ano — ela pode ser domada e fortalecida. Com o tempo, à medida que muito valor é garantido, os sistemas podem ser confiáveis. Os bugs serão corrigidos, o sistema se fortalecerá. O que devemos observar são os fundamentos de longo prazo. Acontece que a Prova de Trabalho (PoW) será completamente interrompida pela computação quântica nos próximos 20 a 30 anos. Sim, existem preocupações de curto prazo com a complexidade, mas se você diminuir o zoom e focar nos fundamentos, há razões fundamentais para ser pessimista em relação à Prova de Trabalho (PoW).
 
-#### O argumento histórico do dinheiro de commodity (1:00:34) {#the-commodity-money-historical-argument-10034}
+### O argumento histórico do dinheiro de commodity (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, você meio que assumiu a liderança como uma comentarista macro com foco nos mercados de commodities. Os Bitcoiners tendem a focar nas propriedades de commodity e em como o Bitcoin consome energia como uma commodity. Isso é em parte um argumento moral — de que o dinheiro de commodity é simplesmente um dinheiro mais adequado para o mundo?
 
@@ -113,13 +113,13 @@ Com o tempo, isso tende à centralização. À medida que a dívida se acumula, 
 
 **Lyn Alden:** Eu pessoalmente abordo isso de uma perspectiva de risco tático. Qual é o sistema com menor probabilidade de ter riscos de cauda? O que é otimizado para o que está tentando fazer? Quando se trata do argumento de justiça, em parte isso se mistura com coisas diferentes — Prova de Trabalho (PoW) versus Prova de Participação (PoS) sendo um aspecto, e a escassez de tokens sendo outro.
 
-#### O motor de escassez vs. o motor de liquidez (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### O motor de escassez vs. o motor de liquidez (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** A Prova de Trabalho (PoW) e a Prova de Participação (PoS) de uma perspectiva de meme são quase o exato oposto. Com a Prova de Participação (PoS), você tem o que chamo de motor de escassez — um mecanismo para transformar ETH líquido em ETH congelado usado como colateral. Minhas projeções dizem que cerca de metade de todo o suprimento de ETH eventualmente estará em staking. Para a Prova de Trabalho (PoW), é o oposto — a emissão e as taxas de transação que os mineradores ganham precisam ser vendidas para cobrir despesas com eletricidade e hardware. Você criou um motor de liquidez, constantemente despejando no mercado. Se você perguntar qual é o melhor sistema para criar dinheiro para a internet — aquele que está constantemente despejando ou aquele que incentiva as pessoas a manter (hold) — acho que é óbvio qual é mais valioso de uma perspectiva de meme.
 
 **Lyn Alden:** Quanto mais um sistema tenta fazer, pior ele será em qualquer coisa. À medida que o Ethereum tentou endurecer sua política monetária, ele indiscutivelmente perdeu participação de mercado em finanças descentralizadas (DeFi) — de 97% do valor total bloqueado (TVL) no final de 2020 para 55% agora. Até agora, o Bitcoin não tem realmente concorrência de outros sistemas. Os breves períodos de concorrência — memes do Dogecoin, Bitcoin Cash — desaparecem com o tempo. Um mundo é baseado em governança e em tornar seu ecossistema atraente. O outro se resume a qual é o mais duro — qual é o melhor em ser dinheiro.
 
-#### Governança, imutabilidade e autossoberania (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Governança, imutabilidade e autossoberania (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** No mínimo, um sistema de Prova de Participação (PoS) dá aos detentores das unidades mais voz sobre quais transações são processadas e quais são censuradas. Mas quem pode mudar o protocolo e como — isso vai além do debate Prova de Trabalho (PoW) vs. Prova de Participação (PoS). Você pode ter sistemas de Prova de Trabalho (PoW) que se parecem mais com ações — com bombas de dificuldade ou blocos super grandes para que as pessoas não possam executar seu próprio nó.
 
@@ -129,13 +129,13 @@ O meme do Bitcoin é a autossoberania. Você executa seu próprio nó, os nós s
 
 **Lyn Alden:** Com dinheiros de commodity, os produtores raramente têm muito controle. O ouro tem uma relação estoque-fluxo muito alta — os mineradores de ouro não têm virtualmente nenhum controle sobre o sistema. Isso tem sido verdade no ecossistema do Bitcoin. Durante as guerras do tamanho do bloco, a maioria dos mineradores favoreceu o aumento do bloco e ainda assim não conseguiu aprová-lo. Os operadores de nó o rejeitaram. Essa combinação de divisão de poderes — onde você pode simplesmente executar um nó e se tornar autossoberano, e separadamente a mineração lhe dá a capacidade temporária de ordenar transações, mas nenhuma alocação permanente — é o que mantém um sistema descentralizado.
 
-#### A refutação de "os ricos ficam mais ricos" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### A refutação de "os ricos ficam mais ricos" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Sobre "os ricos ficam mais ricos" na Prova de Participação (PoS) — eu vejo isso como preservação de riqueza, não multiplicação de riqueza. Ao fazer staking, você está pagando um custo de oportunidade de cerca de 3% e sendo compensado. No fim das contas, você está fazendo preservação de riqueza. Os mineradores profissionais fazem a mesma coisa — eles protegem o risco com futuros, garantindo retornos que correspondem aproximadamente ao custo de oportunidade. Na verdade, a Prova de Trabalho (PoW) é apenas Prova de Participação (PoS) com etapas extras. O risco pode ser removido com produtos financeiros e, no final das contas, você tem essencialmente o mesmo produto financeiro.
 
 **Lyn Alden:** O que torna um sistema de commodity descentralizado é a combinação de nós pequenos e mineração separada. Não importa quanto Bitcoin alguém possua, eles têm zero controle sobre a ordenação de transações. Essa é a divisão de poderes. Se você vai se aproximar da imutabilidade no mundo digital o máximo possível, você está projetando um sistema que é muito descentralizado, muito difícil de forçar mudanças, com nenhuma mudança ou mudanças opcionais (opt-in). Qualquer coisa que se desvie desse modelo — adesão forçada contínua de uma pequena equipe de desenvolvedores, centros de desenvolvimento, fundações — é inerentemente mais parecida com ações, independentemente do mecanismo de consenso.
 
-#### Considerações finais (1:30:42) {#closing-arguments-13042}
+### Considerações finais (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Esta foi uma conversa fantástica. Esta foi provavelmente a melhor conversa sobre Prova de Participação (PoS) versus Prova de Trabalho (PoW) da história. Hora das considerações finais. Justin, por que a Prova de Participação (PoS) é a melhor maneira de criar um dinheiro cripto?
 
@@ -151,7 +151,7 @@ Se você estivesse projetando uma blockchain para maximizar as propriedades mone
 
 Quando se trata de dinheiro adequado para colocar sua tesouraria corporativa, alocar parte de sua doação (endowment) ou manter 10% ou mais de seu patrimônio líquido — ou gerenciar reservas soberanas representando décadas de superávits comerciais acumulados — historicamente o melhor tem sido o ouro. Agora temos novos concorrentes. Você selecionaria o mais descentralizado, o mais imutável, aquele que não sacrifica nenhuma dessas características. Isso não significa que outros sistemas não sejam valiosos — só porque o ouro tem valor não significa que as ações da Tesla não tenham. São coisas diferentes fazendo coisas diferentes. O dinheiro perfeito está disposto a sacrificar quase tudo o mais para ter os atributos perfeitos do dinheiro — cujo objetivo principal é ser mantido e ocasionalmente transacionado, em comparação com algo que tenta ser um canivete suíço.
 
-#### Conclusão (1:40:14) {#wrap-up-14014}
+### Conclusão (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Quero mais uma vez agradecer a Lyn Alden e Justin Drake por se juntarem a nós e terem o melhor debate que já ouvi sobre Prova de Trabalho (PoW) versus Prova de Participação (PoS). Também um agradecimento especial a Lyn por entrar no que alguns podem perceber como o "time visitante".
 

@@ -17,7 +17,7 @@ Une présentation de **Peter Van Valkenburgh**, directeur exécutif de Coin Cent
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=GQML0c1_4Gs) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 C'est une grande scène avec une longue marche et je suis de la vieille école, j'en ai bien peur, donc j'ai un discours écrit, mais j'espère que vous l'apprécierez. Merci de m'avoir invité. Coin Center, mon organisation, existe depuis 11 ans. Nous défendons les développeurs et les utilisateurs de Bitcoin, d'Ethereum et des technologies de cryptomonnaie ultérieures contre les réglementations gouvernementales inappropriées à Washington DC. Nous savons reconnaître les menaces quand nous les voyons. Il y a donc un peu plus de 9 ans aujourd'hui, je me tenais sur la scène à Shanghai lors de la deuxième DevCon d'Ethereum et j'ai mis en garde contre les dangers des ICO. C'était d'ailleurs la présentation d'ouverture de la deuxième DevCon. Nous sommes en 2016. C'est juste au début de ce qu'on a appelé le boom des ICO. C'était bien avant que Gary Gensler ne soit à la SEC. C'était avant que quiconque n'ait reçu un avis Wells. C'était même avant le piratage de The DAO, qui, si vous vous en souvenez ou si vous étiez là à l'époque, a déclenché le rapport sur The DAO de la SEC au début de leur enquête et de leurs poursuites contre des personnes dans la crypto.
 
@@ -27,7 +27,7 @@ Les Américains peuvent utiliser la technologie. Et peut-être plus important en
 
 C'est un développeur de logiciels. Et il poursuit le ministère de la Justice devant un tribunal du Texas pour obtenir un jugement déclaratoire stipulant que la publication de logiciels pour la confidentialité n'est pas un crime et ne nécessite pas de licence aux États-Unis. Vous ne savez donc peut-être pas grand-chose sur moi ou
 
-#### La confidentialité est existentielle (3:15) {#privacy-is-existential-315}
+### La confidentialité est existentielle (3:15) {#privacy-is-existential-315}
 
 sur Coin Center, mais j'espère que vous savez que vous devriez me faire confiance lorsque je tire la sonnette d'alarme, lorsqu'une alarme est justifiée. Si nous voulons réussir à construire et à maintenir une infrastructure financière libre et ouverte, nous devons avancer prudemment. Et c'est pourquoi je veux parler aujourd'hui de la confidentialité. La confidentialité est existentielle pour Ethereum. La confidentialité n'est pas une surface d'attaque réglementaire. Je ne vais pas me tenir ici et vous dire de ne pas développer la confidentialité comme je vous ai dit de ne pas faire d'ICO en 2016.
 
@@ -35,7 +35,7 @@ La confidentialité est en fait un moyen de réduire la surface d'attaque. Et le
 
 Et pour vous le prouver, l'affaire sur laquelle je veux attirer votre attention aujourd'hui n'est pas une poursuite pour violation de la loi sur les valeurs mobilières. Ce n'est même pas une poursuite pour blanchiment d'argent ou financement illicite. Il s'agit de la valeur extractible par le mineur (MEV). Mais avant d'en arriver là, parlons brièvement de Frankenstein. Comme l'a dit le bon docteur, combien l'acquisition du savoir est dangereuse, et combien est plus heureux l'homme qui croit que sa ville natale est le monde, que celui qui aspire à devenir plus grand que sa nature ne le permet.
 
-#### Mary Shelley et le cliquet à sens unique de la connaissance (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley et le cliquet à sens unique de la connaissance (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Voici ce que je pense que Mary Shelley dit dans ce roman. La confidentialité ne concerne pas seulement la dignité humaine. Il s'agit de l'absence efficace de connaissance. Tout comme il serait difficile de vivre sa vie sous une surveillance constante, avec tout le monde envahissant toujours votre confidentialité, il serait également difficile de vivre sa vie avec une connaissance intime et constante des affaires privées de tous les autres. Vous envahissant constamment la confidentialité de tous les autres. Pourquoi cela ? Parce que devenir omniscient sans omnipotence, tout voir sans avoir la capacité de tout réparer, rend les humains fous. Cela détruit notre humanité par l'inquiétude, l'orgueil démesuré et la recherche du contrôle sur l'incontrôlable.
 
@@ -45,7 +45,7 @@ Il ne s'agit pas de preuve de travail (PoW). Il ne s'agit pas de chaînes de blo
 
 Le coût de la médiation augmente les coûts de transaction, limitant la taille minimale pratique des transactions et coupant la possibilité de petites transactions occasionnelles. Et il y a un coût plus large, la perte de la capacité d'effectuer des paiements irréversibles pour des services irréversibles. Avec la possibilité d'annulation, le besoin de confiance se propage. L'objectif de Satoshi était donc en fait la neutralité tout autant que l'irréversibilité. La capacité d'annuler est pour lui l'origine des énormes coûts de transaction associés à la confiance. Il ne l'a pas dit explicitement dans le livre blanc,
 
-#### Le coût de la médiation des litiges (7:50) {#the-cost-of-mediating-disputes-750}
+### Le coût de la médiation des litiges (7:50) {#the-cost-of-mediating-disputes-750}
 
 mais je pense que ce qu'il entend par médiation des litiges, c'est aussi la surveillance de la fraude, la lutte contre la criminalité, l'obéissance aux lois et aux pouvoirs des États-nations, et le contrôle des personnes. Nous parlons souvent de l'inefficacité informatique des chaînes de blocs, et elles le sont. Même l'effort informatique monumental consistant à vérifier globalement les signatures numériques sans parallélisation fait pâle figure en comparaison de l'inefficacité inhérente à un litige humain sur la valeur morale de chaque transaction et sur la question de savoir si elle doit être incluse dans la chaîne.
 
@@ -57,7 +57,7 @@ Il vaut mieux qu'ils ne puissent même pas prendre conscience de leur pouvoir. I
 
 Non. Le meilleur argument en faveur de la confidentialité est que la neutralité des validateurs en dépend, car la neutralité par la décentralisation ne suffira jamais. La neutralité exige l'aveuglement. Je suggérerais humblement qu'il y a
 
-#### Deux règles de la connaissance et du pouvoir (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Deux règles de la connaissance et du pouvoir (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 deux règles fondamentales de la connaissance et du pouvoir dans les chaînes de blocs. La première règle : rien de transparent ne reste neutre. Un registre visible deviendra un registre médiatisé. Il sera médiatisé par l'intérêt personnel de puissants validateurs, par le biais de manipulations intéressées comme la valeur extractible par le mineur (MEV). Il sera médiatisé par la pression hors chaîne d'entités puissantes comme les entreprises et les États-nations par l'imposition d'obligations légales et de responsabilités en cas de non-respect de ces obligations. Si un validateur a ne serait-ce qu'une petite quantité de pouvoir, on l'obligera à exploiter ce pouvoir. Un monde cartographié est un monde qui sera découpé.
 
@@ -69,7 +69,7 @@ Oui, mon organisation, Coin Center, sera toujours là pour lutter contre les ten
 
 Les pools de confidentialité sont une approche judicieuse pour limiter cette menace. Essayez du mieux possible de refuser aux mauvaises personnes l'accès au bon outil neutre, mais notez que l'outil cesse d'être neutre. Et même alors, parfois, quiconque fournit l'ensemble d'anonymat pour ce pool ne parviendra pas à refuser aux mauvaises personnes l'accès à cet outil. Et la transaction d'intégration de ces mauvaises personnes restera visible sur la couche 1 (l1). Et ce sera une munition puissante pour nos adversaires.
 
-#### L'affaire Pereira Bueno et la MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### L'affaire Pereira Bueno et la MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Mais l'affaire qui me convainc vraiment du besoin urgent de confidentialité sur la couche de base n'est pas Tornado Cash. C'est une autre affaire dans le district sud de New York, l'affaire Pereira Bueno. Deux frères sont accusés de fraude électronique criminelle. Ils ont trouvé un moyen d'utiliser le logiciel MEV-Boost pour mener une attaque sandwich contre d'autres utilisateurs de MEV-Boost qui prenaient eux-mêmes en sandwich des utilisateurs ordinaires d'Ethereum. Ils ont gagné plus de 20 millions de dollars en faisant cela. Ils n'ont menti à personne ni fait de fausses déclarations à des partenaires de relations fiduciaires ou contractuelles. Néanmoins, les procureurs du district sud de New York pensent qu'ils sont coupables de fraude électronique, un crime fédéral, parce qu'ils ne sont pas, je cite, un « validateur honnête ».
 
@@ -77,7 +77,7 @@ Lorsque ce terme de validation honnête et de validateur honnête est apparu dan
 
 La valeur extractible par le mineur (MEV) est une réalité dégoûtante d'Ethereum. Elle aussi trouve son origine dans un manque de confidentialité. C'est la nature publique des transactions sur les DEX qui permet aux validateurs de les prendre facilement en sandwich. Il est beaucoup plus difficile, probablement pas impossible, mais beaucoup plus difficile de prendre des transactions en sandwich si vous ne pouvez pas voir leurs fondamentaux économiques. Mais je ne veux pas seulement de la confidentialité sur la couche de base comme moyen de décourager la MEV. Je la veux comme moyen de défendre les validateurs.
 
-#### Obligations légalement exécutoires des validateurs (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Obligations légalement exécutoires des validateurs (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Le pari plus large du ministère de la Justice (DOJ) dans l'affaire Pereira Bueno est que les validateurs ont des obligations légalement exécutoires les uns envers les autres en raison de la nature publique des transactions qu'ils valident. Et si ces obligations ne sont pas respectées, les validateurs, je pense qu'ils le croient, devraient se poursuivre mutuellement. Et s'ils ne le font pas, l'État, le district sud de New York, devrait poursuivre les validateurs malhonnêtes pour des crimes. Et cela ne s'arrête pas à la fraude électronique. Si vous pouvez voir une transaction de blanchiment d'argent ou si vous auriez pu la voir en utilisant l'analyse de la chaîne de blocs, alors comment n'êtes-vous pas complice de ce blanchiment d'argent ?
 
@@ -85,7 +85,7 @@ Si vous construisez sur une version de la chaîne qui contient des transactions 
 
 L'aveuglement volontaire n'est pas une défense, mais l'aveuglement réel l'est. Donc, si vous voulez vraiment l'absence de confiance requise, si vous voulez vraiment une infrastructure neutre, si vous voulez des tuyaux stupides, alors les tuyaux doivent être réellement aveugles à ce qui les traverse.
 
-#### Les pipelines de la finance traditionnelle et SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Les pipelines de la finance traditionnelle et SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Maintenant, une bonne critique de tout cela, vous pourriez dire : Peter, nous avons déjà des tuyaux stupides dans l'industrie financière traditionnelle, dans le système financier mondial traditionnel, et les opérateurs de ces tuyaux stupides ne sont pas cryptographiquement aveugles aux réalités économiques et aux aspects criminels des transactions qu'ils inscrivent dans leurs registres. Le plus grand de ces tuyaux s'appelle SWIFT. Et c'est un argument de poids contre ce que je viens de dire.
 
@@ -101,7 +101,7 @@ Et enfin, même si SWIFT survit à la crise actuelle qui se déroule lentement a
 
 Sommes-nous vraiment ici pour des tuyaux stupides ?
 
-#### Conclusions et défense de l'infrastructure neutre (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Conclusions et défense de l'infrastructure neutre (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 En conclusion, Coin Center ne va nulle part, et nous serons toujours là pour aider à défendre les développeurs de protocoles et l'infrastructure contre les poursuites injustes et les réglementations trop larges. Mais sans véritable confidentialité, ce combat devient de plus en plus difficile. Que pouvons-nous faire ? Premièrement, je crois qu'Ethereum devrait avoir une confidentialité sur la couche de base ou au moins devenir le registre racine pour les L2 qui ont des séquenceurs aveugles et réellement décentralisés.
 
@@ -111,7 +111,7 @@ Et nous avons un projet John Hancock récemment annoncé, qui consiste à trouve
 
 La confidentialité est existentielle. Merci.
 
-#### Session de questions-réponses (24:21) {#qa-session-2421}
+### Session de questions-réponses (24:21) {#qa-session-2421}
 
 **Animateur :** Merci. Vous partagez, je pense, l'un des sujets les plus importants de notre époque, et de loin. Je pense que notre première question se situe en fait dans le domaine de — comment envisagez-vous l'explication de la confidentialité aux nouvelles personnes ? Pendant si longtemps, le concept de confidentialité a été baigné dans cette idée de secret — c'est pour les gens en capes à capuche, etc. Dans quelle mesure pensez-vous que c'est un obstacle, surtout quand vous pensez aux efforts de lobbying ? Vous avez besoin que la personne ordinaire sente aussi que c'est quelque chose qui la concerne. Pensez-vous que c'est une grande difficulté ? Comment pouvons-nous atténuer cela ?
 

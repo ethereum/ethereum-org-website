@@ -18,7 +18,7 @@ Jopo katika tukio la Web3Privacy Now wakati wa Devconnect 2025, likiongozwa na *
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=cZqlg4W1Els) iliyochapishwa na Web3Privacy Now. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi wa Kikosi Kazi cha Faragha ya Kitaasisi (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Utangulizi wa Kikosi Kazi cha Faragha ya Kitaasisi (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Hujambo. Mnanisikia? Sawa. Poa. Kwa hivyo kwanza tutafanya mazungumzo mafupi sana ya utangulizi — kama mazungumzo ya dakika 3 hadi 5 — na kisha hiyo itatupeleka kwenye jopo. Haya ni mazungumzo yaliyofupishwa. Jopo lililopita lilizungumza sana kuhusu uzingatiaji na faragha na kadhalika. Nilitoa mazungumzo ya awali kwenye Cyban Congress ambayo pia yaligusia hili, na kutakuwa na toleo refu zaidi la mazungumzo haya kwenye Siku ya DeFi (DeFi Day) baadaye leo. Lakini ninachotaka kuzungumzia ni faragha ya kitaasisi kwenye Ethereum.
 
@@ -30,7 +30,7 @@ Taasisi moja kubwa hapa inaweza kuwa na athari kubwa kuhusu ni mfumo gani wa iko
 
 Ili Ethereum iweze kufanya uingizaji wa taasisi hizi, wanahitaji kushughulikia masuala haya ya faragha. Tunachojaribu kufanya katika Kikosi Kazi cha Faragha ya Kitaasisi ni kufanya uingizaji wa taasisi kwenye Ethereum na kuhakikisha malengo yao ya faragha yanafikiwa. Tunafanya mambo kama warsha, kujaribu kufafanua nafasi hii na kuhakikisha tunaweza kushughulikia mahitaji ya kitaasisi linapokuja suala la faragha haswa. Kitu cha kwanza tulicho nacho ni ramani hii ya faragha ya kitaasisi — tunazungumza na taasisi kubwa, kuelewa matumizi yao ya kibiashara na mahitaji, kuweka wazi (open source) kadiri iwezekanavyo, na kisha kuzungumza na watoa huduma katika nafasi hii ili kuunganisha taasisi na nafasi ya suluhisho. 
 
-#### Utambulisho wa Jopo na Matatizo ya Kitaasisi (5:00) {#panel-introductions-and-institutional-problems-500}
+### Utambulisho wa Jopo na Matatizo ya Kitaasisi (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Samahani ilikuwa haraka kidogo, lakini natumai inaeleweka. Kwa hivyo jopo hili lina wataalamu wengi katika utafiti, sera, na uhandisi, na tutazungumza kuhusu faragha ya kitaasisi. 
 
@@ -48,7 +48,7 @@ Kutoka upande mwingine, *kwa nini kuwa kwenye mnyororo wa vitalu wa umma?* Haya 
 
 **Amzah:** Ndiyo. Kwa hivyo ninafanya kazi ABN Amro, ambayo ni benki kubwa ya Uholanzi. Tuna wateja milioni 5 wa rejareja. Kwa hivyo hatujengi kitu sasa hivi haswa katika faragha, lakini kinachokuja sasa ni kwa mfano mkoba wa utambulisho wa kidijitali. Kawaida jinsi inavyofanya kazi ni kwamba data inahifadhiwa katika hifadhidata iliyowekwa kati na kisha unaunganisha na mtoa huduma wa nje au mtu wa tatu, lakini hiyo bila shaka si salama sana. Kwa hivyo tayari tunaanza kufikiria jinsi tunavyoweza kutumia uthibitisho wa maarifa-sifuri (ZK-proofs), kwa mfano, ili tuweze kuwa na ufichuzi wa kuchagua na pande za nje. Kwa maana hiyo, tunaweza kulinda taarifa za wateja wetu na pia kuwaruhusu kuunganishwa na mazingira mapana ya Web3.
 
-#### Mtiririko wa Kazi Halisi na Uhifadhi (10:07) {#concrete-workflows-and-storage-1007}
+### Mtiririko wa Kazi Halisi na Uhifadhi (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Sawa, vizuri. Ukichagua mtiririko mmoja halisi ambao unaweza kuujali — kama labda utoaji wa hati fungani, biashara, au malipo ya hazina — nani anaweza kuona nini haswa katika hatua gani, na nini kinahifadhiwa mnyororoni dhidi ya nje ya mnyororo? Labda tukianzia na François.
 
@@ -68,7 +68,7 @@ Kwa upande mwingine, labda kuna biashara ya nafasi kati ya wakopeshaji, na kuna 
 
 **Amzah:** Ndiyo. Nakubaliana zaidi na kile Zach alichosema. Zamani, wakati taasisi zilipofikiria kuhusu faragha, wangeanzisha tu mnyororo wa kibinafsi ambapo labda benki 20 zinashiriki na wao tu ndio wanaoweza kuona kilichomo. Lakini kwa kweli, ni ngumu zaidi. Inategemea matumizi, aina gani ya mtiririko, na kile mdhibiti anahitaji kujua. Unaweza kuweka taarifa za salio mnyororoni katika muundo uliojumuishwa zaidi kwa kutumia uthibitisho wa akiba (proof of reserves), kwa mfano.
 
-#### Mahitaji Yasiyojadiliwa (15:26) {#non-negotiable-requirements-1526}
+### Mahitaji Yasiyojadiliwa (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio na Amzah, kutoka kwa benki, kumbi, na wadhibiti, ni yapi baadhi ya mahitaji yasiyojadiliwa ambayo mnaendelea kusikia tena na tena? Kama njia za ukaguzi, sheria za KYC, au mahitaji ya utoaji wa taarifa?
 
@@ -78,7 +78,7 @@ Kwa upande mwingine, labda kuna biashara ya nafasi kati ya wakopeshaji, na kuna 
 
 **François:** Mwanzilishi mwenza wetu hutumia wiki kadhaa na wateja katika nafasi ya kitaasisi, na hitaji la kiwango cha juu linalojitokeza ni "udhibiti." Nani anaona nini, lini, na kwa sababu gani. Na kisha unashusha mazungumzo hayo kwenye maelezo na yanakuwa yaliyobinafsishwa sana. Kwetu sisi, hii ni nzuri kwa sababu ulimwengu wa fedha wa jadi umetumia miongo kadhaa kujenga mazoea yao ya uhasibu na mtiririko wa AML/CTF. Wako mahususi sana kuhusu udhibiti huo. Kwa hivyo tunajenga uwezo huo katika kiwango cha itifaki na kusaidia wateja katika safari yao.
 
-#### Maelewano na Ukwasi wa Kimataifa (18:10) {#trade-offs-and-global-liquidity-1810}
+### Maelewano na Ukwasi wa Kimataifa (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Ni yapi maelewano makuu ambayo mnaishi nayo kwa sasa? Utendaji dhidi ya faragha, au ukwasi wa kimataifa dhidi ya udhibiti wa kuandika, au uwazi mnyororoni dhidi ya rekodi za nje ya mnyororo? Tukianzia na Zach.
 
@@ -88,7 +88,7 @@ Kwa upande mwingine, labda kuna biashara ya nafasi kati ya wakopeshaji, na kuna 
 
 Bila shaka, kuna utata. Tunajali sana kuhusu uzoefu huo wa kipekee kwa taasisi inayoingia kwenye soko hilo, ili waweze kuwa na masharti yao wenyewe. Moja ya changamoto ni usawa kati ya faragha na upinzani dhidi ya vitisho. Kuna wahusika wa vitisho ambao wapo katika ulimwengu wa Web3, na tunataka kupata udhibiti bora wa hilo ili kutoa uzoefu mzuri. Tunakaribia ugatuzi kwa uangalifu — tunajua jinsi ya kufanya hivyo, lakini tutafanya hivyo wakati utakapowahudumia wateja vizuri zaidi.
 
-#### Uaminifu wa Mfumo na Vichochezi vya Kupitishwa (20:47) {#system-trust-and-adoption-drivers-2047}
+### Uaminifu wa Mfumo na Vichochezi vya Kupitishwa (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, unafanyaje suluhisho hizi ziwe za kuaminika na kutumika na taasisi na serikali?
 
@@ -98,7 +98,7 @@ Bila shaka, kuna utata. Tunajali sana kuhusu uzoefu huo wa kipekee kwa taasisi i
 
 **Amzah:** Kwetu sisi, ni muhimu sana kwamba inaweza kubinafsishwa. Mnyororo wa vitalu si tena matumizi moja tu ambapo kila kitu ni cha umma kabisa au cha faragha kabisa. Si saizi moja inayofaa wote. Kile ambacho pia ni muhimu zaidi kwetu ni kuzingatia kanuni. Sekta ya benki barani Ulaya inadhibitiwa sana, na ikiwa kitu si sahihi kuhusu faragha, hakikubaliki kwa wadhibiti.
 
-#### Kuangalia Mbele hadi 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Kuangalia Mbele hadi 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Sawa, tunakaribia mwisho. Ni kizuizi gani kimoja cha ujenzi — kiufundi, kiutendaji, au kisera — ambacho unafikiri kingeharakisha kwa maana kupitishwa kwa kitaasisi? Na ikiwa tutakutana tena mwaka wa 2026, unafikiri ni nini cha kweli ambacho kingetokea mwaka huu?
 
@@ -110,7 +110,7 @@ Bila shaka, kuna utata. Tunajali sana kuhusu uzoefu huo wa kipekee kwa taasisi i
 
 **François:** Ikiwa tutakutana katika mwaka mmoja, ningependa kuwa nimezindua Mtandao Mkuu wa Miden katika majira ya kuchipua, ili tuweze kusherehekea hilo. Zaidi ya hili, ningependa tuwe kwenye njia yetu ya ugatuzi kamili. Itachukua kijiji. Jambo la msingi ninalotaka kuona likitokea ni ushiriki zaidi. Wazo kwamba faragha inapingana na uzingatiaji si kweli, lakini kuoanisha haya mawili kunahitaji kazi. Tunataka taasisi zisaidie kuunda aina ya masoko wanayotaka kuona, kwa sababu tunajua hii itakuwa na vurugu na ya kipekee kwa mahitaji yao.
 
-#### Mawazo ya Kufunga (28:05) {#closing-thoughts-2805}
+### Mawazo ya Kufunga (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Nataka tu kumpa kila mmoja wenu sekunde 10 hadi 20 kutaja jambo lililotokea wiki hii au tangazo la haraka kabla hatujamaliza.
 

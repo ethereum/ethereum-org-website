@@ -18,7 +18,7 @@ La demostración visual de Anders Brownworth sobre cómo funciona la tecnología
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=_160oMzblY8) publicada por Anders Brownworth. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Hash SHA-256 (0:01) {#sha-256-hash-001}
+### Hash SHA-256 (0:01) {#sha-256-hash-001}
 
 Esta es una demostración de la cadena de bloques. Vamos a hacer esto de una manera muy visual: vamos a hacer que sea muy fácil de entender repasando paso a paso las piezas clave de lo que es una cadena de bloques.
 
@@ -28,7 +28,7 @@ Así que este es el hash del nombre "Anders", todo en minúsculas: comienza con 
 
 Puedo escribir lo que quiera. Pueden no tener nada, `e3b0`, ese es el hash de la nada. O podrían escribir muchísimas cosas. De hecho, podrían poner la Biblioteca del Congreso aquí y obtendrían un hash. Lo interesante es que, independientemente de si hay una pequeña cantidad de información, ninguna información o toda la Biblioteca del Congreso, siempre van a obtener un hash de esta longitud. No van a poder adivinar de antemano qué es esto: tienen que introducir los datos para averiguar cuál es el hash, pero siempre obtendrán exactamente el mismo hash independientemente de cuántas veces introduzcan exactamente la misma información.
 
-#### Bloque (2:10) {#block-210}
+### Bloque (2:10) {#block-210}
 
 Lo que voy a hacer es extender esta idea de un hash a algo que vamos a llamar bloque. Un bloque es exactamente como el hash, pero la sección de datos se ha dividido en tres secciones: una llamada "bloque" (solo un número, este es el bloque número 1), un "nonce", que es solo otro número, y luego algunos datos tal como teníamos antes.
 
@@ -40,7 +40,7 @@ Ahí es donde entra en juego el nonce. El nonce es solo un número que pueden co
 
 Se detuvo en 59.396, y da la casualidad de que ese produce un hash que comienza con cuatro ceros. Satisface mi definición de lo que es un bloque firmado.
 
-#### Cadena de bloques (5:16) {#blockchain-516}
+### Cadena de bloques (5:16) {#blockchain-516}
 
 Entonces, ¿pueden decirme qué es una cadena de bloques? Probablemente sea solo una cadena de estos bloques. Aquí está mi cadena de bloques: el bloque número uno tiene un nonce igual que antes, un área de datos, pero luego tiene este campo "anterior" que es un montón de ceros. Avanzando, este es el bloque dos, el bloque tres, el bloque cuatro: esta cadena de bloques tiene cinco bloques.
 
@@ -50,7 +50,7 @@ El campo "anterior" para cada bloque es el hash del bloque anterior. Pueden ver 
 
 Si voy y cambio el último bloque, todo lo que tengo que hacer es volver a minar ese bloque. Si retrocedo mucho en el tiempo y hago un cambio, tengo que minar este, este, este y este. Cuantos más bloques pasan, más y más difícil es hacer un cambio. Así es como una cadena de bloques resiste la mutación: resiste el cambio.
 
-#### Cadena de bloques distribuida (9:18) {#distributed-blockchain-918}
+### Cadena de bloques distribuida (9:18) {#distributed-blockchain-918}
 
 Entonces, ¿cómo sabría si mi cadena de bloques ha sido re-minada? Ahora tenemos una cadena de bloques distribuida. Se ve exactamente como la última cadena de bloques, pero este es el Par A. Si bajan aquí, pueden ver el Par B, y tiene una copia exacta de la cadena de bloques. También hay un Par C: esto podría seguir para siempre. Hay muchos pares en internet, y todos tienen una copia completa de la cadena de bloques.
 
@@ -60,7 +60,7 @@ Así que sé con solo echar un vistazo a este pequeño hash que algo anda mal en
 
 Las cadenas de bloques pueden tener 400.000 o 500.000 bloques muy fácilmente. En lugar de revisarlos todos, todo lo que realmente tienen que hacer es mirar el hash del más reciente, y pueden ver si algo en el pasado fue alterado.
 
-#### Tokens (12:17) {#tokens-1217}
+### Tokens (12:17) {#tokens-1217}
 
 Eso es todo: no hay nada más que eso. Pero en cierto modo no es realmente útil porque no tenemos nada en el área de datos que signifique algo. Lo que realmente queremos es un token.
 
@@ -70,7 +70,7 @@ Aquí es donde la inmutabilidad es importante. Si cambio algo aquí atrás, el h
 
 Una cosa que mencionaría: no estamos enumerando "Darcy tiene cien dólares y le está dando 25 a Bingley". Solo estamos recordando los movimientos de dinero, no los saldos de las cuentas bancarias. Esto plantea la pregunta: ¿tiene Darcy $25?
 
-#### Transacción Coinbase (14:34) {#coinbase-transaction-1434}
+### Transacción Coinbase (14:34) {#coinbase-transaction-1434}
 
 Tenemos un problema en esta versión de la cadena de bloques: en realidad no sabemos si Darcy tiene $25. Así que veamos una transacción Coinbase. Agregamos una transacción Coinbase a nuestros bloques: dice que vamos a inventar cien dólares de la nada y dárselos a Anders. No hay otras transacciones en este bloque porque nadie tenía dinero antes de esto.
 
@@ -80,7 +80,7 @@ Suman todos estos y no superan los cien. Sigue una regla básica de la moneda: n
 
 Si avanzamos rápidamente en el tiempo, vemos que Jackson le está dando a Alexa dos dólares. ¿Jackson realmente tiene dos dólares? Retrocedemos un bloque y vemos que Emily había recibido diez dólares de Anders y le dio diez a Jackson. Así que Jackson sí tiene el dinero. Podemos retroceder y averiguarlo: ese es uno de los beneficios de tener el campo "anterior".
 
-#### Cierre (16:30) {#closing-1630}
+### Cierre (16:30) {#closing-1630}
 
 Esa es una cadena de bloques básica que ejecuta una moneda sobre ella. Como saben, las cadenas de bloques tienen muchas copias: todos tienen una copia. Si mutamos algo y lo convertimos en seis dólares, los bloques se vuelven inválidos y no concuerdan con las otras copias. Esto resiste la manipulación, que es lo que se busca para una moneda. Funciona muy bien para cosas que son pequeñas y transaccionales.
 

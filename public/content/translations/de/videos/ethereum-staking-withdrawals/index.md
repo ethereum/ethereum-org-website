@@ -19,7 +19,7 @@ Ein Erklärvideo von **Finematics**, das behandelt, wie Staking-Abhebungen auf E
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=RwwU3P9n3uo), das von Finematics veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Die Beacon Chain (0:31) {#the-beacon-chain-031}
+### Die Beacon Chain (0:31) {#the-beacon-chain-031}
 
 Da das Shanghai/Capella-Upgrade schnell näher rückt, gibt es viele Diskussionen über Ethereum-Staking-Abhebungen und was dies für das gesamte Ethereum-Ökosystem bedeutet.
 
@@ -35,7 +35,7 @@ Der nächste große Schritt, der Merge, vereinte die Proof-of-Stake-Konsensschic
 
 Um das Risiko zu minimieren, wurde der Umfang des Merges reduziert, und es wurden keine anderen Funktionen – abgesehen vom Wechsel von Proof-of-Work zu Proof-of-Stake – in das Upgrade aufgenommen. Der größte „Einschnitt“, der vorgenommen werden musste, betraf die Abhebungen, die in den Fokus des kommenden Shanghai/Capella-Upgrades rückten.
 
-#### Abhebungen (2:09) {#withdrawals-209}
+### Abhebungen (2:09) {#withdrawals-209}
 
 Staking-Abhebungen werden es Stakern, wie der Name schon sagt, ermöglichen, ihre gesperrten ETH abzuheben. Es gibt zwei Arten von Abhebungen: „teilweise“ und „vollständige“.
 
@@ -47,7 +47,7 @@ Sobald sie aktiviert sind, werden Staking-Abhebungen alle paar Tage automatisch 
 
 Um mit der Abhebung ihrer Staking-Belohnungen zu beginnen, muss ein Validator seine Abhebungsadresse nur einmal angeben. Da Abhebungen sowohl die Konsensschicht als auch die Ausführungsschicht von Ethereum betreffen, müssen beide Teile des Netzwerks aktualisiert werden. „Shanghai“ ist der Name des Upgrades der Ausführungsschicht, das Abhebungen enthält, die in EIP-4895 spezifiziert sind. „Capella“ ist der Name des entsprechenden Upgrades der Konsensschicht, das zur gleichen Zeit aktiviert wird. Diese beiden Upgrades werden manchmal auch als „Shapella“ bezeichnet.
 
-#### Mechanismen (3:40) {#mechanics-340}
+### Mechanismen (3:40) {#mechanics-340}
 
 Im Ethereum-Ökosystem hat jeder Validator eine entsprechende Index-Nummer. Darüber hinaus haben sie auch zwei Arten von Auszahlungsberechtigungen, die entweder als `0x00` oder `0x01` definiert sind.
 
@@ -77,7 +77,7 @@ Beim Erstellen oder Verarbeiten eines Blocks wenden Clients der Ausführungsschi
 
 Das Design der Abhebungen ist einfach, aber extrem robust.
 
-#### Missverständnisse (6:30) {#misconceptions-630}
+### Missverständnisse (6:30) {#misconceptions-630}
 
 Das erste Missverständnis besagt, dass es bei der Verarbeitung von Abhebungen einen Unterschied zwischen einer „vollständigen“ und einer „teilweisen“ Abhebung in Bezug auf Priorität oder Reihenfolge gibt. Sowohl vollständige als auch teilweise Abhebungen finden statt, wenn der lineare Scan über das Validator-Set den Index eines Validators erreicht. Der einzige Unterschied besteht darin, dass ein Validator im Falle von vollständigen Abhebungen die Austritts-Warteschlange verlassen und die „abhebbare Epoche“ erreichen muss, bevor der lineare Scan ihn erfassen kann.
 
@@ -93,7 +93,7 @@ Zweitens hat Ethereum, um sicherzustellen, dass der Proof-of-Stake-Konsensmechan
 
 Der erste Abhebungs-Scan wird viele angesammelte Belohnungen abheben – im Grunde seit der Einführung der Beacon Chain. Die darauffolgenden werden jedoch eine viel geringere Menge an ETH verarbeiten.
 
-#### Auswirkungen (8:39) {#implications-839}
+### Auswirkungen (8:39) {#implications-839}
 
 Die Aktivierung von Abhebungen wird einen offenen, zweiseitigen Staking-Fluss schaffen. Derzeit ist der Staking-Fluss einseitig – ETH können nur in das Netzwerk fließen und es niemals verlassen. Interessanterweise könnte die Aktivierung von Abhebungen noch mehr Menschen dazu anregen zu staken, da sie wissen, dass sie ihre ETH jederzeit abheben können, wenn sie sie für etwas anderes benötigen.
 
@@ -103,7 +103,7 @@ Abhebungen werden sich auch auf Liquid-Staking-Derivate wie Lido, Rocket Pool un
 
 Frühe Anwender im Liquid Staking und zentralisierten Staking eroberten die große Mehrheit des Marktes, da sie nicht viel Konkurrenz hatten. Der Marktanteil dieser etablierten Akteure könnte sich jedoch stark verändern, sobald Abhebungen aktiviert sind, insbesondere wenn sie keine wettbewerbsfähige Rate anbieten. Die Möglichkeit, frei zwischen Staking-Anbietern zu wechseln, wird dem ETH-Staking-Markt zugutekommen.
 
-#### Zusammenfassung (10:01) {#summary-1001}
+### Zusammenfassung (10:01) {#summary-1001}
 
 Die Aktivierung von Staking-Abhebungen ist eines der am meisten erwarteten Upgrades für Ethereum. Es wird extrem wichtig sein, sicherzustellen, dass diese Änderung reibungslos durchgeführt wird. Um beim Testen zu helfen, werden Validatoren mehrere Devnets und Testnets zur Verfügung stehen, um den Prozess durchzugehen und mögliche Probleme auszuräumen, bevor sie im Mainnet live gehen.
 

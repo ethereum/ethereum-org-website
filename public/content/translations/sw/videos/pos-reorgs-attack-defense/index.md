@@ -19,13 +19,13 @@ Wasilisho hili linachunguza aina za mipangilio upya ya kitalu inayowezekana kati
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=xcPxwhrg3Ao) iliyochapishwa na LisCon. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi na usuli (0:03) {#introduction-and-background-003}
+### Utangulizi na usuli (0:03) {#introduction-and-background-003}
 
 Karibuni. Leo nitazungumzia kuhusu mipangilio upya inayowezekana katika Uthibitisho wa Dau (PoS) wa Ethereum.
 
 Hivi karibuni nilijiunga na Taasisi ya Ethereum, hasa Kikundi cha Motisha Imara. Kimsingi sisi ni timu ya utafiti inayoangazia chochote kinachohusu motisha. Nitafanya hili kuwa fupi — mazungumzo haya yamesheheni mambo mengi na unaweza kupata kazi zetu nyingi kwenye GitHub.
 
-#### Aina mbili za mipangilio upya (0:44) {#two-types-of-reorgs-044}
+### Aina mbili za mipangilio upya (0:44) {#two-types-of-reorgs-044}
 
 Leo nataka kuzungumzia mipangilio upya, na hasa nataka kuelezea aina mbili tofauti za mipangilio upya zinazowezekana katika ulimwengu wa Uthibitisho wa Dau (PoS) wa Ethereum.
 
@@ -37,7 +37,7 @@ Sasa mipangilio upya ya ex-ante ni tofauti kidogo. Wazo ni kwamba mshambuliaji a
 
 Unaweza kujiuliza kwa nini hata ungetaka kufanya aina hii ya mpangilio upya. Kweli, bado kuna MEV ya kunaswa. Ikiwa una bahati, kitalu N+2 kina MEV nyingi — unaweza kuinasa kwa kunakili na kubandika chochote kile kitalu hicho kilivyo. Katika hali mbaya zaidi, kimsingi una miamala ya thamani ya sloti mbili ya kusikiliza.
 
-#### Mipangilio upya ya ex-post katika Uthibitisho wa Kazi (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Mipangilio upya ya ex-post katika Uthibitisho wa Kazi (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Kabla ya kuzama kwenye mipangilio upya ya ex-ante, ambayo ndiyo mada kuu ya mazungumzo haya, wacha nirejee kwa ufupi mipangilio upya ya ex-post na hasa nianze na muktadha wa Uthibitisho wa Kazi (PoW).
 
@@ -45,7 +45,7 @@ Kimsingi ni muhtasari wa chapisho la blogu na washukiwa wa kawaida — Georgios 
 
 Kwa ufupi, katika Uthibitisho wa Kazi (PoW) wa Ethereum, mipangilio upya ya ex-post ni ngumu lakini haiwezekani. Mchimbaji wa 10% ana nafasi nzuri kiasi ya kuchimba baadhi ya vitalu mfululizo, na ikiwa motisha ni kubwa ya kutosha — fikiria kuna kitalu kimoja chenye thamani ya 100 ETH ya MEV ya kunasa — basi labda kiwango cha mafanikio cha asilimia moja kinaweza kutosha kufanya iwe na thamani ya kujaribu kupangilia upya.
 
-#### Mipangilio upya ya ex-post katika Uthibitisho wa Dau (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Mipangilio upya ya ex-post katika Uthibitisho wa Dau (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Katika Uthibitisho wa Dau (PoS) ni mchezo tofauti kabisa. Tunazungumzia kiasi kikubwa sana cha dhamana kinachohitajika. Nitawapitisha jinsi mtu anavyoweza kufanya hivyo ili tu kusisitiza jinsi ilivyo ngumu kupita kiasi.
 
@@ -63,7 +63,7 @@ Tukijumlisha hili — kitalu N+1 kina uthibitisho wa thamani ya theluthi moja ju
 
 Ili kukupa wazo la jinsi mawazo haya yalivyo ya kushangaza — hata kama ungekuwa na mweka dhamana wa 65%, kudhibiti theluthi mbili ya kamati katika sloti yoyote ile una uwezekano wa 0.05%. Hili linaonyesha kwamba nguvu ya uthibitisho sambamba ni halisi — mipangilio upya ya ex-post ni ngumu sana, ikiwa haiwezekani kabisa, katika Uthibitisho wa Dau (PoS) wa Ethereum.
 
-#### Taratibu za shambulio la mpangilio upya wa ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Taratibu za shambulio la mpangilio upya wa ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Sasa nitazungumzia mipangilio upya ya ex-ante. Shambulio hili linatokana na karatasi ya Neuder na wengine. Hivi karibuni tumeboresha shambulio hili kwa kiasi kikubwa. Pia tuliandika karatasi kuihusu na kufanikiwa kuipakia kwenye arXiv kwa wakati muafaka.
 
@@ -75,7 +75,7 @@ Kinachotokea ni kwamba watu waaminifu hawaoni kitalu N+1, kwa hivyo watatoa uthi
 
 Hebu tuchukulie hakuna ucheleweshaji kwa sasa. Katika sloti N+2, kile tunachofanya kama mshambuliaji ni kutoa kitalu N+1 na uthibitisho wa faragha vyote kwa wakati mmoja. Wathibitishaji waaminifu katika sloti N+2 wanahitaji kutoa uthibitisho kwa kitalu. Kutoka kwa mtazamo wao wanaona kitalu N+2 na kitalu N+1 na uthibitisho huu mmoja wa faragha. Wakiendesha chaguo la mchepuo watagundua kwamba kitalu N+1 kina uzito zaidi kuliko kitalu N+2, kwa sababu N+1 ina uthibitisho wa faragha ambao N+2 haina. Hata wathibitishaji wote waaminifu watatoa uthibitisho kwa kitalu N+1. Katika N+3, kwa urahisi, N+1 itaonekana kama kichwa cha mnyororo.
 
-#### Ucheleweshaji wa mtandao na shambulio (10:25) {#network-latency-and-the-attack-1025}
+### Ucheleweshaji wa mtandao na shambulio (10:25) {#network-latency-and-the-attack-1025}
 
 Nilichukulia hakuna ucheleweshaji, ambayo ni wazi sivyo inavyofanya kazi. Kuna ucheleweshaji — inachukua muda kusambaza vitalu na jumbe kwenye safu ya P2P.
 
@@ -83,7 +83,7 @@ Njia ambayo mshambuliaji bado anaweza kufanikisha aina hii ya shambulio ni kwa k
 
 Kusisitiza tena kile kinachotokea hapa: tuna mpendekezaji na mthibitishaji mmoja anayefanikiwa kufanya mpangilio upya wa kitalu kimoja. Sio bora, kusema ukweli.
 
-#### Mikakati ya kusawazisha kwa mipangilio upya mirefu zaidi (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Mikakati ya kusawazisha kwa mipangilio upya mirefu zaidi (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Ikiwa unataka kufanya mambo ya kisasa zaidi, unaweza kufanikisha mipangilio upya mirefu zaidi ukitumia mkakati wa kusawazisha. Wazo ni kugawanya kamati ya waaminifu katika mitazamo tofauti ya mnyororo.
 
@@ -97,7 +97,7 @@ Ili kuhitimisha mpangilio upya wa vitalu viwili: kitalu N+3 kinapendekezwa, unak
 
 Ukifikiria juu yake, ni rahisi kiasi kufanya mipangilio upya hii chini ya mawazo haya. Hata kama huna migawanyiko kamili, kwa sababu safu ya P2P ni kubwa sana una usambazaji wa uwezekano ambao unaweza kulenga kiasi kwamba gharama ya shambulio inakua katika kipeo cha pili cha ukubwa wa kamati.
 
-#### Hatua ya kupunguza madhara ya nyongeza ya mpendekezaji (15:17) {#proposer-boost-mitigation-1517}
+### Hatua ya kupunguza madhara ya nyongeza ya mpendekezaji (15:17) {#proposer-boost-mitigation-1517}
 
 Hebu tuzungumzie hatua ya kupunguza madhara. Wazo la msingi ni nini? Tutampa mpendekezaji nguvu zaidi kidogo. Ikiwa kitalu halali kinafika kwa wakati, hebu tuongeze uzito wa kitalu hiki kwa muda wa sloti. Baada ya sloti hiyo kukamilika, tunaendelea na alama ya kawaida ya LMD-GHOST na mambo yanakuwa kama kawaida.
 
@@ -107,7 +107,7 @@ Mambo ya kusawazisha pia hayafanyi kazi tena kwa sababu una mgawanyiko wa 50/50 
 
 Wazo ni kwamba kukiwa na hatua hii ya kupunguza madhara, uthibitisho wa mpinzani unapaswa kushindana na nyongeza ili kuwashawishi wathibitishaji waaminifu kupiga kura kulingana na matakwa yao. Hili linavunja mikakati ya kusawazisha na kimsingi linazuia mipangilio upya yote kabisa. Habari njema — kuna PR wazi, kwa hivyo kimsingi itaunganishwa kabla ya Unganisho.
 
-#### Mambo muhimu ya kuzingatia (16:48) {#key-takeaways-1648}
+### Mambo muhimu ya kuzingatia (16:48) {#key-takeaways-1648}
 
 Baadhi ya mambo muhimu ya kuzingatia. Nimezungumzia tofauti kati ya mipangilio upya ya ex-post na ex-ante. Nilielezea kwa ufupi mazingira tofauti ya mipangilio upya katika Uthibitisho wa Kazi (PoW) dhidi ya Uthibitisho wa Dau (PoS). Niliwaonyesha jinsi ya kufanikisha mpangilio upya wa ex-ante lakini pia muhimu zaidi jinsi ya kuirekebisha.
 

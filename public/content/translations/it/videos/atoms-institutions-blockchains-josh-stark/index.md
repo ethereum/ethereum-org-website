@@ -19,7 +19,7 @@ Un keynote filosofico di **Josh Stark** della Fondazione Ethereum al Pragma Denv
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=zI07mqNdxzA) pubblicata da ETHGlobal. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Perché non riusciamo a spiegare le blockchain? (0:00) {#why-cant-we-explain-blockchains-000}
+### Perché non riusciamo a spiegare le blockchain? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Ciao a tutti, grazie per essere qui al Pragma a Denver. Mi chiamo Josh. Lavoro presso la Fondazione Ethereum — sono con la EF da circa cinque anni ormai. Mi piace scherzare dicendo che il mio lavoro è capire quale dovrebbe essere il mio lavoro, e questo cambia ogni sei mesi.
 
@@ -31,7 +31,7 @@ Dobbiamo davvero arrivare al nocciolo della questione, e non credo che ci siamo 
 
 Quindi tutto è iniziato con una domanda molto specifica che mi sono posto: qual è la tecnologia di uso generale? Qual è questa capacità fondamentale? E si è trasformato in qualcosa che trovo molto più interessante.
 
-#### Claude Shannon e l'idea di informazione (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon e l'idea di informazione (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Lasciate che vi racconti una storia. Negli anni '30 e '40, Claude Shannon era circondato dagli albori di una nuova era. Ai Bell Labs, lavorò sui sistemi di controllo del fuoco e sulla crittografia durante la guerra, e iniziò a pensare a un approccio più generale all'informazione. All'inizio non la chiamava informazione: nel 1939 scrisse a un collega che stava pensando alla "trasmissione dell'intelligenza". La parola informazione aveva un significato diverso allora.
 
@@ -41,7 +41,7 @@ Prima di questo momento, nessuno aveva davvero questo concetto di informazione c
 
 Quello che voglio che traiate da questo è che c'è stato un tempo prima che avessimo l'idea di informazione e un tempo dopo. E se ci mancasse allo stesso modo qualcosa di così fondamentale? Questa è la mia ipotesi.
 
-#### Tre indizi (7:00) {#three-clues-700}
+### Tre indizi (7:00) {#three-clues-700}
 
 Mentre fatico a spiegare le blockchain, continuo a imbattermi in queste cose strane che penso siano indizi verso qualcosa di più grande.
 
@@ -53,7 +53,7 @@ Con le automobili, parlavamo di "carrozze senza cavalli", ma almeno potevamo dar
 
 **Indizio numero tre**: il documento di Satoshi inizia con queste parole: "il commercio su Internet è arrivato a dipendere quasi esclusivamente dalle istituzioni finanziarie che fungono da terze parti fidate". Satoshi stava paragonando Bitcoin alle istituzioni, non ad altri software. C'è qualcosa sotto.
 
-#### Introduzione alla durezza (11:00) {#introducing-hardness-1100}
+### Introduzione alla durezza (11:00) {#introducing-hardness-1100}
 
 Ecco la mia risposta a cosa va in quella scatola. La chiamo **durezza** (hardness). Ecco la storia in cinque semplici passaggi, e poi andremo più a fondo.
 
@@ -71,7 +71,7 @@ Il tasso di inflazione dell'oro è affidabile grazie alle proprietà fisiche del
 
 Potete pensare ad atomi, istituzioni e blockchain come a materiali da costruzione: come legno, cemento e acciaio. Sono diversi, ma fanno parte di una categoria condivisa. E usiamo queste cose non per costruire edifici, ma per costruire una civiltà. Forse con materiali migliori, possiamo costruire una civiltà più grande, migliore e più forte di quella che abbiamo ora.
 
-#### Cos'è la durezza? (14:00) {#what-is-hardness-1400}
+### Cos'è la durezza? (14:00) {#what-is-hardness-1400}
 
 Lasciatemi precisare meglio cosa intendo per durezza. Non si tratta di una qualsiasi affidabilità che qualsiasi cosa potrebbe avere. La durezza è un tipo specifico. La prima cosa da notare è che è un tipo di affidabilità che conta per la coordinazione sociale. Non solo, sapete, che questo tavolo è in modo affidabile un tavolo, ma che potete pagare l'affitto, che un contratto verrà fatto rispettare, che un'economia è forte. È a questo che serve la durezza.
 
@@ -87,7 +87,7 @@ E infine, la durezza proviene da certe fonti: atomi, istituzioni e blockchain. O
 
 Di questo framework mi piace che ci permette di porre domande più profonde: non solo parlare delle proprietà specifiche delle blockchain, ma confrontare tutte queste cose diverse e pensare a dove sono appropriate, come le usiamo e in quale combinazione.
 
-#### Durezza degli atomi (19:00) {#atom-hardness-1900}
+### Durezza degli atomi (19:00) {#atom-hardness-1900}
 
 La durezza degli atomi riguarda quando troviamo affidabilità nella natura che ci circonda: atomi fisici letterali ma anche altre proprietà presenti in natura. Lo facciamo quando usiamo perline d'oro come denaro, quando usiamo strutture fisiche per definire i diritti di proprietà, o registriamo i diritti di proprietà in un oggetto fisico come un atto.
 
@@ -101,7 +101,7 @@ E i cast sono spesso minati dal nostro crescente controllo umano sulla natura. U
 
 Ma è più sottile di così. A volte abbiamo dei cast di cui non ci rendiamo nemmeno conto dell'esistenza, ma poi spariscono perché qualcosa è cambiato. C'è stato un cast duro sulla velocità di trading nei mercati finanziari per molto tempo: poteva essere fatto solo a un certo ritmo, forse il ritmo a cui qualcuno può gridare all'altro sul parterre. Questo cast era duro come un atomo: semplicemente non potevamo comunicare più velocemente di così. Ma la nuova tecnologia ha completamente minato quelle ipotesi. Ci siamo resi conto che in realtà ci piaceva una versione di quel vecchio cast e l'abbiamo ricreato a partire dalle istituzioni, introducendo regolamentazioni che limitano la velocità di trading e impongono interruttori di circuito (circuit breaker).
 
-#### Durezza istituzionale (22:00) {#institutional-hardness-2200}
+### Durezza istituzionale (22:00) {#institutional-hardness-2200}
 
 La durezza istituzionale è una categoria molto ampia: copre la maggior parte delle cose a cui potremmo pensare quando pensiamo alla civiltà. I nostri sistemi legali, le legislature, le forze di polizia, le corporazioni, tutto. Tutte le istituzioni che forniscono durezza di qualche tipo. Abbiamo creato cast che hanno dato ordine alle nostre società, punendo i comportamenti antisociali. Abbiamo creato la durezza come piattaforma, permettendo a chiunque di creare i propri cast resi duri dalle istituzioni se si seguono certe regole. Abbiamo creato cast che hanno generato nuovi asset e fornito fonti di credito alle economie in crescita.
 
@@ -111,13 +111,13 @@ Ma ha anche molti punti deboli. È limitata dai confini: solo in certi paesi si 
 
 E sono fatte di persone, e le persone sono cattive. La realtà in questo paese e in molti altri è che molte persone non hanno davvero avuto accesso alla durezza fornita dalle istituzioni. Non sono riuscite a ottenere un mutuo. Non sono riuscite ad aprire un conto in banca. Perché quando si riempie un'istituzione di persone, questa è soggetta ai loro mali, ai loro pregiudizi, alle loro ideologie. E la nostra dipendenza dalla durezza istituzionale sta solo aumentando. Il problema del software che divora il mondo è che la maggior parte del software è in realtà solo costituito da un'istituzione dietro lo schermo, e di conseguenza stiamo dando loro sempre più potere.
 
-#### Durezza della blockchain (24:20) {#blockchain-hardness-2420}
+### Durezza della blockchain (24:20) {#blockchain-hardness-2420}
 
 L'invenzione di Satoshi era ovviamente più del solo Bitcoin: era il nucleo di una tecnica di uso generale per creare durezza digitale in un ambiente digitale. Ha molti punti di forza: accesso globale universale, è fatta di software e chiunque può scrivere software, il grado di durezza può essere trasparente e verificabile, basso costo di avvio, facile da iterare, ed è protetta da incentivi di mercato (e i mercati sono razionali).
 
 Ma ha anche dei punti deboli. Richiede una civiltà tecnologica: non avremmo potuto avere le blockchain prima di adesso a causa dei requisiti, e una civiltà nel futuro che non ha ciò che abbiamo noi non sarà in grado di usarle a sua volta. È fatta di software, e il software può essere scritto male. L'ambito dei cast è limitato agli ambienti onchain. Ed è protetta da incentivi di mercato (e i mercati sono irrazionali).
 
-#### Perché questo è importante (25:10) {#why-this-matters-2510}
+### Perché questo è importante (25:10) {#why-this-matters-2510}
 
 Quindi cosa significa questo? Cosa ci offre? Perché è più di un semplice interesse accademico?
 
@@ -127,7 +127,7 @@ Spiega perché le blockchain private o centralizzate non sono interessanti. Una 
 
 Aiuta anche a comprendere lo spettro delle possibilità e le ideologie predefinite in cui le persone ricadono nello spazio blockchain. Molte persone sono molto concentrate sull'uso della durezza della blockchain per competere con o sostituire la durezza istituzionale: è di questo che si occupa gran parte della comunità Bitcoin, di cui si occupa gran parte della finanza decentralizzata (DeFi). Anche ENS sta cercando di sostituire o competere con DNS in qualche modo. Ma poi ci sono anche persone che vedono che la durezza della blockchain può fare cose che la durezza istituzionale non può fare: idee che nessuno ha mai provato prima perché non abbiamo mai avuto questa capacità, questo particolare sapore di durezza. E ora possiamo esplorare quelle cose. Forse gli NFT sono lì, o giochi come Dark Forest, o il movimento attorno ai mondi autonomi.
 
-#### Alzare le nostre ambizioni (27:00) {#raising-our-ambitions-2700}
+### Alzare le nostre ambizioni (27:00) {#raising-our-ambitions-2700}
 
 Ancora più importante, penso che questo framework alzi le nostre ambizioni. Personalmente, questo è ciò che conta per me, e forse risuona con voi: non sono qui solo per queste singole applicazioni. Non sono uno che è davvero tutto per Bitcoin o tutto per la DeFi o tutto per gli NFT. Forse siete così anche voi. C'è qualcosa di più grande in corso qui.
 

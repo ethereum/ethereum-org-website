@@ -17,7 +17,7 @@ Maelezo mafupi ya uhuishaji kutoka **Amnesty International** kuhusu kwa nini usa
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=5GTD14irFvQ) iliyochapishwa na Amnesty International. Imehaririwa kidogo ili isomeke kwa urahisi, na lebo za wazungumzaji zimeongezwa.*
 
-#### "Huna cha kuficha, sivyo?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Huna cha kuficha, sivyo?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Wakala:** Hujali kuhusu usalama wa kidijitali, sivyo?
 
@@ -79,7 +79,7 @@ Maelezo mafupi ya uhuishaji kutoka **Amnesty International** kuhusu kwa nini usa
 
 **Raia:** Ndiyo, naiunga mkono.
 
-#### Haki ya faragha (1:30) {#the-right-to-privacy-130}
+### Haki ya faragha (1:30) {#the-right-to-privacy-130}
 
 **Raia:** Na nchi yangu inaundwa na watu. Watu wenye haki ya faragha yao wenyewe. Ikiwa serikali zinataka kukusanya data zako zote bila ubaguzi—barua pepe, simu, picha za kamera za wavuti, na utafutaji wa mtandaoni—hilo si sawa.
 

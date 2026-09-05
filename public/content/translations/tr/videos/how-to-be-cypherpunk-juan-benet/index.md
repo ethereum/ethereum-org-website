@@ -18,7 +18,7 @@ breadcrumb: "Nasıl Cypherpunk Olunur"
 
 *Bu döküm, Web3Privacy Now tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=B08IXHLOQp4) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:05) {#introduction-005}
+### Giriş (0:05) {#introduction-005}
 
 **Sunucu:** [alkışlar] Çok teşekkür ederim. Ve bugünkü kıyafetinize bayıldım. Harika. Bu arada kiltler muhteşem. Yakın zamanda evlendim ve günlerden birinde kilt giydim, İskoçya gerçekten harika.
 
@@ -28,7 +28,7 @@ Benim adım Juan Benet. Son 15, 20 yıl boyunca IPFS, libp2p, Ethereum, Filecoin
 
 Cypherpunk olmak için atabileceğiniz birçok adım var. Bunlar ilk dalga cypherpunk'ların fotoğrafları. Onlar sıradan, normal insanlar. Burada da sonraki dalga cypherpunk'ların bazı fotoğrafları var. Ve içlerinden biri hem ilk hem de sonraki cypherpunk'lar arasındaydı. Zooko'yu daha uzun saçlı ve daha az saçlı haliyle görebilirsiniz.
 
-#### Cypherpunk'lar kod yazar (2:20) {#cypherpunks-write-code-220}
+### Cypherpunk'lar kod yazar (2:20) {#cypherpunks-write-code-220}
 
 Cypherpunk'lar kod yazar. Bu, hareketin temel ilkelerinden biridir. Bu konuda çok şey söylendi, ancak günün sonunda gerçek bir altyapı, donanıma giren gerçek bir kod, her gün kullandığımız sistemlere güç veren gerçek bir kod üretmemiz gerektiğini unutmayın. Ve bu sadece son derece teknik hacker'lardan oluşan küçük, elit bir grup için yazılmış bir kod olamaz. Dünyadaki herkesin kullanabileceği bir kod olmalıdır. Geniş çapta yayılan şeyler olmalıdır. Ürün kullanıcı deneyiminin en üst seviyelerinde rekabet eden şeyler olmalıdır. Herhangi bir merkezi veya daha az güvenli alternatif kadar iyi ve kullanımı kolay bir kod olmalıdır. Sadece neyin daha fazla gizlilik sunduğu konusunda değil, aynı zamanda neyin daha kullanışlı, neyin kullanımının daha eğlenceli olduğu konusunda da rekabet etmelisiniz. İnsanlar en çok neden keyif alıyor? Çünkü günün sonunda insanlar güvenlikten ziyade bu özelliklere göre seçim yapacaklardır. 
 
@@ -38,7 +38,7 @@ Cypherpunk'lar özgürlükler ve haklar için savaşır. Sahip olmak istediğini
 
 Cypherpunk'lar ütopyalar ve protopyalar inşa eder. Gelecek için olumlu vizyonlarımız var. Özgürce yaşayabileceğimiz ve birlikte gelişebileceğimiz harika dünyalar inşa etmeyi arzuluyoruz. Doğamız gereği çoğulcuyuz. Aynı zamanda distopyaları da önleriz. Olası kötü geleceklerin derinden farkındayız. Korkunç sonuçların ortaya çıkmasını önlemek için motiveyiz. 1984, cypherpunk hareketi üzerinde çok etkiliydi. Birçok bireysel cypherpunk, Doğruluk Bakanlığı'ndan kaçınmak istedi. Orwell'in bahsettiği kitlesel gözetimden kaçınmak istediler ve kitaptan şu çok basit ahlaki dersi çıkardılar: Bunun olmasına izin vermeyin. Bu size bağlı. Ve bugün size söylüyorum, bunun olmasına izin vermeyin. Bu özellikle size bağlı. 
 
-#### Güvenli iletişim ve fonlama (5:26) {#secure-communications-and-funding-526}
+### Güvenli iletişim ve fonlama (5:26) {#secure-communications-and-funding-526}
 
 Cypherpunk'lar, açık anahtar kriptografisini mümkün kılmak için kriptografide çığır açan sonuçlar bulmaktan, onu pratik, daha da kullanışlı ve kırılmasını zorlaştıran çığır açan algoritmalara kadar güvenli ve gizli iletişimi sağlarlar. Ya da bir yenilik değil, sadece o an için önemli bir eylem. Bazen tarihin akışını düzeltmek için önemli bir eylemde bulunmanız gerektiğini fark edebilirsiniz. İlk günlerin en üretken cypherpunk'larından biri olan ve burada soldan ikinci sırada resmedilen Mark Miller, o dönemin diğer birçok aydınıyla birlikte (yine sıradan, normal insanlar), RSA ve açık anahtarın gizli tutulduğunu ve yayımlanmadığını biliyordu. Bu yüzden gidip makaleleri bulmayı kendine görev edindi. İz bırakmamak için birçok farklı fotokopiciye giderek makalelerin tek tek fotokopilerini çekti. Ve sonra, bu makalelerin gizli kalması ihtimaline karşı, bu tür bir kriptografinin nasıl inşa edileceğine dair bilginin yayılmasını sağlamak için bu makaleleri bir sürü insana tek tek postaladı. Bu eylem o an için çok önemliydi. 
 
@@ -48,7 +48,7 @@ Cypherpunk'lar sansüre direnir ve onu engeller. Türkiye Wikipedia'yı yasaklad
 
 Cypherpunk'lar kriptografi ve gizlilik teknolojilerini geliştirmek ve finanse etmek için para kazanırlar. Bu muhtemelen buradaki hepiniz için en şaşırtıcı olanıdır. Ne? Gizlilik ve güvenlikten bahsediyoruz, paradan değil. Ah, ancak cypherpunk'lar, açık kaynak tarihindeki diğer birçok geliştiricinin aksine, sermayeyi anlar, dünyanın işleyişini anlar ve yazılım geliştirmek için büyük insan gruplarını finanse edebilmeniz gerektiğini anlarlar. Milyonlarca insanın kullanabileceği yüksek kaliteli yazılımlar oluşturmanın son derece pahalı olduğunu anlarlar. Bu yüzden bazılarımız, birçok yazılımı finanse edebilmek ve geliştirebilmek için nakit akışı pozitif olabilen sistemler inşa ediyoruz. Tonlarca ZK ve FHE araştırmasını ve diğer birçok gizlilik teknolojisini finanse eden, nakit akışı pozitif bir sistem olan Ethereum'u düşünün. ZK çalışmalarını geliştiren ve finanse eden, nakit akışı pozitif bir sistem olan Zcash'i düşünün. ZK ve FHE'yi geliştiren ve finanse eden nakit akışı pozitif bir sisteme sahip Protocol Labs ve Filecoin'i ve geliştirmelerin çoğunu kendileri yapan ve aynı zamanda gelecekte bu araştırmaların birçoğunu finanse edebilmek için sermaye yapısını oluşturan Starknet ve Zama gibi daha yeni katılımcıları düşünün. Tüm bu gruplar sadece kendi işlerini geliştirmekle kalmıyor, bu teknoloji üzerinde çalışan binlerce başka insanı da finanse ediyorlar. Bu yüzden bir cypherpunk olarak, nakit akışı pozitif bir sistem yapabiliyorsanız, bunu yapın ki diğer çalışmaları finanse edebilesiniz. Ve bugün tonlarca proje bunu yapıyor. 
 
-#### Hukuki savaşlar ve birlikte inşa etmek (10:17) {#legal-battles-and-building-together-1017}
+### Hukuki savaşlar ve birlikte inşa etmek (10:17) {#legal-battles-and-building-together-1017}
 
 Cypherpunk'lar hukuki savaşlarla yüzleşmek zorunda kalabilir. Umarım bundan kaçınabiliriz. Umarım her yerde her şeyi kitabına uygun yapabiliriz. Ancak bazen güçlü gruplar özgürlüklerinizi ihlal etmek istediklerinde, etraftaki her sistemi manipüle edecekler ve bazen size hukuki savaşlarla saldıracaklardır. Savaşılması gereken kripto savaşlarımız vardı ve bunlarla mahkemede savaşılması gerekiyordu. Neyse ki onları kazandık. Bilgi akışını engellemek, önemli araştırmaların yayımlanmasını önlemek, Clipper çipi gibi belirli türde cihazları zorlamak için açılmış birçok dava olmak üzere bunlardan üç tane vardı. Bu mücadelelerin her biri çok sayıda insan, çok sayıda avukat, çok sayıda politika yapıcı, bu sorunların neden önemli olduğu ve bu tür bir sorunu tekrarlamanın neden korkunç olacağı hakkında konuşan çok sayıda insan gerektiriyordu. 
 
@@ -56,7 +56,7 @@ Ve bugün başka bir versiyonumuz var. Avrupa'daki sohbet kontrolü (chat contro
 
 Cypherpunk'lar birlikte inşa eder. Bazen bir şeyleri kendi başımıza yaparız, ancak günün sonunda fikirlerimizi ve kodumuzu açık kaynak olarak diğer birçok insana sunarız ve birbirimizle konuşarak, fikirlerimizi geliştirerek, yazılımımızı geliştirerek, geri bildirim alarak yaptıklarımızı iyileştiririz. Bunu Cypherpunks e-posta listesi gibi forumlar veya Liberty topluluğundaki ya da Ethereum araştırma topluluğundaki bu tür forumlar aracılığıyla yapıyoruz. Bunu birçok proje ve ekip arasında iş birliği yaparak yapıyoruz ve bunu bu tür iletişim mekanları aracılığıyla yapıyoruz. Chaos Communication Congress geçmişte bu grupların birçoğunun bir araya gelmesine yardımcı oldu ve şimdi bu fikirler hakkında konuşmak üzere grubumuzu bir araya getiren Ethereum Cypherpunk Kongresi'ne sahibiz. Ayrıca, bu sistemlerdeki ve projelerdeki bir grup geliştiricinin bir araya gelip herkesi etkileyen temel sorunları çözmesi için bir mekan olan Cypherpunk Retreat'i de oluşturuyoruz. Belki de birlikte üstesinden gelebileceğimiz ortak sorunlar, çünkü çoğu zaman kaçınmak istediğimiz şey, hiçbir şeyin birbiriyle konuşmadığı ve devasa merkezi oyuncuların küçücük ağlarla rekabet ettiği süper parçalanmış bir ortamdır. Açık kimlik standartları veya açık mesajlaşma standartları gibi açık standartlar üzerine inşa edersek, çok büyük ölçekli gizliliği koruyan sistemler inşa edebiliriz. Güvenli olan, ancak aynı zamanda birlikte çalışabilen şeyler. 
 
-#### Üç açık sorun (15:27) {#three-open-problems-1527}
+### Üç açık sorun (15:27) {#three-open-problems-1527}
 
 Cypherpunk'lar açık sorunları çözer. Bu yüzden sizi önümüzdeki 10 ila 15 yıl için üç kritik açık sorunla baş başa bırakacağım ve umarım bu odadaki biriniz veya birkaçınız bu açık sorunlardan ilham alır ve bunlar üzerinde çalışır. 
 

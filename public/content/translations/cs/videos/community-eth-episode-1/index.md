@@ -17,7 +17,7 @@ První epizoda seriálu *Community.eth* od **Optimist**. Na oslavu 9. narozenin 
 
 *Tento přepis je přístupnou kopií [původního videa](https://www.youtube.com/watch?v=onCwaj1FM-4) publikovaného společností Optimist. Byl lehce upraven pro lepší čitelnost. Mluvčí jsou členy komunity Etherea a ne všichni byli ve videu jmenovitě identifikováni.*
 
-#### Co je Ethereum? (0:00) {#what-is-ethereum-000}
+### Co je Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Osoba 1:** Co je Ethereum?
 
@@ -29,7 +29,7 @@ První epizoda seriálu *Community.eth* od **Optimist**. Na oslavu 9. narozenin 
 
 **Osoba 4:** Ethereum znamená pro mnoho lidí mnoho věcí.
 
-#### V čem spočívá jeho síla (0:40) {#what-makes-it-powerful-040}
+### V čem spočívá jeho síla (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Potenciál, který Ethereum má, je obrovský, protože ho ani nedokážeme definovat. A to je podle mě velmi silné.
 
@@ -43,7 +43,7 @@ První epizoda seriálu *Community.eth* od **Optimist**. Na oslavu 9. narozenin 
 
 **Simona Pop:** Ethereum je pro mě další fází ve vývoji internetu.
 
-#### Proč budujeme (2:00) {#why-we-build-200}
+### Proč budujeme (2:00) {#why-we-build-200}
 
 **Simona Pop:** Ano, samozřejmě je tu rozruch, když jde cena nahoru, ale ti lidé a opravdoví věřící tu jsou, když jde dolů, když jde nahoru – na tom vlastně nezáleží. Děláme to, protože upřímně věříme v to, co budujeme.
 
@@ -51,7 +51,7 @@ První epizoda seriálu *Community.eth* od **Optimist**. Na oslavu 9. narozenin 
 
 **Alexis Ohanian:** Máme šanci přetvořit tolik společenských institucí se skutečným vlastnictvím, se skutečnou schopností hromadit hodnotu po zbytek vašeho života, pro další generace – v podstatě do nekonečna. Opravdu zoufale chci vidět, jak se to odemkne.
 
-#### Komunita (3:00) {#the-community-300}
+### Komunita (3:00) {#the-community-300}
 
 **Amber Baldet:** Jedna věc, která komunitu Etherea od začátku opravdu odlišuje, je to, že se nebojí být trochu bláznivá. Vidíte to na jednorožcích, bláznivých duhových barvách, tancích a písních – a právě tato bláznivost dodává celému ekosystému pocit naděje. A jedna věc, kterou lidé v dnešní době opravdu potřebují, je naděje.
 

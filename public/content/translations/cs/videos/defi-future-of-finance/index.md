@@ -18,7 +18,7 @@ Vysvětlující video od **Finematics**, které se zabývá budoucností decentr
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=H-O3r2YMWJ4) zveřejněného společností Finematics. Pro lepší čitelnost byl lehce upraven.*
 
-#### Století finančních inovací (0:00) {#a-century-of-financial-innovation-000}
+### Století finančních inovací (0:00) {#a-century-of-financial-innovation-000}
 
 Finanční systém, jak ho známe dnes, prošel desítkami let technologického pokroku. První pokusy o zefektivnění financí začaly již ve 20. letech 20. století zavedením účtovacích strojů a děrných štítků. Následoval vzestup sálových počítačů, které v 50. letech a později výrazně urychlily bankovní systém.
 
@@ -28,7 +28,7 @@ Od 90. let se díky rostoucímu přijetí internetu komputerizace financí ješt
 
 Pak přichází fintechová revoluce. PayPal, Robinhood, TransferWise, Revolut a další fintechové startupy pochopily technologický přístup známý z jiných nefinančních technologických společností a nabídly svým uživatelům bezproblémový přístup k finančním službám – což je ve srovnání s neohrabanými bankovními uživatelskými rozhraními zcela odlišný zážitek.
 
-#### Problémy v tradičních financích (2:09) {#problems-in-traditional-finance-209}
+### Problémy v tradičních financích (2:09) {#problems-in-traditional-finance-209}
 
 Navzdory století inovací má finanční systém k dokonalosti daleko:
 
@@ -44,7 +44,7 @@ Celá finanční infrastruktura se skládá z izolovaných systémů postavenýc
 
 Přesně proto potřebujeme něco nového – něco lepšího, co dokáže některé z těchto problémů vyřešit.
 
-#### Co je DeFi? (3:58) {#what-is-defi-358}
+### Co je DeFi? (3:58) {#what-is-defi-358}
 
 Zde přicházejí na řadu decentralizované finance (DeFi). Místo spoléhání se na starou a neefektivní infrastrukturu využívá DeFi sílu kryptografie, decentralizace a blockchainu k vybudování nového finančního systému. Systému, který může poskytnout přístup ke známým finančním službám, jako jsou platby, půjčování, vypůjčování a obchodování, efektivnějším, spravedlivějším a otevřenějším způsobem.
 
@@ -54,7 +54,7 @@ Zde přicházejí na řadu decentralizované finance (DeFi). Místo spoléhání
 
 To vše je možné díky vynálezu Bitcoinu a Etherea a jejich základních technologií. Zejména Ethereum jako platforma pro chytré kontrakty umožňuje vytvářet jakékoli libovolné finanční aplikace. Díky těmto vlastnostem se Ethereum stalo hlavním blockchainem pro drtivou většinu DeFi aktivit.
 
-#### Metriky růstu DeFi (6:18) {#defi-growth-metrics-618}
+### Metriky růstu DeFi (6:18) {#defi-growth-metrics-618}
 
 Decentralizované finance (DeFi) v poslední době zažívají obrovský růst. Některé z klíčových metrik:
 
@@ -66,7 +66,7 @@ Decentralizované finance (DeFi) v poslední době zažívají obrovský růst. 
 
 To se neomezuje pouze na kryptoměny, které mohou být poměrně volatilní. Stablecoiny, které sledují hodnotu fiat měn, jako je americký dolar, také zaznamenaly v DeFi ekosystému obrovský růst. Tržní kapitalizace USDC, populárního stablecoinu v DeFi, vzrostla z necelé jedné miliardy dolarů v dubnu 2020 na více než šest miliard dolarů v roce 2021. DAI vzrostl z necelých 100 milionů dolarů v dubnu 2020 na téměř dvě miliardy dolarů v roce 2021.
 
-#### Problémy reálného světa, které DeFi řeší (8:00) {#real-world-problems-defi-solves-800}
+### Problémy reálného světa, které DeFi řeší (8:00) {#real-world-problems-defi-solves-800}
 
 Abychom ještě lépe pochopili hodnotovou nabídku decentralizovaných financí (DeFi), projděme si několik běžných problémů v tradičních financích a podívejme se, jak je lze řešit v DeFi.
 
@@ -80,7 +80,7 @@ A co takhle platit 10 až 30 procent z hodnoty bankovního převodu jen za to, �
 
 Rovný přístup k finančním službám — DeFi protokolu je jedno, kdo jste. Řídí se pouze předem definovanými pravidly, která jsou pro všechny naprosto stejná.
 
-#### Výzvy DeFi (10:48) {#challenges-of-defi-1048}
+### Výzvy DeFi (10:48) {#challenges-of-defi-1048}
 
 Ačkoli nám DeFi představuje jedinečnou hodnotovou nabídku, přináší s sebou i vlastní výzvy. Přináší větší zodpovědnost uživatelům, kteří nyní skutečně vlastní svá aktiva a musí se ujistit, že je uchovávají bezpečným způsobem. Nikdo vás tu nevodí za ručičku, zvláště při interakci s novými DeFi protokoly.
 
@@ -92,7 +92,7 @@ Hackerské útoky jsou další výzvou v prostoru DeFi, kvůli nimž jsou určit
 
 Nezajištěné půjčky a hypotéky jsou velkými oblastmi tradičních financí, které je v DeFi o něco těžší implementovat. Naštěstí již existují protokoly jako Aave, které zkoumají různé možnosti, jako je delegace úvěrů a tokenizované hypotéky.
 
-#### Budoucnost financí (12:38) {#the-future-of-finance-1238}
+### Budoucnost financí (12:38) {#the-future-of-finance-1238}
 
 Navzdory těmto výzvám je DeFi jedinečnou inovací typu „z nuly na jedničku“ a vyřešení některých z těchto problémů je jen otázkou času. Co se tedy stane s tradičními financemi, pokud bude DeFi nadále inovovat a růst tímto obrovským tempem?
 

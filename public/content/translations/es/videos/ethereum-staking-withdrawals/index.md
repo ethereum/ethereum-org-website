@@ -19,7 +19,7 @@ Una explicación de **Finematics** que cubre cómo funcionan los retiros de stak
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=RwwU3P9n3uo) publicada por Finematics. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### La cadena de balizas (0:31) {#the-beacon-chain-031}
+### La cadena de balizas (0:31) {#the-beacon-chain-031}
 
 Con la actualización Shanghái/Capella acercándose rápidamente, hay mucha discusión sobre los retiros de staking de Ethereum y lo que esto significa para el ecosistema de Ethereum en su conjunto.
 
@@ -35,7 +35,7 @@ El siguiente gran paso, La Fusión, unió la capa de consenso de prueba de parti
 
 Para minimizar el riesgo, el alcance de La Fusión se redujo, y no se incluyeron otras características —fuera del cambio de prueba de trabajo a prueba de participación— como parte de la actualización. El mayor "recorte" que tuvo que hacerse afectó a los retiros, que se convirtieron en el foco de la próxima actualización Shanghái/Capella.
 
-#### Retiros (2:09) {#withdrawals-209}
+### Retiros (2:09) {#withdrawals-209}
 
 Los retiros de staking, como su nombre indica, permitirán a los participantes retirar su ETH bloqueado. Hay dos tipos de retiros: "parciales" y "totales".
 
@@ -47,7 +47,7 @@ Una vez habilitados, los retiros de staking se distribuirán automáticamente ca
 
 Para comenzar a retirar sus recompensas de staking, un validador tendrá que proporcionar su dirección de retiro solo una vez. Dado que los retiros afectan tanto a la capa de consenso como a la capa de ejecución de Ethereum, ambas partes de la red deben actualizarse. "Shanghái" es el nombre de la actualización de la capa de ejecución que contiene los retiros, los cuales se especifican en la EIP-4895. "Capella" es el nombre de la actualización homóloga de la capa de consenso, activada al mismo tiempo. Estas dos actualizaciones a veces también se denominan "Shapella".
 
-#### Mecánica (3:40) {#mechanics-340}
+### Mecánica (3:40) {#mechanics-340}
 
 En el ecosistema de Ethereum, cada validador tiene un número de índice correspondiente. Además, también tienen dos tipos de credenciales de retiro, definidas como `0x00` o `0x01`.
 
@@ -77,7 +77,7 @@ Al construir o procesar un bloque, los clientes de la capa de ejecución aplican
 
 El diseño de los retiros es simple pero extremadamente robusto.
 
-#### Conceptos erróneos (6:30) {#misconceptions-630}
+### Conceptos erróneos (6:30) {#misconceptions-630}
 
 El primer concepto erróneo afirma que al procesar retiros, existe una diferencia entre un retiro "total" y uno "parcial" en términos de prioridad u orden. Tanto los retiros totales como los parciales ocurren cuando el escaneo lineal sobre el conjunto de validadores alcanza el índice de un validador. La única diferencia es que, en el caso de los retiros totales, un validador debe abandonar la cola de salida y alcanzar la "época retirable" antes de que el escaneo lineal pueda detectarlo.
 
@@ -93,7 +93,7 @@ En segundo lugar, para garantizar que el mecanismo de consenso de prueba de part
 
 El primer escaneo de retiros retirará una gran cantidad de recompensas acumuladas, básicamente desde el inicio de la cadena de balizas. Sin embargo, los posteriores procesarán una cantidad mucho menor de ETH.
 
-#### Implicaciones (8:39) {#implications-839}
+### Implicaciones (8:39) {#implications-839}
 
 Habilitar los retiros creará un flujo de staking abierto y bidireccional. Actualmente, el flujo de staking es unidireccional: el ETH solo puede fluir hacia la red y nunca salir de ella. Curiosamente, habilitar los retiros puede incentivar a aún más personas a hacer staking, ya que sabrán que siempre pueden retirar su ETH si lo necesitan para otra cosa.
 
@@ -103,7 +103,7 @@ Los retiros también afectarán a los derivados de staking líquido como Lido, R
 
 Los primeros en adoptar el staking líquido y el staking centralizado capturaron una gran mayoría del mercado, ya que no tenían mucha competencia. Sin embargo, la cuota de mercado de estos actores establecidos podría experimentar un cambio importante una vez que se habiliten los retiros, especialmente si no ofrecen una tasa competitiva. La capacidad de cambiar libremente entre proveedores de staking beneficiará al mercado de staking de ETH.
 
-#### Resumen (10:01) {#summary-1001}
+### Resumen (10:01) {#summary-1001}
 
 Habilitar los retiros de staking es una de las actualizaciones más esperadas de Ethereum. Será extremadamente importante asegurarse de que este cambio se ejecute sin problemas. Para ayudar con las pruebas, los validadores tendrán varias redes de desarrollo (devnets) y redes de prueba (testnets) disponibles para ejecutar el proceso y resolver cualquier problema potencial antes de lanzarse en la Red principal.
 

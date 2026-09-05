@@ -20,7 +20,7 @@ Eine Präsentation von **Nixo Rokish** von der Ethereum Foundation auf der ETHBo
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=ghyY_cRqd54), das von EthBoulder veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:12) {#introduction-012}
+### Einführung (0:12) {#introduction-012}
 
 Danke an alle sechs meiner Freunde, die aufgetaucht sind. Also gut. Ich spreche heute zu euch über die Ethereum Core Governance. Mein Name ist Nixo. Ich leite das Protokoll-Support-Team bei der EF. Zu unseren Aufgaben gehört es unter anderem, den Governance-Prozess klarer und einfacher navigierbar für alle anderen zu machen, die an diesen Dingen teilnehmen, denn Ethereum umfasst viel mehr als nur seine Core-Entwickler.
 
@@ -36,7 +36,7 @@ Letztes Jahr ist also eine wirklich umstrittene Sache passiert. Vielleicht habt 
 
 Das war also sozusagen der Tropfen, der das Fass bei EOF zum Überlaufen brachte, und es wurde schließlich aus dem Fork geworfen. Eine weitere Sache, die sie berücksichtigen müssen, ist, dass es in sechs verschiedenen Sprachen geschrieben und streng getestet werden muss, da diese Clients in sechs verschiedenen Sprachen geschrieben sind. Das ist also eine wirklich große Testmatrix, mit der sie arbeiten müssen. Und aus diesem Grund wird jede noch so kleine Designentscheidung debattiert, ohne dass es eine Autorität gibt, die Meinungsverschiedenheiten beilegt. Die Frage, die sich daraus ergibt, ist also, wer entscheidet – was der Kern der Governance ist.
 
-#### Missverständnisse (5:23) {#misconceptions-523}
+### Missverständnisse (5:23) {#misconceptions-523}
 
 Das bringt uns zu den Missverständnissen, und wir werden einige davon ansprechen. Eines ist, dass Vitalik entscheidet, was in das Ethereum-Protokoll aufgenommen wird. Eine Erweiterung davon ist, dass die EF alles kontrolliert. Und ein drittes ist, dass alles in Hinterzimmern abläuft – Insider, OGs, die diese Entscheidungen treffen.
 
@@ -52,13 +52,13 @@ Und ich mag diesen dummen Tweet, den ich hier als Screenshot eingefügt habe, we
 
 Es sind alles Hinterzimmer-Deals, Insider, OGs – ich verstehe ein bisschen besser, warum das ein Missverständnis ist, denn man kommt im Grunde zu diesen Governance-Calls, da sind hundert Leute in diesen Governance-Calls. Es scheint, als wären sie alle sehr vertraut mit dem, was vor sich geht. Man ist verloren. Man hat keine Ahnung, wie diese Entscheidungen getroffen werden. Man denkt sich: „Bin ich schon dran mit Reden?“ Und es fühlt sich an, als würden die Leute immer denselben 10 Personen zuhören, um diese Entscheidungen zu treffen.
 
-#### Leistungsprinzip und Teilnahme-Statistiken (10:18) {#meritocracy-and-participation-stats-1018}
+### Leistungsprinzip und Teilnahme-Statistiken (10:18) {#meritocracy-and-participation-stats-1018}
 
 Aber die Wahrheit ist, dass die Ethereum-Entwicklung mehr eine Leistungsgesellschaft (Meritokratie) ist, als ich es je in der meisten Softwareentwicklung gesehen habe. All diese Leute auf diesem Screenshot – das ist einer von dreien in diesem zufälligen ACD-Call, den ich als Screenshot aufgenommen habe – niemand von diesen Leuten wurde ernannt, um hier zu sein. Jeder ist einfach nur jemand, der aufgetaucht ist. Es sind die Entwickler, die viel Zeit mit diesem Protokoll verbracht haben. Sie sind diejenigen, die von den Leuten als talentierte Entwickler in diesem Bereich anerkannt wurden, die beständig gute Entscheidungen treffen, und niemand hier ist ernannt worden, um hier zu sein.
 
 Ich bin also erst vor etwas mehr als einem Jahr zur EF gekommen. Ich habe mir diese Statistiken geschnappt. Sie gehen nur bis März 2025 zurück. Also weniger als ein Jahr. Die durchschnittliche Anzahl der Teilnehmer an den All Core Devs – das sind die Governance-Calls – beträgt 98. Im Durchschnitt sind also 98 Personen in diesen Calls. Die maximale Teilnehmerzahl in einem Call seitdem lag bei 153. Ich glaube, das war der Tag, an dem wir das Datum für das Pectra Mainnet festgelegt haben. Und die Gesamtzahl der eindeutigen Teilnehmer beträgt 567 allein im letzten Jahr. Ich mag diese Metrik wirklich, weil sie zeigt, dass nicht jedes Mal dieselben 100 Leute an diesen Calls teilnehmen. Diese App-Entwickler, Forscher, jemand hört von einer Funktion, die diskutiert wird, sie tauchen auf, um ihren Widerstand dagegen oder ihre Unterstützung dafür zu äußern, und dann kommen sie zu keinem weiteren Call mehr.
 
-#### Wie der Governance-Prozess funktioniert (11:52) {#how-the-governance-process-works-1152}
+### Wie der Governance-Prozess funktioniert (11:52) {#how-the-governance-process-works-1152}
 
 Das ist also eine etwas trockene Folie, aber ich denke, es ist wichtig, sie durchzugehen – so funktioniert die Governance von Ethereum derzeit. Wenn also einer dieser Forks diskutiert wird, ist das Erste, was passiert, dass die Leute während dieses zugewiesenen Zeitfensters ihren Headliner-Vorschlag einreichen können. Der Headliner-Vorschlag ist die Hauptfunktion, um die sich die Leute für diesen Fork versammeln sollen. Das kann ein Community-Mitglied, ein Forscher, ein Core-Entwickler sein – wirklich jeder, der einen dieser Headliner-Vorschläge einreicht. Dann endet das Zeitfenster und in den Governance-Calls diskutieren wir sozusagen, welcher davon Sinn macht. Die Leute bringen ihre Argumente vor, die Leute diskutieren und es gibt einen Konsens darüber, welchen wir für den kommenden Fork auswählen sollten.
 
@@ -68,7 +68,7 @@ Nach einer Reihe von Devnets – es könnten zwei sein, es könnten 10 sein – 
 
 Und sobald das erlaubnisfreie Testnetz stabil ist, wird das Mainnet-Datum gewählt. Danach gibt es einen 30-tägigen Puffer. Dieser 30-tägige Puffer existiert, weil L2s und Protokolle dies angefordert haben, um sich auf den Fork vorzubereiten. Das sind also mindestens 30 Tage und dann findet der Fork statt.
 
-#### Call-Struktur und Koordination (15:01) {#call-structure-and-coordination-1501}
+### Call-Struktur und Koordination (15:01) {#call-structure-and-coordination-1501}
 
 Während dieser ganzen Zeit finden einige wichtige Call-Serien statt. Dies sind alles öffentliche Calls, die live auf YouTube gestreamt werden. Die wichtigsten sind ACDE und ACDC. E steht für Ausführungsschicht (Execution Layer) – das sind Dinge wie Transaktionen, Smart Contract-Bereitstellungen, Mempool-Management. ACDC ist die Konsensschicht (Consensus Layer) – das sind also Validator-Dinge wie Validator-Management, Slashing. Und diese wechseln sich donnerstags ab. Es gibt also jeden einzelnen Donnerstag einen ACD und einer davon ist ACDE und dann der nächste ist ACDC, und so geht es weiter.
 
@@ -76,7 +76,7 @@ Die ACDE- und ACDC-Calls konzentrieren sich auf den Fork, den wir gerade durchf�
 
 Und dann gibt es Breakout-Calls. Breakout-Calls sind Community-Mitglieder, Forscher, Entwickler, die sagen: „Hey, ich habe eine Funktion, die ich in zwei Forks in Ethereum einbringen möchte.“ Und so veranstalten sie diese wöchentlichen, monatlichen oder zweimonatlichen Calls, in denen sie die Implementierungsdetails ausarbeiten, die Spezifikation ändern und iterieren und im Allgemeinen alle Fragen ansprechen, die die Leute haben, alle bekannten Unbekannten, um sicherzustellen, dass sie sich in der bestmöglichen Position befindet, um in den übernächsten Fork aufgenommen zu werden. Und diese können angesetzt werden, wann immer der Moderator (Facilitator) es entscheidet.
 
-#### Ein sich entwickelnder Prozess (15:29) {#an-evolving-process-1529}
+### Ein sich entwickelnder Prozess (15:29) {#an-evolving-process-1529}
 
 Eine Sache, die ich jedem ans Herz legen möchte, ist, dass dieser Prozess alles andere als statisch ist. Dieser Prozess, den ich euch gerade beschrieben habe, ist seit weniger als einem Jahr live. Ethereum ist seit 10 Jahren live. Aber er ändert sich ständig, und der Grund dafür ist, dass niemand das Sagen hat. Und dieser Prozess entwickelt sich sozusagen weiter, um die effizienteste Arbeitsweise herauszufinden. Und ich sage zwar effizient, aber der Ruf, den die Ethereum-Governance hat, ist, dass sie wirklich stagniert, dass es schwer ist, Dinge durchzusetzen, dass sie verwirrend ist – und das liegt daran, dass ich ehrlich gesagt beeindruckt bin, dass das überhaupt funktioniert, wenn 100 bis 500 Leute Entscheidungen treffen.
 
@@ -88,7 +88,7 @@ Der andere Screenshot oben zeigt also, wie Tim Definitionen für die Phasen der 
 
 Die dritte Sache sind Commits im Laufe der Zeit auf Forkcast. Forkcast ist ein Produkt meines Teams, von Wolfram Mark, einem Typen in meinem Team, der dies Mitte letzten Jahres entwickelt hat, als mein Team in seiner jetzigen Form gegründet wurde. Und es ist zu einer so kanonischen Ressource für die Leute geworden, um mit einem Fork zu interagieren, um zu sehen, was in einen Fork einfließt und wie es sie betrifft. All diese Dinge sind weniger als zwei Jahre alt. Der Punkt, den ich also machen möchte, ist, dass sich dieser Prozess stark verändert. Er ist überhaupt nicht statisch. Es ist keine eingefrorene Bürokratie, bei der es schwer ist, einen Fuß in die Tür zu bekommen.
 
-#### Vergleichbare Governance-Systeme (20:21) {#comparable-governance-systems-2021}
+### Vergleichbare Governance-Systeme (20:21) {#comparable-governance-systems-2021}
 
 Ich wollte also nur kurz auf die ähnlichsten dezentralen Governance-Systeme eingehen, die ich im Vergleich zur Ethereum-Governance sehe. Und der Punkt, den ich hier irgendwie machen möchte, ist, dass dies nachhaltig ist – auch wenn es erstaunlich ist, dass 100 bis 500 Leute Entscheidungen treffen können, ist es in der realen Welt nachhaltig. Wir sehen Beispiele dafür, dass dies funktioniert.
 
@@ -96,13 +96,13 @@ Die IETF ist die Internet Engineering Task Force. Es ist das ehrenamtlich gefüh
 
 Dinge, denen dies nicht ähnlich ist: andere Blockchains, die Onchain-Token-Abstimmungen haben. Ethereum vermeidet ausdrücklich jede Art von Abstimmungsmechanismus, weil das meiner Meinung nach zu Möglichkeiten der Vereinnahmung führt und sozusagen den Anreiz beseitigt, die Dinge zu einer Leistungsgesellschaft zu machen, in der die Leute einfach denjenigen vertrauen, die den besten Code schreiben. Und dann gibt es L2s. Sie haben Multi-Sigs. Sie haben Sicherheitsräte. Das sind eher ernannte Positionen, die diese Entscheidungen treffen. Und das hat seine Kompromisse. Es ist zentralisierter. Es bewegt sich jedoch schneller.
 
-#### Warum Entwickler sich dafür interessieren (22:38) {#why-builders-care-2238}
+### Warum Entwickler sich dafür interessieren (22:38) {#why-builders-care-2238}
 
 Warum interessieren sich Entwickler also für Governance? Weil Entwickler buchstäblich diejenigen sind, für die Ethereum geschaffen wurde. Ethereum wurde nicht für Core-Entwickler geschaffen. Es wurde nicht für Validatoren geschaffen. Manchmal sind diese Leute darüber verwirrt. Ethereum-Core-Entwickler und Validatoren dienen Ethereum, das wiederum Entwicklern und Nutzern dient.
 
 Und jeder hatte schon mal diesen Moment mit einer KI, in dem man sich viel zu sehr in Details verliert und sie versucht, diese kleine Sache zu reparieren, und es versäumt, herauszuzoomen und den gesamten Zweck des Projekts zu betrachten. Und Core-Entwickler können so sein, wenn sie versuchen, den Core-Entwicklungsprozess zu perfektionieren. Und in diesem Fall ist es sehr wichtig, dass Entwickler hinzukommen, denn die Core-Entwicklung ist so allumfassend, dass sie die meiste Zeit nicht auch noch auf Ethereum aufbauen. Sie sind sehr in die Core-Entwicklung involviert. Es nimmt ihre ganze Zeit in Anspruch. Und so müssen sich App-Entwickler wirklich bemühen, zu kommen und zu sagen: „Hey, wir brauchen das. Das ist entscheidend für Ethereum.“ Nur um sicherzustellen, dass die Perspektive vorhanden ist und dass sie nicht einfach in die Schublade gesteckt werden, nur für Core-Entwickler zu arbeiten.
 
-#### Wie man teilnehmen kann (24:40) {#how-to-participate-2440}
+### Wie man teilnehmen kann (24:40) {#how-to-participate-2440}
 
 Wie kann man also teilnehmen oder seine Funktion einbringen? Das ist ein eher allgemeiner Ratschlag, aber ich denke, es ist der beste. Sprecht laut über eure Schmerzpunkte. Geht auf Twitter, schreibt Blogbeiträge, identifiziert Lösungen für eure Schmerzpunkte. Spekuliert über die Dinge, die euch helfen könnten. Wenn ihr andere Leute findet, die dieselben Schmerzpunkte haben, könnt ihr in der Regel ein EIP finden, das existiert, um diesen Schmerzpunkt anzugehen, oder jemanden finden, der euch hilft, ein EIP zu schreiben, das dies tut.
 

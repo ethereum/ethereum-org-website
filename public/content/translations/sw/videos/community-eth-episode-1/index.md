@@ -17,7 +17,7 @@ Sehemu ya kwanza ya mfululizo wa *Community.eth* wa **Optimist**. Ili kusherehek
 
 *Nakala hii ni nakala inayofikika ya [video asili](https://www.youtube.com/watch?v=onCwaj1FM-4) iliyochapishwa na Optimist. Imehaririwa kidogo ili isomeke kwa urahisi. Wazungumzaji ni wanachama wa jamii ya Ethereum na si wote waliotambuliwa mmoja mmoja kwenye video.*
 
-#### Ethereum ni nini? (0:00) {#what-is-ethereum-000}
+### Ethereum ni nini? (0:00) {#what-is-ethereum-000}
 
 **Mtu wa 1:** Ethereum ni nini?
 
@@ -29,7 +29,7 @@ Sehemu ya kwanza ya mfululizo wa *Community.eth* wa **Optimist**. Ili kusherehek
 
 **Mtu wa 4:** Ethereum ni mambo mengi kwa watu wengi.
 
-#### Nini kinaifanya iwe na nguvu (0:40) {#what-makes-it-powerful-040}
+### Nini kinaifanya iwe na nguvu (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Uwezo ambao Ethereum inao ni mkubwa kwa sababu hatuwezi hata kuufafanua. Na nadhani hilo lina nguvu sana.
 
@@ -43,7 +43,7 @@ Sehemu ya kwanza ya mfululizo wa *Community.eth* wa **Optimist**. Ili kusherehek
 
 **Simona Pop:** Ethereum, kwangu mimi, ni hatua inayofuata katika mageuzi ya intaneti.
 
-#### Kwa nini tunajenga (2:00) {#why-we-build-200}
+### Kwa nini tunajenga (2:00) {#why-we-build-200}
 
 **Simona Pop:** Ndiyo, bila shaka kuna msisimko wakati bei inapanda, lakini watu na waumini wa kweli wapo wakati inashuka, wakati inapanda—haijalishi sana. Tunafanya hivi kwa sababu tunaamini kwa dhati katika kile tunachojenga.
 
@@ -51,7 +51,7 @@ Sehemu ya kwanza ya mfululizo wa *Community.eth* wa **Optimist**. Ili kusherehek
 
 **Alexis Ohanian:** Tuna nafasi ya kufikiria upya taasisi nyingi za jamii zenye umiliki wa kweli, zenye uwezo wa kweli wa kukusanya thamani kwa maisha yako yote, kwa vizazi—kwa umilele, kimsingi. Ninataka sana kuona hilo likifunguliwa.
 
-#### Jamii (3:00) {#the-community-300}
+### Jamii (3:00) {#the-community-300}
 
 **Amber Baldet:** Jambo moja ambalo kwa kweli linaitofautisha jamii ya Ethereum limekuwa, tangu mwanzo, kwamba hawaogopi kuwa wacheshi kidogo. Unaona hilo katika nyati na rangi za upinde wa mvua za kuchekesha na ngoma na nyimbo—na ucheshi huo ndio unaoupa mfumo mzima wa ikolojia hisia ya matumaini. Na jambo moja ambalo watu wanahitaji sana siku hizi ni matumaini.
 

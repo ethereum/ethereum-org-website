@@ -20,7 +20,7 @@ Maelezo kutoka kwa **Finematics** yanayohusu mikusanyiko kama mkakati mkuu wa ku
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=7pWxCklcNsU) iliyochapishwa na Finematics. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Tabaka la 2 (1:17) {#layer-2-117}
+### Tabaka la 2 (1:17) {#layer-2-117}
 
 Kuongeza uwezo wa Ethereum imekuwa mojawapo ya mada zinazojadiliwa sana katika kripto. Mjadala wa kuongeza uwezo kwa kawaida hupamba moto wakati wa vipindi vya shughuli nyingi za mtandao kama vile wazimu wa CryptoKitties mnamo 2017, Majira ya Joto ya fedha zilizogatuliwa (DeFi) ya 2020, au soko la ng'ombe la kripto mwanzoni mwa 2021. Wakati wa vipindi hivi, mahitaji yasiyo na kifani ya mtandao wa Ethereum yalisababisha ada za gesi kuwa juu sana, na kuifanya iwe ghali kwa watumiaji wa kila siku kulipia miamala yao.
 
@@ -28,7 +28,7 @@ Ili kukabiliana na tatizo hili, utafutaji wa suluhisho kuu la kuongeza uwezo ume
 
 Kwa ujumla, kuna njia tatu kuu za kuongeza uwezo wa Ethereum — au kwa kweli, minyororo ya vitalu mingine mingi: kuongeza uwezo wa mnyororo wa vitalu wenyewe (kuongeza uwezo wa tabaka la 1), kujenga juu ya tabaka la 1 (kuongeza uwezo wa tabaka la 2), na kujenga kando ya tabaka la 1 (minyororo ya kando).
 
-#### Nje ya tabaka la 1 (1:58) {#outside-of-layer-1-158}
+### Nje ya tabaka la 1 (1:58) {#outside-of-layer-1-158}
 
 Linapokuja suala la tabaka la 1, Eth2 ndilo suluhisho lililochaguliwa kwa ajili ya kuongeza uwezo wa mnyororo wa vitalu wa Ethereum. Eth2 inarejelea seti ya mabadiliko yaliyounganishwa kama vile uhamiaji kwenye Uthibitisho wa Dau (PoS), kuunganisha hali ya mnyororo wa vitalu wa Uthibitisho wa Kazi (PoW) kwenye mnyororo mpya wa Uthibitisho wa Dau, na shadi. Shadi, haswa, inaweza kuongeza kwa kiasi kikubwa uwezo wa upitishaji wa mtandao wa Ethereum, haswa inapounganishwa na mikusanyiko.
 
@@ -42,7 +42,7 @@ Ili kufanikisha hili, miamala ya rollup inatekelezwa kwenye mnyororo tofauti amb
 
 Kila rollup inapeleka seti ya mikataba mahiri kwenye tabaka la 1 ambayo inawajibika kwa kuchakata amana na uondoaji na kuthibitisha uthibitisho. Uthibitisho pia ndipo tofauti kuu kati ya aina tofauti za mikusanyiko inapoingia. Rollup za optimistic zinatumia ushahidi wa udanganyifu, wakati rollup za ZK zinatumia uthibitisho wa uhalali.
 
-#### Rollup za optimistic (4:26) {#optimistic-rollups-426}
+### Rollup za optimistic (4:26) {#optimistic-rollups-426}
 
 Rollup za optimistic zinachapisha data kwenye tabaka la 1 na kudhani ni sahihi — hivyo jina "optimistic." Ikiwa data iliyochapishwa ni halali, tuko kwenye njia nzuri na hakuna kingine kinachopaswa kufanywa. Rollup ya optimistic inafaidika kwa kutolazimika kufanya kazi yoyote ya ziada katika hali ya matumaini.
 
@@ -58,7 +58,7 @@ Mfumo unaweza kufanya kazi kama inavyotarajiwa na kugundua udanganyifu hata kama
 
 Linapokuja suala la rollup za ZK, hakuna utatuzi wa migogoro kabisa. Hili linawezekana kwa kutumia kipande kijanja cha kriptografia kinachoitwa uthibitisho wa sifuri-maarifa — hivyo jina rollup za ZK. Katika mfumo huu, kila kundi linalochapishwa kwenye tabaka la 1 linajumuisha uthibitisho wa kriptografia unaoitwa ZK-SNARK. Uthibitisho unaweza kuthibitishwa haraka na mkataba wa tabaka la 1 wakati kundi la muamala linapowasilishwa, na makundi batili yanaweza kukataliwa mara moja.
 
-#### Tofauti nyingine (7:28) {#other-differences-728}
+### Tofauti nyingine (7:28) {#other-differences-728}
 
 Kutokana na asili ya mchakato wa utatuzi wa migogoro, rollup za optimistic zinapaswa kutoa muda wa kutosha kwa washiriki wote wa mtandao kuwasilisha ushahidi wa udanganyifu kabla ya kukamilisha muamala kwenye tabaka la 1. Kipindi hiki kwa kawaida ni kirefu sana — ili kuhakikisha kwamba hata katika hali mbaya zaidi, miamala ya udanganyifu bado inaweza kupingwa. Hii inasababisha uondoaji kutoka kwenye rollup za optimistic kuwa mrefu sana, kwani watumiaji wanapaswa kusubiri hadi wiki moja au mbili ili kuweza kutoa fedha zao kurudi kwenye tabaka la 1.
 
@@ -70,7 +70,7 @@ Hata hivyo, rollup za ZK zinakuja na vikwazo vyake. Kutokana na ugumu wa teknolo
 
 Rollup za optimistic zina wakati rahisi kiasi na utangamano wa EVM. Bado zinapaswa kuendesha toleo lao wenyewe la EVM na marekebisho machache, lakini 99% ya mikataba inaweza kuhamishwa bila kufanya mabadiliko yoyote. Rollup za ZK pia ni nzito zaidi katika ukokotoaji kuliko rollup za optimistic, ikimaanisha kwamba nodi zinazokokotoa uthibitisho wa ZK zinapaswa kuwa mashine zenye uwezo wa juu, na kufanya iwe vigumu kwa watumiaji wengine kuziendesha.
 
-#### Maboresho ya kuongeza uwezo (9:32) {#scaling-improvements-932}
+### Maboresho ya kuongeza uwezo (9:32) {#scaling-improvements-932}
 
 Linapokuja suala la maboresho ya kuongeza uwezo, aina zote mbili za mikusanyiko zinapaswa kuwa na uwezo wa kuongeza uwezo wa Ethereum kutoka karibu miamala 15–45 kwa sekunde (kulingana na aina ya muamala) hadi miamala 1,000–4,000 kwa sekunde. Inafaa kuzingatia kwamba inawezekana kuchakata miamala mingi zaidi kwa sekunde kwa kutoa nafasi zaidi kwa makundi ya rollup kwenye tabaka la 1.
 
@@ -84,7 +84,7 @@ Ingawa Arbitrum na Optimism zinajaribu kufikia lengo sawa — kujenga suluhisho 
 
 Tofauti nyingine kubwa ni mbinu ya kushughulikia upangaji wa miamala na MEV. Arbitrum mwanzoni itaendesha mpangaji anayewajibika kwa kupanga miamala, lakini wanataka kuigatua kwa muda mrefu. Optimism inapendelea mbinu nyingine ambapo upangaji wa miamala — na hivyo MEV — inaweza kupigwa mnada kwa pande nyingine kwa kipindi fulani cha muda.
 
-#### Rollup za ZK (13:10) {#zk-rollups-1310}
+### Rollup za ZK (13:10) {#zk-rollups-1310}
 
 Ingawa inaonekana kama jamii ya Ethereum inaangazia zaidi rollup za optimistic — angalau kwa muda mfupi — miradi inayofanya kazi kwenye rollup za ZK pia inaendelea haraka sana.
 
@@ -92,11 +92,11 @@ Loopring inatumia teknolojia ya rollup ya ZK kuongeza uwezo wa ubadilishanaji wa
 
 Mikusanyiko inayotegemea StarkWare tayari inatumiwa sana na miradi kama vile DeversiFi, Immutable X, na dYdX. Kama ilivyotajwa hapo awali, zkSync inafanya kazi kwenye mashine pepe inayoendana na EVM ambayo itaweza kusaidia kikamilifu mikataba mahiri yoyote ya kiholela iliyoandikwa katika Solidity.
 
-#### Fedha zilizogatuliwa (DeFi) (14:02) {#defi-1402}
+### Fedha zilizogatuliwa (DeFi) (14:02) {#defi-1402}
 
 Mikusanyiko inapaswa pia kuwa na athari kubwa kwenye fedha zilizogatuliwa (DeFi). Watumiaji ambao hapo awali hawakuweza kufanya miamala kwenye Ethereum kutokana na ada kubwa za muamala wataweza kubaki katika mfumo wa ikolojia wakati ujao shughuli za mtandao zitakapokuwa nyingi. Mikusanyiko pia itawezesha aina mpya ya programu zinazohitaji miamala ya bei nafuu na muda wa uthibitisho wa haraka — yote huku ikilindwa kikamilifu na mwafaka wa Ethereum. Inaonekana kama mikusanyiko inaweza kuchochea kipindi kingine cha ukuaji wa juu kwa DeFi.
 
-#### Changamoto (14:29) {#challenges-1429}
+### Changamoto (14:29) {#challenges-1429}
 
 Hata hivyo, kuna changamoto chache linapokuja suala la mikusanyiko. Utangamano ni mojawapo — ili kuunda muamala unaotumia itifaki nyingi, zote zingepaswa kupelekwa kwenye rollup sawa.
 
@@ -104,7 +104,7 @@ Changamoto nyingine ni ukwasi uliogawanyika. Bila pesa mpya kuingia katika mfumo
 
 Hii pia inamaanisha kwamba kwa asili kutakuwa na washindi na walioshindwa. Kwa sasa, mfumo wa ikolojia wa Ethereum uliopo si mkubwa kiasi cha kutumia suluhisho zote za kuongeza uwezo. Hili linaweza — na labda litabadilika — kwa muda mrefu, lakini kwa muda mfupi, tunaweza kuona baadhi ya mikusanyiko na suluhisho nyingine za kuongeza uwezo zikigeuka kuwa miji iliyotelekezwa. Katika siku zijazo, tunaweza pia kuona watumiaji wakiishi kabisa ndani ya mfumo mmoja wa ikolojia wa rollup na kutoshirikiana na mnyororo mkuu wa Ethereum na suluhisho nyingine za kuongeza uwezo kwa vipindi virefu vya muda.
 
-#### Tishio kwa minyororo ya kando (15:44) {#threat-to-sidechains-1544}
+### Tishio kwa minyororo ya kando (15:44) {#threat-to-sidechains-1544}
 
 Swali moja ambalo hujitokeza mara nyingi sana wakati wa kujadili mikusanyiko ni kama ni tishio kwa minyororo ya kando. Minyororo ya kando bado itakuwa na nafasi yake katika mfumo wa ikolojia wa Ethereum. Ingawa gharama ya miamala kwenye tabaka la 2 itakuwa chini sana kuliko kwenye tabaka la 1, kuna uwezekano mkubwa bado itakuwa juu kiasi cha kuondoa aina fulani za programu kama vile michezo na programu nyingine zenye kiasi kikubwa cha matumizi. Hili linaweza kubadilika wakati Ethereum inapoanzisha shadi, lakini kufikia wakati huo minyororo ya kando inaweza kuunda athari ya kutosha ya mtandao ili kuishi kwa muda mrefu.
 

@@ -19,13 +19,13 @@ Ta prezentacja analizuje rodzaje reorganizacji bloków możliwe w Ethereum opart
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=xcPxwhrg3Ao) opublikowanego przez LisCon. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie i tło (0:03) {#introduction-and-background-003}
+### Wprowadzenie i tło (0:03) {#introduction-and-background-003}
 
 Witam serdecznie. Dzisiaj opowiem o reorganizacjach, które są możliwe w Ethereum opartym na dowodzie stawki (PoS).
 
 Niedawno dołączyłem do Fundacji Ethereum, a dokładniej do grupy Robust Incentives Group. W zasadzie jesteśmy zespołem badawczym skupiającym się na wszystkim, co dotyczy zachęt. Będę się streszczał — ta prezentacja jest pełna materiału, a większość naszej pracy można znaleźć na GitHubie.
 
-#### Dwa rodzaje reorganizacji (0:44) {#two-types-of-reorgs-044}
+### Dwa rodzaje reorganizacji (0:44) {#two-types-of-reorgs-044}
 
 Dzisiaj chcę porozmawiać o reorganizacjach, a w szczególności chcę nakreślić dwa różne rodzaje reorganizacji, które są możliwe w sferze Ethereum opartego na dowodzie stawki.
 
@@ -37,7 +37,7 @@ Z kolei reorganizacje ex-ante są nieco inne. Chodzi o to, że atakujący musi r
 
 Można się zastanawiać, dlaczego w ogóle ktoś chciałby przeprowadzić taką reorganizację. Cóż, wciąż jest MEV do przechwycenia. Jeśli masz szczęście, blok N+2 ma dużo MEV — możesz to przechwycić, po prostu kopiując i wklejając zawartość tego bloku. W najgorszym przypadku masz w zasadzie transakcje z dwóch slotów do nasłuchiwania.
 
-#### Reorganizacje ex-post w dowodzie pracy (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Reorganizacje ex-post w dowodzie pracy (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Zanim przejdę do reorganizacji ex-ante, które są głównym tematem tej prezentacji, pozwolę sobie krótko podsumować reorganizacje ex-post, zaczynając w szczególności od kontekstu dowodu pracy (PoW).
 
@@ -45,7 +45,7 @@ W zasadzie jest to podsumowanie wpisu na blogu autorstwa stałych bywalców — 
 
 Krótko mówiąc, w Ethereum opartym na dowodzie pracy reorganizacje ex-post są trudne, ale nie są niewykonalne. Górnik posiadający 10% mocy obliczeniowej ma stosunkowo duże szanse na wykopanie kilku bloków z rzędu, a jeśli zachęta jest wystarczająco wysoka — wyobraźmy sobie jeden blok z MEV o wartości 100 ETH do przechwycenia — to być może jednoprocentowy wskaźnik sukcesu może faktycznie wystarczyć, aby opłacało się spróbować reorganizacji.
 
-#### Reorganizacje ex-post w dowodzie stawki (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Reorganizacje ex-post w dowodzie stawki (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 W dowodzie stawki to zupełnie inna bajka. Mówimy o absurdalnej wymaganej kwocie stawki. Przeprowadzę was przez to, jak można by do tego podejść, aby tylko podkreślić, jak absurdalnie jest to trudne.
 
@@ -63,7 +63,7 @@ Jeśli to podsumujemy — blok N+1 ma poświadczenia warte jedną trzecią plus 
 
 Aby dać wam wyobrażenie, jak absurdalne są te założenia — nawet jeśli byłbyś stakującym posiadającym 65% stawki, prawdopodobieństwo kontrolowania dwóch trzecich komitetu w dowolnym slocie wynosi 0,05%. To pokazuje, że siła równoległych poświadczeń jest realna — reorganizacje ex-post są niezwykle trudne, jeśli nie praktycznie niemożliwe, w Ethereum opartym na dowodzie stawki.
 
-#### Mechanika ataku reorganizacji ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mechanika ataku reorganizacji ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Teraz opowiem o reorganizacjach ex-ante. Ten atak opiera się na artykule Neudera i innych. Niedawno znacznie ulepszyliśmy ten atak. Napisaliśmy również o nim artykuł i udało nam się go przesłać na arXiv w samą porę.
 
@@ -75,7 +75,7 @@ Dzieje się tak, że uczciwi uczestnicy nie widzą bloku N+1, więc poświadczą
 
 Załóżmy na chwilę zerowe opóźnienie. W slocie N+2, jako atakujący, publikujemy blok N+1 i prywatne poświadczenie w tym samym czasie. Uczciwi walidatorzy w slocie N+2 muszą poświadczyć blok. Z ich perspektywy widzą blok N+2 oraz blok N+1 z tym jednym prywatnym poświadczeniem. Jeśli uruchomią wybór rozwidlenia, odkryją, że blok N+1 ma większą wagę niż blok N+2, ponieważ N+1 ma prywatne poświadczenie, którego N+2 nie posiada. Nawet wszyscy uczciwi walidatorzy faktycznie poświadczą blok N+1. W N+3, co oczywiste, N+1 będzie postrzegany jako szczyt łańcucha.
 
-#### Opóźnienia w sieci a atak (10:25) {#network-latency-and-the-attack-1025}
+### Opóźnienia w sieci a atak (10:25) {#network-latency-and-the-attack-1025}
 
 Założyłem zerowe opóźnienie, co oczywiście tak nie działa. Opóźnienia istnieją — propagacja bloków i wiadomości w warstwie P2P wymaga czasu.
 
@@ -83,7 +83,7 @@ Sposobem, w jaki atakujący wciąż może przeprowadzić tego rodzaju atak, jest
 
 Aby jeszcze raz podkreślić, co się tutaj dzieje: mamy proponującego z pojedynczym poświadczającym, któremu udaje się przeprowadzić reorganizację jednego bloku. Delikatnie mówiąc, nie jest to idealne.
 
-#### Strategie równoważenia dla dłuższych reorganizacji (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Strategie równoważenia dla dłuższych reorganizacji (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Jeśli chcesz zaszaleć, możesz przeprowadzić dłuższe reorganizacje, stosując strategię równoważenia. Chodzi o to, aby podzielić uczciwy komitet na różne wizje łańcucha.
 
@@ -97,7 +97,7 @@ Aby zakończyć reorganizację dwóch bloków: proponowany jest blok N+3, słysz
 
 Jeśli się nad tym zastanowić, przeprowadzenie tych reorganizacji przy takich założeniach jest stosunkowo tanie. Nawet jeśli nie masz idealnych podziałów, ponieważ warstwa P2P jest tak duża, masz rozkład prawdopodobieństwa, w który możesz celować, tak że koszt ataku rośnie proporcjonalnie do pierwiastka kwadratowego z rozmiaru komitetu.
 
-#### Środek zaradczy w postaci premii proponującego (15:17) {#proposer-boost-mitigation-1517}
+### Środek zaradczy w postaci premii proponującego (15:17) {#proposer-boost-mitigation-1517}
 
 Porozmawiajmy o środkach zaradczych. Jaka jest podstawowa idea? Damy proponującemu trochę więcej władzy. Jeśli prawidłowy blok dotrze na czas, zwiększmy wagę tego bloku na czas trwania slotu. Po zakończeniu tego slotu wznawiamy zwykłą punktację LMD-GHOST i wszystko wraca do normy.
 
@@ -107,7 +107,7 @@ Kwestie równoważenia również już nie działają, ponieważ masz podział 50
 
 Chodzi o to, że po wdrożeniu tego środka zaradczego poświadczenia przeciwnika muszą konkurować z premią, aby przekonać uczciwych walidatorów do głosowania zgodnie z ich upodobaniami. To niszczy strategie równoważenia i w zasadzie całkowicie uniemożliwia wszelkie reorganizacje. Dobre wieści — istnieje otwarty PR, więc w zasadzie zostanie to wdrożone przed The Merge.
 
-#### Kluczowe wnioski (16:48) {#key-takeaways-1648}
+### Kluczowe wnioski (16:48) {#key-takeaways-1648}
 
 Kilka kluczowych wniosków. Omówiłem różnice między reorganizacjami ex-post i ex-ante. Krótko nakreśliłem różne krajobrazy dla reorganizacji w dowodzie pracy w porównaniu z dowodem stawki. Pokazałem, jak przeprowadzić reorganizację ex-ante, ale co równie ważne, jak to naprawić.
 

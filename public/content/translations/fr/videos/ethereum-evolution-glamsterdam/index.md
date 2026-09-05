@@ -19,7 +19,7 @@ Une présentation de **Preston Van Loon** d'Offchain Labs et Prysm, donnée à l
 
 *Cette transcription est une copie accessible de la [transcription vidéo originale](https://www.youtube.com/watch?v=GgKveVMLnoo) publiée par l'ETHDenver. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:07) {#introduction-007}
+### Introduction (0:07) {#introduction-007}
 
 **Animateur :** Très bien, tout le monde. Continuons. Nous allons parler de l'évolution d'Ethereum avec Preston Van Loon. À vous.
 
@@ -29,7 +29,7 @@ Il y a un discours que vous avez probablement déjà entendu : Ethereum est trop
 
 Je travaille sur le client de consensus Prysm. C'est l'un des composants clés de la chaîne balise d'Ethereum. Et j'étais sur le front pour les mises à jour les plus récentes — pour Pectra, Fusaka. D'après ce que j'ai vu de l'intérieur, ce n'était pas la bureaucratie lente que les gens ont reprochée à Ethereum pendant de nombreuses années. C'était en fait une machine à grande vitesse et bien exécutée, livrant certaines des plus grandes mises à jour que nous ayons jamais vues dans l'histoire d'Ethereum.
 
-#### Déploiement de trois mises à jour en un an (1:18) {#shipping-three-upgrades-in-one-year-118}
+### Déploiement de trois mises à jour en un an (1:18) {#shipping-three-upgrades-in-one-year-118}
 
 Ce que nous avons déployé en 2025, ce sont trois mises à jour majeures en un an. Tout d'abord, Pectra en mai 2025. Cela a introduit l'abstraction de compte native, une augmentation du solde effectif maximum du validateur permettant des consolidations, et dix autres EIP. En mai, c'était la plus grande mise à jour en termes d'EIP qu'Ethereum ait jamais connue.
 
@@ -37,7 +37,7 @@ Mais à peine sept mois plus tard, nous avons déployé Fusaka — une mise à j
 
 C'est une preuve de la capacité d'Ethereum à livrer. Il s'agit d'une collaboration entre cinq ou six clients de consensus, cinq clients d'exécution, de nombreux chercheurs — plus d'une centaine de personnes impliquées dans le développement principal d'Ethereum — et ils déploient tous en coordination en même temps.
 
-#### Mise à l'échelle avec PeerDAS (2:22) {#peerdas-scaling-222}
+### Mise à l'échelle avec PeerDAS (2:22) {#peerdas-scaling-222}
 
 Jetons un coup d'œil à la tête d'affiche de Fusaka : PeerDAS. PeerDAS est une solution de mise à l'échelle vraiment géniale. Avant PeerDAS, nous avions Pectra, et avec Pectra, vous deviez — en tant qu'opérateur de nœud ou validateur — télécharger chaque blob qui accompagnait un bloc. Cela ciblait six blobs par bloc. Tout le monde devait le télécharger, et c'est vraiment un goulot d'étranglement pour la mise à l'échelle. Si vous voulez augmenter cela, vous demandez aux opérateurs de nœuds d'augmenter proportionnellement leur utilisation de bande passante pour les blobs.
 
@@ -47,7 +47,7 @@ En regardant les chiffres : pour Pectra, nous avions un objectif de six et un ma
 
 Et puis nous avons obtenu cette importante diminution de la bande passante où chaque bloc avec un objectif de six blobs ne représente plus que 96 kilo-octets de données de blob qu'un validateur devait stocker. Ensuite, avec BPO1, le fork uniquement pour les paramètres de blob, nous avons augmenté l'objectif à 10 et le maximum à 15. BPO2, qui a eu lieu juste un mois plus tard, est passé à 14 et 21 — ce qui est le double de ce que nous avions dans Pectra, mais toujours 71 % d'utilisation de bande passante en moins sur les blobs pour les stakers individuels.
 
-#### Ce qui arrive dans Glamsterdam (4:30) {#whats-coming-in-glamsterdam-430}
+### Ce qui arrive dans Glamsterdam (4:30) {#whats-coming-in-glamsterdam-430}
 
 Que nous réserve la suite avec Glamsterdam ? Il y a trois éléments vraiment clés et un qui fait toujours l'objet de recherches actives.
 
@@ -57,7 +57,7 @@ La chose suivante que nous avons, ce sont les listes d'accès au niveau du bloc.
 
 La troisième chose est la réévaluation du prix du gaz. Il y a eu des tests de performance via cette EIP qui ont montré que certains codes d'opération étaient surévalués, d'autres sous-évalués. Maintenant, nous allons mettre à jour les frais que vous payez pour chaque code d'opération afin de refléter la réalité, rendant Ethereum plus sécurisé et plus efficace.
 
-#### L'évolution du rôle des L2 (6:14) {#the-evolving-role-of-l2s-614}
+### L'évolution du rôle des L2 (6:14) {#the-evolving-role-of-l2s-614}
 
 Il y a une chose dont je veux parler et que Vitalik a mentionnée récemment. Il a déclaré dans un tweet il y a quelques semaines que la vision originale des L2 et de leur rôle dans Ethereum n'avait plus de sens. Cela a fait les gros titres, et je pense que beaucoup de gens en ont tiré la mauvaise conclusion.
 
@@ -65,7 +65,7 @@ Laissez-moi vous dire ce que cela signifie du point de vue de quelqu'un de l'int
 
 Donc, l'idée que nous avons besoin de L2 à usage général — c'est-à-dire des L2 qui sont simplement la même EVM que nous avons sur la couche 1 (l1), qu'il suffit de copier-coller plusieurs fois et dont le seul but est d'aller plus vite — ce n'est plus la vision. Ces L2 prospéreront grâce à la spécialisation. Certains d'entre eux cibleront des éléments comme la confidentialité, les jeux, des spécificités de la finance décentralisée (DeFi) ou des extensions de l'EVM. Mais s'ils sont simplement une copie conforme de la couche 1 (l1), ils ne font pas partie de la feuille de route où nous avions initialement envisagé ce type de paradigme fragmenté via les L2.
 
-#### FOCIL : résistance à la censure au niveau du protocole (7:25) {#focil-protocol-level-censorship-resistance-725}
+### FOCIL : résistance à la censure au niveau du protocole (7:25) {#focil-protocol-level-censorship-resistance-725}
 
 Au-delà de Glamsterdam, il y a trois choses vraiment géniales en développement et en recherche actifs. La première est FOCIL — Fork-Choice Enforced Inclusion Lists (Listes d'inclusion appliquées par le choix de fork).
 
@@ -75,23 +75,23 @@ FOCIL modifie la dynamique de pouvoir. Au lieu de dire que les constructeurs de 
 
 Cela est appliqué via le choix de fork. Les validateurs qui voient un bloc ne l'attesteront pas à moins qu'une liste d'inclusion n'y soit ajoutée à la fin. S'ils en voient un sans la liste, ils considéreront ce bloc comme invalide et l'ignoreront tout simplement — ils ne le propageront pas, ils ne voteront pas pour lui. Il s'agit toujours d'une recherche active avec certains paramètres encore en cours de décision, mais la direction est claire : Ethereum va inclure la résistance à la censure au niveau du protocole.
 
-#### Temps de créneau plus courts (9:24) {#shorter-slot-times-924}
+### Temps de créneau plus courts (9:24) {#shorter-slot-times-924}
 
 Le prochain point vraiment passionnant concerne les temps de créneau plus courts. Avec Hegata — le fork après Glamsterdam — nous examinons si nous pouvons inclure des temps de créneau plus courts ou des créneaux rapides. Cela ne veut pas dire que nous passons directement à des créneaux de six secondes ou même plus rapides, mais que nous construisons l'infrastructure pour rendre cela possible.
 
 Cela semble vraiment simple — du genre, « allons juste plus vite ». Mais il faut penser à la propagation sur le réseau, aux tâches d'attestation des validateurs où ils ont un temps limité pour s'exécuter, et puis il y a l'aspect économique. Quand j'ai expérimenté cela pour la première fois, j'ai juste changé le 12 en 6 et soudainement tout le monde générait deux fois plus d'émission — deux fois plus d'argent — ce qui n'est pas vraiment l'intention derrière des temps de créneau plus courts. Il s'agit d'aller plus vite mais en gardant toutes choses égales par ailleurs. C'est donc une chose très complexe, mais il y a la possibilité d'y arriver progressivement à terme.
 
-#### Finalité plus rapide (10:20) {#faster-finality-1020}
+### Finalité plus rapide (10:20) {#faster-finality-1020}
 
 La troisième chose est une finalité plus rapide. C'est vraiment important car Ethereum finalise toutes les deux époques — toutes les 13 minutes — et il y a des applications qui dépendent vraiment de la question : ma transaction est-elle permanente ? Si la transaction n'a pas été dans une époque finalisée, alors la réponse est non — il y a une petite chance qu'elle puisse être réorganisée et que la transaction doive être soumise à nouveau.
 
 Maintenant, si nous avons une finalité rapide, des choses comme les échanges, les ponts ou n'importe quelle application peuvent être assurés qu'une transaction est finale. Tout d'abord, au lieu de deux époques pour la finalité, faisons-le en une seule. Ensuite, nous pouvons dire qu'au lieu d'époques de 32 créneaux, raccourcissons-les à quatre créneaux. Maintenant, si vous associez cela à des temps de créneau de six secondes, vous parlez d'une finalité en moins de 30 secondes. C'est un objectif final vraiment génial.
 
-#### L'étoile polaire (11:15) {#the-north-star-1115}
+### L'étoile polaire (11:15) {#the-north-star-1115}
 
 Tout cela est intégré dans l'étoile polaire, où nous disons que la couche 1 (l1) est rapide avec une finalisation en quelques secondes. Comment y parvenons-nous ? Tout d'abord, nous commençons par PeerDAS — qui est déjà déployé. Cela nous a donné une couche évolutive pour la disponibilité des données. Ensuite, nous avons Glamsterdam, incluant principalement l'ePBS, qui est une implémentation propre pour la séparation proposant-constructeur (PBS) et rend des choses comme FOCIL plus percutantes. FOCIL arrive avec la résistance à la censure, ce qui est très harmonieux avec l'ePBS. Avec des créneaux plus rapides, des temps de créneau plus courts rendent une finalité plus rapide encore plus percutante. Ensuite, nous arrivons à cet objectif final où nous avons vraiment des transactions rapides qui sont finalisées en quelques secondes.
 
-#### Conclusion (12:02) {#closing-1202}
+### Conclusion (12:02) {#closing-1202}
 
 Je veux que vous imaginiez à quoi ressemblera la vie dans deux ans. C'est un peu difficile à concevoir car la crypto évolue si vite. Cela pourrait être une réalité dans seulement deux ans : des temps de confirmation de transaction de quatre ou six secondes ; une finalité mesurée en secondes, et non en minutes ; une application au niveau du protocole pour la résistance à la censure ; des protections contre la cryptographie post-quantique ; et des L2 en concurrence sur les fonctionnalités et les nouvelles innovations, pas seulement sur la vitesse. Tout cela en conservant la vertu de pouvoir utiliser un ordinateur portable ou du matériel grand public pour faire tourner un nœud complet à la maison. Ethereum est accessible et le restera pour tout le monde à l'avenir.
 

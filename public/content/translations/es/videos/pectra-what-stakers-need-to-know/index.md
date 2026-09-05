@@ -19,11 +19,11 @@ Un seminario web organizado por **Blockdaemon** con la ingeniera de cadena de bl
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=_UpAFpC7X6Y) publicada por Blockdaemon. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:00) {#introduction-000}
+### Introducción (0:00) {#introduction-000}
 
 **Presentador:** Hola y bienvenidos a este seminario web organizado por Blockdaemon centrado en la próxima actualización Pectra de Ethereum. Hoy nos acompañan Julia Schmidt, ingeniera de cadena de bloques en Alluvial, y Freddy Tänzer, líder del ecosistema de Ethereum en Blockdaemon, para hablar sobre cómo los cambios de Pectra afectarán el staking de ETH, la red en su conjunto, los servicios de staking líquido y más. Para empezar, Freddy, ¿podrías darnos una breve descripción general de la actualización Pectra y cuál será su impacto para quienes hacen staking?
 
-#### Qué es Pectra (1:28) {#what-is-pectra-128}
+### Qué es Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra es una actualización de Ethereum que está programada para finales del primer trimestre de 2025, alrededor de marzo, aunque podría retrasarse un poco, tal vez hasta abril más o menos. En un principio se suponía que sería una pequeña bifurcación, y luego se fueron añadiendo más y más cosas, por lo que ahora la han dividido en dos.
 
@@ -33,7 +33,7 @@ El primero es el hecho de que puedes activar retiros y salidas de tu validador a
 
 También hay uno más pequeño que básicamente hace que los depósitos sean mucho más rápidos (registrados en cadena de unas 14 horas a menos de una hora), pero creo que esos dos son los más relevantes para nuestra discusión aquí.
 
-#### EIP-7002: salidas activables desde la capa de ejecución (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: salidas activables desde la capa de ejecución (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Presentador:** En cuanto al primer cambio importante, Julia, ¿podrías explicar cómo cambiará el proceso después de Pectra en comparación con las formas actuales en que se inician los retiros en el ecosistema de staking de Ethereum?
 
@@ -49,7 +49,7 @@ En la última actualización Dencun, una nueva EIP cambió el tiempo de expiraci
 
 Esto ahora se resuelve con la EIP-7002, que permite que tanto la clave del validador como la clave de retiro activen la salida desde la capa de ejecución, simplemente enviando una transacción a un contrato de retiro especial donde envías una solicitud de retiro y especificas una salida completa del validador o un retiro parcial del saldo en staking.
 
-#### EIP-7251: saldo efectivo máximo (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: saldo efectivo máximo (4:15) {#eip-7251-max-effective-balance-415}
 
 **Presentador:** Freddy, ¿podrías darnos una descripción general del saldo efectivo máximo en el futuro a partir de Pectra, y cómo esto afectará a las personas que actualmente hacen staking?
 
@@ -69,7 +69,7 @@ También hay buenas noticias sobre el recorte: la penalización inicial por reco
 
 El beneficio de la capitalización automática beneficia principalmente a cantidades más pequeñas de participación. Si tienes mil validadores, podrías lanzar manualmente uno nuevo cada mes. Pero si solo tienes un validador, prácticamente tendrías que esperar 32 años para capitalizar.
 
-#### Implicaciones del staking líquido (11:25) {#liquid-staking-implications-1125}
+### Implicaciones del staking líquido (11:25) {#liquid-staking-implications-1125}
 
 **Presentador:** Julia, ¿cómo se compara la consolidación de validadores más grandes con los beneficios del staking líquido? ¿Cómo sopesarán estas decisiones en la mente de quienes hacen staking después de Pectra?
 
@@ -79,7 +79,7 @@ El hecho de que se haya reducido la penalización inicial por recorte reduce el 
 
 Por el lado de la utilidad, un token de staking líquido (LST) obviamente agrega liquidez; incluso con retiros parciales desde la capa de ejecución, no será instantáneo. Envías la transacción, se pone en cola, luego está la época de salida y la época de retiro. Los tokens de staking líquido aún ofrecen liquidez instantánea que los retiros parciales no pueden ofrecer.
 
-#### Próximos pasos para quienes hacen staking (16:20) {#next-steps-for-stakers-1620}
+### Próximos pasos para quienes hacen staking (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Lo que vemos es que las instituciones financieras normalmente harían staking de entre el 65 % y el 85 % de sus ETH bajo custodia, porque necesitan el resto como un margen de liquidez para los reembolsos. Con el staking líquido, puedes aumentar potencialmente la cantidad de ETH en staking, lo que genera mayores recompensas.
 
@@ -89,7 +89,7 @@ Ambas partes se benefician de Pectra: el staking líquido obtiene la opción de 
 
 Una ventaja clave que aún no he mencionado son los retiros parciales: ahora que puedes retirar ETH en staking desde la capa de ejecución, esto abre nuevas vías para que protocolos como EigenLayer activen retiros y salidas. Hay un gran aumento en la funcionalidad y la interoperabilidad que las finanzas descentralizadas (DeFi) ahora pueden incorporar mejor en todo el ciclo de vida del validador, desde el depósito hasta la salida. Como ingeniera de cadena de bloques, es emocionante poder automatizar todo el flujo de trabajo.
 
-#### Cierre (19:50) {#closing-1950}
+### Cierre (19:50) {#closing-1950}
 
 **Presentador:** Julia, ¿dónde puede ir la gente para obtener más información sobre Liquid Collective y Alluvial?
 

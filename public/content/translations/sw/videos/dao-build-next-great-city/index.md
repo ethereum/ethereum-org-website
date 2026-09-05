@@ -18,7 +18,7 @@ Wasilisho la TED la mtaalamu wa majaribio ya mipango miji **Scott Fitsimones** k
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=zTStDvUtQWc) iliyochapishwa na TED. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Kuanzisha jiji kutokana na chapisho la Twitter (0:04) {#starting-a-city-from-a-tweet-004}
+### Kuanzisha jiji kutokana na chapisho la Twitter (0:04) {#starting-a-city-from-a-tweet-004}
 
 Unaanzishaje jiji jipya? Inageuka kuwa si rahisi. Unahitaji kupima ardhi, kupata ruhusa kutoka kwa serikali, kununua ardhi, kuwashawishi watu kuhamia huko. Na hadi Elon Musk atupeleke Mirihi, ardhi ni rasilimali yenye kikomo — na maeneo mazuri huenda yote yameshakamatwa.
 
@@ -26,7 +26,7 @@ Lakini vipi ikiwa tungeweza kuanza kwa udogo zaidi, yaani udogo haswa? Na kuchap
 
 Sasa tulikuwa na kipande cha ardhi, kiasi cha pesa, na maamuzi mengi ya kufanya kwa pamoja. Ndiyo maana tuliamua kuanzisha DAO — shirika linalojitegemea lililogatuliwa — lililoitwa CityDAO.
 
-#### DAO ni nini? (1:15) {#what-is-a-dao-115}
+### DAO ni nini? (1:15) {#what-is-a-dao-115}
 
 DAO ni shirika la asili la mtandaoni, linalotawaliwa na mnyororo wa vitalu, linalomilikiwa kwa pamoja na linalofanya kazi kuelekea lengo la pamoja. DAOs nyingi hukusanya sarafu-fiche katika hazina ambapo wanachama hupiga kura kuhusu jinsi inavyotumika.
 
@@ -34,7 +34,7 @@ Katika kampuni ya kitamaduni, Afisa Mtendaji Mkuu (CEO) hufanya kazi na watendaj
 
 Ikiwa kampuni ya kitamaduni itafanikiwa, utajiri mwingi utaenda kwa waanzilishi wachache, baadhi ya wafanyakazi wa mapema, na wawekezaji ambao kwa ujumla tayari wana utajiri mkubwa. DAO ni aina ya ushirika wa kripto, unaowapa kundi pana la watu fursa ya kumiliki sehemu, kushiriki katika usimamizi, na kugawana faida inayoweza kupatikana.
 
-#### CityDAO na majiji ya mnyororoni (2:28) {#citydao-and-onchain-cities-228}
+### CityDAO na majiji ya mnyororoni (2:28) {#citydao-and-onchain-cities-228}
 
 CityDAO ilitokana na kufadhaika kwangu kushughulika na urasimu wa jiji na vikwazo wakati nikijenga kampuni changa inayosaidia majiji kutumia vizuri maeneo yao tupu ya kuegesha magari. Ilituchukua zaidi ya miezi mitatu kupata kibali cha kuuza tu maegesho huko San Francisco, na ilikuwa ndoto mbaya ya urasimu wa kizamani. Mambo kama vile kuweka eneo la maegesho kwa matumizi ya juu na bora zaidi — kujenga eneo la malori ya chakula, kitovu cha usafirishaji, labda hata nyumba mpya, soko la wakulima — haya yanachosha, yanaweza kuchukua miezi au miaka, au hata kuwa kinyume cha sheria kutokana na sheria za ukanda.
 
@@ -42,7 +42,7 @@ CityDAO ilikuwa miongoni mwa DAOs za kwanza zilizokuwa na ujasiri wa kutosha kun
 
 Katika CityDAO, tunafikiria jiji la mnyororoni ambapo mambo kama vile utoaji wa vibali, bajeti, sheria, hati, na rekodi zote ni wazi kwenye mnyororo wa vitalu, na mikataba mahiri inaweza kuharakisha miamala na kupunguza urasimu. Mambo ambayo yalikuwa yakichukua wiki — kama kununua au kuuza ardhi, au kuchukua mkopo dhidi ya mali yako — yanaweza kufanyika kwa sekunde kupitia mkataba mahiri.
 
-#### Jinsi DAOs zinavyojipanga (3:49) {#how-daos-organize-349}
+### Jinsi DAOs zinavyojipanga (3:49) {#how-daos-organize-349}
 
 DAOs ni kama makundi ya ghafla ya kifedha, mara nyingi yakijipanga kana kwamba ni usiku mmoja katika kutafuta wazo. Kawaida huanza kama watu wachache ambao wana maono makubwa lakini wanatambua itachukua juhudi kubwa ya pamoja ili kufanikisha.
 
@@ -50,7 +50,7 @@ Kawaida huanzisha jamii katika seva ya soga ya kikundi, na inayojulikana zaidi n
 
 Watu wanaweza kuchangia kwenye DAO kwa muda wote, muda wa ziada, lakini mojawapo ya njia za kawaida ni kupitia zawadi — ambapo unaingia na kutoka kwenye DAO, ukichukua kazi ndogo ndogo na kuchangia pale unapoweza.
 
-#### Utawala na ufadhili (4:39) {#governance-and-funding-439}
+### Utawala na ufadhili (4:39) {#governance-and-funding-439}
 
 DAOs nyingi hukusanya ufadhili wa awali kwa kuuza tokini ya utawala inayowapa wamiliki haki za kupiga kura juu ya shughuli za DAO. Unaweza kununua tokeni hizi kwenye soko la wazi ukitumia sarafu-fiche kama Ethereum, au unaweza kuzipata kwa kuchangia kwenye DAO — kwa mfano, kubuni nembo, kufanya utafiti, au kuandika msimbo.
 
@@ -60,7 +60,7 @@ DAOs zimeitwa soga za kikundi zenye akaunti ya benki. Na najua unachofikiria: "S
 
 Fedha hukaa katika hazina ya mnyororo wa vitalu ya umma ambapo mtu yeyote anaweza kukagua mapato na matumizi. Wakati wowote matumizi au uhamishaji wa pesa unapohusika, DAO inaidhinisha kupitia pendekezo. Kwa kawaida huandikwa na mwanachama wa DAO, pendekezo huanza kama wazo ambalo hujadiliwa na kuwekwa kwa kura ya wamiliki wa tokeni.
 
-#### Kununua Sehemu ya 0 (5:53) {#buying-parcel-0-553}
+### Kununua Sehemu ya 0 (5:53) {#buying-parcel-0-553}
 
 Moja ya mapendekezo ya kwanza katika CityDAO ilikuwa, bila shaka, ni kipande gani cha ardhi cha kununua. DAO ilijadili mambo ya lazima kuwa nayo, mambo mazuri kuwa nayo, na wachangiaji wa DAO walichambua orodha za ardhi za Wyoming na kuzipunguza hadi tatu bora, wakielezea faida na hasara za kila moja na kuwasilisha pendekezo la mwisho kwa DAO kwa ajili ya kura.
 
@@ -68,7 +68,7 @@ Tulipiga kura kupata Sehemu ya 0 karibu na Cody, Wyoming — iliyochaguliwa kwa 
 
 Hatua zinazofuata katika CityDAO ni mambo kama vile kupiga kura kuhusu nini kitajengwa kwenye ardhi na nani atapata kuitumia lini. Baadhi ya mapendekezo mengine yanayozunguka ni mambo kama kununua kipande cha ardhi katika Amazon kwa ajili ya uhifadhi, au kujenga mtandao wa maeneo yanayomilikiwa na DAO ambapo wananchi wanaweza kutembelea wakati wowote — jiji lililogatuliwa, labda.
 
-#### DAOs katika vitendo (7:11) {#daos-in-action-711}
+### DAOs katika vitendo (7:11) {#daos-in-action-711}
 
 Leo tunaona DAOs zikifanya kila aina ya mambo ya kuvutia sana pamoja. Zinajenga bidhaa, kuwekeza katika kampuni changa, kununua sanaa na mali, kufadhili utafiti, na kukusanya pesa.
 
@@ -78,7 +78,7 @@ PleasrDAO inakusanya sanaa na mali za kidijitali kama NFTs. Hivi karibuni walinu
 
 Katika DAOs kama MetaCartel na Seed Club, wanachama hukagua mawasilisho kutoka kwa kampuni changa na miradi inayoahidi na kuamua ni ipi ya kufadhili. VitaDAO inafadhili utafiti, na hivi karibuni zaidi, UkraineDAO ilikusanya zaidi ya dola milioni sita kuchangia juhudi za ulinzi za Ukraine.
 
-#### Changamoto na siku zijazo (8:40) {#challenges-and-the-future-840}
+### Changamoto na siku zijazo (8:40) {#challenges-and-the-future-840}
 
 Bado ni mapema kwa DAOs, na hakika si kwa kila kitu. Zinahitaji kiwango cha kujenga mwafaka na zinaweza kwenda polepole kuliko kampuni yenye bosi anayeweza tu kutoa maamuzi. Baada ya yote, ConstitutionDAO ilizidiwa dau katika jumba la mnada la Sotheby's na Mkurugenzi Mtendaji wa Citadel, na wengine wanasema uwazi na ugatuzi ulifanya iwe vigumu kwa DAO kuratibu na kushinda mnada.
 

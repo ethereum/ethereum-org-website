@@ -18,7 +18,7 @@ Panel na wydarzeniu Web3Privacy Now podczas Devconnect 2025, moderowany przez **
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=cZqlg4W1Els) opublikowanego przez Web3Privacy Now. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie do Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Wprowadzenie do Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Cześć. Słyszycie mnie? W porządku. Super. Najpierw zrobimy bardzo krótkie wprowadzenie — taką 3- do 5-minutową prelekcję — a potem przejdziemy do panelu. To jest skrócona wersja. Poprzedni panel dużo mówił o zgodności z przepisami, prywatności i tak dalej. Wcześniej wygłosiłem prelekcję na Cyban Congress, która również tego dotyczyła, a dłuższa wersja tej prelekcji odbędzie się na DeFi Day w dalszej części dnia. Ale to, o czym chcę porozmawiać, to prywatność instytucjonalna na Ethereum.
 
@@ -30,7 +30,7 @@ Pojedyncza duża instytucja może mieć tutaj ogromny wpływ na to, który ekosy
 
 Aby Ethereum mogło przeprowadzić onboarding tych instytucji, musi zająć się tymi obawami dotyczącymi prywatności. To, co staramy się robić w Institutional Privacy Task Force, to onboarding instytucji na Ethereum i upewnienie się, że ich cele w zakresie prywatności są spełnione. Organizujemy warsztaty, starając się odczarować tę przestrzeń i upewnić się, że możemy zaspokoić potrzeby instytucjonalne, jeśli chodzi konkretnie o prywatność. Pierwszym artefaktem, jaki mamy, jest ta mapa prywatności instytucjonalnej — rozmawiamy z ogromnymi instytucjami, rozumiemy ich przypadki użycia biznesowego i wymagania, udostępniamy jak najwięcej w modelu open source, a następnie rozmawiamy z dostawcami w tej przestrzeni, aby połączyć instytucje z dostępnymi rozwiązaniami. 
 
-#### Wprowadzenia do panelu i problemy instytucjonalne (5:00) {#panel-introductions-and-institutional-problems-500}
+### Wprowadzenia do panelu i problemy instytucjonalne (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Przepraszam, że było to trochę szybkie, ale mam nadzieję, że zrozumiałe. W tym panelu bierze udział wielu ekspertów z dziedziny badań, polityki i inżynierii, a my porozmawiamy o prywatności instytucjonalnej. 
 
@@ -48,7 +48,7 @@ Z drugiej strony, *dlaczego być na publicznym blockchainie?* Są to złożone r
 
 **Amzah:** Tak. Pracuję dla ABN Amro, dużego holenderskiego banku. Mamy 5 milionów klientów detalicznych. Obecnie nie budujemy niczego konkretnie w zakresie prywatności, ale to, co się teraz pojawia, to na przykład portfel tożsamości cyfrowej. Zazwyczaj działa to tak, że dane są przechowywane w scentralizowanej bazie danych, a następnie łączysz się z zewnętrznym dostawcą lub stroną trzecią, ale to oczywiście nie jest do końca bezpieczne. Zaczynamy więc już myśleć o tym, jak możemy wykorzystać na przykład dowody z wiedzą zerową (ZK-proofs), abyśmy mogli mieć selektywne ujawnianie informacji podmiotom zewnętrznym. W ten sposób możemy chronić informacje o naszych klientach, a także pozwolić im połączyć się z szerszym środowiskiem Web3.
 
-#### Konkretne przepływy pracy i przechowywanie (10:07) {#concrete-workflows-and-storage-1007}
+### Konkretne przepływy pracy i przechowywanie (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Okej, świetnie. Jeśli wybierzesz jeden konkretny przepływ, na którym może ci zależeć — na przykład emisja obligacji, transakcja handlowa lub płatność ze skarbca — kto może zobaczyć co dokładnie na jakim etapie i co jest przechowywane onchain w porównaniu do środowiska pozałańcuchowego? Może zaczniemy od François.
 
@@ -68,7 +68,7 @@ Z drugiej strony, być może dochodzi do wymiany pozycji między pożyczkodawcam
 
 **Amzah:** Tak. W większości zgadzam się z tym, co powiedział Zach. W przeszłości, kiedy instytucje myślały o prywatności, po prostu uruchamiały łańcuch prywatny, w którym uczestniczyło może 20 banków i tylko one mogły zobaczyć, co w nim jest. Ale w rzeczywistości jest to znacznie bardziej zniuansowane. Zależy to od przypadku użycia, rodzaju przepływów i tego, co musi wiedzieć regulator. Możesz umieścić informacje o saldzie onchain w bardziej zagregowanej formie, używając na przykład dowodu rezerw (proof of reserves).
 
-#### Wymagania niepodlegające negocjacjom (15:26) {#non-negotiable-requirements-1526}
+### Wymagania niepodlegające negocjacjom (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio i Amzah, z perspektywy banków, platform i organów regulacyjnych, jakie są wymagania niepodlegające negocjacjom, o których słyszycie w kółko? Na przykład ścieżki audytu, zasady KYC czy wymogi dotyczące raportowania?
 
@@ -78,7 +78,7 @@ Z drugiej strony, być może dochodzi do wymiany pozycji między pożyczkodawcam
 
 **François:** Nasz współzałożyciel spędza tygodnie z klientami w przestrzeni instytucjonalnej, a najważniejszym żądaniem, które się pojawia, jest „kontrola”. Kto widzi co, kiedy i z jakiego powodu. A potem te rozmowy schodzą na szczegóły i stają się niesamowicie spersonalizowane. Dla nas to świetnie, ponieważ tradycyjny świat finansów spędził dziesięciolecia na budowaniu swoich praktyk księgowych i przepływów AML/CTF. Są bardzo konkretni, jeśli chodzi o tę kontrolę. Budujemy więc te możliwości w warstwie protokołu i wspieramy klientów w ich podróży.
 
-#### Kompromisy i globalna płynność (18:10) {#trade-offs-and-global-liquidity-1810}
+### Kompromisy i globalna płynność (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Z jakimi głównymi kompromisami obecnie się zmagacie? Wydajność kontra prywatność, globalna płynność kontra ścisłe kontrole, czy przejrzystość onchain kontra rejestry pozałańcuchowe? Zaczynając od Zacha.
 
@@ -88,7 +88,7 @@ Z drugiej strony, być może dochodzi do wymiany pozycji między pożyczkodawcam
 
 Oczywiście, istnieją pewne zawiłości. Bardzo zależy nam na tym doświadczeniu najwyższej jakości (white-glove) dla instytucji wchodzącej na ten rynek, aby mogła mieć własne warunki. Jednym z wyzwań jest równowaga między prywatnością a odpornością na zagrożenia. W świecie Web3 istnieją podmioty stanowiące zagrożenie, a my chcemy lepiej sobie z tym radzić, aby zaoferować fantastyczne doświadczenie. Do decentralizacji podchodzimy ostrożnie — wiemy, jak to zrobić, ale zrobimy to w momencie, w którym najlepiej posłuży to klientom.
 
-#### Zaufanie do systemu i czynniki napędzające adopcję (20:47) {#system-trust-and-adoption-drivers-2047}
+### Zaufanie do systemu i czynniki napędzające adopcję (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, jak sprawić, by te rozwiązania były godne zaufania i użyteczne dla instytucji i rządów?
 
@@ -98,7 +98,7 @@ Oczywiście, istnieją pewne zawiłości. Bardzo zależy nam na tym doświadczen
 
 **Amzah:** Dla nas bardzo ważne jest to, aby można było to dostosować. Blockchain to już nie tylko jeden przypadek użycia, w którym wszystko jest w pełni publiczne lub w pełni prywatne. To nie jest rozwiązanie uniwersalne. To, co jest dla nas również najważniejsze, to zgodność z przepisami. Sektor bankowy w Europie jest silnie regulowany i jeśli coś nie jest w porządku pod względem prywatności, to po prostu nie przejdzie u regulatorów.
 
-#### Spojrzenie w przyszłość na rok 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Spojrzenie w przyszłość na rok 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** W porządku, zbliżamy się do końca. Jaki jest jeden element budulcowy — techniczny, operacyjny lub polityczny — który waszym zdaniem znacząco przyspieszyłby adopcję instytucjonalną? I jeśli spotkamy się ponownie w 2026 roku, co waszym zdaniem jest realistyczne, że wydarzy się w tym roku?
 
@@ -110,7 +110,7 @@ Oczywiście, istnieją pewne zawiłości. Bardzo zależy nam na tym doświadczen
 
 **François:** Jeśli spotkamy się za rok, chciałbym, abyśmy wiosną uruchomili Sieć główną Miden, żebyśmy mogli to świętować. Poza tym chciałbym, abyśmy byli na drodze do pełnej decentralizacji. Będzie to wymagało wysiłku wielu osób. Główną rzeczą, którą chciałbym zobaczyć, jest większe zaangażowanie. Pomysł, że prywatność kłóci się ze zgodnością, nie jest do końca prawdziwy, ale połączenie tych dwóch rzeczy wymaga pracy. Chcemy, aby instytucje pomogły kształtować rynki, które chcą zobaczyć, ponieważ wiemy, że będzie to skomplikowane i specyficzne dla ich potrzeb.
 
-#### Przemyślenia końcowe (28:05) {#closing-thoughts-2805}
+### Przemyślenia końcowe (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Chcę tylko dać każdemu z was 10 do 20 sekund na wspomnienie o czymś, co wydarzyło się w tym tygodniu, lub na szybką reklamę, zanim skończymy.
 

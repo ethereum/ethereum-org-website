@@ -21,13 +21,13 @@ Sebuah penjelasan oleh **Finematics** yang membahas EIP-4844 (proto-danksharding
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=HT9PHWloIiU) yang dipublikasikan oleh Finematics. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 Penskalaan Ethereum telah menjadi topik yang hangat diperdebatkan selama beberapa waktu. Solusi lapisan 2 (l2) telah berada di garis depan pertempuran ini, menawarkan cara untuk menangani transaksi di luar rantai utama untuk mengurangi kemacetan dan menurunkan biaya. Namun ada satu kendala — bahkan l2 menghadapi batasan yang menghambat efisiensi dan skalabilitasnya. EIP-4844 adalah langkah selanjutnya dalam meningkatkan potensi l2 dan menyelaraskan Ethereum dengan peta jalan penskalaannya.
 
 Jadi, tentang apa sebenarnya EIP-4844 itu? Bagaimana tepatnya hal ini membantu penskalaan l2? Kemungkinan baru apa yang dibukanya? Dan benarkah hal ini dapat mengurangi biaya transaksi di l2 hingga lebih dari 90%?
 
-#### Apa itu EIP-4844 dan proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### Apa itu EIP-4844 dan proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Sebagai pengingat, EIP adalah singkatan dari Ethereum Improvement Proposal (Proposal Peningkatan Ethereum), sebuah proses di mana pengembang dapat menyarankan perubahan pada protokol Ethereum. EIP-4844, secara khusus, mengusulkan jenis transaksi baru yang dapat secara signifikan meningkatkan cara data ditangani dan diproses di Ethereum. Anda mungkin juga pernah mendengar nama "proto-danksharding," yang sekarang digunakan secara bergantian dengan EIP-4844.
 
@@ -39,7 +39,7 @@ Bayangkan melakukan tukar DEX di salah satu rollup. Jika biaya saat ini untuk me
 
 EIP-4844 bersama dengan beberapa EIP lainnya akan disertakan dalam pembaruan jaringan Dencun yang akan datang.
 
-#### Detail teknis (2:50) {#technical-details-250}
+### Detail teknis (2:50) {#technical-details-250}
 
 Sekarang, mari kita lihat lebih dekat bagaimana EIP-4844 bekerja.
 
@@ -65,7 +65,7 @@ Dalam kasus rollup optimis seperti Optimism atau Arbitrum, mereka hanya perlu me
 
 Rollup ZK akan memberikan dua komitmen pada transaksi atau data delta state mereka: komitmen blob dan komitmen rollup ZK itu sendiri menggunakan sistem bukti apa pun yang digunakan rollup secara internal. Mereka juga akan menggunakan protokol bukti kesetaraan, menggunakan prakompilasi evaluasi titik yang disebutkan sebelumnya, untuk membuktikan bahwa kedua komitmen tersebut merujuk pada data yang sama.
 
-#### Dampak (6:25) {#impact-625}
+### Dampak (6:25) {#impact-625}
 
 Dampak EIP-4844 pada ekosistem Ethereum tidak dapat dilebih-lebihkan. Sebagai permulaan, ini secara dramatis meningkatkan skalabilitas solusi lapisan 2 (l2), mengurangi biaya operasionalnya dan membuatnya lebih kompetitif dengan rantai blok alternatif lain yang murah. Pengurangan biaya operasional dimungkinkan karena sebagian besar biaya yang saat ini ditanggung oleh rollup disebabkan oleh biaya yang dibayarkan untuk data panggilan.
 
@@ -77,7 +77,7 @@ Terkait penurunan biaya transaksi pada rollup, yang diilustrasikan oleh contoh t
 
 Satu hal yang pasti — bahkan jika hasil utamanya adalah peningkatan laju pemrosesan transaksi dan biaya transaksi tetap sama, EIP-4844 meletakkan dasar untuk skalabilitas yang lebih besar di masa depan yang pada akhirnya akan menghasilkan transaksi yang lebih murah bagi pengguna.
 
-#### Ringkasan (8:04) {#summary-804}
+### Ringkasan (8:04) {#summary-804}
 
 Komunitas Ethereum telah menyelesaikan pengujian EIP-4844 di berbagai testnet, dengan peluncuran Mainnet yang diharapkan pada tanggal 13 Maret. Ini adalah langkah monumental menuju pencapaian skalabilitas yang tak tertandingi untuk Ethereum. Kita sudah dapat melihat sebagian besar l2 utama berkomitmen untuk mulai menggunakan ruang blob baru segera setelah pembaruan Dencun terjadi.
 

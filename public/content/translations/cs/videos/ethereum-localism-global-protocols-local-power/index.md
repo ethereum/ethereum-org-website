@@ -20,7 +20,7 @@ Panelová diskuse s **Benjaminem Lifem** a **Sarah Johnstoneovou** na EthBoulder
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=I4xb0rst6SQ) zveřejněného EthBoulder. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod do Ethereum lokalismu (0:12) {#introduction-to-ethereum-localism-012}
+### Úvod do Ethereum lokalismu (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Ahoj. Slyšíte nás? Skvělé. Je opravdu vzrušující tu být. Začněme nějakým představením. Jsem Sarah Johnstone. Jsem permakulturistka, bioregionalistka a aktivní členka Etherea. A jsem opravdu nadšená z komunity Ethereum lokalismu. Jsem velmi ráda, že tu mohu být s Benjaminem.
 
@@ -30,7 +30,7 @@ Panelová diskuse s **Benjaminem Lifem** a **Sarah Johnstoneovou** na EthBoulder
 
 **Benjamin Life:** Jo, je opravdu krásné mít tu některé z katalyzátorů GEL — jak zní zkratka — a hnutí Ethereum lokalismu. Chci vyzdvihnout Christy a Jamese a několik dalších členů jejich party v Portlandu, kteří nás poprvé svedli dohromady. Vlastně to bylo místo, kde jsem poprvé potkal Kevina Owockiho, i když jsme oba žili v Boulderu. Katalyzovalo to obrovské množství věcí a tak nějak to vytvořilo precedens pro to, co je komunita Ethereum lokalismu a jaké jsou její sdílené hodnoty. Opravdu to svedlo dohromady jakousi krypto-levicovou, ale také explicitněji hodnotově orientovanou podskupinu Web3 komunity, které podle mě to, že dostala jméno a prostor, opravdu pomohlo mnoha z nás najít jeden druhého.
 
-#### Hodnoty a napětí mezi globálním a lokálním (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Hodnoty a napětí mezi globálním a lokálním (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** A mohl bys promluvit o některých z těch hodnot, které v ekosystému zastáváme?
 
@@ -40,7 +40,7 @@ Pro ty z nás, kteří se do tohoto prostoru dostali kvůli hodnotám demokratic
 
 Ethereum lokalismus tak nějak sedí uprostřed tohoto rozporu. Místo toho, abychom říkali, že je to buď jedno, nebo druhé — není to jen hyperlokální, kašlat na globální sdílené statky, ani se to nesnaží vytvořit tuto abstrahovanou globální koordinační vrstvu, která se ve skutečnosti smysluplně nepropojuje se skutečným každodenním životem lidí. Tím, že proplouváme tímto napětím, hledáme, kde můžeme být v globální solidaritě. Co je lehké, by mělo být globální a sdílené, a co je těžké, by mělo být lokální a samosprávné. Sdílíme naše znalosti a open source software, ale dbáme na to, aby lokální sebeurčení a komunitou vedené iniciativy spravovaly to, jak jsou tyto protokoly aplikovány na lokální úrovni.
 
-#### Localism Fund a upevňování hodnot (5:27) {#the-localism-fund-and-consolidating-values-527}
+### Localism Fund a upevňování hodnot (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Takže bych ráda slyšela — loni jsme na dva dny shromáždili pár stovek lidí a byly to velmi dynamické, živé diskuse. Měla jsem pocit, že hned s ETHDenver a vytvořením skupiny Region Commons došlo k nějakému vzrušujícímu posunu. Jak si myslíš, že si jako hnutí vedeme? Vím, že jste s Localism Fund dosáhli významného milníku.
 
@@ -50,7 +50,7 @@ Myslím, že Ethereum lokalismus je pokusem být hradbou proti vzestupu autorit�
 
 Pozitivní je, že jsme právě rozdělili 150 000 dolarů 12 různým lokálním programům financování, které experimentují s rozmanitou sadou mechanismů, a to díky Gitcoinu a Celo Public Goods. Tyto příběhy jsou opravdu vzrušující, protože máme skutečné komunity přímo v terénu na téměř každém kontinentu. Máme solární zařízení na těžbu krypta v Nigérii, které financuje vzdělávání. Máme síť družstevních podniků v Barceloně, která vytváří celou paralelní ekonomiku a měnový systém. Máme lidi v Kolumbii, kteří dělají úžasné UBI, vytvářejí komunitní centra, která rozdělují peníze lidem žijícím pod hranicí chudoby.
 
-#### Transparentnost a alokace kapitálu (10:01) {#transparency-and-allocating-capital-1001}
+### Transparentnost a alokace kapitálu (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** A tady v tomto prostoru, co děláme v Boulderu?
 
@@ -64,7 +64,7 @@ Nakonec jsme spolupracovali s layer labs a Jakem Hartnellem na implementaci ně�
 
 Používáme stejný algoritmus, jaký používá Google k hodnocení webových stránek na základě síly jejich odkazů, abychom přišli s číselnou reprezentací kolektivního množství důvěry, kterou měl daný uzel v síti. Měli jsme přes 100 lidí, kteří provedli přes 1 000 atestací, a z toho jsme byli schopni odvodit 30 nejdůvěryhodnějších lidí v rámci této sítě. Ti se stali hodnotiteli lokálních programů financování, které se přihlásily. Každý hodnotitel prováděl přezkum podle kritérií a celkové skóre určilo jejich poměr dorovnání. Takže jsme použili tuto síť důvěry založenou na atestacích k rozdělení peněz podle vůle této sítě odborníků.
 
-#### Protokolový underground a sociální technologie (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### Protokolový underground a sociální technologie (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Díky. Ráda bych to otevřela skupině. Vidím tu spoustu známých tváří a lidí, kteří se pravděpodobně s tímto hnutím ztotožňují. Ráda bych slyšela někoho z publika, kdo by se chtěl podělit. Je tu někdo ze skupiny, která dnes vydala ten manifest, kdo by o něm chtěl trochu promluvit?
 
@@ -86,13 +86,13 @@ Ethereum lokalismus je místem, kde lidé, kteří se zajímají o sdílení zna
 
 **Benjamin Life:** Ano. Sociální technologie.
 
-#### Rozhodování o tom, co budovat pro globální dopad (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Rozhodování o tom, co budovat pro globální dopad (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **Člen publika:** Omlouvám se, právě jsem přišel. Ale chtěl jsem pochopit, jak se rozhodujete, jaké otevřené technologie budovat? Lidé mají omezený čas — jak se rozhodujete, co se má postavit?
 
 **Sarah Johnstone:** Jednou z oblastí, které teď věnuji svůj čas, je kontext humanitární pomoci, protože stav škrtů ve financování mezinárodní pomoci je super naléhavý a škodlivý. Posledních zhruba osm měsíců jsem se hluboce ponořila do studia a snažila se tento prostor pochopit, a bylo to vlastně docela nadějné, když jsem viděla, jak se technologie z ekosystému Etherea a dalších ekosystémů aplikují v reálných kontextech, jako jsou populace uprchlíků a vysídlené komunity nebo konfliktní zóny s přeshraničními platbami a stablecoiny. Cítím se ohledně toho docela plná naděje. Pro mě je to to, čemu se rozhoduji věnovat svůj čas.
 
-#### Důvěryhodná neutralita a subsidiarita (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Důvěryhodná neutralita a subsidiarita (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Chci odpovědět na to, na co ses ptal. Něco, čemu říkám „důvěryhodná neutralita prostřednictvím návrhu mechanismů“. Opravdu pracuji na tom, jak můžeme decentralizovat individuální binární rozhodnutí — ten druh rozhodnutí, která rozbíjejí komunity, když nemůžete dospět ke konsensu a musíte se buď forknout, nebo rozpustit. Skupiny obvykle skončí u jedné z těchto možností a je velmi vzácné, že má skupina metabolický nebo imunitní systém k tomu, aby neustále přehodnocovala svůj soulad s vlastními deklarovanými hodnotami.
 
@@ -102,7 +102,7 @@ Jedním ze způsobů, jak si myslím, že to můžeme usnadnit, je, že místo b
 
 **Benjamin Life:** Naprosto, a to přináší další důležitou myšlenku v prostoru Ethereum lokalismu, kterou je subsidiarita — tato myšlenka, že rozhodování by mělo být zasazeno na co nejlokálnější úroveň tam, kde má toto rozhodnutí dopad. Část důvodu, proč Localism Fund financoval grantové programy namísto přímého udělování grantů projektům, byla ta, že jsme chtěli dát 20 000 dolarů organizaci Regenerate Cascadia, což je neziskovka, která má svou vlastní síť s domorodými národy a lokálními komunitami, a místo toho, abychom my vybírali, jaké projekty by tam měly být financovány, dát jim plnou autonomii určit, jak tyto zdroje rozdělit. Není to přehazování zodpovědnosti; je to distribuce pravomocí.
 
-#### Toky hodnot a univerzální pravda v Ethereu (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Toky hodnot a univerzální pravda v Ethereu (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **Člen publika:** Existuje v srdci Etherea nějaká ústřední pravda, za kterou se všichni honíte? Nezdá se, že by existovala shoda na univerzální pravdě za Ethereem ve srovnání se současným měnovým systémem. Dává to smysl?
 
@@ -116,7 +116,7 @@ To je to, co mě drží u Etherea. Nyní existují i jiné blockchainy, na kter�
 
 Scott Morris, který byl na všech událostech GEL, je jedním z předních světových odborníků na tuto problematiku a identifikoval způsoby, jak obejít regulační omezení, kdy se komunitní měny nazývají prostě „kupóny“ — nejsou to peníze, je to jen kupón. Stále byste mohli mít token, který představuje kupón. Nevím, jestli tato právní klička obstojí u soudu — nejsem právník — ale existují určité úspěšné příběhy komunitních měn, které skutečně udržují hodnotu v oběhu v jejich lokální komunitě. Moc rád bych viděl, kdyby někdo opravdu převzal štafetu a vytvořil „Salesforce“ prostoru decentralizovaných komunitně vlastněných měn, protože právě ta snadnost onboardingu lidí a vytváření správy kolem tokenu byla křivkou učení. Vidím to jako jednu z věcí s největším pákovým efektem, kterou bychom mohli udělat, ale vlastně neznám nikoho, kdo by to opravdu posouval kupředu tak, jak si myslím, že by se mělo.
 
-#### Globální občané s lokálními povinnostmi (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Globální občané s lokálními povinnostmi (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **Člen publika:** Když navážu na některá vlákna z celého rozhovoru — napětí mezi globálním protokolem a lokálními sítěmi. Máme přátele a rodinu rozeseté po různých bioregionech, které si získaly naše srdce. Jak přemýšlíte o tom, že jsme mobilnější než kdy jindy, chceme být lokalisty, ale jsme zapojeni do sítí, které nejsou všechny na stejném místě?
 

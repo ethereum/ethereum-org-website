@@ -19,7 +19,7 @@ Một bài phát biểu mang tính triết học của **Josh Stark** từ Tổ 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=zI07mqNdxzA) được xuất bản bởi ETHGlobal. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Tại sao chúng ta không thể giải thích chuỗi khối? (0:00) {#why-cant-we-explain-blockchains-000}
+### Tại sao chúng ta không thể giải thích chuỗi khối? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Chào mọi người, cảm ơn các bạn đã có mặt tại Pragma ở Denver. Tên tôi là Josh. Tôi làm việc tại Tổ chức Ethereum — tôi đã gắn bó với EF được khoảng năm năm nay. Tôi thường nói đùa rằng công việc của tôi là tìm xem công việc của mình nên là gì, và điều đó thay đổi sáu tháng một lần.
 
@@ -31,7 +31,7 @@ Chúng ta thực sự cần đi vào trọng tâm của vấn đề, và tôi kh
 
 Vì vậy, điều này bắt đầu từ một câu hỏi rất cụ thể mà tôi có: công nghệ đa mục đích là gì? Năng lực cơ bản này là gì? Và nó đã biến thành một thứ mà tôi thấy thú vị hơn nhiều.
 
-#### Claude Shannon và ý tưởng về thông tin (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon và ý tưởng về thông tin (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Để tôi kể cho bạn nghe một câu chuyện. Vào những năm 1930 và 40, Claude Shannon được bao quanh bởi những khởi đầu của một thời đại mới. Tại Bell Labs, ông làm việc về các hệ thống kiểm soát hỏa lực và mật mã học trong chiến tranh, và ông bắt đầu nghĩ về một cách tiếp cận tổng quát hơn đối với thông tin. Ban đầu ông không gọi nó là thông tin — năm 1939, ông viết cho một đồng nghiệp rằng ông đang nghĩ về "sự truyền tải trí tuệ". Từ thông tin có một ý nghĩa khác vào thời điểm đó.
 
@@ -41,7 +41,7 @@ Trước thời điểm này, không ai thực sự có khái niệm này về t
 
 Điều tôi muốn bạn rút ra từ điều này: đã có một thời gian trước khi chúng ta có ý tưởng về thông tin và một thời gian sau đó. Sẽ ra sao nếu chúng ta cũng đang bỏ lỡ một điều gì đó cơ bản như vậy? Đó là giả thuyết của tôi.
 
-#### Ba manh mối (7:00) {#three-clues-700}
+### Ba manh mối (7:00) {#three-clues-700}
 
 Khi tôi đang vật lộn để giải thích chuỗi khối, tôi liên tục bắt gặp những điều kỳ lạ này mà tôi nghĩ là manh mối hướng tới một điều gì đó lớn lao hơn.
 
@@ -53,7 +53,7 @@ Với ô tô, chúng ta đã nói về "xe ngựa không ngựa", nhưng ít nh�
 
 **Manh mối số ba** — Bài báo của Satoshi bắt đầu bằng những lời này: "thương mại trên internet đã trở nên phụ thuộc gần như hoàn toàn vào các tổ chức tài chính đóng vai trò là bên thứ ba đáng tin cậy." Satoshi đang so sánh Bitcoin với các thể chế, chứ không phải với các phần mềm khác. Có điều gì đó ở đây.
 
-#### Giới thiệu về độ cứng (11:00) {#introducing-hardness-1100}
+### Giới thiệu về độ cứng (11:00) {#introducing-hardness-1100}
 
 Đây là câu trả lời của tôi cho những gì nằm trong chiếc hộp đó. Tôi gọi nó là **độ cứng** (hardness). Dưới đây là câu chuyện trong năm bước đơn giản, và sau đó chúng ta sẽ đi sâu hơn.
 
@@ -71,7 +71,7 @@ Tỷ lệ lạm phát của vàng đáng tin cậy nhờ vào các đặc tính 
 
 Bạn có thể coi nguyên tử, thể chế và chuỗi khối giống như vật liệu xây dựng — như gỗ, bê tông và thép. Chúng khác nhau, nhưng chúng là một phần của một danh mục chung. Và chúng ta sử dụng những thứ này không phải để xây dựng các tòa nhà, mà để xây dựng một nền văn minh. Có lẽ với những vật liệu tốt hơn, chúng ta có thể xây dựng một nền văn minh lớn hơn, tốt hơn, mạnh mẽ hơn nền văn minh mà chúng ta đang có hiện nay.
 
-#### Độ cứng là gì? (14:00) {#what-is-hardness-1400}
+### Độ cứng là gì? (14:00) {#what-is-hardness-1400}
 
 Hãy để tôi giải thích chính xác hơn về ý của tôi khi nói đến độ cứng. Đây không chỉ là bất kỳ độ tin cậy nào mà bất cứ thứ gì cũng có thể có. Độ cứng là một loại cụ thể. Điều cần lưu ý đầu tiên là nó là một loại độ tin cậy quan trọng đối với sự phối hợp xã hội. Không chỉ là, bạn biết đấy, cái bàn này chắc chắn là một cái bàn — mà là bạn có thể trả tiền thuê nhà, rằng một hợp đồng sẽ được thực thi, rằng một nền kinh tế vững mạnh. Đó là những thứ mà độ cứng hướng tới.
 
@@ -87,7 +87,7 @@ Và cuối cùng, độ cứng đến từ các nguồn nhất định — nguy�
 
 Điều tôi thích ở khuôn khổ này là nó cho phép chúng ta đặt ra những câu hỏi sâu sắc hơn — không chỉ nói về các thuộc tính cụ thể của chuỗi khối, mà còn so sánh tất cả những thứ khác nhau này và suy nghĩ về nơi chúng phù hợp, cách chúng ta sử dụng chúng và kết hợp chúng như thế nào.
 
-#### Độ cứng của nguyên tử (19:00) {#atom-hardness-1900}
+### Độ cứng của nguyên tử (19:00) {#atom-hardness-1900}
 
 Độ cứng của nguyên tử là khi chúng ta tìm thấy độ tin cậy trong tự nhiên xung quanh mình — các nguyên tử vật lý theo nghĩa đen nhưng cũng là các thuộc tính tự nhiên khác. Chúng ta làm điều này khi sử dụng các hạt vàng làm tiền, khi sử dụng các cấu trúc vật lý để xác định quyền tài sản, hoặc ghi lại quyền tài sản trong một vật thể vật lý như một khế ước.
 
@@ -101,7 +101,7 @@ Và các khuôn đúc thường bị suy yếu bởi sự kiểm soát ngày cà
 
 Nhưng nó còn tinh tế hơn thế. Đôi khi chúng ta có những khuôn đúc mà chúng ta thậm chí không nhận ra là có tồn tại, nhưng rồi chúng biến mất vì một điều gì đó đã thay đổi. Đã có một khuôn đúc cứng về tốc độ giao dịch trên thị trường tài chính trong một thời gian dài — nó chỉ có thể được thực hiện ở một tốc độ nhất định, có thể là tốc độ mà ai đó có thể hét vào mặt nhau trên sàn giao dịch. Khuôn đúc này cứng như nguyên tử — chúng ta đơn giản là không thể giao tiếp nhanh hơn thế. Nhưng công nghệ mới đã hoàn toàn làm suy yếu những giả định đó. Chúng ta nhận ra rằng chúng ta thực sự thích một phiên bản của khuôn đúc cũ đó và đã làm lại nó từ các thể chế — đưa ra các quy định giới hạn tốc độ giao dịch và thực thi các cơ chế ngắt mạch (circuit breakers).
 
-#### Độ cứng của thể chế (22:00) {#institutional-hardness-2200}
+### Độ cứng của thể chế (22:00) {#institutional-hardness-2200}
 
 Độ cứng của thể chế là một danh mục rất rộng — nó bao gồm hầu hết những thứ chúng ta có thể nghĩ đến khi nghĩ về nền văn minh. Hệ thống pháp luật, cơ quan lập pháp, lực lượng cảnh sát, tập đoàn, mọi thứ. Tất cả các thể chế cung cấp độ cứng dưới một hình thức nào đó. Chúng ta đã tạo ra các khuôn đúc mang lại trật tự cho xã hội của chúng ta, trừng phạt các hành vi chống đối xã hội. Chúng ta đã tạo ra độ cứng như một nền tảng, cho phép bất kỳ ai tạo ra các khuôn đúc của riêng họ được làm cứng bởi các thể chế nếu bạn tuân theo các quy tắc nhất định. Chúng ta đã tạo ra các khuôn đúc sinh ra các tài sản mới và cung cấp các nguồn tín dụng cho các nền kinh tế đang phát triển.
 
@@ -111,13 +111,13 @@ Nhưng nó cũng có nhiều điểm yếu. Nó bị giới hạn bởi biên gi
 
 Và chúng được tạo nên từ con người, và con người thì xấu. Thực tế ở quốc gia này và nhiều quốc gia khác là nhiều người chưa thực sự được tiếp cận với độ cứng do các thể chế cung cấp. Họ không thể vay thế chấp. Họ không thể mở tài khoản ngân hàng. Bởi vì khi bạn lấp đầy một thể chế bằng con người, nó sẽ phải chịu những thói hư tật xấu, định kiến, hệ tư tưởng của họ. Và sự phụ thuộc của chúng ta vào độ cứng của thể chế chỉ ngày càng tăng. Vấn đề với việc phần mềm đang nuốt chửng thế giới là hầu hết phần mềm thực sự chỉ được tạo ra từ một thể chế đằng sau màn hình, và kết quả là chúng ta đang trao cho chúng ngày càng nhiều quyền lực.
 
-#### Độ cứng của chuỗi khối (24:20) {#blockchain-hardness-2420}
+### Độ cứng của chuỗi khối (24:20) {#blockchain-hardness-2420}
 
 Phát minh của Satoshi tất nhiên không chỉ là Bitcoin — nó là hạt nhân của một kỹ thuật đa mục đích để tạo ra độ cứng kỹ thuật số trong môi trường kỹ thuật số. Nó có nhiều điểm mạnh: khả năng tiếp cận toàn cầu phổ quát, nó được làm bằng phần mềm và bất kỳ ai cũng có thể viết phần mềm, mức độ cứng có thể minh bạch và có thể kiểm toán được, chi phí khởi tạo thấp, dễ dàng lặp lại và được bảo mật bởi các động lực thị trường — và thị trường thì hợp lý.
 
 Nhưng nó cũng có những điểm yếu. Nó đòi hỏi một nền văn minh công nghệ — chúng ta không thể có chuỗi khối trước đây vì những yêu cầu đó, và một nền văn minh trong tương lai không có những gì chúng ta có cũng sẽ không thể sử dụng chúng. Nó được làm bằng phần mềm, và phần mềm có thể được viết rất tệ. Phạm vi của các khuôn đúc bị giới hạn trong các môi trường trên chuỗi. Và nó được bảo mật bởi các động lực thị trường — và thị trường thì phi lý.
 
-#### Tại sao điều này lại quan trọng (25:10) {#why-this-matters-2510}
+### Tại sao điều này lại quan trọng (25:10) {#why-this-matters-2510}
 
 Vậy điều này có ý nghĩa gì? Điều này mang lại cho chúng ta điều gì? Tại sao điều này không chỉ là một sự quan tâm mang tính học thuật?
 
@@ -127,7 +127,7 @@ Nó giải thích tại sao các chuỗi khối riêng tư hoặc tập trung l�
 
 Nó cũng giúp hiểu được phổ các khả năng và các hệ tư tưởng mặc định mà mọi người rơi vào trong không gian chuỗi khối. Nhiều người rất tập trung vào việc sử dụng độ cứng của chuỗi khối để cạnh tranh hoặc thay thế độ cứng của thể chế — đây là những gì mà phần lớn cộng đồng Bitcoin hướng tới, những gì mà phần lớn tài chính phi tập trung (DeFi) hướng tới. Thậm chí ENS cũng đang cố gắng thay thế hoặc cạnh tranh với DNS theo một cách nào đó. Nhưng sau đó cũng có những người thấy rằng độ cứng của chuỗi khối có thể làm những điều mà độ cứng của thể chế không thể — những ý tưởng chưa ai từng thử trước đây vì chúng ta chưa bao giờ có năng lực này, hương vị độ cứng nhất định này. Và bây giờ chúng ta có thể khám phá những điều đó. Có thể NFT ở đó, hoặc các trò chơi như Dark Forest, hoặc phong trào xung quanh các thế giới tự trị.
 
-#### Nâng cao tham vọng của chúng ta (27:00) {#raising-our-ambitions-2700}
+### Nâng cao tham vọng của chúng ta (27:00) {#raising-our-ambitions-2700}
 
 Quan trọng nhất, tôi nghĩ khuôn khổ này nâng cao tham vọng của chúng ta. Cá nhân tôi, đây là điều quan trọng đối với tôi, và có thể nó cũng cộng hưởng với bạn — tôi không chỉ ở đây vì các ứng dụng riêng lẻ này. Tôi không phải là người chỉ thực sự quan tâm đến Bitcoin hay tất cả về DeFi hay tất cả về NFT. Có thể bạn cũng vậy. Có một điều gì đó lớn lao hơn đang diễn ra ở đây.
 

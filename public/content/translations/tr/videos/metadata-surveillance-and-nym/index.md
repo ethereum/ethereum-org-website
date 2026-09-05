@@ -17,23 +17,23 @@ breadcrumb: "Gizlilik"
 
 *Bu transkript, Nym tarafından yayınlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=QBX5AK3DXqw) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiştir.*
 
-#### Giriş (0:04) {#intro-004}
+### Giriş (0:04) {#intro-004}
 
 İletişim meta verisi nedir? Bir iletişim hakkında, gerçekte söylenenlerin içeriği olmayan her şeyi ifade eder. Bu, örneğin iletişimin kaynağını, hedefini, bilginin gönderildiği zamanı, ne kadar bilgi gönderildiğini ve alınıp verilen paketlerin zamanlamaları ile boyutları da dahil olmak üzere tespit edilebilir tüm kalıpları içerir.
 
-#### İletişim meta verileri (0:27) {#communications-metadata-027}
+### İletişim meta verileri (0:27) {#communications-metadata-027}
 
 İletişim meta verileri tüm internet protokollerinde varsayılan olarak açığa çıkar: TCP/IP, HTTP, UDP, FTP. İçeriği uçtan uca şifreleme ile koruyan TLS veya güvenli DNS gibi güvenli protokoller bile iletişim meta verilerini göstermeye devam eder: kaynak, hedef, zamanlama, uzunluk vb.
 
 Peki bu bilgiler açığa çıkıyor ama kime? Bunları kim elde edebilir?
 
-#### Meta verilere kimler erişebilir (1:10) {#who-gets-access-to-metadata-110}
+### Meta verilere kimler erişebilir (1:10) {#who-gets-access-to-metadata-110}
 
 İnternet iletişiminde aracı olan ve bu iletişim meta verilerine erişebilen bir dizi varlık vardır. Buna internet servis sağlayıcıları, değişim noktaları, otonom sistemler, BGP yönlendiricileri ve genel olarak internet omurgası katılımcıları gibi internet altyapısındaki büyük oyuncular dahildir; bunlar birçok iletişim meta verisine erişebilirler. 
 
 Ancak Wi-Fi yönlendiricisini veya yerel alan ağını çalıştıran herhangi biri veya yerel olarak gizlice dinleme yapabilen biri gibi küçük oyuncular bile iletişim meta verilerine erişebilir. Ve elbette, NSA gibi ulus-devlet düzeyindeki düşmanların büyük ölçekte meta veri topladığı ve her türlü istihbaratı çıkarmak için bunları analiz ettiği bilinmektedir.
 
-#### Meta veriler neden önemlidir (2:00) {#why-is-metadata-important-200}
+### Meta veriler neden önemlidir (2:00) {#why-is-metadata-important-200}
 
 Meta verilerin toplanması ve kullanılması için çok ilginç bir veri türü olmasının başka nedenleri de vardır. Makine tarafından okunabilirdir, çünkü bilgisayarların dilini konuşur; temelde bilgisayarların iletişimleri kaynağından hedefine uygun bir şekilde yönlendirebilmesi için bir dildir. Yani makine tarafından okunabilirdir ve bu, makinelerin onu büyük ölçekte çok kolay bir şekilde anlamlandırabileceği anlamına gelir; doğal insan dilinin aksine, yorumlanması çok daha zordur, çünkü belki insanlar kelimeleri belirli bir şekilde kullanıyorlardır veya nüansları vardır ve bunu yorumlamak çok daha zordur. Meta veriler ise gerçekten kolaydır.
 
@@ -51,7 +51,7 @@ Meta verilerin trafik analizi, kriptografiyi kırmadan şifrelenmiş içeriği k
 
 Ancak, iletişim meta verilerinin trafik analizinin bu şifrelenmiş içeriği ortaya çıkaran bir yan kanal olarak işlev görebileceği birçok durum vardır.
 
-#### Meta veri gözetimi (5:15) {#metadata-surveillance-515}
+### Meta veri gözetimi (5:15) {#metadata-surveillance-515}
 
 Bunun bir örneği, HTTPS ile bir web sitesinde gezindiğiniz zamandır. Prensip olarak, bu web sitesiyle iletişim şifrelenmiş olduğundan, iletişiminizi gözlemleyen biri web sitesinde hangi belirli sayfaya eriştiğinizi söyleyemez. Örneğin, hastalıkları kontrol etmek için WebMD'ye gidiyorsanız, bir gözlemci veya gizlice dinleyen kişi, "Tamam, WebMD tıbbi bilgilerini kontrol ediyorsun" diyebilir, ancak hangi belirli hastalığı aradığınızı söyleyemez.
 
@@ -61,7 +61,7 @@ Bunu yaparak, bu sayfaların her birinin bir parmak izini oluşturabilirsiniz, b
 
 Bu açıkça endişe vericidir. Uçtan uca şifrelemeye sahip olabilsek de, iletişimlerimizin gizliliğini koruma konusunda daha kat etmemiz gereken çok yol var.
 
-#### Özel iletişimler için bir dilek listesi (6:40) {#a-wish-list-for-private-communications-640}
+### Özel iletişimler için bir dilek listesi (6:40) {#a-wish-list-for-private-communications-640}
 
 Peki, mükemmel derecede güvenli bir iletişim ağının neler sunacağına dair bir dilek listemiz olmasını isteseydik, istediğimiz özellikler neler olurdu? 
 
