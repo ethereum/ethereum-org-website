@@ -49,6 +49,7 @@ import TrezorImage from "@/public/images/wallets/trezor.png"
 import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UniswapWalletImage from "@/public/images/wallets/uniswapwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
+import VeyrnoxImage from "@/public/images/wallets/veyrnox.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
 /**
@@ -2998,6 +2999,53 @@ export const walletsData: WalletData[] = [
     rpc_importing: false,
     erc_20_support: true, // auto, but scam assets are filtered (can be selectively disabled)
     gas_fee_customization: false,
+  },
+  {
+    last_updated: "2026-09-05",
+    name: "Veyrnox",
+    image: VeyrnoxImage,
+    twBackgroundColor: "bg-[#00d4a0]",
+    twGradiantBrandColor: "from-[#00d4a0]",
+    url: "https://veyrnox.com",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://twitter.com/VeyrnoxWallet",
+    discord: "",
+    reddit: "",
+    telegram: "",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/veyrnox/veyrnox",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: true,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet", "Base", "Polygon zkEVM"],
+    gas_fee_customization: false,
+    ens_support: false,
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://veyrnox.com/docs",
+    documentation: "https://veyrnox.com/docs",
+    mpc: false,
+    privacy: true, // duress PIN, decoy wallet, panic wipe on Safety Plus tier
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
