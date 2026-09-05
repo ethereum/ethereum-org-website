@@ -1,6 +1,6 @@
 "use client"
 
-import { type RefObject, useRef } from "react"
+import { type RefObject, useCallback, useMemo, useRef } from "react"
 import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 import {
@@ -11,10 +11,17 @@ import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
+import { BaseLink } from "@/components/ui/Link"
 
+import {
+  type ExplorerQuery,
+  parseExplorerQuery,
+  truncateHex,
+} from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { sanitizeHitUrl } from "@/lib/utils/url"
+import { withPageRow } from "@/lib/utils/searchResults"
+import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
@@ -30,7 +37,34 @@ type DocSearchHit = Parameters<
   NonNullable<DocSearchModalProps["transformItems"]>
 >[0][number]
 
+type HitComponentProps = Parameters<
+  NonNullable<DocSearchModalProps["hitComponent"]>
+>[0]
+
 const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
+
+/**
+ * Marks our injected hits so `transformItems` leaves them alone. One row per network, so
+ * the id carries the index -- the renderer keys rows on it.
+ */
+const EXPLORER_ID_PREFIX = "ethereum-org-block-explorer:"
+
+const isExplorerHit = (objectID: string) =>
+  objectID.startsWith(EXPLORER_ID_PREFIX)
+
+/** Network logos already shipped for `/layer-2/networks`. */
+const NETWORK_ICON_PATH = "/images/layer-2/"
+
+/**
+ * What `useSearchClient` actually hands to `transformSearchClient`: a bare object with
+ * one `search` method, not the `typesense` SearchClient the prop's type claims. Modelled
+ * narrowly here so the cast at the call site is the only place that lies.
+ */
+interface MinimalSearchClient {
+  search: (
+    requests: { q?: string }[]
+  ) => Promise<{ results: { hits: DocSearchHit[]; nbHits: number }[] }>
+}
 
 /**
  * Strip the site-name suffix from every copy of a hit's lvl0 title.
@@ -103,6 +137,157 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
   const collectionName = `${collectionPrefix}-${locale}`
 
+  /**
+   * A pasted address or transaction hash is never answerable from site content, so
+   * offer the block explorer instead. This has to happen in the search client rather
+   * than `transformItems`, which never sees the query and is not called at all when
+   * there are no results -- the normal case for an address.
+   */
+  /**
+   * A pasted address or hash is never answerable from site content, so offer the block
+   * explorers instead. This has to happen in the search client rather than
+   * `transformItems`, which never sees the query and is not called at all when there are
+   * no results -- the normal case for an address.
+   *
+   * One row per network, titled by network. The value itself is identical on every row
+   * and already visible in the input two lines above, so repeating it nine times would
+   * be noise; the network is the only thing that differs and the only thing being chosen.
+   */
+  /**
+   * A pasted address or hash is never answerable from site content, so offer the block
+   * explorers instead. This has to happen in the search client rather than
+   * `transformItems`, which never sees the query and is not called at all when there are
+   * no results -- the normal case for an address.
+   *
+   * One row per network, titled by network. The value itself is identical on every row
+   * and already visible in the input two lines above, so repeating it would be noise;
+   * the network is the only thing that differs and the only thing being chosen.
+   */
+  const buildExplorerHits = useCallback(
+    (parsed: ExplorerQuery): DocSearchHit[] =>
+      parsed.groups.flatMap((group, groupIndex) => {
+        const heading = t(
+          group.kind === "hash"
+            ? "docsearch-explorer-hash"
+            : "docsearch-explorer-address",
+          { explorer: group.brand }
+        )
+        // `type: "lvl1"` is the renderer's top-level row: title from `hierarchy.lvl1`,
+        // and a second line only if `content` is set -- omitted to keep rows one line.
+        // `hierarchy.lvl0` is both the section heading and the grouping key, so rows
+        // sharing an explorer share it and land in one section.
+        //
+        // Snippet renders these through dangerouslySetInnerHTML. Every value is a
+        // translated string or a generated network name -- the query itself never
+        // reaches them, which is what keeps a pasted value out of an HTML sink.
+        return group.targets.map((target, index) => {
+          // Rows name a network, unless the explorer covers one chain and the value is
+          // ambiguous -- then they name the lookup instead (Starkscan's two routes).
+          const label = target.role
+            ? t(`docsearch-explorer-${target.role}`)
+            : target.name
+          return {
+            objectID: `${EXPLORER_ID_PREFIX}${groupIndex}:${index}`,
+            type: "lvl1",
+            url: target.url,
+            "hierarchy.lvl0": heading,
+            "hierarchy.lvl1": label,
+            // Rendered by the library as the row's second line; CSS shows it only in
+            // Recent, where the input is empty and a row titled "Base" would not say
+            // which value was looked up.
+            content: truncateHex(parsed.value),
+            __explorerIcon: target.icon,
+            // The library caps every section at five rows as a stand-in for `distinct`.
+            // Each row here is a different destination, not a repeat of one page, so
+            // the cap would silently drop real choices. See patches/.
+            __docsearchNoLimit: true,
+            _highlightResult: {
+              "hierarchy.lvl0": { value: heading },
+              "hierarchy.lvl1": { value: label },
+            },
+          }
+        }) as unknown as DocSearchHit[]
+      }),
+    [t]
+  )
+
+  /**
+   * Explorer rows leave the site, so they get the external-link treatment -- new tab,
+   * `rel`, the arrow affordance and its assistive text -- from `BaseLink`. Everything
+   * else keeps the library's plain anchor.
+   *
+   * `hideArrow` because BaseLink appends its icon after the children, which here is a
+   * block-level row; the arrow belongs beside the network name.
+   */
+  /**
+   * Explorer rows leave the site, so they get the external-link treatment -- new tab,
+   * `rel`, and its assistive text -- from `BaseLink`.
+   *
+   * `children` is the library's whole rendered row, including the save and remove
+   * buttons it puts on Recent entries. Replacing it drops that functionality, so the row
+   * is kept intact and only decorated: the network logo arrives as a CSS variable that
+   * `docsearch.css` paints over the default icon, and the external-link arrow is drawn
+   * there too -- as a `::after` on the title, which is the only way to seat it beside the
+   * text rather than after the action buttons.
+   */
+  const hitComponent = useCallback(({ hit, children }: HitComponentProps) => {
+    if (!isExplorerHit(hit.objectID)) {
+      return <a href={hit.url}>{children}</a>
+    }
+    const icon = (hit as unknown as { __explorerIcon: string }).__explorerIcon
+    return (
+      <BaseLink
+        href={hit.url}
+        hideArrow
+        className="DocSearch-Hit-explorer"
+        style={
+          {
+            "--explorer-icon": `url("${NETWORK_ICON_PATH}${icon}")`,
+          } as React.CSSProperties
+        }
+      >
+        {children}
+      </BaseLink>
+    )
+  }, [])
+
+  const navigator = useMemo(
+    () => ({
+      navigate({ itemUrl }: { itemUrl: string }) {
+        if (isExternal(itemUrl)) {
+          window.open(itemUrl, "_blank", "noopener,noreferrer")?.focus()
+          return
+        }
+        window.location.assign(itemUrl)
+      },
+    }),
+    []
+  )
+
+  const transformSearchClient = useCallback(
+    (client: MinimalSearchClient): MinimalSearchClient => ({
+      ...client,
+      search: async (requests) => {
+        const response = await client.search(requests)
+        const parsed = parseExplorerQuery(requests[0]?.q ?? "")
+        if (!parsed) return response
+        const hits = buildExplorerHits(parsed)
+        const [first, ...rest] = response.results
+        return {
+          results: [
+            {
+              ...first,
+              hits: [...hits, ...(first?.hits ?? [])],
+              nbHits: (first?.nbHits ?? 0) + hits.length,
+            },
+            ...rest,
+          ],
+        }
+      },
+    }),
+    [buildExplorerHits]
+  )
+
   const searchModalProps = {
     typesenseCollectionName: collectionName,
     typesenseServerConfig: {
@@ -110,17 +295,46 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       apiKey,
     },
     typesenseSearchParameters: {
+      // The library groups by `url`, which is anchor-scoped, so one page can occupy
+      // several rows and its page-level record need not be among them -- results then
+      // deep-link into sections with no parent to click. Grouping by page instead caps
+      // a page at `group_limit` rows and lets the renderer nest them under the page.
+      //
+      // It also aligns the app with how relevance is actually measured: promote scores
+      // against `url_without_anchor`, so the two disagreed about what a result even is.
+      group_by: "url_without_anchor",
       // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
       // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
       // match scores into one tier and lets a three-value signal reorder them, which
       // measured worse than no sort at all. At this granularity pagerank only decides
       // between comparable matches: hit@1 and MRR match the unsorted baseline while
       // hit@10 improves 81% -> 84% against the labelled query set.
-      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+      // `item_priority` is the library's own signal and encodes heading depth, so it
+      // breaks remaining ties towards the h1 -- the page itself -- over an h2 inside it.
+      // Overriding sort_by without it is what let a page's first section outrank the
+      // page, sending "issuance of eth" to a #components-of-eth-issuance anchor.
+      sort_by:
+        "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc",
     },
     onClose,
+    hitComponent,
+    navigator,
+    // The prop is typed against typesense's SearchClient; the object the hook builds
+    // is the narrower shape above.
+    transformSearchClient:
+      transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
     transformItems: (items: DocSearchHit[]) =>
-      items.map((item: DocSearchHit) => {
+      // The page leads, with its sections beneath. The renderer nests children under an
+      // `lvl1` sibling but never reorders, so a section that scored higher would
+      // otherwise render above the page it belongs to.
+      withPageRow(
+        [...items].sort(
+          (a, b) => Number(b.type === "lvl1") - Number(a.type === "lvl1")
+        )
+      ).map((item: DocSearchHit) => {
+        // Our own hit carries an absolute explorer URL, which sanitizeHitUrl would
+        // strip to a path -- turning it into a broken internal link.
+        if (isExplorerHit(item.objectID)) return item
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
