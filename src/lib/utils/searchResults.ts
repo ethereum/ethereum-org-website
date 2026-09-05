@@ -59,3 +59,25 @@ export const withPageRow = <T extends PageResult>(items: T[]): T[] => {
     ...items,
   ]
 }
+
+/**
+ * The homepage, in any locale. Withheld from results: what the crawler extracts from it
+ * is hero copy and section headings, every phrase of which appears more fully on the page
+ * it links to, so it is a near-null answer for someone already on the site.
+ *
+ * Dropped here rather than with a `filter_by` on its `category` facet, which would be
+ * tidier but is not safe to assume: `category` is an optional field, and Typesense does
+ * not document whether a negation filter keeps or discards documents that lack it. If it
+ * discards them, any page missing the tag would silently vanish from search. Worth
+ * switching to once that behaviour is confirmed against a live index.
+ */
+export const isHomepageUrl = (url: string, locale: string): boolean => {
+  let path: string
+  try {
+    path = new URL(url).pathname
+  } catch {
+    path = url.split("#")[0]
+  }
+  const trimmed = path.replace(/\/+$/, "")
+  return trimmed === "" || trimmed === `/${locale}`
+}

@@ -20,7 +20,7 @@ import {
 } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { withPageRow } from "@/lib/utils/searchResults"
+import { isHomepageUrl, withPageRow } from "@/lib/utils/searchResults"
 import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
@@ -269,23 +269,30 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       ...client,
       search: async (requests) => {
         const response = await client.search(requests)
-        const parsed = parseExplorerQuery(requests[0]?.q ?? "")
-        if (!parsed) return response
-        const hits = buildExplorerHits(parsed)
         const [first, ...rest] = response.results
+        // The homepage is withheld from results; see isHomepageUrl.
+        const kept = (first?.hits ?? []).filter(
+          (hit) => !isHomepageUrl(hit.url, locale)
+        )
+        const dropped = (first?.hits?.length ?? 0) - kept.length
+
+        const parsed = parseExplorerQuery(requests[0]?.q ?? "")
+        const explorerHits = parsed ? buildExplorerHits(parsed) : []
+        if (!dropped && !explorerHits.length) return response
+
         return {
           results: [
             {
               ...first,
-              hits: [...hits, ...(first?.hits ?? [])],
-              nbHits: (first?.nbHits ?? 0) + hits.length,
+              hits: [...explorerHits, ...kept],
+              nbHits: (first?.nbHits ?? 0) + explorerHits.length - dropped,
             },
             ...rest,
           ],
         }
       },
     }),
-    [buildExplorerHits]
+    [buildExplorerHits, locale]
   )
 
   const searchModalProps = {
