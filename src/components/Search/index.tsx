@@ -138,22 +138,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
   const collectionName = `${collectionPrefix}-${locale}`
 
   /**
-   * A pasted address or transaction hash is never answerable from site content, so
-   * offer the block explorer instead. This has to happen in the search client rather
-   * than `transformItems`, which never sees the query and is not called at all when
-   * there are no results -- the normal case for an address.
-   */
-  /**
-   * A pasted address or hash is never answerable from site content, so offer the block
-   * explorers instead. This has to happen in the search client rather than
-   * `transformItems`, which never sees the query and is not called at all when there are
-   * no results -- the normal case for an address.
-   *
-   * One row per network, titled by network. The value itself is identical on every row
-   * and already visible in the input two lines above, so repeating it nine times would
-   * be noise; the network is the only thing that differs and the only thing being chosen.
-   */
-  /**
    * A pasted address or hash is never answerable from site content, so offer the block
    * explorers instead. This has to happen in the search client rather than
    * `transformItems`, which never sees the query and is not called at all when there are
@@ -211,14 +195,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     [t]
   )
 
-  /**
-   * Explorer rows leave the site, so they get the external-link treatment -- new tab,
-   * `rel`, the arrow affordance and its assistive text -- from `BaseLink`. Everything
-   * else keeps the library's plain anchor.
-   *
-   * `hideArrow` because BaseLink appends its icon after the children, which here is a
-   * block-level row; the arrow belongs beside the network name.
-   */
   /**
    * Explorer rows leave the site, so they get the external-link treatment -- new tab,
    * `rel`, and its assistive text -- from `BaseLink`.
@@ -310,6 +286,10 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       // It also aligns the app with how relevance is actually measured: promote scores
       // against `url_without_anchor`, so the two disagreed about what a result even is.
       group_by: "url_without_anchor",
+      // Set explicitly rather than inherited: the library supplies `group_limit: 3`
+      // alongside the `group_by` we override here, so the pairing would otherwise be an
+      // accident of its defaults.
+      group_limit: 3,
       // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
       // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
       // match scores into one tier and lets a three-value signal reorder them, which

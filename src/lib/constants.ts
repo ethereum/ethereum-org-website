@@ -128,15 +128,6 @@ export const BLOCKSCOUT_CHAINS_ENDPOINT =
   "https://chains.blockscout.com/api/chains"
 
 /**
- * Networks offered when a search looks like an address or hash, in the order the rows
- * appear -- Ethereum Mainnet first, then the L2s in the same order as
- * `/layer-2/networks`. Curated rather than derived from Blockscout's 745-chain registry:
- * this is the set ethereum.org itself features, and the icons are assets we already ship.
- *
- * Absent deliberately: Zircuit is not in Blockscout's registry, and Starknet is not EVM
- * -- its addresses collide with Ethereum transaction hashes, so it needs its own handling.
- */
-/**
  * Explorers for featured networks that Blockscout does not cover, each rendered as its
  * own section so the heading never claims Blockscout for a link that isn't.
  *
@@ -176,6 +167,15 @@ export const ZIRCUIT_EXPLORER = {
   txUrl: "https://explorer.zircuit.com/tx",
 }
 
+/**
+ * Blockscout-covered networks offered when a search looks like an address or hash, in the
+ * order the rows appear -- Ethereum Mainnet first, then the L2s in the same order as
+ * `/layer-2/networks`. Curated rather than derived from Blockscout's 745-chain registry:
+ * this is the set ethereum.org itself features, and the icons are assets we already ship.
+ *
+ * Starknet and Zircuit are absent here because Blockscout does not cover them; they get
+ * their own sections above.
+ */
 export const EXPLORER_NETWORKS = [
   { chainId: 1, icon: "ethereum.png" },
   { chainId: 42161, icon: "arbitrum.jpg" },
