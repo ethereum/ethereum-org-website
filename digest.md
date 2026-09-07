@@ -1,39 +1,39 @@
-**Intake decisions — 2026-09-04**
-5 decisions · 1 batch · 85 open PRs / 96 open issues
+**Intake decisions — 2026-09-07**
+5 decisions · 1 batch · 81 PRs / 99 issues open
 
 **🧭 Decide today**
-**1. SEO crawlability batch now fully green** · code · impact high, effort small
-[#19017](https://github.com/ethereum/ethereum-org-website/pull/19017), [#19029](https://github.com/ethereum/ethereum-org-website/pull/19029), [#19043](https://github.com/ethereum/ethereum-org-website/pull/19043), [#19044](https://github.com/ethereum/ethereum-org-website/pull/19044): #19044 rebased out of conflict today, the rest re-reviewed — all green, blocked only on review.
-→ **One reviewer clears all four as a batch and merges (0.82)**
+**1. SEO crawlability batch — 3 mergeable now, #19044 re-conflicting** · code · impact high
+[#19017](https://github.com/ethereum/ethereum-org-website/pull/19017) (+#19029, #19043) are green, blocked only on review — top decision 3d ago, none merged. [#19044](https://github.com/ethereum/ethereum-org-website/pull/19044) re-conflicted a second time; #19001 still failing.
+→ **Merge the 3 green now; a maintainer rebases #19044 to end the rebase race (0.8)**
+
+**2. Recovery guards stacking up — 4 green fixes unreviewed, 3 fresh crashes untriaged** · code · impact high
+Prod-crash guards [#19209](https://github.com/ethereum/ethereum-org-website/pull/19209) (+#19202, #19192, #19198) are green, review-blocked; new crashes [#19238](https://github.com/ethereum/ethereum-org-website/issues/19238) (+#19233, #19221) landed untriaged.
+→ **Merge the ready guards in one pass, triage the 3 new crashes (0.75)**
 
 **✅ Verify, then merge**
-**2. [#19218](https://github.com/ethereum/ethereum-org-website/pull/19218) — conclude FindWalletCatalog2026 A/B test** · tooling
-wackerow APPROVED, CI green; only orphan-code notes left.
-→ **pettinarip clears the notes, then merges the winning catalog to all (0.85)**
+**3. [#19223](https://github.com/ethereum/ethereum-org-website/pull/19223) — Sentry span-quota fix (observability dark since Aug 31)** · tooling
+Zero spans accepted since Aug 31 — no traces/Web Vitals until this lands; drops ~84% infra spans. Green, unreviewed. Pair with [#19210](https://github.com/ethereum/ethereum-org-website/pull/19210).
+→ **Review both Sentry PRs, then merge (0.8)**
 
-**3. [#19210](https://github.com/ethereum/ethereum-org-website/pull/19210) — drop unlocatable Sentry stacks** · tooling · team, 2 files, green, unreviewed → **review, then merge (0.75)**
+**4. Quiz content — [#19225](https://github.com/ethereum/ethereum-org-website/pull/19225) hub reorder + [#19217](https://github.com/ethereum/ethereum-org-website/pull/19217) 5 DeFi questions** · content
+Both green, review-blocked; #19225 a verified data-only reorder (impl #19224), #19217 impl good-first-issue #17280.
+→ **Content-verify both, merge together (0.75)**
 
-**4. [#19211](https://github.com/ethereum/ethereum-org-website/pull/19211) — shared Intl-whitespace helper** · tooling · team, green, folds in #19191/#19195/#19201 → **review, then merge (0.75)**
-
-**5. [#19217](https://github.com/ethereum/ethereum-org-website/pull/19217) — 5 DeFi quiz questions** · content · external, green, implements good-first-issue #17280 → **content-verify, then merge (0.70)**
+**5. [#19227](https://github.com/ethereum/ethereum-org-website/pull/19227) — Devcon India campaign copy + localized ticket link** · content · time-sensitive
+Team, green, review-blocked; leads with the ETHORG10 code, points CTA to localized devcon.org. Value decays as the window passes.
+→ **Review copy, merge before the window closes (0.75)**
 
 **🧩 Review batches**
-- **Node-provider listings** — [#19132](https://github.com/ethereum/ethereum-org-website/pull/19132), [#19157](https://github.com/ethereum/ethereum-org-website/pull/19157), [#19035](https://github.com/ethereum/ethereum-org-website/pull/19035), [#18872](https://github.com/ethereum/ethereum-org-website/pull/18872): one-file adds awaiting product review — apply the listing bar once.
+- **Node-provider listings** — [#19132](https://github.com/ethereum/ethereum-org-website/pull/19132) (+#19157, #19035, #18872): one-file adds awaiting product review — apply the bar once (#19132 BEHIND, needs rebase).
 
 **⏳ Waiting on others**
-- [#19063](https://github.com/ethereum/ethereum-org-website/pull/19063) — byt61: un-draft the green fix for #18928, 10d
-- [#19097](https://github.com/ethereum/ethereum-org-website/pull/19097) — pankajjagtapp: address CHANGES_REQUESTED on ether.fi, 2d
-- [#19184](https://github.com/ethereum/ethereum-org-website/pull/19184) — nloureiro: fix Dencun EIP count + testnet stage, 2d
+- [#19097](https://github.com/ethereum/ethereum-org-website/pull/19097) — pankajjagtapp: address CHANGES_REQUESTED on the ether.fi listing, 1d
+- [#19184](https://github.com/ethereum/ethereum-org-website/pull/19184) — nloureiro: fix Dencun EIP count + testnet stage, 5d
 
 **🔁 Carried over**
-- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 12, still nothing**: zero replies, 4 red checks. Close and leave #18052 open, or adopt the branch.
-- [#18891](https://github.com/ethereum/ethereum-org-website/issues/18891) — **day 11, still nothing**: propagation thread (+#19031/#18896). Assign wackerow or close the trio.
-- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — **day 9, still nothing**: 158d idle, Stale+Blocked draft — close.
+- [#19218](https://github.com/ethereum/ethereum-org-website/pull/19218) — day 2: wackerow-APPROVED and green; just needs a maintainer to press merge.
+- [#18918](https://github.com/ethereum/ethereum-org-website/pull/18918) — **day 13, still nothing**: zero replies, 4 red checks. Close and leave #18052 open, or adopt.
+- [#18891](https://github.com/ethereum/ethereum-org-website/issues/18891) — **day 12, still nothing**: propagation thread (+#19031/#18896). Assign wackerow or close the trio.
+- [#17263](https://github.com/ethereum/ethereum-org-website/pull/17263) — **day 10, still nothing**: 161d idle Stale+Blocked draft — close.
 
-**🗑️ Suggested closures**
-- [#19019](https://github.com/ethereum/ethereum-org-website/issues/19019) invalid · [#19014](https://github.com/ethereum/ethereum-org-website/issues/19014) + [#19110](https://github.com/ethereum/ethereum-org-website/issues/19110) empty "Feature request", no body (0.75)
-
-**🔄 Since the last digest**
-- [#19016](https://github.com/ethereum/ethereum-org-website/pull/19016) merged — retired the recovery-500 locale class (replaced 11 recovery PRs).
-
-**📊 Queue** — 85 open PRs (1 conflicting, 9 failing checks) · 96 open issues (64 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
+**📊 Queue** — 81 open PRs (13 conflicting, 9 failing) · 99 open issues (67 external, no team reply) · [full queue](https://github.com/ethereum/ethereum-org-website/pulls)
