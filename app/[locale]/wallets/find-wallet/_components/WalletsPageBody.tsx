@@ -1,10 +1,7 @@
-import { ArrowLeft } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import ListingMethodology from "@/components/ListingMethodology"
-import { BaseLink } from "@/components/ui/Link"
 import { UnorderedList } from "@/components/ui/list"
-import { Section } from "@/components/ui/section"
 
 import {
   type CatalogWallet,
@@ -14,13 +11,16 @@ import {
 } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels } from "@/data/wallets/devices"
-import { WALLET_ADVANCED_FILTERS } from "@/data/wallets/features"
+import {
+  CROPS_PROPERTIES,
+  WALLET_ADVANCED_FILTERS,
+} from "@/data/wallets/features"
 import {
   buildPersonaLabels,
+  WALLET_PERSONAS,
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
-import WalletPersonaCards from "./WalletPersonaCards"
 import WalletsCatalog, { type WalletCatalogLabels } from "./WalletsCatalog"
 
 const METHODOLOGY_CRITERIA = [
@@ -39,20 +39,18 @@ type WalletsPageBodyProps = {
   wallets: CatalogWallet[]
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
-  personaCounts: Record<WalletPersonaId, number>
   lastUpdatedDisplay: string
-  currentPersonaId?: WalletPersonaId
+  initialPersonaId?: WalletPersonaId
 }
 
-/** Shared by the index and persona pages, over each page's wallet subset. */
+/** Shared by the index and persona pages; the persona only seeds the filter. */
 const WalletsPageBody = async ({
   locale,
   wallets,
   networks,
   languages,
-  personaCounts,
   lastUpdatedDisplay,
-  currentPersonaId,
+  initialPersonaId,
 }: WalletsPageBodyProps) => {
   const t = await getTranslations({
     locale,
@@ -82,6 +80,28 @@ const WalletsPageBody = async ({
       filters: t("page-find-wallet-filters"),
       reset: t("page-find-wallet-reset-filters"),
     },
+    personaCards: {
+      legend: t("page-find-wallet-persona-legend"),
+      countAvailable: t.raw("page-find-wallet-persona-count-available"),
+    },
+    modal: {
+      close: tCommon("close"),
+      yes: tCommon("yes"),
+      no: tCommon("no"),
+      networkSupport: t("page-find-wallet-network-support"),
+      device: t("page-find-wallet-device"),
+      languages: t("page-find-wallet-languages-supported"),
+      fees: t("page-find-wallet-fee-row-label"),
+      feesTooltip: t("page-find-wallet-fee-row-tooltip"),
+      fullDetails: t("page-find-wallet-full-details"),
+      getWallet: t.raw("page-find-wallet-get-wallet"),
+      crops: CROPS_PROPERTIES.map(({ key, labelKey, descKey }) => ({
+        key,
+        label: t(labelKey),
+        tooltip: t(descKey),
+      })),
+    },
+    tableTitle: t("page-find-wallet-table-title"),
     buyCrypto: t("page-find-wallet-buy-crypto"),
     sellCrypto: t("page-find-wallet-sell-for-fiat"),
     devices: buildDeviceLabels(t),
@@ -95,45 +115,25 @@ const WalletsPageBody = async ({
       .length,
   }))
 
+  const personas = WALLET_PERSONAS.map((persona) => ({
+    id: persona.id,
+    title: t(persona.titleKey),
+    description: t(persona.descKey),
+  }))
+
   return (
     <>
-      <Section>
-        {currentPersonaId && (
-          <div className="mb-4 flex px-page">
-            <BaseLink
-              href="/wallets/find-wallet/"
-              className="inline-flex items-center gap-1.5 text-sm font-bold no-underline hover:underline"
-            >
-              <ArrowLeft className="size-4 rtl:-scale-x-100" />
-              {t("page-find-wallet-see-all-wallets")}
-            </BaseLink>
-          </div>
-        )}
-        <WalletPersonaCards
-          locale={locale}
-          personaCounts={personaCounts}
-          currentPersonaId={currentPersonaId}
-        />
-      </Section>
-
-      <Section id="wallets" className="mt-10 px-page lg:mt-16">
-        <h2 className="sr-only select-none">
-          {t("page-find-wallet-table-title")}
-        </h2>
-        <WalletsCatalog
-          // Reset client filter/search state when navigating between personas.
-          key={currentPersonaId ?? "all"}
-          locale={locale}
-          // Slim projection: only what the island reads crosses to the client.
-          wallets={wallets.map((wallet) =>
-            toCatalogCard(wallet, { t, locale })
-          )}
-          networks={networks}
-          languages={languages}
-          advancedFilters={advancedFilters}
-          labels={catalogLabels}
-        />
-      </Section>
+      <WalletsCatalog
+        locale={locale}
+        // Slim projection: only what the island reads crosses to the client.
+        wallets={wallets.map((wallet) => toCatalogCard(wallet, { t, locale }))}
+        networks={networks}
+        languages={languages}
+        advancedFilters={advancedFilters}
+        personas={personas}
+        initialPersonaId={initialPersonaId}
+        labels={catalogLabels}
+      />
 
       <ListingMethodology
         heading={t("page-find-wallet-methodology-title")}

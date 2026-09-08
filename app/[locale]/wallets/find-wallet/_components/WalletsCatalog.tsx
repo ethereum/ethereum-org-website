@@ -1,10 +1,11 @@
 "use client"
 
-import { memo, useCallback, useMemo } from "react"
+import { memo, useCallback, useEffect, useMemo, useState } from "react"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
-import { asArray } from "@/components/FilterableCatalog/utils"
+import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
+import { Section } from "@/components/ui/section"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import type {
@@ -17,16 +18,22 @@ import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
+import WalletDetailModal, { type WalletModalLabels } from "./WalletDetailModal"
 import type { WalletFilterOption } from "./WalletFilterGroup"
 import WalletFilters, {
   ADVANCED_KEY,
+  ALL_FILTER_KEYS,
   DEVICES_KEY,
   LANGUAGE_KEY,
   NETWORKS_KEY,
   PURCHASES_KEY,
   WalletFiltersHeader,
 } from "./WalletFilters"
+import WalletPersonaCards, {
+  type WalletPersonaCard,
+} from "./WalletPersonaCards"
 
+const PERSONAS_KEY = "personas"
 const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
 // Category kept from the old empty state for trend comparability.
@@ -57,6 +64,9 @@ export type WalletCatalogLabels = {
     advanced: string
   }
   header: { filters: string; reset: string }
+  personaCards: { legend: string; countAvailable: string }
+  modal: WalletModalLabels
+  tableTitle: string
   buyCrypto: string
   sellCrypto: string
   devices: Record<WalletDeviceId, string>
@@ -70,7 +80,97 @@ type WalletsCatalogProps = {
   languages: WalletLanguageOption[]
   /** Built server-side: its labels come from the feature groups' i18n keys. */
   advancedFilters: WalletFilterOption[]
+  personas: WalletPersonaCard[]
+  /** Set by the persona pages; the path segment is derived from it afterwards. */
+  initialPersonaId?: WalletPersonaId
   labels: WalletCatalogLabels
+}
+
+function filterWallet(
+  wallet: CatalogWalletCard,
+  state: CatalogFilterState,
+  query: string
+) {
+  const personas = asArray(state[PERSONAS_KEY])
+  if (
+    !personas.every((persona) =>
+      wallet.personas.includes(persona as WalletPersonaId)
+    )
+  ) {
+    return false
+  }
+
+  const devices = asArray(state[DEVICES_KEY])
+  if (!devices.every((device) => wallet.devices[device as WalletDeviceId])) {
+    return false
+  }
+
+  const selectedNetworks = asArray(state[NETWORKS_KEY])
+  if (
+    !selectedNetworks.every((network) =>
+      (wallet.supported_chains as string[]).includes(network)
+    )
+  ) {
+    return false
+  }
+
+  const purchases = asArray(state[PURCHASES_KEY])
+  if (!purchases.every((key) => wallet[key as (typeof PURCHASE_IDS)[number]])) {
+    return false
+  }
+
+  const advanced = asArray(state[ADVANCED_KEY])
+  if (
+    !advanced.every((flag) => (wallet.advancedFlags as string[]).includes(flag))
+  ) {
+    return false
+  }
+
+  // OR, unlike the AND-combined groups above.
+  const languages = asArray(state[LANGUAGE_KEY])
+  if (
+    languages.length > 0 &&
+    !languages.some((code) =>
+      (wallet.languages_supported as string[]).includes(code)
+    )
+  ) {
+    return false
+  }
+
+  const normalizedQuery = query.toLowerCase().trim()
+  if (!normalizedQuery) return true
+  const haystack = [wallet.name, wallet.descriptionStripped ?? ""]
+    .join(" ")
+    .toLowerCase()
+  return haystack.includes(normalizedQuery)
+}
+
+/** `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per group. */
+const readQueryFilters = (
+  search: string,
+  validIds: Record<string, Set<string>>
+): CatalogFilterState => {
+  const params = new URLSearchParams(search)
+  const state: CatalogFilterState = {}
+  for (const key of ALL_FILTER_KEYS) {
+    const ids = (params.get(key) ?? "")
+      .split(",")
+      .filter((id) => validIds[key].has(id))
+    if (ids.length) state[key] = ids
+  }
+  return state
+}
+
+const buildUrl = (selection: CatalogFilterState) => {
+  const { pathname, hash } = window.location
+  const base = pathname.replace(/\/personas\/[^/]+\/?$/, "/")
+  const personas = asArray(selection[PERSONAS_KEY])
+  const path = personas.length === 1 ? `${base}personas/${personas[0]}/` : base
+  const query = ALL_FILTER_KEYS.flatMap((key) => {
+    const ids = asArray(selection[key])
+    return ids.length ? [`${key}=${ids.map(encodeURIComponent).join(",")}`] : []
+  }).join("&")
+  return path + (query ? `?${query}` : "") + hash
 }
 
 const WalletsResults = memo(function WalletsResults({
@@ -78,11 +178,13 @@ const WalletsResults = memo(function WalletsResults({
   filtered,
   deviceLabels,
   personaLabels,
+  onOpen,
 }: {
   wallets: CatalogWalletCard[]
   filtered: CatalogWalletCard[]
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
+  onOpen: (slug: string) => void
 }) {
   // Every wallet renders once and filtering toggles `hidden`: no remounts, and
   // all wallets stay in the SSR DOM for crawlers.
@@ -98,6 +200,7 @@ const WalletsResults = memo(function WalletsResults({
             wallet={wallet}
             deviceLabels={deviceLabels}
             personaLabels={personaLabels}
+            onOpen={onOpen}
           />
         </div>
       ))}
@@ -111,21 +214,25 @@ export default function WalletsCatalog({
   networks,
   languages,
   advancedFilters,
+  personas,
+  initialPersonaId,
   labels,
 }: WalletsCatalogProps) {
-  // No state here, so no re-renders — plain consts, not useMemo. Only filterFn
-  // needs a stable identity, since FilterableCatalog memoizes on it.
-  const deviceCounts = {} as Record<WalletDeviceId, number>
-  for (const device of WALLET_DEVICE_IDS) {
-    deviceCounts[device] = wallets.filter(
-      (wallet) => wallet.devices[device]
-    ).length
-  }
+  const [selection, setSelection] = useState<CatalogFilterState>(() =>
+    initialPersonaId ? { [PERSONAS_KEY]: [initialPersonaId] } : {}
+  )
+  // Seeded like the SSR pass so the persona counts hydrate without a mismatch.
+  const [filtered, setFiltered] = useState(() =>
+    wallets.filter((wallet) => filterWallet(wallet, selection, ""))
+  )
+  const [openSlug, setOpenSlug] = useState<string | null>(null)
+  const [urlRead, setUrlRead] = useState(false)
 
+  // Plain consts, not useMemo: these only re-run on the rare state changes above.
   const deviceOptions = WALLET_DEVICE_IDS.map((device) => ({
     id: device,
     label: labels.devices[device],
-    count: deviceCounts[device],
+    count: wallets.filter((wallet) => wallet.devices[device]).length,
   }))
 
   const purchaseOptions = [
@@ -153,96 +260,145 @@ export default function WalletsCatalog({
     count: language.count,
   }))
 
-  const filterWallet = useCallback(function filterWallet(
-    wallet: CatalogWalletCard,
-    state: CatalogFilterState,
-    query: string
-  ) {
-    const devices = asArray(state[DEVICES_KEY])
-    if (!devices.every((device) => wallet.devices[device as WalletDeviceId])) {
-      return false
+  // Read from window.location, not useSearchParams: the latter would force this
+  // static page into client-side rendering.
+  useEffect(() => {
+    const validIds = {
+      [DEVICES_KEY]: new Set<string>(WALLET_DEVICE_IDS),
+      [PURCHASES_KEY]: new Set<string>(PURCHASE_IDS),
+      [NETWORKS_KEY]: new Set(networks.map((network) => network.id)),
+      [LANGUAGE_KEY]: new Set(languages.map((language) => language.code)),
+      [ADVANCED_KEY]: new Set(advancedFilters.map((option) => option.id)),
     }
-
-    const selectedNetworks = asArray(state[NETWORKS_KEY])
-    if (
-      !selectedNetworks.every((network) =>
-        (wallet.supported_chains as string[]).includes(network)
-      )
-    ) {
-      return false
+    const fromUrl = readQueryFilters(window.location.search, validIds)
+    if (Object.keys(fromUrl).length) {
+      setSelection((prev) => ({ ...prev, ...fromUrl }))
     }
+    setUrlRead(true)
+  }, [networks, languages, advancedFilters])
 
-    const purchases = asArray(state[PURCHASES_KEY])
-    if (
-      !purchases.every((key) => wallet[key as (typeof PURCHASE_IDS)[number]])
-    ) {
-      return false
+  // replaceState, never push: a pushed entry would make Back a real route change.
+  useEffect(() => {
+    if (!urlRead) return
+    const url = buildUrl(selection)
+    const { pathname, search, hash } = window.location
+    if (url !== pathname + search + hash) {
+      window.history.replaceState(null, "", url)
     }
+  }, [selection, urlRead])
 
-    const advanced = asArray(state[ADVANCED_KEY])
-    if (
-      !advanced.every((flag) =>
-        (wallet.advancedFlags as string[]).includes(flag)
-      )
-    ) {
-      return false
+  const selectedPersonas = useMemo(
+    () => asArray(selection[PERSONAS_KEY]) as WalletPersonaId[],
+    [selection]
+  )
+
+  // Old-arm semantics: how many of the currently visible wallets also fit.
+  const personaCounts = useMemo(() => {
+    const counts = {} as Record<WalletPersonaId, number>
+    for (const persona of personas) {
+      counts[persona.id] = filtered.filter((wallet) =>
+        wallet.personas.includes(persona.id)
+      ).length
     }
+    return counts
+  }, [filtered, personas])
 
-    // OR, unlike the AND-combined groups above.
-    const languages = asArray(state[LANGUAGE_KEY])
-    if (
-      languages.length > 0 &&
-      !languages.some((code) =>
-        (wallet.languages_supported as string[]).includes(code)
-      )
-    ) {
-      return false
-    }
+  const onTogglePersona = useCallback(
+    (persona: WalletPersonaCard) => {
+      const selecting = !selectedPersonas.includes(persona.id)
+      setSelection((prev) => ({
+        ...prev,
+        [PERSONAS_KEY]: toggleId(asArray(prev[PERSONAS_KEY]), persona.id),
+      }))
+      // Same triple as the old preset cards so persona engagement stays comparable.
+      trackCustomEvent({
+        eventCategory: "UserPersona",
+        eventAction: persona.title,
+        eventName: `${persona.title} ${selecting}`,
+      })
+    },
+    [selectedPersonas]
+  )
 
-    const normalizedQuery = query.toLowerCase().trim()
-    if (!normalizedQuery) return true
-    const haystack = [wallet.name, wallet.descriptionStripped ?? ""]
-      .join(" ")
-      .toLowerCase()
-    return haystack.includes(normalizedQuery)
+  // Empty-state reset: sidebar groups and search only; personas stay.
+  const onReset = useCallback(() => {
+    setSelection((prev) => {
+      const next = { ...prev }
+      for (const key of ALL_FILTER_KEYS) delete next[key]
+      return next
+    })
+    trackEmptyStateReset()
   }, [])
 
+  const openWallet = openSlug
+    ? wallets.find((wallet) => wallet.slug === openSlug)
+    : undefined
+
   return (
-    <FilterableCatalog
-      locale={locale}
-      items={wallets}
-      filterFn={filterWallet}
-      mobileVariant="sheet"
-      labels={labels.catalog}
-      onReset={trackEmptyStateReset}
-      renderSidebarHeader={({ state, setFilter }) => (
-        <WalletFiltersHeader
-          state={state}
-          setFilter={setFilter}
-          labels={labels.header}
-        />
-      )}
-      renderSidebar={({ state, setFilter }) => (
-        <WalletFilters
+    <>
+      <Section>
+        <WalletPersonaCards
           locale={locale}
-          state={state}
-          setFilter={setFilter}
-          deviceOptions={deviceOptions}
-          purchaseOptions={purchaseOptions}
-          networkOptions={networkOptions}
-          languageOptions={languageOptions}
-          advancedOptions={advancedFilters}
-          labels={labels.filter}
+          personas={personas}
+          counts={personaCounts}
+          selected={selectedPersonas}
+          onToggle={onTogglePersona}
+          labels={labels.personaCards}
         />
-      )}
-      renderResults={(filtered) => (
-        <WalletsResults
-          wallets={wallets}
-          filtered={filtered}
+      </Section>
+
+      <Section id="wallets" className="mt-10 px-page lg:mt-16">
+        <h2 className="sr-only select-none">{labels.tableTitle}</h2>
+        <FilterableCatalog
+          locale={locale}
+          items={wallets}
+          filterFn={filterWallet}
+          selection={selection}
+          onSelectionChange={setSelection}
+          onFilteredChange={setFiltered}
+          mobileVariant="sheet"
+          labels={labels.catalog}
+          onReset={onReset}
+          renderSidebarHeader={({ state, setFilter }) => (
+            <WalletFiltersHeader
+              state={state}
+              setFilter={setFilter}
+              labels={labels.header}
+            />
+          )}
+          renderSidebar={({ state, setFilter }) => (
+            <WalletFilters
+              locale={locale}
+              state={state}
+              setFilter={setFilter}
+              deviceOptions={deviceOptions}
+              purchaseOptions={purchaseOptions}
+              networkOptions={networkOptions}
+              languageOptions={languageOptions}
+              advancedOptions={advancedFilters}
+              labels={labels.filter}
+            />
+          )}
+          renderResults={(filtered) => (
+            <WalletsResults
+              wallets={wallets}
+              filtered={filtered}
+              deviceLabels={labels.devices}
+              personaLabels={labels.personas}
+              onOpen={setOpenSlug}
+            />
+          )}
+        />
+      </Section>
+
+      {openWallet && (
+        <WalletDetailModal
+          wallet={openWallet}
+          labels={labels.modal}
           deviceLabels={labels.devices}
-          personaLabels={labels.personas}
+          onClose={() => setOpenSlug(null)}
         />
       )}
-    />
+    </>
   )
 }

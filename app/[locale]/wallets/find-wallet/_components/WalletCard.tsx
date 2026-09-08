@@ -21,12 +21,15 @@ type WalletCardProps = {
   wallet: CatalogWalletCard
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
+  /** When set, a plain click opens the modal instead of following the link. */
+  onOpen?: (slug: string) => void
 }
 
 const WalletCard = memo(function WalletCard({
   wallet,
   deviceLabels,
   personaLabels,
+  onOpen,
 }: WalletCardProps) {
   const deviceList = getDeviceLabels(wallet.devices, deviceLabels)
 
@@ -47,11 +50,26 @@ const WalletCard = memo(function WalletCard({
         <div className="flex min-w-0 flex-col gap-1">
           <LinkOverlay
             href={`/wallets/find-wallet/${wallet.slug}/`}
+            // Real link for crawlers and modifier-clicks; no prefetch, or the
+            // grid would warm 49 detail routes nobody navigates to.
+            prefetch={false}
             className="text-lg font-bold text-body no-underline hover:text-body"
-            matomoEvent={{
+            customEventOptions={{
               eventCategory: "find-wallet",
               eventAction: "open_wallet_modal",
               eventName: wallet.name,
+            }}
+            onClick={(event) => {
+              if (!onOpen || event.button !== 0) return
+              if (
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              )
+                return
+              event.preventDefault()
+              onOpen(wallet.slug)
             }}
           >
             {wallet.name}

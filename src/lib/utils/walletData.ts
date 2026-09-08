@@ -31,11 +31,7 @@ import {
   getWalletAdvancedFlags,
   type WalletFeatureKey,
 } from "@/data/wallets/features"
-import {
-  WALLET_PERSONA_IDS,
-  WALLET_PERSONAS,
-  type WalletPersonaId,
-} from "@/data/wallets/personas"
+import { WALLET_PERSONAS, type WalletPersonaId } from "@/data/wallets/personas"
 import walletsData from "@/data/wallets/wallet-data"
 
 export {
@@ -150,6 +146,9 @@ export type CatalogWalletCard = Pick<
   | "languages_supported"
   | "buy_crypto"
   | "withdraw_crypto"
+  | "url"
+  | "discord"
+  | "twitter"
 > & {
   /** Already formatted, e.g. "Swap fee: 0.3%" — see `toCatalogCard`. */
   fees?: string
@@ -171,6 +170,9 @@ export const toCatalogCard = (
   languages_supported: wallet.languages_supported,
   buy_crypto: wallet.buy_crypto,
   withdraw_crypto: wallet.withdraw_crypto,
+  url: wallet.url,
+  discord: wallet.discord,
+  twitter: wallet.twitter,
   // Omit the key rather than serialize a null.
   ...(wallet.descriptionStripped && {
     descriptionStripped: wallet.descriptionStripped,
@@ -306,15 +308,4 @@ export function getLastUpdatedDisplay(
     .sort()
     .at(-1)
   return mostRecent ? formatDate(mostRecent, locale) : ""
-}
-
-export function getPersonaCounts(
-  wallets: CatalogWallet[]
-): Record<WalletPersonaId, number> {
-  const counts = {} as Record<WalletPersonaId, number>
-  for (const id of WALLET_PERSONA_IDS) counts[id] = 0
-  for (const wallet of wallets) {
-    for (const persona of wallet.personas) counts[persona] += 1
-  }
-  return counts
 }

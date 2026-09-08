@@ -47,9 +47,19 @@ export class FindWalletPage extends BasePage {
     return (await this.parseResultsCounter()).total
   }
 
-  async openPersona(personaSlug: string) {
-    await this.page.locator(`a[href*="/personas/${personaSlug}/"]`).click()
-    await this.assertUrlMatches(new RegExp(`/personas/${personaSlug}/?$`))
+  /** Clicks the card's label; the real checkbox is visually hidden. */
+  async togglePersona(title: string) {
+    await this.page
+      .getByTestId("persona-cards-container")
+      .locator("label")
+      .filter({ hasText: new RegExp(`^${title} \\(`) })
+      .click()
+  }
+
+  personaCheckbox(title: string): Locator {
+    return this.page
+      .getByTestId("persona-cards-container")
+      .getByRole("checkbox", { name: new RegExp(`^${title}\\b`) })
   }
 
   /**
