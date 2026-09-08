@@ -114,6 +114,58 @@
   width: 80%;
 }
 
+/* Tailwind's preflight makes every svg `display: block`, which takes these icons out of
+   the inline flow the vendor centres with `text-align`. The vendor's own bottom padding
+   is zeroed by the same preflight reset, so it is restored here too. */
+.DocSearch-Screen-Icon {
+  padding-bottom: 2rem;
+}
+
+.DocSearch-Screen-Icon > svg {
+  margin-inline: auto;
+}
+
+/* Kept on one line so the quotes stay with the value they wrap. An unmatched hash has no
+   break opportunity, and truncating the value alone was not enough: as an inline-block at
+   `max-width: 100%` it could not fit beside the opening quote, so it wrapped to its own
+   line and stranded both quotes on lines of their own. Truncating the whole message
+   instead keeps them adjacent -- the point of it is that nothing matched, not the value. */
+.DocSearch-NoResults .DocSearch-Title {
+  margin-bottom: 1rem;
+  @apply truncate;
+}
+
+/* One suggestion per line. The vendor shrink-wraps both lists with `inline-block`, so
+   there is no width for an overflow to act against and long titles wrapped instead --
+   leaving the "»" marker orphaned above its own text. */
+.DocSearch-NoResults-Prefill-List,
+.DocSearch-NoResults-Prefill-List ul {
+  display: block;
+  max-width: 100%;
+}
+
+/* The marker sits outside the truncated text. `text-overflow` cannot clip inside an
+   atomic inline box, and the vendor makes each suggestion an `inline-block` button -- so
+   truncating the list item replaced the whole button with an ellipsis, rendering a
+   suggestion as a bare "» ...". Truncating the button instead trims its own text, and
+   `min-width: 0` is what lets a flex item shrink below its content. */
+.DocSearch-NoResults-Prefill-List li {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+}
+
+.DocSearch-NoResults-Prefill-List li::before {
+  content: "» ";
+  flex: none;
+  white-space: pre;
+}
+
+.DocSearch-Prefill {
+  min-width: 0;
+  @apply truncate;
+}
+
 .DocSearch.DocSearch-Container {
   @apply fixed inset-0;
 }
@@ -138,6 +190,10 @@
 }
 
 .DocSearch-Cancel {
+  /* The vendor's own margin is zeroed by the preflight reset, leaving the button flush
+     against the input on mobile, where it is the only place it shows. Logical so it
+     stays on the correct side in RTL. */
+  margin-inline-start: 1rem;
   @apply text-primary hover:text-primary md:text-primary-high-contrast;
 }
 

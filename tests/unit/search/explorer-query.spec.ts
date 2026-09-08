@@ -183,3 +183,57 @@ test.describe("truncateHex", () => {
     expect(truncateHex("0xabc")).toBe("0xabc")
   })
 })
+
+test.describe("naming-service names", () => {
+  test("offers mainnet only, so a real page answer is not buried", () => {
+    // `vitalik.eth` legitimately matches the authentication docs that use it as their
+    // example. One row leaves that visible; nine would push it off the screen.
+    const result = parseExplorerQuery("vitalik.eth")
+    expect(result?.groups).toHaveLength(1)
+    expect(result?.groups[0].kind).toBe("name")
+    expect(result?.groups[0].targets).toHaveLength(1)
+    expect(result?.groups[0].targets[0].name).toBe("Ethereum Mainnet")
+    expect(result?.groups[0].targets[0].url).toBe(
+      "https://eth.blockscout.com/search-results?q=vitalik.eth"
+    )
+  })
+
+  test("accepts subdomains, .id, and any casing", () => {
+    for (const name of ["foo.base.eth", "cb.id", "VITALIK.ETH", "a--b.eth"]) {
+      expect(parseExplorerQuery(name)?.groups[0].kind, name).toBe("name")
+    }
+  })
+
+  test("holds .eth to ENS's three-character minimum, but not subdomains", () => {
+    // The registrar rejects a registered name shorter than three characters, so `ab.eth`
+    // cannot exist -- but its owner may create a subdomain of any length.
+    for (const valid of ["abc.eth", "a-b.eth", "a--b.eth", "a.vitalik.eth"]) {
+      expect(parseExplorerQuery(valid)?.groups[0].kind, valid).toBe("name")
+    }
+    for (const invalid of ["ab.eth", "a.eth", "-ab.eth", "ab-.eth"]) {
+      expect(parseExplorerQuery(invalid), invalid).toBeNull()
+    }
+  })
+
+  test("leaves .id unrestricted, since its registrars do not share that rule", () => {
+    // cb.id is real.
+    for (const name of ["cb.id", "a.id"]) {
+      expect(parseExplorerQuery(name)?.groups[0].kind, name).toBe("name")
+    }
+  })
+
+  test("does not match domains generally", () => {
+    // ENS also resolves imported DNS names, so "an explorer resolves it" is not a usable
+    // test -- a general domain shape would fire on ordinary queries containing a dot.
+    for (const q of [
+      "ethereum.org",
+      "web3.0",
+      "eth",
+      ".eth",
+      "my_name.eth",
+      "what is ens",
+    ]) {
+      expect(parseExplorerQuery(q), q).toBeNull()
+    }
+  })
+})

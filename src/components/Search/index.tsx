@@ -69,10 +69,10 @@ interface MinimalSearchClient {
 /**
  * Strip the site-name suffix from every copy of a hit's lvl0 title.
  *
- * The renderer reads `_highlightResult["hierarchy.lvl0"].value`, and the group header
- * above each result takes its label from the same place -- so the raw fields are not
- * enough. Highlight entries nest the string under `value`, which a naive walk recurses
- * straight past.
+ * The renderer reads `_highlightResult["hierarchy.lvl0"].value`, the group header above
+ * each result takes its label from the same place, and so do the "Try searching for"
+ * suggestions on the no-results screen -- so the raw fields are not enough. Highlight
+ * entries nest the string under `value`, which a naive walk recurses straight past.
  */
 const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
   if (depth > 6) return
@@ -150,12 +150,9 @@ const Search = ({ asChild = false, children }: SearchProps) => {
   const buildExplorerHits = useCallback(
     (parsed: ExplorerQuery): DocSearchHit[] =>
       parsed.groups.flatMap((group, groupIndex) => {
-        const heading = t(
-          group.kind === "hash"
-            ? "docsearch-explorer-hash"
-            : "docsearch-explorer-address",
-          { explorer: group.brand }
-        )
+        const heading = t(`docsearch-explorer-${group.kind}`, {
+          explorer: group.brand,
+        })
         // `type: "lvl1"` is the renderer's top-level row: title from `hierarchy.lvl1`,
         // and a second line only if `content` is set -- omitted to keep rows one line.
         // `hierarchy.lvl0` is both the section heading and the grouping key, so rows
@@ -179,7 +176,9 @@ const Search = ({ asChild = false, children }: SearchProps) => {
             // Rendered by the library as the row's second line; CSS shows it only in
             // Recent, where the input is empty and a row titled "Base" would not say
             // which value was looked up.
-            content: truncateHex(parsed.value),
+            // Only hex is truncated; a name is already short and readable.
+            content:
+              group.kind === "name" ? parsed.value : truncateHex(parsed.value),
             __explorerIcon: target.icon,
             // The library caps every section at five rows as a stand-in for `distinct`.
             // Each row here is a different destination, not a repeat of one page, so
@@ -251,6 +250,14 @@ const Search = ({ asChild = false, children }: SearchProps) => {
           (hit) => !isHomepageUrl(hit.url, locale)
         )
         const dropped = (first?.hits?.length ?? 0) - kept.length
+
+        // Stripped here rather than in `transformItems`, which runs after the library
+        // has grouped the hits and captured `lvl0` for the "Try searching for"
+        // suggestions -- those kept the " | ethereum.org" suffix. Mutating in place is
+        // safe: the adapter builds these objects fresh for each request.
+        for (const hit of kept) {
+          stripTitleSuffix(hit as unknown as Record<string, unknown>)
+        }
 
         const parsed = parseExplorerQuery(requests[0]?.q ?? "")
         const explorerHits = parsed ? buildExplorerHits(parsed) : []
@@ -325,12 +332,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
         const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
         newItem.url = sanitizeHitUrl(item.url)
-        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
-        // shown as the group header above every result. The fork keeps it in several
-        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
-        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
-        // actually reads -- so walk the hit and strip it wherever it appears.
-        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
         return newItem
       }),
     placeholder: t("search-ethereum-org"),

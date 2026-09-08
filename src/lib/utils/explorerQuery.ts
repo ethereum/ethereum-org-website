@@ -21,6 +21,29 @@ import {
  */
 const EXPLORER_QUERY_RE = /^(?:([a-zA-Z0-9-]{2,32}):)?0x([0-9a-fA-F]{40,64})$/
 
+/**
+ * A naming-service name, which resolves to an address on an explorer.
+ *
+ * Deliberately restricted to `.eth` and `.id` rather than matching domains generally.
+ * ENS also resolves DNS names its owners have imported, so "an explorer resolves it" is
+ * not a usable test -- a general domain shape would fire on `ethereum.org` or any query
+ * containing a dot. The rest of the namespace (Unstoppable's several dozen TLDs, SpaceID)
+ * is vendor-owned and drifts, so it would have to be generated rather than typed.
+ *
+ * ENS's registrar rejects a registered name shorter than three characters, so `ab.eth`
+ * cannot exist. The floor applies to the registered name only: its owner may create a
+ * subdomain of any length, which is why `a.vitalik.eth` is fine. `.id` registrars do not
+ * share that rule -- `cb.id` is real -- so it is left unrestricted.
+ */
+const LABEL = "[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+const ENS_LABEL = "[a-z0-9][a-z0-9-]+[a-z0-9]"
+const SUBDOMAINS = `(?:${LABEL}\\.)*`
+
+const NAME_QUERY_RE = new RegExp(
+  `^${SUBDOMAINS}(?:${ENS_LABEL}\\.eth|${LABEL}\\.id)$`,
+  "i"
+)
+
 /** Hex digit counts that mean something on an EVM chain. */
 const EVM_ADDRESS_DIGITS = 40
 const EVM_HASH_DIGITS = 64
@@ -28,8 +51,9 @@ const EVM_HASH_DIGITS = 64
 /**
  * `address` is a 20-byte value, which only an account can be. `hash` is 32 bytes, which
  * may be a transaction or a block -- the copy stays open-ended rather than guessing.
+ * `name` is a naming-service name that resolves to one of the above.
  */
-export type ExplorerKind = "address" | "hash"
+export type ExplorerKind = "address" | "hash" | "name"
 
 /** A row's label when it names a lookup rather than a network. */
 export type ExplorerRole = "contract" | "transaction"
@@ -64,9 +88,33 @@ export interface ExplorerQuery {
 const blockscoutUrl = (base: string, value: string) =>
   `${base}/search-results?q=${value}`
 
+/**
+ * Names get mainnet only, one row.
+ *
+ * ENS's registry lives on mainnet, so that is where resolution is authoritative. It also
+ * keeps the section to a single row, which matters more here than for an address: a name
+ * often has a legitimate page answer too -- searching `vitalik.eth` finds the
+ * authentication docs that use it as their example -- and nine rows would bury it.
+ */
+const parseNameQuery = (query: string): ExplorerQuery | null => {
+  if (!NAME_QUERY_RE.test(query)) return null
+  const mainnet = explorers.eth
+  return {
+    value: query,
+    groups: [
+      {
+        brand: "Blockscout",
+        kind: "name",
+        targets: [{ ...mainnet, url: blockscoutUrl(mainnet.url, query) }],
+      },
+    ],
+  }
+}
+
 export const parseExplorerQuery = (query: string): ExplorerQuery | null => {
-  const match = EXPLORER_QUERY_RE.exec(query.trim())
-  if (!match) return null
+  const trimmed = query.trim()
+  const match = EXPLORER_QUERY_RE.exec(trimmed)
+  if (!match) return parseNameQuery(trimmed)
 
   const [, prefix, hex] = match
   const value = `0x${hex}`

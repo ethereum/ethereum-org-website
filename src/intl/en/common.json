@@ -73,6 +73,7 @@
   "docsearch-explorer-address": "Search this address on {explorer}",
   "docsearch-explorer-contract": "Contract or account",
   "docsearch-explorer-hash": "Search this hash on {explorer}",
+  "docsearch-explorer-name": "Search this name on {explorer}",
   "docsearch-explorer-transaction": "Transaction",
   "docsearch-no-results-missing": "Believe this query should return results?",
   "docsearch-no-results-missing-link": "Let us know.",
