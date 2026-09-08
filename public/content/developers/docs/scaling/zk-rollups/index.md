@@ -14,11 +14,11 @@ You should have read and understood our page on [Ethereum scaling](/developers/d
 
 **Zero-knowledge rollups (ZK-rollups)** bundle (or 'roll up') transactions into batches that are executed offchain. Offchain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce [validity proofs](/glossary/#validity-proof) to prove the correctness of their changes.
 
-The ZK-rollup's state is maintained by a smart contract deployed on the Ethereum network. To update this state, ZK-rollup nodes must submit a validity proof for verification. As mentioned, the validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions. This means that ZK-rollups only need to provide validity proofs to finalize transactions on Ethereum instead of posting all transaction data onchain like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
+The ZK-rollup's state is maintained by a smart contract deployed on the Ethereum network. To update this state, ZK-rollup nodes must submit a validity proof for verification. As mentioned, the validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions. This means that ZK-rollups do not need to post all transaction data onchain the way [optimistic rollups](/developers/docs/scaling/optimistic-rollups/) do, since the validity proof is what finalizes the state transition. They still publish the data required to reconstruct the rollup’s state, as described below.
 
 There are no delays when moving funds from a ZK-rollup to Ethereum because exit transactions are executed once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof).
 
-ZK-rollups write transactions to Ethereum as `calldata`. `calldata` is where data that is included in external calls to smart contract functions gets stored. Information in `calldata` is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. Onchain data publication is a significant cost for rollups, so data compression can reduce fees for users.
+ZK-rollups write transactions to Ethereum as `calldata` or in [blobs](/roadmap/danksharding/). `calldata` is where data that is included in external calls to smart contract functions gets stored. Either way, the data is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. Onchain data publication is a significant cost for rollups, so data compression can reduce fees for users.
 
 ## How do ZK-rollups interact with Ethereum? {#zk-rollups-and-ethereum}
 
@@ -36,7 +36,7 @@ ZK-rollups rely on the main Ethereum protocol for the following:
 
 ### Data availability {#data-availability}
 
-ZK-rollups publish state data for every transaction processed offchain to Ethereum. With this data, it is possible for individuals or businesses to reproduce the rollup’s state and validate the chain themselves. Ethereum makes this data available to all participants of the network as `calldata`.
+ZK-rollups publish state data for every transaction processed offchain to Ethereum. With this data, it is possible for individuals or businesses to reproduce the rollup’s state and validate the chain themselves. Ethereum makes this data available to all participants of the network as `calldata` or in [blobs](/roadmap/danksharding/).
 
 ZK-rollups don’t need to publish much transaction data onchain because validity proofs already verify the authenticity of state transitions. Nevertheless, storing data onchain is still important because it allows permissionless, independent verification of the L2 chain's state which in turn allows anyone to submit batches of transactions, preventing malicious operators from censoring or freezing the chain.
 
@@ -66,6 +66,10 @@ As explained, transaction data is published on Ethereum as `calldata`. `calldata
 
 The `calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data onchain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data onchain.
 
+Since the [Dencun upgrade](/roadmap/dencun/) introduced blob-carrying transactions ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), rollups can also publish their data in [blobs](/roadmap/danksharding/), which are priced in a separate fee market and are usually cheaper than `calldata`. Blobs are not stored by the execution layer, and the protocol defines only a minimum window of roughly 18 days over which the network must serve blob data. That is a serving obligation rather than a deletion deadline: blob data is not permanent archival storage the way execution-layer history is, and longer-term access depends on archival services. `calldata` remains available, and rollups differ in which they use.
+
+Whichever mechanism a rollup uses, the published data is public. Rollups differ in what they publish, with some posting compressed transaction data and others posting state differences, but in both cases it is enough for anyone to reconstruct the rollup’s state independently. Publishing this data is what makes permissionless verification possible; it is not a privacy mechanism.
+
 ### State commitments {#state-commitments}
 
 The ZK-rollup’s state, which includes L2 accounts and balances, is represented as a [Merkle tree](/whitepaper/#merkle-trees). A cryptographic hash of the Merkle tree’s root (Merkle root) is stored in the onchain contract, allowing the rollup protocol to track changes in the state of the ZK-rollup.
@@ -80,7 +84,7 @@ The new state root that the ZK-rollup operator submits to the L1 contract is the
 
 But the rollup contract won’t automatically accept the proposed state commitment until the operator proves the new Merkle root resulted from correct updates to the rollup’s state. The ZK-rollup operator does this by producing a validity proof, a succinct cryptographic commitment verifying the correctness of batched transactions.
 
-Validity proofs allow parties to prove the correctness of a statement without revealing the statement itself—hence, they are also called zero-knowledge proofs. ZK-rollups use validity proofs to confirm the correctness of offchain state transitions without having to re-execute transactions on Ethereum. These proofs can come in the form of a [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
+ZK-rollups use succinct validity proofs to establish that offchain state transitions were computed correctly. Succinctness keeps proofs compact and verification efficient relative to the underlying computation, allowing Ethereum to verify state transitions without re-executing every transaction. A proof system may additionally provide zero knowledge, meaning its proofs reveal no information about private inputs beyond what follows from the public statement. These are separate properties: using validity proofs for scaling does not, by itself, make a rollup’s transactions confidential. These proofs can come in the form of a [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
 
 Both SNARKs and STARKs help attest to the integrity of offchain computation in ZK-rollups, although each proof type has distinctive features.
 
@@ -96,7 +100,7 @@ Trust assumptions aside, ZK-SNARKs are popular for their small proof sizes and c
 
 **ZK-STARKs**
 
-Like ZK-SNARKs, ZK-STARKs prove the validity of offchain computation without revealing the inputs. However, ZK-STARKs are considered an improvement on ZK-SNARKs because of their scalability and transparency.
+Like ZK-SNARKs, ZK-STARKs let a verifier confirm the validity of offchain computation without re-executing it, and can hide a prover’s private inputs where a system implements the zero-knowledge property. In a rollup, the data needed to reconstruct the chain’s state is still published to Ethereum. ZK-STARKs are considered an improvement on ZK-SNARKs because of their scalability and transparency.
 
 ZK-STARKs are 'transparent', as they can work without the trusted setup of a Common Reference String (CRS). Instead, ZK-STARKs rely on publicly verifiable randomness to set up parameters for generating and verifying proofs.
 
@@ -180,7 +184,7 @@ How much users pay for transactions on ZK-rollups is dependent on the gas fee, j
 
 1. **State write**: There is a fixed cost for writing to Ethereum’s state (i.e., submitting a transaction on the Ethereum blockchain). ZK-rollups reduce this cost by batching transactions and spreading fixed costs across multiple users.
 
-2. **Data publication**: ZK-rollups publish state data for every transaction to Ethereum as `calldata`. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. The cost paid on each transaction is influenced by how much `calldata` needs to be posted onchain for it.
+2. **Data publication**: ZK-rollups publish state data for every transaction to Ethereum as `calldata` or in [blobs](/roadmap/danksharding/). The intrinsic gas schedule for `calldata` charges 16 gas per non-zero byte and 4 gas per zero byte, a reduction introduced by [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) governs the price paid per unit of gas rather than the byte schedule itself. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) additionally applies a floor cost to data-heavy transactions, so a transaction dominated by `calldata` can pay more than the standard schedule while computation-heavy transactions are unaffected. The cost paid on each transaction is influenced by how much data needs to be posted onchain for it.
 
 3. **L2 operator fees**: This is the amount paid to the rollup operator as compensation for computational costs incurred in processing transactions, much like [transaction "priority fees (tips)"](/developers/docs/gas/#how-are-gas-fees-calculated) on Ethereum Mainnet.
 
