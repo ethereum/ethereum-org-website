@@ -20,7 +20,7 @@ import {
 } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { isHomepageUrl, withPageRow } from "@/lib/utils/searchResults"
+import { isWithheldResult, withPageRow } from "@/lib/utils/searchResults"
 import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
@@ -245,9 +245,10 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       search: async (requests) => {
         const response = await client.search(requests)
         const [first, ...rest] = response.results
-        // The homepage is withheld from results; see isHomepageUrl.
+        const query = requests[0]?.q ?? ""
+        // See isWithheldResult: the homepage always, the glossary unless asked for.
         const kept = (first?.hits ?? []).filter(
-          (hit) => !isHomepageUrl(hit.url, locale)
+          (hit) => !isWithheldResult(hit.url, locale, query)
         )
         const dropped = (first?.hits?.length ?? 0) - kept.length
 
@@ -259,7 +260,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
           stripTitleSuffix(hit as unknown as Record<string, unknown>)
         }
 
-        const parsed = parseExplorerQuery(requests[0]?.q ?? "")
+        const parsed = parseExplorerQuery(query)
         const explorerHits = parsed ? buildExplorerHits(parsed) : []
         if (!dropped && !explorerHits.length) return response
 

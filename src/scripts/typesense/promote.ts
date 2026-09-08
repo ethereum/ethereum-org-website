@@ -20,10 +20,12 @@ import {
   countByLanguage,
   listCollections,
   LOCALES,
+  QUERY_BY,
   requireEnv,
   resolveAlias,
   SEARCH_KEY,
   SITE_ORIGIN,
+  SORT_BY,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -45,15 +47,6 @@ const KEEP_PER_LOCALE = 2
  * regression in the underlying ranking.
  */
 const MIN_HIT_AT_1 = 0.35
-
-/**
- * The search parameters the app sends. Kept beside the floor they are scored against so
- * the two cannot drift apart again.
- */
-const QUERY_BY =
-  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content"
-const SORT_BY =
-  "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc"
 
 const GROUNDTRUTH_PATH = path.join(
   process.cwd(),

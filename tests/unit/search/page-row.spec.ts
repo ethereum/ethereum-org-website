@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test"
 
-import { isHomepageUrl, withPageRow } from "@/lib/utils/searchResults"
+import { isWithheldResult, withPageRow } from "@/lib/utils/searchResults"
 
 const section = (anchor: string, level = "lvl2") => ({
   objectID: `rec-${anchor}`,
@@ -68,24 +68,36 @@ test.describe("withPageRow", () => {
   })
 })
 
-test.describe("isHomepageUrl", () => {
-  test("matches the homepage in the default locale and any other", () => {
-    expect(isHomepageUrl("https://ethereum.org/", "en")).toBe(true)
-    expect(isHomepageUrl("https://ethereum.org", "en")).toBe(true)
-    expect(isHomepageUrl("https://ethereum.org/ja/", "ja")).toBe(true)
-    expect(isHomepageUrl("https://ethereum.org/zh-tw/", "zh-tw")).toBe(true)
+test.describe("isWithheldResult", () => {
+  const q = "issuance"
+
+  test("withholds the homepage in any locale", () => {
+    expect(isWithheldResult("https://ethereum.org/", "en", q)).toBe(true)
+    expect(isWithheldResult("https://ethereum.org/ja/", "ja", q)).toBe(true)
+    expect(isWithheldResult("/", "en", q)).toBe(true)
   })
 
-  test("does not match a content page, including one a locale deep", () => {
-    expect(isHomepageUrl("https://ethereum.org/nft/", "en")).toBe(false)
-    expect(isHomepageUrl("https://ethereum.org/ja/nft/", "ja")).toBe(false)
-    // A locale root is only the homepage for that locale's own search.
-    expect(isHomepageUrl("https://ethereum.org/ja/", "en")).toBe(false)
+  test("withholds the glossary unless the reader asked for it", () => {
+    expect(
+      isWithheldResult("https://ethereum.org/glossary/#gas", "en", "gas")
+    ).toBe(true)
+    for (const asked of ["glossary", "Glossary", "eth glossary"]) {
+      expect(
+        isWithheldResult("https://ethereum.org/glossary/#gas", "en", asked),
+        asked
+      ).toBe(false)
+    }
   })
 
-  test("ignores a fragment and survives a relative url", () => {
-    expect(isHomepageUrl("https://ethereum.org/#hero", "en")).toBe(true)
-    expect(isHomepageUrl("/", "en")).toBe(true)
-    expect(isHomepageUrl("/nft/", "en")).toBe(false)
+  test("leaves content pages alone", () => {
+    expect(isWithheldResult("https://ethereum.org/nft/", "en", q)).toBe(false)
+    expect(
+      isWithheldResult(
+        "https://ethereum.org/developers/docs/glossary-of-terms/",
+        "en",
+        q
+      )
+    ).toBe(false)
+    expect(isWithheldResult("https://ethereum.org/ja/", "en", q)).toBe(false)
   })
 })

@@ -6,15 +6,52 @@
  * that reads like a credentials problem rather than a scoping one.
  */
 
+import { config } from "dotenv"
+
 import i18nConfig from "../../../i18n.config.json"
+
+// Next loads these for the app; a standalone script has to ask. `.env.local` first to
+// match Next's precedence, and dotenv never overwrites a variable that is already set,
+// so CI's `env:` block still wins.
+config({ path: ".env.local" })
+config()
 
 const trimSlash = (s: string) => s.replace(/\/+$/, "")
 
-export const TYPESENSE_URL = trimSlash(process.env.TYPESENSE_URL ?? "")
+/**
+ * The pipeline's own variables, with the app's browser-side ones as a fallback. Reading
+ * an index needs nothing the browser does not already ship, so a query script should not
+ * demand the admin credentials that writing does.
+ */
+const publicUrl = () => {
+  const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST
+  if (!host) return ""
+  const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL ?? "https"
+  const port = process.env.NEXT_PUBLIC_TYPESENSE_PORT
+  const suffix = !port || port === "443" || port === "80" ? "" : `:${port}`
+  return `${protocol}://${host}${suffix}`
+}
+
+export const TYPESENSE_URL = trimSlash(process.env.TYPESENSE_URL || publicUrl())
 export const ADMIN_KEY = process.env.TYPESENSE_API_KEY ?? ""
-export const SEARCH_KEY = process.env.TYPESENSE_API_SEARCH_KEY || ADMIN_KEY
+export const SEARCH_KEY =
+  process.env.TYPESENSE_API_SEARCH_KEY ||
+  process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY ||
+  ADMIN_KEY
 
 export const SITE_ORIGIN = "https://ethereum.org"
+
+/**
+ * The search parameters the app sends, shared so a script cannot measure something users
+ * never receive. `sort_by` was missing from the relevance gate once already, which made a
+ * change to page ranking invisible to the check meant to catch it.
+ * See src/components/Search/index.tsx.
+ */
+export const QUERY_BY =
+  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content"
+
+export const SORT_BY =
+  "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc"
 
 /** Canonical locale list -- same source the site builds from. */
 export const LOCALES = i18nConfig.map(({ code }) => code)

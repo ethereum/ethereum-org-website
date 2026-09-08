@@ -61,23 +61,50 @@ export const withPageRow = <T extends PageResult>(items: T[]): T[] => {
 }
 
 /**
- * The homepage, in any locale. Withheld from results: what the crawler extracts from it
- * is hero copy and section headings, every phrase of which appears more fully on the page
- * it links to, so it is a near-null answer for someone already on the site.
+ * Pages withheld from results, in any locale.
  *
- * Dropped here rather than with a `filter_by` on its `category` facet, which would be
- * tidier but is not safe to assume: `category` is an optional field, and Typesense does
- * not document whether a negation filter keeps or discards documents that lack it. If it
- * discards them, any page missing the tag would silently vanish from search. Worth
- * switching to once that behaviour is confirmed against a live index.
+ * The homepage: what the crawler extracts from it is hero copy and section headings,
+ * every phrase of which appears more fully on the page it links to.
+ *
+ * The glossary: every entry is a one-word heading, which is an exact full-field match for
+ * any single-word query and so scores above pages that are actually about the term. It
+ * takes the top three for "gas" and "staking" as readily as for "issuance". No ranking
+ * weight fixes that -- the score gap is far too wide for page importance to close -- so it
+ * is withheld unless the reader asked for the glossary itself.
+ *
+ * Both are dropped here rather than with a `filter_by` on their `category` facet, which
+ * would be tidier but is not safe to assume: `category` is an optional field, and
+ * Typesense does not document whether a negation filter keeps or discards documents that
+ * lack it. If it discards them, any page missing the tag would silently vanish.
  */
-export const isHomepageUrl = (url: string, locale: string): boolean => {
+const pathOf = (url: string): string => {
   let path: string
   try {
     path = new URL(url).pathname
   } catch {
     path = url.split("#")[0]
   }
-  const trimmed = path.replace(/\/+$/, "")
-  return trimmed === "" || trimmed === `/${locale}`
+  return path.replace(/\/+$/, "")
+}
+
+export const isHomepageUrl = (url: string, locale: string): boolean => {
+  const path = pathOf(url)
+  return path === "" || path === `/${locale}`
+}
+
+const isGlossaryUrl = (url: string, locale: string): boolean => {
+  const path = pathOf(url)
+  return path === "/glossary" || path === `/${locale}/glossary`
+}
+
+/** True when a result should not be shown for this query. */
+export const isWithheldResult = (
+  url: string,
+  locale: string,
+  query: string
+): boolean => {
+  if (isHomepageUrl(url, locale)) return true
+  // Asked for by name, so it is the answer rather than noise.
+  if (isGlossaryUrl(url, locale)) return !/glossar/i.test(query)
+  return false
 }
