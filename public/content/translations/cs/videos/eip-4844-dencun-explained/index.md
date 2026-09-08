@@ -21,13 +21,13 @@ Vysvětlující video od **Finematics** pokrývající EIP-4844 (proto-dankshard
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=HT9PHWloIiU) zveřejněného kanálem Finematics. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 Škálování Etherea je již nějakou dobu žhavě diskutovaným tématem. Řešení na vrstvě 2 (l2) stála v čele této bitvy a nabízela způsob, jak zpracovávat transakce mimo hlavní řetězec, aby se zmírnilo přetížení a snížily poplatky. Má to ale háček – i l2 čelí omezením, která brání jejich efektivitě a škálovatelnosti. EIP-4844 je dalším krokem ke zvýšení potenciálu l2 a sladění Etherea s jeho plánem škálování.
 
 O čem tedy EIP-4844 vlastně je? Jak přesně pomáhá se škálováním l2? Jaké nové možnosti odemyká? A je pravda, že může snížit transakční poplatky na l2 o více než 90 %?
 
-#### Co je EIP-4844 a proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### Co je EIP-4844 a proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Pro připomenutí, EIP znamená Ethereum Improvement Proposal (Návrh na vylepšení Etherea), což je proces, jehož prostřednictvím mohou vývojáři navrhovat změny v protokolu Etherea. Konkrétně EIP-4844 navrhuje nový typ transakce, který může významně zlepšit způsob, jakým jsou data na Ethereu spravována a zpracovávána. Možná jste také slyšeli název „proto-danksharding“, který se nyní používá zaměnitelně s EIP-4844.
 
@@ -39,7 +39,7 @@ Představte si, že provádíte swap na DEX na jednom z rollupů. Pokud jsou sou
 
 EIP-4844 bude společně s několika dalšími EIP zahrnuto do nadcházející aktualizace Dencun.
 
-#### Technické detaily (2:50) {#technical-details-250}
+### Technické detaily (2:50) {#technical-details-250}
 
 Nyní se pojďme blíže podívat na to, jak EIP-4844 funguje.
 
@@ -65,7 +65,7 @@ V případě optimistických rollupů, jako jsou Optimism nebo Arbitrum, stačí
 
 ZK rollupy by poskytovaly dva závazky ke svým transakcím nebo datům o změně stavu: závazek blobu a vlastní závazek ZK rollupu pomocí jakéhokoli systému důkazů, který rollup interně používá. Použily by také protokol důkazu o ekvivalenci s využitím dříve zmíněného předkompilovaného kontraktu pro vyhodnocení bodu, aby dokázaly, že oba závazky odkazují na stejná data.
 
-#### Dopad (6:25) {#impact-625}
+### Dopad (6:25) {#impact-625}
 
 Dopad EIP-4844 na ekosystém Etherea nelze přeceňovat. Pro začátek dramaticky zlepšuje škálovatelnost řešení na vrstvě 2, snižuje jejich provozní náklady a činí je konkurenceschopnějšími vůči jiným, levným, alternativním blockchainům. Snížení provozních nákladů je možné, protože drtivá většina nákladů, které v současnosti rollupy nesou, je způsobena poplatky placenými za data volání.
 
@@ -77,7 +77,7 @@ Pokud jde o snížení transakčních nákladů na rollupech, ilustrované naš�
 
 Jedna věc je jistá – i kdyby hlavním výsledkem bylo zvýšení propustnosti transakcí a náklady na transakce by zůstaly stejné, EIP-4844 pokládá základy pro ještě větší škálovatelnost v budoucnu, což nakonec povede k levnějším transakcím pro uživatele.
 
-#### Shrnutí (8:04) {#summary-804}
+### Shrnutí (8:04) {#summary-804}
 
 Komunita Etherea již dokončila testování EIP-4844 na různých testnetech, přičemž spuštění na Mainnetu se očekává 13. března. Jedná se o monumentální krok k dosažení bezkonkurenční škálovatelnosti pro Ethereum. Již nyní můžeme vidět, že většina hlavních l2 se zavazuje začít využívat nový prostor pro bloby, jakmile proběhne aktualizace Dencun.
 

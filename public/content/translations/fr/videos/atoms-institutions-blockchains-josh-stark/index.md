@@ -19,7 +19,7 @@ Une présentation philosophique de **Josh Stark** de la Fondation Ethereum lors 
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=zI07mqNdxzA) publiée par ETHGlobal. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Pourquoi ne pouvons-nous pas expliquer les chaînes de blocs ? (0:00) {#why-cant-we-explain-blockchains-000}
+### Pourquoi ne pouvons-nous pas expliquer les chaînes de blocs ? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Bonjour à tous, merci d'être ici à Pragma à Denver. Je m'appelle Josh. Je travaille à la Fondation Ethereum — je suis à la FE depuis environ cinq ans maintenant. J'aime plaisanter en disant que mon travail consiste à découvrir quel devrait être mon travail, et cela change tous les six mois.
 
@@ -31,7 +31,7 @@ Nous devons vraiment aller au cœur du problème, et je ne pense pas que nous en
 
 Donc, cela a commencé par une question très spécifique que je me posais : quelle est cette technologie à usage général ? Quelle est cette capacité fondamentale ? Et cela s'est transformé en quelque chose que je trouve beaucoup plus intéressant.
 
-#### Claude Shannon et l'idée de l'information (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon et l'idée de l'information (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Laissez-moi vous raconter une histoire. Dans les années 1930 et 1940, Claude Shannon était entouré par les prémices d'une nouvelle ère. Aux Bell Labs, il a travaillé sur des systèmes de contrôle de tir et sur la cryptographie pendant la guerre, et il a commencé à réfléchir à une approche plus générale de l'information. Il ne l'appelait pas information au début — en 1939, il a écrit à un collègue qu'il réfléchissait à la « transmission de l'intelligence ». Le mot information avait un sens différent à l'époque.
 
@@ -41,7 +41,7 @@ Avant ce moment, personne n'avait vraiment ce concept de l'information comme une
 
 Ce que je veux que vous reteniez de ceci : il y a eu une époque avant que nous ayons l'idée de l'information et une époque après. Et si nous passions de la même manière à côté de quelque chose d'aussi fondamental ? C'est mon hypothèse.
 
-#### Trois indices (7:00) {#three-clues-700}
+### Trois indices (7:00) {#three-clues-700}
 
 Alors que je m'efforce d'expliquer les chaînes de blocs, je n'arrête pas de tomber sur ces choses étranges qui, je pense, sont des indices vers quelque chose de plus grand.
 
@@ -53,7 +53,7 @@ Avec les voitures, nous parlions de « voitures sans chevaux », mais au moins n
 
 **Indice numéro trois** — l'article de Satoshi commence par ces mots : « le commerce sur Internet en est venu à s'appuyer presque exclusivement sur les institutions financières servant de tiers de confiance ». Satoshi comparait Bitcoin à des institutions, pas à d'autres logiciels. Il y a quelque chose là-dedans.
 
-#### Introduction à la dureté (11:00) {#introducing-hardness-1100}
+### Introduction à la dureté (11:00) {#introducing-hardness-1100}
 
 Voici ma réponse à ce qui va dans cette case. Je l'appelle la **dureté**. Voici l'histoire en cinq étapes simples, et ensuite nous irons plus en profondeur.
 
@@ -71,7 +71,7 @@ Le taux d'inflation de l'or est fiable en raison des propriétés physiques de n
 
 Vous pouvez considérer les atomes, les institutions et les chaînes de blocs comme des matériaux de construction — comme le bois, le béton et l'acier. Ils sont différents, mais ils font partie d'une catégorie commune. Et nous utilisons ces choses non pas pour construire des bâtiments, mais pour construire une civilisation. Peut-être qu'avec de meilleurs matériaux, nous pourrons construire une civilisation plus grande, meilleure et plus forte que celle que nous avons actuellement.
 
-#### Qu'est-ce que la dureté ? (14:00) {#what-is-hardness-1400}
+### Qu'est-ce que la dureté ? (14:00) {#what-is-hardness-1400}
 
 Laissez-moi donner plus de précision à ce que j'entends par dureté. Ce n'est pas n'importe quelle fiabilité que n'importe quoi pourrait avoir. La dureté est d'un genre spécifique. La première chose à noter est que c'est un type de fiabilité qui compte pour la coordination sociale. Pas seulement, vous savez, que cette table est de manière fiable une table — mais que vous pouvez payer votre loyer, qu'un contrat sera appliqué, qu'une économie est forte. C'est à cela que sert la dureté.
 
@@ -87,7 +87,7 @@ Et enfin, la dureté provient de certaines sources — les atomes, les instituti
 
 Ce que j'aime dans ce cadre, c'est qu'il nous permet de poser des questions plus profondes — pas seulement de parler des propriétés spécifiques des chaînes de blocs, mais de comparer toutes ces différentes choses et de réfléchir à l'endroit où elles sont appropriées, à la façon dont nous les utilisons et dans quelle combinaison.
 
-#### La dureté de l'atome (19:00) {#atom-hardness-1900}
+### La dureté de l'atome (19:00) {#atom-hardness-1900}
 
 La dureté de l'atome concerne le moment où nous trouvons la fiabilité dans la nature qui nous entoure — des atomes physiques littéraux mais aussi d'autres propriétés naturelles. Nous le faisons lorsque nous utilisons des perles d'or comme monnaie, lorsque nous utilisons des structures physiques pour définir des droits de propriété, ou que nous enregistrons des droits de propriété dans un objet physique comme un acte de propriété.
 
@@ -101,7 +101,7 @@ Et les moulages sont souvent sapés par notre contrôle humain croissant sur la 
 
 Mais c'est plus subtil que cela. Parfois, nous avons des moulages dont nous ne réalisons même pas l'existence, mais ensuite ils disparaissent parce que quelque chose a changé. Il y a eu un moulage dur concernant la vitesse des transactions sur les marchés financiers pendant longtemps — cela ne pouvait se faire qu'à un certain rythme, peut-être le rythme auquel quelqu'un peut crier à un autre sur le parquet. Ce moulage avait la dureté de l'atome — nous ne pouvions tout simplement pas communiquer plus vite que cela. Mais les nouvelles technologies ont complètement sapé ces hypothèses. Nous avons réalisé que nous aimions en fait une version de cet ancien moulage et nous l'avons refait à partir d'institutions — en introduisant des réglementations qui limitent la vitesse des transactions et imposent des coupe-circuits.
 
-#### La dureté institutionnelle (22:00) {#institutional-hardness-2200}
+### La dureté institutionnelle (22:00) {#institutional-hardness-2200}
 
 La dureté institutionnelle est une catégorie très vaste — elle couvre la plupart des choses auxquelles nous pourrions penser lorsque nous pensons à la civilisation. Nos systèmes juridiques, nos assemblées législatives, nos forces de police, nos entreprises, tout. Toutes les institutions qui fournissent une dureté d'une certaine sorte. Nous avons créé des moulages qui ont donné de l'ordre à nos sociétés, en punissant les comportements antisociaux. Nous avons créé la dureté comme une plateforme, permettant à quiconque de créer ses propres moulages rendus durs par les institutions si vous suivez certaines règles. Nous avons créé des moulages qui ont engendré de nouveaux actifs et fourni des sources de crédit aux économies en croissance.
 
@@ -111,13 +111,13 @@ Mais elle a aussi de nombreuses faiblesses. Elle est limitée par les frontière
 
 Et elles sont faites de personnes, et les personnes sont mauvaises. La réalité dans ce pays et dans beaucoup d'autres est que de nombreuses personnes n'ont pas vraiment eu accès à la dureté fournie par les institutions. Elles n'ont pas pu obtenir de prêt hypothécaire. Elles n'ont pas pu ouvrir de compte bancaire. Parce que lorsque vous dotez une institution de personnes, elle est soumise à leurs maux, à leurs préjugés, à leurs idéologies. Et notre dépendance à la dureté institutionnelle ne fait qu'augmenter. Le problème avec les logiciels qui dévorent le monde, c'est que la plupart des logiciels ne sont en réalité constitués que d'une institution derrière l'écran, et nous leur donnons de plus en plus de pouvoir en conséquence.
 
-#### La dureté de la chaîne de blocs (24:20) {#blockchain-hardness-2420}
+### La dureté de la chaîne de blocs (24:20) {#blockchain-hardness-2420}
 
 L'invention de Satoshi était bien sûr plus que le simple Bitcoin — c'était le noyau d'une technique à usage général pour créer une dureté numérique dans un environnement numérique. Elle a de nombreuses forces : un accès mondial universel, elle est faite de logiciels et n'importe qui peut écrire des logiciels, le degré de dureté peut être transparent et auditable, un faible coût de démarrage, facile à itérer, et sécurisée par les incitations du marché — et les marchés sont rationnels.
 
 Mais elle a aussi des faiblesses. Elle nécessite une civilisation technologique — nous n'aurions pas pu avoir de chaînes de blocs avant aujourd'hui en raison des exigences, et une civilisation future qui n'a pas ce que nous avons ne pourra pas non plus les utiliser. Elle est faite de logiciels, et les logiciels peuvent être mal écrits. La portée des moulages est limitée aux environnements onchain. Et elle est sécurisée par les incitations du marché — et les marchés sont irrationnels.
 
-#### Pourquoi c'est important (25:10) {#why-this-matters-2510}
+### Pourquoi c'est important (25:10) {#why-this-matters-2510}
 
 Alors, qu'est-ce que cela signifie ? Qu'est-ce que cela nous apporte ? Pourquoi est-ce plus qu'un simple intérêt académique ?
 
@@ -127,7 +127,7 @@ Cela explique pourquoi les chaînes de blocs privées ou centralisées ne sont p
 
 Cela aide également à comprendre le spectre des possibilités et les idéologies par défaut dans lesquelles les gens tombent dans l'espace des chaînes de blocs. Beaucoup de gens sont très concentrés sur l'utilisation de la dureté de la chaîne de blocs pour concurrencer ou remplacer la dureté institutionnelle — c'est ce dont il s'agit dans une grande partie de la communauté Bitcoin, ce dont il s'agit dans une grande partie de la finance décentralisée (DeFi). Même ENS essaie de remplacer ou de concurrencer DNS d'une certaine manière. Mais il y a aussi des gens qui voient que la dureté de la chaîne de blocs peut faire des choses que la dureté institutionnelle ne peut pas faire — des idées que personne n'a jamais essayées auparavant parce que nous n'avions jamais eu cette capacité, cette certaine saveur de dureté. Et maintenant, nous pouvons explorer ces choses. Peut-être que les NFT sont là, ou des jeux comme Dark Forest, ou le mouvement autour des mondes autonomes.
 
-#### Élever nos ambitions (27:00) {#raising-our-ambitions-2700}
+### Élever nos ambitions (27:00) {#raising-our-ambitions-2700}
 
 Plus important encore, je pense que ce cadre élève nos ambitions. Personnellement, c'est ce qui compte pour moi, et peut-être que cela résonne en vous — je ne suis pas seulement ici pour ces applications individuelles. Je ne suis pas quelqu'un qui ne s'intéresse vraiment qu'à Bitcoin ou qu'à la DeFi ou qu'aux NFT. C'est peut-être votre cas aussi. Il se passe quelque chose de plus grand ici.
 

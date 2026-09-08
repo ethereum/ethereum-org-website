@@ -17,7 +17,7 @@ Lambda'nın kurucusu ve çeşitli Ethereum girişimlerinin kurucu ortağı olan 
 
 *Bu transkript, Ethereum Vakfı tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=2E-0DF0tFbc) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Doğrulanabilir bir bilgisayar olarak Ethereum (0:07) {#ethereum-as-a-verifiable-computer-007}
+### Doğrulanabilir bir bilgisayar olarak Ethereum (0:07) {#ethereum-as-a-verifiable-computer-007}
 
 Ethereum'un önümüzdeki 10 yılı hakkında konuşacağım — doğrulanabilir bilgisayardan küresel ekonomiye. Bana göre Ethereum doğrulanabilir bir bilgisayardır. "Dünya bilgisayarı" memini hiçbir zaman sevmedim. Bence AWS veya Google dünya bilgisayarlarıdır — çok paraları var, çok bilgisayarları var ama onlara güvenmek zorundasınız. Ethereum ile diğer bilgisayarlar arasındaki en büyük fark, onun doğrulanabilir olmasıdır. Ethereum dünyanın ilk doğrulanabilir bilgisayarıdır — güvene dayalı hesaplama yoktur, sadece ekonomik teşvikler ve matematik vardır.
 
@@ -25,7 +25,7 @@ Bu, AWS veya Google Cloud'a karşı büyük bir avantaj sağlar, çünkü bu bil
 
 Bu, Ethereum'u kırılganlıktan uzak (antifragile) hale getirir. Her saldırıda, her hafta birilerinin Ethereum'a saldırmaya çalışmasıyla — Kuzey Kore'den veya diğer devlet aktörlerinden ya da özel aktörlerden — daha da güçlenir, çünkü orada çalışmaya devam ediyor ve onu ele geçirmeye çalışan çok fazla para ve insan var.
 
-#### İnternet mülkiyet hakları (2:39) {#internet-property-rights-239}
+### İnternet mülkiyet hakları (2:39) {#internet-property-rights-239}
 
 Peki doğrulanabilir bir bilgisayar ne sağlar? İnternet mülkiyet haklarını — gerçek sahipliği sağlar. "İleri"ye tıklayıp tüm verilerinizi bir şirkete vermeyi kabul ettiğiniz tipik bir durumdaki gibi platform şartlarına inanmak veya güvenmek yerine, yaptığınız şey özel anahtarlara güvenmektir. Özel anahtarlar, şartlara ve hizmetlere güvenmekten çok daha iyidir.
 
@@ -33,19 +33,19 @@ Bu, küresel tarafsızlık yaratır. Çinli bir geliştirici, Rus bir yatırımc
 
 Önümüzdeki 10 yıl içinde, sanattan araziye ve hatta yapay zekaya kadar her şeyi Token haline getireceğiz. Eğer çocuklar yapay zeka ile çalışacaksa, insanların yapay zekayı hacklemesi ve parametreleri değiştirerek yapay zekanın hacker'ın istediği şekilde cevap vermesini sağlaması için teşvikler vardır. Yapay zekanın düzgün çalıştığını doğrulamak için Ethereum'a ihtiyacımız var ve bunun üzerinde çalışan pek çok insan var.
 
-#### Günümüzde Ethereum ekonomisi (3:46) {#ethereums-economy-today-346}
+### Günümüzde Ethereum ekonomisi (3:46) {#ethereums-economy-today-346}
 
 Ethereum koca bir ekonomi yarattı — bugünlerde 300 milyar dolar değerinde. Bu çok büyük. Katman 2 (L2)'ler büyüyor ve her ay sadece Ethereum üzerinde üç trilyonluk aylık sabitcoin hacmi var. Visa'dan üç kat daha büyüğüz. Visa, New York Borsası veya Arjantin'in Merval'i gibi diğer borsalara karşı sahip olduğumuz en büyük avantajlardan biri birleştirilebilirlik özelliğine sahip olmamızdır — her şey aynı yerdedir. Sabitcoin'lerinizi dolara, Token haline getirilmiş bir varlığa, sanata dönüştürebilirsiniz ve bu bir volan etkisi yaratır çünkü daha fazla insan daha fazla para ekler ve her şey aynı anda, aynı yerde, sürekli olarak gerçekleşir. Aslında bu anlamda Ethereum, dünyanın sermaye piyasalarından daha az parçalanmıştır.
 
 Peki bunu nasıl yarattık? Bir balonla. 2017'den 2022'ye kadar kripto dünyasında devasa bir balon vardı. Benim bakış açıma göre çoğu proje dolandırıcılıktı. Ethereum kazandı çünkü Vitalik, Ethereum Vakfı (EF) ve onu inşa eden insanların uzun vadeli vizyonları vardı — ekonomik olarak teşvik ediliyorlardı ama kendilerinden daha büyük bir şey yapmak istiyorlardı. Bu yüzden büyük balon ve üç yıllık durgunluktan sonra Ethereum kazandı. Bir şekilde kazanıyorduk ve sıfır bilgi (ZK) gibi şeyler yapabiliyorduk — örneğin Sandeep'in ZK'nin büyük bir şey olması için çok para yatırdığı Polygon. StarkWare de aynı şekilde. Bu, ZK'nin benim bakış açıma göre Blokzincir'lerden bile daha büyük olacak inanılmaz bir teknoloji olmasını sağladı.
 
-#### Ürün-piyasa uyumu (5:29) {#product-market-fit-529}
+### Ürün-piyasa uyumu (5:29) {#product-market-fit-529}
 
 Ancak bu aynı zamanda rakipler de yarattı ve bu bazen unuttuğumuz bir şey. Bu balon, ilginç şeyler yaptıkları için incelememiz gereken Solana, Sui ve Aptos gibi yeni teknolojiler yarattı ve kendimizi geliştirmek için onları incelemeliyiz.
 
 Balondan sonra, benim bakış açıma göre Ethereum bir ürün-piyasa uyumu (PMF) buldu. Ürün-piyasa uyumu, merkeziyetsiz veya izinsiz doğrulanabilirlik artı gizlilik — Ethereum'un çekirdeğine inşa etmeye başlamaya çalıştığımız bir şey — artı sabitcoin'lerdir. Gerçek PMF budur. Çalışan ve büyüyen temel şey budur. Çoğu Token düşüyor, ancak sabitcoin'lerin hacmi artıyor. Bu programlanabilir, özel, sınırsız bir USD'dir. Şu anda rakiplerimizden 10 kat daha büyüğüz. Bu, üzerinde çalışmaya devam etmemiz gereken bir avantajdır ve bunun üzerine yatıp sahip olduğumuz en büyük PMF'lerden biri olduğunu unutmamalıyız.
 
-#### Teknik zorluklar (6:26) {#technical-challenges-626}
+### Teknik zorluklar (6:26) {#technical-challenges-626}
 
 Bugün hakkında biraz dert yanacağım iki şeyden bahsetmek istiyorum: Ethereum'un önümüzdeki yıllarda kazanmaya devam etmesi için gördüğüm teknik zorluklar ve üzerinde çalışmamız gerektiğini düşündüğüm sosyal ve kültürel zorluklar. Performans, ölçeklenebilirlik, birlikte çalışabilirlik, gizlilik, güvenlik, kuantum sonrası ve karmaşıklık.
 
@@ -59,29 +59,29 @@ Ayrıca Doğrulayıcı gereksinimlerinin artması gerektiğine inanıyorum. Ethe
 
 Ben büyük bir RISC-V hayranıyım. Dürüst olmak gerekirse Solidity'nin büyük bir hayranı değilim. Solidity, Ethereum değildir. Ethereum, Solidity tarafından tanımlanmaz. Üzerinde çalışan insanlara saygı duyuyorum — çok önemliydi, basit bir dil — ama pek çok sorunu var. Ben büyük bir RISC-V hayranıyım ve bence varsayılan bu olmalı.
 
-#### L2 yığınları ve birlikte çalışabilirlik (10:00) {#l2-stacks-and-interop-1000}
+### L2 yığınları ve birlikte çalışabilirlik (10:00) {#l2-stacks-and-interop-1000}
 
 Çoğu katman 2 (L2) yığını çalışmıyor. Çoğu L2 yığını kelimenin tam anlamıyla çalışmıyor — depoyu klonluyorsunuz, çalıştırmayı deniyorsunuz ve çalışmıyor. Kimsenin adını verip utandırmak istemiyorum ama bu teşviklerle ilgili. Teşvikler bir Token piyasaya sürmek, onu unutmak ve ölmek üzerine kurulu. Lambda ile yapmaya çalıştığımız şey, herkesin tek bir komutla bir L2 çalıştırabilmesini sağlamak ve eğer hala Rollup merkezli yol haritasına inanıyorsak, toplamalar çalıştırmayı kolaylaştırmalıyız.
 
 Birlikte çalışabilirlik ve toplamaların merkezileşmesi konusunda — geçen gün AWS'de bir kesinti oldu ve birkaç Rollup çöktü. Bence bu çok kötü. İnsanlar isyan ediyordu ve haklılar. Aşama 2'ye geçmemiz gerekiyor. Merkeziyetsiz sıralayıcılara ihtiyacımız var veya sansür direnci yaratmalıyız. Ben tabanlı (based) toplamalar inanıyorum. Commit-boost, Drew'un üzerinde çalıştığı bir başka teknoloji parçasıdır — ön onaylar gibi şeyler yaratabilmek için inanılmaz bir kamu malı. Lambda da bunun üzerinde çalışıyor.
 
-#### Gizlilik (11:29) {#privacy-1129}
+### Gizlilik (11:29) {#privacy-1129}
 
 Gizlilik hakkında söyleyeceğim tek şey, bir avukattan "Hey Fede, eğer işbirliği yapmazsan başın büyük belaya girecek" diyen bir telefon aldıktan sonra halka açıldığım. Bu birkaç yıl önce oldu ve arada bir bu yüzden sorun yaşıyorum. Hala gizlilik üzerinde çalışıyorum — Maiden üzerinde çalışıyoruz, Sombra için, hükümet için gizlilikle ilgili şeyler üzerinde çalışıyoruz. Söyleyeceğim tek şey, bence hepimiz gizlilik üzerinde çalışabilmeliyiz ve gizlilik üzerinde çalışan herkesi desteklemeliyiz. Şu anda kuralların ne olduğu belli değil. Herkesi desteklemeliyiz — Roman, Alexey, Samourai Cüzdan geliştiricileri. Bununla hep birlikte savaşmalıyız. Ve açıkçası Ethereum'un gizliliğe ihtiyacı var çünkü annemin Ethereum kullanmasını istiyorsam, herkesin onun işlemlerini görebilmesi gerçeğinden hoşlanmayacaktır.
 
-#### Güvenlik ve Solidity derleyicisi (12:27) {#security-and-the-solidity-compiler-1227}
+### Güvenlik ve Solidity derleyicisi (12:27) {#security-and-the-solidity-compiler-1227}
 
 Solidity derleyicisi — GitHub katkıda bulunanlarını kontrol ederseniz, onu koruyan sadece bir veya iki kişi var. Çok sıkı çalışıyorlar ama bu büyük bir sorun. Ethereum'daki en önemli programlama dili üzerinde çalışan yeterli insanımız yok. Önümüzdeki 10 yıl içinde burada olmak istiyorsak, bunu finanse etmeliyiz. Aynı şey Vyper için de geçerli.
 
 Solidity'nin sözdizimi basittir — insanların onu sevmesinin nedeni budur. Ancak, anlambilim ve derleyici birden fazla hatayı yakalayamaz. Erlang'dan Rust'a kadar 20'den fazla programlama dilinde çalıştım. Solidity gibi bir programlama diliyle hiç bu kadar zorlanmamıştım. Güvenlik hataları yaratmak çok kolay. Daha iyi bir derleyicimiz olsaydı birçok hata derleme zamanında yakalanabilirdi. Bence uzun vadeli çözüm, katman 1 (L1) varsayılanı olarak RISC-V EVM'dir.
 
-#### Kuantum sonrası kriptografi (13:40) {#post-quantum-cryptography-1340}
+### Kuantum sonrası kriptografi (13:40) {#post-quantum-cryptography-1340}
 
 Justin Drake ile Lean Ethereum üzerinde çalışıyoruz. Hash tabanlı imzalar ve minimal bir ZKVM üzerinde çalışmak için üç kriptografımızla birlikte Cambridge'e gittik. Lean VM üzerinde çalışıyoruz. Bizim gibi çok uzakta olan ve risk sermayesi (VC) açısından iyi bağlantıları olmayan insanlar için işleri kolaylaştırdıkları için Justin'e ve Ethereum Vakfı'na çok teşekkür ederim. Bana hayatımda en çok gurur duyduğum şeyleri sorarsanız, Lean Ethereum üzerinde çalışmaktır.
 
 Lambda'da StarkWare'in yardımıyla uyguladığımız Cairo VM'den ilham alan bir ZKVM üzerinde çalışıyoruz. Nethermind ayrıca biçimsel doğrulama üzerinde de çalışıyor. Bitcoin'e karşı büyük bir avantajımız var çünkü ivmeciliğimiz ve birden fazla uygulama üzerinde çalışma tutumumuz, birçok insanın bir şeyleri kontrol etmesi ve çekirdek geliştirme ile araştırma açısından daha açık olmamız bize bir avantaj sağlıyor. Bitcoin'in kuantum sonrası kriptografi dağıtımı konusunda bir sorunu var.
 
-#### Kendi kendine dayatılan durgunluk (14:46) {#self-imposed-stagnation-1446}
+### Kendi kendine dayatılan durgunluk (14:46) {#self-imposed-stagnation-1446}
 
 Şimdi çok net olmak istediğim kısma geliyorum. Ben büyük bir Ethereum hayranıyım. Şirketim Ethereum'a bağlı. Eğer Ethereum önümüzdeki 10 yıl içinde bir sorun yaşarsa, şirketim ve son 12 yılda inşa ettiğim her şey biter. Ethereum üzerinde birden fazla yeni şirket kurmak için son birkaç ayda onlarca milyon dolar yatırım yaptık. Bunu söylüyorum çünkü Ethereum'u seviyorum — Ethereum'un ölmesini istediğim için değil. Gelişim, sahip olduğumuz sorunlar hakkında açıkça konuşmak demektir.
 
@@ -89,7 +89,7 @@ Lambda'da StarkWare'in yardımıyla uyguladığımız Cairo VM'den ilham alan bi
 
 Henüz kazanmadık — kazanıyoruz, ancak kazanmaya devam etmek için açık ve eleştirel bir tartışma alanı tutmalıyız. Benimkiler gibi yorumları birinin Ethereum'a sert davranması olarak görmemize gerek yok. Mühendislerime karşı çok sertim, kendime ve şirketime karşı çok sertim, ama bunun nedeni kültürün gelişmesini istememdir.
 
-#### Açık tartışma ve yönetişim (17:01) {#open-debate-and-governance-1701}
+### Açık tartışma ve yönetişim (17:01) {#open-debate-and-governance-1701}
 
 Ben teknoloji elitinin bir parçasıyım — diğer insanlar hakkında kötü konuşmuyorum, teknoloji elitinin bir parçası olduğumu söylüyorum. Bunu yapmalıyız çünkü bu epeydir devam ediyor. İki gün önce en iyi Ethereum araştırmacılarından biriyle bir görüşme yaptım ve "Bunu neden yapıyoruz?" diye sordum. Cevap şuydu: "Çünkü bu kişi iki yıldır bunun üzerinde çalışıyor." Bu doğru değil. Eğer Lambda iki yıldır bir şey yapıyorsa ve başka biri daha iyisini yapıyorsa, lütfen Lambda'nın yaptığını sonlandırın. Ethereum herkesten büyüktür.
 
@@ -97,19 +97,19 @@ Bu, üzerinde çalışan insanlara kaba davranmamız gerektiği anlamına gelmez
 
 Önemli kararlar kapalı kapılar ardında alındı. Ben de bunun bir parçasıydım — gerçekleşen bir sosyal koordinasyon var. Bundan hoşlanmıyorum. Ben kamuya açık tartışmaları severim. Eğer bir şeyleri kapalı kapılar ardında yapmaya devam edersek, bu son derece kırılgandır çünkü devlet aktörleri Ethereum'un çekirdeğine sızmaya çalışıyor — bunu kesin olarak biliyorum. OpenBSD'ye bakın — bir geliştiriciye ödeme yaparak çekirdeğe girmeye çalışan devlet aktörleri vardı. İşlerin açık ve herkese görünür olmasına ihtiyacımız var. Şeffaflık her şeyi herkes için daha iyi hale getirir.
 
-#### Rakiplerden öğrenmek (19:18) {#learning-from-competitors-1918}
+### Rakiplerden öğrenmek (19:18) {#learning-from-competitors-1918}
 
 Başka bir şey: rakiplerin ne yaptığına dair bilgi eksikliği. Her Solana Breakpoint etkinliğine gittim ve bununla gurur duyuyorum. Neden mi? Çünkü onları bir rakip olarak görüyorum. Solana boğası olduğum için değil — rakibimden öğrenmek istediğim için, onlardan iyi fikirleri kopyalamak istediğim için. Çok sayıda zeki insanları var. Aynı şey Sui ve Aptos için de geçerli. Başka birinin yaptığı iyi olan her şeyi kopyalamalıyız. Linux bunu defalarca yaptı — Linux, Solaris'ten her şeyi kopyaladı. Ben büyük bir Solaris hayranıydım, Sun Microsystems'ta çalıştım. Ancak Linux açıktı ve tüm iyi şeyleri kopyaladı.
 
 Gençler bu şeyleri kontrol ediyor. Kimin kazandığı umurlarında değil — olayları kimin yönlendirdiğini, dünyayı ele geçirme konusunda kimin daha agresif olduğunu görmek istiyorlar. Linux bu şekilde devasa hale geldi — Android, Linux kullanıyor. Kazanmak için bu tutuma sahip olmalıyız.
 
-#### Kültür ve geri bildirim döngüleri (20:44) {#culture-and-feedback-loops-2044}
+### Kültür ve geri bildirim döngüleri (20:44) {#culture-and-feedback-loops-2044}
 
 Kalabalığı takip etme zihniyeti. Önemli tartışmalar kamuya açık değil. Yankı odaları ve muhalefeti dışlamak geri bildirim döngülerini öldürür. Tek bir doğru ideoloji olduğuna inanmıyorum. Ultra özgürlükçü (liberteryen) bir ortağım var — devlet tarafından yapılan her şeyin kötü olduğuna inanıyor. Peronizme daha yakın olan ve özel aktörler tarafından yapılan her şeyin kötü olduğunu düşünen başka bir ortağım var. Bir şeyin toplum için uzun vadede iyi olup olmadığını belirleyen şeyin kamu veya özel sektör olduğunu düşünmüyorum. Bence kapalı geri bildirim döngülerine sahip sistemler — kullanıcılarından ve paydaşlarından öğrendikleri sistemler — uzun vadede iyi sistemler yaratan şeylerdir.
 
 Bence insanlara muhalif olmaları için kelimenin tam anlamıyla ödeme yapmalıyız. Şirketimde bana karşı sert oldukları için bazen kovmak istediğim ortaklarım var, ama günün sonunda otoritemi sorgulayan insanlara sahip olduğum için mutluyum. Buna ihtiyacımız var çünkü iyi geri bildirim döngülerini zorunlu kılıyor. Eğer açık olan iyi bir kültürümüz yoksa, uzun vadede kötü bir teknolojiye sahip olacağız. Ve kötü bir teknolojiye sahip olduğumuzda, iyi ve taze kan Ethereum'a gelmez. Daha çok Bitcoin gibi tartışmalıyız — tehditler olmadan — ama Ethereum gibi uygulamalıyız. Güçlü bir şekilde tartışırız, sonra bir ekip olarak birlikte çalışırız.
 
-#### Lambda'nın Latin Amerika'daki çalışmaları (22:45) {#lambdas-work-across-latin-america-2245}
+### Lambda'nın Latin Amerika'daki çalışmaları (22:45) {#lambdas-work-across-latin-america-2245}
 
 Peki beni neden dinlemelisiniz? Latin Amerika'da birden fazla ülkede çalışıyoruz. Ortaklarımızla — Sombra aracılığıyla Diego Fernández — Ethereum üzerinde basılmış 10 milyondan fazla kimliğimiz var. Meksika'da Nuevo León hükümetiyle çalışıyoruz. Burada, Arjantin'de birden fazla eyaletle çalışıyoruz. Kolombiya'da görüşmelere başlıyoruz. Kimlikler zincir içi olduğunda, KYC yapabilir, buna dayanarak kredi verebilirsiniz. Ayrıca Afrika'da farklı ülkelerde çalışıyor, pasaportlar ve fiziksel mülkiyet hakları için altyapı oluşturuyoruz. Aynı şeyi Asya'da, farklı Orta Asya ülkelerinde de yapıyoruz — yakın zamanda Özbekistan'daydım.
 
@@ -117,7 +117,7 @@ Bir Ethereum katman 1 (L1) istemcisi oluşturduk. Üzerinde çalışan 40 kişim
 
 Bugün son derece gururluyum — Rodrigo ile birlikte, bölgede devasa bir şey inşa etmek için Lambda, Boulder Tech ve IRSA arasında bir ortaklık kurmaya karar verdik. Onlarla Latin Amerika'daki ödeme sistemleri üzerinde çalışıyoruz. Yüzlerce mühendisi olan Lambda — neredeyse 500 kişiyiz ve pazarlama konusunda pek iyi değiliz. Twitter'daki tek adam benim! Ama o kadar çok şey üzerinde çalışıyoruz ki, yaptığımız işten son derece gurur duyuyorum. Sadece ETH ve Ethereum'u istediğimiz kadar büyük yapmak için tartışmaya, eleştiriye daha açık olmamızı umuyorum. Herkese teşekkürler.
 
-#### Soru-Cevap (25:53) {#qa-2553}
+### Soru-Cevap (25:53) {#qa-2553}
 
 **Sunucu:** Teşekkürler, Fede. İzleyicilerden harika sorularımız var. Tüm bunlardan önce benim bir sorum var. Şu an nasıl hissediyorsun? Arjantin'deyiz, Devconnect yapıyoruz. Nasıl hissettiğini tarif edecek tek bir kelime var mı?
 
@@ -143,6 +143,6 @@ Bugün son derece gururluyum — Rodrigo ile birlikte, bölgede devasa bir şey 
 
 **Fede Fernández:** Ürün-piyasa uyumunu (PMF) yakalayana kadar para toplamayın. İnsanlar sizi para toplamanız için zorlayacak ve o zaman düşündüğünüzden daha fazla sorununuz olacak. Para sadece bir araçtır — bir şeyler inşa edebilmek için Gaz'dır. Ancak daha önemli şeyler var: bağlantılar, kitaplar. Yaptıkları iş konusunda derinden motive olan insanlarla çalışmaya çalışın. Etiği olan, toplum için iyi bir şey, gurur duydukları bir şey yapmaya çalışan insanlarla çalışın. Bunu yapıyorsunuz çünkü bununla gurur duyuyorsunuz. Ailenize, arkadaşlarınıza ne yaptığınızı anlatmak istiyorsunuz. Tutkuyla bir şeyler yapan insanları takip edin ve 10 yıl sonra gurur duyacağınız şeyler üzerinde çalışın.
 
-#### Kapanış (30:32) {#closing-3032}
+### Kapanış (30:32) {#closing-3032}
 
 **Sunucu:** Harika. Çok teşekkürler, Fede. Yaptığın her şey için teşekkür ederiz.

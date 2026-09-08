@@ -20,7 +20,7 @@ Ethereum Vakfı'ndan **Nixo Rokish**'in ETHBoulder'da yaptığı, Ethereum'un ç
 
 *Bu döküm, EthBoulder tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=ghyY_cRqd54) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:12) {#introduction-012}
+### Giriş (0:12) {#introduction-012}
 
 Gelen altı arkadaşımın hepsine teşekkürler. Pekala. Bugün sizinle Ethereum çekirdek yönetişimi hakkında konuşacağım. Adım Nixo. EF'deki (Ethereum Vakfı) protokol destek ekibini yönetiyorum. Tüm görevlerimiz arasında, görevlerimizden biri de yönetişim sürecini bu işlere katılan herkes için daha açık ve gezinmesi daha kolay hale getirmektir, çünkü Ethereum sadece çekirdek geliştiricilerinden çok daha fazlasını içerir.
 
@@ -36,7 +36,7 @@ Geçen yıl gerçekten tartışmalı bir olay yaşandı. Duymuş olabilirsiniz. 
 
 Yani bu, EOF konusunda bardağı taşıran son damla oldu ve sonunda çatallanmadan çıkarıldı. Dikkate almaları gereken bir diğer şey de, bu istemciler altı farklı dilde yazıldığı için altı farklı dilde yazılması ve titizlikle test edilmesi gerektiğidir. Bu yüzden üzerinde çalışmaları gereken gerçekten büyük bir test matrisi var. Ve bu nedenle, her küçük tasarım seçimi, anlaşmazlıkları çözecek hiçbir otorite olmadan tartışmaya tabi tutulur. Bu da şu soruyu gündeme getiriyor: Kim karar veriyor? Ki bu da yönetişimin can alıcı noktasıdır.
 
-#### Yanlış Bilinenler (5:23) {#misconceptions-523}
+### Yanlış Bilinenler (5:23) {#misconceptions-523}
 
 Bu bizi yanlış bilinenlere getiriyor ve bunlardan bazılarını ele alacağız. Birincisi, Ethereum protokolüne neyin gireceğine Vitalik'in karar verdiğidir. Bunun bir uzantısı, EF'nin her şeyi kontrol ettiğidir. Ve üçüncüsü, her şeyin kapalı kapılar ardında yapılan anlaşmalar olduğu — bu kararları içeridekilerin, eski kurtların (OG'lerin) aldığıdır.
 
@@ -52,13 +52,13 @@ Ve burada ekran görüntüsünü aldığım bu aptalca tweet'i seviyorum çünk�
 
 Her şey kapalı kapılar ardında yapılan anlaşmalar, içeridekiler, eski kurtlar (OG'ler) — bunun neden yanlış bilinen bir şey olduğunu biraz daha iyi anlıyorum çünkü temelde bu yönetişim çağrılarına geliyorsunuz, bu yönetişim çağrılarında yüz kişi var. Hepsi olup bitenler konusunda çok rahat görünüyor. Siz ise kaybolmuşsunuz. Bu kararların nasıl alındığına dair hiçbir fikriniz yok. "Konuşma sırası bana geldi mi?" diyorsunuz. Ve sanki insanlar bu kararları almak için aynı 10 kişiyi dinliyormuş gibi hissettiriyor.
 
-#### Meritokrasi ve katılım istatistikleri (10:18) {#meritocracy-and-participation-stats-1018}
+### Meritokrasi ve katılım istatistikleri (10:18) {#meritocracy-and-participation-stats-1018}
 
 Ancak gerçek şu ki, Ethereum geliştirmesi çoğu yazılım geliştirmesinde gördüğümden çok daha fazla bir meritokrasidir. Bu ekran görüntüsündeki tüm bu insanlar — bu, ekran görüntüsünü almaya karar verdiğim rastgele bir ACD çağrısındaki üç kişiden biri — bu insanların hiçbiri burada olmak için atanmadı. Herkes sadece bir şekilde ortaya çıkan insanlar. Onlar bu protokolle çok zaman geçirmiş geliştiriciler. İnsanların bu alanda sürekli olarak iyi kararlar veren yetenekli geliştiriciler olarak kabul ettiği kişilerdir ve buradaki hiç kimse burada olmak için atanmamıştır.
 
 Ben EF'ye sadece bir yıldan biraz daha uzun bir süre önce katıldım. Bu istatistikleri aldım. Sadece Mart 2025'e kadar gidiyorlar. Yani bir yıldan az. Ortalama Tüm Çekirdek Geliştirici (All Core Dev - ACD) katılımcıları — yani yönetişim çağrıları — 98'dir. Yani bu çağrılarda ortalama 98 kişi var. O zamandan beri bir çağrıdaki maksimum katılımcı sayısı 153'tü. Sanırım o gün Pectra ana ağ tarihine karar veriyorduk. Ve sadece geçen yılki toplam benzersiz katılımcı sayısı 567. Bu metriği gerçekten seviyorum çünkü bu çağrılara her seferinde aynı 100 kişinin gitmediğini gösteriyor. Bu uygulama geliştiricileri, araştırmacılar, birisi tartışılan bir özellik hakkında bir şeyler duyuyor, buna karşı olduklarını veya desteklediklerini dile getirmek için ortaya çıkıyorlar ve sonra başka bir çağrıya gelmiyorlar.
 
-#### Yönetişim süreci nasıl işler (11:52) {#how-the-governance-process-works-1152}
+### Yönetişim süreci nasıl işler (11:52) {#how-the-governance-process-works-1152}
 
 Bu biraz sıkıcı bir slayt ama üzerinden geçmenin önemli olduğunu düşünüyorum — Ethereum'un yönetişimi şu anda bu şekilde işliyor. Yani bu çatallanmalardan biri tartışılırken olan ilk şey, insanların bu ayrılan zaman aralığında ana tekliflerini sunabilmeleridir. Ana teklif, insanların bu çatallanma etrafında toplanmasını istediğimiz ana özelliktir. Bu bir topluluk üyesi, bir araştırmacı, bir çekirdek geliştirici olabilir — gerçekten bu ana tekliflerden birini sunan herhangi biri olabilir. Sonra pencere kapanır ve yönetişim çağrılarında bunlardan hangisinin mantıklı olduğunu tartışırız. İnsanlar argümanlarını sunar, tartışırlar ve yaklaşan o çatallanma için hangisini seçmemiz gerektiği konusunda bir mutabakat sağlanır.
 
@@ -68,7 +68,7 @@ Yani bir dizi geliştirici ağından sonra — iki olabilir, 10 olabilir — ist
 
 Ve sonra izinsiz test ağı kararlı hale geldiğinde, ana ağ tarihi seçilir. Bunun ardından 30 günlük bir tampon süre vardır. Bu 30 günlük tampon süre, Katman 2'lerin (L2) ve protokollerin çatallanmaya hazırlanmak için bunu talep etmesi nedeniyle mevcuttur. Yani bu en az 30 gündür ve ardından çatallanma gerçekleşir.
 
-#### Çağrı yapısı ve koordinasyon (15:01) {#call-structure-and-coordination-1501}
+### Çağrı yapısı ve koordinasyon (15:01) {#call-structure-and-coordination-1501}
 
 Tüm bu süre boyunca gerçekleşen bazı ana çağrı serileri vardır. Bunların hepsi YouTube'da canlı yayınlanan halka açık çağrılardır. Başlıcaları ACDE ve ACDC'dir. E, yürütme katmanı (execution layer) içindir — bu, işlemler, akıllı sözleşme dağıtımları, bellek havuzu yönetimi gibi şeylerdir. ACDC, mutabakat katmanıdır (consensus layer) — yani bu, doğrulayıcı yönetimi, kesinti (slashing) gibi doğrulayıcı şeyleridir. Ve bunlar perşembe günleri dönüşümlü olarak yapılır. Yani her perşembe bir ACD vardır ve bunlardan biri ACDE'dir ve sonraki ACDC'dir, bu şekilde devam eder.
 
@@ -76,7 +76,7 @@ ACDE ve ACDC çağrıları, şu anda yapmakta olduğumuz çatallanmaya ve gelece
 
 Ve bir de ara çağrılar (breakout calls) vardır. Ara çağrılar, topluluk üyelerinin, araştırmacıların, geliştiricilerin "Hey, bundan iki çatallanma sonra Ethereum'a girmesini istediğim bir özelliğim var." demesidir. Ve böylece, uygulama ayrıntılarını tartıştıkları, spesifikasyon üzerinde değişiklik yapıp yineledikleri ve genel olarak insanların sahip olduğu tüm soruları, bilinen tüm bilinmeyenleri ele aldıkları haftalık, aylık veya iki ayda bir yapılan bu çağrılara ev sahipliği yaparlar; böylece bundan iki çatallanma sonraki çatallanmaya dahil edilmek için mümkün olan en iyi yerde olduğundan emin olurlar. Ve bunlar kolaylaştırıcı ne zaman karar verirse o zaman planlanabilir.
 
-#### Gelişen bir süreç (15:29) {#an-evolving-process-1529}
+### Gelişen bir süreç (15:29) {#an-evolving-process-1529}
 
 Yani herkese vurgulamak istediğim bir şey, bu sürecin statik olmaktan çok uzak olduğudur. Size az önce anlattığım bu süreç bir yıldan daha kısa bir süredir yayında. Ethereum 10 yıldır yayında. Ancak sürekli değişiyor ve sürekli değişmesinin nedeni kimsenin sorumlu olmamasıdır. Ve bu süreç, çalışmanın en verimli yolunu bulmak için bir nevi evrimleşiyor. Ve verimli diyorum ama Ethereum yönetişiminin sahip olduğu itibar gerçekten durgun, bir şeyleri kabul ettirmenin zor olduğu, kafa karıştırıcı bir süreç olduğudur — ve bunun nedeni, karar veren 100 ila 500 kişi olduğunda, bunun hiç çalışabilmesine dürüst olmak gerekirse hayran kalıyorum.
 
@@ -88,7 +88,7 @@ Yani üstteki diğer ekran görüntüsü, Tim'in bu EIP'ler için dahil edilme a
 
 Üçüncü şey, Forkcast'teki zaman içindeki işlemelerdir (commits). Forkcast, ekibim tarafından, ekibimin şu anki haliyle kurulduğu geçen yılın ortalarında bunu yaratan ekibimdeki bir adam olan Wolfram Mark tarafından oluşturulan bir üründür. Ve insanların bir çatallanma ile etkileşime girmek, bir çatallanmaya neyin girdiğini ve onları nasıl etkilediğini görmek için kullanabilecekleri çok temel bir kaynak haline geldi. Tüm bu şeyler iki yıldan daha yenidir. Yani sadece belirtmek istediğim nokta, bu sürecin çok değiştiğidir. Hiç de statik değil. Kapıdan içeri adım atmanın zor olduğu donmuş bir bürokrasi değil.
 
-#### Karşılaştırılabilir yönetişim sistemleri (20:21) {#comparable-governance-systems-2021}
+### Karşılaştırılabilir yönetişim sistemleri (20:21) {#comparable-governance-systems-2021}
 
 Bu yüzden kısaca Ethereum yönetişimine görebildiğim en benzer merkeziyetsiz yönetişim sistemlerine değinmek istedim. Ve burada anlatmaya çalıştığım nokta, bunun sürdürülebilir olduğudur — 100 ila 500 kişinin karar verebilmesi şaşırtıcı olsa da, gerçek dünyada sürdürülebilirdir. Bunun işe yaradığına dair örnekler görüyoruz.
 
@@ -96,13 +96,13 @@ IETF, İnternet Mühendisliği Görev Gücü'dür (Internet Engineering Task For
 
 Bunun benzemediği şeyler: zincir içi token oylamasına sahip diğer blokzincirler. Ethereum özellikle her türlü oylama mekanizmasından kaçınır çünkü bence bu, ele geçirme yollarına yol açar ve insanların sadece en iyi kodu yazan kişilere güvendiği bir meritokrasi yapma teşvikini bir nevi ortadan kaldırır. Ve bir de Katman 2'ler (L2) var. Çoklu imzaları (multi-sig) var. Güvenlik konseyleri var. Bunlar daha çok bu kararları veren atanmış pozisyonlar gibidir. Ve bunun kendi ödünleşimleri (trade-offs) vardır. Daha merkezidir. Ancak daha hızlı hareket eder.
 
-#### Geliştiriciler neden umursar (22:38) {#why-builders-care-2238}
+### Geliştiriciler neden umursar (22:38) {#why-builders-care-2238}
 
 Peki geliştiriciler yönetişimi neden umursar? Çünkü geliştiriciler kelimenin tam anlamıyla Ethereum'un yaratıldığı kişilerdir. Ethereum çekirdek geliştiriciler için yaratılmamıştır. Doğrulayıcılar için yaratılmamıştır. Bazen bu insanlar bu konuda kafaları karışır. Ethereum çekirdek geliştiricileri ve doğrulayıcıları, geliştiricilere ve kullanıcılara hizmet eden Ethereum'a hizmet eder.
 
 Ve herkes bir yapay zeka ile o anı yaşamıştır; çok fazla ayrıntıya girersiniz ve o bu küçük şeyi düzeltmeye çalışır ve uzaklaşıp projenin tüm amacına bakmayı başaramaz. Ve çekirdek geliştiriciler de çekirdek geliştirme sürecini mükemmelleştirmeye çalışırken böyle olabilirler. Ve bu durumda geliştiricilerin devreye girmesi çok önemlidir çünkü çekirdek geliştirme o kadar her şeyi tüketen bir süreçtir ki çoğu zaman Ethereum'un üzerine de bir şeyler inşa etmezler. Çekirdek geliştirmeye çok dahil olurlar. Tüm zamanlarını alır. Ve bu yüzden uygulama geliştiricilerinin gerçekten gelip "Hey, buna ihtiyacımız var. Bu Ethereum için çok önemli." demek için çaba göstermeleri gerekir. Sadece perspektifin orada olduğundan ve sadece çekirdek geliştiriciler için çalışmaya hapsolmadıklarından emin olmak için.
 
-#### Nasıl katılınır (24:40) {#how-to-participate-2440}
+### Nasıl katılınır (24:40) {#how-to-participate-2440}
 
 Peki nasıl katılırsınız veya özelliğinizi nasıl dahil edersiniz? Bu biraz genel bir tavsiye ama bence en iyisi. Sıkıntı yaşadığınız noktalar hakkında sesinizi duyurun. Twitter'a girin, blog yazıları yazın, sıkıntı yaşadığınız noktalar için çözümler belirleyin. Size yardımcı olabilecek şeyler hakkında fikir yürütün. Aynı sıkıntıları yaşayan başka insanlar bulursanız, genellikle o sıkıntıyı gidermek için var olan bir EIP bulabilir veya bunu yapan bir EIP yazmanıza yardımcı olacak birini bulabilirsiniz.
 

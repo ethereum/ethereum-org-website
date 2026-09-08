@@ -19,11 +19,11 @@ Webinář pořádaný společností **Blockdaemon**, ve kterém blockchainová i
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=_UpAFpC7X6Y) zveřejněného společností Blockdaemon. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 **Moderátor:** Dobrý den a vítejte na tomto webináři pořádaném společností Blockdaemon, který se zaměřuje na nadcházející aktualizaci Ethereum Pectra. Dnes jsou tu s námi Julia Schmidt, blockchainová inženýrka ve společnosti Alluvial, a Freddy Tänzer, vedoucí ekosystému Ethereum ve společnosti Blockdaemon, abychom prodiskutovali, jak změny v aktualizaci Pectra ovlivní staking ETH, síť jako celek, služby likvidního stakingu a další. Na úvod, Freddy — mohl byste nám stručně shrnout aktualizaci Pectra a jaký bude její dopad na stakery?
 
-#### Co je Pectra (1:28) {#what-is-pectra-128}
+### Co je Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra je aktualizace Etherea, která je naplánována na konec prvního čtvrtletí roku 2025 — zhruba na březen, možná se to trochu posune, třeba na duben. Původně to měl být vlastně malý fork, ale pak se přidávalo stále více věcí, takže to teď vlastně rozdělili na dvě části.
 
@@ -33,7 +33,7 @@ První je skutečnost, že můžete spouštět výběry a výstupy ze svého val
 
 Je tu také jedna menší, která v podstatě vede k tomu, že vklady jsou mnohem rychlejší — onchain registrace se zkrátí z nějakých 14 hodin na méně než hodinu — ale myslím, že ty dvě první jsou pro naši diskusi nejrelevantnější.
 
-#### EIP-7002: výstupy spustitelné z exekuční vrstvy (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: výstupy spustitelné z exekuční vrstvy (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Moderátor:** Pokud jde o první velkou změnu, Julio, mohla byste vysvětlit, jak se proces po aktualizaci Pectra změní v porovnání se současnými způsoby, jakými jsou výběry iniciovány v ekosystému stakingu na Ethereu?
 
@@ -49,7 +49,7 @@ Při poslední aktualizaci Dencun změnilo nové EIP dobu platnosti těchto zpr�
 
 To je nyní vyřešeno pomocí EIP-7002, které umožňuje jak klíči validátora, tak klíči pro výběr spustit výstup z exekuční vrstvy — jednoduše odesláním transakce do speciálního kontraktu pro výběr, kam odešlete žádost o výběr a specifikujete buď úplný výstup validátora, nebo částečný výběr ze stakovaného zůstatku.
 
-#### EIP-7251: maximální efektivní zůstatek (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: maximální efektivní zůstatek (4:15) {#eip-7251-max-effective-balance-415}
 
 **Moderátor:** Freddy, mohl byste nám poskytnout přehled o maximálním efektivním zůstatku od aktualizace Pectra dále a jak to ovlivní lidi, kteří v současnosti stakují?
 
@@ -69,7 +69,7 @@ Dobré zprávy jsou i ohledně penalizace: počáteční penalizace se dramatick
 
 Výhoda automatického složeného úročení prospívá hlavně menším částkám staku. Pokud máte tisíc validátorů, mohli byste ručně spouštět nový každý měsíc. Ale pokud máte jen jednoho validátora, museli byste na složené úročení čekat prakticky 32 let.
 
-#### Důsledky pro likvidní staking (11:25) {#liquid-staking-implications-1125}
+### Důsledky pro likvidní staking (11:25) {#liquid-staking-implications-1125}
 
 **Moderátor:** Julio, jak si stojí konsolidace větších validátorů v porovnání s výhodami likvidního stakingu? Jak se budou tato rozhodnutí zvažovat v mysli stakera po aktualizaci Pectra?
 
@@ -79,7 +79,7 @@ Skutečnost, že byla snížena počáteční penalizace, snižuje riziko provoz
 
 Co se týče užitečnosti, token likvidního stakingu (LST) samozřejmě přidává likviditu — i s částečnými výběry z exekuční vrstvy to nebude okamžité. Odešlete transakci, ta se zařadí do fronty, pak následuje epocha výstupu a epocha výběru. Tokeny likvidního stakingu stále nabízejí okamžitou likviditu, kterou částečné výběry poskytnout nemohou.
 
-#### Další kroky pro stakery (16:20) {#next-steps-for-stakers-1620}
+### Další kroky pro stakery (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Vidíme, že finanční instituce by typicky stakovaly mezi 65 % a 85 % svých ETH ve správě, protože zbytek potřebují jako rezervu likvidity pro zpětné odkupy. S likvidním stakingem můžete potenciálně zvýšit množství stakovaných ETH, což generuje vyšší odměny.
 
@@ -89,7 +89,7 @@ Z aktualizace Pectra těží obě strany — likvidní staking získává možno
 
 Klíčovou výhodou, které jsem se ještě nedotkla, jsou částečné výběry — nyní, když můžete vybírat stakované ETH z exekuční vrstvy, otevírá to nové cesty pro protokoly, jako je EigenLayer, ke spouštění výběrů a výstupů. Dochází k obrovskému nárůstu funkčnosti a interoperability, které nyní mohou decentralizované finance (DeFi) lépe začlenit do celého životního cyklu validátora, od vkladu až po výstup. Jako blockchainovou inženýrku mě velmi těší, že mohu automatizovat celý pracovní postup.
 
-#### Závěr (19:50) {#closing-1950}
+### Závěr (19:50) {#closing-1950}
 
 **Moderátor:** Julio, kam se mohou lidé podívat, aby se dozvěděli více o Liquid Collective a Alluvial?
 

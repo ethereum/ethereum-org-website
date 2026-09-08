@@ -17,7 +17,7 @@ breadcrumb: "Gizlilik"
 
 *Bu transkript, Uluslararası Af Örgütü tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=5GTD14irFvQ) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiş ve konuşmacı etiketleri eklenmiştir.*
 
-#### "Saklayacak hiçbir şeyin yok, değil mi?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Saklayacak hiçbir şeyin yok, değil mi?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Ajan:** Dijital güvenliği umursamıyorsun, değil mi?
 
@@ -79,7 +79,7 @@ breadcrumb: "Gizlilik"
 
 **Vatandaş:** Destekliyorum.
 
-#### Gizlilik hakkı (1:30) {#the-right-to-privacy-130}
+### Gizlilik hakkı (1:30) {#the-right-to-privacy-130}
 
 **Vatandaş:** Ve benim ülkem insanlardan oluşuyor. Kendi gizlilik hakkına sahip insanlardan. Eğer hükümetler ayrım gözetmeksizin tüm verilerinizi—e-postalar, telefon görüşmeleri, web kamerası görüntüleri ve internet aramaları—toplamak istiyorsa, bu kabul edilemez.
 

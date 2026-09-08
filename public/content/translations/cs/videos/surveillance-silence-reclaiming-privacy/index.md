@@ -18,11 +18,11 @@ Hlavní přednáška **Naomi Brockwell** na EthBoulder 2026 o narušování digi
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=nvJSFR1Q_JE) zveřejněného organizací EthBoulder. Pro lepší čitelnost byl lehce upraven.*
 
-#### Dvoudílná přednáška: varování + řešení (00:00) {#two-part-talk-warning-solution-0000}
+### Dvoudílná přednáška: varování + řešení (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Skvělé. Vítejte všichni. Děkuji, že jste tady. Takže, toto bude dvoudílná přednáška. V první části to může být trochu intenzivní. Jsem známá tím, že dokážu být docela intenzivní, když přijde na přednášky o soukromí a sledování. Druhá část se ponese v trochu jiném duchu. Takže v první části vám budu vyprávět příběh a ve druhé části zachráníme svět. Takže pokud s tím všichni souhlasíte, můžeme začít.
 
-#### Císařovy nové šaty (00:44) {#the-emperors-new-clothes-0044}
+### Císařovy nové šaty (00:44) {#the-emperors-new-clothes-0044}
 
 Takže první dějství. Začněme prvním dějstvím našeho příběhu. Kouzlo. Byl jednou jeden císař, kterému prodali nádherné nové šaty. Prodavač mu řekl: „Tyto šaty jsou výjimečné. Vidí je jen inteligentní a ctnostní lidé, a kdokoli, kdo se nehodí pro své postavení, neuvidí vůbec nic.“ Císař žádné šaty neviděl, ale bál se to přiznat. Kdyby to řekl, znamenalo by to přiznat, že není hoden vládnout, a tak neřekl nic. A když se císař objevil na veřejnosti a promenádoval se ulicemi, nikdo jiný ty šaty také neviděl. 
 
@@ -32,7 +32,7 @@ Takže v jádru, vraťme se sem. V jádru tento příběh samozřejmě není o �
 
 V našem příběhu si každý myslel, že problém je možná v něm. Takže se spoléhali na své sousedy a předpokládali, že kdyby bylo něco opravdu špatně, někdo jiný by se ozval jako první. Všichni se podřídili moudrosti davu. A to byla špatná strategie, protože dav se mýlil. Císař byl nahý. A protože všichni mlčeli, konsensus nahradil pravdu. Mlčení davu se stalo důkazem, že je vše v pořádku. A přesně takto se hroutí soukromí v moderním světě.
 
-#### Stroj (02:46) {#the-machine-0246}
+### Stroj (02:46) {#the-machine-0246}
 
 Takže, dějství druhé, stroj. Tady je moderní verze tohoto příběhu. Žijeme v režimu s největším sběrem dat v lidské historii. Vybudovali jsme a nadále živíme infrastrukturu dohledu, jakou svět ještě neviděl. A směr, kterým se ubíráme, je receptem na katastrofu. Proč tomu tak je? Protože právě teď je jediný způsob, jak to může dobře dopadnout, ten, že dokážeme zaručit, že nad tímto systémem nikdy nezíská kontrolu někdo zlý. Ale pokud někdo zlý nakonec kontrolu získá, je to jako atomová zbraň plná potenciální energie se všemi ingrediencemi potřebnými k naprostému ovládnutí obyvatelstva. 
 
@@ -42,13 +42,13 @@ Je to nepříjemný pocit, že? A cítíme to, když aplikace žádá o přístu
 
 Cítíme, že je něco špatně, když jen tak prolétneme zásady ochrany osobních údajů a víme, že bychom si je měli přečíst pozorně. Pravděpodobně tam jsou nějaké důležité věci. A vlastně je tam černé na bílém napsáno, že ano, naprosto jistě budou sdílet tato intimní data, a my ani nevíme s kým, ale stejně klikneme na souhlasím, protože to přece nemůže být tak hrozné, jinak by přijímání těchto věcí nebylo běžnou praxí, že? Kdyby to bylo tak špatné, nedělali by to přece všichni.
 
-#### Jak špatný je status quo? (05:12) {#how-bad-is-the-status-quo-0512}
+### Jak špatný je status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Takže jak špatný je status quo? Jak špatné to vlastně je? Nebo bychom o tom možná měli mluvit, protože někteří lidé si myslí, že jde jen o to, že se nám společnosti snaží prodat lepší pár bot. Je to prostě jen spotřebitelská záležitost, že? Nebo možná jde jen o to, že se o nás společnosti provozující sociální sítě učí, aby vytvořily lépe vyladěný algoritmus, že? To nevypadá tak hrozivě. V čem je s tím vším problém?
 
 Ale právě teď všichni dáváme souhlas všudypřítomné sledovací mašinérii, která tiše proniká do každé soukromé oblasti našich životů. Někde, například v autoritářských režimech, se tato mašinérie používá ke kontrole disentu ještě předtím, než k němu dojde, a to tak, že označí potenciálně problémové lidi jako ty, u nichž je větší pravděpodobnost, že se připojí k protestnímu hnutí, a na tyto lidi se pak zaměří. Někdy se tato mašinérie používá k formování nálad veřejnosti, ovlivňování názorů, zvrácení voleb nebo k tomu, aby přiměla celé populace nenávidět určité typy lidí tím, že je přesvědčí, že tyto skupiny nenávidí je. A pak jsou země, které veřejně šíří informace o občanech, jejichž sociální kredit klesl, a pak toto skóre používají k omezení cestování, omezení jejich zaměstnání, k zablokování přístupu jejich dětí do určitých škol nebo k jejich úplnému odříznutí od příležitostí.
 
-#### Sběr dat v bilionovém měřítku (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Sběr dat v bilionovém měřítku (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 A nyní, s revolucí umělé inteligence, přestává být tento stroj pouhým záznamem vašeho života a stává se prediktivním nástrojem. Proto je to tak důležité. Chci vám to tedy ukázat na konkrétním příkladu. Takže si teď jen tak trochu projdeme současný stav dohledu. 
  
@@ -56,7 +56,7 @@ Rozdělím tento stroj na tři části. První z nich je sběr dat. Způsob, jak
  
 Ale řekněme, že máte opravdu štěstí a vyhnete se tomu, aby na vás tento systém cílil. Vaše děti se mu ale pravděpodobně nevyhnou a vy nemáte tušení, jestli ano, nebo ne. A tato mašinérie, se kterou dnes souhlasíte, nezmizí. Nevíte, kdo bude u moci zítra.
 
-#### Jak tyto informace unikají (08:03) {#how-this-information-is-leaked-0803}
+### Jak tyto informace unikají (08:03) {#how-this-information-is-leaked-0803}
  
 Takže druhou oblastí je, jak tyto informace následně unikají. Každý rok dosahuje počet úniků dat nového historického maxima. Unikají nejrůznější informace, které společnosti v první řadě vůbec neměly shromažďovat. Tedy historie polohy a lékařské záznamy, finanční údaje, soukromé zprávy. Tyto informace se dostávají na veřejnost a všechny končí na dark webu, kde je využívají organizované kartely, zločinecké gangy a státem sponzorovaní hackeři. 
 
@@ -68,7 +68,7 @@ A přesto se společnosti stále rozhodují shromažďovat všechna tato zbyteč
  
 Takže to je jako dav tleskající na přehlídce, že? Není to proto, že bychom si byli jistí, že každé kliknutí a každé odsouhlasení je bezpečné. Je to proto, že ozvat se a odmítnout to, nebo přejít na jiné nástroje, se zdá být těžší než jít s davem.
 
-#### Zadní vrátka a vládní odposlechy (09:33) {#backdoors-government-interception-0933}
+### Zadní vrátka a vládní odposlechy (09:33) {#backdoors-government-interception-0933}
  
 Takže teď si pojďme promluvit o této třetí skupině, o zneužití jako zbraně. Nepřátelské zahraniční zpravodajské operace již infiltrovaly klíčovou komunikační infrastrukturu. Zrovna před chvílí jsem se tu s lidmi bavil o Salt Typhoon, že? Například Čína ve velkém zachycuje naše hovory a zprávy. 
 
@@ -78,7 +78,7 @@ Víme, že není možné, aby vlády zajistily, že k těmto zadním vrátkům b
 
 Víme o jednom z nich, Salt Typhoon, ale nemáme tušení, kdo další shromažďuje naši citlivou, intimní komunikaci v této samotné infrastruktuře, na kterou spoléháme.
 
-#### Proč je dohled vzácnější, než si myslíte (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Proč je dohled vzácnější, než si myslíte (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Takže císař je nahý a jediný důvod, proč to všechno přetrvává, je ten, že dav nepřestává tleskat. Ale je tu ještě jeden důvod, proč dav stále tleská. 
  
@@ -112,7 +112,7 @@ Takže, kolik stovek milionů lidí používá produkty Apple a jeden člověk s
 
 Je tu další prezentace, kde něčí otec přinesl domů jeden z těch domácích hubů, že? Ona se rozhodla to trochu prozkoumat. Někdy si hraje s různými nástroji v domě a chtěla přijít na to, jak to funguje. A ukázalo se, že toto oblíbené spotřebitelské zařízení, které si mohl koupit kdokoli, bylo používáno jako uzel v masivním čínském botnetu. Pak tu prezentaci uvidí FBI. Nakonec tu prezentaci stáhnou z internetu a vyšetřování utají. Nevěděli, že se to děje, ale byla to ona, kdo je na to upozornil jen tím, že udělala tuto prezentaci ve smyslu: „Hej lidi, zjistila jsem, že se tu dějí divné věci.“ A takhle zjistíme, že masivní čínský botnet napadá všechny naše domovy prostřednictvím tohoto jednoho konkrétního zařízení. A co všechna ta ostatní zařízení v našich domovech, na která se ještě nikdo ani neobtěžoval podívat?
 
-#### Problém mlčení a falešný konsensus (16:30) {#the-silence-problem-false-consensus-1630}
+### Problém mlčení a falešný konsensus (16:30) {#the-silence-problem-false-consensus-1630}
 
 Takže, tam se právě teď nacházíme. Sledování je dnes všudypřítomné, neviditelné, normalizované a ospravedlněné a považujeme ho za průmyslový standard. A přesně tam teď jsme.
 
@@ -134,7 +134,7 @@ Takže Eric Schmidt z Googlu má tento slavný a otřesný citát, kde říká, 
 
 Takže si všimněte, co se děje. Soukromí začalo být prezentováno jako vina a podřízenost jako ctnost. Ti dobří jsou ti, kteří se vzdají a umožní přístup, a ti podezřelí jsou ti, kteří kladou otázky. A bránit se teď začíná být společensky nákladné. Jakmile k mlčení připojíte tuto morální nálepku, celá ta přehlídka už běží sama.
 
-#### Jak zastavíme císařův průvod? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Jak zastavíme císařův průvod? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Vraťme se k našemu příběhu. Císařovy nové šaty. Když císař kráčí ulicí ve svých nových šatech, dav tleská. Obdivují řemeslné zpracování. Chválí eleganci. Komentují střihy, látku a způsob, jakým oděv zachycuje světlo. A předhánějí se v tom, kdo bude znít nejvíce ohromeně. Dvořané se naklánějí dopředu a dychtí po tom, aby bylo vidět, jak souhlasí, úředníci vážně přikyvují a poradci přidávají květnatou technickou chválu a vymýšlejí si detaily, aby dokázali, že rozumí tomu, na co se dívají. Někteří mluví nahlas v naději, že je někdo uslyší, a jiní se usmívají a nic neříkají, opatrní, aby nevypadali zmateně. Nikdo nechce být tím prvním, kdo zaváhá, a nikdo nechce být tím, kdo položí zřejmé otázky, a s každým komplimentem je těžší tuto lež vzít zpět. 
 
@@ -158,7 +158,7 @@ Takže způsob, jakým se to změní, nespočívá v čekání na to, až se cí
 
 Když lidé... když dostatek lidí přestane tleskat, průvod nemůže pokračovat. A to je ta část příběhu, kterou tu stále píšeme. Takže nejde o to, jestli císař nemá žádné šaty. Všichni víme, že žádné šaty nemá. Jedinou zbývající otázkou je, zda budeme dál kráčet po jeho boku a předstírat, že je to v pořádku.
 
-#### Část druhá: pojďme zachránit svět (25:22) {#part-two-lets-save-the-world-2522}
+### Část druhá: pojďme zachránit svět (25:22) {#part-two-lets-save-the-world-2522}
 
 Takže po této poněkud chmurné poznámce, část druhá: pojďme zachránit svět. Kdo chce lepší budoucnost? Kdo chce lepší budoucnost pro budoucí generace, pro své děti? Kdo chce věci změnit? Protože máme plnou moc něco změnit. 
 
@@ -312,7 +312,7 @@ Takže pokaždé, když jste na tomto rozcestí, prostě zkuste zjistit, jestli 
 
 A navíc, pokud zákonodárci tyto věci zakážou, protože za ně nikdo nebojuje, protože všichni říkáme: „No, já nemám co skrývat.“ Tyto věci zmizí.
 
-#### Rozhodnutí, která musíme učinit o budoucnosti, jakou chceme vidět (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Rozhodnutí, která musíme učinit o budoucnosti, jakou chceme vidět (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Takže se s vámi rozloučím touto myšlenkou, protože si myslím, že nám tu dochází čas. Právě teď se nacházíme na křižovatce, kde se musíme rozhodnout, jaký svět chceme vidět. A vím, že je spousta lidí, pro které jsou tyto systémy nepohodlné a zdá se, že přechod na něco jiného dá spoustu práce. 
 

@@ -17,7 +17,7 @@ A short animated explainer from **Amnesty International** on why online security
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=5GTD14irFvQ) published by Amnesty International. It has been lightly edited for readability, and speaker labels have been added.*
 
-#### "You've got nothing to hide, right?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "You've got nothing to hide, right?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agent:** You don't care about digital security, do you?
 
@@ -79,7 +79,7 @@ A short animated explainer from **Amnesty International** on why online security
 
 **Citizen:** I do.
 
-#### The right to privacy (1:30) {#the-right-to-privacy-130}
+### The right to privacy (1:30) {#the-right-to-privacy-130}
 
 **Citizen:** And my country is made up of people. People with the right to their own privacy. If governments want to indiscriminately collect all your data—emails, phone calls, webcam images, and internet searches—that's not okay.
 

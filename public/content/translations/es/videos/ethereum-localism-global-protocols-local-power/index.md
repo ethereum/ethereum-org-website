@@ -20,7 +20,7 @@ Un panel de discusión con **Benjamin Life** y **Sarah Johnstone** en EthBoulder
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=I4xb0rst6SQ) publicada por EthBoulder. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción al Localismo de Ethereum (0:12) {#introduction-to-ethereum-localism-012}
+### Introducción al Localismo de Ethereum (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Hola. ¿Nos escuchan? Genial. Bueno, es muy emocionante estar aquí. Comencemos con algunas presentaciones. Soy Sarah Johnstone. Soy permacultora, biorregionalista y miembro activo de Ethereum. Y me apasiona mucho la comunidad del localismo de Ethereum. Estoy muy emocionada de estar aquí con Benjamin.
 
@@ -30,7 +30,7 @@ Un panel de discusión con **Benjamin Life** y **Sarah Johnstone** en EthBoulder
 
 **Benjamin Life:** Sí, es realmente hermoso tener a algunos de los catalizadores de GEL —como dice el acrónimo— y del movimiento del localismo de Ethereum aquí presentes. Quiero agradecer a Christy y a James y a algunos otros miembros de su equipo en Portland que nos reunieron a un grupo de nosotros por primera vez. De hecho, fue allí donde conocí a Kevin Owocki, a pesar de que ambos vivíamos en Boulder. Catalizó muchísimas cosas y sentó un precedente de lo que es la comunidad del localismo de Ethereum y cuáles son los valores compartidos. Realmente reunió a una especie de izquierda cripto, pero también a un subconjunto de la comunidad Web3 más explícitamente alineado con los valores que creo que, al darle un nombre y un espacio, realmente nos ayudó a muchos a encontrarnos.
 
-#### Valores y la tensión entre lo global y lo local (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Valores y la tensión entre lo global y lo local (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** ¿Y te importaría hablar sobre algunos de esos valores que mantenemos en el ecosistema?
 
@@ -40,7 +40,7 @@ Aquellos de nosotros que entramos en el espacio por los valores de participació
 
 El localismo de Ethereum se sitúa en el centro de esa contradicción. En lugar de decir que es uno u otro —no es solo hiperlocal, al diablo con los bienes comunes globales, ni tampoco intenta crear esta capa de coordinación global abstracta que en realidad no se conecta de manera significativa con la vida cotidiana real de las personas. Al navegar por esa tensión, buscamos dónde podemos estar en solidaridad global. Lo que es ligero debería ser global y compartido, y lo que es pesado debería ser local y autogobernado. Estamos compartiendo nuestro conocimiento y software de código abierto, pero asegurándonos de que la autodeterminación local y las iniciativas lideradas por la comunidad estén administrando cómo se aplican esos protocolos a nivel local.
 
-#### El Localism Fund y la consolidación de valores (5:27) {#the-localism-fund-and-consolidating-values-527}
+### El Localism Fund y la consolidación de valores (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Así que me encantaría escuchar: el año pasado reunimos a un par de cientos de personas durante dos días y hubo discusiones muy dinámicas y animadas. Sentí que hubo un movimiento emocionante que ocurrió de inmediato con ETHDenver y la formación del grupo Region Commons. ¿Cómo crees que nos va como movimiento? Sé que has tenido un hito importante con el Localism Fund.
 
@@ -50,7 +50,7 @@ Creo que el localismo de Ethereum es un intento de ser un baluarte contra el sur
 
 En el lado positivo, acabamos de distribuir $150,000 a 12 programas de financiamiento local diferentes que están experimentando con un conjunto diverso de mecanismos, y eso es gracias a Gitcoin y Celo Public Goods. Esas historias son realmente emocionantes porque tenemos comunidades reales sobre el terreno en casi todos los continentes. Tenemos una instalación de minería cripto solar en Nigeria que financia la educación. Tenemos una red de empresas cooperativas en Barcelona creando toda una economía paralela y un sistema monetario. Tenemos personas en Colombia haciendo un increíble Ingreso Básico Universal (UBI), creando centros comunitarios que están distribuyendo dinero a personas que viven por debajo del umbral de pobreza.
 
-#### Transparencia y asignación de capital (10:01) {#transparency-and-allocating-capital-1001}
+### Transparencia y asignación de capital (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** Y aquí en este espacio, ¿qué estamos haciendo en Boulder?
 
@@ -64,7 +64,7 @@ Terminamos trabajando con layer labs y Jake Hartnell para implementar algo llama
 
 Usamos el mismo algoritmo que usa Google para clasificar páginas web basándose en la fuerza de sus enlaces para obtener una representación numérica de la cantidad colectiva de confianza que ese nodo tenía en la red. Tuvimos a más de 100 personas haciendo más de 1,000 atestaciones, y de ahí pudimos derivar a las 30 personas más confiables dentro de esta red. Esos se convirtieron en los evaluadores de los programas de financiamiento local que se postularon. Cada evaluador revisó de acuerdo con los criterios, y la puntuación total determinó su proporción de contrapartida. Así que usamos esta red de confianza basada en atestaciones para distribuir dinero de acuerdo con la voluntad de esta red de expertos.
 
-#### El Protocolo Subterráneo y las Tecnologías Sociales (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### El Protocolo Subterráneo y las Tecnologías Sociales (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Gracias. Me encantaría abrirlo al grupo. Veo muchas caras conocidas aquí y personas que probablemente se identifican con el movimiento. Me encantaría escuchar a personas del público que quieran compartir. ¿Hay alguien del grupo que publicó el manifiesto hoy que quiera hablar un poco al respecto?
 
@@ -86,13 +86,13 @@ El Localismo de Ethereum es un lugar donde las personas que están interesadas e
 
 **Benjamin Life:** Sí. Tecnologías sociales.
 
-#### Decidir qué construir para un impacto global (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Decidir qué construir para un impacto global (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **Audience Member:** Lo siento, acabo de llegar. Pero quería entender, ¿cómo deciden qué tecnologías abiertas construir? Los humanos tienen un tiempo limitado, ¿cómo deciden qué se debe construir?
 
 **Sarah Johnstone:** Una de las áreas en las que estoy invirtiendo mi tiempo en este momento es el contexto de la ayuda humanitaria, porque el estado de los recortes de financiamiento de la ayuda internacional es súper urgente y perjudicial. Los últimos ocho meses más o menos he estado en un estudio profundo tratando de entender ese espacio, y en realidad ha sido bastante esperanzador en términos de ver cómo la tecnología del ecosistema de Ethereum y otros ecosistemas se aplica a contextos del mundo real como poblaciones de refugiados y comunidades desplazadas o zonas de conflicto con pagos transfronterizos y monedas estables. Me siento bastante esperanzada al respecto. Para mí, en eso es en lo que elijo invertir mi tiempo.
 
-#### Neutralidad creíble y subsidiariedad (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Neutralidad creíble y subsidiariedad (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Sí quiero responder a lo que preguntaste. Algo que he estado llamando "neutralidad creíble a través del diseño de mecanismos". Realmente estoy trabajando en cómo podemos descentrar las decisiones binarias individuales: el tipo de decisiones que rompen comunidades cuando no se puede llegar a un consenso y tienes que hacer una bifurcación o disolverte. Por lo general, los grupos terminan en una de esas opciones, y es muy raro que un grupo tenga el sistema metabólico o inmunológico para reevaluar continuamente su alineación con sus propios valores declarados.
 
@@ -102,7 +102,7 @@ Una de las formas en que creo que podemos hacerlo más fácil es que, en lugar d
 
 **Benjamin Life:** Totalmente, y eso saca a relucir otra idea importante en el espacio del localismo de Ethereum, que es la subsidiariedad: esta idea de que la toma de decisiones debe estar anidada en el nivel más local donde esa decisión tiene un impacto. Parte de la razón por la que el Localism Fund estaba financiando programas de subvenciones en lugar de otorgar subvenciones directamente a los proyectos fue que queríamos dar $20,000 a Regenerate Cascadia, que es una organización sin fines de lucro que tiene su propia red con naciones indígenas y comunidades locales, y en lugar de que nosotros eligiéramos qué proyectos debían financiarse allí, darles la plena autonomía para determinar cómo distribuir esos recursos. No es pasarle la pelota a otro; es distribuir la agencia.
 
-#### Flujos de valor y verdad universal en Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Flujos de valor y verdad universal en Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **Audience Member:** ¿Hay una verdad central en el corazón de Ethereum que todos ustedes están persiguiendo? No parece haber alineación sobre una verdad universal detrás de Ethereum en comparación con el sistema monetario actual. ¿Tiene sentido eso?
 
@@ -116,7 +116,7 @@ Eso es lo que me mantiene en Ethereum. Hay otras cadenas de bloques en las que p
 
 Scott Morris, que estuvo en todos los eventos de GEL, es uno de los principales expertos del mundo en esto y ha identificado formas de eludir las restricciones regulatorias donde las monedas comunitarias simplemente se llaman "cupones": no es dinero, es solo un cupón. Aún podrías tener un token que represente un cupón. No sé si ese vacío legal se sostendrá en los tribunales —no soy abogado— pero hay algunas historias de éxito de monedas comunitarias que realmente mantienen el valor circulando en su comunidad local. Me encantaría ver a alguien realmente tomar ese relevo y crear el "Salesforce" del espacio de las monedas descentralizadas de propiedad comunitaria, porque es esa facilidad de incorporación de personas y la creación de gobernanza en torno al token lo que ha sido una curva de aprendizaje. Veo eso como una de las cosas de mayor impacto que podríamos hacer, pero en realidad no conozco a nadie que lo esté impulsando de la manera que creo que debería ser.
 
-#### Ciudadanos globales con responsabilidades locales (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Ciudadanos globales con responsabilidades locales (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **Audience Member:** Retomando algunos hilos de toda la conversación: la tensión entre el protocolo global y las redes locales. Tenemos amigos y familiares distribuidos en diferentes biorregiones que capturan nuestros corazones. ¿Cómo piensan sobre el hecho de que somos más móviles que nunca, queremos ser localistas, pero estamos involucrados en redes que no están todas en el mismo lugar?
 

@@ -19,7 +19,7 @@ Mazungumzo na **Santiago Palladino** katika Siku ya Ethereum wakati wa Devconnec
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=FzJBV3oSUns) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Kukua mbali (0:07) {#growing-up-far-away-007}
+### Kukua mbali (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Asante, Binji. Asanteni nyote kwa kuwa hapa. Ni heshima kubwa kuwa hapa jukwaani na heshima zaidi kuwa na Devconnect hapa Buenos Aires.
 
@@ -39,13 +39,13 @@ Dhana inayojirudia ambayo tungeiona ni Argentina kama mahali pa kutorokea—maha
 
 Nukuu hiyo inatoka kwenye kipindi cha Dexter miaka iliyopita. Kwa kweli niliingia kwenye wiki ya Dexter kujaribu kuitafuta na nikapata maelezo haya mazuri: "Argentina ni eneo katika kipindi." Oh, na kwa njia, pia ni mahali halisi—ili mjue tu.
 
-#### Ugatuzi kama kipengele (4:47) {#decentralization-as-a-feature-447}
+### Ugatuzi kama kipengele (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Kwa hivyo tuko mbali, tumetengwa. Na kwa mbali simaanishi tu kijiografia—kama wengi wenu mliosafiri kuja hapa mlivyovumilia kwenye ndege. Hei, ni wakati wa kulipiza kisasi—sisi huwa tunakabiliana na hili kila tunapoenda mahali pengine.
 
 Hoja yangu ni: kuwa mbali sana, kutengwa sana na ulimwengu wote, nadhani haishangazi kwamba tulipopata teknolojia ambapo ugatuzi sio kasoro bali ni kipengele—kwamba ni rasilimali—tulijitosa humo.
 
-#### Muongo mmoja wa kripto ya Argentina (5:27) {#a-decade-of-argentine-crypto-527}
+### Muongo mmoja wa kripto ya Argentina (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Kwa kuwa sasa nimewapa muktadha wa ninakotoka, nataka kuzungumzia mambo mawili. Kwanza, kuelezea kile ambacho Waajentina wamekuwa wakifanya katika kripto kwa miaka kumi iliyopita au zaidi. Na pia kupitia watu tofauti, wasifu tofauti, asili tofauti ambazo tunahitaji ili kujenga Ethereum. Hoja ninayotaka kusisitiza ni: tunahitaji utofauti katika Ethereum. Tunahitaji utofauti wa kijiografia. Tunahitaji maeneo tofauti ya utaalamu, nyanja tofauti. Tunahitaji watu wengi iwezekanavyo wajitose ili kujenga kile tunachotaka kujenga.
 
@@ -59,7 +59,7 @@ Kutoka Voltaire, baadhi ya miradi inayotambulika zaidi ya Argentina iliibuka: Op
 
 Kiwango cha wasanidi programu wa Web3 hadi Web2 nchini Argentina ni karibu mara tatu ya kile cha Marekani. Hata katika Aztec Labs, mhandisi mmoja kati ya sita ni Muajentina—na ninazungumzia kampuni iliyoundwa nchini Uingereza. Tunapenda Web3. Tunavutiwa nayo kiasili. Nadhani sababu ni nusu ya kile Isabelle alichotaja katika mazungumzo yake wakati wa tukio hili, na pia hisia hii ya kutengwa na kupata katika Ethereum mahali ambapo tunaweza kujenga, ambapo tunaweza kustawi, na ambapo tunakaribishwa.
 
-#### Kuingia kwenye mfumo wa ikolojia (9:37) {#infiltrating-the-ecosystem-937}
+### Kuingia kwenye mfumo wa ikolojia (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Acha nishiriki visa vichache zaidi—tena, sio kuhusu pesa, bali kuhusu aina ya mambo ambayo Waajentina hawa ambao wameingia kwenye mfumo wa ikolojia wa Web3 wamekuwa wakijenga. Kwangu mimi, uzoefu wangu wa kwanza katika Web3 ulikuwa kukagua lugha ya mkataba mahiri—Serpent. Ikiwa hujawahi kuisikia, ni kwa sababu tuliiharibu.
 
@@ -67,7 +67,7 @@ Nikitoka katika miaka kumi ya maendeleo ya kitaaluma na ghafla kutua katika mfum
 
 Jamii ya usalama hapa Argentina ni ya kushangaza. Kumekuwa na udhaifu mkubwa muhimu uliogunduliwa na Waajentina katika ENS—hiyo inatoka kwa Red Guild, mojawapo ya timu zinazothaminiwa chini sana katika usalama katika mfumo mzima wa ikolojia, ukiniuliza. Hawa jamaa ni wazuri sana. Pia Waajentina wakigundua mashambulizi muhimu kwenye MakerDAO, au hata shambulio la mnyororo wa usambazaji kwenye SMS ambalo lilikuwa likisababisha wizi wa mamia ya akaunti za Telegram. Kwa njia—kikumbusho cha kila siku: usitumie SMS kwa 2FA.
 
-#### Viwango na miundombinu (11:17) {#standards-and-infrastructure-1117}
+### Viwango na miundombinu (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Pia tulichangia sana kwenye viwango. Miaka yangu mitano ya kwanza katika kripto ilikuwa OpenZeppelin. Nilipata nafasi ya kujenga mkataba wa ERC-721 pamoja na jamaa ambaye amekaa pale, na Facu pia. Msimbo huo hatimaye ungeendesha wazimu wa NFT miaka michache baadaye—uliandikwa kutoka hapa.
 
@@ -83,7 +83,7 @@ Yote haya yamekusanywa katika mpango mzuri na timu ya Crecimiento. Unaweza kuang
 
 Pia wanatoa michango mikubwa. Nataka kusimama kwenye moja. Jana kulikuwa na Kongamano la Ethereum Cypherpunk kuhusu faragha. Kwenye jukwaa kuu, Vitalik alikuwa akionyesha Kohaku, mkoba mpya wa faragha. Saa moja baadaye, kwenye jukwaa la pili—karibu limefichwa kwenye ghorofa ya juu—kulikuwa na jopo lililojumuisha mmoja wa wasanidi programu anayejenga Kohaku, ambaye ni Muajentina na anafanya kazi mitaa michache kutoka hapa.
 
-#### Kuleta Ethereum nyumbani (15:07) {#bringing-ethereum-home-1507}
+### Kuleta Ethereum nyumbani (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Lakini michango hii yote, mambo haya yote ambayo Argentina inaleta kwenye Web3—hayakutosha. Tulitaka kufanya zaidi. Tulitaka kuleta Ethereum hapa. Na tahadhari ya mshangao, kwa kuwa mmekaa hapa—ndiyo, tulifanikiwa.
 
@@ -91,13 +91,13 @@ Haya yote yalianza mnamo 2018 na ETH Buenos Aires, hackathon ya kwanza ya jamii 
 
 Na ndiyo, hatimaye hii ilisababisha mazungumzo na Mariano kwenye Devcon 5. Mazungumzo hayo yaliitwa "Kuishi kwenye fedha zilizogatuliwa (DeFi)—Jinsi Tulivyonusurika Mfumuko wa Bei wa 50% wa Argentina." Nambari hiyo inaonekana ndogo baada ya kufikia mfumuko wa bei wa 300%. Tayari mmeona picha hiyo katika wasilisho la Mariano. Kile ambacho hakuonyesha ni kwamba bado nina fulana hiyo. Kwa kweli tulichapisha fulana zilizosema "Devcon Buenos Aires 2020" ili kujaribu kufanya hilo liwe kweli. Nimehifadhi hii kwa zaidi ya miaka mitano. Ninajivunia kuionyesha sasa.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Tulifanikiwa. Siwezi kuelezea jinsi ninavyojivunia, jinsi nilivyo na heshima kwamba Devconnect hatimaye ilikuja hapa. Ni kama ndoto iliyotimia.
 
 Nadhani inaleta maana—sio tu kwa sababu ninaipenda nchi hii, bali kwa sababu inaonyesha kweli kwamba Ethereum inaweka mkutano wao pale wanaposema. Maadili haya yote kuhusu ugatuzi kwa kweli yanafanyiwa kazi kwa kuandaa mkutano hapa, kutumia vipaji vilivyopo—ambavyo natumai nimewashawishi vipo—na pia kutumia msingi wa watumiaji uliopo. Karibu Muajentina mmoja kati ya watano anamiliki kripto, iliyogatuliwa au iliyowekwa kati. Tunaweza kubishana kwa muda mrefu kuhusu kama kumiliki kripto kwenye soko kuu ni kumiliki kripto kweli au la, lakini hawa ni watu ambao tayari wanayo, ambao tayari wamekutana nayo. Kuna msingi wa watumiaji uliopo ambao unaweza kuutumia na kujaribu kuleta mambo mapya, bidhaa mpya, na kuona kile kinachoweza kujengwa.
 
-#### Ethereum kwa kila mtu (17:46) {#ethereum-for-everyone-1746}
+### Ethereum kwa kila mtu (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Acha nibadilishe mwelekeo kwa sekunde moja. Najua nimekuwa nikisifia jinsi Argentina ilivyo nzuri kwa kuandaa tukio, kwa vipaji vya ndani, kwa kila kitu. Lakini hoja ninayotaka kutoa hasa ni kwamba ikiwa Ethereum ilifanya kazi hapa—katika kona hii ya ulimwengu, mbali sana—inaweza kufanya kazi kila mahali. Argentina ni mfano tu unaoonyesha Ethereum ni teknolojia ambayo kwa kweli haina mipaka na inaweza kufanya kazi katika kona yoyote ya ulimwengu.
 
@@ -125,7 +125,7 @@ Waendeshaji wa nodi wanaendesha mtandao, kwa kweli wakitekeleza programu ambapo 
 
 Yote haya yaliendeshwa na kundi tofauti sana la watu. Ukichagua tu kundi la wasanidi programu—na mimi mwenyewe ni msanidi programu—hatuwezi kujenga hili.
 
-#### Aleph (23:59) {#the-aleph-2359}
+### Aleph (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** Najua hii labda sio maarufu kusema kwenye mkutano unaoitwa Devconnect, lakini hoja yangu ni: Ethereum ni teknolojia inayokusudiwa kufanya kazi kila mahali na inakusudiwa kwa kila mtu—kujengwa na kila mtu, kutoka kila asili, kutoka kila mahali ulimwenguni.
 
@@ -133,7 +133,7 @@ Kwa dakika moja niliyobakiza, nataka kuchukua nukuu kutoka kwa Jorge Luis Borges
 
 Ninachowaomba mfanye katika siku hizi ni kuungana na watu wengine. Kusanya maoni kuhusu kile mnachojenga. Jaribu kutafuta washirika, wajenzi, watumiaji, wawekezaji. Toka kwenye kiputo chako, toka kwenye eneo lako la faraja, na uzungumze na watu wengi uwezavyo. Kutana na watu wapya, ingiliana na watu wapya. Kumbuka kwamba uvumbuzi unastawi kwenye utofauti—iwe ni wa kijiografia, kutoka asili, au kutoka kwa itikadi. Unganeni, jengeni pamoja, na mfurahie wiki hii. Asante.
 
-#### Maswali na Majibu (25:35) {#qa-2535}
+### Maswali na Majibu (25:35) {#qa-2535}
 
 **Binji:** Hiyo ilikuwa ya kushangaza. Asante sana. Nadhani umeshughulikia karibu kila kitu kuhusu Ethereum—utamaduni, sifa za kiufundi—yote katika mazungumzo moja. Hiyo inavutia sana. Sidhani kama nimewahi kuona mtu akifanya yote hayo kwa wakati mmoja. Kwa hivyo, maswali machache. Lile nililoona la kuvutia zaidi—haswa unapozungumza kuhusu matukio ya matumizi—ni kitu gani ungependa kuona kikijengwa kwenye Ethereum ambacho hakijajengwa bado?
 

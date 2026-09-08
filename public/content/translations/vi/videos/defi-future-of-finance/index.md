@@ -18,7 +18,7 @@ Một video giải thích của **Finematics** bao quát về tương lai của 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=H-O3r2YMWJ4) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Một thế kỷ đổi mới tài chính (0:00) {#a-century-of-financial-innovation-000}
+### Một thế kỷ đổi mới tài chính (0:00) {#a-century-of-financial-innovation-000}
 
 Hệ thống tài chính mà chúng ta biết ngày nay đã trải qua nhiều thập kỷ tiến bộ công nghệ. Những nỗ lực đầu tiên nhằm làm cho tài chính hiệu quả hơn đã bắt đầu từ những năm 1920 với sự ra đời của máy kế toán và thẻ đục lỗ. Tiếp theo đó là sự trỗi dậy của các máy tính lớn (mainframe) đã tăng tốc đáng kể hệ thống ngân hàng vào những năm 1950 và sau đó.
 
@@ -28,7 +28,7 @@ Từ những năm 1990, nhờ sự phổ biến ngày càng tăng của internet
 
 Sau đó là cuộc cách mạng fintech. PayPal, Robinhood, TransferWise, Revolut và các công ty khởi nghiệp fintech khác đã hiểu được cách tiếp cận ưu tiên công nghệ (tech-first) được biết đến từ các công ty công nghệ phi tài chính khác và cung cấp cho người dùng của họ quyền truy cập liền mạch vào các dịch vụ tài chính — một trải nghiệm hoàn toàn khác biệt khi so sánh với các giao diện người dùng ngân hàng cồng kềnh.
 
-#### Các vấn đề trong tài chính truyền thống (2:09) {#problems-in-traditional-finance-209}
+### Các vấn đề trong tài chính truyền thống (2:09) {#problems-in-traditional-finance-209}
 
 Bất chấp một thế kỷ đổi mới, hệ thống tài chính vẫn còn lâu mới hoàn hảo:
 
@@ -44,7 +44,7 @@ Toàn bộ cơ sở hạ tầng tài chính bao gồm các hệ thống biệt l
 
 Đây chính xác là lý do tại sao chúng ta cần một thứ gì đó mới mẻ — một thứ gì đó tốt hơn có thể giải quyết một số vấn đề này.
 
-#### DeFi là gì? (3:58) {#what-is-defi-358}
+### DeFi là gì? (3:58) {#what-is-defi-358}
 
 Đây là lúc tài chính phi tập trung (DeFi) phát huy tác dụng. Thay vì dựa vào cơ sở hạ tầng cũ kỹ và kém hiệu quả, DeFi tận dụng sức mạnh của mật mã học, sự phi tập trung và Chuỗi khối để xây dựng một hệ thống tài chính mới. Một hệ thống có thể cung cấp quyền truy cập vào các dịch vụ tài chính quen thuộc như thanh toán, cho vay, vay mượn và giao dịch một cách hiệu quả, công bằng và cởi mở hơn.
 
@@ -54,7 +54,7 @@ Toàn bộ cơ sở hạ tầng tài chính bao gồm các hệ thống biệt l
 
 Tất cả những điều này đều có thể thực hiện được nhờ vào việc phát minh ra Bitcoin và Ethereum cùng các công nghệ nền tảng của chúng. Cụ thể, Ethereum với tư cách là một nền tảng hợp đồng thông minh cho phép tạo ra bất kỳ ứng dụng tài chính tùy ý nào. Nhờ những đặc điểm này, Ethereum đã trở thành Chuỗi khối được lựa chọn hàng đầu cho phần lớn các hoạt động DeFi.
 
-#### Các chỉ số tăng trưởng của DeFi (6:18) {#defi-growth-metrics-618}
+### Các chỉ số tăng trưởng của DeFi (6:18) {#defi-growth-metrics-618}
 
 Tài chính phi tập trung gần đây đã trải qua sự tăng trưởng to lớn. Một số chỉ số chính:
 
@@ -66,7 +66,7 @@ Tài chính phi tập trung gần đây đã trải qua sự tăng trưởng to 
 
 Điều này không chỉ giới hạn ở tiền mã hóa, vốn có thể khá biến động. Các stablecoin theo dõi giá trị của các loại tiền pháp định như đô la Mỹ cũng đã trải qua sự tăng trưởng to lớn trong hệ sinh thái DeFi. Vốn hóa thị trường của USDC, một stablecoin phổ biến trong DeFi, đã tăng từ chưa đầy một tỷ đô la vào tháng 4 năm 2020 lên hơn sáu tỷ đô la vào năm 2021. DAI đã tăng từ chưa đầy 100 triệu đô la vào tháng 4 năm 2020 lên gần hai tỷ đô la vào năm 2021.
 
-#### Các vấn đề trong thế giới thực mà DeFi giải quyết (8:00) {#real-world-problems-defi-solves-800}
+### Các vấn đề trong thế giới thực mà DeFi giải quyết (8:00) {#real-world-problems-defi-solves-800}
 
 Để hiểu rõ hơn nữa về đề xuất giá trị của tài chính phi tập trung, hãy cùng điểm qua một vài vấn đề phổ biến trong tài chính truyền thống và xem chúng có thể được giải quyết như thế nào trong DeFi.
 
@@ -80,7 +80,7 @@ Kế toán — mọi bản ghi đều có sẵn công khai trên Chuỗi khối,
 
 Quyền truy cập bình đẳng vào các dịch vụ tài chính — một Giao thức DeFi không quan tâm bạn là ai. Nó chỉ tuân theo các quy tắc được xác định trước hoàn toàn giống nhau đối với tất cả mọi người.
 
-#### Những thách thức của DeFi (10:48) {#challenges-of-defi-1048}
+### Những thách thức của DeFi (10:48) {#challenges-of-defi-1048}
 
 Mặc dù DeFi mang đến cho chúng ta một đề xuất giá trị độc đáo, nó cũng đi kèm với những thách thức riêng. Nó mang lại nhiều trách nhiệm hơn cho người dùng, những người giờ đây thực sự sở hữu tài sản của họ và phải đảm bảo rằng họ lưu trữ chúng một cách an toàn. Không có nhiều sự cầm tay chỉ việc ở đây, đặc biệt là khi tương tác với các Giao thức DeFi mới.
 
@@ -92,7 +92,7 @@ Các vụ hack là một thách thức khác của không gian DeFi, khiến m�
 
 Các khoản cho vay không có tài sản thế chấp và các khoản thế chấp là những lĩnh vực lớn của tài chính truyền thống hơi khó triển khai hơn trong DeFi. May mắn thay, đã có những Giao thức như Aave khám phá các khả năng khác nhau, chẳng hạn như sự ủy quyền tín dụng và các khoản thế chấp được token hóa.
 
-#### Tương lai của tài chính (12:38) {#the-future-of-finance-1238}
+### Tương lai của tài chính (12:38) {#the-future-of-finance-1238}
 
 Bất chấp những thách thức, DeFi là một sự đổi mới độc đáo từ không đến một (zero-to-one), và việc giải quyết một số thách thức này chỉ là vấn đề thời gian. Vậy điều gì sẽ xảy ra với tài chính truyền thống nếu DeFi tiếp tục đổi mới và phát triển với tốc độ chóng mặt này?
 

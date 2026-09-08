@@ -18,7 +18,7 @@ Wasilisho la **Peter Van Valkenburgh**, Mkurugenzi Mtendaji wa Coin Center, kati
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=GQML0c1_4Gs) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 Hili ni jukwaa kubwa lenye mwendo mrefu na mimi ni wa kizamani, nahofia, kwa hivyo nina hotuba iliyoandikwa, lakini natumai mtaifurahia. Kwa hivyo, asanteni kwa kunialika. Coin Center, shirika langu, limekuwepo kwa miaka 11. Tunatetea wasanidi na watumiaji wa Bitcoin, Ethereum, na teknolojia za sarafu-fiche zinazofuata dhidi ya udhibiti usiofaa wa serikali huko Washington DC. Tunajua vitisho tunapoviona. Kwa hivyo, zaidi ya miaka 9 iliyopita leo, nilisimama jukwaani huko Shanghai kwenye DevCon ya pili ya Ethereum na nilionya kuhusu hatari za kufanya ICO. Kwa kweli lilikuwa wasilisho la ufunguzi kwenye DevCon ya pili. Hii ni 2016. Hii ni mwanzoni mwa kile kinachoitwa mlipuko wa ICO. Hiyo ilikuwa muda mrefu kabla Gary Gensler hajawa SEC. Ilikuwa kabla mtu yeyote hajapokea ilani ya Wells. Ilikuwa hata kabla ya udukuzi wa DAO, ambao kama unakumbuka au ulikuwepo wakati huo ulisababisha ripoti ya DAO kutoka SEC mwanzoni mwa uchunguzi wao na mashtaka ya watu katika kripto.
 
@@ -26,7 +26,7 @@ Miaka mitatu iliyopita, nilisimama jukwaani kwenye ZCON uh 3 ya Zcash na kutoa h
 
 Wamarekani wanaweza kutumia teknolojia hiyo. Na labda muhimu zaidi, mahakama ziliweka mfano wa kisheria unaobana kwamba huwezi kutumia sheria za vikwazo kuwaambia Wamarekani ni programu gani wanaweza na hawawezi kutumia. Lakini si habari njema zote. Wasanidi wanaendelea kupigania uhuru wao. Tunawaunga mkono kwa muhtasari wa amicus. Coin Center pia inamuunga mkono mlalamikaji wa madai. Hili ndilo lalamiko. Ni Michael Llewellyn. Yeye ni msanidi wa programu. Na anaishtaki Idara ya Haki katika mahakama ya Texas ili kupata hukumu ya kutangaza kwamba kuchapisha programu kwa ajili ya faragha si kosa la jinai na hakuhitaji leseni nchini Marekani. Kwa hivyo, unaweza usijue mengi kunihusu au
 
-#### Faragha ni ya kiuwepo (3:15) {#privacy-is-existential-315}
+### Faragha ni ya kiuwepo (3:15) {#privacy-is-existential-315}
 
 Coin Center, lakini natumai unajua kwamba unapaswa kuniamini ninapotoa onyo, wakati onyo linastahili. Ikiwa tutafanikiwa katika kujenga na kudumisha miundombinu ya kifedha iliyo huru na wazi, tunahitaji kwenda kwa uangalifu. Na ndiyo maana nataka kuzungumza leo kuhusu faragha. Faragha ni ya kiuwepo kwa Ethereum. Faragha si eneo la kushambuliwa kidhibiti. Sitasimama hapa na kukuambia usijenge faragha kama nilivyokuambia usifanye ICO mwaka wa 2016.
 
@@ -34,7 +34,7 @@ Faragha kwa kweli ni njia ya kupunguza eneo la kushambuliwa. Na mashtaka ya Torn
 
 Na ili kuthibitisha hilo kwako, kesi ninayotaka kuelekeza uangalifu wako leo si mashtaka ya sheria ya dhamana. Hata si mashtaka ya utakatishaji fedha au ufadhili haramu. Inahusu thamani inayoweza kutolewa na mchimbaji au MEV. Lakini kabla hatujafika huko, hebu tuzungumze kwa ufupi kuhusu Frankenstein. Kama daktari mzuri alivyosema, jinsi upatikanaji wa maarifa ulivyo hatari, na jinsi mtu anayeamini mji wake wa asili kuwa dunia alivyo na furaha zaidi kuliko yule anayetamani kuwa mkuu kuliko asili yake inavyoruhusu.
 
-#### Mary Shelley na mwelekeo wa njia moja wa maarifa (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley na mwelekeo wa njia moja wa maarifa (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Hiki ndicho ninachofikiri Mary Shelley anasema katika riwaya hiyo. Faragha si tu kuhusu utu wa binadamu. Inahusu ukosefu mzuri wa maarifa. Kama vile ambavyo ingekuwa vigumu kuishi maisha ya mtu kwa uchunguzi wa mara kwa mara, kila mtu akivamia faragha yako kila wakati, ingekuwa vigumu pia kuishi maisha yako kwa ujuzi wa karibu wa mara kwa mara wa mambo ya faragha ya kila mtu mwingine. Wewe ukivamia faragha ya kila mtu mwingine kila wakati. Kwa nini hivyo? Kwa sababu kuwa mjuzi wa yote bila kuwa na uwezo wote, kuona kila kitu bila kuwa na uwezo wa kurekebisha kila kitu, huwafanya binadamu kuwa wazimu. Inaharibu ubinadamu wetu kwa wasiwasi, kiburi, na harakati za kudhibiti yasiyodhibitika.
 
@@ -44,7 +44,7 @@ Sio kuhusu Uthibitisho wa Kazi (PoW). Sio kuhusu minyororo ya vitalu, neno ambal
 
 Gharama ya usuluhishi huongeza gharama za muamala, ikipunguza ukubwa wa chini wa muamala unaowezekana na kukata uwezekano wa miamala midogo ya kawaida. Na kuna gharama pana zaidi, kupoteza uwezo wa kufanya malipo yasiyoweza kubatilishwa kwa huduma zisizoweza kubatilishwa. Pamoja na uwezekano wa kubatilishwa, hitaji la uaminifu huenea. Kwa hivyo, lengo la Satoshi kwa kweli lilikuwa kutoegemea upande wowote sawa na kutoweza kubatilishwa. Uwezo wa kubatilisha kwake ni asili ya gharama kubwa za muamala zinazohusiana na uaminifu. Hakujitokeza wazi na kusema kwenye waraka wa kiufundi,
 
-#### Gharama ya kusuluhisha mizozo (7:50) {#the-cost-of-mediating-disputes-750}
+### Gharama ya kusuluhisha mizozo (7:50) {#the-cost-of-mediating-disputes-750}
 
 lakini nadhani anachomaanisha kwa kusuluhisha mizozo pia ni kudhibiti ulaghai, kuzuia uhalifu, kutii sheria na mamlaka ya mataifa, na kudhibiti watu. Mara nyingi tunazungumza kuhusu jinsi minyororo ya vitalu isivyofaa kiukokotoaji, na ndivyo ilivyo. kwamba hata juhudi kubwa za kiukokotoaji za kuthibitisha saini za kidijitali ulimwenguni kote bila usambamba ni ndogo ikilinganishwa na ukosefu wa ufanisi uliopo katika mzozo wa kibinadamu kuhusu thamani ya kimaadili ya kila muamala na kama unapaswa kujumuishwa kwenye mnyororo.
 
@@ -56,7 +56,7 @@ Afadhali ikiwa hawawezi hata kutambua nguvu yao. Afadhali zaidi ikiwa ni vipofu.
 
 Hapana. Hoja bora ya faragha ni kwamba kutoegemea upande wowote kwa mthibitishaji kunategemea hilo kwa sababu kutoegemea upande wowote kupitia ugatuzi hakutatosha kamwe. Kutoegemea upande wowote kunahitaji upofu. Ningependekeza kwa unyenyekevu kwamba kuna
 
-#### Sheria mbili za maarifa na nguvu (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Sheria mbili za maarifa na nguvu (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 sheria mbili za msingi za maarifa na nguvu katika minyororo ya vitalu. Sheria ya kwanza, hakuna kitu kilicho wazi kinachobaki bila kuegemea upande wowote. Leja inayoonekana itakuwa leja inayosuluhishwa. Itasuluhishwa na maslahi binafsi ya wathibitishaji wenye nguvu, kupitia ujanja wa maslahi binafsi kama thamani inayoweza kutolewa na mchimbaji (MEV). Itasuluhishwa na shinikizo la nje ya mnyororo la vyombo vyenye nguvu kama mashirika na mataifa kupitia uwekaji wa majukumu ya kisheria na dhima kwa kushindwa kuheshimu majukumu hayo. Ikiwa mthibitishaji ana hata kiasi kidogo cha nguvu, watafanywa kutumia nguvu hiyo. Dunia iliyochorwa ramani ni dunia itakayogawanywa.
 
@@ -68,7 +68,7 @@ Ndiyo, shirika langu, Coin Center, daima litakuwepo kupambana dhidi ya majaribio
 
 Mabwawa ya faragha ni mbinu ya busara ya kupunguza tishio hilo. Jaribu kadiri iwezekanavyo kuwanyima watu wabaya ufikiaji wa zana nzuri isiyoegemea upande wowote, lakini kumbuka kwamba zana hiyo inaacha kutoegemea upande wowote. Na hata hivyo, wakati mwingine yeyote anayetoa seti ya kutojulikana kwa bwawa hilo atashindwa kuwanyima watu wabaya ufikiaji wa zana hiyo. Na muamala wa uingizaji wa watu hao wabaya utabaki kuonekana kwenye tabaka la 1 (l1). Na itakuwa silaha yenye nguvu kwa wapinzani wetu.
 
-#### Kesi ya Pereira Bueno na MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Kesi ya Pereira Bueno na MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Lakini kesi inayonisadikisha kweli kuhusu hitaji kubwa la faragha ya tabaka la msingi si Tornado Cash. Ni kesi nyingine katika Wilaya ya Kusini ya New York, kesi ya Pereira Bueno. Ndugu wawili wanashtakiwa kwa ulaghai wa kielektroniki wa jinai. Walipata njia ya kutumia programu ya MEV Boost kufanya shambulio la sandwichi kwa watumiaji wengine wa MEV Boost ambao wao wenyewe walikuwa wakiwafanyia sandwichi watumiaji wa kawaida wa Ethereum. Walipata zaidi ya dola milioni 20 kwa kufanya hivi. Hawakumwambia uongo mtu yeyote au kujiwakilisha vibaya kwa washirika wowote wa uhusiano wa uaminifu au wa kimkataba. Hata hivyo, waendesha mashtaka wa Wilaya ya Kusini ya New York wanafikiri kwamba wana hatia ya ulaghai wa kielektroniki, uhalifu wa shirikisho, kwa sababu wao si, kwa kunukuu, mthibitishaji mwaminifu.
 
@@ -76,7 +76,7 @@ Wakati neno hilo uthibitishaji mwaminifu na mthibitishaji mwaminifu lilipoonekan
 
 Thamani inayoweza kutolewa na mchimbaji (MEV) ni ukweli wa kuchukiza wa Ethereum. Hiyo pia ina asili yake katika ukosefu wa faragha. Ni asili ya umma ya miamala ya DEX inayoruhusu kufanyiwa shambulio la sandwichi kwa urahisi na wathibitishaji. Ni vigumu zaidi, labda si jambo lisilowezekana, lakini ni vigumu zaidi kufanya sandwichi miamala ikiwa huwezi kuona misingi yao ya kiuchumi. Lakini sitaki tu faragha ya tabaka la msingi kama njia ya kukatisha tamaa MEV. Ninaitaka kama njia ya kuwatetea wathibitishaji.
 
-#### Majukumu yanayoweza kutekelezwa kisheria ya wathibitishaji (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Majukumu yanayoweza kutekelezwa kisheria ya wathibitishaji (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Mbinu kubwa zaidi ya DOJ katika kesi ya Pereira Bueno ni kwamba wathibitishaji wana majukumu yanayoweza kutekelezwa kisheria kwa kila mmoja kutokana na asili ya umma ya miamala wanayothibitisha. Na ikiwa majukumu hayo yatakiukwa, wathibitishaji, nadhani wanafikiri, wanapaswa kushtakiana. Na ikiwa hawatafanya hivyo, serikali, Wilaya ya Kusini ya New York, inapaswa kuwashtaki wathibitishaji wasio waaminifu kwa uhalifu. Na hii haiishii tu kwenye ulaghai wa kielektroniki. Ikiwa unaweza kuona muamala wa utakatishaji fedha au ungeweza kuuona kwa kutumia uchambuzi wa mnyororo wa vitalu, basi inakuwaje wewe si mshiriki katika utakatishaji fedha huo?
 
@@ -84,7 +84,7 @@ Ikiwa unajenga kwenye toleo la mnyororo ambalo lina miamala iliyowekewa vikwazo 
 
 Upofu wa makusudi si utetezi, lakini upofu halisi ndio utetezi. Kwa hivyo ikiwa kweli unataka kutohitaji uaminifu, ikiwa kweli unataka miundombinu isiyoegemea upande wowote, ikiwa unataka mabomba bubu, basi mabomba yanahitaji kuwa vipofu kweli kwa kile kinachotiririka kupitia kwao.
 
-#### Mabomba ya fedha za jadi na SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Mabomba ya fedha za jadi na SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Sasa, ukosoaji mzuri wa haya yote, unaweza kusema, Peter, tayari tuna mabomba bubu katika tasnia ya kifedha ya jadi, katika mfumo wa kifedha wa kimataifa wa jadi, na kwamba waendeshaji wa mabomba hayo bubu si vipofu kwa njia ya kriptografia kwa ukweli wa kiuchumi na vipengele vya jinai vya miamala wanayoweka kwenye leja zao. Bomba kubwa zaidi kati ya hayo linaitwa SWIFT. Na hii ni hoja yenye nguvu dhidi ya kile nilichokuwa nikisema.
 
@@ -100,7 +100,7 @@ Na hatimaye, hata kama SWIFT itanusurika mgogoro wa sasa unaoenda polepole ambao
 
 Je, tuko hapa kwa ajili ya mabomba bubu?
 
-#### Hitimisho na utetezi wa miundombinu isiyoegemea upande wowote (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Hitimisho na utetezi wa miundombinu isiyoegemea upande wowote (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Kwa kumalizia, Coin Center haiendi popote, na daima tutakuwepo kusaidia kutetea wasanidi wa itifaki na miundombinu dhidi ya mashtaka yasiyo ya haki na kanuni zilizopitiliza. Lakini bila faragha halisi, pambano hilo linazidi kuwa gumu. Tunaweza kufanya nini? Moja, ninaamini Ethereum inapaswa kuwa na faragha ya tabaka la msingi au angalau kuwa leja ya msingi kwa L2 ambazo zina vipanga mfuatano vipofu na vilivyogatuliwa kweli.
 
@@ -110,7 +110,7 @@ Na tuna mradi uliotangazwa hivi karibuni wa John Hancock um ambao unatafuta njia
 
 Faragha ni ya kiuwepo. Asante.
 
-#### Kipindi cha Maswali na Majibu (24:21) {#qa-session-2421}
+### Kipindi cha Maswali na Majibu (24:21) {#qa-session-2421}
 
 **Mwenyeji:** Asante. Kushiriki nadhani mojawapo ya mada muhimu zaidi za nyakati zetu kwa mbali. Nadhani swali letu la kwanza kwa kweli liko katika uwanja wa — unaonaje ufafanuzi wa faragha kwa watu wapya? Kwa muda mrefu sana dhana ya faragha imeoshwa katika wazo hili la usiri — ni kwa watu waliovaa makoti yenye kofia, n.k. Unahisi hilo ni kikwazo kiasi gani, hasa unapofikiria kuhusu juhudi za ushawishi? Unahitaji mtu wa kawaida pia ahisi kama hili ni jambo ambalo ni kwa ajili yao. Je, unahisi hilo ni pambano kubwa? Tunapunguzaje hilo?
 

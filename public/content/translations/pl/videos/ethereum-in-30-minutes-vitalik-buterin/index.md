@@ -18,7 +18,7 @@ breadcrumb: "Ethereum w 30 minut"
 
 *Poniższy zapis to przystępna kopia [oryginalnej transkrypcji wideo](https://www.youtube.com/watch?v=ei3tDRMjw6k) opublikowanej przez Fundację Ethereum. Została ona lekko zredagowana w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:02) {#introduction-002}
+### Wprowadzenie (0:02) {#introduction-002}
 
 Świetnie, a więc Ethereum w 30 minut. To prezentacja, którą wygłaszałem na właściwie każdym Devconie od momentu uruchomienia. Ciekawe jest to, że w miarę jak zmienia się ekosystem Ethereum, jak zmienia się protokół Ethereum i jak zmieniają się czasy, treść tej prezentacji również ulega sporym zmianom. Jeśli wrócicie do jej odpowiednika z 2015 roku, usłyszycie wiele o blokach wujków (uncle blocks). Oczywiście bloki wujków to cecha dowodu pracy (PoW). Teraz mamy dowód stawki (PoS), więc nie mamy już bloków wujków. Ethereum ma teraz oczywiście również warstwy 2 (L2), a wtedy w ogóle by ich tu nie było. Teraz wiemy, że warstwy 2 to połowa sukcesu. Ethereum to przede wszystkim ewoluujący ekosystem, a treść tej prezentacji będzie się nadal zmieniać wraz ze zmianami technologii, a także w miarę jak nacisk ekosystemu przesuwa się z budowania podstawowej infrastruktury na ogromne skupienie się na aplikacjach.
 
@@ -30,7 +30,7 @@ Jak działa komputer światowy? Sposób, w jaki o tym myślę, jest taki: warstw
 
 Warstwa 2 to GPU. Warstwa 2 to wy wszyscy na tej sali, którzy jesteście częścią jakiejkolwiek warstwy 2. Kto z was jest częścią warstwy 2? Hurra. Kto z was korzystał z warstwy 2? Kto korzystał z warstwy 1? Dobrze, wszyscy jesteśmy tu użytkownikami. Istnieje wiele tych różnych GPU, a Ethereum jako komputer światowy jest w stanie utrzymać się w całości, ponieważ każde z tych GPU jest połączone z maszyną zaufania poprzez systemy dowodów optymistycznych, dowody z wiedzą zerową, SNARK-i, STARK-i, plonk czy jakiekolwiek inne modne hasła. Wszystkie te systemy zapewniają, że warstwa 1 jest w stanie bez zaufania weryfikować to, co dzieje się wewnątrz warstw 2, a warstwy 2 są również w stanie bez zaufania odczytywać to, co dzieje się na warstwie 1.
 
-#### Decentralizacja i różnorodność (5:11) {#decentralization-and-diversity-511}
+### Decentralizacja i różnorodność (5:11) {#decentralization-and-diversity-511}
 
 Istnieje ważna interakcja między tymi dwoma komponentami i razem tworzą one Ethereum, które mamy dzisiaj. Czym jest L1? To łańcuch. Działa na dowodzie stawki. Nie psuje się. Co to oznacza? L1 Ethereum to łańcuch, który istnieje łącznie od ponad dziewięciu lat, a w swojej obecnej formie dowodu stawki istnieje od nieco ponad dwóch lat. Jedną z naprawdę ważnych rzeczy dla warstwy bazowej jest wyraźny dowód na to, że budujesz na warstwie bazowej, która jest zdecentralizowana, otwarta, solidna i prawdopodobnie zachowa te cechy w przyszłości. 
 
@@ -42,7 +42,7 @@ Następnie mamy „niezidentyfikowane” (unidentified). Niezidentyfikowane to n
 
 Jedną z właściwości, która faktycznie znacznie się poprawiła, jest różnorodność klientów. Około pięć lat temu Ethereum to był w zasadzie tylko Go Ethereum (Geth). Kiedy masz ekosystem zdominowany przez jednego klienta, to samo w sobie staje się centralnym punktem awarii. Kto z was pamięta ataki DoS z 2016 roku? Budzisz się o 5:17 rano, dostajesz pobudkę w wojskowym stylu, schodzisz do pokoju narad (war room), a ktoś odkrył błąd w kliencie. Cały łańcuch się zatrzymuje. Naprawiamy to, a dwa lub trzy dni później ktoś znajduje kolejny błąd. Trwa to przez cały miesiąc, aż w końcu musimy przeprowadzić twarde rozwidlenie. Ale w tym okresie możliwość posiadania przez Ethereum dwóch różnych klientów — w tamtym czasie były to Geth i Parity — w zasadzie uratowała łańcuch. Bywały chwile, kiedy błąd uderzał w Getha, ale nie w Parity, i takie, kiedy błąd uderzał w Parity, ale nie w Getha. Ethereum wiele zyskało na posiadaniu wielu implementacji oprogramowania i jest to coś, co na rok 2024 jest prawdopodobnie w najlepszym stanie w całej historii Ethereum.
 
-#### Wielu klientów i solidność (10:40) {#multiple-clients-and-robustness-1040}
+### Wielu klientów i solidność (10:40) {#multiple-clients-and-robustness-1040}
 
 Jeśli spojrzymy na klientów konsensusu, którzy obsługują część Ethereum związaną z dowodem stawki, oraz klientów wykonawczych, którzy obsługują część EVM Ethereum, możemy zauważyć, że pojedynczym klientem o najwyższym udziale w rynku jest Geth, który ma około 50%. Co się stanie, jeśli dosłownie dzisiaj, w tej chwili, wystąpi błąd w jakimkolwiek kliencie Ethereum? Sprawdźcie, czy Ethereum nadal działa. Zgaduję, że tak — postawiłbym 99,99% na PolyMarket. 
 
@@ -56,7 +56,7 @@ Dwa lata temu ten wykres wyglądał gorzej. Decentralizacja Ethereum nie tylko p
 
 Jeśli masz 32 ETH, lub mniej, jeśli dołączysz do puli, pojawia się coraz więcej naprawdę interesujących opcji puli — takich jak Obol squad staking, który pozwala na tworzenie mniejszych puli ze znajomymi. Istnieje wiele różnych sposobów, aby zostać stakerem, a jeśli to zrobisz, stajesz się częścią tej sieci węzłów zabezpieczających blockchain Ethereum.
 
-#### Weryfikacja węzłów i skala (15:06) {#node-verification-and-scale-1506}
+### Weryfikacja węzłów i skala (15:06) {#node-verification-and-scale-1506}
 
 Chyba tak opisuje to propaganda fundacji — ma uroczego słonia. Więc brawa dla słonia! Ty również możesz dołączyć do sieci i pomóc w jej zabezpieczaniu. Nawet jeśli nie jesteś stakerem, możesz również uruchomić węzeł Ethereum na swoim komputerze i dobrowolnie weryfikować łańcuch. 
 
@@ -70,7 +70,7 @@ Staking z mniejszą ilością ETH to również bardzo aktywny wymóg badawczy. 3
 
 Co działa na L1 Ethereum? Niektóre aplikacje o wysokiej wartości. Wiele zdecentralizowanych finansów (DeFi) o wysokiej wartości działa na L1. ENS jest obecnie na L1, chociaż coraz częściej współpracuje z warstwami 2. Ludzie trzymają aktywa na warstwie 1. Ponadto warstwa 1 zarządza korzeniami bloków (block roots), korzeniami stanu (state roots) i systemami dowodów dla warstw 2. Zabezpiecza ona warstwy 2. Warstwa 1 musi być wystarczająco potężna, aby obsługiwać operacje międzywarstwowe, zwłaszcza w przypadku awarii warstwy 2. Różnica między warstwą 2 a niezależnym łańcuchem polega na tym, że nawet jeśli twoja warstwa 2 padnie ofiarą ataku 51% lub zespół zakończy działalność, warstwa 1 nadal tam jest, aby chronić użytkowników. Użytkownicy są w stanie udowodnić swoją własność i stan wewnątrz warstwy 2 i zmigrować je z powrotem do warstwy 1. 
 
-#### Prędkości L2 i mapy drogowe (20:33) {#l2-speeds-and-roadmaps-2033}
+### Prędkości L2 i mapy drogowe (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Niedawno przeprowadzono z tym eksperyment na żywo. dYdX v3 zostało niedawno zamknięte, a ludzie z L2Beat napisali własną implementację oprogramowania mechanizmu ewakuacyjnego (escape hatch). Bez jakiegokolwiek zaangażowania ze strony zespołu dYdX, użytkownicy byli w stanie wziąć wszelkie aktywa, które mieli w dYdX v3, i przenieść je z powrotem na L1 Ethereum. Wyjście z warstwy 2 bez zaangażowania zespołu to nie tylko teoria, to rzeczywistość.
 
@@ -82,7 +82,7 @@ Potem The Merge. Z powodu interesującego dziwactwa matematycznego, mimo że śr
 
 Historia Ethereum: listopad 2013 to biała księga (whitepaper). Lipiec 2015 to uruchomienie. Około 2018 roku Ethereum ustaliło swój przybliżony projekt dla dowodu stawki i próbkowania dostępności danych. Oryginalne prace na temat próbkowania dostępności danych i kodowania wymazań (erasure coding) napisałem jeszcze w 2017 roku. 
 
-#### Casper i skalowanie rollupów (25:27) {#casper-and-rollup-scaling-2527}
+### Casper i skalowanie rollupów (25:27) {#casper-and-rollup-scaling-2527}
 
 Jeśli poszperacie na GitHubie, możecie poszukać katalogu o nazwie `simple_casper` i znaleźć kontrakty napisane w języku Serpent. Kto z was pamięta Serpenta? Kto z was używa Serpenta? To znaczy, uważam, że Python jest naprawdę piękny, ale jeśli tego chcecie, powinniście kodować w Vyper. Vyper jest w rzeczywistości świetny i znacznie się poprawił. Wewnątrz tego repozytorium w 2017 roku próbowaliśmy dokonać pełnej abstrakcji i napisać logikę dowodu stawki bezpośrednio jako inteligentny kontrakt. Uruchomiliśmy demo o 23:20 czasu w Bangkoku 31 grudnia 2017 roku — chcieliśmy wypuścić coś przed Nowym Rokiem — i demo ostatecznie dość szybko się zepsuło. To były wczesne dni.
 

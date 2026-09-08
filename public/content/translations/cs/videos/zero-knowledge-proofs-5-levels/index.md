@@ -19,13 +19,13 @@ Počítačový vědec **Amit Sahai**, profesor na UCLA Samueli School of Enginee
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=fOGdb1CTu5c) publikovaného společností WIRED. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 **Amit Sahai:** Ahoj, jmenuji se Amit Sahai a jsem profesorem počítačových věd na UCLA Samueli School of Engineering. Dnes jsem byl požádán, abych vysvětlil důkazy s nulovou znalostí v pěti úrovních rostoucí složitosti.
 
 Důkaz s nulovou znalostí je způsob, jakým může dokazovatel přesvědčit ověřovatele, že je nějaké tvrzení pravdivé, a přitom neodhalit žádné další informace kromě samotného faktu, že je tvrzení pravdivé. Důkazy s nulovou znalostí se používají v blockchainech a kryptoměnách. Kryptografové jsou nadšeni z důkazů s nulovým vědomím kvůli jejich úžasným matematickým vlastnostem, ale také kvůli jejich neuvěřitelné využitelnosti v mnoha různých scénářích.
 
-#### Úroveň 1: dítě (0:41) {#level-1-child-041}
+### Úroveň 1: dítě (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Jaký je tvůj oblíbený předmět?
 
@@ -55,7 +55,7 @@ Takže Chelsea, tvými vlastními slovy, co je to důkaz s nulovou znalostí?
 
 **Chelsea:** Důkaz s nulovou znalostí je důkaz nějakého tvrzení. Neukážeš jim proč nebo co. Jen jim ukážeš malý kousek, nebo prostě uděláš nějaký divný kouzelnický trik, který vlastně není kouzelnický trik, a oni budou přesvědčeni. A ty jsi jim neukázal proč, ani nic podobného.
 
-#### Úroveň 2: teenager (3:31) {#level-2-teen-331}
+### Úroveň 2: teenager (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Takže, slyšel jsi už někdy pojem důkaz s nulovou znalostí?
 
@@ -85,7 +85,7 @@ Takže na základě toho, o čem jsme dnes mluvili, tvými vlastními slovy, co 
 
 **Teenager:** Je to jako když máte nějaké opravdu důležité tajemství, o kterém chcete, aby někdo věděl, ale nechcete mu říct všechno. Můžete použít důkaz s nulovou znalostí, abyste mu to tajemství dokázali, ale neprozradili ho celé.
 
-#### Úroveň 3: vysokoškolák (6:13) {#level-3-college-student-613}
+### Úroveň 3: vysokoškolák (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Co studuješ?
 
@@ -131,7 +131,7 @@ Můžeš si náhodně vybrat dvě země a my zase odhalíme dvě barvy.
 
 **Amit Sahai:** Jedním skvělým příkladem jsou volby. Pokud bys mohl dokázat, že volby proběhly správně — že každý hlas byl započítán a vše se sečetlo tak, že vyhrála jedna osoba s konkrétním celkovým počtem — s nulovým vědomím, pak nemusíš prozrazovat skutečné hlasy žádného člověka. A přesto by všichni viděli, že to bylo provedeno správně.
 
-#### Úroveň 4: postgraduální student (11:59) {#level-4-grad-student-1159}
+### Úroveň 4: postgraduální student (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Je skvělé, že jsi tady a že si s tebou můžu popovídat, Eli. Můžeš mi říct něco málo o svém výzkumu?
 
@@ -165,7 +165,7 @@ Můžeš si náhodně vybrat dvě země a my zase odhalíme dvě barvy.
 
 **Eli:** Myslím, že to je jeden z důvodů, proč mě vícestranné výpočty tak přitahovaly. Jedním z nejdůležitějších problémů na světě je skutečnost, že si tolik lidí navzájem nedůvěřuje. Být schopen použít matematiku k vytvoření technologie, která lidem umožňuje spolupracovat, aniž by si museli důvěřovat, je opravdu skvělé a úžasné poslání.
 
-#### Úroveň 5: expert (17:10) {#level-5-expert-1710}
+### Úroveň 5: expert (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, je tak skvělé tě zase vidět. Myslím, že naposledy jsme se viděli v roce 2017 nebo tak nějak.
 

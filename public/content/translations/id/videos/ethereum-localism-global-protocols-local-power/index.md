@@ -20,7 +20,7 @@ Diskusi panel dengan **Benjamin Life** dan **Sarah Johnstone** di EthBoulder 202
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=I4xb0rst6SQ) yang diterbitkan oleh EthBoulder. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar Lokalisme Ethereum (0:12) {#introduction-to-ethereum-localism-012}
+### Pengantar Lokalisme Ethereum (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Halo. Apakah Anda bisa mendengar kami? Bagus. Sangat menyenangkan bisa berada di sini. Mari kita mulai dengan perkenalan. Saya Sarah Johnstone. Saya seorang ahli permakultur, bioregionalis, dan anggota Ethereum yang aktif. Dan saya sangat bersemangat dengan komunitas lokalisme Ethereum. Saya sangat senang berada di sini bersama Benjamin.
 
@@ -30,7 +30,7 @@ Diskusi panel dengan **Benjamin Life** dan **Sarah Johnstone** di EthBoulder 202
 
 **Benjamin Life:** Ya, sungguh indah memiliki beberapa katalisator GEL — seperti singkatannya — dan gerakan lokalisme Ethereum di sini. Saya ingin memberikan apresiasi kepada Christy dan James serta beberapa anggota kru mereka di Portland yang menyatukan sekelompok dari kami untuk pertama kalinya. Di sanalah saya pertama kali bertemu Kevin Owocki, meskipun kami berdua tinggal di Boulder. Hal itu mengkatalisasi banyak hal dan semacam menetapkan preseden tentang apa itu komunitas lokalisme Ethereum dan apa nilai-nilai bersamanya. Hal ini benar-benar menyatukan semacam kelompok kiri-kripto, tetapi juga subkumpulan komunitas Web3 yang lebih selaras dengan nilai-nilai secara eksplisit yang menurut saya dengan memberinya nama dan ruang benar-benar membantu banyak dari kita untuk saling menemukan.
 
-#### Nilai-nilai dan Ketegangan antara Global vs Lokal (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Nilai-nilai dan Ketegangan antara Global vs Lokal (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** Dan apakah Anda keberatan berbicara tentang beberapa nilai yang kita pegang dalam ekosistem tersebut?
 
@@ -40,7 +40,7 @@ Bagi kita yang masuk ke ruang ini karena nilai-nilai partisipasi demokratis, kep
 
 Lokalisme Ethereum seolah berada di tengah kontradiksi tersebut. Alih-alih mengatakan ini salah satu dari keduanya — ini bukan hanya hiper-lokal dan mengabaikan kepentingan global, juga tidak mencoba menciptakan lapisan koordinasi global abstrak yang sebenarnya tidak terhubung secara bermakna dengan kehidupan nyata sehari-hari orang-orang. Dengan menavigasi ketegangan itu, kita mencari di mana kita bisa berada dalam solidaritas global. Apa yang ringan harus bersifat global dan dibagikan, dan apa yang berat harus bersifat lokal dan dikelola sendiri. Kita menyatukan pengetahuan dan perangkat lunak sumber terbuka kita, tetapi memastikan bahwa penentuan nasib sendiri secara lokal dan inisiatif yang dipimpin komunitas mengelola bagaimana protokol tersebut diterapkan di tingkat lokal.
 
-#### Localism Fund dan Mengonsolidasikan Nilai-nilai (5:27) {#the-localism-fund-and-consolidating-values-527}
+### Localism Fund dan Mengonsolidasikan Nilai-nilai (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Jadi saya ingin mendengar — tahun lalu kami mengumpulkan beberapa ratus orang selama dua hari dan diskusinya sangat dinamis dan hidup. Saya merasa ada beberapa pergerakan menarik yang terjadi segera dengan ETHDenver dan pembentukan kelompok Region Commons. Menurut Anda, bagaimana perkembangan kita sebagai sebuah gerakan? Saya tahu Anda telah mencapai tonggak penting dengan Localism Fund.
 
@@ -50,7 +50,7 @@ Saya pikir lokalisme Ethereum adalah upaya untuk menjadi benteng terhadap kebang
 
 Di sisi positifnya, kami baru saja mendistribusikan $150.000 ke 12 program pendanaan lokal berbeda yang bereksperimen dengan beragam mekanisme, dan itu berkat Gitcoin dan Celo Public Goods. Kisah-kisah itu sangat menarik karena kita memiliki komunitas nyata di lapangan di hampir setiap benua. Kita memiliki fasilitas penambangan kripto bertenaga surya di Nigeria yang mendanai pendidikan. Kita memiliki jaringan bisnis koperasi di Barcelona yang menciptakan seluruh ekonomi paralel dan sistem mata uang. Kita memiliki teman-teman di Kolombia yang melakukan UBI (Universal Basic Income) yang luar biasa, menciptakan pusat komunitas yang mendistribusikan uang kepada orang-orang yang hidup di bawah garis kemiskinan.
 
-#### Transparansi dan Mengalokasikan Modal (10:01) {#transparency-and-allocating-capital-1001}
+### Transparansi dan Mengalokasikan Modal (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** Dan di ruang ini, apa yang kita lakukan di Boulder?
 
@@ -64,7 +64,7 @@ Kami akhirnya bekerja sama dengan layer labs dan Jake Hartnell untuk mengimpleme
 
 Kami menggunakan algoritma yang sama dengan yang digunakan Google untuk memeringkat halaman web berdasarkan kekuatan tautan mereka untuk menghasilkan representasi numerik dari jumlah kepercayaan kolektif yang dimiliki node tersebut dalam jaringan. Kami memiliki lebih dari 100 orang yang membuat lebih dari 1.000 atestasi, dan dari situ kami dapat memperoleh 30 orang paling tepercaya dalam jaringan ini. Mereka menjadi evaluator program pendanaan lokal yang mendaftar. Setiap evaluator meninjau berdasarkan kriteria, dan skor total menentukan rasio pencocokan mereka. Jadi kami menggunakan jaringan kepercayaan berbasis atestasi ini untuk mendistribusikan uang sesuai dengan kehendak jaringan ahli ini.
 
-#### Protocol Underground dan Teknologi Sosial (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### Protocol Underground dan Teknologi Sosial (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Terima kasih. Saya ingin membukanya untuk grup. Saya melihat banyak wajah yang tidak asing di sini dan orang-orang yang mungkin mengidentifikasi diri dengan gerakan ini. Saya ingin mendengar dari penonton yang mungkin ingin berbagi. Apakah ada orang dari kelompok yang mengeluarkan manifesto hari ini yang ingin berbicara sedikit tentang hal itu?
 
@@ -86,13 +86,13 @@ Lokalisme Ethereum adalah tempat di mana orang-orang yang tertarik pada penyatua
 
 **Benjamin Life:** Ya. Teknologi sosial.
 
-#### Memutuskan apa yang akan dibangun untuk dampak global (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Memutuskan apa yang akan dibangun untuk dampak global (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **Anggota Penonton:** Maaf, saya baru saja masuk. Tetapi saya ingin memahami, bagaimana Anda memutuskan teknologi terbuka apa yang akan dibangun? Manusia memiliki waktu yang terbatas — bagaimana Anda memutuskan apa yang harus dibangun?
 
 **Sarah Johnstone:** Salah satu bidang yang saya habiskan waktu saya saat ini adalah konteks bantuan kemanusiaan, karena kondisi pemotongan dana bantuan internasional sangat mendesak dan merugikan. Sekitar delapan bulan terakhir saya telah melakukan studi mendalam untuk mencoba memahami ruang tersebut, dan sebenarnya cukup memberikan harapan dalam hal melihat teknologi dari ekosistem Ethereum dan ekosistem lainnya diterapkan pada konteks dunia nyata seperti populasi pengungsi dan komunitas yang terlantar atau zona konflik dengan pembayaran lintas batas dan stablecoin. Saya merasa cukup penuh harapan tentang hal itu. Bagi saya, itulah yang saya pilih untuk menghabiskan waktu saya.
 
-#### Netralitas yang kredibel dan subsidiaritas (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Netralitas yang kredibel dan subsidiaritas (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Saya ingin menanggapi apa yang Anda tanyakan. Sesuatu yang saya sebut "netralitas yang kredibel melalui desain mekanisme." Saya benar-benar berupaya tentang bagaimana kita dapat mendesentralisasi keputusan biner individu — jenis keputusan yang memecah belah komunitas ketika Anda tidak dapat mencapai konsensus dan Anda harus melakukan percabangan atau bubar. Biasanya kelompok berakhir pada salah satu opsi tersebut, dan sangat jarang sebuah kelompok memiliki sistem metabolisme atau kekebalan untuk terus mengevaluasi kembali keselarasan dengan nilai-nilai yang dinyatakannya sendiri.
 
@@ -102,7 +102,7 @@ Salah satu cara yang menurut saya dapat membuatnya lebih mudah adalah alih-alih 
 
 **Benjamin Life:** Tentu saja, dan itu memunculkan gagasan penting lainnya dalam ruang lokalisme Ethereum, yaitu subsidiaritas — gagasan bahwa pengambilan keputusan harus disarangkan di tingkat paling lokal di mana keputusan itu berdampak. Sebagian alasan Localism Fund mendanai program hibah alih-alih memberikan hibah langsung ke proyek adalah karena kami ingin memberikan $20.000 kepada Regenerate Cascadia, yang merupakan organisasi nirlaba yang memiliki jaringannya sendiri dengan bangsa adat dan komunitas lokal, dan alih-alih kami memilih proyek apa yang harus didanai di sana, memberi mereka otonomi penuh untuk menentukan bagaimana mendistribusikan sumber daya tersebut. Ini bukan melempar tanggung jawab; ini mendistribusikan agensi.
 
-#### Aliran Nilai dan Kebenaran Universal di Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Aliran Nilai dan Kebenaran Universal di Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **Anggota Penonton:** Apakah ada kebenaran sentral di jantung Ethereum yang kalian semua kejar? Tampaknya tidak ada keselarasan pada kebenaran universal di balik Ethereum dibandingkan dengan sistem mata uang saat ini. Apakah itu masuk akal?
 
@@ -116,7 +116,7 @@ Itulah yang membuat saya tetap berada di Ethereum. Ada blockchain lain di mana A
 
 Scott Morris, yang hadir di semua acara GEL, adalah salah satu pakar terkemuka di dunia dalam hal ini dan telah mengidentifikasi cara-cara untuk menyiasati kendala peraturan di mana mata uang komunitas hanya disebut "kupon" — itu bukan uang, itu hanya kupon. Anda masih bisa memiliki token yang mewakili kupon. Saya tidak tahu apakah celah hukum itu akan bertahan di pengadilan — saya bukan pengacara — tetapi ada beberapa kisah sukses mata uang komunitas yang benar-benar menjaga nilai tetap beredar di komunitas lokal mereka. Saya ingin melihat seseorang benar-benar mengambil tongkat estafet itu dan menciptakan "Salesforce" dari ruang mata uang milik komunitas yang terdesentralisasi, karena kemudahan orientasi orang-orang dan menciptakan tata kelola di sekitar token itulah yang telah menjadi kurva pembelajaran. Saya melihatnya sebagai salah satu hal dengan daya ungkit tertinggi yang bisa kita lakukan, tetapi saya sebenarnya tidak tahu siapa pun yang benar-benar mendorongnya maju seperti yang saya pikir seharusnya.
 
-#### Warga Global dengan Tanggung Jawab Lokal (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Warga Global dengan Tanggung Jawab Lokal (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **Anggota Penonton:** Menarik beberapa benang merah dari sepanjang percakapan — ketegangan antara protokol global dan jaringan lokal. Kita memiliki teman dan keluarga yang tersebar di berbagai bioregion yang memikat hati kita. Bagaimana pendapat Anda tentang fakta bahwa kita lebih mobile dari sebelumnya, ingin menjadi lokalis, tetapi terlibat dalam jaringan yang tidak semuanya berada di tempat yang sama?
 

@@ -18,11 +18,11 @@ Hotuba kuu na **Naomi Brockwell** katika EthBoulder 2026 kuhusu mmomonyoko wa fa
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=nvJSFR1Q_JE) iliyochapishwa na EthBoulder. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Mazungumzo ya sehemu mbili: onyo + suluhisho (00:00) {#two-part-talk-warning-solution-0000}
+### Mazungumzo ya sehemu mbili: onyo + suluhisho (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Vizuri sana. Karibuni nyote. Asanteni kwa kuwa hapa. Kwa hivyo, haya yatakuwa mazungumzo ya sehemu mbili. katika sehemu ya kwanza, mambo yanaweza kuwa mazito kidogo. Nimejulikana kuwa mzito sana linapokuja suala la mazungumzo ya faragha na ufuatiliaji. sehemu ya pili itakuwa na hali tofauti kidogo. Kwa hivyo katika sehemu ya kwanza nitawasimulia hadithi na katika sehemu ya pili tutaokoa ulimwengu. Kwa hivyo ikiwa nyote mko sawa na hilo tunaweza kuanza.
 
-#### Nguo mpya za mfalme (00:44) {#the-emperors-new-clothes-0044}
+### Nguo mpya za mfalme (00:44) {#the-emperors-new-clothes-0044}
 
 Basi onyesho la kwanza. Tuanze na onyesho la kwanza la hadithi yetu. Uchawi. Hapo zamani palikuwa na mfalme aliyeuziwa seti nzuri sana ya nguo mpya. Muuzaji alimwambia, "Mavazi haya yalikuwa maalum. Ni watu wenye akili na wema tu ndio wangeweza kuyaona, na mtu yeyote asiyefaa kwa nafasi yake hangeona chochote kabisa." Mfalme hakuweza kuona nguo zozote, lakini aliogopa kukubali. Kusema hivyo kungemaanisha kukiri kwamba hakustahili kutawala, kwa hivyo hakusema chochote. Na wakati mfalme alipoonekana hadharani akifanya gwaride mitaani, hakuna mtu mwingine aliyeweza kuona nguo hizo pia. 
 
@@ -32,7 +32,7 @@ Kwa hivyo, kimsingi, turudi hapa. Kimsingi, hadithi hii haihusu nguo, ni wazi. I
 
 Sasa, katika hadithi yetu, kila mtu alifikiri kwamba labda wao ndio walikuwa tatizo. Kwa hivyo, walitegemea majirani zao na kudhani kwamba ikiwa kuna kitu kilikuwa kibaya kweli, mtu mwingine angezungumza kwanza. Kila mtu alikubaliana na hekima ya umati. Na huu ulikuwa mkakati mbaya kwa sababu umati ulikuwa umekosea. Mfalme alikuwa uchi. Na kwa sababu kila mtu alikaa kimya, mwafaka ulichukua nafasi ya ukweli. Kimya cha umati kikawa uthibitisho kwamba kila kitu kilikuwa sawa. Sasa, hivi ndivyo hasa faragha inavyoporomoka katika ulimwengu wa kisasa.
 
-#### Mashine (02:46) {#the-machine-0246}
+### Mashine (02:46) {#the-machine-0246}
 
 Hivyo, sehemu ya pili, mashine. Hili hapa ni toleo la kisasa la hadithi hii. Tunaishi chini ya mfumo mkubwa zaidi wa ukusanyaji wa data katika historia ya binadamu. Tumejenga na tunaendelea kulisha miundombinu ya ufuatiliaji ambayo haijawahi kuonekana duniani hapo awali. na mwelekeo wa tunakoelekea ni kichocheo cha janga. Sasa, kwa nini iko hivyo? Kwa sababu sasa hivi, njia pekee ya jambo hili kuisha vizuri ni ikiwa tunaweza kuhakikisha kwamba mtu mbaya hatapata kamwe udhibiti wa mfumo huu. Lakini ikiwa mtu mbaya hatimaye atapata udhibiti, hii ni kama silaha ya atomiki ya nishati inayowezekana iliyojaa viungo vyote vinavyohitajika kudhibiti kikamilifu idadi ya watu. 
 
@@ -42,13 +42,13 @@ Inaleta wasiwasi, sivyo? Na tunaihisi wakati programu inaomba ufikiaji ambao kwa
 
 Tunahisi kwamba kuna kitu kibaya tunapopitia sera ya faragha na tunajua kwamba tunapaswa kuisoma kwa uangalifu. Pengine ina mambo muhimu ndani yake. Na kwa kweli inasema hapo waziwazi kwamba ndiyo watashiriki data hii ya siri kabisa na hata hatujui na nani lakini tunabofya kubali hata hivyo kwa sababu baada ya yote haiwezi kuwa mbaya kiasi hicho au kukubali mambo haya isingekuwa hali ya kawaida sivyo? Kama ingekuwa mbaya kiasi hicho kila mtu asingekuwa anafanya hivi tu.
 
-#### Hali ya sasa ni mbaya kiasi gani? (05:12) {#how-bad-is-the-status-quo-0512}
+### Hali ya sasa ni mbaya kiasi gani? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Kwa hivyo hali ya sasa ni mbaya kiasi gani? Mambo haya ni mabaya kiasi gani hasa? Au labda tunapaswa kuzungumzia hili kwa sababu baadhi ya watu wanafikiri kwamba hili ni suala tu la kampuni zinazojaribu kutuuzia viatu bora zaidi. Hili ni kama jambo la mlaji tu, sivyo? Au labda ni kuhusu tu kampuni za mitandao ya kijamii kujifunza kutuhusu ili kuunda algoriti iliyoboreshwa zaidi, sivyo? Hiyo haionekani kuwa mbaya sana. Kuna tatizo gani na hayo yote?
 
 Lakini sasa hivi, sote tunakubaliana na mfumo wa ufuatiliaji ulioenea kila mahali ambao unaingilia kimyakimya kila eneo la faragha la maisha yetu. Sasa, katika baadhi ya maeneo kama vile tawala za kimabavu, mfumo huu unatumiwa kudhibiti upinzani kabla haujatokea kwa kuwatambua watu wanaoweza kuleta matatizo kama watu wenye uwezekano mkubwa wa kujiunga na vuguvugu la maandamano na kisha kuwalenga watu hao. Wakati mwingine mfumo huu unatumiwa kuunda hisia za umma au kushawishi maoni au kuyumbisha chaguzi au kufanya idadi nzima ya watu kuchukia aina fulani za watu kwa kuwashawishi kwamba makundi hayo yanawachukia. Na kisha kuna nchi ambazo hutangaza hadharani taarifa kuhusu raia ambao alama zao za sifa za kijamii zimeshuka na kisha wanatumia alama hizo kuzuia usafiri, kupunguza ajira zao, kuwazuia watoto wao kujiunga na shule fulani au kuwatenga kabisa na fursa.
 
-#### Ukusanyaji wa data kwa kiwango cha trilioni ya dola (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Ukusanyaji wa data kwa kiwango cha trilioni ya dola (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Na sasa kutokana na mapinduzi ya AI, mashine inaacha kuwa tu rekodi ya maisha yako na inakuwa injini ya utabiri. Hivyo ndiyo maana hii ni muhimu. Kwa hivyo nataka kuweka hili wazi kwenu. Kwa hivyo nitapitia tu hali hii ya ufuatiliaji sasa hivi. 
  
@@ -56,7 +56,7 @@ Nitagawa mashine hii katika sehemu tatu. Ya kwanza iliyokusanywa. Jinsi taarifa 
  
 Lakini tuseme kwamba una bahati sana na unaepuka kulengwa na mfumo huu. Lakini watoto wako labda hawataiepuka, na hujui kama wataiepuka au la. Na mitambo hii ambayo unakubaliana nayo leo, haipotei. Hujui nani atakuwa kiongozi kesho.
 
-#### Jinsi taarifa hizi zinavyovuja (08:03) {#how-this-information-is-leaked-0803}
+### Jinsi taarifa hizi zinavyovuja (08:03) {#how-this-information-is-leaked-0803}
  
 Hivyo sehemu ya pili ni jinsi taarifa hizi zinavyovuja. Kila mwaka idadi ya visa vya udukuzi wa data hufikia kiwango kipya cha juu. Kuvujisha kila aina ya taarifa ambazo kampuni hazikupaswa kukusanya hapo awali. Hivyo historia za maeneo na rekodi za matibabu, data za kifedha, jumbe za faragha, na taarifa hizi huwekwa wazi mtandaoni, na zote huishia kwenye mtandao wa giza ili kutumiwa na mitandao ya uhalifu iliyopangwa, magenge ya wahalifu, na wadukuzi wa serikali. 
 
@@ -68,7 +68,7 @@ Na bado kampuni zinaamua kukusanya data hizi zote zisizo za lazima, milima ya da
  
 Hivyo huu ni umati unaopiga makofi kwenye gwaride, sivyo? Siyo kwa sababu tuna uhakika kwamba kila mbofyo na kila ukubali ni salama. Ni kwa sababu kupaza sauti na kujiondoa au kubadilisha zana kunaonekana kuwa kugumu zaidi kuliko kukubaliana na hali.
 
-#### Milango ya nyuma na udukuzi wa serikali (09:33) {#backdoors-government-interception-0933}
+### Milango ya nyuma na udukuzi wa serikali (09:33) {#backdoors-government-interception-0933}
  
 Kwa hivyo sasa hebu tuzungumzie kundi hili la tatu, lililofanywa silaha. Kwa hivyo operesheni za kijasusi za kigeni zenye uhasama tayari zimepenya kwenye miundombinu mikuu ya mawasiliano. Nilikuwa nikizungumza hapo awali na watu kuhusu Salt Typhoon, sivyo? China, kwa mfano, imekuwa ikinasa simu na ujumbe wetu kwa kiwango kikubwa. 
 
@@ -78,7 +78,7 @@ Tunajua kwamba haiwezekani kwa serikali kuhakikisha kuwa wao pekee ndio wanaofik
 
 Tunajua kuhusu mmoja wao, Salt Typhoon, lakini hatuna wazo ni nani amekuwa akikusanya mawasiliano yetu nyeti na ya kibinafsi katika miundombinu hii hii tunayoitegemea.
 
-#### Kwa nini uangalizi ni nadra zaidi kuliko unavyofikiri (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Kwa nini uangalizi ni nadra zaidi kuliko unavyofikiri (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Kwa hivyo, mfalme yuko uchi na sababu pekee inayosababisha haya yote kuendelea ni kwa sababu umati unaendelea kupiga makofi. Lakini kuna sababu nyingine kwa nini umati unaendelea kupiga makofi. 
  
@@ -112,7 +112,7 @@ Kwa hivyo, ni mamia ya mamilioni ya watu wangapi wanatumia bidhaa za Apple na mt
 
 Kuna wasilisho jingine ambapo baba wa mtu fulani alinunua na kuleta nyumbani mojawapo ya vituo vya nyumbani (home hubs), sivyo? Aliamua kufanya uchunguzi. Wakati mwingine anacheza na zana tofauti ndani ya nyumba na alitaka kujua jinsi inavyofanya kazi. Na inageuka kuwa kifaa hiki maarufu cha watumiaji ambacho mtu yeyote angeweza kununua kilikuwa kikitumika kama kitovu katika mtandao mkubwa wa roboti (botnet) wa Kichina. Kwa hivyo basi FBI wanaona wasilisho. Wanaishia kuondoa wasilisho mtandaoni na kuainisha uchunguzi kuwa wa siri. Hawakujua hili lilikuwa likiendelea, lakini yeye ndiye aliyewajulisha kwa kutoa tu wasilisho hili kama, "Hei jamani, nimepata mambo haya ya ajabu yakiendelea." Na hivyo ndivyo tunavyogundua kwamba mtandao mkubwa wa roboti wa Kichina unavamia nyumba zetu zote kupitia kifaa hiki kimoja maalum. Vipi kuhusu vifaa vingine vyote katika nyumba zetu ambavyo hakuna mtu ambaye amejisumbua hata kuviangalia bado?
 
-#### Tatizo la ukimya na mwafaka wa uongo (16:30) {#the-silence-problem-false-consensus-1630}
+### Tatizo la ukimya na mwafaka wa uongo (16:30) {#the-silence-problem-false-consensus-1630}
 
 Kwa hivyo, hapo ndipo tulipofikia kwa sasa. Ufuatiliaji leo umeenea sana, hauonekani, umezoeleka, na umehalalishwa, na tunauchukulia kama kiwango cha sekta. Na hapo ndipo tulipofikia kwa sasa.
 
@@ -134,7 +134,7 @@ Kwa hivyo Eric Schmidt wa Google, ana nukuu hii maarufu ya kutisha ambapo anasem
 
 Kwa hivyo, angalia kile kinachotokea. Faragha imegeuzwa kuonekana kama hatia na utiifu umegeuzwa kuonekana kama wema. Watu wazuri ni wale wanaojisalimisha kwa ufikiaji na watu wanaotiliwa shaka ni wale wanaouliza maswali. Na sasa kupinga kunakuwa na gharama kubwa kijamii. Mara tu unapoweka lebo hiyo ya kimaadili kwenye ukimya, mambo hujiendesha yenyewe.
 
-#### Je, tunasimamisha vipi gwaride la mfalme? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Je, tunasimamisha vipi gwaride la mfalme? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Turudi kwenye hadithi yetu. Nguo mpya za mfalme. Wakati mfalme anatembea barabarani akiwa na nguo zake mpya, umati unashangilia. Wanavutiwa na ufundi. Wanasifu umaridadi. Wanatoa maoni kuhusu miondoko na kitambaa na jinsi mavazi yanavyoshika mwanga. Na wanashindana kuonekana kuvutiwa zaidi. Na watumishi wa ikulu wanainama mbele na wana hamu ya kuonekana wakikubaliana, na maafisa wanatikisa vichwa kwa dhati, na washauri wanaongeza sifa za kiufundi na wanabuni maelezo ili kuthibitisha kwamba wanaelewa kile wanachokiangalia, na wengine wanazungumza kwa sauti kubwa wakitumaini kusikika, na wengine wanatabasamu na hawasemi chochote, wakiwa makini wasionekane wamechanganyikiwa. Na hakuna anayetaka kuwa wa kwanza kusita, na hakuna anayetaka kuwa yule anayeuliza maswali ya wazi, na kwa kila pongezi uongo unakuwa mgumu zaidi kuutengua. 
 
@@ -158,7 +158,7 @@ Kwa hivyo, njia ambayo hili linabadilika sio kwa kusubiri mfalme asimame. Ni kwa
 
 Sasa, wakati watu wakati watu wa kutosha wanaacha kushangilia, gwaride haliwezi kuendelea. Na hiyo ndiyo sehemu ya hadithi ambayo bado tunaiandika hapa. Kwa hivyo, sio kama mfalme hana nguo. Sote tunajua kwamba hana nguo zozote. Swali pekee lililobaki ni kama tunaendelea kutembea kando yake, tukijifanya kwamba ni sawa.
 
-#### Sehemu ya pili: tuokoe ulimwengu (25:22) {#part-two-lets-save-the-world-2522}
+### Sehemu ya pili: tuokoe ulimwengu (25:22) {#part-two-lets-save-the-world-2522}
 
 Kwa hivyo kwenye dokezo hilo la kutisha, sehemu ya pili: tuokoe ulimwengu. Nani anataka maisha bora ya baadaye? Nani anataka maisha bora ya baadaye kwa vizazi vijavyo, kwa watoto wao? Nani anataka kubadilisha mambo? Kwa sababu tumewezeshwa kikamilifu kuleta mabadiliko. 
 
@@ -312,7 +312,7 @@ Kwa hivyo kila wakati unapokuwa katika njia panda hiyo, jaribu tu kuona ikiwa ni
 
 Juu ya hayo, ikiwa wabunge watapiga marufuku mambo haya yasiwepo, kwa sababu hakuna anayeyapigania, kwa sababu sote tunasema, "Kweli, sina cha kuficha." Mambo haya yatatoweka.
 
-#### Chaguzi tunazopaswa kufanya kuhusu mustakabali tunaotaka kuuona (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Chaguzi tunazopaswa kufanya kuhusu mustakabali tunaotaka kuuona (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Kwa hivyo, nitawaacha na ujumbe huu kwa sababu nadhani tunaishiwa na muda hapa. Sasa hivi, tuko kwenye njia panda ambapo tunapaswa kufanya baadhi ya chaguzi kuhusu ulimwengu tunaotaka kuuona. Na ninajua kuna watu wengi ambao wanasumbuliwa na mifumo hii na inaonekana kama kazi kubwa kuhamisha mambo. 
 

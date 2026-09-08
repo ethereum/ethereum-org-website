@@ -18,25 +18,25 @@ Một bài thuyết trình của **Mike Neuder** tại sự kiện CBER Forum tr
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=rOJo7VwPh7I) được xuất bản bởi CBER Forum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Chào mọi người, tôi là Mike. Tôi sẽ nói về LRT và LST. LRT — liệu đặt cọc lại có phải là hình thức đặt cọc mới không? Tôi sẽ bắt đầu với một câu hỏi thứ hai và sử dụng nó để thúc đẩy cuộc thảo luận về LST và LRT, định nghĩa chúng là gì. Đây chủ yếu là một bài thuyết trình bằng hình ảnh, vì vậy hy vọng chúng ta có thể bắt đầu từ đầu và cùng nhau xây dựng.
 
 Dàn ý nhanh: bắt đầu từ những điều cơ bản nhất, chúng ta sẽ định nghĩa hai chế độ đặt cọc. Đầu tiên là tự đặt cọc, thứ hai là đặt cọc ủy quyền. Sau đó, chúng ta sẽ đi vào khái niệm đặt cọc lại và định nghĩa nó. Có bốn mô hình khác nhau mà tôi muốn khám phá — sử dụng sự phân tách giữa tự đặt cọc và ủy quyền, sau đó tập trung vào đặt cọc lại gốc so với đặt cọc lại không gốc. Sau đó, chúng ta sẽ đi vào quá trình thanh khoản hóa, nói về các token thanh khoản — token staking thanh khoản (LST) và token đặt cọc lại thanh khoản. Chúng ta sẽ thúc đẩy điều này bằng cách xem xét việc phạt cắt giảm và đặt cọc lại, và sau đó là cả hai loại token. Cuối cùng, chúng ta sẽ kết thúc với một số dữ liệu xung quanh việc đặt cọc như nó đang tồn tại ngày nay trên Ethereum.
 
-#### Tự đặt cọc (0:48) {#self-staking-048}
+### Tự đặt cọc (0:48) {#self-staking-048}
 
 Bắt đầu từ những điều cơ bản nhất, chúng ta có việc đặt cọc nơi Alice tự mình thực hiện. Cô ấy tương tác trực tiếp với giao thức, đưa khoản đặt cọc vào giao thức và cô ấy nhận được phần thưởng cho việc đó thông qua việc phát hành token gốc. Trong trường hợp của Ethereum, Alice đặt cọc 32 ETH và nhận được phần thưởng bằng ETH vì đã tham gia vào quá trình đồng thuận.
 
 Có hai điều cần tập trung ở đây. Đầu tiên, việc đặt cọc đóng vai trò như cơ chế chống Sybil này — bạn không thể đánh lừa mạng lưới rằng bạn có nhiều danh tính vì mỗi danh tính tiêu tốn một lượng nhất định từ nguồn cung token cố định này. Thứ hai là tài sản thế chấp chịu rủi ro — đây là những quy tắc của giao thức liên quan đến việc phạt cắt giảm. Nếu Alice có hành vi sai trái theo một số đặc tả được định nghĩa rất rõ ràng, giao thức sẽ lấy đi vốn của cô ấy và trừng phạt cô ấy vì đã làm như vậy.
 
-#### Đặt cọc ủy quyền (2:52) {#delegated-staking-252}
+### Đặt cọc ủy quyền (2:52) {#delegated-staking-252}
 
 Đặt cọc ủy quyền thêm một lớp nữa ở giữa Alice và giao thức. Alice bây giờ ủy quyền cho Bob, người sẽ đặt cọc vào giao thức Ethereum. Phần thưởng được gửi cho Bob, và phần thưởng sau khi trừ phí được chuyển tiếp cho Alice. Đây là phiên bản đơn giản nhất của đặt cọc ủy quyền — Alice không muốn tự chạy phần mềm, có thể cô ấy không có đủ 32 ETH, hoặc không có phần cứng hay chuyên môn kỹ thuật để chạy một trình xác thực.
 
 Có nhiều chế độ khác nhau của sự ủy quyền này ở các mức độ tin cậy khác nhau. Phiên bản cần nhiều sự tin tưởng nhất là có lưu ký — bạn gửi ETH của mình cho Coinbase và nói "hãy đặt cọc thay cho tôi." Bạn thực sự tin tưởng họ hoàn toàn vì họ lưu ký tài sản dưới tên của bạn. Có một phiên bản không lưu ký nhưng được quản trị bởi DAO, nơi bạn ủy quyền khoản đặt cọc của mình cho một người được xác định bởi một DAO bỏ phiếu xem ai sẽ được chạy các nút — đây là kiểu đặt cọc của Lido. Thứ ba là phiên bản tối thiểu hóa niềm tin nơi cả Alice và Bob đều đưa ra một số tài sản thế chấp. Alice trợ cấp phần còn lại cho tài sản thế chấp của Bob, và nếu Bob có hành vi sai trái và bị phạt cắt giảm, tài sản thế chấp của anh ta là phần đầu tiên bị loại bỏ. Tôi nói "tối thiểu hóa niềm tin" chứ không phải "không cần tin cậy" vì dù thế nào đi nữa, vẫn có những trường hợp mà tài sản thế chấp của Alice bị xóa sạch hoàn toàn tùy thuộc vào những gì Bob làm.
 
-#### Tự đặt cọc lại với ETH gốc (4:42) {#self-restaking-with-native-eth-442}
+### Tự đặt cọc lại với ETH gốc (4:42) {#self-restaking-with-native-eth-442}
 
 Bây giờ chúng ta có thể nói về việc đặt cọc lại là gì. Đây là một khái niệm hoàn toàn mới — nó đã xuất hiện kể từ khi Sreeram và EigenLayer giới thiệu thuật ngữ này có lẽ khoảng một năm rưỡi hoặc hai năm trước.
 
@@ -44,7 +44,7 @@ Trong mô hình này, Alice làm điều tương tự như cô ấy đã làm tr
 
 Cô ấy nhận được phần thưởng cho việc đó. Điều này có vẻ tuyệt vời — Alice bây giờ có khả năng nhận được gấp đôi phần thưởng cho cùng một lượng đặt cọc. Nhưng rủi ro là số vốn mà cô ấy đã đặt cọc trong cả hai giao thức hiện bị ràng buộc bởi các quy tắc của cả hai giao thức. Nếu Alice có hành vi sai trái trên Ethereum, cô ấy có thể mất vốn do bị phạt cắt giảm. Nếu cô ấy có hành vi sai trái trên "Retheum," cô ấy cũng có thể bị phạt cắt giảm. Lợi nhuận tăng thêm đi kèm với trách nhiệm tăng thêm — các hành vi giao thức được bắt buộc và có thể bị trừng phạt theo những cách khác nếu bạn ràng buộc token đặt cọc của mình trên nhiều giao thức khác nhau.
 
-#### Đặt cọc lại gốc có ủy quyền (8:28) {#delegated-native-restaking-828}
+### Đặt cọc lại gốc có ủy quyền (8:28) {#delegated-native-restaking-828}
 
 Phiên bản thứ hai là đặt cọc lại ủy quyền với ETH gốc. Alice đang đặt cọc với Ethereum, và bây giờ cô ấy muốn sử dụng Bob để ủy quyền khoản đặt cọc của mình cho giao thức "Retheum". Cô ấy ủy quyền cho Bob, Bob đặt cọc lại, giao thức phát hành phần thưởng cho Bob, và Bob phát hành phần thưởng sau khi trừ phí cho Alice.
 
@@ -56,7 +56,7 @@ Trong phiên bản gốc này, Alice đặt cọc và có cái được gọi l�
 
 Tại sao điều này được gọi là "gốc?" Bởi vì Alice vẫn đang tương tác trực tiếp với Ethereum — khoản đặt cọc của cô ấy là 32 ETH mà cô ấy sở hữu, được sử dụng để bảo mật lớp đồng thuận của Ethereum.
 
-#### Đặt cọc lại không gốc (10:57) {#non-native-restaking-1057}
+### Đặt cọc lại không gốc (10:57) {#non-native-restaking-1057}
 
 Tự đặt cọc lại trong bối cảnh không gốc: Alice chỉ đang tương tác với giao thức "Retheum". Cô ấy không chạy một nút trên Ethereum. Cô ấy đặt cọc lại — mặc dù tôi đặt chữ "lại" trong ngoặc kép vì cô ấy không thực sự đặt cọc lại, mà ngay từ đầu đó đã là việc đặt cọc. Lý do duy nhất nó được gọi là đặt cọc lại là vì điều này diễn ra thông qua một giao thức cũng tạo điều kiện cho các loại hình đặt cọc lại khác.
 
@@ -64,7 +64,7 @@ Cô ấy lấy các token không gốc — đây có thể là USDC, một stabl
 
 Đặt cọc lại ủy quyền với các token không gốc cũng tuân theo mô hình tương tự — Alice ủy quyền thông qua Bob và nhận được phần thưởng sau khi trừ phí.
 
-#### Phạt cắt giảm và đặt cọc lại (13:55) {#slashing-and-restaking-1355}
+### Phạt cắt giảm và đặt cọc lại (13:55) {#slashing-and-restaking-1355}
 
 Trước khi chúng ta đi vào Thanh khoản, hãy nói về việc phạt cắt giảm. Trong chế độ phạt cắt giảm bình thường, Alice đang đặt cọc trong giao thức Ethereum. Nếu cô ấy làm điều gì đó mà giao thức coi là sai — ví dụ, một xác nhận nước đôi, nơi cô ấy sử dụng khóa mật mã của mình để ký hai mẩu thông tin xung đột với nhau — đó là một lỗi khách quan. Mọi người đều có thể xác minh cả hai chữ ký đều do Alice ký, và đó là bằng chứng đủ để phạt cắt giảm các token của cô ấy.
 

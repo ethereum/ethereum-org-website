@@ -19,7 +19,7 @@ Un dibattito tra **Lyn Alden** e **Justin Drake** sui compromessi fondamentali t
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=1m12zgJ42dI) pubblicata da Bankless. È stata leggermente modificata per migliorarne la leggibilità.*
 
-#### Introduzione (0:00) {#introduction-000}
+### Introduzione (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Benvenuti a Bankless, dove esploriamo la frontiera del denaro e della finanza su internet. Sono Ryan Sean Adams, sono qui con David Hoffman, e siamo qui per aiutarvi a diventare più indipendenti dalle banche. Ragazzi, oggi vi aspetta una chicca. Abbiamo due esperti di Proof-of-Stake (PoS) e Prova di lavoro (PoW), e stanno discutendo su quale sia la migliore per creare un sistema monetario globale — un sistema monetario cripto — la Prova di lavoro (PoW) o la Proof-of-Stake (PoS). Lyn Alden e Justin Drake nell'episodio di oggi. Parleremo di alcune cose. Numero uno: quale fornisce la maggiore sicurezza economica, la Prova di lavoro (PoW) o la Proof-of-Stake (PoS)? Numero due: quale fornisce la migliore deterrenza e capacità di recupero di fronte al temuto attacco del 51%? Numero tre: quale minimizza il potere di governance per le élite — quale dà più "potere al popolo"? Numero quattro: quale è economicamente il sistema più equo a cui partecipare? E numero cinque — questa è personalmente la mia preferita — questa conversazione sul fatto che la Prova di lavoro (PoW) sia più una moneta merce e la Proof-of-Stake (PoS) sia più una moneta azionaria.
 
@@ -29,7 +29,7 @@ Un dibattito tra **Lyn Alden** e **Justin Drake** sui compromessi fondamentali t
 
 **Justin Drake:** Alla grande, grazie ancora per avermi invitato, ragazzi.
 
-#### Inquadrare il dibattito: premio monetario (7:30) {#framing-the-debate-monetary-premium-730}
+### Inquadrare il dibattito: premio monetario (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Voglio iniziare con la grande domanda. Penso che stiamo cercando di rispondere alla meta-domanda se la Prova di lavoro (PoW) o la Proof-of-Stake (PoS) sia più propensa all'accumulo di un premio monetario — fondamentalmente quale di questi due protocolli di consenso sia più propenso a rendere una criptovaluta una moneta. Justin, sei d'accordo che questa sia l'impostazione corretta?
 
@@ -41,7 +41,7 @@ Un dibattito tra **Lyn Alden** e **Justin Drake** sui compromessi fondamentali t
 
 **Justin Drake:** Voglio intervenire e argomentare perché questa analogia tra azioni e Proof-of-Stake (PoS) sia forse una cattiva analogia. Nel contesto delle azioni, hai il diritto di voto su qualsiasi cosa — puoi cambiare completamente le regole dell'azienda. Nel consenso Proof-of-Stake (PoS), i partecipanti al consenso non possono semplicemente cambiare arbitrariamente le regole. Non possono dire "ci daremo semplicemente mille ETH a testa" — quella sarebbe una transazione non valida. In definitiva, i partecipanti al consenso sono responsabili verso la comunità, e questa è un'enorme differenza rispetto alle azioni.
 
-#### Moneta merce vs. moneta azionaria (10:06) {#commodity-money-vs-equity-money-1006}
+### Moneta merce vs. moneta azionaria (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, vuoi continuare con quella conversazione sulla Prova di lavoro (PoW) come merce e la Proof-of-Stake (PoS) come azione?
 
@@ -53,7 +53,7 @@ Un dibattito tra **Lyn Alden** e **Justin Drake** sui compromessi fondamentali t
 
 **Lyn Alden:** Penso che ci sia un certo grado di spettro, ma per la maggior parte è una strada piuttosto a senso unico. Ci sono molti modi per diventare un'azione ma pochissimi modi per diventare una merce. Le merci per loro natura sono in qualche modo rare e immutabili. I modi per creare una vera merce nel regno digitale sono estremamente limitati.
 
-#### Attacchi del 51%: deterrenza e recupero (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Attacchi del 51%: deterrenza e recupero (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Voglio confrontare la Prova di lavoro (PoW) e la Proof-of-Stake (PoS) su quale sia meno soggetta ad attacchi di censura. Uno degli enormi vantaggi della Proof-of-Stake (PoS) è che il livello sociale ha gli strumenti per intervenire. Nella Prova di lavoro (PoW), se interviene un attaccante con un attacco del 51%, raccoglie ogni singola ricompensa, ogni singola emissione, ogni commissione di transazione. I minatori onesti si spengono perché non ha senso spendere elettricità senza entrate. Poi vogliono liquidare, vendendo il loro hardware. L'attaccante può comprare questo hardware per pochi spiccioli e rafforzarsi. Anche se la comunità riuscisse a organizzare un contrattacco, ci vorrebbero mesi se non anni per organizzarlo.
 
@@ -65,7 +65,7 @@ Quando si tratta di sicurezza, non si tratta solo di attacchi del 51% — si tra
 
 Per riprendersi dagli attacchi del 51%: l'unico modo nella Proof-of-Stake (PoS) è fare un soft fork e prendere il capitale delle persone. Se la metti nei termini di prendere il capitale dell'attaccante, suona bene. Ma l'attaccante potrebbe essere un custode regolamentato — stai prendendo capitale da persone che non avevano nulla a che fare con l'attacco.
 
-#### Complessità, bug e diversità dei client (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Complessità, bug e diversità dei client (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** La complessità non è necessariamente un male. L'umanità prospera su di essa. In termini di complessità della Proof-of-Stake (PoS) — sì, è più complessa, almeno 10 volte, forse 100 volte. Ma è una complessità che a questo punto abbiamo domato. Abbiamo cinque diversi client che hanno implementato il protocollo, ciascuno con piccoli team da cinque a dieci persone. La diversità dei client consente alla comunità di acquistare un'assicurazione contro i bug.
 
@@ -75,7 +75,7 @@ Riguardo all'essere continuamente online — ciò che chiamiamo soggettività de
 
 Guardando alla direzione della Prova di lavoro (PoW) a lungo termine, vedrai una crescente integrazione tra minatori e produttori di energia. La rete elettrica deve naturalmente sovrapprodurre elettricità. I sistemi basati sulla Prova di lavoro (PoW) sono un ottimo bilanciatore di carico per l'energia in eccesso. La fonte di elettricità più economica è l'energia in eccesso a costo virtualmente zero. In questo momento la più grande struttura di minaggio di Bitcoin al mondo ha circa l'1% dell'hash rate totale — è già strutturalmente decentralizzata.
 
-#### Equità e l'argomento "i ricchi diventano più ricchi" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Equità e l'argomento "i ricchi diventano più ricchi" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Nella Proof-of-Stake (PoS), hai un'equità perfetta — metti un'unità di capitale e ottieni esattamente la stessa quantità di ricompense, non importa quanto tu sia grande o piccolo. Nella Prova di lavoro (PoW), i pesci grossi hanno vantaggi ingiusti. Se sei un minatore al dettaglio che compra un impianto, stai pagando 2, 3, 4, 5 volte di più rispetto ai minatori professionisti che comprano all'ingrosso. A causa della legge di Moore, gli attaccanti che vogliono attaccare hanno un vantaggio — possono scegliere l'hardware più recente e all'avanguardia. Per loro, il prezzo dell'elettricità è in gran parte irrilevante, perché un attacco del 51% deve durare solo un giorno o una settimana. Il 99% del costo è negli impianti e nell'infrastruttura, non nell'elettricità.
 
@@ -85,7 +85,7 @@ Il fatto che la Prova di lavoro (PoW) sia intrinsecamente ingiusta crea vantaggi
 
 Nella Prova di lavoro (PoW), stai essenzialmente affittando la tua capacità di governare il sistema. Le tue macchine si degradano, la tua fonte di energia potrebbe diventare meno efficiente, il tuo hardware diventa meno all'avanguardia. È una serie costante di decisioni piuttosto che un sistema che avvantaggia intrinsecamente le persone che hanno comprato per prime. Non importa quanto Bitcoin abbia Michael Saylor, ha zero controllo su quali transazioni vengono elaborate.
 
-#### La Prova di lavoro come "Proof-of-Stake con passaggi extra" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### La Prova di lavoro come "Proof-of-Stake con passaggi extra" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Non conosco nessuno — e sono in questo spazio da quasi un decennio — che a questo punto faccia minaggio di Bitcoin come individuo. È tutto industriale. D'altra parte, con la Proof-of-Stake (PoS), tutti in questa chiamata — forse tranne te, Lyn — stanno facendo staking come individui. La diversità nella Proof-of-Stake (PoS) è molto, molto più grande. La barriera all'ingresso è molto più bassa — fondamentalmente hai solo bisogno di un computer acceso 24 ore su 24, 7 giorni su 7.
 
@@ -97,11 +97,11 @@ Sull'argomento "i ricchi diventano più ricchi" nella Proof-of-Stake (PoS): lo v
 
 Sulla diversità dei client — almeno l'ultima volta che ho controllato, il client più grande ha circa l'84% dei client Ethereum. Hai un certo grado di diversificazione, ma è anche un'illusione parziale. In pratica, una delle cose chiave che protegge dai bug è avere la base di codice più semplice possibile.
 
-#### NIST, quantistica e fondamentali a lungo termine (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, quantistica e fondamentali a lungo termine (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Se vogliamo essere l'internet del denaro, abbiamo bisogno di una scala temporale dell'ordine di grandezza di internet stesso — decenni se non secoli. La complessità è qualcosa che ha un'emivita di forse un anno — può essere domata e rafforzata. Nel tempo, man mano che viene garantito molto valore, ci si può fidare dei sistemi. I bug verranno risolti, il sistema si rafforzerà. Quello a cui dovremmo guardare sono i fondamentali a lungo termine. Si scopre che la Prova di lavoro (PoW) sarà completamente stravolta dall'informatica quantistica nei prossimi 20-30 anni. Sì, ci sono preoccupazioni a breve termine con la complessità, ma se allarghi la prospettiva e ti concentri sui fondamentali, ci sono ragioni fondamentali per essere ribassisti sulla Prova di lavoro (PoW).
 
-#### L'argomento storico della moneta merce (1:00:34) {#the-commodity-money-historical-argument-10034}
+### L'argomento storico della moneta merce (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, hai in un certo senso preso il comando come commentatrice macro concentrandoti sui mercati delle materie prime. I bitcoiner tendono a concentrarsi sulle proprietà delle merci e su come Bitcoin consumi energia come una merce. È in parte un argomento morale — che la moneta merce sia semplicemente una moneta più adatta al mondo?
 
@@ -113,13 +113,13 @@ Nel tempo, questo tende verso la centralizzazione. Man mano che il debito si acc
 
 **Lyn Alden:** Personalmente lo affronto da una prospettiva di rischio tattico. Qual è il sistema con meno probabilità di avere rischi di coda? Cosa è ottimizzato per ciò che sta cercando di fare? Quando si tratta dell'argomento dell'equità, in parte questo si confonde con cose diverse — la Prova di lavoro (PoW) rispetto alla Proof-of-Stake (PoS) è un aspetto, e la scarsità dei token è un altro.
 
-#### Il motore di scarsità vs. il motore di liquidità (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Il motore di scarsità vs. il motore di liquidità (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** La Prova di lavoro (PoW) e la Proof-of-Stake (PoS) da una prospettiva di meme sono quasi l'esatto opposto. Con la Proof-of-Stake (PoS), hai quello che chiamo un motore di scarsità — un meccanismo per trasformare ETH liquido in ETH congelato usato come collaterale. Le mie proiezioni dicono che circa metà di tutta l'offerta di ETH alla fine sarà messa in staking. Per la Prova di lavoro (PoW), è l'opposto — l'emissione e le commissioni di transazione che i minatori guadagnano devono essere vendute per coprire le spese di elettricità e hardware. Hai creato un motore di liquidità, che scarica costantemente sul mercato. Se chiedi quale sia il sistema migliore per creare denaro per internet — quello che scarica costantemente o quello che incoraggia le persone a detenere — penso sia ovvio quale sia più prezioso da una prospettiva di meme.
 
 **Lyn Alden:** Più un sistema cerca di fare, peggio riuscirà in una singola cosa. Man mano che Ethereum ha cercato di indurire la sua politica monetaria, ha probabilmente perso quote di mercato nella finanza decentralizzata (DeFi) — dal 97% del valore totale bloccato (TVL) alla fine del 2020 al 55% di adesso. Finora, Bitcoin non ha davvero concorrenza da altri sistemi. I brevi periodi di concorrenza — i meme di Dogecoin, Bitcoin Cash — svaniscono nel tempo. Un mondo si basa sulla governance e sul rendere attraente il proprio ecosistema. L'altro si riduce a quale sia il più solido — quale sia il migliore nell'essere denaro.
 
-#### Governance, immutabilità e auto-sovranità (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Governance, immutabilità e auto-sovranità (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Come minimo, un sistema Proof-of-Stake (PoS) dà ai detentori delle unità più voce in capitolo su quali transazioni vengono elaborate e quali vengono censurate. Ma chi può cambiare il protocollo e come — questo va al di fuori del dibattito tra Prova di lavoro (PoW) e Proof-of-Stake (PoS). Puoi avere sistemi basati sulla Prova di lavoro (PoW) che sembrano più simili ad azioni — con bombe di difficoltà o blocchi super grandi in modo che le persone non possano eseguire il proprio nodo.
 
@@ -129,13 +129,13 @@ Il meme di Bitcoin è l'auto-sovranità. Esegui il tuo nodo, i nodi sono piccoli
 
 **Lyn Alden:** Con le monete merce, i produttori raramente hanno molto controllo. L'oro ha un rapporto stock-to-flow molto alto — i minatori d'oro non hanno praticamente alcun controllo sul sistema. Questo è stato vero nell'ecosistema Bitcoin. Durante le guerre sulla dimensione dei blocchi, la maggioranza dei minatori era a favore dell'aumento del blocco e non è comunque riuscita a farlo passare. Gli operatori dei nodi lo hanno respinto. Quella combinazione di divisione dei poteri — in cui puoi semplicemente eseguire un nodo e diventare auto-sovrano, e separatamente il minaggio ti dà la capacità temporanea di ordinare le transazioni ma nessuna allocazione permanente — è ciò che mantiene un sistema decentralizzato.
 
-#### La confutazione de "i ricchi diventano più ricchi" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### La confutazione de "i ricchi diventano più ricchi" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Riguardo a "i ricchi diventano più ricchi" nella Proof-of-Stake (PoS) — lo vedo come conservazione della ricchezza, non moltiplicazione della ricchezza. Quando fai staking, stai pagando un costo opportunità di circa il 3% e vieni compensato. Al netto, stai facendo conservazione della ricchezza. I minatori professionisti fanno la stessa cosa — coprono il rischio con i futures, bloccando rendimenti che corrispondono all'incirca al costo opportunità. In realtà, la Prova di lavoro (PoW) è solo Proof-of-Stake (PoS) con passaggi extra. Il rischio può essere rimosso con prodotti finanziari, e alla fine della giornata hai essenzialmente lo stesso prodotto finanziario.
 
 **Lyn Alden:** Ciò che rende un sistema di merci decentralizzato è la combinazione di piccoli nodi e minaggio separato. Non importa quanto Bitcoin qualcuno detenga, ha zero controllo sull'ordinamento delle transazioni. Questa è la divisione dei poteri. Se hai intenzione di approssimare l'immutabilità nel regno digitale il più possibile, stai progettando un sistema che è molto decentralizzato, molto difficile da forzare a cambiamenti, con nessun cambiamento o cambiamenti facoltativi. Qualsiasi cosa che devii da quel modello — un continuo buy-in forzato da parte di un piccolo team di sviluppatori, hub di sviluppo, fondazioni — è intrinsecamente più simile a un'azione indipendentemente dal meccanismo di consenso.
 
-#### Dichiarazioni conclusive (1:30:42) {#closing-arguments-13042}
+### Dichiarazioni conclusive (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Questa è stata una conversazione fantastica. Questa è stata probabilmente la migliore conversazione tra Proof-of-Stake (PoS) e Prova di lavoro (PoW) della storia. È il momento delle dichiarazioni conclusive. Justin, perché la Proof-of-Stake (PoS) è il modo migliore per creare una moneta cripto?
 
@@ -151,7 +151,7 @@ Se stessi progettando una blockchain per massimizzare le proprietà monetarie, n
 
 Quando si tratta di denaro adatto per metterci la tesoreria aziendale, allocare parte del proprio fondo di dotazione, o detenere il 10% o più del proprio patrimonio netto — o gestire riserve sovrane che rappresentano decenni di surplus commerciali accumulati — storicamente il migliore è stato l'oro. Ora abbiamo nuovi concorrenti. Sceglieresti il più decentralizzato, il più immutabile, quello che non sacrifica nessuna di quelle caratteristiche. Questo non significa che altri sistemi non abbiano valore — solo perché l'oro ha valore non significa che le azioni Tesla non ne abbiano. Sono cose diverse che fanno cose diverse. Il denaro perfetto è disposto a sacrificare quasi tutto il resto pur di avere gli attributi perfetti del denaro — il cui scopo principale è essere detenuto e occasionalmente scambiato, rispetto a qualcosa che cerca di essere un coltellino svizzero.
 
-#### Conclusione (1:40:14) {#wrap-up-14014}
+### Conclusione (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Voglio ringraziare ancora una volta Lyn Alden e Justin Drake per essersi uniti a noi e aver fatto il miglior dibattito che abbia mai sentito sulla Prova di lavoro (PoW) rispetto alla Proof-of-Stake (PoS). Anche un ringraziamento speciale a Lyn per essere venuta in quella che alcuni potrebbero percepire come la "squadra in trasferta".
 

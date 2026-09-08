@@ -19,11 +19,11 @@ Webinar zorganizowany przez **Blockdaemon**, w którym inżynierka blockchain Ju
 
 *Ten transkrypt jest przystępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=_UpAFpC7X6Y) opublikowanego przez Blockdaemon. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 **Prowadzący:** Witam i zapraszam na ten webinar organizowany przez Blockdaemon, skupiający się na nadchodzącej aktualizacji Ethereum Pectra. Są dziś z nami Julia Schmidt, inżynierka blockchain w Alluvial, oraz Freddy Tänzer, lider ekosystemu Ethereum w Blockdaemon, aby omówić, jak zmiany w Pectra wpłyną na staking ETH, sieć jako całość, usługi płynnego stakingu i nie tylko. Na początek, Freddy — czy mógłbyś dać nam krótki przegląd aktualizacji Pectra i jej wpływu na stakujących?
 
-#### Czym jest Pectra (1:28) {#what-is-pectra-128}
+### Czym jest Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra to aktualizacja Ethereum zaplanowana na koniec pierwszego kwartału 2025 roku — około marca, choć może się to nieco przesunąć, może na kwiecień. Początkowo miało to być małe rozwidlenie, ale z czasem dodawano coraz więcej rzeczy, więc ostatecznie podzielono ją na dwie części.
 
@@ -33,7 +33,7 @@ Pierwszą z nich jest fakt, że można wyzwalać wypłaty i wyjścia ze swojego 
 
 Jest też mniejsza zmiana, która w zasadzie sprawia, że depozyty są znacznie szybsze — rejestrowane onchain w czasie od około 14 godzin do mniej niż godziny — ale myślę, że te dwie pierwsze są najbardziej istotne dla naszej dzisiejszej dyskusji.
 
-#### EIP-7002: wyjścia wyzwalane z warstwy wykonawczej (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: wyjścia wyzwalane z warstwy wykonawczej (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Prowadzący:** Jeśli chodzi o pierwszą dużą zmianę, Julio, czy mogłabyś wyjaśnić, jak proces po aktualizacji Pectra zmieni się w stosunku do obecnych sposobów inicjowania wypłat w ekosystemie stakingu Ethereum?
 
@@ -49,7 +49,7 @@ W ostatniej aktualizacji Dencun nowe EIP zmieniło czas wygaśnięcia tych wiado
 
 Zostało to teraz rozwiązane dzięki EIP-7002, które pozwala zarówno kluczowi walidatora, jak i kluczowi wypłaty na wyzwolenie wyjścia z warstwy wykonawczej — po prostu poprzez wysłanie transakcji do specjalnego kontraktu wypłat, gdzie wysyłasz żądanie wypłaty i określasz pełne wyjście walidatora lub częściową wypłatę ze stakowanego salda.
 
-#### EIP-7251: maksymalne saldo efektywne (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: maksymalne saldo efektywne (4:15) {#eip-7251-max-effective-balance-415}
 
 **Prowadzący:** Freddy, czy mógłbyś przedstawić nam przegląd maksymalnego salda efektywnego począwszy od aktualizacji Pectra i jak wpłynie to na osoby, które obecnie stakują?
 
@@ -69,7 +69,7 @@ Są też dobre wieści dotyczące cięcia: początkowa kara za cięcie drastyczn
 
 Korzyść z automatycznej kapitalizacji przynosi zyski głównie przy mniejszych kwotach stawki. Jeśli masz tysiąc walidatorów, mógłbyś ręcznie uruchamiać nowego co miesiąc. Ale jeśli masz tylko jednego walidatora, w praktyce musiałbyś czekać 32 lata na kapitalizację.
 
-#### Implikacje dla płynnego stakingu (11:25) {#liquid-staking-implications-1125}
+### Implikacje dla płynnego stakingu (11:25) {#liquid-staking-implications-1125}
 
 **Prowadzący:** Julio, jak konsolidacja większych walidatorów ma się do korzyści płynących z płynnego stakingu? Jak te decyzje będą ważyć w umyśle stakującego po aktualizacji Pectra?
 
@@ -79,7 +79,7 @@ Fakt, że początkowa kara za cięcie została obniżona, zmniejsza ryzyko prowa
 
 Od strony użyteczności, token płynnego stakingu (LST) oczywiście dodaje płynność — nawet przy częściowych wypłatach z warstwy wykonawczej nie będzie to natychmiastowe. Przesyłasz transakcję, trafia ona do kolejki, a następnie następuje epoka wyjścia i epoka wypłaty. Tokeny płynnego stakingu nadal oferują natychmiastową płynność, której częściowe wypłaty nie mogą zapewnić.
 
-#### Następne kroki dla stakujących (16:20) {#next-steps-for-stakers-1620}
+### Następne kroki dla stakujących (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Widzimy, że instytucje finansowe zazwyczaj stakują od 65% do 85% swojego ETH będącego w depozycie, ponieważ potrzebują reszty jako bufora płynności na wypadek umorzeń. Dzięki płynnemu stakingowi można potencjalnie zwiększyć ilość stakowanego ETH, co generuje wyższe nagrody.
 
@@ -89,7 +89,7 @@ Obie strony korzystają na aktualizacji Pectra — płynny staking zyskuje opcj�
 
 Kluczową zaletą, o której jeszcze nie wspomniałam, są częściowe wypłaty — teraz, gdy można wypłacić stakowane ETH z warstwy wykonawczej, otwiera to nowe możliwości dla protokołów takich jak EigenLayer do wyzwalania wypłat i wyjść. Nastąpił ogromny wzrost funkcjonalności i interoperacyjności, które zdecentralizowane finanse (DeFi) mogą teraz lepiej włączyć w pełny cykl życia walidatora, od depozytu do wyjścia. Jako inżynierka blockchain, to ekscytujące móc zautomatyzować cały przepływ pracy.
 
-#### Zakończenie (19:50) {#closing-1950}
+### Zakończenie (19:50) {#closing-1950}
 
 **Prowadzący:** Julio, gdzie można dowiedzieć się więcej o Liquid Collective i Alluvial?
 

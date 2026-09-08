@@ -17,7 +17,7 @@ Ethereum Vakfı araştırmacısı **Justin Drake** ile Ethereum'un kuantum sonra
 
 *Bu transkript, Bankless tarafından yayınlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=wURmzLKhJco) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiştir.*
 
-#### Giriş ve kuantum tehdidi (0:00) {#introduction-and-the-quantum-threat-000}
+### Giriş ve kuantum tehdidi (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Son birkaç ayda benim için ilginç bir zihniyet değişikliği, kuantum sonrasını aşmamız gereken bir engel olarak düşünmeyi bırakıp onu daha çok bir fırsat olarak görmeye başlamam oldu. Bu, Ethereum'un sadece Bitcoin ve benzeri rakiplerine kıyasla değil, aynı zamanda itibari para ve geleneksel finansa (TradFi) kıyasla da kuantum sonrası güvenliğe sahip ilk küresel finansal sistem olarak öne çıkması için bir fırsat. Bence bu çok güçlü bir mesaj verir ve dünyanın Ethereum'a geçmesi için çok doğal bir güvenlik odaklı satış noktası olur.
 
@@ -35,7 +35,7 @@ Yani hedefler giderek yaklaşıyor ve bir anlamda eninde sonunda kesişecek olan
 
 Şimdi geleceğe yönelik bir projeksiyon yaparsak, benim kişisel Q-Günüm 2032'de. Bu, biraz daha geç gelme ihtimalleri olduğu anlamında biraz iyimser bir bakış açısı, ancak en kötü senaryoya hazırlıklı olmalıyız. Bu yüzden Q-Günü'nün 2032'de olma ihtimalinin en az %1 olduğunu, hatta büyük olasılıkla çift haneli bir yüzde olduğunu söyleyebilirim. Çeşitli uzmanlar size 2031 ile 2038 arasında bir tarih verecektir. Sektörden bir arkadaşım, dünyanın en büyük kuantum hata düzeltme şirketlerinden birinin kurucusu ve CEO'su olan ve tesadüfen benim bulunduğum Cambridge'de yaşayan Steve Bryley — onun kişisel Q-Günü 2032'ydi, ancak 15 yıldır bu tarihi öngörüyordu
 
-#### Q-Day ne zaman ve nasıl hazırlanırız? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Q-Day ne zaman ve nasıl hazırlanırız? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 ve her zaman aynı kaldı.
 
@@ -51,7 +51,7 @@ ve her zaman aynı kaldı.
 
 **Justin Drake:** Onun adına konuşamam ama belirtmemiz gereken bir şey var ki Scott öncelikle bir teorisyen. Çok uzun bir süre kuantum bilgisayarların günlük işleyişinden ziyade teorisi üzerinde çalıştı ve bence bu kadar temkinli olmasının nedeni kısmen buydu. Giderek daha fazla olan şey, bunları inşa eden gerçek şirketlerin, gerçek girişimcilerin olması ve onun içeriden bir bakış açısına sahip olması. Temel olarak tüm bu bilgileri özümsüyor. Son zamanlarda söylediği şeylerden biri, ABD hükümetinin fikirlerin yayınlanmasına müdahale etmeye başladığı. Yani Shor algoritmasında iyileştirmeler yapabilecek şirketlerimiz ve akademisyenlerimiz var ve bunlar potansiyel olarak ulusal güvenlik nedenleriyle tamamen açıklanmıyor.
 
-#### Fiziksel kübitler, mantıksal kübitler ve ECDSA'yı kırmak (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Fiziksel kübitler, mantıksal kübitler ve ECDSA'yı kırmak (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Vay canına. Tamam. Görünüşe göre hükümetler de bu işe dahil oluyor. Perde arkasında dönen tüm çalışmaları aslında tam olarak bilmiyoruz — şu an sadece ticari olarak uygulanabilir çalışmalardan haberdarız. Mantıksal kübit konusuna gelirsek, şu anda bir mantıksal kübitimiz olduğunu söylediniz. Fiziksel kübitler ve mantıksal kübitler var ve ölçeklendirilmesi gereken şey mantıksal kübitler. ECDSA'yı kırmak için aslında kaç mantıksal kübite ihtiyacımız var? Bu benim baktığım bir metrik, ama bu doğru bir sayı mı? İnsanların bin veya belki 1.500 taneye ihtiyaç duyulduğundan bahsettiğini duydum. Bu dikkat etmemiz gereken bir sayı mı?
 
@@ -69,7 +69,7 @@ Ayrık logaritmayı (discrete log) ve ECDSA'yı kırmak için algoritmaya baktı
 
 **Justin Drake:** Evet. Ve eğer bu kuantum bilgisayarlara ilk erişen gerçekten bir ulus devlet olacaksa, kripto dünyada büyük bir sistemik rol oynamadığı sürece, büyük ihtimalle güçlerini gizli bir şekilde bir şeylere saldırmak için kullanacaklardır — örneğin, düşmanlarına casusluk yapmak gibi. Bu da bizim lehimize işliyor. Ancak dolarla motive olan tamamen rasyonel bir varlıkla karşı karşıyaysanız, gerçekten de Bitcoin veya Ethereum'u hedef alabilirler.
 
-#### Kuantum veri merkezleri ve Q-Day saldırı senaryosu (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Kuantum veri merkezleri ve Q-Day saldırı senaryosu (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Kübitler hakkında son soru. Şu anda kuantum hesaplama veri merkezleri inşa ediliyor mu? Yapay zeka için devasa bir veri merkezi inşası var. Kuantum bilgisayarlar için de benzer bir şey olmaya başlıyor mu?
 
@@ -93,7 +93,7 @@ Ayrık logaritmayı (discrete log) ve ECDSA'yı kırmak için algoritmaya baktı
 
 **Justin Drake:** Kesinlikle. Evet. Ve sonra muhtemelen gidip en büyük balığa saldırırsınız, bu da kendilerini korumak için doğru altyapıyı kurmamış bir borsa olabilir. Kuantum bilgisayarlara karşı, en azından ilk olanlara karşı çok kolay bir önlem olduğu ortaya çıktı — adreslerinizi yeniden kullanmayın. Adresinizi yeniden kullandığınızda, açık anahtarı da yeniden kullanmış olursunuz ve bu, bir saldırganın ilgili özel anahtarı kırmak ve ardından adresi ikinci kez kullandığınızda fonlarınızı çalmak için zamanı olduğu anlamına gelir. Bu nedenle en iyi uygulama, uzun vadeli soğuk depolamada herhangi bir fon tutuyorsanız, bunun ilgili açık anahtarının hiçbir zaman açığa çıkmadığı temiz bir adres olması gerektiğidir. Bunu tamamen netleştirmek gerekirse: bir kuantum bilgisayarın size sağladığı şey
 
-#### Savunmasız Bitcoin adresleri ve Satoshi coin'leri (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Savunmasız Bitcoin adresleri ve Satoshi coin'leri (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 yapmak, açık anahtardan özel anahtara geri dönmektir. Bu yüzden mülkiyetin temellerini gerçekten tehlikeye atıyor.
 
@@ -119,7 +119,7 @@ Bu zamana yayılan bir süreç olacak. Ve ilginç bir sonuç da şu ki, eğer k�
 
 **Justin Drake:** Evet, aklımdaki kaba rakam bunlarla uyumlu. Yaklaşık 2 milyon Bitcoin, diyelim ki %10. Satoshi'den gelen 1 milyon ve ardından çok uzun zamandır hareket etmeyen yaklaşık bir milyon daha var. Bunun bir kısmını hesaptan düşmeliyiz çünkü bazı zombi adresleri meşrudur ve canlanacaktır, ancak yakın zamanda harcanan ve kaybolacak bazı adresler olabileceği için bunu artırmalıyız da. Yani %5 ila %15 doğru aralıktır. Ben %10-12 civarında bir tahminde bulunurdum, ki bu çok büyük bir oran — kesinlikle yüz milyarlarca dolar değerinde.
 
-#### Bitcoin için yakım ve kurtarma tartışması (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### Bitcoin için yakım ve kurtarma tartışması (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Buradaki oyun teorisi üzerine biraz düşünülebilir. A Seçeneği coin'leri yakmaya çalışmaktır. Bunun avantajı, yüz milyarlarca dolarlık satış baskısına maruz kalmamanızdır. Bunu kısa vadeli bir bakış açısıyla analiz ederseniz, rasyonel hamle budur. Ancak Bitcoin'in tüm hikayesi güçlü mülkiyet haklarına dayanır, bu yüzden daha uzun vadeli bir bakış açısına sahipseniz coin'leri yakmak istememelisiniz. Topluluğun hangi yöne gideceğini bilmek çok zor. Nihayetinde kararın büyük sahipler — örneğin Michael Saylor ve MicroStrategy — tarafından verilmesi mümkündür. Çünkü bu büyük sahipler Bitcoin'in her iki versiyonunun da — yakım olan ve olmayan — bir kopyasını alacaklar ve sevmediklerini elden çıkarmayı seçebilirler. Ve Saylor'ın yakımdan yana olduğunu biliyoruz, bu yüzden tek başına piyasayı potansiyel olarak manipüle edebilir ve istediği sonucu elde edebilir.
 
@@ -131,7 +131,7 @@ Diğer seçenek ise bu %10'u, kuantum bilgisayarını yaratabilen her kimse gidi
 
 **Justin Drake:** Evet, çok iyi ifade ettiniz. Ancak küçük bir düzeltme: bunun Q-Günü'nde veya Q-Günü'nden sonra gerçekleşmesi gerekmiyor. Daha önce de olabilir. Herhangi bir zamanda, Bitcoin topluluğu veya onun bir alt kümesi bir çatallanma yapmayı teklif edebilir. Çatallanma Blok numarasında, tıpkı Bitcoin Cash çatallanmasında olduğu gibi, bir varlık olarak Bitcoin'in iki versiyonu olacaktır. Ve nihayetinde buna piyasa karar verir. Borsalar varlığın iki versiyonunu oluşturacak ve piyasa hangisinin gerçek Bitcoin olduğuna karar verecektir. Ve sadece kısa vadeli Likidite dinamikleri nedeniyle, potansiyel olarak Q-Günü'nden önce coin'leri yakan versiyonun kazanacak olan versiyon olması mümkündür.
 
-#### Michael Saylor senaryosu ve Schelling noktaları (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### Michael Saylor senaryosu ve Schelling noktaları (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Doğru. Diyelim ki ben Michael Saylor'ım, Bitcoin arzının, özellikle de likit arzın %2-3'üne sahibim. Her iki kopyayı da alıyorum. Tıpkı 2017'deki Bitcoin çatallanma savaşlarında olduğu gibi Bitcoin Blokzincirini çatallıyoruz. Değerimi korumak istiyorum, bu yüzden kuantum saldırılarına açık olan tüm bitcoin'leri satıyorum ve kuantum saldırılarına açık coin'leri yakan versiyondaki tüm bitcoin'leri elimde tutuyorum. Dokunulmamış Blokzincirinin fiyatı düşüyor. Yakım versiyonunun fiyatı yüksek kalıyor çünkü kimse onu satmıyor — Saylor satmıyor, BlackRock satmıyor. Yani kuantum sorunu çözülmüş Bitcoin'in fiyatının daha yüksek olacağını ve piyasa güçleri tarafından asıl (kanonik) Bitcoin haline geleceğini söylüyorsunuz.
 
@@ -155,7 +155,7 @@ Diğer seçenek ise bu %10'u, kuantum bilgisayarını yaratabilen her kimse gidi
 
 Böylesine büyük bir ödüle sahip, çok trilyon dolarlık bir ağın başına bunun gelmiş olması kesinlikle inanılmaz. Bunun bir benzeri daha görülmedi. Ancak bu da olabilir ve belki de Bitcoin için daha iyi bir sonuç budur.
 
-#### Kurtarma ifadesi kanıtı ve kuantum sonrası imza boyutu sorunu (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Kurtarma ifadesi kanıtı ve kuantum sonrası imza boyutu sorunu (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Evet. Bu konuda birkaç düşüncem var. Birincisi, özel anahtar kullanmadan Bitcoin sahipliğini kanıtlamanın oldukça karmaşık bir yolu var. Bu, kurtarma ifadesi kanıtı olarak bilinir. Bir Bitcoin adresi türetmenin yolu üç adımdan oluşur: birinci adım, kurtarma ifadenizi oluşturursunuz; ikinci adım, özel anahtarınızı türetmek için kurtarma ifadesi üzerinde hashleme de dahil olmak üzere bazı işlemler yaparsınız; daha sonra özel anahtardan, zincir içi olarak kaydedilen adres olan açık anahtarı türetirsiniz. Ne yazık ki artık özel anahtar sahipliği kanıtlayabilen bir şey değil. Ancak hashleme adımı nedeniyle, kurtarma ifadenizi biliyorsanız, bu hala bir sahiplik kanıtıdır. Bu yüzden olabilecek bir şey — ve teknik olarak konuşmak gerekirse ileriye dönük en sağlam yol — Bitcoin'i dondurmak ancak herkesin kurtarma ifadesi kanıtı ile Bitcoin'lerini canlandırmasına izin vermektir.
 
@@ -177,7 +177,7 @@ Ethereum için inşa ettiğimiz şey, büyük olsalar bile ham imzaları zincir 
 
 Ancak aslında Bitcoin fiyatını riskten korumanın bir yolu var ve bu çok kolay — sadece BTC'de kısa pozisyon açarsınız. Diyelim ki 100.000 BTC tutan bir cüzdanın özel anahtarını kırdığınızdan eminsiniz. 100.000 BTC'lik kısa pozisyon açarsınız. Bu, kârınızı garantiler. Ve sonra Bitcoin'in fiyatı ne olursa olsun, on milyarlarca dolar olabilecek kârınızı garantilemiş olursunuz.
 
-#### Bitcoin'in sosyal katman zorluğu ve Ethereum'un avantajı (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### Bitcoin'in sosyal katman zorluğu ve Ethereum'un avantajı (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Şimdi, şunu belirtmek isterim ki Justin, sen belirli bir şekilde düşünüyorsun ve düşünme şeklin senin neden Ethereum'da olduğunun sebebidir. Eğer bir Bitcoinci olsaydın, farklı bir şekilde düşünürdün. Bitcoinci düşünce tarzı çok benzersiz, çok farklıdır — bir nevi mülkiyet hakları maksimalistidir. Bence Justin Bitcoin'in başında olsaydı yapacağı şey, genel Bitcoinci kitlesinin yapacağından çok farklı olurdu. Burada eyleme geçirilebilir bir sorum yok, sadece bunu vurgulamak istedim.
 
@@ -205,7 +205,7 @@ Ultrasound projesindeyken yapmaya çalıştığımız şeylerden biri, yakım i�
 
 **Justin Drake:** Kesinlikle. Evet. Somut bir tahminde bulunacak olsaydım, yaklaşık %2 derdim, ki bu Bitcoin'den kabaca bir büyüklük mertebesi daha azdır. Ve bu niceliksel farkın niteliksel sonuçları var: Ethereum söz konusu olduğunda, hiçbir şey yapmamayı ve mülkiyet haklarını gerçekten onurlandırmayı şiddetle savunurdum, çünkü günün sonunda %2 büyük bir mesele değil. Bitcoin söz konusu olduğunda ise %15 devasa bir meseledir.
 
-#### Ethereum'un üç katmanlı kuantum sonrası yükseltmesi (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### Ethereum'un üç katmanlı kuantum sonrası yükseltmesi (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Yani Ethereum da aynı seçimi yapmak zorunda kalacak. Diyelim ki %3 — dondurma ve yakım mı yapılacak yoksa sadece bir hazine avı olmasına izin mi verilecek. Senin umudun hazine avı seçeneğiyle ilerlememiz, yani bir kuantum saldırganının bu %1-3'lük Ether'i toplayıp götürmesi. Ve büyük resme bakarsanız, temelde Ether'in BTC'den çok daha iyi bir para birimi olmasına doğru ilerliyoruz. Müdahaleci olmayan, mülkiyet haklarına saygılı, kuantum güvenli olacak ve birkaç yarılanma sonra Bitcoin'in başına bela olacak güvenlik bütçesi sorununu yaşamayacak. Bu yüzden bunun varlık için büyük bir fırsat olduğunu düşünüyorum.
 
@@ -225,7 +225,7 @@ Ancak büyük resme baktığınızda, daha büyük sorunun — belki de %80'inin
 
 *(50:00)*
 
-#### Yürütme katmanını yükseltmek: imza birleştirme (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Yürütme katmanını yükseltmek: imza birleştirme (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 bu yükseltmeleri gerçekleştirmek için bazı temel kilometre taşlarını gerçekten detaylandırıyor.
 
@@ -243,7 +243,7 @@ Ethereum Vakfı, hash tabanlı imzalarla başlamak ve birleştirme maliyetinin m
 
 Ve bu yaklaşımla ilgili ironik şeylerden biri, aslında bugün sahip olduğumuza kıyasla bir ölçeklenebilirlik artışı olmasıdır. Bunun nedeni, işlem başına 64 baytlık sabit maliyetinizin olmamasıdır. İşlemler sıfır bayt imza verisine sahiptir ve ardından bloktaki tüm işlemlere paylaştırılan bu tek ana imzaya sahip olursunuz.
 
-#### Bitcoin iş birliği ile endüstri standardını belirlemek (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Bitcoin iş birliği ile endüstri standardını belirlemek (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Tamam. Yani bu, Ethereum'un izinden giden diğer birçok akıllı sözleşme blokzinciri için, özellikle de hız için optimize edenler için bir yükseltme—
 
@@ -263,7 +263,7 @@ Söylediğim diğer şeye dönecek olursak — sadece hash fonksiyonlarına daya
 
 Şimdi vurgulamak istediğim dikkat edilmesi gereken iki nokta var. Birinci nokta, daha karmaşık nesnelerle uğraşıyor olmamızdır ve burada sahip olduğumuz çözüm, derin uçtan uca biçimsel doğrulama olarak adlandırdığımız şeydir.
 
-#### Biçimsel doğrulama, Poseidon ve mutabakat katmanı (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Biçimsel doğrulama, Poseidon ve mutabakat katmanı (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Kriptografik nesnemiz var ve bunun sağlam olduğunu, yani sahte bir imza oluşturmanın imkansız olduğunu matematiksel olarak kanıtlamak istiyoruz. Ve bunu sadece matematik için değil, aynı zamanda kod için de yapmak istiyoruz. Bana 2-3 yıl önce bunun yapılabilir olup olmadığını sorsaydınız evet derdim, ancak son derece zahmetli ve pahalıydı. Yapay zekanın gelişiyle gördüğümüz şey, bu zahmetli ve pahalı işin 100 kat daha hızlı ve 100 kat daha ucuza yapılabileceğidir.
 
@@ -279,7 +279,7 @@ Ne yazık ki, hash fonksiyonlarının tasarımı gereği güvenli olduklarını 
 
 Yalnızca mutabakat katmanında bulunan belirli bir performans optimizasyonunun kilidini açmak için, durumlu imza kavramına sahibiz; imzaladığınız mesajların her seferinde artan bir sayacı vardır. Bu size bir şeyi hatırlatmıyor mu? Slot numarası. Ethereum'da mutabakat katmanında, slot başına her zaman yalnızca tek bir mesaj imzalarsınız. İki tane imzalarsanız, kesintiye uğrarsınız. Bir araya getirilmesi 10 kat daha verimli olan imzalara sahip olmak için bu kısıtlamayı kullanıyoruz.
 
-#### Lean VM, Lean Consensus yol haritası ve 2029 zaman çizelgesi (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, Lean Consensus yol haritası ve 2029 zaman çizelgesi (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 Temel fark budur: yürütme katmanındaki durumsuz hash fonksiyonlarına karşılık, slot numarasının arttığı mutabakat katmanındaki durumlu imzalar. Toplama teknolojisinin bir adı var: Lean VM, hash tabanlı kriptografi için minimal bir zkVM. Temel olarak Lean VM, bunun doğru bir Merkle kökü olduğunu kanıtlayacaktır. Henüz tam olarak emin olmadığımız asıl konu, bu yaklaşımın benim "tera gaz sınırı" olarak adlandırdığım şeyi — L1'de saniyede 1 gigagaz, 10.000 TPS, ancak daha da iddialı olarak, veri kullanılabilirliğini kullanarak L2'de saniyede 1 teragaz, 10 milyon işlem — açığa çıkarıp çıkaramayacağıdır.
 
@@ -297,7 +297,7 @@ Yani evet, çok iddialı. Temiz bir sayfa açıyoruz ve inanılmaz derecede güz
 
 Bunun yönetişimin yanı sıra sürdürülebilirlik açısından da ilginç sonuçları olacağını düşünüyorum. Yönetişim konusunda, bugün bunu yapma şeklimiz kabaca ifade etmek gerekirse
 
-#### Ethereum yönetişimi ve 2029 tamamlanma tarihi (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Ethereum yönetişimi ve 2029 tamamlanma tarihi (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 beş mutabakat katmanı istemcimiz var ve ilerleyebilmek için hepsinin yükseltmeyi uygulaması gerekiyor. Gelecekte, 10 veya 15 istemcimiz olduğunda, ilerlemek için sadece en iyi %80'in veya en hızlı %80'in bunu yapmasını şart koşabiliriz. Bu, en yavaş istemciyi beklemeden çok daha hızlı ilerlememizi sağlayan daha Darwinci bir rekabettir.
 
@@ -325,7 +325,7 @@ Bir diğer iyi haber ise başka seçeneğimizin olmaması. Kriptografiyi değiş
 
 Bu da koordinasyonu ve mutabakata varmayı çok daha basit hale getiriyor.
 
-#### Kuantum sadece bir kripto sorunu değil (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### Kuantum sadece bir kripto sorunu değil (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Sanırım sadece Ethereum'un başka seçeneği olmadığını değil, kriptodaki hiç kimsenin buna bir alternatifi olmadığını vurgulamalıyız. Kriptodaki herkesin yeniden yazım yapması gerekiyor. Bitcoin'de bu sadece ECDSA, ancak bu bile tek başına yeterli.
 
@@ -341,7 +341,7 @@ Size katılacağım nokta, yürütme katmanında tüm blokzincirler için çok b
 
 **Justin Drake:** Katılmıyorum. Sadece tarihsel analize bakabilirsiniz — deniz kabuklarının yerini tuz aldı, sonra gümüş, sonra altın ve şimdi potansiyel olarak altının yerini Bitcoin alıyor. Sırf altın başarısız oldu diye bir sonraki şeyin de başarısız olması gerekmez. İnternet parası olarak Ethereum'un Bitcoin'in çok doğal bir halefi olduğunu söyleyebilirim. Ve sırf Bitcoin başarısız oldu diye Ethereum'un da başarısız olması gerekmez. Kısa vadede bazı sıkıntılar olabileceğine katılıyorum, ancak aynı zamanda uzun vadeli kazançtan da bahsediyoruz.
 
-#### Kuantum sonrası fırsat ve güvenlik bütçesi hesaplaşması (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### Kuantum sonrası fırsat ve güvenlik bütçesi hesaplaşması (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Peki tüm bunların sonunda elimize ne geçecek? 2030'da Ethereum kuantum sonrası güvenliğe sahip olacak çünkü Justin söz verdi. Ethereum neye dönüşecek? Kendi sınıfında tek mi olacak, yoksa diğer blokzincirlerin de onu takip edip kuantum sonrası güvenliğe ulaşmasını bekliyor musunuz? Tüm bunlar gerçekleşirse 2030'da sahip olacağımız sistemi tarif edebilir misiniz?
 
@@ -357,7 +357,7 @@ Bu sadece Ethereum'un emsallerine kıyasla kendini farklı kılması için bir f
 
 Şimdiden görmeye başlıyoruz — daha dün, yapay zeka öncülerinden (OG) Dario Amodei, yapay zekanın otonom olarak kendini özyinelemeli bir şekilde geliştirmesini sağlamaya başladı ki bu son derece korkutucu. Temel olarak süper zekaya doğru üstel büyümeyi başlatması gereken şey de budur.
 
-#### Bitcoin'in güvenlik bütçesi krizi ve 2032 hesaplaşması (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### Bitcoin'in güvenlik bütçesi krizi ve 2032 hesaplaşması (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Potansiyel bir Q-Günü olarak 2032 var ve ayrıca Bitcoin'in inandığım kadarıyla son yarılanmasını yaşayacağı bir 2032 var. Buna B-Günü diyebilirsiniz — bir tür hesaplaşmanın yaşanacağı Bitcoin günü, çünkü ihraç onu güvence altına almak için çok düşük kalacak.
 
@@ -379,7 +379,7 @@ Bir varlık olarak BTC'nin, bir zincir olan Bitcoin'den ayrışarak daha güvenl
 
 **Justin Drake:** Ve eğer "Güvenlik bütçesi yeterli olmadığı için 21 milyon sınırını kaldıracağız" gibi farklı sözler söyleseydim — Bitcoin destekçileri yine böyle düşünmezdi. Çok hızlı bir şekilde duvara doğru ilerliyorlar ve 2032 hesaplaşma günü.
 
-#### Şimdi topla, sonra şifresini çöz — kriptonun ötesindeki kuantum riskleri (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Şimdi topla, sonra şifresini çöz — kriptonun ötesindeki kuantum riskleri (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** Peki ya kuantumun toplumun geri kalanıyla olan ilişkisi? Bu sadece bir kripto sorunu değil. Blokzincirler benzersiz bir şekilde savunmasızdır, ancak toplumun diğer bileşenleri de savunmasızdır. Kuantum sonrası bir Ethereum, kuantum ve yapay zeka sonrası bir dünyada toplumun bir şeyleri çözmesi ve önlemesi için ne ölçüde bir araç temsil ediyor?
 
@@ -387,7 +387,7 @@ Bir varlık olarak BTC'nin, bir zincir olan Bitcoin'den ayrışarak daha güvenl
 
 Ayrıca şifreleme ile ilgili başka bir sorun daha var: eğer materyal bugün şifrelenmişse ve kuantum sonrası güvenli şifreleme kullanmıyorsanız, bu verilerin şifresi gelecekte çözülebilir. "Şimdi topla, sonra şifresini çöz" adı verilen bütün bir saldırı sınıfı var. Toplumda kitlesel şifre çözme olayları yaşayacağımızın gerçekçi olduğunu düşünüyorum — çok sayıda Signal mesajı, Telegram mesajı veya yığınla Gmail mesajının hepsinin aynı anda şifresinin çözülmesi gibi. Bunun toplum üzerinde çok önemli bir etkisi olabilir.
 
-#### Savunmacı ivmecilik ve yapay zeka varoluşsal riski olarak Ethereum (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Savunmacı ivmecilik ve yapay zeka varoluşsal riski olarak Ethereum (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, bu üç işlem teknolojisi hakkında konuştuğumuzda, öne çıkanın yapay zeka olduğu hissediliyor. 2032'nin bir tür AGI (Yapay Genel Zeka) anı olacağından bahsediyordun. Genel bir soru: son derece yetenekli bir kriptograf olarak, sen bir AGI değilsin. Endişe şu ki, bilişim tekilliğine girdiğimizde, artık hiçbir şeyin garantisi yok. Blokzincirlerimizin kuantum direncine sahip olması için 2026'da yaptığımız tüm o iyi hazırlanmış planlar — ya AGI kuantum dirençli kriptografimizi başka bir yolla kırmanın bir yolunu bulursa? Bir kriptograf olarak, yapay genel zekanın bilinmeyen bilinmeyenleri ve kırabileceği şeyler hakkında endişeleniyor musun? Ya kuantum sonrası bir dünyaya hazırlıklıysak ama AGI sonrası bir dünyaya hazırlıklı değilsek?
 
@@ -401,7 +401,7 @@ Bence insanlık hayatta kalırsa, Ethereum'un bunda kilit bir rol oynaması akla
 
 Ethereum üzerinde çalışmak son birkaç ayda benim için yepyeni bir anlam kazandı. Kısmen Blokzincir işlerine takıntılı olduğum için, ama aynı zamanda kısa bir süre öncesine kadar bir oyuncak olduğu için yapay zekayı çoğunlukla görmezden geliyordum. Ancak çalışmalarım sayesinde, özellikle biçimsel doğrulama ve geliştirme ile
 
-#### Yapay zeka çağında Ethereum üzerinde çalışmanın anlamı (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### Yapay zeka çağında Ethereum üzerinde çalışmanın anlamı (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 ve kodlama yaparken, bu şeylerin ne kadar güçlü olduğunu görüyorum. Son birkaç hafta ve aydır yapay zekaya takıntılı hale geldim, elimden geldiğince çok şey öğreniyorum. Kesinlikle bir uzman değilim ve belki de bu sadece insanların Pandora'nın kutusunu açtıklarında geçirdikleri bir evredir. Ancak benim için Ethereum üzerinde çalışmak artık tamamen savunmacı ivmecilik ile ilgili.
 
@@ -417,7 +417,7 @@ Toplumun diğer kesimlerinin fren sistemi üzerinde çalıştığını görmüyo
 
 **Justin Drake:** Bu konuda nispeten huzurluyum. Ölmeye razı olduğum bir noktaya ulaştım. Çok mutlu bir hayat yaşadım.
 
-#### Kıyamet olasılığı üzerine son düşünceler (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Kıyamet olasılığı üzerine son düşünceler (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** Ne?
 

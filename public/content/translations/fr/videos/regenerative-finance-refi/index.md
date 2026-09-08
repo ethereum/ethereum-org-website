@@ -18,25 +18,25 @@ Une vidéo explicative de **CNBC Television** explorant le mouvement de la finan
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=La52dDzBt2k) publiée par CNBC Television. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Qu'est-ce que la finance régénérative ? (0:00) {#what-is-regenerative-finance-000}
+### Qu'est-ce que la finance régénérative ? (0:00) {#what-is-regenerative-finance-000}
 
 Que vous vient-il à l'esprit lorsque vous entendez le terme « ReFi » ? Si vous êtes propriétaire, vous pourriez penser au refinancement de votre maison. Mais pour la crypto, cela a pris un tout autre sens. La finance régénérative a été décrite comme l'intersection de la crypto et du climat. C'est un modèle financier qui encourage les actions communautaires pour aider à résoudre des problèmes systémiques tels que le réchauffement climatique et la gestion des déchets.
 
 **Nirvaan Ranganathan :** La ReFi combine véritablement le meilleur de la finance décentralisée (DeFi) avec les concepts de l'économie régénérative, et consiste essentiellement à disposer d'un ensemble d'outils qui crée des instruments financiers, des marchés financiers et un système économique ayant des externalités positives — apportant des avantages aux personnes, à leurs communautés et, en fin de compte, à la planète.
 
-#### Le problème énergétique de la crypto (0:48) {#cryptos-energy-problem-048}
+### Le problème énergétique de la crypto (0:48) {#cryptos-energy-problem-048}
 
 La crypto a acquis la réputation d'être nocive pour la planète, car les actifs numériques sont connus pour nécessiter une forte consommation d'électricité, ce qui peut entraîner des émissions de gaz à effet de serre — en particulier dans les communautés proches des installations de minage. En août de l'année dernière, la Maison Blanche a estimé que la consommation mondiale totale d'électricité pour les crypto-actifs se situait entre 120 et 240 milliards de kilowattheures par an — une fourchette qui dépasse la consommation annuelle totale d'électricité de pays comme l'Argentine et l'Australie.
 
 Depuis lors, Ethereum est passé de la preuve de travail (PoW) à la preuve d'enjeu (PoS), réduisant considérablement sa consommation d'énergie. Mais Bitcoin reste un gouffre énergétique — une étude plus récente a révélé que le minage de Bitcoin utilisait 95,58 térawattheures par an.
 
-#### Les chaînes de blocs à empreinte carbone négative (1:31) {#carbon-negative-blockchains-131}
+### Les chaînes de blocs à empreinte carbone négative (1:31) {#carbon-negative-blockchains-131}
 
 Celo, un protocole de chaîne de blocs lancé lors du Jour de la Terre il y a trois ans, fait partie d'un mouvement croissant qui espère changer ce discours. Ses fondateurs qualifient Celo de « berceau de la ReFi ».
 
 **Nirvaan Ranganathan :** Celo a une empreinte carbone négative, et ce parce qu'il y a des années, la communauté a adopté une proposition de gouvernance qui a décidé de compenser le carbone que le réseau produit. Depuis lors, il achète automatiquement des crédits de compensation carbone littéralement tous les jours pour compenser en réalité plus que le carbone qu'il émet — c'est pourquoi nous disons qu'il a une empreinte carbone négative. Celo a vraiment été le premier réseau à faire cela, ce qui a ouvert la voie pour aider à changer le discours autour des chaînes de blocs et déterminer si elles peuvent être une véritable force positive pour l'environnement.
 
-#### Les projets ReFi en action (2:16) {#refi-projects-in-action-216}
+### Les projets ReFi en action (2:16) {#refi-projects-in-action-216}
 
 Un exemple de ReFi en action : un projet appelé Silvi, qui aide à soutenir les efforts de boisement dans une forêt tropicale au Kenya. Ils ont créé un système qui encourage à moindre coût les gens à planter des arbres, puis d'autres personnes à aller vérifier que ces arbres sont bien là — simplement en utilisant leurs téléphones, en prenant des photos des arbres et en utilisant le GPS du téléphone comme moyen de fournir des preuves.
 
@@ -44,7 +44,7 @@ Un exemple de ReFi en action : un projet appelé Silvi, qui aide à soutenir les
 
 Un autre projet est le Collectivo Guilder, une monnaie communautaire à Curaçao dans les Caraïbes. Ils encouragent les dépenses locales par le biais d'une monnaie communautaire, mais la monnaie elle-même est également adossée à des arbres et à d'autres actifs ReFi sur l'île. Cela encourage la plantation d'arbres à Curaçao en plus d'encourager les dépenses locales — un projet ReFi convaincant qui est à la fois bon pour les communautés et bon pour le climat.
 
-#### Un élan croissant (3:50) {#growing-momentum-350}
+### Un élan croissant (3:50) {#growing-momentum-350}
 
 Le mouvement ReFi gagne du terrain. En avril, plusieurs centaines de personnes ont assisté à un Sommet sur le Climat et la Chaîne de blocs organisé par Celo dans ce qui a été appelé la « ReFi House » à Austin, au Texas. Il a eu lieu en même temps et dans la même ville que l'une des plus grandes conférences crypto au monde, Consensus 2023. L'objectif principal était de créer un espace pour que les bâtisseurs de la ReFi et les « Regens » — comme les gens aiment s'appeler — se réunissent, partagent des idées et parlent du travail qu'ils accomplissent. De nombreuses collaborations y ont vu le jour.
 
@@ -52,7 +52,7 @@ Le mouvement ReFi gagne du terrain. En avril, plusieurs centaines de personnes o
 
 Pitchbook a suivi les capitaux investis dans la ReFi, avec une activité culminant au troisième trimestre de l'année dernière lorsque le marché global de la crypto était encore florissant. Cependant, cette année, dans le contexte de ralentissement actuel, les investissements et le nombre de transactions ont chuté.
 
-#### Les perspectives pour la ReFi (5:15) {#the-outlook-for-refi-515}
+### Les perspectives pour la ReFi (5:15) {#the-outlook-for-refi-515}
 
 **Analyste :** J'adore le concept. Quant à savoir s'il s'agit d'une industrie à part entière — je me dis toujours : « Attendons de voir comment cela évolue. » Mais je pense que la transparence accrue que la chaîne de blocs peut offrir a toujours fourni un mécanisme pour plus de responsabilité — que ce soit la responsabilité dans les chaînes d'approvisionnement, la façon dont nous gérons les déchets, la création de modèles de comportement durables, ou l'engagement dans différents types d'activités de réseau, ce que nous voyons déjà.
 

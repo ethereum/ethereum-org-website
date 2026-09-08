@@ -19,7 +19,7 @@ Eine Präsentation von **Preston Van Loon** von Offchain Labs und Prysm, gehalte
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=GgKveVMLnoo), das von der ETHDenver veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:07) {#introduction-007}
+### Einführung (0:07) {#introduction-007}
 
 **Moderator:** Alles klar, Leute. Machen wir direkt weiter. Wir werden mit Preston Van Loon über die Evolution von Ethereum sprechen. Leg los.
 
@@ -29,7 +29,7 @@ Es gibt ein Narrativ, das ihr wahrscheinlich schon einmal gehört habt: Ethereum
 
 Ich arbeite am Konsens-Client Prysm. Er ist eine der Schlüsselkomponenten der Ethereum Beacon Chain. Und ich war bei den jüngsten Updates an vorderster Front dabei – bei Pectra, Fusaka. Nach dem, was ich von innen gesehen habe, war dies keine langsam mahlende Bürokratie, wie die Leute es seit vielen Jahren über Ethereum behaupten. Es war tatsächlich eine hochgeschwindigkeits-, gut funktionierende Maschine, die einige der größten Upgrades geliefert hat, die wir jemals in der Geschichte von Ethereum gesehen haben.
 
-#### Auslieferung von drei Upgrades in einem Jahr (1:18) {#shipping-three-upgrades-in-one-year-118}
+### Auslieferung von drei Upgrades in einem Jahr (1:18) {#shipping-three-upgrades-in-one-year-118}
 
 Was wir 2025 ausgeliefert haben, waren drei große Updates in einem Jahr. Zuerst Pectra im Mai 2025. Dies führte native Kontoabstraktion ein, eine Erhöhung des maximalen effektiven Guthabens für Validatoren, was Konsolidierungen ermöglichte, und zehn weitere EIPs. Im Mai war dies das größte Upgrade in Bezug auf EIPs, das Ethereum je gesehen hatte.
 
@@ -37,7 +37,7 @@ Aber dann, nur sieben Monate später, lieferten wir Fusaka aus – ein noch grö
 
 Dies ist ein Beweis für die Lieferfähigkeit von Ethereum. Dies ist eine Zusammenarbeit zwischen fünf oder sechs Konsens-Clients, fünf Ausführungs-Clients, vielen Forschern – über hundert Personen, die an der Kernentwicklung von Ethereum beteiligt sind – und sie alle liefern koordiniert zur gleichen Zeit aus.
 
-#### PeerDAS-Skalierung (2:22) {#peerdas-scaling-222}
+### PeerDAS-Skalierung (2:22) {#peerdas-scaling-222}
 
 Werfen wir einen Blick auf das Highlight von Fusaka: PeerDAS. PeerDAS ist eine sehr großartige Skalierungslösung. Vor PeerDAS hatten wir Pectra, und mit Pectra musste man – als Knotenbetreiber oder Validator – jeden Blob herunterladen, der mit einem Block kam. Das Ziel waren sechs Blobs pro Block. Jeder musste sie herunterladen, und das ist wirklich ein Skalierungsengpass. Wenn man das erhöhen möchte, verlangt man von den Knotenbetreibern, ihre Bandbreitennutzung für Blobs proportional zu erhöhen.
 
@@ -47,7 +47,7 @@ Wenn wir uns die Zahlen ansehen: Für Pectra hatten wir ein Ziel von sechs und e
 
 Und dann bekamen wir diesen großen Rückgang der Bandbreite, bei dem jeder Block mit einem Ziel von sechs Blobs jetzt nur noch 96 Kilobyte an Blob-Daten umfasst, die ein Validator speichern musste. Dann haben wir mit BPO1, dem Blob-Parameter-Only-Fork, das Ziel auf 10 und das Maximum auf 15 erhöht. BPO2, das nur einen Monat später stattfand, ging auf 14 und 21 – was das Doppelte von dem ist, was wir in Pectra hatten, aber immer noch 71 % weniger Bandbreitennutzung für Blobs für Solo-Staker bedeutet.
 
-#### Was in Glamsterdam kommt (4:30) {#whats-coming-in-glamsterdam-430}
+### Was in Glamsterdam kommt (4:30) {#whats-coming-in-glamsterdam-430}
 
 Was kommt als Nächstes in Glamsterdam? Es gibt drei wirklich wichtige Dinge und eines, das noch aktiv erforscht wird.
 
@@ -57,7 +57,7 @@ Das nächste, was wir haben, sind Zugriffslisten auf Blockebene. Dies ist eine c
 
 Die dritte Sache ist die Neupreisung von Gas. Es gab Benchmarks durch dieses EIP, die zeigten, dass einige Opcodes überteuert und andere unterbewertet waren. Jetzt werden wir die Gebühren, die man für jeden Opcode zahlt, aktualisieren, um die Realität widerzuspiegeln, was Ethereum sicherer und effizienter macht.
 
-#### Die sich wandelnde Rolle von L2s (6:14) {#the-evolving-role-of-l2s-614}
+### Die sich wandelnde Rolle von L2s (6:14) {#the-evolving-role-of-l2s-614}
 
 Es gibt eine Sache, über die ich sprechen möchte, die Vitalik kürzlich erwähnt hat. Er sagte vor ein paar Wochen in einem Tweet, dass die ursprüngliche Vision von Layer 2 (L2) und ihrer Rolle in Ethereum keinen Sinn mehr ergibt. Das sorgte für viele Schlagzeilen, und ich denke, viele Leute haben daraus die falschen Schlüsse gezogen.
 
@@ -65,7 +65,7 @@ Lasst mich euch sagen, was das aus der Sicht von jemandem bedeutet, der mittendr
 
 Die Idee, dass wir Allzweck-L2s brauchen – also L2s, die einfach dieselbe EVM sind, die wir auf Layer 1 (L1) haben, nur ein paar Mal kopiert und eingefügt, und alles, was sie tun, ist schneller zu sein – das ist nicht mehr die Vision. Diese L2s werden durch Spezialisierung florieren. Einige von ihnen werden auf Dinge wie Privatsphäre, Gaming, Spezifika in Dezentralisierte Finanzen (DeFi) oder Erweiterungen der EVM abzielen. Aber wenn sie einfach nur eine Klon-Kopie der L1 sind, sind sie nicht Teil der Roadmap, in der wir uns ursprünglich diese Art von Sharding-Paradigma durch L2s vorgestellt haben.
 
-#### FOCIL: Zensurresistenz auf Protokollebene (7:25) {#focil-protocol-level-censorship-resistance-725}
+### FOCIL: Zensurresistenz auf Protokollebene (7:25) {#focil-protocol-level-censorship-resistance-725}
 
 Jenseits von Glamsterdam gibt es drei wirklich coole Dinge in aktiver Entwicklung und Forschung. Das erste ist FOCIL – Fork-Choice Enforced Inclusion Lists.
 
@@ -75,23 +75,23 @@ FOCIL verändert die Machtdynamik. Anstatt zu sagen, dass Block-Ersteller alle T
 
 Dies wird durch die Fork-Choice-Regel erzwungen. Validatoren, die einen Block sehen, werden keine Attestierung dafür abgeben, es sei denn, es ist unten eine Inklusionsliste angehängt. Wenn sie einen ohne die Liste sehen, betrachten sie diesen Block als ungültig und ignorieren ihn einfach – sie werden ihn nicht weiterleiten, sie werden keine Stimme dafür abgeben. Dies ist noch aktive Forschung, bei der einige Parameter noch festgelegt werden müssen, aber die Richtung ist klar: Ethereum wird Zensurresistenz auf Protokollebene integrieren.
 
-#### Kürzere Slot-Zeiten (9:24) {#shorter-slot-times-924}
+### Kürzere Slot-Zeiten (9:24) {#shorter-slot-times-924}
 
 Das nächste wirklich Aufregende sind kürzere Slot-Zeiten. Mit Hegata – dem Fork nach Glamsterdam – überlegen wir, ob wir kürzere Slot-Zeiten oder schnelle Slots einführen können. Das heißt nicht, dass wir direkt zu Sechs-Sekunden-Slots oder noch schneller springen, sondern dass wir die Weichen stellen, um das möglich zu machen.
 
 Es klingt wirklich einfach – so nach dem Motto: „Lasst uns einfach schneller werden.“ Aber man muss an die Netzwerk-Propagierung denken, an die Attestierungspflichten der Validatoren, für die sie nur eine begrenzte Zeit zur Verfügung haben, und dann ist da noch die Wirtschaftlichkeit. Als ich zum ersten Mal damit experimentierte, änderte ich einfach die 12 in eine 6, und plötzlich machte jeder doppelt so viel Emission – doppelt so viel Geld –, was nicht wirklich die Absicht hinter kürzeren Slot-Zeiten ist. Es geht darum, schneller zu werden, aber alles andere gleich zu belassen. Es ist also eine sehr komplexe Angelegenheit, aber es besteht die Möglichkeit, im Endstadium schrittweise dorthin zu gelangen.
 
-#### Schnellere Endgültigkeit (10:20) {#faster-finality-1020}
+### Schnellere Endgültigkeit (10:20) {#faster-finality-1020}
 
 Die dritte Sache ist schnellere Endgültigkeit. Das ist wirklich wichtig, weil Ethereum alle zwei Epochen – alle 13 Minuten – endgültig wird, und es gibt Anwendungen, die wirklich davon abhängen, die Frage zu stellen: Ist meine Transaktion dauerhaft? Wenn die Transaktion nicht in einer endgültigen Epoche war, dann lautet die Antwort nein – es besteht eine kleine Chance, dass sie durch eine Reorganisation (Reorg) verschwindet und die Transaktion erneut eingereicht werden muss.
 
 Wenn wir nun eine schnelle Endgültigkeit haben, können Dinge wie Börsen, Bridges oder jede andere Anwendung sicher sein, dass eine Transaktion endgültig ist. Zuerst, anstatt zwei Epochen für die Endgültigkeit, machen wir es in einer. Dann können wir sagen, anstatt Epochen, die 32 Slots lang sind, verkürzen wir sie auf vier Slots. Wenn man das nun mit Sechs-Sekunden-Slot-Zeiten koppelt, spricht man von einer Endgültigkeit in weniger als 30 Sekunden. Das ist ein wirklich cooles Endziel.
 
-#### Der Nordstern (11:15) {#the-north-star-1115}
+### Der Nordstern (11:15) {#the-north-star-1115}
 
 All dies ist in den Nordstern eingebaut, bei dem wir sagen, die L1 ist schnell mit einer Finalisierung in Sekunden. Wie kommen wir dorthin? Zuerst beginnen wir mit PeerDAS – das ist bereits ausgeliefert. Das hat uns eine skalierbare Schicht für Datenverfügbarkeit gegeben. Als Nächstes haben wir Glamsterdam, das hauptsächlich ePBS umfasst, was eine saubere Implementierung für die Proposer-Builder-Trennung (PBS) ist und Dinge wie FOCIL wirkungsvoller macht. FOCIL bringt Zensurresistenz mit sich, was sehr harmonisch mit ePBS zusammenpasst. Mit schnelleren Slots machen schnelle Slot-Zeiten eine schnellere Endgültigkeit noch wirkungsvoller. Dann erreichen wir dieses Endziel, bei dem wir wirklich schnelle Transaktionen haben, die in Sekunden endgültig sind.
 
-#### Abschluss (12:02) {#closing-1202}
+### Abschluss (12:02) {#closing-1202}
 
 Ich möchte, dass ihr euch vorstellt, wie das Leben in zwei Jahren aussieht. Es ist ein bisschen schwer vorstellbar, weil Krypto sich so schnell bewegt. Dies könnte in nur zwei Jahren Realität sein: Transaktionsbestätigungszeiten von vier oder sechs Sekunden; Endgültigkeit gemessen in Sekunden, nicht in Minuten; Durchsetzung von Zensurresistenz auf Protokollebene; Schutzmaßnahmen gegen Post-Quanten-Kryptographie; und L2s, die über Funktionen und neue Innovationen konkurrieren, anstatt nur schneller zu werden. All dies, während die Tugend erhalten bleibt, dass man einen handelsüblichen Laptop oder Hardware verwenden kann, um einen Full Node zu Hause zu betreiben. Ethereum ist zugänglich und bleibt auch in Zukunft für jeden zugänglich.
 

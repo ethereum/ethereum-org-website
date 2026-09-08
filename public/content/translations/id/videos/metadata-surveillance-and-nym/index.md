@@ -17,23 +17,23 @@ Sebuah fitur dari **Nym** bersama Kepala Ilmuwan Nym Claudia Diaz, mengeksploras
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=QBX5AK3DXqw) yang diterbitkan oleh Nym. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar (0:04) {#intro-004}
+### Pengantar (0:04) {#intro-004}
 
 Apa itu metadata komunikasi? Ini merujuk pada segala sesuatu tentang komunikasi yang bukan merupakan isi dari apa yang sebenarnya sedang dibicarakan. Ini termasuk, misalnya, asal komunikasi, tujuan, waktu pengiriman informasi, berapa banyak informasi yang dikirim, dan pola apa pun yang dapat dideteksi, termasuk waktu dan ukuran paket yang dipertukarkan.
 
-#### Metadata komunikasi (0:27) {#communications-metadata-027}
+### Metadata komunikasi (0:27) {#communications-metadata-027}
 
 Metadata komunikasi terekspos secara default di semua protokol internet: TCP/IP, HTTP, UDP, FTP. Bahkan protokol aman seperti TLS atau DNS aman, yang melindungi konten dengan enkripsi ujung-ke-ujung (end-to-end encryption), masih menampilkan metadata komunikasi: asal, tujuan, waktu, panjang, dan sebagainya.
 
 Jadi informasi ini terekspos, tetapi kepada siapa? Siapa yang bisa mendapatkannya?
 
-#### Siapa yang mendapat akses ke metadata (1:10) {#who-gets-access-to-metadata-110}
+### Siapa yang mendapat akses ke metadata (1:10) {#who-gets-access-to-metadata-110}
 
 Ada sejumlah entitas yang menjadi perantara dalam komunikasi internet yang dapat mengakses metadata komunikasi ini. Ini termasuk pemain besar dalam infrastruktur internet, seperti penyedia layanan internet (ISP), bursa, sistem otonom, router BGP, dan peserta tulang punggung (backbone) internet pada umumnya; mereka bisa mendapatkan akses ke banyak metadata komunikasi. 
 
 Namun, bahkan pemain kecil, seperti siapa pun yang menjalankan router Wi-Fi atau jaringan area lokal (LAN), atau seseorang yang dapat menguping secara lokal, juga mendapatkan akses ke metadata komunikasi. Dan tentu saja, musuh tingkat negara-bangsa seperti NSA telah diketahui mengumpulkan metadata dalam skala besar dan menganalisisnya untuk mengekstrak segala jenis intelijen.
 
-#### Mengapa metadata itu penting (2:00) {#why-is-metadata-important-200}
+### Mengapa metadata itu penting (2:00) {#why-is-metadata-important-200}
 
 Ada lebih banyak alasan mengapa metadata adalah jenis data yang sangat menarik untuk dikumpulkan dan dieksploitasi. Metadata dapat dibaca oleh mesin, karena ia berbicara dalam bahasa komputer; pada dasarnya ini adalah bahasa bagi komputer agar dapat merutekan komunikasi dari sumber ke tujuannya dengan cara yang tepat. Jadi ini dapat dibaca oleh mesin, dan itu berarti mesin dapat memahaminya dalam skala besar dengan sangat mudah, berbeda dengan bahasa alami manusia, yang jauh lebih sulit untuk ditafsirkan, karena mungkin orang menggunakan kata-kata dengan cara tertentu, atau mereka memiliki nuansa, dan ini jauh lebih sulit untuk ditafsirkan. Di sisi lain, metadata sangatlah mudah.
 
@@ -51,7 +51,7 @@ Analisis lalu lintas metadata bahkan dapat digunakan untuk memulihkan konten ter
 
 Namun, ada banyak situasi di mana analisis lalu lintas metadata komunikasi dapat bertindak sebagai saluran sampingan (side channel) yang mengungkapkan konten terenkripsi ini.
 
-#### Pengawasan metadata (5:15) {#metadata-surveillance-515}
+### Pengawasan metadata (5:15) {#metadata-surveillance-515}
 
 Salah satu contohnya adalah ketika Anda menjelajahi situs web dengan HTTPS. Pada prinsipnya, karena komunikasi dengan situs web ini dienkripsi, seseorang yang mengamati komunikasi Anda tidak dapat mengetahui halaman spesifik mana yang Anda akses di situs web tersebut. Misalnya, jika Anda membuka WebMD untuk memeriksa penyakit, seorang pengamat atau penguping akan dapat melihat, "Oke, Anda sedang memeriksa informasi medis WebMD," tetapi mereka tidak dapat mengetahui penyakit spesifik apa yang sedang Anda cari.
 
@@ -61,7 +61,7 @@ Dengan melakukan ini, Anda dapat membangun sidik jari (fingerprint) dari masing-
 
 Ini jelas mengkhawatirkan. Meskipun kita dapat memiliki enkripsi ujung-ke-ujung, kita masih sangat jauh dari selesai dalam hal melindungi privasi komunikasi kita.
 
-#### Daftar keinginan untuk komunikasi privat (6:40) {#a-wish-list-for-private-communications-640}
+### Daftar keinginan untuk komunikasi privat (6:40) {#a-wish-list-for-private-communications-640}
 
 Jadi jika kita ingin memiliki daftar keinginan tentang apa yang akan ditawarkan oleh jaringan komunikasi yang aman secara sempurna, apa saja properti yang kita inginkan? 
 

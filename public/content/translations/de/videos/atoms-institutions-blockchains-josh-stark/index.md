@@ -19,7 +19,7 @@ Eine philosophische Keynote von **Josh Stark** von der Ethereum Foundation auf d
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=zI07mqNdxzA), das von ETHGlobal veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Warum können wir Blockchains nicht erklären? (0:00) {#why-cant-we-explain-blockchains-000}
+### Warum können wir Blockchains nicht erklären? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Hallo zusammen, danke, dass ihr hier bei der Pragma in Denver seid. Mein Name ist Josh. Ich arbeite bei der Ethereum Foundation – ich bin jetzt seit etwa fünf Jahren bei der EF. Ich scherze gerne, dass mein Job darin besteht, herauszufinden, was mein Job sein sollte, und das ändert sich alle sechs Monate.
 
@@ -31,7 +31,7 @@ Wir müssen wirklich zum Kern der Sache vordringen, und ich glaube nicht, dass w
 
 Das begann also mit einer sehr spezifischen Frage, die ich hatte: Was ist diese Allzwecktechnologie? Was ist diese grundlegende Fähigkeit? Und es entwickelte sich zu etwas, das ich viel interessanter finde.
 
-#### Claude Shannon und die Idee der Information (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon und die Idee der Information (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Lasst mich euch eine Geschichte erzählen. In den 1930er und 40er Jahren war Claude Shannon von den Anfängen eines neuen Zeitalters umgeben. Bei den Bell Labs arbeitete er während des Krieges an Feuerleitsystemen und Kryptographie und begann, über einen allgemeineren Ansatz für Informationen nachzudenken. Er nannte es anfangs nicht Information – 1939 schrieb er einem Kollegen, dass er über die „Übertragung von Intelligenz“ nachdenke. Das Wort Information hatte damals eine andere Bedeutung.
 
@@ -41,7 +41,7 @@ Vor diesem Moment hatte niemand wirklich dieses Konzept von Information als eine
 
 Was ihr daraus mitnehmen solltet: Es gab eine Zeit, bevor wir die Idee der Information hatten, und eine Zeit danach. Was wäre, wenn uns auf ähnliche Weise etwas so Grundlegendes fehlt? Das ist meine Hypothese.
 
-#### Drei Hinweise (7:00) {#three-clues-700}
+### Drei Hinweise (7:00) {#three-clues-700}
 
 Während ich mich bemühe, Blockchains zu erklären, stoße ich immer wieder auf diese seltsamen Dinge, die ich für Hinweise auf etwas Größeres halte.
 
@@ -53,7 +53,7 @@ Bei Autos sprachen wir von „pferdelosen Kutschen“, aber zumindest konnten wi
 
 **Hinweis Nummer drei** – Satoshis Paper beginnt mit diesen Worten: „Der Handel im Internet hat sich fast ausschließlich auf Finanzinstitute als vertrauenswürdige Dritte verlassen.“ Satoshi verglich Bitcoin mit Institutionen, nicht mit anderer Software. Da ist etwas dran.
 
-#### Einführung der Härte (11:00) {#introducing-hardness-1100}
+### Einführung der Härte (11:00) {#introducing-hardness-1100}
 
 Hier ist meine Antwort darauf, was in diese Kategorie gehört. Ich nenne es **Härte** (hardness). Hier ist die Geschichte in fünf einfachen Schritten, und dann gehen wir mehr in die Tiefe.
 
@@ -71,7 +71,7 @@ Die Inflationsrate von Gold ist aufgrund der physikalischen Eigenschaften unsere
 
 Man kann sich Atome, Institutionen und Blockchains wie Baumaterialien vorstellen – wie Holz, Beton und Stahl. Sie sind unterschiedlich, aber sie gehören zu einer gemeinsamen Kategorie. Und wir nutzen diese Dinge nicht, um Gebäude zu bauen, sondern um eine Zivilisation aufzubauen. Vielleicht können wir mit besseren Materialien eine größere, bessere und stärkere Zivilisation aufbauen als die, die wir jetzt haben.
 
-#### Was ist Härte? (14:00) {#what-is-hardness-1400}
+### Was ist Härte? (14:00) {#what-is-hardness-1400}
 
 Lasst mich genauer erklären, was ich mit Härte meine. Das ist nicht einfach irgendeine Zuverlässigkeit, die irgendetwas haben könnte. Härte ist eine spezifische Art. Zunächst ist festzuhalten, dass es sich um eine Art von Zuverlässigkeit handelt, die für die soziale Koordination wichtig ist. Nicht nur, wisst ihr, dass dieser Tisch zuverlässig ein Tisch ist – sondern dass man seine Miete bezahlen kann, dass ein Vertrag durchgesetzt wird, dass eine Wirtschaft stark ist. Dafür ist Härte da.
 
@@ -87,7 +87,7 @@ Und schließlich stammt Härte aus bestimmten Quellen – Atomen, Institutionen 
 
 Was mir an diesem Konzept gefällt, ist, dass es uns erlaubt, tiefere Fragen zu stellen – nicht nur über spezifische Eigenschaften von Blockchains zu sprechen, sondern all diese verschiedenen Dinge zu vergleichen und darüber nachzudenken, wo sie angemessen sind, wie wir sie nutzen und in welcher Kombination.
 
-#### Atom-Härte (19:00) {#atom-hardness-1900}
+### Atom-Härte (19:00) {#atom-hardness-1900}
 
 Bei der Atom-Härte geht es darum, dass wir Zuverlässigkeit in der Natur um uns herum finden – buchstäblich physische Atome, aber auch andere natürlich vorkommende Eigenschaften. Wir tun dies, wenn wir Goldperlen als Geld verwenden, wenn wir physische Strukturen nutzen, um Eigentumsrechte zu definieren, oder Eigentumsrechte in einem physischen Objekt wie einer Urkunde festhalten.
 
@@ -101,7 +101,7 @@ Und Güsse werden oft durch unsere zunehmende menschliche Kontrolle über die Na
 
 Aber es ist subtiler als das. Manchmal haben wir Güsse, von denen wir nicht einmal wissen, dass sie existieren, aber dann sind sie weg, weil sich etwas geändert hat. Es gab lange Zeit einen harten Guss bezüglich der Handelsgeschwindigkeit auf den Finanzmärkten – es konnte nur in einem bestimmten Tempo gehandelt werden, vielleicht in dem Tempo, in dem sich jemand auf dem Parkett etwas zurufen kann. Dieser Guss war atomhart – wir konnten einfach nicht schneller kommunizieren. Aber neue Technologien haben diese Annahmen völlig untergraben. Wir stellten fest, dass uns eine Version dieses alten Gusses eigentlich gefiel, und bauten ihn aus Institutionen neu auf – indem wir Vorschriften einführten, die die Handelsgeschwindigkeit begrenzen und Handelsaussetzungen (Circuit Breakers) durchsetzen.
 
-#### Institutionelle Härte (22:00) {#institutional-hardness-2200}
+### Institutionelle Härte (22:00) {#institutional-hardness-2200}
 
 Institutionelle Härte ist eine sehr weite Kategorie – sie umfasst die meisten Dinge, an die wir denken, wenn wir an Zivilisation denken. Unsere Rechtssysteme, Gesetzgeber, Polizeikräfte, Unternehmen, alles. Alle Institutionen, die irgendeine Art von Härte bieten. Wir haben Güsse geschaffen, die unseren Gesellschaften Ordnung gaben und asoziales Verhalten bestraften. Wir haben Härte als Plattform geschaffen, die es jedem ermöglicht, seine eigenen Güsse zu erstellen, die durch Institutionen gehärtet werden, wenn man bestimmte Regeln befolgt. Wir haben Güsse geschaffen, die neue Vermögenswerte hervorbrachten und wachsenden Volkswirtschaften Kreditquellen boten.
 
@@ -111,13 +111,13 @@ Aber sie hat auch viele Schwächen. Sie ist durch Grenzen beschränkt – nur in
 
 Und sie bestehen aus Menschen, und Menschen sind schlecht. Die Realität in diesem und vielen anderen Ländern ist, dass viele Menschen nicht wirklich Zugang zu der Härte hatten, die von Institutionen bereitgestellt wird. Sie konnten keine Hypothek aufnehmen. Sie konnten kein Bankkonto eröffnen. Denn wenn man eine Institution mit Menschen besetzt, ist sie deren Übeln, deren Vorurteilen, deren Ideologien ausgesetzt. Und unsere Abhängigkeit von institutioneller Härte nimmt nur noch zu. Das Problem damit, dass Software die Welt verschlingt, ist, dass die meiste Software eigentlich nur aus einer Institution hinter dem Bildschirm besteht, und wir geben ihnen dadurch immer mehr Macht.
 
-#### Blockchain-Härte (24:20) {#blockchain-hardness-2420}
+### Blockchain-Härte (24:20) {#blockchain-hardness-2420}
 
 Satoshis Erfindung war natürlich mehr als nur Bitcoin – sie war der Kern einer Allzwecktechnik zur Schaffung digitaler Härte in einer digitalen Umgebung. Sie hat viele Stärken: universeller globaler Zugang, sie besteht aus Software und jeder kann Software schreiben, der Grad der Härte kann transparent und überprüfbar sein, niedrige Anlaufkosten, leicht weiterzuentwickeln und durch Marktanreize gesichert – und Märkte sind rational.
 
 Aber sie hat auch Schwächen. Sie erfordert eine technologische Zivilisation – wir hätten Blockchains aufgrund der Anforderungen nicht schon früher haben können, und eine Zivilisation in der Zukunft, die nicht das hat, was wir haben, wird sie auch nicht nutzen können. Sie besteht aus Software, und Software kann schlecht geschrieben sein. Der Anwendungsbereich von Güssen ist auf Onchain-Umgebungen beschränkt. Und sie ist durch Marktanreize gesichert – und Märkte sind irrational.
 
-#### Warum das wichtig ist (25:10) {#why-this-matters-2510}
+### Warum das wichtig ist (25:10) {#why-this-matters-2510}
 
 Was bedeutet das also? Was bringt uns das? Warum ist das mehr als nur von akademischem Interesse?
 
@@ -127,7 +127,7 @@ Es erklärt, warum private oder zentralisierte Blockchains nicht interessant sin
 
 Es hilft auch, das Spektrum der Möglichkeiten und die Standardideologien zu verstehen, in die Menschen im Blockchain-Bereich verfallen. Viele Menschen konzentrieren sich sehr darauf, Blockchain-Härte zu nutzen, um mit institutioneller Härte zu konkurrieren oder sie zu ersetzen – darum geht es in weiten Teilen der Bitcoin-Community und bei vielen Dezentralisierten Finanzen (DeFi). Sogar ENS versucht in gewisser Weise, DNS zu ersetzen oder damit zu konkurrieren. Aber dann gibt es auch Leute, die sehen, dass Blockchain-Härte Dinge tun kann, die institutionelle Härte nicht kann – Ideen, die noch nie jemand zuvor ausprobiert hat, weil wir diese Fähigkeit, diese bestimmte Art von Härte, nie hatten. Und jetzt können wir diese Dinge erforschen. Vielleicht gehören NFTs dazu, oder Spiele wie Dark Forest, oder die Bewegung rund um autonome Welten.
 
-#### Unsere Ambitionen steigern (27:00) {#raising-our-ambitions-2700}
+### Unsere Ambitionen steigern (27:00) {#raising-our-ambitions-2700}
 
 Am wichtigsten ist meiner Meinung nach, dass dieses Konzept unsere Ambitionen steigert. Persönlich ist es das, was für mich zählt, und vielleicht findet das bei euch Anklang – ich bin nicht nur wegen dieser einzelnen Anwendungen hier. Ich bin niemand, dem es nur um Bitcoin oder nur um DeFi oder nur um NFTs geht. Vielleicht geht es euch genauso. Hier ist etwas Größeres im Gange.
 

@@ -19,7 +19,7 @@ Prezentacja **Bartka Kiepuszewskiego**, założyciela L2BEAT, na Devcon SEA, bad
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=ik2JxmHDmyw) opublikowanego przez Fundację Ethereum. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 Będąc założycielem L2BEAT, mam wyjątkową okazję współpracować z niemal każdym zespołem L2 na rynku, a pracujemy z nimi od samego początku istnienia tej przestrzeni — czyli od jakichś czterech lat. To niesamowite. Czas leci bardzo szybko. Pracowaliśmy z wczesnymi pionierami technologii z wiedzą zerową (ZK), pracowaliśmy z Plasma Group, która zmieniła nazwę na Optimism, pracowaliśmy z Arbitrum. I z tej sceny chcę wyrazić uznanie dla wszystkich tych zespołów, ponieważ bez waszego wsparcia z pewnością by nas tu nie było. Jako L2BEAT jesteśmy niezwykle wdzięczni za całe wsparcie, jakie daje nam społeczność.
 
@@ -27,7 +27,7 @@ Spójrzmy więc na to, co udało nam się osiągnąć. Przede wszystkim udało n
 
 Rzecz w tym, że z całym tym wzrostem wiąże się również ogromna odpowiedzialność. Musimy zrozumieć, że użytkownicy końcowi korzystający z tych systemów wpłacają pieniądze do tych rollupów, ponieważ wierzą, że rollupy dziedziczą bezpieczeństwo Ethereum. Mając tę świadomość, moim zdaniem, musimy zacząć poważnie traktować bezpieczeństwo.
 
-#### Skalowanie Ethereum (2:10) {#scaling-ethereum-210}
+### Skalowanie Ethereum (2:10) {#scaling-ethereum-210}
 
 Udało nam się również przeskalować Ethereum. Ethereum radziło sobie całkiem nieźle, ale zaczęło stawać się naprawdę wolne w stosunku do popytu, a opłaty stawały się bardzo wysokie. Więc z pewnością się skalujemy — te liczby również rosną. To niesamowite.
 
@@ -35,7 +35,7 @@ Jest jednak pewne „ale”. Wiecie, zawsze jest jakieś „ale”, prawda? A ja
 
 Ponieważ, wiecie, zbyt długo używaliśmy kółek bocznych. Jeśli jesteś dorosłym używającym kółek bocznych — a powtarzam, minęły już cztery lata — to jesteś naprawdę niedojrzały. Używanie kółek bocznych jest w porządku, jeśli jesteś dzieckiem. Nie jest w porządku, jeśli jesteś dorosły. I myślę, że nadszedł czas, abyśmy wszyscy przestali się tego wstydzić. Wszyscy powinniśmy głośno o tym mówić i nie powinniśmy cierpieć na syndrom nowych szat króla.
 
-#### Wielkie „ale”: brakujące systemy dowodzenia (4:30) {#the-big-but-missing-proof-systems-430}
+### Wielkie „ale”: brakujące systemy dowodzenia (4:30) {#the-big-but-missing-proof-systems-430}
 
 Więc czym jest to wielkie „ale”? Cóż, po pierwsze, większość dzisiejszych L2 nie ma systemu dowodzenia, co jest dość zaskakujące, ponieważ wczesnym pionierom, takim jak StarkNet, zkSync czy Aztec — cztery lata temu, kiedy uruchamiali swoje pierwsze rollupy specyficzne dla aplikacji, nie brakowało systemów dowodzenia. Więc tak, możesz dziś uruchomić L2 jednym kliknięciem przycisku. Jednak czy to naprawdę jest L2? Czy to naprawdę jest rollup? To, co robisz, to uruchamianie czegoś, co jest zabezpieczone przez multisig. Nie sądzę, by to było wystarczająco dobre.
 
@@ -43,13 +43,13 @@ Stan ekosystemu dzisiaj wygląda mniej więcej tak, jak na tym diagramie. Po lew
 
 Ten wykres po prawej stronie obejmie również wszystkie stosy Orbit, które mają system dowodzenia, jednak w rzeczywistości kryje się on za często bardzo krótką, wymagającą zezwolenia białą listą. Czasami ta biała lista to tylko jeden podmiot — to ten sam, co proponujący stan. Zasadniczo jest to proponujący stan i tylko on może rzucić wyzwanie samemu sobie. Że co? Poważnie.
 
-#### Rady bezpieczeństwa (6:00) {#security-councils-600}
+### Rady bezpieczeństwa (6:00) {#security-councils-600}
 
 Obecnie większość L2 nie korzysta z rad bezpieczeństwa. Co rozumiemy przez radę bezpieczeństwa? Rada bezpieczeństwa to w zasadzie multisig, który składa się z co najmniej ośmiu uczestników i wymaga progu konsensusu na poziomie 75%. Można więc o tym myśleć jak o dużym multisigu, ale nie chodzi tylko o rozmiar — chodzi o to, że chcemy, aby uczestnicy byli geograficznie zdecentralizowani. Być może słyszeliście wczoraj niesamowitą prezentację o potrzebie dywersyfikacji geograficznej. Tego właśnie oczekujemy od tych struktur. I w zasadzie chcemy, co najważniejsze, aby uczestnicy pochodzili z różnych firm i różnych jurysdykcji. To niezwykle ważne i pokażę wam kilka przykładów, dlaczego tak jest.
 
 Pomyślcie o radach bezpieczeństwa jak o takich superdoładowanych multisigach. Kryje się za nimi bardzo ważna warstwa społeczna. Tak więc wygląda obecny stan rzeczy i znowu, jest bardzo źle. Mamy rady bezpieczeństwa tylko w Arbitrum, Optimism, Polygon, zkSync — i wiem, że StarkNet, Scroll i, co ciekawe, Fuel uruchamiają się z radą bezpieczeństwa. Wszyscy inni to w zasadzie bardzo mały, wewnętrzny, często prywatny multisig i szczerze mówiąc, niezwykle trudno jest odróżnić te multisigi od zwykłych kont zewnętrznych (EOA).
 
-#### Założenia dotyczące zaufania w kwestii dostępności danych (7:25) {#data-availability-trust-assumptions-725}
+### Założenia dotyczące zaufania w kwestii dostępności danych (7:25) {#data-availability-trust-assumptions-725}
 
 Trzecią dużą rzeczą, którą zrobiliśmy źle, jest to, że większość L2 niebędących rollupami jest skonfigurowana z fatalnymi założeniami dotyczącymi zaufania w kwestii dostępności danych (DA). I używam słowa „fatalnymi” — po pierwsze, ponieważ je lubię, a po drugie, ponieważ jest naprawdę, naprawdę źle.
 
@@ -59,7 +59,7 @@ Komitet dostępności danych został pierwotnie stworzony i promowany przez Star
 
 Podsumowując, przykro mi to mówić, ale w tej chwili w większości L2 operatorzy wymagający zezwolenia mogą ukraść lub zamrozić wasze środki. Jesteśmy tu po to, aby uświadomić to wam wszystkim. Przykro mi to mówić, ale musimy zmienić to nastawienie.
 
-#### Dlaczego systemy dowodzenia mają znaczenie (8:40) {#why-proof-systems-matter-840}
+### Dlaczego systemy dowodzenia mają znaczenie (8:40) {#why-proof-systems-matter-840}
 
 Dlaczego powinniśmy dbać o systemy dowodzenia? Naszym zdaniem istnieją co najmniej trzy dobre powody, dla których wszyscy powinniśmy mieć działający system dowodzenia.
 
@@ -71,7 +71,7 @@ Po wprowadzeniu systemu dowodzenia sytuacja staje się znacznie trudniejsza dla 
 
 Wreszcie, systemy dowodzenia — jeśli jesteś na Etapie 2 (Stage 2) — pozwalają na usunięcie jakichkolwiek pośredników. Nie potrzebujesz rady bezpieczeństwa, a jeśli ją masz, to tylko w sytuacjach awaryjnych. Może to więc mieć głębokie implikacje regulacyjne. Możesz chcieć uruchomić swoje L2 jako system Etapu 2 od samego początku. Jest to możliwe, ale oczywiście musisz mieć system dowodzenia — w idealnym przypadku możesz chcieć mieć więcej niż jeden. Pojawiły się już pewne ogłoszenia o systemach, które to robią, jak niedawne ogłoszenie zespołu Nethermind budującego rollup, który ma być na Etapie 2 w momencie uruchomienia.
 
-#### Dlaczego rady bezpieczeństwa, a nie multisigi (11:29) {#why-security-councils-not-multisigs-1129}
+### Dlaczego rady bezpieczeństwa, a nie multisigi (11:29) {#why-security-councils-not-multisigs-1129}
 
 To było o systemach dowodzenia. Teraz, dlaczego rady bezpieczeństwa, a nie po prostu zwykłe multisigi? Powód jest taki: nie wierzcie, że multisigi to multisigi. To jest powód — chyba że istnieje warstwa społeczna, która może was faktycznie przekonać, że są one fundamentalnie zdywersyfikowane.
 
@@ -83,7 +83,7 @@ Wreszcie, całkiem niedawno mieliśmy atak na multisig. Nie myślcie ani przez c
 
 Podsumowując: jeśli masz rollup na Etapie 0 bez rady bezpieczeństwa, w zasadzie złośliwy operator może zrobić z twoimi środkami, co tylko zechce. Jeśli jesteś rollupem na Etapie 0 z radą bezpieczeństwa, to atakujący musi przekupić mniejszość rady bezpieczeństwa — może to być trudne, ale znacznie łatwiejsze niż przekupienie większości rady bezpieczeństwa, co musiałbyś zrobić, gdyby twój rollup miał system dowodzenia. I wreszcie, nikt nie może ukraść twoich środków, jeśli jesteś na Etapie 2. To jest obietnica dotarcia do Etapu 2.
 
-#### Proponowana reklasyfikacja (13:10) {#proposed-reclassification-1310}
+### Proponowana reklasyfikacja (13:10) {#proposed-reclassification-1310}
 
 Pytanie brzmi: czy mamy odpowiednie zachęty dla projektów, aby faktycznie się tym przejmowały? Problem polega na tym, że jedyną rzeczą, jaką możemy zrobić — my jako L2BEAT i my jako społeczność Ethereum — jest wywieranie presji społecznej. Vitalik powiedział, że od przyszłego roku planuje publicznie wspominać tylko o L2, które są na Etapie 1. Wcześniej powiedział nawet, że nie będzie nazywał systemów rollupami, jeśli nie są na Etapie 1.
 
@@ -93,7 +93,7 @@ To, co proponujemy społeczności — i to trafi na forum w celu uzyskania opini
 
 Następnie mamy kolejną kategorię systemów, które nie używają DA Ethereum. Używają one dodatkowych założeń dotyczące zaufania, które wiążą się z zewnętrznym DA. Nazywamy je „alt-DA”, ale obejmowałyby one validium, optimium i wszelkie konstrukcje hybrydowe, jakie można stworzyć. Muszą one jednak dawać rozsądne gwarancje DA — to nie może być twoja piwnica. To musi być komitet dostępności danych o rozsądnej wielkości, a jeśli używasz Celestii lub Avail, musisz użyć mostu.
 
-#### Kategoria „inne” i zobowiązanie L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### Kategoria „inne” i zobowiązanie L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 A co z pozostałymi? Umieścimy je w trzeciej kategorii, którą nazywamy — i teraz czekam na opinie społeczności, jak nazwać te systemy — nasza robocza nazwa to „inne”. Rzecz w tym, że są one zabezpieczone przez multisigi, a my obnażymy te multisigi, pokazując, czym naprawdę są. To właśnie chcemy zrobić w naszym interfejsie użytkownika.
 
@@ -107,7 +107,7 @@ Czy wystarczy po prostu powiedzieć „Mam system dowodzenia”? Nie. Naszym zob
 
 Zatrudniamy badaczy. Wykonamy całą tę pracę. To jest nasze zobowiązanie na przyszły rok. Mam nadzieję, że przyszły rok będzie rokiem L2 i rollupów — jednak nie chodzi o uruchomienie rollupa jednym kliknięciem przycisku. Chodzi o to, aby móc uruchomić system z dobrym bezpieczeństwem. W idealnym przypadku chcesz odziedziczyć jak najwięcej bezpieczeństwa z Ethereum. Przed nami wszystkimi dużo pracy, aby to osiągnąć. Ale jeśli tego nie zrobimy, to w zasadzie jedyne, co robimy, to tworzenie tysięcy niezabezpieczonych łańcuchów pobocznych (sidechains). Myślę, że jako społeczność tego nie chcemy.
 
-#### Pytania i odpowiedzi (18:45) {#qa-1845}
+### Pytania i odpowiedzi (18:45) {#qa-1845}
 
 **Prowadzący:** Przejdźmy do pytań i odpowiedzi. Czy to ważne, aby rollupy miały zdecentralizowany sekwenser, czy też inne mechanizmy bezpieczeństwa są wystarczające?
 

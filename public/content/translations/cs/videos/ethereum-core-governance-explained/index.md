@@ -20,7 +20,7 @@ Prezentace od **Nixa Rokishe** z Nadace Ethereum na ETHBoulder, která vysvětlu
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=ghyY_cRqd54) zveřejněného komunitou EthBoulder. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:12) {#introduction-012}
+### Úvod (0:12) {#introduction-012}
 
 Děkuji všem šesti mým přátelům, kteří dorazili. Dobrá. Dnes k vám budu mluvit o správě jádra Etherea. Jmenuji se Nixo. Vedu tým podpory protokolu v Nadaci Ethereum (EF). Mezi všechny naše úkoly patří i to, aby byl proces správy jasnější a snáze se v něm orientovalo všem ostatním, kteří se na těchto věcech podílejí, protože Ethereum zahrnuje mnohem více lidí než jen své hlavní vývojáře (core devs).
 
@@ -36,7 +36,7 @@ Loni se stala jedna velmi sporná věc. Možná jste o ní slyšeli. Jmenovalo s
 
 Takže to byla taková ta poslední kapka pro EOF a nakonec to bylo z forku vyřazeno. Další věc, kterou musí vzít v úvahu, je, že to musí být napsáno a důkladně otestováno v šesti různých jazycích, protože tito klienti jsou napsáni v šesti různých jazycích. To je pro ně opravdu velká testovací matice, se kterou musí pracovat. A kvůli tomu je každé drobné rozhodnutí o designu předmětem debaty, aniž by existovala nějaká autorita, která by neshody vyřešila. To přináší otázku, kdo o tom rozhoduje – což je jádro správy.
 
-#### Mylné představy (5:23) {#misconceptions-523}
+### Mylné představy (5:23) {#misconceptions-523}
 
 To nás přivádí k mylným představám a na některé z nich se podíváme. Jednou z nich je, že Vitalik rozhoduje o tom, co se dostane do protokolu Etherea. Rozšířením toho je, že Nadace Ethereum ovládá všechno. A třetí je, že jsou to všechno zákulisní dohody – že tato rozhodnutí dělají zasvěcenci a veteráni (OGs).
 
@@ -52,13 +52,13 @@ A líbí se mi tenhle hloupý tweet, který jsem si tu vyfotil, protože je to j
 
 Jsou to všechno zákulisní dohody, zasvěcenci, veteráni – trochu víc chápu, proč je to mylná představa, protože v podstatě přijdete na tyto hovory o správě a je tam stovka lidí. Zdá se, že jsou všichni velmi v pohodě s tím, co se děje. Vy jste ztraceni. Nemáte tušení, jak se tato rozhodnutí dělají. Říkáte si: „Už je řada na mně, abych mluvil?“ A máte pocit, že lidé při rozhodování poslouchají pořád těch samých 10 lidí.
 
-#### Meritokracie a statistiky účasti (10:18) {#meritocracy-and-participation-stats-1018}
+### Meritokracie a statistiky účasti (10:18) {#meritocracy-and-participation-stats-1018}
 
 Pravdou ale je, že vývoj Etherea je větší meritokracií, než jakou jsem kdy viděl u většiny vývoje softwaru. Všichni tito lidé na tomto snímku obrazovky – to je jeden ze tří v tomto náhodném hovoru ACD, který jsem se rozhodl vyfotit – nikdo z těchto lidí nebyl jmenován, aby tu byl. Všichni jsou to prostě lidé, kteří se ukázali. Jsou to vývojáři, kteří s tímto protokolem strávili spoustu času. Jsou to ti, které lidé uznali jako talentované vývojáře v tomto prostoru, kteří neustále dělají dobrá rozhodnutí, a nikdo z nich tu není z moci úřední.
 
 Já jsem se k EF připojil teprve před více než rokem. Vzal jsem tyto statistiky. Sahají jen do března 2025. Takže méně než rok. Průměrný počet účastníků All Core Dev – to jsou ty hovory o správě – je 98. Takže v průměru je na těchto hovorech 98 lidí. Maximální počet účastníků v jednom hovoru od té doby byl 153. Myslím, že to bylo v den, kdy jsme rozhodovali o datu spuštění Pectra na Mainnet. A celkový počet unikátních účastníků je 567 jen za poslední rok. Tahle metrika se mi opravdu líbí, protože ukazuje, že na tyto hovory nechodí pokaždé těch samých 100 lidí. Tito vývojáři aplikací, výzkumníci, někdo uslyší o nějaké funkci, o které se diskutuje, objeví se, aby vyjádřil svůj nesouhlas nebo podporu, a pak už na další hovor nepřijde.
 
-#### Jak funguje proces správy (11:52) {#how-the-governance-process-works-1152}
+### Jak funguje proces správy (11:52) {#how-the-governance-process-works-1152}
 
 Tohle je trochu suchý snímek, ale myslím, že je důležité si ho projít – takto v současnosti funguje správa Etherea. Takže když se diskutuje o jednom z těchto forků, první věc, která se stane, je, že lidé během tohoto vyhrazeného časového okna mohou předložit svůj hlavní návrh (headliner proposal). Hlavní návrh je ta stěžejní funkce, kolem které chceme, aby se lidé pro tento fork sjednotili. Může to být člen komunity, výzkumník, hlavní vývojář – opravdu kdokoli, kdo předloží jeden z těchto hlavních návrhů. Pak se okno uzavře a na hovorech o správě tak nějak diskutujeme o tom, který z nich dává smysl. Lidé předkládají své argumenty, lidé se přou a panuje konsensus ohledně toho, který bychom měli pro nadcházející fork vybrat.
 
@@ -68,7 +68,7 @@ Takže po několika devnetech – mohou to být dva, může jich být 10 – se 
 
 A jakmile je testnet nevyžadující povolení stabilní, vybere se datum pro Mainnet. Poté následuje 30denní rezerva. Tato 30denní rezerva existuje, protože si to vyžádaly L2 a protokoly, aby se mohly na fork připravit. Takže to je minimálně 30 dní a pak dojde k forku.
 
-#### Struktura hovorů a koordinace (15:01) {#call-structure-and-coordination-1501}
+### Struktura hovorů a koordinace (15:01) {#call-structure-and-coordination-1501}
 
 Během celé této doby probíhají některé hlavní série hovorů. Všechny tyto veřejné hovory jsou živě přenášeny na YouTube. Ty hlavní jsou ACDE a ACDC. E znamená exekuční vrstva – to jsou věci jako transakce, nasazování chytrých kontraktů, správa mempoolu. ACDC je vrstva konsensu – takže to jsou věci týkající se validátorů, jako je správa validátorů, penalizace. A ty se střídají ve čtvrtek. Takže každý čtvrtek je ACD a jeden z nich je ACDE a pak ten další je ACDC, a tak to pokračuje.
 
@@ -76,7 +76,7 @@ Hovory ACDE a ACDC se zaměřují na fork, který právě vytváříme, a na for
 
 A pak jsou tu oddělené hovory (breakout calls). Oddělené hovory jsou členové komunity, výzkumníci, vývojáři, kteří říkají: „Hej, mám funkci, kterou chci dostat do Etherea za dva forky.“ A tak pořádají tyto týdenní, měsíční nebo dvouměsíční hovory, kde probírají detaily implementace, mění a iterují specifikaci a obecně řeší všechny otázky, které lidé mají, všechny známé neznámé, aby se ujistili, že je to v nejlepším možném stavu pro zařazení do forku za dva forky. A ty mohou být naplánovány, kdykoli se facilitátor rozhodne.
 
-#### Vyvíjející se proces (15:29) {#an-evolving-process-1529}
+### Vyvíjející se proces (15:29) {#an-evolving-process-1529}
 
 Takže jedna věc, kterou chci všem vštípit, je, že tento proces není vůbec statický. Tento proces, který jsem vám právě popsal, funguje méně než rok. Ethereum funguje už 10 let. Ale neustále se mění a důvodem, proč se neustále mění, je to, že to nikdo neřídí. A tento proces se tak nějak vyvíjí, aby se zjistil nejefektivnější způsob fungování. A říkám sice efektivní, ale pověst, kterou správa Etherea má, je taková, že je opravdu stagnující, je těžké něco prosadit, je matoucí – a to proto, že když máte 100 až 500 lidí, kteří dělají rozhodnutí, jsem upřímně ohromen, že to vůbec funguje.
 
@@ -88,7 +88,7 @@ Takže ten druhý snímek obrazovky nahoře je Tim, který navrhuje definice pro
 
 Třetí věcí jsou commity v průběhu času na Forkcastu. Forkcast je produkt mého týmu, od Wolframa Marka, kluka z mého týmu, který ho vytvořil v polovině loňského roku, když se můj tým v současné podobě zformoval. A stal se z něj takový kanonický zdroj, který lidé používají k interakci s forkem, aby viděli, co se do forku dostane a jak je to ovlivní. Všechny tyto věci jsou staré méně než dva roky. Takže chci jen říct, že tento proces se hodně mění. Není vůbec statický. Není to nějaká zamrzlá byrokracie, do které je těžké proniknout.
 
-#### Srovnatelné systémy správy (20:21) {#comparable-governance-systems-2021}
+### Srovnatelné systémy správy (20:21) {#comparable-governance-systems-2021}
 
 Takže jen v rychlosti jsem se chtěl dotknout nejpodobnějších decentralizovaných systémů správy, které vidím ve srovnání se správou Etherea. A to, co se tu tak nějak snažím říct, je, že je to udržitelné – i když je úžasné, že 100 až 500 lidí dokáže dělat rozhodnutí, v reálném světě je to udržitelné. Vidíme příklady toho, že to funguje.
 
@@ -96,13 +96,13 @@ IETF je Internet Engineering Task Force. Je to dobrovolníky řízený standardi
 
 Věci, kterým se to nepodobá: jiné blockchainy, které mají onchain hlasování pomocí tokenů. Ethereum se specificky vyhýbá jakémukoli mechanismu hlasování, protože to podle mého názoru vede k možnostem ovládnutí a tak nějak to odstraňuje motivaci dělat věci jako meritokracii, kde lidé prostě důvěřují těm, kteří píšou nejlepší kód. A pak jsou tu L2. Ty mají multi-sigy. Mají bezpečnostní rady. To jsou spíše jmenované pozice, které dělají tato rozhodnutí. A to má své kompromisy. Je to více centralizované. Pohybuje se to ale rychleji.
 
-#### Proč to zajímá tvůrce (22:38) {#why-builders-care-2238}
+### Proč to zajímá tvůrce (22:38) {#why-builders-care-2238}
 
 Proč se tedy tvůrci zajímají o správu? Protože tvůrci jsou doslova ti, pro které je Ethereum vytvořeno. Ethereum není vytvořeno pro hlavní vývojáře. Není vytvořeno pro validátory. Někdy jsou z toho tito lidé zmatení. Hlavní vývojáři Etherea a validátoři slouží Ethereu, které slouží tvůrcům a uživatelům.
 
 A každý už zažil ten moment s umělou inteligencí, kdy se dostáváte příliš do detailů a ona se snaží opravit tuhle maličkost a nedokáže si poodstoupit a podívat se na celkový smysl projektu. A hlavní vývojáři mohou být takoví, když se snaží zdokonalit proces vývoje jádra. A v tom případě je velmi klíčové, aby přišli tvůrci, protože vývoj jádra je tak pohlcující, že většinou zároveň nestaví na Ethereu. Jsou velmi zapojeni do vývoje jádra. Zabírá jim to veškerý čas. A tak se tvůrci aplikací musí opravdu snažit přijít a říct: „Hej, tohle potřebujeme. Tohle je pro Ethereum klíčové.“ Jen aby se ujistili, že tam ta perspektiva je a že nejsou jen zaškatulkováni do práce pouze pro hlavní vývojáře.
 
-#### Jak se zapojit (24:40) {#how-to-participate-2440}
+### Jak se zapojit (24:40) {#how-to-participate-2440}
 
 Jak se tedy zapojit nebo prosadit svou funkci? Tohle je taková obecná rada, ale myslím, že je ta nejlepší. Buďte hlasití ohledně svých problémů. Běžte na Twitter, pište příspěvky na blog, hledejte řešení svých problémů. Spekulujte o věcech, které by vám mohly pomoci. Pokud najdete další lidi, kteří mají stejné problémy, obecně můžete najít EIP, které existuje k řešení tohoto problému, nebo vám někdo pomůže napsat EIP, které to udělá.
 

@@ -18,7 +18,7 @@ Un panel lors de l'événement Web3Privacy Now pendant Devconnect 2025, animé p
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=cZqlg4W1Els) publiée par Web3Privacy Now. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction à l'Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Introduction à l'Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin :** Bonjour. Vous m'entendez ? Très bien. Super. Nous allons d'abord faire une très courte présentation d'introduction — environ 3 à 5 minutes — qui nous mènera ensuite au panel. Il s'agit d'une présentation abrégée. Le panel précédent a beaucoup parlé de conformité, de confidentialité, etc. J'ai donné une présentation précédente au Cyban Congress qui a également abordé ce sujet, et il y aura une version plus longue de cette présentation lors du DeFi Day plus tard dans la journée. Mais ce dont je veux parler, c'est de la confidentialité institutionnelle sur Ethereum.
 
@@ -30,7 +30,7 @@ Une seule grande institution ici peut avoir un impact massif sur l'écosystème 
 
 Pour qu'Ethereum puisse intégrer ces institutions, il faut répondre à ces préoccupations en matière de confidentialité. Ce que nous essayons de faire à l'Institutional Privacy Task Force, c'est d'intégrer les institutions sur Ethereum et de nous assurer que leurs objectifs de confidentialité sont atteints. Nous organisons des ateliers, en essayant de démystifier le secteur et de nous assurer que nous pouvons répondre aux besoins institutionnels en matière de confidentialité spécifiquement. Le premier artefact que nous avons est cette carte de la confidentialité institutionnelle — nous parlons à des institutions massives, comprenons leurs cas d'utilisation commerciaux et leurs exigences, rendons open source autant que possible, puis nous parlons aux fournisseurs du secteur pour connecter les institutions à l'espace des solutions. 
 
-#### Présentations du panel et problèmes institutionnels (5:00) {#panel-introductions-and-institutional-problems-500}
+### Présentations du panel et problèmes institutionnels (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin :** Désolé, c'était un peu rapide, mais j'espère que c'était compréhensible. Ce panel réunit donc de nombreux experts en recherche, en politique et en ingénierie, et nous allons parler de la confidentialité institutionnelle. 
 
@@ -48,7 +48,7 @@ Dans l'autre sens, *pourquoi être sur une chaîne de blocs publique ?* Ce sont 
 
 **Amzah :** Oui. Je travaille pour ABN Amro, qui est une grande banque néerlandaise. Nous avons 5 millions de clients de détail. Nous ne construisons donc rien de spécifique à la confidentialité pour le moment, mais ce qui arrive maintenant, c'est par exemple un portefeuille d'identité numérique. Habituellement, cela fonctionne de la manière suivante : les données sont stockées dans une base de données centralisée, puis vous vous connectez à un fournisseur externe ou à un tiers, mais ce n'est bien sûr pas vraiment sûr. Nous commençons donc déjà à réfléchir à la manière dont nous pouvons utiliser les preuves à divulgation nulle de connaissance (ZK), par exemple, afin d'avoir une divulgation sélective avec des parties externes. Dans ce sens, nous pouvons protéger les informations de nos clients et également leur permettre de se connecter à l'environnement Web3 plus large.
 
-#### Flux de travail concrets et stockage (10:07) {#concrete-workflows-and-storage-1007}
+### Flux de travail concrets et stockage (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin :** D'accord, super. Si vous choisissez un flux concret qui pourrait vous intéresser — comme peut-être des émissions d'obligations, des transactions ou un paiement de trésorerie — qui peut voir quoi exactement à quelle étape, et qu'est-ce qui est stocké onchain par rapport à hors chaîne ? Nous pouvons peut-être commencer par François.
 
@@ -68,7 +68,7 @@ Le troisième pilier est le reporting. Il est associé à l'intégration et aux 
 
 **Amzah :** Oui. Je suis globalement d'accord avec ce que Zach a dit. Dans le passé, lorsque les institutions pensaient à la confidentialité, elles lançaient simplement une chaîne privée à laquelle participaient peut-être 20 banques et seules elles étaient capables de voir ce qui s'y trouvait. Mais en réalité, c'est beaucoup plus nuancé. Cela dépend du cas d'utilisation, du type de flux et de ce que le régulateur a besoin de savoir. Vous pouvez mettre des informations de solde onchain sous une forme plus agrégée en utilisant la preuve de réserves, par exemple.
 
-#### Exigences non négociables (15:26) {#non-negotiable-requirements-1526}
+### Exigences non négociables (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin :** Eugenio et Amzah, de la part des banques, des plateformes et des régulateurs, quelles sont les exigences non négociables que vous entendez sans cesse ? Comme les pistes d'audit, les règles KYC ou les exigences de reporting ?
 
@@ -78,7 +78,7 @@ Le troisième pilier est le reporting. Il est associé à l'intégration et aux 
 
 **François :** Notre cofondateur passe des semaines avec des clients dans l'espace institutionnel, et la demande principale qui revient est le « contrôle ». Qui voit quoi, quand, et pour quelle raison. Et puis vous déclinez ces conversations dans les détails et elles deviennent incroyablement personnalisées. Pour nous, c'est génial car le monde de la finance traditionnelle a passé des décennies à construire ses pratiques comptables et ses flux de lutte contre le blanchiment d'argent et le financement du terrorisme (AML/CTF). Ils sont très précis sur ce contrôle. Nous construisons donc ces capacités au niveau du protocole et accompagnons les clients dans leur parcours.
 
-#### Compromis et liquidité mondiale (18:10) {#trade-offs-and-global-liquidity-1810}
+### Compromis et liquidité mondiale (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin :** Quels sont les principaux compromis avec lesquels vous vivez actuellement ? Performance contre confidentialité, ou liquidité mondiale contre contrôles stricts, ou transparence onchain contre registres hors chaîne ? En commençant par Zach.
 
@@ -88,7 +88,7 @@ Le troisième pilier est le reporting. Il est associé à l'intégration et aux 
 
 Bien sûr, il y a des complexités. Nous accordons beaucoup d'importance à cette expérience sur mesure pour une institution qui entre sur ce marché, afin qu'elle puisse avoir ses propres conditions. L'un des défis est l'équilibre entre la confidentialité et la résistance aux menaces. Il existe des acteurs malveillants dans le monde du Web3, et nous voulons mieux gérer cela pour offrir une expérience fantastique. Nous abordons la décentralisation avec prudence — nous savons comment le faire, mais nous le ferons au moment où cela servira le mieux les clients.
 
-#### Confiance dans le système et moteurs d'adoption (20:47) {#system-trust-and-adoption-drivers-2047}
+### Confiance dans le système et moteurs d'adoption (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin :** Eugenio, comment rendez-vous ces solutions fiables et utilisables par les institutions et les gouvernements ?
 
@@ -98,7 +98,7 @@ Bien sûr, il y a des complexités. Nous accordons beaucoup d'importance à cett
 
 **Amzah :** Pour nous, il est vraiment important que ce soit personnalisable. La chaîne de blocs n'est plus un simple cas d'utilisation où tout est entièrement public ou entièrement privé. Ce n'est pas une solution universelle. Ce qui est également le plus important pour nous, c'est d'être conforme à la réglementation. Le secteur bancaire en Europe est fortement réglementé, et si quelque chose n'est pas correct en matière de confidentialité, cela ne passe tout simplement pas auprès des régulateurs.
 
-#### Perspectives pour 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Perspectives pour 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin :** Très bien, nous sommes presque à la fin. Quel est l'élément fondamental — technique, opérationnel ou politique — qui, selon vous, accélérerait de manière significative l'adoption institutionnelle ? Et si nous nous revoyons en 2026, que pensez-vous qu'il soit réaliste de voir se réaliser cette année ?
 
@@ -110,7 +110,7 @@ Bien sûr, il y a des complexités. Nous accordons beaucoup d'importance à cett
 
 **François :** Si nous nous revoyons dans un an, j'aimerais avoir lancé le Réseau principal de Miden au printemps, afin que nous puissions célébrer cela. Au-delà de cela, j'aimerais que nous soyons en route vers une décentralisation complète. Il faudra tout un village. La chose principale que je veux voir se produire est plus d'engagement. L'idée que la confidentialité est en contradiction avec la conformité n'est pas vraiment vraie, mais marier les deux demande du travail. Nous voulons que les institutions aident à façonner le type de marchés qu'elles veulent voir, car nous savons que cela va être complexe et spécifique à leurs besoins.
 
-#### Réflexions finales (28:05) {#closing-thoughts-2805}
+### Réflexions finales (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin :** Je veux juste donner à chacun de vous 10 à 20 secondes pour mentionner quelque chose qui s'est passé cette semaine ou faire une petite annonce avant de terminer.
 

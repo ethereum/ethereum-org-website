@@ -19,7 +19,7 @@ Sebuah debat antara **Lyn Alden** dan **Justin Drake** mengenai tarik-ulur menda
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=1m12zgJ42dI) yang diterbitkan oleh Bankless. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Selamat datang di Bankless, tempat kami menjelajahi Frontier uang internet dan keuangan internet. Saya Ryan Sean Adams, saya di sini bersama David Hoffman, dan kami di sini untuk membantu Anda menjadi lebih bankless. Teman-teman, Anda akan disuguhi sesuatu yang istimewa hari ini. Kami memiliki dua pakar tentang Bukti Kepemilikan (PoS) dan Bukti Kerja (PoW), dan mereka berdebat tentang mana yang lebih baik untuk menciptakan sistem uang global — sistem uang kripto — Bukti Kerja (PoW) atau Bukti Kepemilikan (PoS). Lyn Alden dan Justin Drake hadir di episode hari ini. Kami akan membicarakan beberapa hal. Nomor satu: mana yang memberikan keamanan ekonomi paling besar, Bukti Kerja (PoW) atau Bukti Kepemilikan (PoS)? Nomor dua: mana yang memberikan pencegahan dan pemulihan terbaik dalam menghadapi serangan 51% yang ditakuti? Nomor tiga: mana yang meminimalkan kekuatan tata kelola bagi para elit — mana yang lebih "memberikan kekuatan kepada rakyat"? Nomor empat: mana yang secara ekonomi merupakan sistem yang paling adil untuk diikuti? Dan nomor lima — ini favorit saya pribadi — percakapan seputar Bukti Kerja (PoW) yang lebih merupakan uang komoditas dan Bukti Kepemilikan (PoS) yang lebih merupakan uang ekuitas.
 
@@ -29,7 +29,7 @@ Sebuah debat antara **Lyn Alden** dan **Justin Drake** mengenai tarik-ulur menda
 
 **Justin Drake:** Kabar baik, terima kasih kembali telah mengundang saya, teman-teman.
 
-#### Membingkai perdebatan: premi moneter (7:30) {#framing-the-debate-monetary-premium-730}
+### Membingkai perdebatan: premi moneter (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Saya ingin memulai dengan pertanyaan besar. Saya pikir kita sedang mencoba menjawab pertanyaan meta tentang apakah Bukti Kerja (PoW) atau Bukti Kepemilikan (PoS) yang paling sesuai untuk akrual premi moneter — pada dasarnya mana dari kedua protokol konsensus tersebut yang paling sesuai untuk menjadikan mata uang kripto sebagai uang. Justin, apakah Anda setuju ini adalah pembingkaian yang benar?
 
@@ -41,7 +41,7 @@ Sebuah debat antara **Lyn Alden** dan **Justin Drake** mengenai tarik-ulur menda
 
 **Justin Drake:** Saya ingin menyela dan berargumen mengapa analogi dengan ekuitas dan Bukti Kepemilikan (PoS) ini mungkin merupakan analogi yang buruk. Dalam konteks ekuitas, Anda memiliki hak untuk memberikan suara pada apa pun — Anda dapat sepenuhnya mengubah aturan perusahaan. Dalam konsensus Bukti Kepemilikan (PoS), peserta konsensus tidak dapat secara sewenang-wenang mengubah aturan. Mereka tidak bisa mengatakan "kita akan memberikan diri kita masing-masing seribu ETH" — itu akan menjadi transaksi yang tidak valid. Pada akhirnya, peserta konsensus terikat pada komunitas, dan itu adalah perbedaan besar dibandingkan dengan ekuitas.
 
-#### Uang komoditas vs. uang ekuitas (10:06) {#commodity-money-vs-equity-money-1006}
+### Uang komoditas vs. uang ekuitas (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, apakah Anda ingin melanjutkan percakapan tentang Bukti Kerja (PoW) sebagai komoditas dan Bukti Kepemilikan (PoS) sebagai ekuitas?
 
@@ -53,7 +53,7 @@ Sebuah debat antara **Lyn Alden** dan **Justin Drake** mengenai tarik-ulur menda
 
 **Lyn Alden:** Saya pikir ada semacam spektrum, tetapi sebagian besar ini adalah jalan satu arah. Ada banyak cara untuk menjadi ekuitas tetapi sangat sedikit cara untuk menjadi komoditas. Komoditas pada dasarnya agak langka dan tidak dapat diubah. Cara untuk menciptakan komoditas sejati di ranah digital sangatlah terbatas.
 
-#### Serangan 51%: pencegahan dan pemulihan (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Serangan 51%: pencegahan dan pemulihan (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Saya ingin membandingkan Bukti Kerja (PoW) dan Bukti Kepemilikan (PoS) tentang mana yang paling tidak rentan terhadap serangan penyensoran. Salah satu keuntungan besar dari Bukti Kepemilikan (PoS) adalah bahwa lapisan sosial memiliki alat untuk campur tangan. Dalam Bukti Kerja (PoW), jika penyerang serangan 51% masuk, mereka mengumpulkan setiap bagian imbalan, setiap bagian penerbitan, setiap biaya transaksi. Para penambang yang jujur mematikan mesin karena tidak masuk akal untuk menghabiskan listrik tanpa pendapatan. Kemudian mereka ingin melikuidasi, menjual perangkat keras mereka. Penyerang dapat membeli perangkat keras ini dengan harga sangat murah dan memperkuat diri mereka sendiri. Bahkan jika komunitas berhasil melakukan serangan balik, akan memakan waktu berbulan-bulan jika tidak bertahun-tahun untuk mengaturnya.
 
@@ -65,7 +65,7 @@ Ketika berbicara tentang keamanan, ini bukan hanya tentang serangan 51% — ini 
 
 Untuk memulihkan dari serangan 51%: satu-satunya cara dalam Bukti Kepemilikan (PoS) adalah melakukan percabangan lunak dan mengambil modal orang. Jika Anda mengungkapkannya sebagai mengambil modal penyerang, itu terdengar baik-baik saja. Tetapi penyerang bisa jadi adalah kustodian yang diatur — Anda mengambil modal dari orang-orang yang tidak ada hubungannya dengan serangan tersebut.
 
-#### Kompleksitas, bug, dan keragaman klien (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Kompleksitas, bug, dan keragaman klien (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Kompleksitas belum tentu buruk. Umat manusia berkembang karenanya. Dalam hal kompleksitas Bukti Kepemilikan (PoS) — ya, ini lebih kompleks, setidaknya 10x, mungkin 100x. Tetapi ini adalah kompleksitas yang pada titik ini telah kita jinakkan. Kita memiliki lima klien berbeda yang telah mengimplementasikan protokol, masing-masing dengan tim kecil yang terdiri dari lima hingga sepuluh orang. Keragaman klien memungkinkan komunitas untuk membeli asuransi terhadap bug.
 
@@ -75,7 +75,7 @@ Mengenai topik terus-menerus online — apa yang kita sebut subjektivitas lemah 
 
 Melihat arah Bukti Kerja (PoW) dalam jangka panjang, Anda akan melihat peningkatan integrasi antara penambang dan produsen energi. Jaringan listrik secara alami harus memproduksi listrik secara berlebihan. Sistem Bukti Kerja (PoW) adalah penyeimbang beban yang sangat baik untuk energi yang terdampar (stranded energy). Sumber listrik termurah adalah energi terdampar yang hampir tanpa biaya. Saat ini fasilitas penambangan Bitcoin terbesar di dunia memiliki sekitar 1% dari total tingkat hash — ini sudah terdesentralisasi secara struktural.
 
-#### Keadilan dan argumen "yang kaya semakin kaya" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Keadilan dan argumen "yang kaya semakin kaya" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Dalam Bukti Kepemilikan (PoS), Anda memiliki keadilan yang sempurna — Anda memasukkan satu unit modal dan mendapatkan jumlah imbalan yang sama persis tidak peduli seberapa besar atau kecil. Dalam Bukti Kerja (PoW), ikan besar memiliki keuntungan yang tidak adil. Jika Anda seorang penambang ritel yang membeli satu rig, Anda membayar lebih mahal 2x, 3x, 4x, 5x dibandingkan dengan penambang profesional yang membeli dalam jumlah besar. Karena hukum Moore, penyerang yang ingin menyerang memiliki keuntungan — mereka dapat memilih perangkat keras terbaru dan paling mutakhir. Bagi mereka, harga listrik sebagian besar tidak relevan, karena serangan 51% hanya perlu berjalan selama satu hari atau satu minggu. 99% dari biaya ada pada rig dan infrastruktur, bukan listrik.
 
@@ -85,7 +85,7 @@ Fakta bahwa Bukti Kerja (PoW) pada dasarnya tidak adil menciptakan keuntungan ba
 
 Dalam Bukti Kerja (PoW), Anda pada dasarnya menyewa kemampuan Anda untuk mengatur sistem. Mesin Anda menurun kualitasnya, sumber energi Anda bisa menjadi kurang efisien, perangkat keras Anda menjadi kurang mutakhir. Ini adalah serangkaian keputusan yang konstan daripada sistem yang secara inheren menguntungkan orang-orang yang membeli pertama kali. Tidak peduli berapa banyak Bitcoin yang dimiliki Michael Saylor, dia tidak memiliki kendali sama sekali atas transaksi apa yang diproses.
 
-#### Bukti Kerja sebagai "Bukti Kepemilikan dengan langkah ekstra" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Bukti Kerja sebagai "Bukti Kepemilikan dengan langkah ekstra" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Saya tidak tahu siapa pun — dan saya telah berada di ruang ini selama hampir satu dekade — yang menambang Bitcoin sebagai individu pada saat ini. Semuanya bersifat industri. Di sisi lain, dengan Bukti Kepemilikan (PoS), semua orang di panggilan ini — mungkin kecuali Anda, Lyn — melakukan staking sebagai individu. Keragaman pada Bukti Kepemilikan (PoS) jauh, jauh lebih besar. Hambatan untuk masuk jauh lebih rendah — Anda pada dasarnya hanya membutuhkan komputer yang berjalan 24/7.
 
@@ -97,11 +97,11 @@ Mengenai argumen "yang kaya semakin kaya" dalam Bukti Kepemilikan (PoS): Saya me
 
 Mengenai keragaman klien — setidaknya terakhir kali saya periksa, klien terbesar memiliki sekitar 84% dari klien Ethereum. Anda memiliki tingkat diversifikasi tertentu, tetapi itu juga merupakan ilusi parsial. Dalam praktiknya, salah satu hal utama yang melindungi dari bug adalah memiliki basis kode sesederhana mungkin.
 
-#### NIST, kuantum, dan fundamental jangka panjang (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, kuantum, dan fundamental jangka panjang (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Jika kita ingin menjadi internet uang, kita membutuhkan skala waktu seukuran internet itu sendiri — puluhan tahun jika bukan berabad-abad. Kompleksitas adalah sesuatu yang memiliki waktu paruh mungkin satu tahun — itu dapat dijinakkan dan diperkeras. Seiring waktu, karena banyak nilai yang diamankan, sistem dapat dipercaya. Bug akan diperbaiki, sistem akan mengeras. Apa yang harus kita lihat adalah fundamental jangka panjang. Ternyata Bukti Kerja (PoW) akan sepenuhnya terganggu oleh komputasi kuantum dalam 20 hingga 30 tahun ke depan. Ya, ada kekhawatiran jangka pendek dengan kompleksitas, tetapi jika Anda memperkecil tampilan dan fokus pada fundamental, ada alasan fundamental untuk bersikap *bearish* pada Bukti Kerja (PoW).
 
-#### Argumen historis uang komoditas (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Argumen historis uang komoditas (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, Anda telah mengambil peran utama sebagai komentator makro yang berfokus pada pasar komoditas. Para pendukung Bitcoin cenderung fokus pada sifat komoditas dan bagaimana Bitcoin mengonsumsi energi sebagai komoditas. Apakah ini sebagian merupakan argumen moral — bahwa uang komoditas hanyalah uang yang lebih cocok untuk dunia?
 
@@ -113,13 +113,13 @@ Seiring waktu, hal itu cenderung mengarah pada sentralisasi. Saat utang menumpuk
 
 **Lyn Alden:** Saya pribadi mendekatinya dari perspektif risiko taktis. Sistem apa yang paling kecil kemungkinannya memiliki risiko ekor (tail risks)? Apa yang dioptimalkan untuk apa yang coba dilakukannya? Ketika berbicara tentang argumen keadilan, sebagian hal itu tercampur dengan hal-hal yang berbeda — Bukti Kerja (PoW) versus Bukti Kepemilikan (PoS) menjadi satu aspek, dan kelangkaan token menjadi aspek lainnya.
 
-#### Mesin kelangkaan vs. mesin likuiditas (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Mesin kelangkaan vs. mesin likuiditas (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Bukti Kerja (PoW) dan Bukti Kepemilikan (PoS) dari perspektif meme hampir merupakan kebalikan yang tepat. Dengan Bukti Kepemilikan (PoS), Anda memiliki apa yang saya sebut mesin kelangkaan — sebuah mekanisme untuk mengubah ETH cair menjadi ETH beku yang digunakan sebagai kolateral. Proyeksi saya mengatakan sekitar setengah dari semua pasokan ETH pada akhirnya akan di-staking. Untuk Bukti Kerja (PoW), kebalikannya — penerbitan dan biaya transaksi yang diperoleh penambang perlu dijual untuk menutupi biaya listrik dan perangkat keras. Anda telah menciptakan mesin likuiditas, yang terus-menerus membuang ke pasar (market-dumping). Jika Anda bertanya mana sistem terbaik untuk menciptakan uang bagi internet — yang terus-menerus membuang atau yang mendorong orang untuk menahan (hold) — saya pikir sudah jelas mana yang lebih berharga dari perspektif meme.
 
 **Lyn Alden:** Semakin banyak yang coba dilakukan oleh suatu sistem, semakin buruk sistem itu dalam satu hal. Saat Ethereum mencoba memperkeras kebijakan moneternya, bisa dibilang ia kehilangan pangsa pasar di keuangan terdesentralisasi (DeFi) — dari 97% total nilai terkunci (TVL) pada akhir 2020 menjadi 55% sekarang. Sejauh ini, Bitcoin tidak benar-benar memiliki persaingan dari sistem lain. Periode persaingan singkat — meme Dogecoin, Bitcoin Cash — memudar seiring waktu. Satu dunia didasarkan pada tata kelola dan membuat ekosistem Anda menarik. Yang lainnya bermuara pada mana yang paling keras — apa yang terbaik dalam menjadi uang.
 
-#### Tata kelola, sifat tidak dapat diubah, dan kedaulatan diri (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Tata kelola, sifat tidak dapat diubah, dan kedaulatan diri (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Minimal, sistem Bukti Kepemilikan (PoS) memberi pemegang unit lebih banyak suara atas transaksi mana yang diproses dan mana yang disensor. Tetapi siapa yang dapat mengubah protokol dan bagaimana caranya — itu berada di luar perdebatan Bukti Kerja (PoW) vs. Bukti Kepemilikan (PoS). Anda dapat memiliki sistem Bukti Kerja (PoW) yang terlihat lebih seperti ekuitas — dengan bom kesulitan atau blok super besar sehingga orang tidak dapat menjalankan node mereka sendiri.
 
@@ -129,13 +129,13 @@ Meme Bitcoin adalah kedaulatan diri. Anda menjalankan node Anda sendiri, node-ny
 
 **Lyn Alden:** Dengan uang komoditas, produsen jarang memiliki banyak kendali. Emas memiliki rasio stok-terhadap-aliran (stock-to-flow) yang sangat tinggi — penambang emas hampir tidak memiliki kendali atas sistem. Itu juga berlaku dalam ekosistem Bitcoin. Selama perang ukuran blok, mayoritas penambang menyukai peningkatan blok dan tetap tidak bisa meloloskannya. Operator node menolaknya. Kombinasi pembagian kekuasaan itu — di mana Anda bisa menjalankan node dan menjadi berdaulat atas diri sendiri, dan secara terpisah penambangan memberi Anda kemampuan sementara untuk memesan transaksi tetapi tidak ada alokasi permanen — adalah apa yang mempertahankan sistem yang terdesentralisasi.
 
-#### Bantahan "yang kaya semakin kaya" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Bantahan "yang kaya semakin kaya" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Mengenai "yang kaya semakin kaya" dalam Bukti Kepemilikan (PoS) — Saya melihatnya sebagai pelestarian kekayaan, bukan penggandaan kekayaan. Saat melakukan staking, Anda membayar biaya peluang sekitar 3% dan mendapatkan kompensasi. Secara bersih, Anda melakukan pelestarian kekayaan. Penambang profesional melakukan hal yang sama — mereka melakukan lindung nilai risiko dengan kontrak berjangka, mengunci pengembalian yang kira-kira sesuai dengan biaya peluang. Sungguh, Bukti Kerja (PoW) hanyalah Bukti Kepemilikan (PoS) dengan langkah ekstra. Risiko dapat dihilangkan dengan produk keuangan, dan pada akhirnya Anda pada dasarnya memiliki produk keuangan yang sama.
 
 **Lyn Alden:** Apa yang membuat sistem komoditas terdesentralisasi adalah kombinasi node kecil dan penambangan terpisah. Tidak peduli berapa banyak Bitcoin yang dimiliki seseorang, mereka tidak memiliki kendali sama sekali atas pengurutan transaksi. Itulah pembagian kekuasaan. Jika Anda akan mendekati sifat tidak dapat diubah di ranah digital sebanyak mungkin, Anda merancang sistem yang sangat terdesentralisasi, sangat sulit untuk memaksakan perubahan, dengan tidak ada perubahan atau perubahan opsional (opt-in). Apa pun yang menyimpang dari model itu — pembelian paksa yang berkelanjutan dari tim kecil pengembang, pusat pengembangan, yayasan — pada dasarnya lebih seperti ekuitas terlepas dari mekanisme konsensusnya.
 
-#### Pernyataan penutup (1:30:42) {#closing-arguments-13042}
+### Pernyataan penutup (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Ini adalah percakapan yang fantastis. Ini mungkin merupakan percakapan Bukti Kepemilikan (PoS) versus Bukti Kerja (PoW) terbaik dalam sejarah. Waktunya pernyataan penutup. Justin, mengapa Bukti Kepemilikan (PoS) adalah cara terbaik untuk menciptakan uang kripto?
 
@@ -151,7 +151,7 @@ Jika Anda merancang rantai blok untuk memaksimalkan sifat moneter, Anda akan mem
 
 Ketika berbicara tentang uang yang cocok untuk menempatkan perbendaharaan perusahaan Anda, mengalokasikan sebagian dari dana abadi Anda, atau memegang 10% atau lebih dari kekayaan bersih Anda — atau mengelola cadangan negara yang mewakili akumulasi surplus perdagangan selama beberapa dekade — secara historis yang terbaik adalah emas. Sekarang kita memiliki pesaing baru. Anda akan memilih yang paling terdesentralisasi, yang paling tidak dapat diubah, yang tidak mengorbankan karakteristik tersebut. Itu tidak berarti sistem lain tidak berharga — hanya karena emas memiliki nilai bukan berarti saham Tesla tidak. Mereka adalah hal yang berbeda yang melakukan hal yang berbeda. Uang yang sempurna bersedia mengorbankan hampir semua hal lain untuk memiliki atribut uang yang sempurna — yang tujuan utamanya adalah untuk dipegang dan sesekali ditransaksikan, dibandingkan dengan sesuatu yang mencoba menjadi pisau lipat Swiss.
 
-#### Penutup (1:40:14) {#wrap-up-14014}
+### Penutup (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Saya ingin sekali lagi berterima kasih kepada Lyn Alden dan Justin Drake karena telah bergabung dengan kami dan melakukan debat terbaik yang pernah saya dengar tentang Bukti Kerja (PoW) versus Bukti Kepemilikan (PoS). Juga terima kasih khusus kepada Lyn karena telah datang ke tempat yang mungkin dianggap oleh sebagian orang sebagai "tim tandang."
 

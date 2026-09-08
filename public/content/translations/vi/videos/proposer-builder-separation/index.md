@@ -19,13 +19,13 @@ Bài thuyết trình này giải thích cách thức sản xuất khối của E
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=u8XvkTrjITs) được xuất bản bởi CBER Forum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Tên tôi là Barnabé Monnot. Tôi sẽ nói một chút về những gì đang diễn ra bên ngoài Giao thức, và cụ thể là khái niệm tách biệt người đề xuất và người xây dựng (PBS) cũng như cách nó được vận hành với các relay và rất nhiều cơ sở hạ tầng ngoài chuỗi.
 
 Tôi thích nghĩ về Giao thức như một đối tượng trừu tượng có những sức mạnh nhất định. Một trong những sức mạnh mà Giao thức có là khả năng trao quyền cho một số người tham gia nhất định. Chúng ta đã thấy trong bài nói chuyện trước rằng Giao thức trao quyền cho các trình xác thực để thực hiện các nhiệm vụ đồng thuận, nhưng đó không phải là điều duy nhất họ làm — chúng ta cũng phải đóng gói các khối với các giao dịch. Chúng tôi gọi đó là các nhiệm vụ thực thi, và đó là điều tôi muốn tập trung vào trong bài nói chuyện này.
 
-#### Tại sao các trình xác thực sử dụng trình xây dựng (0:46) {#why-validators-use-builders-046}
+### Tại sao các trình xác thực sử dụng trình xây dựng (0:46) {#why-validators-use-builders-046}
 
 Điều thú vị là mặc dù Giao thức là nơi khởi nguồn những quyền này và trao chúng cho các trình xác thực, những gì chúng ta quan sát thấy trong thực tế là nhiều trình xác thực chọn không tự mình thực thi quyền đó. Họ chọn trao quyền cho người khác để thực hiện thay cho họ. Và "người khác" đó được chúng ta biết đến trong Ethereum với tư cách là các trình xây dựng.
 
@@ -33,7 +33,7 @@ Vì vậy, những gì chúng ta quan sát thấy là mặc dù các trình xác
 
 Hôm nay tôi muốn thảo luận về lý do tại sao các trình xác thực sử dụng trình xây dựng, mối quan hệ đó bắt nguồn từ đâu — tôi sẽ giới thiệu một chút về MEV và người tìm kiếm trong quá trình này — sau đó tôi sẽ cho bạn biết mối quan hệ này được làm trung gian như thế nào, và tôi sẽ nói về các relay tồn tại ngày nay cũng như các giải pháp trong giao thức mà chúng tôi đang xem xét. Tôi cũng muốn nhìn nhận tổng thể một chút, bởi vì rất dễ nhìn vào những bức tranh này và nghĩ rằng "ồ điều này thật đáng sợ, còn sự phi tập trung thì sao?" Tôi muốn cho bạn thấy rằng đây là những sự đánh đổi đang được thực hiện, nhưng theo ý kiến của tôi là đang đi đúng hướng.
 
-#### Mô hình ngây thơ và MEV (3:04) {#the-naive-model-and-mev-304}
+### Mô hình ngây thơ và MEV (3:04) {#the-naive-model-and-mev-304}
 
 Bạn có thể nghĩ về một mô hình sản xuất khối ngây thơ, trong đó trình xác thực được chọn theo quy trình chọn người lãnh đạo, và họ phải tạo ra một khối chứa danh sách các giao dịch từ mempool. Trong mô hình ngây thơ nhất, bạn thực sự chỉ có hai bên — một trình xác thực lắng nghe mempool, và khi đến lượt họ tạo khối, họ lấy ra các giao dịch trả phí cao nhất và thêm chúng vào, thường sử dụng các thuật toán đóng gói không mấy tinh vi.
 
@@ -43,7 +43,7 @@ Trong trường hợp tốt nhất, lợi nhuận này đến từ chức năng 
 
 Điều này thực sự mang lại rất nhiều quyền lực cho người sản xuất và làm cho vị trí người sản xuất khối trở nên cực kỳ có giá trị. Đặc quyền của người sản xuất này là thứ mà chúng ta hiện gọi là **giá trị có thể trích xuất tối đa (MEV)**.
 
-#### Vai trò của người tìm kiếm (5:43) {#the-role-of-searchers-543}
+### Vai trò của người tìm kiếm (5:43) {#the-role-of-searchers-543}
 
 Trong thực tế, những người sản xuất có thể không biết giá trị nằm ở đâu. Bạn có thể có những người sản xuất khối không mấy tinh vi — như đã đề cập, bất kỳ ai cũng có thể trở thành trình xác thực miễn là họ có đủ vốn và có khả năng chạy một nút. Trong thực tế, tôi có thể không biết cách kinh doanh chênh lệch giá hay bất cứ điều gì về thị trường tài chính. Điều tôi muốn là có ai đó nói cho tôi biết những cơ hội này ở đâu — một thị trường gồm những người cạnh tranh để nói cho tôi biết điều tốt nhất nên làm với tư cách là người sản xuất khối.
 
@@ -51,7 +51,7 @@ Những thực thể rất giỏi trong việc tìm kiếm cơ hội này, chún
 
 Mô hình này hoạt động tốt trong thực tế nếu người tìm kiếm tin tưởng người sản xuất sẽ giữ cho gói giao dịch mang tính nguyên tử. Gần đây bạn có thể đã nghe nói về một cuộc tấn công trên Ethereum gây thiệt hại 25 triệu đô la cho một nhóm những kẻ tấn công sandwich — nguyên nhân gốc rễ là kẻ tấn công đã phá vỡ được tính nguyên tử của các gói, nhận nội dung và cố gắng tổ chức lại cũng như sửa đổi chúng. Đó là một thuộc tính rất quan trọng thực sự chỉ được duy trì chừng nào người sản xuất có thể được tin tưởng là không phá vỡ tính nguyên tử này.
 
-#### Tại sao chúng ta cần trình xây dựng (8:16) {#why-we-need-builders-816}
+### Tại sao chúng ta cần trình xây dựng (8:16) {#why-we-need-builders-816}
 
 Bạn sẽ làm gì nếu một người sản xuất không đáng tin cậy? Sau The Merge trong Ethereum, chúng ta có những người đặt cọc độc lập — chiếm khoảng 6% mạng lưới — những người mà chúng ta không biết. Những người tìm kiếm sẽ không thực sự muốn gửi các gói giao dịch cho những người đề xuất khối này vì nó hơi quá nguy hiểm.
 
@@ -59,7 +59,7 @@ Vì vậy, thiết kế được đưa ra là: thay vì để người tìm ki�
 
 Bây giờ bạn có một chuỗi thậm chí còn sâu hơn: trình xác thực ở một đầu, người dùng ở đầu kia, và ở giữa là toàn bộ chuỗi các bên trung gian này tiếp tục trở nên dày đặc hơn theo thời gian. Trình xây dựng thực hiện phần thực thi trong khi trình xác thực thực hiện phần đồng thuận.
 
-#### Cách các relay MEV-Boost hoạt động (13:01) {#how-mev-boost-relays-work-1301}
+### Cách các relay MEV-Boost hoạt động (13:01) {#how-mev-boost-relays-work-1301}
 
 Giả sử bạn là một người đề xuất và bạn muốn tham gia vào thị trường này. Dịch vụ sản xuất khối này là một bài toán trao đổi công bằng kinh điển — hai bên cố gắng đạt được thỏa thuận nhưng họ không tin tưởng lẫn nhau. Các tài liệu kinh điển cho bạn biết rằng bạn không thể thực hiện trao đổi công bằng mà không có một bên thứ ba đáng tin cậy.
 
@@ -71,19 +71,19 @@ Thứ hai, các trình xây dựng đang đưa ra các giá thầu cố gắng c
 
 Tính kinh tế của các relay rất phức tạp. Một số thì miễn phí, giống như hàng hóa công cộng. Những relay khác đã phát triển các mô hình doanh thu — ví dụ như relay Ultrasound, có một "sự điều chỉnh giá thầu" nơi họ lấy phần chênh lệch giữa giá thầu tốt nhất và giá thầu tốt thứ hai làm doanh thu.
 
-#### Niềm tin và relay (17:01) {#trust-and-the-relay-1701}
+### Niềm tin và relay (17:01) {#trust-and-the-relay-1701}
 
 Relay là bên thứ ba đáng tin cậy trong hệ thống. Giả sử một relay phục vụ một khối không hợp lệ — mọi người sẽ ngay lập tức nhìn thấy nó vì nó đã được ký, và họ sẽ rất nhanh chóng ngắt kết nối khỏi relay đó. Bạn thậm chí có thể lan truyền một loại bằng chứng lỗi nào đó. Trong vòng năm khối, nếu relay không hoạt động tốt, mọi người sẽ ngừng tin tưởng nó và chỉ cần ngắt kết nối.
 
 Vì vậy, nó dựa trên niềm tin, nhưng với giả định rằng nó có thể được thay thế khá nhanh chóng. Các relay không phải là trình xác thực — chúng không nhất thiết phải có khoản đặt cọc và chúng không cần phải có bất kỳ liên quan nào đến Ethereum. Đó có thể là những người chúng ta biết và yêu mến hôm nay, nhưng ngày mai có thể là bất kỳ ai.
 
-#### Tích hợp PBS vào trong giao thức (20:01) {#enshrining-pbs-in-the-protocol-2001}
+### Tích hợp PBS vào trong giao thức (20:01) {#enshrining-pbs-in-the-protocol-2001}
 
 Chúng tôi đang cố gắng loại bỏ trạng thái bên thứ ba đáng tin cậy của relay. Chúng ta có một bên thứ ba đáng tin cậy mà chúng ta thích trong Ethereum — và đó chính là bản thân Ethereum. Bạn có thể thiết kế các giải pháp trong giao thức cố gắng về cơ bản là tích hợp vai trò của relay và làm cho sự phụ thuộc vào nó trở thành tùy chọn.
 
 Hiện tại, Giao thức Ethereum nhìn thấy một phần những gì các trình xác thực đang làm nhưng hoàn toàn mù tịt về mạng lưới các trình xây dựng. Chúng tôi đang cố gắng thúc đẩy để Giao thức Ethereum trở thành bên thứ ba đáng tin cậy trong sự tương tác giữa người đề xuất và trình xây dựng — theo nghĩa đó, chúng ta không cần phải dựa vào relay nữa.
 
-#### Ràng buộc trình xây dựng, khuếch đại sự phi tập trung (22:05) {#constraining-builders-amplifying-decentralization-2205}
+### Ràng buộc trình xây dựng, khuếch đại sự phi tập trung (22:05) {#constraining-builders-amplifying-decentralization-2205}
 
 Bức tranh toàn cảnh rất quan trọng. Ở mỗi lớp dường như có những trò chơi khác nhau đang diễn ra và những người chơi khác nhau đang lấy tiền của nhau — liệu đây có phải là tài chính truyền thống lặp lại một lần nữa không? Tôi muốn lập luận rằng những sự đánh đổi này không xuất phát từ một ý định xấu. Chúng cố gắng dựa vào các thuộc tính của những hệ thống này mà chúng tôi cho là hữu ích để mở rộng quy mô và làm cho chúng trở nên hữu dụng hơn.
 
@@ -104,7 +104,7 @@ Một số ý tưởng để ràng buộc các trình xây dựng:
 - **Tách biệt người chứng thực và người đề xuất (Attester-proposer separation)** — thay vì mặc định biến trình xác thực thành người sản xuất khối, hãy chọn một nhóm người khác để trở thành người sản xuất khối và tách biệt các vai trò
 - **Cải thiện cơ chế đặt cọc** — việc đặt cọc trong Ethereum ngày nay hơi thô sơ và có thể được cải thiện
 
-#### Câu hỏi và kết thúc (27:03) {#questions-and-closing-2703}
+### Câu hỏi và kết thúc (27:03) {#questions-and-closing-2703}
 
 Một câu hỏi từ khán giả: trong thế giới tài chính truyền thống, thời gian quyết toán đang được giảm từ hai ngày xuống còn một ngày. Liệu việc giảm thời gian quyết toán từ 12 giây xuống một khoảng thời gian ngắn hơn có giải quyết được một số vấn đề chạy trước không?
 

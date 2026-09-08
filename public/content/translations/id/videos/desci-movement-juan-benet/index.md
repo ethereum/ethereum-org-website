@@ -18,7 +18,7 @@ Sebuah presentasi oleh **Juan Benet**, pendiri Protocol Labs dan penemu IPFS ser
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=zkXM9H90g_E) yang dipublikasikan oleh EthCC. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar tentang sains dan kemajuan (0:10) {#introduction-to-science-and-progress-010}
+### Pengantar tentang sains dan kemajuan (0:10) {#introduction-to-science-and-progress-010}
 
 Baiklah, halo semuanya. Nama saya Juan. Saya di sini untuk berbicara tentang desci. Saya ingin berbicara tentang bagaimana kita dapat menggunakan desci untuk mendanai, mengatur, dan membuka sains. Pertama-tama, inilah yang akan kita bahas: Saya akan berbicara tentang sains secara umum sejenak, lalu saya akan berbicara tentang apa itu gerakan desci, kemudian tentang bagaimana kita dapat mendanai barang publik sains. Lalu bagaimana desci mengatur orang-orang, proyek, dan pekerjaan seputar sains. Kemudian saya ingin berbicara sedikit tentang akses terbuka dan sains yang dapat direproduksi, dan saya ingin mengakhirinya dengan ajakan bertindak. Jadi ini akan cukup singkat. Ada banyak hal yang harus kita bahas, jadi saya akan bergerak cepat.
 
@@ -34,7 +34,7 @@ Sekarang, sains memiliki banyak masalah. Ada berbagai macam masalah dengan usaha
 
 Setelah studi selesai dan diproduksi, hanya sebagian kecil yang dapat direplikasi. Jadi ada berbagai macam sains yang telah diterbitkan dan diterima serta dianggap benar, hanya untuk mengetahui kemudian bahwa sebagian besar darinya sebenarnya tidak dapat direproduksi. Jadi ada krisis reproduktibilitas yang besar. Dan bahkan ada penemuan ilmiah yang artefaknya hilang. Pikirkan tentang makalah, kode, atau data aktual yang terkait dengan suatu hasil yang hilang dari bank pengetahuan kita. Jadi ada berbagai macam masalah seputar sains yang perlu diperbaiki, dan inilah bagian dari tujuan desci. Ini mengatasi berbagai masalah tersebut, tidak secara keseluruhan, tidak sepenuhnya, tetapi komunitas desci mencoba mengatasi sejumlah masalah ini.
 
-#### Gerakan DeSci (5:11) {#the-desci-movement-511}
+### Gerakan DeSci (5:11) {#the-desci-movement-511}
 
 Jadi apa itu desci? Desci adalah gerakan untuk meningkatkan sains menggunakan teknologi dan alat Web3. Bayangkan bisa menggunakan semua keajaiban penautan hash, blockchain, dan kontrak pintar (smart contract) untuk menciptakan sistem dan struktur yang dapat meningkatkan cara kita melakukan sains di berbagai bidang di seluruh dunia.
 
@@ -46,7 +46,7 @@ Sekarang ada beberapa kelompok yang melakukan pendanaan bioteknologi terdesentra
 
 Sekarang juga ada banyak pertemuan dan konferensi berbeda yang mengumpulkan komunitas-komunitas ini. Hal-hal seperti DeSci Day, DeSci Berlin, Schelling Point dari komunitas Gitcoin, dan Funding the Commons. Konferensi-konferensi ini mengumpulkan banyak percakapan seputar desci.
 
-#### Mendanai barang publik (10:40) {#funding-the-commons-1040}
+### Mendanai barang publik (10:40) {#funding-the-commons-1040}
 
 Mari kita bicara tentang mendanai barang publik. Mungkin beberapa dari Anda pernah melihat diagram ini yang saya gunakan di masa lalu seputar jurang inovasi. Dalam penerjemahan sains-ke-teknologi, bagian desci sebagian besar difokuskan pada bagian kiri—hanya bagian sainsnya—mencoba memikirkan struktur insentif yang lebih baik dan cara yang lebih baik untuk mengoordinasikan kelompok guna menghasilkan keluaran ilmiah yang lebih baik. Perlu dicatat bahwa total pendanaan R&D global, dari satu perspektif, agak masif, tetapi dari perspektif lain, tidak terlalu besar dan tidak banyak berubah dalam beberapa dekade terakhir, meskipun laju pemrosesan dan hasil dari teknologi yang kita bangun telah berkembang pesat.
 
@@ -64,7 +64,7 @@ Misalnya, kelompok seperti VitaDAO menciptakan struktur data yang memberikan hib
 
 Sertifikat dampak adalah struktur menarik lainnya yang mewakili pendanaan retroaktif. Sertifikat ini memungkinkan peserta, setelah mereka mencapai suatu dampak, untuk mencetak sertifikat seputar dampak tersebut dan menjualnya di pasar kepada siapa saja yang ingin mengklaim dampak tersebut. Hal itu memungkinkan munculnya pasar spekulatif, menutup putaran lintas waktu untuk mendanai pekerjaan yang sangat penting secara retroaktif. Ini sangat penting karena sering kali Anda baru menyadari betapa berharganya sesuatu jauh setelah pekerjaan itu selesai.
 
-#### Mengatur orang dan Data DAO (15:28) {#organizing-people-and-data-daos-1528}
+### Mengatur orang dan Data DAO (15:28) {#organizing-people-and-data-daos-1528}
 
 Sekarang beberapa pemikiran singkat tentang mengatur orang. Di masa lalu, GitHub telah sangat sukses dalam membantu mengatur penemuan ilmiah. Seluruh buku teks dan bidang telah berkembang melalui GitHub. Banyak kelompok telah menggunakan primitif dasar GitHub seputar masalah (issues), kolaborasi kode, dan kontrol versi untuk mengatur komunitas praktik dan sains. Tetapi apa yang tidak lengkap di sana adalah Anda tidak memiliki cara untuk menciptakan organisasi yang melakukan penelitian, berurusan dengan modal, atau membayar kontributor.
 
@@ -78,7 +78,7 @@ Anda dapat memikirkan untuk menggabungkan jenis aktivitas dan pembuatan data ter
 
 Beberapa catatan akhir tentang akses terbuka dan sains yang dapat direproduksi. IPFS telah banyak digunakan untuk berbagai jenis pekerjaan sains terbuka. IPFS sudah mewujudkan impian untuk membuka akses ke banyak sains, mendukung salinan Wikipedia yang terdistribusi, arsip makalah yang masif, dan kumpulan data.
 
-#### Akses terbuka, sains yang dapat direproduksi, dan ajakan bertindak (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Akses terbuka, sains yang dapat direproduksi, dan ajakan bertindak (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Kita belum sepenuhnya mencapai reproduktibilitas penuh. Ini adalah area yang membutuhkan lebih banyak pekerjaan, tetapi banyak orang sudah memikirkannya. Ada spesifikasi dan ide yang sangat bagus seputar penggunaan reproduktibilitas standar dengan IPFS untuk membekukan semua aset dan membangun alur yang sepenuhnya dapat direproduksi. Anda dapat memanggil kembali eksperimen tertentu dari masa lalu, membawa kembali VM atau kontainer yang sepenuhnya dibekukan, menjalankan ulang semua alur data, dan memverifikasi bahwa eksperimen tersebut benar.
 

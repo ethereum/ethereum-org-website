@@ -20,7 +20,7 @@ Mjadala wa jopo na **Benjamin Life** na **Sarah Johnstone** katika EthBoulder 20
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=I4xb0rst6SQ) iliyochapishwa na EthBoulder. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi wa Ugatuzi wa Ndani wa Ethereum (0:12) {#introduction-to-ethereum-localism-012}
+### Utangulizi wa Ugatuzi wa Ndani wa Ethereum (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Hujambo. Mnatupata? Vizuri. Kweli, inafurahisha sana kuwa hapa. Tuanze na utambulisho. Mimi ni Sarah Johnstone. Mimi ni mtaalamu wa kilimo cha kudumu (permaculturist), mwanakanda wa kibiolojia (bioregionalist), na mwanachama hai wa Ethereum. Na nina shauku kubwa kuhusu jamii ya ugatuzi wa ndani wa Ethereum. Nimefurahi sana kuwa hapa na Benjamin.
 
@@ -30,7 +30,7 @@ Mjadala wa jopo na **Benjamin Life** na **Sarah Johnstone** katika EthBoulder 20
 
 **Benjamin Life:** Ndiyo, ni jambo zuri sana kuwa na baadhi ya vichochezi vya GEL — kama kifupi chake kinavyosema — na vuguvugu la ugatuzi wa ndani wa Ethereum hapa ukumbini. Nataka kuwapongeza Christy na James na wanachama wengine wachache wa kikundi chao huko Portland ambao walituleta pamoja kwa mara ya kwanza. Kwa kweli ndipo nilipokutana na Kevin Owocki kwa mara ya kwanza, ingawa sote tuliishi Boulder. Ilichochea mambo mengi sana na kwa namna fulani iliweka mfano wa kile ambacho jamii ya ugatuzi wa ndani wa Ethereum ni na maadili yanayoshirikiwa ni yapi. Kwa kweli ilileta pamoja aina ya mrengo wa kushoto wa kripto, lakini pia kikundi kidogo cha jamii ya Web3 kinachoendana waziwazi na maadili ambacho nadhani kwa kukipa jina na nafasi kilisaidia sana wengi wetu kupatana.
 
-#### Maadili na Mvutano kati ya Kimataifa dhidi ya Ndani (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Maadili na Mvutano kati ya Kimataifa dhidi ya Ndani (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** Na je, unaweza kuzungumzia baadhi ya maadili hayo tunayoshikilia katika mfumo ikolojia?
 
@@ -40,7 +40,7 @@ Wale kati yetu walioingia katika nafasi hii kwa ajili ya maadili ya ushiriki wa 
 
 Ugatuzi wa ndani wa Ethereum kwa namna fulani unakaa katikati ya mkanganyiko huo. Badala ya kusema ni moja au nyingine — sio tu ya ndani kabisa, na kupuuza rasilimali za kimataifa, wala haijaribu kuunda safu hii ya uratibu wa kimataifa isiyoeleweka ambayo kwa kweli haiunganishi kwa maana na maisha halisi ya kila siku ya watu. Kwa kupitia mvutano huo, tunatafuta wapi tunaweza kuwa katika mshikamano wa kimataifa. Kile ambacho ni chepesi kinapaswa kuwa cha kimataifa na kushirikiwa, na kile ambacho ni kizito kinapaswa kuwa cha ndani na kujitawala. Tunashiriki maarifa yetu na programu huria, lakini tunahakikisha kwamba kujiamulia kwa ndani na mipango inayoongozwa na jamii inasimamia jinsi itifaki hizo zinavyotumika katika kiwango cha ndani.
 
-#### Mfuko wa Ugatuzi wa Ndani na Kuimarisha Maadili (5:27) {#the-localism-fund-and-consolidating-values-527}
+### Mfuko wa Ugatuzi wa Ndani na Kuimarisha Maadili (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Kwa hivyo ningependa kusikia — mwaka jana tulikusanya watu mia kadhaa kwa siku mbili na ilikuwa mijadala yenye nguvu na uchangamfu sana. Nilihisi kama kulikuwa na vuguvugu la kusisimua lililotokea mara moja na ETHDenver na kuundwa kwa kikundi cha Region Commons. Unafikiri tunaendeleaje kama vuguvugu? Najua umekuwa na hatua kubwa na Mfuko wa Ugatuzi wa Ndani (Localism Fund).
 
@@ -50,7 +50,7 @@ Nadhani ugatuzi wa ndani wa Ethereum ni jaribio la kuwa ngome dhidi ya kuongezek
 
 Kwa upande mzuri, tumesambaza $150,000 kwa programu 12 tofauti za ufadhili wa ndani ambazo zinafanya majaribio na seti mbalimbali za mifumo, na hiyo ni shukrani kwa Gitcoin na Celo Public Goods. Hadithi hizo zinafurahisha sana kwa sababu tuna jamii halisi za mashinani katika karibu kila bara. Tuna kituo cha uchimbaji wa kripto kwa kutumia nishati ya jua nchini Nigeria kinachofadhili elimu. Tuna mtandao wa biashara za ushirika huko Barcelona unaounda uchumi mzima sambamba na mfumo wa sarafu. Tuna watu nchini Kolombia wanaofanya UBI (Mapato ya Msingi kwa Wote) ya kushangaza, wakiunda vituo vya jamii vinavyosambaza pesa kwa watu wanaoishi chini ya mstari wa umaskini.
 
-#### Uwazi na Ugawaji wa Mtaji (10:01) {#transparency-and-allocating-capital-1001}
+### Uwazi na Ugawaji wa Mtaji (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** Na hapa katika nafasi hii, tunafanya nini huko Boulder?
 
@@ -64,7 +64,7 @@ Tuliishia kufanya kazi na layer labs na Jake Hartnell kutekeleza kitu kinachoitw
 
 Tunatumia algoriti sawa na ambayo Google inatumia kupanga kurasa za wavuti kulingana na nguvu ya viungo vyao ili kuja na uwakilishi wa nambari wa kiasi cha pamoja cha uaminifu ambacho nodi hiyo ilikuwa nacho katika mtandao. Tulikuwa na zaidi ya watu 100 wakifanya zaidi ya uthibitisho 1,000, na kutokana na hilo tuliweza kupata watu 30 wanaoaminika zaidi ndani ya mtandao huu. Hao wakawa watathmini wa programu za ufadhili za ndani zilizotuma maombi. Kila mtathmini alikagua kulingana na vigezo, na alama ya jumla iliamua uwiano wao wa kulinganisha. Kwa hivyo tulitumia mtandao huu wa uaminifu unaotegemea uthibitisho kusambaza pesa kulingana na matakwa ya mtandao huu wa wataalam.
 
-#### Itifaki ya Chini kwa Chini na Teknolojia za Kijamii (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### Itifaki ya Chini kwa Chini na Teknolojia za Kijamii (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Asante. Ningependa kufungua fursa kwa kikundi. Naona nyuso nyingi zinazofahamika hapa na watu ambao labda wanajitambulisha na vuguvugu hili. Ningependa kusikia kutoka kwa watu katika hadhira ambao wanaweza kutaka kushiriki. Je, kuna mtu yeyote kutoka kwa kikundi kilichotoa ilani leo ambaye angetaka kuzungumza kidogo kuihusu?
 
@@ -86,13 +86,13 @@ Ugatuzi wa Ndani wa Ethereum ni mahali ambapo watu wanaopenda kushiriki maarifa 
 
 **Benjamin Life:** Ndiyo. Teknolojia za kijamii.
 
-#### Kuamua nini cha kujenga kwa athari ya kimataifa (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Kuamua nini cha kujenga kwa athari ya kimataifa (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **Mshiriki wa Hadhira:** Samahani, ndio nimeingia. Lakini nilitaka kuelewa, mnaamua vipi ni teknolojia gani wazi za kujenga? Binadamu wana muda mchache — mnaamua vipi kile kinachopaswa kujengwa?
 
 **Sarah Johnstone:** Moja ya maeneo ninayotumia muda wangu sasa hivi ni muktadha wa misaada ya kibinadamu, kwa sababu hali ya kupunguzwa kwa ufadhili wa misaada ya kimataifa ni ya dharura sana na yenye madhara. Miezi minane iliyopita au zaidi nimekuwa katika uchunguzi wa kina nikijaribu kuelewa nafasi hiyo, na kwa kweli imekuwa yenye matumaini makubwa katika suala la kuona teknolojia kutoka kwa mfumo ikolojia wa Ethereum na mifumo ikolojia mingine ikitumika katika miktadha ya ulimwengu halisi kama idadi ya wakimbizi na jamii zilizohamishwa au maeneo ya migogoro na malipo ya kuvuka mipaka na sarafu thabiti. Ninahisi matumaini makubwa kuhusu hilo. Kwangu mimi, hicho ndicho ninachochagua kutumia muda wangu.
 
-#### Kutoegemea upande wowote kwa kuaminika na ugatuzi wa madaraka (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Kutoegemea upande wowote kwa kuaminika na ugatuzi wa madaraka (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Ninataka kujibu ulichouliza. Kitu ambacho nimekuwa nikikiita "kutoegemea upande wowote kwa kuaminika kupitia muundo wa utaratibu" (credible neutrality through mechanism design). Ninafanyia kazi kwa kweli jinsi tunavyoweza kuondoa msisitizo kwenye maamuzi ya pande mbili ya mtu binafsi — aina ya maamuzi yanayovunja jamii wakati hamwezi kufikia mwafaka na inabidi mfanye mchepuo au kuvunjika. Kawaida vikundi huishia kwenye moja ya chaguzi hizo, na ni nadra sana kwamba kikundi kina mfumo wa kimetaboliki au kinga wa kutathmini upya mfululizo ulinganifu wake na maadili yake yaliyotajwa.
 
@@ -102,7 +102,7 @@ Moja ya njia ninazofikiri tunaweza kurahisisha ni badala ya kuwa na maamuzi ya p
 
 **Benjamin Life:** Kabisa, na hiyo inaleta wazo lingine muhimu katika nafasi ya ugatuzi wa ndani wa Ethereum, ambalo ni ugatuzi wa madaraka (subsidiarity) — wazo hili kwamba ufanyaji maamuzi unapaswa kuwekwa katika kiwango cha ndani zaidi ambapo uamuzi huo una athari. Sehemu ya sababu ya Mfuko wa Ugatuzi wa Ndani kufadhili programu za ruzuku badala ya kutoa ruzuku moja kwa moja kwa miradi ilikuwa tulitaka kutoa $20,000 kwa Regenerate Cascadia, ambalo ni shirika lisilo la faida ambalo lina mtandao wake na mataifa ya asili na jamii za ndani, na badala ya sisi kuchagua ni miradi gani inapaswa kufadhiliwa huko, kuwapa uhuru kamili wa kuamua jinsi ya kusambaza rasilimali hizo. Sio kukwepa jukumu; ni kusambaza mamlaka.
 
-#### Mtiririko wa Thamani na Ukweli wa Ulimwengu katika Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Mtiririko wa Thamani na Ukweli wa Ulimwengu katika Ethereum (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **Mshiriki wa Hadhira:** Je, kuna ukweli mkuu katika moyo wa Ethereum ambao nyote mnaufuata? Haionekani kuwa na ulinganifu juu ya ukweli wa ulimwengu nyuma ya Ethereum ikilinganishwa na mfumo wa sasa wa sarafu. Je, hilo linaeleweka?
 
@@ -116,7 +116,7 @@ Hicho ndicho kinachoniweka katika Ethereum. Kuna minyororo ya vizuizi (blockchai
 
 Scott Morris, ambaye alikuwepo kwenye matukio yote ya GEL, ni mmoja wa wataalam wakuu duniani kuhusu hili na ametambua njia za kukwepa vikwazo vya udhibiti ambapo sarafu za jamii zinaitwa tu "kuponi" — sio pesa, ni kuponi tu. Bado unaweza kuwa na tokeni inayowakilisha kuponi. Sijui kama mwanya huo wa kisheria utasimama mahakamani — mimi si mwanasheria — lakini kuna baadhi ya hadithi za mafanikio za sarafu za jamii zinazoweka kweli thamani ikizunguka katika jamii yao ya ndani. Ningependa kuona mtu akichukua kijiti hicho na kuunda "Salesforce" ya nafasi ya sarafu inayomilikiwa na jamii iliyogatuliwa, kwa sababu ni urahisi huo wa uingizaji wa watu na kuunda utawala kuzunguka tokeni ambao umekuwa mchakato wa kujifunza. Ninaona hilo kama moja ya mambo yenye faida kubwa zaidi tunayoweza kufanya, lakini kwa kweli simjui mtu yeyote anayeisukuma mbele kwa njia ninayofikiri inapaswa kuwa.
 
-#### Raia wa Kimataifa wenye Majukumu ya Ndani (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Raia wa Kimataifa wenye Majukumu ya Ndani (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **Mshiriki wa Hadhira:** Nikivuta baadhi ya nyuzi kutoka katika mazungumzo yote — mvutano kati ya itifaki ya kimataifa na mitandao ya ndani. Tuna marafiki na familia waliosambazwa katika kanda tofauti za kibiolojia zinazoteka mioyo yetu. Unafikiriaje kuhusu ukweli kwamba tunasafiri zaidi kuliko hapo awali, tunataka kuwa wanaugatuzi wa ndani, lakini tunahusika katika mitandao ambayo yote haiko mahali pamoja?
 

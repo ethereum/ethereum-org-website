@@ -20,13 +20,13 @@ breadcrumb: "Couche 2 (l2) de guérilla"
 
 *Cette transcription est une copie accessible de la [transcription vidéo originale](https://www.youtube.com/watch?v=WlsICV2OPAE) publiée par Web3Privacy Now. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction et philosophie anarchiste (0:05) {#introduction-and-anarchist-philosophy-005}
+### Introduction et philosophie anarchiste (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh :** [Applaudissements] Eh bien, merci d'être ici. Je sais que Vitalik parle en ce moment. C'est vraiment un honneur d'avoir quelques-uns d'entre vous ici et non dans la file d'attente pour le matcha là-bas. Nous allons avoir une conversation aujourd'hui sur les couches 2 (l2) de guérilla, et je pense que nous allons y venir, mais je vous présente Melanie Premsyl, philosophe et anarchiste française, qui nous fait l'honneur de se joindre à nous. Veux-tu te présenter brièvement ?
 
 **Melanie Premsyl :** Oui. Bonjour tout le monde. Je suis donc une philosophe française. J'étudie l'anarchie et la technologie, et au début j'étais plutôt du côté du territoire. Comme dans le centre de la France, par exemple, je ne sais pas si vous connaissez Tarnac, ou tout ce genre de groupes qui sont plutôt des groupes violents. Le principal problème que j'ai rencontré était que nous avons besoin d'être liés à d'autres personnes dans le monde, et beaucoup de groupes anarchistes sont très limités. Nous avons besoin d'un moyen de communiquer avec plus de personnes d'Amérique du Nord ou d'Amérique du Sud. Et c'est pourquoi nous essayons maintenant de créer un pont avec la crypto et tous ceux qui essaient de trouver de nouvelles façons de lutter contre le manque de confidentialité, le manque de liberté et la violence de l'État.
 
-#### Le procès des frères MEV (1:52) {#the-mev-brothers-trial-152}
+### Le procès des frères MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh :** Incroyable. Donc, en gros, nous nous sommes rencontrées il y a quelques semaines à New York. Nous assistions toutes les deux à un procès qui se déroulait à Manhattan où ces deux frères, connus sous le nom de frères MEV, étaient poursuivis parce qu'ils avaient pris en sandwich des bots de sandwich. Je suis allée au tribunal pour assister au procès, et j'ai vu cette personne ici en train de lire Spinoza en français, et j'étais vraiment curieuse de ce qui se passait. Il n'y avait personne dans le public à part nous deux ! J'étais donc très curieuse de savoir ce qui t'avait amenée, toi qui es avant tout une anarchiste et une philosophe plutôt qu'une technologue, à venir assister à ce procès spécifique, mais aussi à réfléchir à la gouvernance d'Ethereum, à l'ensemble du système de validation et au procès qui se déroulait à New York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Couche 2 (l2) de guérilla"
 
 **Fatemeh Fannizadeh :** D'accord. Oui, c'est de bonne guerre. Donc, pour ceux qui n'ont pas suivi le procès, après environ trois ou quatre semaines, il a été annulé. Le jury n'a pas pu parvenir à un verdict unanime et décider si ces deux frères étaient coupables ou non d'avoir violé les règles de la chaîne de blocs — ce qui est plutôt un résultat positif, je pense, pour la crypto, qu'un tribunal ou un jury ne décide pas de ce qui est bien ou mal onchain. 
 
-#### Créer des ponts entre la chaîne de blocs et d'autres communautés (4:06) {#bridging-blockchain-with-other-communities-406}
+### Créer des ponts entre la chaîne de blocs et d'autres communautés (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh :** Mais bon, si nous prenons un peu de recul par rapport à ce que tu as dit sur les anarchistes qui s'intéressent à cette technologie afin de créer un pont entre différents groupes. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Couche 2 (l2) de guérilla"
 
 **Melanie Premsyl :** Oui, j'aimerais dire ça, mais je n'en suis pas sûre, parce que tu sais qu'il y a beaucoup de gens qui ont besoin de gagner de l'argent, donc c'est aussi le but principal. Mais je pense que nous pourrions simplement l'utiliser comme un réseau communiste, qu'une seule partie pourrait être ce genre de rêve. Je pense que c'est un gâteau de rêve qui peut être réalisé, mais nous devons avoir des outils et une conception qui aident les gens à sortir de la pensée technique, très orientée ingénierie, pour comprendre à quoi cela ressemble.
 
-#### Décentralisation et couches 2 (6:55) {#decentralization-and-layer-2s-655}
+### Décentralisation et couches 2 (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh :** Cela me rappelle beaucoup les organisations autonomes décentralisées (DAO) il y a quelques années. Je ne sais pas pour vous tous, mais j'étais vraiment enthousiaste, je pensais que les DAO révolutionnaient la façon dont nous nous organisons en tant que groupes et communautés onchain et la liberté que nous avons. Et au final, tout cela a fait un flop. Je ne pense pas que cela se soit manifesté du tout. C'est juste devenu davantage une question de système de vote, ce n'est pas vraiment démocratique, il s'agit uniquement de faire du profit. Toute cette idée que nous avions des DAO comme outil social ne s'est pas vraiment concrétisée. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Couche 2 (l2) de guérilla"
 
 **Melanie Premsyl :** Je suis donc française. C'est un gros problème. En tant que Français, nous sommes une nation très étatique. Je pense donc toujours de manière pédagogique et très descendante. Et je pense que la l2 crée un moyen pour que chacun puisse créer des mini chaînes de blocs, et elles sont sécurisées par la couche 1 (l1). J'aimerais voir si les gens peuvent créer une aide pédagogique pour tout le monde pour quelque chose qui est gratuit. Je pense que beaucoup de groupes, comme des associations, pourraient créer leur propre chaîne de blocs, et ce sera un moyen — comme vous le savez, le fédéralisme est le grand sujet principal de l'anarchisme. Comment les gens peuvent réussir à se détester peut-être, mais à se parler. Nous devons donc avoir ce genre de fédéralisme dans la chaîne de blocs. Chacun a une couche 2 (l2) avec sa propre valeur, et ainsi nous parlons avec la même infrastructure. 
 
-#### Anarchie, liberté et création d'outils (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarchie, liberté et création d'outils (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh :** Oui, j'aime beaucoup ce que tu as dit sur le fait de se détester fondamentalement mais de continuer à communiquer, comme ne pas être toxique malgré nos différences. Et le fait qu'il y ait une seule l1 dans ce scénario, qui serait Ethereum, est aussi souvent qualifié de fasciste parce que nous devons tous être d'accord avec cet ensemble unique de règles. C'est donc ce système unique qui est égal pour tout le monde, et vous devez fondamentalement vous soumettre à cette l1 ou vous pouvez vous en éloigner, c'est une toute autre question. Mais si nous pouvons décentraliser cela en un écosystème varié de minuscules l2 de type rollup, alors nous pouvons ramener la dissonance et le désaccord au sein de cette infrastructure commune. 
 

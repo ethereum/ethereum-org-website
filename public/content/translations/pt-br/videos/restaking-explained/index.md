@@ -18,25 +18,25 @@ Uma apresentação de **Mike Neuder** em um evento do CBER Forum abordando como 
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=rOJo7VwPh7I) publicada pelo CBER Forum. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução (0:00) {#introduction-000}
+### Introdução (0:00) {#introduction-000}
 
 Olá a todos, eu sou o Mike. Vou falar sobre LRTs (tokens de restaking líquido) e LSTs (tokens de staking líquido). LRTs — o restaking é o novo staking? Vou começar com uma segunda pergunta e usá-la para motivar a discussão sobre LSTs e LRTs, definindo o que eles são. Esta é principalmente uma apresentação gráfica, então espero que possamos começar do início e construir isso juntos.
 
 Um breve resumo: começando bem do início, vamos definir dois modos de staking. O primeiro é o self-staking, o segundo é o staking delegado. Depois, entraremos no conceito de restaking e o definiremos. Há quatro modelos diferentes que quero explorar — usando a separação entre próprio e delegado, e depois focando no restaking nativo versus restaking não nativo. Em seguida, entraremos na liquidez, falando sobre tokens líquidos — tokens de staking líquido e tokens de restaking líquido. Vamos motivar isso analisando a penalização e o restaking, e depois ambos os tipos de tokens. Por fim, terminaremos com alguns dados sobre o staking como ele existe hoje no Ethereum.
 
-#### Self-staking (0:48) {#self-staking-048}
+### Self-staking (0:48) {#self-staking-048}
 
 Começando bem do início, temos o staking onde a Alice está fazendo isso sozinha. Ela interage diretamente com o protocolo, coloca seu stake no protocolo e recebe uma recompensa por fazer isso por meio da emissão do token nativo. No caso do Ethereum, Alice faz o staking de 32 ETH e recebe uma recompensa em ETH por participar do consenso.
 
 Há duas coisas para focar aqui. Primeiro, o staking serve como esse mecanismo anti-Sybil — você não pode enganar a rede dizendo que tem muitas identidades porque cada identidade custa uma certa quantia desse suprimento fixo de tokens. O segundo é o colateral em risco — isso diz respeito às regras do protocolo em termos de penalização. Se a Alice se comportar mal de acordo com alguma especificação muito bem definida, o protocolo retirará seu capital e a punirá por fazer isso.
 
-#### Staking delegado (2:52) {#delegated-staking-252}
+### Staking delegado (2:52) {#delegated-staking-252}
 
 O staking delegado adiciona outra camada no meio entre a Alice e o protocolo. A Alice agora delega para o Bob, que faz o staking no protocolo Ethereum. As recompensas são enviadas para o Bob, e as recompensas menos as taxas são repassadas para a Alice. Esta é a versão mais simples do staking delegado — a Alice não quer executar o software sozinha, talvez ela não tenha 32 ETH inteiros, ou não tenha o hardware ou a experiência técnica para executar um validador.
 
 Existem muitos modos diferentes dessa delegação em vários níveis de confiança. A versão de maior confiança é a custodial — você envia seu ETH para a Coinbase e diz "faça o staking em meu nome". Você efetivamente confia neles inteiramente porque eles custodiam o ativo em seu nome. Há uma versão não custodial, mas governada por uma DAO (organização autônoma descentralizada), onde você delega seu stake para alguém determinado por uma DAO que vota em quem pode executar os nós — este é o staking no estilo da Lido. A terceira é uma versão minimizada em confiança onde tanto a Alice quanto o Bob colocam algum colateral. A Alice subsidia o resto do colateral do Bob, e se o Bob se comportar mal e for penalizado, o colateral dele é a primeira parcela a ser removida. Eu digo "minimizado em confiança" e não "sem necessidade de confiança" porque, não importa o que aconteça, existem mundos nos quais o colateral da Alice é completamente eliminado dependendo do que o Bob fizer.
 
-#### Self-restaking com ETH nativo (4:42) {#self-restaking-with-native-eth-442}
+### Self-restaking com ETH nativo (4:42) {#self-restaking-with-native-eth-442}
 
 Agora podemos falar sobre o que é o restaking. Este é um conceito totalmente novo — existe desde que Sreeram e a EigenLayer introduziram o termo há talvez um ano e meio ou dois anos.
 
@@ -44,7 +44,7 @@ Neste modelo, a Alice faz a mesma coisa que estava fazendo antes — ela envia s
 
 Ela recebe recompensas por isso. Isso parece ótimo — a Alice agora tem potencialmente o dobro da recompensa pela mesma quantidade de stake. Mas o risco é que o capital que ela colocou em staking em ambos os protocolos agora está sobrecarregado pelas regras de ambos os protocolos. Se a Alice se comportar mal no Ethereum, ela pode perder seu capital sendo penalizada. Se ela se comportar mal no "Retheum", ela também pode ser penalizada. Com rendimento adicional vêm responsabilidades adicionais — comportamentos do protocolo que são obrigatórios e puníveis de outras maneiras se você sobrecarregar seu token de staking em muitos protocolos diferentes.
 
-#### Restaking nativo delegado (8:28) {#delegated-native-restaking-828}
+### Restaking nativo delegado (8:28) {#delegated-native-restaking-828}
 
 A segunda versão é o restaking delegado com ETH nativo. A Alice está fazendo staking com o Ethereum, e agora ela quer usar o Bob para delegar seu stake para o protocolo "Retheum". Ela delega para o Bob, o Bob faz o restaking, o protocolo emite recompensas para o Bob, e o Bob emite as recompensas menos as taxas para a Alice.
 
@@ -56,7 +56,7 @@ Nesta versão nativa, a Alice faz o staking e tem o que é chamado de credencial
 
 Por que isso é chamado de "nativo"? Porque a Alice ainda está interagindo diretamente com o Ethereum — seu stake são os 32 ETH que ela possui, usados para garantir a segurança da camada de consenso do Ethereum.
 
-#### Restaking não nativo (10:57) {#non-native-restaking-1057}
+### Restaking não nativo (10:57) {#non-native-restaking-1057}
 
 Self-restaking no cenário não nativo: a Alice está interagindo apenas com o protocolo "Retheum". Ela não está executando um nó no Ethereum. Ela faz o restaking — embora eu coloque "re" entre aspas porque ela não está realmente fazendo restaking, é um staking em primeiro lugar. A única razão pela qual é chamado de restaking é porque isso ocorre por meio de um protocolo que também facilita outros tipos de restaking.
 
@@ -64,7 +64,7 @@ Ela pega tokens não nativos — isso pode ser USDC, uma stablecoin de euro, Bit
 
 O restaking delegado com tokens não nativos segue o mesmo padrão — a Alice delega por meio do Bob e recebe recompensas menos as taxas.
 
-#### Penalização e restaking (13:55) {#slashing-and-restaking-1355}
+### Penalização e restaking (13:55) {#slashing-and-restaking-1355}
 
 Antes de entrarmos na liquidez, vamos falar sobre penalização. No modo normal de penalização, a Alice está fazendo staking no protocolo Ethereum. Se ela fizer algo que o protocolo considere errado — por exemplo, uma equivocação, onde ela usa sua chave criptográfica para assinar duas informações que estão em conflito uma com a outra — isso é uma falha objetiva. Todos podem verificar que ambas as assinaturas foram feitas pela Alice, e isso é prova suficiente para penalizar seus tokens.
 

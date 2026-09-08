@@ -19,11 +19,11 @@ Semina ya mtandaoni iliyoandaliwa na **Blockdaemon** pamoja na mhandisi wa mnyor
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=_UpAFpC7X6Y) iliyochapishwa na Blockdaemon. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 **Mwenyeji:** Hujambo na karibu kwenye semina hii ya mtandaoni iliyoandaliwa na Blockdaemon inayoangazia sasisho lijalo la Pectra la Ethereum. Pamoja nasi leo ni Julia Schmidt, mhandisi wa mnyororo wa vitalu katika Alluvial, na Freddy Tänzer, kiongozi wa mfumo wa ikolojia wa Ethereum wa Blockdaemon, kujadili jinsi mabadiliko ya Pectra yatakavyoathiri uwekaji dhamana wa ETH, mtandao kwa ujumla, huduma za uwekaji dhamana wenye ukwasi, na zaidi. Ili kuanza, Freddy — unaweza kutupa muhtasari mfupi wa sasisho la Pectra na athari zake kwa waweka dhamana zitakuwa nini?
 
-#### Pectra ni nini (1:28) {#what-is-pectra-128}
+### Pectra ni nini (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Kwa hivyo Pectra ni sasisho la Ethereum ambalo limepangwa kufanyika mwishoni mwa robo ya kwanza ya 2025 — karibu Machi, linaweza kusogezwa mbele kidogo, labda Aprili hivi. Kimsingi lilipaswa kuwa mchepuo mdogo mwanzoni, na kisha mambo mengi zaidi yakaongezwa, kwa hivyo sasa wameligawanya katika sehemu mbili.
 
@@ -33,7 +33,7 @@ La kwanza ni ukweli kwamba unaweza kuanzisha utoaji na kujitoa kutoka kwa mthibi
 
 Pia kuna jambo dogo ambalo kimsingi linasababisha ukweli kwamba amana zinakuwa za haraka zaidi — kusajiliwa mnyororoni kutoka kama saa 14 hadi chini ya saa moja — lakini hayo mawili nadhani ndiyo muhimu zaidi kwa mjadala wetu hapa.
 
-#### EIP-7002: kujitoa kunakoanzishwa kwenye tabaka la utekelezaji (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: kujitoa kunakoanzishwa kwenye tabaka la utekelezaji (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Mwenyeji:** Kwa mabadiliko makubwa ya kwanza, Julia, unaweza kueleza jinsi mchakato baada ya Pectra utabadilika ikilinganishwa na njia za sasa ambazo utoaji unaanzishwa katika mfumo wa ikolojia wa uwekaji dhamana wa Ethereum?
 
@@ -49,7 +49,7 @@ Katika sasisho la Dencun lililopita, EIP mpya ilibadilisha muda wa kuisha kwa ju
 
 Hili sasa limetatuliwa na EIP-7002, ambayo inaruhusu ufunguo wa mthibitishaji na ufunguo wa utoaji kuanzisha kujitoa kutoka kwa tabaka la utekelezaji — kwa kutuma tu muamala kwenye mkataba maalum wa utoaji ambapo unatuma ombi la utoaji na kubainisha ama kujitoa kamili kwa mthibitishaji, au utoaji wa kiasi kutoka kwa salio la dhamana.
 
-#### EIP-7251: kiwango cha juu cha salio tendaji (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: kiwango cha juu cha salio tendaji (4:15) {#eip-7251-max-effective-balance-415}
 
 **Mwenyeji:** Freddy, unaweza kutupa muhtasari wa kiwango cha juu cha salio tendaji kuanzia Pectra na kuendelea, na jinsi hii itakavyoathiri watu ambao kwa sasa wanaweka dhamana?
 
@@ -69,7 +69,7 @@ Kuna habari njema kuhusu ukataji, pia: adhabu ya awali ya ukataji itashuka sana 
 
 Faida ya kuongeza kiotomatiki inafaidisha hasa viwango vidogo vya dhamana. Ikiwa una wathibitishaji elfu moja, unaweza kuanzisha mpya wewe mwenyewe kila mwezi. Lakini ikiwa una mthibitishaji mmoja tu, kwa vitendo ungehitaji kusubiri miaka 32 ili kuongeza.
 
-#### Athari za uwekaji dhamana wenye ukwasi (11:25) {#liquid-staking-implications-1125}
+### Athari za uwekaji dhamana wenye ukwasi (11:25) {#liquid-staking-implications-1125}
 
 **Mwenyeji:** Julia, ujumuishaji wa wathibitishaji wakubwa unalinganishwaje na faida za uwekaji dhamana wenye ukwasi? Maamuzi haya yatapimwaje katika akili ya mweka dhamana baada ya Pectra?
 
@@ -79,7 +79,7 @@ Ukweli kwamba adhabu ya awali ya ukataji imepunguzwa unapunguza hatari ya kuende
 
 Kwa upande wa matumizi, tokani ya uwekaji amana wenye ukwasi (LST) ni wazi inaongeza ukwasi — hata kwa utoaji wa kiasi kutoka kwa tabaka la utekelezaji, haitakuwa ya papo hapo. Unawasilisha muamala, unawekwa kwenye foleni, kisha kuna kipindi cha kujitoa na kipindi cha utoaji. Tokani za uwekaji amana wenye ukwasi bado zinatoa ukwasi wa papo hapo ambao utoaji wa kiasi hauwezi.
 
-#### Hatua zinazofuata kwa waweka dhamana (16:20) {#next-steps-for-stakers-1620}
+### Hatua zinazofuata kwa waweka dhamana (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Tunachoona ni kwamba taasisi za kifedha kwa kawaida zingeweka dhamana kati ya 65% na 85% ya ETH zao chini ya uhifadhi, kwa sababu wanahitaji iliyobaki kama akiba ya ukwasi kwa ajili ya ukombozi. Ukiwa na uwekaji dhamana wenye ukwasi, unaweza kuongeza kiasi cha ETH iliyowekwa dhamana, ambayo inazalisha zawadi kubwa zaidi.
 
@@ -89,7 +89,7 @@ Pande zote mbili zinafaidika na Pectra — uwekaji dhamana wenye ukwasi unapata 
 
 Faida kuu ambayo sijagusia bado ni utoaji wa kiasi — sasa kwa kuwa unaweza kutoa ETH iliyowekwa dhamana kutoka kwa tabaka la utekelezaji, hii inafungua njia mpya kwa itifaki kama vile EigenLayer kuanzisha utoaji na kujitoa. Kuna ongezeko kubwa la utendaji na mwingiliano ambalo fedha zilizogatuliwa (DeFi) sasa linaweza kujumuisha vyema katika mzunguko wa maisha wa mthibitishaji kamili, kuanzia kuweka amana hadi kujitoa. Kama mhandisi wa mnyororo wa vitalu, inafurahisha kuweza kugeuza mtiririko kamili wa kazi kuwa wa kiotomatiki.
 
-#### Kufunga (19:50) {#closing-1950}
+### Kufunga (19:50) {#closing-1950}
 
 **Mwenyeji:** Julia, watu wanaweza kwenda wapi ili kujifunza zaidi kuhusu Liquid Collective na Alluvial?
 

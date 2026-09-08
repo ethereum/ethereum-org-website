@@ -19,13 +19,13 @@ Presentasi ini menjelaskan bagaimana produksi blok Ethereum telah berevolusi dar
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=u8XvkTrjITs) yang diterbitkan oleh CBER Forum. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 Nama saya Barnabé Monnot. Saya akan berbicara sedikit tentang apa yang terjadi di luar protokol, dan khususnya konsep pemisahan pengusul-pembangun (PBS) dan bagaimana hal itu dioperasikan dengan relai serta banyak infrastruktur offchain.
 
 Saya suka menganggap protokol sebagai objek abstrak yang memiliki kekuatan tertentu. Salah satu kekuatan yang dimiliki protokol adalah kemampuannya untuk memberikan hak kepada peserta tertentu. Kita telah melihat pada pembicaraan sebelumnya bahwa protokol memberdayakan validator untuk melakukan tugas konsensus, tetapi itu bukan satu-satunya hal yang mereka lakukan — kita juga harus mengemas blok dengan transaksi. Kita menyebutnya tugas eksekusi, dan itulah yang ingin saya fokuskan dalam pembicaraan ini.
 
-#### Mengapa validator menggunakan pembangun (0:46) {#why-validators-use-builders-046}
+### Mengapa validator menggunakan pembangun (0:46) {#why-validators-use-builders-046}
 
 Yang menarik adalah meskipun protokol yang memunculkan hak-hak ini dan memberikannya kepada validator, apa yang kita amati dalam praktiknya adalah banyak validator memilih untuk tidak menggunakan hak itu sendiri. Mereka memilih untuk memberikan hak tersebut kepada orang lain untuk melakukannya atas nama mereka. Dan dengan "orang lain" kita mengenal mereka di Ethereum sebagai pembangun.
 
@@ -33,7 +33,7 @@ Jadi apa yang kita amati adalah meskipun validator terus melakukan tugas konsens
 
 Hari ini saya ingin membahas mengapa validator menggunakan pembangun, dari mana hubungan itu berasal — saya akan memperkenalkan sedikit tentang MEV dan pencari di sepanjang jalan — kemudian saya akan memberi tahu Anda bagaimana hubungan ini dimediasi, dan saya akan berbicara tentang relai yang ada saat ini dan solusi dalam-protokol yang sedang kami pikirkan. Saya juga ingin melihat gambaran besarnya sedikit, karena mudah untuk melihat gambar-gambar ini dan berpikir "oh ini sangat menakutkan, bagaimana dengan desentralisasi?" Saya ingin memberi Anda pemahaman bahwa ini adalah pertukaran yang sedang dibuat, tetapi menurut pendapat saya dibuat ke arah yang benar.
 
-#### Model naif dan MEV (3:04) {#the-naive-model-and-mev-304}
+### Model naif dan MEV (3:04) {#the-naive-model-and-mev-304}
 
 Anda dapat memikirkan model naif dari produksi blok di mana validator dipilih menurut proses pemilihan pemimpin, dan mereka harus membuat blok yang berisi daftar transaksi dari mempool. Dalam model yang paling naif, Anda benar-benar hanya memiliki dua pihak — validator yang mendengarkan mempool, dan ketika giliran mereka untuk membuat blok, mereka mengambil transaksi yang membayar biaya paling besar dan menambahkannya, biasanya menggunakan algoritma pengemasan yang tidak terlalu canggih.
 
@@ -43,7 +43,7 @@ Dalam kasus terbaik, keuntungan ini berasal dari fungsi pasar alami seperti arbi
 
 Ini benar-benar memberikan banyak kekuatan kepada produsen dan membuat posisi menjadi produsen blok sangat berharga. Hak istimewa produsen ini adalah sesuatu yang sekarang kita sebut **nilai maksimal yang dapat diekstraksi (MEV)**.
 
-#### Peran pencari (5:43) {#the-role-of-searchers-543}
+### Peran pencari (5:43) {#the-role-of-searchers-543}
 
 Dalam praktiknya, produsen mungkin tidak tahu di mana letak nilainya. Anda bisa memiliki produsen blok yang agak tidak canggih — seperti yang disebutkan, siapa pun dapat menjadi validator selama mereka memiliki modal yang cukup dan mampu menjalankan node. Dalam praktiknya, saya mungkin tidak tahu cara melakukan arbitrase atau apa pun tentang pasar keuangan. Apa yang saya inginkan adalah seseorang memberi tahu saya di mana peluang ini berada — pasar orang-orang yang bersaing untuk memberi tahu saya apa hal terbaik yang harus dilakukan sebagai produsen blok.
 
@@ -51,7 +51,7 @@ Entitas-entitas ini yang sangat pandai menemukan peluang, kita menyebutnya **pen
 
 Model ini bekerja dengan baik dalam praktiknya jika pencari memercayai produsen untuk menjaga bundel tetap atomik. Anda mungkin baru-baru ini mendengar tentang serangan di Ethereum yang merugikan sekelompok penyerang sandwich sebesar $25 juta — akar penyebabnya adalah penyerang berhasil merusak atomisitas bundel, menerima isinya dan mencoba mengatur ulang serta memodifikasinya. Itu adalah properti yang sangat penting yang benar-benar hanya berlaku selama produsen dapat dipercaya untuk tidak merusak atomisitas ini.
 
-#### Mengapa kita membutuhkan pembangun (8:16) {#why-we-need-builders-816}
+### Mengapa kita membutuhkan pembangun (8:16) {#why-we-need-builders-816}
 
 Apa yang Anda lakukan jika produsen tidak tepercaya? Pasca-The Merge di Ethereum, kita memiliki staker solo — sekitar 6% dari jaringan — yang tidak kita kenal. Para pencari tidak akan benar-benar ingin mengirim bundel ke pengusul blok ini karena itu sedikit terlalu berbahaya.
 
@@ -59,7 +59,7 @@ Jadi desain yang dicapai adalah: alih-alih meminta pencari mengomunikasikan bund
 
 Sekarang Anda memiliki rantai yang lebih dalam ini: validator di satu ujung, pengguna di ujung lain, dan di antara seluruh rantai perantara ini yang terus menjadi lebih padat seiring waktu. Pembangun melakukan bagian eksekusi sementara validator melakukan konsensus.
 
-#### Bagaimana relai MEV-Boost bekerja (13:01) {#how-mev-boost-relays-work-1301}
+### Bagaimana relai MEV-Boost bekerja (13:01) {#how-mev-boost-relays-work-1301}
 
 Katakanlah Anda adalah seorang pengusul dan Anda ingin masuk ke pasar ini. Layanan produksi blok ini adalah masalah pertukaran adil yang klasik — dua pihak mencoba mencapai kesepakatan tetapi mereka tidak saling percaya. Literatur klasik memberi tahu Anda bahwa Anda tidak dapat melakukan pertukaran yang adil tanpa pihak ketiga yang tepercaya.
 
@@ -71,19 +71,19 @@ Kedua, para pembangun membuat penawaran yang mencoba bersaing untuk menjadi pemb
 
 Ekonomi relai itu rumit. Beberapa gratis, semacam barang publik. Yang lain telah mengembangkan model pendapatan — relai Ultrasound, misalnya, memiliki "penyesuaian penawaran" di mana mereka mengambil selisih antara penawaran terbaik dan terbaik kedua sebagai pendapatan.
 
-#### Kepercayaan dan relai (17:01) {#trust-and-the-relay-1701}
+### Kepercayaan dan relai (17:01) {#trust-and-the-relay-1701}
 
 Relai adalah pihak ketiga yang tepercaya dalam sistem. Katakanlah sebuah relai menyajikan blok yang tidak valid — orang-orang akan segera melihatnya karena itu ditandatangani, dan mereka akan dengan sangat cepat memutuskan sambungan dari relai itu. Anda bahkan dapat menggosipkan semacam bukti kesalahan. Dalam lima blok, jika relai tidak berkinerja baik, orang-orang akan berhenti memercayainya dan langsung memutuskan sambungan.
 
 Jadi ini didasarkan pada kepercayaan, tetapi dengan asumsi itu dapat diganti dengan agak cepat. Relai bukanlah validator — mereka tidak harus memiliki stake dan mereka tidak harus memiliki hubungan apa pun dengan Ethereum. Mungkin saja mereka adalah orang-orang yang kita kenal dan cintai hari ini, tetapi besok bisa jadi siapa saja.
 
-#### Mengabadikan PBS dalam protokol (20:01) {#enshrining-pbs-in-the-protocol-2001}
+### Mengabadikan PBS dalam protokol (20:01) {#enshrining-pbs-in-the-protocol-2001}
 
 Kami mencoba menghilangkan status pihak ketiga tepercaya dari relai. Kami memiliki pihak ketiga tepercaya yang kami sukai di Ethereum — dan itu adalah Ethereum itu sendiri. Anda dapat merancang solusi dalam-protokol yang pada dasarnya mencoba mengabadikan peran relai dan membuat ketergantungan padanya menjadi opsional.
 
 Saat ini, protokol Ethereum melihat sebagian dari apa yang dilakukan validator tetapi benar-benar buta terhadap jaringan pembangun. Kami mencoba mendorongnya agar protokol Ethereum menjadi pihak ketiga yang tepercaya dalam interaksi antara pengusul dan pembangun — dalam arti itu, kita tidak perlu lagi bergantung pada relai.
 
-#### Membatasi pembangun, memperkuat desentralisasi (22:05) {#constraining-builders-amplifying-decentralization-2205}
+### Membatasi pembangun, memperkuat desentralisasi (22:05) {#constraining-builders-amplifying-decentralization-2205}
 
 Gambaran besarnya itu penting. Di setiap lapisan tampaknya ada permainan berbeda yang terjadi dan pemain berbeda yang mengambil uang dari satu sama lain — apakah ini keuangan tradisional yang terulang kembali? Saya ingin berargumen bahwa pertukaran ini tidak datang dari tempat yang buruk. Mereka mencoba bersandar pada properti dari sistem ini yang menurut kami berguna untuk menskalakannya dan membuatnya lebih bermanfaat.
 
@@ -104,7 +104,7 @@ Untuk memperkuat desentralisasi validator:
 - **Pemisahan pengesah-pengusul** — alih-alih menjadikan validator sebagai produsen blok secara default, memilih sekelompok orang yang berbeda untuk menjadi produsen blok dan memisahkan peran-peran tersebut
 - **Mekanisme staking yang ditingkatkan** — staking di Ethereum sedikit belum sempurna saat ini dan dapat ditingkatkan
 
-#### Pertanyaan dan penutup (27:03) {#questions-and-closing-2703}
+### Pertanyaan dan penutup (27:03) {#questions-and-closing-2703}
 
 Sebuah pertanyaan dari audiens: di dunia keuangan tradisional, waktu penyelesaian sedang dikurangi dari dua hari menjadi satu hari. Apakah mengurangi waktu penyelesaian dari 12 detik ke interval yang lebih pendek akan mengatasi beberapa masalah front-running?
 

@@ -19,7 +19,7 @@ Maelezo kutoka kwa **Junion** yanayosimulia hadithi ya udukuzi wa DAO mwaka 2016
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=rNeLuBOVe8A) iliyochapishwa na Junion. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Ugunduzi (0:00) {#the-discovery-000}
+### Ugunduzi (0:00) {#the-discovery-000}
 
 Ni Jumatatu, Juni 13, 2016. Profesa wa sayansi ya kompyuta katika chuo cha Cornell anachunguza msimbo wa DAO, moja ya miradi yenye malengo makubwa zaidi katika nafasi ya kripto. Kwa miezi kadhaa alikuwa akitetea mradi huo usitishwe, kwani aliamini kulikuwa na kasoro fulani ambazo zingeweza kuweka mradi mzima hatarini. Lakini leo anapata udhaifu mkubwa: hitilafu kwenye mstari wa 666.
 
@@ -33,7 +33,7 @@ Kama vile udukuzi wa SWIFT wa dola milioni 81 ulivyotangaza mapengo katika sekta
 
 Hii ni hadithi ya moja ya wizi mkubwa zaidi wa kidijitali kuwahi kutokea na jaribio la ujasiri la kuandika upya historia ili isionekane kama ilitokea.
 
-#### DAO ilikuwa nini? (2:00) {#what-was-the-dao-200}
+### DAO ilikuwa nini? (2:00) {#what-was-the-dao-200}
 
 Ingia kwenye DAO — kifupi cha shirika linalojitegemea lililogatuliwa. Wazo hili lilitokana na uchangiaji wa umma. Badala ya fedha nyingi kwa miradi tofauti, kungekuwa na mfuko mmoja wa kuzitawala zote, na hakukuwa na njia bora ya kufanya hivi zaidi ya kutumia DAO.
 
@@ -45,7 +45,7 @@ Wakati kipindi cha kupiga kura kilipoisha na akidi ya 20% ya tokeni zote ilipofi
 
 Hata hivyo, bado kulihitajika njia ya kuwalinda walio wachache dhidi ya kukandamizwa na walio wengi. Ikiwa kikundi cha wachache hakikubaliani kabisa na pendekezo ambalo hawangeweza kulishinda kwa kura, badala ya kupiga kura ya hapana, wangeweza kuita utendakazi wa kugawanya na kuhamisha Etha yao kutoka kwenye DAO kuu kwenda kwenye DAO tanzu, kimsingi wakiigawanya DAO mara mbili. Utendakazi huu wa kugawanya utakuwa muhimu sana baadaye.
 
-#### Uchangiaji wa umma (4:01) {#the-crowdfund-401}
+### Uchangiaji wa umma (4:01) {#the-crowdfund-401}
 
 DAO ulikuwa mradi mkubwa zaidi wa uchangiaji wa umma kuwahi kutokea, ukikusanya Etha milioni 12.7 — yenye thamani ya dola milioni 150 kwa wakati huo. Ilifanyika wakati wa enzi za mwanzo za Ethereum, ambapo mradi huo ulikabiliwa na kiasi kikubwa cha msisimko na hofu ya kupitwa (FOMO) ya wawekezaji.
 
@@ -53,7 +53,7 @@ Kabla ya hili, miradi ya Ethereum ilikuwa hasa uthibitisho wa dhana tu, lakini h
 
 Huu ulikuwa msimbo usiobadilika uliopangishwa kwenye kompyuta salama zaidi ulimwenguni, ambao ulihakikisha sifa kuu za DAO: shirika ambalo limegatuliwa kabisa na linajitegemea. Mara tu mikataba ilipotumwa mnamo Aprili 30, hakuna chombo kimoja — hata Slock.it — kingeweza kufanya mabadiliko kwenye itifaki au kusimamisha uwepo wake. Msimbo wake ulikuwa umekaguliwa mara nyingi na watengenezaji mbalimbali wa Ethereum na uliweza kuonekana na kila mtu kwa ukaguzi.
 
-#### Udukuzi (5:02) {#the-hack-502}
+### Udukuzi (5:02) {#the-hack-502}
 
 "Pweke, pweke sana" — jina la Pendekezo la DAO #59. Ni pendekezo la kawaida tu la kugawanya, lakini kwa kweli ndipo udukuzi unapoanzia. Baada ya mdukuzi kuwasilisha pendekezo, kuna kipindi cha kawaida cha siku saba cha mjadala ambapo mtu yeyote yuko huru kujiunga. Hata hivyo, hakuna anayejiunga na mgawanyiko huu.
 
@@ -65,7 +65,7 @@ Unakumbuka lile suluhisho la hitilafu lililofanyika siku nne zilizopita? Ni aibu
 
 Lakini bila suluhisho hili, mtu yeyote angeweza kuita utendakazi mara kwa mara ili kutoa Etha kabla ya mkataba kusasisha salio lao. Ni kama ATM ambayo haibadilishi salio lako hadi ikupe pesa. "Je, ninaweza kutoa dola kumi? Subiri, kabla ya hapo, ninaweza kutoa dola kumi? Subiri, kabla ya hapo…"
 
-#### Kikundi cha Robin Hood (6:55) {#the-robin-hood-group-655}
+### Kikundi cha Robin Hood (6:55) {#the-robin-hood-group-655}
 
 Wamiliki wa tokeni za DAO walitazama huku uwekezaji wao ukivujishwa polepole kutoka kwenye DAO kuu kwenda kwenye DAO tanzu, inayojulikana pia kama DAO nyeusi. Zaidi ya hayo, bei ya Ethereum ilishuka ghafla kutoka dola 20 hadi dola 15 kufuatia habari hizo. Kitu kilihitajika kufanywa, na njia pekee ilikuwa ni kuvujisha kilichosalia kabla mdukuzi hajafanya hivyo. Na hivyo ndivyo mbio za kukausha zilianza.
 
@@ -79,13 +79,13 @@ Wakati huo huo, Alex alikuwa akijiandaa kuanzisha shambulio la wadukuzi wema ili
 
 Asubuhi iliyofuata, Alex alijaribu kukusanya tena kikundi ili kupenyeza kwenye pendekezo lingine la kugawanya, lakini wengine walikuwa na shughuli nyingi. "Tulijihisi kama wadukuzi wabaya zaidi katika historia. Tulikwamishwa na intaneti mbaya na majukumu ya kifamilia."
 
-#### Mbio za kumaliza (9:10) {#the-race-to-empty-910}
+### Mbio za kumaliza (9:10) {#the-race-to-empty-910}
 
 Siku nne baada ya shambulio la awali, DAO ilishambuliwa tena. Ilikuwa ikivuja polepole — Etha chache kwa kila mzunguko — lakini ilikuwa tayari imekusanya maelfu ya dola. Ilionekana kuwa kutoka kwa mshambuliaji anayejaribu mazingira. Katika hatua hii, Robin Hood alihitaji kufanya kitu.
 
 Walichagua kupenyeza kwenye Mgawanyiko #78 kwa sababu walikuwa wamemtambua msimamizi wa pendekezo na lilikuwa linaisha hivi karibuni. Waliwasiliana na baadhi ya wawekezaji wakubwa ambao walifurahi kuchangia tokeni zao za DAO, na kuruhusu timu kupata tokeni milioni sita. Kadiri mkataba wa Robin ulivyokuwa na tokeni nyingi, ndivyo ulivyoweza kufyonza Etha kwa haraka zaidi. Mshambuliaji aliongeza kasi na washambuliaji wengine walijiunga. Lakini kutokana na michango hiyo, Robin Hood aliweza kuwapita. Hii iliwaruhusu kulinda Etha milioni 7.2 — 55% ya DAO.
 
-#### Mchepuo (10:08) {#the-fork-1008}
+### Mchepuo (10:08) {#the-fork-1008}
 
 DAO kuu sasa ilikuwa imevujishwa na fedha zote zilisambazwa kwenye DAO tanzu kadhaa — mbili kuu zikiwa DAO ya wadukuzi wema na DAO nyeusi. Lakini pesa zote zilikuwa zimefungwa kwa muda. Hakuna pendekezo ambalo lingeweza kuwasilishwa chini ya DAO tanzu hadi kipindi cha kusubiri cha siku 27 kiishe. Na hata baada ya hapo, kutuma fedha kwenye anwani ya nje kulihitaji kuwasilisha pendekezo na kusubiri kwa wiki mbili. Kimsingi, bado kulikuwa na siku 41 hadi mdukuzi aweze kutoa pesa ambazo zililingana na 5% ya usambazaji wote wa Ethereum.
 
@@ -93,7 +93,7 @@ Lakini mdukuzi hangekuja kugusa Ethereum yake. Kilichotokea baadaye ni moja ya m
 
 Mnyororo wa vitalu ni kama orodha ya miamala inayoendelea kukua kwa kila kitalu kinachochimbwa. Kila muamala umekita mizizi katika mnyororo wa vitalu milele. Lakini ikiwa zaidi ya 50% ya wachimbaji watashirikiana, wanaweza kubadilisha mnyororo wa vitalu kwa udanganyifu, wakiandika upya historia jinsi wanavyotaka. Kawaida hii inaitwa shambulio la asilimia 51. Lakini hakukuwa na nia mbaya kuhusu mchepuo huu — jamii ilikuwa inarudisha tu pesa zilizoibiwa kutoka kwao.
 
-#### Msimbo ni sheria (11:48) {#code-is-law-1148}
+### Msimbo ni sheria (11:48) {#code-is-law-1148}
 
 Bado, si kila mtu alikubaliana na mchepuo uliopendekezwa. Walidai kwamba msimbo ni sheria. Katika mtazamo huu, mshambuliaji hakuwa mdukuzi sana bali alikuwa kama mwanasheria mwerevu aliyesoma kwa makini masharti ya mkataba. Kwa hivyo, hakuna fedha zilizokuwa zimeibiwa kweli na walipaswa kuwa na haki halali ya Etha kutoka kwenye DAO nyeusi.
 
@@ -107,7 +107,7 @@ Baada ya ukaguzi zaidi, watu waligundua kuwa sahihi ilikuwa batili, kwa hivyo ba
 
 Kwa upande mwingine, watetezi walidai kwamba "msimbo ni sheria" ni kauli kali sana na kwamba binadamu wanapaswa kuwa na kauli ya mwisho kupitia mwafaka wa kijamii. Mdukuzi hapaswi kuruhusiwa kufaidika na unyonyaji huo kwani ni makosa kimaadili na kuna uwezekano mkubwa ni kinyume cha sheria. Lakini muhimu zaidi, DAO ilikuwa kubwa mno kushindwa. Ilishikilia karibu 15% ya usambazaji wote wa Etha.
 
-#### Ethereum Asilia (14:34) {#ethereum-classic-1434}
+### Ethereum Asilia (14:34) {#ethereum-classic-1434}
 
 Katika tukio ambalo liliakisi mgogoro wa kifedha wa 2008, watengenezaji wa Ethereum waliokoa DAO. Vitalik Buterin, muundaji na mtengenezaji mkuu wa Ethereum, hakuomba radhi kuhusu kushinikiza mchepuo. Katika mahojiano, baadaye alisema, "Baadhi ya watumiaji wa Bitcoin wanaona mchepuo mgumu kama kwa njia fulani unakiuka maadili yao ya msingi. Binafsi nadhani maadili haya ya msingi, yakisukumwa kwa viwango hivyo, ni ya kijinga."
 
@@ -117,7 +117,7 @@ Lakini haiishii hapo. Mnyororo wa vitalu asili wa Ethereum — ule wenye udukuzi
 
 Ikiwa ulishikilia Etha kabla ya mchepuo, sasa ungekuwa na Ethereum moja na Ethereum Asilia moja. Ikiwa ulishikilia Etha moja kwenye DAO, ungeweza kutoa Ethereum moja kutoka kwenye mkataba wa kurejesha fedha. Na ikiwa ulikuwa umedukua DAO, ungekuwa umetengeneza utajiri mzuri katika Ethereum Asilia — karibu dola milioni saba.
 
-#### Urithi wa DAO (16:14) {#legacy-of-the-dao-1614}
+### Urithi wa DAO (16:14) {#legacy-of-the-dao-1614}
 
 Hapo awali, Ethereum Asilia ilipata kasi kama mbadala, ikiwa na jamii yenye nguvu ya wenye msimamo mkali wa mnyororo wa vitalu ambao hawakukubaliana na uokoaji. Lakini tangu wakati huo, Ethereum Asilia imeshindwa kupata mvuto na inakuwepo tu kama wazo lenye matumizi madogo. Wakati Ethereum ni nyumbani kwa maelfu ya itifaki, Ethereum Asilia ina chache tu za msingi. Ni wazi kwamba mchepuo ulikuwa umeshinda.
 
@@ -125,7 +125,7 @@ Miezi miwili baadaye, Robin Hood walihamisha milioni 2.9 za Ethereum Asilia yao 
 
 Kuhusu mdukuzi, aliondoka na Ethereum Asilia milioni 3.6 — yenye thamani ya dola milioni 150 leo. Lakini kama kusingekuwa na mchepuo, Ethereum hiyo milioni 3.6 ingekuwa na thamani ya zaidi ya dola bilioni saba leo.
 
-#### Athari ya kudumu ya DAO (17:26) {#the-daos-lasting-impact-1726}
+### Athari ya kudumu ya DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Ni muhimu kutambua kwamba DAO sasa inajulikana kama Genesis DAO ili kuepuka mkanganyiko, kwa sababu ilikuwa DAO ya kwanza lakini hakika si ya mwisho. Licha ya vikwazo vya awali, DAO zimezidi kuwa maarufu. MakerDAO inatawala sarafu thabiti ya DAI, na itifaki za fedha zilizogatuliwa (DeFi) kama vile Uniswap yenye tokeni yake ya UNI kwa kawaida huwa na DAO ya utawala. DAO hizi zote zilijengwa kutokana na uzoefu wa miradi ya awali ili kuunda mashirika yenye matumizi mengi na yenye mafanikio zaidi.
 

@@ -81,6 +81,9 @@ const UseCaseCard = ({
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-use-cases")
 
   const { contributors, lastEditLocaleTimestamp } =

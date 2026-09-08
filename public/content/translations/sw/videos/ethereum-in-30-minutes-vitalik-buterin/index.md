@@ -18,7 +18,7 @@ breadcrumb: "Ethereum ndani ya Dakika 30"
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=ei3tDRMjw6k) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:02) {#introduction-002}
+### Utangulizi (0:02) {#introduction-002}
 
 Sawa, kwa hivyo Ethereum ndani ya dakika 30. Hili ni wasilisho ambalo nimetoa katika karibu kila Devcon tangu kuzinduliwa. Kinachovutia ni jinsi mfumo wa ikolojia wa Ethereum unavyobadilika, na jinsi itifaki ya Ethereum inavyobadilika, kadiri nyakati zinavyobadilika, yaliyomo pia huishia kubadilika sana. Ikiwa utarudi kwenye wasilisho sawa na hili la mwaka 2015, utasikia mengi kuhusu vitalu vya mjomba (uncle blocks). Bila shaka, vitalu vya mjomba ni kipengele cha Uthibitisho wa Kazi (PoW). Sasa tuna Uthibitisho wa Dau (PoS), na kwa hivyo hatuna tena vitalu vya mjomba. Ethereum pia bila shaka sasa ina tabaka la 2 (l2), na wakati huo wasilisho hili lisingekuwa na tabaka la 2 hata kidogo. Sasa tunajua tabaka la 2 ni nusu ya hadithi. Ethereum zaidi ya yote ni mfumo wa ikolojia unaoendelea kubadilika, na yaliyomo katika wasilisho hili yataendelea kubadilika kadiri teknolojia inavyobadilika, na pia kadiri msisitizo wa mfumo wa ikolojia unavyobadilika kutoka kujenga miundombinu ya msingi hadi kuweka kiasi kikubwa cha mwelekeo kwenye programu.
 
@@ -30,7 +30,7 @@ Kompyuta ya dunia inafanyaje kazi? Njia ninayofikiria kuhusu hili ni kwamba taba
 
 Tabaka la 2 ni GPU. Tabaka la 2 ni ninyi nyote mliopo chumbani ambao ni sehemu ya tabaka la 2 lolote lile. Nani hapa ni sehemu ya tabaka la 2? Safi. Nani hapa ametumia tabaka la 2? Nani hapa ametumia tabaka la 1? Vizuri, sote ni watumiaji hapa. Kuna GPU nyingi tofauti, na Ethereum kompyuta ya dunia inaweza kushikamana kwa sababu kila moja ya GPU hizi imeunganishwa kwenye mashine ya uaminifu kupitia mifumo ya uthibitisho wa matumaini (optimistic proof systems), uthibitisho wa sifuri-maarifa, SNARKs, STARKs, plonk, au maneno yoyote yale maarufu. Mifumo hii yote inahakikisha kwamba tabaka la 1 linaweza kuthibitisha bila kuhitaji uaminifu kile kinachoendelea ndani ya tabaka la 2, na tabaka la 2 pia linaweza kusoma bila kuhitaji uaminifu kile kinachotokea kwenye tabaka la 1.
 
-#### Ugatuzi na anuwai (5:11) {#decentralization-and-diversity-511}
+### Ugatuzi na anuwai (5:11) {#decentralization-and-diversity-511}
 
 Kuna mwingiliano muhimu kati ya vipengele hivi viwili, na kwa pamoja vinaunda Ethereum iliyopo leo. L1 ni nini? Ni mnyororo. Inaendesha Uthibitisho wa Dau. Haivunjiki. Hii inamaanisha nini? Ethereum L1 ni mnyororo ambao umekuwepo kwa zaidi ya miaka tisa sasa, na umekuwepo katika muundo wake wa sasa wa Uthibitisho wa Dau kwa zaidi ya miaka miwili kidogo. Moja ya mambo muhimu sana kwa tabaka la msingi kuwa nayo ni ushahidi wazi kwamba unajenga kwenye tabaka la msingi ambalo ni lililogatuliwa, wazi, imara, na lenye uwezekano wa kuendeleza sifa hizo kwenda mbele katika siku zijazo. 
 
@@ -42,7 +42,7 @@ Kisha tuna "wasiojulikana". Wasiojulikana si mhusika, kama vile kitufe cha "any"
 
 Sifa moja ambayo kwa kweli imekuwa bora zaidi ni anuwai ya wateja. Ethereum takriban miaka mitano iliyopita ilikuwa kimsingi Go Ethereum (Geth) pekee. Unapokuwa na mfumo wa ikolojia unaotawaliwa na mteja mmoja, hilo lenyewe linakuwa kitovu cha kushindwa. Nani hapa anakumbuka mashambulizi ya DoS ya 2016? Unaamka saa 11:17 asubuhi, unapata simu ya kukuamsha ya kijeshi, unashuka kwenye chumba cha vita, na mtu amegundua hitilafu kwenye mteja. Mnyororo mzima unasimama. Tunairekebisha, na kisha siku mbili au tatu baadaye mtu anapata hitilafu nyingine. Hiyo inaendelea kwa mwezi mzima hadi hatimaye inabidi tufanye mchepuo mgumu. Lakini katika kipindi hicho, uwezo wa Ethereum kuwa na wateja wawili tofauti — wakati huo walikuwa Geth na Parity — kimsingi uliokoa mnyororo. Kuna nyakati ambapo hitilafu ingeathiri Geth lakini si Parity, na nyakati ambapo hitilafu ingeathiri Parity lakini si Geth. Ethereum ilipata faida kubwa kutokana na kuwa na utekelezaji wa programu nyingi, na hili ni jambo ambalo kufikia 2024 labda liko katika hali bora zaidi kuwahi kutokea katika historia ya Ethereum.
 
-#### Wateja wengi na uimara (10:40) {#multiple-clients-and-robustness-1040}
+### Wateja wengi na uimara (10:40) {#multiple-clients-and-robustness-1040}
 
 Tukitazama wateja wa mwafaka, ambao hushughulikia sehemu ya Uthibitisho wa Dau ya Ethereum, na wateja wa utekelezaji, ambao hushughulikia sehemu ya EVM ya Ethereum, tunaweza kuona mteja mmoja aliye na sehemu kubwa zaidi ya soko ni Geth, ambayo ni karibu 50%. Nini kitatokea ikiwa kuna hitilafu katika mteja yeyote wa Ethereum leo hii, sasa hivi? Angalia ikiwa Ethereum bado inafanya kazi. Nitakisia inafanya kazi — ningeweka dau la 99.99% kwenye PolyMarket. 
 
@@ -56,7 +56,7 @@ Miaka miwili iliyopita, chati hii ilikuwa mbaya zaidi. Ugatuzi wa Ethereum sio t
 
 Ikiwa una 32 ETH, au chini ya hapo ikiwa utajiunga na bwawa, kuna chaguzi nyingi zaidi za mabwawa zinazovutia zinazojitokeza — kama uwekaji dhamana wa kikosi wa Obol, ambao unakuruhusu kuunda mabwawa madogo na marafiki zako. Kuna njia nyingi tofauti za wewe kuwa mweka dhamana, na ukifanya hivyo, unakuwa sehemu ya mtandao huu wa nodi zinazolinda mnyororo wa vitalu wa Ethereum.
 
-#### Uthibitishaji wa nodi na kiwango (15:06) {#node-verification-and-scale-1506}
+### Uthibitishaji wa nodi na kiwango (15:06) {#node-verification-and-scale-1506}
 
 Nadhani hivi ndivyo propaganda ya taasisi inavyoielezea — ina tembo mzuri. Kwa hivyo pongezi kwa tembo! Wewe pia unaweza kujiunga na mtandao na kusaidia kuulinda. Hata kama wewe si mweka dhamana, unaweza pia kuendesha nodi ya Ethereum kwenye kompyuta yako na kuthibitisha mnyororo kwa hiari. 
 
@@ -70,7 +70,7 @@ Kuweka dhamana kwa ETH chache pia ni hitaji la utafiti linaloendelea sana. 32 ET
 
 Nini kinaendeshwa kwenye Ethereum L1? Baadhi ya programu zenye thamani kubwa. Fedha zilizogatuliwa (DeFi) nyingi zenye thamani kubwa zinaendeshwa kwenye L1. ENS kwa sasa iko kwenye L1, ingawa inazidi kufanya mengi zaidi na tabaka la 2. Watu wanashikilia rasilimali kwenye tabaka la 1. Zaidi ya hayo, tabaka la 1 linasimamia mizizi ya kitalu, mizizi ya hali, na mifumo ya uthibitisho kwa tabaka la 2. Inalinda tabaka la 2. Tabaka la 1 linahitaji kuwa na nguvu ya kutosha kushughulikia shughuli za kuvuka tabaka, hasa katika hali ambapo tabaka la 2 linashindwa. Tofauti kati ya tabaka la 2 na mnyororo unaojitegemea ni kwamba hata kama tabaka lako la 2 litashambuliwa kwa 51% au timu ikafungwa, tabaka la 1 bado linasimama hapo kulinda watumiaji. Watumiaji wanaweza kuthibitisha umiliki wao na hali ndani ya tabaka la 2 na kuihamisha kurudi kwenye tabaka la 1. 
 
-#### Kasi za L2 na ramani za njia (20:33) {#l2-speeds-and-roadmaps-2033}
+### Kasi za L2 na ramani za njia (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Hivi karibuni, kulikuwa na jaribio la moja kwa moja la hili. dYdX v3 ilifungwa hivi karibuni, na watu wa L2Beat waliandika utekelezaji wao wenyewe wa programu ya njia ya kujitoa kwa dharura. Bila ushiriki wowote kutoka kwa timu ya dYdX, watumiaji waliweza kuchukua rasilimali zozote walizokuwa nazo ndani ya dYdX v3 na kuzirudisha kwenye Ethereum L1. Kutoka kwenye tabaka la 2 bila ushiriki wa timu si nadharia tu, ni ukweli.
 
@@ -82,7 +82,7 @@ Kisha Unganisho. Kwa sababu ya upekee wa kuvutia wa hisabati, ingawa muda wa was
 
 Historia ya Ethereum: Novemba 2013 ilikuwa waraka mweupe. Julai 2015 ulikuwa uzinduzi. Mnamo 2018, Ethereum ilikubaliana juu ya muundo wake wa takriban wa Uthibitisho wa Dau na usampulishaji wa upatikanaji wa data. Karatasi asili za usampulishaji wa upatikanaji wa data na usimbaji wa ufutaji niliandika mnamo 2017. 
 
-#### Casper na uongezaji wa kiwango wa rollup (25:27) {#casper-and-rollup-scaling-2527}
+### Casper na uongezaji wa kiwango wa rollup (25:27) {#casper-and-rollup-scaling-2527}
 
 Ikiwa utachimba kwenye GitHub, unaweza kutafuta saraka inayoitwa `simple_casper` na kupata mikataba iliyoandikwa kwa Serpent. Nani hapa anakumbuka Serpent? Nani hapa anatumia Serpent? Namaanisha, nadhani Python ni nzuri sana, lakini ikiwa unataka hiyo, unapaswa kuandika msimbo kwa Vyper. Vyper kwa kweli ni nzuri na imeendelea kuboreka sana. Ndani ya hifadhi hiyo mnamo 2017, tulijaribu kufanya uondoaji kamili na kuandika mantiki ya Uthibitisho wa Dau moja kwa moja kama mkataba mahiri. Tulizindua onyesho saa 5:20 usiku kwa saa za Bangkok mnamo Desemba 31, 2017 — tulitaka kutoa kitu kabla ya Mwaka Mpya — na onyesho hilo liliishia kuharibika haraka sana. Ilikuwa siku za mwanzo.
 

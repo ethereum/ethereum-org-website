@@ -19,7 +19,7 @@ Rozhovor s **Dannym Ryanem**, spoluzakladatelem Etherealize a bývalým hlavním
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=GZPLTF5ds2A) vydaného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Objevování internetu a raná zvědavost (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### Objevování internetu a raná zvědavost (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Moderátor:** Jak to jde? Kdy jsi naposledy hrál Jengu?
 
@@ -37,7 +37,7 @@ Rozhovor s **Dannym Ryanem**, spoluzakladatelem Etherealize a bývalým hlavním
 
 **Danny Ryan:** Vždycky jsem byl ten, kdo uměl věci opravit. Moji prarodiče mě pořád citovali – bylo mi asi sedm – pomáhal jsem jim s počítačem a jednou jsem řekl: „Někdy to prostě musíte vypnout a zase zapnout.“ Od té doby mě s tím pořád citovali.
 
-#### Od strojního inženýrství k softwaru (5:02) {#from-mechanical-engineering-to-software-502}
+### Od strojního inženýrství k softwaru (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Moderátor:** Byl tam nějaký „aha“ moment nebo mentor, který tě přiměl vydat se určitou cestou?
 
@@ -47,7 +47,7 @@ Vždycky mě tak nějak bavily počítače, protože byly všude kolem, ale neby
 
 Nejsem jeden z těch typů, co „programují od šesti let“. Nejsem žádný šílený programátor ani šílený matematik. Jsem prostě jen dobrý v tom, že vidím problémy a dokážu je pospojovat dohromady.
 
-#### Život freelancera v Louisianě (7:17) {#the-freelance-life-in-louisiana-717}
+### Život freelancera v Louisianě (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Moderátor:** Co jsi dělal po vysoké?
 
@@ -59,7 +59,7 @@ Nejsem jeden z těch typů, co „programují od šesti let“. Nejsem žádný 
 
 Na střední škole jsem taky založil firmu na sítotisk. Funguje už 20 let. Vede ji můj nejlepší kamarád a společník – jmenuje se Girraphic. Začali jsme to dělat pro naši kapelu a pak jsme začali dělat všechna trička pro naši střední školu.
 
-#### Hack DAO a propadnutí Ethereu (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### Hack DAO a propadnutí Ethereu (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** V roce 2016 mi jeden kamarád poslal článek z New York Times o DAO. Vybralo to, já nevím, 120 milionů dolarů – největší crowdfunding v historii. O Bitcoinu jsem věděl. Dělal jsem bitcoinové transakce. Pravděpodobně jsem na Bitcoinu i prodělal. Ale nějak mě to neoslovilo.
 
@@ -73,7 +73,7 @@ Hned první den jsem si řekl: „Dobře, půjdu na Ethereum meetup v New Orlean
 
 Dozvěděl jsem se o důkazu podílem (PoS) a říkal si: „To nedává žádný smysl.“ Pak jsem se učil dál a říkal si: „Možná to smysl dává. Možná bych mohl vytvořit stakingový pool nebo tak něco.“ Slyšel jsem, že se chystá Casper – tak se tehdy důkaz podílem (PoS) jmenoval – a tak jsem začal číst kód. Říkal jsem si: „Aha, mohli by udělat víc testů.“ Napsal jsem nějaké testy. Na konci roku 2017 mi výzkumný tým řekl: „Hej, nechceš u nás pracovat?“ Řekl jsem: „Tak jo.“
 
-#### Hledání komunity v open source (14:35) {#finding-community-in-open-source-1435}
+### Hledání komunity v open source (14:35) {#finding-community-in-open-source-1435}
 
 **Moderátor:** Jak jsi našel svou komunitu a své lidi? Jak sis vybudoval sebevědomí?
 
@@ -81,7 +81,7 @@ Dozvěděl jsem se o důkazu podílem (PoS) a říkal si: „To nedává žádn�
 
 Dveře byly až komicky dokořán. Už dlouho jsem těmi dveřmi nemusel procházet, ale dokážu si představit, že v mnoha částech Etherea jsou dveře stále dost otevřené, vzhledem k tomu, že se pracuje veřejně.
 
-#### Vedení Merge (16:58) {#leading-the-merge-1658}
+### Vedení Merge (16:58) {#leading-the-merge-1658}
 
 **Moderátor:** Kluk, který nehrál hry, protože se bavil s holkama, byl v kapele, založil firmu na sítotisk, zafinancoval hack DAO – nakonec se přidal k Nadaci Ethereum tím, že byl zpočátku nápomocný, a nakonec v podstatě navrhl možná jeden z nejšílenějších inženýrských počinů všech dob. Jak jsi udělal Merge?
 
@@ -89,7 +89,7 @@ Dveře byly až komicky dokořán. Už dlouho jsem těmi dveřmi nemusel prochá
 
 Což dobře ukazovalo, jak cenný je čas a pozornost lidí jako Vitalik – on se soustředí na jiné věci. A já si uvědomil, že dokážu dělat tu práci, ale dokážu dělat i věci, které ostatní nedělali. Dokázal jsem přijít na to, co se musí stát, aby se to celé posunulo kupředu. Lidé mají hlavy v oblacích, pracují na neuvěřitelně složitých a těžkých věcech. Můj přístup byl vždycky: „Co můžu udělat pro to, aby se to stalo realitou?“ Někdy jsem dělal výzkum, někdy jsem psal specifikace a čím dál víc to bylo o komunikaci a koordinaci napříč velmi složitým projektem.
 
-#### Rovnováha mezi pracovním a soukromým životem a zvládání stresu (18:07) {#work-life-balance-and-managing-stress-1807}
+### Rovnováha mezi pracovním a soukromým životem a zvládání stresu (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Moderátor:** Jak jsi zvládal ten stres?
 
@@ -99,7 +99,7 @@ Jsem svou prací docela pohlcen – hodně o ní přemýšlím. Ale taky vím, �
 
 Technické problémy nejsou nikdy ty stresující. Je to ta složitá technopolitická sféra. Lidé jsou ta těžká část.
 
-#### Spoluzaložení Etherealize (20:02) {#co-founding-etherealize-2002}
+### Spoluzaložení Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Moderátor:** Nedávno jsi spoluzaložil Etherealize. Kde se vzal tvůj zájem o tohle? Co tě na tom pořád baví a proč si myslíš, že je ta práce důležitá?
 
@@ -117,7 +117,7 @@ Zjistíte, že je to civilní organizace, takže to nejhorší, co můžou uděl
 
 Pak jsem se vrátil do Nadace Ethereum a pak zase odešel. Pak Trump spustil memecoin – doslova šok. Pak jsem zvažoval návrat do Nadace Ethereum a tyhle dveře jsme zavřeli. První zajímavá věc, která mi přistála na stole, bylo seznámení s Vivekem. Říkal jsem si: „Aha – během tohohle okna bychom možná opravdu mohli dosáhnout adopce Etherea.“ Vivek má velmi doplňující se energii, doplňující se zázemí z tradičních financí. Prostě jsem řekl: „Dobře, jdeme do toho. Uděláme onboarding celého světa.“
 
-#### Proč svět potřebuje Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
+### Proč svět potřebuje Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Moderátor:** Proč svět potřebuje Ethereum?
 
@@ -125,7 +125,7 @@ Pak jsem se vrátil do Nadace Ethereum a pak zase odešel. Pak Trump spustil mem
 
 Vivek měl ten „aha“ moment v roce 2020, když odešel z Wall Street a dozvěděl se o Ethereu – „Aha, všechny kapitálové trhy by se měly upgradovat pomocí Etherea.“ A má pravdu. A je na čase.
 
-#### Argumenty pro decentralizaci (25:47) {#the-case-for-decentralization-2547}
+### Argumenty pro decentralizaci (25:47) {#the-case-for-decentralization-2547}
 
 **Moderátor:** Ethereum se silně zaměřuje na decentralizaci, na to, aby bylo důvěryhodně neutrální. Existuje kritika, že byste se mohli vzdát decentralizace ve prospěch efektivity a udělat onboarding více lidí už dnes. Jaká je tvá odpověď?
 
@@ -135,13 +135,13 @@ To bude pro banky a finanční instituce znamenat strašně moc. A bude to zname
 
 Máme před sebou ještě trochu práce, co se týče škálování – ačkoli se spouští Pectra a ta spolu s vrstvami 2 (l2) připraví půdu pro masivní škálování. Máme také práci na vývoji, aby tyto věci nebyly jen vynikajícími decentralizovanými protokoly, ale i vynikajícími produkty – bezpečnými produkty, snadno použitelnými produkty. Během tohoto přechodu je Ethereum vlastně tou nejlepší odpovědí pro onboarding celého světa.
 
-#### Přání, aby na sebe lidé byli milejší (27:38) {#wishing-people-were-nicer-2738}
+### Přání, aby na sebe lidé byli milejší (27:38) {#wishing-people-were-nicer-2738}
 
 **Moderátor:** Co by sis přál, aby si dnes ve světě uvědomovalo více lidí – ani to nemusí souviset s kryptem?
 
 **Danny Ryan:** Přál bych si, aby na sebe lidé byli trochu milejší. A taky aby si uvědomili, že celá tahle šílená věc zvaná moderní společnost – buďte opatrní a zacházejte s ní s péčí. Je to složité. Byla v poměrně stabilní rovnováze. Myslím, že ji můžeme a měli bychom dál zlepšovat, ale neměli bychom to všechno jen tak zahodit.
 
-#### Změna vedení v Nadaci Ethereum a zaujetí postoje (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Změna vedení v Nadaci Ethereum a zaujetí postoje (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Moderátor:** Začátkem roku, když měla Nadace Ethereum projít změnami, jsi byl vržen do světla reflektorů. Jaká byla tvá reakce?
 
@@ -149,7 +149,7 @@ Máme před sebou ještě trochu práce, co se týče škálování – ačkoli 
 
 K Aye chovám obrovský respekt. Jsme blízcí přátelé a dlouho jsme spolu úzce spolupracovali. Spoustu rozhodnutí, která udělala, jsem pomáhal dělat, podporoval je a realizoval. Takže je vtipné být proti ní postaven ve veřejném prostoru, když se od ní filozoficky nijak hluboce neliším. Rád jsem laskavý. Rád se k lidem chovám s respektem, zvláště na veřejných fórech. Byla velmi zraněná, a to jsem absolutně nechtěl. Upřímně řečeno, to, že se to stalo, byl pro mě asi poslední hřebíček do rakve, abych se nevracel – což je přesný opak toho, co ten dav zamýšlel.
 
-#### Města budoucnosti a lidství ve věku umělé inteligence (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Města budoucnosti a lidství ve věku umělé inteligence (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Zrovna jsem si vzpomněl – v osmé třídě jsem pracoval na projektu Města budoucnosti. Moje učitelka angličtiny vždycky vybrala jednoho vítěze ze třídy a pracovala s ním až do celostátního kola. Udělali jsme velký model, naplánovali celé město, přečetli spoustu výzkumů, vymysleli budoucí společnost. Jeli jsme na celostátní kolo. Možná to byla taková malá předzvěst.
 
@@ -159,7 +159,7 @@ K Aye chovám obrovský respekt. Jsme blízcí přátelé a dlouho jsme spolu ú
 
 Proto jsem optimistický ohledně věcí, na kterých pracuji – onboarding institucionálního kapitálu do Etherea, zlepšování těchto trhů. Ale už nemám ten nespoutaný optimismus typu „když prostě vybudujete úžasnou decentralizovanou technologii, svět bude hned lepší.“
 
-#### Děti a budoucnost (39:00) {#kids-and-the-future-3900}
+### Děti a budoucnost (39:00) {#kids-and-the-future-3900}
 
 **Moderátor:** Máš děti. Řekněme, že se posuneme o dvacet let dopředu – věci, ve které věříš, vyšly. Jak to změní životy tvých dětí?
 
@@ -167,7 +167,7 @@ Proto jsem optimistický ohledně věcí, na kterých pracuji – onboarding ins
 
 Doufejme, že budeme mít alespoň spravedlivou, otevřenou a svobodnou společnost, částečně proto, že dokážeme navrhnout dobré systémy postavené na kryptu. Ale AI je komplikující faktor v otázce „co to znamená být člověkem?“
 
-#### Hodnoty a komunikace s institucemi (42:34) {#values-and-speaking-to-institutions-4234}
+### Hodnoty a komunikace s institucemi (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Moderátor:** Z jaké hodnoty bys nikdy neslevil?
 
@@ -181,7 +181,7 @@ Doufejme, že budeme mít alespoň spravedlivou, otevřenou a svobodnou společn
 
 **Danny Ryan:** Nemám žádné osvědčené. Jsem velmi dynamický. Čtu jejich jazyk, chápu, jaké jsou jejich potřeby, chápu, co je zajímá, a vymýšlím ty správné vstupní body a metafory. Nejsem velký plánovač.
 
-#### Život mimo krypto (45:12) {#life-outside-crypto-4512}
+### Život mimo krypto (45:12) {#life-outside-crypto-4512}
 
 **Moderátor:** K čemu vzhlížíš mimo technologie a krypto?
 
@@ -191,7 +191,7 @@ Doufejme, že budeme mít alespoň spravedlivou, otevřenou a svobodnou společn
 
 **Danny Ryan:** Trávím čas s rodinou. Cvičím a hraju si venku. Hraju na klavír. A dělám svou práci.
 
-#### Příběh moderátora – odchod z Optimism do Nadace Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Příběh moderátora – odchod z Optimism do Nadace Ethereum (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Moderátor:** Proč jsi odešel z Optimism?
 
@@ -203,7 +203,7 @@ Po vysoké jsem nastoupil do Coinbase jako produktový manažer. Po osmi nebo de
 
 Myslím, že důvodem mého odchodu bylo to, že jsem cítil, že jsem tam udělal všechno, co jsem mohl. Nadace Ethereum je velmi unikátní v tom, že udělala hodně – schytala za to spoustu kritiky, ale udělala hodně pro ochranu své neutrality, pro ochranu svých hodnot. Když s někým mluvím, nemyslí si, že od něj něco chci, protože Nadace Ethereum není startup. A já potřeboval novou výzvu.
 
-#### Zajištění budoucnosti Etherea (59:26) {#securing-ethereums-future-5926}
+### Zajištění budoucnosti Etherea (59:26) {#securing-ethereums-future-5926}
 
 **Moderátor:** Jak zajistíme, aby Ethereum neprohrálo? Jaký je tvůj nejkontroverznější názor na zajištění budoucnosti Etherea?
 

@@ -20,7 +20,7 @@ Dieses Interview behandelt die Blob-Space-Ressource von Ethereum, die mit [EIP-4
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=dFjyUY3e53Q), das von Bankless veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung in den Blob-Space (0:00) {#introduction-to-blob-space-000}
+### Einführung in den Blob-Space (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Willkommen bei Bankless, wo wir die Frontier des Internetgeldes und der Internetfinanzen erkunden. Hier erfahrt ihr, wie ihr anfangt, wie ihr besser werdet und wie ihr Chancen frühzeitig nutzt. Ich bin hier mit David Hoffman, und wir sind hier, um euch zu helfen, mehr 'bankless' zu werden. Ihr wisst, wie wir sagen, dass Blockchains Blöcke verkaufen? Nun, bald wird Ethereum mehr als nur Blöcke verkaufen – es wird auch Blobs verkaufen.
 
@@ -38,7 +38,7 @@ Was bedeutet das für Ether? Was bedeutet das für die Marktplätze, die rund um
 
 Lasst uns unseren Gast Dom, auch bekannt als Domothy, dazu holen. Er ist Forscher bei der Ethereum Foundation und arbeitet an der Forschung und Entwicklung wichtiger kommender Ethereum-Upgrades, einschließlich EIP-4844 (unser heutiges Thema), vollständigem Danksharding und MEV-Burn.
 
-#### Die Geschichte der Rollup-zentrierten Roadmap (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Die Geschichte der Rollup-zentrierten Roadmap (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Also Dom, um vollständig zu verstehen, wie wir zum Blob-Space gekommen sind, denke ich, dass es sich lohnt, in die Vergangenheit zu reisen, um die gesamte Ethereum-Roadmap zu verstehen, denn sie führte zu einer sehr logischen Schlussfolgerung von Blobs und Blob-Space. Kannst du uns mit zurücknehmen? Denn zu einem bestimmten Zeitpunkt gab es die Rollup-zentrierte Roadmap von Ethereum noch nicht. Wir hatten dieses Ding namens Ausführungs-Sharding, das wir eigentlich nie bekommen haben. Wo in der Geschichte der Ethereum-Roadmap ist der richtige Punkt, um den vollen Kontext des Blob-Space wirklich zu verstehen?
 
@@ -58,7 +58,7 @@ Was wir jetzt mit der Rollup-zentrierten Roadmap machen, ist, dass wir die Ausf�
 
 Ende 2020 erkannten die Leute, dass Rollups anfingen, unglaublich gut und beliebt zu werden, und sie lösten unser Problem der Ausführungsskalierung ohne die Notwendigkeit von Ausführungs-Sharding. Indem man auf ein Ökosystem von Rollups setzt, anstatt zu versuchen, ein Layer-1-Maximalist zu sein, können Rollups ihre eigenen Kompromisse eingehen, ihre eigenen Blockchains starten und mit neuartigen Dingen experimentieren. Ethereum übernimmt die Verifizierung – das ist der Kern dessen, was eine Blockchain ausmacht.
 
-#### Was ist der Blob-Space? (30:00) {#what-is-blob-space-3000}
+### Was ist der Blob-Space? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Bring uns nun zum aktuellen Stand, Dom. Wir haben viele Rollups, die den Ethereum-Layer-1-Block-Space nutzen und hohe Gasgebühren zahlen, um ihre Zustandsdaten zu posten, damit jeder sie verifizieren kann. Also, Dom, was ist ein Blob?
 
@@ -72,7 +72,7 @@ Es ist im Grunde ein versiegeltes Paket. Layer 1 nimmt es an, garantiert, dass j
 
 **Domothy:** Genau. Und eine weitere wichtige Eigenschaft von Blobs ist, dass sie nach einer bestimmten Zeit automatisch bereinigt werden – derzeit nach etwa 18 Tagen. Der Grund für diese Bereinigung ist, dass Einzelpersonen zur Gewährleistung einer vertrauenslosen Verifizierung diese Daten nur benötigen, um die Endgültigkeit und den Konsens über den Rollup-Zustand innerhalb eines bestimmten Anfechtungsfensters zu beweisen. Man braucht keine tausend Knoten, die Blobs von vor zwei Jahren speichern, um seine Transaktion heute zu verifizieren. Wenn das Fenster abläuft, bekommt man sie nicht mehr von einem Ethereum-Knoten; man bekommt sie von Historien-Anbietern, Indexern oder den nativen Block-Explorern des Rollups. Speicherplatz auf Ethereum ist für immer wahnsinnig teuer. Der Verzicht auf die Speicheranforderung ermöglicht es uns, den Blob-Transaktionsdurchsatz zu skalieren, ohne die Festplatten der Knotenbetreiber zu zerstören.
 
-#### Ökonomie und vollständiges Danksharding (55:00) {#economics-and-full-danksharding-5500}
+### Ökonomie und vollständiges Danksharding (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Wir wissen, dass 4844 der erste Schritt ist – das, was wir Proto-Danksharding nennen. Es etabliert das Blob-Format und den isolierten Gebührenmarkt, aber die tatsächliche Zielanzahl von Blobs pro Block ist anfangs begrenzt, um recht sicher zu sein. Wie sieht das bei der Skalierung in Richtung vollständigem Danksharding aus?
 
@@ -86,7 +86,7 @@ Mit einem zweidimensionalen Gebührenmarkt – im Grunde einer separaten, isolie
 
 **Domothy:** Ja, sie sind völlig voneinander getrennt. Und das Umgekehrte gilt auch. Wenn der Transaktionsdurchsatz von Layer 2 immens ansteigt und Tausende von Rollups operieren und den Blob-Space verstopfen, wird der daraus resultierende Anstieg der Blob-Grundgebühren die Kosten für eine einfache Transaktion im Ethereum Mainnet nicht beeinflussen. Die Blob-Grundgebühr funktioniert genau wie die EIP-1559-Grundgebühr, aber in ihrer eigenen Dimension. Und zu deiner früheren Frage über das Verbrennen – ja, die Blob-Gebühr generiert verbrannte ETH, um für die Aufnahme der Blob-Space-Daten zu bezahlen, völlig getrennt vom Verbrennen der Block-Space-Grundgebühr.
 
-#### Die Zukunft der Ethereum-Skalierbarkeit (75:00) {#the-future-of-ethereum-scalability-7500}
+### Die Zukunft der Ethereum-Skalierbarkeit (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Ich möchte darauf eingehen, was speziell bei der Veröffentlichung von 4844 passiert. Anfänglich gibt es offensichtlich eine sehr hohe Erwartung, dass, wenn die Blob-Kapazität plötzlich freigeschaltet wird, es in genau dieser Mikrosekunde nicht genug Rollup-Nachfrage geben wird, um sie vollständig zu füllen. Der Blob-Space wird beim Start fast schon komisch billig sein. Aber gibt es nicht das Gesetz der induzierten Nachfrage? Wenn man unglaublich billige Ressourcen hat, explodieren die Anwendungen, die diese Ressourcen verbrauchen, im Volumen.
 

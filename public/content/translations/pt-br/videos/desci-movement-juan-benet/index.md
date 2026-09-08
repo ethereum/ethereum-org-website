@@ -18,7 +18,7 @@ Uma apresentação de **Juan Benet**, fundador da Protocol Labs e inventor do IP
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=zkXM9H90g_E) publicada pela EthCC. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução à ciência e ao progresso (0:10) {#introduction-to-science-and-progress-010}
+### Introdução à ciência e ao progresso (0:10) {#introduction-to-science-and-progress-010}
 
 Certo, olá a todos. Meu nome é Juan. Estou aqui para falar sobre a desci. Quero falar sobre como podemos usar a desci para financiar, organizar e abrir a ciência. Primeiramente, é sobre isso que vamos conversar: vou falar sobre a ciência em geral por um momento, depois vou falar sobre o que é o movimento desci, e então sobre como podemos financiar os bens comuns da ciência. Depois, como a desci está organizando as pessoas, os projetos e os trabalhos em torno da ciência. Em seguida, quero falar um pouco sobre acesso aberto e ciência reprodutível, e quero terminar com um chamado à ação. Então, isso será bem rápido. Temos muito a cobrir, então vou me mover rápido.
 
@@ -34,7 +34,7 @@ Agora, a ciência tem uma tonelada de problemas. Existem todos os tipos de quest
 
 Uma vez que os estudos são concluídos e produzidos, apenas uma fração deles se replica. Então, há todos os tipos de ciência que foram publicados, aceitos e considerados corretos, apenas para descobrir mais tarde que uma enorme fração deles não pode ser realmente reproduzida. Portanto, há uma enorme crise de reprodutibilidade. E há até descobertas científicas cujos artefatos estão desaparecendo. Pense nos próprios artigos, códigos ou dados associados a algum resultado desaparecendo de nossos bancos de conhecimento. Então, há todos os tipos de problemas em torno da ciência que precisam ser corrigidos, e isso é parte do que a desci se trata. Isso é enfrentar uma série desses problemas, não no atacado, não completamente, mas a comunidade desci está tentando enfrentar várias dessas questões.
 
-#### O movimento DeSci (5:11) {#the-desci-movement-511}
+### O movimento DeSci (5:11) {#the-desci-movement-511}
 
 Então, o que é a desci? A desci é um movimento para melhorar a ciência usando tecnologia e ferramentas da Web3. Pense em ser capaz de usar toda a magia da vinculação de hash, blockchains e contratos inteligentes para criar sistemas e estruturas que podem melhorar como fazemos ciência em vários campos ao redor do globo.
 
@@ -46,7 +46,7 @@ Agora existem vários grupos fazendo financiamento descentralizado de biotecnolo
 
 Agora também há muitos encontros e conferências diferentes que estão reunindo essas comunidades. Coisas como DeSci Day, DeSci Berlim, Schelling Point da comunidade Gitcoin e Funding the Commons. Essas conferências estão reunindo muitas das conversas em torno da desci.
 
-#### Financiando os bens comuns (10:40) {#funding-the-commons-1040}
+### Financiando os bens comuns (10:40) {#funding-the-commons-1040}
 
 Vamos falar sobre financiar os bens comuns. Talvez alguns de vocês tenham visto este diagrama que usei no passado sobre o abismo da inovação. Na tradução da ciência para a tecnologia, a parte da desci está focada principalmente na parte esquerda — apenas a parte da ciência — tentando pensar em melhores estruturas de incentivo e melhores maneiras de coordenar grupos para produzir melhores resultados científicos. Vale a pena notar que o financiamento global total de P&D é, de uma perspectiva, meio massivo, mas de outra perspectiva, não tão grande e não mudou muito nas últimas décadas, embora a vazão e o resultado da tecnologia que estamos construindo tenham crescido tremendamente.
 
@@ -64,7 +64,7 @@ Por exemplo, grupos como a VitaDAO estão criando uma estrutura de dados distrib
 
 Certificados de impacto são outra estrutura fascinante que representa o financiamento retroativo. Eles permitem que os participantes, uma vez que alcancem algum impacto, possam cunhar um certificado em torno desse impacto e vendê-lo no mercado para qualquer um que queira reivindicar esse impacto. Isso permite que um mercado especulativo surja, fechando um ciclo ao longo do tempo para financiar retroativamente um trabalho extremamente importante. Isso é crucial porque muitas vezes você só percebe o quão valioso algo é muito tempo depois que o trabalho foi feito.
 
-#### Organizando pessoas e Data DAOs (15:28) {#organizing-people-and-data-daos-1528}
+### Organizando pessoas e Data DAOs (15:28) {#organizing-people-and-data-daos-1528}
 
 Agora, alguns pensamentos rápidos sobre a organização de pessoas. No passado, o GitHub foi tremendamente bem-sucedido em ajudar a organizar a descoberta científica. Livros didáticos e campos inteiros se desenvolveram através do GitHub. Muitos grupos usaram as primitivas básicas do GitHub em torno de problemas (issues), colaboração de código e controle de versão para organizar comunidades de prática e ciência. Mas o que não está completo lá é que você não tem uma maneira de criar organizações que fazem pesquisa, lidam com capital ou pagam contribuidores.
 
@@ -78,7 +78,7 @@ Você pode pensar em agrupar esse tipo de atividade e geração de dados com alg
 
 Algumas notas finais sobre acesso aberto e ciência reprodutível. O IPFS já tem sido muito usado para muitos tipos de trabalho de ciência aberta. Ele já está vivendo o sonho de abrir o acesso a muita ciência, apoiando cópias distribuídas da Wikipedia, arquivos massivos de artigos e conjuntos de dados.
 
-#### Acesso aberto, ciência reprodutível e chamado à ação (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Acesso aberto, ciência reprodutível e chamado à ação (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Ainda não chegamos lá com a reprodutibilidade total. Esta é uma área que precisa de mais trabalho, mas muitas pessoas já pensaram sobre isso. Existem especificações e ideias muito boas em torno do uso de reprodutibilidade padrão com o IPFS para congelar todos os ativos e construir um pipeline totalmente reprodutível. Você pode invocar de volta experimentos específicos do passado, trazer de volta VMs ou contêineres totalmente congelados, reexecutar todos os pipelines de dados e verificar se os experimentos estão corretos.
 

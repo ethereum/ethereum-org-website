@@ -19,7 +19,7 @@ Una presentación filosófica de **Josh Stark** de la Fundación Ethereum en Pra
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=zI07mqNdxzA) publicada por ETHGlobal. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### ¿Por qué no podemos explicar las cadenas de bloques? (0:00) {#why-cant-we-explain-blockchains-000}
+### ¿Por qué no podemos explicar las cadenas de bloques? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Hola a todos, gracias por estar aquí en Pragma en Denver. Mi nombre es Josh. Trabajo en la Fundación Ethereum; he estado en la EF durante unos cinco años. Me gusta bromear diciendo que mi trabajo es descubrir cuál debería ser mi trabajo, y eso cambia cada seis meses.
 
@@ -31,7 +31,7 @@ Realmente necesitamos llegar al meollo del asunto, y no creo que estemos tan cer
 
 Así que esto comenzó como una pregunta muy específica que tenía: ¿cuál es la tecnología de propósito general? ¿Cuál es esta capacidad fundamental? Y se convirtió en algo que me parece mucho más interesante.
 
-#### Claude Shannon y la idea de la información (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon y la idea de la información (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Déjenme contarles una historia. En las décadas de 1930 y 1940, Claude Shannon estaba rodeado por los inicios de una nueva era. En los Laboratorios Bell, trabajó en sistemas de control de tiro y criptografía durante la guerra, y comenzó a pensar en un enfoque más general de la información. Al principio no lo llamó información; en 1939 le escribió a un colega que estaba pensando en la "transmisión de inteligencia". La palabra información tenía un significado diferente en ese entonces.
 
@@ -41,7 +41,7 @@ Antes de este momento, nadie tenía realmente este concepto de la información c
 
 Lo que quiero que saquen de esto: hubo un tiempo antes de que tuviéramos la idea de la información y un tiempo después. ¿Qué pasaría si de manera similar nos estuviéramos perdiendo algo tan fundamental? Esa es mi hipótesis.
 
-#### Tres pistas (7:00) {#three-clues-700}
+### Tres pistas (7:00) {#three-clues-700}
 
 Mientras lucho por explicar las cadenas de bloques, sigo encontrándome con estas cosas raras que creo que son pistas hacia algo más grande.
 
@@ -53,7 +53,7 @@ Con los coches, hablábamos de "carruajes sin caballos", pero al menos podíamos
 
 **Pista número tres**: el artículo de Satoshi comienza con estas palabras: "el comercio en Internet ha llegado a depender casi exclusivamente de instituciones financieras que sirven como terceros de confianza". Satoshi estaba comparando Bitcoin con instituciones, no con otro software. Hay algo ahí.
 
-#### Introduciendo la dureza (11:00) {#introducing-hardness-1100}
+### Introduciendo la dureza (11:00) {#introducing-hardness-1100}
 
 Aquí está mi respuesta a lo que va en esa caja. Lo llamo **dureza**. Aquí está la historia en cinco sencillos pasos, y luego profundizaremos más.
 
@@ -71,7 +71,7 @@ La tasa de inflación del oro es confiable debido a las propiedades físicas de 
 
 Puedes pensar en los átomos, las instituciones y las cadenas de bloques como materiales de construcción, como la madera, el hormigón y el acero. Son diferentes, pero forman parte de una categoría compartida. Y usamos estas cosas no para construir edificios, sino para construir una civilización. Tal vez con mejores materiales, podamos construir una civilización más grande, mejor y más fuerte que la que tenemos ahora.
 
-#### ¿Qué es la dureza? (14:00) {#what-is-hardness-1400}
+### ¿Qué es la dureza? (14:00) {#what-is-hardness-1400}
 
 Permítanme dar más precisión a lo que quiero decir con dureza. Esta no es cualquier confiabilidad que cualquier cosa pueda tener. La dureza es un tipo específico. Lo primero que hay que notar es que es un tipo de confiabilidad que importa para la coordinación social. No solo, ya sabes, que esta mesa es confiablemente una mesa, sino que puedes pagar tu alquiler, que se hará cumplir un contrato, que una economía es fuerte. Para eso sirve la dureza.
 
@@ -87,7 +87,7 @@ Y por último, la dureza proviene de ciertas fuentes: átomos, instituciones y c
 
 Lo que me gusta de este marco es que nos permite hacer preguntas más profundas: no solo hablar sobre propiedades específicas de las cadenas de bloques, sino comparar todas estas cosas diferentes y pensar en dónde son apropiadas, cómo las usamos y en qué combinación.
 
-#### Dureza atómica (19:00) {#atom-hardness-1900}
+### Dureza atómica (19:00) {#atom-hardness-1900}
 
 La dureza atómica se trata de cuando encontramos confiabilidad en la naturaleza que nos rodea: átomos físicos literales, pero también otras propiedades que ocurren naturalmente. Hacemos esto cuando usamos cuentas de oro como dinero, cuando usamos estructuras físicas para definir derechos de propiedad, o registramos derechos de propiedad en un objeto físico como una escritura.
 
@@ -101,7 +101,7 @@ Y los moldes a menudo se ven socavados por nuestro creciente control humano sobr
 
 Pero es más sutil que eso. A veces tenemos moldes que ni siquiera nos damos cuenta de que existen, pero luego desaparecen porque algo cambió. Hubo un molde duro sobre la velocidad de las operaciones en los mercados financieros durante mucho tiempo: solo se podía hacer a un cierto ritmo, tal vez el ritmo al que alguien puede gritarse en el parqué. Este molde tenía dureza atómica: simplemente no podíamos comunicarnos más rápido que eso. Pero la nueva tecnología socavó por completo esas suposiciones. Nos dimos cuenta de que en realidad nos gustaba una versión de ese viejo molde y lo rehicimos a partir de instituciones: introduciendo regulaciones que limitan la velocidad de las operaciones y aplican interruptores de circuito.
 
-#### Dureza institucional (22:00) {#institutional-hardness-2200}
+### Dureza institucional (22:00) {#institutional-hardness-2200}
 
 La dureza institucional es una categoría muy amplia: cubre la mayoría de las cosas en las que podríamos pensar cuando pensamos en la civilización. Nuestros sistemas legales, legislaturas, fuerzas policiales, corporaciones, todo. Todas las instituciones que proporcionan dureza de algún tipo. Creamos moldes que dieron orden a nuestras sociedades, castigando el comportamiento antisocial. Creamos la dureza como plataforma, permitiendo que cualquiera cree sus propios moldes endurecidos por las instituciones si sigues ciertas reglas. Creamos moldes que generaron nuevos activos y proporcionaron fuentes de crédito a las economías en crecimiento.
 
@@ -111,13 +111,13 @@ Pero también tiene muchas debilidades. Está limitada por las fronteras: solo e
 
 Y están hechas de personas, y las personas son malas. La realidad en este país y en muchos otros es que muchas personas no han tenido realmente acceso a la dureza proporcionada por las instituciones. No pudieron obtener una hipoteca. No pudieron abrir una cuenta bancaria. Porque cuando llenas una institución de personas, está sujeta a sus maldades, sus prejuicios, sus ideologías. Y nuestra dependencia de la dureza institucional no hace más que aumentar. El problema de que el software se esté comiendo el mundo es que la mayor parte del software en realidad solo está hecho de una institución detrás de la pantalla, y como resultado les estamos dando cada vez más poder.
 
-#### Dureza de la cadena de bloques (24:20) {#blockchain-hardness-2420}
+### Dureza de la cadena de bloques (24:20) {#blockchain-hardness-2420}
 
 La invención de Satoshi fue, por supuesto, más que solo Bitcoin: fue el núcleo de una técnica de propósito general para crear dureza digital en un entorno digital. Tiene muchas fortalezas: acceso global universal, está hecha de software y cualquiera puede escribir software, el grado de dureza puede ser transparente y auditable, bajo costo inicial, fácil de iterar y asegurada por incentivos de mercado (y los mercados son racionales).
 
 Pero también tiene debilidades. Requiere una civilización tecnológica: no podríamos haber tenido cadenas de bloques antes de ahora debido a los requisitos, y una civilización en el futuro que no tenga lo que tenemos tampoco podrá usarlas. Está hecha de software, y el software puede estar mal escrito. El alcance de los moldes se limita a entornos en cadena. Y está asegurada por incentivos de mercado (y los mercados son irracionales).
 
-#### Por qué esto importa (25:10) {#why-this-matters-2510}
+### Por qué esto importa (25:10) {#why-this-matters-2510}
 
 Entonces, ¿qué significa esto? ¿Qué nos aporta? ¿Por qué es esto más que un simple interés académico?
 
@@ -127,7 +127,7 @@ Explica por qué las cadenas de bloques privadas o centralizadas no son interesa
 
 También ayuda a entender el espectro de posibilidades y las ideologías predeterminadas en las que cae la gente en el espacio de las cadenas de bloques. Muchas personas están muy enfocadas en usar la dureza de la cadena de bloques para competir con o reemplazar la dureza institucional: de esto se trata gran parte de la comunidad de Bitcoin, de esto se tratan gran parte de las finanzas descentralizadas (DeFi). Incluso ENS está intentando reemplazar o competir con DNS de alguna manera. Pero luego también hay personas que ven que la dureza de la cadena de bloques puede hacer cosas que la dureza institucional no puede: ideas que nadie ha intentado antes porque nunca tuvimos esta capacidad, este cierto sabor de dureza. Y ahora podemos explorar esas cosas. Tal vez los NFT estén ahí, o juegos como Dark Forest, o el movimiento en torno a los mundos autónomos.
 
-#### Elevando nuestras ambiciones (27:00) {#raising-our-ambitions-2700}
+### Elevando nuestras ambiciones (27:00) {#raising-our-ambitions-2700}
 
 Lo más importante es que creo que este marco eleva nuestras ambiciones. Personalmente, esto es lo que me importa, y tal vez resuene contigo: no estoy aquí solo por estas aplicaciones individuales. No soy alguien a quien solo le importe realmente Bitcoin o solo DeFi o solo los NFT. Tal vez ese también seas tú. Hay algo más grande sucediendo aquí.
 

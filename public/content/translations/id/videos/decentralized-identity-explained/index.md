@@ -17,7 +17,7 @@ Penjelasan oleh **Microsoft Security** tentang bagaimana identitas terdesentrali
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=Ew-_F-OtDFI) yang dipublikasikan oleh Microsoft Security. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Masalah dengan kredensial digital (0:02) {#the-problem-with-digital-credentials-002}
+### Masalah dengan kredensial digital (0:02) {#the-problem-with-digital-credentials-002}
 
 Setiap hari, kita membawa dompet yang penuh dengan kartu. Namun, hanya beberapa kartu pilihan — seperti KTP pemerintah dan kartu kredit — yang diterima secara luas. Masyarakat kita telah menetapkan norma global tentang bagaimana kita menyajikan dan memverifikasi kredensial yang diwakili oleh kartu fisik ini. Namun, tidak ada padanan yang benar-benar setara untuk kredensial digital.
 
@@ -25,19 +25,19 @@ Mengapa tidak? Pertama, tidak ada mekanisme standar untuk menerbitkan kartu digi
 
 Kedua, tidak ada standar yang diterima secara universal untuk mengekspresikan, menukar, dan memverifikasi kredensial digital melintasi batas-batas organisasi.
 
-#### Bagaimana identitas terdesentralisasi bekerja (1:03) {#how-decentralized-identity-works-103}
+### Bagaimana identitas terdesentralisasi bekerja (1:03) {#how-decentralized-identity-works-103}
 
 Semua ini akan segera berubah. Bentuk baru identitas digital, berdasarkan standar yang sedang berkembang seperti Kredensial yang Dapat Diverifikasi dan Pengidentifikasi Terdesentralisasi, dapat memungkinkan kredensial digital berfungsi di mana saja, menjadi lebih tepercaya, dan menghormati privasi.
 
 Begini cara kerjanya. Kenalkan, Alice. Dompet digital barunya memberdayakannya untuk memiliki dan mengendalikan kredensial. Karena tidak terikat pada satu organisasi mana pun, sumber otoritatif dapat dengan yakin menerbitkan kredensial berbasis standar kepada Alice. Ketika Alice menyajikan kredensial ini, situs web dan aplikasi dapat memeriksa bahwa kredensial tersebut valid — misalnya, dengan mengonfirmasi ke universitas bahwa dia adalah mahasiswa di sana — dan kemudian memberikan akses yang sesuai.
 
-#### Kepercayaan kriptografi (1:51) {#cryptographic-trust-151}
+### Kepercayaan kriptografi (1:51) {#cryptographic-trust-151}
 
 Meskipun proses ini mungkin lebih mudah, bagaimana kita tahu bahwa ini tepercaya? Pengidentifikasi Terdesentralisasi memanfaatkan sistem kriptografi yang telah terbukti. Ketika Alice menyajikan kredensialnya, dompet digitalnya menghasilkan pengidentifikasi unik dan menandatanganinya menggunakan kunci privat yang diamankan oleh bukti biometrik atau PIN yang hanya dia yang tahu. Kunci publik yang dipasangkan secara unik dipublikasikan ke buku besar terdistribusi.
 
 Alice dapat menyajikan kartu identitas mahasiswa digitalnya ke toko buku, dan sebelum memberikan diskon, toko buku tersebut dapat mengonfirmasi bahwa universitas menerbitkan kartu tersebut untuk Alice.
 
-#### Privasi dan kendali (2:27) {#privacy-and-control-227}
+### Privasi dan kendali (2:27) {#privacy-and-control-227}
 
 Pengalaman ini meniru apa yang dilakukan Alice saat ini. Dia dapat menyajikan dan mengautentikasi serangkaian Kredensial yang Dapat Diverifikasi secara digital sama seperti dia menyajikan kartu fisik. Dan dia dapat mencabutnya dengan satu klik, sama seperti dia mengembalikan kartu ke dompetnya.
 

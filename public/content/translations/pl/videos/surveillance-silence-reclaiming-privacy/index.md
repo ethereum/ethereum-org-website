@@ -18,11 +18,11 @@ Prezentacja **Naomi Brockwell** na EthBoulder 2026 dotycząca erozji cyfrowej pr
 
 *Poniższa transkrypcja jest dostępną kopią [oryginalnej transkrypcji wideo](https://www.youtube.com/watch?v=nvJSFR1Q_JE) opublikowanej przez EthBoulder. Została ona poddana lekkiej redakcji w celu poprawy czytelności.*
 
-#### Dwuczęściowa prelekcja: ostrzeżenie + rozwiązanie (00:00) {#two-part-talk-warning-solution-0000}
+### Dwuczęściowa prelekcja: ostrzeżenie + rozwiązanie (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Wspaniale. Witam wszystkich. Dziękuję, że tu jesteście. Będzie to dwuczęściowa prelekcja. W pierwszej części może zrobić się trochę intensywnie. Jestem znana z tego, że potrafię być dość intensywna, jeśli chodzi o prelekcje o prywatności i inwigilacji. Druga część będzie miała nieco inny ton. Tak więc w pierwszej części opowiem wam historię, a w drugiej uratujemy świat. Jeśli wam to odpowiada, możemy zaczynać.
 
-#### Nowe szaty cesarza (00:44) {#the-emperors-new-clothes-0044}
+### Nowe szaty cesarza (00:44) {#the-emperors-new-clothes-0044}
 
 A więc akt pierwszy. Zacznijmy od pierwszego aktu naszej historii. Zaklęcie. Był sobie raz cesarz, któremu sprzedano wspaniałe nowe szaty. Sprzedawca powiedział mu: „Te szaty są wyjątkowe. Tylko inteligentni i cnotliwi mogą je zobaczyć, a każdy, kto nie nadaje się na swoje stanowisko, nie zobaczy zupełnie nic”. Cesarz nie widział żadnych szat, ale bał się do tego przyznać. Powiedzenie tego oznaczałoby przyznanie się, że nie jest godzien rządzić, więc nic nie powiedział. A kiedy cesarz pojawił się publicznie, paradując ulicami, nikt inny również nie widział szat. 
 
@@ -32,7 +32,7 @@ Więc, w gruncie rzeczy, wróćmy do tego. W gruncie rzeczy ta historia oczywiś
 
 W naszej historii każda osoba myślała, że być może to z nią jest problem. Więc zdawali się na swoich sąsiadów i zakładali, że gdyby coś było naprawdę nie tak, ktoś inny odezwałby się pierwszy. Wszyscy poddali się mądrości tłumu. I to była zła strategia, ponieważ tłum się mylił. Cesarz był nagi. A ponieważ wszyscy milczeli, konsensus zastąpił prawdę. Milczenie tłumu stało się dowodem na to, że wszystko jest w porządku. I dokładnie w ten sposób prywatność upada we współczesnym świecie.
 
-#### Maszyna (02:46) {#the-machine-0246}
+### Maszyna (02:46) {#the-machine-0246}
 
 A więc, akt drugi, maszyna. Oto współczesna wersja tej historii. Żyjemy w czasach największego reżimu gromadzenia danych w historii ludzkości. Zbudowaliśmy i nadal zasilamy infrastrukturę inwigilacji, jakiej świat nigdy wcześniej nie widział, a trajektoria, po której zmierzamy, to gotowy przepis na katastrofę. Dlaczego tak jest? Ponieważ w tej chwili jedynym sposobem na to, by to wszystko dobrze się skończyło, jest zagwarantowanie, że nikt o złych intencjach nigdy nie przejmie kontroli nad tym systemem. Ale jeśli ktoś taki w końcu przejmie kontrolę, będzie to jak broń atomowa o ogromnej energii potencjalnej, wypełniona wszystkimi składnikami potrzebnymi do całkowitego kontrolowania populacji. 
 
@@ -42,13 +42,13 @@ To wywołuje niepokój, prawda? I czujemy to, gdy aplikacja prosi o dostęp, kt�
 
 Czujemy, że coś jest nie tak, gdy pobieżnie przeglądamy politykę prywatności i wiemy, że powinniśmy przeczytać ją uważnie. Prawdopodobnie zawiera jakieś ważne rzeczy. I właściwie jest tam napisane czarno na białym, że tak, absolutnie będą udostępniać te intymne dane i nawet nie wiemy komu, ale i tak klikamy „akceptuję”, bo w końcu nie może być aż tak źle, w przeciwnym razie akceptowanie tych rzeczy nie byłoby normą, prawda? Gdyby to było aż tak złe, nie wszyscy by to robili.
 
-#### Jak złe jest status quo? (05:12) {#how-bad-is-the-status-quo-0512}
+### Jak złe jest status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Więc jak złe jest status quo? Jak źle jest w rzeczywistości? A może powinniśmy o tym porozmawiać, ponieważ niektórzy uważają, że to tylko kwestia firm próbujących sprzedać nam lepszą parę butów. To tylko sprawa konsumencka, prawda? A może chodzi tylko o to, że firmy z branży mediów społecznościowych dowiadują się o nas więcej, aby stworzyć precyzyjniej dostrojony algorytm, prawda? To nie wydaje się takie straszne. W czym tkwi problem z tym wszystkim?
 
 Ale obecnie wszyscy wyrażamy zgodę na wszechobecną maszynę inwigilacyjną, która po cichu wkracza w każdy prywatny obszar naszego życia. W niektórych miejscach, takich jak reżimy autorytarne, maszyna ta jest używana do tłumienia sprzeciwu, zanim on w ogóle nastąpi, poprzez oznaczanie potencjalnie problematycznych osób jako bardziej skłonnych do przyłączenia się do ruchu protestacyjnego, a następnie branie ich na cel. Czasami ta maszyna jest używana do kształtowania nastrojów społecznych, wpływania na opinie, manipulowania wyborami lub sprawiania, by całe populacje nienawidziły określonych grup ludzi, przekonując ich, że te grupy nienawidzą ich. Są też kraje, które publicznie udostępniają informacje o obywatelach, których wyniki w systemie zaufania społecznego spadły, a następnie wykorzystują te wyniki do ograniczania możliwości podróżowania, limitowania zatrudnienia, blokowania ich dzieciom dostępu do określonych szkół lub całkowitego odcięcia ich od szans na rozwój.
 
-#### Gromadzenie danych na bilionową skalę (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Gromadzenie danych na bilionową skalę (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 A teraz, wraz z rewolucją AI, maszyna przestaje być tylko zapisem twojego życia, a staje się silnikiem predykcyjnym. Dlatego jest to tak ważne. Chcę to wam zobrazować na konkretach. Więc po prostu omówię obecny stan inwigilacji. 
  
@@ -56,7 +56,7 @@ Podzielę tę maszynę na trzy części. Pierwsza to gromadzenie danych. Sposób
  
 Ale powiedzmy, że masz naprawdę dużo szczęścia i unikniesz namierzenia przez ten system. Ale twoje dzieci prawdopodobnie tego nie unikną, a ty nie masz pojęcia, czy tak się stanie, czy nie. A ta machina, na którą dzisiaj wyrażasz zgodę, nie zniknie. Nie wiesz, kto będzie u władzy jutro.
 
-#### Jak te informacje wyciekają (08:03) {#how-this-information-is-leaked-0803}
+### Jak te informacje wyciekają (08:03) {#how-this-information-is-leaked-0803}
  
 Druga kwestia to sposób, w jaki te informacje następnie wyciekają. Każdego roku liczba naruszeń ochrony danych bije kolejne rekordy. Wyciekają wszelkiego rodzaju informacje, których firmy w ogóle nie powinny były gromadzić. Historie lokalizacji, dokumentacja medyczna, dane finansowe, prywatne wiadomości – te informacje trafiają do sieci i ostatecznie lądują w dark webie, gdzie są wykorzystywane przez zorganizowane kartele, gangi przestępcze i hakerów sponsorowanych przez państwo. 
 
@@ -68,7 +68,7 @@ A jednak firmy nadal decydują się na gromadzenie tych wszystkich niepotrzebnyc
  
 Więc to jest ten tłum klaszczący na paradzie, prawda? Nie dlatego, że jesteśmy pewni, iż każde kliknięcie i każda akceptacja są bezpieczne. Dzieje się tak dlatego, że zabranie głosu, rezygnacja lub zmiana narzędzi wydają się trudniejsze niż płynięcie z prądem.
 
-#### Backdoory i przechwytywanie przez rząd (09:33) {#backdoors-government-interception-0933}
+### Backdoory i przechwytywanie przez rząd (09:33) {#backdoors-government-interception-0933}
  
 Porozmawiajmy teraz o tej trzeciej kategorii – wykorzystaniu jako broń. Wrogie operacje obcych wywiadów zinfiltrowały już kluczową infrastrukturę komunikacyjną. Przed chwilą rozmawiałem z ludźmi o Salt Typhoon, prawda? Chiny, na przykład, przechwytują nasze rozmowy i wiadomości na masową skalę. 
 
@@ -78,7 +78,7 @@ Wiemy, że rządy nie są w stanie zagwarantować, że tylko one będą miały d
 
 Wiemy o jednym z nich, Salt Typhoon, ale nie mamy pojęcia, kto jeszcze gromadził nasze wrażliwe, intymne komunikaty w tej samej infrastrukturze, na której polegamy.
 
-#### Dlaczego nadzór jest rzadszy, niż myślisz (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Dlaczego nadzór jest rzadszy, niż myślisz (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Więc cesarz jest nagi, a jedynym powodem, dla którego to wszystko trwa, jest to, że tłum wciąż bije brawo. Ale jest jeszcze jeden powód, dla którego tłum wciąż bije brawo. 
  
@@ -112,7 +112,7 @@ Więc ile setek milionów ludzi używa produktów Apple, a tylko jeden facet pos
 
 Jest jeszcze inna prezentacja, w której czyjś tata przyniósł do domu jeden z tych domowych hubów, prawda? Postanowiła trochę poszperać. Czasami bawi się różnymi narzędziami w domu i chciała dowiedzieć się, jak to działa. Okazało się, że to popularne urządzenie konsumenckie, które każdy mógł kupić, było używane jako węzeł w potężnym chińskim botnecie. Następnie FBI widzi tę prezentację. Ostatecznie usuwają prezentację z sieci i utajniają śledztwo. Nie wiedzieli, że to się dzieje, ale to ona zwróciła na to ich uwagę, po prostu robiąc tę prezentację w stylu: „Hej, znalazłam coś dziwnego”. I w ten sposób dowiadujemy się, że potężny chiński botnet atakuje wszystkie nasze domy za pośrednictwem tego jednego konkretnego urządzenia. A co ze wszystkimi innymi urządzeniami w naszym domu, na które nikt jeszcze nie zadał sobie trudu, by w ogóle spojrzeć?
 
-#### Problem milczenia i fałszywy konsensus (16:30) {#the-silence-problem-false-consensus-1630}
+### Problem milczenia i fałszywy konsensus (16:30) {#the-silence-problem-false-consensus-1630}
 
 Więc w takim właśnie miejscu obecnie się znajdujemy. Inwigilacja jest dziś wszechobecna, niewidoczna, znormalizowana i uzasadniona, a my uważamy ją za standard branżowy. I w takim właśnie miejscu obecnie się znajdujemy.
 
@@ -134,7 +134,7 @@ Eric Schmidt z Google ma ten słynny, okropny cytat, w którym mówi, że jeśli
 
 Zauważ więc, co się dzieje. Prywatność zaczęła być postrzegana jako wina, a uległość jako cnota. Dobrzy ludzie to ci, którzy poddają się dostępowi, a podejrzani to ci, którzy zadają pytania. A teraz stawianie oporu staje się kosztowne społecznie. Kiedy przypniesz milczeniu tę moralną łatkę, parada po prostu toczy się sama.
 
-#### Jak zatrzymać paradę cesarza? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Jak zatrzymać paradę cesarza? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Wróćmy do naszej historii. Nowe szaty cesarza. Gdy cesarz maszeruje przez ulicę w swoich nowych szatach, tłum bije brawo. Podziwiają kunszt. Chwalą elegancję. Komentują kroje, materiał i to, jak stroje łapią światło. I rywalizują o to, kto zabrzmi na najbardziej pod wrażeniem. Dworzanie pochylają się do przodu, pragnąc, by widziano, jak przytakują, urzędnicy kiwają z powagą głowami, a doradcy dodają kwieciste, techniczne pochwały i wymyślają detale, by udowodnić, że rozumieją, na co patrzą. Niektórzy mówią głośno, mając nadzieję, że zostaną usłyszani, a inni uśmiechają się i nic nie mówią, uważając, by nie wyglądać na zdezorientowanych. Nikt nie chce być pierwszym, który się zawaha, nikt nie chce być tym, który zadaje oczywiste pytania, a z każdym komplementem kłamstwo staje się coraz trudniejsze do odkręcenia.
 
@@ -158,7 +158,7 @@ Więc sposób, w jaki to się zmieni, nie polega na czekaniu, aż cesarz się za
 
 Kiedy wystarczająco dużo osób przestanie bić brawo, parada nie będzie mogła trwać dalej. I to jest ta część historii, którą wciąż tutaj piszemy. Więc nie chodzi o to, czy cesarz jest nagi. Wszyscy wiemy, że nie ma na sobie ubrań. Jedyne pytanie, jakie pozostaje, to czy nadal będziemy szli obok niego, udając, że wszystko jest w porządku.
 
-#### Część druga: uratujmy świat (25:22) {#part-two-lets-save-the-world-2522}
+### Część druga: uratujmy świat (25:22) {#part-two-lets-save-the-world-2522}
 
 Więc po tym dość ponurym akcencie, część druga: uratujmy świat. Kto chce lepszej przyszłości? Kto chce lepszej przyszłości dla przyszłych pokoleń, dla swoich dzieci? Kto chce coś zmienić? Ponieważ mamy pełną moc, by to zrobić. 
 
@@ -312,7 +312,7 @@ Więc za każdym razem, gdy jesteście na takim rozdrożu, po prostu spróbujcie
 
 Na dodatek, jeśli ustawodawcy zakażą tych rzeczy, ponieważ nikt o nie nie walczy, ponieważ wszyscy mówimy: „Cóż, nie mam nic do ukrycia”. Te rzeczy znikną.
 
-#### Wybory, których musimy dokonać w kwestii przyszłości, jaką chcemy zobaczyć (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Wybory, których musimy dokonać w kwestii przyszłości, jaką chcemy zobaczyć (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Zostawię was z tą myślą, ponieważ wydaje mi się, że kończy nam się czas. Obecnie znajdujemy się na rozdrożu, gdzie musimy dokonać pewnych wyborów dotyczących świata, w którym chcemy żyć. Wiem, że dla wielu osób te systemy są niewygodne i wydaje się, że przeniesienie wszystkiego wymaga mnóstwa pracy.
 

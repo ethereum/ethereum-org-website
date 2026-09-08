@@ -19,7 +19,7 @@ Một cuộc tranh luận giữa **Lyn Alden** và **Justin Drake** về những
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=1m12zgJ42dI) do Bankless xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Chào mừng đến với Bankless, nơi chúng ta khám phá Biên giới của tiền tệ internet và tài chính internet. Tôi là Ryan Sean Adams, tôi ở đây cùng David Hoffman, và chúng tôi ở đây để giúp bạn trở nên 'bankless' (không phụ thuộc vào ngân hàng) hơn. Các bạn, hôm nay các bạn sẽ được thưởng thức một chương trình thú vị. Chúng ta có hai chuyên gia về Bằng chứng cổ phần (PoS) và Bằng chứng công việc (PoW), và họ đang tranh luận xem cái nào tốt hơn để tạo ra một hệ thống tiền tệ toàn cầu — một hệ thống tiền mã hóa — Bằng chứng công việc (PoW) hay Bằng chứng cổ phần (PoS). Lyn Alden và Justin Drake sẽ góp mặt trong tập hôm nay. Chúng ta sẽ nói về một vài điều. Số một: cái nào cung cấp an ninh kinh tế cao nhất, Bằng chứng công việc (PoW) hay Bằng chứng cổ phần (PoS)? Số hai: cái nào cung cấp khả năng răn đe và phục hồi tốt nhất khi đối mặt với cuộc tấn công 51% đáng sợ? Số ba: cái nào giảm thiểu quyền lực Quản trị của giới tinh hoa — cái nào mang lại nhiều "quyền lực cho người dân" hơn? Số bốn: về mặt kinh tế, hệ thống nào công bằng nhất để tham gia? Và số năm — đây là phần tôi thích nhất — cuộc trò chuyện xoay quanh việc Bằng chứng công việc (PoW) giống tiền tệ hàng hóa hơn và Bằng chứng cổ phần (PoS) giống tiền tệ vốn cổ phần hơn.
 
@@ -29,7 +29,7 @@ Một cuộc tranh luận giữa **Lyn Alden** và **Justin Drake** về những
 
 **Justin Drake:** Rất tuyệt, một lần nữa cảm ơn các bạn đã mời tôi.
 
-#### Định hình cuộc tranh luận: thặng dư tiền tệ (7:30) {#framing-the-debate-monetary-premium-730}
+### Định hình cuộc tranh luận: thặng dư tiền tệ (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Tôi muốn bắt đầu với câu hỏi lớn. Tôi nghĩ chúng ta đang cố gắng trả lời câu hỏi cốt lõi là liệu Bằng chứng công việc (PoW) hay Bằng chứng cổ phần (PoS) phù hợp nhất cho việc tích lũy thặng dư tiền tệ — về cơ bản, cơ chế đồng thuận nào trong hai cơ chế đó phù hợp nhất để biến một loại tiền mã hóa thành tiền tệ. Justin, anh có đồng ý đây là cách đặt vấn đề chính xác không?
 
@@ -41,7 +41,7 @@ Một cuộc tranh luận giữa **Lyn Alden** và **Justin Drake** về những
 
 **Justin Drake:** Tôi muốn xen vào và lập luận tại sao sự so sánh giữa vốn cổ phần và Bằng chứng cổ phần (PoS) có thể là một sự so sánh tồi. Trong bối cảnh vốn cổ phần, bạn có quyền bỏ phiếu cho bất cứ điều gì — bạn có thể thay đổi hoàn toàn các quy tắc của công ty. Trong đồng thuận Bằng chứng cổ phần (PoS), những người tham gia đồng thuận không thể tùy tiện thay đổi các quy tắc. Họ không thể nói "chúng ta sẽ tự cho mỗi người một nghìn ETH" — đó sẽ là một giao dịch không hợp lệ. Cuối cùng, những người tham gia đồng thuận phải chịu trách nhiệm trước cộng đồng, và đó là một sự khác biệt rất lớn so với vốn cổ phần.
 
-#### Tiền tệ hàng hóa so với tiền tệ vốn cổ phần (10:06) {#commodity-money-vs-equity-money-1006}
+### Tiền tệ hàng hóa so với tiền tệ vốn cổ phần (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, cô có muốn tiếp tục cuộc trò chuyện về Bằng chứng công việc (PoW) như một hàng hóa và Bằng chứng cổ phần (PoS) như vốn cổ phần không?
 
@@ -53,7 +53,7 @@ Một cuộc tranh luận giữa **Lyn Alden** và **Justin Drake** về những
 
 **Lyn Alden:** Tôi nghĩ có một mức độ quang phổ nhất định, nhưng phần lớn nó là một con đường khá một chiều. Có nhiều cách để trở thành vốn cổ phần nhưng có rất ít cách để trở thành hàng hóa. Hàng hóa về bản chất là khá hiếm và bất biến. Các cách để tạo ra một hàng hóa thực sự trong thế giới kỹ thuật số là cực kỳ hạn chế.
 
-#### Các cuộc tấn công 51%: răn đe và phục hồi (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Các cuộc tấn công 51%: răn đe và phục hồi (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Tôi muốn so sánh Bằng chứng công việc (PoW) và Bằng chứng cổ phần (PoS) xem cái nào ít có khả năng bị tấn công kiểm duyệt nhất. Một trong những lợi thế to lớn của Bằng chứng cổ phần (PoS) là lớp xã hội có các công cụ để can thiệp. Trong Bằng chứng công việc (PoW), nếu một kẻ tấn công 51% xuất hiện, họ sẽ thu thập mọi phần thưởng, mọi khoản phát hành, mọi phí giao dịch. Các thợ đào trung thực sẽ tắt máy vì việc tiêu tốn điện năng mà không có thu nhập là vô lý. Sau đó họ muốn thanh lý, bán phần cứng của mình. Kẻ tấn công có thể mua phần cứng này với giá rẻ mạt và củng cố thêm sức mạnh của chúng. Ngay cả khi cộng đồng xoay sở để phản công, sẽ mất nhiều tháng nếu không muốn nói là nhiều năm để tổ chức.
 
@@ -65,7 +65,7 @@ Khi nói đến bảo mật, nó không chỉ là về các cuộc tấn công 5
 
 Để phục hồi sau các cuộc tấn công 51%: cách duy nhất trong Bằng chứng cổ phần (PoS) là Phân nhánh mềm và lấy đi vốn của mọi người. Nếu bạn diễn đạt nó là lấy đi vốn của kẻ tấn công, điều đó nghe có vẻ ổn. Nhưng kẻ tấn công có thể là một tổ chức lưu ký được quản lý — bạn đang lấy đi vốn từ những người không liên quan gì đến cuộc tấn công.
 
-#### Độ phức tạp, lỗi và sự đa dạng máy khách (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Độ phức tạp, lỗi và sự đa dạng máy khách (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Sự phức tạp không hẳn là xấu. Nhân loại phát triển mạnh mẽ nhờ nó. Về độ phức tạp của Bằng chứng cổ phần (PoS) — đúng vậy, nó phức tạp hơn, ít nhất là gấp 10 lần, có thể là 100 lần. Nhưng đó là sự phức tạp mà tại thời điểm này chúng ta đã chế ngự được. Chúng ta có năm máy khách khác nhau đã triển khai Giao thức, mỗi máy khách có các nhóm nhỏ từ năm đến mười người. Sự đa dạng máy khách cho phép cộng đồng mua bảo hiểm chống lại các lỗi.
 
@@ -75,7 +75,7 @@ Về chủ đề phải liên tục trực tuyến — cái mà chúng ta gọi 
 
 Nhìn vào hướng đi của Bằng chứng công việc (PoW) trong dài hạn, bạn sẽ thấy sự tích hợp ngày càng tăng giữa các thợ đào và các nhà sản xuất năng lượng. Lưới điện theo tự nhiên phải sản xuất dư thừa điện năng. Các hệ thống Bằng chứng công việc (PoW) là một bộ cân bằng tải thực sự tốt cho năng lượng bị mắc kẹt (stranded energy). Nguồn điện rẻ nhất gần như là năng lượng bị mắc kẹt với chi phí bằng không. Hiện tại, cơ sở khai thác Bitcoin lớn nhất thế giới chiếm khoảng 1% tổng Tỷ lệ băm — nó đã được phi tập trung hóa về mặt cấu trúc.
 
-#### Tính công bằng và lập luận "người giàu càng giàu hơn" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Tính công bằng và lập luận "người giàu càng giàu hơn" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Trong Bằng chứng cổ phần (PoS), bạn có sự công bằng hoàn hảo — bạn bỏ ra một đơn vị vốn và nhận được chính xác cùng một lượng phần thưởng bất kể lớn hay nhỏ. Trong Bằng chứng công việc (PoW), những con cá lớn có những lợi thế không công bằng. Nếu bạn là một thợ đào nhỏ lẻ mua một dàn máy, bạn đang trả hớ gấp 2, 3, 4, 5 lần so với các thợ đào chuyên nghiệp mua sỉ. Do định luật Moore, những kẻ tấn công muốn tấn công có một lợi thế — chúng có thể chọn phần cứng mới nhất, tiên tiến nhất. Đối với chúng, giá điện phần lớn không quan trọng, bởi vì một cuộc tấn công 51% chỉ cần chạy trong một ngày hoặc một tuần. 99% chi phí nằm ở các dàn máy và cơ sở hạ tầng, không phải ở tiền điện.
 
@@ -85,7 +85,7 @@ Thực tế là Bằng chứng công việc (PoW) về bản chất không công
 
 Trong Bằng chứng công việc (PoW), về cơ bản bạn đang thuê khả năng Quản trị hệ thống của mình. Máy móc của bạn xuống cấp, nguồn năng lượng của bạn có thể trở nên kém hiệu quả hơn, phần cứng của bạn trở nên bớt tiên tiến hơn. Đó là một chuỗi các quyết định liên tục chứ không phải là một hệ thống vốn dĩ mang lại lợi ích cho những người mua vào đầu tiên. Bất kể Michael Saylor có bao nhiêu Bitcoin, ông ấy không có chút quyền kiểm soát nào đối với việc giao dịch nào được xử lý.
 
-#### Bằng chứng công việc như là "bằng chứng cổ phần với các bước bổ sung" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Bằng chứng công việc như là "bằng chứng cổ phần với các bước bổ sung" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Tôi không biết bất kỳ ai — và tôi đã ở trong không gian này gần một thập kỷ — khai thác Bitcoin với tư cách cá nhân vào thời điểm này. Tất cả đều mang tính công nghiệp. Mặt khác, với Bằng chứng cổ phần (PoS), mọi người trong cuộc gọi này — có lẽ ngoại trừ cô, Lyn — đều đang thực hiện việc đặt cọc với tư cách cá nhân. Sự đa dạng trên Bằng chứng cổ phần (PoS) lớn hơn rất, rất nhiều. Rào cản gia nhập thấp hơn nhiều — về cơ bản bạn chỉ cần một máy tính chạy 24/7.
 
@@ -97,11 +97,11 @@ Về lập luận "người giàu càng giàu hơn" trong Bằng chứng cổ ph
 
 Về sự đa dạng máy khách — ít nhất là lần cuối tôi kiểm tra, máy khách lớn nhất chiếm khoảng 84% các máy khách Ethereum. Bạn có một mức độ đa dạng hóa nhất định, nhưng nó cũng là một phần ảo tưởng. Trong thực tế, một trong những điều quan trọng giúp bảo vệ khỏi các lỗi là có một cơ sở mã đơn giản nhất có thể.
 
-#### NIST, lượng tử và các nền tảng dài hạn (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, lượng tử và các nền tảng dài hạn (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Nếu chúng ta muốn trở thành internet của tiền tệ, chúng ta cần một thang thời gian tương đương với chính internet — hàng thập kỷ nếu không muốn nói là hàng thế kỷ. Sự phức tạp là thứ có chu kỳ bán rã có thể là một năm — nó có thể được chế ngự và củng cố. Theo thời gian, khi nhiều giá trị được bảo đảm, các hệ thống có thể được tin tưởng. Các lỗi sẽ được sửa, hệ thống sẽ trở nên cứng cáp hơn. Những gì chúng ta nên xem xét là các nền tảng dài hạn. Hóa ra Bằng chứng công việc (PoW) sẽ bị phá vỡ hoàn toàn bởi điện toán lượng tử trong 20 đến 30 năm tới. Đúng vậy, có những lo ngại ngắn hạn về độ phức tạp, nhưng nếu bạn nhìn rộng ra và tập trung vào các nền tảng, có những lý do cơ bản để bi quan về Bằng chứng công việc (PoW).
 
-#### Lập luận lịch sử về tiền tệ hàng hóa (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Lập luận lịch sử về tiền tệ hàng hóa (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, cô dường như đã đi đầu với tư cách là một nhà bình luận vĩ mô tập trung vào các thị trường hàng hóa. Những người ủng hộ Bitcoin có xu hướng tập trung vào các đặc tính hàng hóa và cách Bitcoin tiêu thụ năng lượng như một hàng hóa. Đây có phải một phần là một lập luận đạo đức — rằng tiền tệ hàng hóa đơn giản là một loại tiền tệ phù hợp hơn với thế giới?
 
@@ -113,13 +113,13 @@ Theo thời gian, điều đó có xu hướng dẫn đến sự tập trung hó
 
 **Lyn Alden:** Cá nhân tôi tiếp cận nó từ góc độ rủi ro chiến thuật. Hệ thống nào ít có khả năng gặp rủi ro đuôi (tail risks) nhất? Cái gì được tối ưu hóa cho những gì nó đang cố gắng thực hiện? Khi nói đến lập luận về tính công bằng, một phần nó bị lẫn lộn với những thứ khác nhau — Bằng chứng công việc (PoW) so với Bằng chứng cổ phần (PoS) là một khía cạnh, và sự khan hiếm của các token là một khía cạnh khác.
 
-#### Động cơ khan hiếm so với động cơ thanh khoản (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Động cơ khan hiếm so với động cơ thanh khoản (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Bằng chứng công việc (PoW) và Bằng chứng cổ phần (PoS) từ góc độ meme gần như hoàn toàn trái ngược nhau. Với Bằng chứng cổ phần (PoS), bạn có cái mà tôi gọi là động cơ khan hiếm — một cơ chế để biến ETH có Thanh khoản thành ETH bị đóng băng được sử dụng làm tài sản thế chấp. Dự phóng của tôi cho thấy khoảng một nửa tổng nguồn cung ETH cuối cùng sẽ được đặt cọc. Đối với Bằng chứng công việc (PoW), điều ngược lại xảy ra — khoản phát hành và phí giao dịch mà các thợ đào kiếm được cần phải được bán đi để trang trải chi phí điện và phần cứng. Bạn đã tạo ra một động cơ Thanh khoản, liên tục xả hàng ra thị trường. Nếu bạn hỏi hệ thống nào tốt nhất để tạo ra tiền cho internet — hệ thống liên tục xả hàng hay hệ thống khuyến khích mọi người nắm giữ — tôi nghĩ rõ ràng cái nào có giá trị hơn từ góc độ meme.
 
 **Lyn Alden:** Một hệ thống càng cố gắng làm nhiều việc, nó sẽ càng làm tệ ở bất kỳ một việc nào đó. Khi Ethereum cố gắng củng cố chính sách tiền tệ của mình, có thể cho rằng nó đã mất thị phần trong tài chính phi tập trung (DeFi) — từ 97% tổng giá trị bị khóa (TVL) vào cuối năm 2020 xuống còn 55% hiện nay. Cho đến nay, Bitcoin không thực sự có sự cạnh tranh từ các hệ thống khác. Những giai đoạn cạnh tranh ngắn ngủi — meme Dogecoin, Bitcoin Cash — đều mờ nhạt dần theo thời gian. Một thế giới dựa trên Quản trị và làm cho hệ sinh thái của bạn trở nên hấp dẫn. Thế giới còn lại quy về việc cái nào là cứng nhất — cái nào làm tốt nhất vai trò là tiền tệ.
 
-#### Quản trị, tính bất biến và quyền tự chủ (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Quản trị, tính bất biến và quyền tự chủ (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Tối thiểu, một hệ thống Bằng chứng cổ phần (PoS) mang lại cho những người nắm giữ các đơn vị nhiều tiếng nói hơn về việc giao dịch nào được xử lý và giao dịch nào bị kiểm duyệt. Nhưng ai được quyền thay đổi Giao thức và thay đổi như thế nào — điều đó nằm ngoài cuộc tranh luận giữa Bằng chứng công việc (PoW) và Bằng chứng cổ phần (PoS). Bạn có thể có các hệ thống Bằng chứng công việc (PoW) trông giống vốn cổ phần hơn — với các bom độ khó hoặc các khối siêu lớn để mọi người không thể chạy nút của riêng họ.
 
@@ -129,13 +129,13 @@ Meme của Bitcoin là quyền tự chủ. Bạn chạy nút của riêng mình,
 
 **Lyn Alden:** Với các loại tiền tệ hàng hóa, các nhà sản xuất hiếm khi có nhiều quyền kiểm soát. Vàng có tỷ lệ lưu lượng trên trữ lượng (stock-to-flow) rất cao — các thợ đào vàng hầu như không có quyền kiểm soát đối với hệ thống. Điều đó cũng đúng trong hệ sinh thái Bitcoin. Trong các cuộc chiến về kích thước khối, phần lớn các thợ đào ủng hộ việc tăng kích thước khối và vẫn không thể thông qua được. Các nhà điều hành nút đã từ chối nó. Sự kết hợp của việc phân chia quyền lực đó — nơi bạn chỉ cần chạy một nút và trở nên có quyền tự chủ, và việc khai thác riêng biệt mang lại cho bạn khả năng tạm thời để sắp xếp các giao dịch nhưng không có sự phân bổ vĩnh viễn — là điều duy trì một hệ thống phi tập trung.
 
-#### Phản biện về "người giàu càng giàu hơn" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Phản biện về "người giàu càng giàu hơn" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Về việc "người giàu càng giàu hơn" trong Bằng chứng cổ phần (PoS) — tôi coi đó là sự bảo toàn tài sản, không phải là sự nhân lên của tài sản. Khi thực hiện việc đặt cọc, bạn đang trả chi phí cơ hội khoảng 3% và được đền bù. Tựu trung lại, bạn đang thực hiện việc bảo toàn tài sản. Các thợ đào chuyên nghiệp cũng làm điều tương tự — họ phòng ngừa rủi ro bằng hợp đồng tương lai, chốt lợi nhuận gần tương đương với chi phí cơ hội. Thực sự, Bằng chứng công việc (PoW) chỉ là Bằng chứng cổ phần (PoS) với các bước bổ sung. Rủi ro có thể được loại bỏ bằng các sản phẩm tài chính, và cuối cùng bạn về cơ bản có cùng một sản phẩm tài chính.
 
 **Lyn Alden:** Điều làm cho một hệ thống hàng hóa trở nên phi tập trung là sự kết hợp của các nút nhỏ và việc khai thác riêng biệt. Bất kể ai đó nắm giữ bao nhiêu Bitcoin, họ không có chút quyền kiểm soát nào đối với việc sắp xếp giao dịch. Đó là sự phân chia quyền lực. Nếu bạn định mô phỏng tính bất biến trong thế giới kỹ thuật số càng nhiều càng tốt, bạn đang thiết kế một hệ thống rất phi tập trung, rất khó để ép buộc các thay đổi, với việc không có thay đổi nào hoặc các thay đổi là tùy chọn tham gia. Bất cứ điều gì đi chệch khỏi mô hình đó — sự bắt buộc mua vào liên tục từ một nhóm nhỏ các nhà phát triển, các trung tâm phát triển, các tổ chức — về bản chất đều giống vốn cổ phần hơn bất kể cơ chế đồng thuận là gì.
 
-#### Các phát biểu kết luận (1:30:42) {#closing-arguments-13042}
+### Các phát biểu kết luận (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Đây là một cuộc trò chuyện tuyệt vời. Đây có lẽ là cuộc trò chuyện về Bằng chứng cổ phần (PoS) so với Bằng chứng công việc (PoW) hay nhất trong lịch sử. Đã đến lúc cho các phát biểu kết luận. Justin, tại sao Bằng chứng cổ phần (PoS) là cách tốt nhất để tạo ra một loại tiền mã hóa?
 
@@ -151,7 +151,7 @@ Nếu bạn đang thiết kế một Chuỗi khối để tối đa hóa các đ
 
 Khi nói đến loại tiền tệ phù hợp để đưa kho bạc doanh nghiệp của bạn vào, phân bổ một phần quỹ tài trợ của bạn, hoặc nắm giữ 10% trở lên giá trị tài sản ròng của bạn — hoặc quản lý dự trữ quốc gia đại diện cho nhiều thập kỷ thặng dư thương mại tích lũy — trong lịch sử, tốt nhất vẫn là vàng. Bây giờ chúng ta có những đối thủ cạnh tranh mới. Bạn sẽ chọn cái phi tập trung nhất, bất biến nhất, cái không hy sinh bất kỳ đặc điểm nào trong số đó. Điều đó không có nghĩa là các hệ thống khác không có giá trị — chỉ vì vàng có giá trị không có nghĩa là cổ phiếu Tesla không có. Chúng là những thứ khác nhau làm những việc khác nhau. Tiền tệ hoàn hảo sẵn sàng hy sinh gần như mọi thứ khác để có được các thuộc tính hoàn hảo của tiền tệ — với mục đích chính là để nắm giữ và thỉnh thoảng giao dịch, so với một thứ đang cố gắng trở thành một con dao Thụy Sĩ.
 
-#### Tổng kết (1:40:14) {#wrap-up-14014}
+### Tổng kết (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Tôi muốn một lần nữa cảm ơn Lyn Alden và Justin Drake đã tham gia cùng chúng tôi và có một cuộc tranh luận hay nhất mà tôi từng nghe về Bằng chứng công việc (PoW) so với Bằng chứng cổ phần (PoS). Cũng xin gửi lời cảm ơn đặc biệt đến Lyn vì đã đến với nơi mà một số người có thể coi là "đội khách".
 

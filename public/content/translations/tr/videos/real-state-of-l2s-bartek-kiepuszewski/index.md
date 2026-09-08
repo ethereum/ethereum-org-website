@@ -19,7 +19,7 @@ L2BEAT'in kurucusu **Bartek Kiepuszewski** tarafından Devcon SEA'de yapılan, k
 
 *Bu transkript, Ethereum Vakfı tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=ik2JxmHDmyw) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 L2BEAT'in bir kurucusu olarak, piyasadaki hemen hemen her l2 ekibiyle çalışma gibi eşsiz bir fırsata sahibim ve onlarla bu alanın en başından beri, yani yaklaşık dört yıl öncesinden beri çalışıyoruz. Bu inanılmaz. Zaman çok hızlı akıp geçiyor. ZK (sıfır bilgi) teknolojisindeki ilk öncülerle çalıştık, adını Optimism olarak değiştiren Plasma Group ile çalıştık, Arbitrum ile çalıştık. Ve bu sahneden tüm bu ekiplere teşekkür etmek istiyorum, çünkü sizin desteğiniz olmasaydı kesinlikle burada olamazdık. L2BEAT olarak, topluluğun bize verdiği tüm destek için son derece minnettarız.
 
@@ -27,7 +27,7 @@ L2BEAT'in bir kurucusu olarak, piyasadaki hemen hemen her l2 ekibiyle çalışma
 
 Mesele şu ki, tüm bu büyümeyle birlikte büyük bir sorumluluk da geliyor. Bu sistemleri kullanan son kullanıcıların, toplamalar Ethereum'un güvenliğini devraldığına inandıkları için bu toplamalar içine para koyduklarını anlamamız gerekiyor. Bence bu farkındalıkla birlikte güvenlik konusunda ciddileşmeye başlamalıyız.
 
-#### Ethereum'u Ölçeklendirme (2:10) {#scaling-ethereum-210}
+### Ethereum'u Ölçeklendirme (2:10) {#scaling-ethereum-210}
 
 Ayrıca Ethereum'u ölçeklendirmeyi de başardık. Ethereum oldukça iyi gidiyordu, ancak talep karşısında gerçekten yavaşlamaya başladı ve ücretler çok yükseliyordu. Yani kesinlikle ölçekleniyoruz; bu sayılar da artıyor. Bu inanılmaz.
 
@@ -35,7 +35,7 @@ Ancak bir "ama" var. Biliyorsunuz arkadaşlar, her zaman bir "ama" vardır, değ
 
 Çünkü biliyorsunuz, çok uzun zamandır destek tekerlekleri kullanıyoruz. Eğer destek tekerlekleri kullanan bir yetişkinseniz —ve tekrar ediyorum, dört yıl oldu— o zaman gerçekten olgunlaşmamışsınız demektir. Çocuksanız destek tekerlekleri kullanmanız sorun değildir. Yetişkinseniz destek tekerlekleri kullanmanız doğru değildir. Ve bence hepimizin bu konuda çekingen davranmayı bırakmasının zamanı geldi. Hepimiz sesimizi duyurmalıyız ve kral çıplak sendromundan muzdarip olmamalıyız.
 
-#### Büyük "ama": eksik kanıt sistemleri (4:30) {#the-big-but-missing-proof-systems-430}
+### Büyük "ama": eksik kanıt sistemleri (4:30) {#the-big-but-missing-proof-systems-430}
 
 Peki bu büyük "ama" nedir? Öncelikle, günümüzdeki çoğu l2'nin bir kanıt sistemi yok, ki bu biraz şaşırtıcı çünkü StarkNet, zkSync, Aztec gibi ilk öncüler dört yıl önce ilk uygulamaya özel toplamalar başlattıklarında kanıt sistemlerine sahiplerdi. Yani evet, bugün tek bir düğmeye tıklayarak bir l2 başlatabilirsiniz. Ancak, bu gerçekten bir l2 mi? Bu gerçekten bir Rollup mı? Yaptığınız şey, çoklu imza ile güvence altına alınan bir şey başlatmak. Bunun yeterince iyi olduğunu düşünmüyorum.
 
@@ -43,13 +43,13 @@ Ekosistemin bugünkü durumu bu diyagramdaki gibi. Solda kanıt sistemi olan mev
 
 Sağdaki bu grafik, bir kanıt sistemine sahip olan ancak aslında genellikle çok kısa izinli bir beyaz listenin arkasında bulunan tüm Orbit yığınlarını da içerecektir. Bazen bu beyaz liste sadece tek bir aktördür; durum teklif edici ile aynıdır. Temelde durum teklif edicidir ve kendilerine meydan okuyabilecek tek kişi onlardır. Yani, ne? Cidden mi.
 
-#### Güvenlik konseyleri (6:00) {#security-councils-600}
+### Güvenlik konseyleri (6:00) {#security-councils-600}
 
 Şu anda çoğu l2 güvenlik konseylerini kullanmıyor. Güvenlik konseyi derken neyi kastediyoruz? Bir güvenlik konseyi temel olarak en az sekiz katılımcıdan oluşan ve %75'lik bir mutabakat eşiği gerektiren bir çoklu imza yapısıdır. Yani bunu büyük bir çoklu imza olarak düşünebilirsiniz, ancak bu sadece boyutla ilgili değildir; katılımcıların coğrafi olarak merkeziyetsiz olmasını istememizle ilgilidir. Dün coğrafi çeşitlendirme ihtiyacı hakkında harika bir sunum duymuş olabilirsiniz. Bu yapılardan istediğimiz şey budur. Ve temel olarak, en önemlisi katılımcıların farklı şirketlerden ve farklı yargı bölgelerinden gelmesini istiyoruz. Bu son derece önemli ve size bunun nedenlerine dair bazı örnekler göstereceğim.
 
 Güvenlik konseylerini bu güçlendirilmiş çoklu imza yapıları olarak düşünün. Arkalarında çok önemli bir sosyal katman var. Yani işlerin mevcut durumu bu ve yine söylüyorum, çok kötü. Sadece Arbitrum, Optimism, Polygon, zkSync'te güvenlik konseylerimiz var —ve StarkNet, Scroll ve ilginç bir şekilde Fuel'in bir güvenlik konseyi ile başlatıldığını biliyorum. Diğer herkes temel olarak çok küçük, dahili, genellikle özel bir çoklu imza kullanıyor ve açıkçası bu çoklu imza yapıları ile basit EOA'lar (Harici Sahipli Hesaplar) arasındaki farkı söylemek son derece zor.
 
-#### Veri kullanılabilirliği güven varsayımları (7:25) {#data-availability-trust-assumptions-725}
+### Veri kullanılabilirliği güven varsayımları (7:25) {#data-availability-trust-assumptions-725}
 
 Yanlış yaptığımız üçüncü büyük madde, Rollup olmayan çoğu l2'nin berbat veri kullanılabilirliği güven varsayımları ile kurulmuş olmasıdır. Ve "berbat" kelimesini kullanıyorum — A, çünkü hoşuma gidiyor ve B, çünkü gerçekten, gerçekten çok kötü.
 
@@ -59,7 +59,7 @@ Bir veri kullanılabilirliği komitesi ilk olarak StarkEx uygulamaları için St
 
 Sonuç olarak, bunu söylediğim için üzgünüm ama şu anda çoğu l2'de izinli operatörler fonlarınızı çalabilir veya dondurabilir. Hepinizi bu konuda bilinçlendirmek için buradayız. Söylediğim için üzgünüm ama bu tutumu değiştirmemiz gerekiyor.
 
-#### Kanıt sistemleri neden önemlidir (8:40) {#why-proof-systems-matter-840}
+### Kanıt sistemleri neden önemlidir (8:40) {#why-proof-systems-matter-840}
 
 Kanıt sistemlerini neden önemsemeliyiz? Bize göre hepimizin çalışan bir kanıt sistemine sahip olması için en az üç iyi neden var.
 
@@ -71,7 +71,7 @@ Bir kanıt sistemi sunduğunuzda, kötü niyetli teklif edici için durum çok d
 
 Son olarak, kanıt sistemleri —eğer Aşama 2 iseniz— herhangi bir aracıyı tamamen ortadan kaldırmanıza olanak tanır. Bir güvenlik konseyine ihtiyacınız yoktur veya varsa bile sadece acil durumlar içindir. Dolayısıyla bunun aslında derin düzenleyici etkileri olabilir. l2'nizi en başından itibaren bir Aşama 2 sistemi olarak başlatmak isteyebilirsiniz. Bu mümkündür, ancak elbette bir kanıt sistemine sahip olmanız gerekir; ideal olarak birden fazlasına sahip olmak isteyebilirsiniz. Nethermind ekibinin lansmanda Aşama 2 olması amaçlanan bir Rollup inşa ettiğine dair son duyurusu gibi, bunu yapan sistemlerin bazı duyuruları zaten var.
 
-#### Neden çoklu imza değil de güvenlik konseyleri (11:29) {#why-security-councils-not-multisigs-1129}
+### Neden çoklu imza değil de güvenlik konseyleri (11:29) {#why-security-councils-not-multisigs-1129}
 
 Bu kanıt sistemleri hakkındaydı. Peki, neden sadece basit çoklu imza değil de güvenlik konseyleri? Nedeni şu: çoklu imzaların çoklu imza olduğuna inanmayın. Nedeni budur; ta ki sizi bunların temelden çeşitlendirildiğine gerçekten ikna edebilecek bir sosyal katman olana kadar.
 
@@ -83,7 +83,7 @@ Son olarak, oldukça yakın zamanda bir çoklu imza üzerine saldırı yaşadık
 
 Özetlemek gerekirse: güvenlik konseyi olmayan bir Aşama 0 Rollup'ınız varsa, temel olarak kötü niyetli bir operatör fonlarınızla ne isterse yapabilir. Güvenlik konseyi olan bir Aşama 0 Rollup iseniz, o zaman bir saldırganın güvenlik konseyi azınlığına rüşvet vermesi gerekir; belki yapması zor bir şeydir, ancak Rollup'ınızın bir kanıt sistemi varsa yapmanız gerekecek olan güvenlik konseyi çoğunluğuna rüşvet vermekten çok daha kolaydır. Ve son olarak, Aşama 2 iseniz kimse fonlarınızı çalamaz. Aşama 2'ye geçmenin vaadi budur.
 
-#### Önerilen yeniden sınıflandırma (13:10) {#proposed-reclassification-1310}
+### Önerilen yeniden sınıflandırma (13:10) {#proposed-reclassification-1310}
 
 Soru şu: projelerin gerçekten önemsemesi için doğru teşviklere sahip miyiz? Sorun şu ki, yapabileceğimiz tek şey —L2BEAT olarak biz ve Ethereum topluluğu olarak biz— sosyal baskı uygulamaktır. Vitalik, önümüzdeki yıldan itibaren yalnızca Aşama 1 olan l2'lerden açıkça bahsetmeyi planladığını söyledi. Hatta daha önce, Aşama 1 değillerse sistemleri toplamalar olarak adlandırmayacağını bile söylemişti.
 
@@ -93,7 +93,7 @@ Topluluğa önerdiğimiz şey —ve bu topluluk geri bildirimi için foruma gide
 
 Sonra Ethereum veri kullanılabilirliği kullanmayan başka bir sistem kategoriniz var. Harici veri kullanılabilirliği ile birlikte gelen ek güven varsayımları kullanırlar. Onlara "alt-DA" diyoruz ancak Validium, optimium'lar ve oluşturabileceğiniz her türlü hibrit yapıyı içereceklerdir. Ancak, size makul veri kullanılabilirliği garantileri vermek zorundadırlar; bu sizin bodrum katınız olamaz. Bu makul büyüklükte bir veri kullanılabilirliği komitesi olmalıdır veya Celestia veya Avail kullanıyorsanız, köprü kullanmanız gerekir.
 
-#### "Diğerleri" kategorisi ve L2BEAT'in taahhüdü (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### "Diğerleri" kategorisi ve L2BEAT'in taahhüdü (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 Peki ya diğerleri? Onları üçüncü bir kategoriye koyacağız, ki buna —ve şimdi bu sistemleri nasıl adlandıracağımız konusunda topluluktan geri bildirim bekliyorum— çalışma adımız "diğerleri". Mesele şu ki, çoklu imza ile güvence altına alınıyorlar ve biz bu çoklu imzaları oldukları gibi ifşa edeceğiz. Kullanıcı arayüzümüzde yapmak istediğimiz şey bu.
 
@@ -107,7 +107,7 @@ Sadece "Bir kanıt sistemim var" demek yeterli mi? Hayır. L2BEAT olarak toplulu
 
 Araştırmacılar işe alıyoruz. Tüm bu işleri yapacağız. Bu bizim gelecek yıl için taahhüdümüz. Umarım gelecek yıl l2'lerin ve toplamalar yılı olur; ancak bu, tek bir düğmeye tıklayarak bir Rollup başlatmakla ilgili değildir. Mesele şu ki, iyi güvenliğe sahip bir sistem başlatabilmek istiyorsunuz. İdeal olarak Ethereum'dan mümkün olduğunca fazla güvenlik devralmak istersiniz. Buna ulaşmak için hepimizin yapması gereken çok iş var. Ancak yapmazsak, o zaman tek yaptığımız temel olarak binlerce güvensiz yan zincir oluşturmaktır. Topluluk olarak bunu istemediğimizi düşünüyorum.
 
-#### Soru-Cevap (18:45) {#qa-1845}
+### Soru-Cevap (18:45) {#qa-1845}
 
 **Sunucu:** Soru-Cevap bölümüne geçelim. Toplamalar için merkeziyetsiz bir sıralayıcı olması önemli mi, yoksa diğer güvenlik mekanizmaları yeterli mi?
 

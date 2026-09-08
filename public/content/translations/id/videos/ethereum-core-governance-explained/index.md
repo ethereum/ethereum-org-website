@@ -20,7 +20,7 @@ Sebuah presentasi oleh **Nixo Rokish** dari Yayasan Ethereum di ETHBoulder, yang
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=ghyY_cRqd54) yang dipublikasikan oleh EthBoulder. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar (0:12) {#introduction-012}
+### Pengantar (0:12) {#introduction-012}
 
 Terima kasih kepada keenam teman saya yang telah hadir. Baiklah. Hari ini saya akan berbicara kepada Anda tentang tata kelola inti Ethereum. Nama saya Nixo. Saya memimpin tim dukungan protokol di EF (Yayasan Ethereum). Di antara semua mandat kami, salah satunya adalah membuat proses tata kelola menjadi lebih jelas dan lebih mudah dinavigasi bagi semua orang yang berpartisipasi dalam hal ini karena Ethereum mencakup lebih dari sekadar pengembang intinya.
 
@@ -36,7 +36,7 @@ Jadi tahun lalu ada hal yang sangat kontroversial terjadi. Anda mungkin pernah m
 
 Jadi itulah yang menjadi puncak masalah pada EOF dan akhirnya dikeluarkan dari percabangan tersebut. Hal lain yang harus mereka pertimbangkan adalah bahwa fitur tersebut harus ditulis dan diuji secara ketat dalam enam bahasa yang berbeda karena klien-klien ini ditulis dalam enam bahasa yang berbeda. Jadi itu adalah matriks pengujian yang sangat besar untuk mereka kerjakan. Dan karena itu, setiap pilihan desain sekecil apa pun menjadi subjek perdebatan tanpa ada otoritas untuk menyelesaikan ketidaksepakatan. Jadi pertanyaan yang muncul adalah siapa yang memutuskan — yang merupakan inti dari tata kelola.
 
-#### Kesalahpahaman (5:23) {#misconceptions-523}
+### Kesalahpahaman (5:23) {#misconceptions-523}
 
 Hal ini membawa kita pada kesalahpahaman dan kita akan membahas beberapa di antaranya. Pertama adalah Vitalik memutuskan apa yang masuk ke dalam protokol Ethereum. Perluasan dari hal itu adalah bahwa EF mengendalikan segalanya. Dan yang ketiga adalah semuanya merupakan kesepakatan di ruang tertutup — orang dalam, para OG yang membuat keputusan ini.
 
@@ -52,13 +52,13 @@ Dan saya suka cuitan konyol yang saya tangkap layarnya di sini karena ini sepert
 
 Semuanya adalah kesepakatan di ruang tertutup, orang dalam, para OG — saya sedikit lebih mengerti mengapa ini adalah sebuah kesalahpahaman karena pada dasarnya Anda datang ke panggilan tata kelola ini, ada seratus orang dalam panggilan tata kelola ini. Sepertinya mereka semua sangat nyaman dengan apa yang sedang terjadi. Anda merasa tersesat. Anda tidak tahu bagaimana keputusan ini dibuat. Anda berpikir, "Apakah sudah giliran saya untuk berbicara?" Dan rasanya seperti orang-orang mendengarkan 10 orang yang sama untuk membuat keputusan ini.
 
-#### Meritokrasi dan statistik partisipasi (10:18) {#meritocracy-and-participation-stats-1018}
+### Meritokrasi dan statistik partisipasi (10:18) {#meritocracy-and-participation-stats-1018}
 
 Namun kenyataannya, pengembangan Ethereum lebih merupakan sebuah meritokrasi daripada yang pernah saya lihat di sebagian besar pengembangan perangkat lunak. Semua orang di tangkapan layar ini — ini adalah satu dari tiga panggilan ACD acak yang saya putuskan untuk ditangkap layarnya — tidak satu pun dari orang-orang ini yang ditunjuk untuk berada di sini. Semua orang hanyalah orang-orang yang hadir. Mereka adalah para pengembang yang telah menghabiskan banyak waktu dengan protokol ini. Mereka adalah orang-orang yang diakui sebagai pengembang berbakat di ruang ini yang secara konsisten membuat keputusan yang baik, dan tidak ada seorang pun di sini yang ditunjuk untuk berada di sini.
 
 Jadi saya baru bergabung dengan EF sedikit lebih dari setahun yang lalu. Saya mengambil statistik ini. Data ini hanya mundur hingga Maret 2025. Jadi kurang dari setahun. Rata-rata peserta All Core Dev — yaitu panggilan tata kelola — adalah 98. Jadi rata-rata ada 98 orang dalam panggilan ini. Peserta maksimal dalam satu panggilan sejak saat itu adalah 153. Saya rasa itu adalah hari di mana kami memutuskan tanggal Mainnet Pectra. Dan total peserta unik adalah 567 hanya dalam setahun terakhir. Saya sangat menyukai metrik itu karena itu menunjukkan bahwa bukan 100 orang yang sama yang menghadiri panggilan ini setiap saat. Para pengembang aplikasi, peneliti, seseorang mendengar tentang suatu fitur yang sedang dibahas, mereka muncul untuk menyuarakan penolakan atau dukungan mereka terhadapnya dan kemudian mereka tidak datang ke panggilan lain.
 
-#### Bagaimana proses tata kelola bekerja (11:52) {#how-the-governance-process-works-1152}
+### Bagaimana proses tata kelola bekerja (11:52) {#how-the-governance-process-works-1152}
 
 Jadi ini adalah salindia yang agak membosankan tetapi saya pikir penting untuk dibahas — begitulah cara tata kelola Ethereum saat ini bekerja. Jadi ketika salah satu percabangan ini sedang dibahas, hal pertama yang terjadi adalah orang-orang selama jendela waktu yang dialokasikan ini dapat mengirimkan proposal utama mereka. Proposal utama adalah fitur besar yang kami ingin agar orang-orang berkumpul untuk mendukungnya pada percabangan ini. Ini bisa berupa anggota komunitas, peneliti, pengembang inti — benar-benar siapa saja yang mengirimkan salah satu proposal utama ini. Kemudian jendelanya berakhir dan pada panggilan tata kelola kami semacam membahas mana dari proposal ini yang masuk akal. Orang-orang menyampaikan argumen mereka, orang-orang berdebat dan ada konsensus seputar mana yang harus kita pilih untuk percabangan yang akan datang tersebut.
 
@@ -68,7 +68,7 @@ Jadi setelah sejumlah devnet — bisa dua, bisa 10 — semua klien memutuskan pa
 
 Dan kemudian setelah testnet tanpa izin stabil, tanggal Mainnet dipilih. Setelah itu, ada penyangga 30 hari. Penyangga 30 hari ini ada karena L2 dan protokol telah meminta ini agar bersiap untuk percabangan. Jadi itu minimal 30 hari dan kemudian percabangan terjadi.
 
-#### Struktur panggilan dan koordinasi (15:01) {#call-structure-and-coordination-1501}
+### Struktur panggilan dan koordinasi (15:01) {#call-structure-and-coordination-1501}
 
 Selama waktu ini ada beberapa seri panggilan utama yang terjadi. Ini semua adalah panggilan publik yang disiarkan langsung di YouTube. Yang utama adalah ACDE dan ACDC. E adalah untuk lapisan eksekusi — itu adalah hal-hal seperti transaksi, penerapan kontrak pintar, manajemen mempool. ACDC adalah lapisan konsensus — jadi itu adalah hal-hal validator seperti manajemen validator, pemotongan. Dan itu bergantian setiap hari Kamis. Jadi ada ACD setiap hari Kamis dan salah satunya adalah ACDE dan kemudian yang berikutnya adalah ACDC, berlanjut seperti itu.
 
@@ -76,7 +76,7 @@ Panggilan ACDE dan ACDC berfokus pada percabangan yang sedang kami buat saat ini
 
 Dan kemudian ada panggilan terobosan. Panggilan terobosan adalah anggota komunitas, peneliti, pengembang yang berkata, "Hei, saya punya fitur yang ingin saya masukkan ke Ethereum dua percabangan dari sekarang." Jadi mereka menyelenggarakan panggilan mingguan, bulanan, atau dua bulanan ini di mana mereka membahas detail implementasi, mengubah dan mengulangi spesifikasi, dan secara umum menjawab semua pertanyaan yang dimiliki orang-orang, semua hal yang tidak diketahui yang telah diketahui untuk memastikan bahwa itu berada di tempat terbaik untuk disertakan dalam percabangan dua percabangan dari sekarang. Dan itu dapat dijadwalkan kapan pun fasilitator memutuskan.
 
-#### Proses yang terus berkembang (15:29) {#an-evolving-process-1529}
+### Proses yang terus berkembang (15:29) {#an-evolving-process-1529}
 
 Jadi satu hal yang ingin saya tekankan kepada semua orang adalah bahwa proses ini sama sekali tidak statis. Proses yang baru saja saya jelaskan kepada Anda ini telah berjalan kurang dari setahun. Ethereum telah berjalan selama 10 tahun. Tetapi ini terus berubah dan alasan mengapa ini terus berubah adalah karena tidak ada yang memegang kendali. Dan proses ini semacam berevolusi untuk mencari tahu cara paling efisien untuk beroperasi. Dan seperti yang saya katakan efisien, tetapi reputasi yang dimiliki tata kelola Ethereum adalah sangat mandek, sulit untuk meloloskan sesuatu, membingungkan — dan itu karena ketika Anda memiliki 100 hingga 500 orang yang membuat keputusan, sejujurnya saya terkesan bahwa ini bisa berhasil sama sekali.
 
@@ -88,7 +88,7 @@ Jadi tangkapan layar lainnya di bagian atas adalah Tim yang mengusulkan definisi
 
 Hal ketiga adalah komit dari waktu ke waktu di Forkcast. Forkcast adalah produk dari tim saya, oleh Wolfram Mark, seorang pria di tim saya yang membuat ini pada pertengahan tahun lalu ketika tim saya dalam iterasinya saat ini dibentuk. Dan ini telah menjadi sumber daya kanonis bagi orang-orang untuk digunakan berinteraksi dengan percabangan, untuk melihat apa yang masuk ke dalam percabangan dan bagaimana hal itu memengaruhi mereka. Semua hal ini berusia kurang dari dua tahun. Jadi poin yang saya sampaikan adalah proses ini banyak berubah. Ini sama sekali tidak statis. Ini bukan birokrasi beku yang sulit untuk Anda masuki.
 
-#### Sistem tata kelola yang sebanding (20:21) {#comparable-governance-systems-2021}
+### Sistem tata kelola yang sebanding (20:21) {#comparable-governance-systems-2021}
 
 Jadi dengan cepat saya ingin menyinggung sistem tata kelola terdesentralisasi yang paling mirip yang dapat saya lihat dengan tata kelola Ethereum. Dan poin yang ingin saya sampaikan di sini adalah bahwa ini berkelanjutan — meskipun luar biasa bahwa 100 hingga 500 orang dapat membuat keputusan, ini berkelanjutan di dunia nyata. Kita memang melihat contoh-contoh dari hal ini yang berhasil.
 
@@ -96,13 +96,13 @@ IETF adalah Internet Engineering Task Force. Ini adalah badan standar yang dijal
 
 Hal-hal yang tidak mirip dengan ini: rantai blok lain yang memiliki pemungutan suara token onchain. Ethereum secara khusus menghindari segala jenis mekanisme pemungutan suara karena menurut pendapat saya itu mengarah pada jalan untuk pengambilalihan dan itu semacam menghilangkan insentif untuk membuat segala sesuatunya menjadi meritokrasi di mana orang-orang hanya memercayai orang-orang yang menulis kode terbaik. Dan kemudian ada L2. Mereka memiliki multi-sig. Mereka memiliki dewan keamanan. Ini lebih seperti posisi yang ditunjuk yang membuat keputusan ini. Dan itu memiliki pengorbanannya. Ini lebih terpusat. Meskipun bergerak lebih cepat.
 
-#### Mengapa pembangun peduli (22:38) {#why-builders-care-2238}
+### Mengapa pembangun peduli (22:38) {#why-builders-care-2238}
 
 Jadi mengapa pembangun peduli dengan tata kelola? Karena pembangun secara harfiah adalah untuk siapa Ethereum diciptakan. Ethereum tidak diciptakan untuk pengembang inti. Ini tidak diciptakan untuk validator. Terkadang orang-orang ini bingung tentang hal itu. Pengembang inti dan validator Ethereum melayani Ethereum yang melayani pembangun dan pengguna.
 
 Dan semua orang pernah mengalami momen itu dengan AI di mana Anda terlalu mendalami detail dan AI mencoba memperbaiki hal kecil ini dan gagal untuk memperluas pandangan dan melihat keseluruhan tujuan proyek. Dan pengembang inti bisa seperti itu di mana mereka mencoba menyempurnakan proses pengembangan inti. Dan sangat penting dalam kasus itu bahwa pembangun masuk karena pengembangan inti sangat menyita waktu sehingga mereka tidak juga membangun di atas Ethereum pada sebagian besar waktu. Mereka sangat terlibat dalam pengembangan inti. Itu menyita seluruh waktu mereka. Jadi pembangun aplikasi benar-benar harus berusaha untuk masuk dan berkata, "Hei, kami membutuhkan ini. Ini sangat penting untuk Ethereum." Hanya untuk memastikan bahwa perspektif itu ada dan bahwa mereka tidak hanya terjebak dalam bekerja hanya untuk pengembang inti.
 
-#### Cara berpartisipasi (24:40) {#how-to-participate-2440}
+### Cara berpartisipasi (24:40) {#how-to-participate-2440}
 
 Jadi bagaimana Anda berpartisipasi atau memasukkan fitur Anda? Ini semacam saran umum, tetapi saya pikir ini yang terbaik. Bersuaralah tentang titik masalah Anda. Buka Twitter, tulis pos blog, identifikasi solusi untuk titik masalah Anda. Berspekulasilah tentang hal-hal yang dapat membantu Anda. Jika Anda menemukan orang lain yang memiliki titik masalah yang sama, umumnya Anda dapat menemukan EIP yang ada untuk mengatasi titik masalah tersebut atau meminta seseorang membantu Anda menulis EIP yang melakukan hal itu.
 

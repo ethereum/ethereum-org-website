@@ -18,7 +18,7 @@ Un panel all'evento Web3Privacy Now durante il Devconnect 2025, moderato da **Os
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=cZqlg4W1Els) pubblicata da Web3Privacy Now. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione all'Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Introduzione all'Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Ciao. Mi sentite? Va bene. Perfetto. Inizieremo con un brevissimo discorso introduttivo — di circa 3-5 minuti — che ci condurrà poi al panel. Questo è un discorso abbreviato. Il panel precedente ha parlato molto di conformità, privacy e così via. Ho tenuto un discorso precedente al Cyban Congress che ha toccato anche questo argomento, e ci sarà una versione più lunga di questo intervento al DeFi Day più tardi oggi. Ma ciò di cui voglio parlare è la privacy istituzionale su Ethereum.
 
@@ -30,7 +30,7 @@ Una singola grande istituzione qui può avere un impatto enorme su quale ecosist
 
 Affinché Ethereum possa gestire l'inserimento di queste istituzioni, è necessario affrontare queste preoccupazioni relative alla privacy. Quello che stiamo cercando di fare all'Institutional Privacy Task Force è l'inserimento delle istituzioni su Ethereum, assicurandoci che i loro obiettivi di privacy vengano soddisfatti. Organizziamo workshop, cercando di demistificare il settore e assicurarci di poter rispondere alle esigenze istituzionali, in particolare per quanto riguarda la privacy. Il primo artefatto che abbiamo è questa mappa della privacy istituzionale: parliamo con grandi istituzioni, comprendiamo i loro casi d'uso aziendali e i loro requisiti, rendiamo open source il più possibile e poi parliamo con i fornitori del settore per connettere le istituzioni allo spazio delle soluzioni. 
 
-#### Presentazioni del Panel e Problemi Istituzionali (5:00) {#panel-introductions-and-institutional-problems-500}
+### Presentazioni del Panel e Problemi Istituzionali (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Scusate se sono andato un po' veloce, ma spero sia stato comprensibile. Questo panel è composto da molti esperti in ricerca, policy e ingegneria, e parleremo di privacy istituzionale. 
 
@@ -48,7 +48,7 @@ Dall'altra direzione: *perché essere su una blockchain pubblica?* Si tratta di 
 
 **Amzah:** Sì. Lavoro per ABN Amro, che è una grande banca olandese. Abbiamo 5 milioni di clienti retail. Quindi al momento non stiamo costruendo nulla di specifico sulla privacy, ma ciò che sta emergendo ora è, ad esempio, un portafoglio di identità digitale. Di solito funziona che i dati vengono archiviati in un database centralizzato e poi ci si connette con un fornitore esterno o una terza parte, ma questo ovviamente non è molto sicuro. Quindi stiamo già iniziando a pensare a come poter utilizzare le prove a conoscenza zero, ad esempio, in modo da poter avere una divulgazione selettiva con parti esterne. In questo senso, possiamo proteggere le informazioni dei nostri clienti e consentire loro di connettersi con il più ampio ambiente Web3.
 
-#### Flussi di Lavoro Concreti e Archiviazione (10:07) {#concrete-workflows-and-storage-1007}
+### Flussi di Lavoro Concreti e Archiviazione (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Ok, fantastico. Se scegliete un flusso concreto che potrebbe interessarvi — come magari alcune emissioni di obbligazioni, operazioni di trading o pagamenti di tesoreria — chi può vedere cosa esattamente in quale fase, e cosa viene archiviato onchain rispetto all'offchain? Magari iniziando con François.
 
@@ -68,7 +68,7 @@ All'altro estremo, forse c'è uno scambio di posizioni tra prestatori e ci si as
 
 **Amzah:** Sì. Sono per lo più d'accordo con quello che ha detto Zach. In passato, quando le istituzioni pensavano alla privacy, avviavano semplicemente una catena privata a cui partecipavano magari 20 banche e solo loro erano in grado di vedere cosa c'era dentro. Ma in realtà, è molto più sfumato. Dipende dal caso d'uso, dal tipo di flussi e da ciò che il regolatore ha bisogno di sapere. È possibile inserire le informazioni sui saldi onchain in una forma più aggregata utilizzando la prova delle riserve (proof of reserves), ad esempio.
 
-#### Requisiti Non Negoziabili (15:26) {#non-negotiable-requirements-1526}
+### Requisiti Non Negoziabili (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio e Amzah, da parte di banche, sedi di negoziazione e regolatori, quali sono alcuni requisiti non negoziabili che continuate a sentire ripetutamente? Come tracce di controllo (audit trail), regole KYC o requisiti di reportistica?
 
@@ -78,7 +78,7 @@ All'altro estremo, forse c'è uno scambio di posizioni tra prestatori e ci si as
 
 **François:** Il nostro co-fondatore trascorre settimane con i clienti nello spazio istituzionale e la richiesta principale che emerge è il "controllo". Chi vede cosa, quando e per quale motivo. E poi si approfondiscono quelle conversazioni nei dettagli e diventano incredibilmente personalizzate. Per noi, questo è fantastico perché il mondo della finanza tradizionale ha trascorso decenni a costruire le proprie pratiche contabili e i flussi AML/CTF. Sono molto specifici riguardo a quel controllo. Quindi stiamo costruendo quelle capacità a livello di protocollo e supportando i clienti nel loro percorso.
 
-#### Compromessi e Liquidità Globale (18:10) {#trade-offs-and-global-liquidity-1810}
+### Compromessi e Liquidità Globale (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Quali sono i principali compromessi con cui state convivendo attualmente? Prestazioni contro privacy, o liquidità globale contro controlli rigorosi, o trasparenza onchain contro registri offchain? Iniziando con Zach.
 
@@ -88,7 +88,7 @@ All'altro estremo, forse c'è uno scambio di posizioni tra prestatori e ci si as
 
 Naturalmente, ci sono delle complessità. Ci teniamo molto a quell'esperienza "in guanti bianchi" per un'istituzione che entra in quel mercato, in modo che possa avere le proprie condizioni. Una delle sfide è l'equilibrio tra privacy e resistenza alle minacce. Esistono attori ostili nel mondo del Web3 e vogliamo gestirli meglio per offrire un'esperienza fantastica. Ci stiamo avvicinando alla decentralizzazione con cautela: sappiamo come farla, ma la faremo nel momento in cui servirà al meglio i clienti.
 
-#### Fiducia nel Sistema e Fattori di Adozione (20:47) {#system-trust-and-adoption-drivers-2047}
+### Fiducia nel Sistema e Fattori di Adozione (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, come si rendono queste soluzioni affidabili e utilizzabili da istituzioni e governi?
 
@@ -98,7 +98,7 @@ Naturalmente, ci sono delle complessità. Ci teniamo molto a quell'esperienza "i
 
 **Amzah:** Per noi è davvero importante che sia personalizzabile. La blockchain non è più solo un caso d'uso in cui tutto è completamente pubblico o completamente privato. Non esiste una soluzione unica per tutti. Ciò che è anche più importante per noi è essere conformi alle normative. Il settore bancario in Europa è fortemente regolamentato e se qualcosa non è corretto per quanto riguarda la privacy, semplicemente non viene accettato dai regolatori.
 
-#### Guardando al 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Guardando al 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Va bene, siamo quasi alla fine. Qual è un elemento fondamentale — tecnico, operativo o a livello di policy — che pensate accelererebbe in modo significativo l'adozione istituzionale? E se ci incontrassimo di nuovo nel 2026, cosa pensate sia realistico che sia successo quest'anno?
 
@@ -110,7 +110,7 @@ Naturalmente, ci sono delle complessità. Ci teniamo molto a quell'esperienza "i
 
 **François:** Se ci incontrassimo tra un anno, mi piacerebbe aver lanciato la Mainnet di Miden in primavera, così potremo festeggiarlo. Oltre a questo, vorrei che fossimo sulla buona strada verso la completa decentralizzazione. Ci vorrà un grande sforzo collettivo. La cosa principale che voglio vedere accadere è un maggiore coinvolgimento. L'idea che la privacy sia in contrasto con la conformità non è del tutto vera, ma unire le due cose richiede lavoro. Vogliamo che le istituzioni aiutino a plasmare il tipo di mercati che vogliono vedere, perché sappiamo che questo sarà complesso e peculiare per le loro esigenze.
 
-#### Considerazioni Finali (28:05) {#closing-thoughts-2805}
+### Considerazioni Finali (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Voglio solo dare a ciascuno di voi 10-20 secondi per menzionare qualcosa che è successo questa settimana o per fare una rapida promozione prima di concludere.
 

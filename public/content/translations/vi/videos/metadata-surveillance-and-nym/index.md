@@ -17,23 +17,23 @@ Một chương trình đặc biệt từ **Nym** với Nhà khoa học trưởng
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=QBX5AK3DXqw) do Nym xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:04) {#intro-004}
+### Giới thiệu (0:04) {#intro-004}
 
 Siêu dữ liệu truyền thông là gì? Nó đề cập đến mọi thứ về một cuộc giao tiếp mà không phải là nội dung thực sự đang được nói đến. Ví dụ, điều này bao gồm nguồn gốc của cuộc giao tiếp, đích đến, thời gian thông tin được gửi, lượng thông tin được gửi và bất kỳ mẫu nào có thể phát hiện được, bao gồm thời gian và kích thước của các gói tin đang được trao đổi.
 
-#### Siêu dữ liệu truyền thông (0:27) {#communications-metadata-027}
+### Siêu dữ liệu truyền thông (0:27) {#communications-metadata-027}
 
 Siêu dữ liệu truyền thông được phơi bày theo mặc định trong tất cả các giao thức internet: TCP/IP, HTTP, UDP, FTP. Ngay cả các giao thức bảo mật như TLS hoặc DNS bảo mật, vốn bảo vệ nội dung bằng mã hóa đầu cuối, vẫn hiển thị siêu dữ liệu truyền thông: nguồn gốc, đích đến, thời gian, độ dài, v.v.
 
 Vậy thông tin này bị phơi bày, nhưng cho ai? Ai có thể lấy được nó?
 
-#### Ai có quyền truy cập vào siêu dữ liệu (1:10) {#who-gets-access-to-metadata-110}
+### Ai có quyền truy cập vào siêu dữ liệu (1:10) {#who-gets-access-to-metadata-110}
 
 Có một số thực thể là trung gian trong truyền thông internet có khả năng truy cập vào siêu dữ liệu truyền thông này. Điều này bao gồm những ông lớn trong cơ sở hạ tầng internet, chẳng hạn như các nhà cung cấp dịch vụ internet, các điểm trao đổi, các hệ thống tự trị, bộ định tuyến BGP và những người tham gia mạng trục internet nói chung; họ có thể truy cập vào rất nhiều siêu dữ liệu truyền thông. 
 
 Nhưng ngay cả những người chơi nhỏ, chẳng hạn như bất kỳ ai đang chạy bộ định tuyến Wi-Fi hoặc mạng cục bộ, hoặc ai đó có khả năng nghe lén cục bộ, cũng có quyền truy cập vào siêu dữ liệu truyền thông. Và tất nhiên, các đối thủ cấp quốc gia như NSA đã được biết là thu thập siêu dữ liệu ở quy mô lớn và phân tích nó để trích xuất mọi loại thông tin tình báo.
 
-#### Tại sao siêu dữ liệu lại quan trọng (2:00) {#why-is-metadata-important-200}
+### Tại sao siêu dữ liệu lại quan trọng (2:00) {#why-is-metadata-important-200}
 
 Có nhiều lý do hơn giải thích tại sao siêu dữ liệu là một loại dữ liệu rất thú vị để thu thập và khai thác. Nó có thể đọc được bằng máy, bởi vì nó nói ngôn ngữ của máy tính; về cơ bản, nó là ngôn ngữ để máy tính có thể định tuyến các giao tiếp từ nguồn đến đích một cách hợp lý. Vì vậy, nó có thể đọc được bằng máy, và điều đó có nghĩa là máy móc có thể hiểu nó ở quy mô lớn rất dễ dàng, trái ngược với ngôn ngữ tự nhiên của con người, vốn khó diễn giải hơn nhiều, bởi vì có thể mọi người đang sử dụng từ ngữ theo một cách nhất định, hoặc chúng có những sắc thái, và điều này khó diễn giải hơn rất nhiều. Mặt khác, siêu dữ liệu lại thực sự dễ dàng.
 
@@ -51,7 +51,7 @@ Việc phân tích lưu lượng của siêu dữ liệu thậm chí có thể �
 
 Tuy nhiên, có nhiều tình huống mà phân tích lưu lượng của siêu dữ liệu truyền thông có thể hoạt động như một kênh kề (side channel) tiết lộ nội dung được mã hóa này.
 
-#### Giám sát siêu dữ liệu (5:15) {#metadata-surveillance-515}
+### Giám sát siêu dữ liệu (5:15) {#metadata-surveillance-515}
 
 Một ví dụ là khi bạn đang duyệt một trang web bằng HTTPS. Về nguyên tắc, vì giao tiếp với trang web này được mã hóa, nên ai đó đang quan sát giao tiếp của bạn không thể biết bạn đang truy cập trang cụ thể nào trên trang web. Ví dụ, nếu bạn truy cập WebMD để kiểm tra bệnh tật, một người quan sát hoặc kẻ nghe lén sẽ có thể thấy, "Được rồi, bạn đang kiểm tra thông tin y tế trên WebMD," nhưng họ không thể biết bạn đang tìm kiếm căn bệnh cụ thể nào.
 
@@ -61,7 +61,7 @@ Bằng cách làm điều này, bạn có thể xây dựng một dấu vân tay
 
 Điều này rõ ràng là đáng lo ngại. Mặc dù chúng ta có thể có mã hóa đầu cuối, nhưng chúng ta còn lâu mới hoàn thành việc bảo vệ quyền riêng tư cho các giao tiếp của mình.
 
-#### Danh sách mong muốn cho truyền thông riêng tư (6:40) {#a-wish-list-for-private-communications-640}
+### Danh sách mong muốn cho truyền thông riêng tư (6:40) {#a-wish-list-for-private-communications-640}
 
 Vậy nếu chúng ta muốn có một danh sách mong muốn về những gì một mạng lưới truyền thông an toàn hoàn hảo sẽ cung cấp, thì những thuộc tính mà chúng ta muốn là gì? 
 

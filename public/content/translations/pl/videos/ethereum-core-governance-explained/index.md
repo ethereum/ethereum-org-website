@@ -20,7 +20,7 @@ Prezentacja **Nixo Rokisha** z Fundacji Ethereum na ETHBoulder, wyjaśniająca z
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=ghyY_cRqd54) opublikowanego przez EthBoulder. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:12) {#introduction-012}
+### Wprowadzenie (0:12) {#introduction-012}
 
 Dziękuję całej szóstce moich przyjaciół, którzy się pojawili. W porządku. Opowiem wam dzisiaj o zarządzaniu głównym protokołem Ethereum. Nazywam się Nixo. Kieruję zespołem wsparcia protokołu w EF (Fundacji Ethereum). Wśród wszystkich naszych zadań, jednym z nich jest uczynienie procesu zarządzania jaśniejszym i łatwiejszym do nawigowania dla wszystkich innych, którzy w nim uczestniczą, ponieważ Ethereum to znacznie więcej niż tylko jego główni deweloperzy (core developers).
 
@@ -36,7 +36,7 @@ W zeszłym roku wydarzyła się naprawdę kontrowersyjna rzecz. Być może o tym
 
 To była kropla, która przelała czarę goryczy w przypadku EOF i ostatecznie zostało to wyrzucone z rozwidlenia. Kolejną rzeczą, którą muszą wziąć pod uwagę, jest to, że musi to być napisane i rygorystycznie przetestowane w sześciu różnych językach, ponieważ ci klienci są napisani w sześciu różnych językach. To naprawdę duża matryca testowa, z którą muszą pracować. Z tego powodu każdy najmniejszy wybór projektowy staje się przedmiotem debaty, bez żadnego autorytetu, który mógłby rozwiązywać spory. Pojawia się więc pytanie, kto decyduje — co jest sednem zarządzania.
 
-#### Nieporozumienia (5:23) {#misconceptions-523}
+### Nieporozumienia (5:23) {#misconceptions-523}
 
 To prowadzi nas do nieporozumień i zajmiemy się niektórymi z nich. Jednym z nich jest to, że Vitalik decyduje o tym, co wchodzi do protokołu Ethereum. Rozszerzeniem tego jest to, że Fundacja Ethereum kontroluje wszystko. Trzecim jest to, że to wszystko zakulisowe układy — wtajemniczeni, weterani (OGs) podejmujący te decyzje.
 
@@ -52,13 +52,13 @@ Podoba mi się też ten głupi tweet, którego zrzut ekranu tu zamieściłem, po
 
 To wszystko zakulisowe układy, wtajemniczeni, weterani — trochę bardziej rozumiem, dlaczego jest to nieporozumienie, ponieważ w zasadzie przychodzisz na te spotkania dotyczące zarządzania, a na nich jest stu ludzi. Wydaje się, że wszyscy czują się bardzo swobodnie z tym, co się dzieje. Ty jesteś zagubiony. Nie masz pojęcia, jak podejmowane są te decyzje. Zastanawiasz się: „Czy to już moja kolej, żeby coś powiedzieć?”. I wydaje się, że ludzie słuchają tych samych 10 osób, aby podjąć te decyzje.
 
-#### Merytokracja i statystyki uczestnictwa (10:18) {#meritocracy-and-participation-stats-1018}
+### Merytokracja i statystyki uczestnictwa (10:18) {#meritocracy-and-participation-stats-1018}
 
 Ale prawda jest taka, że rozwój Ethereum jest w większym stopniu merytokracją, niż kiedykolwiek widziałem w większości projektów programistycznych. Wszyscy ci ludzie na tym zrzucie ekranu — to jeden z trzech z tego przypadkowego spotkania ACD (All Core Devs), z którego postanowiłem zrobić zrzut ekranu — nikt z tych ludzi nie został tu mianowany. Wszyscy to po prostu ludzie, którzy się pojawili. To deweloperzy, którzy spędzili dużo czasu z tym protokołem. To oni zostali uznani przez innych za utalentowanych deweloperów w tej przestrzeni, konsekwentnie podejmujących dobre decyzje, i nikt z nich nie został wyznaczony, by tu być.
 
 Dołączyłem do EF zaledwie nieco ponad rok temu. Zebrałem te statystyki. Sięgają one tylko do marca 2025 roku. Czyli mniej niż rok. Średnia liczba uczestników All Core Dev — to są spotkania dotyczące zarządzania — wynosi 98. Średnio w tych spotkaniach bierze udział 98 osób. Maksymalna liczba uczestników na jednym spotkaniu od tego czasu wyniosła 153. Myślę, że to był dzień, w którym decydowaliśmy o dacie uruchomienia Pectra w sieci głównej. Całkowita liczba unikalnych uczestników to 567 tylko w ostatnim roku. Bardzo podoba mi się ta metryka, ponieważ pokazuje, że to nie jest tych samych 100 osób, które za każdym razem uczestniczą w tych spotkaniach. Ci deweloperzy aplikacji, badacze, ktoś słyszy o jakiejś omawiananej funkcji, pojawia się, aby wyrazić swój sprzeciw lub poparcie dla niej, a potem nie przychodzi na kolejne spotkanie.
 
-#### Jak działa proces zarządzania (11:52) {#how-the-governance-process-works-1152}
+### Jak działa proces zarządzania (11:52) {#how-the-governance-process-works-1152}
 
 To trochę suchy slajd, ale myślę, że ważne jest, aby go omówić — tak obecnie działa zarządzanie Ethereum. Kiedy omawiane jest jedno z tych rozwidleń, pierwszą rzeczą, która się dzieje, jest to, że ludzie w wyznaczonym oknie czasowym mogą zgłaszać swoje główne propozycje (headliner proposals). Główna propozycja to najważniejsza funkcja, wokół której chcemy zgromadzić ludzi dla tego rozwidlenia. Może to być członek społeczności, badacz, główny deweloper — tak naprawdę każdy, kto zgłasza jedną z tych głównych propozycji. Następnie okno się zamyka i na spotkaniach dotyczących zarządzania dyskutujemy, która z nich ma sens. Ludzie przedstawiają swoje argumenty, dyskutują i osiągany jest konsensus co do tego, którą z nich powinniśmy wybrać dla nadchodzącego rozwidlenia.
 
@@ -68,7 +68,7 @@ Po kilku sieciach deweloperskich — mogą to być dwie, może być ich 10 — w
 
 A kiedy niewymagająca pozwoleń sieć testowa jest stabilna, wybierana jest data dla sieci głównej. Następnie jest 30-dniowy bufor. Ten 30-dniowy bufor istnieje, ponieważ warstwy drugie (L2) i protokoły prosiły o to, aby przygotować się na rozwidlenie. To minimum 30 dni, a potem następuje rozwidlenie.
 
-#### Struktura spotkań i koordynacja (15:01) {#call-structure-and-coordination-1501}
+### Struktura spotkań i koordynacja (15:01) {#call-structure-and-coordination-1501}
 
 Przez cały ten czas odbywają się główne serie spotkań. Są to publiczne spotkania transmitowane na żywo na YouTube. Główne z nich to ACDE i ACDC. E oznacza warstwę wykonawczą (execution layer) — to rzeczy takie jak transakcje, wdrażanie inteligentnych kontraktów, zarządzanie mempoolem. ACDC to warstwa konsensusu (consensus layer) — czyli sprawy walidatorów, takie jak zarządzanie walidatorami, cięcie (slashing). Odbywają się one na przemian w czwartki. W każdy czwartek jest spotkanie ACD, jedno z nich to ACDE, a następne to ACDC, i tak na zmianę.
 
@@ -76,7 +76,7 @@ Spotkania ACDE i ACDC skupiają się na rozwidleniu, które obecnie tworzymy, or
 
 Są też spotkania robocze (breakout calls). Spotkania robocze to członkowie społeczności, badacze, deweloperzy mówiący: „Hej, mam funkcję, którą chcę wprowadzić do Ethereum za dwa rozwidlenia”. Organizują więc te cotygodniowe, comiesięczne lub odbywające się co dwa miesiące spotkania, na których omawiają szczegóły implementacji, zmieniają i iterują specyfikację oraz ogólnie odpowiadają na wszystkie pytania, które mają ludzie, wszystkie znane niewiadome, aby upewnić się, że jest to w najlepszym możliwym miejscu, aby zostać włączonym do rozwidlenia za dwa rozwidlenia. Mogą one być zaplanowane w dowolnym momencie, o którym zdecyduje facylitator.
 
-#### Ewoluujący proces (15:29) {#an-evolving-process-1529}
+### Ewoluujący proces (15:29) {#an-evolving-process-1529}
 
 Jedną rzeczą, którą chcę wszystkim uświadomić, jest to, że ten proces wcale nie jest statyczny. Proces, który właśnie wam opisałem, działa od niespełna roku. Ethereum działa od 10 lat. Ale to stale się zmienia, a powodem, dla którego stale się zmienia, jest to, że nikt nie rządzi. Ten proces w pewnym sensie ewoluuje, aby znaleźć najbardziej efektywny sposób działania. Mówię efektywny, ale reputacja zarządzania Ethereum jest taka, że jest ono naprawdę w stagnacji, trudno coś przeforsować, jest mylące — a to dlatego, że kiedy masz od 100 do 500 osób podejmujących decyzje, szczerze mówiąc, jestem pod wrażeniem, że to w ogóle działa.
 
@@ -88,7 +88,7 @@ Drugi zrzut ekranu na górze to Tim proponujący definicje etapów włączania t
 
 Trzecia rzecz to commity w czasie na Forkcast. Forkcast to produkt mojego zespołu, autorstwa Wolframa Marka, faceta z mojego zespołu, który stworzył to w połowie zeszłego roku, kiedy powstał mój zespół w obecnej formie. Stało się to tak kanonicznym zasobem dla ludzi do interakcji z rozwidleniem, aby zobaczyć, co wchodzi do rozwidlenia i jak to na nich wpływa. Wszystkie te rzeczy mają mniej niż dwa lata. Chcę tylko powiedzieć, że ten proces bardzo się zmienia. Wcale nie jest statyczny. To nie jest jakaś zamrożona biurokracja, do której trudno się dostać.
 
-#### Porównywalne systemy zarządzania (20:21) {#comparable-governance-systems-2021}
+### Porównywalne systemy zarządzania (20:21) {#comparable-governance-systems-2021}
 
 Chciałem tylko szybko poruszyć temat najbardziej podobnych zdecentralizowanych systemów zarządzania, jakie widzę w stosunku do zarządzania Ethereum. Chcę przez to powiedzieć, że jest to zrównoważone — mimo że to niesamowite, że od 100 do 500 osób może podejmować decyzje, jest to zrównoważone w prawdziwym świecie. Widzimy przykłady, że to działa.
 
@@ -96,13 +96,13 @@ IETF to Internet Engineering Task Force. To prowadzona przez wolontariuszy organ
 
 Rzeczy, do których to nie jest podobne: inne blockchainy, które mają głosowanie tokenami onchain. Ethereum celowo unika jakiegokolwiek mechanizmu głosowania, ponieważ moim zdaniem prowadzi to do możliwości przejęcia kontroli i w pewnym sensie pozbywa się zachęty do uczynienia rzeczy merytokracją, w której ludzie po prostu ufają tym, którzy piszą najlepszy kod. Są też warstwy drugie (L2). Mają portfele z wieloma podpisami (multi-sig). Mają rady bezpieczeństwa. Są to bardziej mianowane stanowiska, które podejmują te decyzje. I to ma swoje kompromisy. Jest bardziej scentralizowane. Chociaż działa szybciej.
 
-#### Dlaczego twórcy powinni się tym interesować (22:38) {#why-builders-care-2238}
+### Dlaczego twórcy powinni się tym interesować (22:38) {#why-builders-care-2238}
 
 Dlaczego więc twórcy (builders) interesują się zarządzaniem? Ponieważ twórcy to dosłownie ci, dla których stworzono Ethereum. Ethereum nie zostało stworzone dla głównych deweloperów. Nie zostało stworzone dla walidatorów. Czasami ci ludzie się w tym gubią. Główni deweloperzy i walidatorzy Ethereum służą Ethereum, które służy twórcom i użytkownikom.
 
 Każdy miał taki moment ze sztuczną inteligencją (AI), kiedy wchodzisz zbyt głęboko w szczegóły, a ona próbuje naprawić tę małą rzecz i nie potrafi spojrzeć z szerszej perspektywy na cały cel projektu. Główni deweloperzy mogą być tacy sami, gdy próbują udoskonalić proces głównego rozwoju. W takim przypadku bardzo ważne jest, aby twórcy wkroczyli, ponieważ główny rozwój jest tak pochłaniający, że przez większość czasu nie budują oni również na Ethereum. Są bardzo zaangażowani w główny rozwój. Zajmuje to cały ich czas. Dlatego twórcy aplikacji naprawdę muszą podjąć wysiłek, aby przyjść i powiedzieć: „Hej, potrzebujemy tego. To jest kluczowe dla Ethereum”. Tylko po to, aby upewnić się, że ta perspektywa jest obecna i że nie zostają zaszufladkowani do pracy tylko dla głównych deweloperów.
 
-#### Jak uczestniczyć (24:40) {#how-to-participate-2440}
+### Jak uczestniczyć (24:40) {#how-to-participate-2440}
 
 Jak więc uczestniczyć lub wprowadzić swoją funkcję? To dość ogólna rada, ale myślę, że jest najlepsza. Głośno mów o swoich problemach. Wejdź na Twittera, pisz posty na blogu, identyfikuj rozwiązania swoich problemów. Spekuluj na temat rzeczy, które mogłyby ci pomóc. Jeśli znajdziesz inne osoby, które mają te same problemy, zazwyczaj możesz znaleźć EIP, które istnieje, aby rozwiązać ten problem, lub poprosić kogoś o pomoc w napisaniu EIP, które to zrobi.
 

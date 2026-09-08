@@ -18,7 +18,7 @@ breadcrumb: "30 Dakikada Ethereum"
 
 *Bu döküm, Ethereum Vakfı tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=ei3tDRMjw6k) erişilebilir bir kopyasıdır. Okunabilirliği artırmak amacıyla üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:02) {#introduction-002}
+### Giriş (0:02) {#introduction-002}
 
 Harika, işte 30 dakikada Ethereum. Bu, lansmandan bu yana neredeyse her Devcon'da yaptığım bir sunum. İlginç olan şu ki, Ethereum ekosistemi değiştikçe, Ethereum Protokolü değiştikçe ve zaman ilerledikçe içerik de oldukça değişiyor. 2015'teki eşdeğerine dönerseniz, amca bloklar (uncle blocks) hakkında çok şey duyarsınız. Elbette amca bloklar, İş Kanıtı (PoW) sisteminin bir özelliğiydi. Artık Hisse Kanıtı (PoS) sistemimiz var, bu yüzden artık amca bloklarımız yok. Ethereum'un artık elbette katman 2'leri (l2) de var ve o zamanlar bu sunum katman 2'leri hiç içermezdi. Artık katman 2'lerin hikayenin yarısı olduğunu biliyoruz. Ethereum her şeyden önce gelişen bir ekosistemdir ve teknoloji değiştikçe, ayrıca ekosistemin odak noktası temel altyapı oluşturmaktan uygulamalara büyük bir ağırlık vermeye doğru kaydıkça bunun içeriği de değişmeye devam edecektir.
 
@@ -30,7 +30,7 @@ Dünya bilgisayarı nasıl çalışır? Benim düşünceme göre katman 1 (l1) g
 
 Katman 2 (l2) GPU'dur. Katman 2, bu odada herhangi bir katman 2'nin parçası olan hepinizsiniz. Burada kimler bir katman 2'nin parçası? Yaşasın. Burada kimler bir katman 2 kullandı? Burada kimler katman 1 (l1) kullandı? Güzel, hepimiz burada kullanıcıyız. Bu farklı GPU'lardan çok sayıda var ve dünya bilgisayarı Ethereum bir arada kalabiliyor çünkü bu GPU'ların her biri güven makinesine iyimser kanıt sistemleri, sıfır bilgi kanıtları, SNARK'lar, STARK'lar, plonk veya popüler kelimeler her neyse onlar aracılığıyla bağlı. Tüm bu sistemler, katman 1'in katman 2'lerin içinde neler olup bittiğini güvene dayalı olmadan doğrulayabilmesini ve katman 2'lerin de katman 1'de neler olduğunu güvene dayalı olmadan okuyabilmesini sağlar.
 
-#### Merkeziyetsizlik ve çeşitlilik (5:11) {#decentralization-and-diversity-511}
+### Merkeziyetsizlik ve çeşitlilik (5:11) {#decentralization-and-diversity-511}
 
 Bu iki bileşen arasında önemli bir etkileşim vardır ve birlikte bugünkü Ethereum'u oluştururlar. L1 nedir? O bir Zincir. Hisse Kanıtı (PoS) çalıştırır. Bozulmaz. Bu ne anlama geliyor? Ethereum L1, dokuz yılı aşkın süredir var olan ve mevcut Hisse Kanıtı (PoS) formunda iki yılı aşkın süredir varlığını sürdüren bir Zincirdir. Bir temel katmanın sahip olması gereken gerçekten önemli şeylerden biri, merkeziyetsiz, açık, sağlam ve bu özellikleri gelecekte de sürdürmesi muhtemel bir temel katman üzerine inşa ettiğinize dair net kanıtlardır. 
 
@@ -42,7 +42,7 @@ Sonra "tanımlanamayan" var. Tanımlanamayan bir aktör değildir, tıpkı klavy
 
 Aslında çok daha iyi hale gelen bir özellik de istemci çeşitliliğidir. Yaklaşık beş yıl önce Ethereum temel olarak sadece Go Ethereum (Geth) idi. Tek bir istemcinin hakim olduğu bir ekosisteme sahip olduğunuzda, bu durum başlı başına merkezi bir hata noktası haline gelir. Burada 2016 DoS saldırılarını kimler hatırlıyor? Sabah 5:17'de uyanıyorsunuz, askeri tarzda bir uyandırma telefonu alıyorsunuz, savaş odasına iniyorsunuz ve birisi istemcide bir hata keşfetmiş. Tüm Zincir duruyor. Düzeltiyoruz ve iki veya üç gün sonra birisi başka bir hata buluyor. Bu, sonunda sert çatallanma yapmak zorunda kalana kadar tam bir ay boyunca devam ediyor. Ancak o dönemde, Ethereum'un iki farklı istemciye sahip olma yeteneği — o zamanlar bunlar Geth ve Parity idi — temel olarak Zinciri kurtardı. Bir hatanın Geth'i etkileyip Parity'yi etkilemediği zamanlar ve bir hatanın Parity'yi etkileyip Geth'i etkilemediği zamanlar oldu. Ethereum, birden fazla yazılım uygulamasına sahip olmaktan çok şey kazandı ve bu, 2024 itibarıyla muhtemelen Ethereum tarihinde şimdiye kadarki en iyi durumunda olan bir şeydir.
 
-#### Çoklu istemciler ve sağlamlık (10:40) {#multiple-clients-and-robustness-1040}
+### Çoklu istemciler ve sağlamlık (10:40) {#multiple-clients-and-robustness-1040}
 
 Ethereum'un Hisse Kanıtı (PoS) kısmını yöneten mutabakat istemcilerine ve Ethereum'un EVM kısmını yöneten yürütme istemcilerine bakarsak, en yüksek pazar payına sahip tek istemcinin yaklaşık %50 ile Geth olduğunu görebiliriz. Kelimenin tam anlamıyla bugün, şu anda herhangi bir Ethereum istemcisinde bir hata olursa ne olur? Ethereum'un hala çalışıp çalışmadığını kontrol edin. Çalıştığını tahmin ediyorum — PolyMarket'te %99,99 bahse girerim. 
 
@@ -56,7 +56,7 @@ Bu, tek istemcili bir ekosistemde pratik değildir. Çeşitli, çok istemcili bi
 
 32 ETH'niz varsa veya bir havuza katılırsanız daha azıyla, giderek daha fazla gerçekten ilginç havuz seçeneği ortaya çıkıyor — arkadaşlarınızla daha küçük havuzlar oluşturmanıza olanak tanıyan Obol squad staking gibi. Bir staker olmanız için pek çok farklı yol var ve eğer olursanız, Ethereum Blokzincirini güvence altına alan bu Düğüm ağının bir parçası olursunuz.
 
-#### Düğüm doğrulaması ve ölçek (15:06) {#node-verification-and-scale-1506}
+### Düğüm doğrulaması ve ölçek (15:06) {#node-verification-and-scale-1506}
 
 Sanırım vakıf propagandası bunu böyle tanımlıyor — sevimli bir fili var. O halde fil için alkışlar! Siz de ağa katılabilir ve güvenliğini sağlamaya yardımcı olabilirsiniz. Bir staker olmasanız bile, bilgisayarınızda bir Ethereum Düğümü çalıştırabilir ve Zinciri gönüllü olarak doğrulayabilirsiniz. 
 
@@ -70,7 +70,7 @@ Daha az ETH ile staking yapmak da çok aktif bir araştırma gereksinimidir. 32 
 
 Ethereum L1'de neler çalışır? Bazı yüksek değerli uygulamalar. Pek çok yüksek değerli merkeziyetsiz finans (DeFi) L1'de çalışır. ENS şu anda L1'de, ancak giderek katman 2'lerle (l2) daha fazlasını yapıyor. İnsanlar varlıklarını katman 1'de (l1) tutuyor. Dahası, katman 1; katman 2'ler için Blok köklerini, durum köklerini ve kanıt sistemlerini yönetir. Katman 2'leri güvence altına alır. Katman 1'in, özellikle bir katman 2'nin başarısız olduğu durumlarda, katmanlar arası işlemleri idare edebilecek kadar güçlü olması gerekir. Bir katman 2 ile bağımsız bir Zincir arasındaki fark, katman 2'niz %51 saldırısına uğrasa veya ekip kapansa bile, katman 1'in kullanıcıları korumak için hala orada durmasıdır. Kullanıcılar, katman 2 içindeki sahipliklerini ve durumlarını kanıtlayabilir ve bunu tekrar katman 1'e taşıyabilirler. 
 
-#### L2 hızları ve yol haritaları (20:33) {#l2-speeds-and-roadmaps-2033}
+### L2 hızları ve yol haritaları (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Yakın zamanda bununla ilgili canlı bir deney yapıldı. dYdX v3 yakın zamanda kapandı ve L2Beat ekibi kendi kaçış mekanizması yazılımı uygulamasını yazdı. dYdX ekibinin herhangi bir müdahalesi olmadan, kullanıcılar dYdX v3 içindeki tüm varlıklarını alıp Ethereum L1'e geri getirebildiler. Ekibin müdahalesi olmadan bir katman 2'den (l2) çıkmak sadece bir teori değil, bir gerçektir.
 
@@ -82,7 +82,7 @@ Sonra Birleşme gerçekleşti. Matematiğin ilginç bir cilvesi nedeniyle, blokl
 
 Ethereum'un tarihi: Kasım 2013 Tanıtım belgesi idi. Temmuz 2015 lansmandı. 2018 civarında Ethereum, Hisse Kanıtı (PoS) ve Veri kullanılabilirliği örneklemesi için yaklaşık tasarımına karar verdi. Veri kullanılabilirliği örneklemesi ve silme kodlaması için orijinal makaleleri 2017'de yazmıştım. 
 
-#### Casper ve Rollup ölçeklendirmesi (25:27) {#casper-and-rollup-scaling-2527}
+### Casper ve Rollup ölçeklendirmesi (25:27) {#casper-and-rollup-scaling-2527}
 
 GitHub'ı kurcalarsanız, `simple_casper` adlı dizini arayabilir ve Serpent ile yazılmış sözleşmeleri bulabilirsiniz. Burada Serpent'i kimler hatırlıyor? Burada kimler Serpent kullanıyor? Yani, bence Python gerçekten çok güzel, ama bunu istiyorsanız Vyper ile kodlamalısınız. Vyper aslında harikadır ve oldukça gelişmeye devam etmiştir. 2017'de o deponun içinde, tam soyutlama yapmaya ve Hisse Kanıtı (PoS) mantığını doğrudan bir Akıllı sözleşme olarak yazmaya çalıştık. 31 Aralık 2017'de Bangkok saatiyle 23:20'de bir demo başlattık — Yeni Yıldan önce bir şeyler çıkarmak istedik — ve demo oldukça hızlı bir şekilde bozuldu. Bunlar ilk günlerdi.
 

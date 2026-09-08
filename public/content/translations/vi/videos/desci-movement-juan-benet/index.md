@@ -18,7 +18,7 @@ Một bài thuyết trình của **Juan Benet**, nhà sáng lập Protocol Labs 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=zkXM9H90g_E) do EthCC xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu về khoa học và sự tiến bộ (0:10) {#introduction-to-science-and-progress-010}
+### Giới thiệu về khoa học và sự tiến bộ (0:10) {#introduction-to-science-and-progress-010}
 
 Xin chào mọi người. Tên tôi là Juan. Tôi ở đây để nói về DeSci. Tôi muốn nói về cách chúng ta có thể sử dụng DeSci để tài trợ, tổ chức và mở rộng khoa học. Đầu tiên, đây là những gì chúng ta sẽ thảo luận: Tôi sẽ nói về khoa học nói chung một chút, sau đó tôi sẽ nói về phong trào DeSci là gì, tiếp theo là cách chúng ta có thể tài trợ cho tài sản chung của khoa học. Sau đó là cách DeSci đang tổ chức con người, các dự án và các công việc xoay quanh khoa học. Tiếp đến, tôi muốn nói một chút về quyền truy cập mở và khoa học có thể tái tạo, và tôi muốn kết thúc bằng một lời kêu gọi hành động. Vì vậy, phần này sẽ khá nhanh. Chúng ta có rất nhiều điều cần đề cập, nên tôi sẽ đi nhanh.
 
@@ -34,7 +34,7 @@ Hiện nay, khoa học có vô số vấn đề. Có đủ loại vấn đề v�
 
 Một khi các nghiên cứu được hoàn thành và công bố, chỉ một phần nhỏ trong số đó có thể được tái tạo. Vì vậy, có đủ loại nghiên cứu khoa học đã được xuất bản, được chấp nhận và được cho là đúng, chỉ để sau này phát hiện ra rằng một phần lớn trong số đó thực sự không thể tái tạo được. Do đó, có một cuộc khủng hoảng tái tạo khổng lồ. Và thậm chí có những khám phá khoa học mà các hiện vật của chúng đang bị thất lạc. Hãy nghĩ đến các bài báo, mã nguồn hoặc dữ liệu thực tế liên quan đến một kết quả nào đó đang biến mất khỏi kho tàng kiến thức của chúng ta. Vì vậy, có đủ loại vấn đề xoay quanh khoa học cần được khắc phục, và đây là một phần của những gì DeSci hướng tới. Điều này đang giải quyết một loạt các vấn đề này, không phải toàn bộ, không phải hoàn toàn, nhưng cộng đồng DeSci đang cố gắng giải quyết một số vấn đề trong đó.
 
-#### Phong trào DeSci (5:11) {#the-desci-movement-511}
+### Phong trào DeSci (5:11) {#the-desci-movement-511}
 
 Vậy DeSci là gì? Khoa học phi tập trung (desci) là một phong trào nhằm cải thiện khoa học bằng cách sử dụng công nghệ và công cụ Web3. Hãy nghĩ đến việc có thể sử dụng tất cả sự kỳ diệu của liên kết mã băm, blockchain và hợp đồng thông minh để tạo ra các hệ thống và cấu trúc có thể cải thiện cách chúng ta làm khoa học trên các lĩnh vực trên toàn cầu.
 
@@ -46,7 +46,7 @@ Hiện có một số nhóm đang thực hiện tài trợ công nghệ sinh h�
 
 Hiện cũng có rất nhiều buổi gặp gỡ và hội nghị khác nhau đang tập hợp các cộng đồng này. Những sự kiện như DeSci Day, DeSci Berlin, Schelling Point từ cộng đồng Gitcoin và Funding the Commons. Những hội nghị này đang tập hợp rất nhiều cuộc thảo luận xoay quanh DeSci.
 
-#### Tài trợ cho tài sản chung (10:40) {#funding-the-commons-1040}
+### Tài trợ cho tài sản chung (10:40) {#funding-the-commons-1040}
 
 Hãy nói về việc tài trợ cho tài sản chung. Có thể một số bạn đã thấy biểu đồ này mà tôi từng sử dụng trong quá khứ về hố sâu đổi mới (innovation chasm). Trong quá trình chuyển đổi từ khoa học sang công nghệ, phần DeSci chủ yếu tập trung vào phần bên trái—chỉ phần khoa học—cố gắng nghĩ ra các cấu trúc khuyến khích tốt hơn và các cách tốt hơn để điều phối các nhóm nhằm tạo ra kết quả khoa học tốt hơn. Đáng chú ý là tổng tài trợ R&D toàn cầu, từ một góc độ nào đó, là khá lớn, nhưng từ một góc độ khác, lại không lớn đến thế và không thay đổi nhiều trong vài thập kỷ qua, mặc dù thông lượng và kết quả của công nghệ mà chúng ta đang xây dựng đã phát triển vô cùng mạnh mẽ.
 
@@ -64,7 +64,7 @@ Ví dụ, các nhóm như VitaDAO đang tạo ra một cấu trúc dữ liệu t
 
 Chứng chỉ tác động là một cấu trúc hấp dẫn khác đại diện cho tài trợ hồi tố. Chúng cho phép những người tham gia, một khi họ đạt được một số tác động, có thể đúc một chứng chỉ xoay quanh tác động đó và bán nó trên thị trường cho bất kỳ ai muốn yêu cầu nhận tác động đó. Điều đó cho phép một thị trường đầu cơ xuất hiện, khép kín một vòng lặp xuyên thời gian để tài trợ hồi tố cho những công việc cực kỳ quan trọng. Điều này rất quan trọng vì nhiều khi bạn chỉ nhận ra giá trị của một thứ gì đó rất lâu sau khi công việc đã được hoàn thành.
 
-#### Tổ chức con người và Data DAO (15:28) {#organizing-people-and-data-daos-1528}
+### Tổ chức con người và Data DAO (15:28) {#organizing-people-and-data-daos-1528}
 
 Bây giờ là một vài suy nghĩ nhanh về việc tổ chức con người. Trong quá khứ, GitHub đã cực kỳ thành công trong việc giúp tổ chức khám phá khoa học. Toàn bộ sách giáo khoa và các lĩnh vực đã phát triển thông qua GitHub. Nhiều nhóm đã sử dụng các nguyên thủy cơ bản của GitHub xoay quanh các vấn đề (issues), cộng tác mã nguồn và kiểm soát phiên bản để tổ chức các cộng đồng thực hành và khoa học. Nhưng điều chưa hoàn thiện ở đó là bạn không có cách nào để tạo ra các tổ chức thực hiện nghiên cứu, xử lý vốn hoặc trả tiền cho những người đóng góp.
 
@@ -78,7 +78,7 @@ Bạn có thể nghĩ đến việc đóng gói loại hoạt động và việc
 
 Một vài lưu ý cuối cùng về quyền truy cập mở và khoa học có thể tái tạo. IPFS đã được sử dụng rất nhiều cho nhiều loại công việc khoa học mở. Nó đã và đang hiện thực hóa giấc mơ mở rộng quyền truy cập vào rất nhiều kiến thức khoa học, hỗ trợ các bản sao Wikipedia phân tán, các kho lưu trữ bài báo và tập dữ liệu khổng lồ.
 
-#### Quyền truy cập mở, khoa học có thể tái tạo và lời kêu gọi hành động (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Quyền truy cập mở, khoa học có thể tái tạo và lời kêu gọi hành động (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Chúng ta vẫn chưa hoàn toàn đạt được khả năng tái tạo đầy đủ. Đây là một lĩnh vực cần nhiều nỗ lực hơn, nhưng rất nhiều người đã suy nghĩ về nó. Có những thông số kỹ thuật và ý tưởng thực sự tốt xoay quanh việc sử dụng khả năng tái tạo tiêu chuẩn với IPFS để đóng băng tất cả các tài sản và xây dựng một quy trình có thể tái tạo hoàn toàn. Bạn có thể gọi lại các thí nghiệm cụ thể từ quá khứ, mang lại các máy ảo (VM) hoặc container đã bị đóng băng hoàn toàn, chạy lại tất cả các quy trình dữ liệu và xác minh các thí nghiệm là chính xác.
 

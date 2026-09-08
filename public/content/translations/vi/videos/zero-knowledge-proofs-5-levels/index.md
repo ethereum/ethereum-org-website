@@ -19,13 +19,13 @@ Nhà khoa học máy tính **Amit Sahai**, giáo sư tại Trường Kỹ thuậ
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=fOGdb1CTu5c) do WIRED xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 **Amit Sahai:** Xin chào, tên tôi là Amit Sahai, và tôi là giáo sư khoa học máy tính tại Trường Kỹ thuật Samueli thuộc UCLA. Hôm nay, tôi được yêu cầu giải thích các bằng chứng không kiến thức ở năm cấp độ phức tạp tăng dần.
 
 Bằng chứng không kiến thức là một cách để một trình chứng minh thuyết phục một trình xác minh rằng một tuyên bố nào đó là đúng, nhưng không tiết lộ thêm bất kỳ thông tin nào ngoài việc tuyên bố đó là đúng. Các bằng chứng không kiến thức đang được sử dụng trong các chuỗi khối và tiền mã hóa. Các nhà mật mã học rất hào hứng với không tri thức vì những đặc tính toán học tuyệt vời của nó, nhưng cũng vì khả năng ứng dụng đáng kinh ngạc của nó vào rất nhiều kịch bản khác nhau.
 
-#### Cấp độ 1: trẻ em (0:41) {#level-1-child-041}
+### Cấp độ 1: trẻ em (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Môn học yêu thích của cháu là gì?
 
@@ -55,7 +55,7 @@ Vậy Chelsea, theo lời của cháu, bằng chứng không kiến thức là g
 
 **Chelsea:** Bằng chứng không kiến thức là bằng chứng cho một tuyên bố. Chú không cho họ thấy tại sao hoặc cái gì. Chú chỉ cho họ thấy một phân đoạn nhỏ, hoặc chỉ làm một trò ảo thuật kỳ lạ nào đó không thực sự là ảo thuật, và họ sẽ bị thuyết phục. Và chú không cho họ thấy tại sao, hay bất cứ điều gì tương tự.
 
-#### Cấp độ 2: thanh thiếu niên (3:31) {#level-2-teen-331}
+### Cấp độ 2: thanh thiếu niên (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Vậy cháu đã bao giờ nghe đến thuật ngữ bằng chứng không kiến thức trước đây chưa?
 
@@ -85,7 +85,7 @@ Vậy dựa trên những gì chúng ta đã thảo luận hôm nay, theo lời 
 
 **Teen:** Nó giống như việc chú có một bí mật thực sự quan trọng mà chú muốn ai đó biết, nhưng chú không muốn kể cho họ nghe mọi thứ. Chú có thể sử dụng một bằng chứng không kiến thức để chứng minh cho họ thấy bí mật đó, nhưng không tiết lộ toàn bộ.
 
-#### Cấp độ 3: sinh viên đại học (6:13) {#level-3-college-student-613}
+### Cấp độ 3: sinh viên đại học (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Bạn đang học ngành gì?
 
@@ -131,7 +131,7 @@ Bạn có thể chọn ngẫu nhiên hai quốc gia, và chúng ta sẽ lại ti
 
 **Amit Sahai:** Một ví dụ tuyệt vời là các cuộc bầu cử. Nếu bạn có thể chứng minh rằng một cuộc bầu cử đã được tiến hành chính xác — rằng mọi lá phiếu bỏ phiếu đều được kiểm đếm và tất cả cộng lại thành một người chiến thắng với một tổng số cụ thể — trong không tri thức, thì bạn không phải từ bỏ các lá phiếu thực tế của bất kỳ người nào. Vậy mà mọi người đều có thể thấy rằng nó đã được thực hiện chính xác.
 
-#### Cấp độ 4: nghiên cứu sinh (11:59) {#level-4-grad-student-1159}
+### Cấp độ 4: nghiên cứu sinh (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Thật tuyệt khi có bạn ở đây và được trò chuyện với bạn, Eli. Bạn có thể kể cho tôi nghe một chút về nghiên cứu của bạn không?
 
@@ -165,7 +165,7 @@ Bạn có thể chọn ngẫu nhiên hai quốc gia, và chúng ta sẽ lại ti
 
 **Eli:** Tôi nghĩ đó là một trong những lý do khiến tôi bị thu hút bởi tính toán đa bên. Một trong những vấn đề quan trọng nhất trên thế giới là thực tế có rất nhiều người không tin tưởng lẫn nhau. Việc có thể sử dụng toán học để tạo ra công nghệ cho phép mọi người làm việc cùng nhau mà không cần phải tin tưởng lẫn nhau là một sứ mệnh thực sự thú vị và tuyệt vời.
 
-#### Cấp độ 5: chuyên gia (17:10) {#level-5-expert-1710}
+### Cấp độ 5: chuyên gia (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, thật tuyệt khi được gặp lại anh. Tôi nghĩ lần cuối chúng ta gặp nhau là vào năm 2017 hay khoảng thời gian đó.
 

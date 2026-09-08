@@ -17,7 +17,7 @@ Le premier épisode de la série *Community.eth* d'**Optimist**. Pour célébrer
 
 *Cette transcription est une copie accessible de la [vidéo originale](https://www.youtube.com/watch?v=onCwaj1FM-4) publiée par Optimist. Elle a été légèrement modifiée pour en faciliter la lecture. Les intervenants sont des membres de la communauté Ethereum et n'ont pas tous été identifiés individuellement dans la vidéo.*
 
-#### Qu'est-ce qu'Ethereum ? (0:00) {#what-is-ethereum-000}
+### Qu'est-ce qu'Ethereum ? (0:00) {#what-is-ethereum-000}
 
 **Personne 1 :** Qu'est-ce qu'Ethereum ?
 
@@ -29,7 +29,7 @@ Le premier épisode de la série *Community.eth* d'**Optimist**. Pour célébrer
 
 **Personne 4 :** Ethereum représente beaucoup de choses pour beaucoup de gens.
 
-#### Ce qui fait sa puissance (0:40) {#what-makes-it-powerful-040}
+### Ce qui fait sa puissance (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi :** Le potentiel d'Ethereum est immense car nous ne pouvons même pas le définir. Et je pense que c'est très puissant.
 
@@ -43,7 +43,7 @@ Le premier épisode de la série *Community.eth* d'**Optimist**. Pour célébrer
 
 **Simona Pop :** Ethereum, pour moi, est la prochaine étape dans l'évolution d'Internet.
 
-#### Pourquoi nous construisons (2:00) {#why-we-build-200}
+### Pourquoi nous construisons (2:00) {#why-we-build-200}
 
 **Simona Pop :** Oui, bien sûr, il y a de l'effervescence quand le prix monte, mais les gens et les vrais croyants sont là quand il descend, quand il monte — cela n'a pas vraiment d'importance. Nous le faisons parce que nous croyons sincèrement en ce que nous construisons.
 
@@ -51,7 +51,7 @@ Le premier épisode de la série *Community.eth* d'**Optimist**. Pour célébrer
 
 **Alexis Ohanian :** Nous avons la chance de réinventer tant d'institutions de la société avec une véritable propriété, avec la réelle capacité d'accumuler de la valeur pour le reste de votre vie, pour des générations — pour l'infini, en fait. Je veux vraiment, désespérément, voir cela se concrétiser.
 
-#### La communauté (3:00) {#the-community-300}
+### La communauté (3:00) {#the-community-300}
 
 **Amber Baldet :** Une chose qui distingue vraiment la communauté Ethereum depuis le début, c'est qu'elle n'a pas peur d'être un peu loufoque. Vous le voyez avec les licornes, les couleurs arc-en-ciel amusantes, les danses et les chansons — et cette fantaisie est ce qui donne à l'ensemble de l'écosystème un sentiment d'espoir. Et s'il y a bien une chose dont les gens ont vraiment besoin de nos jours, c'est d'espoir.
 

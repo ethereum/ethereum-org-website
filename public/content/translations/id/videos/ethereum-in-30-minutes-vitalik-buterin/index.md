@@ -18,7 +18,7 @@ breadcrumb: "Ethereum dalam 30 Menit"
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=ei3tDRMjw6k) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:02) {#introduction-002}
+### Pengantar (0:02) {#introduction-002}
 
 Bagus, jadi Ethereum dalam 30 menit. Ini adalah presentasi yang pada dasarnya selalu saya sampaikan di setiap Devcon sejak peluncuran. Yang menarik adalah bagaimana seiring dengan perubahan ekosistem Ethereum, dan seiring dengan perubahan protokol Ethereum, seiring berjalannya waktu, isinya juga pada akhirnya banyak berubah. Jika Anda kembali ke presentasi yang setara dengan ini dari tahun 2015, Anda akan banyak mendengar tentang blok paman (uncle blocks). Tentu saja, blok paman adalah fitur dari Bukti Kerja (PoW). Sekarang kita memiliki Bukti Kepemilikan (PoS), jadi kita tidak lagi memiliki blok paman. Ethereum tentu saja sekarang juga memiliki lapisan 2 (l2), dan pada saat itu presentasi ini tidak akan memuat lapisan 2 (l2) sama sekali. Sekarang kita tahu lapisan 2 (l2) adalah separuh dari ceritanya. Ethereum di atas segalanya adalah ekosistem yang terus berkembang, dan isi dari presentasi ini akan terus berubah seiring dengan perubahan teknologi, dan juga seiring dengan perubahan penekanan ekosistem dari membangun infrastruktur dasar menjadi menaruh fokus yang sangat besar pada aplikasi.
 
@@ -30,7 +30,7 @@ Bagaimana cara kerja komputer dunia? Cara saya memikirkan hal ini adalah lapisan
 
 Lapisan 2 (l2) adalah GPU. Lapisan 2 (l2) adalah Anda semua di ruangan ini yang merupakan bagian dari lapisan 2 (l2) mana pun. Siapa di sini yang merupakan bagian dari lapisan 2 (l2)? Yay. Siapa di sini yang pernah menggunakan lapisan 2 (l2)? Siapa di sini yang pernah menggunakan lapisan 1 (l1)? Bagus, kita semua adalah pengguna di sini. Ada banyak GPU yang berbeda ini, dan Ethereum sang komputer dunia mampu bertahan bersama karena setiap GPU ini terhubung ke mesin kepercayaan melalui sistem bukti optimistik, bukti zero-knowledge, SNARK, STARK, plonk, atau apa pun istilah populernya. Semua sistem ini memastikan bahwa lapisan 1 (l1) mampu memverifikasi tanpa perlu rasa percaya apa yang terjadi di dalam lapisan 2 (l2), dan lapisan 2 (l2) juga mampu membaca tanpa perlu rasa percaya apa yang terjadi di lapisan 1 (l1).
 
-#### Desentralisasi dan keragaman (5:11) {#decentralization-and-diversity-511}
+### Desentralisasi dan keragaman (5:11) {#decentralization-and-diversity-511}
 
 Ada interaksi penting antara kedua komponen ini, dan bersama-sama mereka membentuk Ethereum yang ada saat ini. Apa itu L1? Itu adalah sebuah rantai. Ia menjalankan Bukti Kepemilikan (PoS). Ia tidak rusak. Apa artinya ini? Ethereum L1 adalah rantai yang telah ada secara keseluruhan selama lebih dari sembilan tahun sekarang, dan telah ada dalam bentuk Bukti Kepemilikan (PoS) saat ini selama sedikit lebih dari dua tahun. Salah satu hal yang sangat penting untuk dimiliki oleh lapisan dasar adalah bukti yang jelas bahwa Anda membangun di atas lapisan dasar yang terdesentralisasi, terbuka, kuat, dan kemungkinan akan mempertahankan sifat-sifat tersebut di masa depan. 
 
@@ -42,7 +42,7 @@ Kemudian kita memiliki "tidak teridentifikasi". Tidak teridentifikasi bukanlah s
 
 Satu properti yang sebenarnya telah menjadi jauh lebih baik adalah keragaman klien. Ethereum sekitar lima tahun yang lalu pada dasarnya hanyalah Go Ethereum (Geth). Ketika Anda memiliki ekosistem yang didominasi oleh satu klien, itu sendiri menjadi titik kegagalan terpusat. Siapa di sini yang ingat serangan DoS tahun 2016? Anda bangun jam 5:17 pagi, mendapat panggilan bangun ala militer, turun ke ruang perang, dan seseorang menemukan bug di klien. Seluruh rantai berhenti. Kita memperbaikinya, dan kemudian dua atau tiga hari kemudian seseorang menemukan bug lain. Itu terus berlangsung selama sebulan penuh sampai akhirnya kita harus melakukan percabangan keras. Tetapi selama periode itu, kemampuan Ethereum untuk memiliki dua klien yang berbeda — pada saat itu adalah Geth dan Parity — pada dasarnya menyelamatkan rantai tersebut. Ada kalanya bug akan mengenai Geth tetapi tidak Parity, dan ada kalanya bug akan mengenai Parity tetapi tidak Geth. Ethereum memperoleh banyak keuntungan dari memiliki beberapa implementasi perangkat lunak, dan ini adalah sesuatu yang pada tahun 2024 mungkin berada pada kondisi terbaiknya dalam sejarah Ethereum.
 
-#### Berbagai klien dan ketahanan (10:40) {#multiple-clients-and-robustness-1040}
+### Berbagai klien dan ketahanan (10:40) {#multiple-clients-and-robustness-1040}
 
 Jika kita melihat klien konsensus, yang menangani bagian Bukti Kepemilikan (PoS) dari Ethereum, dan klien eksekusi, yang menangani bagian EVM dari Ethereum, kita dapat melihat klien tunggal dengan pangsa pasar tertinggi adalah Geth, yang berada di sekitar 50%. Apa yang terjadi jika ada bug di klien Ethereum mana pun secara harfiah hari ini, saat ini juga? Periksa apakah Ethereum masih berjalan. Saya akan menebak masih berjalan — saya berani bertaruh 99,99% di PolyMarket. 
 
@@ -56,7 +56,7 @@ Dua tahun lalu, grafik ini lebih buruk. Desentralisasi Ethereum tidak hanya mamp
 
 Jika Anda memiliki 32 ETH, atau kurang jika Anda bergabung dengan sebuah kumpulan, ada semakin banyak opsi kumpulan yang sangat menarik bermunculan — seperti staking regu Obol, yang memungkinkan Anda membuat kumpulan yang lebih kecil dengan teman-teman Anda. Ada banyak cara berbeda bagi Anda untuk menjadi seorang staker, dan jika Anda melakukannya, Anda menjadi bagian dari jaringan node ini yang mengamankan rantai blok Ethereum.
 
-#### Verifikasi node dan skala (15:06) {#node-verification-and-scale-1506}
+### Verifikasi node dan skala (15:06) {#node-verification-and-scale-1506}
 
 Saya rasa begitulah propaganda yayasan menggambarkannya — ia memiliki gajah yang lucu. Jadi sorakan yang bagus untuk gajah itu! Anda juga dapat bergabung dengan jaringan dan membantu mengamankannya. Bahkan jika Anda bukan seorang staker, Anda juga dapat menjalankan node Ethereum di komputer Anda dan secara sukarela memverifikasi rantai tersebut. 
 
@@ -70,7 +70,7 @@ Staking dengan lebih sedikit ETH juga merupakan persyaratan penelitian yang sang
 
 Apa yang berjalan di Ethereum L1? Beberapa aplikasi bernilai tinggi. Banyak keuangan terdesentralisasi (DeFi) bernilai tinggi berjalan di L1. ENS saat ini berada di L1, meskipun semakin banyak melakukan hal dengan lapisan 2 (l2). Orang-orang menyimpan aset di lapisan 1 (l1). Selanjutnya, lapisan 1 (l1) mengelola akar blok, akar state, dan sistem bukti untuk lapisan 2 (l2). Ia mengamankan lapisan 2 (l2). Lapisan 1 (l1) harus cukup kuat untuk menangani operasi lintas lapisan, terutama jika lapisan 2 (l2) gagal. Perbedaan antara lapisan 2 (l2) dan rantai independen adalah bahwa bahkan jika lapisan 2 (l2) Anda diserang 51% atau timnya ditutup, lapisan 1 (l1) tetap berdiri di sana untuk melindungi pengguna. Pengguna dapat membuktikan kepemilikan dan state mereka di dalam lapisan 2 (l2) dan memigrasikannya kembali ke lapisan 1 (l1). 
 
-#### Kecepatan dan peta jalan L2 (20:33) {#l2-speeds-and-roadmaps-2033}
+### Kecepatan dan peta jalan L2 (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Baru-baru ini, ada eksperimen langsung dengan ini. dYdX v3 ditutup baru-baru ini, dan orang-orang L2Beat menulis implementasi perangkat lunak mekanisme penyelamatan mereka sendiri. Tanpa keterlibatan apa pun dari tim dYdX, pengguna dapat mengambil aset apa pun yang mereka miliki di dalam dYdX v3 dan membawanya kembali ke Ethereum L1. Keluar dari lapisan 2 (l2) tanpa keterlibatan tim bukan sekadar teori, ini adalah kenyataan.
 
@@ -82,7 +82,7 @@ Kemudian The Merge. Karena keunikan matematika yang menarik, meskipun rata-rata 
 
 Sejarah Ethereum: November 2013 adalah buku putih. Juli 2015 adalah peluncuran. Sekitar tahun 2018, Ethereum menetapkan perkiraan desainnya untuk Bukti Kepemilikan (PoS) dan pencuplikan ketersediaan data. Makalah asli untuk pencuplikan ketersediaan data dan pengodean penghapusan saya tulis pada tahun 2017. 
 
-#### Casper dan penskalaan rollup (25:27) {#casper-and-rollup-scaling-2527}
+### Casper dan penskalaan rollup (25:27) {#casper-and-rollup-scaling-2527}
 
 Jika Anda menggali GitHub, Anda dapat mencari direktori bernama `simple_casper` dan menemukan kontrak yang ditulis dalam Serpent. Siapa di sini yang ingat Serpent? Siapa di sini yang menggunakan Serpent? Maksud saya, saya pikir Python sangat indah, tetapi jika Anda menginginkan itu, Anda harus membuat kode di Vyper. Vyper sebenarnya hebat dan terus meningkat cukup banyak. Di dalam repo itu pada tahun 2017, kami mencoba melakukan abstraksi penuh dan menulis logika Bukti Kepemilikan (PoS) secara langsung sebagai kontrak pintar. Kami meluncurkan demo pada pukul 23:20 waktu Bangkok pada tanggal 31 Desember 2017 — kami ingin mengeluarkan sesuatu sebelum Tahun Baru — dan demo tersebut akhirnya rusak dengan cukup cepat. Itu adalah masa-masa awal.
 

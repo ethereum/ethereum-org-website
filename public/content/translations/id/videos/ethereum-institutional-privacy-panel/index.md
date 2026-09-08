@@ -18,7 +18,7 @@ Sebuah panel di acara Web3Privacy Now selama Devconnect 2025, dimoderatori oleh 
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=cZqlg4W1Els) yang dipublikasikan oleh Web3Privacy Now. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar Satuan Tugas Privasi Institusional (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Pengantar Satuan Tugas Privasi Institusional (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Halo. Apakah kalian bisa mendengar saya? Baiklah. Keren. Jadi pertama-tama kita akan melakukan pembicaraan pengantar yang sangat singkat — sekitar 3 hingga 5 menit — dan kemudian itu akan mengarah ke panel. Ini adalah pembicaraan yang dipersingkat. Panel sebelumnya banyak berbicara tentang kepatuhan dan privasi dan sebagainya. Saya memberikan pembicaraan sebelumnya di Cyban Congress yang juga menyinggung hal ini, dan akan ada versi yang lebih panjang dari pembicaraan ini di DeFi Day nanti hari ini. Namun, apa yang ingin saya bicarakan adalah privasi institusional di Ethereum.
 
@@ -30,7 +30,7 @@ Satu institusi besar di sini dapat memiliki dampak besar pada ekosistem mana yan
 
 Agar Ethereum dapat melakukan orientasi pada institusi-institusi ini, mereka perlu mengatasi masalah privasi ini. Apa yang kami coba lakukan di Satuan Tugas Privasi Institusional adalah melakukan orientasi institusi ke Ethereum dan memastikan tujuan privasi mereka terpenuhi. Kami melakukan hal-hal seperti lokakarya, mencoba mendemistifikasi ruang ini dan memastikan kami dapat memenuhi kebutuhan institusional khususnya terkait privasi. Artefak pertama yang kami miliki adalah peta privasi institusional ini — kami berbicara dengan institusi besar, memahami kasus penggunaan dan persyaratan bisnis mereka, menjadikannya sumber terbuka (open source) sebanyak mungkin, dan kemudian berbicara dengan vendor di ruang ini untuk menghubungkan institusi ke ruang solusi. 
 
-#### Pengenalan Panel dan Masalah Institusional (5:00) {#panel-introductions-and-institutional-problems-500}
+### Pengenalan Panel dan Masalah Institusional (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Maaf agak cepat, tetapi semoga bisa dipahami. Jadi panel ini memiliki banyak ahli di bidang penelitian, kebijakan, dan rekayasa, dan kita akan berbicara tentang privasi institusional. 
 
@@ -48,7 +48,7 @@ Dari arah lain, *mengapa berada di rantai blok publik?* Ini adalah pasar yang ko
 
 **Amzah:** Ya. Jadi saya bekerja untuk ABN Amro, yang merupakan bank besar di Belanda. Kami memiliki 5 juta pelanggan ritel. Jadi kami sebenarnya tidak sedang membangun sesuatu saat ini secara khusus dalam privasi, tetapi apa yang akan datang sekarang adalah misalnya dompet identitas digital. Biasanya cara kerjanya adalah data disimpan dalam basis data terpusat dan kemudian Anda terhubung dengan penyedia luar atau pihak ketiga, tetapi itu tentu saja tidak benar-benar aman. Jadi kami sudah mulai memikirkan bagaimana kami dapat menggunakan bukti tanpa pengetahuan (ZK-proofs), misalnya, sehingga kami dapat memiliki pengungkapan selektif dengan pihak luar. Dalam hal itu, kami dapat melindungi informasi pelanggan kami dan juga membiarkan mereka terhubung dengan lingkungan Web3 yang lebih luas.
 
-#### Alur Kerja dan Penyimpanan Konkret (10:07) {#concrete-workflows-and-storage-1007}
+### Alur Kerja dan Penyimpanan Konkret (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Oke, bagus. Jika Anda memilih satu alur konkret yang mungkin Anda pedulikan — seperti mungkin beberapa penerbitan obligasi, perdagangan, atau pembayaran perbendaharaan — siapa yang dapat melihat apa tepatnya pada langkah apa, dan apa yang disimpan onchain versus offchain? Mungkin dimulai dengan François.
 
@@ -68,7 +68,7 @@ Di sisi lain, mungkin ada perdagangan posisi antara pemberi pinjaman, dan ada ha
 
 **Amzah:** Ya. Saya sebagian besar setuju dengan apa yang dikatakan Zach. Di masa lalu, ketika institusi memikirkan tentang privasi, mereka hanya akan memulai rantai privat di mana mungkin 20 bank berpartisipasi dan hanya mereka yang dapat melihat apa yang ada di dalamnya. Namun sebenarnya, ini jauh lebih bernuansa. Ini tergantung pada kasus penggunaan, jenis alur apa, dan apa yang perlu diketahui oleh regulator. Anda dapat menempatkan informasi saldo onchain dalam bentuk yang lebih teragregasi menggunakan bukti cadangan (proof of reserves), misalnya.
 
-#### Persyaratan yang Tidak Dapat Dinegosiasikan (15:26) {#non-negotiable-requirements-1526}
+### Persyaratan yang Tidak Dapat Dinegosiasikan (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio dan Amzah, dari bank, tempat, dan regulator, apa saja persyaratan yang tidak dapat dinegosiasikan yang terus Anda dengar berulang kali? Seperti jejak audit, aturan KYC, atau persyaratan pelaporan?
 
@@ -78,7 +78,7 @@ Di sisi lain, mungkin ada perdagangan posisi antara pemberi pinjaman, dan ada ha
 
 **François:** Salah satu pendiri kami menghabiskan berminggu-minggu dengan pelanggan di ruang institusional, dan permintaan tingkat atas yang muncul adalah "kontrol." Siapa yang melihat apa, kapan, dan untuk alasan apa. Dan kemudian Anda menurunkan percakapan tersebut ke dalam detail dan itu menjadi sangat disesuaikan. Bagi kami, ini bagus karena dunia keuangan tradisional telah menghabiskan puluhan tahun membangun praktik akuntansi dan alur AML/CTF mereka. Mereka sangat spesifik tentang kontrol tersebut. Jadi kami membangun kemampuan tersebut di lapisan protokol dan mendukung pelanggan dalam perjalanan mereka.
 
-#### Pertukaran (Trade-offs) dan Likuiditas Global (18:10) {#trade-offs-and-global-liquidity-1810}
+### Pertukaran (Trade-offs) dan Likuiditas Global (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Apa pertukaran utama yang saat ini Anda jalani? Kinerja versus privasi, atau likuiditas global versus kontrol pengetikan, atau transparansi onchain versus catatan offchain? Dimulai dengan Zach.
 
@@ -88,7 +88,7 @@ Di sisi lain, mungkin ada perdagangan posisi antara pemberi pinjaman, dan ada ha
 
 Tentu saja, ada kompleksitas. Kami sangat peduli dengan pengalaman layanan premium (white-glove) untuk institusi yang memasuki pasar tersebut, sehingga mereka dapat memiliki kondisi mereka sendiri. Salah satu tantangannya adalah keseimbangan antara privasi dan ketahanan terhadap ancaman. Ada aktor ancaman yang ada di dunia Web3, dan kami ingin menanganinya dengan lebih baik untuk menawarkan pengalaman yang fantastis. Kami mendekati desentralisasi dengan hati-hati — kami tahu cara melakukannya, tetapi kami akan melakukannya pada saat yang paling melayani pelanggan.
 
-#### Kepercayaan Sistem dan Pendorong Adopsi (20:47) {#system-trust-and-adoption-drivers-2047}
+### Kepercayaan Sistem dan Pendorong Adopsi (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, bagaimana Anda membuat solusi ini dipercaya dan dapat digunakan oleh institusi dan pemerintah?
 
@@ -98,7 +98,7 @@ Tentu saja, ada kompleksitas. Kami sangat peduli dengan pengalaman layanan premi
 
 **Amzah:** Bagi kami, sangat penting bahwa itu dapat disesuaikan. Rantai blok tidak lagi hanya satu kasus penggunaan di mana semuanya sepenuhnya publik atau sepenuhnya privat. Ini bukan satu ukuran untuk semua. Yang juga paling penting bagi kami adalah mematuhi regulasi. Sektor perbankan di Eropa sangat diatur, dan jika ada sesuatu yang tidak benar mengenai privasi, itu tidak akan diterima oleh regulator.
 
-#### Menatap ke Depan ke 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Menatap ke Depan ke 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Baiklah, kita hampir sampai di penghujung acara. Apa satu blok bangunan — secara teknis, operasional, atau kebijakan — yang menurut Anda akan secara bermakna mempercepat adopsi institusional? Dan jika kita bertemu lagi pada tahun 2026, menurut Anda apa yang realistis yang akan terjadi tahun ini?
 
@@ -110,7 +110,7 @@ Tentu saja, ada kompleksitas. Kami sangat peduli dengan pengalaman layanan premi
 
 **François:** Jika kita bertemu dalam setahun, saya ingin telah meluncurkan Mainnet Miden di musim semi, sehingga kita dapat merayakannya. Di luar ini, saya ingin kita berada di jalur menuju desentralisasi penuh. Ini akan membutuhkan upaya bersama. Hal inti yang ingin saya lihat terjadi adalah lebih banyak keterlibatan. Gagasan bahwa privasi bertentangan dengan kepatuhan tidaklah benar, tetapi menyatukan keduanya membutuhkan kerja keras. Kami ingin institusi membantu membentuk jenis pasar yang ingin mereka lihat, karena kami tahu ini akan menjadi berantakan dan khas dengan kebutuhan mereka.
 
-#### Pemikiran Penutup (28:05) {#closing-thoughts-2805}
+### Pemikiran Penutup (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Saya hanya ingin memberi Anda masing-masing 10 hingga 20 detik untuk menyebutkan sesuatu yang terjadi minggu ini atau promosi singkat sebelum kita selesai.
 

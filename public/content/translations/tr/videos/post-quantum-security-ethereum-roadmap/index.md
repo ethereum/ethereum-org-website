@@ -17,7 +17,7 @@ breadcrumb: "Kuantum Sonrası Yol Haritası"
 
 *Bu döküm, ETHBoulder tarafından yayınlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=RBQwELDHXWk) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiştir.*
 
-#### EF ilerlemesi ve kültürel değişim (0:12) {#ef-progress-and-the-cultural-shift-012}
+### EF ilerlemesi ve kültürel değişim (0:12) {#ef-progress-and-the-cultural-shift-012}
 
 Bazılarınız buraya Ethereum Vakfı'nın vizyonu ve yönü hakkında bir şeyler duyacağınız düşüncesiyle gelmiş olabilir. Bana daha önce kuantum sonrası para hakkında konuşacağım söylendi, bu yüzden buna hazırlandım, ancak diğeri için de hızlıca slaytlar hazırladım. Bu yüzden belki ikisinin de üzerinden hızlıca geçeriz — sanırım 20 ila 25 dakikam var.
 
@@ -29,7 +29,7 @@ Ethereum'un kurumsal yönü 2025'te çok önemliydi. Kurumlar için çok kritik 
 
 Trilyon Dolarlık Güvenlik girişimi büyük bir çabaydı — güvenlik yönlerindeki en büyük sıkıntılı noktalar için ekosistemi gözden geçirmek. Sonra iki çatallanma yayınladık. Ekosistemden gelen büyük bir geri bildirim, zamanında yayınlamadığımız, bazen bir çatallanma sunmamızın bir buçuk yıl sürdüğüydü. Bu yüzden yılda iki çatallanma sunabileceğimizi gösterdik ve belki bu yıl bunu tekrarlayacağız — belki daha çok dokuz ayda bir gibi olacak, ama iyi bir yöne gidiyor. Gizlilik kümesi değişiklikleri hala yapılandırılıyor. Dünya çapında kutlanan Ethereum'un 10 yılı hakkında konuştuk. Merkeziyetsiz yapay zeka ekibi kuruldu. Dış ekiplerle fiziksel merkezler başlattık — çoğu durumda Ethereum Vakfı tarafından ya hiç fonlanmıyorlar ya da zar zor fonlanıyorlar. Yerel ekiplerin yerel sponsorlarla, genellikle VC'lerle veya canlı topluluklarla kendi kendilerine yetebilmeleri için çok baskı yapıyoruz. Ve zkVM'ler gerçekten büyük bir konuydu.
 
-#### 2026 stratejisi ve öncelikleri (4:30) {#2026-strategy-and-priorities-430}
+### 2026 stratejisi ve öncelikleri (4:30) {#2026-strategy-and-priorities-430}
 
 Haziran ayında Protokol değişikliklerini duyurduk. Mayıs ayında Trilyon Dolarlık Güvenlik girişimini duyurduk. Bu, yakın zamanda başlatılan gösterge paneli — daha çok 2026 için yapılan bu çalışmanın bir sonucu. Hazine politikası Haziran ayında duyuruldu. Sanırım bir veya iki hafta içinde bunun daha fazla sonucunu göreceğiz — merkeziyetsiz finans (DeFi) koordinasyon ekibini duyuracağız. Sonunda o ekip için bazı önemli işe alımlar yaptık. Vakıfta DeFi'yi destekleyecek kişiler için çok heyecanlıyım. Ayrıca, doğrulayıcıları Ana Ağ'a itmek için bir sırada olduğumuzu yeni öğrendim, bu nedenle Ethereum Vakfı kendi ETH'sini stake etmek için bazı doğrulayıcıları sürdürecek. Bunlar hazine politikasının iki parçası. Yapay zeka ekibi yakın zamanda, ajan yapay zekayı desteklemek için Ana Ağ'a inen çok zamanında ERC-8004'ü duyurdu.
 
@@ -39,7 +39,7 @@ Kurumsal Ethereum için sertifikalar ve kimlik bilgileri — kurumların dünya 
 
 ETHBoulder, ETHDenver — burada olmak, EF'den çok daha fazla insanı gelip sunum yapması ve herkesle tartışması için göndermek bizim çabamızın bir parçası. New York City'nin kurumsal tarafta Ethereum'u ağırlaması — vakıftan bağımsız olarak, EVE Global New York'taki büyük konferansı yürütüyor ve 6.000 ila 8.000 kişi planlıyor. Dünya çapındaki politika yapıcıları ve düzenleyicileri destekleyebilmemiz için geçen yıl küresel politika destek ekibi başlatıldı. DeFi koordinasyon ekibi önümüzdeki hafta faaliyete geçiyor. Platform ekibi, Ethereum'un L2'lerin üzerine inşa edebileceği en iyi platform olduğu hakkında konuşmakla ilgili — iki hafta önce strateji, yol haritası ve teknolojiyi tartışmak için bir araya gelen 70'ten fazla kişi, 20'den fazla L2 vardı. EFCC'de ihraç yuvarlak masa tartışması geliyor ve umarım DevCon Mumbai aracılığıyla Ethereum'daki kültür ve sanat hakkında da çok konuşuruz.
 
-#### Kuantum sonrası neden şimdi önemli (8:30) {#why-post-quantum-matters-now-830}
+### Kuantum sonrası neden şimdi önemli (8:30) {#why-post-quantum-matters-now-830}
 
 Bu, ekibimin bana hakkında konuşmam gerektiğini söylediği konu, ki bu biraz komik çünkü bu konuda kendimi en güçlü hissetmiyorum — fikri anlıyorum, bizim için neden süper önemli olduğunu anlıyorum ve nedenini açıklamaya çalışıyorum. Ancak teknik olarak, EIP seviyelerinde tam olarak ne yaptığımızı veya ekibin nasıl teslim ettiğini bilmiyormuşum gibi hissettim. Bu hazırlıksız olduğum anlamına gelmiyor — bugün bunu sizin için hazırlamak ve ekibin bana gönderdiği tüm materyalleri okumak için sekiz saat harcadım. Ancak en iyi şekilde açıklayamadığım bazı teknik detaylar olursa veya birkaç aylık olabilecek bilgiler paylaşırsam beni affetmelisiniz.
 
@@ -47,7 +47,7 @@ Peki kuantum sonrası neden şimdi bu kadar önemli? Belki de zaman çizelgeleri
 
 Şu anki çabamızın büyük bir kısmı, kuantum sonrası güvenlik için planlama, araştırma, programlama ve yol haritaları oluşturmaya ne kadar iş koyduğumuzu göstermektir. Bitcoin özellikle kuantum sonrası tehditler konusunda çok endişeli. En büyük endişe, toplamda yaklaşık 6 milyon BTC'nin risk altında olmasıdır — bazıları Taproot hesaplarından, yaklaşık 1,9 milyon BTC Satoshi hesaplarından ve diğer eski hesaplardan. Sonra işlemleri imzalama sırasında ele geçirilebilecek anlık hesaplarınız var, ancak bu daha az bir tehdit çünkü kriptografiyi çok hızlı kırabilecek kuantum bilgisayarlara sahip olmanız gerekir. Bu adreslerin çoğunluğu, bu adresleri kırması haftalar süren kuantum bilgisayarlarla bile Bitcoin'de risk altındadır. Bu, özellikle şimdi yapay zeka ivmesiyle daha erken gelirse ne olur diye düşünen insanlar arasında çok fazla belirsizlik yaratıyor. Kuantum etrafında çok sayıda yeni duyuru çok hızlı geliyor ve ayrıca kuantum bilgisayarlar hakkında ne kadar şey bildiğimiz konusunda da belirsizlik var, çünkü bu teknolojinin çoğu hükümetler tarafından gizli modda geliştiriliyor olabilir.
 
-#### Piyasa endişesi ve kurumsal tepki (12:00) {#market-anxiety-and-institutional-response-1200}
+### Piyasa endişesi ve kurumsal tepki (12:00) {#market-anxiety-and-institutional-response-1200}
 
 Devasa belirsizlik. Bazı insanlar yatırımcıların kuantum bilgisayarlar yüzünden BTC satmadığını iddia ediyor, ancak büyük bankalardan ve yatırım fonlarından müşterilerinin tam da bu yüzden "BTC sat" — veya Ethereum — dediğini söyleyen duyurular görüyoruz. Bazı sorunlar "şimdi topla, sonra şifresini çöz" şeklindedir — kuantum bilgisayarlarla mevcut şifrelenmiş trafiğe bakabileceğiniz, gelecekte kullanmak üzere saklayabileceğiniz ve ardından şifresini çözebileceğiniz fikri. Blokzincir tehditlerini düşündüğünüzde — eğer onu gizlilik için, şifreleme için kullanıyorsanız ve ileriye dönük güvenliğiniz olacağını umuyorsanız — bu bir sorundur. Özellikle Monero gibi gizliliğe dayanan zincirler için, pratikte gelecekte zincirin tüm geçmişini, tüm durumları ve geçişleri çözebileceksiniz.
 
@@ -59,13 +59,13 @@ Nick Carter, geliştiricilerin kuantum sonrası güvenlik hakkında düşünme b
 
 İşte Jeff'ten gelen duyuru — kuantumun varoluşsal bir tehdit olduğu gerekçesiyle bir Asya portföyünden %10 BTC tahsisi kaldırıldı. İlk büyük kurumsal portföy örneği, Bloomberg makalesi. Citibank kuantum tehdidini ve trilyon dolarlık güvenlik yarışını duyurdu — sadece Blokzincir değil, bankalarda ve finans kurumlarında kullanılan kriptografi hakkında konuşuyorlardı, ancak Bitcoin ile ilgili risklerden de bahsettiler. Bitcoin'lerin %25'i potansiyel olarak kuantuma maruz kalıyor ve 2034'e kadar işlerin bozulma olasılığı yüksek.
 
-#### NIST standartları ve Vitalik'in uzaklaşma testi (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
+### NIST standartları ve Vitalik'in uzaklaşma testi (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
 
 İşte NIST kuantum sonrası güvenli kriptografi standartlarını — kullanılması gereken imzaları duyuruyor. 2030'a kadar insanların hazır olması gerektiğini söylüyorlar. Sistemler eski imza algoritmalarını kullanımdan kaldırmalı ve 2035'e kadar bunlar tamamen yasaklanmalı. Bu, o zamana kadar kesinlikle tehdit oluşturan kuantum sonrası bilgisayarlara sahip olacağımız anlamına gelmez, ancak beklenti o zamana kadar herkesin — kurumların, devlet kurumlarının, ABD'deki lisanslı operatörlerin — hazır olmasıdır.
 
 Vitalik, kuantum sonrası güvenliği Ethereum için uzaklaşma testinin çok önemli bir gerekliliği olarak gösteriyor — kuantum güvenli olmadıkça Ethereum'u kemikleştiremeyiz, çünkü gerçekten her şey bozulur. Önümüzdeki birkaç yıl içinde, çok önemli bir teslimat seti tüm Ethereum yığınını kuantum güvenli hale getirmektir — tüm yönleriyle: imzalar, Veri kullanılabilirliği, yürütme katmanındaki imzalar ve mutabakat katmanındaki imzalar.
 
-#### Kuantum sonrası imza şemaları (17:30) {#post-quantum-signature-schemes-1730}
+### Kuantum sonrası imza şemaları (17:30) {#post-quantum-signature-schemes-1730}
 
 Ethereum Vakfı araştırma forumunda, önerilen işlem imza şemaları ve Ethereum'da hesap soyutlama tarafından kuantum sonrası güvenliğe nasıl yaklaşılacağı hakkında konuşan bir dizi blog yazısı var. İlk olarak, Falcon kafes tabanlı bir imza şemasıdır — NIST tarafından standart olarak önerilen şemalardan biri. İyi yanı, EVM bağlamında Gaz maliyetlerini kesinlikle en kötü senaryolara göre hesaplamak istemediğiniz durumlarda önemli olan, çok iyi tanımlanmış en kötü durum çalışma süresine sahip olmasıdır. Ethereum'da ölçeklendirmeyi düşündüğünüzde, her zaman ortalamaya değil, en kötü durum senaryosuna bakarız. Ortalama performansı düşünmek güzel olurdu, ancak bunun bir önemi yok çünkü bunu yaptığınız an, saldırgan ağı özellikle en kötü durumu tetiklemek için tasarlanmış işlemlerle dolduracaktır. Bu yüzden o en kötü durumun ne olduğunu bilmek önemlidir.
 
@@ -73,19 +73,19 @@ Kötü olan şey, Falcon imzalarının ve birçok kuantum sonrası imzanın çok
 
 Toplama ile ilgili sorunlar da var — Falcon tabanlı imzalar için toplama çözümleri var, ancak verimliliği daha da düşürüyorlar. Gerçekten önerilen şey hash tabanlı çoklu imza çözümleridir. Mutabakat katmanındaki Ethereum XMSS'yi seçiyor. Ethereum araştırması şimdi XMSS etrafında çözümler öneriyor — Lean Ethereum yol haritası için çoğunlukla üzerinde çalışılan şey buydu. Lean Ethereum'u çekirdek geliştirme Protokolü yol haritası teklifine entegre ediyoruz, bu da Tüm Çekirdek Geliştiricilere (All Core Devs) inceleme için kuantum sonrası bir güvenlik yol haritası önereceğimiz anlamına geliyor. Uygulamalarımız var ve yürütme hızı konusundaki hedefleri ve metrikleri takip ediyoruz.
 
-#### Geçiş zorluğu (20:30) {#the-migration-challenge-2030}
+### Geçiş zorluğu (20:30) {#the-migration-challenge-2030}
 
 Ethereum'daki kuantum sonrası çalışmaların gereksinimlerine geri dönersek — tehditlerin tam olarak ne olduğunu, ne tür saldırıların gerçekleştirilebileceğini bilmek ve hesaplar için çok öngörülebilir geçiş yollarına sahip olmak. Bu, kuantum sonrası güvenlikle ilgili en büyük sorunlardan biridir. Blokzincirdeki mevcut tüm hesapları almalı ve kullanıcıların bir şekilde kuantum sonrası imza şemalarına yükseltme eylemini gerçekleştirmesini sağlamalısınız. Herhangi bir işlem yapmazlarsa, hesaplar risk altındadır. Bu hesaplar ölü olsa bile — kayboldukları için kimse anahtarları tutmuyor — bu hala bir sorundur çünkü kuantum saldırıları bu anahtarları kurtarabilir. Bu, teknoloji etrafında genel bir belirsizlik hissi ve ek risk yaratabilir.
 
 Ethereum'da bazı çözümler var — acil durum yaklaşımı. Birisi anahtarları tutuyorsa, büyük olasılıkla ön görüntüyü — kurtarma ifadesini de tuttuğunu varsayarsınız. Böylece, insanların açık anahtarı oluşturan kurtarma ifadesini tuttuklarını ZK ile kanıtladıkları acil durum yaklaşımını yapabilirsiniz. Ardından, birisi kanıtı gönderene kadar bu hesapları kilitleyebilirsiniz. Ancak, bir kurtarma ifadesi olmadan doğrudan anahtar oluşturanların fonlarını asla kurtaramayabilecekleri riskini hala alıyorsunuz.
 
-#### Performans, biçimsel doğrulama ve uygulama ilerlemesi (23:00) {#performance-formal-verification-and-implementation-progress-2300}
+### Performans, biçimsel doğrulama ve uygulama ilerlemesi (23:00) {#performance-formal-verification-and-implementation-progress-2300}
 
 Şu anda çok hızlanan biçimsel doğrulama ile bir dizi uygulamaya sahip olmak istiyoruz. Yapay zeka sayesinde çok hızlı yapılan biçimsel doğrulama örneklerimiz oldu. Performans değişikliklerini — Blok alanı değişikliklerinin ekonomisini analiz etmek istiyoruz. İmzaların ne kadar hızlı doğrulanabileceği ve yürütmek için donanım maliyetinin ne olduğu. İyi olan şey, katman 1 (L1)'i ölçeklendirerek yeni tür imzalar için daha fazla alan yaratmamızdır. Kuantum sonrası şemalardaki daha büyük imzalar nedeniyle temel işlemler bugünden 10 ila 20 kat daha pahalı olabilir. Genel olarak tüm ekosistemin hazır olmasını bekliyoruz — cüzdanlar, doğrulayıcılar, operatörler — herkes geçiş yapar ve birlikte yükseltmeye hazırdır. Bir şey araştırma ve uygulamaları yapmaktır; diğeri ise tüm geçiş sürecidir. İlk kısım iki ila üç yıl sürebilirse, insanlar gerçekten bir acil durum olduğunu hissetmedikçe entegrasyon iki ila üç yıl daha sürecektir.
 
 Çalışma hakkındaki yanlış anlamalar nelerdir? Gerçekten işaret etmeyi sevdiğim ilki — eylemin bir noktada sınırlı olabilmesi, halihazırda çok fazla iş yapılmadığı anlamına gelmez. Araştırmacılar basit değişiklikler ve kademeli iyileştirmelerle ilerlemeye karar verebilirler, ancak bu, tüm detayların üç veya dört yıllık bir incelemesinin ve tüm olasılıkların ve saldırıların çok iyi anlaşılmasının bir sonucudur. Yanlış anlama, bunu tek bir değişiklikle yapacağımızdır — büyük olasılıkla zaman içinde değiştirilen bir dizi değişiklik ve birden fazla modül olacaktır.
 
-#### Tam yol haritası ve geliştirici ağı ilerlemesi (25:29) {#the-full-roadmap-and-devnet-progress-2529}
+### Tam yol haritası ve geliştirici ağı ilerlemesi (25:29) {#the-full-roadmap-and-devnet-progress-2529}
 
 Bu, yaptığımız şeylerin hızlı bir incelemesidir — mutabakat katmanı, Lean EVM, Lean Spec. Üzerinde çalıştığımız üç şey. Yeni imzalar için ön derlemeler de var. İşte yol haritası — Bangkok'ta sunulduğunda, insanlar Ethereum'un yavaş olduğunu ve yol haritaları hakkında çok yavaş düşündüğünü söylediler. Ancak şimdi, kuantum sonrası için birçok hazırlığın zaten iki yılı geride bıraktığımızı gösteriyor ve insanları sakinleştirmeye başlıyor çünkü "oh, zaten yarı yoldayız ve çözümleri inşa ediyoruz" diyorlar. Yani o yol haritası sonuçta o kadar da kötü değildi — Ethereum takip edildiğini gösteriyor.
 

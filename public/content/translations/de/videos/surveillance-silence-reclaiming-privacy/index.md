@@ -18,11 +18,11 @@ Eine Keynote von **Naomi Brockwell** auf der EthBoulder 2026 über die Erosion d
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=nvJSFR1Q_JE), das von EthBoulder veröffentlicht wurde. Es wurde für eine bessere Lesbarkeit leicht bearbeitet.*
 
-#### Zweiteiliger Vortrag: Warnung + Lösung (00:00) {#two-part-talk-warning-solution-0000}
+### Zweiteiliger Vortrag: Warnung + Lösung (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Wunderbar. Willkommen zusammen. Vielen Dank, dass ihr hier seid. Dies wird also ein zweiteiliger Vortrag sein. Im ersten Teil könnte es ein wenig intensiv werden. Ich bin dafür bekannt, ziemlich intensiv zu werden, wenn es um Vorträge über Privatsphäre und Überwachung geht. Der zweite Teil wird einen etwas anderen Ton anschlagen. Im ersten Teil werde ich euch also eine Geschichte erzählen und im zweiten Teil werden wir die Welt retten. Wenn ihr also alle damit einverstanden seid, können wir anfangen.
 
-#### Des Kaisers neue Kleider (00:44) {#the-emperors-new-clothes-0044}
+### Des Kaisers neue Kleider (00:44) {#the-emperors-new-clothes-0044}
 
 Also, erster Akt. Beginnen wir mit dem ersten Akt unserer Geschichte. Der Zauber. Es war einmal ein Kaiser, dem prächtige neue Kleider verkauft wurden. Der Verkäufer sagte ihm: „Diese Gewänder sind besonders. Nur die Intelligenten und Tugendhaften können sie sehen, und jeder, der für sein Amt ungeeignet ist, wird überhaupt nichts sehen.“ Der Kaiser konnte keine Kleider sehen, aber er hatte Angst, es zuzugeben. Das zu sagen würde bedeuten, einzugestehen, dass er nicht würdig war zu herrschen, also sagte er nichts. Und als der Kaiser in der Öffentlichkeit erschien und durch die Straßen paradierte, konnte auch sonst niemand die Kleider sehen. 
 
@@ -32,7 +32,7 @@ Also, im Kern, lassen Sie uns hierhin zurückkehren. Im Kern geht es in dieser G
 
 Nun, in unserer Geschichte dachte jeder, dass vielleicht er selbst das Problem sei. Also verließen sie sich auf ihre Nachbarn und nahmen an, dass, wenn etwas wirklich falsch wäre, jemand anderes zuerst etwas gesagt hätte. Jeder unterwarf sich der Weisheit der Masse. Und das war eine schlechte Strategie, denn die Masse lag falsch. Der Kaiser war nackt. Und weil alle schwiegen, ersetzte Konsens die Wahrheit. Das Schweigen der Masse wurde zum Beweis dafür, dass alles in Ordnung war. Nun, genau so bricht die Privatsphäre in der modernen Welt zusammen.
 
-#### Die Maschine (02:46) {#the-machine-0246}
+### Die Maschine (02:46) {#the-machine-0246}
 
 Also, zweiter Akt, die Maschine. Hier ist die moderne Version der Geschichte. Wir leben unter dem größten Datenerfassungsregime der Menschheitsgeschichte. Wir haben eine Überwachungsinfrastruktur aufgebaut und füttern sie weiter, wie sie die Welt noch nie zuvor gesehen hat. Und die Richtung, in die wir uns bewegen, ist ein Rezept für eine Katastrophe. Warum ist das so? Weil es im Moment nur dann ein gutes Ende nimmt, wenn wir garantieren können, dass niemals jemand Böses die Kontrolle über dieses System erlangt. Aber wenn jemand Böses irgendwann die Kontrolle erlangt, ist das wie eine Atomwaffe aus potenzieller Energie, gefüllt mit allen Zutaten, die nötig sind, um eine Bevölkerung vollständig zu kontrollieren. 
 
@@ -42,13 +42,13 @@ Es fühlt sich unbehaglich an, oder? Und wir spüren es, wenn eine App nach Zugr
 
 Wir spüren, dass etwas nicht stimmt, wenn wir eine Datenschutzrichtlinie überfliegen und wissen, dass wir sie sorgfältig lesen sollten. Da steht wahrscheinlich etwas Wichtiges drin. Und tatsächlich steht dort schwarz auf weiß, dass sie diese intimen Daten absolut weitergeben werden, und wir wissen nicht einmal an wen, aber wir klicken trotzdem auf Akzeptieren, denn schließlich kann es nicht so schlimm sein, sonst wäre das Akzeptieren dieser Dinge nicht der Status quo, oder? Wenn es so schlimm wäre, würde das nicht einfach jeder machen.
 
-#### Wie schlimm ist der Status quo? (05:12) {#how-bad-is-the-status-quo-0512}
+### Wie schlimm ist der Status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Wie schlimm ist der Status quo also? Wie schlimm ist das alles wirklich? Oder vielleicht sollten wir darüber sprechen, weil einige Leute denken, dass es nur darum geht, dass Unternehmen versuchen, uns ein besseres Paar Schuhe zu verkaufen. Das ist doch nur so ein Konsumentending, oder? Oder vielleicht geht es nur darum, dass Social-Media-Unternehmen etwas über uns lernen, um einen feiner abgestimmten Algorithmus zu entwickeln, richtig? Das scheint nicht so dramatisch zu sein. Was ist das Problem an all dem?
 
 Aber im Moment stimmen wir alle einer allgegenwärtigen Überwachungsmaschinerie zu, die still und leise in jeden privaten Bereich unseres Lebens eindringt. An einigen Orten, wie in autoritären Regimen, wird diese Maschinerie genutzt, um abweichende Meinungen zu kontrollieren, bevor sie entstehen, indem potenziell problematische Personen als wahrscheinlicher für den Beitritt zu einer Protestbewegung markiert und dann ins Visier genommen werden. Manchmal wird diese Maschinerie genutzt, um die öffentliche Stimmung zu formen, Meinungen zu beeinflussen, Wahlen zu manipulieren oder ganze Bevölkerungen dazu zu bringen, bestimmte Arten von Menschen zu hassen, indem man sie davon überzeugt, dass diese Gruppen sie hassen. Und dann gibt es Länder, die öffentlich Informationen über Bürger verbreiten, deren Sozialkredit-Punkte gesunken sind, und diese Punkte dann nutzen, um ihre Reisefreiheit einzuschränken, ihre Beschäftigungsmöglichkeiten zu begrenzen, ihren Kindern den Zugang zu bestimmten Schulen zu verwehren oder sie komplett von Chancen abzuschneiden.
 
-#### Datenerfassung im Billionen-Dollar-Maßstab (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Datenerfassung im Billionen-Dollar-Maßstab (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Und jetzt, mit der KI-Revolution, ist die Maschine nicht mehr nur eine Aufzeichnung Ihres Lebens, sondern wird zu einer Vorhersagemaschine. Deshalb ist das so wichtig. Ich möchte das für Sie konkret machen. Ich werde also einfach mal den aktuellen Zustand der Überwachung durchgehen. 
  
@@ -56,7 +56,7 @@ Ich werde die Maschine in drei Teile zerlegen. Erstens: die Erfassung. Wie diese
  
 Aber nehmen wir an, Sie haben wirklich Glück und entgehen der Zielerfassung dieses Systems. Aber Ihre Kinder werden ihr wahrscheinlich nicht entgehen, und Sie haben keine Ahnung, ob sie es tun werden oder nicht. Und diese Maschinerie, der Sie heute zustimmen, verschwindet nicht. Sie wissen nicht, wer morgen das Sagen haben wird.
 
-#### Wie diese Informationen geleakt werden (08:03) {#how-this-information-is-leaked-0803}
+### Wie diese Informationen geleakt werden (08:03) {#how-this-information-is-leaked-0803}
  
 Kategorie zwei ist also, wie diese Informationen dann geleakt werden. Jedes Jahr erreicht die Zahl der Datenlecks ein neues Rekordhoch. Dabei werden alle möglichen Informationen geleakt, die Unternehmen gar nicht erst hätten sammeln dürfen. Also Standortverläufe und Krankenakten, Finanzdaten, private Nachrichten, und diese Informationen geraten in Umlauf und landen alle im Darknet, wo sie von organisierten Kartellen, kriminellen Banden und staatlichen Hackern genutzt werden. 
 
@@ -68,7 +68,7 @@ Und dennoch entscheiden sich Unternehmen weiterhin dafür, all diese unnötigen 
  
 Das ist also die Menge, die bei der Parade klatscht, richtig? Nicht, weil wir sicher sind, dass jeder Klick und jedes Akzeptieren sicher ist. Sondern weil es sich schwieriger anfühlt, sich zu wehren und auszusteigen oder die Tools zu wechseln, als einfach mitzumachen.
 
-#### Hintertüren & staatliches Abhören (09:33) {#backdoors-government-interception-0933}
+### Hintertüren & staatliches Abhören (09:33) {#backdoors-government-interception-0933}
  
 Lassen Sie uns nun über diesen dritten Bereich sprechen: die Nutzung als Waffe. Feindliche ausländische Geheimdienstoperationen haben bereits die Kernkommunikationsinfrastruktur infiltriert. Ich habe mich vorhin erst mit Leuten über Salt Typhoon unterhalten, nicht wahr? China zum Beispiel fängt unsere Anrufe und Nachrichten in großem Stil ab. 
 
@@ -78,7 +78,7 @@ Wir wissen, dass es für Regierungen nicht möglich ist, sicherzustellen, dass s
 
 Wir wissen von einem davon, Salt Typhoon, aber wir haben keine Ahnung, wer unsere sensiblen, intimen Kommunikationen in genau dieser Infrastruktur, auf die wir uns verlassen, gesammelt hat.
 
-#### Warum Überprüfung seltener ist, als man denkt (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Warum Überprüfung seltener ist, als man denkt (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Der Kaiser ist also nackt, und der einzige Grund, warum das alles weitergeht, ist, dass die Menge weiter klatscht. Aber es gibt noch einen anderen Grund, warum die Menge weiter klatscht. 
  
@@ -112,7 +112,7 @@ Wie viele Hunderte Millionen Menschen nutzen also Apple-Produkte, und ein einzig
 
 Es gibt eine weitere Präsentation, in der der Vater von jemandem einen dieser Home-Hubs mit nach Hause brachte, richtig? Sie beschloss, ein paar Untersuchungen anzustellen. Manchmal spielt sie mit den verschiedenen Geräten im Haus herum und wollte herausfinden, wie es funktioniert. Und es stellte sich heraus, dass dieses beliebte Verbrauchergerät, das jeder kaufen konnte, als Knotenpunkt in einem massiven chinesischen Botnetz verwendet wurde. Dann sieht das FBI eine Präsentation. Letztendlich nehmen sie eine Präsentation offline und stufen die Untersuchung als geheim ein. Sie wussten nicht, dass dies vor sich ging, aber sie war diejenige, die sie darauf aufmerksam machte, indem sie einfach diese Präsentation hielt, so nach dem Motto: „Hey Leute, ich habe herausgefunden, dass hier seltsame Dinge vor sich gehen.“ Und so finden wir heraus, dass ein massives chinesisches Botnetz durch dieses eine spezifische Gerät in all unsere Häuser eindringt. Was ist mit all den anderen Geräten in unserem Zuhause, die sich noch niemand die Mühe gemacht hat, überhaupt anzusehen?
 
-#### Das Problem des Schweigens & falscher Konsens (16:30) {#the-silence-problem-false-consensus-1630}
+### Das Problem des Schweigens & falscher Konsens (16:30) {#the-silence-problem-false-consensus-1630}
 
 Also, das ist der Punkt, an dem wir uns gerade befinden. Überwachung ist heute allgegenwärtig, sie ist unsichtbar, sie ist normalisiert, sie ist gerechtfertigt, und wir betrachten sie als Branchenstandard. Und genau da stehen wir im Moment.
 
@@ -134,7 +134,7 @@ Eric Schmidt von Google hat dieses berühmte, grauenhafte Zitat, in dem er sagt,
 
 Also, achte darauf, was passiert. Privatsphäre wird als Schuld dargestellt und Konformität als Tugend. Die guten Menschen sind diejenigen, die sich dem Zugriff ergeben, und die verdächtigen Menschen sind diejenigen, die Fragen stellen. Und jetzt wird es gesellschaftlich kostspielig, sich zu wehren. Sobald man dem Schweigen dieses moralische Etikett anheftet, läuft die Parade wie von selbst.
 
-#### Wie stoppen wir die Parade des Kaisers? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Wie stoppen wir die Parade des Kaisers? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Kehren wir zu unserer Geschichte zurück. Des Kaisers neue Kleider. Während der Kaiser in seinen neuen Kleidern durch die Straßen marschiert, applaudiert die Menge. Sie bewundern die Handwerkskunst. Sie loben die Eleganz. Sie kommentieren die Schnitte und den Stoff und die Art und Weise, wie die Gewänder das Licht einfangen. Und sie wetteifern darum, am meisten beeindruckt zu klingen. Höflinge beugen sich vor und sind erpicht darauf, dass man ihre Zustimmung bemerkt, Beamte nicken feierlich, und Berater fügen ausschweifendes technisches Lob hinzu und erfinden Details, um zu beweisen, dass sie verstehen, was sie da sehen. Einige sprechen laut in der Hoffnung, belauscht zu werden, und andere lächeln und sagen nichts, bedacht darauf, nicht verwirrt auszusehen. Und niemand möchte der Erste sein, der zögert, und niemand möchte derjenige sein, der offensichtliche Fragen stellt, und mit jedem Kompliment wird es schwieriger, die Lüge rückgängig zu machen.
 
@@ -158,7 +158,7 @@ Die Art und Weise, wie sich dies ändert, besteht also nicht darin, darauf zu wa
 
 Nun, wenn die Leute – wenn genug Leute aufhören zu applaudieren, kann die Parade nicht weitergehen. Und das ist der Teil der Geschichte, den wir hier immer noch schreiben. Also geht es nicht darum, ob der Kaiser keine Kleider anhat. Wir alle wissen, dass er keine Kleider anhat. Die einzige verbleibende Frage ist, ob wir weiter neben ihm herlaufen und so tun, als wäre alles in Ordnung.
 
-#### Teil zwei: Lasst uns die Welt retten (25:22) {#part-two-lets-save-the-world-2522}
+### Teil zwei: Lasst uns die Welt retten (25:22) {#part-two-lets-save-the-world-2522}
 
 Nach dieser eher düsteren Anmerkung nun zu Teil zwei: Lasst uns die Welt retten. Wer möchte eine bessere Zukunft? Wer möchte eine bessere Zukunft für kommende Generationen, für seine Kinder? Wer möchte die Dinge verändern? Denn wir haben absolut die Macht, etwas zu bewirken. 
 
@@ -312,7 +312,7 @@ Jedes Mal, wenn ihr also an diesem Punkt seid, versucht einfach zu sehen, ob es 
 
 Darüber hinaus, wenn der Gesetzgeber dieses Zeug aus der Existenz verbannt, weil niemand dafür kämpft, weil wir alle sagen: „Nun, ich habe nichts zu verbergen.“ Dieses Zeug wird verschwinden.
 
-#### Die Entscheidungen, die wir über die Zukunft treffen müssen, die wir sehen wollen (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Die Entscheidungen, die wir über die Zukunft treffen müssen, die wir sehen wollen (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Ich möchte euch mit diesem Gedanken entlassen, da uns hier langsam die Zeit ausgeht. Im Moment stehen wir an einem Scheideweg, an dem wir einige Entscheidungen über die Welt treffen müssen, die wir sehen wollen. Und ich weiß, dass es viele Menschen gibt, denen diese Systeme unbequem sind, und es scheint nach viel Arbeit auszusehen, die Dinge umzustellen. 
 

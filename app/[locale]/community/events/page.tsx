@@ -55,6 +55,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   const _events = (await getEventsData()) ?? []
 
   const t = await getTranslations("page-community-events")

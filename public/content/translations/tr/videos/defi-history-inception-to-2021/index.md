@@ -18,7 +18,7 @@ breadcrumb: "DeFi Tarihi"
 
 *Bu transkript, Finematics tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=qFBYB4W2tqU) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiştir.*
 
-#### DeFi'ın kökenleri (0:00) {#the-origins-of-defi-000}
+### DeFi'ın kökenleri (0:00) {#the-origins-of-defi-000}
 
 Merkeziyetsiz finansın (DeFi) arkasındaki hikaye nedir? Tüm bunlar nasıl başladı? 2020'de DeFi'da neler oldu? Ve gelecekte nereye gidiyoruz?
 
@@ -26,13 +26,13 @@ DeFi'ın kökeni 2009'a dayanır. Bitcoin'i ilk DeFi protokolü olarak düşünm
 
 Ethereum tarafında, DeFi için ilk önemli olaylardan biri Ethereum ICO'suydu. 22 Temmuz 2014'te Ethereum token satışı bizzat Vitalik Buterin tarafından duyuruldu. 42 günde yaklaşık 18 milyon dolar toplayarak kripto para destekli ilk başarılı kitlesel fonlama kampanyalarından biri oldu. Bu, Ethereum ağının daha da geliştirilmesini sağlayan ve akıllı sözleşmeler ile merkeziyetsiz uygulamaların (dapp) önünü açan önemli bir andı.
 
-#### MakerDAO ve DeFi borç vermenin doğuşu (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
+### MakerDAO ve DeFi borç vermenin doğuşu (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
 
 Bir sonraki önemli dönüm noktası: MakerDAO Aralık 2017'de piyasaya sürüldü. Bu, bugün DeFi ekosistemi olarak adlandırdığımız şeyi başlatan protokollerden biriydi. Özünde MakerDAO, kullanıcıların ETH'yi teminat olarak kilitlemelerine ve buna karşılık ABD dolarına sabitlenmiş bir sabitcoin olan DAI üretmelerine olanak tanıdı. Bu, ilk merkeziyetsiz borç verme ve borç alma protokollerinden birini yarattı ve DAI, DeFi ekosisteminin temel taşı haline geldi.
 
 ERC-20 token standardının oluşturulması da önemliydi. Bu, herkesin Ethereum üzerinde misli (fungible) token'lar oluşturmasına olanak tanıdı. ERC-20 token'ları, çoğu DeFi protokolü yönetişim token'ı, sabitcoin'ler ve diğer dijital varlıklar için standart haline geldi. Ayrıca, yeni protokollerin kendi token'larını çıkarabilmesi ve daha geniş ekosisteme kolayca entegre olabilmesi sayesinde bir inovasyon dalgası sağladılar.
 
-#### ICO dönemi ve ilk borsalar (2:42) {#the-ico-era-and-early-exchanges-242}
+### ICO dönemi ve ilk borsalar (2:42) {#the-ico-era-and-early-exchanges-242}
 
 2017 yılı aynı zamanda Ethereum üzerindeki ilk merkeziyetsiz borsalardan biri olan EtherDelta'nın ortaya çıkışına da tanık oldu. Bir emir defteri konsepti üzerine inşa edilen EtherDelta'nın kullanıcı deneyimi ideal olmaktan çok uzaktı; yavaştı, hatalarla doluydu ve kullanıcı dostu değildi. Buna rağmen EtherDelta, özellikle ICO döneminde ERC-20 token'larının ticareti için en popüler borsalardan biriydi.
 
@@ -51,11 +51,11 @@ ICO bolluğu içinde, bugün DeFi olarak sınıflandıracağımız projeler de v
 
 2017 ICO çılgınlığının kötü şöhretine rağmen, o zamanlar ortaya çıkan projelerden bazıları artık DeFi'daki en iyi protokoller olarak kabul ediliyor.
 
-#### Kullanıcıdan sözleşmeye modeli (4:52) {#the-user-to-contract-model-452}
+### Kullanıcıdan sözleşmeye modeli (4:52) {#the-user-to-contract-model-452}
 
 O zamanki ana atılımlardan biri, kullanıcıların doğrudan diğer kullanıcılarla etkileşime girmek yerine, birden fazla kullanıcıdan havuzlanmış fonlar içeren akıllı sözleşmelerle etkileşime girmesi fikriydi. Bu, temelde merkeziyetsiz uygulamalar için daha uygun olan yeni bir kullanıcıdan sözleşmeye modeli yarattı, çünkü kullanıcıdan kullanıcıya modeli kadar altta yatan blokzincir ile etkileşim gerektirmiyordu.
 
-#### Sessiz dönem ve Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
+### Sessiz dönem ve Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
 
 ICO çılgınlığı bittikten ve ayı piyasası başladıktan sonra DeFi, en azından dışarıdan bakıldığında nispeten sessiz bir dönem yaşadı. Gerçekte, perde arkasında büyük DeFi protokolleri inşa ediliyordu. Ben bu dönemi genellikle "COMP öncesi" olarak adlandırıyorum; Compound'un COMP token likidite madenciliğinin DeFi'da neden büyük bir atılım olduğunu daha sonra öğreneceğiz.
 
@@ -63,7 +63,7 @@ ICO çılgınlığı bittikten ve ayı piyasası başladıktan sonra DeFi, en az
 
 Temmuz 2019'da başka bir önemli olay gerçekleşti: Synthetix, daha sonra 2020 DeFi Yazı'nın temel katalizörlerinden biri haline gelen bir mekanizma olan ilk likidite teşvik programını başlattı. Compound, Ren, Kyber ve 0x dahil olmak üzere diğer birçok DeFi projesi de 2018 ile 2019 yılları arasında protokollerini Ethereum Ana Ağı'nda başlattı.
 
-#### Kara Perşembe (8:07) {#black-thursday-807}
+### Kara Perşembe (8:07) {#black-thursday-807}
 
 12 Mart 2020'de, küresel pandemiye dair korkuların bir sonucu olarak ETH'nin fiyatı 24 saatten kısa bir sürede yüzde 30'dan fazla keskin bir düşüş yaşadı. Bu, henüz yeni doğmakta olan DeFi endüstrisi için en büyük stres testlerinden biriydi.
 
@@ -73,13 +73,13 @@ En çok etkilenen protokollerden biri Maker oldu. Kullanıcıların ETH teminatl
 
 Sonuç olarak, Kara Perşembe gibi olaylar oldukça şiddetli olabilse de, genellikle tüm DeFi ekosisteminin güçlenmesiyle sonuçlanarak onu giderek daha kırılganlık karşıtı (antifragile) hale getirir.
 
-#### DeFi Yazı (9:37) {#defi-summer-937}
+### DeFi Yazı (9:37) {#defi-summer-937}
 
 Bu bizi DeFi Yazı olarak da adlandırılan büyük DeFi büyüme dönemine getiriyor. Ana katalizör, Compound tarafından başlatılan COMP token'larının likidite madenciliği programıydı. Mayıs 2020'de DeFi kullanıcıları, Compound üzerinde borç verme ve borç alma işlemleri için ödüllendirilmeye başlandı. COMP token'ları şeklindeki ekstra teşvikler, farklı token'lar için arz ve borçlanma APY'lerinin dramatik bir şekilde artmasıyla sonuçlandı. Bu aynı zamanda, kullanıcıların mümkün olan en iyi getiriyi elde etmek için farklı token'ları borç alma ve borç verme arasında sürekli geçiş yapmaya teşvik edilmesiyle getiri çiftçiliğinin gelişimini de sağladı.
 
 Bu olay, token'larını likidite madenciliği yoluyla dağıtan ve giderek daha fazla getiri çiftçiliği fırsatı yaratan diğer protokollerin bir dalgasını başlattı. Ayrıca, COMP token'larına sahip kullanıcıların protokole önerilen farklı değişiklikler üzerinde oy kullanabildiği Compound yönetişimini yarattı. Compound'un yönetişim modeli daha sonra diğer birçok DeFi projesi tarafından yeniden kullanıldı.
 
-#### Yearn Finance ve YFI (10:48) {#yearn-finance-and-yfi-1048}
+### Yearn Finance ve YFI (10:48) {#yearn-finance-and-yfi-1048}
 
 Bu bizi başka bir büyük DeFi inovasyonuna getiriyor. 2020'nin başlarında Andre Cronje tarafından geliştirilen Yearn, farklı borç verme protokolleri arasında otomatik olarak geçiş yaparak DeFi yeteneklerini en üst düzeye çıkarmaya odaklanan bir getiri optimize edicidir. Yearn'ü daha da merkeziyetsizleştirmek için Andre, Temmuz 2020'de Yearn topluluğuna bir yönetişim token'ı olan YFI'ı dağıtmaya karar verdi. Token tamamen likidite madenciliği yoluyla dağıtıldı: risk sermayedarları (VC) yok, kurucu ödülleri yok, geliştirici ödülleri yok.
 
@@ -87,7 +87,7 @@ Bu model, teşvik edilen likidite havuzlarına akan paranın kilitlenmiş toplam
 
 DeFi'daki hemen hemen tüm çığır açan projelerde olduğu gibi, Yearn'ün başarısını hızla birkaç küçük değişiklikle benzer projeler başlatan diğer birçok ekip izledi.
 
-#### Gıda DeFi dönemi (11:44) {#the-food-defi-era-1144}
+### Gıda DeFi dönemi (11:44) {#the-food-defi-era-1144}
 
 Benzersiz esnek arz modeli sayesinde ilgi görmeye başlayan bir diğer proje de Ampleforth oldu. Bu model hızla ödünç alındı ve başka bir DeFi protokolü olan Yam tarafından tekrarlandı. Sadece 10 günlük bir geliştirme sürecinin ardından Yam, 11 Ağustos 2020'de piyasaya sürüldü.
 
@@ -99,7 +99,7 @@ Ardından, Ağustos 2020'nin sonunda anonim bir ekip tarafından başlatılan Su
 
 DeFi Yazı boyunca, değişen kalitede birçok başka proje başlatıldı; bunların çoğu, aşırı coşkudan yararlanmaya çalışan mevcut açık kaynaklı projelerin yalnızca yinelemeleriydi. Yam ve SushiSwap'ı takiben, topluca "gıda DeFi" veya "gıda finalleri" olarak adlandırılan, farklı yiyecek türlerinin adını taşıyan bir dizi proje (Pasta, Spaghetti, Kimchi, HotDog ve diğerleri) ortaya çıktı. Hemen hemen hepsi bir veya iki günlük ilgiden sonra başarısız oldu.
 
-#### Uniswap token'ı ve temel metrikler (14:16) {#the-uniswap-token-and-key-metrics-1416}
+### Uniswap token'ı ve temel metrikler (14:16) {#the-uniswap-token-and-key-metrics-1416}
 
 DeFi Yazı'nın son büyük olaylarından biri Uniswap token'ı UNI'nin piyasaya sürülmesiydi. Uniswap'ın önceki tüm kullanıcıları ve likidite sağlayıcıları, değeri bin doların çok üzerinde olan geriye dönük bir airdrop ile ödüllendirildi. Bunun da ötesinde Uniswap, dört farklı likidite havuzunda likidite madenciliği programını başlattı ve çoğu SushiSwap'tan geri alınan iki milyar dolardan fazla likidite çekti.
 
@@ -109,7 +109,7 @@ DeFi Yazı boyunca tüm temel metrikler dramatik bir şekilde iyileşti:
 - DeFi'da kilitlenmiş toplam değer (tvl) Nisan ayında 800 milyon dolardan Eylül ayında 10 milyar dolara çıktı; bu 10 kattan fazla bir artıştı
 - Ethereum'a taşınan Bitcoin miktarı Nisan ayında 20.000'den Eylül ayında neredeyse 60.000'e çıktı; bu 3 katlık bir artıştı
 
-#### DeFi kışı ve toparlanma (15:30) {#defi-winter-and-recovery-1530}
+### DeFi kışı ve toparlanma (15:30) {#defi-winter-and-recovery-1530}
 
 DeFi'ın parabolik yükselişi elbette uzun vadede sürdürülebilir değildi. Piyasa duyarlılığı Eylül 2020'nin başlarında hızla değişti. Büyük DeFi token'ları keskin bir şekilde değer kaybetmeye başladı. Dağıtılan token'ların değerinden elde edilen likidite madenciliği getirileri de giderek düştü. DeFi kışı gelmişti.
 
@@ -119,7 +119,7 @@ Yüzde 50'den fazla hızlı bir toparlanmanın ardından DeFi piyasası yeniden 
 
 2020'nin sonunda, Bitcoin'in önceki 2017 tüm zamanların en yüksek seviyesini kırmasıyla, DeFi başka bir parabolik koşuya hazırlanıyor gibi görünüyordu.
 
-#### 2021 ve ötesine bakış (16:56) {#looking-ahead-to-2021-and-beyond-1656}
+### 2021 ve ötesine bakış (16:56) {#looking-ahead-to-2021-and-beyond-1656}
 
 2021 ve ötesine bakıldığında, DeFi'ın geleceği parlak. DeFi geliştiricileri yeni yenilikçi projeler inşa etmeye devam ediyor. Çok ihtiyaç duyulan ölçeklendirme de Ethereum 2.0, katman 2 (l2) çözümleri ve hatta diğer blokzincirler şeklinde geliyor. Bu, yeni bir kullanıcı grubunun DeFi'a katılmaya başlamasına olanak tanıyacak. Ayrıca, yüksek ağ ücretleri nedeniyle daha önce mümkün olmayan yeni kullanım durumlarının keşfedilmesine de yardımcı olacak.
 

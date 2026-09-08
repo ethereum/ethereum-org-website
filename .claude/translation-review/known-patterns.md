@@ -1026,3 +1026,28 @@ This cost real accuracy. The `ar` choice between `ديفكون` (ف) and `ديڤ
 5. **Never:** other output of this same pipeline (blog.ethereum.org, sibling locale files from the same run) dressed up as corroboration.
 
 Also from the same episode: an LLM's "established form, confidence High" claim is checkable and is sometimes false. Gemini 3.1 Pro asserted that Japanese crypto press "consistently use デブコン, e.g. CoinPost"; every outlet found writes Latin 「Devcon」. Its supporting reasoning was internally broken too -- it cited デベロッパー as evidence for ブ, but that word uses ベ. **Verify "established" claims with one search before shipping the form.** Its bn "established" claim failed the same check; the form was kept on phonetic merit and relabeled derived.
+
+### 77. A ticket-tier proper noun absent from the glossary splits the fleet four ways (PATTERN -- glossary gap)
+
+`General Admission` is a named Devcon ticket tier, not a generic phrase, and it is in neither ETHGlossary (`/filter` against the banner source still matches only `claim`) nor `PROTECTED_BRAND_NAMES`. With nothing to anchor it, PR #19228 produced four different treatments of one string:
+
+| Treatment | Locales |
+| --- | --- |
+| Kept Latin `General Admission` | bn, id, pl, vi |
+| Transliterated | hi `जनरल एडमिशन`, mr `जनरल ॲडमिशन`, te `జనరల్ అడ్మిషన్`, ur `جنرل ایڈمیشن` |
+| Translated as the tier | cs, de, es, fr, it, ja, ko, pt-br, sw, ta, tr, uk, zh-tw, ar |
+| Translated as a generic ticket class | ru `стандартный входной билет` (standard entry ticket), zh `普通门票` (ordinary ticket) |
+
+This is #74's shape exactly -- an event-adjacent proper noun with no entry, re-decided every run -- so the durable fix is the same: an ETHGlossary entry, requested in normalization-queue section 10. Do NOT hand-normalize the 24 locale files toward one treatment. Unlike #74's `Devcon`, there is no reference locale here: the right treatment depends on what a ticket buyer will actually see at checkout, which is a devcon.org question, not a linguistic one.
+
+**Reviewer rule:** the tier name and the code are two different risks. The code (`ETHORG10`) must survive byte-identical because the user types it -- that is checkable and was 24/24 clean. The tier name only has to be recognizable at the checkout page, so treat its variance as a warning pending the glossary entry, never as a critical.
+
+**What raises the stakes here:** the campaign URL no longer carries `voucher=ETHORG10` (dropped in PR #19227 so the link can be locale-routed to devcon.org/{en,hi,mr}/tickets). The code is now transcribed by hand, which makes any mutation of it -- including invisible characters adjacent to it -- user-visible failure rather than cosmetic drift. See #78.
+
+### 78. Bidi isolates and agglutinative suffixes touching a user-typed code (INFORMATIONAL -- RTL/script correctness, copy-paste caveat)
+
+In ar and ur the sanitizer wraps the Latin run as `⁦ETHORG10⁩` (LRI/PDI), which is correct -- it is what keeps the code from reordering against surrounding RTL text, and isolates were balanced 4/4 in both files. In ja, ko and te the case particle or suffix attaches with no separator (`ETHORG10を`, `ETHORG10을`, `ETHORG10ని`), which is likewise correct typography for those scripts.
+
+Both are right for rendering and both mean a reader who *selects* the code gets more than the code: invisible U+2066/U+2069 in ar/ur, a trailing particle in ja/ko/te. Reading and retyping is unaffected, which is the normal path for a voucher code.
+
+**Reviewer rule:** do not "fix" either one -- stripping the isolates breaks RTL ordering and detaching the particle breaks the grammar. Flag it as a product question instead (is the code presented anywhere copy-clickable?) and leave the locale files alone.

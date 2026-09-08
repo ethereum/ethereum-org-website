@@ -19,7 +19,7 @@ Una spiegazione di **Finematics** su come funzionano i prelievi dallo staking su
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=RwwU3P9n3uo) pubblicata da Finematics. È stata leggermente modificata per migliorarne la leggibilità.*
 
-#### La Beacon Chain (0:31) {#the-beacon-chain-031}
+### La Beacon Chain (0:31) {#the-beacon-chain-031}
 
 Con l'avvicinarsi rapido dell'aggiornamento Shanghai/Capella, si discute molto dei prelievi dallo staking di Ethereum e di cosa questo significhi per l'ecosistema di Ethereum nel suo complesso.
 
@@ -35,7 +35,7 @@ Il grande passo successivo, il The Merge, ha unito il livello di consenso Proof-
 
 Per ridurre al minimo i rischi, la portata del The Merge è stata ridotta e nessun'altra funzionalità — al di fuori del passaggio dalla Prova di lavoro alla Proof-of-Stake — è stata inclusa come parte dell'aggiornamento. Il "taglio" più grande che si è dovuto fare ha riguardato i prelievi, che sono diventati il fulcro dell'imminente aggiornamento Shanghai/Capella.
 
-#### Prelievi (2:09) {#withdrawals-209}
+### Prelievi (2:09) {#withdrawals-209}
 
 I prelievi dallo staking, come suggerisce il nome, consentiranno agli staker di prelevare i propri ETH bloccati. Esistono due tipi di prelievi: "parziali" e "completi".
 
@@ -47,7 +47,7 @@ Una volta abilitati, i prelievi dallo staking verranno distribuiti automaticamen
 
 Per iniziare a prelevare le proprie ricompense di staking, un validatore dovrà fornire il proprio indirizzo di prelievo una sola volta. Dato che i prelievi interessano sia il livello di consenso che il livello di esecuzione di Ethereum, entrambe le parti della rete devono essere aggiornate. "Shanghai" è il nome dell'aggiornamento del livello di esecuzione contenente i prelievi, che sono specificati nell'EIP-4895. "Capella" è il nome della controparte dell'aggiornamento del livello di consenso, attivato contemporaneamente. Questi due aggiornamenti sono talvolta indicati anche come "Shapella".
 
-#### Meccaniche (3:40) {#mechanics-340}
+### Meccaniche (3:40) {#mechanics-340}
 
 Nell'ecosistema di Ethereum, ogni validatore ha un numero di indice corrispondente. Inoltre, hanno anche due tipi di credenziali di prelievo, definite come `0x00` o `0x01`.
 
@@ -77,7 +77,7 @@ Durante la creazione o l'elaborazione di un blocco, i client del livello di esec
 
 Il design dei prelievi è semplice ma estremamente robusto.
 
-#### Malintesi (6:30) {#misconceptions-630}
+### Malintesi (6:30) {#misconceptions-630}
 
 Il primo malinteso afferma che, durante l'elaborazione dei prelievi, c'è una differenza tra un prelievo "completo" e uno "parziale" in termini di priorità o ordinamento. Sia i prelievi completi che quelli parziali avvengono quando la scansione lineare sul set di validatori raggiunge l'indice di un validatore. L'unica differenza è che, nel caso di prelievi completi, un validatore deve lasciare la coda di uscita e raggiungere l'"epoca prelevabile" prima che la scansione lineare possa rilevarlo.
 
@@ -93,7 +93,7 @@ In secondo luogo, per garantire che il meccanismo di consenso Proof-of-Stake e i
 
 La prima scansione dei prelievi preleverà molte ricompense accumulate — in pratica dall'inizio della Beacon Chain. Tuttavia, quelle successive elaboreranno una quantità molto più piccola di ETH.
 
-#### Implicazioni (8:39) {#implications-839}
+### Implicazioni (8:39) {#implications-839}
 
 L'abilitazione dei prelievi creerà un flusso di staking aperto e bidirezionale. Attualmente, il flusso di staking è unidirezionale: gli ETH possono solo fluire nella rete e mai uscirne. È interessante notare che l'abilitazione dei prelievi potrebbe incentivare ancora più persone a fare staking, poiché sapranno di poter sempre prelevare i propri ETH se necessari per qualcos'altro.
 
@@ -103,7 +103,7 @@ I prelievi avranno un impatto anche sui derivati di staking liquido come Lido, R
 
 I primi adottanti nello staking liquido e nello staking centralizzato hanno catturato la stragrande maggioranza del mercato poiché non avevano molta concorrenza. Tuttavia, la quota di mercato di questi attori storici potrebbe subire un grande cambiamento una volta abilitati i prelievi, specialmente se non offrono un tasso competitivo. La capacità di spostarsi liberamente tra i fornitori di staking andrà a vantaggio del mercato dello staking di ETH.
 
-#### Riepilogo (10:01) {#summary-1001}
+### Riepilogo (10:01) {#summary-1001}
 
 L'abilitazione dei prelievi dallo staking è uno degli aggiornamenti più attesi per Ethereum. Sarà estremamente importante assicurarsi che questo cambiamento venga eseguito senza intoppi. Per aiutare con i test, i validatori avranno a disposizione diverse devnet e testnet per eseguire il processo e risolvere eventuali problemi prima di passare alla Mainnet.
 

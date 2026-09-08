@@ -19,7 +19,7 @@ Přednáška **Santiaga Palladina** na Ethereum Day během Devconnect Argentina 
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=FzJBV3oSUns) zveřejněného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Vyrůstání daleko odtud (0:07) {#growing-up-far-away-007}
+### Vyrůstání daleko odtud (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Děkuji, Binji. Děkuji vám všem, že jste tady. Je pro mě absolutní ctí být zde na pódiu a ještě větší ctí je mít Devconnect tady v Buenos Aires.
 
@@ -39,13 +39,13 @@ Opakujícím se motivem, který jsme vídali, je Argentina jako místo k útěku
 
 Ten citát je z epizody Dextera před lety. Vlastně jsem šel na wiki Dextera, abych se ho pokusil najít, a našel jsem tento krásný popis: „Argentina je lokace v seriálu.“ Jo, a mimochodem, je to taky skutečné místo – jen abyste věděli.
 
-#### Decentralizace jako vlastnost (4:47) {#decentralization-as-a-feature-447}
+### Decentralizace jako vlastnost (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Takže jsme daleko, jsme odříznutí. A tím daleko nemyslím jen geograficky – jak většina z vás, kteří jste sem cestovali, musela přetrpět v letadle. Hej, je čas odplaty – my se s tím musíme potýkat vždycky, když někam jedeme.
 
 Jde mi o to: když jsme tak daleko, tak odříznutí od zbytku světa, myslím, že není divu, že když jsme objevili technologii, kde decentralizace není chyba, ale vlastnost – že je to přednost – vrhli jsme se do toho.
 
-#### Desetiletí argentinského krypta (5:27) {#a-decade-of-argentine-crypto-527}
+### Desetiletí argentinského krypta (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Teď, když jsem vám dal nějaký kontext o tom, odkud pocházím, chci mluvit o dvou věcech. Zaprvé, propagovat to, co Argentinci dělali v kryptu za posledních deset a více let. A také projít různé lidi, různé profily, různá zázemí, které potřebujeme k budování Etherea. Myšlenka, kterou chci zdůraznit, je: v Ethereu potřebujeme rozmanitost. Potřebujeme geografickou rozmanitost. Potřebujeme různé oblasti odbornosti, různé domény. Potřebujeme, aby se zapojilo co nejvíce lidí a budovali to, co chceme vybudovat.
 
@@ -59,7 +59,7 @@ Z Voltaire vzešly některé z nejznámějších argentinských projektů: OpenZ
 
 Poměr vývojářů Web3 k Web2 v Argentině je téměř třikrát vyšší než v USA. Dokonce i v Aztec Labs je každý šestý inženýr Argentinec – a to mluvím o společnosti založené ve Velké Británii. Milujeme Web3. Přirozeně nás to k němu táhne. Myslím, že důvody jsou z poloviny to, co zmínila Isabelle ve své přednášce během této události, a také tento pocit odříznutí a nalezení místa v Ethereu, kde můžeme budovat, kde můžeme prosperovat a kde jsme vítáni.
 
-#### Infiltrace ekosystému (9:37) {#infiltrating-the-ecosystem-937}
+### Infiltrace ekosystému (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Dovolte mi podělit se o pár dalších historek – opět ne o penězích, ale o tom, jaké věci tito Argentinci, kteří infiltrovali ekosystém Web3, budovali. Pro mě byla první zkušenost ve Web3 auditování jazyka pro chytré kontrakty – Serpent. Pokud jste o něm neslyšeli, je to proto, že jsme ho zničili.
 
@@ -67,7 +67,7 @@ Přijít z deseti let profesionálního vývoje a najednou přistát v ekosysté
 
 Bezpečnostní komunita tady v Argentině je neuvěřitelná. Argentinci objevili velké kritické zranitelnosti v ENS – ta jedna je od Red Guild, což je podle mě jeden z nejvíce nedoceněných bezpečnostních týmů v celém ekosystému. Ti kluci jsou fantastičtí. Také Argentinci odhalili kritické útoky na MakerDAO, nebo dokonce útok na dodavatelský řetězec přes SMS, který vedl ke krádeži stovek účtů na Telegramu. Mimochodem – každodenní připomínka: nepoužívejte SMS pro 2FA.
 
-#### Standardy a infrastruktura (11:17) {#standards-and-infrastructure-1117}
+### Standardy a infrastruktura (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Také jsme hodně přispěli ke standardům. Mých prvních pět let v kryptu bylo v OpenZeppelin. Měl jsem možnost vytvořit kontrakt ERC-721 spolu s chlápkem, který sedí přímo tamhle, a také s Facuem. Tento kód nakonec o pár let později poháněl šílenství kolem NFT – byl napsán odtud.
 
@@ -83,7 +83,7 @@ To vše je shrnuto v krásné iniciativě týmu Crecimiento. Můžete se podíva
 
 Také významně přispívají. Chci se zastavit u jednoho z nich. Včera se konal Ethereum Cypherpunk Congress o soukromí. Na hlavním pódiu Vitalik předváděl Kohaku, novou peněženku zaměřenou na soukromí. O hodinu později, na vedlejším pódiu – téměř ukrytém v nejvyšším patře – probíhal panel, jehož součástí byl jeden z vývojářů, kteří Kohaku skutečně budují, který je Argentinec a pracuje pár bloků odtud.
 
-#### Přivedení Etherea domů (15:07) {#bringing-ethereum-home-1507}
+### Přivedení Etherea domů (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Ale všechny tyto příspěvky, všechny tyto věci, které Argentina přináší do Web3 – to nestačilo. Chtěli jsme udělat víc. Chtěli jsme sem přivést Ethereum. A spoiler alert, vzhledem k tomu, že tu sedíte – ano, uspěli jsme.
 
@@ -91,13 +91,13 @@ Všechno to začalo v roce 2018 s ETH Buenos Aires, prvním komunitním hackatho
 
 A ano, nakonec to vedlo k Marianově přednášce na Devconu 5. Přednáška se jmenovala „Život na DeFi – Jak jsme přežili 50% inflaci v Argentině“. To číslo se zdá roztomilé poté, co jsme se dostali na 300% inflaci. Ten obrázek jste už viděli v Marianově prezentaci. Co neukázal, je, že to tričko pořád mám. Vlastně jsme si nechali vytisknout trička s nápisem „Devcon Buenos Aires 2020“, abychom se to pokusili zhmotnit jako meme. Schovával jsem si ho přes pět let. Jsem hrdý, že ho teď můžu ukázat.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Zvládli jsme to. Nedokážu vysvětlit, jak jsem hrdý, jaká je to pro mě čest, že Devconnect konečně dorazil sem. Je to v podstatě splněný sen.
 
 Myslím, že to dává smysl – nejen proto, že miluji tuto zemi, ale proto, že to skutečně ukazuje, že Ethereum pořádá svou konferenci tam, kde to má smysl. Celý tento étos o decentralizaci se skutečně naplňuje tím, že se konference pořádá zde, využívá se stávající talent – o kterém jsem vás snad přesvědčil, že existuje – a také se staví na stávající uživatelské základně. Zhruba každý pátý Argentinec drží krypto, ať už decentralizovaně nebo centralizovaně. Můžeme se dlouho dohadovat o tom, jestli držení krypta na centralizované burze je vlastně držení krypta nebo ne, ale jsou to lidé, kteří ho už mají, kteří s ním už přišli do styku. Je tu existující uživatelská základna, kterou můžete využít a zkusit dodávat nové věci, nové produkty a zjistit, co se dá vybudovat.
 
-#### Ethereum pro všechny (17:46) {#ethereum-for-everyone-1746}
+### Ethereum pro všechny (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Dovolte mi na chvíli změnit téma. Vím, že jsem tu propagoval, jak je Argentina úžasná pro pořádání akce, pro místní talenty, pro všechno. Ale to, co chci vlastně říct, je, že pokud Ethereum fungovalo tady – v tomto koutě světa, tak daleko – může fungovat všude. Argentina je jen příklad, který ukazuje, že Ethereum je technologie, která je skutečně bez hranic a může fungovat v jakémkoli koutě světa.
 
@@ -125,7 +125,7 @@ Provozovatelé uzlů provozují síť a skutečně spouštějí software, ve kte
 
 To vše bylo poháněno velmi různorodou skupinou lidí. Pokud si vyberete jen skupinu vývojářů – a já sám jsem vývojář – nedokážeme to vybudovat.
 
-#### Alef (23:59) {#the-aleph-2359}
+### Alef (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** Vím, že to asi není populární říkat na konferenci s názvem Devconnect, ale jde mi o to: Ethereum je technologie, která má běžet všude a je určena pro každého – má být budována každým, z jakéhokoli prostředí, z jakéhokoli místa na světě.
 
@@ -133,7 +133,7 @@ V té jedné minutě, která mi zbývá, chci vybrat citát od Jorgeho Luise Bor
 
 O co vás během těchto dnů žádám, je, abyste se propojili s ostatními lidmi. Získejte zpětnou vazbu na to, co budujete. Pokuste se najít partnery, tvůrce, uživatele, investory. Vystupte ze své bubliny, ze své komfortní zóny a mluvte s co nejvíce lidmi. Poznávejte nové lidi, komunikujte s novými lidmi. Pamatujte, že inovacím se daří díky rozmanitosti – ať už geografické, z různých prostředí nebo ideologií. Propojujte se, budujte společně a užijte si tento týden. Děkuji.
 
-#### Otázky a odpovědi (25:35) {#qa-2535}
+### Otázky a odpovědi (25:35) {#qa-2535}
 
 **Binji:** To bylo neuvěřitelné. Moc děkuji. Myslím, že jsi pokryl v podstatě všechno kolem Etherea – kulturu, technické vlastnosti – vše v jedné přednášce. To je velmi působivé. Myslím, že jsem ještě neviděl nikoho, kdo by to všechno zvládl najednou. Takže, pár otázek. Ta, která mi přišla nejzajímavější – zvláště když mluvíš o případech užití – co bys rád viděl vybudované na Ethereu, co ještě vybudováno nebylo?
 

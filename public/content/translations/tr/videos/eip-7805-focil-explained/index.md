@@ -19,7 +19,7 @@ Ethereum Cat Herders tarafından sunulan **PEEPanEIP**'in 141. bölümü. Sunucu
 
 *Bu döküm, Ethereum Cat Herders tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=cUGyLx-mf6I) erişilebilir bir kopyasıdır. Okunabilirliği artırmak amacıyla üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:35) {#introduction-035}
+### Giriş (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Merhaba ve Ethereum Geliştirme Tekliflerini derinlemesine incelediğimiz ve ekosistem üzerindeki etkilerini keşfettiğimiz tek program olan PEEPanEIP'ye hoş geldiniz. Ethereum Cat Herders tarafından sunulan 141. bölümdeyiz. Ben sunucunuz Pooja Ranjan ve bugün EIP-7805, Çatallanma seçimiyle zorunlu kılınan Dahil Etme Listeleri hakkında konuşuyoruz.
 
@@ -33,7 +33,7 @@ Bu bölümde, EIP-7805'in ayrıntılarını, doğuracağı sonuçları ve Ethere
 
 **Pooja Ranjan:** Teklife genel bakış, bugün hangi aşamada olduğu ve onu Ethereum Ana Ağı üzerinde ne kadar yakında görebileceğimiz hakkında bilgi edinmek için heyecanlıyız. Ancak başlamadan önce, topluluğumuz bu çalışmaların arkasındaki araştırmacıları ve geliştiricileri tanımayı çok seviyor. Bize biraz kendinizden, şu anda dahil olduğunuz projeden ve Ethereum ekosistemindeki yolculuğunuzdan bahsedebilir misiniz?
 
-#### Konuk tanıtımları (2:14) {#guest-introductions-214}
+### Konuk tanıtımları (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Tabii, ben başlayabilirim. Ben Julian, tıpkı Thomas gibi Ethereum Vakfı'ndaki Sağlam Teşvikler Grubu'nda (Robust Incentives Group) araştırmacıyım. Sağlam Teşvikler Grubu, çok geniş anlamda Protokol ekonomisiyle ilgileniyor. Bazılarımız EIP-1559 gibi işlem ücreti mekanizmalarını incelerken, diğerleri çoğunlukla ekonomik teşviklerle motive edilen mutabakat katmanı saldırılarını araştırıyor.
 
@@ -45,7 +45,7 @@ Benzer konular üzerinde çalıştım. Katıldığımda MEV oldukça popülerdi.
 
 **Pooja Ranjan:** Paylaştığınız için teşekkürler. Geliştiricilerin geçmişini öğrenmek her zaman ilham vericidir. Farklı alanlardan geldiklerini ve nihayetinde Ethereum ekosistemine katkıda bulunduklarını görmek ilginç. Anladığım kadarıyla bugün burada bir sunumumuz var. O halde daha fazla uzatmadan bir göz atalım.
 
-#### Sunum: FOCIL'in hedefleri (5:16) {#presentation-goals-of-focil-516}
+### Sunum: FOCIL'in hedefleri (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Harika, çok teşekkür ederim. EIP-7805'in veya FOCIL'in nasıl çalıştığı ve bunu tam olarak neden yapmak istediğimiz hakkında küçük bir sunumla başlamak istiyorum. Amacı sohbeti başlatmak, bu yüzden sonrasında tartışmaya biraz yer bırakmak adına çok derinlemesine olmayacak.
 
@@ -53,7 +53,7 @@ FOCIL'in temel amacı, Ethereum'un güvenilir tarafsızlığını artırmaktır.
 
 Daha üst düzey hedef, zincir tarafsızlığı adını verdiğimiz bir özelliği sürdürmektir; bu da, bekleyen ve ücret ödeyen herhangi bir işlemin, eğer mevcutsa ve zincir içi dahil etmek için yer varsa dahil edilmesi gerektiği anlamına gelir. Bu özelliğin yeterince karşılanması durumunda Ethereum'un güvenilir tarafsızlığını artıracağımıza inanıyoruz.
 
-#### Neden FOCIL'e ihtiyacımız var ve neden şimdi? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Neden FOCIL'e ihtiyacımız var ve neden şimdi? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Neden böyle bir şeye ihtiyacımız var? Şu anda neredeyse tüm doğrulayıcılar blok inşasını, oluşturucuların blok inşa hakları için teklif verdiği protokol dışı bir piyasa olan MEV-Boost'a devrediyor. Bu piyasada gerçekten hakim olan sadece iki kuruluş var ve bu da blokların %90'ının sadece iki kuruluş tarafından oluşturulduğu anlamına geliyor.
 
@@ -65,7 +65,7 @@ Ayrıca, tabanlı toplamalar bugünlerde daha yaygın hale geliyor ve Ethereum'u
 
 Ve kime sorduğunuza bağlı olarak, FOCIL potansiyel olarak ölçeklendirmeye yardımcı olabilir. Bugün Ethereum sansür direncini hala yerel blok oluşturmadan alıyor. Eğer Ethereum sansür direncini başka bir yerden, örneğin FOCIL aracılığıyla sağlayabilirse, o zaman belki blok oluşturuculardan beklentilerimizi artırabilir ve örneğin daha fazla bloba izin verebiliriz. Ancak potansiyel olarak bu FOCIL olmadan da yapılabilir. Bu nedenle, FOCIL'in Fusaka'da uygulanması teklif edilmiştir.
 
-#### FOCIL nasıl çalışır (8:10) {#how-focil-works-810}
+### FOCIL nasıl çalışır (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Şimdi size FOCIL'in nasıl çalıştığını anlatacağım. Temel bilgilerle başlayıp tam mekanizmayı elde edene kadar adım adım ilerleyeceğiz ve ardından bu tam mekanizmanın istediğimiz özellikleri nasıl karşıladığını inceleyeceğiz.
 
@@ -79,7 +79,7 @@ Ardından, uygulama olan son adıma geçiyoruz. Dediğim gibi, uygulama çatalla
 
 Tam mekanizmayı özetlemek gerekirse: her slotta, 16 komite üyesi dahil etme listesi komite üyesi olarak seçilir. Bellek havuzunu gözlemlerler ve bir son tarihten, bu durumda 9. saniyeden önce küresel konu üzerinden dağıttıkları dahil etme listesi nesneleri oluştururlar. Oluşturucu bu dahil etme listelerini gözlemler ve gördüğü tüm işlemleri bloğuna dahil eder. Onaylayıcılar daha sonra 9. saniyeden önce dahil etme listelerinde gördükleri tüm işlemlerin gerçekten blokta olup olmadığını kontrol ederler. Bu kontrol geçerse, blok için oy verirler ve aynı kurulumun tekrar gerçekleştiği bir sonraki slota geçeriz.
 
-#### IL Boost ve kalabalıklaştırılamama (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost ve kalabalıklaştırılamama (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Dahil etme listeleri hakkındaki en büyük endişelerden biri, Mike'ın önceki EIP'si için ve sonrasındaki geliştirme sürecinde dile getirilen "IL Boost" veya kalabalıklaştırılamama durumudur. Bu, dahil etme listesi teklif edicilerinin bir dahil etme listesi oluşturma haklarını satmak isteyebilecekleri gerçeğini ifade eder. Bu çok mantıklı bir endişedir, çünkü bunun blok oluşturma sürecinde gerçekleştiğini görüyoruz: bu hakkın satılması, gelişmiş oluşturuculardan oluşan merkezi bir piyasaya yol açar.
 
@@ -93,7 +93,7 @@ Ve son olarak, bu dahil etme listeleri blok üreticisi harekete geçmeden 3 sani
 
 Bu nedenlerden dolayı, hiçbir bireysel dahil etme listesi teklif edicisinin MEV'in temel tanımı olan dahil etme, sıralama veya hariç tutma gücüne sahip olmadığına inanıyoruz. Bu nedenle dahil etme listeleri MEV'e tabi olmamalıdır.
 
-#### Sunumun özeti (13:09) {#summary-of-the-presentation-1309}
+### Sunumun özeti (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Bu kısa sunumu özetlemek gerekirse: FOCIL, birden fazla doğrulayıcının blok inşasına katkıda bulunmasına olanak tanıyarak tek bir teklif edicinin dahil etme tekeline engel olur ve Ethereum'un güvenilir tarafsızlığını artırır. FOCIL'i şu anda uygulamanın gerekli olduğuna inanıyoruz çünkü şu anda herhangi bir noktada sansürlemeye başlayabilecek yalnızca iki baskın oluşturucu var ve bu, fayda sağlayabilecekleri ekonomik nedenlerden dolayı olabilir. Blok oluşturma daha fazla yük taşıyan bir hale gelebilir çünkü tabanlı toplamalar Ethereum'un sıralama özelliklerini kullanmak isteyecektir. FOCIL, sansür uygulayan tarafların sayısı az olduğunda çok daha sorunsuz bir şekilde başlatılacaktır: ilk olarak, bu durum doğrulayıcıların dahil etme listeleri oluşturmasının varsayılan bir eylem olduğu anlamına gelir ve ikinci olarak ise, sansür uygulayan oluşturucular ile uygulamayan oluşturucular arasında daha az piyasa istikrarsızlığı olacağı anlamına gelir. Ve son olarak, FOCIL potansiyel olarak ölçeklendirmeye yardımcı olabilir, ki bu belki de daha derinlemesine inceleyebileceğimiz bir konudur.
 
@@ -101,7 +101,7 @@ Bu küçük sunumu yapmama vakit ayırdığınız için teşekkürler. İlgilene
 
 **Pooja Ranjan:** Bu hızlı sunum ve teklife genel bakış için çok teşekkür ederim.
 
-#### Soru-Cevap: EIP-7805, EIP-7547'den nasıl farklıdır? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Soru-Cevap: EIP-7805, EIP-7547'den nasıl farklıdır? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Soru-Cevap bölümüne, sunumunuzda da bahsedilen önceki teklif hakkındaki ilk soruyla başlamak istiyorum: Mike Neuder'in 7547 numaralı dahil etme listeleri (inclusion lists) teklifi. Bu teklif ile 7805 numaralı FOCIL arasındaki temel farkı anlamak istiyorum. Sunumunuzda IL Boost ve kalabalıklaştırılamama (uncrowdability) konularına kısmen değinmiştiniz. Belki bu konuyu biraz daha açıklamak istersiniz?
 
@@ -115,7 +115,7 @@ Ve sonra biraz daha teknik detaylar: hesap soyutlama ile bazı uyumsuzluklar var
 
 **Pooja Ranjan:** Çok teşekkür ederim. 7547 numaralı teklif hakkında daha fazla bilgi edinmek isteyenler için, Mike Neuder ile üst düzey bir genel bakış sunan kaydedilmiş bir bölümümüz var, PEEPanEIP'in 130. bölümü. Rekabet eden teklifleri görmeyi her zaman severim, çünkü bunun ekosistemin ve zincirin iyileştirilmesi için olduğunu biliyorum. Sohbette birkaç soru olduğunu görüyorum. Belki Kataya'yı sorusunu paylaşması için davet edebilirim.
 
-#### Teklif edici 16 listenin tamamını dahil etmek zorunda mı? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Teklif edici 16 listenin tamamını dahil etmek zorunda mı? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Merhaba, teşekkürler. Benim sorum şuydu: blok teklifçisi, her biri bir komite üyesinden olmak üzere 16 dahil etme listesi mi alıyor ve bu listelerdeki tüm işlemleri dahil etmek zorunda mı?
 
@@ -123,7 +123,7 @@ Ve sonra biraz daha teknik detaylar: hesap soyutlama ile bazı uyumsuzluklar var
 
 **Pooja Ranjan:** Sohbetteki bir sonraki soru Justin'den. Justin, sorunu konuklar için okumak ister misin?
 
-#### Dahil etme listelerindeki özel bellek havuzu işlemleri (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Dahil etme listelerindeki özel bellek havuzu işlemleri (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Çok fazla soru soruyorum. Özel bir bellek havuzundan bir işlemi dahil etme listesine koymayı neyin engellediğini sormak istiyordum ve sanırım bu oldukça iyi cevaplandı. Oluşturucunun bunları zaten uygun gördüğü şekilde sıralayacağı ve işleminizin dahil etme listesine (IL) girdiğinde herkese açık hale geleceği göz önüne alındığında, bu tamamen sorunsuz görünüyor. Yani bence bu mantıklı. Teşekkürler.
 
@@ -133,7 +133,7 @@ Yani ya herkese açık bir işleminiz vardır ve bir dahil etme listesine eklenm
 
 **Pooja Ranjan:** Paylaştığınız için teşekkürler. Gördüğüm kadarıyla bir sonraki soru Ladislaus'tan.
 
-#### FOCIL ve ölçeklendirme (21:41) {#focil-and-scaling-2141}
+### FOCIL ve ölçeklendirme (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Merhaba arkadaşlar. Bu, FOCIL ve ölçeklendirme konusunda değindiğiniz noktayla ilgili. Hepimiz gibi ben de son zamanlarda Ethereum'u ölçeklendirme üzerine bazı tartışmalar gördüm ve haklı olarak belirttiğiniz gibi, piyasada az sayıdaki oluşturucunun yarattığı bir darboğaz var. Kişisel olarak FOCIL'i yerel oluşturmayı yeniden güçlendiren bir şey olarak düşünmeyi seviyorum ve bant genişliği gereksinimlerini veya genel olarak düğüm gereksinimlerini artırmadan önce protokole dahil edilmesinin bir zorunluluk olduğunu düşünüyorum. Belki bu konudaki düşüncelerinizi ve bahsettiğiniz gibi FOCIL olmadan ölçeklendirmenin diğer olası yollarını detaylandırabilirsiniz.
 
@@ -151,7 +151,7 @@ Bu yüzden evde stake edenleri ve yerel blok oluşturucuları gerçekten elimizd
 
 **Pooja Ranjan:** Çok teşekkür ederim. Sanırım bir sonraki soru Luis'ten.
 
-#### İşlemleri seçme kriterleri (26:46) {#criteria-for-selecting-transactions-2646}
+### İşlemleri seçme kriterleri (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Başlangıçtan birkaç dakika sonra katıldım, ancak bana öyle geliyor ki bu, bir bütün olarak ağdaki işlem seçimini merkeziyetsizleştiriyor. Bence bu çok iyi; MEV'e ve sansüre karşı savaşıyor. Ve bu işi onaylayıcıların yapması kısmını kesinlikle seviyorum, çünkü gelecekte oluşturuculardan daha düşük donanım gereksinimlerine sahip olacaklar, durumsuzluk ve durumsuz istemcilerle bu daha da geçerli olacak. Bunu çok düşük donanımla çalıştırabileceğiniz için, işleri çok merkeziyetsiz hale getiriyor. Sanırım buradaki asıl zorluk, bu dahil etme listelerinin işlem seçimi için kriterleri belirlemek, ister öncelik ücretleriyle ister blob sayısıyla ilerleyin; çok fazla değişken var. Uygulamayı düşündüğünüz bir dizi kritere karar verdiniz mi?
 
@@ -165,7 +165,7 @@ Sonra, dahil etme kuralı için, bu çok iyi bir soru. Bunun üzerinde epey dü�
 
 **Luis Pinto:** Tamam, teşekkür ederim.
 
-#### EIP-7702, ePBS ve PeerDAS ile Uyumluluk (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### EIP-7702, ePBS ve PeerDAS ile Uyumluluk (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Çok teşekkür ederim. Anladığım kadarıyla bu teklif, Pectra'dan sonraki yükseltme olan Fusaka için zaten önerilmiş durumda. Fusaka'nın devam etmekte olan diğer bazı EIP'leri içerip içermeyeceği göz önüne alındığında, hesap soyutlama için olan 7702, ePBS ve PeerDAS gibi tekliflere kıyasla FOCIL'in uyumluluk durumunun ne olduğunu merak ediyorum.
 
@@ -175,7 +175,7 @@ Sonra, dahil etme kuralı için, bu çok iyi bir soru. Bunun üzerinde epey dü�
 
 **Pooja Ranjan:** Bunu bilmek güzel. Jihoon'un da özellikle ePBS ile uyumluluk hakkında daha fazla bilgi edinmek isteyenler için kaynaklara ekleyeceğimiz bir HackMD paylaştığını fark ettim. Ve evet, Mike ile yaptığımız son konuşmadan hatırlıyorum, sanırım teklif hesap soyutlama uyumsuzluğu nedeniyle dahil edilmemişti. Bu yüzden bunun zaten halledilmiş olduğunu bilmek güzel.
 
-#### FOCIL ve çoklu slot MEV'i (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL ve çoklu slot MEV'i (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** FOCIL web sitesine (meetfocil.eth.limo) eklenen belgelere ve ayrıntılara göz atıyordum ve çoklu slot MEV'i (multi-slot MEV) adı verilen bir terim öğrendim. Julian ayrıca, geliştiricilerin onu dengede tutma arzusuna ve çabalarına rağmen MEV-Boost'un genel olarak kârlı olduğundan bahsetti. FOCIL'in bunu nasıl önleyeceğini merak ediyorum.
 
@@ -191,7 +191,7 @@ Yani FOCIL, çoklu slot MEV'inin işlemlerin ters seçime maruz kalmadığı kı
 
 **Pooja Ranjan:** Çok iyi, bunu paylaştığınız için çok teşekkür ederim. MEV konusunu ele almak için devam eden pek çok araştırma olduğunu anlıyorum, bu nedenle en azından prensipte mevcut senaryodan daha fazla yardımcı olacağını bilmek güzel.
 
-#### Ödünleşimler ve zorluklar (36:44) {#trade-offs-and-challenges-3644}
+### Ödünleşimler ve zorluklar (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Thomas'ın daha önce bahsettiği IL çifte imzası ile ilgili bir sorum var. Teklifin güvenlik hususları bölümünde mutabakat canlılığı, IL çifte imzası ve yürütme yükü oluşturma gibi epeyce noktaya değinildiğini fark ettim. Sizce en büyük ödünleşim nedir veya daha fazla araştırma gerektirebilecek ve bu teklifin bir sonraki yükseltmeye bu haliyle girmesini engelleyebilecek şey nedir?
 
@@ -203,7 +203,7 @@ Taraflı olabilirim ama büyük ödünleşimler görmüyorum. Sansür direnci s�
 
 **Pooja Ranjan:** Bunu bilmek güzel. Çoğu teklifte güvenlik hususları bölümünün ya hiç bilgi içermediğini ya da çok az bilgi içerdiğini görüyoruz, bu nedenle bu kısımda araştırmanın yapıldığını ve olası güvenlik hususlarının farkında olduğumuzu bilmek güzel. Gelecekteki uygulama ve benimseme için bir engel veya potansiyel bir zorluk olmadığını bilmek sevindirici.
 
-#### Dahil etme listeleri için işlem ücreti mekanizmaları (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Dahil etme listeleri için işlem ücreti mekanizmaları (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Web sitesinde bulduğum bazı açık sorular hakkında, işlem ücreti mekanizmasıyla ilgili bir sorum var. Herhangi bir güncelleme olup olmadığını veya dahil etme listesine dahil edilmek üzere ücret almanın ve bu ücretleri dağıtmanın en iyi yolu hakkında daha fazla bilgi paylaşmak isteyip istemediğinizi merak ediyorum.
 
@@ -219,7 +219,7 @@ Luis'in daha önceki noktasına dönersek, teşvik etmek büyük ölçüde dahil
 
 **Pooja Ranjan:** Oh, bu ilginç. Yani mevcut FOCIL özelliklerini geliştirmek için gelecekte bazı ek teklifler beklemeliyiz.
 
-#### Dahil etme listesi boyutu (44:16) {#inclusion-list-size-4416}
+### Dahil etme listesi boyutu (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Bir sorum daha var. Mevcut teklifin bir parçası olup olmaması gerektiğinden emin değilim, ancak IL boyutuyla ilgili herhangi bir güncelleme olup olmadığını merak ediyorum. Aşırı bant genişliği kullanımını önlemek için dahil etme listelerinin boyutunun muhtemelen sınırlandırılması gerekir. Dahil etme listesinin optimum boyutunun nasıl belirlenebileceğine dair daha fazla araştırmamız veya güncellememiz var mı?
 
@@ -229,7 +229,7 @@ Tam olarak optimum boyut üzerinde yapılması gereken çok fazla araştırma va
 
 Gelecek için IL boyutunu artırabilirsiniz, ancak IL komite üyelerinin sayısını artırmayı da düşünebilirsiniz. Bu, ağın büyük bir kısmı sansür uygulamaya karar verirse dürüst bir IL komite üyesi bulma şansınızı daha da artırmanızı sağlar. Yani bu da yapabileceğimiz bir şey. Şimdilik 16 tamamen iyi ve yeterli görünüyor, ancak sansür çok çığırından çıkarsa veya daha fazla önlem almamız gerekirse gelecekte bu parametrelerle kesinlikle oynayabilirsiniz.
 
-#### Benimsenmeyi izlemek için metrikler (46:39) {#metrics-to-track-adoption-4639}
+### Benimsenmeyi izlemek için metrikler (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Burada küçük bir takip sorusu: Bu teklifin benimsenmesini veya başarısını anlamak için takip edebileceğimiz, aklınızda olan herhangi bir metrik var mı?
 
@@ -241,7 +241,7 @@ Bence bu o kadar önemli bir nokta ki, FOCIL'i yakında uygulamak büyük önem 
 
 **Pooja Ranjan:** Çok ilginç. Yani belki de bu araştırmacılar için bir şeydir: yükseltmeler için olası bir istek listesi; bir teklif bir ağ yükseltmesine dahil edildiğinde, gösterge panelleri ve metrik izleyicilerin geliştiriciler tarafından paylaşılması gerektiği.
 
-#### İstemci uygulama durumu (49:11) {#client-implementation-status-4911}
+### İstemci uygulama durumu (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Julian'ın da bahsettiği gibi, bu teklifin en kısa sürede uygulanması gerekebilir. İstemci uygulaması konusunda ne durumda olduğumuzu merak ediyorum, çünkü son test ağı görüşmesinde Paritosh'un geliştirici ağlarına bazı destekler eklemekten bahsettiğini hatırlıyorum. Peki bu konuda ne durumdayız?
 
@@ -253,7 +253,7 @@ Genel olarak, giderek daha fazla geliştirici ağını hazır ve canlı hale get
 
 **Pooja Ranjan:** Bunu paylaştığınız için teşekkür ederim. Geliştirici ağlarındaki güncellemeleri takip etmeyi dört gözle bekliyorum. Bu geliştirici ağının kaç yinelemesi olacağından emin değilim ama bunun yaklaştığını görmek beni heyecanlandırıyor. Justin'in burada bir sorusu olduğunu görüyorum. Justin, lütfen devam et.
 
-#### FOCIL Fusaka'da mı yoksa Glamsterdam'da mı? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL Fusaka'da mı yoksa Glamsterdam'da mı? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Tamam, bunun için kemerlerinizi bağlayın. Sansürü ele almanın en iyi zamanının sansür gerçekleşmeden önce olduğuna dair çok iyi bir noktaya değindiniz, değil mi? Peki: FOCIL Fusaka'da mı olmalı, yoksa Glamsterdam'ı bekleyebilir mi? Ve bir geliştirici olarak hangisini savunmalıyım?
 
@@ -265,7 +265,7 @@ Bahsetmek istediğim diğer bir şey, çünkü bunun önemli olduğunu düşün�
 
 **Pooja Ranjan:** Bazen tekliflerin bir sonraki veya en yakın yükseltme için seçilmediğini görmek üzücü, ancak bir yükseltmeye yalnızca belirli sayıda teklif dahil edilebilir. Teklifin sunulmasının, teklifin hazır olmasının ve ayrıca buna dahil olan testlerin arkasında yapılan tüm sıkı çalışmayı gerçekten takdir ediyorum. Ethereum ekosistemi için yaptığınız tüm çalışmalar için çok teşekkür ederim.
 
-#### Hızlı soru-cevap (55:18) {#rapid-fire-5518}
+### Hızlı soru-cevap (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Bitirmeden önce, kısa bir hızlı soru-cevap turumuz var. Tek şart, cevabın tek bir kelime veya tek bir cümle olması ve bunu bir zamanlayıcıyla, belki her biri için 30 saniye ile yapmaya çalışacağız. Hazırsanız, devam edelim ve Julian ile başlayalım. Şu anda Blokzincir araştırmalarındaki en zor problem nedir?
 
@@ -317,7 +317,7 @@ Bahsetmek istediğim diğer bir şey, çünkü bunun önemli olduğunu düşün�
 
 **Pooja Ranjan:** Çok iyiydi, çok teşekkür ederim Thomas. Tüm bu soruları cevapladığınız için teşekkürler. Toparlarken, bu fırsatı size vermek istiyorum: teklif hakkında topluluğa veya genel olarak Ethereum topluluğuna bir mesajınız var mı?
 
-#### Topluluğa mesajlar (58:08) {#messages-to-the-community-5808}
+### Topluluğa mesajlar (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Aslında bu çok önemli bir konu, çünkü sürekli aktif tartışmalarımız oluyor ve bunların hepsi Discord'da herkese açık. Başlangıçta her şeyi herkese açık hale getirmek için bir çaba vardı ve insanlar bunu gerçekten yapıyor, bu yüzden çok memnunum. Tartışmaları ve ilerlemeyi herkese açık Eth R&D Discord'unda, inclusion-list kanalından takip edebilirsiniz. Şu anda her şey temel olarak orada gerçekleşiyor. Ayrıca bize Twitter, Telegram veya herhangi bir yerden ulaşabilirsiniz. Çekinmeyin.
 
@@ -325,6 +325,6 @@ Ne kadar çok insanla konuşur ve onları dahil edersek, tasarım ve uygulama o 
 
 **Julian Ma:** Buna ek olarak, umarım bazı insanları FOCIL konusunda heyecanlandırmışızdır. Eğer heyecan duyuyorsanız, lütfen bize bildirin. Ve hala sorularınız varsa, bunları yanıtlamaktan mutluluk duyarız ve umarım sizi FOCIL'in gerçekten doğru yol olduğuna ikna edebiliriz. Çok teşekkür ederim. Burada olmak gerçekten bir zevkti ve bu oturuma ev sahipliği yaptığınız için teşekkürler. Ve tabii ki katılan herkese de teşekkürler.
 
-#### Kapanış sözleri (59:52) {#closing-words-5952}
+### Kapanış sözleri (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Teşekkürler. Programımızın sonuna geldik. Bugün bize katıldıkları ve EIP-7805 hakkındaki görüşlerini paylaştıkları için Thomas ve Julian'a çok teşekkür ederiz. Tüm katılımcılara teşekkürler; sorularınız teşvik edici ve bilgilendiriciydi. Bizi izlediğiniz için teşekkürler. Bu sohbetten keyif aldıysanız beğenmeyi, abone olmayı ve bu bölümü diğer Ethereum meraklılarıyla paylaşmayı unutmayın. PEEPanEIP'te size daha fazla EIP ve araştırma gelişmesi sunmaya devam edeceğiz. Bir dahaki sefere kadar, bilgiyle mırıldanmaya ve Ethereum Cat Herders ile Ethereum'da gezinmeye devam edin. Gününüzün geri kalanının harika geçmesini dilerim.

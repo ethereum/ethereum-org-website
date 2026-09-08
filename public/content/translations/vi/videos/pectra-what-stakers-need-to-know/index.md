@@ -19,11 +19,11 @@ Một hội thảo trực tuyến do **Blockdaemon** tổ chức với kỹ sư 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=_UpAFpC7X6Y) do Blockdaemon xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 **Người dẫn chương trình:** Xin chào và chào mừng đến với hội thảo trực tuyến do Blockdaemon tổ chức tập trung vào bản nâng cấp Pectra sắp tới của Ethereum. Cùng tham gia với chúng ta hôm nay là Julia Schmidt, kỹ sư chuỗi khối tại Alluvial, và Freddy Tänzer, trưởng nhóm hệ sinh thái Ethereum của Blockdaemon, để thảo luận về cách các thay đổi của Pectra sẽ tác động đến việc đặt cọc ETH, toàn bộ mạng lưới, các dịch vụ đặt cọc thanh khoản và hơn thế nữa. Để bắt đầu, Freddy — anh có thể cung cấp cho chúng tôi một cái nhìn tổng quan ngắn gọn về bản nâng cấp Pectra và tác động của nó đối với người đặt cọc sẽ là gì không?
 
-#### Pectra là gì (1:28) {#what-is-pectra-128}
+### Pectra là gì (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra là một bản nâng cấp Ethereum dự kiến diễn ra vào cuối quý 1 năm 2025 — khoảng tháng 3, có thể lùi lại một chút, có lẽ là tháng 4 hoặc tầm đó. Ban đầu nó được cho là một phân nhánh nhỏ, và sau đó ngày càng có nhiều thứ được thêm vào, vì vậy hiện tại họ thực sự đã chia nó thành hai phần.
 
@@ -33,7 +33,7 @@ Phần đầu tiên chứa rất nhiều thứ — ví dụ, liên quan đến t
 
 Cũng có một thay đổi nhỏ hơn về cơ bản dẫn đến việc các khoản tiền gửi nhanh hơn nhiều — được đăng ký trên chuỗi từ khoảng 14 giờ xuống còn chưa đầy một giờ — nhưng tôi nghĩ hai thay đổi kia là những thay đổi có liên quan nhất đến cuộc thảo luận của chúng ta ở đây.
 
-#### EIP-7002: các lệnh thoát có thể kích hoạt từ lớp thực thi (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: các lệnh thoát có thể kích hoạt từ lớp thực thi (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Người dẫn chương trình:** Đối với thay đổi lớn đầu tiên, Julia, cô có thể giải thích quy trình sau Pectra sẽ thay đổi như thế nào so với các cách hiện tại mà việc rút tiền được khởi tạo trong hệ sinh thái đặt cọc của Ethereum không?
 
@@ -49,7 +49,7 @@ Trong bản nâng cấp Dencun gần đây nhất, một EIP mới đã thay đ�
 
 Điều này hiện đã được giải quyết với EIP-7002, cho phép cả khóa trình xác thực và khóa rút tiền kích hoạt việc thoát từ lớp thực thi — đơn giản bằng cách gửi một giao dịch đến một hợp đồng rút tiền đặc biệt, nơi bạn gửi yêu cầu rút tiền và chỉ định thoát toàn bộ trình xác thực, hoặc rút tiền một phần từ số dư đã đặt cọc.
 
-#### EIP-7251: số dư hiệu dụng tối đa (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: số dư hiệu dụng tối đa (4:15) {#eip-7251-max-effective-balance-415}
 
 **Người dẫn chương trình:** Freddy, anh có thể cung cấp cho chúng tôi cái nhìn tổng quan về số dư hiệu dụng tối đa trong tương lai từ Pectra trở đi, và điều này sẽ tác động như thế nào đến những người hiện đang đặt cọc?
 
@@ -69,7 +69,7 @@ Cũng có tin tốt về việc phạt cắt giảm: hình phạt cắt giảm b
 
 Lợi ích tự động gộp chủ yếu mang lại lợi ích cho các khoản đặt cọc nhỏ hơn. Nếu bạn có một nghìn trình xác thực, bạn có thể khởi chạy thủ công một trình xác thực mới hàng tháng. Nhưng nếu bạn chỉ có một trình xác thực, trên thực tế bạn sẽ cần đợi 32 năm để gộp.
 
-#### Tác động của đặt cọc thanh khoản (11:25) {#liquid-staking-implications-1125}
+### Tác động của đặt cọc thanh khoản (11:25) {#liquid-staking-implications-1125}
 
 **Người dẫn chương trình:** Julia, việc hợp nhất các trình xác thực lớn hơn so với lợi ích của đặt cọc thanh khoản như thế nào? Những quyết định này sẽ được cân nhắc ra sao trong tâm trí của người đặt cọc sau Pectra?
 
@@ -79,7 +79,7 @@ Việc hình phạt cắt giảm ban đầu đã được hạ thấp làm giả
 
 Về mặt tiện ích, một token staking thanh khoản (LST) rõ ràng là bổ sung thêm thanh khoản — ngay cả với việc rút tiền một phần từ lớp thực thi, nó sẽ không diễn ra ngay lập tức. Bạn gửi giao dịch, nó được đưa vào hàng đợi, sau đó có kỷ nguyên thoát và kỷ nguyên rút tiền. Các token staking thanh khoản vẫn cung cấp thanh khoản tức thì mà việc rút tiền một phần không thể làm được.
 
-#### Các bước tiếp theo cho người đặt cọc (16:20) {#next-steps-for-stakers-1620}
+### Các bước tiếp theo cho người đặt cọc (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Những gì chúng tôi thấy là các tổ chức tài chính thường sẽ đặt cọc từ 65% đến 85% số ETH của họ dưới dạng lưu ký, bởi vì họ cần phần còn lại như một bộ đệm thanh khoản cho các khoản quy đổi. Với đặt cọc thanh khoản, bạn có khả năng tăng số lượng ETH được đặt cọc, điều này tạo ra phần thưởng cao hơn.
 
@@ -89,7 +89,7 @@ Cả hai bên đều được hưởng lợi từ Pectra — đặt cọc thanh 
 
 Một lợi thế chính mà tôi chưa đề cập đến là việc rút tiền một phần — giờ đây khi bạn có thể rút ETH đã đặt cọc từ lớp thực thi, điều này mở ra những con đường mới cho các giao thức như EigenLayer để kích hoạt việc rút tiền và thoát. Có một sự gia tăng lớn về chức năng và khả năng tương tác mà tài chính phi tập trung (DeFi) hiện có thể kết hợp tốt hơn vào toàn bộ vòng đời trình xác thực, từ khi gửi tiền đến khi thoát. Là một kỹ sư chuỗi khối, thật thú vị khi có thể tự động hóa toàn bộ quy trình làm việc.
 
-#### Lời kết (19:50) {#closing-1950}
+### Lời kết (19:50) {#closing-1950}
 
 **Người dẫn chương trình:** Julia, mọi người có thể đến đâu để tìm hiểu thêm về Liquid Collective và Alluvial?
 

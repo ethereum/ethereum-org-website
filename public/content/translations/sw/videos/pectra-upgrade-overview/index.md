@@ -19,11 +19,11 @@ Wasilisho la **Christine Kim** katika Devcon SEA linalojumuisha EIP zilizojumuis
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=ufIDBCgdGwY) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 Tutazungumza kuhusu EIP zote zinazoingia kwenye uboreshaji wa Pectra. Onyo fupi kabla sijaanza: kila kitu ninachotaka kusema ni cha kutoa taarifa tu — kwa madhumuni ya kutoa taarifa — na hakipaswi kuchukuliwa kama ushauri wa kifedha au uwekezaji.
 
-#### Mtandao Mkuu wa Pectra ni lini (0:23) {#when-is-pectra-mainnet-023}
+### Mtandao Mkuu wa Pectra ni lini (0:23) {#when-is-pectra-mainnet-023}
 
 Kabla hatujaingia kwenye kile kinachoingia kwenye Pectra, swali ninaloulizwa zaidi ni "Pectra itaingia lini kwenye Mtandao Mkuu?" Kwa hivyo nitaondoa hilo njiani ili tuweze kuingia kwenye mambo ya kiufundi.
 
@@ -43,7 +43,7 @@ Kihistoria, wasanidi wamepanga bajeti ya takriban wiki mbili kati ya maboresho y
 
 Kwa kuzingatia taarifa zote ninazojua sasa hivi na maendeleo ambayo wasanidi wamefanya hadi sasa kwenye Pectra, uchambuzi na nadhani yangu bora ni kwamba Mtandao Mkuu wa Pectra utafanyika kiuhalisia Aprili ijayo 2025. Tena, hii ni ya muda sana kwa sababu mambo mengi yanaweza kubadilika. Uendelezaji hufanyika kila wiki — wasanidi wako kwenye simu hizi za ACD wakizungumza kuhusu hitilafu hii ambayo hawakutarajia katika EIP hii au EIP hii mpya wanayotaka kuongeza kwenye Pectra.
 
-#### EIP za tabaka la utekelezaji (6:23) {#execution-layer-eips-623}
+### EIP za tabaka la utekelezaji (6:23) {#execution-layer-eips-623}
 
 Hebu tuendelee kwenye kiini cha mazungumzo haya — ni nini kinachoingia kwenye uboreshaji wa Pectra. Kuna EIP kumi zinazoingia kwenye Pectra, na nne kati yao zinalenga tabaka la utekelezaji.
 
@@ -55,7 +55,7 @@ Hebu tuendelee kwenye kiini cha mazungumzo haya — ni nini kinachoingia kwenye 
 
 **EIP-7702** — weka msimbo kwa akaunti zinazomilikiwa na nje. Aina mpya ya muamala inakuja kwenye Ethereum. Aina hii ya muamala itaruhusu kwa muda EOA kuwa na unyumbufu mkubwa zaidi, kuwezesha vipengele kama vile ukusanyaji wa mafungu wa muamala, miamala iliyofadhiliwa, miamala yenye masharti, na usalama uliokabidhiwa. Unaweza kuwa unafikiria, "je, haya ni maono ya udhanifu wa akaunti yanayokuja hai kwenye Ethereum?" Hapana, sio — ni hatua ndogo. Ni hatua ya mapema kuona jinsi ramani ya njia halisi ya udhanifu wa akaunti asilia wa kweli inavyoweza kuonekana kwenye Ethereum. Kulikuwa na mjadala kidogo kuhusu jinsi wasanidi wanapaswa kuchukua hatua hiyo ya kwanza, na utata mwingi kuhusu hii kuingia na muundo wake — lakini imeingia.
 
-#### EIP za tabaka la mwafaka (12:00) {#consensus-layer-eips-1200}
+### EIP za tabaka la mwafaka (12:00) {#consensus-layer-eips-1200}
 
 Kuna nyingine sita — hizi ni EIP za tabaka la mwafaka.
 
@@ -69,11 +69,11 @@ Kuna nyingine sita — hizi ni EIP za tabaka la mwafaka.
 
 **EIP-7549** — hamisha faharisi ya kamati nje ya uthibitisho. Huu ni urekebishaji na uundaji upya wa jinsi uthibitisho unavyokusanywa ili kupunguza mzigo wa mtandao kwenye Ethereum na kuokoa kipimo data cha nodi. Wasanidi walipokuwa wakijumuisha hii kwenye Pectra, walifikiri ni mabadiliko makubwa yenye faida nzuri na rahisi — lakini kwa vitendo, iligeuka kuwa ngumu zaidi kutekeleza kuliko ilivyotarajiwa.
 
-#### Muhtasari (17:19) {#summary-1719}
+### Muhtasari (17:19) {#summary-1719}
 
 Pectra ni mchanganyiko wa masasisho. Itafanya mambo matatu: kwanza, kurekebisha mapungufu muhimu ya Ethereum kama mnyororo wa vitalu wa Uthibitisho wa Dau (PoS) — fikiria kuhusu MaxEB, hilo ni rekebisho muhimu kwa sababu ukubwa wa kundi la wathibitishaji unaweza kuendelea kukua bila kudhibitiwa. Pili, kuboresha uzoefu wa mtumiaji — aina mpya ya muamala, miundo inayonyumbulika zaidi, baadhi ya maboresho kwa miundo isiyo na hitaji la uaminifu zaidi kwa mabwawa ya uwekaji dhamana. Na tatu, kuongeza uwezo wa upatikanaji wa data wa Ethereum — hilo halijajumuishwa rasmi kwenye Pectra lakini linaonekana kuwa na uwezekano.
 
-#### EIP zilizoondolewa kwenye Pectra (18:02) {#eips-removed-from-pectra-1802}
+### EIP zilizoondolewa kwenye Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Hizi hapa ni EIP zote zilizoondolewa kwenye Pectra. Hili ni jambo la mara ya kwanza kwa uboreshaji kuwa na EIP nyingi zilizoondolewa.
 
@@ -83,7 +83,7 @@ Hizi hapa ni EIP zote zilizoondolewa kwenye Pectra. Hili ni jambo la mara ya kwa
 
 Hizi sasa zimehamishiwa Fusaka. Verkle hapo awali ilipangwa kwa Fusaka lakini tangu wakati huo imecheleweshwa zaidi. EOF na PeerDAS ziko Fusaka kwa sasa. Kuna EIP nyingine ambazo wasanidi watafikiria tena kujumuisha katika Fusaka — mpito wa SSZ, orodha za ujumuishaji, mabadiliko ya utoaji, ukomo wa historia, ePBS, na mwelekeo wa udhanifu wa akaunti.
 
-#### Maswali na Majibu (22:02) {#qa-2202}
+### Maswali na Majibu (22:02) {#qa-2202}
 
 **Mwenyeji:** EOF ni lini?
 

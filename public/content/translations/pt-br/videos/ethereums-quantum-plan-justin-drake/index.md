@@ -17,7 +17,7 @@ Uma entrevista com **Justin Drake**, pesquisador da Fundação Ethereum, cobrind
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=wURmzLKhJco) publicada pelo Bankless. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução e a ameaça quântica (0:00) {#introduction-and-the-quantum-threat-000}
+### Introdução e a ameaça quântica (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Uma mudança de mentalidade interessante para mim nos últimos meses é que parei de pensar no pós-quântico como um obstáculo que temos que superar e penso nisso mais como uma oportunidade. É uma oportunidade para o Ethereum se destacar como o primeiro sistema financeiro global que é seguro no cenário pós-quântico, não apenas em relação aos seus concorrentes como o Bitcoin e outros, mas também em relação às moedas fiduciárias e às finanças tradicionais (TradFi). E acho que isso enviaria uma mensagem muito forte e seria uma espécie de argumento de venda de segurança muito natural para o mundo migrar para o Ethereum.
 
@@ -35,7 +35,7 @@ Então, as metas estão se aproximando cada vez mais, e você tem essa dupla exp
 
 Agora, projetando para o futuro, meu Dia Q pessoal é em 2032. Esta é uma visão um pouco otimista no sentido de que é possível que eles cheguem um pouco mais tarde, mas precisamos estar preparados para o pior cenário. Então, eu diria que há pelo menos 1% de chance de que o Dia Q seja em 2032, mais provavelmente uma porcentagem de dois dígitos. Vários especialistas dirão algo entre 2031 e 2038. Um dos meus amigos na indústria, Steve Bryley, fundador e CEO de uma das maiores empresas de correção de erros quânticos do mundo, que por acaso está sediado em Cambridge, onde estou — seu Dia Q pessoal era 2032, mas ele tem essa data há 15 anos
 
-#### Quando é o Dia Q e como nos preparamos? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Quando é o Dia Q e como nos preparamos? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 e sempre permaneceu o mesmo.
 
@@ -51,7 +51,7 @@ e sempre permaneceu o mesmo.
 
 **Justin Drake:** Não posso falar por ele, mas uma coisa que devemos notar é que Scott é principalmente um teórico. Por muito tempo ele esteve trabalhando na teoria, não tanto no dia a dia dos computadores quânticos, e acho que essa foi parcialmente a razão pela qual ele foi tão cauteloso. O que está acontecendo cada vez mais é que existem empresas reais, empreendedores reais construindo essas coisas e ele tem uma visão privilegiada. Ele está basicamente absorvendo todas essas informações. Uma das coisas que ele disse recentemente é que o governo dos EUA está começando a intervir na publicação de ideias. Então, temos empresas e acadêmicos que podem apresentar melhorias para o algoritmo de Shor, e elas não estão sendo totalmente divulgadas, possivelmente por razões de segurança nacional.
 
-#### Qubits físicos, qubits lógicos e a quebra do ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Qubits físicos, qubits lógicos e a quebra do ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Uau. Certo. Então parece que os governos estão se envolvendo nisso. Na verdade, não temos certeza de todo o trabalho que está acontecendo nos bastidores — só estamos cientes do trabalho comercialmente viável neste momento. Sobre a parte do qubit lógico, você disse que temos um qubit lógico agora. Existem qubits físicos e qubits lógicos, e o que precisa ser escalado são os qubits lógicos. Para quebrar o ECDSA, de quantos qubits lógicos nós realmente precisamos? Essa é uma métrica que estou observando, mas esse é mesmo o número certo? Ouvi pessoas falarem sobre precisar de mil, ou talvez 1.500. Esse é um número ao qual deveríamos prestar atenção?
 
@@ -69,7 +69,7 @@ Agora, sobre os tempos de execução, isso é um pouco interessante porque exist
 
 **Justin Drake:** Sim. E se de fato for um estado-nação que terá acesso a esses computadores quânticos primeiro, a menos que cripto desempenhe um papel sistêmico importante no mundo, o mais provável é que eles usem seus poderes para atacar as coisas de forma furtiva — por exemplo, espionar seus adversários. Então isso joga a nosso favor. Mas se você estiver lidando com uma entidade puramente racional motivada por dólares, eles podem de fato ir atrás do Bitcoin ou do Ethereum.
 
-#### Data centers quânticos e o cenário de ataque do Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Data centers quânticos e o cenário de ataque do Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Última pergunta sobre qubits. Os data centers de computação quântica estão sendo construídos agora? Temos essa construção massiva de data centers para IA. Algo semelhante está começando a acontecer com os computadores quânticos?
 
@@ -93,7 +93,7 @@ Agora, sobre os tempos de execução, isso é um pouco interessante porque exist
 
 **Justin Drake:** Exatamente. Sim. E então você provavelmente iria atacar os peixes grandes, que podem ser alguma corretora que não implementou a infraestrutura correta para se proteger. Acontece que há uma mitigação muito fácil para computadores quânticos, pelo menos para os primeiros — não reutilize seus endereços. Quando você reutiliza seu endereço, você reutiliza a chave pública, e isso significa que um invasor tem tempo para quebrar a chave privada correspondente e, em seguida, roubar seus fundos na segunda vez que você usar o endereço. Portanto, a melhor prática deve ser que, se você estiver mantendo fundos em armazenamento frio de longo prazo, deve ser um endereço limpo para o qual a chave pública correspondente nunca foi revelada. Só para deixar isso bem claro: o que um computador quântico permite que você
 
-#### Endereços vulneráveis de Bitcoin e as moedas de Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Endereços vulneráveis de Bitcoin e as moedas de Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 fazer é ir da chave pública de volta para a chave privada. Então, isso realmente compromete as bases da propriedade.
 
@@ -119,7 +119,7 @@ Será um processo estendido ao longo do tempo. E uma consequência interessante 
 
 **Justin Drake:** Sim, então o número aproximado que tenho em mente está alinhado com esses. São cerca de 2 milhões de Bitcoin, digamos 10%. Temos 1 milhão do Satoshi e depois aproximadamente outro milhão que não se move há muito tempo. Precisamos descontar um pouco disso porque alguns endereços zumbis são legítimos e vão reviver, mas também devemos aumentar porque pode haver alguns endereços gastos recentemente que serão perdidos. Então, 5 a 15% é a faixa correta. Eu apostaria em torno de 10–12%, o que é muito considerável — definitivamente na casa das centenas de bilhões de dólares.
 
-#### O debate entre queima e resgate para o Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### O debate entre queima e resgate para o Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Pode-se pensar um pouco sobre a teoria dos jogos aqui. A opção A é tentar queimar as moedas. A vantagem é que você não tem as centenas de bilhões de dólares de pressão de venda. Se você analisar isso com uma visão de curto prazo, essa é a jogada racional. Mas toda a história do Bitcoin é sobre fortes direitos de propriedade, então, se você tiver uma visão de longo prazo, não deveria querer queimar as moedas. É muito difícil saber qual caminho a comunidade seguirá. É possível que, no final, a decisão seja tomada por grandes detentores — por exemplo, Michael Saylor e a MicroStrategy. Porque esses grandes detentores receberão uma cópia de ambas as versões do Bitcoin — a com a queima e a sem — e eles podem escolher despejar a que não gostam. E sabemos que Saylor é a favor da queima, então ele pode, sozinho, potencialmente manipular o mercado e obter o resultado que deseja.
 
@@ -131,7 +131,7 @@ A outra opção é simplesmente deixar esses 10% para quem conseguir criar o com
 
 **Justin Drake:** Sim, isso foi muito bem dito. Mas uma pequena correção: isso não precisa acontecer no Q-Day ou depois do Q-Day. Pode acontecer antes. A qualquer momento, a comunidade do Bitcoin ou algum subconjunto dela pode propor fazer uma bifurcação. No número do bloco da bifurcação, haveria duas versões do ativo Bitcoin — assim como na bifurcação do Bitcoin Cash. E, em última análise, isso é decidido pelo mercado. As exchanges configurarão as duas versões do ativo e o mercado decidirá qual é o verdadeiro Bitcoin. E é possível que, apenas por causa da dinâmica de liquidez de curto prazo, a versão que queima as moedas, potencialmente antes do Q-Day, seja a que vença.
 
-#### O cenário de Michael Saylor e os pontos de Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### O cenário de Michael Saylor e os pontos de Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Certo. Então eu sou o Michael Saylor, possuo de 2 a 3% da oferta de Bitcoin, especialmente a oferta líquida. Eu recebo ambas as cópias. Estamos fazendo uma bifurcação na blockchain do Bitcoin, assim como nas guerras de bifurcação do Bitcoin de 2017. Quero preservar meu valor, então vendo todos os bitcoins que são suscetíveis a ataques quânticos e mantenho todos os bitcoins na versão que queimou as moedas suscetíveis a ataques quânticos. O preço da blockchain intocada cai. O preço da versão com queima permanece alto porque ninguém a está vendendo — Saylor não está vendendo, a BlackRock não está vendendo. Então você está dizendo que o preço do Bitcoin com a solução quântica será mais alto e, pelas forças do mercado, se tornará o Bitcoin canônico.
 
@@ -155,7 +155,7 @@ A outra opção é simplesmente deixar esses 10% para quem conseguir criar o com
 
 Certamente é incrível que isso venha a acontecer com uma rede de vários trilhões de dólares com uma recompensa tão grande. É sem precedentes. Mas isso também pode acontecer, e talvez seja um resultado melhor para o Bitcoin.
 
-#### Prova de frase semente e o problema do tamanho da assinatura pós-quântica (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Prova de frase semente e o problema do tamanho da assinatura pós-quântica (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Sim. Então, eu tenho algumas considerações. A primeira é que existe uma maneira bastante sofisticada de provar a propriedade de Bitcoin sem passar pela chave privada. Isso é conhecido como prova de frase semente. A maneira como você deriva um endereço de Bitcoin ocorre em três etapas: etapa um, você gera sua frase semente; etapa dois, você faz algumas manipulações na frase semente, incluindo a geração de hash, para derivar sua chave privada; então, a partir da chave privada, você deriva a chave pública, que é o endereço que vai onchain. Agora, a chave privada infelizmente não é mais algo que possa provar a propriedade. Mas, por causa da etapa de geração de hash, se você souber sua frase semente, isso ainda é uma prova de propriedade. Então, uma coisa que poderia acontecer — e, tecnicamente falando, é o caminho mais sólido a seguir — é congelar o Bitcoin, mas permitir que qualquer pessoa reviva seu Bitcoin com uma prova de frase semente.
 
@@ -177,7 +177,7 @@ O que estamos construindo para o Ethereum é essa tecnologia sofisticada de agre
 
 Mas, na verdade, existe uma maneira de fazer hedge do preço do Bitcoin, que é muito fácil — você simplesmente faz short de BTC. Digamos que você saiba com certeza que quebrou a chave privada de uma carteira que contém 100.000 BTC. Você faz um short de 100.000 BTC. Isso garante o seu lucro. E então, não importa o que aconteça com o preço do Bitcoin, você garantiu seu lucro, que pode ser de dezenas de bilhões de dólares.
 
-#### O desafio da camada social do Bitcoin e a vantagem do Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### O desafio da camada social do Bitcoin e a vantagem do Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Agora, eu quero destacar que Justin, você pensa de uma maneira particular, e a forma como você pensa é o motivo pelo qual você está no Ethereum. Se você fosse um Bitcoiner, pensaria de uma maneira diferente. A forma de pensar de um Bitcoiner é muito única, muito distinta — uma espécie de maximalista dos direitos de propriedade. Eu acho que o que o Justin faria se estivesse no comando do Bitcoin é muito diferente do que a maioria geral dos Bitcoiners faria. Não tenho uma pergunta prática aqui, mas só quero destacar isso.
 
@@ -205,7 +205,7 @@ Quando eu estava no projeto Ultrasound, uma das coisas que tentávamos fazer era
 
 **Justin Drake:** Exatamente. Sim. Se eu fosse fazer uma previsão concreta, diria cerca de 2%, o que é aproximadamente uma ordem de grandeza menor que o Bitcoin. E essa diferença quantitativa tem consequências qualitativas: no caso do Ethereum, eu defenderia fortemente não fazer nada e realmente honrar os direitos de propriedade, porque no fim das contas, 2% não é grande coisa. No caso do Bitcoin, 15% é um problema enorme.
 
-#### A atualização pós-quântica de três camadas do Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### A atualização pós-quântica de três camadas do Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Então o Ethereum terá que fazer essa mesma escolha. Digamos 3% — se deve congelar e queimar ou apenas deixar ser uma caça ao tesouro. Sua esperança é que sigamos com a opção da caça ao tesouro, o que significa que algum invasor quântico irá capturar esses 1–3% de ether. E se você olhar o panorama geral, estamos basicamente caminhando para que o ether seja um dinheiro muito melhor do que o BTC. Ele será não intervencionista, respeitoso aos direitos de propriedade, seguro contra ataques quânticos e não terá o problema de orçamento de segurança que vai atormentar o Bitcoin em alguns halvings. Então, acho que esta é uma grande oportunidade para o ativo.
 
@@ -225,7 +225,7 @@ Mas quando você olha o panorama geral, eu diria que o problema maior — talvez
 
 *(50:00)*
 
-#### Atualizando a camada de execução: agregação de assinatura (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Atualizando a camada de execução: agregação de assinatura (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 realmente detalha alguns dos principais marcos para fazer essas atualizações.
 
@@ -243,7 +243,7 @@ A Fundação Ethereum tem se esforçado muito para começar com assinaturas base
 
 E uma das coisas irônicas sobre essa abordagem é que ela é, na verdade, um aumento de escalabilidade em relação ao que temos hoje. O motivo é que você não tem o custo fixo de 64 bytes por transação. As transações têm zero bytes de dados de assinatura e, em seguida, você tem essa assinatura mestre única que é amortizada em todas as transações no bloco.
 
-#### Definindo o padrão da indústria com a colaboração do Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Definindo o padrão da indústria com a colaboração do Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Certo. Então, esta é uma atualização para muitas outras blockchains de contratos inteligentes derivadas do Ethereum, especialmente aquelas que otimizam para velocidade—
 
@@ -263,7 +263,7 @@ Voltando à outra coisa que eu disse — ela depende apenas de funções de hash
 
 Agora, há duas ressalvas que quero destacar. A ressalva número um é que estamos lidando com objetos mais complexos, e a solução que temos aqui é o que chamamos de verificação formal profunda de ponta a ponta.
 
-#### Verificação formal, Poseidon e a camada de consenso (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Verificação formal, Poseidon e a camada de consenso (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Temos nosso objeto criptográfico e queremos provar matematicamente que ele é sólido — que é impossível forjar uma assinatura. E não queremos fazer isso apenas para a matemática, mas também para o código. Se você tivesse me perguntado há 2 ou 3 anos se isso era viável, eu teria dito que sim, mas era extremamente trabalhoso e caro. O que estamos vendo com o advento da IA é que esse trabalho trabalhoso e caro pode ser feito 100 vezes mais rápido e 100 vezes mais barato.
 
@@ -279,7 +279,7 @@ Infelizmente, a maneira como você projeta funções de hash é que você não p
 
 Para desbloquear uma certa otimização de desempenho disponível apenas na camada de consenso, temos essa noção de uma assinatura com estado — as mensagens que você assina têm um contador que aumenta a cada vez. Isso não te lembra de algo? O número do slot. No Ethereum, na camada de consenso, você sempre assinará apenas uma única mensagem por slot. Se você assinar duas, você sofre uma penalização. Usamos essa restrição para ter assinaturas que são 10 vezes mais eficientes para agregar.
 
-#### Lean VM, o roteiro do Lean Consensus e o cronograma para 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, o roteiro do Lean Consensus e o cronograma para 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 Esta é a principal diferença — funções de hash sem estado na camada de execução versus assinaturas com estado na camada de consenso, onde o número do slot é incrementado. A tecnologia de agregação tem um nome: Lean VM, uma zkVM mínima para criptografia baseada em hash. Basicamente, a Lean VM estaria provando que esta é uma raiz de Merkle correta. A principal coisa da qual ainda não temos certeza absoluta é se essa abordagem pode desbloquear o que chamo de "fronteira do teragás" — 1 gigagás por segundo na l1, 10.000 TPS, mas de forma ainda mais ambiciosa, 1 teragás, 10 milhões de transações por segundo na l2 usando a disponibilidade de dados.
 
@@ -297,7 +297,7 @@ No momento, temos devnets para o Lean Consensus. E as especificações são tão
 
 Acho que isso terá consequências interessantes para a sustentabilidade, bem como para a governança. Sobre a governança, a maneira como fazemos isso hoje é, grosso modo,
 
-#### Governança do Ethereum e a data de conclusão em 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Governança do Ethereum e a data de conclusão em 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 que temos cinco clientes da camada de consenso e todos eles precisam implementar a atualização para podermos avançar. No futuro, quando tivermos 10 ou 15 clientes, poderemos simplesmente exigir os 80% melhores ou os 80% mais rápidos para avançar. Isso é mais como uma competição darwiniana que nos permite avançar muito mais rápido sem esperar pelo cliente mais lento.
 
@@ -325,7 +325,7 @@ Outra boa notícia é que não temos escolha. Temos que mudar a criptografia. É
 
 Isso torna a coordenação e a chegada a um consenso muito mais simples.
 
-#### A questão quântica não é apenas um problema cripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### A questão quântica não é apenas um problema cripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Acho que devemos enfatizar que não é apenas o Ethereum que não tem escolha — ninguém em cripto tem uma alternativa a isso. Todos em cripto terão que fazer uma reescrita. Com o Bitcoin é apenas o ECDSA, mas isso por si só já é o suficiente.
 
@@ -341,7 +341,7 @@ Onde eu concordaria com você é que tem que haver uma mudança muito grande par
 
 **Justin Drake:** Eu discordo. Você pode simplesmente olhar para a análise histórica — conchas do mar foram substituídas por sal, depois prata, depois ouro, e agora potencialmente o Bitcoin substituindo o ouro. Só porque o ouro falha não significa que a próxima coisa também tenha que falhar. Eu diria que o Ethereum é o sucessor muito natural do Bitcoin como dinheiro da internet. E só porque o Bitcoin falha não significa que o Ethereum tenha que falhar. Concordo que pode haver alguma dor a curto prazo, mas também estamos falando de ganhos a longo prazo.
 
-#### A oportunidade pós-quântica e o acerto de contas do orçamento de segurança (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### A oportunidade pós-quântica e o acerto de contas do orçamento de segurança (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Então, o que teremos no final disso? Em 2030, o Ethereum será seguro contra ameaças pós-quânticas porque o Justin prometeu. O que o Ethereum se tornará? Ele será o único de sua classe ou você espera que outras blockchains sigam o exemplo e também alcancem a segurança pós-quântica? Você pode descrever o sistema que teremos em 2030 se tudo isso se concretizar?
 
@@ -357,7 +357,7 @@ Um dado interessante: a Beacon Chain original (OG) foi lançada em 2020, e o des
 
 Já estamos começando a ver — apenas ontem, Dario Amodei, um dos veteranos (OGs) da IA, começou a fazer com que a IA se aprimorasse recursivamente de forma autônoma, o que é extremamente assustador. Isso é basicamente o que deve iniciar a curva exponencial em direção à superinteligência.
 
-#### A crise do orçamento de segurança do Bitcoin e o acerto de contas de 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### A crise do orçamento de segurança do Bitcoin e o acerto de contas de 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Temos 2032 potencialmente como o Dia Q, e também temos 2032 onde o Bitcoin terá o que acredito ser seu último halving. Você poderia chamá-lo de Dia B — o dia do Bitcoin onde haverá algum tipo de acerto de contas, porque a emissão será baixa demais para protegê-lo.
 
@@ -379,7 +379,7 @@ Existe a possibilidade de que o BTC, o ativo, possa se desvincular do Bitcoin, a
 
 **Justin Drake:** E se eu dissesse palavras diferentes como: "Vamos simplesmente remover o limite de 21 milhões porque o orçamento de segurança não é suficiente" — os Bitcoiners também não pensam assim. Eles estão indo muito rápido em direção a um muro, e 2032 é o dia do acerto de contas.
 
-#### Colete agora, descriptografe depois — riscos quânticos além das cripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Colete agora, descriptografe depois — riscos quânticos além das cripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** E quanto à questão quântica em relação ao resto da sociedade? Este não é apenas um problema do mundo cripto. As blockchains são singularmente suscetíveis, mas outros componentes da sociedade também são. Até que ponto um Ethereum pós-quântico representa uma ferramenta para a sociedade resolver e prevenir coisas em um mundo pós-quântico e pós-IA?
 
@@ -387,7 +387,7 @@ Existe a possibilidade de que o BTC, o ativo, possa se desvincular do Bitcoin, a
 
 Aí existe outro problema com a criptografia: se o material foi criptografado hoje e você não está usando uma criptografia segura pós-quântica, esses dados podem ser descriptografados no futuro. Existe toda essa classe de ataque chamada "colete agora, descriptografe depois". Acho realista que teremos descriptografias em massa na sociedade — muitas mensagens do Signal, mensagens do Telegram ou acervos de mensagens do Gmail sendo todos descriptografados simultaneamente. Isso poderia ter um impacto muito significativo na sociedade.
 
-#### Ethereum como aceleracionismo defensivo e risco existencial da IA (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Ethereum como aceleracionismo defensivo e risco existencial da IA (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, quando estávamos falando sobre essas três tecnologias de computação, parece que a que mais se destaca é a IA. Você estava falando sobre 2032 ser uma espécie de momento do tipo AGI (Inteligência Artificial Geral). Uma pergunta geral: como um criptógrafo extremamente talentoso, você não é uma AGI. A preocupação é que, à medida que entramos na singularidade da computação, tudo pode acontecer. Todos os planos bem elaborados que fizermos em 2026 para que nossas blockchains sejam resistentes a computadores quânticos — e se a AGI descobrir como quebrar nossa criptografia resistente a computadores quânticos de alguma outra forma? Como criptógrafo, você está preocupado com as incógnitas desconhecidas da inteligência artificial geral e com as coisas que ela poderia quebrar? E se estivermos preparados para um mundo pós-quântico, mas não para um mundo pós-AGI?
 
@@ -401,7 +401,7 @@ Acho plausível que, se a humanidade sobreviver, o Ethereum desempenhe um papel 
 
 Trabalhar no Ethereum ganhou um significado totalmente novo para mim nos últimos meses. Eu estava ignorando a IA na maior parte do tempo, em parte porque estava obcecado com coisas de blockchain, mas também porque era um brinquedo não muito tempo atrás. Mas através do meu trabalho, especialmente com verificação formal e desenvolvimento
 
-#### O significado de trabalhar no Ethereum na era da IA (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### O significado de trabalhar no Ethereum na era da IA (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 e programando, estou vendo o quão poderosa essa tecnologia é. Nas últimas semanas e meses, fiquei obcecado por IA, aprendendo o máximo que posso. De forma alguma sou um especialista, e talvez isso seja apenas uma fase pela qual as pessoas passam quando abrem a caixa de Pandora. Mas, para mim, trabalhar no Ethereum agora é tudo sobre aceleracionismo defensivo.
 
@@ -417,7 +417,7 @@ Acho que é possível que, nos próximos meses e anos, tenhamos algum tipo de de
 
 **Justin Drake:** Sou relativamente zen em relação a isso. Cheguei a um ponto em que estou feliz em morrer. Vivi uma vida muito feliz.
 
-#### Considerações finais sobre a probabilidade de ruína (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Considerações finais sobre a probabilidade de ruína (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** O quê?
 

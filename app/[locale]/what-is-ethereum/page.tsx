@@ -55,6 +55,9 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-what-is-ethereum")
 
   const { contributors, lastEditLocaleTimestamp } =

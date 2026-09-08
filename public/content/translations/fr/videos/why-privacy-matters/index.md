@@ -17,7 +17,7 @@ Une conférence TED de **Glenn Greenwald**, l'un des premiers journalistes à av
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=pcSlowAhvUk) publiée par TED. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Une expérience que tout le monde a vécue (0:12) {#an-experience-everyone-has-had-012}
+### Une expérience que tout le monde a vécue (0:12) {#an-experience-everyone-has-had-012}
 
 Il existe tout un genre de vidéos YouTube consacré à une expérience que, j'en suis certain, tout le monde dans cette salle a déjà vécue. Il s'agit d'un individu qui, se croyant seul, s'adonne à un comportement expressif — chanter à tue-tête, danser de manière frénétique, une légère activité sexuelle — pour découvrir qu'en fait, il n'est pas seul, qu'une personne l'observe et se cache, une découverte qui l'amène à cesser immédiatement ce qu'il faisait, horrifié. 
 
@@ -25,7 +25,7 @@ Le sentiment de honte et d'humiliation sur son visage est palpable. C'est le sen
 
 C'est le cœur du travail sur lequel je me suis singulièrement concentré au cours des 16 derniers mois : la question de savoir pourquoi la confidentialité est importante, une question qui a surgi dans le contexte d'un débat mondial, rendu possible par les révélations d'Edward Snowden selon lesquelles les États-Unis et leurs partenaires, à l'insu du monde entier, ont converti Internet, autrefois salué comme un outil de libération et de démocratisation sans précédent, en une zone sans précédent de surveillance de masse et aveugle.
 
-#### L'argument du « rien à cacher » (1:29) {#the-nothing-to-hide-argument-129}
+### L'argument du « rien à cacher » (1:29) {#the-nothing-to-hide-argument-129}
 
 Il y a un sentiment très commun qui émerge dans ce débat, même parmi les personnes qui sont mal à l'aise avec la surveillance de masse, qui dit qu'il n'y a pas de réel préjudice découlant de cette invasion à grande échelle parce que seules les personnes qui commettent de mauvaises actions ont une raison de vouloir se cacher et de se soucier de leur confidentialité.
 
@@ -37,7 +37,7 @@ Mais en revanche, les bonnes personnes sont celles qui vont au travail, rentrent
 
 Les personnes qui disent cela s'engagent en réalité dans un acte très extrême d'autodépréciation. Ce qu'elles disent vraiment, c'est : « J'ai accepté de faire de moi une personne tellement inoffensive, non menaçante et inintéressante que je ne crains pas que le gouvernement sache ce que je fais. »
 
-#### Même les détracteurs de la confidentialité ne croient pas ce qu'ils disent (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Même les détracteurs de la confidentialité ne croient pas ce qu'ils disent (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Cet état d'esprit a trouvé ce qui est, je pense, sa plus pure expression dans une interview de 2009 avec le PDG de longue date de Google, Eric Schmidt, qui, lorsqu'on l'a interrogé sur toutes les différentes façons dont son entreprise provoque des violations de la confidentialité pour des centaines de millions de personnes à travers le monde, a déclaré ceci : « Si vous faites quelque chose que vous ne voulez pas que les autres sachent, peut-être que vous ne devriez pas le faire en premier lieu. »
 
@@ -49,7 +49,7 @@ Ce même Eric Schmidt, le PDG de Google, a ordonné à ses employés chez Google
 
 Cette même division peut être observée avec le PDG de Facebook, Mark Zuckerberg, qui, dans une interview tristement célèbre en 2010, a déclaré que la confidentialité n'était plus une « norme sociale ». L'année dernière, Mark Zuckerberg et sa nouvelle épouse ont acheté non seulement leur propre maison, mais aussi les quatre maisons adjacentes à Palo Alto pour un total de 30 millions de dollars afin de s'assurer de profiter d'une zone de confidentialité empêchant d'autres personnes de surveiller ce qu'ils font dans leur vie personnelle.
 
-#### Le défi du mot de passe de messagerie (4:51) {#the-email-password-challenge-451}
+### Le défi du mot de passe de messagerie (4:51) {#the-email-password-challenge-451}
 
 Au cours des 16 derniers mois, alors que j'ai débattu de cette question à travers le monde, chaque fois que quelqu'un m'a dit : « Je ne m'inquiète pas vraiment des violations de la confidentialité parce que je n'ai rien à cacher », je leur dis toujours la même chose. 
 
@@ -65,7 +65,7 @@ Il y a une raison pour laquelle nous recherchons cela, et notre raison est que n
 
 Nous portons des jugements chaque jour sur le genre de choses que nous disons, pensons et faisons que nous sommes prêts à faire savoir aux autres, et le genre de choses que nous disons, pensons et faisons que nous ne voulons que personne d'autre ne sache. Les gens peuvent très facilement affirmer en paroles qu'ils n'accordent pas d'importance à leur confidentialité, mais leurs actions nient l'authenticité de cette croyance.
 
-#### Être observé modifie notre comportement (7:02) {#being-watched-changes-our-behavior-702}
+### Être observé modifie notre comportement (7:02) {#being-watched-changes-our-behavior-702}
 
 Or, il y a une raison pour laquelle la confidentialité est si universellement et instinctivement désirée. Ce n'est pas seulement un mouvement réflexe comme respirer de l'air ou boire de l'eau. La raison est que lorsque nous sommes dans un état où nous pouvons être surveillés, où nous pouvons être observés, notre comportement change radicalement. 
 
@@ -73,7 +73,7 @@ L'éventail des options comportementales que nous envisageons lorsque nous penso
 
 La honte humaine est un facteur de motivation très puissant, tout comme le désir de l'éviter, et c'est la raison pour laquelle les gens, lorsqu'ils sont dans un état où ils sont observés, prennent des décisions qui ne sont pas le sous-produit de leur propre libre arbitre, mais qui concernent les attentes que les autres ont d'eux ou les mandats de l'orthodoxie sociétale.
 
-#### Le panoptique de Bentham (8:09) {#benthams-panopticon-809}
+### Le panoptique de Bentham (8:09) {#benthams-panopticon-809}
 
 Cette prise de conscience a été exploitée de la manière la plus puissante à des fins pragmatiques par le philosophe du 18e siècle Jeremy Bentham, qui a entrepris de résoudre un problème important introduit par l'ère industrielle, où, pour la première fois, les institutions étaient devenues si grandes et centralisées qu'elles n'étaient plus en mesure de surveiller et donc de contrôler chacun de leurs membres individuels. 
 
@@ -81,7 +81,7 @@ Et la solution qu'il a conçue était une conception architecturale initialement
 
 Le philosophe français du 20e siècle Michel Foucault a réalisé que ce modèle pouvait être utilisé non seulement pour les prisons, mais pour chaque institution qui cherche à contrôler le comportement humain : les écoles, les hôpitaux, les usines, les lieux de travail. Et ce qu'il a dit, c'est que cet état d'esprit, ce cadre découvert par Bentham, était le moyen clé du contrôle sociétal pour les sociétés occidentales modernes, qui n'ont plus besoin des armes manifestes de la tyrannie — punir, emprisonner ou tuer les dissidents, ou contraindre légalement à la loyauté envers un parti particulier — parce que la surveillance de masse crée une prison dans l'esprit qui est un moyen beaucoup plus subtil bien que beaucoup plus efficace de favoriser la conformité aux normes sociales ou à l'orthodoxie sociale, beaucoup plus efficace que la force brute ne pourrait jamais l'être.
 
-#### Orwell, la religion et la prison dans l'esprit (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, la religion et la prison dans l'esprit (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 L'œuvre littéraire la plus emblématique sur la surveillance et la confidentialité est le roman de George Orwell *1984*, que nous étudions tous à l'école, et par conséquent, c'est presque devenu un cliché. En fait, chaque fois que vous l'évoquez dans un débat sur la surveillance, les gens le rejettent instantanément comme inapplicable, et ce qu'ils disent, c'est : « Oh, eh bien dans *1984*, il y avait des moniteurs dans les maisons des gens, ils étaient observés à chaque instant, et cela n'a rien à voir avec l'État de surveillance auquel nous sommes confrontés. » 
 
@@ -93,7 +93,7 @@ Ce que toutes ces œuvres apparemment disparates reconnaissent, la conclusion à
 
 À l'inverse, et c'est encore plus important, c'est un domaine de confidentialité, la capacité d'aller quelque part où nous pouvons penser, raisonner, interagir et parler sans que le regard critique des autres ne se pose sur nous, dans lequel résident exclusivement la créativité, l'exploration et la dissidence, et c'est la raison pour laquelle, lorsque nous permettons à une société d'exister dans laquelle nous sommes soumis à une surveillance constante, nous permettons à l'essence de la liberté humaine d'être gravement paralysée.
 
-#### Deux leçons destructrices (12:30) {#two-destructive-lessons-1230}
+### Deux leçons destructrices (12:30) {#two-destructive-lessons-1230}
 
 Le dernier point que je veux observer à propos de cet état d'esprit, l'idée que seules les personnes qui font quelque chose de mal ont des choses à cacher et donc des raisons de se soucier de la confidentialité, c'est qu'il enracine deux messages très destructeurs, deux leçons destructrices. La première est que les seules personnes qui se soucient de la confidentialité, les seules personnes qui rechercheront la confidentialité, sont par définition de mauvaises personnes. 
 
@@ -111,7 +111,7 @@ La célèbre militante socialiste Rosa Luxemburg a dit un jour : « Celui qui ne
 
 Merci beaucoup. (Applaudissements)
 
-#### Questions-réponses avec Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Questions-réponses avec Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani :** Glenn, merci. L'argumentaire est plutôt convaincant, je dois dire, mais je veux vous ramener aux 16 derniers mois et à Edward Snowden pour quelques questions, si vous le permettez. La première vous est personnelle. Nous avons tous lu des articles sur l'arrestation de votre partenaire, David Miranda, à Londres, et d'autres difficultés, mais je suppose qu'en termes d'engagement personnel et de risque, la pression sur vous n'est pas si facile à supporter face aux plus grandes organisations souveraines du monde. Parlez-nous un peu de cela.
 

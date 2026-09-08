@@ -19,7 +19,7 @@ Un débat entre **Lyn Alden** et **Justin Drake** sur les compromis fondamentaux
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=1m12zgJ42dI) publiée par Bankless. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 **Ryan Sean Adams :** Bienvenue sur Bankless, où nous explorons la frontière de la monnaie et de la finance sur Internet. Ici Ryan Sean Adams, je suis avec David Hoffman, et nous sommes là pour vous aider à vous affranchir davantage des banques. Les amis, vous allez vous régaler aujourd'hui. Nous avons deux experts de la preuve d'enjeu et de la preuve de travail, et ils débattent pour savoir laquelle est la meilleure pour créer un système monétaire mondial — un système monétaire crypto — la preuve de travail ou la preuve d'enjeu. Lyn Alden et Justin Drake sont dans l'épisode d'aujourd'hui. Nous allons parler de plusieurs choses. Numéro un : laquelle offre la plus grande sécurité économique, la preuve de travail ou la preuve d'enjeu ? Numéro deux : laquelle offre la meilleure dissuasion et capacité de récupération face à la redoutée attaque des 51 % ? Numéro trois : laquelle minimise le pouvoir de gouvernance des élites — laquelle donne le plus le « pouvoir au peuple » ? Numéro quatre : quel est le système le plus équitable économiquement pour y participer ? Et numéro cinq — c'est personnellement mon préféré — cette conversation sur le fait que la preuve de travail s'apparente davantage à une monnaie marchandise et la preuve d'enjeu à une monnaie action.
 
@@ -29,7 +29,7 @@ Un débat entre **Lyn Alden** et **Justin Drake** sur les compromis fondamentaux
 
 **Justin Drake :** Je vais très bien, merci encore de m'avoir invité, les gars.
 
-#### Cadrage du débat : prime monétaire (7:30) {#framing-the-debate-monetary-premium-730}
+### Cadrage du débat : prime monétaire (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams :** Je veux commencer par la grande question. Je pense que nous essayons de répondre à la méta-question de savoir si la preuve de travail ou la preuve d'enjeu est la plus propice à l'accumulation d'une prime monétaire — en gros, lequel de ces deux protocoles de consensus est le plus susceptible de faire d'une cryptomonnaie une monnaie. Justin, es-tu d'accord pour dire que c'est le bon cadrage ?
 
@@ -41,7 +41,7 @@ Un débat entre **Lyn Alden** et **Justin Drake** sur les compromis fondamentaux
 
 **Justin Drake :** Je veux intervenir et expliquer pourquoi cette analogie entre les actions et la preuve d'enjeu est peut-être une mauvaise analogie. Dans le contexte des actions, vous avez le droit de vote sur n'importe quoi — vous pouvez complètement changer les règles de l'entreprise. Dans le consensus de preuve d'enjeu, les participants au consensus ne peuvent pas simplement changer les règles arbitrairement. Ils ne peuvent pas dire « nous allons simplement nous donner mille ETH chacun » — ce serait une transaction invalide. En fin de compte, les participants au consensus sont redevables envers la communauté, et c'est une énorme différence par rapport aux actions.
 
-#### Monnaie marchandise contre monnaie action (10:06) {#commodity-money-vs-equity-money-1006}
+### Monnaie marchandise contre monnaie action (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams :** Lyn, veux-tu poursuivre cette conversation sur la preuve de travail en tant que marchandise et la preuve d'enjeu en tant qu'action ?
 
@@ -53,7 +53,7 @@ Un débat entre **Lyn Alden** et **Justin Drake** sur les compromis fondamentaux
 
 **Lyn Alden :** Je pense qu'il y a un certain degré de spectre, mais pour l'essentiel, c'est plutôt une rue à sens unique. Il y a de multiples façons de devenir une action mais très peu de façons de devenir une marchandise. Les marchandises, par leur nature, sont quelque peu rares et immuables. Les moyens de créer une véritable marchandise dans le domaine numérique sont extrêmement limités.
 
-#### Attaques des 51 % : dissuasion et récupération (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Attaques des 51 % : dissuasion et récupération (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake :** Je veux comparer la preuve de travail et la preuve d'enjeu sur celui qui est le moins exposé aux attaques de censure. L'un des avantages massifs de la preuve d'enjeu est que la couche sociale dispose d'outils pour intervenir. Dans la preuve de travail, si un attaquant menant une attaque des 51 % arrive, il collecte chaque récompense, chaque émission, chaque frais de transaction. Les mineurs honnêtes s'éteignent parce que cela n'a pas de sens de dépenser de l'électricité sans revenu. Ensuite, ils veulent liquider, en vendant leur matériel. L'attaquant peut acheter ce matériel pour une bouchée de pain et se renforcer. Même si la communauté parvient à organiser une contre-attaque, cela prendrait des mois, voire des années à mettre en place.
 
@@ -65,7 +65,7 @@ En matière de sécurité, il ne s'agit pas seulement d'attaques des 51 % — il
 
 Pour se remettre des attaques des 51 % : la seule façon dans la preuve d'enjeu est de faire un soft fork et de prendre le capital des gens. Si vous le formulez comme prendre le capital de l'attaquant, cela semble bien. Mais l'attaquant pourrait être un dépositaire réglementé — vous prenez le capital de personnes qui n'avaient rien à voir avec l'attaque.
 
-#### Complexité, bugs et diversité des clients (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Complexité, bugs et diversité des clients (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake :** La complexité n'est pas nécessairement un mal. L'humanité prospère grâce à elle. En termes de complexité de la preuve d'enjeu — oui, c'est plus complexe, au moins 10 fois, peut-être 100 fois. Mais c'est une complexité que nous avons apprivoisée à ce stade. Nous avons cinq clients différents qui ont implémenté le protocole, chacun avec de petites équipes de cinq à dix personnes. La diversité des clients permet à la communauté d'acheter une assurance contre les bugs.
 
@@ -75,7 +75,7 @@ Sur le sujet d'être continuellement en ligne — ce que nous appelons la subjec
 
 En regardant la direction de la preuve de travail à long terme, vous verrez une intégration croissante entre les mineurs et les producteurs d'énergie. Le réseau électrique doit naturellement surproduire de l'électricité. Les systèmes de preuve de travail sont un très bon équilibreur de charge pour l'énergie excédentaire. La source d'électricité la moins chère est l'énergie excédentaire à coût pratiquement nul. À l'heure actuelle, la plus grande installation de minage de Bitcoin au monde possède environ 1 % du taux de hachage total — c'est déjà structurellement décentralisé.
 
-#### Équité et l'argument « les riches s'enrichissent » (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Équité et l'argument « les riches s'enrichissent » (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake :** Dans la preuve d'enjeu, vous avez une équité parfaite — vous investissez une unité de capital et obtenez exactement le même montant de récompenses, peu importe votre taille. Dans la preuve de travail, les gros poissons ont des avantages injustes. Si vous êtes un mineur particulier achetant une machine, vous payez 2x, 3x, 4x, 5x plus cher par rapport aux mineurs professionnels qui achètent en gros. En raison de la loi de Moore, les attaquants qui veulent attaquer ont un avantage — ils peuvent choisir le matériel le plus récent et le plus à la pointe. Pour eux, le prix de l'électricité est largement hors de propos, car une attaque des 51 % n'a besoin de durer qu'un jour ou une semaine. 99 % du coût réside dans les machines et l'infrastructure, pas dans l'électricité.
 
@@ -85,7 +85,7 @@ Le fait que la preuve de travail soit intrinsèquement injuste crée des avantag
 
 Dans la preuve de travail, vous louez essentiellement votre capacité à gouverner le système. Vos machines se dégradent, votre source d'énergie pourrait devenir moins efficace, votre matériel devient moins à la pointe. C'est une série constante de décisions plutôt qu'un système qui profite intrinsèquement aux personnes qui ont acheté en premier. Peu importe la quantité de Bitcoin que possède Michael Saylor, il n'a aucun contrôle sur les transactions qui sont traitées.
 
-#### La preuve de travail comme « preuve d'enjeu avec des étapes supplémentaires » (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### La preuve de travail comme « preuve d'enjeu avec des étapes supplémentaires » (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake :** Je ne connais personne — et je suis dans cet espace depuis près d'une décennie — qui mine du Bitcoin en tant qu'individu à ce stade. C'est entièrement industriel. D'un autre côté, avec la preuve d'enjeu, tout le monde dans cet appel — sauf peut-être toi, Lyn — fait du staking en tant qu'individus. La diversité sur la preuve d'enjeu est beaucoup, beaucoup plus grande. La barrière à l'entrée est beaucoup plus basse — vous avez essentiellement juste besoin d'un ordinateur qui tourne 24h/24 et 7j/7.
 
@@ -97,11 +97,11 @@ Sur l'argument « les riches s'enrichissent » dans la preuve d'enjeu : je vois 
 
 Sur la diversité des clients — du moins la dernière fois que j'ai vérifié, le plus gros client représente environ 84 % des clients Ethereum. Vous avez un certain degré de diversification, mais c'est aussi en partie une illusion. En pratique, l'une des choses clés qui protège contre les bugs est d'avoir la base de code la plus simple possible.
 
-#### NIST, quantique et fondamentaux à long terme (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, quantique et fondamentaux à long terme (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake :** Si nous voulons être l'internet de la monnaie, nous avons besoin d'une échelle de temps de l'ordre de l'internet lui-même — des décennies, voire des siècles. La complexité est quelque chose qui a une demi-vie de peut-être un an — elle peut être apprivoisée et renforcée. Au fil du temps, à mesure que beaucoup de valeur est sécurisée, on peut faire confiance aux systèmes. Les bugs seront corrigés, le système se renforcera. Ce que nous devrions examiner, ce sont les fondamentaux à long terme. Il s'avère que la preuve de travail va être complètement bouleversée par l'informatique quantique dans les 20 à 30 prochaines années. Oui, il y a des préoccupations à court terme avec la complexité, mais si vous prenez du recul et vous concentrez sur les fondamentaux, il y a des raisons fondamentales d'être baissier sur la preuve de travail.
 
-#### L'argument historique de la monnaie marchandise (1:00:34) {#the-commodity-money-historical-argument-10034}
+### L'argument historique de la monnaie marchandise (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman :** Lyn, tu as en quelque sorte pris les devants en tant que commentatrice macroéconomique se concentrant sur les marchés des matières premières. Les Bitcoiners ont tendance à se concentrer sur les propriétés des marchandises et sur la façon dont Bitcoin consomme de l'énergie en tant que marchandise. Est-ce en partie un argument moral — que la monnaie marchandise est simplement une monnaie mieux adaptée au monde ?
 
@@ -113,13 +113,13 @@ Au fil du temps, cela tend vers la centralisation. À mesure que la dette s'accu
 
 **Lyn Alden :** Personnellement, je l'aborde d'un point de vue de risque tactique. Quel est le système le moins susceptible d'avoir des risques extrêmes ? Qu'est-ce qui est optimisé pour ce qu'il essaie de faire ? En ce qui concerne l'argument de l'équité, cela se mélange en partie avec différentes choses — la preuve de travail contre la preuve d'enjeu étant un aspect, et la rareté des jetons en étant un autre.
 
-#### Le moteur de rareté contre le moteur de liquidité (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Le moteur de rareté contre le moteur de liquidité (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake :** La preuve de travail et la preuve d'enjeu, du point de vue des mèmes, sont presque l'exact opposé. Avec la preuve d'enjeu, vous avez ce que j'appelle un moteur de rareté — un mécanisme pour transformer des ETH liquides en ETH gelés utilisés comme collatéral. Mes projections indiquent qu'environ la moitié de toute l'offre d'ETH finira par être stakée. Pour la preuve de travail, c'est l'inverse — l'émission et les frais de transaction que les mineurs gagnent doivent être vendus pour couvrir les dépenses d'électricité et de matériel. Vous avez créé un moteur de liquidité, qui inonde constamment le marché. Si vous demandez quel est le meilleur système pour créer de la monnaie pour l'internet — celui qui inonde constamment ou celui qui encourage les gens à conserver — je pense qu'il est évident de savoir lequel a le plus de valeur du point de vue des mèmes.
 
 **Lyn Alden :** Plus un système essaie de faire de choses, moins il sera bon dans l'une d'entre elles. Alors qu'Ethereum a essayé de durcir sa politique monétaire, il a sans doute perdu des parts de marché dans la finance décentralisée (DeFi) — passant de 97 % de la valeur totale bloquée (TVL) fin 2020 à 55 % aujourd'hui. Jusqu'à présent, Bitcoin n'a pas vraiment de concurrence d'autres systèmes. Les brèves périodes de concurrence — les mèmes Dogecoin, Bitcoin Cash — s'estompent avec le temps. Un monde est basé sur la gouvernance et sur le fait de rendre votre écosystème attractif. L'autre se résume à savoir lequel est le plus solide — lequel est le meilleur pour être de la monnaie.
 
-#### Gouvernance, immuabilité et auto-souveraineté (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Gouvernance, immuabilité et auto-souveraineté (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden :** Au minimum, un système de preuve d'enjeu donne aux détenteurs d'unités plus de poids sur les transactions qui sont traitées et celles qui sont censurées. Mais qui a le droit de changer le protocole et comment — cela dépasse le débat entre la preuve de travail et la preuve d'enjeu. Vous pouvez avoir des systèmes de preuve de travail qui ressemblent davantage à des actions — avec des bombes de difficulté ou des blocs super larges pour que les gens ne puissent pas faire tourner leur propre nœud.
 
@@ -129,13 +129,13 @@ Le mème de Bitcoin est l'auto-souveraineté. Vous faites tourner votre propre n
 
 **Lyn Alden :** Avec les monnaies marchandises, les producteurs ont rarement beaucoup de contrôle. L'or a un ratio stock-flux très élevé — les mineurs d'or n'ont pratiquement aucun contrôle sur le système. Cela a été vrai dans l'écosystème Bitcoin. Pendant la guerre de la taille des blocs, la majorité des mineurs étaient favorables à l'augmentation des blocs et n'ont tout de même pas pu la faire passer. Les opérateurs de nœuds l'ont rejetée. Cette combinaison de séparation des pouvoirs — où vous pouvez simplement faire tourner un nœud et devenir auto-souverain, et séparément le minage vous donne la capacité temporaire d'ordonner les transactions mais aucune allocation permanente — est ce qui maintient un système décentralisé.
 
-#### La réfutation de « les riches s'enrichissent » (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### La réfutation de « les riches s'enrichissent » (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake :** Sur le fait que « les riches s'enrichissent » dans la preuve d'enjeu — je vois cela comme de la préservation de richesse, pas de la multiplication de richesse. Lors du staking, vous payez un coût d'opportunité d'environ 3 % et vous êtes rémunéré. En net, vous faites de la préservation de richesse. Les mineurs professionnels font la même chose — ils couvrent le risque avec des contrats à terme, verrouillant des rendements qui correspondent à peu près au coût d'opportunité. En réalité, la preuve de travail n'est qu'une preuve d'enjeu avec des étapes supplémentaires. Le risque peut être éliminé avec des produits financiers, et à la fin de la journée, vous avez essentiellement le même produit financier.
 
 **Lyn Alden :** Ce qui rend un système de marchandises décentralisé, c'est la combinaison de petits nœuds et d'un minage séparé. Peu importe la quantité de Bitcoin que quelqu'un détient, il n'a aucun contrôle sur l'ordonnancement des transactions. C'est la séparation des pouvoirs. Si vous voulez vous rapprocher le plus possible de l'immuabilité dans le domaine numérique, vous concevez un système qui est très décentralisé, très difficile à modifier de force, avec soit aucun changement, soit des changements facultatifs. Tout ce qui s'écarte de ce modèle — une adhésion forcée continue de la part d'une petite équipe de développeurs, de pôles de développement, de fondations — s'apparente intrinsèquement davantage à des actions, quel que soit le mécanisme de consensus.
 
-#### Déclarations de clôture (1:30:42) {#closing-arguments-13042}
+### Déclarations de clôture (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams :** Ce fut une conversation fantastique. Cela a probablement été la meilleure conversation sur la preuve d'enjeu contre la preuve de travail de l'histoire. L'heure des déclarations de clôture. Justin, pourquoi la preuve d'enjeu est-elle la meilleure façon de créer une monnaie crypto ?
 
@@ -151,7 +151,7 @@ Si vous conceviez une chaîne de blocs pour maximiser les propriétés monétair
 
 Lorsqu'il s'agit d'une monnaie adaptée pour y placer la trésorerie de votre entreprise, allouer une partie de votre dotation, ou détenir 10 % ou plus de votre valeur nette — ou gérer des réserves souveraines représentant des décennies d'excédents commerciaux accumulés — historiquement, le meilleur a été l'or. Maintenant, nous avons de nouveaux concurrents. Vous choisiriez le plus décentralisé, le plus immuable, celui qui ne sacrifie aucune de ces caractéristiques. Cela ne signifie pas que d'autres systèmes n'ont pas de valeur — ce n'est pas parce que l'or a de la valeur que l'action Tesla n'en a pas. Ce sont des choses différentes qui font des choses différentes. La monnaie parfaite est prête à sacrifier presque tout le reste afin d'avoir les attributs parfaits de la monnaie — dont le but principal est d'être détenue et occasionnellement utilisée pour des transactions, par rapport à quelque chose qui essaie d'être un couteau suisse.
 
-#### Conclusion (1:40:14) {#wrap-up-14014}
+### Conclusion (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams :** Je tiens à remercier une fois de plus Lyn Alden et Justin Drake de s'être joints à nous et d'avoir eu le meilleur débat que j'aie jamais entendu sur la preuve de travail contre la preuve d'enjeu. Un merci spécial également à Lyn pour être venue dans ce que certains pourraient percevoir comme l'« équipe adverse ».
 

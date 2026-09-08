@@ -20,7 +20,7 @@ Một bài thuyết trình của **Nixo Rokish** từ Tổ chức Ethereum tại
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=ghyY_cRqd54) được xuất bản bởi EthBoulder. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:12) {#introduction-012}
+### Giới thiệu (0:12) {#introduction-012}
 
 Cảm ơn cả sáu người bạn của tôi đã đến dự. Được rồi. Hôm nay tôi sẽ nói với các bạn về quản trị cốt lõi của Ethereum. Tên tôi là Nixo. Tôi dẫn dắt nhóm hỗ trợ giao thức tại EF (Tổ chức Ethereum). Trong số tất cả các nhiệm vụ của chúng tôi, một trong những nhiệm vụ đó là làm cho quy trình quản trị trở nên rõ ràng và dễ điều hướng hơn cho tất cả những người khác tham gia vào những việc này vì Ethereum thực sự bao gồm nhiều thứ hơn là chỉ các nhà phát triển cốt lõi của nó.
 
@@ -36,7 +36,7 @@ Năm ngoái đã có một sự việc thực sự gây tranh cãi xảy ra. B�
 
 Vì vậy, đó giống như giọt nước tràn ly đối với EOF và cuối cùng nó đã bị loại khỏi phân nhánh. Một điều khác mà họ phải xem xét là nó phải được viết và kiểm tra nghiêm ngặt bằng sáu ngôn ngữ khác nhau vì các máy khách này được viết bằng sáu ngôn ngữ khác nhau. Vì vậy, đó là một ma trận thử nghiệm thực sự lớn để họ làm việc. Và vì điều đó, mọi lựa chọn thiết kế nhỏ nhất đều trở thành chủ đề tranh luận mà không có cơ quan thẩm quyền nào để giải quyết các bất đồng. Vì vậy, câu hỏi được đặt ra là ai sẽ quyết định — đó chính là mấu chốt của quản trị.
 
-#### Những hiểu lầm (5:23) {#misconceptions-523}
+### Những hiểu lầm (5:23) {#misconceptions-523}
 
 Điều đó đưa chúng ta đến những hiểu lầm và chúng ta sẽ giải quyết một số trong số này. Một là Vitalik quyết định những gì được đưa vào giao thức Ethereum. Một hệ quả của điều đó là EF kiểm soát mọi thứ. Và điều thứ ba là tất cả đều là những thỏa thuận ngầm — những người trong cuộc, những người kỳ cựu (OG) đưa ra những quyết định này.
 
@@ -52,13 +52,13 @@ Và tôi thích dòng tweet ngớ ngẩn mà tôi đã chụp màn hình ở đ�
 
 Tất cả đều là những thỏa thuận ngầm, những người trong cuộc, những người kỳ cựu — tôi hiểu thêm một chút lý do tại sao đây lại là một sự hiểu lầm vì về cơ bản bạn đến tham gia các cuộc gọi quản trị này, có hàng trăm người trong các cuộc gọi quản trị này. Có vẻ như tất cả họ đều rất thoải mái với những gì đang diễn ra. Bạn thì lạc lõng. Bạn không có ý niệm gì về cách những quyết định này được đưa ra. Bạn kiểu như, "Đã đến lượt tôi nói chưa?" Và có cảm giác như mọi người đang lắng nghe cùng 10 người đó để đưa ra những quyết định này.
 
-#### Chế độ nhân tài và số liệu thống kê tham gia (10:18) {#meritocracy-and-participation-stats-1018}
+### Chế độ nhân tài và số liệu thống kê tham gia (10:18) {#meritocracy-and-participation-stats-1018}
 
 Nhưng sự thật là quá trình phát triển Ethereum mang tính trọng dụng nhân tài nhiều hơn những gì tôi từng thấy trong hầu hết các quá trình phát triển phần mềm. Tất cả những người trên ảnh chụp màn hình này — đây là một trong ba ảnh trong cuộc gọi ACD ngẫu nhiên này mà tôi quyết định chụp lại — không ai trong số những người này được chỉ định ở đây. Mọi người chỉ đơn giản là những người đã xuất hiện. Họ là những nhà phát triển đã dành rất nhiều thời gian cho giao thức này. Họ là những người được mọi người công nhận là những nhà phát triển tài năng trong không gian này, liên tục đưa ra những quyết định đúng đắn, và không ai trong số này được chỉ định ở đây.
 
 Vì vậy, tôi chỉ mới gia nhập EF hơn một năm trước. Tôi đã lấy những số liệu thống kê này. Chúng chỉ tính từ tháng 3 năm 2025. Tức là chưa đầy một năm. Số lượng người tham dự trung bình của All Core Dev (Tất cả các nhà phát triển cốt lõi) — đó là các cuộc gọi quản trị — là 98. Vì vậy, trung bình có 98 người trong các cuộc gọi này. Số lượng người tham dự tối đa trong một cuộc gọi kể từ đó là 153. Tôi nghĩ đó là ngày mà chúng tôi quyết định ngày ra mắt Mạng chính Pectra. Và tổng số người tham dự duy nhất là 567 chỉ trong năm ngoái. Tôi thực sự thích số liệu đó vì nó cho thấy rằng không phải lúc nào cũng là 100 người đó tham gia các cuộc gọi này. Các nhà phát triển ứng dụng, nhà nghiên cứu này, ai đó nghe về một tính năng nào đó đang được thảo luận, họ xuất hiện để lên tiếng phản đối hoặc ủng hộ nó và sau đó họ không đến tham gia một cuộc gọi nào khác nữa.
 
-#### Quy trình quản trị hoạt động như thế nào (11:52) {#how-the-governance-process-works-1152}
+### Quy trình quản trị hoạt động như thế nào (11:52) {#how-the-governance-process-works-1152}
 
 Vì vậy, đây là một slide khá khô khan nhưng tôi nghĩ điều quan trọng là phải xem qua — đây là cách quản trị của Ethereum hiện đang hoạt động. Vì vậy, khi một trong những phân nhánh này đang được thảo luận, điều đầu tiên xảy ra là mọi người trong khoảng thời gian được phân bổ này có thể gửi đề xuất tiêu điểm của họ. Đề xuất tiêu điểm là tính năng chính mà chúng tôi muốn mọi người tập trung vào cho phân nhánh này. Người này có thể là một thành viên cộng đồng, một nhà nghiên cứu, một nhà phát triển cốt lõi — thực sự là bất kỳ ai gửi một trong những đề xuất tiêu điểm này. Sau đó, khoảng thời gian kết thúc và trên các cuộc gọi quản trị, chúng tôi sẽ thảo luận xem đề xuất nào trong số này là hợp lý. Mọi người đưa ra lập luận của mình, mọi người tranh luận và có sự đồng thuận về việc chúng ta nên chọn cái nào cho phân nhánh sắp tới đó.
 
@@ -68,7 +68,7 @@ Vì vậy, sau một số mạng phát triển — có thể là hai, có thể 
 
 Và sau đó, khi mạng thử nghiệm không cần cấp phép đã ổn định, ngày ra mắt Mạng chính sẽ được chọn. Tiếp theo đó, có một khoảng thời gian đệm 30 ngày. Khoảng thời gian đệm 30 ngày này tồn tại vì các L2 và các giao thức đã yêu cầu điều này để chuẩn bị sẵn sàng cho phân nhánh. Vì vậy, đó là tối thiểu 30 ngày và sau đó phân nhánh sẽ diễn ra.
 
-#### Cấu trúc cuộc gọi và sự điều phối (15:01) {#call-structure-and-coordination-1501}
+### Cấu trúc cuộc gọi và sự điều phối (15:01) {#call-structure-and-coordination-1501}
 
 Trong suốt thời gian này, có một số chuỗi cuộc gọi chính diễn ra. Đây đều là các cuộc gọi công khai được phát trực tiếp trên YouTube. Các cuộc gọi lớn là ACDE và ACDC. E là viết tắt của lớp thực thi — đó là những thứ như giao dịch, triển khai hợp đồng thông minh, quản lý mempool. ACDC là lớp đồng thuận — vì vậy đó là những thứ thuộc về trình xác thực như quản lý trình xác thực, phạt cắt giảm. Và những cuộc gọi đó luân phiên nhau vào các ngày thứ Năm. Vì vậy, có một cuộc gọi ACD vào mỗi thứ Năm và một trong số đó là ACDE và sau đó cuộc gọi tiếp theo là ACDC, cứ tiếp tục như vậy.
 
@@ -76,7 +76,7 @@ Các cuộc gọi ACDE và ACDC tập trung vào phân nhánh mà chúng tôi hi
 
 Và sau đó có các cuộc gọi đột phá (breakout calls). Các cuộc gọi đột phá là khi các thành viên cộng đồng, nhà nghiên cứu, nhà phát triển nói rằng, "Này, tôi có một tính năng mà tôi muốn đưa vào Ethereum trong hai phân nhánh tới." Và vì vậy họ tổ chức các cuộc gọi hàng tuần, hàng tháng hoặc hai tháng một lần này, nơi họ thảo luận chi tiết về việc triển khai, thay đổi và lặp lại trên thông số kỹ thuật, và nhìn chung giải quyết tất cả các câu hỏi mà mọi người có, tất cả những điều chưa biết đã được nhận diện để đảm bảo rằng nó ở trạng thái tốt nhất có thể để được đưa vào phân nhánh trong hai phân nhánh tới. Và những cuộc gọi đó có thể được lên lịch bất cứ khi nào người điều phối quyết định.
 
-#### Một quy trình đang tiến hóa (15:29) {#an-evolving-process-1529}
+### Một quy trình đang tiến hóa (15:29) {#an-evolving-process-1529}
 
 Vì vậy, một điều tôi muốn nhấn mạnh với mọi người là quy trình này không hề tĩnh tại. Quy trình mà tôi vừa mô tả cho bạn đã hoạt động được chưa đầy một năm. Ethereum đã hoạt động được 10 năm. Nhưng nó liên tục thay đổi và lý do nó liên tục thay đổi là vì không có ai nắm quyền điều hành. Và quy trình này phần nào tiến hóa để tìm ra cách hoạt động hiệu quả nhất. Và tôi nói là hiệu quả, nhưng danh tiếng mà quản trị Ethereum có được là thực sự trì trệ, khó thông qua mọi thứ, khó hiểu — và đó là vì khi bạn có 100 đến 500 người đưa ra quyết định, thành thật mà nói tôi rất ấn tượng rằng điều này lại có thể hoạt động được.
 
@@ -88,7 +88,7 @@ Vì vậy, ảnh chụp màn hình khác ở trên cùng là Tim đang đề xu�
 
 Điều thứ ba là các cam kết (commit) theo thời gian trên Forkcast. Forkcast là một sản phẩm của nhóm tôi, do Wolfram Mark, một thành viên trong nhóm tôi tạo ra vào giữa năm ngoái khi nhóm của tôi ở phiên bản hiện tại được thành lập. Và nó đã trở thành một nguồn tài nguyên chuẩn mực để mọi người sử dụng nhằm tương tác với một phân nhánh, để xem những gì sẽ được đưa vào một phân nhánh và nó ảnh hưởng đến họ như thế nào. Tất cả những thứ này đều chưa đầy hai năm tuổi. Vì vậy, điểm tôi muốn nói là quy trình này thay đổi rất nhiều. Nó không hề tĩnh tại. Nó không phải là một bộ máy quan liêu đóng băng khó có thể chen chân vào.
 
-#### Các hệ thống quản trị có thể so sánh (20:21) {#comparable-governance-systems-2021}
+### Các hệ thống quản trị có thể so sánh (20:21) {#comparable-governance-systems-2021}
 
 Vì vậy, tôi muốn nhanh chóng đề cập đến các hệ thống quản trị phi tập trung tương tự nhất mà tôi có thể thấy so với quản trị Ethereum. Và điểm tôi đang cố gắng nhấn mạnh ở đây là điều này có tính bền vững — mặc dù thật đáng kinh ngạc khi 100 đến 500 người có thể đưa ra quyết định, nhưng nó bền vững trong thế giới thực. Chúng ta thực sự thấy các ví dụ về việc này đang hoạt động.
 
@@ -96,13 +96,13 @@ IETF là Lực lượng Đặc nhiệm Kỹ thuật Internet (Internet Engineeri
 
 Những thứ mà điều này không giống: các Chuỗi khối khác có tính năng bỏ phiếu token trên chuỗi. Ethereum đặc biệt tránh bất kỳ loại cơ chế bỏ phiếu nào vì theo ý kiến của tôi, điều đó dẫn đến các con đường bị thâu tóm và nó phần nào loại bỏ động lực để biến mọi thứ thành một chế độ nhân tài, nơi mọi người chỉ tin tưởng những người viết mã tốt nhất. Và sau đó là các L2. Họ có đa chữ ký (multi-sig). Họ có các hội đồng bảo mật. Đây giống như các vị trí được bổ nhiệm để đưa ra những quyết định này. Và điều đó có những sự đánh đổi của nó. Nó tập trung hơn. Tuy nhiên, nó di chuyển nhanh hơn.
 
-#### Tại sao các nhà xây dựng quan tâm (22:38) {#why-builders-care-2238}
+### Tại sao các nhà xây dựng quan tâm (22:38) {#why-builders-care-2238}
 
 Vậy tại sao các nhà xây dựng lại quan tâm đến quản trị? Bởi vì các nhà xây dựng chính xác là những người mà Ethereum được tạo ra để phục vụ. Ethereum không được tạo ra cho các nhà phát triển cốt lõi. Nó không được tạo ra cho các trình xác thực. Đôi khi những người này bị nhầm lẫn về điều đó. Các nhà phát triển cốt lõi và trình xác thực của Ethereum phục vụ Ethereum, và Ethereum phục vụ các nhà xây dựng và người dùng.
 
 Và mọi người đều đã từng có khoảnh khắc đó với một AI khi bạn đi quá sâu vào chi tiết và nó đang cố gắng sửa chữa một thứ nhỏ nhặt này mà không thể lùi lại để nhìn vào toàn bộ mục đích của dự án. Và các nhà phát triển cốt lõi cũng có thể như vậy khi họ đang cố gắng hoàn thiện quy trình phát triển cốt lõi. Và trong trường hợp đó, điều rất quan trọng là các nhà xây dựng phải tham gia vì quá trình phát triển cốt lõi tiêu tốn quá nhiều công sức đến mức hầu hết thời gian họ không đồng thời xây dựng trên Ethereum. Họ tham gia rất sâu vào quá trình phát triển cốt lõi. Nó chiếm toàn bộ thời gian của họ. Và vì vậy, các nhà xây dựng ứng dụng thực sự phải nỗ lực bước vào và nói, "Này, chúng tôi cần điều này. Điều này rất quan trọng đối với Ethereum." Chỉ để đảm bảo rằng góc nhìn đó luôn hiện diện và họ không chỉ bị bó hẹp vào việc chỉ làm việc cho các nhà phát triển cốt lõi.
 
-#### Cách tham gia (24:40) {#how-to-participate-2440}
+### Cách tham gia (24:40) {#how-to-participate-2440}
 
 Vậy làm thế nào để bạn tham gia hoặc đưa tính năng của mình vào? Đây là một lời khuyên khá chung chung, nhưng tôi nghĩ nó là tốt nhất. Hãy lên tiếng mạnh mẽ về những điểm yếu (pain points) của bạn. Lên Twitter, viết bài trên blog, xác định các giải pháp cho những điểm yếu của bạn. Suy đoán về những thứ có thể giúp ích cho bạn. Nếu bạn tìm thấy những người khác có cùng những điểm yếu đó, thông thường bạn có thể tìm thấy một EIP hiện có để giải quyết điểm yếu đó hoặc nhờ ai đó giúp bạn viết một EIP làm điều đó.
 
