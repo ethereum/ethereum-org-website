@@ -101,6 +101,18 @@ but a locale that refuses several runs in a row is worth looking at.
 Recovering from the Actions tab is not possible today: re-running the workflow re-crawls
 and meets the same gate. The commands above need the admin key locally.
 
+## Which networks appear
+
+`src/data/networks/networks.ts` decides -- the same file `/layer-2/networks` renders from,
+so adding or removing an L2 there is the only edit needed. `src/scripts/update-explorers.ts`
+reads it, resolves each chain id through `chains.ts`, and joins chainid.network for the
+EIP-3770 short name with Blockscout's registry for the explorer URL. Neither of those is
+ours to maintain, and typing them by hand invites a mismatch that fails silently.
+
+Starknet and Zircuit are not in the generated file: Blockscout does not cover them, so they
+get their own sections from `constants.ts`. `tests/unit/search/explorer-coverage.spec.ts`
+fails if a featured network is covered by neither route, in either direction.
+
 ## curation.json
 
 Query to ordered list of paths. Paths are locale-agnostic (brand names read the same in

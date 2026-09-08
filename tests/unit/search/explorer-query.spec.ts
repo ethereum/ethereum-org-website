@@ -20,11 +20,12 @@ test.describe("parseExplorerQuery", () => {
     const group = blockscout(ADDRESS)
     expect(group?.kind).toBe("address")
     expect(group?.targets.map((t) => t.name)).toEqual([
+      // Nicknames, matching what /layer-2/networks shows.
       "Ethereum Mainnet",
       "Arbitrum One",
       "Base",
-      "OP Mainnet",
-      "zkSync Mainnet",
+      "Optimism",
+      "ZKSync Era",
       "Linea",
       "Scroll",
       "Unichain",
