@@ -10,7 +10,7 @@ import {
   type WalletNetwork,
 } from "@/lib/utils/walletData"
 
-import { buildDeviceLabels } from "@/data/wallets/devices"
+import { buildDeviceLabels, WALLET_DEVICE_IDS } from "@/data/wallets/devices"
 import {
   CROPS_PROPERTIES,
   WALLET_ADVANCED_FILTERS,
@@ -21,7 +21,10 @@ import {
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
-import WalletsCatalog, { type WalletCatalogLabels } from "./WalletsCatalog"
+import WalletsCatalog, {
+  type WalletCatalogLabels,
+  type WalletFilterOptions,
+} from "./WalletsCatalog"
 
 const METHODOLOGY_CRITERIA = [
   "security",
@@ -102,18 +105,45 @@ const WalletsPageBody = async ({
       })),
     },
     tableTitle: t("page-find-wallet-table-title"),
-    buyCrypto: t("page-find-wallet-buy-crypto"),
-    sellCrypto: t("page-find-wallet-sell-for-fiat"),
     devices: buildDeviceLabels(t),
     personas: buildPersonaLabels(t),
   }
 
-  const advancedFilters = WALLET_ADVANCED_FILTERS.map(({ key, labelKey }) => ({
-    id: key,
-    label: t(labelKey),
-    count: wallets.filter((wallet) => wallet.advancedFlags.includes(key))
-      .length,
-  }))
+  const filterOptions: WalletFilterOptions = {
+    devices: WALLET_DEVICE_IDS.map((device) => ({
+      id: device,
+      label: catalogLabels.devices[device],
+      count: wallets.filter((wallet) => wallet.devices[device]).length,
+    })),
+    purchases: [
+      {
+        id: "buy_crypto",
+        label: t("page-find-wallet-buy-crypto"),
+        count: wallets.filter((wallet) => wallet.buy_crypto).length,
+      },
+      {
+        id: "withdraw_crypto",
+        label: t("page-find-wallet-sell-for-fiat"),
+        count: wallets.filter((wallet) => wallet.withdraw_crypto).length,
+      },
+    ],
+    networks: networks.map((network) => ({
+      id: network.id,
+      label: network.id,
+      count: network.count,
+    })),
+    language: languages.map((language) => ({
+      id: language.code,
+      label: language.name,
+      count: language.count,
+    })),
+    advanced: WALLET_ADVANCED_FILTERS.map(({ key, labelKey }) => ({
+      id: key,
+      label: t(labelKey),
+      count: wallets.filter((wallet) => wallet.advancedFlags.includes(key))
+        .length,
+    })),
+  }
 
   const personas = WALLET_PERSONAS.map((persona) => ({
     id: persona.id,
@@ -127,9 +157,7 @@ const WalletsPageBody = async ({
         locale={locale}
         // Slim projection: only what the island reads crosses to the client.
         wallets={wallets.map((wallet) => toCatalogCard(wallet, { t, locale }))}
-        networks={networks}
-        languages={languages}
-        advancedFilters={advancedFilters}
+        filterOptions={filterOptions}
         personas={personas}
         initialPersonaId={initialPersonaId}
         labels={catalogLabels}

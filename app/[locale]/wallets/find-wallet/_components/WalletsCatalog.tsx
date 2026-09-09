@@ -1,6 +1,13 @@
 "use client"
 
-import { memo, useCallback, useEffect, useMemo, useState } from "react"
+import {
+  memo,
+  startTransition,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
@@ -8,13 +15,9 @@ import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
 import { Section } from "@/components/ui/section"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import type {
-  CatalogWalletCard,
-  WalletLanguageOption,
-  WalletNetwork,
-} from "@/lib/utils/walletData"
+import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
-import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
+import type { WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
@@ -34,7 +37,6 @@ import WalletPersonaCards, {
 } from "./WalletPersonaCards"
 
 const PERSONAS_KEY = "personas"
-const PURCHASE_IDS = ["buy_crypto", "withdraw_crypto"] as const
 
 // Category kept from the old empty state for trend comparability.
 const trackEmptyStateReset = () =>
@@ -67,19 +69,24 @@ export type WalletCatalogLabels = {
   personaCards: { legend: string; countAvailable: string }
   modal: WalletModalLabels
   tableTitle: string
-  buyCrypto: string
-  sellCrypto: string
   devices: Record<WalletDeviceId, string>
   personas: Record<WalletPersonaId, string>
 }
 
+/**
+ * All option lists are built on the server: they arrive as stable references,
+ * which is what lets the memoized filter groups skip re-rendering when
+ * unrelated state (a persona, the modal) changes.
+ */
+export type WalletFilterOptions = Record<
+  (typeof ALL_FILTER_KEYS)[number],
+  WalletFilterOption[]
+>
+
 type WalletsCatalogProps = {
   locale: string
   wallets: CatalogWalletCard[]
-  networks: WalletNetwork[]
-  languages: WalletLanguageOption[]
-  /** Built server-side: its labels come from the feature groups' i18n keys. */
-  advancedFilters: WalletFilterOption[]
+  filterOptions: WalletFilterOptions
   personas: WalletPersonaCard[]
   /** Set by the persona pages; the path segment is derived from it afterwards. */
   initialPersonaId?: WalletPersonaId
@@ -115,7 +122,9 @@ function filterWallet(
   }
 
   const purchases = asArray(state[PURCHASES_KEY])
-  if (!purchases.every((key) => wallet[key as (typeof PURCHASE_IDS)[number]])) {
+  if (
+    !purchases.every((key) => wallet[key as "buy_crypto" | "withdraw_crypto"])
+  ) {
     return false
   }
 
@@ -148,14 +157,14 @@ function filterWallet(
 /** `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per group. */
 const readQueryFilters = (
   search: string,
-  validIds: Record<string, Set<string>>
+  options: WalletFilterOptions
 ): CatalogFilterState => {
   const params = new URLSearchParams(search)
   const state: CatalogFilterState = {}
   for (const key of ALL_FILTER_KEYS) {
     const ids = (params.get(key) ?? "")
       .split(",")
-      .filter((id) => validIds[key].has(id))
+      .filter((id) => options[key].some((option) => option.id === id))
     if (ids.length) state[key] = ids
   }
   return state
@@ -211,9 +220,7 @@ const WalletsResults = memo(function WalletsResults({
 export default function WalletsCatalog({
   locale,
   wallets,
-  networks,
-  languages,
-  advancedFilters,
+  filterOptions,
   personas,
   initialPersonaId,
   labels,
@@ -228,54 +235,15 @@ export default function WalletsCatalog({
   const [openSlug, setOpenSlug] = useState<string | null>(null)
   const [urlRead, setUrlRead] = useState(false)
 
-  // Plain consts, not useMemo: these only re-run on the rare state changes above.
-  const deviceOptions = WALLET_DEVICE_IDS.map((device) => ({
-    id: device,
-    label: labels.devices[device],
-    count: wallets.filter((wallet) => wallet.devices[device]).length,
-  }))
-
-  const purchaseOptions = [
-    {
-      id: "buy_crypto",
-      label: labels.buyCrypto,
-      count: wallets.filter((wallet) => wallet.buy_crypto).length,
-    },
-    {
-      id: "withdraw_crypto",
-      label: labels.sellCrypto,
-      count: wallets.filter((wallet) => wallet.withdraw_crypto).length,
-    },
-  ]
-
-  const networkOptions = networks.map((network) => ({
-    id: network.id,
-    label: network.id,
-    count: network.count,
-  }))
-
-  const languageOptions = languages.map((language) => ({
-    id: language.code,
-    label: language.name,
-    count: language.count,
-  }))
-
   // Read from window.location, not useSearchParams: the latter would force this
   // static page into client-side rendering.
   useEffect(() => {
-    const validIds = {
-      [DEVICES_KEY]: new Set<string>(WALLET_DEVICE_IDS),
-      [PURCHASES_KEY]: new Set<string>(PURCHASE_IDS),
-      [NETWORKS_KEY]: new Set(networks.map((network) => network.id)),
-      [LANGUAGE_KEY]: new Set(languages.map((language) => language.code)),
-      [ADVANCED_KEY]: new Set(advancedFilters.map((option) => option.id)),
-    }
-    const fromUrl = readQueryFilters(window.location.search, validIds)
+    const fromUrl = readQueryFilters(window.location.search, filterOptions)
     if (Object.keys(fromUrl).length) {
       setSelection((prev) => ({ ...prev, ...fromUrl }))
     }
     setUrlRead(true)
-  }, [networks, languages, advancedFilters])
+  }, [filterOptions])
 
   // replaceState, never push: a pushed entry would make Back a real route change.
   useEffect(() => {
@@ -330,6 +298,13 @@ export default function WalletsCatalog({
     trackEmptyStateReset()
   }, [])
 
+  // The click paints immediately; the Dialog and its tooltips mount in a
+  // transition, like the intercepted route used to.
+  const openWalletModal = useCallback(
+    (slug: string) => startTransition(() => setOpenSlug(slug)),
+    []
+  )
+
   const openWallet = openSlug
     ? wallets.find((wallet) => wallet.slug === openSlug)
     : undefined
@@ -371,11 +346,11 @@ export default function WalletsCatalog({
               locale={locale}
               state={state}
               setFilter={setFilter}
-              deviceOptions={deviceOptions}
-              purchaseOptions={purchaseOptions}
-              networkOptions={networkOptions}
-              languageOptions={languageOptions}
-              advancedOptions={advancedFilters}
+              deviceOptions={filterOptions[DEVICES_KEY]}
+              purchaseOptions={filterOptions[PURCHASES_KEY]}
+              networkOptions={filterOptions[NETWORKS_KEY]}
+              languageOptions={filterOptions[LANGUAGE_KEY]}
+              advancedOptions={filterOptions[ADVANCED_KEY]}
               labels={labels.filter}
             />
           )}
@@ -385,7 +360,7 @@ export default function WalletsCatalog({
               filtered={filtered}
               deviceLabels={labels.devices}
               personaLabels={labels.personas}
-              onOpen={setOpenSlug}
+              onOpen={openWalletModal}
             />
           )}
         />
