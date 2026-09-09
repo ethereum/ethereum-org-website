@@ -110,20 +110,6 @@ test.describe("Find Wallet Page", () => {
     await expect(page.getByRole("dialog")).toBeHidden()
   })
 
-  test("related wallet card opens the modal on the standalone page", async ({
-    page,
-  }) => {
-    await page.goto("/wallets/find-wallet/metamask/")
-    await page
-      .locator('section a[href*="/find-wallet/"]:not([href*="/metamask/"])')
-      .first()
-      .click()
-    await expect(findWalletPage.detailDialog).toBeVisible()
-    await expect(page).toHaveURL(/\/find-wallet\/metamask\/$/)
-    await findWalletPage.closeDialog()
-    await expect(findWalletPage.detailDialog).toBeHidden()
-  })
-
   test("standalone page lists related wallets", async ({ page }) => {
     await page.goto("/wallets/find-wallet/metamask/")
     const related = page.locator("section").filter({

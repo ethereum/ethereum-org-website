@@ -4,12 +4,7 @@ import { memo, useId } from "react"
 import { Check } from "lucide-react"
 
 import Checkbox from "@/components/ui/checkbox"
-import {
-  FieldDescription,
-  FieldLabel,
-  FieldLegend,
-  FieldSet,
-} from "@/components/ui/field"
+import { FieldLegend, FieldSet } from "@/components/ui/field"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -48,18 +43,12 @@ const PersonaCard = memo(function PersonaCard({
   countLabel: string
   onToggle: (persona: WalletPersonaCard) => void
 }) {
-  const id = useId()
-  const descriptionId = `${id}-description`
+  const descriptionId = useId()
   const color = PERSONA_STYLES[persona.id]
 
   return (
     <li className="grid-rows-1 pb-5">
-      <div
-        onClick={(event) => {
-          // The label already forwards its clicks to the checkbox.
-          if ((event.target as HTMLElement).closest("label")) return
-          onToggle(persona)
-        }}
+      <label
         className={cn(
           "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 shadow-lg transition-all duration-50 lg:h-full lg:p-6",
           "has-[:focus-visible]:outline has-[:focus-visible]:outline-4 has-[:focus-visible]:-outline-offset-4 has-[:focus-visible]:outline-primary-hover",
@@ -68,12 +57,8 @@ const PersonaCard = memo(function PersonaCard({
             : "border-primary-low-contrast hover:bg-background-highlight"
         )}
       >
-        <FieldLabel
-          htmlFor={id}
-          className="items-top flex w-full gap-2 px-1.5 text-base leading-normal font-normal has-data-[state=checked]:bg-transparent dark:has-data-[state=checked]:bg-transparent"
-        >
+        <span className="items-top flex w-full gap-2 px-1.5 leading-normal">
           <Checkbox
-            id={id}
             className="sr-only"
             aria-describedby={descriptionId}
             checked={isActive}
@@ -104,14 +89,14 @@ const PersonaCard = memo(function PersonaCard({
             </span>
             <span className="sr-only"> {countLabel}</span>
           </span>
-        </FieldLabel>
-        <FieldDescription
+        </span>
+        <span
           id={descriptionId}
-          className="p-2 text-left text-sm leading-normal font-normal text-body transition-colors duration-500"
+          className="block p-2 text-left text-sm leading-normal text-body"
         >
           {persona.description}
-        </FieldDescription>
-      </div>
+        </span>
+      </label>
     </li>
   )
 })

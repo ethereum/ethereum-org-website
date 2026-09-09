@@ -11,14 +11,16 @@ import {
 } from "@/lib/utils/walletData"
 
 import { buildDeviceLabels, WALLET_DEVICE_IDS } from "@/data/wallets/devices"
-import { WALLET_ADVANCED_FILTERS } from "@/data/wallets/features"
+import {
+  CROPS_PROPERTIES,
+  WALLET_ADVANCED_FILTERS,
+} from "@/data/wallets/features"
 import {
   buildPersonaLabels,
   WALLET_PERSONAS,
   type WalletPersonaId,
 } from "@/data/wallets/personas"
 
-import { buildWalletModalLabels } from "./walletModalLabels"
 import WalletsCatalog, {
   type WalletCatalogLabels,
   type WalletFilterOptions,
@@ -85,7 +87,23 @@ const WalletsPageBody = async ({
       legend: t("page-find-wallet-persona-legend"),
       countAvailable: t.raw("page-find-wallet-persona-count-available"),
     },
-    modal: buildWalletModalLabels(t, tCommon),
+    modal: {
+      close: tCommon("close"),
+      yes: tCommon("yes"),
+      no: tCommon("no"),
+      networkSupport: t("page-find-wallet-network-support"),
+      device: t("page-find-wallet-device"),
+      languages: t("page-find-wallet-languages-supported"),
+      fees: t("page-find-wallet-fee-row-label"),
+      feesTooltip: t("page-find-wallet-fee-row-tooltip"),
+      fullDetails: t("page-find-wallet-full-details"),
+      getWallet: t.raw("page-find-wallet-get-wallet"),
+      crops: CROPS_PROPERTIES.map(({ key, labelKey, descKey }) => ({
+        key,
+        label: t(labelKey),
+        tooltip: t(descKey),
+      })),
+    },
     tableTitle: t("page-find-wallet-table-title"),
     devices: buildDeviceLabels(t),
     personas: buildPersonaLabels(t),

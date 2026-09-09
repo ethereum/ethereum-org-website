@@ -60,14 +60,9 @@ const WalletCard = memo(function WalletCard({
               eventName: wallet.name,
             }}
             onClick={(event) => {
-              if (!onOpen || event.button !== 0) return
-              if (
-                event.metaKey ||
-                event.ctrlKey ||
-                event.shiftKey ||
-                event.altKey
-              )
-                return
+              const modified =
+                event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+              if (!onOpen || event.button !== 0 || modified) return
               event.preventDefault()
               onOpen(wallet.slug)
             }}

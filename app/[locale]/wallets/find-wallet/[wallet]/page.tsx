@@ -36,8 +36,7 @@ import { buildPersonaLabels } from "@/data/wallets/personas"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
-import RelatedWallets from "../_components/RelatedWallets"
-import { buildWalletModalLabels } from "../_components/walletModalLabels"
+import WalletCard from "../_components/WalletCard"
 import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
@@ -65,7 +64,6 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
     locale,
     namespace: "page-wallets-find-wallet",
   })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const deviceLabelMap = buildDeviceLabels(t)
   const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
@@ -235,14 +233,16 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                 <h2 className="text-h4">
                   {t("page-find-wallet-related-title")}
                 </h2>
-                <RelatedWallets
-                  wallets={relatedWallets.map((related) =>
-                    toCatalogCard(related, { t, locale })
-                  )}
-                  deviceLabels={deviceLabelMap}
-                  personaLabels={personaLabels}
-                  modalLabels={buildWalletModalLabels(t, tCommon)}
-                />
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {relatedWallets.map((related) => (
+                    <WalletCard
+                      key={related.slug}
+                      wallet={toCatalogCard(related, { t, locale })}
+                      deviceLabels={deviceLabelMap}
+                      personaLabels={personaLabels}
+                    />
+                  ))}
+                </div>
               </section>
             )}
           </div>

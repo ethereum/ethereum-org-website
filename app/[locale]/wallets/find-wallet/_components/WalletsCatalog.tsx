@@ -6,6 +6,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react"
 
@@ -233,32 +234,28 @@ export default function WalletsCatalog({
     wallets.filter((wallet) => filterWallet(wallet, selection, ""))
   )
   const [openSlug, setOpenSlug] = useState<string | null>(null)
-  const [urlRead, setUrlRead] = useState(false)
+  const urlRead = useRef(false)
 
   // Read from window.location, not useSearchParams: the latter would force this
-  // static page into client-side rendering.
+  // static page into client-side rendering. replaceState, never push: a pushed
+  // entry would make Back a real route change.
   useEffect(() => {
-    const fromUrl = readQueryFilters(window.location.search, filterOptions)
-    if (Object.keys(fromUrl).length) {
-      setSelection((prev) => ({ ...prev, ...fromUrl }))
+    if (!urlRead.current) {
+      urlRead.current = true
+      const fromUrl = readQueryFilters(window.location.search, filterOptions)
+      if (Object.keys(fromUrl).length) {
+        setSelection((prev) => ({ ...prev, ...fromUrl }))
+        return
+      }
     }
-    setUrlRead(true)
-  }, [filterOptions])
-
-  // replaceState, never push: a pushed entry would make Back a real route change.
-  useEffect(() => {
-    if (!urlRead) return
     const url = buildUrl(selection)
     const { pathname, search, hash } = window.location
     if (url !== pathname + search + hash) {
       window.history.replaceState(null, "", url)
     }
-  }, [selection, urlRead])
+  }, [selection, filterOptions])
 
-  const selectedPersonas = useMemo(
-    () => asArray(selection[PERSONAS_KEY]) as WalletPersonaId[],
-    [selection]
-  )
+  const selectedPersonas = asArray(selection[PERSONAS_KEY]) as WalletPersonaId[]
 
   // Old-arm semantics: how many of the currently visible wallets also fit.
   const personaCounts = useMemo(() => {

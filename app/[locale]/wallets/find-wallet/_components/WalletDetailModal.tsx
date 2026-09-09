@@ -55,12 +55,7 @@ const DetailRow = ({
 }: {
   label: string
   tooltip?: string
-  /**
-   * Floors the label column. Both sides of the row shrink to min-content by
-   * default, so a long label next to a long value collapses to one word per
-   * line. Only set this where both are long -- it costs the value width, which
-   * wraps shorter values that would otherwise fit on one line.
-   */
+  /** Floors the label width; only where label and value are both long. */
   roomyLabel?: boolean
   children: ReactNode
 }) => (
