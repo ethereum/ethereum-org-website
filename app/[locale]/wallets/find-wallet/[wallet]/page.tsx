@@ -19,6 +19,7 @@ import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
+  getCatalogWallets,
   getRelatedWallets,
   getWalletBySlug,
   toCatalogCard,
@@ -32,8 +33,11 @@ import {
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
-import WalletCard from "../_components/WalletCard"
+import RelatedWallets from "../_components/RelatedWallets"
+import { buildWalletModalLabels } from "../_components/walletModalLabels"
 import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
@@ -49,10 +53,7 @@ const WALLET_LINK_EVENT = {
   eventAction: "Go to wallet",
 } as const
 
-/**
- * Standalone wallet detail, reached by direct load or refresh. Navigating here
- * from inside the find-wallet subtree hits `@modal/(.)[wallet]` instead.
- */
+/** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
@@ -64,6 +65,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
     locale,
     namespace: "page-wallets-find-wallet",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const deviceLabelMap = buildDeviceLabels(t)
   const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
@@ -233,16 +235,14 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
                 <h2 className="text-h4">
                   {t("page-find-wallet-related-title")}
                 </h2>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  {relatedWallets.map((related) => (
-                    <WalletCard
-                      key={related.slug}
-                      wallet={toCatalogCard(related, { t, locale })}
-                      deviceLabels={deviceLabelMap}
-                      personaLabels={personaLabels}
-                    />
-                  ))}
-                </div>
+                <RelatedWallets
+                  wallets={relatedWallets.map((related) =>
+                    toCatalogCard(related, { t, locale })
+                  )}
+                  deviceLabels={deviceLabelMap}
+                  personaLabels={personaLabels}
+                  modalLabels={buildWalletModalLabels(t, tCommon)}
+                />
               </section>
             )}
           </div>
@@ -254,11 +254,8 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 }
 
 export function generateStaticParams() {
-  // Deliberately empty: these pages must render on demand so the response
-  // carries `Vary: Next-Url`. Build-time prerenders have no response to read,
-  // so Next marks them "cannot be intercepted" and the client then caches this
-  // URL ignoring Next-Url, which permanently shadows `@modal/(.)[wallet]`.
-  return []
+  // Slugs derive from wallet names, so any locale lists the same set.
+  return getCatalogWallets(DEFAULT_LOCALE).map(({ slug }) => ({ wallet: slug }))
 }
 
 export async function generateMetadata(props: {
