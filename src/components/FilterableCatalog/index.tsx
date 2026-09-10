@@ -4,6 +4,7 @@ import {
   type Dispatch,
   type ReactNode,
   type SetStateAction,
+  startTransition,
   useCallback,
   useDeferredValue,
   useEffect,
@@ -176,8 +177,11 @@ export default function FilterableCatalog<TItem>({
     [items, filterFn, deferredSelection, deferredSearch]
   )
 
+  // Whatever the consumer derives from this (counts, summaries) is a third
+  // render pass; keep it off the critical path of the filter interaction.
   useEffect(() => {
-    onFilteredChange?.(filteredItems)
+    if (!onFilteredChange) return
+    startTransition(() => onFilteredChange(filteredItems))
   }, [filteredItems, onFilteredChange])
 
   useEffect(() => {
