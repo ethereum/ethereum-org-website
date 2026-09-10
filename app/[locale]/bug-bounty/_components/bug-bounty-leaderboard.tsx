@@ -9,6 +9,22 @@ import { List, ListItem } from "@/components/ui/list"
 
 import { GITHUB_URL } from "@/lib/constants"
 
+/**
+ * GitHub handles are alphanumeric, may contain hyphens, must not start with
+ * one, and cap at 39 characters. Leaderboard data is hand-maintained and has
+ * held a display name in `username` before, which produced a 404 avatar and a
+ * dead profile link -- so validate the shape rather than just checking
+ * truthiness, since a display name is truthy.
+ *
+ * Deliberately looser than GitHub's current signup rule, which also forbids
+ * trailing and consecutive hyphens: legacy accounts predate it (`p-` in
+ * `execution-bounty-hunters.json` is a live account), and rejecting a working
+ * handle would swap a good link for initials. Catching the actual failure mode
+ * -- characters that can't appear in a handle at all, such as the space in
+ * "Jeongmin Choi" -- is what matters here.
+ */
+const GITHUB_USERNAME_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,38}$/
+
 type Person = {
   name: string
   username: string
@@ -34,9 +50,16 @@ const BugBountyLeaderboard = async ({
       {content
         .filter((_, idx) => idx < limit)
         .map(({ name, username, score }, idx) => {
-          const hasGitHub = !!username
-          const avatarImg = GITHUB_URL + (username || "random") + ".png?size=40"
-          const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
+          const hasGitHub = GITHUB_USERNAME_REGEX.test(username ?? "")
+          // Empty src lets Avatar fall back to initials. The old `"random"`
+          // placeholder requested github.com/random.png -- a real, unrelated user.
+          const avatarImg = hasGitHub
+            ? `${GITHUB_URL}${username}.png?size=40`
+            : ""
+          // Doubles as the image alt when there is an avatar and as the source
+          // of Avatar's initials when there isn't, so fall back to the person's
+          // name -- `""` renders an empty circle instead of initials.
+          const avatarAlt = hasGitHub ? `${username} GitHub avatar` : name
 
           let emoji: string | null = null
           if (idx === 0) {
