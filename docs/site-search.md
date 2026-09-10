@@ -24,9 +24,9 @@ Pinned results live in `typesense/curation.json` as query-to-URL mappings, in th
 
 ## What the modal shows beyond page results
 
-Three behaviours live in the app rather than the index, in `src/components/Search/SearchModal.tsx`.
+Three behaviors live in the app rather than the index, in `src/components/Search/SearchModal.tsx`.
 
-**A page leads its own sections.** Results are grouped by page, and where the index returns only sections of one, a row for the page itself is synthesised from the heading every record carries. Without it a search can offer three anchors into a page it never offered on its own.
+**A page leads its own sections.** Results are grouped by page, and where the index returns only sections of one, a row for the page itself is synthesized from the heading every record carries. Without it a search can offer three anchors into a page it never offered on its own.
 
 **Some pages are withheld.** The homepage, because what the crawler extracts from it is hero copy that appears more fully on the pages it links to. The glossary, unless searched for by name -- every entry is a one-word heading, which is an exact match for any one-word query and outranks the page actually about the term.
 

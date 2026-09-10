@@ -115,7 +115,7 @@
 }
 
 /* Tailwind's preflight makes every svg `display: block`, which takes these icons out of
-   the inline flow the vendor centres with `text-align`. The vendor's own bottom padding
+   the inline flow the vendor centers with `text-align`. The vendor's own bottom padding
    is zeroed by the same preflight reset, so it is restored here too. */
 .DocSearch-Screen-Icon {
   padding-bottom: 2rem;

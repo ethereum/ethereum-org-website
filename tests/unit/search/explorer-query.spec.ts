@@ -210,7 +210,7 @@ test.describe("query length cap", () => {
 })
 
 test.describe("truncateHex", () => {
-  test("keeps both ends, so a Recent row is still recognisable", () => {
+  test("keeps both ends, so a Recent row is still recognizable", () => {
     expect(truncateHex(ADDRESS)).toBe("0xd8dA6BF2\u20267aA96045")
   })
 

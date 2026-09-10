@@ -25,7 +25,7 @@ export interface PageResult {
  * `#components-of-eth-issuance`, the page's first heading, is the usual shape of it.
  *
  * Nothing has to be invented: every record carries the page's h1 in `hierarchy.lvl1`,
- * and its `url` minus the fragment is the page. The synthesised row becomes the parent
+ * and its `url` minus the fragment is the page. The synthesized row becomes the parent
  * the renderer nests the remaining sections under.
  */
 export const withPageRow = <T extends PageResult>(items: T[]): T[] => {

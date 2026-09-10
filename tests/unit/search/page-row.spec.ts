@@ -61,7 +61,7 @@ test.describe("withPageRow", () => {
     expect(withPageRow([])).toEqual([])
   })
 
-  test("gives the synthesised row its own id", () => {
+  test("gives the synthesized row its own id", () => {
     // The renderer keys rows on objectID; reusing the section's would collide.
     const [page, original] = withPageRow([section("x")])
     expect(page.objectID).not.toBe(original.objectID)

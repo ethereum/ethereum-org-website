@@ -178,7 +178,7 @@ export const parseExplorerQuery = (
   return { value, groups: group(eligible, value, hex.length, kind) }
 }
 
-/** Middle-truncated: keeps both ends, which is how a hex value is recognised. */
+/** Middle-truncated: keeps both ends, which is how a hex value is recognized. */
 export const truncateHex = (value: string, lead = 10, tail = 8) =>
   value.length <= lead + tail + 1
     ? value

@@ -61,7 +61,7 @@ const EXPLORER_NETWORKS: ExplorerNetwork[] = [
 
 /**
  * What `useSearchClient` actually hands to `transformSearchClient`: a bare object with
- * one `search` method, not the `typesense` SearchClient the prop's type claims. Modelled
+ * one `search` method, not the `typesense` SearchClient the prop's type claims. Modeled
  * narrowly here so the cast at the call site is the only place that lies.
  */
 interface MinimalSearchClient {
@@ -293,7 +293,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // match scores into one tier and lets a three-value signal reorder them, which
       // measured worse than no sort at all. At this granularity pagerank only decides
       // between comparable matches: hit@1 and MRR match the unsorted baseline while
-      // hit@10 improves 81% -> 84% against the labelled query set.
+      // hit@10 improves 81% -> 84% against the labeled query set.
       // `item_priority` is the library's own signal and encodes heading depth, so it
       // breaks remaining ties towards the h1 -- the page itself -- over an h2 inside it.
       // Overriding sort_by without it is what let a page's first section outrank the
