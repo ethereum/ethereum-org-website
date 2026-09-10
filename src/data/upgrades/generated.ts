@@ -424,6 +424,16 @@ export const generated = {
           month: 8,
           day: 13,
         },
+        status: "complete",
+      },
+      {
+        kind: "devnet",
+        version: 9,
+        when: {
+          year: 2026,
+          month: 9,
+          day: 1,
+        },
         status: "live",
       },
       {
@@ -441,8 +451,8 @@ export const generated = {
         network: "Sepolia",
         when: {
           year: 2026,
-          month: 9,
-          day: 28,
+          month: 10,
+          day: 6,
         },
         status: "anticipated",
       },

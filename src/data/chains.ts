@@ -33,17 +33,6 @@ const chains = [
     chain: "TCH",
   },
   {
-    name: "Ubiq",
-    infoURL: "https://ubiqsmart.com",
-    chainId: 8,
-    nativeCurrency: {
-      name: "Ubiq Ether",
-      symbol: "UBQ",
-      decimals: 18,
-    },
-    chain: "UBQ",
-  },
-  {
     name: "OP Mainnet",
     infoURL: "https://optimism.io",
     chainId: 10,
