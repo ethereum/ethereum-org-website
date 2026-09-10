@@ -143,14 +143,19 @@ control. An allowlist would also break on every new deploy-preview subdomain.
 
 ## Secrets
 
-GitHub Actions secrets, which are separate from Netlify's environment variables.
+GitHub Actions secrets, which are separate from Netlify's environment variables. The
+workflow maps the two key secrets onto different variable names, which is what the scripts
+read -- worth knowing when running them by hand.
 
-| Secret                 | Used for                                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TYPESENSE_URL`        | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
-| `TYPESENSE_ADMIN_KEY`  | collections, aliases, document import, curation                                                                                                         |
-| `TYPESENSE_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
-| `SENTRY_DSN`           | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
+| Secret                 | Env var                    | Used for                                                                                                                                                |
+| ---------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPESENSE_URL`        | `TYPESENSE_URL`            | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
+| `TYPESENSE_ADMIN_KEY`  | `TYPESENSE_API_KEY`        | collections, aliases, document import, curation                                                                                                         |
+| `TYPESENSE_SEARCH_KEY` | `TYPESENSE_API_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
+| `SENTRY_DSN`           | `SENTRY_DSN`               | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
+
+Locally the scripts read `.env.local`, falling back to the `NEXT_PUBLIC_TYPESENSE_*` values
+for queries, so a read-only command needs nothing the app does not already have.
 
 ## Local runs
 

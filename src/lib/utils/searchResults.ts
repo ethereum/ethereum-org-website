@@ -87,7 +87,7 @@ const pathOf = (url: string): string => {
   return path.replace(/\/+$/, "")
 }
 
-export const isHomepageUrl = (url: string, locale: string): boolean => {
+const isHomepageUrl = (url: string, locale: string): boolean => {
   const path = pathOf(url)
   return path === "" || path === `/${locale}`
 }

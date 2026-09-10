@@ -113,7 +113,7 @@ export const api = async <T>(
 export const listCollections = () =>
   api<CollectionInfo[]>("GET", "/collections")
 
-export const listAliases = async () =>
+const listAliases = async () =>
   (await api<{ aliases: Alias[] }>("GET", "/aliases")).aliases
 
 /** The collection an alias currently resolves to, or undefined if unset. */

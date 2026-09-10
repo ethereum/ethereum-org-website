@@ -264,6 +264,14 @@ Key gotcha: **variants are matched by array index, not names** — the `variants
 
 Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
 
+## Site Search
+
+Search runs on a self-hosted Typesense instance, one collection per locale, crawled by DocSearch from production ethereum.org. Publishing is gated: a crawl goes to a staging collection and the live alias only moves if the new index passes size, field and relevance checks.
+
+Two things bite most often. **Ranking hints reach the index as `docsearch:*` meta tags** from `src/lib/utils/metadata.ts`, so a ranking change does nothing until the site is deployed and re-crawled. And **the networks offered as block explorer results come from `src/data/networks/networks.ts`** -- the same list `/layer-2/networks` renders -- so adding an L2 there is the only edit needed.
+
+Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/README.md`. Code: `src/components/Search/`, `src/scripts/typesense/`, `typesense/`.
+
 ## Deployment
 
 - **Platform**: Netlify (config in `netlify.toml`)
