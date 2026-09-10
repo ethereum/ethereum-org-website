@@ -186,25 +186,28 @@ const buildUrl = (selection: CatalogFilterState) => {
 const WalletsResults = memo(function WalletsResults({
   wallets,
   filtered,
+  revealAll,
   deviceLabels,
   personaLabels,
   onOpen,
 }: {
   wallets: CatalogWalletCard[]
   filtered: CatalogWalletCard[]
+  /** False until the visitor interacts: only the matches are in the DOM. */
+  revealAll: boolean
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
   onOpen: (slug: string) => void
 }) {
-  // Every wallet renders once and filtering toggles `hidden`: no remounts, and
-  // all wallets stay in the SSR DOM for crawlers.
+  // Once revealed, every wallet renders once and filtering toggles `hidden`:
+  // no remounts.
   const visibleSlugs = useMemo(
     () => new Set(filtered.map((wallet) => wallet.slug)),
     [filtered]
   )
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-1 lg:grid-cols-2">
-      {wallets.map((wallet) => (
+      {(revealAll ? wallets : filtered).map((wallet) => (
         <div key={wallet.slug} hidden={!visibleSlugs.has(wallet.slug)}>
           <WalletCard
             wallet={wallet}
@@ -234,7 +237,23 @@ export default function WalletsCatalog({
     wallets.filter((wallet) => filterWallet(wallet, selection, ""))
   )
   const [openSlug, setOpenSlug] = useState<string | null>(null)
+  // A persona page renders only its own wallets until the visitor touches the
+  // page. Crawlers render the HTML but never interact, so they index the
+  // subset the page is about; anything time-based would defeat that.
+  const [revealAll, setRevealAll] = useState(!initialPersonaId)
   const urlRead = useRef(false)
+
+  useEffect(() => {
+    if (revealAll) return
+    const reveal = () => startTransition(() => setRevealAll(true))
+    const options = { once: true, passive: true } as const
+    window.addEventListener("pointerdown", reveal, options)
+    window.addEventListener("keydown", reveal, options)
+    return () => {
+      window.removeEventListener("pointerdown", reveal)
+      window.removeEventListener("keydown", reveal)
+    }
+  }, [revealAll])
 
   // Read from window.location, not useSearchParams: the latter would force this
   // static page into client-side rendering. replaceState, never push: a pushed
@@ -355,6 +374,7 @@ export default function WalletsCatalog({
             <WalletsResults
               wallets={wallets}
               filtered={filtered}
+              revealAll={revealAll}
               deviceLabels={labels.devices}
               personaLabels={labels.personas}
               onOpen={openWalletModal}
