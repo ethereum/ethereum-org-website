@@ -35,29 +35,30 @@ The scraper would otherwise swap its own alias the moment a crawl ends, with no 
 all. Scraping to a staging name and promoting separately is what makes the swap
 conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
 
-## The scraper is a version behind
+## Indexing choices
+
+`only_content_level` stops the scraper creating a record for every heading. A heading whose
+text is exactly the query -- an h2 reading "Issuance", say -- is an exact full-field match
+and outscores the page that is actually about the term, by a margin no ranking weight can
+close. Headings still populate the hierarchy carried on each content record, so their text
+stays searchable through `query_by`; they just no longer compete as results of their own.
+
+`stem` is on for the fields a query is matched against, so "wallet" finds "wallets". The
+singular/plural pairs pinned by hand in `curation.json` exist only because it was off, and
+can be retired once a crawl has run with it.
+
+## The scraper was a version behind
 
 Typesense v30 replaced per-collection synonyms and overrides with synonym sets and curation
-sets. Scraper 0.11.0 still calls the removed v29 endpoints in `commit_tmp_collection`, but
-only when the `ethereumorg-staging-<locale>` alias resolves to a previous collection --
-which is true from a locale's second run onward. The symptom is a full, successful crawl
-that dies with `ObjectNotFound: [Errno 404]` at commit, having indexed everything and
-published nothing.
+sets. Scraper 0.11.0 called the removed v29 endpoints in `commit_tmp_collection`, but only
+when the `ethereumorg-staging-<locale>` alias resolved a previous collection -- so a locale
+crawled fine on its first run and 404'd at commit on every run after, having indexed
+everything and published nothing.
 
-The workflow therefore deletes that alias before every crawl, which makes each run look
-like a first run. Nothing else reads it: search queries `ethereumorg-<locale>`, and promote
-finds staged collections by name. We define no synonyms, and curation is reapplied from
-`curation.json` after every promote, so there is nothing for the transfer to carry over.
-
-A side effect worth knowing: the scraper also deletes the old collection at the end of
-`commit_tmp_collection`. With the alias gone it no longer does, which leaves `prune` in
-promote as the only thing that deletes collections -- one deleter instead of two racing
-over the same names.
-
-A 0.12.x image exists and may address this properly. It is deliberately not taken here:
-every relevance number we have -- the field definitions, the `lvl0` XPath, hit@1 of 67% --
-was measured on 0.11.0, and swapping the crawler would invalidate that baseline. Upgrading
-is worth doing, against the ground truth set, as its own change.
+0.12.x added v30 support and is what we now run. The workflow still clears that alias before
+each crawl, which is no longer required but remains worth keeping: with the alias gone the
+scraper does not delete the old collection either, leaving `prune` in promote as the only
+thing that removes collections rather than two deleters racing over the same names.
 
 ## When promotion is refused
 
@@ -100,6 +101,25 @@ but a locale that refuses several runs in a row is worth looking at.
 Recovering from the Actions tab is not possible today: re-running the workflow re-crawls
 and meets the same gate. The commands above need the admin key locally.
 
+## Which networks appear
+
+`src/data/networks/networks.ts` -- the same list `/layer-2/networks` renders. Each entry
+carries a `searchExplorer` alongside its existing `blockExplorerLink`, so adding or
+removing an L2 there is the only edit; nothing else enumerates them.
+
+The two explorer fields are deliberately separate. `blockExplorerLink` stays whatever that
+network's own users expect; `searchExplorer` prefers Blockscout, which is open source.
+Explorers with a single route that resolves anything give `search`; those without give
+`address` and `tx`, and the type makes it impossible to fill in half a pair.
+
+`addressFormat` says which value shapes a network accepts: `evm` for a 20-byte address or
+32-byte hash, `starknet` for a field element that could be either -- which is why Starknet
+offers both routes rather than guessing.
+
+EIP-3770 prefixes are typed by hand, and `tests/unit/search/networks-data.spec.ts` checks
+each one against `chains.ts`, itself generated weekly from the same registry. A typo fails
+CI with the correct value, and an upstream rename turns it red on the next chains update.
+
 ## curation.json
 
 Query to ordered list of paths. Paths are locale-agnostic (brand names read the same in
@@ -123,14 +143,19 @@ control. An allowlist would also break on every new deploy-preview subdomain.
 
 ## Secrets
 
-GitHub Actions secrets, which are separate from Netlify's environment variables.
+GitHub Actions secrets, which are separate from Netlify's environment variables. The
+workflow maps the two key secrets onto different variable names, which is what the scripts
+read -- worth knowing when running them by hand.
 
-| Secret                 | Used for                                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TYPESENSE_URL`        | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
-| `TYPESENSE_ADMIN_KEY`  | collections, aliases, document import, curation                                                                                                         |
-| `TYPESENSE_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
-| `SENTRY_DSN`           | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
+| Secret                 | Env var                    | Used for                                                                                                                                                |
+| ---------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPESENSE_URL`        | `TYPESENSE_URL`            | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
+| `TYPESENSE_ADMIN_KEY`  | `TYPESENSE_API_KEY`        | collections, aliases, document import, curation                                                                                                         |
+| `TYPESENSE_SEARCH_KEY` | `TYPESENSE_API_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
+| `SENTRY_DSN`           | `SENTRY_DSN`               | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
+
+Locally the scripts read `.env.local`, falling back to the `NEXT_PUBLIC_TYPESENSE_*` values
+for queries, so a read-only command needs nothing the app does not already have.
 
 ## Local runs
 

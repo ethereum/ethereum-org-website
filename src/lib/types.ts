@@ -754,7 +754,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]

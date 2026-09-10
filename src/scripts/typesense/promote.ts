@@ -20,10 +20,12 @@ import {
   countByLanguage,
   listCollections,
   LOCALES,
+  QUERY_BY,
   requireEnv,
   resolveAlias,
   SEARCH_KEY,
   SITE_ORIGIN,
+  SORT_BY,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -37,7 +39,7 @@ const MIN_SIZE_RATIO = 0.9
 const KEEP_PER_LOCALE = 2
 
 /**
- * Minimum share of labelled queries whose correct page must rank first, measured against
+ * Minimum share of labeled queries whose correct page must rank first, measured against
  * the staging collection before the alias moves. The baseline is ~42% before curation is
  * applied, so this catches a collapse without tripping on ordinary drift.
  *
@@ -127,7 +129,7 @@ const promoteLocale = async (
     const score = await hitAtOne(source, locale)
     if (score !== null) {
       console.log(
-        `  ${locale}: hit@1 ${(score * 100).toFixed(0)}% on labelled queries`
+        `  ${locale}: hit@1 ${(score * 100).toFixed(0)}% on labeled queries`
       )
       if (score < MIN_HIT_AT_1 && !args.force)
         failures.push(
@@ -159,7 +161,7 @@ const promoteLocale = async (
   return true
 }
 
-interface LabelledQuery {
+interface LabeledQuery {
   q: string
   correct: string | null
 }
@@ -173,22 +175,28 @@ const normalizePath = (url: string) =>
   "/"
 
 /**
- * Share of labelled queries whose correct page ranks first. Returns null when there is no
+ * Share of labeled queries whose correct page ranks first. Returns null when there is no
  * ground truth for this locale, which is every locale but English.
  */
 const hitAtOne = async (collection: string, locale: string) => {
   if (locale !== "en" || !existsSync(GROUNDTRUTH_PATH)) return null
-  const queries: LabelledQuery[] = JSON.parse(
+  const queries: LabeledQuery[] = JSON.parse(
     readFileSync(GROUNDTRUTH_PATH, "utf-8")
-  ).queries.filter((row: LabelledQuery) => row.correct)
+  ).queries.filter((row: LabeledQuery) => row.correct)
 
   let hits = 0
   for (const { q, correct } of queries) {
     const params = new URLSearchParams({
       q,
-      query_by:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content",
+      // Must mirror what the app sends, or the gate scores results nobody receives.
+      // Without `sort_by` this ranked on text match alone and never consulted
+      // `pagerank`, so a change to page ranking was invisible to the very check meant
+      // to catch it. See src/components/Search/index.tsx.
+      query_by: QUERY_BY,
+      sort_by: SORT_BY,
       group_by: "url_without_anchor",
+      // 1 rather than the app's 3: hit@1 only cares which page ranks first, and
+      // `group_limit` does not affect the order of the groups themselves.
       group_limit: "1",
       per_page: "1",
     })

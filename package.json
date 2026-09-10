@@ -182,6 +182,9 @@
       "sha.js": ">=2.4.12",
       "react": "$react",
       "react-dom": "$react-dom"
+    },
+    "patchedDependencies": {
+      "typesense-docsearch-react": "patches/typesense-docsearch-react.patch"
     }
   }
 }

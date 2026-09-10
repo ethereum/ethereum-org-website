@@ -2,19 +2,14 @@
 
 import { type RefObject, useRef } from "react"
 import dynamic from "next/dynamic"
-import { useLocale, useTranslations } from "next-intl"
-import {
-  type DocSearchModalProps,
-  useDocSearchKeyboardEvents,
-} from "typesense-docsearch-react"
+import { useTranslations } from "next-intl"
+import { useDocSearchKeyboardEvents } from "typesense-docsearch-react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
@@ -22,44 +17,6 @@ import SearchInputButton from "./SearchInputButton"
 import { useDisclosure } from "@/hooks/useDisclosure"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
-
-// `DocSearchHit` isn't re-exported from the package root, so derive it from the
-// modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
-// object, this fork exposes flattened dotted keys (e.g. `item["hierarchy.lvl0"]`).
-type DocSearchHit = Parameters<
-  NonNullable<DocSearchModalProps["transformItems"]>
->[0][number]
-
-const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
-
-/**
- * Strip the site-name suffix from every copy of a hit's lvl0 title.
- *
- * The renderer reads `_highlightResult["hierarchy.lvl0"].value`, and the group header
- * above each result takes its label from the same place -- so the raw fields are not
- * enough. Highlight entries nest the string under `value`, which a naive walk recurses
- * straight past.
- */
-const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
-  if (depth > 6) return
-  for (const [key, value] of Object.entries(node)) {
-    if (TITLE_KEYS.has(key)) {
-      if (typeof value === "string") {
-        node[key] = sanitizeHitTitle(value)
-        continue
-      }
-      // Highlight/snippet entries: { value: "...", matchLevel: "none" }
-      const wrapped = value as { value?: unknown } | null
-      if (wrapped && typeof wrapped.value === "string") {
-        wrapped.value = sanitizeHitTitle(wrapped.value)
-        continue
-      }
-    }
-    if (value && typeof value === "object") {
-      stripTitleSuffix(value as Record<string, unknown>, depth + 1)
-    }
-  }
-}
 
 interface SearchProps {
   asChild?: boolean
@@ -70,7 +27,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
-  const locale = useLocale()
   const searchButtonRef = useRef<HTMLButtonElement>(null)
   const t = useTranslations("common")
 
@@ -91,89 +47,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
     searchButtonRef: searchButtonRef as RefObject<HTMLButtonElement>,
   })
-
-  const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
-  const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
-  const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"
-  const apiKey = process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY || ""
-  // One collection per locale (`ethereumorg-en`, `ethereumorg-ja`, ...). A single
-  // combined index took ~16h to crawl -- past CI limits, and every locale waited
-  // on every other. See typesense/README.md.
-  const collectionPrefix =
-    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
-  const collectionName = `${collectionPrefix}-${locale}`
-
-  const searchModalProps = {
-    typesenseCollectionName: collectionName,
-    typesenseServerConfig: {
-      nodes: [{ host, port, protocol }],
-      apiKey,
-    },
-    typesenseSearchParameters: {
-      // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
-      // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
-      // match scores into one tier and lets a three-value signal reorder them, which
-      // measured worse than no sort at all. At this granularity pagerank only decides
-      // between comparable matches: hit@1 and MRR match the unsorted baseline while
-      // hit@10 improves 81% -> 84% against the labelled query set.
-      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
-    },
-    onClose,
-    transformItems: (items: DocSearchHit[]) =>
-      items.map((item: DocSearchHit) => {
-        // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
-        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
-        newItem.url = sanitizeHitUrl(item.url)
-        // lvl0 is the page's og:title, which always ends " | ethereum.org", and it is
-        // shown as the group header above every result. The fork keeps it in several
-        // places -- a flat dotted key, the `hierarchy` object, a `hierarchy_camel`
-        // array, and `_highlightResult`/`_snippetResult` copies that the renderer
-        // actually reads -- so walk the hit and strip it wherever it appears.
-        stripTitleSuffix(newItem as unknown as Record<string, unknown>)
-        return newItem
-      }),
-    placeholder: t("search-ethereum-org"),
-    translations: {
-      searchBox: {
-        resetButtonTitle: t("clear"),
-        resetButtonAriaLabel: t("clear"),
-        cancelButtonText: t("close"),
-        cancelButtonAriaLabel: t("close"),
-      },
-      footer: {
-        selectText: t("docsearch-to-select"),
-        selectKeyAriaLabel: t("docsearch-to-select"),
-        navigateText: t("docsearch-to-navigate"),
-        navigateUpKeyAriaLabel: t("up"),
-        navigateDownKeyAriaLabel: t("down"),
-        closeText: t("docsearch-to-close"),
-        closeKeyAriaLabel: t("docsearch-to-close"),
-        searchByText: t("docsearch-search-by"),
-      },
-      errorScreen: {
-        titleText: t("docsearch-error-title"),
-        helpText: t("docsearch-error-help"),
-      },
-      startScreen: {
-        recentSearchesTitle: t("docsearch-start-recent-searches-title"),
-        noRecentSearchesText: t("docsearch-start-no-recent-searches"),
-        saveRecentSearchButtonTitle: t("docsearch-start-save-recent-search"),
-        removeRecentSearchButtonTitle: t(
-          "docsearch-start-remove-recent-search"
-        ),
-        favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
-        removeFavoriteSearchButtonTitle: t(
-          "docsearch-start-remove-favorite-search"
-        ),
-      },
-      noResultsScreen: {
-        noResultsText: t("docsearch-no-results-text"),
-        suggestedQueryText: t("docsearch-no-results-suggested-query"),
-        reportMissingResultsText: t("docsearch-no-results-missing"),
-        reportMissingResultsLinkText: t("docsearch-no-results-missing-link"),
-      },
-    },
-  }
 
   return (
     <>
@@ -222,7 +95,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
               </div>
             )}
           >
-            <SearchModal {...searchModalProps} />
+            <SearchModal onClose={onClose} />
           </ErrorBoundary>
         )}
       </Portal.Root>
