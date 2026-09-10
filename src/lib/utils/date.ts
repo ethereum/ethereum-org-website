@@ -4,6 +4,20 @@ import { DEFAULT_LOCALE } from "../constants"
 import type { Lang } from "../types"
 
 /**
+ * Intl constructors throw a RangeError on structurally invalid BCP 47 tags
+ * ("undefined", "en_US", ""), so any locale that isn't route-validated falls
+ * back to DEFAULT_LOCALE here rather than 500ing the render (#18013).
+ */
+export function safeLocale(locale: string): string {
+  try {
+    Intl.getCanonicalLocales(locale)
+    return locale
+  } catch {
+    return DEFAULT_LOCALE
+  }
+}
+
+/**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
  * - Forces the Gregorian calendar universally.
  * - Arabic ('ar') and standard locales default to Western numerals (1, 2, 3).
@@ -30,7 +44,7 @@ export function dateTimeFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.DateTimeFormat(locale, finalOptions)
+  return new Intl.DateTimeFormat(safeLocale(locale), finalOptions)
 }
 
 export const dateToString = (published: Date | string) =>
