@@ -158,7 +158,8 @@ function filterWallet(
 /** `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per group. */
 const readQueryFilters = (
   search: string,
-  options: WalletFilterOptions
+  options: WalletFilterOptions,
+  personas: WalletPersonaCard[]
 ): CatalogFilterState => {
   const params = new URLSearchParams(search)
   const state: CatalogFilterState = {}
@@ -168,6 +169,10 @@ const readQueryFilters = (
       .filter((id) => options[key].some((option) => option.id === id))
     if (ids.length) state[key] = ids
   }
+  const selected = (params.get(PERSONAS_KEY) ?? "")
+    .split(",")
+    .filter((id) => personas.some((persona) => persona.id === id))
+  if (selected.length) state[PERSONAS_KEY] = selected
   return state
 }
 
@@ -175,11 +180,20 @@ const buildUrl = (selection: CatalogFilterState) => {
   const { pathname, hash } = window.location
   const base = pathname.replace(/\/personas\/[^/]+\/?$/, "/")
   const personas = asArray(selection[PERSONAS_KEY])
+  // A single persona owns an indexable path; several have no path, so they
+  // travel as a query param off the index instead of being dropped.
   const path = personas.length === 1 ? `${base}personas/${personas[0]}/` : base
-  const query = ALL_FILTER_KEYS.flatMap((key) => {
-    const ids = asArray(selection[key])
-    return ids.length ? [`${key}=${ids.map(encodeURIComponent).join(",")}`] : []
-  }).join("&")
+  const query = [
+    ...(personas.length > 1
+      ? [`${PERSONAS_KEY}=${personas.map(encodeURIComponent).join(",")}`]
+      : []),
+    ...ALL_FILTER_KEYS.flatMap((key) => {
+      const ids = asArray(selection[key])
+      return ids.length
+        ? [`${key}=${ids.map(encodeURIComponent).join(",")}`]
+        : []
+    }),
+  ].join("&")
   return path + (query ? `?${query}` : "") + hash
 }
 
@@ -261,7 +275,11 @@ export default function WalletsCatalog({
   useEffect(() => {
     if (!urlRead.current) {
       urlRead.current = true
-      const fromUrl = readQueryFilters(window.location.search, filterOptions)
+      const fromUrl = readQueryFilters(
+        window.location.search,
+        filterOptions,
+        personas
+      )
       if (Object.keys(fromUrl).length) {
         setSelection((prev) => ({ ...prev, ...fromUrl }))
         return
@@ -272,7 +290,7 @@ export default function WalletsCatalog({
     if (url !== pathname + search + hash) {
       window.history.replaceState(null, "", url)
     }
-  }, [selection, filterOptions])
+  }, [selection, filterOptions, personas])
 
   const selectedPersonas = asArray(selection[PERSONAS_KEY]) as WalletPersonaId[]
 

@@ -26,10 +26,15 @@ test.describe("Find Wallet Page", () => {
     await expect(page).toHaveURL(/\/find-wallet\/personas\/nfts\/$/)
     await expect(findWalletPage.personaCheckbox("NFTs")).toBeChecked()
 
-    // Two personas AND-combine, and the path only names a single persona.
+    // Two personas AND-combine; with no path for a pair they move to the query,
+    // which is what lets the selection survive a reload.
     await findWalletPage.togglePersona("Finance")
-    await expect(page).toHaveURL(/\/find-wallet\/$/)
+    await expect(page).toHaveURL(/\/find-wallet\/\?personas=nfts,finance$/)
     expect(await findWalletPage.getResultsCount()).toBeLessThanOrEqual(nftCount)
+    await expect(findWalletPage.personaCheckbox("Finance")).toBeChecked()
+
+    await page.reload()
+    await expect(findWalletPage.personaCheckbox("NFTs")).toBeChecked()
     await expect(findWalletPage.personaCheckbox("Finance")).toBeChecked()
 
     await findWalletPage.togglePersona("Finance")
