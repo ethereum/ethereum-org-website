@@ -178,7 +178,10 @@ export const getWeekNumber = (date: Date): number => {
  * @returns Day of year (1-365 or 1-366 for leap years)
  */
 export const getDayOfYear = (date: Date): number => {
-  const start = new Date(date.getFullYear(), 0, 0)
-  const diff = date.getTime() - start.getTime()
-  return Math.floor(diff / 86400000)
+  // Differences are taken in UTC so a DST shift between January and `date`
+  // cannot move the result to the neighbouring day, the same way
+  // getWeekNumber normalizes.
+  const start = Date.UTC(date.getFullYear(), 0, 0)
+  const current = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+  return Math.round((current - start) / 86400000)
 }
