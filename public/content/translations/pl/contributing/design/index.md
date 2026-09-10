@@ -15,7 +15,7 @@ Ostatecznie jest to świetny sposób na zbudowanie zróżnicowanego i imponując
 
 Czasami potrzebujemy pomocy w testowaniu naszych wstępnych pomysłów. To świetny sposób na wniesienie wkładu bez wiedzy technicznej.
 
-1. Zespół projektowy udostępni makietę na [Discord](https://discord.com/invite/ethereum-org) oraz na [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Zespół projektowy udostępni makietę na [Discord](/discord/) oraz na [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Zostaniesz oprowadzony po projektach, aby przekazać swoją opinię za pomocą funkcji komentarzy.
 3. Wynik zostanie udostępniony w zgłoszeniu na GitHub, a następnie zamknięty przez zespół.
 

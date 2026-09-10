@@ -16,7 +16,7 @@ Siamo profondamente grati alle migliaia di traduttori della community che hanno 
 
 Se noti un errore in una traduzione esistente, ti preghiamo di [aprire una issue su GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Unisciti al [Discord di ethereum.org](https://discord.gg/ethereum-org) per fare domande o condividere feedback._
+_Unisciti al [Discord di ethereum.org](/discord/) per fare domande o condividere feedback._
 
 ## Informazioni sul Programma di traduzione {#about-us}
 
@@ -63,7 +63,7 @@ Per altri utili strumenti di traduzione, community di traduttori e post del blog
 
 ## Contattaci {#get-in-touch}
 
-Hai delle domande? O vuoi collaborare con il nostro team e altri traduttori? Scrivi nel canale #translations del nostro [server Discord di ethereum.org](https://discord.gg/ethereum-org)
+Hai delle domande? O vuoi collaborare con il nostro team e altri traduttori? Scrivi nel canale #translations del nostro [server Discord di ethereum.org](/discord/)
 
 Puoi anche contattarci all'indirizzo translations@ethereum.org
 

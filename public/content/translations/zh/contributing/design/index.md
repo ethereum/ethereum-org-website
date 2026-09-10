@@ -15,7 +15,7 @@ lang: zh
 
 我们有时需要帮助来测试我们的初步想法。这是一种无需任何技术知识即可做出贡献的绝佳方式。
 
-1. 设计团队将在 [Discord](https://discord.com/invite/ethereum-org) 和 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) 上分享设计模型。
+1. 设计团队将在 [Discord](/discord/) 和 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) 上分享设计模型。
 2. 你将在引导下浏览设计，并通过评论功能提供反馈。
 3. 结果将分享在 GitHub 议题 (issue) 中，然后由团队关闭。
 

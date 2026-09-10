@@ -89,4 +89,4 @@ Unaweza kuona kanuni zetu za muundo zikifanya kazi [kote kwenye tovuti yetu](/).
 
 Ingawa kanuni hizi zinalenga tovuti ya ethereum.org, tunatumai kuwa nyingi kati yazo zinawakilisha maadili ya mfumo wa ikolojia wa Ethereum kwa ujumla. Labda hata unataka kujumuisha baadhi yazo kwenye mradi wako mwenyewe!
 
-Tujulishe mawazo yako kwenye [seva ya Discord](https://discord.gg/ethereum-org) au kwa [kuunda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Tujulishe mawazo yako kwenye [seva ya Discord](/discord/) au kwa [kuunda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

@@ -89,4 +89,4 @@ Tasarım ilkelerimizi [sitemizin genelinde](/) iş başında görebilirsiniz.
 
 Bu ilkeler ethereum.org web sitesine odaklansa da, birçoğunun genel olarak Ethereum ekosisteminin değerlerini temsil ettiğini umuyoruz. Belki de bunlardan bazılarını kendi projenize dahil etmek istersiniz!
 
-Düşüncelerinizi [Discord sunucusunda](https://discord.gg/ethereum-org) veya [bir sorun oluşturarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize bildirin.
+Düşüncelerinizi [Discord sunucusunda](/discord/) veya [bir sorun oluşturarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize bildirin.

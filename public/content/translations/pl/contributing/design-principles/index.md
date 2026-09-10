@@ -89,4 +89,4 @@ Możesz zobaczyć nasze zasady projektowania w akcji [na całej naszej stronie](
 
 Chociaż te zasady koncentrują się na witrynie ethereum.org, mamy nadzieję, że wiele z nich odzwierciedla wartości całego ekosystemu Ethereum. Być może zechcesz nawet włączyć niektóre z nich do własnego projektu!
 
-Podziel się swoimi przemyśleniami na [serwerze Discord](https://discord.gg/ethereum-org) lub [tworząc zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Podziel się swoimi przemyśleniami na [serwerze Discord](/discord/) lub [tworząc zgłoszenie](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

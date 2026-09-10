@@ -89,4 +89,4 @@ description: المبادئ الكامنة وراء قرارات التصميم 
 
 على الرغم من أن هذه المبادئ تركز على موقع <span dir="ltr">ethereum.org</span>، إلا أننا نأمل أن يكون العديد منها ممثلاً لقيم منظومة إيثيريوم بشكل عام. ربما ترغب حتى في دمج بعضها في مشروعك الخاص!
 
-أخبرنا بأفكارك على خادم [ديسكورد](https://discord.gg/ethereum-org) أو عن طريق [إنشاء مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+أخبرنا بأفكارك على خادم [ديسكورد](/discord/) أو عن طريق [إنشاء مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

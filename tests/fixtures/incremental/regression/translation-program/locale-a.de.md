@@ -18,7 +18,7 @@ Das Übersetzungsprogramm von ethereum.org ist offen und jeder kann dazu beitrag
 4. Maschinelle Übersetzungen werden nicht genehmigt.
 5. Alle Übersetzungen werden überprüft, bevor sie der Website hinzugefügt werden. Es gibt also eine kurze Verzögerung, bevor deine Übersetzungen live gehen.
 
-_Tritt dem [ethereum.org Discord](https://discord.gg/ethereum-org) bei, um bei Übersetzungen zusammenzuarbeiten, Fragen zu stellen, Feedback und Ideen zu teilen oder einer Übersetzungsgruppe beizutreten._
+_Tritt dem [ethereum.org Discord](/discord/) bei, um bei Übersetzungen zusammenzuarbeiten, Fragen zu stellen, Feedback und Ideen zu teilen oder einer Übersetzungsgruppe beizutreten._
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Mit dem Übersetzen beginnen
@@ -75,7 +75,7 @@ Für weitere nützliche Übersetzungstools, Übersetzer-Communitys und Blogbeitr
 
 ## Nimm Kontakt auf {#get-in-touch}
 
-Hast du Fragen? Oder möchtest du mit unserem Team und anderen Übersetzern zusammenarbeiten? Bitte poste im Kanal #translations auf unserem [ethereum.org Discord-Server](https://discord.gg/ethereum-org)
+Hast du Fragen? Oder möchtest du mit unserem Team und anderen Übersetzern zusammenarbeiten? Bitte poste im Kanal #translations auf unserem [ethereum.org Discord-Server](/discord/)
 
 Du kannst uns auch unter translations@ethereum.org erreichen.
 

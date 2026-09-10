@@ -23,7 +23,7 @@ Níže najdete několik užitečných průvodců a nástrojů pro překladatele 
 
 ## Komunity {#communities}
 
-- [Jazykově specifické překladatelské skupiny na Discordu](https://discord.gg/ethereum-org)
+- [Jazykově specifické překladatelské skupiny na Discordu](/discord/)
   _– iniciativa propojující překladatele webu ethereum.org s překladatelskými skupinami_
 - [Skupina čínských překladatelů](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– stránka na platformě Notion pro snazší koordinaci mezi čínskými překladateli_
@@ -39,7 +39,7 @@ Chcete-li mít přehled o nejnovějším vývoji překladatelského programu, m�
 
 ## Konzultační hodiny pro překladatele {#office-hours}
 
-Každou druhou středu v měsíci pořádáme konzultační hodiny pro překladatele. Konají se v hlasovém kanálu #office-hours na [Discordu ethereum.org](https://discord.gg/ethereum-org), kde také najdete přesné časy a další podrobnosti.
+Každou druhou středu v měsíci pořádáme konzultační hodiny pro překladatele. Konají se v hlasovém kanálu #office-hours na [Discordu ethereum.org](/discord/), kde také najdete přesné časy a další podrobnosti.
 
 Konzultační hodiny umožňují našim překladatelům klást otázky ohledně procesu překladu, poskytovat zpětnou vazbu k programu, sdílet své nápady nebo si jen tak popovídat s hlavním týmem ethereum.org.
 V neposlední řadě chceme tyto hovory využít k informování o nedávném vývoji překladatelského programu a ke sdílení klíčových tipů a pokynů s našimi přispěvateli.

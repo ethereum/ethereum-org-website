@@ -43,7 +43,7 @@ Jsme přátelská komunita, která vám pomůže růst a vzdělávat se v ekosys
 - [Navrhnout projekt pro naši stránku DeSci](/contributing/adding-desci-projects/) – Přidejte projekt postavený na Ethereu, který přispívá k decentralizované vědě (DeSci)
 - [Přidat zdroj](/contributing/adding-resources/) – Přidejte užitečný zdroj na jakoukoli příslušnou stránku
 
-Máte nějaké dotazy? 🤔 Připojte se na náš [server na Discordu](https://discord.gg/ethereum-org)
+Máte nějaké dotazy? 🤔 Připojte se na náš [server na Discordu](/discord/)
 
 ## Dobré první úkoly pro začátek přispívání {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Všechny aktualizace se provádějí prostřednictvím procesu PR (Pull Request)
 K práci na čemkoli nepotřebujete povolení, ale vždy je nejlepší nám dát vědět, co plánujete udělat. Můžete to udělat takto:
 
 - Okometováním problému (issue) nebo PR na [GitHubu](https://github.com/ethereum/ethereum-org-website)
-- Napsáním zprávy na náš [server na Discordu](https://discord.gg/ethereum-org)
+- Napsáním zprávy na náš [server na Discordu](/discord/)
 
 Předtím, než začnete přispívat, se ujistěte, že jste obeznámeni s:
 
@@ -77,7 +77,7 @@ Rozhodnutí o jednotlivých PR, vývoji designu a velkých upgradech dělá tým
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Server na Discordu](https://discord.gg/ethereum-org)
+- [Server na Discordu](/discord/)
 
 ### Poznámka k plagiátorství {#plagiarism}
 
@@ -95,7 +95,7 @@ Pokud bude váš příspěvek sloučen (merged) do ethereum.org, budete mít ša
 
 ### Jak uplatnit nárok {#how-to-claim}
 
-1. Připojte se na náš [server na Discordu](https://discord.gg/ethereum-org).
+1. Připojte se na náš [server na Discordu](/discord/).
 2. Vložte odkaz na svůj příspěvek do kanálu `#🥇 | proof-of-contribution`.
 3. Počkejte, až vám člen našeho týmu pošle odkaz na váš OAT.
 4. Nárokujte si svůj OAT!

@@ -15,7 +15,7 @@ In definitiva, questo è un ottimo modo per costruire un portfolio diversificato
 
 A volte abbiamo bisogno di aiuto per testare le nostre idee iniziali. Questo è un ottimo modo per contribuire senza alcuna conoscenza tecnica.
 
-1. Il team di design condividerà un mockup del design su [Discord](https://discord.com/invite/ethereum-org) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Il team di design condividerà un mockup del design su [Discord](/discord/) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Verrai guidato attraverso i design per fornire feedback tramite la funzione dei commenti.
 3. Il risultato verrà condiviso nella issue di GitHub e poi chiuso dal team.
 

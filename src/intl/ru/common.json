@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "Эта страница полезна?",
   "feedback-widget-thank-you-cta": "Пройти короткий опрос",
   "feedback-widget-thank-you-subtitle": "Сделайте эту страницу еще лучше, ответив на несколько вопросов.",
-  "feedback-widget-thank-you-subtitle-ext": "Если вам нужна помощь, вы можете обратиться к сообществу в нашем <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">Дискорде</a>.",
+  "feedback-widget-thank-you-subtitle-ext": "Если вам нужна помощь, вы можете обратиться к сообществу в нашем <a href=\"/discord/\" target=\"_blank\">Дискорде</a>.",
   "feedback-widget-thank-you-timing": "2–3 мин",
   "feedback-widget-thank-you-title": "Спасибо за ваш отзыв!",
   "filter-bar-clear": "Очистить фильтр",

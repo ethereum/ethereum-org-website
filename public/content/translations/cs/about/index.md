@@ -100,7 +100,7 @@ Abychom naši práci zpřístupnili a podpořili větší spolupráci s komunito
 
 **Jak to zní?** Vždy oceníme zpětnou vazbu k naší roadmapě – pokud si myslíte, že bychom měli na něčem pracovat, dejte nám prosím vědět! Uvítáme nápady a PR (Pull Requesty) od kohokoli z komunity.
 
-**Chcete se zapojit?** [Přečtěte si více o přispívání](/contributing/), [napište nám na Twitteru](https://x.com/ethdotorg) nebo se připojte ke komunitním diskusím na [našem serveru na Discordu](https://discord.gg/ethereum-org).
+**Chcete se zapojit?** [Přečtěte si více o přispívání](/contributing/), [napište nám na Twitteru](https://x.com/ethdotorg) nebo se připojte ke komunitním diskusím na [našem serveru na Discordu](/discord/).
 
 ## Principy designu {#design-principles}
 
@@ -110,7 +110,7 @@ Používáme sadu [principů designu](/contributing/design-principles/), kterým
 
 Vytvořili jsme a vydali [designový systém](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), abychom mohli rychleji dodávat funkce a umožnili členům komunity podílet se na otevřeném designu ethereum.org.
 
-Chcete se zapojit? [Sledujte nás ve Figmě](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), v [issue na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/6284) a připojte se ke konverzaci v našem [kanálu #design na Discordu](https://discord.gg/ethereum-org).
+Chcete se zapojit? [Sledujte nás ve Figmě](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), v [issue na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/6284) a připojte se ke konverzaci v našem [kanálu #design na Discordu](/discord/).
 
 ## Průvodce stylem {#style-guide}
 
@@ -128,6 +128,6 @@ Web ethereum.org je open-source a je vytvořen pod [licencí MIT](https://github
 
 Ačkoli je tento web open-source a může na něm pracovat kdokoli, máme tým, který se věnuje ethereum.org a dalším webovým projektům Nadace Ethereum.
 
-Zde budeme zveřejňovat všechny volné pracovní pozice. Pokud zde nevidíte roli pro sebe, zamiřte na [náš server na Discordu](https://discord.gg/ethereum-org) a dejte nám vědět, jak byste s námi chtěli spolupracovat!
+Zde budeme zveřejňovat všechny volné pracovní pozice. Pokud zde nevidíte roli pro sebe, zamiřte na [náš server na Discordu](/discord/) a dejte nám vědět, jak byste s námi chtěli spolupracovat!
 
 Hledáte i mimo tým ethereum.org? [Podívejte se na další pracovní pozice související s Ethereem](/community/get-involved/#ethereum-jobs/).

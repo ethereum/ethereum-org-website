@@ -100,7 +100,7 @@ lang: ar
 
 **ما رأيك في ذلك؟** نحن نقدر دائمًا الملاحظات حول خارطة الطريق الخاصة بنا - إذا كان هناك شيء تعتقد أنه يجب علينا العمل عليه، فيرجى إخبارنا! نرحب بالأفكار وطلبات السحب من أي شخص في المجتمع.
 
-**هل تريد المشاركة؟** [تعرف على المزيد حول المساهمة](/contributing/)، أو [تواصل معنا على تويتر](https://x.com/ethdotorg)، أو انضم إلى مناقشات المجتمع في [خادم ديسكورد الخاص بنا](https://discord.gg/ethereum-org).
+**هل تريد المشاركة؟** [تعرف على المزيد حول المساهمة](/contributing/)، أو [تواصل معنا على تويتر](https://x.com/ethdotorg)، أو انضم إلى مناقشات المجتمع في [خادم ديسكورد الخاص بنا](/discord/).
 
 ## مبادئ التصميم {#design-principles}
 
@@ -110,7 +110,7 @@ lang: ar
 
 لقد قمنا ببناء وإصدار [نظام تصميم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) لشحن الميزات بسرعة أكبر والسماح لأعضاء المجتمع بالمشاركة في التصميم المفتوح لـ <span dir="ltr">ethereum.org</span>.
 
-هل تريد المشاركة؟ [تابع معنا في <span dir="ltr">Figma</span>](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)، و[مشكلة <span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website/issues/6284) وانضم إلى المحادثة في [قناة ديسكورد <span dir="ltr">#design</span>](https://discord.gg/ethereum-org).
+هل تريد المشاركة؟ [تابع معنا في <span dir="ltr">Figma</span>](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)، و[مشكلة <span dir="ltr">GitHub</span>](https://github.com/ethereum/ethereum-org-website/issues/6284) وانضم إلى المحادثة في [قناة ديسكورد <span dir="ltr">#design</span>](/discord/).
 
 ## دليل الأسلوب {#style-guide}
 
@@ -128,6 +128,6 @@ lang: ar
 
 على الرغم من أن هذا الموقع مفتوح المصدر ويمكن لأي شخص العمل عليه، إلا أن لدينا فريقًا مخصصًا لـ <span dir="ltr">ethereum.org</span> ومشاريع الويب الأخرى التابعة لمؤسسة إيثيريوم.
 
-سننشر أي فرص عمل هنا. إذا لم تجد دورًا مناسبًا لك هنا، فتوجه إلى [خادم ديسكورد الخاص بنا](https://discord.gg/ethereum-org) وأخبرنا كيف ترغب في العمل معنا!
+سننشر أي فرص عمل هنا. إذا لم تجد دورًا مناسبًا لك هنا، فتوجه إلى [خادم ديسكورد الخاص بنا](/discord/) وأخبرنا كيف ترغب في العمل معنا!
 
 هل تتطلع إلى ما هو أبعد من فريق <span dir="ltr">ethereum.org</span>؟ [تحقق من الوظائف الأخرى المتعلقة بإيثيريوم](/community/get-involved/#ethereum-jobs/).

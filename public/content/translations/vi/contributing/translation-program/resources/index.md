@@ -23,7 +23,7 @@ Bạn có thể tìm thấy một số hướng dẫn và công cụ hữu ích 
 
 ## Cộng đồng {#communities}
 
-- [Các nhóm dịch thuật Discord theo ngôn ngữ cụ thể](https://discord.gg/ethereum-org)
+- [Các nhóm dịch thuật Discord theo ngôn ngữ cụ thể](/discord/)
   _– một sáng kiến nhằm kết nối các biên dịch viên của ethereum.org với các Nhóm Dịch thuật_
 - [Nhóm biên dịch viên tiếng Trung](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Trang Notion giúp điều phối dễ dàng hơn giữa các biên dịch viên tiếng Trung_
@@ -39,7 +39,7 @@ Bạn có thể tìm thấy một số hướng dẫn và công cụ hữu ích 
 
 ## Giờ hỗ trợ dành cho biên dịch viên {#office-hours}
 
-Chúng tôi có các giờ hỗ trợ dành cho biên dịch viên vào ngày thứ Tư của tuần thứ hai mỗi tháng. Các buổi này được tổ chức trong kênh thoại #office-hours trên [Discord của ethereum.org](https://discord.gg/ethereum-org), nơi bạn cũng có thể tìm thấy thời gian chính xác và các thông tin chi tiết khác.
+Chúng tôi có các giờ hỗ trợ dành cho biên dịch viên vào ngày thứ Tư của tuần thứ hai mỗi tháng. Các buổi này được tổ chức trong kênh thoại #office-hours trên [Discord của ethereum.org](/discord/), nơi bạn cũng có thể tìm thấy thời gian chính xác và các thông tin chi tiết khác.
 
 Giờ hỗ trợ cho phép các biên dịch viên của chúng tôi đặt câu hỏi về quá trình dịch thuật, cung cấp phản hồi về chương trình, chia sẻ ý tưởng của họ hoặc chỉ đơn giản là trò chuyện với đội ngũ nòng cốt của ethereum.org.
 Cuối cùng, chúng tôi muốn sử dụng các cuộc gọi này để truyền đạt những bước phát triển gần đây của Chương trình Dịch thuật, đồng thời chia sẻ các mẹo và hướng dẫn quan trọng với những người đóng góp của chúng tôi.

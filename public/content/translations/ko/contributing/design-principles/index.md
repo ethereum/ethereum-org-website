@@ -89,4 +89,4 @@ ethereum.org의 맥락에서 이러한 디자인 원칙은 우리가 웹사이�
 
 이러한 원칙은 ethereum.org 웹사이트에 초점을 맞추고 있지만, 그중 상당수가 이더리움 생태계 전반의 가치를 대변하기를 바랍니다. 여러분의 프로젝트에 이 원칙 중 일부를 통합하고 싶어질지도 모릅니다!
 
-[디스코드 서버](https://discord.gg/ethereum-org)에 의견을 남겨주시거나 [이슈를 생성](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)하여 여러분의 생각을 알려주세요.
+[디스코드 서버](/discord/)에 의견을 남겨주시거나 [이슈를 생성](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)하여 여러분의 생각을 알려주세요.

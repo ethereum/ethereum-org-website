@@ -12,7 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
-import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+import { DISCORD_URL } from "@/lib/constants"
 
 import { ArrowNext } from "./arrow"
 
@@ -94,7 +94,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isDiscordInvite) {
-    href = new URL(DISCORD_PATH, SITE_URL).href
+    href = DISCORD_URL
   }
 
   const commonProps = {

@@ -15,7 +15,7 @@ Cuối cùng, đây là một cách tuyệt vời để xây dựng một hồ s
 
 Đôi khi chúng tôi cần trợ giúp để thử nghiệm các ý tưởng sơ khai của mình. Đây là một cách tuyệt vời để đóng góp mà không cần bất kỳ kiến thức kỹ thuật nào.
 
-1. Nhóm thiết kế sẽ chia sẻ một bản thiết kế mô phỏng (mockup) trên [Discord](https://discord.com/invite/ethereum-org) và trên [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Nhóm thiết kế sẽ chia sẻ một bản thiết kế mô phỏng (mockup) trên [Discord](/discord/) và trên [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Bạn sẽ được hướng dẫn qua các thiết kế để cung cấp phản hồi thông qua chức năng bình luận.
 3. Kết quả sẽ được chia sẻ trong vấn đề (issue) trên GitHub và sau đó được nhóm đóng lại.
 

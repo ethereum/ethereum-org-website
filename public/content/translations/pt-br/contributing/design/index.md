@@ -15,7 +15,7 @@ Em última análise, esta é uma ótima maneira de construir um portfólio diver
 
 Às vezes, precisamos de ajuda para testar nossas ideias iniciais. Esta é uma ótima maneira de contribuir sem nenhum conhecimento técnico.
 
-1. A equipe de design compartilhará um modelo de design no [Discord](https://discord.com/invite/ethereum-org) e no [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. A equipe de design compartilhará um modelo de design no [Discord](/discord/) e no [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Você será guiado pelos designs para fornecer feedback por meio da função de comentários.
 3. O resultado será compartilhado na issue do GitHub e, em seguida, fechado pela equipe.
 

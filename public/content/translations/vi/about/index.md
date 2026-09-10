@@ -100,7 +100,7 @@ Ethereum là một điều lớn lao: nó bao gồm một cộng đồng, một 
 
 **Bạn thấy thế nào?** Chúng tôi luôn trân trọng các phản hồi về lộ trình của mình - nếu có điều gì bạn nghĩ chúng tôi nên thực hiện, vui lòng cho chúng tôi biết! Chúng tôi hoan nghênh các ý tưởng và PR từ bất kỳ ai trong cộng đồng.
 
-**Bạn muốn tham gia?** [Tìm hiểu thêm về việc đóng góp](/contributing/), [liên hệ với chúng tôi trên Twitter](https://x.com/ethdotorg), hoặc tham gia các cuộc thảo luận cộng đồng trong [máy chủ Discord của chúng tôi](https://discord.gg/ethereum-org).
+**Bạn muốn tham gia?** [Tìm hiểu thêm về việc đóng góp](/contributing/), [liên hệ với chúng tôi trên Twitter](https://x.com/ethdotorg), hoặc tham gia các cuộc thảo luận cộng đồng trong [máy chủ Discord của chúng tôi](/discord/).
 
 ## Các nguyên tắc thiết kế {#design-principles}
 
@@ -110,7 +110,7 @@ Chúng tôi sử dụng một bộ [nguyên tắc thiết kế](/contributing/de
 
 Chúng tôi đã xây dựng và phát hành một [hệ thống thiết kế](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) để triển khai các tính năng nhanh hơn và cho phép các thành viên cộng đồng tham gia vào quá trình thiết kế mở của ethereum.org.
 
-Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [vấn đề trên GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) và tham gia cuộc trò chuyện trong [kênh Discord #design của chúng tôi](https://discord.gg/ethereum-org).
+Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [vấn đề trên GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) và tham gia cuộc trò chuyện trong [kênh Discord #design của chúng tôi](/discord/).
 
 ## Hướng dẫn văn phong {#style-guide}
 
@@ -128,6 +128,6 @@ Trang web ethereum.org là mã nguồn mở và được xây dựng theo [Giấ
 
 Mặc dù trang web này là mã nguồn mở và bất kỳ ai cũng có thể làm việc trên đó, chúng tôi vẫn có một đội ngũ chuyên trách cho ethereum.org và các dự án web khác của Tổ chức Ethereum.
 
-Chúng tôi sẽ đăng bất kỳ cơ hội việc làm nào tại đây. Nếu bạn không thấy vai trò nào phù hợp với mình ở đây, hãy truy cập [máy chủ Discord của chúng tôi](https://discord.gg/ethereum-org) và cho chúng tôi biết bạn muốn làm việc với chúng tôi như thế nào!
+Chúng tôi sẽ đăng bất kỳ cơ hội việc làm nào tại đây. Nếu bạn không thấy vai trò nào phù hợp với mình ở đây, hãy truy cập [máy chủ Discord của chúng tôi](/discord/) và cho chúng tôi biết bạn muốn làm việc với chúng tôi như thế nào!
 
 Bạn đang tìm kiếm cơ hội ngoài đội ngũ ethereum.org? [Hãy xem các công việc khác liên quan đến Ethereum](/community/get-involved/#ethereum-jobs/).

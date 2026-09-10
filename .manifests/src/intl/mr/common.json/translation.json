@@ -28,7 +28,7 @@
       "type": "html-tag",
       "values": {
         "tagName": "a",
-        "href": "https://discord.gg/ethereum-org",
+        "href": "/discord/",
         "target": "_blank"
       }
     }

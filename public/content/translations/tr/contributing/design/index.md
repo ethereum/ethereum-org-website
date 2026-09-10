@@ -15,7 +15,7 @@ Sonuç olarak bu, tasarım becerilerinizi sergileyen çeşitli ve etkileyici bir
 
 Bazen ham fikirlerimizi test etmek için yardıma ihtiyaç duyarız. Bu, herhangi bir teknik bilgi olmadan katkıda bulunmanın harika bir yoludur.
 
-1. Tasarım ekibi, [Discord](https://discord.com/invite/ethereum-org) ve [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) üzerinde bir taslak tasarım paylaşacaktır.
+1. Tasarım ekibi, [Discord](/discord/) ve [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) üzerinde bir taslak tasarım paylaşacaktır.
 2. Yorumlar işlevi aracılığıyla geri bildirim sağlamanız için tasarımlar üzerinden yönlendirileceksiniz.
 3. Sonuç, GitHub sorununda paylaşılacak ve ardından ekip tarafından kapatılacaktır.
 

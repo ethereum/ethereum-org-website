@@ -89,4 +89,4 @@ description: ⁦ethereum.org⁩ کے ڈیزائن اور مواد کے فیصل�
 
 اگرچہ یہ اصول <span dir="ltr">ethereum.org</span> ویب سائٹ پر مرکوز ہیں، ہمیں امید ہے کہ ان میں سے بہت سے مجموعی طور پر ایتھیریم ایکو سسٹم کی اقدار کے نمائندہ ہیں۔ ہو سکتا ہے کہ آپ ان میں سے کچھ کو اپنے پروجیکٹ میں بھی شامل کرنا چاہیں!
 
-[ڈسکارڈ سرور](https://discord.gg/ethereum-org) پر یا [ایک مسئلہ (issue) بنا کر](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ہمیں اپنے خیالات سے آگاہ کریں۔
+[ڈسکارڈ سرور](/discord/) پر یا [ایک مسئلہ (issue) بنا کر](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ہمیں اپنے خیالات سے آگاہ کریں۔

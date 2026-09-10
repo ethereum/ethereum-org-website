@@ -89,4 +89,4 @@ description: Принципы, лежащие в основе дизайна и 
 
 Хотя эти принципы ориентированы на веб-сайт ethereum.org, мы надеемся, что многие из них отражают ценности экосистемы Эфириума в целом. Возможно, вы даже захотите внедрить некоторые из них в свой собственный проект!
 
-Поделитесь своими мыслями на сервере в [Дискорде](https://discord.gg/ethereum-org) или [создав задачу](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Поделитесь своими мыслями на сервере в [Дискорде](/discord/) или [создав задачу](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
