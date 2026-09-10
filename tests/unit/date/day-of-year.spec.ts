@@ -29,6 +29,10 @@ test("getDayOfYear is unaffected by daylight saving shifts", () => {
     expect(getDayOfYear(new Date(2024, 11, 31, 12, 0))).toBe(366)
     expect(getDayOfYear(new Date(2026, 0, 1, 12, 0))).toBe(1)
   } finally {
-    process.env.TZ = originalTZ
+    if (originalTZ === undefined) {
+      delete process.env.TZ
+    } else {
+      process.env.TZ = originalTZ
+    }
   }
 })
