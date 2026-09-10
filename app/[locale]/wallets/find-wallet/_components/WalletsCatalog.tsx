@@ -270,8 +270,8 @@ export default function WalletsCatalog({
   }, [revealAll])
 
   // Read from window.location, not useSearchParams: the latter would force this
-  // static page into client-side rendering. replaceState, never push: a pushed
-  // entry would make Back a real route change.
+  // static page into client-side rendering. Filters replaceState, never push: an
+  // entry per filter change would bury the previous page under history.
   useEffect(() => {
     if (!urlRead.current) {
       urlRead.current = true
@@ -338,6 +338,36 @@ export default function WalletsCatalog({
     (slug: string) => startTransition(() => setOpenSlug(slug)),
     []
   )
+
+  const closeWalletModal = useCallback(() => {
+    setOpenSlug(null)
+    // Drop the entry we pushed, or Back would have to be pressed twice.
+    if (window.history.state?.walletModal) window.history.back()
+  }, [])
+
+  // One extra entry at the same URL, so Back and the Android back gesture close
+  // the modal instead of leaving the catalog. Two deliberate details: the entry
+  // is added a frame after the dialog paints, because a history entry added
+  // inside the click makes the browser wait for the dialog's render before the
+  // interaction's paint (+500ms INP); and it goes through the native method,
+  // since the patched one notifies Next's router for a URL that has not changed.
+  useEffect(() => {
+    if (!openSlug) return
+    const frame = requestAnimationFrame(() => {
+      History.prototype.pushState.call(
+        window.history,
+        { ...window.history.state, walletModal: openSlug },
+        "",
+        window.location.href
+      )
+    })
+    const close = () => setOpenSlug(null)
+    window.addEventListener("popstate", close)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener("popstate", close)
+    }
+  }, [openSlug])
 
   const openWallet = openSlug
     ? wallets.find((wallet) => wallet.slug === openSlug)
@@ -406,7 +436,7 @@ export default function WalletsCatalog({
           wallet={openWallet}
           labels={labels.modal}
           deviceLabels={labels.devices}
-          onClose={() => setOpenSlug(null)}
+          onClose={closeWalletModal}
         />
       )}
     </>
