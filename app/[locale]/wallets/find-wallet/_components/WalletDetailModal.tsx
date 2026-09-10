@@ -112,6 +112,16 @@ const WalletDetailModal = ({
       }}
     >
       <DialogContent
+        // Radix aims focus at whatever was focused when the dialog mounted,
+        // which lands on the body here; put the visitor back on the card.
+        onCloseAutoFocus={(event) => {
+          const card = document.querySelector<HTMLElement>(
+            `a[href$="/wallets/find-wallet/${wallet.slug}/"]`
+          )
+          if (!card) return
+          event.preventDefault()
+          card.focus()
+        }}
         {...(description ? {} : { "aria-describedby": undefined })}
       >
         {description && (
