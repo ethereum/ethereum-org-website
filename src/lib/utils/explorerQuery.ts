@@ -1,73 +1,65 @@
-import explorers from "@/data/explorers"
+import type { AddressFormat, SearchExplorer } from "@/data/networks/networks"
 
-import {
-  STARKNET_EXPLORER,
-  STARKNET_MIN_HEX_DIGITS,
-  ZIRCUIT_EXPLORER,
-} from "@/lib/constants"
+import { STARKNET_MIN_HEX_DIGITS } from "@/lib/constants"
 
 /**
- * A search for a raw address or hash is never answerable from site content, so offer
- * block explorers instead.
+ * Block explorer results for a query that site content cannot answer.
  *
- * Without a chain prefix there is no way to know which network the value belongs to, and
- * we deliberately do not probe explorers to find out -- that would hand the user's
- * address to every one of them on each keystroke. All featured networks are offered
- * instead and the user picks, which they can do because they know where they got it.
- *
- * Prefixes follow EIP-3770 (`base:0x...`), whose short names come from the same
- * chainid.network registry that generates `@/data/explorers`. EIP-3770 short names are
- * case-sensitive; this is a search box, so `BASE:` is accepted too.
+ * The networks are passed in rather than imported: they live in `networks.ts` alongside
+ * everything `/layer-2/networks` renders, which imports logo images and so cannot be
+ * loaded outside the bundler. Keeping this module pure is also what lets it be tested
+ * without the network list at all.
  */
-const EXPLORER_QUERY_RE = /^(?:([a-zA-Z0-9-]{2,32}):)?0x([0-9a-fA-F]{40,64})$/
+export interface ExplorerNetwork {
+  /** Nickname shown on the row, matching what /layer-2/networks calls it */
+  name: string
+  /** Image src for the row icon */
+  icon: string
+  addressFormat: AddressFormat
+  explorer: SearchExplorer
+}
 
 /**
- * A naming-service name, which resolves to an address on an explorer.
- *
- * Deliberately restricted to `.eth` and `.id` rather than matching domains generally.
- * ENS also resolves DNS names its owners have imported, so "an explorer resolves it" is
- * not a usable test -- a general domain shape would fire on `ethereum.org` or any query
- * containing a dot. The rest of the namespace (Unstoppable's several dozen TLDs, SpaceID)
- * is vendor-owned and drifts, so it would have to be generated rather than typed.
+ * Prefixes follow EIP-3770 (`base:0x...`). Case-insensitive: the spec is case-sensitive
+ * but this is a search box, and `BASE:` is what a paste looks like.
+ */
+const HEX_QUERY_RE = /^(?:([a-zA-Z0-9-]{2,32}):)?0x([0-9a-fA-F]{40,64})$/
+
+/**
+ * Restricted to `.eth` and `.id` rather than domains generally: ENS also resolves DNS
+ * names its owners have imported, so "an explorer resolves it" is not a usable test, and
+ * a general domain shape would fire on `ethereum.org`.
  *
  * ENS's registrar rejects a registered name shorter than three characters, so `ab.eth`
- * cannot exist. The floor applies to the registered name only: its owner may create a
- * subdomain of any length, which is why `a.vitalik.eth` is fine. `.id` registrars do not
- * share that rule -- `cb.id` is real -- so it is left unrestricted.
+ * cannot exist -- but its owner may create a subdomain of any length, hence
+ * `a.vitalik.eth`. `.id` registrars do not share that rule; `cb.id` is real.
  */
 const LABEL = "[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
 const ENS_LABEL = "[a-z0-9][a-z0-9-]+[a-z0-9]"
-const SUBDOMAINS = `(?:${LABEL}\\.)*`
-
 const NAME_QUERY_RE = new RegExp(
-  `^${SUBDOMAINS}(?:${ENS_LABEL}\\.eth|${LABEL}\\.id)$`,
+  `^(?:${LABEL}\\.)*(?:${ENS_LABEL}\\.eth|${LABEL}\\.id)$`,
   "i"
 )
 
-/** Hex digit counts that mean something on an EVM chain. */
 const EVM_ADDRESS_DIGITS = 40
 const EVM_HASH_DIGITS = 64
 
 /**
- * `address` is a 20-byte value, which only an account can be. `hash` is 32 bytes, which
- * may be a transaction or a block -- the copy stays open-ended rather than guessing.
- * `name` is a naming-service name that resolves to one of the above.
+ * `address` is 20 bytes, which only an account can be. `hash` is 32 bytes, which may be a
+ * transaction or a block, so the copy stays open-ended. `name` resolves to one of those.
  */
 export type ExplorerKind = "address" | "hash" | "name"
 
-/** A row's label when it names a lookup rather than a network. */
+/** A row's label, when it names a lookup rather than a network. */
 export type ExplorerRole = "contract" | "transaction"
 
 export interface ExplorerTarget {
-  /** Row label: a network name, unless `role` names a lookup instead */
   name?: string
   role?: ExplorerRole
-  /** Filename within `public/images/layer-2/` */
   icon: string
   url: string
 }
 
-/** One section of results: an explorer brand and what it can look the value up as. */
 export interface ExplorerGroup {
   brand: string
   kind: ExplorerKind
@@ -75,138 +67,110 @@ export interface ExplorerGroup {
 }
 
 export interface ExplorerQuery {
-  /** The 0x value, without any chain prefix */
   value: string
   groups: ExplorerGroup[]
 }
 
-/**
- * `/search-results` rather than `/address` or `/tx`: the value may not exist on the
- * chosen chain, and a search page says so gracefully where a direct route renders a
- * dead end. It also resolves blocks, tokens and ENS names without us classifying them.
- */
-const blockscoutUrl = (base: string, value: string) =>
-  `${base}/search-results?q=${value}`
+const hasSearchRoute = (
+  e: SearchExplorer
+): e is SearchExplorer & { search: string } => "search" in e
 
-/**
- * Names get mainnet only, one row.
- *
- * ENS's registry lives on mainnet, so that is where resolution is authoritative. It also
- * keeps the section to a single row, which matters more here than for an address: a name
- * often has a legitimate page answer too -- searching `vitalik.eth` finds the
- * authentication docs that use it as their example -- and nine rows would bury it.
- */
-const parseNameQuery = (query: string): ExplorerQuery | null => {
-  if (!NAME_QUERY_RE.test(query)) return null
-  const mainnet = explorers.eth
-  return {
-    value: query,
-    groups: [
-      {
-        brand: "Blockscout",
-        kind: "name",
-        targets: [{ ...mainnet, url: blockscoutUrl(mainnet.url, query) }],
-      },
-    ],
+/** Which value shapes a network can look up. */
+const accepts = (network: ExplorerNetwork, digits: number) =>
+  network.addressFormat === "starknet"
+    ? digits >= STARKNET_MIN_HEX_DIGITS
+    : digits === EVM_ADDRESS_DIGITS || digits === EVM_HASH_DIGITS
+
+const targetsFor = (
+  network: ExplorerNetwork,
+  value: string,
+  digits: number
+): ExplorerTarget[] => {
+  const { explorer, icon, name } = network
+  if (hasSearchRoute(explorer)) {
+    return [{ name, icon, url: `${explorer.search}${value}` }]
   }
+  // Starknet cannot tell a contract from a transaction by shape, so it offers both.
+  // An EVM value can: 20 bytes is an account, 32 bytes is a hash.
+  if (network.addressFormat === "starknet") {
+    return [
+      { role: "contract", icon, url: `${explorer.address}${value}` },
+      { role: "transaction", icon, url: `${explorer.tx}${value}` },
+    ]
+  }
+  const base = digits === EVM_ADDRESS_DIGITS ? explorer.address : explorer.tx
+  return [{ name, icon, url: `${base}${value}` }]
 }
 
-export const parseExplorerQuery = (query: string): ExplorerQuery | null => {
+/** One section per explorer, in the order the networks are declared. */
+const group = (
+  networks: ExplorerNetwork[],
+  value: string,
+  digits: number,
+  kind: ExplorerKind
+): ExplorerGroup[] => {
+  const groups: ExplorerGroup[] = []
+  for (const network of networks) {
+    const existing = groups.find((g) => g.brand === network.explorer.brand)
+    const targets = targetsFor(network, value, digits)
+    if (existing) existing.targets.push(...targets)
+    else
+      groups.push({
+        brand: network.explorer.brand,
+        // Starknet's rows name the lookup, so the heading stays open-ended.
+        kind: network.addressFormat === "starknet" ? "hash" : kind,
+        targets,
+      })
+  }
+  return groups
+}
+
+export const parseExplorerQuery = (
+  query: string,
+  networks: ExplorerNetwork[]
+): ExplorerQuery | null => {
   const trimmed = query.trim()
-  const match = EXPLORER_QUERY_RE.exec(trimmed)
-  if (!match) return parseNameQuery(trimmed)
 
-  const [, prefix, hex] = match
-  const value = `0x${hex}`
-  const isEvmAddress = hex.length === EVM_ADDRESS_DIGITS
-  const isEvmHash = hex.length === EVM_HASH_DIGITS
-  const isEvm = isEvmAddress || isEvmHash
-  // Unpadded Starknet values fall short of 64; see STARKNET_MIN_HEX_DIGITS for the floor.
-  const isStarknet = hex.length >= STARKNET_MIN_HEX_DIGITS
-  const kind: ExplorerKind = isEvmAddress ? "address" : "hash"
-
-  if (prefix) {
-    // A chain prefix is an EIP-3770 EVM short name, so it only applies to EVM shapes.
-    if (!isEvm) return null
-    const explorer = explorers[prefix.toLowerCase() as keyof typeof explorers]
-    // An unrecognised prefix falls through to ordinary search rather than ignoring it
-    // and offering every chain -- the user named one, and guessing is worse than nothing.
-    if (!explorer) return null
+  if (NAME_QUERY_RE.test(trimmed)) {
+    // Mainnet only: ENS's registry lives there, and one row leaves room for the page
+    // answer a name often has -- `vitalik.eth` finds the docs that use it as an example.
+    const mainnet = networks.find((n) => n.explorer.prefix === "eth")
+    if (!mainnet) return null
     return {
-      value,
+      value: trimmed,
       groups: [
         {
-          brand: "Blockscout",
-          kind,
-          targets: [{ ...explorer, url: blockscoutUrl(explorer.url, value) }],
+          brand: mainnet.explorer.brand,
+          kind: "name",
+          targets: targetsFor(mainnet, trimmed, 0),
         },
       ],
     }
   }
 
-  const groups: ExplorerGroup[] = []
+  const match = HEX_QUERY_RE.exec(trimmed)
+  if (!match) return null
+  const [, prefix, hex] = match
+  const value = `0x${hex}`
+  const kind: ExplorerKind =
+    hex.length === EVM_ADDRESS_DIGITS ? "address" : "hash"
 
-  if (isEvm) {
-    groups.push({
-      brand: "Blockscout",
-      kind,
-      targets: Object.values(explorers).map((explorer) => ({
-        ...explorer,
-        url: blockscoutUrl(explorer.url, value),
-      })),
-    })
+  if (prefix) {
+    // A prefix names one chain, so guessing a different one is worse than nothing.
+    const named = networks.find(
+      (n) => n.explorer.prefix?.toLowerCase() === prefix.toLowerCase()
+    )
+    if (!named || !accepts(named, hex.length)) return null
+    return { value, groups: group([named], value, hex.length, kind) }
   }
 
-  // After the EVM readings: a 64-hex value is far more often an Ethereum hash than a
-  // Starknet felt, since Starknet is one L2 among the ten the site lists. Shorter values
-  // are unambiguous -- they are not a valid EVM address or hash at all.
-  //
-  // Two rows because Starkscan has no unified search and a felt carries no hint of which
-  // it is, so guessing one would send half of these to a "not found" page.
-  if (isStarknet) {
-    groups.push({
-      brand: STARKNET_EXPLORER.brand,
-      kind: "hash",
-      targets: [
-        {
-          role: "contract",
-          icon: STARKNET_EXPLORER.icon,
-          url: `${STARKNET_EXPLORER.contractUrl}/${value}`,
-        },
-        {
-          role: "transaction",
-          icon: STARKNET_EXPLORER.icon,
-          url: `${STARKNET_EXPLORER.txUrl}/${value}`,
-        },
-      ],
-    })
-  }
-
-  // Last: Zircuit is a single network on its own explorer, so it reads as a footnote to
-  // the Blockscout list rather than a peer of it.
-  if (isEvm) {
-    groups.push({
-      brand: ZIRCUIT_EXPLORER.brand,
-      kind,
-      targets: [
-        {
-          name: ZIRCUIT_EXPLORER.name,
-          icon: ZIRCUIT_EXPLORER.icon,
-          url: `${isEvmAddress ? ZIRCUIT_EXPLORER.addressUrl : ZIRCUIT_EXPLORER.txUrl}/${value}`,
-        },
-      ],
-    })
-  }
-
-  return groups.length ? { value, groups } : null
+  const eligible = networks.filter((n) => accepts(n, hex.length))
+  if (!eligible.length) return null
+  return { value, groups: group(eligible, value, hex.length, kind) }
 }
 
-/**
- * Middle-truncated for display: keeps both ends, which is how a hex value is recognised.
- * Only used in the Recent list, where the row has to identify itself without the search
- * input to fall back on.
- */
+/** Middle-truncated: keeps both ends, which is how a hex value is recognised. */
 export const truncateHex = (value: string, lead = 10, tail = 8) =>
   value.length <= lead + tail + 1
     ? value
-    : `${value.slice(0, lead)}\u2026${value.slice(-tail)}`
+    : `${value.slice(0, lead)}…${value.slice(-tail)}`

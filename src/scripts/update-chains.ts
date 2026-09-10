@@ -50,12 +50,15 @@ const parseChains = async (
       return isEthereum && isActive && !isExcluded
     })
     // Map into simplified Chain object
-    .map(({ chain, name, infoURL, chainId, nativeCurrency }) => ({
+    .map(({ chain, name, infoURL, chainId, nativeCurrency, shortName }) => ({
       name,
       infoURL,
       chainId,
       nativeCurrency,
       chain,
+      // EIP-3770 prefix, e.g. `base:0x...`. Carried so the block explorer prefixes in
+      // networks.ts can be checked against their source rather than trusted.
+      shortName,
     }))
 
 /**

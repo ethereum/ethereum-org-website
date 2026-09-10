@@ -9,6 +9,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "eth",
   },
   {
     name: "Expanse Network",
@@ -20,6 +21,7 @@ const chains = [
       decimals: 18,
     },
     chain: "EXP",
+    shortName: "exp",
   },
   {
     name: "ThaiChain",
@@ -31,17 +33,7 @@ const chains = [
       decimals: 18,
     },
     chain: "TCH",
-  },
-  {
-    name: "Ubiq",
-    infoURL: "https://ubiqsmart.com",
-    chainId: 8,
-    nativeCurrency: {
-      name: "Ubiq Ether",
-      symbol: "UBQ",
-      decimals: 18,
-    },
-    chain: "UBQ",
+    shortName: "tch",
   },
   {
     name: "OP Mainnet",
@@ -53,6 +45,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "oeth",
   },
   {
     name: "Metadium Mainnet",
@@ -64,6 +57,7 @@ const chains = [
       decimals: 18,
     },
     chain: "META",
+    shortName: "meta",
   },
   {
     name: "ThaiChain 2.0 ThaiFi",
@@ -75,6 +69,7 @@ const chains = [
       decimals: 18,
     },
     chain: "TCH",
+    shortName: "tfi",
   },
   {
     name: "Elastos Smart Chain",
@@ -86,6 +81,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "esc",
   },
   {
     name: "ELA-DID-Sidechain Mainnet",
@@ -97,6 +93,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "eladid",
   },
   {
     name: "GoodData Mainnet",
@@ -108,6 +105,7 @@ const chains = [
       decimals: 18,
     },
     chain: "GooD",
+    shortName: "GooD",
   },
   {
     name: "TBWG Chain",
@@ -119,6 +117,7 @@ const chains = [
       decimals: 18,
     },
     chain: "TBWG",
+    shortName: "tbwg",
   },
   {
     name: "GoChain",
@@ -130,6 +129,7 @@ const chains = [
       decimals: 18,
     },
     chain: "GO",
+    shortName: "go",
   },
   {
     name: "Ethereum Classic",
@@ -141,6 +141,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETC",
+    shortName: "etc",
   },
   {
     name: "Ellaism",
@@ -152,6 +153,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ELLA",
+    shortName: "ellaism",
   },
   {
     name: "SoterOne Mainnet",
@@ -163,6 +165,7 @@ const chains = [
       decimals: 18,
     },
     chain: "SOTER",
+    shortName: "SO1",
   },
   {
     name: "Optimism Kovan",
@@ -174,6 +177,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "okov",
   },
   {
     name: "Mix",
@@ -185,6 +189,7 @@ const chains = [
       decimals: 18,
     },
     chain: "MIX",
+    shortName: "mix",
   },
   {
     name: "POA Network Sokol",
@@ -196,6 +201,7 @@ const chains = [
       decimals: 18,
     },
     chain: "POA",
+    shortName: "spoa",
   },
   {
     name: "PrimusChain mainnet",
@@ -207,6 +213,7 @@ const chains = [
       decimals: 18,
     },
     chain: "PC",
+    shortName: "primuschain",
   },
   {
     name: "POA Network Core",
@@ -218,6 +225,7 @@ const chains = [
       decimals: 18,
     },
     chain: "POA",
+    shortName: "poa",
   },
   {
     name: "EtherInc",
@@ -229,6 +237,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETI",
+    shortName: "eti",
   },
   {
     name: "EtherLite Chain",
@@ -240,6 +249,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETL",
+    shortName: "ETL",
   },
   {
     name: "Factory 127 Mainnet",
@@ -251,6 +261,7 @@ const chains = [
       decimals: 18,
     },
     chain: "FETH",
+    shortName: "feth",
   },
   {
     name: "Unichain",
@@ -262,6 +273,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "unichain",
   },
   {
     name: "Defi Oracle Meta Mainnet",
@@ -273,6 +285,7 @@ const chains = [
       decimals: 18,
     },
     chain: "dfiometa",
+    shortName: "dfio-meta-main",
   },
   {
     name: "Manta Pacific Mainnet",
@@ -284,6 +297,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Manta Pacific",
+    shortName: "manta",
   },
   {
     name: "Ethernity",
@@ -295,6 +309,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Ethernity",
+    shortName: "ethernity-mainnet",
   },
   {
     name: "Mint Mainnet",
@@ -306,6 +321,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "mint",
   },
   {
     name: "Mind Network Mainnet",
@@ -317,6 +333,7 @@ const chains = [
       decimals: 18,
     },
     chain: "FHE",
+    shortName: "fhe",
   },
   {
     name: "Blast Mainnet",
@@ -328,6 +345,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "blast",
   },
   {
     name: "Swan Chain Mainnet",
@@ -339,6 +357,7 @@ const chains = [
       decimals: 18,
     },
     chain: "SWAN",
+    shortName: "Swan",
   },
   {
     name: "Kroma",
@@ -350,6 +369,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "kroma",
   },
   {
     name: "High Performance Blockchain",
@@ -361,6 +381,7 @@ const chains = [
       decimals: 18,
     },
     chain: "HPB",
+    shortName: "hpb",
   },
   {
     name: "XR One",
@@ -372,6 +393,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "xr1",
   },
   {
     name: "Boba Network",
@@ -383,6 +405,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "Boba",
   },
   {
     name: "Orderly Mainnet",
@@ -394,6 +417,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "orderly",
   },
   {
     name: "ZKcandy Mainnet",
@@ -405,6 +429,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zkcandy",
   },
   {
     name: "zkSync Mainnet",
@@ -416,6 +441,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zksync",
   },
   {
     name: "GRVT Exchange",
@@ -427,6 +453,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "grvt",
   },
   {
     name: "Shape",
@@ -438,6 +465,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "shape",
   },
   {
     name: "zkXPLA Mainnet",
@@ -449,6 +477,7 @@ const chains = [
       decimals: 18,
     },
     chain: "zkXPLA",
+    shortName: "zkxpla",
   },
   {
     name: "Lisinski",
@@ -460,6 +489,7 @@ const chains = [
       decimals: 18,
     },
     chain: "CRO",
+    shortName: "lisinski",
   },
   {
     name: "Syndr L3",
@@ -471,6 +501,7 @@ const chains = [
       decimals: 18,
     },
     chain: "SYNDR",
+    shortName: "syndr-l3",
   },
   {
     name: "PGN (Public Goods Network)",
@@ -482,6 +513,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "PGN",
   },
   {
     name: "AppChain",
@@ -493,6 +525,7 @@ const chains = [
       decimals: 18,
     },
     chain: "AppChain",
+    shortName: "appchain",
   },
   {
     name: "Form Network",
@@ -504,6 +537,7 @@ const chains = [
       decimals: 18,
     },
     chain: "form",
+    shortName: "formnetwork",
   },
   {
     name: "World Chain",
@@ -515,6 +549,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "wc",
   },
   {
     name: "River",
@@ -526,6 +561,7 @@ const chains = [
       decimals: 18,
     },
     chain: "river",
+    shortName: "river",
   },
   {
     name: "BattleChain Mainnet",
@@ -537,6 +573,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "battlechain",
   },
   {
     name: "Redstone",
@@ -548,6 +585,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "redstone",
   },
   {
     name: "Tranched Mainnet",
@@ -559,6 +597,7 @@ const chains = [
       decimals: 18,
     },
     chain: "tranched-mainnet",
+    shortName: "tranched-mainnet",
   },
   {
     name: "Rivalz",
@@ -570,6 +609,7 @@ const chains = [
       decimals: 18,
     },
     chain: "rivalz",
+    shortName: "rivalz",
   },
   {
     name: "Patex",
@@ -581,6 +621,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "peth",
   },
   {
     name: "Firechain zkEVM",
@@ -592,6 +633,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Firechain",
+    shortName: "firechan-zkEVM",
   },
   {
     name: "Lyra Chain",
@@ -603,6 +645,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Lyra",
+    shortName: "lyra",
   },
   {
     name: "Nepal Blockchain Network",
@@ -614,6 +657,7 @@ const chains = [
       decimals: 18,
     },
     chain: "YETI",
+    shortName: "yeti",
   },
   {
     name: "TOP Mainnet EVM",
@@ -625,6 +669,7 @@ const chains = [
       decimals: 18,
     },
     chain: "TOP",
+    shortName: "top_evm",
   },
   {
     name: "Bifrost Polkadot Mainnet",
@@ -636,6 +681,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Bifrost",
+    shortName: "bnc",
   },
   {
     name: "Metis Andromeda Mainnet",
@@ -647,6 +693,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "metis-andromeda",
   },
   {
     name: "Polygon zkEVM",
@@ -658,6 +705,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Polygon",
+    shortName: "zkevm",
   },
   {
     name: "Lisk",
@@ -669,6 +717,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "lisk",
   },
   {
     name: "Dogether Mainnet",
@@ -680,6 +729,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Dogether",
+    shortName: "Dogether",
   },
   {
     name: "Perennial",
@@ -691,6 +741,7 @@ const chains = [
       decimals: 18,
     },
     chain: "perennial",
+    shortName: "perennial",
   },
   {
     name: "ZKBase Mainnet",
@@ -702,6 +753,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zkbase",
   },
   {
     name: "Betherance",
@@ -713,6 +765,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Beth",
+    shortName: "Beth",
   },
   {
     name: "Ethereum Inscription Mainnet",
@@ -724,6 +777,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETINS",
+    shortName: "etins",
   },
   {
     name: "Atheios",
@@ -735,6 +789,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ATH",
+    shortName: "ath",
   },
   {
     name: "Pivotal Mainnet",
@@ -746,6 +801,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Pivotal",
+    shortName: "pivotal-mainnet",
   },
   {
     name: "Anytype EVM Chain",
@@ -757,6 +813,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "AnytypeChain",
   },
   {
     name: "Reya Network",
@@ -768,6 +825,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Reya",
+    shortName: "reya",
   },
   {
     name: "Metal L2",
@@ -779,6 +837,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Metal L2",
+    shortName: "metall2",
   },
   {
     name: "Teslafunds",
@@ -790,6 +849,7 @@ const chains = [
       decimals: 18,
     },
     chain: "TSF",
+    shortName: "tsf",
   },
   {
     name: "Soneium",
@@ -801,6 +861,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "soneium",
   },
   {
     name: "Lightlink Phoenix Mainnet",
@@ -812,6 +873,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Lightlink Phoenix Mainnet",
+    shortName: "lightlink_phoenix",
   },
   {
     name: "Scalind",
@@ -823,6 +885,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "scal",
   },
   {
     name: "Swellchain",
@@ -834,6 +897,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "swellchain",
   },
   {
     name: "EtherGem",
@@ -845,6 +909,7 @@ const chains = [
       decimals: 18,
     },
     chain: "EGEM",
+    shortName: "egem",
   },
   {
     name: "BOSagora Mainnet",
@@ -856,6 +921,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "boa",
   },
   {
     name: "SnaxChain",
@@ -867,6 +933,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "snax",
   },
   {
     name: "Silicon zkEVM",
@@ -878,6 +945,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Silicon",
+    shortName: "silicon-zk",
   },
   {
     name: "K2 Mainnet",
@@ -889,6 +957,7 @@ const chains = [
       decimals: 18,
     },
     chain: "K2",
+    shortName: "K2-mainnet",
   },
   {
     name: "Abstract",
@@ -900,6 +969,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Abstract",
+    shortName: "abstract",
   },
   {
     name: "Nanon",
@@ -911,6 +981,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "Nanon",
   },
   {
     name: "GM Network Mainnet",
@@ -922,6 +993,7 @@ const chains = [
       decimals: 18,
     },
     chain: "GM Network Mainnet",
+    shortName: "gmnetwork-mainnet",
   },
   {
     name: "Morph",
@@ -933,6 +1005,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "morph",
   },
   {
     name: "HYCHAIN",
@@ -944,6 +1017,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "hychain",
   },
   {
     name: "Alpha Chain Mainnet",
@@ -955,6 +1029,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Alpha Chain",
+    shortName: "alpha",
   },
   {
     name: "Edge",
@@ -966,6 +1041,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "edge",
   },
   {
     name: "Astar zkEVM",
@@ -977,6 +1053,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "astrzk",
   },
   {
     name: "Firechain zkEVM Ghostrider",
@@ -988,6 +1065,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Firechain",
+    shortName: "firechain-zkEVM-testnet",
   },
   {
     name: "Nahmii 3 Mainnet",
@@ -999,6 +1077,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Nahmii",
+    shortName: "Nahmii3Mainnet",
   },
   {
     name: "Muster Mainnet",
@@ -1010,6 +1089,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Muster",
+    shortName: "muster",
   },
   {
     name: "RISE",
@@ -1021,6 +1101,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "rise",
   },
   {
     name: "Tempo Mainnet Presto",
@@ -1032,6 +1113,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "tempo-presto",
   },
   {
     name: "MegaETH Mainnet",
@@ -1043,6 +1125,7 @@ const chains = [
       decimals: 18,
     },
     chain: "MegaETH",
+    shortName: "megaeth",
   },
   {
     name: "Robinhood Chain",
@@ -1054,6 +1137,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "robinhoodchain",
   },
   {
     name: "OEV Network",
@@ -1065,6 +1149,7 @@ const chains = [
       decimals: 18,
     },
     chain: "oev-network",
+    shortName: "oev-network",
   },
   {
     name: "Mantle",
@@ -1076,6 +1161,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "mantle",
   },
   {
     name: "Skate Mainnet",
@@ -1087,6 +1173,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "skate",
   },
   {
     name: "Ham",
@@ -1098,6 +1185,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Ham",
+    shortName: "ham",
   },
   {
     name: "Superseed",
@@ -1109,6 +1197,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "sseed",
   },
   {
     name: "Settlus",
@@ -1120,6 +1209,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "setl",
   },
   {
     name: "Nahmii 2 Mainnet",
@@ -1131,6 +1221,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Nahmii",
+    shortName: "Nahmii",
   },
   {
     name: "Ganache",
@@ -1142,6 +1233,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "ggui",
   },
   {
     name: "RACE Mainnet",
@@ -1153,6 +1245,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "raceeth",
   },
   {
     name: "Rarimo",
@@ -1164,6 +1257,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "rarimo",
   },
   {
     name: "Cyber Mainnet",
@@ -1175,6 +1269,19 @@ const chains = [
       decimals: 18,
     },
     chain: "Cyber",
+    shortName: "cyeth",
+  },
+  {
+    name: "RWA Chain",
+    infoURL: "https://rwa-chain.io",
+    chainId: 7741,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "RWA",
+    shortName: "rwachain",
   },
   {
     name: "Kinto Mainnet",
@@ -1186,6 +1293,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Kinto Mainnet",
+    shortName: "kintoMainnet",
   },
   {
     name: "arena-z",
@@ -1197,6 +1305,7 @@ const chains = [
       decimals: 18,
     },
     chain: "arena-z",
+    shortName: "arena-z",
   },
   {
     name: "Polynomial",
@@ -1208,6 +1317,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Polynomial",
+    shortName: "polynomial",
   },
   {
     name: "ACME Mainnet Stealth",
@@ -1219,6 +1329,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ASM",
+    shortName: "acme-mainnet",
   },
   {
     name: "B3",
@@ -1230,6 +1341,7 @@ const chains = [
       decimals: 18,
     },
     chain: "B3",
+    shortName: "b3",
   },
   {
     name: "Base",
@@ -1241,6 +1353,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "base",
   },
   {
     name: "SuperLumio",
@@ -1252,6 +1365,7 @@ const chains = [
       decimals: 18,
     },
     chain: "SuperLumio",
+    shortName: "superlumio",
   },
   {
     name: "Rebus Mainnet",
@@ -1263,6 +1377,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "rebus",
   },
   {
     name: "Zytron Linea Mainnet",
@@ -1274,6 +1389,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zytron-linea",
   },
   {
     name: "SJATSH",
@@ -1285,6 +1401,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "SJ",
   },
   {
     name: "Huddle01 dRTC Chain",
@@ -1296,6 +1413,7 @@ const chains = [
       decimals: 18,
     },
     chain: "huddle01",
+    shortName: "huddle01",
   },
   {
     name: "L3X Protocol",
@@ -1307,6 +1425,7 @@ const chains = [
       decimals: 18,
     },
     chain: "L3X",
+    shortName: "l3x",
   },
   {
     name: "unreal",
@@ -1318,6 +1437,7 @@ const chains = [
       decimals: 18,
     },
     chain: "unreal",
+    shortName: "unreal",
   },
   {
     name: "Camelark Mainnet",
@@ -1329,6 +1449,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETHW",
+    shortName: "Camelark",
   },
   {
     name: "Fluent Developer Preview",
@@ -1340,6 +1461,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Fluent",
+    shortName: "fluent-dev-net",
   },
   {
     name: "Lestnet",
@@ -1351,6 +1473,7 @@ const chains = [
       decimals: 18,
     },
     chain: "LETH",
+    shortName: "leth",
   },
   {
     name: "Nautilus Mainnet",
@@ -1362,6 +1485,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "NAUTCHAIN",
   },
   {
     name: "Webchain",
@@ -1373,6 +1497,7 @@ const chains = [
       decimals: 18,
     },
     chain: "WEB",
+    shortName: "web",
   },
   {
     name: "Everclear Mainnet",
@@ -1384,6 +1509,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Everclear Mainnet",
+    shortName: "Everclear",
   },
   {
     name: "Fluent",
@@ -1395,6 +1521,7 @@ const chains = [
       decimals: 18,
     },
     chain: "FLUENT",
+    shortName: "fluent",
   },
   {
     name: "Horizen Mainnet",
@@ -1406,6 +1533,7 @@ const chains = [
       decimals: 18,
     },
     chain: "horizen",
+    shortName: "horizen",
   },
   {
     name: "Vizing Mainnet",
@@ -1417,6 +1545,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Vizing Mainnet",
+    shortName: "Vizing",
   },
   {
     name: "Ethiq",
@@ -1428,6 +1557,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "ethiq",
   },
   {
     name: "Ethersocial Network",
@@ -1439,6 +1569,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ESN",
+    shortName: "esn",
   },
   {
     name: "Wirex Pay Mainnet",
@@ -1450,6 +1581,7 @@ const chains = [
       decimals: 18,
     },
     chain: "WirexPay",
+    shortName: "wpay",
   },
   {
     name: "Funki",
@@ -1461,6 +1593,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "funki",
   },
   {
     name: "Mode",
@@ -1472,6 +1605,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "mode",
   },
   {
     name: "Donatuz",
@@ -1483,6 +1617,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "donatuz",
   },
   {
     name: "Arbitrum One",
@@ -1494,6 +1629,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "arb1",
   },
   {
     name: "Arbitrum Nova",
@@ -1505,6 +1641,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "arb-nova",
   },
   {
     name: "Athereum",
@@ -1516,6 +1653,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ATH",
+    shortName: "avaeth",
   },
   {
     name: "Hemi",
@@ -1527,6 +1665,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "hemi",
   },
   {
     name: "Billions",
@@ -1538,6 +1677,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Billions",
+    shortName: "Billions",
   },
   {
     name: "Blessnet",
@@ -1549,6 +1689,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "bless",
   },
   {
     name: "Zircuit Mainnet",
@@ -1560,6 +1701,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Zircuit Mainnet",
+    shortName: "zircuit-mainnet",
   },
   {
     name: "Liveplex OracleEVM",
@@ -1571,6 +1713,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Liveplex OracleEVM Network",
+    shortName: "LOE",
   },
   {
     name: "Reddio",
@@ -1582,6 +1725,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "reddio",
   },
   {
     name: "Memento Mainnet",
@@ -1593,6 +1737,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Memento",
+    shortName: "memento-mainnet",
   },
   {
     name: "BirdLayer",
@@ -1604,6 +1749,7 @@ const chains = [
       decimals: 18,
     },
     chain: "BirdLayer",
+    shortName: "birdlayer",
   },
   {
     name: "Titan",
@@ -1615,6 +1761,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "teth",
   },
   {
     name: "Superposition",
@@ -1626,6 +1773,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Superposition",
+    shortName: "spn",
   },
   {
     name: "DUST Mainnet",
@@ -1637,6 +1785,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "dust-mainnet",
   },
   {
     name: "Lambda Chain Mainnet",
@@ -1648,6 +1797,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Lambda Chain",
+    shortName: "lambda",
   },
   {
     name: "Ink",
@@ -1659,6 +1809,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "ink",
   },
   {
     name: "Linea",
@@ -1670,6 +1821,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "linea",
   },
   {
     name: "BOB",
@@ -1681,6 +1833,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "bob",
   },
   {
     name: "Optopia Mainnet",
@@ -1692,6 +1845,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "Optopia",
   },
   {
     name: "Animechain Mainnet",
@@ -1703,6 +1857,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "anime",
   },
   {
     name: "Proof of Play - Apex",
@@ -1714,6 +1869,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "pop-apex",
   },
   {
     name: "Proof of Play - Boss",
@@ -1725,6 +1881,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "pop-boss",
   },
   {
     name: "Mixin Virtual Machine",
@@ -1736,6 +1893,7 @@ const chains = [
       decimals: 18,
     },
     chain: "MVM",
+    shortName: "mvm",
   },
   {
     name: "ResinCoin Mainnet",
@@ -1747,6 +1905,7 @@ const chains = [
       decimals: 18,
     },
     chain: "RESIN",
+    shortName: "resin",
   },
   {
     name: "Cycle Network Mainnet Sailboat",
@@ -1758,6 +1917,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "cycles",
   },
   {
     name: "Firenze test network",
@@ -1769,6 +1929,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "firenze",
   },
   {
     name: "Codex",
@@ -1780,6 +1941,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "codex",
   },
   {
     name: "Blast",
@@ -1791,6 +1953,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "blastmainnet",
   },
   {
     name: "Cycle Network Mainnet Frigate",
@@ -1802,6 +1965,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "cyclef",
   },
   {
     name: "Nautilus Trition Chain",
@@ -1813,6 +1977,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "NAUT",
   },
   {
     name: "Henez Chain Mainnet",
@@ -1824,6 +1989,7 @@ const chains = [
       decimals: 18,
     },
     chain: "henez",
+    shortName: "henez",
   },
   {
     name: "XCHAIN",
@@ -1835,6 +2001,7 @@ const chains = [
       decimals: 18,
     },
     chain: "XCHAIN",
+    shortName: "xc",
   },
   {
     name: "Lumoz Chain Mainnet",
@@ -1846,6 +2013,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "Lumoz-Chain-Mainnet",
   },
   {
     name: "Doma",
@@ -1857,6 +2025,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "doma",
   },
   {
     name: "Nillion Network",
@@ -1868,6 +2037,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "nil",
   },
   {
     name: "Sova",
@@ -1879,6 +2049,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "sova",
   },
   {
     name: "re.al",
@@ -1890,6 +2061,7 @@ const chains = [
       decimals: 18,
     },
     chain: "re.al",
+    shortName: "re-al",
   },
   {
     name: "Ethernova Mainnet",
@@ -1901,6 +2073,7 @@ const chains = [
       decimals: 18,
     },
     chain: "NOVA",
+    shortName: "ethnova",
   },
   {
     name: "Eventum Mainnet",
@@ -1912,6 +2085,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Eventum",
+    shortName: "Eventum",
   },
   {
     name: "Taiko",
@@ -1923,6 +2097,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "tko-mainnet",
   },
   {
     name: "HPP Mainnet",
@@ -1934,6 +2109,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "hpp-mainnet",
   },
   {
     name: "R0AR Chain",
@@ -1945,6 +2121,7 @@ const chains = [
       decimals: 18,
     },
     chain: "R0AR Chain",
+    shortName: "R0AR-Chain",
   },
   {
     name: "Akroma",
@@ -1956,6 +2133,7 @@ const chains = [
       decimals: 18,
     },
     chain: "AKA",
+    shortName: "aka",
   },
   {
     name: "Jellie",
@@ -1967,6 +2145,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "twl-jellie",
   },
   {
     name: "Hydration",
@@ -1978,6 +2157,7 @@ const chains = [
       decimals: 18,
     },
     chain: "HDX",
+    shortName: "hdx",
   },
   {
     name: "CONET Mainnet",
@@ -1989,6 +2169,7 @@ const chains = [
       decimals: 18,
     },
     chain: "CONET Mainnet",
+    shortName: "conet-mainnet",
   },
   {
     name: "Abyss Protocol",
@@ -2000,6 +2181,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Abyss Protocol Testnet",
+    shortName: "abyss",
   },
   {
     name: "ARTIS sigma1",
@@ -2011,6 +2193,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ARTIS",
+    shortName: "ats",
   },
   {
     name: "Athene Parthenon",
@@ -2023,6 +2206,7 @@ const chains = [
       decimals: 18,
     },
     chain: "athene-parthenon",
+    shortName: "athene-parthenon",
   },
   {
     name: "Nal Mainnet",
@@ -2034,6 +2218,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "nal",
   },
   {
     name: "Silent Data Mainnet",
@@ -2045,6 +2230,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Silent Data",
+    shortName: "silent-data-mainnet",
   },
   {
     name: "Infinaeon",
@@ -2056,6 +2242,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Infinaeon",
+    shortName: "Infinaeon",
   },
   {
     name: "EthereumFair",
@@ -2067,6 +2254,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETHF",
+    shortName: "ethf",
   },
   {
     name: "Scroll",
@@ -2078,6 +2266,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "scr",
   },
   {
     name: "DustBoy IoT",
@@ -2089,6 +2278,7 @@ const chains = [
       decimals: 18,
     },
     chain: "DUSTBOY",
+    shortName: "DustBoy_IoT",
   },
   {
     name: "Gensyn Mainnet",
@@ -2100,6 +2290,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Gensyn",
+    shortName: "gensyn-mainnet",
   },
   {
     name: "Zether Mainnet",
@@ -2111,6 +2302,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Zether",
+    shortName: "zth",
   },
   {
     name: "bokuto",
@@ -2122,6 +2314,7 @@ const chains = [
       decimals: 18,
     },
     chain: "bokuto",
+    shortName: "bokuto",
   },
   {
     name: "katana",
@@ -2133,6 +2326,7 @@ const chains = [
       decimals: 18,
     },
     chain: "katana",
+    shortName: "katana",
   },
   {
     name: "zkLink Nova Mainnet",
@@ -2144,6 +2338,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zklink-nova",
   },
   {
     name: "Testethiq",
@@ -2155,6 +2350,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "testethiq",
   },
   {
     name: "Owshen Mainnet",
@@ -2166,6 +2362,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "owshen-mainnet",
   },
   {
     name: "zKatana",
@@ -2177,6 +2374,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "azktn",
   },
   {
     name: "Etho Protocol",
@@ -2188,6 +2386,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETHO",
+    shortName: "etho",
   },
   {
     name: "Xerom",
@@ -2199,6 +2398,7 @@ const chains = [
       decimals: 18,
     },
     chain: "XERO",
+    shortName: "xero",
   },
   {
     name: "Turkey Demo Dev",
@@ -2210,6 +2410,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "TDD",
   },
   {
     name: "Xterio Chain (ETH)",
@@ -2221,6 +2422,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Xterio",
+    shortName: "xterio",
   },
   {
     name: "AltLayer Zero Gas Network",
@@ -2232,6 +2434,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "alt-zerogas",
   },
   {
     name: "Worlds Caldera",
@@ -2243,6 +2446,7 @@ const chains = [
       decimals: 18,
     },
     chain: "WCal",
+    shortName: "worldscal",
   },
   {
     name: "Jovay Mainnet",
@@ -2254,6 +2458,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "jovay",
   },
   {
     name: "Astar zKyoto",
@@ -2265,6 +2470,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "azkyt",
   },
   {
     name: "OpenVessel",
@@ -2276,6 +2482,7 @@ const chains = [
       decimals: 18,
     },
     chain: "VSL",
+    shortName: "vsl",
   },
   {
     name: "Zora",
@@ -2287,6 +2494,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "zora",
   },
   {
     name: "MAKI Chain",
@@ -2298,6 +2506,7 @@ const chains = [
       decimals: 18,
     },
     chain: "MAKI",
+    shortName: "maki",
   },
   {
     name: "Hokum",
@@ -2309,6 +2518,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Hokum",
+    shortName: "hokum",
   },
   {
     name: "AlienX Mainnet",
@@ -2320,6 +2530,7 @@ const chains = [
       decimals: 18,
     },
     chain: "AlienX Mainnet",
+    shortName: "AlienX",
   },
   {
     name: "PepChain Churchill",
@@ -2331,6 +2542,7 @@ const chains = [
       decimals: 18,
     },
     chain: "PEP",
+    shortName: "tpep",
   },
   {
     name: "IOLite",
@@ -2342,6 +2554,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ILT",
+    shortName: "ilt",
   },
   {
     name: "Crynux on Base",
@@ -2353,6 +2566,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "crynux-base",
   },
   {
     name: "DBK Chain",
@@ -2364,6 +2578,7 @@ const chains = [
       decimals: 18,
     },
     chain: "DBK Chain",
+    shortName: "dbkchain",
   },
   {
     name: "Aquachain",
@@ -2375,6 +2590,7 @@ const chains = [
       decimals: 18,
     },
     chain: "AQUA",
+    shortName: "aqua",
   },
   {
     name: "Reya Cronos",
@@ -2386,6 +2602,7 @@ const chains = [
       decimals: 18,
     },
     chain: "reya-cronos",
+    shortName: "reya-cronos",
   },
   {
     name: "Polygon Blackberry",
@@ -2398,6 +2615,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "polygon-blackberry",
   },
   {
     name: "Ethos",
@@ -2409,6 +2627,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETHOS",
+    shortName: "ETHOS",
   },
   {
     name: "OP Celestia Raspberry",
@@ -2421,6 +2640,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "opcelestia-raspberry",
   },
   {
     name: "Ancient8",
@@ -2432,6 +2652,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Ancient8",
+    shortName: "ancient8",
   },
   {
     name: "Lumia Mainnet",
@@ -2443,6 +2664,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "lumia-mainnet",
   },
   {
     name: "IPOS Network",
@@ -2454,6 +2676,7 @@ const chains = [
       decimals: 18,
     },
     chain: "IPOS",
+    shortName: "ipos",
   },
   {
     name: "Aurora Mainnet",
@@ -2465,6 +2688,7 @@ const chains = [
       decimals: 18,
     },
     chain: "NEAR",
+    shortName: "aurora",
   },
   {
     name: "Aurora Betanet",
@@ -2476,6 +2700,7 @@ const chains = [
       decimals: 18,
     },
     chain: "NEAR",
+    shortName: "aurora-betanet",
   },
   {
     name: "PowerGold",
@@ -2487,6 +2712,7 @@ const chains = [
       decimals: 18,
     },
     chain: "NEAR",
+    shortName: "powergold",
   },
   {
     name: "Crynux on Near",
@@ -2498,6 +2724,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "crynux-near",
   },
   {
     name: "RARI Chain Mainnet",
@@ -2509,6 +2736,7 @@ const chains = [
       decimals: 18,
     },
     chain: "RARI",
+    shortName: "rari-mainnet",
   },
   {
     name: "WITNESS CHAIN",
@@ -2520,6 +2748,7 @@ const chains = [
       decimals: 18,
     },
     chain: "Witness-Chain",
+    shortName: "Witness",
   },
   {
     name: "Pirl",
@@ -2531,6 +2760,7 @@ const chains = [
       decimals: 18,
     },
     chain: "PIRL",
+    shortName: "pirl",
   },
   {
     name: "Arbitrum Blueberry",
@@ -2542,6 +2772,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "arb-blueberry",
   },
   {
     name: "PIN",
@@ -2553,6 +2784,7 @@ const chains = [
       decimals: 18,
     },
     chain: "PIN",
+    shortName: "PIN",
   },
   {
     name: "volmex",
@@ -2564,6 +2796,7 @@ const chains = [
       decimals: 18,
     },
     chain: "volmex",
+    shortName: "volmex",
   },
   {
     name: "Molereum Network",
@@ -2575,6 +2808,7 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+    shortName: "mole",
   },
   {
     name: "Yominet",
@@ -2586,6 +2820,7 @@ const chains = [
       decimals: 18,
     },
     chain: "YOMINET",
+    shortName: "yomi",
   },
   {
     name: "DCHAIN",
@@ -2597,6 +2832,7 @@ const chains = [
       decimals: 18,
     },
     chain: "dchainmainnet",
+    shortName: "dchainmainnet",
   },
 ] as const
 

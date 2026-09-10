@@ -103,15 +103,22 @@ and meets the same gate. The commands above need the admin key locally.
 
 ## Which networks appear
 
-`src/data/networks/networks.ts` decides -- the same file `/layer-2/networks` renders from,
-so adding or removing an L2 there is the only edit needed. `src/scripts/update-explorers.ts`
-reads it, resolves each chain id through `chains.ts`, and joins chainid.network for the
-EIP-3770 short name with Blockscout's registry for the explorer URL. Neither of those is
-ours to maintain, and typing them by hand invites a mismatch that fails silently.
+`src/data/networks/networks.ts` -- the same list `/layer-2/networks` renders. Each entry
+carries a `searchExplorer` alongside its existing `blockExplorerLink`, so adding or
+removing an L2 there is the only edit; nothing else enumerates them.
 
-Starknet and Zircuit are not in the generated file: Blockscout does not cover them, so they
-get their own sections from `constants.ts`. `tests/unit/search/explorer-coverage.spec.ts`
-fails if a featured network is covered by neither route, in either direction.
+The two explorer fields are deliberately separate. `blockExplorerLink` stays whatever that
+network's own users expect; `searchExplorer` prefers Blockscout, which is open source.
+Explorers with a single route that resolves anything give `search`; those without give
+`address` and `tx`, and the type makes it impossible to fill in half a pair.
+
+`addressFormat` says which value shapes a network accepts: `evm` for a 20-byte address or
+32-byte hash, `starknet` for a field element that could be either -- which is why Starknet
+offers both routes rather than guessing.
+
+EIP-3770 prefixes are typed by hand, and `tests/unit/search/networks-data.spec.ts` checks
+each one against `chains.ts`, itself generated weekly from the same registry. A typo fails
+CI with the correct value, and an upstream rename turns it red on the next chains update.
 
 ## curation.json
 
