@@ -72,7 +72,7 @@ function buildHubSchemaNodes(
     startDate:
       schema.schedule.startDate ?? new Date().toISOString().split("T")[0],
     isAccessibleForFree: true,
-    url: hub.coworkingSignupUrl,
+    url: hub.coworkingSignupUrl ?? hub.meetupUrl,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     organizer: REFERENCE.ETHEREUM_FOUNDATION,
