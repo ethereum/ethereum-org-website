@@ -2250,6 +2250,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jayproof"><img src="https://avatars.githubusercontent.com/u/229312301?v=4?s=100" width="100px;" alt="jayproof"/><br /><sub><b>jayproof</b></sub></a><br /><a href="#tool-jayproof" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pillowtalk-Qy"><img src="https://avatars.githubusercontent.com/u/190499865?v=4?s=100" width="100px;" alt="Qy"/><br /><sub><b>Qy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apillowtalk-Qy" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BonganiN-KhulaIQ"><img src="https://avatars.githubusercontent.com/u/288278264?v=4?s=100" width="100px;" alt="Bongani Nkosi"/><br /><sub><b>Bongani Nkosi</b></sub></a><br /><a href="#content-BonganiN-KhulaIQ" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kriss39"><img src="https://avatars.githubusercontent.com/u/93033289?v=4?s=100" width="100px;" alt="Kanan"/><br /><sub><b>Kanan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akriss39" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
