@@ -28,6 +28,7 @@ const ToolCard = memo(function ToolCard({
         descriptionMaxLines={2}
         descriptionExpandable={false}
         thumbnail={tool.thumbnail_url ?? undefined}
+        thumbnailUnoptimized
         fallbackIcon={
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
         }

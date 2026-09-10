@@ -75,6 +75,13 @@ export interface AppCardProps
   descriptionMaxLines?: number
   descriptionExpandable?: boolean
   thumbnail?: string
+  /**
+   * Render the thumbnail as a raw `<img>` rather than through `next/image`.
+   * Use when the source is an arbitrary third-party URL that isn't in
+   * `images.remotePatterns` -- the optimizer 400s on those instead of
+   * serving the image.
+   */
+  thumbnailUnoptimized?: boolean
   category?: string
   categoryTagStatus?: TagProps["status"]
   tags?: string[]
@@ -104,6 +111,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
       descriptionMaxLines,
       descriptionExpandable = true,
       thumbnail,
+      thumbnailUnoptimized,
       category,
       categoryTagStatus,
       tags,
@@ -130,20 +138,28 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
       </div>
     ) : null
 
+    const thumbnailProps = {
+      src: thumbnail as string,
+      alt: name,
+      className: "size-full object-contain",
+      width: imageSize ? imageSizePixels[imageSize] : 64,
+      height: imageSize ? imageSizePixels[imageSize] : 64,
+      fallback: fallbackNode,
+    }
+
     const innerContent = (
       <div className={cn(layoutVariants({ layout }))}>
         {/* Image or fallback */}
         {(thumbnail || fallbackIcon) && (
           <div className={cn(imageSizeVariants({ size: imageSize }))}>
             {thumbnail ? (
-              <ImageWithFallback
-                src={thumbnail}
-                alt={name}
-                className="size-full object-contain"
-                width={imageSize ? imageSizePixels[imageSize] : 64}
-                height={imageSize ? imageSizePixels[imageSize] : 64}
-                fallback={fallbackNode}
-              />
+              // `unoptimized` is the discriminant of ImageWithFallback's prop
+              // union, so it has to be a literal, not a variable.
+              thumbnailUnoptimized ? (
+                <ImageWithFallback unoptimized {...thumbnailProps} />
+              ) : (
+                <ImageWithFallback {...thumbnailProps} />
+              )
             ) : (
               fallbackNode
             )}

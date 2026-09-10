@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
 
-import { Image } from "@/components/Image"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import {
@@ -58,12 +58,14 @@ const InterceptedToolDetail = async ({
       <div className="flex flex-col bg-background">
         {tool.banner_url && (
           <div className="h-24 w-full shrink-0 sm:h-36">
-            <Image
+            <ImageWithFallback
+              unoptimized
               src={tool.banner_url}
               alt=""
               width={23 * 16}
               height={23 * 4}
               className="size-full object-cover"
+              fallback={null}
             />
           </div>
         )}
