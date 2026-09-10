@@ -152,6 +152,8 @@ export type CatalogWalletCard = Pick<
 > & {
   /** Already formatted, e.g. "Swap fee: 0.3%" — see `toCatalogCard`. */
   fees?: string
+  /** The viewer's own language, when this wallet speaks it. */
+  localeLanguage?: string
 }
 
 export const toCatalogCard = (
@@ -179,6 +181,10 @@ export const toCatalogCard = (
   }),
   ...(wallet.fees?.length && {
     fees: formatWalletFees(wallet.fees, intl.locale, intl.t),
+  }),
+  // `enrichWallet` hoists the viewer's language to the front of the list.
+  ...((wallet.languages_supported as string[]).includes(intl.locale) && {
+    localeLanguage: wallet.supportedLanguages[0],
   }),
 })
 

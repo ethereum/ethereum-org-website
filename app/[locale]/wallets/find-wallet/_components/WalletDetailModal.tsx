@@ -11,7 +11,6 @@ import Discord from "@/components/icons/discord.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { XCircle } from "@/components/icons/XCircle"
 import { Image } from "@/components/Image"
-import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -27,6 +26,8 @@ import { cn } from "@/lib/utils/cn"
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
 import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
+
+import WalletLanguages from "./WalletLanguages"
 
 const LANGUAGES_SHOWN = 5
 
@@ -98,11 +99,6 @@ const WalletDetailModal = ({
   const chains = getRenderableChains(wallet.supported_chains as ChainName[])
   const description = wallet.descriptionStripped
 
-  const shownLanguages = wallet.supportedLanguages
-    .slice(0, LANGUAGES_SHOWN)
-    .join(" · ")
-  const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
-
   return (
     <Dialog
       open
@@ -170,15 +166,11 @@ const WalletDetailModal = ({
 
             {wallet.supportedLanguages.length > 0 && (
               <DetailRow label={labels.languages}>
-                <span className="font-bold text-body">
-                  {shownLanguages}{" "}
-                  {hasExtraLanguages && (
-                    <SupportedLanguagesTooltip
-                      supportedLanguages={wallet.supportedLanguages}
-                      shown={LANGUAGES_SHOWN}
-                    />
-                  )}
-                </span>
+                <WalletLanguages
+                  languages={wallet.supportedLanguages}
+                  localeLanguage={wallet.localeLanguage}
+                  shown={LANGUAGES_SHOWN}
+                />
               </DetailRow>
             )}
 
