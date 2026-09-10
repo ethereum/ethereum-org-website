@@ -251,18 +251,7 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
       { id: "wallets", level: "beginner" },
       { id: "what-are-apps", level: "beginner" },
       { id: "web3", level: "beginner" },
-      { id: "energy-consumption", level: "beginner" },
       { id: "ethereum-vs-bitcoin", level: "beginner" },
-    ],
-  },
-  {
-    id: "security-and-privacy",
-    titleKey: "security-and-privacy",
-    descriptionKey: "security-and-privacy-description",
-    quizzes: [
-      { id: "security", level: "beginner" },
-      { id: "privacy", level: "beginner" },
-      { id: "zero-knowledge-proofs", level: "intermediate" },
     ],
   },
   {
@@ -284,10 +273,21 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
     quizzes: [
       { id: "accounts", level: "beginner" },
       { id: "smart-contracts", level: "beginner" },
+      { id: "energy-consumption", level: "beginner" },
       { id: "transactions", level: "intermediate" },
       { id: "blocks", level: "intermediate" },
       { id: "gas", level: "advanced" },
       { id: "evm", level: "advanced" },
+    ],
+  },
+  {
+    id: "security-and-privacy",
+    titleKey: "security-and-privacy",
+    descriptionKey: "security-and-privacy-description",
+    quizzes: [
+      { id: "security", level: "beginner" },
+      { id: "privacy", level: "beginner" },
+      { id: "zero-knowledge-proofs", level: "intermediate" },
     ],
   },
   {
