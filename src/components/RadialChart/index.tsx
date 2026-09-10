@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl"
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
 
 import { cn } from "@/lib/utils/cn"
-import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
+import { formatDateTime, isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -60,9 +60,9 @@ const RadialChart = ({
 
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
-      ? dateTimeFormat(locale, {
+      ? formatDateTime(locale, new Date(lastUpdated), {
           dateStyle: "medium",
-        }).format(new Date(lastUpdated))
+        })
       : ""
 
   const data = [{ value }]
