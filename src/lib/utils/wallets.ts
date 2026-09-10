@@ -104,7 +104,8 @@ export const formatWalletFees = (
     [min, max]: [min: number, max: number]
   ) => {
     if (typeof fmt.formatRange !== "function") {
-      return `${fmt.format(min)} - ${fmt.format(max)}`
+      // en dash separation for numerical range
+      return `${fmt.format(min)} – ${fmt.format(max)}`
     }
     return fmt
       .formatRange(min, max)
