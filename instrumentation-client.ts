@@ -39,6 +39,14 @@ Sentry.init({
     // 1% for everything else
     return 0.01
   },
+  // Web Vitals ride on the pageload span; its resource children are pure quota
+  // cost. browser.* and LoAF stay: TTFB and INP diagnosis needs them.
+  ignoreSpans: [
+    { op: /^resource\./ },
+    { op: "paint" },
+    { op: "mark" },
+    { op: "measure" },
+  ],
   debug: environment === "development",
   environment,
   enabled: environment === "production",
