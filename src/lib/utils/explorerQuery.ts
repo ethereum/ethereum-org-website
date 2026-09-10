@@ -1,7 +1,5 @@
 import type { AddressFormat, SearchExplorer } from "@/data/networks/networks"
 
-import { STARKNET_MIN_HEX_DIGITS } from "@/lib/constants"
-
 /**
  * Block explorer results for a query that site content cannot answer.
  *
@@ -40,6 +38,17 @@ const NAME_QUERY_RE = new RegExp(
   `^(?:${LABEL}\\.)*(?:${ENS_LABEL}\\.eth|${LABEL}\\.id)$`,
   "i"
 )
+
+/**
+ * Starknet addresses and hashes are field elements below 2^251, so unpadded they run to
+ * at most 63 hex digits; zero-padded to 32 bytes they reach 64 and become
+ * indistinguishable from an Ethereum hash. Explorers differ on padding -- Starkscan
+ * displays padded but copies unpadded -- and leading zeros then cascade at one in
+ * sixteen: 63 digits covers 87.5% of values, 60 is 1 in 2,000, and 56 is 1 in 130
+ * million. Accepting 56 or more catches essentially every real value without reaching
+ * into lengths that mean something else.
+ */
+const STARKNET_MIN_HEX_DIGITS = 56
 
 const EVM_ADDRESS_DIGITS = 40
 const EVM_HASH_DIGITS = 64
