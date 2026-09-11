@@ -45,6 +45,8 @@ const ToolsPageBody = async ({
     locale,
     namespace: "page-developers-tools",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const tTable = await getTranslations({ locale, namespace: "table" })
 
   return (
     <main className="pb-page">
@@ -65,6 +67,9 @@ const ToolsPageBody = async ({
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
+            filtersToggle: tTable("table-filters"),
+            applyLabel: t("page-developers-tools-show-results"),
+            closeLabel: tCommon("close"),
           }}
         />
         <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">

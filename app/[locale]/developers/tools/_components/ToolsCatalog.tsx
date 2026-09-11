@@ -39,6 +39,9 @@ type ToolsCatalogProps = {
     allCategories: string
     resultsLabel: string
     noResults: string
+    filtersToggle: string
+    applyLabel: string
+    closeLabel: string
   }
   currentCategoryId?: string
 }
@@ -284,17 +287,12 @@ export default function ToolsCatalog({
         searchPlaceholder: labels.searchPlaceholder,
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
+        filtersToggle: labels.filtersToggle,
+        applyLabel: labels.applyLabel,
+        closeLabel: labels.closeLabel,
       }}
-      mobileVariant="collapsible"
-      mobileFilterSummary={{
-        label: currentCategoryId
-          ? getCategoryLabel(currentCategoryId, categoryLabels)
-          : labels.allCategories,
-        count: currentCategoryId
-          ? countByCategory[currentCategoryId] || 0
-          : totalCount,
-      }}
-      renderSidebar={({ state, setFilter, variant }) => {
+      mobileVariant="sheet"
+      renderSidebar={({ state, setFilter }) => {
         const raw = state[SUBCATEGORY_FILTER_KEY]
         return (
           <CatalogNavGroup
@@ -304,8 +302,6 @@ export default function ToolsCatalog({
             onSelectChild={(childId) =>
               setFilter(SUBCATEGORY_FILTER_KEY, childId)
             }
-            // Collapsed mobile trigger already names the all-resources view
-            showAllItem={variant === "desktop" || !!currentCategoryId}
           />
         )
       }}

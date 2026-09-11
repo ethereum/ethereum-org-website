@@ -16,8 +16,6 @@ type CatalogNavGroupProps = {
   /** Currently selected child id (single-select), or undefined for none */
   selectedChildId?: string
   onSelectChild: (childId?: string) => void
-  /** Hide the "all" entry where it would duplicate a surrounding label */
-  showAllItem?: boolean
 }
 
 /**
@@ -31,27 +29,24 @@ export default function CatalogNavGroup({
   config,
   selectedChildId,
   onSelectChild,
-  showAllItem = true,
 }: CatalogNavGroupProps) {
   const nf = numberFormat(locale)
   const hasCurrentItem = config.items.some((item) => item.isCurrent)
 
   return (
     <div className="space-y-1">
-      {showAllItem && (
-        <BaseLink
-          href={config.allHref}
-          className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
-            !hasCurrentItem && "bg-background-highlight text-primary"
-          )}
-        >
-          <span>{config.allLabel}</span>
-          <span className="text-xs text-body-medium">
-            {nf.format(config.allCount)}
-          </span>
-        </BaseLink>
-      )}
+      <BaseLink
+        href={config.allHref}
+        className={cn(
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
+          !hasCurrentItem && "bg-background-highlight text-primary"
+        )}
+      >
+        <span>{config.allLabel}</span>
+        <span className="text-xs text-body-medium">
+          {nf.format(config.allCount)}
+        </span>
+      </BaseLink>
 
       {config.items.map((item) => {
         const isItemActive = item.isCurrent && !selectedChildId

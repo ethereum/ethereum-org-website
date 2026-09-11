@@ -9,14 +9,9 @@ import {
   useRef,
   useState,
 } from "react"
-import { ChevronDown, RotateCcw, X } from "lucide-react"
+import { RotateCcw, X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import Input from "@/components/ui/input"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
@@ -57,12 +52,6 @@ export type CatalogSidebarHelpers = {
   variant: "desktop" | "mobile"
 }
 
-/** Collapsed trigger content for `mobileVariant="collapsible"`: selection + count */
-export type CatalogMobileFilterSummary = {
-  label: ReactNode
-  count?: number
-}
-
 export type FilterableCatalogProps<TItem> = {
   locale: string
   items: TItem[]
@@ -83,17 +72,14 @@ export type FilterableCatalogProps<TItem> = {
   /** Optional row above the search input, outside the bordered sidebar box. */
   renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
   renderResults: (items: TItem[]) => ReactNode
-  /** Trigger content required by `mobileVariant="collapsible"`. */
-  mobileFilterSummary?: CatalogMobileFilterSummary
   /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
   renderResultsHeader?: (state: CatalogFilterState) => ReactNode
   /**
    * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
-   * into the page flow; `"collapsible"` tucks it behind a `mobileFilterSummary`
-   * trigger, in flow; `"sheet"` collapses it behind a "Filters" bar and needs
+   * into the page flow; `"sheet"` collapses it behind a "Filters" bar and needs
    * `labels.filtersToggle` / `labels.applyLabel`.
    */
-  mobileVariant?: "inline" | "collapsible" | "sheet"
+  mobileVariant?: "inline" | "sheet"
   /**
    * Called after the empty-state reset has cleared both search and filters.
    * The shell owns the clearing; the consumer owns any tracking.
@@ -120,7 +106,6 @@ export default function FilterableCatalog<TItem>({
   renderSidebarHeader,
   renderResults,
   renderResultsHeader,
-  mobileFilterSummary,
   mobileVariant = "inline",
   onReset,
   className,
@@ -275,28 +260,9 @@ export default function FilterableCatalog<TItem>({
             <div className="space-y-3 lg:hidden">
               {renderHeader("mobile")}
               {searchInput}
-              {mobileVariant === "collapsible" ? (
-                <Collapsible className="rounded-xl border">
-                  <CollapsibleTrigger className="group flex w-full items-center justify-between gap-2 rounded-xl px-4 py-3 text-sm hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover">
-                    <span className="flex-1 text-start">
-                      {mobileFilterSummary?.label}
-                    </span>
-                    {typeof mobileFilterSummary?.count === "number" && (
-                      <span className="text-xs text-body-medium">
-                        {nf.format(mobileFilterSummary.count)}
-                      </span>
-                    )}
-                    <ChevronDown className="size-4 shrink-0 text-body-medium transition-transform group-data-[state=open]:rotate-180" />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="p-2 pt-0">
-                    {renderFilters("mobile")}
-                  </CollapsibleContent>
-                </Collapsible>
-              ) : (
-                <div className="rounded-xl border p-2">
-                  {renderFilters("mobile")}
-                </div>
-              )}
+              <div className="rounded-xl border p-2">
+                {renderFilters("mobile")}
+              </div>
             </div>
           )}
           <div ref={resultsTopRef} className="scroll-mt-24" />
