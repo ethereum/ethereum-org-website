@@ -49,6 +49,7 @@ export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_
 export const getStakedPercentageData = () => get<MetricReturnData>(KEYS.STAKED_PERCENTAGE)
 export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
+export const getMeetupImages = () => get<Record<string, string>>(KEYS.MEETUP_IMAGES)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
 export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
