@@ -11,8 +11,10 @@ import i18nConfig from "../../../i18n.config.json"
 const trimSlash = (s: string) => s.replace(/\/+$/, "")
 
 export const TYPESENSE_URL = trimSlash(process.env.TYPESENSE_URL ?? "")
-export const ADMIN_KEY = process.env.TYPESENSE_API_KEY ?? ""
-export const SEARCH_KEY = process.env.TYPESENSE_API_SEARCH_KEY || ADMIN_KEY
+export const ADMIN_KEY = process.env.TYPESENSE_ADMIN_KEY ?? ""
+// No fallback to the admin key: it cannot search, so falling back only turns a missing
+// variable into a 401 at query time instead of a clear failure at startup.
+export const SEARCH_KEY = process.env.TYPESENSE_SEARCH_KEY ?? ""
 
 export const SITE_ORIGIN = "https://ethereum.org"
 
@@ -46,7 +48,8 @@ export const requireEnv = () => {
   const missing = (
     [
       ["TYPESENSE_URL", TYPESENSE_URL],
-      ["TYPESENSE_API_KEY", ADMIN_KEY],
+      ["TYPESENSE_ADMIN_KEY", ADMIN_KEY],
+      ["TYPESENSE_SEARCH_KEY", SEARCH_KEY],
     ] as const
   )
     .filter(([, v]) => !v)

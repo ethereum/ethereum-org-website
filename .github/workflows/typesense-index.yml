@@ -183,8 +183,8 @@ jobs:
       - name: Promote
         env:
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
-          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
         run: pnpm typesense:promote -- --locale ${{ matrix.locale }}
 
       # Document ids change on every crawl, so pins are re-resolved against the new
@@ -192,8 +192,8 @@ jobs:
       - name: Apply curation
         env:
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
-          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
-          TYPESENSE_API_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
+          TYPESENSE_ADMIN_KEY: ${{ secrets.TYPESENSE_ADMIN_KEY }}
+          TYPESENSE_SEARCH_KEY: ${{ secrets.TYPESENSE_SEARCH_KEY }}
         run: pnpm typesense:curate -- --locale ${{ matrix.locale }}
 
       - name: Sentry check-in (result)

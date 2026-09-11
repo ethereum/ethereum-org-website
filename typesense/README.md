@@ -145,6 +145,10 @@ GitHub Actions secrets, which are separate from Netlify's environment variables.
 
 ## Local runs
 
+The scripts read the same variable names as the secrets above, so `.env.example` works as
+written. Both keys are required -- the admin key cannot search, and promote and curate both
+query.
+
 ```sh
 pnpm typesense:promote -- --locale en --dry-run
 pnpm typesense:curate  -- --locale en --dry-run
