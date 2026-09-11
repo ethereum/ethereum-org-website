@@ -30,6 +30,29 @@ type DocSearchHit = Parameters<
   NonNullable<DocSearchModalProps["transformItems"]>
 >[0][number]
 
+/**
+ * What `useSearchClient` hands to `transformSearchClient`: a bare object with one `search`
+ * method, not the `typesense` SearchClient the prop's type claims.
+ */
+interface MinimalSearchClient {
+  search: (requests: unknown[]) => Promise<unknown>
+}
+
+/**
+ * The modal only shows its error screen for an error named `RetryError`; anything else is
+ * rethrown and leaves the modal sitting in its idle state, throwing again on every
+ * keystroke. A locale whose collection has not been promoted yet hits exactly that:
+ * Typesense answers 200 with the 404 nested inside the multi-search result, which the
+ * adapter chokes on rather than surfacing.
+ */
+const asRetryError = (error: unknown) => {
+  const retryable = new Error(
+    error instanceof Error ? error.message : "Search request failed"
+  )
+  retryable.name = "RetryError"
+  return retryable
+}
+
 const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
 
 /**
@@ -119,6 +142,17 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
     },
     onClose,
+    // Surface any failed query as the modal's error state rather than a silent idle one.
+    transformSearchClient: ((client: MinimalSearchClient) => ({
+      ...client,
+      search: async (requests: unknown[]) => {
+        try {
+          return await client.search(requests)
+        } catch (error) {
+          throw asRetryError(error)
+        }
+      },
+    })) as unknown as DocSearchModalProps["transformSearchClient"],
     transformItems: (items: DocSearchHit[]) =>
       items.map((item: DocSearchHit) => {
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
