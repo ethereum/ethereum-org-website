@@ -2,6 +2,9 @@ export type CatalogSelectOption = {
   id: string
   label: string
   count?: number
+  /** Renders as a link, not a filter toggle: for options whose items are out of
+   * this catalog's scope, so filtering can't reach them. */
+  href?: string
 }
 
 export type CatalogNavItem = {
@@ -11,7 +14,7 @@ export type CatalogNavItem = {
   count: number
   /** Marks the item matching the current route; its children render as filters */
   isCurrent?: boolean
-  /** Single-select filter options shown while this item is current */
+  /** Single-select filter options, revealed by expanding the item */
   children?: CatalogSelectOption[]
 }
 
@@ -25,6 +28,8 @@ export type CatalogNavGroupConfig = {
   allLabel: string
   allHref: string
   allCount: number
+  /** Label for each item's link to its own listing page, e.g. "Show all" */
+  itemAllLabel: string
   items: CatalogNavItem[]
 }
 

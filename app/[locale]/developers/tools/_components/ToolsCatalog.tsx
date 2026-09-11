@@ -36,6 +36,7 @@ type ToolsCatalogProps = {
     filtersToggle: string
     applyLabel: string
     closeLabel: string
+    showAll: string
   }
   currentCategoryId?: string
 }
@@ -212,18 +213,29 @@ export default function ToolsCatalog({
     allLabel: labels.allCategories,
     allHref: "/developers/tools/",
     allCount: totalCount,
-    items: categories.map((category) => ({
-      id: category.id,
-      label: getCategoryLabel(category.id, categoryLabels),
-      href: `/developers/tools/categories/${category.id}/`,
-      count: countByCategory[category.id] || 0,
-      isCurrent: currentCategoryId === category.id,
-      children: category.subcategories.map((subcategory) => ({
-        id: subcategory.id,
-        label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
-        count: countBySubcategory[subcategory.id] || 0,
-      })),
-    })),
+    itemAllLabel: labels.showAll,
+    items: categories.map((category) => {
+      const href = `/developers/tools/categories/${category.id}/`
+      // A category page holds only its own tools, so every other category's
+      // subcategories link out instead of filtering.
+      const isFilterable =
+        !currentCategoryId || currentCategoryId === category.id
+      return {
+        id: category.id,
+        label: getCategoryLabel(category.id, categoryLabels),
+        href,
+        count: countByCategory[category.id] || 0,
+        isCurrent: currentCategoryId === category.id,
+        children: category.subcategories.map((subcategory) => ({
+          id: subcategory.id,
+          label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
+          count: isFilterable
+            ? countBySubcategory[subcategory.id] || 0
+            : undefined,
+          href: isFilterable ? undefined : href,
+        })),
+      }
+    }),
   }
 
   const filterTool = (

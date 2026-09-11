@@ -176,6 +176,7 @@ const navConfig: CatalogNavGroupConfig = {
   allLabel: "All categories",
   allHref: "#all",
   allCount: demoWallets.length,
+  itemAllLabel: "Show all",
   items: [
     {
       id: "software",
@@ -199,8 +200,10 @@ const navConfig: CatalogNavGroupConfig = {
 }
 
 /**
- * Nav-tree sidebar as used by /developers/tools: top-level entries are route
- * links; children of the current entry are a single-select client filter.
+ * Nav-tree sidebar as used by /developers/tools: top-level entries expand in
+ * place, their children are a single-select client filter, and each group links
+ * out to its own listing page. Children carrying an `href` render as links
+ * instead — for entries whose items this catalog doesn't hold.
  */
 export const NavigationSidebar: StoryObj = {
   render: () => (

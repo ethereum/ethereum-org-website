@@ -1,14 +1,25 @@
 "use client"
 
-import { ChevronRight } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import type { CatalogNavGroupConfig } from "./types"
+
+const rowClasses =
+  "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight"
+
+const childRowClasses =
+  "flex min-h-0 w-full items-center justify-between gap-2 rounded-md px-3 py-1.5 text-start text-xs font-normal no-underline hover:bg-background-highlight"
 
 type CatalogNavGroupProps = {
   locale: string
@@ -19,10 +30,12 @@ type CatalogNavGroupProps = {
 }
 
 /**
- * Controlled sidebar building block: top-level entries are route links to
- * server-rendered listing pages; the children of the current entry are a
- * single-select filter. Purely presentational — value in (`selectedChildId`),
- * event out (`onSelectChild`); it holds no filter state of its own.
+ * Controlled sidebar building block: each top-level entry expands in place to
+ * reveal its children, which are single-select filters — or links, for children
+ * whose items this catalog doesn't hold (`child.href`). The entry's own listing
+ * page stays reachable through the link at the top of the expanded group.
+ * Purely presentational — value in (`selectedChildId`), event out
+ * (`onSelectChild`); it holds no filter state of its own.
  */
 export default function CatalogNavGroup({
   locale,
@@ -38,7 +51,8 @@ export default function CatalogNavGroup({
       <BaseLink
         href={config.allHref}
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
+          rowClasses,
+          "justify-between",
           !hasCurrentItem && "bg-background-highlight text-primary"
         )}
       >
@@ -50,58 +64,88 @@ export default function CatalogNavGroup({
 
       {config.items.map((item) => {
         const isItemActive = item.isCurrent && !selectedChildId
+        const holdsSelectedChild = item.children?.some(
+          (child) => child.id === selectedChildId
+        )
 
         return (
-          <div key={item.id} className="space-y-1">
-            <BaseLink
-              href={item.href}
+          <Collapsible
+            key={item.id}
+            defaultOpen={item.isCurrent || holdsSelectedChild}
+          >
+            <CollapsibleTrigger
               className={cn(
-                "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight",
+                "group",
+                rowClasses,
                 isItemActive && "bg-background-highlight text-primary"
               )}
-              onClick={() => {
-                if (item.isCurrent) onSelectChild(undefined)
-              }}
             >
-              <ChevronRight
-                className={cn(
-                  "size-4 text-body-medium transition-transform",
-                  item.isCurrent && "rotate-90"
-                )}
-              />
+              <ChevronDown className="size-4 shrink-0 text-body-medium transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
               <span className="flex-1">{item.label}</span>
               <span className="text-xs text-body-medium">
                 {nf.format(item.count)}
               </span>
-            </BaseLink>
-            {item.isCurrent && item.children && (
-              <div className="ms-5 space-y-1 border-s ps-2">
-                {item.children.map((child) => (
-                  <Button
-                    key={child.id}
-                    variant="ghost"
-                    isSecondary
-                    className={cn(
-                      "flex min-h-0 w-full items-center justify-between rounded-md px-3 py-1.5 text-start text-xs font-normal hover:bg-background-highlight",
-                      selectedChildId === child.id && "bg-background-highlight"
-                    )}
-                    onClick={() => {
-                      onSelectChild(
-                        selectedChildId === child.id ? undefined : child.id
-                      )
-                    }}
+            </CollapsibleTrigger>
+            {/* forceMount keeps every category link in the DOM for crawlers, so
+                collapsing is CSS-only: grid rows animate 1fr <-> 0fr. See
+                ui/accordion for why the duration needs `!`. */}
+            <CollapsibleContent
+              forceMount
+              className="grid grid-rows-[1fr] transition-[grid-template-rows,visibility] duration-200! ease-out data-[state=closed]:invisible data-[state=closed]:grid-rows-[0fr]"
+            >
+              <div className="min-h-0 overflow-hidden">
+                <div className="ms-5 space-y-1 border-s ps-2">
+                  <BaseLink
+                    href={item.href}
+                    className={cn(childRowClasses, "text-body-medium")}
                   >
-                    <span>{child.label}</span>
-                    {typeof child.count === "number" && (
-                      <span className="text-2xs text-body-medium">
-                        {nf.format(child.count)}
-                      </span>
-                    )}
-                  </Button>
-                ))}
+                    {/* Every group's link would otherwise read "Show all":
+                        ambiguous to a screen reader, and this is the site's
+                        only internal link to the listing page. */}
+                    <span>
+                      {config.itemAllLabel}
+                      <span className="sr-only"> {item.label}</span>
+                    </span>
+                  </BaseLink>
+
+                  {item.children?.map((child) =>
+                    child.href ? (
+                      <BaseLink
+                        key={child.id}
+                        href={child.href}
+                        className={cn(childRowClasses, "text-body")}
+                      >
+                        <span>{child.label}</span>
+                      </BaseLink>
+                    ) : (
+                      <Button
+                        key={child.id}
+                        variant="ghost"
+                        isSecondary
+                        className={cn(
+                          childRowClasses,
+                          selectedChildId === child.id &&
+                            "bg-background-highlight"
+                        )}
+                        onClick={() => {
+                          onSelectChild(
+                            selectedChildId === child.id ? undefined : child.id
+                          )
+                        }}
+                      >
+                        <span>{child.label}</span>
+                        {typeof child.count === "number" && (
+                          <span className="text-2xs text-body-medium">
+                            {nf.format(child.count)}
+                          </span>
+                        )}
+                      </Button>
+                    )
+                  )}
+                </div>
               </div>
-            )}
-          </div>
+            </CollapsibleContent>
+          </Collapsible>
         )
       })}
     </div>
