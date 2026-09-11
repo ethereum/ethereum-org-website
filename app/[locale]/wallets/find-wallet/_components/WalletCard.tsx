@@ -3,7 +3,6 @@
 import { memo } from "react"
 
 import { Image } from "@/components/Image"
-import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
@@ -11,6 +10,7 @@ import type { CatalogWalletCard } from "@/lib/utils/walletData"
 import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
 
+import WalletLanguages from "./WalletLanguages"
 import WalletPersonaTags from "./WalletPersonaTags"
 
 // Deliberately lower than the shared NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN — the
@@ -21,19 +21,17 @@ type WalletCardProps = {
   wallet: CatalogWalletCard
   deviceLabels: Record<WalletDeviceId, string>
   personaLabels: Record<WalletPersonaId, string>
+  /** When set, a plain click opens the modal instead of following the link. */
+  onOpen?: (slug: string) => void
 }
 
 const WalletCard = memo(function WalletCard({
   wallet,
   deviceLabels,
   personaLabels,
+  onOpen,
 }: WalletCardProps) {
   const deviceList = getDeviceLabels(wallet.devices, deviceLabels)
-
-  const formattedLanguages = wallet.supportedLanguages
-    .slice(0, LANGUAGES_SHOWN)
-    .join(" · ")
-  const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
 
   return (
     // Skips layout/paint of off-screen cards without dropping them from the HTML.
@@ -47,11 +45,21 @@ const WalletCard = memo(function WalletCard({
         <div className="flex min-w-0 flex-col gap-1">
           <LinkOverlay
             href={`/wallets/find-wallet/${wallet.slug}/`}
+            // Real link for crawlers and modifier-clicks; no prefetch, or the
+            // grid would warm 49 detail routes nobody navigates to.
+            prefetch={false}
             className="text-lg font-bold text-body no-underline hover:text-body"
-            matomoEvent={{
+            customEventOptions={{
               eventCategory: "find-wallet",
               eventAction: "open_wallet_modal",
               eventName: wallet.name,
+            }}
+            onClick={(event) => {
+              const modified =
+                event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+              if (!onOpen || event.button !== 0 || modified) return
+              event.preventDefault()
+              onOpen(wallet.slug)
             }}
           >
             {wallet.name}
@@ -65,18 +73,11 @@ const WalletCard = memo(function WalletCard({
           <div className="space-y-0.5 text-sm text-body-medium">
             {deviceList.length > 0 && <p>{deviceList.join(" · ")}</p>}
             <p>
-              <span className="font-semibold text-body">
-                {formattedLanguages}
-              </span>{" "}
-              {hasExtraLanguages && (
-                // Lift above the LinkOverlay's ::before so the tooltip is hoverable.
-                <span className="relative z-10">
-                  <SupportedLanguagesTooltip
-                    supportedLanguages={wallet.supportedLanguages}
-                    shown={LANGUAGES_SHOWN}
-                  />
-                </span>
-              )}
+              <WalletLanguages
+                languages={wallet.supportedLanguages}
+                localeLanguage={wallet.localeLanguage}
+                shown={LANGUAGES_SHOWN}
+              />
             </p>
             {wallet.fees && <p>{wallet.fees}</p>}
           </div>

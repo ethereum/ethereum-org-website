@@ -10,7 +10,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
   getLastUpdatedDisplay,
-  getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
 } from "@/lib/utils/walletData"
@@ -33,7 +32,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const wallets = getCatalogWallets(locale)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
-  const personaCounts = getPersonaCounts(wallets)
 
   const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
@@ -67,7 +65,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           wallets={wallets}
           networks={networks}
           languages={languages}
-          personaCounts={personaCounts}
           lastUpdatedDisplay={lastUpdatedDisplay}
         />
       </MainArticle>

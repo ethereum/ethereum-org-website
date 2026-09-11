@@ -19,6 +19,7 @@ import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
+  getCatalogWallets,
   getRelatedWallets,
   getWalletBySlug,
   toCatalogCard,
@@ -31,6 +32,8 @@ import {
   type WalletFeature,
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletCard from "../_components/WalletCard"
@@ -49,10 +52,7 @@ const WALLET_LINK_EVENT = {
   eventAction: "Go to wallet",
 } as const
 
-/**
- * Standalone wallet detail, reached by direct load or refresh. Navigating here
- * from inside the find-wallet subtree hits `@modal/(.)[wallet]` instead.
- */
+/** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
@@ -254,11 +254,8 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
 }
 
 export function generateStaticParams() {
-  // Deliberately empty: these pages must render on demand so the response
-  // carries `Vary: Next-Url`. Build-time prerenders have no response to read,
-  // so Next marks them "cannot be intercepted" and the client then caches this
-  // URL ignoring Next-Url, which permanently shadows `@modal/(.)[wallet]`.
-  return []
+  // Slugs derive from wallet names, so any locale lists the same set.
+  return getCatalogWallets(DEFAULT_LOCALE).map(({ slug }) => ({ wallet: slug }))
 }
 
 export async function generateMetadata(props: {
