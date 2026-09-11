@@ -35,6 +35,17 @@ The scraper would otherwise swap its own alias the moment a crawl ends, with no 
 all. Scraping to a staging name and promoting separately is what makes the swap
 conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
 
+## Tokenization
+
+Typesense splits on whitespace unless a field declares its language, which leaves CJK text
+as a single token -- a search on `/zh/` comes back near-empty. The workflow sets `locale` on
+`content` and the `hierarchy.lvl*` fields per crawl, for the languages Typesense has
+customizations for: `ja`, `ko`, `ru`, `uk`, and `zh` (which `zh-tw` maps onto). Everything
+else falls back to `en`, which covers European languages well.
+
+No promote gate can catch a mistake here: the size and field checks pass, and the relevance
+gate is English-only, so a CJK index that barely searches still promotes green.
+
 ## The scraper is a version behind
 
 Typesense v30 replaced per-collection synonyms and overrides with synonym sets and curation
