@@ -91,12 +91,12 @@ const cases: Array<[name: string, event: ErrorEvent, expected: DropReason]> = [
     event([
       { value: "Maximum call stack size exceeded.", frames: ["undefined"] },
     ]),
-    "unattributable-overflow",
+    "unattributable",
   ],
   [
     "overflow, Firefox wording",
     event([{ value: "too much recursion", frames: ["<anonymous>"] }]),
-    "unattributable-overflow",
+    "unattributable",
   ],
   [
     // Sentry prepends causes, so the thrown error is the last value.
@@ -105,13 +105,41 @@ const cases: Array<[name: string, event: ErrorEvent, expected: DropReason]> = [
       { value: "some upstream cause", frames: ["undefined"] },
       { value: "Maximum call stack size exceeded", frames: ["undefined"] },
     ]),
-    "unattributable-overflow",
+    "unattributable",
   ],
   [
     "overflow in our own bundle",
     event([
       { value: "Maximum call stack size exceeded", frames: [OURS, OURS] },
     ]),
+    null,
+  ],
+  // The message no longer gates the rule, so any unlocatable stack is dropped
+  // whatever it says. ETHORG-1AC: a third-party `AutoScroll` scraper whose
+  // frames carry a line/column but no filename at all.
+  [
+    "unlocatable stack, arbitrary message",
+    event([
+      {
+        value:
+          "Failed to execute 'querySelector' on 'Document': The provided selector is empty.",
+        frames: ["", "", ""],
+      },
+    ]),
+    "unattributable",
+  ],
+  [
+    "one locatable frame among unlocatable ones is enough to keep",
+    event([
+      { value: "Cannot read properties of null", frames: ["undefined", OURS] },
+    ]),
+    null,
+  ],
+  // Absence of frames is not evidence of anything, so these still come through
+  // and remain the residue that only a message rule could catch.
+  [
+    "frameless event with a noisy message",
+    event([{ value: "Failed to connect to MetaMask" }]),
     null,
   ],
   [
