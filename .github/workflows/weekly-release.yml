@@ -89,6 +89,18 @@ jobs:
             - On any error, print the error and exit non-zero so the workflow
               fails and the team is notified.
 
+      # Upload the raw path rather than the action's `execution_file` output:
+      # a failed composite step doesn't reliably export its outputs, and this
+      # log is only interesting when the step failed.
+      - name: Upload prepare execution log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: prepare-release-execution-log
+          path: ${{ runner.temp }}/claude-execution-output*.json
+          retention-days: 30
+          if-no-files-found: ignore
+
       - name: Capture PR number / URL / version
         if: steps.skip_check.outputs.skip == 'false'
         id: capture_pr
@@ -217,14 +229,19 @@ jobs:
           node "$(npm root -g)/@playwright/cli/node_modules/playwright-core/cli.js" \
             install --with-deps chromium
 
+      # continue-on-error: a crashed review means the release is unreviewed, not
+      # broken. The job stays green and "Announce review incomplete" hands off
+      # to a human instead of paging them with a release-failure alarm.
       - name: Run /review-release
+        id: review
         if: steps.wait.outputs.outcome == 'success'
+        continue-on-error: true
         uses: anthropics/claude-code-action@v1
         timeout-minutes: 20
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
-            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Bash(playwright-cli:*),Skill"
+            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Bash(playwright-cli:*),Skill" --max-budget-usd 4
           prompt: |
             Execute /review-release for PR #${{ needs.prepare.outputs.pr_number }}
             with the --post-comment flag, per .claude/commands/review-release.md.
@@ -251,8 +268,17 @@ jobs:
             - The full summary goes in the PR comment (--post-comment). Do NOT
               write it anywhere else — Discord only gets a pass/fail line.
 
+      - name: Upload review execution log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-release-execution-log
+          path: ${{ runner.temp }}/claude-execution-output*.json
+          retention-days: 30
+          if-no-files-found: ignore
+
       - name: Announce ready for human
-        if: steps.wait.outputs.outcome == 'success'
+        if: steps.wait.outputs.outcome == 'success' && steps.review.outcome == 'success'
         uses: ./.github/actions/discord-notify
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
@@ -264,6 +290,20 @@ jobs:
             ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
             ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
             Remaining manual steps: approve Chromatic, approve PR, merge.
+
+      - name: Announce review incomplete
+        if: steps.wait.outputs.outcome == 'success' && steps.review.outcome == 'failure'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :warning: **Release ${{ needs.prepare.outputs.version }} — CI green, but the automated review didn't finish**  •  ${{ needs.prepare.outputs.pr_url }}
+            The release itself is not known to be broken — the review agent errored out. Needs manual eyes on the preview before merge.
+            Run (see the `review-release-execution-log` artifact for why): <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
+            ${{ steps.links.outputs.preview && format(':eyes: Preview: <{0}>', steps.links.outputs.preview) || '' }}
+            ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
+            ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
 
       - name: Announce wait-and-review failure
         if: failure()
