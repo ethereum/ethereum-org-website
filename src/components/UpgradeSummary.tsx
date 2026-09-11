@@ -9,46 +9,19 @@ import {
 import InlineLink from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
-import { formatPartialDate } from "@/lib/utils/date"
-import { numberFormat } from "@/lib/utils/numbers"
-
 import {
-  type Milestone,
-  type MilestoneKind,
-  upgrades,
-  type UpgradeStatus,
-} from "@/data/upgrades"
+  formatMilestoneLabel,
+  formatUpgradeDate,
+  getNextMilestoneBeforeMainnet,
+  getUpgradeStage,
+  UPGRADE_STAGE_LABEL_KEYS,
+} from "@/lib/utils/upgrades"
+
+import { upgrades } from "@/data/upgrades"
 
 export type UpgradeSummaryProps = {
   /** Key into `src/data/upgrades`, e.g. "glamsterdam". */
   slug: string
-}
-
-/**
- * The stage an upgrade has reached, read from whichever milestone is running
- * rather than from a field: `status` only distinguishes live from upcoming, and
- * "testing on devnets" is the more useful thing to tell a reader.
- *
- * A kind missing from this map renders no tag rather than a raw key — every
- * label is a translation task across all locales, so add one when an upgrade
- * actually reaches that stage.
- */
-const STAGE_LABEL_KEYS: Partial<Record<MilestoneKind, string>> = {
-  devnet: "page-roadmap-upgrade-status-phase-devnet",
-}
-
-/**
- * Fallback for an upgrade with nothing running yet — Hegotá has only projected
- * milestones, so there is no stage to read and its `status` is all we have.
- */
-const STATUS_LABEL_KEYS: Partial<Record<UpgradeStatus, string>> = {
-  planning: "page-roadmap-upgrade-status-phase-planning",
-}
-
-const MILESTONE_LABEL_KEYS: Record<MilestoneKind, string> = {
-  devnet: "page-roadmap-upgrade-milestone-devnet",
-  testnet: "page-roadmap-upgrade-milestone-testnet",
-  mainnet: "page-roadmap-upgrade-milestone-mainnet",
 }
 
 /**
@@ -70,21 +43,6 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   const t = await getTranslations("page-roadmap")
   const locale = await getLocale()
 
-  // A year is a label, not a quantity — grouping would render it "2,026".
-  const number = numberFormat(locale, { useGrouping: false })
-  const formatQuarter = (quarter: number, year: number) =>
-    t("page-roadmap-upgrade-quarter", {
-      quarter: number.format(quarter),
-      year: number.format(year),
-    })
-
-  /** Milestones carry no English name, so the label is built from `kind`. */
-  const milestoneLabel = (milestone: Milestone) =>
-    t(MILESTONE_LABEL_KEYS[milestone.kind], {
-      version: milestone.kind === "devnet" ? milestone.version : "",
-      network: milestone.kind === "testnet" ? milestone.network : "",
-    })
-
   const target = upgrade.mainnetTarget
   const mainnet = upgrade.milestones.find(
     (milestone) => milestone.kind === "mainnet"
@@ -92,18 +50,11 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   if (mainnet?.status === "complete") return null
 
   const targetLabelKey = "page-roadmap-upgrade-status-target"
-  const running = upgrade.milestones.find((m) => m.status === "live")
-  const stageLabelKey = running
-    ? STAGE_LABEL_KEYS[running.kind]
-    : STATUS_LABEL_KEYS[upgrade.status]
 
-  // `live` is happening now rather than next, so a running devnet is not the
-  // answer to "what comes next". The mainnet row already states the target, so
-  // repeating it here as the next milestone would be noise.
-  const next = upgrade.milestones.find(
-    (m) =>
-      m.status !== "complete" && m.status !== "live" && m.kind !== "mainnet"
-  )
+  // Shared with the `/roadmap` release carousel so the same upgrade cannot be
+  // described two ways on two pages.
+  const stageLabelKey = UPGRADE_STAGE_LABEL_KEYS[getUpgradeStage(upgrade)]
+  const next = getNextMilestoneBeforeMainnet(upgrade)
 
   return (
     <Alert variant="info" className="items-start p-6 md:p-8">
@@ -112,11 +63,9 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
           <AlertTitle asChild className="text-2xl font-black">
             <h2>{t("page-roadmap-upgrade-status-heading")}</h2>
           </AlertTitle>
-          {stageLabelKey && (
-            <Tag size="small" status="tag">
-              {t(stageLabelKey)}
-            </Tag>
-          )}
+          <Tag size="small" status="tag">
+            {t(stageLabelKey)}
+          </Tag>
         </div>
 
         <AlertDescription className="text-base">
@@ -127,7 +76,7 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
                   {t(targetLabelKey)}
                 </dt>
                 <dd className="text-base">
-                  {formatPartialDate(target.when, locale, formatQuarter)}
+                  {formatUpgradeDate(target.when, locale, t)}
                   {/* The qualifier is its own clause, not an adjective, so it cannot
                       be lost to word order in translation or read as settled. */}
                   {!target.confirmed && (
@@ -146,21 +95,23 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
                   {t("page-roadmap-upgrade-status-next")}
                 </dt>
                 <dd className="text-base">
-                  {milestoneLabel(next)}
+                  {formatMilestoneLabel(next, t)}
                   {", "}
-                  {formatPartialDate(next.when, locale, formatQuarter)}
+                  {formatUpgradeDate(next.when, locale, t)}
                 </dd>
               </div>
             )}
           </dl>
 
-          <div className="mt-4">
-            <p className="m-0">
-              <InlineLink href={upgrade.sourceUrl} className="text-sm">
-                {t("page-roadmap-upgrade-status-track")}
-              </InlineLink>
-            </p>
-          </div>
+          {upgrade.sourceUrl && (
+            <div className="mt-4">
+              <p className="m-0">
+                <InlineLink href={upgrade.sourceUrl} className="text-sm">
+                  {t("page-roadmap-upgrade-status-track")}
+                </InlineLink>
+              </p>
+            </div>
+          )}
         </AlertDescription>
       </AlertContent>
     </Alert>

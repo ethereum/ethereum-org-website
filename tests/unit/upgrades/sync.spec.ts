@@ -29,6 +29,7 @@ const source: ForkcastSource = {
       activationDate: null,
       activationDetails: null,
       path: "/upgrade/previous-upgrades",
+      disabled: false,
     },
     {
       id: "fusaka",
@@ -41,6 +42,7 @@ const source: ForkcastSource = {
         slotNumber: 13164544,
       },
       path: "/upgrade/fusaka",
+      disabled: false,
     },
     {
       id: "glamsterdam",
@@ -49,6 +51,7 @@ const source: ForkcastSource = {
       activationDate: "2026",
       activationDetails: null,
       path: "/upgrade/glamsterdam",
+      disabled: false,
     },
   ],
   relationships: [
@@ -178,6 +181,7 @@ test("confirmed means the date is settled, by epoch or by having shipped", () =>
         activationDate: "Mar 13, 2024",
         activationDetails: null,
         path: "/upgrade/dencun",
+        disabled: false,
       },
     ],
     relationships: [],
@@ -200,6 +204,7 @@ test("a completed phase date outranks a headline year that lags behind it", () =
         activationDate: "2026",
         activationDetails: null,
         path: "/upgrade/glamsterdam",
+        disabled: false,
       },
     ],
     devnetLaunches: {},
@@ -234,6 +239,7 @@ test("two projections disagreeing on the year is drift, not a tiebreak", () => {
         activationDate: "2026",
         activationDetails: null,
         path: "/upgrade/glamsterdam",
+        disabled: false,
       },
     ],
     devnetLaunches: {},
@@ -404,6 +410,7 @@ test("release stage outranks the date when precision degrades", () => {
         activationDate: "2027",
         activationDetails: null,
         path: "/upgrade/hegota",
+        disabled: false,
       },
     ],
     relationships: [],
@@ -497,6 +504,7 @@ export const networkUpgrades: NetworkUpgrade[] = [
       slotNumber: 411392 * 32,
     },
     path: '/upgrade/fusaka',
+    disabled: false,
   },
   {
     id: 'genesis',
@@ -509,6 +517,7 @@ export const networkUpgrades: NetworkUpgrade[] = [
       slotNumber: 0,
     },
     path: '/upgrade/genesis',
+    disabled: false,
   },
 ]
 `
@@ -548,6 +557,7 @@ export const networkUpgrades: NetworkUpgrade[] = [
       slotNumber: 411_392 * 32,
     },
     path: '/upgrade/fusaka',
+    disabled: false,
   },
 ]
 `
@@ -711,4 +721,35 @@ test("completed testnets require an actual date claim", () => {
   expect(() => normalize(badStatus)).toThrow(
     /Completed testnet "Sepolia".*does not state an actual date/
   )
+})
+
+test("a fork Forkcast has disabled gets no source URL", () => {
+  // Upstream populates `path` for every fork but only renders a page for the
+  // ones it has not disabled, so trusting `path` alone linked the pre-Pectra
+  // forks to a 404.
+  const disabled: ForkcastSource = {
+    ...source,
+    upgrades: source.upgrades.map((upgrade) =>
+      upgrade.id === "fusaka" ? { ...upgrade, disabled: true } : upgrade
+    ),
+  }
+
+  expect(normalize(disabled).fusaka.sourceUrl).toBeNull()
+  expect(normalize(source).fusaka.sourceUrl).toBe(
+    "https://forkcast.org/upgrade/fusaka"
+  )
+})
+
+test("a missing disabled flag is drift, not a default", () => {
+  // Guessing `false` would silently restore the fabricated-URL bug the moment
+  // upstream renames the field.
+  const without = upgradesLiteral.replace(/\n\s*disabled: false,/g, "")
+  expect(() => parseUpgrades(without)).toThrow(/missing id\/name\/status/)
+})
+
+test("the disabled flag parses as a boolean, not a string", () => {
+  const off = upgradesLiteral.replace("disabled: false", "disabled: true")
+  const [fusaka] = parseUpgrades(off)
+  expect(fusaka.disabled).toBe(true)
+  expect(parseUpgrades(upgradesLiteral)[0].disabled).toBe(false)
 })
