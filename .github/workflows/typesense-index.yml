@@ -81,11 +81,21 @@ jobs:
           # DSN is https://<public_key>@<host>/<project_id>
           KEY="${SENTRY_DSN#*//}"; KEY="${KEY%%@*}"
           REST="${SENTRY_DSN#*@}"; HOST="${REST%%/*}"; PROJECT="${REST##*/}"
-          echo "SENTRY_CRONS=https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/" >> "$GITHUB_ENV"
-          curl -sS -m 10 -X POST \
-            "https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/?environment=${{ matrix.locale }}" \
+          BASE="https://$HOST/api/$PROJECT/cron/typesense-index/$KEY/"
+          echo "SENTRY_CRONS=$BASE" >> "$GITHUB_ENV"
+          RESPONSE=$(curl -sS -m 10 -X POST \
+            "$BASE?environment=${{ matrix.locale }}" \
             --data-raw '{"status":"in_progress","monitor_config":{"schedule":{"type":"crontab","value":"0 22 * * 5"},"checkin_margin":120,"max_runtime":60}}' \
-            || echo "check-in failed; continuing"
+            || echo "check-in failed; continuing")
+          # The result step has to close *this* check-in by id. Posting to the base URL
+          # again opens a second one instead, leaving the in_progress one to alert when it
+          # passes its margin -- a green run then pages someone.
+          ID=$(printf '%s' "$RESPONSE" | jq -r '.id // empty' 2>/dev/null || true)
+          if [ -n "$ID" ]; then
+            echo "SENTRY_CHECKIN_ID=$ID" >> "$GITHUB_ENV"
+          else
+            echo "no check-in id returned; the result step will open its own"
+          fi
 
       - name: Check secrets
         env:
@@ -191,5 +201,8 @@ jobs:
         if: always() && env.SENTRY_CRONS != ''
         run: |
           STATUS=${{ job.status == 'success' && 'ok' || 'error' }}
-          curl -sS -m 10 "${SENTRY_CRONS}?environment=${{ matrix.locale }}&status=$STATUS" \
+          # Closes the check-in the start step opened. Without the id this posts a fresh
+          # one, which reports the result but leaves the in_progress check-in to expire.
+          curl -sS -m 10 \
+            "${SENTRY_CRONS}${SENTRY_CHECKIN_ID}${SENTRY_CHECKIN_ID:+/}?environment=${{ matrix.locale }}&status=$STATUS" \
             || echo "check-in failed; continuing"

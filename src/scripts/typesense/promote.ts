@@ -52,6 +52,9 @@ const GROUNDTRUTH_PATH = path.join(
   "groundtruth.json"
 )
 
+/** Per-locale result. A skip is a failure of its own, not a quiet success. */
+type Outcome = "promoted" | "refused" | "skipped"
+
 interface Args {
   locales: string[]
   dryRun: boolean
@@ -66,13 +69,29 @@ const parseArgs = (argv: string[]): Args => {
     const i = argv.indexOf(flag)
     return i === -1 ? undefined : argv[i + 1]
   }
+  /**
+   * A bad value used to become `NaN` and disable a safeguard silently, in opposite
+   * directions: `NaN` keep made `slice(NaN)` return everything, so prune deleted every
+   * predecessor, and `NaN` minRatio made `ratio < minRatio` always false, turning the
+   * shrink gate off.
+   */
+  const numeric = (flag: string, fallback: number) => {
+    const raw = get(flag)
+    if (raw === undefined) return fallback
+    const value = Number(raw)
+    if (!Number.isFinite(value)) {
+      console.error(`${flag} needs a number, got "${raw}"`)
+      process.exit(1)
+    }
+    return value
+  }
   const locale = get("--locale")
   return {
     locales: argv.includes("--all") ? [...LOCALES] : locale ? [locale] : ["en"],
     dryRun: argv.includes("--dry-run"),
     force: argv.includes("--force"),
-    minRatio: Number(get("--min-ratio") ?? MIN_SIZE_RATIO),
-    keep: Number(get("--keep") ?? KEEP_PER_LOCALE),
+    minRatio: numeric("--min-ratio", MIN_SIZE_RATIO),
+    keep: numeric("--keep", KEEP_PER_LOCALE),
     skipRelevance: argv.includes("--skip-relevance"),
   }
 }
@@ -89,12 +108,15 @@ const promoteLocale = async (
   locale: string,
   collections: CollectionInfo[],
   args: Args
-): Promise<boolean> => {
+): Promise<Outcome> => {
   const alias = `ethereumorg-${locale}`
   const source = newestStaged(collections, locale)
   if (!source) {
+    // Promote runs straight after that locale's crawl, so nothing staged means the crawl
+    // produced nothing. Counting it as promoted made a silently failed scrape read as a
+    // successful run.
     console.log(`  ${locale}: no staged collection -- skipped`)
-    return true
+    return "skipped"
   }
 
   const sizeOf = (name?: string) =>
@@ -141,22 +163,22 @@ const promoteLocale = async (
       `  ${locale}: REFUSED (${next.toLocaleString()} docs vs ${live.toLocaleString()} live)`
     )
     failures.forEach((f) => console.log(`      - ${f}`))
-    return false
+    return "refused"
   }
 
   if (args.dryRun) {
     console.log(
       `  ${locale}: would promote ${source} (${next.toLocaleString()} docs)`
     )
-    return true
+    return "promoted"
   }
 
   await api("PUT", `/aliases/${alias}`, { body: { collection_name: source } })
   console.log(
     `  ${locale}: ${alias} -> ${source} (${next.toLocaleString()} docs)`
   )
-  await prune(locale, source, collections, args.keep)
-  return true
+  await prune(locale, source, current, collections, args.keep)
+  return "promoted"
 }
 
 interface LabelledQuery {
@@ -207,6 +229,7 @@ const hitAtOne = async (collection: string, locale: string) => {
 const prune = async (
   locale: string,
   live: string,
+  previous: string | undefined,
   collections: CollectionInfo[],
   keep: number
 ) => {
@@ -217,12 +240,16 @@ const prune = async (
         n.startsWith(`ethereumorg-${locale}_`) ||
         n.startsWith(`ethereumorg-staging-${locale}_`)
     )
-    .filter((n) => n !== live)
+    .filter((n) => n !== live && n !== previous)
     .sort()
     .reverse()
 
-  // `live` occupies one of the kept slots, so only keep-1 predecessors survive.
-  const doomed = mine.slice(Math.max(keep - 1, 0))
+  // Newest-first ordering alone would drop the wrong one: after a refused run the newest
+  // leftover is the collection that failed its gates, so it would outlive the index the
+  // alias was actually serving. `previous` is held explicitly to keep rollback a single
+  // alias flip, and both it and `live` occupy kept slots.
+  const reserved = previous ? 2 : 1
+  const doomed = mine.slice(Math.max(keep - reserved, 0))
   for (const name of doomed) {
     await api("DELETE", `/collections/${name}`)
     console.log(`      pruned ${name}`)
@@ -240,9 +267,13 @@ const main = async () => {
   const results = await Promise.all(
     args.locales.map((l) => promoteLocale(l, collections, args))
   )
-  const refused = results.filter((ok) => !ok).length
-  console.log(`\n${results.length - refused} promoted, ${refused} refused`)
-  if (refused) process.exitCode = 1
+  const count = (outcome: Outcome) =>
+    results.filter((r) => r === outcome).length
+  const [promoted, refused, skipped] = (
+    ["promoted", "refused", "skipped"] as const
+  ).map(count)
+  console.log(`\n${promoted} promoted, ${refused} refused, ${skipped} skipped`)
+  if (refused || skipped) process.exitCode = 1
 }
 
 main().catch((error) => {
