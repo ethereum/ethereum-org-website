@@ -123,12 +123,28 @@ jobs:
           # English URLs are unprefixed (next-intl localePrefix "as-needed"), so /en/
           # 301s to / and a /en/-scoped crawl matches nothing in the sitemap.
           if [ "$LOCALE" = "en" ]; then START="https://ethereum.org/"; else START="https://ethereum.org/$LOCALE/"; fi
-          jq --arg loc "$LOCALE" --arg start "$START" \
+
+          # Typesense tokenizes on whitespace unless a field declares its language, which
+          # leaves CJK text as one giant token -- a search on /zh/ returns almost nothing.
+          # Only the languages Typesense has customizations for are worth setting; the
+          # rest fall back to `en`, which covers European languages well enough.
+          case "$LOCALE" in
+            ja|ko|ru|uk) TS_LOCALE="$LOCALE" ;;
+            zh|zh-tw) TS_LOCALE="zh" ;;
+            *) TS_LOCALE="" ;;
+          esac
+
+          jq --arg loc "$LOCALE" --arg start "$START" --arg tsLocale "$TS_LOCALE" \
             '.index_name = "ethereumorg-staging-\($loc)"
              | .start_urls = [$start]
-             | .sitemap_urls = ["https://ethereum.org/sitemaps/sitemap/\($loc).xml"]' \
+             | .sitemap_urls = ["https://ethereum.org/sitemaps/sitemap/\($loc).xml"]
+             | if $tsLocale == "" then . else
+                 .custom_settings.field_definitions |= map(
+                   if .name == "content" or (.name | startswith("hierarchy.lvl"))
+                   then .locale = $tsLocale else . end)
+               end' \
             typesense/scraper-config.json > /tmp/config.json
-          jq -r '"index_name: \(.index_name)\nstart: \(.start_urls[0])"' /tmp/config.json
+          jq -r '"index_name: \(.index_name)\nstart: \(.start_urls[0])\nfield locale: \(.custom_settings.field_definitions[] | select(.name == "content") | .locale // "en (default)")"' /tmp/config.json
 
       - name: Scrape
         env:
