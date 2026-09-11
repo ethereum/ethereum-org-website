@@ -174,6 +174,15 @@
   @apply whitespace-normal;
 }
 
+/* Vendor sizes this connector from `--docsearch-hit-height`, which we set to
+   `fit-content` so a row can wrap onto two lines. `fit-content` on a replaced element is
+   not defined, and Safari resolves it enormous -- only child rows render this svg, so
+   only they stretched. Filling the row is what the vendor's fixed height did anyway. */
+.DocSearch-Hit-Tree {
+  height: auto;
+  align-self: stretch;
+}
+
 .DocSearch-Hit-icon {
   @apply text-body;
 }
