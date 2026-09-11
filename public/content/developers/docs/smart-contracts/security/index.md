@@ -517,6 +517,8 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
 
+- **[Adevar Labs](https://adevarlabs.com/)** - _Blockchain security firm securing $1 billion+ on chain across smart contract, infrastructure, and operational security audits, with engineers ranked top-3 in the industry’s biggest audit competitions._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
