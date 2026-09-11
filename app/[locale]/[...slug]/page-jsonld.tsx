@@ -52,7 +52,7 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
-  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
+  const { authorGraphNodes, authorReferences } = resolveAuthorsFromFrontmatter(
     frontmatter.authors ?? frontmatter.author
   )
 
@@ -71,7 +71,7 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url,
         inLanguage: locale,
-        author: authorIds,
+        author: authorReferences,
         contributor: contributorList,
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
@@ -91,7 +91,7 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: authorIds,
+        author: authorReferences,
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,
