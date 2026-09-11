@@ -72,8 +72,6 @@ export type FilterableCatalogProps<TItem> = {
   /** Optional row above the search input, outside the bordered sidebar box. */
   renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
   renderResults: (items: TItem[]) => ReactNode
-  /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
-  renderResultsHeader?: (state: CatalogFilterState) => ReactNode
   /**
    * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
    * into the page flow; `"sheet"` collapses it behind a "Filters" bar and needs
@@ -105,7 +103,6 @@ export default function FilterableCatalog<TItem>({
   renderSidebar,
   renderSidebarHeader,
   renderResults,
-  renderResultsHeader,
   mobileVariant = "inline",
   onReset,
   className,
@@ -266,8 +263,6 @@ export default function FilterableCatalog<TItem>({
             </div>
           )}
           <div ref={resultsTopRef} className="scroll-mt-24" />
-          {renderResultsHeader?.(selection)}
-
           <p className="text-sm text-body-medium" aria-live="polite">
             {labels.resultsLabel}:{" "}
             <strong>{nf.format(filteredItems.length)}</strong> /{" "}

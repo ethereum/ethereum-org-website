@@ -20,12 +20,6 @@ import ToolCard from "./ToolCard"
 
 const SUBCATEGORY_FILTER_KEY = "subcategory"
 
-const PATH_SEPARATOR = "\u00A0\u00A0/\u00A0\u00A0"
-
-function formatPathSegment(value: string): string {
-  return value.toLocaleUpperCase()
-}
-
 type ToolsCatalogProps = {
   locale: string
   tools: DeveloperToolWithCategory[]
@@ -260,24 +254,6 @@ export default function ToolsCatalog({
     return searchableText.includes(normalizedQuery)
   }
 
-  const renderResultsHeader = (state: CatalogFilterState) => {
-    const raw = state[SUBCATEGORY_FILTER_KEY]
-    const selectedSubcategoryId = typeof raw === "string" ? raw : undefined
-    if (!currentCategoryId && !selectedSubcategoryId) return null
-    return (
-      <p className="text-sm text-body-medium">
-        {currentCategoryId &&
-          formatPathSegment(
-            getCategoryLabel(currentCategoryId, categoryLabels)
-          )}
-        {selectedSubcategoryId &&
-          `${PATH_SEPARATOR}${formatPathSegment(
-            getSubcategoryLabel(selectedSubcategoryId, subcategoryLabels)
-          )}`}
-      </p>
-    )
-  }
-
   return (
     <FilterableCatalog
       locale={locale}
@@ -305,7 +281,6 @@ export default function ToolsCatalog({
           />
         )
       }}
-      renderResultsHeader={renderResultsHeader}
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}
