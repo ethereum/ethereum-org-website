@@ -25,11 +25,13 @@ export function discoverStaticPages(
 
   for (const entry of entries) {
     if (entry.isDirectory()) {
-      // Skip dynamic routes (names starting with '[')
-      if (entry.name.startsWith("[")) continue
-
-      // Skip private folders starting with '_' (Next.js convention - not routable)
-      if (entry.name.startsWith("_")) continue
+      // Skip non-public Next.js route segments: dynamic routes, private
+      // folders, parallel-route slots, and route groups/interceptors.
+      if (
+        ["[", "_", "@", "("].some((prefix) => entry.name.startsWith(prefix))
+      ) {
+        continue
+      }
 
       // Skip parallel-route slots ('@modal') and intercepting routes
       // ('(.)[tool]'). Neither is a URL segment, so emitting them produces

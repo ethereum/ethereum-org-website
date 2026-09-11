@@ -38,7 +38,7 @@ export default async function sitemap({
   const entries: MetadataRoute.Sitemap = []
   const seenUrls = new Set<string>()
 
-  for (const { slug, translatedLocales } of pages) {
+  for (const { slug, translatedLocales, lastModified } of pages) {
     // This shard only carries URLs for its own locale; the full hreflang
     // alternates block is still emitted so each URL cross-references every
     // translated version.
@@ -64,7 +64,7 @@ export default async function sitemap({
     if (seenUrls.has(url)) continue
     seenUrls.add(url)
 
-    entries.push({ url, alternates })
+    entries.push({ url, alternates, lastModified })
   }
 
   return entries

@@ -11,11 +11,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-ethereum-history-founder-and-ownership")
@@ -104,7 +104,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
               "The historical development and launch of the Ethereum blockchain network",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }
