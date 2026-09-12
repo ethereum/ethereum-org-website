@@ -51,6 +51,9 @@ export default function CatalogNavGroup({
     <div className="space-y-1">
       <BaseLink
         href={config.allHref}
+        // Navigating to a route already rendered keeps this island mounted, so
+        // the filter has to be cleared here or the "all" view stays filtered.
+        onClick={() => onSelectChild(undefined)}
         className={cn(
           rowClasses,
           "justify-between",
@@ -99,6 +102,7 @@ export default function CatalogNavGroup({
                 <div className="ms-5 space-y-1 border-s ps-2">
                   <BaseLink
                     href={item.href}
+                    onClick={() => onSelectChild(undefined)}
                     className={cn(childRowClasses, "text-body-medium")}
                   >
                     {/* Every group's link would otherwise read "Show all":

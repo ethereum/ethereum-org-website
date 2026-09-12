@@ -140,7 +140,10 @@ export default function FilterableCatalog<TItem>({
         }
         // Native history, not the router: this is the same page with a
         // different filter, so there is nothing to re-fetch or re-render.
-        window.history.pushState(null, "", url)
+        // Guarded: clearing an absent param would stack dead history entries.
+        if (url.href !== window.location.href) {
+          window.history.pushState(null, "", url)
+        }
       }
       if (options?.scroll ?? true) {
         resultsTopRef.current?.scrollIntoView({
