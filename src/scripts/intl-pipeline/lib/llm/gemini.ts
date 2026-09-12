@@ -1280,7 +1280,7 @@ async function callGemini(
     const validation: ValidationResult =
       fileType === "json"
         ? validateTranslatedJson(text, fileContent)
-        : validateTranslatedMarkdown(text, fileContent)
+        : validateTranslatedMarkdown(text, fileContent, targetLanguage)
 
     if (validation.valid) {
       return {
