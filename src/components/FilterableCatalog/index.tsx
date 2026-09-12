@@ -83,6 +83,13 @@ export type FilterableCatalogProps<TItem> = {
    * The shell owns the clearing; the consumer owns any tracking.
    */
   onReset?: () => void
+  /**
+   * Mirrors one single-select filter key in the URL query string under the same
+   * name, so a selection is shareable, survives a refresh, and undoes with the
+   * back button. Read on mount rather than during render: the prerendered HTML
+   * knows no query string, so seeding state from it would mismatch hydration.
+   */
+  urlParamKey?: string
   className?: string
 }
 
@@ -105,6 +112,7 @@ export default function FilterableCatalog<TItem>({
   renderResults,
   mobileVariant = "inline",
   onReset,
+  urlParamKey,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
@@ -120,15 +128,44 @@ export default function FilterableCatalog<TItem>({
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
   // Stable identity so memoized filter controls don't re-render every keystroke
-  const setFilter: CatalogSetFilter = useCallback((key, value, options) => {
-    setSelection((prev) => ({ ...prev, [key]: value }))
-    if (options?.scroll ?? true) {
-      resultsTopRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
+  const setFilter: CatalogSetFilter = useCallback(
+    (key, value, options) => {
+      setSelection((prev) => ({ ...prev, [key]: value }))
+      if (key === urlParamKey) {
+        const url = new URL(window.location.href)
+        if (typeof value === "string") {
+          url.searchParams.set(key, value)
+        } else {
+          url.searchParams.delete(key)
+        }
+        // Native history, not the router: this is the same page with a
+        // different filter, so there is nothing to re-fetch or re-render.
+        window.history.pushState(null, "", url)
+      }
+      if (options?.scroll ?? true) {
+        resultsTopRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    },
+    [urlParamKey]
+  )
+
+  useEffect(() => {
+    if (!urlParamKey) return
+    const syncFromUrl = () => {
+      const value =
+        new URLSearchParams(window.location.search).get(urlParamKey) ??
+        undefined
+      setSelection((prev) =>
+        prev[urlParamKey] === value ? prev : { ...prev, [urlParamKey]: value }
+      )
     }
-  }, [])
+    syncFromUrl()
+    window.addEventListener("popstate", syncFromUrl)
+    return () => window.removeEventListener("popstate", syncFromUrl)
+  }, [urlParamKey])
 
   const filteredItems = useMemo(
     () =>
@@ -156,8 +193,13 @@ export default function FilterableCatalog<TItem>({
   const resetAll = useCallback(() => {
     setSearch("")
     setSelection({})
+    if (urlParamKey) {
+      const url = new URL(window.location.href)
+      url.searchParams.delete(urlParamKey)
+      window.history.pushState(null, "", url)
+    }
     onReset?.()
-  }, [onReset])
+  }, [onReset, urlParamKey])
 
   // Event triple kept from the old shared ProductTable sheet for trend comparability.
   const openMobileFilters = useCallback((open: boolean) => {

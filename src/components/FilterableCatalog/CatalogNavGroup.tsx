@@ -1,5 +1,6 @@
 "use client"
 
+import { type ReactNode, useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -69,9 +70,10 @@ export default function CatalogNavGroup({
         )
 
         return (
-          <Collapsible
+          <NavGroupCollapsible
             key={item.id}
-            defaultOpen={item.isCurrent || holdsSelectedChild}
+            defaultOpen={!!item.isCurrent}
+            holdsSelectedChild={!!holdsSelectedChild}
           >
             <CollapsibleTrigger
               className={cn(
@@ -145,9 +147,37 @@ export default function CatalogNavGroup({
                 </div>
               </div>
             </CollapsibleContent>
-          </Collapsible>
+          </NavGroupCollapsible>
         )
       })}
     </div>
+  )
+}
+
+/**
+ * Opens itself when its group gains the selected child — a deep link applies
+ * its filter after mount, so `defaultOpen` alone would leave the matching
+ * group collapsed. Never force-closes: deselecting shouldn't collapse the
+ * group the pointer is in.
+ */
+function NavGroupCollapsible({
+  defaultOpen,
+  holdsSelectedChild,
+  children,
+}: {
+  defaultOpen: boolean
+  holdsSelectedChild: boolean
+  children: ReactNode
+}) {
+  const [open, setOpen] = useState(defaultOpen || holdsSelectedChild)
+
+  useEffect(() => {
+    if (holdsSelectedChild) setOpen(true)
+  }, [holdsSelectedChild])
+
+  return (
+    <Collapsible open={open} onOpenChange={setOpen}>
+      {children}
+    </Collapsible>
   )
 }

@@ -18,7 +18,8 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
 
-const SUBCATEGORY_FILTER_KEY = "subcategory"
+/** Doubles as the URL query param, so a subcategory is linkable: `?sub=<id>` */
+const SUBCATEGORY_FILTER_KEY = "sub"
 
 type ToolsCatalogProps = {
   locale: string
@@ -232,7 +233,9 @@ export default function ToolsCatalog({
           count: isFilterable
             ? countBySubcategory[subcategory.id] || 0
             : undefined,
-          href: isFilterable ? undefined : href,
+          href: isFilterable
+            ? undefined
+            : `${href}?${SUBCATEGORY_FILTER_KEY}=${subcategory.id}`,
         })),
       }
     }),
@@ -280,6 +283,7 @@ export default function ToolsCatalog({
         closeLabel: labels.closeLabel,
       }}
       mobileVariant="sheet"
+      urlParamKey={SUBCATEGORY_FILTER_KEY}
       renderSidebar={({ state, setFilter }) => {
         const raw = state[SUBCATEGORY_FILTER_KEY]
         return (
