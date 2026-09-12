@@ -90,6 +90,12 @@ export type FilterableCatalogProps<TItem> = {
    * knows no query string, so seeding state from it would mismatch hydration.
    */
   urlParamKey?: string
+  /**
+   * Single-select catalogs: picking a filter or following a link closes the
+   * mobile panel, since the choice is already final. Leave off for multi-select
+   * filters, where the panel has to survive several ticks.
+   */
+  closeMobileOnSelect?: boolean
   className?: string
 }
 
@@ -113,6 +119,7 @@ export default function FilterableCatalog<TItem>({
   mobileVariant = "inline",
   onReset,
   urlParamKey,
+  closeMobileOnSelect,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
@@ -145,6 +152,9 @@ export default function FilterableCatalog<TItem>({
           window.history.pushState(null, "", url)
         }
       }
+      // Untracked, unlike openMobileFilters: this is a consequence of the pick,
+      // not a tap on the toggle.
+      if (closeMobileOnSelect) setMobileFiltersOpen(false)
       if (options?.scroll ?? true) {
         resultsTopRef.current?.scrollIntoView({
           behavior: "smooth",
@@ -152,7 +162,7 @@ export default function FilterableCatalog<TItem>({
         })
       }
     },
-    [urlParamKey]
+    [urlParamKey, closeMobileOnSelect]
   )
 
   useEffect(() => {
@@ -283,7 +293,19 @@ export default function FilterableCatalog<TItem>({
                     <X className="size-5" />
                   </button>
                 </div>
-                <div className="flex-1 space-y-3 overflow-y-auto">
+                <div
+                  className="flex-1 space-y-3 overflow-y-auto"
+                  // Links navigate past the panel, so they close it like a
+                  // filter pick does. `setFilter` can't see them.
+                  onClick={(event) => {
+                    if (
+                      closeMobileOnSelect &&
+                      (event.target as HTMLElement).closest("a")
+                    ) {
+                      setMobileFiltersOpen(false)
+                    }
+                  }}
+                >
                   {renderHeader("mobile")}
                   {searchInput}
                   <div className="rounded-xl border p-2">

@@ -284,6 +284,7 @@ export default function ToolsCatalog({
       }}
       mobileVariant="sheet"
       urlParamKey={SUBCATEGORY_FILTER_KEY}
+      closeMobileOnSelect
       renderSidebar={({ state, setFilter }) => {
         const raw = state[SUBCATEGORY_FILTER_KEY]
         return (
