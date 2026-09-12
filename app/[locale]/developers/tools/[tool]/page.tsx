@@ -1,10 +1,11 @@
+import { AppWindowMac } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
-import { Image } from "@/components/Image"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
 import MainArticle from "@/components/MainArticle"
 import {
   Breadcrumb,
@@ -120,23 +121,32 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
       <main className="px-page pb-page">
         <MainArticle className="flex flex-col gap-10">
           {tool.banner_url && (
-            <Image
+            <ImageWithFallback
+              unoptimized
               src={tool.banner_url}
               alt=""
               width={1200}
               height={300}
               className="h-40 w-full rounded-base object-cover sm:h-56"
+              fallback={null}
             />
           )}
 
           <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
             {tool.thumbnail_url && (
-              <Image
+              <ImageWithFallback
+                unoptimized
+                loading="eager"
                 src={tool.thumbnail_url}
                 alt={tool.name}
                 width={124}
                 height={124}
                 className="size-16 shrink-0 rounded-xl object-cover xl:size-32"
+                fallback={
+                  <div className="grid size-16 shrink-0 place-items-center rounded-xl border xl:size-32">
+                    <AppWindowMac className="size-8 text-body-medium xl:size-12" />
+                  </div>
+                }
               />
             )}
             <div className="flex flex-col gap-4">
