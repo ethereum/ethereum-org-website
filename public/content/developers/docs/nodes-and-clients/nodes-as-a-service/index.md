@@ -290,6 +290,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
 
+- [**OnFinality**](https://onfinality.io/en/networks/eth)
+  - [Docs](https://documentation.onfinality.io/support/)
+  - Features
+    - HTTP and WebSocket endpoints
+    - Archive access and Trace API
+    - Shared RPC APIs with dedicated node options
+    - Request analytics and usage-based billing
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/)
   - Features
