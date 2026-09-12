@@ -11,6 +11,7 @@ set -euo pipefail
 #   ./src/scripts/prepare-release.sh [--dry-run] fetch-draft        # Fetch draft release body
 #   ./src/scripts/prepare-release.sh [--dry-run] publish <version> <draft_tag> <body_file>  # Publish release
 #   ./src/scripts/prepare-release.sh [--dry-run] create-pr <version> <body_file>            # Create deploy PR
+#   ./src/scripts/prepare-release.sh [--dry-run] verify <version>   # Assert the release was published
 #   ./src/scripts/prepare-release.sh cleanup            # Remove worktree if created
 #   ./src/scripts/prepare-release.sh reset              # Reset worktree to clean state
 #
@@ -153,6 +154,21 @@ cmd_reset() {
   log_info "✓ Worktree reset and updated"
 }
 
+# Fast-forward a release branch onto its origin counterpart before merging into
+# it. The worktree checks out the *local* ref, which on a dev machine is usually
+# stale; merging into it rewinds the branch and the push is rejected.
+sync_branch_to_origin() {
+  local branch="$1"
+  local ahead
+  ahead=$(run_in_workdir git rev-list --count "origin/$branch..$branch")
+  if [[ "$ahead" -gt 0 ]]; then
+    log_error "Local $branch has $ahead commit(s) not on origin/$branch."
+    log_error "Release branches must mirror origin. Resolve manually."
+    exit 1
+  fi
+  run_in_workdir_or_dry git reset --hard "origin/$branch"
+}
+
 cmd_preflight() {
   log_info "Running pre-flight checks..."
 
@@ -176,6 +192,7 @@ cmd_preflight() {
   # Fetch latest from origin
   log_info "Fetching latest from origin..."
   run_in_workdir git fetch origin
+  sync_branch_to_origin dev
 
   # Back-merge: master -> staging (if needed)
   log_info "Checking if master needs to be merged into staging..."
@@ -183,6 +200,7 @@ cmd_preflight() {
   if [[ "$MASTER_AHEAD" -gt 0 ]]; then
     log_info "Merging origin/master into staging ($MASTER_AHEAD commits)..."
     run_in_workdir_or_dry git checkout staging
+    sync_branch_to_origin staging
     run_in_workdir_or_dry git merge origin/master -m "Merge master into staging"
     run_in_workdir_or_dry git push origin staging
     run_in_workdir_or_dry git checkout dev
@@ -263,7 +281,9 @@ cmd_merge_staging() {
 
   log_info "Merging dev into staging..."
 
+  run_in_workdir git fetch origin
   run_in_workdir_or_dry git checkout staging
+  sync_branch_to_origin staging
   run_in_workdir_or_dry git merge dev -m "Merge dev into staging for release"
   run_in_workdir_or_dry git push origin staging
   run_in_workdir_or_dry git checkout dev
@@ -363,6 +383,37 @@ cmd_create_pr() {
   fi
 }
 
+# A deploy PR can merge even when publishing was skipped, shipping a version
+# whose release notes never went out. Fail loudly instead.
+cmd_verify() {
+  local VERSION="${1:-}"
+
+  if [[ -z "$VERSION" ]]; then
+    log_error "Usage: prepare-release.sh verify <version>"
+    exit 1
+  fi
+
+  if [[ "$DRY_RUN" == "true" ]]; then
+    log_dry "gh release view v$VERSION --repo $REPO --json isDraft"
+    log_info "✓ Would verify release v$VERSION"
+    return 0
+  fi
+
+  local IS_DRAFT
+  if ! IS_DRAFT=$(gh release view "v$VERSION" --repo "$REPO" --json isDraft -q .isDraft 2>/dev/null); then
+    log_error "No release exists for v$VERSION — it was never published."
+    log_error "Publish it before merging the deploy PR."
+    exit 1
+  fi
+
+  if [[ "$IS_DRAFT" == "true" ]]; then
+    log_error "Release v$VERSION is still a draft — it was not published."
+    exit 1
+  fi
+
+  log_info "✓ Release v$VERSION is published"
+}
+
 # Parse --dry-run flag
 if [[ "${1:-}" == "--dry-run" ]]; then
   DRY_RUN=true
@@ -390,6 +441,9 @@ case "${1:-}" in
   create-pr)
     cmd_create_pr "${2:-}" "${3:-}"
     ;;
+  verify)
+    cmd_verify "${2:-}"
+    ;;
   cleanup)
     cmd_cleanup
     ;;
@@ -409,6 +463,7 @@ case "${1:-}" in
     echo "  fetch-draft            Fetch draft release body (JSON)"
     echo "  publish <ver> <tag> <body_file>   Publish release"
     echo "  create-pr <ver> <body_file>       Create deploy PR"
+    echo "  verify <ver>           Assert the release for <ver> was published"
     echo "  cleanup                Remove worktree if created"
     echo "  reset                  Reset worktree to clean state (recovery)"
     exit 1
