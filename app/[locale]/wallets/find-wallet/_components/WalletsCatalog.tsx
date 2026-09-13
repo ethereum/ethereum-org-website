@@ -12,14 +12,14 @@ import {
 
 import FilterableCatalog from "@/components/FilterableCatalog"
 import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
-import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
+import { asArray } from "@/components/FilterableCatalog/utils"
 import { Section } from "@/components/ui/section"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
-import type { WalletDeviceId } from "@/data/wallets/devices"
-import type { WalletPersonaId } from "@/data/wallets/personas"
+import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
+import { WALLET_PERSONAS, type WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
 import WalletDetailModal, { type WalletModalLabels } from "./WalletDetailModal"
@@ -36,8 +36,6 @@ import WalletFilters, {
 import WalletPersonaCards, {
   type WalletPersonaCard,
 } from "./WalletPersonaCards"
-
-const PERSONAS_KEY = "personas"
 
 // Category kept from the old empty state for trend comparability.
 const trackEmptyStateReset = () =>
@@ -89,7 +87,7 @@ type WalletsCatalogProps = {
   wallets: CatalogWalletCard[]
   filterOptions: WalletFilterOptions
   personas: WalletPersonaCard[]
-  /** Set by the persona pages; the path segment is derived from it afterwards. */
+  /** Set by the persona pages: seeds the base filters and stays out of the query. */
   initialPersonaId?: WalletPersonaId
   labels: WalletCatalogLabels
 }
@@ -99,15 +97,6 @@ function filterWallet(
   state: CatalogFilterState,
   query: string
 ) {
-  const personas = asArray(state[PERSONAS_KEY])
-  if (
-    !personas.every((persona) =>
-      wallet.personas.includes(persona as WalletPersonaId)
-    )
-  ) {
-    return false
-  }
-
   const devices = asArray(state[DEVICES_KEY])
   if (!devices.every((device) => wallet.devices[device as WalletDeviceId])) {
     return false
@@ -155,46 +144,102 @@ function filterWallet(
   return haystack.includes(normalizedQuery)
 }
 
-/** `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per group. */
+/**
+ * A persona is a shortcut over the base filters, not a filter of its own: it
+ * checks its features in the sidebar and reads as selected while they all
+ * are. `hardware` is a device; every other persona feature is an advanced flag.
+ */
+const slotOf = (feature: string) =>
+  (WALLET_DEVICE_IDS as string[]).includes(feature) ? DEVICES_KEY : ADVANCED_KEY
+
+const personaFeatures = (id: WalletPersonaId): readonly string[] =>
+  WALLET_PERSONAS.find((persona) => persona.id === id)?.features ?? []
+
+const hasPersona = (state: CatalogFilterState, id: WalletPersonaId) =>
+  personaFeatures(id).every((feature) =>
+    asArray(state[slotOf(feature)]).includes(feature)
+  )
+
+const addPersona = (state: CatalogFilterState, id: WalletPersonaId) => {
+  const next = { ...state }
+  for (const feature of personaFeatures(id)) {
+    const slot = slotOf(feature)
+    const ids = asArray(next[slot])
+    if (!ids.includes(feature)) next[slot] = [...ids, feature]
+  }
+  return next
+}
+
+/** Drops the persona's features, except those another selected persona still needs. */
+const removePersona = (state: CatalogFilterState, id: WalletPersonaId) => {
+  const keep = new Set(
+    WALLET_PERSONAS.filter(
+      (persona) => persona.id !== id && hasPersona(state, persona.id)
+    ).flatMap((persona) => persona.features)
+  )
+  const next = { ...state }
+  for (const feature of personaFeatures(id)) {
+    if (keep.has(feature)) continue
+    const slot = slotOf(feature)
+    next[slot] = asArray(next[slot]).filter((existing) => existing !== feature)
+  }
+  return next
+}
+
+const sameSelection = (a: CatalogFilterState, b: CatalogFilterState) =>
+  ALL_FILTER_KEYS.every((key) => {
+    const left = [...asArray(a[key])].sort()
+    const right = [...asArray(b[key])].sort()
+    return (
+      left.length === right.length && left.every((id, i) => id === right[i])
+    )
+  })
+
+/**
+ * `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per
+ * group. Null when none of our keys is present, so the page falls back to its
+ * seed. A present-but-empty key is how "the visitor cleared what this persona
+ * page starts with" survives a reload.
+ */
 const readQueryFilters = (
   search: string,
-  options: WalletFilterOptions,
-  personas: WalletPersonaCard[]
-): CatalogFilterState => {
+  options: WalletFilterOptions
+): CatalogFilterState | null => {
   const params = new URLSearchParams(search)
   const state: CatalogFilterState = {}
+  let explicit = false
   for (const key of ALL_FILTER_KEYS) {
+    if (!params.has(key)) continue
+    explicit = true
     const ids = (params.get(key) ?? "")
       .split(",")
       .filter((id) => options[key].some((option) => option.id === id))
     if (ids.length) state[key] = ids
   }
-  const selected = (params.get(PERSONAS_KEY) ?? "")
-    .split(",")
-    .filter((id) => personas.some((persona) => persona.id === id))
-  if (selected.length) state[PERSONAS_KEY] = selected
-  return state
+  return explicit ? state : null
 }
 
-const buildUrl = (selection: CatalogFilterState) => {
-  const { pathname, hash } = window.location
-  const base = pathname.replace(/\/personas\/[^/]+\/?$/, "/")
-  const personas = asArray(selection[PERSONAS_KEY])
-  // A single persona owns an indexable path; several have no path, so they
-  // travel as a query param off the index instead of being dropped.
-  const path = personas.length === 1 ? `${base}personas/${personas[0]}/` : base
-  const query = [
-    ...(personas.length > 1
-      ? [`${PERSONAS_KEY}=${personas.map(encodeURIComponent).join(",")}`]
-      : []),
-    ...ALL_FILTER_KEYS.flatMap((key) => {
-      const ids = asArray(selection[key])
-      return ids.length
-        ? [`${key}=${ids.map(encodeURIComponent).join(",")}`]
-        : []
-    }),
-  ].join("&")
-  return path + (query ? `?${query}` : "") + hash
+/**
+ * The pathname is where the visitor landed and never moves — rewriting it
+ * would make Next's router treat a toggle as a navigation. Only the query
+ * changes, and only once the selection diverges from the page's seed.
+ */
+const buildUrl = (selection: CatalogFilterState, seed: CatalogFilterState) => {
+  const { pathname, search, hash } = window.location
+  // Mutated in place rather than rebuilt: params we do not own (utm_*, gclid,
+  // referral tags) have to outlive us -- matomo.js is deferred and reads the
+  // URL well after this runs.
+  const params = new URLSearchParams(search)
+  const explicit = !sameSelection(selection, seed)
+  for (const key of ALL_FILTER_KEYS) {
+    const ids = asArray(selection[key])
+    if (explicit && ids.length) params.set(key, ids.join(","))
+    else if (explicit && asArray(seed[key]).length) params.set(key, "")
+    else params.delete(key)
+  }
+  // Commas are legal unencoded; %2C everywhere makes a shared link unreadable.
+  const query = params.toString().replace(/%2C/g, ",")
+  return pathname + (query ? `?${query}` : "") + hash
 }
 
 const WalletsResults = memo(function WalletsResults({
@@ -243,9 +288,12 @@ export default function WalletsCatalog({
   initialPersonaId,
   labels,
 }: WalletsCatalogProps) {
-  const [selection, setSelection] = useState<CatalogFilterState>(() =>
-    initialPersonaId ? { [PERSONAS_KEY]: [initialPersonaId] } : {}
+  // What this page starts with; the query only records divergence from it.
+  const seed = useMemo<CatalogFilterState>(
+    () => (initialPersonaId ? addPersona({}, initialPersonaId) : {}),
+    [initialPersonaId]
   )
+  const [selection, setSelection] = useState(seed)
   // Seeded like the SSR pass so the persona counts hydrate without a mismatch.
   const [filtered, setFiltered] = useState(() =>
     wallets.filter((wallet) => filterWallet(wallet, selection, ""))
@@ -275,24 +323,26 @@ export default function WalletsCatalog({
   useEffect(() => {
     if (!urlRead.current) {
       urlRead.current = true
-      const fromUrl = readQueryFilters(
-        window.location.search,
-        filterOptions,
-        personas
-      )
-      if (Object.keys(fromUrl).length) {
-        setSelection((prev) => ({ ...prev, ...fromUrl }))
+      const fromUrl = readQueryFilters(window.location.search, filterOptions)
+      if (fromUrl) {
+        setSelection(fromUrl)
         return
       }
     }
-    const url = buildUrl(selection)
+    const url = buildUrl(selection, seed)
     const { pathname, search, hash } = window.location
     if (url !== pathname + search + hash) {
-      window.history.replaceState(null, "", url)
+      window.history.replaceState(window.history.state, "", url)
     }
-  }, [selection, filterOptions, personas])
+  }, [selection, seed, filterOptions])
 
-  const selectedPersonas = asArray(selection[PERSONAS_KEY]) as WalletPersonaId[]
+  const selectedPersonas = useMemo(
+    () =>
+      personas
+        .filter((persona) => hasPersona(selection, persona.id))
+        .map((persona) => persona.id),
+    [personas, selection]
+  )
 
   // Old-arm semantics: how many of the currently visible wallets also fit.
   const personaCounts = useMemo(() => {
@@ -308,10 +358,11 @@ export default function WalletsCatalog({
   const onTogglePersona = useCallback(
     (persona: WalletPersonaCard) => {
       const selecting = !selectedPersonas.includes(persona.id)
-      setSelection((prev) => ({
-        ...prev,
-        [PERSONAS_KEY]: toggleId(asArray(prev[PERSONAS_KEY]), persona.id),
-      }))
+      setSelection((prev) =>
+        selecting
+          ? addPersona(prev, persona.id)
+          : removePersona(prev, persona.id)
+      )
       // Same triple as the old preset cards so persona engagement stays comparable.
       trackCustomEvent({
         eventCategory: "UserPersona",
@@ -322,7 +373,7 @@ export default function WalletsCatalog({
     [selectedPersonas]
   )
 
-  // Empty-state reset: sidebar groups and search only; personas stay.
+  // Empty-state reset clears every base filter; the persona cards follow, being derived.
   const onReset = useCallback(() => {
     setSelection((prev) => {
       const next = { ...prev }

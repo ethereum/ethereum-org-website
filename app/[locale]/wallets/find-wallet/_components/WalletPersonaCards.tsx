@@ -5,6 +5,7 @@ import { Check } from "lucide-react"
 
 import Checkbox from "@/components/ui/checkbox"
 import { FieldLegend, FieldSet } from "@/components/ui/field"
+import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -76,11 +77,23 @@ const PersonaCard = memo(function PersonaCard({
               <Check className="size-4 stroke-[3] text-background" />
             )}
           </span>
-          <span
+          <BaseLink
+            href={`/wallets/find-wallet/personas/${persona.id}/`}
+            // Real link for crawlers and modifier-clicks; a plain click filters
+            // in place. No prefetch: five landing pages nobody navigates to.
+            prefetch={false}
+            activeClassName=""
             className={cn(
-              "text-left text-xl font-bold hyphens-auto transition-all duration-50",
+              "text-start text-xl font-bold hyphens-auto no-underline transition-all duration-50 hover:no-underline",
               color.text
             )}
+            onClick={(event) => {
+              const modified =
+                event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+              if (event.button !== 0 || modified) return
+              event.preventDefault()
+              onToggle(persona)
+            }}
           >
             {persona.title}
             <span aria-hidden="true" className="font-normal">
@@ -88,11 +101,11 @@ const PersonaCard = memo(function PersonaCard({
               ({count})
             </span>
             <span className="sr-only"> {countLabel}</span>
-          </span>
+          </BaseLink>
         </span>
         <span
           id={descriptionId}
-          className="block p-2 text-left text-sm leading-normal text-body"
+          className="block p-2 text-start text-sm leading-normal text-body"
         >
           {persona.description}
         </span>
@@ -101,7 +114,7 @@ const PersonaCard = memo(function PersonaCard({
   )
 })
 
-/** Multi-select presets; the page owns the state and combines them with AND. */
+/** Shortcuts over the base filters; the page derives which read as selected. */
 const WalletPersonaCards = ({
   locale,
   personas,

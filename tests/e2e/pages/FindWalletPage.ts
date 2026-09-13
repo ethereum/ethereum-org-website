@@ -89,6 +89,12 @@ export class FindWalletPage extends BasePage {
     await this.clickFilterOption(/^Advanced filters/, label)
   }
 
+  /** The sidebar header's reset; lives inside the filter sheet below lg. */
+  async resetFilters() {
+    await this.openFiltersIfCollapsed()
+    await this.page.getByRole("button", { name: "Reset", exact: true }).click()
+  }
+
   /**
    * Scoped to the group's own Collapsible content via Radix's `aria-controls`,
    * so a prefix like "Hardware" can't reach "Hardware wallet support" in
