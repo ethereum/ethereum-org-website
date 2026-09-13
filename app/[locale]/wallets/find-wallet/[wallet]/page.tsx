@@ -19,7 +19,6 @@ import { getLocaleFormattedDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
-  getCatalogWallets,
   getRelatedWallets,
   getWalletBySlug,
   toCatalogCard,
@@ -33,15 +32,15 @@ import {
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletCard from "../_components/WalletCard"
 import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
 
-// Wallet data is repo-checked-in, so it only changes at deploy time.
+// Rendered on the first request and cached until the next deploy: wallet data
+// is repo-checked-in, and only the index and persona pages are worth
+// prerendering across 25 locales.
 export const revalidate = false
 export const dynamicParams = true
 
@@ -253,9 +252,11 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   )
 }
 
+// Empty on purpose: nothing is prerendered, but the function has to exist for
+// unknown slugs to render on demand and be cached -- without it Next renders
+// the route dynamically on every request.
 export function generateStaticParams() {
-  // Slugs derive from wallet names, so any locale lists the same set.
-  return getCatalogWallets(DEFAULT_LOCALE).map(({ slug }) => ({ wallet: slug }))
+  return []
 }
 
 export async function generateMetadata(props: {
