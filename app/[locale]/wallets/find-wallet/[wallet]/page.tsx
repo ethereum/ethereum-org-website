@@ -38,9 +38,7 @@ import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
 
-// Rendered on the first request and cached until the next deploy: wallet data
-// is repo-checked-in, and only the index and persona pages are worth
-// prerendering across 25 locales.
+// Wallet data is repo-checked-in: render on first request, cache until deploy.
 export const revalidate = false
 export const dynamicParams = true
 
@@ -252,9 +250,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   )
 }
 
-// Empty on purpose: nothing is prerendered, but the function has to exist for
-// unknown slugs to render on demand and be cached -- without it Next renders
-// the route dynamically on every request.
+// Empty on purpose: absent, Next renders the route dynamically on every request.
 export function generateStaticParams() {
   return []
 }

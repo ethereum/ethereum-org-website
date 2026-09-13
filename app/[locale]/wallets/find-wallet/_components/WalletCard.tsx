@@ -5,6 +5,7 @@ import { memo } from "react"
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import { isModified } from "@/lib/utils/keyboard"
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
 import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
@@ -55,9 +56,7 @@ const WalletCard = memo(function WalletCard({
               eventName: wallet.name,
             }}
             onClick={(event) => {
-              const modified =
-                event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
-              if (!onOpen || event.button !== 0 || modified) return
+              if (!onOpen || event.button !== 0 || isModified(event)) return
               event.preventDefault()
               onOpen(wallet.slug)
             }}

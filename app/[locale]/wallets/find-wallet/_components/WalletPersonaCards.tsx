@@ -8,7 +8,7 @@ import { FieldLegend, FieldSet } from "@/components/ui/field"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { isModified } from "@/lib/utils/keyboard"
 
 import { PERSONA_STYLES, type WalletPersonaId } from "@/data/wallets/personas"
 
@@ -19,9 +19,9 @@ export type WalletPersonaCard = {
 }
 
 type WalletPersonaCardsProps = {
-  locale: string
   personas: WalletPersonaCard[]
-  counts: Record<WalletPersonaId, number>
+  /** Already locale-formatted. */
+  counts: Record<WalletPersonaId, string>
   selected: WalletPersonaId[]
   onToggle: (persona: WalletPersonaCard) => void
   labels: {
@@ -31,7 +31,7 @@ type WalletPersonaCardsProps = {
   }
 }
 
-const PersonaCard = memo(function PersonaCard({
+const PersonaCard = ({
   persona,
   count,
   isActive,
@@ -43,7 +43,7 @@ const PersonaCard = memo(function PersonaCard({
   isActive: boolean
   countLabel: string
   onToggle: (persona: WalletPersonaCard) => void
-}) {
+}) => {
   const descriptionId = useId()
   const color = PERSONA_STYLES[persona.id]
 
@@ -88,9 +88,7 @@ const PersonaCard = memo(function PersonaCard({
               color.text
             )}
             onClick={(event) => {
-              const modified =
-                event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
-              if (event.button !== 0 || modified) return
+              if (event.button !== 0 || isModified(event)) return
               event.preventDefault()
               onToggle(persona)
             }}
@@ -112,19 +110,16 @@ const PersonaCard = memo(function PersonaCard({
       </label>
     </li>
   )
-})
+}
 
 /** Shortcuts over the base filters; the page derives which read as selected. */
 const WalletPersonaCards = ({
-  locale,
   personas,
   counts,
   selected,
   onToggle,
   labels,
 }: WalletPersonaCardsProps) => {
-  const nf = numberFormat(locale)
-
   return (
     <FieldSet className="relative min-w-0 gap-0 overflow-x-clip">
       <FieldLegend className="sr-only">{labels.legend}</FieldLegend>
@@ -133,7 +128,7 @@ const WalletPersonaCards = ({
         data-testid="persona-cards-container"
       >
         {personas.map((persona) => {
-          const count = nf.format(counts[persona.id])
+          const count = counts[persona.id]
           return (
             <PersonaCard
               key={persona.id}

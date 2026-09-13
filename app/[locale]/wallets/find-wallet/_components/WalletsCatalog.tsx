@@ -16,6 +16,7 @@ import { asArray } from "@/components/FilterableCatalog/utils"
 import { Section } from "@/components/ui/section"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { numberFormat } from "@/lib/utils/numbers"
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
 import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
@@ -72,11 +73,7 @@ export type WalletCatalogLabels = {
   personas: Record<WalletPersonaId, string>
 }
 
-/**
- * All option lists are built on the server: they arrive as stable references,
- * which is what lets the memoized filter groups skip re-rendering when
- * unrelated state (a persona, the modal) changes.
- */
+/** Built on the server: stable references keep the memoized filter groups quiet. */
 export type WalletFilterOptions = Record<
   (typeof ALL_FILTER_KEYS)[number],
   WalletFilterOption[]
@@ -152,17 +149,19 @@ function filterWallet(
 const slotOf = (feature: string) =>
   (WALLET_DEVICE_IDS as string[]).includes(feature) ? DEVICES_KEY : ADVANCED_KEY
 
-const personaFeatures = (id: WalletPersonaId): readonly string[] =>
-  WALLET_PERSONAS.find((persona) => persona.id === id)?.features ?? []
+const PERSONA_FEATURES = {} as Record<WalletPersonaId, readonly string[]>
+for (const persona of WALLET_PERSONAS) {
+  PERSONA_FEATURES[persona.id] = persona.features
+}
 
 const hasPersona = (state: CatalogFilterState, id: WalletPersonaId) =>
-  personaFeatures(id).every((feature) =>
+  PERSONA_FEATURES[id].every((feature) =>
     asArray(state[slotOf(feature)]).includes(feature)
   )
 
 const addPersona = (state: CatalogFilterState, id: WalletPersonaId) => {
   const next = { ...state }
-  for (const feature of personaFeatures(id)) {
+  for (const feature of PERSONA_FEATURES[id]) {
     const slot = slotOf(feature)
     const ids = asArray(next[slot])
     if (!ids.includes(feature)) next[slot] = [...ids, feature]
@@ -178,7 +177,7 @@ const removePersona = (state: CatalogFilterState, id: WalletPersonaId) => {
     ).flatMap((persona) => persona.features)
   )
   const next = { ...state }
-  for (const feature of personaFeatures(id)) {
+  for (const feature of PERSONA_FEATURES[id]) {
     if (keep.has(feature)) continue
     const slot = slotOf(feature)
     next[slot] = asArray(next[slot]).filter((existing) => existing !== feature)
@@ -187,20 +186,13 @@ const removePersona = (state: CatalogFilterState, id: WalletPersonaId) => {
 }
 
 const sameSelection = (a: CatalogFilterState, b: CatalogFilterState) =>
-  ALL_FILTER_KEYS.every((key) => {
-    const left = [...asArray(a[key])].sort()
-    const right = [...asArray(b[key])].sort()
-    return (
-      left.length === right.length && left.every((id, i) => id === right[i])
-    )
-  })
+  ALL_FILTER_KEYS.every(
+    (key) =>
+      String([...asArray(a[key])].sort()) ===
+      String([...asArray(b[key])].sort())
+  )
 
-/**
- * `?devices=ios,android&networks=OP%20Mainnet` — one comma-joined param per
- * group. Null when none of our keys is present, so the page falls back to its
- * seed. A present-but-empty key is how "the visitor cleared what this persona
- * page starts with" survives a reload.
- */
+/** `?devices=ios,android` per group; null when none of our keys is present. */
 const readQueryFilters = (
   search: string,
   options: WalletFilterOptions
@@ -219,16 +211,10 @@ const readQueryFilters = (
   return explicit ? state : null
 }
 
-/**
- * The pathname is where the visitor landed and never moves — rewriting it
- * would make Next's router treat a toggle as a navigation. Only the query
- * changes, and only once the selection diverges from the page's seed.
- */
+/** Only the query moves, and only once the selection diverges from the seed. */
 const buildUrl = (selection: CatalogFilterState, seed: CatalogFilterState) => {
   const { pathname, search, hash } = window.location
-  // Mutated in place rather than rebuilt: params we do not own (utm_*, gclid,
-  // referral tags) have to outlive us -- matomo.js is deferred and reads the
-  // URL well after this runs.
+  // Keep params we do not own (utm_*, gclid): deferred matomo.js reads them later.
   const params = new URLSearchParams(search)
   const explicit = !sameSelection(selection, seed)
   for (const key of ALL_FILTER_KEYS) {
@@ -299,9 +285,7 @@ export default function WalletsCatalog({
     wallets.filter((wallet) => filterWallet(wallet, selection, ""))
   )
   const [openSlug, setOpenSlug] = useState<string | null>(null)
-  // A persona page renders only its own wallets until the visitor touches the
-  // page. Crawlers render the HTML but never interact, so they index the
-  // subset the page is about; anything time-based would defeat that.
+  // Persona pages render only their subset until interaction, so crawlers index it.
   const [revealAll, setRevealAll] = useState(!initialPersonaId)
   const urlRead = useRef(false)
 
@@ -346,14 +330,15 @@ export default function WalletsCatalog({
 
   // Old-arm semantics: how many of the currently visible wallets also fit.
   const personaCounts = useMemo(() => {
-    const counts = {} as Record<WalletPersonaId, number>
+    const nf = numberFormat(locale)
+    const counts = {} as Record<WalletPersonaId, string>
     for (const persona of personas) {
-      counts[persona.id] = filtered.filter((wallet) =>
-        wallet.personas.includes(persona.id)
-      ).length
+      counts[persona.id] = nf.format(
+        filtered.filter((wallet) => wallet.personas.includes(persona.id)).length
+      )
     }
     return counts
-  }, [filtered, personas])
+  }, [filtered, locale, personas])
 
   const onTogglePersona = useCallback(
     (persona: WalletPersonaCard) => {
@@ -396,12 +381,8 @@ export default function WalletsCatalog({
     if (window.history.state?.walletModal) window.history.back()
   }, [])
 
-  // One extra entry at the same URL, so Back and the Android back gesture close
-  // the modal instead of leaving the catalog. Two deliberate details: the entry
-  // is added a frame after the dialog paints, because a history entry added
-  // inside the click makes the browser wait for the dialog's render before the
-  // interaction's paint (+500ms INP); and it goes through the native method,
-  // since the patched one notifies Next's router for a URL that has not changed.
+  // Extra entry so Back closes the modal. Pushed a frame late (pushState inside
+  // the click costs +500ms INP) via the native method (Next patches the other).
   useEffect(() => {
     if (!openSlug) return
     const frame = requestAnimationFrame(() => {
@@ -428,7 +409,6 @@ export default function WalletsCatalog({
     <>
       <Section>
         <WalletPersonaCards
-          locale={locale}
           personas={personas}
           counts={personaCounts}
           selected={selectedPersonas}
