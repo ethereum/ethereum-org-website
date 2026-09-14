@@ -16,6 +16,7 @@ import {
   parseExplorerQuery,
   truncateHex,
 } from "@/lib/utils/explorerQuery"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import {
   isWithheldResult,
@@ -63,6 +64,29 @@ const EXPLORER_ID_PREFIX = "ethereum-org-block-explorer:"
 
 const isExplorerHit = (objectID: string) =>
   objectID.startsWith(EXPLORER_ID_PREFIX)
+
+/**
+ * What the reader took, as the Matomo event action.
+ *
+ * It has to travel on the event rather than be read off the pageview the click produces:
+ * `Matomo.tsx` tracks `usePathname()`, which has no fragment, so a pageview cannot say
+ * whether a page or a section inside it was chosen.
+ *
+ * A stored row has no `_highlightResult` -- `stored-searches` strips it on save, the same
+ * signal the vendor's own grouping keys on. Reusing history is a different act from taking
+ * a fresh result, and counting the two together would flatter the follow-through rate.
+ */
+const resultKind = (hit: DocSearchHit): string => {
+  if (!hit._highlightResult) return "recent result"
+  if (isExplorerHit(hit.objectID)) return "explorer result"
+  return hit.type === "lvl1" ? "page result" : "section result"
+}
+
+const resultEvent = (hit: DocSearchHit) => ({
+  eventCategory: "search",
+  eventAction: resultKind(hit),
+  eventName: hit.url,
+})
 
 /**
  * The networks offered as explorer results, from the same list `/layer-2/networks`
@@ -217,7 +241,17 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
    */
   const hitComponent = useCallback(({ hit, children }: HitComponentProps) => {
     if (!isExplorerHit(hit.objectID)) {
-      return <a href={hit.url}>{children}</a>
+      return (
+        <a
+          href={hit.url}
+          // Navigates this tab, so the event cannot wait for an idle callback.
+          onClick={() =>
+            trackCustomEvent(resultEvent(hit), { immediate: true })
+          }
+        >
+          {children}
+        </a>
+      )
     }
     const icon = (hit as unknown as { __explorerIcon: string }).__explorerIcon
     return (
@@ -225,6 +259,9 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
         href={hit.url}
         hideArrow
         className="DocSearch-Hit-explorer"
+        // BaseLink already tracks its own click, so this replaces that event rather than
+        // adding a second one beside it.
+        customEventOptions={resultEvent(hit)}
         style={
           {
             "--explorer-icon": `url("${icon}")`,
@@ -238,7 +275,9 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
 
   const navigator = useMemo(
     () => ({
-      navigate({ itemUrl }: { itemUrl: string }) {
+      // Keyboard selection only -- a mouse click follows the anchor and is tracked there.
+      navigate({ item, itemUrl }: { item: DocSearchHit; itemUrl: string }) {
+        trackCustomEvent(resultEvent(item), { immediate: true })
         if (isExternal(itemUrl)) {
           window.open(itemUrl, "_blank", "noopener,noreferrer")?.focus()
           return
