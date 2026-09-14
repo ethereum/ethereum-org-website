@@ -28,8 +28,6 @@ export type CatalogNavGroupConfig = {
   allLabel: string
   allHref: string
   allCount: number
-  /** Label for each item's link to its own listing page, e.g. "Show all" */
-  itemAllLabel: string
   items: CatalogNavItem[]
 }
 

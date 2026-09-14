@@ -37,7 +37,6 @@ type ToolsCatalogProps = {
     filtersToggle: string
     applyLabel: string
     closeLabel: string
-    showAll: string
   }
   currentCategoryId?: string
 }
@@ -214,7 +213,6 @@ export default function ToolsCatalog({
     allLabel: labels.allCategories,
     allHref: "/developers/tools/",
     allCount: totalCount,
-    itemAllLabel: labels.showAll,
     items: categories.map((category) => {
       const href = `/developers/tools/categories/${category.id}/`
       // A category page holds only its own tools, so every other category's

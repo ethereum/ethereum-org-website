@@ -31,12 +31,12 @@ type CatalogNavGroupProps = {
 }
 
 /**
- * Controlled sidebar building block: each top-level entry expands in place to
- * reveal its children, which are single-select filters — or links, for children
- * whose items this catalog doesn't hold (`child.href`). The entry's own listing
- * page stays reachable through the link at the top of the expanded group.
- * Purely presentational — value in (`selectedChildId`), event out
- * (`onSelectChild`); it holds no filter state of its own.
+ * Controlled sidebar building block. Each top-level entry splits in two: the
+ * chevron expands the group in place, the label is a link to that entry's own
+ * listing page. Children are single-select filters — or links, for children
+ * whose items this catalog doesn't hold (`child.href`). Purely presentational —
+ * value in (`selectedChildId`), event out (`onSelectChild`); it holds no filter
+ * state of its own.
  */
 export default function CatalogNavGroup({
   locale,
@@ -78,19 +78,31 @@ export default function CatalogNavGroup({
             defaultOpen={!!item.isCurrent}
             holdsSelectedChild={!!holdsSelectedChild}
           >
-            <CollapsibleTrigger
-              className={cn(
-                "group",
-                rowClasses,
-                isItemActive && "bg-background-highlight text-primary"
-              )}
-            >
-              <ChevronDown className="size-4 shrink-0 text-body-medium transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
-              <span className="flex-1">{item.label}</span>
-              <span className="text-xs text-body-medium">
-                {nf.format(item.count)}
-              </span>
-            </CollapsibleTrigger>
+            <div className="flex items-center gap-1">
+              <CollapsibleTrigger className="group grid size-8 shrink-0 place-items-center rounded-md hover:bg-background-highlight">
+                <ChevronDown className="size-4 text-body-medium transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
+                {/* Names the toggle for a screen reader; its own label would
+                    otherwise be just an icon. */}
+                <span className="sr-only">{item.label}</span>
+              </CollapsibleTrigger>
+              <BaseLink
+                href={item.href}
+                // Navigating to a route already rendered keeps this island
+                // mounted, so the filter has to be cleared here.
+                onClick={() => onSelectChild(undefined)}
+                className={cn(
+                  rowClasses,
+                  "justify-between ps-2",
+                  item.isCurrent && "text-primary",
+                  isItemActive && "bg-background-highlight font-bold"
+                )}
+              >
+                <span>{item.label}</span>
+                <span className="text-xs text-body-medium">
+                  {nf.format(item.count)}
+                </span>
+              </BaseLink>
+            </div>
             {/* forceMount keeps every category link in the DOM for crawlers, so
                 collapsing is CSS-only: grid rows animate 1fr <-> 0fr. See
                 ui/accordion for why the duration needs `!`. */}
@@ -99,21 +111,7 @@ export default function CatalogNavGroup({
               className="grid grid-rows-[1fr] transition-[grid-template-rows,visibility] duration-200! ease-out data-[state=closed]:invisible data-[state=closed]:grid-rows-[0fr]"
             >
               <div className="min-h-0 overflow-hidden">
-                <div className="ms-5 space-y-1 border-s ps-2">
-                  <BaseLink
-                    href={item.href}
-                    onClick={() => onSelectChild(undefined)}
-                    className={cn(childRowClasses, "text-body-medium")}
-                  >
-                    {/* Every group's link would otherwise read "Show all":
-                        ambiguous to a screen reader, and this is the site's
-                        only internal link to the listing page. */}
-                    <span>
-                      {config.itemAllLabel}
-                      <span className="sr-only"> {item.label}</span>
-                    </span>
-                  </BaseLink>
-
+                <div className="ms-9 space-y-1 border-s ps-2">
                   {item.children?.map((child) =>
                     child.href ? (
                       <BaseLink
@@ -131,7 +129,7 @@ export default function CatalogNavGroup({
                         className={cn(
                           childRowClasses,
                           selectedChildId === child.id &&
-                            "bg-background-highlight"
+                            "bg-background-highlight font-bold text-primary"
                         )}
                         onClick={() => {
                           onSelectChild(

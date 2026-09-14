@@ -167,6 +167,7 @@ export default function FilterableCatalog<TItem>({
 
   useEffect(() => {
     if (!urlParamKey) return
+    let isInitial = true
     const syncFromUrl = () => {
       const value =
         new URLSearchParams(window.location.search).get(urlParamKey) ??
@@ -174,6 +175,13 @@ export default function FilterableCatalog<TItem>({
       setSelection((prev) =>
         prev[urlParamKey] === value ? prev : { ...prev, [urlParamKey]: value }
       )
+      // Arriving with a filter already applied lands on the results, the same
+      // as picking one in-page does. Not on popstate: the back button restores
+      // a position of its own.
+      if (isInitial && value) {
+        resultsTopRef.current?.scrollIntoView({ block: "start" })
+      }
+      isInitial = false
     }
     syncFromUrl()
     window.addEventListener("popstate", syncFromUrl)

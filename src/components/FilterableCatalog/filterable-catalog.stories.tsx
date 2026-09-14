@@ -176,7 +176,6 @@ const navConfig: CatalogNavGroupConfig = {
   allLabel: "All categories",
   allHref: "#all",
   allCount: demoWallets.length,
-  itemAllLabel: "Show all",
   items: [
     {
       id: "software",

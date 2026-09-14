@@ -70,7 +70,6 @@ const ToolsPageBody = async ({
             filtersToggle: tTable("table-filters"),
             applyLabel: t("page-developers-tools-show-results"),
             closeLabel: tCommon("close"),
-            showAll: tCommon("show-all"),
           }}
         />
         <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
