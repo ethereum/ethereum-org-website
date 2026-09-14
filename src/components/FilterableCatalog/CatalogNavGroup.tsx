@@ -1,23 +1,15 @@
 "use client"
 
-import { type ReactNode, useEffect, useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { useEffect, useState } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import type { CatalogNavGroupConfig } from "./types"
-
-const rowClasses =
-  "flex w-full items-center gap-2 rounded-md px-3 py-2 text-start text-sm no-underline hover:bg-background-highlight"
+import CatalogFilterGroup from "./CatalogFilterGroup"
+import type { CatalogNavGroupConfig, CatalogNavItem } from "./types"
 
 const childRowClasses =
   "flex min-h-0 w-full items-center justify-between gap-2 rounded-md px-3 py-1.5 text-start text-xs font-normal no-underline hover:bg-background-highlight"
@@ -55,8 +47,7 @@ export default function CatalogNavGroup({
         // the filter has to be cleared here or the "all" view stays filtered.
         onClick={() => onSelectChild(undefined)}
         className={cn(
-          rowClasses,
-          "justify-between font-bold text-primary",
+          "flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-start text-sm font-bold text-primary no-underline hover:bg-background-highlight",
           !hasCurrentItem && "bg-background-highlight"
         )}
       >
@@ -66,120 +57,87 @@ export default function CatalogNavGroup({
         </span>
       </BaseLink>
 
-      {config.items.map((item) => {
-        const isItemActive = item.isCurrent && !selectedChildId
-        const holdsSelectedChild = item.children?.some(
-          (child) => child.id === selectedChildId
-        )
-
-        return (
-          <NavGroupCollapsible
-            key={item.id}
-            defaultOpen={!!item.isCurrent}
-            holdsSelectedChild={!!holdsSelectedChild}
-          >
-            <div className="flex items-center gap-1">
-              <CollapsibleTrigger className="group grid size-8 shrink-0 place-items-center rounded-md hover:bg-background-highlight">
-                <ChevronDown className="size-4 text-primary transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
-                {/* Names the toggle for a screen reader; its own label would
-                    otherwise be just an icon. */}
-                <span className="sr-only">{item.label}</span>
-              </CollapsibleTrigger>
-              <BaseLink
-                href={item.href}
-                // Navigating to a route already rendered keeps this island
-                // mounted, so the filter has to be cleared here.
-                onClick={() => onSelectChild(undefined)}
-                className={cn(
-                  rowClasses,
-                  // Group labels read as headings, matching the wallets filters.
-                  "justify-between ps-2 font-bold text-primary",
-                  isItemActive && "bg-background-highlight"
-                )}
-              >
-                <span>{item.label}</span>
-                <span className="text-xs font-normal text-body-medium">
-                  {nf.format(item.count)}
-                </span>
-              </BaseLink>
-            </div>
-            {/* forceMount keeps every category link in the DOM for crawlers, so
-                collapsing is CSS-only: grid rows animate 1fr <-> 0fr. See
-                ui/accordion for why the duration needs `!`. */}
-            <CollapsibleContent
-              forceMount
-              className="grid grid-rows-[1fr] transition-[grid-template-rows,visibility] duration-200! ease-out data-[state=closed]:invisible data-[state=closed]:grid-rows-[0fr]"
-            >
-              <div className="min-h-0 overflow-hidden">
-                <div className="ms-9 space-y-1 border-s ps-2">
-                  {item.children?.map((child) =>
-                    child.href ? (
-                      <BaseLink
-                        key={child.id}
-                        href={child.href}
-                        className={cn(childRowClasses, "text-body")}
-                      >
-                        <span>{child.label}</span>
-                      </BaseLink>
-                    ) : (
-                      <Button
-                        key={child.id}
-                        variant="ghost"
-                        isSecondary
-                        className={cn(
-                          childRowClasses,
-                          selectedChildId === child.id &&
-                            "bg-background-highlight font-bold"
-                        )}
-                        onClick={() => {
-                          onSelectChild(
-                            selectedChildId === child.id ? undefined : child.id
-                          )
-                        }}
-                      >
-                        <span>{child.label}</span>
-                        {typeof child.count === "number" && (
-                          <span className="text-2xs text-body-medium">
-                            {nf.format(child.count)}
-                          </span>
-                        )}
-                      </Button>
-                    )
-                  )}
-                </div>
-              </div>
-            </CollapsibleContent>
-          </NavGroupCollapsible>
-        )
-      })}
+      {config.items.map((item) => (
+        <NavItemGroup
+          key={item.id}
+          locale={locale}
+          item={item}
+          selectedChildId={selectedChildId}
+          onSelectChild={onSelectChild}
+        />
+      ))}
     </div>
   )
 }
 
-/**
- * Opens itself when its group gains the selected child — a deep link applies
- * its filter after mount, so `defaultOpen` alone would leave the matching
- * group collapsed. Never force-closes: deselecting shouldn't collapse the
- * group the pointer is in.
- */
-function NavGroupCollapsible({
-  defaultOpen,
-  holdsSelectedChild,
-  children,
+function NavItemGroup({
+  locale,
+  item,
+  selectedChildId,
+  onSelectChild,
 }: {
-  defaultOpen: boolean
-  holdsSelectedChild: boolean
-  children: ReactNode
+  locale: string
+  item: CatalogNavItem
+  selectedChildId?: string
+  onSelectChild: (childId?: string) => void
 }) {
-  const [open, setOpen] = useState(defaultOpen || holdsSelectedChild)
+  const nf = numberFormat(locale)
+  const holdsSelectedChild = !!item.children?.some(
+    (child) => child.id === selectedChildId
+  )
+  const [open, setOpen] = useState(!!item.isCurrent || holdsSelectedChild)
 
+  // A deep link applies its filter after mount, so the matching group has to
+  // open then. Only ever opens: deselecting shouldn't collapse the group the
+  // pointer is in.
   useEffect(() => {
     if (holdsSelectedChild) setOpen(true)
   }, [holdsSelectedChild])
 
   return (
-    <Collapsible open={open} onOpenChange={setOpen}>
-      {children}
-    </Collapsible>
+    <CatalogFilterGroup
+      label={item.label}
+      count={nf.format(item.count)}
+      labelHref={item.href}
+      onLabelClick={() => onSelectChild(undefined)}
+      active={item.isCurrent && !selectedChildId}
+      open={open}
+      onOpenChange={setOpen}
+      // Every category link stays in the DOM for crawlers.
+      keepMounted
+    >
+      {item.children?.map((child) =>
+        child.href ? (
+          <BaseLink
+            key={child.id}
+            href={child.href}
+            className={cn(childRowClasses, "text-body")}
+          >
+            <span>{child.label}</span>
+          </BaseLink>
+        ) : (
+          <Button
+            key={child.id}
+            variant="ghost"
+            isSecondary
+            className={cn(
+              childRowClasses,
+              selectedChildId === child.id &&
+                "bg-background-highlight font-bold"
+            )}
+            onClick={() => {
+              onSelectChild(selectedChildId === child.id ? undefined : child.id)
+            }}
+          >
+            <span>{child.label}</span>
+            {typeof child.count === "number" && (
+              <span className="text-2xs text-body-medium">
+                {nf.format(child.count)}
+              </span>
+            )}
+          </Button>
+        )
+      )}
+    </CatalogFilterGroup>
   )
 }

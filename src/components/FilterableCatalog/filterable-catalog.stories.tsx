@@ -4,9 +4,9 @@ import CatalogCheckboxGroup from "./CatalogCheckboxGroup"
 import CatalogNavGroup from "./CatalogNavGroup"
 import FilterableCatalog from "./index"
 import type {
-  CatalogCheckboxGroupConfig,
   CatalogFilterState,
   CatalogNavGroupConfig,
+  CatalogSelectOption,
 } from "./types"
 import { toggleId } from "./utils"
 
@@ -70,37 +70,40 @@ const walletAttributes = (wallet: DemoWallet) => [
 // The find-wallet filter sidebar shape planned for PR 2: independent checkbox
 // groups combined with AND semantics by the consumer's filterFn. The consumer
 // owns the state key; the block config is presentational only.
-const walletFilterGroups: Array<{ key: string } & CatalogCheckboxGroupConfig> =
-  [
-    {
-      key: "devices",
-      label: "Devices",
-      options: [
-        { id: "desktop", label: "Desktop" },
-        { id: "mobile", label: "Mobile" },
-        { id: "browser", label: "Browser" },
-        { id: "hardware", label: "Hardware" },
-      ],
-    },
-    {
-      key: "networks",
-      label: "Networks",
-      options: [
-        { id: "ethereum", label: "Ethereum Mainnet" },
-        { id: "op-mainnet", label: "OP Mainnet" },
-        { id: "arbitrum-one", label: "Arbitrum One" },
-        { id: "base", label: "Base" },
-      ],
-    },
-    {
-      key: "purchases",
-      label: "Buy / sell crypto",
-      options: [
-        { id: "buy", label: "Buy crypto" },
-        { id: "sell", label: "Sell crypto" },
-      ],
-    },
-  ]
+const walletFilterGroups: Array<{
+  key: string
+  label: string
+  options: CatalogSelectOption[]
+}> = [
+  {
+    key: "devices",
+    label: "Devices",
+    options: [
+      { id: "desktop", label: "Desktop" },
+      { id: "mobile", label: "Mobile" },
+      { id: "browser", label: "Browser" },
+      { id: "hardware", label: "Hardware" },
+    ],
+  },
+  {
+    key: "networks",
+    label: "Networks",
+    options: [
+      { id: "ethereum", label: "Ethereum Mainnet" },
+      { id: "op-mainnet", label: "OP Mainnet" },
+      { id: "arbitrum-one", label: "Arbitrum One" },
+      { id: "base", label: "Base" },
+    ],
+  },
+  {
+    key: "purchases",
+    label: "Buy / sell crypto",
+    options: [
+      { id: "buy", label: "Buy crypto" },
+      { id: "sell", label: "Sell crypto" },
+    ],
+  },
+]
 
 const andFilterWallet = (
   wallet: DemoWallet,
@@ -132,8 +135,8 @@ const renderWalletResults = (wallets: DemoWallet[]) => (
 )
 
 /**
- * Checkbox filter groups with AND semantics in the consumer's filterFn --
- * the shape the find-wallet revamp consumes.
+ * Collapsible checkbox groups with AND semantics in the consumer's filterFn --
+ * the shape /wallets/find-wallet consumes.
  */
 export const CheckboxFilters: StoryObj = {
   render: () => (
@@ -147,14 +150,16 @@ export const CheckboxFilters: StoryObj = {
         noResults: "No results",
       }}
       renderSidebar={({ state, setFilter }) =>
-        walletFilterGroups.map(({ key, ...config }) => {
+        walletFilterGroups.map(({ key, label, options }) => {
           const raw = state[key]
           const selectedIds = Array.isArray(raw) ? raw : []
           return (
             <CatalogCheckboxGroup
               key={key}
               locale="en"
-              config={config}
+              label={label}
+              options={options}
+              defaultOpen
               selectedIds={selectedIds}
               onToggle={(optionId) =>
                 setFilter(key, toggleId(selectedIds, optionId), {

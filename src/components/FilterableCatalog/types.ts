@@ -31,16 +31,6 @@ export type CatalogNavGroupConfig = {
   items: CatalogNavItem[]
 }
 
-/**
- * Presentational data for the `CatalogCheckboxGroup` building block: a labelled
- * set of independent checkboxes. The block is controlled — the consumer owns
- * the selected ids and how the group combines with others (AND/OR) in `filterFn`.
- */
-export type CatalogCheckboxGroupConfig = {
-  label: string
-  options: CatalogSelectOption[]
-}
-
 /** Selected filter values keyed by an arbitrary consumer-chosen key */
 export type CatalogFilterState = Record<string, string | string[] | undefined>
 
