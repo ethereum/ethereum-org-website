@@ -64,19 +64,32 @@ test.describe("Find Wallet Page", () => {
     expect(await findWalletPage.getResultsCount()).toBe(nftCount)
   })
 
-  test("persona card title is a real link that filters on a plain click", async ({
+  // The link is for crawlers and modifier-clicks; the checkbox is the control,
+  // so the card stays one tab stop and a plain click never navigates.
+  test("persona card links to its page but filters on a plain click", async ({
     page,
   }) => {
-    const link = page
-      .getByTestId("persona-cards-container")
-      .getByRole("link", { name: /^NFTs/ })
-    await expect(link).toHaveAttribute(
-      "href",
-      /\/wallets\/find-wallet\/personas\/nfts\/$/
-    )
+    const cards = page.getByTestId("persona-cards-container")
+    const link = cards.locator('a[href$="/wallets/find-wallet/personas/nfts/"]')
+    await expect(link).toHaveCount(1)
+
     await link.click()
     await expect(findWalletPage.personaCheckbox("NFTs")).toBeChecked()
     await expect(page).toHaveURL(/\/find-wallet\/\?advanced=/)
+
+    // Toggling off has to take one click, not two: the overlay must not let
+    // the click reach the label and flip the checkbox back.
+    await link.click()
+    await expect(findWalletPage.personaCheckbox("NFTs")).not.toBeChecked()
+  })
+
+  test("each persona card is a single tab stop", async ({ page }) => {
+    const cards = page.getByTestId("persona-cards-container")
+    await expect(
+      cards.locator(
+        'a[href]:not([tabindex="-1"]), button:not([tabindex="-1"]), input, [tabindex]:not([tabindex="-1"])'
+      )
+    ).toHaveCount(5)
   })
 
   // Persona cards derive from the base filters, so clearing those leaves

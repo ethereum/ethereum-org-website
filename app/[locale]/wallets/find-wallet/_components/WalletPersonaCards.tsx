@@ -51,13 +51,33 @@ const PersonaCard = ({
     <li className="grid-rows-1 pb-5">
       <label
         className={cn(
-          "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 shadow-lg transition-all duration-50 lg:h-full lg:p-6",
+          "group relative flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 shadow-lg transition-all duration-50 lg:h-full lg:p-6",
           "has-[:focus-visible]:outline has-[:focus-visible]:outline-4 has-[:focus-visible]:-outline-offset-4 has-[:focus-visible]:outline-primary-hover",
           isActive
             ? cn(color.border, color.bgTint)
             : "border-primary-low-contrast hover:bg-background-highlight"
         )}
       >
+        {/* The checkbox is the control -- a persona is a multi-select filter --
+            and keeping it the only tab stop is why this link is not one. It is
+            here so crawlers and modifier-clicks reach the persona page; a plain
+            click anywhere on the card filters in place. */}
+        <BaseLink
+          href={`/wallets/find-wallet/personas/${persona.id}/`}
+          prefetch={false}
+          tabIndex={-1}
+          aria-hidden
+          activeClassName=""
+          className="absolute inset-0 rounded-base"
+          onClick={(event) => {
+            if (event.button !== 0 || isModified(event)) return
+            event.preventDefault()
+            // Or the label would forward the click on to the checkbox and
+            // toggle it straight back.
+            event.stopPropagation()
+            onToggle(persona)
+          }}
+        />
         <span className="items-top flex w-full gap-2 px-1.5 leading-normal">
           <Checkbox
             className="sr-only"
@@ -77,21 +97,11 @@ const PersonaCard = ({
               <Check className="size-4 stroke-[3] text-background" />
             )}
           </span>
-          <BaseLink
-            href={`/wallets/find-wallet/personas/${persona.id}/`}
-            // Real link for crawlers and modifier-clicks; a plain click filters
-            // in place. No prefetch: five landing pages nobody navigates to.
-            prefetch={false}
-            activeClassName=""
+          <span
             className={cn(
-              "text-start text-xl font-bold hyphens-auto no-underline transition-all duration-50 hover:no-underline",
+              "text-start text-xl font-bold hyphens-auto transition-all duration-50",
               color.text
             )}
-            onClick={(event) => {
-              if (event.button !== 0 || isModified(event)) return
-              event.preventDefault()
-              onToggle(persona)
-            }}
           >
             {persona.title}
             <span aria-hidden="true" className="font-normal">
@@ -99,7 +109,7 @@ const PersonaCard = ({
               ({count})
             </span>
             <span className="sr-only"> {countLabel}</span>
-          </BaseLink>
+          </span>
         </span>
         <span
           id={descriptionId}
