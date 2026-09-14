@@ -56,12 +56,12 @@ export default function CatalogNavGroup({
         onClick={() => onSelectChild(undefined)}
         className={cn(
           rowClasses,
-          "justify-between",
-          !hasCurrentItem && "bg-background-highlight text-primary"
+          "justify-between font-bold text-primary",
+          !hasCurrentItem && "bg-background-highlight"
         )}
       >
         <span>{config.allLabel}</span>
-        <span className="text-xs text-body-medium">
+        <span className="text-xs font-normal text-body-medium">
           {nf.format(config.allCount)}
         </span>
       </BaseLink>
@@ -80,7 +80,7 @@ export default function CatalogNavGroup({
           >
             <div className="flex items-center gap-1">
               <CollapsibleTrigger className="group grid size-8 shrink-0 place-items-center rounded-md hover:bg-background-highlight">
-                <ChevronDown className="size-4 text-body-medium transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
+                <ChevronDown className="size-4 text-primary transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
                 {/* Names the toggle for a screen reader; its own label would
                     otherwise be just an icon. */}
                 <span className="sr-only">{item.label}</span>
@@ -92,13 +92,13 @@ export default function CatalogNavGroup({
                 onClick={() => onSelectChild(undefined)}
                 className={cn(
                   rowClasses,
-                  "justify-between ps-2",
-                  item.isCurrent && "text-primary",
-                  isItemActive && "bg-background-highlight font-bold"
+                  // Group labels read as headings, matching the wallets filters.
+                  "justify-between ps-2 font-bold text-primary",
+                  isItemActive && "bg-background-highlight"
                 )}
               >
                 <span>{item.label}</span>
-                <span className="text-xs text-body-medium">
+                <span className="text-xs font-normal text-body-medium">
                   {nf.format(item.count)}
                 </span>
               </BaseLink>
@@ -129,7 +129,7 @@ export default function CatalogNavGroup({
                         className={cn(
                           childRowClasses,
                           selectedChildId === child.id &&
-                            "bg-background-highlight font-bold text-primary"
+                            "bg-background-highlight font-bold"
                         )}
                         onClick={() => {
                           onSelectChild(
