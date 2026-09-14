@@ -19,13 +19,13 @@ Esta apresentação explica como a produção de blocos do Ethereum evoluiu de u
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=u8XvkTrjITs) publicada pelo CBER Forum. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução (0:00) {#introduction-000}
+### Introdução (0:00) {#introduction-000}
 
 Meu nome é Barnabé Monnot. Vou falar um pouco sobre o que está acontecendo fora do protocolo e, em particular, sobre o conceito de separação propositor-construtor e como ele é operado com relays e muita infraestrutura offchain.
 
 Gosto de pensar no protocolo como um objeto abstrato que tem certos poderes. Um dos poderes que o protocolo tem é a capacidade de conceder direitos a certos participantes. Vimos na palestra anterior que o protocolo capacita os validadores a realizar tarefas de consenso, mas não é a única coisa que eles fazem — também temos que preencher os blocos com transações. Chamamos isso de tarefas de execução, e é nisso que quero focar nesta palestra.
 
-#### Por que os validadores usam construtores (0:46) {#why-validators-use-builders-046}
+### Por que os validadores usam construtores (0:46) {#why-validators-use-builders-046}
 
 O que é interessante é que, embora o protocolo seja o que origina esses direitos e os conceda aos validadores, o que observamos na prática é que muitos validadores optam por não exercer o direito por si mesmos. Eles escolhem dar o direito a outra pessoa para executá-lo em seu nome. E por "outra pessoa", nós os conhecemos no Ethereum como construtores.
 
@@ -33,7 +33,7 @@ Então, o que observamos é que, embora os validadores continuem a realizar essa
 
 Hoje quero discutir por que os validadores usam construtores, de onde vem esse relacionamento — vou introduzir um pouco sobre MEV e buscadores ao longo do caminho — então direi como esse relacionamento é mediado e falarei sobre os relays que existem hoje e as soluções no protocolo nas quais estamos pensando. Também quero ter uma visão mais ampla, porque é fácil ver essas imagens e pensar "oh, isso é muito assustador, e quanto à descentralização?". Quero dar a vocês a sensação de que essas são compensações que estão sendo feitas, mas, na minha opinião, estão sendo feitas na direção certa.
 
-#### O modelo ingênuo e o MEV (3:04) {#the-naive-model-and-mev-304}
+### O modelo ingênuo e o MEV (3:04) {#the-naive-model-and-mev-304}
 
 Você pode pensar em um modelo ingênuo de produção de blocos onde o validador é selecionado de acordo com um processo de seleção de líder, e ele tem que fazer um bloco contendo uma lista de transações da mempool. No modelo mais ingênuo, você realmente só tem duas partes — um validador ouvindo a mempool e, quando chega a sua vez de fazer um bloco, ele retira as transações que pagam as maiores taxas e as adiciona, geralmente usando algoritmos de empacotamento não muito sofisticados.
 
@@ -43,7 +43,7 @@ No melhor dos casos, esse lucro vem da função natural do mercado, como a arbit
 
 Isso realmente dá muito poder ao produtor e torna a posição de ser o produtor de blocos extremamente valiosa. Esse privilégio do produtor é algo que agora chamamos de **valor máximo extraível (MEV)**.
 
-#### O papel dos buscadores (5:43) {#the-role-of-searchers-543}
+### O papel dos buscadores (5:43) {#the-role-of-searchers-543}
 
 Na prática, os produtores podem não saber onde está o valor. Você pode ter produtores de blocos um tanto inexperientes — como mencionado, qualquer um pode se tornar um validador, desde que tenha capital suficiente e seja capaz de executar um nó. Na prática, eu posso não saber como fazer arbitragem ou qualquer coisa sobre mercados financeiros. O que eu gostaria é que alguém me dissesse onde estão essas oportunidades — um mercado de pessoas competindo para me dizer qual é a melhor coisa a fazer como produtor de blocos.
 
@@ -51,7 +51,7 @@ Essas entidades que são muito boas em encontrar oportunidades, nós as chamamos
 
 Esse modelo funciona bem na prática se o buscador confiar no produtor para manter o pacote atômico. Você pode ter ouvido falar recentemente de um ataque no Ethereum que custou US$ 25 milhões a um grupo de atacantes sanduíche — a causa raiz foi que o invasor conseguiu quebrar a atomicidade dos pacotes, recebendo o conteúdo e tentando reorganizá-los e modificá-los. Essa é uma propriedade muito importante que realmente só se mantém enquanto se puder confiar que o produtor não quebrará essa atomicidade.
 
-#### Por que precisamos de construtores (8:16) {#why-we-need-builders-816}
+### Por que precisamos de construtores (8:16) {#why-we-need-builders-816}
 
 O que você faz se um produtor não for confiável? Pós-The Merge no Ethereum, temos stakers individuais — cerca de 6% da rede — que não conhecemos. Os buscadores não vão querer enviar pacotes para esses proponentes de blocos porque é um pouco perigoso demais.
 
@@ -59,7 +59,7 @@ Então, o design a que se chegou é: em vez de ter buscadores comunicando pacote
 
 Agora você tem essa cadeia ainda mais profunda: o validador em uma ponta, o usuário na outra, e no meio toda essa cadeia de intermediários que continua a ficar mais densa com o tempo. O construtor faz a parte de execução enquanto o validador faz o consenso.
 
-#### Como funcionam os relays do MEV-Boost (13:01) {#how-mev-boost-relays-work-1301}
+### Como funcionam os relays do MEV-Boost (13:01) {#how-mev-boost-relays-work-1301}
 
 Digamos que você seja um proponente e queira entrar neste mercado. Esse serviço de produção de blocos é um problema clássico de troca justa — duas partes tentando chegar a um acordo, mas não confiam uma na outra. A literatura clássica diz que você não pode fazer uma troca justa sem um terceiro confiável.
 
@@ -71,19 +71,19 @@ Segundo, os construtores estão fazendo lances tentando competir para se tornare
 
 A economia dos relays é complicada. Alguns são gratuitos, como bens públicos. Outros desenvolveram modelos de receita — o relay Ultrasound, por exemplo, tem um "ajuste de lance" onde eles pegam a diferença entre o melhor lance e o segundo melhor como receita.
 
-#### Confiança e o relay (17:01) {#trust-and-the-relay-1701}
+### Confiança e o relay (17:01) {#trust-and-the-relay-1701}
 
 O relay é o terceiro confiável no sistema. Digamos que um relay sirva um bloco inválido — as pessoas verão imediatamente porque ele está assinado, e elas se desconectarão muito rapidamente desse relay. Você pode até propagar algum tipo de prova de falha. Dentro de cinco blocos, se o relay não tiver um bom desempenho, as pessoas deixarão de confiar nele e simplesmente se desconectarão.
 
 Portanto, é baseado na confiança, mas com a suposição de que pode ser substituído de forma um tanto rápida. Os relays não são validadores — eles não têm necessariamente stake e não precisam ter nada a ver com o Ethereum. Podem ser pessoas que conhecemos e amamos hoje, mas amanhã pode ser qualquer um.
 
-#### Consagrando a PBS no protocolo (20:01) {#enshrining-pbs-in-the-protocol-2001}
+### Consagrando a PBS no protocolo (20:01) {#enshrining-pbs-in-the-protocol-2001}
 
 Estamos tentando eliminar o status de terceiro confiável do relay. Temos um terceiro confiável de que gostamos no Ethereum — e é o próprio Ethereum. Você pode projetar soluções no protocolo que tentam essencialmente consagrar o papel do relay e tornar a dependência dele opcional.
 
 No momento, o protocolo Ethereum vê parte do que os validadores estão fazendo, mas é completamente cego para a rede de construtores. Estamos tentando impulsioná-lo para que o protocolo Ethereum se torne o terceiro confiável na interação entre proponente e construtor — nesse sentido, não precisamos mais depender do relay.
 
-#### Restringindo construtores, ampliando a descentralização (22:05) {#constraining-builders-amplifying-decentralization-2205}
+### Restringindo construtores, ampliando a descentralização (22:05) {#constraining-builders-amplifying-decentralization-2205}
 
 A visão geral é importante. Em cada camada, parece haver jogos diferentes acontecendo e jogadores diferentes tirando dinheiro uns dos outros — isso é a finança tradicional tudo de novo? Quero argumentar que essas compensações não vêm de um lugar ruim. Elas tentam se apoiar em propriedades desses sistemas que achamos úteis para escalá-los e torná-los mais úteis.
 
@@ -104,7 +104,7 @@ Para ampliar a descentralização dos validadores:
 - **Separação atestador-proponente** — em vez de tornar o validador o produtor de blocos por padrão, escolher um conjunto diferente de pessoas para se tornarem produtores de blocos e desmembrar as funções
 - **Mecanismos de staking aprimorados** — o staking no Ethereum é um pouco rudimentar hoje e pode ser melhorado
 
-#### Perguntas e encerramento (27:03) {#questions-and-closing-2703}
+### Perguntas e encerramento (27:03) {#questions-and-closing-2703}
 
 Uma pergunta do público: no mundo das finanças tradicionais, o tempo de liquidação está sendo reduzido de dois dias para um dia. Reduzir o tempo de liquidação de 12 segundos para um intervalo mais curto lidaria com alguns dos problemas de front-running?
 

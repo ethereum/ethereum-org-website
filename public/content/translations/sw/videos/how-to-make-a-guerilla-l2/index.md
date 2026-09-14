@@ -20,13 +20,13 @@ breadcrumb: "L2 ya Gerila"
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=WlsICV2OPAE) iliyochapishwa na Web3Privacy Now. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Utangulizi na falsafa ya uasi (0:05) {#introduction-and-anarchist-philosophy-005}
+### Utangulizi na falsafa ya uasi (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Makofi] Naam, asanteni kwa kuwa hapa. Najua Vitalik anazungumza sasa hivi. Ni heshima kubwa kuwa na baadhi yenu hapa na sio kwenye foleni ya matcha pale. Tutakuwa na mazungumzo leo kuhusu tabaka la 2 (l2) za gerila, na nadhani tutafika huko, lakini namtambulisha kwenu Melanie Premsyl, mwanafalsafa wa Kifaransa na mwasi (anarchist), ambaye anatupa heshima ya kujiunga nasi hapa. Je, ungependa kujitambulisha kidogo?
 
 **Melanie Premsyl:** Ndiyo. Habari zenu. Mimi ni mwanafalsafa wa Kifaransa. Ninasoma kuhusu uasi (anarchy) na teknolojia, na mwanzoni nilikuwa zaidi upande wa maeneo. Kama katikati ya Ufaransa, kwa mfano, sijui kama mnajua Tarnac, au makundi yote ya aina hiyo ambayo ni makundi yenye vurugu zaidi. Tatizo kuu nililokumbana nalo ni kwamba tunahitaji kuunganishwa na watu wengine duniani, na makundi mengi ya waasi yana mipaka sana. Tunahitaji njia ya kuwasiliana na watu wengi zaidi kutoka Amerika au Amerika Kusini. Na ndiyo maana sasa tunajaribu kuunda daraja na kripto na kila mtu anayejaribu kutafuta njia mpya za kupambana na ukosefu wa faragha, ukosefu wa uhuru, na ukatili wa serikali.
 
-#### Kesi ya ndugu wa MEV (1:52) {#the-mev-brothers-trial-152}
+### Kesi ya ndugu wa MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Inashangaza. Kimsingi, tulikutana wiki chache zilizopita huko New York. Sote tulikuwa tunahudhuria kesi iliyokuwa ikifanyika Manhattan ambapo ndugu hawa wawili, wanaojulikana kama ndugu wa MEV, walikuwa wakishtakiwa kwa sababu waliweka kati (sandwiched) baadhi ya roboti za sandwich. Nilienda mahakamani kutazama kesi, na nilimwona mtu huyu hapa akisoma Spinoza kwa Kifaransa, na nilikuwa na hamu sana ya kujua nini kilikuwa kikiendelea. Hakukuwa na mtu yeyote kwenye hadhira isipokuwa sisi wawili! Kwa hivyo nilipata hamu sana ya kujua nini kilikufanya, kwanza kabisa kama mwasi na mwanafalsafa badala ya mwanateknolojia, kuja kuhudhuria kesi hii maalum, lakini pia kufikiria kuhusu utawala wa Ethereum na mfumo mzima wa uthibitishaji na kesi iliyokuwa ikifanyika New York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "L2 ya Gerila"
 
 **Fatemeh Fannizadeh:** Sawa. Ndiyo, hiyo inaeleweka. Kwa hivyo kwa wale ambao hawajafuatilia kesi hiyo, baada ya kama wiki tatu au nne, kesi ilifutwa (mistrial). Baraza la wazee wa mahakama halikuweza kufikia uamuzi wa pamoja na kuamua kama ndugu hawa wawili walikuwa na hatia ya kukiuka sheria za mnyororo wa vitalu au la—ambayo ni aina ya matokeo chanya, nadhani, kwa kripto, kwamba mahakama au baraza la wazee wa mahakama haliamui nini ni sahihi na nini ni makosa mnyororoni. 
 
-#### Kuunganisha mnyororo wa vitalu na jamii nyingine (4:06) {#bridging-blockchain-with-other-communities-406}
+### Kuunganisha mnyororo wa vitalu na jamii nyingine (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Lakini sawa, tukirudi nyuma kidogo kuhusu ulichosema cha waasi kuangalia teknolojia hii ili kimsingi kujenga daraja kati ya makundi tofauti. 
 
@@ -48,7 +48,7 @@ breadcrumb: "L2 ya Gerila"
 
 **Melanie Premsyl:** Ndiyo, ningependa kusema hivyo, lakini sina uhakika, kwa sababu unajua kuna watu wengi wanaohitaji kutengeneza pesa, kwa hivyo hilo ndilo dhumuni kuu pia. Lakini nadhani tunaweza kuitumia tu kama wavu wa kikomunisti, kwamba sehemu moja tu inaweza kuwa ndoto ya aina hiyo. Nadhani ni keki ya ndoto inayoweza kufanywa, lakini tunahitaji kuwa na zana na muundo unaosaidia watu kutoka kwenye fikra za kiufundi, za kihandisi sana, ili kuelewa jinsi ilivyo.
 
-#### Ugatuzi na Tabaka la 2 (6:55) {#decentralization-and-layer-2s-655}
+### Ugatuzi na Tabaka la 2 (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Hiyo inanikumbusha sana kuhusu Mashirika Huru Yaliyogatuliwa (DAOs) miaka michache iliyopita. Sijui kuhusu ninyi nyote, lakini nilifurahi sana, nilikuwa nafikiria kwamba DAOs zinaleta mapinduzi katika jinsi tunavyojipanga kama makundi na jamii mnyororoni na uhuru tulio nao. Na mwishowe, haya yote yalianguka tu. Sidhani kama ilidhihirika hata kidogo. Ikawa zaidi kuhusu mfumo wa kupiga kura, sio wa kidemokrasia kweli, yote ni kuhusu kutengeneza faida. Wazo hili lote tulilokuwa nalo la DAOs kama zana ya kijamii halikudhihirika kweli. 
 
@@ -56,7 +56,7 @@ breadcrumb: "L2 ya Gerila"
 
 **Melanie Premsyl:** Kwa hivyo mimi ni Mfaransa. Hili ni tatizo kubwa. Kuwa Mfaransa, sisi ni taifa linalotegemea sana serikali. Kwa hivyo mimi hufikiria kila wakati kwa njia ya ufundishaji na kutoka juu kwenda chini. Na nadhani tabaka la 2 (l2) inaunda njia ambayo kila mtu anaweza kuunda minyororo ya vitalu midogo, na inalindwa na Tabaka la 1 (l1). Ningependa kuona kama watu wanaweza kuunda msaada wa ufundishaji kwa kila mtu kwa kitu ambacho ni cha bure. Nadhani makundi mengi, kama vyama, yanaweza kuunda mnyororo wao wa vitalu, na itakuwa njia—kama unavyojua, shirikisho (federalism) ni somo kuu kubwa la uasi. Jinsi watu wanaweza kusimamia kuchukiana labda, lakini kuzungumza wao kwa wao. Kwa hivyo tunahitaji kuwa na aina hii ya shirikisho katika mnyororo wa vitalu. Kila mtu ana Tabaka la 2 (l2) lenye thamani yake, na kwa hivyo tunazungumza na miundombinu sawa. 
 
-#### Uasi, uhuru, na kujenga zana (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Uasi, uhuru, na kujenga zana (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Ndiyo, napenda sana ulichosema kuhusu kimsingi kuchukiana lakini bado kuwasiliana, kama kutokuwa na sumu licha ya tofauti zetu. Na ukweli kwamba kuna kama l1 moja katika hali hii, ambayo itakuwa Ethereum, pia mara nyingi inasemwa kama ya kifashisti kwa sababu sote tunahitaji kukubaliana na seti hii moja ya sheria. Kwa hivyo ni mfumo huu mmoja ambao ni sawa kwa kila mtu, na inabidi kimsingi ujisalimishe kwa l1 hii au unaweza kuondoka, hilo ni swali lingine kabisa. Lakini ikiwa tunaweza kugatua hili katika aina mbalimbali za mfumo ikolojia mdogo wa rollup l2, basi tunaweza kurudisha tofauti na kutokubaliana ndani ya miundombinu hii ya kawaida. 
 

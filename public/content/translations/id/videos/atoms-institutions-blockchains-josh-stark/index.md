@@ -19,7 +19,7 @@ Sebuah pidato utama filosofis oleh **Josh Stark** dari Yayasan Ethereum di Pragm
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=zI07mqNdxzA) yang diterbitkan oleh ETHGlobal. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Mengapa kita tidak bisa menjelaskan rantai blok? (0:00) {#why-cant-we-explain-blockchains-000}
+### Mengapa kita tidak bisa menjelaskan rantai blok? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Halo semuanya, terima kasih sudah hadir di Pragma di Denver. Nama saya Josh. Saya bekerja di Yayasan Ethereum — saya sudah bersama EF selama sekitar lima tahun sekarang. Saya suka bercanda bahwa pekerjaan saya adalah mencari tahu apa yang seharusnya menjadi pekerjaan saya, dan itu berubah setiap enam bulan.
 
@@ -31,7 +31,7 @@ Kita benar-benar perlu memahami intinya, dan saya rasa kita belum sedekat itu. I
 
 Jadi ini dimulai sebagai pertanyaan yang sangat spesifik yang saya miliki: apa itu teknologi serbaguna? Apa kapasitas fundamental ini? Dan itu berubah menjadi sesuatu yang menurut saya jauh lebih menarik.
 
-#### Claude Shannon dan gagasan tentang informasi (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon dan gagasan tentang informasi (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Izinkan saya bercerita. Pada tahun 1930-an dan 40-an, Claude Shannon dikelilingi oleh awal mula era baru. Di Bell Labs, ia mengerjakan sistem pengendalian tembakan dan kriptografi selama perang, dan ia mulai memikirkan pendekatan yang lebih umum terhadap informasi. Awalnya ia tidak menyebutnya informasi — pada tahun 1939 ia menulis kepada seorang rekan bahwa ia sedang memikirkan "transmisi kecerdasan." Kata informasi memiliki arti yang berbeda saat itu.
 
@@ -41,7 +41,7 @@ Sebelum momen ini, tidak ada yang benar-benar memiliki konsep informasi sebagai 
 
 Apa yang saya ingin Anda ambil dari hal ini: ada masa sebelum kita memiliki gagasan tentang informasi dan masa sesudahnya. Bagaimana jika kita juga melewatkan sesuatu yang begitu mendasar? Itulah hipotesis saya.
 
-#### Tiga petunjuk (7:00) {#three-clues-700}
+### Tiga petunjuk (7:00) {#three-clues-700}
 
 Saat saya berjuang untuk menjelaskan rantai blok, saya terus menemukan hal-hal aneh ini yang menurut saya adalah petunjuk menuju sesuatu yang lebih besar.
 
@@ -53,7 +53,7 @@ Dengan mobil, kita berbicara tentang "kereta tanpa kuda," tetapi setidaknya kita
 
 **Petunjuk nomor tiga** — makalah Satoshi dimulai dengan kata-kata ini: "perdagangan di internet telah bergantung hampir secara eksklusif pada institusi keuangan yang berfungsi sebagai pihak ketiga tepercaya." Satoshi membandingkan Bitcoin dengan institusi, bukan dengan perangkat lunak lain. Ada sesuatu di sana.
 
-#### Memperkenalkan kekerasan (11:00) {#introducing-hardness-1100}
+### Memperkenalkan kekerasan (11:00) {#introducing-hardness-1100}
 
 Inilah jawaban saya untuk apa yang ada di dalam kotak itu. Saya menyebutnya **kekerasan** (hardness). Inilah ceritanya dalam lima langkah sederhana, dan kemudian kita akan membahasnya lebih dalam.
 
@@ -71,7 +71,7 @@ Tingkat inflasi emas dapat diandalkan karena sifat fisik planet kita — ia kera
 
 Anda dapat menganggap atom, institusi, dan rantai blok seperti bahan bangunan — seperti kayu, beton, dan baja. Mereka berbeda, tetapi mereka adalah bagian dari kategori yang sama. Dan kita menggunakan hal-hal ini bukan untuk membangun gedung, tetapi untuk membangun peradaban. Mungkin dengan bahan yang lebih baik, kita dapat membangun peradaban yang lebih besar, lebih baik, dan lebih kuat daripada yang kita miliki sekarang.
 
-#### Apa itu kekerasan? (14:00) {#what-is-hardness-1400}
+### Apa itu kekerasan? (14:00) {#what-is-hardness-1400}
 
 Izinkan saya memberikan presisi lebih pada apa yang saya maksud dengan kekerasan. Ini bukan sekadar keandalan apa pun yang mungkin dimiliki oleh sesuatu. Kekerasan adalah jenis yang spesifik. Hal pertama yang perlu diperhatikan adalah bahwa ini adalah jenis keandalan yang penting untuk koordinasi sosial. Bukan sekadar, Anda tahu, meja ini secara andal adalah sebuah meja — tetapi bahwa Anda dapat membayar sewa Anda, bahwa sebuah kontrak akan ditegakkan, bahwa sebuah ekonomi itu kuat. Untuk hal-hal seperti itulah kekerasan ada.
 
@@ -87,7 +87,7 @@ Dan terakhir, kekerasan berasal dari sumber-sumber tertentu — atom, institusi,
 
 Yang saya sukai dari kerangka kerja ini adalah ia memungkinkan kita mengajukan pertanyaan yang lebih dalam — bukan hanya berbicara tentang sifat spesifik dari rantai blok, tetapi membandingkan semua hal yang berbeda ini dan memikirkan di mana mereka sesuai, bagaimana kita menggunakannya, dan dalam kombinasi apa.
 
-#### Kekerasan atom (19:00) {#atom-hardness-1900}
+### Kekerasan atom (19:00) {#atom-hardness-1900}
 
 Kekerasan atom adalah tentang ketika kita menemukan keandalan di alam sekitar kita — atom fisik secara harfiah tetapi juga sifat-sifat lain yang terjadi secara alami. Kita melakukan ini ketika kita menggunakan manik-manik emas untuk uang, ketika kita menggunakan struktur fisik untuk mendefinisikan hak milik, atau mencatat hak milik dalam objek fisik seperti akta.
 
@@ -101,7 +101,7 @@ Dan cetakan sering kali dirusak oleh meningkatnya kendali manusia atas alam. Men
 
 Tetapi ini lebih halus dari itu. Terkadang kita memiliki cetakan yang bahkan tidak kita sadari keberadaannya, tetapi kemudian mereka hilang karena sesuatu berubah. Ada cetakan keras tentang kecepatan perdagangan di pasar keuangan untuk waktu yang lama — itu hanya bisa dilakukan pada kecepatan tertentu, mungkin kecepatan seseorang dapat berteriak satu sama lain di lantai bursa. Cetakan ini keras secara atom — kita tidak bisa berkomunikasi lebih cepat dari itu. Tetapi teknologi baru benar-benar merusak asumsi tersebut. Kita menyadari bahwa kita sebenarnya menyukai versi dari cetakan lama itu dan membuatnya kembali dari institusi — memperkenalkan regulasi yang membatasi kecepatan perdagangan dan memberlakukan penghentian sementara (circuit breakers).
 
-#### Kekerasan institusional (22:00) {#institutional-hardness-2200}
+### Kekerasan institusional (22:00) {#institutional-hardness-2200}
 
 Kekerasan institusional adalah kategori yang sangat luas — ini mencakup sebagian besar hal yang mungkin kita pikirkan ketika kita memikirkan peradaban. Sistem hukum kita, badan legislatif, kepolisian, perusahaan, semuanya. Semua institusi yang memberikan semacam kekerasan. Kita menciptakan cetakan yang memberikan ketertiban pada masyarakat kita, menghukum perilaku antisosial. Kita menciptakan kekerasan sebagai platform, membiarkan siapa pun membuat cetakan mereka sendiri yang dibuat keras oleh institusi jika Anda mengikuti aturan tertentu. Kita menciptakan cetakan yang melahirkan aset baru dan menyediakan sumber kredit untuk ekonomi yang sedang berkembang.
 
@@ -111,13 +111,13 @@ Tetapi ini juga memiliki banyak kelemahan. Ini dibatasi oleh perbatasan — hany
 
 Dan mereka terbuat dari orang-orang, dan orang-orang itu buruk. Kenyataannya di negara ini dan banyak negara lain adalah bahwa banyak orang belum benar-benar memiliki akses ke kekerasan yang diberikan oleh institusi. Mereka tidak bisa mendapatkan hipotek. Mereka tidak bisa membuka rekening bank. Karena ketika Anda mengisi sebuah institusi dengan orang-orang, itu tunduk pada kejahatan mereka, prasangka mereka, ideologi mereka. Dan ketergantungan kita pada kekerasan institusional terus meningkat. Masalah dengan perangkat lunak yang menguasai dunia adalah bahwa sebagian besar perangkat lunak sebenarnya hanya terbuat dari institusi di balik layar, dan sebagai hasilnya kita memberi mereka semakin banyak kekuatan.
 
-#### Kekerasan rantai blok (24:20) {#blockchain-hardness-2420}
+### Kekerasan rantai blok (24:20) {#blockchain-hardness-2420}
 
 Penemuan Satoshi tentu saja lebih dari sekadar Bitcoin — itu adalah inti dari teknik serbaguna untuk menciptakan kekerasan digital dalam lingkungan digital. Ini memiliki banyak kekuatan: akses global universal, terbuat dari perangkat lunak dan siapa pun dapat menulis perangkat lunak, tingkat kekerasan dapat transparan dan dapat diaudit, biaya awal yang rendah, mudah diiterasi, dan diamankan oleh insentif pasar — dan pasar itu rasional.
 
 Tetapi ini juga memiliki kelemahan. Ini membutuhkan peradaban teknologi — kita tidak mungkin memiliki rantai blok sebelum sekarang karena persyaratannya, dan peradaban di masa depan yang tidak memiliki apa yang kita miliki juga tidak akan dapat menggunakannya. Ini terbuat dari perangkat lunak, dan perangkat lunak dapat ditulis dengan buruk. Ruang lingkup cetakan terbatas pada lingkungan onchain. Dan ini diamankan oleh insentif pasar — dan pasar itu irasional.
 
-#### Mengapa ini penting (25:10) {#why-this-matters-2510}
+### Mengapa ini penting (25:10) {#why-this-matters-2510}
 
 Jadi apa artinya ini? Apa yang diberikan ini kepada kita? Mengapa ini lebih dari sekadar minat akademis?
 
@@ -127,7 +127,7 @@ Ini menjelaskan mengapa rantai blok privat atau terpusat tidak menarik. Rantai b
 
 Ini juga membantu memahami spektrum kemungkinan dan ideologi bawaan yang dianut orang-orang di ruang rantai blok. Banyak orang sangat fokus menggunakan kekerasan rantai blok untuk bersaing dengan atau menggantikan kekerasan institusional — inilah inti dari banyak komunitas Bitcoin, inti dari banyak keuangan terdesentralisasi (DeFi). Bahkan ENS mencoba menggantikan atau bersaing dengan DNS dalam beberapa hal. Tetapi kemudian ada juga orang-orang yang melihat bahwa kekerasan rantai blok dapat melakukan hal-hal yang tidak dapat dilakukan oleh kekerasan institusional — ide-ide yang belum pernah dicoba oleh siapa pun sebelumnya karena kita tidak pernah memiliki kapasitas ini, rasa kekerasan tertentu ini. Dan sekarang kita dapat mengeksplorasi hal-hal tersebut. Mungkin NFT ada di sana, atau permainan seperti Dark Forest, atau gerakan seputar dunia otonom.
 
-#### Meningkatkan ambisi kita (27:00) {#raising-our-ambitions-2700}
+### Meningkatkan ambisi kita (27:00) {#raising-our-ambitions-2700}
 
 Yang terpenting, saya pikir kerangka kerja ini meningkatkan ambisi kita. Secara pribadi, inilah yang penting bagi saya, dan mungkin ini selaras dengan Anda — saya tidak hanya di sini untuk aplikasi-aplikasi individual ini. Saya bukan seseorang yang hanya benar-benar peduli tentang Bitcoin atau semua tentang DeFi atau semua tentang NFT. Mungkin Anda juga begitu. Ada sesuatu yang lebih besar terjadi di sini.
 

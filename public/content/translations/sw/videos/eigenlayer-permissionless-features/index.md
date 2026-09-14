@@ -19,17 +19,17 @@ Mazungumzo ya utafiti na **Sreeram Kannan** (Chuo Kikuu cha Washington / EigenLa
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=-V-fG4J1N_M) iliyochapishwa na a16z kripto. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 Leo nitazungumzia moja ya bidhaa tunazojenga, ambayo pia ni wazo linaloitwa EigenLayer. Tunaiita EigenLayer mkusanyiko wa uwekaji dhamana upya, lakini inachofanya ni kuwezesha mtu yeyote kuongeza vipengele vipya kwenye Ethereum.
 
 Kama Tim alivyotambulisha, mimi ni profesa mshiriki katika Chuo Kikuu cha Washington huko Seattle, ambapo tumekuwa tukifanya kazi kwenye minyororo ya vitalu, mwafaka, na maeneo mengine kwa kipindi cha miaka minne na nusu iliyopita. Katika mwaka uliopita, nimekuwa nikianzisha kampuni changa ya EigenLayer Labs. Tumefanya kazi nyingi kwenye itifaki za mwafaka — tulikuwa na chapisho linaloitwa "Everything is a Race" ambalo linachambua masharti ambayo itifaki za aina ya mnyororo mrefu zaidi za Uthibitisho wa Kazi, Uthibitisho wa Dau, na uthibitisho wa nafasi ni salama. Tulijenga juu ya baadhi ya uelewa huo — kwa mfano, chapisho linaloitwa Prism, ambalo ni itifaki ya Uthibitisho wa Kazi yenye ucheleweshaji mdogo sana. Pia tulifanya kazi inayoitwa PoSAT kuhusu jinsi ya kuunda itifaki ya Uthibitisho wa Dau inayopatikana kwa nguvu, ambapo itifaki yako inaendelea kufanya kazi chini ya ushiriki unaobadilika.
 
-#### Ni wakati gani minyororo ya vitalu inawajibika (1:31) {#when-are-blockchains-accountable-131}
+### Ni wakati gani minyororo ya vitalu inawajibika (1:31) {#when-are-blockchains-accountable-131}
 
 Pia tulichunguza ni wakati gani minyororo ya vitalu inawajibika. Kigezo kimoja ni kwamba unapokuwa na akidi na saini, ikiwa kundi la waweka dhamana litasaini mara mbili kwenye kitalu, minyororo hiyo ya vitalu inawajibika. Lakini kuna mambo madogo madogo — kwa mfano, itifaki kama Algorand, ambayo pia inatumia akidi, haiwajibiki kwa sababu inategemea mawazo ya muda ambapo unaweza kuunda ukiukaji wa usalama kwa kutozungumza chochote.
 
-#### Mwafaka wa rasilimali nyingi (2:11) {#multi-resource-consensus-211}
+### Mwafaka wa rasilimali nyingi (2:11) {#multi-resource-consensus-211}
 
 Kazi mbili za hivi karibuni zaidi ni kuhusu mwafaka wa rasilimali nyingi — tuseme unataka kujenga itifaki inayotumia Uthibitisho wa Dau, uthibitisho wa nafasi, na Uthibitisho wa Kazi zote zikiwa zimeunganishwa katika itifaki moja. Unataka ifanye kazi hata kama idadi kubwa ya wachimbaji wa Uthibitisho wa Kazi ni waovu, mradi tu sehemu ndogo sana ya wachimbaji wa Uthibitisho wa Dau ni waaminifu. Tumeainisha maeneo ya maelewano katika rasilimali nyingi.
 
@@ -39,7 +39,7 @@ Juu ya mwafaka, kuna suluhisho za kuongeza uwezo kama vile shadi. Tulikuwa na ma
 
 Jambo moja tulilogundua kama msuguano mkubwa katika mnyororo wa vitalu ni kwamba kiwango cha uvumbuzi katika matabaka ya msingi — kwenye mwafaka, shadi, au rika-kwa-rika — kiko chini sana kuliko kiwango cha uvumbuzi katika tabaka la programu tumizi. Programu tumizi zinaweza kusambazwa bila ruhusa — mtu yeyote anaweza kusambaza programu tumizi juu ya mnyororo wa vitalu uliopo kama Ethereum. Wakati ambapo maboresho ya itifaki ya msingi ni yenye ruhusa kwa maana ya kina sana. Hili limekwamisha nafasi yetu kwa kiasi kikubwa.
 
-#### Kutenganisha uaminifu na uvumbuzi (8:30) {#decoupling-trust-and-innovation-830}
+### Kutenganisha uaminifu na uvumbuzi (8:30) {#decoupling-trust-and-innovation-830}
 
 Tukirudisha hadithi nyuma hadi 2008–2009: Bitcoin ilianzisha uaminifu uliogatuliwa kupitia uchimbaji wa Uthibitisho wa Kazi. Juu ya uchimbaji, kuna itifaki ya mwafaka — mnyororo mrefu zaidi au mnyororo mzito zaidi — ambayo inaamua mnyororo halali. Juu ya hilo, Bitcoin Script inaweka semantiki za utekelezaji. Kwa hivyo tuna tabaka la uaminifu kwenye msingi, tabaka la mwafaka juu yake, na tabaka la utekelezaji juu ya hilo.
 
@@ -47,7 +47,7 @@ Lakini Bitcoin pia ilikuwa mnyororo wa vitalu maalum kwa programu tumizi — ili
 
 Wazo la msingi lililojengwa na Ethereum lilikuwa kutenganisha uaminifu na uvumbuzi. Walichukua tabaka la uandishi la Bitcoin na kulibadilisha na tabaka la upangaji programu la madhumuni ya jumla la Turing-complete — Ethereum Virtual Machine. Hili lilikuwa uboreshaji mdogo wa kiufundi kwa maana ya msingi, lakini kile kilichounda kilikuwa ni muundo wa uaminifu. Sasa mtu yeyote anaweza kuja na kujenga programu tumizi zilizogatuliwa (dapps) juu ya mfumo. Mtu aliyejenga ENS hakuwa na uhusiano wowote na mtandao wa uaminifu. Uaminifu wa mtandao wa Ethereum ukawa moduli inayoweza kutolewa kwa programu tumizi yoyote iliyosambazwa.
 
-#### Uvumbuzi wazi (10:23) {#open-innovation-1023}
+### Uvumbuzi wazi (10:23) {#open-innovation-1023}
 
 Hili lilisababisha kasi kubwa ya uchumi wa majina bandia. Mtu yeyote anayeunda programu tumizi hizi — wao wenyewe hawaaminiki, wanaleta tu uvumbuzi. Unakuja na wazo, unaweza kuwa mtu asiyejulikana, huhitaji kuaminika, unaandika tu msimbo wako, unauweka kwenye Ethereum, na kila mtu anaamini kwamba Ethereum itaendelea kutekeleza masharti kama yalivyoelezwa.
 
@@ -59,7 +59,7 @@ Picha hii inaonekana sawa na picha ya 2011 ya Bitcoin na Namecoin. Uvumbuzi kati
 
 Zaidi ya hayo, Ethereum inatoa tu uaminifu kwa dapps kwa ajili ya utengenezaji wa kitalu — upangaji wa muamala na utekelezaji wa muamala. Hiyo ndiyo yote. Ikiwa dapps zilitaka uaminifu kwenye kitu kingine chochote — kusoma data kutoka kwenye mtandao, kusoma data kutoka kwenye mnyororo wa vitalu mwingine, kuendesha injini tofauti ya utekelezaji, kuendesha injini ya michezo, kuendesha mfumo wa uthibitishaji — zinapaswa kuunda mtandao wao wa uaminifu. Chainlink ni mfano mzuri: ni itifaki ya orakeli inayosaidia kuchukua data kutoka kwenye mtandao kuingia kwenye mnyororo wa vitalu, lakini Chainlink ina mtandao wake wa uaminifu. Uaminifu wake haujakopwa kutoka kwa waweka dhamana wa Ethereum.
 
-#### Tatizo la uchumi mdogo (16:28) {#microeconomic-problem-1628}
+### Tatizo la uchumi mdogo (16:28) {#microeconomic-problem-1628}
 
 Tatizo la uchumi mdogo: ikiwa unaendesha programu ya kati — tuseme, mfumo wa kuhifadhi data — unapaswa kuunda utaratibu wako wa uwekaji dhamana. Unahitaji usalama wa juu wa kiuchumi, ambayo inamaanisha mtaji mwingi uliowekwa dhamana, na kisha una gharama ya fursa ya mtaji. Kwa mfano, unataka dola bilioni 10 ziwekwe dhamana katika tabaka lako la kuhifadhi data. Unapaswa kulipa kiwango cha 5% au 10% kwa mwaka kwenye mtaji huo katika ulimwengu usio wa kubahatisha. Gharama kuu sio gharama ya uendeshaji ya kuhifadhi data — ni gharama ya kulisha msingi mkubwa wa mtaji wa kiuchumi.
 
@@ -67,11 +67,11 @@ Ukiangalia mfumo ikolojia wowote wa Uthibitisho wa Dau: 94% ya tuzo huenda kwa m
 
 Ikiwa wewe ni dapp, tatizo la uchumi mdogo ni kwamba unalipa ada kubwa sana kwa mtandao mkubwa wa uaminifu kama Ethereum, lakini umewekewa kikomo na uaminifu dhaifu zaidi unaoutegemea. Ikiwa ulikuwa na orakeli au daraja ambalo haliaminiki sana, unaweza kunyonywa hapo. Usalama wako daima ni kiwango cha chini kabisa cha uaminifu.
 
-#### Tatizo la kiuchumi (19:52) {#economic-problem-1952}
+### Tatizo la kiuchumi (19:52) {#economic-problem-1952}
 
 Kwa mnyororo wa vitalu wa msingi, ikiwa pendekezo la thamani ya msingi ni kutoa uaminifu uliogatuliwa na kupata mapato juu yake, Ethereum ina uwezo tu wa kutoa uaminifu uliogatuliwa kwenye utengenezaji wa kitalu — sio kwenye mambo mengine yote yanayohitajika kuendesha huduma iliyogatuliwa. Visiwa vya uaminifu uliogatuliwa vinaundwa na programu nyingine za kati, na badala ya mapato kuoanishwa na kuunda mtandao mkubwa wa uaminifu, mapato yanagawanywa katika visiwa vidogo.
 
-#### EigenLayer (20:44) {#eigenlayer-2044}
+### EigenLayer (20:44) {#eigenlayer-2044}
 
 Kwa kweli ni wazo rahisi sana ambalo linatatua matatizo haya yote kwa wakati mmoja.
 
@@ -81,7 +81,7 @@ Uwekaji dhamana upya ni nini? Katika Ethereum ya Uthibitisho wa Dau, makumi kadh
 
 Sifa tunayotaka: dhamana hiyo hiyo inachukua hatari ya ziada. Hatari ya ziada kwenye nini? Kwenye kutoa huduma zozote mpya ambazo zimejengwa juu ya EigenLayer — mtu anataka kujenga orakeli, daraja, tabaka la upatikanaji wa data, itifaki mpya ya mwafaka. Yoyote kati ya haya inaweza kujengwa juu ya EigenLayer. Ikiwa wewe ni mweka dhamana anayejiunga, pia unabainisha ni kikundi gani cha huduma unachojiunga nacho — na hivyo kupata mapato huku pia ukichukua hatari ya ziada ya ukataji.
 
-#### Jinsi EigenLayer inavyooanisha mfumo ikolojia (23:50) {#how-eigenlayer-aligns-the-ecosystem-2350}
+### Jinsi EigenLayer inavyooanisha mfumo ikolojia (23:50) {#how-eigenlayer-aligns-the-ecosystem-2350}
 
 Kwa programu za kati: ikiwa mweka dhamana ambaye tayari ameweka dhamana katika Ethereum anajiunga ili pia kutoa huduma kwenye orakeli, hawana gharama ya ziada ya mtaji. Tayari wameweka dhamana kwenye Ethereum na wanapata APR. Kwa kujiunga na EigenLayer, gharama ya ziada ya mtaji ni ndogo sana au kinadharia ni sifuri. Ikiwa unajua kwamba kama nodi mwaminifu hutawahi kukatwa, hatari inapunguzwa. Mlinganyo unakuwa: je, gharama ya uendeshaji inahalalishwa na mapato? Muundo wa gharama wa programu za kati unabadilika ghafla kutoka kuwa na kikomo cha mtaji hadi kuwa na kikomo cha gharama ya uendeshaji.
 
@@ -91,7 +91,7 @@ Pia inaoana kithamani na mfumo ikolojia wa msingi. Waweka dhamana walioweka dham
 
 EigenLayer ni soko la pande mbili. Upande mmoja ni waweka dhamana wanaojiunga. Upande mwingine ni programu za kati na huduma zilizojengwa juu ya EigenLayer zinazojiunga ili kutumia waweka dhamana hawa.
 
-#### Kujiinua kupita kiasi na usimamizi wa hatari (33:00) {#over-leveraging-and-risk-management-3300}
+### Kujiinua kupita kiasi na usimamizi wa hatari (33:00) {#over-leveraging-and-risk-management-3300}
 
 **Swali la hadhira:** Vipi ikiwa dhamana inainuliwa kupita kiasi?
 
@@ -99,7 +99,7 @@ Tuseme kuna dapps kumi tofauti zinazoendesha minyororo yao wenyewe, kila moja ik
 
 Ikiwa mfumo unainuliwa kupita kiasi, ada hupanda, watu wengi zaidi wanajiunga, na mfumo unakuwa chini ya kiwango cha kujiinua tena. Kadiri huduma nyingi zinavyoanza, fursa za mavuno hupanda, na mtaji zaidi unafungiwa — badala ya 5% ya ETH kuwekwa dhamana, unaweza kuwa na 50%.
 
-#### Uchumi wa nafasi ya kitalu (43:58) {#block-space-economics-4358}
+### Uchumi wa nafasi ya kitalu (43:58) {#block-space-economics-4358}
 
 Nafasi ya kitalu imedhamiriwa na kikomo cha kitalu — ukubwa wa juu zaidi ambao kitalu kinaweza kuchukua. Mifumo yote ya mnyororo wa vitalu ina uchumi wa kujirekebisha ambapo kadiri ukubwa wako wa kitalu unavyokaribia kikomo cha kitalu, bei zinaanza kulipuka.
 
@@ -107,23 +107,23 @@ Kikomo cha kitalu kinawekwa na miundombinu ya nodi dhaifu zaidi. Falsafa ya Ethe
 
 EigenLayer inatatua hili kiotomatiki kwa kuunda soko huria ambapo waweka dhamana hawa wanaweza kukopesha nafasi yao ya ziada ya kitalu kwa huduma zingine. Mtu anaweza kujenga mnyororo mwingine wenye giga-gesi 15 kwa kila kitalu badala ya gesi milioni 15. Unapata kitu kama 60% ya usalama wa Ethereum — na hiyo tayari inatosha.
 
-#### Utofauti wa waweka dhamana (48:57) {#staker-heterogeneity-4857}
+### Utofauti wa waweka dhamana (48:57) {#staker-heterogeneity-4857}
 
 Utofauti wa waweka dhamana unaenea zaidi ya uwezo wa kimahesabu. Waweka dhamana ni tofauti sana katika mapendeleo yao ya hatari na tuzo. Mimi na wewe tunaweza kukubaliana kwamba tutakatwa ikiwa tutatofautiana na matokeo ya API ya Coinbase, lakini kwa mtu mwingine hilo halikubaliki kabisa. Hili haliwezi kamwe kurekebishwa kuwa itifaki ya msingi lakini linaweza kuwekwa nje kwenye tabaka la kujiunga.
 
 Waweka dhamana pia ni tofauti katika mapendeleo ya tuzo. Katika Ethereum, nafasi ya kitalu ni kiasi kisicho na rangi — miamala yote ni sawa, na ishara pekee ya kuitofautisha ni bei. Ni vigumu sana kujenga mtandao wa kijamii juu ya Ethereum kwa sababu kila muamala wa mtandao wa kijamii unashindana na muamala wa fedha zilizogatuliwa (DeFi) ambao una faida zaidi kwa msingi wa muamala kwa muamala. Suluhisho letu: waweka dhamana wanajiunga na minyororo midogo tofauti ambapo wana mapendeleo tofauti ya tuzo.
 
-#### Uvumbuzi wa kidemokrasia na wepesi (51:01) {#democratic-and-agile-innovation-5101}
+### Uvumbuzi wa kidemokrasia na wepesi (51:01) {#democratic-and-agile-innovation-5101}
 
 EigenLayer inatatua tatizo la jinsi ya kuunda mnyororo wa vitalu ambao ni wa kidemokrasia na mwepesi katika uvumbuzi. Ethereum inatawaliwa kidemokrasia sana lakini pia ni polepole sana kujibu. Itifaki zote leo zinafanya maelewano kati ya wepesi na utawala wa kidemokrasia. Ethereum pamoja na EigenLayer inapata bora zaidi ya pande zote mbili: tabaka la msingi ambalo ni la kidemokrasia na linasasishwa polepole, juu yake EigenLayer inaruhusu watu kujenga uvumbuzi unaojibu haraka mahitaji ya soko kwa njia isiyohitaji ruhusa kabisa.
 
-#### EigenDA na kufunga (52:56) {#eigenda-and-closing-5256}
+### EigenDA na kufunga (52:56) {#eigenda-and-closing-5256}
 
 Tunachunguza kujenga madaraja, otomatiki inayoendeshwa na tukio, huduma za upangaji wa haki, minyororo ya kando, na ujumuishaji wa MEV — yote kwenye EigenLayer. EigenLayer tayari iko hewani kwenye mitandao ya majaribio ya ndani. Tayari tumejenga kisa cha kwanza cha matumizi: tabaka la upatikanaji wa data la kiwango kikubwa sana kwa Ethereum linaloitwa EigenDA. Ni tabaka la upatikanaji wa data ambalo linajumuisha mawazo bora katika usimbaji wa ufutaji na ahadi za polinomiali. Kwenye mtandao wetu wa majaribio, kiwango ambacho unaweza kuandika data ni megabaiti 12.4 kwa sekunde — mara 10 zaidi ya kile ambacho Ethereum 2.0 imepangwa kusafirisha.
 
 Ufahamu muhimu ni kwamba kwa usimbaji wa ufutaji, gharama ya jumla ya kuhifadhi faili haitegemei idadi ya nodi zilizojiunga. Lakini bei unayoweza kutoza inategemea idadi ya nodi kwa sababu unatoa usalama zaidi wa kiuchumi. Kuna uchumi wa kujiongeza ambapo nodi nyingi zaidi zitajiunga kwa sababu zinaweza kutoza malipo ya usalama bila kuongeza gharama ya uendeshaji. Usimbaji wa ufutaji unavunja maelewano kati ya uwezo wa kuongezeka na ugatuzi — unapata ugatuzi kamili na uwezo kamili wa kuongezeka kwa wakati mmoja.
 
-#### Vivutio vya Maswali na Majibu (58:00) {#qa-highlights-5800}
+### Vivutio vya Maswali na Majibu (58:00) {#qa-highlights-5800}
 
 **Kuhusu ukaguzi wa programu za kati:** Kama vile kuna mfumo ikolojia wa ukaguzi wa mkataba mahiri, tunahitaji mifumo ikolojia ya ukaguzi wa programu za kati. Ukaguzi wa mkataba mahiri unahudumia watumiaji ambao wanapaswa kutojua chochote. Ukaguzi wa programu za kati unahudumia waweka dhamana ambao wanapaswa kujua kitu. Ikiwa hatuwezi kufanya ukaguzi wa programu za kati ufanye kazi, hatupaswi pia kuamini ukaguzi wa mkataba mahiri.
 

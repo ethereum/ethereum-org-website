@@ -19,7 +19,7 @@ Hotuba kuu na **Bartek Kiepuszewski**, mwanzilishi wa L2BEAT, katika Devcon SEA 
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=ik2JxmHDmyw) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 Nikiwa mwanzilishi wa L2BEAT, nina fursa ya kipekee ya kufanya kazi na karibu kila timu ya l2 iliyopo, na tumekuwa tukifanya kazi nao tangu mwanzo kabisa wa nafasi hii — ambayo ni kama miaka minne iliyopita. Hiyo ni ajabu. Wakati unakwenda haraka sana. Tumefanya kazi na waanzilishi wa mapema katika teknolojia ya ZK, tumefanya kazi na Plasma Group ambayo ilibadilisha jina kuwa Optimism, tumefanya kazi na Arbitrum. Na kutoka jukwaa hili ninataka kutambua timu hizi zote, kwa sababu bila msaada wenu hakika tusingekuwa hapa. Kama L2BEAT, tunashukuru sana kwa msaada wote ambao jamii inatupa.
 
@@ -27,7 +27,7 @@ Kwa hivyo hebu tuangalie kile ambacho tumeweza kufikia. Kwanza kabisa, tumeweza 
 
 Jambo ni kwamba, pamoja na ukuaji huo wote pia inakuja jukumu kubwa. Tunahitaji kuelewa kwamba watumiaji wa mwisho wanaotumia mifumo hii wanaweka pesa kwenye mikusanyiko hii kwa sababu wanaamini kwamba mikusanyiko inarithi usalama wa Ethereum. Kwa utambuzi wa aina hiyo, kwa maoni yangu, tunahitaji kuanza kuwa makini kuhusu usalama.
 
-#### Kuongeza Kiwango cha Ethereum (2:10) {#scaling-ethereum-210}
+### Kuongeza Kiwango cha Ethereum (2:10) {#scaling-ethereum-210}
 
 Pia tumeweza kuongeza kiwango cha Ethereum. Ethereum ilikuwa ikiendelea vizuri kabisa, lakini ilianza kuwa polepole sana kwa mahitaji na ada zilikuwa zikipanda sana. Kwa hivyo hakika tunaongeza kiwango — nambari hizi pia zinapanda. Hii ni ajabu.
 
@@ -35,7 +35,7 @@ Hata hivyo, kuna "lakini." Mnajua, jamani, kila wakati kuna "lakini," sivyo? Na 
 
 Kwa sababu unajua, tumekuwa tukitumia magurudumu ya mafunzo kwa muda mrefu sana. Ikiwa wewe ni mtu mzima unayetumia magurudumu ya mafunzo — na ninarudia, imekuwa miaka minne — basi wewe ni mchanga sana. Ni sawa kutumia magurudumu ya mafunzo ikiwa wewe ni mtoto. Sio sawa kutumia magurudumu ya mafunzo ikiwa wewe ni mtu mzima. Na nadhani ni wakati wa sisi sote kuacha kuona aibu kuhusu hilo. Sote tunapaswa kuzungumza, na hatupaswi kuteseka na ugonjwa wa nguo mpya za mfalme.
 
-#### "Lakini" kubwa: mifumo ya uthibitisho inayokosekana (4:30) {#the-big-but-missing-proof-systems-430}
+### "Lakini" kubwa: mifumo ya uthibitisho inayokosekana (4:30) {#the-big-but-missing-proof-systems-430}
 
 Kwa hivyo hii "lakini" kubwa ni nini? Kweli, kwanza kabisa, l2 nyingi leo hazina mfumo wa uthibitisho, jambo ambalo linashangaza kwa sababu waanzilishi wa mapema kama StarkNet, kama zkSync, kama Aztec — miaka minne iliyopita walipokuwa wakizindua mikusanyiko yao ya kwanza maalum kwa programu, walikuwa na mifumo ya uthibitisho. Kwa hivyo ndiyo, unaweza kuzindua l2 leo kwa kubofya kitufe kimoja. Hata hivyo, je, hiyo kweli ni l2? Je, hiyo kweli ni rollup? Unachofanya ni kuzindua kitu ambacho kinalindwa na saini-nyingi. Sidhani kama hiyo inatosha.
 
@@ -43,13 +43,13 @@ Hali ya mfumo wa ikolojia leo ni kama hii kwenye mchoro huu. Upande wa kushoto u
 
 Chati hiyo upande wa kulia pia itajumuisha mrundikano wote wa Orbit, ambao una mfumo wa uthibitisho, hata hivyo kwa kweli uko nyuma ya orodha fupi sana yenye ruhusa. Wakati mwingine orodha hii ni mhusika mmoja tu — ni sawa na mpendekezaji wa hali. Kimsingi ni mpendekezaji wa hali na ni wao tu wanaoweza kujipinga wenyewe. Yaani, nini? Kwa kweli.
 
-#### Mabaraza ya usalama (6:00) {#security-councils-600}
+### Mabaraza ya usalama (6:00) {#security-councils-600}
 
 Sasa, l2 nyingi hazitumii mabaraza ya usalama. Tunamaanisha nini kwa baraza la usalama? Baraza la usalama kimsingi ni saini-nyingi inayojumuisha angalau washiriki wanane na inahitaji kiwango cha mwafaka cha 75%. Kwa hivyo unaweza kuifikiria kama saini-nyingi kubwa, lakini sio tu kuhusu ukubwa — ni kuhusu ukweli kwamba tunataka washiriki wawe wamegatuliwa kijiografia. Labda ulisikia jana wasilisho la kushangaza kuhusu hitaji la utofauti wa kijiografia. Hicho ndicho tunachotaka kutoka kwa miundo hii. Na kimsingi, tunataka washiriki muhimu zaidi watoke katika kampuni tofauti na mamlaka tofauti. Hilo ni muhimu sana, na nitakuonyesha baadhi ya mifano ya kwa nini.
 
 Fikiria mabaraza ya usalama kama saini-nyingi hizi zilizoboreshwa sana. Kuna tabaka muhimu sana la kijamii nyuma yao. Kwa hivyo hii ndiyo hali ya sasa ya mambo, na tena, ni mbaya sana. Tuna mabaraza ya usalama tu katika Arbitrum, Optimism, Polygon, zkSync — na ninajua kwamba StarkNet, Scroll, na cha kufurahisha Fuel zinazinduliwa na baraza la usalama. Kila mtu mwingine kimsingi ni saini-nyingi ndogo sana, ya ndani, mara nyingi ya kibinafsi, na kwa kweli ni ngumu sana kutofautisha kati ya saini-nyingi hizi na EOA rahisi.
 
-#### Dhana za uaminifu za upatikanaji wa data (7:25) {#data-availability-trust-assumptions-725}
+### Dhana za uaminifu za upatikanaji wa data (7:25) {#data-availability-trust-assumptions-725}
 
 Jambo la tatu kubwa ambalo tulifanya vibaya ni kwamba l2 nyingi ambazo sio rollup zimewekwa na dhana za uaminifu za upatikanaji wa data mbaya sana. Na ninatumia neno "mbaya sana" — A, kwa sababu ninalipenda, na B, kwa sababu ni mbaya sana, sana.
 
@@ -59,7 +59,7 @@ Kamati ya upatikanaji wa data awali iliundwa na kutetewa na StarkWare kwa utekel
 
 Kwa hivyo kwa ujumla, nasikitika kusema, lakini kwa sasa katika l2 nyingi, waendeshaji wenye ruhusa wanaweza kuiba au kufungia pesa zako. Tuko hapa kuwafahamisha nyote kuhusu hilo. Samahani kusema hivyo, lakini tunahitaji kubadilisha mtazamo.
 
-#### Kwa nini mifumo ya uthibitisho ni muhimu (8:40) {#why-proof-systems-matter-840}
+### Kwa nini mifumo ya uthibitisho ni muhimu (8:40) {#why-proof-systems-matter-840}
 
 Kwa nini tunapaswa kujali kuhusu mifumo ya uthibitisho? Kuna angalau sababu tatu nzuri kwa maoni yetu kwa nini sote tunapaswa kuwa na mfumo wa uthibitisho unaofanya kazi.
 
@@ -71,7 +71,7 @@ Mara tu unapoanzisha mfumo wa uthibitisho, hali inakuwa ngumu zaidi kwa mpendeke
 
 Hatimaye, mifumo ya uthibitisho — ikiwa wewe ni Hatua ya 2 — inakuruhusu kuondoa waamuzi wowote wale. Huhitaji baraza la usalama, au ikiwa unalo, ni kwa hali za dharura tu. Kwa hivyo hiyo inaweza kuwa na athari kubwa za udhibiti. Unaweza kutaka kuzindua l2 yako kama mfumo wa Hatua ya 2 tangu mwanzo kabisa. Hilo linawezekana, lakini bila shaka unahitaji kuwa na mfumo wa uthibitisho — kwa hakika unaweza kutaka kuwa na zaidi ya mmoja. Tayari kuna baadhi ya matangazo ya mifumo inayofanya hivyo, kama tangazo la hivi karibuni kutoka kwa timu ya Nethermind inayojenga rollup inayokusudiwa kuwa Hatua ya 2 wakati wa uzinduzi.
 
-#### Kwa nini mabaraza ya usalama, sio saini-nyingi (11:29) {#why-security-councils-not-multisigs-1129}
+### Kwa nini mabaraza ya usalama, sio saini-nyingi (11:29) {#why-security-councils-not-multisigs-1129}
 
 Hiyo ilikuwa kuhusu mifumo ya uthibitisho. Sasa, kwa nini mabaraza ya usalama na sio tu saini-nyingi rahisi? Sababu ni: usiamini saini-nyingi ni saini-nyingi. Hiyo ndiyo sababu — isipokuwa kuna tabaka la kijamii ambalo linaweza kukushawishi kwamba hizi zimetofautishwa kimsingi.
 
@@ -83,7 +83,7 @@ Hatimaye, hivi karibuni tulikuwa na shambulio kwenye saini-nyingi. Usifikirie ha
 
 Kwa hivyo kwa muhtasari: ikiwa una rollup ya Hatua ya 0 isiyo na baraza la usalama, kimsingi mwendeshaji mwenye nia mbaya anaweza kufanya chochote anachotaka na pesa zako. Ikiwa wewe ni rollup ya Hatua ya 0 yenye baraza la usalama, basi mshambuliaji anahitaji kuhonga wachache wa baraza la usalama — labda ni jambo gumu kufanya, lakini ni rahisi zaidi kuliko kuhonga wengi wa baraza la usalama, jambo ambalo ungehitaji kufanya ikiwa rollup yako ina mfumo wa uthibitisho. Na hatimaye, hakuna anayeweza kuiba pesa zako ikiwa wewe ni Hatua ya 2. Hiyo ndiyo ahadi ya kufika Hatua ya 2.
 
-#### Uainishaji mpya uliopendekezwa (13:10) {#proposed-reclassification-1310}
+### Uainishaji mpya uliopendekezwa (13:10) {#proposed-reclassification-1310}
 
 Swali ni: je, tuna motisha sahihi kwa miradi kujali kweli? Shida ni kwamba jambo pekee tunaloweza kufanya — sisi kama L2BEAT na sisi kama jamii ya Ethereum — ni kutumia shinikizo la kijamii. Vitalik alisema kwamba kuanzia mwaka ujao atapanga kutaja hadharani tu l2 ambazo ni Hatua ya 1. Hapo awali hata alisema kwamba hataita mifumo mikusanyiko ikiwa sio Hatua ya 1.
 
@@ -93,7 +93,7 @@ Tunachopendekeza kwa jamii — na hii itaenda kwenye jukwaa kwa maoni ya jamii �
 
 Kisha una kategoria nyingine ya mifumo ambayo haitumii DA ya Ethereum. Wanatumia dhana za uaminifu za ziada zinazokuja na DA ya nje. Tunaziita "alt-DA" lakini zingejumuisha Validium, optimium, na ujenzi wowote wa mseto unaoweza kuunda. Hata hivyo, lazima zikupe dhamana nzuri za DA — hiyo haiwezi kuwa chumba chako cha chini. Hiyo inapaswa kuwa kamati ya upatikanaji wa data yenye ukubwa unaofaa, au ikiwa unatumia Celestia au Avail, unahitaji kutumia daraja.
 
-#### Kategoria ya "zingine" na ahadi ya L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### Kategoria ya "zingine" na ahadi ya L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 Vipi kuhusu zingine? Tutaziweka katika kategoria ya tatu, ambayo tunaiita — na sasa ninasubiri maoni ya jamii kuhusu jinsi ya kutaja mifumo hii — jina letu la kazi ni "zingine." Hoja ni kwamba zinalindwa na saini-nyingi, na tutafichua saini-nyingi hizi kwa jinsi zilivyo. Hicho ndicho tunachotaka kufanya katika UI yetu.
 
@@ -107,7 +107,7 @@ Je, inatosha kusema tu "Nina mfumo wa uthibitisho"? Hapana. Ahadi yetu kwa jamii
 
 Tunaajiri watafiti. Tutafanya kazi hiyo yote. Hii ni ahadi yetu kwa mwaka ujao. Natumai mwaka ujao utakuwa mwaka wa l2 na mikusanyiko — hata hivyo, sio kuhusu kuzindua rollup kwa kubofya kitufe kimoja. Hoja ni kwamba unataka kuweza kuzindua mfumo wenye usalama mzuri. Kwa hakika unataka kurithi usalama mwingi iwezekanavyo kutoka kwa Ethereum. Kuna kazi nyingi ya kufanya kwa sisi sote kufikia hilo. Lakini ikiwa hatutafanya hivyo, basi tunachofanya kimsingi ni kuunda maelfu ya minyororo ya kando isiyo salama. Hatutaki hilo, nadhani, kama jamii.
 
-#### Maswali na Majibu (18:45) {#qa-1845}
+### Maswali na Majibu (18:45) {#qa-1845}
 
 **Mwenyeji:** Hebu tufanye Maswali na Majibu. Je, ni muhimu kwamba mikusanyiko iwe na mpangaji uliogatuliwa, au mifumo mingine ya usalama inatosha?
 

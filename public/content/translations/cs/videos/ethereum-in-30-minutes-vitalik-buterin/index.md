@@ -18,7 +18,7 @@ breadcrumb: "Ethereum za 30 minut"
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=ei3tDRMjw6k) vydaného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:02) {#introduction-002}
+### Úvod (0:02) {#introduction-002}
 
 Skvělé, takže Ethereum za 30 minut. Toto je prezentace, kterou jsem měl v podstatě na každém Devconu od jeho spuštění. Zajímavé je, jak se s tím, jak se mění ekosystém Etherea a jak se mění protokol Etherea, a jak se mění doba, nakonec docela dost mění i samotný obsah. Když se vrátíte k ekvivalentu této přednášky z roku 2015, uslyšíte hodně o uncle blocích. Samozřejmě, uncle bloky jsou vlastností důkazu prací (PoW). Nyní máme důkaz podílem (PoS), a tak už uncle bloky nemáme. Ethereum má nyní samozřejmě také vrstvy 2 (l2), a tehdy by toto vrstvy 2 vůbec neobsahovalo. Nyní víme, že vrstvy 2 tvoří polovinu celého příběhu. Ethereum je především vyvíjející se ekosystém a obsah tohoto se bude i nadále měnit s tím, jak se mění technologie, a také s tím, jak se důraz ekosystému přesouvá od budování základní infrastruktury k obrovskému zaměření na aplikace.
 
@@ -30,7 +30,7 @@ Jak světový počítač funguje? Způsob, jakým o tom přemýšlím, je, že v
 
 Vrstva 2 je GPU. Vrstva 2 jste vy všichni v této místnosti, kteří jste součástí jakékoli jednotlivé vrstvy 2. Kdo z vás je součástí vrstvy 2? Hurá. Kdo z vás použil vrstvu 2? Kdo z vás použil vrstvu 1? Dobře, všichni jsme tu uživatelé. Existuje spousta těchto různých GPU a Ethereum jako světový počítač dokáže držet pohromadě, protože každé z těchto GPU je připojeno ke stroji na důvěru prostřednictvím systémů optimistických důkazů, důkazů s nulovým vědomím, SNARKů, STARKů, plonku nebo jakýchkoli jiných módních slov. Všechny tyto systémy zajišťují, že vrstva 1 je schopna bez nutnosti důvěry ověřovat, co se děje uvnitř vrstev 2, a vrstvy 2 jsou také schopny bez nutnosti důvěry číst, co se děje na vrstvě 1.
 
-#### Decentralizace a diverzita (5:11) {#decentralization-and-diversity-511}
+### Decentralizace a diverzita (5:11) {#decentralization-and-diversity-511}
 
 Mezi těmito dvěma komponentami existuje důležitá souhra a společně tvoří Ethereum, které tu dnes je. Co je to L1? Je to řetězec. Běží na něm důkaz podílem. Nerozbíjí se. Co to znamená? L1 Etherea je řetězec, který celkově existuje už více než devět let a ve své současné podobě s důkazem podílem existuje něco málo přes dva roky. Jednou z opravdu důležitých věcí, kterou by základní vrstva měla mít, je jasný důkaz, že stavíte na základní vrstvě, která je decentralizovaná, otevřená, robustní a pravděpodobně si tyto vlastnosti udrží i do budoucna. 
 
@@ -42,7 +42,7 @@ Pak tu máme „neidentifikované“. Neidentifikovaný není aktér, stejně ja
 
 Jednou z vlastností, která se skutečně hodně zlepšila, je klientská diverzita. Ethereum bylo asi před pěti lety v podstatě jen Go Ethereum (Geth). Když máte ekosystém, kterému dominuje jeden klient, stává se to samo o sobě centrálním bodem selhání. Kdo z vás si pamatuje DoS útoky z roku 2016? Probudíte se v 5:17 ráno, dostanete budíček ve vojenském stylu, sejdete do krizové místnosti a někdo objevil chybu v klientovi. Celý řetězec se zastaví. Opravíme to a pak o dva nebo tři dny později někdo najde další chybu. To pokračuje celý měsíc, dokud nakonec nemusíme provést hard fork. Ale během tohoto období schopnost Etherea mít dva různé klienty – v té době to byli Geth a Parity – v podstatě zachránila řetězec. Byly chvíle, kdy chyba zasáhla Geth, ale ne Parity, a chvíle, kdy chyba zasáhla Parity, ale ne Geth. Ethereum hodně získalo tím, že má více softwarových implementací, a to je něco, co je v roce 2024 pravděpodobně v nejlepším stavu v historii Etherea.
 
-#### Více klientů a robustnost (10:40) {#multiple-clients-and-robustness-1040}
+### Více klientů a robustnost (10:40) {#multiple-clients-and-robustness-1040}
 
 Když se podíváme na konsensuální klienty, kteří zpracovávají část Etherea týkající se důkazu podílem, a exekuční klienty, kteří zpracovávají část Etherea týkající se EVM, vidíme, že jediným klientem s nejvyšším tržním podílem je Geth, který má někde kolem 50 %. Co se stane, když se doslova dnes, právě teď, objeví chyba v jakémkoli klientovi Etherea? Zkontrolujte, jestli Ethereum stále běží. Hádám, že ano – vsadil bych si 99,99 % na PolyMarketu. 
 
@@ -56,7 +56,7 @@ Před dvěma lety byl tento graf horší. Decentralizace Etherea je nejen schopn
 
 Pokud máte 32 ETH, nebo méně, pokud se připojíte k poolu, objevuje se stále více opravdu zajímavých možností poolů – jako je Obol squad staking, který vám umožňuje vytvářet menší pooly s vašimi přáteli. Existuje spousta různých způsobů, jak se můžete stát stakerem, a pokud tak učiníte, stanete se součástí této sítě uzlů zabezpečujících blockchain Etherea.
 
-#### Ověřování uzlů a škálování (15:06) {#node-verification-and-scale-1506}
+### Ověřování uzlů a škálování (15:06) {#node-verification-and-scale-1506}
 
 Hádám, že takhle to popisuje propaganda nadace – má to roztomilého slona. Takže sláva slonovi! I vy se můžete připojit k síti a pomoci ji zabezpečit. I když nejste staker, můžete na svém počítači provozovat uzel Etherea a dobrovolně ověřovat řetězec. 
 
@@ -70,7 +70,7 @@ Staking s menším množstvím ETH je také velmi aktivním výzkumným požadav
 
 Co běží na L1 Etherea? Některé aplikace s vysokou hodnotou. Spousta decentralizovaných financí (DeFi) s vysokou hodnotou běží na L1. ENS je v současné době na L1, ačkoli stále více využívá vrstvy 2. Lidé drží aktiva na vrstvě 1. Kromě toho vrstva 1 spravuje kořeny bloků, kořeny stavů a systémy důkazů pro vrstvy 2. Zabezpečuje vrstvy 2. Vrstva 1 musí být dostatečně výkonná, aby zvládla operace napříč vrstvami, zejména v případě, kdy vrstva 2 selže. Rozdíl mezi vrstvou 2 a nezávislým řetězcem je v tom, že i když je vaše vrstva 2 vystavena 51% útoku nebo tým ukončí činnost, vrstva 1 tam stále stojí, aby chránila uživatele. Uživatelé jsou schopni prokázat své vlastnictví a stav uvnitř vrstvy 2 a migrovat je zpět dolů na vrstvu 1. 
 
-#### Rychlosti L2 a roadmapy (20:33) {#l2-speeds-and-roadmaps-2033}
+### Rychlosti L2 a roadmapy (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Nedávno s tím proběhl živý experiment. dYdX v3 nedávno ukončilo činnost a lidé z L2Beat napsali vlastní implementaci softwaru pro únikový mechanismus. Bez jakéhokoli zapojení týmu dYdX si uživatelé mohli vzít jakákoli aktiva, která měli uvnitř dYdX v3, a přenést je zpět na L1 Etherea. Opuštění vrstvy 2 bez zapojení týmu není jen teorie, je to realita.
 
@@ -82,7 +82,7 @@ Pak přišlo Merge. Díky zajímavé matematické zvláštnosti se průměrná d
 
 Historie Etherea: Listopad 2013 byla bílá kniha. Červenec 2015 bylo spuštění. Kolem roku 2018 se Ethereum ustálilo na svém přibližném designu pro důkaz podílem a vzorkování dostupnosti dat. Původní dokumenty pro vzorkování dostupnosti dat a výmazové kódování jsem napsal už v roce 2017. 
 
-#### Casper a škálování rollupů (25:27) {#casper-and-rollup-scaling-2527}
+### Casper a škálování rollupů (25:27) {#casper-and-rollup-scaling-2527}
 
 Když se ponoříte do GitHubu, můžete vyhledat adresář s názvem `simple_casper` a najít kontrakty napsané v Serpentu. Kdo z vás si pamatuje Serpent? Kdo z vás používá Serpent? Tedy, myslím si, že Python je opravdu krásný, ale pokud to chcete, měli byste kódovat ve Vyperu. Vyper je vlastně skvělý a docela dost se zlepšuje. Uvnitř tohoto repozitáře jsme se v roce 2017 pokusili o plnou abstrakci a napsání logiky důkazu podílem přímo jako chytrý kontrakt. Spustili jsme demo ve 23:20 bangkockého času 31. prosince 2017 – chtěli jsme něco vydat ještě před Novým rokem – a demo se nakonec docela rychle rozbilo. Byly to rané časy.
 

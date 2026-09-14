@@ -20,13 +20,13 @@ breadcrumb: "l2 du kích"
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=WlsICV2OPAE) được xuất bản bởi Web3Privacy Now. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu và triết học vô chính phủ (0:05) {#introduction-and-anarchist-philosophy-005}
+### Giới thiệu và triết học vô chính phủ (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Vỗ tay] Chà, cảm ơn các bạn đã có mặt ở đây. Tôi biết Vitalik đang phát biểu lúc này. Thật sự là một vinh dự khi có một vài người trong số các bạn ở đây thay vì xếp hàng mua matcha đằng kia. Hôm nay chúng ta sẽ có một cuộc trò chuyện về các l2 du kích, và tôi nghĩ chúng ta sẽ đi sâu vào vấn đề đó, nhưng tôi xin giới thiệu với các bạn Melanie Premsyl, nhà triết học và người theo chủ nghĩa vô chính phủ người Pháp, người đã làm vinh dự cho chúng ta khi tham gia tại đây. Bạn có muốn giới thiệu một chút về bản thân không?
 
 **Melanie Premsyl:** Vâng. Chào mọi người. Tôi là một nhà triết học người Pháp. Tôi đang nghiên cứu về chủ nghĩa vô chính phủ và công nghệ, và ban đầu tôi thiên về khía cạnh lãnh thổ hơn. Giống như ở miền trung nước Pháp chẳng hạn, tôi không biết các bạn có biết Tarnac không, hay tất cả những nhóm kiểu như vậy, những nhóm có xu hướng bạo lực hơn. Vấn đề chính mà tôi gặp phải là chúng ta cần được liên kết với những người khác trên thế giới, và rất nhiều nhóm vô chính phủ lại rất hạn chế. Chúng ta cần một cách để có thể giao tiếp với nhiều người hơn từ Mỹ hoặc Nam Mỹ. Và đó là lý do tại sao bây giờ chúng tôi đang cố gắng tạo ra một cầu nối với tiền mã hóa và tất cả những ai đang cố gắng tìm ra những cách thức mới để đấu tranh chống lại sự thiếu hụt quyền riêng tư, sự thiếu tự do và bạo lực của nhà nước.
 
-#### Phiên tòa xét xử anh em MEV (1:52) {#the-mev-brothers-trial-152}
+### Phiên tòa xét xử anh em MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Thật tuyệt vời. Về cơ bản, chúng tôi đã gặp nhau vài tuần trước ở New York. Cả hai chúng tôi đều tham dự một phiên tòa diễn ra ở Manhattan, nơi hai anh em này, được biết đến với cái tên anh em MEV, đang bị truy tố vì họ đã thực hiện tấn công sandwich đối với một số bot sandwich. Tôi đã đến tòa án để theo dõi phiên tòa, và tôi thấy người này ở đây đang đọc Spinoza bằng tiếng Pháp, và tôi thực sự tò mò về những gì đang xảy ra. Không có ai ở hàng ghế khán giả ngoài hai chúng tôi! Vì vậy, tôi thực sự tò mò về điều gì đã khiến bạn, trước hết là một người theo chủ nghĩa vô chính phủ và một nhà triết học chứ không phải là một chuyên gia công nghệ, về cơ bản lại đến tham dự phiên tòa cụ thể này, mà còn để suy nghĩ về Quản trị của Ethereum và toàn bộ hệ thống xác thực cũng như phiên tòa đang diễn ra ở New York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "l2 du kích"
 
 **Fatemeh Fannizadeh:** Được rồi. Vâng, điều đó cũng khá hợp lý. Vì vậy, đối với những người chưa theo dõi phiên tòa, sau khoảng ba hoặc bốn tuần, đó là một phiên tòa xử sai (mistrial). Bồi thẩm đoàn không thể đưa ra phán quyết nhất trí và quyết định xem hai anh em này có tội vi phạm các quy tắc của Chuỗi khối hay không—tôi nghĩ đây là một kết quả khá tích cực đối với tiền mã hóa, rằng một tòa án hoặc bồi thẩm đoàn không quyết định điều gì là đúng và điều gì là sai trên chuỗi. 
 
-#### Cầu nối Chuỗi khối với các cộng đồng khác (4:06) {#bridging-blockchain-with-other-communities-406}
+### Cầu nối Chuỗi khối với các cộng đồng khác (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Nhưng được rồi, nếu chúng ta lùi lại một bước về những gì bạn đã nói về việc những người theo chủ nghĩa vô chính phủ đang xem xét công nghệ này để về cơ bản tạo ra cầu nối giữa các nhóm khác nhau. 
 
@@ -48,7 +48,7 @@ breadcrumb: "l2 du kích"
 
 **Melanie Premsyl:** Vâng, tôi muốn nói như vậy, nhưng tôi không chắc, bởi vì bạn biết đấy có rất nhiều người cần kiếm tiền, vì vậy đó cũng là mục đích chính của nó. Nhưng tôi nghĩ chúng ta có thể chỉ sử dụng nó như một mạng lưới cộng sản, rằng chỉ một phần có thể là giấc mơ kiểu đó. Tôi nghĩ đó là một chiếc bánh mơ ước có thể thực hiện được, nhưng chúng ta cần có các công cụ và thiết kế giúp mọi người thoát khỏi lối tư duy kỹ thuật, nặng tính kỹ sư, để hiểu nó thực sự là như thế nào.
 
-#### Sự phi tập trung và các lớp 2 (l2) (6:55) {#decentralization-and-layer-2s-655}
+### Sự phi tập trung và các lớp 2 (l2) (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Điều đó làm tôi nhớ rất nhiều về các tổ chức tự trị phi tập trung (DAO) vài năm trước. Tôi không biết các bạn thế nào, nhưng tôi đã rất hào hứng, tôi đã nghĩ rằng các DAO đang cách mạng hóa cách chúng ta tổ chức thành các nhóm và cộng đồng trên chuỗi cũng như sự tự do mà chúng ta có. Và cuối cùng, tất cả những điều này chỉ rơi vào bế tắc. Tôi không nghĩ nó đã trở thành hiện thực chút nào. Nó chỉ trở nên thiên về hệ thống bỏ phiếu, nó không thực sự dân chủ, tất cả chỉ là về việc tạo ra lợi nhuận. Toàn bộ ý tưởng mà chúng ta có về các DAO như một công cụ xã hội đã không thực sự trở thành hiện thực. 
 
@@ -56,7 +56,7 @@ breadcrumb: "l2 du kích"
 
 **Melanie Premsyl:** Tôi là người Pháp. Đây là một vấn đề lớn. Là người Pháp, chúng tôi là một quốc gia rất nặng tính nhà nước. Vì vậy, tôi luôn suy nghĩ theo một cách sư phạm và rất từ trên xuống. Và tôi nghĩ l2 tạo ra một cách mà mọi người đều có thể tạo ra các Chuỗi khối mini, và chúng được bảo mật bởi lớp 1 (l1). Tôi muốn xem liệu mọi người có thể tạo ra sự trợ giúp mang tính sư phạm cho tất cả mọi người về một thứ gì đó miễn phí hay không. Tôi nghĩ rất nhiều nhóm, như các hiệp hội, có thể tạo ra Chuỗi khối của riêng họ, và nó sẽ là một cách—như bạn biết đấy, chủ nghĩa liên bang là chủ đề chính lớn của chủ nghĩa vô chính phủ. Làm thế nào mọi người có thể xoay sở để có thể ghét nhau, nhưng vẫn nói chuyện với nhau. Vì vậy, chúng ta cần có kiểu chủ nghĩa liên bang này trong Chuỗi khối. Mọi người đều có một lớp 2 (l2) với giá trị riêng của nó, và vì vậy chúng ta giao tiếp bằng cùng một cơ sở hạ tầng. 
 
-#### Chủ nghĩa vô chính phủ, tự do và xây dựng công cụ (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Chủ nghĩa vô chính phủ, tự do và xây dựng công cụ (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Vâng, tôi thực sự thích những gì bạn nói về việc về cơ bản là ghét nhau nhưng vẫn giao tiếp, giống như không trở nên độc hại bất chấp những khác biệt của chúng ta. Và thực tế là có một l1 trong kịch bản này, đó sẽ là Ethereum, cũng thường bị coi là phát xít vì tất cả chúng ta đều cần đồng ý với một bộ quy tắc duy nhất này. Vì vậy, đây là một hệ thống duy nhất bình đẳng cho tất cả mọi người, và về cơ bản bạn phải tuân phục l1 này hoặc bạn có thể rời đi, đó là một câu hỏi hoàn toàn khác. Nhưng nếu chúng ta có thể phân tán điều này thành một hệ sinh thái l2 bản cuộn nhỏ bé đa dạng, thì chúng ta có thể mang lại sự bất đồng và không đồng tình trong cơ sở hạ tầng chung này. 
 

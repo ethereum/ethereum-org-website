@@ -1,22 +1,14 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-08-13T21:32:44.891Z",
-  "rootHash": "baa427fdf68d",
+  "generatedAt": "2026-09-09T21:41:19.179Z",
+  "rootHash": "4e7ed1bd4371",
   "tree": {
-    "contentHash": "7d7944ffc946",
-    "anchorHash": "cd6bedd245d3",
+    "contentHash": "7cb1b6866c64",
+    "anchorHash": "2b972c6a5934",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-desc-2": {
-        "contentHash": "aab808411904",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-desc-2-wallets-link": {
-        "contentHash": "08cbcebd3552",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-description": {
@@ -32,7 +24,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-title": {
-        "contentHash": "d4529680c439",
+        "contentHash": "30eddc01525e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-description-fallback": {
@@ -84,7 +76,7 @@
         ]
       },
       "page-find-wallet-title": {
-        "contentHash": "aecbd96c0c74",
+        "contentHash": "30eddc01525e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-table-title": {
@@ -101,10 +93,6 @@
       },
       "page-find-wallet-open-source-desc": {
         "contentHash": "3ba181ad2c45",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-self-custody": {
-        "contentHash": "c74f60ca7f64",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-non-custodial": {
@@ -239,14 +227,6 @@
         "contentHash": "cf1b517ca362",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-find-wallet-languages-search-language": {
-        "contentHash": "bd16bde755d6",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-popular-languages": {
-        "contentHash": "ad2ea9485094",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-find-wallet-features": {
         "contentHash": "5697d03daef4",
         "anchorHash": "e3b0c44298fc"
@@ -273,10 +253,6 @@
       },
       "page-find-wallet-see-all-wallets": {
         "contentHash": "a44cf6ec46ae",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-showing-all-wallets": {
-        "contentHash": "80bdb414819c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-iOS": {
@@ -320,10 +296,18 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-new-to-crypto-hero-title": {
-        "contentHash": "10ee50443995",
+        "contentHash": "3cd057ed7bd5",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-new-to-crypto-hero-description": {
+        "contentHash": "3242f7a78f7f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-new-to-crypto-meta-title": {
+        "contentHash": "3cd057ed7bd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-new-to-crypto-meta-description": {
         "contentHash": "3242f7a78f7f",
         "anchorHash": "e3b0c44298fc"
       },
@@ -336,10 +320,18 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-nfts-hero-title": {
-        "contentHash": "3f43cd68602f",
+        "contentHash": "ed0bd324465e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-nfts-hero-description": {
+        "contentHash": "bc539743455a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-nfts-meta-title": {
+        "contentHash": "ed0bd324465e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-nfts-meta-description": {
         "contentHash": "bc539743455a",
         "anchorHash": "e3b0c44298fc"
       },
@@ -359,6 +351,14 @@
         "contentHash": "0138e778e954",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-find-wallet-hardware-meta-title": {
+        "contentHash": "48823975c206",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-hardware-meta-description": {
+        "contentHash": "0138e778e954",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-find-wallet-finance-title": {
         "contentHash": "b696d75511dc",
         "anchorHash": "e3b0c44298fc"
@@ -368,10 +368,18 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-finance-hero-title": {
-        "contentHash": "51cfe6b7c0d7",
+        "contentHash": "c03a3c6c0fe3",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-finance-hero-description": {
+        "contentHash": "5f419ecbb63e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-finance-meta-title": {
+        "contentHash": "c03a3c6c0fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-finance-meta-description": {
         "contentHash": "5f419ecbb63e",
         "anchorHash": "e3b0c44298fc"
       },
@@ -388,6 +396,14 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-developer-hero-description": {
+        "contentHash": "885f87fb0e60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-developer-meta-title": {
+        "contentHash": "97aef56b634a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-developer-meta-description": {
         "contentHash": "885f87fb0e60",
         "anchorHash": "e3b0c44298fc"
       },
@@ -420,39 +436,6 @@
       "page-find-wallet-footnote-2": {
         "contentHash": "8752ea57e52b",
         "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-footnote-3": {
-        "contentHash": "4771fa73f9d1",
-        "anchorHash": "1dd43e280ebc",
-        "children": {
-          "prose:2": {
-            "contentHash": "63c0636dbe9c",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:0": {
-            "contentHash": "e3c43f37b428",
-            "anchorHash": "79baf2ec52d5"
-          },
-          "prose:3": {
-            "contentHash": "df05f2085072",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:1": {
-            "contentHash": "4825eb580a1e",
-            "anchorHash": "a19e08564237"
-          },
-          "prose:4": {
-            "contentHash": "cdb4ee2aea69",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "prose:2",
-          "html-tag:0",
-          "prose:3",
-          "html-tag:1",
-          "prose:4"
-        ]
       },
       "page-find-wallet-mobile": {
         "contentHash": "cbaad3cf4a65",
@@ -528,10 +511,6 @@
         "contentHash": "1bced1d0ce55",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-find-wallet-social-links": {
-        "contentHash": "9024c197d849",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-find-wallet-empty-results-title": {
         "contentHash": "a43619f32117",
         "anchorHash": "e3b0c44298fc"
@@ -562,14 +541,6 @@
       },
       "page-find-wallet-account-upgrades-desc": {
         "contentHash": "85ca72879bfa",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-see-wallets": {
-        "contentHash": "ea0ff8b64bbc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-search-languages": {
-        "contentHash": "7858b9baa709",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-search-wallets": {
@@ -899,8 +870,6 @@
     },
     "childrenOrder": [
       "page-find-wallet-clear",
-      "page-find-wallet-desc-2",
-      "page-find-wallet-desc-2-wallets-link",
       "page-find-wallet-description",
       "page-find-wallet-last-updated",
       "page-find-wallet-meta-description",
@@ -911,7 +880,6 @@
       "page-find-wallet-results-label",
       "page-find-wallet-open-source",
       "page-find-wallet-open-source-desc",
-      "page-find-wallet-self-custody",
       "page-find-wallet-non-custodial",
       "page-find-wallet-non-custodial-desc",
       "page-find-wallet-hardware-wallet-support",
@@ -945,8 +913,6 @@
       "page-find-wallet-social-recovery",
       "page-find-wallet-social-recovery-desc",
       "page-find-wallet-languages-supported",
-      "page-find-wallet-languages-search-language",
-      "page-find-wallet-popular-languages",
       "page-find-wallet-features",
       "page-find-wallet-security",
       "page-find-wallet-smart-contract",
@@ -954,7 +920,6 @@
       "page-find-wallet-advanced-filters",
       "page-find-wallet-info-updated-on",
       "page-find-wallet-see-all-wallets",
-      "page-find-wallet-showing-all-wallets",
       "page-find-wallet-iOS",
       "page-find-wallet-android",
       "page-find-wallet-linux",
@@ -967,27 +932,36 @@
       "page-find-wallet-new-to-crypto-desc",
       "page-find-wallet-new-to-crypto-hero-title",
       "page-find-wallet-new-to-crypto-hero-description",
+      "page-find-wallet-new-to-crypto-meta-title",
+      "page-find-wallet-new-to-crypto-meta-description",
       "page-find-wallet-nfts-title",
       "page-find-wallet-nfts-desc",
       "page-find-wallet-nfts-hero-title",
       "page-find-wallet-nfts-hero-description",
+      "page-find-wallet-nfts-meta-title",
+      "page-find-wallet-nfts-meta-description",
       "page-find-wallet-hodler-title",
       "page-find-wallet-hodler-desc",
       "page-find-wallet-hardware-hero-title",
       "page-find-wallet-hardware-hero-description",
+      "page-find-wallet-hardware-meta-title",
+      "page-find-wallet-hardware-meta-description",
       "page-find-wallet-finance-title",
       "page-find-wallet-finance-desc",
       "page-find-wallet-finance-hero-title",
       "page-find-wallet-finance-hero-description",
+      "page-find-wallet-finance-meta-title",
+      "page-find-wallet-finance-meta-description",
       "page-find-wallet-developer-title",
       "page-find-wallet-developer-desc",
       "page-find-wallet-developer-hero-title",
       "page-find-wallet-developer-hero-description",
+      "page-find-wallet-developer-meta-title",
+      "page-find-wallet-developer-meta-description",
       "page-find-wallet-persona-legend",
       "page-find-wallet-persona-count-available",
       "page-find-wallet-footnote-1",
       "page-find-wallet-footnote-2",
-      "page-find-wallet-footnote-3",
       "page-find-wallet-mobile",
       "page-find-wallet-desktop",
       "page-find-wallet-browser",
@@ -1003,7 +977,6 @@
       "page-find-wallet-crops-censorship-resistant-desc",
       "page-find-wallet-crops-private",
       "page-find-wallet-crops-secure",
-      "page-find-wallet-social-links",
       "page-find-wallet-empty-results-title",
       "page-find-wallet-empty-results-desc",
       "page-find-wallet-privacy",
@@ -1012,8 +985,6 @@
       "page-find-wallet-smart-accounts-desc",
       "page-find-wallet-account-upgrades",
       "page-find-wallet-account-upgrades-desc",
-      "page-find-wallet-see-wallets",
-      "page-find-wallet-search-languages",
       "page-find-wallet-search-wallets",
       "page-find-wallet-methodology-title",
       "page-find-wallet-methodology-intro",
@@ -1052,5 +1023,5 @@
       "page-find-wallet-fee-value-variable"
     ]
   },
-  "sourceCommitSha": "7a583ec0aee23934f9b83e4a4be2de6c50c14483"
+  "sourceCommitSha": "c09d096eb65daf5f1c48cd93252e07c9acc50d71"
 }

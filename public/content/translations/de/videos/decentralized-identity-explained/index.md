@@ -17,7 +17,7 @@ Eine Erklärung von **Microsoft Security** darüber, wie dezentrale Identität B
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Videotranskripts](https://www.youtube.com/watch?v=Ew-_F-OtDFI), das von Microsoft Security veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Das Problem mit digitalen Nachweisen (0:02) {#the-problem-with-digital-credentials-002}
+### Das Problem mit digitalen Nachweisen (0:02) {#the-problem-with-digital-credentials-002}
 
 Jeden Tag tragen wir Wallets voller Karten bei uns. Jedoch werden nur einige wenige – wie staatliche Ausweise und Kreditkarten – weithin akzeptiert. Unsere Gesellschaft hat globale Normen dafür etabliert, wie wir die Nachweise, die diese physischen Karten repräsentieren, vorlegen und verifizieren. Aber es gibt kein wirkliches Äquivalent für digitale Nachweise.
 
@@ -25,19 +25,19 @@ Warum nicht? Erstens gibt es keinen Standardmechanismus für die Ausstellung dig
 
 Zweitens gibt es keine universell akzeptierten Standards für den Ausdruck, den Austausch und die Verifizierung digitaler Nachweise über Organisationsgrenzen hinweg.
 
-#### Wie dezentrale Identität funktioniert (1:03) {#how-decentralized-identity-works-103}
+### Wie dezentrale Identität funktioniert (1:03) {#how-decentralized-identity-works-103}
 
 Das alles wird sich bald ändern. Eine neue Form der digitalen Identität, basierend auf aufkommenden Standards wie Verifiable Credentials und dezentralen Identifikatoren, kann es ermöglichen, dass digitale Nachweise überall funktionieren, vertrauenswürdiger sind und die Privatsphäre respektieren.
 
 So funktioniert es: Das ist Alice. Ihre neue digitale Wallet ermöglicht es ihr, Nachweise zu besitzen und zu kontrollieren. Da sie nicht an eine einzige Organisation gebunden ist, können autoritative Quellen Alice vertrauensvoll standardbasierte Nachweise ausstellen. Wenn Alice diese Nachweise vorlegt, können Websites und Apps überprüfen, ob sie gültig sind – zum Beispiel, indem sie bei einer Universität bestätigen, dass sie dort Studentin ist – und dann entsprechend Zugang gewähren.
 
-#### Kryptografisches Vertrauen (1:51) {#cryptographic-trust-151}
+### Kryptografisches Vertrauen (1:51) {#cryptographic-trust-151}
 
 Auch wenn dieser Prozess einfacher sein mag, woher wissen wir, dass er vertrauenswürdig ist? Dezentrale Identifikatoren nutzen bewährte kryptografische Systeme. Wenn Alice ihre Nachweise vorlegt, generiert ihre digitale Wallet einen eindeutigen Identifikator und signiert ihn mit einem privaten Schlüssel, der durch einen biometrischen Nachweis oder eine PIN gesichert ist, die nur sie kennt. Der eindeutig zugeordnete öffentliche Schlüssel wird auf einem Distributed Ledger veröffentlicht.
 
 Alice kann ihren digitalen Studentenausweis in einer Buchhandlung vorlegen, und bevor die Buchhandlung einen Rabatt gewährt, kann sie bestätigen, dass die Universität die Karte an Alice ausgestellt hat.
 
-#### Privatsphäre und Kontrolle (2:27) {#privacy-and-control-227}
+### Privatsphäre und Kontrolle (2:27) {#privacy-and-control-227}
 
 Diese Erfahrung ahmt nach, was Alice heute tut. Sie kann eine Reihe von Verifiable Credentials digital vorlegen und authentifizieren, genau wie sie eine physische Karte vorlegen würde. Und sie kann sie mit einem einzigen Klick widerrufen, genau wie sie eine Karte in ihre Wallet zurückstecken würde.
 

@@ -19,7 +19,7 @@ breadcrumb: "Staking Çekim İşlemleri"
 
 *Bu transkript, Finematics tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=RwwU3P9n3uo) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### İşaret Zinciri (0:31) {#the-beacon-chain-031}
+### İşaret Zinciri (0:31) {#the-beacon-chain-031}
 
 Şanghay/Capella güncellemesi hızla yaklaşırken, Ethereum staking çekim işlemleri ve bunun bir bütün olarak Ethereum ekosistemi için ne anlama geldiği hakkında pek çok tartışma var.
 
@@ -35,7 +35,7 @@ Bir sonraki büyük adım olan Birleşme, Hisse Kanıtı (PoS) mutabakat katman�
 
 Riski en aza indirmek için Birleşme'nin kapsamı daraltıldı ve İş Kanıtı'ndan (PoW) Hisse Kanıtı'na (PoS) geçiş dışında hiçbir özellik güncellemenin bir parçası olarak dahil edilmedi. Yapılması gereken en büyük "kesinti", yaklaşan Şanghay/Capella güncellemesinin odak noktası haline gelen çekim işlemlerini etkiledi.
 
-#### Çekim İşlemleri (2:09) {#withdrawals-209}
+### Çekim İşlemleri (2:09) {#withdrawals-209}
 
 Staking çekim işlemleri, adından da anlaşılacağı gibi, staker'ların kilitli ETH'lerini çekmelerine olanak tanıyacaktır. İki tür çekim işlemi vardır: "kısmi" ve "tam".
 
@@ -47,7 +47,7 @@ Etkinleştirildikten sonra, staking çekim işlemleri birkaç günde bir otomati
 
 Staking ödüllerini çekmeye başlamak için, bir doğrulayıcının çekim adresini yalnızca bir kez sağlaması gerekecektir. Çekim işlemlerinin Ethereum'un hem mutabakat hem de yürütme katmanlarını etkilediği göz önüne alındığında, ağın her iki bölümünün de güncellenmesi gerekir. "Şanghay", EIP-4895'te belirtilen çekim işlemlerini içeren yürütme katmanı güncellemesinin adıdır. "Capella", aynı anda etkinleştirilen karşılık gelen mutabakat katmanı güncellemesinin adıdır. Bu iki güncelleme bazen "Şapella" olarak da adlandırılır.
 
-#### Mekanikler (3:40) {#mechanics-340}
+### Mekanikler (3:40) {#mechanics-340}
 
 Ethereum ekosisteminde, her doğrulayıcının karşılık gelen bir endeks numarası vardır. Buna ek olarak, `0x00` veya `0x01` olarak tanımlanan iki tür çekim kimlik bilgisine de sahiptirler.
 
@@ -77,7 +77,7 @@ Bir blok oluştururken veya işlerken, yürütme katmanı istemcileri bu çekim 
 
 Çekim işlemlerinin tasarımı basit ancak son derece sağlamdır.
 
-#### Yanlış Bilinenler (6:30) {#misconceptions-630}
+### Yanlış Bilinenler (6:30) {#misconceptions-630}
 
 İlk yanlış bilinen şey, çekim işlemleri işlenirken öncelik veya sıralama açısından "tam" ve "kısmi" çekim arasında bir fark olduğudur. Hem tam hem de kısmi çekim işlemleri, doğrulayıcı seti üzerindeki doğrusal tarama bir doğrulayıcının endeksine ulaştığında gerçekleşir. Tek fark, tam çekim işlemlerinde, doğrusal taramanın onu alabilmesi için bir doğrulayıcının çıkış sırasından ayrılması ve "çekilebilir Dönem" (withdrawable epoch) aşamasına ulaşması gerektiğidir.
 
@@ -93,7 +93,7 @@ Ayrıca, çekim işlemleri etkinleştirildiğinde staker'ların Ethereum ekosist
 
 İlk çekim taraması, temel olarak İşaret zincirinin başlangıcından bu yana biriken birçok ödülü çekecektir. Ancak, sonrakiler çok daha küçük miktarda ETH işleyecektir.
 
-#### Etkiler (8:39) {#implications-839}
+### Etkiler (8:39) {#implications-839}
 
 Çekim işlemlerinin etkinleştirilmesi açık, iki taraflı bir staking akışı yaratacaktır. Şu anda staking akışı tek taraflıdır; ETH yalnızca ağa akabilir ve ağdan asla çıkamaz. İlginç bir şekilde, çekim işlemlerinin etkinleştirilmesi, başka bir şey için ihtiyaç duymaları halinde ETH'lerini her zaman çekebileceklerini bilecekleri için daha fazla insanı stake etmeye teşvik edebilir.
 
@@ -103,7 +103,7 @@ Kendi doğrulayıcılarını çalıştırmayan ve merkezi bir staking sağlayıc
 
 Likit staking ve merkezi staking'i erken benimseyenler, fazla rekabetleri olmadığı için pazarın büyük bir çoğunluğunu ele geçirdiler. Ancak, bu mevcut oyuncuların pazar payı, özellikle rekabetçi bir oran sunmazlarsa, çekim işlemleri etkinleştirildiğinde büyük bir değişiklik görebilir. Staking sağlayıcıları arasında serbestçe geçiş yapabilme yeteneği, ETH staking pazarına fayda sağlayacaktır.
 
-#### Özet (10:01) {#summary-1001}
+### Özet (10:01) {#summary-1001}
 
 Staking çekim işlemlerinin etkinleştirilmesi, Ethereum için en çok beklenen güncellemelerden biridir. Bu değişikliğin sorunsuz bir şekilde yürütüldüğünden emin olmak son derece önemli olacaktır. Testlere yardımcı olmak için doğrulayıcılar, Ana Ağ üzerinde canlıya geçmeden önce süreci baştan sona yürütmek ve olası sorunları gidermek için çeşitli geliştirici ağlarına (devnet) ve test ağlarına (testnet) sahip olacaklardır.
 

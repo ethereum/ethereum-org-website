@@ -18,7 +18,7 @@ Ein Panel auf dem Web3Privacy Now-Event während der Devconnect 2025, moderiert 
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Videotranskripts](https://www.youtube.com/watch?v=cZqlg4W1Els), das von Web3Privacy Now veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung in die Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Einführung in die Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Hallo. Könnt ihr mich hören? Alles klar. Cool. Wir machen zuerst einen sehr kurzen Einführungsvortrag – etwa 3 bis 5 Minuten – und das leitet dann in das Panel über. Dies ist ein verkürzter Vortrag. Das vorherige Panel hat viel über Compliance, Privatsphäre und so weiter gesprochen. Ich habe auf dem Cyban Congress bereits einen Vortrag gehalten, der dies ebenfalls berührte, und später am heutigen DeFi-Tag wird es eine längere Version dieses Vortrags geben. Aber worüber ich sprechen möchte, ist institutionelle Privatsphäre auf Ethereum.
 
@@ -30,7 +30,7 @@ Eine einzige große Institution kann hier massive Auswirkungen darauf haben, wel
 
 Damit Ethereum das Onboarding dieser Institutionen durchführen kann, müssen diese Bedenken hinsichtlich der Privatsphäre angegangen werden. Was wir bei der Institutional Privacy Task Force versuchen, ist das Onboarding von Institutionen auf Ethereum und sicherzustellen, dass ihre Ziele in Bezug auf die Privatsphäre erreicht werden. Wir veranstalten Dinge wie Workshops, versuchen den Bereich zu entmystifizieren und sicherzustellen, dass wir auf institutionelle Bedürfnisse speziell beim Thema Privatsphäre eingehen können. Das erste Artefakt, das wir haben, ist diese Karte zur institutionellen Privatsphäre – wir sprechen mit riesigen Institutionen, verstehen ihre geschäftlichen Anwendungsfälle und Anforderungen, machen so viel wie möglich Open Source und sprechen dann mit Anbietern in diesem Bereich, um Institutionen mit dem Lösungsraum zu verbinden. 
 
-#### Panel-Vorstellungen und institutionelle Probleme (5:00) {#panel-introductions-and-institutional-problems-500}
+### Panel-Vorstellungen und institutionelle Probleme (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Entschuldigung, das war etwas schnell, aber hoffentlich verständlich. Dieses Panel besteht also aus vielen Experten aus den Bereichen Forschung, Politik und Technik, und wir werden über institutionelle Privatsphäre sprechen. 
 
@@ -48,7 +48,7 @@ Aus der anderen Richtung: *Warum auf einer öffentlichen Blockchain sein?* Dies 
 
 **Amzah:** Ja. Ich arbeite also für ABN Amro, eine große niederländische Bank. Wir haben 5 Millionen Privatkunden. Wir bauen also im Moment nicht wirklich etwas speziell im Bereich Privatsphäre, aber was jetzt ansteht, ist zum Beispiel eine Wallet für digitale Identitäten. Normalerweise funktioniert das so, dass Daten in einer zentralisierten Datenbank gespeichert werden und man sich dann mit einem externen Anbieter oder einem Dritten verbindet, aber das ist natürlich nicht wirklich sicher. Wir fangen also bereits an darüber nachzudenken, wie wir zum Beispiel Zero-Knowledge-Beweise (ZK-Beweise) nutzen können, damit wir eine selektive Offenlegung gegenüber externen Parteien haben könnten. In diesem Sinne können wir unsere Kundeninformationen schützen und sie sich auch mit der breiteren Web3-Umgebung verbinden lassen.
 
-#### Konkrete Workflows und Speicherung (10:07) {#concrete-workflows-and-storage-1007}
+### Konkrete Workflows und Speicherung (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Okay, großartig. Wenn ihr euch einen konkreten Ablauf aussucht, der für euch wichtig sein könnte – wie vielleicht einige Anleiheemissionen, ein Trade oder eine Zahlung aus der Schatzkammer –, wer kann bei welchem Schritt genau was sehen, und was wird Onchain im Gegensatz zu offchain gespeichert? Vielleicht fangen wir mit François an.
 
@@ -68,7 +68,7 @@ Am anderen Ende gibt es vielleicht einen Handel von Positionen zwischen Kreditge
 
 **Amzah:** Ja. Ich stimme größtenteils mit dem überein, was Zach gesagt hat. Wenn Institutionen in der Vergangenheit über Privatsphäre nachdachten, starteten sie einfach eine Private Blockchain, an der vielleicht 20 Banken teilnehmen und nur sie sehen können, was dort drin ist. Aber eigentlich ist es viel nuancierter. Es hängt vom Anwendungsfall ab, von der Art der Abläufe und davon, was die Aufsichtsbehörde wissen muss. Man kann Kontostandsinformationen in einer aggregierteren Form Onchain stellen, zum Beispiel durch Proof of Reserves.
 
-#### Nicht verhandelbare Anforderungen (15:26) {#non-negotiable-requirements-1526}
+### Nicht verhandelbare Anforderungen (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio und Amzah, von Banken, Handelsplätzen und Aufsichtsbehörden: Was sind einige nicht verhandelbare Anforderungen, die ihr immer wieder hört? Wie Audit-Trails, KYC-Regeln oder Reporting-Anforderungen?
 
@@ -78,7 +78,7 @@ Am anderen Ende gibt es vielleicht einen Handel von Positionen zwischen Kreditge
 
 **François:** Unser Mitgründer verbringt Wochen mit Kunden im institutionellen Bereich, und die wichtigste Forderung, die aufkommt, ist „Kontrolle“. Wer sieht was, wann und aus welchem Grund. Und dann geht man in diesen Gesprächen in die Details und sie werden wahnsinnig individuell. Für uns ist das großartig, denn die traditionelle Finanzwelt hat Jahrzehnte damit verbracht, ihre Buchhaltungspraktiken und AML/CTF-Abläufe aufzubauen. Sie sind sehr spezifisch, was diese Kontrolle angeht. Wir bauen diese Fähigkeiten also auf der Protokoll-Ebene auf und unterstützen Kunden auf ihrer Reise.
 
-#### Kompromisse und globale Liquidität (18:10) {#trade-offs-and-global-liquidity-1810}
+### Kompromisse und globale Liquidität (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Was sind die wichtigsten Kompromisse, mit denen ihr derzeit lebt? Leistung versus Privatsphäre, oder globale Liquidität versus strenge Kontrollen, oder Onchain-Transparenz versus offchain-Aufzeichnungen? Fangen wir mit Zach an.
 
@@ -88,7 +88,7 @@ Am anderen Ende gibt es vielleicht einen Handel von Positionen zwischen Kreditge
 
 Natürlich gibt es Komplexitäten. Wir legen großen Wert auf diesen erstklassigen Service für eine Institution, die in diesen Markt eintritt, damit sie ihre eigenen Bedingungen haben kann. Eine der Herausforderungen ist das Gleichgewicht zwischen Privatsphäre und Bedrohungsresistenz. Es gibt Bedrohungsakteure in der Web3-Welt, und wir wollen das besser in den Griff bekommen, um ein fantastisches Erlebnis zu bieten. Wir gehen die Dezentralisierung vorsichtig an – wir wissen, wie man es macht, aber wir werden es in dem Moment tun, in dem es den Kunden am besten dient.
 
-#### Systemvertrauen und Treiber der Akzeptanz (20:47) {#system-trust-and-adoption-drivers-2047}
+### Systemvertrauen und Treiber der Akzeptanz (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, wie macht man diese Lösungen für Institutionen und Regierungen vertrauenswürdig und nutzbar?
 
@@ -98,7 +98,7 @@ Natürlich gibt es Komplexitäten. Wir legen großen Wert auf diesen erstklassig
 
 **Amzah:** Für uns ist es wirklich wichtig, dass es anpassbar ist. Blockchain ist nicht mehr nur ein Anwendungsfall, bei dem alles vollständig öffentlich oder vollständig privat ist. Es gibt keine Einheitslösung. Was für uns auch am wichtigsten ist, ist die Einhaltung gesetzlicher Vorschriften. Der Bankensektor in Europa ist stark reguliert, und wenn in Bezug auf die Privatsphäre etwas nicht stimmt, wird das von den Aufsichtsbehörden einfach nicht akzeptiert.
 
-#### Ausblick auf 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Ausblick auf 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Alles klar, wir sind fast am Ende. Was ist ein Baustein – technisch, operativ oder politisch –, von dem ihr glaubt, dass er die institutionelle Akzeptanz bedeutsam beschleunigen würde? Und wenn wir uns 2026 wiedersehen, was glaubt ihr, ist realistisch, was in diesem Jahr passiert sein wird?
 
@@ -110,7 +110,7 @@ Natürlich gibt es Komplexitäten. Wir legen großen Wert auf diesen erstklassig
 
 **François:** Wenn wir uns in einem Jahr treffen, würde ich gerne im Frühjahr das Mainnet von Miden gestartet haben, damit wir das feiern können. Darüber hinaus würde ich mir wünschen, dass wir auf dem Weg zur vollständigen Dezentralisierung sind. Es wird eine gemeinsame Anstrengung erfordern. Das Wichtigste, was ich sehen möchte, ist mehr Engagement. Die Vorstellung, dass Privatsphäre im Widerspruch zu Compliance steht, ist nicht wirklich wahr, aber beides miteinander zu verbinden, erfordert Arbeit. Wir wollen, dass Institutionen dabei helfen, die Art von Märkten zu gestalten, die sie sehen wollen, denn wir wissen, dass dies chaotisch und speziell auf ihre Bedürfnisse zugeschnitten sein wird.
 
-#### Abschließende Gedanken (28:05) {#closing-thoughts-2805}
+### Abschließende Gedanken (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Ich möchte jedem von euch nur 10 bis 20 Sekunden geben, um etwas zu erwähnen, das diese Woche passiert ist, oder für eine kurze Eigenwerbung, bevor wir zum Ende kommen.
 

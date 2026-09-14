@@ -20,7 +20,7 @@ Wawancara ini membahas sumber daya ruang blob Ethereum, yang diperkenalkan denga
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=dFjyUY3e53Q) yang dipublikasikan oleh Bankless. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar ruang blob (0:00) {#introduction-to-blob-space-000}
+### Pengantar ruang blob (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Selamat datang di Bankless, tempat kami menjelajahi batas terdepan (frontier) dari uang internet dan keuangan internet. Ini adalah cara untuk memulai, cara untuk menjadi lebih baik, cara untuk mendahului peluang. Saya di sini bersama David Hoffman, dan kami di sini untuk membantu Anda menjadi lebih *bankless* (tanpa bank). Anda tahu bagaimana kita mengatakan bahwa rantai blok menjual blok? Nah, sebentar lagi Ethereum akan menjual lebih dari sekadar blok — Ethereum juga akan menjual blob.
 
@@ -38,7 +38,7 @@ Apa artinya itu bagi Ether? Apa artinya itu bagi pasar yang muncul di sekitar ha
 
 Mari kita sambut tamu kita, Dom, yang juga dikenal sebagai Domothy. Dia adalah seorang peneliti di Yayasan Ethereum yang mengerjakan penelitian dan pengembangan peningkatan utama Ethereum yang akan datang, termasuk EIP-4844 (topik hari ini), danksharding penuh, dan pembakaran MEV.
 
-#### Sejarah peta jalan yang berpusat pada rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Sejarah peta jalan yang berpusat pada rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Jadi Dom, untuk sepenuhnya memahami bagaimana kita bisa sampai ke ruang blob, saya rasa ada gunanya bernostalgia untuk memahami keseluruhan peta jalan Ethereum, karena ini mencapai kesimpulan yang sangat logis tentang blob dan ruang blob. Bisakah Anda membawa kita kembali ke masa lalu? Karena pada satu titik waktu, peta jalan Ethereum yang berpusat pada rollup belum ada. Kita memiliki sesuatu yang disebut sharding eksekusi, yang sebenarnya tidak pernah kita dapatkan. Di bagian mana dalam sejarah peta jalan Ethereum yang tepat untuk benar-benar memahami konteks penuh dari ruang blob?
 
@@ -58,7 +58,7 @@ Sekarang apa yang kita lakukan dengan peta jalan yang berpusat pada rollup adala
 
 Kembali pada akhir tahun 2020, orang-orang menyadari bahwa rollup mulai menjadi sangat bagus dan populer, dan mereka memecahkan masalah penskalaan eksekusi kita tanpa perlu sharding eksekusi. Dengan menggunakan ekosistem rollup daripada mencoba menjadi maksimalis lapisan 1, rollup dapat membuat pertukaran mereka sendiri, memutar rantai blok mereka sendiri, dan bereksperimen dengan hal-hal baru. Ethereum menangani verifikasinya — itulah inti dari apa itu rantai blok.
 
-#### Apa itu ruang blob? (30:00) {#what-is-blob-space-3000}
+### Apa itu ruang blob? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Sekarang bawa kita ke state saat ini, Dom. Kita memiliki banyak rollup yang menggunakan ruang blok lapisan 1 Ethereum, membayar biaya gas yang tinggi untuk memposting data state mereka sehingga siapa pun dapat memverifikasinya. Jadi, Dom, apa itu blob?
 
@@ -72,7 +72,7 @@ Ini pada dasarnya adalah paket tertutup. Lapisan 1 mengambilnya, menjamin bahwa 
 
 **Domothy:** Tepat sekali. Dan properti penting lainnya dari blob adalah bahwa mereka secara otomatis dipangkas setelah jangka waktu tertentu — saat ini sekitar 18 hari. Alasan mereka dipangkas adalah untuk menjamin verifikasi tanpa kepercayaan, individu hanya membutuhkan data tersebut tersedia untuk membuktikan finalitas dan konsensus atas state rollup dalam jendela tantangan tertentu. Anda tidak memerlukan seribu node yang menyimpan blob dari dua tahun lalu untuk memverifikasi transaksi Anda hari ini. Ketika jendela tersebut berakhir, Anda tidak akan mendapatkannya dari node Ethereum lagi; Anda mendapatkannya dari penyedia riwayat, pengindeks, atau penjelajah blok asli rollup. Penyimpanan di Ethereum sangat mahal selamanya. Menghilangkan persyaratan penyimpanan memungkinkan kita untuk menskalakan laju pemrosesan blob tanpa menghancurkan hard drive operator node.
 
-#### Ekonomi dan danksharding penuh (55:00) {#economics-and-full-danksharding-5500}
+### Ekonomi dan danksharding penuh (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Kita tahu bahwa 4844 adalah langkah pertama — apa yang kita sebut Proto-Danksharding. Ini menetapkan format blob dan pasar biaya yang terisolasi, tetapi target jumlah blob per blok yang sebenarnya dibatasi pada awalnya agar cukup aman. Seperti apa bentuknya saat menskalakan menuju danksharding penuh?
 
@@ -86,7 +86,7 @@ Dengan pasar biaya dua dimensi — pada dasarnya jalan terisolasi yang terpisah 
 
 **Domothy:** Ya, keduanya sepenuhnya terputus. Dan sebaliknya juga benar. Jika laju pemrosesan lapisan 2 melonjak sangat besar dan ribuan rollup beroperasi serta memadatkan ruang blob, lonjakan biaya dasar blob yang dihasilkan tidak akan memengaruhi biaya untuk melakukan transaksi sederhana di Mainnet Ethereum. Biaya dasar blob beroperasi persis seperti biaya dasar EIP-1559, tetapi pada dimensinya sendiri. Dan untuk pertanyaan Anda sebelumnya tentang pembakaran — ya, biaya blob menghasilkan ETH yang dibakar untuk membayar penyertaan data ruang blob, benar-benar terpisah dari pembakaran biaya dasar ruang blok.
 
-#### Masa depan skalabilitas Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### Masa depan skalabilitas Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Saya ingin membahas apa yang terjadi secara spesifik pada rilis 4844. Awalnya, jelas ada ekspektasi yang sangat tinggi bahwa ketika kapasitas blob tiba-tiba terbuka, tidak akan ada cukup permintaan rollup pada mikrodetik yang tepat itu untuk mengisinya sepenuhnya. Ruang blob akan menjadi sangat murah pada saat peluncuran. Namun, bukankah ada hukum permintaan yang diinduksi? Jika Anda memiliki sumber daya yang sangat murah, aplikasi yang mengonsumsi sumber daya tersebut akan meledak dalam volume.
 

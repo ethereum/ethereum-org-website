@@ -18,7 +18,7 @@ Uma apresentação de **Peter Van Valkenburgh**, Diretor Executivo do Coin Cente
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=GQML0c1_4Gs) publicada pela Fundação Ethereum. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução (0:00) {#introduction-000}
+### Introdução (0:00) {#introduction-000}
 
 Este é um palco grande com uma longa caminhada e eu sou da velha guarda, receio, então tenho um discurso escrito, mas espero que vocês gostem. Então, obrigado por me receberem. O Coin Center, minha organização, existe há 11 anos. Estamos defendendo os desenvolvedores e usuários do Bitcoin, Ethereum e tecnologias de criptomoedas subsequentes contra regulamentações governamentais inadequadas em Washington DC. Nós reconhecemos ameaças quando as vemos. Então, há pouco mais de 9 anos, eu estava no palco em Shanghai, na segunda DevCon do Ethereum, e alertei sobre os perigos de fazer ICOs. Na verdade, foi a apresentação de abertura da segunda DevCon. Isso foi em 2016. Isso foi bem no início do chamado boom das ICOs. Isso foi muito antes de Gary Gendler estar na SEC. Foi antes de qualquer pessoa ter recebido um aviso de Wells (Wells notice). Foi até mesmo antes do hack da DAO, que, se vocês se lembram ou estavam por perto na época, desencadeou o relatório da DAO pela SEC no início de sua investigação e processo contra pessoas em cripto.
 
@@ -28,7 +28,7 @@ Os americanos podem usar a tecnologia. E talvez ainda mais importante, os tribun
 
 Ele é um desenvolvedor de software. E está processando o Departamento de Justiça em um tribunal do Texas para obter uma sentença declaratória de que publicar software para privacidade não é um crime e não exige uma licença nos Estados Unidos. Então, você pode não saber muito sobre mim ou
 
-#### A privacidade é existencial (3:15) {#privacy-is-existential-315}
+### A privacidade é existencial (3:15) {#privacy-is-existential-315}
 
 sobre o Coin Center, mas espero que saiba que deve confiar em mim quando eu soar um alarme, quando um alarme for justificado. Se quisermos ter sucesso na construção e manutenção de uma infraestrutura financeira livre e aberta, precisamos agir com cuidado. E é por isso que quero falar hoje sobre privacidade. A privacidade é existencial para o Ethereum. A privacidade não é uma superfície de ataque regulatório. Não vou ficar aqui e dizer para vocês não construírem privacidade da mesma forma que disse para não fazerem ICOs em 2016.
 
@@ -36,7 +36,7 @@ A privacidade é, na verdade, uma forma de estreitar a superfície de ataque. E 
 
 E para provar isso a vocês, o caso para o qual quero direcionar sua atenção hoje não é um processo de lei de valores mobiliários. Não é nem mesmo um processo de lavagem de dinheiro ou finanças ilícitas. É sobre o valor extraível do minerador (MEV). Mas antes de chegarmos lá, vamos falar brevemente sobre Frankenstein. Como disse o bom doutor, quão perigosa é a aquisição de conhecimento, e quão mais feliz é aquele homem que acredita que sua cidade natal é o mundo do que aquele que aspira a se tornar maior do que sua natureza permite.
 
-#### Mary Shelley e a catraca unidirecional do conhecimento (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley e a catraca unidirecional do conhecimento (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Aqui está o que eu acho que Mary Shelley está dizendo naquele romance. A privacidade não é apenas sobre dignidade humana. É sobre a ausência eficiente de conhecimento. Assim como seria difícil viver a vida sob escrutínio constante, com todos sempre invadindo sua privacidade, também seria difícil viver a vida com um conhecimento íntimo e constante dos assuntos privados de todos os outros. Você invadindo constantemente a privacidade de todos os outros. Por que isso? Porque se tornar onisciente sem onipotência, ver tudo sem ter a capacidade de consertar tudo, enlouquece os humanos. Isso destrói nossa humanidade com preocupação, arrogância e a busca pelo controle sobre o incontrolável.
 
@@ -46,7 +46,7 @@ Não é sobre Prova de Trabalho (PoW). Não é sobre blockchains, uma palavra qu
 
 O custo da mediação aumenta os custos da transação, limitando o tamanho mínimo prático da transação e cortando a possibilidade de pequenas transações casuais. E há um custo mais amplo, a perda da capacidade de fazer pagamentos irreversíveis por serviços irreversíveis. Com a possibilidade de reversão, a necessidade de confiança se espalha. Então, o objetivo de Satoshi era, na verdade, tanto a neutralidade quanto a irreversibilidade. A capacidade de reverter é, para ele, a origem de enormes custos de transação associados à confiança. Ele não disse isso diretamente no white paper,
 
-#### O custo da mediação de disputas (7:50) {#the-cost-of-mediating-disputes-750}
+### O custo da mediação de disputas (7:50) {#the-cost-of-mediating-disputes-750}
 
 mas acho que o que ele quer dizer com mediar disputas também é policiar fraudes, deter crimes, obedecer às leis e aos poderes dos estados-nação e controlar as pessoas. Falamos frequentemente sobre como as blockchains são ineficientes computacionalmente, e elas são. que mesmo o esforço computacional monumental de verificar globalmente assinaturas digitais sem paralelização empalidece em comparação com a ineficiência inerente a uma disputa humana sobre o valor moral de cada transação e se ela deve ser incluída na cadeia.
 
@@ -58,7 +58,7 @@ Melhor se eles nem puderem se tornar conscientes de seu poder. Muito melhor se e
 
 Não. O melhor argumento para a privacidade é que a neutralidade do validador depende dela, porque a neutralidade por meio da descentralização nunca será suficiente. A neutralidade exige cegueira. Eu sugeriria humildemente que existem
 
-#### Duas regras de conhecimento e poder (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Duas regras de conhecimento e poder (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 duas regras fundamentais de conhecimento e poder em blockchains. A primeira regra: nada que seja transparente permanece neutro. Um livro-razão visível se tornará um livro-razão mediado. Ele será mediado pelo interesse próprio de validadores poderosos, por meio de manipulação egoísta, como o valor extraível do minerador (MEV). Ele será mediado pela pressão offchain de entidades poderosas, como corporações e estados-nação, por meio da imposição de deveres legais e responsabilidade por falha em honrar esses deveres. Se um validador tiver mesmo uma pequena quantidade de poder, ele será forçado a explorar esse poder. Um mundo mapeado é um mundo que será fatiado.
 
@@ -70,7 +70,7 @@ Sim, minha organização, o Coin Center, sempre estará lá para lutar contra te
 
 Os pools de privacidade são uma abordagem sábia para limitar essa ameaça. Tente o melhor possível negar às pessoas erradas o acesso à boa ferramenta neutra, mas observe que a ferramenta deixa de ser neutra. E mesmo assim, às vezes, quem quer que esteja fornecendo o conjunto de anonimato para esse pool falhará em negar às pessoas más o acesso a essa ferramenta. E a transação de integração dessas pessoas más permanecerá visível na camada 1 (l1). E será uma munição poderosa para nossos oponentes.
 
-#### O caso Pereira Bueno e o MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### O caso Pereira Bueno e o MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Mas o caso que realmente me convence da extrema necessidade de privacidade na camada base não é o do Tornado Cash. É outro caso no Distrito Sul de Nova York, o caso Pereira Bueno. Dois irmãos estão sendo acusados de fraude eletrônica criminal. Eles encontraram uma maneira de usar o software MEV Boost para realizar ataques sanduíche contra outros usuários do MEV Boost que, por sua vez, estavam fazendo ataques sanduíche contra usuários comuns do Ethereum. Eles ganharam mais de US$ 20 milhões fazendo isso. Eles não mentiram para ninguém nem se deturparam para nenhum parceiro de relacionamento fiduciário ou contratual. No entanto, os promotores do Distrito Sul de Nova York acham que eles são culpados de fraude eletrônica, um crime federal, porque eles não são, entre aspas, um validador honesto.
 
@@ -78,7 +78,7 @@ Quando esse termo validação honesta e validador honesto apareceu nas instruç�
 
 O valor extraível do minerador (MEV) é uma realidade repugnante do Ethereum. Ele também tem sua gênese na falta de privacidade. É a natureza pública das transações em DEXs que permite que elas sofram ataques sanduíche facilmente por validadores. É muito mais difícil, provavelmente não impossível, mas muito mais difícil fazer ataques sanduíche em transações se você não consegue ver seus fundamentos econômicos. Mas eu não quero a privacidade na camada base apenas como uma forma de desencorajar o MEV. Eu a quero como uma forma de defender os validadores.
 
-#### Deveres legalmente exigíveis dos validadores (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Deveres legalmente exigíveis dos validadores (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 A maior aposta do DOJ no caso Pereira Bueno é que os validadores têm deveres legalmente exigíveis uns com os outros devido à natureza pública das transações que eles validam. E se esses deveres forem violados, os validadores, eu acho que eles pensam, deveriam processar uns aos outros. E se não o fizerem, o estado, o Distrito Sul de Nova York, deveria processar validadores desonestos por crimes. E isso não para apenas na fraude eletrônica. Se você pode ver uma transação de lavagem de dinheiro ou poderia tê-la visto usando análise de blockchain, então como você não é cúmplice dessa lavagem de dinheiro?
 
@@ -86,7 +86,7 @@ Se você constrói em uma versão da cadeia que tem transações sancionadas nel
 
 A cegueira intencional não é uma defesa, mas a cegueira real é. Então, se você realmente quer ausência de confiança (trustlessness), se você verdadeiramente quer uma infraestrutura neutra, se você quer tubos burros (dumb pipes), então os tubos precisam ser realmente cegos para o que flui através deles.
 
-#### Tubulações financeiras tradicionais e SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Tubulações financeiras tradicionais e SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Agora, uma boa crítica a tudo isso, você pode dizer: Peter, nós já temos tubos burros na indústria financeira tradicional, no sistema financeiro global tradicional, e os operadores desses tubos burros não são criptograficamente cegos para as realidades econômicas e os aspectos criminais das transações que eles colocam em seus livros-razão. O maior desses tubos é chamado SWIFT. E este é um forte argumento contra o que eu acabei de dizer.
 
@@ -102,7 +102,7 @@ E, finalmente, mesmo que a SWIFT sobreviva à atual crise lenta que está se des
 
 Estamos realmente aqui por tubos burros?
 
-#### Conclusões e defesa da infraestrutura neutra (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Conclusões e defesa da infraestrutura neutra (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Em conclusão, o Coin Center não vai a lugar nenhum, e sempre estaremos aqui para ajudar a defender os desenvolvedores de protocolo e a infraestrutura de processos injustos e regulamentações excessivamente amplas. Mas sem privacidade real, essa luta fica cada vez mais difícil. O que podemos fazer? Um, acredito que o Ethereum deveria ter privacidade na camada base ou pelo menos se tornar o livro-razão raiz para L2s que tenham sequenciadores cegos e realmente descentralizados.
 
@@ -112,7 +112,7 @@ E temos um projeto recém-anunciado, o John Hancock, que está encontrando manei
 
 A privacidade é existencial. Obrigado.
 
-#### Sessão de perguntas e respostas (24:21) {#qa-session-2421}
+### Sessão de perguntas e respostas (24:21) {#qa-session-2421}
 
 **Apresentador:** Obrigado. Compartilhando, eu acho, um dos tópicos mais importantes dos nossos tempos, de longe. Acho que nossa primeira pergunta é, na verdade, no âmbito de — como você vê a explicação da privacidade para novas pessoas? Por muito tempo, o conceito de privacidade foi banhado nessa ideia de segredo — é para pessoas com capas com capuz, etc. O quanto você acha que isso é um obstáculo, especialmente quando você pensa em esforços de lobby? Você precisa que a pessoa comum também sinta que isso é algo para ela. Você sente que isso é uma grande luta? Como mitigamos isso?
 

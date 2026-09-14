@@ -18,7 +18,7 @@ breadcrumb: "Ethereum trong 30 phút"
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=ei3tDRMjw6k) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:02) {#introduction-002}
+### Giới thiệu (0:02) {#introduction-002}
 
 Tuyệt vời, vậy là Ethereum trong 30 phút. Đây là một bài thuyết trình mà tôi đã trình bày ở hầu hết mọi kỳ Devcon kể từ khi ra mắt. Điều thú vị là khi hệ sinh thái Ethereum thay đổi, và khi Giao thức Ethereum thay đổi, cũng như thời đại thay đổi, nội dung cuối cùng cũng thay đổi khá nhiều. Nếu bạn xem lại phiên bản tương đương của bài này từ năm 2015, bạn sẽ nghe rất nhiều về các khối uncle (uncle block). Tất nhiên, các khối uncle là một tính năng của Bằng chứng công việc (PoW). Bây giờ chúng ta có Bằng chứng cổ phần (PoS), và vì vậy chúng ta không còn các khối uncle nữa. Tất nhiên, Ethereum hiện nay cũng có các lớp 2 (l2), và hồi đó bài này sẽ không hề có các lớp 2 (l2). Bây giờ chúng ta biết rằng các lớp 2 (l2) là một nửa của câu chuyện. Trên hết, Ethereum là một hệ sinh thái đang tiến hóa, và nội dung của bài này sẽ tiếp tục thay đổi khi công nghệ thay đổi, và cũng như khi trọng tâm của hệ sinh thái chuyển từ việc xây dựng cơ sở hạ tầng cơ bản sang việc tập trung rất nhiều vào các ứng dụng.
 
@@ -30,7 +30,7 @@ Máy tính thế giới hoạt động như thế nào? Cách tôi nghĩ về đ
 
 lớp 2 (l2) là GPU. lớp 2 (l2) là tất cả các bạn trong căn phòng này, những người là một phần của bất kỳ lớp 2 (l2) nào. Có ai ở đây là một phần của lớp 2 (l2) không? Yay. Có ai ở đây đã sử dụng lớp 2 (l2) chưa? Có ai ở đây đã sử dụng lớp 1 (l1) chưa? Tốt, tất cả chúng ta đều là người dùng ở đây. Có rất nhiều GPU khác nhau này, và máy tính thế giới Ethereum có thể gắn kết với nhau vì mỗi và mọi GPU này đều được kết nối với cỗ máy niềm tin thông qua các hệ thống bằng chứng optimistic, bằng chứng không tri thức, SNARK, STARK, plonk, hoặc bất kỳ thuật ngữ thông dụng nào khác. Tất cả các hệ thống này đảm bảo rằng lớp 1 (l1) có thể xác minh một cách không cần tin cậy những gì đang diễn ra bên trong các lớp 2 (l2), và các lớp 2 (l2) cũng có thể đọc một cách không cần tin cậy những gì đang xảy ra trên lớp 1 (l1).
 
-#### Sự phi tập trung và đa dạng (5:11) {#decentralization-and-diversity-511}
+### Sự phi tập trung và đa dạng (5:11) {#decentralization-and-diversity-511}
 
 Có một sự tương tác quan trọng giữa hai thành phần này, và cùng nhau chúng tạo nên Ethereum như ngày hôm nay. L1 là gì? Nó là một Chuỗi. Nó chạy Bằng chứng cổ phần (PoS). Nó không bị phá vỡ. Điều này có nghĩa là gì? Ethereum L1 là một Chuỗi đã tồn tại tổng cộng hơn chín năm nay, và nó đã tồn tại ở dạng Bằng chứng cổ phần (PoS) hiện tại được hơn hai năm một chút. Một trong những điều thực sự quan trọng đối với một lớp cơ sở là bằng chứng rõ ràng cho thấy bạn đang xây dựng trên một lớp cơ sở phi tập trung, mở, mạnh mẽ và có khả năng duy trì những đặc điểm đó trong tương lai. 
 
@@ -42,7 +42,7 @@ Sau đó chúng ta có "chưa xác định". Chưa xác định không phải l�
 
 Một đặc tính thực sự đã trở nên tốt hơn rất nhiều là sự đa dạng máy khách. Ethereum khoảng năm năm trước về cơ bản chỉ là Go Ethereum (Geth). Khi bạn có một hệ sinh thái bị thống trị bởi một máy khách, bản thân điều đó sẽ trở thành một điểm lỗi tập trung. Có ai ở đây nhớ các cuộc tấn công DoS năm 2016 không? Bạn thức dậy lúc 5:17 sáng, nhận được một cuộc gọi báo thức kiểu quân đội, đi xuống phòng tác chiến, và ai đó đã phát hiện ra một lỗi trong máy khách. Toàn bộ Chuỗi dừng lại. Chúng tôi sửa nó, và rồi hai hoặc ba ngày sau ai đó lại tìm thấy một lỗi khác. Điều đó cứ tiếp diễn trong suốt một tháng cho đến khi cuối cùng chúng tôi phải Phân nhánh cứng. Nhưng trong khoảng thời gian đó, khả năng Ethereum có hai máy khách khác nhau — vào thời điểm đó là Geth và Parity — về cơ bản đã cứu Chuỗi. Đã có những lúc một lỗi sẽ tấn công Geth nhưng không phải Parity, và những lúc một lỗi sẽ tấn công Parity nhưng không phải Geth. Ethereum đã đạt được rất nhiều lợi ích từ việc có nhiều triển khai phần mềm, và đây là điều mà tính đến năm 2024 có lẽ đang ở mức tốt nhất từng có trong lịch sử của Ethereum.
 
-#### Nhiều máy khách và sự mạnh mẽ (10:40) {#multiple-clients-and-robustness-1040}
+### Nhiều máy khách và sự mạnh mẽ (10:40) {#multiple-clients-and-robustness-1040}
 
 Nếu chúng ta nhìn vào các máy khách đồng thuận, xử lý phần Bằng chứng cổ phần (PoS) của Ethereum, và các máy khách thực thi, xử lý phần EVM của Ethereum, chúng ta có thể thấy máy khách duy nhất có thị phần cao nhất là Go Ethereum (Geth), chiếm đâu đó khoảng 50%. Điều gì sẽ xảy ra nếu có một lỗi trong bất kỳ máy khách Ethereum nào theo đúng nghĩa đen vào hôm nay, ngay lúc này? Hãy kiểm tra xem Ethereum có còn đang chạy không. Tôi đoán là có — tôi sẽ cá 99,99% trên PolyMarket. 
 
@@ -56,7 +56,7 @@ Hai năm trước, biểu đồ này còn tệ hơn. Sự phi tập trung của 
 
 Nếu bạn có 32 ETH, hoặc ít hơn nếu bạn tham gia một nhóm, ngày càng có nhiều tùy chọn nhóm thực sự thú vị xuất hiện — như việc đặt cọc theo nhóm Obol, cho phép bạn tạo các nhóm nhỏ hơn với bạn bè của mình. Có rất nhiều cách khác nhau để bạn trở thành người đặt cọc, và nếu bạn làm vậy, bạn sẽ trở thành một phần của mạng lưới các nút bảo mật Chuỗi khối Ethereum này.
 
-#### Xác minh nút và quy mô (15:06) {#node-verification-and-scale-1506}
+### Xác minh nút và quy mô (15:06) {#node-verification-and-scale-1506}
 
 Tôi đoán đây là cách mà tài liệu tuyên truyền của tổ chức mô tả nó — nó có một chú voi dễ thương. Vì vậy, hãy hoan hô chú voi! Bạn cũng có thể tham gia mạng lưới và giúp bảo mật nó. Ngay cả khi bạn không phải là người đặt cọc, bạn cũng có thể chạy một nút Ethereum trên máy tính của mình và tự nguyện xác minh Chuỗi. 
 
@@ -70,7 +70,7 @@ Việc đặt cọc với ít ETH hơn cũng là một yêu cầu nghiên cứu 
 
 Những gì chạy trên Ethereum L1? Một số ứng dụng có giá trị cao. Rất nhiều tài chính phi tập trung (DeFi) có giá trị cao chạy trên L1. ENS hiện đang ở trên L1, mặc dù nó đang ngày càng hoạt động nhiều hơn với các lớp 2 (l2). Mọi người nắm giữ tài sản trên lớp 1 (l1). Hơn nữa, lớp 1 (l1) quản lý các gốc khối, gốc trạng thái và các hệ thống bằng chứng cho các lớp 2 (l2). Nó bảo mật các lớp 2 (l2). lớp 1 (l1) cần phải đủ mạnh để xử lý các hoạt động xuyên lớp, đặc biệt là trong trường hợp một lớp 2 (l2) bị lỗi. Sự khác biệt giữa một lớp 2 (l2) và một Chuỗi độc lập là ngay cả khi lớp 2 (l2) của bạn bị tấn công 51% hoặc nhóm phát triển ngừng hoạt động, lớp 1 (l1) vẫn đứng đó để bảo vệ người dùng. Người dùng có thể chứng minh quyền sở hữu và trạng thái của họ bên trong lớp 2 (l2) và di chuyển nó trở lại xuống lớp 1 (l1). 
 
-#### Tốc độ và lộ trình của L2 (20:33) {#l2-speeds-and-roadmaps-2033}
+### Tốc độ và lộ trình của L2 (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Gần đây, đã có một thử nghiệm thực tế với điều này. dYdX v3 đã ngừng hoạt động gần đây, và những người ở L2Beat đã viết bản triển khai phần mềm cơ chế thoát của riêng họ. Mà không cần bất kỳ sự can thiệp nào từ nhóm dYdX, người dùng đã có thể lấy bất kỳ tài sản nào họ có bên trong dYdX v3 và đưa chúng trở lại xuống Ethereum L1. Việc thoát khỏi một lớp 2 (l2) mà không cần sự can thiệp của nhóm phát triển không chỉ là lý thuyết, nó là thực tế.
 
@@ -82,7 +82,7 @@ Sau đó là The Merge. Bởi vì một sự kỳ quặc thú vị của toán h
 
 Lịch sử của Ethereum: Tháng 11 năm 2013 là sách trắng. Tháng 7 năm 2015 là thời điểm ra mắt. Khoảng năm 2018, Ethereum đã chốt thiết kế gần đúng của mình cho Bằng chứng cổ phần (PoS) và lấy mẫu tính khả dụng của dữ liệu. Các bài báo gốc về lấy mẫu tính khả dụng của dữ liệu và mã hóa xóa đã được tôi viết vào năm 2017. 
 
-#### Casper và mở rộng quy mô Rollup (25:27) {#casper-and-rollup-scaling-2527}
+### Casper và mở rộng quy mô Rollup (25:27) {#casper-and-rollup-scaling-2527}
 
 Nếu bạn đào sâu vào GitHub, bạn có thể tìm kiếm thư mục có tên `simple_casper` và tìm thấy các hợp đồng được viết bằng Serpent. Có ai ở đây nhớ Serpent không? Có ai ở đây sử dụng Serpent không? Ý tôi là, tôi nghĩ Python thực sự rất đẹp, nhưng nếu bạn muốn điều đó, bạn nên lập trình bằng Vyper. Vyper thực sự rất tuyệt và đã không ngừng cải thiện khá nhiều. Bên trong kho lưu trữ đó vào năm 2017, chúng tôi đã cố gắng thực hiện trừu tượng hóa toàn bộ và viết logic Bằng chứng cổ phần (PoS) trực tiếp dưới dạng một hợp đồng thông minh. Chúng tôi đã ra mắt một bản demo vào lúc 11:20 tối giờ Bangkok ngày 31 tháng 12 năm 2017 — chúng tôi muốn đưa ra một thứ gì đó trước Năm mới — và bản demo cuối cùng đã bị hỏng khá nhanh. Đó là những ngày đầu.
 

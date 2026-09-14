@@ -19,7 +19,7 @@ Debata mezi **Lyn Alden** a **Justinem Drakem** o základních kompromisech mezi
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=1m12zgJ42dI) zveřejněného podcastem Bankless. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Vítejte v Bankless, kde prozkoumáváme hranice internetových peněz a internetových financí. Tady je Ryan Sean Adams, jsem tu s Davidem Hoffmanem a jsme tu, abychom vám pomohli stát se více 'bankless' (nezávislými na bankách). Lidi, dnes vás čeká opravdová lahůdka. Máme tu dva odborníky na důkaz podílem (PoS) a důkaz prací (PoW), kteří budou debatovat o tom, co je lepší pro vytvoření globálního peněžního systému – krypto peněžního systému – zda důkaz prací (PoW) nebo důkaz podílem (PoS). V dnešní epizodě vystoupí Lyn Alden a Justin Drake. Budeme mluvit o několika věcech. Za prvé: co poskytuje největší ekonomickou bezpečnost, důkaz prací (PoW) nebo důkaz podílem (PoS)? Za druhé: co poskytuje nejlepší odstrašení a schopnost zotavení tváří v tvář obávanému 51% útoku? Za třetí: co minimalizuje moc správy pro elity – co dává více „moci lidu“? Za čtvrté: jaký systém je ekonomicky nejspravedlivější pro účast? A za páté – to je můj osobní favorit – konverzace o tom, že důkaz prací (PoW) jsou spíše komoditní peníze a důkaz podílem (PoS) spíše akciové peníze.
 
@@ -29,7 +29,7 @@ Debata mezi **Lyn Alden** a **Justinem Drakem** o základních kompromisech mezi
 
 **Justin Drake:** Mám se skvěle, díky moc za pozvání, pánové.
 
-#### Rámování debaty: monetární prémie (7:30) {#framing-the-debate-monetary-premium-730}
+### Rámování debaty: monetární prémie (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Chci začít tou hlavní otázkou. Myslím, že se snažíme odpovědět na meta otázku, zda je důkaz prací (PoW) nebo důkaz podílem (PoS) vhodnější pro akumulaci monetární prémie – v podstatě který z těchto dvou protokolů konsensu je vhodnější k tomu, aby z kryptoměny udělal peníze. Justine, souhlasíš, že je to správné rámování?
 
@@ -41,7 +41,7 @@ Debata mezi **Lyn Alden** a **Justinem Drakem** o základních kompromisech mezi
 
 **Justin Drake:** Chci do toho vstoupit a argumentovat, proč je tato analogie mezi akciemi a důkazem podílem (PoS) možná špatná. V kontextu akcií máte právo hlasovat o čemkoli – můžete zcela změnit pravidla společnosti. V konsensu důkazu podílem (PoS) účastníci konsensu nemohou jen tak svévolně měnit pravidla. Nemohou říct „prostě si každý dáme tisíc ETH“ – to by byla neplatná transakce. Účastníci konsensu jsou nakonec zodpovědní komunitě, a to je obrovský rozdíl oproti akciím.
 
-#### Komoditní peníze vs. akciové peníze (10:06) {#commodity-money-vs-equity-money-1006}
+### Komoditní peníze vs. akciové peníze (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, chceš pokračovat v té konverzaci o důkazu prací (PoW) jako komoditě a důkazu podílem (PoS) jako akciích?
 
@@ -53,7 +53,7 @@ Debata mezi **Lyn Alden** a **Justinem Drakem** o základních kompromisech mezi
 
 **Lyn Alden:** Myslím, že existuje určité spektrum, ale z větší části je to spíše jednosměrka. Existuje mnoho způsobů, jak se stát akcií, ale jen velmi málo způsobů, jak se stát komoditou. Komodity jsou ze své podstaty poněkud vzácné a neměnné. Způsoby, jak vytvořit skutečnou komoditu v digitálním světě, jsou extrémně omezené.
 
-#### 51% útoky: odstrašení a zotavení (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### 51% útoky: odstrašení a zotavení (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Chci porovnat důkaz prací (PoW) a důkaz podílem (PoS) v tom, co je nejméně náchylné k cenzurním útokům. Jednou z obrovských výhod důkazu podílem (PoS) je, že sociální vrstva má nástroje k zásahu. V důkazu prací (PoW), pokud přijde 51% útočník, shrábne každý kousek odměny, každý kousek emise, každý transakční poplatek. Poctiví těžaři se vypnou, protože nedává smysl spotřebovávat elektřinu bez příjmu. Pak chtějí likvidovat a prodávají svůj hardware. Útočník může tento hardware koupit za zlomek ceny a posílit tak svou pozici. I kdyby se komunitě podařilo zorganizovat protiútok, trvalo by měsíce, ne-li roky, než by se zorganizoval.
 
@@ -65,7 +65,7 @@ Pokud jde o bezpečnost, nejde jen o 51% útoky – jde také o chyby (bugs). D�
 
 Pro zotavení z 51% útoků: jedinou cestou v důkazu podílem (PoS) je provést soft fork a vzít lidem kapitál. Pokud to formulujete jako odebrání kapitálu útočníkovi, zní to dobře. Ale útočníkem může být regulovaný správce (custodian) – berete kapitál lidem, kteří s útokem neměli nic společného.
 
-#### Složitost, chyby a klientská diverzita (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Složitost, chyby a klientská diverzita (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Složitost není nutně zlo. Lidstvo na ní prosperuje. Pokud jde o složitost důkazu podílem (PoS) – ano, je složitější, minimálně 10x, možná 100x. Ale je to složitost, kterou jsme v tuto chvíli zkrotili. Máme pět různých klientů, kteří implementovali protokol, každý s malými týmy pěti až deseti lidí. Klientská diverzita umožňuje komunitě koupit si pojištění proti chybám.
 
@@ -75,7 +75,7 @@ K tématu neustálého připojení online – tomu, co nazýváme slabá subjekt
 
 Při pohledu na dlouhodobé směřování důkazu prací (PoW) uvidíte rostoucí integraci mezi těžaři a výrobci energie. Elektrická síť přirozeně musí nadprodukci elektřiny. Systémy důkazu prací (PoW) jsou opravdu dobrým nástrojem pro vyrovnávání zátěže (load balancer) pro nevyužitou (stranded) energii. Nejlevnějším zdrojem elektřiny je prakticky bezplatná nevyužitá energie. Právě teď má největší zařízení na těžbu sítě Bitcoin na světě asi 1 % celkového hashovacího výkonu – je to již strukturálně decentralizované.
 
-#### Spravedlnost a argument „bohatí bohatnou“ (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Spravedlnost a argument „bohatí bohatnou“ (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** V důkazu podílem (PoS) máte dokonalou spravedlnost – vložíte jednu jednotku kapitálu a získáte přesně stejné množství odměn bez ohledu na to, jak jste velcí nebo malí. V důkazu prací (PoW) mají velké ryby nespravedlivé výhody. Pokud jste drobný těžař kupující jednu těžební sestavu (rig), přeplácíte 2x, 3x, 4x, 5x ve srovnání s profesionálními těžaři, kteří nakupují ve velkém. Kvůli Mooreovu zákonu mají útočníci, kteří chtějí zaútočit, výhodu – mohou si vybrat ten nejnovější, nejmodernější hardware. Cena elektřiny je pro ně do značné míry irelevantní, protože 51% útok stačí provádět jen jeden den nebo jeden týden. 99 % nákladů je v těžebních sestavách a infrastruktuře, ne v elektřině.
 
@@ -85,7 +85,7 @@ Skutečnost, že důkaz prací (PoW) je ze své podstaty nespravedlivý, vytvá�
 
 V důkazu prací (PoW) si v podstatě pronajímáte svou schopnost spravovat systém. Vaše stroje degradují, váš zdroj energie se může stát méně efektivním, váš hardware přestává být špičkový. Je to neustálá série rozhodnutí spíše než systém, který ze své podstaty zvýhodňuje lidi, kteří nakoupili jako první. Bez ohledu na to, kolik bitcoinů má Michael Saylor, má nulovou kontrolu nad tím, jaké transakce jsou zpracovávány.
 
-#### Důkaz prací jako „důkaz podílem s kroky navíc“ (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Důkaz prací jako „důkaz podílem s kroky navíc“ (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Neznám nikoho – a to jsem v tomto prostoru už téměř deset let – kdo by v tuto chvíli těžil Bitcoin jako jednotlivec. Všechno je to průmyslové. Na druhou stranu, u důkazu podílem (PoS) všichni v tomto hovoru – možná kromě tebe, Lyn – stakují jako jednotlivci. Diverzita u důkazu podílem (PoS) je mnohem, mnohem větší. Bariéra vstupu je mnohem nižší – v podstatě potřebujete jen počítač běžící 24/7.
 
@@ -97,11 +97,11 @@ K argumentu „bohatí bohatnou“ u důkazu podílem (PoS): vnímám to jako za
 
 Ke klientské diverzitě – alespoň když jsem to naposledy kontrolovala, největší klient má asi 84 % klientů Etherea. Máte určitou míru diverzifikace, ale je to také částečná iluze. V praxi je jednou z klíčových věcí, která chrání před chybami, mít co nejjednodušší kódovou základnu.
 
-#### NIST, kvantové počítače a dlouhodobé fundamenty (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, kvantové počítače a dlouhodobé fundamenty (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Pokud chceme být internetem peněz, potřebujeme časové měřítko v řádu samotného internetu – desetiletí, ne-li staletí. Složitost je něco, co má poločas rozpadu možná jeden rok – dá se zkrotit a zocelit. Postupem času, jak je zabezpečeno velké množství hodnoty, lze systémům důvěřovat. Chyby budou opraveny, systém se zocelí. Měli bychom se dívat na dlouhodobé fundamenty. Ukazuje se, že důkaz prací (PoW) bude v příštích 20 až 30 letech zcela narušen kvantovými počítači. Ano, existují krátkodobé obavy ze složitosti, ale pokud si odmyslíte detaily a zaměříte se na fundamenty, existují fundamentální důvody, proč být ohledně důkazu prací (PoW) pesimistický (bearish).
 
-#### Historický argument komoditních peněz (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Historický argument komoditních peněz (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, tak trochu ses ujala vedení jako makro komentátorka zaměřující se na komoditní trhy. Zastánci Bitcoinu se často zaměřují na komoditní vlastnosti a na to, jak Bitcoin spotřebovává energii jako komoditu. Je to částečně morální argument – že komoditní peníze jsou pro svět prostě vhodnějšími penězi?
 
@@ -113,13 +113,13 @@ Postupem času to směřuje k centralizaci. Jak se hromadí dluh, systém je st�
 
 **Lyn Alden:** Osobně k tomu přistupuji z pohledu taktického rizika. Který systém má nejmenší pravděpodobnost extrémních rizik (tail risks)? Co je optimalizováno pro to, o co se to snaží? Pokud jde o argument spravedlnosti, částečně se to míchá s různými věcmi – důkaz prací (PoW) versus důkaz podílem (PoS) je jeden aspekt a vzácnost tokenů je další.
 
-#### Motor vzácnosti vs. motor likvidity (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Motor vzácnosti vs. motor likvidity (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Důkaz prací (PoW) a důkaz podílem (PoS) jsou z pohledu memů téměř přesným opakem. U důkazu podílem (PoS) máte to, co nazývám motorem vzácnosti – mechanismus, který mění likvidní ETH na zmrazené ETH používané jako zajištění. Moje projekce říkají, že zhruba polovina veškeré nabídky ETH bude nakonec stakována. U důkazu prací (PoW) je to naopak – emise a transakční poplatky, které těžaři vydělají, musí být prodány na pokrytí nákladů na elektřinu a hardware. Vytvořili jste motor likvidity, který neustále zaplavuje trh (market-dumping). Pokud se ptáte, který systém je nejlepší pro vytvoření peněz pro internet – ten, který neustále prodává, nebo ten, který povzbuzuje lidi k držení – myslím, že je zřejmé, co je z pohledu memů cennější.
 
 **Lyn Alden:** Čím více se systém snaží dělat, tím horší bude v jakékoli jedné věci. Jak se Ethereum snažilo zpřísnit svou monetární politiku, pravděpodobně ztratilo podíl na trhu v decentralizovaných financích (DeFi) – z 97 % celkové uzamčené hodnoty (TVL) na konci roku 2020 na současných 55 %. Zatím Bitcoin nemá skutečnou konkurenci ze strany jiných systémů. Krátká období konkurence – memy Dogecoinu, Bitcoin Cash – časem vyblednou. Jeden svět je založen na správě a zatraktivnění vašeho ekosystému. Druhý se scvrkává na to, co je nejtvrdší – co je nejlepší v tom být penězi.
 
-#### Správa, neměnnost a samosvrchovanost (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Správa, neměnnost a samosvrchovanost (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Minimálně systém důkazu podílem (PoS) dává držitelům jednotek větší slovo v tom, které transakce jsou zpracovávány a které jsou cenzurovány. Ale kdo může změnit protokol a jak – to přesahuje debatu o důkazu prací (PoW) vs. důkazu podílem (PoS). Můžete mít systémy důkazu prací (PoW), které vypadají více jako akcie – s bombami obtížnosti nebo super velkými bloky, takže lidé nemohou provozovat svůj vlastní uzel.
 
@@ -129,13 +129,13 @@ Memem Bitcoinu je samosvrchovanost. Provozujete svůj vlastní uzel, uzly jsou m
 
 **Lyn Alden:** U komoditních peněz mají producenti zřídkakdy velkou kontrolu. Zlato má velmi vysoký poměr zásob k toku (stock-to-flow) – těžaři zlata nemají nad systémem prakticky žádnou kontrolu. To platí i v ekosystému Bitcoinu. Během válek o velikost bloku většina těžařů podporovala zvětšení bloku a přesto to nedokázali prosadit. Provozovatelé uzlů to odmítli. Tato kombinace rozdělení moci – kde můžete prostě provozovat uzel a stát se samosvrchovaným, a odděleně vám těžba dává dočasnou schopnost řadit transakce, ale žádnou trvalou alokaci – je to, co udržuje decentralizovaný systém.
 
-#### Vyvrácení argumentu „bohatí bohatnou“ (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Vyvrácení argumentu „bohatí bohatnou“ (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** K argumentu „bohatí bohatnou“ u důkazu podílem (PoS) – vnímám to jako zachování bohatství, ne jako násobení bohatství. Při stakingu platíte náklady obětované příležitosti zhruba 3 % a dostáváte kompenzaci. Čistě vzato, provádíte zachování bohatství. Profesionální těžaři dělají to samé – zajišťují riziko pomocí futures a uzamykají si výnosy, které zhruba odpovídají nákladům obětované příležitosti. Ve skutečnosti je důkaz prací (PoW) jen důkaz podílem (PoS) s kroky navíc. Riziko lze odstranit pomocí finančních produktů a na konci dne máte v podstatě stejný finanční produkt.
 
 **Lyn Alden:** To, co dělá komoditní systém decentralizovaným, je kombinace malých uzlů a oddělené těžby. Bez ohledu na to, kolik bitcoinů někdo drží, má nulovou kontrolu nad řazením transakcí. To je rozdělení moci. Pokud se chystáte co nejvíce přiblížit neměnnosti v digitálním světě, navrhujete systém, který je velmi decentralizovaný, je velmi těžké mu vnutit změny, a to buď bez změn, nebo s volitelnými (opt-in) změnami. Cokoli, co se od tohoto modelu odchyluje – neustálé nucené zapojení malého týmu vývojářů, vývojových center, nadací – je ze své podstaty více podobné akciím bez ohledu na mechanismus konsensu.
 
-#### Závěrečné argumenty (1:30:42) {#closing-arguments-13042}
+### Závěrečné argumenty (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Byla to fantastická konverzace. Byla to pravděpodobně nejlepší konverzace o důkazu podílem (PoS) versus důkazu prací (PoW) v historii. Čas na závěrečné argumenty. Justine, proč je důkaz podílem (PoS) nejlepším způsobem, jak vytvořit krypto peníze?
 
@@ -151,7 +151,7 @@ Pokud byste navrhovali blockchain s cílem maximalizovat monetární vlastnosti,
 
 Pokud jde o peníze vhodné pro uložení vaší firemní pokladny, alokaci části vašeho nadačního fondu nebo držení 10 % či více vašeho čistého jmění – nebo správu státních rezerv představujících desetiletí nahromaděných obchodních přebytků – historicky bylo nejlepší zlato. Nyní máme nové konkurenty. Vybrali byste si ten nejvíce decentralizovaný, nejvíce neměnný, ten, který neobětuje žádnou z těchto vlastností. To neznamená, že jiné systémy nejsou cenné – to, že má hodnotu zlato, neznamená, že akcie Tesly ji nemají. Jsou to různé věci, které dělají různé věci. Dokonalé peníze jsou ochotny obětovat téměř vše ostatní, aby měly dokonalé atributy peněz – jejichž hlavním účelem je být drženy a občas s nimi transaktovat, ve srovnání s něčím, co se snaží být švýcarským kapesním nožem.
 
-#### Závěr (1:40:14) {#wrap-up-14014}
+### Závěr (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Chci ještě jednou poděkovat Lyn Alden a Justinu Drakeovi, že se k nám připojili a vedli tu nejlepší debatu, jakou jsem kdy slyšel o důkazu prací (PoW) versus důkazu podílem (PoS). Také zvláštní poděkování Lyn za to, že přišla do prostředí, které by někteří mohli vnímat jako „hřiště soupeře“.
 

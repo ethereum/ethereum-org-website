@@ -20,7 +20,7 @@ Questa intervista tratta la risorsa dello spazio dei blob (blobspace) di Ethereu
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=dFjyUY3e53Q) pubblicata da Bankless. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione allo spazio dei blob (0:00) {#introduction-to-blob-space-000}
+### Introduzione allo spazio dei blob (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Benvenuti a Bankless, dove esploriamo la frontiera del denaro e della finanza su internet. Qui vi spieghiamo come iniziare, come migliorare e come anticipare le opportunità. Sono qui con David Hoffman e siamo qui per aiutarvi a diventare più "bankless". Sapete quando diciamo che le blockchain vendono blocchi? Ebbene, presto Ethereum venderà molto più che semplici blocchi: venderà anche blob.
 
@@ -38,7 +38,7 @@ Cosa significa questo per l'ether? Cosa significa per i mercati che nascono atto
 
 Facciamo entrare il nostro ospite, Dom, noto anche come Domothy. È un ricercatore presso la Fondazione Ethereum che lavora alla ricerca e allo sviluppo dei principali aggiornamenti di Ethereum in arrivo, tra cui l'EIP-4844 (l'argomento di oggi), il danksharding completo e la combustione del MEV (MEV burn).
 
-#### La storia della roadmap incentrata sui rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### La storia della roadmap incentrata sui rollup (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Quindi Dom, per capire appieno come siamo arrivati allo spazio dei blob, penso valga la pena fare un tuffo nel passato per comprendere l'intera roadmap di Ethereum, perché è giunta a una conclusione molto logica con i blob e lo spazio dei blob. Puoi riportarci indietro? Perché un tempo la roadmap di Ethereum incentrata sui rollup non esisteva. Avevamo questa cosa chiamata sharding dell'esecuzione (execution sharding), che in realtà non abbiamo mai ottenuto. In quale punto della storia della roadmap di Ethereum è opportuno collocarsi per comprendere davvero l'intero contesto dello spazio dei blob?
 
@@ -58,7 +58,7 @@ Ora, quello che stiamo facendo con la roadmap incentrata sui rollup è separare 
 
 Verso la fine del 2020, le persone si sono rese conto che i rollup stavano iniziando a diventare incredibilmente validi e popolari, e risolvevano il nostro problema di scalabilità dell'esecuzione senza la necessità dello sharding dell'esecuzione. Scegliendo un ecosistema di rollup piuttosto che cercare di essere dei massimalisti del layer 1, i rollup possono fare i propri compromessi, avviare le proprie blockchain e sperimentare cose nuove. Ethereum gestisce la verifica: questo è il fulcro di ciò che è una blockchain.
 
-#### Cos'è lo spazio dei blob? (30:00) {#what-is-blob-space-3000}
+### Cos'è lo spazio dei blob? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Ora portaci allo stato attuale, Dom. Abbiamo molti rollup che utilizzano lo spazio dei blocchi del layer 1 di Ethereum, pagando commissioni del gas elevate per pubblicare i dati del loro stato in modo che chiunque possa verificarli. Quindi, Dom, cos'è un blob?
 
@@ -72,7 +72,7 @@ Il vincolo di progettazione cruciale qui è che l'EVM (Ethereum Virtual Machine)
 
 **Domothy:** Esattamente. E un'altra proprietà critica dei blob è che vengono automaticamente eliminati (pruned) dopo un periodo di tempo: attualmente circa 18 giorni. Il motivo per cui vengono eliminati è che per garantire una verifica trustless, gli individui hanno bisogno che quei dati siano disponibili solo per dimostrare la definitività e il consenso sullo stato del rollup entro una specifica finestra di contestazione. Non hai bisogno di mille nodi che conservano blob di due anni fa per verificare la tua transazione oggi. Quando la finestra scade, non li otterrai più da un nodo Ethereum; li otterrai da fornitori di cronologia, indicizzatori o dagli esploratori di blocchi nativi del rollup. L'archiviazione su Ethereum è follemente costosa per sempre. L'eliminazione del requisito di archiviazione ci consente di scalare la capacità transazionale dei blob senza distruggere i dischi rigidi degli operatori dei nodi.
 
-#### Economia e danksharding completo (55:00) {#economics-and-full-danksharding-5500}
+### Economia e danksharding completo (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Sappiamo che la 4844 è il primo passo: quello che chiamiamo Proto-Danksharding. Stabilisce il formato dei blob e il mercato delle commissioni isolato, ma il numero effettivo di blob target per blocco è inizialmente limitato per essere abbastanza sicuro. Come si presenta questo scalando verso il danksharding completo?
 
@@ -86,7 +86,7 @@ Con un mercato delle commissioni bidimensionale (essenzialmente una strada isola
 
 **Domothy:** Sì, sono completamente disconnessi. E vale anche il contrario. Se la capacità transazionale del layer 2 subisce un'impennata immensa e migliaia di rollup operano e congestionano lo spazio dei blob, il conseguente picco delle commissioni di base dei blob non influirà sul costo di esecuzione di una semplice transazione sulla Mainnet di Ethereum. La commissione di base dei blob funziona esattamente come la commissione di base dell'EIP-1559, ma nella sua dimensione. E per quanto riguarda la tua precedente domanda su ciò che viene bruciato: sì, la commissione per i blob genera ETH bruciati per pagare l'inclusione dei dati nello spazio dei blob, in modo totalmente separato dagli ETH bruciati per la commissione di base dello spazio dei blocchi.
 
-#### Il futuro della scalabilità di Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### Il futuro della scalabilità di Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Voglio arrivare a ciò che accade specificamente al rilascio della 4844. Inizialmente, c'è ovviamente un'aspettativa molto alta che quando la capacità dei blob si sbloccherà all'improvviso, non ci sarà abbastanza domanda di rollup in quell'esatto microsecondo per riempirla completamente. Lo spazio dei blob sarà quasi comicamente economico al lancio. Ma non cè la legge della domanda indotta? Se hai risorse incredibilmente economiche, le applicazioni che consumano quelle risorse esplodono in volume.
 

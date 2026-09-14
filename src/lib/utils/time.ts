@@ -3,6 +3,7 @@ import humanizeDuration from "humanize-duration"
 import { Lang } from "../types"
 
 import { dateTimeFormat } from "./date"
+import { normalizeIntlSpaces } from "./intl"
 import { numberFormat } from "./numbers"
 
 export const getLocaleTimestamp = (
@@ -18,7 +19,7 @@ export const getLocaleTimestamp = (
       day: "numeric",
     } as Intl.DateTimeFormatOptions)
   const date = new Date(timestamp)
-  return dateTimeFormat(locale, opts).format(date)
+  return normalizeIntlSpaces(dateTimeFormat(locale, opts).format(date))
 }
 
 /**
