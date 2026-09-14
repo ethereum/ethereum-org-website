@@ -1,0 +1,33 @@
+diff --git a/dist/esm/constants.d.ts b/dist/esm/constants.d.ts
+index b44c01456dad31b63f2d7f618f79073775631528..3d4bef816951d268335da4f71b6489de74d407d9 100644
+--- a/dist/esm/constants.d.ts
++++ b/dist/esm/constants.d.ts
+@@ -1 +1 @@
+-export declare const MAX_QUERY_SIZE = 64;
++export declare const MAX_QUERY_SIZE = 512;
+diff --git a/dist/esm/constants.js b/dist/esm/constants.js
+index 9325780c8ad4375b6c37b20f26954bca2be8d6d5..175cf4ca30430a051d0dfb1f48b81af931ca814d 100644
+--- a/dist/esm/constants.js
++++ b/dist/esm/constants.js
+@@ -1 +1 @@
+-export var MAX_QUERY_SIZE = 64;
+\ No newline at end of file
++export var MAX_QUERY_SIZE = 512;
+\ No newline at end of file
+diff --git a/dist/esm/utils/groupBy.js b/dist/esm/utils/groupBy.js
+index b6ce1dc626dca397261f0c7af44f34ed93fbc37f..1975bafcb2c267d13d0bb5f27a94d40b3ed33fac 100644
+--- a/dist/esm/utils/groupBy.js
++++ b/dist/esm/utils/groupBy.js
+@@ -7,7 +7,11 @@ export function groupBy(values, predicate) {
+ 
+     // We limit each section to show 5 hits maximum.
+     // This acts as a frontend alternative to `distinct`.
+-    if (acc[key].length < 5) {
++    //
++    // ethereum.org: items may opt out. The cap exists to stop one page filling a
++    // section of content results; an injected section whose rows are each a distinct
++    // destination is not that, and truncating it silently drops real choices.
++    if (acc[key].length < 5 || item.__docsearchNoLimit) {
+       acc[key].push(item);
+     }
+     return acc;

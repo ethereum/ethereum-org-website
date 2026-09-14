@@ -1,5 +1,5 @@
 {
-  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Seeded from the hand-labelled queries in groundtruth.json plus the search rules; hand edits win and are preserved. Singular and plural are listed separately because the index does not stem, so 'smart contract' and 'smart contracts' rank independently. See typesense/README.md.",
+  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Seeded from the hand-labeled queries in groundtruth.json plus the search rules; hand edits win and are preserved. Singular and plural are listed separately because the index does not stem, so 'smart contract' and 'smart contracts' rank independently. See typesense/README.md.",
   "rules": [
     {
       "q": "app",
