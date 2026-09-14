@@ -97,10 +97,11 @@ const MIN_MARKET_CAP_USD = 500_000
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-stablecoins")
-  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

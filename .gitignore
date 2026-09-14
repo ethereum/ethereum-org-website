@@ -49,8 +49,9 @@ next-env.d.ts
 # route handler that serves the <sitemapindex> stays tracked -- mirrors /feed.xml)
 /sitemap*.xml
 
-# Robots.txt
-robots.txt
+# Robots.txt (root-level generated output only; anchored so the app/robots.txt/
+# route handler stays tracked -- mirrors /sitemap*.xml above)
+/robots.txt
 
 # Local Netlify folder
 .netlify

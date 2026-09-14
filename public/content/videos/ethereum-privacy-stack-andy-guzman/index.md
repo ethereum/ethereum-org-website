@@ -18,7 +18,7 @@ A talk by **Andy Guzman**, lead of the Privacy Stewards of Ethereum (PSE) team a
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=tvAqDJXCBaA) published by EthBoulder. It has been lightly edited for readability.*
 
-#### The fictional RPC provider letter (0:12) {#the-fictional-rpc-provider-letter-012}
+### The fictional RPC provider letter (0:12) {#the-fictional-rpc-provider-letter-012}
 
 Hey everyone, I'm Andy, and I wanted to introduce a topic that is not often discussed in the Ethereum ecosystem and is extremely important. As you might have noticed from the slide and the introduction, it's related to privacy, and how we are underprotected without even noticing.
 
@@ -26,13 +26,13 @@ Let me start with a letter that someone wrote to you.
 
 "Dear valuable user, thank you for the 847 queries you made this month. We really enjoyed getting to know you. We know that you hold ETH across three different wallets. We know that you checked the price of ETH 94 times last Tuesday. It was a very rough day for everyone, so no judgment. You also checked the BTC price, which is interesting, because you don't hold any Bitcoin. Are you thinking of diversifying? That will stay between us, and of course our analytics partners. You are also watching two Uniswap pools very closely, and you checked your Aave health factor 14 times last week. You might want to relax, or just add some collateral. On Thursday you checked it three times within 12 minutes, and you were very worried. You looked at four different ENS names, so either you're starting a new project or you're having an identity crisis. And you always go quiet between 11 p.m. and 7 a.m. Mountain time."
 
-#### How you leak data without signing transactions (1:34) {#how-you-leak-data-without-signing-transactions-134}
+### How you leak data without signing transactions (1:34) {#how-you-leak-data-without-signing-transactions-134}
 
 "So we're fairly confident that you're based in Boulder, or close. You never signed a single transaction through us. You never had to. Your curiosity told us everything. Warmly, your RPC provider."
 
 Of course this is a fictitious letter, but it describes something we really do leak every day. Even if you're not doing a single transaction or any onchain action, you're basically telling everything to any analytics company that would love to get their hands on that data and your behaviors.
 
-#### Private writes vs private reads (2:07) {#private-writes-vs-private-reads-207}
+### Private writes vs private reads (2:07) {#private-writes-vs-private-reads-207}
 
 So what is really going on right now in the privacy world? I see that we put a lot of emphasis on onchain privacy, or what we at PSE call private writes: all the actions that you do onchain. And it makes sense, right? Those actions get recorded forever and transmitted around the world, so it does make sense to not leak your address with a specific action. We also put a lot of emphasis on tooling: data sources, proofs, DSLs, and languages we can use to give developers more tools to express and build stronger apps that have more privacy onchain.
 
@@ -40,7 +40,7 @@ But I want to argue in this presentation that we don't put nearly enough attenti
 
 To get slightly more technical: all the RPC calls, like eth_getBalance, eth_call, and eth_getLogs, are requests in plain text that go to RPC providers and get correlated with your IP.
 
-#### Why more activity increases profiling risk (3:20) {#why-more-activity-increases-profiling-risk-320}
+### Why more activity increases profiling risk (3:20) {#why-more-activity-increases-profiling-risk-320}
 
 With this information, it becomes very easy to profile people, to segment them, and to model behaviors. And this can be used against you. As you would imagine, information is power, and the more information people have about you and your behavior, the more power they have over you.
 
@@ -48,13 +48,13 @@ Most people don't realize this. Most people will say, okay, well, it doesn't rea
 
 So whenever there's DeFi mania or NFT craziness, people become more sloppy. OpSec, of course, gets thrown out of the window, and it becomes much, much easier to deanonymize people based on the activity patterns most people fall into.
 
-#### Introducing the Ethereum privacy stack (4:43) {#introducing-the-ethereum-privacy-stack-443}
+### Introducing the Ethereum privacy stack (4:43) {#introducing-the-ethereum-privacy-stack-443}
 
 I want to start with the landscape: where should we attack, what's needed, and who's working on what. This talk will go into some more technical topics and some more high-level conceptual ones, so everyone can take some value out of it.
 
 I want to present what I call the Ethereum privacy stack, or the layers of the Ethereum privacy stack, and I think this is useful to reason about. If we really want privacy, we don't only need privacy onchain; we also need privacy in all these layers of the stack, similar to the lifecycle of a transaction, or the OSI model and its technology layers. I would argue we could create a standard, or some sort of ecosystem-wide acknowledgment, that these layers exist. Maybe this is not the final form, but I think it's arguably already useful.
 
-#### Layer by layer: where you leak (5:41) {#layer-by-layer-where-you-leak-541}
+### Layer by layer: where you leak (5:41) {#layer-by-layer-where-you-leak-541}
 
 The top is the application layer. Whenever you visit a website, of course, you're leaking what you're visiting, and people can start profiling: anonymity sets, credentials, linking your IP to what you're visiting, even if you don't do anything.
 
@@ -66,15 +66,15 @@ And there's another vertical, which is what we call networking, which is transve
 
 Those are the types of things that make sense: we need to go layer by layer, hardening everything, analyzing through the lens of a very disruptive attacker who wants to censor everything. Even if we don't do it, and we say we live in a good enough state, this information gets recorded now and will be hosted forever by a lot of people you don't even know, companies that start selling your data. Eventually, in five years, somebody might ban crypto and say, "anybody who used Uniswap in the last five years, I'm the IRS, I'm going to start knocking and get you to jail," or whatever. These dystopian scenarios happen in different countries around the world right now.
 
-#### Private reads and private networking (8:24) {#private-reads-and-private-networking-824}
+### Private reads and private networking (8:24) {#private-reads-and-private-networking-824}
 
 Okay, so we have the Ethereum privacy stack. Where should we focus? In this presentation I want to talk about these two areas. Private reads: whenever you access state from onchain, you touch all these layers, from the app, let's say I want to query the price of ETH, to the wallet, to the gateways, to a node that is running Ethereum and the EVM, and then back. Basically an RPC provider or an indexer. And private networking, which is all the actions that happen on the networking layer. This is what we want to harden.
 
-#### Three pillars: data, traffic, performance (9:05) {#three-pillars-data-traffic-performance-905}
+### Three pillars: data, traffic, performance (9:05) {#three-pillars-data-traffic-performance-905}
 
 There are three pillars that I think are critical for us to achieve this. We want to hide and make private the data itself. We want to hide and make private the traffic itself. And then we want to make it performant, useful, practical, and cheap. This summarizes a lot of information about things going on in the ecosystem, but I think it's useful to paint the lay of the land and identify the leverage points where we can accelerate.
 
-#### Hiding data: from proxies to PIR (9:39) {#hiding-data-from-proxies-to-pir-939}
+### Hiding data: from proxies to PIR (9:39) {#hiding-data-from-proxies-to-pir-939}
 
 So, data. What is it that we want to protect? We want to hide what information you're asking these servers for, and we want to hide the patterns of how you access this data. Not only the content but also the patterns.
 
@@ -88,13 +88,13 @@ There are other teams working on OMAPs, oblivious map access patterns, and ORAM,
 
 And I would argue the endgame of these will be PIR, private information retrieval, which means the server doesn't know what you're querying and doesn't learn anything about it.
 
-#### Private Information Retrieval explained (12:03) {#private-information-retrieval-explained-1203}
+### Private Information Retrieval explained (12:03) {#private-information-retrieval-explained-1203}
 
 Private information retrieval is a super powerful technique in cryptography, and it's going to be used a lot. There are two variants: index PIR, which you can use if you have structured data under an index, and keyword PIR, where, as the name says, you query per keyword. It's very hard to have one scheme that works for everything.
 
 Ethereum state is huge and very varied. Logs, I was learning yesterday, are append-only, but the account model is different: some state gets updated very frequently, some doesn't. Depending on how you slice and dice it, you can have megabytes, gigabytes, or terabytes of data, with very different access patterns.
 
-#### A multi-agent PIR architecture (12:48) {#a-multi-agent-pir-architecture-1248}
+### A multi-agent PIR architecture (12:48) {#a-multi-agent-pir-architecture-1248}
 
 The proposal we're working on within PSE, and here I'm going to talk conceptually and then about specific projects we're doing at PSE and other things I'm seeing in the ecosystem, is a multi-agent architecture. There's no single scheme that is perfect for all Ethereum state. But if we can slice the Ethereum state per type or per access pattern, we can find very good schemes for each of them.
 
@@ -104,7 +104,7 @@ We're already doing this and implementing two different schemes. We will open gr
 
 Here are a few numbers about different PIR schemes: throughputs, communication overhead, and so on. It's hard, because different apps have different access patterns. Some access a lot of receipts, some want to access more of the state, like Rotki, and some access more transactions, like Helios. There's no silver bullet, and most likely a mixed architecture will be helpful. We're also doing a systematization of knowledge, so if this is interesting to you, we can share it. And here are just some of the teams working in these areas. Forgive me if you are part of a team and I didn't include you; if somebody sees the recording and is missing, please let me know and I can start adding you.
 
-#### Hiding traffic: onion routing and Tor (15:22) {#hiding-traffic-onion-routing-and-tor-1522}
+### Hiding traffic: onion routing and Tor (15:22) {#hiding-traffic-onion-routing-and-tor-1522}
 
 We covered data. The other big bucket is traffic. How do we hide traffic, and what do we want to hide? In very simple terms, we want to hide the client's and the server's IPs from each other, and from the rest of the world that might be snooping on traffic. We have different techniques: onion services, mixnets, VPNs, DC-nets, and there might be other classifications. I'm just going to talk about the first two.
 
@@ -118,13 +118,13 @@ There's a team I want to shout out, the Brume Wallet team, who started Echalote,
 
 Then, the Tor Project has a new implementation being developed called Arti, the next generation of their client. But we need an embedded Arti. Arti is Rust-based, and it needs to be compiled to WASM to be able to run in your browser, so you can import it really easily. We basically have a collaboration with the Tor team: calls every week, and some projects and partnerships together.
 
-#### Mixnets for Ethereum (18:16) {#mixnets-for-ethereum-1816}
+### Mixnets for Ethereum (18:16) {#mixnets-for-ethereum-1816}
 
 On the mixnet side, I want to give a shout-out to several teams approaching this: the Nym team; HOPR, also one of the first ones; VPNs like Gnosis VPN; and a couple of others that were new to me, like Anyone Protocol, and I think somebody from that team should be here in Denver, plus some other new ones. There are many teams working on mixnets, VPNs, and other approaches.
 
 We want to see: what if we create a purpose-built mixnet for Ethereum, where we can route RPC traffic? Mixnets have strong guarantees, but they add a lot of latency. For some use cases that's fine: it doesn't matter if it takes a little bit longer, as long as you have privacy. But for things like DeFi and trading, it's extremely unlikely these will get adopted if they add latency. So, what's the fastest we can run with the highest privacy guarantees? Again, a shout-out to some of these teams, and if someone is working in these areas and I haven't added you, I would love to chat.
 
-#### Performance: unified binary trees and GPU acceleration (19:28) {#performance-unified-binary-trees-and-gpu-acceleration-1928}
+### Performance: unified binary trees and GPU acceleration (19:28) {#performance-unified-binary-trees-and-gpu-acceleration-1928}
 
 The last thing I want to talk about, the third pillar to make this a reality, is performance. We want these things to run fast and cheap. I have a principle: these things won't get adopted if the cost is higher than the benefit. Cost means user experience, time, and effort for the user, but also cost for the developers and the infrastructure: is this very expensive to run? We need to lower the cost as much as we can, and there are two high-level initiatives I can talk about.
 
@@ -136,25 +136,25 @@ The other aspect is GPU acceleration. We can run these things much faster if we 
 
 Doing a recap so far: we have these five layers, and we want to cover these use cases. There are three pillars: data, traffic, and performance. For data we have proxies, TEEs, ORAMs, OMAPs, and PIR. For traffic we have mixnets, onion routing, and others. For performance we have UBT and GPU acceleration. If you want to read more, at least about the contributions PSE is making, you can go to pse.dev/research.
 
-#### Measuring success (22:15) {#measuring-success-2215}
+### Measuring success (22:15) {#measuring-success-2215}
 
 So what is success, and how can we measure it? Coming back to these layers: if I want to be able to claim that Ethereum is the most private chain, what is the endgame? I would need to feel comfortable that all these layers are extremely hardened. How would I measure it? I would expect more websites and dapp frontends to be hosted behind onion domains. I would love wallets to natively use anonymous routing, and gateways, RPC providers, and indexers as well. And I would measure a percentage.
 
 The question is: of the current Ethereum ecosystem frontends, how many are hosted behind an onion domain? I would say extremely few, 1% if any. For me to feel good and say we did it, we would probably need more than 80% at all of these layers. How many wallets right now are routing traffic through anonymous routing techniques? Very, very few. Same with RPC providers: do these providers offer PIR? No. So for me, claiming success means the actors at all of these layers adopt these types of technologies, at least 80% of the teams, the traffic, or the queries.
 
-#### Bitcoin's onion node comparison (23:39) {#bitcoins-onion-node-comparison-2339}
+### Bitcoin's onion node comparison (23:39) {#bitcoins-onion-node-comparison-2339}
 
 This is one thing we can be jealous of Bitcoin for. For all the critiques they get, this is a picture from November of last year: 64% of their reachable full nodes are hidden behind onion domains.
 
 Can we do it ourselves? This is lower-level, consensus-level privacy, but could we say that our full nodes and validator nodes are behind an onion network or mixnets? I definitely think we should, and we are probably at less than 1%. We have other challenges that they don't have: we run much faster, and our consensus is different. But I would love to have dashboards like this and say more than 80% of wallets have adopted these types of technologies, and RPC providers, explorers, frontends, load balancers, and SDKs too. I would love for this list to grow.
 
-#### Comparing Ethereum to Monero and Zcash (24:55) {#comparing-ethereum-to-monero-and-zcash-2455}
+### Comparing Ethereum to Monero and Zcash (24:55) {#comparing-ethereum-to-monero-and-zcash-2455}
 
 I took the liberty, last night and the night before, of starting to see how, through this lens of layers, the Ethereum ecosystem compares to things like Solana, Bitcoin, Zcash, and Monero. Things in yellow are opt-in techniques, and I think we're very good there. Things in blue are proposals, some of them protocol proposals. Things in green are enforced at the protocol layer.
 
 Because of our 10-year history of being a public chain, I think it's going to be hard to catch up with Monero and Zcash in making privacy native. But I think we can do a really good job at getting opt-in adoption, and culturally and socially influencing teams and users to adopt more of these techniques. Bitcoin and Solana have their own challenges, and I think they'll be further behind, at least on these privacy things.
 
-#### The challenge: the most private programmable ecosystem (25:50) {#the-challenge-the-most-private-programmable-ecosystem-2550}
+### The challenge: the most private programmable ecosystem (25:50) {#the-challenge-the-most-private-programmable-ecosystem-2550}
 
 My goal, and the goal I want to put in your mind, is for Ethereum to become the most private, permissionless, trustless, and programmable ecosystem in the world. We have other private payment chains, and that's great, they're very good, but I think they will have a much harder job becoming programmable and creating the ecosystem that we have created.
 

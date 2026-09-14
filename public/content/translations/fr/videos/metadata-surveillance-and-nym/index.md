@@ -17,23 +17,23 @@ Un reportage de **Nym** avec Claudia Diaz, scientifique en chef chez Nym, explor
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=QBX5AK3DXqw) publiée par Nym. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:04) {#intro-004}
+### Introduction (0:04) {#intro-004}
 
 Que sont les métadonnées de communication ? Cela désigne tout ce qui concerne une communication et qui n'est pas le contenu de ce qui est réellement dit. Cela inclut, par exemple, l'origine de la communication, la destination, l'heure à laquelle l'information est envoyée, la quantité d'informations envoyées, et tout modèle détectable, y compris la chronologie et la taille des paquets échangés.
 
-#### Métadonnées de communication (0:27) {#communications-metadata-027}
+### Métadonnées de communication (0:27) {#communications-metadata-027}
 
 Les métadonnées de communication sont exposées par défaut dans tous les protocoles Internet : TCP/IP, HTTP, UDP, FTP. Même les protocoles sécurisés tels que TLS ou le DNS sécurisé, qui protègent le contenu avec un chiffrement de bout en bout, affichent toujours les métadonnées de communication : l'origine, la destination, la chronologie, la longueur, etc.
 
 Ces informations sont donc exposées, mais à qui ? Qui peut les obtenir ?
 
-#### Qui a accès aux métadonnées (1:10) {#who-gets-access-to-metadata-110}
+### Qui a accès aux métadonnées (1:10) {#who-gets-access-to-metadata-110}
 
 Il existe un certain nombre d'entités qui sont des intermédiaires dans les communications Internet et qui sont capables d'accéder à ces métadonnées de communication. Cela inclut les grands acteurs de l'infrastructure Internet, tels que les fournisseurs d'accès à Internet, les points d'échange, les systèmes autonomes, les routeurs BGP et les participants à la dorsale Internet en général ; ils peuvent avoir accès à un grand nombre de métadonnées de communication. 
 
 Mais même les petits acteurs, comme la personne qui gère le routeur Wi-Fi ou un réseau local, ou quelqu'un qui est capable d'écouter localement, ont également accès aux métadonnées de communication. Et bien sûr, il est de notoriété publique que des adversaires au niveau des États-nations, comme la NSA, collectent des métadonnées à grande échelle et les analysent afin d'en extraire toutes sortes de renseignements.
 
-#### Pourquoi les métadonnées sont-elles importantes (2:00) {#why-is-metadata-important-200}
+### Pourquoi les métadonnées sont-elles importantes (2:00) {#why-is-metadata-important-200}
 
 Il y a d'autres raisons pour lesquelles les métadonnées constituent un type de données très intéressant à collecter et à exploiter. Elles sont lisibles par machine, car elles parlent le langage des ordinateurs ; c'est essentiellement un langage permettant aux ordinateurs d'acheminer correctement les communications de leur source à leur destination. Elles sont donc lisibles par machine, ce qui signifie que les machines peuvent facilement leur donner un sens à grande échelle, contrairement au langage humain naturel, qui est beaucoup plus difficile à interpréter, car les gens utilisent peut-être les mots d'une certaine manière, ou ils ont des nuances, et c'est beaucoup plus difficile à interpréter. Les métadonnées, en revanche, sont vraiment simples.
 
@@ -51,7 +51,7 @@ L'analyse du trafic des métadonnées peut même être utilisée pour récupére
 
 Cependant, il existe de nombreuses situations où l'analyse du trafic des métadonnées de communication peut agir comme un canal auxiliaire qui révèle ce contenu chiffré.
 
-#### Surveillance des métadonnées (5:15) {#metadata-surveillance-515}
+### Surveillance des métadonnées (5:15) {#metadata-surveillance-515}
 
 Un exemple est lorsque vous naviguez sur un site Web avec HTTPS. En principe, comme la communication avec ce site Web est chiffrée, quelqu'un qui observe votre communication ne peut pas dire à quelle page spécifique vous accédez sur le site Web. Par exemple, si vous allez sur WebMD pour vérifier des maladies, un observateur ou une personne sur écoute pourra voir : « D'accord, vous consultez des informations médicales sur WebMD », mais il ne pourra pas dire quelle maladie spécifique vous recherchez.
 
@@ -61,7 +61,7 @@ En faisant cela, vous pouvez créer une empreinte numérique de chacune de ces p
 
 C'est évidemment préoccupant. Même si nous pouvons avoir un chiffrement de bout en bout, nous sommes très loin d'en avoir terminé en termes de protection de la confidentialité de nos communications.
 
-#### Une liste de souhaits pour des communications privées (6:40) {#a-wish-list-for-private-communications-640}
+### Une liste de souhaits pour des communications privées (6:40) {#a-wish-list-for-private-communications-640}
 
 Donc, si nous voulions avoir une liste de souhaits de ce qu'un réseau de communication parfaitement sécurisé offrirait, quelles sont les propriétés que nous voulons ? 
 

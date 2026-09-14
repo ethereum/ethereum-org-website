@@ -17,23 +17,23 @@ Příspěvek od **Nym** s hlavní vědkyní Nym Claudií Diaz, který zkoumá me
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=QBX5AK3DXqw) zveřejněného společností Nym. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:04) {#intro-004}
+### Úvod (0:04) {#intro-004}
 
 Co jsou komunikační metadata? Týkají se všeho ohledně komunikace, co není samotným obsahem toho, co se skutečně říká. Zahrnuje to například původ komunikace, cíl, čas odeslání informací, množství odeslaných informací a jakékoli detekovatelné vzorce, včetně načasování a velikosti vyměňovaných paketů.
 
-#### Komunikační metadata (0:27) {#communications-metadata-027}
+### Komunikační metadata (0:27) {#communications-metadata-027}
 
 Komunikační metadata jsou ve výchozím nastavení odhalena ve všech internetových protokolech: TCP/IP, HTTP, UDP, FTP. Dokonce i bezpečné protokoly, jako je TLS nebo zabezpečené DNS, které chrání obsah pomocí koncového šifrování (end-to-end encryption), stále zobrazují komunikační metadata: původ, cíl, načasování, délku a tak dále.
 
 Takže tyto informace jsou odhaleny, ale komu? Kdo je může získat?
 
-#### Kdo má přístup k metadatům (1:10) {#who-gets-access-to-metadata-110}
+### Kdo má přístup k metadatům (1:10) {#who-gets-access-to-metadata-110}
 
 Existuje řada subjektů, které jsou zprostředkovateli v internetové komunikaci a mají přístup k těmto komunikačním metadatům. Patří sem velcí hráči v internetové infrastruktuře, jako jsou poskytovatelé internetových služeb, uzly výměny dat (exchanges), autonomní systémy, BGP směrovače a obecně účastníci internetové páteřní sítě; ti mohou získat přístup k velkému množství komunikačních metadat. 
 
 Ale i malí hráči, jako je kdokoli, kdo provozuje Wi-Fi směrovač nebo místní síť (LAN), nebo někdo, kdo je schopen lokálně odposlouchávat, také získají přístup ke komunikačním metadatům. A samozřejmě je známo, že protivníci na úrovni národních států, jako je NSA, shromažďují metadata ve velkém měřítku a analyzují je za účelem získání nejrůznějších zpravodajských informací.
 
-#### Proč jsou metadata důležitá (2:00) {#why-is-metadata-important-200}
+### Proč jsou metadata důležitá (2:00) {#why-is-metadata-important-200}
 
 Existuje více důvodů, proč jsou metadata velmi zajímavým typem dat ke shromažďování a využívání. Jsou strojově čitelná, protože mluví jazykem počítačů; je to v podstatě jazyk pro počítače, aby mohly správně směrovat komunikaci od zdroje k cíli. Jsou tedy strojově čitelná, a to znamená, že jim stroje mohou velmi snadno porozumět ve velkém měřítku, na rozdíl od přirozeného lidského jazyka, který je mnohem obtížnější interpretovat, protože lidé možná používají slova určitým způsobem nebo mají nuance, a to je mnohem těžší interpretovat. Metadata jsou na druhou stranu opravdu snadná.
 
@@ -51,7 +51,7 @@ Analýzu provozu metadat lze dokonce použít k obnovení zašifrovaného obsahu
 
 Existuje však mnoho situací, kdy analýza provozu komunikačních metadat může fungovat jako postranní kanál (side channel), který tento zašifrovaný obsah odhalí.
 
-#### Sledování metadat (5:15) {#metadata-surveillance-515}
+### Sledování metadat (5:15) {#metadata-surveillance-515}
 
 Jedním z příkladů je, když prohlížíte webové stránky pomocí HTTPS. V principu, protože komunikace s tímto webem je zašifrovaná, někdo, kdo vaši komunikaci sleduje, nedokáže říct, na jakou konkrétní stránku na webu přistupujete. Pokud například jdete na WebMD zkontrolovat nemoci, pozorovatel nebo odposlouchávač uvidí: „Dobře, prohlížíš si lékařské informace na WebMD,“ ale nedokáže říct, jakou konkrétní nemoc hledáš.
 
@@ -61,7 +61,7 @@ Tímto způsobem můžete vytvořit otisk (fingerprint) každé z těchto strán
 
 To je samozřejmě znepokojivé. I když můžeme mít koncové šifrování, jsme velmi daleko od toho, abychom měli hotovo, pokud jde o ochranu soukromí naší komunikace.
 
-#### Seznam přání pro soukromou komunikaci (6:40) {#a-wish-list-for-private-communications-640}
+### Seznam přání pro soukromou komunikaci (6:40) {#a-wish-list-for-private-communications-640}
 
 Pokud bychom tedy chtěli mít seznam přání toho, co by dokonale bezpečná komunikační síť nabízela, jaké vlastnosti bychom chtěli? 
 

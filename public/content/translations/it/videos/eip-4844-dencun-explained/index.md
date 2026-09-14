@@ -21,13 +21,13 @@ Una spiegazione di **Finematics** che copre l'EIP-4844 (Proto-Danksharding), l'a
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=HT9PHWloIiU) pubblicata da Finematics. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione (0:00) {#introduction-000}
+### Introduzione (0:00) {#introduction-000}
 
 La scalabilità di Ethereum è da tempo un argomento molto dibattuto. Le soluzioni di layer 2 (l2) sono state in prima linea in questa battaglia, offrendo un modo per gestire le transazioni fuori dalla catena principale per alleviare la congestione e ridurre le commissioni. Ma c'è un problema: anche i layer 2 affrontano limitazioni che ostacolano la loro efficienza e scalabilità. L'EIP-4844 è il passo successivo per aumentare il potenziale dei layer 2 e allineare Ethereum alla sua roadmap di scalabilità.
 
 Quindi, di cosa tratta esattamente l'EIP-4844? In che modo aiuta a scalare i layer 2? Quali nuove possibilità sblocca? Ed è vero che può ridurre le commissioni di transazione sui layer 2 di oltre il 90%?
 
-#### Cos'è l'EIP-4844 e il Proto-Danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### Cos'è l'EIP-4844 e il Proto-Danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Come promemoria, EIP sta per Ethereum Improvement Proposal (Proposta di Miglioramento di Ethereum), un processo attraverso il quale gli sviluppatori possono suggerire modifiche al protocollo di Ethereum. L'EIP-4844, nello specifico, propone un nuovo tipo di transazione che può migliorare significativamente il modo in cui i dati vengono gestiti ed elaborati su Ethereum. Potresti aver sentito anche il nome "Proto-Danksharding", che ora viene usato in modo intercambiabile con EIP-4844.
 
@@ -39,7 +39,7 @@ Immagina di fare uno swap su un DEX su uno dei rollup. Se il costo attuale per e
 
 L'EIP-4844 insieme ad alcuni altri EIP sarà incluso nell'imminente aggiornamento Dencun della rete.
 
-#### Dettagli tecnici (2:50) {#technical-details-250}
+### Dettagli tecnici (2:50) {#technical-details-250}
 
 Ora, diamo un'occhiata più da vicino a come funziona l'EIP-4844.
 
@@ -65,7 +65,7 @@ Nel caso dei rollup ottimistici come Optimism o Arbitrum, devono fornire i dati 
 
 I rollup a conoscenza zero (ZK rollup) fornirebbero due commitment ai dati della loro transazione o del delta di stato: il commitment del blob e il commitment del rollup ZK stesso, utilizzando qualsiasi sistema di prova il rollup usi internamente. Utilizzerebbero anche un protocollo di prova di equivalenza, usando il precompilato di valutazione del punto menzionato in precedenza, per dimostrare che i due commitment si riferiscono agli stessi dati.
 
-#### Impatto (6:25) {#impact-625}
+### Impatto (6:25) {#impact-625}
 
 L'impatto dell'EIP-4844 sull'ecosistema di Ethereum non può essere sopravvalutato. Per cominciare, migliora drasticamente la scalabilità delle soluzioni di layer 2, riducendo i loro costi operativi e rendendole più competitive rispetto ad altre blockchain alternative ed economiche. La riduzione dei costi operativi è possibile poiché la stragrande maggioranza dei costi attualmente sostenuti dai rollup è dovuta alle commissioni pagate per i dati di chiamata.
 
@@ -77,7 +77,7 @@ Per quanto riguarda la diminuzione dei costi di transazione sui rollup, illustra
 
 Una cosa è certa: anche se il risultato principale fosse l'aumento della capacità transazionale e il costo delle transazioni rimanesse lo stesso, l'EIP-4844 pone le basi per una scalabilità ancora maggiore in futuro che alla fine si tradurrà in transazioni più economiche per gli utenti.
 
-#### Riepilogo (8:04) {#summary-804}
+### Riepilogo (8:04) {#summary-804}
 
 La comunità di Ethereum ha già completato i test dell'EIP-4844 su varie testnet, con un lancio sulla Mainnet previsto per il 13 marzo. Questo è un passo monumentale verso il raggiungimento di una scalabilità senza pari per Ethereum. Possiamo già vedere la maggior parte dei principali layer 2 impegnarsi a iniziare a utilizzare il nuovo spazio dei blob non appena avverrà l'aggiornamento Dencun.
 

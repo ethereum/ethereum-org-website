@@ -17,23 +17,23 @@ A feature from **Nym** with Nym Chief Scientist Claudia Diaz, exploring the mech
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=QBX5AK3DXqw) published by Nym. It has been lightly edited for readability.*
 
-#### Intro (0:04) {#intro-004}
+### Intro (0:04) {#intro-004}
 
 What is communications metadata? It refers to everything about a communication that is not the content of what is actually being said. This includes, for example, the origin of the communication, the destination, the time at which the information is sent, how much information is sent, and any detectable patterns, including the timings and sizes of the packets being exchanged.
 
-#### Communications metadata (0:27) {#communications-metadata-027}
+### Communications metadata (0:27) {#communications-metadata-027}
 
 Communications metadata is exposed by default in all the internet protocols: TCP/IP, HTTP, UDP, FTP. Even secure protocols such as TLS or secure DNS, which protect the content with end-to-end encryption, still show the communications metadata: the origin, destination, timing, length, and so on.
 
 So this information is exposed, but to whom? Who can get it?
 
-#### Who gets access to metadata (1:10) {#who-gets-access-to-metadata-110}
+### Who gets access to metadata (1:10) {#who-gets-access-to-metadata-110}
 
 There are a number of entities that are intermediaries in internet communications that are able to access this communications metadata. This includes big players in the internet infrastructure, such as internet service providers, exchanges, autonomous systems, BGP routers, and internet backbone participants generally; they can get access to a lot of communications metadata. 
 
 But even small players, such as whoever is running the Wi-Fi router or a local area network, or somebody who is able to eavesdrop locally, also get access to the communications metadata. And of course, nation-state-level adversaries such as the NSA have been known to collect metadata at a large scale and to analyze it in order to extract all kinds of intelligence.
 
-#### Why is metadata important (2:00) {#why-is-metadata-important-200}
+### Why is metadata important (2:00) {#why-is-metadata-important-200}
 
 There are more reasons why metadata is a very interesting type of data to collect and exploit. It is machine readable, because it speaks the language of computers; it's basically language for computers to be able to route communications from their source to their destination in a proper manner. So it is machine readable, and that means that machines can make sense of it at a large scale very easily, as opposed to natural human language, which is much more difficult to interpret, because maybe people are using words in a certain way, or they have nuances, and this is a lot harder to interpret. Metadata, on the other hand, is really easy.
 
@@ -51,7 +51,7 @@ The traffic analysis of metadata can even be used to recover encrypted content w
 
 However, there are many situations where the traffic analysis of communications metadata can act as a side channel that reveals this encrypted content.
 
-#### Metadata surveillance (5:15) {#metadata-surveillance-515}
+### Metadata surveillance (5:15) {#metadata-surveillance-515}
 
 One example is when you're browsing to a website with HTTPS. In principle, because the communication with this website is encrypted, somebody who is observing your communication cannot tell which specific page you're accessing on the website. For example, if you're going to WebMD to check diseases, an observer or eavesdropper will be able to see, "Okay, you're checking WebMD medical information," but they cannot tell which specific disease you're looking for.
 
@@ -61,7 +61,7 @@ By doing this, you can build a fingerprint of each of these pages, such that whe
 
 This is obviously concerning. Even though we can have end-to-end encryption, we are very far from being done in terms of protecting the privacy of our communications.
 
-#### A wish list for private communications (6:40) {#a-wish-list-for-private-communications-640}
+### A wish list for private communications (6:40) {#a-wish-list-for-private-communications-640}
 
 So if we wanted to have a wish list of what a perfectly secure communication network would offer, what are the properties that we want? 
 

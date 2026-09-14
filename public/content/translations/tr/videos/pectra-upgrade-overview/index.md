@@ -19,11 +19,11 @@ breadcrumb: "Pectra'ya Genel Bakış"
 
 *Bu döküm, Ethereum Vakfı tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=ufIDBCgdGwY) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 Pectra yükseltmesine girecek olan tüm EIP'ler hakkında konuşacağız. Başlamadan önce kısa bir yasal uyarı: Söyleyeceğim her şey tamamen bilgi amaçlıdır ve finansal veya yatırım tavsiyesi olarak yorumlanmamalıdır.
 
-#### Pectra Ana Ağı ne zaman (0:23) {#when-is-pectra-mainnet-023}
+### Pectra Ana Ağı ne zaman (0:23) {#when-is-pectra-mainnet-023}
 
 Pectra'ya nelerin dahil edileceğine geçmeden önce, bana en çok sorulan soru "Pectra Ana Ağ'a ne zaman geçecek?" oluyor. Bu yüzden teknik konulara girebilmemiz için önce bunu aradan çıkaracağım.
 
@@ -43,7 +43,7 @@ Tarihsel olarak geliştiriciler, halka açık test ağı yükseltmeleri arasınd
 
 Şu anda bildiğim tüm bilgiler ve geliştiricilerin Pectra üzerinde şimdiye kadar kaydettikleri ilerleme göz önüne alındığında, en iyi analizim ve tahminim Pectra Ana Ağının gerçekçi olarak önümüzdeki Nisan 2025'te gerçekleşeceği yönünde. Tekrar ediyorum, bu çok taslak niteliğinde çünkü pek çok şey değişebilir. Geliştirme haftadan haftaya gerçekleşiyor — geliştiriciler bu ACD çağrılarında bu EIP'de beklemedikleri bir hata veya Pectra'ya eklemek istedikleri bu yeni EIP hakkında konuşuyorlar.
 
-#### Yürütme katmanı EIP'leri (6:23) {#execution-layer-eips-623}
+### Yürütme katmanı EIP'leri (6:23) {#execution-layer-eips-623}
 
 Gelelim bu konuşmanın asıl konusuna — Pectra yükseltmesine neler dahil ediliyor. Pectra'ya giren on EIP var ve bunlardan dördü yürütme katmanına odaklanıyor.
 
@@ -55,7 +55,7 @@ Gelelim bu konuşmanın asıl konusuna — Pectra yükseltmesine neler dahil edi
 
 **EIP-7702** — harici olarak sahip olunan hesaplar için kod ayarlama. Ethereum'a yeni bir işlem türü geliyor. Bu işlem türü, geçici olarak bir EOA'nın daha fazla esnekliğe sahip olmasını sağlayarak işlem toplu işleme, sponsorlu işlemler, koşullu işlemler ve devredilmiş güvenlik gibi özellikleri mümkün kılacak. "Bu, Ethereum'da hesap soyutlama vizyonunun hayata geçmesi mi?" diye düşünüyor olabilirsiniz. Hayır, değil — bu küçük bir adım. Ethereum'da gerçek yerel hesap soyutlamasına giden gerçek yol haritasının nasıl görünebileceğini görmek için erken bir adım. Geliştiricilerin bu ilk adımı nasıl atması gerektiği konusunda epeyce tartışma oldu ve bunun dahil edilmesi ve tasarımı etrafında çok fazla anlaşmazlık yaşandı — ancak dahil edildi.
 
-#### Mutabakat katmanı EIP'leri (12:00) {#consensus-layer-eips-1200}
+### Mutabakat katmanı EIP'leri (12:00) {#consensus-layer-eips-1200}
 
 Altı tane daha var — bunlar mutabakat katmanı EIP'leridir.
 
@@ -69,11 +69,11 @@ Altı tane daha var — bunlar mutabakat katmanı EIP'leridir.
 
 **EIP-7549** — komite endeksini onayın dışına taşıma. Bu, Ethereum üzerindeki ağ yükünü azaltmak ve düğüm bant genişliğinden tasarruf etmek için onayların toplanma şeklinin yeniden yapılandırılması ve yeniden düzenlenmesidir. Geliştiriciler bunu Pectra'ya dahil ederken, harika faydaları olan harika ve kolay bir değişiklik olduğunu düşündüler — ancak pratikte uygulamasının beklenenden çok daha zor olduğu ortaya çıktı.
 
-#### Özet (17:19) {#summary-1719}
+### Özet (17:19) {#summary-1719}
 
 Pectra, karışık bir güncellemeler paketidir. Üç şey yapacak: birincisi, bir Hisse Kanıtı (PoS) blokzinciri olarak Ethereum'un kritik eksikliklerini gidermek — MaxEB'yi düşünün, bu kritik bir düzeltmedir çünkü doğrulayıcı seti boyutu kontrolsüz bir şekilde büyümeye devam edebilir. İkincisi, kullanıcı deneyimini iyileştirmek — yeni işlem türü, daha esnek tasarımlar, staking havuzları için daha güven gerektirmeyen tasarımlara yönelik bazı iyileştirmeler. Ve üçüncüsü, Ethereum'un veri kullanılabilirliği kapasitesini artırmak — bu resmi olarak Pectra'ya dahil edilmedi ancak muhtemel görünüyor.
 
-#### Pectra'dan çıkarılan EIP'ler (18:02) {#eips-removed-from-pectra-1802}
+### Pectra'dan çıkarılan EIP'ler (18:02) {#eips-removed-from-pectra-1802}
 
 İşte Pectra'dan çıkarılan tüm EIP'ler. Bir yükseltmeden bu kadar çok EIP'nin çıkarılması bir ilk sayılır.
 
@@ -83,7 +83,7 @@ Pectra, karışık bir güncellemeler paketidir. Üç şey yapacak: birincisi, b
 
 Bunlar şimdi Fusaka'ya taşındı. Verkle başlangıçta Fusaka için planlanmıştı ancak o zamandan beri daha da ertelendi. EOF ve PeerDAS şimdilik Fusaka'da. Geliştiricilerin Fusaka'ya dahil etmeyi yeniden değerlendirecekleri başka EIP'ler de var — SSZ geçişi, dahil etme listeleri, ihraç değişiklikleri, geçmiş sonlanması, ePBS ve hesap soyutlama yönü.
 
-#### Soru-Cevap (22:02) {#qa-2202}
+### Soru-Cevap (22:02) {#qa-2202}
 
 **Sunucu:** EOF ne zaman?
 

@@ -19,13 +19,13 @@ Esta presentación explora los tipos de reorganizaciones de bloques posibles en 
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=xcPxwhrg3Ao) publicada por LisCon. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción y antecedentes (0:03) {#introduction-and-background-003}
+### Introducción y antecedentes (0:03) {#introduction-and-background-003}
 
 Bienvenidos. Hoy voy a hablar sobre las reorganizaciones que son posibles en la prueba de participación (PoS) de Ethereum.
 
 Recientemente me uní a la Fundación Ethereum, en particular al Grupo de Incentivos Robustos. Básicamente somos un equipo de investigación centrado en todo lo relacionado con incentivos. Seré breve: esta charla está repleta de información y pueden encontrar la mayor parte de nuestro trabajo en GitHub.
 
-#### Dos tipos de reorganizaciones (0:44) {#two-types-of-reorgs-044}
+### Dos tipos de reorganizaciones (0:44) {#two-types-of-reorgs-044}
 
 Hoy quiero hablar sobre las reorganizaciones, y en particular quiero esbozar dos tipos diferentes de reorganizaciones que son posibles en el ámbito de la prueba de participación de Ethereum.
 
@@ -37,7 +37,7 @@ Ahora bien, las reorganizaciones ex-ante son ligeramente diferentes. La idea es 
 
 Se preguntarán por qué alguien querría hacer este tipo de reorganización. Bueno, todavía hay MEV por capturar. Si tienen suerte, el bloque N+2 tiene mucho MEV; pueden capturarlo simplemente copiando y pegando lo que sea que tenga ese bloque. En el peor de los casos, tienen básicamente transacciones equivalentes a dos slots para escuchar.
 
-#### Reorganizaciones ex-post en la prueba de trabajo (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Reorganizaciones ex-post en la prueba de trabajo (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Antes de profundizar en las reorganizaciones ex-ante, que es el tema principal de esta charla, permítanme repasar brevemente las reorganizaciones ex-post y, en especial, comenzar con el contexto de la prueba de trabajo (PoW).
 
@@ -45,7 +45,7 @@ Básicamente es un resumen de la publicación del blog de los sospechosos habitu
 
 En pocas palabras, en la prueba de trabajo de Ethereum, las reorganizaciones ex-post son difíciles pero no inviables. Un minero con el 10 % tiene una probabilidad relativamente buena de minar algunos bloques seguidos, y si el incentivo es lo suficientemente alto (imaginen que hay un bloque con 100 ETH de MEV para capturar), entonces tal vez una tasa de éxito del uno por ciento pueda ser suficiente para que valga la pena intentar la reorganización.
 
-#### Reorganizaciones ex-post en la prueba de participación (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Reorganizaciones ex-post en la prueba de participación (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 En la prueba de participación es una historia completamente diferente. Estamos hablando de una cantidad absurda de participación requerida. Voy a explicarles cómo se podría llevar a cabo solo para enfatizar lo ridículamente difícil que es.
 
@@ -63,7 +63,7 @@ Si hacemos el recuento: el bloque N+1 tiene atestaciones por valor de un tercio 
 
 Para darles una idea de lo ridículas que son estas suposiciones: incluso si tuvieran un participante con el 65 % de la participación, para controlar dos tercios del comité en cualquier slot dado tienen una probabilidad del 0,05 %. Esto demuestra que el poder de las atestaciones paralelas es real: las reorganizaciones ex-post son increíblemente difíciles, si no virtualmente imposibles, en la prueba de participación de Ethereum.
 
-#### Mecánica del ataque de reorganización ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mecánica del ataque de reorganización ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Ahora voy a hablar sobre las reorganizaciones ex-ante. Este ataque se basa en un artículo de Neuder y otros. Recientemente hemos mejorado este ataque de manera significativa. También escribimos un artículo al respecto y logramos subirlo a arXiv justo a tiempo.
 
@@ -75,7 +75,7 @@ Lo que sucede es que las personas honestas no ven el bloque N+1, por lo que emit
 
 Supongamos latencia cero por el momento. En el slot N+2, lo que hacemos como atacantes es publicar el bloque N+1 y la atestación privada al mismo tiempo. Los validadores honestos en el slot N+2 necesitan emitir una atestación para un bloque. Desde su punto de vista, ven el bloque N+2 y el bloque N+1 con esta única atestación privada. Si ejecutan la elección de bifurcación, encontrarán que el bloque N+1 tiene más peso que el bloque N+2, porque N+1 tiene la atestación privada que N+2 no tiene. Incluso todos los validadores honestos emitirán una atestación para el bloque N+1. En N+3, de forma trivial, N+1 será visto como la cabeza de la cadena.
 
-#### Latencia de la red y el ataque (10:25) {#network-latency-and-the-attack-1025}
+### Latencia de la red y el ataque (10:25) {#network-latency-and-the-attack-1025}
 
 Supuse latencia cero, que obviamente no es como funciona. Hay latencia: toma tiempo propagar bloques y mensajes en la capa P2P.
 
@@ -83,7 +83,7 @@ La forma en que un atacante aún puede llevar a cabo este tipo de ataque es teni
 
 Para volver a enfatizar lo que está sucediendo aquí: tenemos un proponente con un solo atestador logrando llevar a cabo una reorganización de un bloque. No es lo ideal, por decir lo menos.
 
-#### Estrategias de equilibrio para reorganizaciones más largas (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Estrategias de equilibrio para reorganizaciones más largas (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Si quieren ser más sofisticados, pueden llevar a cabo reorganizaciones más largas utilizando una estrategia de equilibrio. La idea es dividir al comité honesto en diferentes vistas de la cadena.
 
@@ -97,7 +97,7 @@ Para llevar a su fin una reorganización de dos bloques: se propone el bloque N+
 
 Si lo piensan, es relativamente barato hacer estas reorganizaciones bajo estas suposiciones. Incluso si no tienen divisiones perfectas, debido a que la capa P2P es tan grande, tienen una distribución de probabilidad a la que pueden apuntar de modo que el costo del ataque crezca en la raíz cuadrada del tamaño del comité.
 
-#### Mitigación del impulso del proponente (15:17) {#proposer-boost-mitigation-1517}
+### Mitigación del impulso del proponente (15:17) {#proposer-boost-mitigation-1517}
 
 Hablemos de la mitigación. ¿Cuál es la idea básica? Vamos a darle al proponente un poco más de poder. Si un bloque válido llega a tiempo, vamos a aumentar el peso de este bloque durante la duración del slot (impulso del proponente). Una vez que ese slot termina, reanudamos la puntuación habitual de LMD-GHOST y todo vuelve a la normalidad.
 
@@ -107,7 +107,7 @@ El tema del equilibrio tampoco funciona ya porque tienes una división 50/50 per
 
 La idea es que con esta mitigación implementada, las atestaciones del adversario tienen que competir con el impulso para convencer a los validadores honestos de que emitan su voto según sus preferencias. Esto rompe las estrategias de equilibrio y prohíbe básicamente todas las reorganizaciones por completo. Buenas noticias: hay un PR abierto, así que básicamente se integrará antes de La Fusión.
 
-#### Puntos clave (16:48) {#key-takeaways-1648}
+### Puntos clave (16:48) {#key-takeaways-1648}
 
 Algunos puntos clave. He hablado sobre las diferencias entre las reorganizaciones ex-post y ex-ante. Esbocé brevemente los diferentes panoramas para las reorganizaciones en la prueba de trabajo frente a la prueba de participación. Les mostré cómo llevar a cabo una reorganización ex-ante, pero también, y más importante, cómo solucionarlo.
 

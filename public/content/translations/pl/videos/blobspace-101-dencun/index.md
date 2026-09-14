@@ -20,7 +20,7 @@ Ten wywiad omawia zasób przestrzeni blobów (blob space) w Ethereum, wprowadzon
 
 *Ten transkrypt jest przystępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=dFjyUY3e53Q) opublikowanego przez Bankless. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie do przestrzeni blobów (0:00) {#introduction-to-blob-space-000}
+### Wprowadzenie do przestrzeni blobów (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Witamy w Bankless, gdzie odkrywamy granice internetowego pieniądza i internetowych finansów. Dowiecie się tutaj, jak zacząć, jak stawać się lepszym i jak wyprzedzać okazje. Jestem tu z Davidem Hoffmanem i jesteśmy po to, aby pomóc wam stać się bardziej niezależnymi od banków. Wiecie, jak mówimy, że blockchainy sprzedają bloki? Cóż, wkrótce Ethereum będzie sprzedawać coś więcej niż tylko bloki — będzie sprzedawać również bloby.
 
@@ -38,7 +38,7 @@ Co to oznacza dla etheru? Co to oznacza dla rynków, które powstają wokół ty
 
 Zaprośmy naszego gościa, Doma, znanego również jako Domothy. Jest on badaczem w Fundacji Ethereum, pracującym nad badaniami i rozwojem kluczowych aktualizacji Ethereum, które wkrótce nadejdą, w tym EIP-4844 (dzisiejszy temat), pełnego dankshardingu i spalania MEV.
 
-#### Historia mapy drogowej skoncentrowanej na rollupach (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Historia mapy drogowej skoncentrowanej na rollupach (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Więc Dom, aby w pełni zrozumieć, jak dotarliśmy do przestrzeni blobów, myślę, że warto cofnąć się w czasie, aby zrozumieć pełnię mapy drogowej Ethereum, ponieważ doprowadziła ona do bardzo logicznego wniosku w postaci blobów i przestrzeni blobów. Czy możesz nas cofnąć w czasie? Ponieważ w pewnym momencie mapa drogowa Ethereum skoncentrowana na rollupach nie istniała. Mieliśmy coś, co nazywało się shardingiem wykonawczym, którego tak naprawdę nigdy nie otrzymaliśmy. W którym momencie historii mapy drogowej Ethereum należy się znaleźć, aby naprawdę zrozumieć pełny kontekst przestrzeni blobów?
 
@@ -58,7 +58,7 @@ Teraz to, co robimy z mapą drogową skoncentrowaną na rollupach, to wydzielani
 
 Pod koniec 2020 roku ludzie zdali sobie sprawę, że rollupy stają się niesamowicie dobre i popularne, i rozwiązały nasz problem skalowania wykonawczego bez potrzeby shardingu wykonawczego. Wybierając ekosystem rollupów, zamiast próbować być jakimś maksymalistą warstwy 1, rollupy mogą iść na własne kompromisy, uruchamiać własne blockchainy i eksperymentować z nowatorskimi rzeczami. Ethereum zajmuje się weryfikacją — to jest sedno tego, czym jest blockchain.
 
-#### Czym jest przestrzeń blobów? (30:00) {#what-is-blob-space-3000}
+### Czym jest przestrzeń blobów? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Teraz przenieś nas do obecnego stanu, Dom. Mamy wiele rollupów korzystających z przestrzeni bloków warstwy 1 Ethereum, płacących wysokie opłaty za gaz, aby opublikować swoje dane stanu, tak aby każdy mógł je zweryfikować. Więc, Dom, czym jest blob?
 
@@ -72,7 +72,7 @@ To w zasadzie zapieczętowana paczka. Warstwa 1 przyjmuje ją, gwarantuje, że k
 
 **Domothy:** Dokładnie. Kolejną kluczową właściwością blobów jest to, że są one automatycznie usuwane po pewnym czasie — obecnie po około 18 dniach. Powodem ich usuwania jest to, że aby zagwarantować weryfikację niewymagającą zaufania, jednostki potrzebują tych danych tylko po to, aby udowodnić ostateczność i konsensus co do stanu rollupa w określonym oknie wyzwania. Nie potrzebujesz tysiąca węzłów przechowujących bloby sprzed dwóch lat, aby zweryfikować swoją dzisiejszą transakcję. Kiedy okno wygasa, nie otrzymasz ich już z węzła Ethereum; pobierasz je od dostawców historii, indeksatorów lub natywnych eksploratorów bloków rollupa. Przechowywanie w Ethereum na zawsze jest szalenie drogie. Porzucenie wymogu przechowywania pozwala nam skalować przepustowość blobów bez niszczenia dysków twardych operatorów węzłów.
 
-#### Ekonomia i pełny danksharding (55:00) {#economics-and-full-danksharding-5500}
+### Ekonomia i pełny danksharding (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Wiemy, że 4844 to krok pierwszy — to, co nazywamy proto-danksharding. Ustanawia on format bloba i odizolowany rynek opłat, ale rzeczywista docelowa liczba blobów na blok jest początkowo ograniczona, aby była całkiem bezpieczna. Jak to wygląda w kontekście skalowania w kierunku pełnego dankshardingu?
 
@@ -86,7 +86,7 @@ Dzięki dwuwymiarowemu rynkowi opłat — w zasadzie oddzielnej, odizolowanej dr
 
 **Domothy:** Tak, są one całkowicie odłączone. I odwrotnie. Jeśli przepustowość warstwy 2 ogromnie wzrośnie, a tysiące rollupów będzie działać i zapychać przestrzeń blobów, wynikający z tego skok opłat podstawowych za bloby nie wpłynie na koszt wykonania prostej transakcji w sieci głównej Ethereum. Opłata podstawowa za blob działa dokładnie tak samo jak opłata podstawowa EIP-1559, ale w swoim własnym wymiarze. A wracając do twojego wcześniejszego pytania o spalanie — tak, opłata za blob generuje spalone ETH, aby zapłacić za włączenie danych do przestrzeni blobów, całkowicie niezależnie od spalania opłaty podstawowej za przestrzeń bloków.
 
-#### Przyszłość skalowalności Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### Przyszłość skalowalności Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Chcę przejść do tego, co wydarzy się konkretnie w momencie wydania 4844. Początkowo istnieje oczywiście bardzo wysokie oczekiwanie, że kiedy pojemność blobów nagle się odblokuje, w tej samej mikrosekundzie nie będzie wystarczającego popytu ze strony rollupów, aby całkowicie ją wypełnić. Przestrzeń blobów będzie w momencie premiery wręcz komicznie tania. Ale czy nie istnieje prawo popytu indukowanego? Jeśli masz niewiarygodnie tanie zasoby, aplikacje, które je zużywają, eksplodują pod względem wolumenu.
 

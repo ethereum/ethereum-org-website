@@ -21,13 +21,13 @@ Une explication par **Finematics** couvrant l'EIP-4844 (proto-danksharding), la 
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=HT9PHWloIiU) publiée par Finematics. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 La mise à l'échelle d'Ethereum est un sujet vivement débattu depuis un certain temps. Les solutions de couche 2 (l2) ont été à l'avant-garde de cette bataille, offrant un moyen de traiter les transactions hors de la chaîne principale pour atténuer la congestion et réduire les frais. Mais il y a un hic : même les l2 sont confrontées à des limitations qui entravent leur efficacité et leur évolutivité. L'EIP-4844 est la prochaine étape pour accroître le potentiel des l2 et aligner Ethereum sur sa feuille de route de mise à l'échelle.
 
 Alors, en quoi consiste exactement l'EIP-4844 ? Comment aide-t-il précisément à la mise à l'échelle des l2 ? Quelles nouvelles possibilités ouvre-t-il ? Et est-il vrai qu'il peut réduire les frais de transaction sur les l2 de plus de 90 % ?
 
-#### Qu'est-ce que l'EIP-4844 et le proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### Qu'est-ce que l'EIP-4844 et le proto-danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Pour rappel, EIP signifie Ethereum Improvement Proposal (proposition d'amélioration d'Ethereum), un processus par lequel les développeurs peuvent suggérer des modifications au protocole Ethereum. L'EIP-4844, en particulier, propose un nouveau type de transaction qui peut considérablement améliorer la façon dont les données sont gérées et traitées sur Ethereum. Vous avez peut-être aussi entendu le nom de « proto-danksharding », qui est désormais utilisé de manière interchangeable avec l'EIP-4844.
 
@@ -39,7 +39,7 @@ Imaginez effectuer un échange (swap) sur un DEX sur l'un des rollups. Si le co�
 
 L'EIP-4844, ainsi que quelques autres EIP, seront inclus dans la prochaine mise à jour Dencun du réseau.
 
-#### Détails techniques (2:50) {#technical-details-250}
+### Détails techniques (2:50) {#technical-details-250}
 
 Maintenant, examinons de plus près le fonctionnement de l'EIP-4844.
 
@@ -65,7 +65,7 @@ Dans le cas des rollups optimistes comme Optimism ou Arbitrum, ils n'ont besoin 
 
 Les rollups à divulgation nulle de connaissance (ZK rollups) fourniraient deux engagements pour leurs données de transaction ou de delta d'état : l'engagement de blob et le propre engagement du ZK rollup en utilisant le système de preuve que le rollup utilise en interne. Ils utiliseraient également un protocole de preuve d'équivalence, en utilisant le précompilé d'évaluation de point mentionné précédemment, pour prouver que les deux engagements se réfèrent aux mêmes données.
 
-#### Impact (6:25) {#impact-625}
+### Impact (6:25) {#impact-625}
 
 L'impact de l'EIP-4844 sur l'écosystème Ethereum ne saurait être surestimé. Pour commencer, il améliore considérablement l'évolutivité des solutions de couche 2, en réduisant leurs coûts opérationnels et en les rendant plus compétitives par rapport à d'autres chaînes de blocs alternatives et bon marché. La réduction des coûts opérationnels est possible car la grande majorité des coûts actuellement supportés par les rollups est due aux frais payés pour les données d'appel.
 
@@ -77,7 +77,7 @@ En ce qui concerne la diminution des coûts de transaction sur les rollups, illu
 
 Une chose est certaine : même si le résultat principal est l'augmentation du débit des transactions et que le coût des transactions reste le même, l'EIP-4844 jette les bases d'une évolutivité encore plus grande à l'avenir qui se traduira à terme par des transactions moins chères pour les utilisateurs.
 
-#### Résumé (8:04) {#summary-804}
+### Résumé (8:04) {#summary-804}
 
 La communauté Ethereum a déjà terminé de tester l'EIP-4844 sur divers réseaux de test, avec un lancement sur le Réseau principal prévu pour le 13 mars. Il s'agit d'une étape monumentale vers l'atteinte d'une évolutivité inégalée pour Ethereum. Nous pouvons déjà voir la plupart des principaux l2 s'engager à commencer à utiliser le nouvel espace de blobs dès que la mise à jour Dencun aura lieu.
 

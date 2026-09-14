@@ -18,7 +18,7 @@ Một hội thảo tại sự kiện Web3Privacy Now trong Devconnect 2025, đư
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi video gốc](https://www.youtube.com/watch?v=cZqlg4W1Els) được xuất bản bởi Web3Privacy Now. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu về Lực lượng Đặc nhiệm Quyền riêng tư của Tổ chức (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Giới thiệu về Lực lượng Đặc nhiệm Quyền riêng tư của Tổ chức (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Xin chào. Các bạn có nghe thấy tôi không? Được rồi. Tuyệt vời. Đầu tiên chúng ta sẽ có một bài nói chuyện giới thiệu rất ngắn — khoảng 3 đến 5 phút — và sau đó sẽ dẫn vào buổi hội thảo. Đây là một bài nói chuyện tóm tắt. Hội thảo trước đã nói rất nhiều về sự tuân thủ và quyền riêng tư, v.v. Tôi đã có một bài nói chuyện trước đó tại Cyban Congress cũng đề cập đến vấn đề này, và sẽ có một phiên bản dài hơn của bài nói chuyện này tại DeFi Day vào cuối ngày hôm nay. Nhưng điều tôi muốn nói đến là quyền riêng tư của tổ chức trên Ethereum.
 
@@ -30,7 +30,7 @@ Một tổ chức lớn duy nhất ở đây có thể có tác động khổng 
 
 Để Ethereum có thể tiếp nhận người dùng là các tổ chức này, họ cần giải quyết những lo ngại về quyền riêng tư này. Những gì chúng tôi đang cố gắng làm tại Lực lượng Đặc nhiệm Quyền riêng tư của Tổ chức là tiếp nhận các tổ chức vào Ethereum và đảm bảo các mục tiêu về quyền riêng tư của họ được đáp ứng. Chúng tôi thực hiện những việc như tổ chức hội thảo, cố gắng làm sáng tỏ không gian này và đảm bảo chúng tôi có thể giải quyết các nhu cầu của tổ chức khi nói riêng về quyền riêng tư. Sản phẩm đầu tiên chúng tôi có là bản đồ quyền riêng tư của tổ chức này — chúng tôi nói chuyện với các tổ chức khổng lồ, hiểu các trường hợp sử dụng kinh doanh và yêu cầu của họ, mã nguồn mở nhiều nhất có thể, và sau đó nói chuyện với các nhà cung cấp trong không gian này để kết nối các tổ chức với không gian giải pháp. 
 
-#### Giới thiệu Hội thảo và Các vấn đề của Tổ chức (5:00) {#panel-introductions-and-institutional-problems-500}
+### Giới thiệu Hội thảo và Các vấn đề của Tổ chức (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Xin lỗi vì tôi nói hơi nhanh, nhưng hy vọng là dễ hiểu. Hội thảo này có rất nhiều chuyên gia trong các lĩnh vực nghiên cứu, chính sách và kỹ thuật, và chúng ta sẽ nói về quyền riêng tư của tổ chức. 
 
@@ -48,7 +48,7 @@ Từ hướng khác, *tại sao lại ở trên một Chuỗi khối công khai?
 
 **Amzah:** Vâng. Tôi làm việc cho ABN Amro, một ngân hàng lớn của Hà Lan. Chúng tôi có 5 triệu khách hàng bán lẻ. Vì vậy, hiện tại chúng tôi không thực sự xây dựng một thứ gì đó cụ thể về quyền riêng tư, nhưng những gì sắp tới ví dụ như là một ví danh tính kỹ thuật số. Thông thường cách thức hoạt động của nó là dữ liệu được lưu trữ trong một cơ sở dữ liệu tập trung và sau đó bạn kết nối với một nhà cung cấp bên ngoài hoặc một bên thứ ba, nhưng điều đó tất nhiên không thực sự an toàn. Vì vậy, chúng tôi đã bắt đầu suy nghĩ về cách chúng tôi có thể sử dụng các bằng chứng không kiến thức, ví dụ, để chúng tôi có thể tiết lộ có chọn lọc với các bên bên ngoài. Theo nghĩa đó, chúng tôi có thể bảo vệ thông tin khách hàng của mình và cũng cho phép họ kết nối với môi trường Web3 rộng lớn hơn.
 
-#### Các Luồng công việc Cụ thể và Lưu trữ (10:07) {#concrete-workflows-and-storage-1007}
+### Các Luồng công việc Cụ thể và Lưu trữ (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Được rồi, tuyệt vời. Nếu bạn chọn một luồng công việc cụ thể mà bạn có thể quan tâm — như có thể là một số đợt phát hành trái phiếu, giao dịch, hoặc thanh toán kho bạc — ai có thể thấy chính xác những gì ở bước nào, và những gì được lưu trữ trên chuỗi so với ngoài chuỗi? Có lẽ bắt đầu với François.
 
@@ -68,7 +68,7 @@ Trụ cột thứ ba là báo cáo. Điều này gắn liền với việc tiế
 
 **Amzah:** Vâng. Tôi hầu như đồng ý với những gì Zach nói. Trong quá khứ, khi các tổ chức nghĩ về quyền riêng tư, họ sẽ chỉ bắt đầu một chuỗi riêng tư nơi có thể 20 ngân hàng tham gia và chỉ họ mới có thể thấy những gì ở trong đó. Nhưng thực ra, nó tinh tế hơn nhiều. Nó phụ thuộc vào trường hợp sử dụng, loại luồng nào, và những gì cơ quan quản lý cần biết. Bạn có thể đưa thông tin số dư lên trên chuỗi dưới dạng tổng hợp hơn bằng cách sử dụng bằng chứng dự trữ (proof of reserves), ví dụ.
 
-#### Các Yêu cầu Không thể Thương lượng (15:26) {#non-negotiable-requirements-1526}
+### Các Yêu cầu Không thể Thương lượng (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio và Amzah, từ các ngân hàng, nền tảng giao dịch và cơ quan quản lý, một số yêu cầu không thể thương lượng mà các bạn liên tục nghe đi nghe lại là gì? Giống như dấu vết kiểm toán, các quy tắc KYC, hay yêu cầu báo cáo?
 
@@ -78,7 +78,7 @@ Trụ cột thứ ba là báo cáo. Điều này gắn liền với việc tiế
 
 **François:** Người đồng sáng lập của chúng tôi dành hàng tuần với các khách hàng trong không gian tổ chức, và nhu cầu hàng đầu được đưa ra là "sự kiểm soát." Ai thấy cái gì, khi nào, và vì lý do gì. Và sau đó bạn đi sâu những cuộc trò chuyện đó vào các chi tiết và chúng trở nên được tùy chỉnh một cách điên rồ. Đối với chúng tôi, điều này thật tuyệt vời vì thế giới tài chính truyền thống đã dành nhiều thập kỷ để xây dựng các thực tiễn kế toán và các luồng AML/CTF của họ. Họ rất cụ thể về sự kiểm soát đó. Vì vậy, chúng tôi đang xây dựng những khả năng đó ở lớp giao thức và hỗ trợ khách hàng trong hành trình của họ.
 
-#### Sự Đánh đổi và Thanh khoản Toàn cầu (18:10) {#trade-offs-and-global-liquidity-1810}
+### Sự Đánh đổi và Thanh khoản Toàn cầu (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Những sự đánh đổi chính mà các bạn hiện đang phải sống chung là gì? Hiệu suất so với quyền riêng tư, hay thanh khoản toàn cầu so với các kiểm soát chặt chẽ, hay tính minh bạch trên chuỗi so với hồ sơ ngoài chuỗi? Bắt đầu với Zach.
 
@@ -88,7 +88,7 @@ Trụ cột thứ ba là báo cáo. Điều này gắn liền với việc tiế
 
 Tất nhiên, có những sự phức tạp. Chúng tôi rất quan tâm đến trải nghiệm dịch vụ cao cấp (white-glove) đó cho một tổ chức tham gia vào thị trường đó, để họ có thể có các điều kiện của riêng mình. Một trong những thách thức là sự cân bằng giữa quyền riêng tư và khả năng chống lại các mối đe dọa. Có những tác nhân đe dọa tồn tại trong thế giới Web3, và chúng tôi muốn xử lý điều đó tốt hơn để mang lại một trải nghiệm tuyệt vời. Chúng tôi đang tiếp cận sự phi tập trung một cách cẩn thận — chúng tôi biết cách làm điều đó, nhưng chúng tôi sẽ làm điều đó vào thời điểm nó phục vụ khách hàng tốt nhất.
 
-#### Niềm tin Hệ thống và Động lực Áp dụng (20:47) {#system-trust-and-adoption-drivers-2047}
+### Niềm tin Hệ thống và Động lực Áp dụng (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, làm thế nào để bạn làm cho các giải pháp này được tin tưởng và có thể sử dụng được bởi các tổ chức và chính phủ?
 
@@ -98,7 +98,7 @@ Tất nhiên, có những sự phức tạp. Chúng tôi rất quan tâm đến 
 
 **Amzah:** Đối với chúng tôi, điều thực sự quan trọng là nó có thể tùy chỉnh được. Chuỗi khối không còn chỉ là một trường hợp sử dụng nơi mọi thứ hoàn toàn công khai hoặc hoàn toàn riêng tư. Nó không phải là một kích cỡ phù hợp cho tất cả. Điều quan trọng nhất đối với chúng tôi cũng là tuân thủ quy định. Lĩnh vực ngân hàng ở Châu Âu được quản lý rất chặt chẽ, và nếu có điều gì đó không chính xác liên quan đến quyền riêng tư, nó đơn giản là sẽ không được các cơ quan quản lý chấp nhận.
 
-#### Hướng tới năm 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Hướng tới năm 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Được rồi, chúng ta gần như đã đến phần cuối. Một khối xây dựng nào — về mặt kỹ thuật, vận hành, hoặc chính sách — mà bạn nghĩ sẽ thúc đẩy một cách có ý nghĩa việc áp dụng của tổ chức? Và nếu chúng ta gặp lại nhau vào năm 2026, bạn nghĩ điều gì là thực tế sẽ xảy ra trong năm nay?
 
@@ -110,7 +110,7 @@ Tất nhiên, có những sự phức tạp. Chúng tôi rất quan tâm đến 
 
 **François:** Nếu chúng ta gặp nhau trong một năm nữa, tôi muốn đã ra mắt Mạng chính của Miden vào mùa xuân, để chúng ta có thể ăn mừng điều đó. Vượt ra ngoài điều này, tôi muốn chúng ta đang trên con đường hướng tới sự phi tập trung hoàn toàn. Sẽ cần sự chung tay của cả cộng đồng. Điều cốt lõi tôi muốn thấy xảy ra là sự tham gia nhiều hơn. Ý tưởng rằng quyền riêng tư mâu thuẫn với sự tuân thủ không thực sự đúng, nhưng việc kết hợp cả hai đòi hỏi nhiều công sức. Chúng tôi muốn các tổ chức giúp định hình loại thị trường mà họ muốn thấy, bởi vì chúng tôi biết điều này sẽ lộn xộn và đặc thù theo nhu cầu của họ.
 
-#### Những Suy nghĩ Kết luận (28:05) {#closing-thoughts-2805}
+### Những Suy nghĩ Kết luận (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Tôi chỉ muốn dành cho mỗi bạn 10 đến 20 giây để đề cập đến điều gì đó đã xảy ra trong tuần này hoặc một lời quảng bá nhanh trước khi chúng ta kết thúc.
 

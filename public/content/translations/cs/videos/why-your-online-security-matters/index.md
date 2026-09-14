@@ -17,7 +17,7 @@ Krátké animované vysvětlující video od **Amnesty International** o tom, pr
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=5GTD14irFvQ) zveřejněného organizací Amnesty International. Byl lehce upraven pro lepší čitelnost a byly přidány štítky mluvčích.*
 
-#### „Nemáte co skrývat, že?“ (0:00) {#youve-got-nothing-to-hide-right-000}
+### „Nemáte co skrývat, že?“ (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agent:** O digitální bezpečnost se nezajímáte, že?
 
@@ -79,7 +79,7 @@ Krátké animované vysvětlující video od **Amnesty International** o tom, pr
 
 **Občan:** Podporuji.
 
-#### Právo na soukromí (1:30) {#the-right-to-privacy-130}
+### Právo na soukromí (1:30) {#the-right-to-privacy-130}
 
 **Občan:** A moje země se skládá z lidí. Lidí s právem na vlastní soukromí. Pokud chtějí vlády plošně shromažďovat všechna vaše data – e-maily, telefonní hovory, záběry z webkamer a vyhledávání na internetu – není to v pořádku.
 

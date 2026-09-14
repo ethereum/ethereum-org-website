@@ -19,11 +19,11 @@ breadcrumb: "Stake Edenler için Pectra"
 
 *Bu döküm, Blockdaemon tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=_UpAFpC7X6Y) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 **Sunucu:** Merhaba ve Blockdaemon'ın sunduğu, Ethereum'un yaklaşan Pectra güncellemesine odaklanan bu web seminerine hoş geldiniz. Bugün bizimle Alluvial'da Blokzincir mühendisi olan Julia Schmidt ve Blockdaemon Ethereum ekosistem lideri Freddy Tänzer var; Pectra'nın getireceği değişikliklerin ETH staking'ini, ağın bütününü, likit staking hizmetlerini ve daha fazlasını nasıl etkileyeceğini tartışacağız. Başlamak gerekirse, Freddy — bize Pectra güncellemesi ve bunun stake edenler üzerindeki etkisi hakkında kısa bir genel bakış sunabilir misin?
 
-#### Pectra nedir (1:28) {#what-is-pectra-128}
+### Pectra nedir (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra, 2025'in ilk çeyreğinin sonlarına — yaklaşık Mart ayına, belki biraz daha ileriye, Nisan civarına — planlanan bir Ethereum güncellemesidir. Aslında başlangıçta küçük bir çatallanma olması gerekiyordu, ancak sonrasında giderek daha fazla şey eklendi, bu yüzden şimdi onu ikiye böldüler.
 
@@ -33,7 +33,7 @@ Birincisi, yürütme katmanı — çekim kimlik bilgileri — aracılığıyla d
 
 Ayrıca, yatırma işlemlerinin çok daha hızlı olmasını sağlayan daha küçük bir değişiklik de var — zincir içi kayıt süresi yaklaşık 14 saatten bir saatin altına iniyor — ancak bence buradaki tartışmamız için en çok ilgili olanlar bu iki büyük değişiklik.
 
-#### EIP-7002: yürütme katmanı tarafından tetiklenebilen çıkışlar (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: yürütme katmanı tarafından tetiklenebilen çıkışlar (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Sunucu:** İlk büyük değişiklik için Julia, Pectra sonrası sürecin, Ethereum'un staking ekosisteminde çekim işlemlerinin şu anki başlatılma yöntemlerine kıyasla nasıl değişeceğini açıklayabilir misin?
 
@@ -49,7 +49,7 @@ Son Dencun güncellemesinde, yeni bir EIP bu çıkış mesajlarının sona erme 
 
 Bu durum artık hem doğrulayıcı anahtarının hem de çekim anahtarının yürütme katmanından çıkışı tetiklemesine olanak tanıyan EIP-7002 ile çözülüyor — sadece özel bir çekim sözleşmesine bir işlem göndererek, burada bir çekim talebi gönderir ve doğrulayıcıdan tam bir çıkış veya stake edilen bakiyeden kısmi bir çekim işlemi belirlersiniz.
 
-#### EIP-7251: maksimum etkin bakiye (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: maksimum etkin bakiye (4:15) {#eip-7251-max-effective-balance-415}
 
 **Sunucu:** Freddy, Pectra'dan itibaren maksimum etkin bakiye hakkında bize genel bir bakış sunabilir misin ve bu durum şu anda stake eden kişileri nasıl etkileyecek?
 
@@ -69,7 +69,7 @@ Ceza kesintisi konusunda da iyi haberler var: ilk ceza kesintisi miktarı dramat
 
 Otomatik bileşik getiri avantajı temel olarak daha küçük stake miktarlarına fayda sağlar. Eğer bin tane doğrulayıcınız varsa, her ay manuel olarak yeni bir tane başlatabilirsiniz. Ancak sadece bir doğrulayıcınız varsa, bileşik getiri elde etmek için pratikte 32 yıl beklemeniz gerekir.
 
-#### Likit staking etkileri (11:25) {#liquid-staking-implications-1125}
+### Likit staking etkileri (11:25) {#liquid-staking-implications-1125}
 
 **Sunucu:** Julia, daha büyük doğrulayıcıların konsolidasyonu likit staking'in faydalarıyla nasıl karşılaştırılır? Pectra sonrasında stake eden birinin zihninde bu kararlar nasıl tartılacak?
 
@@ -79,7 +79,7 @@ Otomatik bileşik getiri avantajı temel olarak daha küçük stake miktarların
 
 Fayda tarafında, bir likit staking tokeni (LST) açıkça likidite ekler — yürütme katmanından kısmi çekim işlemleriyle bile bu anında gerçekleşmeyecektir. İşlemi gönderirsiniz, sıraya alınır, ardından çıkış dönemi ve çekim dönemi gelir. Likit staking tokenleri, kısmi çekim işlemlerinin sağlayamayacağı anında likiditeyi sunmaya devam eder.
 
-#### Stake edenler için sonraki adımlar (16:20) {#next-steps-for-stakers-1620}
+### Stake edenler için sonraki adımlar (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Gördüğümüz kadarıyla finansal kurumlar, geri ödemeler için geri kalanını bir likidite tamponu olarak kullanmaları gerektiğinden, genellikle gözetim altındaki ETH'lerinin %65'i ile %85'i arasında bir kısmını stake ediyorlar. Likit staking ile, stake edilen ETH miktarını potansiyel olarak artırabilirsiniz, bu da daha yüksek ödüller üretir.
 
@@ -89,7 +89,7 @@ Her iki taraf da Pectra'dan faydalanıyor — likit staking yürütme katmanı �
 
 Henüz değinmediğim önemli bir avantaj da kısmi çekim işlemleridir — artık stake edilen ETH'yi yürütme katmanından çekebildiğinize göre, bu durum EigenLayer gibi protokollerin çekim işlemlerini ve çıkışları tetiklemesi için yeni yollar açıyor. Merkeziyetsiz finansın (DeFi) artık yatırma işleminden çıkışa kadar tüm doğrulayıcı yaşam döngüsüne daha iyi dahil edebileceği işlevsellik ve birlikte çalışabilirlik açısından büyük bir artış var. Bir Blokzincir mühendisi olarak, tüm iş akışını otomatikleştirebilmek heyecan verici.
 
-#### Kapanış (19:50) {#closing-1950}
+### Kapanış (19:50) {#closing-1950}
 
 **Sunucu:** Julia, insanlar Liquid Collective ve Alluvial hakkında daha fazla bilgi edinmek için nereye gidebilirler?
 

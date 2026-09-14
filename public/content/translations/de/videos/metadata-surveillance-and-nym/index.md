@@ -17,23 +17,23 @@ Ein Beitrag von **Nym** mit der leitenden Wissenschaftlerin von Nym, Claudia Dia
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=QBX5AK3DXqw), das von Nym veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Intro (0:04) {#intro-004}
+### Intro (0:04) {#intro-004}
 
 Was sind Kommunikations-Metadaten? Das bezieht sich auf alles an einer Kommunikation, was nicht der Inhalt dessen ist, was tatsächlich gesagt wird. Dazu gehören beispielsweise der Ursprung der Kommunikation, das Ziel, die Zeit, zu der die Informationen gesendet werden, wie viele Informationen gesendet werden, und alle erkennbaren Muster, einschließlich der Zeitpunkte und Größen der ausgetauschten Pakete.
 
-#### Kommunikations-Metadaten (0:27) {#communications-metadata-027}
+### Kommunikations-Metadaten (0:27) {#communications-metadata-027}
 
 Kommunikations-Metadaten werden standardmäßig in allen Internetprotokollen offengelegt: TCP/IP, HTTP, UDP, FTP. Selbst sichere Protokolle wie TLS oder sicheres DNS, die den Inhalt mit Ende-zu-Ende-Verschlüsselung schützen, zeigen weiterhin die Kommunikations-Metadaten: Ursprung, Ziel, Zeitpunkt, Länge und so weiter.
 
 Diese Informationen sind also offengelegt, aber für wen? Wer kann sie erhalten?
 
-#### Wer Zugriff auf Metadaten erhält (1:10) {#who-gets-access-to-metadata-110}
+### Wer Zugriff auf Metadaten erhält (1:10) {#who-gets-access-to-metadata-110}
 
 Es gibt eine Reihe von Entitäten, die als Vermittler in der Internetkommunikation fungieren und auf diese Kommunikations-Metadaten zugreifen können. Dazu gehören große Akteure in der Internetinfrastruktur, wie Internetdienstanbieter, Knotenpunkte, autonome Systeme, BGP-Router und generell Teilnehmer am Internet-Backbone; sie können Zugang zu einer Menge Kommunikations-Metadaten erhalten. 
 
 Aber auch kleine Akteure, wie der Betreiber des WLAN-Routers oder eines lokalen Netzwerks, oder jemand, der in der Lage ist, lokal mitzuhören, erhalten ebenfalls Zugriff auf die Kommunikations-Metadaten. Und natürlich ist bekannt, dass staatliche Akteure wie die NSA Metadaten in großem Maßstab sammeln und analysieren, um alle Arten von Geheimdienstinformationen zu gewinnen.
 
-#### Warum Metadaten wichtig sind (2:00) {#why-is-metadata-important-200}
+### Warum Metadaten wichtig sind (2:00) {#why-is-metadata-important-200}
 
 Es gibt noch weitere Gründe, warum Metadaten eine sehr interessante Art von Daten sind, um sie zu sammeln und auszuwerten. Sie sind maschinenlesbar, weil sie die Sprache der Computer sprechen; es ist im Grunde die Sprache für Computer, um Kommunikationen ordnungsgemäß von ihrer Quelle zu ihrem Ziel leiten zu können. Sie sind also maschinenlesbar, und das bedeutet, dass Maschinen sie in großem Maßstab sehr leicht verstehen können, im Gegensatz zur natürlichen menschlichen Sprache, die viel schwieriger zu interpretieren ist, weil Menschen Wörter vielleicht auf eine bestimmte Weise verwenden oder Nuancen haben, was viel schwerer zu interpretieren ist. Metadaten hingegen sind wirklich einfach.
 
@@ -51,7 +51,7 @@ Die Verkehrsanalyse von Metadaten kann sogar verwendet werden, um verschlüsselt
 
 Es gibt jedoch viele Situationen, in denen die Verkehrsanalyse von Kommunikations-Metadaten als Seitenkanal fungieren kann, der diesen verschlüsselten Inhalt preisgibt.
 
-#### Metadaten-Überwachung (5:15) {#metadata-surveillance-515}
+### Metadaten-Überwachung (5:15) {#metadata-surveillance-515}
 
 Ein Beispiel ist, wenn man mit HTTPS auf einer Website surft. Da die Kommunikation mit dieser Website verschlüsselt ist, kann jemand, der die Kommunikation beobachtet, im Prinzip nicht erkennen, auf welche spezifische Seite man auf der Website zugreift. Wenn man zum Beispiel auf WebMD geht, um Krankheiten nachzuschlagen, wird ein Beobachter oder Lauscher sehen können: „Okay, du überprüfst medizinische Informationen auf WebMD“, aber er kann nicht sagen, nach welcher spezifischen Krankheit du suchst.
 
@@ -61,7 +61,7 @@ Dadurch kann man einen Fingerabdruck von jeder dieser Seiten erstellen, sodass m
 
 Das ist offensichtlich besorgniserregend. Auch wenn wir eine Ende-zu-Ende-Verschlüsselung haben können, sind wir noch lange nicht am Ziel, wenn es darum geht, die Privatsphäre unserer Kommunikation zu schützen.
 
-#### Eine Wunschliste für private Kommunikation (6:40) {#a-wish-list-for-private-communications-640}
+### Eine Wunschliste für private Kommunikation (6:40) {#a-wish-list-for-private-communications-640}
 
 Wenn wir also eine Wunschliste hätten, was ein perfekt sicheres Kommunikations-Netzwerk bieten würde, welche Eigenschaften würden wir uns wünschen? 
 
