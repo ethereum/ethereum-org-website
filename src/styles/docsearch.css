@@ -1,8 +1,8 @@
-/* Algolia DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
+/* DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
 
 /**
  * DocSearch Button
- * https://docsearch.algolia.com/docs/styling
+ * https://typesense.org/docs/guide/docsearch.html
  */
 .DocSearch-Button-Container {
   @apply hidden lg:flex;
@@ -172,6 +172,18 @@
 
 .DocSearch-Hit-content-wrapper {
   @apply whitespace-normal;
+}
+
+/* Wrapping is deliberate -- the vendor truncates to one line and titles read badly cut
+   off -- but unbounded it lets a transcript paragraph fill eight lines. Typesense does
+   return a short snippet for these; the renderer displays the full field instead, so a
+   clamp is the bound until that is fixed upstream of the CSS. */
+.DocSearch-Hit-title {
+  @apply line-clamp-2;
+}
+
+.DocSearch-Hit-path {
+  @apply line-clamp-1;
 }
 
 /* Vendor sizes this connector from `--docsearch-hit-height`, which we set to
