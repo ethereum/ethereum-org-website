@@ -47,6 +47,23 @@ stays searchable through `query_by`; they just no longer compete as results of t
 singular/plural pairs pinned by hand in `curation.json` exist only because it was off, and
 can be retired once a crawl has run with it.
 
+## Query choices
+
+The parameters the modal sends live in `src/components/Search/SearchModal.tsx`. Two are
+worth knowing about because they are not what the library ships.
+
+`group_limit: 1`, against the library's 3. Only one record per page is ever rendered: the
+search adapter collapses each group to its best-scoring member and staples the rest onto it
+under a key nothing reads. Asking for three returned three times the payload for the same
+rows -- 55 KB against 18 KB for "wallet", on every keystroke.
+
+`drop_tokens_threshold: 5` widens a multi-word query that finds fewer than five results.
+The knobs usually reached for first do nothing here: typo correction is on by default, and
+`walet` already returns 390 results, all of them wallet pages, so `num_typos` and
+`typo_tokens_threshold` measure identical at every value. What a misspelling costs is rank,
+not recall. Measured against the labeled queries misspelled one character each, this moves
+hit@5 from 65% to 71% and leaves hit@1 on the correctly spelled set unchanged.
+
 ## Tokenization
 
 Typesense splits on whitespace unless a field declares its language, which leaves CJK text

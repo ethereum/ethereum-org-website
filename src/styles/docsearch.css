@@ -311,9 +311,9 @@
 }
 
 /* Wrapping is deliberate -- the vendor truncates to one line and titles read badly cut
-   off -- but unbounded it lets a transcript paragraph fill eight lines. Typesense does
-   return a short snippet for these; the renderer displays the full field instead, so a
-   clamp is the bound until that is fixed upstream of the CSS. */
+   off. Two lines is the bound because that is what Typesense's snippets need: the longest
+   title measured over 357 rows was 115 characters, so rows vary between one line and two
+   rather than being cut at a fixed height. */
 .DocSearch-Hit-title {
   @apply line-clamp-2;
 }

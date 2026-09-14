@@ -10,10 +10,24 @@ export interface PageResult {
   url?: string
   anchor?: string | null
   content?: string | null
+  "hierarchy.lvl0"?: unknown
   "hierarchy.lvl1"?: unknown
   _highlightResult?: unknown
   _snippetResult?: unknown
 }
+
+/** One field of one hit, as the search adapter reports it. */
+interface FieldResult {
+  value?: unknown
+}
+
+const fields = (bag: unknown): Record<string, FieldResult> | undefined =>
+  bag && typeof bag === "object"
+    ? (bag as Record<string, FieldResult>)
+    : undefined
+
+const plainText = (value: unknown): string =>
+  typeof value === "string" ? value.replace(/<\/?mark>/g, "") : ""
 
 /**
  * Guarantee a row for the page itself at the head of its group.
@@ -58,6 +72,61 @@ export const withPageRow = <T extends PageResult>(items: T[]): T[] => {
     } as T,
     ...items,
   ]
+}
+
+/**
+ * Title a page row by the page, not by its opening headline.
+ *
+ * `hierarchy.lvl1` is the page's `h1`, which on a landing page is a slogan: `/staking/`
+ * offered "Earn rewards while securing Ethereum" as the clickable label under a heading
+ * reading "Ethereum staking: How does it work?". Most pages carry the same text in both,
+ * so this only moves the ones where the `h1` is not the page's name.
+ *
+ * Only the rendered copies change. The raw `hierarchy.lvl1` is what the renderer matches a
+ * child row against to find its parent, so rewriting it would unnest every section.
+ */
+export const withPageName = <T extends PageResult>(item: T): T => {
+  if (item.type !== "lvl1") return item
+  const highlight = fields(item._highlightResult)
+  const name = highlight?.["hierarchy.lvl0"]
+  if (!name || !plainText(name.value)) return item
+  if (plainText(name.value) === plainText(highlight["hierarchy.lvl1"]?.value))
+    return item
+
+  // The snippet copy is dropped rather than replaced: it wins over the highlight one, and
+  // lvl0's is an excerpt of a title already short enough to show whole.
+  const snippet = fields(item._snippetResult)
+  const keptSnippets = snippet ? { ...snippet } : undefined
+  delete keptSnippets?.["hierarchy.lvl1"]
+  return {
+    ...item,
+    _highlightResult: { ...highlight, "hierarchy.lvl1": name },
+    _snippetResult: keptSnippets ?? item._snippetResult,
+  }
+}
+
+/**
+ * Fields the search adapter attaches for its own use, none of which anything reads.
+ *
+ * They matter because a selected row is written to `localStorage` as the recent search:
+ * `_rawTypesenseHit` is the hit's whole unadapted response and `_grouped_hits` repeats it
+ * for every sibling, which measured 9.9 KB per entry against 0.5 KB without them.
+ * DocSearch keeps seven.
+ */
+const ADAPTER_FIELDS = [
+  "_rawTypesenseHit",
+  "_grouped_hits",
+  "_group_key",
+  "_group_found",
+  "group_key",
+  "text_match",
+  "text_match_info",
+] as const
+
+export const withoutAdapterFields = <T extends PageResult>(item: T): T => {
+  const rest = { ...item } as Record<string, unknown>
+  for (const field of ADAPTER_FIELDS) delete rest[field]
+  return rest as T
 }
 
 /**

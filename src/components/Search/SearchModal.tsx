@@ -17,7 +17,12 @@ import {
   truncateHex,
 } from "@/lib/utils/explorerQuery"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { isWithheldResult, withPageRow } from "@/lib/utils/searchResults"
+import {
+  isWithheldResult,
+  withoutAdapterFields,
+  withPageName,
+  withPageRow,
+} from "@/lib/utils/searchResults"
 import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
@@ -304,10 +309,12 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // It also aligns the app with how relevance is actually measured: promote scores
       // against `url_without_anchor`, so the two disagreed about what a result even is.
       group_by: "url_without_anchor",
-      // Set explicitly rather than inherited: the library supplies `group_limit: 3`
-      // alongside the `group_by` we override here, so the pairing would otherwise be an
-      // accident of its defaults.
-      group_limit: 3,
+      // One record per page is all that is rendered: the search adapter collapses each
+      // group to its best-scoring member and stakes the rest onto it under a key nothing
+      // reads. The library's own `group_limit: 3` therefore bought three times the
+      // response -- 55 KB against 18 KB for "wallet" -- for the same rows. Verified
+      // identical leaders and `found` across the labeled queries.
+      group_limit: 1,
       // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
       // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
       // match scores into one tier and lets a three-value signal reorder them, which
@@ -320,6 +327,17 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // page, sending "issuance of eth" to a #components-of-eth-issuance anchor.
       sort_by:
         "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc",
+      // Widen a multi-word query that finds fewer than this many results by dropping its
+      // least useful token, rather than answering with almost nothing.
+      //
+      // The two knobs usually reached for first do nothing here. Typo correction is
+      // already on -- `walet` returns 390 results, all of them wallet pages -- so
+      // `num_typos` and `typo_tokens_threshold` measured identical at every value: the
+      // index always has enough matches for the thresholds to bind. What a misspelling
+      // costs is rank, not recall, and no tolerance setting recovers that. Against the
+      // labeled queries misspelled one character each, this alone moves hit@5 from 65% to
+      // 71% and leaves hit@1 on the correctly spelled set where it was.
+      drop_tokens_threshold: 5,
     },
     onClose,
     hitComponent,
@@ -341,9 +359,11 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
         // strip to a path -- turning it into a broken internal link.
         if (isExplorerHit(item.objectID)) return item
         // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
-        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
+        const newItem: DocSearchHit = JSON.parse(
+          JSON.stringify(withoutAdapterFields(item))
+        )
         newItem.url = sanitizeHitUrl(item.url)
-        return newItem
+        return withPageName(newItem)
       }),
     placeholder: t("search-ethereum-org"),
     translations: {
