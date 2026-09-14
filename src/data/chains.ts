@@ -1166,6 +1166,17 @@ const chains = [
     chain: "Cyber",
   },
   {
+    name: "RWA Chain",
+    infoURL: "https://rwa-chain.io",
+    chainId: 7741,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "RWA",
+  },
+  {
     name: "Kinto Mainnet",
     infoURL: "https://kinto.xyz",
     chainId: 7887,
