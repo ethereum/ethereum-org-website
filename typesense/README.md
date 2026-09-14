@@ -47,6 +47,17 @@ stays searchable through `query_by`; they just no longer compete as results of t
 singular/plural pairs pinned by hand in `curation.json` exist only because it was off, and
 can be retired once a crawl has run with it.
 
+## Tokenization
+
+Typesense splits on whitespace unless a field declares its language, which leaves CJK text
+as a single token -- a search on `/zh/` comes back near-empty. The workflow sets `locale` on
+`content` and the `hierarchy.lvl*` fields per crawl, for the languages Typesense has
+customizations for: `ja`, `ko`, `ru`, `uk`, and `zh` (which `zh-tw` maps onto). Everything
+else falls back to `en`, which covers European languages well.
+
+No promote gate can catch a mistake here: the size and field checks pass, and the relevance
+gate is English-only, so a CJK index that barely searches still promotes green.
+
 ## The scraper was a version behind
 
 Typesense v30 replaced per-collection synonyms and overrides with synonym sets and curation
@@ -144,20 +155,23 @@ control. An allowlist would also break on every new deploy-preview subdomain.
 ## Secrets
 
 GitHub Actions secrets, which are separate from Netlify's environment variables. The
-workflow maps the two key secrets onto different variable names, which is what the scripts
-read -- worth knowing when running them by hand.
+scripts read these names directly; the one exception is the scraper container, which is
+handed the admin key as `TYPESENSE_API_KEY` because that is the name its own entrypoint
+reads.
 
-| Secret                 | Env var                    | Used for                                                                                                                                                |
-| ---------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TYPESENSE_URL`        | `TYPESENSE_URL`            | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
-| `TYPESENSE_ADMIN_KEY`  | `TYPESENSE_API_KEY`        | collections, aliases, document import, curation                                                                                                         |
-| `TYPESENSE_SEARCH_KEY` | `TYPESENSE_API_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
-| `SENTRY_DSN`           | `SENTRY_DSN`               | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
-
-Locally the scripts read `.env.local`, falling back to the `NEXT_PUBLIC_TYPESENSE_*` values
-for queries, so a read-only command needs nothing the app does not already have.
+| Secret                 | Used for                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `TYPESENSE_URL`        | full origin. The scraper's `TYPESENSE_HOST` is derived from it, so the two can't disagree                                                               |
+| `TYPESENSE_ADMIN_KEY`  | collections, aliases, document import, curation                                                                                                         |
+| `TYPESENSE_SEARCH_KEY` | queries; the admin key cannot search                                                                                                                    |
+| `SENTRY_DSN`           | cron check-ins, one monitor environment per locale. Optional -- if unset the check-in steps no-op, so monitoring can never be the reason indexing fails |
 
 ## Local runs
+
+The scripts read the same variable names as the secrets above, so `.env.example` works as
+written. Both keys are required -- the admin key cannot search, and promote and curate both
+query -- though a read-only command falls back to the `NEXT_PUBLIC_TYPESENSE_*` values in
+`.env.local`, so it needs nothing the app does not already have.
 
 ```sh
 pnpm typesense:promote -- --locale en --dry-run

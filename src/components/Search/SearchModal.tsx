@@ -33,6 +33,21 @@ type HitComponentProps = Parameters<
   NonNullable<DocSearchModalProps["hitComponent"]>
 >[0]
 
+/**
+ * The modal only shows its error screen for an error named `RetryError`; anything else is
+ * rethrown and leaves it idle, throwing again on every keystroke. A locale whose
+ * collection has not been promoted yet hits exactly that: Typesense answers 200 with the
+ * 404 nested inside the multi-search result, which the adapter chokes on rather than
+ * surfacing.
+ */
+const asRetryError = (error: unknown) => {
+  const retryable = new Error(
+    error instanceof Error ? error.message : "Search request failed"
+  )
+  retryable.name = "RetryError"
+  return retryable
+}
+
 const TITLE_KEYS = new Set(["lvl0", "hierarchy.lvl0"])
 
 /**
@@ -233,7 +248,12 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     (client: MinimalSearchClient): MinimalSearchClient => ({
       ...client,
       search: async (requests) => {
-        const response = await client.search(requests)
+        let response
+        try {
+          response = await client.search(requests)
+        } catch (error) {
+          throw asRetryError(error)
+        }
         const [first, ...rest] = response.results
         const query = requests[0]?.q ?? ""
         // See isWithheldResult: the homepage always, the glossary unless asked for.

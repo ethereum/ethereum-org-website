@@ -269,8 +269,9 @@ module.exports = (phase) => {
           // Dev-only files that get traced from the package root but are never
           // read by the SSR handler at runtime. Keep dir excludes anchored with
           // "/**" -- Turbopack matches these globs as substrings during trace
-          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
-          // and drops it, 502ing ISR pages that use search.
+          // pruning, so a bare "docs" also matches the search modal's SSR chunk
+          // (the package name contains "docsearch") and drops it, 502ing ISR
+          // pages that use search.
           "tests/**",
           "docs/**",
           "README.md",
