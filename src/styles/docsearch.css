@@ -280,7 +280,7 @@
 /* Groups otherwise read as one list: the next sticky heading sits directly on the
    previous group's last row. Only between sections, never above the first. */
 .DocSearch-Hits + .DocSearch-Hits {
-  @apply mt-4 md:mt-8;
+  @apply mt-4 md:mt-6;
 }
 
 /* Vendor spaces the last group with its own margin, which stacks with the padding above
@@ -304,6 +304,26 @@
 .DocSearch-Hit[aria-selected="true"] a {
   --docsearch-hit-active-color: hsla(var(--background));
   @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-visited)];
+}
+
+/* A child row is a section of the page named directly above it, so it reads as part of
+   that row rather than as its own entry. The container inside already carries spacing. */
+.DocSearch-Hit--Child a {
+  @apply pt-2 pb-1;
+}
+
+/* A page and its sections are one entry, so the rules inside a block are lightened and
+   only the rule closing the block stays at full strength. Matched to the elbow connector
+   beside them by reading the same variable at the same 50%, rather than naming a token:
+   `--docsearch-muted-color` is themed in `.dark` only, so in light mode that elbow is
+   still the vendor's own blue-grey. Recoloured rather than removed because the border is
+   in the row's height, so dropping it would shorten every row with sections under it. */
+.DocSearch-Hit:has(+ .DocSearch-Hit--Child) a {
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--docsearch-muted-color) 50%,
+    transparent
+  );
 }
 
 .DocSearch-Hit-content-wrapper {
