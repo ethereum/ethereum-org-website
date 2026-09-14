@@ -17,7 +17,7 @@ Ein TED-Talk von **Glenn Greenwald**, einem der ersten Reporter, der die Edward-
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=pcSlowAhvUk), das von TED veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Eine Erfahrung, die jeder schon einmal gemacht hat (0:12) {#an-experience-everyone-has-had-012}
+### Eine Erfahrung, die jeder schon einmal gemacht hat (0:12) {#an-experience-everyone-has-had-012}
 
 Es gibt ein ganzes Genre von YouTube-Videos, das sich einer Erfahrung widmet, von der ich sicher bin, dass jeder in diesem Raum sie schon einmal gemacht hat. Es geht um eine Person, die glaubt, allein zu sein, und sich einem ausdrucksstarken Verhalten hingibt – wildes Singen, kreisendes Tanzen, leichte sexuelle Aktivitäten –, nur um dann festzustellen, dass sie in Wirklichkeit nicht allein ist, dass da eine Person ist, die zuschaut und lauert, deren Entdeckung sie dazu veranlasst, sofort entsetzt mit dem aufzuhören, was sie gerade getan hat. 
 
@@ -25,7 +25,7 @@ Das Gefühl von Scham und Demütigung in ihrem Gesicht ist greifbar. Es ist das 
 
 Dies ist der Kern der Arbeit, auf die ich mich in den letzten 16 Monaten einzig und allein konzentriert habe: die Frage, warum Privatsphäre wichtig ist. Eine Frage, die im Kontext einer globalen Debatte aufkam, ausgelöst durch die Enthüllungen von Edward Snowden, dass die Vereinigten Staaten und ihre Partner, ohne dass die Welt davon wusste, das Internet – einst als beispielloses Werkzeug der Befreiung und Demokratisierung gefeiert – in eine beispiellose Zone der massenhaften, wahllosen Überwachung verwandelt haben.
 
-#### Das „Nichts zu verbergen“-Argument (1:29) {#the-nothing-to-hide-argument-129}
+### Das „Nichts zu verbergen“-Argument (1:29) {#the-nothing-to-hide-argument-129}
 
 Es gibt eine sehr verbreitete Ansicht, die in dieser Debatte aufkommt, selbst unter Menschen, denen Massenüberwachung unbehaglich ist. Sie besagt, dass von diesem groß angelegten Eingriff kein wirklicher Schaden ausgeht, da nur Menschen, die in schlechte Handlungen verwickelt sind, einen Grund haben, sich verstecken zu wollen und sich um ihre Privatsphäre zu sorgen.
 
@@ -37,7 +37,7 @@ Im Gegensatz dazu sind gute Menschen diejenigen, die zur Arbeit gehen, nach Haus
 
 Die Menschen, die das tatsächlich sagen, begehen einen sehr extremen Akt der Selbstabwertung. Was sie eigentlich sagen, ist: „Ich habe zugestimmt, mich zu einer so harmlosen, unbedrohlichen und uninteressanten Person zu machen, dass ich tatsächlich keine Angst davor habe, dass die Regierung weiß, was ich tue.“
 
-#### Selbst die Kritiker der Privatsphäre glauben nicht, was sie sagen (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Selbst die Kritiker der Privatsphäre glauben nicht, was sie sagen (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Diese Denkweise hat ihren meiner Meinung nach reinsten Ausdruck in einem Interview aus dem Jahr 2009 mit dem langjährigen CEO von Google, Eric Schmidt, gefunden. Als er nach all den verschiedenen Wegen gefragt wurde, auf denen sein Unternehmen die Privatsphäre von Hunderten Millionen Menschen auf der ganzen Welt verletzt, sagte er Folgendes: „Wenn Sie etwas tun, von dem Sie nicht wollen, dass andere Leute es wissen, sollten Sie es vielleicht gar nicht erst tun.“
 
@@ -49,7 +49,7 @@ Genau dieser Eric Schmidt, der CEO von Google, wies seine Mitarbeiter bei Google
 
 Dieselbe Diskrepanz ist beim CEO von Facebook, Mark Zuckerberg, zu beobachten, der 2010 in einem berüchtigten Interview verkündete, dass Privatsphäre keine „soziale Norm“ mehr sei. Letztes Jahr kauften Mark Zuckerberg und seine neue Frau nicht nur ihr eigenes Haus, sondern auch alle vier angrenzenden Häuser in Palo Alto für insgesamt 30 Millionen Dollar, um sicherzustellen, dass sie eine Zone der Privatsphäre genießen, die andere Menschen daran hindert, zu überwachen, was sie in ihrem Privatleben tun.
 
-#### Die E-Mail-Passwort-Herausforderung (4:51) {#the-email-password-challenge-451}
+### Die E-Mail-Passwort-Herausforderung (4:51) {#the-email-password-challenge-451}
 
 In den letzten 16 Monaten, in denen ich dieses Thema auf der ganzen Welt debattiert habe, habe ich jedes Mal, wenn jemand zu mir sagte: „Ich mache mir eigentlich keine Sorgen über Verletzungen der Privatsphäre, weil ich nichts zu verbergen habe“, immer dasselbe geantwortet. 
 
@@ -65,7 +65,7 @@ Es gibt einen Grund, warum wir das suchen, und unser Grund ist, dass wir alle, n
 
 Wir treffen jeden einzelnen Tag Entscheidungen darüber, welche Dinge, die wir sagen, denken und tun, andere Menschen wissen dürfen, und welche Dinge, die wir sagen, denken und tun, niemand sonst wissen soll. Menschen können sehr leicht mit Worten behaupten, dass sie keinen Wert auf ihre Privatsphäre legen, aber ihre Taten widerlegen die Authentizität dieser Überzeugung.
 
-#### Beobachtet zu werden, verändert unser Verhalten (7:02) {#being-watched-changes-our-behavior-702}
+### Beobachtet zu werden, verändert unser Verhalten (7:02) {#being-watched-changes-our-behavior-702}
 
 Nun, es gibt einen Grund, warum Privatsphäre universell und instinktiv so sehr begehrt wird. Es ist nicht nur eine reflexartige Handlung wie das Atmen von Luft oder das Trinken von Wasser. Der Grund ist, dass sich unser Verhalten dramatisch verändert, wenn wir uns in einem Zustand befinden, in dem wir überwacht oder beobachtet werden können. 
 
@@ -73,7 +73,7 @@ Die Bandbreite an Verhaltensoptionen, die wir in Betracht ziehen, wenn wir glaub
 
 Menschliche Scham ist ein sehr starker Motivator, ebenso wie der Wunsch, sie zu vermeiden. Und das ist der Grund, warum Menschen, wenn sie sich in einem Zustand der Beobachtung befinden, Entscheidungen treffen, die nicht das Nebenprodukt ihrer eigenen Handlungsfähigkeit sind, sondern sich nach den Erwartungen richten, die andere an sie stellen, oder nach den Vorgaben der gesellschaftlichen Orthodoxie.
 
-#### Benthams Panoptikum (8:09) {#benthams-panopticon-809}
+### Benthams Panoptikum (8:09) {#benthams-panopticon-809}
 
 Diese Erkenntnis wurde am wirkungsvollsten für pragmatische Zwecke von dem Philosophen Jeremy Bentham aus dem 18. Jahrhundert genutzt. Er machte sich daran, ein wichtiges Problem zu lösen, das durch das Industriezeitalter eingeläutet wurde, in dem Institutionen zum ersten Mal so groß und zentralisiert geworden waren, dass sie nicht mehr in der Lage waren, jedes einzelne ihrer Mitglieder zu überwachen und somit zu kontrollieren. 
 
@@ -81,7 +81,7 @@ Und die Lösung, die er entwarf, war ein architektonisches Design, das ursprüng
 
 Der französische Philosoph Michel Foucault aus dem 20. Jahrhundert erkannte, dass dieses Modell nicht nur für Gefängnisse genutzt werden konnte, sondern für jede Institution, die menschliches Verhalten kontrollieren will: Schulen, Krankenhäuser, Fabriken, Arbeitsplätze. Und er sagte, dass diese Denkweise, dieser von Bentham entdeckte Rahmen, das wichtigste Mittel der gesellschaftlichen Kontrolle für moderne, westliche Gesellschaften sei. Diese benötigen nicht mehr die offensichtlichen Waffen der Tyrannei – das Bestrafen, Inhaftieren oder Töten von Dissidenten oder den gesetzlichen Zwang zur Loyalität gegenüber einer bestimmten Partei –, weil Massenüberwachung ein Gefängnis im Kopf erschafft. Dies ist ein viel subtileres, aber weitaus effektiveres Mittel, um die Einhaltung sozialer Normen oder sozialer Orthodoxie zu fördern, viel effektiver, als es rohe Gewalt jemals sein könnte.
 
-#### Orwell, Religion und das Gefängnis im Kopf (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, Religion und das Gefängnis im Kopf (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Das ikonischste literarische Werk über Überwachung und Privatsphäre ist der Roman *1984* von George Orwell, den wir alle in der Schule behandeln und der deshalb fast schon zu einem Klischee geworden ist. Tatsächlich tun die Leute es sofort als unzutreffend ab, wenn man es in einer Debatte über Überwachung zur Sprache bringt, und sagen: „Oh, nun, in *1984* gab es Monitore in den Häusern der Menschen, sie wurden in jedem Moment beobachtet, und das hat nichts mit dem Überwachungsstaat zu tun, dem wir gegenüberstehen.“ 
 
@@ -93,7 +93,7 @@ Was all diese scheinbar unterschiedlichen Werke erkennen, die Schlussfolgerung, 
 
 Umgekehrt, und das ist noch wichtiger, ist es ein Bereich der Privatsphäre, die Fähigkeit, an einen Ort zu gehen, an dem wir denken, schlussfolgern, interagieren und sprechen können, ohne dass die urteilenden Blicke anderer auf uns gerichtet sind, in dem Kreativität, Erforschung und abweichende Meinungen exklusiv beheimatet sind. Und das ist der Grund, warum wir, wenn wir die Existenz einer Gesellschaft zulassen, in der wir ständiger Überwachung ausgesetzt sind, zulassen, dass die Essenz der menschlichen Freiheit schwer beschnitten wird.
 
-#### Zwei destruktive Lektionen (12:30) {#two-destructive-lessons-1230}
+### Zwei destruktive Lektionen (12:30) {#two-destructive-lessons-1230}
 
 Der letzte Punkt, den ich zu dieser Denkweise anmerken möchte – der Idee, dass nur Menschen, die etwas Falsches tun, Dinge zu verbergen haben und daher Gründe haben, sich um Privatsphäre zu sorgen –, ist, dass sie zwei sehr destruktive Botschaften, zwei destruktive Lektionen verfestigt. Die erste davon ist, dass die einzigen Menschen, die sich um Privatsphäre sorgen, die einzigen Menschen, die Privatsphäre suchen, per Definition schlechte Menschen sind. 
 
@@ -111,7 +111,7 @@ Die renommierte sozialistische Aktivistin Rosa Luxemburg sagte einmal: „Wer si
 
 Vielen Dank. (Applaus)
 
-#### Fragerunde mit Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Fragerunde mit Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, danke. Die Argumentation ist ziemlich überzeugend, muss ich sagen, aber ich möchte Sie für ein paar Fragen auf die letzten 16 Monate und auf Edward Snowden zurückbringen, wenn es Ihnen nichts ausmacht. Die erste ist persönlicher Natur. Wir haben alle von der Verhaftung Ihres Partners, David Miranda, in London und anderen Schwierigkeiten gelesen, aber ich nehme an, dass in Bezug auf persönliches Engagement und Risiko der Druck auf Sie nicht so leicht zu ertragen ist, wenn man es mit den größten souveränen Organisationen der Welt aufnimmt. Erzählen Sie uns ein wenig darüber.
 

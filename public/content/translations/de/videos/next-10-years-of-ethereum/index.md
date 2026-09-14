@@ -17,7 +17,7 @@ Ein Vortrag von **Fede Fernández**, Gründer von Lambda und Mitbegründer mehre
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=2E-0DF0tFbc), das von der Ethereum Foundation veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Ethereum als verifizierbarer Computer (0:07) {#ethereum-as-a-verifiable-computer-007}
+### Ethereum als verifizierbarer Computer (0:07) {#ethereum-as-a-verifiable-computer-007}
 
 Ich werde über die nächsten 10 Jahre von Ethereum sprechen – vom verifizierbaren Computer zur globalen Wirtschaft. Für mich ist Ethereum ein verifizierbarer Computer. Ich mochte das „Weltcomputer“-Meme noch nie. Ich denke, AWS oder Google sind die Weltcomputer – sie haben viel Geld, sie haben viele Computer, aber man muss ihnen vertrauen. Der große Unterschied zwischen Ethereum und den restlichen Computern ist, dass es verifizierbar ist. Ethereum ist der erste verifizierbare Computer der Welt – keine vertrauensbasierte Berechnung, nur wirtschaftliche Anreize und Mathematik.
 
@@ -25,7 +25,7 @@ Das bietet einen enormen Vorteil gegenüber AWS oder Google Cloud, denn alles, w
 
 Das macht Ethereum antifragil. Mit jedem Angriff, jede Woche, in der jemand versucht, Ethereum anzugreifen – sei es aus Nordkorea oder von anderen staatlichen oder privaten Akteuren – wird es stärker, weil es da draußen läuft und es viel Geld und viele Leute gibt, die versuchen, daran zu kommen.
 
-#### Eigentumsrechte im Internet (2:39) {#internet-property-rights-239}
+### Eigentumsrechte im Internet (2:39) {#internet-property-rights-239}
 
 Was ermöglicht also ein verifizierbarer Computer? Er ermöglicht Eigentumsrechte im Internet – echtes Eigentum. Anstatt den Plattformbedingungen zu glauben oder zu vertrauen, wie bei der typischen Sache, bei der man auf „Weiter“ klickt und zustimmt, alle seine Daten an ein Unternehmen zu geben, vertraut man hier auf private Schlüssel. Private Schlüssel sind viel besser, als Nutzungsbedingungen zu vertrauen.
 
@@ -33,19 +33,19 @@ Das schafft globale Neutralität. Ein chinesischer Entwickler, ein russischer Tr
 
 In den nächsten 10 Jahren werden wir alles tokenisieren – von Kunst über Land bis hin zu künstlicher Intelligenz. Wenn Kinder mit künstlicher Intelligenz lernen werden, gibt es Anreize für Leute, sich in die KI zu hacken und die Parameter so zu ändern, dass die KI mit dem antwortet, was der Hacker will. Wir brauchen Ethereum, um zu verifizieren, dass die KI richtig funktioniert, und es gibt viele Leute, die daran arbeiten.
 
-#### Die Wirtschaft von Ethereum heute (3:46) {#ethereums-economy-today-346}
+### Die Wirtschaft von Ethereum heute (3:46) {#ethereums-economy-today-346}
 
 Ethereum hat eine ganze Wirtschaft geschaffen – heutzutage sind es 300 Milliarden Dollar. Das ist riesig. Layer 2 (L2) wachsen, und jeden Monat gibt es allein auf Ethereum ein monatliches Stablecoin-Volumen von drei Billionen. Wir sind dreimal größer als Visa. Einer der größten Vorteile, den wir gegenüber Visa, der New Yorker Börse oder jeder anderen Börse wie der argentinischen Merval haben, ist, dass wir Komponierbarkeit haben – alles ist am selben Ort. Man kann seine Stablecoins gegen Dollar, gegen ein tokenisiertes Asset oder gegen Kunst tauschen, und das erzeugt einen Schwungradeffekt, weil mehr Leute mehr Geld hinzufügen und alles gleichzeitig am selben Ort passiert, die ganze Zeit. Tatsächlich ist Ethereum in diesem Sinne weniger fragmentiert als die Kapitalmärkte der Welt.
 
 Wie haben wir das also geschaffen? Mit einer Blase. Von 2017 bis 2022 gab es eine riesige Blase im Krypto-Bereich. Die meisten Projekte waren aus meiner Sicht Betrug. Ethereum hat gewonnen, weil Vitalik, die Ethereum Foundation und die Leute, die daran bauten, langfristige Visionen hatten – sie hatten wirtschaftliche Anreize, aber sie wollten etwas erschaffen, das größer war als sie selbst. Deshalb hat Ethereum nach der großen Blase und der dreijährigen Stagnation gewonnen. Wir haben in gewisser Weise gewonnen und konnten Dinge wie Zero-Knowledge (ZK) umsetzen – Polygon zum Beispiel, wo Sandeep viel Geld investiert hat, damit ZK eine große Sache wird. Bei StarkWare das Gleiche. Das hat ZK als eine erstaunliche Technologie ermöglicht, die aus meiner Sicht noch größer werden wird als Blockchains.
 
-#### Product-Market-Fit (5:29) {#product-market-fit-529}
+### Product-Market-Fit (5:29) {#product-market-fit-529}
 
 Dies hat jedoch auch Konkurrenten hervorgebracht, und das ist etwas, das wir manchmal vergessen. Diese Blase hat neue Technologien wie Solana, Sui und Aptos hervorgebracht, die wir uns ansehen sollten, weil sie interessante Dinge tun, und wir sollten sie prüfen, um uns selbst zu verbessern.
 
 Nach der Blase hat Ethereum aus meiner Sicht einen gewissen Product-Market-Fit (PMF) gefunden. Der Product-Market-Fit ist dezentrale oder erlaubnisfreie Verifizierbarkeit plus Privatsphäre – etwas, das wir versuchen, in den Kern von Ethereum einzubauen – plus Stablecoins. Das ist der wahre PMF. Das ist die grundlegende Sache, die funktioniert und wächst. Die meisten Token gehen nach unten, aber das Volumen der Stablecoins steigt. Es ist ein programmierbarer, privater, grenzenloser USD. Im Moment sind wir zehnmal größer als die Konkurrenz. Das ist ein Vorsprung, an dem wir weiterarbeiten müssen, und wir dürfen uns nicht darauf ausruhen und vergessen, dass dies einer der größten PMFs ist, die wir haben.
 
-#### Technische Herausforderungen (6:26) {#technical-challenges-626}
+### Technische Herausforderungen (6:26) {#technical-challenges-626}
 
 Es gibt zwei Dinge, über die ich heute sprechen möchte und über die ich mich ein wenig auslassen werde: die technischen Herausforderungen, die ich für Ethereum sehe, um in den nächsten Jahren weiter zu gewinnen, und die sozialen und kulturellen Herausforderungen, an denen wir meiner Meinung nach arbeiten müssen. Leistung, Skalierbarkeit, Interoperabilität, Privatsphäre, Sicherheit, Post-Quanten-Kryptographie und Komplexität.
 
@@ -59,29 +59,29 @@ Ich glaube auch, dass die Anforderungen an die Validatoren steigen sollten. Ich 
 
 Ich bin ein großer Fan von RISC-V. Ich bin ehrlich gesagt kein großer Fan von Solidity. Solidity ist nicht Ethereum. Ethereum wird nicht durch Solidity definiert. Ich respektiere die Leute, die daran arbeiten – es war entscheidend, es ist eine einfache Sprache – aber es hat viele Probleme. Ich bin ein großer Fan von RISC-V und denke, das sollte der Standard sein.
 
-#### L2-Stacks und Interoperabilität (10:00) {#l2-stacks-and-interop-1000}
+### L2-Stacks und Interoperabilität (10:00) {#l2-stacks-and-interop-1000}
 
 Die meisten L2-Stacks funktionieren nicht. Die meisten L2-Stacks funktionieren buchstäblich nicht – man klont das Repo, versucht es auszuführen, und es funktioniert nicht. Ich möchte niemanden an den Pranger stellen, aber das hat mit Anreizen zu tun. Die Anreize sind darauf ausgerichtet, einen Token auf den Markt zu bringen, ihn zu vergessen und sterben zu lassen. Was wir mit Lambda versuchen, ist, es so zu machen, dass jeder mit einem Befehl eine L2 ausführen kann, und wenn wir immer noch an die Rollup-zentrierte Roadmap glauben, müssen wir es einfach machen, Rollups auszuführen.
 
 Zur Interoperabilität und der Zentralisierung von Rollups – neulich gab es einen Ausfall bei AWS, und einige der Rollups sind ausgefallen. Ich finde das extrem schlecht. Die Leute haben sich aufgeregt, und sie haben recht. Wir müssen zu Phase 2 übergehen. Wir brauchen dezentrale Sequencer, oder wir müssen Zensurresistenz schaffen. Ich glaube an Based Rollups. Commit-Boost ist eine weitere Technologie, an der Drew gearbeitet hat – ein erstaunliches öffentliches Gut, um Dinge wie Vorab-Bestätigungen (Pre-Confirmations) zu ermöglichen. Lambda arbeitet ebenfalls daran.
 
-#### Privatsphäre (11:29) {#privacy-1129}
+### Privatsphäre (11:29) {#privacy-1129}
 
 Das Einzige, was ich zum Thema Privatsphäre sagen werde, ist, dass ich an die Öffentlichkeit gegangen bin, nachdem ich einen Anruf von einem Anwalt bekommen habe, der sagte: „Hey Fede, wenn du nicht kooperierst, wirst du großen Ärger bekommen.“ Das ist vor ein paar Jahren passiert, und ab und zu habe ich deswegen ein Problem. Ich arbeite immer noch an Privatsphäre – wir arbeiten an Maiden, wir arbeiten an datenschutzbezogenen Dingen für Sombra, für die Regierung. Das Einzige, was ich sagen werde, ist, dass ich denke, wir sollten alle an Privatsphäre arbeiten können und wir sollten jeden unterstützen, der an Privatsphäre arbeitet. Im Moment ist nicht klar, wie die Regeln lauten. Wir sollten alle unterstützen – Roman, Alexey, die Entwickler der Samourai Wallet. Wir müssen das alle gemeinsam durchstehen. Und offensichtlich braucht Ethereum Privatsphäre, denn wenn ich möchte, dass meine Mutter Ethereum nutzt, wird es ihr nicht gefallen, dass jeder ihre Transaktionen sehen kann.
 
-#### Sicherheit und der Solidity-Compiler (12:27) {#security-and-the-solidity-compiler-1227}
+### Sicherheit und der Solidity-Compiler (12:27) {#security-and-the-solidity-compiler-1227}
 
 Der Solidity-Compiler – wenn man sich die GitHub-Mitwirkenden ansieht, gibt es nur ein oder zwei Leute, die ihn pflegen. Sie arbeiten sehr hart, aber das ist ein riesiges Problem. Wir haben nicht genug Leute, die an der wichtigsten Programmiersprache auf Ethereum arbeiten. Wenn wir in den nächsten 10 Jahren noch hier sein wollen, müssen wir das finanzieren. Das Gleiche gilt für Vyper.
 
 Die Syntax von Solidity ist einfach – deshalb mögen die Leute sie. Die Semantik und der Compiler fangen jedoch viele Fehler nicht ab. Ich habe in mehr als 20 Programmiersprachen gearbeitet, von Erlang bis Rust. Ich hatte noch nie so große Schwierigkeiten mit einer Programmiersprache wie mit Solidity. Es ist so einfach, Sicherheitslücken zu erzeugen. Viele Fehler könnten zur Kompilierzeit abgefangen werden, wenn wir einen besseren Compiler hätten. Ich denke, die langfristige Lösung ist die RISC-V EVM als Standard für Layer 1 (L1).
 
-#### Post-Quanten-Kryptographie (13:40) {#post-quantum-cryptography-1340}
+### Post-Quanten-Kryptographie (13:40) {#post-quantum-cryptography-1340}
 
 Wir arbeiten mit Justin Drake an Lean Ethereum. Wir waren gerade mit drei unserer Kryptographen in Cambridge, um an Hash-basierten Signaturen und einer minimalen ZKVM zu arbeiten. Wir arbeiten an der Lean VM. Vielen Dank an Justin und die Ethereum Foundation, dass sie es Leuten wie uns, die sehr weit weg und in Bezug auf VC-Kapital nicht gut vernetzt waren, so einfach gemacht haben. Wenn Sie mich fragen, auf welche Dinge in meinem Leben ich am meisten stolz bin, dann ist es die Arbeit an Lean Ethereum.
 
 Wir arbeiten an einer ZKVM, inspiriert von der Cairo VM, die wir bei Lambda mit Hilfe von StarkWare implementiert haben. Nethermind arbeitet ebenfalls an der Formalen Verifikation. Wir haben einen riesigen Vorteil gegenüber Bitcoin, weil unser Akzelerationismus und unsere Einstellung, an mehreren Implementierungen zu arbeiten, viele Leute Dinge überprüfen zu lassen und in Bezug auf Kernentwicklung und Forschung offener zu sein, uns einen Vorteil verschaffen. Bitcoin hat ein Problem mit der Bereitstellung von Post-Quanten-Kryptographie.
 
-#### Selbst auferlegte Stagnation (14:46) {#self-imposed-stagnation-1446}
+### Selbst auferlegte Stagnation (14:46) {#self-imposed-stagnation-1446}
 
 Nun zu dem Teil, bei dem ich sehr deutlich werden möchte. Ich bin ein riesiger Ethereum-Fan. Mein Unternehmen hängt von Ethereum ab. Wenn Ethereum in den nächsten 10 Jahren ein Problem hat, ist mein Unternehmen und alles, was ich in den letzten 12 Jahren aufgebaut habe, erledigt. Wir haben in den letzten Monaten Dutzende Millionen Dollar bereitgestellt, um mehrere neue Unternehmen auf Ethereum aufzubauen. Ich sage das, weil ich Ethereum liebe – nicht, weil ich will, dass Ethereum stirbt. Verbesserung bedeutet, offen über die Probleme zu sprechen, die wir haben.
 
@@ -89,7 +89,7 @@ Erstes Problem: „Wir haben bereits gewonnen.“ Das ist selbst auferlegte Stag
 
 Wir haben noch nicht gewonnen – wir sind auf der Gewinnerseite, aber um weiter zu gewinnen, müssen wir eine offene, kritische Debattenkultur aufrechterhalten. Wir dürfen Kommentare wie meinen nicht so sehen, als wäre jemand hart zu Ethereum. Ich bin sehr hart zu meinen Ingenieuren, ich bin sehr hart zu mir selbst und meinem Unternehmen, aber das liegt daran, dass ich möchte, dass sich die Kultur verbessert.
 
-#### Offene Debatte und Governance (17:01) {#open-debate-and-governance-1701}
+### Offene Debatte und Governance (17:01) {#open-debate-and-governance-1701}
 
 Ich bin Teil der Tech-Elite – ich spreche nicht schlecht über andere Leute, ich sage, ich bin Teil der Tech-Elite. Wir müssen das tun, weil es schon eine ganze Weile so geht. Vor zwei Tagen hatte ich ein Gespräch mit einem der Top-Ethereum-Forscher und fragte: „Warum zum Teufel machen wir das?“ Die Antwort war: „Weil diese Person seit zwei Jahren daran arbeitet.“ Das ist nicht in Ordnung. Wenn Lambda seit zwei Jahren etwas macht und jemand anderes etwas Besseres macht, dann beendet bitte das, was Lambda macht. Ethereum ist größer als jeder Einzelne.
 
@@ -97,19 +97,19 @@ Das bedeutet nicht, dass wir gemein zu den Leuten sein müssen, die daran arbeit
 
 Wichtige Entscheidungen wurden hinter verschlossenen Türen getroffen. Ich war Teil davon – da findet soziale Koordination statt. Das gefällt mir nicht. Ich mag öffentliche Debatten. Wenn wir weiterhin Dinge hinter verschlossenen Türen tun, ist das extrem fragil, weil staatliche Akteure versuchen, den Kern von Ethereum zu infiltrieren – das weiß ich als Tatsache. Sehen Sie sich OpenBSD an – dort versuchten staatliche Akteure, in den Kern einzudringen, indem sie einen Entwickler bezahlten. Wir brauchen Dinge, die offen und öffentlich sind. Transparenz macht die Dinge für alle besser.
 
-#### Von Konkurrenten lernen (19:18) {#learning-from-competitors-1918}
+### Von Konkurrenten lernen (19:18) {#learning-from-competitors-1918}
 
 Noch etwas: mangelndes Wissen darüber, was die Konkurrenz macht. Ich war auf jedem Solana Breakpoint und darauf bin ich stolz. Warum? Weil ich sie als Konkurrenten sehe. Nicht, weil ich ein Solana-Bulle bin – sondern weil ich von meinem Konkurrenten lernen möchte, ich möchte gute Ideen von ihnen kopieren. Sie haben viele kluge Köpfe. Das Gleiche gilt für Sui und Aptos. Wir sollten alles kopieren, was jemand anderes gut macht. Linux hat das viele Male getan – Linux hat alles von Solaris kopiert. Ich war ein großer Solaris-Fan, ich habe bei Sun Microsystems gearbeitet. Aber Linux war offen und hat all die guten Dinge kopiert.
 
 Junge Leute achten auf diese Dinge. Es ist ihnen egal, wer gewinnt – sie wollen sehen, wer die Dinge vorantreibt, wer aggressiver ist, wenn es darum geht, die Welt zu erobern. So wurde Linux riesig – Android nutzt Linux. Wir müssen diese Einstellung haben, um zu gewinnen.
 
-#### Kultur und Feedbackschleifen (20:44) {#culture-and-feedback-loops-2044}
+### Kultur und Feedbackschleifen (20:44) {#culture-and-feedback-loops-2044}
 
 Herdenmentalität. Wichtige Debatten sind nicht öffentlich. Echokammern und der Ausschluss von abweichenden Meinungen zerstören Feedbackschleifen. Ich glaube nicht, dass es eine einzige richtige Ideologie gibt. Ich habe einen Partner, der ultra-libertär ist – er glaubt, dass alles, was der Staat tut, schlecht ist. Ich habe einen anderen Partner, der dem Peronismus näher steht und denkt, dass alles, was private Akteure tun, schlecht ist. Ich glaube nicht, dass öffentlich oder privat definiert, ob etwas langfristig gut für die Gesellschaft ist. Ich denke, Systeme, die geschlossene Feedbackschleifen haben – bei denen sie von ihren Nutzern und Stakeholdern lernen – sind das, was auf lange Sicht gute Systeme ausmacht.
 
 Ich denke, wir sollten Leute buchstäblich dafür bezahlen, eine gegensätzliche Meinung zu vertreten. Ich habe Partner in meinem Unternehmen, die ich manchmal feuern möchte, weil sie hart zu mir sind, aber am Ende des Tages bin ich froh, Leute zu haben, die meine Autorität in Frage stellen. Wir brauchen das, weil es gute Feedbackschleifen erzwingt. Wenn wir keine gute Kultur haben, die offen ist, werden wir auf lange Sicht schlechte Technologie haben. Und wenn wir schlechte Technologie haben, kommt der gute Nachwuchs nicht zu Ethereum. Wir sollten mehr wie Bitcoin debattieren – ohne die Drohungen – aber wie Ethereum ausführen. Wir debattieren hart, dann arbeiten wir als Team zusammen.
 
-#### Lambdas Arbeit in ganz Lateinamerika (22:45) {#lambdas-work-across-latin-america-2245}
+### Lambdas Arbeit in ganz Lateinamerika (22:45) {#lambdas-work-across-latin-america-2245}
 
 Warum sollten Sie mir also zuhören? Wir arbeiten in mehreren Ländern in Lateinamerika. Mit unseren Partnern – Diego Fernández, über Sombra – haben wir mehr als 10 Millionen IDs auf Ethereum geprägt. Wir arbeiten mit der Regierung von Nuevo León in Mexiko zusammen. Wir arbeiten mit mehreren Bundesstaaten hier in Argentinien zusammen. Wir fangen an, in Kolumbien Gespräche zu führen. Sobald man IDs Onchain hat, kann man KYC durchführen, man kann darauf basierend Kredite vergeben. Wir arbeiten auch in Afrika in verschiedenen Ländern und schaffen Infrastruktur für Pässe und physische Eigentumsrechte. Das Gleiche tun wir in Asien, in verschiedenen zentralasiatischen Ländern – ich war kürzlich in Usbekistan.
 
@@ -117,7 +117,7 @@ Wir haben einen Ethereum-L1-Client gebaut. Wir haben 40 Leute, die daran arbeite
 
 Heute bin ich super stolz – mit Rodrigo haben wir beschlossen, eine Partnerschaft zwischen Lambda, Boulder Tech und IRSA einzugehen, um etwas Massives in der Region aufzubauen. Wir arbeiten mit ihnen an Zahlungssystemen in Lateinamerika. Lambda, mit Hunderten von Ingenieuren – wir haben fast 500 Leute, und wir sind nicht sehr gut im Marketing. Ich bin der einzige Typ auf Twitter! Aber wir arbeiten an so vielen Dingen, und ich bin super stolz auf das, was wir tun. Ich hoffe nur, dass wir offener für Debatten und Kritik sind, um ETH und Ethereum so groß zu machen, wie wir es wollen. Vielen Dank an alle.
 
-#### Fragen und Antworten (25:53) {#qa-2553}
+### Fragen und Antworten (25:53) {#qa-2553}
 
 **Moderator:** Danke, Fede. Wir haben einige großartige Fragen aus dem Publikum. Ich habe eine Frage vor all dem. Wie fühlst du dich gerade? Wir sind in Argentinien, wir haben die Devconnect. Gibt es ein Wort, um zu beschreiben, wie du dich fühlst?
 
@@ -143,6 +143,6 @@ Heute bin ich super stolz – mit Rodrigo haben wir beschlossen, eine Partnersch
 
 **Fede Fernández:** Sammle kein Geld ein, bis du einen Product-Market-Fit hast. Die Leute werden dich drängen, Geld zu sammeln, und dann wirst du mehr Probleme haben, als du denkst. Geld ist nur ein Werkzeug – es ist Treibstoff, um Dinge bauen zu können. Aber es gibt wichtigere Dinge: Verbindungen, Bücher. Versuche, mit Leuten zu arbeiten, die zutiefst motiviert sind von dem, was sie tun. Arbeite mit Leuten, die Ethik haben, die versuchen, etwas Gutes für die Gesellschaft zu tun, etwas, worauf sie stolz sind. Du tust das, weil du stolz darauf bist. Du willst deiner Familie, deinen Freunden erzählen, was du tust. Folge den Leuten, die Dinge tun, für die sie brennen, und arbeite an Dingen, auf die du in 10 Jahren stolz sein wirst.
 
-#### Abschluss (30:32) {#closing-3032}
+### Abschluss (30:32) {#closing-3032}
 
 **Moderator:** Großartig. Nun, vielen Dank, Fede. Danke für alles, was du tust.

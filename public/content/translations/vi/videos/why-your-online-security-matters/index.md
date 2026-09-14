@@ -17,7 +17,7 @@ Một video hoạt hình giải thích ngắn gọn từ **Tổ chức Ân xá Q
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=5GTD14irFvQ) do Tổ chức Ân xá Quốc tế xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn và các nhãn người nói đã được thêm vào.*
 
-#### "Bạn không có gì để giấu, đúng không?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Bạn không có gì để giấu, đúng không?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Đặc vụ:** Bạn không quan tâm đến bảo mật kỹ thuật số, đúng không?
 
@@ -79,7 +79,7 @@ Một video hoạt hình giải thích ngắn gọn từ **Tổ chức Ân xá Q
 
 **Công dân:** Tôi có.
 
-#### Quyền riêng tư (1:30) {#the-right-to-privacy-130}
+### Quyền riêng tư (1:30) {#the-right-to-privacy-130}
 
 **Công dân:** Và đất nước của tôi được tạo nên từ con người. Những người có quyền riêng tư của riêng họ. Nếu chính phủ muốn thu thập bừa bãi tất cả dữ liệu của bạn—email, cuộc gọi điện thoại, hình ảnh webcam và các tìm kiếm trên internet—điều đó là không ổn.
 

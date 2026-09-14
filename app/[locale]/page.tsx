@@ -26,12 +26,9 @@ import { SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getDevconTicketLink } from "@/lib/utils/url"
 
-import {
-  DEFAULT_LOCALE,
-  DEVCON_INDIA_TICKET_URL,
-  LOCALES_CODES,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import {
   KPISection,
@@ -126,17 +123,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
 
             <div className="min-w-0 text-center text-xs font-black sm:text-sm md:text-md lg:text-xl">
-              {tDevcon("headline")}
+              {tDevcon("discount-headline")}
             </div>
 
             <div className="flex flex-1 shrink-0 justify-end">
               {/* Overlay stretches the CTA's hit area across the whole banner */}
               <LinkOverlay asChild>
                 <ButtonLink
-                  href={DEVCON_INDIA_TICKET_URL}
+                  href={getDevconTicketLink(locale)}
                   customEventOptions={{
                     eventCategory: "devcon",
-                    eventAction: `get_tickets`,
+                    eventAction: "get_tickets_home_banner",
                     eventName: "visit",
                   }}
                   hideArrow
@@ -195,7 +192,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <FeatureCards eventCategory={eventCategory} />
 
             {/* Devcon VIII India callout banner */}
-            <DevconIndiaLargeCallout />
+            <DevconIndiaLargeCallout sourcePage="home" />
 
             <LatestUpdates eventCategory={eventCategory} />
 

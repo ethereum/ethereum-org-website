@@ -20,7 +20,7 @@ breadcrumb: "Toplamalar"
 
 *Bu transkript, Finematics tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=7pWxCklcNsU) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Katman 2 (1:17) {#layer-2-117}
+### Katman 2 (1:17) {#layer-2-117}
 
 Ethereum ölçeklendirmesi, kripto dünyasında en çok tartışılan konulardan biri olmuştur. Ölçeklendirme tartışması genellikle 2017'deki CryptoKitties çılgınlığı, 2020'nin merkeziyetsiz finans (DeFi) Yazı veya 2021'in başındaki kripto boğa piyasası gibi yüksek ağ etkinliği dönemlerinde alevlenir. Bu dönemlerde, Ethereum ağına yönelik eşi benzeri görülmemiş talep, son derece yüksek gaz ücretlerine yol açarak günlük kullanıcıların işlemlerini ödemesini pahalı hale getirdi.
 
@@ -28,7 +28,7 @@ Bu sorunun üstesinden gelmek için nihai ölçeklendirme çözümünü arayış
 
 Genel olarak, Ethereum'u —veya aslında diğer çoğu blokzinciri— ölçeklendirmenin üç ana yolu vardır: blokzincirin kendisini ölçeklendirmek (katman 1 ölçeklendirmesi), katman 1'in üzerine inşa etmek (katman 2 ölçeklendirmesi) ve katman 1'in yanına inşa etmek (yan zincirler).
 
-#### Katman 1'in dışında (1:58) {#outside-of-layer-1-158}
+### Katman 1'in dışında (1:58) {#outside-of-layer-1-158}
 
 Katman 1 söz konusu olduğunda, Eth2, Ethereum blokzincirini ölçeklendirmek için seçilen çözümdür. Eth2; Hisse Kanıtı (PoS) sistemine geçiş, İş Kanıtı (PoW) blokzincirinin durumunu yeni Hisse Kanıtı zinciriyle birleştirme ve parça zinciri oluşturma gibi birbirine bağlı bir dizi değişikliği ifade eder. Özellikle parça zinciri oluşturma, bilhassa toplamalarla birleştirildiğinde Ethereum ağının işlem kapasitesini önemli ölçüde artırabilir.
 
@@ -42,7 +42,7 @@ Bunu başarmak için Rollup işlemleri, EVM'nin Rollup'a özgü bir sürümünü
 
 Her Rollup, katman 1'de para yatırma ve çekme işlemlerini işlemekten ve kanıtları doğrulamaktan sorumlu bir dizi akıllı sözleşme dağıtır. Kanıtlar aynı zamanda farklı Rollup türleri arasındaki temel ayrımın devreye girdiği yerdir. İyimser rolluplar sahtekarlık kanıtlarını kullanırken, ZK rollupları geçerlilik kanıtlarını kullanır.
 
-#### İyimser rolluplar (4:26) {#optimistic-rollups-426}
+### İyimser rolluplar (4:26) {#optimistic-rollups-426}
 
 İyimser rolluplar verileri katman 1'de yayınlar ve doğru olduğunu varsayar — "iyimser" adı da buradan gelir. Yayınlanan veriler geçerliyse, mutlu yoldayız demektir ve başka hiçbir şey yapılmasına gerek yoktur. İyimser rollup, iyimser senaryoda herhangi bir ek iş yapmak zorunda kalmamanın avantajını yaşar.
 
@@ -58,7 +58,7 @@ Sistem beklendiği gibi çalışabilir ve Rollup'ın durumunu izleyen ve gerekir
 
 ZK rollupları söz konusu olduğunda, hiçbir uyuşmazlık çözümü yoktur. Bu, sıfır bilgi kanıtları adı verilen zekice bir kriptografi parçasından yararlanılarak mümkündür — ZK rollupları adı da buradan gelir. Bu modelde, katman 1'de yayınlanan her parti, ZK-SNARK adı verilen kriptografik bir kanıt içerir. Kanıt, işlem partisi gönderildiğinde katman 1 sözleşmesi tarafından hızlı bir şekilde doğrulanabilir ve geçersiz partiler anında reddedilebilir.
 
-#### Diğer farklılıklar (7:28) {#other-differences-728}
+### Diğer farklılıklar (7:28) {#other-differences-728}
 
 Uyuşmazlık çözüm sürecinin doğası gereği, iyimser rolluplar, katman 1'de bir işlemi kesinleştirmeden önce tüm ağ katılımcılarına sahtekarlık kanıtları sunmaları için yeterli zaman vermelidir. Bu süre genellikle oldukça uzundur — en kötü senaryoda bile hileli işlemlere itiraz edilebileceğinden emin olmak için. Bu, kullanıcıların fonlarını katman 1'e geri çekebilmek için bir veya iki hafta kadar beklemeleri gerektiğinden, iyimser rolluplardan para çekme işlemlerinin oldukça uzun sürmesine neden olur.
 
@@ -70,7 +70,7 @@ Ancak, ZK rollupları kendi dezavantajlarıyla birlikte gelir. Teknolojinin karm
 
 İyimser rolluplar EVM uyumluluğu konusunda biraz daha rahattır. Yine de birkaç değişiklikle EVM'nin kendi sürümlerini çalıştırmaları gerekir, ancak sözleşmelerin %99'u herhangi bir değişiklik yapılmadan taşınabilir. ZK rollupları ayrıca iyimser rolluplardan çok daha fazla hesaplama ağırlıklıdır, bu da ZK kanıtlarını hesaplayan düğümlerin yüksek özellikli makineler olması gerektiği anlamına gelir ve diğer kullanıcıların bunları çalıştırmasını zorlaştırır.
 
-#### Ölçeklendirme iyileştirmeleri (9:32) {#scaling-improvements-932}
+### Ölçeklendirme iyileştirmeleri (9:32) {#scaling-improvements-932}
 
 Ölçeklendirme iyileştirmeleri söz konusu olduğunda, her iki Rollup türü de Ethereum'u saniyede yaklaşık 15–45 işlemden (işlem türüne bağlı olarak) saniyede 1.000–4.000 işleme kadar ölçeklendirebilmelidir. Katman 1'de Rollup partileri için daha fazla alan sunarak saniyede daha da fazla işlem gerçekleştirmenin mümkün olduğunu belirtmekte fayda var.
 
@@ -84,7 +84,7 @@ Hem Arbitrum hem de Optimism aynı hedefe —EVM uyumlu iyimser rollup çözüml
 
 Bir diğer önemli fark, işlem sıralamasını ve MEV'yi ele alma yaklaşımıdır. Arbitrum başlangıçta işlemleri sıralamaktan sorumlu bir sıralayıcı çalıştıracak, ancak uzun vadede bunu merkeziyetsizleştirmek istiyorlar. Optimism, işlemlerin sıralanmasının —ve dolayısıyla MEV'nin— belirli bir süre için diğer taraflara açık artırmayla satılabileceği başka bir yaklaşımı tercih ediyor.
 
-#### ZK rollupları (13:10) {#zk-rollups-1310}
+### ZK rollupları (13:10) {#zk-rollups-1310}
 
 Ethereum topluluğu çoğunlukla iyimser rolluplara odaklanıyor gibi görünse de —en azından kısa vadede— ZK rollupları üzerinde çalışan projeler de son derece hızlı ilerliyor.
 
@@ -92,11 +92,11 @@ Loopring, borsa ve ödeme protokolünü ölçeklendirmek için ZK rollup teknolo
 
 StarkWare tabanlı rolluplar halihazırda DeversiFi, Immutable X ve dYdX gibi projeler tarafından yaygın olarak kullanılmaktadır. Daha önce de belirtildiği gibi zkSync, Solidity ile yazılmış herhangi bir rastgele akıllı sözleşmeyi tam olarak destekleyebilecek EVM uyumlu bir sanal makine üzerinde çalışıyor.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Toplamaların DeFi üzerinde de büyük bir etkisi olmalıdır. Daha önce yüksek işlem ücretleri nedeniyle Ethereum'da işlem yapamayan kullanıcılar, ağ etkinliği bir sonraki sefer yüksek olduğunda ekosistemde kalabilecekler. Toplamalar ayrıca, tamamen Ethereum mutabakatı tarafından güvence altına alınırken daha ucuz işlemler ve daha hızlı onay süresi gerektiren yeni bir uygulama türüne de olanak tanıyacaktır. Görünüşe göre toplamalar, DeFi için başka bir yüksek büyüme dönemini tetikleyebilir.
 
-#### Zorluklar (14:29) {#challenges-1429}
+### Zorluklar (14:29) {#challenges-1429}
 
 Ancak, toplamalar söz konusu olduğunda birkaç zorluk vardır. Birleştirilebilirlik bunlardan biridir — birden fazla protokol kullanan bir işlem oluşturmak için, hepsinin aynı Rollup üzerinde dağıtılması gerekir.
 
@@ -104,7 +104,7 @@ Bir diğer zorluk ise parçalanmış likiditedir. Bir bütün olarak Ethereum ek
 
 Bu aynı zamanda doğal olarak kazananlar ve kaybedenler olacağı anlamına da gelir. Şu anda mevcut Ethereum ekosistemi, tüm ölçeklendirme çözümlerinden yararlanacak kadar büyük değil. Bu uzun vadede değişebilir —ve muhtemelen değişecektir— ancak kısa vadede bazı rollupların ve diğer ölçeklendirme çözümlerinin hayalet kasabalara dönüştüğünü görebiliriz. Gelecekte, kullanıcıların tamamen tek bir Rollup ekosistemi içinde yaşadığını ve uzun süreler boyunca ana Ethereum zinciri ve diğer ölçeklendirme çözümleriyle etkileşime girmediğini de görebiliriz.
 
-#### Yan zincirlere yönelik tehdit (15:44) {#threat-to-sidechains-1544}
+### Yan zincirlere yönelik tehdit (15:44) {#threat-to-sidechains-1544}
 
 Toplamaları tartışırken çok sık gündeme gelen bir soru, bunların yan zincirler için bir tehdit olup olmadığıdır. Yan zincirlerin Ethereum ekosisteminde hala bir yeri olacaktır. Katman 2'deki işlem maliyeti katman 1'dekinden çok daha düşük olsa da, büyük olasılıkla oyunlar ve diğer yüksek hacimli uygulamalar gibi belirli uygulama türlerini fiyatlandıracak kadar yüksek olmaya devam edecektir. Bu durum Ethereum parça zinciri oluşturmayı tanıttığında değişebilir, ancak o zamana kadar yan zincirler uzun vadede hayatta kalmak için yeterli ağ etkisi yaratabilir.
 

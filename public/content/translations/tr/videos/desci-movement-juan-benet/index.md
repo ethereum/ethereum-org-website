@@ -18,7 +18,7 @@ Protocol Labs'in kurucusu ve IPFS ile Filecoin'in mucidi **Juan Benet**'in EthCC
 
 *Bu döküm, EthCC tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=zkXM9H90g_E) erişilebilir bir kopyasıdır. Okunabilirliği artırmak amacıyla ufak düzenlemeler yapılmıştır.*
 
-#### Bilime ve ilerlemeye giriş (0:10) {#introduction-to-science-and-progress-010}
+### Bilime ve ilerlemeye giriş (0:10) {#introduction-to-science-and-progress-010}
 
 Pekala, herkese merhaba. Benim adım Juan. Buraya DeSci hakkında konuşmaya geldim. DeSci'yi bilimi finanse etmek, organize etmek ve erişime açmak için nasıl kullanabileceğimizden bahsetmek istiyorum. Öncelikle, şunların üzerinden geçeceğiz: Bir süreliğine genel olarak bilimden bahsedeceğim, ardından DeSci hareketinin ne olduğunu, sonrasında bilimsel müşterekleri nasıl finanse edebileceğimizi anlatacağım. Daha sonra DeSci'nin insanları, projeleri ve bilim etrafındaki çalışmaları nasıl organize ettiğine değineceğim. Ardından açık erişim ve tekrarlanabilir bilim hakkında biraz konuşmak ve bir eylem çağrısıyla bitirmek istiyorum. Bu yüzden oldukça hızlı olacak. Ele alacağımız çok şey var, bu yüzden hızlı ilerleyeceğim.
 
@@ -34,7 +34,7 @@ Ancak bilimin bir ton sorunu var. Bilimsel girişimle ilgili her türlü mesele 
 
 Çalışmalar yapılıp üretildikten sonra, bunların sadece bir kısmı tekrarlanabiliyor. Yani yayımlanmış, kabul edilmiş ve doğru olduğu düşünülmüş, ancak daha sonra büyük bir kısmının aslında tekrarlanamadığı anlaşılan her türlü bilimsel çalışma var. Dolayısıyla büyük bir tekrarlanabilirlik krizi var. Hatta eserleri kaybolan bilimsel keşifler bile var. Bazı sonuçlarla ilişkili asıl makalelerin, kodların veya verilerin bilgi bankalarımızdan kaybolduğunu düşünün. Yani bilim etrafında düzeltilmesi gereken her türlü sorun var ve DeSci'nin amacı da kısmen budur. Bu, söz konusu sorunların birçoğunu toptan veya tamamen olmasa da ele almaktır; DeSci topluluğu bu sorunların bir kısmını çözmeye çalışıyor.
 
-#### DeSci hareketi (5:11) {#the-desci-movement-511}
+### DeSci hareketi (5:11) {#the-desci-movement-511}
 
 Peki DeSci nedir? Merkeziyetsiz bilim (DeSci), Web3 teknolojisini ve araçlarını kullanarak bilimi geliştirmeye yönelik bir harekettir. Dünya çapında çeşitli alanlarda bilimi nasıl yaptığımızı iyileştirebilecek sistemler ve yapılar oluşturmak için hash bağlantılarının, blokzincirlerinin ve akıllı sözleşmelerin tüm büyüsünü kullanabildiğinizi düşünün.
 
@@ -46,7 +46,7 @@ Bu oldukça yeni bir hareket. Bir süredir bizimle birlikte. IPFS'i başlattığ
 
 Artık bu toplulukları bir araya getiren birçok farklı buluşma ve konferans da var. DeSci Day, DeSci Berlin, Gitcoin topluluğundan Schelling Point ve Funding the Commons gibi etkinlikler. Bu konferanslar, DeSci etrafındaki konuşmaların birçoğunu bir araya getiriyor.
 
-#### Müşterekleri finanse etmek (10:40) {#funding-the-commons-1040}
+### Müşterekleri finanse etmek (10:40) {#funding-the-commons-1040}
 
 Müşterekleri finanse etmek hakkında konuşalım. Belki bazılarınız geçmişte inovasyon uçurumu etrafında kullandığım bu diyagramı görmüştür. Bilimden teknolojiye geçişte, DeSci kısmı çoğunlukla sol kısma —sadece bilim kısmına— odaklanıyor; daha iyi bilimsel çıktılar üretmek için daha iyi teşvik yapıları ve grupları koordine etmenin daha iyi yollarını düşünmeye çalışıyor. Küresel Ar-Ge fonlamasının toplamının bir açıdan oldukça devasa olduğunu, ancak başka bir açıdan o kadar da büyük olmadığını ve inşa ettiğimiz teknolojinin işlem kapasitesi ve sonuçları muazzam bir şekilde artmış olmasına rağmen son birkaç on yılda çok fazla değişmediğini belirtmekte fayda var.
 
@@ -64,7 +64,7 @@ Web3 kamusal mallar imdada yetişiyor! Birçok farklı grup var. Elbette bu hala
 
 Etki sertifikaları, geriye dönük fonlamayı temsil eden bir başka büyüleyici yapıdır. Katılımcıların, bir etki elde ettiklerinde, bu etki etrafında bir sertifika basmalarına ve bunu piyasada bu etkiyi talep etmek isteyen herkese satmalarına olanak tanır. Bu, spekülatif bir piyasanın ortaya çıkmasını sağlayarak, son derece önemli çalışmaları geriye dönük olarak finanse etmek için zaman içinde bir döngüyü kapatır. Bu çok önemlidir çünkü çoğu zaman bir şeyin ne kadar değerli olduğunu ancak iş yapıldıktan çok sonra fark edersiniz.
 
-#### İnsanları organize etmek ve Veri DAO'ları (15:28) {#organizing-people-and-data-daos-1528}
+### İnsanları organize etmek ve Veri DAO'ları (15:28) {#organizing-people-and-data-daos-1528}
 
 Şimdi insanları organize etmek hakkında bazı kısa düşünceler. Geçmişte GitHub, bilimsel keşifleri organize etmeye yardımcı olma konusunda muazzam derecede başarılı oldu. Tüm ders kitapları ve alanlar GitHub aracılığıyla gelişti. Birçok grup, uygulama ve bilim topluluklarını organize etmek için GitHub'ın sorunlar (issues), kod iş birliği ve sürüm kontrolü etrafındaki temel yapı taşlarını kullandı. Ancak orada eksik olan şey, araştırma yapan, sermaye ile ilgilenen veya katkıda bulunanlara ödeme yapan organizasyonlar yaratmanın bir yolunun olmamasıdır.
 
@@ -78,7 +78,7 @@ Bu tür bir faaliyeti ve veri üretimini Veri DAO'su (Data DAO) adı verilen bir
 
 Açık erişim ve tekrarlanabilir bilim üzerine bazı son notlar. IPFS halihazırda birçok açık bilim çalışması için tonlarca kullanıldı. Dağıtık Wikipedia kopyalarını, devasa makale arşivlerini ve veri kümelerini destekleyerek, birçok bilime erişimi açma hayalini halihazırda yaşıyor.
 
-#### Açık erişim, tekrarlanabilir bilim ve eylem çağrısı (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Açık erişim, tekrarlanabilir bilim ve eylem çağrısı (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Tam tekrarlanabilirlik konusunda henüz o noktada değiliz. Bu, daha fazla çalışma gerektiren bir alan, ancak birçok insan halihazırda bunun üzerine düşündü. Tüm varlıkları dondurmak ve tamamen tekrarlanabilir bir ardışık düzen oluşturmak için IPFS ile standart tekrarlanabilirliği kullanma etrafında gerçekten iyi spesifikasyonlar ve fikirler var. Geçmişteki belirli deneyleri geri çağırabilir, tamamen dondurulmuş sanal makineleri (VM) veya konteynerleri geri getirebilir, tüm veri ardışık düzenlerini yeniden çalıştırabilir ve deneylerin doğru olduğunu doğrulayabilirsiniz.
 

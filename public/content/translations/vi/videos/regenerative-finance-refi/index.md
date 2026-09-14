@@ -18,25 +18,25 @@ Một video giải thích của **CNBC Television** khám phá phong trào tài 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=La52dDzBt2k) do CNBC Television xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Tài chính tái tạo là gì? (0:00) {#what-is-regenerative-finance-000}
+### Tài chính tái tạo là gì? (0:00) {#what-is-regenerative-finance-000}
 
 Điều gì xuất hiện trong đầu bạn khi nghe thuật ngữ "ReFi"? Nếu bạn là chủ nhà, bạn có thể nghĩ đến việc tái cấp vốn (refinancing) cho ngôi nhà của mình. Nhưng đối với tiền mã hóa, nó mang một ý nghĩa hoàn toàn mới. Tài chính tái tạo đã được mô tả là sự giao thoa giữa tiền mã hóa và khí hậu. Đó là một mô hình tài chính khuyến khích các hành động của cộng đồng nhằm giúp giải quyết các vấn đề mang tính hệ thống như sự nóng lên toàn cầu và quản lý chất thải.
 
 **Nirvaan Ranganathan:** ReFi thực sự là sự kết hợp những gì tốt nhất của tài chính phi tập trung (DeFi) với các khái niệm về kinh tế học tái tạo, và về cơ bản là có một bộ công cụ tạo ra các công cụ tài chính, thị trường tài chính và một hệ thống kinh tế có các ngoại ứng tích cực — mang lại lợi ích cho con người, cho cộng đồng của họ và cuối cùng là cho hành tinh.
 
-#### Vấn đề năng lượng của tiền mã hóa (0:48) {#cryptos-energy-problem-048}
+### Vấn đề năng lượng của tiền mã hóa (0:48) {#cryptos-energy-problem-048}
 
 Tiền mã hóa đã mang tiếng là có hại cho hành tinh, vì các tài sản kỹ thuật số được biết là yêu cầu sử dụng rất nhiều điện năng, điều này có thể dẫn đến phát thải khí nhà kính — đặc biệt là ở các cộng đồng gần các cơ sở khai thác. Vào tháng 8 năm ngoái, Nhà Trắng ước tính tổng lượng điện sử dụng toàn cầu cho các tài sản tiền mã hóa là từ 120 đến 240 tỷ kilowatt-giờ mỗi năm — một mức vượt quá tổng lượng điện sử dụng hàng năm của các quốc gia như Argentina và Úc.
 
 Kể từ đó, Ethereum đã chuyển từ Bằng chứng công việc (PoW) sang Bằng chứng cổ phần (PoS), cắt giảm đáng kể mức sử dụng năng lượng của nó. Nhưng Bitcoin vẫn là một cỗ máy ngốn năng lượng — một nghiên cứu gần đây hơn cho thấy việc khai thác Bitcoin đã sử dụng 95,58 terawatt-giờ mỗi năm.
 
-#### Các chuỗi khối âm carbon (1:31) {#carbon-negative-blockchains-131}
+### Các chuỗi khối âm carbon (1:31) {#carbon-negative-blockchains-131}
 
 Celo, một Giao thức chuỗi khối ra mắt vào Ngày Trái Đất ba năm trước, là một phần của phong trào đang phát triển với hy vọng thay đổi câu chuyện đó. Các nhà sáng lập của nó gọi Celo là "ngôi nhà của ReFi."
 
 **Nirvaan Ranganathan:** Celo là âm carbon, và đó là vì nhiều năm trước, cộng đồng đã thông qua một đề xuất Quản trị quyết định bù đắp lượng carbon mà mạng lưới tạo ra. Kể từ đó, nó đã tự động mua các tín chỉ bù đắp carbon theo đúng nghĩa đen mỗi ngày để thực sự bù đắp nhiều hơn lượng carbon mà nó thải ra — đó là lý do tại sao chúng tôi nói nó là âm carbon. Celo thực sự là mạng lưới đầu tiên làm điều này, mở đường để giúp thay đổi câu chuyện xung quanh các chuỗi khối và liệu chúng có thể là một động lực thực sự mang lại lợi ích cho môi trường hay không.
 
-#### Các dự án ReFi trong thực tế (2:16) {#refi-projects-in-action-216}
+### Các dự án ReFi trong thực tế (2:16) {#refi-projects-in-action-216}
 
 Một ví dụ về ReFi trong thực tế: một dự án có tên là Silvi, đang giúp hỗ trợ các nỗ lực trồng rừng trong một khu rừng nhiệt đới ở Kenya. Họ đã tạo ra một hệ thống khuyến khích mọi người trồng cây với chi phí thấp, và sau đó để những người khác đi và xác minh rằng những cái cây đó có ở đó — chỉ đơn giản bằng cách sử dụng điện thoại của họ, chụp ảnh những cái cây và sử dụng GPS trên điện thoại như một cách cung cấp bằng chứng.
 
@@ -44,7 +44,7 @@ Một ví dụ về ReFi trong thực tế: một dự án có tên là Silvi, �
 
 Một dự án khác là Collectivo Guilder, một loại tiền tệ cộng đồng ở Curaçao thuộc vùng Caribe. Họ đang khuyến khích chi tiêu tại địa phương thông qua một loại tiền tệ cộng đồng, nhưng bản thân loại tiền tệ này cũng được bảo chứng bằng cây xanh và các tài sản ReFi khác trên đảo. Điều này khuyến khích việc trồng cây ở Curaçao bên cạnh việc khuyến khích chi tiêu tại địa phương — một dự án ReFi hấp dẫn vừa tốt cho cộng đồng vừa tốt cho khí hậu.
 
-#### Động lực ngày càng tăng (3:50) {#growing-momentum-350}
+### Động lực ngày càng tăng (3:50) {#growing-momentum-350}
 
 Phong trào ReFi đang ngày càng thu hút sự chú ý. Vào tháng 4, vài trăm người đã tham dự Hội nghị Thượng đỉnh Khí hậu Chuỗi khối do Celo tổ chức tại nơi được gọi là "Ngôi nhà ReFi" ở Austin, Texas. Sự kiện này diễn ra cùng thời điểm và cùng thành phố với một trong những hội nghị tiền mã hóa lớn nhất thế giới, Consensus 2023. Mục tiêu chính là tạo ra một không gian cho các nhà xây dựng ReFi và "Regens" — như cách mọi người thích tự gọi mình — cùng nhau tụ họp, chia sẻ ý tưởng và nói về công việc họ đang làm. Rất nhiều sự hợp tác đã được hình thành ở đó.
 
@@ -52,7 +52,7 @@ Phong trào ReFi đang ngày càng thu hút sự chú ý. Vào tháng 4, vài tr
 
 Pitchbook đã và đang theo dõi nguồn vốn đầu tư vào ReFi, với hoạt động đạt đỉnh vào quý 3 năm ngoái khi toàn bộ thị trường tiền mã hóa vẫn đang phát triển mạnh mẽ. Tuy nhiên, năm nay, trong bối cảnh suy thoái hiện tại, các khoản đầu tư và số lượng giao dịch đã giảm xuống.
 
-#### Triển vọng cho ReFi (5:15) {#the-outlook-for-refi-515}
+### Triển vọng cho ReFi (5:15) {#the-outlook-for-refi-515}
 
 **Nhà phân tích:** Tôi thích khái niệm này. Liệu nó có phải là một ngành công nghiệp theo đúng nghĩa của nó hay không — tôi luôn kiểu như, "Hãy chờ xem điều này diễn ra như thế nào." Nhưng tôi thực sự nghĩ rằng sự minh bạch ngày càng tăng mà chuỗi khối có thể cung cấp luôn mang lại một cơ chế cho trách nhiệm giải trình cao hơn — cho dù đó là trách nhiệm giải trình trong chuỗi cung ứng, cách chúng ta xử lý chất thải, tạo ra các mô hình hành vi bền vững, hay tham gia vào các loại hoạt động lưới điện khác nhau, điều mà chúng ta đã và đang thấy.
 

@@ -20,7 +20,7 @@ Cette interview couvre la ressource d'espace de blobs d'Ethereum, introduite ave
 
 *Cette transcription est une copie accessible de la [transcription vidéo originale](https://www.youtube.com/watch?v=dFjyUY3e53Q) publiée par Bankless. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction à l'espace de blobs (0:00) {#introduction-to-blob-space-000}
+### Introduction à l'espace de blobs (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams :** Bienvenue sur Bankless, où nous explorons la frontière de la monnaie et de la finance sur Internet. Voici comment commencer, comment s'améliorer, comment anticiper les opportunités. Je suis ici avec David Hoffman, et nous sommes là pour vous aider à devenir plus « bankless » (sans banque). Vous savez comment nous disons que les chaînes de blocs vendent des blocs ? Eh bien, bientôt Ethereum vendra plus que de simples blocs — il vendra aussi des blobs.
 
@@ -38,7 +38,7 @@ Qu'est-ce que cela signifie pour l'ether ? Qu'est-ce que cela signifie pour les 
 
 Faisons entrer notre invité, Dom, également connu sous le nom de Domothy. Il est chercheur à la Fondation Ethereum et travaille sur la recherche et le développement des principales mises à jour d'Ethereum à venir, y compris l'EIP-4844 (le sujet d'aujourd'hui), le danksharding complet et le burn de MEV.
 
-#### L'histoire de la feuille de route centrée sur les rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### L'histoire de la feuille de route centrée sur les rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams :** Alors Dom, pour bien comprendre comment nous en sommes arrivés à l'espace de blobs, je pense qu'il vaut la peine de remonter le temps pour comprendre l'intégralité de la feuille de route d'Ethereum, car elle a abouti à une conclusion très logique avec les blobs et l'espace de blobs. Peux-tu nous ramener en arrière ? Parce qu'à une époque, la feuille de route d'Ethereum centrée sur les rollups n'existait pas. Nous avions cette chose appelée le sharding d'exécution (fragmentation de l'exécution), que nous n'avons finalement jamais eue. À quel moment de l'histoire de la feuille de route d'Ethereum est-il approprié de se placer pour vraiment comprendre tout le contexte de l'espace de blobs ?
 
@@ -58,7 +58,7 @@ Maintenant, ce que nous faisons avec la feuille de route centrée sur les rollup
 
 Fin 2020, les gens ont réalisé que les rollups commençaient à devenir incroyablement bons et populaires, et ils ont résolu notre problème de mise à l'échelle de l'exécution sans avoir besoin du sharding d'exécution. En optant pour un écosystème de rollups plutôt que d'essayer d'être un maximaliste de la couche 1 (l1), les rollups peuvent faire leurs propres compromis, créer leurs propres chaînes de blocs et expérimenter de nouvelles choses. Ethereum gère la vérification — c'est le cœur de ce qu'est une chaîne de blocs.
 
-#### Qu'est-ce que l'espace de blobs ? (30:00) {#what-is-blob-space-3000}
+### Qu'est-ce que l'espace de blobs ? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams :** Maintenant, amène-nous à l'état actuel, Dom. Nous avons de nombreux rollups qui utilisent l'espace de blocs de la couche 1 (l1) d'Ethereum, payant des frais de gaz élevés pour publier leurs données d'état afin que quiconque puisse les vérifier. Alors, Dom, qu'est-ce qu'un blob ?
 
@@ -72,7 +72,7 @@ C'est essentiellement un paquet scellé. La couche 1 (l1) le prend, garantit que
 
 **Domothy :** Exactement. Et une autre propriété critique des blobs est qu'ils sont automatiquement élagués après une certaine période — actuellement environ 18 jours. La raison pour laquelle ils sont élagués est que pour garantir une vérification sans tiers de confiance, les individus n'ont besoin de ces données disponibles que pour prouver la finalité et le consensus sur l'état du rollup dans une fenêtre de contestation spécifique. Vous n'avez pas besoin d'un millier de nœuds conservant des blobs d'il y a deux ans pour vérifier votre transaction aujourd'hui. Lorsque la fenêtre expire, vous ne l'obtiendrez plus d'un nœud Ethereum ; vous l'obtiendrez de fournisseurs d'historique, d'indexeurs ou des explorateurs de blocs natifs du rollup. Le stockage sur Ethereum est incroyablement cher pour toujours. L'abandon de l'exigence de stockage nous permet de mettre à l'échelle le débit des blobs sans détruire les disques durs des opérateurs de nœuds.
 
-#### Économie et danksharding complet (55:00) {#economics-and-full-danksharding-5500}
+### Économie et danksharding complet (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams :** Nous savons que la 4844 est la première étape — ce que nous appelons le proto-danksharding. Elle établit le format de blob et le marché des frais isolé, mais le nombre cible réel de blobs par bloc est initialement contraint pour être tout à fait sûr. À quoi ressemble cette mise à l'échelle vers le danksharding complet ?
 
@@ -86,7 +86,7 @@ Avec un marché des frais bidimensionnel — essentiellement une route isolée e
 
 **Domothy :** Oui, ils sont entièrement déconnectés. Et l'inverse est vrai. Si le débit de la couche 2 (l2) augmente considérablement et que des milliers de rollups fonctionnent et congestionnent l'espace de blobs, le pic résultant des frais de base des blobs n'affectera pas le coût d'une simple transaction sur le réseau principal Ethereum. Le frais de base des blobs fonctionne exactement comme le frais de base de l'EIP-1559, mais dans sa propre dimension. Et pour répondre à ta question précédente sur le burn — oui, les frais de blob génèrent de l'ETH brûlé pour payer l'inclusion des données dans l'espace de blobs, de manière totalement séparée du burn des frais de base de l'espace de blocs.
 
-#### L'avenir de la mise à l'échelle d'Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### L'avenir de la mise à l'échelle d'Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams :** Je veux en venir à ce qui se passe spécifiquement lors de la sortie de la 4844. Initialement, on s'attend évidemment à ce que lorsque la capacité des blobs se débloquera soudainement, il n'y aura pas assez de demande de la part des rollups à cette microseconde exacte pour la remplir complètement. L'espace de blobs sera presque comiquement bon marché au lancement. Mais n'y a-t-il pas la loi de la demande induite ? Si vous avez des ressources incroyablement bon marché, les applications qui consomment ces ressources explosent en volume.
 

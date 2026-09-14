@@ -19,7 +19,7 @@ Une keynote de **Bartek Kiepuszewski**, fondateur de L2BEAT, à la Devcon SEA, e
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=ik2JxmHDmyw) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 En tant que fondateur de L2BEAT, j'ai l'opportunité unique de travailler avec pratiquement toutes les équipes de l2 existantes, et nous travaillons avec elles depuis les tout débuts de cet écosystème — c'est-à-dire il y a environ quatre ans. C'est incroyable. Le temps passe très vite. Nous avons travaillé avec les premiers pionniers de la technologie à divulgation nulle de connaissance (ZK), nous avons travaillé avec le Plasma Group qui a été rebaptisé Optimism, nous avons travaillé avec Arbitrum. Et depuis cette scène, je tiens à saluer toutes ces équipes, car sans votre soutien, nous ne serions certainement pas là. Chez L2BEAT, nous sommes extrêmement reconnaissants pour tout le soutien que la communauté nous apporte.
 
@@ -27,7 +27,7 @@ Jetons donc un coup d'œil à ce que nous avons réussi à accomplir. Tout d'abo
 
 Le fait est qu'avec toute cette croissance vient aussi beaucoup de responsabilités. Nous devons comprendre que les utilisateurs finaux qui utilisent ces systèmes placent de l'argent dans ces rollups parce qu'ils croient que les rollups héritent de la sécurité d'Ethereum. Avec cette prise de conscience, à mon avis, nous devons commencer à prendre la sécurité au sérieux.
 
-#### Mettre Ethereum à l'échelle (2:10) {#scaling-ethereum-210}
+### Mettre Ethereum à l'échelle (2:10) {#scaling-ethereum-210}
 
 Nous avons également réussi à mettre Ethereum à l'échelle. Ethereum fonctionnait plutôt bien, mais il a commencé à devenir vraiment lent face à la demande et les frais devenaient très élevés. Donc, nous sommes assurément en train de passer à l'échelle — ces chiffres augmentent également. C'est incroyable.
 
@@ -35,7 +35,7 @@ Cependant, il y a un « mais ». Vous savez, les amis, il y a toujours un « mai
 
 Parce que vous savez, nous utilisons des petites roues depuis trop longtemps. Si vous êtes un adulte et que vous utilisez des petites roues — et je le répète, cela fait quatre ans — alors vous êtes vraiment immature. C'est normal d'utiliser des petites roues quand on est un enfant. Ce n'est pas normal d'utiliser des petites roues quand on est un adulte. Et je pense qu'il est temps pour nous tous d'arrêter d'être timides à ce sujet. Nous devrions tous nous exprimer, et nous ne devrions pas souffrir du syndrome des habits neufs de l'empereur.
 
-#### Le grand « mais » : l'absence de systèmes de preuve (4:30) {#the-big-but-missing-proof-systems-430}
+### Le grand « mais » : l'absence de systèmes de preuve (4:30) {#the-big-but-missing-proof-systems-430}
 
 Alors, quel est ce grand « mais » ? Eh bien, tout d'abord, la plupart des l2 d'aujourd'hui n'ont pas de système de preuve, ce qui est assez surprenant car les premiers pionniers comme StarkNet, comme zkSync, comme Aztec — il y a quatre ans, lorsqu'ils lançaient leurs premiers rollups spécifiques à des applications, ils avaient des systèmes de preuve. Donc oui, vous pouvez lancer aujourd'hui un l2 en un clic. Cependant, est-ce vraiment un l2 ? Est-ce vraiment un rollup ? Ce que vous faites, c'est lancer quelque chose qui est sécurisé par un multisig. Je ne pense pas que ce soit suffisant.
 
@@ -43,13 +43,13 @@ L'état de l'écosystème aujourd'hui ressemble un peu à ce diagramme. À gauch
 
 Ce graphique à droite inclura également toutes les piles Orbit, qui ont un système de preuve, mais qui se trouvent en réalité derrière une liste blanche à permission souvent très courte. Parfois, cette liste blanche ne compte qu'un seul acteur — c'est le même que le proposant d'état. C'est essentiellement le proposant d'état et il n'y a que lui qui puisse se contester lui-même. Genre, pardon ? Sérieusement.
 
-#### Conseils de sécurité (6:00) {#security-councils-600}
+### Conseils de sécurité (6:00) {#security-councils-600}
 
 Aujourd'hui, la plupart des l2 n'utilisent pas de conseils de sécurité. Qu'entendons-nous par conseil de sécurité ? Un conseil de sécurité est essentiellement un multisig composé d'au moins huit participants et nécessitant un seuil de consensus de 75 %. Vous pouvez donc le voir comme un grand multisig, mais ce n'est pas seulement une question de taille — c'est le fait que nous voulons que les participants soient géographiquement décentralisés. Vous avez peut-être entendu hier une présentation incroyable sur la nécessité de la géo-diversification. C'est ce que nous attendons de ces structures. Et fondamentalement, nous voulons surtout que les participants viennent d'entreprises différentes et de juridictions différentes. C'est super important, et je vais vous montrer quelques exemples du pourquoi.
 
 Considérez les conseils de sécurité comme des multisigs surpuissants. Il y a une couche sociale très importante derrière eux. Voici donc l'état actuel des choses, et encore une fois, c'est très mauvais. Nous n'avons des conseils de sécurité que chez Arbitrum, Optimism, Polygon, zkSync — et je sais que StarkNet, Scroll, et de manière intéressante Fuel, se lancent avec un conseil de sécurité. Tous les autres sont essentiellement de très petits multisigs internes, souvent privés, et franchement, il est extrêmement difficile de faire la différence entre ces multisigs et de simples EOA.
 
-#### Hypothèses de confiance sur la disponibilité des données (7:25) {#data-availability-trust-assumptions-725}
+### Hypothèses de confiance sur la disponibilité des données (7:25) {#data-availability-trust-assumptions-725}
 
 Le troisième grand point sur lequel nous nous sommes trompés est que la plupart des l2 qui ne sont pas des rollups sont configurés avec des hypothèses de confiance sur la disponibilité des données (DA) épouvantables. Et j'utilise le mot « épouvantable » — A, parce que je l'aime bien, et B, parce que c'est vraiment, vraiment mauvais.
 
@@ -59,7 +59,7 @@ Un comité de disponibilité des données (DAC) a été initialement créé et d
 
 Donc, dans l'ensemble, je suis désolé de le dire, mais pour le moment dans la plupart des l2, des opérateurs à permission peuvent voler ou geler vos fonds. Nous sommes ici pour vous en faire prendre conscience. Désolé de le dire, mais nous devons changer d'attitude.
 
-#### Pourquoi les systèmes de preuve sont importants (8:40) {#why-proof-systems-matter-840}
+### Pourquoi les systèmes de preuve sont importants (8:40) {#why-proof-systems-matter-840}
 
 Pourquoi devrions-nous nous soucier des systèmes de preuve ? Il y a au moins trois bonnes raisons, à notre avis, pour lesquelles nous devrions tous avoir un système de preuve fonctionnel.
 
@@ -71,7 +71,7 @@ Une fois que vous introduisez un système de preuve, la situation est beaucoup p
 
 Enfin, les systèmes de preuve — si vous êtes au Stade 2 — vous permettent de supprimer tout intermédiaire quel qu'il soit. Vous n'avez pas besoin d'un conseil de sécurité, ou si vous en avez un, c'est uniquement pour les situations d'urgence. Cela peut donc avoir de profondes implications réglementaires. Vous pourriez vouloir lancer votre l2 en tant que système de Stade 2 dès le départ. C'est possible, mais bien sûr, vous devez avoir un système de preuve — idéalement, vous pourriez vouloir en avoir plus d'un. Il y a déjà des annonces de systèmes qui font cela, comme la récente annonce de l'équipe Nethermind construisant un rollup prévu pour être au Stade 2 dès son lancement.
 
-#### Pourquoi des conseils de sécurité, et non des multisigs (11:29) {#why-security-councils-not-multisigs-1129}
+### Pourquoi des conseils de sécurité, et non des multisigs (11:29) {#why-security-councils-not-multisigs-1129}
 
 C'était pour les systèmes de preuve. Maintenant, pourquoi des conseils de sécurité et pas de simples multisigs ? La raison est la suivante : ne croyez pas que les multisigs sont des multisigs. C'est la raison — à moins qu'il n'y ait une couche sociale qui puisse réellement vous convaincre qu'ils sont fondamentalement diversifiés.
 
@@ -83,7 +83,7 @@ Enfin, très récemment, nous avons subi une attaque sur un multisig. Ne pensez 
 
 Donc pour résumer : si vous avez un rollup de Stade 0 sans conseil de sécurité, un opérateur malveillant peut essentiellement faire ce qu'il veut de vos fonds. Si vous êtes un rollup de Stade 0 avec un conseil de sécurité, alors un attaquant doit soudoyer une minorité du conseil de sécurité — peut-être une chose difficile à faire, mais beaucoup plus facile que de soudoyer la majorité du conseil de sécurité, ce que vous devriez faire si votre rollup a un système de preuve. Et enfin, personne ne peut voler vos fonds si vous êtes au Stade 2. C'est la promesse d'atteindre le Stade 2.
 
-#### Reclassification proposée (13:10) {#proposed-reclassification-1310}
+### Reclassification proposée (13:10) {#proposed-reclassification-1310}
 
 La question est : avons-nous les bonnes incitations pour que les projets s'en soucient réellement ? Le problème est que la seule chose que nous puissions faire — nous en tant que L2BEAT et nous en tant que communauté Ethereum — c'est d'exercer une pression sociale. Vitalik a déclaré qu'à partir de l'année prochaine, il prévoyait de ne mentionner publiquement que les l2 qui sont au Stade 1. Il avait même dit auparavant qu'il n'appellerait pas les systèmes des rollups s'ils ne sont pas au Stade 1.
 
@@ -93,7 +93,7 @@ Ce que nous proposons à la communauté — et cela va être publié sur le foru
 
 Ensuite, vous avez une autre catégorie de systèmes qui n'utilisent pas la DA d'Ethereum. Ils utilisent des hypothèses de confiance supplémentaires qui accompagnent une DA externe. Nous les appelons « alt-DA » mais ils incluraient les validiums, les optimiums, et toute construction hybride que vous pourriez créer. Cependant, ils doivent vous donner des garanties de DA raisonnables — cela ne peut pas être votre cave. Cela doit être un comité de disponibilité des données (DAC) de taille raisonnable, ou si vous utilisez Celestia ou Avail, vous devez utiliser le pont.
 
-#### La catégorie « autres » et l'engagement de L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### La catégorie « autres » et l'engagement de L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 Qu'en est-il des autres ? Nous les placerons dans une troisième catégorie, que nous appelons — et j'attends maintenant les retours de la communauté sur la façon de nommer ces systèmes — notre nom de travail est « autres ». Le fait est qu'ils sont sécurisés par des multisigs, et nous exposerons ces multisigs pour ce qu'ils sont. C'est ce que nous voulons faire dans notre interface utilisateur.
 
@@ -107,7 +107,7 @@ Suffit-il de dire « J'ai un système de preuve » ? Non. Notre engagement enver
 
 Nous embauchons des chercheurs. Nous ferons tout ce travail. C'est notre engagement pour l'année prochaine. J'espère que l'année prochaine sera l'année des l2 et des rollups — cependant, il ne s'agit pas de lancer un rollup en un clic. Le but est de pouvoir lancer un système avec une bonne sécurité. Idéalement, vous voulez hériter d'autant de sécurité que possible d'Ethereum. Il y a beaucoup de travail à faire pour nous tous afin d'y parvenir. Mais si nous ne le faisons pas, alors tout ce que nous faisons, c'est essentiellement créer des milliers de chaînes latérales non sécurisées. Je pense que nous ne voulons pas de cela en tant que communauté.
 
-#### Questions-Réponses (18:45) {#qa-1845}
+### Questions-Réponses (18:45) {#qa-1845}
 
 **Animateur :** Passons aux questions-réponses. Est-il important que les rollups aient un séquenceur décentralisé, ou d'autres mécanismes de sécurité sont-ils suffisants ?
 

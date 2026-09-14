@@ -98,8 +98,8 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["wallets", "find-wallet", "personas", personaId],
-    title: t(persona.heroTitleKey),
-    description: t(persona.heroDescKey),
+    title: t(persona.metaTitleKey),
+    description: t(persona.metaDescKey),
     image: "/images/wallets/wallet-hero.png",
   })
 }

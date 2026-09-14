@@ -24,8 +24,9 @@ export const clearMatomoOptOutCache = () => {
 }
 
 const scheduleIdleCallback =
-  typeof requestIdleCallback === "function"
-    ? requestIdleCallback
+  typeof window !== "undefined" &&
+  typeof window.requestIdleCallback === "function"
+    ? (cb: () => void) => window.requestIdleCallback(cb)
     : (cb: () => void) => setTimeout(cb, 0)
 
 // Use only for user-initiated actions (clicks, submits, swipes). Passive

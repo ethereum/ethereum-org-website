@@ -19,11 +19,11 @@ Prezentace **Christine Kim** na Devcon SEA, která pokrývá EIP zahrnuté do up
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=ufIDBCgdGwY) zveřejněného Nadací Ethereum. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 Budeme mluvit o všech EIP, které budou součástí upgradu Pectra. Rychlé upozornění, než začnu: vše, co se chystám říct, je pouze informativní — pro informační účely — a nemělo by to být vykládáno jako finanční nebo investiční poradenství.
 
-#### Kdy bude Pectra na Mainnetu (0:23) {#when-is-pectra-mainnet-023}
+### Kdy bude Pectra na Mainnetu (0:23) {#when-is-pectra-mainnet-023}
 
 Než se dostaneme k tomu, co bude součástí upgradu Pectra, otázka, kterou dostávám nejčastěji, zní: „Kdy bude Pectra na Mainnetu?“ Takže to hned na začátku vyřeším, abychom se mohli vrhnout na technické věci.
 
@@ -43,7 +43,7 @@ Historicky si vývojáři vyhradili asi dva týdny mezi upgrady veřejných test
 
 Vzhledem ke všem informacím, které v tuto chvíli vím, a pokroku, kterého vývojáři na upgradu Pectra dosud dosáhli, je moje nejlepší analýza a odhad, že Pectra na Mainnetu reálně proběhne v dubnu 2025. Opět platí, že je to velmi předběžné, protože se toho může hodně změnit. Vývoj probíhá z týdne na týden — vývojáři jsou na těchto hovorech ACD a mluví o chybě, kterou v tomto EIP nečekali, nebo o novém EIP, které chtějí do upgradu Pectra přidat.
 
-#### EIP exekuční vrstvy (6:23) {#execution-layer-eips-623}
+### EIP exekuční vrstvy (6:23) {#execution-layer-eips-623}
 
 Přejděme k jádru této přednášky — co bude součástí upgradu Pectra. Do upgradu Pectra jde deset EIP a čtyři z nich jsou zaměřeny na exekuční vrstvu.
 
@@ -55,7 +55,7 @@ Přejděme k jádru této přednášky — co bude součástí upgradu Pectra. D
 
 **EIP-7702** — nastavení kódu pro externě vlastněné účty (EOA). Do Etherea přichází nový typ transakce. Tento typ transakce dočasně umožní EOA mít větší flexibilitu, což umožní funkce jako dávkování transakcí, sponzorované transakce, podmíněné transakce a delegovanou bezpečnost. Možná si říkáte: „Je to vize abstrakce účtu, která ožívá na Ethereu?“ Ne, není — je to jen malý krůček. Je to raný krok k tomu, abychom viděli, jak by mohl vypadat skutečný plán k opravdové nativní abstrakci účtu na Ethereu. Proběhla poměrně velká debata o tom, jak by měli vývojáři tento první krok udělat, a spousta kontroverzí kolem jeho zařazení a designu — ale je tam.
 
-#### EIP vrstvy konsensu (12:00) {#consensus-layer-eips-1200}
+### EIP vrstvy konsensu (12:00) {#consensus-layer-eips-1200}
 
 Je tu šest dalších — to jsou EIP vrstvy konsensu.
 
@@ -69,11 +69,11 @@ Je tu šest dalších — to jsou EIP vrstvy konsensu.
 
 **EIP-7549** — přesun indexu výboru mimo atestaci. Jedná se o restrukturalizaci a refaktorování způsobu, jakým jsou atestace agregovány, aby se snížilo síťové zatížení Etherea a ušetřila šířka pásma uzlů. Když to vývojáři zahrnovali do upgradu Pectra, mysleli si, že je to skvělá změna s úžasnými výhodami a že bude snadná — ale v praxi se ukázalo, že je mnohem těžší ji implementovat, než se očekávalo.
 
-#### Shrnutí (17:19) {#summary-1719}
+### Shrnutí (17:19) {#summary-1719}
 
 Pectra je pestrá směs aktualizací. Udělá tři věci: zaprvé, opraví kritické nedostatky Etherea jako blockchainu s důkazem podílem (PoS) — vezměte si MaxEB, to je kritická oprava, protože velikost sady validátorů může nadále nekontrolovaně růst. Zadruhé, zlepší uživatelskou zkušenost — nový typ transakce, flexibilnější designy, některá vylepšení pro designy nevyžadující důvěru u staking poolů. A zatřetí, zvýší kapacitu dostupnosti dat Etherea — to sice nebylo formálně zahrnuto do upgradu Pectra, ale zdá se to pravděpodobné.
 
-#### EIP odstraněná z upgradu Pectra (18:02) {#eips-removed-from-pectra-1802}
+### EIP odstraněná z upgradu Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Zde jsou všechna EIP, která byla z upgradu Pectra odstraněna. Je to tak trochu poprvé, co bylo z upgradu odstraněno tolik EIP.
 
@@ -83,7 +83,7 @@ Zde jsou všechna EIP, která byla z upgradu Pectra odstraněna. Je to tak troch
 
 Tyto jsou nyní přesunuty do upgradu Fusaka. Verkle byl původně plánován pro upgrade Fusaka, ale od té doby byl dále odložen. EOF a PeerDAS jsou prozatím v upgradu Fusaka. Existují další EIP, u kterých vývojáři přehodnotí zahrnutí do upgradu Fusaka — přechod na SSZ, seznamy zahrnutí (inclusion lists), změny v emisi, exspirace historie, ePBS a směřování abstrakce účtu.
 
-#### Otázky a odpovědi (22:02) {#qa-2202}
+### Otázky a odpovědi (22:02) {#qa-2202}
 
 **Moderátor:** Kdy bude EOF?
 

@@ -18,7 +18,7 @@ Hotuba kuu na **Juan Benet** katika Kongamano la Cypherpunk la Ethereum (ECC#2) 
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=B08IXHLOQp4) iliyochapishwa na Web3Privacy Now. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:05) {#introduction-005}
+### Utangulizi (0:05) {#introduction-005}
 
 **Mwenyeji:** [makofi] Asante sana. Na ninapenda vazi lako leo. Ni la kushangaza. Kilts ni za kushangaza kwa kweli. Nilipata fursa ya kufunga ndoa hivi karibuni kwa moja ya siku na Scotland ni ya kushangaza.
 
@@ -28,7 +28,7 @@ Jina langu ni Juan Benet. Nimefanya kazi kwenye IPFS, libp2p, Ethereum, Filecoin
 
 Kuna hatua nyingi unazoweza kuchukua ili kuwa cypherpunk. Hizi ni picha za wimbi la kwanza la cypherpunks. Ni watu wa kawaida wa kila siku. Hapa kuna baadhi ya picha za wimbi la baadaye la cypherpunks. Na mmoja wao alikuwa katika cypherpunks wa mapema na wa baadaye. Unaweza kumuona Zooko akiwa na nywele ndefu na Zooko akiwa na nywele fupi.
 
-#### Cypherpunks huandika kodi (2:20) {#cypherpunks-write-code-220}
+### Cypherpunks huandika kodi (2:20) {#cypherpunks-write-code-220}
 
 Cypherpunks huandika kodi. Hii ni moja ya misingi mikuu ya vuguvugu hili. Mengi yamesemwa kuhusu hili, lakini kumbuka kwamba mwisho wa siku, inabidi tuzalishe miundombinu halisi, kodi halisi inayoingia kwenye vifaa, kodi halisi inayoendesha mifumo tunayotumia kila siku. Na haiwezi kuwa kodi kwa ajili ya kikundi kidogo tu cha wasomi wa wadukuzi wenye ujuzi wa hali ya juu. Lazima iwe kodi ambayo kila mtu duniani anaweza kuitumia. Lazima iwe vitu vinavyosambazwa kwa mapana. Lazima iwe vitu vinavyoshindana katika viwango vya juu zaidi vya uzoefu wa mtumiaji wa bidhaa. Lazima iwe kodi ambayo ni nzuri na rahisi kutumia kama mbadala wowote uliowekwa kati au usio salama sana. Inabidi ushindane si tu kwa kile kilicho na faragha zaidi, bali pia kwa kile kilicho rahisi zaidi, kile kinachofurahisha zaidi kutumia. Watu wanafurahia nini zaidi? Kwa sababu mwisho wa siku, watu watachagua kulingana na vipengele hivyo na si kwa usalama. 
 
@@ -38,7 +38,7 @@ Cypherpunks hupigania uhuru na haki. Fikiria kuhusu uhuru muhimu unaotaka kuwa n
 
 Cypherpunks hujenga yutopia na protopia. Tuna maono chanya kwa ajili ya mustakabali. Tunatamani kujenga ulimwengu mzuri ambapo tunaweza kuishi kwa uhuru na kustawi pamoja. Sisi ni wa wingi kwa asili. Pia tunazuia distopia. Tunafahamu sana mustakabali mbaya unaowezekana. Tunahamasishwa kuzuia kuibuka kwa matokeo mabaya. Kitabu cha 1984 kilikuwa na ushawishi mkubwa kwa vuguvugu la cypherpunk. Cypherpunks wengi binafsi walitaka kuepuka Wizara ya Ukweli. Walitaka kuepuka ufuatiliaji wa watu wengi ambao Orwell alizungumzia na walichukua somo hili rahisi sana la kimaadili kutoka kwenye kitabu: Usiruhusu itokee. Inategemea wewe. Na ninawaambia leo, msiruhusu itokee. Inategemea ninyi haswa. 
 
-#### Mawasiliano salama na ufadhili (5:26) {#secure-communications-and-funding-526}
+### Mawasiliano salama na ufadhili (5:26) {#secure-communications-and-funding-526}
 
 Cypherpunks huwezesha mawasiliano salama na ya faragha, kuanzia kuja na matokeo ya mapinduzi katika kriptografia ili kuwezesha kripto ya ufunguo wa umma, aligoriti za mapinduzi zinazoifanya iwe ya vitendo, yenye manufaa zaidi, na ngumu zaidi kuvunja. Au si uvumbuzi, bali ni hatua muhimu tu kwa wakati huo. Unaweza kugundua kwamba wakati mwingine unahitaji kuchukua hatua muhimu ili kurekebisha mkondo wa historia. Mark Miller, mmoja wa cypherpunks mahiri zaidi kutoka siku za mwanzo, aliyeonyeshwa hapa, wa pili kutoka kushoto, pamoja na magwiji wengine wengi wa enzi hiyo, tena, watu wa kawaida wa kila siku, alijua kwamba RSA na ufunguo wa umma vilikuwa vikizuiliwa na havikuchapishwa. Na kwa hivyo alichukua jukumu la kwenda na kutafuta karatasi hizo. Alitengeneza nakala za karatasi hizo kibinafsi, akienda kwenye sehemu nyingi tofauti za kutoa nakala ili kuepuka kuacha alama. Na kisha akatuma karatasi hizo kibinafsi kwa kundi kubwa la watu ili kuhakikisha kwamba endapo karatasi hizi zitaendelea kuwa za siri, maarifa yangetoka kuhusu jinsi ya kujenga aina hii ya kriptografia. Hatua hiyo ilikuwa muhimu sana katika wakati huo. 
 
@@ -48,7 +48,7 @@ Cypherpunks hupinga na kuzuia udhibiti. Kundi letu wakati Uturuki ilipopiga maru
 
 Cypherpunks hutengeneza pesa ili kuendeleza na kufadhili kriptografia na teknolojia ya faragha. Hili labda ndilo la kushangaza zaidi kwenu nyote hapa. Nini? Tunazungumzia faragha na usalama, sio pesa. Ah, lakini cypherpunks, tofauti na waendelezaji wengine wengi katika historia ya chanzo huria, wanaelewa mtaji na wanaelewa njia za ulimwengu na wanaelewa kwamba unahitaji kuweza kufadhili makundi makubwa ya watu ili kuendeleza programu. Wanaelewa kwamba ni ghali sana kujenga programu yenye ubora wa juu ambayo mamilioni ya watu wanaweza kutumia. Na kwa hivyo baadhi yetu hujenga mifumo inayoweza kuwa na mtiririko chanya wa pesa ili kuweza kufadhili na kuendeleza programu nyingi. Fikiria Ethereum, mfumo wenye mtiririko chanya wa pesa ambao umefadhili tani za utafiti wa ZK na FHE na teknolojia nyingine nyingi za faragha. Fikiria Zcash, mfumo wenye mtiririko chanya wa pesa ambao uliendeleza na kufadhili kazi ya ZK. Fikiria Protocol Labs na Filecoin ambao wana mfumo wenye mtiririko chanya wa pesa unaoendeleza na kufadhili ZK na FHE, na washiriki wa hivi karibuni zaidi, vitu kama Starknet na Zama, ambao wanafanya maendeleo mengi wenyewe na pia wanaunda muundo wa mtaji ili kuweza kufadhili tani ya utafiti huu katika siku zijazo. Makundi haya yote sio tu yanaendeleza vitu vyao wenyewe, yanafadhili maelfu ya watu wengine wanaofanya kazi kwenye teknolojia hii. Kwa hivyo kama cypherpunk, ikiwa unaweza kutengeneza mfumo wenye mtiririko chanya wa pesa, fanya hivyo ili uweze kufadhili kazi nyingine. Na miradi mingi hufanya hivi leo. 
 
-#### Vita vya kisheria na kujenga pamoja (10:17) {#legal-battles-and-building-together-1017}
+### Vita vya kisheria na kujenga pamoja (10:17) {#legal-battles-and-building-together-1017}
 
 Cypherpunks wanaweza kulazimika kukabiliana na vita vya kisheria. Tunatumai tunaweza kuepuka hilo. Tunatumai tunaweza kufanya kila kitu kwa kufuata sheria kila mahali. Lakini wakati mwingine makundi yenye nguvu yanapotaka kukiuka uhuru wako, yatachezea kila mfumo uliopo na yatakushambulia wakati mwingine kwa vita vya kisheria. Tulikuwa na vita vya kripto ambavyo vilipaswa kupiganwa, na vilipaswa kupiganwa mahakamani. Tunashukuru, tulishinda. Kulikuwa na vita vitatu, kesi nyingi za kuzuia mtiririko wa taarifa, kuzuia uchapishaji wa utafiti muhimu, kulazimisha aina fulani ya vifaa kama vile chipu ya Clipper. Kila moja ya mapambano haya yalihitaji watu wengi, wanasheria wengi, watunga sera wengi, watu wengi wakizungumza kuhusu kwa nini masuala haya ni muhimu na kwa nini ingekuwa mbaya sana kurudia aina hiyo ya tatizo. 
 
@@ -56,7 +56,7 @@ Na leo tuna toleo jingine. Udhibiti wa soga (Chat control) barani Ulaya unajarib
 
 Cypherpunks hujenga pamoja. Wakati mwingine tunafanya mambo peke yetu, lakini mwisho wa siku, tunachangia mawazo yetu na kodi yetu katika chanzo huria kwa watu wengine wengi, na tunaboresha kile tunachofanya kwa kuzungumza juu yake na kila mmoja, kuboresha mawazo yetu, kuboresha programu yetu, kupata maoni. Tunafanya hivyo kupitia majukwaa kama orodha ya barua pepe ya Cypherpunks au aina hizi za majukwaa katika jamii ya Liberty au jamii ya utafiti ya Ethereum. Tunafanya hivyo kwa kushirikiana katika miradi na timu nyingi, na tunafanya hivyo kupitia kumbi za mawasiliano kama hii. Kongamano la Mawasiliano la Chaos (Chaos Communication Congress) lilisaidia kukutanisha mengi ya makundi haya huko nyuma, na sasa tuna Kongamano la Cypherpunk la Ethereum linalokutanisha kundi letu kuzungumzia mawazo haya. Na pia tumekuwa tukitengeneza Mafungo ya Cypherpunk (Cypherpunk Retreat), ukumbi kwa ajili ya kundi la wajenzi katika mifumo na miradi hii kuja pamoja na kutatua matatizo ya msingi yanayoathiri kila mtu. Matatizo ya pamoja ambayo labda tunaweza kuyashughulikia pamoja, kwa sababu mara nyingi kile tunachotaka kuepuka ni mazingira yaliyogawanyika sana ambapo hakuna kinachowasiliana na kingine na ni wachezaji wakubwa waliowekwa kati wanaoshindana na mitandao midogo sana. Ikiwa tutajenga kwenye viwango vya wazi kama viwango vya wazi vya utambulisho au viwango vya wazi vya ujumbe, basi tunaweza kujenga mifumo mikubwa sana inayohifadhi faragha. Vitu ambavyo ni salama, lakini pia vinaingiliana. 
 
-#### Matatizo matatu ya wazi (15:27) {#three-open-problems-1527}
+### Matatizo matatu ya wazi (15:27) {#three-open-problems-1527}
 
 Cypherpunks hutatua matatizo ya wazi. Kwa hivyo nitawaacha na matatizo matatu muhimu ya wazi kwa miaka 10 hadi 15 ijayo, na natumai mmoja wenu au wachache wenu katika chumba hiki mtahamasishwa na matatizo haya ya wazi na mtafanyia kazi. 
 

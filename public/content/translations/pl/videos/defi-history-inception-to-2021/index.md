@@ -18,7 +18,7 @@ Materiał wyjaśniający autorstwa **Finematics** śledzący historię zdecentra
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=qFBYB4W2tqU) opublikowanego przez Finematics. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Początki DeFi (0:00) {#the-origins-of-defi-000}
+### Początki DeFi (0:00) {#the-origins-of-defi-000}
 
 Jaka jest historia zdecentralizowanych finansów (DeFi)? Jak to wszystko się zaczęło? Co wydarzyło się w DeFi w 2020 roku? I dokąd zmierzamy w przyszłości?
 
@@ -26,13 +26,13 @@ Początki DeFi sięgają 2009 roku. Chociaż możesz nie myśleć o Bitcoinie ja
 
 Po stronie Ethereum jednym z pierwszych kluczowych wydarzeń dla DeFi było ICO Ethereum. 22 lipca 2014 roku sprzedaż tokenów Ethereum została ogłoszona przez samego Vitalika Buterina. Zebrano około 18 milionów dolarów w 42 dni, co uczyniło ją jedną z pierwszych udanych kampanii crowdfundingowych opartych na kryptowalucie. Był to ważny moment, który umożliwił dalszy rozwój sieci Ethereum i utorował drogę dla inteligentnych kontraktów oraz zdecentralizowanych aplikacji (dapp).
 
-#### MakerDAO i narodziny pożyczania w DeFi (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
+### MakerDAO i narodziny pożyczania w DeFi (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
 
 Kolejny ważny kamień milowy: MakerDAO zostało uruchomione w grudniu 2017 roku. Był to jeden z protokołów, które zapoczątkowały to, co dziś nazwalibyśmy ekosystemem DeFi. W swoim rdzeniu MakerDAO pozwalało użytkownikom na zablokowanie ETH jako zabezpieczenia i wygenerowanie pod jego zastaw DAI — stablecoina powiązanego z USD. Stworzyło to jeden z pierwszych zdecentralizowanych protokołów pożyczkowych, a DAI stało się kamieniem węgielnym ekosystemu DeFi.
 
 Ważne było również stworzenie standardu tokenów ERC-20. Pozwoliło to każdemu na tworzenie zamiennych tokenów na Ethereum. Tokeny ERC-20 stały się standardem dla większości tokenów zarządzania protokołami DeFi, stablecoinów i innych aktywów cyfrowych. Umożliwiły one również falę innowacji, ponieważ nowe protokoły mogły emitować własne tokeny i łatwo integrować się z szerszym ekosystemem.
 
-#### Era ICO i wczesne giełdy (2:42) {#the-ico-era-and-early-exchanges-242}
+### Era ICO i wczesne giełdy (2:42) {#the-ico-era-and-early-exchanges-242}
 
 W 2017 roku pojawiła się również EtherDelta, jedna z pierwszych zdecentralizowanych giełd na Ethereum. Zbudowana na koncepcji księgi zleceń (order book), EtherDelta oferowała doświadczenie użytkownika dalekie od ideału — była powolna, pełna błędów i nieprzyjazna dla użytkownika. Mimo to EtherDelta była jedną z najpopularniejszych giełd do handlu tokenami ERC-20, zwłaszcza w erze ICO.
 
@@ -51,11 +51,11 @@ W gąszczu ICO znalazły się również projekty, które dziś sklasyfikowaliby�
 
 Pomimo złej reputacji manii ICO z 2017 roku, niektóre z projektów, które wtedy powstały, są obecnie uważane za czołowe protokoły w DeFi.
 
-#### Model użytkownik-kontrakt (4:52) {#the-user-to-contract-model-452}
+### Model użytkownik-kontrakt (4:52) {#the-user-to-contract-model-452}
 
 Jednym z głównych przełomów w tamtym czasie był pomysł, aby użytkownicy wchodzili w interakcje z inteligentnymi kontraktami zawierającymi połączone fundusze od wielu użytkowników, zamiast wchodzić w interakcje bezpośrednio z innymi użytkownikami. Zasadniczo stworzyło to nowy model użytkownik-kontrakt, który był bardziej odpowiedni dla zdecentralizowanych aplikacji, ponieważ nie wymagał tak wielu interakcji z bazowym blockchainem, jak model użytkownik-użytkownik.
 
-#### Spokojny okres i Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
+### Spokojny okres i Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
 
 Po zakończeniu manii ICO i nadejściu bessy, DeFi doświadczyło stosunkowo spokojnego okresu — przynajmniej z zewnątrz. W rzeczywistości, za kulisami, budowano główne protokoły DeFi. Zazwyczaj nazywam ten okres „przed COMP” — później dowiemy się, dlaczego kopanie płynności tokena COMP od Compound było głównym przełomem w DeFi.
 
@@ -63,7 +63,7 @@ Po zakończeniu manii ICO i nadejściu bessy, DeFi doświadczyło stosunkowo spo
 
 W lipcu 2019 roku miało miejsce kolejne ważne wydarzenie: Synthetix uruchomił pierwszy program zachęt do zapewniania płynności — mechanizm, który później stał się jednym z kluczowych katalizatorów DeFi Summer w 2020 roku. Wiele innych projektów DeFi również uruchomiło swoje protokoły w sieci głównej Ethereum w latach 2018-2019, w tym Compound, Ren, Kyber i 0x.
 
-#### Czarny Czwartek (8:07) {#black-thursday-807}
+### Czarny Czwartek (8:07) {#black-thursday-807}
 
 12 marca 2020 roku cena ETH gwałtownie spadła o ponad 30 procent w mniej niż 24 godziny w wyniku obaw związanych z globalną pandemią. Był to jeden z największych testów warunków skrajnych dla wciąż raczkującej branży DeFi.
 
@@ -73,13 +73,13 @@ Jednym z najbardziej dotkniętych protokołów był Maker. Fala likwidacji spowo
 
 Ostatecznie, chociaż wydarzenia takie jak Czarny Czwartek mogą być dość dotkliwe, zazwyczaj skutkują wzmocnieniem całego ekosystemu DeFi, czyniąc go coraz bardziej antykruchym.
 
-#### DeFi Summer (9:37) {#defi-summer-937}
+### DeFi Summer (9:37) {#defi-summer-937}
 
 To prowadzi nas do głównego okresu wzrostu DeFi, zwanego również DeFi Summer. Głównym katalizatorem był program kopania płynności tokenów COMP uruchomiony przez Compound. W maju 2020 roku użytkownicy DeFi zaczęli być nagradzani za pożyczanie na Compound. Dodatkowe zachęty w postaci tokenów COMP spowodowały drastyczny wzrost rocznych stóp procentowych (APY) dla podaży i pożyczania różnych tokenów. Umożliwiło to również rozwój yield farmingu, ponieważ użytkownicy byli zachęcani do ciągłego przełączania się między pożyczaniem różnych tokenów, aby osiągnąć jak najlepszy zysk.
 
 Wydarzenie to zapoczątkowało falę innych protokołów dystrybuujących swoje tokeny poprzez kopanie płynności i tworzących coraz więcej możliwości yield farmingu. Stworzyło to również zarządzanie Compound, w którym użytkownicy posiadający tokeny COMP mogli oddawać głos na różne proponowane zmiany w protokole. Model zarządzania Compound został później ponownie wykorzystany przez wiele innych projektów DeFi.
 
-#### Yearn Finance i YFI (10:48) {#yearn-finance-and-yfi-1048}
+### Yearn Finance i YFI (10:48) {#yearn-finance-and-yfi-1048}
 
 To prowadzi nas do kolejnej dużej innowacji w DeFi. Yearn, opracowany przez Andre Cronje na początku 2020 roku, to optymalizator zysków, który skupia się na maksymalizacji możliwości DeFi poprzez automatyczne przełączanie się między różnymi protokołami pożyczkowymi. Aby jeszcze bardziej zdecentralizować Yearn, Andre zdecydował się na dystrybucję tokena zarządzania — YFI — do społeczności Yearn w lipcu 2020 roku. Token został w pełni rozdystrybuowany poprzez kopanie płynności: bez funduszy VC, bez nagród dla założycieli, bez nagród dla deweloperów.
 
@@ -87,7 +87,7 @@ Model ten przyciągnął ogromne wsparcie ze strony społeczności DeFi, a pieni
 
 Podobnie jak w przypadku niemal wszystkich przełomowych projektów w DeFi, po sukcesie Yearn szybko pojawiło się wiele innych zespołów uruchamiających podobne projekty z kilkoma drobnymi modyfikacjami.
 
-#### Era żywnościowego DeFi (11:44) {#the-food-defi-era-1144}
+### Era żywnościowego DeFi (11:44) {#the-food-defi-era-1144}
 
 Kolejnym projektem, który zaczął zyskiwać na popularności dzięki swojemu unikalnemu modelowi elastycznej podaży, był Ampleforth. Model ten został szybko zapożyczony i powtórzony przez inny protokół DeFi: Yam. Po zaledwie 10 dniach rozwoju, Yam został uruchomiony 11 sierpnia 2020 roku.
 
@@ -99,7 +99,7 @@ Następnie pojawia się SushiSwap, uruchomiony pod koniec sierpnia 2020 roku prz
 
 Podczas DeFi Summer uruchomiono wiele innych projektów o różnej jakości — większość z nich była tylko iteracjami istniejących projektów open-source, próbującymi skorzystać z nadmiernego entuzjazmu. W ślad za Yam i SushiSwap pojawiła się garść projektów nazwanych od różnych rodzajów jedzenia — Pasta, Spaghetti, Kimchi, HotDog i inne — zbiorczo nazwanych „żywnościowym DeFi” (food DeFi) lub „food finals”. Prawie wszystkie z nich upadły po dniu lub dwóch zainteresowania.
 
-#### Token Uniswap i kluczowe wskaźniki (14:16) {#the-uniswap-token-and-key-metrics-1416}
+### Token Uniswap i kluczowe wskaźniki (14:16) {#the-uniswap-token-and-key-metrics-1416}
 
 Jednym z ostatnich ważnych wydarzeń DeFi Summer było uruchomienie tokena Uniswap, UNI. Wszyscy dotychczasowi użytkownicy i dostawcy płynności Uniswap zostali nagrodzeni retrospektywnym airdropem o wartości znacznie przekraczającej tysiąc dolarów. Ponadto Uniswap rozpoczął swój program kopania płynności w czterech różnych pulach płynności i przyciągnął ponad dwa miliardy dolarów płynności, z czego większość została odebrana z SushiSwap.
 
@@ -109,7 +109,7 @@ Podczas DeFi Summer wszystkie kluczowe wskaźniki uległy drastycznej poprawie:
 - Całkowita wartość zablokowana (TVL) w DeFi wzrosła z 800 milionów dolarów w kwietniu do 10 miliardów dolarów we wrześniu — ponad 10-krotny wzrost
 - Ilość Bitcoina przeniesionego do Ethereum wzrosła z 20 000 w kwietniu do prawie 60 000 we wrześniu — 3-krotny wzrost
 
-#### Zima DeFi i ożywienie (15:30) {#defi-winter-and-recovery-1530}
+### Zima DeFi i ożywienie (15:30) {#defi-winter-and-recovery-1530}
 
 Paraboliczny wzrost DeFi nie był oczywiście zrównoważony w dłuższej perspektywie. Nastroje rynkowe szybko uległy zmianie na początku września 2020 roku. Główne tokeny DeFi zaczęły gwałtownie tracić na wartości. Zyski z kopania płynności, pochodzące z wartości dystrybuowanych tokenów, również stawały się coraz niższe. Nadeszła zima DeFi.
 
@@ -119,7 +119,7 @@ Po szybkim odbiciu o ponad 50 procent, rynek DeFi ponownie zaczął rosnąć. Co
 
 Pod koniec 2020 roku, gdy Bitcoin przebił swój poprzedni rekord wszech czasów z 2017 roku, wyglądało na to, że DeFi przygotowuje się do kolejnego parabolicznego rajdu.
 
-#### Spojrzenie w rok 2021 i w przyszłość (16:56) {#looking-ahead-to-2021-and-beyond-1656}
+### Spojrzenie w rok 2021 i w przyszłość (16:56) {#looking-ahead-to-2021-and-beyond-1656}
 
 Patrząc dalej w rok 2021 i w przyszłość, perspektywy dla DeFi są jasne. Deweloperzy DeFi wciąż budują nowe, innowacyjne projekty. Nadchodzi również bardzo potrzebne skalowanie w postaci Ethereum 2.0, rozwiązań warstwy 2 (L2), a nawet innych blockchainów. Pozwoli to nowej grupie użytkowników na rozpoczęcie uczestnictwa w DeFi. Pomoże to również w odkrywaniu nowych przypadków użycia, które wcześniej nie były możliwe ze względu na wysokie opłaty sieciowe.
 

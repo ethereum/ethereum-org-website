@@ -13,8 +13,8 @@ type Persona = {
   id: string
   titleKey: string
   descKey: string
-  heroTitleKey: string
-  heroDescKey: string
+  metaTitleKey: string
+  metaDescKey: string
 }
 
 export default async function PersonaPageJsonLD({
@@ -35,8 +35,8 @@ export default async function PersonaPageJsonLD({
     locale,
     `/wallets/find-wallet/personas/${persona.id}/`
   )
-  // Hero title matches the page <title>/H1; short titleKey stays the crumb leaf.
-  const name = t(persona.heroTitleKey)
+  // Matches the page <title>; short titleKey stays the crumb leaf.
+  const name = t(persona.metaTitleKey)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@ export default async function PersonaPageJsonLD({
         "@type": "CollectionPage",
         "@id": url,
         name,
-        description: t(persona.heroDescKey),
+        description: t(persona.metaDescKey),
         image: normalizeUrlForJsonLd(
           undefined,
           "/images/wallets/wallet-hero.png"

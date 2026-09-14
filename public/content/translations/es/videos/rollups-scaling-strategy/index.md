@@ -20,7 +20,7 @@ Un video explicativo de **Finematics** que cubre los rollups como la estrategia 
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=7pWxCklcNsU) publicada por Finematics. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Capa 2 (1:17) {#layer-2-117}
+### Capa 2 (1:17) {#layer-2-117}
 
 La escalabilidad de Ethereum ha sido uno de los temas más discutidos en el mundo cripto. El debate sobre la escalabilidad suele intensificarse durante períodos de alta actividad en la red, como la locura de CryptoKitties en 2017, el verano de las finanzas descentralizadas (DeFi) de 2020 o el mercado alcista de las cripto a principios de 2021. Durante estos períodos, la demanda sin precedentes de la red Ethereum resultó en tarifas de gas extremadamente altas, lo que hizo que fuera costoso para los usuarios cotidianos pagar por sus transacciones.
 
@@ -28,7 +28,7 @@ Para abordar este problema, la búsqueda de la solución de escalabilidad defini
 
 En general, hay tres formas principales de escalar Ethereum (o, de hecho, la mayoría de las otras cadenas de bloques): escalar la propia cadena de bloques (escalabilidad de capa 1), construir sobre la capa 1 (escalabilidad de capa 2) y construir al lado de la capa 1 (cadenas laterales).
 
-#### Fuera de la capa 1 (1:58) {#outside-of-layer-1-158}
+### Fuera de la capa 1 (1:58) {#outside-of-layer-1-158}
 
 En lo que respecta a la capa 1, Eth2 es la solución elegida para escalar la cadena de bloques de Ethereum. Eth2 se refiere a un conjunto de cambios interconectados, como la migración a la prueba de participación (PoS), la fusión del estado de la cadena de bloques de prueba de trabajo (PoW) en la nueva cadena de prueba de participación, y la fragmentación. La fragmentación, en particular, puede aumentar drásticamente la capacidad de procesamiento de la red Ethereum, especialmente cuando se combina con los rollups.
 
@@ -42,7 +42,7 @@ Para lograr esto, las transacciones del rollup se ejecutan en una cadena separad
 
 Cada rollup implementa un conjunto de contratos inteligentes en la capa 1 que son responsables de procesar depósitos y retiros, y de verificar pruebas. Las pruebas también son donde entra en juego la principal distinción entre los diferentes tipos de rollups. Los rollups optimistas utilizan pruebas de fraude, mientras que los ZK rollups utilizan pruebas de validez.
 
-#### Rollups optimistas (4:26) {#optimistic-rollups-426}
+### Rollups optimistas (4:26) {#optimistic-rollups-426}
 
 Los rollups optimistas publican datos en la capa 1 y asumen que son correctos; de ahí el nombre "optimista". Si los datos publicados son válidos, estamos en el camino ideal y no hay que hacer nada más. El rollup optimista se beneficia de no tener que hacer ningún trabajo adicional en el escenario optimista.
 
@@ -58,7 +58,7 @@ El sistema puede funcionar como se espera y detectar fraudes incluso si solo hay
 
 En lo que respecta a los ZK rollups, no hay resolución de disputas en absoluto. Esto es posible aprovechando una ingeniosa pieza de criptografía llamada pruebas de conocimiento cero; de ahí el nombre ZK rollups. En este modelo, cada lote publicado en la capa 1 incluye una prueba criptográfica llamada ZK-SNARK. La prueba puede ser verificada rápidamente por el contrato de la capa 1 cuando se envía el lote de transacciones, y los lotes inválidos pueden ser rechazados de inmediato.
 
-#### Otras diferencias (7:28) {#other-differences-728}
+### Otras diferencias (7:28) {#other-differences-728}
 
 Debido a la naturaleza del proceso de resolución de disputas, los rollups optimistas tienen que dar suficiente tiempo a todos los participantes de la red para enviar pruebas de fraude antes de finalizar una transacción en la capa 1. Este período suele ser bastante largo, para asegurarse de que incluso en el peor de los casos, las transacciones fraudulentas aún puedan ser disputadas. Esto hace que los retiros de los rollups optimistas sean bastante largos, ya que los usuarios tienen que esperar hasta una o dos semanas para poder retirar sus fondos de vuelta a la capa 1.
 
@@ -70,7 +70,7 @@ Sin embargo, los ZK rollups vienen con sus propios inconvenientes. Debido a la c
 
 Los rollups optimistas lo tienen un poco más fácil con la compatibilidad con la EVM. Todavía tienen que ejecutar su propia versión de la EVM con algunas modificaciones, pero el 99 % de los contratos se pueden portar sin hacer ningún cambio. Los ZK rollups también requieren mucha más computación que los rollups optimistas, lo que significa que los nodos que calculan las pruebas ZK tienen que ser máquinas de altas especificaciones, lo que dificulta que otros usuarios los ejecuten.
 
-#### Mejoras de escalabilidad (9:32) {#scaling-improvements-932}
+### Mejoras de escalabilidad (9:32) {#scaling-improvements-932}
 
 En lo que respecta a las mejoras de escalabilidad, ambos tipos de rollups deberían ser capaces de escalar Ethereum desde alrededor de 15 a 45 transacciones por segundo (dependiendo del tipo de transacción) hasta unas 1000 a 4000 transacciones por segundo. Vale la pena señalar que es posible procesar aún más transacciones por segundo ofreciendo más espacio para los lotes de rollup en la capa 1.
 
@@ -84,7 +84,7 @@ Aunque tanto Arbitrum como Optimism intentan lograr el mismo objetivo (construir
 
 Otra diferencia importante es el enfoque para manejar el ordenamiento de transacciones y el MEV. Arbitrum ejecutará inicialmente un secuenciador responsable de ordenar las transacciones, pero quieren descentralizarlo a largo plazo. Optimism prefiere otro enfoque en el que el ordenamiento de las transacciones (y, por lo tanto, el MEV) se puede subastar a otras partes durante un cierto período de tiempo.
 
-#### ZK rollups (13:10) {#zk-rollups-1310}
+### ZK rollups (13:10) {#zk-rollups-1310}
 
 Aunque parece que la comunidad de Ethereum se está centrando principalmente en los rollups optimistas (al menos a corto plazo), los proyectos que trabajan en ZK rollups también están progresando extremadamente rápido.
 
@@ -92,11 +92,11 @@ Loopring utiliza la tecnología de ZK rollup para escalar su protocolo de interc
 
 Los rollups basados en StarkWare ya son ampliamente utilizados por proyectos como DeversiFi, Immutable X y dYdX. Como se mencionó anteriormente, zkSync está trabajando en una máquina virtual compatible con la EVM que podrá soportar completamente cualquier contrato inteligente arbitrario escrito en Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Los rollups también deberían tener un gran impacto en las finanzas descentralizadas (DeFi). Los usuarios que antes no podían realizar transacciones en Ethereum debido a las altas tarifas de transacción podrán permanecer en el ecosistema la próxima vez que la actividad de la red sea alta. Los rollups también permitirán una nueva generación de aplicaciones que requieren transacciones más baratas y un tiempo de confirmación más rápido, todo mientras están completamente aseguradas por el consenso de Ethereum. Parece que los rollups pueden desencadenar otro período de alto crecimiento para las DeFi.
 
-#### Desafíos (14:29) {#challenges-1429}
+### Desafíos (14:29) {#challenges-1429}
 
 Sin embargo, hay algunos desafíos en lo que respecta a los rollups. La composabilidad es uno de ellos: para componer una transacción que utilice múltiples protocolos, todos ellos tendrían que estar implementados en el mismo rollup.
 
@@ -104,7 +104,7 @@ Otro desafío es la liquidez fracturada. Sin la entrada de dinero nuevo en el ec
 
 Esto también significa que, naturalmente, habrá ganadores y perdedores. En este momento, el ecosistema de Ethereum existente no es lo suficientemente grande como para hacer uso de todas las soluciones de escalabilidad. Esto puede cambiar (y probablemente lo hará) a largo plazo, pero a corto plazo, es posible que veamos algunos rollups y otras soluciones de escalabilidad convertirse en pueblos fantasma. En el futuro, también es posible que veamos a usuarios viviendo completamente dentro de un ecosistema de rollup y sin interactuar con la cadena principal de Ethereum y otras soluciones de escalabilidad durante largos períodos de tiempo.
 
-#### Amenaza para las cadenas laterales (15:44) {#threat-to-sidechains-1544}
+### Amenaza para las cadenas laterales (15:44) {#threat-to-sidechains-1544}
 
 Una pregunta que surge muy a menudo cuando se habla de rollups es si son una amenaza para las cadenas laterales. Las cadenas laterales seguirán teniendo su lugar en el ecosistema de Ethereum. Aunque el costo de las transacciones en la capa 2 será mucho menor que en la capa 1, lo más probable es que siga siendo lo suficientemente alto como para excluir por precio a ciertos tipos de aplicaciones, como juegos y otras aplicaciones de alto volumen. Esto puede cambiar cuando Ethereum introduzca la fragmentación, pero para entonces las cadenas laterales pueden crear suficiente efecto de red para sobrevivir a largo plazo.
 

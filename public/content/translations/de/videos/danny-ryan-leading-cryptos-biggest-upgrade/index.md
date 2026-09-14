@@ -19,7 +19,7 @@ Ein Interview mit **Danny Ryan**, Mitbegründer von Etherealize und ehemaliger l
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=GZPLTF5ds2A), das von der Ethereum Foundation veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Die Entdeckung des Internets und frühe Neugier (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### Die Entdeckung des Internets und frühe Neugier (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Host:** Wie läuft's? Wann hast du das letzte Mal Jenga gespielt?
 
@@ -37,7 +37,7 @@ Ein Interview mit **Danny Ryan**, Mitbegründer von Etherealize und ehemaliger l
 
 **Danny Ryan:** Ich war immer derjenige, der Dinge reparieren konnte. Meine Großeltern haben mich immer zitiert – ich war wahrscheinlich etwa sieben –, ich half ihnen mit ihrem Computer, und einmal sagte ich: „Manchmal muss man ihn einfach aus- und wieder einschalten.“ Das haben sie mir ewig nachgesagt.
 
-#### Vom Maschinenbau zur Software (5:02) {#from-mechanical-engineering-to-software-502}
+### Vom Maschinenbau zur Software (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Host:** Gab es einen Aha-Moment oder einen Mentor, der dich dazu gebracht hat, einen bestimmten Weg einzuschlagen?
 
@@ -47,7 +47,7 @@ Ich habe mich immer irgendwie für Computer interessiert, weil sie da waren, abe
 
 Ich bin keiner von diesen „programmiert seit dem sechsten Lebensjahr“-Typen. Ich bin kein verrückter Programmierer, kein verrückter Mathematiker. Ich bin einfach gut darin, die Probleme zu erkennen und sie zusammenzufügen.
 
-#### Das Freelancer-Leben in Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
+### Das Freelancer-Leben in Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Host:** Was hast du nach dem College gemacht?
 
@@ -59,7 +59,7 @@ Ich bin keiner von diesen „programmiert seit dem sechsten Lebensjahr“-Typen.
 
 Ich habe in der Highschool auch ein Siebdruckunternehmen gegründet. Das läuft jetzt seit 20 Jahren. Mein bester Freund und Partner leitet es – es heißt Girraphic. Wir haben damit für unsere Band angefangen und dann alle T-Shirts für unsere Highschool gemacht.
 
-#### Der DAO-Hack und der Weg zu Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### Der DAO-Hack und der Weg zu Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** 2016 schickte mir ein Freund einen Artikel der New York Times über die DAO. Sie hatte, ich weiß nicht, 120 Millionen Dollar gesammelt – das größte Crowdfunding der Geschichte. Ich kannte Bitcoin. Ich hatte Transaktionen mit Bitcoin gemacht. Ich habe wahrscheinlich Geld mit Bitcoin verloren. Es hatte noch nicht wirklich Klick gemacht.
 
@@ -73,7 +73,7 @@ Am ersten Tag dachte ich: „Okay, ich gehe zum New Orleans Ethereum-Meetup.“ 
 
 Ich lernte über Proof-of-Stake (PoS) und dachte: „Das ergibt keinen Sinn.“ Dann lernte ich weiter und dachte: „Vielleicht ergibt das doch Sinn. Vielleicht könnte ich einen Staking-Pool oder so etwas machen.“ Ich hörte, dass Casper kommen würde – so wurde Proof-of-Stake genannt –, also fing ich an, den Code zu lesen. Ich dachte: „Oh, sie könnten noch ein paar Tests gebrauchen.“ Ich schrieb einige Tests. Ende 2017 fragte das Forschungsteam: „Hey, willst du einen Job?“ Ich sagte: „Okay.“
 
-#### Gemeinschaft in Open Source finden (14:35) {#finding-community-in-open-source-1435}
+### Gemeinschaft in Open Source finden (14:35) {#finding-community-in-open-source-1435}
 
 **Host:** Wie hast du deine Community und deine Leute gefunden? Wie hast du das Selbstvertrauen aufgebaut?
 
@@ -81,7 +81,7 @@ Ich lernte über Proof-of-Stake (PoS) und dachte: „Das ergibt keinen Sinn.“ 
 
 Die Türen standen komischerweise weit offen. Ich musste schon lange nicht mehr durch diese Türen gehen, aber ich stelle mir vor, dass für viele Bereiche von Ethereum die Türen ziemlich weit offen stehen, da die Arbeit von Natur aus öffentlich ist.
 
-#### Die Leitung des Merge (16:58) {#leading-the-merge-1658}
+### Die Leitung des Merge (16:58) {#leading-the-merge-1658}
 
 **Host:** Ein Typ, der nicht aufs Zocken stand, weil er mit Mädchen redete, in einer Band war, ein Siebdruckunternehmen gründete, den DAO-Hack finanzierte – landete schließlich bei dieser Foundation, indem er anfangs hilfsbereit war, und entwarf letztendlich im Grunde eine der vielleicht verrücktesten Ingenieursleistungen aller Zeiten. Wie hast du den Merge gemacht?
 
@@ -89,7 +89,7 @@ Die Türen standen komischerweise weit offen. Ich musste schon lange nicht mehr 
 
 Was repräsentativ dafür war, wie wertvoll die Zeit und Aufmerksamkeit von Leuten wie Vitalik ist – er konzentriert sich auf andere Dinge. Und mir wurde klar, dass ich die Arbeit machen konnte, aber ich konnte auch die Dinge tun, die andere Leute nicht taten. Ich konnte herausfinden, was passieren muss, um das alles voranzubringen. Die Köpfe der Leute sind in den Wolken, sie arbeiten an unglaublich komplexen und schwierigen Dingen. Mein Ansatz war immer: „Was kann ich tun, um das Wirklichkeit werden zu lassen?“ Manchmal habe ich recherchiert, manchmal habe ich Spezifikationen geschrieben, und zunehmend wurde es zur Kommunikation und Koordination in einem sehr komplexen Projekt.
 
-#### Work-Life-Balance und Stressbewältigung (18:07) {#work-life-balance-and-managing-stress-1807}
+### Work-Life-Balance und Stressbewältigung (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Host:** Wie bist du mit dem Stress umgegangen?
 
@@ -99,7 +99,7 @@ Ich bin ziemlich von meiner Arbeit eingenommen – ich denke viel darüber nach.
 
 Die technischen Probleme sind nie die stressigen Probleme. Es ist die komplexe technopolitische Sphäre. Die Menschen sind der schwierige Teil.
 
-#### Die Mitgründung von Etherealize (20:02) {#co-founding-etherealize-2002}
+### Die Mitgründung von Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Host:** Du hast vor Kurzem Etherealize mitgegründet. Woher kam dein Interesse dafür? Was begeistert dich daran und warum denkst du, dass diese Arbeit wichtig ist?
 
@@ -117,7 +117,7 @@ Man lernt, dass es eine zivilrechtliche Organisation ist, also ist das Schlimmst
 
 Dann bin ich zurück zur Ethereum Foundation gegangen und dann wieder gegangen. Dann hat Trump einen Memecoin auf den Markt gebracht – buchstäblich ein Schleudertrauma. Dann überlege ich, zur Ethereum Foundation zurückzukehren, und wir schließen diese Tür. Das erste Interessante, das mir vor die Füße fiel, war eine Vorstellung bei Vivek. Ich dachte: „Oh – in diesem Zeitfenster könnten wir es tatsächlich schaffen, dass Ethereum angenommen wird.“ Vivek hat eine wirklich ergänzende Energie, einen ergänzenden Hintergrund aus TradFi. Ich sagte einfach: „Okay, lass es uns tun. Lass uns die Welt onboarden.“
 
-#### Warum die Welt Ethereum braucht (24:10) {#why-the-world-needs-ethereum-2410}
+### Warum die Welt Ethereum braucht (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Host:** Warum braucht die Welt Ethereum?
 
@@ -125,7 +125,7 @@ Dann bin ich zurück zur Ethereum Foundation gegangen und dann wieder gegangen. 
 
 Vivek hatte 2020 den Aha-Moment, als er die Wall Street verließ und von Ethereum erfuhr – „Oh, alle Kapitalmärkte sollten mit Ethereum aufgerüstet werden.“ Und er hat recht. Und es ist an der Zeit.
 
-#### Das Argument für Dezentralisierung (25:47) {#the-case-for-decentralization-2547}
+### Das Argument für Dezentralisierung (25:47) {#the-case-for-decentralization-2547}
 
 **Host:** Ethereum ist stark auf Dezentralisierung ausgerichtet, darauf, glaubwürdig neutral zu sein. Es gibt diese Kritik, dass man zugunsten der Effizienz auf Dezentralisierung verzichten könnte, um heute mehr Menschen an Bord zu holen. Was ist deine Entgegnung?
 
@@ -135,13 +135,13 @@ Das wird für Banken und Finanzinstitute enorm viel bedeuten. Und es wird für d
 
 Wir haben noch ein wenig Arbeit in Bezug auf die Skalierung vor uns – obwohl Pectra an den Start geht und zusammen mit Layer 2 (L2) die Voraussetzungen für eine massive Skalierung schaffen wird. Wir müssen uns auch weiterentwickeln, damit diese Dinge nicht nur exzellente dezentrale Protokolle sind, sondern auch exzellente Produkte – sichere Produkte, einfach zu bedienende Produkte. Während wir diesen Übergang vollziehen, ist Ethereum tatsächlich die beste Antwort, um das Onboarding der Welt zu realisieren.
 
-#### Der Wunsch, dass die Menschen netter wären (27:38) {#wishing-people-were-nicer-2738}
+### Der Wunsch, dass die Menschen netter wären (27:38) {#wishing-people-were-nicer-2738}
 
 **Host:** Was wünschst du dir, worüber sich mehr Menschen in der heutigen Welt bewusst wären – es muss nicht einmal etwas mit Krypto zu tun haben?
 
 **Danny Ryan:** Ich wünschte, die Menschen wären ein bisschen netter zueinander. Und dass sie auch erkennen, dass diese ganze verrückte Sache der modernen Gesellschaft – seid vorsichtig und behandelt sie mit Sorgfalt. Sie ist komplex. Sie befand sich in einem einigermaßen stabilen Gleichgewicht. Ich denke, wir können sie weiter verbessern und sollten das auch tun, aber wir sollten nicht einfach alles wegwerfen.
 
-#### Der Führungswechsel bei der EF und Stellung beziehen (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Der Führungswechsel bei der EF und Stellung beziehen (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Host:** Anfang des Jahres, als bei der Ethereum Foundation Veränderungen anstanden, wurdest du ins Rampenlicht gedrängt. Was war deine Reaktion?
 
@@ -149,7 +149,7 @@ Wir haben noch ein wenig Arbeit in Bezug auf die Skalierung vor uns – obwohl P
 
 Ich habe massiven Respekt vor Aya. Wir sind enge Freunde und haben lange Zeit eng zusammengearbeitet. Viele der Entscheidungen, die sie getroffen hat, habe ich mitgetroffen, unterstützt und ausgeführt. Es ist also komisch, in einer öffentlichen Arena gegen sie ausgespielt zu werden, wenn ich philosophisch nicht tiefgreifend von ihr abweiche. Ich bin gerne freundlich. Ich behandle Menschen gerne mit Respekt, besonders in öffentlichen Foren. Sie war sehr verletzt, und das ist absolut nicht das, was ich wollte. Ehrlich gesagt war das wahrscheinlich der Sargnagel dafür, dass ich nicht zurückgegangen bin – was das Gegenteil von dem ist, was der Mob beabsichtigt hatte.
 
-#### Zukünftige Städte und das Menschsein im Zeitalter der KI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Zukünftige Städte und das Menschsein im Zeitalter der KI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Mir fällt gerade ein – in der achten Klasse habe ich an diesem Future-Cities-Projekt gearbeitet. Mein Englischlehrer wählte einen Gewinner aus der Klasse aus und arbeitete mit ihm bis zu den nationalen Meisterschaften. Wir haben ein großes Modell gebaut, eine ganze Stadt geplant, eine Menge Forschungsergebnisse gelesen und uns eine zukünftige Gesellschaft ausgedacht. Wir sind zu den nationalen Meisterschaften gefahren. Vielleicht war das ein kleines Vorzeichen.
 
@@ -159,7 +159,7 @@ Ich habe massiven Respekt vor Aya. Wir sind enge Freunde und haben lange Zeit en
 
 Deshalb bin ich optimistisch, was die Dinge angeht, an denen ich arbeite – das Onboarding von institutionellem Kapital in Ethereum, diese Märkte besser zu machen. Aber ich habe nicht mehr diesen ungebremsten Optimismus nach dem Motto: „Wenn man einfach nur dezentrale, großartige Technologie baut, wird die Welt automatisch besser.“
 
-#### Kinder und die Zukunft (39:00) {#kids-and-the-future-3900}
+### Kinder und die Zukunft (39:00) {#kids-and-the-future-3900}
 
 **Host:** Du hast Kinder. Spulen wir mal zwanzig Jahre vor – die Dinge, an die du glaubst, haben funktioniert. Wie verändert das das Leben deiner Kinder?
 
@@ -167,7 +167,7 @@ Deshalb bin ich optimistisch, was die Dinge angeht, an denen ich arbeite – das
 
 Hoffentlich haben wir zumindest eine faire, offene und freie Gesellschaft, teilweise weil wir gute Systeme auf Basis von Krypto aufbauen können. Aber KI ist ein erschwerender Faktor bei der Frage: „Was bedeutet es, menschlich zu sein?“
 
-#### Werte und das Sprechen mit Institutionen (42:34) {#values-and-speaking-to-institutions-4234}
+### Werte und das Sprechen mit Institutionen (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Host:** Was ist ein Wert, bei dem du niemals Kompromisse eingehen würdest?
 
@@ -181,7 +181,7 @@ Hoffentlich haben wir zumindest eine faire, offene und freie Gesellschaft, teilw
 
 **Danny Ryan:** Ich habe keine Standarderklärung. Ich bin sehr dynamisch. Ich lese ihre Sprache, verstehe, was ihre Bedürfnisse sind, verstehe, worauf sie neugierig sind, und finde die richtigen Einstiegspunkte und Metaphern. Ich bin kein großer Planer.
 
-#### Das Leben außerhalb von Krypto (45:12) {#life-outside-crypto-4512}
+### Das Leben außerhalb von Krypto (45:12) {#life-outside-crypto-4512}
 
 **Host:** Zu wem oder was schaust du außerhalb von Tech und Krypto auf?
 
@@ -191,7 +191,7 @@ Hoffentlich haben wir zumindest eine faire, offene und freie Gesellschaft, teilw
 
 **Danny Ryan:** Ich verbringe Zeit mit meiner Familie. Ich trainiere und spiele draußen. Ich spiele Klavier. Und ich mache meine Arbeit.
 
-#### Die Entstehungsgeschichte des Hosts – der Wechsel von Optimism zur EF (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Die Entstehungsgeschichte des Hosts – der Wechsel von Optimism zur EF (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Host:** Warum hast du Optimism verlassen?
 
@@ -203,7 +203,7 @@ Nach dem College fing ich als Produktmanager bei Coinbase an. Ich bin nach acht 
 
 Ich glaube, der Grund, warum ich gegangen bin, war, dass ich das Gefühl hatte, dort alles getan zu haben, was ich tun konnte. Die Ethereum Foundation ist sehr einzigartig, da sie viel getan hat – sie hat dafür viel Kritik einstecken müssen, aber sie hat viel getan, um ihre Neutralität und ihre Werte zu schützen. Wenn ich mit jemandem spreche, denkt er nicht, dass ich etwas von ihm will, weil die Ethereum Foundation kein Startup ist. Und ich brauchte eine neue Herausforderung.
 
-#### Die Zukunft von Ethereum sichern (59:26) {#securing-ethereums-future-5926}
+### Die Zukunft von Ethereum sichern (59:26) {#securing-ethereums-future-5926}
 
 **Host:** Wie stellen wir sicher, dass Ethereum nicht verliert? Was ist deine umstrittenste Ansicht, um die Zukunft von Ethereum zu sichern?
 
