@@ -1,12 +1,14 @@
 import {
-  AppWindow,
+  ArrowDown,
+  AtSign,
   Cookie,
   EyeOff,
-  KeyRound,
+  Fingerprint,
   Mail,
   MessagesSquare,
   ScrollText,
-  ShieldCheck,
+  Search,
+  ShieldOff,
   SignalHigh,
   SlidersHorizontal,
   UserMinus,
@@ -23,7 +25,16 @@ import AppsExpander from "@/components/AppsExpander"
 import PathwayCard from "@/components/cards/pathway-card"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
-import { Strong } from "@/components/IntlStringElements"
+import MarkdownVideo from "@/components/Image/MarkdownVideo"
+import { Emphasis, Strong } from "@/components/IntlStringElements"
+import {
+  Alert,
+  AlertContent,
+  AlertIcon,
+  AlertTitle,
+} from "@/components/ui/alert"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -34,8 +45,16 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { cn } from "@/lib/utils/cn"
@@ -45,33 +64,39 @@ import { getMetadata } from "@/lib/utils/metadata"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import awesomePrivacyBannerImg from "@/public/assets/privacy-online/awesome-privacy-banner.png"
-import fpfBannerImg from "@/public/assets/privacy-online/freedom-of-the-press-foundation-banner.png"
-import frontLineDefendersBannerImg from "@/public/assets/privacy-online/front-line-defenders-banner.png"
-import privacyGuidesBannerImg from "@/public/assets/privacy-online/privacy-guides-banner.png"
-import ssdBannerImg from "@/public/assets/privacy-online/surveillance-self-defense-banner.png"
+import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
+import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
+import ludlowBannerImg from "@/public/assets/privacy-online/ludlow-institute-banner.png"
+import noybBannerImg from "@/public/assets/privacy-online/noyb-banner.png"
+import privacyInternationalBannerImg from "@/public/assets/privacy-online/privacy-international-banner.png"
 import web3privacyBannerImg from "@/public/assets/privacy-online/web3privacy-now-banner.png"
 import developersEthBlocksImg from "@/public/images/developers-eth-blocks.png"
 import heroImg from "@/public/images/doge-computer.png"
 // Logos shared with /open-source are imported from there rather than copied.
 // TODO: move the app catalog somewhere both pages can read it.
 import bitwardenImg from "@/public/images/open-source/bitwarden.png"
+import braveImg from "@/public/images/open-source/brave.png"
 import cryptomatorImg from "@/public/images/open-source/cryptomator.png"
 import entePhotosImg from "@/public/images/open-source/ente-photos.png"
 import firefoxImg from "@/public/images/open-source/firefox.png"
 import grapheneosImg from "@/public/images/open-source/grapheneos.png"
 import organicMapsImg from "@/public/images/open-source/organic-maps.png"
 import signalImg from "@/public/images/open-source/signal.png"
-import aegisImg from "@/public/images/privacy-online/aegis.png"
+import twofasImg from "@/public/images/privacy-online/2fas.png"
+import addyImg from "@/public/images/privacy-online/addy-io.png"
 import braveSearchImg from "@/public/images/privacy-online/brave-search.png"
 import duckduckgoImg from "@/public/images/privacy-online/duckduckgo.png"
-import keepassxcImg from "@/public/images/privacy-online/keepassxc.png"
+import fdroidImg from "@/public/images/privacy-online/f-droid.png"
 import mullvadImg from "@/public/images/privacy-online/mullvad.png"
+import mysudoImg from "@/public/images/privacy-online/mysudo.png"
 import notesnookImg from "@/public/images/privacy-online/notesnook.png"
 import protonMailImg from "@/public/images/privacy-online/proton-mail.png"
 import protonVpnImg from "@/public/images/privacy-online/proton-vpn.png"
 import quad9Img from "@/public/images/privacy-online/quad9.png"
+import sessionImg from "@/public/images/privacy-online/session.png"
+import simpleloginImg from "@/public/images/privacy-online/simplelogin.png"
 import simplexImg from "@/public/images/privacy-online/simplex-chat.png"
+import tailsImg from "@/public/images/privacy-online/tails.png"
 import torBrowserImg from "@/public/images/privacy-online/tor-browser.png"
 import tutaImg from "@/public/images/privacy-online/tuta.png"
 import ublockOriginImg from "@/public/images/privacy-online/ublock-origin.png"
@@ -79,8 +104,11 @@ import privacyWhyImg from "@/public/images/three-people-cat-butterflies-petting-
 
 // The first run of app cards; the rest sit behind "show more". The order is
 // fixed rather than shuffled -- the visible run mirrors the tip cards above it
-// (browser, messaging, passwords, VPN, blocking, email).
+// (browser, search, blocking, messaging, email).
 const VISIBLE_APP_COUNT = 12
+
+// The article opens with unheaded lead-in copy; the hero CTA scrolls to it.
+const INTRO_ID = "introduction"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -95,10 +123,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
   // under another section's anchor is invisible in review.
   const sections = {
-    how: {
-      id: "how-to-protect-your-privacy-online",
-      title: t("page-privacy-online-how-title"),
-    },
     tools: {
       id: "use-online-privacy-tools",
       title: t("page-privacy-online-tools-title"),
@@ -107,17 +131,25 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       id: "optimize-privacy-settings",
       title: t("page-privacy-online-settings-title"),
     },
-    policies: {
-      id: "navigate-privacy-policies",
-      title: t("page-privacy-online-policies-title"),
-    },
     apps: {
       id: "privacy-default-apps",
       title: t("page-privacy-online-apps-title"),
     },
+    vpn: {
+      id: "what-a-vpn-does",
+      title: t("page-privacy-online-vpn-title"),
+    },
     resources: {
-      id: "actionable-resources-and-guides",
+      id: "organizations-defending-your-privacy",
       title: t("page-privacy-online-resources-title"),
+    },
+    policies: {
+      id: "navigate-privacy-policies",
+      title: t("page-privacy-online-policies-title"),
+    },
+    furtherReading: {
+      id: "further-reading",
+      title: t("page-privacy-online-further-reading-title"),
     },
   }
 
@@ -135,48 +167,105 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     eventName: name,
   })
 
-  type Tip = { id: string; icon: ReactNode; title: string; description: string }
+  // Footnote marker for the numbered citations under Further reading. Rendered
+  // outside the strings so translators never carry the numbering.
+  const footnote = (n: number, section: string) => (
+    <sup>
+      <Link
+        href={`#${sections.furtherReading.id}`}
+        customEventOptions={track(section, `Footnote ${n}`)}
+      >{`[${n}]`}</Link>
+    </sup>
+  )
+
+  // `t.rich` tag that leaves the claim as plain text and trails a footnote.
+  const cite = (n: number, section: string) => {
+    const Cited = (chunks: ReactNode) => (
+      <>
+        {chunks}
+        {footnote(n, section)}
+      </>
+    )
+    Cited.displayName = "Cited"
+    return Cited
+  }
+
+  // `t.rich` link placeholder, pre-wired to Matomo.
+  const linkTo = (href: string, section: string, name: string) => {
+    const TrackedLink = (chunks: ReactNode) => (
+      <Link href={href} customEventOptions={track(section, name)}>
+        {chunks}
+      </Link>
+    )
+    TrackedLink.displayName = "TrackedLink"
+    return TrackedLink
+  }
+
+  type Tip = {
+    id: string
+    icon: ReactNode
+    title: string
+    description: ReactNode
+  }
 
   const tools: Tip[] = [
     {
-      id: "browser",
-      icon: <AppWindow className="size-12 text-primary" />,
-      title: t("page-privacy-online-tools-browser-title"),
-      description: t("page-privacy-online-tools-browser-description"),
-    },
-    {
-      id: "messaging",
-      icon: <MessagesSquare className="size-12 text-primary" />,
-      title: t("page-privacy-online-tools-messaging-title"),
-      description: t("page-privacy-online-tools-messaging-description"),
-    },
-    {
-      id: "passwords",
-      icon: <KeyRound className="size-12 text-primary" />,
-      title: t("page-privacy-online-tools-passwords-title"),
-      description: t("page-privacy-online-tools-passwords-description"),
-    },
-    {
-      id: "vpn",
-      icon: <ShieldCheck className="size-12 text-primary" />,
-      title: t("page-privacy-online-tools-vpn-title"),
-      description: t("page-privacy-online-tools-vpn-description"),
+      id: "search",
+      icon: <Search className="size-12 text-primary" />,
+      title: t("page-privacy-online-tools-search-title"),
+      description: t.rich("page-privacy-online-tools-search-description", {
+        strong: Strong,
+      }),
     },
     {
       id: "blocking",
       icon: <EyeOff className="size-12 text-primary" />,
       title: t("page-privacy-online-tools-blocking-title"),
-      description: t("page-privacy-online-tools-blocking-description"),
+      description: t.rich("page-privacy-online-tools-blocking-description", {
+        strong: Strong,
+      }),
+    },
+    {
+      id: "messaging",
+      icon: <MessagesSquare className="size-12 text-primary" />,
+      title: t("page-privacy-online-tools-messaging-title"),
+      description: t.rich("page-privacy-online-tools-messaging-description", {
+        strong: Strong,
+      }),
     },
     {
       id: "email",
       icon: <Mail className="size-12 text-primary" />,
       title: t("page-privacy-online-tools-email-title"),
-      description: t("page-privacy-online-tools-email-description"),
+      description: t.rich("page-privacy-online-tools-email-description", {
+        strong: Strong,
+      }),
+    },
+    {
+      id: "aliases",
+      icon: <AtSign className="size-12 text-primary" />,
+      title: t("page-privacy-online-tools-aliases-title"),
+      description: t.rich("page-privacy-online-tools-aliases-description", {
+        strong: Strong,
+      }),
+    },
+    {
+      id: "signin",
+      icon: <Fingerprint className="size-12 text-primary" />,
+      title: t("page-privacy-online-tools-signin-title"),
+      description: t.rich("page-privacy-online-tools-signin-description", {
+        strong: Strong,
+      }),
     },
   ]
 
   const settings: Tip[] = [
+    {
+      id: "devices",
+      icon: <SlidersHorizontal className="size-12 text-primary" />,
+      title: t("page-privacy-online-settings-devices-title"),
+      description: t("page-privacy-online-settings-devices-description"),
+    },
     {
       id: "gpc",
       icon: <SignalHigh className="size-12 text-primary" />,
@@ -189,14 +278,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-privacy-online-settings-cookies-title"),
       description: t("page-privacy-online-settings-cookies-description"),
     },
-    {
-      id: "devices",
-      icon: <SlidersHorizontal className="size-12 text-primary" />,
-      title: t("page-privacy-online-settings-devices-title"),
-      description: t("page-privacy-online-settings-devices-description"),
-    },
   ]
 
+  // Free routes only: Consumer Reports measured paid removal services doing
+  // worse than filing by hand, so neither is named here.
   const policies: Tip[] = [
     {
       id: "optout",
@@ -205,16 +290,22 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       description: t("page-privacy-online-policies-optout-description"),
     },
     {
+      id: "registry",
+      icon: <WandSparkles className="size-12 text-primary" />,
+      title: t("page-privacy-online-policies-registry-title"),
+      description: t.rich("page-privacy-online-policies-registry-description", {
+        link: linkTo(
+          "https://www.consumer.drop.privacy.ca.gov",
+          sections.policies.id,
+          "California DROP"
+        ),
+      }),
+    },
+    {
       id: "manual",
       icon: <ScrollText className="size-12 text-primary" />,
       title: t("page-privacy-online-policies-manual-title"),
       description: t("page-privacy-online-policies-manual-description"),
-    },
-    {
-      id: "automate",
-      icon: <WandSparkles className="size-12 text-primary" />,
-      title: t("page-privacy-online-policies-automate-title"),
-      description: t("page-privacy-online-policies-automate-description"),
     },
   ]
 
@@ -222,18 +313,22 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const categories = {
     browser: t("page-privacy-online-category-browser"),
     search: t("page-privacy-online-category-search"),
-    messaging: t("page-privacy-online-category-messaging"),
-    email: t("page-privacy-online-category-email"),
-    passwords: t("page-privacy-online-category-passwords"),
-    twoFactor: t("page-privacy-online-category-two-factor"),
-    vpn: t("page-privacy-online-category-vpn"),
     blocking: t("page-privacy-online-category-blocking"),
+    messaging: t("page-privacy-online-category-messaging"),
+    passwords: t("page-privacy-online-category-passwords"),
+    phone: t("page-privacy-online-category-phone"),
+    email: t("page-privacy-online-category-email"),
+    aliases: t("page-privacy-online-category-aliases"),
+    vpn: t("page-privacy-online-category-vpn"),
     dns: t("page-privacy-online-category-dns"),
+    twoFactor: t("page-privacy-online-category-two-factor"),
     photos: t("page-privacy-online-category-photos"),
     fileEncryption: t("page-privacy-online-category-file-encryption"),
     notes: t("page-privacy-online-category-notes"),
     maps: t("page-privacy-online-category-maps"),
     mobileOs: t("page-privacy-online-category-mobile-os"),
+    desktopOs: t("page-privacy-online-category-desktop-os"),
+    appStore: t("page-privacy-online-category-app-store"),
   }
 
   // Hard-coded rather than read from the apps dataset: these are mainstream
@@ -251,19 +346,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     invertOnDark?: boolean
   }[] = [
     {
-      id: "tor-browser",
-      href: "https://www.torproject.org/download/",
-      logo: torBrowserImg,
-      name: t("page-privacy-online-app-tor-browser-name"),
-      description: t("page-privacy-online-app-tor-browser-description"),
-      category: categories.browser,
-    },
-    {
-      id: "mullvad-browser",
-      href: "https://mullvad.net/browser",
-      logo: mullvadImg,
-      name: t("page-privacy-online-app-mullvad-browser-name"),
-      description: t("page-privacy-online-app-mullvad-browser-description"),
+      id: "brave",
+      href: "https://brave.com",
+      logo: braveImg,
+      name: t("page-privacy-online-app-brave-name"),
+      description: t("page-privacy-online-app-brave-description"),
       category: categories.browser,
     },
     {
@@ -275,11 +362,59 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       category: categories.browser,
     },
     {
+      id: "mullvad-browser",
+      href: "https://mullvad.net/browser",
+      logo: mullvadImg,
+      name: t("page-privacy-online-app-mullvad-browser-name"),
+      description: t("page-privacy-online-app-mullvad-browser-description"),
+      category: categories.browser,
+    },
+    {
+      id: "tor-browser",
+      href: "https://www.torproject.org/download/",
+      logo: torBrowserImg,
+      name: t("page-privacy-online-app-tor-browser-name"),
+      description: t("page-privacy-online-app-tor-browser-description"),
+      category: categories.browser,
+    },
+    {
+      id: "brave-search",
+      href: "https://search.brave.com",
+      logo: braveSearchImg,
+      name: t("page-privacy-online-app-brave-search-name"),
+      description: t("page-privacy-online-app-brave-search-description"),
+      category: categories.search,
+    },
+    {
+      id: "duckduckgo",
+      href: "https://duckduckgo.com",
+      logo: duckduckgoImg,
+      name: t("page-privacy-online-app-duckduckgo-name"),
+      description: t("page-privacy-online-app-duckduckgo-description"),
+      category: categories.search,
+    },
+    {
+      id: "ublock-origin",
+      href: "https://ublockorigin.com",
+      logo: ublockOriginImg,
+      name: t("page-privacy-online-app-ublock-origin-name"),
+      description: t("page-privacy-online-app-ublock-origin-description"),
+      category: categories.blocking,
+    },
+    {
       id: "signal",
       href: "https://signal.org",
       logo: signalImg,
       name: t("page-privacy-online-app-signal-name"),
       description: t("page-privacy-online-app-signal-description"),
+      category: categories.messaging,
+    },
+    {
+      id: "session",
+      href: "https://getsession.org",
+      logo: sessionImg,
+      name: t("page-privacy-online-app-session-name"),
+      description: t("page-privacy-online-app-session-description"),
       category: categories.messaging,
     },
     {
@@ -289,46 +424,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       name: t("page-privacy-online-app-simplex-name"),
       description: t("page-privacy-online-app-simplex-description"),
       category: categories.messaging,
-    },
-    {
-      id: "bitwarden",
-      href: "https://bitwarden.com",
-      logo: bitwardenImg,
-      name: t("page-privacy-online-app-bitwarden-name"),
-      description: t("page-privacy-online-app-bitwarden-description"),
-      category: categories.passwords,
-    },
-    {
-      id: "keepassxc",
-      href: "https://keepassxc.org",
-      logo: keepassxcImg,
-      name: t("page-privacy-online-app-keepassxc-name"),
-      description: t("page-privacy-online-app-keepassxc-description"),
-      category: categories.passwords,
-    },
-    {
-      id: "mullvad-vpn",
-      href: "https://mullvad.net/vpn",
-      logo: mullvadImg,
-      name: t("page-privacy-online-app-mullvad-vpn-name"),
-      description: t("page-privacy-online-app-mullvad-vpn-description"),
-      category: categories.vpn,
-    },
-    {
-      id: "proton-vpn",
-      href: "https://protonvpn.com",
-      logo: protonVpnImg,
-      name: t("page-privacy-online-app-proton-vpn-name"),
-      description: t("page-privacy-online-app-proton-vpn-description"),
-      category: categories.vpn,
-    },
-    {
-      id: "ublock-origin",
-      href: "https://ublockorigin.com",
-      logo: ublockOriginImg,
-      name: t("page-privacy-online-app-ublock-origin-name"),
-      description: t("page-privacy-online-app-ublock-origin-description"),
-      category: categories.blocking,
     },
     {
       id: "proton-mail",
@@ -347,28 +442,44 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       category: categories.email,
     },
     {
-      id: "duckduckgo",
-      href: "https://duckduckgo.com",
-      logo: duckduckgoImg,
-      name: t("page-privacy-online-app-duckduckgo-name"),
-      description: t("page-privacy-online-app-duckduckgo-description"),
-      category: categories.search,
+      id: "simplelogin",
+      href: "https://simplelogin.io",
+      logo: simpleloginImg,
+      name: t("page-privacy-online-app-simplelogin-name"),
+      description: t("page-privacy-online-app-simplelogin-description"),
+      category: categories.aliases,
     },
     {
-      id: "brave-search",
-      href: "https://search.brave.com",
-      logo: braveSearchImg,
-      name: t("page-privacy-online-app-brave-search-name"),
-      description: t("page-privacy-online-app-brave-search-description"),
-      category: categories.search,
+      id: "addy",
+      href: "https://addy.io",
+      logo: addyImg,
+      name: t("page-privacy-online-app-addy-name"),
+      description: t("page-privacy-online-app-addy-description"),
+      category: categories.aliases,
     },
     {
-      id: "aegis",
-      href: "https://getaegis.app",
-      logo: aegisImg,
-      name: t("page-privacy-online-app-aegis-name"),
-      description: t("page-privacy-online-app-aegis-description"),
-      category: categories.twoFactor,
+      id: "mysudo",
+      href: "https://mysudo.com",
+      logo: mysudoImg,
+      name: t("page-privacy-online-app-mysudo-name"),
+      description: t("page-privacy-online-app-mysudo-description"),
+      category: categories.phone,
+    },
+    {
+      id: "mullvad-vpn",
+      href: "https://mullvad.net/vpn",
+      logo: mullvadImg,
+      name: t("page-privacy-online-app-mullvad-vpn-name"),
+      description: t("page-privacy-online-app-mullvad-vpn-description"),
+      category: categories.vpn,
+    },
+    {
+      id: "proton-vpn",
+      href: "https://protonvpn.com",
+      logo: protonVpnImg,
+      name: t("page-privacy-online-app-proton-vpn-name"),
+      description: t("page-privacy-online-app-proton-vpn-description"),
+      category: categories.vpn,
     },
     {
       id: "quad9",
@@ -377,6 +488,23 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       name: t("page-privacy-online-app-quad9-name"),
       description: t("page-privacy-online-app-quad9-description"),
       category: categories.dns,
+    },
+    {
+      id: "grapheneos",
+      href: "https://grapheneos.org",
+      logo: grapheneosImg,
+      invertOnDark: true,
+      name: t("page-privacy-online-app-grapheneos-name"),
+      description: t("page-privacy-online-app-grapheneos-description"),
+      category: categories.mobileOs,
+    },
+    {
+      id: "tails",
+      href: "https://tails.net",
+      logo: tailsImg,
+      name: t("page-privacy-online-app-tails-name"),
+      description: t("page-privacy-online-app-tails-description"),
+      category: categories.desktopOs,
     },
     {
       id: "ente-photos",
@@ -411,56 +539,53 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       category: categories.maps,
     },
     {
-      id: "grapheneos",
-      href: "https://grapheneos.org",
-      logo: grapheneosImg,
-      invertOnDark: true,
-      name: t("page-privacy-online-app-grapheneos-name"),
-      description: t("page-privacy-online-app-grapheneos-description"),
-      category: categories.mobileOs,
+      id: "f-droid",
+      href: "https://f-droid.org",
+      logo: fdroidImg,
+      name: t("page-privacy-online-app-f-droid-name"),
+      description: t("page-privacy-online-app-f-droid-description"),
+      category: categories.appStore,
+    },
+    {
+      id: "bitwarden",
+      href: "https://bitwarden.com",
+      logo: bitwardenImg,
+      name: t("page-privacy-online-app-bitwarden-name"),
+      description: t("page-privacy-online-app-bitwarden-description"),
+      category: categories.passwords,
+    },
+    {
+      id: "2fas",
+      href: "https://2fas.com",
+      logo: twofasImg,
+      name: t("page-privacy-online-app-2fas-name"),
+      description: t("page-privacy-online-app-2fas-description"),
+      category: categories.twoFactor,
     },
   ]
 
   // The grid is capped at six; everything else is listed as a plain link below.
   const resources = [
     {
-      id: "privacy-guides",
-      href: "https://www.privacyguides.org",
-      banner: privacyGuidesBannerImg,
-      name: t("page-privacy-online-resource-privacy-guides-name"),
-      description: t("page-privacy-online-resource-privacy-guides-description"),
+      id: "eff",
+      href: "https://www.eff.org",
+      banner: effBannerImg,
+      name: t("page-privacy-online-resource-eff-name"),
+      description: t("page-privacy-online-resource-eff-description"),
     },
     {
-      id: "ssd",
-      href: "https://ssd.eff.org",
-      banner: ssdBannerImg,
-      name: t("page-privacy-online-resource-ssd-name"),
-      description: t("page-privacy-online-resource-ssd-description"),
+      id: "tor",
+      href: "https://www.torproject.org",
+      banner: torBannerImg,
+      name: t("page-privacy-online-resource-tor-name"),
+      description: t("page-privacy-online-resource-tor-description"),
     },
     {
-      id: "awesome-privacy",
-      href: "https://awesome-privacy.xyz",
-      banner: awesomePrivacyBannerImg,
-      name: t("page-privacy-online-resource-awesome-privacy-name"),
-      description: t(
-        "page-privacy-online-resource-awesome-privacy-description"
-      ),
-    },
-    {
-      id: "fpf",
-      href: "https://freedom.press/digisec/",
-      banner: fpfBannerImg,
-      name: t("page-privacy-online-resource-fpf-name"),
-      description: t("page-privacy-online-resource-fpf-description"),
-    },
-    {
-      id: "security-in-a-box",
-      href: "https://securityinabox.org/en/",
-      banner: frontLineDefendersBannerImg,
-      name: t("page-privacy-online-resource-security-in-a-box-name"),
-      description: t(
-        "page-privacy-online-resource-security-in-a-box-description"
-      ),
+      id: "ludlow",
+      href: "https://ludlowinstitute.org",
+      banner: ludlowBannerImg,
+      name: t("page-privacy-online-resource-ludlow-name"),
+      description: t("page-privacy-online-resource-ludlow-description"),
     },
     {
       id: "web3privacy",
@@ -469,16 +594,34 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       name: t("page-privacy-online-resource-web3privacy-name"),
       description: t("page-privacy-online-resource-web3privacy-description"),
     },
+    {
+      id: "privacy-international",
+      href: "https://www.privacyinternational.org",
+      banner: privacyInternationalBannerImg,
+      name: t("page-privacy-online-resource-privacy-international-name"),
+      description: t(
+        "page-privacy-online-resource-privacy-international-description"
+      ),
+    },
+    {
+      id: "noyb",
+      href: "https://noyb.eu",
+      banner: noybBannerImg,
+      name: t("page-privacy-online-resource-noyb-name"),
+      description: t("page-privacy-online-resource-noyb-description"),
+    },
   ]
 
   const moreResources = [
-    { id: "ludlow", href: "https://ludlowinstitute.org" },
+    { id: "access-now", href: "https://www.accessnow.org" },
+    { id: "fpf", href: "https://freedom.press/digisec/" },
+    { id: "security-in-a-box", href: "https://securityinabox.org/en/" },
     { id: "prc", href: "https://www.privacyrights.org/resources" },
     { id: "newsguild", href: "https://www.nyguild.org/digital-security" },
   ]
 
   const renderTips = (tips: Tip[]) => (
-    <Grid columns={3} size="narrow">
+    <Grid columns={3} size="narrow" data-flow="cta">
       {tips.map(({ id, icon, title, description }) => (
         <Card key={id}>
           <CardContent>
@@ -511,7 +654,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             buttons={[
               {
                 content: t("page-privacy-online-hero-cta"),
-                href: tocItems[0].url,
+                href: `#${INTRO_ID}`,
               },
             ]}
           />
@@ -550,8 +693,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </CardContent>
         </Card>
 
-        <Section id={sections.how.id}>
-          <h2>{sections.how.title}</h2>
+        <Section id={INTRO_ID}>
           <p>{t("page-privacy-online-how-description-1")}</p>
           <p>{t("page-privacy-online-how-description-2")}</p>
         </Section>
@@ -559,7 +701,58 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         <Section id={sections.tools.id}>
           <h2>{sections.tools.title}</h2>
           <p>{t("page-privacy-online-tools-description")}</p>
+          <p>
+            {t.rich("page-privacy-online-tools-browser-first", {
+              strong: Strong,
+              browserShare: cite(1, sections.tools.id),
+              searchShare: cite(2, sections.tools.id),
+              em: Emphasis,
+            })}
+          </p>
+          <Callout
+            id="start-with-brave"
+            title={t("page-privacy-online-tools-browser-callout-title")}
+            description={t(
+              "page-privacy-online-tools-browser-callout-description"
+            )}
+            image={braveImg}
+            variant="sm"
+            as="h3"
+          >
+            <ButtonLink
+              href="https://brave.com"
+              customEventOptions={track(sections.tools.id, "Brave")}
+            >
+              {t("page-privacy-online-tools-browser-callout-cta")}
+            </ButtonLink>
+            <ButtonLink
+              href="https://brave.com/compare/chrome-vs-brave/"
+              variant="outline"
+              customEventOptions={track(sections.tools.id, "Brave vs Chrome")}
+            >
+              {t("page-privacy-online-tools-browser-callout-compare")}
+            </ButtonLink>
+          </Callout>
+          <p>{t("page-privacy-online-tools-browser-tests")}</p>
+          <p>
+            <Link
+              href="https://privacytests.org"
+              customEventOptions={track(sections.tools.id, "PrivacyTests")}
+            >
+              {t("page-privacy-online-tools-browser-tests-cta")}
+            </Link>
+          </p>
+
           {renderTips(tools)}
+          <p>
+            <Link
+              href={`#${sections.apps.id}`}
+              customEventOptions={track(sections.tools.id, "Jump to apps")}
+            >
+              {t("page-privacy-online-tools-jump-to-apps")}
+              <ArrowDown className="ms-1 inline size-4 align-text-bottom" />
+            </Link>
+          </p>
           <VideoWatch slug="privacy-fixes-most-people-never-make" />
         </Section>
 
@@ -567,12 +760,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h2>{sections.settings.title}</h2>
           <p>{t("page-privacy-online-settings-description")}</p>
           {renderTips(settings)}
-        </Section>
-
-        <Section id={sections.policies.id}>
-          <h2>{sections.policies.title}</h2>
-          <p>{t("page-privacy-online-policies-description")}</p>
-          {renderTips(policies)}
+          <MarkdownVideo
+            src="/assets/privacy-online/reject-cookies.mp4#1280x720"
+            poster="/assets/privacy-online/reject-cookies-poster.jpg"
+            alt={t("page-privacy-online-settings-cookies-clip-alt")}
+          />
         </Section>
 
         <Section id={sections.apps.id}>
@@ -589,8 +781,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     key={id}
                     name={name}
                     description={description}
-                    // 21 cards is ~8 phone screens with descriptions shown
+                    // 24 cards is ~9 phone screens with descriptions shown
                     descriptionClassName="hidden md:block"
+                    descriptionMaxLines={6}
+                    descriptionExpandable={false}
                     nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
                     thumbnail={logo.src}
                     tags={[category]}
@@ -606,6 +800,98 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               )}
             </Grid>
           </AppsExpander>
+          <p>
+            {t.rich("page-privacy-online-apps-more", {
+              privacyGuides: linkTo(
+                "https://www.privacyguides.org",
+                sections.apps.id,
+                "Privacy Guides"
+              ),
+              awesomePrivacy: linkTo(
+                "https://awesome-privacy.xyz",
+                sections.apps.id,
+                "Awesome Privacy"
+              ),
+            })}
+          </p>
+        </Section>
+
+        <Section id={sections.vpn.id}>
+          <h2>{sections.vpn.title}</h2>
+          <Alert>
+            <AlertIcon size="lg">
+              <ShieldOff />
+            </AlertIcon>
+            <AlertContent>
+              <AlertTitle size="lg">
+                {t("page-privacy-online-vpn-alert-title")}
+              </AlertTitle>
+              <p className="mt-2">
+                {t.rich("page-privacy-online-vpn-alert-description", {
+                  strong: Strong,
+                })}
+              </p>
+            </AlertContent>
+          </Alert>
+
+          <p data-flow="cta">{t("page-privacy-online-vpn-table-lead")}</p>
+
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>{t("page-privacy-online-vpn-table-does")}</TableHead>
+                <TableHead>
+                  {t("page-privacy-online-vpn-table-does-not")}
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[1, 2, 3, 4].map((n) => (
+                <TableRow key={n}>
+                  <TableCell>
+                    {t(`page-privacy-online-vpn-table-${n}-does`)}
+                  </TableCell>
+                  <TableCell>
+                    {t(`page-privacy-online-vpn-table-${n}-not`)}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+
+          <p>{t.rich("page-privacy-online-vpn-trust", { strong: Strong })}</p>
+          <p>{t("page-privacy-online-vpn-criteria-lead")}</p>
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-privacy-online-vpn-criteria-1", { strong: Strong })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-vpn-criteria-2", { strong: Strong })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-vpn-criteria-3", { strong: Strong })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-vpn-criteria-4", { strong: Strong })}
+            </ListItem>
+          </UnorderedList>
+
+          <h3>{t("page-privacy-online-vpn-tor-title")}</h3>
+          <p>{t("page-privacy-online-vpn-tor-description-1")}</p>
+          <p>{t("page-privacy-online-vpn-tor-description-2")}</p>
+          <p>{t("page-privacy-online-vpn-tor-description-3")}</p>
+          <p>
+            {t.rich("page-privacy-online-vpn-tor-learn-more", {
+              link: linkTo(
+                "https://www.privacyguides.org/en/advanced/tor-overview/",
+                sections.vpn.id,
+                "Tor overview"
+              ),
+            })}
+          </p>
+
+          <h3>{t("page-privacy-online-vpn-relay-title")}</h3>
+          <p>{t("page-privacy-online-vpn-relay-description")}</p>
         </Section>
 
         <Section id={sections.resources.id}>
@@ -643,18 +929,65 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {moreResources.map(({ id, href }) => (
               <ListItem key={id}>
                 {t.rich(`page-privacy-online-resource-${id}`, {
-                  link: (chunks) => (
-                    <Link
-                      href={href}
-                      customEventOptions={track(sections.resources.id, id)}
-                    >
-                      {chunks}
-                    </Link>
-                  ),
+                  link: linkTo(href, sections.resources.id, id),
                 })}
               </ListItem>
             ))}
           </UnorderedList>
+        </Section>
+
+        <Section id={sections.policies.id}>
+          <h2>{sections.policies.title}</h2>
+          <p>{t("page-privacy-online-policies-description")}</p>
+          <p>
+            {t.rich("page-privacy-online-policies-services", {
+              crStudy: cite(3, sections.policies.id),
+              privacyGuidesRemovals: cite(4, sections.policies.id),
+            })}
+          </p>
+          {renderTips(policies)}
+        </Section>
+
+        <Section id={sections.furtherReading.id}>
+          <h2>{sections.furtherReading.title}</h2>
+          <OrderedList>
+            <ListItem>
+              {t.rich("page-privacy-online-reference-browser-share", {
+                link: linkTo(
+                  "https://gs.statcounter.com/browser-market-share",
+                  sections.furtherReading.id,
+                  "Statcounter browsers"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-reference-search-share", {
+                link: linkTo(
+                  "https://gs.statcounter.com/search-engine-market-share",
+                  sections.furtherReading.id,
+                  "Statcounter search"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-reference-cr-removal-services", {
+                link: linkTo(
+                  "https://advocacy.consumerreports.org/press_release/consumer-reports-evaluation-of-people-search-site-removal-services-finds-that-they-are-largely-ineffective/",
+                  sections.furtherReading.id,
+                  "Consumer Reports removal services"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-privacy-online-reference-privacy-guides-removals", {
+                link: linkTo(
+                  "https://www.privacyguides.org/en/data-broker-removals/",
+                  sections.furtherReading.id,
+                  "Privacy Guides data broker removals"
+                ),
+              })}
+            </ListItem>
+          </OrderedList>
         </Section>
 
         <Section>
