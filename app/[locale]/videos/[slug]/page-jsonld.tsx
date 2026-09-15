@@ -4,7 +4,6 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -16,12 +15,10 @@ export default async function VideoPageJsonLD({
   locale,
   slug,
   frontmatter,
-  transcript,
 }: {
   locale: string
   slug: string
   frontmatter: VideoFrontmatter
-  transcript: string | null
 }) {
   const url = normalizeUrlForJsonLd(locale, `/videos/${slug}/`)
   const videoGalleryUrl = normalizeUrlForJsonLd(locale, "/videos/")
@@ -101,13 +98,6 @@ export default async function VideoPageJsonLD({
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         isAccessibleForFree: true,
         isFamilyFriendly: true,
-        // Add transcript as plain text if available
-        transcript: transcript
-          ? stripMarkdown(transcript, true)
-              // Escape < and / to prevent script injection (XSS protection)
-              .replace(/</g, "\\u003c")
-              .replace(/\//g, "\\u002f")
-          : undefined,
       },
     ],
   }
