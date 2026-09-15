@@ -1,5 +1,5 @@
 {
-  "glamsterdam-banner": "Glamsterdam bug bounty coverage is coming. <a>View the planned rewards and scope</a>.",
+  "glamsterdam-banner": "Glamsterdam reports are accepted! <a>View the rewards and scope</a>.",
   "glamsterdam-title": "Glamsterdam bug bounty: coming soon",
   "glamsterdam-opening": "Coverage for the Glamsterdam upgrade will open as soon as the first Sepolia client releases are ready. Glamsterdam coverage is not open yet.",
   "glamsterdam-scope": "The multipliers below only apply to bugs specific to the Glamsterdam upgrade. Researchers should target the latest unstable client branches and check for existing issues and pull requests. Bugs already covered by an open issue or pull request are not eligible.",
