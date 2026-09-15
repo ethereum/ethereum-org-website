@@ -3,7 +3,7 @@
   "glamsterdam-title": "Glamsterdam bug bounty",
   "glamsterdam-opening": "The Glamsterdam upgrade is now in scope. For specifications, reports are accepted now. For clients, reports are only accepted for those that have a stable release with the Sepolia upgrade scheduled.",
   "glamsterdam-scope": "The multipliers below only apply to bugs specific to the Glamsterdam upgrade. Researchers should target the latest unstable client branches and check for existing issues and pull requests. Bugs already covered by an open issue or pull request are not eligible.",
-  "glamsterdam-rewards-title": "Planned reward multipliers",
+  "glamsterdam-rewards-title": "Reward multipliers",
   "glamsterdam-rewards-initial": "When Glamsterdam coverage opens: 0.5× the standard rewards.",
   "glamsterdam-rewards-sepolia": "24 hours after successful Sepolia activation: 2× the standard rewards.",
   "glamsterdam-rewards-hoodi": "24 hours after successful Hoodi activation: 1.5× the standard rewards.",
