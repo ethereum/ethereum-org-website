@@ -15,6 +15,7 @@ import type { ReactNode } from "react"
 import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import AppsExpander from "@/components/AppsExpander"
 import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
@@ -49,7 +50,6 @@ import { getDayOfYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { seededShuffle } from "@/lib/utils/random"
 
-import AppsExpander from "./_components/apps-expander"
 import PromptCard from "./_components/prompt-card"
 import PageJsonLD from "./page-jsonld"
 
