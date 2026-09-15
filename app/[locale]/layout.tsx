@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { getMessages } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -35,10 +35,6 @@ export default async function LocaleLayout(props: {
   const { locale } = params
 
   const { children } = props
-
-  // Safety net only - pages must still call this themselves. Runs before the
-  // notFound() bail so invalid-locale probes can't fall back to headers().
-  setRequestLocale(locale)
 
   if (!routing.locales.includes(locale)) {
     notFound()

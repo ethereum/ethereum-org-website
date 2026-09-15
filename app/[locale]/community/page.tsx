@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { HandCoins, MessageCircleHeart, Sparkles } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -59,8 +55,6 @@ import contributeImg from "@/public/images/three-people-cat-butterflies-petting-
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const { contributors } = await getAppPageContributorInfo(
     "community",
@@ -442,8 +436,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community")
   return await getMetadata({

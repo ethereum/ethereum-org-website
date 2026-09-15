@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -26,8 +26,6 @@ export const revalidate = 86400
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const [data, { contributors }, t, toolDescriptions] = await Promise.all([
     getDeveloperToolsData(),
@@ -85,8 +83,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,

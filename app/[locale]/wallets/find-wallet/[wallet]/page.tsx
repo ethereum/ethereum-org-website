@@ -1,6 +1,6 @@
 import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
@@ -55,7 +55,6 @@ const WALLET_LINK_EVENT = {
  */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
   const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) notFound()
@@ -265,7 +264,6 @@ export async function generateMetadata(props: {
   params: Promise<WalletPageParams>
 }) {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
   const wallet = getWalletBySlug(walletSlug, locale)
   if (!wallet) return {}
