@@ -3,6 +3,7 @@ import { join } from "path"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import { getAppPageLastCommitDate } from "../utils/gh"
 import { getPostSlugs } from "../utils/md"
 import { getStaticPagePaths } from "../utils/staticPages"
 import { getPrimaryNamespaceForPath } from "../utils/translations"
@@ -10,6 +11,8 @@ import { addSlashes } from "../utils/url"
 import { getVideoSlugs } from "../utils/videos"
 
 import { areNamespacesTranslated } from "./translationStatus"
+
+import { getStaticGitHubContributors } from "@/lib/data"
 
 const CONTENT_ROOT = "public/content"
 const TRANSLATIONS_ROOT = "public/content/translations"
@@ -92,6 +95,17 @@ export async function getTranslatedLocales(slug: string): Promise<string[]> {
 type PageWithTranslations = {
   slug: string
   translatedLocales: string[]
+  lastModified?: string
+}
+
+const getAppPageContributorKey = (slug: string): string => {
+  const normalized = normalizeContentSlug(slug)
+  if (normalized.startsWith("apps/categories/")) {
+    return "apps/categories/[catetgoryName]"
+  }
+  if (normalized.startsWith("apps/")) return "apps/[application]"
+  if (normalized.startsWith("developers/tools/")) return "developers/tools"
+  return normalized
 }
 
 async function getDynamicIntlPagePaths(): Promise<string[]> {
@@ -138,6 +152,7 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
   const appPaths = appsData
     ? Object.values(appsData)
         .flat()
+        .filter((app) => slugify(app.name) !== "scout-game")
         .map((app) => `/apps/${slugify(app.name)}/`)
     : []
 
@@ -163,6 +178,7 @@ export async function getAllPagesWithTranslations(): Promise<
   PageWithTranslations[]
 > {
   const pages: PageWithTranslations[] = []
+  const contributorsData = await getStaticGitHubContributors()
 
   const mdSlugs = await getPostSlugs("/")
 
@@ -179,12 +195,23 @@ export async function getAllPagesWithTranslations(): Promise<
 
   for (const slug of [...mdSlugs, ...videoSlugs]) {
     const translatedLocales = await getTranslatedLocales(slug)
-    pages.push({ slug, translatedLocales })
+    const lastModified =
+      getAppPageLastCommitDate(contributorsData?.content[slug] ?? []) ||
+      undefined
+    pages.push({ slug, translatedLocales, lastModified })
   }
 
   for (const path of uniqueIntlPaths) {
     const translatedLocales = await getTranslatedLocales(path)
-    pages.push({ slug: path, translatedLocales })
+    const contributorKey = getAppPageContributorKey(path)
+    const lastModified = getAppPageLastCommitDate(
+      contributorsData?.appPages[contributorKey] ?? []
+    )
+    pages.push({
+      slug: path,
+      translatedLocales,
+      lastModified: lastModified || undefined,
+    })
   }
 
   return pages

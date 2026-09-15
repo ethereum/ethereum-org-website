@@ -108,7 +108,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations("page-privacy-ethereum")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo("privacy/ethereum", locale)
 
   const tocItems: ToCItem[] = [
@@ -142,7 +142,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 
