@@ -43,7 +43,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Grid } from "@/components/ui/grid"
+import { Grid, type GridProps } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -620,8 +620,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     { id: "newsguild", href: "https://www.nyguild.org/digital-security" },
   ]
 
-  const renderTips = (tips: Tip[]) => (
-    <Grid columns={3} size="narrow" data-flow="cta">
+  const renderTips = (tips: Tip[], size: GridProps["size"] = "slim") => (
+    <Grid columns={3} size={size} data-flow="cta">
       {tips.map(({ id, icon, title, description }) => (
         <Card key={id}>
           <CardContent>
@@ -743,7 +743,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </Link>
           </p>
 
-          {renderTips(tools)}
+          {renderTips(tools, "narrow")}
           <p>
             <Link
               href={`#${sections.apps.id}`}
