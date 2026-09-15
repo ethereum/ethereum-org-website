@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "가스 한도 및 DoS 방어 강화",
   "page-roadmap-fusaka-gas-item-1": "트랜잭션당 1,670만 가스로 트랜잭션 가스 한도 상한 설정",
   "page-roadmap-fusaka-gas-item-2": "기본 가스 한도를 약 6,000만으로 증가(현재 4,500만)",
-  "page-roadmap-fusaka-additional-title": "잠재적인 추가 기능",
-  "page-roadmap-fusaka-additional-item-1": "UX 개선을 위해 모바일 기기의 보안 엔클레이브(secure enclaves) 지원",
-  "page-roadmap-fusaka-additional-item-2": "블롭 수수료 시장 개선",
-  "page-roadmap-fusaka-additional-item-3": "검증자 효율성 및 네트워크 성능 추가 개선",
   "page-roadmap-glamsterdam-epbs-title": "내장된 제안자-빌더 분리 (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "블록 합의를 처리 과정과 분리하여, 검증자가 더 많은 데이터를 처리할 수 있게 함으로써 레이어 1 (l1) 확장을 돕습니다.",
   "page-roadmap-glamsterdam-epbs-item-2": "빌더를 기본적으로 통합하여 검증자가 외부 소프트웨어를 신뢰하지 않고도 블록 조립을 안전하게 아웃소싱할 수 있습니다.",
   "page-roadmap-glamsterdam-bal-title": "블록 수준 액세스 목록",
   "page-roadmap-glamsterdam-bal-item-1": "개별 트랜잭션이 아닌 블록 수준에서 필수 액세스 목록 도입",
   "page-roadmap-glamsterdam-bal-item-2": "더 빠른 동기화, 병렬 실행 및 병렬 디스크 읽기를 위해 종속성을 사전에 매핑",
-  "page-roadmap-glamsterdam-bal-item-3": "상태 의존도가 높은 앱의 가스를 낮추고 가스 비용 예측 가능성 향상",
-  "page-roadmap-hegota-discussed-title": "헤고타(Hegotá) 계획",
-  "page-roadmap-hegota-discussed-item-1": "제안 사항이 현재 논의 중입니다"
+  "page-roadmap-glamsterdam-bal-item-3": "상태 의존도가 높은 앱의 가스를 낮추고 가스 비용 예측 가능성 향상"
 }

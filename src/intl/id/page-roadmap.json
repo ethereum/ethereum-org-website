@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Batas Gas & Penguatan DoS",
   "page-roadmap-fusaka-gas-item-1": "Batas atas batas gas transaksi sebesar 16,7 juta gas per transaksi",
   "page-roadmap-fusaka-gas-item-2": "Peningkatan batas gas bawaan menjadi ~60 juta (dari 45 juta saat ini)",
-  "page-roadmap-fusaka-additional-title": "Potensi Fitur Tambahan",
-  "page-roadmap-fusaka-additional-item-1": "Dukungan untuk enklave aman di perangkat seluler untuk meningkatkan UX",
-  "page-roadmap-fusaka-additional-item-2": "Peningkatan pasar biaya blob",
-  "page-roadmap-fusaka-additional-item-3": "Peningkatan lebih lanjut pada efisiensi validator dan kinerja jaringan",
   "page-roadmap-glamsterdam-epbs-title": "Pemisahan pengusul-pembangun (PBS) yang diabadikan",
   "page-roadmap-glamsterdam-epbs-item-1": "Memisahkan kesepakatan blok dari pemrosesan, membantu skala lapisan 1 (l1) dengan memungkinkan validator memproses lebih banyak data",
   "page-roadmap-glamsterdam-epbs-item-2": "Mengintegrasikan pembangun secara bawaan sehingga validator dapat dengan aman mengalihdayakan perakitan blok tanpa memercayai perangkat lunak eksternal",
   "page-roadmap-glamsterdam-bal-title": "Daftar akses tingkat blok",
   "page-roadmap-glamsterdam-bal-item-1": "Memperkenalkan daftar akses wajib di tingkat blok, bukan untuk transaksi individu",
   "page-roadmap-glamsterdam-bal-item-2": "Memetakan dependensi di awal untuk sinkronisasi yang lebih cepat, eksekusi paralel, dan pembacaan disk paralel",
-  "page-roadmap-glamsterdam-bal-item-3": "Menurunkan gas untuk aplikasi yang sarat state dan meningkatkan prediktabilitas biaya gas",
-  "page-roadmap-hegota-discussed-title": "Direncanakan untuk Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Proposal saat ini sedang dalam diskusi"
+  "page-roadmap-glamsterdam-bal-item-3": "Menurunkan gas untuk aplikasi yang sarat state dan meningkatkan prediktabilitas biaya gas"
 }

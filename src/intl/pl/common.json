@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Wyspa Wake (USA)",
   "region-bonaire-netherlands": "Bonaire (Holandia)",
   "region-saba-netherlands": "Saba (Holandia)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Holandia)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Holandia)",
+  "item-logo": "Logo {item}"
 }

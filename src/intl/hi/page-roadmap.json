@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "गैस सीमा और DoS हार्डनिंग",
   "page-roadmap-fusaka-gas-item-1": "प्रति लेन-देन 16.7M गैस की लेन-देन गैस सीमा कैप",
   "page-roadmap-fusaka-gas-item-2": "डिफ़ॉल्ट गैस सीमा में ~60M तक की वृद्धि (वर्तमान 45M से)",
-  "page-roadmap-fusaka-additional-title": "संभावित अतिरिक्त विशेषताएं",
-  "page-roadmap-fusaka-additional-item-1": "UX को बेहतर बनाने के लिए मोबाइल उपकरणों पर सुरक्षित एन्क्लेव के लिए समर्थन",
-  "page-roadmap-fusaka-additional-item-2": "ब्लॉब शुल्क बाजार में सुधार",
-  "page-roadmap-fusaka-additional-item-3": "सत्यापक दक्षता और नेटवर्क प्रदर्शन में और सुधार",
   "page-roadmap-glamsterdam-epbs-title": "प्रस्थापित प्रस्तावक-निर्माता पृथक्करण (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "ब्लॉक समझौते को प्रसंस्करण से अलग करता है, जिससे सत्यापकों को अधिक डेटा संसाधित करने की अनुमति देकर लेयर 1 (L1) को स्केल करने में मदद मिलती है",
   "page-roadmap-glamsterdam-epbs-item-2": "मूल रूप से निर्माताओं को एकीकृत करता है ताकि सत्यापक बाहरी सॉफ़्टवेयर पर भरोसा किए बिना सुरक्षित रूप से ब्लॉक असेंबली को आउटसोर्स कर सकें",
   "page-roadmap-glamsterdam-bal-title": "ब्लॉक-स्तरीय एक्सेस सूचियां",
   "page-roadmap-glamsterdam-bal-item-1": "व्यक्तिगत लेन-देन के बजाय ब्लॉक स्तर पर अनिवार्य एक्सेस सूचियां पेश करता है",
   "page-roadmap-glamsterdam-bal-item-2": "तेज़ सिंक, समानांतर निष्पादन और समानांतर डिस्क रीड के लिए निर्भरता को पहले से मैप करता है",
-  "page-roadmap-glamsterdam-bal-item-3": "स्थिति-भारी ऐप्स के लिए गैस कम करता है और गैस लागत की भविष्यवाणी में सुधार करता है",
-  "page-roadmap-hegota-discussed-title": "हेगोटा के लिए योजनाबद्ध",
-  "page-roadmap-hegota-discussed-item-1": "प्रस्ताव वर्तमान में चर्चा के अधीन हैं"
+  "page-roadmap-glamsterdam-bal-item-3": "स्थिति-भारी ऐप्स के लिए गैस कम करता है और गैस लागत की भविष्यवाणी में सुधार करता है"
 }

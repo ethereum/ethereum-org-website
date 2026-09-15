@@ -19,6 +19,7 @@
     "build-storybook:chromatic": "storybook build --test",
     "chromatic": "chromatic --project-token=${CHROMATIC_STORYBOOK_TOKEN:?}",
     "chromatic:pages": "chromatic --playwright --zip --exit-zero-on-changes --project-token=${CHROMATIC_PAGES_TOKEN:?}",
+    "lint:i18n": "eloqnt lint",
     "lint:md": "markdownlint-cli2 \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "intl:estimate": "MODE=estimate tsx ./src/scripts/intl-pipeline/estimate.ts",
@@ -119,6 +120,7 @@
   "devDependencies": {
     "@chromatic-com/playwright": "^0.13.1",
     "@chromatic-com/storybook": "5.1.1",
+    "@eloqnt/cli": "^0.6.16",
     "@google/genai": "^1.46.0",
     "@netlify/plugin-nextjs": "^5.15.9",
     "@playwright/test": "^1.52.0",

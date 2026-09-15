@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Giới hạn gas & Tăng cường chống DoS",
   "page-roadmap-fusaka-gas-item-1": "Mức trần giới hạn gas của giao dịch là 16,7 triệu Gas mỗi giao dịch",
   "page-roadmap-fusaka-gas-item-2": "Tăng giới hạn gas mặc định lên ~60 triệu (từ 45 triệu hiện tại)",
-  "page-roadmap-fusaka-additional-title": "Các tính năng bổ sung tiềm năng",
-  "page-roadmap-fusaka-additional-item-1": "Hỗ trợ các vùng an toàn (secure enclave) trên thiết bị di động để cải thiện trải nghiệm người dùng (UX)",
-  "page-roadmap-fusaka-additional-item-2": "Cải tiến thị trường phí blob",
-  "page-roadmap-fusaka-additional-item-3": "Cải thiện hơn nữa hiệu quả của trình xác thực và hiệu suất mạng lưới",
   "page-roadmap-glamsterdam-epbs-title": "tách biệt người đề xuất và người xây dựng (PBS) được tích hợp sẵn",
   "page-roadmap-glamsterdam-epbs-item-1": "Tách biệt sự thỏa thuận khối khỏi quá trình xử lý, giúp lớp 1 (l1) mở rộng quy mô bằng cách cho phép các trình xác thực xử lý nhiều dữ liệu hơn",
   "page-roadmap-glamsterdam-epbs-item-2": "Tích hợp nguyên bản các người xây dựng để các trình xác thực có thể thuê ngoài việc lắp ráp khối một cách an toàn mà không cần tin tưởng vào phần mềm bên ngoài",
   "page-roadmap-glamsterdam-bal-title": "Danh sách truy cập cấp độ khối",
   "page-roadmap-glamsterdam-bal-item-1": "Giới thiệu các danh sách truy cập bắt buộc ở cấp độ khối, thay vì cho từng giao dịch riêng lẻ",
   "page-roadmap-glamsterdam-bal-item-2": "Lập bản đồ các phần phụ thuộc từ trước để đồng bộ hóa nhanh hơn, thực thi song song và đọc đĩa song song",
-  "page-roadmap-glamsterdam-bal-item-3": "Giảm Gas cho các ứng dụng nặng về trạng thái và cải thiện khả năng dự đoán chi phí Gas",
-  "page-roadmap-hegota-discussed-title": "Được lên kế hoạch cho Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Các đề xuất hiện đang được thảo luận"
+  "page-roadmap-glamsterdam-bal-item-3": "Giảm Gas cho các ứng dụng nặng về trạng thái và cải thiện khả năng dự đoán chi phí Gas"
 }
