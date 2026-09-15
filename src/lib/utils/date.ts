@@ -3,6 +3,8 @@ import type { PartialDate } from "@/data/upgrades/types"
 import { DEFAULT_LOCALE } from "../constants"
 import type { Lang } from "../types"
 
+import { normalizeIntlSpaces } from "./intl"
+
 /**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
  * - Forces the Gregorian calendar universally.
@@ -65,12 +67,14 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return dateTimeFormat(locale, {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    ...options,
-  }).format(new Date(date))
+  return normalizeIntlSpaces(
+    dateTimeFormat(locale, {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      ...options,
+    }).format(new Date(date))
+  )
 }
 
 /**
@@ -109,18 +113,13 @@ export const formatDateRange = (
   locale: string = DEFAULT_LOCALE,
   options?: Intl.DateTimeFormatOptions
 ) =>
-  dateTimeFormat(locale, {
-    month: "short",
-    day: "numeric",
-    ...options,
-  })
-    .formatRange(new Date(start), new Date(end || start))
-    // Normalize whitespace to avoid SSR/client hydration mismatches: Node's ICU
-    // and the browser's ICU can emit different space characters (e.g. U+202F
-    // narrow no-break space vs a regular U+0020) around the range en-dash. The
-    // two render identically but differ byte-for-byte, tripping React's
-    // hydration check. Collapsing whitespace makes the output deterministic.
-    .replace(/\s+/g, " ")
+  normalizeIntlSpaces(
+    dateTimeFormat(locale, {
+      month: "short",
+      day: "numeric",
+      ...options,
+    }).formatRange(new Date(start), new Date(end || start))
+  )
 
 /**
  * Date range split into parts so callers can style them individually (e.g. a
@@ -139,7 +138,7 @@ export const formatDateRangeToParts = (
     ...options,
   })
     .formatRangeToParts(new Date(start), new Date(end))
-    .map(({ type, value }) => ({ type, value: value.replace(/\s+/g, " ") }))
+    .map(({ type, value }) => ({ type, value: normalizeIntlSpaces(value) }))
 
 export const getLocaleYear = (
   locale: string = "en-US",
@@ -179,7 +178,10 @@ export const getWeekNumber = (date: Date): number => {
  * @returns Day of year (1-365 or 1-366 for leap years)
  */
 export const getDayOfYear = (date: Date): number => {
-  const start = new Date(date.getFullYear(), 0, 0)
-  const diff = date.getTime() - start.getTime()
-  return Math.floor(diff / 86400000)
+  // Differences are taken in UTC so a DST shift between January and `date`
+  // cannot move the result to the neighbouring day, the same way
+  // getWeekNumber normalizes.
+  const start = Date.UTC(date.getFullYear(), 0, 0)
+  const current = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+  return Math.round((current - start) / 86400000)
 }

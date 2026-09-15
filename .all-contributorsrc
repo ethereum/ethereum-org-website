@@ -5921,9 +5921,9 @@
     },
     {
       "login": "pcaversaccio",
-      "name": "Pascal Marco Caversaccio",
+      "name": "pcaversaccio",
       "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
-      "profile": "http://www.daita.tech",
+      "profile": "https://pcaversaccio.com",
       "contributions": [
         "doc",
         "content"
@@ -14504,6 +14504,15 @@
       "profile": "https://github.com/BonganiN-KhulaIQ",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "kriss39",
+      "name": "Kanan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93033289?v=4",
+      "profile": "https://github.com/kriss39",
+      "contributions": [
+        "bug"
       ]
     }
   ],

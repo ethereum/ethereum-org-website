@@ -133,7 +133,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   href={getDevconTicketLink(locale)}
                   customEventOptions={{
                     eventCategory: "devcon",
-                    eventAction: `get_tickets`,
+                    eventAction: "get_tickets_home_banner",
                     eventName: "visit",
                   }}
                   hideArrow
@@ -192,7 +192,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <FeatureCards eventCategory={eventCategory} />
 
             {/* Devcon VIII India callout banner */}
-            <DevconIndiaLargeCallout />
+            <DevconIndiaLargeCallout sourcePage="home" />
 
             <LatestUpdates eventCategory={eventCategory} />
 

@@ -10,7 +10,15 @@ import DevconDateLocation from "./date-location"
 
 import devconIndiaBanner from "@/public/images/assets/devcon-india-banner.webp"
 
-const DevconIndiaLargeCallout = async ({ preload }: { preload?: boolean }) => {
+type DevconIndiaLargeCalloutProps = {
+  sourcePage: string
+  preload?: boolean
+}
+
+const DevconIndiaLargeCallout = async ({
+  preload,
+  sourcePage,
+}: DevconIndiaLargeCalloutProps) => {
   const locale = await getLocale()
   const tDevcon = await getTranslations("component-devcon-banner")
   return (
@@ -18,7 +26,7 @@ const DevconIndiaLargeCallout = async ({ preload }: { preload?: boolean }) => {
       href={getDevconTicketLink(locale)}
       customEventOptions={{
         eventCategory: "devcon",
-        eventAction: `get_tickets`,
+        eventAction: `get_tickets_${sourcePage}_callout`,
         eventName: "visit",
       }}
       variant="ghost"
