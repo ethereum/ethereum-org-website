@@ -1,28 +1,25 @@
-import { ArrowRight, Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
-import type { ReactNode } from "react"
 
 import type { ChainName, Lang } from "@/lib/types"
 
+import CatalogDetailModal from "@/components/CatalogDetailModal"
+import DetailRow from "@/components/CatalogDetailModal/DetailRow"
+import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { XCircle } from "@/components/icons/XCircle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
-import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
-import { cn } from "@/lib/utils/cn"
 import { getWalletBySlug } from "@/lib/utils/walletData"
 import { formatWalletFees } from "@/lib/utils/wallets"
 
 import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
 import { CROPS_PROPERTIES } from "@/data/wallets/features"
-
-import WalletDetailModal from "../../_components/WalletDetailModal"
 
 import { getPathname } from "@/i18n/navigation"
 
@@ -33,41 +30,6 @@ const LANGUAGES_SHOWN = 5
 // Without this the interceptor is uncacheable and re-renders on every modal
 // open; the standalone `[wallet]` page already sets it.
 export const revalidate = false
-
-const DetailRow = ({
-  label,
-  tooltip,
-  roomyLabel,
-  children,
-}: {
-  label: string
-  tooltip?: string
-  /**
-   * Floors the label column. Both sides of the row shrink to min-content by
-   * default, so a long label next to a long value collapses to one word per
-   * line. Only set this where both are long -- it costs the value width, which
-   * wraps shorter values that would otherwise fit on one line.
-   */
-  roomyLabel?: boolean
-  children: ReactNode
-}) => (
-  <div className="flex items-center justify-between gap-4 rounded-lg bg-background-highlight px-4 py-3">
-    <div
-      className={cn(
-        "flex items-center gap-1.5 text-sm text-body-medium",
-        roomyLabel && "min-w-[35%]"
-      )}
-    >
-      <span>{label}</span>
-      {tooltip && (
-        <Tooltip nested content={<p className="text-body">{tooltip}</p>}>
-          <Info className="size-4 shrink-0" />
-        </Tooltip>
-      )}
-    </div>
-    <div className="min-w-0 text-end text-sm">{children}</div>
-  </div>
-)
 
 /**
  * Shown as a modal when navigated to from inside the find-wallet subtree; a
@@ -102,7 +64,7 @@ export default async function InterceptedWalletModal(props: {
   const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
 
   return (
-    <WalletDetailModal
+    <CatalogDetailModal
       title={wallet.name}
       image={wallet.image}
       description={wallet.descriptionStripped}
@@ -182,19 +144,11 @@ export default async function InterceptedWalletModal(props: {
           })}
 
           {/* Belongs with the rows it extends: these properties are a summary
-              of the full feature set. Deliberate raw anchor (against the
-              design-system "no raw <a>" rule) because the modal already sits on
-              this URL, so only a document navigation escapes the interception.
-              LinkWithArrow is out for the same reason; its markup is mirrored. */}
-          <a
+              of the full feature set. */}
+          <FullDetailsLink
             href={detailHref}
-            className="group mt-1 self-end text-sm no-underline visited:text-primary-visited"
-          >
-            <span className="group-hover:underline">
-              {t("page-find-wallet-full-details")}
-            </span>
-            <ArrowRight className="ms-1 mb-0.5 inline size-[1em] rtl:-scale-x-100" />
-          </a>
+            label={t("page-find-wallet-full-details")}
+          />
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -243,6 +197,6 @@ export default async function InterceptedWalletModal(props: {
           </div>
         </div>
       </div>
-    </WalletDetailModal>
+    </CatalogDetailModal>
   )
 }
