@@ -1,5 +1,5 @@
 import * as React from "react"
-import { DocSearchModal, DocSearchModalProps } from "@docsearch/react"
+import { DocSearchModal, DocSearchModalProps } from "typesense-docsearch-react"
 
 type ModalPropsNoScroll = Omit<DocSearchModalProps, "initialScrollY">
 
