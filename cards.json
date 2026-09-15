@@ -23,14 +23,14 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
-    "item": "Green review-only PRs (#19017/#19043/#19259/#19261)",
-    "intent": "Four standalone green fixes blocked only on the review gate, no reviewer assigned",
+    "item": "Green review-only PRs (#19017/#19259/#19261)",
+    "intent": "Three standalone green production/SEO fixes blocked only on the review gate, no reviewer assigned",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Assign a merge owner for small green PRs, or say why the SEO pair is held",
+    "next_human_decision": "Name a merge owner for small green PRs, or state the SEO fixes are held",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -41,19 +41,19 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #18996",
-      "Issue #18978"
+      "PR #19043",
+      "Issue #18996"
     ],
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "all four ms=BLOCKED, ci=SUCCESS, supersededByCommits=false, 0 reviews",
-      "#19017/#19043 merge-recommended 9 mornings, zero action",
-      "#19259/#19261 green production fixes, day 2"
+      "all three ms=BLOCKED, ci=SUCCESS, supersededByCommits=false, 0 reviews",
+      "#19017 author-confirmed intent Aug 10; merge-recommended 11 mornings, zero action",
+      "#19043 dropped out of the cluster to CONFLICTING/DIRTY (delay cost a rebase)"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 11
+    "runs_seen": 12
   },
   {
     "item": "Issue #18891",
@@ -78,11 +78,11 @@
     "confidence": 0.7,
     "evidence": [
       "team issue, unassigned, no reply",
-      "idle 21d, day 14 unactioned"
+      "idle 22d, day 15 unactioned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 14
+    "runs_seen": 15
   },
   {
     "item": "Issue #19014",
@@ -104,11 +104,11 @@
     "confidence": 0.7,
     "evidence": [
       "vague 'cheaper swap', no actionable detail",
-      "Status: Stale"
+      "Status: Stale, open 6 mornings post-suggestion"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "Issue #19019",
@@ -134,7 +134,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "Issue #19247",
@@ -160,7 +160,33 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 2
+    "runs_seen": 3
+  },
+  {
+    "item": "Issue #19270",
+    "intent": "Suggest Chain.Love as a Web3 infra discovery tool",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Product triage: does it clear the tool-listing bar",
+    "waiting_on": [
+      {
+        "actor": "product",
+        "action": "Triage suggestion"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "product",
+    "confidence": 0.6,
+    "evidence": [
+      "new product suggestion, needs triage",
+      "age 1, no reply"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-15",
+    "runs_seen": 1
   },
   {
     "item": "Issue #19271",
@@ -182,18 +208,18 @@
     "confidence": 0.9,
     "evidence": [
       "'Fazer pix', failed 'canal_bancario' PDF upload",
-      "no repro, age 0"
+      "no repro"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-14",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Node-provider listing batch (#19132/#19157/#19035/#18872)",
     "intent": "Single-file node-provider additions awaiting product review",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Apply the node-provider listing bar once across all four",
+    "next_human_decision": "Apply the node-provider listing bar once across all four, or say what's blocking",
     "waiting_on": [
       {
         "actor": "product",
@@ -213,7 +239,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #17263",
@@ -234,12 +260,12 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "draft, Blocked+Stale, idle 168d",
-      "day 12 unactioned"
+      "draft, Blocked+Stale, idle 169d",
+      "day 13 unactioned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 12
+    "runs_seen": 13
   },
   {
     "item": "PR #18918",
@@ -263,11 +289,11 @@
     "confidence": 0.8,
     "evidence": [
       "ci=FAILURE (4 checks), CHANGES_REQUESTED",
-      "0 replies, idle 20d, day 15 unactioned"
+      "0 replies, idle 21d, day 16 unactioned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-04",
-    "runs_seen": 15
+    "runs_seen": 16
   },
   {
     "item": "PR #19097",
@@ -295,7 +321,7 @@
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19217",
@@ -320,11 +346,11 @@
     "evidence": [
       "ms=BLOCKED, ci=SUCCESS, no reviews",
       "implements linked #17280",
-      "idle 6d"
+      "idle 7d"
     ],
     "analyzed_sha": "634f26b",
     "first_seen": "2026-09-04",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19234",
@@ -346,22 +372,22 @@
     "confidence": 0.8,
     "evidence": [
       "team asked for wallet issue form (wackerow)",
-      "needs product review label, idle 3d"
+      "needs product review label, idle 4d"
     ],
     "analyzed_sha": "fd780f0",
     "first_seen": "2026-09-11",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19252",
     "intent": "find-wallet multi-select persona presets + client modal",
-    "state": "waiting-on-contributor",
-    "recommended_disposition": "request_changes",
-    "next_human_decision": "",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "wackerow: re-review the rethink (orphaned personas now filter shortcuts) and clear Chromatic",
     "waiting_on": [
       {
-        "actor": "pettinarip",
-        "action": "Address orphaned /personas/ routes; unblocks stacked #19266"
+        "actor": "myelinated-wackerow",
+        "action": "Re-review pushed rethink"
       }
     ],
     "impact": "medium",
@@ -374,13 +400,13 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "team review CHANGES_REQUESTED by wackerow",
-      "orphaned persona pages flagged",
-      "#19266 stacked on this, idle 0d"
+      "pettinarip pushed rethink 09-14, aiReview supersededByCommits=true",
+      "old wackerow CHANGES_REQUESTED still standing; ci=FAILURE (Chromatic)",
+      "CLEAN #19266 stacked behind it, cannot move until this lands"
     ],
-    "analyzed_sha": "ecd3541",
-    "first_seen": "2026-09-11",
-    "runs_seen": 2
+    "analyzed_sha": "0abbf92",
+    "first_seen": "2026-09-15",
+    "runs_seen": 1
   },
   {
     "item": "PR #19266",
@@ -404,11 +430,69 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "ms=CLEAN but body: stacked on #19252, retarget once merged",
-      "team-authored, ci=SUCCESS, aiReview superseded"
+      "ms=CLEAN, ci=SUCCESS, stacked on #19252 per body",
+      "retarget to dev once #19252 merges"
     ],
     "analyzed_sha": "b84e463",
     "first_seen": "2026-09-14",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19272",
+    "intent": "Sync Glamsterdam page's EIP/proposal list with generated upgrade data",
+    "state": "blocked",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Confirm EIP set matches upgrade data, then merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19171"
+    ],
+    "owner_lane": "technical-content",
+    "confidence": 0.7,
+    "evidence": [
+      "new, one file roadmap/glamsterdam/index.md, ci=SUCCESS ms=BLOCKED, 0 reviews",
+      "drops EIP-7610, adds eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189)",
+      "implements bot content-review issue #19171"
+    ],
+    "analyzed_sha": "3aa58e4",
+    "first_seen": "2026-09-15",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19276",
+    "intent": "Add upcoming Glamsterdam bug-bounty banner + scope details",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "hold",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "moodmosaic",
+        "action": "Address jtraglia inline review"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19272"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.75,
+    "evidence": [
+      "team-authored, ci=SUCCESS",
+      "18 comments, jtraglia actively reviewing 09-14/09-15",
+      "self-driving, no maintainer decision needed"
+    ],
+    "analyzed_sha": "f5cad8a",
+    "first_seen": "2026-09-15",
     "runs_seen": 1
   },
   {
@@ -434,11 +518,11 @@
     "confidence": 0.75,
     "evidence": [
       "4 recovery-agent issues unassigned, no reply, real Sentry links",
-      "individual issues at day 3; open-ended triage failed twice",
+      "day 3; open-ended triage produced nothing twice",
       "guard drafts #19198/#19208 also sit unmerged"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 2
+    "runs_seen": 3
   }
 ]
