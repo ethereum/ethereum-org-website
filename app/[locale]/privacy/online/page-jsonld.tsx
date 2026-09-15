@@ -39,7 +39,7 @@ export default async function PrivacyOnlinePageJsonLD({
       {
         "@type": "WebPage",
         ...webPageId,
-        name: t("page-privacy-online-meta-title"),
+        name: t("page-privacy-online-title"),
         description: t("page-privacy-online-meta-description"),
         url,
         inLanguage: locale,

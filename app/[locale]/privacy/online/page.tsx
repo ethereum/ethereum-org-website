@@ -1023,7 +1023,7 @@ export async function generateMetadata({
   return await getMetadata({
     locale,
     slug: ["privacy", "online"],
-    title: t("page-privacy-online-meta-title"),
+    title: t("page-privacy-online-title"),
     description: t("page-privacy-online-meta-description"),
   })
 }
