@@ -10,9 +10,8 @@ import {
 } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import type { ReactNode } from "react"
 
-import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import AppsExpander from "@/components/AppsExpander"
@@ -48,6 +47,7 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getDayOfYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { createPageTracking } from "@/lib/utils/pageTracking"
 import { seededShuffle } from "@/lib/utils/random"
 
 import PromptCard from "./_components/prompt-card"
@@ -183,33 +183,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   // Matomo: one category for the page, the section id as the action, and a
   // stable English name for the element. Section titles and most element titles
   // are translated -- ids and slugs keep a locale from splitting its own row.
-  const track = (section: string, name: string): MatomoEventOptions => ({
-    eventCategory: "open-source",
-    eventAction: section,
-    eventName: name,
-  })
-
-  // Footnote marker for the numbered citations under Further reading. Rendered
-  // outside the strings so translators never carry the numbering.
-  const footnote = (n: number, section: string) => (
-    <sup>
-      <Link
-        href="#further-reading"
-        customEventOptions={track(section, `Footnote ${n}`)}
-      >{`[${n}]`}</Link>
-    </sup>
-  )
-
-  // `t.rich` link placeholder, pre-wired to Matomo.
-  const linkTo = (href: string, section: string, name: string) => {
-    const TrackedLink = (chunks: ReactNode) => (
-      <Link href={href} customEventOptions={track(section, name)}>
-        {chunks}
-      </Link>
-    )
-    TrackedLink.displayName = "TrackedLink"
-    return TrackedLink
-  }
+  const { track, footnote, linkTo } = createPageTracking("open-source")
 
   // The four freedoms, in the order the design lists them.
   const freedoms = [
