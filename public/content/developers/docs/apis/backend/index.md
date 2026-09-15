@@ -100,6 +100,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ### Development tools {#development-tools}
 
+**eth.zig -** **_A Zig library for Ethereum, with compile-time ABI encoding and contract bindings._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Documentation](https://ethzig.org)
+- [Examples](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
