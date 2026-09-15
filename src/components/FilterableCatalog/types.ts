@@ -2,6 +2,9 @@ export type CatalogSelectOption = {
   id: string
   label: string
   count?: number
+  /** Renders as a link, not a filter toggle: for options whose items are out of
+   * this catalog's scope, so filtering can't reach them. */
+  href?: string
 }
 
 export type CatalogNavItem = {
@@ -11,7 +14,7 @@ export type CatalogNavItem = {
   count: number
   /** Marks the item matching the current route; its children render as filters */
   isCurrent?: boolean
-  /** Single-select filter options shown while this item is current */
+  /** Single-select filter options, revealed by expanding the item */
   children?: CatalogSelectOption[]
 }
 
@@ -26,16 +29,6 @@ export type CatalogNavGroupConfig = {
   allHref: string
   allCount: number
   items: CatalogNavItem[]
-}
-
-/**
- * Presentational data for the `CatalogCheckboxGroup` building block: a labelled
- * set of independent checkboxes. The block is controlled — the consumer owns
- * the selected ids and how the group combines with others (AND/OR) in `filterFn`.
- */
-export type CatalogCheckboxGroupConfig = {
-  label: string
-  options: CatalogSelectOption[]
 }
 
 /** Selected filter values keyed by an arbitrary consumer-chosen key */

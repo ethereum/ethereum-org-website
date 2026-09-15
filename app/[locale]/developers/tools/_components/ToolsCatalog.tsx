@@ -18,13 +18,8 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
 
-const SUBCATEGORY_FILTER_KEY = "subcategory"
-
-const PATH_SEPARATOR = "\u00A0\u00A0/\u00A0\u00A0"
-
-function formatPathSegment(value: string): string {
-  return value.toLocaleUpperCase()
-}
+/** Doubles as the URL query param, so a subcategory is linkable: `?sub=<id>` */
+const SUBCATEGORY_FILTER_KEY = "sub"
 
 type ToolsCatalogProps = {
   locale: string
@@ -39,6 +34,9 @@ type ToolsCatalogProps = {
     allCategories: string
     resultsLabel: string
     noResults: string
+    filtersToggle: string
+    applyLabel: string
+    closeLabel: string
   }
   currentCategoryId?: string
 }
@@ -215,18 +213,30 @@ export default function ToolsCatalog({
     allLabel: labels.allCategories,
     allHref: "/developers/tools/",
     allCount: totalCount,
-    items: categories.map((category) => ({
-      id: category.id,
-      label: getCategoryLabel(category.id, categoryLabels),
-      href: `/developers/tools/categories/${category.id}/`,
-      count: countByCategory[category.id] || 0,
-      isCurrent: currentCategoryId === category.id,
-      children: category.subcategories.map((subcategory) => ({
-        id: subcategory.id,
-        label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
-        count: countBySubcategory[subcategory.id] || 0,
-      })),
-    })),
+    items: categories.map((category) => {
+      const href = `/developers/tools/categories/${category.id}/`
+      // A category page holds only its own tools, so every other category's
+      // subcategories link out instead of filtering.
+      const isFilterable =
+        !currentCategoryId || currentCategoryId === category.id
+      return {
+        id: category.id,
+        label: getCategoryLabel(category.id, categoryLabels),
+        href,
+        count: countByCategory[category.id] || 0,
+        isCurrent: currentCategoryId === category.id,
+        children: category.subcategories.map((subcategory) => ({
+          id: subcategory.id,
+          label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
+          count: isFilterable
+            ? countBySubcategory[subcategory.id] || 0
+            : undefined,
+          href: isFilterable
+            ? undefined
+            : `${href}?${SUBCATEGORY_FILTER_KEY}=${subcategory.id}`,
+        })),
+      }
+    }),
   }
 
   const filterTool = (
@@ -257,24 +267,6 @@ export default function ToolsCatalog({
     return searchableText.includes(normalizedQuery)
   }
 
-  const renderResultsHeader = (state: CatalogFilterState) => {
-    const raw = state[SUBCATEGORY_FILTER_KEY]
-    const selectedSubcategoryId = typeof raw === "string" ? raw : undefined
-    if (!currentCategoryId && !selectedSubcategoryId) return null
-    return (
-      <p className="text-sm text-body-medium">
-        {currentCategoryId &&
-          formatPathSegment(
-            getCategoryLabel(currentCategoryId, categoryLabels)
-          )}
-        {selectedSubcategoryId &&
-          `${PATH_SEPARATOR}${formatPathSegment(
-            getSubcategoryLabel(selectedSubcategoryId, subcategoryLabels)
-          )}`}
-      </p>
-    )
-  }
-
   return (
     <FilterableCatalog
       locale={locale}
@@ -284,17 +276,14 @@ export default function ToolsCatalog({
         searchPlaceholder: labels.searchPlaceholder,
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
+        filtersToggle: labels.filtersToggle,
+        applyLabel: labels.applyLabel,
+        closeLabel: labels.closeLabel,
       }}
-      mobileVariant="collapsible"
-      mobileFilterSummary={{
-        label: currentCategoryId
-          ? getCategoryLabel(currentCategoryId, categoryLabels)
-          : labels.allCategories,
-        count: currentCategoryId
-          ? countByCategory[currentCategoryId] || 0
-          : totalCount,
-      }}
-      renderSidebar={({ state, setFilter, variant }) => {
+      mobileVariant="sheet"
+      urlParamKey={SUBCATEGORY_FILTER_KEY}
+      closeMobileOnSelect
+      renderSidebar={({ state, setFilter }) => {
         const raw = state[SUBCATEGORY_FILTER_KEY]
         return (
           <CatalogNavGroup
@@ -304,12 +293,9 @@ export default function ToolsCatalog({
             onSelectChild={(childId) =>
               setFilter(SUBCATEGORY_FILTER_KEY, childId)
             }
-            // Collapsed mobile trigger already names the all-resources view
-            showAllItem={variant === "desktop" || !!currentCategoryId}
           />
         )
       }}
-      renderResultsHeader={renderResultsHeader}
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}
