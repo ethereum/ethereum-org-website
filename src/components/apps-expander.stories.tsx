@@ -14,7 +14,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Reveals the overflow half of a server-rendered grid. Every card is in the HTML either way, so this stays usable without JS and keeps the grid itself a Server Component. Overflow cards opt into hiding themselves with `group-data-[expanded=false]/apps:hidden` -- the expander does not know which children are hidden, so the caller decides where the fold sits.",
+          "Reveals the overflow half of a server-rendered grid. Every card ships in the server HTML either way -- crawlable, and no client fetch on expand -- so only the toggle is client-side. It does need JS: without it the button is inert and the overflow cards stay hidden. Overflow cards opt into hiding themselves with `group-data-[expanded=false]/apps:hidden` -- the expander does not know which children are hidden, so the caller decides where the fold sits.",
       },
     },
   },

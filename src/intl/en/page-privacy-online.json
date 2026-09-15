@@ -12,7 +12,7 @@
   "page-privacy-online-how-description-2": "The strategies below are a starting place to protect your privacy online and mitigate tracking across standard web environments.",
   "page-privacy-online-tools-title": "Use online privacy tools",
   "page-privacy-online-tools-description": "You can protect your personal information online by switching from standard web tools to privacy-preserving alternatives built to collect less data.",
-  "page-privacy-online-tools-browser-first": "The easiest place to start is your browser, and is a change nobody else has to make with you. <strong>Roughly seven in ten people</strong> browse with <browserShare>Chrome</browserShare> and more than <strong>nine in ten searches</strong> go to <searchShare>Google</searchShare>, both built by an advertising company and <em>designed for tracking</em>.",
+  "page-privacy-online-tools-browser-first": "The easiest place to start is your browser, and it is a change nobody else has to make with you. <strong>Roughly seven in ten people</strong> browse with <browserShare>Chrome</browserShare> and more than <strong>nine in ten searches</strong> go to <searchShare>Google</searchShare>, both built by an advertising company and <em>designed for tracking</em>.",
   "page-privacy-online-tools-browser-callout-title": "Start with Brave Browser",
   "page-privacy-online-tools-browser-callout-description": "Same engine as Chrome with same look and feel. Bookmarks, passwords, and extensions carry straight over. Open source, blocks ads and trackers with no setup, and searches with Brave Search by default instead of Google.",
   "page-privacy-online-tools-browser-callout-cta": "Get Brave",

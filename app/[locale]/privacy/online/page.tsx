@@ -30,6 +30,7 @@ import { Emphasis, Strong } from "@/components/IntlStringElements"
 import {
   Alert,
   AlertContent,
+  AlertDescription,
   AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
@@ -40,6 +41,7 @@ import {
   CardBanner,
   CardContent,
   CardHeader,
+  CardIconContainer,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -84,7 +86,6 @@ import organicMapsImg from "@/public/images/open-source/organic-maps.png"
 import signalImg from "@/public/images/open-source/signal.png"
 import twofasImg from "@/public/images/privacy-online/2fas.png"
 import addyImg from "@/public/images/privacy-online/addy-io.png"
-import braveSearchImg from "@/public/images/privacy-online/brave-search.png"
 import duckduckgoImg from "@/public/images/privacy-online/duckduckgo.png"
 import fdroidImg from "@/public/images/privacy-online/f-droid.png"
 import mullvadImg from "@/public/images/privacy-online/mullvad.png"
@@ -107,8 +108,8 @@ import privacyWhyImg from "@/public/images/three-people-cat-butterflies-petting-
 // (browser, search, blocking, messaging, email).
 const VISIBLE_APP_COUNT = 12
 
-// The article opens with unheaded lead-in copy; the hero CTA scrolls to it.
-const INTRO_ID = "introduction"
+// The Summary card is the article's first block, so the hero CTA targets it.
+const SUMMARY_ID = "summary"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -211,7 +212,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const tools: Tip[] = [
     {
       id: "search",
-      icon: <Search className="size-12 text-primary" />,
+      icon: <Search />,
       title: t("page-privacy-online-tools-search-title"),
       description: t.rich("page-privacy-online-tools-search-description", {
         strong: Strong,
@@ -219,7 +220,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "blocking",
-      icon: <EyeOff className="size-12 text-primary" />,
+      icon: <EyeOff />,
       title: t("page-privacy-online-tools-blocking-title"),
       description: t.rich("page-privacy-online-tools-blocking-description", {
         strong: Strong,
@@ -227,7 +228,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "messaging",
-      icon: <MessagesSquare className="size-12 text-primary" />,
+      icon: <MessagesSquare />,
       title: t("page-privacy-online-tools-messaging-title"),
       description: t.rich("page-privacy-online-tools-messaging-description", {
         strong: Strong,
@@ -235,7 +236,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "email",
-      icon: <Mail className="size-12 text-primary" />,
+      icon: <Mail />,
       title: t("page-privacy-online-tools-email-title"),
       description: t.rich("page-privacy-online-tools-email-description", {
         strong: Strong,
@@ -243,7 +244,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "aliases",
-      icon: <AtSign className="size-12 text-primary" />,
+      icon: <AtSign />,
       title: t("page-privacy-online-tools-aliases-title"),
       description: t.rich("page-privacy-online-tools-aliases-description", {
         strong: Strong,
@@ -251,7 +252,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "signin",
-      icon: <Fingerprint className="size-12 text-primary" />,
+      icon: <Fingerprint />,
       title: t("page-privacy-online-tools-signin-title"),
       description: t.rich("page-privacy-online-tools-signin-description", {
         strong: Strong,
@@ -262,19 +263,19 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const settings: Tip[] = [
     {
       id: "devices",
-      icon: <SlidersHorizontal className="size-12 text-primary" />,
+      icon: <SlidersHorizontal />,
       title: t("page-privacy-online-settings-devices-title"),
       description: t("page-privacy-online-settings-devices-description"),
     },
     {
       id: "gpc",
-      icon: <SignalHigh className="size-12 text-primary" />,
+      icon: <SignalHigh />,
       title: t("page-privacy-online-settings-gpc-title"),
       description: t("page-privacy-online-settings-gpc-description"),
     },
     {
       id: "cookies",
-      icon: <Cookie className="size-12 text-primary" />,
+      icon: <Cookie />,
       title: t("page-privacy-online-settings-cookies-title"),
       description: t("page-privacy-online-settings-cookies-description"),
     },
@@ -285,13 +286,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const policies: Tip[] = [
     {
       id: "optout",
-      icon: <UserMinus className="size-12 text-primary" />,
+      icon: <UserMinus />,
       title: t("page-privacy-online-policies-optout-title"),
       description: t("page-privacy-online-policies-optout-description"),
     },
     {
       id: "registry",
-      icon: <WandSparkles className="size-12 text-primary" />,
+      icon: <WandSparkles />,
       title: t("page-privacy-online-policies-registry-title"),
       description: t.rich("page-privacy-online-policies-registry-description", {
         link: linkTo(
@@ -303,7 +304,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
     {
       id: "manual",
-      icon: <ScrollText className="size-12 text-primary" />,
+      icon: <ScrollText />,
       title: t("page-privacy-online-policies-manual-title"),
       description: t("page-privacy-online-policies-manual-description"),
     },
@@ -380,7 +381,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     {
       id: "brave-search",
       href: "https://search.brave.com",
-      logo: braveSearchImg,
+      logo: braveImg,
       name: t("page-privacy-online-app-brave-search-name"),
       description: t("page-privacy-online-app-brave-search-description"),
       category: categories.search,
@@ -624,8 +625,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <Grid columns={3} size={size} data-flow="cta">
       {tips.map(({ id, icon, title, description }) => (
         <Card key={id}>
+          <CardHeader>
+            <CardIconContainer>{icon}</CardIconContainer>
+          </CardHeader>
           <CardContent>
-            {icon}
             <CardTitle asChild>
               <h3>{title}</h3>
             </CardTitle>
@@ -654,7 +657,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             buttons={[
               {
                 content: t("page-privacy-online-hero-cta"),
-                href: `#${INTRO_ID}`,
+                href: `#${SUMMARY_ID}`,
               },
             ]}
           />
@@ -663,37 +666,39 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       >
-        <Card size="lg">
-          <CardContent>
-            <CardTitle size="lg" asChild>
-              <h2>{t("page-privacy-online-summary-title")}</h2>
-            </CardTitle>
-            <UnorderedList className="mb-0">
-              <ListItem>
-                {t.rich("page-privacy-online-summary-item-1", {
-                  strong: Strong,
-                })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-privacy-online-summary-item-2", {
-                  strong: Strong,
-                })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-privacy-online-summary-item-3", {
-                  strong: Strong,
-                })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-privacy-online-summary-item-4", {
-                  strong: Strong,
-                })}
-              </ListItem>
-            </UnorderedList>
-          </CardContent>
-        </Card>
+        <Section id={SUMMARY_ID}>
+          <Card size="lg">
+            <CardContent>
+              <CardTitle size="lg" asChild>
+                <h2>{t("page-privacy-online-summary-title")}</h2>
+              </CardTitle>
+              <UnorderedList className="mb-0">
+                <ListItem>
+                  {t.rich("page-privacy-online-summary-item-1", {
+                    strong: Strong,
+                  })}
+                </ListItem>
+                <ListItem>
+                  {t.rich("page-privacy-online-summary-item-2", {
+                    strong: Strong,
+                  })}
+                </ListItem>
+                <ListItem>
+                  {t.rich("page-privacy-online-summary-item-3", {
+                    strong: Strong,
+                  })}
+                </ListItem>
+                <ListItem>
+                  {t.rich("page-privacy-online-summary-item-4", {
+                    strong: Strong,
+                  })}
+                </ListItem>
+              </UnorderedList>
+            </CardContent>
+          </Card>
+        </Section>
 
-        <Section id={INTRO_ID}>
+        <Section>
           <p>{t("page-privacy-online-how-description-1")}</p>
           <p>{t("page-privacy-online-how-description-2")}</p>
         </Section>
@@ -781,7 +786,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     key={id}
                     name={name}
                     description={description}
-                    // 24 cards is ~9 phone screens with descriptions shown
+                    // 27 cards is ~9 phone screens with descriptions shown
                     descriptionClassName="hidden md:block"
                     descriptionMaxLines={6}
                     descriptionExpandable={false}
@@ -826,11 +831,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               <AlertTitle size="lg">
                 {t("page-privacy-online-vpn-alert-title")}
               </AlertTitle>
-              <p className="mt-2">
-                {t.rich("page-privacy-online-vpn-alert-description", {
-                  strong: Strong,
-                })}
-              </p>
+              <AlertDescription>
+                <p>
+                  {t.rich("page-privacy-online-vpn-alert-description", {
+                    strong: Strong,
+                  })}
+                </p>
+              </AlertDescription>
             </AlertContent>
           </Alert>
 
