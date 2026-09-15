@@ -20,7 +20,7 @@ export const PURCHASES_KEY = "purchases"
 export const LANGUAGE_KEY = "language"
 export const ADVANCED_KEY = "advanced"
 
-const ALL_FILTER_KEYS = [
+export const ALL_FILTER_KEYS = [
   DEVICES_KEY,
   NETWORKS_KEY,
   PURCHASES_KEY,
