@@ -18,7 +18,7 @@ This doc summarizes integration patterns for pipeline contributors; **endpoint s
 - **Default base URL**: defined in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`
 - **Override**: `GLOSSARY_API_URL` env var
 - **Repo**: https://github.com/ethereum/ethglossary (MPL-2.0)
-- **Live API**: https://glossary.ethereum.org (the `visual-20-hoists.workers.dev` host is the deprecated predecessor)
+- **Live API**: https://glossary.ethereum.org
 - **Agent reference**: `${GLOSSARY_HOST}/llms.txt`
 
 ## Endpoints the pipeline uses
@@ -83,7 +83,7 @@ For local testing without network: there's no offline mode currently. If `GLOSSA
 - **Querying `/translations/{lang}` and pulling all 500+ terms into the prompt** — bloats context. Use `/filter` per file.
 - **Hard-coding a term's translation locally** — defeats the purpose. If you need a term ETHGlossary doesn't have, flag it; don't add a local override.
 - **Reading endpoint shapes from this doc instead of llms.txt** — this doc is orientation. Live API specifics belong in llms.txt where they stay in sync.
-- **Hard-coding the API URL in a script** — read it from `GLOSSARY_API_URL` / `config.ts` instead. The legacy `ethglossary.visual-20-hoists.workers.dev` host still answers, but it's deprecated; `glossary.ethereum.org` is the production domain.
+- **Hard-coding the API URL in a script** — read it from `GLOSSARY_API_URL` / `config.ts` instead. `glossary.ethereum.org` is the production domain.
 - **Ignoring `confidence: low` entries** — the API returns them anyway; for review-time decisions, low-confidence terms should be flagged for native-speaker review, not blindly trusted.
 
 The policy informing `script_rule` decisions is ETHGlossary's `docs/translation-policy.md` (ethereum/ethglossary repo).
