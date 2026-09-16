@@ -1,6 +1,6 @@
 # ETHGlossary Integration
 
-The intl-pipeline consumes ETHGlossary at https://ethglossary.visual-20-hoists.workers.dev as the canonical source for term translations. The pipeline does not author terminology policy — it queries. This file is also the canonical home for the shared plumbing (llms.txt, configuration, endpoints); the review-side perspective (severity mapping, what reviewers flag) is `intl-review/references/ethglossary-usage.md`.
+The intl-pipeline consumes ETHGlossary at https://glossary.ethereum.org as the canonical source for term translations. The pipeline does not author terminology policy — it queries. This file is also the canonical home for the shared plumbing (llms.txt, configuration, endpoints); the review-side perspective (severity mapping, what reviewers flag) is `intl-review/references/ethglossary-usage.md`.
 
 ## Start with llms.txt
 
@@ -17,8 +17,8 @@ This doc summarizes integration patterns for pipeline contributors; **endpoint s
 
 - **Default base URL**: defined in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`
 - **Override**: `GLOSSARY_API_URL` env var
-- **Repo**: https://github.com/wackerow/ethglossary (MPL-2.0)
-- **Live API**: https://ethglossary.visual-20-hoists.workers.dev
+- **Repo**: https://github.com/ethereum/ethglossary (MPL-2.0)
+- **Live API**: https://glossary.ethereum.org (the `visual-20-hoists.workers.dev` host is the deprecated predecessor)
 - **Agent reference**: `${GLOSSARY_HOST}/llms.txt`
 
 ## Endpoints the pipeline uses
@@ -70,7 +70,7 @@ The `term_role` is metadata — actual policy is the per-term `script_rule`. Def
 
 If a glossary lookup returns 404 for a term that should be there, the pipeline falls back to LLM-only translation (no glossary hint in the prompt). Safe default but lower consistency for unknown terms.
 
-**Don't author terminology locally.** Flag the gap in the review report so a maintainer can address it upstream. Optionally note it in `.claude/translation-review/per-language/{lang}.md` for the next review of that language. Cross-repo coordination (filing an issue or PR against `wackerow/ethglossary`) is a separate maintainer task, not part of pipeline or review work.
+**Don't author terminology locally.** Flag the gap in the review report so a maintainer can address it upstream. Optionally note it in `.claude/translation-review/per-language/{lang}.md` for the next review of that language. Cross-repo coordination (filing an issue or PR against `ethereum/ethglossary`) is a separate maintainer task, not part of pipeline or review work.
 
 ## Cache behavior
 
@@ -83,7 +83,7 @@ For local testing without network: there's no offline mode currently. If `GLOSSA
 - **Querying `/translations/{lang}` and pulling all 500+ terms into the prompt** — bloats context. Use `/filter` per file.
 - **Hard-coding a term's translation locally** — defeats the purpose. If you need a term ETHGlossary doesn't have, flag it; don't add a local override.
 - **Reading endpoint shapes from this doc instead of llms.txt** — this doc is orientation. Live API specifics belong in llms.txt where they stay in sync.
-- **Assuming the API URL is stable** — it's hosted on Cloudflare Workers; check `config.ts` if the default URL has moved.
+- **Hard-coding the API URL in a script** — read it from `GLOSSARY_API_URL` / `config.ts` instead. The legacy `ethglossary.visual-20-hoists.workers.dev` host still answers, but it's deprecated; `glossary.ethereum.org` is the production domain.
 - **Ignoring `confidence: low` entries** — the API returns them anyway; for review-time decisions, low-confidence terms should be flagged for native-speaker review, not blindly trusted.
 
-The policy informing `script_rule` decisions is ETHGlossary's `docs/translation-policy.md` (wackerow/ethglossary repo).
+The policy informing `script_rule` decisions is ETHGlossary's `docs/translation-policy.md` (ethereum/ethglossary repo).

@@ -88,8 +88,8 @@ NEVER run the sanitizer against an entire language. It processes thousands of fi
 | Pipeline test suite                    | `tests/unit/intl-pipeline/`                                        |
 | Future-work backlog                    | `src/scripts/intl-pipeline/FUTURE.md`                              |
 | Language config (canonical list)       | `i18n.config.json`                                                 |
-| ETHGlossary repo                       | https://github.com/wackerow/ethglossary                            |
-| ETHGlossary API root                   | https://ethglossary.visual-20-hoists.workers.dev                   |
+| ETHGlossary repo                       | https://github.com/ethereum/ethglossary                            |
+| ETHGlossary API root                   | https://glossary.ethereum.org                                      |
 
 ## When to Load Each Reference
 
