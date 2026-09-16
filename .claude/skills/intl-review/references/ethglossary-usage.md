@@ -67,4 +67,4 @@ Don't patch the locale to compensate, and don't author terminology locally — s
 - **Don't query ETHGlossary from memory.** Always use the API for the actual review evaluation. Memory is for understanding patterns, not for citing specific terms.
 - **Don't read endpoint shapes from this doc.** Use llms.txt for the canonical API contract.
 
-ETHGlossary's `docs/translation-policy.md` (in the wackerow/ethglossary repo) is the canonical policy behind all of the above.
+ETHGlossary's `docs/translation-policy.md` (in the ethereum/ethglossary repo) is the canonical policy behind all of the above.
