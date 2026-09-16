@@ -102,5 +102,9 @@
   "page-open-access-future-description-1": "Digital systems do not have to be built around permanent permission from a handful of gatekeepers.",
   "page-open-access-future-description-2": "We can build infrastructure where companies still provide useful services, communities still set their own rules, and laws still apply, while no single intermediary holds the final switch over everyone's access.",
   "page-open-access-future-description-3": "That is the promise of censorship resistance.",
-  "page-open-access-future-description-4": "And it is one of the principles Ethereum is designed to protect."
+  "page-open-access-future-description-4": "And it is one of the principles Ethereum is designed to protect.",
+
+  "page-open-access-resources-title": "Further reading",
+  "page-open-access-reference-cfpb": "<link>2025 Consumer Response Annual Report</link> - Consumer Financial Protection Bureau",
+  "page-open-access-reference-findex": "<link>Mobile-Phone Technology Powers Saving Surge in Developing Economies</link> - World Bank (Global Findex 2025)"
 }

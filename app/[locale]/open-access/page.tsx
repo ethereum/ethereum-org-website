@@ -1,5 +1,6 @@
 import { Globe, Handshake, Heart, PowerOff, Recycle } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
+import type { ReactNode } from "react"
 
 import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
 
@@ -26,7 +27,7 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -90,6 +91,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       id: "a-different-future-is-possible",
       title: t("page-open-access-future-title"),
     },
+    resources: {
+      id: "further-reading",
+      title: t("page-open-access-resources-title"),
+    },
   }
 
   const tocItems: ToCItem[] = Object.values(sections).map(({ id, title }) => ({
@@ -105,6 +110,28 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     eventAction: section,
     eventName: name,
   })
+
+  // Footnote marker for the numbered citations under Further reading. Rendered
+  // outside the strings so translators never carry the numbering.
+  const footnote = (n: number, section: string) => (
+    <sup>
+      <InlineLink
+        href="#further-reading"
+        customEventOptions={track(section, `Footnote ${n}`)}
+      >{`[${n}]`}</InlineLink>
+    </sup>
+  )
+
+  // `t.rich` link placeholder, pre-wired to Matomo.
+  const linkTo = (href: string, section: string, name: string) => {
+    const TrackedLink = (chunks: ReactNode) => (
+      <InlineLink href={href} customEventOptions={track(section, name)}>
+        {chunks}
+      </InlineLink>
+    )
+    TrackedLink.displayName = "TrackedLink"
+    return TrackedLink
+  }
 
   // The four properties that make Ethereum's access hard to revoke, in the
   // order the design lists them.
@@ -274,9 +301,17 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         <Section id={sections.frozen.id}>
           <h2>{sections.frozen.title}</h2>
           <p>{t("page-open-access-frozen-description-1")}</p>
-          <p>{t("page-open-access-frozen-description-2")}</p>
+          {/* Markers sit outside the strings so translators never carry the
+              numbering; both sources are cited under Further reading. */}
+          <p>
+            {t("page-open-access-frozen-description-2")}
+            {footnote(1, sections.frozen.id)}
+          </p>
           <p>{t("page-open-access-frozen-description-3")}</p>
-          <p>{t("page-open-access-frozen-description-4")}</p>
+          <p>
+            {t("page-open-access-frozen-description-4")}
+            {footnote(2, sections.frozen.id)}
+          </p>
           <p>{t("page-open-access-frozen-description-5")}</p>
           <Image
             src={ethVaultImg}
@@ -449,6 +484,32 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-future-description-2")}</p>
           <p>{t("page-open-access-future-description-3")}</p>
           <p>{t("page-open-access-future-description-4")}</p>
+        </Section>
+
+        <Section id={sections.resources.id}>
+          <h2>{sections.resources.title}</h2>
+
+          {/* Numbered: the targets of the [1]-[2] markers in the body. */}
+          <OrderedList>
+            <ListItem>
+              {t.rich("page-open-access-reference-cfpb", {
+                link: linkTo(
+                  "https://www.consumerfinance.gov/data-research/research-reports/2025-consumer-response-annual-report/",
+                  sections.resources.id,
+                  "CFPB Consumer Response Annual Report"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-findex", {
+                link: linkTo(
+                  "https://www.worldbank.org/en/news/press-release/2025/07/16/mobile-phone-technology-powers-saving-surge-in-developing-economies",
+                  sections.resources.id,
+                  "World Bank Global Findex 2025"
+                ),
+              })}
+            </ListItem>
+          </OrderedList>
         </Section>
       </ContentLayout>
     </>
