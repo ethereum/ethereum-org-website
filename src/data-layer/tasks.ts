@@ -70,8 +70,10 @@ export const KEYS = {
   QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
-// Task definition: storage key + fetch function
-type TaskDef = [string, () => Promise<unknown>]
+// Task definition: storage key + fetch function + optional per-task overrides
+// of the limits set for every task in trigger.config.ts.
+type TaskOverrides = { maxDuration?: number }
+type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
@@ -91,7 +93,11 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  // The builder-resources catalog passed 400 entries, and this fetch enriches
+  // every one of them from the GitHub GraphQL API and the npm downloads API
+  // (both paced with sleeps to stay under their rate limits), then re-hosts
+  // each image on S3. That no longer fits the 300s default.
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
@@ -109,12 +115,13 @@ const HOURLY: TaskDef[] = [
 ]
 
 // ─── Dynamic task creation ───
-function createDataTask([key, fetchFn]: TaskDef) {
+function createDataTask([key, fetchFn, overrides]: TaskDef) {
   return task({
     id: key,
     retry: {
       maxAttempts: 2,
     },
+    ...overrides,
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },
