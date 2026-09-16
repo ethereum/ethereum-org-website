@@ -66,31 +66,30 @@ import { getMetadata } from "@/lib/utils/metadata"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
-import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
-import ludlowBannerImg from "@/public/assets/privacy-online/ludlow-institute-banner.png"
-import noybBannerImg from "@/public/assets/privacy-online/noyb-banner.png"
-import privacyInternationalBannerImg from "@/public/assets/privacy-online/privacy-international-banner.png"
-import web3privacyBannerImg from "@/public/assets/privacy-online/web3privacy-now-banner.png"
 import developersEthBlocksImg from "@/public/images/developers-eth-blocks.png"
 // Logos shared with /open-source are imported from there rather than copied.
 // TODO: move the app catalog somewhere both pages can read it.
 import bitwardenImg from "@/public/images/open-source/bitwarden.png"
 import braveImg from "@/public/images/open-source/brave.png"
 import cryptomatorImg from "@/public/images/open-source/cryptomator.png"
+import effBannerImg from "@/public/images/open-source/electronic-frontier-foundation-banner.png"
 import entePhotosImg from "@/public/images/open-source/ente-photos.png"
 import firefoxImg from "@/public/images/open-source/firefox.png"
 import grapheneosImg from "@/public/images/open-source/grapheneos.png"
 import organicMapsImg from "@/public/images/open-source/organic-maps.png"
 import signalImg from "@/public/images/open-source/signal.png"
+import torBannerImg from "@/public/images/open-source/tor-project-banner.png"
 import heroImg from "@/public/images/privacy-curtains-woman-cat-computer.png"
 import twofasImg from "@/public/images/privacy-online/2fas.png"
 import addyImg from "@/public/images/privacy-online/addy-io.png"
 import duckduckgoImg from "@/public/images/privacy-online/duckduckgo.png"
 import fdroidImg from "@/public/images/privacy-online/f-droid.png"
+import ludlowBannerImg from "@/public/images/privacy-online/ludlow-institute-banner.png"
 import mullvadImg from "@/public/images/privacy-online/mullvad.png"
 import mysudoImg from "@/public/images/privacy-online/mysudo.png"
 import notesnookImg from "@/public/images/privacy-online/notesnook.png"
+import noybBannerImg from "@/public/images/privacy-online/noyb-banner.png"
+import privacyInternationalBannerImg from "@/public/images/privacy-online/privacy-international-banner.png"
 import protonMailImg from "@/public/images/privacy-online/proton-mail.png"
 import protonVpnImg from "@/public/images/privacy-online/proton-vpn.png"
 import quad9Img from "@/public/images/privacy-online/quad9.png"
@@ -101,6 +100,7 @@ import tailsImg from "@/public/images/privacy-online/tails.png"
 import torBrowserImg from "@/public/images/privacy-online/tor-browser.png"
 import tutaImg from "@/public/images/privacy-online/tuta.png"
 import ublockOriginImg from "@/public/images/privacy-online/ublock-origin.png"
+import web3privacyBannerImg from "@/public/images/privacy-online/web3privacy-now-banner.png"
 import privacyWhyImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
 
 // The first run of app cards; the rest sit behind "show more". The order is
@@ -766,8 +766,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-privacy-online-settings-description")}</p>
           {renderTips(settings)}
           <MarkdownVideo
-            src="/assets/privacy-online/reject-cookies.mp4#1280x720"
-            poster="/assets/privacy-online/reject-cookies-poster.jpg"
+            src="/images/privacy-online/reject-cookies.mp4#1280x720"
+            poster="/images/privacy-online/reject-cookies-poster.jpg"
             alt={t("page-privacy-online-settings-cookies-clip-alt")}
           />
         </Section>
