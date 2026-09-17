@@ -145,6 +145,23 @@ function isAlreadyOnS3(url: string): boolean {
 }
 
 /**
+ * Learn an image's served type without downloading it. Plenty of hosts answer
+ * HEAD badly or not at all, so any failure here just falls through to the GET.
+ */
+async function headContentType(sourceUrl: string): Promise<string | null> {
+  try {
+    const response = await fetch(sourceUrl, {
+      method: "HEAD",
+      signal: AbortSignal.timeout(5_000),
+      headers: { "User-Agent": "ethereum.org-image-sync/1.0" },
+    })
+    return response.ok ? response.headers.get("content-type") : null
+  } catch {
+    return null
+  }
+}
+
+/**
  * Upload an image from an external URL to S3.
  *
  * @param sourceUrl - The external image URL to fetch and upload
@@ -179,12 +196,40 @@ export async function uploadToS3(
       ? generateKey(prefix, sourceUrl, urlExt)
       : null
 
+  // Keys already known to be absent, so no path below probes one twice
+  const probed = new Set<string>()
+
   if (precheckKey) {
+    probed.add(precheckKey)
     try {
       await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: precheckKey }))
       return buildS3Url(bucket, precheckKey)
     } catch {
       // Not in the bucket yet; fall through and upload it.
+    }
+  }
+
+  // The pre-check key is only a guess from the URL extension, and hosts often
+  // serve something else -- `github.com/<org>.png` returns whatever format the
+  // org uploaded. A HEAD settles the real key for one round trip instead of a
+  // full download. Skipped for customFilename, whose key ignores the extension.
+  if (!customFilename) {
+    const servedType = await headContentType(sourceUrl)
+    const servedExt = servedType
+      ? getExtensionFromContentType(servedType)
+      : null
+    const servedKey = servedExt
+      ? generateKey(prefix, sourceUrl, servedExt)
+      : null
+
+    if (servedKey && !probed.has(servedKey)) {
+      probed.add(servedKey)
+      try {
+        await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: servedKey }))
+        return buildS3Url(bucket, servedKey)
+      } catch {
+        // Still absent; the GET below uploads it.
+      }
     }
   }
 
@@ -237,8 +282,8 @@ export async function uploadToS3(
       ? `${prefix}/${customFilename}`
       : generateKey(prefix, sourceUrl, ext)
 
-    // Check if already exists in S3 (skipped when the pre-check used this key)
-    if (key !== precheckKey) {
+    // Check if already exists in S3 (skipped when a pre-check used this key)
+    if (!probed.has(key)) {
       try {
         await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }))
         return buildS3Url(bucket, key)

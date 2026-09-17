@@ -70,6 +70,7 @@ const s3Key = (prefix: string, url: string, ext: string) =>
 test.describe("data-layer S3 helpers", () => {
   let stub: Stub
   let sourceFetches: string[]
+  const servedTypes = new Map<string, string>()
 
   test.beforeAll(async () => {
     stub = await startS3Stub()
@@ -81,13 +82,22 @@ test.describe("data-layer S3 helpers", () => {
     // The module reads every S3 env var lazily, on first upload, so setting
     // them here is enough despite the static import above.
     sourceFetches = []
-    globalThis.fetch = (async (input: string | URL | Request) => {
+    globalThis.fetch = (async (
+      input: string | URL | Request,
+      init?: RequestInit
+    ) => {
       const url = typeof input === "string" ? input : input.toString()
-      sourceFetches.push(url)
-      return new Response(new Uint8Array([1, 2, 3, 4]), {
-        status: 200,
-        headers: { "content-type": "image/png" },
-      })
+      const method = init?.method ?? "GET"
+      sourceFetches.push(`${method} ${url}`)
+      // A url can declare a type the host does not actually serve
+      const contentType = servedTypes.get(url) ?? "image/png"
+      return new Response(
+        method === "HEAD" ? null : new Uint8Array([1, 2, 3, 4]),
+        {
+          status: 200,
+          headers: { "content-type": contentType },
+        }
+      )
     }) as typeof fetch
   })
 
@@ -98,6 +108,7 @@ test.describe("data-layer S3 helpers", () => {
   test.beforeEach(() => {
     stub.calls.length = 0
     sourceFetches.length = 0
+    servedTypes.clear()
   })
 
   test("returns the S3 url without downloading an image the bucket holds", async () => {
@@ -121,7 +132,8 @@ test.describe("data-layer S3 helpers", () => {
 
     expect(result).toBe(`http://127.0.0.1:${stub.port}/${BUCKET}/${key}`)
     expect(stub.calls).toEqual([`HEAD ${key}`, `PUT ${key}`])
-    expect(sourceFetches).toEqual([url])
+    // HEAD settles the served type, GET pulls the body exactly once
+    expect(sourceFetches).toEqual([`HEAD ${url}`, `GET ${url}`])
   })
 
   test("a repeat run costs one HEAD and no download", async () => {
@@ -145,10 +157,43 @@ test.describe("data-layer S3 helpers", () => {
 
     const result = await uploadToS3(url, "tools/thumbnails")
 
-    // No pre-check is possible, so the source is fetched to learn the type
-    expect(sourceFetches).toEqual([url])
+    // No url extension, so the type comes from the source HEAD
+    expect(sourceFetches).toEqual([`HEAD ${url}`, `GET ${url}`])
     expect(stub.calls).toEqual([`HEAD ${key}`, `PUT ${key}`])
     expect(result).toContain(key)
+  })
+
+  test("resolves a url whose extension lies about the served type", async () => {
+    // `github.com/<org>.png` serves whatever the org uploaded
+    const url = "https://github.com/some-org.png"
+    servedTypes.set(url, "image/jpeg")
+    const jpgKey = s3Key("tools/thumbnails", url, "jpg")
+    stub.existing.add(jpgKey)
+
+    const result = await uploadToS3(url, "tools/thumbnails")
+
+    expect(result).toContain(jpgKey)
+    // The body is never pulled: the source HEAD is enough to find the real key
+    expect(sourceFetches).toEqual([`HEAD ${url}`])
+    expect(stub.calls).toEqual([
+      `HEAD ${s3Key("tools/thumbnails", url, "png")}`,
+      `HEAD ${jpgKey}`,
+    ])
+  })
+
+  test("never probes the same S3 key twice on a mismatched miss", async () => {
+    const url = "https://github.com/absent-org.png"
+    servedTypes.set(url, "image/jpeg")
+    const pngKey = s3Key("tools/banners", url, "png")
+    const jpgKey = s3Key("tools/banners", url, "jpg")
+
+    await uploadToS3(url, "tools/banners")
+
+    expect(stub.calls).toEqual([
+      `HEAD ${pngKey}`,
+      `HEAD ${jpgKey}`,
+      `PUT ${jpgKey}`,
+    ])
   })
 
   test("mapWithConcurrency preserves input order", async () => {
