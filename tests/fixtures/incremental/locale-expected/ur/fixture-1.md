@@ -1,6 +1,6 @@
 ---
 title: "اوپن سورس لائسنسنگ کو سمجھنا"
-description: "مفت سافٹ ویئر لائسنسز اور باہمی ترقی کے لیے ایک عملی گائیڈ"
+description: "اوپن سورس لائسنسز، تعمیل، اور تعاون کے لیے ایک جامع گائیڈ"
 image: /images/open-source/hero-licensing-v2.png
 alt: "مختلف لائسنس کی اقسام کو ظاہر کرنے والا خاکہ"
 template: tutorial
