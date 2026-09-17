@@ -14,9 +14,8 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { AccordionContainer } from "@/components/ui/accordion"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-// Uncomment `Alert` for Bug Bounty Banner:
-// import { Alert } from "@/components/ui/alert"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import { Flex, VStack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
@@ -217,10 +216,15 @@ export default async function Page(props: { params: Promise<Params> }) {
   return (
     <>
       <BugBountyJsonLD locale={locale} contributors={contributors} />
-      {/* Uncomment for Bug Bounty Banner: */}
-      {/* <Alert variant="banner">
-        Fusaka vulnerabilities are now part of the Bug Bounty Program!
-      </Alert> */}
+      <Alert variant="banner">
+        <p>
+          {t.rich("glamsterdam-banner", {
+            a: (chunks) => (
+              <InlineLink href="#glamsterdam">{chunks}</InlineLink>
+            ),
+          })}
+        </p>
+      </Alert>
 
       <PageHero
         breadcrumbs={{ slug: "bug-bounty" }}
@@ -265,6 +269,34 @@ export default async function Page(props: { params: Promise<Params> }) {
       />
 
       <MainArticle className="flow *:px-page! **:[:is(p,ul,ol)]:max-w-3xl">
+        <Section id="glamsterdam">
+          <h2>{t("glamsterdam-title")}</h2>
+          <p>
+            {t.rich("glamsterdam-opening", {
+              a: (chunks) => (
+                <InlineLink href="https://blog.ethereum.org">
+                  {chunks}
+                </InlineLink>
+              ),
+            })}
+          </p>
+          <p>{t("glamsterdam-scope")}</p>
+          <h3>{t("glamsterdam-rewards-title")}</h3>
+          <UnorderedList>
+            <ListItem>{t("glamsterdam-rewards-initial")}</ListItem>
+            <ListItem>{t("glamsterdam-rewards-sepolia")}</ListItem>
+            <ListItem>{t("glamsterdam-rewards-hoodi")}</ListItem>
+          </UnorderedList>
+          <p>{t("glamsterdam-rewards-submission")}</p>
+          <p>{t("glamsterdam-rewards-low")}</p>
+          <p>{t("glamsterdam-timing")}</p>
+          <p>
+            {t.rich("glamsterdam-rules", {
+              a: (chunks) => <InlineLink href="#rules">{chunks}</InlineLink>,
+            })}
+          </p>
+        </Section>
+
         <Section id="clients">
           <p className="mx-auto text-center uppercase">
             {t("page-upgrades-bug-bounty-clients")}
