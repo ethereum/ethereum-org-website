@@ -65,6 +65,7 @@ const ToolsPageBody = async ({
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
+            cropsNative: t("page-developers-tools-crops-native"),
           }}
         />
         <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
