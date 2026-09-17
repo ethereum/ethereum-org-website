@@ -20,13 +20,13 @@ breadcrumb: "Partyzanckie L2"
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=WlsICV2OPAE) opublikowanego przez Web3Privacy Now. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie i filozofia anarchistyczna (0:05) {#introduction-and-anarchist-philosophy-005}
+### Wprowadzenie i filozofia anarchistyczna (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Oklaski] Cóż, dziękuję, że tu jesteście. Wiem, że Vitalik teraz przemawia. To naprawdę zaszczyt gościć tu kilkoro z was, a nie w tamtej kolejce po matchę. Porozmawiamy dzisiaj o partyzanckich warstwach 2 (L2) i myślę, że zaraz do tego przejdziemy, ale najpierw przedstawiam wam Melanie Premsyl, francuską filozofkę i anarchistkę, która robi nam ten zaszczyt i dołącza do nas. Czy chciałabyś powiedzieć o sobie kilka słów tytułem wstępu?
 
 **Melanie Premsyl:** Tak. Cześć wszystkim. Jestem francuską filozofką. Badam anarchię i technologię, a na początku skupiałam się bardziej na terytorium. Jak na przykład w środkowej Francji, nie wiem, czy znacie Tarnac, albo tego typu grupy, które są bardziej radykalne. Głównym problemem, z jakim się spotkałam, było to, że musimy być w kontakcie z innymi ludźmi na świecie, a wiele grup anarchistycznych jest bardzo ograniczonych. Potrzebujemy sposobu na komunikację z większą liczbą osób z Ameryki Północnej czy Południowej. I właśnie dlatego próbujemy teraz stworzyć most z krypto i wszystkimi, którzy szukają nowych sposobów na walkę z brakiem prywatności, brakiem wolności i przemocą ze strony państwa.
 
-#### Proces braci MEV (1:52) {#the-mev-brothers-trial-152}
+### Proces braci MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Niesamowite. Zasadniczo poznałyśmy się kilka tygodni temu w Nowym Jorku. Obie uczestniczyłyśmy w procesie na Manhattanie, gdzie dwaj bracia, znani jako bracia MEV, byli sądzeni za to, że zastosowali atak sandwich na boty typu sandwich. Poszłam do sądu, aby obserwować proces, i zobaczyłam tę oto osobę czytającą Spinozę po francusku, i byłam bardzo ciekawa, co się dzieje. Na widowni nie było nikogo oprócz nas dwóch! Byłam więc bardzo ciekawa, co skłoniło cię, przede wszystkim anarchistkę i filozofkę, a nie technolożkę, do wzięcia udziału w tym konkretnym procesie, ale także do refleksji nad zarządzaniem Ethereum, całym systemem walidacji i procesem, który odbywał się w Nowym Jorku. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Partyzanckie L2"
 
 **Fatemeh Fannizadeh:** Okej. Tak, to ma sens. Więc dla tych, którzy nie śledzili procesu, po jakichś trzech czy czterech tygodniach został on unieważniony. Ława przysięgłych nie mogła dojść do jednomyślnego werdyktu i zdecydować, czy ci dwaj bracia byli winni naruszenia zasad blockchain, czy nie – co jest w pewnym sensie pozytywnym wynikiem, jak sądzę, dla krypto, że sąd lub ława przysięgłych nie decyduje o tym, co jest dobre, a co złe onchain. 
 
-#### Łączenie blockchain z innymi społecznościami (4:06) {#bridging-blockchain-with-other-communities-406}
+### Łączenie blockchain z innymi społecznościami (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Ale dobrze, jeśli cofniemy się o krok do tego, co powiedziałaś o anarchistach przyglądających się tej technologii, aby w zasadzie budować mosty między różnymi grupami. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Partyzanckie L2"
 
 **Melanie Premsyl:** Tak, chciałabym tak powiedzieć, ale nie jestem pewna, bo wiesz, jest wielu ludzi, którzy muszą zarabiać pieniądze, więc to też jest główny cel. Ale myślę, że moglibyśmy po prostu używać tego jak komunistycznej sieci, że tylko jedna część mogłaby być takim marzeniem. Myślę, że to wymarzone ciasto, które można upiec, ale potrzebujemy narzędzi i projektów, które pomogą ludziom wyjść z technicznego, bardzo inżynieryjnego sposobu myślenia, aby zrozumieć, jak to wygląda.
 
-#### Decentralizacja i warstwy 2 (L2) (6:55) {#decentralization-and-layer-2s-655}
+### Decentralizacja i warstwy 2 (L2) (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** To bardzo przypomina mi zdecentralizowane organizacje autonomiczne (DAO) sprzed kilku lat. Nie wiem jak wy, ale ja byłam bardzo podekscytowana, myślałam, że DAO rewolucjonizują sposób, w jaki organizujemy się jako grupy i społeczności onchain, oraz wolność, jaką mamy. A ostatecznie wszystko to spaliło na panewce. Nie sądzę, żeby to się w ogóle zmaterializowało. Stało się to bardziej kwestią systemu głosowania, nie jest to tak naprawdę demokratyczne, chodzi tylko o osiąganie zysków. Cała ta idea DAO jako narzędzia społecznego, którą mieliśmy, tak naprawdę się nie urzeczywistniła. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Partyzanckie L2"
 
 **Melanie Premsyl:** Jestem Francuzką. To duży problem. Będąc Francuzami, jesteśmy narodem bardzo państwowym. Więc zawsze myślę w sposób pedagogiczny i bardzo odgórny. Myślę, że L2 tworzy sposób, w jaki każdy może tworzyć mini blockchainy, a są one zabezpieczone przez warstwę 1 (L1). Chciałabym zobaczyć, czy ludzie potrafią stworzyć pomoc pedagogiczną dla każdego w zakresie czegoś, co jest darmowe. Myślę, że wiele grup, takich jak stowarzyszenia, mogłoby stworzyć własny blockchain, i byłby to sposób – jak wiesz, federalizm to główny temat anarchizmu. Jak ludzie mogą sobie radzić, może nienawidząc się nawzajem, ale rozmawiając ze sobą. Potrzebujemy więc tego rodzaju federalizmu w blockchain. Każdy ma warstwę 2 (L2) z własną wartością, więc rozmawiamy za pomocą tej samej infrastruktury. 
 
-#### Anarchia, wolność i budowanie narzędzi (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarchia, wolność i budowanie narzędzi (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Tak, bardzo podoba mi się to, co powiedziałaś o tym, że w zasadzie nienawidzimy się nawzajem, ale wciąż się komunikujemy, czyli nie jesteśmy toksyczni pomimo naszych różnic. A fakt, że w tym scenariuszu istnieje jedna warstwa 1 (L1), którą byłoby Ethereum, jest również często określany jako faszystowski, ponieważ wszyscy musimy zgodzić się na ten jeden zestaw zasad. Jest to więc jeden system, który jest równy dla wszystkich, i musisz w zasadzie podporządkować się temu L1 albo możesz odejść, to zupełnie inna kwestia. Ale jeśli możemy to zdecentralizować w różnego rodzaju ekosystemy małych rollupów L2, to możemy przywrócić dysonans i niezgodę w ramach tej wspólnej infrastruktury. 
 

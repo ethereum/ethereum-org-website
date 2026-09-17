@@ -39,7 +39,7 @@ export const testData = {
     headings: {
       homepage: en["site-title"],
       startPage: enStart["page-start-meta-title"],
-      findWallet: en["nav-find-wallet-label"],
+      findWallet: enFindWallet["page-find-wallet-title"],
       findWalletRelated: enFindWallet["page-find-wallet-related-title"],
       notFoundEn: en["we-couldnt-find-that-page"],
       notFoundEs: es["we-couldnt-find-that-page"],

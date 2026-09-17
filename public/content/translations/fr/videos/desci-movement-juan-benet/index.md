@@ -18,7 +18,7 @@ Une présentation de **Juan Benet**, fondateur de Protocol Labs et inventeur d'I
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=zkXM9H90g_E) publiée par l'EthCC. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction à la science et au progrès (0:10) {#introduction-to-science-and-progress-010}
+### Introduction à la science et au progrès (0:10) {#introduction-to-science-and-progress-010}
 
 Très bien, bonjour à tous. Je m'appelle Juan. Je suis ici pour parler de la DeSci. Je veux parler de la façon dont nous pouvons utiliser la DeSci pour financer, organiser et ouvrir la science. Tout d'abord, voici ce dont nous allons discuter : je vais parler de la science en général pendant un moment, puis je vais parler de ce qu'est le mouvement DeSci, et ensuite de la façon dont nous pouvons financer les biens communs scientifiques. Ensuite, comment la DeSci organise les personnes, les projets et les travaux autour de la science. Puis je veux parler un peu du libre accès et de la science reproductible, et je veux terminer par un appel à l'action. Ce sera donc assez rapide. Nous avons beaucoup de choses à couvrir, alors je vais aller vite.
 
@@ -34,7 +34,7 @@ Maintenant, la science a une tonne de problèmes. Il y a toutes sortes de probl�
 
 Une fois les études terminées et produites, seule une fraction d'entre elles se reproduit. Il y a donc toutes sortes de travaux scientifiques qui ont été publiés, acceptés et considérés comme corrects, pour découvrir plus tard qu'une grande partie d'entre eux ne peut pas être reproduite. Il y a donc une énorme crise de reproductibilité. Et il y a même des découvertes scientifiques dont les artefacts disparaissent. Pensez aux articles, au code ou aux données réels associés à un résultat qui disparaissent de nos banques de connaissances. Il y a donc toutes sortes de problèmes autour de la science qui doivent être résolus, et c'est en partie ce dont traite la DeSci. Il s'agit de s'attaquer à une série de ces problèmes, pas en bloc, pas complètement, mais la communauté DeSci essaie de s'attaquer à un certain nombre de ces problèmes.
 
-#### Le mouvement DeSci (5:11) {#the-desci-movement-511}
+### Le mouvement DeSci (5:11) {#the-desci-movement-511}
 
 Alors, qu'est-ce que la DeSci ? La science décentralisée (DeSci) est un mouvement visant à améliorer la science en utilisant les technologies et les outils du Web3. Imaginez pouvoir utiliser toute la magie des liens de hash, des blockchains et des contrats intelligents pour créer des systèmes et des structures qui peuvent améliorer la façon dont nous faisons de la science dans tous les domaines à travers le monde.
 
@@ -46,7 +46,7 @@ Il y a maintenant plusieurs groupes qui font du financement décentralisé de la
 
 Il y a aussi maintenant beaucoup de rencontres et de conférences différentes qui rassemblent ces communautés. Des événements comme le DeSci Day, DeSci Berlin, Schelling Point de la communauté Gitcoin et Funding the Commons. Ces conférences rassemblent une grande partie des conversations autour de la DeSci.
 
-#### Financer les biens communs (10:40) {#funding-the-commons-1040}
+### Financer les biens communs (10:40) {#funding-the-commons-1040}
 
 Parlons du financement des biens publics. Peut-être que certains d'entre vous ont vu ce diagramme que j'ai utilisé dans le passé concernant le gouffre de l'innovation. Dans le passage de la science à la technologie, la partie DeSci se concentre principalement sur la partie gauche — juste la partie scientifique — en essayant de penser à de meilleures structures d'incitation et à de meilleures façons de coordonner les groupes pour produire de meilleurs résultats scientifiques. Il convient de noter que le financement mondial total de la R&D est, d'un certain point de vue, assez massif, mais d'un autre point de vue, pas si important et n'a pas beaucoup changé au cours des dernières décennies, même si le débit et les résultats de la technologie que nous construisons ont considérablement augmenté.
 
@@ -64,7 +64,7 @@ Par exemple, des groupes comme VitaDAO créent une structure de données accorda
 
 Les certificats d'impact sont une autre structure fascinante représentant un financement rétroactif. Ils permettent aux participants, une fois qu'ils ont obtenu un certain impact, de frapper un certificat autour de cet impact et de le vendre sur le marché à quiconque souhaite réclamer cet impact. Cela permet l'émergence d'un marché spéculatif, bouclant la boucle dans le temps pour financer rétroactivement des travaux extrêmement importants. C'est crucial car bien souvent, on ne se rend compte de la valeur d'une chose que bien après que le travail a été accompli.
 
-#### Organiser les personnes et les Data DAO (15:28) {#organizing-people-and-data-daos-1528}
+### Organiser les personnes et les Data DAO (15:28) {#organizing-people-and-data-daos-1528}
 
 Maintenant, quelques réflexions rapides sur l'organisation des personnes. Dans le passé, GitHub a connu un énorme succès en aidant à organiser la découverte scientifique. Des manuels et des domaines entiers se sont développés grâce à GitHub. De nombreux groupes ont utilisé les primitives de base de GitHub autour des tickets, de la collaboration sur le code et du contrôle de version pour organiser des communautés de pratique et de science. Mais ce qui n'est pas complet là-bas, c'est que vous n'avez pas de moyen de créer des organisations qui font de la recherche, de gérer des capitaux ou de payer des contributeurs.
 
@@ -78,7 +78,7 @@ Vous pouvez envisager de regrouper ce type d'activité et de génération de don
 
 Quelques notes finales sur le libre accès et la science reproductible. IPFS a déjà été énormément utilisé pour de nombreux types de travaux de science ouverte. Il vit déjà le rêve d'ouvrir l'accès à une grande partie de la science, en prenant en charge des copies distribuées de Wikipédia, des archives massives d'articles et des ensembles de données.
 
-#### Libre accès, science reproductible et appel à l'action (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Libre accès, science reproductible et appel à l'action (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Nous n'y sommes pas encore tout à fait avec une reproductibilité totale. C'est un domaine qui nécessite plus de travail, mais beaucoup de gens y ont déjà réfléchi. Il y a de très bonnes spécifications et idées autour de l'utilisation de la reproductibilité standard avec IPFS pour figer tous les actifs et construire un pipeline entièrement reproductible. Vous pouvez rappeler des expériences spécifiques du passé, ramener des machines virtuelles (VM) ou des conteneurs totalement figés, réexécuter tous les pipelines de données et vérifier que les expériences sont correctes.
 

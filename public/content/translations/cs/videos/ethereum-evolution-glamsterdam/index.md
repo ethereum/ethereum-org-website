@@ -19,7 +19,7 @@ Prezentace **Prestona Van Loona** z Offchain Labs a Prysm, přednesená na ETHDe
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=GgKveVMLnoo) zveřejněného ETHDenver. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:07) {#introduction-007}
+### Úvod (0:07) {#introduction-007}
 
 **Moderátor:** Dobrá, všichni. Pokračujeme dál. Budeme mluvit o evoluci Etherea s Prestonem Van Loonem. Máš slovo.
 
@@ -29,7 +29,7 @@ Existuje narativ, který jste už pravděpodobně slyšeli: Ethereum vydává no
 
 Pracuji na konsensuálním klientovi Prysm. Je to jedna z klíčových součástí Beacon chainu Etherea. A byl jsem v první linii u nejnovějších aktualizací — u Pectra, Fusaka. Z toho, co jsem viděl zevnitř, to nebyla žádná pomalá byrokracie, jak lidé o Ethereu po mnoho let tvrdili. Ve skutečnosti to byl vysoce rychlý, dobře fungující stroj, který dodal jedny z největších aktualizací, jaké jsme kdy v historii Etherea viděli.
 
-#### Vydání tří aktualizací za jeden rok (1:18) {#shipping-three-upgrades-in-one-year-118}
+### Vydání tří aktualizací za jeden rok (1:18) {#shipping-three-upgrades-in-one-year-118}
 
 To, co jsme vydali v roce 2025, byly tři hlavní aktualizace během jednoho roku. Nejprve Pectra v květnu 2025. Ta přinesla nativní abstrakci účtu, zvýšení maximálního efektivního zůstatku validátoru umožňující konsolidace a dalších deset EIP. V květnu to byla největší aktualizace z hlediska počtu EIP, jakou kdy Ethereum zažilo.
 
@@ -37,7 +37,7 @@ Ale pak, jen o sedm měsíců později, jsme vydali Fusaka — ještě větší 
 
 To je důkazem toho, že Ethereum dodává výsledky. Jde o spolupráci mezi pěti nebo šesti konsensuálními klienty, pěti exekučními klienty, mnoha výzkumníky — více než sto lidmi zapojenými do hlavního vývoje Etherea — a všichni vydávají aktualizace koordinovaně ve stejnou dobu.
 
-#### Škálování PeerDAS (2:22) {#peerdas-scaling-222}
+### Škálování PeerDAS (2:22) {#peerdas-scaling-222}
 
 Pojďme se podívat na hlavní tahák Fusaka: PeerDAS. PeerDAS je naprosto úžasné řešení pro škálování. Před PeerDAS jsme měli Pectra a s Pectra jste museli — jako provozovatel uzlu nebo validátor — stáhnout každý blob, který přišel s blokem. Cílem bylo šest blobů na blok. Každý to musel stahovat, a to je opravdu úzké hrdlo škálování. Pokud to chcete zvýšit, žádáte provozovatele uzlů, aby úměrně zvýšili využití šířky pásma pro bloby.
 
@@ -47,7 +47,7 @@ Když se podíváme na čísla: pro Pectra jsme měli cíl šest a maximum devě
 
 A pak jsme dosáhli toho velkého snížení šířky pásma, kde každý blok s cílem šesti blobů nyní představuje pouze 96 kilobajtů dat blobů, které musel validátor ukládat. Pak znovu s BPO1, forkem zaměřeným pouze na parametry blobů, jsme zvýšili cíl na 10 a maximum na 15. BPO2, který proběhl jen o měsíc později, se dostal na 14 a 21 — což je dvojnásobek toho, co jsme měli v Pectra, ale stále o 71 % menší využití šířky pásma pro bloby u sólo stakerů.
 
-#### Co nás čeká v Glamsterdam (4:30) {#whats-coming-in-glamsterdam-430}
+### Co nás čeká v Glamsterdam (4:30) {#whats-coming-in-glamsterdam-430}
 
 Co dalšího nás čeká v Glamsterdam? Jsou tu tři opravdu klíčové věci a jedna, která je stále předmětem aktivního výzkumu.
 
@@ -57,7 +57,7 @@ Další věcí, kterou máme, jsou seznamy přístupů na úrovni bloku (block-l
 
 Třetí věcí je přecenění gasu (gas repricing). Prostřednictvím tohoto EIP proběhly benchmarky, které ukázaly, že některé operační kódy byly předražené, jiné podhodnocené. Nyní aktualizujeme poplatky, které platíte za každý operační kód, aby odrážely realitu, čímž se Ethereum stane bezpečnějším a efektivnějším.
 
-#### Vyvíjející se role L2 (6:14) {#the-evolving-role-of-l2s-614}
+### Vyvíjející se role L2 (6:14) {#the-evolving-role-of-l2s-614}
 
 Je tu jedna věc, o které chci mluvit a kterou nedávno zmínil Vitalik. Před pár týdny v tweetu uvedl, že původní vize vrstev 2 (l2) a jejich role v Ethereu už nedává smysl. Získalo to spoustu titulků a myslím, že si z toho mnoho lidí odneslo špatný závěr.
 
@@ -65,7 +65,7 @@ Dovolte mi říct, co to znamená z pohledu někoho zevnitř. Ethereum škáluje
 
 Takže myšlenka, že potřebujeme univerzální l2 — tedy l2, které jsou jednoduše stejným EVM, jaké máme na vrstvě 1 (l1), jen ho několikrát zkopírujeme a vložíme a jediné, co dělají, je, že jsou rychlejší — to už není naše vize. Tyto l2 budou prosperovat díky specializaci. Některé z nich se zaměří na věci jako soukromí, hraní her, specifika v decentralizovaných financích (DeFi) nebo rozšíření EVM. Ale pokud jsou to jen klony l1, nejsou součástí roadmapy, kde jsme původně předpokládali tento druh sharded paradigmatu prostřednictvím l2.
 
-#### FOCIL: odolnost proti cenzuře na úrovni protokolu (7:25) {#focil-protocol-level-censorship-resistance-725}
+### FOCIL: odolnost proti cenzuře na úrovni protokolu (7:25) {#focil-protocol-level-censorship-resistance-725}
 
 Kromě Glamsterdam jsou v aktivním vývoji a výzkumu tři opravdu skvělé věci. První z nich je FOCIL — Fork-Choice Enforced Inclusion Lists (seznamy zahrnutí vynucené volbou forku).
 
@@ -75,23 +75,23 @@ FOCIL mění dynamiku moci. Místo toho, abychom řekli, že tvůrci bloků moho
 
 To je vynuceno prostřednictvím volby forku (fork choice). Validátoři, kteří uvidí blok, pro něj neprovedou atestaci, pokud k němu nebude na konci připojen seznam zahrnutí. Pokud uvidí blok bez tohoto seznamu, budou ho považovat za neplatný a jednoduše ho budou ignorovat — nebudou ho šířit, nebudou o něm hlasovat. Toto je stále aktivní výzkum a o některých parametrech se stále rozhoduje, ale směr je jasný: Ethereum bude zahrnovat odolnost proti cenzuře na úrovni protokolu.
 
-#### Kratší časy slotů (9:24) {#shorter-slot-times-924}
+### Kratší časy slotů (9:24) {#shorter-slot-times-924}
 
 Další opravdu vzrušující věcí jsou kratší časy slotů. S Hegata — forkem po Glamsterdam — zvažujeme, zda můžeme zahrnout kratší časy slotů nebo rychlé sloty. To neznamená, že rovnou přeskočíme na šestisekundové sloty nebo ještě rychlejší, ale budujeme základy, které to umožní.
 
 Zní to opravdu jednoduše — jako „pojďme prostě zrychlit“. Ale musíte myslet na šíření v síti, povinnosti atestace validátorů, kde mají na provedení omezené množství času, a pak je tu ekonomika. Když jsem s tím poprvé experimentoval, prostě jsem změnil 12 na 6 a najednou všichni generovali dvakrát větší emisi — dvakrát více peněz — což opravdu není záměrem kratších časů slotů. Jde o to být rychlejší, ale zachovat vše ostatní stejné. Takže je to velmi složitá věc, ale má to potenciál se tam v konečné fázi postupně dostat.
 
-#### Rychlejší finalita (10:20) {#faster-finality-1020}
+### Rychlejší finalita (10:20) {#faster-finality-1020}
 
 Třetí věcí je rychlejší finalita. To je opravdu důležité, protože Ethereum finalizuje každé dvě epochy — každých 13 minut — a existují aplikace, které skutečně závisí na otázce: je moje transakce trvalá? Pokud transakce nebyla ve finalizované epoše, pak je odpověď ne — existuje malá šance, že by mohla být odstraněna při reorganizaci (reorg) a transakci by bylo nutné odeslat znovu.
 
 Nyní, pokud budeme mít rychlou finalitu, věci jako burzy, mosty nebo jakákoli aplikace si mohou být jisty, že transakce je finální. Nejprve, místo dvou epoch pro finalitu, to udělejme v jedné. Pak můžeme říct, že místo epoch, které jsou dlouhé 32 slotů, je zkrátíme na čtyři sloty. Nyní, pokud to spojíte s šestisekundovými časy slotů, mluvíme o finalitě za méně než 30 sekund. To je opravdu skvělý konečný cíl.
 
-#### Hlavní cíl (11:15) {#the-north-star-1115}
+### Hlavní cíl (11:15) {#the-north-star-1115}
 
 To vše je zabudováno do našeho hlavního cíle, kde říkáme, že l1 je rychlá s finalizací v řádu sekund. Jak se tam dostaneme? Nejprve začneme s PeerDAS — to už bylo vydáno. To nám poskytlo škálovatelnou vrstvu pro dostupnost dat. Dále tu máme Glamsterdam, zahrnující převážně ePBS, což je čistá implementace pro oddělení navrhovatele a tvůrce a díky níž jsou věci jako FOCIL účinnější. FOCIL přichází s odolností proti cenzuře, což je velmi v souladu s ePBS. S rychlejšími sloty činí kratší časy slotů rychlejší finalitu ještě efektivnější. Pak se dostaneme k tomuto konečnému cíli, kde skutečně máme rychlé transakce, které jsou finalizovány v řádu sekund.
 
-#### Závěr (12:02) {#closing-1202}
+### Závěr (12:02) {#closing-1202}
 
 Chci, abyste si představili, jaký bude život za dva roky. Je to trochu těžké si představit, protože krypto se pohybuje tak rychle. Tohle by mohla být realita už za dva roky: čtyř- nebo šestisekundové časy potvrzení transakce; finalita měřená v sekundách, ne v minutách; vynucování odolnosti proti cenzuře na úrovni protokolu; ochrana proti postkvantové kryptografii; a l2 soutěžící ve funkcích a nových inovacích, nejen v rychlosti. To vše při zachování výhody, že můžete použít běžný spotřebitelský notebook nebo hardware k provozování plného uzlu doma. Ethereum je přístupné a zůstane přístupné pro všechny i v budoucnu.
 

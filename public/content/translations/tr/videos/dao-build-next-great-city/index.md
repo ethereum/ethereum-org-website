@@ -18,7 +18,7 @@ Deneysel şehir plancısı **Scott Fitsimones** tarafından yapılan, merkeziyet
 
 *Bu transkript, TED tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=zTStDvUtQWc) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Bir tweet'ten şehir kurmak (0:04) {#starting-a-city-from-a-tweet-004}
+### Bir tweet'ten şehir kurmak (0:04) {#starting-a-city-from-a-tweet-004}
 
 Yeni bir şehri nasıl kurarsınız? Görünüşe göre bu hiç de kolay değil. Araziyi incelemeniz, bir devletten izin almanız, arazi satın almanız ve insanları oraya taşınmaya ikna etmeniz gerekir. Elon Musk bizi Mars'a götürene kadar arazi sınırlı bir kaynaktır ve iyi yerler muhtemelen çoktan kapılmıştır.
 
@@ -26,7 +26,7 @@ Peki ya daha küçük, gerçekten çok küçük bir başlangıç yapabilseydik? 
 
 Artık bir arazimiz, bir para havuzumuz ve kolektif olarak almamız gereken bir sürü kararımız vardı. Bu yüzden CityDAO adında bir DAO — merkeziyetsiz otonom organizasyon — kurmaya karar verdik.
 
-#### DAO nedir? (1:15) {#what-is-a-dao-115}
+### DAO nedir? (1:15) {#what-is-a-dao-115}
 
 Bir DAO, ortak bir misyon doğrultusunda çalışan, internete özgü, blokzincir ile yönetilen ve kolektif olarak sahip olunan bir organizasyondur. Çoğu DAO, üyelerin nasıl kullanılacağına dair oy kullandığı bir hazinede kripto para havuzu oluşturur.
 
@@ -34,7 +34,7 @@ Geleneksel bir şirkette bir CEO, yönü ve bütçeleri belirlemek için yöneti
 
 Geleneksel bir şirket başarılı olursa, servetin büyük bir kısmı birkaç kurucuya, bazı ilk çalışanlara ve genellikle zaten yüksek net değere sahip olan yatırımcılara gider. Bir DAO ise bir tür kripto kooperatifidir; daha geniş bir insan grubuna bir parçaya sahip olma, yönetime katılma ve potansiyel kazancı paylaşma fırsatı verir.
 
-#### CityDAO ve zincir içi şehirler (2:28) {#citydao-and-onchain-cities-228}
+### CityDAO ve zincir içi şehirler (2:28) {#citydao-and-onchain-cities-228}
 
 CityDAO, şehirlerin boş otoparklarını daha iyi kullanmalarına yardımcı olan bir girişim kurarken şehir bürokrasisi ve kırtasiyecilikle uğraşmaktan duyduğum hayal kırıklıklarından doğdu. San Francisco'da sadece otopark satmak için izin almamız üç aydan fazla sürdü ve bu, çağdışı bürokratik bir kabustu. Bir otoparkı daha yüksek ve daha iyi bir kullanıma sunmak — bir yemek karavanı parkı, lojistik merkezi, belki de yeni konutlar veya bir çiftçi pazarı inşa etmek — gibi şeyler sıkıcıdır, aylar veya yıllar alabilir, hatta imar yasaları nedeniyle yasa dışı bile olabilir.
 
@@ -42,7 +42,7 @@ CityDAO, arazi satın alacak kadar cesur olan ilk DAO'lar arasındaydı. Bürokr
 
 CityDAO'da, izinler, bütçeler, yasalar, tapular ve kayıtlar gibi şeylerin bir blokzincir üzerinde tamamen şeffaf olduğu ve akıllı sözleşmelerin işlemleri hızlandırıp bürokrasiyi azaltabildiği zincir içi bir şehir hayal ediyoruz. Eskiden haftalar süren şeyler — arazi almak veya satmak ya da mülkünüz üzerinden kredi çekmek gibi — bir akıllı sözleşme aracılığıyla saniyeler içinde gerçekleşebilir.
 
-#### DAO'lar nasıl organize olur (3:49) {#how-daos-organize-349}
+### DAO'lar nasıl organize olur (3:49) {#how-daos-organize-349}
 
 DAO'lar, genellikle bir fikrin peşinde bir gecede organize olmuş gibi görünen finansal flaş mob'lardır. Genellikle büyük bir vizyona sahip olan ancak bunu gerçekleştirmenin büyük bir kolektif çaba gerektireceğini fark eden birkaç kişi olarak başlarlar.
 
@@ -50,7 +50,7 @@ Topluluğu genellikle bir grup sohbeti sunucusunda başlatırlar ve en yaygın o
 
 İnsanlar DAO'ya tam zamanlı veya yarı zamanlı olarak katkıda bulunabilirler, ancak en yaygın yollardan biri ödüller (bounties) aracılığıyladır; bu sayede DAO'ya girip çıkarak küçük görevler üstlenir ve elinizden geldiğince katkıda bulunursunuz.
 
-#### Yönetişim ve finansman (4:39) {#governance-and-funding-439}
+### Yönetişim ve finansman (4:39) {#governance-and-funding-439}
 
 Çoğu DAO, sahiplerine DAO faaliyetleri üzerinde oy kullanma hakları veren bir yönetişim token'ı satarak ilk finansmanını sağlar. Bu token'ları Ethereum gibi bir kripto para kullanarak açık piyasadan satın alabilir veya DAO'ya katkıda bulunarak — örneğin bir logo tasarlayarak, araştırma yaparak veya biraz kod yazarak — kazanabilirsiniz.
 
@@ -60,7 +60,7 @@ DAO'lar, banka hesabı olan grup sohbetleri olarak adlandırılmıştır. Ve ne 
 
 Fonlar, herkesin gelir ve giderleri denetleyebileceği halka açık bir blokzincir hazinesinde bulunur. Harcama veya para transferleri söz konusu olduğunda, DAO bunu bir teklif aracılığıyla onaylar. Genellikle bir DAO üyesi tarafından yazılan bir teklif, tartışılan ve token sahiplerinin oylamasına sunulan bir fikir olarak başlar.
 
-#### Parsel 0'ı satın almak (5:53) {#buying-parcel-0-553}
+### Parsel 0'ı satın almak (5:53) {#buying-parcel-0-553}
 
 CityDAO'daki ilk tekliflerden biri elbette hangi arazinin satın alınacağıydı. DAO, olmazsa olmazları ve olsa iyi olurları tartıştı ve DAO katılımcıları Wyoming arazi ilanlarını tarayarak seçenekleri en iyi üçe indirdi, her birinin artılarını ve eksilerini özetleyerek nihai teklifi oylama için DAO'ya sundu.
 
@@ -68,7 +68,7 @@ Cody, Wyoming yakınlarındaki Parsel 0'ı satın almak için oy kullandık; bu 
 
 CityDAO'daki sonraki adımlar, araziye ne inşa edileceği ve onu kimin ne zaman kullanacağı gibi konularda oy kullanmak gibi şeylerdir. Etrafta dolaşan diğer bazı teklifler, koruma amacıyla Amazon'da bir arazi satın almak veya vatandaşların istedikleri zaman ziyaret edebilecekleri DAO'ya ait alanlardan oluşan bir ağ kurmak gibi şeylerdir — belki de merkeziyetsiz bir şehir.
 
-#### İş başında DAO'lar (7:11) {#daos-in-action-711}
+### İş başında DAO'lar (7:11) {#daos-in-action-711}
 
 Bugün DAO'ların birlikte her türlü gerçekten ilginç şeyi yaptığını görüyoruz. Ürünler geliştiriyor, girişimlere yatırım yapıyor, sanat eserleri ve varlıklar satın alıyor, araştırmaları finanse ediyor ve para topluyorlar.
 
@@ -78,7 +78,7 @@ PleasrDAO, sanat eserleri ve NFT'ler gibi dijital varlıklar toplar. Yakın zama
 
 MetaCartel ve Seed Club gibi DAO'larda üyeler, gelecek vadeden girişimlerden ve projelerden gelen başvuruları inceler ve hangilerinin finanse edileceğine karar verirler. VitaDAO araştırmaları finanse ediyor ve daha yakın zamanda UkraineDAO, Ukrayna savunma çabalarına bağışlamak üzere altı milyon doların üzerinde para topladı.
 
-#### Zorluklar ve gelecek (8:40) {#challenges-and-the-future-840}
+### Zorluklar ve gelecek (8:40) {#challenges-and-the-future-840}
 
 DAO'lar için henüz erken ve kesinlikle her şey için uygun değiller. Belirli bir düzeyde mutabakat oluşturmayı gerektirirler ve sadece tek başına kararları alabilen bir patronu olan bir şirketten daha yavaş hareket edebilirler. Sonuçta, ConstitutionDAO, Sotheby's müzayede evinde Citadel'in CEO'su tarafından verilen daha yüksek bir teklifle geride bırakıldı ve bazıları şeffaflığın ve merkeziyetsizliğin DAO'nun koordine olmasını ve müzayedeyi kazanmasını zorlaştırdığını söylüyor.
 

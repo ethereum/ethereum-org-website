@@ -20,7 +20,7 @@ Bu röportaj, [EIP-4844 (Proto-Danksharding)](https://www.eip4844.com/) ile sunu
 
 *Bu döküm, Bankless tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=dFjyUY3e53Q) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Blob alanına giriş (0:00) {#introduction-to-blob-space-000}
+### Blob alanına giriş (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** İnternet parasının ve internet finansının sınırlarını keşfettiğimiz Bankless'a hoş geldiniz. Bu, nasıl başlayacağınız, nasıl daha iyi olacağınız ve fırsatları nasıl önceden yakalayacağınızla ilgilidir. David Hoffman ile birlikte buradayım ve daha bankasız (bankless) olmanıza yardımcı olmak için buradayız. Blokzincirlerin blok sattığını söylediğimizi biliyorsunuz, değil mi? Yakında Ethereum sadece bloklardan daha fazlasını satacak; blob'lar da satacak.
 
@@ -38,7 +38,7 @@ Bu Ether için ne anlama geliyor? Bu, bunların etrafında ortaya çıkan pazar 
 
 Konuğumuz Dom'u, diğer adıyla Domothy'yi davet edelim. Kendisi, EIP-4844 (bugünün konusu), tam danksharding ve MEV yakımı da dahil olmak üzere ufuktaki önemli Ethereum güncellemelerinin araştırma ve geliştirmesi üzerinde çalışan Ethereum Vakfı'nda bir araştırmacıdır.
 
-#### Rollup odaklı yol haritasının tarihi (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Rollup odaklı yol haritasının tarihi (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Dom, blob alanına nasıl geldiğimizi tam olarak anlamak için, Ethereum yol haritasının bütünlüğünü anlamak adına hafıza şeridinde geriye gitmeye değer olduğunu düşünüyorum, çünkü blob'lar ve blob alanı çok mantıklı bir sonuca ulaştı. Bizi geçmişe götürebilir misin? Çünkü bir zamanlar Ethereum'un Rollup odaklı yol haritası diye bir şey yoktu. Aslında hiçbir zaman sahip olamadığımız yürütme parçalaması (execution sharding) denen bir şey vardı. Ethereum'un yol haritasının tarihinde, blob alanının tam bağlamını gerçekten anlamak için neresi uygundur?
 
@@ -58,7 +58,7 @@ Farklı aşamalara ayrılmıştı. İlk olarak, bir İşaret zinciri başlataca�
 
 2020'nin sonlarında insanlar, toplamaların inanılmaz derecede iyi ve popüler olmaya başladığını ve yürütme parçalamasına ihtiyaç duymadan yürütme ölçeklendirme sorunumuzu çözdüklerini fark ettiler. Bir tür katman 1 (l1) maksimalisti olmaya çalışmak yerine bir toplamalar ekosistemiyle ilerleyerek, toplamalar kendi ödünleşimlerini yapabilir, kendi Blokzincirlerini oluşturabilir ve yeni şeyler deneyebilirler. Ethereum doğrulamayı halleder; bir Blokzincirin özü budur.
 
-#### Blob alanı nedir? (30:00) {#what-is-blob-space-3000}
+### Blob alanı nedir? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Şimdi bizi mevcut duruma götür, Dom. Ethereum katman 1 (l1) blok alanını kullanan, herkesin doğrulayabilmesi için durum verilerini göndermek adına yüksek Gaz ücretleri ödeyen birçok toplamamız var. Peki, Dom, blob nedir?
 
@@ -72,7 +72,7 @@ Bu aslında mühürlü bir pakettir. Katman 1 (l1) onu alır, fiziksel olarak in
 
 **Domothy:** Kesinlikle. Blob'ların bir diğer kritik özelliği de belirli bir süre sonra — şu anda yaklaşık 18 gün — otomatik olarak budanmalarıdır. Budanmalarının nedeni, güven gerektirmeyen doğrulamayı garanti etmek için, bireylerin yalnızca belirli bir itiraz penceresi içinde Rollup durumu üzerinde kesinlik ve mutabakat kanıtlamak için bu verilere ihtiyaç duymasıdır. Bugünkü işleminizi doğrulamak için iki yıl önceki blob'ları tutan bin Düğüme ihtiyacınız yok. Pencere süresi dolduğunda, onu artık bir Ethereum Düğümünden alamazsınız; geçmiş sağlayıcılarından, indeksleyicilerden veya Rollup'ın yerel blok gezginlerinden alırsınız. Ethereum'da depolama sonsuza dek inanılmaz derecede pahalıdır. Depolama gereksinimini ortadan kaldırmak, Düğüm operatörlerinin sabit disklerini yok etmeden blob işlem kapasitesini ölçeklendirmemize olanak tanır.
 
-#### Ekonomi ve tam danksharding (55:00) {#economics-and-full-danksharding-5500}
+### Ekonomi ve tam danksharding (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** 4844'ün ilk adım olduğunu biliyoruz; buna Proto-Danksharding diyoruz. Blob formatını ve izole edilmiş ücret piyasasını kurar, ancak blok başına hedeflenen gerçek blob sayısı başlangıçta oldukça güvenli olması için kısıtlanmıştır. Tam danksharding'e doğru ölçeklendirme nasıl görünüyor?
 
@@ -86,7 +86,7 @@ Tam danksharding bunu dramatik bir şekilde ölçeklendirir. Veri kullanılabili
 
 **Domothy:** Evet, tamamen bağlantısızlar. Ve tam tersi de geçerlidir. Katman 2 (l2) işlem kapasitesi muazzam bir şekilde artarsa ve binlerce Rollup çalışıp blob alanını sıkıştırırsa, blob taban ücretlerinde ortaya çıkan artış, Ethereum Ana Ağında basit bir işlem yapmanın maliyetini etkilemeyecektir. Blob taban ücreti tam olarak EIP-1559 taban ücreti gibi çalışır, ancak kendi boyutunda. Ve yakım ile ilgili önceki sorunuza gelince; evet, blob ücreti, blok alanı taban ücreti yakımından tamamen ayrı olarak, blob alanı veri dahil etme maliyetini ödemek için yakılan ETH üretir.
 
-#### Ethereum ölçeklenebilirliğinin geleceği (75:00) {#the-future-of-ethereum-scalability-7500}
+### Ethereum ölçeklenebilirliğinin geleceği (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Özellikle 4844'ün piyasaya sürülmesinde ne olacağına değinmek istiyorum. Başlangıçta, blob kapasitesi aniden açıldığında, o tam mikrosaniyede onu tamamen dolduracak kadar Rollup talebi olmayacağına dair açıkça çok yüksek bir beklenti var. Blob alanı lansmanda neredeyse komik derecede ucuz olacak. Ancak uyarılmış talep yasası yok mu? İnanılmaz derecede ucuz kaynaklarınız varsa, bu kaynakları tüketen uygulamaların hacmi patlar.
 

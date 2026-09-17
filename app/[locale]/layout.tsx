@@ -36,12 +36,13 @@ export default async function LocaleLayout(props: {
 
   const { children } = props
 
+  // Safety net only - pages must still call this themselves. Runs before the
+  // notFound() bail so invalid-locale probes can't fall back to headers().
+  setRequestLocale(locale)
+
   if (!routing.locales.includes(locale)) {
     notFound()
   }
-
-  // Enable static rendering
-  setRequestLocale(locale)
 
   const allMessages = await getMessages()
   const messages = pick(allMessages, "common")

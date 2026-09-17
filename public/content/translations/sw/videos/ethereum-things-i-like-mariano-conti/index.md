@@ -18,7 +18,7 @@ Mazungumzo ya kibinafsi ya msanidi mkongwe wa Ethereum **Mariano Conti** katika 
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=S0-oO_4ZRfs) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:08) {#introduction-008}
+### Utangulizi (0:08) {#introduction-008}
 
 **Mariano Conti:** Buenos Aires. Habari za jioni kila mtu. Nataka kuanza kwa kuomba radhi. Sijakuwa sana kwenye mfumo wa ikolojia kwa miaka michache iliyopita. Kwa hivyo waandaaji waliponiambia kuwa wanataka nitoe mada, mwanzoni nilikataa kwa sababu nimekuwa mbali sana katika mambo fulani kiasi kwamba wakati mwingine nimesahau kwa nini tuko hapa, kwa nini tunafanya mambo tunayofanya. Nimekuwa na wasiwasi kidogo kwa njia fulani na mwenye matumaini kwa njia nyingine. Kwa hivyo, hata hivyo, nina dakika 15 za kuzungumza nanyi kuhusu haya yote, na tuanze.
 
@@ -26,23 +26,23 @@ Kama ninavyosema kila wakati, kama Mwajentina, napenda tiba ya kisaikolojia. Hik
 
 Kwa hivyo huyu ni mimi, 2015 — nilianza kununua Etha. Kijana anayeonekana mnyenyekevu sana. Na sasa 2025, baada ya miaka 10, hilo ni ganda lililovunjika la mtu mnayemwona leo amesimama mbele yenu, nikiwa na kipindi cha kuwekeza kwa pupa kwenye tokeni wakati wa Majira ya Joto ya fedha zilizogatuliwa (DeFi), sivyo? Na kwa wale ambao hamjui, nilitumia miaka michache huko Maker. Nilisaidia kutoa DAI ya dhamana moja na dhamana nyingi, ambayo labda ilikuwa sarafu thabiti iliyogatuliwa ya kwanza kwenye Ethereum. Niliunda orako zilizogatuliwa za kwanza kwenye Ethereum. Yote haya nikiwa naishi katika ghorofa huko Almagro — bila shaka, nikiwa sehemu ya kundi kubwa zaidi — lakini ningesema uzoefu wangu katika Ethereum umekuwa mpana sana na wenye kuridhisha sana.
 
-#### Devcon huko Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
+### Devcon huko Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti:** Na mnamo 2019, nina uhakika mmeona picha hii mara chache. Na ninaona baadhi ya watu hapa ambao walikuwa jukwaani pamoja nami huko Osaka mnamo 2019. Hapa ndipo tulipofanya msukumo mkubwa wa kuwa na moja ya matukio haya ya Devcon hapa Buenos Aires, sivyo? Na labda mtu aliyefanya kazi kidogo zaidi kufanikisha hili ni mimi. Kimsingi nilivaa tu fulana na kutuma ujumbe kwenye Twitter mara kadhaa. Kila mtu hapo alifanya kazi mara mia zaidi, na watu waliokuja baadaye walifanya kazi mara elfu zaidi. Kwa hivyo kwa mara nyingine tena, nina heshima kubwa sana kwamba tuna Devconnect hapa Ajentina.
 
 Na nilikata "kumechelewa sana" na kuweka "baadaye." Kwa muda nilikuwa na uchungu sana kwamba hatukuweza kuwa nayo tuliposema — kwamba ingekuwa na athari kubwa zaidi. Na kwa njia fulani hiyo ni kweli, na kwa njia nyingine sio. Kwanza, kama tungekuwa na Devcon — najua 2020 haikufanyika kwa sababu ya UVIKO — lakini labda 2021, isingekuwa kubwa hivi. Teknolojia isingekuwa imekita mizizi katika jamii yetu kama ilivyo sasa. Watu bado, wanapokuja Ajentina kwa mara ya kwanza, wanashangazwa na kiasi cha matumizi tunayopata kutoka kwa sarafu thabiti — iwe ni wakati tulipokuwa na udhibiti wa mtaji na wakati hatuna na popote katikati. Waajentina wana utamaduni wa kujaribu mambo mapya, kila wakati wakilinda uwekezaji wao. Hili ni jambo ambalo nimezungumzia kwa kina. Kwa hivyo, tena, nina furaha sana kwamba hatimaye Devcon iko hapa.
 
-#### Mambo Ninayopenda Kuhusu Ethereum (4:28) {#things-i-like-about-ethereum-428}
+### Mambo Ninayopenda Kuhusu Ethereum (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti:** Na nimebakiwa na slaidi tatu tu. Kwa hivyo nitazungumza kidogo kuhusu mambo ninayopenda kuhusu Ethereum. Na napenda kwamba bado ipo baada ya zaidi ya miaka 10. Na muda wa kufanya kazi ni 100%. Kwa kweli ni teknolojia ambayo unaweza kujenga juu yake na unaweza kutegemea kwamba itakuwa ya kuaminika — kwamba unatuma muamala na hatimaye utafanikiwa, chochote kitakachotokea, nodi ya RPC kote ulimwenguni, kisha kunakiliwa katika maelfu ya kompyuta kote ulimwenguni — tunatumai nyingi zikiwa katika nyumba za watu na sio tu kwenye vituo vya data — na kwamba chochote ulichotuma au kuingiliana nacho kitakita mizizi katika kitalu, tunatumai milele.
 
 Nilipoanza safari hii, nilikuwa mimi tu. Mke wangu — sasa, karibu mwaka mmoja uliopita — tulipata mtoto. Mtoto wangu ana ENS. Ni sehemu ya sisi ni nani na sisi ni nini katika familia yetu, kwamba Ethereum imefanya mengi yawezekane kwetu kiasi kwamba kila wakati ninahisi kama sijarudisha vya kutosha. Na hiyo pia ni moja ya sababu kwa nini ninalalamika sana kuhusu mambo fulani.
 
-#### Jamii (5:25) {#the-community-525}
+### Jamii (5:25) {#the-community-525}
 
 **Mariano Conti:** Ni kwa sababu sitaki kwenda kwenye mambo nisiyopenda mapema hivi. Kwa hivyo wacha niruke kwenye mambo mengine kadhaa ninayopenda — jamii, haswa jamii ya Ajentina, na kuona marafiki wengi hapa, kutoka Ajentina, kutoka Amerika ya Kusini, na pia kutoka kote ulimwenguni. Inashangaza kwamba walikuja hapa kwa wiki moja au wiki mbili au kwa tukio ambalo linatuunganisha sote pamoja katika upendo na heshima yetu kwa — nasema upendo, na inashangaza. Sisi, angalau watu wa enzi zangu — sijui kama hii ni kweli kwa wageni — hatukuchukulia teknolojia hii kama sarafu nyingine tu au hisa nyingine ambayo ungenunua na kujaribu kuona kama imepanda au kushuka. Bei inatuathiri, bila shaka, lakini kila wakati ilituathiri zaidi kuona kwamba kile tulichokuwa tunajenga kilikuwa muhimu, na kwamba tulikuwa tunafanya kitu cha maana na teknolojia ili kuwezesha matumizi mapya kabisa, iwe ni ufadhili, vitu vya kukusanywa, au fedha zilizogatuliwa (DeFi).
 
-#### Mambo Nisiyopenda (7:00) {#things-i-dont-like-700}
+### Mambo Nisiyopenda (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti:** Na kwa hivyo, kwa mpito huo, nitahamia kwenye baadhi ya mambo nisiyopenda — sio lazima tu na Ethereum, bali na mfumo wa ikolojia.
 
@@ -52,7 +52,7 @@ Sikupenda kwa muda mrefu kwamba Taasisi ya Ethereum ilionekana kama inadorora na
 
 Kama ilivyokuwa miaka michache iliyopita, mimi na Eric Connor tulianzisha tovuti hii ndogo inayoitwa "Pump the Gas," ambayo iliwakera watu wengi. Tulitaka tu jamii kubwa na wasanidi wakuu watambue kwamba labda ulikuwa wakati wa kuongeza kikomo cha gesi cha vitalu kwa kiasi kidogo. Na ilikuwa na utata wakati huo, lakini mwishowe ikawa kitu kilichokubaliwa na kuanza kufanyika kwa utaratibu wa kawaida. Na sasa hata tuna EIPs — Fusaka itakuwa ongezeko la lazima hadi milioni 60 — na kisha kuna hata EIPs zinazotaka kuongeza kwa nguvu kikomo cha gesi kwa kila mzunguko. Kwa hivyo nina furaha sana kwamba hilo lilitokea.
 
-#### Wito wa Kuchukua Hatua (10:24) {#calls-to-action-1024}
+### Wito wa Kuchukua Hatua (10:24) {#calls-to-action-1024}
 
 **Mariano Conti:** Na nadhani ninajichosha na kuishiwa na wakati. Kwa hivyo, nitasema tu wito wangu wa kuchukua hatua. Kwa kweli nina mbili tu, labda ya tatu ambayo ilipita kwa wadhibiti, lakini tutaona kuhusu hilo.
 
@@ -62,7 +62,7 @@ Kurudi kwenye tabaka la 1 (l1). Ingawa ninapenda L2s na ninajua watu wengi wanao
 
 Kweli, sijui — hiyo labda haikupaswa kuwepo, lakini ninaamini ndivyo tu nilitaka kusema. Nataka kuwashukuru — au samahani, kulingana na jinsi hili lilivyoenda — na ninataka kuomba radhi kwamba kwa kawaida nina mambo mengi ya kusema. Na labda tukiwa na Maswali na Majibu madogo, nitayasema. Nimekuwa pembezoni, kama nilivyosema, kwa miaka michache iliyopita, lakini sijawahi kupoteza mwelekeo wa kile watu wanachofanyia kazi kwenye Ethereum, na itakuwa sehemu ya maisha yangu kila wakati. Na tena, nina furaha sana kwamba tuna Devcon huko Buenos Aires.
 
-#### Kipindi cha Maswali na Majibu (12:10) {#qa-session-1210}
+### Kipindi cha Maswali na Majibu (12:10) {#qa-session-1210}
 
 **Mwenyeji:** Asante sana. Kwanza kabisa, naweza kukutana nawe?
 
@@ -90,7 +90,7 @@ Una msisimko kiasi gani sasa? Umekuwepo kwa muda, mambo yanabadilika. Ni nini ki
 
 **Mariano Conti:** Nadhani kinachonisisimua zaidi sasa hivi ni Ethereum nyepesi — labda hatua inayofuata ya kufanya tabaka la 1 (l1) la Ethereum kweli, kweli kupitisha sifuri-maarifa, mambo yote yanayokuja na — vizuri, hata kabla ya hapo — Fusaka kufanya utengano wa wathibitishaji na nodi, na watafutaji, na wajenzi. Sijui kama ninaweza kuweka jambo moja. Nimefurahishwa na mchepuo mgumu unaofuata. Inashangaza kwamba tutakuwa na miwili kwa mwaka wakati tulikuwa na labda mmoja kila baada ya miaka mitatu kwa muda uliopita. Kwa hivyo ninafurahi kwamba kwa sababu fulani mchakato ulianza na sote tuliamua kwamba tunaweza kufanya mambo haraka sasa.
 
-#### Maadili ya Cypherpunk na Ushauri (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Maadili ya Cypherpunk na Ushauri (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Mwenyeji:** Unafurahia nini ambacho tumeondoa kutoka siku za ukongwe katika kripto kwa ujumla, na unatamani tungehifadhi nini?
 

@@ -1,6 +1,6 @@
 # Language-Group Rules
 
-Per-language transliteration and translation rules for the 13 non-Latin-script target languages. Condensed from the canonical version at **ETHGlossary's `docs/translation-policy.md`** (https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md). This reference is the agent-facing digest for review work.
+Per-language transliteration and translation rules for the 13 non-Latin-script target languages. Condensed from the canonical version at **ETHGlossary's `docs/translation-policy.md`** (https://github.com/ethereum/ethglossary/blob/main/docs/translation-policy.md). This reference is the agent-facing digest for review work.
 
 ## Quick reference table
 
@@ -127,4 +127,4 @@ No global rule. Per-term in glossary.
 
 When Latin terms appear adjacent to native script in CJK, pad with a single ASCII space (not concatenation, not zero-width). "使用 MetaMask" (zh) — single ASCII space.
 
-ETHGlossary's `docs/translation-policy.md` (wackerow/ethglossary repo) is the canonical version of these rules — this digest is downstream of it.
+ETHGlossary's `docs/translation-policy.md` (ethereum/ethglossary repo) is the canonical version of these rules — this digest is downstream of it.

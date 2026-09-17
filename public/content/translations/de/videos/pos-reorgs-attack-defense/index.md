@@ -19,13 +19,13 @@ Diese Präsentation untersucht die Arten von Block-Reorgs, die in Proof-of-Stake
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=xcPxwhrg3Ao), das von LisCon veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung und Hintergrund (0:03) {#introduction-and-background-003}
+### Einführung und Hintergrund (0:03) {#introduction-and-background-003}
 
 Herzlich willkommen. Heute werde ich über die Reorgs sprechen, die in Proof-of-Stake (PoS) Ethereum möglich sind.
 
 Ich bin vor Kurzem der Ethereum Foundation beigetreten, genauer gesagt der Robust Incentives Group. Im Grunde sind wir ein Forschungsteam, das sich auf alles rund um Anreize konzentriert. Ich werde mich kurz fassen – dieser Vortrag ist vollgepackt und Sie können die meisten unserer Arbeiten auf GitHub finden.
 
-#### Zwei Arten von Reorgs (0:44) {#two-types-of-reorgs-044}
+### Zwei Arten von Reorgs (0:44) {#two-types-of-reorgs-044}
 
 Heute möchte ich über Reorgs sprechen und insbesondere zwei verschiedene Arten von Reorgs skizzieren, die im Bereich von Proof-of-Stake Ethereum möglich sind.
 
@@ -37,7 +37,7 @@ Nun sind Ex-ante-Reorgs etwas anders. Die Idee ist, dass der Angreifer den Angri
 
 Sie fragen sich vielleicht, warum man diese Art von Reorg überhaupt durchführen möchte. Nun, es gibt immer noch MEV zu extrahieren. Wenn Sie Glück haben, hat Block N+2 viel MEV – Sie können das erfassen, indem Sie einfach kopieren und einfügen, was auch immer dieser Block ist. Im schlimmsten Fall haben Sie im Grunde Transaktionen im Wert von zwei Slots, die Sie abhören können.
 
-#### Ex-post-Reorgs in Proof-of-Work (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Ex-post-Reorgs in Proof-of-Work (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Bevor wir uns mit Ex-ante-Reorgs befassen, was das Hauptthema dieses Vortrags ist, lassen Sie mich kurz Ex-post-Reorgs rekapitulieren und insbesondere mit dem Proof-of-Work (PoW) Kontext beginnen.
 
@@ -45,7 +45,7 @@ Im Grunde ist es eine Zusammenfassung des Blogbeitrags der üblichen Verdächtig
 
 Kurz gesagt, in Proof-of-Work Ethereum sind Ex-post-Reorgs schwierig, aber nicht unmöglich. Ein 10%-Miner hat eine relativ gute Chance, einige Blöcke hintereinander zu minen, und wenn der Anreiz hoch genug ist – stellen Sie sich vor, es gibt einen Block mit MEV im Wert von 100 ETH zu erfassen –, dann reicht vielleicht eine Erfolgsquote von einem Prozent aus, damit es sich lohnt, einen Reorg zu versuchen.
 
-#### Ex-post-Reorgs in Proof-of-Stake (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Ex-post-Reorgs in Proof-of-Stake (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 In Proof-of-Stake ist es eine völlig andere Liga. Wir sprechen von einer absurden Menge an Stake, die erforderlich ist. Ich werde Ihnen zeigen, wie man dabei vorgehen könnte, nur um zu betonen, wie lächerlich schwierig es ist.
 
@@ -63,7 +63,7 @@ Wenn wir das zusammenzählen – Block N+1 hat Attestierungen im Wert von einem 
 
 Um Ihnen eine Vorstellung davon zu geben, wie lächerlich diese Annahmen sind – selbst wenn Sie einen 65%-Staker hätten, liegt die Wahrscheinlichkeit, zwei Drittel des Komitees in einem beliebigen Slot zu kontrollieren, bei 0,05 %. Dies zeigt, dass die Macht paralleler Attestierungen real ist – Ex-post-Reorgs sind in Proof-of-Stake Ethereum unglaublich schwierig, wenn nicht gar praktisch unmöglich.
 
-#### Mechanik des Ex-ante-Reorg-Angriffs (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mechanik des Ex-ante-Reorg-Angriffs (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Nun werde ich über Ex-ante-Reorgs sprechen. Dieser Angriff basiert auf einem Paper von Neuder und anderen. Wir haben diesen Angriff kürzlich erheblich verbessert. Wir haben auch ein Paper darüber verfasst und es gerade noch rechtzeitig auf arXiv hochgeladen.
 
@@ -75,7 +75,7 @@ Was passiert, ist, dass die ehrlichen Teilnehmer Block N+1 nicht sehen, also wer
 
 Nehmen wir für den Moment eine Latenz von null an. In Slot N+2 veröffentlichen wir als Angreifer Block N+1 und die private Attestierung gleichzeitig. Die ehrlichen Validatoren in Slot N+2 müssen einen Block attestieren. Aus ihrer Sicht sehen sie Block N+2 und Block N+1 mit dieser einen privaten Attestierung. Wenn sie die Fork-Choice ausführen, werden sie feststellen, dass Block N+1 mehr Gewicht hat als Block N+2, da N+1 die private Attestierung hat, die N+2 fehlt. Sogar alle ehrlichen Validatoren werden tatsächlich Block N+1 attestieren. In N+3 wird N+1 trivialerweise als Kopf der Chain angesehen.
 
-#### Netzwerklatenz und der Angriff (10:25) {#network-latency-and-the-attack-1025}
+### Netzwerklatenz und der Angriff (10:25) {#network-latency-and-the-attack-1025}
 
 Ich bin von einer Latenz von null ausgegangen, was offensichtlich nicht der Realität entspricht. Es gibt Latenz – es braucht Zeit, um Blöcke und Nachrichten auf der P2P-Schicht zu verbreiten.
 
@@ -83,7 +83,7 @@ Die Art und Weise, wie ein Angreifer diese Art von Angriff dennoch durchführen 
 
 Um noch einmal zu betonen, was hier passiert: Wir haben einen Proposer mit einem einzigen Attester, der es schafft, einen Ein-Block-Reorg durchzuführen. Gelinde gesagt, nicht ideal.
 
-#### Balancing-Strategien für längere Reorgs (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Balancing-Strategien für längere Reorgs (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Wenn Sie es ausgefallen mögen, können Sie längere Reorgs mithilfe einer Balancing-Strategie durchführen. Die Idee ist, das ehrliche Komitee in verschiedene Ansichten der Chain aufzuteilen.
 
@@ -97,7 +97,7 @@ Um einen Zwei-Block-Reorg zu beenden: Block N+3 wird vorgeschlagen, Sie hören i
 
 Wenn man darüber nachdenkt, ist es relativ günstig, diese Reorgs unter diesen Annahmen durchzuführen. Selbst wenn Sie keine perfekten Aufteilungen haben, haben Sie, weil die P2P-Schicht so groß ist, eine Wahrscheinlichkeitsverteilung, auf die Sie abzielen können, sodass die Angriffskosten mit der Quadratwurzel der Komiteegröße wachsen.
 
-#### Proposer-Boost-Abhilfemaßnahme (15:17) {#proposer-boost-mitigation-1517}
+### Proposer-Boost-Abhilfemaßnahme (15:17) {#proposer-boost-mitigation-1517}
 
 Lassen Sie uns über die Abhilfemaßnahme sprechen. Was ist die Grundidee? Wir werden dem Proposer etwas mehr Macht geben. Wenn ein gültiger Block rechtzeitig ankommt, erhöhen wir das Gewicht dieses Blocks für die Dauer des Slots durch einen Proposer-Boost. Nachdem dieser Slot beendet ist, nehmen wir den üblichen LMD-GHOST-Score wieder auf und alles läuft wie gewohnt.
 
@@ -107,7 +107,7 @@ Die Balancing-Sache funktioniert auch nicht mehr, weil man zwar eine 50/50-Aufte
 
 Die Idee ist, dass mit dieser Abhilfemaßnahme die Attestierungen des Gegners mit dem Boost konkurrieren müssen, um ehrliche Validatoren davon zu überzeugen, nach ihren Wünschen abzustimmen. Dies bricht Balancing-Strategien und verhindert im Grunde alle Reorgs vollständig. Gute Nachrichten – es gibt einen offenen PR, also wird es im Grunde vor dem Merge integriert.
 
-#### Wichtige Erkenntnisse (16:48) {#key-takeaways-1648}
+### Wichtige Erkenntnisse (16:48) {#key-takeaways-1648}
 
 Einige wichtige Erkenntnisse. Ich habe über die Unterschiede zwischen Ex-post- und Ex-ante-Reorgs gesprochen. Ich habe kurz die verschiedenen Landschaften für Reorgs in Proof-of-Work (PoW) im Vergleich zu Proof-of-Stake (PoS) skizziert. Ich habe Ihnen gezeigt, wie man einen Ex-ante-Reorg durchführt, aber auch, was wichtig ist, wie man ihn behebt.
 

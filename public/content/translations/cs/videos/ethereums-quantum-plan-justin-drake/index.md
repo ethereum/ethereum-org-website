@@ -17,7 +17,7 @@ Rozhovor s **Justinem Drakem**, výzkumníkem Nadace Ethereum, který pokrývá 
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=wURmzLKhJco) zveřejněného kanálem Bankless. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod a kvantová hrozba (0:00) {#introduction-and-the-quantum-threat-000}
+### Úvod a kvantová hrozba (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Jedním ze zajímavých posunů v mém myšlení za posledních několik měsíců je, že jsem přestal vnímat postkvantovou éru jako překážku, kterou musíme překonat, a beru ji spíše jako příležitost. Je to příležitost pro Ethereum vyniknout jako vůbec první globální finanční systém, který je postkvantově bezpečný, a to nejen ve srovnání se svými konkurenty, jako je Bitcoin a podobně, ale také ve srovnání s fiat měnami a tradičními financemi (TradFi). A myslím si, že by to vyslalo velmi silný signál a byl by to velmi přirozený bezpečnostní argument pro to, aby svět přešel na Ethereum.
 
@@ -35,7 +35,7 @@ Takže cíl se stále přibližuje a v určitém smyslu tu máme dvojitou expone
 
 Když se teď podíváme do budoucnosti, můj osobní Q-Day je v roce 2032. Je to trochu optimistický pohled v tom smyslu, že je možné, že to přijde o něco později, ale musíme být připraveni na ten nejhorší možný scénář. Takže bych řekl, že je tu minimálně 1% šance, že Q-Day nastane v roce 2032, a spíše to bude dvouciferné procento. Různí odborníci vám řeknou něco mezi lety 2031 a 2038. Jeden můj přítel z oboru, Steve Bryley, zakladatel a generální ředitel jedné z největších společností zabývajících se kvantovou opravou chyb na světě, který shodou okolností sídlí v Cambridge, kde jsem i já – jeho osobní Q-Day byl rok 2032, ale toto datum má už 15 let
 
-#### Kdy nastane Q-Day a jak se připravit? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Kdy nastane Q-Day a jak se připravit? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 a vždy to zůstalo stejné.
 
@@ -51,7 +51,7 @@ a vždy to zůstalo stejné.
 
 **Justin Drake:** Nemůžu mluvit za něj, ale měli bychom si uvědomit jednu věc – Scott je především teoretik. Velmi dlouho pracoval na teorii, ne tolik na každodenní praxi kvantových počítačů, a myslím, že to byl částečně důvod, proč byl tak opatrný. Čím dál častěji se ale stává, že tyto věci budují skutečné společnosti a skuteční podnikatelé, a on má pohled zevnitř. V podstatě všechny tyto informace vstřebává. Jedna z věcí, kterou nedávno řekl, je, že americká vláda začíná zasahovat do publikování nápadů. Máme tu tedy společnosti a akademiky, kteří by mohli přijít s vylepšeními Shorova algoritmu, a ty nejsou zcela zveřejňovány, potenciálně z důvodů národní bezpečnosti.
 
-#### Fyzické qubity, logické qubity a prolomení ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Fyzické qubity, logické qubity a prolomení ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Páni. Dobře. Takže to zní, že se do toho zapojují vlády. Vlastně si nejsme jistí veškerou prací, která probíhá v zákulisí — v tuto chvíli víme jen o komerčně životaschopných projektech. Co se týče logických qubitů, říkal jsi, že teď máme jeden logický qubit. Existují fyzické qubity a logické qubity, a to, co je potřeba škálovat, jsou logické qubity. Kolik logických qubitů vlastně potřebujeme k prolomení ECDSA? To je metrika, kterou sleduji, ale je to vůbec to správné číslo? Slyšel jsem lidi mluvit o tom, že jich je potřeba tisíc, nebo možná 1 500. Je to číslo, kterému bychom měli věnovat pozornost?
 
@@ -69,7 +69,7 @@ Co se týče doby běhu, je to docela zajímavé, protože existují dva druhy k
 
 **Justin Drake:** Ano. A pokud to skutečně bude národní stát, kdo získá přístup k těmto kvantovým počítačům jako první, pak pokud krypto nebude hrát ve světě hlavní systémovou roli, s největší pravděpodobností využijí své schopnosti k nenápadným útokům — například ke špehování svých protivníků. To hraje v náš prospěch. Ale pokud máte co do činění s čistě racionální entitou, která je motivována penězi, mohla by se skutečně zaměřit na Bitcoin nebo Ethereum.
 
-#### Kvantová datová centra a scénář útoku Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Kvantová datová centra a scénář útoku Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Poslední otázka ke qubitům. Budují se právě teď datová centra pro kvantové počítače? Vidíme masivní výstavbu datových center pro umělou inteligenci. Začíná se něco podobného dít i u kvantových počítačů?
 
@@ -93,7 +93,7 @@ Co se týče doby běhu, je to docela zajímavé, protože existují dva druhy k
 
 **Justin Drake:** Přesně tak. Ano. A pak byste pravděpodobně šli a zaútočili na ty největší ryby, což by mohla být nějaká burza, která nezavedla správnou infrastrukturu, aby se ochránila. Ukazuje se, že existuje velmi snadné zmírnění hrozby kvantových počítačů, alespoň těch úplně prvních – nepoužívejte své adresy opakovaně. Když znovu použijete svou adresu, znovu použijete veřejný klíč, a to znamená, že útočník má čas prolomit odpovídající soukromý klíč a poté vám ukrást prostředky při druhém použití adresy. Nejlepší praxí by tedy mělo být, že pokud držíte nějaké prostředky v dlouhodobém offline úložišti (cold storage), mělo by jít o čistou adresu, u které nebyl odpovídající veřejný klíč nikdy odhalen. Jen aby to bylo naprosto jasné: to, co vám kvantový počítač umožňuje
 
-#### Zranitelné bitcoinové adresy a Satoshiho mince (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Zranitelné bitcoinové adresy a Satoshiho mince (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 udělat, je přejít od veřejného klíče zpět k soukromému klíči. Takže to skutečně ohrožuje samotné základy vlastnictví.
 
@@ -119,7 +119,7 @@ Bude to proces rozložený v čase. A jedním zajímavým důsledkem je, že pok
 
 **Justin Drake:** Jo, takže hrubé číslo, které mám na mysli, je v souladu s těmito. Jsou to asi 2 miliony bitcoinů, řekněme 10 %. Máme 1 milion od Satoshiho a pak zhruba další milion, který se velmi dlouho nepohnul. Musíme z toho něco odečíst, protože některé zombie adresy jsou legitimní a oživnou, ale měli bychom to také navýšit, protože mohou existovat některé nedávno utracené adresy, které budou ztraceny. Takže 5 až 15 % je správné rozpětí. Vsadil bych si na zhruba 10–12 %, což je velmi značné – rozhodně ve stovkách miliard dolarů.
 
-#### Debata o spálení vs. záchraně pro Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### Debata o spálení vs. záchraně pro Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Člověk by se zde mohl zamyslet nad teorií her. Možnost A je pokusit se mince spálit. Výhodou je, že nemáte prodejní tlak v řádech stovek miliard dolarů. Pokud to analyzujete z krátkodobého hlediska, je to racionální krok. Ale celý příběh Bitcoinu je o silných vlastnických právech, takže pokud máte dlouhodobější pohled, neměli byste chtít mince spálit. Je velmi těžké odhadnout, jakým směrem se komunita vydá. Je možné, že nakonec rozhodnou velcí držitelé — například Michael Saylor a MicroStrategy. Protože tito velcí držitelé obdrží kopii obou verzí Bitcoinu — té se spálením i té bez něj — a mohou se rozhodnout zbavit se té, která se jim nelíbí. A víme, že Saylor je pro spálení, takže může potenciálně sám zmanipulovat trh a dosáhnout výsledku, který chce.
 
@@ -131,7 +131,7 @@ Druhou možností je, že prostě přenechají těch 10 % komukoli, kdo dokáže
 
 **Justin Drake:** Ano, to je velmi dobře řečeno. Ale jedna malá oprava: nemusí se to stát v Q-Day nebo po Q-Day. Může se to stát už předtím. Kdykoli může bitcoinová komunita nebo její část navrhnout vytvoření forku. Na čísle bloku forku by existovaly dvě verze aktiva Bitcoin — stejně jako u forku Bitcoin Cash. A nakonec o tom rozhodne trh. Burzy zavedou obě verze aktiva a trh rozhodne, která z nich je ten pravý Bitcoin. A je možné, že jen kvůli krátkodobé dynamice likvidity vyhraje ta verze, která mince spálí, a to potenciálně ještě před Q-Day.
 
-#### Scénář Michaela Saylora a Schellingovy body (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### Scénář Michaela Saylora a Schellingovy body (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Dobře. Takže jsem Michael Saylor, vlastním 2–3 % nabídky Bitcoinu, obzvláště té likvidní. Dostanu obě kopie. Děláme fork blockchainu Bitcoinu, přesně jako během válek o fork Bitcoinu v roce 2017. Chci si zachovat svou hodnotu, takže prodám všechny bitcoiny, které jsou náchylné vůči kvantovým útokům, a nechám si všechny bitcoiny ve verzi, která tyto zranitelné mince spálila. Cena nedotčeného blockchainu klesá. Cena verze se spálenými mincemi zůstává vysoká, protože ji nikdo neprodává – Saylor neprodává, BlackRock neprodává. Takže říkáte, že cena Bitcoinu s vyřešenou kvantovou hrozbou bude vyšší a díky tržním silám se stane tím kanonickým Bitcoinem.
 
@@ -155,7 +155,7 @@ Druhou možností je, že prostě přenechají těch 10 % komukoli, kdo dokáže
 
 Je rozhodně neuvěřitelné, že by se to stalo síti s hodnotou mnoha bilionů dolarů a s tak obrovskou odměnou. Je to bezprecedentní. Ale i to by se mohlo stát a možná je to pro Bitcoin lepší výsledek.
 
-#### Důkaz seed fráze a problém velikosti postkvantových podpisů (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Důkaz seed fráze a problém velikosti postkvantových podpisů (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Jo. Mám k tomu pár myšlenek. První z nich je, že existuje poměrně sofistikovaný způsob, jak prokázat vlastnictví Bitcoinu bez použití soukromého klíče. Tomu se říká důkaz seed fráze. Způsob, jakým odvodíte bitcoinovou adresu, má tři kroky: první krok, vygenerujete svou seed frázi; druhý krok, provedete se seed frází určité manipulace včetně hashování, abyste odvodili svůj soukromý klíč; pak ze soukromého klíče odvodíte veřejný klíč, což je adresa, která jde onchain. Soukromý klíč už bohužel není něčím, co by mohlo prokázat vlastnictví. Ale díky kroku hashování platí, že pokud znáte svou seed frázi, je to stále důkaz vlastnictví. Takže jedna věc, která by se mohla stát – a technicky vzato je to nejrozumnější cesta vpřed – je zmrazit Bitcoin, ale umožnit komukoli oživit svůj Bitcoin pomocí důkazu seed fráze.
 
@@ -177,7 +177,7 @@ To, co budujeme pro Ethereum, je tato propracovaná technologie agregace postkva
 
 Ale ve skutečnosti existuje způsob, jak se zajistit proti ceně Bitcoinu, což je velmi snadné – prostě otevřete short pozici na BTC. Řekněme, že s jistotou víte, že jste prolomili soukromý klíč peněženky, která drží 100 000 BTC. Otevřete short na 100 000 BTC. Tím si uzamknete svůj zisk. A pak, bez ohledu na to, co udělá cena Bitcoinu, máte uzamčený svůj zisk, což mohou být desítky miliard dolarů.
 
-#### Výzva sociální vrstvy Bitcoinu a výhoda Etherea (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### Výzva sociální vrstvy Bitcoinu a výhoda Etherea (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Nyní chci upozornit na to, Justine, že přemýšlíš určitým způsobem, a způsob, jakým přemýšlíš, je důvodem, proč jsi v Ethereu. Kdybys byl Bitcoiner, přemýšlel bys jinak. Způsob myšlení Bitcoinerů je velmi unikátní, velmi odlišný — tak trochu maximalistický ohledně vlastnických práv. Myslím, že to, co by udělal Justin, kdyby měl na starosti Bitcoin, je velmi odlišné od toho, co by udělal obecný souhrn Bitcoinerů. Nemám tu žádnou konkrétní otázku, ale chci to jen zdůraznit.
 
@@ -205,7 +205,7 @@ Když jsem byl u projektu Ultrasound, jednou z věcí, o které jsme se snažili
 
 **Justin Drake:** Přesně tak. Ano. Kdybych měl udělat konkrétní předpověď, řekl bych asi 2 %, což je zhruba o řád méně než u Bitcoinu. A tento kvantitativní rozdíl má kvalitativní důsledky: v případě Etherea bych silně obhajoval nedělat nic a opravdu ctít vlastnická práva, protože na konci dne 2 % nejsou žádný velký problém. V případě Bitcoinu je 15 % obrovský problém.
 
-#### Třívrstvý postkvantový upgrade Etherea (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### Třívrstvý postkvantový upgrade Etherea (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Takže Ethereum bude muset učinit stejnou volbu. Řekněme 3 % — zda je zmrazit a spálit, nebo to nechat jako honbu za pokladem. Vaší nadějí je, že půjdeme cestou honby za pokladem, což znamená, že nějaký kvantový útočník shrábne ta 1–3 % etheru. A když se na to podíváte s odstupem, v podstatě směřujeme k tomu, že ether bude mnohem lepšími penězi než BTC. Bude neintervenční, bude respektovat vlastnická práva, bude kvantově bezpečný a nebude mít problém s rozpočtem na bezpečnost, který bude trápit Bitcoin za pár halvingů. Takže si myslím, že je to pro toto aktivum velká příležitost.
 
@@ -225,7 +225,7 @@ Ale když se na to podíváte s odstupem, tvrdil bych, že ten větší problém
 
 *(50:00)*
 
-#### Vylepšení exekuční vrstvy: agregace podpisů (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Vylepšení exekuční vrstvy: agregace podpisů (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 skutečně podrobně popisuje některé z klíčových milníků k provedení těchto vylepšení.
 
@@ -243,7 +243,7 @@ Nadace Ethereum vynaložila velké úsilí, aby začala s podpisy založenými n
 
 A jednou z ironických věcí na tomto přístupu je, že ve skutečnosti představuje zvýšení škálovatelnosti ve srovnání s tím, co máme dnes. Důvodem je, že nemáte fixní náklady 64 bajtů na transakci. Transakce mají nula bajtů dat podpisu a pak tu máte tento jeden hlavní podpis, který se amortizuje napříč všemi transakcemi v bloku.
 
-#### Nastavení průmyslového standardu díky spolupráci s Bitcoinem (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Nastavení průmyslového standardu díky spolupráci s Bitcoinem (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Dobře. Takže tohle je upgrade pro mnoho dalších blockchainů s chytrými kontrakty, které navazují na Ethereum, obzvláště pro ty, které optimalizují na rychlost—
 
@@ -263,7 +263,7 @@ Vrátím se k té druhé věci, kterou jsem říkal — spoléhá se to pouze na
 
 Nyní jsou tu dvě upozornění, která chci zdůraznit. Upozornění číslo jedna je, že máme co do činění se složitějšími objekty a řešení, které tu máme, je to, čemu říkáme hluboká end-to-end formální verifikace.
 
-#### Formální verifikace, Poseidon a vrstva konsensu (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Formální verifikace, Poseidon a vrstva konsensu (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Máme náš kryptografický objekt a chceme matematicky dokázat, že je bezpečný — že je nemožné zfalšovat podpis. A nechceme to udělat jen pro matematiku, ale také pro kód. Kdybyste se mě zeptali před 2–3 lety, jestli je to proveditelné, řekl bych ano, ale bylo to extrémně pracné a drahé. S nástupem umělé inteligence vidíme, že tuto pracnou a drahou práci lze provést stokrát rychleji a stokrát levněji.
 
@@ -279,7 +279,7 @@ Bohužel, způsob, jakým se navrhují hashovací funkce, neumožňuje dokázat,
 
 Abychom odemkli určitou optimalizaci výkonu, která je dostupná pouze na vrstvě konsensu, máme tento koncept stavového podpisu — zprávy, které podepisujete, mají počítadlo, které se pokaždé zvyšuje. Nepřipomíná vám to něco? Číslo slotu. V Ethereu na vrstvě konsensu vždy podepíšete pouze jednu zprávu za slot. Pokud podepíšete dvě, budete penalizováni. Toto omezení využíváme k tomu, abychom měli podpisy, jejichž agregace je desetkrát efektivnější.
 
-#### Lean VM, plán Lean Consensus a časová osa pro rok 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, plán Lean Consensus a časová osa pro rok 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 To je ten hlavní rozdíl — bezstavové hashovací funkce na exekuční vrstvě oproti stavovým podpisům na vrstvě konsensu, kde se číslo slotu zvyšuje. Tato agregační technologie má své jméno: Lean VM, minimální zkVM pro kryptografii založenou na hashi. V podstatě by Lean VM dokazoval, že toto je správný Merkleho kořen. Hlavní věc, kterou si zatím nejsme úplně jistí, je, zda tento přístup dokáže odemknout to, co nazývám „hranicí tera gasu“ — 1 gigagas za sekundu na vrstvě 1 (l1), 10 000 TPS, ale ještě ambiciózněji 1 teragas, 10 milionů transakcí za sekundu na vrstvě 2 (l2) s využitím dostupnosti dat.
 
@@ -297,7 +297,7 @@ Právě teď máme devnety pro Lean Consensus. A specifikace jsou tak snadno str
 
 Myslím, že to bude mít zajímavé důsledky pro udržitelnost i správu. Co se týče správy, způsob, jakým to děláme dnes, je zhruba řečeno
 
-#### Správa Etherea a datum dokončení v roce 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Správa Etherea a datum dokončení v roce 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 že máme pět klientů vrstvy konsensu a všichni musí implementovat upgrade, abychom se mohli posunout vpřed. V budoucnu, až budeme mít 10 nebo 15 klientů, můžeme jednoduše vyžadovat horních 80 % nebo nejrychlejších 80 %, abychom se posunuli dál. Je to spíše darwinovská soutěž, která nám umožňuje postupovat mnohem rychleji, aniž bychom čekali na nejpomalejšího klienta.
 
@@ -325,7 +325,7 @@ Další dobrou zprávou je, že nemáme na výběr. Musíme změnit kryptografii
 
 Díky tomu je koordinace a dosažení konsensu mnohem jednodušší.
 
-#### Kvantová hrozba není jen problémem pro krypto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### Kvantová hrozba není jen problémem pro krypto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Myslím, že bychom měli zdůraznit, že to není jen Ethereum, kdo nemá na výběr — nikdo v kryptu k tomu nemá alternativu. Všichni v kryptu musí provést přepis. U Bitcoinu je to jen ECDSA, ale to samo o sobě stačí.
 
@@ -341,7 +341,7 @@ V čem bych s tebou souhlasil, je to, že musí dojít k velmi velké změně pr
 
 **Justin Drake:** Nesouhlasím. Stačí se podívat na historickou analýzu — mořské mušle byly nahrazeny solí, pak stříbrem, pak zlatem a nyní potenciálně Bitcoin nahrazuje zlato. Jen proto, že selže zlato, neznamená to, že musí selhat i to další. Řekl bych, že Ethereum je naprosto přirozeným nástupcem Bitcoinu jako internetových peněz. A jen proto, že selže Bitcoin, neznamená to, že musí selhat i Ethereum. Souhlasím, že to může přinést určitou krátkodobou bolest, ale bavíme se tu také o dlouhodobém zisku.
 
-#### Postkvantová příležitost a zúčtování bezpečnostního rozpočtu (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### Postkvantová příležitost a zúčtování bezpečnostního rozpočtu (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Takže co z toho nakonec budeme mít? V roce 2030 bude Ethereum postkvantově bezpečné, protože to Justin slíbil. Čím se Ethereum stane? Bude jediné svého druhu, nebo očekáváte, že ho budou následovat i další blockchainy a také dosáhnou postkvantové bezpečnosti? Můžete popsat systém, který budeme mít v roce 2030, pokud se to všechno stane?
 
@@ -357,7 +357,7 @@ Jeden zajímavý údaj: původní OG Beacon chain byl spuštěn v roce 2020 a je
 
 Už to začínáme vidět – zrovna včera Dario Amodei, jeden z veteránů (OGs) AI, začal s tím, že se AI autonomně rekurzivně vylepšuje, což je extrémně děsivé. To je v podstatě to, co by mělo odstartovat exponenciální růst směrem k superinteligenci.
 
-#### Krize rozpočtu na zabezpečení Bitcoinu a zúčtování v roce 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### Krize rozpočtu na zabezpečení Bitcoinu a zúčtování v roce 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Rok 2032 máme jako potenciální Q-Day a také jako rok, kdy Bitcoin projde tím, co považuji za jeho poslední halving. Mohli byste to nazvat B-Day – den Bitcoinu, kdy dojde k nějakému zúčtování, protože emise bude příliš nízká na to, aby ho zabezpečila.
 
@@ -379,7 +379,7 @@ Existuje možnost, že by se aktivum BTC mohlo oddělit od řetězce Bitcoin a �
 
 **Justin Drake:** A kdybych řekl něco jiného, například: „Prostě zrušíme limit 21 milionů, protože rozpočet na zabezpečení není dostatečný“ – takhle bitcoineři také nepřemýšlejí. Řítí se velmi rychle proti zdi a rok 2032 je dnem zúčtování.
 
-#### Sklízej nyní, dešifruj později — kvantová rizika mimo krypto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Sklízej nyní, dešifruj později — kvantová rizika mimo krypto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** A co kvantové technologie ve vztahu ke zbytku společnosti? Není to jen problém pro krypto. Blockchainy jsou obzvláště náchylné, ale náchylné jsou i další složky společnosti. Do jaké míry představuje postkvantové Ethereum nástroj pro společnost k řešení a předcházení problémům v postkvantovém a post-AI světě?
 
@@ -387,7 +387,7 @@ Existuje možnost, že by se aktivum BTC mohlo oddělit od řetězce Bitcoin a �
 
 Pak je tu další problém se šifrováním: pokud byl materiál zašifrován dnes a nepoužíváte postkvantově bezpečné šifrování, mohou být tato data v budoucnu dešifrována. Existuje celá třída útoků zvaná „sklízej nyní, dešifruj později“. Myslím, že je reálné, že ve společnosti dojde k hromadnému dešifrování – spousta zpráv ze Signalu, Telegramu nebo hromady zpráv z Gmailu budou dešifrovány současně. To by mohlo mít na společnost velmi významný dopad.
 
-#### Ethereum jako defenzivní akceleracionismus a existenční riziko AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Ethereum jako defenzivní akceleracionismus a existenční riziko AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justine, když jsme mluvili o těchto třech výpočetních technologiích, zdá se, že ta, která vyčnívá, je AI. Mluvil jsi o tom, že rok 2032 bude jakýmsi momentem nástupu AGI. Jedna obecná otázka: jako extrémně talentovaný kryptograf nejsi AGI. Obava spočívá v tom, že jakmile vstoupíme do výpočetní singularity, nelze se už na nic spolehnout. Všechny ty pečlivě připravené plány, které děláme pro rok 2026, aby naše blockchainy byly odolné vůči kvantovým počítačům — co když AGI přijde na to, jak prolomit naši kvantově odolnou kryptografii nějakým jiným způsobem? Jako kryptograf, obáváš se těch naprosto nepředvídatelných hrozeb umělé obecné inteligence a toho, co by mohla prolomit? Co když jsme připraveni na postkvantový svět, ale nejsme připraveni na post-AGI svět?
 
@@ -401,7 +401,7 @@ Myslím, že je docela možné, že pokud lidstvo přežije, Ethereum v tom sehr
 
 Práce na Ethereu pro mě v posledních několika měsících získala zcela nový význam. Většinou jsem AI ignoroval, částečně proto, že jsem byl posedlý věcmi kolem blockchainu, ale také proto, že to ještě nedávno byla jen hračka. Ale díky mé práci, zejména s formální verifikací a vývojem
 
-#### Smysl práce na Ethereu ve věku umělé inteligence (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### Smysl práce na Ethereu ve věku umělé inteligence (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 a programování, vidím, jak mocné to je. V posledních několika týdnech a měsících jsem byl posedlý umělou inteligencí a učil se, co to šlo. V žádném případě nejsem odborník a možná je to jen fáze, kterou lidé procházejí, když otevřou Pandořinu skříňku. Ale pro mě je teď práce na Ethereu především o defenzivním akceleracionismu.
 
@@ -417,7 +417,7 @@ Myslím, že je možné, že v nadcházejících měsících a letech zažijeme 
 
 **Justin Drake:** Jsem s tím relativně smířený. Dospěl jsem do bodu, kdy jsem připravený zemřít. Prožil jsem velmi šťastný život.
 
-#### Závěrečné myšlenky o pravděpodobnosti zkázy (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Závěrečné myšlenky o pravděpodobnosti zkázy (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** Cože?
 

@@ -2,8 +2,6 @@
 [![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors)
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/ethereum-org)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://x.com/ethdotorg)
-[![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
-[![gitpoap badge](https://public-api.gitpoap.io/v1/repo/ethereum/ethereum-org-website/badge)](https://www.gitpoap.io/gh/ethereum/ethereum-org-website)
 
 <div align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <a href="https://ethereum.org"><img alt="ethereum logo" src="./public/images/assets/eth-transparent.png" alt="ethereum.org" width="125"></a>
@@ -2252,6 +2250,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jayproof"><img src="https://avatars.githubusercontent.com/u/229312301?v=4?s=100" width="100px;" alt="jayproof"/><br /><sub><b>jayproof</b></sub></a><br /><a href="#tool-jayproof" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pillowtalk-Qy"><img src="https://avatars.githubusercontent.com/u/190499865?v=4?s=100" width="100px;" alt="Qy"/><br /><sub><b>Qy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apillowtalk-Qy" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BonganiN-KhulaIQ"><img src="https://avatars.githubusercontent.com/u/288278264?v=4?s=100" width="100px;" alt="Bongani Nkosi"/><br /><sub><b>Bongani Nkosi</b></sub></a><br /><a href="#content-BonganiN-KhulaIQ" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kriss39"><img src="https://avatars.githubusercontent.com/u/93033289?v=4?s=100" width="100px;" alt="Kanan"/><br /><sub><b>Kanan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akriss39" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

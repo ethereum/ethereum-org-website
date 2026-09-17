@@ -19,6 +19,8 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-new-to-crypto-desc",
     heroTitleKey: "page-find-wallet-new-to-crypto-hero-title",
     heroDescKey: "page-find-wallet-new-to-crypto-hero-description",
+    metaTitleKey: "page-find-wallet-new-to-crypto-meta-title",
+    metaDescKey: "page-find-wallet-new-to-crypto-meta-description",
   },
   {
     id: "developer",
@@ -27,6 +29,8 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-developer-desc",
     heroTitleKey: "page-find-wallet-developer-hero-title",
     heroDescKey: "page-find-wallet-developer-hero-description",
+    metaTitleKey: "page-find-wallet-developer-meta-title",
+    metaDescKey: "page-find-wallet-developer-meta-description",
   },
   {
     id: "finance",
@@ -35,6 +39,8 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-finance-desc",
     heroTitleKey: "page-find-wallet-finance-hero-title",
     heroDescKey: "page-find-wallet-finance-hero-description",
+    metaTitleKey: "page-find-wallet-finance-meta-title",
+    metaDescKey: "page-find-wallet-finance-meta-description",
   },
   {
     id: "hardware",
@@ -43,6 +49,8 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-hodler-desc",
     heroTitleKey: "page-find-wallet-hardware-hero-title",
     heroDescKey: "page-find-wallet-hardware-hero-description",
+    metaTitleKey: "page-find-wallet-hardware-meta-title",
+    metaDescKey: "page-find-wallet-hardware-meta-description",
   },
   {
     id: "nfts",
@@ -51,6 +59,8 @@ export const WALLET_PERSONAS = [
     descKey: "page-find-wallet-nfts-desc",
     heroTitleKey: "page-find-wallet-nfts-hero-title",
     heroDescKey: "page-find-wallet-nfts-hero-description",
+    metaTitleKey: "page-find-wallet-nfts-meta-title",
+    metaDescKey: "page-find-wallet-nfts-meta-description",
   },
 ] as const
 

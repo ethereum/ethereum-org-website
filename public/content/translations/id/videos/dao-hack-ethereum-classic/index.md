@@ -19,7 +19,7 @@ Sebuah penjelasan oleh **Junion** yang menceritakan kisah peretasan DAO pada tah
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=rNeLuBOVe8A) yang dipublikasikan oleh Junion. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Penemuan (0:00) {#the-discovery-000}
+### Penemuan (0:00) {#the-discovery-000}
 
 Hari itu Senin, 13 Juni 2016. Seorang profesor ilmu komputer di Cornell sedang memeriksa kode untuk DAO, salah satu proyek paling ambisius di ruang kripto. Selama berbulan-bulan ia telah mengadvokasi agar proyek tersebut ditunda, karena ia percaya ada kelemahan tertentu yang dapat membahayakan keseluruhan proyek. Namun hari ini ia menemukan kerentanan serius: sebuah bug di baris 666.
 
@@ -33,7 +33,7 @@ Sama seperti peretasan SWIFT senilai 81 juta dolar yang mempublikasikan celah da
 
 Ini adalah kisah tentang salah satu pencurian digital terbesar yang pernah ada dan upaya berani untuk menulis ulang sejarah sehingga hal itu seolah tidak pernah terjadi.
 
-#### Apa itu DAO? (2:00) {#what-was-the-dao-200}
+### Apa itu DAO? (2:00) {#what-was-the-dao-200}
 
 Masuklah DAO — singkatan dari organisasi otonom terdesentralisasi (decentralized autonomous organization). Idenya terinspirasi oleh urun dana (crowdfunding). Alih-alih memiliki banyak dana untuk proyek yang berbeda, akan ada satu dana untuk mengatur semuanya, dan tidak ada cara yang lebih baik untuk melakukan ini selain dengan DAO.
 
@@ -45,7 +45,7 @@ Ketika periode pemungutan suara berakhir dan kuorum 20% dari semua token terpenu
 
 Namun, masih perlu ada cara untuk melindungi minoritas agar tidak ditindas oleh mayoritas. Jika kelompok minoritas sangat tidak setuju dengan sebuah proposal yang tidak dapat mereka kalahkan dalam pemungutan suara, alih-alih memberikan suara tidak, mereka dapat memanggil fungsi pemisahan (split) dan memindahkan Ether mereka dari DAO utama ke DAO anak, yang pada dasarnya membelah DAO menjadi dua. Fungsi pemisahan ini akan menjadi sangat penting nantinya.
 
-#### Urun dana (4:01) {#the-crowdfund-401}
+### Urun dana (4:01) {#the-crowdfund-401}
 
 DAO adalah proyek urun dana terbesar yang pernah ada, mengumpulkan 12,7 juta Ether — bernilai 150 juta dolar pada saat itu. Ini terjadi selama era awal Ethereum, di mana proyek tersebut menjadi sasaran sensasi yang sangat besar dan FOMO investor.
 
@@ -53,7 +53,7 @@ Sebelum ini, proyek-proyek Ethereum sebagian besar hanyalah bukti konsep (proof 
 
 Ini adalah kode yang tidak dapat diubah yang di-host di komputer paling aman di dunia, yang memastikan properti kunci dari sebuah DAO: sebuah organisasi yang sepenuhnya terdesentralisasi dan otonom. Setelah kontrak disebarkan pada tanggal 30 April, tidak ada satu entitas pun — bahkan Slock.it — yang dapat membuat perubahan pada protokol atau menghentikan keberadaannya. Kodenya telah diaudit berkali-kali oleh berbagai pengembang Ethereum dan dapat dilihat oleh semua orang untuk ditinjau.
 
-#### Peretasan (5:02) {#the-hack-502}
+### Peretasan (5:02) {#the-hack-502}
 
 "Lonely, so lonely" — nama Proposal DAO #59. Ini hanyalah proposal pemisahan biasa, tetapi sebenarnya di sinilah peretasan dimulai. Setelah peretas mengajukan proposal, ada periode debat standar selama tujuh hari di mana siapa pun bebas untuk bergabung. Namun, tidak ada yang bergabung dengan pemisahan ini.
 
@@ -65,7 +65,7 @@ Ingat perbaikan bug yang terjadi empat hari lalu? Sayang sekali tidak ada cara u
 
 Namun tanpa perbaikan ini, siapa pun dapat berulang kali memanggil fungsi tersebut untuk menarik Ether sebelum kontrak memperbarui saldo mereka. Ini seperti ATM yang tidak mengubah saldo Anda sampai ia memberi Anda uang. "Bisakah saya menarik sepuluh dolar? Tunggu, sebelum itu, bisakah saya menarik sepuluh dolar? Tunggu, sebelum itu…"
 
-#### Kelompok Robin Hood (6:55) {#the-robin-hood-group-655}
+### Kelompok Robin Hood (6:55) {#the-robin-hood-group-655}
 
 Pemegang token DAO menyaksikan saat investasi mereka perlahan-lahan dikuras dari DAO utama ke DAO anak, yang juga dikenal sebagai DAO gelap (dark DAO). Selain itu, harga Ethereum anjlok tajam dari $20 menjadi $15 menyusul berita tersebut. Sesuatu harus dilakukan, dan satu-satunya cara adalah menguras sisanya sebelum peretas melakukannya. Dan dengan demikian dimulailah perlombaan untuk mengosongkan.
 
@@ -79,13 +79,13 @@ Sementara itu, Alex baru saja bersiap untuk meluncurkan serangan topi putih untu
 
 Keesokan paginya, Alex mencoba mengumpulkan kembali kelompok tersebut untuk menyusup ke proposal pemisahan lainnya, tetapi yang lain sedang sibuk. "Kami merasa seperti peretas terburuk dalam sejarah. Kami digagalkan oleh internet yang buruk dan komitmen keluarga."
 
-#### Perlombaan untuk mengosongkan (9:10) {#the-race-to-empty-910}
+### Perlombaan untuk mengosongkan (9:10) {#the-race-to-empty-910}
 
 Empat hari setelah serangan awal, DAO kembali diserang. Dana terkuras perlahan — beberapa Ether per putaran — tetapi sudah mengumpulkan beberapa ribu dolar. Tampaknya ini berasal dari penyerang yang sedang menguji coba. Pada titik ini, Robin Hood harus melakukan sesuatu.
 
 Mereka memilih untuk menyusup ke Pemisahan #78 karena mereka telah mengidentifikasi kurator proposal tersebut dan itu akan segera berakhir. Mereka menghubungi beberapa paus (whales) yang dengan senang hati menyumbangkan token DAO mereka, memungkinkan tim untuk mengamankan enam juta token. Semakin banyak token yang dimiliki kontrak Robin, semakin cepat ia dapat menyedot Ether. Penyerang mempercepat langkahnya dan penyerang lain ikut bergabung. Namun berkat sumbangan tersebut, Robin Hood mampu mengungguli mereka. Hal ini memungkinkan mereka untuk mengamankan 7,2 juta Ether — 55% dari DAO.
 
-#### Percabangan (10:08) {#the-fork-1008}
+### Percabangan (10:08) {#the-fork-1008}
 
 DAO utama kini telah dikuras dan semua dana didistribusikan ke beberapa DAO anak — dua yang utama adalah DAO topi putih dan DAO gelap. Namun semua uang itu terkunci oleh waktu. Tidak ada proposal yang dapat diajukan di bawah DAO anak sampai masa tunggu 27 hari berakhir. Dan bahkan setelah itu, mengirim dana ke alamat eksternal memerlukan pengajuan proposal dan menunggu selama dua minggu. Pada dasarnya, masih ada 41 hari sampai peretas dapat mencairkan apa yang setara dengan 5% dari total pasokan Ethereum.
 
@@ -93,7 +93,7 @@ Namun peretas tidak akan pernah bisa menyentuh Ethereum-nya. Apa yang terjadi se
 
 Sebuah rantai blok ibarat daftar transaksi yang terus bertambah dengan setiap blok yang ditambang. Setiap transaksi tertanam dalam rantai blok selamanya. Namun jika lebih dari 50% penambang berkolusi, mereka dapat mengubah rantai blok secara keliru, menulis ulang sejarah sesuka mereka. Biasanya ini disebut serangan 51%. Namun tidak ada yang berbahaya tentang percabangan ini — komunitas hanya mengklaim kembali uang yang telah dicuri dari mereka.
 
-#### Kode adalah hukum (11:48) {#code-is-law-1148}
+### Kode adalah hukum (11:48) {#code-is-law-1148}
 
 Meski begitu, tidak semua orang setuju dengan usulan percabangan tersebut. Mereka berpendapat bahwa kode adalah hukum. Dalam pandangan ini, penyerang bukanlah seorang peretas melainkan seorang pengacara pintar yang dengan cermat membaca ketentuan kontrak. Oleh karena itu, tidak ada dana yang benar-benar dicuri dan mereka seharusnya berhak atas Ether dari DAO gelap tersebut.
 
@@ -107,7 +107,7 @@ Setelah pemeriksaan lebih lanjut, orang-orang menyadari bahwa tanda tangan terse
 
 Di sisi lain, para pendukung berpendapat bahwa "kode adalah hukum" adalah pernyataan yang terlalu drastis dan bahwa manusia harus memiliki keputusan akhir melalui konsensus sosial. Peretas tidak boleh dibiarkan mengambil keuntungan dari eksploitasi tersebut karena secara etis salah dan kemungkinan besar ilegal. Namun yang terpenting, DAO terlalu besar untuk gagal. DAO memegang sekitar 15% dari total pasokan Ether.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 Dalam sebuah kejadian yang menggemakan krisis keuangan 2008, para pengembang Ethereum memberikan dana talangan (bailout) kepada DAO. Vitalik Buterin, pencipta dan pengembang utama Ethereum, tidak menyesal karena mendorong percabangan. Dalam sebuah wawancara, ia kemudian berkata, "Beberapa pengguna Bitcoin melihat percabangan keras dalam beberapa hal melanggar nilai-nilai paling mendasar mereka. Saya pribadi berpikir nilai-nilai mendasar ini, jika didorong ke titik ekstrem seperti itu, adalah konyol."
 
@@ -117,7 +117,7 @@ Namun tidak berakhir di situ. Rantai blok Ethereum asli — yang mengalami peret
 
 Jika Anda memegang Ether sebelum percabangan, Anda sekarang akan memiliki satu Ethereum dan satu Ethereum Classic. Jika Anda memegang satu Ether di DAO, Anda akan dapat menarik satu Ethereum dari kontrak pengembalian dana. Dan jika Anda baru saja meretas DAO, Anda akan menghasilkan kekayaan yang lumayan dalam Ethereum Classic — sekitar tujuh juta dolar.
 
-#### Warisan DAO (16:14) {#legacy-of-the-dao-1614}
+### Warisan DAO (16:14) {#legacy-of-the-dao-1614}
 
 Awalnya, Ethereum Classic mendapatkan momentum sebagai alternatif, dengan komunitas kuat dari fundamentalis rantai blok yang tidak setuju dengan dana talangan tersebut. Namun sejak saat itu, Ethereum Classic gagal mendapatkan daya tarik dan hanya benar-benar ada sebagai ide dengan sedikit utilitas. Sementara Ethereum adalah rumah bagi ribuan protokol, Ethereum Classic hanya memiliki beberapa protokol dasar. Jelas bahwa percabangan tersebut telah menang.
 
@@ -125,7 +125,7 @@ Dua bulan kemudian, Robin Hood mentransfer 2,9 juta Ethereum Classic mereka ke P
 
 Adapun peretas, mereka pergi dengan 3,6 juta Ethereum Classic — bernilai 150 juta dolar hari ini. Namun jika tidak ada percabangan, 3,6 juta Ethereum itu akan bernilai lebih dari tujuh miliar dolar hari ini.
 
-#### Dampak jangka panjang DAO (17:26) {#the-daos-lasting-impact-1726}
+### Dampak jangka panjang DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Penting untuk dicatat bahwa DAO sekarang umumnya disebut sebagai Genesis DAO untuk menghindari kebingungan, karena itu adalah DAO pertama tetapi jelas bukan yang terakhir. Terlepas dari kemunduran awal, DAO justru menjadi semakin populer. MakerDAO mengatur stablecoin DAI, dan protokol keuangan terdesentralisasi (DeFi) seperti Uniswap dengan token UNI-nya biasanya memiliki DAO tata kelola. Semua DAO ini dibangun dari pengalaman proyek-proyek sebelumnya untuk menciptakan organisasi yang lebih serbaguna dan sukses.
 
