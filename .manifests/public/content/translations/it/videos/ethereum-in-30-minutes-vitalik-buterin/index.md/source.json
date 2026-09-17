@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-in-30-minutes-vitalik-buterin/index.md",
   "generatedAt": "2026-04-28T23:26:05.456Z",
-  "rootHash": "46631e7d4011",
+  "rootHash": "586aeb164356",
   "tree": {
-    "contentHash": "66926c1d4193",
-    "anchorHash": "90c86cb829a2",
+    "contentHash": "07549b6ebfb6",
+    "anchorHash": "a0f574c8dfd6",
     "children": {
       "frontmatter:title": {
-        "contentHash": "38499e912911",
+        "contentHash": "5507780c542f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "c010ade63b49",
+        "contentHash": "cc7570cb7082",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "74c130b9bc91"
+        "anchorHash": "822d958dc7ac"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d166b49bc9f5"
+        "anchorHash": "4537d71ebe19"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "9411cc93293b",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b60d7bdd334c"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "178b326acc81"
+        "anchorHash": "8536ef0f78ce"
       },
       "prose:1": {
         "contentHash": "08bb3cadf821",

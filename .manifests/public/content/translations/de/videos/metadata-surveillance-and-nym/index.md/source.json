@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/metadata-surveillance-and-nym/index.md",
   "generatedAt": "2026-07-23T00:27:05.086Z",
-  "rootHash": "10ada09035ea",
+  "rootHash": "974b206dc1a9",
   "tree": {
-    "contentHash": "4543d5ef2729",
-    "anchorHash": "c54533ac526d",
+    "contentHash": "9d4c2795f021",
+    "anchorHash": "49e3a5939ff4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "450de059ae87",
+        "contentHash": "839c231fffeb",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "bba43d789df1",
+        "contentHash": "cab76056eff9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "95e0b1347872"
+        "anchorHash": "ee9dcd8c4657"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d50880ed2d08"
+        "anchorHash": "a6f7d992ef08"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d4e11841abf2"
+        "anchorHash": "54a57c3147c4"
       },
       "prose:1": {
         "contentHash": "aebe937c3f0b",
