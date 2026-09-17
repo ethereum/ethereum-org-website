@@ -18,7 +18,7 @@ import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import AppsExpander from "@/components/AppsExpander"
@@ -62,6 +62,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { createPageTracking } from "@/lib/utils/pageTracking"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -159,48 +160,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     url: `#${id}`,
   }))
 
-  // Matomo: one category for the page, the section id as the action, and a
-  // stable English name for the element. Section titles are translated -- ids
-  // and slugs keep a locale from splitting its own row.
-  const track = (section: string, name: string): MatomoEventOptions => ({
-    eventCategory: "privacy-online",
-    eventAction: section,
-    eventName: name,
-  })
-
-  // Footnote marker for the numbered citations under Further reading. Rendered
-  // outside the strings so translators never carry the numbering.
-  const footnote = (n: number, section: string) => (
-    <sup>
-      <Link
-        href={`#${sections.furtherReading.id}`}
-        customEventOptions={track(section, `Footnote ${n}`)}
-      >{`[${n}]`}</Link>
-    </sup>
+  const { track, cite, linkTo } = createPageTracking(
+    "privacy-online",
+    sections.furtherReading.id
   )
-
-  // `t.rich` tag that leaves the claim as plain text and trails a footnote.
-  const cite = (n: number, section: string) => {
-    const Cited = (chunks: ReactNode) => (
-      <>
-        {chunks}
-        {footnote(n, section)}
-      </>
-    )
-    Cited.displayName = "Cited"
-    return Cited
-  }
-
-  // `t.rich` link placeholder, pre-wired to Matomo.
-  const linkTo = (href: string, section: string, name: string) => {
-    const TrackedLink = (chunks: ReactNode) => (
-      <Link href={href} customEventOptions={track(section, name)}>
-        {chunks}
-      </Link>
-    )
-    TrackedLink.displayName = "TrackedLink"
-    return TrackedLink
-  }
 
   type Tip = {
     id: string
