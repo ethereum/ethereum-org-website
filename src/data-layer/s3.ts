@@ -41,6 +41,9 @@ function getS3Client(): S3Client {
       endpoint,
       credentials: { accessKeyId, secretAccessKey },
       forcePathStyle: true, // Required for S3-compatible services
+      // The SDK defaults to no request timeout, so a stalled endpoint hangs the
+      // caller until the task's maxDuration kills the entire run.
+      requestHandler: { connectionTimeout: 5_000, requestTimeout: 20_000 },
     })
   }
   return s3Client
@@ -166,6 +169,25 @@ export async function uploadToS3(
   const bucket = getBucket()
   const s3 = getS3Client()
 
+  // Almost every source URL carries a usable extension, so the key can be
+  // derived and checked before paying for the download. A miss falls through to
+  // the fetch path, which re-checks against the Content-Type-derived key.
+  const urlExt = getExtensionFromUrl(sourceUrl)
+  const precheckKey = customFilename
+    ? `${prefix}/${customFilename}`
+    : urlExt
+      ? generateKey(prefix, sourceUrl, urlExt)
+      : null
+
+  if (precheckKey) {
+    try {
+      await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: precheckKey }))
+      return buildS3Url(bucket, precheckKey)
+    } catch {
+      // Not in the bucket yet; fall through and upload it.
+    }
+  }
+
   // Fetch the image first to get accurate Content-Type
   try {
     const response = await fetch(sourceUrl, {
@@ -215,12 +237,14 @@ export async function uploadToS3(
       ? `${prefix}/${customFilename}`
       : generateKey(prefix, sourceUrl, ext)
 
-    // Check if already exists in S3
-    try {
-      await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }))
-      return buildS3Url(bucket, key)
-    } catch {
-      // Object doesn't exist, continue to upload
+    // Check if already exists in S3 (skipped when the pre-check used this key)
+    if (key !== precheckKey) {
+      try {
+        await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }))
+        return buildS3Url(bucket, key)
+      } catch {
+        // Object doesn't exist, continue to upload
+      }
     }
 
     const buffer = Buffer.from(await response.arrayBuffer())
@@ -253,9 +277,28 @@ export async function uploadToS3(
 }
 
 /**
- * Batch upload multiple images, in chunks to bound peak memory: every upload
- * buffers the whole image before the size check, so unbounded fan-out can OOM
- * the task machine.
+ * Map over items with a bounded number in flight. Unbounded fan-out breaks two
+ * ways here: every upload buffers a whole image before the size check, and each
+ * one starts its own 10s fetch deadline at call time, so queued requests expire
+ * before they are ever dispatched.
+ *
+ * @returns Results in input order
+ */
+export async function mapWithConcurrency<T, R>(
+  items: T[],
+  fn: (item: T) => Promise<R>,
+  concurrency = 5
+): Promise<R[]> {
+  const results: R[] = []
+  for (let i = 0; i < items.length; i += concurrency) {
+    const chunk = items.slice(i, i + concurrency)
+    results.push(...(await Promise.all(chunk.map((item) => fn(item)))))
+  }
+  return results
+}
+
+/**
+ * Batch upload multiple images with bounded concurrency.
  *
  * @param urls - Array of external image URLs
  * @param prefix - S3 key prefix
@@ -266,12 +309,5 @@ export async function uploadManyToS3(
   prefix: string,
   concurrency = 5
 ): Promise<(string | null)[]> {
-  const results: (string | null)[] = []
-  for (let i = 0; i < urls.length; i += concurrency) {
-    const chunk = urls.slice(i, i + concurrency)
-    results.push(
-      ...(await Promise.all(chunk.map((u) => uploadToS3(u, prefix))))
-    )
-  }
-  return results
+  return mapWithConcurrency(urls, (url) => uploadToS3(url, prefix), concurrency)
 }
