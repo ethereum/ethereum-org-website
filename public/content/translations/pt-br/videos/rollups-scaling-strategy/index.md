@@ -20,7 +20,7 @@ Um vídeo explicativo da **Finematics** abordando os rollups como a principal es
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=7pWxCklcNsU) publicada pela Finematics. Ela foi levemente editada para facilitar a leitura.*
 
-#### Camada 2 (1:17) {#layer-2-117}
+### Camada 2 (1:17) {#layer-2-117}
 
 A escalabilidade do Ethereum tem sido um dos tópicos mais discutidos em cripto. O debate sobre escalabilidade geralmente esquenta durante períodos de alta atividade na rede, como a febre dos CryptoKitties em 2017, o verão das finanças descentralizadas (DeFi) de 2020 ou o mercado de alta de cripto no início de 2021. Durante esses períodos, a demanda sem precedentes pela rede Ethereum resultou em taxas de gás extremamente altas, tornando caro para os usuários comuns pagarem por suas transações.
 
@@ -28,7 +28,7 @@ Para enfrentar esse problema, a busca pela solução definitiva de escalabilidad
 
 Em geral, existem três maneiras principais de escalar o Ethereum — ou, de fato, a maioria das outras blockchains: escalar a própria blockchain (escalabilidade de camada 1 (l1)), construir sobre a camada 1 (escalabilidade de camada 2 (l2)) e construir ao lado da camada 1 (sidechains).
 
-#### Fora da camada 1 (1:58) {#outside-of-layer-1-158}
+### Fora da camada 1 (1:58) {#outside-of-layer-1-158}
 
 Quando se trata da camada 1 (l1), o Eth2 é a solução escolhida para escalar a blockchain do Ethereum. O Eth2 refere-se a um conjunto de mudanças interconectadas, como a migração para a Prova de Participação (PoS), a fusão do estado da cadeia de Prova de Trabalho (PoW) na nova cadeia de Prova de Participação (PoS) e a criação de fragmentos. A criação de fragmentos, em particular, pode aumentar drasticamente a vazão da rede Ethereum, especialmente quando combinada com rollups.
 
@@ -42,7 +42,7 @@ Para conseguir isso, as transações do rollup são executadas em uma cadeia sep
 
 Cada rollup implanta um conjunto de contratos inteligentes na camada 1 (l1) que são responsáveis por processar depósitos e saques e verificar provas. As provas também são onde a principal distinção entre os diferentes tipos de rollups entra em jogo. Os rollups otimistas usam provas de fraude, enquanto os ZK rollups usam provas de validade.
 
-#### Rollups otimistas (4:26) {#optimistic-rollups-426}
+### Rollups otimistas (4:26) {#optimistic-rollups-426}
 
 Os rollups otimistas publicam dados na camada 1 (l1) e assumem que estão corretos — daí o nome "otimista". Se os dados publicados forem válidos, estamos no caminho feliz e nada mais precisa ser feito. O rollup otimista se beneficia por não ter que fazer nenhum trabalho adicional no cenário otimista.
 
@@ -58,7 +58,7 @@ O sistema pode funcionar conforme o esperado e detectar fraudes mesmo se houver 
 
 Quando se trata de ZK rollups, não há nenhuma resolução de disputas. Isso é possível aproveitando uma peça inteligente de criptografia chamada provas de conhecimento zero — daí o nome ZK rollups. Neste modelo, cada lote publicado na camada 1 (l1) inclui uma prova criptográfica chamada ZK-SNARK. A prova pode ser verificada rapidamente pelo contrato da camada 1 quando o lote de transações é enviado, e lotes inválidos podem ser rejeitados imediatamente.
 
-#### Outras diferenças (7:28) {#other-differences-728}
+### Outras diferenças (7:28) {#other-differences-728}
 
 Devido à natureza do processo de resolução de disputas, os rollups otimistas precisam dar tempo suficiente a todos os participantes da rede para enviar provas de fraude antes de finalizar uma transação na camada 1 (l1). Esse período geralmente é bastante longo — para garantir que, mesmo no pior cenário, transações fraudulentas ainda possam ser contestadas. Isso faz com que os saques de rollups otimistas sejam bastante demorados, já que os usuários precisam esperar até uma ou duas semanas para poder sacar seus fundos de volta para a camada 1.
 
@@ -70,7 +70,7 @@ No entanto, os ZK rollups vêm com suas próprias desvantagens. Devido à comple
 
 Os rollups otimistas têm um pouco mais de facilidade com a compatibilidade com a EVM. Eles ainda precisam executar sua própria versão da EVM com algumas modificações, mas 99% dos contratos podem ser portados sem fazer nenhuma alteração. Os ZK rollups também exigem muito mais computação do que os rollups otimistas, o que significa que os nós que calculam as provas ZK precisam ser máquinas de alta especificação, dificultando a execução por outros usuários.
 
-#### Melhorias de escalabilidade (9:32) {#scaling-improvements-932}
+### Melhorias de escalabilidade (9:32) {#scaling-improvements-932}
 
 Quando se trata de melhorias de escalabilidade, ambos os tipos de rollups devem ser capazes de escalar o Ethereum de cerca de 15 a 45 transações por segundo (dependendo do tipo de transação) para até 1.000 a 4.000 transações por segundo. Vale a pena notar que é possível processar ainda mais transações por segundo oferecendo mais espaço para lotes de rollup na camada 1 (l1).
 
@@ -84,7 +84,7 @@ Embora tanto o Arbitrum quanto o Optimism tentem atingir o mesmo objetivo — co
 
 Outra grande diferença é a abordagem para lidar com a ordenação de transações e o MEV. O Arbitrum executará inicialmente um sequenciador responsável por ordenar as transações, mas eles querem descentralizá-lo a longo prazo. O Optimism prefere outra abordagem em que a ordenação de transações — e, portanto, o MEV — pode ser leiloada para outras partes por um determinado período de tempo.
 
-#### ZK rollups (13:10) {#zk-rollups-1310}
+### ZK rollups (13:10) {#zk-rollups-1310}
 
 Embora pareça que a comunidade Ethereum está se concentrando principalmente em rollups otimistas — pelo menos a curto prazo —, os projetos que trabalham em ZK rollups também estão progredindo de forma extremamente rápida.
 
@@ -92,11 +92,11 @@ A Loopring usa a tecnologia de ZK rollup para escalar seu protocolo de troca e p
 
 Os rollups baseados na StarkWare já são amplamente utilizados por projetos como DeversiFi, Immutable X e dYdX. Como mencionado anteriormente, a zkSync está trabalhando em uma máquina virtual compatível com a EVM que será capaz de suportar totalmente quaisquer contratos inteligentes arbitrários escritos em Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Os rollups também devem ter um grande impacto nas finanças descentralizadas (DeFi). Os usuários que antes não conseguiam transacionar no Ethereum devido às altas taxas de transação poderão permanecer no ecossistema na próxima vez que a atividade da rede estiver alta. Os rollups também permitirão uma nova geração de aplicativos que exigem transações mais baratas e tempo de confirmação mais rápido — tudo isso sendo totalmente protegido pelo consenso do Ethereum. Parece que os rollups podem desencadear outro período de alto crescimento para as DeFi.
 
-#### Desafios (14:29) {#challenges-1429}
+### Desafios (14:29) {#challenges-1429}
 
 Existem, no entanto, alguns desafios quando se trata de rollups. A composabilidade é um deles — para compor uma transação que usa vários protocolos, todos eles teriam que ser implantados no mesmo rollup.
 
@@ -104,7 +104,7 @@ Outro desafio é a liquidez fraturada. Sem a entrada de dinheiro novo no ecossis
 
 Isso também significa que naturalmente haverá vencedores e perdedores. No momento, o ecossistema Ethereum existente não é grande o suficiente para fazer uso de todas as soluções de escalabilidade. Isso pode — e provavelmente irá — mudar a longo prazo, mas a curto prazo, podemos ver alguns rollups e outras soluções de escalabilidade se tornando cidades fantasmas. No futuro, também podemos ver usuários vivendo inteiramente dentro de um ecossistema de rollup e não interagindo com a cadeia principal do Ethereum e outras soluções de escalabilidade por longos períodos de tempo.
 
-#### Ameaça às sidechains (15:44) {#threat-to-sidechains-1544}
+### Ameaça às sidechains (15:44) {#threat-to-sidechains-1544}
 
 Uma pergunta que surge com muita frequência ao discutir rollups é se eles são uma ameaça às sidechains. As sidechains ainda terão seu lugar no ecossistema Ethereum. Embora o custo das transações na camada 2 (l2) seja muito menor do que na camada 1 (l1), muito provavelmente ainda será alto o suficiente para inviabilizar certos tipos de aplicativos, como jogos e outros aplicativos de alto volume. Isso pode mudar quando o Ethereum introduzir a criação de fragmentos, mas até lá as sidechains podem criar efeito de rede suficiente para sobreviver a longo prazo.
 

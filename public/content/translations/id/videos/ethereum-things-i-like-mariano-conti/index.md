@@ -18,7 +18,7 @@ Sebuah bincang-bincang personal oleh pengembang OG Ethereum **Mariano Conti** di
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=S0-oO_4ZRfs) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah disunting sedikit untuk keterbacaan.*
 
-#### Pengantar (0:08) {#introduction-008}
+### Pengantar (0:08) {#introduction-008}
 
 **Mariano Conti:** Buenos Aires. Selamat malam semuanya. Saya ingin memulai dengan meminta maaf. Saya tidak terlalu banyak berada di ekosistem ini selama beberapa tahun terakhir. Jadi ketika penyelenggara memberi tahu saya bahwa mereka ingin saya memberikan presentasi, saya awalnya menolak karena saya sudah sangat jauh dari hal-hal tertentu sehingga saya terkadang benar-benar lupa mengapa kita ada di sini, mengapa kita melakukan hal-hal yang kita lakukan. Saya menjadi sedikit lebih sinis dalam beberapa hal dan optimis dalam hal lain. Jadi, bagaimanapun, saya punya waktu 15 menit untuk berbicara dengan Anda tentang semua ini, dan mari kita mulai.
 
@@ -26,23 +26,23 @@ Seperti yang selalu saya katakan, sebagai orang Argentina, saya suka terapi. Ini
 
 Jadi ini saya, 2015 — saya mulai membeli Ether. Pria yang terlihat sangat rendah hati. Dan sekarang 2025, setelah 10 tahun, itulah cangkang pria hancur yang Anda lihat hari ini berdiri di depan Anda, dengan pengalaman ikut-ikutan membeli token selama Musim Panas keuangan terdesentralisasi (DeFi), kan? Dan bagi Anda yang tidak tahu, saya menghabiskan beberapa tahun di Maker. Saya membantu merilis DAI agunan tunggal dan multi-agunan, yang mungkin merupakan stablecoin terdesentralisasi pertama di Ethereum. Saya membuat oracle terdesentralisasi pertama di Ethereum. Semuanya dari tinggal di sebuah apartemen di Almagro — tentu saja, sebagai bagian dari kelompok yang jauh, jauh lebih besar — tetapi saya akan mengatakan pengalaman saya di Ethereum cukup luas dan sebagian besar sangat memuaskan.
 
-#### Devcon di Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
+### Devcon di Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti:** Dan pada tahun 2019, saya yakin Anda sudah melihat gambar ini beberapa kali. Dan saya melihat beberapa orang di sini yang berada di atas panggung bersama saya di Osaka pada tahun 2019. Saat itulah kami benar-benar memulai dorongan besar untuk mengadakan salah satu acara Devcon ini di sini di Buenos Aires, kan? Dan mungkin orang yang paling sedikit bekerja untuk mewujudkannya adalah saya. Saya pada dasarnya hanya memakai kaus dan mencuit beberapa kali. Semua orang di sana bekerja seratus kali lebih banyak, dan orang-orang yang datang setelahnya bekerja seribu kali lebih banyak. Jadi sekali lagi, saya sangat, sangat merasa terhormat bahwa kita memiliki Devconnect di sini di Argentina.
 
 Dan saya mencoret "terlalu lambat" dan menggantinya dengan "nanti." Untuk sementara waktu saya sangat, sangat kecewa karena kita tidak bisa mengadakannya saat kita katakan — bahwa itu akan menjadi yang paling berdampak. Dan dalam satu sisi itu benar, dan di sisi lain tidak. Pertama, jika kita mengadakan Devcon — saya tahu 2020 sebenarnya tidak terjadi karena COVID — tetapi mungkin 2021, itu tidak akan sebesar ini. Teknologinya tidak akan mendarah daging di komunitas kita, di masyarakat kita, seperti sekarang. Orang-orang masih, ketika mereka datang ke Argentina untuk pertama kalinya, mereka kagum dengan seberapa banyak penggunaan yang kita dapatkan dari stablecoin — baik saat kita memiliki kontrol modal maupun saat tidak dan di antara keduanya. Orang Argentina memiliki budaya mencoba hal-hal baru, selalu melindungi investasi mereka. Ini adalah sesuatu yang telah saya bicarakan secara ekstensif. Jadi, sekali lagi, sangat senang bahwa Devcon akhirnya ada di sini.
 
-#### Hal-hal yang Saya Sukai dari Ethereum (4:28) {#things-i-like-about-ethereum-428}
+### Hal-hal yang Saya Sukai dari Ethereum (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti:** Dan saya sebenarnya hanya punya tiga salindia tersisa. Jadi saya akan berbicara sedikit tentang hal-hal yang saya sukai dari Ethereum. Dan saya suka bahwa ini masih ada setelah lebih dari 10 tahun. Dan waktu aktifnya adalah 100%. Ini benar-benar teknologi yang dapat Anda bangun di atasnya dan Anda dapat mengandalkan bahwa ini akan dapat dipercaya — bahwa Anda mengirim transaksi dan pada akhirnya itu akan berhasil, apa pun yang terjadi, sebuah node RPC di belahan bumi lain, kemudian direplikasi di ribuan komputer di seluruh dunia — semoga banyak dari mereka di rumah orang-orang dan bukan hanya di pusat data — dan bahwa apa pun yang Anda kirim atau interaksikan akan tertanam dalam sebuah blok, semoga selamanya.
 
 Ketika saya memulai perjalanan ini, hanya ada saya. Istri saya — sekarang, hampir setahun yang lalu — kami memiliki seorang anak. Anak saya memiliki ENS. Ini adalah bagian dari siapa kami dan apa kami dalam keluarga kami, bahwa Ethereum telah membuat begitu banyak hal menjadi mungkin bagi kami sehingga saya selalu merasa seperti saya tidak pernah memberikan kembali yang cukup. Dan itu juga salah satu alasan mengapa saya sangat banyak mengeluh tentang hal-hal tertentu.
 
-#### Komunitas (5:25) {#the-community-525}
+### Komunitas (5:25) {#the-community-525}
 
 **Mariano Conti:** Itu karena saya tidak ingin membahas hal-hal yang tidak saya sukai terlalu awal. Jadi izinkan saya melompat ke beberapa hal lain yang saya sukai — komunitas, terutama komunitas Argentina, dan melihat begitu banyak teman di sini, baik dari Argentina, dari Amerika Latin, maupun dari seluruh dunia. Sungguh gila bahwa mereka datang ke sini selama satu atau dua minggu atau untuk sebuah acara yang menyatukan kita semua dalam cinta dan rasa hormat kita terhadap — saya katakan cinta, dan itu aneh. Kami, setidaknya orang-orang di zaman saya — saya tidak tahu apakah ini berlaku untuk pendatang baru — kami tidak memperlakukan teknologi ini hanya sebagai koin lain atau saham lain yang akan Anda beli dan coba lihat apakah harganya naik atau turun. Harga memengaruhi kami, tentu saja, tetapi selalu lebih memengaruhi kami untuk melihat bahwa apa yang kami bangun itu penting, dan bahwa kami melakukan sesuatu yang bermakna dengan teknologi ini untuk memungkinkan kasus penggunaan yang sama sekali baru, baik itu pembiayaan, barang koleksi, atau DeFi.
 
-#### Hal-hal yang Tidak Saya Sukai (7:00) {#things-i-dont-like-700}
+### Hal-hal yang Tidak Saya Sukai (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti:** Dan dengan transisi itu, saya akan beralih ke beberapa hal yang tidak saya sukai — belum tentu hanya dengan Ethereum, tetapi dengan ekosistemnya.
 
@@ -52,7 +52,7 @@ Saya sudah lama tidak suka bahwa Yayasan Ethereum terlihat seperti mulai stagnan
 
 Sama seperti beberapa tahun yang lalu, Eric Connor dan saya memulai situs web kecil ini yang disebut "Pump the Gas," yang membuat banyak orang kesal. Kami hanya ingin komunitas yang lebih luas dan pengembang inti mengakui bahwa mungkin sudah waktunya untuk meningkatkan batas gas dari blok sedikit saja. Dan itu kontroversial pada saat itu, tetapi pada akhirnya itu menjadi sesuatu yang diterima dan mulai terjadi dengan ritme yang teratur. Dan sekarang kita bahkan memiliki EIP — Fusaka akan menjadi peningkatan yang diwajibkan menjadi 60 juta — dan kemudian bahkan ada EIP yang ingin secara paksa meningkatkan batas gas dengan setiap iterasi tunggal. Jadi sangat senang bahwa itu terjadi.
 
-#### Seruan Bertindak (10:24) {#calls-to-action-1024}
+### Seruan Bertindak (10:24) {#calls-to-action-1024}
 
 **Mariano Conti:** Dan saya pikir saya terlalu memaksakan diri dan kehabisan waktu. Jadi, saya hanya akan menyampaikan seruan bertindak saya. Saya benar-benar hanya punya dua, mungkin yang ketiga yang lolos dari sensor, tapi kita lihat saja nanti.
 
@@ -62,7 +62,7 @@ Kembali ke lapisan 1 (l1). Meskipun saya menyukai L2 dan saya tahu banyak orang 
 
 Yah, saya tidak tahu — yang itu mungkin seharusnya tidak ada di sana, tetapi saya percaya hanya itu yang ingin saya katakan. Saya ingin berterima kasih kepada Anda — atau saya minta maaf, tergantung bagaimana ini diterima — dan saya ingin meminta maaf bahwa saya biasanya memiliki lebih banyak hal untuk dikatakan. Dan mungkin jika kita memiliki sesi tanya jawab kecil, saya akan mengatakannya. Saya telah berada di pinggiran, seperti yang saya katakan, selama beberapa tahun terakhir, tetapi saya tidak pernah kehilangan pandangan tentang apa yang sedang dikerjakan orang-orang di Ethereum, dan itu akan selalu menjadi bagian dari hidup saya. Dan sekali lagi, saya sangat senang bahwa kita memiliki Devcon di Buenos Aires.
 
-#### Sesi Tanya Jawab (12:10) {#qa-session-1210}
+### Sesi Tanya Jawab (12:10) {#qa-session-1210}
 
 **Pembawa Acara:** Terima kasih banyak. Pertama-tama, bolehkah saya bertemu dengan Anda?
 
@@ -90,7 +90,7 @@ Seberapa antusias Anda sekarang? Anda sudah lama berada di sini, banyak hal beru
 
 **Mariano Conti:** Saya rasa apa yang paling membuat saya antusias saat ini adalah Ethereum yang ramping (lean Ethereum) — mungkin langkah selanjutnya untuk membuat lapisan 1 (l1) Ethereum benar-benar mengadopsi zero-knowledge, semua hal yang menyertainya — yah, bahkan sebelum itu — Fusaka melakukan pemisahan pembukti (prover) dengan node, dengan pencari (searcher), dengan pembangun (builder). Saya tidak tahu apakah saya bisa menyebutkan satu hal saja. Saya antusias dengan percabangan keras berikutnya. Sungguh gila bahwa kita akan memiliki dua dalam setahun ketika kita mungkin hanya memiliki satu setiap tiga tahun selama beberapa waktu terakhir. Jadi saya antusias bahwa karena suatu alasan pergerakan telah dimulai dan kita semua memutuskan bahwa kita dapat melakukan berbagai hal dengan lebih cepat sekarang.
 
-#### Etos Cypherpunk dan Nasihat (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Etos Cypherpunk dan Nasihat (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Pembawa Acara:** Apa yang membuat Anda senang karena kita telah menyingkirkannya dari hari-hari OG di kripto secara keseluruhan, dan apa yang Anda harap tetap kita pertahankan?
 

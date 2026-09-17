@@ -18,11 +18,11 @@ Bài phát biểu chính của **Naomi Brockwell** tại EthBoulder 2026 về s�
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=nvJSFR1Q_JE) do EthBoulder xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Bài nói chuyện hai phần: cảnh báo + giải pháp (00:00) {#two-part-talk-warning-solution-0000}
+### Bài nói chuyện hai phần: cảnh báo + giải pháp (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Tuyệt vời. Chào mừng mọi người. Cảm ơn các bạn vì đã có mặt ở đây. Vậy, đây sẽ là một bài nói chuyện gồm hai phần. Trong phần đầu tiên, không khí có thể sẽ hơi căng thẳng một chút. Tôi vốn được biết đến là người khá gay gắt khi nói về các chủ đề quyền riêng tư và giám sát. Phần thứ hai sẽ có một tông giọng hơi khác một chút. Vì vậy, trong phần đầu tiên, tôi sẽ kể cho các bạn nghe một câu chuyện và trong phần thứ hai, chúng ta sẽ giải cứu thế giới. Vậy nếu tất cả các bạn đều thấy ổn với điều đó, chúng ta có thể bắt đầu.
 
-#### Bộ quần áo mới của hoàng đế (00:44) {#the-emperors-new-clothes-0044}
+### Bộ quần áo mới của hoàng đế (00:44) {#the-emperors-new-clothes-0044}
 
 Vậy hồi một. Hãy bắt đầu với hồi một của câu chuyện chúng ta. Lời nguyền. Ngày xửa ngày xưa có một vị hoàng đế được bán cho một bộ quần áo mới tuyệt đẹp. Người bán hàng nói với ông ta, "Những bộ trang phục này rất đặc biệt. Chỉ những người thông minh và đức hạnh mới có thể nhìn thấy chúng, và bất kỳ ai không xứng đáng với vị trí của mình sẽ không nhìn thấy gì cả." Hoàng đế không thể nhìn thấy bất kỳ bộ quần áo nào, nhưng ông sợ phải thừa nhận điều đó. Nói ra điều đó đồng nghĩa với việc thú nhận rằng ông không xứng đáng để cai trị, vì vậy ông không nói gì. Và khi hoàng đế xuất hiện trước công chúng, diễu hành qua các con phố, cũng không ai khác có thể nhìn thấy bộ quần áo. 
 
@@ -32,7 +32,7 @@ Vì vậy, về cốt lõi, hãy quay lại đây. Về cốt lõi, câu chuyệ
 
 Bây giờ, trong câu chuyện của chúng ta, mỗi người đều nghĩ rằng có lẽ họ mới là vấn đề. Vì vậy, họ dựa vào những người xung quanh và cho rằng nếu có điều gì đó thực sự sai, ai đó khác hẳn đã lên tiếng trước. Mọi người đều khuất phục trước trí tuệ của đám đông. Và đây là một chiến lược tồi vì đám đông đã sai. Hoàng đế đang trần truồng. Và bởi vì mọi người đều giữ im lặng, sự đồng thuận đã thay thế sự thật. Sự im lặng của đám đông trở thành bằng chứng cho thấy mọi thứ đều ổn. Bây giờ, đây chính xác là cách quyền riêng tư sụp đổ trong thế giới hiện đại.
 
-#### Cỗ máy (02:46) {#the-machine-0246}
+### Cỗ máy (02:46) {#the-machine-0246}
 
 Vậy, hồi hai, cỗ máy. Đây là phiên bản hiện đại của câu chuyện. Chúng ta đang sống dưới chế độ thu thập dữ liệu lớn nhất trong lịch sử nhân loại. Chúng ta đã xây dựng và tiếp tục nuôi dưỡng một cơ sở hạ tầng giám sát chưa từng có trên thế giới. và quỹ đạo mà chúng ta đang hướng tới là mầm mống của một thảm họa. Bây giờ, tại sao lại như vậy? Bởi vì ngay lúc này, cách duy nhất để mọi chuyện kết thúc êm đẹp là nếu chúng ta có thể đảm bảo rằng những kẻ xấu sẽ không bao giờ giành được quyền kiểm soát hệ thống này. Nhưng nếu cuối cùng kẻ xấu thực sự nắm được quyền kiểm soát, thì đây giống như một vũ khí nguyên tử chứa đầy thế năng với tất cả các thành phần cần thiết để kiểm soát hoàn toàn một quần thể dân cư. 
 
@@ -42,13 +42,13 @@ Cảm giác thật bất an, phải không? Và chúng ta cảm nhận được 
 
 Chúng ta cảm thấy có gì đó không ổn khi đọc lướt qua một chính sách quyền riêng tư và chúng ta biết rằng mình nên đọc nó cẩn thận. Chắc hẳn có một số thứ quan trọng trong đó. Và thực tế thì giấy trắng mực đen ghi rõ rành rành trong đó rằng đúng vậy, họ chắc chắn sẽ chia sẻ dữ liệu nhạy cảm này và chúng ta thậm chí không biết là với ai, nhưng chúng ta vẫn nhấp vào chấp nhận vì rốt cuộc thì nó không thể tệ đến thế, hoặc nếu không thì việc chấp nhận những điều này đã không trở thành chuyện thường tình, phải không? Nếu nó thực sự tệ đến vậy thì mọi người đã không làm như thế.
 
-#### Tình trạng hiện tại tồi tệ đến mức nào? (05:12) {#how-bad-is-the-status-quo-0512}
+### Tình trạng hiện tại tồi tệ đến mức nào? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Vậy tình trạng hiện tại tồi tệ đến mức nào? Những thứ này thực sự tồi tệ ra sao? Hoặc có lẽ chúng ta nên nói về điều này vì một số người nghĩ rằng đây chỉ là vấn đề các công ty đang cố gắng bán cho chúng ta một đôi giày tốt hơn. Đây chỉ giống như một vấn đề của người tiêu dùng thôi, phải không? Hoặc có lẽ chỉ là việc các công ty mạng xã hội tìm hiểu về chúng ta để tạo ra một thuật toán được tinh chỉnh tốt hơn, đúng chứ? Điều đó dường như không quá thảm khốc. Vấn đề với tất cả những điều đó là gì?
 
 Nhưng ngay lúc này, tất cả chúng ta đều đang đồng thuận với một cỗ máy giám sát lan rộng đang âm thầm xâm nhập vào mọi khía cạnh riêng tư trong cuộc sống của chúng ta. Hiện nay, ở một số nơi như các chế độ độc tài, cỗ máy này được sử dụng để kiểm soát sự bất đồng chính kiến trước khi nó xảy ra bằng cách gắn cờ những người có khả năng gây rắc rối là có nhiều nguy cơ tham gia vào một phong trào biểu tình và sau đó nhắm mục tiêu vào những người đó. Đôi khi cỗ máy này được sử dụng để định hình tâm lý công chúng, ảnh hưởng đến các quan điểm, thao túng các cuộc bầu cử hoặc khiến toàn bộ người dân ghét một số kiểu người nhất định bằng cách thuyết phục họ rằng những nhóm đó ghét họ. Và sau đó có những quốc gia công khai phát sóng thông tin về những công dân có điểm tín nhiệm xã hội bị giảm sút, rồi họ sử dụng những điểm số đó để hạn chế việc đi lại, giới hạn việc làm của họ, ngăn cản con cái họ vào một số trường học nhất định hoặc cắt đứt hoàn toàn cơ hội của họ.
 
-#### Thu thập dữ liệu ở quy mô nghìn tỷ đô la (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Thu thập dữ liệu ở quy mô nghìn tỷ đô la (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Và giờ đây với cuộc cách mạng AI, cỗ máy không chỉ còn là một bản ghi chép về cuộc đời bạn mà nó trở thành một công cụ dự đoán. Đó là lý do tại sao điều này lại quan trọng. Vì vậy, tôi muốn làm cho điều này trở nên cụ thể đối với bạn. Do đó, tôi sẽ điểm qua tình trạng giám sát hiện tại. 
  
@@ -56,7 +56,7 @@ Tôi sẽ chia cỗ máy này thành ba phần. Phần đầu tiên là thu th�
  
 Nhưng cứ cho là bạn thực sự may mắn và tránh được sự nhắm mục tiêu của hệ thống này. Nhưng con cái bạn có lẽ sẽ không tránh được, và bạn không thể biết liệu chúng có bị nhắm mục tiêu hay không. Và bộ máy mà bạn đang chấp thuận ngày hôm nay, nó sẽ không biến mất. Bạn không biết ai sẽ là người nắm quyền vào ngày mai.
 
-#### Cách thông tin này bị rò rỉ (08:03) {#how-this-information-is-leaked-0803}
+### Cách thông tin này bị rò rỉ (08:03) {#how-this-information-is-leaked-0803}
  
 Vì vậy, phần thứ hai là cách thông tin này sau đó bị rò rỉ. Mỗi năm, số lượng các vụ vi phạm dữ liệu lại đạt mức cao kỷ lục mới. Làm rò rỉ đủ loại thông tin mà lẽ ra các công ty không bao giờ nên thu thập ngay từ đầu. Từ lịch sử vị trí và hồ sơ y tế, dữ liệu tài chính, tin nhắn riêng tư, và những thông tin này bị phát tán tràn lan trên mạng, và tất cả đều kết thúc trên dark web để bị lợi dụng bởi các băng đảng có tổ chức, các nhóm tội phạm và các tin tặc cấp quốc gia. 
 
@@ -68,7 +68,7 @@ Tuy nhiên, các công ty vẫn quyết định thu thập tất cả dữ liệ
  
 Vì vậy, đây giống như đám đông đang vỗ tay tại buổi diễu hành, đúng không? Không phải vì chúng ta chắc chắn rằng mỗi cú nhấp chuột và mỗi lần nhấn chấp nhận đều an toàn. Mà là vì việc lên tiếng và từ chối hoặc chuyển đổi công cụ cảm giác khó khăn hơn là cứ hùa theo.
 
-#### Cửa hậu & sự đánh chặn của chính phủ (09:33) {#backdoors-government-interception-0933}
+### Cửa hậu & sự đánh chặn của chính phủ (09:33) {#backdoors-government-interception-0933}
  
 Bây giờ chúng ta hãy nói về nhóm thứ ba này, được vũ khí hóa. Các hoạt động tình báo nước ngoài thù địch đã xâm nhập vào cơ sở hạ tầng giao tiếp cốt lõi. Lúc nãy tôi vừa mới trò chuyện với mọi người về Salt Typhoon, đúng không? Ví dụ, Trung Quốc đã và đang đánh chặn các cuộc gọi và thông điệp của chúng ta trên quy mô lớn. 
 
@@ -78,7 +78,7 @@ Chúng ta biết rằng các chính phủ không thể đảm bảo họ là nh�
 
 Chúng ta biết về một trong số đó, Salt Typhoon, nhưng chúng ta không hề biết ai đã và đang thu thập các thông tin liên lạc nhạy cảm, riêng tư của chúng ta ngay trong chính cơ sở hạ tầng mà chúng ta đang phụ thuộc vào này.
 
-#### Tại sao sự giám sát lại hiếm hơn bạn nghĩ (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Tại sao sự giám sát lại hiếm hơn bạn nghĩ (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Vậy là, vị hoàng đế đang cởi truồng và lý do duy nhất khiến tất cả những điều này vẫn tiếp diễn là vì đám đông vẫn tiếp tục vỗ tay. Nhưng còn một lý do khác giải thích tại sao đám đông vẫn vỗ tay. 
  
@@ -112,7 +112,7 @@ Vậy, có bao nhiêu hàng trăm triệu người đang sử dụng các sản 
 
 Có một bài thuyết trình khác kể về việc bố của một người đã mua về nhà một trong những trung tâm điều khiển nhà thông minh đó, đúng không? Cô ấy quyết định thực hiện một số cuộc thăm dò. Thỉnh thoảng cô ấy nghịch các công cụ khác nhau trong nhà và cô ấy muốn tìm hiểu xem nó hoạt động như thế nào. Và hóa ra thiết bị tiêu dùng phổ biến mà bất kỳ ai cũng có thể mua này đang được sử dụng như một trung tâm trong một mạng botnet khổng lồ của Trung Quốc. Sau đó FBI xem được bài thuyết trình. Cuối cùng họ đã gỡ bài thuyết trình xuống và đưa cuộc điều tra vào diện mật. Họ không biết điều này đang diễn ra, nhưng cô ấy là người đã thu hút sự chú ý của họ chỉ bằng cách đưa ra bài thuyết trình này kiểu như, "Này các bạn, tôi phát hiện ra những thứ kỳ lạ này đang diễn ra." Và đó là cách chúng ta phát hiện ra rằng một mạng botnet khổng lồ của Trung Quốc đang xâm nhập vào tất cả các ngôi nhà của chúng ta thông qua một thiết bị cụ thể này. Vậy còn tất cả các thiết bị khác trong nhà của chúng ta mà chưa ai bận tâm xem xét thì sao?
 
-#### Vấn đề im lặng & sự đồng thuận giả tạo (16:30) {#the-silence-problem-false-consensus-1630}
+### Vấn đề im lặng & sự đồng thuận giả tạo (16:30) {#the-silence-problem-false-consensus-1630}
 
 Vì vậy, đó là tình trạng hiện tại của chúng ta. Sự giám sát ngày nay diễn ra ở khắp mọi nơi, vô hình, được bình thường hóa, được biện minh, và chúng ta coi đó là tiêu chuẩn của ngành. Và đó là nơi chúng ta đang đứng hiện tại.
 
@@ -134,7 +134,7 @@ Eric Schmidt của Google, ông ấy có một câu nói tồi tệ nổi tiến
 
 Vì vậy, hãy chú ý đến những gì đang xảy ra. Quyền riêng tư đã bị gán cho là tội lỗi và sự tuân thủ được coi là đức hạnh. Những người tốt là những người đầu hàng trước sự truy cập và những người đáng ngờ là những người đặt câu hỏi. Và giờ đây, việc phản kháng trở nên tốn kém về mặt xã hội. Một khi bạn gắn nhãn mác đạo đức đó cho sự im lặng, cuộc diễu hành sẽ tự động diễn ra.
 
-#### Làm thế nào để chúng ta dừng cuộc diễu hành của hoàng đế? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Làm thế nào để chúng ta dừng cuộc diễu hành của hoàng đế? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Hãy quay lại câu chuyện của chúng ta. Bộ quần áo mới của hoàng đế. Khi hoàng đế diễu hành qua đường phố trong bộ quần áo mới của mình, đám đông vỗ tay tán thưởng. Họ chiêm ngưỡng sự khéo léo. Họ ca ngợi sự thanh lịch. Họ bình phẩm về những đường cắt, chất liệu vải và cách mà bộ trang phục bắt sáng. Và họ cạnh tranh nhau để tỏ ra là người ấn tượng nhất. Các cận thần rướn người về phía trước, háo hức muốn được thấy là đang đồng tình, các quan chức gật gù trang nghiêm, còn các cố vấn thì thêm thắt những lời khen ngợi mang tính chuyên môn và bịa ra các chi tiết để chứng tỏ rằng họ hiểu những gì mình đang nhìn thấy, một số người nói lớn với hy vọng được người khác nghe thấy, trong khi những người khác chỉ mỉm cười và không nói gì, cẩn thận để không tỏ ra bối rối. Và không ai muốn là người đầu tiên do dự, không ai muốn là người đặt ra những câu hỏi hiển nhiên, và với mỗi lời khen ngợi, lời nói dối càng trở nên khó vãn hồi hơn. 
 
@@ -158,7 +158,7 @@ Vì vậy, cách để điều này thay đổi không phải là chờ đợi h
 
 Giờ đây, khi mọi người, khi có đủ số người ngừng vỗ tay, cuộc diễu hành không thể tiếp tục. Và đó là phần của câu chuyện mà chúng ta vẫn đang viết ở đây. Vì vậy, vấn đề không phải là liệu hoàng đế có mặc quần áo hay không. Tất cả chúng ta đều biết rằng ông ta không mặc gì cả. Câu hỏi duy nhất còn lại là liệu chúng ta có tiếp tục bước đi bên cạnh ông ta, giả vờ rằng mọi chuyện vẫn ổn hay không.
 
-#### Phần hai: hãy cùng giải cứu thế giới (25:22) {#part-two-lets-save-the-world-2522}
+### Phần hai: hãy cùng giải cứu thế giới (25:22) {#part-two-lets-save-the-world-2522}
 
 Vậy với một lưu ý khá tồi tệ đó, phần hai: hãy cùng giải cứu thế giới. Ai muốn một tương lai tốt đẹp hơn? Ai muốn một tương lai tốt đẹp hơn cho các thế hệ mai sau, cho con cái của họ? Ai muốn thay đổi mọi thứ? Bởi vì chúng ta hoàn toàn có quyền năng để tạo ra sự khác biệt. 
 
@@ -312,7 +312,7 @@ Vì vậy, mỗi khi bạn ở trong thời điểm đó, hãy thử xem liệu 
 
 Hơn thế nữa, nếu các nhà lập pháp cấm những thứ này tồn tại, bởi vì không ai đấu tranh cho nó, bởi vì tất cả chúng ta đều nói, "Chà, tôi không có gì phải giấu." Những thứ này sẽ biến mất.
 
-#### Những lựa chọn chúng ta phải đưa ra về tương lai mà chúng ta muốn thấy (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Những lựa chọn chúng ta phải đưa ra về tương lai mà chúng ta muốn thấy (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Vì vậy, tôi sẽ kết thúc với lưu ý này vì tôi nghĩ chúng ta đang hết thời gian ở đây. Ngay lúc này, chúng ta đang ở ngã rẽ mà chúng ta phải đưa ra một số lựa chọn về thế giới mà chúng ta muốn thấy. Và tôi biết có rất nhiều người cảm thấy bất tiện với các hệ thống này và có vẻ như sẽ mất rất nhiều công sức để chuyển đổi mọi thứ. 
 

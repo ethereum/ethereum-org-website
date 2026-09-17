@@ -18,7 +18,7 @@ Mahojiano ya Offstage kwenye Devconnect ambapo mtangazaji Binji na mwanzilishi w
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=EWe-cjT9IQs) iliyochapishwa na Taasisi ya Ethereum. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Kukua nchini Ufini (0:28) {#growing-up-in-finland-028}
+### Kukua nchini Ufini (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Kwa hivyo, tutacheza Jenga hapa. Kuna baadhi ya maswali yanayohusiana nayo. Ikiwa unataka kufanya hatua ya kwanza, tunaweza kuanza.
 
@@ -48,7 +48,7 @@ Mahojiano ya Offstage kwenye Devconnect ambapo mtangazaji Binji na mwanzilishi w
 
 **Stani Kulechov:** Babangu sikuzote alitaka nifanye mambo ya teknolojia kwa sababu aliona umuhimu wa kompyuta. Mtandao ulikuwa unaanza kuja. Maktaba zilikuwa na kompyuta — hapo ndipo palikuwa mahali pa kwanza. Kwa kweli waliniunga mkono sana, kusema ukweli.
 
-#### Kupata kompyuta ya kwanza (3:00) {#getting-the-first-computer-300}
+### Kupata kompyuta ya kwanza (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Unawaelezaje kile unachofanya? Je, wanafahamu fedha zilizogatuliwa (DeFi) sasa?
 
@@ -58,7 +58,7 @@ Mahojiano ya Offstage kwenye Devconnect ambapo mtangazaji Binji na mwanzilishi w
 
 **Stani Kulechov:** Kabisa. Mtandao na kompyuta zilitoa ufikiaji wa habari — haukuhitaji kwenda kwenye maktaba ili kujifunza kitu au kuuliza wazazi wako au marafiki zako. Na nadhani kwa njia sawa, DeFi na kripto zinatoa ufikiaji wa zana za kifedha. Hicho ndicho kinachonisukuma haswa. Ni jambo la kibinafsi kwa sababu nimeona moja kwa moja jinsi inavyoweza kusaidia.
 
-#### Kugundua Ethereum (5:30) {#discovering-ethereum-530}
+### Kugundua Ethereum (5:30) {#discovering-ethereum-530}
 
 **Binji:** Uliishiaje kuacha shule ya sheria na kuingia kwenye Ethereum?
 
@@ -70,7 +70,7 @@ Nilianza kuunda mikataba mahiri na nilikuwa nikifanya kazi hii yote kwenye Ether
 
 **Stani Kulechov:** Tunaamini katika uhuru na kile ambacho fedha zilizogatuliwa zinaweza kufanya kwa watu wengi — kuwawezesha. Kujenga kuzunguka jamii ya watu wenye nia moja kwa kweli huleta kila kitu pamoja.
 
-#### Kujenga ETHLend na kuipa jina Aave (9:00) {#building-ethlend-and-naming-aave-900}
+### Kujenga ETHLend na kuipa jina Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Jina Aave lilitoka wapi?
 
@@ -82,7 +82,7 @@ Tutakuwa wakubwa kuliko JPMorgan na benki na mitandao hii yote. Kwa nini uipe ji
 
 **Stani Kulechov:** Ndiyo. Na nikitokea katika mji mdogo nchini Ufini, nilichogundua ni kwamba kuna watu wengi ambao kwa kweli wanatafuta kile tunachojenga — ndani na nje ya nafasi yetu.
 
-#### Aave dhidi ya fedha za jadi (12:00) {#aave-vs-traditional-finance-1200}
+### Aave dhidi ya fedha za jadi (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** Unatofautishaje kati ya JPMorgan na Aave?
 
@@ -90,7 +90,7 @@ Tutakuwa wakubwa kuliko JPMorgan na benki na mitandao hii yote. Kwa nini uipe ji
 
 Niliishiriki kwenye Reddit ya Ethereum mnamo 2017 na nilipata msisimko mwingi kutoka kwa jamii tangu mwanzo kabisa. Hivyo ndivyo jamii ya kripto inavyofanya kazi. Huhitaji mpango wa biashara au wasilisho. Unawaonyesha tu watu kitu ambacho wanaweza kujenga juu yake.
 
-#### Usalama na uzoefu wa mtumiaji (14:30) {#security-and-user-experience-1430}
+### Usalama na uzoefu wa mtumiaji (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Ufikiaji bora pia unamaanisha usalama bora. Unahakikishaje kwamba watumiaji hawaathiriwi na majaribio ya wizi wa mtandaoni, na tunafanyaje vizuri zaidi kuliko katika ulimwengu wa jadi wa mtandao? Kutatua hili ni muhimu kwa sababu hatuwezi kutegemea mchakato ambapo watumiaji wanapoteza kile walicho nacho, sivyo? Nadhani jambo la kawaida zaidi ni wizi wa mtandaoni. Uzoefu wa mtumiaji wa kuingiliana na mnyororo wa vitalu hauna uthibitishaji.
 
@@ -102,7 +102,7 @@ Niliishiriki kwenye Reddit ya Ethereum mnamo 2017 na nilipata msisimko mwingi ku
 
 **Stani Kulechov:** Wakati mwingine wazo halina uthibitisho. Wakati mwingine wazo linaweza kuwa na uthibitisho lakini utekelezaji ni duni. Kwa hivyo kuna vipengele tofauti ambavyo ni muhimu. Niliendelea tu kufikiria, nikaendelea kuboresha bidhaa, na nadhani hiyo ilikuwa njia sahihi.
 
-#### Uwekezaji wa malaika (17:00) {#angel-investing-1700}
+### Uwekezaji wa malaika (17:00) {#angel-investing-1700}
 
 **Binji:** Wewe ni mwekezaji wa malaika mahiri. Unatafuta nini unapotathmini wajenzi wapya?
 
@@ -112,7 +112,7 @@ Niliishiriki kwenye Reddit ya Ethereum mnamo 2017 na nilipata msisimko mwingi ku
 
 **Stani Kulechov:** Sio kweli, kwa sababu kila wakati kuna thamani fulani. Unajifunza mengi sana, unaendeleza nafasi hii. Na kwa kawaida unaunda vipaji vingi kama matokeo. Wakati mwingine uwekezaji haufanyi kazi, lakini kisha timu hiyo hiyo inaweza kwenda na kuanzisha kampuni nyingine ambapo wana uzoefu zaidi na wanaweza kufanikiwa zaidi. Baadhi hufanikiwa zaidi kuliko wengine, lakini kwa ujumla zote ni dau ambazo tuna imani nazo.
 
-#### Uhifadhi dhidi ya upataji (19:00) {#retention-vs-acquisition-1900}
+### Uhifadhi dhidi ya upataji (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Ni kipimo gani unachojali katika kripto?
 
@@ -122,7 +122,7 @@ Niliishiriki kwenye Reddit ya Ethereum mnamo 2017 na nilipata msisimko mwingi ku
 
 **Stani Kulechov:** Kwa kawaida sasa, kwa upande wa upataji, watu wanafikiria zaidi kuhusu uhifadhi kuliko upataji. Inaangazia kwa nini watu hawashiriki zaidi — kwa kawaida ni kwa sababu kuna ukosefu wa bidhaa ambayo inaweza kuwavutia watumiaji hawa. Tumekuwa tukiangazia muongo mmoja kwenye miundombinu. Nadhani safu ya programu ni muongo ujao, na hiyo itatusaidia kukuza idadi ya watumiaji.
 
-#### Kubadilikabadilika kwa kripto na mali za taasisi (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Kubadilikabadilika kwa kripto na mali za taasisi (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Kripto inaonekana kila wakati kama kitu hiki kinachobadilikabadilika — soko la kushuka, soko la kupanda. Aave ni kama kinyume cha hilo, sivyo? Ni thabiti tu wakati wote.
 
@@ -132,7 +132,7 @@ Kwa mali za taasisi kama soko la Horizon ambalo tulizindua, unatumia mali zilizo
 
 Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri kwa wakopeshaji kwa sababu wanaweza kukopesha dhidi ya mali za jadi lakini wanafanya hivyo mnyororoni kwa kutumia sarafu thabiti. Nadhani kwa taasisi, kutambua faida ya sarafu thabiti na mali zilizowekwa kwenye tokeni kunawasaidia kufikiria nje ya kubadilikabadilika — na kuacha kufikiria kuwa kripto inahusu tu kubadilikabadilika.
 
-#### Ethereum kama safu ya uaminifu (22:00) {#ethereum-as-a-trust-layer-2200}
+### Ethereum kama safu ya uaminifu (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** Kwa Ethereum, moja ya mambo ninayoyapenda sana ni kwamba ni safu ya uaminifu. Itifaki kama Aave zinaonyesha uaminifu kwa vitendo katika ulimwengu wa kweli. Ni kukopesha, kukopa, kuungwa mkono na usalama wa kiuchumi na uzito wa uaminifu unaokuja na majukwaa haya.
 
@@ -142,7 +142,7 @@ Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri
 
 **Stani Kulechov:** Ni wazi hauoni ni kiasi gani cha kazi kinaingia katika kile tunachofanya siku hadi siku. Mambo mengi yanachukuliwa kijuujuu tu. Lakini nadhani inapaswa kuwa mchakato wa kufurahisha. Kujenga kunapaswa kuwa mchakato wa kufurahisha. Haupaswi kuwa hapa ikiwa inakulemea. Unapaswa kuwa hapa ili kufurahia kufanya kile unachofanya.
 
-#### Kufurahi wakati wa kujenga (24:00) {#having-fun-while-building-2400}
+### Kufurahi wakati wa kujenga (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave ni mfano mzuri wa jinsi ya kufurahi. Ni jambo lisilo la kweli kwangu kwamba timu hiyo hiyo inayobadilisha jinsi fedha za kisasa zinavyoonekana — nini, benki ya 30 kwa ukubwa duniani bila kuzingatia uwekaji dhamana, labda juu zaidi — pia inafanya GrAave. Inathibitisha kwamba ninyi mnaleta utamaduni wa kripto katika kizazi kijacho cha fedha bila kuacha jamii na utamaduni uliowaleta kwenye ulimwengu huu.
 
@@ -152,7 +152,7 @@ Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri
 
 **Stani Kulechov:** Nadhani programu ya Aave. Kuangazia tu urahisi. Urahisi unakua. Tuna nguvu sana kuhusu mwelekeo huo — kuleta DeFi zaidi kwa watu wengi na kuifanya kwa njia sahihi, ambapo kila kitu kimerahisishwa na ni rahisi kutumia.
 
-#### Nini kinakufanya uhisi kuwa hai zaidi (26:00) {#what-makes-you-feel-most-alive-2600}
+### Nini kinakufanya uhisi kuwa hai zaidi (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** Nini kinakufanya uhisi kuwa hai zaidi?
 
@@ -166,7 +166,7 @@ Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri
 
 **Stani Kulechov:** Sipendi tu kipengele cha uzito kupita kiasi. Ninapenda uzito wa kufanya mambo, lakini ninapenda ukweli kwamba lazima ufurahi katika maisha, ufurahi kazini. Nilikuwa na uhuru mwingi nilipokuwa nikikua, na hilo liliunda uzoefu ambao nisingekuwa nao.
 
-#### Kwa nini London (28:30) {#why-london-2830}
+### Kwa nini London (28:30) {#why-london-2830}
 
 **Binji:** Ninyi mlichagua kuwa na makao yenu London kama mojawapo ya makao makuu yenu. Kwa nini London?
 
@@ -176,7 +176,7 @@ Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri
 
 **Stani Kulechov:** Tulisafiri hivi karibuni, ndiyo.
 
-#### Uvuvio na karibu kuacha (30:00) {#inspiration-and-almost-quitting-3000}
+### Uvuvio na karibu kuacha (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Ni nani mtu nje ya kripto na teknolojia aliyekupa uvuvio, iwe ni mtindo wako wa uongozi au ulipokuwa unakua?
 
@@ -186,7 +186,7 @@ Ni nzuri kwa wakopaji kwa sababu wanaweza kufikia ukwasi wakati wowote. Ni nzuri
 
 **Stani Kulechov:** Ndiyo, wakati mwingine. Lakini ni kama kuacha kwa siku hiyo. Unakata tamaa tu kwa siku hiyo ili kupumzika na kila wakati kuna siku inayofuata. Hasa ikiwa una kitu ambacho ni kigumu kutatua — kama fumbo hapa.
 
-#### Bidhaa za mtumiaji wa mwisho na jamii ya Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Bidhaa za mtumiaji wa mwisho na jamii ya Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Ni jambo gani muhimu zaidi tunalohitaji kufanya kama jamii ya Ethereum?
 
@@ -198,7 +198,7 @@ Kujua jinsi tunavyoweza kuelekeza nishati hiyo, hasa ndani ya bidhaa za mtumiaji
 
 **Stani Kulechov:** Hakika. Tulijenga miundombinu hii ya kushangaza kwenye safu ya mtandao, kwenye safu ya DeFi, na sasa safu inayofuata kimsingi ni kujenga kile kinachofanya kazi na kukisambaza kwa kila mtu. DeFi kwa kila mtu.
 
-#### Kufunga (36:00) {#closing-3600}
+### Kufunga (36:00) {#closing-3600}
 
 **Binji:** Nadhani idadi kubwa ya watu wanaogundua Ethereum wataigundua kupitia nyuso hizi.
 

@@ -229,14 +229,28 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     releaseName: "Hegotá",
     plannedReleaseYear: "2027",
     displayDate: "2027",
+    href: "/roadmap/hegota/",
     content: (
       <>
         <p>
-          <strong>{t("page-roadmap-hegota-discussed-title")}</strong>
+          <strong>{t("page-roadmap-hegota-focil-title")}</strong>
         </p>
         <ul>
-          <li>{t("page-roadmap-hegota-discussed-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-2")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-3")}</li>
         </ul>
+        <p>
+          <strong>{t("page-roadmap-hegota-frame-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-hegota-frame-item-1")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-2")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-3")}</li>
+        </ul>
+        {/* Hegotá is still `planning` upstream, so the slide must not read as a
+            settled feature list the way a scheduled fork's does. */}
+        <p>{t("page-roadmap-hegota-scope-note")}</p>
       </>
     ),
     forkcast_href: "https://forkcast.org/upgrade/hegota",

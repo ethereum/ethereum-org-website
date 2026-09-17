@@ -18,7 +18,7 @@ Coin Center İcra Direktörü **Peter Van Valkenburgh**'ün Ethereum Günü'nde 
 
 *Bu döküm, Ethereum Vakfı tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=GQML0c1_4Gs) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 Burası uzun bir yürüyüş mesafesi olan büyük bir sahne ve korkarım ki ben eski kafalıyım, bu yüzden yazılı bir konuşmam var ama umarım keyif alırsınız. Beni ağırladığınız için teşekkür ederim. Kuruluşum Coin Center, 11 yıldır faaliyet gösteriyor. Washington DC'de Bitcoin, Ethereum ve sonraki kripto para teknolojilerinin geliştiricilerini ve kullanıcılarını uygunsuz hükümet düzenlemelerine karşı savunuyoruz. Tehditleri gördüğümüzde tanırız. Bugünden 9 yılı biraz aşkın bir süre önce, Şanghay'da Ethereum'un ikinci DevCon'unda sahneye çıktım ve ICO yapmanın tehlikeleri konusunda uyarılarda bulundum. Aslında ikinci DevCon'daki açılış sunumuydu. Yıl 2016. Bu, sözde ICO patlamasının tam başlangıcıydı. Bu, Gary Gensler'ın SEC'de olmasından çok önceydi. Henüz kimsenin bir Wells bildirimi almadığı bir dönemdi. Hatta, hatırlarsanız veya o zamanlar buralardaysanız, SEC'in kriptodaki kişileri soruşturmaya ve yargılamaya başlamasının başında DAO raporunu tetikleyen DAO hack'inden bile önceydi.
 
@@ -28,7 +28,7 @@ Amerikalılar, Amerikalılar bu teknolojiyi kullanabilir. Ve belki de daha önem
 
 O bir yazılım geliştiricisi. Ve gizlilik için yazılım yayınlamanın bir suç olmadığına ve Amerika Birleşik Devletleri'nde bir lisans gerektirmediğine dair tespit kararı almak için bir Teksas mahkemesinde Adalet Bakanlığı'na dava açıyor. Yani, benim hakkımda çok şey bilmiyor olabilirsiniz veya
 
-#### Gizlilik varoluşsaldır (3:15) {#privacy-is-existential-315}
+### Gizlilik varoluşsaldır (3:15) {#privacy-is-existential-315}
 
 Coin Center hakkında, ama umarım bir alarm verdiğimde, bir alarm haklı olduğunda bana güvenmeniz gerektiğini biliyorsunuzdur. Özgür ve açık bir finansal altyapı inşa etmeyi ve sürdürmeyi başaracaksak, dikkatli adımlar atmalıyız. İşte bu yüzden bugün gizlilik hakkında konuşmak istiyorum. Gizlilik, Ethereum için varoluşsaldır. Gizlilik, düzenleyici bir saldırı yüzeyi değildir. 2016'da size ICO yapmamanızı söylediğim gibi, burada durup size gizlilik inşa etmemenizi söylemeyeceğim.
 
@@ -36,7 +36,7 @@ Gizlilik aslında saldırı yüzeyini daraltmanın bir yoludur. Ve Tornado Cash 
 
 Ve bunu size kanıtlamak için, bugün dikkatinizi çekmek istediğim dava bir menkul kıymetler yasası yargılaması değil. Hatta bir kara para aklama veya yasadışı finans yargılaması bile değil. Bu, madenci çıkarılabilir değeri (MEV) ile ilgili. Ama oraya gelmeden önce, kısaca Frankenstein hakkında konuşalım. İyi doktorun dediği gibi, bilginin edinilmesi ne kadar tehlikelidir ve doğduğu kasabanın dünya olduğuna inanan insan, doğasının izin verdiğinden daha büyük olmayı arzulayan insandan ne kadar daha mutludur.
 
-#### Mary Shelley ve bilginin tek yönlü mandalı (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley ve bilginin tek yönlü mandalı (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Bence Mary Shelley'nin o romanda söylemek istediği şey şu. Gizlilik sadece insan onuruyla ilgili değildir. Bilginin verimli bir şekilde yokluğuyla ilgilidir. Tıpkı sürekli bir inceleme altında, herkesin her zaman gizliliğinizi ihlal ettiği bir hayat yaşamanın zor olacağı gibi, herkesin özel hayatı hakkında sürekli derinlemesine bilgi sahibi olarak yaşamak da zor olurdu. Sizin sürekli olarak herkesin gizliliğini ihlal etmeniz. Neden mi? Çünkü her şeye gücü yetmeden her şeyi bilmek, her şeyi düzeltme yeteneğine sahip olmadan her şeyi görmek insanları çıldırtır. Endişe, kibir ve kontrol edilemeyeni kontrol etme arayışıyla insanlığımızı yok eder.
 
@@ -46,7 +46,7 @@ Doğanızın izin verdiğinden daha büyük olmaya çalışırsınız. Ve Mary S
 
 Arabuluculuk maliyeti işlem maliyetlerini artırır, pratik minimum işlem boyutunu sınırlar ve küçük, günlük işlemlerin olasılığını ortadan kaldırır. Ve daha geniş bir maliyet vardır: geri döndürülemez hizmetler için geri döndürülemez ödemeler yapma yeteneğinin kaybı. Geri döndürme olasılığıyla birlikte güven ihtiyacı yayılır. Yani, Satoshi'nin amacı aslında geri döndürülemezlik olduğu kadar tarafsızlıktı. Ona göre geri döndürme yeteneği, güvenle ilişkili muazzam işlem maliyetlerinin kaynağıdır. Bunu teknik dokümanda açıkça söylemedi,
 
-#### Anlaşmazlıklara aracılık etmenin maliyeti (7:50) {#the-cost-of-mediating-disputes-750}
+### Anlaşmazlıklara aracılık etmenin maliyeti (7:50) {#the-cost-of-mediating-disputes-750}
 
 ama bence anlaşmazlıklara aracılık etmekten kastettiği şey aynı zamanda dolandırıcılığı denetlemek, suçu durdurmak, ulus devletlerin yasalarına ve güçlerine itaat etmek ve insanları kontrol etmektir. Blokzincirlerin hesaplama açısından ne kadar verimsiz olduğundan sık sık bahsederiz ve öyledirler. dijital imzaları paralelleştirme olmadan küresel olarak doğrulamanın devasa hesaplama çabası bile, her bir işlemin ahlaki değeri ve zincire dahil edilip edilmemesi gerektiği konusundaki insani bir anlaşmazlığın doğasında var olan verimsizliğin yanında sönük kalır.
 
@@ -58,7 +58,7 @@ Güçlerinin farkına bile varamamaları daha iyidir. Kör olmaları çok daha i
 
 Hayır. Gizlilik için en iyi argüman, doğrulayıcı tarafsızlığının buna bağlı olmasıdır, çünkü merkeziyetsizlik yoluyla tarafsızlık asla yeterli olmayacaktır. Tarafsızlık körlük gerektirir. Naçizane şunu öne sürebilirim ki,
 
-#### Bilgi ve gücün iki kuralı (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Bilgi ve gücün iki kuralı (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 Blokzincirlerde bilgi ve gücün iki temel kuralı vardır. Birinci kural, şeffaf olan hiçbir şey tarafsız kalmaz. Görünür bir defter, aracılık edilen bir deftere dönüşecektir. Madenci çıkarılabilir değeri (MEV) gibi kendi çıkarlarına yönelik manipülasyonlar yoluyla, güçlü doğrulayıcıların kendi çıkarları tarafından aracılık edilecektir. Şirketler ve ulus devletler gibi güçlü varlıkların zincir dışı baskısı, yasal görevlerin dayatılması ve bu görevlerin yerine getirilmemesi durumunda yükümlülük getirilmesi yoluyla aracılık edilecektir. Bir doğrulayıcı küçük bir güce sahip olsa bile, bu gücü sömürmeye zorlanacaktır. Haritası çıkarılmış bir dünya, bölüşülecek bir dünyadır.
 
@@ -70,7 +70,7 @@ Evet, kuruluşum Coin Center, tarafsız ve gözetimsiz araçlar olmaları koşul
 
 Gizlilik havuzları, bu tehdidi sınırlamak için akıllıca bir yaklaşımdır. Yanlış kişilerin iyi ve tarafsız araca erişimini engellemek için elinizden gelenin en iyisini yapın, ancak aracın tarafsız olmaktan çıktığını unutmayın. Ve o zaman bile, bazen o havuz için anonimlik kümesi sağlayan kişi, kötü kişilerin o araca erişimini engellemekte başarısız olacaktır. Ve bu kötü kişilerin sisteme katılım işlemi katman 1 (L1) üzerinde görünür kalacaktır. Ve bu, rakiplerimiz için güçlü bir cephane olacaktır.
 
-#### Pereira Bueno davası ve MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Pereira Bueno davası ve MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Ancak beni temel katman gizliliğine olan acil ihtiyaca gerçekten ikna eden dava Tornado Cash değil. New York Güney Bölgesi'ndeki başka bir dava, Pereira Bueno davası. İki kardeş elektronik dolandırıcılık suçuyla suçlanıyor. MEV Boost yazılımını, sıradan Ethereum kullanıcılarına sandviç saldırısı yapan diğer MEV Boost kullanıcılarına sandviç saldırısı yapmak için kullanmanın bir yolunu buldular. Bunu yaparak 20 milyon dolardan fazla kazandılar. Kimseye yalan söylemediler veya herhangi bir mutemet veya sözleşmeye dayalı ilişki ortaklarına kendilerini yanlış tanıtmadılar. Buna rağmen, New York Güney Bölgesi savcıları, tırnak içinde dürüst bir doğrulayıcı olmadıkları için federal bir suç olan elektronik dolandırıcılıktan suçlu olduklarını düşünüyorlar.
 
@@ -78,7 +78,7 @@ Bu yargılamadaki jüri talimatlarında dürüst doğrulama ve dürüst doğrula
 
 Madenci çıkarılabilir değeri (MEV), Ethereum'un iğrenç bir gerçeğidir. Onun da kökeni gizlilik eksikliğine dayanır. DEX işlemlerinin doğrulayıcılar tarafından kolayca sandviç saldırısına uğramasına izin veren şey, halka açık doğalarıdır. İşlemlerin ekonomik temellerini göremiyorsanız, onlara sandviç saldırısı yapmak muhtemelen imkansız olmasa da çok daha zordur. Ancak temel katman gizliliğini sadece MEV'i caydırmanın bir yolu olarak istemiyorum. Bunu doğrulayıcıları savunmanın bir yolu olarak istiyorum.
 
-#### Doğrulayıcıların yasal olarak uygulanabilir görevleri (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Doğrulayıcıların yasal olarak uygulanabilir görevleri (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Adalet Bakanlığı'nın (DOJ) Pereira Bueno davasındaki daha büyük hamlesi, doğrulayıcıların doğruladıkları işlemlerin halka açık doğası nedeniyle birbirlerine karşı yasal olarak uygulanabilir görevleri olduğudur. Ve eğer bu görevler ihlal edilirse, sanırım doğrulayıcıların birbirlerine dava açması gerektiğini düşünüyorlar. Ve eğer yapmazlarsa, devletin, yani New York Güney Bölgesi'nin, dürüst olmayan doğrulayıcıları suçlardan dolayı yargılaması gerektiğini düşünüyorlar. Ve bu sadece elektronik dolandırıcılıkla bitmiyor. Eğer bir kara para aklama işlemini görebiliyorsanız veya Blokzincir analizi kullanarak görebilseydiniz, o zaman bu kara para aklamaya nasıl suç ortağı olmazsınız?
 
@@ -86,7 +86,7 @@ Adalet Bakanlığı'nın (DOJ) Pereira Bueno davasındaki daha büyük hamlesi, 
 
 Kasıtlı körlük bir savunma değildir, ancak gerçek körlük öyledir. Yani gerçekten güven gerektirmeyen bir yapı istiyorsanız, gerçekten tarafsız bir altyapı istiyorsanız, aptal borular istiyorsanız, o zaman boruların içlerinden akan şeye gerçekten kör olması gerekir.
 
-#### Geleneksel finans boru hatları ve SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Geleneksel finans boru hatları ve SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Şimdi, tüm bunlara iyi bir eleştiri olarak şunu diyebilirsiniz: Peter, geleneksel finans endüstrisinde, geleneksel küresel finansal sistemde zaten aptal borularımız var ve bu aptal boruların operatörleri, defterlerine koydukları işlemlerin ekonomik gerçeklerine ve cezai yönlerine kriptografik olarak kör değiller. Bu boruların en büyüğüne SWIFT denir. Ve bu, az önce söylediklerime karşı güçlü bir argümandır.
 
@@ -102,7 +102,7 @@ Ve son olarak, SWIFT şu anda ortaya çıkan yavaş ilerleyen krizi tarafsızlı
 
 Aslında aptal borular için mi buradayız?
 
-#### Sonuçlar ve tarafsız altyapının savunulması (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Sonuçlar ve tarafsız altyapının savunulması (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Sonuç olarak, Coin Center hiçbir yere gitmiyor ve protokol geliştiricilerini ve altyapıyı haksız yargılamalardan ve aşırı geniş düzenlemelerden korumaya yardımcı olmak için her zaman burada olacağız. Ancak gerçek bir gizlilik olmadan bu savaş giderek zorlaşıyor. Ne yapabiliriz? Birincisi, Ethereum'un temel katman gizliliğine sahip olması veya en azından kör ve gerçekten merkeziyetsiz sıralayıcılara sahip L2'ler için kök defter haline gelmesi gerektiğine inanıyorum.
 
@@ -112,7 +112,7 @@ Ve güvenilir kurumlarda veri toplamayı en aza indirmenin yollarını bulan ve 
 
 Gizlilik varoluşsaldır. Teşekkür ederim.
 
-#### Soru-Cevap oturumu (24:21) {#qa-session-2421}
+### Soru-Cevap oturumu (24:21) {#qa-session-2421}
 
 **Sunucu:** Teşekkürler. Bence açık ara çağımızın en önemli konularından birini paylaştınız. Sanırım ilk sorumuz aslında şu alanda: Yeni insanlara gizliliğin açıklanmasını nasıl görüyorsunuz? Çok uzun zamandır gizlilik kavramı bu sır saklama fikriyle yıkandı — kukuletalı pelerinli insanlar içindir vb. Özellikle lobi faaliyetlerini düşündüğünüzde bunun ne kadar büyük bir engel olduğunu düşünüyorsunuz? Sıradan insanın da bunun kendileri için bir şey olduğunu hissetmesine ihtiyacınız var. Bunun büyük bir mücadele olduğunu düşünüyor musunuz? Bunu nasıl hafifletebiliriz?
 

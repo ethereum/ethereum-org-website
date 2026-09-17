@@ -26,12 +26,9 @@ import { SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getDevconTicketLink } from "@/lib/utils/url"
 
-import {
-  DEFAULT_LOCALE,
-  DEVCON_INDIA_TICKET_URL,
-  LOCALES_CODES,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import {
   KPISection,
@@ -99,7 +96,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Alert
             variant="banner"
             // Devcon colors: keep hex colors
-            className="relative grid grid-cols-[1fr_auto_1fr] gap-x-8 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 transition-[--tw-gradient-to-position] duration-300 hover:to-80% max-md:px-4! max-sm:px-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
+            className="relative gap-x-4 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 transition-[--tw-gradient-to-position] duration-300 hover:to-80% max-md:px-4! max-sm:px-8 lg:gap-x-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
           >
             <div className="absolute inset-x-0 grid place-items-center">
               <Image
@@ -111,13 +108,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
             </div>
 
-            <div className="flex items-center justify-start gap-x-8">
+            <div className="flex flex-1 shrink-0 items-center justify-start gap-x-8">
               <Image
                 src="/images/assets/svgs/devcon-india-logo.svg"
                 alt={tDevcon("logo-alt")}
                 width="139"
                 height="60"
-                className="h-9.5 w-22 shrink-0"
+                className="h-9.5 w-22 max-w-none shrink-0"
               />
               <DevconDateLocation
                 longMonthBreakpoint="xl"
@@ -125,18 +122,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
             </div>
 
-            <div className="grid place-items-center text-xs font-black sm:text-sm md:text-md lg:text-xl">
-              {tDevcon("headline")}
+            <div className="min-w-0 text-center text-xs font-black sm:text-sm md:text-md lg:text-xl">
+              {tDevcon("discount-headline")}
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex flex-1 shrink-0 justify-end">
               {/* Overlay stretches the CTA's hit area across the whole banner */}
               <LinkOverlay asChild>
                 <ButtonLink
-                  href={DEVCON_INDIA_TICKET_URL}
+                  href={getDevconTicketLink(locale)}
                   customEventOptions={{
                     eventCategory: "devcon",
-                    eventAction: `get_tickets`,
+                    eventAction: "get_tickets_home_banner",
                     eventName: "visit",
                   }}
                   hideArrow
@@ -195,7 +192,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <FeatureCards eventCategory={eventCategory} />
 
             {/* Devcon VIII India callout banner */}
-            <DevconIndiaLargeCallout />
+            <DevconIndiaLargeCallout sourcePage="home" />
 
             <LatestUpdates eventCategory={eventCategory} />
 

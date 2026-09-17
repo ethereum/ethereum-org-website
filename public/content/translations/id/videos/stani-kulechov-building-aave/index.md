@@ -18,7 +18,7 @@ Wawancara Offstage di Devconnect di mana pembawa acara Binji dan pendiri Aave **
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=EWe-cjT9IQs) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah disunting sedikit agar lebih mudah dibaca.*
 
-#### Tumbuh besar di Finlandia (0:28) {#growing-up-in-finland-028}
+### Tumbuh besar di Finlandia (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Jadi, kita akan bermain Jenga di sini. Ada beberapa pertanyaan yang terkait dengannya. Jika Anda ingin mengambil langkah pertama, kita bisa mulai.
 
@@ -48,7 +48,7 @@ Wawancara Offstage di Devconnect di mana pembawa acara Binji dan pendiri Aave **
 
 **Stani Kulechov:** Ayah saya selalu ingin saya mendalami teknologi karena dia melihat pentingnya komputer. Internet mulai bermunculan. Perpustakaan dulunya memiliki komputer — itu adalah tempat pertama. Sejujurnya, mereka sangat mendukung.
 
-#### Mendapatkan komputer pertama (3:00) {#getting-the-first-computer-300}
+### Mendapatkan komputer pertama (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Bagaimana Anda menjelaskan kepada mereka apa yang Anda lakukan? Apakah mereka sudah familier dengan keuangan terdesentralisasi (DeFi) sekarang?
 
@@ -58,7 +58,7 @@ Wawancara Offstage di Devconnect di mana pembawa acara Binji dan pendiri Aave **
 
 **Stani Kulechov:** Sepenuhnya. Internet dan komputer memberikan akses ke informasi — Anda tidak perlu pergi ke perpustakaan untuk mempelajari sesuatu atau bertanya kepada orang tua atau teman Anda. Dan saya pikir dengan cara yang sama, DeFi dan kripto memberikan akses ke alat-alat keuangan. Itulah yang benar-benar mendorong saya. Ini personal karena saya telah melihat secara langsung bagaimana hal itu bisa bermanfaat.
 
-#### Menemukan Ethereum (5:30) {#discovering-ethereum-530}
+### Menemukan Ethereum (5:30) {#discovering-ethereum-530}
 
 **Binji:** Bagaimana ceritanya Anda akhirnya putus kuliah dari sekolah hukum dan masuk ke Ethereum?
 
@@ -70,7 +70,7 @@ Saya mulai mengembangkan kontrak pintar (smart contracts) dan melakukan semua pe
 
 **Stani Kulechov:** Kami percaya pada kebebasan dan apa yang dapat dilakukan oleh keuangan terdesentralisasi (DeFi) untuk banyak orang — memberdayakan mereka. Membangun di sekitar komunitas individu yang berpikiran sama benar-benar menyatukan segalanya.
 
-#### Membangun ETHLend dan menamai Aave (9:00) {#building-ethlend-and-naming-aave-900}
+### Membangun ETHLend dan menamai Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Dari mana asal nama Aave?
 
@@ -82,7 +82,7 @@ Kami akan menjadi lebih besar dari JPMorgan dan semua bank serta jaringan ini. M
 
 **Stani Kulechov:** Ya. Dan berasal dari kota kecil di Finlandia, apa yang saya sadari adalah bahwa ada banyak orang yang sebenarnya mencari apa yang sedang kami bangun — baik di dalam maupun di luar ruang lingkup kami.
 
-#### Aave vs keuangan tradisional (12:00) {#aave-vs-traditional-finance-1200}
+### Aave vs keuangan tradisional (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** Bagaimana Anda membedakan antara JPMorgan dan Aave?
 
@@ -90,7 +90,7 @@ Kami akan menjadi lebih besar dari JPMorgan dan semua bank serta jaringan ini. M
 
 Saya membagikannya di Reddit Ethereum pada tahun 2017 dan saya mendapat banyak antusiasme dari komunitas sejak awal. Begitulah cara kerja komunitas kripto. Anda tidak memerlukan kasus bisnis atau presentasi (pitch). Anda hanya menunjukkan kepada orang-orang sesuatu yang dapat mereka bangun di atasnya.
 
-#### Keamanan dan pengalaman pengguna (14:30) {#security-and-user-experience-1430}
+### Keamanan dan pengalaman pengguna (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Akses yang lebih baik juga berarti keamanan yang lebih baik. Bagaimana Anda memastikan bahwa pengguna tidak disusupi oleh upaya phishing, dan bagaimana kita melakukannya dengan lebih baik daripada di dunia internet tradisional? Menyelesaikan masalah ini penting karena kita tidak bisa mengandalkan proses di mana pengguna kehilangan apa yang mereka miliki, bukan? Saya pikir hal yang paling umum adalah phishing. Pengalaman pengguna (UX) dalam berinteraksi dengan rantai blok tidak memiliki validasi.
 
@@ -102,7 +102,7 @@ Saya membagikannya di Reddit Ethereum pada tahun 2017 dan saya mendapat banyak a
 
 **Stani Kulechov:** Terkadang ide tersebut tidak memiliki validasi. Terkadang ide tersebut bisa memiliki validasi tetapi eksekusinya buruk. Jadi ada berbagai komponen yang penting. Saya terus berpikir, terus meningkatkan produk, dan saya pikir itu adalah jalan yang benar.
 
-#### Investasi angel (17:00) {#angel-investing-1700}
+### Investasi angel (17:00) {#angel-investing-1700}
 
 **Binji:** Anda adalah seorang investor angel yang produktif. Apa yang Anda cari saat mengevaluasi pembangun baru?
 
@@ -112,7 +112,7 @@ Saya membagikannya di Reddit Ethereum pada tahun 2017 dan saya mendapat banyak a
 
 **Stani Kulechov:** Tidak juga, karena selalu ada nilainya. Anda belajar cukup banyak, Anda memajukan ruang ini. Dan biasanya Anda menciptakan banyak talenta sebagai hasilnya. Terkadang investasi tersebut tidak berhasil, tetapi kemudian tim yang sama mungkin pergi dan memulai perusahaan lain di mana mereka memiliki lebih banyak pengalaman dan mungkin lebih sukses. Beberapa lebih sukses daripada yang lain, tetapi secara keseluruhan semuanya adalah taruhan yang kami yakini.
 
-#### Retensi vs akuisisi (19:00) {#retention-vs-acquisition-1900}
+### Retensi vs akuisisi (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Apa metrik yang Anda pedulikan dalam kripto?
 
@@ -122,7 +122,7 @@ Saya membagikannya di Reddit Ethereum pada tahun 2017 dan saya mendapat banyak a
 
 **Stani Kulechov:** Biasanya sekarang, di sisi akuisisi, orang lebih memikirkan retensi daripada akuisisi. Ini menyoroti mengapa orang tidak menjadi lebih terlibat — biasanya karena kurangnya produk yang mungkin menarik bagi para pengguna ini. Kita telah berfokus selama satu dekade pada infrastruktur. Saya pikir lapisan aplikasi adalah dekade berikutnya, dan itu akan membantu kita menskalakan basis pengguna.
 
-#### Volatilitas kripto dan aset institusional (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Volatilitas kripto dan aset institusional (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Kripto terus-menerus dilihat sebagai sesuatu yang volatil — pasar turun (bear market), pasar naik (bull market). Aave seperti penangkal untuk itu, bukan? Ia tetap stabil sepanjang waktu.
 
@@ -132,7 +132,7 @@ Dengan aset institusional seperti pasar Horizon yang kami luncurkan, Anda menggu
 
 Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. Ini bagus untuk pemberi pinjaman karena mereka dapat meminjamkan dengan jaminan aset tradisional tetapi melakukannya secara onchain dengan koin stabil. Saya pikir bagi institusi, menyadari manfaat koin stabil dan aset yang ditokenisasi membantu mereka berpikir di luar volatilitas — dan berhenti berpikir bahwa kripto murni tentang volatilitas.
 
-#### Ethereum sebagai lapisan kepercayaan (22:00) {#ethereum-as-a-trust-layer-2200}
+### Ethereum sebagai lapisan kepercayaan (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** Untuk Ethereum, salah satu hal yang membuat saya cukup bersemangat adalah bahwa ini merupakan lapisan kepercayaan. Protokol seperti Aave menunjukkan kepercayaan yang beraksi di dunia nyata. Ini adalah pinjam, meminjam, didukung oleh keamanan ekonomi dan bobot kepercayaan yang menyertai platform-platform ini.
 
@@ -142,7 +142,7 @@ Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. In
 
 **Stani Kulechov:** Jelas internet tidak melihat seberapa banyak pekerjaan yang dilakukan dalam apa yang kami kerjakan sehari-hari. Banyak hal yang diterima begitu saja. Tetapi saya pikir ini harus menjadi proses yang menyenangkan. Membangun harus menjadi proses yang menyenangkan. Anda tidak seharusnya berada di sini jika itu membebani. Anda seharusnya berada di sini untuk menikmati apa yang Anda lakukan.
 
-#### Bersenang-senang sambil membangun (24:00) {#having-fun-while-building-2400}
+### Bersenang-senang sambil membangun (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave adalah contoh yang bagus tentang bagaimana bersenang-senang. Sungguh tidak nyata bagi saya bahwa tim yang sama yang mengubah wajah keuangan modern — apa, bank terbesar ke-30 di dunia tanpa mempertimbangkan kolateralisasi, mungkin lebih tinggi — juga mengerjakan GrAave. Ini membuktikan bahwa kalian membawa budaya kripto ke generasi keuangan berikutnya tanpa mengabaikan komunitas dan budaya yang membawa Anda ke dunia ini.
 
@@ -152,7 +152,7 @@ Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. In
 
 **Stani Kulechov:** Saya pikir aplikasi Aave. Hanya berfokus pada kesederhanaan. Kesederhanaan dapat diskalakan. Kami sangat bersemangat tentang arah tersebut — membawa lebih banyak DeFi ke arus utama dan melakukannya dengan cara yang benar, di mana semuanya diabstraksikan dan menjadi sederhana serta mudah digunakan.
 
-#### Apa yang membuat Anda merasa paling hidup (26:00) {#what-makes-you-feel-most-alive-2600}
+### Apa yang membuat Anda merasa paling hidup (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** Apa yang membuat Anda merasa paling hidup?
 
@@ -166,7 +166,7 @@ Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. In
 
 **Stani Kulechov:** Saya hanya tidak suka elemen keseriusan. Saya suka keseriusan dalam menyelesaikan sesuatu, tetapi saya suka fakta bahwa Anda harus bersenang-senang dalam hidup, bersenang-senang dalam pekerjaan. Saya memiliki banyak kebebasan saat tumbuh dewasa, dan itu menciptakan pengalaman yang tidak akan saya miliki jika sebaliknya.
 
-#### Mengapa London (28:30) {#why-london-2830}
+### Mengapa London (28:30) {#why-london-2830}
 
 **Binji:** Kalian memilih untuk berbasis di London sebagai salah satu kantor pusat utama kalian. Mengapa London?
 
@@ -176,7 +176,7 @@ Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. In
 
 **Stani Kulechov:** Kami baru-baru ini melakukannya, ya.
 
-#### Inspirasi dan hampir menyerah (30:00) {#inspiration-and-almost-quitting-3000}
+### Inspirasi dan hampir menyerah (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Siapa seseorang di luar kripto dan teknologi yang menginspirasi Anda, entah itu gaya kepemimpinan Anda atau saat Anda sedang merintis?
 
@@ -186,7 +186,7 @@ Ini bagus untuk peminjam karena mereka dapat mengakses likuiditas kapan saja. In
 
 **Stani Kulechov:** Ya, terkadang. Tapi itu lebih seperti berhenti untuk hari itu. Anda hanya menyerah untuk hari itu agar bisa beristirahat dan selalu ada hari esok. Terutama jika Anda memiliki sesuatu yang sulit untuk dipecahkan — seperti teka-teki di sini.
 
-#### Produk pengguna akhir dan komunitas Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Produk pengguna akhir dan komunitas Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Apa hal terpenting yang perlu kita lakukan sebagai komunitas Ethereum?
 
@@ -198,7 +198,7 @@ Mencari tahu bagaimana kita dapat menyalurkan energi tersebut, terutama dalam pr
 
 **Stani Kulechov:** Pastinya. Kami membangun infrastruktur yang luar biasa ini di lapisan jaringan, di lapisan DeFi, dan sekarang lapisan berikutnya pada dasarnya adalah membangun apa yang berhasil dan mendistribusikannya kepada semua orang. DeFi untuk semua orang.
 
-#### Penutup (36:00) {#closing-3600}
+### Penutup (36:00) {#closing-3600}
 
 **Binji:** Saya pikir mayoritas orang yang menemukan Ethereum akan menemukannya melalui permukaan-permukaan ini.
 

@@ -18,7 +18,7 @@ Eski (OG) Ethereum geliştiricisi **Mariano Conti**'nin Devconnect Buenos Aires'
 
 *Bu transkript, Ethereum Vakfı tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=S0-oO_4ZRfs) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:08) {#introduction-008}
+### Giriş (0:08) {#introduction-008}
 
 **Mariano Conti:** Buenos Aires. Herkese iyi akşamlar. Özür dileyerek başlamak istiyorum. Son birkaç yıldır ekosistemde pek bulunmadım. Bu yüzden organizatörler benden bir konuşma yapmamı istediklerinde başta reddettim çünkü bazı şeylerden o kadar uzak kaldım ki bazen neden burada olduğumuzu, yaptığımız şeyleri neden yaptığımızı gerçekten unuttum. Bazı açılardan biraz daha alaycı, diğer açılardan ise daha iyimser oldum. Her neyse, size tüm bunlardan bahsetmek için 15 dakikam var, hadi başlayalım.
 
@@ -26,23 +26,23 @@ Her zaman söylediğim gibi, bir Arjantinli olarak terapiyi severim. Bu muhtemel
 
 İşte bu benim, 2015 — Ether almaya başladım. Çok mütevazı görünümlü bir adam. Ve şimdi 2025, 10 yıl sonra, bugün karşınızda duran, merkeziyetsiz finans (DeFi) Yazı sırasında tokenlara gözü kapalı atlayan o adamın kırık dökük kabuğu, değil mi? Bilmeyenleriniz için, Maker'da birkaç yıl geçirdim. Muhtemelen Ethereum'daki ilk merkeziyetsiz sabitcoin olan tekli ve çoklu teminatlı DAI'nin piyasaya sürülmesine yardımcı oldum. Ethereum'daki ilk merkeziyetsiz oracle'ları yarattım. Hepsi Almagro'daki bir apartman dairesinde yaşarken oldu — elbette çok, çok daha büyük bir grubun parçası olarak — ama Ethereum'daki deneyimlerimin oldukça geniş ve çoğunlukla çok tatmin edici olduğunu söyleyebilirim.
 
-#### Buenos Aires'te Devcon (2:20) {#devcon-in-buenos-aires-220}
+### Buenos Aires'te Devcon (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti:** Ve 2019'da, eminim bu resmi birkaç kez görmüşsünüzdür. Ve burada 2019'da Osaka'da benimle aynı sahnede olan bazı insanları görüyorum. Bu Devcon etkinliklerinden birini burada, Buenos Aires'te gerçekleştirmek için büyük bir çabaya gerçekten o zaman başladık, değil mi? Ve muhtemelen bunun gerçekleşmesi için en az çalışan kişi benim. Temel olarak sadece tişörtü giydim ve birkaç kez tweet attım. Oradaki herkes yüz kat daha fazla çalıştı ve sonradan gelenler bin kat daha fazla çalıştı. Bu yüzden bir kez daha, Devconnect'in burada, Arjantin'de olmasından inanılmaz, inanılmaz derecede onur duyuyorum.
 
 Ve 'çok geç'in üzerini çizip 'daha sonra' yazdım. Bir süreliğine, en etkili olacağını söylediğimiz zamanda bunu yapamadığımız için çok ama çok kırgındım. Ve bu bir bakıma doğru, bir bakıma da değil. Birincisi, eğer Devcon'u yapmış olsaydık — 2020'nin COVID nedeniyle gerçekleşmediğini biliyorum — ama belki 2021'de, bu kadar büyük olmazdı. Teknoloji topluluğumuza, toplumumuza şu an olduğu kadar kök salmış olmazdı. İnsanlar Arjantin'e ilk geldiklerinde, sermaye kontrollerimiz varken de yokken de ve ikisi arasındaki herhangi bir durumda sabitcoin'lerden ne kadar çok yararlandığımıza hala hayran kalıyorlar. Arjantinlilerin yeni şeyler deneme ve yatırımlarını her zaman koruma kültürü var. Bu benim kapsamlı bir şekilde bahsettiğim bir şey. Bu yüzden, Devcon'un nihayet burada olmasından dolayı yine çok mutluyum.
 
-#### Ethereum Hakkında Sevdiğim Şeyler (4:28) {#things-i-like-about-ethereum-428}
+### Ethereum Hakkında Sevdiğim Şeyler (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti:** Ve gerçekten sadece üç slaytım kaldı. Bu yüzden Ethereum hakkında sevdiğim şeylerden biraz bahsedeceğim. Ve 10 yıldan fazla bir süre sonra hala buralarda olmasını seviyorum. Ve çalışma süresi %100. Gerçekten üzerine inşa edebileceğiniz ve güvenilir olacağına güvenebileceğiniz bir teknoloji — bir işlem gönderdiğinizde ve ne olursa olsun, dünyanın öbür ucundaki bir RPC düğümü aracılığıyla eninde sonunda ulaşacağına, ardından dünyanın dört bir yanındaki binlerce bilgisayarda — umarım birçoğu sadece veri merkezlerinde değil, insanların evlerindedir — kopyalanacağına ve gönderdiğiniz veya etkileşime girdiğiniz şeyin umarım sonsuza dek bir bloğa işleneceğine güvenebilirsiniz.
 
 Bu yolculuğa başladığımda sadece bendim. Eşimle — şimdi, neredeyse bir yıl önce — bir çocuğumuz oldu. Çocuğumun bir ENS'si var. Bu, ailemizde kim olduğumuzun ve ne olduğumuzun bir parçası; Ethereum bizim için o kadar çok şeyi mümkün kıldı ki, her zaman yeterince karşılık veremediğimi hissediyorum. Ve bazı şeyler hakkında bu kadar çok şikayet etmemin nedenlerinden biri de bu.
 
-#### Topluluk (5:25) {#the-community-525}
+### Topluluk (5:25) {#the-community-525}
 
 **Mariano Conti:** Çünkü sevmediğim şeylere bu kadar erken geçmek istemiyorum. Bu yüzden sevdiğim birkaç şeye daha atlayayım — topluluk, özellikle Arjantin topluluğu ve burada hem Arjantin'den, hem Latin Amerika'dan hem de dünyanın dört bir yanından pek çok arkadaşı görmek. Bir veya iki haftalığına ya da hepimizi sevgi ve saygıyla bir araya getiren bir etkinlik için buraya gelmeleri çılgınca — sevgi diyorum ve bu garip. Biz, en azından benim zamanımdaki insanlar — yeni gelenler için bu doğru mu bilmiyorum — bu teknolojiye sadece alıp yükselecek mi yoksa düşecek mi diye bakacağınız başka bir coin veya başka bir hisse senedi muamelesi yapmadık. Fiyat bizi elbette etkiliyor, ancak inşa ettiğimiz şeyin önemli olduğunu ve finansman, koleksiyon ürünleri veya merkeziyetsiz finans (DeFi) gibi tamamen yeni kullanım durumlarını mümkün kılmak için teknolojiyle anlamlı bir şey yaptığımızı görmek bizi her zaman daha çok etkiledi.
 
-#### Sevmediğim Şeyler (7:00) {#things-i-dont-like-700}
+### Sevmediğim Şeyler (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti:** Ve böylece, bu geçişle birlikte, sevmediğim bazı şeylere geçeceğim — sadece Ethereum ile ilgili değil, ekosistemle ilgili olanlara.
 
@@ -52,7 +52,7 @@ Ethereum Vakfı'nın durgunlaşıyor gibi görünmesinden ve değişimin nedenle
 
 Tıpkı birkaç yıl önce Eric Connor ve benim, birçok insanı kızdıran "Pump the Gas" adlı bu küçük web sitesini başlatmamız gibi. Biz sadece daha geniş topluluğun ve çekirdek geliştiricilerin, blokların gaz limitini biraz artırmanın zamanının gelmiş olabileceğini kabul etmelerini istedik. Ve o zamanlar tartışmalıydı, ama sonunda kabul edilen ve düzenli bir ritimle gerçekleşmeye başlayan bir şey oldu. Ve şimdi EIP'lerimiz bile var — Fusaka 60 milyona zorunlu bir artış olacak — ve hatta her bir yinelemede gaz limitini zorla artırmak isteyen EIP'ler bile var. Bu yüzden bunun gerçekleştiğine gerçekten çok sevindim.
 
-#### Eylem Çağrıları (10:24) {#calls-to-action-1024}
+### Eylem Çağrıları (10:24) {#calls-to-action-1024}
 
 **Mariano Conti:** Ve sanırım kendimi fazla zorluyorum ve zamanım tükeniyor. Bu yüzden, sadece eylem çağrılarımı söyleyeceğim. Gerçekten sadece iki tane var, belki sansürden geçen üçüncü bir tane daha, ama onu göreceğiz.
 
@@ -62,7 +62,7 @@ Katman 1'e (l1) dönüş. L2'leri sevmeme ve onlar üzerinde çalışan birçok 
 
 Şey, bilmiyorum — o belki de orada olmamalıydı, ama sanırım söylemek istediklerim bu kadar. Size teşekkür etmek istiyorum — ya da bunun nasıl sonuçlandığına bağlı olarak özür dilerim — ve genellikle söyleyecek daha çok şeyim olduğu için özür dilemek istiyorum. Ve belki küçük bir Soru-Cevap yaparsak, onları söylerim. Dediğim gibi, son birkaç yıldır kıyıda köşede kaldım, ancak insanların Ethereum'da ne üzerinde çalıştıklarını asla gözden kaçırmadım ve bu her zaman hayatımın bir parçası olacak. Ve tekrar, Buenos Aires'te bir Devcon'umuz olduğu için çok mutluyum.
 
-#### Soru-Cevap Oturumu (12:10) {#qa-session-1210}
+### Soru-Cevap Oturumu (12:10) {#qa-session-1210}
 
 **Sunucu:** Çok teşekkür ederim. Öncelikle, sizinle tanışabilir miyim?
 
@@ -90,7 +90,7 @@ Katman 1'e (l1) dönüş. L2'leri sevmeme ve onlar üzerinde çalışan birçok 
 
 **Mariano Conti:** Sanırım şu anda beni en çok heyecanlandıran şey yalın Ethereum — muhtemelen Ethereum katman 1'i (l1) gerçekten, ama gerçekten sıfır bilgi benimsemeye yöneltecek bir sonraki adım, bununla birlikte gelen her şey — aslında, ondan bile önce — Fusaka'nın kanıtlayıcıları düğümlerle, arayıcılarla, inşa edicilerle ayırması. Tek bir şey söyleyebilir miyim bilmiyorum. Bir sonraki sert çatallanma için heyecanlıyım. Son zamanlarda belki üç yılda bir tane yaparken, bir yılda iki tane yapacak olmamız çılgınca. Bu yüzden bir nedenden dolayı işlerin hız kazanmasına ve hepimizin artık işleri daha hızlı yapabileceğimize karar vermemize sevindim.
 
-#### Cypherpunk Ruhu ve Tavsiyeler (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Cypherpunk Ruhu ve Tavsiyeler (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Sunucu:** Bir bütün olarak kriptodaki eski (OG) günlerden kurtulduğumuz için mutlu olduğunuz şey nedir ve neleri saklamış olmayı dilerdiniz?
 

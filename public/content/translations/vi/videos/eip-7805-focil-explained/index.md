@@ -19,7 +19,7 @@ Tập 141 của **PEEPanEIP** do Ethereum Cat Herders thực hiện. Người d�
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=cUGyLx-mf6I) được xuất bản bởi Ethereum Cat Herders. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:35) {#introduction-035}
+### Giới thiệu (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Xin chào và chào mừng đến với PEEPanEIP, chương trình duy nhất nơi chúng ta tìm hiểu sâu về các Đề xuất Cải tiến Ethereum và khám phá tác động của chúng đối với hệ sinh thái. Đây là tập 141, được mang đến cho bạn bởi Ethereum Cat Herders. Tôi là người dẫn chương trình của bạn, Pooja Ranjan, và hôm nay chúng ta sẽ nói về EIP-7805, Danh sách Bao gồm được thực thi bằng Lựa chọn phân nhánh.
 
@@ -33,7 +33,7 @@ Trong tập này, chúng ta sẽ khám phá các chi tiết của EIP-7805, nh�
 
 **Pooja Ranjan:** Chúng tôi rất hào hứng muốn tìm hiểu về tổng quan của đề xuất, vị trí hiện tại của nó và bao lâu nữa chúng ta có thể thấy nó trên Mạng chính Ethereum. Nhưng trước khi bắt đầu, cộng đồng của chúng tôi rất thích làm quen với các nhà nghiên cứu và nhà phát triển đứng sau công việc này. Các bạn có thể chia sẻ một chút về bản thân, dự án mà các bạn hiện đang tham gia và hành trình của các bạn trong hệ sinh thái Ethereum không?
 
-#### Giới thiệu khách mời (2:14) {#guest-introductions-214}
+### Giới thiệu khách mời (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Chắc chắn rồi, tôi có thể bắt đầu trước. Tôi là Julian, một nhà nghiên cứu tại Robust Incentives Group, giống như Thomas, tại Tổ chức Ethereum. Robust Incentives Group quan tâm đến khía cạnh kinh tế của giao thức một cách rất rộng rãi. Một số người trong chúng tôi đã và đang xem xét các cơ chế phí giao dịch, như EIP-1559, và những người khác thì đang xem xét các cuộc tấn công lớp đồng thuận, chủ yếu là những cuộc tấn công được thúc đẩy bởi các động lực kinh tế.
 
@@ -45,7 +45,7 @@ Tôi đã làm việc về các chủ đề tương tự. MEV khá phổ biến 
 
 **Pooja Ranjan:** Cảm ơn bạn đã chia sẻ. Luôn luôn truyền cảm hứng khi tìm hiểu về nền tảng của các nhà phát triển. Thật thú vị khi thấy rằng họ đến từ các lĩnh vực khác nhau và cuối cùng lại đóng góp cho hệ sinh thái Ethereum. Tôi hiểu rằng chúng ta có một bài thuyết trình ở đây hôm nay. Vì vậy, không chần chừ thêm nữa, hãy cùng xem qua.
 
-#### Bài thuyết trình: mục tiêu của FOCIL (5:16) {#presentation-goals-of-focil-516}
+### Bài thuyết trình: mục tiêu của FOCIL (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Tuyệt vời, cảm ơn bạn rất nhiều. Tôi muốn bắt đầu bằng một bài thuyết trình nhỏ về cách thức hoạt động của EIP-7805, hay FOCIL, và chính xác lý do tại sao chúng tôi muốn thực hiện nó. Mục đích là để khơi mào câu chuyện, vì vậy nó sẽ không quá chuyên sâu, nhằm dành không gian cho phần thảo luận sau đó.
 
@@ -53,7 +53,7 @@ Mục tiêu chính của FOCIL là tăng cường tính trung lập đáng tin c
 
 Mục tiêu ở cấp độ cao hơn là theo đuổi một thuộc tính mà chúng tôi gọi là tính trung lập của chuỗi, có nghĩa là bất kỳ giao dịch trả phí nào đang chờ xử lý đều phải được đưa vào nếu nó khả dụng và nếu có chỗ để đưa nó lên trên chuỗi. Chúng tôi tin rằng nếu thuộc tính này được đáp ứng đầy đủ, thì chúng ta sẽ gia tăng được tính trung lập đáng tin cậy của Ethereum.
 
-#### Tại sao chúng ta cần FOCIL, và tại sao lại là lúc này? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Tại sao chúng ta cần FOCIL, và tại sao lại là lúc này? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Tại sao chúng ta cần một thứ như thế này? Hiện tại, hầu hết tất cả các trình xác thực đều thuê ngoài việc xây dựng khối cho MEV-Boost, đây là một thị trường ngoài giao thức nơi các trình xây dựng đấu giá quyền xây dựng khối. Trong thị trường này, chỉ có hai thực thể thực sự thống trị, và điều này có nghĩa là 90% các khối được xây dựng bởi chỉ hai thực thể.
 
@@ -65,7 +65,7 @@ Sau đó, các bản cuộn based (based rollups) đang trở nên phổ biến 
 
 Và có khả năng FOCIL có thể giúp mở rộng quy mô, tùy thuộc vào việc bạn hỏi ai. Ngày nay, Ethereum vẫn lấy khả năng chống kiểm duyệt từ việc xây dựng khối cục bộ. Nếu Ethereum có thể lấy khả năng chống kiểm duyệt từ nơi khác, ví dụ như thông qua FOCIL, thì có lẽ chúng ta có thể tăng kỳ vọng đối với các trình tạo block và cho phép, ví dụ, nhiều khối dữ liệu hơn. Nhưng có khả năng điều này cũng có thể được thực hiện mà không cần FOCIL. Do đó, FOCIL đã được đề xuất để triển khai trong Fusaka.
 
-#### Cách FOCIL hoạt động (8:10) {#how-focil-works-810}
+### Cách FOCIL hoạt động (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Bây giờ tôi sẽ hướng dẫn bạn cách FOCIL hoạt động. Chúng ta sẽ bắt đầu với những điều cơ bản và đi từng bước cho đến khi nắm được toàn bộ cơ chế, sau đó khám phá xem cơ chế hoàn chỉnh này đáp ứng các thuộc tính mà chúng ta mong muốn như thế nào.
 
@@ -79,7 +79,7 @@ Sau đó, chúng ta chuyển sang bước cuối cùng, đó là thực thi. Nh�
 
 Tóm tắt lại toàn bộ cơ chế: trong mỗi khe, 16 thành viên ủy ban được chọn làm thành viên ủy ban danh sách bao gồm. Họ quan sát mempool và xây dựng các đối tượng danh sách bao gồm mà họ phân phối trên chủ đề toàn cầu trước một thời hạn, trong trường hợp này là giây thứ 9. Trình xây dựng quan sát các danh sách bao gồm này và đưa tất cả các giao dịch mà nó đã thấy vào khối của mình. Sau đó, các trình chứng thực kiểm tra xem tất cả các giao dịch mà họ đã thấy trước giây thứ 9 trong các danh sách bao gồm có thực sự nằm trong khối hay không. Nếu quá trình kiểm tra này thành công, họ sẽ bỏ phiếu cho khối, và chúng ta chuyển sang khe tiếp theo, nơi thiết lập tương tự lại diễn ra.
 
-#### IL Boost và tính không thể chen lấn (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost và tính không thể chen lấn (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Một trong những lo ngại lớn về các danh sách bao gồm, được Mike lên tiếng cho EIP trước đó và trong quá trình phát triển sau đó, là "IL Boost," hay tính không thể chen lấn. Nó đề cập đến thực tế là những người đề xuất danh sách bao gồm có thể muốn bán quyền xây dựng danh sách bao gồm của họ. Đây là một mối quan ngại rất hợp lý, bởi vì chúng ta thấy điều này đang xảy ra với việc xây dựng khối: việc bán quyền này dẫn đến một thị trường tập trung của các trình xây dựng tinh vi.
 
@@ -93,7 +93,7 @@ Và cuối cùng, các danh sách bao gồm này được tạo ra 3 giây trư�
 
 Vì những lý do này, chúng tôi tin rằng không có cá nhân người đề xuất danh sách bao gồm nào có quyền đưa vào, sắp xếp hoặc loại trừ, vốn là định nghĩa cơ bản của MEV. Do đó, các danh sách bao gồm sẽ không bị ảnh hưởng bởi MEV.
 
-#### Tóm tắt bài thuyết trình (13:09) {#summary-of-the-presentation-1309}
+### Tóm tắt bài thuyết trình (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Để tóm tắt bài thuyết trình ngắn này: FOCIL cho phép nhiều trình xác thực đóng góp vào việc xây dựng khối, ngăn chặn sự độc quyền đưa vào của một người đề xuất duy nhất và thúc đẩy tính trung lập đáng tin cậy của Ethereum. Chúng tôi tin rằng việc triển khai FOCIL ngay bây giờ là cần thiết bởi vì hiện tại chỉ có hai trình xây dựng thống trị có thể bắt đầu kiểm duyệt bất cứ lúc nào, và điều này có thể vì những lý do kinh tế mà họ có thể hưởng lợi. Việc xây dựng khối có thể phải gánh vác nhiều trọng trách hơn bởi vì các bản cuộn based (based rollups) sẽ muốn sử dụng các thuộc tính sắp xếp trình tự của Ethereum. FOCIL sẽ ra mắt suôn sẻ hơn nhiều khi có ít bên kiểm duyệt: thứ nhất, vì điều đó có nghĩa là việc các trình xác thực xây dựng danh sách đưa vào là mặc định, và thứ hai, vì điều đó có nghĩa là sẽ có ít sự bất ổn thị trường hơn giữa các trình xây dựng đang kiểm duyệt và các trình xây dựng không kiểm duyệt. Và cuối cùng, FOCIL có tiềm năng giúp ích cho việc mở rộng quy mô, đây có lẽ là một chủ đề mà chúng ta có thể đi sâu vào chi tiết hơn.
 
@@ -101,7 +101,7 @@ Cảm ơn vì đã dành thời gian cho bài thuyết trình nhỏ này. Tôi c
 
 **Pooja Ranjan:** Cảm ơn bạn rất nhiều vì bài thuyết trình ngắn này và phần tổng quan về đề xuất.
 
-#### Hỏi đáp: EIP-7805 khác với EIP-7547 như thế nào? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Hỏi đáp: EIP-7805 khác với EIP-7547 như thế nào? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Tôi muốn bắt đầu phần Hỏi đáp với câu hỏi đầu tiên, về đề xuất trước đó cũng đã được đề cập trong bài thuyết trình của bạn: đề xuất 7547, danh sách bao gồm (inclusion list), của Mike Neuder. Tôi muốn hiểu sự khác biệt cơ bản giữa đề xuất đó và FOCIL mà chúng ta có với 7805. Bạn đã đề cập một phần trong bài thuyết trình của mình về IL Boost và tính không thể chen chúc (uncrowdability). Bạn có muốn giải thích thêm một chút về điều đó không?
 
@@ -115,7 +115,7 @@ Và sau đó là một số chi tiết kỹ thuật hơn: có một số điểm
 
 **Pooja Ranjan:** Cảm ơn bạn rất nhiều. Đối với những người muốn tìm hiểu thêm về đề xuất 7547, chúng tôi có một tập đã được ghi hình với Mike Neuder, tập 130 của PEEPanEIP, cung cấp một cái nhìn tổng quan cấp cao. Tôi luôn thích nhìn thấy các đề xuất cạnh tranh, bởi vì tôi biết điều đó là vì sự tốt đẹp hơn của hệ sinh thái và Chuỗi. Tôi thấy trong khung chat có một vài câu hỏi. Có lẽ tôi muốn mời Kataya chia sẻ câu hỏi của cô ấy.
 
-#### Người đề xuất có phải đưa vào tất cả 16 danh sách không? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Người đề xuất có phải đưa vào tất cả 16 danh sách không? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Xin chào, cảm ơn bạn. Câu hỏi của tôi là: người đề xuất khối có nhận được 16 danh sách đưa vào, mỗi danh sách từ một thành viên ủy ban, và họ có phải đưa tất cả các giao dịch từ những danh sách này vào không?
 
@@ -123,7 +123,7 @@ Và sau đó là một số chi tiết kỹ thuật hơn: có một số điểm
 
 **Pooja Ranjan:** Câu hỏi tiếp theo trong khung chat là của Justin. Justin, bạn có muốn đọc câu hỏi của mình cho các khách mời không?
 
-#### Các giao dịch mempool riêng tư trong danh sách đưa vào (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Các giao dịch mempool riêng tư trong danh sách đưa vào (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Tôi đã hỏi rất nhiều câu hỏi. Tôi muốn hỏi điều gì ngăn cản việc đưa một giao dịch từ một mempool riêng tư vào một danh sách đưa vào, và tôi nghĩ câu hỏi đó đã được trả lời khá thỏa đáng. Có vẻ như điều đó hoàn toàn ổn, xét đến việc trình xây dựng về cơ bản sẽ sắp xếp chúng theo bất kỳ cách nào họ thấy phù hợp, và giao dịch của bạn cũng trở nên công khai khi nó xuất hiện trên IL. Vì vậy tôi nghĩ điều đó hợp lý. Cảm ơn bạn.
 
@@ -133,7 +133,7 @@ Vì vậy, hoặc là bạn có một giao dịch công khai và bạn có thể
 
 **Pooja Ranjan:** Cảm ơn bạn đã chia sẻ. Tôi thấy câu hỏi tiếp theo là của Ladislaus.
 
-#### FOCIL và việc mở rộng quy mô (21:41) {#focil-and-scaling-2141}
+### FOCIL và việc mở rộng quy mô (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Chào các bạn. Điều này liên quan đến điểm mà các bạn đã nêu ra về FOCIL và việc mở rộng quy mô. Gần đây tôi có thấy một số cuộc thảo luận, như tất cả chúng ta đều thấy, về việc mở rộng quy mô Ethereum, và như bạn đã đề cập rất đúng, có một nút thắt cổ chai từ một vài trình xây dựng ngoài kia. Cá nhân tôi thích nghĩ về FOCIL như một cách trao quyền lại cho việc xây dựng cục bộ, và tôi xem nó như một sự cần thiết phải được đưa vào giao thức trước khi chúng ta tăng các yêu cầu về băng thông, hoặc các yêu cầu về nút nói chung. Có lẽ bạn có thể nói rõ hơn về cách bạn nghĩ về điều này, và cả những cách tiềm năng khác để mở rộng quy mô, có thể là không cần FOCIL, như bạn đã đề cập.
 
@@ -151,7 +151,7 @@ Vì vậy, chúng ta thực sự muốn giữ lại những người đặt cọ
 
 **Pooja Ranjan:** Cảm ơn bạn rất nhiều. Tôi nghĩ câu hỏi tiếp theo là của Luis.
 
-#### Tiêu chí chọn giao dịch (26:46) {#criteria-for-selecting-transactions-2646}
+### Tiêu chí chọn giao dịch (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Tôi tham gia trễ vài phút sau khi bắt đầu, nhưng theo tôi thấy thì điều này đang phi tập trung hóa việc lựa chọn giao dịch trên toàn bộ mạng lưới. Theo ý kiến của tôi thì điều đó rất tốt; nó chống lại MEV và sự kiểm duyệt. Và tôi chắc chắn thích phần để những người chứng thực (attester) làm công việc này, bởi vì trong tương lai họ sẽ có yêu cầu phần cứng thấp hơn so với các trình xây dựng, thậm chí còn thấp hơn nữa với tính phi trạng thái và các client phi trạng thái. Vì bạn sẽ có thể chạy quy trình này với phần cứng rất thấp, nó làm cho mọi thứ trở nên rất phi tập trung. Tôi đoán thách thức chính ở đây là xác định các tiêu chí cho việc lựa chọn giao dịch của các danh sách đưa vào (inclusion list) này, cho dù bạn chọn dựa trên phí ưu tiên hay số lượng khối dữ liệu; có quá nhiều biến số. Các bạn đã chốt được một bộ tiêu chí nào mà các bạn đang định áp dụng chưa?
 
@@ -165,7 +165,7 @@ Tiếp theo, đối với quy tắc đưa vào (inclusion rule), đó là một 
 
 **Luis Pinto:** Được rồi, cảm ơn bạn.
 
-#### Khả năng tương thích với EIP-7702, ePBS và PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### Khả năng tương thích với EIP-7702, ePBS và PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Cảm ơn bạn rất nhiều. Theo tôi hiểu, đề xuất này đã được đề xuất cho bản nâng cấp sau Pectra, Fusaka. Và do Fusaka có thể bao gồm hoặc không bao gồm một số EIP khác đang được tiến hành, tôi tự hỏi tình trạng tương thích của FOCIL đối với các đề xuất như 7702, dành cho trừu tượng hóa tài khoản, ePBS và PeerDAS là như thế nào.
 
@@ -175,7 +175,7 @@ Chúng tôi rất tự tin, vì chúng tôi cũng đã nói chuyện với các 
 
 **Pooja Ranjan:** Thật tốt khi biết điều đó. Tôi nhận thấy Jihoon cũng đã chia sẻ một liên kết HackMD, mà chúng tôi sẽ thêm vào phần tài nguyên, dành cho những ai muốn tìm hiểu thêm về khả năng tương thích với ePBS nói riêng. Và vâng, tôi nhớ từ cuộc trò chuyện trước với Mike, tôi đoán đề xuất đã không được đưa vào do sự không tương thích với trừu tượng hóa tài khoản. Vì vậy, thật tốt khi biết rằng vấn đề này đã được giải quyết.
 
-#### FOCIL và MEV đa khe (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL và MEV đa khe (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** Tôi đã xem qua các tài liệu và thông tin chi tiết được thêm vào trang web của FOCIL, meetfocil.eth.limo, và biết được một thuật ngữ gọi là MEV đa khe (multi-slot MEV). Julian cũng đã đề cập rằng MEV-Boost nhìn chung là có lợi nhuận, bất chấp mong muốn và nỗ lực của các nhà phát triển nhằm giữ cho nó ở mức cân bằng. Tôi tự hỏi FOCIL sẽ ngăn chặn điều này như thế nào.
 
@@ -191,7 +191,7 @@ Vì vậy, FOCIL giải quyết các phần của MEV đa khe nơi các giao d�
 
 **Pooja Ranjan:** Rất tốt, cảm ơn bạn rất nhiều vì đã chia sẻ điều đó. Tôi hiểu rằng có rất nhiều nghiên cứu đang diễn ra để giải quyết vấn đề MEV, vì vậy thật tốt khi biết rằng ít nhất về nguyên tắc, nó sẽ giúp ích nhiều hơn so với kịch bản hiện tại.
 
-#### Những đánh đổi và thách thức (36:44) {#trade-offs-and-challenges-3644}
+### Những đánh đổi và thách thức (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Tôi có một câu hỏi liên quan đến những gì Thomas đã đề cập trước đó về xác nhận nước đôi IL. Tôi nhận thấy rằng trong phần các cân nhắc về bảo mật của đề xuất, có khá nhiều điểm được đề cập, như tính liên tục của đồng thuận, xác nhận nước đôi IL và việc xây dựng tải trọng. Bạn nghĩ đâu là sự đánh đổi lớn nhất, hoặc điều gì đó có thể cần nghiên cứu thêm và có thể ngăn cản đề xuất này được đưa vào bản nâng cấp tiếp theo ở trạng thái hiện tại?
 
@@ -203,7 +203,7 @@ Tôi có thể hơi thiên vị, nhưng tôi không thấy có những sự đá
 
 **Pooja Ranjan:** Thật tốt khi biết điều đó. Trong hầu hết các đề xuất, chúng tôi thấy rằng phần các cân nhắc về bảo mật thường không có hoặc có rất ít thông tin, vì vậy thật tốt khi biết rằng nghiên cứu đã được thực hiện cho phần đó và chúng ta nhận thức được các cân nhắc bảo mật có thể xảy ra. Rất vui khi biết đó không phải là một rào cản hay thách thức tiềm tàng đối với việc triển khai và áp dụng trong tương lai.
 
-#### Cơ chế phí giao dịch cho các danh sách đưa vào (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Cơ chế phí giao dịch cho các danh sách đưa vào (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Tôi có một câu hỏi về một số vấn đề còn bỏ ngỏ mà tôi tìm thấy trên chính trang web, liên quan đến cơ chế phí giao dịch. Tôi tự hỏi liệu có bất kỳ cập nhật nào không, hoặc liệu bạn có muốn chia sẻ thêm về cách tốt nhất để tính phí và phân phối các khoản phí này cho việc đưa vào danh sách đưa vào (inclusion list) hay không.
 
@@ -219,7 +219,7 @@ Quay lại ý của Luis trước đó, việc khuyến khích liên quan rất 
 
 **Pooja Ranjan:** Ồ, thật thú vị. Vậy chúng ta nên mong đợi một số đề xuất bổ sung trong tương lai để nâng cao các tính năng hiện tại của FOCIL.
 
-#### Kích thước danh sách bao gồm (44:16) {#inclusion-list-size-4416}
+### Kích thước danh sách bao gồm (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Tôi có một câu hỏi khác. Tôi không chắc liệu nó có nên là một phần của đề xuất hiện tại hay không, nhưng tôi tò mò muốn biết liệu có bất kỳ cập nhật nào về kích thước IL (danh sách bao gồm) không. Các danh sách bao gồm rất có thể phải được giới hạn kích thước để ngăn chặn việc sử dụng băng thông quá mức. Chúng ta có bất kỳ nghiên cứu hoặc cập nhật nào thêm về cách xác định kích thước tối ưu của danh sách bao gồm không?
 
@@ -229,7 +229,7 @@ Tôi không biết liệu có cần thực hiện quá nhiều nghiên cứu v�
 
 Trong tương lai, bạn có thể tăng kích thước IL, nhưng bạn cũng có thể xem xét việc tăng số lượng thành viên ủy ban IL. Điều đó cho phép bạn có nhiều cơ hội hơn để có được một thành viên ủy ban IL trung thực nếu phần lớn mạng lưới quyết định bắt đầu kiểm duyệt. Vì vậy, đó cũng là điều chúng ta có thể làm. Hiện tại, có vẻ như 16 sẽ là hoàn toàn ổn và đủ, nhưng bạn chắc chắn có thể điều chỉnh các thông số này trong tương lai nếu tình trạng kiểm duyệt trở nên quá nghiêm trọng, hoặc nếu chúng ta cần hành động nhiều hơn.
 
-#### Các số liệu để theo dõi mức độ áp dụng (46:39) {#metrics-to-track-adoption-4639}
+### Các số liệu để theo dõi mức độ áp dụng (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Chỉ là một câu hỏi tiếp nối ở đây: bạn có nghĩ đến bất kỳ số liệu nào mà chúng ta có thể theo dõi để hiểu được mức độ áp dụng hoặc sự thành công của đề xuất này không?
 
@@ -241,7 +241,7 @@ Tôi nghĩ đây là một điểm quan trọng đến mức việc triển khai
 
 **Pooja Ranjan:** Rất thú vị. Vì vậy, có lẽ đây là điều dành cho các nhà nghiên cứu: một danh sách mong muốn khả thi cho các bản nâng cấp, rằng các bảng điều khiển và công cụ theo dõi số liệu nên được các nhà phát triển chia sẻ cho một đề xuất bất cứ khi nào nó được đưa vào một bản nâng cấp mạng lưới.
 
-#### Trạng thái triển khai máy khách (49:11) {#client-implementation-status-4911}
+### Trạng thái triển khai máy khách (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Như Julian đã đề cập, đề xuất này có thể cần được triển khai càng sớm càng tốt. Tôi tò mò muốn biết chúng ta đang ở đâu trong việc triển khai máy khách, vì tôi nhớ trong cuộc gọi mạng thử nghiệm (testnet) lần trước, Paritosh đã đề cập đến việc thêm một số hỗ trợ với các mạng phát triển. Vậy chúng ta đang ở giai đoạn nào rồi?
 
@@ -253,7 +253,7 @@ Nhìn chung, chúng ta đang có ngày càng nhiều các mạng phát triển s
 
 **Pooja Ranjan:** Cảm ơn bạn đã chia sẻ điều đó. Tôi rất mong được theo dõi các bản cập nhật trên các mạng phát triển. Tôi không chắc sẽ có bao nhiêu vòng lặp của mạng phát triển này, nhưng tôi rất hào hứng khi thấy nó sắp ra mắt. Tôi thấy Justin có một câu hỏi ở đây. Justin, xin mời bạn.
 
-#### FOCIL trong Fusaka hay Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL trong Fusaka hay Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Được rồi, hãy chuẩn bị tinh thần cho câu hỏi này nhé. Bạn đã đưa ra một quan điểm rất hay rằng thời điểm tốt nhất để giải quyết vấn đề kiểm duyệt là trước khi sự kiểm duyệt xảy ra, đúng không? Vậy: FOCIL trong Fusaka, hay nó có thể đợi đến Glamsterdam? Và với tư cách là một nhà phát triển, tôi nên ủng hộ phương án nào?
 
@@ -265,7 +265,7 @@ Một điều khác tôi muốn đề cập, vì tôi thực sự nghĩ nó quan
 
 **Pooja Ranjan:** Đôi khi thật buồn khi thấy các đề xuất không được chọn cho bản nâng cấp tiếp theo hoặc gần nhất, nhưng chỉ có một số lượng đề xuất nhất định mới có thể được đưa vào một bản nâng cấp. Tôi thực sự đánh giá cao tất cả những nỗ lực đằng sau việc đưa ra đề xuất, sự sẵn sàng của đề xuất, cũng như quá trình thử nghiệm đi kèm với nó. Vì vậy, cảm ơn bạn rất nhiều vì tất cả những công việc bạn đang làm cho hệ sinh thái Ethereum.
 
-#### Hỏi đáp nhanh (55:18) {#rapid-fire-5518}
+### Hỏi đáp nhanh (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Trước khi kết thúc, chúng ta có một vòng hỏi đáp nhanh. Điều kiện duy nhất là câu trả lời chỉ nên gồm một từ hoặc một câu, và chúng ta sẽ cố gắng thực hiện với đồng hồ bấm giờ, có thể là 30 giây cho mỗi câu. Nếu bạn đã sẵn sàng, hãy bắt đầu với Julian. Vấn đề khó nhất trong nghiên cứu Chuỗi khối hiện nay là gì?
 
@@ -317,7 +317,7 @@ Một điều khác tôi muốn đề cập, vì tôi thực sự nghĩ nó quan
 
 **Pooja Ranjan:** Rất tuyệt vời, cảm ơn bạn rất nhiều, Thomas. Cảm ơn bạn đã trả lời tất cả những câu hỏi này. Khi chúng ta chuẩn bị kết thúc, tôi muốn dành cơ hội này cho bạn: nếu bạn có bất kỳ thông điệp nào cho cộng đồng về đề xuất này, hoặc cho cộng đồng Ethereum nói chung.
 
-#### Thông điệp gửi đến cộng đồng (58:08) {#messages-to-the-community-5808}
+### Thông điệp gửi đến cộng đồng (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Thực ra, đó là một điều rất quan trọng, bởi vì chúng tôi luôn có những cuộc thảo luận sôi nổi và tất cả đều công khai trên Discord. Ngay từ đầu đã có một sự thúc đẩy để công khai mọi thứ, và mọi người thực sự đang làm như vậy, nên tôi rất vui. Bạn có thể theo dõi các cuộc thảo luận và tiến độ trên Discord Eth R&D công khai, tại kênh inclusion-list. Đó cơ bản là nơi mọi thứ đang diễn ra ngay lúc này. Sau đó, bạn có thể liên hệ với chúng tôi trên Twitter, Telegram, hay bất cứ đâu. Đừng ngần ngại.
 
@@ -325,6 +325,6 @@ Càng nói chuyện và thu hút được nhiều người tham gia, thiết k�
 
 **Julian Ma:** Chỉ xin nói thêm một chút, tôi hy vọng chúng tôi đã làm cho một số người cảm thấy hào hứng với FOCIL. Nếu bạn thấy hào hứng, xin hãy cho chúng tôi biết. Và nếu bạn vẫn còn một số câu hỏi, chúng tôi rất sẵn lòng giải đáp, và hy vọng chúng tôi có thể thuyết phục bạn rằng FOCIL thực sự là hướng đi đúng đắn. Cảm ơn bạn rất nhiều. Thật sự là một niềm vinh hạnh khi được ở đây, và cảm ơn bạn đã tổ chức buổi trò chuyện này. Và tất nhiên, cũng xin cảm ơn tất cả mọi người đã tham dự.
 
-#### Lời kết (59:52) {#closing-words-5952}
+### Lời kết (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Cảm ơn các bạn. Chương trình đến đây là kết thúc. Gửi lời cảm ơn sâu sắc tới Thomas và Julian vì đã tham gia cùng chúng tôi hôm nay và chia sẻ những hiểu biết của họ về EIP-7805. Cảm ơn tất cả những người tham gia; các câu hỏi của các bạn rất đáng khích lệ và cung cấp nhiều thông tin. Cảm ơn các bạn đã theo dõi. Nếu bạn thích cuộc trò chuyện này, hãy nhớ nhấn thích, đăng ký và chia sẻ tập này với những người đam mê Ethereum khác. Chúng tôi sẽ mang đến cho bạn nhiều EIP hơn và tiến độ nghiên cứu trên PEEPanEIP. Hẹn gặp lại lần sau, hãy tiếp tục trau dồi kiến thức và khám phá Ethereum cùng Ethereum Cat Herders. Chúc các bạn một ngày tốt lành.

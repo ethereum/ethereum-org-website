@@ -244,7 +244,7 @@ const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
               isExpanded={isExpanded}
               setIsExpanded={setIsExpanded}
               title={
-                countdown > 0
+                countdown > 0 && playlist[currentTrackIndex + 1]
                   ? `${t(playlist[currentTrackIndex + 1].title)} in ${countdown}s`
                   : t(playlist[currentTrackIndex].title)
               }

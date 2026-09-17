@@ -19,7 +19,7 @@ Film wyjaśniający autorstwa **Junion**, opowiadający historię ataku na DAO w
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=rNeLuBOVe8A) opublikowanego przez Junion. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Odkrycie (0:00) {#the-discovery-000}
+### Odkrycie (0:00) {#the-discovery-000}
 
 Jest poniedziałek, 13 czerwca 2016 roku. Profesor informatyki na uniwersytecie Cornell bada kod DAO, jednego z najbardziej ambitnych projektów w przestrzeni krypto. Od miesięcy opowiadał się za wstrzymaniem projektu, ponieważ uważał, że istnieją pewne wady, które mogą zagrozić całemu przedsięwzięciu. Ale dzisiaj znajduje poważną lukę: błąd w linii 666.
 
@@ -33,7 +33,7 @@ Podobnie jak atak na system SWIFT na kwotę 81 milionów dolarów ujawnił luki 
 
 To historia jednej z największych cyfrowych kradzieży w historii i odważnej próby napisania historii na nowo, tak aby to wydarzenie nigdy nie miało miejsca.
 
-#### Czym było DAO? (2:00) {#what-was-the-dao-200}
+### Czym było DAO? (2:00) {#what-was-the-dao-200}
 
 Oto DAO — skrót od zdecentralizowanej autonomicznej organizacji. Pomysł ten został zainspirowany finansowaniem społecznościowym (crowdfundingiem). Zamiast wielu funduszy na różne projekty, miał istnieć jeden fundusz, by rządzić wszystkimi, a nie było na to lepszego sposobu niż DAO.
 
@@ -45,7 +45,7 @@ Gdy okres głosowania dobiegł końca i osiągnięto kworum wynoszące 20% wszys
 
 Jednak nadal potrzebny był sposób na ochronę mniejszości przed uciskiem ze strony większości. Jeśli grupa mniejszościowa zdecydowanie nie zgadzała się z propozycją, której nie mogła przegłosować, zamiast głosować na „nie”, mogła wywołać funkcję podziału (split) i przenieść swój ether z głównego DAO do podrzędnego DAO (child DAO), w zasadzie dzieląc DAO na dwa. Ta funkcja podziału będzie bardzo ważna w dalszej części.
 
-#### Finansowanie społecznościowe (4:01) {#the-crowdfund-401}
+### Finansowanie społecznościowe (4:01) {#the-crowdfund-401}
 
 DAO było największym projektem crowdfundingowym w historii, zbierając 12,7 miliona etherów — wartych wówczas 150 milionów dolarów. Miało to miejsce we wczesnej erze Ethereum, kiedy projekt był przedmiotem ogromnego szumu medialnego i FOMO inwestorów.
 
@@ -53,7 +53,7 @@ Wcześniej projekty Ethereum były głównie arbitralnymi dowodami słuszności 
 
 Był to niezmienny kod hostowany na najbezpieczniejszym komputerze na świecie, co zapewniało kluczowe właściwości DAO: organizacji, która jest całkowicie zdecentralizowana i autonomiczna. Po wdrożeniu kontraktów 30 kwietnia, żaden pojedynczy podmiot — nawet Slock.it — nie mógł wprowadzić zmian w protokole ani zatrzymać jego istnienia. Jego kod był niezliczoną ilość razy audytowany przez różnych programistów Ethereum i był dostępny dla każdego do wglądu.
 
-#### Atak (5:02) {#the-hack-502}
+### Atak (5:02) {#the-hack-502}
 
 „Lonely, so lonely” — to nazwa Propozycji DAO nr 59. To tylko zwykła propozycja podziału, ale to właśnie od niej zaczyna się atak. Po tym, jak haker złożył propozycję, następuje standardowy siedmiodniowy okres debaty, do której każdy może dołączyć. Jednak nikt nie dołącza do tego podziału.
 
@@ -65,7 +65,7 @@ Pamiętasz tę poprawkę błędu sprzed czterech dni? Szkoda, że nie ma możliw
 
 Ale bez tej poprawki każdy mógł wielokrotnie wywoływać funkcję wypłaty etheru, zanim kontrakt zaktualizował jego saldo. To jak bankomat, który nie zmienia twojego salda, dopóki nie wyda ci pieniędzy. „Czy mogę wypłacić dziesięć dolarów? Czekaj, zanim to zrobisz, czy mogę wypłacić dziesięć dolarów? Czekaj, zanim to zrobisz…”
 
-#### Grupa Robin Hooda (6:55) {#the-robin-hood-group-655}
+### Grupa Robin Hooda (6:55) {#the-robin-hood-group-655}
 
 Posiadacze tokenów DAO patrzyli, jak ich inwestycje są powoli wyprowadzane z głównego DAO do podrzędnego DAO, znanego również jako mroczne DAO (dark DAO). Dodatkowo, w następstwie tych wiadomości, cena Ethereum gwałtownie spadła z 20 do 15 dolarów. Trzeba było coś zrobić, a jedynym sposobem było opróżnienie reszty środków, zanim zrobi to haker. I tak rozpoczął się wyścig z czasem o opróżnienie DAO.
 
@@ -79,13 +79,13 @@ Tymczasem Alex właśnie przygotowywał się do rozpoczęcia ataku white-hat, ab
 
 Następnego ranka Alex próbował ponownie zebrać grupę, aby zinfiltrować kolejną propozycję podziału, ale pozostali byli zajęci. „Czuliśmy się jak najgorsi hakerzy w historii. Pokrzyżował nam plany słaby internet i obowiązki rodzinne”.
 
-#### Wyścig o opróżnienie (9:10) {#the-race-to-empty-910}
+### Wyścig o opróżnienie (9:10) {#the-race-to-empty-910}
 
 Cztery dni po początkowym ataku, DAO ponownie znalazło się pod ostrzałem. Środki uciekały powoli — po kilka etherów na rundę — ale uzbierało się już kilka tysięcy dolarów. Wydawało się, że to atakujący bada grunt. W tym momencie Robin Hood musiał coś zrobić.
 
 Zdecydowali się zinfiltrować Podział nr 78, ponieważ zidentyfikowali kuratora propozycji, a jej czas wkrótce dobiegał końca. Skontaktowali się z kilkoma „wielorybami” (dużymi inwestorami), którzy chętnie przekazali swoje tokeny DAO, co pozwoliło zespołowi zabezpieczyć sześć milionów tokenów. Im więcej tokenów miał kontrakt Robin Hooda, tym szybciej mógł wyprowadzać ether. Atakujący przyspieszył, a dołączyli do niego inni. Ale dzięki darowiznom Robin Hood był w stanie ich wyprzedzić. Pozwoliło im to zabezpieczyć 7,2 miliona etherów — 55% środków DAO.
 
-#### Rozwidlenie (10:08) {#the-fork-1008}
+### Rozwidlenie (10:08) {#the-fork-1008}
 
 Główne DAO zostało teraz opróżnione, a wszystkie fundusze zostały rozdzielone między kilka podrzędnych DAO — dwa główne to white-hat DAO i dark DAO. Ale wszystkie pieniądze były zablokowane czasowo. Żadna propozycja nie mogła zostać zgłoszona w ramach podrzędnego DAO, dopóki nie minął 27-dniowy okres oczekiwania. A nawet po tym czasie wysłanie środków na zewnętrzny adres wymagało złożenia propozycji i odczekania dwóch tygodni. W gruncie rzeczy pozostało jeszcze 41 dni, zanim haker mógł wypłacić to, co stanowiło równowartość 5% całkowitej podaży Ethereum.
 
@@ -93,7 +93,7 @@ Ale haker nigdy nie miał okazji dotknąć swojego Ethereum. To, co wydarzyło s
 
 Blockchain jest jak lista transakcji, która stale rośnie z każdym wydobytym blokiem. Każda transakcja jest na zawsze zakorzeniona w blockchainie. Ale jeśli ponad 50% górników wejdzie w zmowę, mogą oni fałszywie zmienić blockchain, pisząc historię na nowo w dowolny sposób. Zazwyczaj nazywa się to atakiem 51%. Ale w tym rozwidleniu nie było nic złośliwego — społeczność jedynie odzyskiwała pieniądze, które zostały jej skradzione.
 
-#### Kod to prawo (11:48) {#code-is-law-1148}
+### Kod to prawo (11:48) {#code-is-law-1148}
 
 Mimo to nie wszyscy popierali proponowane rozwidlenie. Argumentowali, że kod to prawo. W tym ujęciu atakujący był mniej hakerem, a bardziej sprytnym prawnikiem, który uważnie przeczytał warunki kontraktu. W związku z tym żadne fundusze nie zostały tak naprawdę skradzione i powinien on mieć pełne prawo do etheru z dark DAO.
 
@@ -107,7 +107,7 @@ Po bliższym zbadaniu sprawy ludzie zdali sobie sprawę, że podpis był nieważ
 
 Z drugiej strony zwolennicy argumentowali, że „kod to prawo” jest zbyt drastycznym stwierdzeniem i że to ludzie powinni mieć ostateczne słowo poprzez społeczny konsensus. Haker nie powinien czerpać zysków z exploita, ponieważ jest to etycznie złe i najprawdopodobniej nielegalne. Ale co najważniejsze, DAO było po prostu zbyt duże, by upaść. Posiadało około 15% całkowitej podaży etheru.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 W wydarzeniu, które przypominało kryzys finansowy z 2008 roku, programiści Ethereum uratowali DAO. Vitalik Buterin, twórca i główny programista Ethereum, bez ogródek naciskał na rozwidlenie. W jednym z wywiadów powiedział później: „Niektórzy użytkownicy Bitcoina postrzegają twarde rozwidlenie jako w pewnym sensie naruszenie ich najbardziej fundamentalnych wartości. Osobiście uważam, że te fundamentalne wartości, posunięte do takich skrajności, są głupie”.
 
@@ -117,7 +117,7 @@ Ale na tym się nie kończy. Oryginalny blockchain Ethereum — ten z atakiem na
 
 Jeśli posiadałeś ether przed rozwidleniem, miałbyś teraz jedno Ethereum i jedno Ethereum Classic. Jeśli posiadałeś jeden ether w DAO, mógłbyś wypłacić jedno Ethereum z kontraktu zwrotnego. A jeśli właśnie zhakowałeś DAO, zbiłbyś całkiem niezłą fortunę w Ethereum Classic — około siedmiu milionów dolarów.
 
-#### Dziedzictwo DAO (16:14) {#legacy-of-the-dao-1614}
+### Dziedzictwo DAO (16:14) {#legacy-of-the-dao-1614}
 
 Początkowo Ethereum Classic zyskało na popularności jako alternatywa, z silną społecznością fundamentalistów blockchaina, którzy nie zgadzali się na ratowanie projektu. Ale od tego czasu Ethereum Classic nie zdołało zdobyć szerszego uznania i tak naprawdę istnieje tylko jako idea o niewielkiej użyteczności. Podczas gdy Ethereum jest domem dla tysięcy protokołów, Ethereum Classic ma tylko kilka podstawowych. Jasne jest, że rozwidlenie wygrało.
 
@@ -125,7 +125,7 @@ Dwa miesiące później Robin Hood przetransferował 2,9 miliona swojego Ethereu
 
 Jeśli chodzi o hakera, odszedł on z 3,6 miliona Ethereum Classic — wartymi dziś 150 milionów dolarów. Ale gdyby nie było rozwidlenia, te 3,6 miliona Ethereum byłoby dziś warte ponad siedem miliardów dolarów.
 
-#### Trwały wpływ DAO (17:26) {#the-daos-lasting-impact-1726}
+### Trwały wpływ DAO (17:26) {#the-daos-lasting-impact-1726}
 
 Warto zauważyć, że DAO jest obecnie powszechnie określane jako Genesis DAO, aby uniknąć nieporozumień, ponieważ było to pierwsze DAO, ale zdecydowanie nie ostatnie. Pomimo początkowych niepowodzeń, DAO stają się tylko coraz bardziej popularne. MakerDAO zarządza stablecoinem DAI, a protokoły zdecentralizowanych finansów (DeFi), takie jak Uniswap ze swoim tokenem UNI, zazwyczaj posiadają DAO do zarządzania. Wszystkie te DAO czerpią z doświadczeń wcześniejszych projektów, aby tworzyć jeszcze bardziej wszechstronne i odnoszące sukcesy organizacje.
 

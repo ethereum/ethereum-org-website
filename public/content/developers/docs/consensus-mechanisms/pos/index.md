@@ -97,3 +97,5 @@ Ethereum originally used proof-of-work but switched to proof-of-stake in Septemb
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
+
+<QuizWidget quizKey="proof-of-stake" />

@@ -20,13 +20,13 @@ breadcrumb: "L2 Gerilya"
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=WlsICV2OPAE) yang dipublikasikan oleh Web3Privacy Now. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar dan filosofi anarkis (0:05) {#introduction-and-anarchist-philosophy-005}
+### Pengantar dan filosofi anarkis (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Tepuk tangan] Baiklah, terima kasih sudah hadir di sini. Saya tahu Vitalik sedang berbicara sekarang. Sungguh suatu kehormatan ada beberapa dari Anda di sini dan tidak berada di antrean matcha di sebelah sana. Kita akan berbincang hari ini tentang l2 gerilya, dan saya rasa kita akan membahasnya, tetapi saya perkenalkan kepada Anda Melanie Premsyl, filsuf dan anarkis Prancis, yang memberikan kehormatan untuk bergabung dengan kita di sini. Apakah Anda ingin memberikan sedikit perkenalan tentang diri Anda?
 
 **Melanie Premsyl:** Ya. Hai semuanya. Jadi saya adalah seorang filsuf Prancis. Saya mempelajari anarki dan teknologi, dan pada awalnya saya lebih berada di sisi wilayah. Seperti di pusat Prancis, misalnya, saya tidak tahu apakah Anda tahu Tarnac, atau semua kelompok semacam itu yang lebih merupakan kelompok kekerasan. Masalah utama yang saya temui adalah bahwa kita perlu terhubung dengan orang lain di dunia, dan banyak kelompok anarkis sangat terbatas. Kita butuh cara agar kita bisa berkomunikasi dengan lebih banyak orang dari Amerika atau Amerika Selatan. Dan itulah mengapa sekarang kita mencoba membuat jembatan dengan kripto dan semua orang yang mencoba menemukan cara baru untuk melawan kurangnya privasi, kurangnya kebebasan, dan kekerasan negara.
 
-#### Persidangan bersaudara MEV (1:52) {#the-mev-brothers-trial-152}
+### Persidangan bersaudara MEV (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Luar biasa. Jadi pada dasarnya, kita bertemu beberapa minggu yang lalu di New York. Kita berdua menghadiri persidangan yang berlangsung di Manhattan di mana dua bersaudara ini, yang dikenal sebagai bersaudara MEV, dituntut karena mereka melakukan *sandwich* terhadap beberapa bot *sandwich*. Saya pergi ke pengadilan untuk menonton persidangan, dan saya melihat orang ini di sini sedang membaca Spinoza dalam bahasa Prancis, dan saya sangat penasaran dengan apa yang sedang terjadi. Tidak ada seorang pun di kursi penonton selain kita berdua! Jadi saya menjadi sangat penasaran tentang apa yang membuat Anda, yang pertama dan terutama adalah seorang anarkis dan filsuf daripada seorang teknolog, pada dasarnya datang untuk menghadiri persidangan khusus ini, tetapi juga untuk memikirkan tentang tata kelola Ethereum dan seluruh sistem validasi serta persidangan yang sedang berlangsung di New York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "L2 Gerilya"
 
 **Fatemeh Fannizadeh:** Oke. Ya, itu cukup masuk akal. Jadi bagi mereka yang belum mengikuti persidangan, setelah sekitar tiga atau empat minggu, persidangan tersebut dibatalkan (mistrial). Juri tidak dapat mencapai putusan bulat dan memutuskan apakah kedua bersaudara ini bersalah melanggar aturan rantai blok atau tidak—yang mana ini merupakan hasil yang cukup positif, menurut saya, bagi kripto, bahwa pengadilan atau juri tidak memutuskan apa yang benar dan apa yang salah secara onchain. 
 
-#### Menjembatani rantai blok dengan komunitas lain (4:06) {#bridging-blockchain-with-other-communities-406}
+### Menjembatani rantai blok dengan komunitas lain (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Tapi oke, jika kita mundur selangkah tentang apa yang Anda katakan mengenai kaum anarkis yang melihat ke dalam teknologi ini untuk pada dasarnya menjembatani berbagai kelompok yang berbeda. 
 
@@ -48,7 +48,7 @@ breadcrumb: "L2 Gerilya"
 
 **Melanie Premsyl:** Ya, saya ingin mengatakan itu, tetapi saya tidak yakin, karena Anda tahu ada banyak orang yang perlu menghasilkan uang, jadi itu juga tujuan utamanya. Tetapi saya pikir kita bisa menggunakannya seperti jaring komunis, bahwa hanya satu bagian yang bisa menjadi mimpi semacam itu. Saya pikir itu adalah kue impian yang bisa diwujudkan, tetapi kita perlu memiliki alat dan desain yang membantu orang-orang keluar dari pemikiran teknis yang sangat berbau rekayasa, untuk memahami seperti apa bentuknya.
 
-#### Desentralisasi dan Lapisan 2 (6:55) {#decentralization-and-layer-2s-655}
+### Desentralisasi dan Lapisan 2 (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Itu sangat mengingatkan saya pada DAO beberapa tahun yang lalu. Saya tidak tahu tentang Anda semua, tetapi saya sangat bersemangat, saya berpikir bahwa DAO merevolusi cara kita berorganisasi sebagai kelompok dan komunitas secara onchain dan kebebasan yang kita miliki. Dan pada akhirnya, semua ini gagal total. Saya rasa itu tidak terwujud sama sekali. Itu hanya menjadi lebih tentang sistem pemungutan suara, itu tidak benar-benar demokratis, ini semua tentang mencari keuntungan. Seluruh gagasan yang kita miliki tentang DAO sebagai alat sosial tidak benar-benar terwujud. 
 
@@ -56,7 +56,7 @@ breadcrumb: "L2 Gerilya"
 
 **Melanie Premsyl:** Jadi saya orang Prancis. Ini adalah masalah besar. Menjadi orang Prancis, kami adalah bangsa yang sangat berpusat pada negara. Jadi saya selalu berpikir dengan cara yang pedagogis dan sangat dari atas ke bawah. Dan saya pikir l2 menciptakan cara agar semua orang dapat membuat rantai blok mini, dan mereka diamankan oleh lapisan 1. Saya ingin melihat apakah orang-orang dapat membuat bantuan pedagogis untuk semua orang untuk sesuatu yang gratis. Saya pikir banyak kelompok, seperti asosiasi, dapat membuat rantai blok mereka sendiri, dan itu akan menjadi sebuah cara—seperti yang Anda tahu, federalisme adalah subjek utama yang besar dari anarkisme. Bagaimana orang-orang bisa berhasil untuk mungkin saling membenci, tetapi tetap berbicara satu sama lain. Jadi kita perlu memiliki federalisme semacam ini di dalam rantai blok. Setiap orang memiliki lapisan 2 dengan nilainya sendiri, dan dengan demikian kita berbicara dengan infrastruktur yang sama. 
 
-#### Anarki, kebebasan, dan membangun perkakas (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarki, kebebasan, dan membangun perkakas (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Ya, saya sangat menyukai apa yang Anda katakan tentang pada dasarnya saling membenci tetapi tetap berkomunikasi, seperti tidak menjadi toksik terlepas dari perbedaan kita. Dan fakta bahwa ada seperti satu l1 dalam skenario ini, yang mana adalah Ethereum, juga sering dikatakan sebagai fasis karena kita semua harus setuju dengan satu set aturan ini. Jadi ini adalah satu sistem yang sama untuk semua orang, dan Anda pada dasarnya harus tunduk pada l1 ini atau Anda bisa pergi, itu pertanyaan yang sama sekali berbeda. Tetapi jika kita dapat mendesentralisasikan ini ke dalam berbagai jenis ekosistem l2 rollup kecil, maka kita dapat membawa kembali disonansi dan ketidaksepakatan di dalam infrastruktur bersama ini. 
 

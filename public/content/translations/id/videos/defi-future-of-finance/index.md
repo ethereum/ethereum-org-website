@@ -18,7 +18,7 @@ Sebuah penjelasan oleh **Finematics** yang mencakup masa depan keuangan terdesen
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=H-O3r2YMWJ4) yang diterbitkan oleh Finematics. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Satu abad inovasi keuangan (0:00) {#a-century-of-financial-innovation-000}
+### Satu abad inovasi keuangan (0:00) {#a-century-of-financial-innovation-000}
 
 Sistem keuangan yang kita kenal saat ini telah melalui kemajuan teknologi selama beberapa dekade. Upaya paling awal untuk membuat keuangan lebih efisien dimulai sejak tahun 1920-an dengan diperkenalkannya mesin akuntansi dan kartu plong. Hal ini diikuti oleh kebangkitan komputer mainframe yang secara signifikan mempercepat sistem perbankan pada tahun 1950-an dan seterusnya.
 
@@ -28,7 +28,7 @@ Sejak tahun 1990-an, berkat adopsi internet yang terus berkembang, komputerisasi
 
 Kemudian datanglah revolusi fintech. PayPal, Robinhood, TransferWise, Revolut, dan perusahaan rintisan fintech lainnya memahami pendekatan yang mengutamakan teknologi yang dikenal dari perusahaan teknologi non-keuangan lainnya dan menawarkan akses tanpa hambatan ke layanan keuangan kepada pengguna mereka — pengalaman yang sama sekali berbeda jika dibandingkan dengan antarmuka pengguna perbankan yang kaku.
 
-#### Masalah dalam keuangan tradisional (2:09) {#problems-in-traditional-finance-209}
+### Masalah dalam keuangan tradisional (2:09) {#problems-in-traditional-finance-209}
 
 Meskipun telah ada inovasi selama satu abad, sistem keuangan masih jauh dari kata sempurna:
 
@@ -44,7 +44,7 @@ Seluruh infrastruktur keuangan terdiri dari sistem terisolasi yang dibangun deng
 
 Inilah tepatnya mengapa kita membutuhkan sesuatu yang baru — sesuatu yang lebih baik yang dapat mengatasi beberapa masalah ini.
 
-#### Apa itu DeFi? (3:58) {#what-is-defi-358}
+### Apa itu DeFi? (3:58) {#what-is-defi-358}
 
 Di sinilah keuangan terdesentralisasi (DeFi) berperan. Alih-alih mengandalkan infrastruktur yang tua dan tidak efisien, DeFi memanfaatkan kekuatan kriptografi, desentralisasi, dan rantai blok untuk membangun sistem keuangan baru. Sebuah sistem yang dapat memberikan akses ke layanan keuangan yang sudah dikenal seperti pembayaran, pemberian pinjaman, peminjaman, dan perdagangan dengan cara yang lebih efisien, adil, dan terbuka.
 
@@ -54,7 +54,7 @@ Di sinilah keuangan terdesentralisasi (DeFi) berperan. Alih-alih mengandalkan in
 
 Semua ini dimungkinkan berkat penemuan Bitcoin dan Ethereum serta teknologi yang mendasarinya. Secara khusus, Ethereum sebagai platform kontrak pintar memungkinkan pembuatan aplikasi keuangan arbitrer apa pun. Karena karakteristik ini, Ethereum menjadi rantai blok pilihan untuk sebagian besar aktivitas DeFi.
 
-#### Metrik pertumbuhan DeFi (6:18) {#defi-growth-metrics-618}
+### Metrik pertumbuhan DeFi (6:18) {#defi-growth-metrics-618}
 
 Keuangan terdesentralisasi baru-baru ini mengalami pertumbuhan yang luar biasa. Beberapa metrik utama:
 
@@ -66,7 +66,7 @@ Keuangan terdesentralisasi baru-baru ini mengalami pertumbuhan yang luar biasa. 
 
 Hal ini tidak hanya terbatas pada mata uang kripto, yang bisa sangat fluktuatif. Stablecoin yang melacak nilai mata uang fiat seperti dolar AS juga mengalami pertumbuhan luar biasa dalam ekosistem DeFi. Kapitalisasi pasar USDC, stablecoin populer di DeFi, naik dari kurang dari satu miliar dolar pada April 2020 menjadi lebih dari enam miliar dolar pada tahun 2021. DAI naik dari kurang dari 100 juta dolar pada April 2020 menjadi hampir dua miliar dolar pada tahun 2021.
 
-#### Masalah dunia nyata yang diselesaikan DeFi (8:00) {#real-world-problems-defi-solves-800}
+### Masalah dunia nyata yang diselesaikan DeFi (8:00) {#real-world-problems-defi-solves-800}
 
 Untuk memahami proposisi nilai dari keuangan terdesentralisasi dengan lebih baik, mari kita bahas beberapa masalah umum dalam keuangan tradisional dan melihat bagaimana masalah tersebut dapat diatasi di DeFi.
 
@@ -80,7 +80,7 @@ Akuntansi — setiap catatan tersedia secara publik di rantai blok, sehingga aku
 
 Akses yang setara ke layanan keuangan — sebuah protokol DeFi tidak peduli siapa Anda. Protokol ini hanya mengikuti aturan yang telah ditentukan sebelumnya yang sama persis untuk semua orang.
 
-#### Tantangan DeFi (10:48) {#challenges-of-defi-1048}
+### Tantangan DeFi (10:48) {#challenges-of-defi-1048}
 
 Meskipun DeFi memberi kita proposisi nilai yang unik, ia datang dengan tantangannya sendiri. Hal ini membawa lebih banyak tanggung jawab kepada pengguna, yang sekarang benar-benar memiliki aset mereka dan harus memastikan mereka menyimpannya dengan cara yang aman. Tidak banyak bimbingan di sini, terutama saat berinteraksi dengan protokol DeFi baru.
 
@@ -92,7 +92,7 @@ Peretasan adalah tantangan lain dari ruang DeFi, membuat protokol tertentu — t
 
 Pinjaman tanpa kolateral dan hipotek adalah area besar dari keuangan tradisional yang sedikit lebih sulit untuk diimplementasikan di DeFi. Untungnya, sudah ada protokol seperti Aave yang mengeksplorasi berbagai kemungkinan, seperti pendelegasian kredit dan hipotek yang ditokenisasi.
 
-#### Masa depan keuangan (12:38) {#the-future-of-finance-1238}
+### Masa depan keuangan (12:38) {#the-future-of-finance-1238}
 
 Terlepas dari tantangannya, DeFi adalah inovasi nol-ke-satu yang unik, dan menyelesaikan beberapa tantangan ini hanyalah masalah waktu. Jadi apa yang akan terjadi pada keuangan tradisional jika DeFi terus berinovasi dan tumbuh dengan kecepatan yang luar biasa ini?
 

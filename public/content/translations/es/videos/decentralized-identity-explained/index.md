@@ -17,7 +17,7 @@ Una explicación de **Microsoft Security** sobre cómo la identidad descentraliz
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=Ew-_F-OtDFI) publicada por Microsoft Security. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### El problema con las credenciales digitales (0:02) {#the-problem-with-digital-credentials-002}
+### El problema con las credenciales digitales (0:02) {#the-problem-with-digital-credentials-002}
 
 Todos los días, llevamos billeteras llenas de tarjetas. Sin embargo, solo unas pocas —como las identificaciones gubernamentales y las tarjetas de crédito— son ampliamente aceptadas. Nuestra sociedad ha establecido normas globales sobre cómo presentamos y verificamos las credenciales que representan estas tarjetas físicas. Pero no existe un equivalente real para las credenciales digitales.
 
@@ -25,19 +25,19 @@ Todos los días, llevamos billeteras llenas de tarjetas. Sin embargo, solo unas 
 
 En segundo lugar, no existen estándares universalmente aceptados para expresar, intercambiar y verificar credenciales digitales a través de los límites organizacionales.
 
-#### Cómo funciona la identidad descentralizada (1:03) {#how-decentralized-identity-works-103}
+### Cómo funciona la identidad descentralizada (1:03) {#how-decentralized-identity-works-103}
 
 Todo esto está a punto de cambiar. Una nueva forma de identidad digital, basada en estándares emergentes como las credenciales verificables y los identificadores descentralizados, puede permitir que las credenciales digitales funcionen en todas partes, sean más confiables y respeten la privacidad.
 
 Así es como funciona. Conoce a Alice. Su nueva billetera digital le permite poseer y controlar sus credenciales. Dado que no está vinculada a ninguna organización en particular, las fuentes autorizadas pueden emitir con confianza credenciales basadas en estándares a Alice. Cuando Alice presenta estas credenciales, los sitios web y las aplicaciones pueden comprobar que son válidas —por ejemplo, confirmando con una universidad que es estudiante allí— y luego otorgar el acceso en consecuencia.
 
-#### Confianza criptográfica (1:51) {#cryptographic-trust-151}
+### Confianza criptográfica (1:51) {#cryptographic-trust-151}
 
 Si bien este proceso puede ser más fácil, ¿cómo sabemos que es confiable? Los identificadores descentralizados aprovechan sistemas criptográficos probados. Cuando Alice presenta sus credenciales, su billetera digital genera un identificador único y lo firma utilizando una clave privada asegurada por una prueba biométrica o un PIN que solo ella conoce. La clave pública emparejada de forma única se publica en un libro mayor distribuido.
 
 Alice puede presentar su tarjeta de identificación de estudiante digital en una librería y, antes de otorgar un descuento, la librería puede confirmar que la universidad le emitió la tarjeta a Alice.
 
-#### Privacidad y control (2:27) {#privacy-and-control-227}
+### Privacidad y control (2:27) {#privacy-and-control-227}
 
 Esta experiencia imita lo que Alice hace hoy en día. Puede presentar y autenticar digitalmente un conjunto de credenciales verificables tal como presentaría una tarjeta física. Y puede revocarlas con un solo clic, tal como devolvería una tarjeta a su billetera.
 

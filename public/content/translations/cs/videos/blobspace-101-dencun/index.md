@@ -20,7 +20,7 @@ Tento rozhovor se zabývá zdrojem Etherea zvaným blobspace (prostor pro bloby)
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=dFjyUY3e53Q) zveřejněného podcastem Bankless. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod do blobspace (0:00) {#introduction-to-blob-space-000}
+### Úvod do blobspace (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Vítejte v Bankless, kde prozkoumáváme hranice internetových peněz a internetových financí. Zde se dozvíte, jak začít, jak se zlepšit a jak využít příležitosti dříve než ostatní. Jsem tu s Davidem Hoffmanem a jsme tu, abychom vám pomohli stát se více „bankless“ (nezávislými na bankách). Víte, jak říkáme, že blockchainy prodávají bloky? No, brzy bude Ethereum prodávat víc než jen bloky – bude prodávat i bloby.
 
@@ -38,7 +38,7 @@ Co to znamená pro ether? Co to znamená pro trhy, které kolem těchto věcí v
 
 Pojďme přivítat našeho hosta, Doma, známého také jako Domothy. Je to výzkumník v Nadaci Ethereum, který pracuje na výzkumu a vývoji klíčových upgradů Etherea, které nás čekají, včetně EIP-4844 (dnešní téma), plného dankshardingu a spalování MEV.
 
-#### Historie roadmapy zaměřené na rollupy (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Historie roadmapy zaměřené na rollupy (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Takže Dome, abychom plně pochopili, jak jsme se dostali k blobspace, myslím, že stojí za to zavzpomínat a pochopit celou roadmapu Etherea, protože ta dospěla k velmi logickému závěru v podobě blobů a blobspace. Můžeš nás vzít zpět v čase? Protože v jednu chvíli roadmapa Etherea zaměřená na rollupy vůbec neexistovala. Měli jsme tu věc zvanou exekuční sharding, kterou jsme vlastně nikdy nedostali. Kde v historii roadmapy Etherea je vhodné začít, abychom opravdu pochopili plný kontext blobspace?
 
@@ -58,7 +58,7 @@ To, co nyní děláme s roadmapou zaměřenou na rollupy, je, že oddělujeme ex
 
 Koncem roku 2020 si lidé uvědomili, že rollupy začínají být neuvěřitelně dobré a populární a že řeší náš problém se škálování exekuce bez nutnosti exekučního shardingu. Tím, že se vydáme cestou ekosystému rollupů, místo abychom se snažili být nějakými maximalisty vrstvy 1, mohou rollupy dělat své vlastní kompromisy, spouštět své vlastní blockchainy a experimentovat s novými věcmi. Ethereum se stará o ověřování – to je jádro toho, co blockchain je.
 
-#### Co je to blobspace? (30:00) {#what-is-blob-space-3000}
+### Co je to blobspace? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Nyní nás přenes do současného stavu, Dome. Máme mnoho rollupů, které využívají prostor pro bloky na vrstvě 1 Etherea a platí vysoké poplatky za gas, aby mohly zveřejňovat svá stavová data, aby si je mohl kdokoli ověřit. Takže, Dome, co je to blob?
 
@@ -72,7 +72,7 @@ Je to v podstatě zapečetěný balíček. Vrstva 1 ho převezme, zaručí, že 
 
 **Domothy:** Přesně tak. A další kritickou vlastností blobů je, že jsou po určité době automaticky promazávány – v současnosti je to asi 18 dní. Důvodem jejich promazávání je to, že k zaručení ověřování nevyžadujícího důvěru potřebují jednotlivci tato data pouze k prokázání finality a konsensu ohledně stavu rollupu v rámci specifického okna pro zpochybnění. Nepotřebujete tisíc uzlů, které by uchovávaly bloby staré dva roky, abyste mohli ověřit svou dnešní transakci. Když toto okno vyprší, už je z uzlu Etherea nezískáte; získáte je od poskytovatelů historie, indexerů nebo nativních průzkumníků bloků daného rollupu. Úložiště na Ethereu je navždy šíleně drahé. Odstranění požadavku na ukládání nám umožňuje škálovat propustnost blobů, aniž bychom zničili pevné disky provozovatelů uzlů.
 
-#### Ekonomika a plný danksharding (55:00) {#economics-and-full-danksharding-5500}
+### Ekonomika a plný danksharding (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Víme, že 4844 je první krok – to, čemu říkáme proto-danksharding. Zavádí formát blobu a izolovaný trh s poplatky, ale skutečný cílový počet blobů na blok je zpočátku omezen, aby to bylo zcela bezpečné. Jak to vypadá se škálováním směrem k plnému dankshardingu?
 
@@ -86,7 +86,7 @@ S dvourozměrným trhem s poplatky – v podstatě oddělenou izolovanou silnic�
 
 **Domothy:** Ano, jsou zcela oddělené. A platí to i naopak. Pokud propustnost vrstvy 2 nesmírně vzroste a tisíce rollupů budou fungovat a zahltí blobspace, výsledný nárůst základních poplatků za bloby neovlivní náklady na provedení jednoduché transakce na Ethereum Mainnetu. Základní poplatek za blob funguje přesně jako základní poplatek v EIP-1559, ale ve své vlastní dimenzi. A k tvé dřívější otázce ohledně spalování – ano, poplatek za blob generuje spálené ETH k zaplacení za zahrnutí dat do blobspace, zcela odděleně od spalování základního poplatku za prostor pro bloky.
 
-#### Budoucnost škálovatelnosti Etherea (75:00) {#the-future-of-ethereum-scalability-7500}
+### Budoucnost škálovatelnosti Etherea (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Chci se dostat k tomu, co se stane konkrétně při vydání 4844. Zpočátku je zjevně velmi vysoké očekávání, že když se kapacita blobů najednou odemkne, nebude v té přesné mikrosekundě dostatečná poptávka ze strany rollupů, aby se zcela zaplnila. Blobspace bude při spuštění až komicky levný. Ale neplatí tu zákon indukované poptávky? Pokud máte neuvěřitelně levné zdroje, aplikace, které tyto zdroje spotřebovávají, explodují v objemu.
 

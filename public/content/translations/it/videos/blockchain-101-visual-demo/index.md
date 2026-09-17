@@ -18,7 +18,7 @@ La dimostrazione visiva di Anders Brownworth su come funziona la tecnologia bloc
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=_160oMzblY8) pubblicata da Anders Brownworth. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Hash SHA-256 (0:01) {#sha-256-hash-001}
+### Hash SHA-256 (0:01) {#sha-256-hash-001}
 
 Questa è una demo sulla blockchain. Lo faremo in modo molto visivo: lo renderemo molto facile da capire analizzando passo dopo passo gli elementi chiave di cos'è una blockchain.
 
@@ -28,7 +28,7 @@ Quindi questo è l'hash del nome "Anders", tutto in minuscolo: inizia con `19ea`
 
 Posso digitare qualsiasi cosa io voglia. Potete non avere nulla — `e3b0` — questo è l'hash del nulla. Oppure potreste digitare tonnellate e tonnellate di roba. Di fatto, potreste inserire qui la Biblioteca del Congresso e otterreste un hash. La cosa interessante è che, indipendentemente dal fatto che ci sia una piccolissima quantità di informazioni, nessuna informazione o l'intera Biblioteca del Congresso, otterrete sempre un hash di questa lunghezza. Non sarete in grado di indovinare in anticipo quale sia: dovete in un certo senso inserire i dati per capire quale sia l'hash, ma otterrete sempre esattamente lo stesso hash indipendentemente da quante volte inserite esattamente le stesse informazioni.
 
-#### Blocco (2:10) {#block-210}
+### Blocco (2:10) {#block-210}
 
 Quello che farò è estendere questa idea di hash in qualcosa che chiameremo blocco. Un blocco è esattamente come l'hash, ma la sezione dei dati è stata suddivisa in tre sezioni: una chiamata "blocco" (solo un numero, questo è il blocco numero 1), un "nonce" (che è solo un altro numero) e poi alcuni dati proprio come avevamo prima.
 
@@ -40,7 +40,7 @@ Cosa succederebbe se cambiassi una qualsiasi parte di queste informazioni? Dicia
 
 Si è fermato a 59.396, e si dà il caso che questo produca un hash che inizia con quattro zeri. Soddisfa la mia definizione di cosa sia un blocco firmato.
 
-#### Blockchain (5:16) {#blockchain-516}
+### Blockchain (5:16) {#blockchain-516}
 
 Quindi sapete dirmi cos'è una blockchain? Probabilmente è solo una catena di questi blocchi. Ecco la mia blockchain: il blocco numero uno ha un nonce proprio come prima, un'area dati, ma poi ha questo campo "precedente" (previous) che è un mucchio di zeri. Andando avanti, questo è il blocco due, il blocco tre, il blocco quattro: questa blockchain ha cinque blocchi.
 
@@ -50,7 +50,7 @@ Cosa succede se cambio alcune informazioni qui? Cambierà l'hash di questo blocc
 
 Se vado a cambiare l'ultimo blocco, tutto ciò che devo fare è minare di nuovo quel singolo blocco. Se torno molto indietro nel tempo e faccio un cambiamento, devo minare questo, questo, questo e questo. Più blocchi passano, più diventa difficile apportare un cambiamento. È così che una blockchain resiste alle mutazioni: resiste ai cambiamenti.
 
-#### Blockchain distribuita (9:18) {#distributed-blockchain-918}
+### Blockchain distribuita (9:18) {#distributed-blockchain-918}
 
 Quindi come farei a sapere se la mia blockchain è stata minata di nuovo? Ora abbiamo una blockchain distribuita. Sembra esattamente come l'ultima blockchain, ma questo è il Peer A. Se andate qui sotto, potete vedere il Peer B, e ha una copia esatta della blockchain. C'è anche un Peer C: questo potrebbe andare avanti all'infinito. Ci sono molti peer su internet e tutti hanno una copia completa della blockchain.
 
@@ -60,7 +60,7 @@ Quindi so, solo dando un'occhiata a questo piccolo hash, che c'è qualcosa di sb
 
 Le blockchain possono avere 400.000 o 500.000 blocchi molto facilmente. Invece di controllarli tutti, tutto ciò che dovete fare in realtà è guardare l'hash di quello più recente, e potete vedere se qualcosa nel passato è stato alterato.
 
-#### Token (12:17) {#tokens-1217}
+### Token (12:17) {#tokens-1217}
 
 Questo è tutto: non c'è nient'altro. Ma in un certo senso non è molto utile perché non abbiamo nulla nell'area dati che significhi qualcosa. Quello che vogliamo veramente è un token.
 
@@ -70,7 +70,7 @@ Ora ho questi token: in modo del tutto arbitrario, li chiamo dollari. Abbiamo ve
 
 Una cosa che vorrei menzionare: non stiamo elencando "Darcy ha cento dollari e ne sta dando 25 a Bingley". Stiamo solo ricordando i movimenti di denaro, non i saldi dei conti bancari. Questo fa sorgere la domanda: Darcy ha 25 dollari?
 
-#### Transazione Coinbase (14:34) {#coinbase-transaction-1434}
+### Transazione Coinbase (14:34) {#coinbase-transaction-1434}
 
 Abbiamo un problema in questa versione della blockchain: in realtà non sappiamo se Darcy ha 25 dollari. Quindi diamo un'occhiata a una transazione Coinbase. Aggiungiamo una transazione Coinbase ai nostri blocchi: dice che inventeremo cento dollari dal nulla e li daremo ad Anders. Non ci sono altre transazioni in questo blocco perché nessuno aveva soldi prima di questo.
 
@@ -80,7 +80,7 @@ Li sommate tutti e non superano i cento. Segue una regola di base della valuta: 
 
 Se andiamo avanti nel tempo, vediamo che Jackson sta dando due dollari ad Alexa. Jackson ha davvero due dollari? Torniamo indietro di un blocco e vediamo che Emily aveva ricevuto dieci dollari da Anders e ne ha dati dieci a Jackson. Quindi Jackson ha i soldi. Possiamo andare a ritroso e scoprirlo: questo è uno dei vantaggi di avere il campo "precedente".
 
-#### Conclusione (16:30) {#closing-1630}
+### Conclusione (16:30) {#closing-1630}
 
 Questa è una blockchain di base che esegue una valuta al di sopra di essa. Come sapete, le blockchain hanno molte copie: tutti ne hanno una copia. Se mutiamo qualcosa e lo facciamo diventare sei dollari, i blocchi diventano non validi e non concordano con le altre copie. Questo resiste alle manomissioni, che è ciò che si desidera per una valuta. Funziona molto bene per cose che sono piccole e transazionali.
 

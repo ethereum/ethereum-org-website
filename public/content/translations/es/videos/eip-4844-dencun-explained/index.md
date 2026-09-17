@@ -21,13 +21,13 @@ Una explicación de **Finematics** que cubre el EIP-4844 (Proto-Danksharding), l
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=HT9PHWloIiU) publicada por Finematics. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:00) {#introduction-000}
+### Introducción (0:00) {#introduction-000}
 
 El escalado de Ethereum ha sido un tema muy debatido durante un tiempo. Las soluciones de capa 2 (L2) han estado a la vanguardia de esta batalla, ofreciendo una forma de manejar transacciones fuera de la cadena principal para aliviar la congestión y reducir las tarifas. Pero hay un inconveniente: incluso las L2 enfrentan limitaciones que obstaculizan su eficiencia y escalabilidad. El EIP-4844 es el siguiente paso para aumentar el potencial de las L2 y alinear a Ethereum con su hoja de ruta de escalado.
 
 Entonces, ¿de qué trata exactamente el EIP-4844? ¿Cómo ayuda exactamente con el escalado de las L2? ¿Qué nuevas posibilidades desbloquea? ¿Y es cierto que puede reducir las tarifas de transacción en las L2 en más del 90 %?
 
-#### Qué es el EIP-4844 y el Proto-Danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### Qué es el EIP-4844 y el Proto-Danksharding (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Como recordatorio, EIP significa Propuesta de Mejora de Ethereum (Ethereum Improvement Proposal), un proceso a través del cual los desarrolladores pueden sugerir cambios al protocolo de Ethereum. El EIP-4844, específicamente, presenta una propuesta para un nuevo tipo de transacción que puede mejorar significativamente la forma en que se manejan y procesan los datos en Ethereum. Es posible que también haya escuchado el nombre "Proto-Danksharding", que ahora se usa indistintamente con EIP-4844.
 
@@ -39,7 +39,7 @@ Imagine hacer un intercambio (swap) en un DEX en uno de los rollups. Si el costo
 
 El EIP-4844, junto con algunos otros EIP, se incluirá en la próxima actualización Dencun de la red.
 
-#### Detalles técnicos (2:50) {#technical-details-250}
+### Detalles técnicos (2:50) {#technical-details-250}
 
 Ahora, echemos un vistazo más de cerca a cómo funciona el EIP-4844.
 
@@ -65,7 +65,7 @@ En el caso de los rollups optimistas como Optimism o Arbitrum, solo necesitan pr
 
 Los rollups de conocimiento cero (ZK rollups) proporcionarían dos compromisos para su transacción o datos delta de estado: el compromiso del blob y el propio compromiso del ZK rollup utilizando cualquier sistema de prueba que el rollup use internamente. También usarían un protocolo de prueba de equivalencia, utilizando el precompilado de evaluación de puntos mencionado anteriormente, para demostrar que los dos compromisos se refieren a los mismos datos.
 
-#### Impacto (6:25) {#impact-625}
+### Impacto (6:25) {#impact-625}
 
 El impacto del EIP-4844 en el ecosistema de Ethereum no se puede exagerar. Para empezar, mejora drásticamente la escalabilidad de las soluciones de capa 2, reduciendo sus costos operativos y haciéndolas más competitivas con otras cadenas de bloques alternativas y baratas. La reducción del costo operativo es posible ya que la gran mayoría del costo en el que incurren actualmente los rollups se debe a las tarifas pagadas por los datos de llamada.
 
@@ -77,7 +77,7 @@ Cuando se trata de la disminución de los costos de transacción en los rollups,
 
 Una cosa es segura: incluso si el resultado principal es el aumento en la capacidad de procesamiento de transacciones y el costo de las transacciones sigue siendo el mismo, el EIP-4844 sienta las bases para una escalabilidad aún mayor en el futuro que eventualmente resultará en transacciones más baratas para los usuarios.
 
-#### Resumen (8:04) {#summary-804}
+### Resumen (8:04) {#summary-804}
 
 La comunidad de Ethereum ya ha completado las pruebas del EIP-4844 en varias redes de prueba, y se espera un lanzamiento en la Red principal el 13 de marzo. Este es un paso monumental hacia el logro de una escalabilidad sin precedentes para Ethereum. Ya podemos ver a la mayoría de las principales L2 comprometiéndose a comenzar a usar el nuevo espacio de blobs tan pronto como ocurra la actualización Dencun.
 

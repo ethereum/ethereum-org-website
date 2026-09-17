@@ -21,7 +21,7 @@ Una explicación de **Finematics** que cubre la mecánica de los tokens no fungi
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=Xdkkux6OxfM) publicada por Finematics. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Fungible vs. no fungible (0:00) {#fungible-vs-non-fungible-000}
+### Fungible vs. no fungible (0:00) {#fungible-vs-non-fungible-000}
 
 Empecemos con la palabra "fungible". Fungible significa que las unidades individuales de un activo son intercambiables e indistinguibles entre sí. Un buen ejemplo de un activo fungible es una moneda. Un billete de cinco dólares siempre tiene el mismo valor que cualquier otro billete de cinco dólares. Realmente no le importa qué billete de cinco dólares en particular recibe porque todos valen la misma cantidad.
 
@@ -29,7 +29,7 @@ Sin embargo, cuando se trata de activos no fungibles, cada unidad es única y no
 
 Otro ejemplo son las cartas coleccionables. Aunque puedan parecer similares, cada carta tiene atributos diferentes. Factores como el año de producción o cómo se conserva la carta pueden marcar la diferencia. Un ejemplo extremo de algo no fungible es una obra de arte: una pintura, por ejemplo, generalmente se crea como una única copia original.
 
-#### Propiedades de los NFT (2:13) {#properties-of-nfts-213}
+### Propiedades de los NFT (2:13) {#properties-of-nfts-213}
 
 Ahora que sabemos qué significa "no fungible", veamos las propiedades más comunes de los NFT.
 
@@ -39,7 +39,7 @@ Ahora que sabemos qué significa "no fungible", veamos las propiedades más comu
 
 De manera similar a los tokens estándar, los NFT también garantizan la propiedad del activo, son fácilmente transferibles y a prueba de fraudes.
 
-#### Estándares de tokens: ERC-20, ERC-721 y ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
+### Estándares de tokens: ERC-20, ERC-721 y ERC-1155 (3:17) {#token-standards-erc-20-erc-721-and-erc-1155-317}
 
 Aunque los NFT se pueden implementar en cualquier cadena de bloques que admita la programación de contratos inteligentes, los estándares más notables son ERC-721 y ERC-1155 en Ethereum. Antes de sumergirnos en los estándares de NFT, repasemos rápidamente el ERC-20, ya que será útil para la comparación.
 
@@ -49,7 +49,7 @@ Aunque los NFT se pueden implementar en cualquier cadena de bloques que admita l
 
 **ERC-1155** es el siguiente paso en la creación de tokens no fungibles. Este estándar permite crear contratos que admiten tanto tokens fungibles como no fungibles. Fue creado por Enjin, un proyecto centrado en los juegos basados en la cadena de bloques. En muchos juegos como World of Warcraft, un jugador puede tener tanto artículos no fungibles (espadas, escudos, armaduras) como artículos fungibles, como oro o flechas. ERC-1155 permite a los desarrolladores definir tanto tokens fungibles como no fungibles y decidir cuántos de cada uno deben existir.
 
-#### Casos de uso de los NFT (5:28) {#nft-use-cases-528}
+### Casos de uso de los NFT (5:28) {#nft-use-cases-528}
 
 Además de CryptoKitties, hay varios otros juegos populares que aprovechan los NFT, como Gods Unchained y Decentraland. Decentraland es un ejemplo interesante porque los jugadores pueden comprar parcelas de tierra digital que luego pueden revenderse o incluso usarse como espacio publicitario dentro del juego.
 
@@ -57,7 +57,7 @@ Otros ejemplos incluyen mercados de arte digital, como Rarible y SuperRare, e in
 
 Algunos NFT pueden ser extremadamente costosos. El CryptoKitty más caro, Dragon, se vendió por 600 ETH a finales de 2017, lo que equivalía a unos ciento setenta mil dólares en ese momento. Los nombres de dominio escasos como exchange.eth pueden valer más de quinientos mil dólares.
 
-#### Los NFT como colateral en DeFi (6:48) {#nfts-as-collateral-in-defi-648}
+### Los NFT como colateral en DeFi (6:48) {#nfts-as-collateral-in-defi-648}
 
 Cuando se trata de DeFi, los NFT pueden desbloquear aún más potencial para las finanzas descentralizadas (DeFi). Actualmente, la gran mayoría de los protocolos de préstamos DeFi están colateralizados. Una de las ideas más interesantes es usar los NFT como colateral. Esto significa que podría suministrar un NFT que represente una obra de arte, tierra digital o incluso bienes raíces tokenizados como colateral, y pedir dinero prestado contra él.
 
@@ -67,12 +67,12 @@ Para entender mejor este problema, imagine que alguien compra un CryptoKitty rar
 
 Es por eso que algunos proyectos que ofrecen préstamos colateralizados con NFT utilizan un modelo ligeramente diferente: préstamos entre pares. En este modelo de mercado, los prestatarios pueden ofrecer sus NFT como colateral, y los prestamistas pueden elegir qué NFT están dispuestos a aceptar antes de iniciar un préstamo. El NFT utilizado como colateral se mantiene en un contrato de depósito en garantía, y si el prestatario incumple al no reembolsar la cantidad prestada más los intereses a tiempo, el NFT se transfiere al prestamista. Este espacio es nuevo, pero una de las empresas que utiliza este modelo es NFTfi.
 
-#### Los NFT como productos financieros (9:32) {#nfts-as-financial-products-932}
+### Los NFT como productos financieros (9:32) {#nfts-as-financial-products-932}
 
 Además de usarse como colateral, los NFT también pueden representar productos financieros más complejos, como seguros, bonos u opciones. Yinsure de Yearn Finance es un buen ejemplo del uso de NFT en el espacio de los seguros. En Yinsure, cada contrato de seguro se representa como un NFT que también se puede negociar en un mercado secundario como Rarible.
 
 Recientemente también hemos comenzado a ver conceptos nativos de DeFi, como la minería de liquidez, siendo utilizados por proyectos de NFT. Rarible, por ejemplo, comenzó a recompensar a sus usuarios con tokens de gobernanza RARI por crear, comprar y vender NFT en su plataforma.
 
-#### El creciente mercado de los NFT (10:30) {#the-growing-nft-market-1030}
+### El creciente mercado de los NFT (10:30) {#the-growing-nft-market-1030}
 
 Con más de 100 millones de dólares en NFT negociados y 6 millones de dólares solo en el mes más reciente, el espacio de los NFT es uno de los nichos de más rápido crecimiento en el mundo cripto. Tiene un enorme potencial que va desde gatitos digitales hasta productos financieros complejos.

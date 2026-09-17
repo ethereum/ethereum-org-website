@@ -19,11 +19,11 @@ Sebuah webinar yang diselenggarakan oleh **Blockdaemon** bersama insinyur rantai
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=_UpAFpC7X6Y) yang diterbitkan oleh Blockdaemon. Transkrip ini telah disunting sedikit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 **Host:** Halo dan selamat datang di webinar yang diselenggarakan oleh Blockdaemon ini, yang berfokus pada pembaruan Pectra Ethereum yang akan datang. Bersama kita hari ini adalah Julia Schmidt, insinyur rantai blok di Alluvial, dan Freddy Tänzer, pimpinan ekosistem Ethereum Blockdaemon, untuk membahas bagaimana perubahan Pectra akan berdampak pada staking ETH, jaringan secara keseluruhan, layanan staking likuid, dan banyak lagi. Sebagai permulaan, Freddy — bisakah Anda memberi kami gambaran singkat tentang pembaruan Pectra dan apa dampaknya bagi pelaku staking?
 
-#### Apa itu Pectra (1:28) {#what-is-pectra-128}
+### Apa itu Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Jadi Pectra adalah pembaruan Ethereum yang dijadwalkan pada akhir Q1 2025 — sekitar bulan Maret, mungkin sedikit mundur, mungkin April atau sekitarnya. Pada awalnya ini seharusnya menjadi percabangan kecil, dan kemudian semakin banyak hal yang ditambahkan, sehingga mereka sekarang membaginya menjadi dua.
 
@@ -33,7 +33,7 @@ Yang pertama adalah fakta bahwa Anda dapat memicu penarikan dan keluar dari vali
 
 Ada juga yang lebih kecil yang pada dasarnya mengarah pada fakta bahwa deposit jauh lebih cepat — terdaftar onchain dari sekitar 14 jam menjadi kurang dari satu jam — tetapi saya pikir dua hal tersebut adalah yang paling relevan untuk diskusi kita di sini.
 
-#### EIP-7002: keluar yang dapat dipicu oleh lapisan eksekusi (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: keluar yang dapat dipicu oleh lapisan eksekusi (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Host:** Untuk perubahan besar pertama, Julia, bisakah Anda menjelaskan bagaimana proses pasca-Pectra akan berubah dibandingkan dengan cara saat ini di mana penarikan diinisiasi dalam ekosistem staking Ethereum?
 
@@ -49,7 +49,7 @@ Pada pembaruan Dencun terakhir, EIP baru mengubah waktu kedaluwarsa pada pesan k
 
 Hal ini sekarang diselesaikan dengan EIP-7002, yang memungkinkan kunci validator dan kunci penarikan untuk memicu keluar dari lapisan eksekusi — cukup dengan mengirimkan transaksi ke kontrak penarikan khusus di mana Anda mengirimkan permintaan penarikan dan menentukan apakah keluar penuh dari validator, atau penarikan sebagian dari saldo yang di-stake.
 
-#### EIP-7251: saldo efektif maksimum (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: saldo efektif maksimum (4:15) {#eip-7251-max-effective-balance-415}
 
 **Host:** Freddy, bisakah Anda memberi kami gambaran umum tentang saldo efektif maksimum ke depannya mulai dari Pectra dan seterusnya, dan bagaimana hal ini akan berdampak pada orang-orang yang saat ini melakukan staking?
 
@@ -69,7 +69,7 @@ Ada kabar baik juga tentang pemotongan: penalti pemotongan awal akan turun drast
 
 Manfaat penggabungan otomatis terutama menguntungkan jumlah stake yang lebih kecil. Jika Anda memiliki seribu validator, Anda dapat meluncurkan yang baru secara manual setiap bulan. Tetapi jika Anda hanya memiliki satu validator, Anda praktis harus menunggu 32 tahun untuk menggabungkannya.
 
-#### Implikasi staking likuid (11:25) {#liquid-staking-implications-1125}
+### Implikasi staking likuid (11:25) {#liquid-staking-implications-1125}
 
 **Host:** Julia, bagaimana perbandingan konsolidasi validator yang lebih besar dengan manfaat staking likuid? Bagaimana keputusan ini akan dipertimbangkan dalam benak pelaku staking pasca-Pectra?
 
@@ -79,7 +79,7 @@ Fakta bahwa penalti pemotongan awal telah diturunkan mengurangi risiko menjalank
 
 Dari sisi utilitas, token staking likuid jelas menambah likuiditas — bahkan dengan penarikan sebagian dari lapisan eksekusi, itu tidak akan instan. Anda mengirimkan transaksi, itu masuk antrean, lalu ada Epok keluar dan Epok penarikan. Token staking likuid masih menawarkan likuiditas instan yang tidak dapat diberikan oleh penarikan sebagian.
 
-#### Langkah selanjutnya untuk pelaku staking (16:20) {#next-steps-for-stakers-1620}
+### Langkah selanjutnya untuk pelaku staking (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Apa yang kami lihat adalah bahwa lembaga keuangan biasanya akan melakukan staking antara 65% dan 85% dari ETH mereka di bawah kustodian, karena mereka membutuhkan sisanya sebagai penyangga likuiditas untuk penebusan. Dengan staking likuid, Anda berpotensi meningkatkan jumlah ETH yang di-stake, yang menghasilkan imbalan yang lebih tinggi.
 
@@ -89,7 +89,7 @@ Kedua belah pihak mendapat manfaat dari Pectra — staking likuid mendapatkan op
 
 Keuntungan utama yang belum saya singgung adalah penarikan sebagian — sekarang setelah Anda dapat menarik ETH yang di-stake dari lapisan eksekusi, ini membuka jalan baru bagi protokol seperti EigenLayer untuk memicu penarikan dan keluar. Ada peningkatan besar dalam fungsionalitas dan interoperabilitas yang sekarang dapat digabungkan dengan lebih baik oleh keuangan terdesentralisasi (DeFi) ke dalam siklus hidup validator penuh, dari deposit hingga keluar. Sebagai insinyur rantai blok, sungguh menyenangkan bisa mengotomatiskan alur kerja secara penuh.
 
-#### Penutup (19:50) {#closing-1950}
+### Penutup (19:50) {#closing-1950}
 
 **Host:** Julia, ke mana orang bisa pergi untuk mempelajari lebih lanjut tentang Liquid Collective dan Alluvial?
 
