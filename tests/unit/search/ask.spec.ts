@@ -1,0 +1,140 @@
+import { expect, test } from "@playwright/test"
+
+import {
+  Citations,
+  citedSources,
+  groupExcerpts,
+  matchReferral,
+} from "@/lib/utils/ask"
+
+const record = (url: string, content: string) => ({
+  url,
+  content,
+  headings: ["Staking", "Solo staking"],
+})
+
+test.describe("groupExcerpts", () => {
+  test("collapses a page's sections into one numbered excerpt", () => {
+    // Numbering sections separately invites [2][3][5] citations that are all one link.
+    const excerpts = groupExcerpts([
+      record("/staking/", "first"),
+      record("/staking/", "second"),
+      record("/gas/", "third"),
+    ])
+    expect(excerpts).toHaveLength(2)
+    expect(excerpts[0].text).toBe("first\n\nsecond")
+    expect(excerpts[1].url).toBe("/gas/")
+  })
+
+  test("caps pages, so one page cannot spend the whole budget", () => {
+    const many = ["/a/", "/b/", "/c/", "/d/"].map((url) => record(url, "x"))
+    expect(groupExcerpts(many, { maxPages: 2 })).toHaveLength(2)
+  })
+
+  test("stops growing a page once it is long enough", () => {
+    const excerpts = groupExcerpts(
+      [record("/a/", "12345"), record("/a/", "more")],
+      { maxCharsPerPage: 4 }
+    )
+    expect(excerpts[0].text).toBe("12345")
+  })
+})
+
+test.describe("matchReferral", () => {
+  test("routes a question the site does not own", () => {
+    // The failure this exists for: answered from the contributor-rewards page, with
+    // real citations and a wrong answer.
+    expect(matchReferral("how do I get devcon tickets")?.name).toBe("Devcon")
+  })
+
+  test("matches whole words only", () => {
+    expect(
+      matchReferral("who is the recipient of a transaction")
+    ).toBeUndefined()
+    expect(matchReferral("what is eip 1559")?.name).toBe(
+      "Ethereum Improvement Proposals"
+    )
+  })
+
+  test("prefers the longest trigger, so the specific site wins", () => {
+    // "validator keys" is the Launchpad's; a bare staking question is not.
+    expect(matchReferral("how do I generate validator keys")?.name).toBe(
+      "Staking Launchpad"
+    )
+    expect(matchReferral("how do I stake my eth")).toBeUndefined()
+  })
+
+  test("is case and punctuation insensitive", () => {
+    expect(matchReferral("Apply for a GRANT?")?.name).toBe(
+      "Ecosystem Support Program"
+    )
+  })
+})
+
+test.describe("Citations", () => {
+  test("renumbers to first-appearance order as tokens stream", () => {
+    // The model cites a subset, so raw numbering arrives gappy and out of order.
+    const cites = new Citations(8)
+    const out = ["Rollups ", "batch [5]", " and settle [2]."]
+      .map((chunk) => cites.feed(chunk))
+      .join("")
+    expect(out).toBe("Rollups batch [1] and settle [2].")
+    expect(cites.used).toEqual([5, 2])
+  })
+
+  test("reuses a number the answer cites twice", () => {
+    const cites = new Citations(4)
+    expect(cites.feed("a [3] b [1] c [3]")).toBe("a [1] b [2] c [1]")
+  })
+
+  test("splits a comma list into one bracket each", () => {
+    const cites = new Citations(6)
+    expect(cites.feed("both [2, 4] apply")).toBe("both [1][2] apply")
+  })
+
+  test("survives a citation split across chunks", () => {
+    const cites = new Citations(3)
+    expect(cites.feed("see [") + cites.feed("2] there")).toBe("see [1] there")
+  })
+
+  test("leaves anything that is not a citation alone", () => {
+    // An out-of-range number would otherwise invent a source, and array syntax in a
+    // code answer is not a citation at all.
+    const cites = new Citations(2)
+    expect(cites.feed("use array[0] and [9]")).toBe("use array[0] and [9]")
+    expect(cites.used).toEqual([])
+  })
+
+  test("flushes an unterminated bracket rather than swallowing it", () => {
+    const cites = new Citations(2)
+    expect(cites.feed("trailing [1")).toBe("trailing ")
+    expect(cites.flush()).toBe("[1")
+  })
+})
+
+test.describe("citedSources", () => {
+  const excerpts = [
+    { url: "/a/", headings: ["A", "A section"], text: "" },
+    { url: "/b/", headings: ["B", "B section"], text: "" },
+    { url: "/c/", headings: ["C"], text: "" },
+  ]
+
+  test("lists only what was cited, numbered to match the prose", () => {
+    // Listing the whole retrieval trace invites the reader to discount the citations
+    // that matter.
+    expect(citedSources(excerpts, [3, 1])).toEqual([
+      { n: 1, url: "/c/", title: "C" },
+      { n: 2, url: "/a/", title: "A section" },
+    ])
+  })
+
+  test("falls back to the best excerpt when the answer cited nothing", () => {
+    expect(citedSources(excerpts, [])).toEqual([
+      { n: 1, url: "/a/", title: "A section" },
+    ])
+  })
+
+  test("has nothing to show when there were no excerpts", () => {
+    expect(citedSources([], [])).toEqual([])
+  })
+})

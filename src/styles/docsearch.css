@@ -399,3 +399,104 @@
     @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
   }
 }
+
+/**
+ * Ask AI
+ */
+
+/* Sits inside the vendor's form beside its reset button, which is why it is end-aligned
+   by the form's own flex row rather than positioned. */
+.DocSearch-Ask-trigger {
+  @apply ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary;
+}
+
+.DocSearch-Ask-trigger svg {
+  @apply size-3.5;
+}
+
+.DocSearch-Ask-trigger:hover:not(:disabled) {
+  @apply bg-primary-low-contrast;
+}
+
+.DocSearch-Ask-trigger:disabled {
+  @apply border-disabled text-disabled;
+}
+
+/* The label is the first thing to go when the input needs the room. */
+@media (max-width: 480px) {
+  .DocSearch-Ask-trigger span {
+    @apply sr-only;
+  }
+}
+
+/* The panel replaces the results rather than sitting above them, so the vendor's own
+   screens are hidden while it is mounted. It is portalled into the scroll container, so
+   it inherits the dropdown's height and scrolling for free. */
+[data-asking="true"] .DocSearch-Dropdown > *:not(.DocSearch-Ask) {
+  @apply hidden;
+}
+
+.DocSearch-Ask {
+  @apply flex flex-col gap-4 py-4;
+}
+
+.DocSearch-Ask-header {
+  @apply flex items-center justify-between text-xs text-body-medium uppercase;
+}
+
+.DocSearch-Ask-header button {
+  @apply text-primary normal-case hover:underline;
+}
+
+.DocSearch-Ask-status {
+  @apply text-sm text-body-medium;
+}
+
+/* Model output: spacing only. Anything that needs a heading is too long an answer. */
+.DocSearch-Ask-answer {
+  @apply flex flex-col gap-3 text-md text-body;
+}
+
+.DocSearch-Ask-answer :is(ul, ol) {
+  @apply flex list-outside flex-col gap-1 ps-5;
+}
+
+.DocSearch-Ask-answer ul {
+  @apply list-disc;
+}
+
+.DocSearch-Ask-answer ol {
+  @apply list-decimal;
+}
+
+.DocSearch-Ask-answer code {
+  @apply rounded-sm bg-background-highlight px-1 py-0.5 text-sm;
+}
+
+.DocSearch-Ask-answer a {
+  @apply text-primary underline;
+}
+
+.DocSearch-Ask-error {
+  @apply text-sm text-error;
+}
+
+.DocSearch-Ask-sources {
+  @apply flex flex-col gap-1 border-t border-solid border-disabled pt-3 text-sm;
+}
+
+.DocSearch-Ask-sources span {
+  @apply text-xs text-body-medium uppercase;
+}
+
+.DocSearch-Ask-sources ol {
+  @apply flex list-inside list-decimal flex-col gap-1;
+}
+
+.DocSearch-Ask-sources a {
+  @apply text-primary hover:underline;
+}
+
+.DocSearch-Ask-disclaimer {
+  @apply text-xs text-body-medium;
+}

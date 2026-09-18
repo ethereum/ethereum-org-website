@@ -1,8 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { useCallback, useMemo } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import { Sparkles } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
+import { createPortal } from "react-dom"
 import {
   DocSearchModal,
   type DocSearchModalProps,
@@ -27,6 +29,8 @@ import {
 import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
+
+import AskPanel from "./AskPanel"
 
 // `DocSearchHit` isn't re-exported from the package root, so derive it from the
 // modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
@@ -149,6 +153,43 @@ interface SearchModalProps {
 }
 
 /**
+ * Mount the Ask button inside the vendor's search form, and the answer panel inside its
+ * results area.
+ *
+ * Neither takes a prop for this, and the library owns both elements, so they are reached
+ * once the modal has rendered. The alternative was a third vendor patch; a portal keeps
+ * the change on our side of the line.
+ */
+const useVendorSlot = (selector: string) => {
+  const [node, setNode] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    // The modal renders in the same commit, so one frame is enough to find it.
+    const frame = requestAnimationFrame(() =>
+      setNode(document.querySelector<HTMLElement>(selector))
+    )
+    return () => cancelAnimationFrame(frame)
+  }, [selector])
+  return node
+}
+
+/**
+ * The query as the reader typed it. The vendor owns the input and exposes neither its
+ * value nor a change event, so this subscribes to the element itself.
+ */
+const useVendorQuery = (form: HTMLElement | null) => {
+  const [query, setQuery] = useState("")
+  useEffect(() => {
+    const input = form?.querySelector<HTMLInputElement>(".DocSearch-Input")
+    if (!input) return
+    setQuery(input.value.trim())
+    const read = () => setQuery(input.value.trim())
+    input.addEventListener("input", read)
+    return () => input.removeEventListener("input", read)
+  }, [form])
+  return query
+}
+
+/**
  * Everything the search modal needs, kept in this file because it is loaded lazily.
  * `Search` sits in the global header and ships on every page; the explorer data reaches
  * this module through `networks.ts`, which carries logos and page copy for all eleven
@@ -159,6 +200,16 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   const locale = useLocale()
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
+  const [asked, setAsked] = useState("")
+  const form = useVendorSlot(".DocSearch-Form")
+  const dropdown = useVendorSlot(".DocSearch-Dropdown")
+  const query = useVendorQuery(form)
+
+  // Editing the query returns to results: an answer to the previous question sitting over
+  // live results the reader is changing is the wrong thing to be looking at.
+  useEffect(() => {
+    setAsked((current) => (current && current !== query ? "" : current))
+  }, [query])
 
   const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
   const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
@@ -448,8 +499,33 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   }
 
   return (
-    <div className={className} data-testid="search-modal">
+    <div
+      className={className}
+      data-testid="search-modal"
+      data-asking={asked ? "true" : undefined}
+    >
       <DocSearchModal initialScrollY={windowScrollY} {...searchModalProps} />
+      {form &&
+        createPortal(
+          <button
+            type="button"
+            className="DocSearch-Ask-trigger"
+            title={t("docsearch-ask-ai")}
+            onClick={() => setAsked(query)}
+            // Nothing to ground an answer in until something is typed.
+            disabled={!query || !!asked}
+          >
+            <Sparkles />
+            <span>{t("docsearch-ask-ai")}</span>
+          </button>,
+          form
+        )}
+      {asked &&
+        dropdown &&
+        createPortal(
+          <AskPanel query={asked} onDismiss={() => setAsked("")} />,
+          dropdown
+        )}
     </div>
   )
 }
