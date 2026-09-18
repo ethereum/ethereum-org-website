@@ -429,10 +429,10 @@
   }
 }
 
-/* The panel replaces the results rather than sitting above them, so the vendor's own
-   screens are hidden while it is mounted. It is portalled into the scroll container, so
-   it inherits the dropdown's height and scrolling for free. */
-[data-asking="true"] .DocSearch-Dropdown > *:not(.DocSearch-Ask) {
+/* The panel replaces the results rather than sitting above them. Keyed on the panel's own
+   presence, so nothing has to keep an attribute in sync with it. Portalled into the scroll
+   container, so it inherits the dropdown's height and scrolling for free. */
+.DocSearch-Dropdown:has(.DocSearch-Ask) > *:not(.DocSearch-Ask) {
   @apply hidden;
 }
 

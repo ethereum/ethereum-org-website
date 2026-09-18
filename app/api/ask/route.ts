@@ -21,7 +21,7 @@ import {
 } from "@/lib/utils/ask"
 
 /** Records pulled for grounding, before grouping collapses them to one per page. */
-const RETRIEVE = 30
+const RETRIEVE = 60
 const MAX_PAGES = 8
 /** Reasoning is disabled, but a truncated answer is still worse than a slow one. */
 const MAX_TOKENS = 1200
@@ -60,12 +60,15 @@ const retrieve = async (
           q: query,
           query_by: [...LVLS, "content"].join(","),
           include_fields: [...LVLS, "content", "url", "type"].join(","),
-          // One record per page here too, so `RETRIEVE` counts pages rather than
-          // spending the budget on eight sections of the same page.
-          group_by: "url_without_anchor",
-          group_limit: 1,
           per_page: RETRIEVE,
           sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+          // A question is long and every token has to match, so retrieval was starving:
+          // "how do I stake my eth" returned one page and 289 characters to ground an
+          // answer in. Dropping from both ends reaches the words that carry the question.
+          // Grouping happens in code rather than through `group_by`, which counts groups
+          // while this threshold counts raw hits -- set together they cancel out.
+          drop_tokens_threshold: 30,
+          drop_tokens_mode: "both_sides:3",
           // Grounding wants the whole section, not the matched fragment a row displays.
           highlight_fields: "none",
         },
@@ -75,15 +78,12 @@ const retrieve = async (
   if (!response.ok) return []
 
   const json = await response.json()
-  const groups = json?.results?.[0]?.grouped_hits ?? []
-  return groups.flatMap(
-    (group: { hits: { document: Record<string, string> }[] }) =>
-      group.hits.map(({ document }) => ({
-        url: document.url,
-        content: document.content || "",
-        headings: LVLS.map((lvl) => document[lvl]).filter(Boolean),
-      }))
-  )
+  const hits = json?.results?.[0]?.hits ?? []
+  return hits.map(({ document }: { document: Record<string, string> }) => ({
+    url: document.url,
+    content: document.content || "",
+    headings: LVLS.map((lvl) => document[lvl]).filter(Boolean),
+  }))
 }
 
 const encoder = new TextEncoder()

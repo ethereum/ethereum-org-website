@@ -31,12 +31,28 @@ test.describe("groupExcerpts", () => {
     expect(groupExcerpts(many, { maxPages: 2 })).toHaveLength(2)
   })
 
-  test("stops growing a page once it is long enough", () => {
-    const excerpts = groupExcerpts(
-      [record("/a/", "12345"), record("/a/", "more")],
-      { maxCharsPerPage: 4 }
+  test("caps how much of one page is handed over", () => {
+    const sections = ["a", "b", "c", "d"].map((text) => record("/a/", text))
+    expect(groupExcerpts(sections, { sectionsPerPage: 2 })[0].text).toBe(
+      "a\n\nb"
     )
-    expect(excerpts[0].text).toBe("12345")
+  })
+
+  test("orders documentation ahead of video transcripts", () => {
+    // Left in rank order a governance talk led a question about gas fees.
+    const excerpts = groupExcerpts([
+      record("https://ethereum.org/videos/talk/#x", "talk"),
+      record("https://ethereum.org/gas/#y", "docs"),
+    ])
+    expect(excerpts.map((e) => e.text)).toEqual(["docs", "talk"])
+  })
+
+  test("keeps a couple of videos rather than dropping them", () => {
+    // Excluding them took "what happens if I lose my seed phrase" from nine pages to one.
+    const videos = ["a", "b", "c"].map((slug) =>
+      record(`https://ethereum.org/videos/${slug}/#x`, slug)
+    )
+    expect(groupExcerpts(videos, { maxVideoPages: 2 })).toHaveLength(2)
   })
 })
 

@@ -5,7 +5,7 @@
  * that decides what the model is told, and what the reader is shown, lives here.
  */
 
-import { type Referral,SEARCH_REFERRALS } from "@/data/search-referrals"
+import { type Referral, SEARCH_REFERRALS } from "@/data/search-referrals"
 
 export const SYSTEM_PROMPT = `You are the ethereum.org search assistant. Answer using ONLY the numbered excerpts provided.
 
@@ -39,32 +39,50 @@ export interface RetrievedRecord {
 }
 
 /**
- * One numbered excerpt per page.
+ * Collapse records into one numbered excerpt per page, best pages first.
  *
- * The crawler emits a record per section, so a page arrives as several records. Numbering
- * them separately invites `[2][3][5]` citations that are all the same link, and spends the
- * model's attention on one page.
+ * The crawler emits a record per section, so a page arrives as several records and
+ * numbering them separately invites `[2][3][5]` citations that are all the same link.
+ *
+ * Documentation is ordered ahead of video transcripts, which are conversational and
+ * keyword-dense: left in rank order a governance talk led a question about gas fees. They
+ * are capped rather than dropped, because some answers only exist in a talk -- excluding
+ * them entirely took "what happens if I lose my seed phrase" from nine pages to one.
  */
 export const groupExcerpts = (
   records: RetrievedRecord[],
-  { maxPages = 8, maxCharsPerPage = 4000 } = {}
+  { maxPages = 8, sectionsPerPage = 3, maxVideoPages = 2 } = {}
 ): Excerpt[] => {
-  const byUrl = new Map<string, Excerpt>()
+  const pages = new Map<string, Excerpt & { video: boolean; parts: string[] }>()
   for (const record of records) {
-    const existing = byUrl.get(record.url)
-    if (!existing) {
-      if (byUrl.size >= maxPages) continue
-      byUrl.set(record.url, {
+    const page = record.url.split("#")[0]
+    let entry = pages.get(page)
+    if (!entry) {
+      entry = {
         url: record.url,
         headings: record.headings,
-        text: record.content,
-      })
-      continue
+        text: "",
+        video: page.includes("/videos/"),
+        parts: [],
+      }
+      pages.set(page, entry)
     }
-    if (existing.text.length >= maxCharsPerPage) continue
-    existing.text += `\n\n${record.content}`
+    if (entry.parts.length < sectionsPerPage && record.content) {
+      entry.parts.push(record.content)
+    }
   }
-  return [...byUrl.values()]
+
+  const all = [...pages.values()]
+  const ordered = [
+    ...all.filter((page) => !page.video),
+    ...all.filter((page) => page.video).slice(0, maxVideoPages),
+  ].slice(0, maxPages)
+
+  return ordered.map(({ url, headings, parts }) => ({
+    url,
+    headings,
+    text: parts.join("\n\n"),
+  }))
 }
 
 /**
