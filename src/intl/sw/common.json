@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Kisiwa cha Wake (Marekani)",
   "region-bonaire-netherlands": "Bonaire (Uholanzi)",
   "region-saba-netherlands": "Saba (Uholanzi)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Uholanzi)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Uholanzi)",
+  "item-logo": "Nembo ya {item}"
 }

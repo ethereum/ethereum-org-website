@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Limite de gaz et renforcement contre les attaques DoS",
   "page-roadmap-fusaka-gas-item-1": "Plafond de la limite de gaz de 16,7 millions de gaz par transaction",
   "page-roadmap-fusaka-gas-item-2": "Augmentation de la limite de gaz par défaut à environ 60 millions (contre 45 millions actuellement)",
-  "page-roadmap-fusaka-additional-title": "Fonctionnalités supplémentaires potentielles",
-  "page-roadmap-fusaka-additional-item-1": "Prise en charge des enclaves sécurisées sur les appareils mobiles pour améliorer l'expérience utilisateur",
-  "page-roadmap-fusaka-additional-item-2": "Améliorations du marché des frais de blob",
-  "page-roadmap-fusaka-additional-item-3": "Améliorations supplémentaires de l'efficacité des validateurs et des performances du réseau",
   "page-roadmap-glamsterdam-epbs-title": "Séparation proposant-constructeur (PBS) intégrée",
   "page-roadmap-glamsterdam-epbs-item-1": "Sépare l'accord sur les blocs de leur traitement, aidant la couche 1 (l1) à passer à l'échelle en permettant aux validateurs de traiter plus de données",
   "page-roadmap-glamsterdam-epbs-item-2": "Intègre nativement les constructeurs afin que les validateurs puissent externaliser en toute sécurité l'assemblage des blocs sans faire confiance à des logiciels externes",
   "page-roadmap-glamsterdam-bal-title": "Listes d'accès au niveau du bloc",
   "page-roadmap-glamsterdam-bal-item-1": "Introduit des listes d'accès obligatoires au niveau du bloc, plutôt que pour les transactions individuelles",
   "page-roadmap-glamsterdam-bal-item-2": "Cartographie les dépendances à l'avance pour des synchronisations plus rapides, une exécution parallèle et des lectures de disque parallèles",
-  "page-roadmap-glamsterdam-bal-item-3": "Réduit le gaz pour les applications lourdes en état et améliore la prévisibilité des coûts en gaz",
-  "page-roadmap-hegota-discussed-title": "Prévu pour Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Les propositions sont actuellement en cours de discussion"
+  "page-roadmap-glamsterdam-bal-item-3": "Réduit le gaz pour les applications lourdes en état et améliore la prévisibilité des coûts en gaz"
 }

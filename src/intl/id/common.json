@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Pulau Wake (AS)",
   "region-bonaire-netherlands": "Bonaire (Belanda)",
   "region-saba-netherlands": "Saba (Belanda)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Belanda)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Belanda)",
+  "item-logo": "Logo {item}"
 }

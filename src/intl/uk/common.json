@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Острів Вейк (США)",
   "region-bonaire-netherlands": "Бонайре (Нідерланди)",
   "region-saba-netherlands": "Саба (Нідерланди)",
-  "region-sint-eustatius-netherlands": "Сінт-Естатіус (Нідерланди)"
+  "region-sint-eustatius-netherlands": "Сінт-Естатіус (Нідерланди)",
+  "item-logo": "Логотип {item}"
 }

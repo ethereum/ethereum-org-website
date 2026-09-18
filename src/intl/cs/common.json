@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Ostrov Wake (USA)",
   "region-bonaire-netherlands": "Bonaire (Nizozemsko)",
   "region-saba-netherlands": "Saba (Nizozemsko)",
-  "region-sint-eustatius-netherlands": "Svatý Eustach (Nizozemsko)"
+  "region-sint-eustatius-netherlands": "Svatý Eustach (Nizozemsko)",
+  "item-logo": "Logo {item}"
 }

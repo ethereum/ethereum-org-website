@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "गॅस मर्यादा आणि DoS बळकटीकरण",
   "page-roadmap-fusaka-gas-item-1": "प्रति व्यवहार 16.7M गॅसची कमाल व्यवहार गॅस मर्यादा",
   "page-roadmap-fusaka-gas-item-2": "डिफॉल्ट गॅस मर्यादेत ~60M पर्यंत वाढ (सध्याच्या 45M वरून)",
-  "page-roadmap-fusaka-additional-title": "संभाव्य अतिरिक्त वैशिष्ट्ये",
-  "page-roadmap-fusaka-additional-item-1": "UX सुधारण्यासाठी मोबाइल उपकरणांवरील सुरक्षित एन्क्लेव्हसाठी समर्थन",
-  "page-roadmap-fusaka-additional-item-2": "ब्लॉब शुल्क बाजार सुधारणा",
-  "page-roadmap-fusaka-additional-item-3": "प्रमाणक कार्यक्षमता आणि नेटवर्क कार्यप्रदर्शनात पुढील सुधारणा",
   "page-roadmap-glamsterdam-epbs-title": "प्रस्थापित प्रस्तावक-निर्माता विभाजन (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "प्रक्रियेतून ब्लॉक करार वेगळे करते, प्रमाणकांना अधिक डेटावर प्रक्रिया करण्याची परवानगी देऊन स्तर १ (l1) स्केल करण्यास मदत करते",
   "page-roadmap-glamsterdam-epbs-item-2": "निर्मात्यांना मूळतः एकत्रित करते जेणेकरून प्रमाणक बाह्य सॉफ्टवेअरवर विश्वास न ठेवता ब्लॉक असेंब्ली सुरक्षितपणे आउटसोर्स करू शकतील",
   "page-roadmap-glamsterdam-bal-title": "ब्लॉक-स्तरीय ॲक्सेस याद्या",
   "page-roadmap-glamsterdam-bal-item-1": "वैयक्तिक व्यवहारांऐवजी ब्लॉक स्तरावर अनिवार्य ॲक्सेस याद्या सादर करते",
   "page-roadmap-glamsterdam-bal-item-2": "जलद सिंक, समांतर अंमलबजावणी आणि समांतर डिस्क रीड्ससाठी अवलंबित्व अगोदर मॅप करते",
-  "page-roadmap-glamsterdam-bal-item-3": "स्थिती-जड ॲप्ससाठी गॅस कमी करते आणि गॅस खर्चाचा अंदाज सुधारते",
-  "page-roadmap-hegota-discussed-title": "हेगोटासाठी नियोजित",
-  "page-roadmap-hegota-discussed-item-1": "प्रस्तावांवर सध्या चर्चा सुरू आहे"
+  "page-roadmap-glamsterdam-bal-item-3": "स्थिती-जड ॲप्ससाठी गॅस कमी करते आणि गॅस खर्चाचा अंदाज सुधारते"
 }

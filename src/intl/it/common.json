@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Isola di Wake (USA)",
   "region-bonaire-netherlands": "Bonaire (Paesi Bassi)",
   "region-saba-netherlands": "Saba (Paesi Bassi)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Paesi Bassi)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Paesi Bassi)",
+  "item-logo": "Logo di {item}"
 }
