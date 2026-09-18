@@ -399,3 +399,125 @@
     @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
   }
 }
+
+/**
+ * Ask AI
+ */
+
+/* Sits inside the vendor's form ahead of its reset button, which is why it is
+   end-aligned by the form's own flex row rather than positioned. */
+.DocSearch-Ask-slot {
+  @apply flex shrink-0 items-center;
+}
+
+.DocSearch-Ask-trigger {
+  @apply ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary;
+}
+
+.DocSearch-Ask-trigger svg {
+  @apply size-3.5;
+}
+
+.DocSearch-Ask-trigger:hover:not(:disabled) {
+  @apply bg-primary-low-contrast;
+}
+
+.DocSearch-Ask-trigger:disabled {
+  @apply border-disabled text-disabled;
+}
+
+/* The label is the first thing to go when the input needs the room. */
+@media (max-width: 480px) {
+  .DocSearch-Ask-trigger span {
+    @apply sr-only;
+  }
+}
+
+/* The panel replaces the results rather than sitting above them. Keyed on the panel's own
+   presence, so nothing has to keep an attribute in sync with it. Portalled into the scroll
+   container, so it inherits the dropdown's height and scrolling for free. */
+.DocSearch-Dropdown:has(.DocSearch-Ask) > *:not(.DocSearch-Ask) {
+  @apply hidden;
+}
+
+/* Prose, not a row: the results this replaces are clickable and this is not. */
+.DocSearch-Ask {
+  @apply flex cursor-auto flex-col gap-4 py-4;
+}
+
+.DocSearch-Ask-header {
+  @apply flex items-center justify-between text-xs text-body-medium uppercase;
+}
+
+.DocSearch-Ask-header button {
+  @apply text-primary normal-case hover:underline;
+}
+
+.DocSearch-Ask-status {
+  @apply text-sm text-body-medium;
+}
+
+/* Model output: spacing only. Anything that needs a heading is too long an answer. */
+.DocSearch-Ask-answer {
+  @apply flex flex-col gap-3 text-md text-body;
+}
+
+.DocSearch-Ask-answer :is(ul, ol) {
+  @apply m-0 flex list-outside flex-col gap-1 ps-5;
+}
+
+.DocSearch-Ask-answer ul {
+  @apply list-disc;
+}
+
+.DocSearch-Ask-answer ol {
+  @apply list-decimal;
+}
+
+.DocSearch-Ask-answer code {
+  @apply rounded-sm bg-background-highlight px-1 py-0.5 text-sm;
+}
+
+.DocSearch-Ask-answer a {
+  @apply text-primary underline;
+}
+
+/* A citation marks the sentence rather than sitting in it. Runs carry their own
+   separator, set where the links are built -- an adjacency rule here could not tell which
+   superscripts belonged to the same run. */
+.DocSearch-Ask-cite {
+  @apply text-xs;
+}
+
+.DocSearch-Ask-cite a {
+  @apply text-primary no-underline hover:underline;
+}
+
+/* The site that owns the question, when the answer routed rather than answered. */
+.DocSearch-Ask-referral a {
+  @apply text-primary hover:underline;
+}
+
+.DocSearch-Ask-error {
+  @apply text-sm text-error;
+}
+
+.DocSearch-Ask-sources {
+  @apply flex flex-col gap-1 border-t border-solid border-disabled pt-3 text-sm;
+}
+
+.DocSearch-Ask-sources span {
+  @apply text-xs text-body-medium uppercase;
+}
+
+.DocSearch-Ask-sources ol {
+  @apply m-0 flex list-inside list-decimal flex-col gap-1;
+}
+
+.DocSearch-Ask-sources a {
+  @apply text-primary hover:underline;
+}
+
+.DocSearch-Ask-disclaimer {
+  @apply text-xs text-body-medium;
+}
