@@ -1,5 +1,5 @@
 import {
-  Building2,
+  Building,
   Landmark,
   type LucideIcon,
   ShoppingCart,
@@ -64,13 +64,15 @@ const AUDIENCES: Audience[] = [
     key: "public-sector",
     href: "/organizations/public-sector/",
     icon: Landmark,
-    tile: "text-blue-600 bg-blue-600/10",
-    marker: "marker:text-blue-600",
+    // `accent-a` is the semantic alias for this blue; the raw `blue-600`
+    // palette entry is only defined in `:root`, so it never adapts in dark.
+    tile: "text-accent-a bg-accent-a/10",
+    marker: "marker:text-accent-a",
   },
   {
     key: "enterprise",
     href: "/organizations/enterprise/",
-    icon: Building2,
+    icon: Building,
     tile: "text-primary bg-primary/10",
     marker: "marker:text-primary",
   },
@@ -131,13 +133,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="audiences">
             <SectionIntro
               title={t("page-organizations-hub-audiences-title")}
               description={t("page-organizations-hub-audiences-description")}
             />
-            <Grid balanced={4} data-flow="cta" className="gap-6">
+            <Grid balanced={4} data-flow="cta">
               {AUDIENCES.map(({ key, href, icon: Icon, tile, marker }) => (
                 <Card key={key} href={href} variant="ghost" border size="lg">
                   <CardHeader className="flex flex-row items-center gap-3">
@@ -161,7 +163,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       className={cn("mb-0 text-sm text-body-medium", marker)}
                     >
                       {[1, 2, 3].map((n) => (
-                        <ListItem key={n} className="text-body-medium">
+                        <ListItem key={n}>
                           {t(
                             `page-organizations-hub-audiences-${key}-item-${n}`
                           )}
@@ -170,7 +172,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </UnorderedList>
                   </CardContent>
                   <CardFooter>
-                    <CardButtonFake>
+                    {/* `withChevron` is the RTL-aware stand-in for the
+                        design's trailing arrow-right glyph. */}
+                    <CardButtonFake withChevron>
                       {t(`page-organizations-hub-audiences-${key}-cta`)}
                     </CardButtonFake>
                   </CardFooter>
@@ -217,8 +221,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </InlineLink>
                 </sup>
               </p>
+              {/* TODO(content): this attribution line is not in the Figma
+                  frame -- the design has only the superscript link. Two of the
+                  three figures ("monthly active addresses", "monthly active
+                  users") are on-chain metrics that a holder survey is unlikely
+                  to contain, so each figure needs confirming against the report
+                  (or its own source) before launch. */}
               <p className="text-sm text-body-medium">
-                1. {t("page-organizations-hub-adoption-source")}
+                <bdi>1.</bdi> {t("page-organizations-hub-adoption-source")}
               </p>
             </div>
             <AdoptionChart

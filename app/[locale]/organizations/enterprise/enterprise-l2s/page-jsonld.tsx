@@ -69,7 +69,8 @@ export default async function EnterpriseL2sPageJsonLD({
             {
               "@type": "ListItem",
               position: 4,
-              name: t("page-organizations-enterprise-l2s-meta-title"),
+              // matches the visible breadcrumb, which renders the common.json label
+              name: tCommon("enterprise-l2s"),
               item: url,
             },
           ],

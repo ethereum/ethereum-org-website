@@ -5,7 +5,7 @@ import { Image } from "@/components/Image"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
-import ethereumCityImg from "@/public/images/organizations/ethereum-city.png"
+import enterpriseImg from "@/public/images/organizations/hero-enterprise.png"
 import defiImg from "@/public/images/organizations/isometric-defi.png"
 import privacyImg from "@/public/images/organizations/isometric-privacy.png"
 import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
@@ -13,8 +13,11 @@ import tokenizationImg from "@/public/images/organizations/isometric-tokenizatio
 const READING = [
   {
     key: "enterprise",
+    // Isometric line art like its three siblings. `ethereum-city.png` is an
+    // opaque full-colour illustration, so as a card banner it read as a photo
+    // dropped into a row of transparent line drawings.
     href: "/organizations/enterprise/",
-    image: ethereumCityImg,
+    image: enterpriseImg,
   },
   {
     key: "privacy",

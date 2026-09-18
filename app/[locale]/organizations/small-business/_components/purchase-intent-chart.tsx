@@ -17,8 +17,6 @@ export type PurchaseIntentItem = {
 
 type PurchaseIntentChartProps = {
   items: PurchaseIntentItem[]
-  /** Accessible description of what the percentages measure */
-  caption: string
   className?: string
 }
 
@@ -28,7 +26,15 @@ const chartConfig = {
   apparel: { color: "hsla(var(--accent-a))" },
   travel: { color: "hsla(var(--accent-b))" },
   convenience: { color: "hsla(var(--accent-c))" },
-  cafes: { color: "hsla(var(--warning-dark))" },
+  // `--warning-dark` resolves to the same near-black yellow-900 in both themes,
+  // so a single colour leaves this bar invisible on the dark background. The
+  // theme pair keeps the design's yellow while stepping light in dark mode.
+  cafes: {
+    theme: {
+      light: "hsla(var(--warning-dark))",
+      dark: "hsla(var(--warning))",
+    },
+  },
 } satisfies ChartConfig
 
 const MAX_LINE_CHARS = 12
@@ -75,19 +81,19 @@ const CategoryTick = ({ x = 0, y = 0, payload }: TickProps) => {
  * label below, one theme color per bar. Data is static (NCA 2026 report).
  * The wrapper is a CSS container so the category labels can step down in size
  * when six columns share a phone-width track.
+ *
+ * The figure is `aria-hidden` and carries no accessible name: Recharts renders
+ * nothing server-side, so the six values would be missing from the DOM for
+ * assistive tech and for no-JS visitors alike. The caller owns the accessible
+ * (and no-JS) representation -- a server-rendered `sr-only` description list
+ * of the same six pairs, inside the `<figure>` that wraps this chart.
  */
 const PurchaseIntentChart = ({
   items,
-  caption,
   className,
 }: PurchaseIntentChartProps) => (
-  <div className={cn("@container w-full", className)}>
-    <ChartContainer
-      config={chartConfig}
-      className="aspect-4/3 w-full"
-      role="img"
-      aria-label={caption}
-    >
+  <div className={cn("@container w-full", className)} aria-hidden="true">
+    <ChartContainer config={chartConfig} className="aspect-4/3 w-full">
       <BarChart
         data={items}
         margin={{ top: 28, right: 0, bottom: 8, left: 0 }}
@@ -101,7 +107,7 @@ const PurchaseIntentChart = ({
           height={56}
           tick={<CategoryTick />}
         />
-        <YAxis hide domain={[0, 60]} />
+        <YAxis hide domain={[0, 100]} />
         <Bar dataKey="value" radius={[8, 8, 0, 0]} isAnimationActive={false}>
           {items.map(({ key }) => (
             <Cell key={key} fill={`var(--color-${key})`} />

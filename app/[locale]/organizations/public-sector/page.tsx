@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react"
+import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -15,7 +15,6 @@ import {
   CardEmoji,
   CardFooter,
   CardHeader,
-  CardIconContainer,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -39,10 +38,10 @@ import SectionIntro from "../_components/section-intro"
 import PageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/organizations/hero-public-sector.png"
-import defiImg from "@/public/images/organizations/isometric-defi.png"
-import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
-import privacyImg from "@/public/images/organizations/isometric-privacy.png"
-import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
+import recordsImg from "@/public/images/organizations/isometric-defi.png"
+import fundingImg from "@/public/images/organizations/isometric-l2-stack.png"
+import financeImg from "@/public/images/organizations/isometric-privacy.png"
+import identityImg from "@/public/images/organizations/isometric-tokenization.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -57,28 +56,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const useCases = [
+  // `records` and `funding` have no `href` on purpose: no page on the site
+  // covers public registries or government-to-citizen disbursement, and the
+  // nearest candidates ("Introduction to smart contracts", "Ethereum grants")
+  // would send readers somewhere that does not answer the card. They stay
+  // informational until that content exists.
+  const useCases: {
+    key: string
+    image: StaticImageData
+    href?: string
+  }[] = [
     {
       key: "identity",
       href: "/decentralized-identity/",
-      image: tokenizationImg,
+      image: identityImg,
     },
     {
       key: "records",
-      href: "/smart-contracts/",
-      image: defiImg,
+      image: recordsImg,
     },
     {
       key: "funding",
-      href: "/community/grants/",
-      image: l2StackImg,
+      image: fundingImg,
     },
     {
       key: "finance",
-      href: "/stablecoins/",
-      image: privacyImg,
+      href: "/organizations/enterprise/onchain-finance/",
+      image: financeImg,
     },
-  ] as const
+  ]
 
   const fitsRows = [
     "coordinate",
@@ -97,19 +103,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
     {
       key: "buenos-aires",
-      href: "https://quarkid.org/",
+      href: "https://buenosaires.gob.ar/innovacionytransformaciondigital/quarkid/quarkid",
       badge: <CardEmoji text="🇦🇷" />,
     },
     {
       key: "unicef",
-      href: "https://www.unicef.org/innovation/cryptofund",
-      badge: (
-        <CardIconContainer>
-          <Globe />
-        </CardIconContainer>
-      ),
+      href: "https://www.unicef.org/innovation/stories/unicef-cryptofund",
+      badge: <CardEmoji text="🇺🇳" />,
     },
     {
+      // TODO(content): the india title and description were narrowed to a
+      // pilot for this PR — the only source is a UNDP blog post about a
+      // single-district proof of concept, not a production deployment.
       key: "india",
       href: "https://www.undp.org/blog/using-blockchain-make-land-registry-more-reliable-india",
       badge: <CardEmoji text="🇮🇳" />,
@@ -133,7 +138,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-public-sector-use-cases-title")}
@@ -149,7 +154,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       <Image
                         src={image}
                         alt=""
-                        sizes="(max-width: 768px) 100vw, 320px"
+                        sizes="(max-width: 768px) 340px, 320px"
                       />
                     </CardBanner>
                   </CardHeader>
@@ -165,13 +170,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       )}
                     </CardParagraph>
                   </CardContent>
-                  <CardFooter>
-                    <CardButtonFake>
-                      {t(
-                        `page-organizations-public-sector-use-cases-${key}-cta`
-                      )}
-                    </CardButtonFake>
-                  </CardFooter>
+                  {href && (
+                    <CardFooter>
+                      <CardButtonFake>
+                        {t(
+                          `page-organizations-public-sector-use-cases-${key}-cta`
+                        )}
+                      </CardButtonFake>
+                    </CardFooter>
+                  )}
                 </Card>
               ))}
             </Grid>
@@ -186,7 +193,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             />
             <Table variant="highlight-first-column">
               <TableCaption className="sr-only">
-                {t("page-organizations-public-sector-fits-title")}
+                {/* TODO(content): caption written for this PR, not from Figma — it exists so screen readers do not hear the section heading twice */}
+                {t("page-organizations-public-sector-fits-caption")}
               </TableCaption>
               <TableHeader>
                 <TableRow>

@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -6,7 +7,6 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -41,9 +41,24 @@ import tokenizationImg from "@/public/images/organizations/isometric-tokenizatio
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
 
-const Footnote = () => (
+/** Target of every footnote marker; the source link itself lives on the footnote. */
+const FOOTNOTE_ID = "footnote-nca-2026"
+
+/**
+ * In-page footnote marker. It points at the on-page footnote (not straight out
+ * to the PDF, which skipped the footnote entirely and gave three links the
+ * accessible name "1"), and the link box is padded out to the 24x24 minimum
+ * target size while the `<sup>` keeps the superscript semantics.
+ */
+const FootnoteRef = ({ id, label }: { id: string; label: string }) => (
   <sup>
-    <InlineLink href={NCA_REPORT_URL} hideArrow>
+    <InlineLink
+      id={id}
+      href={`#${FOOTNOTE_ID}`}
+      aria-label={label}
+      hideArrow
+      className="inline-flex size-6 items-center justify-center"
+    >
       1
     </InlineLink>
   </sup>
@@ -115,7 +130,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-small-business-use-cases-title")}
@@ -161,15 +176,32 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-purchases-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-purchases-description")}{" "}
-                <Footnote />
+                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
+                <FootnoteRef
+                  id="footnote-ref-purchases"
+                  label={t(
+                    "page-organizations-small-business-footnote-marker-label"
+                  )}
+                />
               </p>
             </div>
-            <PurchaseIntentChart
-              items={purchaseIntent}
-              caption={t(
-                "page-organizations-small-business-purchases-chart-caption"
-              )}
-            />
+            {/* Recharts renders nothing server-side, so the six values live in a
+                server-rendered sr-only list: the accessible representation, and
+                the no-JS fallback for what would otherwise be an empty box. */}
+            <figure className="m-0 min-w-0">
+              <PurchaseIntentChart items={purchaseIntent} />
+              <dl className="sr-only">
+                {purchaseIntent.map(({ key, label, display }) => (
+                  <Fragment key={key}>
+                    <dt>{label}</dt>
+                    <dd>{display}</dd>
+                  </Fragment>
+                ))}
+              </dl>
+              <figcaption className="sr-only">
+                {t("page-organizations-small-business-purchases-chart-caption")}
+              </figcaption>
+            </figure>
           </Section>
 
           <Section
@@ -182,14 +214,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p className="max-w-3xl text-lg text-body-medium">
               {t("page-organizations-small-business-payments-description")}
             </p>
-            <div data-flow="cta" className="flex flex-wrap gap-4">
-              <ButtonLink href="https://help.crypto.com/en/articles/6188943-shopify-setup-guide">
-                {t("page-organizations-small-business-payments-shopify-cta")}
-              </ButtonLink>
-              <ButtonLink href="https://wordpress.org/plugins/mycryptocheckout/">
-                {t("page-organizations-small-business-payments-wordpress-cta")}
-              </ButtonLink>
-            </div>
+            {/* TODO(content): this panel had "Shopify" and "WordPress" CTAs that
+                opened a Crypto.com support article and an unaudited third-party
+                plugin -- a button must not be labelled with a destination it does
+                not open, and neither target clears the product-listing bar in
+                public/content/contributing/adding-products/index.md. Approved
+                first-party destinations are needed before any CTA returns here. */}
           </Section>
 
           <Section
@@ -201,7 +231,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-adoption-description")}{" "}
-                <Footnote />
+                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
+                <FootnoteRef
+                  id="footnote-ref-adoption"
+                  label={t(
+                    "page-organizations-small-business-footnote-marker-label"
+                  )}
+                />
               </p>
             </div>
             {/* TODO(data): no live source yet -- figures from the design (NCA footnote) */}
@@ -244,9 +280,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-holders-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-holders-description")}{" "}
-                <Footnote />
+                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
+                <FootnoteRef
+                  id="footnote-ref-holders"
+                  label={t(
+                    "page-organizations-small-business-footnote-marker-label"
+                  )}
+                />
               </p>
             </div>
+            {/* TODO(content): one caption per gauge -- written for this PR, not from
+                Figma. The design never states what either percentage measures, and
+                the two describe different populations, so they cannot share one
+                caption. The 40% wording follows this section's own <h2>; the 72%
+                wording claims only a future increase. */}
             <CryptoHoldersChart
               className="lg:col-start-1 lg:row-start-1"
               items={[
@@ -257,6 +304,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   label: t(
                     "page-organizations-small-business-holders-now-label"
                   ),
+                  caption: t(
+                    "page-organizations-small-business-holders-now-caption"
+                  ),
                 },
                 {
                   key: holders[1].key,
@@ -265,18 +315,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   label: t(
                     "page-organizations-small-business-holders-expected-label"
                   ),
+                  caption: t(
+                    "page-organizations-small-business-holders-expected-caption"
+                  ),
                 },
               ]}
-              caption={t(
-                "page-organizations-small-business-holders-chart-caption"
-              )}
             />
           </Section>
 
           <Section id="sources">
-            <p className="text-sm text-body-medium">
-              {t("page-organizations-small-business-footnote-source")}
-            </p>
+            <ol className="m-0 list-decimal ps-6 text-sm text-body-medium">
+              <li id={FOOTNOTE_ID} className="m-0">
+                <InlineLink href={NCA_REPORT_URL}>
+                  {t("page-organizations-small-business-footnote-source")}
+                </InlineLink>
+              </li>
+            </ol>
           </Section>
         </MainArticle>
 

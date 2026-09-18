@@ -62,10 +62,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       getAppPageContributorInfo("organizations/enterprise", locale as Lang),
     ])
 
+  const uptimeYears = uptimeYearsSince(ETHEREUM_GENESIS_TIMESTAMP)
+
   const stats: HeroStat[] = [
     {
       value: t("page-organizations-enterprise-stat-uptime-value", {
-        years: uptimeYearsSince(ETHEREUM_GENESIS_TIMESTAMP),
+        years: uptimeYears,
       }),
       label: t("page-organizations-enterprise-stat-uptime"),
     },
@@ -121,7 +123,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const whyItems = ["neutrality", "composable", "liquidity", "resilience"].map(
     (key) => ({
       title: t(`page-organizations-enterprise-why-${key}-title`),
-      description: t(`page-organizations-enterprise-why-${key}-description`),
+      // `years` keeps the uptime/network-effect figures in the liquidity and
+      // resilience copy in step with the hero stat above
+      description: t(`page-organizations-enterprise-why-${key}-description`, {
+        years: uptimeYears,
+      }),
     })
   )
 
@@ -155,7 +161,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="stats" data-flow="skip">
             <HeroStats stats={stats} />
           </Section>

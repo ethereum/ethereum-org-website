@@ -16,9 +16,19 @@ export type ComparisonRow = {
 }
 
 type ComparisonTableProps = {
-  /** Visually hidden caption for screen readers */
+  /**
+   * Names the table for screen readers. Rendered as a visually hidden
+   * `<caption>` -- the visible name is the `<h2>` above the table, so keep this
+   * distinct from that heading rather than repeating it.
+   */
   caption: string
-  /** Column headings, excluding the leading row-label column */
+  /**
+   * Heading for the criterion (first) column. The Figma frames leave this cell
+   * empty on most pages; pass it where the design shows a label (e.g.
+   * "Functions" on the tokenization matrix).
+   */
+  rowHeader?: ReactNode
+  /** Column headings, excluding the leading criterion column */
   columns: ReactNode[]
   rows: ComparisonRow[]
 }
@@ -26,34 +36,45 @@ type ComparisonTableProps = {
 /**
  * Feature-by-feature comparison matrix: the first column names the criterion
  * and is highlighted; the remaining columns are the options being compared.
- * Scrolls horizontally on narrow viewports instead of squeezing the cells.
+ *
+ * Each criterion is a `<th scope="row">` and each column heading a
+ * `<th scope="col">`, so a screen reader announces both the row and the column
+ * a verdict cell belongs to. A plain `<td>` grid would read as an unlabelled
+ * wall of text, which is the whole point of a comparison matrix lost.
+ *
+ * `Table` supplies its own horizontal scroll container, so this component adds
+ * none; `min-w-2xl` keeps the cells readable and lets that container scroll on
+ * narrow viewports.
  */
-const ComparisonTable = ({ caption, columns, rows }: ComparisonTableProps) => (
-  <div className="w-full overflow-x-auto">
-    <Table variant="highlight-first-column" className="min-w-2xl">
-      <TableCaption className="sr-only">{caption}</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead>
-            <span className="sr-only">{caption}</span>
+const ComparisonTable = ({
+  caption,
+  rowHeader,
+  columns,
+  rows,
+}: ComparisonTableProps) => (
+  <Table variant="highlight-first-column" className="min-w-2xl">
+    <TableCaption className="sr-only">{caption}</TableCaption>
+    <TableHeader>
+      <TableRow>
+        <TableHead scope="col">{rowHeader}</TableHead>
+        {columns.map((column, idx) => (
+          <TableHead key={idx} scope="col">
+            {column}
           </TableHead>
-          {columns.map((column, idx) => (
-            <TableHead key={idx}>{column}</TableHead>
+        ))}
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      {rows.map(({ label, cells }, rowIdx) => (
+        <TableRow key={rowIdx}>
+          <TableHead scope="row">{label}</TableHead>
+          {cells.map((cell, cellIdx) => (
+            <TableCell key={cellIdx}>{cell}</TableCell>
           ))}
         </TableRow>
-      </TableHeader>
-      <TableBody>
-        {rows.map(({ label, cells }, rowIdx) => (
-          <TableRow key={rowIdx}>
-            <TableCell>{label}</TableCell>
-            {cells.map((cell, cellIdx) => (
-              <TableCell key={cellIdx}>{cell}</TableCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </div>
+      ))}
+    </TableBody>
+  </Table>
 )
 
 export default ComparisonTable

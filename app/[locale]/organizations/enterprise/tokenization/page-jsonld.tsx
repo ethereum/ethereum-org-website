@@ -17,7 +17,6 @@ export default async function TokenizationPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-organizations-enterprise-tokenization")
-  const tEnterprise = await getTranslations("page-organizations-enterprise")
   const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(
@@ -62,16 +61,20 @@ export default async function TokenizationPageJsonLD({
               name: tCommon("organizations"),
               item: normalizeUrlForJsonLd(locale, "/organizations/"),
             },
+            // Positions 3 and 4 use the `common.json` crumb labels so the
+            // structured data mirrors the visible breadcrumb trail exactly
+            // ("ethereum.org / Organizations / Enterprise / Tokenization")
+            // rather than the longer page/meta titles.
             {
               "@type": "ListItem",
               position: 3,
-              name: tEnterprise("page-organizations-enterprise-hero-title"),
+              name: tCommon("enterprise"),
               item: normalizeUrlForJsonLd(locale, "/organizations/enterprise/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: t("page-organizations-enterprise-tokenization-meta-title"),
+              name: tCommon("tokenization"),
               item: url,
             },
           ],

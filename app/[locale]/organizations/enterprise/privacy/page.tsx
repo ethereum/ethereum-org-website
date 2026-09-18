@@ -220,7 +220,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="stats" data-flow="skip">
             <HeroStats stats={stats} />
           </Section>

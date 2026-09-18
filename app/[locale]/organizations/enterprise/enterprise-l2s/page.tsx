@@ -162,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="stats" data-flow="skip">
             <HeroStats stats={stats} />
           </Section>
@@ -197,7 +197,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               ))}
             </Grid>
-            <Card variant="ghost" border href="/layer-2/learn/">
+            <Card variant="ghost" border href="#approach">
               <CardHeader>
                 <CardIconContainer>
                   <Sparkles />
@@ -271,7 +271,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <ChecklistPanel
             id="trust-layer"
-            tint="primary"
+            tint="success"
             title={t("page-organizations-enterprise-l2s-trust-title")}
             description={t(
               "page-organizations-enterprise-l2s-trust-description"
@@ -380,6 +380,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <ButtonLink href={href} variant="outline" size="sm">
                       {t("page-organizations-enterprise-l2s-deployment-cta")}
+                      {/* the three CTAs share the visible label "Go", so the
+                          network name keeps their accessible names distinct */}
+                      <span className="sr-only">
+                        &nbsp;
+                        {t(
+                          `page-organizations-enterprise-l2s-deployment-${key}-name`
+                        )}
+                      </span>
                     </ButtonLink>
                   </li>
                 ))}

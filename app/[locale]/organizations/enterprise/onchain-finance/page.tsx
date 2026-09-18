@@ -12,6 +12,7 @@ import {
   CardFooter,
   CardHeader,
   CardIconContainer,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -20,7 +21,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ExpertContacts from "../../_components/expert-contacts"
 import FurtherReading from "../../_components/further-reading"
@@ -57,10 +58,16 @@ const PROTOCOLS = [
   { key: "ethena", href: "https://ethena.fi/" },
   { key: "uniswap", href: "https://uniswap.org/" },
   { key: "pendle", href: "https://www.pendle.finance/" },
-  { key: "spark", href: "https://spark.fi/" },
+  { key: "spark", href: "https://spark.finance/" },
   { key: "morpho", href: "https://morpho.org/" },
   { key: "compound", href: "https://compound.finance/" },
 ] as const
+
+// TODO(data): no live source yet — Ethereum's share of global DeFi TVL is hard-coded from the design
+const GLOBAL_DEFI_TVL_SHARE = 0.56
+
+// TODO(data): no live source yet — 24h DEX volume (12-month avg) is hard-coded from the design
+const DEX_VOLUME_24H_USD = 1.89e9
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -94,19 +101,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ...DEFILLAMA,
     },
     {
-      // TODO(data): no live source yet — Ethereum's share of global DeFi TVL is hard-coded from the design
-      value: t(
-        "page-organizations-enterprise-onchain-finance-stat-global-share-value"
+      value: numberFormat(locale, { style: "percent" }).format(
+        GLOBAL_DEFI_TVL_SHARE
       ),
       label: t(
         "page-organizations-enterprise-onchain-finance-stat-global-share"
       ),
     },
     {
-      // TODO(data): no live source yet — 24h DEX volume (12-month avg) is hard-coded from the design
-      value: t(
-        "page-organizations-enterprise-onchain-finance-stat-dex-volume-value"
-      ),
+      value: formatLargeUSD(DEX_VOLUME_24H_USD, locale),
       label: t("page-organizations-enterprise-onchain-finance-stat-dex-volume"),
     },
   ]
@@ -136,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="stats" data-flow="skip">
             <HeroStats stats={stats} />
           </Section>
@@ -233,6 +236,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               </h2>
               <p className="text-lg text-body-medium">
+                {/* TODO(content): ecosystem lead — written for this PR, not from Figma */}
                 {t(
                   "page-organizations-enterprise-onchain-finance-ecosystem-description"
                 )}
@@ -248,6 +252,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       )}
                     </CardTitle>
                   </CardContent>
+                  <CardFooter buttons="inherit">
+                    <CardLinkFake>
+                      {t(
+                        "page-organizations-enterprise-onchain-finance-ecosystem-visit-cta"
+                      )}
+                    </CardLinkFake>
+                  </CardFooter>
                 </Card>
               ))}
             </Grid>
@@ -280,6 +291,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["organizations", "enterprise", "onchain-finance"],
     title: t("page-organizations-enterprise-onchain-finance-meta-title"),
+    // TODO(content): meta description — written for this PR, not from Figma
     description: t(
       "page-organizations-enterprise-onchain-finance-meta-description"
     ),

@@ -44,7 +44,15 @@ const DEFILLAMA = {
   sourceUrl: "https://defillama.com/",
 }
 
-// TODO(data): no live source yet -- figures hard-coded from the design
+// TODO(data): these two figures come from the Figma frame and carry no source
+// or as-of date, so they render without BigNumber's source tooltip while the
+// stat beside them is live. No data-layer getter matches either label: the
+// L2BEAT getter is L2-only total value secured (~$40B, already shipped as
+// "L2 TVL" on the enterprise-l2s page) and `getTotalValueLockedData` is
+// DefiLlama Ethereum DeFi TVL (~$140B, already shipped as "DeFi TVL" on the
+// enterprise hub) -- binding either one here would put an
+// order-of-magnitude-different number under these words.
+// MUST be sourced or dropped before this page ships. See the PR description.
 const STABLECOINS_L2_USD = 12_100_000_000
 const VALUE_SECURED_USD = 336_000_000_000
 
@@ -69,6 +77,19 @@ const FALLBACK_STABLECOINS: StablecoinMarketEntry[] = [
   { id: "usdd", name: "USDD", market_cap: 1_477_885_641 },
 ]
 
+/**
+ * The data-layer getters read Netlify Blobs, whose client *throws* when its
+ * credentials are missing rather than returning null. Unguarded, that failure
+ * takes the whole page down with a 500, so each getter degrades to `null` here
+ * and the render falls back -- the `hasError` degradation /stablecoins/ uses,
+ * expressed per-getter so one failure doesn't blank the others.
+ */
+const nullOnError = <T,>(promise: Promise<T>): Promise<T | null> =>
+  promise.catch((error) => {
+    console.error(error)
+    return null
+  })
+
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
@@ -79,8 +100,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const [stablecoinsMcap, stablecoinsData, { contributors }] =
     await Promise.all([
-      getEthereumStablecoinsMcapData(),
-      getStablecoinsData(),
+      nullOnError(getEthereumStablecoinsMcapData()),
+      nullOnError(getStablecoinsData()),
       getAppPageContributorInfo(
         "organizations/enterprise/tokenization",
         locale as Lang
@@ -146,22 +167,31 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     maximumFractionDigits: 0,
   })
 
-  const marketData: StablecoinMarketEntry[] =
-    stablecoinsData ?? FALLBACK_STABLECOINS
-  const topStablecoins: StablecoinRow[] = stablecoins
-    .flatMap(({ id, symbol, type }) => {
-      const coin = marketData.find((entry) => entry.id === id)
-      return coin ? [{ ...coin, symbol, type }] : []
-    })
-    .sort((a, b) => b.market_cap - a.market_cap)
-    .slice(0, TOP_STABLECOINS_COUNT)
-    .map(({ name, symbol, type, market_cap, image }) => ({
-      name,
-      symbol,
-      type,
-      marketCap: marketCapFormatter.format(market_cap),
-      image,
-    }))
+  /** Joins market entries onto the curated Ethereum stablecoin list, largest first. */
+  const joinTopStablecoins = (entries: StablecoinMarketEntry[]) =>
+    stablecoins
+      .flatMap(({ id, symbol, type }) => {
+        const coin = entries.find((entry) => entry.id === id)
+        return coin ? [{ ...coin, symbol, type }] : []
+      })
+      .sort((a, b) => b.market_cap - a.market_cap)
+      .slice(0, TOP_STABLECOINS_COUNT)
+
+  // Guard on *sufficiency*, not nullishness: a reachable-but-thin response (the
+  // local mock carries three coins) joins to a short list, and `?? FALLBACK`
+  // would never fire -- the table would quietly render 3 of the designed 8 rows.
+  const fetchedRows = stablecoinsData ? joinTopStablecoins(stablecoinsData) : []
+  const topStablecoins: StablecoinRow[] = (
+    fetchedRows.length < TOP_STABLECOINS_COUNT
+      ? joinTopStablecoins(FALLBACK_STABLECOINS)
+      : fetchedRows
+  ).map(({ name, symbol, type, market_cap, image }) => ({
+    name,
+    symbol,
+    type,
+    marketCap: marketCapFormatter.format(market_cap),
+    image,
+  }))
 
   const stablecoinTypeLabels: Record<StablecoinType, string> = {
     FIAT: t("page-organizations-enterprise-tokenization-stablecoins-type-fiat"),
@@ -176,15 +206,24 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ),
   }
 
+  // TODO(content): the "treasuries" and "credit" cards ship with no body copy.
+  // The Figma grid is a draft ("Suggestion (Paul)") whose bodies were pasted
+  // from the L2s page and contradicted their own titles -- one described two
+  // firms building L2s under "Tokenized Treasuries & Cash-Equivalents", the
+  // other payments pilots under "Private Credit & Structured Credit". Both were
+  // dropped rather than rewritten, since replacement prose would invent claims
+  // about named institutions. Each card stands on its title plus its on-topic
+  // Example list until a content owner writes real bodies.
   const assetCards = [
-    { key: "treasuries", hasExamples: true },
-    { key: "credit", hasExamples: true },
+    { key: "treasuries", hasDescription: false, hasExamples: true },
+    { key: "credit", hasDescription: false, hasExamples: true },
     {
       key: "infrastructure",
+      hasDescription: true,
       hasExamples: false,
       href: "/organizations/enterprise/privacy/",
     },
-    { key: "consumer", hasExamples: false },
+    { key: "consumer", hasDescription: true, hasExamples: false },
   ] as const
 
   return (
@@ -201,7 +240,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-2x">
+        <MainArticle className="flow mx-auto max-w-7xl">
           <Section id="stats" data-flow="skip">
             <HeroStats stats={stats} />
           </Section>
@@ -253,6 +292,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               caption={t(
                 "page-organizations-enterprise-tokenization-compare-title"
               )}
+              rowHeader={t(
+                "page-organizations-enterprise-tokenization-compare-col-functions"
+              )}
               columns={compareColumns.map((col) =>
                 t(
                   `page-organizations-enterprise-tokenization-compare-col-${col}`
@@ -264,7 +306,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="stablecoins"
-            className="rounded-4xl bg-tint-primary px-page py-space-3x"
+            className="rounded-4xl bg-tint-primary px-page py-space-3x gradient-reverse"
           >
             <SectionIntro
               title={t(
@@ -328,11 +370,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         `page-organizations-enterprise-tokenization-assets-${card.key}-title`
                       )}
                     </CardTitle>
-                    <CardParagraph>
-                      {t(
-                        `page-organizations-enterprise-tokenization-assets-${card.key}-description`
-                      )}
-                    </CardParagraph>
+                    {card.hasDescription && (
+                      <CardParagraph>
+                        {t(
+                          `page-organizations-enterprise-tokenization-assets-${card.key}-description`
+                        )}
+                      </CardParagraph>
+                    )}
                     {card.hasExamples && (
                       <div>
                         <p className="text-body-medium">
