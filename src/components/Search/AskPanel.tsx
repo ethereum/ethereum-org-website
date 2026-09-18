@@ -7,7 +7,8 @@ import remarkGfm from "remark-gfm"
 
 import { BaseLink } from "@/components/ui/Link"
 
-import { type Source, withCitationLinks } from "@/lib/utils/ask"
+import { scrubQuery, type Source, withCitationLinks } from "@/lib/utils/ask"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
 interface ReferralNote {
@@ -50,6 +51,27 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
     setError("")
     setDone(false)
 
+    /**
+     * One event per question, once the outcome is known. Abandoning mid-stream records
+     * nothing, which is the trade for not firing twice per ask.
+     *
+     * A refusal is read off the citations rather than the prose: the model was told to
+     * cite everything, so an answer grounded in nothing cited nothing, and that holds in
+     * every language the question might be asked in.
+     */
+    let reported = false
+    const report = (outcome: string) => {
+      if (reported) return
+      reported = true
+      const safe = scrubQuery(query)
+      if (!safe) return
+      trackCustomEvent({
+        eventCategory: "search",
+        eventAction: `ask ${outcome}`,
+        eventName: safe,
+      })
+    }
+
     const run = async () => {
       try {
         const response = await fetch("/api/ask", {
@@ -71,6 +93,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
               ? t("docsearch-ask-busy", { seconds: seconds ?? 20 })
               : t("docsearch-ask-error")
           )
+          report(response.status === 429 ? "rate limited" : "failed")
           setDone(true)
           return
         }
@@ -90,13 +113,19 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
             if (payload.type === "sources") {
               setSources(payload.sources)
               setReferral(payload.referral ?? null)
+              report(payload.sources.length ? "answered" : "refused")
             }
-            if (payload.type === "error") setError(payload.value)
+            if (payload.type === "error") {
+              setError(payload.value)
+              report("failed")
+            }
           }
         }
       } catch (caught) {
-        if ((caught as Error).name !== "AbortError")
+        if ((caught as Error).name !== "AbortError") {
           setError(t("docsearch-ask-error"))
+          report("failed")
+        }
       } finally {
         setDone(true)
       }

@@ -5,6 +5,7 @@ import {
   citedSources,
   groupExcerpts,
   matchReferral,
+  scrubQuery,
   withCitationLinks,
 } from "@/lib/utils/ask"
 
@@ -197,5 +198,44 @@ test.describe("withCitationLinks", () => {
   test("leaves a number that is not a source alone", () => {
     // An uncited excerpt number would otherwise render as a link to nothing.
     expect(withCitationLinks("see [9]", sources)).toBe("see [9]")
+  })
+})
+
+test.describe("scrubQuery", () => {
+  test("keeps an ordinary question", () => {
+    expect(scrubQuery("  how do rollups work  ")).toBe("how do rollups work")
+  })
+
+  test("drops a question carrying an address or a hash", () => {
+    // The explorer results exist because people paste these, so they reach this box.
+    expect(
+      scrubQuery("what is 0x71C7656EC7ab88b098defB751B7401B5f6d8976F")
+    ).toBeNull()
+    expect(
+      scrubQuery("why did a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0 fail")
+    ).toBeNull()
+  })
+
+  test("drops a recovery phrase rather than redacting around it", () => {
+    // What someone panicking is most likely to type. Redacting in place would still
+    // leave the surrounding words, so the whole question goes.
+    const mnemonic =
+      "legal winner thank year wave sausage worth useful legal winner thank yellow"
+    expect(scrubQuery(mnemonic)).toBeNull()
+    // Twelve ordinary words are not a mnemonic: real ones are short and unpunctuated.
+    expect(
+      scrubQuery(
+        "what happens to my staked eth if the validator I chose goes offline"
+      )
+    ).not.toBeNull()
+  })
+
+  test("drops an email, and anything empty", () => {
+    expect(scrubQuery("contact me at someone@example.com")).toBeNull()
+    expect(scrubQuery("   ")).toBeNull()
+  })
+
+  test("caps the length", () => {
+    expect(scrubQuery("gas ".repeat(60))!.length).toBe(120)
   })
 })

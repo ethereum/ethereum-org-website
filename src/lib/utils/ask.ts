@@ -262,3 +262,35 @@ export const withCitationLinks = (text: string, sources: Source[]) => {
     return links.length === numbers.length ? links.join("") : run
   })
 }
+
+/**
+ * What is safe to record about a question before it reaches analytics.
+ *
+ * People paste addresses and hashes into this box -- the explorer results exist because
+ * they do -- and a wallet recovery phrase is the thing someone panicking is most likely
+ * to type. None of that can be allowed into an analytics event, and redacting it in place
+ * would still leave the surrounding words, so a question carrying any of it is dropped
+ * whole. What survives is the ordinary question, which is the part worth knowing.
+ */
+const SECRET_SHAPES = [
+  /0x[a-fA-F0-9]{20,}/,
+  /\b[a-fA-F0-9]{40,}\b/,
+  /\S+@\S+\.\S+/,
+]
+
+/** Mnemonics come in fixed lengths; ordinary questions are not 12 bare words long. */
+const MNEMONIC_LENGTHS = new Set([12, 15, 18, 21, 24])
+
+export const scrubQuery = (query: string): string | null => {
+  const trimmed = query.trim()
+  if (!trimmed) return null
+  if (SECRET_SHAPES.some((shape) => shape.test(trimmed))) return null
+  const words = trimmed.split(/\s+/)
+  if (
+    MNEMONIC_LENGTHS.has(words.length) &&
+    words.every((word) => /^[a-z]{3,8}$/.test(word))
+  ) {
+    return null
+  }
+  return trimmed.slice(0, 120)
+}
