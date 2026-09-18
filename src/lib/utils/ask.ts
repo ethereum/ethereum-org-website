@@ -7,6 +7,8 @@
 
 import { type Referral, SEARCH_REFERRALS } from "@/data/search-referrals"
 
+import { sanitizeHitTitle } from "./sanitizeHitTitle"
+
 export const SYSTEM_PROMPT = `You are the ethereum.org search assistant. Answer using ONLY the numbered excerpts provided.
 
 Rules:
@@ -211,18 +213,24 @@ export interface Source {
 /**
  * The sources the answer actually cited, renumbered to match the prose.
  *
- * Listing everything retrieved shows the reader the retrieval trace and invites them to
- * discount the citations that matter. When nothing was cited the best excerpt still stands
- * as a starting point rather than leaving the answer unattributed.
+ * Titled by the page, not by the deepest heading of whichever section happened to be
+ * retrieved first: an excerpt spans several sections of a page, so a source reading "How
+ * do I mine Ethereum?" under an answer about staking is the FAQ page labelled by the wrong
+ * one of its questions.
+ *
+ * Listing everything retrieved instead of only what was cited shows the reader the
+ * retrieval trace and invites them to discount the citations that matter. Citing nothing
+ * lists nothing: a refusal reached for no excerpt, so offering one anyway attributes an
+ * answer the model did not give.
  */
-export const citedSources = (excerpts: Excerpt[], used: number[]): Source[] => {
-  const order = used.length ? used : excerpts.length ? [1] : []
-  return order.map((excerptNumber, index) => {
+export const citedSources = (excerpts: Excerpt[], used: number[]): Source[] =>
+  used.map((excerptNumber, index) => {
     const excerpt = excerpts[excerptNumber - 1]
+    // lvl0 is the page title and carries the site suffix; lvl1 is its h1.
+    const [lvl0, lvl1] = excerpt.headings
     return {
       n: index + 1,
       url: excerpt.url,
-      title: excerpt.headings.at(-1) || excerpt.headings[0] || excerpt.url,
+      title: sanitizeHitTitle(lvl0 || lvl1 || excerpt.url),
     }
   })
-}

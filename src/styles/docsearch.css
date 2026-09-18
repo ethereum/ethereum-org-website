@@ -404,8 +404,12 @@
  * Ask AI
  */
 
-/* Sits inside the vendor's form beside its reset button, which is why it is end-aligned
-   by the form's own flex row rather than positioned. */
+/* Sits inside the vendor's form ahead of its reset button, which is why it is
+   end-aligned by the form's own flex row rather than positioned. */
+.DocSearch-Ask-slot {
+  @apply flex shrink-0 items-center;
+}
+
 .DocSearch-Ask-trigger {
   @apply ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary;
 }
@@ -475,6 +479,26 @@
 
 .DocSearch-Ask-answer a {
   @apply text-primary underline;
+}
+
+/* A citation marks the sentence rather than sitting in it. Adjacent ones are separated
+   here so the prose does not have to carry punctuation the model did not write. */
+.DocSearch-Ask-cite {
+  @apply text-xs;
+}
+
+.DocSearch-Ask-cite + .DocSearch-Ask-cite::before {
+  content: ", ";
+  @apply text-body-medium;
+}
+
+.DocSearch-Ask-cite a {
+  @apply text-primary no-underline hover:underline;
+}
+
+/* The site that owns the question, when the answer routed rather than answered. */
+.DocSearch-Ask-referral a {
+  @apply text-primary hover:underline;
 }
 
 .DocSearch-Ask-error {

@@ -9,6 +9,12 @@ import { BaseLink } from "@/components/ui/Link"
 
 import type { Source } from "@/lib/utils/ask"
 
+/** Where the model was told to send the reader instead of answering from excerpts. */
+interface ReferralNote {
+  name: string
+  url: string
+}
+
 /**
  * Citations arrive as bare `[1]` in the prose and the source list only lands when the
  * answer finishes, so they are linked by rewriting the markdown once the URLs are known.
@@ -22,6 +28,16 @@ const withCitationLinks = (text: string, sources: Source[]) =>
       })
     : text
 
+/** A citation is a link whose whole text is the number of a source it points at. */
+const isCitation = (
+  href: string | undefined,
+  children: React.ReactNode,
+  sources: Source[]
+) =>
+  sources.some(
+    (source) => source.url === href && String(source.n) === String(children)
+  )
+
 interface AskPanelProps {
   query: string
   onDismiss: () => void
@@ -32,6 +48,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
   const locale = useLocale()
   const [answer, setAnswer] = useState("")
   const [sources, setSources] = useState<Source[]>([])
+  const [referral, setReferral] = useState<ReferralNote | null>(null)
   const [error, setError] = useState("")
   const [done, setDone] = useState(false)
   const scroller = useRef<HTMLDivElement>(null)
@@ -40,6 +57,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
     const controller = new AbortController()
     setAnswer("")
     setSources([])
+    setReferral(null)
     setError("")
     setDone(false)
 
@@ -69,7 +87,10 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
             if (!line.trim()) continue
             const payload = JSON.parse(line)
             if (payload.type === "token") setAnswer((a) => a + payload.value)
-            if (payload.type === "sources") setSources(payload.sources)
+            if (payload.type === "sources") {
+              setSources(payload.sources)
+              setReferral(payload.referral ?? null)
+            }
             if (payload.type === "error") setError(payload.value)
           }
         }
@@ -117,11 +138,20 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
             // No raw HTML by default, so model output never reaches the DOM as markup.
             // Links are the one element worth overriding, to route them like any other.
             components={{
-              a: ({ href, children }) => (
-                <BaseLink href={href ?? "#"} hideArrow>
-                  {children}
-                </BaseLink>
-              ),
+              a: ({ href, children }) =>
+                isCitation(href, children, sources) ? (
+                  // Superscript, so a citation reads as a mark on the sentence rather
+                  // than a word in it. Adjacent ones are separated in CSS.
+                  <sup className="DocSearch-Ask-cite">
+                    <BaseLink href={href ?? "#"} hideArrow>
+                      {children}
+                    </BaseLink>
+                  </sup>
+                ) : (
+                  <BaseLink href={href ?? "#"} hideArrow>
+                    {children}
+                  </BaseLink>
+                ),
             }}
           >
             {withCitationLinks(answer, sources)}
@@ -130,6 +160,12 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
       )}
 
       {error && <p className="DocSearch-Ask-error">{error}</p>}
+
+      {done && referral && (
+        <p className="DocSearch-Ask-referral">
+          <BaseLink href={referral.url}>{referral.name}</BaseLink>
+        </p>
+      )}
 
       {done && sources.length > 0 && (
         <footer className="DocSearch-Ask-sources">

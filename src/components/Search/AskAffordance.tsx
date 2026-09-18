@@ -21,7 +21,7 @@ import AskPanel from "./AskPanel"
  */
 const AskAffordance = () => {
   const t = useTranslations("common")
-  const [form, setForm] = useState<HTMLElement | null>(null)
+  const [host, setHost] = useState<HTMLElement | null>(null)
   const [dropdown, setDropdown] = useState<HTMLElement | null>(null)
   const [query, setQuery] = useState("")
   const [asked, setAsked] = useState("")
@@ -29,15 +29,27 @@ const AskAffordance = () => {
   useEffect(() => {
     // The modal renders in the same commit, so one frame is enough to find it.
     const frame = requestAnimationFrame(() => {
-      setForm(document.querySelector<HTMLElement>(".DocSearch-Form"))
+      const form = document.querySelector<HTMLElement>(".DocSearch-Form")
       setDropdown(document.querySelector<HTMLElement>(".DocSearch-Dropdown"))
+      if (!form) return
+      // Portalling appends, which would put the button after the clear button and tab to
+      // it last. Its own host element goes in at the right place instead. The form's
+      // children are fixed -- the clear button is hidden, never unmounted -- so nothing
+      // the library does moves this.
+      const slot = document.createElement("span")
+      slot.className = "DocSearch-Ask-slot"
+      form.insertBefore(slot, form.querySelector(".DocSearch-Reset"))
+      setHost(slot)
     })
     return () => cancelAnimationFrame(frame)
   }, [])
 
+  useEffect(() => () => host?.remove(), [host])
+
   // The library owns the input and exposes neither its value nor a change event.
   useEffect(() => {
-    const input = form?.querySelector<HTMLInputElement>(".DocSearch-Input")
+    const input =
+      host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
     if (!input) return
     const read = () => {
       const value = input.value.trim()
@@ -46,14 +58,32 @@ const AskAffordance = () => {
       // over results the reader is changing is the wrong thing to be looking at.
       setAsked((current) => (current && current !== value ? "" : current))
     }
+    // Cmd/Ctrl+Enter asks instead of opening the first result in a new tab, which is
+    // what the library does with it. Captured on the input so it never reaches the
+    // library's own handler at the React root.
+    // PR #19279 reworks keyboard shortcuts site-wide; this will want folding into it.
+    const intercept = (thisEvent: KeyboardEvent) => {
+      if (thisEvent.key !== "Enter") return
+      if (!thisEvent.metaKey && !thisEvent.ctrlKey) return
+      const value = input.value.trim()
+      if (!value) return
+      thisEvent.preventDefault()
+      thisEvent.stopPropagation()
+      setAsked(value)
+    }
+
     read()
     input.addEventListener("input", read)
-    return () => input.removeEventListener("input", read)
-  }, [form])
+    input.addEventListener("keydown", intercept, true)
+    return () => {
+      input.removeEventListener("input", read)
+      input.removeEventListener("keydown", intercept, true)
+    }
+  }, [host])
 
   return (
     <>
-      {form &&
+      {host &&
         createPortal(
           <button
             type="button"
@@ -65,7 +95,7 @@ const AskAffordance = () => {
             <Sparkles />
             <span>{t("docsearch-ask-ai")}</span>
           </button>,
-          form
+          host
         )}
       {asked &&
         dropdown &&

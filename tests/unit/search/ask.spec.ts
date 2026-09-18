@@ -130,27 +130,37 @@ test.describe("Citations", () => {
 
 test.describe("citedSources", () => {
   const excerpts = [
-    { url: "/a/", headings: ["A", "A section"], text: "" },
-    { url: "/b/", headings: ["B", "B section"], text: "" },
-    { url: "/c/", headings: ["C"], text: "" },
+    { url: "/a/#one", headings: ["A page | ethereum.org", "A page"], text: "" },
+    { url: "/b/#two", headings: ["B page | ethereum.org", "B page"], text: "" },
+    {
+      url: "/c/#three",
+      headings: ["C page | ethereum.org", "C page"],
+      text: "",
+    },
   ]
 
   test("lists only what was cited, numbered to match the prose", () => {
     // Listing the whole retrieval trace invites the reader to discount the citations
     // that matter.
     expect(citedSources(excerpts, [3, 1])).toEqual([
-      { n: 1, url: "/c/", title: "C" },
-      { n: 2, url: "/a/", title: "A section" },
+      { n: 1, url: "/c/#three", title: "C page" },
+      { n: 2, url: "/a/#one", title: "A page" },
     ])
   })
 
-  test("falls back to the best excerpt when the answer cited nothing", () => {
-    expect(citedSources(excerpts, [])).toEqual([
-      { n: 1, url: "/a/", title: "A section" },
-    ])
+  test("titles a source by its page, not by the section retrieved first", () => {
+    // An excerpt spans several sections, so the deepest heading labelled the FAQ page
+    // "How do I mine Ethereum?" under an answer about staking.
+    const faq = {
+      url: "/faq/#mining",
+      headings: ["FAQ | ethereum.org", "FAQ", "How do I mine Ethereum?"],
+      text: "",
+    }
+    expect(citedSources([faq], [1])[0].title).toBe("FAQ")
   })
 
-  test("has nothing to show when there were no excerpts", () => {
-    expect(citedSources([], [])).toEqual([])
+  test("lists nothing when the answer cited nothing", () => {
+    // A refusal reached for no excerpt; offering one attributes an answer never given.
+    expect(citedSources(excerpts, [])).toEqual([])
   })
 })
