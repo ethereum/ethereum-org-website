@@ -215,16 +215,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>
               {t("page-organizations-enterprise-privacy-hero-description-2")}
             </p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
           </>
         }
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
-          <Section id="stats" data-flow="skip">
-            <HeroStats stats={stats} />
-          </Section>
-
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="compliance">
             <SectionIntro
               title={t(
@@ -259,83 +258,99 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <Section
-            id="solutions"
-            className="rounded-4xl bg-tint-primary px-page py-space-3x"
-          >
-            <SectionIntro
-              title={t("page-organizations-enterprise-privacy-solutions-title")}
-              description={t(
-                "page-organizations-enterprise-privacy-solutions-description"
-              )}
-            />
-            <Grid balanced={4} data-flow="cta">
-              {SOLUTIONS.map(({ key, examples }) => (
-                <Card key={key} variant="nested" hoverLift>
-                  <CardContent>
-                    <CardTitle>
-                      {t(
-                        `page-organizations-enterprise-privacy-solutions-${key}-title`
-                      )}
-                    </CardTitle>
-                    <CardParagraph>
-                      {t(
-                        `page-organizations-enterprise-privacy-solutions-${key}-description`
-                      )}
-                    </CardParagraph>
-                  </CardContent>
-                  <CardFooter>
-                    <p className="text-sm">
-                      <span className="block text-body-medium">
+          {/* Tinted band: the solutions grid and the trust-vs-cryptographic
+              comparison are one argument in the design, so a single panel
+              carries both. Same wrapper rationale as the stablecoins page
+              bands -- the wrapper owns the background and radius, each
+              <Section> inside owns its max-width and padding (the
+              `*:[section]:py-space-3x` rule on MainArticle only reaches its
+              direct children). */}
+          <div className="mt-space-3x w-full rounded-4xl bg-tint-primary">
+            <Section
+              id="solutions"
+              className="mx-auto w-full max-w-7xl px-page py-space-3x"
+            >
+              <SectionIntro
+                title={t(
+                  "page-organizations-enterprise-privacy-solutions-title"
+                )}
+                description={t(
+                  "page-organizations-enterprise-privacy-solutions-description"
+                )}
+              />
+              <Grid balanced={4} data-flow="cta">
+                {SOLUTIONS.map(({ key, examples }) => (
+                  <Card key={key} variant="nested" hoverLift>
+                    <CardContent>
+                      <CardTitle>
                         {t(
-                          "page-organizations-enterprise-privacy-solutions-examples-label"
+                          `page-organizations-enterprise-privacy-solutions-${key}-title`
                         )}
-                      </span>
-                      {examples.map(({ name, href }, idx) => (
-                        <Fragment key={name}>
-                          {idx > 0 && ", "}
-                          <InlineLink href={href}>{name}</InlineLink>
-                        </Fragment>
-                      ))}
-                    </p>
-                  </CardFooter>
-                </Card>
-              ))}
-            </Grid>
-          </Section>
+                      </CardTitle>
+                      <CardParagraph>
+                        {t(
+                          `page-organizations-enterprise-privacy-solutions-${key}-description`
+                        )}
+                      </CardParagraph>
+                    </CardContent>
+                    <CardFooter>
+                      <p className="text-sm">
+                        <span className="block text-body-medium">
+                          {t(
+                            "page-organizations-enterprise-privacy-solutions-examples-label"
+                          )}
+                        </span>
+                        {examples.map(({ name, href }, idx) => (
+                          <Fragment key={name}>
+                            {idx > 0 && ", "}
+                            <InlineLink href={href}>{name}</InlineLink>
+                          </Fragment>
+                        ))}
+                      </p>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </Grid>
+            </Section>
 
-          <Section id="trust-vs-cryptographic">
-            <div className="flex gap-space-2x max-lg:flex-col lg:items-center">
-              <div className="shrink-0 max-lg:max-w-64 lg:w-64">
-                <Image
-                  src={scalesImg}
-                  alt=""
-                  className="w-full"
-                  sizes="256px"
-                />
+            <Section
+              id="trust-vs-cryptographic"
+              className="mx-auto w-full max-w-7xl px-page py-space-3x"
+            >
+              <div className="flex gap-space-2x max-lg:flex-col lg:items-center">
+                <div className="shrink-0 max-lg:max-w-64 lg:w-64">
+                  <Image
+                    src={scalesImg}
+                    alt=""
+                    className="w-full"
+                    sizes="256px"
+                  />
+                </div>
+                <div className="flow">
+                  <h2>
+                    {t("page-organizations-enterprise-privacy-compare-title")}
+                  </h2>
+                  <p className="text-lg text-body-medium">
+                    {t(
+                      "page-organizations-enterprise-privacy-compare-description"
+                    )}
+                  </p>
+                </div>
               </div>
-              <div className="flow">
-                <h2>
-                  {t("page-organizations-enterprise-privacy-compare-title")}
-                </h2>
-                <p className="text-lg text-body-medium">
-                  {t(
-                    "page-organizations-enterprise-privacy-compare-description"
-                  )}
-                </p>
-              </div>
-            </div>
-            <ComparisonTable
-              caption={t("page-organizations-enterprise-privacy-compare-title")}
-              columns={[
-                t("page-organizations-enterprise-privacy-compare-col-trust"),
-                t(
-                  "page-organizations-enterprise-privacy-compare-col-cryptographic"
-                ),
-              ]}
-              rows={compareRows}
-            />
-          </Section>
+              <ComparisonTable
+                caption={t(
+                  "page-organizations-enterprise-privacy-compare-title"
+                )}
+                columns={[
+                  t("page-organizations-enterprise-privacy-compare-col-trust"),
+                  t(
+                    "page-organizations-enterprise-privacy-compare-col-cryptographic"
+                  ),
+                ]}
+                rows={compareRows}
+              />
+            </Section>
+          </div>
 
           <ChecklistPanel
             id="why-it-matters"

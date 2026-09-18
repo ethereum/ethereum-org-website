@@ -156,16 +156,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <>
             <p>{t("page-organizations-enterprise-hero-description-1")}</p>
             <p>{t("page-organizations-enterprise-hero-description-2")}</p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
           </>
         }
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
-          <Section id="stats" data-flow="skip">
-            <HeroStats stats={stats} />
-          </Section>
-
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-enterprise-use-cases-title")}

@@ -56,34 +56,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  // `records` and `funding` have no `href` on purpose: no page on the site
-  // covers public registries or government-to-citizen disbursement, and the
-  // nearest candidates ("Introduction to smart contracts", "Ethereum grants")
-  // would send readers somewhere that does not answer the card. They stay
-  // informational until that content exists.
-  const useCases: {
-    key: string
-    image: StaticImageData
-    href?: string
-  }[] = [
-    {
-      key: "identity",
-      href: "/decentralized-identity/",
-      image: identityImg,
-    },
-    {
-      key: "records",
-      image: recordsImg,
-    },
-    {
-      key: "funding",
-      image: fundingImg,
-    },
-    {
-      key: "finance",
-      href: "/organizations/enterprise/onchain-finance/",
-      image: financeImg,
-    },
+  // None of the four cards links out. No page on the site covers public
+  // registries or government-to-citizen disbursement, and the nearest
+  // candidates ("Introduction to smart contracts", "Ethereum grants") answer a
+  // different question for a different audience. Rather than link two of four
+  // and leave the row half-interactive, all four stay informational until the
+  // destination pages exist.
+  const useCases: { key: string; image: StaticImageData }[] = [
+    { key: "identity", image: identityImg },
+    { key: "records", image: recordsImg },
+    { key: "funding", image: fundingImg },
+    { key: "finance", image: financeImg },
   ]
 
   const fitsRows = [
@@ -138,7 +121,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-public-sector-use-cases-title")}
@@ -147,8 +130,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             />
             <Grid balanced={4} data-flow="cta">
-              {useCases.map(({ key, href, image }) => (
-                <Card key={key} href={href}>
+              {useCases.map(({ key, image }) => (
+                <Card key={key}>
                   <CardHeader>
                     <CardBanner background="none" fit="contain">
                       <Image
@@ -170,15 +153,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       )}
                     </CardParagraph>
                   </CardContent>
-                  {href && (
-                    <CardFooter>
-                      <CardButtonFake>
-                        {t(
-                          `page-organizations-public-sector-use-cases-${key}-cta`
-                        )}
-                      </CardButtonFake>
-                    </CardFooter>
-                  )}
                 </Card>
               ))}
             </Grid>

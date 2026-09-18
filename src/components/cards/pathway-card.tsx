@@ -5,6 +5,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -23,6 +24,12 @@ export type PathwayCardProps = {
    * renders text-only.
    */
   banner?: ReactNode
+  /**
+   * Optional text CTA under the description, for designs that name the action
+   * rather than relying on the trailing chevron alone. Rendered as a
+   * `CardLinkFake`, so it stays non-interactive inside the card's own anchor.
+   */
+  ctaLabel?: ReactNode
   className?: string
 }
 
@@ -43,6 +50,7 @@ const PathwayCard = ({
   description,
   badge,
   banner,
+  ctaLabel,
   className,
 }: PathwayCardProps) => (
   <div className="@container/pathway">
@@ -73,6 +81,7 @@ const PathwayCard = ({
             )}
           </div>
           <CardParagraph>{description}</CardParagraph>
+          {ctaLabel && <CardLinkFake className="mt-2">{ctaLabel}</CardLinkFake>}
         </div>
         <ChevronNext
           className={cn(

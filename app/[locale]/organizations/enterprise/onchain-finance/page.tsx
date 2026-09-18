@@ -1,8 +1,10 @@
 import { Blocks, BookOpenCheck, Coins, Move } from "lucide-react"
+import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -12,13 +14,13 @@ import {
   CardFooter,
   CardHeader,
   CardIconContainer,
-  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
@@ -31,7 +33,13 @@ import SectionIntro from "../../_components/section-intro"
 import PageJsonLD from "./page-jsonld"
 
 import { getTotalValueLockedData } from "@/lib/data"
+import aaveImg from "@/public/images/dapps/aave.png"
+import compoundImg from "@/public/images/dapps/compound.png"
+import morphoImg from "@/public/images/dapps/morpho.png"
+import sparkImg from "@/public/images/dapps/sparkfi.png"
+import uniswapImg from "@/public/images/exchanges/uniswap.png"
 import heroImg from "@/public/images/organizations/isometric-defi.png"
+import makerImg from "@/public/images/stablecoins/maker.png"
 
 const DEFILLAMA = {
   sourceName: "DefiLlama",
@@ -52,16 +60,29 @@ const INNOVATIONS = [
   "fx",
 ] as const
 
-const PROTOCOLS = [
-  { key: "aave", href: "https://aave.com/" },
-  { key: "sky", href: "https://sky.money/" },
+// `logo` is omitted where the repo has no logo for the protocol -- AppCard then
+// renders its own generic app icon in the same 64px frame.
+// TODO(content): add Ethena and Pendle logos to `public/images/` and wire them up
+const PROTOCOLS: {
+  key: string
+  href: string
+  logo?: StaticImageData
+  invertOnDark?: boolean
+}[] = [
+  { key: "aave", href: "https://aave.com/", logo: aaveImg },
+  { key: "sky", href: "https://sky.money/", logo: makerImg },
   { key: "ethena", href: "https://ethena.fi/" },
-  { key: "uniswap", href: "https://uniswap.org/" },
+  {
+    key: "uniswap",
+    href: "https://uniswap.org/",
+    logo: uniswapImg,
+    invertOnDark: true,
+  },
   { key: "pendle", href: "https://www.pendle.finance/" },
-  { key: "spark", href: "https://spark.finance/" },
-  { key: "morpho", href: "https://morpho.org/" },
-  { key: "compound", href: "https://compound.finance/" },
-] as const
+  { key: "spark", href: "https://spark.finance/", logo: sparkImg },
+  { key: "morpho", href: "https://morpho.org/", logo: morphoImg },
+  { key: "compound", href: "https://compound.finance/", logo: compoundImg },
+]
 
 // TODO(data): no live source yet — Ethereum's share of global DeFi TVL is hard-coded from the design
 const GLOBAL_DEFI_TVL_SHARE = 0.56
@@ -134,16 +155,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-enterprise-onchain-finance-hero-description-2"
               )}
             </p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
           </>
         }
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
-          <Section id="stats" data-flow="skip">
-            <HeroStats stats={stats} />
-          </Section>
-
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="defi-primitives">
             <SectionIntro
               title={t(
@@ -243,23 +263,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
             <Grid columns={3} size="narrow" className="lg:basis-2/3">
-              {PROTOCOLS.map(({ key, href }) => (
-                <Card key={key} href={href} size="md">
-                  <CardContent>
-                    <CardTitle size="sm">
-                      {t(
-                        `page-organizations-enterprise-onchain-finance-ecosystem-${key}-name`
-                      )}
-                    </CardTitle>
-                  </CardContent>
-                  <CardFooter buttons="inherit">
-                    <CardLinkFake>
-                      {t(
-                        "page-organizations-enterprise-onchain-finance-ecosystem-visit-cta"
-                      )}
-                    </CardLinkFake>
-                  </CardFooter>
-                </Card>
+              {PROTOCOLS.map(({ key, href, logo, invertOnDark }) => (
+                <AppCard
+                  key={key}
+                  name={t(
+                    `page-organizations-enterprise-onchain-finance-ecosystem-${key}-name`
+                  )}
+                  nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
+                  thumbnail={logo?.src}
+                  // TODO(content): no descriptions or category tags for these
+                  // eight protocols yet -- needs a content owner, not invented copy
+                  href={href}
+                  className={cn(invertOnDark && "dark:[&_img]:invert")}
+                />
               ))}
             </Grid>
           </Section>

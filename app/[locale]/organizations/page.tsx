@@ -92,6 +92,25 @@ const AUDIENCES: Audience[] = [
   },
 ]
 
+/**
+ * Temporary overlay reproducing the "NOT FINAL IMAGE" stamp the Figma frames
+ * carry on both of these illustrations (nodes 266:12127 and 266:12174), so the
+ * preview reads as placeholder art rather than a finished page.
+ *
+ * Intentionally not a translation key: it is scaffolding to delete along with
+ * the placeholder images, and routing it through the intl pipeline would push a
+ * throwaway string to 24 locales. Remove this component and both call sites
+ * when the final artwork lands.
+ */
+const PlaceholderArtLabel = () => (
+  <p
+    aria-hidden="true"
+    className="absolute inset-0 flex items-center justify-center p-8 text-center text-h2 font-black text-primary/70"
+  >
+    NOT FINAL IMAGE
+  </p>
+)
+
 const WHY_ITEMS = ["neutral", "resilient", "interoperable", "programmable"]
 const WHAT_ITEMS = ["payments", "tokenized", "identity", "custom"]
 const FAQ_ITEMS = [1, 2, 3, 4]
@@ -133,7 +152,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="audiences">
             <SectionIntro
               title={t("page-organizations-hub-audiences-title")}
@@ -196,6 +215,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 className="rounded-4xl border border-primary object-cover"
                 sizes="(max-width: 992px) 100vw, 40vw"
               />
+              <PlaceholderArtLabel />
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-why-title")}</h2>
@@ -262,6 +282,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 className="rounded-4xl border border-primary object-cover"
                 sizes="(max-width: 992px) 100vw, 40vw"
               />
+              <PlaceholderArtLabel />
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-what-title")}</h2>

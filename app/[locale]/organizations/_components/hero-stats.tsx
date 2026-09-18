@@ -1,9 +1,15 @@
+import { Info } from "lucide-react"
+import { getLocale, getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import BigNumber from "@/components/BigNumber"
+import Tooltip from "@/components/Tooltip"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+
+import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
 
 export type HeroStat = {
-  /** Formatted display value; pass `undefined` to render the BigNumber error dash */
+  /** Formatted display value; omit to render the error dash */
   value?: ReactNode
   label: ReactNode
   sourceName?: string
@@ -16,33 +22,57 @@ type HeroStatsProps = {
 }
 
 /**
- * Row of headline metrics rendered directly under a `PageHero` on the
- * /organizations/ pages. Each metric is a `BigNumber` (value + label, with the
- * optional data-source tooltip) separated by a start-side rule.
+ * Row of headline metrics rendered *inside* a `PageHero`'s `description`, which
+ * is where the site puts hero KPIs -- see `StakingStatsBox` on `/staking/`,
+ * whose Cell/Value/Label shape and monospace value this mirrors so the two
+ * read as the same component. Keep it in the hero: as a separate `<Section>`
+ * below the hero it reads as page content rather than part of the masthead.
  */
-const HeroStats = ({ stats }: HeroStatsProps) => (
-  // Row only from `lg`: three stats with a 3rem gap overflow the viewport at
-  // the `md` breakpoint, and `flex-wrap` alone can't save them because
-  // BigNumber's root is `shrink-0`.
-  <div className="flex flex-col flex-wrap gap-6 **:data-[label=value]:text-primary lg:flex-row lg:gap-12">
-    {stats.map(({ label, ...stat }, idx) => (
-      <BigNumber
-        key={idx}
-        variant="light"
-        center={false}
-        // `py-0` and the start-side rule are layout context (this row sits in
-        // an already-padded Section, and the rule is a column divider).
-        // TODO(design-system): the purple value and the uppercase label are
-        // this row's treatment, not layout -- they want a BigNumber variant
-        // (e.g. `variant="stat-rule"`) instead of the descendant selector
-        // above and the wrapper below.
-        className="py-0 lg:border-s lg:ps-4"
-        {...stat}
-      >
-        <span className="uppercase">{label}</span>
-      </BigNumber>
-    ))}
-  </div>
-)
+const HeroStats = async ({ stats }: HeroStatsProps) => {
+  const locale = await getLocale()
+  const t = await getTranslations("common")
+
+  return (
+    <Flex className="flex-col md:flex-row">
+      {stats.map(
+        ({ value, label, sourceName, sourceUrl, lastUpdated }, idx) => (
+          <Flex key={idx} className="flex-col gap-2 border-s p-4 pe-12">
+            <div className="inline-block bg-none font-monospace text-3xl font-bold text-primary">
+              {value ?? "—"}
+            </div>
+            <Flex className="gap-2 text-sm uppercase">
+              {label}
+              {sourceName && sourceUrl && (
+                <Tooltip
+                  content={
+                    <div className="normal-case">
+                      <p>
+                        {t("data-provided-by")}{" "}
+                        <InlineLink href={sourceUrl}>{sourceName}</InlineLink>
+                      </p>
+                      {lastUpdated && isValidDate(lastUpdated) && (
+                        <p className="mt-2">
+                          {t("last-updated")}:{" "}
+                          {dateTimeFormat(locale, {
+                            dateStyle: "medium",
+                          }).format(new Date(lastUpdated))}
+                        </p>
+                      )}
+                    </div>
+                  }
+                >
+                  <Info
+                    className="size-[1em] text-md hover:text-primary"
+                    aria-label={t("data-provided-by")}
+                  />
+                </Tooltip>
+              )}
+            </Flex>
+          </Flex>
+        )
+      )}
+    </Flex>
+  )
+}
 
 export default HeroStats

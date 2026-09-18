@@ -1,12 +1,17 @@
+import { pick } from "lodash"
 import { Banknote, Coins, Move, ScanEye } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
-import type { Lang, PageParams, StablecoinType } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
+import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -23,7 +28,11 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import StablecoinsTable, {
+  type TableRow as StablecoinsTableRow,
+} from "../../../stablecoins/_components/stablecoins-table"
 import { stablecoins } from "../../../stablecoins/data"
 import ComparisonTable from "../../_components/comparison-table"
 import ExpertContacts from "../../_components/expert-contacts"
@@ -31,9 +40,6 @@ import FurtherReading from "../../_components/further-reading"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import SectionIntro from "../../_components/section-intro"
 
-import StablecoinsTable, {
-  type StablecoinRow,
-} from "./_components/stablecoins-table"
 import PageJsonLD from "./page-jsonld"
 
 import { getEthereumStablecoinsMcapData, getStablecoinsData } from "@/lib/data"
@@ -56,26 +62,8 @@ const DEFILLAMA = {
 const STABLECOINS_L2_USD = 12_100_000_000
 const VALUE_SECURED_USD = 336_000_000_000
 
-const TOP_STABLECOINS_COUNT = 8
-
-type StablecoinMarketEntry = {
-  id: string
-  name: string
-  market_cap: number
-  image?: string
-}
-
-// TODO(data): design-time snapshot used only when the CoinGecko getter fails
-const FALLBACK_STABLECOINS: StablecoinMarketEntry[] = [
-  { id: "tether", name: "Tether", market_cap: 189_540_192_303 },
-  { id: "usd-coin", name: "USDC", market_cap: 77_200_113_225 },
-  { id: "usds", name: "USDS", market_cap: 11_472_529_149 },
-  { id: "dai", name: "Dai", market_cap: 4_366_533_802 },
-  { id: "ethena-usde", name: "Ethena USDe", market_cap: 3_909_571_199 },
-  { id: "paypal-usd", name: "PayPal USD", market_cap: 3_400_151_014 },
-  { id: "ripple-usd", name: "Ripple USD", market_cap: 1_572_768_419 },
-  { id: "usdd", name: "USDD", market_cap: 1_477_885_641 },
-]
+/** Same floor /stablecoins/ applies, so both pages list the same coins. */
+const MIN_MARKET_CAP_USD = 500_000
 
 /**
  * The data-layer getters read Netlify Blobs, whose client *throws* when its
@@ -97,6 +85,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-tokenization")
+
+  // `StablecoinsTable` is the client component from /stablecoins/ and binds the
+  // `page-stablecoins` namespace itself, so its messages have to reach the
+  // client -- the route's extra namespaces are registered in `translations.ts`.
+  const allMessages = await getMessages({ locale })
+  const messages = pick(
+    allMessages,
+    getRequiredNamespacesForPage("/organizations/enterprise/tokenization")
+  )
 
   const [stablecoinsMcap, stablecoinsData, { contributors }] =
     await Promise.all([
@@ -167,44 +164,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     maximumFractionDigits: 0,
   })
 
-  /** Joins market entries onto the curated Ethereum stablecoin list, largest first. */
-  const joinTopStablecoins = (entries: StablecoinMarketEntry[]) =>
-    stablecoins
-      .flatMap(({ id, symbol, type }) => {
-        const coin = entries.find((entry) => entry.id === id)
-        return coin ? [{ ...coin, symbol, type }] : []
-      })
-      .sort((a, b) => b.market_cap - a.market_cap)
-      .slice(0, TOP_STABLECOINS_COUNT)
+  // Built exactly as /stablecoins/ builds it, so both tables carry the same
+  // rows and fields (CoinGecko logo, ticker, peg, project URL, collateral
+  // type). A failed getter degrades to the component's own error row.
+  const coinDetails: StablecoinsTableRow[] = stablecoins
+    .flatMap(({ id, ...rest }) => {
+      const coinMarketData = stablecoinsData?.find((coin) => coin.id === id)
+      return coinMarketData ? [{ ...coinMarketData, ...rest }] : []
+    })
+    .filter((coin) => coin.market_cap >= MIN_MARKET_CAP_USD)
+    .sort((a, b) => b.market_cap - a.market_cap)
+    .map(({ market_cap, ...rest }) => ({
+      ...rest,
+      marketCap: marketCapFormatter.format(market_cap),
+    }))
 
-  // Guard on *sufficiency*, not nullishness: a reachable-but-thin response (the
-  // local mock carries three coins) joins to a short list, and `?? FALLBACK`
-  // would never fire -- the table would quietly render 3 of the designed 8 rows.
-  const fetchedRows = stablecoinsData ? joinTopStablecoins(stablecoinsData) : []
-  const topStablecoins: StablecoinRow[] = (
-    fetchedRows.length < TOP_STABLECOINS_COUNT
-      ? joinTopStablecoins(FALLBACK_STABLECOINS)
-      : fetchedRows
-  ).map(({ name, symbol, type, market_cap, image }) => ({
-    name,
-    symbol,
-    type,
-    marketCap: marketCapFormatter.format(market_cap),
-    image,
-  }))
-
-  const stablecoinTypeLabels: Record<StablecoinType, string> = {
-    FIAT: t("page-organizations-enterprise-tokenization-stablecoins-type-fiat"),
-    CRYPTO: t(
-      "page-organizations-enterprise-tokenization-stablecoins-type-crypto"
-    ),
-    ASSET: t(
-      "page-organizations-enterprise-tokenization-stablecoins-type-asset"
-    ),
-    ALGORITHMIC: t(
-      "page-organizations-enterprise-tokenization-stablecoins-type-algorithmic"
-    ),
-  }
+  const marketsHasError = !stablecoinsData
 
   // TODO(content): the "treasuries" and "credit" cards ship with no body copy.
   // The Figma grid is a draft ("Suggestion (Paul)") whose bodies were pasted
@@ -234,17 +209,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         breadcrumbs={{ slug: "organizations/enterprise/tokenization" }}
         heroImg={heroImg}
         title={t("page-organizations-enterprise-tokenization-hero-title")}
-        description={t(
-          "page-organizations-enterprise-tokenization-hero-description"
-        )}
+        description={
+          <>
+            <p>
+              {t("page-organizations-enterprise-tokenization-hero-description")}
+            </p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
+          </>
+        }
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
-          <Section id="stats" data-flow="skip">
-            <HeroStats stats={stats} />
-          </Section>
-
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="infrastructure">
             <SectionIntro
               title={t(
@@ -316,31 +294,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-enterprise-tokenization-stablecoins-description"
               )}
             />
-            <StablecoinsTable
-              caption={t(
-                "page-organizations-enterprise-tokenization-stablecoins-title"
-              )}
-              columns={{
-                currency: t(
-                  "page-organizations-enterprise-tokenization-stablecoins-col-currency"
-                ),
-                marketCap: t(
-                  "page-organizations-enterprise-tokenization-stablecoins-col-market-cap"
-                ),
-                collateral: t(
-                  "page-organizations-enterprise-tokenization-stablecoins-col-collateral"
-                ),
-              }}
-              typeLabels={stablecoinTypeLabels}
-              rows={topStablecoins}
-            />
-            <div className="flex justify-center" data-flow="cta">
-              <ButtonLink href="/stablecoins/">
-                {t(
-                  "page-organizations-enterprise-tokenization-stablecoins-show-more"
-                )}
-              </ButtonLink>
-            </div>
+            {/* The shared table is a client component and brings its own
+                column headers, collateral-type labels, error row and
+                "Show more" paging, so the section adds none of those. */}
+            <I18nProvider locale={locale} messages={messages}>
+              <StablecoinsTable
+                content={coinDetails}
+                hasError={marketsHasError}
+              />
+            </I18nProvider>
           </Section>
 
           <Section

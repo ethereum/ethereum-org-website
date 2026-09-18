@@ -130,7 +130,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-small-business-use-cases-title")}

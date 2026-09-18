@@ -10,9 +10,9 @@ import type { ReactNode } from "react"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import PathwayCard from "@/components/cards/pathway-card"
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
-import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -29,7 +29,6 @@ import {
 import { Grid } from "@/components/ui/grid"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
-import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -46,6 +45,7 @@ import PageJsonLD from "./page-jsonld"
 
 import { getL2beatData } from "@/lib/data"
 import arbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
+import ethereumLogo from "@/public/images/layer-2/ethereum.png"
 import optimismLogo from "@/public/images/layer-2/optimism.png"
 import zksyncLogo from "@/public/images/layer-2/zksyncEra.jpg"
 import heroImg from "@/public/images/organizations/isometric-l2-stack.png"
@@ -157,16 +157,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <>
             <p>{t("page-organizations-enterprise-l2s-hero-description-1")}</p>
             <p>{t("page-organizations-enterprise-l2s-hero-description-2")}</p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
           </>
         }
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl">
-          <Section id="stats" data-flow="skip">
-            <HeroStats stats={stats} />
-          </Section>
-
+        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
           <Section id="benefits">
             <SectionIntro
               title={t("page-organizations-enterprise-l2s-benefits-title")}
@@ -197,32 +196,24 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               ))}
             </Grid>
-            <Card variant="ghost" border href="#approach">
-              <CardHeader>
-                <CardIconContainer>
-                  <Sparkles />
-                </CardIconContainer>
-              </CardHeader>
-              <CardContent>
-                <CardTitle>
-                  {t(
-                    "page-organizations-enterprise-l2s-benefits-ecosystem-title"
-                  )}
-                </CardTitle>
-                <CardParagraph>
-                  {t(
-                    "page-organizations-enterprise-l2s-benefits-ecosystem-description"
-                  )}
-                </CardParagraph>
-              </CardContent>
-              <CardFooter buttons="inherit">
-                <CardLinkFake withForwardArrow>
-                  {t(
-                    "page-organizations-enterprise-l2s-benefits-ecosystem-cta"
-                  )}
-                </CardLinkFake>
-              </CardFooter>
-            </Card>
+            {/* Wide, short outlined callout: 96px sparkle on the inline-start
+                side with the text beside it, whole card anchored to the
+                "Choosing the right L2 approach" comparison below. The Figma
+                sparkle is a hex-coloured export, so the equivalent lucide glyph
+                is used instead -- it inherits `text-primary` in both themes. */}
+            <PathwayCard
+              href="#approach"
+              title={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-title"
+              )}
+              description={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-description"
+              )}
+              banner={<Sparkles className="size-24 text-primary" />}
+              ctaLabel={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-cta"
+              )}
+            />
           </Section>
 
           <Section
@@ -392,11 +383,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-space flex justify-center">
-                <Tag status="tag" variant="high-contrast" className="gap-2">
-                  <EthGlyphSolid className="size-4" />
-                  {t("page-organizations-enterprise-l2s-deployment-powered-by")}
-                </Tag>
+              {/* Same badge markup as the network list on /layer-2/ */}
+              <div className="mt-space flex">
+                <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
+                  <Image
+                    src={ethereumLogo}
+                    // decorative: the adjacent label already names Ethereum
+                    alt=""
+                    className="size-6 object-contain"
+                    sizes="24px"
+                  />
+                  <p>
+                    {t(
+                      "page-organizations-enterprise-l2s-deployment-powered-by"
+                    )}
+                  </p>
+                </div>
               </div>
             </div>
           </Section>
