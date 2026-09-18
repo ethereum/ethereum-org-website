@@ -440,8 +440,9 @@
   @apply hidden;
 }
 
+/* Prose, not a row: the results this replaces are clickable and this is not. */
 .DocSearch-Ask {
-  @apply flex flex-col gap-4 py-4;
+  @apply flex cursor-auto flex-col gap-4 py-4;
 }
 
 .DocSearch-Ask-header {
@@ -481,15 +482,11 @@
   @apply text-primary underline;
 }
 
-/* A citation marks the sentence rather than sitting in it. Adjacent ones are separated
-   here so the prose does not have to carry punctuation the model did not write. */
+/* A citation marks the sentence rather than sitting in it. Runs carry their own
+   separator, set where the links are built -- an adjacency rule here could not tell which
+   superscripts belonged to the same run. */
 .DocSearch-Ask-cite {
   @apply text-xs;
-}
-
-.DocSearch-Ask-cite + .DocSearch-Ask-cite::before {
-  content: ", ";
-  @apply text-body-medium;
 }
 
 .DocSearch-Ask-cite a {

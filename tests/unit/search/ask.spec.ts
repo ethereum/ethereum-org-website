@@ -5,6 +5,7 @@ import {
   citedSources,
   groupExcerpts,
   matchReferral,
+  withCitationLinks,
 } from "@/lib/utils/ask"
 
 const record = (url: string, content: string) => ({
@@ -162,5 +163,39 @@ test.describe("citedSources", () => {
   test("lists nothing when the answer cited nothing", () => {
     // A refusal reached for no excerpt; offering one attributes an answer never given.
     expect(citedSources(excerpts, [])).toEqual([])
+  })
+})
+
+test.describe("withCitationLinks", () => {
+  const sources = [
+    { n: 1, url: "/a/", title: "A" },
+    { n: 2, url: "/b/", title: "B" },
+  ]
+
+  test("glues a citation to the word it marks", () => {
+    // With the model's own space it wrapped onto a line of its own, away from the
+    // sentence it belongs to.
+    expect(withCitationLinks("wallets differ [1].", sources)).toBe(
+      "wallets differ[1](/a/)."
+    )
+  })
+
+  test("separates a run inside the citations, not between them", () => {
+    // The separator has to belong to a citation: an adjacency rule in CSS could not tell
+    // which superscripts were part of the same run.
+    expect(withCitationLinks("compare options [2][1]", sources)).toBe(
+      "compare options[2](/b/)[,1](/a/)"
+    )
+  })
+
+  test("leaves the prose alone until the sources arrive", () => {
+    expect(withCitationLinks("streaming [1] still", [])).toBe(
+      "streaming [1] still"
+    )
+  })
+
+  test("leaves a number that is not a source alone", () => {
+    // An uncited excerpt number would otherwise render as a link to nothing.
+    expect(withCitationLinks("see [9]", sources)).toBe("see [9]")
   })
 })

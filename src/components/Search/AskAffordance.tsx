@@ -32,13 +32,13 @@ const AskAffordance = () => {
       const form = document.querySelector<HTMLElement>(".DocSearch-Form")
       setDropdown(document.querySelector<HTMLElement>(".DocSearch-Dropdown"))
       if (!form) return
-      // Portalling appends, which would put the button after the clear button and tab to
-      // it last. Its own host element goes in at the right place instead. The form's
-      // children are fixed -- the clear button is hidden, never unmounted -- so nothing
-      // the library does moves this.
+      // Last in the form, after the clear button. Ahead of it reads better and tabs
+      // better, but the clear button only appears once there is something to clear, and
+      // anything before it jumps sideways when it does. Cmd/Ctrl+Enter is the way in
+      // that does not depend on reaching the button.
       const slot = document.createElement("span")
       slot.className = "DocSearch-Ask-slot"
-      form.insertBefore(slot, form.querySelector(".DocSearch-Reset"))
+      form.append(slot)
       setHost(slot)
     })
     return () => cancelAnimationFrame(frame)

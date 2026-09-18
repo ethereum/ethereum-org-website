@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm"
 
 import { BaseLink } from "@/components/ui/Link"
 
-import type { Source } from "@/lib/utils/ask"
+import { type Source, withCitationLinks } from "@/lib/utils/ask"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
 interface ReferralNote {
@@ -15,28 +15,17 @@ interface ReferralNote {
   url: string
 }
 
-/**
- * Citations arrive as bare `[1]` in the prose and the source list only lands when the
- * answer finishes, so they are linked by rewriting the markdown once the URLs are known.
- * Streaming shows them as plain text, which is the honest intermediate state.
- */
-const withCitationLinks = (text: string, sources: Source[]) =>
-  sources.length
-    ? text.replace(/\[(\d{1,2})\]/g, (match, n) => {
-        const source = sources.find((s) => s.n === Number(n))
-        return source ? `[${n}](${source.url})` : match
-      })
-    : text
-
 /** A citation is a link whose whole text is the number of a source it points at. */
 const isCitation = (
   href: string | undefined,
   children: React.ReactNode,
   sources: Source[]
-) =>
-  sources.some(
-    (source) => source.url === href && String(source.n) === String(children)
+) => {
+  const text = String(children).replace(/^,/, "")
+  return sources.some(
+    (source) => source.url === href && String(source.n) === text
   )
+}
 
 interface AskPanelProps {
   query: string

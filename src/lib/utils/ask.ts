@@ -122,7 +122,7 @@ export const buildMessages = (
 ) => {
   let system = SYSTEM_PROMPT
   if (referral) {
-    system += `\n\nAUTHORITY: ${referral.name} (${referral.url}) is the authoritative source for: ${referral.owns}\nIf the question is about any of that, say it is handled there and give the link, even if an excerpt mentions the topic in passing. Do not assemble an answer about it from the excerpts. Do not attach a bracket citation to this authority link -- it is not one of the numbered excerpts.`
+    system += `\n\nAUTHORITY: ${referral.name} (${referral.url}) is the authoritative source for: ${referral.owns}\nIf the question is about any of that, say it is handled there and name the site, even if an excerpt mentions the topic in passing. Do not write out its URL -- the link is shown to the reader separately, so printing it repeats itself. Do not assemble an answer about it from the excerpts. Do not attach a bracket citation to this authority link -- it is not one of the numbered excerpts.`
   }
   const numbered = excerpts.map(
     (excerpt, index) =>
@@ -234,3 +234,31 @@ export const citedSources = (excerpts: Excerpt[], used: number[]): Source[] =>
       title: sanitizeHitTitle(lvl0 || lvl1 || excerpt.url),
     }
   })
+
+/**
+ * Link the citations once the source URLs are known, as one superscript per number.
+ *
+ * Two things the prose gets wrong on its own. The model writes a space before a citation,
+ * which lets it wrap onto a line of its own away from the sentence it marks -- so the
+ * space goes. And a run of them needs separating, which is done here rather than in CSS:
+ * an adjacency rule cannot see which superscripts belong to the same run, and got it
+ * wrong often enough to be worth removing.
+ *
+ * Streaming leaves them as plain `[1]` until the sources land, which is the honest
+ * intermediate state.
+ */
+const CITATION_RUN = /[ \t]*(\[\d{1,2}\])+/g
+
+export const withCitationLinks = (text: string, sources: Source[]) => {
+  if (!sources.length) return text
+  return text.replace(CITATION_RUN, (run) => {
+    const numbers = [...run.matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1]))
+    const links = numbers
+      .map((n, index) => {
+        const source = sources.find((candidate) => candidate.n === n)
+        return source ? `[${index ? "," : ""}${n}](${source.url})` : null
+      })
+      .filter(Boolean)
+    return links.length === numbers.length ? links.join("") : run
+  })
+}
