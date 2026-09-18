@@ -348,6 +348,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   ),
                 ]}
                 rows={compareRows}
+                surface="tint"
               />
             </Section>
           </div>

@@ -49,6 +49,13 @@ import whyImg from "@/public/images/organizations/hub-why-building.png"
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
 
+/**
+ * Target of the footnote marker. The marker points here rather than straight
+ * out to the PDF, so the citation itself carries the link and the numeral is
+ * list markup -- same pattern as the small-business page.
+ */
+const FOOTNOTE_ID = "footnote-nca-2026"
+
 type Audience = {
   key: string
   href: string
@@ -236,20 +243,29 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p className="text-lg text-body-medium">
                 {t("page-organizations-hub-adoption-description")}
                 <sup>
-                  <InlineLink href={NCA_REPORT_URL} hideArrow>
+                  <InlineLink
+                    href={`#${FOOTNOTE_ID}`}
+                    aria-label={t("page-organizations-hub-adoption-source")}
+                    hideArrow
+                    className="inline-flex size-6 items-center justify-center"
+                  >
                     1
                   </InlineLink>
                 </sup>
               </p>
-              {/* TODO(content): this attribution line is not in the Figma
-                  frame -- the design has only the superscript link. Two of the
-                  three figures ("monthly active addresses", "monthly active
-                  users") are on-chain metrics that a holder survey is unlikely
-                  to contain, so each figure needs confirming against the report
+              {/* TODO(content): this attribution is not in the Figma frame --
+                  the design has only the superscript link. Two of the three
+                  figures ("monthly active addresses", "monthly active users")
+                  are on-chain metrics that a holder survey is unlikely to
+                  contain, so each figure needs confirming against the report
                   (or its own source) before launch. */}
-              <p className="text-sm text-body-medium">
-                <bdi>1.</bdi> {t("page-organizations-hub-adoption-source")}
-              </p>
+              <ol className="m-0 list-decimal ps-6 text-sm text-body-medium">
+                <li id={FOOTNOTE_ID} className="m-0">
+                  <InlineLink href={NCA_REPORT_URL}>
+                    {t("page-organizations-hub-adoption-source")}
+                  </InlineLink>
+                </li>
+              </ol>
             </div>
             <AdoptionChart
               items={[

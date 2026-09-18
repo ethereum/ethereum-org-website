@@ -31,6 +31,16 @@ type ComparisonTableProps = {
   /** Column headings, excluding the leading criterion column */
   columns: ReactNode[]
   rows: ComparisonRow[]
+  /**
+   * What the table sits on. `page` (default) fills the header row and criterion
+   * column with `bg-background-highlight` to separate them from the page.
+   *
+   * Pass `tint` on a coloured band: those fills are page-coloured, so on a tint
+   * they read as grey patches stamped over the band, and the cell separators
+   * (also page-coloured) read as stray lines. On a tint the band itself already
+   * separates the table from the page, so weight alone carries the headers.
+   */
+  surface?: "page" | "tint"
 }
 
 /**
@@ -51,30 +61,49 @@ const ComparisonTable = ({
   rowHeader,
   columns,
   rows,
-}: ComparisonTableProps) => (
-  <Table variant="highlight-first-column" className="min-w-2xl">
-    <TableCaption className="sr-only">{caption}</TableCaption>
-    <TableHeader>
-      <TableRow>
-        <TableHead scope="col">{rowHeader}</TableHead>
-        {columns.map((column, idx) => (
-          <TableHead key={idx} scope="col">
-            {column}
-          </TableHead>
-        ))}
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      {rows.map(({ label, cells }, rowIdx) => (
-        <TableRow key={rowIdx}>
-          <TableHead scope="row">{label}</TableHead>
-          {cells.map((cell, cellIdx) => (
-            <TableCell key={cellIdx}>{cell}</TableCell>
+  surface = "page",
+}: ComparisonTableProps) => {
+  const onTint = surface === "tint"
+
+  return (
+    <Table
+      // `minimal` drops both the header fill and the cell separators, which are
+      // the two page-coloured treatments that misread on a band.
+      variant={onTint ? "minimal" : "highlight-first-column"}
+      className="min-w-2xl"
+    >
+      <TableCaption className="sr-only">{caption}</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead scope="col">{rowHeader}</TableHead>
+          {columns.map((column, idx) => (
+            <TableHead key={idx} scope="col">
+              {column}
+            </TableHead>
           ))}
         </TableRow>
-      ))}
-    </TableBody>
-  </Table>
-)
+      </TableHeader>
+      <TableBody>
+        {rows.map(({ label, cells }, rowIdx) => (
+          <TableRow key={rowIdx}>
+            {/* On a tint the criterion column loses its fill, so weight is what
+                distinguishes it from the cells beside it. `border-b-0` drops
+                the `th` underline, which without the fill behind it reads as a
+                stray rule under each label rather than a column edge. */}
+            <TableHead
+              scope="row"
+              className={onTint ? "border-b-0 font-bold" : undefined}
+            >
+              {label}
+            </TableHead>
+            {cells.map((cell, cellIdx) => (
+              <TableCell key={cellIdx}>{cell}</TableCell>
+            ))}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  )
+}
 
 export default ComparisonTable
