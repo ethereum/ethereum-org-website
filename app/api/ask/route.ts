@@ -137,6 +137,16 @@ export async function POST(request: Request) {
     }
   ).catch(() => null)
 
+  // A rate limit is the one upstream failure worth telling apart: waiting fixes it, and
+  // the key is shared by everyone on the deploy, so it is the failure to expect. Passed
+  // through with its own status and `Retry-After` rather than folded into a generic 502.
+  if (upstream?.status === 429) {
+    const retryAfter = upstream.headers.get("retry-after") ?? "20"
+    return Response.json(
+      { error: "Rate limited", retryAfter: Number(retryAfter) || 20 },
+      { status: 429, headers: { "retry-after": retryAfter } }
+    )
+  }
   if (!upstream?.ok || !upstream.body) {
     return Response.json({ error: "Upstream unavailable" }, { status: 502 })
   }

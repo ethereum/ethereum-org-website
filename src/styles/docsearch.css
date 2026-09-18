@@ -463,7 +463,7 @@
 }
 
 .DocSearch-Ask-answer :is(ul, ol) {
-  @apply flex list-outside flex-col gap-1 ps-5;
+  @apply m-0 flex list-outside flex-col gap-1 ps-5;
 }
 
 .DocSearch-Ask-answer ul {
@@ -511,7 +511,7 @@
 }
 
 .DocSearch-Ask-sources ol {
-  @apply flex list-inside list-decimal flex-col gap-1;
+  @apply m-0 flex list-inside list-decimal flex-col gap-1;
 }
 
 .DocSearch-Ask-sources a {

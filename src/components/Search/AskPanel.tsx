@@ -59,7 +59,18 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
           signal: controller.signal,
         })
         if (!response.ok || !response.body) {
-          setError(t("docsearch-ask-error"))
+          const seconds =
+            response.status === 429
+              ? await response
+                  .json()
+                  .then((body) => body?.retryAfter)
+                  .catch(() => undefined)
+              : undefined
+          setError(
+            response.status === 429
+              ? t("docsearch-ask-busy", { seconds: seconds ?? 20 })
+              : t("docsearch-ask-error")
+          )
           setDone(true)
           return
         }

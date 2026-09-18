@@ -71,6 +71,7 @@
   "docsearch-ask-ai": "Ask AI",
   "docsearch-ask-answer": "AI answer",
   "docsearch-ask-back": "Back to results",
+  "docsearch-ask-busy": "Too many questions at once. Try again in about {seconds} seconds.",
   "docsearch-ask-disclaimer": "Generated from ethereum.org pages. Check the sources before acting on it.",
   "docsearch-ask-error": "The answer could not be generated. Try the search results instead.",
   "docsearch-ask-sources": "Sources",
