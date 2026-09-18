@@ -315,7 +315,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   const { contributors } = await getAppPageContributorInfo(
-    "founders",
+    "organizations/founders",
     locale as Lang
   )
 
@@ -324,7 +324,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <PageHero
-        breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
+        breadcrumbs={{ slug: "organizations/founders" }}
         heroImg={heroImg}
         title={t("page-founders-title")}
         description={t("page-founders-description")}
@@ -435,7 +435,7 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["founders"],
+    slug: ["organizations", "founders"],
     title: t("page-founders-metadata-title"),
     description: t("page-founders-metadata-description"),
     image: "/images/upgrades/merge.png",

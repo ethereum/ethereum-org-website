@@ -9,16 +9,21 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-export default async function FoundersPageJsonLD({
+export default async function EnterpriseL2sPageJsonLD({
   locale,
   contributors,
 }: {
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations("page-founders")
+  const t = await getTranslations("page-organizations-enterprise-l2s")
+  const tEnterprise = await getTranslations("page-organizations-enterprise")
+  const tCommon = await getTranslations("common")
 
-  const url = normalizeUrlForJsonLd(locale, `/founders/`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    "/organizations/enterprise/enterprise-l2s/"
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -33,8 +38,8 @@ export default async function FoundersPageJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t("page-founders-metadata-title"),
-        description: t("page-founders-metadata-description"),
+        name: t("page-organizations-enterprise-l2s-meta-title"),
+        description: t("page-organizations-enterprise-l2s-meta-description"),
         url,
         inLanguage: locale,
         contributor: contributorList,
@@ -52,8 +57,21 @@ export default async function FoundersPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: t("page-founders-metadata-title"),
-              item: normalizeUrlForJsonLd(locale, "/founders/"),
+              name: tCommon("organizations"),
+              item: normalizeUrlForJsonLd(locale, "/organizations/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: tEnterprise("page-organizations-enterprise-meta-title"),
+              item: normalizeUrlForJsonLd(locale, "/organizations/enterprise/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              // matches the visible breadcrumb, which renders the common.json label
+              name: tCommon("enterprise-l2s"),
+              item: url,
             },
           ],
         },
