@@ -438,11 +438,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-alternative-description-3")}</p>
 
           {/* Icon is top-aligned: the default centering strands it beside a
-              four-paragraph body.
-              TODO: the "$60 million within the first 100 days" figure is the
-              one claim on this page without a source -- verify against the
-              Ukrainian Ministry of Digital Transformation or Elliptic's
-              tracking, or soften the wording, before merge. */}
+              four-paragraph body. */}
           <Alert variant="update" className="items-start">
             <AlertIcon className="[&>svg]:size-12">
               <Handshake />
@@ -457,6 +453,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   {t.rich("page-open-access-emergency-description-2", {
                     strong: Strong,
                   })}
+                  {footnote(6, sections.alternative.id)}
                 </p>
                 <p>{t("page-open-access-emergency-description-3")}</p>
                 <p>{t("page-open-access-emergency-description-4")}</p>
@@ -472,17 +469,17 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {t.rich("page-open-access-publish-description-2", {
               strong: Strong,
             })}
-            {footnote(6, sections.publish.id)}
+            {footnote(7, sections.publish.id)}
           </p>
           <p>
             {t.rich("page-open-access-publish-description-3", {
               strong: Strong,
             })}
-            {footnote(7, sections.publish.id)}
+            {footnote(8, sections.publish.id)}
           </p>
           <p>
             {t("page-open-access-publish-description-4")}
-            {footnote(8, sections.publish.id)}
+            {footnote(9, sections.publish.id)}
           </p>
           <p>{t("page-open-access-publish-description-5")}</p>
         </Section>
@@ -493,7 +490,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-build-description-2")}</p>
           <p>
             {t("page-open-access-build-description-3")}
-            {footnote(9, sections.build.id)}
+            {footnote(10, sections.build.id)}
           </p>
           <p>{t("page-open-access-build-description-4")}</p>
         </Section>
@@ -516,7 +513,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h2>{sections.eth.title}</h2>
           <p>
             {t("page-open-access-eth-description-1")}
-            {footnote(10, sections.eth.id)}
+            {footnote(11, sections.eth.id)}
           </p>
           <p>{t("page-open-access-eth-description-2")}</p>
           <p>{t("page-open-access-eth-description-3")}</p>
@@ -610,7 +607,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         <Section id={sections.resources.id}>
           <h2>{sections.resources.title}</h2>
 
-          {/* Numbered: the targets of the [1]-[10] markers in the body. */}
+          {/* Numbered: the targets of the [1]-[11] markers in the body. */}
           <OrderedList>
             <ListItem>
               {t.rich("page-open-access-reference-lebanon", {
@@ -654,6 +651,15 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   "https://www.worldbank.org/en/news/press-release/2025/07/16/mobile-phone-technology-powers-saving-surge-in-developing-economies",
                   sections.resources.id,
                   "World Bank Global Findex 2025"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-ukraine", {
+                link: linkTo(
+                  "https://www.kmu.gov.ua/en/news/mincifri-kriptofond-ukrayini-vzhe-zibrav-ponad-60-miljoniv-dolariv-na-potrebi-zsu",
+                  sections.resources.id,
+                  "Cabinet of Ministers of Ukraine crypto fund"
                 ),
               })}
             </ListItem>
