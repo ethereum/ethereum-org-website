@@ -1,9 +1,20 @@
-import { Globe, Handshake, Heart, PowerOff, Recycle } from "lucide-react"
+import {
+  Clock,
+  Globe,
+  HandCoins,
+  Handshake,
+  Heart,
+  Network,
+  PowerOff,
+  Recycle,
+  Wallet,
+} from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
 
+import PathwayCard from "@/components/cards/pathway-card"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
@@ -41,10 +52,12 @@ import ethDiamondImg from "@/public/assets/open-access/eth-diamond-pastel.png"
 import ethVaultImg from "@/public/assets/open-access/eth-vault.png"
 import freedomPressBannerImg from "@/public/assets/open-access/freedom-of-the-press-foundation-banner.png"
 import heroImg from "@/public/assets/open-access/open-access-hero.png"
+import privacyPathwayImg from "@/public/assets/open-access/privacy-pathway.png"
 import rsfBannerImg from "@/public/assets/open-access/reporters-without-borders-banner.png"
 import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
 import internetArchiveBannerImg from "@/public/assets/open-source/internet-archive-banner.png"
 import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
+import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
 import walletCalloutImg from "@/public/images/impact_transparent.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
@@ -59,17 +72,25 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
   // under another section's anchor is invisible in review.
   const sections = {
-    frozen: {
-      id: "imagine-your-bank-account-frozen-overnight",
-      title: t("page-open-access-frozen-title"),
+    decides: {
+      id: "who-decides-what-you-can-do-with-your-money",
+      title: t("page-open-access-decides-title"),
     },
-    freedom: {
-      id: "what-is-financial-freedom",
-      title: t("page-open-access-freedom-title"),
+    freedoms: {
+      id: "what-financial-freedoms-does-ethereum-offer",
+      title: t("page-open-access-freedoms-title"),
     },
     alternative: {
       id: "an-alternative-when-institutions-fail",
       title: t("page-open-access-alternative-title"),
+    },
+    publish: {
+      id: "your-ability-to-publish",
+      title: t("page-open-access-publish-title"),
+    },
+    build: {
+      id: "your-freedom-to-build",
+      title: t("page-open-access-build-title"),
     },
     how: {
       id: "how-ethereum-resists-censorship",
@@ -133,8 +154,49 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     return TrackedLink
   }
 
-  // The four properties that make Ethereum's access hard to revoke, in the
-  // order the design lists them.
+  // Financial agency: what you can do when you don't need standing permission.
+  // Icons are deliberately distinct from the censorship-resistance grid below --
+  // two 2x2 grids sharing an icon set read as the same idea stated twice.
+  const agency = [
+    {
+      id: "worldwide",
+      icon: <Network />,
+      title: t("page-open-access-agency-worldwide-title"),
+      descriptions: [
+        t("page-open-access-agency-worldwide-description-1"),
+        t("page-open-access-agency-worldwide-description-2"),
+      ],
+    },
+    {
+      id: "collateral",
+      icon: <HandCoins />,
+      title: t("page-open-access-agency-collateral-title"),
+      descriptions: [
+        t("page-open-access-agency-collateral-description-1"),
+        t("page-open-access-agency-collateral-description-2"),
+      ],
+    },
+    {
+      id: "anytime",
+      icon: <Clock />,
+      title: t("page-open-access-agency-anytime-title"),
+      descriptions: [
+        t("page-open-access-agency-anytime-description-1"),
+        t("page-open-access-agency-anytime-description-2"),
+      ],
+    },
+    {
+      id: "portable",
+      icon: <Wallet />,
+      title: t("page-open-access-agency-portable-title"),
+      descriptions: [
+        t("page-open-access-agency-portable-description-1"),
+        t("page-open-access-agency-portable-description-2"),
+      ],
+    },
+  ]
+
+  // The four properties that make Ethereum's access hard to revoke.
   const properties = [
     {
       id: "permissionless",
@@ -170,35 +232,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       descriptions: [
         t("page-open-access-property-shared-record-description-1"),
         t("page-open-access-property-shared-record-description-2"),
-      ],
-    },
-  ]
-
-  // What censorship resistance protects, as prose subsections under
-  // "An alternative when institutions fail".
-  const affordances = [
-    {
-      id: "participate",
-      title: t("page-open-access-participate-title"),
-      descriptions: [
-        t("page-open-access-participate-description-1"),
-        t("page-open-access-participate-description-2"),
-      ],
-    },
-    {
-      id: "publish",
-      title: t("page-open-access-publish-title"),
-      descriptions: [
-        t("page-open-access-publish-description-1"),
-        t("page-open-access-publish-description-2"),
-      ],
-    },
-    {
-      id: "build",
-      title: t("page-open-access-build-title"),
-      descriptions: [
-        t("page-open-access-build-description-1"),
-        t("page-open-access-build-description-2"),
       ],
     },
   ]
@@ -250,6 +283,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
+  const lockouts = [
+    { id: "lebanon", note: 1 },
+    { id: "argentina", note: 2 },
+    { id: "myanmar", note: 3 },
+    { id: "sri-lanka", note: 4 },
+  ] as const
+
   return (
     <>
       <PageJsonLD
@@ -282,58 +322,94 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               <h2>{t("page-open-access-summary-title")}</h2>
             </CardTitle>
             <UnorderedList className="mb-0">
-              <ListItem>
-                {t.rich("page-open-access-summary-item-1", { strong: Strong })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-open-access-summary-item-2", { strong: Strong })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-open-access-summary-item-3", { strong: Strong })}
-              </ListItem>
-              <ListItem>
-                {t.rich("page-open-access-summary-item-4", { strong: Strong })}
-              </ListItem>
+              <ListItem>{t("page-open-access-summary-item-1")}</ListItem>
+              <ListItem>{t("page-open-access-summary-item-2")}</ListItem>
+              <ListItem>{t("page-open-access-summary-item-3")}</ListItem>
+              <ListItem>{t("page-open-access-summary-item-4")}</ListItem>
             </UnorderedList>
           </CardContent>
         </Card>
 
-        <Section id={sections.frozen.id}>
-          <h2>{sections.frozen.title}</h2>
-          <p>{t("page-open-access-frozen-description-1")}</p>
+        <Section id={sections.decides.id}>
+          <h2>{sections.decides.title}</h2>
+          <p>{t("page-open-access-decides-description-1")}</p>
+          <p>
+            <strong>{t("page-open-access-decides-description-2")}</strong>
+          </p>
+          <p>
+            {t.rich("page-open-access-decides-description-3", {
+              strong: Strong,
+            })}
+          </p>
+          <p>{t("page-open-access-decides-lockouts-lead")}</p>
           {/* Markers sit outside the strings so translators never carry the
-              numbering; both sources are cited under Further reading. */}
+              numbering; every case is cited under Further reading. */}
+          <UnorderedList>
+            {lockouts.map(({ id, note }) => (
+              <ListItem key={id}>
+                {t(`page-open-access-decides-lockout-${id}`)}
+                {footnote(note, sections.decides.id)}
+              </ListItem>
+            ))}
+          </UnorderedList>
           <p>
-            {t("page-open-access-frozen-description-2")}
-            {footnote(1, sections.frozen.id)}
+            {t("page-open-access-decides-description-4")}
+            {footnote(5, sections.decides.id)}
           </p>
-          <p>{t("page-open-access-frozen-description-3")}</p>
           <p>
-            {t("page-open-access-frozen-description-4")}
-            {footnote(2, sections.frozen.id)}
+            <strong>{t("page-open-access-decides-description-5")}</strong>
           </p>
-          <p>{t("page-open-access-frozen-description-5")}</p>
+          <p>{t("page-open-access-decides-description-6")}</p>
           <Image
             src={ethVaultImg}
-            alt={t("page-open-access-frozen-image-alt")}
+            alt={t("page-open-access-decides-image-alt")}
             className="mx-auto max-h-48 w-auto object-contain"
             sizes="240px"
           />
         </Section>
 
-        <Section id={sections.freedom.id}>
-          <h2>{sections.freedom.title}</h2>
+        <Section id={sections.freedoms.id}>
+          <h2>{sections.freedoms.title}</h2>
+          <p>{t("page-open-access-freedoms-description-1")}</p>
           <p>
-            <strong>{t("page-open-access-freedom-lead")}</strong>
+            {t.rich("page-open-access-freedoms-description-2", {
+              strong: Strong,
+            })}
           </p>
-          <p>{t("page-open-access-freedom-description-1")}</p>
-          <p>{t("page-open-access-freedom-description-2")}</p>
+          <p>
+            {t.rich("page-open-access-freedoms-description-3", {
+              strong: Strong,
+            })}
+          </p>
+          <p>{t("page-open-access-freedoms-description-4")}</p>
+
+          <h3>{t("page-open-access-participate-title")}</h3>
+          <p>{t("page-open-access-participate-description-1")}</p>
+          <p>{t("page-open-access-participate-description-2")}</p>
+          <Grid balanced={2} className="my-space-2x">
+            {agency.map(({ id, icon, title, descriptions }) => (
+              <Card key={id}>
+                <CardHeader>
+                  <CardIconContainer>{icon}</CardIconContainer>
+                </CardHeader>
+                <CardContent>
+                  <CardTitle asChild>
+                    <h4>{title}</h4>
+                  </CardTitle>
+                  {descriptions.map((description) => (
+                    <CardParagraph key={description}>
+                      {description}
+                    </CardParagraph>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
+          </Grid>
 
           <h3>{t("page-open-access-censorship-resistance-title")}</h3>
           <p>{t("page-open-access-censorship-resistance-description-1")}</p>
           <p>{t("page-open-access-censorship-resistance-description-2")}</p>
           <p>{t("page-open-access-censorship-resistance-description-3")}</p>
-
           <Grid balanced={2} className="my-space-2x">
             {properties.map(({ id, icon, title, descriptions }) => (
               <Card key={id}>
@@ -362,7 +438,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-alternative-description-3")}</p>
 
           {/* Icon is top-aligned: the default centering strands it beside a
-              four-paragraph body. */}
+              four-paragraph body.
+              TODO: the "$60 million within the first 100 days" figure is the
+              one claim on this page without a source -- verify against the
+              Ukrainian Ministry of Digital Transformation or Elliptic's
+              tracking, or soften the wording, before merge. */}
           <Alert variant="update" className="items-start">
             <AlertIcon className="[&>svg]:size-12">
               <Handshake />
@@ -383,15 +463,39 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               </AlertDescription>
             </AlertContent>
           </Alert>
+        </Section>
 
-          {affordances.map(({ id, title, descriptions }) => (
-            <div key={id} className="flow">
-              <h3>{title}</h3>
-              {descriptions.map((description) => (
-                <p key={description}>{description}</p>
-              ))}
-            </div>
-          ))}
+        <Section id={sections.publish.id}>
+          <h2>{sections.publish.title}</h2>
+          <p>{t("page-open-access-publish-description-1")}</p>
+          <p>
+            {t.rich("page-open-access-publish-description-2", {
+              strong: Strong,
+            })}
+            {footnote(6, sections.publish.id)}
+          </p>
+          <p>
+            {t.rich("page-open-access-publish-description-3", {
+              strong: Strong,
+            })}
+            {footnote(7, sections.publish.id)}
+          </p>
+          <p>
+            {t("page-open-access-publish-description-4")}
+            {footnote(8, sections.publish.id)}
+          </p>
+          <p>{t("page-open-access-publish-description-5")}</p>
+        </Section>
+
+        <Section id={sections.build.id}>
+          <h2>{sections.build.title}</h2>
+          <p>{t("page-open-access-build-description-1")}</p>
+          <p>{t("page-open-access-build-description-2")}</p>
+          <p>
+            {t("page-open-access-build-description-3")}
+            {footnote(9, sections.build.id)}
+          </p>
+          <p>{t("page-open-access-build-description-4")}</p>
         </Section>
 
         <Section id={sections.how.id}>
@@ -410,7 +514,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section id={sections.eth.id}>
           <h2>{sections.eth.title}</h2>
-          <p>{t("page-open-access-eth-description-1")}</p>
+          <p>
+            {t("page-open-access-eth-description-1")}
+            {footnote(10, sections.eth.id)}
+          </p>
           <p>{t("page-open-access-eth-description-2")}</p>
           <p>{t("page-open-access-eth-description-3")}</p>
         </Section>
@@ -484,19 +591,60 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-future-description-2")}</p>
           <p>{t("page-open-access-future-description-3")}</p>
           <p>{t("page-open-access-future-description-4")}</p>
+
+          <PathwayCard
+            href="/privacy/"
+            title={t("page-open-access-pathway-privacy-title")}
+            description={t("page-open-access-pathway-privacy-description")}
+            badge={{ label: t("page-open-access-pathway-privacy-badge") }}
+            banner={<Image src={privacyPathwayImg} alt="" sizes="160px" />}
+          />
+          <PathwayCard
+            href="/what-is-ethereum/"
+            title={t("page-open-access-pathway-ethereum-title")}
+            description={t("page-open-access-pathway-ethereum-description")}
+            banner={<Image src={ethBlocksImg} alt="" sizes="160px" />}
+          />
         </Section>
 
         <Section id={sections.resources.id}>
           <h2>{sections.resources.title}</h2>
 
-          {/* Numbered: the targets of the [1]-[2] markers in the body. */}
+          {/* Numbered: the targets of the [1]-[10] markers in the body. */}
           <OrderedList>
             <ListItem>
-              {t.rich("page-open-access-reference-cfpb", {
+              {t.rich("page-open-access-reference-lebanon", {
                 link: linkTo(
-                  "https://www.consumerfinance.gov/data-research/research-reports/2025-consumer-response-annual-report/",
+                  "https://www.imf.org/en/publications/cr/issues/2023/06/28/lebanon-2023-article-iv-consultation-press-release-staff-report-and-statement-by-the-535372",
                   sections.resources.id,
-                  "CFPB Consumer Response Annual Report"
+                  "IMF Lebanon Article IV"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-argentina", {
+                link: linkTo(
+                  "https://bcra.gob.ar/pdfs/comytexord/A6815.pdf",
+                  sections.resources.id,
+                  "BCRA Comunicacion A 6815"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-myanmar", {
+                link: linkTo(
+                  "https://www.worldbank.org/en/country/myanmar/publication/myanmar-economic-monitor-july-2021-progress-threatened-resilience-tested",
+                  sections.resources.id,
+                  "World Bank Myanmar Economic Monitor"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-sri-lanka", {
+                link: linkTo(
+                  "https://www.cbsl.gov.lk/en/news/amending-limits-and-terms-and-conditions-on-possession-of-foreign-currency",
+                  sections.resources.id,
+                  "Central Bank of Sri Lanka FX possession"
                 ),
               })}
             </ListItem>
@@ -509,7 +657,74 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                 ),
               })}
             </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-metoo", {
+                link: linkTo(
+                  "https://www.hongkongfp.com/2018/04/27/historic-moment-chinas-metoo-activists-use-blockchain-skirt-censors/",
+                  sections.resources.id,
+                  "HKFP MeToo blockchain"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-vaccine", {
+                link: linkTo(
+                  "https://technode.com/2018/07/23/vaccine-scandal-blockchain/",
+                  sections.resources.id,
+                  "TechNode vaccine scandal blockchain"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-ai-fen", {
+                link: linkTo(
+                  "https://www.forbes.com/sites/rogerhuang/2020/03/31/chinese-netizens-use-ethereum-to-avoid-chinas-covid-19-censorship/",
+                  sections.resources.id,
+                  "Forbes Ai Fen Ethereum"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-uniswap", {
+                link: linkTo(
+                  "https://blog.uniswap.org/token-access-app",
+                  sections.resources.id,
+                  "Uniswap Labs token access"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-stablecoins", {
+                link: linkTo(
+                  "https://www.circle.com/legal/usdc-risk-factors",
+                  sections.resources.id,
+                  "Circle USDC risk factors"
+                ),
+              })}
+            </ListItem>
           </OrderedList>
+
+          <h3>{t("page-open-access-resources-supporting-title")}</h3>
+          <UnorderedList>
+            <ListItem>
+              {t.rich("page-open-access-reference-nyse", {
+                link: linkTo(
+                  "https://www.nyse.com/trade/hours-calendars",
+                  sections.resources.id,
+                  "NYSE trading hours"
+                ),
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich("page-open-access-reference-settlement", {
+                link: linkTo(
+                  "https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/new-t1-settlement-cycle-what-investors-need-know-investor-bulletin",
+                  sections.resources.id,
+                  "SEC T+1 settlement"
+                ),
+              })}
+            </ListItem>
+          </UnorderedList>
         </Section>
       </ContentLayout>
     </>
