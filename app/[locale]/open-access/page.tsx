@@ -597,7 +597,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             banner={<Image src={privacyPathwayImg} alt="" sizes="160px" />}
           />
           <PathwayCard
-            href="/what-is-ethereum/"
+            href="/values/"
             title={t("page-open-access-pathway-ethereum-title")}
             description={t("page-open-access-pathway-ethereum-description")}
             banner={<Image src={ethBlocksImg} alt="" sizes="160px" />}
