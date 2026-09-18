@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
-import { useEventListener } from "@/hooks/useEventListener"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 export const useThemeToggle = () => {
   const t = useTranslations("common")
@@ -29,15 +29,7 @@ export const useThemeToggle = () => {
     t("light-mode-aria-label")
   )
 
-  /**
-   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \).
-   * @param {string} event - The keydown event.
-   */
-  useEventListener("keydown", (e) => {
-    if (e.key !== "\\") return
-    e.preventDefault()
-    if (e.metaKey || e.ctrlKey) toggleColorMode()
-  })
+  useKeyboardShortcut("theme", toggleColorMode)
 
   return {
     toggleColorMode,
