@@ -20,14 +20,24 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
     "page-contributing-translation-program-acknowledgements",
   "/contributing/translation-program/contributors/":
     "page-contributing-translation-program-contributors",
-  "/enterprise/": "page-enterprise",
   "/ethereum-history-founder-and-ownership/":
     "page-ethereum-history-founder-and-ownership",
   "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
-  "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
   "/open-source/": "page-open-source",
+  "/organizations/": "page-organizations",
+  "/organizations/enterprise/": "page-organizations-enterprise",
+  "/organizations/enterprise/enterprise-l2s/":
+    "page-organizations-enterprise-l2s",
+  "/organizations/enterprise/onchain-finance/":
+    "page-organizations-enterprise-onchain-finance",
+  "/organizations/enterprise/privacy/": "page-organizations-enterprise-privacy",
+  "/organizations/enterprise/tokenization/":
+    "page-organizations-enterprise-tokenization",
+  "/organizations/founders/": "page-founders",
+  "/organizations/public-sector/": "page-organizations-public-sector",
+  "/organizations/small-business/": "page-organizations-small-business",
   "/privacy/": "page-privacy",
   "/privacy/ethereum/": "page-privacy-ethereum",
   "/quizzes/": "learn-quizzes",
