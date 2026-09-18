@@ -434,6 +434,16 @@ export const generated = {
           month: 9,
           day: 1,
         },
+        status: "complete",
+      },
+      {
+        kind: "devnet",
+        version: 11,
+        when: {
+          year: 2026,
+          month: 9,
+          day: 9,
+        },
         status: "live",
       },
       {
@@ -710,6 +720,15 @@ export const generated = {
         decidedAt: {
           call: "acdc/175",
           date: "2026-02-19",
+        },
+      },
+      {
+        id: 8015,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/187",
+          date: "2026-09-17",
         },
       },
       {
