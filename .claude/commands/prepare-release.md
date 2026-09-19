@@ -123,11 +123,30 @@ EOF
 RELEASE_URL=$(./src/scripts/prepare-release.sh $DRY_RUN_FLAG publish "$VERSION" "$DRAFT_TAG" /tmp/claude/release-notes.md)
 ```
 
+**This step is a hard gate. If it fails for ANY reason — a `gh` error, or a
+permission prompt you cannot get approved — STOP HERE.** Do not run Step 8, and
+do not work around the block. Report to the user that the version was bumped and
+`staging` was merged, that the release is NOT published, and that the deploy PR
+was deliberately not created. A deploy PR without a published release is the one
+state that ships silently: the PR can be merged by anyone, and the missing
+release notes are invisible until someone checks the releases page.
+
+(This is exactly how v11.22.0 shipped on 2026-08-25 with no release.)
+
 ### Step 8: Create Deploy PR
 
 ```bash
 PR_URL=$(./src/scripts/prepare-release.sh $DRY_RUN_FLAG create-pr "$VERSION" /tmp/claude/release-notes.md)
 ```
+
+### Step 8b: Verify the Release Published
+
+```bash
+./src/scripts/prepare-release.sh $DRY_RUN_FLAG verify "$VERSION"
+```
+
+If this fails, say so loudly in the final report — the deploy PR must not be
+merged until the release exists.
 
 ### Step 9: Cleanup Worktree
 
