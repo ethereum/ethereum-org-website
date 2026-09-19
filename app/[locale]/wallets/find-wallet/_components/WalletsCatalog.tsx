@@ -3,7 +3,10 @@
 import { memo, useCallback, useMemo } from "react"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
-import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
+import type {
+  CatalogFilterState,
+  CatalogSelectOption,
+} from "@/components/FilterableCatalog/types"
 import { asArray } from "@/components/FilterableCatalog/utils"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -17,7 +20,6 @@ import { WALLET_DEVICE_IDS, type WalletDeviceId } from "@/data/wallets/devices"
 import type { WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
-import type { WalletFilterOption } from "./WalletFilterGroup"
 import WalletFilters, {
   ADVANCED_KEY,
   DEVICES_KEY,
@@ -69,7 +71,7 @@ type WalletsCatalogProps = {
   networks: WalletNetwork[]
   languages: WalletLanguageOption[]
   /** Built server-side: its labels come from the feature groups' i18n keys. */
-  advancedFilters: WalletFilterOption[]
+  advancedFilters: CatalogSelectOption[]
   labels: WalletCatalogLabels
 }
 

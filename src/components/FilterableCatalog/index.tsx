@@ -9,14 +9,9 @@ import {
   useRef,
   useState,
 } from "react"
-import { ChevronDown, RotateCcw, X } from "lucide-react"
+import { RotateCcw, X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
 import Input from "@/components/ui/input"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
@@ -57,12 +52,6 @@ export type CatalogSidebarHelpers = {
   variant: "desktop" | "mobile"
 }
 
-/** Collapsed trigger content for `mobileVariant="collapsible"`: selection + count */
-export type CatalogMobileFilterSummary = {
-  label: ReactNode
-  count?: number
-}
-
 export type FilterableCatalogProps<TItem> = {
   locale: string
   items: TItem[]
@@ -83,22 +72,30 @@ export type FilterableCatalogProps<TItem> = {
   /** Optional row above the search input, outside the bordered sidebar box. */
   renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
   renderResults: (items: TItem[]) => ReactNode
-  /** Trigger content required by `mobileVariant="collapsible"`. */
-  mobileFilterSummary?: CatalogMobileFilterSummary
-  /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
-  renderResultsHeader?: (state: CatalogFilterState) => ReactNode
   /**
    * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
-   * into the page flow; `"collapsible"` tucks it behind a `mobileFilterSummary`
-   * trigger, in flow; `"sheet"` collapses it behind a "Filters" bar and needs
+   * into the page flow; `"sheet"` collapses it behind a "Filters" bar and needs
    * `labels.filtersToggle` / `labels.applyLabel`.
    */
-  mobileVariant?: "inline" | "collapsible" | "sheet"
+  mobileVariant?: "inline" | "sheet"
   /**
    * Called after the empty-state reset has cleared both search and filters.
    * The shell owns the clearing; the consumer owns any tracking.
    */
   onReset?: () => void
+  /**
+   * Mirrors one single-select filter key in the URL query string under the same
+   * name, so a selection is shareable, survives a refresh, and undoes with the
+   * back button. Read on mount rather than during render: the prerendered HTML
+   * knows no query string, so seeding state from it would mismatch hydration.
+   */
+  urlParamKey?: string
+  /**
+   * Single-select catalogs: picking a filter or following a link closes the
+   * mobile panel, since the choice is already final. Leave off for multi-select
+   * filters, where the panel has to survive several ticks.
+   */
+  closeMobileOnSelect?: boolean
   className?: string
 }
 
@@ -119,10 +116,10 @@ export default function FilterableCatalog<TItem>({
   renderSidebar,
   renderSidebarHeader,
   renderResults,
-  renderResultsHeader,
-  mobileFilterSummary,
   mobileVariant = "inline",
   onReset,
+  urlParamKey,
+  closeMobileOnSelect,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
@@ -138,15 +135,58 @@ export default function FilterableCatalog<TItem>({
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
   // Stable identity so memoized filter controls don't re-render every keystroke
-  const setFilter: CatalogSetFilter = useCallback((key, value, options) => {
-    setSelection((prev) => ({ ...prev, [key]: value }))
-    if (options?.scroll ?? true) {
-      resultsTopRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
+  const setFilter: CatalogSetFilter = useCallback(
+    (key, value, options) => {
+      setSelection((prev) => ({ ...prev, [key]: value }))
+      if (key === urlParamKey) {
+        const url = new URL(window.location.href)
+        if (typeof value === "string") {
+          url.searchParams.set(key, value)
+        } else {
+          url.searchParams.delete(key)
+        }
+        // Native history, not the router: this is the same page with a
+        // different filter, so there is nothing to re-fetch or re-render.
+        // Guarded: clearing an absent param would stack dead history entries.
+        if (url.href !== window.location.href) {
+          window.history.pushState(null, "", url)
+        }
+      }
+      // Untracked, unlike openMobileFilters: this is a consequence of the pick,
+      // not a tap on the toggle.
+      if (closeMobileOnSelect) setMobileFiltersOpen(false)
+      if (options?.scroll ?? true) {
+        resultsTopRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    },
+    [urlParamKey, closeMobileOnSelect]
+  )
+
+  useEffect(() => {
+    if (!urlParamKey) return
+    let isInitial = true
+    const syncFromUrl = () => {
+      const value =
+        new URLSearchParams(window.location.search).get(urlParamKey) ??
+        undefined
+      setSelection((prev) =>
+        prev[urlParamKey] === value ? prev : { ...prev, [urlParamKey]: value }
+      )
+      // Arriving with a filter already applied lands on the results, the same
+      // as picking one in-page does. Not on popstate: the back button restores
+      // a position of its own.
+      if (isInitial && value) {
+        resultsTopRef.current?.scrollIntoView({ block: "start" })
+      }
+      isInitial = false
     }
-  }, [])
+    syncFromUrl()
+    window.addEventListener("popstate", syncFromUrl)
+    return () => window.removeEventListener("popstate", syncFromUrl)
+  }, [urlParamKey])
 
   const filteredItems = useMemo(
     () =>
@@ -174,8 +214,13 @@ export default function FilterableCatalog<TItem>({
   const resetAll = useCallback(() => {
     setSearch("")
     setSelection({})
+    if (urlParamKey) {
+      const url = new URL(window.location.href)
+      url.searchParams.delete(urlParamKey)
+      window.history.pushState(null, "", url)
+    }
     onReset?.()
-  }, [onReset])
+  }, [onReset, urlParamKey])
 
   // Event triple kept from the old shared ProductTable sheet for trend comparability.
   const openMobileFilters = useCallback((open: boolean) => {
@@ -256,7 +301,19 @@ export default function FilterableCatalog<TItem>({
                     <X className="size-5" />
                   </button>
                 </div>
-                <div className="flex-1 space-y-3 overflow-y-auto">
+                <div
+                  className="flex-1 space-y-3 overflow-y-auto"
+                  // Links navigate past the panel, so they close it like a
+                  // filter pick does. `setFilter` can't see them.
+                  onClick={(event) => {
+                    if (
+                      closeMobileOnSelect &&
+                      (event.target as HTMLElement).closest("a")
+                    ) {
+                      setMobileFiltersOpen(false)
+                    }
+                  }}
+                >
                   {renderHeader("mobile")}
                   {searchInput}
                   <div className="rounded-xl border p-2">
@@ -275,33 +332,12 @@ export default function FilterableCatalog<TItem>({
             <div className="space-y-3 lg:hidden">
               {renderHeader("mobile")}
               {searchInput}
-              {mobileVariant === "collapsible" ? (
-                <Collapsible className="rounded-xl border">
-                  <CollapsibleTrigger className="group flex w-full items-center justify-between gap-2 rounded-xl px-4 py-3 text-sm hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover">
-                    <span className="flex-1 text-start">
-                      {mobileFilterSummary?.label}
-                    </span>
-                    {typeof mobileFilterSummary?.count === "number" && (
-                      <span className="text-xs text-body-medium">
-                        {nf.format(mobileFilterSummary.count)}
-                      </span>
-                    )}
-                    <ChevronDown className="size-4 shrink-0 text-body-medium transition-transform group-data-[state=open]:rotate-180" />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="p-2 pt-0">
-                    {renderFilters("mobile")}
-                  </CollapsibleContent>
-                </Collapsible>
-              ) : (
-                <div className="rounded-xl border p-2">
-                  {renderFilters("mobile")}
-                </div>
-              )}
+              <div className="rounded-xl border p-2">
+                {renderFilters("mobile")}
+              </div>
             </div>
           )}
           <div ref={resultsTopRef} className="scroll-mt-24" />
-          {renderResultsHeader?.(selection)}
-
           <p className="text-sm text-body-medium" aria-live="polite">
             {labels.resultsLabel}:{" "}
             <strong>{nf.format(filteredItems.length)}</strong> /{" "}

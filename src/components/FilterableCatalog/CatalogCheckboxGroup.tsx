@@ -1,45 +1,59 @@
 "use client"
 
-import { useId } from "react"
+import { memo } from "react"
 
 import Checkbox from "@/components/ui/checkbox"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
-import type { CatalogCheckboxGroupConfig } from "./types"
+import CatalogFilterGroup from "./CatalogFilterGroup"
+import type { CatalogSelectOption } from "./types"
 
 type CatalogCheckboxGroupProps = {
   locale: string
-  config: CatalogCheckboxGroupConfig
+  label: string
+  options: CatalogSelectOption[]
   /** Currently selected option ids */
   selectedIds: string[]
   onToggle: (optionId: string) => void
+  defaultOpen?: boolean
+  /** Cap the height and scroll long option lists (e.g. languages). */
+  scrollable?: boolean
 }
 
 /**
- * Controlled sidebar building block: a labelled group of independent checkboxes.
- * Purely presentational — value in (`selectedIds`), event out (`onToggle`); it
- * holds no filter state of its own and doesn't know how selections are stored or
- * how the group combines with others (that's the consumer's `filterFn`).
+ * Controlled sidebar building block: a collapsible group of independent
+ * checkboxes, counting its own selections in the header. Purely presentational
+ * — value in (`selectedIds`), event out (`onToggle`); it holds no filter state
+ * of its own and doesn't know how the group combines with others (that's the
+ * consumer's `filterFn`). Memoized: pass stable `options` and `onToggle` so
+ * toggling one group doesn't re-render its siblings.
  */
-export default function CatalogCheckboxGroup({
+function CatalogCheckboxGroup({
   locale,
-  config,
+  label,
+  options,
   selectedIds,
   onToggle,
+  defaultOpen,
+  scrollable,
 }: CatalogCheckboxGroupProps) {
   const nf = numberFormat(locale)
-  const labelId = useId()
+  const selectedCount = options.filter((option) =>
+    selectedIds.includes(option.id)
+  ).length
 
   return (
-    <div role="group" aria-labelledby={labelId} className="space-y-1">
-      <p id={labelId} className="px-3 py-2 text-sm font-bold">
-        {config.label}
-      </p>
-      {config.options.map((option) => (
+    <CatalogFilterGroup
+      label={label}
+      count={selectedCount > 0 ? nf.format(selectedCount) : undefined}
+      defaultOpen={defaultOpen}
+      scrollable={scrollable}
+    >
+      {options.map((option) => (
         <label
           key={option.id}
-          className="flex cursor-pointer items-center gap-2 rounded-md px-3 py-1.5 text-sm hover:bg-background-highlight"
+          className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-background-highlight"
         >
           <Checkbox
             checked={selectedIds.includes(option.id)}
@@ -53,6 +67,8 @@ export default function CatalogCheckboxGroup({
           )}
         </label>
       ))}
-    </div>
+    </CatalogFilterGroup>
   )
 }
+
+export default memo(CatalogCheckboxGroup)
