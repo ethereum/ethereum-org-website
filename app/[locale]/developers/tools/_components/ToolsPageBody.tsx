@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
 import type {
@@ -11,9 +10,6 @@ import type {
 } from "@/lib/utils/developerToolsData"
 
 import ToolsCatalog from "./ToolsCatalog"
-
-const SUGGEST_RESOURCE_ISSUE_URL =
-  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
 type ToolsPageBodyProps = {
   locale: string
@@ -48,7 +44,7 @@ const ToolsPageBody = async ({
 
   return (
     <main className="pb-page">
-      <MainArticle className="space-y-20 px-page pt-4">
+      <MainArticle className="px-page pt-4">
         <ToolsCatalog
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
@@ -65,20 +61,9 @@ const ToolsPageBody = async ({
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
+            suggestButton: t("page-developers-tools-suggest-resource-button"),
           }}
         />
-        <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
-          <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
-          <p>{t("page-developers-tools-suggest-resource-description")}</p>
-          <ButtonLink
-            href={SUGGEST_RESOURCE_ISSUE_URL}
-            variant="outline"
-            className="w-fit"
-            hideArrow
-          >
-            {t("page-developers-tools-suggest-resource-button")}
-          </ButtonLink>
-        </div>
       </MainArticle>
 
       <Section className="px-page">
