@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { FileContributor, Lang, PageParams } from "@/lib/types"
 
@@ -23,7 +23,6 @@ export const revalidate = false
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,
@@ -79,7 +78,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,

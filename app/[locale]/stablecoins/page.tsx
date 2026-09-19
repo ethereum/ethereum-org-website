@@ -6,11 +6,7 @@ import {
   ShieldCheck,
   TrendingUp,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -97,8 +93,6 @@ const MIN_MARKET_CAP_USD = 500_000
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
   const tCommon = await getTranslations("common")
@@ -899,8 +893,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
 

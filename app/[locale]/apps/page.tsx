@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
@@ -38,8 +34,6 @@ import { getAppsData, getCommunityPicks } from "@/lib/data"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   // Fetch data using the new data-layer functions (already cached)
   const [appsData, communityPicks] = await Promise.all([
@@ -213,8 +207,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-apps")
 

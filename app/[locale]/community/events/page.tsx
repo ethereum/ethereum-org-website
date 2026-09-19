@@ -5,11 +5,7 @@ import {
   Handshake,
   Presentation,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
@@ -53,8 +49,6 @@ import organizerImage from "@/public/images/people-learning.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const _events = (await getEventsData()) ?? []
 
@@ -493,8 +487,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community-events")
 

@@ -56,7 +56,6 @@ Add `ab-code/[code]/page.tsx` **inside** the tested route's directory. It's a th
 // app/[locale]/wallets/ab-code/[code]/page.tsx
 import { generatePermutations, getPrecomputed } from "flags/next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -88,7 +87,6 @@ export default async function PrecomputedWalletsPage({
 }) {
   const { locale, code } = await params
   if (locale !== DEFAULT_LOCALE) notFound()
-  setRequestLocale(locale)
 
   let heroVariant: number
   try {
