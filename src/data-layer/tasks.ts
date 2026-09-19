@@ -70,8 +70,20 @@ export const KEYS = {
   QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
-// Task definition: storage key + fetch function
-type TaskDef = [string, () => Promise<unknown>]
+// Derived from the SDK rather than hand-written so new presets stay in sync
+type MachinePreset = Extract<
+  NonNullable<Parameters<typeof task>[0]["machine"]>,
+  string
+>
+
+// Per-task overrides for the config-wide defaults in trigger.config.ts
+type TaskOverrides = {
+  maxDuration?: number
+  machine?: MachinePreset
+}
+
+// Task definition: storage key + fetch function + optional runtime overrides
+type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
@@ -91,7 +103,14 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  // The catalog grew ~47% in Sep 2026 and stopped fitting the shared 300s
+  // budget. Enrichment is paced against third-party rate limits, so the floor
+  // here is wall clock, not compute.
+  [
+    KEYS.DEVELOPER_TOOLS,
+    fetchDeveloperTools,
+    { maxDuration: 900, machine: "small-2x" },
+  ],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
@@ -109,12 +128,14 @@ const HOURLY: TaskDef[] = [
 ]
 
 // ─── Dynamic task creation ───
-function createDataTask([key, fetchFn]: TaskDef) {
+function createDataTask([key, fetchFn, overrides]: TaskDef) {
   return task({
     id: key,
     retry: {
       maxAttempts: 2,
     },
+    ...(overrides?.maxDuration ? { maxDuration: overrides.maxDuration } : {}),
+    ...(overrides?.machine ? { machine: overrides.machine } : {}),
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },
