@@ -1,31 +1,50 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/latest/building-on-ethereum-in-2026/index.md",
   "generatedAt": "2026-06-03T06:58:07.705Z",
-  "rootHash": "483e69529ebb",
+  "rootHash": "faf287d2c5d1",
   "tree": {
-    "contentHash": "1dcf551c3115",
-    "anchorHash": "322cd04fe6d0",
+    "contentHash": "810bfd603a8e",
+    "anchorHash": "f61306304fde",
     "children": {
       "frontmatter:title": {
-        "contentHash": "78c30c0b8f71",
+        "contentHash": "32e25300411b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d2afcfe8bac3",
+        "contentHash": "8e968a8c3bcf",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "320fc488a16e"
+        "anchorHash": "fc7c73a89b18"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d0b40ef7405d"
+        "anchorHash": "9e847484a658"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "358c83b897ba",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "3dfd705f6349",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "1859ef770ef0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5b7f82e5486d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",

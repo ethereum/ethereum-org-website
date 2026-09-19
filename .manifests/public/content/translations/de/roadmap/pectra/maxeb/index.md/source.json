@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/pectra/maxeb/index.md",
   "generatedAt": "2026-07-23T00:24:10.229Z",
-  "rootHash": "eea7ecccd980",
+  "rootHash": "2121219ff476",
   "tree": {
-    "contentHash": "4b77fcbeb541",
-    "anchorHash": "2dcee93d33d7",
+    "contentHash": "3b1634130a21",
+    "anchorHash": "0affe4b4e6fc",
     "children": {
       "frontmatter:title": {
         "contentHash": "f584dbcca6ac",
@@ -24,8 +24,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "b7d87b50e08a"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "57972848fea8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          }
+        }
       },
       "prose:0": {
         "contentHash": "35e480df8ff6",

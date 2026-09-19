@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/prediction-markets/index.md",
   "generatedAt": "2026-06-18T00:37:45.664Z",
-  "rootHash": "6ec1f6b38c44",
+  "rootHash": "c80066cca4cb",
   "tree": {
-    "contentHash": "ff45dfa30174",
-    "anchorHash": "a7f1dbb7a321",
+    "contentHash": "94fabb9db049",
+    "anchorHash": "7b3d084b5447",
     "children": {
       "frontmatter:title": {
         "contentHash": "3b50eae8b6b6",
@@ -28,24 +28,73 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "a677fb53b0c2",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "3c4c13a605e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "3277c541b3dd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:buttons": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "frontmatter:- content": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e0ab0ec18559"
-      },
-      "frontmatter:toId": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "2555fb2f1375"
-      },
-      "frontmatter:isSecondary": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "fcbcf165908d"
+        "contentHash": "e13a80477531",
+        "anchorHash": "edb9bccab94d",
+        "children": {
+          "0": {
+            "contentHash": "f5818652a990",
+            "anchorHash": "b2a46786b6fa",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1445799c033a"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "7205d55c98c4"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId"
+            ]
+          },
+          "1": {
+            "contentHash": "918e1f78a588",
+            "anchorHash": "bc8c4bf626db",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e0ab0ec18559"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2555fb2f1375"
+              },
+              "isSecondary": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "fcbcf165908d"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId",
+              "isSecondary"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:0": {
         "contentHash": "4f3786817362",
@@ -351,11 +400,6 @@
       "frontmatter:sidebarDepth",
       "frontmatter:summaryPoints",
       "frontmatter:buttons",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:isSecondary",
       "prose:0",
       "how-prediction-markets-work",
       "why-does-this-matter",

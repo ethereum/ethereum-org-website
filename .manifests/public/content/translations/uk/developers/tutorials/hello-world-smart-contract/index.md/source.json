@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract/index.md",
   "generatedAt": "2026-06-30T00:41:15.043Z",
-  "rootHash": "7e9f07b08672",
+  "rootHash": "0b515620cb6b",
   "tree": {
-    "contentHash": "098d94d68663",
-    "anchorHash": "2cb552c024dc",
+    "contentHash": "275a42b4a775",
+    "anchorHash": "dfd144274b2e",
     "children": {
       "frontmatter:title": {
         "contentHash": "1c6c5c2b5d0c",
@@ -17,11 +17,40 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ca8f3c5cf255"
+        "anchorHash": "eb800d02a5ee"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "3ff5131171ad"
+        "contentHash": "e3fc51e63a56",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "736900ad3b39",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "924b68a85ca1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "430895907c1c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

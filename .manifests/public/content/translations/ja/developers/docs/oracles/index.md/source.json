@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/oracles/index.md",
   "generatedAt": "2026-06-29T23:58:06.775Z",
-  "rootHash": "5a97538cd756",
+  "rootHash": "de226745eb5f",
   "tree": {
-    "contentHash": "de2727e9d204",
-    "anchorHash": "777da8fab317",
+    "contentHash": "7ad8e05b26c1",
+    "anchorHash": "0133b9f713df",
     "children": {
       "frontmatter:title": {
         "contentHash": "8cd7b48f730e",
@@ -20,8 +20,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d79ec386b8c3"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "c05510693868",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7e5b5a1a6b80"
+          }
+        }
       },
       "prose:0": {
         "contentHash": "68c582cf0e41",

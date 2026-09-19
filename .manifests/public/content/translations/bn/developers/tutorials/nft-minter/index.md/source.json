@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/nft-minter/index.md",
   "generatedAt": "2026-06-30T00:45:54.081Z",
-  "rootHash": "39ee507a775c",
+  "rootHash": "3fac69db6f3c",
   "tree": {
-    "contentHash": "5be4c643fec2",
-    "anchorHash": "203567d9983c",
+    "contentHash": "1b9938ed8d44",
+    "anchorHash": "4afb76e2d6c1",
     "children": {
       "frontmatter:title": {
         "contentHash": "f1259169e786",
@@ -17,11 +17,50 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "12299bb2742c"
+        "anchorHash": "809133b253ac"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "dc4946f22191"
+        "contentHash": "048c4f295c4b",
+        "anchorHash": "d956e4dd69c7",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "35987a0f9ae7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "924b68a85ca1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "1cf387c012cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "5": {
+            "contentHash": "9e527a945b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "6": {
+            "contentHash": "39d40b1bb241",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

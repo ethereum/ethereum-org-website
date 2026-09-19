@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/devconnect-argentina-2025-recap/index.md",
   "generatedAt": "2026-04-29T05:17:02.060Z",
-  "rootHash": "1c271d881fad",
+  "rootHash": "cb58d374f102",
   "tree": {
-    "contentHash": "92f6df4ee1e1",
-    "anchorHash": "3dde21837500",
+    "contentHash": "56b8d9f5cf7f",
+    "anchorHash": "d34aba31a5f8",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a8085a2276d7",
+        "contentHash": "0e860eded993",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "600b24640cd5",
+        "contentHash": "2c9658c4009f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a9ce6b9bd111"
+        "anchorHash": "8cb10b7675e9"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "49d250b61bb9"
+        "anchorHash": "94fede4d1888"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6f5df05d6841"
+        "anchorHash": "5533fbf86039"
       },
       "prose:1": {
         "contentHash": "be933263b7c4",
