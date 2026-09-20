@@ -59,6 +59,7 @@ The two public testnets that client developers are currently maintaining are Sep
 - [Infura Sepolia Faucet](https://www.infura.io/faucet)
 - [PoW Faucet](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
+- [OpenFaucet.org Sepolia Faucet](https://openfaucet.org/ethereum-sepolia)
 
 #### Hoodi {#hoodi}
 
@@ -82,6 +83,7 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 - [PoW Faucet](https://hoodi-faucet.pk910.de/)
+- [OpenFaucet.org Hoodi Faucet](https://openfaucet.org/ethereum-hoodi)
 
 #### Ephemery {#ephemery}
 
@@ -134,6 +136,7 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 - [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
+- [OpenFaucet.org Arbitrum Sepolia Faucet](https://openfaucet.org/arbitrum-sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
@@ -150,6 +153,7 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
 - [Testnet Faucet](https://docs.optimism.io/app-developers/tools/faucets)
+- [OpenFaucet.org Optimism Sepolia Faucet](https://openfaucet.org/optimism-sepolia)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
