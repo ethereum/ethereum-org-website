@@ -33,7 +33,7 @@ export const CROPS_PROPERTIES: WalletFeature[] = [
   {
     key: "privacy",
     labelKey: "page-find-wallet-crops-private",
-    descKey: "page-find-wallet-privacy-desc",
+    descKey: "page-find-wallet-private-transactions-desc",
   },
   {
     key: "non_custodial",
@@ -96,6 +96,11 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
         labelKey: "page-find-wallet-non-custodial",
         descKey: "page-find-wallet-non-custodial-desc",
       },
+      {
+        key: "privacy",
+        labelKey: "page-find-wallet-private-transactions",
+        descKey: "page-find-wallet-private-transactions-desc",
+      },
     ],
   },
   {
@@ -125,11 +130,6 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
         key: "social_recovery",
         labelKey: "page-find-wallet-social-recovery",
         descKey: "page-find-wallet-social-recovery-desc",
-      },
-      {
-        key: "privacy",
-        labelKey: "page-find-wallet-privacy",
-        descKey: "page-find-wallet-privacy-desc",
       },
       {
         key: "eip_4337_support",
@@ -167,12 +167,20 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
 
 /**
  * The sidebar's "Advanced filters" set: every detail-page feature except the
- * buy/sell pair, which already has its own sidebar group.
+ * buy/sell pair, which already has its own sidebar group, plus the beginner
+ * flag — a curation call rather than a feature, so it stays off detail pages
+ * but has to be filterable for the "New to crypto" persona to expand into it.
  */
-export const WALLET_ADVANCED_FILTERS: WalletFeature[] =
-  WALLET_FEATURE_GROUPS.filter(
+export const WALLET_ADVANCED_FILTERS: WalletFeature[] = [
+  ...WALLET_FEATURE_GROUPS.filter(
     (group) => group.titleKey !== "page-find-wallet-buy-sell-crypto"
-  ).flatMap((group) => group.features)
+  ).flatMap((group) => group.features),
+  {
+    key: "new_to_crypto",
+    labelKey: "page-find-wallet-new-to-crypto-title",
+    descKey: "page-find-wallet-new-to-crypto-desc",
+  },
+]
 
 export function getWalletAdvancedFlags(wallet: WalletData): WalletFeatureKey[] {
   return WALLET_ADVANCED_FILTERS.filter(({ key }) => wallet[key]).map(
