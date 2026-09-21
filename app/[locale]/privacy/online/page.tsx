@@ -765,11 +765,16 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h2>{sections.settings.title}</h2>
           <p>{t("page-privacy-online-settings-description")}</p>
           {renderTips(settings)}
-          <MarkdownVideo
-            src="/images/privacy-online/reject-cookies.mp4#1280x720"
-            poster="/images/privacy-online/reject-cookies-poster.jpg"
-            alt={t("page-privacy-online-settings-cookies-clip-alt")}
-          />
+          <figure>
+            <MarkdownVideo
+              src="/images/privacy-online/reject-cookies.mp4#1280x720"
+              poster="/images/privacy-online/reject-cookies-poster.jpg"
+              alt={t("page-privacy-online-settings-cookies-clip-alt")}
+            />
+            <figcaption className="mt-4 text-center text-sm text-body-medium">
+              {t("page-privacy-online-settings-cookies-clip-caption")}
+            </figcaption>
+          </figure>
         </Section>
 
         <Section id={sections.apps.id}>
