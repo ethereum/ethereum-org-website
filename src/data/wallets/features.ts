@@ -33,7 +33,7 @@ export const CROPS_PROPERTIES: WalletFeature[] = [
   {
     key: "privacy",
     labelKey: "page-find-wallet-crops-private",
-    descKey: "page-find-wallet-privacy-desc",
+    descKey: "page-find-wallet-private-transactions-desc",
   },
   {
     key: "non_custodial",
@@ -96,6 +96,11 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
         labelKey: "page-find-wallet-non-custodial",
         descKey: "page-find-wallet-non-custodial-desc",
       },
+      {
+        key: "privacy",
+        labelKey: "page-find-wallet-private-transactions",
+        descKey: "page-find-wallet-private-transactions-desc",
+      },
     ],
   },
   {
@@ -125,11 +130,6 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
         key: "social_recovery",
         labelKey: "page-find-wallet-social-recovery",
         descKey: "page-find-wallet-social-recovery-desc",
-      },
-      {
-        key: "privacy",
-        labelKey: "page-find-wallet-privacy",
-        descKey: "page-find-wallet-privacy-desc",
       },
       {
         key: "eip_4337_support",
