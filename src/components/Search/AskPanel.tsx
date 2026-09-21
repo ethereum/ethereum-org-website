@@ -16,15 +16,15 @@ interface ReferralNote {
   url: string
 }
 
-/** A citation is a link whose whole text is the number of a source it points at. */
+/** A citation is a link whose whole text is `[n]` for a source it points at. */
 const isCitation = (
   href: string | undefined,
   children: React.ReactNode,
   sources: Source[]
 ) => {
-  const text = String(children).replace(/^,/, "")
+  const text = String(children)
   return sources.some(
-    (source) => source.url === href && String(source.n) === text
+    (source) => source.url === href && `[${source.n}]` === text
   )
 }
 

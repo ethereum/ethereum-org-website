@@ -238,14 +238,15 @@ export const citedSources = (excerpts: Excerpt[], used: number[]): Source[] =>
 /**
  * Link the citations once the source URLs are known, as one superscript per number.
  *
- * Two things the prose gets wrong on its own. The model writes a space before a citation,
- * which lets it wrap onto a line of its own away from the sentence it marks -- so the
- * space goes. And a run of them needs separating, which is done here rather than in CSS:
- * an adjacency rule cannot see which superscripts belong to the same run, and got it
- * wrong often enough to be worth removing.
+ * The brackets are kept in the link text -- `[1]`, not `1` -- which is the site's
+ * citation form; see the design-system skill. They also separate a run on their own, so
+ * the comma this used to insert between adjacent numbers is gone.
+ *
+ * The model writes a space before a citation, which lets it wrap onto a line of its own
+ * away from the sentence it marks, so the space goes.
  *
  * Streaming leaves them as plain `[1]` until the sources land, which is the honest
- * intermediate state.
+ * intermediate state -- and the same shape they end up in.
  */
 const CITATION_RUN = /[ \t]*(\[\d{1,2}\])+/g
 
@@ -254,9 +255,10 @@ export const withCitationLinks = (text: string, sources: Source[]) => {
   return text.replace(CITATION_RUN, (run) => {
     const numbers = [...run.matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1]))
     const links = numbers
-      .map((n, index) => {
+      .map((n) => {
         const source = sources.find((candidate) => candidate.n === n)
-        return source ? `[${index ? "," : ""}${n}](${source.url})` : null
+        // Nested brackets are valid link text, so `[[1]](url)` is a link reading `[1]`.
+        return source ? `[[${n}]](${source.url})` : null
       })
       .filter(Boolean)
     return links.length === numbers.length ? links.join("") : run

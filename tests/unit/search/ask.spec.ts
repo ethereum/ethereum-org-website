@@ -177,15 +177,13 @@ test.describe("withCitationLinks", () => {
     // With the model's own space it wrapped onto a line of its own, away from the
     // sentence it belongs to.
     expect(withCitationLinks("wallets differ [1].", sources)).toBe(
-      "wallets differ[1](/a/)."
+      "wallets differ[[1]](/a/)."
     )
   })
 
-  test("separates a run inside the citations, not between them", () => {
-    // The separator has to belong to a citation: an adjacency rule in CSS could not tell
-    // which superscripts were part of the same run.
+  test("keeps the brackets, which are the site's citation form and separate a run", () => {
     expect(withCitationLinks("compare options [2][1]", sources)).toBe(
-      "compare options[2](/b/)[,1](/a/)"
+      "compare options[[2]](/b/)[[1]](/a/)"
     )
   })
 
