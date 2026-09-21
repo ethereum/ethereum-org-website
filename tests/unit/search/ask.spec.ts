@@ -3,6 +3,7 @@ import { expect, test } from "@playwright/test"
 import {
   Citations,
   citedSources,
+  collapseRepeatedCitations,
   groupExcerpts,
   matchReferral,
   scrubQuery,
@@ -167,6 +168,53 @@ test.describe("citedSources", () => {
   })
 })
 
+test.describe("collapseRepeatedCitations", () => {
+  test("keeps the last of a run of the same citation", () => {
+    // The model cites every claim, and consecutive sentences usually rest on one page.
+    expect(
+      collapseRepeatedCitations("Rollups batch [1]. They settle on L1 [1].")
+    ).toBe("Rollups batch. They settle on L1 [1].")
+  })
+
+  test("collapses a chain longer than two", () => {
+    expect(collapseRepeatedCitations("A [2]. B [2]. C [2].")).toBe(
+      "A. B. C [2]."
+    )
+  })
+
+  test("a different citation in between breaks the run", () => {
+    // Two claims from different places, so both keep their marker.
+    expect(collapseRepeatedCitations("A [1]. B [2]. C [1].")).toBe(
+      "A [1]. B [2]. C [1]."
+    )
+  })
+
+  test("matches on the set, so order within a run does not matter", () => {
+    expect(collapseRepeatedCitations("A [1][2]. B [2][1].")).toBe(
+      "A. B [2][1]."
+    )
+  })
+
+  test("leaves a multi-number run alone next to one of its numbers", () => {
+    expect(collapseRepeatedCitations("A [1][2]. B [1].")).toBe(
+      "A [1][2]. B [1]."
+    )
+  })
+
+  test("does not carry a marker across a paragraph or list item", () => {
+    // Far enough that the citation would no longer sit with the claim it marks.
+    expect(collapseRepeatedCitations("- A [1]\n- B [1]")).toBe(
+      "- A [1]\n- B [1]"
+    )
+  })
+
+  test("leaves prose with no citations untouched", () => {
+    expect(collapseRepeatedCitations("nothing to do here")).toBe(
+      "nothing to do here"
+    )
+  })
+})
+
 test.describe("withCitationLinks", () => {
   const sources = [
     { n: 1, url: "/a/", title: "A" },
@@ -191,6 +239,12 @@ test.describe("withCitationLinks", () => {
     expect(withCitationLinks("streaming [1] still", [])).toBe(
       "streaming [1] still"
     )
+  })
+
+  test("collapses a repeated citation before linking what is left", () => {
+    expect(
+      withCitationLinks("wallets differ [1]. so do keys [1].", sources)
+    ).toBe("wallets differ. so do keys[[1]](/a/).")
   })
 
   test("leaves a number that is not a source alone", () => {

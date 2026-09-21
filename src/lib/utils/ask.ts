@@ -248,11 +248,45 @@ export const citedSources = (excerpts: Excerpt[], used: number[]): Source[] =>
  * Streaming leaves them as plain `[1]` until the sources land, which is the honest
  * intermediate state -- and the same shape they end up in.
  */
+/**
+ * Drop a citation the next sentence is about to repeat.
+ *
+ * The model was told to cite every claim, and several sentences in a row usually rest on
+ * the same page, so the same marker lands at the end of each of them. Keeping the last of
+ * a run attributes the whole passage once, where the reader is looking when they finish it.
+ *
+ * Only adjacent identical runs collapse, and only within a line -- a different citation in
+ * between means the two claims came from different places, and a paragraph or list-item
+ * break is far enough that the marker should not travel across it.
+ */
+export const collapseRepeatedCitations = (text: string) =>
+  text
+    .split("\n")
+    .map((line) => {
+      const runs = [...line.matchAll(/[ \t]*(?:\[\d{1,2}\])+/g)]
+      const key = (run: string) =>
+        [...run.matchAll(/\d{1,2}/g)]
+          .map(Number)
+          .sort((a, b) => a - b)
+          .join(",")
+      // Right to left, so removing one does not shift the offsets of those still to check.
+      return runs.reduceRight(
+        (acc, run, index) =>
+          index < runs.length - 1 && key(run[0]) === key(runs[index + 1][0])
+            ? acc.slice(0, run.index) + acc.slice(run.index + run[0].length)
+            : acc,
+        line
+      )
+    })
+    .join("\n")
+
 const CITATION_RUN = /[ \t]*(\[\d{1,2}\])+/g
 
 export const withCitationLinks = (text: string, sources: Source[]) => {
   if (!sources.length) return text
-  return text.replace(CITATION_RUN, (run) => {
+  // Sources only land once the answer is finished, so the collapse never runs against a
+  // half-streamed passage -- a marker would otherwise appear and vanish as tokens arrive.
+  return collapseRepeatedCitations(text).replace(CITATION_RUN, (run) => {
     const numbers = [...run.matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1]))
     const links = numbers
       .map((n) => {
