@@ -281,36 +281,16 @@ export default async function Page(props: { params: Promise<Params> }) {
             })}
           </p>
           <p>{t("glamsterdam-scope")}</p>
-          {/* Boxed rather than a plain paragraph: this is the one rule on the page that
-              narrows a client's scope instead of widening it, and a reporter who skims
-              past it wastes their time and ours on an ineligible Ethrex report. */}
+          {/* Boxed rather than a plain paragraph: clients are not in scope for
+              Glamsterdam yet, only specifications, so a reporter who skims past this
+              wastes their time and ours on an ineligible client report. */}
           {/* max-w-3xl by hand: MainArticle constrains the text column with
               `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
               runs the full page width and reads as a different section rather than an
               aside to the paragraph above it. */}
           <Alert variant="update" className="max-w-3xl">
-            {/* gap-4: AlertContent is a bare flex-col, so two sibling <p>s sit
-                flush against each other and read as one wrapped sentence; this
-                separates them by a blank line. */}
-            <AlertContent className="gap-4">
-              <p>
-                {t.rich("glamsterdam-client-scope", {
-                  a: (chunks) => (
-                    <InlineLink href="https://notes.ethereum.org/@mushow/glamsterdam_clients_scope">
-                      {chunks}
-                    </InlineLink>
-                  ),
-                })}
-              </p>
-              <p>
-                {t.rich("glamsterdam-clients", {
-                  a: (chunks) => (
-                    <InlineLink href="https://github.com/lambdaclass/ethrex">
-                      {chunks}
-                    </InlineLink>
-                  ),
-                })}
-              </p>
+            <AlertContent>
+              <p>{t("glamsterdam-specs")}</p>
             </AlertContent>
           </Alert>
           <h3>{t("glamsterdam-rewards-title")}</h3>
