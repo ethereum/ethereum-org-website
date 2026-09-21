@@ -1362,8 +1362,8 @@
       "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
-      "pctMajorityExecutionClient": 51.9,
-      "pctMajorityConsensusClient": 18.2,
+      "pctMajorityExecutionClient": 36.3,
+      "pctMajorityConsensusClient": 58.6,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
