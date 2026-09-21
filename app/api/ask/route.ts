@@ -20,6 +20,8 @@ import {
   type RetrievedRecord,
 } from "@/lib/utils/ask"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 /** Records pulled for grounding, before grouping collapses them to one per page. */
 const RETRIEVE = 60
 const MAX_PAGES = 8
@@ -98,8 +100,10 @@ export async function POST(request: Request) {
   if (!process.env.INFERENCE_API_KEY || !process.env.INFERENCE_URL) {
     return Response.json({ error: "Not configured" }, { status: 503 })
   }
-  if (typeof locale !== "string" || !/^[a-z]{2}(-[a-z]{2})?$/.test(locale)) {
-    return Response.json({ error: "Bad locale" }, { status: 400 })
+  // English only, and enforced here as well as in the UI: this is a public endpoint, so
+  // the button not being rendered elsewhere is not what keeps other locales out.
+  if (locale !== DEFAULT_LOCALE) {
+    return Response.json({ error: "Unsupported locale" }, { status: 400 })
   }
 
   const question = q.slice(0, 500)

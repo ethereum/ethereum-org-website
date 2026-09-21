@@ -28,6 +28,8 @@ import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import AskAffordance from "./AskAffordance"
 
 // `DocSearchHit` isn't re-exported from the package root, so derive it from the
@@ -503,7 +505,10 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   return (
     <div className={className} data-testid="search-modal">
       <DocSearchModal initialScrollY={windowScrollY} {...searchModalProps} />
-      <AskAffordance />
+      {/* English only: the prompt, the guardrails and the referral records are written
+          in English and measured against the English index. Elsewhere the button would
+          answer from that locale's pages with none of that tested. */}
+      {locale === DEFAULT_LOCALE && <AskAffordance />}
     </div>
   )
 }

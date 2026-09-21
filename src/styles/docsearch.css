@@ -449,6 +449,13 @@
   @apply flex items-center justify-between text-xs text-body-medium uppercase;
 }
 
+/* Rides the label rather than sitting beside it, so the header stays one line on a
+   phone. The header uppercases, so the string stays sentence case. Inherits the header's
+   colour deliberately: primary is the link colour, and this is not a link. */
+.DocSearch-Ask-beta {
+  @apply ms-1;
+}
+
 .DocSearch-Ask-header button {
   @apply text-primary normal-case hover:underline;
 }

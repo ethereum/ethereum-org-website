@@ -148,7 +148,11 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
   return (
     <section className="DocSearch-Ask" ref={scroller}>
       <header className="DocSearch-Ask-header">
-        <span>{t("docsearch-ask-answer")}</span>
+        <span>
+          {t("docsearch-ask-answer")}
+          {/* Not a citation, so no brackets -- see the design-system skill. */}
+          <sup className="DocSearch-Ask-beta">{t("docsearch-ask-beta")}</sup>
+        </span>
         <button type="button" onClick={onDismiss}>
           {t("docsearch-ask-back")}
         </button>
