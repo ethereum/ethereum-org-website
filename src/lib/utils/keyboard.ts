@@ -1,2 +1,6 @@
-export const isModified = (event: KeyboardEvent) =>
-  event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
+export const isModified = (event: {
+  altKey: boolean
+  ctrlKey: boolean
+  metaKey: boolean
+  shiftKey: boolean
+}) => event.altKey || event.ctrlKey || event.metaKey || event.shiftKey

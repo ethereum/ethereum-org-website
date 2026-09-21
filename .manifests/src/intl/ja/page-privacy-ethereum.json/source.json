@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-privacy-ethereum.json",
-  "generatedAt": "2026-07-29T05:45:42.288Z",
-  "rootHash": "5a1caed35c36",
+  "generatedAt": "2026-09-17T17:24:59.597Z",
+  "rootHash": "a16b6561eea1",
   "tree": {
-    "contentHash": "dba6e5a6de26",
+    "contentHash": "e45eec12b087",
     "anchorHash": "f605c2d2ade9",
     "children": {
       "page-privacy-ethereum-meta-title": {
@@ -488,21 +488,21 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-privacy-ethereum-l2-description-2": {
-        "contentHash": "829086689b04",
+        "contentHash": "bbe6d884848f",
         "anchorHash": "4b9f7d802648",
         "children": {
           "prose:0": {
-            "contentHash": "2c1d392662b4",
+            "contentHash": "f128139b5b78",
             "anchorHash": "e3b0c44298fc"
           }
         }
       },
       "page-privacy-ethereum-l2-description-3": {
-        "contentHash": "c9f7f5068c11",
+        "contentHash": "34b93f7ea38d",
         "anchorHash": "4b9f7d802648",
         "children": {
           "prose:0": {
-            "contentHash": "ad0885ea9170",
+            "contentHash": "07bdf79fd189",
             "anchorHash": "e3b0c44298fc"
           }
         }
@@ -903,5 +903,5 @@
       "page-privacy-ethereum-pathway-2-description"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "3c6baedb49e01399649b0d6bb2f3f849a490a12e"
 }

@@ -79,6 +79,7 @@ type PersonaStyle = {
   tag: PersonaTagStatus
   text: string
   border: string
+  bg: string
   bgTint: string
 }
 
@@ -92,24 +93,28 @@ export const PERSONA_STYLES: Record<WalletPersonaId, PersonaStyle> = {
     tag: "primary",
     text: "text-primary",
     border: "border-primary",
+    bg: "bg-primary",
     bgTint: "bg-primary/10",
   },
   developer: {
     tag: "accent-b",
     text: "text-accent-b",
     border: "border-accent-b",
+    bg: "bg-accent-b",
     bgTint: "bg-accent-b/10",
   },
   finance: {
     tag: "accent-c",
     text: "text-accent-c",
     border: "border-accent-c",
+    bg: "bg-accent-c",
     bgTint: "bg-accent-c/10",
   },
   hardware: {
     tag: "accent-a",
     text: "text-accent-a",
     border: "border-accent-a",
+    bg: "bg-accent-a",
     bgTint: "bg-accent-a/10",
   },
   // No accent-d token exists, so nfts rides the warning/yellow family.
@@ -117,6 +122,7 @@ export const PERSONA_STYLES: Record<WalletPersonaId, PersonaStyle> = {
     tag: "tag-yellow",
     text: "text-warning-dark dark:text-yellow-500",
     border: "border-warning-dark dark:border-yellow-500",
+    bg: "bg-warning-dark dark:bg-yellow-500",
     bgTint: "bg-warning-dark/10 dark:bg-yellow-500/10",
   },
 }
