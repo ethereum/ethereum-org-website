@@ -1,8 +1,11 @@
 {
+  "fcr-scope": "<a>Fast Confirmation Rule</a> is now in scope of the Bug Bounty Program.",
   "glamsterdam-banner": "The Glamsterdam upgrade is approaching. <a>View the bug bounty rewards and scope</a>.",
   "glamsterdam-title": "Glamsterdam Bug Bounty",
   "glamsterdam-opening": "The Glamsterdam upgrade will be in scope once its release candidates are announced on the <a>Ethereum Foundation blog</a>. Glamsterdam specifications and EIPs are already in scope with a 0.5× multiplier.",
   "glamsterdam-scope": "The special rules and multipliers below only apply to bugs specific to the Glamsterdam upgrade. Researchers should target the latest unstable client branches and check for existing issues and pull requests. Bugs already covered by an open issue or pull request are not eligible.",
+  "glamsterdam-client-scope": "Find the list of clients and their respective scope <a>here</a>.",
+  "glamsterdam-clients": "<a>Ethrex</a> is now also in scope for Glamsterdam-issues only.",
   "glamsterdam-rewards-title": "Reward multipliers",
   "glamsterdam-rewards-initial": "0.5×: From publication of the release candidate blog post until the scheduled Sepolia testnet upgrade. Medium, High and Critical findings are in scope. Glamsterdam specifications and EIPs are already eligible for this multiplier.",
   "glamsterdam-rewards-sepolia": "2.0×: From 24 hours after the Sepolia upgrade epoch finalizes until the Hoodi upgrade. Low, Medium, High and Critical findings are in scope.",
