@@ -12,24 +12,28 @@ export const useThemeToggle = () => {
   const { setTheme, resolvedTheme } = useTheme()
   const ThemeIcon = useColorModeValue(Moon, Sun)
 
-  const toggleColorMode = () => {
+  // The nav-bar event records the theme change and how it was reached; the
+  // keyboard path is separately counted as a shortcut by the hook below.
+  const setColorMode = (eventAction: "click" | "keyboard") => {
     const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
 
     setTheme(targetTheme)
 
     trackCustomEvent({
       eventCategory: "nav bar",
-      eventAction: "click",
+      eventAction,
       eventName: `${targetTheme} mode`,
     })
   }
+
+  const toggleColorMode = () => setColorMode("click")
 
   const themeIconAriaLabel = useColorModeValue(
     t("dark-mode-aria-label"),
     t("light-mode-aria-label")
   )
 
-  useKeyboardShortcut("theme", toggleColorMode)
+  useKeyboardShortcut("theme", () => setColorMode("keyboard"))
 
   return {
     toggleColorMode,

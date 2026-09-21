@@ -33,6 +33,7 @@ export type Shortcut = {
   /**
    * The binding lives outside our code (DocSearch, Radix), so nothing calls
    * `useKeyboardShortcut` for it -- the entry exists to document the behavior.
+   * These are not counted by the hook's Matomo event either.
    */
   documentedOnly?: boolean
   /** Only bound on viewports that render the desktop nav. */
@@ -72,9 +73,9 @@ export const KEYBOARD_SHORTCUTS = {
     combos: [["mod", "k"], ["/"]],
     labelKey: "shortcut-open-search",
     group: "navigation",
-    // Bound by DocSearch's `useDocSearchKeyboardEvents`, which also owns the
-    // Escape-to-close behavior of the search modal.
-    documentedOnly: true,
+    // DocSearch's `useDocSearchKeyboardEvents` owns the behavior (and the
+    // Escape that closes the modal). Search registers this entry anyway, with
+    // no handler, so the keypress still lands in the shortcut count.
   },
   searchNavigate: {
     combos: [["ArrowUp"], ["ArrowDown"]],

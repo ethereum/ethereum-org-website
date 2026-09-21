@@ -17,6 +17,7 @@ import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
@@ -48,6 +49,11 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     onClose,
     searchButtonRef,
   })
+
+  // DocSearch already opens on these chords, so there is nothing to do here.
+  // The registration exists only so the hook counts a keyboard-opened search
+  // separately from the button, which share the event above.
+  useKeyboardShortcut("search", () => {})
 
   const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
   const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""

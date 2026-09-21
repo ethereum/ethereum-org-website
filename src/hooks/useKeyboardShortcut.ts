@@ -1,4 +1,5 @@
 import { isTypingTarget, matchesCombo } from "@/lib/utils/keyboard"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useEventListener } from "./useEventListener"
 
@@ -25,9 +26,21 @@ export const useKeyboardShortcut = (
   useEventListener("keydown", (event) => {
     if (!enabled) return
     if (!allowWhileTyping && isTypingTarget(event.target)) return
-    if (!combos.some((combo) => matchesCombo(event, combo))) return
+
+    const combo = combos.find((candidate) => matchesCombo(event, candidate))
+    if (!combo) return
 
     event.preventDefault()
+
+    // Tracked here rather than per call site so every bound shortcut is
+    // counted. The name carries the chord, to separate alternates like
+    // mod+k vs / and one nav digit from another.
+    trackCustomEvent({
+      eventCategory: "keyboard shortcut",
+      eventAction: id,
+      eventName: combo.join("+"),
+    })
+
     handler(event)
   })
 }
