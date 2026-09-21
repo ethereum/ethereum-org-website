@@ -105,12 +105,9 @@ const DAILY: TaskDef[] = [
   [KEYS.EVENTS, fetchEvents],
   // The catalog grew ~47% in Sep 2026 and stopped fitting the shared 300s
   // budget. Enrichment is paced against third-party rate limits, so the floor
-  // here is wall clock, not compute.
-  [
-    KEYS.DEVELOPER_TOOLS,
-    fetchDeveloperTools,
-    { maxDuration: 900, machine: "small-2x" },
-  ],
+  // here is wall clock, not compute -- which is why this buys time, not a
+  // bigger machine.
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],

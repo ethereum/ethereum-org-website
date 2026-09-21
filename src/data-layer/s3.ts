@@ -41,9 +41,13 @@ function getS3Client(): S3Client {
       endpoint,
       credentials: { accessKeyId, secretAccessKey },
       forcePathStyle: true, // Required for S3-compatible services
-      // The SDK defaults to no request timeout, so a stalled endpoint hangs the
-      // caller until the task's maxDuration kills the entire run.
-      requestHandler: { connectionTimeout: 5_000, requestTimeout: 20_000 },
+      // The SDK ships no socket timeout, so a stalled endpoint hangs the caller
+      // until the task's maxDuration kills the entire run. `requestTimeout` is
+      // the wrong knob: without `throwOnRequestTimeout` it only warns, and it
+      // caps total wall clock, which would abort a legitimately slow multi-MB
+      // PUT. `socketTimeout` fires on inactivity, so slow-but-moving uploads
+      // survive and genuinely dead sockets do not.
+      requestHandler: { connectionTimeout: 5_000, socketTimeout: 20_000 },
     })
   }
   return s3Client

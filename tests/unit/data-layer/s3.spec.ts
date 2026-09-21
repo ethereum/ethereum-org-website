@@ -71,8 +71,17 @@ test.describe("data-layer S3 helpers", () => {
   let stub: Stub
   let sourceFetches: string[]
   const servedTypes = new Map<string, string>()
+  const originalFetch = globalThis.fetch
+  const S3_ENV_KEYS = [
+    "S3_ENDPOINT",
+    "S3_ACCESS_KEY_ID",
+    "S3_SECRET_ACCESS_KEY",
+    "S3_IMAGE_BUCKET",
+  ] as const
+  const originalEnv: Record<string, string | undefined> = {}
 
   test.beforeAll(async () => {
+    for (const key of S3_ENV_KEYS) originalEnv[key] = process.env[key]
     stub = await startS3Stub()
     process.env.S3_ENDPOINT = `http://127.0.0.1:${stub.port}`
     process.env.S3_ACCESS_KEY_ID = "test"
@@ -102,6 +111,14 @@ test.describe("data-layer S3 helpers", () => {
   })
 
   test.afterAll(async () => {
+    // CI runs the unit project with workers: 1, so every spec shares this
+    // process. Other specs capture globalThis.fetch as their "original" and
+    // restore it later -- leaving the stub in place hands them the stub.
+    globalThis.fetch = originalFetch
+    for (const [key, value] of Object.entries(originalEnv)) {
+      if (value === undefined) delete process.env[key]
+      else process.env[key] = value
+    }
     await stub.close()
   })
 
