@@ -167,12 +167,20 @@ export const WALLET_FEATURE_GROUPS: WalletFeatureGroup[] = [
 
 /**
  * The sidebar's "Advanced filters" set: every detail-page feature except the
- * buy/sell pair, which already has its own sidebar group.
+ * buy/sell pair, which already has its own sidebar group, plus the beginner
+ * flag — a curation call rather than a feature, so it stays off detail pages
+ * but has to be filterable for the "New to crypto" persona to expand into it.
  */
-export const WALLET_ADVANCED_FILTERS: WalletFeature[] =
-  WALLET_FEATURE_GROUPS.filter(
+export const WALLET_ADVANCED_FILTERS: WalletFeature[] = [
+  ...WALLET_FEATURE_GROUPS.filter(
     (group) => group.titleKey !== "page-find-wallet-buy-sell-crypto"
-  ).flatMap((group) => group.features)
+  ).flatMap((group) => group.features),
+  {
+    key: "new_to_crypto",
+    labelKey: "page-find-wallet-new-to-crypto-title",
+    descKey: "page-find-wallet-new-to-crypto-desc",
+  },
+]
 
 export function getWalletAdvancedFlags(wallet: WalletData): WalletFeatureKey[] {
   return WALLET_ADVANCED_FILTERS.filter(({ key }) => wallet[key]).map(
