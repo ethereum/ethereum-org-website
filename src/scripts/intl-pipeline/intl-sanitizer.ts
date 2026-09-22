@@ -23,7 +23,7 @@ async function loadFranc(): Promise<void> {
  * - Protect known brand/team names from inadvertent translation
  * - Validate JSON files; report issues
  *
- * Wired into the pipeline via lib/workflows/sanitization.ts
+ * Wired into the pipeline per task via sanitizeAndGate in main.ts (before the gates and the commit)
  */
 
 const ROOT = process.cwd()
