@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/index.md",
-  "generatedAt": "2026-06-18T21:07:38.856Z",
-  "rootHash": "7367afbe696a",
+  "generatedAt": "2026-09-17T17:25:41.982Z",
+  "rootHash": "fd1a210854ea",
   "tree": {
-    "contentHash": "c8fb789ee0ef",
-    "anchorHash": "32b3906a59a6",
+    "contentHash": "c709497c55ce",
+    "anchorHash": "490b154f4178",
     "children": {
       "frontmatter:title": {
         "contentHash": "6ed157982b1b",
@@ -305,8 +305,8 @@
         ]
       },
       "crypto-economic-security": {
-        "contentHash": "876d5be06845",
-        "anchorHash": "52dfb2477e14",
+        "contentHash": "11e1cfe5102a",
+        "anchorHash": "98b2aba849d5",
         "labelHash": "27b2959f7b26",
         "children": {
           "_label": {
@@ -319,10 +319,10 @@
           },
           "link:0": {
             "contentHash": "7262e766acf7",
-            "anchorHash": "b810bdad2832"
+            "anchorHash": "7de9c1dfc237"
           },
           "prose:2": {
-            "contentHash": "e0e2ba8543d5",
+            "contentHash": "8b0dac5176b4",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -525,8 +525,8 @@
         ]
       },
       "related-topics": {
-        "contentHash": "ce3216d2fbf0",
-        "anchorHash": "242c6d7e2e2c",
+        "contentHash": "8b441c4887b4",
+        "anchorHash": "4c11172c3e41",
         "labelHash": "5a38da0df0ab",
         "children": {
           "_label": {
@@ -548,6 +548,16 @@
           "link:1": {
             "contentHash": "e98666fe5aaf",
             "anchorHash": "6051eacd0386"
+          },
+          "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "5ddeea1290e5",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "769e0b8515e3"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -555,7 +565,8 @@
           "prose:2",
           "link:0",
           "prose:3",
-          "link:1"
+          "link:1",
+          "component:5"
         ]
       }
     },
@@ -581,5 +592,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "3c6baedb49e01399649b0d6bb2f3f849a490a12e"
 }

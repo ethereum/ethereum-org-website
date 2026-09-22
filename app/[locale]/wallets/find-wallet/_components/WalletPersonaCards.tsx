@@ -1,100 +1,158 @@
-import { getTranslations } from "next-intl/server"
+"use client"
 
+import { memo, useId } from "react"
+import { Check } from "lucide-react"
+
+import Checkbox from "@/components/ui/checkbox"
+import { FieldLegend, FieldSet } from "@/components/ui/field"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { isModified } from "@/lib/utils/keyboard"
 
-import {
-  PERSONA_STYLES,
-  WALLET_PERSONAS,
-  type WalletPersonaId,
-} from "@/data/wallets/personas"
+import { PERSONA_STYLES, type WalletPersonaId } from "@/data/wallets/personas"
 
-type WalletPersonaCardsProps = {
-  locale: string
-  personaCounts: Record<WalletPersonaId, number>
-  currentPersonaId?: WalletPersonaId
+export type WalletPersonaCard = {
+  id: WalletPersonaId
+  title: string
+  description: string
 }
 
-/**
- * Real links to persona pages, not client-side filters, so each persona is its
- * own indexable page. The active card links back to the full list.
- */
-const WalletPersonaCards = async ({
-  locale,
-  personaCounts,
-  currentPersonaId,
-}: WalletPersonaCardsProps) => {
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
+type WalletPersonaCardsProps = {
+  personas: WalletPersonaCard[]
+  /** Already locale-formatted. */
+  counts: Record<WalletPersonaId, string>
+  selected: WalletPersonaId[]
+  onToggle: (persona: WalletPersonaCard) => void
+  labels: {
+    legend: string
+    /** Raw message with a `{count}` placeholder. */
+    countAvailable: string
+  }
+}
+
+const PersonaCard = ({
+  persona,
+  count,
+  isActive,
+  countLabel,
+  onToggle,
+}: {
+  persona: WalletPersonaCard
+  count: string
+  isActive: boolean
+  countLabel: string
+  onToggle: (persona: WalletPersonaCard) => void
+}) => {
+  const descriptionId = useId()
+  const color = PERSONA_STYLES[persona.id]
 
   return (
-    <nav
-      className="relative min-w-0 overflow-x-clip"
-      aria-label={t("page-find-wallet-persona-legend")}
-    >
+    <li className="grid-rows-1 pb-5">
+      <label
+        className={cn(
+          "group relative flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 shadow-lg transition-all duration-50 lg:h-full lg:p-6",
+          "has-[:focus-visible]:outline has-[:focus-visible]:outline-4 has-[:focus-visible]:-outline-offset-4 has-[:focus-visible]:outline-primary-hover",
+          isActive
+            ? cn(color.border, color.bgTint)
+            : "border-primary-low-contrast hover:bg-background-highlight"
+        )}
+      >
+        {/* The checkbox is the control -- a persona is a multi-select filter --
+            and keeping it the only tab stop is why this link is not one. It is
+            here so crawlers and modifier-clicks reach the persona page; a plain
+            click anywhere on the card filters in place. */}
+        <BaseLink
+          href={`/wallets/find-wallet/personas/${persona.id}/`}
+          prefetch={false}
+          tabIndex={-1}
+          aria-hidden
+          activeClassName=""
+          className="absolute inset-0 rounded-base"
+          onClick={(event) => {
+            if (event.button !== 0 || isModified(event)) return
+            event.preventDefault()
+            // Or the label would forward the click on to the checkbox and
+            // toggle it straight back.
+            event.stopPropagation()
+            onToggle(persona)
+          }}
+        />
+        <span className="items-top flex w-full gap-2 px-1.5 leading-normal">
+          <Checkbox
+            className="sr-only"
+            aria-describedby={descriptionId}
+            checked={isActive}
+            onCheckedChange={() => onToggle(persona)}
+          />
+          <span
+            aria-hidden
+            className={cn(
+              "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
+              color.border,
+              isActive && color.bg
+            )}
+          >
+            {isActive && (
+              <Check className="size-4 stroke-[3] text-background" />
+            )}
+          </span>
+          <span
+            className={cn(
+              "text-start text-xl font-bold hyphens-auto transition-all duration-50",
+              color.text
+            )}
+          >
+            {persona.title}
+            <span aria-hidden="true" className="font-normal">
+              {" "}
+              ({count})
+            </span>
+            <span className="sr-only"> {countLabel}</span>
+          </span>
+        </span>
+        <span
+          id={descriptionId}
+          className="block p-2 text-start text-sm leading-normal text-body"
+        >
+          {persona.description}
+        </span>
+      </label>
+    </li>
+  )
+}
+
+/** Shortcuts over the base filters; the page derives which read as selected. */
+const WalletPersonaCards = ({
+  personas,
+  counts,
+  selected,
+  onToggle,
+  labels,
+}: WalletPersonaCardsProps) => {
+  return (
+    <FieldSet className="relative min-w-0 gap-0 overflow-x-clip">
+      <FieldLegend className="sr-only">{labels.legend}</FieldLegend>
       <ul
         className="m-0 grid list-none auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         data-testid="persona-cards-container"
       >
-        {WALLET_PERSONAS.map((persona) => {
-          const isActive = currentPersonaId === persona.id
-          const color = PERSONA_STYLES[persona.id]
-          const count = personaCounts[persona.id]
-          const title = t(persona.titleKey)
+        {personas.map((persona) => {
+          const count = counts[persona.id]
           return (
-            <li key={persona.id} className="grid-rows-1 pb-5">
-              <BaseLink
-                href={
-                  isActive
-                    ? "/wallets/find-wallet/"
-                    : `/wallets/find-wallet/personas/${persona.id}/`
-                }
-                aria-current={isActive ? "page" : undefined}
-                // Mirrors the old preset filter's event exactly (same category,
-                // same translated title, same "<title> true|false") so persona
-                // engagement stays comparable across the A/B arms. The active
-                // card links back to the full list, so it is the deselect.
-                customEventOptions={{
-                  eventCategory: "UserPersona",
-                  eventAction: title,
-                  eventName: `${title} ${!isActive}`,
-                }}
-                className={cn(
-                  "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-base border-2 p-3 no-underline shadow-lg transition-all duration-50 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover lg:h-full lg:p-6",
-                  isActive
-                    ? cn(color.border, color.bgTint)
-                    : "border-primary-low-contrast hover:bg-background-highlight"
-                )}
-              >
-                <span
-                  className={cn(
-                    "w-full px-1.5 text-left text-xl leading-normal font-bold hyphens-auto transition-all duration-50",
-                    color.text
-                  )}
-                >
-                  {title}
-                  <span aria-hidden="true" className="font-normal">
-                    {" "}
-                    ({count})
-                  </span>
-                  <span className="sr-only">
-                    {" "}
-                    {t("page-find-wallet-persona-count-available", { count })}
-                  </span>
-                </span>
-                <p className="px-1.5 py-2 text-left text-sm leading-normal font-normal text-body transition-colors duration-500">
-                  {t(persona.descKey)}
-                </p>
-              </BaseLink>
-            </li>
+            <PersonaCard
+              key={persona.id}
+              persona={persona}
+              count={count}
+              countLabel={labels.countAvailable.replace("{count}", count)}
+              isActive={selected.includes(persona.id)}
+              onToggle={onToggle}
+            />
           )
         })}
       </ul>
-    </nav>
+    </FieldSet>
   )
 }
 
-export default WalletPersonaCards
+export default memo(WalletPersonaCards)
