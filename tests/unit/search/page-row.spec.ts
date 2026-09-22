@@ -1,6 +1,10 @@
 import { expect, test } from "@playwright/test"
 
-import { isWithheldResult, withPageRow } from "@/lib/utils/searchResults"
+import {
+  isWithheldResult,
+  sinkContributorPages,
+  withPageRow,
+} from "@/lib/utils/searchResults"
 
 const section = (anchor: string, level = "lvl2") => ({
   objectID: `rec-${anchor}`,
@@ -99,5 +103,62 @@ test.describe("isWithheldResult", () => {
       )
     ).toBe(false)
     expect(isWithheldResult("https://ethereum.org/ja/", "en", q)).toBe(false)
+  })
+})
+
+test.describe("sinkContributorPages", () => {
+  const reader = (n: number) =>
+    Array.from({ length: n }, (_, i) => ({
+      url: `https://ethereum.org/page-${i}/`,
+    }))
+  const contributor = (n: number) =>
+    Array.from({ length: n }, (_, i) => ({
+      url: `https://ethereum.org/contributing/adding-${i}/`,
+    }))
+  const urls = (hits: { url: string }[]) => hits.map((hit) => hit.url)
+
+  test("sinks a contributor page a reader's question turned up", () => {
+    // "Adding a quiz" ranked third for "what is eth". Its pagerank is already the lowest
+    // tier; sort_by leads with the text-match bucket, so rank never reaches it.
+    const hits = [...reader(4), ...contributor(1), ...reader(5)]
+    expect(urls(sinkContributorPages(hits, "en")).at(-1)).toContain(
+      "/contributing/"
+    )
+  })
+
+  test("leaves them alone when the question is about contributing", () => {
+    // Read off how much of the result set they are: a word list would have to anticipate
+    // every way someone asks.
+    const hits = [...contributor(3), ...reader(7)]
+    expect(sinkContributorPages(hits, "en")).toBe(hits)
+  })
+
+  test("keeps every result, since these are demoted and not withheld", () => {
+    const hits = [...reader(9), ...contributor(1)]
+    const sunk = sinkContributorPages(hits, "en")
+    expect(sunk).toHaveLength(hits.length)
+    expect(new Set(urls(sunk))).toEqual(new Set(urls(hits)))
+  })
+
+  test("does nothing when there are none to sink", () => {
+    const hits = reader(5)
+    expect(sinkContributorPages(hits, "en")).toBe(hits)
+  })
+
+  test("matches a localized path too", () => {
+    const hits = [
+      ...reader(9),
+      { url: "https://ethereum.org/ja/contributing/adding-a-quiz/" },
+    ]
+    expect(urls(sinkContributorPages(hits, "ja")).at(-1)).toContain("/ja/")
+  })
+
+  test("leaves a page merely named for contributing where it is", () => {
+    // Only the section counts -- a reader page about contributing to a DAO is not one.
+    const hits = [
+      ...reader(9),
+      { url: "https://ethereum.org/dao/contributing-to-a-dao/" },
+    ]
+    expect(sinkContributorPages(hits, "en")).toBe(hits)
   })
 })

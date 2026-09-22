@@ -20,6 +20,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import {
   isWithheldResult,
+  sinkContributorPages,
   withoutAdapterFields,
   withPageName,
   withPageRow,
@@ -301,8 +302,11 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
         const [first, ...rest] = response.results
         const query = requests[0]?.q ?? ""
         // See isWithheldResult: the homepage always, the glossary unless asked for.
-        const kept = (first?.hits ?? []).filter(
-          (hit) => !isWithheldResult(hit.url, locale, query)
+        const kept = sinkContributorPages(
+          (first?.hits ?? []).filter(
+            (hit) => !isWithheldResult(hit.url, locale, query)
+          ),
+          locale
         )
         const dropped = (first?.hits?.length ?? 0) - kept.length
 
