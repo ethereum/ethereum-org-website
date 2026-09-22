@@ -20,7 +20,11 @@ export const SITE_ORIGIN = "https://ethereum.org"
 
 // Re-exported so the scripts keep one import site; the definitions live outside this
 // module because it loads `.env` and the browser must not.
-export { QUERY_BY, sortBy, TEXT_MATCH_TYPE } from "../../lib/utils/searchParams"
+export {
+  QUERY_BY,
+  SORT_BY,
+  TEXT_MATCH_TYPE,
+} from "../../lib/utils/searchParams"
 
 /** Canonical locale list -- same source the site builds from. */
 export const LOCALES = i18nConfig.map(({ code }) => code)

@@ -25,7 +25,7 @@ import {
   resolveAlias,
   SEARCH_KEY,
   SITE_ORIGIN,
-  sortBy,
+  SORT_BY,
   TEXT_MATCH_TYPE,
 } from "./client"
 
@@ -219,7 +219,7 @@ const hitAtOne = async (collection: string, locale: string) => {
       // `pagerank`, so a change to page ranking was invisible to the very check meant
       // to catch it.
       query_by: QUERY_BY,
-      sort_by: sortBy(locale),
+      sort_by: SORT_BY,
       text_match_type: TEXT_MATCH_TYPE,
       group_by: "url_without_anchor",
       // 1 rather than the app's 3: hit@1 only cares which page ranks first, and

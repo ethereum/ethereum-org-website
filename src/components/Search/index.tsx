@@ -14,7 +14,7 @@ import { ErrorBoundary } from "@/components/ui/error-boundary"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { sortBy, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
+import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
@@ -137,7 +137,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       // Shared with the promote gate, so a script cannot measure ranking users never
       // receive. The rationale for both values lives with them.
       text_match_type: TEXT_MATCH_TYPE,
-      sort_by: sortBy(locale),
+      sort_by: SORT_BY,
     },
     onClose,
     // Surface any failed query as the modal's error state rather than a silent idle one.

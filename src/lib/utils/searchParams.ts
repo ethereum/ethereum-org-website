@@ -12,22 +12,24 @@ export const QUERY_BY =
   "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content"
 
 /**
- * Rank by which field matched rather than by raw match score: without this a short
- * content snippet outscores a page title, so short queries land on whichever page
- * happens to mention the term. Costs long exact-title queries (89/90 -> 73/90) but they
- * stay far ahead of Algolia's 37/90.
+ * Rank by which field matched rather than by raw match score, so a page title beats a
+ * content snippet that happens to repeat the term. Measured on the live index against
+ * production Algolia, 2026-09: on 200 unpinned glossary terms across 8 locales the top
+ * result agrees with Algolia's 83 times against 56 for `max_score`; on 248 pages searched
+ * by their own title it costs 10 hits (233 vs 243 of 248) and stays ahead of Algolia's 222.
  */
 export const TEXT_MATCH_TYPE = "max_weight" as const
 
 /**
- * Break near-ties by page importance: root-level pages rank 10, tutorials 1. Far fewer
- * buckets than the default 100, where almost nothing ties so pagerank never applies. The
- * two locale groups peak in different places, measured on unpinned queries: English at
- * 16 (45/56 vs 37 at 6), the rest at 5-6 (hit@3 89/120 vs 80 at 16). Every query in
- * groundtruth.json is also a curation rule, so that set scores pins rather than ranking
- * -- don't tune against it.
+ * `pagerank` (root-level pages 10, tutorials 1) breaks ties within a text-match bucket.
+ * 100 buckets, the default: coarser bucketing was tried (6 and 16) to pull short head
+ * terms onto their landing pages, and it worked for those, but it collapses an exact
+ * title match into the same tier as a page that merely contains the words -- known-item
+ * fell to 186 of 248 at 6 buckets and agreement with Algolia on unpinned terms to 36 of
+ * 200. Head terms are pinned per locale instead (see typesense/curation-aliases.json),
+ * which is deterministic and leaves the ranking free to serve everything else.
+ *
+ * Every query in groundtruth.json is also a curation rule, so that set scores pins rather
+ * than ranking -- don't tune against it.
  */
-export const textMatchBuckets = (locale: string) => (locale === "en" ? 16 : 6)
-
-export const sortBy = (locale: string) =>
-  `_text_match(buckets: ${textMatchBuckets(locale)}):desc,pagerank:desc`
+export const SORT_BY = "_text_match(buckets: 100):desc,pagerank:desc"
