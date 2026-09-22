@@ -47,6 +47,10 @@ export function getEventTypes(tags: string[]): EventType[] {
 function transformEvent(event: GeodeApiEventItem): EventItem {
   return {
     ...event,
+    // The feed sends null for a missing image; "" is the sentinel the UI and
+    // the S3 upload path below already expect.
+    logoImage: event.logoImage ?? "",
+    bannerImage: event.bannerImage ?? "",
     id: slugify(event.title),
     eventTypes: getEventTypes(event.tags),
     isOnline: isOnlineLocation(event.location),
