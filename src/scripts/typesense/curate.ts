@@ -74,11 +74,20 @@ const itemId = (query: string) => {
   return `${slug || "q"}-${hash}`
 }
 
+/**
+ * Typesense compares an exact rule against the typed query with punctuation as a token
+ * separator, but stores the rule's own text with punctuation removed -- so a rule written
+ * "erc-20" or "crypto.com" matches nothing anyone types, while a rule written "erc 20"
+ * matches "erc-20", "erc_20" and "erc 20" alike. Store every query in the spaced form.
+ */
+const ruleQuery = (query: string) =>
+  query.replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+
 /** The strings that pin this rule's pages in a locale. English never gets aliases. */
-const queriesFor = (rule: CurationRule, aliases: Aliases, locale: string) => [
-  rule.q,
-  ...(locale === "en" ? [] : (aliases[rule.q]?.[locale] ?? [])),
-]
+const queriesFor = (rule: CurationRule, aliases: Aliases, locale: string) =>
+  [rule.q, ...(locale === "en" ? [] : (aliases[rule.q]?.[locale] ?? []))]
+    .map(ruleQuery)
+    .filter(Boolean)
 
 /** Resolve a site path to a document id. Anchors are dropped: we pin pages, not fragments. */
 const resolveDocumentId = async (collection: string, sitePath: string) => {
