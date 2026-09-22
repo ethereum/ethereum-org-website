@@ -20,10 +20,13 @@ import {
   countByLanguage,
   listCollections,
   LOCALES,
+  QUERY_BY,
   requireEnv,
   resolveAlias,
   SEARCH_KEY,
   SITE_ORIGIN,
+  sortBy,
+  TEXT_MATCH_TYPE,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -38,11 +41,14 @@ const KEEP_PER_LOCALE = 2
 
 /**
  * Minimum share of labelled queries whose correct page must rank first, measured against
- * the staging collection before the alias moves. The baseline is ~42% before curation is
- * applied, so this catches a collapse without tripping on ordinary drift.
+ * the staging collection before the alias moves. The ~42% baseline was measured under the
+ * gate's old parameters (no sort, default text match); the first promote after the gate
+ * started mirroring the app re-baselines it. It catches a collapse, not ordinary drift.
  *
  * Deliberately measured pre-curation: pins are applied after promotion and would mask a
- * regression in the underlying ranking.
+ * regression in the underlying ranking. This is also the only place it can be measured --
+ * curation sets ignore `enable_overrides=false` on Typesense v30, so a live alias always
+ * scores its pins.
  */
 const MIN_HIT_AT_1 = 0.35
 
@@ -208,9 +214,16 @@ const hitAtOne = async (collection: string, locale: string) => {
   for (const { q, correct } of queries) {
     const params = new URLSearchParams({
       q,
-      query_by:
-        "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,content",
+      // Must mirror what the app sends, or the gate scores results nobody receives.
+      // Without `sort_by` this ranked on text match alone and never consulted
+      // `pagerank`, so a change to page ranking was invisible to the very check meant
+      // to catch it.
+      query_by: QUERY_BY,
+      sort_by: sortBy(locale),
+      text_match_type: TEXT_MATCH_TYPE,
       group_by: "url_without_anchor",
+      // 1 rather than the app's 3: hit@1 only cares which page ranks first, and
+      // `group_limit` does not affect the order of the groups themselves.
       group_limit: "1",
       per_page: "1",
     })

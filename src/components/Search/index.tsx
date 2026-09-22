@@ -12,10 +12,9 @@ import { Slot } from "@radix-ui/react-slot"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { sortBy, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
@@ -127,7 +126,6 @@ const Search = ({ asChild = false, children }: SearchProps) => {
   const collectionPrefix =
     process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
   const collectionName = `${collectionPrefix}-${locale}`
-  const textMatchBuckets = locale === DEFAULT_LOCALE ? 16 : 6
 
   const searchModalProps = {
     typesenseCollectionName: collectionName,
@@ -136,18 +134,10 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       apiKey,
     },
     typesenseSearchParameters: {
-      // Rank by which field matched, not by raw match score: without this a short
-      // content snippet outscores a page title, so short queries land on whichever
-      // page happens to mention the term. Costs long exact-title queries (89/90 ->
-      // 73/90) but they stay far ahead of Algolia's 37/90.
-      text_match_type: "max_weight",
-      // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
-      // Far fewer buckets than the default 100, where almost nothing ties so pagerank
-      // never applies. The two locale groups peak in different places, measured on
-      // unpinned queries: English at 16 (45/56 vs 37 at 6), the rest at 5-6 (hit@3
-      // 89/120 vs 80 at 16). Every query in groundtruth.json is also a curation rule,
-      // so that set scores pins rather than ranking -- don't tune against it.
-      sort_by: `_text_match(buckets: ${textMatchBuckets}):desc,pagerank:desc`,
+      // Shared with the promote gate, so a script cannot measure ranking users never
+      // receive. The rationale for both values lives with them.
+      text_match_type: TEXT_MATCH_TYPE,
+      sort_by: sortBy(locale),
     },
     onClose,
     // Surface any failed query as the modal's error state rather than a silent idle one.
