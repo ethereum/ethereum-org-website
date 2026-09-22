@@ -12,9 +12,14 @@
  * Paths there are locale-agnostic: brand names read the same in every language and
  * ethereum.org uses English slugs throughout, so `/wallets/find-wallet/metamask/` becomes
  * `/ja/wallets/find-wallet/metamask/` for Japanese.
+ *
+ * Queries are not: a pin matches its string exactly, so every locale gets the English
+ * query plus that locale's entries in `typesense/curation-aliases.json` -- the ETHGlossary
+ * surface forms that `localize-curation.ts` generates.
  */
 
-import { readFileSync } from "fs"
+import { createHash } from "crypto"
+import { existsSync, readFileSync } from "fs"
 import path from "path"
 
 import {
@@ -29,23 +34,51 @@ import {
 
 interface CurationRule {
   q: string
+  term?: string
   pin: string[]
 }
 
+/** rule query -> locale -> localized query strings. */
+type Aliases = Record<string, Record<string, string[]>>
+
 const CURATION_PATH = path.join(process.cwd(), "typesense", "curation.json")
+const ALIASES_PATH = path.join(
+  process.cwd(),
+  "typesense",
+  "curation-aliases.json"
+)
 
 const loadRules = (): CurationRule[] =>
   JSON.parse(readFileSync(CURATION_PATH, "utf-8")).rules ?? []
 
+const loadAliases = (): Aliases =>
+  existsSync(ALIASES_PATH)
+    ? (JSON.parse(readFileSync(ALIASES_PATH, "utf-8")).aliases ?? {})
+    : {}
+
 const localize = (p: string, locale: string) =>
   locale === "en" ? p : `/${locale}${p}`
 
-const itemId = (query: string) =>
-  query
+/**
+ * Readable where the query is Latin, unique regardless: the slug alone collapsed every
+ * non-Latin query to "", so all of a locale's localized pins shared one id and overwrote
+ * each other.
+ */
+const itemId = (query: string) => {
+  const slug = query
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
-    .slice(0, 48)
+    .slice(0, 32)
+  const hash = createHash("sha1").update(query).digest("hex").slice(0, 10)
+  return `${slug || "q"}-${hash}`
+}
+
+/** The strings that pin this rule's pages in a locale. English never gets aliases. */
+const queriesFor = (rule: CurationRule, aliases: Aliases, locale: string) => [
+  rule.q,
+  ...(locale === "en" ? [] : (aliases[rule.q]?.[locale] ?? [])),
+]
 
 /** Resolve a site path to a document id. Anchors are dropped: we pin pages, not fragments. */
 const resolveDocumentId = async (collection: string, sitePath: string) => {
@@ -67,6 +100,7 @@ const resolveDocumentId = async (collection: string, sitePath: string) => {
 const curateLocale = async (
   locale: string,
   rules: CurationRule[],
+  aliases: Aliases,
   dryRun: boolean
 ) => {
   const alias = `ethereumorg-${locale}`
@@ -77,6 +111,8 @@ const curateLocale = async (
   const setName = `curation-${locale}`
 
   const items: unknown[] = []
+  // Exact matching is case-insensitive, so two rules must not claim one string.
+  const claimed = new Set<string>()
   let unresolved = 0
 
   for (const rule of rules) {
@@ -87,11 +123,15 @@ const curateLocale = async (
       else unresolved++
     }
     if (!ids.length) continue
-    items.push({
-      id: itemId(rule.q),
-      rule: { query: rule.q, match: "exact" },
-      includes: ids.map((id, i) => ({ id, position: i + 1 })),
-    })
+    for (const query of queriesFor(rule, aliases, locale)) {
+      if (claimed.has(query.toLowerCase())) continue
+      claimed.add(query.toLowerCase())
+      items.push({
+        id: itemId(query),
+        rule: { query, match: "exact" },
+        includes: ids.map((id, i) => ({ id, position: i + 1 })),
+      })
+    }
   }
 
   // The whole set is written in one request: the per-item endpoint
@@ -115,7 +155,7 @@ const curateLocale = async (
   }
 
   console.log(
-    `  ${locale}: ${items.length}/${rules.length} rules -> ${setName}` +
+    `  ${locale}: ${items.length} pins from ${rules.length} rules -> ${setName}` +
       (unresolved ? `, ${unresolved} URLs unresolved` : "")
   )
   return unresolved
@@ -132,13 +172,14 @@ const main = async () => {
       : ["en"]
 
   const rules = loadRules()
+  const aliases = loadAliases()
   console.log(
     `applying ${rules.length} curation rules to ${locales.length} locale(s)${dryRun ? " (dry run)" : ""}\n`
   )
 
   let unresolved = 0
   for (const locale of locales)
-    unresolved += await curateLocale(locale, rules, dryRun)
+    unresolved += await curateLocale(locale, rules, aliases, dryRun)
 
   // An unresolved URL means curation.json points at a page that no longer exists; the
   // pin silently does nothing, so fail rather than let it rot.

@@ -20,7 +20,7 @@ Indexing runs from `.github/workflows/typesense-index.yml`: on a Netlify `deploy
 
 The scraper crawls into a staging collection. A separate promote step swaps the live alias onto it only if the new index passes a size check, has a sortable `pagerank`, and returns documents for its own language. A refused promotion leaves the previous index serving, so a bad crawl degrades freshness rather than breaking search.
 
-Pinned results live in `typesense/curation.json` as query-to-URL mappings, in the repo rather than in a dashboard. Document ids change on every crawl, so pins are re-resolved against the new collection each time it is published.
+Pinned results live in `typesense/curation.json` as query-to-URL mappings, in the repo rather than in a dashboard. Document ids change on every crawl, so pins are re-resolved against the new collection each time it is published. Pins match the query string exactly, so rules that name an ETHGlossary term also carry that term's forms in every locale, generated into `typesense/curation-aliases.json` by `pnpm typesense:localize-curation` and pinned alongside the English query.
 
 ## Resources
 

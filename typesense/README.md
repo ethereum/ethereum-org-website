@@ -29,7 +29,8 @@ segmentation needs.
    a sortable `pagerank` field, and a non-zero count for its own language. On refusal the
    alias is left alone, so search serves slightly stale results rather than none.
 3. **Curate** (`pnpm typesense:curate`) — applies the pinned results in
-   `typesense/curation.json`.
+   `typesense/curation.json`, plus their localized forms from
+   `typesense/curation-aliases.json`.
 
 The scraper would otherwise swap its own alias the moment a crawl ends, with no checks at
 all. Scraping to a staging name and promoting separately is what makes the swap
@@ -121,6 +122,19 @@ Curation **cannot** be entered in a dashboard. Typesense pins by document id, an
 scraper assigns ids as sequential counters that change on every crawl -- dashboard pins
 would silently stop matching after the next run. Storing URLs here and resolving them at
 promote time is what keeps them working.
+
+Queries, unlike paths, are not locale-agnostic: a pin matches its string exactly, so the
+English rules do nothing for a reader on `/ja/` typing ウォレット. A rule may therefore
+name an ETHGlossary `term`, and `pnpm typesense:localize-curation` writes that term's
+surface forms in every locale -- canonical term, glossary aliases, heading and tag forms,
+plurals -- to `curation-aliases.json`. Curate pins each locale's forms next to the English
+query. The generated file is committed and never hand-edited; re-run the command when a
+rule gains a `term` or the glossary changes. It is the only thing here that talks to
+ETHGlossary: one request per language, by hand, never at query or crawl time.
+
+Not every rule has a term. Brands the glossary does not carry, English-only page titles
+and the wallet names stay English-only, which is also how the pin behaves for a reader who
+types the English word in any locale.
 
 ## CORS
 
