@@ -21,7 +21,6 @@ import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 import {
   isWithheldResult,
-  sinkContributorPages,
   withoutAdapterFields,
   withPageName,
   withPageRow,
@@ -303,11 +302,8 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
         const [first, ...rest] = response.results
         const query = requests[0]?.q ?? ""
         // See isWithheldResult: the homepage always, the glossary unless asked for.
-        const kept = sinkContributorPages(
-          (first?.hits ?? []).filter(
-            (hit) => !isWithheldResult(hit.url, locale, query)
-          ),
-          locale
+        const kept = (first?.hits ?? []).filter(
+          (hit) => !isWithheldResult(hit.url, locale, query)
         )
         const dropped = (first?.hits?.length ?? 0) - kept.length
 

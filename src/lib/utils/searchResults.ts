@@ -166,50 +166,6 @@ const isGlossaryUrl = (url: string, locale: string): boolean => {
   return path === "/glossary" || path === `/${locale}/glossary`
 }
 
-const isContributingUrl = (url: string, locale: string): boolean => {
-  const path = pathOf(url)
-  return (
-    path.startsWith("/contributing/") ||
-    path.startsWith(`/${locale}/contributing/`)
-  )
-}
-
-/**
- * Share of results that must be contributor pages before the reader is taken to be asking
- * about contributing. Measured: reader questions put them at 0-10%, contributor questions
- * at 22% and up.
- */
-const CONTRIBUTOR_INTENT_SHARE = 0.2
-
-/**
- * Sink the pages written for contributors below the ones written for readers, unless the
- * reader is asking about contributing.
- *
- * `/contributing/` documents how to add a quiz or a wallet to the site, and it matches a
- * reader's words closely enough to take a top slot -- "Adding a quiz" ranked third for
- * "what is eth". Its `pagerank` is already the lowest tier and that never reaches it:
- * `sort_by` leads with the text-match bucket, and rank only separates pages inside one.
- *
- * Intent is read off how much of the result set they are rather than off the query text.
- * A word list has to anticipate every way someone asks, and sinking them unconditionally
- * buried "how to contribute" under Glossary and Glamsterdam -- weak reader matches still
- * float up, so there is always something to sink beneath.
- */
-export const sinkContributorPages = <T extends { url?: string }>(
-  hits: T[],
-  locale: string
-): T[] => {
-  const contributor = hits.filter((hit) =>
-    isContributingUrl(hit.url ?? "", locale)
-  )
-  if (!contributor.length) return hits
-  if (contributor.length / hits.length >= CONTRIBUTOR_INTENT_SHARE) return hits
-  return [
-    ...hits.filter((hit) => !isContributingUrl(hit.url ?? "", locale)),
-    ...contributor,
-  ]
-}
-
 /** True when a result should not be shown for this query. */
 export const isWithheldResult = (
   url: string,
