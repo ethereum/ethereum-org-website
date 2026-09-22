@@ -18,6 +18,7 @@ import {
 } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 import {
   isWithheldResult,
   sinkContributorPages,
@@ -358,18 +359,10 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // response -- 55 KB against 18 KB for "wallet" -- for the same rows. Verified
       // identical leaders and `found` across the labeled queries.
       group_limit: 1,
-      // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
-      // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
-      // match scores into one tier and lets a three-value signal reorder them, which
-      // measured worse than no sort at all. At this granularity pagerank only decides
-      // between comparable matches: hit@1 and MRR match the unsorted baseline while
-      // hit@10 improves 81% -> 84% against the labeled query set.
-      // `item_priority` is the library's own signal and encodes heading depth, so it
-      // breaks remaining ties towards the h1 -- the page itself -- over an h2 inside it.
-      // Overriding sort_by without it is what let a page's first section outrank the
-      // page, sending "issuance of eth" to a #components-of-eth-issuance anchor.
-      sort_by:
-        "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc",
+      // Shared with the promote gate, so a script cannot measure ranking users never
+      // receive. See client.ts for why six buckets and why `item_priority` is gone.
+      text_match_type: TEXT_MATCH_TYPE,
+      sort_by: SORT_BY,
       // Widen a multi-word query that finds fewer than this many results by dropping its
       // least useful token, rather than answering with almost nothing.
       //

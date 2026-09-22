@@ -8,8 +8,7 @@ dotenv.config({ path: ".env.local" })
 
 // Glossary API (ETHGlossary)
 export const GLOSSARY_API_URL =
-  process.env.GLOSSARY_API_URL ||
-  "https://ethglossary.visual-20-hoists.workers.dev/api/v1"
+  process.env.GLOSSARY_API_URL || "https://glossary.ethereum.org/api/v1"
 
 // GitHub API configuration. MODE=estimate never writes to GitHub (it assembles
 // prompts from the working tree and sends nothing), so it runs without a token.

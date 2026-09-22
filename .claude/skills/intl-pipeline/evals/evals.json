@@ -54,7 +54,7 @@
         {"text": "Output explicitly says NOT to add a local override for the term in `.claude/translation-review/transliterations/` (or anywhere local)"},
         {"text": "Output recommends flagging the missing term in the review report (and optionally per-language findings)"},
         {"text": "Output mentions ETHGlossary as the canonical / authoritative source for term translations"},
-        {"text": "Output does NOT direct the user to immediately open a PR or issue against `wackerow/ethglossary` as part of the review workflow"},
+        {"text": "Output does NOT direct the user to immediately open a PR or issue against `ethereum/ethglossary` as part of the review workflow"},
         {"text": "Output does NOT suggest editing the deprecated `.claude/translation-review/transliterations/*.json` files"}
       ]
     },

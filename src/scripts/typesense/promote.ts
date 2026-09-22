@@ -26,6 +26,7 @@ import {
   SEARCH_KEY,
   SITE_ORIGIN,
   SORT_BY,
+  TEXT_MATCH_TYPE,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -216,6 +217,7 @@ const hitAtOne = async (collection: string, locale: string) => {
       // to catch it. See src/components/Search/index.tsx.
       query_by: QUERY_BY,
       sort_by: SORT_BY,
+      text_match_type: TEXT_MATCH_TYPE,
       group_by: "url_without_anchor",
       // 1 rather than the app's 3: hit@1 only cares which page ranks first, and
       // `group_limit` does not affect the order of the groups themselves.

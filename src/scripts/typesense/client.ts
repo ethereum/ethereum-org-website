@@ -44,17 +44,13 @@ export const SEARCH_KEY =
 
 export const SITE_ORIGIN = "https://ethereum.org"
 
-/**
- * The search parameters the app sends, shared so a script cannot measure something users
- * never receive. `sort_by` was missing from the relevance gate once already, which made a
- * change to page ranking invisible to the check meant to catch it.
- * See src/components/Search/index.tsx.
- */
-export const QUERY_BY =
-  "hierarchy.lvl0,hierarchy.lvl1,hierarchy.lvl2,hierarchy.lvl3,hierarchy.lvl4,hierarchy.lvl5,hierarchy.lvl6,content"
-
-export const SORT_BY =
-  "_text_match(buckets: 100):desc,pagerank:desc,item_priority:desc"
+// Re-exported so the scripts keep one import site; the definitions live outside this
+// module because it loads `.env` and the browser must not.
+export {
+  QUERY_BY,
+  SORT_BY,
+  TEXT_MATCH_TYPE,
+} from "../../lib/utils/searchParams"
 
 /** Canonical locale list -- same source the site builds from. */
 export const LOCALES = i18nConfig.map(({ code }) => code)
