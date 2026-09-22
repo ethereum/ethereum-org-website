@@ -133,13 +133,18 @@ const Search = ({ asChild = false, children }: SearchProps) => {
       apiKey,
     },
     typesenseSearchParameters: {
+      // Rank by which field matched, not by raw match score: without this a short
+      // content snippet outscores a page title, so short queries land on whichever
+      // page happens to mention the term. Costs long exact-title queries (89/90 ->
+      // 73/90) but they stay far ahead of Algolia's 37/90.
+      text_match_type: "max_weight",
       // Break near-ties by page importance: root-level pages rank 10, tutorials 1.
-      // 100 buckets is deliberate -- coarser bucketing collapses genuinely different
-      // match scores into one tier and lets a three-value signal reorder them, which
-      // measured worse than no sort at all. At this granularity pagerank only decides
-      // between comparable matches: hit@1 and MRR match the unsorted baseline while
-      // hit@10 improves 81% -> 84% against the labelled query set.
-      sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
+      // 6 buckets, not 100: at 100 almost nothing ties, so pagerank never applies and
+      // non-English short queries score 33/120 against Algolia's 114/120. Non-English
+      // plateaus at 5-6; English keeps improving past it, and 6 is the compromise.
+      // Measured on unpinned queries -- every query in groundtruth.json is also a
+      // curation rule, so that set scores pins rather than ranking.
+      sort_by: "_text_match(buckets: 6):desc,pagerank:desc",
     },
     onClose,
     // Surface any failed query as the modal's error state rather than a silent idle one.
