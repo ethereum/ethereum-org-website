@@ -6,7 +6,15 @@
  * that reads like a credentials problem rather than a scoping one.
  */
 
+import { config } from "dotenv"
+
 import i18nConfig from "../../../i18n.config.json"
+
+// Next loads these for the app; a standalone script has to ask. `.env.local` first to
+// match Next's precedence, and dotenv never overwrites a variable that is already set,
+// so CI's `env:` block still wins.
+config({ path: ".env.local" })
+config()
 
 const trimSlash = (s: string) => s.replace(/\/+$/, "")
 
