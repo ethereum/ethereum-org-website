@@ -79,9 +79,12 @@ const itemId = (query: string) => {
  * separator, but stores the rule's own text with punctuation removed -- so a rule written
  * "erc-20" or "crypto.com" matches nothing anyone types, while a rule written "erc 20"
  * matches "erc-20", "erc_20" and "erc 20" alike. Store every query in the spaced form.
+ *
+ * Marks (\p{M}) are the vowel signs and viramas of Bengali, Hindi and Tamil, and the
+ * zero-width joiners spell Persian and Indic words. Neither is punctuation.
  */
 const ruleQuery = (query: string) =>
-  query.replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+  query.replace(/[^\p{L}\p{M}\p{N}\u200c\u200d]+/gu, " ").trim()
 
 /** The strings that pin this rule's pages in a locale. English never gets aliases. */
 const queriesFor = (rule: CurationRule, aliases: Aliases, locale: string) =>
