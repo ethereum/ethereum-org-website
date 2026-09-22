@@ -14,7 +14,7 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { AccordionContainer } from "@/components/ui/accordion"
-import { Alert } from "@/components/ui/alert"
+import { Alert, AlertContent } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -281,6 +281,18 @@ export default async function Page(props: { params: Promise<Params> }) {
             })}
           </p>
           <p>{t("glamsterdam-scope")}</p>
+          {/* Boxed rather than a plain paragraph: clients are not in scope for
+              Glamsterdam yet, only specifications, so a reporter who skims past this
+              wastes their time and ours on an ineligible client report. */}
+          {/* max-w-3xl by hand: MainArticle constrains the text column with
+              `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
+              runs the full page width and reads as a different section rather than an
+              aside to the paragraph above it. */}
+          <Alert variant="warning" className="max-w-3xl">
+            <AlertContent>
+              <p>{t("glamsterdam-specs")}</p>
+            </AlertContent>
+          </Alert>
           <h3>{t("glamsterdam-rewards-title")}</h3>
           <UnorderedList>
             <ListItem>{t("glamsterdam-rewards-initial")}</ListItem>
@@ -394,6 +406,27 @@ export default async function Page(props: { params: Promise<Params> }) {
                 ),
               })}
             </p>
+
+            {/* Sits in #in-scope rather than the Glamsterdam section: the Fast
+                Confirmation Rule is part of the general programme, not tied to one
+                upgrade. max-w-3xl because MainArticle only constrains p/ul/ol. */}
+            <Alert variant="update" className="max-w-3xl">
+              {/* A <p> inside AlertContent, not bare children: AlertContent is
+                  `flex flex-col`, so rich text with a link becomes separate flex
+                  children and each fragment lands on its own line — the link broke
+                  away and the full stop after it sat alone on a third row. */}
+              <AlertContent>
+                <p>
+                  {t.rich("fcr-scope", {
+                    a: (chunks) => (
+                      <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/fast-confirmation.md">
+                        {chunks}
+                      </InlineLink>
+                    ),
+                  })}
+                </p>
+              </AlertContent>
+            </Alert>
 
             <Flex className="flex-wrap gap-8">
               <MarkdownCard
