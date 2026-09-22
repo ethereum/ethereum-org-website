@@ -261,7 +261,9 @@ const prune = async (
   // leftover is the collection that failed its gates, so it would outlive the index the
   // alias was actually serving. `previous` is held explicitly to keep rollback a single
   // alias flip, and both it and `live` occupy kept slots.
-  const reserved = previous ? 2 : 1
+  // A re-run without a new scrape points the alias at itself, so `previous` is `live`
+  // and reserving a second slot would delete the real predecessor.
+  const reserved = previous && previous !== live ? 2 : 1
   const doomed = mine.slice(Math.max(keep - reserved, 0))
   for (const name of doomed) {
     await api("DELETE", `/collections/${name}`)
@@ -277,9 +279,16 @@ const main = async () => {
     `promoting ${args.locales.length} locale(s)${args.dryRun ? " (dry run)" : ""}\n`
   )
 
-  const results = await Promise.all(
-    args.locales.map((l) => promoteLocale(l, collections, args))
-  )
+  // One locale throwing must not cut the others off mid-promotion; it is a refusal.
+  const results = (
+    await Promise.allSettled(
+      args.locales.map((l) => promoteLocale(l, collections, args))
+    )
+  ).map((r, i): Outcome => {
+    if (r.status === "fulfilled") return r.value
+    console.error(`  ${args.locales[i]}: ${(r.reason as Error).message}`)
+    return "refused"
+  })
   const count = (outcome: Outcome) =>
     results.filter((r) => r === outcome).length
   const [promoted, refused, skipped] = (
