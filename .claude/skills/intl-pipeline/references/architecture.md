@@ -108,6 +108,10 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 **Post-assembly invariants** (`findStructuralRegressions`, markdown only): the merged output is compared to english-B on heading count, `{#anchor}` set and href multiset, minus the same comparison for english-A vs locale-A so pre-existing drift isn't counted. Any regression this run introduced discards the merge and falls that file back to `runFullTranslation`. This is what makes `auto` safe as the default; `mode=full` is the fallback, not the routine choice.
 
+## Phase 5b: Sanitize and gate
+
+The task sanitizes its own output (`runSanitizer` on the single file) and then runs the pre-commit gates (`lib/gates.ts`): `verify-structure` error checks, an MDX compile with the site's parser setup, nested JSON key parity. Incremental output must introduce no new structural errors relative to the locale it replaces; full output must be clean. A failing gate throws `GateError`, the task fails, nothing below runs, and the pair is quarantined on its second strike (`references/recovery.md`).
+
 ## Phase 6: Manifest Update
 
 1. Serialize english-B tree as the new source manifest
@@ -125,4 +129,3 @@ Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 - Duplicate inert values within one section (same URL twice, only one changed): match-by-value is ambiguous. Surrounding paragraph context may be a tiebreaker.
 - Code fence insertion point for added structural fences — needs implementation-level definition relative to other elements.
 - Partial-failure strategy is currently all-or-nothing on manifest stamping. Wasteful on retry; may revisit for per-section stamping later.
-
