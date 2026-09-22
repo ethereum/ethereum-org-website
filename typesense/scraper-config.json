@@ -38,8 +38,7 @@
       {
         "name": "content",
         "type": "string",
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "url",
@@ -56,50 +55,43 @@
         "name": "hierarchy.lvl0",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl1",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl2",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl3",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl4",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl5",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "hierarchy.lvl6",
         "type": "string",
         "facet": true,
-        "optional": true,
-        "stem": true
+        "optional": true
       },
       {
         "name": "type",
@@ -130,6 +122,5 @@
         "optional": true
       }
     ]
-  },
-  "only_content_level": true
+  }
 }
