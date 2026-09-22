@@ -67,6 +67,17 @@ export interface RunFailure {
   locale: string
   file: string
   message: string
+  /** Recorded in the quarantine list this run; skipped next run */
+  quarantined?: boolean
+}
+
+/** A pair the run did not attempt because the quarantine list holds it. */
+export interface SkippedPair {
+  locale: string
+  file: string
+  class: string
+  reason: string
+  expiresAt: string
 }
 
 /**
@@ -77,7 +88,8 @@ export function generateRunSummary(
   committedFiles: CommittedFile[],
   mode: string,
   workflowRunUrl?: string,
-  failures: RunFailure[] = []
+  failures: RunFailure[] = [],
+  skipped: SkippedPair[] = []
 ): string {
   const now = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC"
 
@@ -104,17 +116,40 @@ export function generateRunSummary(
     const cap = extra > 0 ? ` (showing first ${MAX_FAILURES_LISTED})` : ""
     parts.push("", `**${failures.length} task(s) failed${cap}:**`, "")
     for (const f of shown) {
-      parts.push(`- \`${f.file}\` (${f.locale}): ${f.message}`)
+      parts.push(
+        `- \`${f.file}\` (${f.locale}): ${f.message}${f.quarantined ? " _(quarantined)_" : ""}`
+      )
     }
     if (extra > 0) parts.push(`- ...and ${extra} more (see workflow log)`)
     parts.push("", "Rerun the failed combinations:", "", "```")
     for (const f of shown) {
       parts.push(
-        `gh workflow run "Intl Pipeline" -f target_path="${f.file}" -f target_languages="${f.locale}"`
+        `gh workflow run "Intl Pipeline" -f target_path="${f.file}" -f target_languages="${f.locale}"${f.quarantined ? " -f mode=full" : ""}`
       )
     }
     if (extra > 0) parts.push(`# ...and ${extra} more (see workflow log)`)
     parts.push("```")
+  }
+
+  if (skipped.length > 0) {
+    const shown = skipped.slice(0, MAX_FAILURES_LISTED)
+    const extra = skipped.length - shown.length
+    parts.push(
+      "",
+      `**${skipped.length} pair(s) skipped -- quarantined from an earlier run:**`,
+      ""
+    )
+    for (const p of shown) {
+      parts.push(
+        `- \`${p.file}\` (${p.locale}): ${p.class}, until ${p.expiresAt.slice(0, 10)} -- ${p.reason.slice(0, 120)}`
+      )
+    }
+    if (extra > 0)
+      parts.push(`- ...and ${extra} more (see \`.manifests/quarantine.json\`)`)
+    parts.push(
+      "",
+      "A quarantined pair is retried when its English changes or the entry expires. To force it now, rerun with `mode=full`, or delete its entry from `.manifests/quarantine.json`."
+    )
   }
 
   parts.push("")
@@ -146,7 +181,8 @@ export async function createOrUpdateTranslationPR(
   committedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
   mode: string,
-  failures: RunFailure[] = []
+  failures: RunFailure[] = [],
+  skipped: SkippedPair[] = []
 ): Promise<{ number: number; html_url: string }> {
   logSection("Pull Request")
 
@@ -157,7 +193,8 @@ export async function createOrUpdateTranslationPR(
     committedFiles,
     mode,
     workflowRunUrl,
-    failures
+    failures,
+    skipped
   )
 
   // Check for existing open PR
