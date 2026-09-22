@@ -288,7 +288,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
               runs the full page width and reads as a different section rather than an
               aside to the paragraph above it. */}
-          <Alert variant="update" className="max-w-3xl">
+          <Alert variant="warning" className="max-w-3xl">
             <AlertContent>
               <p>{t("glamsterdam-specs")}</p>
             </AlertContent>
