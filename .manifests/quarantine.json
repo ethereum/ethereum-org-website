@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "file": "public/content/whitepaper/index.md",
+      "locale": "zh",
+      "englishHash": "8dda3a783fcc",
+      "class": "validation",
+      "reason": "Output validation failed after 3 attempts: Suspiciously short: 378 chars vs 1571 English chars",
+      "attempts": 1,
+      "firstSeen": "2026-09-23T05:12:00.429Z",
+      "lastSeen": "2026-09-23T05:12:00.429Z",
+      "expiresAt": "2026-10-07T05:12:00.429Z"
+    }
+  ]
+}
