@@ -4,43 +4,43 @@ description: "دو اہم سمارٹ کنٹریکٹ زبانوں – ⁦Solidity
 lang: ur
 ---
 
-[ایتھیریم](/) کے بارے میں ایک بہترین پہلو یہ ہے کہ سمارٹ کنٹریکٹس کو نسبتاً ڈیولپر دوست زبانوں کا استعمال کرتے ہوئے پروگرام کیا جا سکتا ہے۔ اگر آپ کو <span dir="ltr">Python</span> یا کسی بھی [کرلی بریکٹ زبان](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) کا تجربہ ہے، تو آپ مانوس سنٹیکس والی زبان تلاش کر سکتے ہیں۔
+[ایتھیریم](/) کے بارے میں ایک بہترین پہلو یہ ہے کہ سمارٹ کنٹریکٹس کو نسبتاً ڈیولپر دوست زبانوں کا استعمال کرتے ہوئے پروگرام کیا جا سکتا ہے۔ اگر آپ کو Python یا کسی بھی [کرلی بریکٹ زبان](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) کا تجربہ ہے، تو آپ مانوس سنٹیکس والی زبان تلاش کر سکتے ہیں۔
 
-دو سب سے زیادہ فعال اور زیرِ انتظام زبانیں یہ ہیں:
+دو سب سے زیادہ فعال اور برقرار رکھی جانے والی زبانیں یہ ہیں:
 
-- <span dir="ltr">Solidity</span>
-- <span dir="ltr">Vyper</span>
+- Solidity
+- Vyper
 
-<span dir="ltr">Remix IDE</span> <span dir="ltr">Solidity</span> اور <span dir="ltr">Vyper</span> دونوں میں کنٹریکٹس بنانے اور ٹیسٹ کرنے کے لیے ایک جامع ڈیولپمنٹ ماحول فراہم کرتا ہے۔ کوڈنگ شروع کرنے کے لیے [براؤزر میں موجود <span dir="ltr">Remix IDE</span> آزمائیں](https://remix.ethereum.org)۔
+Remix مربوط ترقیاتی ماحول (آئی ڈی ای) Solidity اور Vyper دونوں میں کنٹریکٹس بنانے اور ٹیسٹ کرنے کے لیے ایک جامع ترقیاتی ماحول فراہم کرتا ہے۔ کوڈنگ شروع کرنے کے لیے [براؤزر میں موجود Remix آئی ڈی ای کو آزمائیں](https://remix.ethereum.org)۔
 
-زیادہ تجربہ کار ڈیولپرز <span dir="ltr">Yul</span> کا استعمال بھی کرنا چاہیں گے، جو [ایتھیریم ورچوئل مشین (<span dir="ltr">EVM</span>)](/developers/docs/evm/) کے لیے ایک درمیانی زبان ہے، یا <span dir="ltr">Yul+</span>، جو <span dir="ltr">Yul</span> کی ایک ایکسٹینشن ہے۔
+زیادہ تجربہ کار ڈیولپرز Yul کا استعمال بھی کرنا چاہیں گے، جو [ایتھیریم ورچوئل مشین (EVM)](/developers/docs/evm/) کے لیے ایک درمیانی زبان ہے، یا Yul+، جو Yul کی ایک توسیع ہے۔
 
-اگر آپ متجسس ہیں اور نئی زبانوں کو ٹیسٹ کرنے میں مدد کرنا پسند کرتے ہیں جو ابھی تک تیزی سے ڈیولپمنٹ کے مراحل میں ہیں، تو آپ <span dir="ltr">Fe</span> کے ساتھ تجربہ کر سکتے ہیں، جو ایک ابھرتی ہوئی سمارٹ کنٹریکٹ زبان ہے اور فی الحال اپنے ابتدائی مراحل میں ہے۔
+اگر آپ متجسس ہیں اور نئی زبانوں کو ٹیسٹ کرنے میں مدد کرنا پسند کرتے ہیں جو ابھی تک بھاری ترقی کے مراحل میں ہیں، تو آپ Fe کے ساتھ تجربہ کر سکتے ہیں، جو ایک ابھرتی ہوئی سمارٹ کنٹریکٹ زبان ہے اور فی الحال اپنے ابتدائی مراحل میں ہے۔
 
 ## پیشگی شرائط {#prerequisites}
 
-پروگرامنگ زبانوں، خاص طور پر <span dir="ltr">JavaScript</span> یا <span dir="ltr">Python</span> کا پچھلا علم، آپ کو سمارٹ کنٹریکٹ زبانوں میں فرق کو سمجھنے میں مدد دے سکتا ہے۔ ہم یہ بھی تجویز کرتے ہیں کہ زبانوں کے موازنے میں گہرائی تک جانے سے پہلے آپ سمارٹ کنٹریکٹس کو ایک تصور کے طور پر سمجھیں۔ [سمارٹ کنٹریکٹس کا تعارف](/developers/docs/smart-contracts/)۔
+پروگرامنگ زبانوں، خاص طور پر JavaScript یا Python کا پیشگی علم، آپ کو سمارٹ کنٹریکٹ زبانوں میں فرق کو سمجھنے میں مدد دے سکتا ہے۔ ہم یہ بھی تجویز کرتے ہیں کہ زبانوں کے موازنے میں گہرائی تک جانے سے پہلے آپ سمارٹ کنٹریکٹس کو ایک تصور کے طور پر سمجھیں۔ [سمارٹ کنٹریکٹس کا تعارف](/developers/docs/smart-contracts/)۔
 
-## <span dir="ltr">Solidity</span> {#solidity}
+## Solidity {#solidity}
 
 - سمارٹ کنٹریکٹس کو نافذ کرنے کے لیے آبجیکٹ اورینٹڈ، ہائی لیول زبان۔
-- کرلی بریکٹ زبان جو <span dir="ltr">C++</span> سے سب سے زیادہ متاثر ہوئی ہے۔
-- سٹیٹیکلی ٹائپڈ (ویری ایبل کی ٹائپ کمپائل کے وقت معلوم ہوتی ہے)۔
-- سپورٹ کرتی ہے:
-  - انہیریٹنس (آپ دوسرے کنٹریکٹس کو ایکسٹینڈ کر سکتے ہیں)۔
+- کرلی بریکٹ زبان جو C++ سے سب سے زیادہ متاثر ہوئی ہے۔
+- سٹیٹیکلی ٹائپڈ (متغیر کی قسم کمپائل کے وقت معلوم ہوتی ہے)۔
+- یہ سپورٹ کرتی ہے:
+  - وراثت (آپ دوسرے کنٹریکٹس کو بڑھا سکتے ہیں)۔
   - لائبریریاں (آپ دوبارہ استعمال کے قابل کوڈ بنا سکتے ہیں جسے آپ مختلف کنٹریکٹس سے کال کر سکتے ہیں – جیسے دیگر آبجیکٹ اورینٹڈ پروگرامنگ زبانوں میں سٹیٹک کلاس میں سٹیٹک فنکشنز)۔
-  - پیچیدہ یوزر ڈیفائنڈ ٹائپس۔
+  - پیچیدہ صارف کی متعین کردہ اقسام۔
 
 ### اہم لنکس {#important-links}
 
 - [دستاویزات](https://docs.soliditylang.org/en/latest/)
-- [<span dir="ltr">Solidity</span> لینگویج پورٹل](https://soliditylang.org/)
-- [مثال کے ذریعے <span dir="ltr">Solidity</span>](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
+- [Solidity لینگویج پورٹل](https://soliditylang.org/)
+- [Solidity بذریعہ مثال](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [<span dir="ltr">Solidity</span> Gitter چیٹ روم](https://gitter.im/ethereum/solidity) جو [<span dir="ltr">Solidity</span> میٹرکس چیٹ روم](https://matrix.to/#/#ethereum_solidity:gitter.im) سے منسلک ہے
+- [Solidity Gitter چیٹ روم](https://gitter.im/ethereum/solidity) جو [Solidity Matrix چیٹ روم](https://matrix.to/#/#ethereum_solidity:gitter.im) سے منسلک ہے
 - [چیٹ شیٹ](https://reference.auditless.com/cheatsheet)
-- [<span dir="ltr">Solidity</span> بلاگ](https://blog.soliditylang.org/)
-- [<span dir="ltr">Solidity</span> ٹوئٹر](https://twitter.com/solidity_lang)
+- [Solidity بلاگ](https://blog.soliditylang.org/)
+- [Solidity ٹوئٹر](https://twitter.com/solidity_lang)
 
 ### مثال کا کنٹریکٹ {#example-contract}
 
@@ -49,8 +49,8 @@ lang: ur
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // لفظ "public" ویری ایبلز کو
-    // دوسرے کنٹریکٹس سے قابل رسائی بناتا ہے
+    // کی ورڈ "public" ویری ایبلز کو بناتا ہے
+    // دوسرے کنٹریکٹس سے قابل رسائی
     address public minter;
     mapping (address => uint) public balances;
 
@@ -83,39 +83,41 @@ contract Coin {
 }
 ```
 
-یہ مثال آپ کو اندازہ دے گی کہ <span dir="ltr">Solidity</span> کنٹریکٹ کا سنٹیکس کیسا ہوتا ہے۔ فنکشنز اور ویری ایبلز کی مزید تفصیلی وضاحت کے لیے، [دستاویزات دیکھیں](https://docs.soliditylang.org/en/latest/contracts.html)۔
+یہ مثال آپ کو اندازہ دے گی کہ Solidity کنٹریکٹ کا سنٹیکس کیسا ہوتا ہے۔ فنکشنز اور متغیرات کی مزید تفصیلی وضاحت کے لیے، [دستاویزات دیکھیں](https://docs.soliditylang.org/en/latest/contracts.html)۔
 
-## <span dir="ltr">Vyper</span> {#vyper}
+## Vyper {#vyper}
 
-- پائتھونک پروگرامنگ زبان
+- پائتھونک (Pythonic) پروگرامنگ زبان
 - سٹرانگ ٹائپنگ
 - چھوٹا اور قابل فہم کمپائلر کوڈ
-- موثر بائٹ کوڈ جنریشن
-- جان بوجھ کر <span dir="ltr">Solidity</span> سے کم فیچرز رکھتی ہے جس کا مقصد کنٹریکٹس کو زیادہ محفوظ اور آڈٹ کرنے میں آسان بنانا ہے۔ <span dir="ltr">Vyper</span> درج ذیل کو سپورٹ نہیں کرتی:
-  - موڈیفائرز
-  - انہیریٹنس
-  - ان لائن اسمبلی
-  - فنکشن اوورلوڈنگ
-  - آپریٹر اوورلوڈنگ
-  - ریکرسیو کالنگ
-  - لامحدود لمبائی والے لوپس
-  - بائنری فکسڈ پوائنٹس
+- موثر بائٹ کوڈ کی تخلیق
+- جان بوجھ کر Solidity سے کم خصوصیات رکھتی ہے تاکہ کنٹریکٹس کو زیادہ محفوظ اور آڈٹ کرنے میں آسان بنایا جا سکے۔ Vyper درج ذیل کو سپورٹ نہیں کرتی:
+  - موڈیفائرز (Modifiers)
+  - وراثت (Inheritance)
+  - ان لائن اسمبلی (Inline assembly)
+  - فنکشن اوورلوڈنگ (Function overloading)
+  - آپریٹر اوورلوڈنگ (Operator overloading)
+  - ریکرسیو کالنگ (Recursive calling)
+  - لامحدود لمبائی کے لوپس (Infinite-length loops)
+  - بائنری فکسڈ پوائنٹس (Binary fixed points)
 
-مزید معلومات کے لیے، [<span dir="ltr">Vyper</span> کی دلیل پڑھیں](https://vyper.readthedocs.io/en/latest/index.html)۔
+<span dir="ltr">v0.4.0</span> کے بعد سے، Vyper ایک [ماڈیول سسٹم](https://docs.vyperlang.org/en/stable/using-modules.html) کو سپورٹ کرتی ہے۔ کوڈ کا دوبارہ استعمال کلاس کی وراثت کے بجائے کمپوزیشن کے ذریعے حاصل کیا جاتا ہے۔
+
+مزید معلومات کے لیے، [Vyper کی دلیل پڑھیں](https://vyper.readthedocs.io/en/latest/index.html)۔
 
 ### اہم لنکس {#important-links-1}
 
 - [دستاویزات](https://vyper.readthedocs.io)
-- [مثال کے ذریعے <span dir="ltr">Vyper</span>](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [مثال کے ذریعے مزید <span dir="ltr">Vyper</span>](https://vyper-by-example.org/)
+- [Vyper بذریعہ مثال](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [مزید Vyper بذریعہ مثال](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [<span dir="ltr">Vyper</span> کمیونٹی ڈسکارڈ چیٹ](https://discord.gg/SdvKC79cJk)
+- [Vyper کمیونٹی ڈسکارڈ چیٹ](https://discord.gg/SdvKC79cJk)
 - [چیٹ شیٹ](https://reference.auditless.com/cheatsheet)
-- [<span dir="ltr">Vyper</span> کے لیے سمارٹ کنٹریکٹ ڈیولپمنٹ فریم ورکس اور ٹولز](/developers/docs/programming-languages/python/)
-- [<span dir="ltr">VyperPunk</span> - <span dir="ltr">Vyper</span> سمارٹ کنٹریکٹس کو محفوظ بنانا اور ہیک کرنا سیکھیں](https://github.com/SupremacyTeam/VyperPunk)
-- [ڈیولپمنٹ کے لیے <span dir="ltr">Vyper Hub</span>](https://github.com/zcor/vyper-dev)
-- [<span dir="ltr">Vyper</span> کی بہترین سمارٹ کنٹریکٹ مثالیں](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [بہترین <span dir="ltr">Vyper</span> کے منتخب کردہ وسائل](https://github.com/spadebuilders/awesome-vyper)
+- [Vyper کے لیے سمارٹ کنٹریکٹ ڈیولپمنٹ فریم ورکس اور ٹولز](/developers/docs/programming-languages/python/)
+- [VyperPunk - Vyper سمارٹ کنٹریکٹس کو محفوظ بنانا اور ہیک کرنا سیکھیں](https://github.com/SupremacyTeam/VyperPunk)
+- [ڈیولپمنٹ کے لیے Vyper ہب](https://github.com/zcor/vyper-dev)
+- [Vyper کی بہترین سمارٹ کنٹریکٹ مثالیں](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper کے منتخب کردہ وسائل](https://github.com/spadebuilders/awesome-vyper)
 
 ### مثال {#example}
 
@@ -135,22 +137,22 @@ highestBid: public(uint256)
 # آخر میں true پر سیٹ کیا جاتا ہے، کسی بھی تبدیلی کی اجازت نہیں دیتا
 ended: public(bool)
 
-# ریفنڈ کی گئی بولیوں کا ریکارڈ رکھیں تاکہ ہم ودڈرا (withdraw) پیٹرن کی پیروی کر سکیں
+# واپس کی گئی بولیوں کا ریکارڈ رکھیں تاکہ ہم ودڈرا پیٹرن کی پیروی کر سکیں
 pendingReturns: public(HashMap[address, uint256])
 
 # `_bidding_time` کے ساتھ ایک سادہ نیلامی بنائیں
-# سیکنڈز بولی کا وقت، جو کہ
-# فائدہ اٹھانے والے کے ایڈریس `_beneficiary` کی طرف سے ہو۔
-@external
+# سیکنڈز بولی کا وقت، اس کی طرف سے
+# فائدہ اٹھانے والے کے ایڈریس `_beneficiary`۔
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# بھیجی گئی ویلیو کے ساتھ نیلامی پر بولی لگائیں
-# جو اس ٹرانزیکشن کے ساتھ ہو۔
-# ویلیو صرف اسی صورت میں ریفنڈ کی جائے گی اگر
-# نیلامی جیتی نہ جائے۔
+# بھیجی گئی ویلیو کے ساتھ نیلامی میں بولی لگائیں
+# اس ٹرانزیکشن کے ساتھ۔
+# ویلیو صرف اسی صورت میں واپس کی جائے گی اگر
+# نیلامی نہیں جیتی جاتی۔
 @external
 @payable
 def bid():
@@ -164,10 +166,10 @@ def bid():
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# پہلے سے ریفنڈ کی گئی بولی کو ودڈرا (withdraw) کریں۔ ودڈرا پیٹرن کو
-# یہاں سیکیورٹی کے مسئلے سے بچنے کے لیے استعمال کیا گیا ہے۔ اگر ریفنڈز براہ راست
-# bid() کے حصے کے طور پر بھیجے جاتے، تو ایک بدنیتی پر مبنی بولی لگانے والا کنٹریکٹ
-# ان ریفنڈز کو بلاک کر سکتا تھا اور اس طرح نئی زیادہ بولیوں کو آنے سے روک سکتا تھا۔
+# پہلے سے ریفنڈ کی گئی بولی کو نکالیں۔ ودڈرا پیٹرن کا استعمال
+# یہاں ایک سیکیورٹی مسئلے سے بچنے کے لیے کیا گیا ہے۔ اگر ریفنڈز براہ راست
+# bid() کے حصے کے طور پر بھیجے جاتے، تو ایک نقصان دہ بولی لگانے والا کنٹریکٹ
+# ان ریفنڈز کو روک سکتا تھا اور اس طرح نئی زیادہ بولیوں کو آنے سے روک سکتا تھا۔
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
@@ -182,17 +184,17 @@ def endAuction():
     # دوسرے کنٹریکٹس کے ساتھ تعامل کرتے ہیں (یعنی، وہ فنکشنز کو کال کرتے ہیں یا ایتھر بھیجتے ہیں)
     # تین مراحل میں:
     # 1. شرائط چیک کرنا
-    # 2. ایکشنز پرفارم کرنا (ممکنہ طور پر شرائط کو تبدیل کرنا)
+    # 2. ایکشنز انجام دینا (ممکنہ طور پر شرائط کو تبدیل کرنا)
     # 3. دوسرے کنٹریکٹس کے ساتھ تعامل کرنا
     # اگر ان مراحل کو ملا دیا جائے، تو دوسرا کنٹریکٹ
     # موجودہ کنٹریکٹ میں واپس کال کر سکتا ہے اور اسٹیٹ کو تبدیل کر سکتا ہے یا
-    # اثرات (ایتھر کی ادائیگی) کو کئی بار پرفارم کرنے کا سبب بن سکتا ہے۔
+    # اثرات (ایتھر کی ادائیگی) کو کئی بار انجام دینے کا سبب بن سکتا ہے۔
     # اگر اندرونی طور پر کال کیے گئے فنکشنز میں بیرونی
-    # کنٹریکٹس کے ساتھ تعامل شامل ہے، تو انہیں بھی
-    # بیرونی کنٹریکٹس کے ساتھ تعامل سمجھا جانا چاہیے۔
+    # کنٹریکٹس کے ساتھ تعامل شامل ہے، تو انہیں بھی بیرونی کنٹریکٹس کے ساتھ
+    # تعامل سمجھا جانا چاہیے۔
 
     # 1. شرائط
-    # چیک کریں کہ کیا نیلامی کے اختتام کا وقت آ گیا ہے
+    # چیک کریں کہ کیا نیلامی کے اختتامی وقت تک پہنچ چکے ہیں
     assert block.timestamp >= self.auctionEnd
     # چیک کریں کہ کیا یہ فنکشن پہلے ہی کال کیا جا چکا ہے
     assert not self.ended
@@ -204,33 +206,33 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-یہ مثال آپ کو اندازہ دے گی کہ <span dir="ltr">Vyper</span> کنٹریکٹ کا سنٹیکس کیسا ہوتا ہے۔ فنکشنز اور ویری ایبلز کی مزید تفصیلی وضاحت کے لیے، [دستاویزات دیکھیں](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)۔
+یہ مثال آپ کو اندازہ دے گی کہ Vyper کنٹریکٹ کا سنٹیکس کیسا ہوتا ہے۔ فنکشنز اور متغیرات کی مزید تفصیلی وضاحت کے لیے، [دستاویزات دیکھیں](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)۔
 
-## <span dir="ltr">Yul</span> اور <span dir="ltr">Yul+</span> {#yul}
+## Yul اور Yul+ {#yul}
 
-اگر آپ ایتھیریم میں نئے ہیں اور ابھی تک سمارٹ کنٹریکٹ زبانوں کے ساتھ کوئی کوڈنگ نہیں کی ہے، تو ہم <span dir="ltr">Solidity</span> یا <span dir="ltr">Vyper</span> سے شروعات کرنے کی تجویز کرتے ہیں۔ <span dir="ltr">Yul</span> یا <span dir="ltr">Yul+</span> کو تب ہی دیکھیں جب آپ سمارٹ کنٹریکٹ سیکیورٹی کے بہترین طریقوں اور <span dir="ltr">EVM</span> کے ساتھ کام کرنے کی تفصیلات سے واقف ہو جائیں۔
+اگر آپ ایتھیریم میں نئے ہیں اور ابھی تک سمارٹ کنٹریکٹ زبانوں کے ساتھ کوئی کوڈنگ نہیں کی ہے، تو ہم تجویز کرتے ہیں کہ Solidity یا Vyper سے شروعات کریں۔ Yul یا Yul+ کو صرف اسی وقت دیکھیں جب آپ سمارٹ کنٹریکٹ سیکیورٹی کے بہترین طریقوں اور EVM کے ساتھ کام کرنے کی تفصیلات سے واقف ہو جائیں۔
 
-**<span dir="ltr">Yul</span>**
+**Yul**
 
 - ایتھیریم کے لیے درمیانی زبان۔
-- [<span dir="ltr">EVM</span>](/developers/docs/evm) اور [<span dir="ltr">Ewasm</span>](https://github.com/ewasm) کو سپورٹ کرتی ہے، جو ایتھیریم کے انداز کی <span dir="ltr">WebAssembly</span> ہے، اور اسے دونوں پلیٹ فارمز کے قابل استعمال مشترکہ ڈینومینیٹر کے طور پر ڈیزائن کیا گیا ہے۔
-- ہائی لیول آپٹیمائزیشن کے مراحل کے لیے ایک اچھا ہدف ہے جو <span dir="ltr">EVM</span> اور <span dir="ltr">Ewasm</span> دونوں پلیٹ فارمز کو یکساں طور پر فائدہ پہنچا سکتا ہے۔
+- [EVM](/developers/docs/evm) اور [Ewasm](https://github.com/ewasm) کو سپورٹ کرتی ہے، جو ایتھیریم کے ذائقے والی WebAssembly ہے، اور اسے دونوں پلیٹ فارمز کے قابل استعمال مشترکہ ڈینومینیٹر کے طور پر ڈیزائن کیا گیا ہے۔
+- اعلیٰ سطحی آپٹیمائزیشن کے مراحل کے لیے ایک اچھا ہدف جو EVM اور Ewasm دونوں پلیٹ فارمز کو یکساں طور پر فائدہ پہنچا سکتا ہے۔
 
-**<span dir="ltr">Yul+</span>**
+**Yul+**
 
-- <span dir="ltr">Yul</span> کی ایک لو لیول، انتہائی موثر ایکسٹینشن۔
-- ابتدائی طور پر ایک [آپٹمسٹک رول اپ](/developers/docs/scaling/optimistic-rollups/) کنٹریکٹ کے لیے ڈیزائن کی گئی تھی۔
-- <span dir="ltr">Yul+</span> کو <span dir="ltr">Yul</span> کے لیے ایک تجرباتی اپ گریڈ تجویز کے طور پر دیکھا جا سکتا ہے، جو اس میں نئے فیچرز کا اضافہ کرتی ہے۔
+- Yul کی ایک نچلی سطح کی، انتہائی موثر توسیع۔
+- ابتدائی طور پر ایک [آپٹمسٹک رول اپ](/developers/docs/scaling/optimistic-rollups/) کنٹریکٹ کے لیے ڈیزائن کیا گیا تھا۔
+- Yul+ کو Yul کے لیے ایک تجرباتی اپ گریڈ تجویز کے طور پر دیکھا جا سکتا ہے، جو اس میں نئی خصوصیات کا اضافہ کرتا ہے۔
 
 ### اہم لنکس {#important-links-2}
 
-- [<span dir="ltr">Yul</span> کی دستاویزات](https://docs.soliditylang.org/en/latest/yul.html)
-- [<span dir="ltr">Yul+</span> کی دستاویزات](https://github.com/fuellabs/yulp)
-- [<span dir="ltr">Yul+</span> کی تعارفی پوسٹ](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Yul کی دستاویزات](https://docs.soliditylang.org/en/latest/yul.html)
+- [Yul+ کی دستاویزات](https://github.com/fuellabs/yulp)
+- [Yul+ کے تعارف کی پوسٹ](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### مثال کا کنٹریکٹ {#example-contract-2}
 
-درج ذیل سادہ مثال ایک پاور فنکشن کو نافذ کرتی ہے۔ اسے `solc --strict-assembly --bin input.yul` کا استعمال کرتے ہوئے کمپائل کیا جا سکتا ہے۔ اس مثال کو <span dir="ltr">input.yul</span> فائل میں محفوظ کیا جانا چاہیے۔
+درج ذیل سادہ مثال ایک پاور فنکشن کو نافذ کرتی ہے۔ اسے `solc --strict-assembly --bin input.yul` کا استعمال کرتے ہوئے کمپائل کیا جا سکتا ہے۔ اس مثال کو input.yul فائل میں محفوظ کیا جانا چاہیے۔
 
 ```
 {
@@ -251,26 +253,26 @@ def endAuction():
 }
 ```
 
-اگر آپ پہلے ہی سمارٹ کنٹریکٹس کا اچھا تجربہ رکھتے ہیں، تو <span dir="ltr">Yul</span> میں ایک مکمل <span dir="ltr">ERC-20</span> کا نفاذ [یہاں](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) پایا جا سکتا ہے۔
+اگر آپ پہلے سے ہی سمارٹ کنٹریکٹس کا اچھا تجربہ رکھتے ہیں، تو Yul میں ایک مکمل <span dir="ltr">ERC-20</span> کا نفاذ [یہاں](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) پایا جا سکتا ہے۔
 
-## <span dir="ltr">Fe</span> {#fe}
+## Fe {#fe}
 
-- ایتھیریم ورچوئل مشین (<span dir="ltr">EVM</span>) کے لیے سٹیٹیکلی ٹائپڈ زبان۔
-- <span dir="ltr">Python</span> اور <span dir="ltr">Rust</span> سے متاثر۔
+- ایتھیریم ورچوئل مشین (EVM) کے لیے سٹیٹیکلی ٹائپڈ زبان۔
+- Python اور Rust سے متاثر۔
 - اس کا مقصد سیکھنے میں آسان ہونا ہے -- یہاں تک کہ ان ڈیولپرز کے لیے بھی جو ایتھیریم ایکو سسٹم میں نئے ہیں۔
-- <span dir="ltr">Fe</span> کی ڈیولپمنٹ ابھی اپنے ابتدائی مراحل میں ہے، اس زبان کا الفا ریلیز جنوری <span dir="ltr">2021</span> میں ہوا تھا۔
+- Fe کی ترقی ابھی اپنے ابتدائی مراحل میں ہے، اس زبان کا الفا ریلیز جنوری 2021 میں ہوا تھا۔
 
 ### اہم لنکس {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [<span dir="ltr">Fe</span> کا اعلان](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [<span dir="ltr">Fe</span> کا <span dir="ltr">2021</span> کا روڈ میپ](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [<span dir="ltr">Fe</span> ڈسکارڈ چیٹ](https://discord.com/invite/ywpkAXFjZH)
-- [<span dir="ltr">Fe</span> ٹوئٹر](https://twitter.com/official_fe)
+- [Fe کا اعلان](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Fe کا 2021 کا روڈ میپ](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Fe ڈسکارڈ چیٹ](https://discord.com/invite/ywpkAXFjZH)
+- [Fe ٹوئٹر](https://twitter.com/official_fe)
 
 ### مثال کا کنٹریکٹ {#example-contract-3}
 
-ذیل میں <span dir="ltr">Fe</span> میں نافذ کیا گیا ایک سادہ کنٹریکٹ ہے۔
+درج ذیل Fe میں نافذ کیا گیا ایک سادہ کنٹریکٹ ہے۔
 
 ```
 type BookMsg = bytes[100]
@@ -294,30 +296,30 @@ contract GuestBook:
 
 کسی بھی دوسری پروگرامنگ زبان کی طرح، یہ زیادہ تر صحیح کام کے لیے صحیح ٹول کے انتخاب کے ساتھ ساتھ ذاتی ترجیحات کے بارے میں ہے۔
 
-اگر آپ نے ابھی تک کسی بھی زبان کو نہیں آزمایا ہے تو یہاں چند چیزوں پر غور کرنا چاہیے:
+اگر آپ نے ابھی تک کسی بھی زبان کو نہیں آزمایا ہے تو یہاں غور کرنے کے لیے چند چیزیں ہیں:
 
-### <span dir="ltr">Solidity</span> کے بارے میں کیا زبردست ہے؟ {#solidity-advantages}
+### Solidity کے بارے میں کیا زبردست ہے؟ {#solidity-advantages}
 
 - اگر آپ ابتدائی ہیں، تو وہاں بہت سے ٹیوٹوریلز اور سیکھنے کے ٹولز موجود ہیں۔ اس کے بارے میں مزید [کوڈنگ کے ذریعے سیکھیں](/developers/learning-tools/) سیکشن میں دیکھیں۔
 - اچھے ڈیولپر ٹولز دستیاب ہیں۔
-- <span dir="ltr">Solidity</span> کی ایک بڑی ڈیولپر کمیونٹی ہے، جس کا مطلب ہے کہ آپ کو اپنے سوالات کے جوابات بہت جلد ملنے کا امکان ہے۔
+- Solidity کی ایک بڑی ڈیولپر کمیونٹی ہے، جس کا مطلب ہے کہ آپ کو اپنے سوالات کے جوابات بہت جلد ملنے کا امکان ہے۔
 
-### <span dir="ltr">Vyper</span> کے بارے میں کیا زبردست ہے؟ {#vyper-advatages}
+### Vyper کے بارے میں کیا زبردست ہے؟ {#vyper-advatages}
 
-- ان <span dir="ltr">Python</span> ڈیولپرز کے لیے شروعات کرنے کا بہترین طریقہ جو سمارٹ کنٹریکٹس لکھنا چاہتے ہیں۔
-- <span dir="ltr">Vyper</span> میں فیچرز کی تعداد کم ہے جو اسے آئیڈیاز کی فوری پروٹو ٹائپنگ کے لیے بہترین بناتی ہے۔
-- <span dir="ltr">Vyper</span> کا مقصد آڈٹ کرنے میں آسان اور زیادہ سے زیادہ انسانوں کے پڑھنے کے قابل ہونا ہے۔
+- ان Python ڈیولپرز کے لیے شروعات کرنے کا بہترین طریقہ جو سمارٹ کنٹریکٹس لکھنا چاہتے ہیں۔
+- Vyper میں خصوصیات کی تعداد کم ہے جو اسے آئیڈیاز کی فوری پروٹو ٹائپنگ کے لیے بہترین بناتی ہے۔
+- Vyper کا مقصد آڈٹ کرنے میں آسان اور زیادہ سے زیادہ انسانوں کے پڑھنے کے قابل ہونا ہے۔
 
-### <span dir="ltr">Yul</span> اور <span dir="ltr">Yul+</span> کے بارے میں کیا زبردست ہے؟ {#yul-advantages}
+### Yul اور Yul+ کے بارے میں کیا زبردست ہے؟ {#yul-advantages}
 
-- سادہ اور فنکشنل لو لیول زبان۔
-- خام <span dir="ltr">EVM</span> کے بہت قریب جانے کی اجازت دیتی ہے، جو آپ کے کنٹریکٹس کے گیس کے استعمال کو بہتر بنانے میں مدد کر سکتی ہے۔
+- سادہ اور فعال نچلی سطح کی زبان۔
+- خام EVM کے بہت قریب جانے کی اجازت دیتی ہے، جو آپ کے کنٹریکٹس کے گیس کے استعمال کو بہتر بنانے میں مدد کر سکتی ہے۔
 
 ## زبانوں کا موازنہ {#language-comparisons}
 
-بنیادی سنٹیکس، کنٹریکٹ لائف سائیکل، انٹرفیسز، آپریٹرز، ڈیٹا سٹرکچرز، فنکشنز، کنٹرول فلو، اور مزید کے موازنے کے لیے [آڈٹ لیس کی یہ چیٹ شیٹ](https://reference.auditless.com/cheatsheet/) دیکھیں۔
+بنیادی سنٹیکس، کنٹریکٹ کے لائف سائیکل، انٹرفیسز، آپریٹرز، ڈیٹا سٹرکچرز، فنکشنز، کنٹرول فلو، اور مزید کے موازنے کے لیے Auditless کی یہ [چیٹ شیٹ](https://reference.auditless.com/cheatsheet/) دیکھیں۔
 
 ## مزید مطالعہ {#further-reading}
 
-- [اوپن زیپلن کی جانب سے <span dir="ltr">Solidity</span> کنٹریکٹس لائبریری](https://docs.openzeppelin.com/contracts/5.x/)
-- [مثال کے ذریعے <span dir="ltr">Solidity</span>](https://solidity-by-example.org)
+- [اوپن زیپلن کی جانب سے Solidity کنٹریکٹس کی لائبریری](https://docs.openzeppelin.com/contracts/5.x/)
+- [Solidity بذریعہ مثال](https://solidity-by-example.org)
