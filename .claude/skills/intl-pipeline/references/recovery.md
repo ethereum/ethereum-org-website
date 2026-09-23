@@ -4,18 +4,30 @@ Load this when "the pipeline did something wrong" — bad translation in product
 
 ## Triage matrix
 
-| Symptom | First check | Likely fix |
-|---|---|---|
-| Run reported "success" but content looks incomplete | Read the PR body's "N task(s) failed" block + grep the log | "Success" ships partial failures; see "Diagnosing a completed run" below |
-| Lots of content changed but few/no manifests in the PR diff | Content and manifests desynced (manifest drift) | See "Manifest drift after a run" below |
-| Translation looks wrong, not yet merged | Is it a glossary deviation? | Re-run pipeline targeting that file+locale; auto-fix should correct |
-| Translation already merged to `dev`, looks wrong | Is the English version up to date? | Re-run with `mode: full` for that file |
-| Manifest file is invalid / missing | One of the two manifests gone? | Delete both manifests for that file+locale; pipeline auto-runs full mode |
-| Build fails on a locale (MDX compile error) | Is it the sanitizer's fault or content? | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file |
-| `intl/pending-{base}` PR has merge conflicts on base side | Was base force-pushed/rebased? | Don't rebase pending; merge base→pending again, or close pending and start fresh |
-| LLM returned garbage / refused | Check `finishReason` in logs | See "LLM returned garbage / refused" below |
-| English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping | Re-run `mode: full` for that file; pipeline regenerates from scratch |
-| Hand-edit slipped through review | Was it pre- or post-English-change? | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict |
+| Symptom                                                                       | First check                                                                                                             | Likely fix                                                                                                        |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Run reported "success" but content looks incomplete                           | Read the PR body's "N task(s) failed" and "skipped -- quarantined" blocks; the run log ends with a PASS/SKIP/FAIL table | "Success" ships partial failures; see "Diagnosing a completed run" and "Quarantined pairs" below                  |
+| A pair is skipped every run                                                   | `.manifests/quarantine.json` holds it                                                                                   | Fix the cause (or the English), or rerun the pair with `mode: full`; see "Quarantined pairs"                      |
+| Task fails with `[gate] ...`                                                  | The output would have shipped a structural or MDX regression                                                            | Read the listed checks; the file is retried next run and quarantined on the second strike; see "Pre-commit gates" |
+| Lots of content changed but few/no manifests in the PR diff                   | Content and manifests desynced (manifest drift)                                                                         | See "Manifest drift after a run" below                                                                            |
+| Translation looks wrong, not yet merged                                       | Is it a glossary deviation?                                                                                             | Re-run pipeline targeting that file+locale; auto-fix should correct                                               |
+| Translation already merged to `dev`, looks wrong                              | Is the English version up to date?                                                                                      | Re-run with `mode: full` for that file                                                                            |
+| Manifest file is invalid / missing                                            | One of the two manifests gone?                                                                                          | Delete both manifests for that file+locale; pipeline auto-runs full mode                                          |
+| Build fails on a locale (MDX compile error)                                   | Is it the sanitizer's fault or content?                                                                                 | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file                                      |
+| `intl/pending-{base}` PR has merge conflicts on base side                     | Was base force-pushed/rebased?                                                                                          | Don't rebase pending; merge base→pending again, or close pending and start fresh                                  |
+| LLM returned garbage / refused                                                | Check `finishReason` in logs                                                                                            | See "LLM returned garbage / refused" below                                                                        |
+| English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping                                                                                  | Re-run `mode: full` for that file; pipeline regenerates from scratch                                              |
+| Hand-edit slipped through review                                              | Was it pre- or post-English-change?                                                                                     | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict                    |
+
+## Quarantined pairs
+
+A file+locale that fails **deterministically** -- a provider refusal (`finishReason=RECITATION` / `PROHIBITED_CONTENT`), an output-validation floor it legitimately sits under, a plan the per-file budget refuses, or a pre-commit gate it fails twice -- is written to `.manifests/quarantine.json` (`lib/quarantine.ts`) and **skipped on later runs** instead of retried byte-identically every morning. The entry is pinned to the English `rootHash` it failed against, so any English edit releases it; it also expires (14 days, doubling per repeat, capped at 90) so nothing is forgotten. A run whose only failures are quarantined exits green: it recorded them, and retrying the same input would fail the same way. Transient errors (timeouts, 5xx, rate limits, GitHub API hiccups, the run fuse) are never quarantined.
+
+The PR body lists skipped pairs with class, reason and expiry. To force a pair now: rerun it with `mode: full` (bypasses the list), or delete its entry from `.manifests/quarantine.json`. The list travels through `intl/pending-{base}` with the manifests.
+
+## Pre-commit gates
+
+Every task's output passes through `lib/gates.ts` after the sanitizer and before anything is recorded: `verify-structure` checks (heading anchors, tag parity, hrefs, fences, frontmatter shape), an MDX compile with the site's parser setup (`src/lib/md/compile.ts`: heading-id escape, gfm, heading-id, slug; the ToC/JSX/image passes run after parsing and cannot change validity), and for JSON a nested key-path parity check. Incremental output is held to **no new structural errors relative to the locale it replaces** -- about a fifth of the corpus carries pre-existing errors, and an absolute bar would freeze those files -- while full translations must be clean. A gate failure fails the task (`[gate] ...`), nothing is stamped, the pair retries next run and quarantines on the second strike. The sanitizer runs inside the task on the task's own output, so the gates judge exactly what ships.
 
 ## Diagnosing a completed run
 
@@ -47,13 +59,13 @@ Healthy run: every translated content file has a matching `.manifests/<destPath>
 
 Error-string -> source map (where to look when a signature appears):
 
-| Log signature | Source |
-|---|---|
-| `Failed to update ref` / squash errors | `lib/github/commits.ts` (`SharedCommitter`) |
-| `Key set mismatch` / `Suspiciously short` / refusal | `lib/llm/output-validation.ts` |
-| `FINISH_REASON` / `RECITATION` | `lib/llm/gemini.ts` |
-| PR body assembly / length | `lib/workflows/pr-creation.ts` |
-| rate-limit backoff (403/429) | `lib/utils/fetch.ts` |
+| Log signature                                       | Source                                      |
+| --------------------------------------------------- | ------------------------------------------- |
+| `Failed to update ref` / squash errors              | `lib/github/commits.ts` (`SharedCommitter`) |
+| `Key set mismatch` / `Suspiciously short` / refusal | `lib/llm/output-validation.ts`              |
+| `FINISH_REASON` / `RECITATION`                      | `lib/llm/gemini.ts`                         |
+| PR body assembly / length                           | `lib/workflows/pr-creation.ts`              |
+| rate-limit backoff (403/429)                        | `lib/utils/fetch.ts`                        |
 
 ## Manifest drift after a run
 
