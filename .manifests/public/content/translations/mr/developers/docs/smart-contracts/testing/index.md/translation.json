@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "mr",
-  "translatedAt": "2026-06-17T23:02:05.464Z",
-  "englishManifestHash": "fb49a3c756a2",
+  "translatedAt": "2026-09-23T21:53:46.894Z",
+  "englishManifestHash": "d1d8e1739cb4",
   "placeholderOrder": [
     "LINK-ab1800",
     "LINK-6d8e85",
@@ -22,9 +22,9 @@
     "CODE-f82a04",
     "CODE-7f4a66",
     "CODE-e8aac7",
-    "CODE-a7937c",
     "CODE-7f4a66",
     "CODE-e8aac7",
+    "CODE-a7937c",
     "LINK-c435c2",
     "CODE-c4d0cf",
     "CODE-254506",
@@ -37,6 +37,7 @@
     "LINK-0e4d92",
     "LINK-bbd934",
     "LINK-3a2ac7",
+    "LINK-8716a1",
     "LINK-1922c6",
     "LINK-81a340",
     "LINK-6c9d91",
@@ -48,7 +49,7 @@
     "LINK-ccb5f0",
     "LINK-cfac8c",
     "LINK-b990cf",
-    "LINK-e46d86",
+    "LINK-62f1d8",
     "LINK-9aae93",
     "LINK-8334a0",
     "LINK-8ee08b",
@@ -56,7 +57,7 @@
     "LINK-07cb50",
     "LINK-6d0bef",
     "LINK-8b1b68",
-    "LINK-b4531f",
+    "LINK-0523d1",
     "LINK-9e08f8",
     "LINK-61616e",
     "LINK-20beaf",
@@ -83,7 +84,7 @@
     "LINK-171119",
     "LINK-f630b0",
     "LINK-0e128c",
-    "LINK-0ebf13",
+    "LINK-b68350",
     "LINK-ee08e8",
     "LINK-09e516",
     "LINK-b6d344",
@@ -272,6 +273,12 @@
         "url": "https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/"
       }
     },
+    "LINK-8716a1": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/Cyfrin/moccasin"
+      }
+    },
     "LINK-1922c6": {
       "type": "link",
       "values": {
@@ -338,10 +345,10 @@
         "url": "https://www.halborn.com/blog/post/what-is-fuzz-testing-fuzzing"
       }
     },
-    "LINK-e46d86": {
+    "LINK-62f1d8": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ConsenSys/mythril/wiki/Integer-Overflow"
+        "url": "https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow"
       }
     },
     "LINK-9aae93": {
@@ -386,10 +393,10 @@
         "url": "https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial"
       }
     },
-    "LINK-b4531f": {
+    "LINK-0523d1": {
       "type": "link",
       "values": {
-        "url": "https://mythril-classic.readthedocs.io/en/master/tutorial.html"
+        "url": "https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst"
       }
     },
     "LINK-9e08f8": {
@@ -548,10 +555,10 @@
         "url": "https://manticore.readthedocs.io/en/latest/index.html"
       }
     },
-    "LINK-0ebf13": {
+    "LINK-b68350": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ConsenSys/mythril-classic"
+        "url": "https://github.com/ConsenSysDiligence/mythril"
       }
     },
     "LINK-ee08e8": {
@@ -635,7 +642,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T23:02:05.464Z",
+      "translatedAt": "2026-09-23T21:53:46.894Z",
       "status": "success"
     }
   }

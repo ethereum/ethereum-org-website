@@ -4,9 +4,9 @@ description: Una panoramica delle tecniche e delle considerazioni per testare gl
 lang: it
 ---
 
-Le blockchain pubbliche come Ethereum sono immutabili, il che rende difficile modificare il codice di uno smart contract dopo la distribuzione. Esistono [modelli di aggiornamento dei contratti](/developers/docs/smart-contracts/upgrading/) per eseguire "aggiornamenti virtuali", ma sono difficili da implementare e richiedono consenso sociale. Inoltre, un aggiornamento può correggere un errore solo _dopo_ che è stato scoperto: se un utente malintenzionato scopre prima la vulnerabilità, il tuo smart contract è a rischio di exploit.
+Le blockchain pubbliche come Ethereum sono immutabili, rendendo difficile modificare il codice di uno smart contract dopo la distribuzione. Esistono [modelli di aggiornamento dei contratti](/developers/docs/smart-contracts/upgrading/) per eseguire "aggiornamenti virtuali", ma sono difficili da implementare e richiedono consenso sociale. Inoltre, un aggiornamento può correggere un errore solo _dopo_ che è stato scoperto: se un utente malintenzionato scopre prima la vulnerabilità, il tuo smart contract è a rischio di exploit.
 
-Per questi motivi, testare gli smart contract prima di [distribuirli](/developers/docs/smart-contracts/deploying/) sulla Mainnet è un requisito minimo per la [sicurezza](/developers/docs/smart-contracts/security/). Esistono molte tecniche per testare i contratti e valutare la correttezza del codice; la scelta dipende dalle tue esigenze. Tuttavia, una suite di test composta da diversi strumenti e approcci è l'ideale per individuare falle di sicurezza sia minori che maggiori nel codice del contratto.
+Per questi motivi, testare gli smart contract prima di [distribuirli](/developers/docs/smart-contracts/deploying/) sulla Mainnet è un requisito minimo per la [sicurezza](/developers/docs/smart-contracts/security/). Esistono molte tecniche per testare i contratti e valutare la correttezza del codice; la scelta dipende dalle tue esigenze. Tuttavia, una suite di test composta da strumenti e approcci diversi è l'ideale per individuare falle di sicurezza sia minori che maggiori nel codice del contratto.
 
 ## Prerequisiti {#prerequisites}
 
@@ -22,7 +22,7 @@ Sebbene gli approcci varino, la maggior parte dei metodi di test richiede l'esec
 
 Poiché gli smart contract gestiscono spesso asset finanziari di alto valore, errori di programmazione minori possono portare, e spesso portano, a [perdite massicce per gli utenti](https://rekt.news/leaderboard/). Test rigorosi possono, tuttavia, aiutarti a scoprire tempestivamente difetti e problemi nel codice di uno smart contract e a risolverli prima del lancio sulla Mainnet.
 
-Sebbene sia possibile aggiornare un contratto se viene scoperto un bug, gli aggiornamenti sono complessi e possono [causare errori](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) se gestiti in modo improprio. L'aggiornamento di un contratto nega ulteriormente il principio di immutabilità e grava gli utenti di ulteriori assunzioni di fiducia. Al contrario, un piano completo per testare il tuo contratto mitiga i rischi per la sicurezza dello smart contract e riduce la necessità di eseguire complessi aggiornamenti logici dopo la distribuzione.
+Sebbene sia possibile aggiornare un contratto se viene scoperto un bug, gli aggiornamenti sono complessi e possono [causare errori](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) se gestiti in modo improprio. L'aggiornamento di un contratto nega ulteriormente il principio di immutabilità e grava gli utenti di ulteriori assunzioni di fiducia. Al contrario, un piano completo per testare il tuo contratto mitiga i rischi per la sicurezza degli smart contract e riduce la necessità di eseguire complessi aggiornamenti logici dopo la distribuzione.
 
 ## Metodi per testare gli smart contract {#methods-for-testing-smart-contracts}
 
@@ -30,13 +30,13 @@ I metodi per testare gli smart contract di Ethereum rientrano in due ampie categ
 
 ### Test automatizzati {#automated-testing}
 
-I test automatizzati utilizzano strumenti che controllano automaticamente il codice di uno smart contract per individuare errori nell'esecuzione. Il vantaggio dei test automatizzati deriva dall'utilizzo di [script](https://www.techtarget.com/whatis/definition/script?amp=1) per guidare la valutazione delle funzionalità del contratto. I test basati su script possono essere programmati per essere eseguiti ripetutamente con un intervento umano minimo, rendendo i test automatizzati più efficienti rispetto agli approcci manuali.
+I test automatizzati utilizzano strumenti che controllano automaticamente il codice di uno smart contract per individuare errori di esecuzione. Il vantaggio dei test automatizzati deriva dall'uso di [script](https://www.techtarget.com/whatis/definition/script?amp=1) per guidare la valutazione delle funzionalità del contratto. I test basati su script possono essere programmati per essere eseguiti ripetutamente con un intervento umano minimo, rendendo i test automatizzati più efficienti rispetto agli approcci manuali.
 
-I test automatizzati sono particolarmente utili quando i test sono ripetitivi e dispendiosi in termini di tempo; difficili da eseguire manualmente; soggetti a errori umani; o comportano la valutazione di funzioni critiche del contratto. Ma gli strumenti di test automatizzati possono avere degli svantaggi: potrebbero non rilevare determinati bug e produrre molti [falsi positivi](https://www.contrastsecurity.com/glossary/false-positive). Pertanto, l'abbinamento di test automatizzati con test manuali per gli smart contract è l'ideale.
+I test automatizzati sono particolarmente utili quando i test sono ripetitivi e dispendiosi in termini di tempo; difficili da eseguire manualmente; soggetti a errori umani; o comportano la valutazione di funzioni critiche del contratto. Ma gli strumenti di test automatizzati possono presentare degli svantaggi: potrebbero non rilevare determinati bug e produrre molti [falsi positivi](https://www.contrastsecurity.com/glossary/false-positive). Pertanto, l'ideale è abbinare i test automatizzati ai test manuali per gli smart contract.
 
 ### Test manuali {#manual-testing}
 
-I test manuali sono assistiti dall'uomo e comportano l'esecuzione di ogni caso di test nella tua suite di test uno dopo l'altro durante l'analisi della correttezza di uno smart contract. Questo è diverso dai test automatizzati in cui puoi eseguire contemporaneamente più test isolati su un contratto e ottenere un rapporto che mostra tutti i test falliti e superati.
+I test manuali sono assistiti dall'uomo e comportano l'esecuzione di ogni caso di test nella suite di test uno dopo l'altro durante l'analisi della correttezza di uno smart contract. Questo è diverso dai test automatizzati in cui è possibile eseguire contemporaneamente più test isolati su un contratto e ottenere un rapporto che mostra tutti i test falliti e superati.
 
 I test manuali possono essere eseguiti da un singolo individuo seguendo un piano di test scritto che copre diversi scenari di test. Potresti anche far interagire più individui o gruppi con uno smart contract per un periodo specificato come parte dei test manuali. I tester confronteranno il comportamento effettivo del contratto con il comportamento previsto, segnalando qualsiasi differenza come bug.
 
@@ -46,7 +46,7 @@ Test manuali efficaci richiedono risorse considerevoli (competenze, tempo, denar
 
 ### Test unitari {#unit-testing-for-smart-contracts}
 
-I test unitari valutano le funzioni del contratto separatamente e verificano che ogni componente funzioni correttamente. I buoni test unitari dovrebbero essere semplici, veloci da eseguire e fornire un'idea chiara di cosa è andato storto se i test falliscono.
+I test unitari valutano le funzioni del contratto separatamente e verificano che ogni componente funzioni correttamente. I buoni test unitari dovrebbero essere semplici, veloci da eseguire e fornire un'idea chiara di cosa è andato storto in caso di fallimento dei test.
 
 I test unitari sono utili per verificare che le funzioni restituiscano i valori previsti e che l'archiviazione del contratto venga aggiornata correttamente dopo l'esecuzione della funzione. Inoltre, l'esecuzione di test unitari dopo aver apportato modifiche alla base di codice di un contratto garantisce che l'aggiunta di nuova logica non introduca errori. Di seguito sono riportate alcune linee guida per eseguire test unitari efficaci:
 
@@ -54,7 +54,7 @@ I test unitari sono utili per verificare che le funzioni restituiscano i valori 
 
 ##### 1. Comprendere la logica di business e il flusso di lavoro del contratto
 
-Prima di scrivere test unitari, è utile sapere quali funzionalità offre uno smart contract e come gli utenti accederanno e utilizzeranno tali funzioni. Questo è particolarmente utile per eseguire [test del percorso felice (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) che determinano se le funzioni in un contratto restituiscono l'output corretto per input utente validi. Spiegheremo questo concetto utilizzando questo esempio (abbreviato) di [un contratto d'asta](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
+Prima di scrivere test unitari, è utile sapere quali funzionalità offre uno smart contract e come gli utenti accederanno e utilizzeranno tali funzioni. Questo è particolarmente utile per eseguire [test del percorso felice (happy path)](https://en.m.wikipedia.org/wiki/Happy_path) che determinano se le funzioni in un contratto restituiscono l'output corretto per input utente validi. Spiegheremo questo concetto usando questo esempio (abbreviato) di [un contratto d'asta](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
 
 ```solidity
 constructor(
@@ -108,29 +108,29 @@ function auctionEnd() external {
 }
 ```
 
-Questo è un semplice contratto d'asta progettato per ricevere offerte durante il periodo di offerta. Se la `highestBid` aumenta, il precedente miglior offerente riceve i suoi soldi; una volta terminato il periodo di offerta, il `beneficiary` chiama il contratto per ottenere i propri soldi.
+Questo è un semplice contratto d'asta progettato per ricevere offerte durante il periodo di offerta. Se `highestBid` aumenta, il precedente miglior offerente riceve i suoi soldi; una volta terminato il periodo di offerta, il `beneficiary` chiama il contratto per ottenere i propri soldi.
 
-I test unitari per un contratto come questo coprirebbero diverse funzioni che un utente potrebbe chiamare quando interagisce con il contratto. Un esempio potrebbe essere un test unitario che verifica se un utente può fare un'offerta mentre l'asta è in corso (cioè, le chiamate a `bid()` hanno successo) o uno che verifica se un utente può fare un'offerta più alta dell'attuale `highestBid`.
+I test unitari per un contratto come questo coprirebbero diverse funzioni che un utente potrebbe chiamare interagendo con il contratto. Un esempio sarebbe un test unitario che verifica se un utente può fare un'offerta mentre l'asta è in corso (cioè, le chiamate a `bid()` hanno successo) o uno che verifica se un utente può fare un'offerta più alta dell'attuale `highestBid`.
 
 Comprendere il flusso di lavoro operativo di un contratto aiuta anche a scrivere test unitari che verificano se l'esecuzione soddisfa i requisiti. Ad esempio, il contratto d'asta specifica che gli utenti non possono fare offerte quando l'asta è terminata (cioè, quando `auctionEndTime` è inferiore a `block.timestamp`). Pertanto, uno sviluppatore potrebbe eseguire un test unitario che verifica se le chiamate alla funzione `bid()` hanno successo o falliscono quando l'asta è finita (cioè, quando `auctionEndTime` > `block.timestamp`).
 
 ##### 2. Valutare tutte le assunzioni relative all'esecuzione del contratto
 
-È importante documentare qualsiasi assunzione sull'esecuzione di un contratto e scrivere test unitari per verificare la validità di tali assunzioni. Oltre a offrire protezione contro esecuzioni impreviste, testare le asserzioni ti costringe a pensare alle operazioni che potrebbero infrangere il modello di sicurezza di uno smart contract. Un consiglio utile è andare oltre i "test dell'utente felice" e scrivere test negativi che verificano se una funzione fallisce per gli input sbagliati.
+È importante documentare qualsiasi assunzione sull'esecuzione di un contratto e scrivere test unitari per verificare la validità di tali assunzioni. Oltre a offrire protezione contro esecuzioni impreviste, testare le asserzioni ti costringe a pensare alle operazioni che potrebbero infrangere il modello di sicurezza di uno smart contract. Un consiglio utile è andare oltre i "test dell'utente felice" e scrivere test negativi che verificano se una funzione fallisce per input errati.
 
 Molti framework di test unitari consentono di creare asserzioni (semplici dichiarazioni che stabiliscono cosa un contratto può e non può fare) ed eseguire test per vedere se tali asserzioni reggono durante l'esecuzione. Uno sviluppatore che lavora sul contratto d'asta descritto in precedenza potrebbe fare le seguenti asserzioni sul suo comportamento prima di eseguire test negativi:
 
-- Gli utenti non possono fare offerte quando l'asta è finita o non è iniziata.
+- Gli utenti non possono fare offerte quando l'asta è finita o non è ancora iniziata.
 
-- Il contratto d'asta si annulla (revert) se un'offerta è al di sotto della soglia accettabile.
+- Il contratto d'asta si annulla (revert) se un'offerta è inferiore alla soglia accettabile.
 
-- Agli utenti che non riescono a vincere l'offerta vengono accreditati i loro fondi
+- Agli utenti che non riescono a vincere l'offerta vengono riaccreditati i loro fondi
 
-**Nota**: Un altro modo per testare le assunzioni è scrivere test che attivano i [modificatori di funzione](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) in un contratto, in particolare le istruzioni `require`, `assert` e `if…else`.
+**Nota**: Un altro modo per testare le assunzioni è scrivere test che attivano i [modificatori di funzione](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) in un contratto, specialmente le istruzioni `require`, `assert` e `if…else`.
 
 ##### 3. Misurare la copertura del codice
 
-La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è una metrica di test che traccia il numero di rami, righe e istruzioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona copertura del codice per ridurre al minimo il rischio di vulnerabilità non testate. Senza una copertura sufficiente, potresti presumere erroneamente che il tuo contratto sia sicuro perché tutti i test vengono superati, mentre le vulnerabilità esistono ancora in percorsi di codice non testati. Registrare un'elevata copertura del codice, tuttavia, dà la garanzia che tutte le istruzioni/funzioni in uno smart contract siano state sufficientemente testate per la correttezza.
+La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è una metrica di test che traccia il numero di rami, righe e istruzioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona copertura del codice per ridurre al minimo il rischio di vulnerabilità non testate. Senza una copertura sufficiente, potresti presumere erroneamente che il tuo contratto sia sicuro perché tutti i test vengono superati, mentre esistono ancora vulnerabilità in percorsi di codice non testati. Registrare un'elevata copertura del codice, tuttavia, dà la garanzia che tutte le istruzioni/funzioni in uno smart contract siano state sufficientemente testate per la correttezza.
 
 ##### 4. Utilizzare framework di test ben sviluppati
 
@@ -145,12 +145,13 @@ I framework di test unitari per gli smart contract in Solidity sono disponibili 
 - **[Eseguire test unitari con Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Eseguire test unitari con Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 - **[Eseguire test unitari con Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
+- **[Eseguire test unitari con Moccasin](https://github.com/Cyfrin/moccasin)**
 
 ### Test di integrazione {#integration-testing-for-smart-contracts}
 
 Mentre i test unitari eseguono il debug delle funzioni del contratto in isolamento, i test di integrazione valutano i componenti di uno smart contract nel loro insieme. I test di integrazione possono rilevare problemi derivanti da chiamate tra contratti o interazioni tra diverse funzioni nello stesso smart contract. Ad esempio, i test di integrazione possono aiutare a verificare se elementi come l'[ereditarietà](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e l'iniezione delle dipendenze funzionano correttamente.
 
-I test di integrazione sono utili se il tuo contratto adotta un'architettura modulare o si interfaccia con altri contratti onchain durante l'esecuzione. Un modo per eseguire test di integrazione è fare un [fork della blockchain](/glossary/#fork) a un'altezza specifica (utilizzando uno strumento come [Forge](https://book.getfoundry.sh/forge/fork-testing) o [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) e simulare le interazioni tra il tuo contratto e i contratti distribuiti.
+I test di integrazione sono utili se il tuo contratto adotta un'architettura modulare o si interfaccia con altri contratti onchain durante l'esecuzione. Un modo per eseguire test di integrazione è fare un [fork della blockchain](/glossary/#fork) a un'altezza specifica (usando uno strumento come [Forge](https://book.getfoundry.sh/forge/fork-testing) o [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) e simulare le interazioni tra il tuo contratto e i contratti distribuiti.
 
 La blockchain biforcata (forked) si comporterà in modo simile alla Mainnet e avrà account con stati e saldi associati. Ma agisce solo come un ambiente di sviluppo locale in sandbox, il che significa che non avrai bisogno di ETH reali per le transazioni, ad esempio, né le tue modifiche influenzeranno il vero protocollo Ethereum.
 
@@ -164,7 +165,7 @@ L'**analisi statica** e l'**analisi dinamica** sono due tecniche comuni per eseg
 
 Un analizzatore statico prende in input il codice sorgente di uno smart contract e restituisce risultati che dichiarano se un contratto soddisfa o meno una proprietà. A differenza dell'analisi dinamica, l'analisi statica non comporta l'esecuzione di un contratto per analizzarne la correttezza. L'analisi statica ragiona invece su tutti i possibili percorsi che uno smart contract potrebbe intraprendere durante l'esecuzione (cioè, esaminando la struttura del codice sorgente per determinare cosa significherebbe per il funzionamento del contratto in fase di esecuzione).
 
-Il [linting](https://www.perforce.com/blog/qac/what-is-linting) e i [test statici](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sono metodi comuni per eseguire l'analisi statica sui contratti. Entrambi richiedono l'analisi di rappresentazioni di basso livello dell'esecuzione di un contratto, come gli [alberi di sintassi astratta](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) e i [grafi del flusso di controllo](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) generati dal compilatore.
+Il [linting](https://www.perforce.com/blog/qac/what-is-linting) e i [test statici](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sono metodi comuni per eseguire l'analisi statica sui contratti. Entrambi richiedono l'analisi di rappresentazioni di basso livello dell'esecuzione di un contratto, come gli [alberi sintattici astratti](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) e i [grafi del flusso di controllo](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) generati dal compilatore.
 
 Nella maggior parte dei casi, l'analisi statica è utile per rilevare problemi di sicurezza come l'uso di costrutti non sicuri, errori di sintassi o violazioni degli standard di codifica nel codice di un contratto. Tuttavia, è noto che gli analizzatori statici sono generalmente inaffidabili nel rilevare vulnerabilità più profonde e possono produrre eccessivi falsi positivi.
 
@@ -174,17 +175,17 @@ L'analisi dinamica genera input simbolici (es. nell'[esecuzione simbolica](https
 
 Il [fuzzing](https://www.halborn.com/blog/post/what-is-fuzz-testing-fuzzing) è un esempio di tecnica di analisi dinamica per verificare proprietà arbitrarie negli smart contract. Un fuzzer invoca funzioni in un contratto di destinazione con variazioni casuali o malformate di un valore di input definito. Se lo smart contract entra in uno stato di errore (es. uno in cui un'asserzione fallisce), il problema viene segnalato e gli input che guidano l'esecuzione verso il percorso vulnerabile vengono prodotti in un rapporto.
 
-Il fuzzing è utile per valutare il meccanismo di convalida dell'input di uno smart contract, poiché una gestione impropria di input imprevisti potrebbe comportare un'esecuzione non intenzionale e produrre effetti pericolosi. Questa forma di test basato sulle proprietà può essere ideale per molti motivi:
+Il fuzzing è utile per valutare il meccanismo di convalida dell'input di uno smart contract, poiché una gestione impropria di input imprevisti potrebbe provocare un'esecuzione non intenzionale e produrre effetti pericolosi. Questa forma di test basato sulle proprietà può essere ideale per molti motivi:
 
-1. **Scrivere casi di test per coprire molti scenari è difficile.** Un test delle proprietà richiede solo di definire un comportamento e un intervallo di dati con cui testare il comportamento: il programma genera automaticamente casi di test in base alla proprietà definita.
+1. **Scrivere casi di test per coprire molti scenari è difficile.** Un test delle proprietà richiede solo di definire un comportamento e un intervallo di dati con cui testare il comportamento: il programma genera automaticamente i casi di test in base alla proprietà definita.
 
-2. **La tua suite di test potrebbe non coprire sufficientemente tutti i possibili percorsi all'interno del programma.** Anche con una copertura del 100%, è possibile perdersi casi limite.
+2. **La tua suite di test potrebbe non coprire sufficientemente tutti i possibili percorsi all'interno del programma.** Anche con una copertura del 100%, è possibile tralasciare casi limite.
 
-3. **I test unitari dimostrano che un contratto viene eseguito correttamente per i dati di esempio, ma non è noto se il contratto venga eseguito correttamente per input al di fuori del campione.** I test delle proprietà eseguono un contratto di destinazione con più variazioni di un determinato valore di input per trovare tracce di esecuzione che causano fallimenti delle asserzioni. Pertanto, un test delle proprietà fornisce maggiori garanzie che un contratto venga eseguito correttamente per un'ampia classe di dati di input.
+3. **I test unitari dimostrano che un contratto viene eseguito correttamente per i dati di esempio, ma non è noto se il contratto venga eseguito correttamente per input al di fuori del campione.** I test delle proprietà eseguono un contratto di destinazione con molteplici variazioni di un dato valore di input per trovare tracce di esecuzione che causano fallimenti delle asserzioni. Pertanto, un test delle proprietà fornisce maggiori garanzie che un contratto venga eseguito correttamente per un'ampia classe di dati di input.
 
 ### Linee guida per l'esecuzione di test basati sulle proprietà per gli smart contract {#running-property-based-tests}
 
-L'esecuzione di test basati sulle proprietà inizia in genere con la definizione di una proprietà (es. assenza di [overflow di interi](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) o di una raccolta di proprietà che si desidera verificare in uno smart contract. Potrebbe anche essere necessario definire un intervallo di valori entro il quale il programma può generare dati per gli input delle transazioni durante la scrittura dei test delle proprietà.
+L'esecuzione di test basati sulle proprietà inizia in genere con la definizione di una proprietà (es. assenza di [overflow di interi](https://github.com/ConsenSysDiligence/mythril/wiki/Integer-Overflow)) o di un insieme di proprietà che si desidera verificare in uno smart contract. Potrebbe anche essere necessario definire un intervallo di valori entro il quale il programma può generare dati per gli input delle transazioni durante la scrittura dei test delle proprietà.
 
 Una volta configurato correttamente, lo strumento di test delle proprietà eseguirà le funzioni del tuo smart contract con input generati casualmente. Se ci sono violazioni delle asserzioni, dovresti ottenere un rapporto con dati di input concreti che violano la proprietà in fase di valutazione. Consulta alcune delle guide di seguito per iniziare a eseguire test basati sulle proprietà con diversi strumenti:
 
@@ -207,7 +208,7 @@ Sebbene i test automatizzati eseguiti in un ambiente di sviluppo locale possano 
 
 Testare il tuo contratto su una blockchain locale (nota anche come [rete di sviluppo](/developers/docs/development-networks/)) è un'alternativa consigliata ai test sulla Mainnet. Una blockchain locale è una copia della blockchain di Ethereum in esecuzione localmente sul tuo computer che simula il comportamento del livello di esecuzione di Ethereum. In quanto tale, puoi programmare transazioni per interagire con un contratto senza incorrere in costi generali significativi.
 
-L'esecuzione di contratti su una blockchain locale potrebbe essere utile come forma di test di integrazione manuale. Gli [smart contract sono altamente componibili](/developers/docs/smart-contracts/composability/), consentendoti di integrarli con i protocolli esistenti, ma dovrai comunque assicurarti che interazioni onchain così complesse producano i risultati corretti.
+L'esecuzione di contratti su una blockchain locale potrebbe essere utile come forma di test di integrazione manuale. [Gli smart contract sono altamente componibili](/developers/docs/smart-contracts/composability/), consentendoti di integrarli con i protocolli esistenti, ma dovrai comunque assicurarti che interazioni onchain così complesse producano i risultati corretti.
 
 [Maggiori informazioni sulle reti di sviluppo.](/developers/docs/development-networks/)
 
@@ -217,7 +218,7 @@ Una rete di test o testnet funziona esattamente come la Mainnet di Ethereum, tra
 
 Questa forma di test manuale è utile per valutare il flusso end-to-end della tua applicazione dal punto di vista dell'utente. Qui, i beta tester possono anche eseguire prove e segnalare eventuali problemi con la logica di business e la funzionalità complessiva del contratto.
 
-La distribuzione su una testnet dopo i test su una blockchain locale è l'ideale poiché la prima è più vicina al comportamento della Ethereum Virtual Machine. Pertanto, è comune per molti progetti nativi di Ethereum distribuire dapp sulle testnet per valutare il funzionamento di uno smart contract in condizioni reali.
+Distribuire su una testnet dopo aver testato su una blockchain locale è l'ideale poiché la prima è più vicina al comportamento della Macchina Virtuale di Ethereum (EVM). Pertanto, è comune per molti progetti nativi di Ethereum distribuire dapp sulle testnet per valutare il funzionamento di uno smart contract in condizioni reali.
 
 [Maggiori informazioni sulle testnet di Ethereum.](/developers/docs/development-networks/#public-beacon-testchains)
 
@@ -227,21 +228,21 @@ Sebbene i test aiutino a confermare che un contratto restituisce i risultati pre
 
 La verifica formale è un approccio per valutare la correttezza del software verificando se un modello formale del programma corrisponde alla specifica formale. Un modello formale è una rappresentazione matematica astratta di un programma, mentre una specifica formale definisce le proprietà di un programma (cioè, asserzioni logiche sull'esecuzione del programma).
 
-Poiché le proprietà sono scritte in termini matematici, diventa possibile verificare che un modello formale (matematico) del sistema soddisfi una specifica utilizzando regole logiche di inferenza. Pertanto, si dice che gli strumenti di verifica formale producano una 'prova matematica' della correttezza di un sistema.
+Poiché le proprietà sono scritte in termini matematici, diventa possibile verificare che un modello formale (matematico) del sistema soddisfi una specifica utilizzando regole logiche di inferenza. Pertanto, si dice che gli strumenti di verifica formale producano una "prova matematica" della correttezza di un sistema.
 
-A differenza dei test, la verifica formale può essere utilizzata per verificare che l'esecuzione di uno smart contract soddisfi una specifica formale per _tutte_ le esecuzioni (cioè, non ha bug) senza doverlo eseguire con dati di esempio. Non solo questo riduce il tempo impiegato per eseguire dozzine di test unitari, ma è anche più efficace nel rilevare vulnerabilità nascoste. Detto questo, le tecniche di verifica formale si collocano su uno spettro a seconda della loro difficoltà di implementazione e utilità.
+A differenza dei test, la verifica formale può essere utilizzata per verificare che l'esecuzione di uno smart contract soddisfi una specifica formale per _tutte_ le esecuzioni (cioè, non ha bug) senza doverlo eseguire con dati di esempio. Questo non solo riduce il tempo impiegato per eseguire dozzine di test unitari, ma è anche più efficace nel cogliere vulnerabilità nascoste. Detto questo, le tecniche di verifica formale si collocano su uno spettro a seconda della loro difficoltà di implementazione e utilità.
 
 [Maggiori informazioni sulla verifica formale per gli smart contract.](/developers/docs/smart-contracts/formal-verification)
 
 ## Test vs audit e bug bounty {#testing-vs-audits-bug-bounties}
 
-Come accennato, test rigorosi raramente possono garantire l'assenza di bug in un contratto; gli approcci di verifica formale possono fornire garanzie più forti di correttezza ma sono attualmente difficili da usare e comportano costi considerevoli.
+Come accennato, test rigorosi raramente possono garantire l'assenza di bug in un contratto; gli approcci di verifica formale possono fornire garanzie più forti di correttezza, ma sono attualmente difficili da usare e comportano costi considerevoli.
 
 Tuttavia, puoi aumentare ulteriormente la possibilità di individuare le vulnerabilità del contratto ottenendo una revisione indipendente del codice. Gli [audit degli smart contract](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) e i [bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) sono due modi per far analizzare i tuoi contratti ad altri.
 
-Gli audit vengono eseguiti da revisori esperti nel trovare casi di falle di sicurezza e scarse pratiche di sviluppo negli smart contract. Un audit di solito includerà test (e possibilmente verifica formale) nonché una revisione manuale dell'intera base di codice.
+Gli audit vengono eseguiti da revisori esperti nel trovare casi di falle di sicurezza e scarse pratiche di sviluppo negli smart contract. Un audit includerà solitamente test (e possibilmente verifica formale) nonché una revisione manuale dell'intera base di codice.
 
-Al contrario, un programma di bug bounty di solito prevede l'offerta di una ricompensa finanziaria a un individuo (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) che scopre una vulnerabilità in uno smart contract e la rivela agli sviluppatori. I bug bounty sono simili agli audit poiché implicano chiedere ad altri di aiutare a trovare difetti negli smart contract.
+Al contrario, un programma di bug bounty di solito prevede l'offerta di una ricompensa finanziaria a un individuo (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) che scopre una vulnerabilità in uno smart contract e la rivela agli sviluppatori. I bug bounty sono simili agli audit poiché implicano chiedere ad altri di aiutare a trovare difetti negli smart contract.
 
 La differenza principale è che i programmi di bug bounty sono aperti alla più ampia comunità di sviluppatori/hacker e attraggono un'ampia classe di hacker etici e professionisti della sicurezza indipendenti con competenze ed esperienze uniche. Questo può essere un vantaggio rispetto agli audit degli smart contract che si basano principalmente su team che potrebbero possedere competenze limitate o ristrette.
 
@@ -253,7 +254,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Waffle](https://ethereum-waffle.readthedocs.io/en/latest/)** - _Framework per lo sviluppo e il test avanzati di smart contract (basato su Ethers.js)_.
 
-- **[Remix Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _Strumento per testare gli smart contract in Solidity. Funziona sotto il plugin "Solidity Unit Testing" dell'IDE Remix, che viene utilizzato per scrivere ed eseguire casi di test per un contratto._
+- **[Remix Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _Strumento per testare gli smart contract in Solidity. Funziona sotto il plugin "Solidity Unit Testing" dell'ambiente di sviluppo integrato (IDE) Remix, che viene utilizzato per scrivere ed eseguire casi di test per un contratto._
 
 - **[OpenZeppelin Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _Libreria di asserzioni per il test degli smart contract di Ethereum. Assicurati che i tuoi contratti si comportino come previsto!_
 
@@ -263,7 +264,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework per testare gli smart contract basato su Ethers.js, Mocha e Chai._
 
-- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Framework di sviluppo e test basato su Python per smart contract destinati alla Ethereum Virtual Machine._
+- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Framework di sviluppo e test basato su Python per smart contract destinati alla Macchina Virtuale di Ethereum (EVM)._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Framework basato su Python per test unitari e fuzzing con forti capacità di debug e supporto per test cross-chain, che utilizza pytest e Anvil per la migliore esperienza utente e prestazioni._
 
@@ -275,7 +276,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter per far rispettare le migliori pratiche di stile e sicurezza per il linguaggio di programmazione degli smart contract Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analizzatore statico basato su Rust specificamente progettato per la sicurezza e lo sviluppo di smart contract Web3._
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analizzatore statico basato su Rust specificamente progettato per la sicurezza e lo sviluppo di smart contract nel Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Framework di analisi statica basato su Python con rilevatori di vulnerabilità e qualità del codice, stampanti per estrarre informazioni utili dal codice e supporto per la scrittura di sottomoduli personalizzati._
 
@@ -287,9 +288,9 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Diligence Fuzzing](https://consensys.net/diligence/fuzzing/)** - _Strumento di fuzzing automatizzato utile per rilevare violazioni delle proprietà nel codice degli smart contract._
 
-- **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Framework di esecuzione simbolica dinamica per l'analisi del bytecode EVM._
+- **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Framework di esecuzione simbolica dinamica per l'analisi del bytecode della EVM._
 
-- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Strumento di valutazione del bytecode EVM per rilevare le vulnerabilità dei contratti utilizzando l'analisi delle macchie (taint analysis), l'analisi concolica e il controllo del flusso di controllo._
+- **[Mythril](https://github.com/ConsenSysDiligence/mythril)** - _Strumento di valutazione del bytecode della EVM per rilevare le vulnerabilità dei contratti utilizzando l'analisi delle contaminazioni (taint analysis), l'analisi concolica e il controllo del flusso di controllo._
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble è un linguaggio di specifica e uno strumento di verifica a runtime che ti consente di annotare gli smart contract con proprietà che ti permettono di testare automaticamente i contratti con strumenti come Diligence Fuzzing o MythX._
 
@@ -311,6 +312,6 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 ## Tutorial: Test degli smart contract su Ethereum {#tutorials}
 
-- [Come sviluppare e testare una dapp su una testnet locale multi-client](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Guida passo passo alla distribuzione di uno smart contract su una testnet locale e all'esecuzione dei test._
+- [Come sviluppare e testare una dApp su una testnet locale multi-client](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Guida passo passo alla distribuzione di uno smart contract su una testnet locale e all'esecuzione di test._
 - [Come simulare (mock) gli smart contract in Solidity per i test](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– Tutorial intermedio su come utilizzare dati fittizi (mock) e implementare test unitari._
 - [Come usare Echidna per testare gli smart contract](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) _– Approccio avanzato al fuzzing e al test degli smart contract._

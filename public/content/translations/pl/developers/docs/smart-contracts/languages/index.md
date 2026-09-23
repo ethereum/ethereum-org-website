@@ -13,9 +13,9 @@ Dwa najbardziej aktywne i utrzymywane języki to:
 
 Remix IDE zapewnia kompleksowe środowisko programistyczne do tworzenia i testowania kontraktów zarówno w Solidity, jak i Vyper. [Wypróbuj przeglądarkowe Remix IDE](https://remix.ethereum.org), aby zacząć kodować.
 
-Bardziej doświadczeni programiści mogą również chcieć użyć Yul, języka pośredniego dla [Wirtualnej Maszyny Ethereum (EVM)](/developers/docs/evm/), lub Yul+, rozszerzenia dla Yul.
+Bardziej doświadczeni programiści mogą również chcieć użyć Yul, języka pośredniego dla [Maszyny Wirtualnej Ethereum (EVM)](/developers/docs/evm/), lub Yul+, rozszerzenia języka Yul.
 
-Jeśli jesteś ciekawy i lubisz pomagać w testowaniu nowych języków, które wciąż są w fazie intensywnego rozwoju, możesz poeksperymentować z Fe, nowo powstającym językiem inteligentnych kontraktów, który obecnie wciąż jest w powijakach.
+Jeśli jesteś ciekaw i lubisz pomagać w testowaniu nowych języków, które wciąż są w fazie intensywnego rozwoju, możesz poeksperymentować z Fe, nowo powstającym językiem inteligentnych kontraktów, który obecnie wciąż jest w powijakach.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -28,7 +28,7 @@ Wcześniejsza znajomość języków programowania, zwłaszcza JavaScript lub Pyt
 - Statycznie typowany (typ zmiennej jest znany w czasie kompilacji).
 - Obsługuje:
   - Dziedziczenie (możesz rozszerzać inne kontrakty).
-  - Biblioteki (możesz tworzyć kod wielokrotnego użytku, który można wywoływać z różnych kontraktów – podobnie jak funkcje statyczne w klasie statycznej w innych obiektowych językach programowania).
+  - Biblioteki (możesz tworzyć kod wielokrotnego użytku, który możesz wywoływać z różnych kontraktów – podobnie jak funkcje statyczne w klasie statycznej w innych obiektowych językach programowania).
   - Złożone typy definiowane przez użytkownika.
 
 ### Ważne linki {#important-links}
@@ -91,7 +91,7 @@ Ten przykład powinien dać ci wyobrażenie o tym, jak wygląda składnia kontra
 - Silne typowanie
 - Mały i zrozumiały kod kompilatora
 - Wydajne generowanie kodu bajtowego
-- Celowo posiada mniej funkcji niż Solidity, aby kontrakty były bezpieczniejsze i łatwiejsze do audytu. Vyper nie obsługuje:
+- Celowo ma mniej funkcji niż Solidity, aby kontrakty były bezpieczniejsze i łatwiejsze do audytu. Vyper nie obsługuje:
   - Modyfikatorów
   - Dziedziczenia
   - Wstawek w asemblerze (inline assembly)
@@ -100,6 +100,8 @@ Ten przykład powinien dać ci wyobrażenie o tym, jak wygląda składnia kontra
   - Wywołań rekurencyjnych
   - Pętli o nieskończonej długości
   - Binarnych punktów stałych
+
+Od wersji v0.4.0 Vyper obsługuje [system modułów](https://docs.vyperlang.org/en/stable/using-modules.html). Ponowne użycie kodu osiąga się poprzez kompozycję, a nie dziedziczenie klas.
 
 Aby uzyskać więcej informacji, [przeczytaj uzasadnienie dla języka Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
@@ -123,7 +125,7 @@ Aby uzyskać więcej informacji, [przeczytaj uzasadnienie dla języka Vyper](htt
 # Otwarta aukcja
 
 # Parametry aukcji
-# Beneficjent otrzymuje pieniądze od osoby, która złożyła najwyższą ofertę
+# Beneficjent otrzymuje pieniądze od licytującego najwyższą kwotę
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
@@ -135,13 +137,13 @@ highestBid: public(uint256)
 # Ustawiane na true na końcu, uniemożliwia jakiekolwiek zmiany
 ended: public(bool)
 
-# Śledzenie zwróconych ofert, aby móc zastosować wzorzec wypłaty
+# Śledź zwrócone oferty, abyśmy mogli zastosować wzorzec wypłaty
 pendingReturns: public(HashMap[address, uint256])
 
 # Utwórz prostą aukcję z czasem licytacji `_bidding_time`
 # sekund w imieniu
 # adresu beneficjenta `_beneficiary`.
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
@@ -158,7 +160,7 @@ def bid():
     assert block.timestamp < self.auctionEnd
     # Sprawdź, czy oferta jest wystarczająco wysoka
     assert msg.value > self.highestBid
-    # Śledź zwrot dla poprzedniego licytanta z najwyższą ofertą
+    # Śledź zwrot dla poprzedniego najwyżej licytującego
     self.pendingReturns[self.highestBidder] += self.highestBid
     # Śledź nową najwyższą ofertę
     self.highestBidder = msg.sender
@@ -188,7 +190,7 @@ def endAuction():
     # z powrotem obecny kontrakt i zmodyfikować stan lub spowodować,
     # że efekty (wypłata etheru) zostaną wykonane wielokrotnie.
     # Jeśli funkcje wywoływane wewnętrznie obejmują interakcję z zewnętrznymi
-    # kontraktami, muszą być one również traktowane jako interakcja z
+    # kontraktami, muszą one również być traktowane jako interakcja z
     # zewnętrznymi kontraktami.
 
     # 1. Warunki
@@ -208,7 +210,7 @@ Ten przykład powinien dać ci wyobrażenie o tym, jak wygląda składnia kontra
 
 ## Yul i Yul+ {#yul}
 
-Jeśli jesteś nowy w Ethereum i nie programowałeś jeszcze w językach inteligentnych kontraktów, zalecamy rozpoczęcie od Solidity lub Vyper. Zainteresuj się Yul lub Yul+ dopiero wtedy, gdy zapoznasz się z najlepszymi praktykami bezpieczeństwa inteligentnych kontraktów i specyfiką pracy z Wirtualną Maszyną Ethereum (EVM).
+Jeśli jesteś nowy w Ethereum i nie programowałeś jeszcze w językach inteligentnych kontraktów, zalecamy rozpoczęcie od Solidity lub Vyper. Zainteresuj się Yul lub Yul+ dopiero wtedy, gdy zapoznasz się z najlepszymi praktykami bezpieczeństwa inteligentnych kontraktów i specyfiką pracy z EVM.
 
 **Yul**
 
@@ -218,8 +220,8 @@ Jeśli jesteś nowy w Ethereum i nie programowałeś jeszcze w językach intelig
 
 **Yul+**
 
-- Niskopoziomowe, wysoce wydajne rozszerzenie dla Yul.
-- Początkowo zaprojektowane dla kontraktu typu [optymistyczny rollup](/developers/docs/scaling/optimistic-rollups/).
+- Niskopoziomowe, wysoce wydajne rozszerzenie języka Yul.
+- Początkowo zaprojektowany dla kontraktu typu [optymistyczny rollup](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ można traktować jako eksperymentalną propozycję aktualizacji dla Yul, dodającą do niego nowe funkcje.
 
 ### Ważne linki {#important-links-2}
@@ -255,10 +257,10 @@ Jeśli masz już duże doświadczenie z inteligentnymi kontraktami, pełną impl
 
 ## Fe {#fe}
 
-- Statycznie typowany język dla Wirtualnej Maszyny Ethereum (EVM).
-- Zainspirowany przez Python i Rust.
+- Statycznie typowany język dla Maszyny Wirtualnej Ethereum (EVM).
+- Zainspirowany językami Python i Rust.
 - Ma być łatwy do nauki – nawet dla programistów, którzy są nowi w ekosystemie Ethereum.
-- Rozwój Fe jest wciąż na wczesnym etapie, język miał swoje wydanie alfa w styczniu 2021 roku.
+- Rozwój Fe jest wciąż na wczesnym etapie, język miał swoją wersję alfa w styczniu 2021 roku.
 
 ### Ważne linki {#important-links-3}
 
@@ -298,7 +300,7 @@ Oto kilka rzeczy do rozważenia, jeśli nie próbowałeś jeszcze żadnego z tyc
 
 ### Co jest wspaniałego w Solidity? {#solidity-advantages}
 
-- Jeśli jesteś początkujący, dostępnych jest wiele samouczków i narzędzi do nauki. Więcej na ten temat znajdziesz w sekcji [Nauka przez kodowanie](/developers/learning-tools/).
+- Jeśli jesteś początkujący, istnieje wiele samouczków i narzędzi do nauki. Więcej na ten temat znajdziesz w sekcji [Ucz się przez kodowanie](/developers/learning-tools/).
 - Dostępne są dobre narzędzia dla programistów.
 - Solidity ma dużą społeczność programistów, co oznacza, że najprawdopodobniej dość szybko znajdziesz odpowiedzi na swoje pytania.
 
@@ -310,7 +312,7 @@ Oto kilka rzeczy do rozważenia, jeśli nie próbowałeś jeszcze żadnego z tyc
 
 ### Co jest wspaniałego w Yul i Yul+? {#yul-advantages}
 
-- Uproszczony i funkcjonalny język niskopoziomowy.
+- Uproszczony i funkcjonalny język niskiego poziomu.
 - Pozwala znacznie zbliżyć się do surowego EVM, co może pomóc zoptymalizować zużycie gazu przez twoje kontrakty.
 
 ## Porównania języków {#language-comparisons}
