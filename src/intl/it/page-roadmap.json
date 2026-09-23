@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Limite di gas e protezione dai DoS",
   "page-roadmap-fusaka-gas-item-1": "Tetto massimo del limite di gas di 16,7 milioni di gas per transazione",
   "page-roadmap-fusaka-gas-item-2": "Aumento del limite di gas predefinito a ~60 milioni (dagli attuali 45 milioni)",
-  "page-roadmap-fusaka-additional-title": "Potenziali funzionalità aggiuntive",
-  "page-roadmap-fusaka-additional-item-1": "Supporto per enclave sicure sui dispositivi mobili per migliorare l'esperienza utente (UX)",
-  "page-roadmap-fusaka-additional-item-2": "Miglioramenti al mercato delle commissioni per i blob",
-  "page-roadmap-fusaka-additional-item-3": "Ulteriori miglioramenti all'efficienza dei validatori e alle prestazioni della rete",
   "page-roadmap-glamsterdam-epbs-title": "Separazione proponente-costruttore (PBS) integrata",
   "page-roadmap-glamsterdam-epbs-item-1": "Separa l'accordo sui blocchi dall'elaborazione, aiutando il layer 1 (L1) a scalare consentendo ai validatori di elaborare più dati",
   "page-roadmap-glamsterdam-epbs-item-2": "Integra nativamente i costruttori in modo che i validatori possano esternalizzare in sicurezza l'assemblaggio dei blocchi senza fidarsi di software esterni",
   "page-roadmap-glamsterdam-bal-title": "Elenchi di accesso a livello di blocco",
   "page-roadmap-glamsterdam-bal-item-1": "Introduce elenchi di accesso obbligatori a livello di blocco, piuttosto che per singole transazioni",
   "page-roadmap-glamsterdam-bal-item-2": "Mappa le dipendenze in anticipo per sincronizzazioni più rapide, esecuzione parallela e letture del disco parallele",
-  "page-roadmap-glamsterdam-bal-item-3": "Riduce il gas per le app con uno stato pesante e migliora la prevedibilità dei costi del gas",
-  "page-roadmap-hegota-discussed-title": "Pianificato per Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Le proposte sono attualmente in discussione"
+  "page-roadmap-glamsterdam-bal-item-3": "Riduce il gas per le app con uno stato pesante e migliora la prevedibilità dei costi del gas"
 }

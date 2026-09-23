@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Gas 上限与 DoS 防御强化",
   "page-roadmap-fusaka-gas-item-1": "每笔交易的 Gas 上限为 1670 万 Gas",
   "page-roadmap-fusaka-gas-item-2": "默认 Gas 上限增加至约 6000 万（当前为 4500 万）",
-  "page-roadmap-fusaka-additional-title": "潜在的附加功能",
-  "page-roadmap-fusaka-additional-item-1": "支持移动设备上的安全飞地以改善用户体验",
-  "page-roadmap-fusaka-additional-item-2": "blob 费用市场改进",
-  "page-roadmap-fusaka-additional-item-3": "进一步提高验证者效率和网络性能",
   "page-roadmap-glamsterdam-epbs-title": "被纳入协议的提议者-构建者分离 (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "将区块共识与处理分离开来，通过允许验证者处理更多数据来帮助一层网络 (l1) 扩展",
   "page-roadmap-glamsterdam-epbs-item-2": "原生集成构建者，以便验证者可以安全地外包区块组装，而无需信任外部软件",
   "page-roadmap-glamsterdam-bal-title": "区块级访问列表",
   "page-roadmap-glamsterdam-bal-item-1": "在区块级别引入强制访问列表，而不是针对单笔交易",
   "page-roadmap-glamsterdam-bal-item-2": "预先映射依赖关系，以实现更快的同步、并行执行和并行磁盘读取",
-  "page-roadmap-glamsterdam-bal-item-3": "降低状态繁重应用的 Gas 消耗，并提高 Gas 成本的可预测性",
-  "page-roadmap-hegota-discussed-title": "计划在 Hegotá 中进行",
-  "page-roadmap-hegota-discussed-item-1": "提案目前正在讨论中"
+  "page-roadmap-glamsterdam-bal-item-3": "降低状态繁重应用的 Gas 消耗，并提高 Gas 成本的可预测性"
 }

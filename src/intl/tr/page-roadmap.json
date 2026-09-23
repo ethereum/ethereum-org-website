@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Gaz Limiti ve DoS Güçlendirmesi",
   "page-roadmap-fusaka-gas-item-1": "İşlem başına 16,7M gazlık işlem gaz limiti üst sınırı",
   "page-roadmap-fusaka-gas-item-2": "Varsayılan gaz limitinin ~60M'ye yükseltilmesi (mevcut 45M'den)",
-  "page-roadmap-fusaka-additional-title": "Potansiyel Ek Özellikler",
-  "page-roadmap-fusaka-additional-item-1": "Kullanıcı deneyimini (UX) iyileştirmek için mobil cihazlarda güvenli yerleşim bölgeleri (enclave) desteği",
-  "page-roadmap-fusaka-additional-item-2": "Blob ücreti piyasası iyileştirmeleri",
-  "page-roadmap-fusaka-additional-item-3": "Doğrulayıcı verimliliği ve ağ performansında daha fazla iyileştirme",
   "page-roadmap-glamsterdam-epbs-title": "Yerleşik teklifçi-oluşturucu ayrımı (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "Blok anlaşmasını işlemeden ayırarak, doğrulayıcıların daha fazla veri işlemesine izin verip Katman 1'in (L1) ölçeklenmesine yardımcı olur",
   "page-roadmap-glamsterdam-epbs-item-2": "Oluşturucuları yerel olarak entegre eder, böylece doğrulayıcılar harici yazılımlara güvenmeden blok montajını güvenle dış kaynak olarak kullanabilir",
   "page-roadmap-glamsterdam-bal-title": "Blok düzeyinde erişim listeleri",
   "page-roadmap-glamsterdam-bal-item-1": "Bireysel işlemler yerine blok düzeyinde zorunlu erişim listeleri sunar",
   "page-roadmap-glamsterdam-bal-item-2": "Daha hızlı senkronizasyonlar, paralel yürütme ve paralel disk okumaları için bağımlılıkları önceden eşler",
-  "page-roadmap-glamsterdam-bal-item-3": "Durum ağırlıklı uygulamalar için gazı düşürür ve gaz maliyeti öngörülebilirliğini artırır",
-  "page-roadmap-hegota-discussed-title": "Hegotá için planlandı",
-  "page-roadmap-hegota-discussed-item-1": "Teklifler şu anda tartışılmaktadır"
+  "page-roadmap-glamsterdam-bal-item-3": "Durum ağırlıklı uygulamalar için gazı düşürür ve gaz maliyeti öngörülebilirliğini artırır"
 }

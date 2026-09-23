@@ -511,5 +511,6 @@
   "region-wake-island-usa": "جزيرة ويك (الولايات المتحدة)",
   "region-bonaire-netherlands": "بونير (هولندا)",
   "region-saba-netherlands": "سابا (هولندا)",
-  "region-sint-eustatius-netherlands": "سينت أوستاتيوس (هولندا)"
+  "region-sint-eustatius-netherlands": "سينت أوستاتيوس (هولندا)",
+  "item-logo": "شعار {item}"
 }

@@ -511,5 +511,6 @@
   "region-wake-island-usa": "威克岛（美国）",
   "region-bonaire-netherlands": "博奈尔（荷兰）",
   "region-saba-netherlands": "萨巴（荷兰）",
-  "region-sint-eustatius-netherlands": "圣尤斯特歇斯（荷兰）"
+  "region-sint-eustatius-netherlands": "圣尤斯特歇斯（荷兰）",
+  "item-logo": "{item} 徽标"
 }

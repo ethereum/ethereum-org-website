@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Limite de gas e fortalecimento contra DoS",
   "page-roadmap-fusaka-gas-item-1": "Teto do limite de gas de transação de 16,7M de gas por transação",
   "page-roadmap-fusaka-gas-item-2": "Aumento do limite de gas padrão para ~60M (dos atuais 45M)",
-  "page-roadmap-fusaka-additional-title": "Possíveis recursos adicionais",
-  "page-roadmap-fusaka-additional-item-1": "Suporte para enclaves seguros em dispositivos móveis para melhorar a experiência do usuário",
-  "page-roadmap-fusaka-additional-item-2": "Melhorias no mercado de taxa de blob",
-  "page-roadmap-fusaka-additional-item-3": "Melhorias adicionais na eficiência do validador e no desempenho da rede",
   "page-roadmap-glamsterdam-epbs-title": "Separação propositor-construtor (PBS) consagrada",
   "page-roadmap-glamsterdam-epbs-item-1": "Separa o acordo de bloco do processamento, ajudando a camada 1 (l1) a escalar, permitindo que os validadores processem mais dados",
   "page-roadmap-glamsterdam-epbs-item-2": "Integra nativamente os construtores para que os validadores possam terceirizar com segurança a montagem de blocos sem confiar em software externo",
   "page-roadmap-glamsterdam-bal-title": "Listas de acesso em nível de bloco",
   "page-roadmap-glamsterdam-bal-item-1": "Introduz listas de acesso obrigatórias no nível do bloco, em vez de para transações individuais",
   "page-roadmap-glamsterdam-bal-item-2": "Mapeia dependências antecipadamente para sincronizações mais rápidas, execução paralela e leituras de disco paralelas",
-  "page-roadmap-glamsterdam-bal-item-3": "Reduz o gás para aplicativos com uso intenso de estado e melhora a previsibilidade do custo do gás",
-  "page-roadmap-hegota-discussed-title": "Planejado para Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "As propostas estão atualmente em discussão"
+  "page-roadmap-glamsterdam-bal-item-3": "Reduz o gás para aplicativos com uso intenso de estado e melhora a previsibilidade do custo do gás"
 }

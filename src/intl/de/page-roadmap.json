@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "Gaslimit & DoS-Härtung",
   "page-roadmap-fusaka-gas-item-1": "Obergrenze für das Transaktions-Gaslimit von 16,7 Mio. Gas pro Transaktion",
   "page-roadmap-fusaka-gas-item-2": "Erhöhung des Standard-Gaslimits auf ~60 Mio. (von derzeit 45 Mio.)",
-  "page-roadmap-fusaka-additional-title": "Mögliche zusätzliche Funktionen",
-  "page-roadmap-fusaka-additional-item-1": "Unterstützung für sichere Enklaven auf Mobilgeräten zur Verbesserung der Benutzererfahrung",
-  "page-roadmap-fusaka-additional-item-2": "Verbesserungen des Blob-Gebührenmarktes",
-  "page-roadmap-fusaka-additional-item-3": "Weitere Verbesserungen der Validator-Effizienz und der Netzwerkleistung",
   "page-roadmap-glamsterdam-epbs-title": "Verankerte Proposer-Builder-Trennung (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "Trennt die Block-Zustimmung von der Verarbeitung und hilft Layer 1 (L1) bei der Skalierung, indem Validatoren mehr Daten verarbeiten können",
   "page-roadmap-glamsterdam-epbs-item-2": "Integriert Builder nativ, sodass Validatoren die Block-Zusammenstellung sicher auslagern können, ohne externer Software vertrauen zu müssen",
   "page-roadmap-glamsterdam-bal-title": "Zugriffslisten auf Blockebene",
   "page-roadmap-glamsterdam-bal-item-1": "Führt obligatorische Zugriffslisten auf Blockebene anstelle von einzelnen Transaktionen ein",
   "page-roadmap-glamsterdam-bal-item-2": "Bildet Abhängigkeiten im Voraus ab, um schnellere Synchronisierungen, parallele Ausführung und parallele Festplattenlesevorgänge zu ermöglichen",
-  "page-roadmap-glamsterdam-bal-item-3": "Senkt das Gas für zustandsintensive Apps und verbessert die Vorhersehbarkeit der Gas-Kosten",
-  "page-roadmap-hegota-discussed-title": "Geplant für Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Vorschläge werden derzeit diskutiert"
+  "page-roadmap-glamsterdam-bal-item-3": "Senkt das Gas für zustandsintensive Apps und verbessert die Vorhersehbarkeit der Gas-Kosten"
 }

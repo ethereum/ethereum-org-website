@@ -102,17 +102,11 @@
   "page-roadmap-fusaka-gas-title": "গ্যাস লিমিট এবং DoS শক্তিশালীকরণ",
   "page-roadmap-fusaka-gas-item-1": "প্রতি ট্রানজ্যাকশনে 16.7M গ্যাসের ট্রানজ্যাকশন গ্যাস লিমিট ক্যাপ",
   "page-roadmap-fusaka-gas-item-2": "ডিফল্ট গ্যাস লিমিট ~60M-এ বৃদ্ধি (বর্তমান 45M থেকে)",
-  "page-roadmap-fusaka-additional-title": "সম্ভাব্য অতিরিক্ত বৈশিষ্ট্য",
-  "page-roadmap-fusaka-additional-item-1": "UX উন্নত করতে মোবাইল ডিভাইসে সুরক্ষিত এনক্লেভের জন্য সমর্থন",
-  "page-roadmap-fusaka-additional-item-2": "ব্লব ফি বাজারের উন্নতি",
-  "page-roadmap-fusaka-additional-item-3": "ভ্যালিডেটর দক্ষতা এবং নেটওয়ার্ক কর্মক্ষমতার আরও উন্নতি",
   "page-roadmap-glamsterdam-epbs-title": "এনশ্রাইন্ড প্রপোজার-বিল্ডার সেপারেশন (pbs)",
   "page-roadmap-glamsterdam-epbs-item-1": "প্রক্রিয়াকরণ থেকে ব্লক চুক্তিকে আলাদা করে, ভ্যালিডেটরদের আরও ডেটা প্রক্রিয়া করার অনুমতি দিয়ে লেয়ার ১ (l1) স্কেল করতে সহায়তা করে",
   "page-roadmap-glamsterdam-epbs-item-2": "নেটিভভাবে বিল্ডারদের সংহত করে যাতে ভ্যালিডেটররা বাহ্যিক সফ্টওয়্যারকে বিশ্বাস না করেই নিরাপদে ব্লক অ্যাসেম্বলি আউটসোর্স করতে পারে",
   "page-roadmap-glamsterdam-bal-title": "ব্লক-স্তরের অ্যাক্সেস তালিকা",
   "page-roadmap-glamsterdam-bal-item-1": "স্বতন্ত্র ট্রানজ্যাকশনের পরিবর্তে ব্লক স্তরে বাধ্যতামূলক অ্যাক্সেস তালিকা প্রবর্তন করে",
   "page-roadmap-glamsterdam-bal-item-2": "দ্রুত সিঙ্ক, সমান্তরাল সম্পাদন এবং সমান্তরাল ডিস্ক রিডের জন্য নির্ভরতাগুলি আগে থেকেই ম্যাপ করে",
-  "page-roadmap-glamsterdam-bal-item-3": "স্টেট-ভারী অ্যাপগুলির জন্য গ্যাস কমায় এবং গ্যাস খরচের পূর্বাভাসযোগ্যতা উন্নত করে",
-  "page-roadmap-hegota-discussed-title": "Hegotá-এর জন্য পরিকল্পিত",
-  "page-roadmap-hegota-discussed-item-1": "প্রস্তাবগুলি বর্তমানে আলোচনার অধীনে রয়েছে"
+  "page-roadmap-glamsterdam-bal-item-3": "স্টেট-ভারী অ্যাপগুলির জন্য গ্যাস কমায় এবং গ্যাস খরচের পূর্বাভাসযোগ্যতা উন্নত করে"
 }

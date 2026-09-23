@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Ilha Wake (EUA)",
   "region-bonaire-netherlands": "Bonaire (Países Baixos)",
   "region-saba-netherlands": "Saba (Países Baixos)",
-  "region-sint-eustatius-netherlands": "Santo Eustáquio (Países Baixos)"
+  "region-sint-eustatius-netherlands": "Santo Eustáquio (Países Baixos)",
+  "item-logo": "Logotipo de {item}"
 }

@@ -511,5 +511,6 @@
   "region-wake-island-usa": "ウェーク島（米国）",
   "region-bonaire-netherlands": "ボネール島（オランダ）",
   "region-saba-netherlands": "サバ島（オランダ）",
-  "region-sint-eustatius-netherlands": "シント・ユースタティウス島（オランダ）"
+  "region-sint-eustatius-netherlands": "シント・ユースタティウス島（オランダ）",
+  "item-logo": "{item}のロゴ"
 }

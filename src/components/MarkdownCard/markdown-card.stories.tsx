@@ -25,11 +25,9 @@ const meta = {
 
 export default meta
 
-const DEVELOPS_INDEX_NS = "page-developers-index"
-
 export const Card: StoryObj<MarkdownCardProps> = {
   render: (args) => {
-    const t = useTranslations(DEVELOPS_INDEX_NS)
+    const t = useTranslations("page-developers-index")
 
     const defaultProps: MarkdownCardProps = {
       emoji: ":woman_student:",
@@ -52,7 +50,7 @@ export const Card: StoryObj<MarkdownCardProps> = {
  */
 export const CardWithIcon: StoryObj<MarkdownCardProps> = {
   render: (args) => {
-    const t = useTranslations(DEVELOPS_INDEX_NS)
+    const t = useTranslations("page-developers-index")
 
     const defaultProps: MarkdownCardProps = {
       icon: <Sparkles />,

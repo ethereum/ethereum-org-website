@@ -511,5 +511,6 @@
   "region-wake-island-usa": "Đảo Wake (Hoa Kỳ)",
   "region-bonaire-netherlands": "Bonaire (Hà Lan)",
   "region-saba-netherlands": "Saba (Hà Lan)",
-  "region-sint-eustatius-netherlands": "Sint Eustatius (Hà Lan)"
+  "region-sint-eustatius-netherlands": "Sint Eustatius (Hà Lan)",
+  "item-logo": "Logo {item}"
 }
