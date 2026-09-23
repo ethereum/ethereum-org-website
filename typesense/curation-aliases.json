@@ -14,6 +14,48 @@
       "zh": ["币安"],
       "zh-tw": ["幣安"]
     },
+    "bridge": {
+      "ar": [
+        "الجسر",
+        "الجسور",
+        "جسر",
+        "جسران",
+        "جسرًا",
+        "جسور",
+        "عبور",
+        "لا جسور"
+      ],
+      "bn": ["ব্রিজ", "সেতু", "সেতুগুলো", "সেতুর"],
+      "cs": ["most", "mosty", "mostů"],
+      "de": ["Brücke", "Brücken"],
+      "es": ["puente", "puentes"],
+      "fr": ["passerelle", "pont"],
+      "hi": ["ब्रिज", "सेतु"],
+      "id": ["jembatan"],
+      "it": ["ponte", "ponti"],
+      "ja": ["ブリッジ"],
+      "ko": ["브리지", "브릿지", "브릿지를"],
+      "mr": ["अनेक सेतू", "काही सेतू", "दोन सेतू", "ब्रिज", "सेतू"],
+      "pl": ["most", "mostu", "mosty", "mostów"],
+      "pt-br": ["ponte", "pontes"],
+      "ru": ["кроссчейн-мост", "мост", "моста", "мостов", "мосты"],
+      "sw": ["daraja", "kiunganishi", "madaraja"],
+      "ta": ["இணைப்புப்பாலம்", "பாலங்கள்", "பாலம்"],
+      "te": ["వారధి", "వారధిని", "వారధులు", "సంధానకర్త"],
+      "tr": ["köprü", "köprüler"],
+      "uk": [
+        "кросчейн-міст",
+        "мостами",
+        "мости",
+        "мостів",
+        "міст",
+        "переводити через міст"
+      ],
+      "ur": ["برج", "رابطہ", "پل", "پلوں"],
+      "vi": ["cầu", "cầu nối"],
+      "zh": ["桥", "跨链桥"],
+      "zh-tw": ["橋接", "跨鏈橋"]
+    },
     "coinbase": {
       "ar": ["كوين بيس"],
       "bn": ["কয়েনবেস"],
@@ -434,29 +476,33 @@
     },
     "eth": {
       "ar": ["إيثر", "إيثريوم"],
-      "bn": ["Ether", "ইথার"],
-      "cs": ["ether"],
-      "de": ["Ether"],
-      "es": ["ether"],
-      "fr": ["Ether"],
-      "hi": ["Ether", "ईथर"],
-      "id": ["ether"],
-      "it": ["ether"],
+      "bn": ["ইথার"],
+      "hi": ["ईथर"],
       "ja": ["イーサ"],
       "ko": ["ETH는", "이더"],
-      "mr": ["Ether", "इथर"],
-      "pl": ["eter", "ether"],
-      "pt-br": ["ether"],
+      "mr": ["इथर"],
+      "pl": ["eter"],
       "ru": ["эфир"],
-      "sw": ["etha", "ether"],
-      "ta": ["Ether", "ஈத்தர்"],
+      "sw": ["etha"],
+      "ta": ["ஈத்தர்"],
       "te": ["ఈథర్"],
-      "tr": ["Ether"],
-      "uk": ["ether", "ефір"],
+      "uk": ["ефір"],
       "ur": ["ای ٹی ایچ", "ایتھر"],
-      "vi": ["Ether"],
       "zh": ["以太币"],
       "zh-tw": ["以太幣"]
+    },
+    "ether": {
+      "ar": ["إيثرات", "إيثران"],
+      "cs": ["etheru", "ethery", "etherů"],
+      "es": ["ethers"],
+      "fr": ["ethers"],
+      "ko": ["이더를", "이더리움 코인"],
+      "pl": ["etherami", "ethery", "etherów"],
+      "pt-br": ["ethers"],
+      "ru": ["эфира", "эфиров", "эфиры"],
+      "ta": ["ஈதரை", "ஈதர்", "ஈதர்கள்"],
+      "uk": ["етер", "етери", "етером", "етеру", "етерів"],
+      "zh": ["以太"]
     },
     "etherscan.io": {
       "ar": ["Etherscan"],
@@ -1906,6 +1952,119 @@
       "tr": ["Web 3.0"],
       "uk": ["веб3"],
       "zh-tw": ["Web 3.0", "第三代互聯網"]
+    },
+    "weth": {
+      "ar": ["إيثر مغلف", "إيثر مغلف (WETH)", "الإيثر المغلف"],
+      "bn": [
+        "Wrapped Ether",
+        "ডব্লিউইথার",
+        "র‍্যাপড ইথার",
+        "র‍্যাপড ইথার (weth)"
+      ],
+      "cs": [
+        "zabalené ethery",
+        "zabalené ethery (WETH)",
+        "zabalený ether",
+        "zabalený ether (WETH)",
+        "zabalených etherů",
+        "zabalených etherů (WETH)"
+      ],
+      "de": [
+        "Wrapped Ether",
+        "Wrapped Ether (WETH)",
+        "verpackter Ether",
+        "verpackter Ether (WETH)"
+      ],
+      "es": [
+        "ether empaquetado",
+        "ether envuelto",
+        "ether envuelto (WETH)",
+        "ethers envueltos"
+      ],
+      "fr": [
+        "ether emballé",
+        "ether enveloppé",
+        "ether enveloppé (WETH)",
+        "ethers enveloppés",
+        "wrapped ether"
+      ],
+      "hi": ["रैप्ड ईथर", "रैप्ड ईथर (WETH)"],
+      "id": ["ether terbungkus", "ether terbungkus (weth)"],
+      "it": [
+        "ether incapsulati",
+        "ether incapsulato",
+        "ether incapsulato (weth)",
+        "ether wrappato",
+        "ether wrappato (weth)",
+        "wrapped ether"
+      ],
+      "ja": [
+        "ラップドイーサ",
+        "ラップドイーサ (WETH)",
+        "ラップド・イーサ",
+        "ラップド・イーサ (WETH)"
+      ],
+      "ko": [
+        "래핑된 이더",
+        "래핑된 이더 (weth)",
+        "래핑된 이더(weth)를",
+        "랩트 이더"
+      ],
+      "mr": ["गुंडाळलेले इथर", "रॅप्ड इथर", "रॅप्ड इथर (weth)"],
+      "pl": [
+        "opakowane ETH",
+        "opakowane ethery",
+        "opakowanego etheru",
+        "opakowany ether",
+        "opakowany ether (WETH)",
+        "opakowanych etherów"
+      ],
+      "pt-br": [
+        "Wrapped Ether",
+        "ether empacotado",
+        "ether empacotado (weth)",
+        "ethers empacotados"
+      ],
+      "ru": [
+        "обернутого эфира",
+        "обернутый эфир",
+        "обернутый эфир (WETH)",
+        "обернутых эфира",
+        "обернутых эфиров",
+        "обёрнутый эфир"
+      ],
+      "sw": [
+        "ether iliyofungwa",
+        "ether iliyofungwa (weth)",
+        "ether zilizofungwa",
+        "ether-iliyofungwa"
+      ],
+      "ta": [
+        "சுற்றப்பட்ட ஈதர்",
+        "பொதியப்பட்ட ஈதரை",
+        "பொதியப்பட்ட ஈதர்",
+        "பொதியப்பட்ட ஈதர் (WETH)",
+        "பொதியப்பட்ட ஈதர்கள்"
+      ],
+      "te": ["ర్యాప్డ్ ఈథర్", "ర్యాప్డ్ ఈథర్ (weth)", "ర్యాప్డ్ ఈథర్లు"],
+      "tr": ["paketlenmiş ether", "sarılmış ether", "sarılmış ether (WETH)"],
+      "uk": [
+        "загорнутий ефір",
+        "обгорнутий ефір",
+        "обгорнутий ефір (WETH)",
+        "обгорнутих ефірів",
+        "обгорнутого ефіру",
+        "обгорнуті ефіри"
+      ],
+      "ur": [
+        "ریپڈ ایتھر",
+        "ریپڈ ایتھر (ڈبلیو ایتھ)",
+        "لپٹا ہوا ایتھر",
+        "ڈبلیو ایتھ"
+      ],
+      "vi": ["Ether bọc", "Ether được bọc", "Ether được bọc (WETH)"],
+      "zh": ["包装以太币", "封装以太币", "封装以太币 (WETH)"],
+      "zh-tw": ["包裝以太幣", "包裝以太幣 (wETH)", "封裝以太幣"]
     },
     "whitepaper": {
       "ar": [

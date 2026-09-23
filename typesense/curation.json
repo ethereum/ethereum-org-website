@@ -8,6 +8,12 @@
       ]
     },
     {
+      "q": "apps",
+      "pin": [
+        "/apps/"
+      ]
+    },
+    {
       "q": "base",
       "pin": [
         "/layer-2/networks/"
@@ -30,6 +36,26 @@
       "q": "bitget",
       "pin": [
         "/wallets/find-wallet/bitget-wallet/"
+      ]
+    },
+    {
+      "q": "bridge",
+      "term": "bridge",
+      "pin": [
+        "/bridges/"
+      ]
+    },
+    {
+      "q": "bridges",
+      "term": "bridge",
+      "pin": [
+        "/bridges/"
+      ]
+    },
+    {
+      "q": "buy eth",
+      "pin": [
+        "/get-eth/"
       ]
     },
     {
@@ -67,6 +93,18 @@
       ]
     },
     {
+      "q": "developer",
+      "pin": [
+        "/developers/"
+      ]
+    },
+    {
+      "q": "developers",
+      "pin": [
+        "/developers/"
+      ]
+    },
+    {
       "q": "eip",
       "term": "ethereum improvement proposal (eip)",
       "pin": [
@@ -94,6 +132,13 @@
       ]
     },
     {
+      "q": "ether",
+      "term": "ether",
+      "pin": [
+        "/what-is-ether/"
+      ]
+    },
+    {
       "q": "etherscan.io",
       "term": "etherscan",
       "pin": [
@@ -118,6 +163,12 @@
       "term": "gas",
       "pin": [
         "/gas/"
+      ]
+    },
+    {
+      "q": "get eth",
+      "pin": [
+        "/get-eth/"
       ]
     },
     {
@@ -271,6 +322,18 @@
       ]
     },
     {
+      "q": "quiz",
+      "pin": [
+        "/quizzes/"
+      ]
+    },
+    {
+      "q": "quizzes",
+      "pin": [
+        "/quizzes/"
+      ]
+    },
+    {
       "q": "rabby",
       "pin": [
         "/wallets/find-wallet/rabby-wallet/"
@@ -281,6 +344,12 @@
       "term": "remix",
       "pin": [
         "/apps/remix/"
+      ]
+    },
+    {
+      "q": "resources",
+      "pin": [
+        "/resources/"
       ]
     },
     {
@@ -379,6 +448,12 @@
       ]
     },
     {
+      "q": "values",
+      "pin": [
+        "/values/"
+      ]
+    },
+    {
       "q": "wallet",
       "term": "wallet",
       "pin": [
@@ -399,10 +474,42 @@
       ]
     },
     {
+      "q": "weth",
+      "term": "wrapped ether (weth)",
+      "pin": [
+        "/wrapped-eth/"
+      ]
+    },
+    {
+      "q": "what are apps",
+      "pin": [
+        "/what-are-apps/"
+      ]
+    },
+    {
+      "q": "what is eth",
+      "pin": [
+        "/what-is-ether/"
+      ]
+    },
+    {
+      "q": "what is ether",
+      "pin": [
+        "/what-is-ether/"
+      ]
+    },
+    {
       "q": "whitepaper",
       "term": "whitepaper",
       "pin": [
         "/whitepaper/"
+      ]
+    },
+    {
+      "q": "wrapped eth",
+      "term": "wrapped ether (weth)",
+      "pin": [
+        "/wrapped-eth/"
       ]
     },
     {
