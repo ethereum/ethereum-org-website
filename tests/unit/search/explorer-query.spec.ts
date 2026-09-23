@@ -95,6 +95,10 @@ test.describe("parseExplorerQuery", () => {
     expect(blockscout(`BASE:${ADDRESS}`)?.targets[0].name).toBe("Base")
   })
 
+  test("accepts an uppercase 0X, which spreadsheets produce", () => {
+    expect(parse(ADDRESS.replace(/^0x/, "0X"))?.value).toBe(ADDRESS)
+  })
+
   test("offers both Starkscan routes, because a felt does not say which it is", () => {
     // Starkscan has no unified search route, and a Starknet address and transaction hash
     // are the same shape -- guessing one sends half of these to a "not found" page.

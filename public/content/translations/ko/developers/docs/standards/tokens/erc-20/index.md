@@ -175,7 +175,7 @@ ERC-20에서 이 문제를 완전히 방지하는 것은 불가능하지만, 최
 - [오픈제플린 - ERC-20 구현](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 토큰 가이드](https://www.alchemy.com/overviews/erc20-solidity)
 
-## 기타 대체 가능 토큰 표준
+## 기타 대체 가능 토큰 표준 {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

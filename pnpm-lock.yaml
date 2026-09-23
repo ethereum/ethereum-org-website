@@ -251,6 +251,9 @@ importers:
       wagmi:
         specifier: ^2.14.11
         version: 2.15.4(@netlify/blobs@10.4.1)(@tanstack/query-core@5.80.2)(@tanstack/react-query@5.80.2(react@19.2.4))(@types/react@19.2.14)(bufferutil@4.0.9)(react@19.2.4)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.30.6(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.25.76))(zod@3.25.76)
+      yaml:
+        specifier: ^2.9.1
+        version: 2.9.1
       yaml-loader:
         specifier: ^0.8.0
         version: 0.8.1
@@ -349,8 +352,8 @@ importers:
         specifier: ^1.0.2
         version: 1.2.1
       intl-content-tree:
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: ^0.4.1
+        version: 0.4.1
       lint-staged:
         specifier: ^15.2.5
         version: 15.5.2
@@ -7387,8 +7390,8 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
 
-  intl-content-tree@0.3.2:
-    resolution: {integrity: sha512-/Y5X2xKDFJKNFSqtz28YrPR4NK6Dbt8wxChHh5KSwvmcvRmQtLZTlVWE9nSKn7LOoGBoK+qiv1XfsmL/FChmBg==}
+  intl-content-tree@0.4.1:
+    resolution: {integrity: sha512-es1Tr2enBAOR4cFcbZ1zpp1CeKTlxTUjuoSb+LsNMXD0g/en2nPsjIIvmvwLidqiK5YNqLrsMEvh6v/tk0YMyA==}
 
   intl-messageformat@11.2.4:
     resolution: {integrity: sha512-iKP6+uJXn+XcfRgYfGPE3+mqCoODV2vATrXDLo/YkYgIdelJHJPBEbc0GZThipAYPuk+8QJFiPgOfblU085ABg==}
@@ -10769,8 +10772,8 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.8.0:
-    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+  yaml@2.9.1:
+    resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
     engines: {node: '>= 14.6'}
     hasBin: true
 
@@ -19812,7 +19815,9 @@ snapshots:
 
   internmap@2.0.3: {}
 
-  intl-content-tree@0.3.2: {}
+  intl-content-tree@0.4.1:
+    dependencies:
+      yaml: 2.9.1
 
   intl-messageformat@11.2.4:
     dependencies:
@@ -20240,7 +20245,7 @@ snapshots:
       micromatch: 4.0.8
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.8.0
+      yaml: 2.9.1
     transitivePeerDependencies:
       - supports-color
 
@@ -23521,7 +23526,7 @@ snapshots:
   vfile-matter@5.0.1:
     dependencies:
       vfile: 6.0.3
-      yaml: 2.8.0
+      yaml: 2.9.1
 
   vfile-message@3.1.4:
     dependencies:
@@ -23855,11 +23860,11 @@ snapshots:
     dependencies:
       javascript-stringify: 2.1.0
       loader-utils: 2.0.4
-      yaml: 2.8.0
+      yaml: 2.9.1
 
   yaml@1.10.2: {}
 
-  yaml@2.8.0: {}
+  yaml@2.9.1: {}
 
   yargs-parser@18.1.3:
     dependencies:

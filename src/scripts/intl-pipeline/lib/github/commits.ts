@@ -1,7 +1,7 @@
 // GitHub commit operations
 
 import { config, gitHubBearerHeaders } from "../../config"
-import { LLM } from "../../constants"
+import { LLM, QUARANTINE_LANG } from "../../constants"
 import { fetchWithRetry } from "../utils/fetch"
 import { debugLog, delay } from "../workflows/utils"
 
@@ -226,7 +226,10 @@ export class SharedCommitter {
         method: "POST",
         headers: { ...gitHubBearerHeaders, "Content-Type": "application/json" },
         body: JSON.stringify({
-          message: `i18n(${lang}): LLM translation\n\nCo-Authored-By: ${LLM.coAuthor || LLM.name}`,
+          message:
+            lang === QUARANTINE_LANG
+              ? "i18n: update quarantine list"
+              : `i18n(${lang}): LLM translation\n\nCo-Authored-By: ${LLM.coAuthor || LLM.name}`,
           tree: treeData.sha,
           parents: [parentSha],
         }),

@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/user-experience/index.md",
   "generatedAt": "2026-06-30T00:53:04.278Z",
-  "rootHash": "6826e0ea4c70",
+  "rootHash": "f8ba2b94bd53",
   "tree": {
-    "contentHash": "7a0cf4ddc594",
+    "contentHash": "cfe3fc8c3b9c",
     "anchorHash": "b2fd14b10984",
     "children": {
       "frontmatter:title": {
@@ -24,7 +24,7 @@
         "anchorHash": "9570994d623b"
       },
       "frontmatter:alt": {
-        "contentHash": "65171c25554c",
+        "contentHash": "be50ffa0fc02",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:template": {

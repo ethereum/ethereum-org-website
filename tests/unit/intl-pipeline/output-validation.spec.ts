@@ -119,6 +119,74 @@ Contenido aqui.
     expect(result.error).toContain("Suspiciously short")
   })
 
+  // Regression: whitepaper/index.md zh + zh-tw failed every scheduled run from
+  // 2026-07-30 on, three attempts each, at a stable 381-393 chars against the
+  // same 1571-char English chunk. Chinese renders that content in ~0.245 of the
+  // characters; the flat 0.3 floor read correct output as truncation, the
+  // manifest never stamped, and the next run repeated the whole file.
+  const longEnglish = `---
+title: Test Page
+description: A test description
+---
+
+# Heading {#heading}
+
+${"The quick brown fox jumps over the lazy dog. ".repeat(34)}
+`
+  const denseTranslation = `---
+title: 測試頁面
+description: 測試說明
+---
+
+# 標題 {#heading}
+
+${"敏捷的棕色狐狸跳過懶狗。".repeat(30)}
+`
+
+  test("dense CJK output passes the CJK floor", () => {
+    const ratio = denseTranslation.length / longEnglish.length
+    expect(ratio).toBeGreaterThan(0.2)
+    expect(ratio).toBeLessThan(0.3)
+
+    expect(
+      validateTranslatedMarkdown(denseTranslation, longEnglish, "zh").valid
+    ).toBe(true)
+    expect(
+      validateTranslatedMarkdown(denseTranslation, longEnglish, "zh-tw").valid
+    ).toBe(true)
+  })
+
+  test("the same ratio still fails for a non-CJK locale", () => {
+    const result = validateTranslatedMarkdown(
+      denseTranslation,
+      longEnglish,
+      "es"
+    )
+    expect(result.valid).toBe(false)
+    expect(result.error).toContain("Suspiciously short")
+  })
+
+  test("genuinely truncated CJK output still fails", () => {
+    const truncated = `---
+title: 測試頁面
+description: 測試說明
+---
+
+# 標題 {#heading}
+
+敏捷的棕色狐狸。
+`
+    const result = validateTranslatedMarkdown(truncated, longEnglish, "zh")
+    expect(result.valid).toBe(false)
+    expect(result.error).toContain("Suspiciously short")
+  })
+
+  test("omitting targetLanguage keeps the default floor", () => {
+    const result = validateTranslatedMarkdown(denseTranslation, longEnglish)
+    expect(result.valid).toBe(false)
+    expect(result.error).toContain("Suspiciously short")
+  })
+
   test("untranslated frontmatter (both title and desc) fails", () => {
     const translated = `---
 title: Test Page

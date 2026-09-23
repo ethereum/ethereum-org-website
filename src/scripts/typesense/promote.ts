@@ -26,6 +26,7 @@ import {
   SEARCH_KEY,
   SITE_ORIGIN,
   SORT_BY,
+  TEXT_MATCH_TYPE,
 } from "./client"
 
 /** A new index must retain at least this share of the live one to be promotable. */
@@ -39,12 +40,15 @@ const MIN_SIZE_RATIO = 0.9
 const KEEP_PER_LOCALE = 2
 
 /**
- * Minimum share of labeled queries whose correct page must rank first, measured against
- * the staging collection before the alias moves. The baseline is ~42% before curation is
- * applied, so this catches a collapse without tripping on ordinary drift.
+ * Minimum share of labelled queries whose correct page must rank first, measured against
+ * the staging collection before the alias moves. The ~42% baseline was measured under the
+ * gate's old parameters (no sort, default text match); the first promote after the gate
+ * started mirroring the app re-baselines it. It catches a collapse, not ordinary drift.
  *
  * Deliberately measured pre-curation: pins are applied after promotion and would mask a
- * regression in the underlying ranking.
+ * regression in the underlying ranking. This is also the only place it can be measured --
+ * curation sets ignore `enable_overrides=false` on Typesense v30, so a live alias always
+ * scores its pins.
  */
 const MIN_HIT_AT_1 = 0.35
 
@@ -151,7 +155,7 @@ const promoteLocale = async (
     const score = await hitAtOne(source, locale)
     if (score !== null) {
       console.log(
-        `  ${locale}: hit@1 ${(score * 100).toFixed(0)}% on labeled queries`
+        `  ${locale}: hit@1 ${(score * 100).toFixed(0)}% on labelled queries`
       )
       if (score < MIN_HIT_AT_1 && !args.force)
         failures.push(
@@ -183,7 +187,7 @@ const promoteLocale = async (
   return "promoted"
 }
 
-interface LabeledQuery {
+interface LabelledQuery {
   q: string
   correct: string | null
 }
@@ -197,14 +201,14 @@ const normalizePath = (url: string) =>
   "/"
 
 /**
- * Share of labeled queries whose correct page ranks first. Returns null when there is no
+ * Share of labelled queries whose correct page ranks first. Returns null when there is no
  * ground truth for this locale, which is every locale but English.
  */
 const hitAtOne = async (collection: string, locale: string) => {
   if (locale !== "en" || !existsSync(GROUNDTRUTH_PATH)) return null
-  const queries: LabeledQuery[] = JSON.parse(
+  const queries: LabelledQuery[] = JSON.parse(
     readFileSync(GROUNDTRUTH_PATH, "utf-8")
-  ).queries.filter((row: LabeledQuery) => row.correct)
+  ).queries.filter((row: LabelledQuery) => row.correct)
 
   let hits = 0
   for (const { q, correct } of queries) {
@@ -213,9 +217,10 @@ const hitAtOne = async (collection: string, locale: string) => {
       // Must mirror what the app sends, or the gate scores results nobody receives.
       // Without `sort_by` this ranked on text match alone and never consulted
       // `pagerank`, so a change to page ranking was invisible to the very check meant
-      // to catch it. See src/components/Search/index.tsx.
+      // to catch it.
       query_by: QUERY_BY,
       sort_by: SORT_BY,
+      text_match_type: TEXT_MATCH_TYPE,
       group_by: "url_without_anchor",
       // 1 rather than the app's 3: hit@1 only cares which page ranks first, and
       // `group_limit` does not affect the order of the groups themselves.
@@ -256,7 +261,9 @@ const prune = async (
   // leftover is the collection that failed its gates, so it would outlive the index the
   // alias was actually serving. `previous` is held explicitly to keep rollback a single
   // alias flip, and both it and `live` occupy kept slots.
-  const reserved = previous ? 2 : 1
+  // A re-run without a new scrape points the alias at itself, so `previous` is `live`
+  // and reserving a second slot would delete the real predecessor.
+  const reserved = previous && previous !== live ? 2 : 1
   const doomed = mine.slice(Math.max(keep - reserved, 0))
   for (const name of doomed) {
     await api("DELETE", `/collections/${name}`)
@@ -272,9 +279,16 @@ const main = async () => {
     `promoting ${args.locales.length} locale(s)${args.dryRun ? " (dry run)" : ""}\n`
   )
 
-  const results = await Promise.all(
-    args.locales.map((l) => promoteLocale(l, collections, args))
-  )
+  // One locale throwing must not cut the others off mid-promotion; it is a refusal.
+  const results = (
+    await Promise.allSettled(
+      args.locales.map((l) => promoteLocale(l, collections, args))
+    )
+  ).map((r, i): Outcome => {
+    if (r.status === "fulfilled") return r.value
+    console.error(`  ${args.locales[i]}: ${(r.reason as Error).message}`)
+    return "refused"
+  })
   const count = (outcome: Outcome) =>
     results.filter((r) => r === outcome).length
   const [promoted, refused, skipped] = (

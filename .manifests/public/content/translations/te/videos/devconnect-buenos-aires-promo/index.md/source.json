@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/devconnect-buenos-aires-promo/index.md",
   "generatedAt": "2026-04-29T05:17:51.917Z",
-  "rootHash": "d3aa88637085",
+  "rootHash": "e4363dfdbaf1",
   "tree": {
-    "contentHash": "77de47d87d9e",
-    "anchorHash": "b0801edf5c1b",
+    "contentHash": "1943ee9ac7e6",
+    "anchorHash": "b24dd3f8e7a5",
     "children": {
       "frontmatter:title": {
-        "contentHash": "5cd1141859fc",
+        "contentHash": "087241b2175f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "37131a24a97b",
+        "contentHash": "5a9899d0dfb1",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ba390b7ff543"
+        "anchorHash": "3aab55b6e456"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "36c014e54fac"
+        "anchorHash": "7527168f728e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4d1e2ab6b188"
+        "anchorHash": "7418fd5cb9a3"
       },
       "prose:1": {
         "contentHash": "c495159727c1",

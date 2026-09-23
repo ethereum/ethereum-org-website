@@ -21,7 +21,7 @@ export interface ExplorerNetwork {
  * Prefixes follow EIP-3770 (`base:0x...`). Case-insensitive: the spec is case-sensitive
  * but this is a search box, and `BASE:` is what a paste looks like.
  */
-const HEX_QUERY_RE = /^(?:([a-zA-Z0-9-]{2,32}):)?0x([0-9a-fA-F]{40,64})$/
+const HEX_QUERY_RE = /^(?:([a-zA-Z0-9-]{2,32}):)?0[xX]([0-9a-fA-F]{40,64})$/
 
 /**
  * Restricted to `.eth` and `.id` rather than domains generally: ENS also resolves DNS

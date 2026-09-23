@@ -293,6 +293,12 @@
 .DocSearch-Hit-source {
   @apply pb-0.5 leading-6 text-body;
 }
+/* A results group leads with its page row, whose title is the header repeated. Recent
+   and explorer groups have no page row and keep theirs. */
+.DocSearch-Hits:has(> ul > li:first-child > a[data-page-row])
+  > .DocSearch-Hit-source {
+  @apply hidden;
+}
 
 .DocSearch-Hit {
   @apply pb-0;

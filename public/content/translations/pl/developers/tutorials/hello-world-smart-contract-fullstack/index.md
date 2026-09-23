@@ -32,7 +32,7 @@ Jeśli w którymkolwiek momencie będziesz mieć pytania, śmiało napisz na [Di
 
 Istnieje wiele sposobów na wysyłanie żądań do łańcucha Ethereum. Dla uproszczenia użyjemy darmowego konta na platformie Alchemy, która jest platformą dla programistów blockchain i API, pozwalającą na komunikację z łańcuchem Ethereum bez konieczności samodzielnego uruchamiania węzła. Alchemy posiada również narzędzia programistyczne do monitorowania i analityki; wykorzystamy je w tym samouczku, aby zrozumieć, jak technicznie działa wdrożenie naszego inteligentnego kontraktu.
 
-### Utwórz swoją aplikację i klucz API
+### Utwórz swoją aplikację i klucz API {#create-your-app-and-api-key}
 
 Gdy już utworzysz konto Alchemy, możesz wygenerować klucz API, tworząc aplikację. Pozwoli to na wysyłanie żądań do sieci testowej Sepolia. Jeśli nie znasz sieci testowych, możesz [przeczytać przewodnik Alchemy dotyczący wyboru sieci](https://www.alchemy.com/docs/choosing-a-web3-network).
 
@@ -47,11 +47,11 @@ Nadaj swojej aplikacji nazwę „_Hello World_” i napisz krótki opis. Wybierz
 _Uwaga: upewnij się, że wybrałeś sieć **Sepolia**, w przeciwnym razie ten samouczek nie zadziała._
 
 Kliknij **Create app**. Twoja aplikacja pojawi się w tabeli poniżej.
-### Utwórz konto Ethereum
+### Utwórz konto Ethereum {#create-an-ethereum-account}
 Potrzebujesz konta Ethereum, aby wysyłać i odbierać transakcje. Użyjemy MetaMask, wirtualnego portfela w przeglądarce, który pozwala użytkownikom zarządzać adresem ich konta Ethereum.
 
 Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/download). Podczas tworzenia konta lub jeśli już je posiadasz, upewnij się, że przełączyłeś się na „Sepolia Test Network” w prawym górnym rogu (abyśmy nie operowali prawdziwymi pieniędzmi).
-### Krok 4: Dodaj ether z kranika
+### Krok 4: Dodaj ether z kranika {#step-4-add-ether-from-a-faucet}
 Aby wdrożyć swój inteligentny kontrakt w sieci testowej, będziesz potrzebować trochę fałszywego ETH. Aby zdobyć ETH w sieci Sepolia, przejdź do kranika Sepolii i wprowadź adres swojego konta Sepolii. Zobacz [stronę sieci testowych](/developers/docs/networks/#sepolia), aby uzyskać listę opcji do wypróbowania:
 
 _Uwaga: ze względu na przeciążenie sieci może to chwilę potrwać._
@@ -337,7 +337,7 @@ const hello_world = await HelloWorld.deploy()
 
 Wywołanie `deploy()` na `ContractFactory` rozpocznie wdrożenie i zwróci `Promise`, który rozwiązuje się do obiektu `Contract`. Jest to obiekt, który posiada metodę dla każdej z funkcji naszego inteligentnego kontraktu.
 
-### Krok 16: Wdróż nasz kontrakt
+### Krok 16: Wdróż nasz kontrakt {#step-16-deploy-our-contract}
 
 W końcu jesteśmy gotowi, aby wdrożyć nasz inteligentny kontrakt! Przejdź do wiersza poleceń i uruchom:
 
@@ -508,7 +508,7 @@ main()
 
 Zauważ, że w linii 11 wywołujemy `.wait()` na zwróconym obiekcie transakcji. Zapewnia to, że nasz skrypt poczeka na wydobycie transakcji w blockchainie przed zakończeniem funkcji. Jeśli wywołanie `.wait()` nie zostanie uwzględnione, skrypt może nie zobaczyć zaktualizowanej wartości `message` w kontrakcie.
 
-### Odczytanie nowej wiadomości
+### Odczytanie nowej wiadomości {#read-the-new-message}
 
 Powinieneś być w stanie powtórzyć [poprzedni krok](#read-the-init-message), aby odczytać zaktualizowaną wartość `message`. Poświęć chwilę i sprawdź, czy potrafisz wprowadzić zmiany niezbędne do wydrukowania tej nowej wartości!
 
@@ -635,7 +635,7 @@ module.exports = {
 }
 ```
 
-#### Zweryfikuj swój inteligentny kontrakt w Etherscan
+#### Zweryfikuj swój inteligentny kontrakt w Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Upewnij się, że wszystkie pliki są zapisane, a wszystkie zmienne `.env` są poprawnie skonfigurowane.
 
@@ -938,7 +938,7 @@ Mając gotowy ten punkt końcowy, nadszedł czas na załadowanie naszego intelig
 
 Aby załadować swój inteligentny kontrakt Hello World, będziesz potrzebować jego adresu kontraktu i ABI, z których oba można znaleźć w Etherscan, jeśli ukończyłeś [Część 3 tego samouczka.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Jak pobrać ABI kontraktu z Etherscan
+#### Jak pobrać ABI kontraktu z Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 Jeśli pominąłeś Część 3 tego samouczka, najpierw wdróż i zweryfikuj swój własny kontrakt HelloWorld. Następnie otwórz stronę swojego kontraktu w [Sepolia Etherscan](https://sepolia.etherscan.io), aby skopiować jego ABI.
 
@@ -1112,9 +1112,9 @@ Aby zapisać cokolwiek w łańcuchu Ethereum, użytkownicy muszą podpisywać tr
 
 Jeśli chcesz dowiedzieć się więcej o tym, jak działają transakcje w Ethereum, sprawdź [tę stronę](/developers/docs/transactions/) od Ethereum Foundation.
 
-#### Pobierz MetaMask
+#### Pobierz MetaMask {#download-metamask}
 Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/download). Podczas tworzenia konta, lub jeśli już je posiadasz, upewnij się, że w prawym górnym rogu przełączysz się na „sieć testową Sepolia” \(abyśmy nie operowali prawdziwymi pieniędzmi\).
-#### Dodaj ether z kranika
+#### Dodaj ether z kranika {#add-ether-from-a-faucet}
 
 Aby podpisać transakcję na blockchainie Ethereum, będziemy potrzebować trochę fałszywego ETH. Aby zdobyć ETH, możesz przejść do kranika Sepolia wymienionego na [stronie sieci testowych](/developers/docs/networks/#sepolia) i wprowadzić adres swojego konta Sepolia. Wkrótce potem powinieneś zobaczyć ETH na swoim koncie MetaMask!
 #### Sprawdź swoje saldo {#check-your-balance}

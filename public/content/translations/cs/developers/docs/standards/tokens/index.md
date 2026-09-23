@@ -29,7 +29,7 @@ Zde jsou některé z nejpopulárnějších standardů tokenů na Ethereu:
 
 Úplný seznam návrhů [ERC](https://eips.ethereum.org/erc).
 
-## Další čtení
+## Další čtení {#further-reading}
 
 _Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte ho!_
 

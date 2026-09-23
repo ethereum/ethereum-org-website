@@ -29,23 +29,12 @@ segmentation needs.
    a sortable `pagerank` field, and a non-zero count for its own language. On refusal the
    alias is left alone, so search serves slightly stale results rather than none.
 3. **Curate** (`pnpm typesense:curate`) — applies the pinned results in
-   `typesense/curation.json`.
+   `typesense/curation.json`, plus their localized forms from
+   `typesense/curation-aliases.json`.
 
 The scraper would otherwise swap its own alias the moment a crawl ends, with no checks at
 all. Scraping to a staging name and promoting separately is what makes the swap
 conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
-
-## Indexing choices
-
-`only_content_level` stops the scraper creating a record for every heading. A heading whose
-text is exactly the query -- an h2 reading "Issuance", say -- is an exact full-field match
-and outscores the page that is actually about the term, by a margin no ranking weight can
-close. Headings still populate the hierarchy carried on each content record, so their text
-stays searchable through `query_by`; they just no longer compete as results of their own.
-
-`stem` is on for the fields a query is matched against, so "wallet" finds "wallets". The
-singular/plural pairs pinned by hand in `curation.json` exist only because it was off, and
-can be retired once a crawl has run with it.
 
 ## Query choices
 
@@ -75,18 +64,29 @@ else falls back to `en`, which covers European languages well.
 No promote gate can catch a mistake here: the size and field checks pass, and the relevance
 gate is English-only, so a CJK index that barely searches still promotes green.
 
-## The scraper was a version behind
+## The scraper is a version behind
 
 Typesense v30 replaced per-collection synonyms and overrides with synonym sets and curation
-sets. Scraper 0.11.0 called the removed v29 endpoints in `commit_tmp_collection`, but only
-when the `ethereumorg-staging-<locale>` alias resolved a previous collection -- so a locale
-crawled fine on its first run and 404'd at commit on every run after, having indexed
-everything and published nothing.
+sets. Scraper 0.11.0 still calls the removed v29 endpoints in `commit_tmp_collection`, but
+only when the `ethereumorg-staging-<locale>` alias resolves to a previous collection --
+which is true from a locale's second run onward. The symptom is a full, successful crawl
+that dies with `ObjectNotFound: [Errno 404]` at commit, having indexed everything and
+published nothing.
 
-0.12.x added v30 support and is what we now run. The workflow still clears that alias before
-each crawl, which is no longer required but remains worth keeping: with the alias gone the
-scraper does not delete the old collection either, leaving `prune` in promote as the only
-thing that removes collections rather than two deleters racing over the same names.
+The workflow therefore deletes that alias before every crawl, which makes each run look
+like a first run. Nothing else reads it: search queries `ethereumorg-<locale>`, and promote
+finds staged collections by name. We define no synonyms, and curation is reapplied from
+`curation.json` after every promote, so there is nothing for the transfer to carry over.
+
+A side effect worth knowing: the scraper also deletes the old collection at the end of
+`commit_tmp_collection`. With the alias gone it no longer does, which leaves `prune` in
+promote as the only thing that deletes collections -- one deleter instead of two racing
+over the same names.
+
+A 0.12.x image exists and may address this properly. It is deliberately not taken here:
+every relevance number we have -- the field definitions, the `lvl0` XPath, hit@1 of 67% --
+was measured on 0.11.0, and swapping the crawler would invalidate that baseline. Upgrading
+is worth doing, against the ground truth set, as its own change.
 
 ## When promotion is refused
 
@@ -158,6 +158,19 @@ Curation **cannot** be entered in a dashboard. Typesense pins by document id, an
 scraper assigns ids as sequential counters that change on every crawl -- dashboard pins
 would silently stop matching after the next run. Storing URLs here and resolving them at
 promote time is what keeps them working.
+
+Queries, unlike paths, are not locale-agnostic: a pin matches its string exactly, so the
+English rules do nothing for a reader on `/ja/` typing ウォレット. A rule may therefore
+name an ETHGlossary `term`, and `pnpm typesense:localize-curation` writes that term's
+surface forms in every locale -- canonical term, glossary aliases, heading and tag forms,
+plurals -- to `curation-aliases.json`. Curate pins each locale's forms next to the English
+query. The generated file is committed and never hand-edited; re-run the command when a
+rule gains a `term` or the glossary changes. It is the only thing here that talks to
+ETHGlossary: one request per language, by hand, never at query or crawl time.
+
+Not every rule has a term. Brands the glossary does not carry, English-only page titles
+and the wallet names stay English-only, which is also how the pin behaves for a reader who
+types the English word in any locale.
 
 ## CORS
 

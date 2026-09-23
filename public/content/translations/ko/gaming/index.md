@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## 이더리움 게이밍
+## 이더리움 게이밍 {#gaming-on-ethereum}
 
 이더리움 게이밍은 특정 기능을 위해 블록체인을 사용하는 게임부터 전체 게임 세계가 온체인에 존재하는 게임까지 다양한 형태로 제공됩니다. 이더리움 블록체인은 다양한 방식으로 게임에 활용될 수 있습니다. 게임은 통화를 전송 가능한 토큰으로 저장하거나 다른 게임 내 자산(캐릭터, 장비, 펫 등)을 [대체 불가능한 토큰(NFT)](/nft/) 형태로 저장할 수 있습니다. 또한 게임은 스마트 컨트랙트를 활용하여 로직, 규칙 및 상태를 온체인에 호스팅할 수 있습니다. 이러한 게임을 일반적으로 "완전한 온체인 게임"이라고 합니다.
 
@@ -32,7 +32,7 @@ EVE Online, World of Warcraft, MapleStory, RuneScape와 같은 전통적인 MMO�
 
 이더리움 블록체인은 규칙을 임의로 변경할 수 없고, 상태를 삭제할 수 없으며, 네트워크가 존재하는 한 누구나 계속 유지되는 확장 기능을 구축할 수 있는 세계를 가능하게 했습니다. 이것은 이더리움이 기본적으로 제공하는 기능입니다.
 
-## 이더리움 게이밍 생태계 개요
+## 이더리움 게이밍 생태계 개요 {#ethereums-gaming-ecosystem-overview}
 - **레이어 2 (l2):** 더 저렴한 수수료와 짧은 트랜잭션 시간 덕분에 이더리움 l2는 게임이 출시되는 일반적인 장소가 되었습니다. l2 환경은 계속 진화하고 있으며, Ronin(원래 Axie Infinity를 위한 사이드체인)과 같은 선도적인 Web3 게이밍 생태계는 최근 이더리움의 보안 보장을 상속받으면서 게이밍에 최적화된 인프라를 유지하는 이더리움 레이어 2 아키텍처로 전환했습니다. 현재 게이밍을 위한 선도적인 l2에는 [Ronin](https://www.roninchain.com/), [스타크넷](https://www.starknet.io/), [Abstract](https://abs.xyz/), [Base](https://www.base.org/)가 있습니다.
 - **인프라:** 온체인 게임 개발을 더 쉽게 만들기 위해 다양한 도구 스택이 존재합니다. [Cartridge](https://cartridge.gg/)(세션 키, 페이마스터를 통한 가스 없는 트랜잭션, Cartridge Controller를 통한 WebAuthn 기반 인증 제공), [Dojo](https://dojoengine.org/)(기본 계정 추상화 지원을 갖춘 증명 가능한 게임 프레임워크), [MUD](https://mud.dev/)(EVM 기반 온체인 게임 엔진) 등이 있습니다. [Proof of Play](https://proofofplay.com/) 및 [Thirdweb](https://thirdweb.com/)과 같은 다른 도구들은 개발자가 웹2와 유사한 사용자 경험을 가진 게임을 구축할 수 있도록 합니다.
 - **게이밍 커뮤니티:** 이더리움의 게이밍 생태계는 플레이어 협력을 위한 게이밍 길드([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx), [OLAGG](https://x.com/OLAGuildGames) 포함), [GAM3S.GG](https://games.gg/)와 같은 디스커버리 플랫폼, 게임 분석 및 생태계 보도를 위한 [Gaming Daily](https://x.com/GamingDailyx)와 같은 미디어 매체의 지원을 받습니다. [FOCGERS](https://x.com/FOCGERS)처럼 이 모든 것을 아우르는 곳도 있습니다.
