@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/send-token-ethersjs/index.md",
   "generatedAt": "2026-06-30T00:46:45.972Z",
-  "rootHash": "82ac5232cd2c",
+  "rootHash": "772cdff4f0b3",
   "tree": {
-    "contentHash": "134e2a571a9c",
-    "anchorHash": "01fe2c348e2c",
+    "contentHash": "84a69301aa8a",
+    "anchorHash": "a78a34b171ba",
     "children": {
       "frontmatter:title": {
         "contentHash": "51a5ade084c0",
@@ -20,8 +20,27 @@
         "anchorHash": "de3215c76514"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "410804a62ce0"
+        "contentHash": "2cbe62d85026",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "d5734ee7d6cb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "1f090d6c3bb9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "a0dd5436260c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

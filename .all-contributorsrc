@@ -14514,6 +14514,24 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "pepcoiro",
+      "name": "PepCoiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/313789529?v=4",
+      "profile": "https://github.com/pepcoiro",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Web3Dave",
+      "name": "David",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33478820?v=4",
+      "profile": "https://pingify.io",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

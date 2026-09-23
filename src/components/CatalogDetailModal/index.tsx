@@ -3,7 +3,7 @@
 import { X } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { useRouter } from "next/navigation"
-import type { ReactNode } from "react"
+import type { ComponentProps, ReactNode } from "react"
 
 import { Image } from "@/components/Image"
 import {
@@ -15,10 +15,9 @@ import {
 } from "@/components/ui/dialog-modal"
 
 /**
- * Client shell for the intercepted detail route of a product catalog
- * (find-wallet, developer tools); closing pops the intercepted route off
- * history. Composes the dialog primitives directly, rather than the `Modal`
- * wrapper, to keep the close button in the same row as the title.
+ * Shell for a product catalog's detail modal (find-wallet, developer tools).
+ * Composes the dialog primitives directly, rather than the `Modal` wrapper, to
+ * keep the close button in the same row as the title.
  */
 const CatalogDetailModal = ({
   title,
@@ -26,6 +25,8 @@ const CatalogDetailModal = ({
   fallbackIcon,
   description,
   closeLabel,
+  onClose,
+  onCloseAutoFocus,
   children,
 }: {
   title: string
@@ -35,6 +36,9 @@ const CatalogDetailModal = ({
   /** When absent, Radix's describedby warning is opted out. */
   description?: string
   closeLabel: string
+  /** Defaults to popping an intercepted detail route off history. */
+  onClose?: () => void
+  onCloseAutoFocus?: ComponentProps<typeof DialogContent>["onCloseAutoFocus"]
   children: ReactNode
 }) => {
   const router = useRouter()
@@ -44,13 +48,16 @@ const CatalogDetailModal = ({
       open
       size="lg"
       onOpenChange={(open) => {
-        if (!open) router.back()
+        if (open) return
+        if (onClose) onClose()
+        else router.back()
       }}
     >
       <DialogContent
         // Rows rather than the default auto-flow so the header stays put and
         // only the body scrolls once the content outgrows the viewport.
         className="max-h-[calc(100dvh-2rem)] grid-rows-[auto_minmax(0,1fr)]"
+        onCloseAutoFocus={onCloseAutoFocus}
         {...(description ? {} : { "aria-describedby": undefined })}
       >
         {description && (

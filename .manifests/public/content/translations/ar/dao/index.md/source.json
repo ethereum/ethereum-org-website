@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/dao/index.md",
   "generatedAt": "2026-06-29T23:55:31.565Z",
-  "rootHash": "45a899f17813",
+  "rootHash": "963721f4fb1d",
   "tree": {
-    "contentHash": "591aaddbbb70",
-    "anchorHash": "cdd781825736",
+    "contentHash": "7750509d162b",
+    "anchorHash": "a700d166e0b3",
     "children": {
       "frontmatter:title": {
         "contentHash": "a4b49ad8bfca",
@@ -40,8 +40,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "ff43ba83572f",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "f8de8d50e6c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "ee08a7d764d7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5637e922505c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-are-daos": {
         "contentHash": "ccf71fa4314a",

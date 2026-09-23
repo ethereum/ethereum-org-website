@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/fusaka/peerdas/index.md",
   "generatedAt": "2026-06-08T10:20:23.336Z",
-  "rootHash": "a4ed439ae032",
+  "rootHash": "b245a57ca464",
   "tree": {
-    "contentHash": "e19ce1fc69a8",
-    "anchorHash": "a0e498c30700",
+    "contentHash": "6667155764d3",
+    "anchorHash": "f102b8ca721a",
     "children": {
       "frontmatter:title": {
         "contentHash": "87618f74444a",
@@ -20,8 +20,22 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "bd71957f15b3"
+        "contentHash": "f5818652a990",
+        "anchorHash": "bd3ff7caf85d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8a2c0f8bbcfe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:5": {
         "contentHash": "b344d80e24a3",

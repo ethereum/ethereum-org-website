@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.24.2",
+  "version": "11.25.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -114,6 +114,7 @@
     "usehooks-ts": "^3.1.0",
     "viem": "^2.23.3",
     "wagmi": "^2.14.11",
+    "yaml": "^2.9.1",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
@@ -149,7 +150,7 @@
     "franc-min": "^6.2.0",
     "husky": "^9.0.11",
     "image-size": "^1.0.2",
-    "intl-content-tree": "^0.3.2",
+    "intl-content-tree": "^0.4.1",
     "lint-staged": "^15.2.5",
     "markdownlint-cli2": "^0.22.0",
     "mdast-util-toc": "^7.0.0",

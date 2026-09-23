@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-basics-intro/index.md",
   "generatedAt": "2026-04-29T05:21:40.375Z",
-  "rootHash": "67bbe78725fb",
+  "rootHash": "2e6d4f091d51",
   "tree": {
-    "contentHash": "69779682f0f3",
-    "anchorHash": "9699ba805c84",
+    "contentHash": "b893e7e0b11e",
+    "anchorHash": "ff0880dcd45d",
     "children": {
       "frontmatter:title": {
-        "contentHash": "e64c96a67073",
+        "contentHash": "37af31f0222f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "f48c03190396",
+        "contentHash": "bb8fe05bdafe",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "19af6ca7b2fc"
+        "anchorHash": "a161642a7b29"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "12290d258fda"
+        "anchorHash": "347d2d72252e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "77b3e64c9e1f",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b60d7bdd334c"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c432b372e0e3"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e10c6697b924"
+        "anchorHash": "a5f291a7514b"
       },
       "prose:1": {
         "contentHash": "8267e94b8f6e",

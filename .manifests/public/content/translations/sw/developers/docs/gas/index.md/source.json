@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/gas/index.md",
   "generatedAt": "2026-06-29T23:56:50.168Z",
-  "rootHash": "ec6525523017",
+  "rootHash": "8212c336018a",
   "tree": {
     "contentHash": "5572fe0abd64",
-    "anchorHash": "683c99d3d031",
+    "anchorHash": "a30eb7f2e872",
     "children": {
       "frontmatter:title": {
         "contentHash": "f5544e76fdee",
@@ -13,7 +13,7 @@
       },
       "frontmatter:metaTitle": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2199122d82b5"
+        "anchorHash": "6fba966d4a91"
       },
       "frontmatter:description": {
         "contentHash": "b703022fd4cd",

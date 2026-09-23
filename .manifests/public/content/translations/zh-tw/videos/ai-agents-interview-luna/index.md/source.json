@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ai-agents-interview-luna/index.md",
   "generatedAt": "2026-04-29T04:42:17.516Z",
-  "rootHash": "c4f699dcd612",
+  "rootHash": "ae7096412e2b",
   "tree": {
-    "contentHash": "d0588f7e4b04",
-    "anchorHash": "85af9649a8de",
+    "contentHash": "af44aadb792c",
+    "anchorHash": "a35c5fa3468e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "03f51dcba129",
+        "contentHash": "7d9a05c3d60c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "994ad6ea0031",
+        "contentHash": "75282835cffc",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a3cae1101823"
+        "anchorHash": "520f3d98dec1"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "21dbd075c7ab"
+        "anchorHash": "062aca9e030b"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "72550c4fc2af",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "32e83e92d45d"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8c70b25cbbbe"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c40cc25b38bd"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "14add4c54009"
+        "anchorHash": "f92c2ad4534d"
       },
       "prose:1": {
         "contentHash": "9ecd8c66309c",

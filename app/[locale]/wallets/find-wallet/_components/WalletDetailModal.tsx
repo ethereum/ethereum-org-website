@@ -1,83 +1,85 @@
-import { notFound } from "next/navigation"
-import { getTranslations } from "next-intl/server"
+"use client"
 
-import type { ChainName, Lang } from "@/lib/types"
+import type { ChainName } from "@/lib/types"
 
 import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
-import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import Discord from "@/components/icons/discord.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { XCircle } from "@/components/icons/XCircle"
-import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 
-import { getWalletBySlug } from "@/lib/utils/walletData"
-import { formatWalletFees } from "@/lib/utils/wallets"
+import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
-import { buildDeviceLabels, getDeviceLabels } from "@/data/wallets/devices"
-import { CROPS_PROPERTIES } from "@/data/wallets/features"
+import { getDeviceLabels, type WalletDeviceId } from "@/data/wallets/devices"
 
-import { getPathname } from "@/i18n/navigation"
-
-type ModalParams = { locale: string; wallet: string }
+import WalletLanguages from "./WalletLanguages"
 
 const LANGUAGES_SHOWN = 5
 
-// Without this the interceptor is uncacheable and re-renders on every modal
-// open; the standalone `[wallet]` page already sets it.
-export const revalidate = false
+/** Built on the server so no i18n runtime ships to the browser. */
+export type WalletModalLabels = {
+  close: string
+  yes: string
+  no: string
+  networkSupport: string
+  device: string
+  languages: string
+  fees: string
+  feesTooltip: string
+  fullDetails: string
+  /** Raw message with a `{wallet}` placeholder. */
+  getWallet: string
+  /** CROPS rows, in display order; `key` is matched against `advancedFlags`. */
+  crops: { key: string; label: string; tooltip: string }[]
+}
 
 /**
- * Shown as a modal when navigated to from inside the find-wallet subtree; a
- * direct load or refresh renders the standalone `[wallet]` page instead. Body
- * is server-rendered and passed to the client shell as children.
+ * Client-side detail modal fed from the card payload; the standalone
+ * `[wallet]` page stays the linkable, crawlable version.
  */
-export default async function InterceptedWalletModal(props: {
-  params: Promise<ModalParams>
-}) {
-  const { locale, wallet: walletSlug } = await props.params
-
-  const wallet = getWalletBySlug(walletSlug, locale)
-  if (!wallet) notFound()
-
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
-
-  const deviceLabels = getDeviceLabels(wallet.devices, buildDeviceLabels(t))
+const WalletDetailModal = ({
+  wallet,
+  labels,
+  deviceLabels: deviceLabelMap,
+  onClose,
+}: {
+  wallet: CatalogWalletCard
+  labels: WalletModalLabels
+  deviceLabels: Record<WalletDeviceId, string>
+  onClose: () => void
+}) => {
+  const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
   const chains = getRenderableChains(wallet.supported_chains as ChainName[])
-
-  const detailHref = getPathname({
-    href: `/wallets/find-wallet/${wallet.slug}/`,
-    locale: locale as Lang,
-  })
-
-  const shownLanguages = wallet.supportedLanguages
-    .slice(0, LANGUAGES_SHOWN)
-    .join(" · ")
-  const hasExtraLanguages = wallet.supportedLanguages.length > LANGUAGES_SHOWN
+  const description = wallet.descriptionStripped
 
   return (
     <CatalogDetailModal
       title={wallet.name}
       image={wallet.image}
-      description={wallet.descriptionStripped}
-      closeLabel={tCommon("close")}
+      description={description}
+      closeLabel={labels.close}
+      onClose={onClose}
+      // Radix aims focus at whatever was focused when the dialog mounted,
+      // which lands on the body here; put the visitor back on the card.
+      onCloseAutoFocus={(event) => {
+        const card = document.querySelector<HTMLElement>(
+          `a[href$="/wallets/find-wallet/${wallet.slug}/"]`
+        )
+        if (!card) return
+        event.preventDefault()
+        card.focus()
+      }}
     >
       <div className="flex flex-col gap-6">
-        {wallet.descriptionStripped && (
-          <p className="text-body-medium">{wallet.descriptionStripped}</p>
-        )}
+        {description && <p className="text-body-medium">{description}</p>}
 
         <div className="flex flex-col gap-2">
           {chains.length > 0 && (
-            <DetailRow label={t("page-find-wallet-network-support")}>
+            <DetailRow label={labels.networkSupport}>
               <ChainImages
                 chains={chains}
                 className="flex-wrap justify-end gap-1"
@@ -87,7 +89,7 @@ export default async function InterceptedWalletModal(props: {
           )}
 
           {deviceLabels.length > 0 && (
-            <DetailRow label={t("page-find-wallet-device")}>
+            <DetailRow label={labels.device}>
               <span className="font-bold text-body">
                 {deviceLabels.join(" · ")}
               </span>
@@ -95,60 +97,56 @@ export default async function InterceptedWalletModal(props: {
           )}
 
           {wallet.supportedLanguages.length > 0 && (
-            <DetailRow label={t("page-find-wallet-languages-supported")}>
-              <span className="font-bold text-body">
-                {shownLanguages}{" "}
-                {hasExtraLanguages && (
-                  <SupportedLanguagesTooltip
-                    supportedLanguages={wallet.supportedLanguages}
-                    shown={LANGUAGES_SHOWN}
-                  />
-                )}
-              </span>
+            <DetailRow label={labels.languages}>
+              <WalletLanguages
+                languages={wallet.supportedLanguages}
+                localeLanguage={wallet.localeLanguage}
+                shown={LANGUAGES_SHOWN}
+              />
             </DetailRow>
           )}
 
-          {wallet.fees?.length ? (
+          {wallet.fees && (
             <DetailRow
-              label={t("page-find-wallet-fee-row-label")}
-              tooltip={t("page-find-wallet-fee-row-tooltip")}
+              label={labels.fees}
+              tooltip={labels.feesTooltip}
               roomyLabel
             >
-              <span className="font-bold text-body">
-                {formatWalletFees(wallet.fees, locale, t)}
-              </span>
+              <span className="font-bold text-body">{wallet.fees}</span>
             </DetailRow>
-          ) : null}
+          )}
 
-          {CROPS_PROPERTIES.map((feature) => {
-            const supported = Boolean(wallet[feature.key])
+          {labels.crops.map((feature) => {
+            const supported = (wallet.advancedFlags as string[]).includes(
+              feature.key
+            )
             return (
               <DetailRow
                 key={feature.key}
-                label={t(feature.labelKey)}
-                tooltip={t(feature.descKey)}
+                label={feature.label}
+                tooltip={feature.tooltip}
               >
                 {supported ? (
                   <span className="inline-flex items-center gap-1.5 font-bold text-success">
                     <CheckCircle className="my-0 shrink-0" />
-                    {tCommon("yes")}
+                    {labels.yes}
                   </span>
                 ) : (
                   <span className="inline-flex items-center gap-1.5 font-bold text-error">
                     <XCircle className="my-0 shrink-0" />
-                    {tCommon("no")}
+                    {labels.no}
                   </span>
                 )}
               </DetailRow>
             )
           })}
 
-          {/* Belongs with the rows it extends: these properties are a summary
-              of the full feature set. */}
-          <FullDetailsLink
-            href={detailHref}
-            label={t("page-find-wallet-full-details")}
-          />
+          <LinkWithArrow
+            href={`/wallets/find-wallet/${wallet.slug}/`}
+            className="mt-1 self-end text-sm"
+          >
+            {labels.fullDetails}
+          </LinkWithArrow>
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -162,7 +160,7 @@ export default async function InterceptedWalletModal(props: {
               eventName: wallet.name,
             }}
           >
-            {t("page-find-wallet-get-wallet", { wallet: wallet.name })}
+            {labels.getWallet.replace("{wallet}", wallet.name)}
           </ButtonLink>
 
           <div className="flex flex-row items-center gap-2">
@@ -200,3 +198,5 @@ export default async function InterceptedWalletModal(props: {
     </CatalogDetailModal>
   )
 }
+
+export default WalletDetailModal

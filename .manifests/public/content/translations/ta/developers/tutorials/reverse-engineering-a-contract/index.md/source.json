@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/reverse-engineering-a-contract/index.md",
   "generatedAt": "2026-06-17T00:41:51.365Z",
-  "rootHash": "e4c0956c3b54",
+  "rootHash": "66f8df79cd04",
   "tree": {
-    "contentHash": "5bf143dfeae7",
-    "anchorHash": "8e628dc4687c",
+    "contentHash": "ad87a062a6ba",
+    "anchorHash": "b45be4ca799d",
     "children": {
       "frontmatter:title": {
-        "contentHash": "8012a4842f57",
+        "contentHash": "67ded7149734",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,22 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "6de43f936385"
+        "contentHash": "0df1f28d9754",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "603871c2ddd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "3d6f61ea9e38",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

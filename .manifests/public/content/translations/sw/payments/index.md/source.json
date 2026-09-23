@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/payments/index.md",
   "generatedAt": "2026-08-07T06:11:33.074Z",
-  "rootHash": "b25ff8f9dd8f",
+  "rootHash": "28d9e5ddcb7f",
   "tree": {
-    "contentHash": "a2d2218f0ed9",
-    "anchorHash": "b7bab7905109",
+    "contentHash": "02f01460281e",
+    "anchorHash": "0a2423c9bb52",
     "children": {
       "frontmatter:title": {
         "contentHash": "e731b2c33eaf",
@@ -40,8 +40,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "8ffe39f84891",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "4b4152948eaa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "6032169e962b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e1a9edc5873a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:0": {
         "contentHash": "29fab61a5eda",

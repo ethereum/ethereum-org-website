@@ -48,6 +48,20 @@ export const OUTPUT_RATE_USD_PER_1M = 12.0
 // wrong". Override with INTL_MAX_COST_USD.
 export const RUN_FUSE_USD = Number(process.env.INTL_MAX_COST_USD || 100)
 
+// Thinking tokens billed as output on every call, roughly constant whatever the
+// prompt size. Measured across 24 locales on run 31745 (Gemini 3.1 Pro via
+// OpenRouter). Used by the estimator and by the in-flight reservation.
+export const REASONING_TOKENS_PER_CALL = 5_200
+
+// Deterministic-failure quarantine: pairs that failed the same way against the
+// same English are skipped for a while instead of retried every run. Lives
+// with the manifests so it travels through intl/pending-{base}.
+export const QUARANTINE_PATH = ".manifests/quarantine.json"
+export const QUARANTINE_TTL_DAYS = 14
+export const QUARANTINE_MAX_TTL_DAYS = 90
+/** Pseudo-language key the committer records the quarantine file under */
+export const QUARANTINE_LANG = "quarantine"
+
 // Least content a batch may carry after prompt overhead (rules + glossary +
 // replicated context) is accounted for. Hitting this means overhead has grown
 // enough to crowd out the work; fail loudly rather than fan out into many tiny
