@@ -14,7 +14,7 @@ Pour vous aider à mieux comprendre cette page, nous vous recommandons de lire d
 
 Ethereum possède deux types de comptes :
 
-- Compte détenu par un tiers (EOA) – contrôlé par quiconque possède les clés privées
+- Compte détenu en externe (EOA) – contrôlé par quiconque possède les clés privées
 - Compte de contrat – un contrat intelligent déployé sur le réseau, contrôlé par du code. En savoir plus sur les [contrats intelligents](/developers/docs/smart-contracts/)
 
 Les deux types de comptes ont la capacité de :
@@ -24,11 +24,11 @@ Les deux types de comptes ont la capacité de :
 
 ### Différences clés {#key-differences}
 
-**Détenu par un tiers**
+**Détenu en externe**
 
 - La création d'un compte ne coûte rien
 - Peut initier des transactions
-- Les transactions entre des comptes détenus par des tiers ne peuvent être que des transferts d'ETH ou de jetons
+- Les transactions entre des comptes détenus en externe ne peuvent être que des transferts d'ETH ou de jetons
 - Composé d'une paire de clés cryptographiques : des clés publiques et privées qui contrôlent les activités du compte
 
 **Contrat**
@@ -42,21 +42,21 @@ Les deux types de comptes ont la capacité de :
 
 Les comptes Ethereum comportent quatre champs :
 
-- `nonce` – Un compteur qui indique le nombre de transactions envoyées depuis un compte détenu par un tiers ou le nombre de contrats créés par un compte de contrat. Une seule transaction avec un nonce donné peut être exécutée pour chaque compte, ce qui protège contre les attaques par rejeu où des transactions signées sont diffusées et réexécutées à plusieurs reprises.
-- `balance` – Le nombre de Wei possédés par cette adresse. Le Wei est une dénomination de l'ETH et il y a 1e+18 Wei par ETH.
-- `codeHash` – Ce hash fait référence au _code_ d'un compte sur la machine virtuelle Ethereum (EVM). Les comptes de contrat ont des fragments de code programmés qui peuvent effectuer différentes opérations. Ce code EVM est exécuté si le compte reçoit un appel de message. Il ne peut pas être modifié, contrairement aux autres champs du compte. Tous ces fragments de code sont contenus dans la base de données d'état sous leurs hashs correspondants pour une récupération ultérieure. Cette valeur de hash est connue sous le nom de codeHash. Pour les comptes détenus par des tiers, le champ codeHash est le hash d'une chaîne vide.
-- `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash de 256 bits du nœud racine d'un [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) qui encode le contenu de stockage du compte (un mappage entre des valeurs entières de 256 bits), encodé dans le trie comme un mappage du hash Keccak-256 des clés entières de 256 bits vers les valeurs entières de 256 bits encodées en RLP. Ce trie encode le hash du contenu de stockage de ce compte, et est vide par défaut.
+- `nonce` – Un compteur qui indique le nombre de transactions envoyées depuis un compte détenu en externe ou le nombre de contrats créés par un compte de contrat. Une seule transaction avec un nonce donné peut être exécutée pour chaque compte, ce qui protège contre les attaques par rejeu où des transactions signées sont diffusées et réexécutées à plusieurs reprises.
+- `balance` – Le nombre de Wei détenus par cette adresse. Le Wei est une dénomination de l'ETH et il y a 1e+18 Wei par ETH.
+- `codeHash` – Ce hash fait référence au _code_ d'un compte sur la Machine Virtuelle Ethereum (EVM). Les comptes de contrat ont des fragments de code programmés qui peuvent effectuer différentes opérations. Ce code EVM est exécuté si le compte reçoit un appel de message. Il ne peut pas être modifié, contrairement aux autres champs du compte. Tous ces fragments de code sont contenus dans la base de données d'état sous leurs hashs correspondants pour une récupération ultérieure. Cette valeur de hash est connue sous le nom de codeHash. Pour les comptes détenus en externe, le champ codeHash est le hash d'une chaîne vide.
+- `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash de 256 bits du nœud racine d'un [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) qui encode le contenu de stockage du compte (un mappage entre des valeurs entières de 256 bits), encodé dans le trie comme un mappage du hash Keccak-256 des clés entières de 256 bits vers les valeurs entières de 256 bits encodées en préfixe de longueur récursif (RLP). Ce trie encode le hash du contenu de stockage de ce compte, et est vide par défaut.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Comptes détenus par des tiers et paires de clés {#externally-owned-accounts-and-key-pairs}
+## Comptes détenus en externe et paires de clés {#externally-owned-accounts-and-key-pairs}
 
-Un compte est composé d'une paire de clés cryptographiques : publique et privée. Elles aident à prouver qu'une transaction a réellement été signée par l'expéditeur et empêchent les falsifications. Votre clé privée est ce que vous utilisez pour signer des transactions, elle vous accorde donc la garde des fonds associés à votre compte. Vous ne détenez jamais vraiment de cryptomonnaie, vous détenez des clés privées – les fonds sont toujours sur le registre d'Ethereum.
+Un compte est composé d'une paire de clés cryptographiques : publique et privée. Elles aident à prouver qu'une transaction a bien été signée par l'expéditeur et empêchent les falsifications. Votre clé privée est ce que vous utilisez pour signer des transactions, elle vous accorde donc la garde des fonds associés à votre compte. Vous ne détenez jamais vraiment de cryptomonnaie, vous détenez des clés privées – les fonds sont toujours sur le registre d'Ethereum.
 
 Cela empêche les acteurs malveillants de diffuser de fausses transactions car vous pouvez toujours vérifier l'expéditeur d'une transaction.
 
-Si Alice veut envoyer de l'ether de son propre compte vers le compte de Bob, Alice doit créer une demande de transaction et l'envoyer au réseau pour vérification. L'utilisation par Ethereum de la cryptographie à clé publique garantit qu'Alice peut prouver qu'elle a initialement initié la demande de transaction. Sans mécanismes cryptographiques, un adversaire malveillant, Eve, pourrait simplement diffuser publiquement une demande ressemblant à « envoyer 5 ETH du compte d'Alice au compte d'Eve », et personne ne serait en mesure de vérifier que cela ne venait pas d'Alice.
+Si Alice veut envoyer de l'ether de son propre compte vers le compte de Bob, Alice doit créer une demande de transaction et l'envoyer au réseau pour vérification. L'utilisation par Ethereum de la cryptographie à clé publique garantit qu'Alice peut prouver qu'elle a initialement initié la demande de transaction. Sans mécanismes cryptographiques, un adversaire malveillant, Eve, pourrait simplement diffuser publiquement une demande qui ressemblerait à « envoyer 5 ETH du compte d'Alice au compte d'Eve », et personne ne serait en mesure de vérifier que cela ne venait pas d'Alice.
 
 ## Création de compte {#account-creation}
 
@@ -70,7 +70,7 @@ Exemple :
 
 La clé publique est générée à partir de la clé privée en utilisant l'[algorithme de signature numérique à courbe elliptique](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Vous obtenez une adresse publique pour votre compte en prenant les 20 derniers octets du hash Keccak-256 de la clé publique et en ajoutant `0x` au début.
 
-Cela signifie qu'un compte détenu par un tiers (EOA) a une adresse de 42 caractères (un segment de 20 octets qui correspond à 40 caractères hexadécimaux plus le préfixe `0x`).
+Cela signifie qu'un compte détenu en externe (EOA) a une adresse de 42 caractères (un segment de 20 octets qui correspond à 40 caractères hexadécimaux plus le préfixe `0x`).
 
 Exemple :
 
@@ -81,14 +81,14 @@ L'exemple suivant montre comment utiliser un outil de signature appelé [Clef](h
 ```
 > clef newaccount --keystore <path>
 
-Please enter a password for the new account to be created:
+Veuillez entrer un mot de passe pour le nouveau compte à créer :
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please remember your password!
-Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Votre nouvelle clé a été générée       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Veuillez sauvegarder votre fichier de clé      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] N'oubliez pas votre mot de passe !
+Compte généré 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Documentation de Geth](https://geth.ethereum.org/docs)
@@ -111,15 +111,15 @@ Les contrats peuvent également être déployés avec [`CREATE2`](https://eips.e
 
 ## Clés de validateur {#validators-keys}
 
-Il existe également un autre type de clé dans Ethereum, introduit lorsqu'Ethereum est passé d'un consensus basé sur la preuve de travail (PoW) à la preuve d'enjeu (PoS). Ce sont les clés « BLS » et elles sont utilisées pour identifier les validateurs. Ces clés peuvent être agrégées efficacement pour réduire la bande passante requise pour que le réseau parvienne à un consensus. Sans cette agrégation de clés, la mise minimale pour un validateur serait beaucoup plus élevée.
+Il existe également un autre type de clé dans Ethereum, introduit lorsqu'Ethereum est passé d'un consensus basé sur la preuve de travail à la preuve d'enjeu. Ce sont les clés « BLS » et elles sont utilisées pour identifier les validateurs. Ces clés peuvent être agrégées efficacement pour réduire la bande passante requise pour que le réseau parvienne à un consensus. Sans cette agrégation de clés, la mise minimale pour un validateur serait beaucoup plus élevée.
 
 [En savoir plus sur les clés de validateur](/developers/docs/consensus-mechanisms/pos/keys/).
 
 ## Une note sur les portefeuilles {#a-note-on-wallets}
 
-Un compte n'est pas un portefeuille. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum, qu'il s'agisse d'un compte détenu par un tiers ou d'un compte de contrat.
+Un compte n'est pas un portefeuille. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum, qu'il s'agisse d'un compte détenu en externe ou d'un compte de contrat.
 
-## Une démo visuelle {#a-visual-demo}
+## Une démonstration visuelle {#a-visual-demo}
 
 Regardez Austin vous guider à travers les fonctions de hash et les paires de clés.
 
@@ -127,7 +127,7 @@ Regardez Austin vous guider à travers les fonctions de hash et les paires de cl
 
 <VideoWatch slug="key-pair-eth-build" />
 
-## Lectures complémentaires {#further-reading}
+## Complément d'information {#further-reading}
 
 - [Comprendre les comptes Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
@@ -137,3 +137,7 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 
 - [Contrats intelligents](/developers/docs/smart-contracts/)
 - [Transactions](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />
