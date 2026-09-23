@@ -18,11 +18,29 @@ config()
 
 const trimSlash = (s: string) => s.replace(/\/+$/, "")
 
-export const TYPESENSE_URL = trimSlash(process.env.TYPESENSE_URL ?? "")
+/**
+ * The pipeline's own variables, with the app's browser-side ones as a fallback. Reading
+ * an index needs nothing the browser does not already ship, so a query script should not
+ * demand the admin credentials that writing does.
+ */
+const publicUrl = () => {
+  const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST
+  if (!host) return ""
+  const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL ?? "https"
+  const port = process.env.NEXT_PUBLIC_TYPESENSE_PORT
+  const suffix = !port || port === "443" || port === "80" ? "" : `:${port}`
+  return `${protocol}://${host}${suffix}`
+}
+
+export const TYPESENSE_URL = trimSlash(process.env.TYPESENSE_URL || publicUrl())
 export const ADMIN_KEY = process.env.TYPESENSE_ADMIN_KEY ?? ""
-// No fallback to the admin key: it cannot search, so falling back only turns a missing
-// variable into a 401 at query time instead of a clear failure at startup.
-export const SEARCH_KEY = process.env.TYPESENSE_SEARCH_KEY ?? ""
+// The browser key is a real search key, so it is a fine fallback. The admin key is not --
+// it cannot search, and falling back to it only turns a missing variable into a 401 at
+// query time instead of a clear failure at startup.
+export const SEARCH_KEY =
+  process.env.TYPESENSE_SEARCH_KEY ||
+  process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY ||
+  ""
 
 export const SITE_ORIGIN = "https://ethereum.org"
 
@@ -95,7 +113,7 @@ export const api = async <T>(
 export const listCollections = () =>
   api<CollectionInfo[]>("GET", "/collections")
 
-export const listAliases = async () =>
+const listAliases = async () =>
   (await api<{ aliases: Alias[] }>("GET", "/aliases")).aliases
 
 /** The collection an alias currently resolves to, or undefined if unset. */

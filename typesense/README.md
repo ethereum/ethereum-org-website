@@ -36,6 +36,23 @@ The scraper would otherwise swap its own alias the moment a crawl ends, with no 
 all. Scraping to a staging name and promoting separately is what makes the swap
 conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
 
+## Query choices
+
+The parameters the modal sends live in `src/components/Search/SearchModal.tsx`. Two are
+worth knowing about because they are not what the library ships.
+
+`group_limit: 1`, against the library's 3. Only one record per page is ever rendered: the
+search adapter collapses each group to its best-scoring member and staples the rest onto it
+under a key nothing reads. Asking for three returned three times the payload for the same
+rows -- 55 KB against 18 KB for "wallet", on every keystroke.
+
+`drop_tokens_threshold: 5` widens a multi-word query that finds fewer than five results.
+The knobs usually reached for first do nothing here: typo correction is on by default, and
+`walet` already returns 390 results, all of them wallet pages, so `num_typos` and
+`typo_tokens_threshold` measure identical at every value. What a misspelling costs is rank,
+not recall. Measured against the labeled queries misspelled one character each, this moves
+hit@5 from 65% to 71% and leaves hit@1 on the correctly spelled set unchanged.
+
 ## Tokenization
 
 Typesense splits on whitespace unless a field declares its language, which leaves CJK text
@@ -112,6 +129,25 @@ but a locale that refuses several runs in a row is worth looking at.
 Recovering from the Actions tab is not possible today: re-running the workflow re-crawls
 and meets the same gate. The commands above need the admin key locally.
 
+## Which networks appear
+
+`src/data/networks/networks.ts` -- the same list `/layer-2/networks` renders. Each entry
+carries a `searchExplorer` alongside its existing `blockExplorerLink`, so adding or
+removing an L2 there is the only edit; nothing else enumerates them.
+
+The two explorer fields are deliberately separate. `blockExplorerLink` stays whatever that
+network's own users expect; `searchExplorer` prefers Blockscout, which is open source.
+Explorers with a single route that resolves anything give `search`; those without give
+`address` and `tx`, and the type makes it impossible to fill in half a pair.
+
+`addressFormat` says which value shapes a network accepts: `evm` for a 20-byte address or
+32-byte hash, `starknet` for a field element that could be either -- which is why Starknet
+offers both routes rather than guessing.
+
+EIP-3770 prefixes are typed by hand, and `tests/unit/search/networks-data.spec.ts` checks
+each one against `chains.ts`, itself generated weekly from the same registry. A typo fails
+CI with the correct value, and an upstream rename turns it red on the next chains update.
+
 ## curation.json
 
 Query to ordered list of paths. Paths are locale-agnostic (brand names read the same in
@@ -148,7 +184,10 @@ control. An allowlist would also break on every new deploy-preview subdomain.
 
 ## Secrets
 
-GitHub Actions secrets, which are separate from Netlify's environment variables.
+GitHub Actions secrets, which are separate from Netlify's environment variables. The
+scripts read these names directly; the one exception is the scraper container, which is
+handed the admin key as `TYPESENSE_API_KEY` because that is the name its own entrypoint
+reads.
 
 | Secret                 | Used for                                                                                                                                                |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -161,7 +200,8 @@ GitHub Actions secrets, which are separate from Netlify's environment variables.
 
 The scripts read the same variable names as the secrets above, so `.env.example` works as
 written. Both keys are required -- the admin key cannot search, and promote and curate both
-query.
+query -- though a read-only command falls back to the `NEXT_PUBLIC_TYPESENSE_*` values in
+`.env.local`, so it needs nothing the app does not already have.
 
 ```sh
 pnpm typesense:promote -- --locale en --dry-run

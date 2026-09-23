@@ -1,5 +1,5 @@
 {
-  "_comment": "Labelled queries from 30 days of real search logs, used as a relevance gate before an index is promoted. `correct: null` means no page on the site answers the query. English only -- other locales promote on the structural checks alone.",
+  "_comment": "Labeled queries from 30 days of real search logs, used as a relevance gate before an index is promoted. `correct: null` means no page on the site answers the query. English only -- other locales promote on the structural checks alone.",
   "queries": [
     {
       "q": "metamask",
