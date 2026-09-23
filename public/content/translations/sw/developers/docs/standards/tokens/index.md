@@ -29,7 +29,7 @@ Hapa kuna baadhi ya viwango maarufu vya tokeni kwenye Ethereum:
 
 Orodha kamili ya mapendekezo ya [ERC](https://eips.ethereum.org/erc).
 
-## Usomaji zaidi
+## Usomaji zaidi {#further-reading}
 
 _Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 

@@ -20,7 +20,7 @@ lang: zh
 
 在深入了解框架之前，我们建议你首先阅读我们对[去中心化应用 (dapp)](/developers/docs/dapps/)和[以太坊技术栈](/developers/docs/ethereum-stack/)的介绍。
 
-## 可用框架
+## 可用框架 {#available-frameworks}
 
 **Foundry** - **_Foundry 是一个极速、便携且模块化的以太坊应用开发工具包_**
 

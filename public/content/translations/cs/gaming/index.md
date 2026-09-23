@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Hraní na Ethereu
+## Hraní na Ethereu {#gaming-on-ethereum}
 
 Hraní na Ethereu má různé podoby, od her, které využívají blockchain pro specifické funkce, až po ty, kde celý herní svět žije onchain. Blockchain Ethereum lze s hrami využít v různých kapacitách. Hry mohou ukládat své měny jako převoditelné tokeny nebo jiná herní aktiva (postavy, vybavení, mazlíčky atd.) ve formě [nezaměnitelných tokenů (NFT)](/nft/). Hry mohou také využívat chytré kontrakty k hostování své logiky, pravidel a stavu onchain. Takové hry se běžně označují jako „plně onchain hry“.
 
@@ -32,7 +32,7 @@ Když bylo spuštěno Ethereum, **herní designéři viděli příležitost vybu
 
 Blockchain Ethereum umožnil vznik světů, kde pravidla nelze svévolně měnit, stav nelze smazat a kdokoli může vytvářet rozšíření, která žijí tak dlouho, dokud existuje síť. To je něco, co Ethereum nativně poskytuje.
 
-## Přehled herního ekosystému Etherea
+## Přehled herního ekosystému Etherea {#ethereums-gaming-ecosystem-overview}
 
 - **Vrstva 2 (l2):** Díky levnějším poplatkům a krátkým časům transakcí se l2 sítě Etherea staly běžným místem pro spouštění her. Prostředí l2 se nadále vyvíjí, přičemž přední herní ekosystémy Web3, jako je Ronin (původně postranní řetězec pro Axie Infinity), nedávno přešly na architekturu vrstvy 2 Etherea, čímž zdědily bezpečnostní záruky Etherea a zároveň si zachovaly svou infrastrukturu optimalizovanou pro hraní. Mezi současné přední l2 sítě pro hraní patří: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/) a [Base](https://www.base.org/).
 - **Infrastruktura:** Aby byl vývoj onchain her snazší, existuje řada sad nástrojů; [Cartridge](https://cartridge.gg/) (nabízející klíče relace, transakce bez gasu prostřednictvím paymasteru a ověřování založené na WebAuthn prostřednictvím Cartridge Controller), [Dojo](https://dojoengine.org/) (framework pro prokazatelné hry s nativní podporou abstrakce účtu), [MUD](https://mud.dev/) (onchain herní engine založený na EVM). Další, jako [Proof of Play](https://proofofplay.com/) a [Thirdweb](https://thirdweb.com/), umožňují vývojářům vytvářet hry s uživatelským zážitkem podobným Web2.

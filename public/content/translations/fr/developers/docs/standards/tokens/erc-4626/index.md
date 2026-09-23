@@ -4,7 +4,7 @@ description: "Une norme pour les coffres-forts générateurs de rendement."
 lang: fr
 ---
 
-## Introduction
+## Introduction {#introduction}
 
 L'ERC-4626 est une norme permettant d'optimiser et d'unifier les paramètres techniques des coffres-forts générateurs de rendement. Il fournit une API standard pour les coffres-forts générateurs de rendement tokenisés qui représentent des parts d'un seul jeton ERC-20 sous-jacent. L'ERC-4626 décrit également une extension facultative pour les coffres-forts tokenisés utilisant l'ERC-20, offrant des fonctionnalités de base pour le dépôt, le retrait de jetons et la lecture des soldes.
 

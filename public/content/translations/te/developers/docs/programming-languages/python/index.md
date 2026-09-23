@@ -55,7 +55,7 @@ incomplete: true
 
 ## Python ప్రాజెక్ట్‌లు మరియు టూల్స్ {#python-projects-and-tools}
 
-### క్రియాశీలమైనవి:
+### క్రియాశీలమైనవి: {#active}
 - [Web3.py](https://github.com/ethereum/web3.py) - _ఎథీరియంతో ఇంటరాక్ట్ అవ్వడానికి Python లైబ్రరీ_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM కోసం పైథానిక్ స్మార్ట్ కాంట్రాక్ట్ భాష_
 - [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper యొక్క స్థానిక టెస్టింగ్ టూల్; మెయిన్‌నెట్ ఫోర్కింగ్, డీబగ్గింగ్ మరియు అందమైన ట్రేస్‌బ్యాక్‌లతో కూడిన ఇంటర్‌ప్రెటర్_

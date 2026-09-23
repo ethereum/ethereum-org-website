@@ -4,7 +4,7 @@ description: "Getiri sağlayan kasalar için bir standart."
 lang: tr
 ---
 
-## Giriş
+## Giriş {#introduction}
 
 ERC-4626, getiri sağlayan kasaların teknik parametrelerini optimize etmek ve birleştirmek için kullanılan bir standarttır. Tek bir dayanak ERC-20 Tokeninin paylarını temsil eden tokenleştirilmiş getiri sağlayan kasalar için standart bir API sağlar. ERC-4626 ayrıca, ERC-20 kullanan tokenleştirilmiş kasalar için isteğe bağlı bir uzantının ana hatlarını çizer ve Token yatırma, çekme ve bakiyeleri okuma gibi temel işlevler sunar.
 

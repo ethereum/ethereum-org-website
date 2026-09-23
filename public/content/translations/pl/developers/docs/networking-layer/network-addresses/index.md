@@ -21,7 +21,7 @@ W przypadku węzła Ethereum, multiaddr zawiera identyfikator węzła (node-ID, 
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode
+## Enode {#enode}
 
 Enode to sposób identyfikacji węzła Ethereum przy użyciu formatu adresu URL. Szesnastkowy identyfikator węzła (node-ID) jest zakodowany w części URL przeznaczonej na nazwę użytkownika, oddzielonej od hosta znakiem @. Specyfikacja definiuje nazwę hosta wyłącznie jako adres IP; jednak większość klientów (takich jak Geth i Besu) akceptuje w tym miejscu również nazwę DNS i rozwiązuje ją na adres IP podczas uruchamiania. Jest to zachowanie specyficzne dla klienta, a nie część standardu. Port w sekcji nazwy hosta to port nasłuchiwania TCP. Jeśli porty TCP i UDP (odkrywania) różnią się, port UDP jest określany jako parametr zapytania "discport".
 

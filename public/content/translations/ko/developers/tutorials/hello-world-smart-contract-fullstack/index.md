@@ -32,7 +32,7 @@ published: 2021-10-25
 
 이더리움 체인에 요청을 보내는 방법은 여러 가지가 있습니다. 간단하게 진행하기 위해, 노드를 직접 실행하지 않고도 이더리움 체인과 통신할 수 있게 해주는 블록체인 개발자 플랫폼이자 API인 Alchemy의 무료 계정을 사용하겠습니다. Alchemy는 모니터링과 분석을 위한 개발자 도구도 제공합니다. 이 튜토리얼에서는 스마트 컨트랙트 배포 과정에서 내부적으로 어떤 일이 일어나는지 이해하기 위해 이 도구들을 활용할 것입니다.
 
-### 앱 및 API 키 생성하기
+### 앱 및 API 키 생성하기 {#create-your-app-and-api-key}
 
 Alchemy 계정을 생성한 후, 앱을 생성하여 API 키를 발급받을 수 있습니다. 이를 통해 Sepolia 테스트넷에 요청을 보낼 수 있습니다. 테스트넷에 익숙하지 않다면 [네트워크 선택에 대한 Alchemy의 가이드](https://www.alchemy.com/docs/choosing-a-web3-network)를 읽어보세요.
 
@@ -47,11 +47,11 @@ Alchemy 대시보드의 내비게이션 바에서 **Apps** 드롭다운을 찾�
 _참고: 반드시 **Sepolia**를 선택해야 합니다. 그렇지 않으면 이 튜토리얼이 제대로 작동하지 않습니다._
 
 **Create app**을 클릭하세요. 아래 표에 앱이 나타날 것입니다.
-### 이더리움 계정 생성하기
+### 이더리움 계정 생성하기 {#create-an-ethereum-account}
 트랜잭션을 보내고 받으려면 이더리움 계정이 필요합니다. 사용자가 이더리움 계정 주소를 관리할 수 있게 해주는 브라우저 내 가상 지갑인 메타마스크를 사용할 것입니다.
 
 [여기](https://metamask.io/download)에서 무료로 메타마스크를 다운로드하고 계정을 생성할 수 있습니다. 계정을 생성할 때, 또는 이미 계정이 있는 경우, 우측 상단에서 "Sepolia 테스트 네트워크"로 전환해야 합니다(실제 돈을 다루지 않기 위함입니다).
-### 4단계: 퍼싯에서 이더 추가하기
+### 4단계: 퍼싯에서 이더 추가하기 {#step-4-add-ether-from-a-faucet}
 스마트 컨트랙트를 테스트 네트워크에 배포하려면 가짜 ETH가 필요합니다. Sepolia 네트워크에서 ETH를 얻으려면 Sepolia 퍼싯으로 이동하여 Sepolia 계정 주소를 입력하세요. 시도해 볼 수 있는 옵션 목록은 [테스트 네트워크 페이지](/developers/docs/networks/#sepolia)를 참조하세요:
 
 _참고: 네트워크 혼잡으로 인해 시간이 다소 걸릴 수 있습니다._
@@ -336,7 +336,7 @@ const hello_world = await HelloWorld.deploy()
 
 `ContractFactory`에서 `deploy()`를 호출하면 배포가 시작되고, `Contract` 객체로 확인(resolve)되는 `Promise`를 반환합니다. 이 객체는 스마트 컨트랙트의 각 함수에 대한 메서드를 가지고 있습니다.
 
-### 16단계: 컨트랙트 배포하기
+### 16단계: 컨트랙트 배포하기 {#step-16-deploy-our-contract}
 
 드디어 스마트 컨트랙트를 배포할 준비가 되었습니다! 명령줄로 이동하여 다음을 실행하세요:
 
@@ -507,7 +507,7 @@ main()
 
 11번째 줄에서 반환된 트랜잭션 객체에 대해 `.wait()`를 호출한다는 점에 유의하세요. 이는 함수를 종료하기 전에 스크립트가 블록체인에서 트랜잭션이 채굴될 때까지 기다리도록 보장합니다. `.wait()` 호출이 포함되지 않으면, 스크립트가 컨트랙트에서 업데이트된 `message` 값을 확인하지 못할 수 있습니다.
 
-### 새 메시지 읽기
+### 새 메시지 읽기 {#read-the-new-message}
 
 [이전 단계](#read-the-init-message)를 반복하여 업데이트된 `message` 값을 읽을 수 있을 것입니다. 잠시 시간을 내어 새 값을 출력하는 데 필요한 변경을 수행할 수 있는지 확인해 보세요!
 
@@ -633,7 +633,7 @@ module.exports = {
 }
 ```
 
-#### Etherscan에서 스마트 컨트랙트 검증하기
+#### Etherscan에서 스마트 컨트랙트 검증하기 {#verify-your-smart-contract-on-etherscan}
 
 모든 파일이 저장되었고 모든 `.env` 변수가 올바르게 구성되었는지 확인하세요.
 
@@ -951,7 +951,7 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 Hello World 스마트 컨트랙트를 로드하려면 컨트랙트 주소와 ABI가 필요합니다. [이 튜토리얼의 파트 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)을 완료했다면 두 가지 모두 Etherscan에서 찾을 수 있습니다.
 
-#### Etherscan에서 컨트랙트 ABI 가져오기
+#### Etherscan에서 컨트랙트 ABI 가져오기 {#how-to-get-your-contract-abi-from-etherscan}
 
 이 튜토리얼의 파트 3을 건너뛰었다면, 먼저 자신만의 HelloWorld 컨트랙트를 배포하고 검증하세요. 그런 다음 [Sepolia Etherscan](https://sepolia.etherscan.io)에서 컨트랙트 페이지를 열어 ABI를 복사합니다.
 
@@ -1125,10 +1125,10 @@ useEffect(async () => {
 
 이더리움의 트랜잭션 작동 방식에 대해 더 자세히 알고 싶다면 이더리움 재단의 [이 페이지](/developers/docs/transactions/)를 확인하세요.
 
-#### 메타마스크 다운로드하기
+#### 메타마스크 다운로드하기 {#download-metamask}
 
 [여기](https://metamask.io/download)에서 무료로 메타마스크를 다운로드하고 계정을 생성할 수 있습니다. 계정을 생성할 때, 또는 이미 계정이 있는 경우, 우측 상단에서 "Sepolia 테스트 네트워크"로 전환해야 합니다\(실제 돈을 다루지 않기 위함입니다\).
-#### 퍼싯에서 이더 추가하기
+#### 퍼싯에서 이더 추가하기 {#add-ether-from-a-faucet}
 
 이더리움 블록체인에서 트랜잭션에 서명하려면 가짜 ETH가 필요합니다. ETH를 얻으려면 [테스트 네트워크 페이지](/developers/docs/networks/#sepolia)에 나열된 Sepolia 퍼싯으로 이동하여 Sepolia 계정 주소를 입력하면 됩니다. 곧 메타마스크 계정에서 ETH를 확인할 수 있을 것입니다!
 #### 잔액 확인하기 {#check-your-balance}

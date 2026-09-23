@@ -29,7 +29,7 @@ Hier sind einige der beliebtesten Token-Standards auf Ethereum:
 
 Die vollständige Liste der [ERC](https://eips.ethereum.org/erc)-Vorschläge.
 
-## Weiterführende Literatur
+## Weiterführende Literatur {#further-reading}
 
 _Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_
 
