@@ -57,9 +57,9 @@ The two public testnets that client developers are currently maintaining are Sep
 - [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [OpenFaucet.org Sepolia Faucet](https://openfaucet.org/ethereum-sepolia)
 - [PoW Faucet](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
-- [OpenFaucet.org Sepolia Faucet](https://openfaucet.org/ethereum-sepolia)
 
 #### Hoodi {#hoodi}
 
@@ -82,8 +82,8 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
-- [PoW Faucet](https://hoodi-faucet.pk910.de/)
 - [OpenFaucet.org Hoodi Faucet](https://openfaucet.org/ethereum-hoodi)
+- [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
 
@@ -135,8 +135,8 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
-- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 - [OpenFaucet.org Arbitrum Sepolia Faucet](https://openfaucet.org/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
@@ -152,8 +152,8 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
-- [Testnet Faucet](https://docs.optimism.io/app-developers/tools/faucets)
 - [OpenFaucet.org Optimism Sepolia Faucet](https://openfaucet.org/optimism-sepolia)
+- [Testnet Faucet](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
