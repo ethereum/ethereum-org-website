@@ -43,9 +43,9 @@ MaxEBの詳細については、[こちら](/roadmap/pectra/maxeb/)をお読み�
 
 ### ブロブのスループット向上 {#7691}
 
-ブロブはL2に[データ可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)を提供します。これらは[前回のネットワーク・アップグレード](/roadmap/dencun/)で導入されました。 
+ブロブはL2に[データ可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)を提供します。これらは[前回のネットワーク・アップグレード](/roadmap/dencun/)で導入されました。
 
-現在、ネットワークはブロックあたり平均3つのブロブ、最大6つのブロブを目標としています。[EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)により、平均ブロブ数は6に増加し、ブロックあたり最大9つになるため、イーサリアムのロールアップの容量が増加します。このEIPは、[PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)がさらに多くのブロブ数を可能にするまでのギャップを埋めるのに役立ちます。
+ペクトラ以前は、ネットワークは1ブロックあたり平均3個、最大6個のブロブを目標としていました。[EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)は、この目標を6個に、最大値を1ブロックあたり9個に引き上げ、イーサリアムのロールアップの容量を増加させました。これは、[フサカ](/roadmap/fusaka/)で導入され、さらに多くのブロブ数を可能にする[PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)までのギャップを埋めるものでした。
 
 ### コールデータ・コストの引き上げ {#7623}
 

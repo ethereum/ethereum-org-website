@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-07-22T22:39:20.214Z",
-  "rootHash": "a5ad63c9ead3",
+  "generatedAt": "2026-09-23T05:00:31.981Z",
+  "rootHash": "930dfa2637e4",
   "tree": {
-    "contentHash": "1d8170dc74dd",
+    "contentHash": "cd793370138d",
     "anchorHash": "846928701ae9",
     "children": {
       "page-index-meta-title": {
@@ -152,7 +152,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-privacy-cta": {
-        "contentHash": "5d1a362a585c",
+        "contentHash": "cc549a8c5e6b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-privacy-traditional-label": {
@@ -742,5 +742,5 @@
       "page-index-latest-updates-cta"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a2a1283ba2b035641be377010048cc33e45c9e1a"
 }
