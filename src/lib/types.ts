@@ -1544,6 +1544,7 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number

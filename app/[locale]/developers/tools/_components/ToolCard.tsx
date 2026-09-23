@@ -13,8 +13,11 @@ import { getToolKey } from "@/lib/utils/getToolKey"
  */
 const ToolCard = memo(function ToolCard({
   tool,
+  cropsNativeLabel,
 }: {
   tool: DeveloperToolWithCategory
+  /** Translated badge text; the badge renders only when `tool.crops_native` is set */
+  cropsNativeLabel?: string
 }) {
   return (
     // content-visibility lets the browser skip layout/paint of off-screen
@@ -27,6 +30,8 @@ const ToolCard = memo(function ToolCard({
         descriptionClassName="text-sm [&>p]:text-body-medium"
         descriptionMaxLines={2}
         descriptionExpandable={false}
+        category={tool.crops_native ? cropsNativeLabel : undefined}
+        categoryTagStatus="success"
         thumbnail={tool.thumbnail_url ?? undefined}
         fallbackIcon={
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />

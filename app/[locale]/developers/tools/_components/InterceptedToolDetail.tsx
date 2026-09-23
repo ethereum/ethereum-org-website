@@ -1,7 +1,9 @@
+import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
+import Tooltip from "@/components/Tooltip"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import {
@@ -69,9 +71,25 @@ const InterceptedToolDetail = async ({
         )}
         <div className="flex flex-col gap-4 p-4 sm:p-8">
           <div className="space-y-1">
-            <Tag size="small" status="tag">
-              {categoryLabels[tool.categoryId] || tool.categoryId}
-            </Tag>
+            <div className="flex flex-wrap gap-2">
+              <Tag size="small" status="tag">
+                {categoryLabels[tool.categoryId] || tool.categoryId}
+              </Tag>
+              {tool.crops_native && (
+                <Tooltip
+                  content={
+                    <p className="text-body">
+                      {t("page-developers-tools-crops-native-description")}
+                    </p>
+                  }
+                >
+                  <Tag size="small" status="success" className="gap-1">
+                    {t("page-developers-tools-crops-native")}
+                    <Info className="size-3 shrink-0" />
+                  </Tag>
+                </Tooltip>
+              )}
+            </div>
             <p className="text-sm text-body-medium">
               {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
             </p>

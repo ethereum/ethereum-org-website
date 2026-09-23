@@ -1,3 +1,4 @@
+import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -6,6 +7,7 @@ import type { Lang, PageParams } from "@/lib/types"
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Tooltip from "@/components/Tooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -141,8 +143,22 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
             )}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <div>
+                <div className="flex flex-wrap gap-2">
                   <Tag status="tag">{categoryLabel}</Tag>
+                  {tool.crops_native && (
+                    <Tooltip
+                      content={
+                        <p className="text-body">
+                          {t("page-developers-tools-crops-native-description")}
+                        </p>
+                      }
+                    >
+                      <Tag status="success" className="gap-1">
+                        {t("page-developers-tools-crops-native")}
+                        <Info className="size-3 shrink-0" />
+                      </Tag>
+                    </Tooltip>
+                  )}
                 </div>
                 <h1 className="mt-0">{tool.name}</h1>
                 <p className="text-sm text-body-medium">
@@ -180,7 +196,11 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {relatedTools.map((related) => (
-                  <ToolCard key={getToolKey(related)} tool={related} />
+                  <ToolCard
+                    key={getToolKey(related)}
+                    tool={related}
+                    cropsNativeLabel={t("page-developers-tools-crops-native")}
+                  />
                 ))}
               </div>
             </section>

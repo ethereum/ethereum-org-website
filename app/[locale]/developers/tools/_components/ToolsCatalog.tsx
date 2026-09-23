@@ -39,6 +39,7 @@ type ToolsCatalogProps = {
     allCategories: string
     resultsLabel: string
     noResults: string
+    cropsNative: string
   }
   currentCategoryId?: string
 }
@@ -85,6 +86,7 @@ type ToolsResultsProps = {
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
+  cropsNativeLabel: string
 }
 
 const ToolsResults = memo(function ToolsResults({
@@ -93,6 +95,7 @@ const ToolsResults = memo(function ToolsResults({
   categories,
   categoryLabels,
   subcategoryLabels,
+  cropsNativeLabel,
 }: ToolsResultsProps) {
   const nf = numberFormat(locale)
 
@@ -129,6 +132,10 @@ const ToolsResults = memo(function ToolsResults({
             const subcategoryTools =
               toolsBySubcategory.get(subcategory.id)?.slice() || []
             subcategoryTools.sort((a, b) => {
+              // CROPS Native tools lead their subcategory, ranked among themselves as usual
+              const cropsDiff =
+                Number(!!b.crops_native) - Number(!!a.crops_native)
+              if (cropsDiff !== 0) return cropsDiff
               const scoreDiff = getToolSortScore(b) - getToolSortScore(a)
               if (scoreDiff !== 0) return scoreDiff
               return a.name.localeCompare(b.name)
@@ -179,7 +186,11 @@ const ToolsResults = memo(function ToolsResults({
                   </div>
                   <div className="grid grid-cols-auto-3 gap-x-8">
                     {subcategoryTools.map((tool) => (
-                      <ToolCard key={getToolKey(tool)} tool={tool} />
+                      <ToolCard
+                        key={getToolKey(tool)}
+                        tool={tool}
+                        cropsNativeLabel={cropsNativeLabel}
+                      />
                     ))}
                   </div>
                 </div>
@@ -317,6 +328,7 @@ export default function ToolsCatalog({
           categories={categories}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}
+          cropsNativeLabel={labels.cropsNative}
         />
       )}
     />
