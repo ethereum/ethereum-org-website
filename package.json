@@ -37,7 +37,8 @@
     "trigger:dev": "trigger dev --env-file src/data-layer/.env.local",
     "trigger:deploy": "trigger deploy --env-file src/data-layer/.env.local",
     "typesense:promote": "tsx src/scripts/typesense/promote.ts",
-    "typesense:curate": "tsx src/scripts/typesense/curate.ts"
+    "typesense:curate": "tsx src/scripts/typesense/curate.ts",
+    "typesense:localize-curation": "tsx src/scripts/typesense/localize-curation.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1115.0",

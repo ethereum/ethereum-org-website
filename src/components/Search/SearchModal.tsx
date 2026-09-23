@@ -356,7 +356,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // identical leaders and `found` across the labeled queries.
       group_limit: 1,
       // Shared with the promote gate, so a script cannot measure ranking users never
-      // receive. See client.ts for why six buckets and why `item_priority` is gone.
+      // receive; the rationale lives with the values in searchParams.ts.
       text_match_type: TEXT_MATCH_TYPE,
       sort_by: SORT_BY,
       // Widen a multi-word query that finds fewer than this many results by dropping its

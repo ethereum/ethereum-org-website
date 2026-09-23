@@ -1,5 +1,5 @@
 {
-  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Seeded from the hand-labeled queries in groundtruth.json plus the search rules; hand edits win and are preserved. Singular and plural are listed separately because the index does not stem, so 'smart contract' and 'smart contracts' rank independently. See typesense/README.md.",
+  "_comment": "Pinned search results: query -> ordered paths, prefixed per locale at apply time. Seeded from the hand-labelled queries in groundtruth.json plus the search rules; hand edits win and are preserved. Singular and plural are listed separately because the index does not stem, so 'smart contract' and 'smart contracts' rank independently. See typesense/README.md. Rules may name an ETHGlossary `term`; `pnpm typesense:localize-curation` then writes that term's forms in every locale to curation-aliases.json, which curate pins alongside the English query.",
   "rules": [
     {
       "q": "app",
@@ -21,6 +21,7 @@
     },
     {
       "q": "binance",
+      "term": "binance",
       "pin": [
         "/get-eth/#country-picker"
       ]
@@ -39,6 +40,7 @@
     },
     {
       "q": "coinbase",
+      "term": "coinbase",
       "pin": [
         "/wallets/find-wallet/coinbase-wallet/",
         "/get-eth/#country-picker"
@@ -52,30 +54,35 @@
     },
     {
       "q": "dapp",
+      "term": "decentralized application (dapp)",
       "pin": [
         "/apps/"
       ]
     },
     {
       "q": "defi",
+      "term": "decentralized finance (defi)",
       "pin": [
         "/defi/"
       ]
     },
     {
       "q": "eip",
+      "term": "ethereum improvement proposal (eip)",
       "pin": [
         "/eips/"
       ]
     },
     {
       "q": "erc20",
+      "term": "erc-20",
       "pin": [
         "/developers/docs/standards/tokens/erc-20/"
       ]
     },
     {
       "q": "eth",
+      "term": "eth",
       "pin": [
         "/what-is-ether/"
       ]
@@ -88,12 +95,14 @@
     },
     {
       "q": "etherscan.io",
+      "term": "etherscan",
       "pin": [
         "/resources/"
       ]
     },
     {
       "q": "evm",
+      "term": "ethereum virtual machine (evm)",
       "pin": [
         "/developers/docs/evm/"
       ]
@@ -106,12 +115,14 @@
     },
     {
       "q": "gas",
+      "term": "gas",
       "pin": [
         "/gas/"
       ]
     },
     {
       "q": "glamsterdam",
+      "term": "glamsterdam",
       "pin": [
         "/roadmap/glamsterdam/"
       ]
@@ -148,6 +159,7 @@
     },
     {
       "q": "layer 2",
+      "term": "layer 2 (l2)",
       "pin": [
         "/layer-2/"
       ]
@@ -160,12 +172,14 @@
     },
     {
       "q": "mempool",
+      "term": "mempool",
       "pin": [
         "/developers/docs/mev/"
       ]
     },
     {
       "q": "merkle",
+      "term": "merkle tree",
       "pin": [
         "/developers/docs/data-structures-and-encoding/patricia-merkle-trie/"
       ]
@@ -178,36 +192,42 @@
     },
     {
       "q": "metamask",
+      "term": "metamask",
       "pin": [
         "/wallets/find-wallet/metamask/"
       ]
     },
     {
       "q": "mev",
+      "term": "maximal extractable value (mev)",
       "pin": [
         "/developers/docs/mev/"
       ]
     },
     {
       "q": "multisig",
+      "term": "multisig",
       "pin": [
         "/developers/docs/smart-contracts/#multisig"
       ]
     },
     {
       "q": "nft",
+      "term": "non-fungible token (nft)",
       "pin": [
         "/nft/"
       ]
     },
     {
       "q": "node",
+      "term": "node",
       "pin": [
         "/run-a-node/"
       ]
     },
     {
       "q": "nonce",
+      "term": "nonce",
       "pin": [
         "/developers/docs/transactions/"
       ]
@@ -238,12 +258,14 @@
     },
     {
       "q": "privacy",
+      "term": "privacy",
       "pin": [
         "/privacy/"
       ]
     },
     {
       "q": "proof of stake",
+      "term": "proof-of-stake (pos)",
       "pin": [
         "/developers/docs/consensus-mechanisms/pos/"
       ]
@@ -256,6 +278,7 @@
     },
     {
       "q": "remix",
+      "term": "remix",
       "pin": [
         "/apps/remix/"
       ]
@@ -274,6 +297,7 @@
     },
     {
       "q": "rwa",
+      "term": "real world assets (rwa)",
       "pin": [
         "/real-world-assets/"
       ]
@@ -286,6 +310,7 @@
     },
     {
       "q": "smart contract",
+      "term": "smart contract",
       "pin": [
         "/smart-contracts/"
       ]
@@ -298,6 +323,7 @@
     },
     {
       "q": "staking",
+      "term": "staking",
       "pin": [
         "/staking/"
       ]
@@ -310,6 +336,7 @@
     },
     {
       "q": "token",
+      "term": "token",
       "pin": [
         "/developers/docs/standards/tokens/"
       ]
@@ -340,6 +367,7 @@
     },
     {
       "q": "usdc",
+      "term": "usdc",
       "pin": [
         "/stablecoins/"
       ]
@@ -352,6 +380,7 @@
     },
     {
       "q": "wallet",
+      "term": "wallet",
       "pin": [
         "/wallets/"
       ]
@@ -364,12 +393,14 @@
     },
     {
       "q": "web3",
+      "term": "web3",
       "pin": [
         "/web3/"
       ]
     },
     {
       "q": "whitepaper",
+      "term": "whitepaper",
       "pin": [
         "/whitepaper/"
       ]
