@@ -1,10 +1,10 @@
 [
   {
     "item": "Green review-only PRs (#19017/#19259/#19261)",
-    "intent": "Three standalone green production/SEO fixes blocked only on the review gate, no reviewer assigned",
+    "intent": "Three standalone green SEO/production fixes blocked only on the review gate, no reviewer assigned",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Name a standing merger for small green PRs, or declare the SEO work parked",
+    "next_human_decision": "Name a standing merger for small green PRs, or declare the SEO batch parked",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -15,29 +15,31 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "PR #19043"
+      "PR #19318",
+      "PR #19294",
+      "PR #19292"
     ],
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "all three ms=BLOCKED, ci=SUCCESS, 0 reviews",
-      "#19017 author-confirmed Aug 10; merge-recommended 13 mornings, zero action",
-      "#19043 already rotted to CONFLICTING earlier"
+      "all three ci=SUCCESS, 0 reviews, idle 12-20d",
+      "same no-assigned-reviewer wall now also catching fresh team PRs #19318/#19294/#19292",
+      "recommended 14 mornings, zero action"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 13
+    "runs_seen": 14
   },
   {
     "item": "Issue #18891",
     "intent": "intl deterministic propagation drops new frontmatter keys (trio with #18896/#19031)",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Assign wackerow or close the trio - nobody owns intl-pipeline bugs",
+    "next_human_decision": "Review team PR #19295 (supersedes external #18896, fixes this trio) rather than re-triaging the issues",
     "waiting_on": [
       {
-        "actor": "maintainer",
-        "action": "Assign or close"
+        "actor": "myelinated-wackerow",
+        "action": "Land #19295"
       }
     ],
     "impact": "medium",
@@ -45,17 +47,18 @@
     "risk": "low",
     "related_items": [
       "PR #18896",
-      "Issue #19031"
+      "Issue #19031",
+      "PR #19295"
     ],
     "owner_lane": "tooling",
     "confidence": 0.7,
     "evidence": [
-      "team issue, unassigned, no reply",
-      "idle 29d, day 16 unactioned"
+      "team issue, unassigned, idle 30d, day 17 unactioned",
+      "PR #19295 is the comprehensive team fix (YAML frontmatter, manifests v2) that obsoletes the trio"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-05",
-    "runs_seen": 16
+    "runs_seen": 17
   },
   {
     "item": "Issue #19014",
@@ -72,16 +75,18 @@
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "PR #18696"
+    ],
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
       "vague, no actionable detail",
-      "Status: Stale, open 8 mornings post-suggestion"
+      "Status: Stale, day 9 post-suggestion, nobody owns invalid triage"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "Issue #19019",
@@ -98,16 +103,18 @@
     "impact": "low",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "PR #18696"
+    ],
     "owner_lane": "content",
     "confidence": 0.85,
     "evidence": [
       "placeholder text in every field",
-      "invalid label, Status: Stale"
+      "invalid+Stale, day 8; stale-bot PR #18696 would auto-handle"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-03",
-    "runs_seen": 7
+    "runs_seen": 8
   },
   {
     "item": "Issue #19247",
@@ -129,11 +136,11 @@
     "confidence": 0.9,
     "evidence": [
       "body is emoji/'Btc', no repro",
-      "labeled bug+needs triage"
+      "labeled bug+needs triage, day 5"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "Issue #19271",
@@ -154,39 +161,48 @@
     "owner_lane": "code",
     "confidence": 0.9,
     "evidence": [
-      "'Fazer pix', failed PDF upload",
-      "no repro"
+      "'Vou fazer pix', failed PDF upload, no repro",
+      "day 4"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-14",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
-    "item": "Node-provider listing batch (#19132/#19157/#19035/#18872)",
-    "intent": "Single-file node-provider additions awaiting product review",
+    "item": "Node-provider/listing product-review bottleneck",
+    "intent": "The dominant queue dynamic: ~13 one-file listing PRs plus ~15 suggest-a-tool/exchange/wallet issues all stalled with no product reviewer",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Apply the node-provider listing bar once across all four, or say what's blocking",
+    "next_human_decision": "Name a product-review owner, run one batched triage session, or adopt stale-bot PR #18696 as the auto-close valve",
     "waiting_on": [
       {
         "actor": "product",
-        "action": "Product review as a set"
+        "action": "Own the product-review queue"
       }
     ],
-    "impact": "medium",
+    "impact": "high",
     "effort_to_unblock": "medium",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "PR #19314",
+      "PR #19313",
+      "PR #19305",
+      "PR #19281",
+      "PR #19268",
+      "PR #19035",
+      "PR #18872",
+      "PR #18696"
+    ],
     "owner_lane": "product",
-    "confidence": 0.7,
+    "confidence": 0.75,
     "evidence": [
-      "all one-file adds, ci=SUCCESS",
-      "needs product review label",
-      "#19132 needs rebase (REVIEW_REQUIRED); day 8"
+      "~13 listing PRs at ms=BLOCKED ci=SUCCESS needs-product-review, all green one-file adds",
+      "78 external issues awaiting team reply; suggest-a-tool issues span #19299..#17993",
+      "day 9 escalation: open-ended per-item review produced nothing 8 mornings"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #17263",
@@ -207,11 +223,11 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "draft, Blocked+Stale, idle 176d"
+      "draft, Blocked+Stale, idle 177d"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 14
+    "runs_seen": 15
   },
   {
     "item": "PR #18918",
@@ -235,16 +251,16 @@
     "confidence": 0.8,
     "evidence": [
       "ci=FAILURE (4 checks), CHANGES_REQUESTED",
-      "0 replies, idle 28d, day 17 unactioned"
+      "0 replies, idle 29d, day 18 unactioned"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-04",
-    "runs_seen": 17
+    "runs_seen": 18
   },
   {
     "item": "PR #19097",
     "intent": "Add ether.fi to staking pools",
-    "state": "decision-needed",
+    "state": "waiting-on-contributor",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "pettinarip re-review the addressed changes",
     "waiting_on": [
@@ -262,13 +278,13 @@
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
-      "contributor pushed fixes + inline replies 09-21 (idle 0)",
-      "reviewDecision still CHANGES_REQUESTED but superseded; ci=PENDING",
-      "ball now back with team"
+      "contributor pushed fixes + replies 09-21 (idle 1)",
+      "rd=CHANGES_REQUESTED superseded, ci=PENDING; ball back with team",
+      "day 2"
     ],
     "analyzed_sha": "d4ab1cb",
     "first_seen": "2026-09-04",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19217",
@@ -293,11 +309,11 @@
     "evidence": [
       "ms=BLOCKED, ci=SUCCESS, no reviews",
       "implements linked #17280",
-      "idle 14d"
+      "idle 15d, day 7"
     ],
     "analyzed_sha": "634f26b",
     "first_seen": "2026-09-04",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19234",
@@ -319,11 +335,11 @@
     "confidence": 0.8,
     "evidence": [
       "team asked for wallet issue form (wackerow)",
-      "needs product review label, idle 11d"
+      "needs product review label, idle 12d, day 5"
     ],
     "analyzed_sha": "fd780f0",
     "first_seen": "2026-09-11",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19272",
@@ -346,23 +362,23 @@
     "owner_lane": "technical-content",
     "confidence": 0.7,
     "evidence": [
-      "one file roadmap/glamsterdam/index.md, ci=SUCCESS ms=BLOCKED, 0 reviews",
+      "one file, ci=SUCCESS ms=BLOCKED, 0 reviews",
       "implements bot content-review issue #19171",
-      "day 2 unchanged"
+      "idle 7d, day 3"
     ],
     "analyzed_sha": "3aa58e4",
     "first_seen": "2026-09-15",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19292",
     "intent": "Fix timing-out fetch-developer-tools task so the page serves all 440 tools",
-    "state": "verify-then-merge",
+    "state": "blocked",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "pettinarip: review and merge to restore the 141 missing tools",
+    "next_human_decision": "pettinarip: approving review + merge to restore the 141 missing tools",
     "waiting_on": [
       {
-        "actor": "pettinarip",
+        "actor": "maintainer",
         "action": "Approving review + merge"
       }
     ],
@@ -370,18 +386,20 @@
     "effort_to_unblock": "small",
     "risk": "low",
     "related_items": [
-      "Issue #19284"
+      "Issue #19284",
+      "PR #19294",
+      "PR #19319"
     ],
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "page served 299 of 440 tools since 13 Sep; team fix, ci=SUCCESS",
-      "wackerow self-reviewed COMMENTED at head 7bbc46e, aiReview superseded",
-      "ms=BLOCKED on required approving review"
+      "page serves 299/440 tools since 13 Sep; team fix, ci=SUCCESS",
+      "wackerow self-reviewed COMMENTED at 7bbc46e, aiReview superseded",
+      "ms=BLOCKED on required approving review, day 2"
     ],
     "analyzed_sha": "7bbc46e",
     "first_seen": "2026-09-22",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19294",
@@ -398,17 +416,20 @@
     "impact": "high",
     "effort_to_unblock": "small",
     "risk": "low",
-    "related_items": [],
+    "related_items": [
+      "PR #19292",
+      "PR #19319"
+    ],
     "owner_lane": "tooling",
     "confidence": 0.85,
     "evidence": [
-      "one line, ci=SUCCESS ms=BLOCKED, no reviews",
-      "Trigger.dev stops deploying Node 21 default on 5 Oct 2026",
-      "node-22 matches .nvmrc"
+      "one line, ci=SUCCESS ms=BLOCKED, no reviews, idle 5d",
+      "Trigger.dev stops deploying Node 21 default on 5 Oct 2026 (12 days out)",
+      "node-22 matches .nvmrc, day 2"
     ],
     "analyzed_sha": "9277dac",
     "first_seen": "2026-09-22",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19295",
@@ -425,24 +446,88 @@
     "impact": "medium",
     "effort_to_unblock": "large",
     "risk": "medium",
-    "related_items": [],
+    "related_items": [
+      "Issue #18891",
+      "PR #18896",
+      "Issue #19031"
+    ],
     "owner_lane": "tooling",
     "confidence": 0.6,
     "evidence": [
       "13023 files, ci=SUCCESS ms=BLOCKED, 0 reviews",
-      "fixes latent bug: 1150 translated files carry stale array frontmatter",
-      "too large/specialized to judge from evidence - abstain"
+      "supersedes external #18896 and fixes the #18891 trio; 1150 files carry stale array frontmatter",
+      "too large/specialized to judge from evidence - abstain, day 2"
     ],
     "analyzed_sha": "fab17f9",
     "first_seen": "2026-09-22",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19318",
+    "intent": "Guard null src in the Image wrapper - fixes the null-src crash that aborts the static build (closes #19317)",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Any team reviewer: verify the guard, then merge to unblock the release build",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Approving review + merge"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19317",
+      "Issue #19315"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.85,
+    "evidence": [
+      "team fix, ci=SUCCESS ms=BLOCKED on required review, idle 0",
+      "one null logoImage aborted the v11.25.0 static export (#19315)",
+      "aiReview looks-mergeable, not superseded"
+    ],
+    "analyzed_sha": "1d8e0c0",
+    "first_seen": "2026-09-23",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19319",
+    "intent": "Automated intl translation pipeline PR (topic frontmatter migration across 24 locales)",
+    "state": "verify-then-merge",
+    "recommended_disposition": "merge",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #19292",
+      "PR #19294"
+    ],
+    "owner_lane": "translation",
+    "confidence": 0.85,
+    "evidence": [
+      "ms=CLEAN (the only merge-ready PR in queue), ci=SUCCESS",
+      "routine pipeline output, 24 locale manifest re-stamp",
+      "day 1"
+    ],
+    "analyzed_sha": "feb3ce4",
+    "first_seen": "2026-09-23",
     "runs_seen": 1
   },
   {
     "item": "Recovery crash cluster (#19311/#19306/#19238/#19263/#19233/#19221)",
-    "intent": "Growing set of unassigned production crashes; homepage/get-eth RangeError stack-overflows now recurring",
+    "intent": "Unassigned production crashes; homepage/get-eth RangeError stack-overflows recurring, plus guard drafts #19198/#19208",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Assign one owner to the RangeError cluster as a regression; land or close guard drafts #19198/#19208",
+    "next_human_decision": "Assign one owner to the RangeError cluster as a single regression; land or close guard drafts #19198/#19208",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -459,12 +544,12 @@
     "owner_lane": "code",
     "confidence": 0.75,
     "evidence": [
-      "2 fresh RangeError crashes #19311 (homepage, 11 hits) + #19306 (/get-eth), real Sentry links",
-      "atop 4 unactioned recovery issues, all unassigned/no reply",
-      "day 4; open-ended triage produced nothing 3 mornings - reads as one homepage recursion regression"
+      "RangeError crashes #19311 (homepage) + #19306 (/get-eth) atop 4 older recovery issues, all unassigned/no reply",
+      "reads as one homepage recursion regression",
+      "day 2, still no owner"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 1
+    "runs_seen": 2
   }
 ]
