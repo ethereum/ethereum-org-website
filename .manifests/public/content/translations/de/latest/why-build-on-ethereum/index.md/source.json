@@ -1,31 +1,50 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/latest/why-build-on-ethereum/index.md",
   "generatedAt": "2026-06-03T07:04:15.385Z",
-  "rootHash": "76f2395cef75",
+  "rootHash": "e18c62ec2060",
   "tree": {
-    "contentHash": "c205340ed695",
-    "anchorHash": "b1d0363f497b",
+    "contentHash": "6f6bd1954667",
+    "anchorHash": "1cea8c51b846",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0968d690bfa9",
+        "contentHash": "477cfb910177",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d13a9afc99e9",
+        "contentHash": "07d777535eba",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "320fc488a16e"
+        "anchorHash": "fc7c73a89b18"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d0b40ef7405d"
+        "anchorHash": "9e847484a658"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "20d30f97ac47",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "b38e227d5dea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "3c7fb9a54380",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "581153e759e9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",

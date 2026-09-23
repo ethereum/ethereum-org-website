@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-things-i-like-mariano-conti/index.md",
   "generatedAt": "2026-04-28T23:31:21.660Z",
-  "rootHash": "dad66df7e404",
+  "rootHash": "97c74f29c0cf",
   "tree": {
-    "contentHash": "dea6a1fce067",
-    "anchorHash": "6dacdc1eec90",
+    "contentHash": "94b95717525f",
+    "anchorHash": "494d7362391c",
     "children": {
       "frontmatter:title": {
-        "contentHash": "5bd715a3c080",
+        "contentHash": "faf0dd2c6539",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "4b9bced6bd5e",
+        "contentHash": "145b9c6ec0b5",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "41c0548633cd"
+        "anchorHash": "cd729cd22378"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "dd1de8e9eb32"
+        "anchorHash": "cc22c81d63b6"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ebd3b6655337"
+        "anchorHash": "797ef3657a5f"
       },
       "prose:1": {
         "contentHash": "606994c2d021",

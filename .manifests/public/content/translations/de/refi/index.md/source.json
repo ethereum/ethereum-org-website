@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/refi/index.md",
   "generatedAt": "2026-06-19T23:35:56.412Z",
-  "rootHash": "883b729393f7",
+  "rootHash": "ab920e47ddaa",
   "tree": {
-    "contentHash": "dd278a0496be",
-    "anchorHash": "810735f47f29",
+    "contentHash": "39e7d155b9a3",
+    "anchorHash": "6c9e1ab5acf9",
     "children": {
       "frontmatter:title": {
         "contentHash": "7b5b9449d92f",
@@ -32,12 +32,31 @@
         "anchorHash": "13504d1f0b1e"
       },
       "frontmatter:alt": {
-        "contentHash": "12ae32cb1ec0",
+        "contentHash": "e3b0c44298fc",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "7f4424da3d5f",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "de20cb8d714b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "752e9c3b20a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "1be3a05cad73",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-is-refi": {
         "contentHash": "465192e78d92",

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/zero-knowledge-proofs-5-levels/index.md",
   "generatedAt": "2026-04-29T06:28:19.337Z",
-  "rootHash": "43cd560409ff",
+  "rootHash": "64386805fdf5",
   "tree": {
-    "contentHash": "83f3a831a50c",
-    "anchorHash": "89bfc960894c",
+    "contentHash": "cdc5a570db0f",
+    "anchorHash": "19fd366b27e5",
     "children": {
       "frontmatter:title": {
-        "contentHash": "bc137d7ec3f5",
+        "contentHash": "9e9d1bd72102",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ceed7b56a15a",
+        "contentHash": "6d39e684e7ae",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ba9497792820"
+        "anchorHash": "9f799c4263e8"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4811b7223aab"
+        "anchorHash": "d97c4ff6c30d"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "192624f5df52",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "38344bba4684"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7a13e7cfb990"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e06554818e90"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "78ebb06ef2aa"
+        "anchorHash": "27cba1f8a0c9"
       },
       "prose:1": {
         "contentHash": "c727b509481c",
