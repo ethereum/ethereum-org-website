@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/erc-721-vyper-annotated-code/index.md",
   "generatedAt": "2026-07-22T23:39:37.645Z",
-  "rootHash": "f17d80478579",
+  "rootHash": "cc9b47afd77b",
   "tree": {
-    "contentHash": "1424f1183411",
-    "anchorHash": "1e73297d1dc5",
+    "contentHash": "68824006cc77",
+    "anchorHash": "ff2ff6f6827d",
     "children": {
       "frontmatter:title": {
-        "contentHash": "7458380e58b8",
+        "contentHash": "976b9cc1623c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,27 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e7c36a1ed4d4"
+        "contentHash": "30881a024fd8",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "4c50d0fcb0a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "39d40b1bb241",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "11a4a60b518b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

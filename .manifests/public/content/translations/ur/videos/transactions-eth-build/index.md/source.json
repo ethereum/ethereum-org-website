@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/transactions-eth-build/index.md",
   "generatedAt": "2026-04-29T06:21:42.106Z",
-  "rootHash": "c2a001f24db6",
+  "rootHash": "63ec5da6efa1",
   "tree": {
-    "contentHash": "ada3b4757f0d",
-    "anchorHash": "438dfe4e15b1",
+    "contentHash": "28b859a22101",
+    "anchorHash": "ef0f5e2e413d",
     "children": {
       "frontmatter:title": {
-        "contentHash": "cd69e758b599",
+        "contentHash": "904970c81a57",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "c6b6359921cd",
+        "contentHash": "8d06b38a02c9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "636e5e00895e"
+        "anchorHash": "9f2294273894"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bf8c90b59d39"
+        "anchorHash": "1ba464a4ea99"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "a927eec62f04",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "81dc075c3d55"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1cb40c945588"
+        "anchorHash": "0664d2e7c98d"
       },
       "prose:1": {
         "contentHash": "451a7eedc4aa",

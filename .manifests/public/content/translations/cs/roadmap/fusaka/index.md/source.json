@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/fusaka/index.md",
   "generatedAt": "2026-07-23T00:16:32.354Z",
-  "rootHash": "1414b211455f",
+  "rootHash": "9f8dc8c11bba",
   "tree": {
-    "contentHash": "b2544aa1e28d",
-    "anchorHash": "e24f65417f81",
+    "contentHash": "9d9ca9be3adc",
+    "anchorHash": "2fe8b8927415",
     "children": {
       "frontmatter:title": {
-        "contentHash": "364ef645943a",
+        "contentHash": "9667d69eae81",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:metaTitle": {
@@ -28,8 +28,22 @@
         "anchorHash": "7fef9479c8bc"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "bd71957f15b3"
+        "contentHash": "f5818652a990",
+        "anchorHash": "bd3ff7caf85d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8a2c0f8bbcfe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:2": {
         "contentHash": "fc8454eb8e11",

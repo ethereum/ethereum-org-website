@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/gaming/index.md",
   "generatedAt": "2026-07-23T00:07:44.367Z",
-  "rootHash": "d400e209ae59",
+  "rootHash": "4a76c385e1a9",
   "tree": {
-    "contentHash": "4140b8b33fed",
-    "anchorHash": "4cb8737ba91b",
+    "contentHash": "67f643badfbc",
+    "anchorHash": "038e54c5049f",
     "children": {
       "frontmatter:title": {
         "contentHash": "1ebf1ba9edef",
@@ -32,24 +32,78 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "806fdfd5feff",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "b705689795ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "74618b13547f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "fc76c1ed9cdc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:buttons": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "frontmatter:- content": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "8c8dd53bb9de"
-      },
-      "frontmatter:toId": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "cd7ac4c61fd8"
-      },
-      "frontmatter:isSecondary": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "fcbcf165908d"
+        "contentHash": "e13a80477531",
+        "anchorHash": "137884a9db5c",
+        "children": {
+          "0": {
+            "contentHash": "f5818652a990",
+            "anchorHash": "7be97ae79d1b",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1445799c033a"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "24f191de8b04"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId"
+            ]
+          },
+          "1": {
+            "contentHash": "918e1f78a588",
+            "anchorHash": "a33de237aed0",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "8c8dd53bb9de"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "cd7ac4c61fd8"
+              },
+              "isSecondary": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "fcbcf165908d"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId",
+              "isSecondary"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "gaming-on-ethereum": {
         "contentHash": "a999c11c1b02",
@@ -694,11 +748,6 @@
       "frontmatter:sidebarDepth",
       "frontmatter:summaryPoints",
       "frontmatter:buttons",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:isSecondary",
       "gaming-on-ethereum",
       "rise-of-ethereum-gaming",
       "ethereums-gaming-ecosystem-overview",

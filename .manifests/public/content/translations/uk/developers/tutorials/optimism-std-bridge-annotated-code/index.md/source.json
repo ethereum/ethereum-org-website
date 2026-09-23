@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/optimism-std-bridge-annotated-code/index.md",
   "generatedAt": "2026-06-30T00:46:29.023Z",
-  "rootHash": "f00f5c1c5658",
+  "rootHash": "de2ec057f889",
   "tree": {
-    "contentHash": "ff085b422fea",
-    "anchorHash": "6ebe8fddeb9a",
+    "contentHash": "38a4f7acd702",
+    "anchorHash": "0f83517ab3d8",
     "children": {
       "frontmatter:title": {
-        "contentHash": "895dd40de55e",
+        "contentHash": "010362b76438",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -20,8 +20,27 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "8b5aa41db806"
+        "contentHash": "a75d548caf46",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "17f29b073143",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "0c6eea24ed5f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

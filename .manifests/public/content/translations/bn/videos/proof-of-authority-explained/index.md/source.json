@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/proof-of-authority-explained/index.md",
   "generatedAt": "2026-04-29T00:00:09.223Z",
-  "rootHash": "a35c272a097c",
+  "rootHash": "af0ef97b7042",
   "tree": {
-    "contentHash": "a3be11c63464",
-    "anchorHash": "94cbfd31ccfa",
+    "contentHash": "61850487b214",
+    "anchorHash": "f718265614d4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "975c906573b6",
+        "contentHash": "f19abfcb4c61",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "a321aa3960f3",
+        "contentHash": "be851d60028b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7d3bac8a1e57"
+        "anchorHash": "688a9e8dd477"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ed78755f5676"
+        "anchorHash": "2f11f1d293c3"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "c848bb26e88c",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c983c585ac3c"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "694d85cd3c7a"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "3266508d05b4"
+        "anchorHash": "735235928bab"
       },
       "prose:1": {
         "contentHash": "4a648acdd90f",
