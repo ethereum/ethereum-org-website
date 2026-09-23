@@ -86,7 +86,10 @@ const resultKind = (hit: DocSearchHit): string => {
 const resultEvent = (hit: DocSearchHit) => ({
   eventCategory: "search",
   eventAction: resultKind(hit),
-  eventName: hit.url,
+  // An explorer URL carries the pasted address or hash. The network is all we record.
+  eventName: isExplorerHit(hit.objectID)
+    ? String((hit as unknown as Record<string, unknown>)["hierarchy.lvl1"])
+    : hit.url,
 })
 
 /**
@@ -245,6 +248,9 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       return (
         <a
           href={hit.url}
+          // The group header above a page row repeats its title word for word, so
+          // docsearch.css hides the header of any group that leads with one.
+          data-page-row={hit.type === "lvl1" || undefined}
           // Navigates this tab, so the event cannot wait for an idle callback.
           onClick={() =>
             trackCustomEvent(resultEvent(hit), { immediate: true })
