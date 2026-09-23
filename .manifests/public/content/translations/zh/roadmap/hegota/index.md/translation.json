@@ -1,0 +1,100 @@
+{
+  "version": 2,
+  "locale": "zh",
+  "translatedAt": "2026-09-23T15:43:28.217Z",
+  "englishManifestHash": "bedc0d9626b3",
+  "placeholderOrder": [
+    "LINK-1c8218",
+    "LINK-a21a82",
+    "LINK-b38536",
+    "LINK-e4a93e",
+    "LINK-53ee5c",
+    "LINK-d3fab2",
+    "LINK-1bf8cd",
+    "LINK-94abab",
+    "LINK-b36d37",
+    "LINK-f3ba18",
+    "LINK-b88e87",
+    "LINK-f9bbaf"
+  ],
+  "placeholderMap": {
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-1c8218": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/glamsterdam/"
+      }
+    },
+    "LINK-b38536": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/security/#censorship-resistance"
+      }
+    },
+    "LINK-e4a93e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-53ee5c": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#account"
+      }
+    },
+    "LINK-d3fab2": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-1bf8cd": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/security/#quantum-resistance"
+      }
+    },
+    "LINK-94abab": {
+      "type": "link",
+      "values": {
+        "url": "https://forkcast.org/upgrade/hegota"
+      }
+    },
+    "LINK-b36d37": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8081"
+      }
+    },
+    "LINK-f3ba18": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-b88e87": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8141"
+      }
+    },
+    "LINK-f9bbaf": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-09-23T15:43:28.217Z",
+      "status": "success"
+    }
+  }
+}
