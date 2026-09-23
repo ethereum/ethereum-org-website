@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/smart-contracts-code-is-law/index.md",
   "generatedAt": "2026-04-29T06:16:54.722Z",
-  "rootHash": "a7144b8d5dbf",
+  "rootHash": "5fedf170430a",
   "tree": {
-    "contentHash": "8d64db893e9f",
-    "anchorHash": "e9413c81fa1f",
+    "contentHash": "aee762f4f07b",
+    "anchorHash": "1cd53f8885e3",
     "children": {
       "frontmatter:title": {
-        "contentHash": "7871b9a8dee6",
+        "contentHash": "21b041364f67",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b86a1b3c3eb1",
+        "contentHash": "cad927641b31",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5b49836789e4"
+        "anchorHash": "3ef51a500598"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2f35df55c628"
+        "anchorHash": "14e4fba6c91d"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "381673fabf0b",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2658a7ac4df4"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4d863c652f5b"
+        "anchorHash": "7b1f6bccca57"
       },
       "prose:1": {
         "contentHash": "67d9118387fd",

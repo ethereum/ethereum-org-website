@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/index.md",
   "generatedAt": "2026-06-17T21:35:37.252Z",
-  "rootHash": "2453c5ec5ba3",
+  "rootHash": "222f39fbab6b",
   "tree": {
-    "contentHash": "e74d69b30e59",
-    "anchorHash": "d1f6e5a94f10",
+    "contentHash": "12f9380432a8",
+    "anchorHash": "baf8a3e16696",
     "children": {
       "frontmatter:title": {
         "contentHash": "7d27c29b3bf9",
@@ -20,8 +20,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d79ec386b8c3"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "c05510693868",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7e5b5a1a6b80"
+          }
+        }
       },
       "prose:1": {
         "contentHash": "0ee146d787d8",

@@ -30,6 +30,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/open-source/": "page-open-source",
   "/privacy/": "page-privacy",
   "/privacy/ethereum/": "page-privacy-ethereum",
+  "/privacy/online/": "page-privacy-online",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",

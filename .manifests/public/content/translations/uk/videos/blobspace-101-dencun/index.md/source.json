@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/blobspace-101-dencun/index.md",
   "generatedAt": "2026-04-29T04:46:28.501Z",
-  "rootHash": "9ce8935c8149",
+  "rootHash": "327783468c2d",
   "tree": {
-    "contentHash": "dd5aab9af8d2",
-    "anchorHash": "6e507864d09c",
+    "contentHash": "a349f6ba7bf0",
+    "anchorHash": "ad477784e3c9",
     "children": {
       "frontmatter:title": {
-        "contentHash": "128e6d1910f3",
+        "contentHash": "fa9c2e67dc75",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "82c9ac6988ec",
+        "contentHash": "c9aa076ddc42",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "502bb8195911"
+        "anchorHash": "9fe6a63d006d"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "75bd61820377"
+        "anchorHash": "509542d16e2a"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "8321046d29ef",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "567cf013bf70"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3aa3a994ea2f"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "400986f48a80"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dc2963d21f5f"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b1b2ece937e1"
+        "anchorHash": "9f247ae87fa2"
       },
       "prose:2": {
         "contentHash": "e8c8d2d5c72a",

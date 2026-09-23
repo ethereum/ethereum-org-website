@@ -15,6 +15,7 @@ import * as path from "path"
 
 import i18nConfig from "../../../i18n.config.json"
 
+import { GateError, runGates } from "./lib/gates"
 import {
   branchExists,
   createBranchFromSha,
@@ -24,7 +25,12 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { runFuseUsd, usageTotals } from "./lib/llm/cost-meter"
+import {
+  callReserveUsd,
+  minimumFuseUsd,
+  runFuseUsd,
+  usageTotals,
+} from "./lib/llm/cost-meter"
 import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
 import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
 import {
@@ -41,12 +47,15 @@ import {
 } from "./lib/llm/manifest-adapter"
 import { openRouterKeyStatus } from "./lib/llm/openrouter"
 import { planIncrementalBatches } from "./lib/llm/plan"
+import { classifyFailure, Quarantine } from "./lib/quarantine"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
-import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
-import { sanitizeTranslations } from "./lib/workflows/sanitization"
-import { logSection } from "./lib/workflows/utils"
+import {
+  createOrUpdateTranslationPR,
+  type SkippedPair,
+} from "./lib/workflows/pr-creation"
+import { logSection, shouldAbortRun } from "./lib/workflows/utils"
 import {
   config,
   getExcludedReason,
@@ -61,8 +70,12 @@ import {
   MANIFESTS_DIR,
   MAX_BATCHES_PER_FILE,
   MAX_PROMPT_BYTES,
+  MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
+  QUARANTINE_LANG,
+  QUARANTINE_PATH,
 } from "./constants"
+import { runSanitizer } from "./intl-sanitizer"
 import type { LlmTranslator } from "./pipeline"
 import {
   findStructuralRegressions,
@@ -78,6 +91,14 @@ interface FileContext {
   path: string
   content: string
   type: "markdown" | "json"
+}
+
+/** One line of the end-of-run table. */
+interface PairResult {
+  file: string
+  locale: string
+  status: "pass" | "skip" | "fail"
+  detail: string
 }
 
 // ---------------------------------------------------------------------------
@@ -257,6 +278,51 @@ function printTokenSummary(
 }
 
 /**
+ * One line per file+locale, so a run's outcome can be read without grepping,
+ * and the same table as a GitHub job summary when running in Actions.
+ */
+function printResultTable(results: PairResult[]) {
+  if (results.length === 0) return
+  logSection("Results")
+  const order = { fail: 0, skip: 1, pass: 2 } as const
+  const sorted = [...results].sort(
+    (a, b) =>
+      order[a.status] - order[b.status] ||
+      a.file.localeCompare(b.file) ||
+      a.locale.localeCompare(b.locale)
+  )
+  const counts = { pass: 0, skip: 0, fail: 0 }
+  for (const r of sorted) counts[r.status]++
+  for (const r of sorted) {
+    if (r.status === "pass") continue
+    console.log(
+      `${r.status.toUpperCase().padEnd(4)} [${r.locale}] ${r.file}${r.detail ? ` -- ${r.detail}` : ""}`
+    )
+  }
+  console.log(
+    `PASS ${counts.pass}  SKIP ${counts.skip}  FAIL ${counts.fail}  (${results.length} file+locale pair(s))`
+  )
+
+  const summaryPath = process.env.GITHUB_STEP_SUMMARY
+  if (!summaryPath) return
+  const rows = sorted
+    .filter((r) => r.status !== "pass")
+    .map(
+      (r) =>
+        `| ${r.status} | \`${r.file}\` | ${r.locale} | ${r.detail.replace(/\|/g, "\\|")} |`
+    )
+  const md = [
+    `## Intl pipeline: ${counts.pass} passed, ${counts.skip} skipped, ${counts.fail} failed`,
+    "",
+    ...(rows.length
+      ? ["| status | file | locale | detail |", "|---|---|---|---|", ...rows]
+      : ["All pairs passed."]),
+    "",
+  ].join("\n")
+  fs.appendFileSync(summaryPath, md)
+}
+
+/**
  * Build an LLM translator that batches section translations.
  * Uses batchSections for byte-size-aware splitting of large section lists.
  */
@@ -391,6 +457,40 @@ async function buildGeminiTranslator(
   }
 }
 
+/**
+ * Sanitize the output and run the pre-commit gates. Returns the content to
+ * record; throws GateError when the bytes must not be committed. The sanitizer
+ * runs here, on the task's own output, rather than on the branch after the
+ * squash: the gates have to judge what the sanitizer will actually ship.
+ */
+async function sanitizeAndGate(opts: {
+  destPath: string
+  content: string
+  file: FileContext
+  baseline?: string
+  mode: "incremental" | "full"
+}): Promise<string> {
+  let content = opts.content
+  const sanitized = await runSanitizer(
+    [{ path: opts.destPath, content }],
+    undefined,
+    new Map([[opts.file.path, opts.file.content]])
+  )
+  const fixed = sanitized.changedFiles?.find((f) => f.path === opts.destPath)
+  if (fixed) content = fixed.content
+
+  const gate = await runGates({
+    destPath: opts.destPath,
+    fileType: opts.file.type,
+    english: opts.file.content,
+    output: content,
+    baseline: opts.baseline,
+    mode: opts.mode,
+  })
+  if (!gate.ok) throw new GateError(opts.destPath, gate.failures)
+  return content
+}
+
 // ---------------------------------------------------------------------------
 // Full Translation
 // ---------------------------------------------------------------------------
@@ -401,7 +501,8 @@ async function runFullTranslation(
   destPath: string,
   committer: SharedCommitter,
   baseBranchSha: string,
-  committedFiles: Array<{ path: string; content: string }>
+  committedFiles: Array<{ path: string; content: string }>,
+  localeBaseline?: string
 ): Promise<TaskResult> {
   log(`[${locale}] ${file.path}: full translation...`)
 
@@ -451,6 +552,14 @@ async function runFullTranslation(
       }
     }
   }
+
+  finalContent = await sanitizeAndGate({
+    destPath,
+    content: finalContent,
+    file,
+    baseline: localeBaseline,
+    mode: "full",
+  })
 
   // Build the manifests BEFORE recording any blob. Manifest construction is
   // pure and can throw (parse/serialize); doing it first means a builder error
@@ -543,7 +652,8 @@ async function runIncremental(
       destPath,
       committer,
       baseBranchSha,
-      committedFiles
+      committedFiles,
+      localeContent
     )
   }
 
@@ -594,7 +704,8 @@ async function runIncremental(
       destPath,
       committer,
       baseBranchSha,
-      committedFiles
+      committedFiles,
+      localeContent
     )
   }
 
@@ -624,6 +735,14 @@ async function runIncremental(
       }
     }
   }
+
+  finalContent = await sanitizeAndGate({
+    destPath,
+    content: finalContent,
+    file,
+    baseline: localeContent,
+    mode: "incremental",
+  })
 
   // Build the source manifest before recording any blob (see runFullTranslation):
   // a builder throw must not leave content recorded without its manifest.
@@ -684,6 +803,19 @@ async function main() {
   log(
     `Bounds: ${MAX_PROMPT_BYTES} bytes per call x chunks of changed content per file+locale, $${runFuseUsd().toFixed(2)} run fuse (INTL_MAX_COST_USD)`
   )
+  // Reservations for calls in flight count against the fuse. Say what one wave
+  // at this concurrency holds, and refuse a fuse that cannot clear even the
+  // smallest possible wave -- that run would trip on reservations alone.
+  const minFuse = minimumFuseUsd(config.concurrency)
+  log(
+    `Reserve per call: $${callReserveUsd(MIN_CONTENT_BUDGET_BYTES).toFixed(3)} (smallest) .. $${callReserveUsd(MAX_PROMPT_BYTES).toFixed(2)} (ceiling); one wave of ${config.concurrency}: $${minFuse.toFixed(2)} .. $${(config.concurrency * callReserveUsd(MAX_PROMPT_BYTES)).toFixed(2)}`
+  )
+  if (runFuseUsd() < minFuse) {
+    throw new Error(
+      `INTL_MAX_COST_USD=$${runFuseUsd().toFixed(2)} cannot clear one wave of ${config.concurrency} calls ` +
+        `(minimum reservation $${minFuse.toFixed(2)}). Raise the fuse or lower the concurrency input.`
+    )
+  }
   log(`Provider: ${LLM.name} (${LLM_PROVIDER})`)
 
   // The provider-side ceiling is the one guard that survives a bug in the ones
@@ -772,7 +904,37 @@ async function main() {
   // wrapper so we can report rich failure info in the PR body and surface
   // copy-pasteable rerun commands. Pool's own error tracking still runs in
   // parallel for the orchestration-level "did anything fail" check.
-  const failures: Array<{ locale: string; file: string; message: string }> = []
+  const failures: Array<{
+    locale: string
+    file: string
+    message: string
+    quarantined?: boolean
+  }> = []
+  const results: PairResult[] = []
+  const skipped: SkippedPair[] = []
+
+  // Pairs that failed deterministically on an earlier run against the same
+  // English are skipped, not retried. `mode: full` is a human asking for the
+  // pair and bypasses the list.
+  const quarantine = Quarantine.load(process.cwd())
+  if (quarantine.size > 0) {
+    log(
+      `Quarantine: ${quarantine.size} entr(y/ies) loaded from ${QUARANTINE_PATH}`
+    )
+  }
+  const englishHashes = new Map<string, string>()
+  const englishHashOf = (file: FileContext): string => {
+    let h = englishHashes.get(file.path)
+    if (!h) {
+      const manifest =
+        file.type === "markdown"
+          ? buildMarkdownManifest(file.content, file.path)
+          : buildJsonManifest(file.content, file.path)
+      h = (JSON.parse(manifest) as { rootHash: string }).rootHash
+      englishHashes.set(file.path, h)
+    }
+    return h
+  }
 
   // Resolve target paths in five passes:
   //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
@@ -854,15 +1016,42 @@ async function main() {
   // only knows the locale; we want (locale, file, reason) for PR reporting.
   const submitWithContext = (
     locale: string,
-    filePath: string,
+    file: FileContext,
     fn: () => Promise<TaskResult | void>
   ) => {
     pool.submit(locale, async () => {
       try {
-        return await fn()
+        const out = await fn()
+        quarantine.clear(file.path, locale)
+        results.push({ file: file.path, locale, status: "pass", detail: "" })
+        return out
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err)
-        failures.push({ locale, file: filePath, message })
+        const cls = classifyFailure(message)
+        let quarantined = false
+        if (cls) {
+          const { entry, active } = quarantine.record({
+            file: file.path,
+            locale,
+            englishHash: englishHashOf(file),
+            class: cls,
+            reason: message,
+          })
+          quarantined = active
+          if (active) {
+            log(
+              `[${locale}] ${file.path}: quarantined (${cls}, attempt ${entry.attempts}) until ${entry.expiresAt.slice(0, 10)}`,
+              "warn"
+            )
+          }
+        }
+        failures.push({ locale, file: file.path, message, quarantined })
+        results.push({
+          file: file.path,
+          locale,
+          status: "fail",
+          detail: `${quarantined ? "quarantined: " : ""}${message.slice(0, 160)}`,
+        })
         throw err
       }
     })
@@ -886,6 +1075,33 @@ async function main() {
       const hasLocale = fs.existsSync(localePath)
       const hasManifest = fs.existsSync(smPath)
 
+      // `mode: full` bypasses the list because a human asked for that pair.
+      // `stamp_only` does not: stamping a pair that never translated cleanly
+      // would declare a missing translation current and strand it.
+      if (config.mode !== "full") {
+        const held = quarantine.active(file.path, locale, englishHashOf(file))
+        if (held) {
+          log(
+            `[${locale}] ${file.path}: skipped, quarantined (${held.class}) until ${held.expiresAt.slice(0, 10)}`,
+            "warn"
+          )
+          skipped.push({
+            locale,
+            file: file.path,
+            class: held.class,
+            reason: held.reason,
+            expiresAt: held.expiresAt,
+          })
+          results.push({
+            file: file.path,
+            locale,
+            status: "skip",
+            detail: `quarantined (${held.class}) until ${held.expiresAt.slice(0, 10)}`,
+          })
+          continue
+        }
+      }
+
       if (config.mode === "full" || !hasLocale || !hasManifest) {
         const reason =
           config.mode === "full"
@@ -900,14 +1116,15 @@ async function main() {
           continue
         }
 
-        submitWithContext(locale, file.path, () =>
+        submitWithContext(locale, file, () =>
           runFullTranslation(
             file,
             locale,
             destPath,
             committer,
             baseBranchSha,
-            committedFiles
+            committedFiles,
+            hasLocale ? fs.readFileSync(localePath, "utf-8") : undefined
           )
         )
         continue
@@ -924,7 +1141,7 @@ async function main() {
 
       if (config.stampOnly) {
         log(`[${locale}] ${file.path}: stamp only`)
-        submitWithContext(locale, file.path, async () => {
+        submitWithContext(locale, file, async () => {
           const sourceManifest =
             file.type === "markdown"
               ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
@@ -939,7 +1156,7 @@ async function main() {
         continue
       }
 
-      submitWithContext(locale, file.path, () =>
+      submitWithContext(locale, file, () =>
         runIncremental(
           file,
           locale,
@@ -975,37 +1192,45 @@ async function main() {
     }
   }
 
-  // Hard abort only if literally nothing succeeded -- a fully-failed run
-  // shouldn't produce an empty PR. (committedFiles excludes manifest-only stamp
-  // commits, so we also check hasCommits for the stamp-only path.)
-  if (failures.length > 0 && committedFiles.length === 0 && !hasCommits) {
+  // Hard abort before recording anything else: a run with no translated file
+  // and no refreshed manifest, whose failures a retry could still fix, has
+  // nothing to ship and needs eyes. Tracked separately from the quarantine
+  // file below, which is bookkeeping, not output.
+  if (
+    shouldAbortRun({
+      unhandledFailures: failures.filter((f) => !f.quarantined).length,
+      translatedFiles: committedFiles.length,
+      stampedManifests: hasCommits,
+    })
+  ) {
     throw new Error(
       `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
     )
   }
 
-  // Squash interleaved commits into one per language
-  if (committedFiles.length > 0 || hasCommits) {
-    await committer.squashByLanguage()
+  // What the quarantine learned this run ships with the run, so the next one
+  // skips those pairs instead of paying for them again.
+  let quarantineCommitted = false
+  if (quarantine.changed) {
+    await committer.commitFile(
+      QUARANTINE_PATH,
+      quarantine.toJson(),
+      QUARANTINE_LANG
+    )
+    quarantineCommitted = true
   }
 
-  // Post-processing: sanitize LLM output
-  if (committedFiles.length > 0 && !config.stampOnly) {
-    const englishContentMap = new Map<string, string>(
-      englishFiles.map((f) => [f.path, f.content])
-    )
-    try {
-      await sanitizeTranslations(committedFiles, tempBranch, englishContentMap)
-    } catch (error) {
-      console.warn(
-        `[pipeline] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
-      )
-    }
+  const hasOutput =
+    committedFiles.length > 0 || hasCommits || quarantineCommitted
+
+  // Squash interleaved commits into one per language
+  if (hasOutput) {
+    await committer.squashByLanguage()
   }
 
   // Merge temp branch into pending, then clean up the temp.
   // If pending didn't exist at the start, create it from base now.
-  if (committedFiles.length > 0 || hasCommits) {
+  if (hasOutput) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
     if (!pendingExists) {
       await ensurePendingBranch(targetBranch, baseBranch)
@@ -1027,7 +1252,7 @@ async function main() {
   }
 
   // Create or update PR unless skipped
-  if ((committedFiles.length > 0 || hasCommits) && !config.skipPr) {
+  if (hasOutput && !config.skipPr) {
     const languagePairs = targetLanguages.map((code) => {
       const entry = i18nConfig.find((l: { code: string }) => l.code === code)
       return {
@@ -1043,7 +1268,8 @@ async function main() {
         committedFiles,
         languagePairs,
         config.mode,
-        failures
+        failures,
+        skipped
       )
     } catch (error) {
       console.warn(
@@ -1057,6 +1283,8 @@ async function main() {
   if (Object.keys(poolStats).length > 0) {
     printTokenSummary(poolStats, Date.now() - startTime)
   }
+
+  printResultTable(results)
 
   logSection("Complete")
   log(`Finished in ${((Date.now() - startTime) / 1000).toFixed(1)}s`)

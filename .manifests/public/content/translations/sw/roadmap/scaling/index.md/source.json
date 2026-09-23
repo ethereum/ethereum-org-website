@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/scaling/index.md",
   "generatedAt": "2026-06-30T00:52:59.598Z",
-  "rootHash": "95c91bab37e1",
+  "rootHash": "17c9457f3974",
   "tree": {
-    "contentHash": "c2c100ef1284",
+    "contentHash": "3f1f87ed8319",
     "anchorHash": "b3e0e789d9ee",
     "children": {
       "frontmatter:title": {
@@ -24,7 +24,7 @@
         "anchorHash": "24e9a594c54e"
       },
       "frontmatter:alt": {
-        "contentHash": "65171c25554c",
+        "contentHash": "be50ffa0fc02",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:template": {

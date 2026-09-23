@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/staking/dvt/index.md",
   "generatedAt": "2026-08-19T20:27:37.094Z",
-  "rootHash": "5d92f8d85fb9",
+  "rootHash": "3b61658030ea",
   "tree": {
-    "contentHash": "2304b4d81e49",
-    "anchorHash": "9097080b0697",
+    "contentHash": "06bd04102e55",
+    "anchorHash": "b27b660b27ee",
     "children": {
       "frontmatter:title": {
         "contentHash": "0585efee2b31",
@@ -28,8 +28,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "0f54a56237a5",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "63661de185e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "51c8ad885500",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "cbb34c41697b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-is-dvt": {
         "contentHash": "26fa97d45822",

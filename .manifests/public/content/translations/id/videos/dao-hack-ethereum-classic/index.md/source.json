@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/dao-hack-ethereum-classic/index.md",
   "generatedAt": "2026-04-28T23:05:18.199Z",
-  "rootHash": "4089fed1426f",
+  "rootHash": "4f8e308593e5",
   "tree": {
-    "contentHash": "41c915d54010",
-    "anchorHash": "b608ad78d29b",
+    "contentHash": "1be003cb2d54",
+    "anchorHash": "2cfab2286021",
     "children": {
       "frontmatter:title": {
-        "contentHash": "c481733889ea",
+        "contentHash": "fe653d677d99",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "a76f8a9618a7",
+        "contentHash": "32d1f2cd3603",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4c2df52cc443"
+        "anchorHash": "8a50c71363b6"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "816021af9486"
+        "anchorHash": "32a50595656e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "0ab643b14fff",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "bf9422a2a04a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "259aa8ef98a8"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6386713deb27"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1d2304519a4e"
+        "anchorHash": "5be5187fe898"
       },
       "prose:1": {
         "contentHash": "ff388753e032",

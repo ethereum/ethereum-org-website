@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/atoms-institutions-blockchains-josh-stark/index.md",
   "generatedAt": "2026-04-28T22:41:39.248Z",
-  "rootHash": "7afb590290aa",
+  "rootHash": "962a4acfd80f",
   "tree": {
-    "contentHash": "5b644f8a3638",
-    "anchorHash": "55e729912c29",
+    "contentHash": "fa5d96083ef3",
+    "anchorHash": "cc32ed829417",
     "children": {
       "frontmatter:title": {
-        "contentHash": "276232e147e4",
+        "contentHash": "eaf413198a03",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "bc80c32db896",
+        "contentHash": "c47819874f21",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f2024e5d5df2"
+        "anchorHash": "9acb6f9b4901"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "53ee00ec0dbf"
+        "anchorHash": "8fd6e3de3a5e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "31a9b18839f5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ef7797e13d3a"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b60d7bdd334c"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bf63cf23317d"
+        "anchorHash": "d9f9b23fced7"
       },
       "prose:1": {
         "contentHash": "ba380c610f26",

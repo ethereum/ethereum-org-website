@@ -560,7 +560,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section>
           <PathwayCard
-            href="/apps/categories/privacy/"
+            href="/privacy/online/"
             title={t("page-privacy-ethereum-pathway-1-title")}
             description={t("page-privacy-ethereum-pathway-1-description")}
             badge={{ label: t("page-privacy-ethereum-pathway-1-badge") }}

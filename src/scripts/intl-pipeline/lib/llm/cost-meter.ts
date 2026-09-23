@@ -15,7 +15,9 @@ import {
   INPUT_RATE_USD_PER_1M,
   MAX_CHUNK_BYTES,
   MAX_PROMPT_BYTES,
+  MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
+  REASONING_TOKENS_PER_CALL,
   RUN_FUSE_USD,
 } from "../../constants"
 
@@ -23,8 +25,9 @@ let inputTokens = 0
 let outputTokens = 0
 let reasoningTokens = 0
 let providerCostUsd = 0
-/** Worst-case cost held for calls that have been sent but have not resolved */
+/** Cost held for calls that have been sent but have not resolved */
 let reservedUsd = 0
+let inFlight = 0
 let calls = 0
 let fuseUsd = RUN_FUSE_USD
 
@@ -88,34 +91,64 @@ export function runFuseUsd(): number {
   return fuseUsd
 }
 
-/**
- * Worst-case cost of one in-flight call, used to reserve against the fuse while
- * a request is outstanding: a full prompt at MAX_PROMPT_BYTES plus an output of
- * the same order. Deliberately pessimistic -- reserving too little is what lets
- * the fuse overshoot, reserving too much only trips it marginally early.
- */
-const WORST_CASE_CALL_USD =
-  (MAX_PROMPT_BYTES / 3 / 1_000_000) * INPUT_RATE_USD_PER_1M +
-  (MAX_PROMPT_BYTES / 3 / 1_000_000) * OUTPUT_RATE_USD_PER_1M
+/** Bytes per token for the English-heavy prompts the pipeline sends. */
+const BYTES_PER_TOKEN = 3
 
 /**
- * Reserve worst-case cost for a call that is about to be sent, throwing if the
- * fuse cannot cover it. Spend is only recorded once a call resolves, and the
+ * Upper-bound cost of one call from its prompt size: the prompt as input, an
+ * output of the same size (a translation), and the per-call reasoning. Sized
+ * from the prompt actually being sent, not the ceiling: a run at concurrency
+ * 16 used to reserve 16 x $0.31 = $4.89 of ceiling before it had spent a cent,
+ * which made any fuse under $5 trip on reservations alone (run 35252423844).
+ */
+export function callReserveUsd(promptBytes: number): number {
+  const promptTokens = promptBytes / BYTES_PER_TOKEN
+  return (
+    (promptTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
+    ((promptTokens + REASONING_TOKENS_PER_CALL) / 1_000_000) *
+      OUTPUT_RATE_USD_PER_1M
+  )
+}
+
+/** Reservation used when the caller does not say how big the prompt is. */
+const WORST_CASE_CALL_USD = callReserveUsd(MAX_PROMPT_BYTES)
+
+/**
+ * The smallest fuse that lets one full wave of calls at this concurrency get
+ * off the ground: every slot holding the reservation of the smallest prompt
+ * the planner will ever emit. Below this the run cannot spend a cent.
+ */
+export function minimumFuseUsd(concurrency: number): number {
+  return concurrency * callReserveUsd(MIN_CONTENT_BUDGET_BYTES)
+}
+
+/**
+ * Reserve the cost of a call that is about to be sent, throwing if the fuse
+ * cannot cover it. Spend is only recorded once a call resolves, and the
  * pipeline runs up to GEMINI_CONCURRENCY calls at once, so checking recorded
  * spend alone lets every in-flight call clear a fuse that one of them will
  * blow. Reservations close that window.
  *
- * Returns a settle function: call it with the actual cost once the request
- * resolves (or with 0 if it never billed) to release the reservation.
+ * Returns a settle function: call it once the request resolves (billed or not)
+ * to release the reservation.
  */
-export function reserveForCall(context: string): (actualUsd: number) => void {
+export function reserveForCall(
+  context: string,
+  promptBytes?: number
+): (actualUsd: number) => void {
   assertRunFuse(context)
-  reservedUsd += WORST_CASE_CALL_USD
+  const reserved =
+    promptBytes === undefined
+      ? WORST_CASE_CALL_USD
+      : callReserveUsd(promptBytes)
+  reservedUsd += reserved
+  inFlight += 1
   let settled = false
   return () => {
     if (settled) return
     settled = true
-    reservedUsd = Math.max(0, reservedUsd - WORST_CASE_CALL_USD)
+    inFlight -= 1
+    reservedUsd = Math.max(0, reservedUsd - reserved)
   }
 }
 
@@ -131,7 +164,7 @@ export function assertRunFuse(context: string): void {
     `[cost-guard] aborting run: $${providerCostUsd.toFixed(2)} spent across ` +
       `${calls} call(s)` +
       (reservedUsd > 0
-        ? ` plus $${reservedUsd.toFixed(2)} reserved for calls in flight`
+        ? ` plus $${reservedUsd.toFixed(2)} reserved for ${inFlight} call(s) in flight`
         : "") +
       ` reached the $${fuseUsd.toFixed(2)} fuse. Blocked: ${context}. ` +
       `Raise INTL_MAX_COST_USD only after confirming the call pattern is sane.`
@@ -199,6 +232,7 @@ export function resetMeter(fuse: number = RUN_FUSE_USD): void {
   reasoningTokens = 0
   providerCostUsd = 0
   reservedUsd = 0
+  inFlight = 0
   calls = 0
   fuseUsd = fuse
 }

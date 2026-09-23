@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/rollups-scaling-strategy/index.md",
   "generatedAt": "2026-04-29T00:10:16.733Z",
-  "rootHash": "a398c428c7e4",
+  "rootHash": "320ec2e3faa7",
   "tree": {
-    "contentHash": "6fbf85b532b2",
-    "anchorHash": "215e6f27e6f1",
+    "contentHash": "7e40c2155e7f",
+    "anchorHash": "27c93d6a51c5",
     "children": {
       "frontmatter:title": {
-        "contentHash": "fef8d70e5047",
+        "contentHash": "5c0cfd975bea",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6fb77f758108",
+        "contentHash": "ce475e64e472",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "119f49783750"
+        "anchorHash": "8855618d17e9"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "22c23bea34f9"
+        "anchorHash": "4f6f7e877b36"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "a9c58bef7f2f",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "567cf013bf70"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8bffd6eadddc"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5ab07e7fca0d"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b766b24f0847"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "09e34e3ff70b"
+        "anchorHash": "09ff9fac1a18"
       },
       "prose:1": {
         "contentHash": "e4b342c0b2da",

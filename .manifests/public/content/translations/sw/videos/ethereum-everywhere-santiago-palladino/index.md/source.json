@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-everywhere-santiago-palladino/index.md",
   "generatedAt": "2026-06-30T01:02:26.194Z",
-  "rootHash": "0b9c3ae04f65",
+  "rootHash": "a601ca6356d5",
   "tree": {
-    "contentHash": "554f1e83bfa4",
-    "anchorHash": "b89a808044ce",
+    "contentHash": "7868c098c926",
+    "anchorHash": "7c2c61132336",
     "children": {
       "frontmatter:title": {
-        "contentHash": "6c29681f7a87",
+        "contentHash": "23c4a2fd2814",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "bcf553e14e9d",
+        "contentHash": "e036a8cd4a7c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "159e115c1741"
+        "anchorHash": "4356d8ce8cfe"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "66501ad4d2e7"
+        "anchorHash": "c1beb34d4e6e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "c5c117676eee",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "862417b9e7c3"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "48266dd1614d"
+        "anchorHash": "7c6987817c71"
       },
       "prose:1": {
         "contentHash": "dc392434fd7e",
