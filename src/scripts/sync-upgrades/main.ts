@@ -3,10 +3,8 @@
  *
  *   pnpm sync-upgrades
  *
- * The store is stale or hand-edited exactly when this script produces a diff,
- * so CI runs the sync and then `git diff --exit-code src/data/upgrades/`.
- * Path-filter that job — it reaches the network, and upstream downtime should
- * not fail unrelated builds.
+ * Nothing guards the store between runs: the weekly sync workflow overwrites
+ * it, so a hand edit survives until Friday and then disappears.
  *
  * A parse or mapping failure exits non-zero without touching the store, so a
  * broken upstream leaves the last good data serving.

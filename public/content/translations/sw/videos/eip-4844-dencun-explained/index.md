@@ -21,13 +21,13 @@ Ufafanuzi na **Finematics** unaohusu EIP-4844 (Proto-Danksharding), sasisho kuu 
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=HT9PHWloIiU) iliyochapishwa na Finematics. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:00) {#introduction-000}
+### Utangulizi (0:00) {#introduction-000}
 
 Kuongeza ukubwa wa Ethereum imekuwa mada inayojadiliwa sana kwa muda sasa. Suluhu za tabaka la 2 (l2) zimekuwa mstari wa mbele katika vita hivi, zikitoa njia ya kushughulikia miamala nje ya mnyororo mkuu ili kupunguza msongamano na kupunguza ada. Lakini kuna tatizo — hata l2 zinakabiliwa na mapungufu yanayozuia ufanisi wao na uwezo wa kuongeza ukubwa. EIP-4844 ni hatua inayofuata katika kuongeza uwezo wa l2 na kuoanisha Ethereum na ramani yake ya kuongeza ukubwa.
 
 Hivyo basi, EIP-4844 inahusu nini hasa? Inasaidiaje hasa katika kuongeza ukubwa wa l2? Inafungua uwezekano gani mpya? Na je, ni kweli kwamba inaweza kupunguza ada za miamala kwenye l2 kwa zaidi ya 90%?
 
-#### EIP-4844 na Proto-Danksharding ni nini (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### EIP-4844 na Proto-Danksharding ni nini (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Kama ukumbusho, EIP inasimama badala ya Pendekezo la Kuboresha Ethereum (Ethereum Improvement Proposal), mchakato ambao kupitia huo wasanidi wanaweza kupendekeza mabadiliko kwenye itifaki ya Ethereum. EIP-4844, haswa, inatoa pendekezo la aina mpya ya muamala ambayo inaweza kuboresha kwa kiasi kikubwa jinsi data inavyoshughulikiwa na kuchakatwa kwenye Ethereum. Huenda pia umesikia jina "Proto-Danksharding," ambalo sasa linatumika kwa kubadilishana na EIP-4844.
 
@@ -39,7 +39,7 @@ Fikiria kufanya badilishano la DEX kwenye mojawapo ya mikusanyiko. Ikiwa gharama
 
 EIP-4844 pamoja na EIP nyingine chache zitajumuishwa katika sasisho la Dencun la mtandao linalokuja.
 
-#### Maelezo ya kiufundi (2:50) {#technical-details-250}
+### Maelezo ya kiufundi (2:50) {#technical-details-250}
 
 Sasa, hebu tuangalie kwa karibu jinsi EIP-4844 inavyofanya kazi.
 
@@ -65,7 +65,7 @@ Katika kesi ya mikusanyiko yenye matumaini (optimistic rollups) kama Optimism au
 
 Mikusanyiko ya ZK (ZK rollups) itatoa mafungamanisho mawili kwa muamala wao au data ya delta ya hali: ufungamanisho wa blobu na ufungamanisho wa mkusanyiko wa ZK wenyewe kwa kutumia mfumo wowote wa uthibitisho ambao rollup inatumia ndani kwa ndani. Pia wangetumia itifaki ya uthibitisho wa usawa, wakitumia prikampaili ya tathmini ya nukta iliyotajwa hapo awali, kuthibitisha kwamba mafungamanisho hayo mawili yanarejelea data sawa.
 
-#### Athari (6:25) {#impact-625}
+### Athari (6:25) {#impact-625}
 
 Athari ya EIP-4844 kwenye mfumo wa ikolojia wa Ethereum haiwezi kutiliwa chumvi. Kwa kuanzia, inaboresha kwa kiasi kikubwa uwezo wa kuongeza ukubwa wa suluhu za tabaka la 2 (l2), ikipunguza gharama zao za uendeshaji na kuzifanya ziwe na ushindani zaidi na minyororo ya vitalu mingine mbadala na ya bei nafuu. Kupungua kwa gharama za uendeshaji kunawezekana kwani idadi kubwa ya gharama inayopatikana kwa sasa na mikusanyiko inatokana na ada zinazolipwa kwa data za mwito.
 
@@ -77,7 +77,7 @@ Linapokuja suala la kupungua kwa gharama za miamala kwenye mikusanyiko, kama ina
 
 Jambo moja ni la uhakika — hata kama matokeo makuu ni ongezeko la uwezo wa upitishaji wa miamala na gharama ya miamala inabaki kuwa sawa, EIP-4844 inaweka msingi wa uwezo mkubwa zaidi wa kuongeza ukubwa katika siku zijazo ambao hatimaye utasababisha miamala ya bei nafuu kwa watumiaji.
 
-#### Muhtasari (8:04) {#summary-804}
+### Muhtasari (8:04) {#summary-804}
 
 Jumuiya ya Ethereum tayari imekamilisha majaribio ya EIP-4844 kwenye mitandao mbalimbali ya majaribio, huku uzinduzi wa Mtandao Mkuu ukitarajiwa tarehe 13 Machi. Hii ni hatua kubwa kuelekea kufikia uwezo wa kuongeza ukubwa usio na kifani kwa Ethereum. Tayari tunaweza kuona l2 nyingi kuu zikijitolea kuanza kutumia nafasi mpya ya blobu mara tu sasisho la Dencun litakapotokea.
 

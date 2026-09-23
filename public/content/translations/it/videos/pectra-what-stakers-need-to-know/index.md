@@ -19,11 +19,11 @@ Un webinar ospitato da **Blockdaemon** con l'ingegnere blockchain Julia Schmidt 
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=_UpAFpC7X6Y) pubblicata da Blockdaemon. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione (0:00) {#introduction-000}
+### Introduzione (0:00) {#introduction-000}
 
 **Host:** Ciao e benvenuti a questo webinar ospitato da Blockdaemon incentrato sull'imminente aggiornamento Pectra di Ethereum. Con noi oggi ci sono Julia Schmidt, ingegnere blockchain presso Alluvial, e Freddy Tänzer, responsabile dell'ecosistema Ethereum di Blockdaemon, per discutere di come i cambiamenti di Pectra avranno un impatto sullo staking di ETH, sulla rete nel suo complesso, sui servizi di staking liquido e altro ancora. Per iniziare, Freddy: potresti darci una breve panoramica dell'aggiornamento Pectra e di quale sarà il suo impatto sugli staker?
 
-#### Cos'è Pectra (1:28) {#what-is-pectra-128}
+### Cos'è Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Dunque, Pectra è un aggiornamento di Ethereum programmato per la fine del primo trimestre del 2025 — circa a marzo, potrebbe slittare un po' più in là, forse ad aprile o giù di lì. All'inizio doveva essere un piccolo fork, ma poi sono state aggiunte sempre più cose, quindi ora lo hanno diviso in due.
 
@@ -33,7 +33,7 @@ La prima è il fatto che si possono attivare prelievi e uscite dal proprio valid
 
 Ce n'è anche una più piccola che porta fondamentalmente al fatto che i depositi sono molto più rapidi — registrati onchain da circa 14 ore a meno di un'ora — ma penso che quelle due siano le più rilevanti per la nostra discussione qui.
 
-#### EIP-7002: uscite attivabili dal livello di esecuzione (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: uscite attivabili dal livello di esecuzione (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Host:** Per il primo grande cambiamento, Julia, potresti spiegare come cambierà il processo post-Pectra rispetto ai modi attuali in cui vengono avviati i prelievi nell'ecosistema di staking di Ethereum?
 
@@ -49,7 +49,7 @@ Nell'ultimo aggiornamento Dencun, un nuovo EIP ha modificato il tempo di scadenz
 
 Questo è ora risolto con l'EIP-7002, che consente sia alla chiave del validatore che alla chiave di prelievo di attivare l'uscita dal livello di esecuzione, semplicemente inviando una transazione a uno speciale contratto di prelievo in cui si invia una richiesta di prelievo e si specifica un'uscita completa del validatore o un prelievo parziale dal saldo in staking.
 
-#### EIP-7251: saldo effettivo massimo (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: saldo effettivo massimo (4:15) {#eip-7251-max-effective-balance-415}
 
 **Host:** Freddy, potresti darci una panoramica del saldo effettivo massimo da Pectra in poi, e di come questo avrà un impatto sulle persone che attualmente fanno staking?
 
@@ -69,7 +69,7 @@ Ci sono buone notizie anche sullo slashing: la penalità iniziale di slashing sc
 
 Il vantaggio della capitalizzazione automatica va a beneficio principalmente di importi di stake più piccoli. Se hai mille validatori, potresti lanciarne manualmente uno nuovo ogni mese. Ma se hai un solo validatore, dovresti praticamente aspettare 32 anni per capitalizzare.
 
-#### Implicazioni dello staking liquido (11:25) {#liquid-staking-implications-1125}
+### Implicazioni dello staking liquido (11:25) {#liquid-staking-implications-1125}
 
 **Host:** Julia, come si confronta il consolidamento dei validatori più grandi con i vantaggi dello staking liquido? Come peseranno queste decisioni nella mente di uno staker dopo Pectra?
 
@@ -79,7 +79,7 @@ Il fatto che la penalità iniziale di slashing sia stata abbassata riduce il ris
 
 Dal lato dell'utilità, un token di liquid staking (LST) aggiunge ovviamente liquidità: anche con prelievi parziali dal livello di esecuzione, non sarà istantaneo. Invia la transazione, viene messa in coda, poi c'è l'epoca di uscita e l'epoca di prelievo. I token di liquid staking offrono comunque una liquidità istantanea che i prelievi parziali non possono offrire.
 
-#### Prossimi passi per gli staker (16:20) {#next-steps-for-stakers-1620}
+### Prossimi passi per gli staker (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Quello che vediamo è che le istituzioni finanziarie in genere mettono in staking tra il 65% e l'85% dei loro ETH in custodia, perché hanno bisogno del resto come riserva di liquidità per i rimborsi. Con lo staking liquido, puoi potenzialmente aumentare la quantità di ETH in staking, il che genera ricompense più elevate.
 
@@ -89,7 +89,7 @@ Entrambe le parti traggono vantaggio da Pectra: lo staking liquido ottiene l'opz
 
 Un vantaggio chiave che non ho ancora menzionato sono i prelievi parziali: ora che puoi prelevare gli ETH in staking dal livello di esecuzione, questo apre nuove strade per protocolli come EigenLayer per attivare prelievi e uscite. C'è un enorme aumento di funzionalità e interoperabilità che la finanza decentralizzata (DeFi) può ora incorporare meglio nell'intero ciclo di vita del validatore, dal deposito all'uscita. Come ingegnere blockchain, è entusiasmante poter automatizzare l'intero flusso di lavoro.
 
-#### Conclusione (19:50) {#closing-1950}
+### Conclusione (19:50) {#closing-1950}
 
 **Host:** Julia, dove possono andare le persone per saperne di più su Liquid Collective e Alluvial?
 

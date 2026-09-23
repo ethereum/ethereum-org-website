@@ -19,13 +19,13 @@ Informatyk **Amit Sahai**, profesor w UCLA Samueli School of Engineering, wyjaś
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=fOGdb1CTu5c) opublikowanego przez WIRED. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 **Amit Sahai:** Cześć, nazywam się Amit Sahai i jestem profesorem informatyki w UCLA Samueli School of Engineering. Dziś poproszono mnie o wyjaśnienie dowodów z wiedzą zerową na pięciu poziomach o rosnącej złożoności.
 
 Dowód z wiedzą zerową to sposób, w jaki prover może przekonać weryfikatora, że dane twierdzenie jest prawdziwe, nie ujawniając przy tym żadnych dodatkowych informacji poza samym faktem, że twierdzenie to jest prawdziwe. Dowody z wiedzą zerową są wykorzystywane w blockchainach i kryptowalutach. Kryptografowie są podekscytowani wiedzą zerową ze względu na jej niesamowite właściwości matematyczne, ale także ze względu na jej niezwykłe zastosowanie w wielu różnych scenariuszach.
 
-#### Poziom 1: dziecko (0:41) {#level-1-child-041}
+### Poziom 1: dziecko (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Jaki jest twój ulubiony przedmiot?
 
@@ -55,7 +55,7 @@ Więc Chelsea, twoimi własnymi słowami, czym jest dowód z wiedzą zerową?
 
 **Chelsea:** Dowód z wiedzą zerową to dowód na jakieś twierdzenie. Nie pokazujesz im dlaczego ani co. Po prostu pokazujesz im mały fragment lub robisz jakąś dziwną sztuczkę magiczną, która tak naprawdę nie jest sztuczką magiczną, a oni będą przekonani. I nie pokazałeś im dlaczego, ani niczego w tym stylu.
 
-#### Poziom 2: nastolatek (3:31) {#level-2-teen-331}
+### Poziom 2: nastolatek (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Czy słyszałeś kiedyś wcześniej termin dowód z wiedzą zerową?
 
@@ -85,7 +85,7 @@ Więc na podstawie tego, o czym dzisiaj rozmawialiśmy, twoimi własnymi słowam
 
 **Teen:** To tak, jakbyś miał ten naprawdę ważny sekret, o którym chcesz, żeby ktoś wiedział, ale nie chcesz mu mówić wszystkiego. Możesz użyć dowodu z wiedzą zerową, aby udowodnić im ten sekret, ale nie zdradzać go w całości.
 
-#### Poziom 3: student (6:13) {#level-3-college-student-613}
+### Poziom 3: student (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Co studiujesz?
 
@@ -131,7 +131,7 @@ Czy możesz wybrać losowo dwa kraje, a my ponownie odkryjemy dwa kolory.
 
 **Amit Sahai:** Jednym ze świetnych przykładów są wybory. Gdybyś mógł udowodnić, że wybory zostały przeprowadzone poprawnie — że każdy głos został policzony i wszystko złożyło się na wygraną jednej osoby z określoną sumą — z wiedzą zerową, to nie musiałbyś ujawniać rzeczywistych głosów żadnej osoby. A jednak każdy mógłby zobaczyć, że zostało to zrobione poprawnie.
 
-#### Poziom 4: doktorant (11:59) {#level-4-grad-student-1159}
+### Poziom 4: doktorant (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Wspaniale, że tu jesteś i mogę z tobą porozmawiać, Eli. Czy możesz mi opowiedzieć trochę o swoich badaniach?
 
@@ -165,7 +165,7 @@ Czy możesz wybrać losowo dwa kraje, a my ponownie odkryjemy dwa kolory.
 
 **Eli:** Myślę, że to jeden z powodów, dla których tak bardzo pociągały mnie wielostronne obliczenia. Jednym z najważniejszych problemów na świecie jest fakt, że tak wielu ludzi sobie nie ufa. Możliwość wykorzystania matematyki do stworzenia technologii, która pozwala ludziom współpracować bez konieczności ufania sobie nawzajem, to naprawdę fajna i niesamowita misja.
 
-#### Poziom 5: ekspert (17:10) {#level-5-expert-1710}
+### Poziom 5: ekspert (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, wspaniale cię znów widzieć. Myślę, że ostatni raz spotkaliśmy się w 2017 roku czy coś koło tego.
 

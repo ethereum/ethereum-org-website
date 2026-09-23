@@ -18,7 +18,7 @@ Una presentación de **Juan Benet**, fundador de Protocol Labs e inventor de IPF
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=zkXM9H90g_E) publicada por EthCC. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción a la ciencia y el progreso (0:10) {#introduction-to-science-and-progress-010}
+### Introducción a la ciencia y el progreso (0:10) {#introduction-to-science-and-progress-010}
 
 Muy bien, hola a todos. Mi nombre es Juan. Estoy aquí para hablar sobre DeSci. Quiero hablar sobre cómo podemos usar DeSci para financiar, organizar y abrir la ciencia. En primer lugar, esto es de lo que vamos a hablar: voy a hablar sobre la ciencia en general por un momento, luego voy a hablar sobre qué es el movimiento DeSci, y después sobre cómo podemos financiar los bienes comunes de la ciencia. Luego, cómo DeSci está organizando a las personas, los proyectos y los trabajos en torno a la ciencia. Después quiero hablar un poco sobre el acceso abierto y la ciencia reproducible, y quiero terminar con un llamado a la acción. Así que esto será bastante rápido. Tenemos mucho que cubrir, así que avanzaré rápido.
 
@@ -34,7 +34,7 @@ Ahora bien, la ciencia tiene un montón de problemas. Hay todo tipo de problemas
 
 Una vez que los estudios están hechos y producidos, solo una fracción de ellos se replica. Así que hay todo tipo de ciencia que ha sido publicada, aceptada y considerada correcta, solo para descubrir más tarde que una gran fracción de ella en realidad no puede ser reproducida. Así que hay una enorme crisis de reproducibilidad. E incluso hay descubrimientos científicos cuyos artefactos están desapareciendo. Piensa en los artículos reales, el código o los datos asociados con algún resultado que desaparecen de nuestros bancos de conocimiento. Así que hay todo tipo de problemas en torno a la ciencia que necesitan ser solucionados, y de esto trata en parte DeSci. Esto es abordar una serie de estos problemas, no a gran escala, no completamente, pero la comunidad DeSci está intentando abordar varios de estos problemas.
 
-#### El movimiento DeSci (5:11) {#the-desci-movement-511}
+### El movimiento DeSci (5:11) {#the-desci-movement-511}
 
 Entonces, ¿qué es DeSci? DeSci es un movimiento para mejorar la ciencia utilizando tecnología y herramientas de la Web3. Piensa en poder usar toda la magia de la vinculación de hash, las cadenas de bloques y los contratos inteligentes para crear sistemas y estructuras que puedan mejorar cómo hacemos ciencia en todos los campos alrededor del mundo.
 
@@ -46,7 +46,7 @@ Ahora hay varios grupos haciendo financiación biotecnológica descentralizada, 
 
 Ahora también hay muchos encuentros y conferencias diferentes que están reuniendo a estas comunidades. Cosas como DeSci Day, DeSci Berlín, Schelling Point de la comunidad de Gitcoin y Funding the Commons. Estas conferencias están reuniendo muchas de las conversaciones en torno a DeSci.
 
-#### Financiación de los bienes comunes (10:40) {#funding-the-commons-1040}
+### Financiación de los bienes comunes (10:40) {#funding-the-commons-1040}
 
 Hablemos sobre la financiación de los bienes comunes. Tal vez algunos de ustedes hayan visto este diagrama que he usado en el pasado sobre el abismo de la innovación. En la traducción de la ciencia a la tecnología, la parte de DeSci se centra principalmente en la parte izquierda —solo la parte de la ciencia— intentando pensar en mejores estructuras de incentivos y mejores formas de coordinar grupos para producir mejores resultados científicos. Vale la pena señalar que la financiación global total de I+D es, desde una perspectiva, algo masiva, pero desde otra perspectiva, no tan grande y no ha cambiado tanto en las últimas décadas, a pesar de que la capacidad de procesamiento y el resultado de la tecnología que estamos construyendo han crecido enormemente.
 
@@ -64,7 +64,7 @@ Por ejemplo, grupos como VitaDAO están creando una estructura de datos que otor
 
 Los certificados de impacto son otra estructura fascinante que representa la financiación retroactiva. Permiten a los participantes, una vez que logran algún impacto, acuñar un certificado en torno a ese impacto y venderlo en el mercado a cualquiera que quiera hacer un reclamo sobre ese impacto. Eso permite que surja un mercado especulativo, cerrando un ciclo a través del tiempo para financiar retroactivamente un trabajo extremadamente importante. Esto es crucial porque muchas veces solo te das cuenta de lo valioso que es algo mucho después de que el trabajo se ha realizado.
 
-#### Organizando a las personas y las DAO de datos (15:28) {#organizing-people-and-data-daos-1528}
+### Organizando a las personas y las DAO de datos (15:28) {#organizing-people-and-data-daos-1528}
 
 Ahora algunas reflexiones rápidas sobre la organización de las personas. En el pasado, GitHub ha tenido un éxito tremendo ayudando a organizar el descubrimiento científico. Libros de texto y campos enteros se han desarrollado a través de GitHub. Muchos grupos han utilizado las primitivas básicas de GitHub en torno a problemas (issues), colaboración de código y control de versiones para organizar comunidades de práctica y ciencia. Pero lo que no está completo ahí es que no tienes una forma de crear organizaciones que hagan investigación, manejen capital o paguen a los contribuyentes.
 
@@ -78,7 +78,7 @@ Puedes pensar en agrupar ese tipo de actividad y generación de datos con algo l
 
 Algunas notas finales sobre el acceso abierto y la ciencia reproducible. IPFS ya se ha utilizado muchísimo para muchos tipos de trabajo de ciencia abierta. Ya está viviendo el sueño de abrir el acceso a mucha ciencia, apoyando copias distribuidas de Wikipedia, archivos masivos de artículos y conjuntos de datos.
 
-#### Acceso abierto, ciencia reproducible y llamado a la acción (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Acceso abierto, ciencia reproducible y llamado a la acción (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Todavía no hemos llegado a la reproducibilidad total. Esta es un área que necesita más trabajo, pero muchas personas ya han reflexionado al respecto. Hay especificaciones e ideas realmente buenas en torno al uso de la reproducibilidad estándar con IPFS para congelar todos los activos y construir un canal completamente reproducible. Puedes invocar experimentos específicos del pasado, traer de vuelta máquinas virtuales (VM) o contenedores totalmente congelados, volver a ejecutar todos los canales de datos y verificar que los experimentos sean correctos.
 

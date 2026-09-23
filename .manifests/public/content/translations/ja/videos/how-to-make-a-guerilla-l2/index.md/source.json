@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/how-to-make-a-guerilla-l2/index.md",
   "generatedAt": "2026-04-28T23:44:55.906Z",
-  "rootHash": "624ff34016b9",
+  "rootHash": "cbfcfbed222d",
   "tree": {
-    "contentHash": "4c19427a8bf9",
-    "anchorHash": "5bed43cc79ab",
+    "contentHash": "15a283f6ea8f",
+    "anchorHash": "cf3313693cde",
     "children": {
       "frontmatter:title": {
-        "contentHash": "fb3228ec255e",
+        "contentHash": "8e5a72c13dce",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b8578ecc9f30",
+        "contentHash": "1f21c8f74e86",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "439e29d84168"
+        "anchorHash": "c07a9dbd6a71"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "61a2232be070"
+        "anchorHash": "b31f63a85a97"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "c9ebde75175e",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "38344bba4684"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3b3e1a7dae17"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6bdb18f83935"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0b202bf56fe4"
+        "anchorHash": "f88fff3e0ca7"
       },
       "prose:1": {
         "contentHash": "143da4e40dd5",

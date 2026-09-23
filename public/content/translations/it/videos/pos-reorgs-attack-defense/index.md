@@ -19,13 +19,13 @@ Questa presentazione esplora i tipi di riorganizzazioni (reorg) dei blocchi poss
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=xcPxwhrg3Ao) pubblicata da LisCon. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione e contesto (0:03) {#introduction-and-background-003}
+### Introduzione e contesto (0:03) {#introduction-and-background-003}
 
 Benvenuti. Oggi parlerò delle riorganizzazioni (reorg) che sono possibili nella Proof-of-Stake (PoS) di Ethereum.
 
 Di recente sono entrato a far parte della Fondazione Ethereum, in particolare del Robust Incentives Group. Fondamentalmente siamo un team di ricerca focalizzato su tutto ciò che riguarda gli incentivi. Sarò breve: questo intervento è denso di contenuti e potete trovare la maggior parte del nostro lavoro su GitHub.
 
-#### Due tipi di riorganizzazioni (0:44) {#two-types-of-reorgs-044}
+### Due tipi di riorganizzazioni (0:44) {#two-types-of-reorgs-044}
 
 Oggi voglio parlare di riorganizzazioni e, in particolare, voglio delineare due diversi tipi di reorg che sono possibili nell'ambito della Proof-of-Stake (PoS) di Ethereum.
 
@@ -37,7 +37,7 @@ Ora, le riorganizzazioni ex-ante sono leggermente diverse. L'idea è che l'attac
 
 Vi chiederete perché si dovrebbe voler fare questo tipo di reorg. Beh, c'è ancora del MEV da catturare. Se siete fortunati, il blocco N+2 ha molto MEV: potete catturarlo semplicemente copiando e incollando qualsiasi cosa sia quel blocco. Nel peggiore dei casi, avete fondamentalmente due slot di transazioni da ascoltare.
 
-#### Riorganizzazioni ex-post nella Prova di lavoro (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Riorganizzazioni ex-post nella Prova di lavoro (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Prima di immergerci nelle riorganizzazioni ex-ante, che sono l'argomento principale di questo intervento, lasciatemi riassumere brevemente le riorganizzazioni ex-post e iniziare in particolare con il contesto della Prova di lavoro (PoW).
 
@@ -45,7 +45,7 @@ Fondamentalmente è un riassunto del post sul blog dei soliti noti: Georgios e V
 
 In poche parole, nell'Ethereum basato sulla Prova di lavoro (PoW), le riorganizzazioni ex-post sono difficili ma non irrealizzabili. Un minatore con il 10% ha probabilità relativamente buone di minare alcuni blocchi di fila e, se l'incentivo è abbastanza alto (immaginate ci sia un blocco con 100 ether di MEV da catturare), allora forse una percentuale di successo dell'uno percento potrebbe effettivamente essere sufficiente per far sì che valga la pena tentare di riorganizzare.
 
-#### Riorganizzazioni ex-post nella Proof-of-Stake (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Riorganizzazioni ex-post nella Proof-of-Stake (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Nella Proof-of-Stake (PoS) è tutta un'altra storia. Stiamo parlando di una quantità assurda di stake richiesta. Vi illustrerò come si potrebbe procedere solo per sottolineare quanto sia ridicolmente difficile.
 
@@ -63,7 +63,7 @@ Se facciamo i conti: il blocco N+1 ha attestazioni che valgono un terzo più un 
 
 Per darvi un'idea di quanto siano ridicole queste ipotesi: anche se aveste uno staker al 65%, per controllare due terzi del comitato in un dato slot avete una probabilità dello 0,05%. Questo dimostra che il potere delle attestazioni parallele è reale: le riorganizzazioni ex-post sono incredibilmente difficili, se non virtualmente impossibili, nella Proof-of-Stake (PoS) di Ethereum.
 
-#### Meccaniche di attacco delle riorganizzazioni ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Meccaniche di attacco delle riorganizzazioni ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Ora parlerò delle riorganizzazioni ex-ante. Questo attacco si basa su un articolo di Neuder e altri. Di recente abbiamo migliorato significativamente questo attacco. Abbiamo anche scritto un articolo al riguardo e siamo riusciti a caricarlo su arXiv appena in tempo.
 
@@ -75,7 +75,7 @@ Quello che succede è che le persone oneste non vedono il blocco N+1, quindi att
 
 Supponiamo per il momento che la latenza sia zero. Nello slot N+2, ciò che facciamo come attaccanti è rilasciare il blocco N+1 e l'attestazione privata tutti nello stesso momento. I validatori onesti nello slot N+2 devono attestare un blocco. Dal loro punto di vista vedono il blocco N+2 e il blocco N+1 con questa singola attestazione privata. Se eseguono la scelta del fork scopriranno che il blocco N+1 ha più peso del blocco N+2, perché N+1 ha l'attestazione privata che N+2 non ha. Persino tutti i validatori onesti attesteranno effettivamente il blocco N+1. In N+3, banalmente, N+1 sarà visto come la testa della catena.
 
-#### Latenza di rete e l'attacco (10:25) {#network-latency-and-the-attack-1025}
+### Latenza di rete e l'attacco (10:25) {#network-latency-and-the-attack-1025}
 
 Ho ipotizzato una latenza zero, che ovviamente non è come funziona nella realtà. C'è latenza: ci vuole tempo per propagare blocchi e messaggi sul livello P2P.
 
@@ -83,7 +83,7 @@ Il modo in cui un attaccante può comunque portare a termine questo tipo di atta
 
 Per sottolineare di nuovo cosa sta succedendo qui: abbiamo un proponente con un singolo attestatore che riesce a portare a termine una riorganizzazione di un blocco. Non è l'ideale, a dir poco.
 
-#### Strategie di bilanciamento per riorganizzazioni più lunghe (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Strategie di bilanciamento per riorganizzazioni più lunghe (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Se volete fare le cose in grande, potete portare a termine riorganizzazioni più lunghe utilizzando una strategia di bilanciamento. L'idea è di dividere il comitato onesto in diverse visioni della catena.
 
@@ -97,7 +97,7 @@ Per portare a termine una riorganizzazione di due blocchi: viene proposto il blo
 
 Se ci pensate, è relativamente economico fare queste riorganizzazioni con queste premesse. Anche se non avete divisioni perfette, poiché il livello P2P è così grande avete una distribuzione di probabilità che potete prendere di mira in modo tale che il costo dell'attacco cresca in base alla radice quadrata della dimensione del comitato.
 
-#### Mitigazione del boost del proponente (15:17) {#proposer-boost-mitigation-1517}
+### Mitigazione del boost del proponente (15:17) {#proposer-boost-mitigation-1517}
 
 Parliamo della mitigazione. Qual è l'idea di base? Daremo al proponente un po' più di potere. Se un blocco valido arriva in tempo, aumentiamo il peso di questo blocco per la durata dello slot. Una volta terminato quello slot, riprendiamo il consueto punteggio LMD-GHOST e tutto torna alla normalità.
 
@@ -107,7 +107,7 @@ Anche la questione del bilanciamento non funziona più perché avete una divisio
 
 L'idea è che con questa mitigazione in atto, le attestazioni dell'avversario devono competere con il boost per convincere i validatori onesti a votare secondo i loro desideri. Questo rompe le strategie di bilanciamento e proibisce fondamentalmente tutte le riorganizzazioni. Buone notizie: c'è una PR aperta, quindi fondamentalmente sarà integrata prima di The Merge.
 
-#### Punti chiave (16:48) {#key-takeaways-1648}
+### Punti chiave (16:48) {#key-takeaways-1648}
 
 Alcuni punti chiave. Ho parlato delle differenze tra le riorganizzazioni ex-post ed ex-ante. Ho delineato brevemente i diversi scenari per le riorganizzazioni nella Prova di lavoro (PoW) rispetto alla Proof-of-Stake (PoS). Vi ho mostrato come portare a termine una riorganizzazione ex-ante ma anche, cosa importante, come risolverla.
 

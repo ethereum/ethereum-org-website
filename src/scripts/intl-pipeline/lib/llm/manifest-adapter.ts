@@ -27,26 +27,19 @@ import {
   walk,
 } from "intl-content-tree"
 
+import { TRANSLATABLE_ATTRIBUTES } from "../shared-patterns"
+
 // ---------------------------------------------------------------------------
 // Ethereum.org config
 // ---------------------------------------------------------------------------
 
-/** Attributes whose values need translation on this site */
+/**
+ * Same list the pipeline routes with: a field the manifest hashes as inert but
+ * the pipeline treats as translatable (or vice versa) would misclassify drift.
+ */
 const ETHEREUM_ORG_CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
-  translatableAttributes: [
-    "title",
-    "description",
-    "alt",
-    "label",
-    "aria-label",
-    "placeholder",
-    "ctaLabel",
-    "name",
-    "caption",
-    "contentPreview",
-    "location",
-  ],
+  translatableAttributes: [...TRANSLATABLE_ATTRIBUTES],
 }
 
 /**

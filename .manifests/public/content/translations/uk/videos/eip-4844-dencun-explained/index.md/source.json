@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/eip-4844-dencun-explained/index.md",
   "generatedAt": "2026-04-29T05:21:44.057Z",
-  "rootHash": "326d693a7202",
+  "rootHash": "5d7c4555fcfb",
   "tree": {
-    "contentHash": "1d63d54fa3f3",
-    "anchorHash": "a4968fe25383",
+    "contentHash": "f03ee21460d1",
+    "anchorHash": "77d7cf4a49fb",
     "children": {
       "frontmatter:title": {
-        "contentHash": "52d7f2b82ded",
+        "contentHash": "d2de02a7d0b3",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6344e09c5547",
+        "contentHash": "3c7543d414e4",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9d1de56758d2"
+        "anchorHash": "0f47222573a3"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,44 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0c8fa6127a9e"
+        "anchorHash": "5f6c31eea876"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "58df6e0693de",
+        "anchorHash": "e729a0f578d9",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "567cf013bf70"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "008a17248813"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "400986f48a80"
+          },
+          "4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dc2963d21f5f"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +78,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "78f03750356d"
+        "anchorHash": "92345ffa2b24"
       },
       "prose:1": {
         "contentHash": "722ee00828e3",

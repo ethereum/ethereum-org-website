@@ -151,6 +151,12 @@ export const getGithubRepoData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getQuizStats = createCachedGetter(
+  dataLayer.getQuizStats,
+  ["quiz-stats"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getStablecoinsData = createCachedGetter(
   dataLayer.getStablecoinsData,
   ["stablecoins-data"],

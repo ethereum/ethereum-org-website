@@ -19,7 +19,7 @@ Ethereum Vakfı'ndan **Josh Stark**'ın Pragma Denver 2024'te yaptığı, blokzi
 
 *Bu döküm, ETHGlobal tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=zI07mqNdxzA) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Blokzincirleri neden açıklayamıyoruz? (0:00) {#why-cant-we-explain-blockchains-000}
+### Blokzincirleri neden açıklayamıyoruz? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Herkese merhaba, Denver'daki Pragma'da burada olduğunuz için teşekkür ederim. Benim adım Josh. Ethereum Vakfı'nda çalışıyorum — yaklaşık beş yıldır EF ile birlikteyim. İşimle ilgili, işimin ne olması gerektiğini bulmak olduğu ve bunun her altı ayda bir değiştiği şeklinde şaka yapmayı severim.
 
@@ -31,7 +31,7 @@ Gerçekten işin özüne inmemiz gerekiyor ve buna o kadar da yakın olduğumuzu
 
 Yani bu, aklımdaki çok spesifik bir soruyla başladı: Genel amaçlı teknoloji nedir? Bu temel kapasite nedir? Ve bu, benim çok daha ilginç bulduğum bir şeye dönüştü.
 
-#### Claude Shannon ve bilgi fikri (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon ve bilgi fikri (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Size bir hikaye anlatayım. 1930'larda ve 40'larda Claude Shannon, yeni bir çağın başlangıcıyla çevriliydi. Bell Labs'te savaş sırasında atış kontrol sistemleri ve kriptografi üzerinde çalıştı ve bilgiye daha genel bir yaklaşım hakkında düşünmeye başladı. Başlangıçta buna bilgi (information) demedi — 1939'da bir meslektaşına "istihbaratın iletimi" hakkında düşündüğünü yazdı. Bilgi kelimesinin o zamanlar farklı bir anlamı vardı.
 
@@ -41,7 +41,7 @@ Bu andan önce, hiç kimse evrensel, genel bir şey olarak bu bilgi kavramına g
 
 Bundan çıkarmanızı istediğim şey şu: Bilgi fikrine sahip olmadan önceki bir zaman ve sonraki bir zaman vardı. Ya benzer şekilde bu kadar temel bir şeyi gözden kaçırıyorsak? Benim hipotezim bu.
 
-#### Üç ipucu (7:00) {#three-clues-700}
+### Üç ipucu (7:00) {#three-clues-700}
 
 Blokzincirleri açıklamakta zorlanırken, daha büyük bir şeye dair ipuçları olduğunu düşündüğüm bu tuhaf şeylerle sürekli karşılaşıyorum.
 
@@ -53,7 +53,7 @@ Arabalar söz konusu olduğunda "atsız arabalar"dan bahsettik, ama en azından 
 
 **Üçüncü ipucu** — Satoshi'nin makalesi şu sözlerle başlıyor: "İnternet üzerindeki ticaret, neredeyse tamamen güvenilir üçüncü taraflar olarak hizmet veren finansal kurumlara dayanır hale geldi." Satoshi, Bitcoin'i diğer yazılımlarla değil, kurumlarla karşılaştırıyordu. Burada bir şey var.
 
-#### Sertliğin (hardness) tanıtılması (11:00) {#introducing-hardness-1100}
+### Sertliğin (hardness) tanıtılması (11:00) {#introducing-hardness-1100}
 
 İşte o kutuya neyin gireceğine dair cevabım. Ben buna **sertlik** diyorum. İşte beş basit adımda hikaye, sonrasında daha da derinlere ineceğiz.
 
@@ -71,7 +71,7 @@ Altının enflasyon oranı, gezegenimizin fiziksel özellikleri nedeniyle güven
 
 Atomları, kurumları ve blokzincirleri yapı malzemeleri gibi düşünebilirsiniz — ahşap, beton ve çelik gibi. Farklıdırlar, ancak ortak bir kategorinin parçasıdırlar. Ve biz bu şeyleri binalar inşa etmek için değil, bir medeniyet inşa etmek için kullanıyoruz. Belki de daha iyi malzemelerle, şu an sahip olduğumuzdan daha büyük, daha iyi ve daha güçlü bir medeniyet inşa edebiliriz.
 
-#### Sertlik nedir? (14:00) {#what-is-hardness-1400}
+### Sertlik nedir? (14:00) {#what-is-hardness-1400}
 
 Sertlik derken neyi kastettiğimi daha kesin bir şekilde ifade edeyim. Bu, herhangi bir şeyin sahip olabileceği sıradan bir güvenilirlik değildir. Sertlik spesifik bir türdür. İlk dikkat edilmesi gereken şey, bunun sosyal koordinasyon için önemli olan bir güvenilirlik türü olduğudur. Sadece, bilirsiniz, bu masanın güvenilir bir şekilde masa olması değil — kiranızı ödeyebilmeniz, bir sözleşmenin uygulanacak olması, bir ekonominin güçlü olmasıdır. Sertlik işte bu tür şeyler içindir.
 
@@ -87,7 +87,7 @@ Ve son olarak, sertlik belirli kaynaklardan gelir — atomlar, kurumlar ve blokz
 
 Bu çerçevenin sevdiğim yanı, daha derin sorular sormamıza olanak tanımasıdır — sadece blokzincirlerin belirli özellikleri hakkında konuşmakla kalmayıp, tüm bu farklı şeyleri karşılaştırmamıza ve nerede uygun olduklarını, onları nasıl ve hangi kombinasyonda kullandığımızı düşünmemize olanak tanır.
 
-#### Atom sertliği (19:00) {#atom-hardness-1900}
+### Atom sertliği (19:00) {#atom-hardness-1900}
 
 Atom sertliği, etrafımızdaki doğada — kelimenin tam anlamıyla fiziksel atomlarda ve aynı zamanda doğal olarak oluşan diğer özelliklerde — güvenilirlik bulduğumuz zamanlarla ilgilidir. Bunu, para olarak altın boncuklar kullandığımızda, mülkiyet haklarını tanımlamak için fiziksel yapılar kullandığımızda veya mülkiyet haklarını tapu gibi fiziksel bir nesneye kaydettiğimizde yaparız.
 
@@ -101,7 +101,7 @@ Ve kalıplar, doğa üzerindeki artan insan kontrolümüz tarafından sıklıkla
 
 Ancak durum bundan daha inceliklidir. Bazen var olduğunu bile fark etmediğimiz kalıplarımız olur, ancak sonra bir şeyler değiştiği için yok olurlar. Uzun bir süre boyunca finansal piyasalardaki ticaret hızı hakkında sert bir kalıp vardı — bu yalnızca belirli bir hızda, belki de birinin işlem salonunda birbirine bağırabileceği hızda yapılabilirdi. Bu kalıp atomik olarak sertti — bundan daha hızlı iletişim kuramıyorduk. Ancak yeni teknoloji bu varsayımları tamamen zayıflattı. Aslında o eski kalıbın bir versiyonunu sevdiğimizi fark ettik ve onu kurumlardan yeniden yarattık — ticaret hızını sınırlayan ve devre kesicileri uygulayan düzenlemeler getirdik.
 
-#### Kurumsal sertlik (22:00) {#institutional-hardness-2200}
+### Kurumsal sertlik (22:00) {#institutional-hardness-2200}
 
 Kurumsal sertlik çok geniş bir kategoridir — medeniyet denilince aklımıza gelebilecek çoğu şeyi kapsar. Hukuk sistemlerimiz, yasama organlarımız, polis güçlerimiz, şirketlerimiz, her şey. Bir tür sertlik sağlayan tüm kurumlar. Toplumlarımıza düzen veren, antisosyal davranışları cezalandıran kalıplar yarattık. Belirli kurallara uyduğunuz takdirde herkesin kurumlar tarafından sertleştirilmiş kendi kalıplarını yaratmasına izin vererek sertliği bir platform olarak yarattık. Yeni varlıklar doğuran ve büyüyen ekonomilere kredi kaynakları sağlayan kalıplar yarattık.
 
@@ -111,13 +111,13 @@ Ancak birçok zayıf yönü de vardır. Sınırlarla kısıtlıdır — yalnızc
 
 Ve insanlardan oluşurlar ve insanlar kötüdür. Gerçek şu ki, bu ülkede ve diğer pek çok ülkede birçok insan kurumların sağladığı sertliğe gerçekten erişememiştir. İpotekli kredi alamadılar. Banka hesabı açamadılar. Çünkü bir kurumu insanlarla doldurduğunuzda, onların kötülüklerine, önyargılarına, ideolojilerine maruz kalır. Ve kurumsal sertliğe olan bağımlılığımız giderek artıyor. Yazılımın dünyayı yemesindeki sorun, çoğu yazılımın aslında sadece ekranın arkasındaki bir kurumdan ibaret olmasıdır ve sonuç olarak onlara giderek daha fazla güç veriyoruz.
 
-#### Blokzincir sertliği (24:20) {#blockchain-hardness-2420}
+### Blokzincir sertliği (24:20) {#blockchain-hardness-2420}
 
 Satoshi'nin icadı elbette sadece Bitcoin'den ibaret değildi — dijital bir ortamda dijital sertlik yaratmak için genel amaçlı bir tekniğin çekirdeğiydi. Birçok güçlü yönü vardır: evrensel küresel erişim, yazılımdan yapılmıştır ve herkes yazılım yazabilir, sertlik derecesi şeffaf ve denetlenebilir olabilir, düşük başlangıç maliyeti, yinelemesi kolaydır ve piyasa teşvikleriyle güvence altına alınmıştır — ve piyasalar rasyoneldir.
 
 Ancak zayıf yönleri de vardır. Teknolojik bir medeniyet gerektirir — gereksinimler nedeniyle şu ana kadar blokzincirlere sahip olamazdık ve gelecekte bizim sahip olduklarımıza sahip olmayan bir medeniyet de onları kullanamayacaktır. Yazılımdan yapılmıştır ve yazılım kötü yazılabilir. Kalıpların kapsamı zincir içi ortamlarla sınırlıdır. Ve piyasa teşvikleriyle güvence altına alınmıştır — ve piyasalar irrasyoneldir.
 
-#### Bu neden önemli (25:10) {#why-this-matters-2510}
+### Bu neden önemli (25:10) {#why-this-matters-2510}
 
 Peki bu ne anlama geliyor? Bu bize ne kazandırıyor? Bu neden sadece akademik bir ilgiden ibaret değil?
 
@@ -127,7 +127,7 @@ Bu mercekten bakıldığında pek çok şey çok daha mantıklı gelmeye başlı
 
 Ayrıca, olasılıklar yelpazesini ve insanların blokzincir alanında içine düştükleri varsayılan ideolojileri anlamaya yardımcı olur. Birçok insan, kurumsal sertlikle rekabet etmek veya onun yerini almak için blokzincir sertliğini kullanmaya çok odaklanmıştır — Bitcoin topluluğunun büyük bir kısmı bununla ilgilidir, merkeziyetsiz finansın (DeFi) büyük bir kısmı bununla ilgilidir. ENS bile bir şekilde DNS'in yerini almaya veya onunla rekabet etmeye çalışıyor. Ancak bir de blokzincir sertliğinin kurumsal sertliğin yapamadığı şeyleri yapabileceğini gören insanlar var — daha önce hiç kimsenin denemediği fikirler, çünkü bu kapasiteye, bu belirli sertlik türüne hiç sahip olmamıştık. Ve şimdi bu şeyleri keşfedebiliriz. Belki NFT'ler oradadır veya Dark Forest gibi oyunlar ya da otonom dünyalar etrafındaki hareket.
 
-#### Hedeflerimizi yükseltmek (27:00) {#raising-our-ambitions-2700}
+### Hedeflerimizi yükseltmek (27:00) {#raising-our-ambitions-2700}
 
 En önemlisi, bence bu çerçeve hedeflerimizi yükseltiyor. Kişisel olarak benim için önemli olan bu ve belki size de hitap ediyordur — ben sadece bu bireysel uygulamalar için burada değilim. Ben sadece tamamen Bitcoin veya tamamen DeFi veya tamamen NFT'lerle ilgilenen biri değilim. Belki siz de öylesinizdir. Burada daha büyük bir şeyler oluyor.
 

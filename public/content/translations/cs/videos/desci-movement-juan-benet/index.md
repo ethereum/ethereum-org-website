@@ -18,7 +18,7 @@ Prezentace **Juana Beneta**, zakladatele Protocol Labs a vynálezce IPFS a Filec
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=zkXM9H90g_E) zveřejněného EthCC. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod do vědy a pokroku (0:10) {#introduction-to-science-and-progress-010}
+### Úvod do vědy a pokroku (0:10) {#introduction-to-science-and-progress-010}
 
 Dobrá, zdravím všechny. Jmenuji se Juan. Jsem tu, abych mluvil o DeSci. Chci mluvit o tom, jak můžeme DeSci využít k financování, organizaci a otevírání vědy. Nejprve si řekneme, o čem budeme mluvit: chvíli budu mluvit o vědě obecně, pak o tom, co je hnutí DeSci, a následně o tom, jak můžeme financovat vědecké veřejné statky. Dále o tom, jak DeSci organizuje lidi, projekty a práce kolem vědy. Pak chci mluvit trochu o otevřeném přístupu a reprodukovatelné vědě a chci skončit výzvou k akci. Takže to bude docela rychlé. Máme toho hodně co probrat, takže budu postupovat rychle.
 
@@ -34,7 +34,7 @@ Věda má však spoustu problémů. S vědeckým úsilím jsou spojeny nejrůzn�
 
 Jakmile jsou studie dokončeny a vytvořeny, pouze zlomek z nich lze replikovat. Existuje tedy spousta vědeckých prací, které byly publikovány, přijaty a považovány za správné, jen aby se později zjistilo, že obrovskou část z nich vlastně nelze reprodukovat. Čelíme tedy obrovské krizi reprodukovatelnosti. A existují dokonce vědecké objevy, jejichž artefakty se ztrácejí. Představte si, že se z našich znalostních bank ztrácejí samotné články, kód nebo data spojená s nějakým výsledkem. Kolem vědy je tedy spousta problémů, které je třeba vyřešit, a o tom částečně DeSci je. Řeší řadu těchto problémů, ne plošně, ne úplně, ale komunita DeSci se snaží s mnoha těmito problémy vypořádat.
 
-#### Hnutí DeSci (5:11) {#the-desci-movement-511}
+### Hnutí DeSci (5:11) {#the-desci-movement-511}
 
 Co je to tedy DeSci? DeSci je hnutí za zlepšení vědy pomocí technologií a nástrojů Web3. Představte si, že můžete využít veškerou magii hashového propojování, blockchainů a chytrých kontraktů k vytvoření systémů a struktur, které mohou zlepšit způsob, jakým děláme vědu napříč obory po celém světě.
 
@@ -46,7 +46,7 @@ Nyní existuje několik skupin, které se zabývají decentralizovaným financov
 
 Nyní se také koná spousta různých setkání a konferencí, které tyto komunity sdružují. Akce jako DeSci Day, DeSci Berlín, Schelling Point od komunity Gitcoin a Funding the Commons. Tyto konference shromažďují spoustu diskusí kolem DeSci.
 
-#### Financování veřejných statků (10:40) {#funding-the-commons-1040}
+### Financování veřejných statků (10:40) {#funding-the-commons-1040}
 
 Pojďme se bavit o financování veřejných statků. Možná někteří z vás viděli tento diagram, který jsem v minulosti použil v souvislosti s inovační propastí. V překladu vědy do technologií se část DeSci zaměřuje převážně na levou část – pouze na tu vědeckou – a snaží se vymyslet lepší struktury pobídek a lepší způsoby koordinace skupin k produkci lepších vědeckých výstupů. Stojí za zmínku, že celkové globální financování výzkumu a vývoje je z jednoho pohledu docela masivní, ale z jiného pohledu zase tak velké není a v posledních několika desetiletích se příliš nezměnilo, i když propustnost a výsledky technologií, které budujeme, ohromně vzrostly.
 
@@ -64,7 +64,7 @@ Například skupiny jako VitaDAO vytvářejí datovou strukturu, která rozdělu
 
 Certifikáty dopadu jsou další fascinující strukturou představující retroaktivní financování. Umožňují účastníkům, jakmile dosáhnou nějakého dopadu, razit certifikát týkající se tohoto dopadu a prodat jej na trhu komukoli, kdo si chce tento dopad nárokovat. To umožňuje vznik spekulativního trhu, který uzavírá smyčku napříč časem a retroaktivně financuje nesmírně důležitou práci. To je klíčové, protože mnohokrát si uvědomíte, jak je něco cenné, až dlouho poté, co byla práce odvedena.
 
-#### Organizace lidí a Data DAO (15:28) {#organizing-people-and-data-daos-1528}
+### Organizace lidí a Data DAO (15:28) {#organizing-people-and-data-daos-1528}
 
 Nyní několik rychlých myšlenek o organizaci lidí. V minulosti byl GitHub nesmírně úspěšný v pomoci s organizací vědeckého objevování. Celé učebnice a obory se vyvinuly prostřednictvím GitHubu. Mnoho skupin využilo základní primitiva GitHubu týkající se problémů, spolupráce na kódu a správy verzí k organizaci komunit z praxe a vědy. Co tam ale chybí, je způsob, jak vytvářet organizace, které dělají výzkum, nakládají s kapitálem nebo platí přispěvatelům.
 
@@ -78,7 +78,7 @@ Můžete si představit spojení tohoto druhu aktivity a generování dat s ně�
 
 Několik závěrečných poznámek k otevřenému přístupu a reprodukovatelné vědě. IPFS se již hojně využívá pro mnoho druhů otevřené vědecké práce. Už teď žije sen o otevření přístupu k velké části vědy, podporuje distribuované kopie Wikipedie, masivní archivy článků a datové sady.
 
-#### Otevřený přístup, reprodukovatelná věda a výzva k akci (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Otevřený přístup, reprodukovatelná věda a výzva k akci (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 S plnou reprodukovatelností ještě nejsme úplně u cíle. Je to oblast, která potřebuje více práce, ale spousta lidí už nad tím přemýšlela. Existují opravdu dobré specifikace a nápady ohledně využití standardní reprodukovatelnosti s IPFS ke zmrazení všech aktiv a vybudování plně reprodukovatelného procesu. Můžete vyvolat zpět konkrétní experimenty z minulosti, přinést zpět zcela zmrazené virtuální stroje nebo kontejnery, znovu spustit všechny datové procesy a ověřit, že jsou experimenty správné.
 

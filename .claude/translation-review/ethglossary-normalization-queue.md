@@ -18,7 +18,7 @@ The entry ships the acronym in lowercase, so it renders lowercase mid-sentence i
 | --- | --- | --- | --- |
 | hi | `distributed validator technology (DVT)` | `वितरित सत्यापनकर्ता तकनीक (dvt)` | `(DVT)` |
 | hi | `Go Ethereum (Geth)` | `गो इथेरियम (geth)` | `(Geth)` |
-| hi, id, tr, ur, mr, bn, vi, ko, pt-br | `layer 2 (L2)` | `... (l2)` | `(L2)` |
+| bn, cs, es, fr, hi, id, it, ko, mr, pt-br, ru, sw, ta, te, tr, uk, ur, vi, zh (19 of 24) | `layer 2 (L2)` | `... (l2)` | `(L2)` |
 | id, ur | `liquid staking token (LST)` | `token staking likuid (lst)` | `(LST)` |
 | bn | `distributed validator technology (DVT)` | `... (dvt)` | `(DVT)` |
 | ur | `Go Ethereum (Geth)` | `... (geth)` | `(Geth)` |
@@ -150,3 +150,34 @@ Neither name is in ETHGlossary (`/filter` matched only `claim` against the banne
 This is a clean section-9.3-shaped addition rather than a conflict -- `Devcon` is not an existing entry, so there is no `keep_latin` flag to reconcile.
 
 Two pre-existing items the new entry will eventually correct, both out of scope for #19142: `src/intl/*/common.json` ships `"devcon": "Devcon"` and `"nav-devcon-label": "Devcon"` in **24/24** locales, and `public/content/translations/` has zero native-script renderings outside ko (hi 66 Latin, zh 74, ja 71, zh-tw 71, ru 70, uk 70, ta 69, ur 66, ar 64, te 62, mr 55, bn 48).
+
+## 10. Missing entry: `General Admission` (PR #19228)
+
+Same gap as section 9, one campaign later. `General Admission` is a named Devcon ticket tier that now ships in a UI string, and it is in neither ETHGlossary nor `PROTECTED_BRAND_NAMES`. PR #19228 split four ways across 24 locales (known-patterns #77). Unlike `Devcon`, no locale is the reference: the correct treatment depends on what devcon.org's checkout actually labels the tier per language.
+
+**Requested entry -- `General Admission`:**
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `product-tier` (or `brand-or-project` if no tier role exists) |
+| `script_rule` | **blocked on a product answer** -- see below |
+
+The blocking question is not linguistic. If devcon.org's hi and mr ticket pages label the tier in native script, the entry should be `transliterate`/translated to match them; if every localized checkout page shows Latin `General Admission`, the entry should be `keep_latin` so the banner names what the buyer will actually click. Resolve by reading devcon.org/{hi,mr}/tickets -- the two locales this campaign routes to -- then set one rule for all 24.
+
+Until then the shipped forms stand. Two worth noting as furthest from a tier name if the answer comes back "keep Latin": ru `стандартный входной билет` and zh `普通门票` describe a generic ticket class rather than naming the tier.
+
+**Related:** this entry and section 9's `Devcon` are the same request shape and should land together -- both are Devcon-campaign proper nouns that the pipeline re-decides on every run.
+
+## 11. `zk-rollup` compound entries that conflict with their own parts or with shipped content (PR #19291)
+
+The `zk-rollup` entry (English head `zero-knowledge rollup`) is the compound the pipeline correctly applies for "zero-knowledge rollups", and all 24 locales currently match it. Three of those entries conflict with something else the glossary or the site already says.
+
+| Locale | `zk-rollup` entry | Conflicts with | Consequence |
+| --- | --- | --- | --- |
+| zh-tw | `零知識卷疊` (confidence **medium**) | `rollups` -> `匯總` (high), and the zh-tw page the `<zkrollups>` link points at is titled `零知識匯總` (59 uses of `匯總`, 0 of `卷疊`) | Reader clicks `零知識卷疊` and lands on a page called `零知識匯總`. `卷疊` is 11 occurrences repo-wide against 666 for `匯總`; it looks like a Simplified-to-Traditional carryover of zh's legitimate `卷叠` |
+| ta | `பூஜ்ஜிய அறிவு சுருக்கம்` (confidence **medium**, translated, unhyphenated) | `rollups` -> `ரோலப்கள்` (high), whose note says direct transliteration is preferred; the bare `zero-knowledge` entry is hyphenated `பூஜ்ய-அறிவு` | The compound translates what the base entry says to transliterate, and drops the hyphen the bare entry carries. Within one page, `சுருக்கம்` then does double duty for "rollup" and for "succinct" (`சுருக்கமான சான்று`) |
+| te | `జీరో-నాలెడ్జ్ రోలప్` | `rollups` -> `రోల్అప్‌లు`, i.e. a different base spelling (`రోలప్` vs `రోల్అప్`) | The glossary ships two spellings of the same base noun, so singular and plural of one term disagree depending on which entry the pipeline hits |
+
+zh is the control case and needs no change: its `零知识卷叠` matches the zh page title, `src/intl/zh/glossary.json`, and 67 repo-wide uses.
+
+Resolving these upstream is what stops a reviewer re-litigating them: because `/filter` returns only the single-word parts, a compound that disagrees with its parts reads at review time like a pipeline defect. See `intl-review/references/ethglossary-usage.md` step 0.

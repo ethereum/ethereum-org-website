@@ -21,6 +21,8 @@ Ethereum is a public network, a blockchain, and an open-source protocol -- opera
 
 [More on Ethereum governance](/governance/)
 
+[More on Ethereum's core principles](/values/)
+
 ### Ether (ETH) {#ether-or-eth}
 
 Ether (also known by its ticker symbol, ETH) is the native currency transacted on Ethereum. ETH is needed to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
@@ -71,7 +73,7 @@ To achieve this mission, our team focuses on two primary goals on ethereum.org:
 - Facilitate greater diversity of contributions: code, content, design, translation, moderation
 - Keep the codebase modern, clean, and well-documented
 
-## Core principles {#core-principles}
+## Our core principles {#core-principles}
 
 We have some core principles that help guide us to accomplish our mission.
 
@@ -85,20 +87,17 @@ We want our users to have their interest piqued and their questions answered. So
 Ethereum and the community are always evolving, so ethereum.org will too. That's why the site has a simple design system & modular structure. We make iterative changes as we learn more about how people use the site and what the community wants from it.
 We're open source, with a community of contributors, so you can propose changes or help us out too.
 [Learn about contributing](/contributing/)
+[Why open source matters](/open-source/)
 
 ### 3. ethereum.org is not a typical product website 🦄 {#core-principles-3}
 
 Ethereum is a big thing: it includes a community, a technology, a set of ideas and ideologies, and more.
-This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is".
+This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” to “a newcomer who just bought some ETH and doesn’t know what a wallet is”.
 "What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
 
-## Product roadmap {#roadmap}
+## Get involved {#get-involved}
 
-To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our [shape up cycle](https://www.productplan.com/glossary/shape-up-method/) roadmap goals.
-
-[View our 2025 Cycle 1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
+**How's that sound?** We always appreciate feedback on our work - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
 **Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://x.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/ethereum-org).
 
@@ -110,7 +109,7 @@ We use a set of [design principles](/contributing/design-principles/) to guide o
 
 We built and released a [design system](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) to ship features more quickly and let community members participate in the open design of ethereum.org.
 
-Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), the [GitHub issue](https://github.com/ethereum/ethereum-org-website/issues/6284) and join the conversation in our [#design Discord channel](https://discord.gg/ethereum-org).
+Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) and join the conversation in our [#design Discord channel](https://discord.gg/ethereum-org).
 
 ## Style guide {#style-guide}
 
@@ -128,6 +127,6 @@ The ethereum.org website is open source and built under an [MIT License](https:/
 
 Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.
 
-We'll post any job openings here. If you don't see a role here for you, head over to [our Discord server](https://discord.gg/ethereum-org) and let us know how you'd like to work with us!
+When we're hiring, we'll list open roles here. If you don't see a role for you, head over to [our Discord server](https://discord.gg/ethereum-org) and let us know how you'd like to work with us!
 
-Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/get-involved/#ethereum-jobs/).
+Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/get-involved/#ethereum-jobs).

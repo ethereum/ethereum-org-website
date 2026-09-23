@@ -20,7 +20,7 @@ Esta entrevista cubre el recurso del espacio de blobs de Ethereum, introducido c
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=dFjyUY3e53Q) publicada por Bankless. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción al espacio de blobs (0:00) {#introduction-to-blob-space-000}
+### Introducción al espacio de blobs (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Bienvenidos a Bankless, donde exploramos la frontera del dinero y las finanzas de internet. Aquí te mostramos cómo empezar, cómo mejorar y cómo adelantarte a las oportunidades. Estoy aquí con David Hoffman, y estamos aquí para ayudarte a ser más "bankless". ¿Sabes que decimos que las cadenas de bloques venden bloques? Bueno, pronto Ethereum venderá algo más que bloques: también venderá blobs.
 
@@ -38,7 +38,7 @@ Esta entrevista cubre el recurso del espacio de blobs de Ethereum, introducido c
 
 Traigamos a nuestro invitado, Dom, también conocido como Domothy. Es investigador en la Fundación Ethereum y trabaja en la investigación y el desarrollo de actualizaciones clave de Ethereum que están en camino, incluido el EIP-4844 (el tema de hoy), el danksharding completo y la quema de MEV.
 
-#### La historia de la hoja de ruta centrada en los rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### La historia de la hoja de ruta centrada en los rollups (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Entonces, Dom, para entender completamente cómo llegamos al espacio de blobs, creo que vale la pena hacer un viaje por el camino de los recuerdos para comprender la totalidad de la hoja de ruta de Ethereum, porque llegó a una conclusión muy lógica de blobs y espacio de blobs. ¿Puedes llevarnos al pasado? Porque en un momento dado, la hoja de ruta de Ethereum centrada en los rollups no existía. Teníamos esto llamado fragmentación de ejecución, que en realidad nunca obtuvimos. ¿En qué punto de la historia de la hoja de ruta de Ethereum es apropiado situarse para entender realmente el contexto completo del espacio de blobs?
 
@@ -58,7 +58,7 @@ Ahora lo que estamos haciendo con la hoja de ruta centrada en los rollups es fra
 
 A finales de 2020, la gente se dio cuenta de que los rollups estaban empezando a ser increíblemente buenos y populares, y resolvieron nuestro problema de escalado de ejecución sin la necesidad de fragmentación de ejecución. Al optar por un ecosistema de rollups en lugar de intentar ser un maximalista de la capa 1, los rollups pueden hacer sus propias concesiones, crear sus propias cadenas de bloques y experimentar con cosas novedosas. Ethereum se encarga de la verificación: ese es el núcleo de lo que es una cadena de bloques.
 
-#### ¿Qué es el espacio de blobs? (30:00) {#what-is-blob-space-3000}
+### ¿Qué es el espacio de blobs? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Ahora llévanos al estado actual, Dom. Tenemos muchos rollups que utilizan el espacio de bloques de la capa 1 de Ethereum, pagando altas tarifas de gas para publicar sus datos de estado para que cualquiera pueda verificarlos. Entonces, Dom, ¿qué es un blob?
 
@@ -72,7 +72,7 @@ Es esencialmente un paquete sellado. La capa 1 lo toma, garantiza que todos teng
 
 **Domothy:** Exactamente. Y otra propiedad crítica de los blobs es que se podan automáticamente después de un período de tiempo (actualmente alrededor de 18 días). La razón por la que se podan es que, para garantizar una verificación sin necesidad de confianza, los individuos solo necesitan que esos datos estén disponibles para probar la finalidad y el consenso sobre el estado del rollup dentro de una ventana de desafío específica. No necesitas mil nodos guardando blobs de hace dos años para verificar tu transacción hoy. Cuando la ventana expira, ya no lo obtendrás de un nodo de Ethereum; lo obtienes de proveedores de historial, indexadores o los exploradores de bloques nativos del rollup. El almacenamiento en Ethereum es increíblemente caro para siempre. Eliminar el requisito de almacenamiento nos permite escalar la capacidad de procesamiento de blobs sin destruir los discos duros de los operadores de nodos.
 
-#### Economía y danksharding completo (55:00) {#economics-and-full-danksharding-5500}
+### Economía y danksharding completo (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Sabemos que el 4844 es el primer paso: lo que llamamos Proto-Danksharding. Establece el formato de blob y el mercado de tarifas aislado, pero el número objetivo real de blobs por bloque está restringido inicialmente para ser bastante seguro. ¿Cómo se ve esto escalando hacia el danksharding completo?
 
@@ -86,7 +86,7 @@ Con un mercado de tarifas bidimensional (esencialmente una carretera aislada sep
 
 **Domothy:** Sí, están completamente desconectados. Y lo contrario también es cierto. Si la capacidad de procesamiento de la capa 2 se dispara inmensamente y miles de rollups operan y congestionan el espacio de blobs, el aumento resultante en las tarifas base de los blobs no afectará el costo de hacer una transacción simple en la red principal de Ethereum. La tarifa base del blob opera exactamente como la tarifa base del EIP-1559, pero en su propia dimensión. Y a tu pregunta anterior sobre la quema: sí, la tarifa de blob genera ETH quemado para pagar la inclusión de datos en el espacio de blobs, totalmente separado de la quema de la tarifa base del espacio de bloques.
 
-#### El futuro de la escalabilidad de Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### El futuro de la escalabilidad de Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Quiero llegar a lo que sucede específicamente en el lanzamiento del 4844. Inicialmente, obviamente hay una expectativa muy alta de que cuando la capacidad de blobs se desbloquee repentinamente, no habrá suficiente demanda de rollups en ese microsegundo exacto para llenarla por completo. El espacio de blobs será casi cómicamente barato en el lanzamiento. Pero, ¿no existe la ley de la demanda inducida? Si tienes recursos increíblemente baratos, las aplicaciones que consumen esos recursos explotan en volumen.
 

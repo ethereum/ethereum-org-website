@@ -19,7 +19,7 @@ Filozoficzne wystąpienie **Josha Starka** z Fundacji Ethereum na Pragma Denver 
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=zI07mqNdxzA) opublikowanego przez ETHGlobal. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Dlaczego nie potrafimy wyjaśnić blockchainów? (0:00) {#why-cant-we-explain-blockchains-000}
+### Dlaczego nie potrafimy wyjaśnić blockchainów? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Cześć wszystkim, dziękuję, że jesteście tu na Pragma w Denver. Mam na imię Josh. Pracuję w Fundacji Ethereum — jestem w EF od około pięciu lat. Lubię żartować, że moją pracą jest wymyślanie, czym powinna być moja praca, a to zmienia się co sześć miesięcy.
 
@@ -31,7 +31,7 @@ Naprawdę musimy dotrzeć do sedna, a nie sądzę, byśmy byli tego blisko. To p
 
 Zaczęło się to więc od bardzo konkretnego pytania, które sobie zadałem: czym jest ta technologia ogólnego przeznaczenia? Czym jest ta fundamentalna zdolność? A przerodziło się to w coś, co uważam za znacznie ciekawsze.
 
-#### Claude Shannon i idea informacji (4:00) {#claude-shannon-and-the-idea-of-information-400}
+### Claude Shannon i idea informacji (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Pozwólcie, że opowiem wam historię. W latach 30. i 40. XX wieku Claude Shannon był otoczony początkami nowej ery. W Bell Labs pracował podczas wojny nad systemami kierowania ogniem i kryptografią, i zaczął myśleć o bardziej ogólnym podejściu do informacji. Na początku nie nazywał tego informacją — w 1939 roku napisał do kolegi, że myśli o „transmisji inteligencji”. Słowo informacja miało wtedy inne znaczenie.
 
@@ -41,7 +41,7 @@ Przed tym momentem nikt tak naprawdę nie miał koncepcji informacji jako uniwer
 
 Chcę, żebyście wyciągnęli z tego następujący wniosek: był czas, zanim mieliśmy ideę informacji, i czas po nim. Co jeśli nam również brakuje czegoś równie fundamentalnego? Taka jest moja hipoteza.
 
-#### Trzy wskazówki (7:00) {#three-clues-700}
+### Trzy wskazówki (7:00) {#three-clues-700}
 
 Zmagając się z wyjaśnieniem blockchainów, wciąż natrafiam na te dziwne rzeczy, które moim zdaniem są wskazówkami prowadzącymi do czegoś większego.
 
@@ -53,7 +53,7 @@ W przypadku samochodów mówiliśmy o „powozach bez koni”, ale przynajmniej 
 
 **Wskazówka numer trzy** — praca Satoshiego zaczyna się od tych słów: „handel w internecie zaczął opierać się niemal wyłącznie na instytucjach finansowych pełniących rolę zaufanych stron trzecich”. Satoshi porównywał Bitcoina do instytucji, a nie do innego oprogramowania. Coś w tym jest.
 
-#### Wprowadzenie twardości (11:00) {#introducing-hardness-1100}
+### Wprowadzenie twardości (11:00) {#introducing-hardness-1100}
 
 Oto moja odpowiedź na to, co znajduje się w tym pudełku. Nazywam to **twardością** (hardness). Oto historia w pięciu prostych krokach, a potem wejdziemy w szczegóły.
 
@@ -71,7 +71,7 @@ Stopa inflacji złota jest niezawodna ze względu na fizyczne właściwości nas
 
 Możesz myśleć o atomach, instytucjach i blockchainach jak o materiałach budowlanych — jak o drewnie, betonie i stali. Są różne, ale należą do wspólnej kategorii. I używamy tych rzeczy nie do budowania budynków, ale do budowania cywilizacji. Być może dzięki lepszym materiałom będziemy w stanie zbudować większą, lepszą i silniejszą cywilizację niż ta, którą mamy obecnie.
 
-#### Czym jest twardość? (14:00) {#what-is-hardness-1400}
+### Czym jest twardość? (14:00) {#what-is-hardness-1400}
 
 Pozwólcie, że sprecyzuję, co mam na myśli mówiąc o twardości. To nie jest po prostu jakakolwiek niezawodność, którą może mieć cokolwiek. Twardość to jej szczególny rodzaj. Pierwszą rzeczą, na którą należy zwrócić uwagę, jest to, że jest to rodzaj niezawodności, który ma znaczenie dla koordynacji społecznej. Nie tylko to, że ten stół jest niezawodnie stołem — ale to, że możesz zapłacić czynsz, że kontrakt zostanie wyegzekwowany, że gospodarka jest silna. Do tego właśnie służy twardość.
 
@@ -87,7 +87,7 @@ I wreszcie, twardość pochodzi z określonych źródeł — atomów, instytucji
 
 W tych ramach podoba mi się to, że pozwalają nam zadawać głębsze pytania — nie tylko rozmawiać o konkretnych właściwościach blockchainów, ale porównywać wszystkie te różne rzeczy i zastanawiać się, gdzie są one odpowiednie, jak ich używamy i w jakiej kombinacji.
 
-#### Twardość atomów (19:00) {#atom-hardness-1900}
+### Twardość atomów (19:00) {#atom-hardness-1900}
 
 Twardość atomów dotyczy sytuacji, w których znajdujemy niezawodność w otaczającej nas naturze — dosłownych fizycznych atomach, ale także innych naturalnie występujących właściwościach. Robimy to, gdy używamy złotych koralików jako pieniędzy, gdy używamy fizycznych struktur do definiowania praw własności lub zapisujemy prawa własności na fizycznym obiekcie, takim jak akt notarialny.
 
@@ -101,7 +101,7 @@ A odlewy są często podważane przez naszą rosnącą ludzką kontrolę nad nat
 
 Ale to jest bardziej subtelne. Czasami mamy odlewy, z których istnienia nawet nie zdajemy sobie sprawy, ale potem znikają, ponieważ coś się zmieniło. Przez długi czas istniał twardy odlew dotyczący szybkości handlu na rynkach finansowych — można to było robić tylko w określonym tempie, być może w tempie, w jakim ludzie mogą do siebie krzyczeć na parkiecie. Ten odlew był twardy jak atom — po prostu nie mogliśmy komunikować się szybciej. Ale nowa technologia całkowicie podważyła te założenia. Zdaliśmy sobie sprawę, że tak naprawdę podobała nam się wersja tego starego odlewu i odtworzyliśmy go z instytucji — wprowadzając regulacje, które ograniczają prędkość handlu i wymuszają mechanizmy wstrzymujące obrót (circuit breakers).
 
-#### Twardość instytucjonalna (22:00) {#institutional-hardness-2200}
+### Twardość instytucjonalna (22:00) {#institutional-hardness-2200}
 
 Twardość instytucjonalna to bardzo szeroka kategoria — obejmuje większość rzeczy, o których możemy pomyśleć, gdy myślimy o cywilizacji. Nasze systemy prawne, organy ustawodawcze, siły policyjne, korporacje, wszystko. Wszystkie instytucje, które zapewniają jakiegoś rodzaju twardość. Stworzyliśmy odlewy, które zaprowadziły porządek w naszych społeczeństwach, karząc zachowania aspołeczne. Stworzyliśmy twardość jako platformę, pozwalając każdemu tworzyć własne odlewy utwardzane przez instytucje, o ile przestrzega się określonych zasad. Stworzyliśmy odlewy, które zrodziły nowe aktywa i zapewniły źródła kredytu dla rozwijających się gospodarek.
 
@@ -111,13 +111,13 @@ Ma jednak również wiele słabych stron. Jest ograniczona granicami — tylko w
 
 I są tworzone przez ludzi, a ludzie są źli. Rzeczywistość w tym kraju i wielu innych jest taka, że wiele osób tak naprawdę nie miało dostępu do twardości zapewnianej przez instytucje. Nie byli w stanie uzyskać kredytu hipotecznego. Nie byli w stanie otworzyć konta bankowego. Ponieważ kiedy obsadzasz instytucję ludźmi, jest ona podatna na ich zło, uprzedzenia, ideologie. A nasze poleganie na twardości instytucjonalnej tylko rośnie. Problem z oprogramowaniem pożerającym świat polega na tym, że większość oprogramowania jest tak naprawdę tworzona przez instytucję ukrytą za ekranem, a w rezultacie dajemy im coraz więcej władzy.
 
-#### Twardość blockchaina (24:20) {#blockchain-hardness-2420}
+### Twardość blockchaina (24:20) {#blockchain-hardness-2420}
 
 Wynalazek Satoshiego był oczywiście czymś więcej niż tylko Bitcoinem — był zalążkiem techniki ogólnego przeznaczenia do tworzenia cyfrowej twardości w środowisku cyfrowym. Ma wiele mocnych stron: uniwersalny globalny dostęp, jest stworzony z oprogramowania, a każdy może pisać oprogramowanie, stopień twardości może być przejrzysty i weryfikowalny, niski koszt początkowy, łatwość iteracji i zabezpieczenie przez zachęty rynkowe — a rynki są racjonalne.
 
 Ma jednak również słabe strony. Wymaga cywilizacji technologicznej — nie moglibyśmy mieć blockchainów wcześniej ze względu na wymagania, a cywilizacja w przyszłości, która nie będzie miała tego, co my, również nie będzie w stanie z nich korzystać. Jest stworzony z oprogramowania, a oprogramowanie może być źle napisane. Zakres odlewów jest ograniczony do środowisk onchain. I jest zabezpieczony przez zachęty rynkowe — a rynki są irracjonalne.
 
-#### Dlaczego to ma znaczenie (25:10) {#why-this-matters-2510}
+### Dlaczego to ma znaczenie (25:10) {#why-this-matters-2510}
 
 Co to zatem oznacza? Co nam to daje? Dlaczego jest to coś więcej niż tylko akademickie zainteresowanie?
 
@@ -127,7 +127,7 @@ Wyjaśnia to, dlaczego prywatne lub scentralizowane blockchainy nie są interesu
 
 Pomaga to również zrozumieć spektrum możliwości i domyślne ideologie, w które wpadają ludzie w przestrzeni blockchain. Wiele osób jest bardzo skupionych na wykorzystaniu twardości blockchaina do konkurowania z twardością instytucjonalną lub jej zastąpienia — o to właśnie chodzi w dużej części społeczności Bitcoina, o to chodzi w dużej części zdecentralizowanych finansów (DeFi). Nawet ENS próbuje w jakiś sposób zastąpić DNS lub z nim konkurować. Ale są też ludzie, którzy widzą, że twardość blockchaina może robić rzeczy, których twardość instytucjonalna nie potrafi — pomysły, których nikt wcześniej nie próbował, ponieważ nigdy nie mieliśmy tej zdolności, tego konkretnego smaku twardości. A teraz możemy te rzeczy eksplorować. Być może są tam NFT, albo gry takie jak Dark Forest, albo ruch wokół autonomicznych światów.
 
-#### Podnoszenie naszych ambicji (27:00) {#raising-our-ambitions-2700}
+### Podnoszenie naszych ambicji (27:00) {#raising-our-ambitions-2700}
 
 Co najważniejsze, uważam, że te ramy podnoszą nasze ambicje. Osobiście to właśnie ma dla mnie znaczenie i być może rezonuje to z wami — nie jestem tu tylko dla tych poszczególnych aplikacji. Nie jestem kimś, kto po prostu interesuje się tylko Bitcoinem, tylko DeFi lub tylko NFT. Może wy też tacy jesteście. Dzieje się tu coś większego.
 

@@ -29,6 +29,7 @@ import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
+import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
@@ -66,6 +67,7 @@ export const KEYS = {
   ACCOUNT_HOLDERS: "fetch-account-holders",
   TRANSLATION_GLOSSARY: "fetch-translation-glossary",
   VIDEO_THUMBNAILS: "fetch-video-thumbnails",
+  QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
 // Task definition: storage key + fetch function
@@ -93,6 +95,7 @@ const DAILY: TaskDef[] = [
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
+  [KEYS.QUIZ_STATS, fetchQuizStats],
 ]
 
 const HOURLY: TaskDef[] = [

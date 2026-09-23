@@ -1,9 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import type { ReactNode } from "react"
 
 import type { FileContributor, Lang, PageParams } from "@/lib/types"
 
-import { ABTest } from "@/components/AB"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
@@ -12,7 +10,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
   getLastUpdatedDisplay,
-  getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
 } from "@/lib/utils/walletData"
@@ -23,20 +20,8 @@ import FindWalletPageJsonLD from "./page-jsonld"
 // Wallet data is repo-checked-in, so it only changes at deploy time.
 export const revalidate = false
 
-const Page = async (props: {
-  params: Promise<PageParams>
-  /** Precomputed A/B variant index, passed only by the ab-code route */
-  catalogVariant?: number
-  /**
-   * The A/B test's Original arm, injected by the ab-code route rather than
-   * imported here: a static import would pull the legacy table's client
-   * components into this route's bundle, shipping them to every visitor of the
-   * design that replaced it.
-   */
-  legacyBody?: ReactNode
-}) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
-  const { catalogVariant, legacyBody } = props
   setRequestLocale(locale)
 
   const t = await getTranslations({
@@ -47,7 +32,6 @@ const Page = async (props: {
   const wallets = getCatalogWallets(locale)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
-  const personaCounts = getPersonaCounts(wallets)
 
   const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
 
@@ -62,22 +46,8 @@ const Page = async (props: {
     // Non-fatal: JSON-LD omits the contributor list.
   }
 
-  const catalogBody = (
-    <WalletsPageBody
-      key="NewCatalog"
-      locale={locale}
-      wallets={wallets}
-      networks={networks}
-      languages={languages}
-      personaCounts={personaCounts}
-      lastUpdatedDisplay={lastUpdatedDisplay}
-    />
-  )
-
   return (
     <>
-      {/* Outside the variant swap: both arms are the same URL, so search
-          engines must see one consistent set of structured data. */}
       <FindWalletPageJsonLD
         locale={locale}
         contributors={contributors}
@@ -90,17 +60,13 @@ const Page = async (props: {
           description={t("page-find-wallet-description")}
           variant="no-divider"
         />
-        {catalogVariant !== undefined && legacyBody ? (
-          <ABTest
-            testKey="FindWalletCatalog2026"
-            variantIndex={catalogVariant}
-            // Element keys become the Matomo variation names verbatim - they
-            // must match the dashboard exactly (see ABTest label derivation).
-            variants={[legacyBody, catalogBody]}
-          />
-        ) : (
-          catalogBody
-        )}
+        <WalletsPageBody
+          locale={locale}
+          wallets={wallets}
+          networks={networks}
+          languages={languages}
+          lastUpdatedDisplay={lastUpdatedDisplay}
+        />
       </MainArticle>
     </>
   )

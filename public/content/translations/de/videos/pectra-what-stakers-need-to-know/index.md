@@ -19,11 +19,11 @@ Ein von **Blockdaemon** veranstaltetes Webinar mit der Blockchain-Ingenieurin Ju
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=_UpAFpC7X6Y), das von Blockdaemon veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:00) {#introduction-000}
+### Einführung (0:00) {#introduction-000}
 
 **Host:** Hallo und willkommen zu diesem von Blockdaemon veranstalteten Webinar, das sich auf das bevorstehende Pectra-Upgrade von Ethereum konzentriert. Heute bei uns sind Julia Schmidt, Blockchain-Ingenieurin bei Alluvial, und Freddy Tänzer, Leiter des Ethereum-Ökosystems bei Blockdaemon, um zu diskutieren, wie sich die Änderungen von Pectra auf das ETH-Staking, das gesamte Netzwerk, Liquid-Staking-Dienste und mehr auswirken werden. Um den Anfang zu machen, Freddy – könntest du uns einen kurzen Überblick über das Pectra-Upgrade geben und welche Auswirkungen es auf Staker haben wird?
 
-#### Was ist Pectra (1:28) {#what-is-pectra-128}
+### Was ist Pectra (1:28) {#what-is-pectra-128}
 
 **Freddy Tänzer:** Pectra ist also ein Ethereum-Upgrade, das für Ende des ersten Quartals 2025 geplant ist – etwa im März, könnte sich ein wenig nach hinten verschieben, vielleicht April oder so. Es sollte anfangs eigentlich ein kleiner Fork sein, und dann kamen immer mehr Dinge hinzu, sodass sie ihn jetzt tatsächlich in zwei Teile aufgeteilt haben.
 
@@ -33,7 +33,7 @@ Die erste ist die Tatsache, dass man Abhebungen und Austritte aus seinem Validat
 
 Es gibt auch eine kleinere Änderung, die im Grunde dazu führt, dass Einzahlungen viel schneller sind – onchain registriert von etwa 14 Stunden auf weniger als eine Stunde –, aber diese beiden sind meiner Meinung nach die relevantesten für unsere Diskussion hier.
 
-#### EIP-7002: Über die Ausführungsschicht auslösbare Austritte (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
+### EIP-7002: Über die Ausführungsschicht auslösbare Austritte (2:58) {#eip-7002-execution-layer-triggerable-exits-258}
 
 **Host:** Zur ersten großen Änderung, Julia, könntest du erklären, wie sich der Prozess nach Pectra im Vergleich zu den aktuellen Methoden ändern wird, mit denen Abhebungen im Staking-Ökosystem von Ethereum initiiert werden?
 
@@ -49,7 +49,7 @@ Beim letzten Dencun-Upgrade änderte ein neues EIP die Ablaufzeit dieser Austrit
 
 Dies wird nun mit EIP-7002 gelöst, das es sowohl dem Validator-Schlüssel als auch dem Abhebungsschlüssel ermöglicht, den Austritt über die Ausführungsschicht auszulösen – einfach durch das Senden einer Transaktion an einen speziellen Abhebungs-Vertrag, an den man eine Abhebungsanfrage sendet und entweder einen vollständigen Austritt des Validators oder eine teilweise Abhebung vom gestakten Guthaben angibt.
 
-#### EIP-7251: maximales effektives Guthaben (4:15) {#eip-7251-max-effective-balance-415}
+### EIP-7251: maximales effektives Guthaben (4:15) {#eip-7251-max-effective-balance-415}
 
 **Host:** Freddy, könntest du uns einen Überblick über das maximale effektive Guthaben ab Pectra geben und wie sich dies auf Leute auswirken wird, die derzeit staken?
 
@@ -69,7 +69,7 @@ Es gibt auch gute Neuigkeiten zum Slashing: Die anfängliche Slashing-Strafe wir
 
 Der Vorteil des Auto-Compoundings kommt hauptsächlich kleineren Stake-Beträgen zugute. Wenn man tausend Validatoren hat, könnte man monatlich manuell einen neuen starten. Aber wenn man nur einen Validator hat, müsste man praktisch 32 Jahre warten, um zu reinvestieren.
 
-#### Auswirkungen auf das Liquid Staking (11:25) {#liquid-staking-implications-1125}
+### Auswirkungen auf das Liquid Staking (11:25) {#liquid-staking-implications-1125}
 
 **Host:** Julia, wie verhält sich die Konsolidierung größerer Validatoren im Vergleich zu den Vorteilen des Liquid Stakings? Wie werden diese Entscheidungen im Kopf eines Stakers nach Pectra abgewogen?
 
@@ -79,7 +79,7 @@ Die Tatsache, dass die anfängliche Slashing-Strafe gesenkt wurde, verringert da
 
 Auf der Nutzenseite fügt ein Liquid-Staking-Token (LST) offensichtlich Liquidität hinzu – selbst bei teilweisen Abhebungen über die Ausführungsschicht wird dies nicht sofort geschehen. Man reicht die Transaktion ein, sie wird in die Warteschlange gestellt, dann gibt es die Austritts-Epoche und die Abhebungs-Epoche. Liquid-Staking-Token bieten weiterhin sofortige Liquidität, die teilweise Abhebungen nicht bieten können.
 
-#### Nächste Schritte für Staker (16:20) {#next-steps-for-stakers-1620}
+### Nächste Schritte für Staker (16:20) {#next-steps-for-stakers-1620}
 
 **Freddy Tänzer:** Was wir sehen, ist, dass Finanzinstitute typischerweise zwischen 65 % und 85 % ihrer verwahrten ETH staken würden, da sie den Rest als Liquiditätspuffer für Rücknahmen benötigen. Mit Liquid Staking kann man potenziell die Menge der gestakten ETH erhöhen, was höhere Belohnungen generiert.
 
@@ -89,7 +89,7 @@ Beide Seiten profitieren von Pectra – das Liquid Staking erhält die Option f�
 
 Ein wesentlicher Vorteil, den ich noch nicht angesprochen habe, sind die teilweisen Abhebungen – da man nun gestakte ETH über die Ausführungsschicht abheben kann, eröffnet dies neue Wege für Protokolle wie EigenLayer, Abhebungen und Austritte auszulösen. Es gibt eine enorme Zunahme an Funktionalität und Interoperabilität, die Dezentralisierte Finanzen (DeFi) nun besser in den gesamten Validator-Lebenszyklus integrieren können, von der Einzahlung bis zum Austritt. Als Blockchain-Ingenieurin ist es aufregend, den gesamten Workflow automatisieren zu können.
 
-#### Abschluss (19:50) {#closing-1950}
+### Abschluss (19:50) {#closing-1950}
 
 **Host:** Julia, wo können die Leute mehr über Liquid Collective und Alluvial erfahren?
 

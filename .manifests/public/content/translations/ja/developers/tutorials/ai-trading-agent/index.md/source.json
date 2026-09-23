@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/ai-trading-agent/index.md",
   "generatedAt": "2026-06-16T23:50:45.243Z",
-  "rootHash": "ea97c22dcc31",
+  "rootHash": "a4c3601ebd4a",
   "tree": {
-    "contentHash": "e4b4722b3f1e",
-    "anchorHash": "bb002eb23aa7",
+    "contentHash": "d63b97727549",
+    "anchorHash": "0fb71f532141",
     "children": {
       "frontmatter:title": {
         "contentHash": "3d256992fe68",
@@ -20,8 +20,32 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d961d10d18a5"
+        "contentHash": "c8f2585bd700",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "11fb682be0a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "0035e3bed3a1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "d4f0bc5a29de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "11a4a60b518b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

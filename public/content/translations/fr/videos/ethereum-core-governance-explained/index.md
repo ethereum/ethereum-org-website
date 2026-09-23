@@ -20,7 +20,7 @@ Une présentation de **Nixo Rokish** de la Fondation Ethereum à ETHBoulder, exp
 
 *Cette transcription est une copie accessible de la [transcription vidéo originale](https://www.youtube.com/watch?v=ghyY_cRqd54) publiée par EthBoulder. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:12) {#introduction-012}
+### Introduction (0:12) {#introduction-012}
 
 Merci à mes six amis qui sont venus. Très bien. Je vous parle aujourd'hui de la gouvernance de base d'Ethereum. Je m'appelle Nixo. Je dirige l'équipe de support du protocole à la Fondation Ethereum (FE). Parmi tous nos mandats, l'un d'eux est de rendre le processus de gouvernance plus clair et plus facile à naviguer pour tous ceux qui participent à ces choses, car Ethereum inclut bien plus que ses seuls développeurs principaux.
 
@@ -36,7 +36,7 @@ L'année dernière, il s'est passé quelque chose de très controversé. Vous en
 
 C'était donc en quelque sorte la goutte d'eau qui a fait déborder le vase pour EOF et cela a fini par être retiré du fork. Une autre chose qu'ils doivent prendre en compte, c'est que cela doit être écrit et rigoureusement testé dans six langages différents, car ces clients sont écrits dans six langages différents. C'est donc une très grande matrice de test avec laquelle ils doivent travailler. Et à cause de cela, chaque petit choix de conception fait l'objet de débats sans aucune autorité pour résoudre les désaccords. La question qui se pose alors est de savoir qui décide — ce qui est le cœur de la gouvernance.
 
-#### Idées fausses (5:23) {#misconceptions-523}
+### Idées fausses (5:23) {#misconceptions-523}
 
 Cela nous amène donc aux idées fausses et nous allons en aborder quelques-unes. La première est que Vitalik décide de ce qui entre dans le protocole Ethereum. Une extension de cela est que la Fondation Ethereum contrôle tout. Et une troisième est que tout se passe en coulisses — des initiés, des vétérans (OGs) qui prennent ces décisions.
 
@@ -52,13 +52,13 @@ Et j'aime bien ce tweet stupide que j'ai capturé ici parce que c'est un média 
 
 Tout se passe en coulisses, entre initiés, vétérans — je comprends un peu mieux pourquoi c'est une idée fausse, car en gros, vous venez à ces appels de gouvernance, il y a une centaine de personnes dans ces appels. On a l'impression qu'ils sont tous très à l'aise avec ce qui se passe. Vous êtes perdu. Vous n'avez aucune idée de la façon dont ces décisions sont prises. Vous vous dites : « C'est à mon tour de parler ? » Et on a l'impression que les gens écoutent les 10 mêmes personnes pour prendre ces décisions.
 
-#### Méritocratie et statistiques de participation (10:18) {#meritocracy-and-participation-stats-1018}
+### Méritocratie et statistiques de participation (10:18) {#meritocracy-and-participation-stats-1018}
 
 Mais la vérité est que le développement d'Ethereum est plus une méritocratie que ce que j'ai jamais vu dans la plupart des développements de logiciels. Toutes ces personnes sur cette capture d'écran — c'est l'une des trois de cet appel ACD aléatoire que j'ai décidé de capturer — aucune de ces personnes n'a été nommée pour être ici. Tout le monde est juste en quelque sorte les personnes qui se sont présentées. Ce sont les développeurs qui ont passé beaucoup de temps avec ce protocole. Ce sont ceux que les gens ont reconnus comme étant des développeurs talentueux dans cet espace, prenant constamment de bonnes décisions, et personne ici n'est nommé pour y être.
 
 Je n'ai donc rejoint la FE qu'il y a un peu plus d'un an. J'ai récupéré ces statistiques. Elles ne remontent qu'à mars 2025. Donc moins d'un an. La moyenne des participants aux appels All Core Devs — ce sont les appels de gouvernance — est de 98. Il y a donc en moyenne 98 personnes dans ces appels. Le nombre maximum de participants à un appel depuis lors a été de 153. Je crois que c'était le jour où nous décidions de la date du réseau principal pour Pectra. Et le nombre total de participants uniques est de 567 rien qu'au cours de la dernière année. J'aime beaucoup cette métrique car elle montre bien que ce ne sont pas les 100 mêmes personnes qui participent à ces appels à chaque fois. Ces développeurs d'applications, ces chercheurs, quelqu'un entend parler d'une fonctionnalité en cours de discussion, ils se présentent pour exprimer leur opposition ou leur soutien, puis ils ne viennent plus à un autre appel.
 
-#### Comment fonctionne le processus de gouvernance (11:52) {#how-the-governance-process-works-1152}
+### Comment fonctionne le processus de gouvernance (11:52) {#how-the-governance-process-works-1152}
 
 C'est donc une diapositive un peu aride, mais je pense qu'il est important de la parcourir — c'est ainsi que fonctionne actuellement la gouvernance d'Ethereum. Ainsi, lorsqu'un de ces forks est en cours de discussion, la première chose qui se passe est que les gens, pendant cette fenêtre de temps allouée, peuvent soumettre leur proposition phare. La proposition phare est la fonctionnalité majeure autour de laquelle nous voulons que les gens se rallient pour ce fork. Il peut s'agir d'un membre de la communauté, d'un chercheur, d'un développeur principal — vraiment n'importe qui qui soumet l'une de ces propositions phares. Ensuite, la fenêtre se ferme et lors des appels de gouvernance, nous discutons en quelque sorte de celles qui ont du sens. Les gens présentent leurs arguments, débattent et il y a un consensus sur celle que nous devrions choisir pour ce fork à venir.
 
@@ -68,7 +68,7 @@ Donc, après un certain nombre de devnets — il peut y en avoir deux, il peut y
 
 Et puis, une fois que le réseau de test sans permission est stable, la date du réseau principal est choisie. Ensuite, il y a un délai de 30 jours. Ce délai de 30 jours existe parce que les L2 et les protocoles l'ont demandé afin de se préparer pour le fork. C'est donc un minimum de 30 jours, puis le fork a lieu.
 
-#### Structure des appels et coordination (15:01) {#call-structure-and-coordination-1501}
+### Structure des appels et coordination (15:01) {#call-structure-and-coordination-1501}
 
 Pendant tout ce temps, il y a des séries d'appels principaux qui ont lieu. Ce sont tous des appels publics diffusés en direct sur YouTube. Les principaux sont ACDE et ACDC. Le E correspond à la couche d'exécution — ce sont des choses comme les transactions, les déploiements de contrats intelligents, la gestion de la mempool. ACDC correspond à la couche de consensus — ce sont donc des choses liées aux validateurs comme la gestion des validateurs, la réduction (slashing). Et ils s'alternent les jeudis. Il y a donc un ACD chaque jeudi, l'un d'eux est ACDE, puis le suivant est ACDC, et ainsi de suite.
 
@@ -76,7 +76,7 @@ Les appels ACDE et ACDC se concentrent sur le fork que nous sommes en train de r
 
 Et puis il y a les appels en petits groupes (breakout calls). Les appels en petits groupes, ce sont des membres de la communauté, des chercheurs, des développeurs qui disent : « Hé, j'ai une fonctionnalité que je veux intégrer à Ethereum dans deux forks. » Ils organisent donc ces appels hebdomadaires, mensuels ou bimensuels au cours desquels ils discutent des détails de l'implémentation, modifient et itèrent sur les spécifications, et répondent généralement à toutes les questions que les gens se posent, à toutes les inconnues connues pour s'assurer que c'est dans la meilleure position possible pour être inclus dans le fork dans deux forks. Et ceux-ci peuvent être programmés quand l'animateur le décide.
 
-#### Un processus en évolution (15:29) {#an-evolving-process-1529}
+### Un processus en évolution (15:29) {#an-evolving-process-1529}
 
 Il y a donc une chose que je veux faire comprendre à tout le monde, c'est que ce processus est tout sauf statique. Ce processus que je viens de vous décrire est en place depuis moins d'un an. Ethereum est en ligne depuis 10 ans. Mais il change constamment et la raison pour laquelle il change constamment est que personne n'est aux commandes. Et ce processus évolue en quelque sorte pour trouver la façon la plus efficace de fonctionner. Et je dis efficace, mais la réputation de la gouvernance d'Ethereum est d'être vraiment stagnante, difficile à faire passer, confuse — et c'est parce que quand vous avez 100 à 500 personnes qui prennent des décisions, je suis honnêtement impressionné que cela fonctionne tout court.
 
@@ -88,7 +88,7 @@ L'autre capture d'écran en haut montre donc Tim proposant des définitions pour
 
 La troisième chose, ce sont les commits au fil du temps sur Forkcast. Forkcast est un produit de mon équipe, de Wolfram Mark, un gars de mon équipe qui a créé cela au milieu de l'année dernière lorsque mon équipe dans son itération actuelle a été formée. Et c'est devenu une ressource tellement canonique que les gens utilisent pour interagir avec un fork, pour voir ce qui entre dans un fork et comment cela les affecte. Toutes ces choses ont moins de deux ans. Donc, le point que je veux faire valoir, c'est que ce processus change beaucoup. Il n'est pas du tout statique. Ce n'est pas une bureaucratie figée où il est difficile de mettre un pied dans la porte.
 
-#### Systèmes de gouvernance comparables (20:21) {#comparable-governance-systems-2021}
+### Systèmes de gouvernance comparables (20:21) {#comparable-governance-systems-2021}
 
 Je voulais donc aborder rapidement les systèmes de gouvernance décentralisée les plus similaires que je puisse voir à la gouvernance d'Ethereum. Et le point que j'essaie de faire valoir ici, c'est que c'est durable — même s'il est incroyable que 100 à 500 personnes puissent prendre des décisions, c'est durable dans le monde réel. Nous voyons des exemples où cela fonctionne.
 
@@ -96,13 +96,13 @@ L'IETF est l'Internet Engineering Task Force. C'est l'organisme de normalisation
 
 Ce à quoi cela ne ressemble pas : d'autres chaînes de blocs qui ont un vote par jeton onchain. Ethereum évite spécifiquement toute sorte de mécanisme de vote car, à mon avis, cela conduit à des possibilités de capture et cela élimine en quelque sorte l'incitation à faire des choses une méritocratie où les gens font simplement confiance aux personnes qui écrivent le meilleur code. Et puis il y a les L2. Ils ont des multi-signatures. Ils ont des conseils de sécurité. Ce sont plutôt des postes nommés qui prennent ces décisions. Et cela a ses compromis. C'est plus centralisé. Mais ça va plus vite.
 
-#### Pourquoi les constructeurs s'y intéressent (22:38) {#why-builders-care-2238}
+### Pourquoi les constructeurs s'y intéressent (22:38) {#why-builders-care-2238}
 
 Alors pourquoi les constructeurs se soucient-ils de la gouvernance ? Parce que les constructeurs sont littéralement ceux pour qui Ethereum a été créé. Ethereum n'est pas créé pour les développeurs principaux. Il n'est pas créé pour les validateurs. Parfois, ces personnes s'y trompent. Les développeurs principaux et les validateurs d'Ethereum servent Ethereum, qui sert les constructeurs et les utilisateurs.
 
 Et tout le monde a eu ce moment avec une IA où vous rentrez beaucoup trop dans les détails et elle essaie de réparer cette petite chose et elle ne parvient pas à prendre du recul et à regarder l'objectif global du projet. Et les développeurs principaux peuvent être comme ça lorsqu'ils essaient de perfectionner le processus de développement de base. Et il est très crucial dans ce cas que les constructeurs interviennent, car le développement de base est tellement chronophage qu'ils ne construisent pas non plus sur Ethereum la plupart du temps. Ils sont très impliqués dans le développement de base. Cela prend tout leur temps. Les constructeurs d'applications doivent donc vraiment faire un effort pour venir et dire : « Hé, nous avons besoin de ça. C'est crucial pour Ethereum. » Juste pour s'assurer que la perspective est là et qu'ils ne se retrouvent pas cantonnés à travailler uniquement pour les développeurs principaux.
 
-#### Comment participer (24:40) {#how-to-participate-2440}
+### Comment participer (24:40) {#how-to-participate-2440}
 
 Alors, comment participer ou faire accepter votre fonctionnalité ? C'est un conseil un peu générique, mais je pense que c'est le meilleur. Exprimez-vous haut et fort sur vos points de douleur. Allez sur Twitter, écrivez des articles de blog, identifiez des solutions à vos points de douleur. Spéculez sur les choses qui pourraient vous aider. Si vous trouvez d'autres personnes qui ont ces mêmes points de douleur, vous pouvez généralement trouver une EIP qui existe pour résoudre ce point de douleur ou demander à quelqu'un de vous aider à écrire une EIP qui le fait.
 

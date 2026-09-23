@@ -88,3 +88,16 @@ ko was the only locale of 24 that transliterated the event name (`데브콘`). T
 
 `logo-alt` was changed to Latin `Devcon VIII 인도` -- that key is the formal title lockup plus image alt text, which stays Latin in every locale (24/24 after this PR).
 
+
+## PR #19228 (intl/pending-devcon-banner-copy) -- 2026-09-04 -- Score 9.6/10
+Scope: 1 key (`discount-headline`) replacing `headline` + `subtitle` in `component-devcon-banner.json`. Fleet 24/24 clean on the code check.
+
+**Fixed in this branch:**
+
+- Trailing full stop removed. ko was the only locale of 24 to add sentence-final punctuation the English source does not have (`...청구하세요.` -> `...청구하세요`); the English copy is deliberately stop-free because the string renders as a banner headline, not a sentence. Every other locale, including the two that also render it mid-paragraph-length, matched the source.
+
+**Verified clean:**
+
+- `ETHORG10` byte-identical. The suffixed form `ETHORG10을` is correct Korean -- object particle, not a mutation of the code (known-patterns #78).
+- `일반 입장권` for `General Admission` is one of four fleet treatments; not a ko defect, pending the glossary entry (known-patterns #77, normalization-queue section 10).
+- `데브콘` preserved in `title` and Latin `Devcon VIII 인도` preserved in `logo-alt` -- incremental mode left both untouched, so the #19142 hand-corrections survived the English source moving.

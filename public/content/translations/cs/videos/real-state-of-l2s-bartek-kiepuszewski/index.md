@@ -19,7 +19,7 @@ Hlavní přednáška, kterou přednesl **Bartek Kiepuszewski**, zakladatel L2BEA
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=ik2JxmHDmyw) zveřejněného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:00) {#introduction-000}
+### Úvod (0:00) {#introduction-000}
 
 Jako zakladatel L2BEAT mám jedinečnou příležitost spolupracovat v podstatě s každým týmem vrstvy 2 (L2), který existuje, a pracujeme s nimi od samého počátku tohoto odvětví – což je asi před čtyřmi lety. To je neuvěřitelné. Čas letí velmi rychle. Spolupracovali jsme s ranými průkopníky v technologii s nulovým vědomím (ZK), pracovali jsme s Plasma Group, která se přejmenovala na Optimism, pracovali jsme s Arbitrum. A z tohoto pódia chci všem těmto týmům vyjádřit uznání, protože bez vaší podpory bychom tu určitě nebyli. Jako L2BEAT jsme nesmírně vděční za veškerou podporu, kterou nám komunita poskytuje.
 
@@ -27,7 +27,7 @@ Pojďme se tedy podívat na to, čeho se nám podařilo dosáhnout. Především
 
 Jde o to, že s celým tímto růstem přichází také velká zodpovědnost. Musíme pochopit, že koncoví uživatelé, kteří tyto systémy používají, vkládají peníze do těchto rollupů, protože věří, že rollupy dědí bezpečnost Etherea. S tímto uvědoměním bychom podle mého názoru měli začít brát bezpečnost vážně.
 
-#### Škálování Etherea (2:10) {#scaling-ethereum-210}
+### Škálování Etherea (2:10) {#scaling-ethereum-210}
 
 Podařilo se nám také škálovat Ethereum. Ethereum si vedlo docela dobře, ale vzhledem k poptávce začalo být opravdu pomalé a poplatky byly velmi vysoké. Takže určitě škálujeme – tato čísla také rostou. To je neuvěřitelné.
 
@@ -35,7 +35,7 @@ Je tu však jedno „ale“. Víte, lidi, vždycky je nějaké „ale“, že? A
 
 Protože víte, už příliš dlouho používáme pomocná kolečka. Pokud jste dospělí a používáte pomocná kolečka – a opakuji, už jsou to čtyři roky – pak jste opravdu nezralí. Je v pořádku používat pomocná kolečka, když jste dítě. Není v pořádku je používat, když jste dospělí. A myslím, že je načase, abychom se za to všichni přestali stydět. Měli bychom o tom všichni mluvit a neměli bychom trpět syndromem císařových nových šatů.
 
-#### Velké „ale“: chybějící systémy důkazů (4:30) {#the-big-but-missing-proof-systems-430}
+### Velké „ale“: chybějící systémy důkazů (4:30) {#the-big-but-missing-proof-systems-430}
 
 Co je tedy to velké „ale“? No, za prvé, většina L2 dnes nemá systém důkazů, což je docela překvapivé, protože raní průkopníci jako StarkNet, zkSync nebo Aztec – před čtyřmi lety, když spouštěli své první aplikačně specifické rollupy, systémy důkazů měli. Takže ano, dnes můžete spustit L2 jedním kliknutím na tlačítko. Je to ale opravdu L2? Je to opravdu rollup? To, co děláte, je spuštění něčeho, co je zabezpečeno pomocí multisig. Nemyslím si, že to je dostatečné.
 
@@ -43,13 +43,13 @@ Stav ekosystému dnes vypadá zhruba jako na tomto diagramu. Vlevo vidíte souč
 
 Tento graf vpravo bude zahrnovat také všechny stacky Orbit, které sice mají systém důkazů, ale ve skutečnosti se skrývá za často velmi krátkým seznamem povolených adres s řízeným přístupem. Někdy je na tomto seznamu pouze jeden aktér – je to stejný aktér jako navrhovatel stavu. Je to v podstatě navrhovatel stavu a pouze on může zpochybnit sám sebe. Jako, cože? Vážně.
 
-#### Bezpečnostní rady (6:00) {#security-councils-600}
+### Bezpečnostní rady (6:00) {#security-councils-600}
 
 Většina L2 dnes nepoužívá bezpečnostní rady. Co myslíme bezpečnostní radou? Bezpečnostní rada je v podstatě multisig, který se skládá z nejméně osmi účastníků a vyžaduje 75% práh pro konsensus. Můžete si to tedy představit jako velký multisig, ale nejde jen o velikost – jde o to, že chceme, aby účastníci byli geograficky decentralizovaní. Možná jste včera slyšeli úžasnou prezentaci o potřebě geografické diverzifikace. To je to, co od těchto struktur chceme. A v podstatě chceme, aby účastníci pocházeli především z různých společností a různých jurisdikcí. To je nesmírně důležité a já vám ukážu několik příkladů proč.
 
 Představte si bezpečnostní rady jako tyto vylepšené multisigy. Je za nimi velmi důležitá sociální vrstva. Takže toto je současný stav věcí a znovu, je to velmi špatné. Bezpečnostní rady máme pouze u Arbitrum, Optimism, Polygon, zkSync – a vím, že StarkNet, Scroll a zajímavé je, že i Fuel se spouštějí s bezpečnostní radou. Všichni ostatní jsou v podstatě velmi malý, interní, často soukromý multisig a upřímně řečeno, je nesmírně těžké rozeznat rozdíl mezi těmito multisigy a jednoduchými EOA (externě vlastněnými účty).
 
-#### Předpoklady důvěry pro dostupnost dat (7:25) {#data-availability-trust-assumptions-725}
+### Předpoklady důvěry pro dostupnost dat (7:25) {#data-availability-trust-assumptions-725}
 
 Třetí velkou věcí, kterou jsme udělali špatně, je to, že většina L2, které nejsou rollupy, je nastavena s propastnými předpoklady důvěry pro dostupnost dat (DA). A používám slovo „propastnými“ – za A, protože se mi líbí, a za B, protože je to opravdu, ale opravdu špatné.
 
@@ -59,7 +59,7 @@ Výbor pro dostupnost dat byl původně vytvořen a prosazován společností St
 
 Takže celkově vzato, je mi líto, že to musím říct, ale v současné době mohou ve většině L2 operátoři s řízeným přístupem ukrást nebo zmrazit vaše prostředky. Jsme tu proto, abychom vás na to všechny upozornili. Nerad to říkám, ale musíme změnit přístup.
 
-#### Proč záleží na systémech důkazů (8:40) {#why-proof-systems-matter-840}
+### Proč záleží na systémech důkazů (8:40) {#why-proof-systems-matter-840}
 
 Proč bychom se měli zajímat o systémy důkazů? Podle našeho názoru existují minimálně tři dobré důvody, proč bychom všichni měli mít fungující systém důkazů.
 
@@ -71,7 +71,7 @@ Jakmile zavedete systém důkazů, situace je pro škodlivého navrhovatele mnoh
 
 A konečně, systémy důkazů – pokud jste ve Fázi 2 (Stage 2) – vám umožňují odstranit jakékoli zprostředkovatele. Nepotřebujete bezpečnostní radu, nebo pokud ji máte, je to jen pro nouzové situace. To může mít ve skutečnosti hluboké regulační důsledky. Možná budete chtít spustit svou L2 jako systém Fáze 2 hned od začátku. To je možné, ale samozřejmě musíte mít systém důkazů – v ideálním případě jich možná budete chtít mít více. Už existují nějaká oznámení o systémech, které to dělají, jako nedávné oznámení od týmu Nethermind, který buduje rollup zamýšlený jako Fáze 2 již při spuštění.
 
-#### Proč bezpečnostní rady, a ne multisigy (11:29) {#why-security-councils-not-multisigs-1129}
+### Proč bezpečnostní rady, a ne multisigy (11:29) {#why-security-councils-not-multisigs-1129}
 
 To bylo o systémech důkazů. Nyní, proč bezpečnostní rady a ne jen jednoduché multisigy? Důvod je ten: nevěřte, že multisigy jsou multisigy. To je ten důvod – pokud neexistuje sociální vrstva, která by vás skutečně přesvědčila, že jsou zásadně diverzifikované.
 
@@ -83,7 +83,7 @@ A konečně, docela nedávno jsme tu měli útok na multisig. Ani na vteřinu si
 
 Takže abych to shrnul: pokud máte rollup Fáze 0 bez bezpečnostní rady, v podstatě si škodlivý operátor může s vašimi prostředky dělat, co chce. Pokud jste rollup Fáze 0 s bezpečnostní radou, pak útočník musí podplatit menšinu bezpečnostní rady – možná těžká věc, ale mnohem snazší než podplatit většinu bezpečnostní rady, což byste museli udělat, pokud má váš rollup systém důkazů. A konečně, nikdo vám nemůže ukrást prostředky, pokud jste ve Fázi 2. To je slib dosažení Fáze 2.
 
-#### Navrhovaná reklasifikace (13:10) {#proposed-reclassification-1310}
+### Navrhovaná reklasifikace (13:10) {#proposed-reclassification-1310}
 
 Otázkou je: máme správné pobídky pro projekty, aby se o to skutečně zajímaly? Problém je v tom, že jediné, co můžeme udělat – my jako L2BEAT a my jako komunita Etherea – je vyvíjet sociální tlak. Vitalik řekl, že od příštího roku plánuje veřejně zmiňovat pouze L2, které jsou ve Fázi 1. Dříve dokonce řekl, že nebude nazývat systémy rollupy, pokud nebudou ve Fázi 1.
 
@@ -93,7 +93,7 @@ To, co navrhujeme komunitě – a to půjde na fórum pro zpětnou vazbu od komu
 
 Pak tu máte další kategorii systémů, které nepoužívají DA Etherea. Používají dodatečné předpoklady důvěry, které přicházejí s externí DA. Říkáme jim „alt-DA“, ale zahrnovaly by Validium, optimia a jakoukoli hybridní konstrukci, kterou můžete vytvořit. Musí vám však poskytnout rozumné záruky DA – to nemůže být váš sklep. Musí to být přiměřeně velký výbor pro dostupnost dat, nebo pokud používáte Celestia nebo Avail, musíte použít most.
 
-#### Kategorie „ostatní“ a závazek L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### Kategorie „ostatní“ a závazek L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 A co ty ostatní? Zařadíme je do třetí kategorie, kterou nazýváme – a teď čekám na zpětnou vazbu od komunity, jak tyto systémy pojmenovat – náš pracovní název je „ostatní“. Jde o to, že jsou zabezpečeny multisigy a my tyto multisigy odhalíme takové, jaké jsou. To je to, co chceme udělat v našem uživatelském rozhraní (UI).
 
@@ -107,7 +107,7 @@ Stačí jen říct „mám systém důkazů“? Ne. Náš závazek vůči komuni
 
 Najímáme výzkumníky. Uděláme veškerou tuto práci. To je náš závazek pro příští rok. Doufám, že příští rok bude rokem L2 a rollupů – nejde však o spuštění rollupu jedním kliknutím na tlačítko. Jde o to, že chcete být schopni spustit systém s dobrou bezpečností. V ideálním případě chcete zdědit co nejvíce bezpečnosti z Etherea. Čeká nás všechny spousta práce, abychom toho dosáhli. Ale pokud to neuděláme, pak v podstatě jen vytváříme tisíce nezabezpečených postranních řetězců (sidechains). Myslím, že to jako komunita nechceme.
 
-#### Otázky a odpovědi (18:45) {#qa-1845}
+### Otázky a odpovědi (18:45) {#qa-1845}
 
 **Moderátor:** Pojďme na otázky a odpovědi. Je důležité, aby rollupy měly decentralizovaný sekvencer, nebo postačují jiné bezpečnostní mechanismy?
 

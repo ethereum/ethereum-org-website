@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/pectra/index.md",
   "generatedAt": "2026-07-23T00:23:45.154Z",
-  "rootHash": "6657e5ed60f7",
+  "rootHash": "e041f42c2df7",
   "tree": {
-    "contentHash": "01d29058a375",
-    "anchorHash": "2351d61422d1",
+    "contentHash": "9c7c434d88fb",
+    "anchorHash": "afcfcd7e4975",
     "children": {
       "frontmatter:title": {
         "contentHash": "e84deb0fe6a2",
@@ -28,8 +28,22 @@
         "anchorHash": "7fef9479c8bc"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "bd71957f15b3"
+        "contentHash": "f5818652a990",
+        "anchorHash": "bd3ff7caf85d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8a2c0f8bbcfe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:3": {
         "contentHash": "a718ff4882af",
