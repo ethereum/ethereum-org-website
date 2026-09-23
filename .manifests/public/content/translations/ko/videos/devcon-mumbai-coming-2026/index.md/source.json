@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/devcon-mumbai-coming-2026/index.md",
-  "generatedAt": "2026-04-28T23:14:20.980Z",
-  "rootHash": "3ab01c5eb438",
+  "generatedAt": "2026-09-23T04:55:06.088Z",
+  "rootHash": "6cca310f35bb",
   "tree": {
-    "contentHash": "f2a1671c68cf",
-    "anchorHash": "40313cd99d77",
+    "contentHash": "2bf40006e644",
+    "anchorHash": "643aaafd4fe1",
     "children": {
       "frontmatter:title": {
         "contentHash": "d8eb325eb766",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "d0ca918e24fd",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "98d185e29ad2",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "9af2994fe66a"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "f354ee99e2bc"
+            "anchorHash": "862417b9e7c3"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -95,5 +87,5 @@
       "prose:2"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "eecb1405473dd89ed035174ca691cd75b25fe60c"
 }
