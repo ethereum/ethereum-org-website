@@ -92,7 +92,7 @@ Ethereum ni jambo kubwa: inajumuisha jamii, teknolojia, seti ya mawazo na itikad
 Hii inamaanisha tovuti inahitaji kushughulikia safari nyingi tofauti za watumiaji, kuanzia "mwendelezaji anayetaka zana maalum" na "mgeni ambaye amenunua tu baadhi ya ETH na hajui mkoba ni nini".
 "Ni tovuti gani bora kwa jukwaa la mnyororo wa vitalu?" linabaki kuwa swali wazi - sisi ni waanzilishi. Kujenga hili kunahitaji majaribio.
 
-## Ramani ya njia ya bidhaa {#roadmap}
+## Ramani ya njia ya bidhaa {#get-involved}
 
 Ili kufanya kazi yetu iweze kufikiwa zaidi na kukuza ushirikiano zaidi wa jamii, timu ya msingi ya ethereum.org inachapisha muhtasari wa malengo yetu ya ramani ya njia ya [mzunguko wa kuunda](https://www.productplan.com/glossary/shape-up-method/).
 

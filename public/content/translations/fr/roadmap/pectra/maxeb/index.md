@@ -143,7 +143,7 @@ Plusieurs outils sont disponibles pour gérer les consolidations. L'outil offici
 
 ## FAQ {#faq}
 
-### Le fait d'y souscrire modifie-t-il ma chance de proposition ou mes récompenses ?
+### Le fait d'y souscrire modifie-t-il ma chance de proposition ou mes récompenses ? {#change-luck-or-rewards}
 
 Non. Le fait d'y souscrire ne diminue pas vos chances de proposition - vos tâches et la sélection pour les propositions restent les mêmes. Par exemple, si vous avez deux validateurs de 32 ETH contre un seul validateur de 64 ETH, vous aurez au total les mêmes chances d'être sélectionné pour proposer un bloc et gagner des récompenses.
 ### Le fait d'y souscrire modifie-t-il mon risque de réduction ? {#change-slashing-risk}

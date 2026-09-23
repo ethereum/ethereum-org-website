@@ -47,7 +47,7 @@ Baris pertama mengimpor antarmuka, dan yang kedua menentukan bahwa kita mengimpl
 ```python
 #pragma version >0.3.10
 ```
-### Antarmuka ERC721Receiver
+### Antarmuka ERC721Receiver {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -94,7 +94,7 @@ Permintaan tersebut dapat memiliki hingga 1024 bita data pengguna.
 Untuk mencegah kasus di mana sebuah kontrak secara tidak sengaja menerima transfer, nilai kembaliannya bukanlah boolean,
 melainkan nilai empat bita tertentu, yaitu pemilih fungsi dari `onERC721Received`. Fungsi ini bersifat `nonpayable` karena sebuah
 kontrak penerima dapat mengubah state-nya sendiri ketika menerima sebuah token.
-### Peristiwa
+### Peristiwa {#events}
 
 [Peristiwa](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 dipancarkan untuk memberi tahu pengguna dan server di luar rantai blok tentang peristiwa. Perhatikan bahwa konten peristiwa
@@ -123,7 +123,7 @@ ahli waris saya (jika salah satu dari mereka memintanya, kontrak tidak dapat mel
 kita bisa saja memberikan jatah yang tinggi ke kontrak warisan, tetapi itu tidak berfungsi untuk ERC-721 karena tokennya
 tidak sepadan. Ini adalah padanannya. Nilai `approved` memberi tahu kita apakah peristiwa tersebut untuk persetujuan, atau
 penarikan persetujuan.
-### Variabel State
+### Variabel State {#state-vars}
 
 Variabel-variabel ini berisi state token saat ini: mana yang tersedia dan siapa pemiliknya. Sebagian besar dari ini
 adalah objek `HashMap`, [pemetaan searah yang ada di antara dua tipe](https://vyper.readthedocs.io/en/latest/types.html#mappings).
@@ -190,7 +190,7 @@ empat bita yang dipatuhi kontrak ini: ERC-165 itu sendiri dan ERC-721.
 
 Ini adalah fungsi-fungsi yang benar-benar mengimplementasikan ERC-721.
 
-#### Konstruktor
+#### Konstruktor {#constructor}
 
 ```python
 @deploy
@@ -215,7 +215,7 @@ dengan `"""`), dan tidak menggunakannya dengan cara apa pun. Komentar ini juga d
 
 Untuk mengakses variabel state, Anda menggunakan `self.<nama variabel>` (sekali lagi, sama seperti di Python). Konstruktor mencatat
 akun yang menyebarkan kontrak sebagai `minter`.
-#### Fungsi View
+#### Fungsi View {#views}
 
 Ini adalah fungsi-fungsi yang tidak mengubah state rantai blok, dan oleh karena itu dapat dieksekusi secara
 gratis jika dipanggil secara eksternal. Jika fungsi view dipanggil oleh sebuah kontrak, fungsi tersebut tetap harus dieksekusi di
@@ -323,7 +323,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Fungsi ini memeriksa apakah `_operator` diizinkan untuk mengelola semua token `_owner` dalam kontrak ini.
 Karena bisa ada beberapa operator, ini adalah HashMap dua tingkat.
-#### Fungsi Pembantu Transfer
+#### Fungsi Pembantu Transfer {#transfer-helpers}
 
 Fungsi-fungsi ini mengimplementasikan operasi yang merupakan bagian dari transfer atau pengelolaan token.
 
@@ -447,7 +447,7 @@ kita hanya menginginkan satu lokasi dalam kode di mana kita melakukannya untuk m
 Untuk memancarkan peristiwa di Vyper, Anda menggunakan pernyataan `log` ([lihat di sini untuk detail lebih lanjut](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 Karena peristiwa tersebut milik antarmuka yang diimpor, kita merujuknya sebagai `IERC721.Transfer` dan meneruskan bidangnya dengan
 kata kunci.
-#### Fungsi Transfer
+#### Fungsi Transfer {#transfer-funs}
 
 ```python
 

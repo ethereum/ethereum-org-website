@@ -17,6 +17,7 @@ Load this when "the pipeline did something wrong" — bad translation in product
 | `intl/pending-{base}` PR has merge conflicts on base side                     | Was base force-pushed/rebased?                                                                                          | Don't rebase pending; merge base→pending again, or close pending and start fresh                                  |
 | LLM returned garbage / refused                                                | Check `finishReason` in logs                                                                                            | See "LLM returned garbage / refused" below                                                                        |
 | English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping                                                                                  | Re-run `mode: full` for that file; pipeline regenerates from scratch                                              |
+| Heading anchors missing or wrong across many locales                          | `pnpm exec tsx src/scripts/intl-pipeline/verify-structure.ts --changed` reports `heading-anchor`                        | One-off `repair-anchors.ts`; see "One-off repair scripts"                                                         |
 | Hand-edit slipped through review                                              | Was it pre- or post-English-change?                                                                                     | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict                    |
 
 ## Quarantined pairs
@@ -28,6 +29,21 @@ The PR body lists skipped pairs with class, reason and expiry. To force a pair n
 ## Pre-commit gates
 
 Every task's output passes through `lib/gates.ts` after the sanitizer and before anything is recorded: `verify-structure` checks (heading anchors, tag parity, hrefs, fences, frontmatter shape), an MDX compile with the site's parser setup (`src/lib/md/compile.ts`: heading-id escape, gfm, heading-id, slug; the ToC/JSX/image passes run after parsing and cannot change validity), and for JSON a nested key-path parity check. Incremental output is held to **no new structural errors relative to the locale it replaces** -- about a fifth of the corpus carries pre-existing errors, and an absolute bar would freeze those files -- while full translations must be clean. A gate failure fails the task (`[gate] ...`), nothing is stamped, the pair retries next run and quarantines on the second strike. The sanitizer runs inside the task on the task's own output, so the gates judge exactly what ships.
+
+## One-off repair scripts
+
+Two scripts under `src/scripts/intl-pipeline/` repair the corpus. **Neither is part of a pipeline run, and that is deliberate**: both rewrite committed content or manifests outside the manifest model, so they belong in a reviewable PR of their own where a human reads the diff. Wiring either into `main.ts` would let it paper over exactly the regressions the gates exist to surface. Both are idempotent and both take `--dry-run`.
+
+| Script                 | Run it when                                                   | What it does                                                                                 |
+| ---------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `migrate-manifests.ts` | `intl-content-tree` bumps `MANIFEST_VERSION`                  | Re-derives every `source.json` from its own recorded English. See `references/manifests.md`. |
+| `repair-anchors.ts`    | `verify-structure` reports `heading-anchor` across many files | Copies each translated heading's `{#id}` from its English counterpart, positionally.         |
+
+`repair-anchors.ts` only touches a file whose heading count **and** level sequence match English exactly -- that match is what makes "the Nth heading" a safe identity -- and discards any repair that would raise the file's error count. Files whose outline genuinely diverged are reported and left for retranslation; they need `mode: full`, not a mechanical fix. Heading IDs are the same ASCII slugs in every locale, so copying from English is restoration, not invention.
+
+It exists because run 29962972384 (2026-07-22) returned headings without their `{#id}` and Phase 5 took the model's heading line, dropping 815 anchors across 322 files. The propagation bug was fixed in `6126795b7e` a week later, but nothing repaired the corpus, and since `findStructuralRegressions` scores a run against the locale it starts from, the loss became the baseline every later run preserved (PR #19325 cleared it: 935 `heading-anchor` errors down to 15).
+
+The gates added in #19316 are what stop this recurring -- a run that drops an anchor now fails its task instead of stamping. If `repair-anchors.ts` ever finds a large batch again, treat that as a gate escape and investigate the run, rather than repairing and moving on.
 
 ## Diagnosing a completed run
 

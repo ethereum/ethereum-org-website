@@ -4,7 +4,7 @@ description: "Standard pro trezory nesoucí výnos."
 lang: cs
 ---
 
-## Úvod
+## Úvod {#introduction}
 
 ERC-4626 je standard pro optimalizaci a sjednocení technických parametrů výnosových trezorů. Poskytuje standardní API pro tokenizované výnosové trezory, které představují podíly jediného podkladového ERC-20 tokenu. ERC-4626 také nastiňuje volitelné rozšíření pro tokenizované trezory využívající ERC-20, které nabízí základní funkce pro vkládání, výběr tokenů a čtení zůstatků.
 
