@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## イーサリアムでのゲーム
+## イーサリアムでのゲーム {#gaming-on-ethereum}
 
 イーサリアムでのゲームには、特定の機能にブロックチェーンを使用するゲームから、ゲームの世界全体がオンチェーンに存在するゲームまで、さまざまな形態があります。イーサリアムのブロックチェーンは、さまざまな機能でゲームに使用できます。ゲームは、通貨を譲渡可能なトークンとして保存したり、その他のゲーム内資産（キャラクター、装備、ペットなど）を[非代替性トークン（NFT）](/nft/)の形式で保存したりできます。また、ゲームはスマート・コントラクトを利用して、そのロジック、ルール、状態をオンチェーンでホストすることもできます。このようなゲームは、一般的に「フルオンチェーンゲーム」と呼ばれます。
 
@@ -32,7 +32,7 @@ EVE Online、World of Warcraft、MapleStory、RuneScapeなどの従来のMMOは�
 
 イーサリアムのブロックチェーンは、ルールを恣意的に変更できず、状態を削除できず、ネットワークが存在する限り存続する拡張機能を誰でも構築できる世界を可能にしました。これは、イーサリアムがネイティブに提供するものです。
 
-## イーサリアムのゲームエコシステムの概要
+## イーサリアムのゲームエコシステムの概要 {#ethereums-gaming-ecosystem-overview}
 - **レイヤー2:** 手数料が安く、トランザクション時間が短いため、イーサリアムのL2はゲームがローンチされる一般的な場所になりました。L2の状況は進化し続けており、Ronin（元々はAxie Infinityのサイドチェーン）のような主要なWeb3ゲームエコシステムは最近、ゲームに最適化されたインフラストラクチャを維持しながらイーサリアムのセキュリティ保証を継承するイーサリアムのレイヤー2アーキテクチャに移行しました。現在、ゲーム向けの主要なL2には、[Ronin](https://www.roninchain.com/)、[スタークネット](https://www.starknet.io/)、[Abstract](https://abs.xyz/)、[Base](https://www.base.org/)などがあります。
 - **インフラストラクチャ:** オンチェーンゲームの開発を容易にするために、多数のツールスタックが存在します。[Cartridge](https://cartridge.gg/)（セッションキー、ペイマスターを介したガスレスのトランザクション、Cartridge Controllerを介したWebAuthnベースの認証を提供）、[Dojo](https://dojoengine.org/)（ネイティブのアカウント抽象化サポートを備えた証明可能なゲームフレームワーク）、[MUD](https://mud.dev/)（EVMベースのオンチェーンゲームエンジン）などです。他にも、[Proof of Play](https://proofofplay.com/)や[Thirdweb](https://thirdweb.com/)のように、開発者がWeb2のようなユーザー体験を持つゲームを構築できるようにするものもあります。
 - **ゲームコミュニティ:** イーサリアムのゲームエコシステムは、プレイヤーのコラボレーションのためのゲームギルド（[YGG](https://x.com/YieldGuild)、[MANA Gaming](https://x.com/ManaGamingBR)、[WASD](https://x.com/WASD_0x)、[LegacyGG](https://x.com/Lgc_GG)、[Gaming Grid](https://x.com/GamingGridx)、[OLAGG](https://x.com/OLAGuildGames)など）、[GAM3S.GG](https://games.gg/)のようなディスカバリープラットフォーム、ゲーム分析やエコシステムの報道を行う[Gaming Daily](https://x.com/GamingDailyx)のようなメディアによってサポートされています。[FOCGERS](https://x.com/FOCGERS)のように、これらすべてにまたがるものもあります。

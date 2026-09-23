@@ -19,7 +19,7 @@ Comme presque tout le reste dans Ethereum, le livre jaune évolue avec le temps.
 
 Le livre jaune original a été rédigé tout au début du développement d'Ethereum. Il décrit le mécanisme de consensus original basé sur la preuve de travail (PoW) qui était initialement utilisé pour sécuriser le réseau. Cependant, Ethereum a abandonné la preuve de travail et a commencé à utiliser un consensus basé sur la preuve d'enjeu (PoS) en septembre 2022. Ce tutoriel se concentrera sur les parties du livre jaune définissant la machine virtuelle Ethereum (EVM). L'EVM n'a pas été modifiée par la transition vers la preuve d'enjeu (à l'exception de la valeur de retour du code d'opération DIFFICULTY).
 
-## 9 Modèle d'exécution
+## 9 Modèle d'exécution {#9-execution-model}
 
 Cette section (p. 14-16) inclut la majeure partie de la définition de l'EVM.
 
@@ -59,7 +59,7 @@ Le terme exécution exceptionnelle désigne une exception qui provoque l'arrêt 
 
 Cette section explique comment les frais de gaz sont calculés. Il y a trois coûts :
 
-### Coût du code d'opération
+### Coût du code d'opération {#opcode-cost}
 
 Le coût inhérent du code d'opération spécifique. Pour obtenir cette valeur, trouvez le groupe de coût du code d'opération dans l'Annexe H (p. 29, sous l'équation (329)), et trouvez le groupe de coût dans l'équation (326). Cela vous donne une fonction de coût, qui dans la plupart des cas utilise des paramètres de l'Annexe G (p. 28).
 
@@ -73,7 +73,7 @@ Le coût d'exécution du code que nous appelons.
 - Dans le cas de [`CREATE`](https://www.evm.codes/#f0) et [`CREATE2`](https://www.evm.codes/#f5), le constructeur du nouveau contrat.
 - Dans le cas de [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), ou [`DELEGATECALL`](https://www.evm.codes/#f4), le contrat que nous appelons.
 
-### Coût d'extension de la mémoire
+### Coût d'extension de la mémoire {#expanding-memory-cost}
 
 Le coût d'extension de la mémoire (si nécessaire).
 
@@ -84,7 +84,7 @@ La fonction _C<sub>mem</sub>_ est définie dans l'équation 328 : _C<sub>mem</su
 **Remarque** : ces facteurs n'influencent que le coût _inhérent_ en gaz - cela ne prend pas en compte le marché des frais ou les pourboires aux validateurs qui déterminent combien un utilisateur final doit payer - il s'agit simplement du coût brut d'exécution d'une opération particulière sur l'EVM.
 
 [En savoir plus sur le gaz](/developers/docs/gas/).
-## 9.3 Environnement d'exécution
+## 9.3 Environnement d'exécution {#93-execution-env}
 
 L'environnement d'exécution est un n-uplet, _I_, qui inclut des informations qui ne font pas partie de l'état de la chaîne de blocs ou de l'EVM.
 
@@ -109,7 +109,7 @@ Quelques autres paramètres sont nécessaires pour comprendre le reste de la sec
 | _g_       | 9.3 (p. 14)          | Gaz restant                                                                                                                                                                                                            |
 | _A_       | 6.1 (p. 9)           | Sous-état accumulé (modifications prévues pour la fin de la transaction)                                                                                                                                                       |
 | _o_       | 9.3 (p. 14)          | Sortie - le résultat renvoyé dans le cas d'une transaction interne (lorsqu'un contrat en appelle un autre) et des appels aux fonctions de vue (lorsque vous demandez simplement des informations, il n'est donc pas nécessaire d'attendre une transaction) |
-## 9.4 Aperçu de l'exécution
+## 9.4 Aperçu de l'exécution {#94-execution-overview}
 
 Maintenant que nous avons tous les préliminaires, nous pouvons enfin commencer à travailler sur le fonctionnement de l'EVM.
 
@@ -136,7 +136,7 @@ Cette section explique l'état de la machine plus en détail. Elle précise que 
 
 Comme il s'agit d'une [machine à pile](https://en.wikipedia.org/wiki/Stack_machine), nous devons garder une trace du nombre d'éléments retirés (_δ_) et ajoutés (_α_) par chaque code d'opération.
 
-## 9.4.2 Arrêt exceptionnel
+## 9.4.2 Arrêt exceptionnel {#942-exceptional-halt}
 
 Cette section définit la fonction _Z_, qui spécifie quand nous avons une terminaison anormale. Il s'agit d'une fonction [booléenne](https://en.wikipedia.org/wiki/Boolean_data_type), elle utilise donc [_∨_ pour un OU logique](https://en.wikipedia.org/wiki/Logical_disjunction) et [_∧_ pour un ET logique](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Nous avons un arrêt exceptionnel si l'une de ces conditions est vraie :
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Vous ne pouvez pas exécuter [`SSTORE`](https://www.evm.codes/#55) à moins d'avoir plus de G<sub>callstipend</sub> (défini à 2300 dans l'Annexe G) gaz.
-## 9.4.3 Validité de la destination de saut
+## 9.4.3 Validité de la destination de saut {#943-jump-dest-valid}
 
 Ici, nous définissons formellement ce que sont les codes d'opération [`JUMPDEST`](https://www.evm.codes/#5b). Nous ne pouvons pas simplement chercher la valeur d'octet 0x5B, car elle pourrait se trouver à l'intérieur d'un PUSH (et donc être des données et non un code d'opération).
 
@@ -198,7 +198,7 @@ La fonction d'arrêt _H_ peut renvoyer trois types de valeurs.
 - Si nous avons un code d'opération d'arrêt qui ne produit pas de sortie (soit [`STOP`](https://www.evm.codes/#00) soit [`SELFDESTRUCT`](https://www.evm.codes/#ff)), renvoyez une séquence d'octets de taille zéro comme valeur de retour. Notez que c'est très différent de l'ensemble vide. Cette valeur signifie que l'EVM s'est réellement arrêtée, il n'y a simplement aucune donnée de retour à lire.
 - Si nous avons un code d'opération d'arrêt qui produit une sortie (soit [`RETURN`](https://www.evm.codes/#f3) soit [`REVERT`](https://www.evm.codes/#fd)), renvoyez la séquence d'octets spécifiée par ce code d'opération. Cette séquence est extraite de la mémoire, la valeur en haut de la pile (_μ<sub>s</sub>[0]_) est le premier octet, et la valeur qui la suit (_μ<sub>s</sub>[1]_) est la longueur.
 
-## H.2 Jeu d'instructions
+## H.2 Jeu d'instructions {#h2-instruction-set}
 
 Avant de passer à la dernière sous-section de l'EVM, 9.5, examinons les instructions elles-mêmes. Elles sont définies dans l'Annexe H.2 qui commence à la p. 30. Tout ce qui n'est pas spécifié comme changeant avec ce code d'opération spécifique est censé rester le même. Les variables qui changent sont spécifiées avec un \<quelque chose\>′.
 
@@ -242,7 +242,7 @@ La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Notez que pour utiliser n'importe quel élément de la pile, nous devons le retirer, ce qui signifie que nous devons également retirer tous les éléments de la pile au-dessus de lui. Dans le cas de [`DUP<n>`](https://www.evm.codes/#8f) et [`SWAP<n>`](https://www.evm.codes/#9f), cela signifie devoir retirer puis rajouter jusqu'à seize valeurs.
-## 9.5 Le cycle d'exécution
+## 9.5 Le cycle d'exécution {#95-exec-cycle}
 
 Maintenant que nous avons toutes les parties, nous pouvons enfin comprendre comment le cycle d'exécution de l'EVM est documenté.
 

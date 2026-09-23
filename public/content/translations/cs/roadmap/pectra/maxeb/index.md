@@ -143,7 +143,7 @@ Ke správě konsolidací je k dispozici několik nástrojů. Oficiálním nástr
 
 ## Často kladené dotazy (FAQ) {#faq}
 
-### Změní zapojení mé štěstí na návrhy nebo odměny?
+### Změní zapojení mé štěstí na návrhy nebo odměny? {#change-luck-or-rewards}
 
 Ne. Zapojení nesnižuje vaši šanci na návrh – vaše povinnosti a výběr pro návrh zůstávají stejné. Například pokud máte dva validátory s 32 ETH oproti jednomu validátoru s 64 ETH, budete mít stejnou celkovou šanci, že budete vybráni k návrhu bloku a získáte odměny.
 ### Změní zapojení mé riziko penalizace? {#change-slashing-risk}

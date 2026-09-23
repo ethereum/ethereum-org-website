@@ -4,7 +4,7 @@ description: "எத்திரியம் மெய்நிகர் இய�
 lang: ta
 ---
 
-## மேலோட்டம்
+## மேலோட்டம் {#overview}
 
 இது [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) இல் உள்ள EVM குறிப்புப் பக்கத்தின் புதுப்பிக்கப்பட்ட பதிப்பாகும்.
 மேலும் இது [மஞ்சள் அறிக்கை](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/) மற்றும் [geth](https://github.com/ethereum/go-ethereum) செயலாக்கம் ஆகியவற்றிலிருந்தும் எடுக்கப்பட்டது.

@@ -92,7 +92,7 @@ Ethereum je velká věc: zahrnuje komunitu, technologii, soubor myšlenek a ideo
 To znamená, že web musí zvládnout mnoho různých uživatelských cest, od „vývojáře, který chce konkrétní nástroj“, až po „nováčka, který si právě koupil nějaké ETH a neví, co je to peněženka“.
 „Jaký je nejlepší web pro blockchainovou platformu?“ zůstává otevřenou otázkou – jsme průkopníci. Budování něčeho takového vyžaduje experimentování.
 
-## Produktová roadmapa {#roadmap}
+## Produktová roadmapa {#get-involved}
 
 Abychom naši práci zpřístupnili a podpořili větší spolupráci s komunitou, hlavní tým ethereum.org zveřejňuje přehled cílů naší roadmapy v rámci [cyklů Shape Up](https://www.productplan.com/glossary/shape-up-method/).
 

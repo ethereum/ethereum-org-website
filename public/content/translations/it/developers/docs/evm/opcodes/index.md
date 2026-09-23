@@ -4,7 +4,7 @@ description: Un elenco di tutti i codici operativi (opcode) disponibili per la m
 lang: it
 ---
 
-## Panoramica
+## Panoramica {#overview}
 
 Questa è una versione aggiornata della pagina di riferimento dell'EVM su [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Tratta anche dallo [yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf), dal [Jello Paper](https://jellopaper.org/evm/) e dall'implementazione di [geth](https://github.com/ethereum/go-ethereum).

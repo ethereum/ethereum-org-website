@@ -175,7 +175,7 @@ print("Addr Balance:", addr_balance)
 - [欧本齐柏林 - ERC-20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC-20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)
 
-## 其他同质化代币标准
+## 其他同质化代币标准 {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

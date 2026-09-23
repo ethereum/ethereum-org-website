@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Служебные функции Web3js](https://docs.web3js.org/api/web3-utils)
 - [Служебные функции Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Доступные библиотеки
+## Доступные библиотеки {#available-libraries}
 
 **Web3.js —** **_JavaScript API для Эфириума._**
 

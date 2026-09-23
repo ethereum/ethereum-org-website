@@ -5,7 +5,7 @@ description: En savoir plus sur 7702 dans la mise à jour Pectra
 lang: fr
 ---
 
-## Résumé
+## Résumé {#abstract}
 L'EIP-7702 définit un mécanisme pour ajouter du code à un EOA. Cette proposition permet aux EOA, les comptes Ethereum historiques, de recevoir des améliorations de fonctionnalités à court terme, augmentant ainsi la convivialité des applications. Cela se fait en définissant un pointeur vers du code déjà déployé à l'aide d'un nouveau type de transaction : 4.
 
 Ce nouveau type de transaction introduit une liste d'autorisations. Chaque tuple d'autorisation dans la liste est défini comme suit :
@@ -22,7 +22,7 @@ Ce nouveau type de transaction introduit une liste d'autorisations. Chaque tuple
 Une délégation peut être réinitialisée en déléguant à l'adresse nulle.
 
 La clé privée de l'EOA conserve le contrôle total sur le compte après la délégation. Par exemple, déléguer à un Safe ne fait pas du compte un multisig car il y a toujours une seule clé qui peut contourner toute politique de signature. À l'avenir, les développeurs devraient concevoir en partant du principe que tout participant au système pourrait être un contrat intelligent. Pour les développeurs de contrats intelligents, il n'est plus sûr de supposer que `tx.origin` fait référence à un EOA.
-## Bonnes pratiques
+## Bonnes pratiques {#best-practices}
 **Abstraction de compte** : Un contrat de délégation devrait s'aligner sur les normes plus larges d'abstraction de compte (AA) d'Ethereum pour maximiser la compatibilité. En particulier, il devrait idéalement être conforme ou compatible avec l'ERC-4337.
 
 **Conception sans permission et résistante à la censure** : Ethereum valorise la participation sans permission. Un contrat de délégation NE DOIT PAS coder en dur ou s'appuyer sur un seul relayeur ou service « de confiance ». Cela bloquerait le compte si le relayeur se déconnectait. Des fonctionnalités telles que le traitement par lots (par exemple, approve+transferFrom) peuvent être utilisées par l'EOA lui-même sans relayeur. Pour les développeurs d'applications qui souhaitent utiliser les fonctionnalités avancées permises par l'EIP-7702 (abstraction du gaz, retraits préservant la confidentialité), vous aurez besoin d'un relayeur. Bien qu'il existe différentes architectures de relayeurs, notre recommandation est d'utiliser des [assembleurs ERC-4337](https://www.erc4337.io/bundlers) pointant au moins vers le [point d'entrée 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) car :
@@ -102,7 +102,7 @@ Lorsque les utilisateurs effectuent des signatures déléguées, le contrat cibl
 
 **Surface de confiance minimale et sécurité** : Tout en offrant de la flexibilité, un contrat de délégation devrait garder sa logique de base minimale et auditable. Le contrat est effectivement une extension de l'EOA de l'utilisateur, donc toute faille peut être catastrophique. Les implémentations devraient suivre les bonnes pratiques de la communauté de sécurité des contrats intelligents. Par exemple, les fonctions de constructeur ou d'initialisation doivent être soigneusement sécurisées – comme souligné par Alchemy, si l'on utilise un modèle proxy sous 7702, un initialiseur non protégé pourrait permettre à un attaquant de prendre le contrôle du compte. Les équipes devraient s'efforcer de garder le code onchain simple : le contrat 7702 d'Ambire ne fait qu'environ 200 lignes de Solidity, minimisant délibérément la complexité pour réduire les bugs. Un équilibre doit être trouvé entre une logique riche en fonctionnalités et la simplicité qui facilite l'audit.
 
-### Implémentations connues
+### Implémentations connues {#known-implementations}
 En raison de la nature de l'EIP-7702, il est recommandé aux portefeuilles de faire preuve de prudence lorsqu'ils aident les utilisateurs à déléguer à un contrat tiers. Vous trouverez ci-dessous une collection d'implémentations connues qui ont été auditées :
 
 | Adresse du contrat                         | Source                                                                                                                                     | Audits                                                                                                                                                        |
@@ -129,11 +129,11 @@ Remarque : certains actifs pourraient être automatiquement rejetés par le code
 
 Informer l'utilisateur qu'une délégation est en place pour l'EOA en vérifiant son code, et proposer éventuellement de supprimer la délégation.
 
-#### Délégation commune
+#### Délégation commune {#common-delegation}
 Le fournisseur de matériel met sur liste blanche les contrats de délégation connus et implémente leur prise en charge dans l'application logicielle compagnon. Il est recommandé de choisir un contrat avec une prise en charge complète de l'ERC-4337.
 
 Les EOA délégués à un contrat différent seront traités comme des EOA standards.
-#### Délégation personnalisée
+#### Délégation personnalisée {#custom-delegation}
 Le fournisseur de matériel implémente son propre contrat de délégation, l'ajoute aux listes et implémente sa prise en charge dans l'application logicielle compagnon. Il est recommandé de créer un contrat avec une prise en charge complète de l'ERC-4337.
 
 Les EOA délégués à un contrat différent seront traités comme des EOA standards.

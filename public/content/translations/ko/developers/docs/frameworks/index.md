@@ -20,7 +20,7 @@ lang: ko
 
 프레임워크에 대해 자세히 알아보기 전에, 먼저 [디앱(dapp)](/developers/docs/dapps/)과 [이더리움 스택](/developers/docs/ethereum-stack/)에 대한 소개를 읽어보시기를 권장합니다.
 
-## 사용 가능한 프레임워크
+## 사용 가능한 프레임워크 {#available-frameworks}
 
 **Foundry** - **_Foundry는 이더리움 애플리케이션 개발을 위한 매우 빠르고 이식성이 뛰어나며 모듈화된 툴킷입니다._**
 
