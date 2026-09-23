@@ -55,7 +55,7 @@ import {
   createOrUpdateTranslationPR,
   type SkippedPair,
 } from "./lib/workflows/pr-creation"
-import { logSection } from "./lib/workflows/utils"
+import { logSection, shouldAbortRun } from "./lib/workflows/utils"
 import {
   config,
   getExcludedReason,
@@ -1075,6 +1075,9 @@ async function main() {
       const hasLocale = fs.existsSync(localePath)
       const hasManifest = fs.existsSync(smPath)
 
+      // `mode: full` bypasses the list because a human asked for that pair.
+      // `stamp_only` does not: stamping a pair that never translated cleanly
+      // would declare a missing translation current and strand it.
       if (config.mode !== "full") {
         const held = quarantine.active(file.path, locale, englishHashOf(file))
         if (held) {
@@ -1189,35 +1192,45 @@ async function main() {
     }
   }
 
+  // Hard abort before recording anything else: a run with no translated file
+  // and no refreshed manifest, whose failures a retry could still fix, has
+  // nothing to ship and needs eyes. Tracked separately from the quarantine
+  // file below, which is bookkeeping, not output.
+  if (
+    shouldAbortRun({
+      unhandledFailures: failures.filter((f) => !f.quarantined).length,
+      translatedFiles: committedFiles.length,
+      stampedManifests: hasCommits,
+    })
+  ) {
+    throw new Error(
+      `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
+    )
+  }
+
   // What the quarantine learned this run ships with the run, so the next one
   // skips those pairs instead of paying for them again.
+  let quarantineCommitted = false
   if (quarantine.changed) {
     await committer.commitFile(
       QUARANTINE_PATH,
       quarantine.toJson(),
       QUARANTINE_LANG
     )
-    hasCommits = true
+    quarantineCommitted = true
   }
 
-  // Hard abort only if nothing succeeded AND the failures are ones a retry could
-  // fix. A run whose only failures are now quarantined has done its job: it
-  // recorded them, and rerunning the same input would fail the same way.
-  const unhandled = failures.filter((f) => !f.quarantined)
-  if (unhandled.length > 0 && committedFiles.length === 0 && !hasCommits) {
-    throw new Error(
-      `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
-    )
-  }
+  const hasOutput =
+    committedFiles.length > 0 || hasCommits || quarantineCommitted
 
   // Squash interleaved commits into one per language
-  if (committedFiles.length > 0 || hasCommits) {
+  if (hasOutput) {
     await committer.squashByLanguage()
   }
 
   // Merge temp branch into pending, then clean up the temp.
   // If pending didn't exist at the start, create it from base now.
-  if (committedFiles.length > 0 || hasCommits) {
+  if (hasOutput) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
     if (!pendingExists) {
       await ensurePendingBranch(targetBranch, baseBranch)
@@ -1239,7 +1252,7 @@ async function main() {
   }
 
   // Create or update PR unless skipped
-  if ((committedFiles.length > 0 || hasCommits) && !config.skipPr) {
+  if (hasOutput && !config.skipPr) {
     const languagePairs = targetLanguages.map((code) => {
       const entry = i18nConfig.find((l: { code: string }) => l.code === code)
       return {

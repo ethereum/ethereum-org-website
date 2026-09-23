@@ -17,6 +17,7 @@ import {
   classifyFailure,
   Quarantine,
 } from "../../../src/scripts/intl-pipeline/lib/quarantine"
+import { shouldAbortRun } from "../../../src/scripts/intl-pipeline/lib/workflows/utils"
 
 const DAY = 86_400_000
 const clock = (start = Date.UTC(2026, 8, 17)) => {
@@ -185,5 +186,69 @@ test.describe("Quarantine", () => {
     expect(restored.changed).toBe(false)
     expect(restored.active(pair.file, "de", pair.englishHash)?.reason).toBe("r")
     expect(restored.list().map((e) => e.locale)).toEqual(["de", "fr"])
+  })
+})
+
+test.describe("all-failed abort", () => {
+  test("aborts when every task failed and none was quarantined", () => {
+    expect(
+      shouldAbortRun({
+        unhandledFailures: 3,
+        translatedFiles: 0,
+        stampedManifests: false,
+      })
+    ).toBe(true)
+  })
+
+  // The quarantine file is bookkeeping, not output: a run where every task
+  // failed on a first-strike gate or parse still records entries (so
+  // quarantine.changed is true) while those failures stay retryable. Counting
+  // that commit as output would exit green with a PR holding only
+  // quarantine.json -- exactly the case the abort exists for.
+  test("a first-strike failure still aborts even though it was recorded", () => {
+    const q = new Quarantine()
+    const { active } = q.record({
+      file: "public/content/x/index.md",
+      locale: "de",
+      englishHash: "aaaa",
+      class: "gate",
+      reason: "anchors",
+    })
+    expect(active).toBe(false)
+    expect(q.changed).toBe(true)
+    expect(
+      shouldAbortRun({
+        unhandledFailures: 1,
+        translatedFiles: 0,
+        stampedManifests: false,
+      })
+    ).toBe(true)
+  })
+
+  test("does not abort when the only failures are quarantined", () => {
+    expect(
+      shouldAbortRun({
+        unhandledFailures: 0,
+        translatedFiles: 0,
+        stampedManifests: false,
+      })
+    ).toBe(false)
+  })
+
+  test("does not abort when real work landed alongside failures", () => {
+    expect(
+      shouldAbortRun({
+        unhandledFailures: 2,
+        translatedFiles: 5,
+        stampedManifests: false,
+      })
+    ).toBe(false)
+    expect(
+      shouldAbortRun({
+        unhandledFailures: 2,
+        translatedFiles: 0,
+        stampedManifests: true,
+      })
+    ).toBe(false)
   })
 })
