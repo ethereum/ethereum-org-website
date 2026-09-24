@@ -455,10 +455,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             heading={t("more-on-ethereum-protocol-title")}
             docLinks={[
               {
-                href: "/privacy/",
-                children: t("more-on-ethereum-protocol-privacy"),
-              },
-              {
                 href: "/energy-consumption/",
                 children: t("energy-consumption-card-title"),
               },
