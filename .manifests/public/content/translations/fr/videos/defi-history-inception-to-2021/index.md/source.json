@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/defi-history-inception-to-2021/index.md",
   "generatedAt": "2026-04-28T23:12:32.143Z",
-  "rootHash": "52ed5773f298",
+  "rootHash": "b4d7ecde4859",
   "tree": {
-    "contentHash": "69fdeeead7b3",
-    "anchorHash": "494719525e13",
+    "contentHash": "af5957b95fc8",
+    "anchorHash": "768d10f795c9",
     "children": {
       "frontmatter:title": {
-        "contentHash": "5bd8adf28a71",
+        "contentHash": "b77029ee0134",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "98a835125d03",
+        "contentHash": "e6d55978865e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2d6305e6acf9"
+        "anchorHash": "7dcb2d8c0c03"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "79ee1f8d5830"
+        "anchorHash": "af9f37e48947"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "938ab6212652",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "da9fa35c3fa6"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "259aa8ef98a8"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "89d3048a1459"
+        "anchorHash": "21915b9129ef"
       },
       "prose:1": {
         "contentHash": "82a7a9bb6daa",

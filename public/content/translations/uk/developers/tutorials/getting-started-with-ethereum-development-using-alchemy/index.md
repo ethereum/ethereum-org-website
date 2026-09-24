@@ -39,7 +39,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Зробіть запит із командного рядка
+## 3. Зробіть запит із командного рядка {#make-a-request-from-the-command-line}
 
 Взаємодійте з блокчейном Етеріуму через Alchemy за допомогою JSON-RPC та curl.
 
@@ -66,7 +66,7 @@ _**ПРИМІТКА:** Замініть `https://eth-mainnet.alchemyapi.io/v2/de
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Налаштуйте свій клієнт Web3
+## 4. Налаштуйте свій клієнт Web3 {#set-up-your-web3-client}
 
 **Якщо у вас уже є клієнт,** змініть поточну URL-адресу провайдера вузла на URL-адресу Alchemy з вашим ключем API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Напишіть свій перший скрипт Web3!
+## 5. Напишіть свій перший скрипт Web3! {#write-your-first-web3-script}
 
 Тепер, щоб перейти до практики з програмуванням Web3, ми напишемо простий скрипт, який виводить номер останнього блоку з головної мережі Ethereum.
 

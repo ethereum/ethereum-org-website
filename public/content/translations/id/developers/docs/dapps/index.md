@@ -47,7 +47,7 @@ Kontrak pintar adalah kode yang hidup di rantai blok Ethereum dan berjalan persi
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Alat untuk membuat dapp
+## Alat untuk membuat dapp {#dapp-tools}
 
 **Scaffold-ETH 2 _- Bereksperimen dengan cepat menggunakan Solidity melalui frontend yang beradaptasi dengan kontrak pintar Anda._**
 

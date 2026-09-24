@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/crypto-apps-desocial-linda-xie/index.md",
   "generatedAt": "2026-04-29T04:51:47.660Z",
-  "rootHash": "9b083c6b3138",
+  "rootHash": "b9bc484a289a",
   "tree": {
-    "contentHash": "b08d6737fa10",
-    "anchorHash": "38b19268a61e",
+    "contentHash": "451d4629f8f5",
+    "anchorHash": "3ca20e2bf56e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a1232879b0f9",
+        "contentHash": "95a80573f34b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b86b6e3bf8a0",
+        "contentHash": "e08c79d64cf7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "29001a97e391"
+        "anchorHash": "df42200fe0a3"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "410833e7b67f"
+        "anchorHash": "8c7b61223b0a"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "ea5c26496158",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3e860f41a5ea"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b38e227d5dea"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c40cc25b38bd"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "49c00761e209"
+        "anchorHash": "f12930ca479f"
       },
       "prose:1": {
         "contentHash": "956a1413dc92",

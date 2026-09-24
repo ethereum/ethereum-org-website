@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Gaming di Ethereum
+## Gaming di Ethereum {#gaming-on-ethereum}
 Gaming di Ethereum hadir dalam berbagai bentuk, mulai dari gim yang menggunakan rantai blok untuk fitur tertentu hingga gim yang seluruh dunia permainannya hidup secara onchain. Rantai blok Ethereum dapat digunakan dengan gim dalam berbagai kapasitas. Gim dapat menyimpan mata uangnya sebagai token yang dapat ditransfer atau aset dalam gim lainnya (karakter, perlengkapan, hewan peliharaan, dll.) dalam bentuk [token yang tidak dapat dipertukarkan (NFT)](/nft/). Gim juga dapat memanfaatkan kontrak pintar untuk menampung logika, aturan, dan state mereka secara onchain. Gim semacam itu umumnya disebut sebagai "gim onchain sepenuhnya."
 
 Ekosistem Ethereum juga mencakup [rantai blok lapisan 2 (l2)](/layer-2/learn/) yang mewarisi jaminan keamanan Mainnet Ethereum sambil memperluas skala Ethereum dan mendukung kasus penggunaan khusus. Jaringan l2 dapat memberikan manfaat tambahan untuk gim onchain dan komunitasnya karena waktu konfirmasi yang lebih cepat dan biaya yang lebih rendah, membuat alur permainan lebih mudah diakses.
@@ -31,7 +31,7 @@ Ketika Ethereum diluncurkan, **perancang gim melihat peluang untuk membangun dun
 
 Rantai blok Ethereum memungkinkan dunia di mana aturan tidak dapat diubah secara sewenang-wenang, state tidak dapat dihapus, dan siapa pun dapat membangun ekstensi yang hidup selama jaringan tersebut ada. Ini adalah sesuatu yang disediakan secara bawaan oleh Ethereum.
 
-## Ikhtisar ekosistem gaming Ethereum
+## Ikhtisar ekosistem gaming Ethereum {#ethereums-gaming-ecosystem-overview}
 - **Lapisan 2:** Dengan biaya yang lebih murah dan waktu transaksi yang singkat, l2 Ethereum menjadi tempat yang umum bagi gim untuk diluncurkan. Lanskap l2 terus berkembang, dengan ekosistem gaming Web3 terkemuka seperti Ronin (awalnya merupakan rantai samping untuk Axie Infinity) baru-baru ini bertransisi ke arsitektur lapisan 2 Ethereum yang mewarisi jaminan keamanan Ethereum sambil mempertahankan infrastrukturnya yang dioptimalkan untuk gaming. L2 terkemuka saat ini untuk gaming meliputi: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/), dan [Base](https://www.base.org/).
 - **Infrastruktur:** Untuk mempermudah pengembangan gim onchain, terdapat sejumlah tumpukan alat; [Cartridge](https://cartridge.gg/) (menawarkan kunci sesi, transaksi tanpa gas melalui juru bayar, dan autentikasi berbasis WebAuthn melalui Cartridge Controller), [Dojo](https://dojoengine.org/) (kerangka kerja gim yang dapat dibuktikan dengan dukungan abstraksi akun bawaan), [MUD](https://mud.dev/) (mesin gim onchain berbasis EVM). Yang lainnya, seperti [Proof of Play](https://proofofplay.com/) dan [Thirdweb](https://thirdweb.com/), memungkinkan pengembang untuk membangun gim dengan pengalaman pengguna layaknya Web2.
 - **Komunitas gaming:** Ekosistem gaming Ethereum didukung oleh serikat gaming (gaming guild), termasuk ([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx), dan [OLAGG](https://x.com/OLAGuildGames)) untuk kolaborasi pemain, platform penemuan seperti [GAM3S.GG](https://games.gg/), dan outlet media seperti [Gaming Daily](https://x.com/GamingDailyx) untuk analitik gim dan liputan ekosistem. Beberapa mencakup semua ini, seperti [FOCGERS](https://x.com/FOCGERS).

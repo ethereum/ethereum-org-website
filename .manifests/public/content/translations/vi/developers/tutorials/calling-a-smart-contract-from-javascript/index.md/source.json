@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/calling-a-smart-contract-from-javascript/index.md",
   "generatedAt": "2026-06-16T23:53:32.083Z",
-  "rootHash": "01d2013a1e15",
+  "rootHash": "624922166442",
   "tree": {
-    "contentHash": "a1c5d5677a2d",
-    "anchorHash": "87691d137698",
+    "contentHash": "02b868c43991",
+    "anchorHash": "b9d305b88714",
     "children": {
       "frontmatter:title": {
         "contentHash": "613479e69683",
@@ -20,8 +20,32 @@
         "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "ea27a6f3c248"
+        "contentHash": "9b744828ff34",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "1cf387c012cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "b27ad06d123c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "20ba7fe89d26",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:2": {
         "contentHash": "f6e5345444d2",

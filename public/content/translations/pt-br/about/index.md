@@ -92,7 +92,7 @@ O Ethereum é algo grande: inclui uma comunidade, uma tecnologia, um conjunto de
 Isso significa que o site precisa lidar com muitas jornadas de usuário diferentes, desde "um desenvolvedor que deseja uma ferramenta específica" até "um novato que acabou de comprar algum ETH e não sabe o que é uma carteira".
 "Qual é o melhor site para uma plataforma de blockchain?" continua sendo uma questão em aberto — nós somos pioneiros. Construir isso requer experimentação.
 
-## Roteiro do produto {#roadmap}
+## Roteiro do produto {#get-involved}
 
 Para tornar nosso trabalho mais acessível e promover mais colaboração da comunidade, a equipe principal do ethereum.org publica uma visão geral das metas do nosso roteiro do [ciclo de shape up](https://www.productplan.com/glossary/shape-up-method/).
 

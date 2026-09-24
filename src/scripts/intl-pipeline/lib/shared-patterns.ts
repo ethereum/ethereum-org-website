@@ -60,6 +60,10 @@ export const TRANSLATABLE_ATTRIBUTES = [
   "caption",
   "contentPreview",
   "location",
+  // Frontmatter-only fields. Rendered to readers, so the LLM translates them;
+  // `topic` and other taxonomy slugs stay inert.
+  "summaryPoints",
+  "tags",
 ] as const
 
 export type TranslatableAttribute = (typeof TRANSLATABLE_ATTRIBUTES)[number]

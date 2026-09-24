@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/desci/index.md",
   "generatedAt": "2026-06-16T21:49:28.731Z",
-  "rootHash": "26cdbea7b4d7",
+  "rootHash": "7c76cb757954",
   "tree": {
-    "contentHash": "b3edadea7283",
-    "anchorHash": "f92177af3700",
+    "contentHash": "d7700189bf0b",
+    "anchorHash": "482cb8bf0c6b",
     "children": {
       "frontmatter:title": {
         "contentHash": "6cd406da7370",
@@ -32,12 +32,31 @@
         "anchorHash": "13504d1f0b1e"
       },
       "frontmatter:alt": {
-        "contentHash": "12ae32cb1ec0",
+        "contentHash": "e3b0c44298fc",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "9f0bac039ec7",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "05b9e4919ea2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "3be183ae0344",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "75f271377480",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-is-desci": {
         "contentHash": "81b1500a8e1b",
