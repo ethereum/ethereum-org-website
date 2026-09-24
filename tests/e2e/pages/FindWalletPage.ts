@@ -5,7 +5,7 @@ import { testData } from "../fixtures/testData"
 import { BasePage } from "./BasePage"
 
 export class FindWalletPage extends BasePage {
-  private readonly url = "/wallets/find-wallet"
+  private readonly url = "/wallets/find-wallet/"
 
   private readonly pageHeading: Locator
   // The "/ total" keeps this from matching a persona card's "… available".
