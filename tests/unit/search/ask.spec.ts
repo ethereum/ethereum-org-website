@@ -221,11 +221,11 @@ test.describe("withCitationLinks", () => {
     { n: 2, url: "/b/", title: "B" },
   ]
 
-  test("glues a citation to the word it marks", () => {
-    // With the model's own space it wrapped onto a line of its own, away from the
-    // sentence it belongs to.
+  test("puts the citation after the sentence's closing punctuation", () => {
+    // The site's convention, and it also glues the marker to the sentence -- with the
+    // model's own leading space it wrapped onto a line of its own.
     expect(withCitationLinks("wallets differ [1].", sources)).toBe(
-      "wallets differ[[1]](/a/)."
+      "wallets differ.[[1]](/a/)"
     )
   })
 
@@ -244,7 +244,7 @@ test.describe("withCitationLinks", () => {
   test("collapses a repeated citation before linking what is left", () => {
     expect(
       withCitationLinks("wallets differ [1]. so do keys [1].", sources)
-    ).toBe("wallets differ. so do keys[[1]](/a/).")
+    ).toBe("wallets differ. so do keys.[[1]](/a/)")
   })
 
   test("leaves a number that is not a source alone", () => {

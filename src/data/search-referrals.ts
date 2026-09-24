@@ -35,6 +35,7 @@ export const SEARCH_REFERRALS: Referral[] = [
     url: "https://ethereum.foundation/",
     owns: "The Ethereum Foundation as an organization: what the EF is, its mission and philosophy, its teams and people, leadership, annual reports and financial disclosures, the treasury, governance of the Foundation itself, jobs and open roles, press and media contact, and how to contact the EF.",
     triggers: [
+      "ef",
       "ethereum foundation",
       "ef jobs",
       "ef report",
@@ -46,7 +47,13 @@ export const SEARCH_REFERRALS: Referral[] = [
     name: "Ethereum Foundation Blog",
     url: "https://blog.ethereum.org/",
     owns: "Official announcements and release notes: client releases, network upgrade and fork announcements, security advisories and disclosures, testnet and devnet news, research updates, grant round announcements, and time-sensitive statements from the Ethereum Foundation. Posts are dated statements of what was true when published.",
-    triggers: ["release notes", "security advisory", "ef blog"],
+    triggers: [
+      "blog",
+      "blog post",
+      "blog posts",
+      "release notes",
+      "security advisory",
+    ],
   },
   {
     name: "Ecosystem Support Program",
