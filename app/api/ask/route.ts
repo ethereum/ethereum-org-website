@@ -16,9 +16,12 @@ import {
   Citations,
   citedSources,
   groupExcerpts,
+  keywordQuery,
   matchReferral,
   type RetrievedRecord,
+  sitePath,
 } from "@/lib/utils/ask"
+import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -40,52 +43,143 @@ const typesenseOrigin = () => {
   return `${protocol}://${host}${suffix}`
 }
 
-const retrieve = async (
-  query: string,
-  locale: string
-): Promise<RetrievedRecord[]> => {
+const SITE_ORIGIN = "https://ethereum.org"
+
+const collection = () => {
+  const prefix =
+    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
+  return prefix
+}
+
+const search = async (
+  params: Record<string, unknown>
+): Promise<Record<string, string>[]> => {
   const origin = typesenseOrigin()
   const key =
     process.env.TYPESENSE_SEARCH_KEY ||
     process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY
   if (!origin || !key) return []
 
-  const prefix =
-    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
   const response = await fetch(`${origin}/multi_search`, {
     method: "POST",
     headers: { "X-TYPESENSE-API-KEY": key, "content-type": "application/json" },
     body: JSON.stringify({
       searches: [
         {
-          collection: `${prefix}-${locale}`,
-          q: query,
-          query_by: [...LVLS, "content"].join(","),
-          include_fields: [...LVLS, "content", "url", "type"].join(","),
-          per_page: RETRIEVE,
-          sort_by: "_text_match(buckets: 100):desc,pagerank:desc",
-          // A question is long and every token has to match, so retrieval was starving:
-          // "how do I stake my eth" returned one page and 289 characters to ground an
-          // answer in. Dropping from both ends reaches the words that carry the question.
-          // Grouping happens in code rather than through `group_by`, which counts groups
-          // while this threshold counts raw hits -- set together they cancel out.
-          drop_tokens_threshold: 30,
-          drop_tokens_mode: "both_sides:3",
+          include_fields: [
+            ...LVLS,
+            "content",
+            "url",
+            "type",
+            "description",
+          ].join(","),
+          // The crawl that built the live collections predates `only_content_level`, so
+          // it holds thousands of heading records with no text. They match a title hard
+          // and ground nothing, and one of them took an excerpt slot per query.
+          filter_by: "type:=content",
           // Grounding wants the whole section, not the matched fragment a row displays.
           highlight_fields: "none",
+          ...params,
         },
       ],
     }),
   })
   if (!response.ok) return []
-
   const json = await response.json()
-  const hits = json?.results?.[0]?.hits ?? []
-  return hits.map(({ document }: { document: Record<string, string> }) => ({
-    url: document.url,
-    content: document.content || "",
-    headings: LVLS.map((lvl) => document[lvl]).filter(Boolean),
-  }))
+  const result = json?.results?.[0]
+  // A grouped search answers with `grouped_hits` and leaves `hits` empty.
+  const hits =
+    result?.hits ??
+    (result?.grouped_hits ?? []).flatMap(
+      (group: { hits: { document: Record<string, string> }[] }) => group.hits
+    )
+  return (hits ?? []).map(
+    ({ document }: { document: Record<string, string> }) => document
+  )
+}
+
+const asRecord = (document: Record<string, string>): RetrievedRecord => ({
+  url: sitePath(document.url),
+  content: document.content || "",
+  headings: LVLS.map((lvl) => document[lvl]).filter(Boolean),
+  description: document.description,
+})
+
+/**
+ * Two passes over the same index: the question as asked, and its content words alone.
+ *
+ * A question is a poor keyword query. Its scaffolding matches everywhere and a landing
+ * page does not repeat its own topic densely, so "how do I get eth?" ranked /staking/solo/
+ * first and never returned /get-eth/ at all. The content words alone do return it -- and
+ * they are also what the curated head-term pins match, which a whole sentence never will.
+ * Neither pass subsumes the other: "what is a DAO?" only works as a question.
+ *
+ * Keyword pages lead, since that pass names the topic rather than matching around it.
+ */
+const retrieve = async (
+  query: string,
+  locale: string
+): Promise<RetrievedRecord[]> => {
+  const name = `${collection()}-${locale}`
+  const keywords = keywordQuery(query)
+  const [asked, named] = await Promise.all([
+    search({
+      collection: name,
+      q: query,
+      query_by: [...LVLS, "content"].join(","),
+      per_page: RETRIEVE,
+      sort_by: SORT_BY,
+      text_match_type: TEXT_MATCH_TYPE,
+      // A question is long and every token has to match, so retrieval was starving:
+      // "how do I stake my eth" returned one page and 289 characters to ground an
+      // answer in. Dropping from both ends reaches the words that carry the question.
+      drop_tokens_threshold: 30,
+      drop_tokens_mode: "both_sides:3",
+    }),
+    keywords && keywords !== query.toLowerCase()
+      ? search({
+          collection: name,
+          q: keywords,
+          query_by: [...LVLS, "content"].join(","),
+          per_page: RETRIEVE,
+          sort_by: SORT_BY,
+          text_match_type: TEXT_MATCH_TYPE,
+        })
+      : Promise.resolve([]),
+  ])
+  return [...named, ...asked].map(asRecord)
+}
+
+/**
+ * Each page's opening paragraph, which ranking will not surface on its own: a page
+ * defines its subject once, where a section about it repeats the word throughout.
+ * `item_priority` counts down from the end of the page, so the highest is position one.
+ */
+const leadParagraphs = async (
+  paths: string[],
+  locale: string
+): Promise<Map<string, string>> => {
+  if (!paths.length) return new Map()
+  const documents = await search({
+    collection: `${collection()}-${locale}`,
+    q: "*",
+    filter_by: `type:=content && url_without_anchor:=[${paths
+      .map((path) => `${SITE_ORIGIN}${path}`)
+      .join(",")}]`,
+    group_by: "url_without_anchor",
+    group_limit: 1,
+    per_page: Math.min(paths.length, 50),
+    sort_by: "item_priority:desc",
+  })
+  return new Map(
+    documents
+      .filter((document) => document.content)
+      // Keyed by page: a lead record keeps its own anchor, and the lookup is by page.
+      .map((document) => [
+        sitePath(document.url).split("#")[0],
+        document.content,
+      ])
+  )
 }
 
 const encoder = new TextEncoder()
@@ -108,7 +202,14 @@ export async function POST(request: Request) {
 
   const question = q.slice(0, 500)
   const records = await retrieve(question, locale)
-  const excerpts = groupExcerpts(records, { maxPages: MAX_PAGES })
+  const grouped = groupExcerpts(records, { maxPages: MAX_PAGES })
+  const excerpts = groupExcerpts(records, {
+    maxPages: MAX_PAGES,
+    leads: await leadParagraphs(
+      grouped.map((excerpt) => excerpt.url.split("#")[0]),
+      locale
+    ),
+  })
   if (!excerpts.length) {
     return Response.json(
       { error: "Nothing to ground an answer in" },
