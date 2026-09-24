@@ -30,8 +30,8 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import heroImg from "@/public/images/infrastructure_transparent.png"
+import privacyOnlineHeroImg from "@/public/images/privacy-curtains-woman-cat-computer.png"
 import privacyWhyImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
-import walletHeroImg from "@/public/images/wallets/wallet-hero.png"
 
 // Recommended-reading external links (title href pulled from the Figma).
 const READING_LINKS: { key: string; href: string }[] = [
@@ -564,7 +564,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             title={t("page-privacy-ethereum-pathway-1-title")}
             description={t("page-privacy-ethereum-pathway-1-description")}
             badge={{ label: t("page-privacy-ethereum-pathway-1-badge") }}
-            banner={<Image src={walletHeroImg} alt="" sizes="160px" />}
+            banner={<Image src={privacyOnlineHeroImg} alt="" sizes="160px" />}
           />
           <PathwayCard
             href="/privacy/"

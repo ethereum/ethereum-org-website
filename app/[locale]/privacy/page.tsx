@@ -43,8 +43,8 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocksImg from "@/public/images/developers-eth-blocks.png"
+import privacyOnlineHeroImg from "@/public/images/privacy-curtains-woman-cat-computer.png"
 import heroImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
-import walletHeroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -436,7 +436,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             title={t("page-privacy-pathway-1-title")}
             description={t("page-privacy-pathway-1-description")}
             badge={{ label: t("page-privacy-pathway-1-badge") }}
-            banner={<Image src={walletHeroImg} alt="" sizes="160px" />}
+            banner={<Image src={privacyOnlineHeroImg} alt="" sizes="160px" />}
           />
           <PathwayCard
             href="/privacy/ethereum/"
