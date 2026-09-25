@@ -81,7 +81,7 @@
   "page-privacy-ethereum-l2-list-aztec": "<link>Aztec</link> - A privacy-first L2 on Ethereum that allows private execution and private state, public execution and public state, and private interactions with Ethereum Mainnet.",
   "page-privacy-ethereum-l2-list-fairblock": "<link>Fairblock Network</link> - A confidentiality L2 for open finance, focused on confidential finance, confidential execution environments for institutions, and private AI.",
   "page-privacy-ethereum-l2-list-silentdata": "<link>Silent Data</link> - A privacy-enabled L2 for onchain verification of private data and programmable privacy, focused on operating as a platform for deploying private apps and tokenization platforms.",
-  "page-privacy-ethereum-l2-list-starknet": "<link>Starknet</link> - A permissionless, decentralized ZK-Rollup with a modular ecosystem for building custom applications and use cases.",
+  "page-privacy-ethereum-l2-list-starknet": "<link>Starknet</link> - An L2 offering optional privacy through STRK20, a pool for shielded token balances, private transfers and DeFi integrations.",
   "page-privacy-ethereum-l2-cta": "Learn about L2 ecosystem",
   "page-privacy-ethereum-selective-title": "Selective disclosure",
   "page-privacy-ethereum-selective-description-1": "Selective disclosure is the ability for users to cryptographically share specific, verifiable pieces of information with chosen parties while keeping the rest of their data private. Across the Ethereum ecosystem, selective disclosure is becoming a core standard for balancing user autonomy with real-world compliance abilities.",
