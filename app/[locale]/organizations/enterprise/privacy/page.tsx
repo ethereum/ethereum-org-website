@@ -398,7 +398,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <FurtherReading />
+          <FurtherReading current="privacy" />
 
           <ExpertContacts experts={["ethsystems"]} />
         </MainArticle>

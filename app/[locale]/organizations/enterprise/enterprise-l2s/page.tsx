@@ -403,7 +403,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
           </Section>
 
-          <FurtherReading />
+          <FurtherReading current="enterprise-l2s" />
 
           <ExpertContacts />
         </MainArticle>

@@ -368,7 +368,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <FurtherReading />
+          <FurtherReading current="tokenization" />
 
           <ExpertContacts />
         </MainArticle>

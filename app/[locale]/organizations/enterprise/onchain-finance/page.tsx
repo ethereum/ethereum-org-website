@@ -291,7 +291,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <FurtherReading />
+          <FurtherReading current="onchain-finance" />
 
           <ExpertContacts />
         </MainArticle>
