@@ -1,7 +1,5 @@
 import type { NavSections } from "@/components/Nav/types"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 type TranslateFn = (key: string) => string
 
 export const buildNavigation = (t: TranslateFn): NavSections => {
@@ -220,28 +218,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             },
           ],
         },
-        {
-          id: "build/business",
-          label: t("business"),
-          description: t("nav-business-description"),
-          items: [
-            {
-              label: t("founders"),
-              description: t("nav-founders-description"),
-              href: "/founders/",
-            },
-            {
-              label: t("nav-institution-enterprise-label"),
-              description: t("nav-institution-enterprise-description"),
-              href: ENTERPRISE_ETHEREUM_URL,
-            },
-            {
-              label: t("nav-iptf-label"),
-              description: t("nav-iptf-description"),
-              href: "https://iptf.ethereum.org/",
-            },
-          ],
-        },
       ],
     },
     participate: {
@@ -444,6 +420,68 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/foundation/",
             },
           ],
+        },
+      ],
+    },
+    organizations: {
+      label: t("organizations"),
+      ariaLabel: t("organizations-menu"),
+      items: [
+        {
+          id: "organizations/overview",
+          label: t("nav-overview-label"),
+          description: t("nav-organizations-overview-description"),
+          href: "/organizations/",
+        },
+        {
+          id: "organizations/enterprise",
+          label: t("enterprise"),
+          description: t("nav-organizations-enterprise-description"),
+          items: [
+            {
+              label: t("nav-organizations-enterprise-home-label"),
+              description: t("nav-organizations-enterprise-home-description"),
+              href: "/organizations/enterprise/",
+            },
+            {
+              label: t("tokenization"),
+              description: t("nav-organizations-tokenization-description"),
+              href: "/organizations/enterprise/tokenization/",
+            },
+            {
+              label: t("onchain-finance"),
+              description: t("nav-organizations-onchain-finance-description"),
+              href: "/organizations/enterprise/onchain-finance/",
+            },
+            {
+              label: t("nav-organizations-privacy-label"),
+              description: t("nav-organizations-privacy-description"),
+              href: "/organizations/enterprise/privacy/",
+            },
+            {
+              label: t("enterprise-l2s"),
+              description: t("nav-organizations-enterprise-l2s-description"),
+              href: "/organizations/enterprise/enterprise-l2s/",
+            },
+          ],
+        },
+        {
+          id: "organizations/public-sector",
+          label: t("public-sector"),
+          description: t("nav-organizations-public-sector-description"),
+          href: "/organizations/public-sector/",
+        },
+        {
+          id: "organizations/small-business",
+          label: t("small-business"),
+          description: t("nav-organizations-small-business-description"),
+          href: "/organizations/small-business/",
+        },
+        {
+          id: "organizations/founders",
+          label: t("founders"),
+          description: t("nav-founders-description"),
+          href: "/organizations/founders/",
         },
       ],
     },
