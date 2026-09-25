@@ -49,8 +49,8 @@ Remix 整合開發環境 (IDE) 提供了一個全面的開發環境，用於建�
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // 「public」關鍵字使變數
-    // 可從其他合約存取
+    // 關鍵字 "public" 使得變數
+    // 可以從其他合約存取
     address public minter;
     mapping (address => uint) public balances;
 
@@ -64,7 +64,7 @@ contract Coin {
         minter = msg.sender;
     }
 
-    // 將一定數量的新建代幣發送至某個地址
+    // 將一定數量的新建立代幣發送到一個地址
     // 只能由合約建立者呼叫
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
@@ -73,7 +73,7 @@ contract Coin {
     }
 
     // 發送一定數量的現有代幣
-    // 從任何呼叫者發送至某個地址
+    // 從任何呼叫者到一個地址
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -137,10 +137,10 @@ highestBid: public(uint256)
 # 在結束時設為 true，不允許任何變更
 ended: public(bool)
 
-# 追蹤已退款的出價，以便我們遵循提款模式
+# 追蹤已退款的出價，以便我們可以遵循提款模式
 pendingReturns: public(HashMap[address, uint256])
 
-# 建立一個簡單的拍賣，競標時間為 `_bidding_time`
+# 建立一個簡單的拍賣，其競標時間為 `_bidding_time`
 # 秒，代表
 # 受益人地址 `_beneficiary`。
 @deploy
@@ -149,10 +149,10 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# 使用發送的價值對拍賣進行出價
-# 連同此交易一起。
-# 該價值只會在
-# 未贏得拍賣時退還。
+# 使用與此交易一起發送的價值
+# 對拍賣進行出價。
+# 只有在未贏得拍賣的情況下，
+# 該價值才會被退還。
 @external
 @payable
 def bid():
@@ -166,7 +166,7 @@ def bid():
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# 提取先前退還的出價。此處使用提款模式
+# 提取先前已退款的出價。這裡使用提款模式
 # 是為了避免安全問題。如果退款直接
 # 作為 bid() 的一部分發送，惡意競標合約可能會阻擋
 # 這些退款，從而阻擋新的更高出價進入。
@@ -180,14 +180,14 @@ def withdraw():
 # 給受益人。
 @external
 def endAuction():
-    # 將互動的函式結構化是一個很好的準則
-    # 與其他合約（即呼叫函式或發送以太幣）
+    # 為進行互動的函式建立結構是一個很好的準則
+    # 與其他合約互動（即呼叫函式或發送以太幣）
     # 分為三個階段：
     # 1. 檢查條件
     # 2. 執行動作（可能會改變條件）
     # 3. 與其他合約互動
     # 如果這些階段混合在一起，另一個合約可能會回呼
-    # 當前合約並修改狀態，或導致
+    # 到當前合約中並修改狀態，或導致
     # 效果（以太幣支付）被執行多次。
     # 如果內部呼叫的函式包含與外部
     # 合約的互動，它們也必須被視為與
