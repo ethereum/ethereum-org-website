@@ -87,7 +87,10 @@ const ExpertContacts = async ({
                   {t(`page-organizations-experts-${key}-description`)}
                 </CardParagraph>
               </CardContent>
-              <CardFooter buttons="compact">
+              {/* Default `responsive`, not `compact`: the button fills the
+                  card while it is narrow and shrinks to its content once the
+                  card is wide enough. */}
+              <CardFooter>
                 <CardButtonFake>
                   {t("page-organizations-experts-cta")}
                 </CardButtonFake>

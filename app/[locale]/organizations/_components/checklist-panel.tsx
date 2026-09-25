@@ -58,7 +58,11 @@ const ChecklistPanel = ({
             <div key={idx} className="flex items-start gap-3">
               <CheckCircle className="shrink-0" />
               <div>
-                <h3 className="text-h6">{title}</h3>
+                {/* `<h3>` keeps the outline (page h1 > panel h2 > point h3);
+                    `text-h5` is the size the design calls for. At `text-h6`
+                    the title rendered smaller than its own paragraph on
+                    mobile (14px against 16px). */}
+                <h3 className="text-h5">{title}</h3>
                 <p>{description}</p>
               </div>
             </div>

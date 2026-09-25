@@ -222,7 +222,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       )}
                     </CardParagraph>
                   </CardContent>
-                  <CardFooter buttons="compact">
+                  {/* Default `responsive`, not `compact`: the button fills the
+                      card while it is narrow and shrinks to its content once
+                      the card is wide enough. */}
+                  <CardFooter>
                     <CardButtonFake>
                       {t("page-organizations-public-sector-case-studies-cta")}
                     </CardButtonFake>
