@@ -289,34 +289,21 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 />
               </p>
             </div>
-            {/* TODO(content): one caption per gauge -- written for this PR, not from
-                Figma. The design never states what either percentage measures, and
-                the two describe different populations, so they cannot share one
-                caption. The 40% wording follows this section's own <h2>; the 72%
-                wording claims only a future increase. */}
             <CryptoHoldersChart
               className="lg:col-start-1 lg:row-start-1"
-              items={[
+              callouts={[
                 {
                   key: holders[0].key,
-                  value: holders[0].value,
                   display: percent(holders[0].value),
                   label: t(
                     "page-organizations-small-business-holders-now-label"
                   ),
-                  caption: t(
-                    "page-organizations-small-business-holders-now-caption"
-                  ),
                 },
                 {
                   key: holders[1].key,
-                  value: holders[1].value,
                   display: percent(holders[1].value),
                   label: t(
                     "page-organizations-small-business-holders-expected-label"
-                  ),
-                  caption: t(
-                    "page-organizations-small-business-holders-expected-caption"
                   ),
                 },
               ]}
