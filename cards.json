@@ -1,10 +1,42 @@
 [
   {
-    "item": "Green review-only PRs (#19017/#19261, #19259 dropped)",
-    "intent": "Standalone green SEO/production fixes blocked only on the review gate, no reviewer assigned",
+    "item": "Frontmatter trio (#18896/#18891/#19031)",
+    "intent": "intl deterministic propagation dropped added/removed frontmatter keys; team fix #19295 landed, obsoleting the external PR and two issues",
+    "state": "decision-needed",
+    "recommended_disposition": "close",
+    "next_human_decision": "Confirm #19295 shipped the frontmatter fix, then close #18896/#18891/#19031 as obsolete",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close the obsolete trio"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "PR #18896",
+      "Issue #18891",
+      "Issue #19031",
+      "PR #19295"
+    ],
+    "owner_lane": "tooling",
+    "confidence": 0.6,
+    "evidence": [
+      "#19295 no longer open (merged) as of yesterday",
+      "external PR #18896 CONFLICTING/Stale idle 28d; issues #18891/#19031 still open",
+      "same recommendation as yesterday, no action taken"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-24",
+    "runs_seen": 2
+  },
+  {
+    "item": "Green SEO/review-only PRs (#19017/#19261/#19043)",
+    "intent": "Small standalone green fixes blocked only on the required-review gate, no reviewer assigned",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Name a standing merger for small green PRs, or park the SEO batch",
+    "next_human_decision": "Assign a standing merger for small green PRs, or park them",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -16,168 +48,20 @@
     "risk": "low",
     "related_items": [
       "PR #19017",
-      "PR #19259",
-      "PR #19261"
+      "PR #19261",
+      "PR #19043",
+      "PR #19259"
     ],
     "owner_lane": "code",
     "confidence": 0.75,
     "evidence": [
-      "#19017/#19261 still green, 0 reviews, idle 13-21d",
-      "#19259 went CONFLICTING (ms=DIRTY) - now needs a rebase, dropped out of the batch",
-      "recommended 15 mornings, zero action"
+      "#19017/#19261/#19043 green, ms=BLOCKED, 0-1 reviews, idle 14-22d",
+      "#19294 cleared the same one-review path today, proving reviewers are active",
+      "recommended 16 mornings, zero action"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 15
-  },
-  {
-    "item": "Issue #18891 (intl frontmatter trio)",
-    "intent": "intl deterministic propagation drops new frontmatter keys - trio #18891/#18896/#19031; the team fix #19295 landed since yesterday",
-    "state": "decision-needed",
-    "recommended_disposition": "close",
-    "next_human_decision": "Confirm #19295 merged the frontmatter fix; if so close external PR #18896 and issues #18891/#19031 as obsolete; if it was reverted, the trio is live again",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Confirm #19295 outcome and close the trio"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #18896",
-      "Issue #19031",
-      "PR #19295"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.6,
-    "evidence": [
-      "#19295 (13k-file team frontmatter/manifest-v2 fix) no longer open as of today",
-      "yesterday's recommendation was to review #19295; that blocker has now moved",
-      "external PR #18896 and issues #18891/#19031 still open, now likely obsolete"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-24",
-    "runs_seen": 1
-  },
-  {
-    "item": "Node-provider/listing product-review bottleneck",
-    "intent": "~13 one-file listing PRs plus ~15 suggest-a-tool/exchange/wallet issues all stalled with no product reviewer",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "No product owner has appeared in 10 mornings; the realistic action now is to merge stale-bot PR #18696 as the auto-close valve rather than nominate an owner again",
-    "waiting_on": [
-      {
-        "actor": "product",
-        "action": "Own the product-review queue or adopt #18696"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "medium",
-    "risk": "low",
-    "related_items": [
-      "PR #19314",
-      "PR #19313",
-      "PR #19281",
-      "PR #19268",
-      "PR #19035",
-      "PR #18872",
-      "PR #18696"
-    ],
-    "owner_lane": "product",
-    "confidence": 0.75,
-    "evidence": [
-      "~13 listing PRs at ms=BLOCKED ci=SUCCESS needs-product-review, all green one-file adds",
-      "78 external issues awaiting team reply",
-      "day 10: naming an owner has produced nothing; the ask should change to merging #18696"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-02",
-    "runs_seen": 10
-  },
-  {
-    "item": "Recovery crash cluster (#19311/#19306/#19238/#19263/#19233/#19221)",
-    "intent": "Unassigned production crashes; homepage + /get-eth RangeError stack-overflows recurring, plus guard drafts #19198/#19208",
-    "state": "decision-needed",
-    "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "Assign one owner to the RangeError stack-overflows as a single recursion regression; land or close guard drafts #19198/#19208",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Assign owner + dispose drafts"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "medium",
-    "risk": "medium",
-    "related_items": [
-      "PR #19198",
-      "PR #19208"
-    ],
-    "owner_lane": "code",
-    "confidence": 0.75,
-    "evidence": [
-      "RangeError 'Maximum call stack size exceeded' on homepage (#19311) and /get-eth (#19306), both 0 comments, unassigned",
-      "reads as one shared recursion regression atop 4 older recovery issues",
-      "day 3, still no owner"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-11",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #17263",
-    "intent": "UX/UI improvements for Use Cases Explorer",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Close stale draft"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "code",
-    "confidence": 0.8,
-    "evidence": [
-      "draft, Blocked+Stale, idle 178d"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-07",
     "runs_seen": 16
-  },
-  {
-    "item": "PR #18918",
-    "intent": "Walletless-dapps tutorial contribution (implements #18052)",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "Close and leave #18052 open, or adopt the content",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Close or adopt"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #18052"
-    ],
-    "owner_lane": "technical-content",
-    "confidence": 0.8,
-    "evidence": [
-      "ci=FAILURE (4 checks), CHANGES_REQUESTED",
-      "0 replies, idle 30d, day 19"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-08-04",
-    "runs_seen": 19
   },
   {
     "item": "Issue #19014/#19019 (invalid/placeholder)",
@@ -200,16 +84,16 @@
     "owner_lane": "product",
     "confidence": 0.85,
     "evidence": [
-      "placeholder/empty bodies",
-      "invalid+Stale, days 10/9; stale-bot #18696 would auto-handle"
+      "empty/placeholder bodies",
+      "invalid+Stale, days 18/17"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 10
+    "runs_seen": 11
   },
   {
-    "item": "Issue #19097 / PR #19097",
-    "intent": "Add ether.fi to staking pools",
+    "item": "Issue #19097 / PR #19097 (ether.fi)",
+    "intent": "Add ether.fi to staking pools; contributor addressed changes, ball with team",
     "state": "waiting-on-contributor",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "pettinarip re-review the addressed changes",
@@ -228,12 +112,128 @@
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
-      "contributor addressed, ci=PENDING, rd=CHANGES_REQUESTED superseded",
-      "ball with team, idle 1, day 3"
+      "ci=PENDING, rd=CHANGES_REQUESTED superseded, hc=5",
+      "assigned, idle 2, ball with team"
     ],
     "analyzed_sha": "d4ab1cb",
     "first_seen": "2026-09-04",
-    "runs_seen": 3
+    "runs_seen": 4
+  },
+  {
+    "item": "Issue #19247/#19271 (spam/empty)",
+    "intent": "Empty 'Bug report' and 'Vou fazer pix' spam",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close as spam/invalid"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.9,
+    "evidence": [
+      "no repro, emoji/spam bodies",
+      "days 15/11"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-11",
+    "runs_seen": 7
+  },
+  {
+    "item": "Node-provider/listing product-review bottleneck",
+    "intent": "~16 one-file listing PRs plus ~15 suggest-a-tool/exchange/wallet issues all stalled with no product reviewer; grew +3 today",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "No product owner in 11 mornings; merge stale-bot PR #18696 as the auto-close valve rather than nominate an owner again",
+    "waiting_on": [
+      {
+        "actor": "product",
+        "action": "Adopt #18696 or own the queue"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "medium",
+    "risk": "low",
+    "related_items": [
+      "PR #19334",
+      "PR #19333",
+      "PR #19327",
+      "PR #19314",
+      "PR #19313",
+      "PR #19281",
+      "PR #19268",
+      "PR #18872",
+      "PR #18696"
+    ],
+    "owner_lane": "product",
+    "confidence": 0.75,
+    "evidence": [
+      "3 new listing PRs today (#19334/#19333/#19327), all green ms=BLOCKED needs-product-review",
+      "stale bot now warns these (e.g. #18918 idle reset) but can't close until #18696 merges",
+      "79 external issues awaiting team reply; day 11, naming an owner has produced nothing"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-02",
+    "runs_seen": 11
+  },
+  {
+    "item": "PR #17263",
+    "intent": "UX/UI improvements for Use Cases Explorer",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close stale draft"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.8,
+    "evidence": [
+      "draft, CONFLICTING+Blocked+Stale, idle 179d"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-07",
+    "runs_seen": 17
+  },
+  {
+    "item": "PR #18918",
+    "intent": "Walletless-dapps tutorial contribution (implements #18052)",
+    "state": "suggest-close",
+    "recommended_disposition": "close",
+    "next_human_decision": "Close and leave #18052 open, or adopt the content",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Close or adopt"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #18052"
+    ],
+    "owner_lane": "technical-content",
+    "confidence": 0.7,
+    "evidence": [
+      "ci=FAILURE (4 checks), CHANGES_REQUESTED",
+      "idle reset to 0 today (likely stale-bot 30-day warning), Status: Stale"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-08-04",
+    "runs_seen": 20
   },
   {
     "item": "PR #19217",
@@ -258,11 +258,11 @@
     "evidence": [
       "ci=SUCCESS, no reviews",
       "implements linked #17280",
-      "idle 16d, day 8"
+      "idle 17d, day 9"
     ],
     "analyzed_sha": "634f26b",
     "first_seen": "2026-09-04",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #19234",
@@ -283,38 +283,12 @@
     "owner_lane": "product",
     "confidence": 0.8,
     "evidence": [
-      "team asked for wallet issue form (wackerow)",
-      "needs product review, idle 13d, day 6"
+      "team asked for wallet issue form",
+      "needs product review, idle 14d, day 7"
     ],
     "analyzed_sha": "fd780f0",
     "first_seen": "2026-09-11",
-    "runs_seen": 6
-  },
-  {
-    "item": "Issue #19247/#19271 (spam/empty)",
-    "intent": "Empty bug report and 'Vou fazer pix' spam",
-    "state": "suggest-close",
-    "recommended_disposition": "close",
-    "next_human_decision": "",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Close as spam/invalid"
-      }
-    ],
-    "impact": "low",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [],
-    "owner_lane": "code",
-    "confidence": 0.9,
-    "evidence": [
-      "no repro, emoji/spam bodies",
-      "days 6/5"
-    ],
-    "analyzed_sha": null,
-    "first_seen": "2026-09-11",
-    "runs_seen": 6
+    "runs_seen": 7
   },
   {
     "item": "PR #19272",
@@ -338,19 +312,19 @@
     "confidence": 0.7,
     "evidence": [
       "one file, ci=SUCCESS ms=BLOCKED, 0 reviews",
-      "implements bot content-review issue #19171",
-      "idle 0, day 4"
+      "implements bot content-review #19171",
+      "idle 1, day 5"
     ],
     "analyzed_sha": "3aa58e4",
     "first_seen": "2026-09-15",
-    "runs_seen": 4
+    "runs_seen": 5
   },
   {
     "item": "PR #19292",
     "intent": "Fix timing-out fetch-developer-tools task so the page serves all 440 tools (was 299 since 13 Sep)",
-    "state": "blocked",
+    "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Any team reviewer: approving review + merge to restore the 141 missing tools",
+    "next_human_decision": "Any team reviewer: confirm the fetch returns all 440, then approve + merge",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -368,50 +342,20 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "page serves 299/440 tools since 13 Sep; team fix, ci=SUCCESS",
-      "wackerow reviewed COMMENTED at current SHA 7bbc46e (not an approval)",
-      "ms=BLOCKED on required approving review, idle 2, day 3"
+      "page serves 299/440 tools since 13 Sep; team fix, ci=SUCCESS ms=BLOCKED",
+      "wackerow reviewed COMMENTED (not an approval); stuck on the merge gate",
+      "sibling #19294 merged today via the same one-review path"
     ],
     "analyzed_sha": "7bbc46e",
     "first_seen": "2026-09-22",
-    "runs_seen": 3
-  },
-  {
-    "item": "PR #19294",
-    "intent": "Pin Trigger.dev runtime off Node 21 (undeployable after 5 Oct 2026)",
-    "state": "blocked",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Any team reviewer: approve and merge before 5 Oct",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Approving review + merge"
-      }
-    ],
-    "impact": "high",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "PR #19292",
-      "PR #19318"
-    ],
-    "owner_lane": "tooling",
-    "confidence": 0.85,
-    "evidence": [
-      "one line, ci=SUCCESS ms=BLOCKED, no reviews, idle 6d",
-      "Trigger.dev stops deploying Node 21 default 5 Oct 2026 (11 days out)",
-      "node-22 matches .nvmrc, day 3"
-    ],
-    "analyzed_sha": "9277dac",
-    "first_seen": "2026-09-22",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
     "item": "PR #19318",
     "intent": "Guard null src in the Image wrapper - fixes the null-src crash that aborts the static build (closes #19317)",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Any team reviewer: verify the guard, then merge to unblock the release build",
+    "next_human_decision": "Any team reviewer: verify the guard doesn't mask genuinely-missing images, then approve + merge",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -429,17 +373,17 @@
     "owner_lane": "code",
     "confidence": 0.85,
     "evidence": [
-      "team fix, ci=SUCCESS ms=BLOCKED on required review, idle 1",
-      "one null logoImage aborted the v11.25.0 static export; issue #19317 still open",
-      "aiReview looks-mergeable, not superseded, day 2"
+      "team fix, ci=SUCCESS ms=BLOCKED on required review, 0 reviews, idle 2",
+      "one null logoImage aborts the static export; issue #19317 filed",
+      "aiReview looks-mergeable, not superseded; sibling #19294 merged today"
     ],
     "analyzed_sha": "1d8e0c0",
     "first_seen": "2026-09-23",
-    "runs_seen": 2
+    "runs_seen": 3
   },
   {
     "item": "PR #19326",
-    "intent": "Daily automated intl translation pipeline PR (24 locales, 85 files)",
+    "intent": "Daily automated intl translation pipeline PR (24 locales), 11 tasks failed the structural gate",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
     "next_human_decision": "Confirm the 11 gate-failed translation tasks are acceptable to defer, then merge",
@@ -456,12 +400,71 @@
     "owner_lane": "translation",
     "confidence": 0.8,
     "evidence": [
-      "ci=SUCCESS ms=BLOCKED, 0 reviews, correct intl/pending-dev base",
-      "body notes 11 tasks failed the structural gate (dropped, not merged) - e.g. de accounts jsx-structure",
-      "routine pipeline output like the now-merged #19319, day 1"
+      "ci=SUCCESS ms=BLOCKED, 0 reviews, correct intl/pending base",
+      "routine pipeline output",
+      "idle 1, day 2"
     ],
     "analyzed_sha": "17050d2",
     "first_seen": "2026-09-24",
+    "runs_seen": 2
+  },
+  {
+    "item": "PR #19332 / Issue #19331",
+    "intent": "Relink 8 pages dropped from the Learn nav in #19329 and retarget the Privacy card",
+    "state": "waiting-on-contributor",
+    "recommended_disposition": "request_changes",
+    "next_human_decision": "",
+    "waiting_on": [
+      {
+        "actor": "konopkja",
+        "action": "Fix failing E2E and rebase (branch is BEHIND)"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [
+      "Issue #19331",
+      "PR #19329"
+    ],
+    "owner_lane": "content",
+    "confidence": 0.75,
+    "evidence": [
+      "ci=FAILURE (E2E), ms=BEHIND, rd=REVIEW_REQUIRED",
+      "filed today, aiReview superseded by commits"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-25",
     "runs_seen": 1
+  },
+  {
+    "item": "Recovery crash cluster (#19311/#19306/#19263/#19238/#19233/#19221)",
+    "intent": "Unassigned production crashes; homepage + /get-eth RangeError stack-overflows recurring, plus guard drafts #19198/#19208",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Assign one owner to the RangeError stack-overflows as a single recursion regression; land or close guard drafts #19198/#19208",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Assign owner + dispose drafts"
+      }
+    ],
+    "impact": "high",
+    "effort_to_unblock": "medium",
+    "risk": "medium",
+    "related_items": [
+      "PR #19198",
+      "PR #19208"
+    ],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "RangeError 'Maximum call stack size exceeded' on homepage (#19311) and /get-eth (#19306), 0 comments, unassigned",
+      "reads as one shared recursion regression atop 4 older recovery issues",
+      "day 4, still no owner"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-09-11",
+    "runs_seen": 4
   }
 ]
