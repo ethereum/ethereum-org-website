@@ -6,19 +6,16 @@ import {
   UserStar,
 } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
+import type { ReactNode } from "react"
 
 import type { Lang, PageParams } from "@/lib/types"
 
 import ContentFeedback from "@/components/ContentFeedback"
+import ExpandableCard from "@/components/ExpandableCard"
 import { HubHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { AccordionContainer } from "@/components/ui/accordion"
 import {
   Card,
   CardButtonFake,
@@ -30,7 +27,7 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
-import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -49,12 +46,34 @@ import whyImg from "@/public/images/organizations/hub-why-building.png"
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
 
+/** Matomo category suffix, matching the `_open_source` convention. */
+const TRACK_CATEGORY_SUFFIX = "_organizations"
+
 /**
- * Target of the footnote marker. The marker points here rather than straight
- * out to the PDF, so the citation itself carries the link and the numeral is
- * list markup -- same pattern as the small-business page.
+ * Target of the footnote marker. The marker points at the on-page source list
+ * rather than straight out to the PDF, so the citation itself carries the link
+ * -- the `[n]` / numbered-list pattern the open-source page established.
  */
-const FOOTNOTE_ID = "footnote-nca-2026"
+const SOURCES_ID = "sources"
+
+/**
+ * Footnote marker. Rendered outside the strings so translators never carry the
+ * numbering.
+ */
+const footnote = (n: number) => (
+  <sup>
+    <InlineLink
+      href={`#${SOURCES_ID}`}
+      hideArrow
+      className="inline-flex h-6 items-center justify-center"
+    >{`[${n}]`}</InlineLink>
+  </sup>
+)
+
+/** `t.rich` link placeholder for the citation in the source list. */
+const ncaLink = (chunks: ReactNode) => (
+  <InlineLink href={NCA_REPORT_URL}>{chunks}</InlineLink>
+)
 
 type Audience = {
   key: string
@@ -129,6 +148,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations")
+  const tCommon = await getTranslations("common")
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations",
@@ -242,31 +262,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-hub-adoption-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-hub-adoption-description")}
-                <sup>
-                  <InlineLink
-                    href={`#${FOOTNOTE_ID}`}
-                    aria-label={t("page-organizations-hub-adoption-source")}
-                    hideArrow
-                    className="inline-flex size-6 items-center justify-center"
-                  >
-                    1
-                  </InlineLink>
-                </sup>
+                {footnote(1)}
               </p>
-              {/* TODO(content): this attribution is not in the Figma frame --
-                  the design has only the superscript link. Two of the three
-                  figures ("monthly active addresses", "monthly active users")
-                  are on-chain metrics that a holder survey is unlikely to
-                  contain, so each figure needs confirming against the report
-                  (or its own source) before launch. */}
-              <ol className="m-0 list-decimal ps-6 text-sm text-body-medium">
-                <li id={FOOTNOTE_ID} className="m-0">
-                  <InlineLink href={NCA_REPORT_URL}>
-                    {t("page-organizations-hub-adoption-source")}
-                  </InlineLink>
-                </li>
-              </ol>
             </div>
+            {/* TODO(data): two of the three figures ("monthly active
+                addresses", "monthly active users") are on-chain metrics that a
+                holder survey is unlikely to contain, so each figure needs
+                confirming against the report (or its own source) before
+                launch. */}
             <AdoptionChart
               items={[
                 {
@@ -325,23 +328,32 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div>
               <h2>{t("page-organizations-hub-faq-title")}</h2>
-              <Accordion
-                type="single"
-                collapsible
-                className="mt-space divide-y rounded-base border"
-              >
+              <AccordionContainer className="mt-space">
                 {FAQ_ITEMS.map((n) => (
-                  <AccordionItem key={n} value={`faq-${n}`}>
-                    <AccordionTrigger className="px-6 py-5 text-lg font-bold md:px-6">
-                      {t(`page-organizations-hub-faq-${n}-question`)}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6 text-base md:px-6">
-                      {t(`page-organizations-hub-faq-${n}-answer`)}
-                    </AccordionContent>
-                  </AccordionItem>
+                  <ExpandableCard
+                    key={n}
+                    title={t(`page-organizations-hub-faq-${n}-question`)}
+                    eventCategory={TRACK_CATEGORY_SUFFIX}
+                    eventAction="faq"
+                    eventName={`Question ${n}`}
+                  >
+                    <p>{t(`page-organizations-hub-faq-${n}-answer`)}</p>
+                  </ExpandableCard>
                 ))}
-              </Accordion>
+              </AccordionContainer>
             </div>
+          </Section>
+
+          {/* Target of the `[1]` marker above. */}
+          <Section id={SOURCES_ID}>
+            <h2>{tCommon("sources")}</h2>
+            <OrderedList className="m-0 list-decimal text-sm text-body-medium">
+              <ListItem>
+                {t.rich("page-organizations-hub-reference-nca", {
+                  link: ncaLink,
+                })}
+              </ListItem>
+            </OrderedList>
           </Section>
         </MainArticle>
 

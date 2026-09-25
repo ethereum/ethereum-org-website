@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, type ReactNode } from "react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
+import { ListItem, OrderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -41,27 +42,28 @@ import tokenizationImg from "@/public/images/organizations/isometric-tokenizatio
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
 
-/** Target of every footnote marker; the source link itself lives on the footnote. */
-const FOOTNOTE_ID = "footnote-nca-2026"
+/** Target of every footnote marker; the source link itself lives on the citation. */
+const SOURCES_ID = "sources"
 
 /**
- * In-page footnote marker. It points at the on-page footnote (not straight out
- * to the PDF, which skipped the footnote entirely and gave three links the
- * accessible name "1"), and the link box is padded out to the 24x24 minimum
- * target size while the `<sup>` keeps the superscript semantics.
+ * Footnote marker. It points at the on-page source list (not straight out to
+ * the PDF, which skipped the citation entirely), and the numbering is rendered
+ * outside the strings so translators never carry it -- the `[n]` pattern the
+ * open-source page established.
  */
-const FootnoteRef = ({ id, label }: { id: string; label: string }) => (
+const footnote = (n: number) => (
   <sup>
     <InlineLink
-      id={id}
-      href={`#${FOOTNOTE_ID}`}
-      aria-label={label}
+      href={`#${SOURCES_ID}`}
       hideArrow
-      className="inline-flex size-6 items-center justify-center"
-    >
-      1
-    </InlineLink>
+      className="inline-flex h-6 items-center justify-center"
+    >{`[${n}]`}</InlineLink>
   </sup>
+)
+
+/** `t.rich` link placeholder for the citation in the source list. */
+const ncaLink = (chunks: ReactNode) => (
+  <InlineLink href={NCA_REPORT_URL}>{chunks}</InlineLink>
 )
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -71,6 +73,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-small-business")
+  const tCommon = await getTranslations("common")
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations/small-business",
@@ -175,14 +178,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <div className="flow">
               <h2>{t("page-organizations-small-business-purchases-title")}</h2>
               <p className="text-lg text-body-medium">
-                {t("page-organizations-small-business-purchases-description")}{" "}
-                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
-                <FootnoteRef
-                  id="footnote-ref-purchases"
-                  label={t(
-                    "page-organizations-small-business-footnote-marker-label"
-                  )}
-                />
+                {t("page-organizations-small-business-purchases-description")}
+                {footnote(1)}
               </p>
             </div>
             {/* Recharts renders nothing server-side, so the six values live in a
@@ -230,14 +227,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <div className="flow">
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
               <p className="text-lg text-body-medium">
-                {t("page-organizations-small-business-adoption-description")}{" "}
-                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
-                <FootnoteRef
-                  id="footnote-ref-adoption"
-                  label={t(
-                    "page-organizations-small-business-footnote-marker-label"
-                  )}
-                />
+                {t("page-organizations-small-business-adoption-description")}
+                {footnote(1)}
               </p>
             </div>
             {/* TODO(data): no live source yet -- figures from the design (NCA footnote) */}
@@ -279,14 +270,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <div className="flow lg:col-start-2">
               <h2>{t("page-organizations-small-business-holders-title")}</h2>
               <p className="text-lg text-body-medium">
-                {t("page-organizations-small-business-holders-description")}{" "}
-                {/* TODO(content): footnote marker label -- written for this PR, not from Figma */}
-                <FootnoteRef
-                  id="footnote-ref-holders"
-                  label={t(
-                    "page-organizations-small-business-footnote-marker-label"
-                  )}
-                />
+                {t("page-organizations-small-business-holders-description")}
+                {footnote(1)}
               </p>
             </div>
             <CryptoHoldersChart
@@ -310,14 +295,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             />
           </Section>
 
-          <Section id="sources">
-            <ol className="m-0 list-decimal ps-6 text-sm text-body-medium">
-              <li id={FOOTNOTE_ID} className="m-0">
-                <InlineLink href={NCA_REPORT_URL}>
-                  {t("page-organizations-small-business-footnote-source")}
-                </InlineLink>
-              </li>
-            </ol>
+          {/* Target of the `[1]` markers above. */}
+          <Section id={SOURCES_ID}>
+            <h2>{tCommon("sources")}</h2>
+            <OrderedList className="m-0 list-decimal text-sm text-body-medium">
+              <ListItem>
+                {t.rich("page-organizations-small-business-reference-nca", {
+                  link: ncaLink,
+                })}
+              </ListItem>
+            </OrderedList>
           </Section>
         </MainArticle>
 
