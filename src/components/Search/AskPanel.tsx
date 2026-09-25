@@ -16,6 +16,12 @@ interface ReferralNote {
   url: string
 }
 
+/** A page that answers better than prose can -- a comparison tool, usually. */
+interface Followup {
+  url: string
+  label: string
+}
+
 /** A citation is a link whose whole text is `[n]` for a source it points at. */
 const isCitation = (
   href: string | undefined,
@@ -39,6 +45,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
   const [answer, setAnswer] = useState("")
   const [sources, setSources] = useState<Source[]>([])
   const [referral, setReferral] = useState<ReferralNote | null>(null)
+  const [followup, setFollowup] = useState<Followup | null>(null)
   const [error, setError] = useState("")
   const [done, setDone] = useState(false)
   const scroller = useRef<HTMLDivElement>(null)
@@ -48,6 +55,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
     setAnswer("")
     setSources([])
     setReferral(null)
+    setFollowup(null)
     setError("")
     setDone(false)
 
@@ -113,6 +121,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
             if (payload.type === "sources") {
               setSources(payload.sources)
               setReferral(payload.referral ?? null)
+              setFollowup(payload.followup ?? null)
               report(payload.sources.length ? "answered" : "refused")
             }
             if (payload.type === "error") {
@@ -193,6 +202,12 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
       )}
 
       {error && <p className="DocSearch-Ask-error">{error}</p>}
+
+      {done && followup && (
+        <p className="DocSearch-Ask-followup">
+          <BaseLink href={followup.url}>{followup.label}</BaseLink>
+        </p>
+      )}
 
       {done && referral && (
         <p className="DocSearch-Ask-referral">

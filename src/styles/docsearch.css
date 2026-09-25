@@ -506,6 +506,12 @@
   @apply text-primary no-underline hover:underline;
 }
 
+/* A tool the question is better served by than by prose. Its own line, so it reads as a
+   next step rather than as part of the sentence above it. */
+.DocSearch-Ask-followup a {
+  @apply text-primary hover:underline;
+}
+
 /* The site that owns the question, when the answer routed rather than answered. */
 .DocSearch-Ask-referral a {
   @apply text-primary hover:underline;

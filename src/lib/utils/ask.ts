@@ -370,7 +370,10 @@ export const withCitationLinks = (text: string, sources: Source[]) => {
         .map((n) => {
           const source = sources.find((candidate) => candidate.n === n)
           // Nested brackets are valid link text, so `[[1]](url)` is a link reading `[1]`.
-          return source ? `[[${n}]](${source.url})` : null
+          // A word joiner keeps it on the line it marks: `[` opens a break opportunity
+          // after the sentence's full stop, and adjacent citations open another between
+          // `]` and the next `[`.
+          return source ? `\u2060[[${n}]](${source.url})` : null
         })
         .filter(Boolean)
       return links.length === numbers.length ? links.join("") : run

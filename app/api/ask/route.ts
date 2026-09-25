@@ -23,6 +23,8 @@ import {
 } from "@/lib/utils/ask"
 import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 
+import { ASK_FOLLOWUPS } from "@/data/ask-followups"
+
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 /** Records pulled for grounding, before grouping collapses them to one per page. */
@@ -268,11 +270,19 @@ export async function POST(request: Request) {
         if (tail) controller.enqueue(event({ type: "token", value: tail }))
         if (error) controller.enqueue(event({ type: "error", value: error }))
         else {
+          // Offered only from a page the answer was already grounded in.
+          const followup = excerpts
+            .map((excerpt) => excerpt.url.split("#")[0])
+            .find((path) => ASK_FOLLOWUPS[path])
           controller.enqueue(
             event({
               type: "sources",
               sources: citedSources(excerpts, citations.used),
               referral: referral && { name: referral.name, url: referral.url },
+              followup: followup && {
+                url: followup,
+                label: ASK_FOLLOWUPS[followup],
+              },
             })
           )
         }

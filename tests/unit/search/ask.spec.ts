@@ -131,6 +131,29 @@ test.describe("Citations", () => {
   })
 })
 
+test.describe("citation placement", () => {
+  const sources = [{ n: 1, url: "/a/", title: "A" }]
+
+  test("joins the citation to the sentence so it cannot start a line", () => {
+    // `[` opens a break opportunity after a full stop, which put a lone marker on its
+    // own line.
+    const out = withCitationLinks("wallets differ [1].", sources)
+    expect(out).toContain("\u2060")
+    expect(out.indexOf("\u2060")).toBe(out.indexOf("[["))
+  })
+
+  test("joins each citation in a run, not just the first", () => {
+    // `]` followed by `[` is another break opportunity.
+    const both = [
+      { n: 1, url: "/a/", title: "A" },
+      { n: 2, url: "/b/", title: "B" },
+    ]
+    expect(
+      withCitationLinks("see [1][2].", both).match(/\u2060/g)
+    ).toHaveLength(2)
+  })
+})
+
 test.describe("citedSources", () => {
   const excerpts = [
     { url: "/a/#one", headings: ["A page | ethereum.org", "A page"], text: "" },
@@ -225,13 +248,13 @@ test.describe("withCitationLinks", () => {
     // The site's convention, and it also glues the marker to the sentence -- with the
     // model's own leading space it wrapped onto a line of its own.
     expect(withCitationLinks("wallets differ [1].", sources)).toBe(
-      "wallets differ.[[1]](/a/)"
+      "wallets differ.\u2060[[1]](/a/)"
     )
   })
 
   test("keeps the brackets, which are the site's citation form and separate a run", () => {
     expect(withCitationLinks("compare options [2][1]", sources)).toBe(
-      "compare options[[2]](/b/)[[1]](/a/)"
+      "compare options\u2060[[2]](/b/)\u2060[[1]](/a/)"
     )
   })
 
@@ -244,7 +267,7 @@ test.describe("withCitationLinks", () => {
   test("collapses a repeated citation before linking what is left", () => {
     expect(
       withCitationLinks("wallets differ [1]. so do keys [1].", sources)
-    ).toBe("wallets differ. so do keys.[[1]](/a/)")
+    ).toBe("wallets differ. so do keys.\u2060[[1]](/a/)")
   })
 
   test("leaves a number that is not a source alone", () => {
