@@ -26,12 +26,17 @@ export const createPageTracking = (
   // Footnote marker for the numbered citations under Further reading. Rendered
   // outside the strings so translators never carry the numbering.
   const footnote = (n: number, section: string) => (
-    <sup>
-      <Link
-        href={`#${furtherReadingId}`}
-        customEventOptions={track(section, `Footnote ${n}`)}
-      >{`[${n}]`}</Link>
-    </sup>
+    <>
+      {/* Word joiner: a line break is legal between sentence-final "." and the
+          marker's "[", which orphans the marker onto a line of its own. */}
+      {"\u2060"}
+      <sup>
+        <Link
+          href={`#${furtherReadingId}`}
+          customEventOptions={track(section, `Footnote ${n}`)}
+        >{`[${n}]`}</Link>
+      </sup>
+    </>
   )
 
   // `t.rich` tag that leaves the claim as plain text and trails a footnote.
