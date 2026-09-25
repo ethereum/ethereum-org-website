@@ -1,10 +1,10 @@
 ---
-title: Contas na Ethereum
-description: "Uma explicação sobre as contas na Ethereum – suas estruturas de dados e sua relação com a criptografia de par de chaves."
+title: Contas Ethereum
+description: "Uma explicação sobre as contas Ethereum – suas estruturas de dados e sua relação com a criptografia de par de chaves."
 lang: pt-br
 ---
 
-Uma conta na [Ethereum](/) é uma entidade com um saldo em ether (ETH) que pode enviar mensagens na Ethereum. As contas podem ser controladas por usuários ou implantadas como contratos inteligentes.
+Uma conta [Ethereum](/) é uma entidade com um saldo em ether (ETH) que pode enviar mensagens na Ethereum. As contas podem ser controladas por usuários ou implantadas como contratos inteligentes.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -40,12 +40,12 @@ Ambos os tipos de conta têm a capacidade de:
 
 ## Uma conta examinada {#an-account-examined}
 
-As contas na Ethereum têm quatro campos:
+As contas Ethereum têm quatro campos:
 
 - `nonce` – Um contador que indica o número de transações enviadas de uma conta de propriedade externa ou o número de contratos criados por uma conta de contrato. Apenas uma transação com um determinado nonce pode ser executada para cada conta, protegendo contra ataques de repetição (replay attacks) onde transações assinadas são repetidamente transmitidas e reexecutadas.
 - `balance` – O número de Wei de propriedade deste endereço. Wei é uma denominação de ETH e há 1e+18 Wei por ETH.
 - `codeHash` – Este hash se refere ao _código_ de uma conta na Máquina Virtual Ethereum (EVM). Contas de contrato têm fragmentos de código programados que podem realizar diferentes operações. Este código da EVM é executado se a conta receber uma chamada de mensagem. Ele não pode ser alterado, ao contrário dos outros campos da conta. Todos esses fragmentos de código estão contidos no banco de dados de estado sob seus hashes correspondentes para recuperação posterior. Este valor de hash é conhecido como codeHash. Para contas de propriedade externa, o campo codeHash é o hash de uma string vazia.
-- `storageRoot` – Às vezes conhecido como hash de armazenamento. Um hash de 256 bits do nó raiz de uma [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica o conteúdo de armazenamento da conta (um mapeamento entre valores inteiros de 256 bits), codificado na trie como um mapeamento do hash Keccak-256 das chaves inteiras de 256 bits para os valores inteiros de 256 bits codificados em RLP. Esta trie codifica o hash do conteúdo de armazenamento desta conta e é vazia por padrão.
+- `storageRoot` – Às vezes conhecido como hash de armazenamento. Um hash de 256 bits do nó raiz de uma [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica o conteúdo de armazenamento da conta (um mapeamento entre valores inteiros de 256 bits), codificado na trie como um mapeamento do hash Keccak-256 das chaves inteiras de 256 bits para os valores inteiros de 256 bits codificados em Prefixo de Comprimento Recursivo (RLP). Esta trie codifica o hash do conteúdo de armazenamento desta conta e é vazia por padrão.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -54,9 +54,9 @@ _Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 Uma conta é composta por um par de chaves criptográficas: pública e privada. Elas ajudam a provar que uma transação foi realmente assinada pelo remetente e evitam falsificações. Sua chave privada é o que você usa para assinar transações, portanto, ela concede a você a custódia sobre os fundos associados à sua conta. Você nunca realmente possui criptomoeda, você possui chaves privadas – os fundos estão sempre no livro-razão da Ethereum.
 
-Isso impede que atores mal-intencionados transmitam transações falsas porque você sempre pode verificar o remetente de uma transação.
+Isso impede que agentes mal-intencionados transmitam transações falsas, pois você sempre pode verificar o remetente de uma transação.
 
-Se Alice quiser enviar ether de sua própria conta para a conta de Bob, Alice precisa criar uma solicitação de transação e enviá-la à rede para verificação. O uso de criptografia de chave pública pela Ethereum garante que Alice possa provar que ela iniciou originalmente a solicitação de transação. Sem mecanismos criptográficos, uma adversária mal-intencionada, Eve, poderia simplesmente transmitir publicamente uma solicitação que se parecesse com "enviar 5 ETH da conta de Alice para a conta de Eve", e ninguém seria capaz de verificar que não veio de Alice.
+Se Alice quiser enviar ether de sua própria conta para a conta de Bob, Alice precisa criar uma solicitação de transação e enviá-la à rede para verificação. O uso de criptografia de chave pública pela Ethereum garante que Alice possa provar que ela originalmente iniciou a solicitação de transação. Sem mecanismos criptográficos, uma adversária mal-intencionada, Eve, poderia simplesmente transmitir publicamente uma solicitação que se parecesse com "enviar 5 ETH da conta de Alice para a conta de Eve", e ninguém seria capaz de verificar que não veio de Alice.
 
 ## Criação de conta {#account-creation}
 
@@ -76,19 +76,19 @@ Exemplo:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-O exemplo a seguir mostra como usar uma ferramenta de assinatura chamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para gerar uma nova conta. Clef é uma ferramenta de gerenciamento de contas e assinatura que vem empacotada com o cliente Ethereum, [Geth](https://geth.ethereum.org). O comando `clef newaccount` cria um novo par de chaves e as salva em um repositório de chaves criptografado.
+O exemplo a seguir mostra como usar uma ferramenta de assinatura chamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para gerar uma nova conta. Clef é uma ferramenta de gerenciamento de contas e assinatura que vem empacotada com o cliente Ethereum, [Go Ethereum (Geth)](https://geth.ethereum.org). O comando `clef newaccount` cria um novo par de chaves e as salva em um repositório de chaves criptografado.
 
 ```
-> clef newaccount --keystore <path>
+> clef newaccount --keystore <caminho>
 
-Please enter a password for the new account to be created:
-> <password>
+Por favor, insira uma senha para a nova conta a ser criada:
+> <senha>
 
 ------------
-INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please remember your password!
-Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Sua nova chave foi gerada        address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Por favor, faça backup do seu arquivo de chave path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Por favor, lembre-se da sua senha!
+Conta gerada 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Documentação do Geth](https://geth.ethereum.org/docs)
@@ -105,9 +105,9 @@ Exemplo:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-O endereço do contrato geralmente é fornecido quando um contrato é implantado na blockchain da Ethereum. O endereço vem do endereço do criador e do número de transações enviadas a partir desse endereço (o “nonce”). É assim que a operação `CREATE` deriva um endereço.
+O endereço do contrato geralmente é fornecido quando um contrato é implantado na blockchain da Ethereum. O endereço vem do endereço do criador e do número de transações enviadas a partir desse endereço (o "nonce"). É assim que a operação `CREATE` deriva um endereço.
 
-Os contratos também podem ser implantados com [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva o endereço a partir do endereço do criador, um valor que o criador escolhe (o “salt”) e um hash do código de criação do contrato. Nenhum nonce está envolvido, portanto, o endereço pode ser calculado antes que o contrato exista e permanece o mesmo, não importa quantas outras transações o criador envie nesse meio tempo. Isso torna possível referenciar um contrato que ainda não foi implantado.
+Os contratos também podem ser implantados com [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), que deriva o endereço a partir do endereço do criador, um valor que o criador escolhe (o "salt") e um hash do código de criação do contrato. Nenhum nonce está envolvido, então o endereço pode ser calculado antes que o contrato exista e permanece o mesmo, não importa quantas outras transações o criador envie nesse meio tempo. Isso torna possível referenciar um contrato que ainda não foi implantado.
 
 ## Chaves de validador {#validators-keys}
 
@@ -117,11 +117,11 @@ Há também outro tipo de chave na Ethereum, introduzido quando a Ethereum mudou
 
 ## Uma observação sobre carteiras {#a-note-on-wallets}
 
-Uma conta não é uma carteira. Uma carteira é uma interface ou aplicativo que permite que você interaja com sua conta na Ethereum, seja uma conta de propriedade externa ou uma conta de contrato.
+Uma conta não é uma carteira. Uma carteira é uma interface ou aplicativo que permite que você interaja com sua conta Ethereum, seja uma conta de propriedade externa ou uma conta de contrato.
 
 ## Uma demonstração visual {#a-visual-demo}
 
-Assista ao Austin guiando você pelas funções de hash e pares de chaves.
+Assista Austin guiá-lo através de funções de hash e pares de chaves.
 
 <VideoWatch slug="hash-function-eth-build" />
 
@@ -129,7 +129,7 @@ Assista ao Austin guiando você pelas funções de hash e pares de chaves.
 
 ## Leitura adicional {#further-reading}
 
-- [Entendendo as contas na Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
+- [Entendendo as Contas Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
 _Conhece um recurso da comunidade que ajudou você? Edite esta página e adicione-o!_
 
@@ -137,3 +137,7 @@ _Conhece um recurso da comunidade que ajudou você? Edite esta página e adicion
 
 - [Contratos inteligentes](/developers/docs/smart-contracts/)
 - [Transações](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />

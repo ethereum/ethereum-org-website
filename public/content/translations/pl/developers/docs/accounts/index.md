@@ -1,30 +1,30 @@
 ---
 title: Konta Ethereum
-description: "Wyjaśnienie kont Ethereum – ich struktur danych i związku z kryptografią par kluczy."
+description: "Wyjaśnienie kont Ethereum – ich struktury danych i związku z kryptografią par kluczy."
 lang: pl
 ---
 
-[Konto](/) Ethereum to jednostka z saldem etheru (ETH), która może wysyłać wiadomości w sieci Ethereum. Konta mogą być kontrolowane przez użytkowników lub wdrożone jako inteligentne kontrakty.
+Konto [Ethereum](/) to jednostka z saldem etheru (ETH), która może wysyłać wiadomości w sieci Ethereum. Konta mogą być kontrolowane przez użytkowników lub wdrożone jako inteligentne kontrakty.
 
 ## Wymagania wstępne {#prerequisites}
 
 Aby pomóc Ci lepiej zrozumieć tę stronę, zalecamy najpierw przeczytać nasze [wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Rodzaje kont {#types-of-account}
+## Typy kont {#types-of-account}
 
-Ethereum ma dwa rodzaje kont:
+Ethereum ma dwa typy kont:
 
-- Konto posiadane zewnętrznie (EOA - Externally-owned account) – kontrolowane przez każdego, kto posiada klucze prywatne
+- Konto posiadane zewnętrznie (EOA) – kontrolowane przez każdego, kto posiada klucze prywatne
 - Konto kontraktu – inteligentny kontrakt wdrożony w sieci, kontrolowany przez kod. Dowiedz się więcej o [inteligentnych kontraktach](/developers/docs/smart-contracts/)
 
-Oba rodzaje kont mają możliwość:
+Oba typy kont mają możliwość:
 
-- Otrzymywania, przechowywania i wysyłania ETH oraz tokenów
+- Odbierania, przechowywania i wysyłania ETH oraz tokenów
 - Interakcji z wdrożonymi inteligentnymi kontraktami
 
 ### Kluczowe różnice {#key-differences}
 
-**Posiadane zewnętrznie (EOA)**
+**Posiadane zewnętrznie**
 
 - Utworzenie konta nic nie kosztuje
 - Może inicjować transakcje
@@ -44,8 +44,8 @@ Konta Ethereum mają cztery pola:
 
 - `nonce` – Licznik wskazujący liczbę transakcji wysłanych z konta posiadanego zewnętrznie lub liczbę kontraktów utworzonych przez konto kontraktu. Dla każdego konta może zostać wykonana tylko jedna transakcja z danym nonce, co chroni przed atakami typu replay (powtórzenia), w których podpisane transakcje są wielokrotnie rozgłaszane i ponownie wykonywane.
 - `balance` – Liczba wei posiadanych przez ten adres. Wei to nominał ETH, a na 1 ETH przypada 1e+18 wei.
-- `codeHash` – Ten hash odnosi się do _kodu_ konta w Wirtualnej Maszynie Ethereum (EVM). Konta kontraktów mają zaprogramowane fragmenty kodu, które mogą wykonywać różne operacje. Ten kod EVM jest wykonywany, jeśli konto otrzyma wywołanie wiadomości. Nie można go zmienić, w przeciwieństwie do innych pól konta. Wszystkie takie fragmenty kodu są zawarte w bazie danych stanu pod odpowiadającymi im hashami w celu późniejszego pobrania. Ta wartość hasha jest znana jako codeHash. W przypadku kont posiadanych zewnętrznie pole codeHash jest hashem pustego ciągu znaków.
-- `storageRoot` – Czasami znany jako hash pamięci (storage hash). 256-bitowy hash węzła głównego [drzewa Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), który koduje zawartość pamięci konta (mapowanie między 256-bitowymi wartościami całkowitymi), zakodowany w drzewie jako mapowanie z 256-bitowego hasha Keccak 256-bitowych kluczy całkowitych na zakodowane w RLP 256-bitowe wartości całkowite. To drzewo koduje hash zawartości pamięci tego konta i domyślnie jest puste.
+- `codeHash` – Ten hash odnosi się do _kodu_ konta w Maszynie Wirtualnej Ethereum (EVM). Konta kontraktów mają zaprogramowane fragmenty kodu, które mogą wykonywać różne operacje. Ten kod EVM jest wykonywany, jeśli konto otrzyma wywołanie wiadomości. Nie można go zmienić, w przeciwieństwie do innych pól konta. Wszystkie takie fragmenty kodu są zawarte w bazie danych stanu pod odpowiadającymi im hashami w celu późniejszego pobrania. Ta wartość hasha jest znana jako codeHash. W przypadku kont posiadanych zewnętrznie pole codeHash jest hashem pustego ciągu znaków.
+- `storageRoot` – Czasami nazywany hashem pamięci (storage hash). 256-bitowy hash węzła głównego [drzewa Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), który koduje zawartość pamięci konta (mapowanie między 256-bitowymi wartościami całkowitymi), zakodowany w drzewie jako mapowanie z 256-bitowego hasha Keccak 256-bitowych kluczy całkowitych na 256-bitowe wartości całkowite zakodowane za pomocą rekurencyjnego przedrostka długości (RLP). To drzewo koduje hash zawartości pamięci tego konta i domyślnie jest puste.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
@@ -56,7 +56,7 @@ Konto składa się z pary kluczy kryptograficznych: publicznego i prywatnego. Po
 
 Zapobiega to rozgłaszaniu fałszywych transakcji przez złośliwych aktorów, ponieważ zawsze można zweryfikować nadawcę transakcji.
 
-Jeśli Alice chce wysłać ether ze swojego konta na konto Boba, musi utworzyć żądanie transakcji i wysłać je do sieci w celu weryfikacji. Wykorzystanie przez Ethereum kryptografii klucza publicznego gwarantuje, że Alice może udowodnić, iż to ona pierwotnie zainicjowała żądanie transakcji. Bez mechanizmów kryptograficznych złośliwy przeciwnik Eve mógłby po prostu publicznie rozgłosić żądanie wyglądające mniej więcej tak: „wyślij 5 ETH z konta Alice na konto Eve”, a nikt nie byłby w stanie zweryfikować, że nie pochodzi ono od Alice.
+Jeśli Alice chce wysłać ether ze swojego konta na konto Boba, musi utworzyć żądanie transakcji i wysłać je do sieci w celu weryfikacji. Wykorzystanie przez Ethereum kryptografii klucza publicznego gwarantuje, że Alice może udowodnić, iż to ona pierwotnie zainicjowała żądanie transakcji. Bez mechanizmów kryptograficznych złośliwy przeciwnik, Eve, mógłby po prostu publicznie rozgłosić żądanie wyglądające mniej więcej tak: „wyślij 5 ETH z konta Alice na konto Eve”, a nikt nie byłby w stanie zweryfikować, że nie pochodzi ono od Alice.
 
 ## Tworzenie konta {#account-creation}
 
@@ -79,23 +79,23 @@ Przykład:
 Poniższy przykład pokazuje, jak użyć narzędzia do podpisywania o nazwie [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) do wygenerowania nowego konta. Clef to narzędzie do zarządzania kontami i podpisywania, które jest dołączone do klienta Ethereum, [Geth](https://geth.ethereum.org). Polecenie `clef newaccount` tworzy nową parę kluczy i zapisuje je w zaszyfrowanym magazynie kluczy.
 
 ```
-> clef newaccount --keystore <path>
+> clef newaccount --keystore <ścieżka>
 
-Please enter a password for the new account to be created:
-> <password>
+Wprowadź hasło dla nowo tworzonego konta:
+> <hasło>
 
 ------------
-INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Please remember your password!
-Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Twój nowy klucz został wygenerowany       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Zrób kopię zapasową pliku klucza      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Pamiętaj swoje hasło!
+Wygenerowano konto 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Dokumentacja Geth](https://geth.ethereum.org/docs)
 
 Możliwe jest wyprowadzenie nowych kluczy publicznych z klucza prywatnego, ale nie można wyprowadzić klucza prywatnego z kluczy publicznych. Niezwykle ważne jest, aby dbać o bezpieczeństwo swoich kluczy prywatnych i, jak sama nazwa wskazuje, zachować je jako **PRYWATNE**.
 
-Potrzebujesz klucza prywatnego do podpisywania wiadomości i transakcji, co generuje podpis. Inni mogą następnie użyć tego podpisu do wyprowadzenia Twojego klucza publicznego, udowadniając w ten sposób autora wiadomości. W swojej aplikacji możesz użyć biblioteki JavaScript do wysyłania transakcji do sieci.
+Potrzebujesz klucza prywatnego do podpisywania wiadomości i transakcji, co generuje podpis. Inni mogą następnie użyć tego podpisu do wyprowadzenia Twojego klucza publicznego, udowadniając w ten sposób autorstwo wiadomości. W swojej aplikacji możesz użyć biblioteki JavaScript do wysyłania transakcji do sieci.
 
 ## Konta kontraktów {#contract-accounts}
 
@@ -105,13 +105,13 @@ Przykład:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Adres kontraktu jest zazwyczaj nadawany, gdy kontrakt jest wdrażany na blockchainie Ethereum. Adres ten jest generowany na podstawie adresu twórcy oraz liczby transakcji wysłanych z tego adresu („nonce”). W ten sposób operacja `CREATE` wyprowadza adres.
+Adres kontraktu jest zazwyczaj nadawany, gdy kontrakt jest wdrażany na blockchainie Ethereum. Adres pochodzi od adresu twórcy i liczby transakcji wysłanych z tego adresu („nonce”). W ten sposób operacja `CREATE` wyprowadza adres.
 
-Kontrakty mogą być również wdrażane za pomocą [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), które wyprowadza adres na podstawie adresu twórcy, wartości wybranej przez twórcę („sól”) oraz hasha kodu tworzenia kontraktu. W tym procesie nie bierze udziału nonce, więc adres może zostać obliczony zanim kontrakt powstanie i pozostaje taki sam, niezależnie od tego, ile innych transakcji twórca wyśle w międzyczasie. Dzięki temu możliwe jest odwoływanie się do kontraktu, który nie został jeszcze wdrożony.
+Kontrakty mogą być również wdrażane za pomocą [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), co wyprowadza adres z adresu twórcy, wartości wybranej przez twórcę („sól”) oraz hasha kodu tworzenia kontraktu. Nie bierze w tym udziału nonce, więc adres można obliczyć, zanim kontrakt w ogóle powstanie, i pozostaje on taki sam bez względu na to, ile innych transakcji twórca wyśle w międzyczasie. Umożliwia to odwoływanie się do kontraktu, który nie został jeszcze wdrożony.
 
 ## Klucze walidatora {#validators-keys}
 
-W Ethereum istnieje również inny rodzaj klucza, wprowadzony, gdy Ethereum przeszło z konsensusu opartego na dowodzie pracy (PoW) na dowód stawki (PoS). Są to klucze „BLS” i służą do identyfikacji walidatorów. Klucze te mogą być wydajnie agregowane w celu zmniejszenia przepustowości wymaganej przez sieć do osiągnięcia konsensusu. Bez tej agregacji kluczy minimalna stawka dla walidatora byłaby znacznie wyższa.
+W Ethereum istnieje również inny typ klucza, wprowadzony, gdy Ethereum przeszło z dowodu pracy (PoW) na konsensus oparty na dowodzie stawki (PoS). Są to klucze „BLS” i służą do identyfikacji walidatorów. Klucze te można wydajnie agregować, aby zmniejszyć przepustowość wymaganą przez sieć do osiągnięcia konsensusu. Bez tej agregacji kluczy minimalna stawka dla walidatora byłaby znacznie wyższa.
 
 [Więcej o kluczach walidatora](/developers/docs/consensus-mechanisms/pos/keys/).
 
@@ -137,3 +137,7 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 
 - [Inteligentne kontrakty](/developers/docs/smart-contracts/)
 - [Transakcje](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />
