@@ -50,11 +50,11 @@ pragma solidity >= 0.7.0;
 
 contract Coin {
     // Das Schlüsselwort "public" macht Variablen
-    // von anderen Verträgen aus zugänglich
+    // zugänglich von anderen Verträgen
     address public minter;
     mapping (address => uint) public balances;
 
-    // Ereignisse ermöglichen es Clients, auf bestimmte
+    // Ereignisse erlauben es Clients, auf spezifische
     // von Ihnen deklarierte Vertragsänderungen zu reagieren
     event Sent(address from, address to, uint amount);
 
@@ -125,7 +125,7 @@ Für weitere Informationen [lesen Sie die Grundprinzipien (Rationale) von Vyper]
 # Offene Auktion
 
 # Auktionsparameter
-# Der Begünstigte erhält Geld vom Höchstbietenden
+# Begünstigter erhält Geld vom Höchstbietenden
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
@@ -137,10 +137,10 @@ highestBid: public(uint256)
 # Wird am Ende auf true gesetzt, verbietet jegliche Änderung
 ended: public(bool)
 
-# Rückerstattete Gebote nachverfolgen, damit wir dem Auszahlungsmuster folgen können
+# Verfolgt zurückerstattete Gebote, damit wir dem Auszahlungsmuster folgen können
 pendingReturns: public(HashMap[address, uint256])
 
-# Erstelle eine einfache Auktion mit `_bidding_time`
+# Erstellt eine einfache Auktion mit `_bidding_time`
 # Sekunden Bietzeit im Namen der
 # Begünstigten-Adresse `_beneficiary`.
 @deploy
@@ -156,28 +156,28 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 @external
 @payable
 def bid():
-    # Prüfen, ob die Bietzeit abgelaufen ist.
+    # Prüfe, ob die Bietzeit abgelaufen ist.
     assert block.timestamp < self.auctionEnd
-    # Prüfen, ob das Gebot hoch genug ist
+    # Prüfe, ob das Gebot hoch genug ist
     assert msg.value > self.highestBid
-    # Die Rückerstattung für den vorherigen Höchstbietenden nachverfolgen
+    # Verfolge die Rückerstattung für den vorherigen Höchstbietenden
     self.pendingReturns[self.highestBidder] += self.highestBid
-    # Neues Höchstgebot nachverfolgen
+    # Verfolge neues Höchstgebot
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Ein zuvor zurückerstattetes Gebot abheben. Das Auszahlungsmuster wird
+# Zahle ein zuvor zurückerstattetes Gebot aus. Das Auszahlungsmuster wird
 # hier verwendet, um ein Sicherheitsproblem zu vermeiden. Wenn Rückerstattungen direkt
 # als Teil von bid() gesendet würden, könnte ein bösartiger bietender Vertrag
-# diese Rückerstattungen blockieren und somit das Eingehen neuer, höherer Gebote blockieren.
+# diese Rückerstattungen blockieren und somit das Eingehen neuer höherer Gebote verhindern.
 @external
 def withdraw():
     pending_amount: uint256 = self.pendingReturns[msg.sender]
     self.pendingReturns[msg.sender] = 0
     send(msg.sender, pending_amount)
 
-# Die Auktion beenden und das Höchstgebot
-# an den Begünstigten senden.
+# Beende die Auktion und sende das Höchstgebot
+# an den Begünstigten.
 @external
 def endAuction():
     # Es ist eine gute Richtlinie, Funktionen, die mit
@@ -194,9 +194,9 @@ def endAuction():
     # externen Verträgen betrachtet werden.
 
     # 1. Bedingungen
-    # Prüfen, ob die Endzeit der Auktion erreicht wurde
+    # Prüfe, ob die Endzeit der Auktion erreicht wurde
     assert block.timestamp >= self.auctionEnd
-    # Prüfen, ob diese Funktion bereits aufgerufen wurde
+    # Prüfe, ob diese Funktion bereits aufgerufen wurde
     assert not self.ended
 
     # 2. Effekte
