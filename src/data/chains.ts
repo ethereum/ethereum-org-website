@@ -2569,6 +2569,18 @@ const chains = [
     shortName: "crynux-base",
   },
   {
+    name: "Crynux on RH",
+    infoURL: "https://crynux.io",
+    chainId: 18896215,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
+    shortName: "crynux-rh",
+  },
+  {
     name: "DBK Chain",
     infoURL: "https://docs.dbkchain.io",
     chainId: 20240603,
