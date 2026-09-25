@@ -48,17 +48,17 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import accessNowBannerImg from "@/public/assets/open-access/access-now-banner.png"
-import ethDiamondImg from "@/public/assets/open-access/eth-diamond-pastel.png"
-import ethVaultImg from "@/public/assets/open-access/eth-vault.png"
 import freedomPressBannerImg from "@/public/assets/open-access/freedom-of-the-press-foundation-banner.png"
-import heroImg from "@/public/assets/open-access/open-access-hero.png"
-import privacyPathwayImg from "@/public/assets/open-access/privacy-pathway.png"
 import rsfBannerImg from "@/public/assets/open-access/reporters-without-borders-banner.png"
 import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
 import internetArchiveBannerImg from "@/public/assets/open-source/internet-archive-banner.png"
 import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
 import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
+import ethDiamondImg from "@/public/images/eth-org-logo.png"
 import walletCalloutImg from "@/public/images/impact_transparent.png"
+import ethVaultImg from "@/public/images/infrastructure_transparent.png"
+import privacyPathwayImg from "@/public/images/wallets/wallet-hero.png"
+import heroImg from "@/public/images/what-is-ethereum.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await props.params
@@ -753,7 +753,7 @@ export async function generateMetadata({
     slug: ["open-access"],
     title: t("page-open-access-meta-title"),
     description: t("page-open-access-meta-description"),
-    image: "/assets/open-access/open-access-hero.png",
+    image: "/images/what-is-ethereum.png",
   })
 }
 

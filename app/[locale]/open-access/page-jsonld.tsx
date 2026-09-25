@@ -72,7 +72,7 @@ export default async function OpenAccessPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-open-access-title"),
         description: t("page-open-access-meta-description"),
-        image: "https://ethereum.org/assets/open-access/open-access-hero.png",
+        image: "https://ethereum.org/images/what-is-ethereum.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
