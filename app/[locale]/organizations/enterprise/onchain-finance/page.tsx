@@ -162,8 +162,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
+      {/* Padding and max-width sit on each section rather than on `main`, so a
+          non-section wrapper can span the full viewport -- the arrangement
+          `/stablecoins/` uses for its own full-bleed band below. */}
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
           <Section id="defi-primitives">
             <SectionIntro
               title={t(
@@ -198,51 +201,59 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          <Section
-            id="enterprise-innovation"
-            className="rounded-4xl bg-tint-primary px-page py-space-3x text-center"
-          >
-            <h2>
-              {t(
-                "page-organizations-enterprise-onchain-finance-innovation-title"
-              )}
-            </h2>
-            <p className="mx-auto max-w-3xl text-lg text-body-medium">
-              {t(
-                "page-organizations-enterprise-onchain-finance-innovation-description"
-              )}
-            </p>
-            <Grid balanced={4} data-flow="cta" className="text-start">
-              {INNOVATIONS.map((key) => (
-                <Card key={key} variant="nested">
-                  <CardContent>
-                    <CardTitle>
-                      {t(
-                        `page-organizations-enterprise-onchain-finance-innovation-${key}-title`
-                      )}
-                    </CardTitle>
-                    <CardParagraph>
-                      {t(
-                        `page-organizations-enterprise-onchain-finance-innovation-${key}-description`
-                      )}
-                    </CardParagraph>
-                  </CardContent>
-                  <CardFooter buttons="inherit">
-                    <CardParagraph>
-                      {t(
-                        "page-organizations-enterprise-onchain-finance-innovation-examples-label"
-                      )}
-                    </CardParagraph>
-                    <CardParagraph textColor="body">
-                      {t(
-                        `page-organizations-enterprise-onchain-finance-innovation-${key}-examples`
-                      )}
-                    </CardParagraph>
-                  </CardFooter>
-                </Card>
-              ))}
-            </Grid>
-          </Section>
+          {/* Full-bleed wash: the coloured wrapper spans the viewport while the
+              inner Section keeps content at max-w-7xl. `bg-tint-primary` inset
+              inside the page gutter all but vanished on a phone -- there the
+              band is only a hair narrower than the text it sits behind, so a
+              5-15% wash reads as no band at all. `mt-space-3x` restores the
+              section-boundary gap the non-section wrapper misses in `flow`. */}
+          <div className="mt-space-3x w-full bg-radial-primary transition-[border-radius] 2xl:rounded-4xl">
+            <Section
+              id="enterprise-innovation"
+              className="mx-auto w-full max-w-7xl px-page py-space-3x text-center"
+            >
+              <h2>
+                {t(
+                  "page-organizations-enterprise-onchain-finance-innovation-title"
+                )}
+              </h2>
+              <p className="mx-auto max-w-3xl text-lg text-body-medium">
+                {t(
+                  "page-organizations-enterprise-onchain-finance-innovation-description"
+                )}
+              </p>
+              <Grid balanced={4} data-flow="cta" className="text-start">
+                {INNOVATIONS.map((key) => (
+                  <Card key={key} variant="nested">
+                    <CardContent>
+                      <CardTitle>
+                        {t(
+                          `page-organizations-enterprise-onchain-finance-innovation-${key}-title`
+                        )}
+                      </CardTitle>
+                      <CardParagraph>
+                        {t(
+                          `page-organizations-enterprise-onchain-finance-innovation-${key}-description`
+                        )}
+                      </CardParagraph>
+                    </CardContent>
+                    <CardFooter buttons="inherit">
+                      <CardParagraph>
+                        {t(
+                          "page-organizations-enterprise-onchain-finance-innovation-examples-label"
+                        )}
+                      </CardParagraph>
+                      <CardParagraph textColor="body">
+                        {t(
+                          `page-organizations-enterprise-onchain-finance-innovation-${key}-examples`
+                        )}
+                      </CardParagraph>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </Grid>
+            </Section>
+          </div>
 
           <Section
             id="defi-ecosystem"

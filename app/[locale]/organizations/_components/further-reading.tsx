@@ -53,7 +53,10 @@ const FurtherReading = async ({
   return (
     <Section id={id}>
       <h2>{t("page-organizations-further-reading-title")}</h2>
-      <Grid balanced={2} data-flow="cta">
+      {/* `1fr` auto-rows so the second row matches the first: the grid
+          otherwise sizes each row to its own tallest card, and these four
+          descriptions run one to three lines. */}
+      <Grid balanced={2} data-flow="cta" className="[grid-auto-rows:1fr]">
         {READING.map(({ key, href, image }) => (
           <PathwayCard
             key={key}
@@ -63,6 +66,10 @@ const FurtherReading = async ({
               `page-organizations-further-reading-${key}-description`
             )}
             banner={<Image src={image} alt="" sizes="160px" />}
+            // The grid track already stretches; without this the card sits at
+            // its own content height inside it, so the four descriptions --
+            // which run one to three lines -- gave four different card heights.
+            className="h-full"
           />
         ))}
       </Grid>
