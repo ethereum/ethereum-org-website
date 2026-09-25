@@ -7,32 +7,10 @@
       "englishHash": "91539c921316",
       "class": "gate",
       "reason": "[gate] public/content/translations/de/developers/docs/accounts/index.md: 1 check(s) failed -- structure jsx-tags: Pfad (en=0 tr=1), Passwort (en=0 tr=1)",
-      "attempts": 1,
+      "attempts": 2,
       "firstSeen": "2026-09-23T21:38:19.682Z",
-      "lastSeen": "2026-09-23T21:38:19.682Z",
-      "expiresAt": "2026-10-07T21:38:19.682Z"
-    },
-    {
-      "file": "public/content/developers/docs/smart-contracts/languages/index.md",
-      "locale": "ar",
-      "englishHash": "3540927d09e3",
-      "class": "gate",
-      "reason": "[gate] public/content/translations/ar/developers/docs/smart-contracts/languages/index.md: 1 check(s) failed -- structure internal-href: /developers/docs/evm (en=1 tr=0)",
-      "attempts": 1,
-      "firstSeen": "2026-09-23T21:42:25.739Z",
-      "lastSeen": "2026-09-23T21:42:25.739Z",
-      "expiresAt": "2026-10-07T21:42:25.739Z"
-    },
-    {
-      "file": "public/content/developers/docs/smart-contracts/testing/index.md",
-      "locale": "zh-tw",
-      "englishHash": "d1d8e1739cb4",
-      "class": "gate",
-      "reason": "[gate] public/content/translations/zh-tw/developers/docs/smart-contracts/testing/index.md: 3 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}`; mdx Could not parse expression with acorn",
-      "attempts": 1,
-      "firstSeen": "2026-09-23T21:57:59.470Z",
-      "lastSeen": "2026-09-23T21:57:59.470Z",
-      "expiresAt": "2026-10-07T21:57:59.470Z"
+      "lastSeen": "2026-09-25T23:23:26.155Z",
+      "expiresAt": "2026-10-09T23:23:26.155Z"
     }
   ]
 }
