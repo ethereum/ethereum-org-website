@@ -38,6 +38,7 @@ import defiImg from "@/public/images/organizations/isometric-defi.png"
 import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
 import privacyImg from "@/public/images/organizations/isometric-privacy.png"
 import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
+import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
@@ -203,20 +204,34 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="accept-payments"
-            className="rounded-4xl bg-tint-primary px-page py-space-3x"
+            className="flex items-center gap-space-2x rounded-4xl bg-tint-primary px-page py-space-3x max-md:flex-col"
           >
-            <h2 className="text-h3">
-              {t("page-organizations-small-business-payments-title")}
-            </h2>
-            <p className="max-w-3xl text-lg text-body-medium">
-              {t("page-organizations-small-business-payments-description")}
-            </p>
-            {/* TODO(content): this panel had "Shopify" and "WordPress" CTAs that
-                opened a Crypto.com support article and an unaudited third-party
-                plugin -- a button must not be labelled with a destination it does
-                not open, and neither target clears the product-listing bar in
-                public/content/contributing/adding-products/index.md. Approved
-                first-party destinations are needed before any CTA returns here. */}
+            <div className="flex-1">
+              <h2 className="text-h3">
+                {t("page-organizations-small-business-payments-title")}
+              </h2>
+              <p className="mt-space max-w-3xl text-lg text-body-medium">
+                {t("page-organizations-small-business-payments-description")}
+              </p>
+              {/* TODO(content): this panel had "Shopify" and "WordPress" CTAs
+                  that opened a Crypto.com support article and an unaudited
+                  third-party plugin -- a button must not be labelled with a
+                  destination it does not open, and neither target clears the
+                  product-listing bar in
+                  public/content/contributing/adding-products/index.md. Approved
+                  first-party destinations are needed before any CTA returns
+                  here. */}
+            </div>
+            {/* Named rather than decorative: with the CTAs gone this is the
+                panel's only mention of Shopify, so `alt=""` would drop it for
+                screen readers entirely. The art is transparent, so it sits on
+                the dark page without the glare the opaque hub images have. */}
+            <Image
+              src={shopifyImg}
+              alt="Shopify"
+              className="h-auto w-32 shrink-0 md:w-48"
+              sizes="(max-width: 768px) 128px, 192px"
+            />
           </Section>
 
           <Section
