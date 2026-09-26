@@ -55,6 +55,26 @@ Use `playwright-cli` (the `@playwright/cli` terminal client) via Bash to check e
 
 Workflow: `playwright-cli open` → `playwright-cli goto <url>` → `playwright-cli snapshot` (returns element refs like `e15`) → `playwright-cli click e15` / `playwright-cli fill e22 "text"`. Fall back to the `/agent-browser` skill only if `playwright-cli` is unavailable in the environment.
 
+#### Context budget
+
+The CI run of this review has a hard dollar ceiling (`--max-budget-usd`), and a
+runaway loses the entire review — a $7 run that verified everything and then
+died reported nothing. Spend context deliberately:
+
+- **Never read a full snapshot.** `playwright-cli snapshot` is 350–1000 lines
+  per page, almost all of it nav and footer chrome. It writes to
+  `.playwright-cli/page-<timestamp>.yml` — `grep` that file for the specific
+  headings, buttons, or aria labels you need.
+- **Prefer `curl` + `grep`** for text, JSON-LD, status-code and redirect
+  assertions. Reach for the browser only when the check needs a real DOM or an
+  interaction.
+- **Screenshot only new or redesigned pages**, not every page. Note that
+  `playwright-cli screenshot --filename=NAME.png` saves to the current working
+  directory, not `.playwright-cli/`.
+- **Budget ~40–60 tool calls.** If the release touches more surfaces than that
+  covers, verify the highest-risk ones and list the rest as unverified in the
+  summary (see Step 5). Never let an unchecked change read as passing.
+
 #### URL and fetch conventions
 
 - Canonical English URLs have **no `/en/` prefix** — `/en/<path>` returns a 301 redirect to `/<path>`. Always use the un-prefixed form.
@@ -81,6 +101,10 @@ Present a summary table with:
 | Page name | Pass/Fail | What was checked and confirmed |
 
 Flag any issues found. If everything looks good, note that the deploy looks ready to ship.
+
+If you ran out of budget before covering every change from Step 2, add a
+**Not verified** list naming those changes. An omission that isn't stated reads
+as a pass.
 
 ### Step 6: Optionally Post as PR Comment
 
