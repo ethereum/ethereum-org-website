@@ -135,6 +135,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitor and track the Ethereum, and L2 gas prices to reduce transaction fees and save money_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
+- [L2 Gas Tracker](https://l2gastracker.com) _Real-time Base and Arbitrum gas fee tracker with USD cost estimates, historical trends, and cross-chain fee comparison_
 
 ## Related tools {#related-tools}
 
