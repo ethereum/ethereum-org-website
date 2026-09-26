@@ -253,7 +253,7 @@ Regular nodes without any validators will subscribe to only 4 subnets, providing
 
 If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to.
 
-For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwith will have to be around 5 times higher, at 100Mpbs.
+For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwidth will have to be around 5 times higher, at 100Mpbs.
 
 #### Large validators {#large-validators}
 
