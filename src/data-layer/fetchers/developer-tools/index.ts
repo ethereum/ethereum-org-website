@@ -1,6 +1,6 @@
 import type { BuilderResourcesCatalogResource } from "@/lib/types"
 
-import { uploadToS3 } from "@/data-layer/s3"
+import { mapWithConcurrency, uploadToS3 } from "@/data-layer/s3"
 
 import { fetchBuilderResources } from "./fetchBuilderResources"
 import { fetchGitHub } from "./fetchGitHub"
@@ -11,11 +11,15 @@ import type { DeveloperToolsDataEnvelope } from "./utils"
 // Re-export types for consumers
 export type { DeveloperToolsDataEnvelope } from "./utils"
 
+// Every resource carries up to two images, so this is ~20 requests in flight.
+const IMAGE_UPLOAD_CONCURRENCY = 10
+
 async function uploadToolImages(
   resources: BuilderResourcesCatalogResource[]
 ): Promise<BuilderResourcesCatalogResource[]> {
-  return Promise.all(
-    resources.map(async (resource) => {
+  return mapWithConcurrency(
+    resources,
+    async (resource) => {
       const uploadedThumbnail = resource.thumbnail_url
         ? await uploadToS3(resource.thumbnail_url, "tools/thumbnails")
         : undefined
@@ -28,8 +32,20 @@ async function uploadToolImages(
         thumbnail_url: uploadedThumbnail ?? resource.thumbnail_url,
         banner_url: uploadedBanner ?? resource.banner_url,
       }
-    })
+    },
+    IMAGE_UPLOAD_CONCURRENCY
   )
+}
+
+/** Log per-stage wall clock so a timed-out run shows which stage grew. */
+async function timed<T>(label: string, fn: () => Promise<T>): Promise<T> {
+  const start = Date.now()
+  try {
+    return await fn()
+  } finally {
+    const seconds = ((Date.now() - start) / 1000).toFixed(1)
+    console.log(`[developer-tools] ${label}: ${seconds}s`)
+  }
 }
 
 function trimResourceForFrontend(
@@ -75,16 +91,30 @@ function trimResourceForFrontend(
 }
 
 export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope> {
-  const { resources, taxonomy } = await fetchBuilderResources()
+  const { resources, taxonomy } = await timed("catalog", fetchBuilderResources)
   const resourcesWithPackageDefaults = resources.map((resource) => ({
     ...resource,
     packages: resource.packages ?? [],
   }))
-  const withGitHubData = await fetchGitHub(resourcesWithPackageDefaults)
-  const enrichedResources = await fetchNpmJs(withGitHubData)
-  const { resources: rankedResources } =
-    await rankDeveloperToolsResources(enrichedResources)
-  const resourcesWithUploadedImages = await uploadToolImages(rankedResources)
+
+  // GitHub enriches `repos`, npm enriches `packages`, and neither reads the
+  // other's field. Chaining them spent both third-party pacing budgets in
+  // series, which was most of the task's wall clock.
+  const [withGitHubData, withNpmData] = await Promise.all([
+    timed("github", () => fetchGitHub(resourcesWithPackageDefaults)),
+    timed("npm", () => fetchNpmJs(resourcesWithPackageDefaults)),
+  ])
+  const enrichedResources = withGitHubData.map((resource, index) => ({
+    ...resource,
+    packages: withNpmData[index].packages,
+  }))
+
+  const { resources: rankedResources } = await timed("ranking", () =>
+    rankDeveloperToolsResources(enrichedResources)
+  )
+  const resourcesWithUploadedImages = await timed("images", () =>
+    uploadToolImages(rankedResources)
+  )
 
   return {
     taxonomy,
