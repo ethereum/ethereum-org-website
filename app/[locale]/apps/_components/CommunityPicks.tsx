@@ -24,21 +24,25 @@ const CommunityPicks = ({
     return apps.find((app) => app.name === name)
   }
 
-  const getTwitterUsername = (twitterHandle: string) => {
-    return twitterHandle.replace("@", "")
-  }
-
   const cards = communityPicks.map((pick) => (
     <div key={pick.name} className="">
       <div className="flex flex-row gap-2">
         <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
-          <Image
-            src={`https://unavatar.io/twitter/${getTwitterUsername(pick.twitterHandle)}`}
-            alt={`${pick.name} profile`}
-            width={48}
-            height={48}
-            className="h-full w-full object-cover"
-          />
+          {pick.avatarImage ? (
+            <Image
+              src={pick.avatarImage}
+              alt={`${pick.name} profile`}
+              width={48}
+              height={48}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-accent-c">
+              <p className="text-lg font-bold text-white">
+                {pick.name.slice(0, 1).toUpperCase()}
+              </p>
+            </div>
+          )}
         </div>
         <div className="flex flex-col">
           <h4>{pick.name}</h4>
