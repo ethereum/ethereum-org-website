@@ -1,6 +1,6 @@
 ---
 title: "イーサリアムのアカウント"
-description: "イーサリアムのアカウントについての説明。データ構造とキーペア暗号技術との関係について。"
+description: "イーサリアムのアカウントについての説明。データ構造と鍵ペア暗号技術との関係について。"
 lang: ja
 ---
 
@@ -50,7 +50,7 @@ lang: ja
 ![A diagram showing the make up of an account](./accounts.png)
 _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用した図_
 
-## 外部所有アカウントとキーペア {#externally-owned-accounts-and-key-pairs}
+## 外部所有アカウントと鍵ペア {#externally-owned-accounts-and-key-pairs}
 
 アカウントは、公開鍵と秘密鍵の暗号鍵ペアで構成されています。これらは、トランザクションが実際に送信者によって署名されたことを証明し、偽造を防ぐのに役立ちます。秘密鍵はトランザクションに署名するために使用するものであり、アカウントに関連付けられた資金の保管権を付与します。暗号資産を実際に保持することはなく、保持するのは秘密鍵です。資金は常にイーサリアムの台帳上にあります。
 
@@ -121,7 +121,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 ## 視覚的なデモ {#a-visual-demo}
 
-オースティンがハッシュ関数とキーペアについて解説する動画をご覧ください。
+オースティンがハッシュ関数と鍵ペアについて解説する動画をご覧ください。
 
 <VideoWatch slug="hash-function-eth-build" />
 

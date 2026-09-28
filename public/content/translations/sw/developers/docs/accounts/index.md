@@ -81,14 +81,14 @@ Mfano ufuatao unaonyesha jinsi ya kutumia zana ya kusaini inayoitwa [Clef](https
 ```
 > clef newaccount --keystore <path>
 
-Tafadhali weka nenosiri kwa akaunti mpya itakayoundwa:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Ufunguo wako mpya umezalishwa       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Tafadhali hifadhi nakala ya faili lako la ufunguo      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Tafadhali kumbuka nenosiri lako!
-Akaunti iliyozalishwa 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Nyaraka za Geth](https://geth.ethereum.org/docs)
@@ -107,7 +107,7 @@ Mfano:
 
 Anwani ya mkataba kawaida hutolewa wakati mkataba unasambazwa kwenye Mnyororo wa vitalu wa Ethereum. Anwani inatoka kwa anwani ya muundaji na idadi ya miamala iliyotumwa kutoka kwa anwani hiyo (“nonsi”). Hivi ndivyo operesheni ya `CREATE` inavyopata anwani.
 
-Mikataba pia inaweza kusambazwa kwa [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), ambayo hupata anwani kutoka kwa anwani ya muundaji, thamani anayochagua muundaji (“chumvi”), na heshi ya msimbo wa uundaji wa mkataba. Hakuna nonsi inayohusika, kwa hivyo anwani inaweza kuhesabiwa kabla ya mkataba kuwepo na inabaki vile vile bila kujali ni miamala mingapi mingine ambayo muundaji anatuma kwa wakati huo. Hii inafanya iwezekane kurejelea mkataba ambao haujasambazwa bado.
+Mikataba pia inaweza kusambazwa kwa [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), ambayo hupata anwani kutoka kwa anwani ya muundaji, thamani anayochagua muundaji (“salt”), na heshi ya msimbo wa uundaji wa mkataba. Hakuna nonsi inayohusika, kwa hivyo anwani inaweza kuhesabiwa kabla ya mkataba kuwepo na inabaki vile vile bila kujali ni miamala mingapi mingine ambayo muundaji anatuma kwa wakati huo. Hii inafanya iwezekane kurejelea mkataba ambao haujasambazwa bado.
 
 ## Funguo za mthibitishaji {#validators-keys}
 

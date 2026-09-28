@@ -242,7 +242,7 @@ Tuy nhiên, bạn có thể tăng thêm khả năng phát hiện các lỗ hổn
 
 Các cuộc kiểm toán được thực hiện bởi các kiểm toán viên có kinh nghiệm trong việc tìm kiếm các trường hợp lỗ hổng bảo mật và các thực tiễn phát triển kém trong hợp đồng thông minh. Một cuộc kiểm toán thường sẽ bao gồm kiểm thử (và có thể là xác minh hình thức) cũng như đánh giá thủ công toàn bộ cơ sở mã.
 
-Ngược lại, một chương trình tiền thưởng tìm lỗi thường liên quan đến việc cung cấp phần thưởng tài chính cho một cá nhân (thường được mô tả là [tin tặc mũ trắng](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) phát hiện ra lỗ hổng trong một hợp đồng thông minh và tiết lộ nó cho các nhà phát triển. Tiền thưởng tìm lỗi tương tự như kiểm toán vì nó liên quan đến việc yêu cầu người khác giúp tìm ra các khiếm khuyết trong hợp đồng thông minh.
+Ngược lại, một chương trình tiền thưởng tìm lỗi thường liên quan đến việc cung cấp phần thưởng tài chính cho một cá nhân (thường được mô tả là [tin tặc mũ trắng](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) phát hiện ra lỗ hổng trong một hợp đồng thông minh và tiết lộ nó cho các nhà phát triển. Tiền thưởng tìm lỗi tương tự như kiểm toán vì nó liên quan đến việc yêu cầu người khác giúp tìm ra các khiếm khuyết trong hợp đồng thông minh.
 
 Sự khác biệt lớn nhất là các chương trình tiền thưởng tìm lỗi mở cửa cho cộng đồng nhà phát triển/tin tặc rộng lớn hơn và thu hút một lớp rộng rãi các tin tặc có đạo đức và các chuyên gia bảo mật độc lập với các kỹ năng và kinh nghiệm độc đáo. Đây có thể là một lợi thế so với các cuộc kiểm toán hợp đồng thông minh chủ yếu dựa vào các nhóm có thể sở hữu chuyên môn hạn chế hoặc hẹp.
 

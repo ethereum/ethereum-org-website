@@ -242,7 +242,7 @@ Namun, Anda dapat lebih meningkatkan kemungkinan menangkap kerentanan kontrak de
 
 Audit dilakukan oleh auditor yang berpengalaman dalam menemukan kasus kelemahan keamanan dan praktik pengembangan yang buruk dalam kontrak pintar. Audit biasanya akan mencakup pengujian (dan mungkin verifikasi formal) serta tinjauan manual dari seluruh basis kode.
 
-Sebaliknya, program bug bounty biasanya melibatkan penawaran imbalan finansial kepada individu (umumnya digambarkan sebagai [peretas topi putih (whitehat hacker)](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) yang menemukan kerentanan dalam kontrak pintar dan mengungkapkannya kepada pengembang. Bug bounty mirip dengan audit karena melibatkan permintaan kepada orang lain untuk membantu menemukan cacat dalam kontrak pintar.
+Sebaliknya, program bug bounty biasanya melibatkan penawaran imbalan finansial kepada individu (umumnya digambarkan sebagai [peretas topi putih (whitehat hacker)](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) yang menemukan kerentanan dalam kontrak pintar dan mengungkapkannya kepada pengembang. Bug bounty mirip dengan audit karena melibatkan permintaan kepada orang lain untuk membantu menemukan cacat dalam kontrak pintar.
 
 Perbedaan utamanya adalah bahwa program bug bounty terbuka untuk komunitas pengembang/peretas yang lebih luas dan menarik kelas peretas etis dan profesional keamanan independen yang luas dengan keterampilan dan pengalaman unik. Ini mungkin menjadi keuntungan dibandingkan audit kontrak pintar yang terutama mengandalkan tim yang mungkin memiliki keahlian terbatas atau sempit.
 

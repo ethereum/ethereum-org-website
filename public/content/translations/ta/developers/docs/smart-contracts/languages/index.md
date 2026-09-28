@@ -54,7 +54,7 @@ contract Coin {
     address public minter;
     mapping (address => uint) public balances;
 
-    // நிகழ்வுகள் (Events) வாடிக்கையாளர்களை குறிப்பிட்ட
+    // நிகழ்வுகள் (Events) கிளையன்ட்களை குறிப்பிட்ட
     // நீங்கள் அறிவிக்கும் ஒப்பந்த மாற்றங்களுக்கு எதிர்வினையாற்ற அனுமதிக்கின்றன
     event Sent(address from, address to, uint amount);
 

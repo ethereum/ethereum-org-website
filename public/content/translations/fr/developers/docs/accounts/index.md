@@ -81,14 +81,14 @@ L'exemple suivant montre comment utiliser un outil de signature appelé [Clef](h
 ```
 > clef newaccount --keystore <path>
 
-Veuillez entrer un mot de passe pour le nouveau compte à créer :
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Votre nouvelle clé a été générée       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Veuillez sauvegarder votre fichier de clé      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] N'oubliez pas votre mot de passe !
-Compte généré 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Documentation de Geth](https://geth.ethereum.org/docs)

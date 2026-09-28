@@ -11,7 +11,7 @@ lang: ja
 - Solidity
 - Vyper
 
-Remix統合開発環境 (IDE)は、SolidityとVyperの両方でコントラクトを作成およびテストするための包括的な開発環境を提供します。コーディングを始めるには、[ブラウザベースのRemix IDEをお試しください](https://remix.ethereum.org)。
+Remix IDEは、SolidityとVyperの両方でコントラクトを作成およびテストするための包括的な開発環境を提供します。コーディングを始めるには、[ブラウザベースのRemix IDEをお試しください](https://remix.ethereum.org)。
 
 より経験豊富な開発者は、[イーサリアム仮想マシン (EVM)](/developers/docs/evm/)の中間言語であるYul、またはYulの拡張であるYul+を使用することもできます。
 

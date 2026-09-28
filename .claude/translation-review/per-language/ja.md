@@ -93,3 +93,25 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `Electronic Frontier Foundation` left Latin against 5 prior `電子フロンティア財団` uses in the ja tree.
 - `学習` for "study" reads as "train" in an AI-model context.
 - `ケースバイケース、ツールバイツールで` -- `ツールバイツール` is not Japanese.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ja/page-apps.json`, `roadmap/pectra/index.md`. 2 critical, 13 warnings. Brand 8/10 | Technical 9/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ja not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: already repaired by this PR.
+- Bare-acronym over-expansion in `page-apps.json`: not affected, zero keys expanded; de and ja were the only two clean locales.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ja-specific):**
+
+- `キーペア` -> glossary `鍵ペア`, 3 sites; the same file already used `鍵ペア` at 3 others and so does the page quiz string
+- `Remix統合開発環境 (IDE)` -> `Remix IDE`; the same sentence already said "Remix IDE"
+- testing:245 mismatched paren widths: the outer full-width open was closed by an ASCII `)`
+
+**Notes:**
+
+- Anchor sets, heading counts, code fences, link targets, JSX tags and JSON keys/ICU placeholders all byte-identical to English across 5 files; the Vyper 0.4 `@deploy`, Moccasin and Pectra content updates propagated correctly.
+

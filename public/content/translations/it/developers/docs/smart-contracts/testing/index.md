@@ -242,7 +242,7 @@ Tuttavia, puoi aumentare ulteriormente la possibilità di individuare le vulnera
 
 Gli audit vengono eseguiti da revisori esperti nel trovare casi di falle di sicurezza e scarse pratiche di sviluppo negli smart contract. Un audit includerà solitamente test (e possibilmente verifica formale) nonché una revisione manuale dell'intera base di codice.
 
-Al contrario, un programma di bug bounty di solito prevede l'offerta di una ricompensa finanziaria a un individuo (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) che scopre una vulnerabilità in uno smart contract e la rivela agli sviluppatori. I bug bounty sono simili agli audit poiché implicano chiedere ad altri di aiutare a trovare difetti negli smart contract.
+Al contrario, un programma di bug bounty di solito prevede l'offerta di una ricompensa finanziaria a un individuo (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) che scopre una vulnerabilità in uno smart contract e la rivela agli sviluppatori. I bug bounty sono simili agli audit poiché implicano chiedere ad altri di aiutare a trovare difetti negli smart contract.
 
 La differenza principale è che i programmi di bug bounty sono aperti alla più ampia comunità di sviluppatori/hacker e attraggono un'ampia classe di hacker etici e professionisti della sicurezza indipendenti con competenze ed esperienze uniche. Questo può essere un vantaggio rispetto agli audit degli smart contract che si basano principalmente su team che potrebbero possedere competenze limitate o ristrette.
 

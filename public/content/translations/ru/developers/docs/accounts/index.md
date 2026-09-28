@@ -79,10 +79,10 @@ _Диаграмма адаптирована из [Ethereum EVM illustrated](htt
 В следующем примере показано, как использовать инструмент для подписания под названием [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) для генерации нового аккаунта. Clef — это инструмент для управления аккаунтами и подписания, который поставляется в комплекте с клиентом Эфириума [Geth](https://geth.ethereum.org). Команда `clef newaccount` создает новую пару ключей и сохраняет их в зашифрованном хранилище ключей.
 
 ```
-> clef newaccount --keystore <путь>
+> clef newaccount --keystore <path>
 
 Please enter a password for the new account to be created:
-> <пароль>
+> <password>
 
 ------------
 INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120

@@ -81,14 +81,14 @@ Alice가 자신의 계정에서 Bob의 계정으로 이더를 보내려면, Alic
 ```
 > clef newaccount --keystore <path>
 
-생성할 새 계정의 비밀번호를 입력하세요:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] 새 키가 생성되었습니다       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] 키 파일을 백업하세요      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] 비밀번호를 기억하세요!
-생성된 계정 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth 문서](https://geth.ethereum.org/docs)

@@ -79,10 +79,10 @@ Ejemplo:
 El siguiente ejemplo muestra cómo utilizar una herramienta de firma llamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para generar una nueva cuenta. Clef es una herramienta de gestión de cuentas y firma que viene incluida con el cliente de Ethereum, [Go Ethereum (Geth)](https://geth.ethereum.org). El comando `clef newaccount` crea un nuevo par de claves y las guarda en un almacén de claves cifrado.
 
 ```
-> clef newaccount --keystore <ruta>
+> clef newaccount --keystore <path>
 
 Please enter a password for the new account to be created:
-> <contraseña>
+> <password>
 
 ------------
 INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120

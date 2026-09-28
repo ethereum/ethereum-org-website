@@ -96,7 +96,7 @@ contract Coin {
   - الوراثة
   - التجميع المضمن (Inline assembly)
   - التحميل الزائد للدوال (Function overloading)
-  - التحميل الزائد للمعاملات (Operator overloading)
+  - التحميل الزائد للعوامل (Operator overloading)
   - الاستدعاء العودي (Recursive calling)
   - الحلقات اللانهائية
   - النقاط الثابتة الثنائية (Binary fixed points)
@@ -317,7 +317,7 @@ contract GuestBook:
 
 ## مقارنات اللغات {#language-comparisons}
 
-لمقارنات بناء الجملة الأساسي، ودورة حياة العقد، والواجهات، والمعاملات، وهياكل البيانات، والدوال، وتدفق التحكم، والمزيد، تحقق من [ورقة الغش هذه بواسطة <span dir="ltr">Auditless</span>](https://reference.auditless.com/cheatsheet/)
+لمقارنات بناء الجملة الأساسي، ودورة حياة العقد، والواجهات، والعوامل، وهياكل البيانات، والدوال، وتدفق التحكم، والمزيد، تحقق من [ورقة الغش هذه بواسطة <span dir="ltr">Auditless</span>](https://reference.auditless.com/cheatsheet/)
 
 ## قراءة إضافية {#further-reading}
 

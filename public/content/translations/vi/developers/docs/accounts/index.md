@@ -81,14 +81,14 @@ Ví dụ sau đây cho thấy cách sử dụng một công cụ ký có tên l�
 ```
 > clef newaccount --keystore <path>
 
-Vui lòng nhập mật khẩu cho tài khoản mới sẽ được tạo:
+Please enter a password for the new account to be created:
 > <password>
 
 ------------
-INFO [10-28|16:19:09.156] Khóa mới của bạn đã được tạo       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Vui lòng sao lưu tệp khóa của bạn      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Vui lòng nhớ mật khẩu của bạn!
-Đã tạo tài khoản 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Tài liệu Geth](https://geth.ethereum.org/docs)

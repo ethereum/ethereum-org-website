@@ -64,3 +64,24 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `arnés de prueba` for "test harness" (horse-harness sense).
 - `lean` -> `ligero` collides with es's established term for a *light* client.
 - `page-open-source.json` is usted throughout while the `page-values` card that links to it is tú.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/es/page-apps.json`. 2 critical, 8 warnings. Brand 10/10 | Technical 8/10 | Semantic 9/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: es affected on the `<path>`/`<password>` placeholders only; restored. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (es-specific):**
+
+- `<path>` / `<password>` shell placeholders restored inside the clef transcript
+
+**Notes:**
+
+- The `cadena principal` vs `Red principal` collision reverted, because English line 207 literally says "the main Ethereum chain" while the rest of the file says "Mainnet". The durable fix is on the English source, not the translation.
+- Full tu -> usted harmonization of `accounts/index.md`, reversing the PR #19115 register regression.
+

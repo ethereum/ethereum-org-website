@@ -232,7 +232,7 @@ Solidity 스마트 컨트랙트를 위한 단위 테스트 프레임워크는 �
 
 테스트와 달리 정형 검증은 샘플 데이터로 실행할 필요 없이 _모든_ 실행에 대해 스마트 컨트랙트 실행이 정형 명세를 충족하는지(즉, 버그가 없는지) 검증하는 데 사용할 수 있습니다. 이는 수십 개의 단위 테스트를 실행하는 데 소요되는 시간을 줄여줄 뿐만 아니라 숨겨진 취약점을 잡는 데도 더 효과적입니다. 그렇긴 하지만, 정형 검증 기법은 구현의 어려움과 유용성에 따라 스펙트럼 상에 존재합니다.
 
-[스마트 컨트랙 정형 검증에 대해 자세히 알아보기.](/developers/docs/smart-contracts/formal-verification)
+[스마트 컨트랙트 정형 검증에 대해 자세히 알아보기.](/developers/docs/smart-contracts/formal-verification)
 
 ## 테스트 대 감사 및 버그 바운티 {#testing-vs-audits-bug-bounties}
 

@@ -242,7 +242,7 @@ Dennoch können Sie die Wahrscheinlichkeit, Vertragsschwachstellen aufzudecken, 
 
 Audits werden von Prüfern durchgeführt, die Erfahrung darin haben, Fälle von Sicherheitslücken und schlechten Entwicklungspraktiken in Smart Contracts zu finden. Ein Audit umfasst in der Regel Tests (und möglicherweise Formale Verifikation) sowie eine manuelle Überprüfung der gesamten Codebasis.
 
-Umgekehrt beinhaltet ein Bug-Bounty-Programm in der Regel das Anbieten einer finanziellen Belohnung für eine Person (allgemein als [Whitehat-Hacker](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) bezeichnet), die eine Schwachstelle in einem Smart Contract entdeckt und sie den Entwicklern offenlegt. Bug-Bounties ähneln Audits, da sie beinhalten, andere zu bitten, bei der Suche nach Defekten in Smart Contracts zu helfen.
+Umgekehrt beinhaltet ein Bug-Bounty-Programm in der Regel das Anbieten einer finanziellen Belohnung für eine Person (allgemein als [Whitehat-Hacker](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) bezeichnet), die eine Schwachstelle in einem Smart Contract entdeckt und sie den Entwicklern offenlegt. Bug-Bounties ähneln Audits, da sie beinhalten, andere zu bitten, bei der Suche nach Defekten in Smart Contracts zu helfen.
 
 Der Hauptunterschied besteht darin, dass Bug-Bounty-Programme für die breitere Entwickler-/Hacker-Community offen sind und eine breite Klasse von ethischen Hackern und unabhängigen Sicherheitsexperten mit einzigartigen Fähigkeiten und Erfahrungen anziehen. Dies kann ein Vorteil gegenüber Smart-Contract-Audits sein, die sich hauptsächlich auf Teams stützen, die möglicherweise über begrenzte oder enge Fachkenntnisse verfügen.
 

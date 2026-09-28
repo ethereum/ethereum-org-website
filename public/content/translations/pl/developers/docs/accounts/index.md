@@ -79,16 +79,16 @@ Przykład:
 Poniższy przykład pokazuje, jak użyć narzędzia do podpisywania o nazwie [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) do wygenerowania nowego konta. Clef to narzędzie do zarządzania kontami i podpisywania, które jest dołączone do klienta Ethereum, [Geth](https://geth.ethereum.org). Polecenie `clef newaccount` tworzy nową parę kluczy i zapisuje je w zaszyfrowanym magazynie kluczy.
 
 ```
-> clef newaccount --keystore <ścieżka>
+> clef newaccount --keystore <path>
 
-Wprowadź hasło dla nowo tworzonego konta:
-> <hasło>
+Please enter a password for the new account to be created:
+> <password>
 
 ------------
-INFO [10-28|16:19:09.156] Twój nowy klucz został wygenerowany       address=0x5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Zrób kopię zapasową pliku klucza      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
-WARN [10-28|16:19:09.306] Pamiętaj swoje hasło!
-Wygenerowano konto 0x5e97870f263700f46aa00d967821199b9bc5a120
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Dokumentacja Geth](https://geth.ethereum.org/docs)

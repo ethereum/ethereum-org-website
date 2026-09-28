@@ -26,21 +26,21 @@ Ingawa inawezekana kuboresha mkataba ikiwa hitilafu itagunduliwa, maboresho ni m
 
 ## Mbinu za kujaribu mikataba mahiri {#methods-for-testing-smart-contracts}
 
-Mbinu za kujaribu mikataba mahiri ya Ethereum ziko chini ya makundi mawili mapana: **majaribio ya kiotomatiki** na **majaribio ya mwongozo**. Majaribio ya kiotomatiki na majaribio ya mwongozo hutoa faida na hasara za kipekee, lakini unaweza kuchanganya zote mbili ili kuunda mpango thabiti wa kuchanganua mikataba yako.
+Mbinu za kujaribu mikataba mahiri ya Ethereum ziko chini ya makundi mawili mapana: **majaribio ya kiotomatiki** na **majaribio ya mikono**. Majaribio ya kiotomatiki na majaribio ya mikono hutoa faida na hasara za kipekee, lakini unaweza kuchanganya zote mbili ili kuunda mpango thabiti wa kuchanganua mikataba yako.
 
 ### Majaribio ya kiotomatiki {#automated-testing}
 
-Majaribio ya kiotomatiki hutumia zana ambazo huangalia kiotomatiki msimbo wa mkataba mahiri kwa makosa katika utekelezaji. Faida ya majaribio ya kiotomatiki inatokana na kutumia [hati](https://www.techtarget.com/whatis/definition/script?amp=1) kuongoza tathmini ya utendaji wa mkataba. Majaribio yaliyoandikwa yanaweza kupangwa kufanya kazi mara kwa mara kwa uingiliaji mdogo wa binadamu, na kufanya majaribio ya kiotomatiki kuwa na ufanisi zaidi kuliko mbinu za mwongozo za majaribio.
+Majaribio ya kiotomatiki hutumia zana ambazo huangalia kiotomatiki msimbo wa mkataba mahiri kwa makosa katika utekelezaji. Faida ya majaribio ya kiotomatiki inatokana na kutumia [hati](https://www.techtarget.com/whatis/definition/script?amp=1) kuongoza tathmini ya utendaji wa mkataba. Majaribio yaliyoandikwa yanaweza kupangwa kufanya kazi mara kwa mara kwa uingiliaji mdogo wa binadamu, na kufanya majaribio ya kiotomatiki kuwa na ufanisi zaidi kuliko mbinu za mikono za majaribio.
 
-Majaribio ya kiotomatiki ni muhimu hasa wakati majaribio yanajirudia na kuchukua muda mwingi; ni magumu kufanya kwa mwongozo; yanaweza kukumbwa na makosa ya kibinadamu; au yanahusisha kutathmini utendaji muhimu wa mkataba. Lakini zana za majaribio ya kiotomatiki zinaweza kuwa na mapungufu—zinaweza kukosa hitilafu fulani na kutoa [chanya za uongo](https://www.contrastsecurity.com/glossary/false-positive) nyingi. Kwa hivyo, kuoanisha majaribio ya kiotomatiki na majaribio ya mwongozo kwa mikataba mahiri ni bora.
+Majaribio ya kiotomatiki ni muhimu hasa wakati majaribio yanajirudia na kuchukua muda mwingi; ni magumu kufanya kwa mikono; yanaweza kukumbwa na makosa ya kibinadamu; au yanahusisha kutathmini utendaji muhimu wa mkataba. Lakini zana za majaribio ya kiotomatiki zinaweza kuwa na mapungufu—zinaweza kukosa hitilafu fulani na kutoa [chanya za uongo](https://www.contrastsecurity.com/glossary/false-positive) nyingi. Kwa hivyo, kuoanisha majaribio ya kiotomatiki na majaribio ya mikono kwa mikataba mahiri ni bora.
 
-### Majaribio ya mwongozo {#manual-testing}
+### Majaribio ya mikono {#manual-testing}
 
-Majaribio ya mwongozo yanasaidiwa na binadamu na yanahusisha kutekeleza kila tukio la jaribio katika mkusanyiko wako wa majaribio moja baada ya jingine wakati wa kuchanganua usahihi wa mkataba mahiri. Hii ni tofauti na majaribio ya kiotomatiki ambapo unaweza kuendesha majaribio mengi yaliyotengwa kwa wakati mmoja kwenye mkataba na kupata ripoti inayoonyesha majaribio yote yaliyofeli na kufaulu.
+Majaribio ya mikono yanasaidiwa na binadamu na yanahusisha kutekeleza kila tukio la jaribio katika mkusanyiko wako wa majaribio moja baada ya jingine wakati wa kuchanganua usahihi wa mkataba mahiri. Hii ni tofauti na majaribio ya kiotomatiki ambapo unaweza kuendesha majaribio mengi yaliyotengwa kwa wakati mmoja kwenye mkataba na kupata ripoti inayoonyesha majaribio yote yaliyofeli na kufaulu.
 
-Majaribio ya mwongozo yanaweza kufanywa na mtu mmoja kufuatia mpango wa majaribio ulioandikwa ambao unashughulikia matukio tofauti ya majaribio. Unaweza pia kuwa na watu au vikundi vingi vinavyoingiliana na mkataba mahiri kwa kipindi maalum kama sehemu ya majaribio ya mwongozo. Wajaribu watalinganisha tabia halisi ya mkataba dhidi ya tabia inayotarajiwa, na kuashiria tofauti yoyote kama hitilafu.
+Majaribio ya mikono yanaweza kufanywa na mtu mmoja kufuatia mpango wa majaribio ulioandikwa ambao unashughulikia matukio tofauti ya majaribio. Unaweza pia kuwa na watu au vikundi vingi vinavyoingiliana na mkataba mahiri kwa kipindi maalum kama sehemu ya majaribio ya mikono. Wajaribu watalinganisha tabia halisi ya mkataba dhidi ya tabia inayotarajiwa, na kuashiria tofauti yoyote kama hitilafu.
 
-Majaribio ya mwongozo yenye ufanisi yanahitaji rasilimali nyingi (ujuzi, muda, pesa, na juhudi), na inawezekana—kutokana na makosa ya kibinadamu—kukosa makosa fulani wakati wa kutekeleza majaribio. Lakini majaribio ya mwongozo yanaweza pia kuwa na manufaa—kwa mfano, mjaribu wa kibinadamu (k.m., mkaguzi) anaweza kutumia angalizo kugundua matukio ya ukingoni ambayo zana ya majaribio ya kiotomatiki ingekosa.
+Majaribio ya mikono yenye ufanisi yanahitaji rasilimali nyingi (ujuzi, muda, pesa, na juhudi), na inawezekana—kutokana na makosa ya kibinadamu—kukosa makosa fulani wakati wa kutekeleza majaribio. Lakini majaribio ya mikono yanaweza pia kuwa na manufaa—kwa mfano, mjaribu wa kibinadamu (k.m., mkaguzi) anaweza kutumia angalizo kugundua matukio ya ukingoni ambayo zana ya majaribio ya kiotomatiki ingekosa.
 
 ## Majaribio ya kiotomatiki kwa mikataba mahiri {#automated-testing-for-smart-contracts}
 
@@ -198,9 +198,9 @@ Mara tu ikisanidiwa vizuri, zana ya majaribio ya sifa itatekeleza utendaji wa mi
 - **[Utekelezaji wa kiishara wa mikataba mahiri na Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Utekelezaji wa kiishara wa mikataba mahiri na Mythril](https://github.com/ConsenSysDiligence/mythril/blob/develop/docs/source/tutorial.rst)**
 
-## Majaribio ya mwongozo kwa mikataba mahiri {#manual-testing-for-smart-contracts}
+## Majaribio ya mikono kwa mikataba mahiri {#manual-testing-for-smart-contracts}
 
-Majaribio ya mwongozo ya mikataba mahiri mara nyingi huja baadaye katika mzunguko wa uendelezaji baada ya kuendesha majaribio ya kiotomatiki. Aina hii ya majaribio hutathmini mkataba mahiri kama bidhaa moja iliyounganishwa kikamilifu ili kuona ikiwa inafanya kazi kama ilivyobainishwa katika mahitaji ya kiufundi.
+Majaribio ya mikono ya mikataba mahiri mara nyingi huja baadaye katika mzunguko wa uendelezaji baada ya kuendesha majaribio ya kiotomatiki. Aina hii ya majaribio hutathmini mkataba mahiri kama bidhaa moja iliyounganishwa kikamilifu ili kuona ikiwa inafanya kazi kama ilivyobainishwa katika mahitaji ya kiufundi.
 
 ### Kujaribu mikataba kwenye mnyororo wa vitalu wa ndani {#testing-on-local-blockchain}
 
@@ -208,7 +208,7 @@ Ingawa majaribio ya kiotomatiki yanayofanywa katika mazingira ya uendelezaji ya 
 
 Kujaribu mkataba wako kwenye mnyororo wa vitalu wa ndani (pia unajulikana kama [mtandao wa uendelezaji](/developers/docs/development-networks/)) ni mbadala unaopendekezwa kwa kujaribu kwenye Mtandao Mkuu. Mnyororo wa vitalu wa ndani ni nakala ya mnyororo wa vitalu wa Ethereum inayoendeshwa ndani ya kompyuta yako ambayo inaiga tabia ya tabaka la utekelezaji la Ethereum. Kwa hivyo, unaweza kupanga miamala ili kuingiliana na mkataba bila kupata gharama kubwa.
 
-Kuendesha mikataba kwenye mnyororo wa vitalu wa ndani kunaweza kuwa muhimu kama aina ya majaribio ya ujumuishaji ya mwongozo. [Mikataba mahiri inakubalika sana kuunganishwa](/developers/docs/smart-contracts/composability/), ikikuruhusu kuunganisha na itifaki zilizopo—lakini bado utahitaji kuhakikisha kuwa mwingiliano huo mgumu mnyororoni unatoa matokeo sahihi.
+Kuendesha mikataba kwenye mnyororo wa vitalu wa ndani kunaweza kuwa muhimu kama aina ya majaribio ya ujumuishaji ya mikono. [Mikataba mahiri inakubalika sana kuunganishwa](/developers/docs/smart-contracts/composability/), ikikuruhusu kuunganisha na itifaki zilizopo—lakini bado utahitaji kuhakikisha kuwa mwingiliano huo mgumu mnyororoni unatoa matokeo sahihi.
 
 [Zaidi kuhusu mitandao ya uendelezaji.](/developers/docs/development-networks/)
 
@@ -216,7 +216,7 @@ Kuendesha mikataba kwenye mnyororo wa vitalu wa ndani kunaweza kuwa muhimu kama 
 
 Mtandao wa majaribio unafanya kazi sawa na Mtandao Mkuu wa Ethereum, isipokuwa kwamba unatumia Etha (ETH) isiyo na thamani ya ulimwengu halisi. Kusambaza mkataba wako kwenye [mtandao wa majaribio](/developers/docs/networks/#ethereum-testnets) inamaanisha mtu yeyote anaweza kuingiliana nao (k.m., kupitia sehemu ya mbele ya dapp) bila kuweka fedha hatarini.
 
-Aina hii ya majaribio ya mwongozo ni muhimu kwa kutathmini mtiririko wa mwanzo hadi mwisho wa programu yako kutoka kwa mtazamo wa mtumiaji. Hapa, wajaribu wa beta wanaweza pia kufanya majaribio na kuripoti masuala yoyote na mantiki ya biashara ya mkataba na utendaji wa jumla.
+Aina hii ya majaribio ya mikono ni muhimu kwa kutathmini mtiririko wa mwanzo hadi mwisho wa programu yako kutoka kwa mtazamo wa mtumiaji. Hapa, wajaribu wa beta wanaweza pia kufanya majaribio na kuripoti masuala yoyote na mantiki ya biashara ya mkataba na utendaji wa jumla.
 
 Kusambaza kwenye mtandao wa majaribio baada ya kujaribu kwenye mnyororo wa vitalu wa ndani ni bora kwa kuwa ya kwanza iko karibu na tabia ya Mashine Pepe ya Ethereum (EVM). Kwa hivyo, ni kawaida kwa miradi mingi asilia ya Ethereum kusambaza programu tumizi zilizogatuliwa (dapps) kwenye mitandao ya majaribio ili kutathmini uendeshaji wa mikataba mahiri chini ya hali halisi ya ulimwengu.
 
@@ -240,7 +240,7 @@ Kama ilivyotajwa, majaribio makali mara chache yanaweza kuhakikisha kutokuwepo k
 
 Bado, unaweza kuongeza zaidi uwezekano wa kunasa udhaifu wa mkataba kwa kupata ukaguzi huru wa msimbo. [Ukaguzi wa mkataba mahiri](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) na [zawadi za hitilafu](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) ni njia mbili za kupata wengine kuchanganua mikataba yako.
 
-Ukaguzi unafanywa na wakaguzi wenye uzoefu katika kutafuta matukio ya dosari za usalama na mbinu duni za uendelezaji katika mikataba mahiri. Ukaguzi kwa kawaida utajumuisha majaribio (na ikiwezekana uthibitishaji rasmi) pamoja na ukaguzi wa mwongozo wa msingi mzima wa msimbo.
+Ukaguzi unafanywa na wakaguzi wenye uzoefu katika kutafuta matukio ya dosari za usalama na mbinu duni za uendelezaji katika mikataba mahiri. Ukaguzi kwa kawaida utajumuisha majaribio (na ikiwezekana uthibitishaji rasmi) pamoja na ukaguzi wa mikono wa msingi mzima wa msimbo.
 
 Kinyume chake, programu ya zawadi ya hitilafu kwa kawaida inahusisha kutoa tuzo ya kifedha kwa mtu (ambaye kwa kawaida hufafanuliwa kama [wadukuzi wa kimaadili](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) anayegundua udhaifu katika mkataba mahiri na kuufichua kwa wasanidi programu. Zawadi za hitilafu ni sawa na ukaguzi kwa kuwa inahusisha kuwauliza wengine kusaidia kupata kasoro katika mikataba mahiri.
 
