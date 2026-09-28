@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/layer-2-scaling-explained/index.md",
   "generatedAt": "2026-04-28T23:47:18.574Z",
-  "rootHash": "96df6836e348",
+  "rootHash": "214c547bdbd7",
   "tree": {
-    "contentHash": "7f6c721c6f4a",
-    "anchorHash": "9ee00b34c95a",
+    "contentHash": "db88d5823a28",
+    "anchorHash": "16ebfb84ecec",
     "children": {
       "frontmatter:title": {
-        "contentHash": "444735caebf1",
+        "contentHash": "97a7116ee2dd",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "81fc7271f55d",
+        "contentHash": "4fba0025942a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7920f76644e9"
+        "anchorHash": "1ee0fd3978ab"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1efeb9be6fcc"
+        "anchorHash": "fef4319d92eb"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "39380536e429",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "567cf013bf70"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6bdb18f83935"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ab0fcf60cf86"
+        "anchorHash": "9e3dab949520"
       },
       "prose:1": {
         "contentHash": "237e81722940",

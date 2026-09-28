@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/social-networks/index.md",
   "generatedAt": "2026-06-17T01:16:00.917Z",
-  "rootHash": "6af1aa8d8b38",
+  "rootHash": "910f9afc26e6",
   "tree": {
-    "contentHash": "8f3570f51277",
-    "anchorHash": "d100629e5384",
+    "contentHash": "d56894243fa3",
+    "anchorHash": "473580fbc673",
     "children": {
       "frontmatter:title": {
         "contentHash": "4f2cedac6570",
@@ -32,8 +32,27 @@
         "anchorHash": "0393f7f6d15d"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "a3f09487920e",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "dbc8a6bbb22b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "c2049e0d7b54",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "071a875012a3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:1": {
         "contentHash": "770c568a88a1",

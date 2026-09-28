@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/how-to-be-cypherpunk-juan-benet/index.md",
   "generatedAt": "2026-04-28T23:39:56.080Z",
-  "rootHash": "538309234b49",
+  "rootHash": "f1531f9a08a8",
   "tree": {
-    "contentHash": "1743758f21ab",
-    "anchorHash": "064538372d9c",
+    "contentHash": "e26eca8c2025",
+    "anchorHash": "2339ee07bf3b",
     "children": {
       "frontmatter:title": {
-        "contentHash": "e8c1aba84d8a",
+        "contentHash": "712e0dadbe47",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d60baed327f4",
+        "contentHash": "30b00fb5b50a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "59b2248973f1"
+        "anchorHash": "6b4b1d7d1982"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f5b232470f46"
+        "anchorHash": "239845500b1d"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9bea78fbc21f"
+        "anchorHash": "7473f43d2e0e"
       },
       "prose:1": {
         "contentHash": "963afbd055cf",

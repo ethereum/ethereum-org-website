@@ -39,7 +39,7 @@ Alchemy کے ساتھ اکاؤنٹ بنانا آسان ہے، [یہاں مفت �
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## <span dir="ltr">3.</span> کمانڈ لائن سے درخواست کریں
+## <span dir="ltr">3.</span> کمانڈ لائن سے درخواست کریں {#make-a-request-from-the-command-line}
 
 جے سن آر پی سی اور <span dir="ltr">curl</span> کا استعمال کرتے ہوئے Alchemy کے ذریعے ایتھیریم بلاک چین کے ساتھ تعامل کریں۔
 
@@ -66,7 +66,7 @@ _**نوٹ:** `https://eth-mainnet.alchemyapi.io/v2/demo` کو اپنی API کل�
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## <span dir="ltr">4.</span> اپنا Web3 کلائنٹ سیٹ اپ کریں
+## <span dir="ltr">4.</span> اپنا Web3 کلائنٹ سیٹ اپ کریں {#set-up-your-web3-client}
 
 **اگر آپ کے پاس پہلے سے کوئی کلائنٹ موجود ہے،** تو اپنے موجودہ نوڈ پرووائیڈر URL کو اپنی API کلید کے ساتھ Alchemy URL میں تبدیل کریں: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## <span dir="ltr">5.</span> اپنی پہلی Web3 سکرپٹ لکھیں!
+## <span dir="ltr">5.</span> اپنی پہلی Web3 سکرپٹ لکھیں! {#write-your-first-web3-script}
 
 اب تھوڑی سی Web3 پروگرامنگ کا عملی تجربہ حاصل کرنے کے لیے ہم ایک سادہ سکرپٹ لکھیں گے جو ایتھیریم مین نیٹ سے تازہ ترین بلاک نمبر پرنٹ کرے گی۔
 

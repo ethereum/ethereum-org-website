@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/dao-build-next-great-city/index.md",
   "generatedAt": "2026-04-28T22:59:12.334Z",
-  "rootHash": "92e7d946e335",
+  "rootHash": "fb500e6d9219",
   "tree": {
-    "contentHash": "ce0bf8e6b8fb",
-    "anchorHash": "76ccc6a6e439",
+    "contentHash": "0ba97381d5eb",
+    "anchorHash": "a1ac7f6c7ff5",
     "children": {
       "frontmatter:title": {
-        "contentHash": "db0950dbaf42",
+        "contentHash": "5cdb5e8c7655",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "2077aa6e88ee",
+        "contentHash": "8d0ea7b69682",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "64a5204fb437"
+        "anchorHash": "50c44b6406d5"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a922d5c0daec"
+        "anchorHash": "13d97dcfa717"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "272295c30ebb",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6386713deb27"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "bf9422a2a04a"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "fedc47075564"
+        "anchorHash": "63b2f1a1b0ea"
       },
       "prose:1": {
         "contentHash": "8b327bff7da1",

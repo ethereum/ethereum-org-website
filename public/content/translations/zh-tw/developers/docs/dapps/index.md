@@ -47,7 +47,7 @@ dapp 可以使用任何語言編寫前端程式碼和使用者介面（就像一
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## 建立去中心化應用程式 (dapp) 的工具
+## 建立去中心化應用程式 (dapp) 的工具 {#dapp-tools}
 
 **Scaffold-ETH 2 _- 使用能適應你智能合約的前端，快速試驗 Solidity。_**
 

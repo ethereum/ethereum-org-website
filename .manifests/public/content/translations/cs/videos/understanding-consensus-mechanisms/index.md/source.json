@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/understanding-consensus-mechanisms/index.md",
   "generatedAt": "2026-04-29T00:17:51.343Z",
-  "rootHash": "84506cd0baec",
+  "rootHash": "828705ff33ac",
   "tree": {
-    "contentHash": "ff95755566f3",
-    "anchorHash": "e14d14156985",
+    "contentHash": "9c6800d319b3",
+    "anchorHash": "bf8ba2db70f9",
     "children": {
       "frontmatter:title": {
-        "contentHash": "2513fee6af52",
+        "contentHash": "94915bd5fc9f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ab3d8d4805ee",
+        "contentHash": "5570f4c48c22",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7c58a2b66917"
+        "anchorHash": "3ed44e616e13"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5aaa69e1b248"
+        "anchorHash": "5986f4b7f758"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "c2d17db7286b",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c983c585ac3c"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ef7797e13d3a"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "caa32a83056f"
+        "anchorHash": "a7220e642781"
       },
       "prose:1": {
         "contentHash": "16716183ad44",

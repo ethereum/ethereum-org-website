@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/nft/index.md",
   "generatedAt": "2026-06-30T00:51:14.800Z",
-  "rootHash": "3c3745aa57f9",
+  "rootHash": "ec8705fba5ff",
   "tree": {
-    "contentHash": "59d0281ccb9c",
-    "anchorHash": "6b219b58b897",
+    "contentHash": "d9e46c822ee6",
+    "anchorHash": "b64ab4ac51da",
     "children": {
       "frontmatter:title": {
         "contentHash": "5c07cc794a93",
@@ -40,8 +40,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "9a7ca326f550",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "d2af29146b1d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "5a659524dedf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "2cfd1dff8cc5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-are-nfts": {
         "contentHash": "78c42a33a8b2",

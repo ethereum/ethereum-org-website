@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md",
   "generatedAt": "2026-04-29T04:57:55.144Z",
-  "rootHash": "b8f167e2774d",
+  "rootHash": "7017ab4e7871",
   "tree": {
-    "contentHash": "dfd0426021f2",
-    "anchorHash": "8114930e344f",
+    "contentHash": "ef05baf62327",
+    "anchorHash": "cce7daa91091",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0e8d82f640b5",
+        "contentHash": "e61ced3e7dfc",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "fe9704b0ea66",
+        "contentHash": "e114d1857071",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c74c5f391636"
+        "anchorHash": "a3f47e0c0c04"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "766271de674d"
+        "anchorHash": "b93c1cd3b01b"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "0b19fe79a1c0",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b60d7bdd334c"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "769e0b8515e3"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "35ee2031be43"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6261d4ab968b"
+        "anchorHash": "34d2ba7ee31a"
       },
       "prose:1": {
         "contentHash": "4681c4e7fd90",

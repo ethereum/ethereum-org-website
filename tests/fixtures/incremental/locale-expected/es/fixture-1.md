@@ -1,6 +1,6 @@
 ---
 title: "Comprender las licencias de código abierto"
-description: "Una guía práctica sobre licencias de software libre y desarrollo colaborativo"
+description: "Una guía exhaustiva sobre licencias de código abierto, cumplimiento y colaboración"
 image: /images/open-source/hero-licensing-v2.png
 alt: "Diagrama que muestra diferentes tipos de licencias"
 template: tutorial

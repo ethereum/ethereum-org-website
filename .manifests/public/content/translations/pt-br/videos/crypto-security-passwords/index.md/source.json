@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/crypto-security-passwords/index.md",
   "generatedAt": "2026-04-29T05:05:50.401Z",
-  "rootHash": "4cc97a6218a4",
+  "rootHash": "f9c965d49851",
   "tree": {
-    "contentHash": "cae7848d56bb",
-    "anchorHash": "13b61aa6bea1",
+    "contentHash": "e8c6f7ee72ea",
+    "anchorHash": "e18752e9889e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "cf5efd2e0f95",
+        "contentHash": "c43b2270b153",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "3b8f4f362a6c",
+        "contentHash": "bbf11956a536",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b14d1f24c5cd"
+        "anchorHash": "0e7dd87e53f2"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "22c6666b2fe8"
+        "anchorHash": "b6b1fe241f89"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "db9cb6637e51",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5d2d3ceb7abe"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b9d906284539"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6e0850721586"
+        "anchorHash": "cb90ade0f422"
       },
       "prose:1": {
         "contentHash": "d5ef93f6183b",

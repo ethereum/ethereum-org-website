@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-localism-global-protocols-local-power/index.md",
   "generatedAt": "2026-04-28T23:28:55.551Z",
-  "rootHash": "6a3f6edff038",
+  "rootHash": "51ef55f66b65",
   "tree": {
-    "contentHash": "d52524b01032",
-    "anchorHash": "9644050cacea",
+    "contentHash": "13b353b096ca",
+    "anchorHash": "fe61303f896e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "d3f1aaeb490a",
+        "contentHash": "b3083b62c65d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "9ac04063df12",
+        "contentHash": "5e635d0ee67a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "131b2b042c1e"
+        "anchorHash": "64e92a19ade4"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "495d06c59be0"
+        "anchorHash": "aab235d243ef"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "3be486f0b395",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6386713deb27"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b38e227d5dea"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3e860f41a5ea"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e43588d51df3"
+        "anchorHash": "97aca0193d6d"
       },
       "prose:1": {
         "contentHash": "38c54786f051",

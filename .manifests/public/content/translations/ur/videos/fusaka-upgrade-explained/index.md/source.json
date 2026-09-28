@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/fusaka-upgrade-explained/index.md",
   "generatedAt": "2026-04-29T05:37:03.015Z",
-  "rootHash": "65264c6d913c",
+  "rootHash": "639acdcf9eba",
   "tree": {
-    "contentHash": "4062078524d2",
-    "anchorHash": "2c00cf2c32be",
+    "contentHash": "bd6c4cb2d43a",
+    "anchorHash": "4628c023db53",
     "children": {
       "frontmatter:title": {
-        "contentHash": "64816137e757",
+        "contentHash": "9de0d8b78093",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "bdf9c10771e3",
+        "contentHash": "a3ef81573669",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f3b2c56bc5eb"
+        "anchorHash": "fa5e0a15c224"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,39 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a72b1c58b9e4"
+        "anchorHash": "4f1d6f4908d6"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "01e58d9bfef2",
+        "anchorHash": "0af94e210bdf",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dc2963d21f5f"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "58624b356703"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3de1580490d2"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0ea557d26c79"
+        "anchorHash": "6dbd08d5ba8e"
       },
       "prose:1": {
         "contentHash": "0ca5acdb0737",

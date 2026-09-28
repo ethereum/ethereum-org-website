@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/the-graph-fixing-web3-data-querying/index.md",
   "generatedAt": "2026-07-22T23:54:00.373Z",
-  "rootHash": "b58f87e9e3e9",
+  "rootHash": "2e566e48f590",
   "tree": {
-    "contentHash": "94d64c75c5bc",
-    "anchorHash": "df1b28324638",
+    "contentHash": "263dfe9ca44f",
+    "anchorHash": "83ee7c8793d1",
     "children": {
       "frontmatter:title": {
-        "contentHash": "151a93172e3e",
+        "contentHash": "9d3694b3390f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,37 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "db20de13e5a9"
+        "contentHash": "80cdcf73befb",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "bf12a6d9cf9f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "16b9f2912007",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "275976081ce1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

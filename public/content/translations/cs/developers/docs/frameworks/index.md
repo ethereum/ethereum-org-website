@@ -28,7 +28,7 @@ jako například:
 
 Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst náš úvod do [dapp](/developers/docs/dapps/) a [technologického zásobníku Etherea](/developers/docs/ethereum-stack/).
 
-## Dostupné frameworky
+## Dostupné frameworky {#available-frameworks}
 
 **Foundry** - **_Foundry je bleskově rychlá, přenositelná a modulární sada nástrojů pro vývoj aplikací na Ethereu._**
 

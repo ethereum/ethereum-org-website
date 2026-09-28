@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/interact-with-other-contracts-from-solidity/index.md",
   "generatedAt": "2026-06-17T00:21:05.200Z",
-  "rootHash": "33bc317ec90e",
+  "rootHash": "7653790aeb91",
   "tree": {
-    "contentHash": "383a9b3b0650",
-    "anchorHash": "16971b932299",
+    "contentHash": "835726e553ed",
+    "anchorHash": "c665c4840b03",
     "children": {
       "frontmatter:title": {
         "contentHash": "8f3c76ee7afd",
@@ -17,11 +17,40 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "6908016806db"
+        "contentHash": "b163cfb2795b",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "0c5d9661b4fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "430895907c1c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "581153e759e9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +78,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:6": {
         "contentHash": "d0d5509b8f41",

@@ -1280,7 +1280,7 @@ async function callGemini(
     const validation: ValidationResult =
       fileType === "json"
         ? validateTranslatedJson(text, fileContent)
-        : validateTranslatedMarkdown(text, fileContent)
+        : validateTranslatedMarkdown(text, fileContent, targetLanguage)
 
     if (validation.valid) {
       return {
@@ -1373,7 +1373,8 @@ export async function callGeminiRaw(
       // the cap instead of at the end of the run. The reservation covers this
       // call while it is in flight -- see reserveForCall.
       const settleReservation = reserveForCall(
-        `${ctx} (${prompt.length} chars)`
+        `${ctx} (${prompt.length} chars)`,
+        promptBytes
       )
 
       console.log(
