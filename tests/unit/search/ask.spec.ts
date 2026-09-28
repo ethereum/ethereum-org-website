@@ -137,9 +137,10 @@ test.describe("citation placement", () => {
   test("joins the citation to the sentence so it cannot start a line", () => {
     // `[` opens a break opportunity after a full stop, which put a lone marker on its
     // own line.
-    const out = withCitationLinks("wallets differ [1].", sources)
-    expect(out).toContain("\u2060")
-    expect(out.indexOf("\u2060")).toBe(out.indexOf("[["))
+    // The joiner sits immediately before the link, with no break opportunity between.
+    expect(withCitationLinks("wallets differ [1].", sources)).toBe(
+      "wallets differ.\u2060[[1]](/a/)"
+    )
   })
 
   test("joins each citation in a run, not just the first", () => {

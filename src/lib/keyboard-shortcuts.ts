@@ -89,6 +89,14 @@ export const KEYBOARD_SHORTCUTS = {
     group: "search",
     documentedOnly: true,
   },
+  // English only, since that is where Ask AI is offered. Elsewhere Enter keeps the
+  // library's own meaning and opens the highlighted result.
+  searchAsk: {
+    combos: [["Enter"]],
+    labelKey: "shortcut-search-ask",
+    group: "search",
+    documentedOnly: true,
+  },
   theme: {
     combos: [["mod", "\\"]],
     labelKey: "shortcut-toggle-theme",

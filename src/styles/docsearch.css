@@ -547,6 +547,11 @@
   @apply m-0 flex list-inside list-decimal flex-col gap-1;
 }
 
+/* The keyboard highlight, matching how a result row reads when it is active. */
+.DocSearch-Ask-source--active {
+  @apply -mx-2 rounded-sm bg-primary-low-contrast px-2;
+}
+
 .DocSearch-Ask-sources a {
   @apply text-primary hover:underline;
 }

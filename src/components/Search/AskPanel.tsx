@@ -37,9 +37,18 @@ const isCitation = (
 interface AskPanelProps {
   query: string
   onDismiss: () => void
+  /** Reported upward so the input's arrow keys can walk them before the results. */
+  onSources: (sources: Source[]) => void
+  /** Index into `sources`, or null while the highlight is below in the results. */
+  activeSource: number | null
 }
 
-const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
+const AskPanel = ({
+  query,
+  onDismiss,
+  onSources,
+  activeSource,
+}: AskPanelProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
   const [answer, setAnswer] = useState("")
@@ -120,6 +129,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
             if (payload.type === "token") setAnswer((a) => a + payload.value)
             if (payload.type === "sources") {
               setSources(payload.sources)
+              onSources(payload.sources)
               setReferral(payload.referral ?? null)
               setFollowup(payload.followup ?? null)
               report(payload.sources.length ? "answered" : "refused")
@@ -141,7 +151,7 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
     }
     run()
     return () => controller.abort()
-  }, [query, locale, t])
+  }, [query, locale, t, onSources])
 
   // A new question scrolls its answer into view: the reader may have been part-way down
   // the results when they asked, and the answer arrives above them.
@@ -150,6 +160,13 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
       ?.closest<HTMLElement>(".DocSearch-Dropdown")
       ?.scrollTo({ top: 0 })
   }, [query])
+
+  useEffect(() => {
+    if (activeSource === null) return
+    scroller.current
+      ?.querySelector(".DocSearch-Ask-source--active")
+      ?.scrollIntoView({ block: "nearest" })
+  }, [activeSource])
 
   // Follow the stream, but only while the reader is already at the bottom.
   useEffect(() => {
@@ -231,8 +248,18 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
         <footer className="DocSearch-Ask-sources">
           <span>{t("docsearch-ask-sources")}</span>
           <ol>
-            {sources.map((source) => (
-              <li key={source.n}>
+            {sources.map((source, index) => (
+              <li
+                key={source.n}
+                id={`docsearch-ask-source-${source.n}`}
+                // Focus stays in the input; the active row is described, never focused.
+                // `aria-selected` would need listbox semantics, and the library's own
+                // listbox already owns that relationship with the input.
+                aria-current={index === activeSource}
+                className={
+                  index === activeSource ? "DocSearch-Ask-source--active" : ""
+                }
+              >
                 <BaseLink href={source.url} hideArrow>
                   {source.title}
                 </BaseLink>

@@ -202,6 +202,10 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   const locale = useLocale()
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
+
+  // English only: the prompt, the guardrails and the referral records are written in
+  // English and measured against the English index.
+  const canAsk = locale === DEFAULT_LOCALE
   const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
   const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
   const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"
@@ -451,6 +455,10 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     typesenseServerConfig,
     typesenseSearchParameters,
     onClose,
+    // Nothing is highlighted until the reader arrows into the list, which leaves Enter
+    // free to ask. Where there is no Ask, the library's own default stands and Enter
+    // opens the first result as it always has.
+    defaultActiveItemId: canAsk ? null : 0,
     hitComponent,
     navigator,
     // The prop is typed against typesense's SearchClient; the object the hook builds
@@ -507,7 +515,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       {/* English only: the prompt, the guardrails and the referral records are written
           in English and measured against the English index. Elsewhere the button would
           answer from that locale's pages with none of that tested. */}
-      {locale === DEFAULT_LOCALE && <AskAffordance />}
+      {canAsk && <AskAffordance />}
     </div>
   )
 }

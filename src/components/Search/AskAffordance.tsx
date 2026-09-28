@@ -1,9 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { createPortal } from "react-dom"
+
+import type { Source } from "@/lib/utils/ask"
 
 import AskPanel from "./AskPanel"
 
@@ -25,6 +27,9 @@ const AskAffordance = () => {
   const [dropdown, setDropdown] = useState<HTMLElement | null>(null)
   const [query, setQuery] = useState("")
   const [asked, setAsked] = useState("")
+  const [sources, setSources] = useState<Source[]>([])
+  /** Index into `sources` while the highlight is in the answer, else null. */
+  const [activeSource, setActiveSource] = useState<number | null>(null)
 
   useEffect(() => {
     // The modal renders in the same commit, so one frame is enough to find it.
@@ -47,6 +52,18 @@ const AskAffordance = () => {
   useEffect(() => () => host?.remove(), [host])
 
   // The library owns the input and exposes neither its value nor a change event.
+  const handleSources = useCallback((next: Source[]) => {
+    setSources(next)
+    setActiveSource(null)
+  }, [])
+
+  const askedRef = useRef("")
+  const sourcesRef = useRef<Source[]>([])
+  const activeSourceRef = useRef<number | null>(null)
+  askedRef.current = asked
+  sourcesRef.current = sources
+  activeSourceRef.current = activeSource
+
   useEffect(() => {
     const input =
       host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
@@ -55,18 +72,63 @@ const AskAffordance = () => {
     // updating on every keystroke, which is the point of showing both, and the panel
     // names the question it answered so the pair cannot be misread.
     const read = () => setQuery(input.value.trim())
-    // Cmd/Ctrl+Enter asks instead of opening the first result in a new tab, which is
-    // what the library does with it. Captured on the input so it never reaches the
-    // library's own handler at the React root.
-    // PR #19279 reworks keyboard shortcuts site-wide; this will want folding into it.
+    /**
+     * Enter asks, and the arrow keys walk the answer's sources before reaching the
+     * results. Captured on the input so it runs before the library's own handler, and
+     * everything we do not claim falls through to it untouched.
+     *
+     * No result is highlighted to begin with -- `defaultActiveItemId` is null on this
+     * locale -- so Enter is free until the reader arrows into the list, and the library
+     * takes it back the moment they do. Stepping past the last source simply stops
+     * claiming the key: the library's own index is still null, so its next ArrowDown
+     * lands on the first result with nothing double-advancing.
+     */
+    const activeItem = () =>
+      input.getAttribute("aria-activedescendant")?.trim() || ""
+
     const intercept = (thisEvent: KeyboardEvent) => {
-      if (thisEvent.key !== "Enter") return
-      if (!thisEvent.metaKey && !thisEvent.ctrlKey) return
       const value = input.value.trim()
-      if (!value) return
-      thisEvent.preventDefault()
-      thisEvent.stopPropagation()
-      setAsked(value)
+
+      if (thisEvent.key === "Enter") {
+        const source = activeSourceRef.current
+        if (source !== null) {
+          const target = sourcesRef.current[source]
+          if (!target) return
+          thisEvent.preventDefault()
+          thisEvent.stopPropagation()
+          window.location.assign(target.url)
+          return
+        }
+        // A highlighted result belongs to the library.
+        if (activeItem() || !value || value === askedRef.current) return
+        thisEvent.preventDefault()
+        thisEvent.stopPropagation()
+        setSources([])
+        setActiveSource(null)
+        setAsked(value)
+        return
+      }
+
+      if (thisEvent.key !== "ArrowDown" && thisEvent.key !== "ArrowUp") return
+      const count = sourcesRef.current.length
+      if (!count) return
+      const current = activeSourceRef.current
+      const claim = (next: number | null) => {
+        thisEvent.preventDefault()
+        thisEvent.stopPropagation()
+        setActiveSource(next)
+      }
+
+      if (thisEvent.key === "ArrowDown") {
+        if (current === null && !activeItem()) return claim(0)
+        if (current !== null && current < count - 1) return claim(current + 1)
+        if (current !== null) setActiveSource(null)
+        return
+      }
+
+      if (current !== null) return claim(current > 0 ? current - 1 : null)
+      // Coming back up out of the first result returns to the last source.
+      if (activeItem().endsWith("-item-0")) return claim(count - 1)
     }
 
     read()
@@ -97,7 +159,12 @@ const AskAffordance = () => {
       {asked &&
         dropdown &&
         createPortal(
-          <AskPanel query={asked} onDismiss={() => setAsked("")} />,
+          <AskPanel
+            query={asked}
+            onDismiss={() => setAsked("")}
+            onSources={handleSources}
+            activeSource={activeSource}
+          />,
           dropdown
         )}
     </>
