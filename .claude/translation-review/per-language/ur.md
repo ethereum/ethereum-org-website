@@ -106,3 +106,27 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 **Notes:**
 
 - Western numerals retained. 6.3 mandates native Eastern Arabic-Indic numerals for ur *prose*, but does not carve out UI the way the bn rule does, and 7.5 says default conservative when the surface is ambiguous. The tree is overwhelmingly Western anyway (`src/intl/ur` 4547 Western vs 423 native), so this is a pre-existing tree-wide gap, not a defect introduced here.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ur/page-apps.json`. 16 critical, 18 warnings. Brand 9/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ur affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DEX** left expanded, ur has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ur-specific):**
+
+- `لین دین` -> `ٹرانزیکشنز`; the glossary entry names the former as the form to avoid (recurrence of #18942/#19015)
+- `C++` (1 site) and `Yul+` (8 sites) un-isolated in RTL prose, rendering as `++C` / `+Yul` -> wrapped in the file's existing `<span dir="ltr">`
+- whitehat parenthetical: ur was the inverted case, a stray extra `)` rather than a dropped one
+
+**Deliberately not fixed:**
+
+- `Ethers.js` -> `ethers.js`: false positive, the English source itself reads `ethers.js`
+- `لامركزی` Arabic kaf: matches the glossary entry verbatim; per #19034 this is upstream plus a tree-wide sweep
+- frontmatter LRI wrap: a no-op at render time since the isolated run is all strong-RTL, so it belongs in the sanitizer, not a hand edit
+

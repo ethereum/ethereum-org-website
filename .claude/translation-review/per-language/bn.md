@@ -86,3 +86,27 @@ Form is **derived, not established**: Gemini 3.1 Pro asserted "Established. Tech
 **Notes:**
 
 - Western numerals are correct here: 6.1 explicitly carves out UI elements from the native-Bengali-numerals-in-prose rule, and 7.5 says default conservative when the surface is ambiguous. The tree agrees (`src/intl/bn` is 4654 Western vs 225 native).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/bn/page-apps.json`. 8 critical, 15 warnings. Brand 9/10 | Technical 8/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: bn affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (bn-specific):**
+
+- `dapp` / `dApp` -> Latin per ETHGlossary, 3 sites including one link text
+
+**Deliberately not fixed:**
+
+- `কেক্যাক-২৫৬` / `লেয়ার ২` numeral conflict (issue #53), unresolved between the bn entry and the cross-cutting rule
+
+**Notes:**
+
+- A single-file `গুলো` -> `গুলি` dialect flip and an English `-s` plural on `অ্যাপ` in `page-apps.json` point the same direction as the acronym expansion; worth watching next run.
+

@@ -62,3 +62,23 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `programma del gas del testimone` -- "schedule" mis-resolved as timetable; it is a gas cost table.
 - `viene eseguito senza permesso` reads "run without authorisation" rather than "needs no permission".
 - `lego del denaro` breaks it-tree precedent (`mattoncini Lego`); this same line previously read `mattoncini Lego del denaro`.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.6/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/it/page-apps.json`. 10 critical, 7 warnings. Brand 10/10 | Technical 9/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: it not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (it-specific):**
+
+- `privacy` -> `riservatezza` reverted to the glossary loanword; sibling keys in the same file already said `privacy`
+
+**Notes:**
+
+- Acronym expansion accounted for 9 of 10 criticals; es, fr and pt-br did the same thing on the same keys while de did not, confirming it as pipeline-level rather than locale-level.
+

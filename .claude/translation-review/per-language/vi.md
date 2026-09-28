@@ -78,3 +78,20 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `Mã nguồn mở dễ dãi` injects a mildly pejorative "lax" valence into the neutral "permissive" license label.
 - `Kiểm tra AlternativeTo` ("inspect/test") for the "Check out" button.
 - `Giao thức`/`giao thức` split 10:9 within one file (the locale-wide glossary casing leak).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/vi/page-apps.json`. 16 critical, 14 warnings. Brand 9/10 | Technical 6/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: vi affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- Zero ETHGlossary deviations across all 4 files and no untranslated English chunks; vi's historical failure mode was absent. Both critical classes were the fleet-wide mechanical patterns.
+- `testing/index.md:154` **adds** a `)` that the English source is itself missing. The paren bug is upstream in `public/content/developers/docs/smart-contracts/testing/index.md:154`.
+

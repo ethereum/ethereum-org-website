@@ -87,3 +87,27 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 
 **Note:** devcon.org ships `डेवकॉन` (retroflex ड, the standard IT-loanword form -- cf. `डेवलपर`) while `blog.ethereum.org/hi` ships `देवकॉन` (dental द). devcon.org wins: it is the event's own India-facing site and more recent, and the blog is pipeline output rather than independent authority. Record `डेवकॉन` in the glossary entry so the two stop disagreeing.
 
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/hi/page-apps.json`. 7 critical, 8 warnings. Brand 8/10 | Technical 9/10 | Semantic 7/10 | Consistency 5/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: hi not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DAO, DEX** left expanded, hi has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (hi-specific):**
+
+- `कॉन्ट्रैक्ट` -> glossary `अनुबंध` across `languages/index.md`, 25 sites: the PR flipped this file wholesale while its sibling `testing/index.md` kept the entry form. Plural-oblique phrases were restored first so the blanket pass did not bake in singulars
+- "unsound" `अस्वस्थ` (= *unwell*) -> `अविश्वसनीय`
+- "property" `संपत्ति` (= *wealth/asset*) -> `गुण`, 33 of 34 sites, with gender agreement corrected (`गुण` masc. vs `संपत्ति` fem.); `वित्तीय संपत्तियों` left alone, English there is "financial assets"
+- `page-apps-ready-button` shipped untranslated English `"Go"` -> `जाएं`; hi was the only locale of 25 doing so
+- `लेनदेन` -> `लेन-देन`; `इनाम` -> `पुरस्कार`
+
+**Notes:**
+
+- Acronym expansion hit 18 `page-apps` keys including short category-chip `-name` labels, where the Indic UI-tag rule mandates Latin. `DAO` and `DEX` have no hi short form so 6 keys stay expanded.
+
