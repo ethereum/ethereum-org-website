@@ -207,7 +207,7 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+  @apply max-h-[calc(100dvh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100dvh-60px-4rem-var(--docsearch-footer-height))] md:overflow-y-auto md:px-8 md:pb-8;
 }
 
 /* Explorer rows keep the library's own markup so their save/remove buttons survive, and
@@ -402,7 +402,7 @@
 @media (max-width: 768px) {
   .DocSearch-Modal {
     --inset: var(--spacing-4);
-    @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
+    @apply fixed inset-[var(--inset)] max-h-[calc(100dvh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
   }
 }
 
@@ -439,11 +439,21 @@
   }
 }
 
-/* The panel replaces the results rather than sitting above them. Keyed on the panel's own
-   presence, so nothing has to keep an attribute in sync with it. Portalled into the scroll
-   container, so it inherits the dropdown's height and scrolling for free. */
-.DocSearch-Dropdown:has(.DocSearch-Ask) > *:not(.DocSearch-Ask) {
-  @apply hidden;
+/* The answer sits above the results rather than replacing them, so a reader can read it
+   and still scan what search found without going back for it. The panel is portalled into
+   the scroll container and therefore appended last; the column ordering is what puts it
+   first, and it inherits the dropdown's height and scrolling for free. */
+.DocSearch-Dropdown:has(.DocSearch-Ask) {
+  @apply flex flex-col;
+}
+
+.DocSearch-Ask {
+  order: -1;
+}
+
+/* A rule between the answer and the results it sits above. */
+.DocSearch-Dropdown:has(.DocSearch-Ask) .DocSearch-Hits:first-of-type {
+  @apply border-t border-solid border-disabled pt-4;
 }
 
 /* Prose, not a row: the results this replaces are clickable and this is not. */
@@ -464,6 +474,10 @@
 
 .DocSearch-Ask-header button {
   @apply text-primary normal-case hover:underline;
+}
+
+.DocSearch-Ask-question {
+  @apply line-clamp-2 text-md font-bold text-body;
 }
 
 .DocSearch-Ask-status {

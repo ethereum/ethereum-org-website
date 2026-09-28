@@ -143,6 +143,14 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
     return () => controller.abort()
   }, [query, locale, t])
 
+  // A new question scrolls its answer into view: the reader may have been part-way down
+  // the results when they asked, and the answer arrives above them.
+  useEffect(() => {
+    scroller.current
+      ?.closest<HTMLElement>(".DocSearch-Dropdown")
+      ?.scrollTo({ top: 0 })
+  }, [query])
+
   // Follow the stream, but only while the reader is already at the bottom.
   useEffect(() => {
     const element =
@@ -163,9 +171,13 @@ const AskPanel = ({ query, onDismiss }: AskPanelProps) => {
           <sup className="DocSearch-Ask-beta">{t("docsearch-ask-beta")}</sup>
         </span>
         <button type="button" onClick={onDismiss}>
-          {t("docsearch-ask-back")}
+          {t("docsearch-ask-dismiss")}
         </button>
       </header>
+
+      {/* The answer outlives the query that produced it -- the reader keeps typing and the
+          results below keep updating -- so it has to say which question it answered. */}
+      <p className="DocSearch-Ask-question">{query}</p>
 
       {!answer && !error && (
         <p className="DocSearch-Ask-status" role="status">

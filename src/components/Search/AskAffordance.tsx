@@ -51,13 +51,10 @@ const AskAffordance = () => {
     const input =
       host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
     if (!input) return
-    const read = () => {
-      const value = input.value.trim()
-      setQuery(value)
-      // Editing the question returns to results: an answer to the previous one sitting
-      // over results the reader is changing is the wrong thing to be looking at.
-      setAsked((current) => (current && current !== value ? "" : current))
-    }
+    // The answer stays put while the query changes: the results underneath it keep
+    // updating on every keystroke, which is the point of showing both, and the panel
+    // names the question it answered so the pair cannot be misread.
+    const read = () => setQuery(input.value.trim())
     // Cmd/Ctrl+Enter asks instead of opening the first result in a new tab, which is
     // what the library does with it. Captured on the input so it never reaches the
     // library's own handler at the React root.
@@ -90,7 +87,7 @@ const AskAffordance = () => {
             className="DocSearch-Ask-trigger"
             title={t("docsearch-ask-ai")}
             onClick={() => setAsked(query)}
-            disabled={!query || !!asked}
+            disabled={!query || query === asked}
           >
             <Sparkles />
             <span>{t("docsearch-ask-ai")}</span>
