@@ -8,7 +8,12 @@
  */
 
 import { MAX_CHUNK_BYTES } from "../../constants"
-import { FENCED_BLOCK_RE, FRONTMATTER_RE } from "../shared-patterns"
+import {
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  FRONTMATTER_RE,
+  PROSE_FENCE_TAGS,
+} from "../shared-patterns"
 
 /** A single extracted code block */
 export interface CodeBlock {
@@ -95,6 +100,48 @@ export function restoreCodeBlocks(prose: string, blocks: CodeBlock[]): string {
   }
 
   return result
+}
+
+/**
+ * Extract only the fences whose bodies must never be translated, leaving
+ * prose-tagged fences (```text and friends) inline for the model to work on.
+ *
+ * Block indices stay those of the original scan, so the numbering is stable
+ * and unique even though the returned list is a subset.
+ */
+export function extractCodeFencesOnly(markdown: string): ExtractionResult {
+  const { prose, blocks } = extractCodeBlocks(markdown)
+  const proseBlocks = blocks.filter((b) =>
+    PROSE_FENCE_TAGS.has(fenceLanguage(b.language))
+  )
+  if (proseBlocks.length === 0) return { prose, blocks }
+  return {
+    prose: restoreCodeBlocks(prose, proseBlocks),
+    blocks: blocks.filter((b) => !proseBlocks.includes(b)),
+  }
+}
+
+/**
+ * Restore code blocks, refusing to proceed when the model dropped a
+ * placeholder. Restoring a partial set would leave bare
+ * `<!-- CODE_BLOCK_n -->` comments in the committed file and lose the fence
+ * entirely, so a missing placeholder fails the task and is retried instead.
+ */
+export function restoreCodeBlocksStrict(
+  prose: string,
+  blocks: CodeBlock[],
+  label: string
+): string {
+  const missing = blocks
+    .filter((b) => !prose.includes(makePlaceholder(b.index)))
+    .map((b) => b.index)
+  if (missing.length > 0) {
+    throw new Error(
+      `${label}: dropped ${missing.length} code block placeholder(s) ` +
+        `(${missing.map((i) => `CODE_BLOCK_${i}`).join(", ")}) of ${blocks.length}`
+    )
+  }
+  return restoreCodeBlocks(prose, blocks)
 }
 
 // ---------------------------------------------------------------------------

@@ -16,6 +16,7 @@ import {
   MIN_CONTENT_BUDGET_BYTES,
 } from "../../constants"
 
+import { type CodeBlock, extractCodeFencesOnly } from "./code-block-extractor"
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
   batchSections,
@@ -53,6 +54,13 @@ export interface IncrementalPlan {
   budget: FileBudget
   overBudget: boolean
   tooManyBatches: boolean
+  /**
+   * Code fences lifted out of each TRANSLATE section, keyed by section id.
+   * The caller must restore these into the model's reply; the planner does the
+   * extraction because the prompt bytes it measures are the post-extraction
+   * ones.
+   */
+  codeBlocks: Map<string, CodeBlock[]>
 }
 
 export interface PlanOptions {
@@ -93,6 +101,22 @@ export function planIncrementalBatches(
     extract(localeContent),
     sectionIds
   )
+
+  // Lift code fences out before anything measures or sends a section. The
+  // incremental path used to send section bodies completely raw, so a
+  // `solidity` fence reached the model with nothing marking it as code -- and
+  // this is the path nearly every file takes. Prose-tagged fences stay inline;
+  // JSON sections hold string values, never fences.
+  const codeBlocks = new Map<string, CodeBlock[]>()
+  if (fileType === "markdown") {
+    for (const section of sectionList) {
+      const { prose, blocks } = extractCodeFencesOnly(section.content || "")
+      if (blocks.length === 0) continue
+      section.content = prose
+      // CONTEXT sections are never returned, so nothing restores into them.
+      if (section.action === "TRANSLATE") codeBlocks.set(section.id, blocks)
+    }
+  }
 
   const translateSections = sectionList.filter((s) => s.action === "TRANSLATE")
   if (translateSections.length === 0) return null
@@ -220,6 +244,7 @@ export function planIncrementalBatches(
     budget,
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
+    codeBlocks,
   }
 }
 

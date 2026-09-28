@@ -25,6 +25,7 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { restoreCodeBlocksStrict } from "./lib/llm/code-block-extractor"
 import {
   callReserveUsd,
   minimumFuseUsd,
@@ -374,7 +375,13 @@ async function buildGeminiTranslator(
     }
   }
 
-  const { batches: plan, budget, projectedBytes, translateCount } = planned
+  const {
+    batches: plan,
+    budget,
+    projectedBytes,
+    translateCount,
+    codeBlocks,
+  } = planned
 
   // A sane incremental update is a handful of batches. Hundreds means the
   // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
@@ -451,7 +458,15 @@ async function buildGeminiTranslator(
 
   return {
     translator: (sectionId: string, englishFallback: string) => {
-      return allTranslations[sectionId] || englishFallback
+      const translated = allTranslations[sectionId]
+      if (!translated) return englishFallback
+      const blocks = codeBlocks.get(sectionId)
+      if (!blocks || blocks.length === 0) return translated
+      return restoreCodeBlocksStrict(
+        translated,
+        blocks,
+        `${filePath} (${locale}) section "${sectionId}"`
+      )
     },
     tokens: { input: totalInput, output: totalOutput },
   }
