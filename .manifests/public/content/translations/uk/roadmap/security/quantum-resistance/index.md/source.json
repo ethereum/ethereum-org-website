@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/security/quantum-resistance/index.md",
   "generatedAt": "2026-07-15T17:40:42.468Z",
-  "rootHash": "5f784df154b9",
+  "rootHash": "d02a26d04065",
   "tree": {
-    "contentHash": "411f78b87e27",
-    "anchorHash": "d3739b6fa142",
+    "contentHash": "0cee3d9f618b",
+    "anchorHash": "531103cbf9a5",
     "children": {
       "frontmatter:title": {
         "contentHash": "4382c08d5852",
@@ -24,7 +24,7 @@
         "anchorHash": "eb8597fdd721"
       },
       "frontmatter:alt": {
-        "contentHash": "65171c25554c",
+        "contentHash": "be50ffa0fc02",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:template": {
@@ -32,8 +32,27 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "c065eac90d3d",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "34db59abf64d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "5ccc08d3bd27",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "873afeb70d52",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:0": {
         "contentHash": "1921f24fde32",

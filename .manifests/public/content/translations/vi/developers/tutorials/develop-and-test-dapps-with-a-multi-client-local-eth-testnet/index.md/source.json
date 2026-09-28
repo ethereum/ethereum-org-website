@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md",
   "generatedAt": "2026-06-17T00:01:30.724Z",
-  "rootHash": "fe584d255c19",
+  "rootHash": "0f01b37dcb34",
   "tree": {
-    "contentHash": "d7bc500a57a7",
-    "anchorHash": "49ccad48b86b",
+    "contentHash": "ac16d019dd81",
+    "anchorHash": "e327a2d6fa33",
     "children": {
       "frontmatter:title": {
         "contentHash": "43655a1dc64e",
@@ -17,11 +17,50 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1f829daf1396"
+        "anchorHash": "ed4e6d914227"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "c9f8a41d0bb2",
+        "anchorHash": "d956e4dd69c7",
+        "children": {
+          "0": {
+            "contentHash": "8f4d9088121a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "45978ecb2996",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "581153e759e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "db60a8c7c89a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "5": {
+            "contentHash": "a9d90830a1e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "6": {
+            "contentHash": "cf80cd8aed48",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

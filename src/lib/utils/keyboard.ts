@@ -1,5 +1,12 @@
 import type { KeyCombo } from "@/lib/keyboard-shortcuts"
 
+export const isModified = (event: {
+  altKey: boolean
+  ctrlKey: boolean
+  metaKey: boolean
+  shiftKey: boolean
+}) => event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
+
 /** Editable targets own every keystroke; single-key shortcuts must stay out. */
 export const isTypingTarget = (target: EventTarget | null): boolean => {
   if (!(target instanceof HTMLElement)) return false

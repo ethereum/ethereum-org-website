@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/blockchain-101-visual-demo/index.md",
   "generatedAt": "2026-04-29T04:45:49.308Z",
-  "rootHash": "f6f672c04594",
+  "rootHash": "54828c813d69",
   "tree": {
-    "contentHash": "b36595b105cf",
-    "anchorHash": "daf98ed19600",
+    "contentHash": "2dfa406c4b7f",
+    "anchorHash": "f62114245c9e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "23a26b8af983",
+        "contentHash": "6ae830d6910a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ba54093deecd",
+        "contentHash": "d00643e1d5a2",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8aff7d63ece6"
+        "anchorHash": "7358b6be6b77"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e6b0d1e05bfc"
+        "anchorHash": "7b3df0ab4c2b"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "358cce6e2ed0",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ef7797e13d3a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e06554818e90"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "16413c6ab9f4"
+        "anchorHash": "edada54b3e48"
       },
       "prose:1": {
         "contentHash": "46535b263c0b",

@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/privacy/index.md",
   "generatedAt": "2026-07-27T19:07:46.314Z",
-  "rootHash": "9c98a48dea0b",
+  "rootHash": "db6adba6b14d",
   "tree": {
-    "contentHash": "bbd3e71beddc",
+    "contentHash": "f812fa9645fa",
     "anchorHash": "fc8e514708c2",
     "children": {
       "frontmatter:title": {
@@ -24,7 +24,7 @@
         "anchorHash": "adfcffd146ec"
       },
       "frontmatter:alt": {
-        "contentHash": "65171c25554c",
+        "contentHash": "be50ffa0fc02",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:template": {

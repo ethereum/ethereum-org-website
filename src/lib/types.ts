@@ -24,7 +24,6 @@ import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { screens } from "./utils/screen"
-import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/layouts"
 
@@ -754,7 +753,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]
@@ -900,14 +899,6 @@ export type WalletData = {
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
-}
-
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
 }
 
 export type FilterInputState = boolean | Lang | string | string[] | null

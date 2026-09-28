@@ -35,10 +35,12 @@ Key rule: a section with `translatableDrift` goes ENTIRELY to llm-required. The 
 
 Section-depth deduplication: `diff()` propagates hash changes up the tree, so an h3 change flags h2 and h1 ancestors as `translatableDrift`. Routing must pick only the **deepest** (leaf) section per change. A parent section flagged only because a child changed must NOT be re-translated.
 
-Frontmatter fields are classified independently per field:
+Frontmatter fields are classified independently per field, by `TRANSLATABLE_ATTRIBUTES` (`lib/shared-patterns.ts`, the single list the manifest and the router share):
 
-- `description`, `title`, `alt`, `summaryPoints`, `tags` → translatable
-- `image`, `lang`, `template`, `published` → inert
+- `description`, `title`, `alt`, `summaryPoints`, `tags` → translatable; routed to the LLM as `frontmatter:<key>` pseudo-sections (a sequence travels as one item per line)
+- everything else (`image`, `lang`, `template`, `published`, `topic`, `breadcrumb`, ...) → inert; propagated deterministically
+
+Prose before the first heading has no anchor of its own; its root-level element changes collapse into the `_preamble` pseudo-section.
 
 ## Phase 3: Deterministic Propagation
 
@@ -59,7 +61,7 @@ Inert replacement is precise, not naive find/replace:
 
 JSON: walk the parsed object to the target key, apply targeted replacement within the value string (hrefs, ICU variables, HTML attributes), `JSON.stringify` with 2-space indent.
 
-Frontmatter (markdown): YAML scope. For inert fields, replace the value portion only, preserving key and YAML formatting.
+Frontmatter (markdown): every edit goes through the `yaml` Document API (`lib/llm/frontmatter.ts`), mutating nodes in place so quoting, block vs flow sequences, and comments survive. Sequence items are matched by old value before index, so a locale list that drifted out of step with English is not edited at the wrong position. Item additions and removals and whole-field additions and removals are applied here too. If the locale's frontmatter is not valid YAML, it is left untouched.
 
 ## Phase 4: LLM Translation
 
@@ -74,7 +76,7 @@ JSX components in the normalized path are replaced with `<HTML-PLACEHOLDER-COMPO
 
 New sections: send english-B section content, get fresh translation.
 
-Frontmatter translatable fields: extract new value, send with locale-A context, get translated value.
+Frontmatter translatable fields: the field's text is a `frontmatter:<key>` TRANSLATE section (sequences as one item per line); the model must return the same number of lines as English has items, or the field is rewritten from English so its shape matches. Without an LLM, English stands in, never a silent skip.
 
 ## Phase 4b: JSX Attribute Translation Pass
 
@@ -108,6 +110,10 @@ Splices LLM-translated sections (Phase 4) into the deterministically-updated loc
 
 **Post-assembly invariants** (`findStructuralRegressions`, markdown only): the merged output is compared to english-B on heading count, `{#anchor}` set and href multiset, minus the same comparison for english-A vs locale-A so pre-existing drift isn't counted. Any regression this run introduced discards the merge and falls that file back to `runFullTranslation`. This is what makes `auto` safe as the default; `mode=full` is the fallback, not the routine choice.
 
+## Phase 5b: Sanitize and gate
+
+The task sanitizes its own output (`runSanitizer` on the single file) and then runs the pre-commit gates (`lib/gates.ts`): `verify-structure` error checks, an MDX compile with the site's parser setup, nested JSON key parity. Incremental output must introduce no new structural errors relative to the locale it replaces; full output must be clean. A failing gate throws `GateError`, the task fails, nothing below runs, and the pair is quarantined on its second strike (`references/recovery.md`).
+
 ## Phase 6: Manifest Update
 
 1. Serialize english-B tree as the new source manifest
@@ -125,4 +131,3 @@ Surfaced in `tests/specs/PIPELINE-SPEC.md`; load that doc when you hit one:
 - Duplicate inert values within one section (same URL twice, only one changed): match-by-value is ambiguous. Surrounding paragraph context may be a tiebreaker.
 - Code fence insertion point for added structural fences — needs implementation-level definition relative to other elements.
 - Partial-failure strategy is currently all-or-nothing on manifest stamping. Wasteful on retry; may revisit for per-section stamping later.
-

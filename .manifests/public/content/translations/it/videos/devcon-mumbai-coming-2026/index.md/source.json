@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/devcon-mumbai-coming-2026/index.md",
   "generatedAt": "2026-04-28T23:14:06.103Z",
-  "rootHash": "256d7d5f8c90",
+  "rootHash": "3ab01c5eb438",
   "tree": {
-    "contentHash": "8595b555e039",
-    "anchorHash": "ca62f80044c5",
+    "contentHash": "f2a1671c68cf",
+    "anchorHash": "40313cd99d77",
     "children": {
       "frontmatter:title": {
-        "contentHash": "92e6be15303a",
+        "contentHash": "d8eb325eb766",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "e61c8ce17166",
+        "contentHash": "62a827a5be2a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0621513538b3"
+        "anchorHash": "4e44f83e1309"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "201fc023f7c7"
+        "anchorHash": "e1031c78f2c3"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "02548b3cc6c3"
+        "anchorHash": "52edb2312afe"
       },
       "prose:1": {
         "contentHash": "7f20ed7cffea",

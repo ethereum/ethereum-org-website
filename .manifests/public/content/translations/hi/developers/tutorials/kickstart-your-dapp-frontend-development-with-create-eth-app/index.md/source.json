@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md",
   "generatedAt": "2026-06-19T22:56:58.118Z",
-  "rootHash": "d3bc493b61b1",
+  "rootHash": "2bbc2f86e80c",
   "tree": {
-    "contentHash": "f0e508c5be4d",
-    "anchorHash": "d34d1329c00b",
+    "contentHash": "78c6187e96be",
+    "anchorHash": "ca70a3c87d3e",
     "children": {
       "frontmatter:title": {
         "contentHash": "7c015001fcbe",
@@ -17,11 +17,40 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d7dafbda4e09"
+        "anchorHash": "8124b9cb5d60"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "28edc5541335",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "1cf387c012cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "eda71746c01c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "cc90ce1732a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "16b9f2912007",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "da9fa35c3fa6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/defi-future-of-finance/index.md",
   "generatedAt": "2026-04-29T05:11:52.779Z",
-  "rootHash": "adb1e4666e73",
+  "rootHash": "35ab198b5542",
   "tree": {
-    "contentHash": "d9fd3b53df4e",
-    "anchorHash": "cb7af9d49eea",
+    "contentHash": "4387c2b58db9",
+    "anchorHash": "334b6ae65584",
     "children": {
       "frontmatter:title": {
-        "contentHash": "d96feb980bcc",
+        "contentHash": "4fd214e896f5",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "23342c289b93",
+        "contentHash": "3df1b068f4f4",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5ac58bd042c3"
+        "anchorHash": "061c46322a10"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7b08bedc8419"
+        "anchorHash": "2ed0282e9da1"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "fbc85e849662",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "da9fa35c3fa6"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "eab762a03fd9"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0332c0829914"
+        "anchorHash": "25c63b8f1f5d"
       },
       "prose:1": {
         "contentHash": "374cd319aec4",

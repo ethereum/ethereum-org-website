@@ -73,7 +73,7 @@ non-Latin scripts, transliterated author names are correct (e.g.,
 The sanitizer should detect semantic translations (wrong meaning) but NOT
 flag phonetic transliterations.
 
-**Transliteration authority:** ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
+**Transliteration authority:** ETHGlossary (https://glossary.ethereum.org) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
 
 **Authority hierarchy — terms ETHGlossary covers vs. items it doesn't (READ THIS before flagging a transliteration/calque/keep-Latin "error"):**
 

@@ -39,7 +39,7 @@ Unaweza pia kuvuta funguo za API zilizopo kwa kuelea juu ya “Apps” na kuchag
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Fanya Ombi kutoka kwenye Mstari wa Amri
+## 3. Fanya Ombi kutoka kwenye Mstari wa Amri {#make-a-request-from-the-command-line}
 Wasiliana na mnyororo wa vitalu wa Ethereum kupitia Alchemy ukitumia JSON-RPC na curl.
 
 Kwa maombi ya mwongozo, tunapendekeza kuwasiliana na `JSON-RPC` kupitia maombi ya `POST`. Pitisha tu kichwa cha `Content-Type: application/json` na hoja yako kama kiwiliwili cha `POST` chenye nyanja zifuatazo:
@@ -65,7 +65,7 @@ _**KUMBUKA:** Badilisha `https://eth-mainnet.alchemyapi.io/v2/demo` na ufunguo w
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Sanidi Mteja wako wa Web3
+## 4. Sanidi Mteja wako wa Web3 {#set-up-your-web3-client}
 **Ikiwa una mteja aliyepo,** badilisha URL ya mtoa huduma wako wa nodi wa sasa kuwa URL ya Alchemy yenye ufunguo wako wa API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
 **_KUMBUKA:_** Hati zilizo hapa chini zinahitaji kuendeshwa katika **muktadha wa nodi** au **kuhifadhiwa kwenye faili**, sio kuendeshwa kutoka kwenye mstari wa amri. Ikiwa bado huna Node au npm iliyosakinishwa, fuata [maagizo ya usakinishaji wa Node.js](https://nodejs.org/en/download/).
@@ -94,7 +94,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Andika Hati yako ya kwanza ya Web3!
+## 5. Andika Hati yako ya kwanza ya Web3! {#write-your-first-web3-script}
 Sasa ili kuanza kwa vitendo na programu kidogo ya Web3 tutaandika hati rahisi inayochapisha nambari ya kitalu cha hivi punde kutoka kwenye Mtandao Mkuu wa Ethereum.
 
 **1. Ikiwa bado hujafanya hivyo, kwenye terminal yako unda saraka mpya ya mradi na uingie ndani yake (cd):**

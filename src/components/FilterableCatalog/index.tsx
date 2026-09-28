@@ -1,7 +1,10 @@
 "use client"
 
 import {
+  type Dispatch,
   type ReactNode,
+  type SetStateAction,
+  startTransition,
   useCallback,
   useDeferredValue,
   useEffect,
@@ -95,8 +98,16 @@ export type FilterableCatalogProps<TItem> = {
    */
   mobileVariant?: "inline" | "collapsible" | "sheet"
   /**
-   * Called after the empty-state reset has cleared both search and filters.
-   * The shell owns the clearing; the consumer owns any tracking.
+   * Lift the filter state out of the shell (e.g. to drive controls rendered
+   * outside it, or to sync it to the URL). Pass both, or neither.
+   */
+  selection?: CatalogFilterState
+  onSelectionChange?: Dispatch<SetStateAction<CatalogFilterState>>
+  /** Fires whenever the deferred filtered list changes; pass a stable function. */
+  onFilteredChange?: (items: TItem[]) => void
+  /**
+   * Called after the empty-state reset has cleared the search. Uncontrolled,
+   * the shell also clears its filters; controlled, the consumer clears its own.
    */
   onReset?: () => void
   className?: string
@@ -122,12 +133,21 @@ export default function FilterableCatalog<TItem>({
   renderResultsHeader,
   mobileFilterSummary,
   mobileVariant = "inline",
+  selection: controlledSelection,
+  onSelectionChange,
+  onFilteredChange,
   onReset,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
   const [search, setSearch] = useState("")
-  const [selection, setSelection] = useState<CatalogFilterState>({})
+  const [internalSelection, setInternalSelection] =
+    useState<CatalogFilterState>({})
+  const isControlled = controlledSelection !== undefined
+  const selection = isControlled ? controlledSelection : internalSelection
+  const setSelection = isControlled
+    ? (onSelectionChange as Dispatch<SetStateAction<CatalogFilterState>>)
+    : setInternalSelection
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const resultsTopRef = useRef<HTMLDivElement | null>(null)
   const mobileTriggerRef = useRef<HTMLButtonElement | null>(null)
@@ -138,21 +158,31 @@ export default function FilterableCatalog<TItem>({
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
   // Stable identity so memoized filter controls don't re-render every keystroke
-  const setFilter: CatalogSetFilter = useCallback((key, value, options) => {
-    setSelection((prev) => ({ ...prev, [key]: value }))
-    if (options?.scroll ?? true) {
-      resultsTopRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }, [])
+  const setFilter: CatalogSetFilter = useCallback(
+    (key, value, options) => {
+      setSelection((prev) => ({ ...prev, [key]: value }))
+      if (options?.scroll ?? true) {
+        resultsTopRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    },
+    [setSelection]
+  )
 
   const filteredItems = useMemo(
     () =>
       items.filter((item) => filterFn(item, deferredSelection, deferredSearch)),
     [items, filterFn, deferredSelection, deferredSearch]
   )
+
+  // Whatever the consumer derives from this (counts, summaries) is a third
+  // render pass; keep it off the critical path of the filter interaction.
+  useEffect(() => {
+    if (!onFilteredChange) return
+    startTransition(() => onFilteredChange(filteredItems))
+  }, [filteredItems, onFilteredChange])
 
   useEffect(() => {
     const query = search.trim()
@@ -173,9 +203,9 @@ export default function FilterableCatalog<TItem>({
   // emptied the results.
   const resetAll = useCallback(() => {
     setSearch("")
-    setSelection({})
+    if (!isControlled) setInternalSelection({})
     onReset?.()
-  }, [onReset])
+  }, [isControlled, onReset])
 
   // Event triple kept from the old shared ProductTable sheet for trend comparability.
   const openMobileFilters = useCallback((open: boolean) => {

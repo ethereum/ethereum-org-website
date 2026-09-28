@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/stealth-addr/index.md",
   "generatedAt": "2026-06-18T00:25:48.042Z",
-  "rootHash": "ca835cf2ebac",
+  "rootHash": "05d0d826feff",
   "tree": {
-    "contentHash": "34b9b3d91fa1",
-    "anchorHash": "f8a8686b199a",
+    "contentHash": "84a03c1ae164",
+    "anchorHash": "721994adad68",
     "children": {
       "frontmatter:title": {
-        "contentHash": "3bbb45094583",
+        "contentHash": "b107179d24eb",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d63e655e30dc",
+        "contentHash": "6401aaf382c9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
@@ -20,8 +20,37 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "460bb426cd82"
+        "contentHash": "eacd0772591c",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "cdd83c28e867",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "a4cc6bc01a92",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e06554818e90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "521fe5c9ece1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "336154bf67f7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

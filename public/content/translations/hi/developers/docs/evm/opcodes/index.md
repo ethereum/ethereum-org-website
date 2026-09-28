@@ -4,7 +4,7 @@ description: "इथेरियम वर्चुअल मशीन के �
 lang: hi
 ---
 
-## अवलोकन
+## अवलोकन {#overview}
 
 यह [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) पर EVM संदर्भ पृष्ठ का एक अद्यतित संस्करण है।
 इसे [येलो पेपर](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/), और [geth](https://github.com/ethereum/go-ethereum) कार्यान्वयन से भी लिया गया है।

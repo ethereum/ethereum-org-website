@@ -12,9 +12,13 @@ This is the determinism backbone. Reviewers don't argue terminology with the pip
 
 ETHGlossary is the source of truth for **term translations AND for transliteration/calque/keep-Latin guidance**. Apply it in this strict order; do not substitute your own instinct:
 
+0. **Multi-word term? Resolve the compound FIRST.** `/filter` matches single terms, so a phrase like "zero-knowledge rollups" comes back as separate `zero-knowledge` and `rollups` entries even when a dedicated compound entry exists. Composing those two parts yourself is not the glossary's answer. Check `GET /style-guide/{slug}` (try the hyphenated short form and the spelled-out form, e.g. `zk-rollup`, `zero-knowledge-rollup`) and, when it resolves, `GET /translations/{lang}/{slug}`. The compound entry wins over the parts, and the locale is compliant when it matches that entry inflected for number and case.
+
 1. **Term IS in ETHGlossary** → its per-term `script_rule` is the *only* authority for transliterate / calque / keep-latin / always-latin. Query it (`/filter` per file, or `/translations/{lang}/{termId}`). A deviation is CRITICAL.
 2. **Term is NOT in ETHGlossary** (author names, brand-new products, etc.) → apply the script-aware fallback in `known-patterns.md` §1: **transliterate** into non-Latin target scripts, **keep as-is** for Latin scripts.
 3. **Never infer a "default" `script_rule` for an unlisted term.** An absent entry means "use the fallback," **not** "keep Latin." Flagging a correctly-transliterated non-Latin author name (e.g. `te` "మారియో హావెల్" for "Mario Havel") as "should be Latin" is a **false positive** — the kind of fabricated critical that wastes reviewer time. When in doubt, query the API; if the term isn't there, the fallback decides, not you.
+
+Worked example of skipping step 0 (PR #19291): `zero-knowledge rollups` was flagged as a glossary deviation in 8 locales because only the bare `zero-knowledge` and `rollups` entries were consulted. The `zk-rollup` compound entry exists and all 24 locales already matched it, inflected for number and case -- `id` `rollup tanpa pengetahuan`, `mr` `शून्य-ज्ञान रोलअप`, `te` `జీరో-నాలెడ్జ్ రోలప్`, `ta` `பூஜ்ஜிய அறிவு சுருக்கம்`. Because per-language compounds legitimately disagree on transliterate-vs-translate, two locales looked like they had drifted in opposite directions on the same term, which reads as strong evidence of pipeline non-determinism and is not. Neither a `dev`-vs-branch regression nor agreement between independent review agents substitutes for resolving the compound.
 
 ## How to query
 
@@ -67,4 +71,4 @@ Don't patch the locale to compensate, and don't author terminology locally — s
 - **Don't query ETHGlossary from memory.** Always use the API for the actual review evaluation. Memory is for understanding patterns, not for citing specific terms.
 - **Don't read endpoint shapes from this doc.** Use llms.txt for the canonical API contract.
 
-ETHGlossary's `docs/translation-policy.md` (in the wackerow/ethglossary repo) is the canonical policy behind all of the above.
+ETHGlossary's `docs/translation-policy.md` (in the ethereum/ethglossary repo) is the canonical policy behind all of the above.

@@ -5,7 +5,7 @@ description: Saiba mais sobre o 7702 na atualização Pectra
 lang: pt-br
 ---
 
-## Resumo
+## Resumo {#abstract}
 O EIP-7702 define um mecanismo para adicionar código a uma EOA. Esta proposta permite que as EOAs, as contas legadas do Ethereum, recebam melhorias de funcionalidade de curto prazo, aumentando a usabilidade dos aplicativos. Isso é feito definindo um ponteiro para um código já implantado usando um novo tipo de transação: 4.
 
 Este novo tipo de transação introduz uma lista de autorização. Cada tupla de autorização na lista é definida como
@@ -22,7 +22,7 @@ Este novo tipo de transação introduz uma lista de autorização. Cada tupla de
 Uma delegação pode ser redefinida delegando para o endereço nulo.
 
 A chave privada da EOA mantém controle total sobre a conta após a delegação. Por exemplo, delegar para um Safe não torna a conta uma multisig porque ainda há uma única chave que pode contornar qualquer política de assinatura. Daqui para frente, os desenvolvedores devem projetar com a suposição de que qualquer participante do sistema pode ser um contrato inteligente. Para desenvolvedores de contratos inteligentes, não é mais seguro presumir que `tx.origin` se refere a uma EOA.
-## Melhores práticas
+## Melhores práticas {#best-practices}
 **Abstração de conta**: Um contrato de delegação deve se alinhar aos padrões mais amplos de abstração de conta (AA) do Ethereum para maximizar a compatibilidade. Em particular, o ideal é que seja compatível ou esteja em conformidade com o ERC-4337.
 
 **Design não permissionado e resistente à censura**: O Ethereum valoriza a participação não permissionada. Um contrato de delegação NÃO DEVE codificar rigidamente (hard-code) ou depender de um único retransmissor (relayer) ou serviço "confiável". Isso inutilizaria a conta se o retransmissor ficasse offline. Recursos como processamento em lote (por exemplo, approve+transferFrom) podem ser usados pela própria EOA sem um retransmissor. Para desenvolvedores de aplicativos que desejam usar recursos avançados habilitados pelo EIP-7702 (Abstração de Gás, Saques com Preservação de Privacidade), você precisará de um retransmissor. Embora existam diferentes arquiteturas de retransmissores, nossa recomendação é usar [empacotadores ERC-4337](https://www.erc4337.io/bundlers) apontando pelo menos para o [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) porque:
@@ -102,7 +102,7 @@ Quando os usuários realizam assinaturas delegadas, o contrato de destino que re
 
 **Superfície de confiança mínima e segurança**: Embora ofereça flexibilidade, um contrato de delegação deve manter sua lógica principal mínima e auditável. O contrato é efetivamente uma extensão da EOA do usuário, portanto, qualquer falha pode ser catastrófica. As implementações devem seguir as melhores práticas da comunidade de segurança de contratos inteligentes. Por exemplo, as funções de construtor ou inicializador devem ser cuidadosamente protegidas – como destacado pela Alchemy, se usar um padrão de proxy sob o 7702, um inicializador desprotegido pode permitir que um invasor assuma o controle da conta. As equipes devem ter como objetivo manter o código onchain simples: o contrato 7702 da Ambire tem apenas cerca de 200 linhas de Solidity, minimizando deliberadamente a complexidade para reduzir bugs. Deve-se encontrar um equilíbrio entre uma lógica rica em recursos e a simplicidade que facilita a auditoria.
 
-### Implementações conhecidas
+### Implementações conhecidas {#known-implementations}
 Devido à natureza do EIP-7702, recomenda-se que as carteiras tenham cautela ao ajudar os usuários a delegar para um contrato de terceiros. Listada abaixo está uma coleção de implementações conhecidas que foram auditadas:
 
 | Endereço do contrato                       | Fonte                                                                                                                                      | Auditorias                                                                                                                                                    |
@@ -129,11 +129,11 @@ Nota: alguns ativos podem ser rejeitados automaticamente pelo código de delega�
 
 Notifique o usuário de que há uma delegação em vigor para a EOA verificando seu código e, opcionalmente, ofereça a remoção da delegação.
 
-#### Delegação comum
+#### Delegação comum {#common-delegation}
 O provedor de hardware coloca em uma lista de permissões (whitelist) contratos de delegação conhecidos e implementa seu suporte no software complementar. Recomenda-se escolher um contrato com suporte total ao ERC-4337.
 
 As EOAs delegadas a um contrato diferente serão tratadas como EOAs padrão.
-#### Delegação personalizada
+#### Delegação personalizada {#custom-delegation}
 O provedor de hardware implementa seu próprio contrato de delegação e o adiciona às listas, implementando seu suporte no software complementar. Recomenda-se construir um contrato com suporte total ao ERC-4337.
 
 As EOAs delegadas a um contrato diferente serão tratadas como EOAs padrão.

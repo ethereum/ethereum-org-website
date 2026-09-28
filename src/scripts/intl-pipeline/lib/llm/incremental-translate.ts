@@ -9,6 +9,13 @@
  * which are surgically placed back into the locale file.
  */
 
+import { TRANSLATABLE_ATTRIBUTES } from "../shared-patterns"
+
+import {
+  FRONTMATTER_PREFIX,
+  frontmatterFieldText,
+  parseFrontmatterDoc,
+} from "./frontmatter"
 import { getLanguageGroup, getSiteSpecificNotes } from "./language-groups"
 
 // Types for section-level translation
@@ -116,6 +123,7 @@ RULES:
 - Use <SECTION action="CONTEXT"> sections for tone and terminology reference. Do NOT retranslate them.
 - Preserve all markdown syntax, heading anchors {#id}, and placeholder tags exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).
+- Sections whose id starts with "frontmatter:" are page metadata (title, description, summary bullets, tags), not prose. Return plain text only: no markdown, no surrounding quotes, no YAML syntax. When the content has several lines, each line is one list item -- return exactly the same number of lines, one translated item per line.
 - Never translate the English word "or" when it appears as a substring inside a larger word, a URL, a domain, or an identifier (for example inside "tutorial", "uniform", "information", or the ".org" in "ethers.org"). Only translate "or" when it stands alone as a separate English word.
 
 PLACEHOLDER RULES:
@@ -320,6 +328,23 @@ export function extractSections(content: string): ExtractedSection[] {
           text: rawText.replace(/\s*\{#[^}]+\}/, "").trim(),
         })
       }
+    }
+  }
+
+  // Translatable frontmatter fields, one pseudo-section each. Their ids match
+  // the content tree (`frontmatter:<key>`), so drift detection, batching, and
+  // assembly all speak the same name; sequences travel as one item per line.
+  const fm = parseFrontmatterDoc(content)
+  if (fm) {
+    for (const key of TRANSLATABLE_ATTRIBUTES) {
+      const text = frontmatterFieldText(fm.doc, key)
+      if (!text) continue
+      sections.push({
+        id: `${FRONTMATTER_PREFIX}${key}`,
+        level: 0,
+        headingText: "",
+        body: text,
+      })
     }
   }
 

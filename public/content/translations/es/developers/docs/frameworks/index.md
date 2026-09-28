@@ -26,7 +26,7 @@ como:
 
 Antes de sumergirse en los frameworks, le recomendamos que primero lea nuestra introducción a las [dapps](/developers/docs/dapps/) y la [pila de Ethereum](/developers/docs/ethereum-stack/).
 
-## Frameworks disponibles
+## Frameworks disponibles {#available-frameworks}
 
 **Foundry** - **_Foundry es un conjunto de herramientas increíblemente rápido, portátil y modular para el desarrollo de aplicaciones en Ethereum._**
 

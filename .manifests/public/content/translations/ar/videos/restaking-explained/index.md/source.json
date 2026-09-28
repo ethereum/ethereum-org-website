@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/restaking-explained/index.md",
   "generatedAt": "2026-04-29T00:07:55.687Z",
-  "rootHash": "516101d6dee7",
+  "rootHash": "91c7b39841b4",
   "tree": {
-    "contentHash": "172d0ef02eb3",
-    "anchorHash": "d9dac51b3ed1",
+    "contentHash": "31165ba241db",
+    "anchorHash": "6cc3f4039b7c",
     "children": {
       "frontmatter:title": {
-        "contentHash": "89f83cd5a01b",
+        "contentHash": "5185b4d19595",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "42f4571bd835",
+        "contentHash": "4bd1456e8d0e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "79c34e2226aa"
+        "anchorHash": "f7634f559fca"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "329ca82fa2c1"
+        "anchorHash": "5d89dad9cba2"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "3d4994855095",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "afdb2470b343"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5d2d3ceb7abe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f8ff31877a80"
+        "anchorHash": "fee35e745a2c"
       },
       "prose:1": {
         "contentHash": "7dc5c906fef2",

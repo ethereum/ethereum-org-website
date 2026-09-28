@@ -92,7 +92,7 @@ Ethereum est vaste : il comprend une communauté, une technologie, un ensemble d
 Cela signifie que le site Web doit gérer de nombreux parcours utilisateurs différents, allant d'« un développeur qui veut un outil spécifique » à « un nouveau venu qui vient d'acheter de l'ETH et ne sait pas ce qu'est un portefeuille ».
 « Quel est le meilleur site Web pour une plateforme de chaîne de blocs ? » reste une question ouverte - nous sommes des pionniers. Construire cela nécessite de l'expérimentation.
 
-## Feuille de route du produit {#roadmap}
+## Feuille de route du produit {#get-involved}
 
 Pour rendre notre travail plus accessible et favoriser davantage la collaboration communautaire, l'équipe principale d'ethereum.org publie un aperçu des objectifs de notre feuille de route de [cycle Shape Up](https://www.productplan.com/glossary/shape-up-method/).
 

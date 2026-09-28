@@ -38,7 +38,7 @@ import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
 
-// Wallet data is repo-checked-in, so it only changes at deploy time.
+// Wallet data is repo-checked-in: render on first request, cache until deploy.
 export const revalidate = false
 export const dynamicParams = true
 
@@ -49,10 +49,7 @@ const WALLET_LINK_EVENT = {
   eventAction: "Go to wallet",
 } as const
 
-/**
- * Standalone wallet detail, reached by direct load or refresh. Navigating here
- * from inside the find-wallet subtree hits `@modal/(.)[wallet]` instead.
- */
+/** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
@@ -253,11 +250,8 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   )
 }
 
+// Empty on purpose: absent, Next renders the route dynamically on every request.
 export function generateStaticParams() {
-  // Deliberately empty: these pages must render on demand so the response
-  // carries `Vary: Next-Url`. Build-time prerenders have no response to read,
-  // so Next marks them "cannot be intercepted" and the client then caches this
-  // URL ignoring Next-Url, which permanently shadows `@modal/(.)[wallet]`.
   return []
 }
 

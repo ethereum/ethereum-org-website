@@ -92,7 +92,7 @@ Ethereum büyük bir şeydir: bir topluluğu, bir teknolojiyi, bir dizi fikir ve
 Bu, web sitesinin “belirli bir araç isteyen bir geliştirici”den “henüz biraz ETH satın almış ve Cüzdanın ne olduğunu bilmeyen yeni bir kullanıcı”ya kadar birçok farklı kullanıcı yolculuğunu ele alması gerektiği anlamına gelir.
 "Bir Blokzincir platformu için en iyi web sitesi nedir?" sorusu hala açık bir sorudur - bizler öncüyüz. Bunu inşa etmek deneme yanılma gerektirir.
 
-## Ürün yol haritası {#roadmap}
+## Ürün yol haritası {#get-involved}
 
 Çalışmalarımızı daha erişilebilir kılmak ve daha fazla topluluk iş birliğini teşvik etmek için ethereum.org çekirdek ekibi, [şekillendirme döngüsü](https://www.productplan.com/glossary/shape-up-method/) yol haritası hedeflerimizin bir özetini yayınlamaktadır.
 
