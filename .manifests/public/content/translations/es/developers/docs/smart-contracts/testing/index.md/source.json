@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/testing/index.md",
-  "generatedAt": "2026-08-20T22:12:30.731Z",
+  "generatedAt": "2026-09-23T21:50:44.200Z",
   "rootHash": "d1d8e1739cb4",
   "tree": {
     "contentHash": "669c001bf9d3",
@@ -1546,5 +1546,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "1988a451065e8d91e60a09d73935256ab102a52c"
+  "sourceCommitSha": "f97a8c8126d8828c2b51a37ec411c198a5ab31b5"
 }

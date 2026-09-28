@@ -64,3 +64,24 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `réseau de potins` (tabloid gossip) for "gossip network"; house form is `réseau de diffusion`.
 - `ponts de garde` for "custodial bridges" reads "on-duty bridges".
 - `proposeur`/`proposant` split introduced within one file.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/fr/page-apps.json`. 9 critical, 9 warnings. Brand 10/10 | Technical 6/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: fr affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: already repaired by this PR.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (fr-specific):**
+
+- `réseau principal` -> `Réseau principal` at the 4 sites whose English is bare "Mainnet"; the one "Ethereum Mainnet" site correctly stays lowercase per its own glossary entry
+- `de [fork la chaîne de blocs]` -> `forker`; bare `fork` filled a verb slot with a noun
+
+**Notes:**
+
+- Structurally spotless: anchors, fences, backticks, guillemets, JSON parity and tu/vous all exact, and the run lands the long-outstanding EOA custody fix.
+

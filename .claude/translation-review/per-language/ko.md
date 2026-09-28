@@ -101,3 +101,24 @@ Scope: 1 key (`discount-headline`) replacing `headline` + `subtitle` in `compone
 - `ETHORG10` byte-identical. The suffixed form `ETHORG10을` is correct Korean -- object particle, not a mutation of the code (known-patterns #78).
 - `일반 입장권` for `General Admission` is one of four fleet treatments; not a ko defect, pending the glossary entry (known-patterns #77, normalization-queue section 10).
 - `데브콘` preserved in `title` and Latin `Devcon VIII 인도` preserved in `logo-alt` -- incremental mode left both untouched, so the #19142 hand-corrections survived the English source moving.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ko/page-apps.json`. 3 critical, 12 warnings. Brand 8/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ko affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DeFi** left expanded, ko has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ko-specific):**
+
+- truncated non-word `스마트 컨트랙` -> `스마트 컨트랙트`, matched with a negative lookahead so the line the PR already fixed stayed untouched
+- `파운데이션` -> `Foundation`, the foundation.app marketplace name; 21/24 locales keep it Latin
+
+**Notes:**
+
+- Bare-acronym over-expansion hit 18 `page-apps` keys. The `DeFi` ones stay expanded: ko is the only locale whose `ui` context for that term is itself the full phrase.
+

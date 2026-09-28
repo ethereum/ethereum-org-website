@@ -181,3 +181,26 @@ The `zk-rollup` entry (English head `zero-knowledge rollup`) is the compound the
 zh is the control case and needs no change: its `零知识卷叠` matches the zh page title, `src/intl/zh/glossary.json`, and 67 repo-wide uses.
 
 Resolving these upstream is what stops a reviewer re-litigating them: because `/filter` returns only the single-word parts, a compound that disagrees with its parts reads at review time like a pipeline defect. See `intl-review/references/ethglossary-usage.md` step 0.
+
+## 12. Gaps and conflicts surfaced by PR #19326
+
+Five items, all found reviewing the same four source files across 24 locales.
+
+**a. Missing short forms block an otherwise mechanical fix.** Collapsing an over-expanded acronym back to the bare form (known-patterns #80) depends on the term's `ui`/`tag` context holding the acronym. Six locale/term pairs have no short form, so 21 keys had to ship expanded: `DAO` in ar/hi/mr, `DEX` in ar/hi/mr/ur/zh-tw, `DeFi` in ko. Every other locale has them. Adding a bare-acronym `ui`/`tag` context to these entries closes the gap without touching the prose form.
+
+**b. Missing entries: `Python`, `Rust`, `Foundation`, `salt`.** Each caused a real defect this run that had to be argued from the general always-Latin rule rather than from an entry:
+
+| Term | Defect | Locale |
+| --- | --- | --- |
+| `Python` | `पायथन-आधारित` at 4 sites, while the same file kept `Python` Latin elsewhere | mr |
+| `Rust` | `रस्ट-आधारित` | mr |
+| `Foundation` (the foundation.app marketplace) | transliterated to `파운데이션`; 21/24 locales keep it Latin | ko |
+| `salt` (cryptographic) | rendered `chumvi`, the edible kind | sw |
+
+`salt` is the instructive one: English scare-quotes it as a coinage, and PR #18942's sw review had already established English `"salt"` as the correct sw rendering. Without an entry that decision gets re-litigated every run.
+
+**c. `Keccak-256` numerals contradict the cross-cutting rule.** bn `কেক্যাক-২৫৬` and mr `केकाक-256` disagree with each other and with the always-Latin treatment applied to hash-function names elsewhere; ar's entry notes "Western Arabic numerals are retained as per instructions" while bn's uses Bengali digits. This is the long-standing issue #53 and it stays deliberately unfixed in the locale files until the entries agree.
+
+**d. hi `contract` / `smart contract` notes invite the deviation they should prevent.** The entries are `अनुबंध` and `स्मार्ट अनुबंध`, but both carry notes pointing at the other form: "'कॉन्ट्रैक्ट' is very frequently used in developer communities" and "स्मार्ट कॉन्ट्रैक्ट is widely accepted in conversational Hindi tech discussions". PR #19326 flipped `languages/index.md` wholesale to the note's form (25 sites) while its sibling `testing/index.md` kept the entry's form, splitting one page pair two ways. Either demote the note to an `accepted` alias or change the entry; as written it reads as permission.
+
+**e. fr `mainnet` vs `Ethereum Mainnet` is correct but trap-shaped.** `mainnet` -> `Réseau principal` (capitalized) and `Ethereum Mainnet` -> `réseau principal Ethereum` (lowercase). Both are right, and a reviewer who sweeps one form across a file will corrupt the other: `testing/index.md` holds four of the first and one of the second. Worth a cross-reference note on each entry rather than a data change.

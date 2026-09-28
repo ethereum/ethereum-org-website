@@ -100,3 +100,23 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 **Open (upstream, do not fix in locale):**
 
 - `Odbierz 10% zniżki` deviates from ETHGlossary `claim` = `roszczenie`. Not auto-fixed for the same reason as ru -- a `roszczenie`-based imperative is worse copy on a discount banner. See known-patterns #75.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/pl/page-apps.json`. 8 critical, 12 warnings. Brand 10/10 | Technical 6/10 | Semantic 9/10 | Consistency 8/10 | Tone 7/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: pl affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (pl-specific):**
+
+- `-dao-description`: `zarządzać` (instrumental) and `tworzyć` (accusative) shared one object -> `tworzyć ... (DAO) i zarządzać nimi`
+
+**Notes:**
+
+- The run corrects more ETHGlossary deviations than it introduces: `Maszyna Wirtualna Ethereum (EVM)`, capitalized `Sieć główna`, six acronym expansions.
+
