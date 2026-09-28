@@ -15,6 +15,7 @@ import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
@@ -47,6 +48,11 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
     searchButtonRef: searchButtonRef as RefObject<HTMLButtonElement>,
   })
+
+  // DocSearch already opens on these chords, so there is nothing to do here.
+  // The registration exists only so the hook counts a keyboard-opened search
+  // separately from the button, which share the event above.
+  useKeyboardShortcut("search", () => {})
 
   return (
     <>
