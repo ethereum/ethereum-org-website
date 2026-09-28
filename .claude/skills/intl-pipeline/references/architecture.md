@@ -72,6 +72,8 @@ For each llm-required section:
 3. Send to Gemini with instructions: translate only this section, preserve markdown/components/links/code, do NOT translate code bodies / URLs / heading IDs
 4. Receive translated section
 
+Code fences never reach the model on either path. The full path replaces each with an opaque `<HTML-PLACEHOLDER-CODEBLOCK-* />` and restores the English fence verbatim (`content-normalizer.ts`); the incremental path lifts them out per section into `IncrementalPlan.codeBlocks` and restores them into the model's reply (`extractCodeFencesOnly` / `restoreCodeBlocksStrict`). The single exception is a **prose-tagged** fence -- ```` ```text ````, `txt`, `md`, `markdown`, `mdx`, listed in `PROSE_FENCE_TAGS` in `lib/shared-patterns.ts` -- whose body IS translated. An untagged fence counts as code: it used to count as prose, which is how German words landed inside a reproduced `clef` console transcript. If a fence holds prose that should be translated, tag it ```` ```text ```` in the English source; nothing else makes it translatable. A reply that dropped a `<!-- CODE_BLOCK_n -->` placeholder fails the task (classified `parse`, so it quarantines on the second strike) rather than committing a file with the fence missing.
+
 JSX components in the normalized path are replaced with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders BEFORE the prompt is built. Translatable attribute values are extracted as separate leaves and handled by Phase 4b. Non-normalized path (JSON files) preserves component tags raw with a "preserve exactly" prompt rule.
 
 New sections: send english-B section content, get fresh translation.
