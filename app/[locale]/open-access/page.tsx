@@ -57,7 +57,7 @@ import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
 import ethDiamondImg from "@/public/images/eth-org-logo.png"
 import walletCalloutImg from "@/public/images/impact_transparent.png"
 import ethVaultImg from "@/public/images/infrastructure_transparent.png"
-import privacyPathwayImg from "@/public/images/wallets/wallet-hero.png"
+import privacyPathwayImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
@@ -362,7 +362,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-decides-description-6")}</p>
           <Image
             src={ethVaultImg}
-            alt={t("page-open-access-decides-image-alt")}
+            alt=""
             className="mx-auto max-h-48 w-auto object-contain"
             sizes="240px"
           />
@@ -503,7 +503,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-how-description-4")}</p>
           <Image
             src={ethDiamondImg}
-            alt={t("page-open-access-how-image-alt")}
+            alt=""
             className="mx-auto max-h-36 w-auto object-contain"
             sizes="144px"
           />
