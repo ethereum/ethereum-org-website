@@ -37,7 +37,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -523,12 +523,12 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h2>{sections.started.title}</h2>
           <p>{t("page-open-access-started-description")}</p>
           <p>
-            <InlineLink
+            <LinkWithArrow
               href="/wallets/"
               customEventOptions={track(sections.started.id, "Wallets")}
             >
               {t("page-open-access-started-link")}
-            </InlineLink>
+            </LinkWithArrow>
           </p>
 
           <Callout
