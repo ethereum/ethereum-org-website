@@ -9,7 +9,7 @@ lang: ja
 published: 2021-04-06
 ---
 
-## ethers.js(5.0)を使用したトークンの送金 {#send-token}
+## ethers.js v5を使用したトークンの送金 {#send-token}
 
 ### このチュートリアルで学べること {#you-learn-about}
 
@@ -19,19 +19,20 @@ published: 2021-04-06
 
 ### はじめに {#to-get-started}
 
-はじめるにあたり、まず ethers.js ライブラリを JavaScript にインポートする必要があります。
-ethers.js v5 をインクルードします。
+はじめるにあたり、まずethers.jsライブラリをJavaScriptにインポートする必要があります。
+ethers.js v5のインクルード
+
 ### インストール {#install-ethersjs}
 
 ```shell
-/home/ricmoo> npm install --save ethers
+/home/ricmoo> npm install --save ethers@5
 ```
 
 ブラウザでのES6
 
 ```html
 <script type="module">
-  import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
+  import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js"
   // ここにコードを記述してください...
 </script>
 ```
@@ -40,14 +41,14 @@ ethers.js v5 をインクルードします。
 
 ```html
 <script
-  src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+  src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"
   type="application/javascript"
 ></script>
 ```
 
 ### パラメータ {#param}
 
-1. **`contract_address`**: トークンのコントラクトアドレス (送金したいトークンがイーサではない場合、コントラクトアドレスが必要です)
+1. **`contract_address`**: トークンのコントラクトアドレス（送金したいトークンがイーサではない場合、コントラクトアドレスが必要です）
 2. **`send_token_amount`**: 受信者に送金したい金額
 3. **`to_address`**: 受信者のアドレス
 4. **`send_account`**: 送信者のアドレス
@@ -55,15 +56,15 @@ ethers.js v5 をインクルードします。
 
 ## 注意 {#notice}
 
-`sendTransaction()` が内部で処理を行うため、`signTransaction(tx)` は削除されています。
+`sendTransaction()`が内部で処理するため、`signTransaction(tx)`は削除されています。
 
 ## 送金手順 {#procedure}
 
-### 1. ネットワーク (テストネット) への接続 {#connect-to-network}
+### 1. ネットワーク（テストネット）への接続 {#connect-to-network}
 
-#### プロバイダの設定 (Infura) {#set-provider}
+#### プロバイダーの設定（Infura） {#set-provider}
 
-ロプステンテストネットへの接続
+ロプステンのテストネットに接続します
 
 ```javascript
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
@@ -89,9 +90,9 @@ window.ethersProvider.getGasPrice() // ガス価格
 
 ### 5. トランザクションの定義 {#define-transaction}
 
-以下で定義されている変数は、`send_token()` に依存しています。
+以下で定義されているこれらの変数は、`send_token()`に依存しています。
 
-### トランザクションパラメータ {#transaction-params}
+### トランザクションのパラメータ {#transaction-params}
 
 1. **`send_account`**: トークン送信者のアドレス
 2. **`to_address`**: トークン受信者のアドレス
