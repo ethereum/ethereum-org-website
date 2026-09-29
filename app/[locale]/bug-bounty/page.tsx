@@ -281,16 +281,25 @@ export default async function Page(props: { params: Promise<Params> }) {
             })}
           </p>
           <p>{t("glamsterdam-scope")}</p>
-          {/* Boxed rather than a plain paragraph: clients are not in scope for
-              Glamsterdam yet, only specifications, so a reporter who skims past this
-              wastes their time and ours on an ineligible client report. */}
+          {/* Boxed rather than a plain paragraph: only clients with a published
+              Glamsterdam release are in scope, alongside the specifications, so a
+              reporter who skims past this wastes their time and ours on an
+              ineligible client report. */}
           {/* max-w-3xl by hand: MainArticle constrains the text column with
               `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
               runs the full page width and reads as a different section rather than an
               aside to the paragraph above it. */}
           <Alert variant="warning" className="max-w-3xl">
             <AlertContent>
-              <p>{t("glamsterdam-specs")}</p>
+              <p>
+                {t.rich("glamsterdam-specs", {
+                  a: (chunks) => (
+                    <InlineLink href="https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement#client-releases">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
             </AlertContent>
           </Alert>
           <h3>{t("glamsterdam-rewards-title")}</h3>
