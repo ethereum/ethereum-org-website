@@ -428,7 +428,7 @@
 
 /* Desktop only: there is no keyboard to press it with on touch. */
 .DocSearch-Focus-hint {
-  @apply ms-2 hidden shrink-0 items-center md:flex;
+  @apply mx-2 hidden shrink-0 items-center md:flex;
 }
 
 .DocSearch-Focus-hint kbd {
