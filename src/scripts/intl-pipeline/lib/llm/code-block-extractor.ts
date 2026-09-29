@@ -132,16 +132,67 @@ export function restoreCodeBlocksStrict(
   blocks: CodeBlock[],
   label: string
 ): string {
-  const missing = blocks
-    .filter((b) => !prose.includes(makePlaceholder(b.index)))
-    .map((b) => b.index)
-  if (missing.length > 0) {
+  // Count, don't just look: restoreCodeBlocks fills the FIRST match only, so a
+  // duplicated placeholder would ship as a bare HTML comment.
+  const wrong = blocks
+    .map((b) => ({
+      index: b.index,
+      seen: prose.split(makePlaceholder(b.index)).length - 1,
+    }))
+    .filter((b) => b.seen !== 1)
+  if (wrong.length > 0) {
     throw new Error(
-      `${label}: dropped ${missing.length} code block placeholder(s) ` +
-        `(${missing.map((i) => `CODE_BLOCK_${i}`).join(", ")}) of ${blocks.length}`
+      `${label}: dropped ${wrong.length} code block placeholder(s) ` +
+        `(${wrong.map((b) => `CODE_BLOCK_${b.index}x${b.seen}`).join(", ")}) of ${blocks.length}`
     )
   }
   return restoreCodeBlocks(prose, blocks)
+}
+
+/** One comment found inside one lifted code block. */
+export interface BlockComment {
+  block: CodeBlock
+  comment: CodeComment
+}
+
+/** Every non-blank comment in a set of lifted code blocks, in order. */
+export function collectBlockComments(blocks: CodeBlock[]): BlockComment[] {
+  const found: BlockComment[] = []
+  for (const block of blocks) {
+    for (const comment of extractComments(block.content, block.language)
+      .comments) {
+      if (comment.text.trim()) found.push({ block, comment })
+    }
+  }
+  return found
+}
+
+/**
+ * Write translated comments back into their blocks, in place.
+ *
+ * Each translation is applied within its comment's own line span rather than
+ * by a whole-block replace, so a comment whose text also appears in the code
+ * cannot be swapped at the wrong place. Keys are `c<i>` over `found`, matching
+ * the comment prompt's payload.
+ */
+export function applyBlockComments(
+  found: BlockComment[],
+  translations: Record<string, string>
+): void {
+  found.forEach(({ block, comment }, i) => {
+    const translated = translations[`c${i}`]
+    if (!translated || translated === comment.text) return
+    const lines = block.content.split("\n")
+    const last = comment.endLine ?? comment.line
+    for (let ln = comment.line; ln <= last && ln < lines.length; ln++) {
+      if (!lines[ln].includes(comment.text)) continue
+      lines[ln] = lines[ln].replace(comment.text, translated)
+      block.content = lines.join("\n")
+      return
+    }
+    // A multi-line comment's text spans lines, so no single line holds it all.
+    block.content = block.content.replace(comment.text, translated)
+  })
 }
 
 // ---------------------------------------------------------------------------

@@ -16,7 +16,11 @@ import {
   MIN_CONTENT_BUDGET_BYTES,
 } from "../../constants"
 
-import { type CodeBlock, extractCodeFencesOnly } from "./code-block-extractor"
+import {
+  type CodeBlock,
+  extractCodeFencesOnly,
+  extractComments,
+} from "./code-block-extractor"
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
   batchSections,
@@ -26,6 +30,7 @@ import {
   extractSections,
   sectionWireBytes,
 } from "./incremental-translate"
+import { buildCommentPrompt } from "./prompt-builder"
 
 export interface PlannedBatch {
   prompt: string
@@ -61,6 +66,12 @@ export interface IncrementalPlan {
    * ones.
    */
   codeBlocks: Map<string, CodeBlock[]>
+  /**
+   * Prompt bytes for the separate code-comment call, 0 when the lifted fences
+   * hold no comments. Rendered from the real prompt and counted in
+   * projectedBytes, because that call is money too.
+   */
+  commentPromptBytes: number
 }
 
 export interface PlanOptions {
@@ -231,8 +242,30 @@ export function planIncrementalBatches(
     (sum, s) => sum + Buffer.byteLength(s.content || "", "utf-8"),
     0
   )
+  // Comments inside the lifted fences are still translated, in one small call
+  // of their own (`translateFenceComments`). Render it here so the projection
+  // covers every request the task will make.
+  const fenceComments = [...codeBlocks.values()]
+    .flat()
+    .flatMap((b) =>
+      extractComments(b.content, b.language).comments.map((c) => c.text)
+    )
+    .filter((text) => text.trim())
+  const commentPromptBytes =
+    fenceComments.length === 0
+      ? 0
+      : Buffer.byteLength(
+          buildCommentPrompt({
+            comments: fenceComments,
+            languageName,
+            glossaryTerms,
+          }),
+          "utf-8"
+        )
+
   const budget = createFileBudget(`${filePath} (${locale})`, translatableBytes)
-  const projectedBytes = planned.reduce((sum, p) => sum + p.bytes, 0)
+  const projectedBytes =
+    planned.reduce((sum, p) => sum + p.bytes, 0) + commentPromptBytes
 
   return {
     batches: planned,
@@ -245,6 +278,7 @@ export function planIncrementalBatches(
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
     codeBlocks,
+    commentPromptBytes,
   }
 }
 

@@ -11,6 +11,8 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  applyBlockComments,
+  collectBlockComments,
   extractCodeBlocks,
   extractCodeFencesOnly,
   restoreCodeBlocksStrict,
@@ -131,7 +133,20 @@ test("restore refuses a reply that dropped a placeholder", () => {
   const { prose, blocks } = extractCodeFencesOnly(EN)
   const mangled = prose.replace("<!-- CODE_BLOCK_0 -->", "")
   expect(() => restoreCodeBlocksStrict(mangled, blocks, "x.md (de)")).toThrow(
-    /dropped 1 code block placeholder\(s\) \(CODE_BLOCK_0\) of 2/
+    /dropped 1 code block placeholder\(s\) \(CODE_BLOCK_0x0\) of 2/
+  )
+})
+
+test("restore refuses a reply that duplicated a placeholder", () => {
+  // restoreCodeBlocks fills the first match only, so the second copy would
+  // ship as a bare HTML comment with the fence gone.
+  const { prose, blocks } = extractCodeFencesOnly(EN)
+  const mangled = prose.replace(
+    "<!-- CODE_BLOCK_0 -->",
+    "<!-- CODE_BLOCK_0 -->\n\n<!-- CODE_BLOCK_0 -->"
+  )
+  expect(() => restoreCodeBlocksStrict(mangled, blocks, "x.md (de)")).toThrow(
+    /CODE_BLOCK_0x2/
   )
 })
 
@@ -157,10 +172,61 @@ test("block indices stay those of the original scan", () => {
   expect(blocks.map((b) => b.index)).toEqual([0, 2])
 })
 
-// --- gate -------------------------------------------------------------------
+// --- comments ---------------------------------------------------------------
 
 const fenceFindings = (en: string, tr: string) =>
   verifyMarkdown(en, tr, "x.md").filter((f) => f.check.startsWith("code-fence"))
+
+test("comments inside lifted fences are still translatable", () => {
+  const { blocks } = extractCodeFencesOnly(EN)
+  const found = collectBlockComments(blocks)
+  expect(found.map((f) => f.comment.text)).toEqual(["set the owner"])
+})
+
+test("a translated comment lands back in its fence", () => {
+  const { prose, blocks } = extractCodeFencesOnly(EN)
+  applyBlockComments(collectBlockComments(blocks), {
+    c0: "den Eigentuemer setzen",
+  })
+  const out = restoreCodeBlocksStrict(prose, blocks, "x.md")
+  expect(out).toContain("// den Eigentuemer setzen")
+  expect(out).toContain("contract Foo { address owner; }")
+})
+
+test("a comment is replaced on its own line, not wherever the text repeats", () => {
+  // `owner` appears as code above the comment that mentions it; a whole-block
+  // replace would rewrite the code instead.
+  const md = ["```js", "const owner = 1", "let x = 2 // owner", "```"].join(
+    "\n"
+  )
+  const { blocks } = extractCodeFencesOnly(md)
+  const found = collectBlockComments(blocks)
+  applyBlockComments(found, { c0: "Eigentuemer" })
+  expect(blocks[0].content).toBe("const owner = 1\nlet x = 2 // Eigentuemer")
+})
+
+test("comment translation leaves the code untouched", () => {
+  const { prose, blocks } = extractCodeFencesOnly(EN)
+  applyBlockComments(collectBlockComments(blocks), { c0: "geaendert" })
+  const tr = restoreCodeBlocksStrict(prose, blocks, "x.md")
+  expect(fenceFindings(EN, tr)).toEqual([])
+})
+
+test("planner budgets the separate comment call", () => {
+  const withComments = plan(EN)!
+  expect(withComments.commentPromptBytes).toBeGreaterThan(0)
+  expect(withComments.projectedBytes).toBe(
+    withComments.batches.reduce((n, b) => n + b.bytes, 0) +
+      withComments.commentPromptBytes
+  )
+})
+
+test("no comments, no comment call to budget", () => {
+  const bare = EN.replace("// set the owner\n", "")
+  expect(plan(bare)!.commentPromptBytes).toBe(0)
+})
+
+// --- gate -------------------------------------------------------------------
 
 test("gate flags a translated untagged fence", () => {
   const tr = EN.replace(

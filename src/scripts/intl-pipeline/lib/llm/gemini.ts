@@ -18,9 +18,11 @@ import {
 import { delay } from "../workflows/utils"
 
 import {
+  applyBlockComments,
   chunkProse,
   type CodeBlock,
   type CodeComment,
+  collectBlockComments,
   extractCodeBlocks,
   extractComments,
   getCommentSyntax,
@@ -43,7 +45,7 @@ import {
   type ValidationResult,
 } from "./output-validation"
 import { isIrreducibleChunk } from "./plan"
-import { buildTranslationPrompt } from "./prompt-builder"
+import { buildCommentPrompt, buildTranslationPrompt } from "./prompt-builder"
 
 /**
  * Check if the active LLM is available (API key present)
@@ -839,6 +841,57 @@ function reconstructFromPlaceholders(
 }
 
 /**
+ * Translate the comments inside fences the incremental path lifted out, in
+ * place.
+ *
+ * The fence bodies themselves never reach the model, so this is the only way a
+ * code comment gets localized on that path -- without it, retranslating a
+ * section would quietly revert its comments to English. Mirrors the full path's
+ * pass: one small call for the whole file+locale, and non-fatal, because an
+ * English comment is a blemish while a failed task costs the whole file.
+ *
+ */
+export async function translateFenceComments(options: {
+  blocks: CodeBlock[]
+  targetLanguage: string
+  glossaryTerms: Map<string, string>
+  filePath: string
+}): Promise<{ input: number; output: number }> {
+  const { blocks, targetLanguage, glossaryTerms, filePath } = options
+  const noTokens = { input: 0, output: 0 }
+
+  const found = collectBlockComments(blocks)
+  if (found.length === 0) return noTokens
+
+  const prompt = buildCommentPrompt({
+    comments: found.map((f) => f.comment.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
+
+  let translatedMap: Record<string, string>
+  let tokensUsed = noTokens
+  try {
+    const result = await callGeminiRaw(prompt, {
+      filePath,
+      targetLanguage,
+      label: "code-comments",
+    })
+    tokensUsed = result.tokensUsed
+    translatedMap = JSON.parse(stripCodeBlockWrapping(result.text, "json"))
+  } catch (error) {
+    console.warn(
+      `  [comments] ${filePath}: fence comment translation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+    )
+    return tokensUsed
+  }
+
+  applyBlockComments(found, translatedMap)
+
+  return tokensUsed
+}
+
+/**
  * Collect code comment nodes from the normalizer tree.
  */
 function collectCommentNodes(tree: ContentNode[]): Array<{
@@ -894,22 +947,11 @@ async function translateNormalizedComments(
 ): Promise<string> {
   if (commentNodes.length === 0) return content
 
-  const commentPayload: Record<string, string> = {}
-  for (let i = 0; i < commentNodes.length; i++) {
-    commentPayload[`c${i}`] = commentNodes[i].text
-  }
-
-  const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const glossaryLines: string[] = []
-  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
-  const glossaryHint =
-    glossaryLines.length > 0
-      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
-      : ""
-
-  const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
-
-${JSON.stringify(commentPayload, null, 2)}`
+  const commentPrompt = buildCommentPrompt({
+    comments: commentNodes.map((n) => n.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
 
   const result = await callGeminiRaw(commentPrompt, {
     filePath,

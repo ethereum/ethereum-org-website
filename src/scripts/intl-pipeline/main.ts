@@ -32,7 +32,12 @@ import {
   runFuseUsd,
   usageTotals,
 } from "./lib/llm/cost-meter"
-import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
+import {
+  callGeminiRaw,
+  isLlmAvailable,
+  translateFenceComments,
+  translateFile,
+} from "./lib/llm/gemini"
 import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
@@ -443,6 +448,21 @@ async function buildGeminiTranslator(
     Object.assign(allTranslations, translations)
     totalInput += result.tokensUsed.input
     totalOutput += result.tokensUsed.output
+  }
+
+  // Fence bodies never went to the model, so their comments are translated
+  // here, in place, before anything restores them. Skipping this would revert
+  // a retranslated section's comments to English.
+  const lifted = [...codeBlocks.values()].flat()
+  if (lifted.length > 0) {
+    const commentTokens = await translateFenceComments({
+      blocks: lifted,
+      targetLanguage: locale,
+      glossaryTerms,
+      filePath,
+    })
+    totalInput += commentTokens.input
+    totalOutput += commentTokens.output
   }
 
   const translatedIds = Object.keys(allTranslations)
