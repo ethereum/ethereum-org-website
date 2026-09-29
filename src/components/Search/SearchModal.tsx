@@ -33,6 +33,8 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import AskAffordance from "./AskAffordance"
 
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
+
 // `DocSearchHit` isn't re-exported from the package root, so derive it from the
 // modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
 // object, this fork exposes flattened dotted keys (e.g. `item["hierarchy.lvl0"]`).
@@ -206,6 +208,13 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   // English only: the prompt, the guardrails and the referral records are written in
   // English and measured against the English index.
   const canAsk = locale === DEFAULT_LOCALE
+
+  // Tabbing through the answer's links takes focus out of the input, and every other key
+  // then goes nowhere useful. The hook skips this while the reader is typing, so a slash
+  // typed into the box is still a slash.
+  useKeyboardShortcut("searchFocusInput", () => {
+    document.querySelector<HTMLInputElement>(".DocSearch-Input")?.focus()
+  })
   const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
   const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
   const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"

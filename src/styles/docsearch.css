@@ -562,7 +562,7 @@
    navigable target -- the tool link, the referral and each source -- and never to the
    inline citation superscripts, which are part of the sentence. */
 .DocSearch-Ask-target--active {
-  @apply -mx-2 rounded-sm bg-primary-low-contrast px-2;
+  @apply rounded-xs bg-primary-low-contrast outline outline-4 outline-primary-low-contrast;
 }
 
 .DocSearch-Ask-sources a {

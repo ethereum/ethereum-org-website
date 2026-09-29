@@ -485,6 +485,7 @@
   "shortcut-open-language-picker": "Open the language picker",
   "shortcut-open-search": "Open search",
   "shortcut-or": "or",
+  "shortcut-search-focus-input": "Return focus to the search input",
   "shortcut-search-navigate": "Move through search results",
   "shortcut-search-ask": "Ask AI about the search text",
   "shortcut-search-select": "Open the highlighted result",

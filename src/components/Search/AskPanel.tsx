@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm"
 import { BaseLink } from "@/components/ui/Link"
 
 import { scrubQuery, type Source, withCitationLinks } from "@/lib/utils/ask"
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
@@ -182,9 +183,14 @@ const AskPanel = ({
    * rows behave. Focus stays in the input -- `aria-selected` would need listbox
    * semantics, and the library's listbox already owns that relationship with the input.
    */
-  const targetProps = (index: number) => ({
+  const targetProps = (index: number, className?: string) => ({
     "aria-current": index === activeTarget,
-    className: index === activeTarget ? "DocSearch-Ask-target--active" : "",
+    // Merged, not assigned: a `className` written after the spread silently replaced
+    // this one, which left the tool link highlighted invisibly.
+    className: cn(
+      className,
+      index === activeTarget && "DocSearch-Ask-target--active"
+    ),
     onMouseMove: () => onHoverTarget(index),
     onMouseLeave: () => onHoverTarget(null),
   })
@@ -266,16 +272,13 @@ const AskPanel = ({
       {error && <p className="DocSearch-Ask-error">{error}</p>}
 
       {done && followup && (
-        <p {...targetProps(0)} className="DocSearch-Ask-followup">
+        <p {...targetProps(0, "DocSearch-Ask-followup")}>
           <BaseLink href={followup.url}>{followup.label}</BaseLink>
         </p>
       )}
 
       {done && referral && (
-        <p
-          {...targetProps(followup ? 1 : 0)}
-          className="DocSearch-Ask-referral"
-        >
+        <p {...targetProps(followup ? 1 : 0, "DocSearch-Ask-referral")}>
           <BaseLink href={referral.url}>{referral.name}</BaseLink>
         </p>
       )}

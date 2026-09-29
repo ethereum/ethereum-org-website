@@ -179,9 +179,12 @@ const AskAffordance = () => {
         if (current === 0) scrollToAnswer()
         return claim(current > 0 ? current - 1 : null)
       }
-      // The library moves from its first row to no row at all, since nothing is
-      // highlighted by default -- so that step is ours to take, back into the answer.
-      if (activeItem().endsWith("-item-0")) return claim(count - 1)
+      // Coming up out of the library's first row. Deliberately not claimed: the library
+      // has to see this key to step off that row, and preventing it left the row active
+      // forever, so every later ArrowUp re-entered the answer and the results became
+      // unreachable. It moves to no row at all -- nothing is highlighted by default --
+      // and we take the highlight at the same moment.
+      if (activeItem().endsWith("-item-0")) setActiveSource(count - 1)
     }
 
     read()
