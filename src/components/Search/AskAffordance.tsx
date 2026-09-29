@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import { createPortal } from "react-dom"
 
 import type { Source } from "@/lib/utils/ask"
+import { cn } from "@/lib/utils/cn"
 
 import AskPanel from "./AskPanel"
 
@@ -30,6 +31,13 @@ const AskAffordance = () => {
   const [sources, setSources] = useState<Source[]>([])
   /** Index into `sources` while the highlight is in the answer, else null. */
   const [activeSource, setActiveSource] = useState<number | null>(null)
+  /**
+   * Whether the library is holding a highlighted row. Watched rather than read on
+   * keypress because the button's ring depends on it -- and a mouse hover sets it too,
+   * which is right: if hovering a result arms Enter for that result, the button is no
+   * longer what Enter does.
+   */
+  const [resultHighlighted, setResultHighlighted] = useState(false)
 
   useEffect(() => {
     // The modal renders in the same commit, so one frame is enough to find it.
@@ -57,12 +65,27 @@ const AskAffordance = () => {
     setActiveSource(null)
   }, [])
 
+  const disabled = !query || query === asked
+  const armed = !disabled && activeSource === null && !resultHighlighted
+
   const askedRef = useRef("")
   const sourcesRef = useRef<Source[]>([])
   const activeSourceRef = useRef<number | null>(null)
   askedRef.current = asked
   sourcesRef.current = sources
   activeSourceRef.current = activeSource
+
+  useEffect(() => {
+    const input =
+      host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
+    if (!input) return
+    const read = () =>
+      setResultHighlighted(Boolean(input.getAttribute("aria-activedescendant")))
+    read()
+    const observer = new MutationObserver(read)
+    observer.observe(input, { attributeFilter: ["aria-activedescendant"] })
+    return () => observer.disconnect()
+  }, [host])
 
   useEffect(() => {
     const input =
@@ -153,10 +176,14 @@ const AskAffordance = () => {
         createPortal(
           <button
             type="button"
-            className="DocSearch-Ask-trigger"
+            className={cn(
+              "DocSearch-Ask-trigger",
+              // Enter reaches the button only while nothing else holds the highlight.
+              armed && "DocSearch-Ask-trigger--armed"
+            )}
             title={t("docsearch-ask-ai")}
             onClick={() => setAsked(query)}
-            disabled={!query || query === asked}
+            disabled={disabled}
           >
             <Sparkles />
             <span>{t("docsearch-ask-ai")}</span>

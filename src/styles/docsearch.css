@@ -432,6 +432,13 @@
   @apply ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary;
 }
 
+/* Armed: Enter reaches the button. Distinct from merely enabled, which says only that
+   there is something to ask. An outline rather than a shadow, so nothing reflows when it
+   appears -- the button sits in the search bar's flex row beside the clear button. */
+.DocSearch-Ask-trigger--armed {
+  @apply outline outline-2 outline-offset-2 outline-primary-hover;
+}
+
 .DocSearch-Ask-trigger svg {
   @apply size-3.5;
 }
