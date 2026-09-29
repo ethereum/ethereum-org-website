@@ -17,23 +17,23 @@ Un reportaje de **Nym** con la científica jefa de Nym, Claudia Diaz, que explor
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=QBX5AK3DXqw) publicada por Nym. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:04) {#intro-004}
+### Introducción (0:04) {#intro-004}
 
 ¿Qué son los metadatos de las comunicaciones? Se refieren a todo lo relacionado con una comunicación que no es el contenido de lo que realmente se está diciendo. Esto incluye, por ejemplo, el origen de la comunicación, el destino, la hora a la que se envía la información, cuánta información se envía y cualquier patrón detectable, incluidos los tiempos y tamaños de los paquetes que se intercambian.
 
-#### Metadatos de las comunicaciones (0:27) {#communications-metadata-027}
+### Metadatos de las comunicaciones (0:27) {#communications-metadata-027}
 
 Los metadatos de las comunicaciones están expuestos por defecto en todos los protocolos de internet: TCP/IP, HTTP, UDP, FTP. Incluso los protocolos seguros como TLS o DNS seguro, que protegen el contenido con cifrado de extremo a extremo, siguen mostrando los metadatos de las comunicaciones: el origen, el destino, el tiempo, la longitud, etc.
 
 Así que esta información está expuesta, pero ¿a quién? ¿Quién puede obtenerla?
 
-#### Quién tiene acceso a los metadatos (1:10) {#who-gets-access-to-metadata-110}
+### Quién tiene acceso a los metadatos (1:10) {#who-gets-access-to-metadata-110}
 
 Hay una serie de entidades que son intermediarias en las comunicaciones de internet que pueden acceder a estos metadatos de las comunicaciones. Esto incluye a los grandes actores de la infraestructura de internet, como los proveedores de servicios de internet, los puntos de intercambio, los sistemas autónomos, los enrutadores BGP y los participantes de la red troncal de internet en general; ellos pueden tener acceso a una gran cantidad de metadatos de las comunicaciones. 
 
 Pero incluso los actores pequeños, como quienquiera que esté administrando el enrutador Wi-Fi o una red de área local, o alguien que pueda espiar localmente, también tienen acceso a los metadatos de las comunicaciones. Y, por supuesto, se sabe que adversarios a nivel de estado-nación como la NSA recopilan metadatos a gran escala y los analizan para extraer todo tipo de inteligencia.
 
-#### Por qué son importantes los metadatos (2:00) {#why-is-metadata-important-200}
+### Por qué son importantes los metadatos (2:00) {#why-is-metadata-important-200}
 
 Hay más razones por las que los metadatos son un tipo de datos muy interesante para recopilar y explotar. Son legibles por máquinas, porque hablan el lenguaje de las computadoras; es básicamente un lenguaje para que las computadoras puedan enrutar las comunicaciones desde su origen hasta su destino de manera adecuada. Por lo tanto, son legibles por máquinas, y eso significa que las máquinas pueden darles sentido a gran escala muy fácilmente, a diferencia del lenguaje humano natural, que es mucho más difícil de interpretar, porque tal vez las personas usan las palabras de cierta manera, o tienen matices, y esto es mucho más difícil de interpretar. Los metadatos, por otro lado, son realmente fáciles.
 
@@ -51,7 +51,7 @@ El análisis de tráfico de los metadatos puede incluso usarse para recuperar co
 
 Sin embargo, hay muchas situaciones en las que el análisis de tráfico de los metadatos de las comunicaciones puede actuar como un canal lateral que revela este contenido cifrado.
 
-#### Vigilancia de metadatos (5:15) {#metadata-surveillance-515}
+### Vigilancia de metadatos (5:15) {#metadata-surveillance-515}
 
 Un ejemplo es cuando navegas por un sitio web con HTTPS. En principio, debido a que la comunicación con este sitio web está cifrada, alguien que esté observando tu comunicación no puede saber a qué página específica estás accediendo en el sitio web. Por ejemplo, si vas a WebMD para consultar enfermedades, un observador o espía podrá ver: "De acuerdo, estás consultando información médica en WebMD", pero no puede saber qué enfermedad específica estás buscando.
 
@@ -61,7 +61,7 @@ Al hacer esto, puedes construir una huella digital de cada una de estas páginas
 
 Esto es obviamente preocupante. Aunque podamos tener cifrado de extremo a extremo, estamos muy lejos de haber terminado en términos de proteger la privacidad de nuestras comunicaciones.
 
-#### Una lista de deseos para las comunicaciones privadas (6:40) {#a-wish-list-for-private-communications-640}
+### Una lista de deseos para las comunicaciones privadas (6:40) {#a-wish-list-for-private-communications-640}
 
 Entonces, si quisiéramos tener una lista de deseos de lo que ofrecería una red de comunicación perfectamente segura, ¿cuáles son las propiedades que queremos? 
 

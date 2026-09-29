@@ -5,7 +5,7 @@ description: Zjistěte více o 7702 v aktualizaci Pectra
 lang: cs
 ---
 
-## Abstrakt
+## Abstrakt {#abstract}
 EIP-7702 definuje mechanismus pro přidání kódu k externě vlastněnému účtu (EOA). Tento návrh umožňuje EOA, starším účtům na Ethereu, získat krátkodobá vylepšení funkčnosti, což zvyšuje použitelnost aplikací. To se provádí nastavením ukazatele na již nasazený kód pomocí nového typu transakce: 4.
 
 Tento nový typ transakce zavádí seznam autorizací. Každá autorizační n-tice v seznamu je definována jako
@@ -22,7 +22,7 @@ Tento nový typ transakce zavádí seznam autorizací. Každá autorizační n-t
 Delegaci lze resetovat delegováním na nulovou adresu.
 
 Soukromý klíč EOA si po delegaci zachovává plnou kontrolu nad účtem. Například delegování na Safe neudělá z účtu multisig, protože stále existuje jediný klíč, který může obejít jakoukoli politiku podepisování. Do budoucna by vývojáři měli navrhovat s předpokladem, že jakýkoli účastník v systému může být chytrý kontrakt. Pro vývojáře chytrých kontraktů již není bezpečné předpokládat, že `tx.origin` odkazuje na EOA.
-## Osvědčené postupy
+## Osvědčené postupy {#best-practices}
 **Abstrakce účtu**: Kontrakt delegace by měl být v souladu s širšími standardy abstrakce účtu (AA) na Ethereu, aby se maximalizovala kompatibilita. Konkrétně by měl být ideálně v souladu s ERC-4337 nebo s ním kompatibilní.
 
 **Návrh nevyžadující povolení a odolný vůči cenzuře**: Ethereum si cení účasti nevyžadující povolení. Kontrakt delegace NESMÍ mít pevně zakódovaného nebo spoléhat na žádného jediného „důvěryhodného“ relayera (přeposílatele) nebo službu. To by účet znefunkčnilo, pokud by relayer přešel do režimu offline. Funkce jako dávkování (např. schválit+transferFrom) může používat samotný externě vlastněný účet (EOA) bez relayera. Pro vývojáře aplikací, kteří chtějí využívat pokročilé funkce umožněné EIP-7702 (abstrakce gasu, výběry zachovávající soukromí), budete potřebovat relayera. Ačkoli existují různé architektury relayerů, naším doporučením je používat [bundlery ERC-4337](https://www.erc4337.io/bundlers) směřující alespoň na [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), protože:
@@ -102,7 +102,7 @@ Když uživatelé provádějí delegované podpisy, cílový kontrakt přijímaj
 
 **Minimální důvěryhodný povrch a bezpečnost**: Ačkoli kontrakt delegace nabízí flexibilitu, měl by udržovat svou základní logiku minimální a auditovatelnou. Kontrakt je v podstatě rozšířením EOA uživatele, takže jakákoli chyba může být katastrofální. Implementace by měly dodržovat osvědčené postupy komunity pro bezpečnost chytrých kontraktů. Například funkce konstruktoru nebo inicializátoru musí být pečlivě zabezpečeny – jak zdůrazňuje Alchemy, pokud se v rámci 7702 používá návrhový vzor proxy, nechráněný inicializátor by mohl útočníkovi umožnit převzít kontrolu nad účtem. Týmy by se měly snažit udržovat onchain kód jednoduchý: kontrakt 7702 od Ambire má pouze ~200 řádků v Solidity, čímž záměrně minimalizuje složitost, aby se snížil počet chyb. Je třeba najít rovnováhu mezi logikou bohatou na funkce a jednoduchostí, která usnadňuje auditování.
 
-### Známé implementace
+### Známé implementace {#known-implementations}
 Vzhledem k povaze EIP-7702 se doporučuje, aby peněženky byly opatrné při pomoci uživatelům delegovat na kontrakt třetí strany. Níže je uveden seznam známých implementací, které byly auditovány:
 
 | Adresa kontraktu                           | Zdroj                                                                                                                                      | Audity                                                                                                                                                        |
@@ -129,11 +129,11 @@ Poznámka: některá aktiva by mohla být kódem delegace automaticky odmítnuta
 
 Upozorněte uživatele, že pro EOA je zavedena delegace kontrolou jeho kódu, a volitelně nabídněte odstranění delegace.
 
-#### Běžná delegace
+#### Běžná delegace {#common-delegation}
 Poskytovatel hardwaru povolí (whitelistuje) známé kontrakty delegace a implementuje jejich podporu v doprovodném softwaru. Doporučuje se vybrat kontrakt s plnou podporou ERC-4337.
 
 Externě vlastněné účty (EOA) delegované na jiný kontrakt budou zpracovány jako standardní EOA.
-#### Vlastní delegace
+#### Vlastní delegace {#custom-delegation}
 Poskytovatel hardwaru implementuje svůj vlastní kontrakt delegace a přidá jej do seznamů a implementuje jeho podporu v doprovodném softwaru. Doporučuje se vytvořit kontrakt s plnou podporou ERC-4337.
 
 Externě vlastněné účty (EOA) delegované na jiný kontrakt budou zpracovány jako standardní EOA.

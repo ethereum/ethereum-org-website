@@ -6,14 +6,14 @@ lang: vi
 
 Một khía cạnh tuyệt vời của [Ethereum](/) là các hợp đồng thông minh có thể được lập trình bằng các ngôn ngữ tương đối thân thiện với nhà phát triển. Nếu bạn đã có kinh nghiệm với Python hoặc bất kỳ [ngôn ngữ sử dụng dấu ngoặc nhọn](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) nào, bạn có thể tìm thấy một ngôn ngữ có cú pháp quen thuộc.
 
-Hai ngôn ngữ hoạt động và được bảo trì nhiều nhất là:
+Hai ngôn ngữ hoạt động và được bảo trì tích cực nhất là:
 
 - Solidity
 - Vyper
 
-Remix IDE cung cấp một môi trường phát triển toàn diện để tạo và thử nghiệm các hợp đồng bằng cả Solidity và Vyper. [Hãy thử Remix IDE trên trình duyệt](https://remix.ethereum.org) để bắt đầu viết mã.
+Remix IDE cung cấp một môi trường phát triển tích hợp (IDE) toàn diện để tạo và thử nghiệm các hợp đồng bằng cả Solidity và Vyper. [Hãy thử Remix IDE trên trình duyệt](https://remix.ethereum.org) để bắt đầu viết mã.
 
-Các nhà phát triển giàu kinh nghiệm hơn cũng có thể muốn sử dụng Yul, một ngôn ngữ trung gian cho [Máy ảo Ethereum (EVM)](/developers/docs/evm/), hoặc Yul+, một phần mở rộng của Yul.
+Các nhà phát triển giàu kinh nghiệm hơn cũng có thể muốn sử dụng Yul, một ngôn ngữ trung gian cho [Máy ảo Ethereum (EVM)](/developers/docs/evm/), hoặc Yul+, một bản mở rộng của Yul.
 
 Nếu bạn tò mò và muốn giúp thử nghiệm các ngôn ngữ mới vẫn đang trong quá trình phát triển mạnh mẽ, bạn có thể thử nghiệm với Fe, một ngôn ngữ hợp đồng thông minh mới nổi hiện vẫn đang ở giai đoạn sơ khai.
 
@@ -25,7 +25,7 @@ Kiến thức trước đây về các ngôn ngữ lập trình, đặc biệt l
 
 - Ngôn ngữ bậc cao, hướng đối tượng để triển khai các hợp đồng thông minh.
 - Ngôn ngữ sử dụng dấu ngoặc nhọn chịu ảnh hưởng sâu sắc nhất từ C++.
-- Kiểu tĩnh (kiểu của một biến được biết tại thời điểm biên dịch).
+- Kiểu tĩnh (kiểu của biến được biết tại thời điểm biên dịch).
 - Hỗ trợ:
   - Kế thừa (bạn có thể mở rộng các hợp đồng khác).
   - Thư viện (bạn có thể tạo mã có thể tái sử dụng mà bạn có thể gọi từ các hợp đồng khác nhau – giống như các hàm tĩnh trong một lớp tĩnh ở các ngôn ngữ lập trình hướng đối tượng khác).
@@ -55,10 +55,10 @@ contract Coin {
     mapping (address => uint) public balances;
 
     // Các sự kiện cho phép máy khách phản ứng với các
-    // thay đổi của hợp đồng mà bạn khai báo
+    // thay đổi hợp đồng cụ thể mà bạn khai báo
     event Sent(address from, address to, uint amount);
 
-    // Mã của hàm khởi tạo chỉ được chạy khi hợp đồng
+    // Mã hàm tạo chỉ được chạy khi hợp đồng
     // được tạo
     constructor() {
         minter = msg.sender;
@@ -94,12 +94,14 @@ Ví dụ này sẽ cho bạn hình dung về cú pháp hợp đồng Solidity. �
 - Cố tình có ít tính năng hơn Solidity với mục đích làm cho các hợp đồng an toàn hơn và dễ kiểm toán hơn. Vyper không hỗ trợ:
   - Modifiers (Bộ sửa đổi)
   - Kế thừa
-  - Inline assembly (Hợp ngữ nội tuyến)
-  - Nạp chồng hàm
-  - Nạp chồng toán tử
+  - Hợp ngữ nội tuyến (Inline assembly)
+  - Nạp chồng hàm (Function overloading)
+  - Nạp chồng toán tử (Operator overloading)
   - Gọi đệ quy
   - Vòng lặp vô hạn
-  - Dấu phẩy tĩnh nhị phân
+  - Dấu phẩy tĩnh nhị phân (Binary fixed points)
+
+Kể từ phiên bản v0.4.0, Vyper hỗ trợ một [hệ thống mô-đun](https://docs.vyperlang.org/en/stable/using-modules.html). Việc tái sử dụng mã được thực hiện thông qua thành phần (composition), thay vì kế thừa lớp.
 
 Để biết thêm thông tin, [hãy đọc cơ sở lý luận của Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
@@ -109,13 +111,13 @@ Ví dụ này sẽ cho bạn hình dung về cú pháp hợp đồng Solidity. �
 - [Vyper qua ví dụ](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [Thêm về Vyper qua ví dụ](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Chat Discord của cộng đồng Vyper](https://discord.gg/SdvKC79cJk)
+- [Kênh chat Discord của cộng đồng Vyper](https://discord.gg/SdvKC79cJk)
 - [Bảng tóm tắt (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
 - [Các framework và công cụ phát triển hợp đồng thông minh cho Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - học cách bảo mật và hack các hợp đồng thông minh Vyper](https://github.com/SupremacyTeam/VyperPunk)
 - [Vyper Hub dành cho phát triển](https://github.com/zcor/vyper-dev)
 - [Các ví dụ hợp đồng thông minh nổi bật nhất của Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Tài nguyên chọn lọc tuyệt vời về Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Tuyển tập các tài nguyên tuyệt vời về Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Ví dụ {#example}
 
@@ -132,16 +134,16 @@ auctionEnd: public(uint256)
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Được đặt thành true khi kết thúc, không cho phép bất kỳ thay đổi nào
+# Được đặt thành true vào lúc kết thúc, không cho phép bất kỳ thay đổi nào
 ended: public(bool)
 
-# Theo dõi các giá thầu được hoàn lại để chúng ta có thể tuân theo mô hình rút tiền
+# Theo dõi các giá thầu được hoàn lại để chúng ta có thể tuân theo mẫu rút tiền
 pendingReturns: public(HashMap[address, uint256])
 
 # Tạo một cuộc đấu giá đơn giản với `_bidding_time`
 # giây thời gian đấu giá thay mặt cho
 # địa chỉ người thụ hưởng `_beneficiary`.
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
@@ -164,7 +166,7 @@ def bid():
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Rút một giá thầu đã được hoàn lại trước đó. Mô hình rút tiền được
+# Rút một giá thầu đã được hoàn lại trước đó. Mẫu rút tiền được
 # sử dụng ở đây để tránh một vấn đề bảo mật. Nếu các khoản hoàn trả được trực tiếp
 # gửi như một phần của bid(), một hợp đồng đặt giá thầu độc hại có thể chặn
 # các khoản hoàn trả đó và do đó chặn các giá thầu mới cao hơn được đưa ra.
@@ -213,12 +215,12 @@ Nếu bạn mới làm quen với Ethereum và chưa từng viết mã bằng c�
 **Yul**
 
 - Ngôn ngữ trung gian cho Ethereum.
-- Hỗ trợ [EVM](/developers/docs/evm) và [Ewasm](https://github.com/ewasm), một WebAssembly mang phong cách Ethereum, và được thiết kế để trở thành mẫu số chung có thể sử dụng được cho cả hai nền tảng.
-- Mục tiêu tốt cho các giai đoạn tối ưu hóa cấp cao có thể mang lại lợi ích như nhau cho cả nền tảng EVM và Ewasm.
+- Hỗ trợ [EVM](/developers/docs/evm) và [Ewasm](https://github.com/ewasm), một phiên bản WebAssembly dành cho Ethereum, và được thiết kế để trở thành mẫu số chung có thể sử dụng được cho cả hai nền tảng.
+- Mục tiêu tốt cho các giai đoạn tối ưu hóa bậc cao có thể mang lại lợi ích như nhau cho cả nền tảng EVM và Ewasm.
 
 **Yul+**
 
-- Một phần mở rộng cấp thấp, hiệu quả cao cho Yul.
+- Một bản mở rộng bậc thấp, hiệu quả cao cho Yul.
 - Ban đầu được thiết kế cho một hợp đồng [Rollup lạc quan](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ có thể được xem như một đề xuất nâng cấp thử nghiệm cho Yul, bổ sung thêm các tính năng mới cho nó.
 
@@ -230,7 +232,7 @@ Nếu bạn mới làm quen với Ethereum và chưa từng viết mã bằng c�
 
 ### Ví dụ về hợp đồng {#example-contract-2}
 
-Ví dụ đơn giản sau đây triển khai một hàm lũy thừa. Nó có thể được biên dịch bằng cách sử dụng `solc --strict-assembly --bin input.yul`. Ví dụ này nên được lưu trữ trong tệp input.yul.
+Ví dụ đơn giản sau đây triển khai một hàm lũy thừa. Nó có thể được biên dịch bằng cách sử dụng `solc --strict-assembly --bin input.yul`. Ví dụ này nên được lưu trong tệp input.yul.
 
 ```
 {
@@ -265,12 +267,12 @@ Nếu bạn đã có nhiều kinh nghiệm với các hợp đồng thông minh,
 - [GitHub](https://github.com/ethereum/fe)
 - [Thông báo về Fe](https://blog.fe-lang.org/posts/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Lộ trình Fe 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
-- [Chat Discord của Fe](https://discord.com/invite/ywpkAXFjZH)
+- [Kênh chat Discord của Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Twitter của Fe](https://twitter.com/official_fe)
 
 ### Ví dụ về hợp đồng {#example-contract-3}
 
-Sau đây là một hợp đồng đơn giản được triển khai bằng Fe.
+Dưới đây là một hợp đồng đơn giản được triển khai bằng Fe.
 
 ```
 type BookMsg = bytes[100]
@@ -304,14 +306,14 @@ Dưới đây là một vài điều cần cân nhắc nếu bạn chưa thử b
 
 ### Điểm tuyệt vời của Vyper là gì? {#vyper-advatages}
 
-- Cách tuyệt vời để bắt đầu cho các nhà phát triển Python muốn viết các hợp đồng thông minh.
+- Cách tuyệt vời để bắt đầu cho các nhà phát triển Python muốn viết hợp đồng thông minh.
 - Vyper có số lượng tính năng ít hơn, điều này làm cho nó trở nên tuyệt vời để tạo nguyên mẫu ý tưởng nhanh chóng.
 - Vyper hướng tới mục tiêu dễ kiểm toán và tối đa hóa khả năng đọc hiểu của con người.
 
 ### Điểm tuyệt vời của Yul và Yul+ là gì? {#yul-advantages}
 
-- Ngôn ngữ cấp thấp đơn giản và đầy đủ chức năng.
-- Cho phép tiếp cận gần hơn nhiều với EVM thô, điều này có thể giúp tối ưu hóa việc sử dụng Gas cho các hợp đồng của bạn.
+- Ngôn ngữ bậc thấp đơn giản và có tính chức năng.
+- Cho phép tiến gần hơn nhiều đến EVM nguyên bản, điều này có thể giúp tối ưu hóa việc sử dụng Gas cho các hợp đồng của bạn.
 
 ## So sánh các ngôn ngữ {#language-comparisons}
 

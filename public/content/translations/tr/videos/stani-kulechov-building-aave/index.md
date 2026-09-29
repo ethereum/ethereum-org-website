@@ -18,7 +18,7 @@ Sunucu Binji ve Aave kurucusu **Stani Kulechov**'un Jenga oynarken Stani'nin Fin
 
 *Bu döküm, Ethereum Vakfı tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=EWe-cjT9IQs) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Finlandiya'da büyümek (0:28) {#growing-up-in-finland-028}
+### Finlandiya'da büyümek (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Evet, burada Jenga oynayacağız. Bununla bağlantılı bazı sorular var. İlk hamleyi yapmak istersen başlayabiliriz.
 
@@ -48,7 +48,7 @@ Sunucu Binji ve Aave kurucusu **Stani Kulechov**'un Jenga oynarken Stani'nin Fin
 
 **Stani Kulechov:** Babam her zaman teknolojiyle ilgilenmemi istedi çünkü bilgisayarların önemini görüyordu. İnternet yeni yeni ortaya çıkıyordu. Kütüphanelerde bilgisayarlar olurdu — ilk yer orasıydı. Dürüst olmak gerekirse aslında çok destekleyiciydiler.
 
-#### İlk bilgisayarı almak (3:00) {#getting-the-first-computer-300}
+### İlk bilgisayarı almak (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Onlara ne yaptığını nasıl açıklıyorsun? Artık merkeziyetsiz finansa (DeFi) aşinalar mı?
 
@@ -58,7 +58,7 @@ Sunucu Binji ve Aave kurucusu **Stani Kulechov**'un Jenga oynarken Stani'nin Fin
 
 **Stani Kulechov:** Kesinlikle. İnternet ve bilgisayarlar bilgiye erişim sağladı — bir şeyler öğrenmek için kütüphanelere gitmek veya ailenize ya da arkadaşlarınıza sormak zorunda değildiniz. Ve bence benzer bir şekilde, DeFi ve kripto da finansal araçlara erişim sağlıyor. Beni asıl motive eden şey bu. Kişisel çünkü ne kadar yardımcı olabileceğini doğrudan gördüm.
 
-#### Ethereum'u keşfetmek (5:30) {#discovering-ethereum-530}
+### Ethereum'u keşfetmek (5:30) {#discovering-ethereum-530}
 
 **Binji:** Hukuk fakültesini bırakıp Ethereum'a girmeye nasıl karar verdin?
 
@@ -70,7 +70,7 @@ Akıllı sözleşmeler geliştirmeye başladım ve tüm bu işleri Ethereum üze
 
 **Stani Kulechov:** Özgürlüğe ve merkeziyetsiz finansın birçok insan için neler yapabileceğine — onları güçlendireceğine — inanıyoruz. Kafa dengi bireylerden oluşan bir topluluğun etrafında inşa etmek gerçekten her şeyi bir araya getiriyor.
 
-#### ETHLend'i inşa etmek ve Aave'yi isimlendirmek (9:00) {#building-ethlend-and-naming-aave-900}
+### ETHLend'i inşa etmek ve Aave'yi isimlendirmek (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Aave ismi nereden geldi?
 
@@ -82,7 +82,7 @@ JPMorgan'dan ve tüm bu bankalardan ve ağlardan daha büyük olacağız. Güven
 
 **Stani Kulechov:** Evet. Ve Finlandiya'da daha küçük bir kasabadan geldiğim için fark ettiğim şey, aslında inşa ettiğimiz şeyi arayan pek çok insan olduğu — hem alanımızın içinde hem de dışında.
 
-#### Aave ve geleneksel finans (12:00) {#aave-vs-traditional-finance-1200}
+### Aave ve geleneksel finans (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** JPMorgan ve Aave'yi birbirinden nasıl ayırıyorsun?
 
@@ -90,7 +90,7 @@ JPMorgan'dan ve tüm bu bankalardan ve ağlardan daha büyük olacağız. Güven
 
 Bunu 2017'de Ethereum Reddit'inde paylaştım ve en başından beri topluluktan büyük bir heyecan gördüm. Kripto topluluğu işte böyle çalışır. Bir iş senaryosuna veya sunuma ihtiyacınız yoktur. İnsanlara sadece üzerine inşa edebilecekleri bir şey gösterirsiniz.
 
-#### Güvenlik ve kullanıcı deneyimi (14:30) {#security-and-user-experience-1430}
+### Güvenlik ve kullanıcı deneyimi (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Daha iyi erişim aynı zamanda daha iyi güvenlik anlamına gelir. Kullanıcıların oltalama (phishing) girişimleriyle tehlikeye atılmamasını nasıl sağlarsınız ve bunu geleneksel internet dünyasından nasıl daha iyi yaparız? Bunu çözmek önemlidir çünkü kullanıcıların sahip olduklarını kaybettiği bir sürece güvenemeyiz, değil mi? Bence en yaygın şey oltalama. Bir blokzincir ile etkileşime girmenin kullanıcı deneyimi (UX) doğrulamaya sahip değil.
 
@@ -102,7 +102,7 @@ Bunu 2017'de Ethereum Reddit'inde paylaştım ve en başından beri topluluktan 
 
 **Stani Kulechov:** Bazen fikrin doğrulaması olmaz. Bazen fikrin doğrulaması olabilir ama uygulama zayıftır. Yani önemli olan farklı bileşenler var. Sadece düşünmeye, ürünü geliştirmeye devam ettim ve bence doğru yol buydu.
 
-#### Melek yatırımcılık (17:00) {#angel-investing-1700}
+### Melek yatırımcılık (17:00) {#angel-investing-1700}
 
 **Binji:** Üretken bir melek yatırımcısın. Yeni geliştiricileri değerlendirirken neye bakarsın?
 
@@ -112,7 +112,7 @@ Bunu 2017'de Ethereum Reddit'inde paylaştım ve en başından beri topluluktan 
 
 **Stani Kulechov:** Pek sayılmaz, çünkü her zaman bir değer vardır. Oldukça fazla şey öğrenirsiniz, alanı ilerletirsiniz. Ve genellikle bir çıktı olarak çok fazla yetenek yaratırsınız. Bazen yatırım işe yaramaz, ancak daha sonra aynı ekip gidip daha fazla deneyime sahip oldukları ve daha başarılı olabilecekleri başka bir şirket kurabilir. Bazıları diğerlerinden daha başarılıdır, ancak genel olarak hepsi güvendiğimiz bahislerdir.
 
-#### Elde tutma ve kazanım (19:00) {#retention-vs-acquisition-1900}
+### Elde tutma ve kazanım (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Kriptoda önemsediğin bir metrik nedir?
 
@@ -122,7 +122,7 @@ Bunu 2017'de Ethereum Reddit'inde paylaştım ve en başından beri topluluktan 
 
 **Stani Kulechov:** Genellikle artık kazanım tarafında, insanlar kazanımdan çok elde tutmayı düşünüyor. İnsanların neden daha fazla etkileşime girmediğini vurguluyor — genellikle bunun nedeni bu kullanıcılar için ilgi çekici olabilecek bir ürün eksikliği olmasıdır. On yıldır altyapıya odaklanıyoruz. Bence uygulama katmanı önümüzdeki on yıl olacak ve bu, kullanıcı tabanını ölçeklendirmemize yardımcı olacak.
 
-#### Kripto volatilitesi ve kurumsal varlıklar (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Kripto volatilitesi ve kurumsal varlıklar (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Kripto sürekli olarak bu değişken (volatil) şey olarak görülüyor — ayı piyasası, boğa piyasası. Aave buna karşı bir duruş gibi, değil mi? Baştan sona sadece istikrarlı.
 
@@ -132,7 +132,7 @@ Başlattığımız Horizon piyasası gibi kurumsal varlıklarla, tokenize edilmi
 
 Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirler. Borç verenler için harika çünkü geleneksel varlıklara karşı borç verebilirler ancak bunu sabit coinlerle zincir içi yapabilirler. Bence kurumlar için, sabit coinlerin ve tokenize edilmiş varlıkların faydasını fark etmek, volatilitenin dışında düşünmelerine — ve kriptonun tamamen volatilite ile ilgili olduğunu düşünmeyi bırakmalarına — yardımcı oluyor.
 
-#### Bir güven katmanı olarak Ethereum (22:00) {#ethereum-as-a-trust-layer-2200}
+### Bir güven katmanı olarak Ethereum (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** Ethereum için, hakkında oldukça tutkulu hissettiğim şeylerden biri onun bir güven katmanı olması. Aave gibi protokoller, gerçek dünyada güvenin iş başında olduğunu gösteriyor. Bu platformlarla birlikte gelen ekonomik güvenlik ve güvenin ağırlığıyla desteklenen borç verme, borç alma işlemleridir.
 
@@ -142,7 +142,7 @@ Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirl
 
 **Stani Kulechov:** Açıkçası günden güne yaptığımız işe ne kadar emek harcandığını görmüyor. Pek çok şey göründüğü gibi kabul ediliyor. Ama bence bu eğlenceli bir süreç olmalı. İnşa etmek eğlenceli bir süreç olmalı. Eğer bunaltıcıysa burada olmamalısınız. Yaptığınız işten keyif almak için burada olmalısınız.
 
-#### İnşa ederken eğlenmek (24:00) {#having-fun-while-building-2400}
+### İnşa ederken eğlenmek (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave nasıl eğlenileceğine dair harika bir örnek. Modern finansın neye benzediğini değiştiren aynı ekibin — teminatlandırmayı hesaba katmazsak dünyanın en büyük 30. bankası, muhtemelen daha da yüksek — aynı zamanda GrAave'yi de yapıyor olması bana gerçek dışı geliyor. Bu, sizi bu dünyaya getiren topluluktan ve kültürden vazgeçmeden kripto kültürünü yeni nesil finansa taşıdığınızı kanıtlıyor.
 
@@ -152,7 +152,7 @@ Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirl
 
 **Stani Kulechov:** Bence Aave uygulaması. Sadece basitliğe odaklanmak. Basitlik ölçeklenir. Bu yönelim konusunda çok enerjiyiz — daha fazla merkeziyetsiz finansı (DeFi) ana akıma taşımak ve bunu her şeyin soyutlandığı, basit ve kullanımı kolay olan doğru yolla yapmak.
 
-#### Seni en çok ne canlı hissettiriyor (26:00) {#what-makes-you-feel-most-alive-2600}
+### Seni en çok ne canlı hissettiriyor (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** Seni en çok ne canlı hissettiriyor?
 
@@ -166,7 +166,7 @@ Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirl
 
 **Stani Kulechov:** Sadece ciddiyet unsurunu sevmiyorum. İşleri halletmenin ciddiyetini seviyorum, ama hayatta eğlenmek, işte eğlenmek zorunda olduğunuz gerçeğini seviyorum. Büyürken çok fazla özgürlüğüm vardı ve bu, aksi takdirde sahip olamayacağım deneyimler yarattı.
 
-#### Neden Londra (28:30) {#why-london-2830}
+### Neden Londra (28:30) {#why-london-2830}
 
 **Binji:** Ana merkezlerinizden biri olarak Londra'da bulunmayı seçtiniz. Neden Londra?
 
@@ -176,7 +176,7 @@ Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirl
 
 **Stani Kulechov:** Yakın zamanda ettik, evet.
 
-#### İlham ve neredeyse bırakmak (30:00) {#inspiration-and-almost-quitting-3000}
+### İlham ve neredeyse bırakmak (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Kripto ve teknoloji dışında sana ilham veren biri kim, ister liderlik tarzın olsun ister yükselişe geçtiğin dönemde olsun?
 
@@ -186,7 +186,7 @@ Borç alanlar için harika çünkü herhangi bir noktada likiditeye erişebilirl
 
 **Stani Kulechov:** Evet, bazen. Ama bu daha çok o günlüğüne bırakmak gibi bir şey. Dinlenmek için o günlüğüne pes edersiniz ve her zaman ertesi gün vardır. Özellikle çözmesi zor bir şeyiniz varsa — buradaki bulmaca gibi.
 
-#### Son kullanıcı ürünleri ve Ethereum topluluğu (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Son kullanıcı ürünleri ve Ethereum topluluğu (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Ethereum topluluğu olarak yapmamız gereken en önemli şey nedir?
 
@@ -198,7 +198,7 @@ Bu enerjiyi, özellikle son kullanıcı ürünleri içinde nasıl yönlendirebil
 
 **Stani Kulechov:** Kesinlikle. Ağ katmanında, merkeziyetsiz finans (DeFi) katmanında bu harika altyapıyı inşa ettik ve şimdi bir sonraki katman temel olarak neyin işe yaradığını inşa etmek ve bunu herkese dağıtmak. Herkes için DeFi.
 
-#### Kapanış (36:00) {#closing-3600}
+### Kapanış (36:00) {#closing-3600}
 
 **Binji:** Bence Ethereum'u keşfeden insanların çoğunluğu onu bu yüzeyler aracılığıyla keşfedecek.
 

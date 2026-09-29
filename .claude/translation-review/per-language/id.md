@@ -75,3 +75,23 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `soundness` -> `keandalan` (reliability) at 3 sites; no established id form exists.
 - `telah tidak disadari` is ungrammatical (perfective + negation).
 - `salah satu` narrows a universal to an existential in `copyleft-description-3`.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/id/page-apps.json`. 2 critical, 14 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: id not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (id-specific):**
+
+- `-defi-description` lost a coordinate verb because the glossary maps both *lending* and *borrowing* to `peminjaman` -> all four verbs restored
+
+**Notes:**
+
+- The `akun milik eksternal (EOA)` / `disebarkan` glossary migration and the cross-contract and testnet corrections are real upstream fixes.
+

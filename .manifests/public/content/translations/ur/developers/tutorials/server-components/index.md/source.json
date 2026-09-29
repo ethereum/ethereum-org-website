@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/server-components/index.md",
   "generatedAt": "2026-06-18T00:21:02.996Z",
-  "rootHash": "ab55bb4d8808",
+  "rootHash": "970a6b071fa7",
   "tree": {
-    "contentHash": "d5c5f52fa1e9",
-    "anchorHash": "5750d1e8e2f0",
+    "contentHash": "40f758196a96",
+    "anchorHash": "fec5ad10e05b",
     "children": {
       "frontmatter:title": {
-        "contentHash": "915622c198a5",
+        "contentHash": "56a48a830f91",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,32 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "99cf97df2bff"
+        "contentHash": "578e44c27087",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "d4f0bc5a29de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "b3eacd33433b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "65a407718f00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

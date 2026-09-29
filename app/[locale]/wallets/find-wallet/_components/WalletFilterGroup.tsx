@@ -1,6 +1,6 @@
 "use client"
 
-import { memo } from "react"
+import { memo, useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
 
 import Checkbox from "@/components/ui/checkbox"
@@ -44,9 +44,16 @@ function WalletFilterGroup({
   const selectedCount = options.filter((option) =>
     selectedIds.includes(option.id)
   ).length
+  const [open, setOpen] = useState(defaultOpen || selectedCount > 0)
+
+  // URL filters arrive after mount, so a collapsed group can gain a selection
+  // it would otherwise hide. Never auto-closes: that is the reader's call.
+  useEffect(() => {
+    if (selectedCount > 0) setOpen(true)
+  }, [selectedCount])
 
   return (
-    <Collapsible defaultOpen={defaultOpen}>
+    <Collapsible open={open} onOpenChange={setOpen}>
       <CollapsibleTrigger className="group flex w-full items-center gap-2 px-2 py-2.5 text-start">
         <ChevronDown className="size-4 shrink-0 text-primary transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
         <span className="flex-1 text-sm font-bold text-primary">{label}</span>

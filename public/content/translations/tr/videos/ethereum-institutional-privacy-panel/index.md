@@ -18,7 +18,7 @@ Devconnect 2025 sırasındaki Web3Privacy Now etkinliğinde, moderatörlüğün�
 
 *Bu döküm, Web3Privacy Now tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=cZqlg4W1Els) erişilebilir bir kopyasıdır. Okunabilirliği artırmak amacıyla üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Kurumsal Gizlilik Görev Gücüne Giriş (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Kurumsal Gizlilik Görev Gücüne Giriş (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Merhaba. Beni duyabiliyor musunuz? Pekâlâ. Harika. Önce çok kısa bir giriş konuşması yapacağız — yaklaşık 3 ila 5 dakikalık bir konuşma — ve ardından panele geçeceğiz. Bu özetlenmiş bir konuşma. Önceki panelde uyumluluk, gizlilik ve benzeri konulardan epeyce bahsedildi. Cyban Kongresi'nde de bu konuya değinen bir konuşma yapmıştım ve bugün ilerleyen saatlerde DeFi Günü'nde bu konuşmanın daha uzun bir versiyonu olacak. Ancak benim bahsetmek istediğim konu Ethereum üzerinde kurumsal gizlilik.
 
@@ -30,7 +30,7 @@ Buradaki tek bir büyük kurum, sonunda hangi ekosistemin kazanacağı üzerinde
 
 Ethereum'un bu kurumların sisteme katılımını sağlayabilmesi için bu gizlilik endişelerini gidermesi gerekiyor. Kurumsal Gizlilik Görev Gücü olarak yapmaya çalıştığımız şey, kurumların Ethereum'a sisteme katılımını sağlamak ve gizlilik hedeflerinin karşılandığından emin olmak. Atölye çalışmaları gibi şeyler yapıyor, bu alanı aydınlatmaya çalışıyor ve özellikle gizlilik söz konusu olduğunda kurumsal ihtiyaçları karşılayabildiğimizden emin oluyoruz. Sahip olduğumuz ilk eser bu kurumsal gizlilik haritası — devasa kurumlarla konuşuyor, iş kullanım durumlarını ve gereksinimlerini anlıyor, mümkün olduğunca açık kaynaklı hale getiriyor ve ardından kurumları çözüm alanına bağlamak için bu alandaki satıcılarla konuşuyoruz. 
 
-#### Panel Tanıtımları ve Kurumsal Sorunlar (5:00) {#panel-introductions-and-institutional-problems-500}
+### Panel Tanıtımları ve Kurumsal Sorunlar (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Kusura bakmayın biraz hızlı oldu ama umarım anlaşılır olmuştur. Bu panelde araştırma, politika ve mühendislik alanlarında pek çok uzman yer alıyor ve kurumsal gizlilik hakkında konuşacağız. 
 
@@ -48,7 +48,7 @@ Diğer yönden bakarsak, *neden halka açık bir Blokzincir üzerinde olmalıyı
 
 **Amzah:** Evet. Ben büyük bir Hollanda bankası olan ABN Amro için çalışıyorum. 5 milyon bireysel müşterimiz var. Şu anda özellikle gizlilik alanında bir şey inşa etmiyoruz, ancak örneğin şu sıralar gündemde olan şey bir dijital kimlik Cüzdanı. Genellikle bu işleyişte veriler merkezi bir veritabanında saklanır ve ardından dışarıdan bir sağlayıcı veya üçüncü bir tarafla bağlantı kurarsınız, ancak bu elbette pek güvenli değildir. Bu yüzden, örneğin dış taraflarla seçici ifşa yapabilmek için sıfır bilgi ispatlarını nasıl kullanabileceğimizi düşünmeye başladık bile. Bu anlamda, müşteri bilgilerimizi koruyabilir ve aynı zamanda onların daha geniş Web3 ortamıyla bağlantı kurmalarına izin verebiliriz.
 
-#### Somut İş Akışları ve Depolama (10:07) {#concrete-workflows-and-storage-1007}
+### Somut İş Akışları ve Depolama (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Tamam, harika. Önemseyebileceğiniz somut bir akış seçerseniz — örneğin bazı tahvil ihraçları, ticaret veya hazine ödemesi gibi — hangi adımda tam olarak kim neyi görebilir ve zincir içi ile zincir dışı olarak neler saklanır? Belki François ile başlayabiliriz.
 
@@ -68,7 +68,7 @@ Diğer uçta, belki borç verenler arasında bir pozisyon ticareti vardır ve be
 
 **Amzah:** Evet. Zach'in söylediklerine çoğunlukla katılıyorum. Geçmişte kurumlar gizliliği düşündüklerinde, sadece belki 20 bankanın katıldığı ve sadece onların içeride ne olduğunu görebildiği özel bir zincir başlatırlardı. Ancak aslında durum çok daha nüanslı. Kullanım durumuna, ne tür akışlar olduğuna ve düzenleyicinin ne bilmesi gerektiğine bağlıdır. Örneğin, rezerv kanıtı kullanarak bakiye bilgilerini daha toplu bir biçimde zincir içi ortama koyabilirsiniz.
 
-#### Tartışılamaz Gereksinimler (15:26) {#non-negotiable-requirements-1526}
+### Tartışılamaz Gereksinimler (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio ve Amzah, bankalardan, platformlardan ve düzenleyicilerden tekrar tekrar duyduğunuz tartışılamaz gereksinimler nelerdir? Denetim izleri, KYC kuralları veya raporlama gereksinimleri gibi?
 
@@ -78,7 +78,7 @@ Diğer uçta, belki borç verenler arasında bir pozisyon ticareti vardır ve be
 
 **François:** Kurucu ortağımız kurumsal alandaki müşterilerle haftalar geçiriyor ve ortaya çıkan en üst düzey talep "kontrol". Kim, neyi, ne zaman ve ne sebeple görüyor. Ve sonra bu konuşmaları detaylara indirgiyorsunuz ve inanılmaz derecede özelleştirilmiş hale geliyorlar. Bizim için bu harika çünkü geleneksel finans dünyası muhasebe uygulamalarını ve AML/CTF akışlarını oluşturmak için onlarca yıl harcadı. Bu kontrol konusunda çok spesifikler. Bu yüzden bu yetenekleri Protokol katmanında inşa ediyor ve müşterileri yolculuklarında destekliyoruz.
 
-#### Ödünleşimler ve Küresel Likidite (18:10) {#trade-offs-and-global-liquidity-1810}
+### Ödünleşimler ve Küresel Likidite (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** Şu anda yaşadığınız temel ödünleşimler nelerdir? Performansa karşı gizlilik mi, küresel Likiditeye karşı yazım kontrolleri mi, yoksa zincir içi şeffaflığa karşı zincir dışı kayıtlar mı? Zach ile başlayalım.
 
@@ -88,7 +88,7 @@ Diğer uçta, belki borç verenler arasında bir pozisyon ticareti vardır ve be
 
 Elbette karmaşıklıklar var. Bu piyasaya giren bir kurum için o kusursuz deneyimi çok önemsiyoruz, böylece kendi koşullarına sahip olabilirler. Zorluklardan biri gizlilik ile tehdit direnci arasındaki dengedir. Web3 dünyasında var olan tehdit aktörleri var ve harika bir deneyim sunmak için bunu daha iyi ele almak istiyoruz. Merkeziyetsizlik konusuna dikkatle yaklaşıyoruz — bunu nasıl yapacağımızı biliyoruz, ancak müşterilere en iyi hizmet edeceği anda yapacağız.
 
-#### Sistem Güveni ve Benimseme İtici Güçleri (20:47) {#system-trust-and-adoption-drivers-2047}
+### Sistem Güveni ve Benimseme İtici Güçleri (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, bu çözümleri kurumlar ve hükümetler tarafından nasıl güvenilir ve kullanılabilir hale getiriyorsunuz?
 
@@ -98,7 +98,7 @@ Elbette karmaşıklıklar var. Bu piyasaya giren bir kurum için o kusursuz dene
 
 **Amzah:** Bizim için özelleştirilebilir olması gerçekten çok önemli. Blokzincir artık her şeyin tamamen halka açık veya tamamen gizli olduğu tek bir kullanım durumu değil. Herkese uyan tek bir kalıp yok. Bizim için en önemli olan şeylerden biri de mevzuata uyumlu olmaktır. Avrupa'daki bankacılık sektörü sıkı bir şekilde denetleniyor ve gizlilikle ilgili bir şey doğru değilse, düzenleyiciler nezdinde kabul görmez.
 
-#### 2026'ya Bakış (23:15) {#looking-ahead-to-2026-2315}
+### 2026'ya Bakış (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Pekâlâ, neredeyse sona geldik. Kurumsal benimsemeyi anlamlı bir şekilde hızlandıracağını düşündüğünüz — teknik, operasyonel veya politika açısından — bir yapı taşı nedir? Ve 2026'da tekrar buluşursak, bu yıl gerçekleşmiş olmasının gerçekçi olduğunu düşündüğünüz şey nedir?
 
@@ -110,7 +110,7 @@ Elbette karmaşıklıklar var. Bu piyasaya giren bir kurum için o kusursuz dene
 
 **François:** Bir yıl sonra buluşursak, ilkbaharda Miden'ın Ana Ağ lansmanını yapmış olmayı isterim, böylece bunu kutlayabiliriz. Bunun ötesinde, tam merkeziyetsizlik yolunda ilerliyor olmamızı isterim. Bu büyük bir çaba gerektirecek. Gerçekleşmesini istediğim temel şey daha fazla katılım. Gizliliğin uyumlulukla çeliştiği fikri pek doğru değil, ancak ikisini birleştirmek çaba gerektiriyor. Kurumların görmek istedikleri piyasa türlerini şekillendirmeye yardımcı olmalarını istiyoruz, çünkü bunun karmaşık ve onların ihtiyaçlarına özgü olacağını biliyoruz.
 
-#### Kapanış Düşünceleri (28:05) {#closing-thoughts-2805}
+### Kapanış Düşünceleri (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Bitirmeden önce her birinize bu hafta olan bir şeyden bahsetmeniz veya kısa bir duyuru yapmanız için 10 ila 20 saniye vermek istiyorum.
 

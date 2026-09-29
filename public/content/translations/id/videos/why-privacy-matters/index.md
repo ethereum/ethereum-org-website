@@ -17,7 +17,7 @@ Sebuah bincang TED oleh **Glenn Greenwald**, salah satu reporter pertama yang me
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=pcSlowAhvUk) yang dipublikasikan oleh TED. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengalaman yang pernah dialami semua orang (0:12) {#an-experience-everyone-has-had-012}
+### Pengalaman yang pernah dialami semua orang (0:12) {#an-experience-everyone-has-had-012}
 
 Ada seluruh genre video YouTube yang dikhususkan untuk sebuah pengalaman yang saya yakin pernah dialami oleh semua orang di ruangan ini. Ini melibatkan seorang individu yang, karena mengira mereka sendirian, melakukan beberapa perilaku ekspresif—bernyanyi dengan liar, menari berputar-putar, beberapa aktivitas seksual ringan—hanya untuk menemukan bahwa, pada kenyataannya, mereka tidak sendirian, bahwa ada seseorang yang menonton dan mengintai, penemuan yang menyebabkan mereka segera menghentikan apa yang mereka lakukan dengan ngeri. 
 
@@ -25,7 +25,7 @@ Rasa malu dan penghinaan di wajah mereka sangat jelas. Itu adalah perasaan, "Ini
 
 Inilah inti dari pekerjaan yang menjadi fokus tunggal saya selama 16 bulan terakhir: pertanyaan tentang mengapa privasi itu penting, sebuah pertanyaan yang muncul dalam konteks perdebatan global, yang dimungkinkan oleh pengungkapan Edward Snowden bahwa Amerika Serikat dan para mitranya, tanpa diketahui oleh seluruh dunia, telah mengubah Internet, yang dulunya digembar-gemborkan sebagai alat pembebasan dan demokratisasi yang belum pernah ada sebelumnya, menjadi zona pengawasan massal tanpa pandang bulu yang belum pernah terjadi sebelumnya.
 
-#### Argumen "tidak ada yang disembunyikan" (1:29) {#the-nothing-to-hide-argument-129}
+### Argumen "tidak ada yang disembunyikan" (1:29) {#the-nothing-to-hide-argument-129}
 
 Ada sentimen yang sangat umum yang muncul dalam perdebatan ini, bahkan di antara orang-orang yang tidak nyaman dengan pengawasan massal, yang mengatakan bahwa tidak ada bahaya nyata yang timbul dari invasi skala besar ini karena hanya orang-orang yang terlibat dalam tindakan buruk yang memiliki alasan untuk ingin bersembunyi dan peduli dengan privasi mereka.
 
@@ -37,7 +37,7 @@ Namun sebaliknya, orang baik adalah orang yang pergi bekerja, pulang ke rumah, m
 
 Orang-orang yang benar-benar mengatakan hal itu terlibat dalam tindakan merendahkan diri yang sangat ekstrem. Apa yang sebenarnya mereka katakan adalah, "Saya telah setuju untuk menjadikan diri saya orang yang tidak berbahaya dan tidak mengancam serta tidak menarik sehingga saya sebenarnya tidak takut pemerintah mengetahui apa yang sedang saya lakukan."
 
-#### Bahkan para pengkritik privasi tidak memercayai apa yang mereka katakan (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Bahkan para pengkritik privasi tidak memercayai apa yang mereka katakan (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Pola pikir ini telah menemukan apa yang menurut saya merupakan ekspresi paling murninya dalam sebuah wawancara tahun 2009 dengan CEO lama Google, Eric Schmidt, yang, ketika ditanya tentang semua cara berbeda perusahaannya menyebabkan invasi privasi bagi ratusan juta orang di seluruh dunia, mengatakan ini: "Jika Anda melakukan sesuatu yang Anda tidak ingin orang lain ketahui, mungkin Anda tidak seharusnya melakukannya sejak awal."
 
@@ -49,7 +49,7 @@ Eric Schmidt yang sama, CEO Google, memerintahkan karyawannya di Google untuk be
 
 Pembagian yang sama ini dapat dilihat pada CEO Facebook, Mark Zuckerberg, yang dalam sebuah wawancara terkenal pada tahun 2010 menyatakan bahwa privasi bukan lagi "norma sosial." Tahun lalu, Mark Zuckerberg dan istri barunya membeli tidak hanya rumah mereka sendiri tetapi juga keempat rumah yang berdekatan di Palo Alto dengan total 30 juta dolar untuk memastikan bahwa mereka menikmati zona privasi yang mencegah orang lain memantau apa yang mereka lakukan dalam kehidupan pribadi mereka.
 
-#### Tantangan kata sandi email (4:51) {#the-email-password-challenge-451}
+### Tantangan kata sandi email (4:51) {#the-email-password-challenge-451}
 
 Selama 16 bulan terakhir, saat saya memperdebatkan masalah ini di seluruh dunia, setiap kali seseorang berkata kepada saya, "Saya tidak terlalu khawatir tentang invasi privasi karena saya tidak punya apa pun untuk disembunyikan," saya selalu mengatakan hal yang sama kepada mereka. 
 
@@ -65,7 +65,7 @@ Ada alasan mengapa kita mencari hal itu, dan alasan kita adalah bahwa kita semua
 
 Kita membuat penilaian setiap hari tentang jenis hal yang kita katakan dan pikirkan serta lakukan yang bersedia kita biarkan orang lain ketahui, dan jenis hal yang kita katakan dan pikirkan serta lakukan yang tidak ingin kita ketahui oleh orang lain. Orang-orang dapat dengan sangat mudah mengklaim dengan kata-kata bahwa mereka tidak menghargai privasi mereka, tetapi tindakan mereka meniadakan keaslian keyakinan tersebut.
 
-#### Diawasi mengubah perilaku kita (7:02) {#being-watched-changes-our-behavior-702}
+### Diawasi mengubah perilaku kita (7:02) {#being-watched-changes-our-behavior-702}
 
 Nah, ada alasan mengapa privasi sangat didambakan secara universal dan naluriah. Ini bukan sekadar gerakan refleksif seperti menghirup udara atau minum air. Alasannya adalah ketika kita berada dalam keadaan di mana kita dapat dipantau, di mana kita dapat diawasi, perilaku kita berubah secara dramatis. 
 
@@ -73,7 +73,7 @@ Rentang pilihan perilaku yang kita pertimbangkan ketika kita berpikir kita sedan
 
 Rasa malu manusia adalah motivator yang sangat kuat, begitu pula keinginan untuk menghindarinya, dan itulah alasan mengapa orang-orang, ketika mereka berada dalam keadaan diawasi, membuat keputusan yang bukan merupakan produk sampingan dari kehendak mereka sendiri melainkan tentang ekspektasi yang dimiliki orang lain terhadap mereka atau mandat dari ortodoksi masyarakat.
 
-#### Panoptikon Bentham (8:09) {#benthams-panopticon-809}
+### Panoptikon Bentham (8:09) {#benthams-panopticon-809}
 
 Kesadaran ini dieksploitasi dengan sangat kuat untuk tujuan pragmatis oleh filsuf abad ke-18 Jeremy Bentham, yang berangkat untuk menyelesaikan masalah penting yang dibawa oleh era industri, di mana, untuk pertama kalinya, institusi telah menjadi begitu besar dan terpusat sehingga mereka tidak lagi mampu memantau dan oleh karena itu mengendalikan setiap anggota individu mereka. 
 
@@ -81,7 +81,7 @@ Dan solusi yang ia rancang adalah desain arsitektur yang awalnya dimaksudkan unt
 
 Filsuf Prancis abad ke-20 Michel Foucault menyadari bahwa model tersebut dapat digunakan tidak hanya untuk penjara tetapi untuk setiap institusi yang berupaya mengendalikan perilaku manusia: sekolah, rumah sakit, pabrik, tempat kerja. Dan apa yang ia katakan adalah bahwa pola pikir ini, kerangka kerja yang ditemukan oleh Bentham ini, adalah sarana utama kontrol masyarakat untuk masyarakat Barat modern, yang tidak lagi membutuhkan senjata tirani yang terang-terangan—menghukum atau memenjarakan atau membunuh para pembangkang, atau secara hukum memaksa kesetiaan kepada partai tertentu—karena pengawasan massal menciptakan penjara dalam pikiran yang merupakan sarana yang jauh lebih halus meskipun jauh lebih efektif untuk mendorong kepatuhan terhadap norma-norma sosial atau dengan ortodoksi sosial, jauh lebih efektif daripada kekerasan fisik.
 
-#### Orwell, agama, dan penjara dalam pikiran (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, agama, dan penjara dalam pikiran (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Karya sastra paling ikonik tentang pengawasan dan privasi adalah novel George Orwell *1984*, yang kita semua pelajari di sekolah, dan oleh karena itu hampir menjadi klise. Faktanya, setiap kali Anda mengungkitnya dalam perdebatan tentang pengawasan, orang-orang secara instan mengabaikannya sebagai tidak dapat diterapkan, dan apa yang mereka katakan adalah, "Oh, di *1984*, ada monitor di rumah orang-orang, mereka diawasi setiap saat, dan itu tidak ada hubungannya dengan negara pengawasan yang kita hadapi." 
 
@@ -93,7 +93,7 @@ Apa yang diakui oleh semua karya yang tampaknya berbeda ini, kesimpulan yang mer
 
 Sebaliknya, yang lebih penting lagi, ini adalah ranah privasi, kemampuan untuk pergi ke suatu tempat di mana kita dapat berpikir dan bernalar serta berinteraksi dan berbicara tanpa pandangan menghakimi orang lain yang ditujukan kepada kita, di mana kreativitas dan eksplorasi serta perbedaan pendapat secara eksklusif berada, dan itulah alasan mengapa, ketika kita membiarkan sebuah masyarakat ada di mana kita tunduk pada pemantauan terus-menerus, kita membiarkan esensi kebebasan manusia menjadi sangat lumpuh.
 
-#### Dua pelajaran destruktif (12:30) {#two-destructive-lessons-1230}
+### Dua pelajaran destruktif (12:30) {#two-destructive-lessons-1230}
 
 Poin terakhir yang ingin saya amati tentang pola pikir ini, gagasan bahwa hanya orang yang melakukan kesalahan yang memiliki hal-hal untuk disembunyikan dan oleh karena itu memiliki alasan untuk peduli dengan privasi, adalah bahwa hal itu menanamkan dua pesan yang sangat destruktif, dua pelajaran destruktif. Yang pertama adalah bahwa satu-satunya orang yang peduli dengan privasi, satu-satunya orang yang akan mencari privasi, menurut definisi adalah orang jahat. 
 
@@ -111,7 +111,7 @@ Aktivis sosialis terkenal Rosa Luxemburg pernah berkata, "Dia yang tidak bergera
 
 Terima kasih banyak. (Tepuk tangan)
 
-#### Tanya Jawab dengan Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Tanya Jawab dengan Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, terima kasih. Argumennya cukup meyakinkan, harus saya katakan, tetapi saya ingin membawa Anda kembali ke 16 bulan terakhir dan ke Edward Snowden untuk beberapa pertanyaan, jika Anda tidak keberatan. Yang pertama bersifat pribadi bagi Anda. Kita semua telah membaca tentang penangkapan pasangan Anda, David Miranda, di London, dan kesulitan lainnya, tetapi saya berasumsi bahwa dalam hal keterlibatan dan risiko pribadi, tekanan pada Anda tidak semudah itu untuk menghadapi organisasi berdaulat terbesar di dunia. Ceritakan sedikit tentang hal itu.
 

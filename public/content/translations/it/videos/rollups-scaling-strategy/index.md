@@ -20,7 +20,7 @@ Una spiegazione di **Finematics** che tratta i rollup come strategia di ridimens
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=7pWxCklcNsU) pubblicata da Finematics. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Layer 2 (1:17) {#layer-2-117}
+### Layer 2 (1:17) {#layer-2-117}
 
 Il ridimensionamento di Ethereum è stato uno degli argomenti più discussi nel mondo cripto. Il dibattito sul ridimensionamento di solito si accende durante i periodi di elevata attività della rete, come la mania dei CryptoKitties nel 2017, l'estate della finanza decentralizzata (DeFi) del 2020 o il mercato rialzista delle cripto all'inizio del 2021. Durante questi periodi, la domanda senza precedenti per la rete Ethereum ha portato a commissioni del gas estremamente elevate, rendendo costoso per gli utenti comuni pagare le proprie transazioni.
 
@@ -28,7 +28,7 @@ Per affrontare questo problema, la ricerca della soluzione di ridimensionamento 
 
 In generale, ci sono tre modi principali per ridimensionare Ethereum, o di fatto la maggior parte delle altre blockchain: ridimensionare la blockchain stessa (ridimensionamento del layer 1), costruire sopra il layer 1 (ridimensionamento del layer 2) e costruire a lato del layer 1 (sidechain).
 
-#### Al di fuori del layer 1 (1:58) {#outside-of-layer-1-158}
+### Al di fuori del layer 1 (1:58) {#outside-of-layer-1-158}
 
 Per quanto riguarda il layer 1, Eth2 è la soluzione scelta per ridimensionare la blockchain di Ethereum. Eth2 si riferisce a un insieme di modifiche interconnesse come la migrazione alla Proof-of-Stake (PoS), la fusione dello stato della blockchain basata sulla Prova di lavoro (PoW) nella nuova catena Proof-of-Stake e lo sharding. Lo sharding, in particolare, può aumentare drasticamente la capacità transazionale della rete Ethereum, specialmente se combinato con i rollup.
 
@@ -42,7 +42,7 @@ Per ottenere ciò, le transazioni del rollup vengono eseguite su una catena sepa
 
 Ogni rollup distribuisce un insieme di contratti intelligenti sul layer 1 che sono responsabili dell'elaborazione di depositi e prelievi e della verifica delle prove. Le prove sono anche il punto in cui entra in gioco la distinzione principale tra i diversi tipi di rollup. I rollup ottimistici utilizzano prove di frode, mentre gli ZK rollup utilizzano prove di validità.
 
-#### Rollup ottimistici (4:26) {#optimistic-rollups-426}
+### Rollup ottimistici (4:26) {#optimistic-rollups-426}
 
 I rollup ottimistici pubblicano i dati sul layer 1 e presumono che siano corretti: da qui il nome "ottimistici". Se i dati pubblicati sono validi, ci troviamo nello scenario ideale e non c'è nient'altro da fare. Il rollup ottimistico trae vantaggio dal non dover svolgere alcun lavoro aggiuntivo nello scenario ottimistico.
 
@@ -58,7 +58,7 @@ Il sistema può funzionare come previsto e rilevare le frodi anche se c'è solo 
 
 Per quanto riguarda gli ZK rollup, non c'è alcuna risoluzione delle controversie. Ciò è possibile sfruttando un ingegnoso elemento di crittografia chiamato prove a conoscenza zero: da qui il nome ZK rollup. In questo modello, ogni lotto pubblicato sul layer 1 include una prova crittografica chiamata ZK-SNARK. La prova può essere verificata rapidamente dal contratto del layer 1 quando viene inviato il lotto di transazioni e i lotti non validi possono essere rifiutati immediatamente.
 
-#### Altre differenze (7:28) {#other-differences-728}
+### Altre differenze (7:28) {#other-differences-728}
 
 A causa della natura del processo di risoluzione delle controversie, i rollup ottimistici devono concedere a tutti i partecipanti alla rete tempo sufficiente per inviare prove di frode prima di finalizzare una transazione sul layer 1. Questo periodo è solitamente piuttosto lungo, per garantire che anche nello scenario peggiore le transazioni fraudolente possano ancora essere contestate. Ciò fa sì che i prelievi dai rollup ottimistici siano piuttosto lunghi, poiché gli utenti devono aspettare fino a una o due settimane per poter prelevare i propri fondi e riportarli sul layer 1.
 
@@ -70,7 +70,7 @@ Tuttavia, gli ZK rollup presentano i propri svantaggi. A causa della complessit�
 
 I rollup ottimistici hanno vita un po' più facile con la compatibilità EVM. Devono comunque eseguire la propria versione dell'EVM con alcune modifiche, ma il 99% dei contratti può essere trasferito senza apportare alcuna modifica. Gli ZK rollup sono anche molto più pesanti dal punto di vista computazionale rispetto ai rollup ottimistici, il che significa che i nodi che calcolano le prove ZK devono essere macchine ad alte prestazioni, rendendo difficile per altri utenti eseguirli.
 
-#### Miglioramenti del ridimensionamento (9:32) {#scaling-improvements-932}
+### Miglioramenti del ridimensionamento (9:32) {#scaling-improvements-932}
 
 Per quanto riguarda i miglioramenti del ridimensionamento, entrambi i tipi di rollup dovrebbero essere in grado di ridimensionare Ethereum da circa 15-45 transazioni al secondo (a seconda del tipo di transazione) fino a 1.000-4.000 transazioni al secondo. Vale la pena notare che è possibile elaborare ancora più transazioni al secondo offrendo più spazio per i lotti di rollup sul layer 1.
 
@@ -84,7 +84,7 @@ Sebbene sia Arbitrum che Optimism cerchino di raggiungere lo stesso obiettivo, o
 
 Un'altra grande differenza è l'approccio alla gestione dell'ordinamento delle transazioni e del MEV. Arbitrum eseguirà inizialmente un sequencer responsabile dell'ordinamento delle transazioni, ma vogliono decentralizzarlo a lungo termine. Optimism preferisce un altro approccio in cui l'ordinamento delle transazioni, e quindi il MEV, può essere messo all'asta ad altre parti per un certo periodo di tempo.
 
-#### ZK rollup (13:10) {#zk-rollups-1310}
+### ZK rollup (13:10) {#zk-rollups-1310}
 
 Sebbene sembri che la comunità di Ethereum si stia concentrando principalmente sui rollup ottimistici, almeno a breve termine, anche i progetti che lavorano sugli ZK rollup stanno progredendo in modo estremamente rapido.
 
@@ -92,11 +92,11 @@ Loopring utilizza la tecnologia ZK rollup per ridimensionare il suo protocollo d
 
 I rollup basati su StarkWare sono già ampiamente utilizzati da progetti come DeversiFi, Immutable X e dYdX. Come accennato in precedenza, zkSync sta lavorando a una macchina virtuale compatibile con l'EVM che sarà in grado di supportare completamente qualsiasi contratto intelligente arbitrario scritto in Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 I rollup dovrebbero avere un grande impatto anche sulla DeFi. Gli utenti che in precedenza non erano in grado di effettuare transazioni su Ethereum a causa delle elevate commissioni di transazione potranno rimanere nell'ecosistema la prossima volta che l'attività della rete sarà elevata. I rollup consentiranno anche una nuova generazione di applicazioni che richiedono transazioni più economiche e tempi di conferma più rapidi, il tutto pur essendo completamente protette dal consenso di Ethereum. Sembra che i rollup possano innescare un altro periodo di forte crescita per la DeFi.
 
-#### Sfide (14:29) {#challenges-1429}
+### Sfide (14:29) {#challenges-1429}
 
 Ci sono, tuttavia, alcune sfide per quanto riguarda i rollup. La componibilità è una di queste: per comporre una transazione che utilizza più protocolli, tutti dovrebbero essere distribuiti sullo stesso rollup.
 
@@ -104,7 +104,7 @@ Un'altra sfida è la liquidità frammentata. Senza nuovo denaro in entrata nell'
 
 Questo significa anche che naturalmente ci saranno vincitori e vinti. Al momento, l'ecosistema Ethereum esistente non è abbastanza grande da utilizzare tutte le soluzioni di ridimensionamento. Questo potrebbe cambiare, e probabilmente cambierà, a lungo termine, ma a breve termine potremmo vedere alcuni rollup e altre soluzioni di ridimensionamento diventare città fantasma. In futuro, potremmo anche vedere utenti vivere interamente all'interno di un ecosistema di rollup e non interagire con la catena principale di Ethereum e altre soluzioni di ridimensionamento per lunghi periodi di tempo.
 
-#### Minaccia per le sidechain (15:44) {#threat-to-sidechains-1544}
+### Minaccia per le sidechain (15:44) {#threat-to-sidechains-1544}
 
 Una domanda che sorge molto spesso quando si discute dei rollup è se rappresentino una minaccia per le sidechain. Le sidechain avranno ancora il loro posto nell'ecosistema Ethereum. Sebbene il costo delle transazioni sul layer 2 sarà molto inferiore rispetto al layer 1, molto probabilmente sarà ancora abbastanza alto da escludere determinati tipi di applicazioni come i giochi e altre app ad alto volume. Questo potrebbe cambiare quando Ethereum introdurrà lo sharding, ma per allora le sidechain potrebbero creare un effetto rete sufficiente per sopravvivere a lungo termine.
 

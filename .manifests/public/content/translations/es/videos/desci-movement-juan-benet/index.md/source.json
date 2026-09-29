@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/desci-movement-juan-benet/index.md",
   "generatedAt": "2026-04-28T23:13:22.095Z",
-  "rootHash": "a1cd3f31d952",
+  "rootHash": "13f1777c8a7f",
   "tree": {
-    "contentHash": "0fa39d502b17",
-    "anchorHash": "5afed16ab921",
+    "contentHash": "dc9e4faed019",
+    "anchorHash": "15d591d79b08",
     "children": {
       "frontmatter:title": {
-        "contentHash": "e4b219b6a214",
+        "contentHash": "2198f7930723",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ef800d07ab27",
+        "contentHash": "bdbbd7541159",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ebac60a4c1b7"
+        "anchorHash": "485f7bb7e803"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0c251bf3fe78"
+        "anchorHash": "d2e5095da361"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "333be7c9741c",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f09e6be1c16b"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2514e1475add"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "44d59744abee"
+        "anchorHash": "7e0cbbd71a43"
       },
       "prose:1": {
         "contentHash": "4a4408d27048",

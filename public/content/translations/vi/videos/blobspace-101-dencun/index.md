@@ -20,7 +20,7 @@ Cuộc phỏng vấn này đề cập đến tài nguyên không gian khối d�
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=dFjyUY3e53Q) do Bankless xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu về không gian khối dữ liệu (0:00) {#introduction-to-blob-space-000}
+### Giới thiệu về không gian khối dữ liệu (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Chào mừng đến với Bankless, nơi chúng ta khám phá Biên giới của tiền tệ internet và tài chính internet. Đây là cách để bắt đầu, cách để trở nên tốt hơn, cách để đón đầu cơ hội. Tôi đang ở đây cùng với David Hoffman, và chúng tôi ở đây để giúp bạn trở nên "bankless" (không phụ thuộc vào ngân hàng) hơn. Bạn biết chúng ta thường nói các Chuỗi khối bán các khối như thế nào không? Chà, sắp tới Ethereum sẽ bán nhiều thứ hơn là chỉ các khối — nó cũng sẽ bán cả các khối dữ liệu nữa.
 
@@ -38,7 +38,7 @@ Cuộc phỏng vấn này đề cập đến tài nguyên không gian khối d�
 
 Hãy cùng chào đón khách mời của chúng ta, Dom, hay còn được biết đến với tên Domothy. Anh ấy là một nhà nghiên cứu tại Tổ chức Ethereum, làm việc trong lĩnh vực nghiên cứu và phát triển các bản nâng cấp Ethereum quan trọng sắp tới, bao gồm EIP-4844 (chủ đề của ngày hôm nay), danksharding toàn phần và đốt MEV.
 
-#### Lịch sử của lộ trình tập trung vào bản cuộn (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
+### Lịch sử của lộ trình tập trung vào bản cuộn (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** Vậy Dom, để hiểu đầy đủ về cách chúng ta đạt được không gian khối dữ liệu, tôi nghĩ thật đáng để nhìn lại quá khứ nhằm hiểu toàn bộ lộ trình của Ethereum, bởi vì nó đã đi đến một kết luận rất hợp lý về các khối dữ liệu và không gian khối dữ liệu. Bạn có thể đưa chúng tôi quay lại quá khứ không? Bởi vì đã có lúc, lộ trình tập trung vào bản cuộn của Ethereum không hề tồn tại. Chúng ta đã có một thứ gọi là phân mảnh thực thi (execution sharding), thứ mà chúng ta chưa bao giờ thực sự có được. Điểm nào trong lịch sử lộ trình của Ethereum là phù hợp để thực sự hiểu toàn bộ bối cảnh của không gian khối dữ liệu?
 
@@ -58,7 +58,7 @@ Bây giờ những gì chúng ta đang làm với lộ trình tập trung vào b
 
 Quay lại cuối năm 2020, mọi người nhận ra các bản cuộn đang bắt đầu trở nên cực kỳ tốt và phổ biến, và chúng đã giải quyết vấn đề mở rộng quy mô thực thi của chúng ta mà không cần đến phân mảnh thực thi. Bằng cách đi theo một hệ sinh thái các bản cuộn thay vì cố gắng trở thành một người theo chủ nghĩa tối đa hóa lớp 1 (l1), các bản cuộn có thể đưa ra những đánh đổi của riêng chúng, tạo ra các Chuỗi khối của riêng chúng và thử nghiệm những điều mới mẻ. Ethereum xử lý việc xác minh — đó là cốt lõi của một Chuỗi khối.
 
-#### Không gian khối dữ liệu là gì? (30:00) {#what-is-blob-space-3000}
+### Không gian khối dữ liệu là gì? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Bây giờ hãy đưa chúng tôi đến trạng thái hiện tại, Dom. Chúng ta có nhiều bản cuộn sử dụng không gian khối lớp 1 (l1) của Ethereum, trả phí Gas cao để đăng dữ liệu trạng thái của chúng để bất kỳ ai cũng có thể xác minh nó. Vậy, Dom, khối dữ liệu là gì?
 
@@ -72,7 +72,7 @@ Về cơ bản, nó là một gói hàng được niêm phong. Lớp 1 (l1) nh�
 
 **Domothy:** Chính xác. Và một thuộc tính quan trọng khác của các khối dữ liệu là chúng tự động bị cắt tỉa sau một khoảng thời gian — hiện tại là khoảng 18 ngày. Lý do chúng bị cắt tỉa là để đảm bảo việc xác minh không cần tin cậy, các cá nhân chỉ cần dữ liệu đó có sẵn để chứng minh tính chung cuộc và sự đồng thuận về trạng thái bản cuộn trong một khoảng thời gian thử thách cụ thể. Bạn không cần một nghìn nút giữ các khối dữ liệu từ hai năm trước để xác minh giao dịch của bạn ngày hôm nay. Khi khoảng thời gian đó hết hạn, bạn sẽ không lấy được nó từ một nút Ethereum nữa; bạn lấy nó từ các nhà cung cấp lịch sử, các trình lập chỉ mục hoặc các trình khám phá khối gốc của bản cuộn. Lưu trữ trên Ethereum là cực kỳ đắt đỏ mãi mãi. Việc loại bỏ yêu cầu lưu trữ cho phép chúng ta mở rộng thông lượng khối dữ liệu mà không phá hủy ổ cứng của những người vận hành nút.
 
-#### Kinh tế học và danksharding toàn phần (55:00) {#economics-and-full-danksharding-5500}
+### Kinh tế học và danksharding toàn phần (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** Chúng ta biết rằng 4844 là bước một — thứ mà chúng ta gọi là Proto-Danksharding. Nó thiết lập định dạng khối dữ liệu và thị trường phí bị cô lập, nhưng số lượng khối dữ liệu mục tiêu thực tế trên mỗi khối ban đầu bị hạn chế để khá an toàn. Điều này trông như thế nào khi mở rộng quy mô hướng tới danksharding toàn phần?
 
@@ -86,7 +86,7 @@ Với thị trường phí hai chiều — về cơ bản là một con đườn
 
 **Domothy:** Đúng vậy, chúng hoàn toàn bị ngắt kết nối. Và điều ngược lại cũng đúng. Nếu thông lượng lớp 2 (l2) tăng vọt mạnh mẽ và hàng nghìn bản cuộn hoạt động và làm tắc nghẽn không gian khối dữ liệu, sự gia tăng đột biến của phí cơ sở khối dữ liệu sẽ không ảnh hưởng đến chi phí thực hiện một giao dịch đơn giản trên Mạng chính Ethereum. Phí cơ sở khối dữ liệu hoạt động chính xác giống như phí cơ sở EIP-1559, nhưng trên khía cạnh riêng của nó. Và đối với câu hỏi trước đó của bạn về việc đốt — đúng vậy, phí blob tạo ra ETH bị đốt để trả cho việc đưa dữ liệu vào không gian khối dữ liệu, hoàn toàn tách biệt với việc đốt phí cơ sở của không gian khối.
 
-#### Tương lai của khả năng mở rộng quy mô Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
+### Tương lai của khả năng mở rộng quy mô Ethereum (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** Tôi muốn đi đến những gì xảy ra cụ thể khi phát hành 4844. Ban đầu, rõ ràng có một kỳ vọng rất cao rằng khi dung lượng khối dữ liệu đột ngột được mở khóa, sẽ không có đủ nhu cầu bản cuộn tại chính xác phần triệu giây đó để lấp đầy nó hoàn toàn. Không gian khối dữ liệu sẽ rẻ đến mức gần như nực cười khi ra mắt. Nhưng chẳng phải có quy luật về nhu cầu cảm ứng sao? Nếu bạn có các tài nguyên cực kỳ rẻ, các ứng dụng tiêu thụ những tài nguyên đó sẽ bùng nổ về khối lượng.
 

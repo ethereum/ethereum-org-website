@@ -19,13 +19,13 @@ Bài thuyết trình này khám phá các loại hình tái tổ chức khối c
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=xcPxwhrg3Ao) được xuất bản bởi LisCon. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu và bối cảnh (0:03) {#introduction-and-background-003}
+### Giới thiệu và bối cảnh (0:03) {#introduction-and-background-003}
 
 Chào mừng các bạn. Hôm nay tôi sẽ nói về các đợt tái tổ chức có thể xảy ra trong Bằng chứng cổ phần (PoS) Ethereum.
 
 Tôi mới gia nhập Tổ chức Ethereum gần đây, cụ thể là Nhóm Khuyến khích Mạnh mẽ (Robust Incentives Group). Về cơ bản, chúng tôi là một nhóm nghiên cứu tập trung vào bất cứ thứ gì liên quan đến các biện pháp khuyến khích. Tôi sẽ nói ngắn gọn thôi — bài nói chuyện này có rất nhiều thông tin và bạn có thể tìm thấy hầu hết các công việc của chúng tôi trên GitHub.
 
-#### Hai loại tái tổ chức (0:44) {#two-types-of-reorgs-044}
+### Hai loại tái tổ chức (0:44) {#two-types-of-reorgs-044}
 
 Hôm nay tôi muốn nói về tái tổ chức, và cụ thể tôi muốn phác thảo hai loại tái tổ chức khác nhau có thể xảy ra trong lĩnh vực Bằng chứng cổ phần (PoS) Ethereum.
 
@@ -37,7 +37,7 @@ Bây giờ, tái tổ chức ex-ante lại hơi khác một chút. Ý tưởng l
 
 Bạn có thể tự hỏi tại sao lại muốn thực hiện loại tái tổ chức này. Chà, vẫn còn MEV để thu thập. Nếu may mắn, khối N+2 có rất nhiều MEV — bạn có thể thu thập nó chỉ bằng cách sao chép và dán bất cứ thứ gì có trong khối đó. Trong trường hợp xấu nhất, về cơ bản bạn có các giao dịch trị giá bằng hai khe để lắng nghe.
 
-#### Tái tổ chức ex-post trong Bằng chứng công việc (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Tái tổ chức ex-post trong Bằng chứng công việc (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Trước khi đi sâu vào tái tổ chức ex-ante, chủ đề chính của bài nói chuyện này, hãy để tôi tóm tắt ngắn gọn về tái tổ chức ex-post và đặc biệt là bắt đầu với bối cảnh Bằng chứng công việc (PoW).
 
@@ -45,7 +45,7 @@ Về cơ bản, đây là bản tóm tắt bài đăng trên blog của những 
 
 Tóm lại, trong Bằng chứng công việc (PoW) Ethereum, tái tổ chức ex-post rất khó nhưng không phải là không thể. Một thợ đào nắm giữ 10% có cơ hội tương đối tốt để khai thác một vài khối liên tiếp, và nếu phần thưởng đủ cao — hãy tưởng tượng có một khối với lượng MEV trị giá 100 ETH để thu thập — thì có lẽ tỷ lệ thành công một phần trăm thực sự có thể đủ để khiến việc cố gắng tái tổ chức trở nên đáng giá.
 
-#### Tái tổ chức ex-post trong Bằng chứng cổ phần (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Tái tổ chức ex-post trong Bằng chứng cổ phần (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Trong Bằng chứng cổ phần (PoS), đó là một câu chuyện hoàn toàn khác. Chúng ta đang nói về một lượng tiền đặt cọc khổng lồ đến mức vô lý được yêu cầu. Tôi sẽ hướng dẫn bạn cách một người có thể thực hiện điều đó chỉ để nhấn mạnh rằng nó khó khăn đến mức nực cười như thế nào.
 
@@ -63,7 +63,7 @@ Nếu chúng ta tính tổng lại — khối N+1 có các chứng thực trị 
 
 Để cho bạn thấy những giả định này nực cười như thế nào — ngay cả khi bạn là một người đặt cọc nắm giữ 65%, để kiểm soát hai phần ba ủy ban trong bất kỳ khe nào, bạn chỉ có xác suất là 0,05%. Điều này cho thấy sức mạnh của các chứng thực song song là có thật — tái tổ chức ex-post là vô cùng khó khăn, nếu không muốn nói là gần như không thể, trong Bằng chứng cổ phần (PoS) Ethereum.
 
-#### Cơ chế tấn công tái tổ chức ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Cơ chế tấn công tái tổ chức ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Bây giờ tôi sẽ nói về tái tổ chức ex-ante. Cuộc tấn công này dựa trên một bài báo của Neuder và những người khác. Gần đây chúng tôi đã cải thiện đáng kể cuộc tấn công này. Chúng tôi cũng đã viết một bài báo về nó và tải nó lên arXiv vừa kịp lúc.
 
@@ -75,7 +75,7 @@ Một cuộc tấn công tái tổ chức ex-ante hoạt động như thế nào
 
 Hãy tạm thời giả định độ trễ bằng không. Trong khe N+2, những gì chúng ta làm với tư cách là kẻ tấn công là phát hành khối N+1 và chứng thực riêng tư cùng một lúc. Các trình xác thực trung thực trong khe N+2 cần chứng thực cho một khối. Từ góc nhìn của họ, họ thấy khối N+2 và khối N+1 với một chứng thực riêng tư này. Nếu họ chạy lựa chọn Phân nhánh, họ sẽ thấy rằng khối N+1 có nhiều trọng số hơn khối N+2, bởi vì N+1 có chứng thực riêng tư mà N+2 không có. Thậm chí tất cả các trình xác thực trung thực sẽ thực sự chứng thực cho khối N+1. Trong N+3, hiển nhiên, N+1 sẽ được xem là phần đầu của Chuỗi.
 
-#### Độ trễ mạng lưới và cuộc tấn công (10:25) {#network-latency-and-the-attack-1025}
+### Độ trễ mạng lưới và cuộc tấn công (10:25) {#network-latency-and-the-attack-1025}
 
 Tôi đã giả định độ trễ bằng không, điều này rõ ràng không phải là cách nó hoạt động trong thực tế. Luôn có độ trễ — cần có thời gian để truyền bá các khối và tin nhắn trên lớp P2P.
 
@@ -83,7 +83,7 @@ Cách mà một kẻ tấn công vẫn có thể thực hiện loại tấn côn
 
 Để nhấn mạnh lại những gì đang xảy ra ở đây: chúng ta có một người đề xuất với một người chứng thực duy nhất xoay sở để thực hiện một đợt tái tổ chức một khối. Nói giảm nói tránh thì điều này không lý tưởng chút nào.
 
-#### Các chiến lược cân bằng cho các đợt tái tổ chức dài hơn (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Các chiến lược cân bằng cho các đợt tái tổ chức dài hơn (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Nếu bạn muốn làm điều gì đó phức tạp hơn, bạn có thể thực hiện các đợt tái tổ chức dài hơn bằng cách sử dụng một chiến lược cân bằng. Ý tưởng là chia ủy ban trung thực thành các góc nhìn khác nhau về Chuỗi.
 
@@ -97,7 +97,7 @@ Bây giờ bạn có một nửa ủy ban trung thực chứng thực cho N+1 v�
 
 Nếu bạn suy nghĩ về điều đó, việc thực hiện các đợt tái tổ chức này theo những giả định này là tương đối rẻ. Ngay cả khi bạn không có sự phân chia hoàn hảo, vì lớp P2P quá lớn, bạn có một phân phối xác suất mà bạn có thể nhắm mục tiêu sao cho chi phí tấn công tăng theo căn bậc hai của quy mô ủy ban.
 
-#### Biện pháp giảm thiểu tăng cường người đề xuất (15:17) {#proposer-boost-mitigation-1517}
+### Biện pháp giảm thiểu tăng cường người đề xuất (15:17) {#proposer-boost-mitigation-1517}
 
 Hãy nói về biện pháp giảm thiểu. Ý tưởng cơ bản là gì? Chúng ta sẽ trao cho người đề xuất thêm một chút quyền lực. Nếu một khối hợp lệ đến đúng giờ, hãy tăng trọng số của khối này trong suốt thời gian của khe. Sau khi khe đó kết thúc, chúng ta tiếp tục với điểm số LMD-GHOST thông thường và mọi thứ diễn ra như bình thường.
 
@@ -107,7 +107,7 @@ Các chiến lược cân bằng cũng không còn hoạt động nữa vì bạ
 
 Ý tưởng là với biện pháp giảm thiểu này được áp dụng, các chứng thực của kẻ thù phải cạnh tranh với sự tăng cường để thuyết phục các trình xác thực trung thực bỏ phiếu theo ý muốn của chúng. Điều này phá vỡ các chiến lược cân bằng và về cơ bản ngăn cấm hoàn toàn tất cả các đợt tái tổ chức. Tin tốt là — có một PR đang mở, vì vậy về cơ bản nó sẽ được hợp nhất trước The Merge.
 
-#### Những điểm chính (16:48) {#key-takeaways-1648}
+### Những điểm chính (16:48) {#key-takeaways-1648}
 
 Một số điểm chính. Tôi đã nói về sự khác biệt giữa tái tổ chức ex-post và ex-ante. Tôi đã phác thảo ngắn gọn các bối cảnh khác nhau cho tái tổ chức trong Bằng chứng công việc (PoW) so với Bằng chứng cổ phần (PoS). Tôi đã chỉ cho bạn cách thực hiện một đợt tái tổ chức ex-ante nhưng quan trọng hơn là cách khắc phục nó.
 

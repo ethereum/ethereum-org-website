@@ -19,7 +19,7 @@ Sebuah presentasi oleh **Linda Xie** di Devconnect tentang media sosial terdesen
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=4vl8eZEOwqk) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Masalah dengan sosial tersentralisasi (0:00) {#the-problem-with-centralized-social-000}
+### Masalah dengan sosial tersentralisasi (0:00) {#the-problem-with-centralized-social-000}
 
 Saya telah bekerja di ruang kripto selama 11 tahun sekarang dan di tim Farcaster. Sebelumnya, saya membangun di atas Farcaster. Jadi saya sangat bersemangat tentang kripto dan sosial terdesentralisasi serta apa yang dapat dilakukannya untuk masyarakat.
 
@@ -27,7 +27,7 @@ Saya pikir akan sangat membantu untuk terlebih dahulu membingkai masalah dengan 
 
 Dan terakhir, jika sebuah akun dan data dimiliki oleh platform, itu berarti setelah perusahaan itu sendiri tutup, Anda tidak akan dapat memiliki akses ke informasi tersebut. Kita telah melihat hal itu berulang kali. Di AS, TikTok berpotensi dilarang dan banyak kreator yang mengkhawatirkan hal itu. Ada banyak negara di mana banyak dari platform ini melarang diri mereka sendiri. Jadi ini adalah masalah yang benar-benar dialami orang sehari-hari.
 
-#### Grafik sosial terbuka (1:30) {#open-social-graphs-130}
+### Grafik sosial terbuka (1:30) {#open-social-graphs-130}
 
 Salah satu manfaat dari sosial terdesentralisasi berarti Anda dapat memiliki akses ke grafik sosial kapan saja. Tidak ada izin yang Anda perlukan untuk menggunakan data ini. Hal yang sangat hebat adalah Anda melihat di bagian bawah sini ada grafik sosial terbuka. Semua data ini dapat ditarik oleh klien mana pun, pengembang mana pun, platform mana pun, dan Anda dapat menggunakan data ini untuk membangun di atas platform ini.
 
@@ -35,7 +35,7 @@ Contoh yang bagus — Anda memiliki aplikasi Farcaster dan kemudian Anda juga me
 
 Ketika Anda memutuskan untuk menggunakan platform ini, Anda tidak perlu lagi memulai dari awal. Anda dapat mempertahankan audiens Anda sendiri. Anda memposting sekali dan kemudian Anda bisa mendapatkan distribusi di berbagai klien di jaringan. Anda bisa menjadi pengguna Farcaster dan tetap mendapatkan lebih banyak distribusi melalui aplikasi Base saat mereka melakukan orientasi lebih banyak pengguna dan kreator. Ini pada akhirnya adalah pengalaman pengguna terbaik. Dan klien sekarang bersaing untuk mendapatkan pengguna ini karena biaya peralihannya sangat rendah — Anda tidak perlu memulai dari awal, Anda mempertahankan audiens Anda, sehingga klien harus bersaing untuk membangun pengalaman pengguna yang lebih baik.
 
-#### Manfaat bagi pembangun (3:13) {#benefits-for-builders-313}
+### Manfaat bagi pembangun (3:13) {#benefits-for-builders-313}
 
 Kemudian Anda juga memiliki sisi pembangun, di mana pembangun secara konsisten dikeluarkan dari platform. Kita telah melihatnya dengan Twitter — mereka mengeluarkan banyak aplikasi kripto dan pembangun, dan itu adalah titik kegagalan tunggal bagi perusahaan mereka. Bankr baru-baru ini pada hari yang sama dikeluarkan dari Twitter dan Telegram. Untungnya mereka dapat dipulihkan beberapa hari kemudian, tetapi ini benar-benar menunjukkan bahwa ada titik kegagalan tunggal ini. Jika Anda adalah seorang pembangun yang menghabiskan seluruh waktu dan sumber daya Anda untuk mencoba membangun aplikasi Anda, ini adalah pengalaman yang sangat menyakitkan jika distribusi Anda langsung terputus.
 
@@ -45,7 +45,7 @@ Satu hal yang benar-benar menakjubkan tentang sosial terdesentralisasi adalah de
 
 Anda dapat melihat di sini — saya memposting teka-teki silang yang disebut Miniword. Setiap hari orang-orang bersaing dalam hal ini seperti teka-teki silang New York Times. Saya memposting sekali di Farcaster, itu juga masuk ke aplikasi Base dan semua klien lainnya. Anda bisa mendapatkan dorongan distribusi tersebut sebagai pembangun. Jika saya mengetuk untuk membuka aplikasi mini, saya dapat mulai berinteraksi dengannya, dan karena data sosial dapat dimanfaatkan tanpa izin, Anda dapat menarik semua waktu dari berbagai orang di jaringan dan orang-orang dapat bersaing untuk mendapatkan skor terbaik. Ini menjadi lebih seperti pengalaman sosial dibandingkan hanya mengerjakan teka-teki sendirian, dan Anda bisa mendapatkan lebih banyak viralitas dengan memanfaatkan grafik sosial.
 
-#### Kripto dan dompet tersemat (6:30) {#crypto-and-embedded-wallets-630}
+### Kripto dan dompet tersemat (6:30) {#crypto-and-embedded-wallets-630}
 
 Sosial terdesentralisasi itu ada — kita telah melihatnya dengan Bluesky dan mereka telah melakukan pekerjaan yang hebat dalam menarik pengguna saat platform dilarang di berbagai negara. Namun, hal yang benar-benar istimewa adalah ketika Anda menggabungkan kripto dan sosial terdesentralisasi, karena Anda sekarang menciptakan pengalaman yang tidak akan pernah Anda dapatkan di platform tradisional. Itulah sesuatu yang sangat difokuskan oleh tim kami.
 
@@ -55,7 +55,7 @@ Pengguna juga dapat berinteraksi dengan aplikasi mini onchain karena mereka memi
 
 Anda juga dapat memiliki agen yang berinteraksi di feed. Jika Anda benar-benar percaya pada masa depan agenik ini di mana ada banyak agen yang berinteraksi satu sama lain, kripto adalah sumber alami yang mereka gunakan untuk mengirim dana satu sama lain. Anda tidak perlu mengoordinasikan alamat atau bagaimana seseorang dibayar — Anda secara otomatis mengetahui alamat pengguna, Anda memiliki semua informasi, tidak peduli di mana mereka tinggal di dunia. Anda dapat berinteraksi dengan mereka secara langsung. Saya sangat percaya bahwa kripto dan agen serta grafik sosial terbuka akan memainkan peran yang jauh lebih besar.
 
-#### Tip mikro (8:36) {#micro-tipping-836}
+### Tip mikro (8:36) {#micro-tipping-836}
 
 Salah satu contoh favorit saya tentang apa yang benar-benar unik dari grafik sosial terbuka di kripto adalah tip mikro. Di masa-masa awal kripto, orang-orang selalu berbicara tentang betapa menakjubkannya melakukan tip mikro — jika Anda seorang kreator yang memposting konten yang sangat bagus, dapat mengirimkan sejumlah kecil dana kepada kreator tersebut. Saya dulu menggunakan aplikasi tip Bitcoin awal ini. Namun masalah di masa-masa awal adalah sebenarnya cukup lambat dan mahal untuk mengirimkan dana dalam jumlah yang sangat kecil.
 
@@ -63,11 +63,11 @@ Sekarang Anda memiliki kemampuan untuk mengirim transaksi sebesar satu sen atau 
 
 Anda dapat melihat riwayat aktivitas dompet saya — saya mengirim dana ke pengguna lain di jaringan dan saya juga menerima dana dari pengguna lain yang telah menetapkan jatah ini. Bahkan ada transaksi di bawah satu sen, yang merupakan konsep yang cukup gila. Ini adalah orang-orang yang tinggal di seluruh dunia. Jika Anda benar-benar baru mengenal kripto dan Anda bergabung dengan Farcaster, Anda memiliki dompet secara default. Setelah Anda mulai memposting konten berkualitas tinggi, orang-orang dapat mulai memberikan tip kepada Anda secara otomatis dan Anda dapat membangun saldo tanpa harus membeli kripto. Saya telah berbicara dengan begitu banyak pengguna yang mengatakan bahwa ini sebenarnya adalah kripto pertama yang mereka peroleh karena membuat konten atau berinteraksi dengan aplikasi mini.
 
-#### Aplikasi mini dan alat kreatif (11:01) {#mini-apps-and-creative-tools-1101}
+### Aplikasi mini dan alat kreatif (11:01) {#mini-apps-and-creative-tools-1101}
 
 Salah satu aplikasi mini favorit saya yang menampilkan penggunaan dompet tersemat, transaksi kripto, dan grafik sosial terbuka dengan sangat baik adalah Emerge, yang dibangun oleh Atown dan tim. Ini memungkinkan kreator untuk menyusun prompt yang mengubah gambar profil Anda menjadi beberapa versi dari prompt tersebut. Ini adalah contoh — Peachy, seorang kreator yang sangat populer di jaringan, menulis prompt untuk mengubah gambar profil menjadi kartu tarot. Saya dapat menghasilkan gambar menggunakan gambar profil saya dan membagikan aplikasi mini tersebut sehingga orang lain yang tertarik dapat menghasilkan gambar mereka sendiri. Ada papan peringkat dari prompt mana yang berkinerja sangat baik. Jika Anda orang yang kreatif, Anda dapat membuat prompt Anda sendiri dan mulai menghasilkan — saya membayar 25 sen untuk transaksi prompt ini, dan 418 pengguna lain juga menghasilkannya, jadi Peachy berpenghasilan karena membuat konten ini, dan itu bisa menjadi viral di feed.
 
-#### Fenomena Warplet (12:41) {#the-warplet-phenomenon-1241}
+### Fenomena Warplet (12:41) {#the-warplet-phenomenon-1241}
 
 Kami sebenarnya memiliki salah satu hari pengguna aktif harian tertinggi di Farcaster karena viralitas yang terjadi baru-baru ini. Pertama, kami memiliki maskot tidak resmi Farcaster yang disebut Warplet. Dan, salah satu pendiri Farcaster, telah menciptakannya. Tim — termasuk saya — mungkin tidak berpikir itu yang paling lucu untuk menjadi maskot resmi, jadi dia merilisnya ke komunitas dan mengatakan orang-orang dapat melakukan apa pun yang mereka inginkan dengannya.
 
@@ -75,13 +75,13 @@ Seorang pengembang bernama Angel mengambilnya dan memutuskan untuk membangun apl
 
 Hal yang juga sangat keren untuk dilihat adalah budaya remix yang berbeda. Pembangun berkata, "Oke, kalian masing-masing memiliki Warplet kalian sekarang, jadi mari kita bangun permainan dan pengalaman menyenangkan di atasnya." Ada peringkat "apa Warplet yang paling jelek?" dan "seperti apa rupa bayi Warplet jika Anda menggabungkan keduanya?" Semua permainan menyenangkan ini dibuat di jaringan, yang menunjukkan bahwa ketika Anda memanfaatkan grafik sosial, Anda dapat membuat pengalaman yang jauh lebih menarik sebagai pengembang aplikasi.
 
-#### Aplikasi mini untuk kebaikan sosial (15:02) {#mini-apps-for-social-good-1502}
+### Aplikasi mini untuk kebaikan sosial (15:02) {#mini-apps-for-social-good-1502}
 
 Ini adalah contoh aplikasi mini — sebenarnya Horsefax yang membangun ini di tim. Saya pikir ini sangat penting — Anda dapat mendukung dana pembelaan hukum Roman Storm. Kami menggunakan Daimo Pay, dan Anda dapat membayar dengan token apa pun dan berkontribusi pada dana pembelaan hukum. Karena ini adalah dompet tersemat, Anda tidak pernah dikeluarkan untuk menggunakan aplikasi lain. Anda dapat segera membagikannya di feed Anda untuk memberi tahu pengikut Anda bahwa Anda berkontribusi. Mereka kemudian dapat menemukan aplikasi ini dan terus berdonasi juga. Ini adalah mekanisme untuk lebih membagikan aplikasi di dalam pengikut dan audiens yang telah dibangun oleh semua orang sendiri.
 
 Ini contoh serupa lainnya — urun dana yang dibangun oleh Nicholas di Seed Club, seperti platform GoFundMe atau Kickstarter. Anda dapat melihat berbagai pengguna yang telah berkontribusi. Anda dapat mengetuk dompet tersemat Anda dan menyumbangkan dana secara langsung melalui aplikasi Farcaster. Anda tidak pernah harus dikeluarkan. Kreator tersebut mampu mengumpulkan dana jauh melampaui tujuan mereka, dan Anda dapat membagikannya di feed Anda sehingga semua pengikut Anda dapat menemukan aplikasi mini tersebut juga.
 
-#### Tantangan sosial terdesentralisasi (16:41) {#challenges-of-decentralized-social-1641}
+### Tantangan sosial terdesentralisasi (16:41) {#challenges-of-decentralized-social-1641}
 
 Semua ini benar-benar luar biasa, dan sosial terdesentralisasi terdengar hebat, tetapi saya ingin benar-benar jujur tentang tantangannya. Satu hal yang perlu diperhatikan adalah bahwa ini kecil — sangat kecil dibandingkan dengan semua platform sosial tradisional utama ini dengan pengguna dalam miliaran dan ratusan juta.
 
@@ -93,7 +93,7 @@ Spam juga merupakan masalah. Ini juga ada di platform sosial tersentralisasi —
 
 Dan kemudian moderasi — juga merupakan masalah dan tantangan dalam platform sosial tradisional untuk memastikan pengguna mendapatkan pengalaman yang baik dan menemukan konten yang benar-benar mereka minati. Ini adalah hal-hal yang selalu terus kami kerjakan.
 
-#### Mengapa sekarang? (19:48) {#why-now-1948}
+### Mengapa sekarang? (19:48) {#why-now-1948}
 
 Sosial terdesentralisasi telah ada untuk sementara waktu, tetapi mengapa sekarang? Saya pikir ini adalah semua primitif ini yang bersatu. Pertama, Anda memiliki grafik sosial terbuka yang dapat digunakan dan dimanfaatkan oleh siapa saja. Saya berbicara dengan tim-tim sepanjang waktu yang bahkan tidak saya kenal sebelumnya — mereka hanya membangun aplikasi mini Farcaster karena mereka dapat memanfaatkan data tanpa kami.
 
@@ -105,7 +105,7 @@ Di mana semua ini bermuara — saya pikir email adalah analogi yang sangat bagus
 
 Farcaster semakin menghabiskan lebih banyak waktu pada fitur perdagangan; jika Anda tidak tertarik dengan itu, aplikasi Base dan Uno sangat bagus dalam menampilkan fitur sosial. Itulah cara sosial seharusnya dalam jangka panjang. Perjalanan kita masih panjang, tetapi saya benar-benar berpikir ini adalah masa depan ke mana arah sosial seharusnya.
 
-#### Tanya Jawab (23:47) {#qa-2347}
+### Tanya Jawab (23:47) {#qa-2347}
 
 **Moderator:** Terima kasih banyak, Linda. Kami memiliki beberapa pertanyaan dari audiens. Saya pikir apa yang benar-benar keren adalah di dunia nyata, saya bisa pergi ke luar di lingkungan saya dan ada begitu banyak hal yang bisa saya lakukan dengan bebas. Lingkungan digital tidak selalu sama, itulah sebabnya tesis sosial terdesentralisasi sangat menarik, terutama karena semakin banyak kehidupan kita yang beralih ke online. Ada pergeseran saat ini di mana orang-orang di platform media sosial tersentralisasi perlu pindah ke platform media sosial terdesentralisasi. Dari pengalaman Anda, bagaimana kita bisa mempermudah migrasi tersebut?
 

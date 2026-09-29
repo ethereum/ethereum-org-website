@@ -19,13 +19,13 @@ El científico informático **Amit Sahai**, profesor de la Escuela de Ingenierí
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=fOGdb1CTu5c) publicada por WIRED. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:00) {#introduction-000}
+### Introducción (0:00) {#introduction-000}
 
 **Amit Sahai:** Hola, mi nombre es Amit Sahai y soy profesor de ciencias de la computación en la Escuela de Ingeniería Samueli de la UCLA. Hoy me han pedido que explique las pruebas de conocimiento cero en cinco niveles de complejidad creciente.
 
 Una prueba de conocimiento cero es una forma en que un probador convence a un verificador de que una afirmación es verdadera, y sin embargo no revela ninguna información adicional más allá del hecho de que la afirmación es verdadera. Las pruebas de conocimiento cero se están utilizando en cadenas de bloques y criptomonedas. Los criptógrafos están entusiasmados con el conocimiento cero debido a sus asombrosas propiedades matemáticas, pero también por su increíble aplicabilidad a tantos escenarios diferentes.
 
-#### Nivel 1: niño (0:41) {#level-1-child-041}
+### Nivel 1: niño (0:41) {#level-1-child-041}
 
 **Amit Sahai:** ¿Cuál es tu materia favorita?
 
@@ -55,7 +55,7 @@ Entonces Chelsea, en tus propias palabras, ¿qué es una prueba de conocimiento 
 
 **Chelsea:** La prueba de conocimiento cero es la prueba de una afirmación. No les muestras el porqué ni el qué. Solo les muestras un pequeño segmento, o simplemente haces una especie de truco de magia raro que en realidad no es un truco de magia, y se convencerán. Y no les mostraste por qué, ni nada por el estilo.
 
-#### Nivel 2: adolescente (3:31) {#level-2-teen-331}
+### Nivel 2: adolescente (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Entonces, ¿alguna vez has escuchado el término prueba de conocimiento cero antes?
 
@@ -85,7 +85,7 @@ Entonces, basándonos en lo que hemos discutido hoy, en tus propias palabras, ¿
 
 **Adolescente:** Es como si tuvieras este secreto realmente importante que quieres que alguien sepa, pero no quieres contarle todo. Puedes usar una prueba de conocimiento cero para probarles ese secreto, pero sin revelarlo todo.
 
-#### Nivel 3: estudiante universitario (6:13) {#level-3-college-student-613}
+### Nivel 3: estudiante universitario (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** ¿Qué estás estudiando?
 
@@ -131,7 +131,7 @@ Así que, en cambio, te voy a pedir que por favor te des la vuelta. Y ahora, cam
 
 **Amit Sahai:** Un gran ejemplo son las elecciones. Si pudieras probar que una elección se llevó a cabo correctamente (que cada voto fue contado y todo sumó para que una persona ganara con un total particular) en conocimiento cero, entonces no tienes que revelar los votos reales de ninguna persona. Y, sin embargo, todos podrían ver que se hizo correctamente.
 
-#### Nivel 4: estudiante de posgrado (11:59) {#level-4-grad-student-1159}
+### Nivel 4: estudiante de posgrado (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Es genial tenerte aquí y hablar contigo, Eli. ¿Puedes contarme un poco sobre tu investigación?
 
@@ -165,7 +165,7 @@ Así que, en cambio, te voy a pedir que por favor te des la vuelta. Y ahora, cam
 
 **Eli:** Creo que esa es una de las razones por las que me atrajo tanto la computación multiparte. Uno de los problemas más importantes del mundo es el hecho de que muchas personas no confían entre sí. Poder usar las matemáticas para crear tecnología que permita a las personas trabajar juntas sin tener que confiar entre sí es una misión realmente genial y asombrosa.
 
-#### Nivel 5: experto (17:10) {#level-5-expert-1710}
+### Nivel 5: experto (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, es genial verte de nuevo. Creo que la última vez que nos vimos fue en 2017 o algo así.
 

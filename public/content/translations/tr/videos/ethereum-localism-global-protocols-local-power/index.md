@@ -20,7 +20,7 @@ EthBoulder 2026'da **Benjamin Life** ve **Sarah Johnstone** ile Ethereum Yerelli
 
 *Bu transkript, EthBoulder tarafından yayınlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=I4xb0rst6SQ) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Ethereum Yerelliğine Giriş (0:12) {#introduction-to-ethereum-localism-012}
+### Ethereum Yerelliğine Giriş (0:12) {#introduction-to-ethereum-localism-012}
 
 **Sarah Johnstone:** Merhaba. Bizi duyabiliyor musunuz? Harika. Burada olmak gerçekten heyecan verici. Biraz tanışarak başlayalım. Ben Sarah Johnstone. Bir permakültürcü, biyo-bölgeci ve aktif bir Ethereum üyesiyim. Ethereum yerelliği topluluğu konusunda gerçekten tutkuluyum. Benjamin ile burada olmaktan çok heyecanlıyım.
 
@@ -30,7 +30,7 @@ EthBoulder 2026'da **Benjamin Life** ve **Sarah Johnstone** ile Ethereum Yerelli
 
 **Benjamin Life:** Evet, kısaltmasıyla GEL'in ve Ethereum yerelliği hareketinin bazı katalizörlerinin burada, aramızda olması gerçekten çok güzel. Portland'da bir grubumuzu ilk kez bir araya getiren Christy, James ve ekiplerindeki diğer birkaç üyeye teşekkür etmek istiyorum. İkimiz de Boulder'da yaşamamıza rağmen Kevin Owocki ile ilk tanıştığım yer orasıydı. Muazzam bir etki yarattı ve Ethereum yerelliği topluluğunun ne olduğu ve paylaşılan değerlerin neler olduğu konusunda bir nevi emsal teşkil etti. Gerçekten de bir tür kripto-solcu, ama aynı zamanda Web3 topluluğunun değerlerle daha açık bir şekilde uyumlu bir alt kümesini bir araya getirdi ve bence buna bir isim ve alan vermek, birçoğumuzun birbirini bulmasına gerçekten yardımcı oldu.
 
-#### Değerler ve Küresel ile Yerel Arasındaki Gerilim (2:40) {#values-and-the-tension-of-global-vs-local-240}
+### Değerler ve Küresel ile Yerel Arasındaki Gerilim (2:40) {#values-and-the-tension-of-global-vs-local-240}
 
 **Sarah Johnstone:** Peki ekosistemde sahip olduğumuz bu değerlerin bazılarından bahseder misin?
 
@@ -40,7 +40,7 @@ Demokratik katılım, topluluk mülkiyeti ve merkezi kurumlar tarafından ele ge
 
 Ethereum yerelliği bir bakıma bu çelişkinin merkezinde yer alıyor. Ya o ya da bu demek yerine — sadece hiper-yerel olup küresel müşterekleri boş verelim demiyor, insanların gerçek günlük yaşamlarıyla anlamlı bir şekilde bağlantı kurmayan soyutlanmış bir küresel koordinasyon katmanı yaratmaya da çalışmıyor. Bu gerilimi yöneterek, nerede küresel dayanışma içinde olabileceğimize bakıyoruz. Hafif olan küresel ve paylaşılan olmalı, ağır olan ise yerel ve kendi kendini yöneten olmalıdır. Bilgimizi ve açık kaynaklı yazılımımızı ortaklaştırıyoruz, ancak yerel kendi kaderini tayin hakkının ve topluluk öncülüğündeki girişimlerin bu protokollerin yerel düzeyde nasıl uygulandığına rehberlik ettiğinden emin oluyoruz.
 
-#### Localism Fund ve Değerleri Pekiştirmek (5:27) {#the-localism-fund-and-consolidating-values-527}
+### Localism Fund ve Değerleri Pekiştirmek (5:27) {#the-localism-fund-and-consolidating-values-527}
 
 **Sarah Johnstone:** Şunu duymak isterim — geçen yıl birkaç yüz kişiyi iki gün boyunca bir araya getirdik ve çok dinamik, canlı tartışmalar oldu. ETHDenver ve Region Commons grubunun kurulmasıyla hemen heyecan verici bir hareketlenme olduğunu hissettim. Sence bir hareket olarak nasıl gidiyoruz? Localism Fund ile büyük bir dönüm noktası yaşadığınızı biliyorum.
 
@@ -50,7 +50,7 @@ Bence Ethereum yerelliği, toplumumuzun daha otoriter yönlerinin yükselişine 
 
 Olumlu tarafı, Gitcoin ve Celo Public Goods sayesinde, çeşitli mekanizmaları deneyen 12 farklı yerel fonlama programına 150.000 dolar dağıttık. Bu hikayeler gerçekten heyecan verici çünkü neredeyse her kıtada sahada gerçek topluluklarımız var. Nijerya'da eğitimi finanse eden güneş enerjili bir kripto madencilik tesisimiz var. Barselona'da tamamen paralel bir ekonomi ve para sistemi yaratan kooperatif işletmelerinden oluşan bir ağımız var. Kolombiya'da yoksulluk sınırının altında yaşayan insanlara para dağıtan topluluk merkezleri kurarak harika bir Evrensel Temel Gelir (UBI) çalışması yapan insanlarımız var.
 
-#### Şeffaflık ve Sermaye Tahsisi (10:01) {#transparency-and-allocating-capital-1001}
+### Şeffaflık ve Sermaye Tahsisi (10:01) {#transparency-and-allocating-capital-1001}
 
 **Sarah Johnstone:** Peki bu alanda, Boulder'da ne yapıyoruz?
 
@@ -64,7 +64,7 @@ Sonunda güven grafiği (trust graph) adı verilen bir şeyi uygulamak için lay
 
 Google'ın web sayfalarını bağlantılarının gücüne göre sıralamak için kullandığı algoritmanın aynısını kullanarak, o Düğümün ağda sahip olduğu kolektif güven miktarının sayısal bir temsilini elde ettik. 1.000'den fazla onay yapan 100'den fazla kişimiz vardı ve bundan bu ağdaki en güvenilir 30 kişiyi türetebildik. Bunlar, başvuran yerel fonlama programlarının değerlendiricileri oldular. Her değerlendirici kriterlere göre inceleme yaptı ve toplam puan eşleşme oranlarını belirledi. Böylece, parayı bu uzman ağının iradesine göre dağıtmak için bu onaya dayalı güven ağını kullandık.
 
-#### Yeraltı Protokolü ve Sosyal Teknolojiler (15:03) {#the-protocol-underground-and-social-technologies-1503}
+### Yeraltı Protokolü ve Sosyal Teknolojiler (15:03) {#the-protocol-underground-and-social-technologies-1503}
 
 **Sarah Johnstone:** Teşekkürler. Sözü gruba bırakmak isterim. Burada pek çok tanıdık yüz ve muhtemelen kendilerini bu hareketle özdeşleştiren insanlar görüyorum. Dinleyiciler arasından paylaşımda bulunmak isteyenleri dinlemek isterim. Bugün manifestoyu yayınlayan gruptan bu konuda biraz konuşmak isteyen var mı?
 
@@ -86,13 +86,13 @@ Ethereum Yerelliği, bilgi ortaklaştırmasıyla ilgilenen kişilerin taban sevi
 
 **Benjamin Life:** Evet. Sosyal teknolojiler.
 
-#### Küresel etki için ne inşa edileceğine karar vermek (20:25) {#deciding-what-to-build-for-global-impact-2025}
+### Küresel etki için ne inşa edileceğine karar vermek (20:25) {#deciding-what-to-build-for-global-impact-2025}
 
 **İzleyici:** Özür dilerim, yeni geldim. Ama şunu anlamak istedim, hangi açık teknolojilerin inşa edileceğine nasıl karar veriyorsunuz? İnsanların zamanı kısıtlı — neyin inşa edileceğine nasıl karar veriyorsunuz?
 
 **Sarah Johnstone:** Şu anda zamanımı harcadığım alanlardan biri insani yardım bağlamı, çünkü uluslararası yardım fonu kesintilerinin durumu son derece acil ve zararlı. Son sekiz aydır falan bu alanı anlamaya çalışan derin bir çalışma içindeyim ve Ethereum ekosisteminden ve diğer ekosistemlerden gelen teknolojinin mülteci nüfusları ve yerinden edilmiş topluluklar veya çatışma bölgeleri gibi gerçek dünya bağlamlarında sınır ötesi ödemeler ve sabitcoin'ler ile uygulandığını görmek açısından aslında oldukça umut verici oldu. Bu konuda oldukça umutluyum. Benim için zamanımı harcamayı seçtiğim şey bu.
 
-#### Güvenilir tarafsızlık ve yetki devri (27:16) {#credible-neutrality-and-subsidiarity-2716}
+### Güvenilir tarafsızlık ve yetki devri (27:16) {#credible-neutrality-and-subsidiarity-2716}
 
 **Benjamin Life:** Sorduğunuz soruya cevap vermek istiyorum. Benim "mekanizma tasarımı yoluyla güvenilir tarafsızlık" dediğim bir şey var. Bireysel ikili kararları — bir mutabakata varamadığınızda toplulukları parçalayan ve ya çatallanmak ya da dağılmak zorunda kaldığınız türden kararları — nasıl merkezden uzaklaştırabileceğimiz üzerinde gerçekten çalışıyorum. Genellikle gruplar bu seçeneklerden birine varır ve bir grubun kendi beyan ettiği değerlerle uyumunu sürekli olarak yeniden değerlendirecek metabolik veya bağışıklık sistemine sahip olması çok nadirdir.
 
@@ -102,7 +102,7 @@ Bunu kolaylaştırabileceğimizi düşündüğüm yollardan biri, ikili kararlar
 
 **Benjamin Life:** Kesinlikle ve bu, Ethereum yerelliği alanındaki bir başka önemli fikri, yani yetki devri (subsidiarity) ilkesini gündeme getiriyor — karar alma sürecinin, o kararın etkisinin olduğu en yerel düzeyde yuvalanması gerektiği fikri. Localism Fund'ın projelere doğrudan hibe vermek yerine hibe programlarını finanse etmesinin nedenlerinden biri, yerli uluslar ve yerel topluluklarla kendi ağına sahip kâr amacı gütmeyen bir kuruluş olan Regenerate Cascadia'ya 20.000 dolar vermek istememiz ve orada hangi projelerin finanse edileceğini bizim seçmemiz yerine, bu kaynakların nasıl dağıtılacağını belirleme konusunda onlara tam özerklik vermemizdi. Bu topu başkasına atmak değil; failliği (agency) dağıtmaktır.
 
-#### Ethereum'da Değer Akışları ve Evrensel Gerçek (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
+### Ethereum'da Değer Akışları ve Evrensel Gerçek (30:17) {#value-flows-and-universal-truth-in-ethereum-3017}
 
 **İzleyici:** Ethereum'un kalbinde hepinizin peşinden koştuğu merkezi bir gerçek var mı? Mevcut para sistemine kıyasla Ethereum'un arkasındaki evrensel bir gerçek konusunda bir uyum yok gibi görünüyor. Bu mantıklı mı?
 
@@ -116,7 +116,7 @@ Beni Ethereum'da tutan şey de bu. Artık üzerinde akıllı sözleşmeler yazab
 
 Tüm GEL etkinliklerinde bulunan Scott Morris, bu konuda dünyanın önde gelen uzmanlarından biridir ve topluluk para birimlerinin sadece "kupon" olarak adlandırıldığı düzenleyici kısıtlamaları aşmanın yollarını belirlemiştir — bu para değil, sadece bir kupon. Yine de bir kuponu temsil eden bir Token'ınız olabilir. Bu yasal boşluğun mahkemede işe yarayıp yaramayacağını bilmiyorum — ben avukat değilim — ancak değerin gerçekten yerel topluluklarında dolaşmasını sağlayan bazı topluluk para birimi başarı hikayeleri var. Birinin gerçekten bu bayrağı devraldığını ve merkeziyetsiz topluluk mülkiyetindeki para birimi alanının "Salesforce"unu yarattığını görmeyi çok isterim, çünkü bir öğrenme eğrisi olan şey, insanların sisteme katılımını sağlama ve Token etrafında yönetişim oluşturma kolaylığıdır. Bunu yapabileceğimiz en yüksek kaldıraçlı şeylerden biri olarak görüyorum, ancak aslında bunu olması gerektiğini düşündüğüm şekilde gerçekten ileriye taşıyan birini tanımıyorum.
 
-#### Yerel Sorumlulukları Olan Küresel Vatandaşlar (35:03) {#global-citizens-with-local-responsibilities-3503}
+### Yerel Sorumlulukları Olan Küresel Vatandaşlar (35:03) {#global-citizens-with-local-responsibilities-3503}
 
 **İzleyici:** Konuşma boyunca geçen bazı konulardan yola çıkarak — küresel protokol ile yerel ağlar arasındaki gerilim. Kalbimizi fetheden farklı biyo-bölgelere dağılmış arkadaşlarımız ve ailemiz var. Her zamankinden daha hareketli olduğumuz, yerelci olmak istediğimiz, ancak hepsi aynı yerde olmayan ağlara dahil olduğumuz gerçeği hakkında ne düşünüyorsunuz?
 

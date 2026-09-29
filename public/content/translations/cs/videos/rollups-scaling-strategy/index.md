@@ -20,7 +20,7 @@ Vysvětlující video od **Finematics**, které pokrývá rollupy jako hlavní s
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=7pWxCklcNsU) publikovaného kanálem Finematics. Byl lehce upraven pro lepší čitelnost.*
 
-#### Vrstva 2 (1:17) {#layer-2-117}
+### Vrstva 2 (1:17) {#layer-2-117}
 
 Škálování Etherea je jedním z nejdiskutovanějších témat v kryptu. Debata o škálování se obvykle vyostřuje během období vysoké aktivity sítě, jako bylo šílenství kolem CryptoKitties v roce 2017, léto decentralizovaných financí (DeFi) v roce 2020 nebo býčí trh v kryptu na začátku roku 2021. Během těchto období vedla bezprecedentní poptávka po síti Ethereum k extrémně vysokým poplatkům za gas, což běžným uživatelům prodražilo placení za jejich transakce.
 
@@ -28,7 +28,7 @@ Aby se tento problém vyřešil, hledání ultimátního řešení pro škálov�
 
 Obecně existují tři hlavní způsoby, jak škálovat Ethereum – nebo vlastně většinu ostatních blockchainů: škálování samotného blockchainu (škálování vrstvy 1 (l1)), stavění nad vrstvou 1 (škálování vrstvy 2 (l2)) a stavění vedle vrstvy 1 (postranní řetězce).
 
-#### Mimo vrstvu 1 (1:58) {#outside-of-layer-1-158}
+### Mimo vrstvu 1 (1:58) {#outside-of-layer-1-158}
 
 Pokud jde o vrstvu 1, Eth2 je zvoleným řešením pro škálování blockchainu Ethereum. Eth2 odkazuje na soubor vzájemně propojených změn, jako je přechod na důkaz podílem (PoS), sloučení stavu blockchainu s důkazem prací (PoW) do nového řetězce s důkazem podílem a sharding. Zejména sharding může dramaticky zvýšit propustnost sítě Ethereum, obzvláště v kombinaci s rollupy.
 
@@ -42,7 +42,7 @@ K dosažení tohoto cíle jsou rollupové transakce prováděny na samostatném 
 
 Každý rollup nasazuje sadu chytrých kontraktů na vrstvě 1, které jsou zodpovědné za zpracování vkladů a výběrů a ověřování důkazů. Důkazy jsou také tím, kde vstupuje do hry hlavní rozdíl mezi různými typy rollupů. Optimistické rollupy používají důkazy o podvodu, zatímco ZK rollupy používají důkazy platnosti.
 
-#### Optimistické rollupy (4:26) {#optimistic-rollups-426}
+### Optimistické rollupy (4:26) {#optimistic-rollups-426}
 
 Optimistické rollupy odesílají data na vrstvu 1 a předpokládají, že jsou správná – odtud název „optimistické“. Pokud jsou odeslaná data platná, jsme na ideální cestě a není třeba dělat nic dalšího. Optimistický rollup těží z toho, že v optimistickém scénáři nemusí provádět žádnou další práci.
 
@@ -58,7 +58,7 @@ Systém může fungovat podle očekávání a detekovat podvod, i když existuje
 
 Pokud jde o ZK rollupy, neexistuje zde vůbec žádné řešení sporů. To je možné díky využití chytrého kousku kryptografie zvaného důkazy s nulovým vědomím – odtud název ZK rollupy. V tomto modelu každá dávka odeslaná na vrstvu 1 obsahuje kryptografický důkaz zvaný ZK-SNARK. Důkaz může být rychle ověřen kontraktem na vrstvě 1 při odeslání dávky transakcí a neplatné dávky mohou být okamžitě odmítnuty.
 
-#### Další rozdíly (7:28) {#other-differences-728}
+### Další rozdíly (7:28) {#other-differences-728}
 
 Vzhledem k povaze procesu řešení sporů musí optimistické rollupy poskytnout všem účastníkům sítě dostatek času na odeslání důkazů o podvodu před finalizací transakce na vrstvě 1. Toto období je obvykle poměrně dlouhé – aby se zajistilo, že i v nejhorším možném scénáři mohou být podvodné transakce stále zpochybněny. To způsobuje, že výběry z optimistických rollupů jsou poměrně zdlouhavé, protože uživatelé musí čekat až týden nebo dva, než si budou moci vybrat své prostředky zpět na vrstvu 1.
 
@@ -70,7 +70,7 @@ ZK rollupy však mají své vlastní nevýhody. Vzhledem ke složitosti technolo
 
 Optimistické rollupy to mají s kompatibilitou s EVM o něco jednodušší. Stále musí spouštět svou vlastní verzi EVM s několika úpravami, ale 99 % kontraktů lze přenést bez jakýchkoli změn. ZK rollupy jsou také mnohem náročnější na výpočty než optimistické rollupy, což znamená, že uzly, které počítají ZK důkazy, musí být vysoce výkonné stroje, což ztěžuje jejich provozování ostatním uživatelům.
 
-#### Vylepšení škálování (9:32) {#scaling-improvements-932}
+### Vylepšení škálování (9:32) {#scaling-improvements-932}
 
 Pokud jde o vylepšení škálování, oba typy rollupů by měly být schopny škálovat Ethereum z přibližně 15–45 transakcí za sekundu (v závislosti na typu transakce) až na 1 000–4 000 transakcí za sekundu. Stojí za zmínku, že je možné zpracovat ještě více transakcí za sekundu tím, že se nabídne více prostoru pro dávky rollupů na vrstvě 1.
 
@@ -84,7 +84,7 @@ Ačkoli se Arbitrum i Optimism snaží dosáhnout stejného cíle – budování
 
 Dalším velkým rozdílem je přístup ke zpracování řazení transakcí a MEV. Arbitrum bude zpočátku provozovat sekvencer zodpovědný za řazení transakcí, ale v dlouhodobém horizontu jej chtějí decentralizovat. Optimism preferuje jiný přístup, kde řazení transakcí – a tím i MEV – může být vydraženo jiným stranám na určité časové období.
 
-#### ZK rollupy (13:10) {#zk-rollups-1310}
+### ZK rollupy (13:10) {#zk-rollups-1310}
 
 Ačkoli to vypadá, že se komunita Etherea zaměřuje převážně na optimistické rollupy – alespoň v krátkodobém horizontu – projekty pracující na ZK rollupech také postupují extrémně rychle.
 
@@ -92,11 +92,11 @@ Loopring používá technologii ZK rollupů ke škálování své burzy a plateb
 
 Rollupy založené na StarkWare jsou již hojně využívány projekty jako DeversiFi, Immutable X a dYdX. Jak již bylo zmíněno dříve, zkSync pracuje na virtuálním stroji kompatibilním s EVM, který bude schopen plně podporovat jakékoli libovolné chytré kontrakty napsané v Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Rollupy by také měly mít velký dopad na decentralizované finance (DeFi). Uživatelé, kteří dříve nemohli provádět transakce na Ethereu kvůli vysokým transakčním poplatkům, budou moci zůstat v ekosystému, až bude příště aktivita sítě vysoká. Rollupy také umožní vznik nové generace aplikací, které vyžadují levnější transakce a rychlejší dobu potvrzení – to vše při plném zabezpečení konsensem Etherea. Vypadá to, že rollupy mohou spustit další období vysokého růstu pro DeFi.
 
-#### Výzvy (14:29) {#challenges-1429}
+### Výzvy (14:29) {#challenges-1429}
 
 Pokud jde o rollupy, existuje však několik výzev. Skládatelnost je jednou z nich – aby bylo možné složit transakci, která využívá více protokolů, musely by být všechny nasazeny na stejném rollupu.
 
@@ -104,7 +104,7 @@ Další výzvou je roztříštěná likvidita. Bez nových peněz přicházejíc
 
 To také znamená, že přirozeně budou existovat vítězové a poražení. V současné době není stávající ekosystém Etherea dostatečně velký na to, aby využil všechna řešení pro škálování. To se může – a pravděpodobně i stane – v dlouhodobém horizontu změnit, ale v krátkodobém horizontu můžeme vidět, že se z některých rollupů a dalších řešení pro škálování stanou města duchů. V budoucnu můžeme také vidět uživatele, kteří žijí výhradně v rámci jednoho ekosystému rollupu a po dlouhou dobu neinteragují s hlavním řetězcem Etherea a dalšími řešeními pro škálování.
 
-#### Hrozba pro postranní řetězce (15:44) {#threat-to-sidechains-1544}
+### Hrozba pro postranní řetězce (15:44) {#threat-to-sidechains-1544}
 
 Jedna otázka, která se velmi často objevuje při diskusích o rollupech, je, zda představují hrozbu pro postranní řetězce. Postranní řetězce budou mít v ekosystému Etherea stále své místo. Ačkoli náklady na transakce na vrstvě 2 budou mnohem nižší než na vrstvě 1, s největší pravděpodobností budou stále dostatečně vysoké na to, aby vytlačily určité typy aplikací, jako jsou hry a další vysokoobjemové aplikace. To se může změnit, až Ethereum zavede sharding, ale do té doby mohou postranní řetězce vytvořit dostatečný síťový efekt k dlouhodobému přežití.
 

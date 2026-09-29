@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Jogos no Ethereum
+## Jogos no Ethereum {#gaming-on-ethereum}
 Os jogos no Ethereum vêm em várias formas, desde jogos que usam a blockchain para recursos específicos até aqueles em que todo o mundo do jogo vive onchain. A blockchain do Ethereum pode ser usada com jogos em várias capacidades. Os jogos podem armazenar suas moedas como tokens transferíveis ou outros ativos do jogo (personagens, equipamentos, animais de estimação, etc.) na forma de [tokens não fungíveis (NFTs)](/nft/). Os jogos também podem utilizar contratos inteligentes para hospedar sua lógica, regras e estado onchain. Tais jogos são comumente chamados de "jogos totalmente onchain".
 
 O ecossistema do Ethereum também inclui [blockchains de camada 2 (l2s)](/layer-2/learn/) que herdam as garantias de segurança da Rede Principal do Ethereum enquanto estendem a escala do Ethereum e suportam casos de uso especializados. As redes l2 podem fornecer benefícios adicionais para jogos onchain e suas comunidades devido aos seus tempos de confirmação mais rápidos e taxas mais baixas, tornando a jogabilidade mais acessível.
@@ -31,7 +31,7 @@ Quando o Ethereum foi lançado, **os designers de jogos viram uma oportunidade d
 
 A blockchain do Ethereum permitiu mundos onde as regras não podem ser alteradas arbitrariamente, o estado não pode ser excluído e qualquer pessoa pode construir extensões que vivem enquanto a rede existir. Isso é algo que o Ethereum fornece nativamente.
 
-## Visão geral do ecossistema de jogos do Ethereum
+## Visão geral do ecossistema de jogos do Ethereum {#ethereums-gaming-ecosystem-overview}
 - **Camadas 2 (l2s):** Com taxas mais baratas e tempos de transação curtos, as l2s do Ethereum se tornaram um lugar comum para o lançamento de jogos. O cenário das l2s continua a evoluir, com os principais ecossistemas de jogos da Web3, como a Ronin (originalmente uma sidechain para o Axie Infinity), fazendo a transição recentemente para a arquitetura de camada 2 do Ethereum, herdando as garantias de segurança do Ethereum enquanto mantém sua infraestrutura otimizada para jogos. As principais l2s atuais para jogos incluem: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/) e [Base](https://www.base.org/).
 - **Infraestrutura:** Para facilitar o desenvolvimento de jogos onchain, existem várias pilhas de ferramentas; [Cartridge](https://cartridge.gg/) (oferecendo chaves de sessão, transações sem gas via pagador e autenticação baseada em WebAuthn por meio do Cartridge Controller), [Dojo](https://dojoengine.org/) (um framework de jogos prováveis com suporte nativo à abstração de conta), [MUD](https://mud.dev/) (um motor de jogo onchain baseado em EVM). Outros, como [Proof of Play](https://proofofplay.com/) e [Thirdweb](https://thirdweb.com/), permitem que os desenvolvedores criem jogos com experiências de usuário semelhantes às da Web2.
 - **Comunidades de jogos:** O ecossistema de jogos do Ethereum é apoiado por guildas de jogos, incluindo ([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx) e [OLAGG](https://x.com/OLAGuildGames)) para colaboração de jogadores, plataformas de descoberta como [GAM3S.GG](https://games.gg/) e meios de comunicação como [Gaming Daily](https://x.com/GamingDailyx) para análises de jogos e cobertura do ecossistema. Alguns abrangem todos esses, como [FOCGERS](https://x.com/FOCGERS).

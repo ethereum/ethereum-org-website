@@ -18,7 +18,7 @@ Demonstrasi visual Anders Brownworth tentang cara kerja teknologi rantai blok, t
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=_160oMzblY8) yang dipublikasikan oleh Anders Brownworth. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Hash SHA-256 (0:01) {#sha-256-hash-001}
+### Hash SHA-256 (0:01) {#sha-256-hash-001}
 
 Ini adalah demo rantai blok. Kita akan melakukannya dengan cara yang sangat visual — kita akan membuatnya sangat mudah dipahami dengan menelusuri bagian-bagian utama dari apa itu rantai blok.
 
@@ -28,7 +28,7 @@ Jadi ini adalah hash dari nama "Anders," semuanya huruf kecil — dimulai dengan
 
 Saya bisa mengetik apa saja yang saya mau. Anda bisa tidak mengetik apa pun — `e3b0` — itu adalah hash dari ketiadaan. Atau Anda bisa mengetik banyak sekali hal. Faktanya, Anda bisa memasukkan seluruh isi Library of Congress ke sini dan Anda akan mendapatkan sebuah hash. Hal yang menarik adalah, terlepas dari apakah ada sedikit informasi, tidak ada informasi, atau seluruh Library of Congress, Anda akan selalu mendapatkan hash yang sepanjang ini. Anda tidak akan bisa menebak sebelumnya apa hasilnya — Anda harus memasukkan data untuk mengetahui apa hash-nya, tetapi Anda akan selalu mendapatkan hash yang sama persis terlepas dari berapa kali Anda memasukkan informasi yang sama persis.
 
-#### Blok (2:10) {#block-210}
+### Blok (2:10) {#block-210}
 
 Apa yang akan saya lakukan adalah memperluas ide tentang hash ini menjadi sesuatu yang akan kita sebut sebagai blok. Sebuah blok sama persis dengan hash, tetapi bagian datanya telah dipecah menjadi tiga bagian: satu disebut "blok" — hanya sebuah angka, ini adalah blok nomor 1 — sebuah "nonce," yang juga hanya angka lain, dan kemudian beberapa data seperti yang kita miliki sebelumnya.
 
@@ -40,7 +40,7 @@ Di sinilah nonce berperan. Nonce hanyalah sebuah angka yang dapat Anda atur untu
 
 Prosesnya berhenti di 59.396 — dan angka itu kebetulan menghasilkan hash yang dimulai dengan empat angka nol. Ini memenuhi definisi saya tentang apa itu blok yang ditandatangani.
 
-#### Rantai blok (5:16) {#blockchain-516}
+### Rantai blok (5:16) {#blockchain-516}
 
 Jadi, bisakah Anda memberi tahu saya apa itu rantai blok? Mungkin itu hanyalah sebuah rantai dari blok-blok ini. Ini adalah rantai blok saya — blok nomor satu memiliki nonce seperti sebelumnya, area data, tetapi kemudian memiliki bidang "previous" (sebelumnya) yang berisi sekumpulan angka nol. Bergerak maju, ini adalah blok dua, blok tiga, blok empat — rantai blok ini memiliki lima blok di dalamnya.
 
@@ -50,7 +50,7 @@ Apa yang terjadi jika saya mengubah beberapa informasi di sini? Itu akan menguba
 
 Jika saya pergi dan mengubah blok terakhir, yang harus saya lakukan hanyalah menambang ulang satu blok itu. Jika saya mundur jauh ke masa lalu dan membuat perubahan, saya harus menambang yang ini, yang ini, yang ini, dan yang ini. Semakin banyak blok yang berlalu, semakin sulit untuk membuat perubahan. Begitulah cara rantai blok tahan terhadap mutasi — tahan terhadap perubahan.
 
-#### Rantai blok terdistribusi (9:18) {#distributed-blockchain-918}
+### Rantai blok terdistribusi (9:18) {#distributed-blockchain-918}
 
 Jadi bagaimana saya tahu jika rantai blok saya telah ditambang ulang? Sekarang kita memiliki rantai blok terdistribusi. Ini terlihat persis seperti rantai blok terakhir, tetapi ini adalah Peer A. Jika Anda turun ke sini, Anda dapat melihat Peer B, dan ia memiliki salinan persis dari rantai blok tersebut. Ada juga Peer C — ini bisa berlanjut selamanya. Ada banyak peer di internet, dan mereka semua memiliki salinan lengkap dari rantai blok.
 
@@ -60,7 +60,7 @@ Jadi saya tahu hanya dengan melihat sekilas pada satu hash kecil ini bahwa ada s
 
 Rantai blok dapat memiliki 400.000 atau 500.000 blok dengan sangat mudah. Daripada memeriksa semuanya, yang benar-benar harus Anda lakukan hanyalah melihat hash dari yang paling baru, dan Anda dapat melihat apakah ada sesuatu di masa lalu yang diubah.
 
-#### Token (12:17) {#tokens-1217}
+### Token (12:17) {#tokens-1217}
 
 Itulah keseluruhannya — tidak ada yang lebih dari itu. Tetapi ini agak kurang berguna karena kita tidak memiliki apa pun di area data yang berarti sesuatu. Apa yang benar-benar kita inginkan adalah sebuah token.
 
@@ -70,7 +70,7 @@ Di sinilah sifat tidak dapat diubah menjadi penting. Jika saya mengubah sesuatu 
 
 Satu hal yang ingin saya sebutkan: kita tidak mencantumkan "Darcy memiliki seratus dolar dan dia memberikan 25 kepada Bingley." Kita hanya mengingat pergerakan uang, bukan saldo akun bank. Ini menimbulkan pertanyaan — apakah Darcy memiliki $25?
 
-#### Transaksi Coinbase (14:34) {#coinbase-transaction-1434}
+### Transaksi Coinbase (14:34) {#coinbase-transaction-1434}
 
 Kita memiliki masalah dalam versi rantai blok ini: kita sebenarnya tidak tahu apakah Darcy memiliki $25. Jadi mari kita lihat transaksi Coinbase. Kita menambahkan transaksi Coinbase ke blok kita — ini mengatakan bahwa kita akan menciptakan seratus dolar dari ketiadaan dan memberikannya kepada Anders. Tidak ada transaksi lain di blok ini karena tidak ada yang memiliki uang sebelum ini.
 
@@ -80,7 +80,7 @@ Anda menjumlahkan semua ini dan jumlahnya tidak melebihi seratus. Ini mengikuti 
 
 Jika kita melompat maju ke masa depan, kita melihat bahwa Jackson memberikan dua dolar kepada Alexa. Apakah Jackson benar-benar memiliki dua dolar? Kita mundur satu blok dan melihat bahwa Emily telah mendapatkan sepuluh dolar dari Anders dan memberikan sepuluh kepada Jackson. Jadi Jackson memang memiliki uang tersebut. Kita bisa mundur dan mengetahuinya — itu adalah salah satu manfaat memiliki bidang "previous".
 
-#### Penutup (16:30) {#closing-1630}
+### Penutup (16:30) {#closing-1630}
 
 Itulah rantai blok dasar yang menjalankan mata uang di atasnya. Seperti yang Anda ketahui, rantai blok memiliki banyak salinan — semua orang memiliki salinan. Jika kita memutasi sesuatu dan menjadikannya enam dolar, blok-blok tersebut menjadi tidak valid dan tidak setuju dengan salinan lainnya. Ini tahan terhadap perusakan, yang mana itulah yang Anda inginkan untuk sebuah mata uang. Ini bekerja sangat baik untuk hal-hal yang kecil dan transaksional.
 

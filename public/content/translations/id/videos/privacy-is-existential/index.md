@@ -18,7 +18,7 @@ Sebuah presentasi oleh **Peter Van Valkenburgh**, Direktur Eksekutif Coin Center
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=GQML0c1_4Gs) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 Ini adalah panggung yang besar dengan jalan yang panjang dan saya, saya orang yang kuno, jadi saya membawa pidato tertulis, tetapi semoga Anda menikmatinya. Jadi, terima kasih telah mengundang saya. Coin Center, organisasi saya, telah berdiri selama 11 tahun. Kami membela para pengembang dan pengguna Bitcoin, Ethereum, serta teknologi mata uang kripto berikutnya dari regulasi pemerintah yang tidak tepat di Washington DC. Kami tahu ancaman saat kami melihatnya. Jadi, sedikit lebih dari 9 tahun yang lalu hari ini, saya berdiri di panggung di Shanghai pada DevCon kedua Ethereum dan saya memperingatkan tentang bahaya melakukan ICO. Itu sebenarnya adalah presentasi pembuka di DevCon kedua. Ini tahun 2016. Ini tepat di awal apa yang disebut ledakan ICO. Itu jauh sebelum Gary Gensler berada di SEC. Itu sebelum ada yang menerima pemberitahuan Wells. Bahkan sebelum peretasan DAO, yang jika Anda ingat atau ada pada saat itu memicu laporan DAO dari SEC di awal penyelidikan dan penuntutan mereka terhadap orang-orang di dunia kripto.
 
@@ -28,7 +28,7 @@ Orang Amerika dapat menggunakan teknologi tersebut. Dan mungkin yang lebih penti
 
 Dia adalah seorang pengembang perangkat lunak. Dan dia menggugat Departemen Kehakiman di pengadilan Texas untuk mendapatkan putusan deklaratif bahwa menerbitkan perangkat lunak untuk privasi bukanlah kejahatan dan tidak memerlukan lisensi di Amerika Serikat. Jadi, Anda mungkin tidak tahu banyak tentang saya atau
 
-#### Privasi adalah hal yang eksistensial (3:15) {#privacy-is-existential-315}
+### Privasi adalah hal yang eksistensial (3:15) {#privacy-is-existential-315}
 
 Coin Center, tetapi semoga Anda tahu bahwa Anda harus memercayai saya ketika saya membunyikan alarm, ketika alarm itu memang diperlukan. Jika kita ingin berhasil membangun dan memelihara infrastruktur keuangan yang bebas dan terbuka, kita perlu melangkah dengan hati-hati. Dan itulah mengapa saya ingin berbicara hari ini tentang privasi. Privasi adalah hal yang eksistensial bagi Ethereum. Privasi bukanlah permukaan serangan regulasi. Saya tidak akan berdiri di sini dan memberi tahu Anda untuk tidak membangun privasi seperti cara saya memberi tahu Anda untuk tidak melakukan ICO pada tahun 2016.
 
@@ -36,7 +36,7 @@ Privasi sebenarnya adalah cara untuk mempersempit permukaan serangan. Dan penunt
 
 Dan untuk membuktikannya kepada Anda, kasus yang ingin saya arahkan perhatian Anda hari ini bukanlah penuntutan undang-undang sekuritas. Ini bahkan bukan penuntutan pencucian uang atau keuangan gelap. Ini tentang nilai yang dapat diekstraksi penambang (miner extractable value atau MEV). Namun sebelum kita sampai di sana, mari kita bicara singkat tentang Frankenstein. Seperti yang dikatakan dokter yang baik itu, betapa berbahayanya perolehan pengetahuan, dan betapa jauh lebih bahagianya orang yang percaya bahwa kota asalnya adalah dunia daripada dia yang bercita-cita menjadi lebih besar dari yang diizinkan oleh kodratnya.
 
-#### Mary Shelley dan roda gigi searah pengetahuan (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley dan roda gigi searah pengetahuan (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Inilah yang saya pikir ingin disampaikan Mary Shelley dalam novel itu. Privasi bukan hanya tentang martabat manusia. Ini tentang ketiadaan pengetahuan yang efisien. Sama seperti akan sulit menjalani hidup dengan pengawasan terus-menerus, semua orang selalu menyerang privasi Anda, akan sulit juga menjalani hidup Anda dengan pengetahuan intim yang konstan tentang urusan pribadi orang lain. Anda terus-menerus menyerang privasi orang lain. Mengapa demikian? Karena menjadi mahatahu tanpa mahakuasa, melihat segalanya tanpa memiliki kemampuan untuk memperbaiki segalanya, membuat manusia gila. Hal itu menghancurkan kemanusiaan kita dengan kekhawatiran, keangkuhan, dan pengejaran kendali atas hal-hal yang tidak dapat dikendalikan.
 
@@ -46,7 +46,7 @@ Ini bukan tentang Bukti Kerja (PoW). Ini bukan tentang rantai blok, sebuah kata 
 
 Biaya mediasi meningkatkan biaya transaksi, membatasi ukuran transaksi praktis minimum dan memotong kemungkinan untuk transaksi kasual kecil. Dan ada biaya yang lebih luas, hilangnya kemampuan untuk melakukan pembayaran yang tidak dapat dibatalkan untuk layanan yang tidak dapat dibatalkan. Dengan kemungkinan pembatalan, kebutuhan akan kepercayaan menyebar. Jadi, tujuan Satoshi sebenarnya adalah netralitas sama halnya dengan ireversibilitas. Kemampuan untuk membatalkan baginya adalah asal mula biaya transaksi luar biasa yang terkait dengan kepercayaan. Dia tidak secara langsung mengatakannya di buku putih,
 
-#### Biaya mediasi perselisihan (7:50) {#the-cost-of-mediating-disputes-750}
+### Biaya mediasi perselisihan (7:50) {#the-cost-of-mediating-disputes-750}
 
 tetapi saya pikir apa yang dia maksud dengan memediasi perselisihan juga mengawasi penipuan, menghentikan kejahatan, mematuhi hukum dan kekuasaan negara bangsa, dan mengendalikan orang. Kita sering berbicara tentang betapa tidak efisiennya rantai blok secara komputasi, dan memang demikian. bahwa bahkan upaya komputasi monumental untuk memverifikasi tanda tangan digital secara global tanpa paralelisasi tidak ada artinya dibandingkan dengan inefisiensi yang melekat dalam perselisihan manusia atas nilai moral setiap transaksi dan apakah itu harus dimasukkan ke dalam rantai.
 
@@ -58,7 +58,7 @@ Lebih baik jika mereka bahkan tidak menyadari kekuatan mereka. Jauh lebih baik j
 
 Tidak. Argumen terbaik untuk privasi adalah bahwa netralitas validator bergantung padanya karena netralitas melalui desentralisasi tidak akan pernah cukup. Netralitas membutuhkan kebutaan. Saya dengan rendah hati menyarankan bahwa ada
 
-#### Dua aturan pengetahuan dan kekuasaan (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Dua aturan pengetahuan dan kekuasaan (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 dua aturan mendasar tentang pengetahuan dan kekuasaan dalam rantai blok. Aturan pertama, tidak ada hal transparan yang tetap netral. Buku besar yang terlihat akan menjadi buku besar yang dimediasi. Ini akan dimediasi oleh kepentingan pribadi dari validator yang kuat, melalui manipulasi untuk kepentingan pribadi seperti nilai yang dapat diekstraksi penambang (MEV). Ini akan dimediasi oleh tekanan offchain dari entitas yang kuat seperti perusahaan dan negara bangsa melalui pengenaan tugas hukum dan kewajiban atas kegagalan untuk menghormati tugas tersebut. Jika seorang validator memiliki sedikit saja kekuasaan, mereka akan dibuat untuk mengeksploitasi kekuasaan itu. Dunia yang dipetakan adalah dunia yang akan dibagi-bagi.
 
@@ -70,7 +70,7 @@ Ya, organisasi saya, Coin Center, akan selalu ada untuk melawan upaya yang tidak
 
 Pool privasi adalah pendekatan yang bijaksana untuk membatasi ancaman tersebut. Cobalah sebaik mungkin untuk menolak akses orang yang salah ke alat netral yang baik, tetapi perhatikan bahwa alat tersebut berhenti menjadi netral. Dan bahkan kemudian, terkadang siapa pun yang menyediakan himpunan anonimitas untuk pool tersebut akan gagal menolak akses orang jahat ke alat tersebut. Dan transaksi orientasi dari orang-orang jahat tersebut akan tetap terlihat di lapisan 1 (l1). Dan itu akan menjadi amunisi yang kuat bagi lawan kita.
 
-#### Kasus Pereira Bueno dan MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Kasus Pereira Bueno dan MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Namun kasus yang benar-benar meyakinkan saya akan kebutuhan mendesak akan privasi lapisan dasar bukanlah Tornado Cash. Ini adalah kasus lain di Distrik Selatan New York, kasus Pereira Bueno. Dua bersaudara didakwa dengan penipuan kawat (wire fraud) kriminal. Mereka menemukan cara untuk menggunakan perangkat lunak MEV Boost untuk melakukan serangan sandwich terhadap pengguna MEV Boost lain yang juga melakukan serangan sandwich terhadap pengguna Ethereum biasa. Mereka menghasilkan lebih dari $20 juta dengan melakukan ini. Mereka tidak berbohong kepada siapa pun atau memberikan representasi yang salah kepada mitra hubungan fidusia atau kontraktual mana pun. Meskipun demikian, jaksa Distrik Selatan New York berpikir bahwa mereka bersalah atas penipuan kawat, sebuah kejahatan federal, karena mereka bukan, kutip, validator yang jujur.
 
@@ -78,7 +78,7 @@ Ketika istilah validasi jujur dan validator jujur muncul dalam instruksi juri da
 
 Nilai yang dapat diekstraksi penambang (MEV) adalah realitas yang menjijikkan dari Ethereum. Ini juga berawal dari kurangnya privasi. Sifat publik dari transaksi DEX-lah yang memungkinkannya dengan mudah terkena serangan sandwich oleh validator. Jauh lebih sulit, mungkin bukan tidak mungkin, tetapi jauh lebih sulit untuk melakukan serangan sandwich pada transaksi jika Anda tidak dapat melihat fundamental ekonominya. Namun saya tidak hanya menginginkan privasi lapisan dasar sebagai cara untuk mencegah MEV. Saya menginginkannya sebagai cara untuk membela validator.
 
-#### Tugas validator yang dapat ditegakkan secara hukum (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Tugas validator yang dapat ditegakkan secara hukum (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Taktik DOJ yang lebih besar dalam kasus Pereira Bueno adalah bahwa validator memiliki tugas yang dapat ditegakkan secara hukum satu sama lain karena sifat publik dari transaksi yang mereka validasi. Dan jika tugas tersebut dilanggar, validator, saya pikir mereka berpikir, harus saling menggugat. Dan jika tidak, negara, Distrik Selatan New York, harus menuntut validator yang tidak jujur atas kejahatan. Dan ini tidak hanya berhenti pada penipuan kawat. Jika Anda dapat melihat transaksi pencucian uang atau bisa saja melihatnya menggunakan analisis rantai blok, lalu bagaimana Anda tidak terlibat dalam pencucian uang tersebut?
 
@@ -86,7 +86,7 @@ Jika Anda membangun di atas versi rantai yang memiliki transaksi yang disanksi d
 
 Kebutaan yang disengaja bukanlah pembelaan, tetapi kebutaan yang sebenarnya adalah pembelaan. Jadi jika Anda benar-benar menginginkan ketiadaan kebutuhan akan kepercayaan (trustlessness), jika Anda benar-benar menginginkan infrastruktur yang netral, jika Anda menginginkan pipa bodoh (dumb pipes), maka pipa tersebut harus benar-benar buta terhadap apa yang mengalir melaluinya.
 
-#### Saluran keuangan tradisional dan SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Saluran keuangan tradisional dan SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Sekarang, kritik yang bagus terhadap semua ini, Anda mungkin berkata, Peter, kita sudah memiliki pipa bodoh di industri keuangan tradisional, dalam sistem keuangan global tradisional, dan bahwa operator pipa bodoh tersebut tidak buta secara kriptografis terhadap realitas ekonomi dan aspek kriminal dari transaksi yang mereka masukkan ke dalam buku besar mereka. Pipa terbesar dari pipa-pipa tersebut disebut SWIFT. Dan ini adalah argumen yang kuat terhadap apa yang baru saja saya katakan.
 
@@ -102,7 +102,7 @@ Dan akhirnya, bahkan jika SWIFT selamat dari krisis yang bergerak lambat saat in
 
 Apakah kita sebenarnya di sini untuk pipa bodoh?
 
-#### Kesimpulan dan pembelaan infrastruktur netral (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Kesimpulan dan pembelaan infrastruktur netral (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Kesimpulannya, Coin Center tidak akan ke mana-mana, dan kami akan selalu ada di sini untuk membantu membela pengembang protokol dan infrastruktur dari penuntutan yang tidak adil dan peraturan yang terlalu luas. Namun tanpa privasi yang sebenarnya, pertarungan itu menjadi semakin sulit. Apa yang bisa kita lakukan? Satu, saya percaya Ethereum harus memiliki privasi lapisan dasar atau setidaknya menjadi buku besar akar untuk L2 yang memiliki sequencer yang buta dan benar-benar terdesentralisasi.
 
@@ -112,7 +112,7 @@ Dan kami memiliki proyek John Hancock yang baru diumumkan um yang mencari cara u
 
 Privasi adalah hal yang eksistensial. Terima kasih.
 
-#### Sesi Tanya Jawab (24:21) {#qa-session-2421}
+### Sesi Tanya Jawab (24:21) {#qa-session-2421}
 
 **Pembawa Acara:** Terima kasih. Berbagi menurut saya salah satu topik terpenting di zaman kita sejauh ini. Saya pikir pertanyaan pertama kita sebenarnya berada di ranah — bagaimana Anda memandang penjelasan privasi kepada orang baru? Untuk waktu yang sangat lama konsep privasi telah dicuci dalam gagasan kerahasiaan ini — ini untuk orang-orang berjubah berkerudung, dll. Seberapa besar hambatan yang Anda rasakan, terutama ketika Anda memikirkan upaya lobi? Anda membutuhkan orang biasa untuk juga merasa bahwa ini adalah sesuatu yang diperuntukkan bagi mereka. Apakah Anda merasa itu adalah perjuangan yang besar? Bagaimana kita memitigasinya?
 

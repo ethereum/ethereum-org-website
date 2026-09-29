@@ -19,13 +19,13 @@ Presentasi ini mengeksplorasi jenis-jenis reorganisasi blok yang mungkin terjadi
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=xcPxwhrg3Ao) yang diterbitkan oleh LisCon. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Pengantar dan latar belakang (0:03) {#introduction-and-background-003}
+### Pengantar dan latar belakang (0:03) {#introduction-and-background-003}
 
 Selamat datang. Hari ini saya akan berbicara tentang reorg yang mungkin terjadi dalam Bukti Kepemilikan (PoS) Ethereum.
 
 Saya baru-baru ini bergabung dengan Yayasan Ethereum, khususnya Robust Incentives Group. Pada dasarnya kami adalah tim peneliti yang berfokus pada segala hal tentang insentif. Saya akan mempersingkat ini — pembicaraan ini sangat padat dan Anda dapat menemukan sebagian besar pekerjaan kami di GitHub.
 
-#### Dua jenis reorg (0:44) {#two-types-of-reorgs-044}
+### Dua jenis reorg (0:44) {#two-types-of-reorgs-044}
 
 Hari ini saya ingin berbicara tentang reorg, dan secara khusus saya ingin menguraikan dua jenis reorg berbeda yang mungkin terjadi di ranah Bukti Kepemilikan (PoS) Ethereum.
 
@@ -37,7 +37,7 @@ Sekarang reorg ex-ante sedikit berbeda. Gagasannya adalah penyerang perlu memula
 
 Anda mungkin bertanya-tanya mengapa Anda ingin melakukan reorg semacam ini. Nah, masih ada MEV yang bisa ditangkap. Jika Anda beruntung, blok N+2 memiliki banyak MEV — Anda dapat menangkapnya hanya dengan menyalin-tempel apa pun isi blok tersebut. Skenario terburuknya, Anda pada dasarnya memiliki transaksi senilai dua slot untuk didengarkan.
 
-#### Reorg ex-post dalam Bukti Kerja (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Reorg ex-post dalam Bukti Kerja (PoW) (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Sebelum menyelami reorg ex-ante, yang merupakan topik utama pembicaraan ini, izinkan saya merangkum secara singkat reorg ex-post dan khususnya dimulai dengan konteks Bukti Kerja (PoW).
 
@@ -45,7 +45,7 @@ Pada dasarnya ini adalah rekap dari postingan blog oleh orang-orang yang biasa �
 
 Singkatnya, dalam Bukti Kerja (PoW) Ethereum, reorg ex-post itu sulit tetapi bukan tidak mungkin. Seorang penambang dengan 10% kekuatan memiliki peluang yang relatif baik untuk melakukan penambangan beberapa blok berturut-turut, dan jika insentifnya cukup tinggi — bayangkan ada satu blok dengan MEV senilai 100 ETH untuk ditangkap — maka mungkin tingkat keberhasilan satu persen sebenarnya sudah cukup untuk membuatnya sepadan mencoba melakukan reorganisasi.
 
-#### Reorg ex-post dalam Bukti Kepemilikan (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Reorg ex-post dalam Bukti Kepemilikan (PoS) (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Dalam Bukti Kepemilikan (PoS), ini adalah permainan yang sama sekali berbeda. Kita berbicara tentang jumlah stake yang tidak masuk akal yang diperlukan. Saya akan memandu Anda tentang bagaimana seseorang mungkin melakukannya hanya untuk menekankan betapa sulitnya hal itu.
 
@@ -63,7 +63,7 @@ Jika kita menjumlahkannya — blok N+1 memiliki atestasi senilai sepertiga ditam
 
 Untuk memberi Anda gambaran betapa konyolnya asumsi ini — bahkan jika Anda memiliki staker 65%, untuk mengendalikan dua pertiga komite di slot mana pun Anda memiliki probabilitas 0,05%. Ini menunjukkan bahwa kekuatan atestasi paralel itu nyata — reorg ex-post sangat sulit, jika bukan hampir tidak mungkin, dalam Bukti Kepemilikan (PoS) Ethereum.
 
-#### Mekanika serangan reorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mekanika serangan reorg ex-ante (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Sekarang saya akan berbicara tentang reorg ex-ante. Serangan ini didasarkan pada makalah oleh Neuder dan kawan-kawan. Kami baru-baru ini meningkatkan serangan ini secara signifikan. Kami juga menulis makalah tentang hal itu dan berhasil mengunggahnya di arXiv tepat pada waktunya.
 
@@ -75,7 +75,7 @@ Apa yang terjadi adalah orang-orang jujur tidak melihat blok N+1, sehingga merek
 
 Mari kita asumsikan latensi nol untuk saat ini. Di slot N+2, apa yang kita lakukan sebagai penyerang adalah merilis blok N+1 dan atestasi pribadi secara bersamaan. Validator yang jujur di slot N+2 perlu memberikan atestasi pada sebuah blok. Dari pandangan mereka, mereka melihat blok N+2 dan blok N+1 dengan satu atestasi pribadi ini. Jika mereka menjalankan pilihan percabangan, mereka akan menemukan bahwa blok N+1 memiliki bobot lebih dari blok N+2, karena N+1 memiliki atestasi pribadi yang tidak dimiliki N+2. Bahkan semua validator yang jujur sebenarnya akan memberikan atestasi pada blok N+1. Di N+3, secara sepele, N+1 akan dipandang sebagai kepala rantai.
 
-#### Latensi jaringan dan serangan (10:25) {#network-latency-and-the-attack-1025}
+### Latensi jaringan dan serangan (10:25) {#network-latency-and-the-attack-1025}
 
 Saya mengasumsikan latensi nol, yang jelas bukan cara kerjanya. Ada latensi — butuh waktu untuk menyebarkan blok dan pesan di lapisan P2P.
 
@@ -83,7 +83,7 @@ Cara penyerang masih dapat melakukan serangan semacam ini adalah dengan memiliki
 
 Untuk menekankan kembali apa yang terjadi di sini: kita memiliki seorang pengusul dengan pemberi atestasi tunggal yang berhasil melakukan reorg satu blok. Paling tidak, ini tidak ideal.
 
-#### Strategi penyeimbangan untuk reorg yang lebih panjang (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Strategi penyeimbangan untuk reorg yang lebih panjang (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Jika Anda ingin lebih canggih, Anda dapat melakukan reorg yang lebih panjang menggunakan strategi penyeimbangan. Gagasannya adalah membagi komite yang jujur ke dalam pandangan rantai yang berbeda.
 
@@ -97,7 +97,7 @@ Untuk mengakhiri reorg dua blok: blok N+3 diusulkan, Anda mendengarnya lebih awa
 
 Jika Anda memikirkannya, relatif murah untuk melakukan reorg ini di bawah asumsi ini. Bahkan jika Anda tidak memiliki pemisahan yang sempurna, karena lapisan P2P sangat besar, Anda memiliki distribusi probabilitas yang dapat Anda targetkan sehingga biaya serangan tumbuh dalam akar kuadrat dari ukuran komite.
 
-#### Mitigasi dorongan pengusul (15:17) {#proposer-boost-mitigation-1517}
+### Mitigasi dorongan pengusul (15:17) {#proposer-boost-mitigation-1517}
 
 Mari kita bicara tentang mitigasi. Apa gagasan dasarnya? Kita akan memberi pengusul sedikit lebih banyak kekuatan. Jika blok yang valid tiba tepat waktu, mari kita tingkatkan bobot blok ini selama durasi slot. Setelah slot itu selesai, kita melanjutkan skor LMD-GHOST yang biasa dan semuanya berjalan seperti biasa.
 
@@ -107,7 +107,7 @@ Hal penyeimbangan juga tidak berfungsi lagi karena Anda memiliki pemisahan 50/50
 
 Gagasannya adalah bahwa dengan adanya mitigasi ini, atestasi musuh harus bersaing dengan dorongan untuk meyakinkan validator yang jujur agar memilih sesuai dengan keinginan mereka. Ini merusak strategi penyeimbangan dan pada dasarnya melarang semua reorg sama sekali. Berita baik — ada PR yang terbuka, jadi pada dasarnya itu akan digabungkan sebelum The Merge.
 
-#### Poin-poin penting (16:48) {#key-takeaways-1648}
+### Poin-poin penting (16:48) {#key-takeaways-1648}
 
 Beberapa poin penting. Saya telah berbicara tentang perbedaan antara reorg ex-post dan ex-ante. Saya secara singkat menguraikan lanskap yang berbeda untuk reorg dalam Bukti Kerja (PoW) versus Bukti Kepemilikan (PoS). Saya menunjukkan kepada Anda cara melakukan reorg ex-ante tetapi juga yang penting cara memperbaikinya.
 

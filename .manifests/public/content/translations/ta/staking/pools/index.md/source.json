@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/staking/pools/index.md",
   "generatedAt": "2026-08-19T20:41:20.479Z",
-  "rootHash": "6c5b9e9f1a08",
+  "rootHash": "00724c2a34cb",
   "tree": {
-    "contentHash": "49b82ad53941",
-    "anchorHash": "baa8c92a676d",
+    "contentHash": "a026e3c84ad2",
+    "anchorHash": "3d5eda897598",
     "children": {
       "frontmatter:title": {
         "contentHash": "e520102d3cd3",
@@ -32,8 +32,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "0a4bd355a615",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "4179c5d3792e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "223508bc630d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "eb49a118a6f0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-are-staking-pools": {
         "contentHash": "24bf717f3e7e",

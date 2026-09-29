@@ -19,7 +19,7 @@ Eine Debatte zwischen **Lyn Alden** und **Justin Drake** über die grundlegenden
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=1m12zgJ42dI), das von Bankless veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:00) {#introduction-000}
+### Einführung (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Willkommen bei Bankless, wo wir die Frontier des Internetgeldes und der Internetfinanzen erkunden. Hier ist Ryan Sean Adams, ich bin hier mit David Hoffman, und wir sind hier, um euch zu helfen, mehr "bankless" zu werden. Leute, ihr könnt euch heute auf etwas freuen. Wir haben zwei Experten für Proof-of-Stake und Proof-of-Work, und sie debattieren darüber, was besser für die Schaffung eines globalen Geldsystems – eines Krypto-Geldsystems – geeignet ist: Proof-of-Work oder Proof-of-Stake. Lyn Alden und Justin Drake sind heute in der Episode. Wir werden über ein paar Dinge sprechen. Nummer eins: Was bietet die meiste wirtschaftliche Sicherheit, Proof-of-Work oder Proof-of-Stake? Nummer zwei: Was bietet die beste Abschreckung und Erholungsfähigkeit angesichts des gefürchteten 51%-Angriffs? Nummer drei: Was minimiert die Governance-Macht für die Eliten – was ist mehr "Macht dem Volk"? Nummer vier: Welches ist wirtschaftlich das fairste System, um daran teilzunehmen? Und Nummer fünf – das ist persönlich mein Favorit – diese Unterhaltung darüber, dass Proof-of-Work eher Rohstoffgeld und Proof-of-Stake eher Eigenkapitalgeld ist.
 
@@ -29,7 +29,7 @@ Eine Debatte zwischen **Lyn Alden** und **Justin Drake** über die grundlegenden
 
 **Justin Drake:** Mir geht es großartig, danke nochmal für die Einladung, Leute.
 
-#### Den Rahmen der Debatte abstecken: Monetäre Prämie (7:30) {#framing-the-debate-monetary-premium-730}
+### Den Rahmen der Debatte abstecken: Monetäre Prämie (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Ich möchte mit der großen Frage beginnen. Ich denke, wir versuchen die Meta-Frage zu beantworten, ob Proof-of-Work oder Proof-of-Stake am ehesten für den Aufbau einer monetären Prämie geeignet ist – im Grunde, welches dieser beiden Konsensprotokolle am ehesten dazu geeignet ist, eine Kryptowährung zu Geld zu machen. Justin, stimmst du zu, dass dies der richtige Rahmen ist?
 
@@ -41,7 +41,7 @@ Eine Debatte zwischen **Lyn Alden** und **Justin Drake** über die grundlegenden
 
 **Justin Drake:** Ich möchte einwerfen und argumentieren, warum diese Analogie zwischen Eigenkapital und Proof-of-Stake vielleicht eine schlechte Analogie ist. Im Kontext von Eigenkapital hat man das Recht, über alles abzustimmen – man kann die Regeln des Unternehmens komplett ändern. Beim Proof-of-Stake-Konsens können die Konsensteilnehmer die Regeln nicht einfach willkürlich ändern. Sie können nicht sagen: "Wir geben uns jetzt einfach jedem tausend ETH" – das wäre eine ungültige Transaktion. Letztendlich sind die Konsensteilnehmer der Community verpflichtet, und das ist ein riesiger Unterschied im Vergleich zu Eigenkapital.
 
-#### Rohstoffgeld vs. Eigenkapitalgeld (10:06) {#commodity-money-vs-equity-money-1006}
+### Rohstoffgeld vs. Eigenkapitalgeld (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, möchtest du mit dieser Unterhaltung über Proof-of-Work als Rohstoff und Proof-of-Stake als Eigenkapital weitermachen?
 
@@ -53,7 +53,7 @@ Eine Debatte zwischen **Lyn Alden** und **Justin Drake** über die grundlegenden
 
 **Lyn Alden:** Ich denke, es gibt ein gewisses Spektrum, aber größtenteils ist es eher eine Einbahnstraße. Es gibt viele Möglichkeiten, zu Eigenkapital zu werden, aber nur sehr wenige Möglichkeiten, zu einem Rohstoff zu werden. Rohstoffe sind von Natur aus etwas selten und unveränderlich. Die Möglichkeiten, einen echten Rohstoff im digitalen Bereich zu schaffen, sind extrem begrenzt.
 
-#### 51%-Angriffe: Abschreckung und Erholung (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### 51%-Angriffe: Abschreckung und Erholung (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Ich möchte Proof-of-Work und Proof-of-Stake dahingehend vergleichen, welches am wenigsten anfällig für Zensurangriffe ist. Einer der massiven Vorteile von Proof-of-Stake ist, dass die soziale Ebene über Werkzeuge zum Eingreifen verfügt. Wenn bei Proof-of-Work ein 51%-Angreifer auftaucht, sammelt er jede einzelne Belohnung, jede einzelne Emission, jede Transaktionsgebühr ein. Die ehrlichen Miner schalten ab, weil es keinen Sinn macht, Strom ohne Einkommen zu verbrauchen. Dann wollen sie liquidieren und ihre Hardware verkaufen. Der Angreifer kann diese Hardware für einen Spottpreis kaufen und sich selbst verstärken. Selbst wenn die Community einen Gegenangriff zustande bringt, würde es Monate, wenn nicht Jahre dauern, ihn zu organisieren.
 
@@ -65,7 +65,7 @@ Wenn es um Sicherheit geht, geht es nicht nur um 51%-Angriffe – es geht auch u
 
 Zur Erholung von 51%-Angriffen: Der einzige Weg bei Proof-of-Stake ist ein Soft Fork und den Leuten ihr Kapital wegzunehmen. Wenn man es so formuliert, dass man das Kapital des Angreifers nimmt, klingt das in Ordnung. Aber der Angreifer könnte ein regulierter Verwahrer sein – man nimmt Kapital von Leuten, die nichts mit dem Angriff zu tun hatten.
 
-#### Komplexität, Bugs und Client-Diversität (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Komplexität, Bugs und Client-Diversität (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Komplexität ist nicht unbedingt böse. Die Menschheit gedeiht dadurch. Was die Komplexität von Proof-of-Stake angeht – ja, es ist komplexer, mindestens 10-mal, vielleicht 100-mal. Aber es ist eine Komplexität, die wir zu diesem Zeitpunkt gebändigt haben. Wir haben fünf verschiedene Clients, die das Protokoll implementiert haben, jeder mit kleinen Teams von fünf bis zehn Personen. Client-Diversität ermöglicht es der Community, eine Versicherung gegen Bugs zu kaufen.
 
@@ -75,7 +75,7 @@ Zum Thema, ständig online zu sein – was wir schwache Subjektivität nennen �
 
 Wenn man sich die langfristige Richtung von Proof-of-Work ansieht, wird man eine zunehmende Integration zwischen Minern und Energieproduzenten feststellen. Das Stromnetz muss naturgemäß Strom überproduzieren. Proof-of-Work-Systeme sind ein wirklich guter Lastausgleich für überschüssige Energie (Stranded Energy). Die billigste Stromquelle ist praktisch kostenlose überschüssige Energie. Im Moment hat die größte Bitcoin-Mining-Anlage der Welt etwa 1 % der gesamten Hashrate – sie ist bereits strukturell dezentral.
 
-#### Fairness und das "Die Reichen werden reicher"-Argument (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Fairness und das "Die Reichen werden reicher"-Argument (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** Bei Proof-of-Stake hat man perfekte Fairness – man setzt eine Kapitaleinheit ein und erhält genau die gleiche Menge an Belohnungen, egal wie groß oder klein man ist. Bei Proof-of-Work haben die großen Fische unfaire Vorteile. Wenn man ein Retail-Miner ist, der ein Rig kauft, zahlt man das 2-, 3-, 4-, 5-fache im Vergleich zu professionellen Minern, die in großen Mengen kaufen. Aufgrund des Mooreschen Gesetzes haben Angreifer, die angreifen wollen, einen Vorteil – sie können die neueste, modernste Hardware auswählen. Für sie ist der Strompreis weitgehend irrelevant, da ein 51%-Angriff nur für einen Tag oder eine Woche laufen muss. 99 % der Kosten stecken in den Rigs und der Infrastruktur, nicht im Strom.
 
@@ -85,7 +85,7 @@ Die Tatsache, dass Proof-of-Work von Natur aus unfair ist, schafft Vorteile für
 
 Bei Proof-of-Work mietet man im Grunde seine Fähigkeit, das System zu steuern. Die Maschinen verschleißen, die Energiequelle könnte weniger effizient werden, die Hardware wird weniger modern. Es ist eine ständige Reihe von Entscheidungen und nicht ein System, das von Natur aus den Leuten zugutekommt, die sich zuerst eingekauft haben. Egal wie viel Bitcoin Michael Saylor hat, er hat null Kontrolle darüber, welche Transaktionen verarbeitet werden.
 
-#### Proof-of-Work als "Proof-of-Stake mit zusätzlichen Schritten" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Proof-of-Work als "Proof-of-Stake mit zusätzlichen Schritten" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Ich kenne niemanden – und ich bin seit fast einem Jahrzehnt in diesem Bereich –, der zu diesem Zeitpunkt Bitcoin als Einzelperson minet. Es ist alles industriell. Auf der anderen Seite betreiben beim Proof-of-Stake alle in diesem Call – vielleicht mit Ausnahme von dir, Lyn – Staking als Einzelpersonen. Die Diversität beim Proof-of-Stake ist viel, viel größer. Die Eintrittsbarriere ist viel niedriger – man braucht im Grunde nur einen Computer, der rund um die Uhr läuft.
 
@@ -97,11 +97,11 @@ Zum Argument "Die Reichen werden reicher" bei Proof-of-Stake: Ich sehe es als Ve
 
 Zur Client-Diversität – zumindest als ich das letzte Mal nachgesehen habe, hat der größte Client etwa 84 % der Ethereum-Clients. Man hat ein gewisses Maß an Diversifizierung, aber es ist auch teilweise eine Illusion. In der Praxis ist eines der wichtigsten Dinge, die vor Bugs schützen, eine möglichst einfache Codebasis zu haben.
 
-#### NIST, Quanten und langfristige Fundamentaldaten (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, Quanten und langfristige Fundamentaldaten (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Wenn wir das Internet des Geldes sein wollen, brauchen wir eine Zeitskala in der Größenordnung des Internets selbst – Jahrzehnte, wenn nicht Jahrhunderte. Komplexität ist etwas, das eine Halbwertszeit von vielleicht einem Jahr hat – sie kann gebändigt und gehärtet werden. Im Laufe der Zeit, wenn viel Wert gesichert ist, kann man den Systemen vertrauen. Die Bugs werden behoben, das System wird sich härten. Worauf wir schauen sollten, sind langfristige Fundamentaldaten. Es stellt sich heraus, dass Proof-of-Work in den nächsten 20 bis 30 Jahren durch Quantencomputing komplett auf den Kopf gestellt wird. Ja, es gibt kurzfristige Bedenken hinsichtlich der Komplexität, aber wenn man herauszoomt und sich auf die Fundamentaldaten konzentriert, gibt es fundamentale Gründe, bei Proof-of-Work pessimistisch zu sein.
 
-#### Das historische Argument für Rohstoffgeld (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Das historische Argument für Rohstoffgeld (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, du hast gewissermaßen die Führung als Makro-Kommentatorin übernommen, die sich auf Rohstoffmärkte konzentriert. Bitcoiner neigen dazu, sich auf Rohstoffeigenschaften zu konzentrieren und darauf, wie Bitcoin Energie als Rohstoff verbraucht. Ist das teilweise ein moralisches Argument – dass Rohstoffgeld einfach ein besser geeignetes Geld für die Welt ist?
 
@@ -113,13 +113,13 @@ Im Laufe der Zeit tendiert das zur Zentralisierung. Wenn sich Schulden anhäufen
 
 **Lyn Alden:** Ich persönlich gehe das aus einer taktischen Risikoperspektive an. Welches System hat am wenigsten wahrscheinlich Extremrisiken (Tail Risks)? Was ist für das optimiert, was es zu tun versucht? Wenn es um das Fairness-Argument geht, wird das teilweise mit verschiedenen Dingen vermischt – Proof-of-Work versus Proof-of-Stake ist ein Aspekt, und die Knappheit von Token ist ein anderer.
 
-#### Die Knappheitsmaschine vs. die Liquiditätsmaschine (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Die Knappheitsmaschine vs. die Liquiditätsmaschine (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Proof-of-Work und Proof-of-Stake sind aus einer Meme-Perspektive fast das genaue Gegenteil. Bei Proof-of-Stake hat man das, was ich eine Knappheitsmaschine nenne – einen Mechanismus, um liquide ETH in eingefrorene ETH zu verwandeln, die als Sicherheit verwendet werden. Meine Prognosen besagen, dass letztendlich etwa die Hälfte des gesamten ETH-Angebots gestakt sein wird. Bei Proof-of-Work ist es das Gegenteil – Emission und Transaktionsgebühren, die Miner verdienen, müssen verkauft werden, um Strom- und Hardwarekosten zu decken. Man hat eine Liquiditätsmaschine geschaffen, die ständig auf den Markt wirft. Wenn man fragt, welches das beste System ist, um Geld für das Internet zu schaffen – dasjenige, das ständig abwirft, oder dasjenige, das die Leute ermutigt, zu halten –, denke ich, ist es offensichtlich, welches aus einer Meme-Perspektive wertvoller ist.
 
 **Lyn Alden:** Je mehr ein System zu tun versucht, desto schlechter wird es in einer einzelnen Sache sein. Während Ethereum versucht hat, seine Geldpolitik zu härten, hat es wohl Marktanteile bei Dezentralisierte Finanzen (DeFi) verloren – von 97 % des gesamten gebundenen Wertes (TVL) Ende 2020 auf jetzt 55 %. Bisher hat Bitcoin nicht wirklich Konkurrenz von anderen Systemen. Die kurzen Phasen der Konkurrenz – Dogecoin-Memes, Bitcoin Cash – verblassen mit der Zeit. Die eine Welt basiert auf Governance und darauf, sein Ökosystem attraktiv zu machen. Die andere läuft darauf hinaus, welches das härteste ist – was am besten darin ist, Geld zu sein.
 
-#### Governance, Unveränderlichkeit und Selbstsouveränität (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Governance, Unveränderlichkeit und Selbstsouveränität (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Zumindest gibt ein Proof-of-Stake-System den Inhabern der Einheiten mehr Mitspracherecht darüber, welche Transaktionen verarbeitet und welche zensiert werden. Aber wer das Protokoll ändern darf und wie – das geht über die Debatte Proof-of-Work vs. Proof-of-Stake hinaus. Man kann Proof-of-Work-Systeme haben, die eher wie Eigenkapital aussehen – mit Difficulty-Bomben oder supergroßen Blöcken, sodass die Leute nicht ihren eigenen Knoten betreiben können.
 
@@ -129,13 +129,13 @@ Das Meme von Bitcoin ist Selbstsouveränität. Man betreibt seinen eigenen Knote
 
 **Lyn Alden:** Bei Rohstoffgeldern haben die Produzenten selten viel Kontrolle. Gold hat ein sehr hohes Stock-to-Flow-Verhältnis – Gold-Miner haben praktisch keine Kontrolle über das System. Das war auch im Bitcoin-Ökosystem so. Während der Blockgrößen-Kriege befürwortete die Mehrheit der Miner die Blockvergrößerung und konnte sie trotzdem nicht durchsetzen. Die Knoten-Betreiber lehnten sie ab. Diese Kombination aus Gewaltenteilung – bei der man einfach einen Knoten betreiben und selbstsouverän werden kann, und separat das Mining einem die vorübergehende Fähigkeit gibt, Transaktionen zu ordnen, aber keine dauerhafte Zuteilung – ist es, was ein dezentrales System aufrechterhält.
 
-#### Die Widerlegung von "Die Reichen werden reicher" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Die Widerlegung von "Die Reichen werden reicher" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Zum Thema "Die Reichen werden reicher" bei Proof-of-Stake – ich sehe es als Vermögenserhalt, nicht als Vermögensvermehrung. Beim Staking zahlt man Opportunitätskosten von etwa 3 % und wird dafür entschädigt. Netto betreibt man Vermögenserhalt. Professionelle Miner tun dasselbe – sie sichern Risiken mit Futures ab und sichern sich Renditen, die in etwa den Opportunitätskosten entsprechen. Eigentlich ist Proof-of-Work nur Proof-of-Stake mit zusätzlichen Schritten. Das Risiko kann mit Finanzprodukten beseitigt werden, und am Ende des Tages hat man im Wesentlichen das gleiche Finanzprodukt.
 
 **Lyn Alden:** Was ein Rohstoffsystem dezentral macht, ist die Kombination aus kleinen Knoten und separatem Mining. Egal wie viel Bitcoin jemand hält, er hat null Kontrolle über die Reihenfolge der Transaktionen. Das ist die Gewaltenteilung. Wenn man sich der Unveränderlichkeit im digitalen Bereich so weit wie möglich annähern will, entwirft man ein System, das sehr dezentral ist, dem man nur sehr schwer Änderungen aufzwingen kann, mit entweder keinen Änderungen oder Opt-in-Änderungen. Alles, was von diesem Modell abweicht – fortlaufender erzwungener Buy-in von einem kleinen Team von Entwicklern, Entwicklungszentren, Stiftungen – ist unabhängig vom Konsensmechanismus von Natur aus eher eigenkapitalähnlich.
 
-#### Schlussplädoyers (1:30:42) {#closing-arguments-13042}
+### Schlussplädoyers (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Das war eine fantastische Unterhaltung. Das war wahrscheinlich die beste Unterhaltung über Proof-of-Stake versus Proof-of-Work in der Geschichte. Zeit für die Schlussplädoyers. Justin, warum ist Proof-of-Stake der beste Weg, um ein Krypto-Geld zu schaffen?
 
@@ -151,7 +151,7 @@ Wenn man eine Blockchain entwerfen würde, um die monetären Eigenschaften zu ma
 
 Wenn es um Geld geht, das geeignet ist, um die Schatzkammer eines Unternehmens darin anzulegen, einen Teil seiner Stiftungsgelder zuzuweisen oder 10 % oder mehr seines Nettovermögens zu halten – oder staatliche Reserven zu verwalten, die jahrzehntelange angesammelte Handelsüberschüsse repräsentieren –, war historisch gesehen Gold das Beste. Jetzt haben wir neue Konkurrenten. Man würde das dezentralste, das unveränderlichste auswählen, dasjenige, das keine dieser Eigenschaften opfert. Das bedeutet nicht, dass andere Systeme nicht wertvoll sind – nur weil Gold Wert hat, heißt das nicht, dass Tesla-Aktien keinen haben. Es sind verschiedene Dinge, die verschiedene Dinge tun. Das perfekte Geld ist bereit, fast alles andere zu opfern, um die perfekten Eigenschaften von Geld zu haben – dessen Hauptzweck es ist, gehalten und gelegentlich für Transaktionen verwendet zu werden, im Vergleich zu etwas, das versucht, ein Schweizer Taschenmesser zu sein.
 
-#### Abschluss (1:40:14) {#wrap-up-14014}
+### Abschluss (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Ich möchte Lyn Alden und Justin Drake noch einmal dafür danken, dass sie bei uns waren und die beste Debatte geführt haben, die ich je über Proof-of-Work versus Proof-of-Stake gehört habe. Ein besonderer Dank geht auch an Lyn, dass sie in das gekommen ist, was manche vielleicht als das "Auswärtsteam" wahrnehmen könnten.
 

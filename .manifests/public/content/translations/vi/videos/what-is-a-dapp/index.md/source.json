@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/what-is-a-dapp/index.md",
   "generatedAt": "2026-04-29T06:26:15.135Z",
-  "rootHash": "d0d82bf6307f",
+  "rootHash": "e1c86f04924d",
   "tree": {
-    "contentHash": "bd4a924c5ad6",
-    "anchorHash": "6d9de793c6c3",
+    "contentHash": "bdf79b09206e",
+    "anchorHash": "4d1190eab908",
     "children": {
       "frontmatter:title": {
-        "contentHash": "4797d48cbb6d",
+        "contentHash": "625f39c4882f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "688975b30af8",
+        "contentHash": "f27c2c51f037",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d1eebdf80746"
+        "anchorHash": "042caf999727"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5752469ef26a"
+        "anchorHash": "4b1302bc89ef"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "498ea7be21f8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c40cc25b38bd"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2658a7ac4df4"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b29be240f173"
+        "anchorHash": "8264ffa59a1b"
       },
       "prose:1": {
         "contentHash": "6f319ec25088",

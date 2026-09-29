@@ -20,7 +20,7 @@ Penjelasan oleh **Finematics** yang membahas rollup sebagai strategi penskalaan 
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=7pWxCklcNsU) yang dipublikasikan oleh Finematics. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Lapisan 2 (1:17) {#layer-2-117}
+### Lapisan 2 (1:17) {#layer-2-117}
 
 Penskalaan Ethereum telah menjadi salah satu topik yang paling banyak dibahas dalam dunia kripto. Perdebatan tentang penskalaan biasanya memanas selama periode aktivitas jaringan yang tinggi seperti tren CryptoKitties pada tahun 2017, Musim Panas keuangan terdesentralisasi (DeFi) pada tahun 2020, atau pasar bullish kripto pada awal tahun 2021. Selama periode ini, permintaan yang tak tertandingi untuk jaringan Ethereum mengakibatkan biaya gas yang sangat tinggi, sehingga mahal bagi pengguna sehari-hari untuk membayar transaksi mereka.
 
@@ -28,7 +28,7 @@ Untuk mengatasi masalah ini, pencarian solusi penskalaan yang paling mutakhir te
 
 Secara umum, ada tiga cara utama untuk menskalakan Ethereum — atau bahkan, sebagian besar rantai blok lainnya: menskalakan rantai blok itu sendiri (penskalaan lapisan 1 (l1)), membangun di atas lapisan 1 (penskalaan lapisan 2 (l2)), dan membangun di samping lapisan 1 (rantai samping).
 
-#### Di luar lapisan 1 (1:58) {#outside-of-layer-1-158}
+### Di luar lapisan 1 (1:58) {#outside-of-layer-1-158}
 
 Terkait lapisan 1 (l1), Eth2 adalah solusi yang dipilih untuk menskalakan rantai blok Ethereum. Eth2 mengacu pada serangkaian perubahan yang saling terhubung seperti migrasi ke Bukti Kepemilikan (PoS), menggabungkan state dari rantai blok Bukti Kerja (PoW) ke dalam rantai Bukti Kepemilikan (PoS) yang baru, dan sharding. Sharding, khususnya, dapat secara dramatis meningkatkan laju pemrosesan jaringan Ethereum, terutama jika digabungkan dengan rollup.
 
@@ -42,7 +42,7 @@ Untuk mencapai hal ini, transaksi rollup dieksekusi pada rantai terpisah yang ba
 
 Setiap rollup menerapkan serangkaian kontrak pintar di lapisan 1 yang bertanggung jawab untuk memproses setoran dan penarikan serta memverifikasi bukti. Bukti juga merupakan tempat di mana perbedaan utama antara berbagai jenis rollup ikut berperan. Rollup Optimistic menggunakan bukti penipuan, sementara rollup ZK menggunakan bukti validitas.
 
-#### Rollup Optimistic (4:26) {#optimistic-rollups-426}
+### Rollup Optimistic (4:26) {#optimistic-rollups-426}
 
 Rollup Optimistic memposting data ke lapisan 1 (l1) dan mengasumsikan bahwa data tersebut benar — itulah sebabnya dinamakan "optimistic". Jika data yang diposting valid, kita berada di jalur yang tepat dan tidak ada hal lain yang perlu dilakukan. Rollup Optimistic mendapat keuntungan karena tidak perlu melakukan pekerjaan tambahan dalam skenario yang optimis.
 
@@ -58,7 +58,7 @@ Sistem dapat bekerja seperti yang diharapkan dan mendeteksi penipuan bahkan jika
 
 Terkait rollup ZK, tidak ada penyelesaian sengketa sama sekali. Hal ini dimungkinkan dengan memanfaatkan bagian kriptografi cerdas yang disebut bukti zero-knowledge — itulah sebabnya dinamakan rollup ZK. Dalam model ini, setiap kumpulan yang diposting ke lapisan 1 menyertakan bukti kriptografi yang disebut ZK-SNARK. Bukti tersebut dapat diverifikasi dengan cepat oleh kontrak lapisan 1 saat kumpulan transaksi dikirimkan, dan kumpulan yang tidak valid dapat langsung ditolak.
 
-#### Perbedaan lainnya (7:28) {#other-differences-728}
+### Perbedaan lainnya (7:28) {#other-differences-728}
 
 Karena sifat proses penyelesaian sengketa, rollup Optimistic harus memberikan waktu yang cukup kepada semua peserta jaringan untuk mengirimkan bukti penipuan sebelum menyelesaikan transaksi di lapisan 1 (l1). Periode ini biasanya cukup lama — untuk memastikan bahwa bahkan dalam skenario terburuk, transaksi penipuan masih dapat disengketakan. Hal ini menyebabkan penarikan dari rollup Optimistic menjadi cukup lama, karena pengguna harus menunggu hingga satu atau dua minggu untuk dapat menarik dana mereka kembali ke lapisan 1.
 
@@ -70,7 +70,7 @@ Namun, rollup ZK memiliki kelemahannya sendiri. Karena kompleksitas teknologinya
 
 Rollup Optimistic memiliki waktu yang sedikit lebih mudah dengan kompatibilitas EVM. Mereka masih harus menjalankan versi EVM mereka sendiri dengan beberapa modifikasi, tetapi 99% kontrak dapat di-porting tanpa melakukan perubahan apa pun. Rollup ZK juga jauh lebih berat secara komputasi daripada rollup Optimistic, yang berarti bahwa node yang menghitung bukti ZK harus berupa mesin berspesifikasi tinggi, sehingga sulit bagi pengguna lain untuk menjalankannya.
 
-#### Peningkatan penskalaan (9:32) {#scaling-improvements-932}
+### Peningkatan penskalaan (9:32) {#scaling-improvements-932}
 
 Terkait peningkatan penskalaan, kedua jenis rollup seharusnya dapat menskalakan Ethereum dari sekitar 15–45 transaksi per detik (tergantung pada jenis transaksi) hingga sebanyak 1.000–4.000 transaksi per detik. Perlu dicatat bahwa dimungkinkan untuk memproses lebih banyak transaksi per detik dengan menawarkan lebih banyak ruang untuk kumpulan rollup di lapisan 1 (l1).
 
@@ -84,7 +84,7 @@ Meskipun Arbitrum dan Optimism mencoba mencapai tujuan yang sama — membangun s
 
 Perbedaan utama lainnya adalah pendekatan untuk menangani pengurutan transaksi dan MEV. Arbitrum pada awalnya akan menjalankan sekuenser yang bertanggung jawab untuk mengurutkan transaksi, tetapi mereka ingin mendesentralisasikannya dalam jangka panjang. Optimism lebih memilih pendekatan lain di mana pengurutan transaksi — dan karenanya MEV — dapat dilelang ke pihak lain untuk jangka waktu tertentu.
 
-#### Rollup ZK (13:10) {#zk-rollups-1310}
+### Rollup ZK (13:10) {#zk-rollups-1310}
 
 Meskipun tampaknya komunitas Ethereum sebagian besar berfokus pada rollup Optimistic — setidaknya dalam jangka pendek — proyek-proyek yang mengerjakan rollup ZK juga berkembang sangat cepat.
 
@@ -92,11 +92,11 @@ Loopring menggunakan teknologi rollup ZK untuk menskalakan protokol pertukaran d
 
 Rollup berbasis StarkWare telah digunakan secara luas oleh proyek-proyek seperti DeversiFi, Immutable X, dan dYdX. Seperti yang disebutkan sebelumnya, zkSync sedang mengerjakan mesin virtual yang kompatibel dengan EVM yang akan dapat sepenuhnya mendukung kontrak pintar arbitrer apa pun yang ditulis dalam Solidity.
 
-#### DeFi (14:02) {#defi-1402}
+### DeFi (14:02) {#defi-1402}
 
 Rollup juga seharusnya berdampak besar pada keuangan terdesentralisasi (DeFi). Pengguna yang sebelumnya tidak dapat bertransaksi di Ethereum karena biaya transaksi yang tinggi akan dapat tetap berada di ekosistem saat aktivitas jaringan tinggi di lain waktu. Rollup juga akan memungkinkan jenis aplikasi baru yang membutuhkan transaksi lebih murah dan waktu konfirmasi lebih cepat — semuanya sambil sepenuhnya diamankan oleh konsensus Ethereum. Tampaknya rollup dapat memicu periode pertumbuhan tinggi lainnya untuk DeFi.
 
-#### Tantangan (14:29) {#challenges-1429}
+### Tantangan (14:29) {#challenges-1429}
 
 Namun, ada beberapa tantangan terkait rollup. Komposabilitas adalah salah satunya — untuk menyusun transaksi yang menggunakan beberapa protokol, semuanya harus diterapkan pada rollup yang sama.
 
@@ -104,7 +104,7 @@ Tantangan lainnya adalah likuiditas yang terpecah. Tanpa adanya uang baru yang m
 
 Ini juga berarti bahwa secara alami akan ada pemenang dan pecundang. Saat ini, ekosistem Ethereum yang ada tidak cukup besar untuk memanfaatkan semua solusi penskalaan. Hal ini mungkin — dan kemungkinan besar akan — berubah dalam jangka panjang, tetapi dalam jangka pendek, kita mungkin melihat beberapa rollup dan solusi penskalaan lainnya menjadi kota hantu. Di masa depan, kita mungkin juga melihat pengguna hidup sepenuhnya di dalam satu ekosistem rollup dan tidak berinteraksi dengan rantai utama Ethereum dan solusi penskalaan lainnya untuk jangka waktu yang lama.
 
-#### Ancaman terhadap rantai samping (15:44) {#threat-to-sidechains-1544}
+### Ancaman terhadap rantai samping (15:44) {#threat-to-sidechains-1544}
 
 Satu pertanyaan yang sangat sering muncul saat membahas rollup adalah apakah mereka merupakan ancaman bagi rantai samping. Rantai samping masih akan memiliki tempatnya di ekosistem Ethereum. Meskipun biaya transaksi di lapisan 2 (l2) akan jauh lebih rendah daripada di lapisan 1 (l1), kemungkinan besar biayanya masih cukup tinggi untuk menyingkirkan jenis aplikasi tertentu seperti game dan aplikasi bervolume tinggi lainnya. Hal ini mungkin berubah ketika Ethereum memperkenalkan sharding, tetapi pada saat itu rantai samping mungkin menciptakan efek jaringan yang cukup untuk bertahan dalam jangka panjang.
 

@@ -19,7 +19,7 @@ Une explication par **Finematics** couvrant le fonctionnement des retraits de st
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=RwwU3P9n3uo) publiée par Finematics. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### La chaîne balise (0:31) {#the-beacon-chain-031}
+### La chaîne balise (0:31) {#the-beacon-chain-031}
 
 Avec l'approche rapide de la mise à jour Shanghai/Capella, il y a beaucoup de discussions concernant les retraits de staking sur Ethereum et ce que cela signifie pour l'écosystème Ethereum dans son ensemble.
 
@@ -35,7 +35,7 @@ La grande étape suivante, La Fusion, a uni la couche de consensus à preuve d'e
 
 Pour minimiser les risques, la portée de La Fusion a été réduite, et aucune autre fonctionnalité — en dehors du passage de la preuve de travail à la preuve d'enjeu — n'a été incluse dans la mise à jour. La plus grande « coupe » qui a dû être faite a impacté les retraits, qui sont devenus le point central de la prochaine mise à jour Shanghai/Capella.
 
-#### Retraits (2:09) {#withdrawals-209}
+### Retraits (2:09) {#withdrawals-209}
 
 Les retraits de staking, comme leur nom l'indique, permettront aux stakers de retirer leurs ETH verrouillés. Il existe deux types de retraits : « partiels » et « complets ».
 
@@ -47,7 +47,7 @@ Une fois activés, les retraits de staking seront automatiquement distribués to
 
 Afin de commencer à retirer ses récompenses de staking, un validateur devra fournir son adresse de retrait une seule fois. Étant donné que les retraits affectent à la fois la couche de consensus et la couche d'exécution d'Ethereum, les deux parties du réseau doivent être mises à jour. « Shanghai » est le nom de la mise à jour de la couche d'exécution contenant les retraits, qui sont spécifiés dans l'EIP-4895. « Capella » est le nom de la mise à jour correspondante de la couche de consensus, activée en même temps. Ces deux mises à jour sont parfois également appelées « Shapella ».
 
-#### Mécanique (3:40) {#mechanics-340}
+### Mécanique (3:40) {#mechanics-340}
 
 Dans l'écosystème Ethereum, chaque validateur possède un numéro d'indice correspondant. De plus, ils disposent également de deux types d'identifiants de retrait, définis comme `0x00` ou `0x01`.
 
@@ -77,7 +77,7 @@ Lors de la construction ou du traitement d'un bloc, les clients de la couche d'e
 
 La conception des retraits est simple mais extrêmement robuste.
 
-#### Idées fausses (6:30) {#misconceptions-630}
+### Idées fausses (6:30) {#misconceptions-630}
 
 La première idée fausse affirme que lors du traitement des retraits, il y a une différence entre un retrait « complet » et un retrait « partiel » en termes de priorité ou d'ordre. Les retraits complets et partiels se produisent tous deux lorsque le parcours linéaire de l'ensemble des validateurs atteint l'indice d'un validateur. La seule différence est que dans le cas des retraits complets, un validateur doit quitter la file d'attente de sortie et atteindre l'« époque retirable » avant que le parcours linéaire ne puisse le sélectionner.
 
@@ -93,7 +93,7 @@ Deuxièmement, pour s'assurer que le mécanisme de consensus à preuve d'enjeu e
 
 Le premier parcours de retrait retirera beaucoup de récompenses accumulées — essentiellement depuis la création de la chaîne balise. Cependant, les suivants traiteront une quantité d'ETH beaucoup plus faible.
 
-#### Implications (8:39) {#implications-839}
+### Implications (8:39) {#implications-839}
 
 L'activation des retraits créera un flux de staking ouvert et bilatéral. Actuellement, le flux de staking est unilatéral — l'ETH ne peut qu'entrer dans le réseau et ne jamais en sortir. Fait intéressant, l'activation des retraits pourrait inciter encore plus de personnes à staker, car elles sauront qu'elles pourront toujours retirer leurs ETH si elles en ont besoin pour autre chose.
 
@@ -103,7 +103,7 @@ Les retraits auront également un impact sur les dérivés de staking liquide te
 
 Les premiers adoptants du staking liquide et du staking centralisé ont capturé une grande majorité du marché car ils n'avaient pas beaucoup de concurrence. Cependant, la part de marché de ces acteurs historiques pourrait connaître un changement majeur une fois les retraits activés, surtout s'ils n'offrent pas un taux compétitif. La possibilité de passer librement d'un fournisseur de staking à un autre profitera au marché du staking d'ETH.
 
-#### Résumé (10:01) {#summary-1001}
+### Résumé (10:01) {#summary-1001}
 
 L'activation des retraits de staking est l'une des mises à jour les plus attendues d'Ethereum. Il sera extrêmement important de s'assurer que ce changement s'exécute en douceur. Afin d'aider aux tests, les validateurs auront plusieurs devnets et testnets à disposition pour exécuter le processus et résoudre tout problème potentiel avant le lancement sur le Réseau principal.
 

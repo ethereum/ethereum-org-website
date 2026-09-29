@@ -18,11 +18,11 @@ Une présentation de **Naomi Brockwell** à EthBoulder 2026 sur l'érosion de la
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=nvJSFR1Q_JE) publiée par EthBoulder. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Présentation en deux parties : avertissement + solution (00:00) {#two-part-talk-warning-solution-0000}
+### Présentation en deux parties : avertissement + solution (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi :** Merveilleux. Bienvenue à tous. Merci d'être là. Donc, cette présentation se fera en deux parties. dans la première partie, cela pourrait devenir un peu intense. Je suis connue pour devenir assez intense lorsqu'il s'agit de discussions sur la confidentialité et la surveillance. la deuxième partie aura un ton un peu différent. Donc, dans la première partie, je vais vous raconter une histoire et dans la deuxième partie, nous allons sauver le monde. Alors, si cela vous convient à tous, nous pouvons commencer.
 
-#### Les habits neufs de l'empereur (00:44) {#the-emperors-new-clothes-0044}
+### Les habits neufs de l'empereur (00:44) {#the-emperors-new-clothes-0044}
 
 Alors, acte un. Commençons par le premier acte de notre histoire. Le sortilège. Il était une fois un empereur à qui l'on vendit de magnifiques habits neufs. Le vendeur lui dit : « Ces vêtements sont spéciaux. Seuls les gens intelligents et vertueux peuvent les voir, et quiconque est inapte à sa fonction ne verra rien du tout. » L'empereur ne voyait aucun vêtement, mais il avait peur de l'admettre. Le dire reviendrait à avouer qu'il n'était pas digne de gouverner, alors il ne dit rien. Et lorsque l'empereur apparut en public pour parader dans les rues, personne d'autre ne put voir les vêtements non plus. 
 
@@ -32,7 +32,7 @@ Donc, fondamentalement, revenons-en au fait. Fondamentalement, cette histoire ne
 
 Or, dans notre histoire, chaque personne pensait qu'elle était peut-être le problème. Ils s'en remettaient donc à leurs voisins et présumaient que si quelque chose n'allait vraiment pas, quelqu'un d'autre aurait parlé en premier. Tout le monde s'est soumis à la sagesse de la foule. Et c'était une mauvaise stratégie car la foule avait tort. L'empereur était nu. Et parce que tout le monde est resté silencieux, le consensus a remplacé la vérité. Le silence de la foule est devenu la preuve que tout allait bien. Or, c'est exactement ainsi que la confidentialité s'effondre dans le monde moderne.
 
-#### La machine (02:46) {#the-machine-0246}
+### La machine (02:46) {#the-machine-0246}
 
 Donc, acte deux, la machine. Voici la version moderne de l'histoire. Nous vivons sous le plus grand régime de collecte de données de l'histoire de l'humanité. Nous avons construit et nous continuons d'alimenter une infrastructure de surveillance telle que le monde n'en a jamais vu auparavant, et la direction que nous prenons mène droit à la catastrophe. Pourquoi donc ? Parce qu'à l'heure actuelle, la seule façon pour que cela se termine bien est de pouvoir garantir qu'une personne malveillante ne prendra jamais le contrôle de ce système. Mais si une personne malveillante finit par en prendre le contrôle, c'est comme une arme atomique d'énergie potentielle remplie de tous les ingrédients nécessaires pour contrôler complètement une population. 
 
@@ -42,13 +42,13 @@ C'est un sentiment de malaise, n'est-ce pas ? Et nous le ressentons lorsqu'une a
 
 Nous sentons que quelque chose cloche lorsque nous parcourons une politique de confidentialité et que nous savons que nous devrions la lire attentivement. Il y a probablement des choses importantes là-dedans. Et en fait, il y est écrit noir sur blanc que oui, ils vont absolument partager ces données intimes, et nous ne savons même pas avec qui, mais nous cliquons quand même sur accepter parce qu'après tout, ça ne peut pas être si grave, sinon accepter ces choses ne serait pas la norme, n'est-ce pas ? Si c'était si grave, tout le monde ne le ferait pas.
 
-#### À quel point le statu quo est-il mauvais ? (05:12) {#how-bad-is-the-status-quo-0512}
+### À quel point le statu quo est-il mauvais ? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Alors, à quel point le statu quo est-il mauvais ? À quel point la situation est-elle vraiment grave ? Ou peut-être devrions-nous en parler parce que certaines personnes pensent qu'il s'agit simplement d'entreprises essayant de nous vendre une meilleure paire de chaussures. C'est juste une question de consommation, n'est-ce pas ? Ou peut-être s'agit-il simplement d'entreprises de réseaux sociaux qui apprennent à nous connaître pour créer un algorithme plus finement ajusté, n'est-ce pas ? Cela ne semble pas si terrible. Quel est le problème avec tout ça ?
 
 Mais en ce moment, nous consentons tous à une machine de surveillance omniprésente qui envahit discrètement chaque domaine privé de nos vies. Or, dans certains endroits comme les régimes autoritaires, cette machine est utilisée pour contrôler la dissidence avant qu'elle ne se produise en signalant les personnes potentiellement problématiques comme étant plus susceptibles de rejoindre un mouvement de protestation, puis en ciblant ces personnes. Parfois, cette machine est utilisée pour façonner le sentiment public, influencer les opinions, faire basculer les élections ou amener des populations entières à détester certains types de personnes en les convainquant que ces groupes les détestent. Et puis il y a des pays qui diffusent publiquement des informations sur les citoyens dont les scores de crédit social ont baissé, puis ils utilisent ces scores pour restreindre leurs déplacements, limiter leurs emplois, bloquer l'accès de leurs enfants à certaines écoles ou les couper entièrement de toute opportunité.
 
-#### Collecte de données à l'échelle de mille milliards de dollars (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Collecte de données à l'échelle de mille milliards de dollars (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Et maintenant, avec la révolution de l'IA, la machine cesse d'être un simple registre de votre vie pour devenir un moteur de prédiction. C'est pourquoi c'est important. Je veux donc rendre cela concret pour vous. Je vais donc passer en revue l'état actuel de la surveillance. 
  
@@ -56,7 +56,7 @@ Je vais décomposer la machine en trois parties. La première est la collecte. L
  
 Mais disons que vous êtes vraiment chanceux et que vous échappez au ciblage de ce système. Mais vos enfants n'y échapperont probablement pas, et vous n'avez aucune idée s'ils le feront ou non. Et cette machinerie à laquelle vous consentez aujourd'hui ne disparaîtra pas. Vous ne savez pas qui sera aux commandes demain.
 
-#### Comment ces informations sont divulguées (08:03) {#how-this-information-is-leaked-0803}
+### Comment ces informations sont divulguées (08:03) {#how-this-information-is-leaked-0803}
  
 Le deuxième point concerne donc la manière dont ces informations sont ensuite divulguées. Chaque année, le nombre de violations de données atteint un nouveau record. Divulguant toutes sortes d'informations que les entreprises n'auraient jamais dû collecter en premier lieu. Ainsi, les historiques de localisation et les dossiers médicaux, les données financières, les messages privés, toutes ces informations se retrouvent dans la nature, et finissent sur le dark web pour être utilisées par des cartels organisés, des gangs criminels et des pirates informatiques parrainés par des États. 
 
@@ -68,7 +68,7 @@ Et pourtant, les entreprises décident toujours de collecter toutes ces données
  
 C'est donc la foule qui applaudit au défilé, n'est-ce pas ? Ce n'est pas parce que nous sommes certains que chaque clic et chaque acceptation sont sans danger. C'est parce que s'exprimer, se désengager ou changer d'outils semble plus difficile que de suivre le mouvement.
 
-#### Portes dérobées et interception gouvernementale (09:33) {#backdoors-government-interception-0933}
+### Portes dérobées et interception gouvernementale (09:33) {#backdoors-government-interception-0933}
  
 Parlons maintenant de cette troisième catégorie, militarisée. Des opérations de renseignement étrangères hostiles ont déjà infiltré les infrastructures de communication de base. Je parlais justement tout à l'heure avec des gens de Salt Typhoon, n'est-ce pas ? La Chine, par exemple, intercepte nos appels et nos messages à grande échelle. 
 
@@ -78,7 +78,7 @@ Nous savons qu'il est impossible pour les gouvernements de s'assurer qu'ils sont
 
 Nous en connaissons une, Salt Typhoon, mais nous n'avons aucune idée de qui a collecté nos communications sensibles et intimes dans cette infrastructure même sur laquelle nous comptons.
 
-#### Pourquoi le contrôle est plus rare que vous ne le pensez (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Pourquoi le contrôle est plus rare que vous ne le pensez (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Ainsi, l'empereur est nu et la seule raison pour laquelle tout cela persiste est que la foule continue d'applaudir. Mais il y a une autre raison pour laquelle la foule continue d'applaudir. 
  
@@ -112,7 +112,7 @@ Alors, combien de centaines de millions de personnes utilisent des produits Appl
 
 Il y a une autre présentation où le père de quelqu'un a ramené à la maison un de ces hubs domestiques, n'est-ce pas ? Elle a décidé de faire quelques sondages. Parfois, elle joue avec les différents outils de la maison et elle voulait comprendre comment ça marche. Et il s'avère que cet appareil grand public populaire que n'importe qui pouvait acheter était utilisé comme hub dans un énorme botnet chinois. Ensuite, le FBI voit une présentation. Ils finissent par retirer la présentation d'Internet et par classifier l'enquête. Ils ne savaient pas que cela se produisait, mais c'est elle qui a attiré leur attention en faisant simplement cette présentation du genre : « Hé les gars, j'ai trouvé ce truc bizarre qui se passe. » Et c'est ainsi que nous découvrons qu'un énorme botnet chinois envahit toutes nos maisons par le biais de cet appareil spécifique. Qu'en est-il de tous les autres appareils de notre maison que personne n'a encore pris la peine d'examiner ?
 
-#### Le problème du silence et le faux consensus (16:30) {#the-silence-problem-false-consensus-1630}
+### Le problème du silence et le faux consensus (16:30) {#the-silence-problem-false-consensus-1630}
 
 Voilà donc où nous en sommes actuellement. Aujourd'hui, la surveillance est omniprésente, invisible, normalisée et justifiée, et nous la considérons comme la norme de l'industrie. Et c'est là où nous en sommes actuellement.
 
@@ -134,7 +134,7 @@ Eric Schmidt, de Google, a cette citation célèbre et atroce où il dit que si 
 
 Remarquez donc ce qui se passe. La confidentialité est désormais présentée comme une culpabilité et la conformité comme une vertu. Les bonnes personnes sont celles qui cèdent l'accès et les personnes suspectes sont celles qui posent des questions. Et maintenant, s'y opposer devient socialement coûteux. Une fois que vous attachez cette étiquette morale au silence, la parade avance toute seule.
 
-#### Comment arrêter la parade de l'empereur ? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### Comment arrêter la parade de l'empereur ? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Revenons à notre histoire. Les habits neufs de l'empereur. Alors que l'empereur défile dans la rue avec ses nouveaux habits, la foule applaudit. Ils admirent le savoir-faire. Ils louent l'élégance. Ils commentent les coupes, le tissu et la façon dont les vêtements accrochent la lumière. Et ils rivalisent pour paraître les plus impressionnés. Les courtisans se penchent en avant, désireux de montrer leur approbation, les officiels hochent solennellement la tête, les conseillers ajoutent des éloges techniques grandiloquents et inventent des détails pour prouver qu'ils comprennent ce qu'ils regardent, certains parlent fort dans l'espoir d'être entendus, tandis que d'autres sourient et ne disent rien, prenant soin de ne pas avoir l'air confus. Personne ne veut être le premier à hésiter, personne ne veut être celui qui pose les questions évidentes, et à chaque compliment, le mensonge devient plus difficile à défaire. 
 
@@ -158,7 +158,7 @@ Donc, la façon dont cela change n'est pas d'attendre que l'empereur s'arrête. 
 
 Or, quand les gens, quand suffisamment de gens cessent d'applaudir, la parade ne peut pas continuer. Et c'est la partie de l'histoire que nous sommes encore en train d'écrire ici. Il ne s'agit donc pas de savoir si l'empereur est nu. Nous savons tous qu'il n'a pas de vêtements. La seule question qui reste est de savoir si nous continuons à marcher à ses côtés, en faisant semblant que tout va bien.
 
-#### Deuxième partie : sauvons le monde (25:22) {#part-two-lets-save-the-world-2522}
+### Deuxième partie : sauvons le monde (25:22) {#part-two-lets-save-the-world-2522}
 
 Donc, sur cette note un peu sombre, deuxième partie : sauvons le monde. Qui veut un avenir meilleur ? Qui veut un avenir meilleur pour les générations futures, pour ses enfants ? Qui veut changer les choses ? Parce que nous avons totalement le pouvoir de faire la différence. 
 
@@ -312,7 +312,7 @@ Donc, chaque fois que vous êtes à ce carrefour, essayez simplement de voir si 
 
 En plus de cela, si les législateurs interdisent ces choses jusqu'à ce qu'elles disparaissent, parce que personne ne se bat pour elles, parce que nous disons tous : « Eh bien, je n'ai rien à cacher. » Ces choses disparaîtront.
 
-#### Les choix que nous devons faire concernant l'avenir que nous voulons voir (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Les choix que nous devons faire concernant l'avenir que nous voulons voir (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Je vais donc vous laisser sur cette note, car je pense que nous manquons de temps. En ce moment, nous sommes à la croisée des chemins où nous devons faire des choix concernant le monde que nous voulons voir. Et je sais qu'il y a beaucoup de gens qui sont dérangés par ces systèmes et qu'il semble que ce soit beaucoup de travail de faire la transition. 
 

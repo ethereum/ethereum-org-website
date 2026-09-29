@@ -18,7 +18,7 @@ Uma apresentação do TED pelo urbanista experimental **Scott Fitsimones** sobre
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=zTStDvUtQWc) publicada pelo TED. Ela foi levemente editada para facilitar a leitura.*
 
-#### Começando uma cidade a partir de um tweet (0:04) {#starting-a-city-from-a-tweet-004}
+### Começando uma cidade a partir de um tweet (0:04) {#starting-a-city-from-a-tweet-004}
 
 Como você começa uma nova cidade? Acontece que não é fácil. Você precisa mapear o terreno, obter permissão de um estado, comprar terras, convencer as pessoas a se mudarem para lá. E até que Elon Musk nos leve a Marte, a terra é um recurso finito — e os bons lugares provavelmente já estão todos ocupados.
 
@@ -26,7 +26,7 @@ Mas e se pudéssemos começar menor, tipo, muito pequeno? E apenas postar no Twi
 
 Agora tínhamos um pedaço de terra, um fundo de dinheiro e muitas decisões para tomar coletivamente. É por isso que decidimos iniciar uma DAO — uma organização autônoma descentralizada — chamada CityDAO.
 
-#### O que é uma DAO? (1:15) {#what-is-a-dao-115}
+### O que é uma DAO? (1:15) {#what-is-a-dao-115}
 
 Uma DAO é uma organização nativa da internet, governada por blockchain e de propriedade coletiva, trabalhando em prol de uma missão compartilhada. A maioria das DAOs reúne criptomoeda em uma tesouraria onde os membros votam sobre como ela é usada.
 
@@ -34,7 +34,7 @@ Em uma empresa tradicional, um CEO trabalha com executivos para definir a direç
 
 Se uma empresa tradicional for bem-sucedida, a maior parte da riqueza se acumulará para alguns fundadores, alguns dos primeiros funcionários e investidores que geralmente já têm um patrimônio líquido mais alto. Uma DAO é uma espécie de cooperativa cripto, dando a um grupo mais amplo de pessoas a oportunidade de possuir uma parte, participar do gerenciamento e compartilhar os lucros potenciais.
 
-#### CityDAO e cidades onchain (2:28) {#citydao-and-onchain-cities-228}
+### CityDAO e cidades onchain (2:28) {#citydao-and-onchain-cities-228}
 
 A CityDAO surgiu das minhas frustrações ao lidar com a burocracia da cidade e a papelada enquanto construía uma startup que ajuda as cidades a utilizarem melhor seus estacionamentos vazios. Levamos mais de três meses para conseguir uma licença apenas para vender estacionamento em São Francisco, e foi um pesadelo burocrático arcaico. Coisas como dar um uso maior e melhor a um estacionamento — construir um parque de food trucks, um centro logístico, talvez até novas moradias, um mercado de produtores — são tediosas, podem levar meses ou anos, ou até mesmo ser ilegais devido às leis de zoneamento.
 
@@ -42,7 +42,7 @@ A CityDAO esteve entre as primeiras DAOs corajosas o suficiente para comprar ter
 
 Na CityDAO, imaginamos uma cidade onchain onde coisas como licenças, orçamentos, leis, escrituras e registros sejam todos transparentes em uma blockchain, e contratos inteligentes possam acelerar as transações e reduzir a burocracia. Coisas que costumavam levar semanas — como comprar ou vender terras, ou fazer um empréstimo usando sua propriedade como garantia — poderiam acontecer em segundos por meio de um contrato inteligente.
 
-#### Como as DAOs se organizam (3:49) {#how-daos-organize-349}
+### Como as DAOs se organizam (3:49) {#how-daos-organize-349}
 
 As DAOs são flash mobs financeiros, muitas vezes se organizando aparentemente da noite para o dia em busca de uma ideia. Elas geralmente começam com algumas pessoas que têm uma grande visão, mas percebem que será necessário um grande esforço coletivo para realizá-la.
 
@@ -50,7 +50,7 @@ Elas geralmente iniciam a comunidade em um servidor de chat em grupo, e o mais c
 
 As pessoas podem contribuir para a DAO em tempo integral, meio período, mas uma das maneiras mais comuns é por meio de recompensas (bounties) — onde você entra e sai da DAO, assumindo pequenas tarefas e contribuindo onde pode.
 
-#### Governança e financiamento (4:39) {#governance-and-funding-439}
+### Governança e financiamento (4:39) {#governance-and-funding-439}
 
 A maioria das DAOs levanta financiamento inicial vendendo um token de governança que dá aos detentores direitos de voto sobre as atividades da DAO. Você pode comprar esses tokens no mercado aberto usando uma criptomoeda como o Ethereum, ou pode ganhá-los contribuindo para a DAO — por exemplo, criando um logotipo, pesquisando ou escrevendo algum código.
 
@@ -60,7 +60,7 @@ As DAOs têm sido chamadas de chats em grupo com uma conta bancária. E eu sei o
 
 Os fundos ficam em uma tesouraria pública na blockchain, onde qualquer pessoa pode auditar receitas e despesas. Sempre que gastos ou transferências de dinheiro estão envolvidos, a DAO aprova isso por meio de uma proposta. Normalmente escrita por um membro da DAO, uma proposta começa como uma ideia que é debatida e colocada em votação pelos detentores de tokens.
 
-#### Comprando a Parcela 0 (5:53) {#buying-parcel-0-553}
+### Comprando a Parcela 0 (5:53) {#buying-parcel-0-553}
 
 Uma das primeiras propostas na CityDAO foi, claro, qual pedaço de terra comprar. A DAO debateu os requisitos essenciais, os desejáveis, e os contribuidores da DAO vasculharam os anúncios de terras em Wyoming e reduziram para os três melhores, delineando os prós e contras de cada um e apresentando a proposta final à DAO para uma votação.
 
@@ -68,7 +68,7 @@ Votamos para adquirir a Parcela 0 perto de Cody, Wyoming — escolhida por estar
 
 Os próximos passos na CityDAO são coisas como votar sobre o que será construído na terra e quem poderá usá-la e quando. Algumas outras propostas circulando são coisas como comprar um pedaço de terra na Amazônia para conservação, ou construir uma rede de espaços de propriedade da DAO onde os cidadãos possam visitar a qualquer momento — uma cidade descentralizada, talvez.
 
-#### DAOs em ação (7:11) {#daos-in-action-711}
+### DAOs em ação (7:11) {#daos-in-action-711}
 
 Hoje estamos vendo as DAOs fazerem todos os tipos de coisas realmente interessantes juntas. Elas estão construindo produtos, investindo em startups, comprando arte e ativos, financiando pesquisas e arrecadando dinheiro.
 
@@ -78,7 +78,7 @@ A PleasrDAO coleciona arte e ativos digitais como NFTs. Eles compraram recenteme
 
 Em DAOs como MetaCartel e Seed Club, os membros analisam inscrições de startups e projetos promissores e decidem quais financiar. A VitaDAO está financiando pesquisas e, mais recentemente, a UkraineDAO arrecadou mais de seis milhões de dólares para doar ao esforço de defesa ucraniano.
 
-#### Desafios e o futuro (8:40) {#challenges-and-the-future-840}
+### Desafios e o futuro (8:40) {#challenges-and-the-future-840}
 
 Ainda é cedo para as DAOs, e elas certamente não servem para tudo. Elas exigem um nível de construção de consenso e podem se mover mais lentamente do que uma empresa que tem um chefe que pode simplesmente dar as ordens. Afinal, a ConstitutionDAO foi superada na casa de leilões Sotheby's pelo CEO da Citadel, e alguns dizem que a transparência e a descentralização dificultaram a coordenação da DAO para vencer o leilão.
 

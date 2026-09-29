@@ -92,7 +92,7 @@ Ethereum là một điều lớn lao: nó bao gồm một cộng đồng, một 
 Điều này có nghĩa là trang web cần xử lý nhiều hành trình người dùng khác nhau, từ "một nhà phát triển muốn một công cụ cụ thể" đến "một người mới vừa mua một ít ETH và không biết Ví là gì".
 "Đâu là trang web tốt nhất cho một nền tảng Chuỗi khối?" vẫn là một câu hỏi mở - chúng tôi là những người tiên phong. Việc xây dựng điều này đòi hỏi sự thử nghiệm.
 
-## Lộ trình sản phẩm {#roadmap}
+## Lộ trình sản phẩm {#get-involved}
 
 Để làm cho công việc của chúng tôi dễ tiếp cận hơn và thúc đẩy sự hợp tác cộng đồng nhiều hơn, đội ngũ nòng cốt của ethereum.org công bố một cái nhìn tổng quan về các mục tiêu lộ trình [chu kỳ định hình (shape up cycle)](https://www.productplan.com/glossary/shape-up-method/) của chúng tôi.
 

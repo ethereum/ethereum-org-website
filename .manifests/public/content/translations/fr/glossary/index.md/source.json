@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/glossary/index.md",
   "generatedAt": "2026-06-08T09:36:57.839Z",
-  "rootHash": "4471efb51a1f",
+  "rootHash": "7db93bc5fb48",
   "tree": {
-    "contentHash": "09812b23e393",
-    "anchorHash": "746f05681023",
+    "contentHash": "9b6c3dcedf9d",
+    "anchorHash": "e1b89729bcd0",
     "children": {
       "frontmatter:title": {
         "contentHash": "4c4e436f9a45",
@@ -24,8 +24,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "4949bc305da7"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "4668fb3fd719",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a332a5df7559"
+          }
+        }
       },
       "section-numbers": {
         "contentHash": "3378543f00d8",

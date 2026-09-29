@@ -182,3 +182,29 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 - `طالب بخصمك` matches the ETHGlossary `claim` entry (`مطالبة`); see known-patterns #75 for why that entry reads bureaucratic here.
 - Western numerals retained per the 6.3 default for ar.
 
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ar/page-apps.json`, `roadmap/pectra/index.md`. 8 critical, 14 warnings. Brand 8/10 | Technical 7/10 | Semantic 8/10 | Consistency 8/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ar affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DAO, DEX** left expanded, ar has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ar-specific):**
+
+- `OpenZeppelin` -> `أوبن زبلن` (ETHGlossary transliterates this product name; every context is the transliteration)
+- "operators" rendered `المعاملات`, which the glossary assigns to *transactions* -> `العوامل`, 2 sites
+
+**Deliberately not fixed:**
+
+- the third `معامل`-root hit in `languages/index.md` is a code comment genuinely about a *transaction*: false positive
+
+**Notes:**
+
+- Structure spotless: anchors, `dir="ltr"` spans, links, JSX, fences and backticks all match English, isolates balanced, zero cross-script contamination.
+- Three `page-apps` keys were restored to their pre-PR values rather than machine-collapsed, because collapsing orphaned the U+2069 in the isolate pair around `NFT`. See known-patterns #80.
+

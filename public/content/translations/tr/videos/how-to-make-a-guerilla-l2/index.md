@@ -20,13 +20,13 @@ breadcrumb: "Gerilla l2"
 
 *Bu döküm, Web3Privacy Now tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=WlsICV2OPAE) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş ve anarşist felsefe (0:05) {#introduction-and-anarchist-philosophy-005}
+### Giriş ve anarşist felsefe (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Alkışlar] Burada olduğunuz için teşekkürler. Biliyorum şu an Vitalik konuşuyor. Birkaçınızın oradaki matcha sırasında değil de burada olması gerçekten bir onur. Bugün gerilla l2'ler hakkında bir sohbet gerçekleştireceğiz ve sanırım o konuya gireceğiz, ancak size burada bize katılma onurunu bahşeden Fransız filozof ve anarşist Melanie Premsyl'i takdim ediyorum. Kendinden biraz bahsetmek ister misin?
 
 **Melanie Premsyl:** Evet. Herkese merhaba. Ben Fransız bir filozofum. Anarşi ve teknoloji üzerine çalışıyorum ve başlangıçta daha çok bölge tarafındaydım. Örneğin Fransa'nın merkezinde, Tarnac'ı veya daha şiddet yanlısı olan o tür grupları bilir misiniz bilmiyorum. Karşılaştığım temel sorun, dünyadaki diğer insanlarla bağlantı kurmamız gerektiğiydi ve birçok anarşist grup çok kısıtlı. Amerika veya Güney Amerika'dan daha fazla insanla iletişim kurabileceğimiz bir yola ihtiyacımız var. İşte bu yüzden şimdi kripto ile ve gizlilik eksikliğine, özgürlük eksikliğine ve devletin şiddetine karşı savaşmak için yeni yollar bulmaya çalışan herkesle bir köprü kurmaya çalışıyoruz.
 
-#### MEV kardeşler davası (1:52) {#the-mev-brothers-trial-152}
+### MEV kardeşler davası (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Harika. Temel olarak, birkaç hafta önce New York'ta tanıştık. İkimiz de Manhattan'da görülen ve MEV kardeşler olarak bilinen bu iki kardeşin bazı sandviç botlarını sandviçledikleri için yargılandıkları bir davaya katılıyorduk. Davayı izlemek için mahkemeye gittim ve buradaki bu kişinin Fransızca Spinoza okuduğunu gördüm ve neler olduğunu gerçekten merak ettim. İzleyiciler arasında ikimizden başka kimse yoktu! Bu yüzden, bir teknoloji uzmanından ziyade her şeyden önce bir anarşist ve filozof olarak sizi bu özel davaya katılmaya, aynı zamanda Ethereum'un yönetişim yapısını, tüm doğrulama sistemini ve New York'ta gerçekleşen davayı düşünmeye iten şeyin ne olduğunu gerçekten merak ettim. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Gerilla l2"
 
 **Fatemeh Fannizadeh:** Tamam. Evet, bu oldukça makul. Davayı takip etmeyenler için, yaklaşık üç veya dört hafta sonra dava düştü. Jüri oybirliğiyle bir karara varamadı ve bu iki kardeşin Blokzincir kurallarını ihlal etmekten suçlu olup olmadığına karar veremedi; bence bu kripto için oldukça olumlu bir sonuç, bir mahkemenin veya jürinin zincir içi neyin doğru neyin yanlış olduğuna karar vermemesi. 
 
-#### Blokzincir ile diğer topluluklar arasında köprü kurmak (4:06) {#bridging-blockchain-with-other-communities-406}
+### Blokzincir ile diğer topluluklar arasında köprü kurmak (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** Ama tamam, anarşistlerin temel olarak farklı gruplar arasında köprü kurmak amacıyla bu teknolojiyi incelemesi hakkında söylediklerine bir adım geri dönersek. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Gerilla l2"
 
 **Melanie Premsyl:** Evet, bunu söylemek isterdim ama emin değilim, çünkü biliyorsun para kazanması gereken çok insan var, yani bunun temel amacı da bu. Ancak bence onu sadece net bir komünist gibi kullanabiliriz, sadece bir kısmı böyle bir hayal olabilir. Bence bu yapılabilecek rüya gibi bir pasta, ancak insanların neye benzediğini anlamaları için teknik, çok mühendislik odaklı düşünce tarzından çıkmalarına yardımcı olacak araçlara ve tasarıma ihtiyacımız var.
 
-#### Merkeziyetsizlik ve Katman 2'ler (6:55) {#decentralization-and-layer-2s-655}
+### Merkeziyetsizlik ve Katman 2'ler (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** Bu bana birkaç yıl önceki DAO'ları çok hatırlatıyor. Sizi bilmem ama ben gerçekten heyecanlıydım, DAO'ların zincir içi gruplar ve topluluklar olarak örgütlenme şeklimizde ve sahip olduğumuz özgürlükte devrim yarattığını düşünüyordum. Ve sonunda, tüm bunlar suya düştü. Bence hiç de gerçekleşmedi. Sadece oylama sistemiyle ilgili bir hale geldi, gerçekten demokratik değil, tamamen kar elde etmekle ilgili. DAO'ları sosyal bir araç olarak gördüğümüz bu fikrin tamamı pek de hayata geçmedi. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Gerilla l2"
 
 **Melanie Premsyl:** Ben Fransızım. Bu büyük bir sorun. Fransız olduğumuz için çok devletçi bir milletiz. Bu yüzden her zaman pedagojik ve çok yukarıdan aşağıya bir şekilde düşünüyorum. Ve bence l2, herkesin mini Blokzincir'ler yaratabileceği ve bunların katman 1 (l1) tarafından güvence altına alındığı bir yol yaratıyor. İnsanların ücretsiz bir şey için herkese pedagojik yardım yaratıp yaratamayacağını görmek isterim. Bence dernekler gibi pek çok grup kendi Blokzincir'ini yaratabilir ve bu bir yol olacaktır; bilirsiniz, federalizm anarşizmin en büyük ana konusudur. İnsanların belki birbirlerinden nefret etmeyi ama yine de birbirleriyle konuşmayı nasıl başarabilecekleri. Bu yüzden Blokzincir'de bu tür bir federalizme ihtiyacımız var. Herkesin kendi değerine sahip bir katman 2 (l2)'si var ve böylece aynı altyapı ile konuşuyoruz. 
 
-#### Anarşi, özgürlük ve araçlar inşa etmek (9:53) {#anarchy-freedom-and-building-tooling-953}
+### Anarşi, özgürlük ve araçlar inşa etmek (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Evet, temelde birbirimizden nefret edip yine de iletişim kurmak, yani farklılıklarımıza rağmen toksik olmamak hakkında söylediklerini gerçekten sevdim. Ve bu senaryoda Ethereum olacak tek bir l1 olması gerçeği de sıklıkla faşist olarak adlandırılıyor çünkü hepimizin bu tek kurallar bütünüyle hemfikir olması gerekiyor. Yani herkes için eşit olan tek bir sistem var ve temelde bu l1'e boyun eğmek zorundasınız ya da uzaklaşabilirsiniz, bu tamamen başka bir soru. Ancak bunu çeşitli küçük Rollup l2 ekosistemlerine doğru merkeziyetsizleştirebilirsek, o zaman bu ortak altyapı içinde uyumsuzluğu ve anlaşmazlığı geri getirebiliriz. 
 

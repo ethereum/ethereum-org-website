@@ -19,13 +19,13 @@ Bu sunum, Hisse Kanıtı (PoS) Ethereum'da mümkün olan blok yeniden düzenleme
 
 *Bu transkript, LisCon tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=xcPxwhrg3Ao) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için ufak düzenlemeler yapılmıştır.*
 
-#### Giriş ve arka plan (0:03) {#introduction-and-background-003}
+### Giriş ve arka plan (0:03) {#introduction-and-background-003}
 
 Hoş geldiniz. Bugün Hisse Kanıtı (PoS) Ethereum'da mümkün olan yeniden düzenlemeler hakkında konuşacağım.
 
 Yakın zamanda Ethereum Vakfı'na, özellikle de Sağlam Teşvikler Grubu'na katıldım. Temel olarak teşviklerle ilgili her şeye odaklanan bir araştırma ekibiyiz. Bunu kısa tutacağım — bu konuşma oldukça dolu ve çalışmalarımızın çoğunu GitHub'da bulabilirsiniz.
 
-#### İki tür yeniden düzenleme (0:44) {#two-types-of-reorgs-044}
+### İki tür yeniden düzenleme (0:44) {#two-types-of-reorgs-044}
 
 Bugün yeniden düzenlemeler hakkında konuşmak istiyorum ve özellikle Hisse Kanıtı (PoS) Ethereum alanında mümkün olan iki farklı yeniden düzenleme türünü ana hatlarıyla belirtmek istiyorum.
 
@@ -37,7 +37,7 @@ Ex-ante yeniden düzenlemeler ise biraz farklıdır. Buradaki fikir, saldırgan�
 
 Neden böyle bir yeniden düzenleme yapmak isteyesiniz diye merak edebilirsiniz. Şey, hala yakalanacak MEV var. Şanslıysanız, N+2 bloğunda çok fazla MEV vardır — o blok her neyse sadece kopyalayıp yapıştırarak bunu yakalayabilirsiniz. En kötü durumda, dinlemeniz gereken temel olarak iki slot değerinde işlem vardır.
 
-#### İş kanıtında ex-post yeniden düzenlemeler (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### İş kanıtında ex-post yeniden düzenlemeler (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Bu konuşmanın ana konusu olan ex-ante yeniden düzenlemelere dalmadan önce, ex-post yeniden düzenlemeleri kısaca özetleyeyim ve özellikle İş Kanıtı (PoW) bağlamıyla başlayayım.
 
@@ -45,7 +45,7 @@ Temel olarak bu, olağan şüpheliler Georgios ve Vitalik'in blog yazısının b
 
 Kısacası, İş Kanıtı (PoW) Ethereum'da ex-post yeniden düzenlemeler zordur ancak imkansız değildir. %10'luk bir madenci arka arkaya birkaç blok madenciliği yapmak için nispeten iyi bir şansa sahiptir ve eğer teşvik yeterince yüksekse — yakalanacak 100 ETH değerinde MEV'e sahip bir blok olduğunu düşünün — o zaman belki de yüzde birlik bir başarı oranı, yeniden düzenlemeye çalışmayı değerli kılmak için aslında yeterli olabilir.
 
-#### Hisse kanıtında ex-post yeniden düzenlemeler (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Hisse kanıtında ex-post yeniden düzenlemeler (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 Hisse Kanıtı (PoS) sisteminde bu tamamen farklı bir durumdur. Gereken stake miktarının absürtlüğünden bahsediyoruz. Bunun ne kadar gülünç derecede zor olduğunu vurgulamak için birinin bunu nasıl yapabileceğini adım adım anlatacağım.
 
@@ -63,7 +63,7 @@ Bunu toplarsak — N+1 bloğu üçte bir artı üçte bir değerinde onaylara sa
 
 Bu varsayımların ne kadar gülünç olduğu hakkında size bir fikir vermek gerekirse — %65'lik bir stake eden olsanız bile, herhangi bir slotta komitenin üçte ikisini kontrol etme olasılığınız %0,05'tir. Bu, paralel onayların gücünün gerçek olduğunu gösteriyor — ex-post yeniden düzenlemeler, Hisse Kanıtı (PoS) Ethereum'da neredeyse imkansız olmasa da inanılmaz derecede zordur.
 
-#### Ex-ante yeniden düzenleme saldırı mekanikleri (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Ex-ante yeniden düzenleme saldırı mekanikleri (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Şimdi ex-ante yeniden düzenlemeler hakkında konuşacağım. Bu saldırı Neuder ve diğerlerinin bir makalesine dayanmaktadır. Yakın zamanda bu saldırıyı önemli ölçüde geliştirdik. Ayrıca bunun üzerine bir makale yazdık ve tam zamanında arXiv'e yüklemeyi başardık.
 
@@ -75,7 +75,7 @@ Olan şudur ki dürüst insanlar N+1 bloğunu görmezler, bu yüzden N bloğuna 
 
 Şimdilik sıfır gecikme olduğunu varsayalım. N+2 slotunda, saldırgan olarak yaptığımız şey N+1 bloğunu ve özel onayı aynı anda yayınlamaktır. N+2 slotundaki dürüst doğrulayıcıların bir bloğa onay vermesi gerekir. Kendi açılarından N+2 bloğunu ve bu tek özel onaya sahip N+1 bloğunu görürler. Çatallanma seçimini çalıştırırlarsa, N+1 bloğunun N+2 bloğundan daha fazla ağırlığa sahip olduğunu göreceklerdir, çünkü N+1, N+2'nin sahip olmadığı özel onaya sahiptir. Tüm dürüst doğrulayıcılar bile aslında N+1 bloğuna onay verecektir. N+3'te, basitçe, N+1 zincirin başı olarak görülecektir.
 
-#### Ağ gecikmesi ve saldırı (10:25) {#network-latency-and-the-attack-1025}
+### Ağ gecikmesi ve saldırı (10:25) {#network-latency-and-the-attack-1025}
 
 Sıfır gecikme varsaydım, ki açıkçası işler böyle yürümez. Gecikme vardır — blokları ve mesajları P2P katmanında yaymak zaman alır.
 
@@ -83,7 +83,7 @@ Bir saldırganın bu tür bir saldırıyı hala gerçekleştirebilmesinin yolu, 
 
 Burada olanları yeniden vurgulamak gerekirse: tek bir onaylayıcıya sahip bir teklif edicinin tek blokluk bir yeniden düzenlemeyi başarması söz konusu. En hafif tabirle ideal değil.
 
-#### Daha uzun yeniden düzenlemeler için dengeleme stratejileri (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Daha uzun yeniden düzenlemeler için dengeleme stratejileri (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Eğer işi daha da ileri götürmek isterseniz, bir dengeleme stratejisi kullanarak daha uzun yeniden düzenlemeler gerçekleştirebilirsiniz. Buradaki fikir, dürüst komiteyi zincirin farklı görünümlerine bölmektir.
 
@@ -97,7 +97,7 @@ Diyagram üzerinden gidersek: N bloğu her zamanki gibi, N+1 bloğu — aynı hi
 
 Düşündüğünüzde, bu varsayımlar altında bu yeniden düzenlemeleri yapmak nispeten ucuzdur. Mükemmel bölünmelere sahip olmasanız bile, P2P katmanı çok büyük olduğu için, saldırı maliyetinin komite boyutunun karekökü oranında artacağı şekilde hedefleyebileceğiniz bir olasılık dağılımına sahipsiniz.
 
-#### Teklifçi desteği hafifletmesi (15:17) {#proposer-boost-mitigation-1517}
+### Teklifçi desteği hafifletmesi (15:17) {#proposer-boost-mitigation-1517}
 
 Hafifletme hakkında konuşalım. Temel fikir nedir? Teklif ediciye biraz daha fazla güç vereceğiz. Geçerli bir blok zamanında gelirse, bu bloğun ağırlığını slot süresince artıralım. O slot bittikten sonra, olağan LMD-GHOST puanına devam ederiz ve her şey normale döner.
 
@@ -107,7 +107,7 @@ Dengeleme işleri de artık işe yaramıyor çünkü 50/50'lik bir bölünmeniz 
 
 Buradaki fikir, bu hafifletme yürürlükteyken, düşmanın onaylarının dürüst doğrulayıcıları kendi isteklerine göre oy kullanmaya ikna etmek için destekle rekabet etmek zorunda kalmasıdır. Bu, dengeleme stratejilerini bozar ve temel olarak tüm yeniden düzenlemeleri tamamen yasaklar. İyi haber — açık bir PR var, yani temel olarak Birleşme'den önce birleştirilecek.
 
-#### Önemli çıkarımlar (16:48) {#key-takeaways-1648}
+### Önemli çıkarımlar (16:48) {#key-takeaways-1648}
 
 Bazı önemli çıkarımlar. Ex-post ve ex-ante yeniden düzenlemeler arasındaki farklardan bahsettim. İş Kanıtı (PoW) ile Hisse Kanıtı (PoS) sistemlerindeki yeniden düzenlemeler için farklı ortamları kısaca ana hatlarıyla belirttim. Size bir ex-ante yeniden düzenlemeyi nasıl gerçekleştireceğinizi ama aynı zamanda önemli ölçüde bunu nasıl düzelteceğinizi gösterdim.
 

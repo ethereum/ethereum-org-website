@@ -19,7 +19,7 @@ Maelezo kutoka kwa **Finematics** yanayohusu jinsi utoaji wa uwekaji dhamana una
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=RwwU3P9n3uo) iliyochapishwa na Finematics. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Mnyororo wa Beacon (0:31) {#the-beacon-chain-031}
+### Mnyororo wa Beacon (0:31) {#the-beacon-chain-031}
 
 Huku sasisho la Shanghai/Capella likikaribia kwa kasi, kuna majadiliano mengi kuhusu utoaji wa uwekaji dhamana wa Ethereum na maana yake kwa mfumo mzima wa ikolojia wa Ethereum.
 
@@ -35,7 +35,7 @@ Hatua kubwa iliyofuata, Unganisho, iliunganisha tabaka la mwafaka la Uthibitisho
 
 Ili kupunguza hatari, upeo wa Unganisho ulipunguzwa, na hakuna vipengele vingine — nje ya ubadilishaji wa Uthibitisho wa Kazi (PoW) kwenda Uthibitisho wa Dau (PoS) — vilivyojumuishwa kama sehemu ya sasisho. "Kato" kubwa zaidi ambalo lilipaswa kufanywa liliathiri utoaji, ambalo likawa lengo la sasisho lijalo la Shanghai/Capella.
 
-#### Utoaji (2:09) {#withdrawals-209}
+### Utoaji (2:09) {#withdrawals-209}
 
 Utoaji wa uwekaji dhamana, kama jina linavyopendekeza, utaruhusu waweka dhamana kutoa ETH zao zilizofungiwa. Kuna aina mbili za utoaji: "kiasi" na "kamili."
 
@@ -47,7 +47,7 @@ Baada ya kuwezeshwa, utoaji wa uwekaji dhamana utasambazwa kiotomatiki kila baad
 
 Ili kuanza kutoa tuzo zao za uwekaji dhamana, mthibitishaji atalazimika kutoa anwani yao ya utoaji mara moja tu. Kwa kuwa utoaji unaathiri tabaka la mwafaka na tabaka la utekelezaji la Ethereum, sehemu zote mbili za mtandao lazima zisasishwe. "Shanghai" ni jina la sasisho la tabaka la utekelezaji lenye utoaji, ambalo limebainishwa katika EIP-4895. "Capella" ni jina la sasisho la tabaka la mwafaka linaloendana nalo, ambalo linawezeshwa kwa wakati mmoja. Masasisho haya mawili wakati mwingine pia hujulikana kama "Shapella."
 
-#### Mitambo (3:40) {#mechanics-340}
+### Mitambo (3:40) {#mechanics-340}
 
 Katika mfumo wa ikolojia wa Ethereum, kila mthibitishaji ana nambari ya faharisi inayolingana. Kwa kuongezea, pia wana aina mbili za vitambulisho vya uondoaji, vilivyofafanuliwa kama `0x00` au `0x01`.
 
@@ -77,7 +77,7 @@ Wakati wa kujenga au kuchakata kitalu, wateja wa tabaka la utekelezaji hutumia u
 
 Muundo wa utoaji ni rahisi lakini imara sana.
 
-#### Dhana Potofu (6:30) {#misconceptions-630}
+### Dhana Potofu (6:30) {#misconceptions-630}
 
 Dhana potofu ya kwanza inasema kwamba wakati wa kuchakata utoaji, kuna tofauti kati ya utoaji "kamili" na "kiasi" katika suala la kipaumbele au mpangilio. Utoaji kamili na wa kiasi hutokea wakati uchanganuzi wa mfuatano kwenye kundi la wathibitishaji unafikia faharisi ya mthibitishaji. Tofauti pekee ni kwamba katika kesi ya utoaji kamili, mthibitishaji lazima aondoke kwenye foleni ya kujitoa na kufikia "kipindi kinachoweza kutolewa" kabla ya uchanganuzi wa mfuatano kuweza kuichukua.
 
@@ -93,7 +93,7 @@ Pili, ili kuhakikisha kwamba utaratibu wa makubaliano wa Uthibitisho wa Dau (PoS
 
 Uchanganuzi wa kwanza wa utoaji utatoa tuzo nyingi zilizokusanywa — kimsingi tangu kuanzishwa kwa Mnyororo wa Beacon. Hata hivyo, zile zinazofuata zitachakata kiasi kidogo sana cha ETH.
 
-#### Athari (8:39) {#implications-839}
+### Athari (8:39) {#implications-839}
 
 Kuwezesha utoaji kutaunda mtiririko wazi wa uwekaji dhamana wa pande mbili. Kwa sasa, mtiririko wa uwekaji dhamana ni wa upande mmoja — ETH inaweza tu kuingia kwenye mtandao na kamwe isitoke. Cha kufurahisha, kuwezesha utoaji kunaweza kuhamasisha watu wengi zaidi kuweka dhamana, kwani watajua wanaweza kutoa ETH zao kila wakati ikiwa watazihitaji kwa jambo lingine.
 
@@ -103,7 +103,7 @@ Utoaji pia utaathiri bidhaa zinazotokana na uwekaji dhamana wenye ukwasi kama vi
 
 Watumiaji wa mapema katika uwekaji dhamana wenye ukwasi na uwekaji dhamana mkuu waliteka sehemu kubwa ya soko kwani hawakuwa na ushindani mkubwa. Hata hivyo, sehemu ya soko ya wachezaji hawa waliopo inaweza kuona mabadiliko makubwa baada ya utoaji kuwezeshwa, hasa ikiwa hawatoi kiwango cha ushindani. Uwezo wa kuhama kwa uhuru kati ya watoa huduma wa uwekaji dhamana utanufaisha soko la uwekaji dhamana la ETH.
 
-#### Muhtasari (10:01) {#summary-1001}
+### Muhtasari (10:01) {#summary-1001}
 
 Kuwezesha utoaji wa uwekaji dhamana ni mojawapo ya masasisho yanayotarajiwa sana kwenye Ethereum. Itakuwa muhimu sana kuhakikisha mabadiliko haya yanatekelezwa vizuri. Ili kusaidia katika majaribio, wathibitishaji watakuwa na mitandao kadhaa ya wasanidi (devnets) na mitandao ya majaribio (testnets) inayopatikana ili kupitia mchakato na kutatua matatizo yoyote yanayoweza kutokea kabla ya kwenda moja kwa moja kwenye Mtandao Mkuu.
 

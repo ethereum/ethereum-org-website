@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/contributing/index.md",
   "generatedAt": "2026-07-28T22:15:43.438Z",
-  "rootHash": "2424519a1eef",
+  "rootHash": "2ac25e647efa",
   "tree": {
-    "contentHash": "c55b249ff019",
+    "contentHash": "1d6d707c2a09",
     "anchorHash": "b1aa08a2d95a",
     "children": {
       "frontmatter:title": {
-        "contentHash": "00988a763748",
+        "contentHash": "96d260ee8d3e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:metaTitle": {

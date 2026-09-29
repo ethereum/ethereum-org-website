@@ -18,7 +18,7 @@ Một video giải thích của **Finematics** theo dõi lịch sử của tài 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=qFBYB4W2tqU) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Nguồn gốc của DeFi (0:00) {#the-origins-of-defi-000}
+### Nguồn gốc của DeFi (0:00) {#the-origins-of-defi-000}
 
 Câu chuyện đằng sau tài chính phi tập trung là gì? Tất cả những điều này đã bắt đầu như thế nào? Điều gì đã xảy ra trong DeFi vào năm 2020? Và chúng ta sẽ đi về đâu trong tương lai?
 
@@ -26,13 +26,13 @@ Nguồn gốc của DeFi bắt đầu từ năm 2009. Mặc dù bạn có thể 
 
 Về phía Ethereum, một trong những sự kiện quan trọng đầu tiên đối với DeFi là đợt ICO của Ethereum. Vào ngày 22 tháng 7 năm 2014, đợt mở bán token Ethereum đã được công bố bởi không ai khác ngoài Vitalik Buterin. Nó đã huy động được khoảng 18 triệu đô la trong 42 ngày, trở thành một trong những chiến dịch huy động vốn cộng đồng thành công đầu tiên được hỗ trợ bởi tiền mã hóa. Đây là một khoảnh khắc quan trọng cho phép sự phát triển xa hơn của mạng lưới Ethereum và mở đường cho các hợp đồng thông minh và ứng dụng phi tập trung.
 
-#### MakerDAO và sự ra đời của hoạt động cho vay DeFi (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
+### MakerDAO và sự ra đời của hoạt động cho vay DeFi (1:28) {#makerdao-and-the-birth-of-defi-lending-128}
 
 Cột mốc quan trọng tiếp theo: MakerDAO được ra mắt vào tháng 12 năm 2017. Đây là một trong những giao thức đã khởi xướng những gì mà ngày nay chúng ta gọi là hệ sinh thái DeFi. Về cốt lõi, MakerDAO cho phép người dùng khóa ETH làm tài sản thế chấp và tạo ra DAI — một stablecoin được neo giá với USD — dựa trên đó. Điều này đã tạo ra một trong những giao thức cho vay và vay mượn phi tập trung đầu tiên, và DAI đã trở thành nền tảng của hệ sinh thái DeFi.
 
 Một điều quan trọng không kém là việc tạo ra tiêu chuẩn token ERC-20. Điều này cho phép bất kỳ ai cũng có thể tạo ra các token có thể thay thế trên Ethereum. Các token ERC-20 đã trở thành tiêu chuẩn cho hầu hết các token quản trị của giao thức DeFi, stablecoin và các tài sản kỹ thuật số khác. Chúng cũng tạo ra một làn sóng đổi mới, vì các giao thức mới có thể phát hành token của riêng chúng và dễ dàng tích hợp với hệ sinh thái rộng lớn hơn.
 
-#### Kỷ nguyên ICO và các sàn giao dịch sơ khai (2:42) {#the-ico-era-and-early-exchanges-242}
+### Kỷ nguyên ICO và các sàn giao dịch sơ khai (2:42) {#the-ico-era-and-early-exchanges-242}
 
 Năm 2017 cũng chứng kiến sự xuất hiện của EtherDelta, một trong những sàn giao dịch phi tập trung đầu tiên trên Ethereum. Được xây dựng dựa trên khái niệm sổ lệnh, trải nghiệm người dùng của EtherDelta khác xa so với mức lý tưởng — nó chậm chạp, nhiều lỗi và không thân thiện với người dùng. Mặc dù vậy, EtherDelta vẫn là một trong những sàn giao dịch phổ biến nhất để giao dịch các token ERC-20, đặc biệt là trong kỷ nguyên ICO.
 
@@ -51,11 +51,11 @@ Trong vô số các đợt ICO, cũng có những dự án mà ngày nay chúng 
 
 Bất chấp danh tiếng xấu của cơn sốt ICO năm 2017, một số dự án xuất hiện vào thời điểm đó hiện được coi là các giao thức hàng đầu trong DeFi.
 
-#### Mô hình người dùng với hợp đồng (4:52) {#the-user-to-contract-model-452}
+### Mô hình người dùng với hợp đồng (4:52) {#the-user-to-contract-model-452}
 
 Một trong những bước đột phá chính vào thời điểm đó là ý tưởng người dùng tương tác với các hợp đồng thông minh chứa các quỹ được gộp chung từ nhiều người dùng, thay vì tương tác trực tiếp với những người dùng khác. Điều này về cơ bản đã tạo ra một mô hình người dùng với hợp đồng mới phù hợp hơn cho các ứng dụng phi tập trung, vì nó không yêu cầu nhiều tương tác với chuỗi khối cơ sở như mô hình người dùng với người dùng.
 
-#### Thời kỳ trầm lắng và Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
+### Thời kỳ trầm lắng và Uniswap (5:20) {#the-quiet-period-and-uniswap-520}
 
 Sau khi cơn sốt ICO kết thúc và thị trường gấu bắt đầu, DeFi đã trải qua một thời kỳ tương đối trầm lắng — ít nhất là nhìn từ bên ngoài. Trên thực tế, ở hậu trường, các giao thức DeFi lớn đang được xây dựng. Tôi thường gọi khoảng thời gian này là "trước COMP" — chúng ta sẽ tìm hiểu sau về lý do tại sao việc khai thác thanh khoản token COMP của Compound lại là một bước đột phá lớn trong DeFi.
 
@@ -63,7 +63,7 @@ Vào ngày 2 tháng 11 năm 2018, phiên bản ban đầu của Uniswap đã đ�
 
 Vào tháng 7 năm 2019, một sự kiện quan trọng khác đã xảy ra: Synthetix ra mắt chương trình khuyến khích thanh khoản đầu tiên — một cơ chế mà sau này trở thành một trong những chất xúc tác chính cho Mùa hè DeFi năm 2020. Nhiều dự án DeFi khác cũng đã ra mắt các giao thức của họ trên mạng chính Ethereum từ năm 2018 đến 2019, bao gồm Compound, Ren, Kyber và 0x.
 
-#### Ngày thứ Năm Đen tối (8:07) {#black-thursday-807}
+### Ngày thứ Năm Đen tối (8:07) {#black-thursday-807}
 
 Vào ngày 12 tháng 3 năm 2020, giá ETH đã giảm mạnh hơn 30 phần trăm trong vòng chưa đầy 24 giờ do những lo ngại về đại dịch toàn cầu. Đây là một trong những bài kiểm tra sức chịu đựng lớn nhất đối với ngành công nghiệp DeFi vẫn còn non trẻ.
 
@@ -73,13 +73,13 @@ Một trong những giao thức bị ảnh hưởng nhiều nhất là Maker. L�
 
 Cuối cùng, mặc dù các sự kiện như Ngày thứ Năm Đen tối có thể khá nghiêm trọng, nhưng chúng thường dẫn đến việc củng cố toàn bộ hệ sinh thái DeFi, làm cho nó ngày càng trở nên mạnh mẽ và chống chịu tốt hơn.
 
-#### Mùa hè DeFi (9:37) {#defi-summer-937}
+### Mùa hè DeFi (9:37) {#defi-summer-937}
 
 Điều này đưa chúng ta đến thời kỳ tăng trưởng chính của DeFi, còn được gọi là Mùa hè DeFi. Chất xúc tác chính là chương trình khai thác thanh khoản của các token COMP do Compound ra mắt. Vào tháng 5 năm 2020, người dùng DeFi bắt đầu được thưởng cho việc cho vay và vay mượn trên Compound. Các ưu đãi bổ sung dưới dạng token COMP đã dẫn đến việc APY cung cấp và vay mượn cho các token khác nhau tăng lên đáng kể. Điều này cũng cho phép sự phát triển của khai thác lợi suất, vì người dùng được khuyến khích liên tục chuyển đổi giữa việc vay mượn và cho vay các token khác nhau để đạt được lợi suất tốt nhất có thể.
 
 Sự kiện này đã khởi xướng một làn sóng các giao thức khác phân phối token của họ thông qua khai thác thanh khoản và tạo ra ngày càng nhiều cơ hội khai thác lợi suất. Nó cũng tạo ra quản trị Compound, nơi người dùng có token COMP có thể bỏ phiếu cho các đề xuất thay đổi khác nhau đối với giao thức. Mô hình quản trị của Compound sau đó đã được nhiều dự án DeFi khác tái sử dụng.
 
-#### Yearn Finance và YFI (10:48) {#yearn-finance-and-yfi-1048}
+### Yearn Finance và YFI (10:48) {#yearn-finance-and-yfi-1048}
 
 Điều này đưa chúng ta đến một sự đổi mới lớn khác của DeFi. Yearn, được phát triển bởi Andre Cronje vào đầu năm 2020, là một công cụ tối ưu hóa lợi suất tập trung vào việc tối đa hóa các khả năng của DeFi bằng cách tự động chuyển đổi giữa các giao thức cho vay khác nhau. Để phi tập trung hóa Yearn hơn nữa, Andre đã quyết định phân phối một token quản trị — YFI — cho cộng đồng Yearn vào tháng 7 năm 2020. Token này được phân phối hoàn toàn thông qua khai thác thanh khoản: không có quỹ đầu tư mạo hiểm, không có phần thưởng cho nhà sáng lập, không có phần thưởng cho nhà phát triển.
 
@@ -87,7 +87,7 @@ Mô hình này đã thu hút được rất nhiều sự ủng hộ từ cộng 
 
 Giống như hầu hết các dự án mang tính đột phá trong DeFi, thành công của Yearn đã nhanh chóng được theo sau bởi nhiều nhóm khác ra mắt các dự án tương tự với một vài thay đổi nhỏ.
 
-#### Kỷ nguyên DeFi thực phẩm (11:44) {#the-food-defi-era-1144}
+### Kỷ nguyên DeFi thực phẩm (11:44) {#the-food-defi-era-1144}
 
 Một dự án khác bắt đầu thu hút được sự chú ý nhờ mô hình nguồn cung co giãn độc đáo của nó là Ampleforth. Mô hình này đã nhanh chóng được mượn và lặp lại bởi một giao thức DeFi khác: Yam. Chỉ sau 10 ngày phát triển, Yam đã được ra mắt vào ngày 11 tháng 8 năm 2020.
 
@@ -99,7 +99,7 @@ Sau đó là SushiSwap, được ra mắt vào cuối tháng 8 năm 2020 bởi m
 
 Trong Mùa hè DeFi, đã có rất nhiều dự án khác với chất lượng khác nhau được ra mắt — hầu hết trong số đó chỉ là các bản lặp lại của các dự án mã nguồn mở hiện có đang cố gắng hưởng lợi từ sự hưng phấn quá mức. Theo sau Yam và SushiSwap, có một loạt các dự án được đặt tên theo các loại thực phẩm khác nhau — Pasta, Spaghetti, Kimchi, HotDog và những dự án khác — được gọi chung là "DeFi thực phẩm" hoặc "food finals". Gần như tất cả chúng đều thất bại chỉ sau một hoặc hai ngày nhận được sự quan tâm.
 
-#### Token Uniswap và các số liệu chính (14:16) {#the-uniswap-token-and-key-metrics-1416}
+### Token Uniswap và các số liệu chính (14:16) {#the-uniswap-token-and-key-metrics-1416}
 
 Một trong những sự kiện lớn cuối cùng của Mùa hè DeFi là sự ra mắt của token Uniswap, UNI. Tất cả những người dùng và nhà cung cấp thanh khoản trước đây của Uniswap đã được thưởng bằng một đợt airdrop hồi tố trị giá hơn một nghìn đô la. Trên hết, Uniswap đã bắt đầu chương trình khai thác thanh khoản của mình trên bốn nhóm thanh khoản khác nhau và thu hút được hơn hai tỷ đô la thanh khoản, phần lớn trong số đó được lấy lại từ SushiSwap.
 
@@ -109,7 +109,7 @@ Trong Mùa hè DeFi, tất cả các số liệu chính đều được cải th
 - Tổng giá trị bị khóa trong DeFi đã tăng từ 800 triệu đô la vào tháng 4 lên 10 tỷ đô la vào tháng 9 — tăng hơn 10 lần
 - Lượng Bitcoin được chuyển sang Ethereum đã tăng từ 20.000 vào tháng 4 lên gần 60.000 vào tháng 9 — tăng gấp 3 lần
 
-#### Mùa đông DeFi và sự phục hồi (15:30) {#defi-winter-and-recovery-1530}
+### Mùa đông DeFi và sự phục hồi (15:30) {#defi-winter-and-recovery-1530}
 
 Sự đi lên theo hình parabol của DeFi tất nhiên là không bền vững về lâu dài. Tâm lý thị trường nhanh chóng thay đổi vào đầu tháng 9 năm 2020. Các token DeFi lớn bắt đầu mất giá trị nghiêm trọng. Lợi suất từ khai thác thanh khoản, bắt nguồn từ giá trị của các token được phân phối, cũng ngày càng thấp hơn. Mùa đông DeFi đã đến.
 
@@ -119,7 +119,7 @@ Sau một đợt phục hồi nhanh chóng hơn 50 phần trăm, thị trường
 
 Vào cuối năm 2020, với việc Bitcoin phá vỡ mức cao nhất mọi thời đại trước đó của năm 2017, có vẻ như DeFi đang chuẩn bị cho một đợt tăng trưởng parabol khác.
 
-#### Hướng tới năm 2021 và xa hơn nữa (16:56) {#looking-ahead-to-2021-and-beyond-1656}
+### Hướng tới năm 2021 và xa hơn nữa (16:56) {#looking-ahead-to-2021-and-beyond-1656}
 
 Nhìn xa hơn vào năm 2021 và xa hơn nữa, tương lai của DeFi rất tươi sáng. Các nhà phát triển DeFi tiếp tục xây dựng các dự án đổi mới mới. Việc mở rộng quy mô rất cần thiết cũng đang đến dưới dạng Ethereum 2.0, các giải pháp lớp 2 (l2) và thậm chí cả các chuỗi khối khác. Điều này sẽ cho phép một nhóm người dùng mới bắt đầu tham gia vào DeFi. Nó cũng sẽ giúp khám phá các trường hợp sử dụng mới mà trước đây không thể thực hiện được do phí mạng lưới cao.
 

@@ -18,7 +18,7 @@ Eine Präsentation von **Peter Van Valkenburgh**, Executive Director des Coin Ce
 
 *Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=GQML0c1_4Gs), das von der Ethereum Foundation veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:00) {#introduction-000}
+### Einführung (0:00) {#introduction-000}
 
 Dies ist eine große Bühne mit einem langen Weg, und ich bin leider von der alten Schule, also habe ich eine ausformulierte Rede dabei, aber ich hoffe, sie wird Ihnen gefallen. Vielen Dank für die Einladung. Coin Center, meine Organisation, gibt es seit 11 Jahren. Wir verteidigen die Entwickler und Nutzer von Bitcoin, Ethereum und nachfolgenden Kryptowährungstechnologien vor unangemessener staatlicher Regulierung in Washington DC. Wir erkennen Bedrohungen, wenn wir sie sehen. Vor etwas mehr als 9 Jahren stand ich in Shanghai auf der Bühne der zweiten DevCon von Ethereum und warnte vor den Gefahren von ICOs. Es war tatsächlich die Eröffnungspräsentation auf der zweiten DevCon. Das war 2016. Das war genau zu Beginn des sogenannten ICO-Booms. Das war lange bevor Gary Gensler bei der SEC war. Es war, bevor irgendjemand eine Wells Notice erhalten hatte. Es war sogar noch vor dem DAO-Hack, der, falls Sie sich erinnern oder damals dabei waren, den DAO-Bericht der SEC und den Beginn ihrer Ermittlungen und Strafverfolgungen von Personen im Krypto-Bereich auslöste.
 
@@ -28,7 +28,7 @@ Amerikaner können die Technologie nutzen. Und was vielleicht noch wichtiger ist
 
 Er ist ein Softwareentwickler. Und er verklagt das Justizministerium vor einem texanischen Gericht, um ein Feststellungsurteil zu erwirken, dass die Veröffentlichung von Software für Privatsphäre kein Verbrechen ist und in den Vereinigten Staaten keine Lizenz erfordert. Sie wissen also vielleicht nicht viel über mich oder
 
-#### Privatsphäre ist existenziell (3:15) {#privacy-is-existential-315}
+### Privatsphäre ist existenziell (3:15) {#privacy-is-existential-315}
 
 Coin Center, aber hoffentlich wissen Sie, dass Sie mir vertrauen sollten, wenn ich Alarm schlage, wenn ein Alarm gerechtfertigt ist. Wenn wir erfolgreich eine freie und offene Finanzinfrastruktur aufbauen und erhalten wollen, müssen wir vorsichtig vorgehen. Und deshalb möchte ich heute über Privatsphäre sprechen. Privatsphäre ist existenziell für Ethereum. Privatsphäre ist keine regulatorische Angriffsfläche. Ich werde nicht hier stehen und Ihnen sagen, dass Sie keine Privatsphäre einbauen sollen, so wie ich Ihnen 2016 gesagt habe, dass Sie keine ICOs durchführen sollen.
 
@@ -36,7 +36,7 @@ Privatsphäre ist eigentlich ein Weg, die Angriffsfläche zu verkleinern. Und be
 
 Und um Ihnen das zu beweisen, ist der Fall, auf den ich Ihre Aufmerksamkeit heute lenken möchte, keine strafrechtliche Verfolgung nach dem Wertpapierrecht. Es ist nicht einmal eine Strafverfolgung wegen Geldwäsche oder illegaler Finanzierung. Es geht um Miner Extractable Value oder MEV. Aber bevor wir dazu kommen, lassen Sie uns kurz über Frankenstein sprechen. Wie der gute Doktor sagte: Wie gefährlich ist der Erwerb von Wissen, und wie viel glücklicher ist der Mensch, der seine Heimatstadt für die Welt hält, als derjenige, der danach strebt, größer zu werden, als seine Natur es zulässt.
 
-#### Mary Shelley und die Einbahnstraße des Wissens (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley und die Einbahnstraße des Wissens (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Hier ist, was Mary Shelley meiner Meinung nach in diesem Roman sagt. Bei Privatsphäre geht es nicht nur um die Menschenwürde. Es geht um die effiziente Abwesenheit von Wissen. Genauso wie es schwer wäre, sein Leben unter ständiger Beobachtung zu leben, wobei jeder ständig in Ihre Privatsphäre eindringt, wäre es auch schwer, sein Leben mit ständigem intimen Wissen über die privaten Angelegenheiten aller anderen zu leben. Sie würden ständig in die Privatsphäre aller anderen eindringen. Warum ist das so? Weil es Menschen in den Wahnsinn treibt, allwissend ohne Allmacht zu werden, alles zu sehen, ohne die Fähigkeit zu haben, alles in Ordnung zu bringen. Es zerstört unsere Menschlichkeit durch Sorge, Hybris und das Streben nach Kontrolle über das Unkontrollierbare.
 
@@ -46,7 +46,7 @@ Es geht nicht um Proof-of-Work (PoW). Es geht nicht um Blockchains, ein Wort, da
 
 Die Kosten der Vermittlung erhöhen die Transaktionskosten, was die minimale praktische Transaktionsgröße begrenzt und die Möglichkeit für kleine, beiläufige Transaktionen abschneidet. Und es gibt noch umfassendere Kosten: den Verlust der Fähigkeit, irreversible Zahlungen für irreversible Dienstleistungen zu leisten. Mit der Möglichkeit der Rückabwicklung breitet sich das Bedürfnis nach Vertrauen aus. Satoshis Ziel war also eigentlich Neutralität genauso sehr wie Irreversibilität. Die Fähigkeit zur Rückabwicklung ist für ihn der Ursprung enormer Transaktionskosten, die mit Vertrauen verbunden sind. Er hat es im Whitepaper nicht direkt ausgesprochen,
 
-#### Die Kosten der Streitbeilegung (7:50) {#the-cost-of-mediating-disputes-750}
+### Die Kosten der Streitbeilegung (7:50) {#the-cost-of-mediating-disputes-750}
 
 aber ich denke, was er mit der Vermittlung bei Streitigkeiten meint, ist auch die Bekämpfung von Betrug, das Stoppen von Kriminalität, das Befolgen der Gesetze und Mächte von Nationalstaaten und die Kontrolle von Menschen. Wir sprechen oft darüber, wie rechenineffizient Blockchains sind, und das sind sie. Dass selbst der monumentale Rechenaufwand der globalen Verifizierung digitaler Signaturen ohne Parallelisierung verblasst im Vergleich zu der Ineffizienz, die einem menschlichen Streit über den moralischen Wert jeder Transaktion innewohnt und darüber, ob sie in die Chain aufgenommen werden sollte.
 
@@ -58,7 +58,7 @@ Besser, wenn sie sich ihrer Macht gar nicht erst bewusst werden können. Viel be
 
 Nein. Das beste Argument für Privatsphäre ist, dass die Neutralität der Validatoren davon abhängt, denn Neutralität durch Dezentralisierung wird niemals ausreichen. Neutralität erfordert Blindheit. Ich möchte bescheiden vorschlagen, dass es
 
-#### Zwei Regeln von Wissen und Macht (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Zwei Regeln von Wissen und Macht (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 zwei grundlegende Regeln von Wissen und Macht in Blockchains gibt. Die erste Regel: Nichts Transparentes bleibt neutral. Ein sichtbares Ledger wird zu einem vermittelten Ledger. Es wird durch das Eigeninteresse mächtiger Validatoren vermittelt, durch eigennützige Manipulation wie Miner Extractable Value. Es wird durch den Offchain-Druck mächtiger Entitäten wie Unternehmen und Nationalstaaten durch die Auferlegung rechtlicher Pflichten und die Haftung bei Nichterfüllung dieser Pflichten vermittelt. Wenn ein Validator auch nur ein geringes Maß an Macht hat, wird er dazu gebracht, diese Macht auszunutzen. Eine kartografierte Welt ist eine Welt, die aufgeteilt wird.
 
@@ -70,7 +70,7 @@ Ja, meine Organisation, Coin Center, wird immer da sein, um sich gegen unvernün
 
 Privacy Pools sind ein kluger Ansatz, um diese Bedrohung zu begrenzen. Versuchen Sie so gut wie möglich, den falschen Leuten den Zugang zu dem guten neutralen Tool zu verweigern, aber beachten Sie, dass das Tool aufhört, neutral zu sein. Und selbst dann wird derjenige, der die Anonymitätsmenge für diesen Pool bereitstellt, manchmal daran scheitern, schlechten Menschen den Zugang zu diesem Tool zu verweigern. Und die Onboarding-Transaktion dieser schlechten Menschen wird auf Layer 1 (L1) sichtbar bleiben. Und sie wird mächtige Munition für unsere Gegner sein.
 
-#### Der Fall Pereira Bueno und MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Der Fall Pereira Bueno und MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Aber der Fall, der mich wirklich von der dringenden Notwendigkeit von Privatsphäre auf der Basisschicht überzeugt, ist nicht Tornado Cash. Es ist ein anderer Fall im südlichen Bezirk von New York, der Fall Pereira Bueno. Zwei Brüder werden wegen kriminellen Überweisungsbetrugs (Wire Fraud) angeklagt. Sie fanden einen Weg, die MEV-Boost-Software zu nutzen, um einen Sandwich-Angriff auf andere MEV-Boost-Nutzer durchzuführen, die selbst gewöhnliche Ethereum-Nutzer in die Zange nahmen. Sie verdienten damit über 20 Millionen Dollar. Sie haben niemanden angelogen oder sich gegenüber treuhänderischen oder vertraglichen Beziehungspartnern falsch dargestellt. Dennoch sind die Staatsanwälte des südlichen Bezirks von New York der Ansicht, dass sie sich des Überweisungsbetrugs, eines Bundesverbrechens, schuldig gemacht haben, weil sie kein, Zitat, „ehrlicher Validator“ sind.
 
@@ -78,7 +78,7 @@ Als dieser Begriff „ehrliche Validierung“ und „ehrlicher Validator“ in d
 
 Miner Extractable Value ist eine widerwärtige Realität von Ethereum. Auch sie hat ihren Ursprung in einem Mangel an Privatsphäre. Es ist die öffentliche Natur von DEX-Transaktionen, die es ermöglicht, dass sie von Validatoren leicht in die Zange genommen werden können. Es ist viel schwieriger, wahrscheinlich nicht unmöglich, aber viel schwieriger, Transaktionen in einem Sandwich-Angriff anzugreifen, wenn man ihre wirtschaftlichen Grundlagen nicht sehen kann. Aber ich möchte Privatsphäre auf der Basisschicht nicht nur als Mittel, um MEV zu entmutigen. Ich möchte sie als Mittel zur Verteidigung von Validatoren.
 
-#### Rechtlich durchsetzbare Pflichten von Validatoren (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Rechtlich durchsetzbare Pflichten von Validatoren (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Der größere Schachzug des DOJ im Fall Pereira Bueno ist, dass Validatoren aufgrund der öffentlichen Natur der von ihnen validierten Transaktionen rechtlich durchsetzbare Pflichten gegeneinander haben. Und wenn diese Pflichten verletzt werden, sollten Validatoren, so denken sie wohl, einander verklagen. Und wenn sie das nicht tun, sollte der Staat, der südliche Bezirk von New York, unehrliche Validatoren wegen Verbrechen strafrechtlich verfolgen. Und das hört nicht beim Überweisungsbetrug auf. Wenn Sie eine Geldwäsche-Transaktion sehen können oder sie mithilfe von Blockchain-Analyse hätten sehen können, wie sind Sie dann nicht mitschuldig an dieser Geldwäsche?
 
@@ -86,7 +86,7 @@ Wenn Sie auf einer Version der Chain aufbauen, die sanktionierte Transaktionen e
 
 Bewusste Unwissenheit ist keine Verteidigung, aber tatsächliche Blindheit schon. Wenn Sie also wirklich Vertrauenslosigkeit wollen, wenn Sie wirklich eine neutrale Infrastruktur wollen, wenn Sie dumme Leitungen (dumb pipes) wollen, dann müssen die Leitungen tatsächlich blind für das sein, was durch sie fließt.
 
-#### Traditionelle Finanzpipelines und SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Traditionelle Finanzpipelines und SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Nun, eine gute Kritik an all dem wäre, dass Sie sagen könnten: Peter, wir haben bereits dumme Leitungen in der traditionellen Finanzindustrie, im traditionellen globalen Finanzsystem, und die Betreiber dieser dummen Leitungen sind nicht kryptografisch blind für die wirtschaftlichen Realitäten und die kriminellen Aspekte der Transaktionen, die sie in ihre Ledger aufnehmen. Die größte dieser Leitungen heißt SWIFT. Und das ist ein starkes Argument gegen das, was ich gerade gesagt habe.
 
@@ -102,7 +102,7 @@ Und schließlich, selbst wenn SWIFT die aktuelle, sich langsam entwickelnde Kris
 
 Sind wir eigentlich für dumme Leitungen hier?
 
-#### Schlussfolgerungen und Verteidigung neutraler Infrastruktur (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Schlussfolgerungen und Verteidigung neutraler Infrastruktur (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Zusammenfassend lässt sich sagen, dass Coin Center nirgendwo hingeht, und wir werden immer hier sein, um dabei zu helfen, Protokollentwickler und Infrastruktur vor ungerechter Strafverfolgung und zu weit gefassten Vorschriften zu verteidigen. Aber ohne tatsächliche Privatsphäre wird dieser Kampf immer härter. Was können wir tun? Erstens glaube ich, dass Ethereum Privatsphäre auf der Basisschicht haben sollte oder zumindest das Root-Ledger für L2s werden sollte, die blinde und tatsächlich dezentrale Sequencer haben.
 
@@ -112,7 +112,7 @@ Und wir haben ein neu angekündigtes John Hancock-Projekt, bei dem es darum geht
 
 Privatsphäre ist existenziell. Vielen Dank.
 
-#### Fragen und Antworten (24:21) {#qa-session-2421}
+### Fragen und Antworten (24:21) {#qa-session-2421}
 
 **Moderator:** Vielen Dank. Sie haben eines der mit Abstand wichtigsten Themen unserer Zeit geteilt, denke ich. Ich glaube, unsere erste Frage geht in die Richtung: Wie sehen Sie die Erklärung von Privatsphäre für neue Leute? So lange Zeit wurde das Konzept der Privatsphäre mit dieser Idee der Geheimhaltung vermischt – es sei für Leute in Kapuzenmänteln usw. Für wie groß halten Sie dieses Hindernis, besonders wenn Sie an Lobbyarbeit denken? Man muss dem Durchschnittsbürger auch das Gefühl geben, dass dies etwas für ihn ist. Haben Sie das Gefühl, dass das ein großer Kampf ist? Wie können wir das abmildern?
 

@@ -19,7 +19,7 @@ Une présentation de **Linda Xie** à Devconnect sur les réseaux sociaux décen
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=4vl8eZEOwqk) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Le problème avec les réseaux sociaux centralisés (0:00) {#the-problem-with-centralized-social-000}
+### Le problème avec les réseaux sociaux centralisés (0:00) {#the-problem-with-centralized-social-000}
 
 Je travaille dans l'espace crypto depuis 11 ans maintenant et je fais partie de l'équipe Farcaster. Avant cela, je construisais sur Farcaster. Je suis donc vraiment passionnée par la crypto et les réseaux sociaux décentralisés, et par ce qu'ils peuvent apporter à la société.
 
@@ -27,7 +27,7 @@ Je pense qu'il est très utile de d'abord cerner les problèmes actuels des rés
 
 Enfin, si un compte et des données appartiennent à la plateforme, cela signifie qu'une fois l'entreprise fermée, vous n'aurez plus accès à ces informations. Nous l'avons vu maintes et maintes fois. Aux États-Unis, TikTok a failli être banni et de nombreux créateurs s'en sont inquiétés. Il y a de nombreux pays où beaucoup de ces plateformes se bannissent elles-mêmes. C'est donc un problème que les gens rencontrent réellement au quotidien.
 
-#### Graphes sociaux ouverts (1:30) {#open-social-graphs-130}
+### Graphes sociaux ouverts (1:30) {#open-social-graphs-130}
 
 L'un des avantages des réseaux sociaux décentralisés est que vous pouvez avoir accès au graphe social à tout moment. Vous n'avez besoin d'aucune permission pour utiliser ces données. Ce qui est vraiment génial, c'est que vous voyez ici en bas qu'il y a un graphe social ouvert. Toutes ces données peuvent être extraites par n'importe quel client, n'importe quel développeur, n'importe quelle plateforme, et vous pouvez utiliser ces données pour construire par-dessus cette plateforme.
 
@@ -35,7 +35,7 @@ Un excellent exemple : vous avez l'application Farcaster et vous avez également
 
 Lorsque vous décidez d'utiliser cette plateforme, vous n'avez plus à recommencer à zéro. Vous pouvez conserver votre propre public. Vous publiez une fois et vous pouvez ensuite obtenir une distribution sur plusieurs clients du réseau. Vous pouvez être un utilisateur de Farcaster et obtenir tout de même plus de distribution via l'application Base à mesure qu'ils intègrent plus d'utilisateurs et de créateurs. C'est en fin de compte la meilleure expérience utilisateur. Et les clients se font désormais concurrence pour ces utilisateurs car le coût de changement est très faible — vous n'avez pas à recommencer à zéro, vous gardez votre public, et les clients doivent donc rivaliser pour créer de meilleures expériences utilisateur.
 
-#### Avantages pour les constructeurs (3:13) {#benefits-for-builders-313}
+### Avantages pour les constructeurs (3:13) {#benefits-for-builders-313}
 
 Ensuite, vous avez également le côté des constructeurs, où les constructeurs se font constamment expulser des plateformes. Nous l'avons vu avec Twitter — qui expulse de nombreuses applications crypto et constructeurs, et c'est un point de défaillance unique pour leurs entreprises. Récemment, Bankr a été expulsé de Twitter et de Telegram le même jour. Heureusement, ils ont pu être réintégrés quelques jours plus tard, mais cela montre bien qu'il existe ces points de défaillance uniques. Si vous êtes un constructeur qui consacre tout son temps et ses ressources à essayer de développer son application, c'est une expérience extrêmement douloureuse de voir sa distribution coupée immédiatement.
 
@@ -45,7 +45,7 @@ Une chose qui est vraiment incroyable avec les réseaux sociaux décentralisés,
 
 Vous pouvez voir ici — j'ai publié des mots croisés appelés Miniword. Chaque jour, les gens s'affrontent là-dessus comme pour les mots croisés du New York Times. J'ai publié une fois sur Farcaster, cela va également sur l'application Base et tous les autres clients. Vous pouvez obtenir ce coup de pouce de distribution en tant que constructeur. Si j'appuie pour ouvrir la mini-application, je peux commencer à interagir avec elle, et comme les données sociales peuvent être exploitées sans permission, vous pouvez récupérer tous les temps des différentes personnes sur le réseau et les gens peuvent concourir pour le meilleur score. Cela devient davantage une expérience sociale plutôt que de simplement faire un puzzle tout seul, et vous pouvez obtenir plus de viralité en tirant parti du graphe social.
 
-#### Crypto et portefeuilles intégrés (6:30) {#crypto-and-embedded-wallets-630}
+### Crypto et portefeuilles intégrés (6:30) {#crypto-and-embedded-wallets-630}
 
 Les réseaux sociaux décentralisés existent — nous l'avons vu avec Bluesky et ils ont fait un excellent travail pour attirer des utilisateurs à mesure que les plateformes sont bannies dans différents pays. Cependant, ce qui est vraiment spécial, c'est lorsque vous combinez la crypto et les réseaux sociaux décentralisés, car vous créez désormais des expériences que vous n'auriez jamais sur une plateforme traditionnelle. C'est quelque chose sur lequel notre équipe se penche vraiment.
 
@@ -55,7 +55,7 @@ Les utilisateurs peuvent également interagir avec des mini-applications onchain
 
 Vous pouvez également avoir des agents qui interagissent dans le fil d'actualité. Si vous croyez vraiment en cet avenir axé sur les agents où de nombreux agents interagissent les uns avec les autres, la crypto est la source naturelle qu'ils utilisent pour s'envoyer des fonds. Vous n'avez pas besoin de coordonner les adresses ou la façon dont quelqu'un est payé — vous connaissez automatiquement l'adresse d'un utilisateur, vous avez toutes les informations, peu importe où il vit dans le monde. Vous pouvez interagir avec eux directement. Je crois vraiment que la crypto, les agents et les graphes sociaux ouverts vont jouer un rôle beaucoup plus important.
 
-#### Micro-pourboires (8:36) {#micro-tipping-836}
+### Micro-pourboires (8:36) {#micro-tipping-836}
 
 L'un de mes exemples préférés de ce qui est vraiment unique à propos des graphes sociaux ouverts dans la crypto, ce sont les micro-pourboires. Aux tout débuts de la crypto, les gens disaient toujours à quel point ce serait incroyable de faire des micro-pourboires — si vous êtes un créateur publiant du très bon contenu, pouvoir envoyer une très petite somme de fonds au créateur. J'utilisais ces premières applications de pourboires Bitcoin. Mais le problème à l'époque était qu'il était en fait assez lent et coûteux d'envoyer de très petites sommes de fonds.
 
@@ -63,11 +63,11 @@ Maintenant, vous avez la possibilité d'envoyer des transactions d'un centime ou
 
 Vous pouvez voir l'historique d'activité de mon portefeuille — j'envoie des fonds à d'autres utilisateurs sur le réseau et je reçois également des fonds d'autres utilisateurs qui ont défini ces allocations. Il y a même des transactions inférieures à un centime, ce qui est un concept assez fou. Ce sont des gens qui vivent partout dans le monde. Si vous êtes tout nouveau dans la crypto et que vous rejoignez Farcaster, vous avez un portefeuille par défaut. Une fois que vous commencez à publier du contenu de haute qualité, les gens peuvent simplement commencer à vous donner automatiquement des pourboires et vous pouvez vous constituer un solde sans jamais avoir à acheter de crypto. J'ai parlé à tellement d'utilisateurs qui ont dit que c'était en fait la première crypto qu'ils gagnaient en créant du contenu ou en interagissant avec des mini-applications.
 
-#### Mini-applications et outils créatifs (11:01) {#mini-apps-and-creative-tools-1101}
+### Mini-applications et outils créatifs (11:01) {#mini-apps-and-creative-tools-1101}
 
 L'une de mes mini-applications préférées qui illustre très bien l'utilisation du portefeuille intégré, des transactions crypto et du graphe social ouvert est Emerge, construite par Atown et son équipe. Elle permet aux créateurs de concevoir un prompt qui transforme votre photo de profil en une version de ce prompt. Voici un exemple : Peachy, un créateur très populaire sur le réseau, a écrit un prompt pour transformer les photos de profil en cartes de tarot. J'ai pu générer une image en utilisant ma photo de profil et partager la mini-application afin que d'autres personnes intéressées puissent générer la leur. Il y a des classements des prompts qui ont très bien fonctionné. Si vous êtes une personne créative, vous pouvez créer vos propres prompts et commencer à gagner de l'argent — j'ai payé 25 centimes pour cette transaction de prompt, et 418 autres utilisateurs l'ont également générée, donc Peachy gagne de l'argent pour avoir créé ce contenu, et cela peut devenir viral dans le fil d'actualité.
 
-#### Le phénomène Warplet (12:41) {#the-warplet-phenomenon-1241}
+### Le phénomène Warplet (12:41) {#the-warplet-phenomenon-1241}
 
 Nous avons en fait eu l'un de nos jours avec le plus grand nombre d'utilisateurs actifs quotidiens sur Farcaster en raison d'une viralité qui s'est produite récemment. Tout d'abord, nous avons cette mascotte non officielle de Farcaster appelée Warplet. Dan, le cofondateur de Farcaster, l'avait créée. L'équipe — moi y compris — ne pensait peut-être pas que c'était la plus mignonne pour être la mascotte officielle, alors il l'a diffusée dans la communauté et a dit que les gens pouvaient en faire ce qu'ils voulaient.
 
@@ -75,13 +75,13 @@ Un développeur nommé Angel a pris cela et a décidé de construire une mini-ap
 
 Ce qui était aussi vraiment cool à voir, c'était la culture du remix. Les constructeurs disaient : « D'accord, vous avez chacun vos Warplets maintenant, alors construisons des jeux et des expériences amusantes par-dessus. » Il y a eu des classements du type « quel est le Warplet le plus laid ? » et « à quoi ressemblerait un bébé Warplet si vous combiniez ces deux-là ? » Tous ces jeux amusants ont été créés sur le réseau, ce qui montre que lorsque vous tirez parti du graphe social, vous pouvez offrir une expérience beaucoup plus engageante en tant que développeur d'applications.
 
-#### Mini-applications pour le bien social (15:02) {#mini-apps-for-social-good-1502}
+### Mini-applications pour le bien social (15:02) {#mini-apps-for-social-good-1502}
 
 Voici un exemple de mini-application — en fait, Horsefax l'a construite au sein de l'équipe. Je pense que c'est vraiment important — vous pouvez soutenir le fonds de défense juridique de Roman Storm. Nous avons utilisé Daimo Pay, et vous pouvez payer avec n'importe quel jeton et contribuer au fonds de défense juridique. Comme il s'agit d'un portefeuille intégré, vous n'êtes jamais expulsé pour utiliser une autre application. Vous pouvez immédiatement partager cela dans votre fil d'actualité en disant à vos abonnés que vous avez contribué. Ils peuvent alors découvrir cette application et continuer à faire des dons également. C'est un mécanisme pour partager davantage d'applications au sein des abonnés et du public que chacun s'est constitué.
 
 Voici un autre exemple similaire — un financement participatif construit par Nicholas chez Seed Club, comme une plateforme GoFundMe ou Kickstarter. Vous pouvez voir les différents utilisateurs qui ont contribué. Vous pouvez appuyer dans votre portefeuille intégré et contribuer des fonds directement via l'application Farcaster. Vous n'avez jamais à quitter l'application. Le créateur a pu récolter bien plus que son objectif, et vous pouvez partager cela dans votre fil d'actualité afin que tous vos abonnés puissent également découvrir la mini-application.
 
-#### Défis des réseaux sociaux décentralisés (16:41) {#challenges-of-decentralized-social-1641}
+### Défis des réseaux sociaux décentralisés (16:41) {#challenges-of-decentralized-social-1641}
 
 Tout cela est vraiment génial, et les réseaux sociaux décentralisés semblent fantastiques, mais je veux être très honnête quant aux défis. Une chose à noter est que c'est petit — très petit par rapport à toutes ces grandes plateformes sociales traditionnelles qui comptent des milliards et des centaines de millions d'utilisateurs.
 
@@ -93,7 +93,7 @@ Le spam est également un problème. Cela existe aussi sur les plateformes socia
 
 Et puis la modération — c'est aussi un problème et un défi au sein des plateformes sociales traditionnelles pour s'assurer que les utilisateurs vivent une bonne expérience et découvrent du contenu qui les intéresse vraiment. Ce sont des choses sur lesquelles nous continuons toujours de travailler.
 
-#### Pourquoi maintenant ? (19:48) {#why-now-1948}
+### Pourquoi maintenant ? (19:48) {#why-now-1948}
 
 Les réseaux sociaux décentralisés existent depuis un certain temps, mais pourquoi maintenant ? Je pense que ce sont toutes ces primitives qui se rejoignent. Tout d'abord, vous avez des graphes sociaux ouverts que n'importe qui peut utiliser et exploiter. Je parle tout le temps à des équipes que je ne connaissais même pas avant — elles construisaient simplement des mini-applications Farcaster parce qu'elles sont capables d'exploiter les données sans nous.
 
@@ -105,7 +105,7 @@ Où tout cela nous mène — je pense que l'e-mail est une très bonne analogie.
 
 Farcaster consacre de plus en plus de temps aux fonctionnalités de trading ; si cela ne vous intéresse pas, l'application Base et Uno sont vraiment excellentes pour mettre en valeur les fonctionnalités sociales. C'est ainsi que le social est censé être à long terme. Nous avons un long chemin à parcourir, mais je pense vraiment que c'est l'avenir vers lequel le social devrait se diriger.
 
-#### Questions-réponses (23:47) {#qa-2347}
+### Questions-réponses (23:47) {#qa-2347}
 
 **Modérateur :** Merci beaucoup, Linda. Nous avons quelques questions du public. Je pense que ce qui est vraiment cool, c'est que dans le monde réel, je peux sortir dans mon quartier et il y a tellement de choses que je peux faire librement. Les quartiers numériques ne sont pas toujours les mêmes, c'est pourquoi la thèse des réseaux sociaux décentralisés est très convaincante, d'autant plus qu'une plus grande partie de nos vies se déroule en ligne. Il y a un changement actuel où les personnes sur les plateformes de réseaux sociaux centralisés doivent passer aux plateformes de réseaux sociaux décentralisés. D'après votre expérience, comment pouvons-nous faciliter la migration ?
 

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/regenerative-finance-refi/index.md",
   "generatedAt": "2026-04-29T00:06:57.136Z",
-  "rootHash": "591c3bd3ccab",
+  "rootHash": "d98e0eab787b",
   "tree": {
-    "contentHash": "ceaaafdbb809",
-    "anchorHash": "8bf92d526f46",
+    "contentHash": "ff7b42f3a98c",
+    "anchorHash": "cc20a9b078df",
     "children": {
       "frontmatter:title": {
-        "contentHash": "9a51b9a57e9a",
+        "contentHash": "4095a6872334",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "3a3fd8c4c9d1",
+        "contentHash": "33d66e9c454c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8ae09eae9666"
+        "anchorHash": "bef54f16082b"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "41c2a6b1fb9e"
+        "anchorHash": "048ff5ea051e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "79ce6bfdfe97",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c192a6bdc603"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "43029a964b51"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "fac0d12f4316"
+        "anchorHash": "15edd91db371"
       },
       "prose:1": {
         "contentHash": "78ab4da29739",

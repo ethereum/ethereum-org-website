@@ -18,7 +18,7 @@ Rozhovor Offstage na Devconnectu, kde moderátor Binji a zakladatel Aave **Stani
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=EWe-cjT9IQs) vydaného Nadací Ethereum. Pro lepší čitelnost byl lehce upraven.*
 
-#### Dospívání ve Finsku (0:28) {#growing-up-in-finland-028}
+### Dospívání ve Finsku (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Takže si tu zahrajeme Jengu. Jsou s tím spojené nějaké otázky. Pokud chceš udělat první tah, můžeme začít.
 
@@ -48,7 +48,7 @@ Rozhovor Offstage na Devconnectu, kde moderátor Binji a zakladatel Aave **Stani
 
 **Stani Kulechov:** Můj táta vždycky chtěl, abych dělal do technologií, protože viděl důležitost počítačů. Internet zrovna začínal. Počítače bývaly v knihovnách — to bylo první místo. Abych byl upřímný, vlastně mě hodně podporovali.
 
-#### Pořízení prvního počítače (3:00) {#getting-the-first-computer-300}
+### Pořízení prvního počítače (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Jak jim vysvětluješ, co děláš? Znají už decentralizované finance (DeFi)?
 
@@ -58,7 +58,7 @@ Rozhovor Offstage na Devconnectu, kde moderátor Binji a zakladatel Aave **Stani
 
 **Stani Kulechov:** Naprosto. Internet a počítače poskytly přístup k informacím — už jste nemuseli chodit do knihoven, abyste se něco naučili, nebo se ptát rodičů či přátel. A myslím, že podobným způsobem dávají DeFi a krypto přístup k finančním nástrojům. To je to, co mě na tom opravdu žene kupředu. Je to osobní, protože jsem přímo viděl, jak to může být užitečné.
 
-#### Objevení Etherea (5:30) {#discovering-ethereum-530}
+### Objevení Etherea (5:30) {#discovering-ethereum-530}
 
 **Binji:** Jak jsi nakonec odešel z práv a dostal se k Ethereu?
 
@@ -70,7 +70,7 @@ Začal jsem vyvíjet chytré kontrakty a dělal jsem všechnu tuhle práci na Et
 
 **Stani Kulechov:** Věříme ve svobodu a v to, co mohou decentralizované finance (DeFi) udělat pro spoustu lidí — dát jim moc. Budování kolem komunity podobně smýšlejících jedinců to všechno opravdu spojuje dohromady.
 
-#### Budování ETHLend a pojmenování Aave (9:00) {#building-ethlend-and-naming-aave-900}
+### Budování ETHLend a pojmenování Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Kde se vzal název Aave?
 
@@ -82,7 +82,7 @@ Budeme větší než JPMorgan a všechny tyhle banky a sítě. Proč to pojmenov
 
 **Stani Kulechov:** Jo. A jelikož pocházím z menšího města ve Finsku, uvědomil jsem si, že je spousta lidí, kteří vlastně hledají to, co budujeme — jak uvnitř, tak vně našeho prostoru.
 
-#### Aave vs. tradiční finance (12:00) {#aave-vs-traditional-finance-1200}
+### Aave vs. tradiční finance (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** Jaký je podle tebe rozdíl mezi JPMorgan a Aave?
 
@@ -90,7 +90,7 @@ Budeme větší než JPMorgan a všechny tyhle banky a sítě. Proč to pojmenov
 
 Sdílel jsem to na Ethereum Redditu v roce 2017 a hned od začátku jsem od komunity zaznamenal velké nadšení. Takhle krypto komunita funguje. Nepotřebujete byznys plán nebo prezentaci. Prostě lidem ukážete něco, na čem mohou stavět.
 
-#### Bezpečnost a uživatelská zkušenost (14:30) {#security-and-user-experience-1430}
+### Bezpečnost a uživatelská zkušenost (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Lepší přístup znamená také lepší bezpečnost. Jak zajistíte, aby uživatelé nebyli ohroženi pokusy o phishing, a jak to uděláme lépe než v tradičním internetovém světě? Vyřešit to je důležité, protože se nemůžeme spoléhat na proces, při kterém uživatelé přicházejí o to, co mají, že? Myslím, že nejčastější věcí je phishing. Uživatelská zkušenost (UX) při interakci s blockchainem postrádá validaci.
 
@@ -102,7 +102,7 @@ Sdílel jsem to na Ethereum Redditu v roce 2017 a hned od začátku jsem od komu
 
 **Stani Kulechov:** Někdy ten nápad nemá validaci. Někdy nápad může mít validaci, ale provedení je špatné. Takže jsou tu různé komponenty, které jsou důležité. Prostě jsem dál přemýšlel, dál vylepšoval produkt a myslím, že to byla ta správná cesta.
 
-#### Andělské investování (17:00) {#angel-investing-1700}
+### Andělské investování (17:00) {#angel-investing-1700}
 
 **Binji:** Jsi plodný andělský investor. Co hledáš, když hodnotíš nové tvůrce?
 
@@ -112,7 +112,7 @@ Sdílel jsem to na Ethereum Redditu v roce 2017 a hned od začátku jsem od komu
 
 **Stani Kulechov:** Ani ne, protože vždycky to má nějakou hodnotu. Hodně se toho naučíte, posunete ten prostor dál. A typicky jako výstup vytvoříte spoustu talentů. Někdy investice nevyjde, ale pak ten samý tým může jít a založit jinou firmu, kde už mají více zkušeností a mohou být úspěšnější. Některé jsou úspěšnější než jiné, ale celkově jsou to všechno sázky, kterým věříme.
 
-#### Udržení vs. akvizice (19:00) {#retention-vs-acquisition-1900}
+### Udržení vs. akvizice (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Na jaké metrice ti v kryptu záleží?
 
@@ -122,7 +122,7 @@ Sdílel jsem to na Ethereum Redditu v roce 2017 a hned od začátku jsem od komu
 
 **Stani Kulechov:** Typicky teď, na straně akvizice, lidé myslí více na udržení než na akvizici. Ukazuje to, proč se lidé více nezapojují — typicky je to proto, že chybí produkt, který by pro tyto uživatele mohl být poutavý. Deset let jsme se soustředili na infrastrukturu. Myslím, že aplikační vrstva je další dekáda, a to nám pomůže škálovat uživatelskou základnu.
 
-#### Volatilita krypta a institucionální aktiva (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Volatilita krypta a institucionální aktiva (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Krypto je neustále vnímáno jako tahle volatilní věc — medvědí trh, býčí trh. Aave je jako protipól k tomu, že? Je prostě celou dobu stabilní.
 
@@ -132,7 +132,7 @@ S institucionálními aktivy, jako je trh Horizon, který jsme spustili, použí
 
 Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykoli. Je to skvělé pro věřitele, protože mohou půjčovat proti tradičním aktivům, ale dělat to onchain se stablecoiny. Myslím, že pro instituce uvědomění si výhod stablecoinů a tokenizovaných aktiv pomáhá přemýšlet mimo volatilitu — a přestat si myslet, že krypto je čistě o volatilitě.
 
-#### Ethereum jako vrstva důvěry (22:00) {#ethereum-as-a-trust-layer-2200}
+### Ethereum jako vrstva důvěry (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** U Etherea je jednou z věcí, pro kterou jsem docela zapálený, to, že je to vrstva důvěry. Protokoly jako Aave ukazují důvěru v akci v reálném světě. Je to půjčování, vypůjčování, podložené ekonomickou bezpečností a vahou důvěry, která s těmito platformami přichází.
 
@@ -142,7 +142,7 @@ Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykol
 
 **Stani Kulechov:** Očividně nevidí, kolik práce se skrývá za tím, co děláme každý den. Spousta věcí se bere za bernou minci. Ale myslím, že to musí být zábavný proces. Budování musí být zábavný proces. Neměli byste tu být, pokud je to zdrcující. Měli byste tu být, abyste si užívali to, co děláte.
 
-#### Zábava při budování (24:00) {#having-fun-while-building-2400}
+### Zábava při budování (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave je skvělý příklad toho, jak se bavit. Přijde mi prostě neskutečné, že ten samý tým, který mění podobu moderních financí — co, 30. největší banka na světě, když nepočítáme zajištění, pravděpodobně ještě výš — dělá také GrAave. Dokazuje to, že přinášíte krypto kulturu do další generace financí, aniž byste se vzdali komunity a kultury, která vás do tohoto světa přivedla.
 
@@ -152,7 +152,7 @@ Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykol
 
 **Stani Kulechov:** Myslím, že aplikace Aave. Prostě zaměření na jednoduchost. Jednoduchost se dobře škáluje. Jsme z tohoto směru velmi nadšení — přinést více decentralizovaných financí (DeFi) do mainstreamu a udělat to správným způsobem, kde je všechno abstrahováno a je to jednoduché a snadno použitelné.
 
-#### Co ve vás vyvolává pocit, že nejvíce žijete (26:00) {#what-makes-you-feel-most-alive-2600}
+### Co ve vás vyvolává pocit, že nejvíce žijete (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** Kdy se cítíš nejvíc naživu?
 
@@ -166,7 +166,7 @@ Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykol
 
 **Stani Kulechov:** Prostě nemám rád ten prvek vážnosti. Mám rád vážnost při dotahování věcí do konce, ale líbí se mi fakt, že se v životě i v práci musíte bavit. Když jsem vyrůstal, měl jsem spoustu svobody, a to vytvořilo zážitky, které bych jinak neměl.
 
-#### Proč Londýn (28:30) {#why-london-2830}
+### Proč Londýn (28:30) {#why-london-2830}
 
 **Binji:** Vybrali jste si Londýn jako jedno z vašich hlavních sídel. Proč Londýn?
 
@@ -176,7 +176,7 @@ Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykol
 
 **Stani Kulechov:** Nedávno ano, jo.
 
-#### Inspirace a chvíle, kdy to málem vzdal (30:00) {#inspiration-and-almost-quitting-3000}
+### Inspirace a chvíle, kdy to málem vzdal (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Kdo tě inspiroval mimo krypto a technologie, ať už jde o tvůj styl vedení, nebo když jsi začínal?
 
@@ -186,7 +186,7 @@ Je to skvělé pro vypůjčovatele, protože mají přístup k likviditě kdykol
 
 **Stani Kulechov:** Jo, někdy. Ale je to spíš takové to vzdání se pro daný den. Prostě to pro ten den vzdáte, abyste si odpočinuli, a vždycky je tu další den. Zvlášť když máte něco, co se těžko řeší — jako tenhle hlavolam tady.
 
-#### Produkty pro koncové uživatele a komunita Etherea (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Produkty pro koncové uživatele a komunita Etherea (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Co je ta nejdůležitější věc, kterou musíme jako komunita Etherea udělat?
 
@@ -198,7 +198,7 @@ Přijít na to, jak můžeme tuto energii nasměrovat, zejména v rámci produkt
 
 **Stani Kulechov:** Rozhodně. Vybudovali jsme tuto úžasnou infrastrukturu na síťové vrstvě, na vrstvě decentralizovaných financí (DeFi), a teď je další vrstvou v podstatě budování toho, co funguje, a distribuce všem. DeFi pro všechny.
 
-#### Závěr (36:00) {#closing-3600}
+### Závěr (36:00) {#closing-3600}
 
 **Binji:** Myslím, že většina lidí, kteří objeví Ethereum, ho objeví prostřednictvím těchto rozhraní.
 

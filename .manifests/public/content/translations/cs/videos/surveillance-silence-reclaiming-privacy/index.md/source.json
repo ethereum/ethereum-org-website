@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/surveillance-silence-reclaiming-privacy/index.md",
   "generatedAt": "2026-04-29T00:20:33.228Z",
-  "rootHash": "848e11a3cc53",
+  "rootHash": "51c0b0dacba0",
   "tree": {
-    "contentHash": "6295f05f9c19",
-    "anchorHash": "0ce79bfccaad",
+    "contentHash": "fb13e7da15c3",
+    "anchorHash": "03c5d516c85b",
     "children": {
       "frontmatter:title": {
-        "contentHash": "3550cca9aba0",
+        "contentHash": "7ac7f94c08cf",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ea8144b7d6a1",
+        "contentHash": "d308243504a1",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2afb77915764"
+        "anchorHash": "f26a170f667f"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0237e0b03399"
+        "anchorHash": "7ef73fffb356"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "f82179af788e",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "38344bba4684"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "41c2b0c0b231"
+        "anchorHash": "30e19540f0ca"
       },
       "prose:1": {
         "contentHash": "da94b9182473",

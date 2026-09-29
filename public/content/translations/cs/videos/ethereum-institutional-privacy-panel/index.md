@@ -18,7 +18,7 @@ Panelová diskuse na akci Web3Privacy Now během Devconnect 2025, kterou moderov
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=cZqlg4W1Els) zveřejněného organizací Web3Privacy Now. Byl lehce upraven pro lepší čitelnost.*
 
-#### Úvod do Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
+### Úvod do Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Ahoj. Slyšíte mě? Dobře. Skvělé. Takže nejprve si dáme velmi krátkou úvodní přednášku — tak na 3 až 5 minut — a ta nás pak přivede k panelové diskusi. Toto je zkrácená přednáška. Předchozí panel hodně mluvil o dodržování předpisů, soukromí a tak dále. Měl jsem předchozí přednášku na Cyban Congress, která se toho také dotkla, a delší verze této přednášky proběhne později dnes na DeFi Day. O čem ale chci mluvit, je institucionální soukromí na Ethereu.
 
@@ -30,7 +30,7 @@ Jediná velká instituce zde může mít obrovský vliv na to, který ekosystém
 
 Aby mohlo Ethereum provést onboarding těchto institucí, musí vyřešit tyto obavy o soukromí. To, o co se v Institutional Privacy Task Force snažíme, je onboarding institucí na Ethereum a zajištění toho, aby byly splněny jejich cíle v oblasti soukromí. Pořádáme například workshopy, snažíme se tento prostor demystifikovat a zajistit, abychom dokázali řešit institucionální potřeby, konkrétně pokud jde o soukromí. Prvním výstupem, který máme, je tato mapa institucionálního soukromí — mluvíme s obrovskými institucemi, chápeme jejich obchodní případy použití a požadavky, otevíráme zdrojový kód (open source) v co největší míře a pak mluvíme s dodavateli v tomto prostoru, abychom propojili instituce s prostorem řešení. 
 
-#### Představení panelu a institucionální problémy (5:00) {#panel-introductions-and-institutional-problems-500}
+### Představení panelu a institucionální problémy (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Omlouvám se, že to bylo trochu rychlé, ale snad srozumitelné. Tento panel má tedy spoustu odborníků napříč výzkumem, politikou a inženýrstvím a budeme mluvit o institucionálním soukromí. 
 
@@ -48,7 +48,7 @@ Z druhého směru, *proč být na veřejném blockchainu?* Jde o složité trhy 
 
 **Amzah:** Ano. Pracuji pro ABN Amro, což je velká nizozemská banka. Máme 5 milionů retailových zákazníků. Takže v současné době vlastně nebudujeme nic konkrétně v oblasti soukromí, ale to, co se teď chystá, je například peněženka pro digitální identitu. Obvykle to funguje tak, že data jsou uložena v centralizované databázi a vy se pak spojíte s externím poskytovatelem nebo třetí stranou, ale to samozřejmě není úplně bezpečné. Takže už začínáme přemýšlet o tom, jak můžeme využít například důkazy s nulovou znalostí (ZK-proofs), abychom mohli mít selektivní zveřejňování vůči externím stranám. V tomto smyslu můžeme chránit informace o našich zákaznících a zároveň jim umožnit propojení s širším prostředím Web3.
 
-#### Konkrétní pracovní postupy a úložiště (10:07) {#concrete-workflows-and-storage-1007}
+### Konkrétní pracovní postupy a úložiště (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Dobře, skvělé. Když si vyberete jeden konkrétní tok, na kterém by vám mohlo záležet — jako třeba nějaké emise dluhopisů, obchod nebo platba z pokladny — kdo může přesně vidět co a v jakém kroku, a co je uloženo onchain oproti offchain? Možná začneme u Françoise.
 
@@ -68,7 +68,7 @@ Na druhém konci může být obchod s pozicemi mezi věřiteli a existuje oček�
 
 **Amzah:** Ano. Většinou souhlasím s tím, co řekl Zach. V minulosti, když instituce přemýšlely o soukromí, prostě spustily privátní řetězec, kterého se účastnilo třeba 20 bank a jen ony mohly vidět, co v něm je. Ale ve skutečnosti je to mnohem nuancovanější. Záleží na případu použití, na typu toků a na tom, co potřebuje vědět regulátor. Informace o zůstatcích můžete dát onchain v agregovanější podobě, například pomocí důkazu o rezervách (proof of reserves).
 
-#### Neoddiskutovatelné požadavky (15:26) {#non-negotiable-requirements-1526}
+### Neoddiskutovatelné požadavky (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio a Amzahu, jaké jsou z pohledu bank, obchodních míst a regulátorů některé neoddiskutovatelné požadavky, které slyšíte stále dokola? Jako auditní stopy, pravidla KYC nebo požadavky na výkaznictví?
 
@@ -78,7 +78,7 @@ Na druhém konci může být obchod s pozicemi mezi věřiteli a existuje oček�
 
 **François:** Náš spoluzakladatel tráví týdny se zákazníky v institucionálním prostoru a nejvyšším požadavkem, který se objevuje, je „kontrola“. Kdo vidí co, kdy a z jakého důvodu. A pak tyto konverzace rozvedete do detailů a stanou se šíleně přizpůsobenými. Pro nás je to skvělé, protože tradiční finanční svět strávil desetiletí budováním svých účetních postupů a toků AML/CTF. Jsou velmi specifičtí ohledně této kontroly. Takže tyto schopnosti budujeme na vrstvě protokolu a podporujeme zákazníky na jejich cestě.
 
-#### Kompromisy a globální likvidita (18:10) {#trade-offs-and-global-liquidity-1810}
+### Kompromisy a globální likvidita (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** S jakými hlavními kompromisy se v současnosti potýkáte? Výkon versus soukromí, nebo globální likvidita versus přísné kontroly, nebo onchain transparentnost versus offchain záznamy? Začneme u Zacha.
 
@@ -88,7 +88,7 @@ Na druhém konci může být obchod s pozicemi mezi věřiteli a existuje oček�
 
 Samozřejmě jsou tu složitosti. Velmi nám záleží na tom prvotřídním (white-glove) zážitku pro instituci vstupující na tento trh, aby mohla mít své vlastní podmínky. Jednou z výzev je rovnováha mezi soukromím a odolností vůči hrozbám. Ve světě Web3 existují aktéři hrozeb a my to chceme lépe zvládnout, abychom mohli nabídnout fantastický zážitek. K decentralizaci přistupujeme opatrně — víme, jak na to, ale uděláme to ve chvíli, kdy to bude nejlépe sloužit zákazníkům.
 
-#### Důvěra v systém a hnací síly adopce (20:47) {#system-trust-and-adoption-drivers-2047}
+### Důvěra v systém a hnací síly adopce (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, jak zajistíte, aby tato řešení byla důvěryhodná a použitelná pro instituce a vlády?
 
@@ -98,7 +98,7 @@ Samozřejmě jsou tu složitosti. Velmi nám záleží na tom prvotřídním (wh
 
 **Amzah:** Pro nás je opravdu důležité, aby to bylo přizpůsobitelné. Blockchain už není jen jeden případ použití, kde je vše plně veřejné nebo plně privátní. Není to univerzální řešení pro všechny. Co je pro nás také nejdůležitější, je dodržování předpisů. Bankovní sektor v Evropě je silně regulován, a pokud něco není v pořádku ohledně soukromí, u regulátorů to prostě neprojde.
 
-#### Výhled do roku 2026 (23:15) {#looking-ahead-to-2026-2315}
+### Výhled do roku 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** Dobře, jsme skoro na konci. Co je tím jedním stavebním kamenem — technickým, provozním nebo politickým — který by podle vás smysluplně urychlil institucionální adopci? A pokud se znovu setkáme v roce 2026, co si myslíte, že je reálné, že se letos stane?
 
@@ -110,7 +110,7 @@ Samozřejmě jsou tu složitosti. Velmi nám záleží na tom prvotřídním (wh
 
 **François:** Pokud se setkáme za rok, rád bych na jaře spustil Mainnet Miden, abychom to mohli oslavit. Kromě toho bych si přál, abychom byli na cestě k plné decentralizaci. Bude to vyžadovat úsilí mnoha lidí. Hlavní věc, kterou chci vidět, je větší zapojení. Představa, že soukromí je v rozporu s dodržováním předpisů, není tak úplně pravdivá, ale spojit tyto dvě věci dá práci. Chceme, aby instituce pomohly utvářet druh trhů, které chtějí vidět, protože víme, že to bude složité a specifické pro jejich potřeby.
 
-#### Závěrečné myšlenky (28:05) {#closing-thoughts-2805}
+### Závěrečné myšlenky (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** Chci dát každému z vás 10 až 20 sekund, abyste zmínili něco, co se stalo tento týden, nebo udělali rychlou reklamu, než skončíme.
 

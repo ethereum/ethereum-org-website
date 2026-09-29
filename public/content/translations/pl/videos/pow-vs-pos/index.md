@@ -19,7 +19,7 @@ Debata między **Lyn Alden** a **Justinem Drake'em** na temat podstawowych kompr
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=1m12zgJ42dI) opublikowanego przez Bankless. Został on lekko zredagowany w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:00) {#introduction-000}
+### Wprowadzenie (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Witamy w Bankless, gdzie badamy Frontier internetowego pieniądza i internetowych finansów. Z tej strony Ryan Sean Adams, jestem tu z Davidem Hoffmanem i jesteśmy tu po to, aby pomóc wam stać się bardziej niezależnymi od banków (bankless). Słuchajcie, czeka was dziś nie lada gratka. Mamy dwóch ekspertów od dowodu stawki (PoS) i dowodu pracy (PoW), którzy debatują nad tym, co jest lepsze do stworzenia globalnego systemu monetarnego — systemu pieniądza krypto — dowód pracy czy dowód stawki. Lyn Alden i Justin Drake w dzisiejszym odcinku. Porozmawiamy o kilku rzeczach. Po pierwsze: co zapewnia największe bezpieczeństwo ekonomiczne, dowód pracy czy dowód stawki? Po drugie: co zapewnia najlepsze odstraszanie i możliwość odzyskania sprawności w obliczu przerażającego ataku 51%? Po trzecie: co minimalizuje władzę zarządzania dla elit — co daje więcej "władzy w ręce ludu"? Po czwarte: który system jest ekonomicznie najuczciwszy dla uczestników? I po piąte — to mój osobisty faworyt — rozmowa o tym, że dowód pracy jest bardziej pieniądzem towarowym, a dowód stawki bardziej pieniądzem kapitałowym.
 
@@ -29,7 +29,7 @@ Debata między **Lyn Alden** a **Justinem Drake'em** na temat podstawowych kompr
 
 **Justin Drake:** Świetnie, dzięki jeszcze raz za zaproszenie, chłopaki.
 
-#### Ramy debaty: premia monetarna (7:30) {#framing-the-debate-monetary-premium-730}
+### Ramy debaty: premia monetarna (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Chcę zacząć od najważniejszego pytania. Myślę, że próbujemy odpowiedzieć na meta-pytanie, czy dowód pracy, czy dowód stawki jest bardziej podatny na gromadzenie premii monetarnej — w zasadzie, który z tych dwóch protokołów konsensusu jest bardziej odpowiedni, aby uczynić kryptowalutę pieniądzem. Justin, czy zgadzasz się, że to właściwe ujęcie tematu?
 
@@ -41,7 +41,7 @@ Debata między **Lyn Alden** a **Justinem Drake'em** na temat podstawowych kompr
 
 **Justin Drake:** Chciałbym wtrącić i uargumentować, dlaczego ta analogia między akcjami a dowodem stawki jest być może zła. W kontekście akcji masz prawo oddać głos na cokolwiek — możesz całkowicie zmienić zasady działania firmy. W konsensusie dowodu stawki uczestnicy konsensusu nie mogą po prostu arbitralnie zmieniać zasad. Nie mogą powiedzieć "po prostu damy sobie po tysiąc ETH" — to byłaby nieprawidłowa transakcja. Ostatecznie uczestnicy konsensusu są zależni od społeczności, a to ogromna różnica w stosunku do akcji.
 
-#### Pieniądz towarowy kontra pieniądz kapitałowy (10:06) {#commodity-money-vs-equity-money-1006}
+### Pieniądz towarowy kontra pieniądz kapitałowy (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, czy chcesz kontynuować tę rozmowę o dowodzie pracy jako towarze i dowodzie stawki jako kapitale?
 
@@ -53,7 +53,7 @@ Debata między **Lyn Alden** a **Justinem Drake'em** na temat podstawowych kompr
 
 **Lyn Alden:** Myślę, że istnieje pewne spektrum, ale w większości jest to raczej ulica jednokierunkowa. Istnieje wiele sposobów, aby stać się akcją, ale bardzo niewiele, aby stać się towarem. Towary z natury są dość rzadkie i niezmienne. Sposoby na stworzenie prawdziwego towaru w świecie cyfrowym są niezwykle ograniczone.
 
-#### Ataki 51%: odstraszanie i odzyskiwanie (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Ataki 51%: odstraszanie i odzyskiwanie (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Chcę porównać dowód pracy i dowód stawki pod kątem tego, który z nich jest najmniej podatny na ataki cenzury. Jedną z ogromnych zalet dowodu stawki jest to, że warstwa społeczna ma narzędzia do interwencji. W dowodzie pracy, jeśli pojawi się atakujący z 51%, zbiera on każdą nagrodę, każdą emisję, każdą opłatę transakcyjną. Uczciwi górnicy się wyłączają, ponieważ nie ma sensu zużywać prądu bez dochodu. Następnie chcą się zlikwidować, sprzedając swój sprzęt. Atakujący może kupić ten sprzęt za bezcen i się wzmocnić. Nawet jeśli społeczności uda się zorganizować kontratak, jego przygotowanie zajęłoby miesiące, jeśli nie lata.
 
@@ -65,7 +65,7 @@ Jeśli chodzi o bezpieczeństwo, nie chodzi tylko o ataki 51% — chodzi równie
 
 Jeśli chodzi o odzyskiwanie po atakach 51%: jedynym sposobem w dowodzie stawki jest miękkie rozwidlenie i zabranie kapitału ludziom. Jeśli ujmiesz to jako zabranie kapitału atakującemu, brzmi to w porządku. Ale atakującym może być regulowany powiernik — zabierasz kapitał ludziom, którzy nie mieli nic wspólnego z atakiem.
 
-#### Złożoność, błędy i różnorodność klientów (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Złożoność, błędy i różnorodność klientów (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Złożoność niekoniecznie jest zła. Ludzkość na niej rozkwita. Jeśli chodzi o złożoność dowodu stawki — tak, jest on bardziej złożony, co najmniej 10-krotnie, a może i 100-krotnie. Ale jest to złożoność, którą w tym momencie już okiełznaliśmy. Mamy pięciu różnych klientów, którzy zaimplementowali protokół, każdy z małymi zespołami od pięciu do dziesięciu osób. Różnorodność klientów pozwala społeczności na wykupienie ubezpieczenia od błędów.
 
@@ -75,7 +75,7 @@ W kwestii bycia ciągle online — co nazywamy słabą subiektywnością — je�
 
 Patrząc na kierunek rozwoju dowodu pracy w dłuższej perspektywie, zobaczysz rosnącą integrację między górnikami a producentami energii. Sieć elektryczna w naturalny sposób musi nadprodukować energię elektryczną. Systemy dowodu pracy są naprawdę dobrym stabilizatorem obciążenia dla niewykorzystanej energii. Najtańszym źródłem energii elektrycznej jest praktycznie darmowa, niewykorzystana energia. Obecnie największa na świecie kopalnia Bitcoina ma około 1% całkowitego wskaźnika haszowania — jest już strukturalnie zdecentralizowana.
 
-#### Uczciwość i argument "bogaci stają się bogatsi" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Uczciwość i argument "bogaci stają się bogatsi" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** W dowodzie stawki masz idealną uczciwość — wkładasz jedną jednostkę kapitału i otrzymujesz dokładnie taką samą ilość nagród, bez względu na to, jak duży czy mały jesteś. W dowodzie pracy grube ryby mają nieuczciwą przewagę. Jeśli jesteś detalicznym górnikiem kupującym jedną koparkę, przepłacasz 2x, 3x, 4x, 5x w stosunku do profesjonalnych górników kupujących hurtowo. Ze względu na prawo Moore'a atakujący, którzy chcą zaatakować, mają przewagę — mogą wybrać najnowszy, najbardziej nowatorski sprzęt. Dla nich cena prądu jest w dużej mierze bez znaczenia, ponieważ atak 51% musi trwać tylko jeden dzień lub tydzień. 99% kosztów to koparki i infrastruktura, a nie prąd.
 
@@ -85,7 +85,7 @@ Fakt, że dowód pracy jest z natury nieuczciwy, stwarza przewagę dla atakując
 
 W dowodzie pracy w zasadzie wynajmujesz swoją zdolność do zarządzania systemem. Twoje maszyny ulegają degradacji, twoje źródło energii może stać się mniej wydajne, twój sprzęt staje się mniej nowoczesny. To ciągła seria decyzji, a nie system, który z natury przynosi korzyści ludziom, którzy kupili jako pierwsi. Bez względu na to, ile Bitcoina ma Michael Saylor, ma on zerową kontrolę nad tym, które transakcje są przetwarzane.
 
-#### Dowód pracy jako "dowód stawki z dodatkowymi krokami" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### Dowód pracy jako "dowód stawki z dodatkowymi krokami" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** Nie znam nikogo — a jestem w tej przestrzeni od prawie dekady — kto w tym momencie kopie Bitcoina jako osoba prywatna. Wszystko to ma charakter przemysłowy. Z drugiej strony, w przypadku dowodu stawki, wszyscy podczas tej rozmowy — może z wyjątkiem ciebie, Lyn — stakują jako osoby prywatne. Różnorodność w dowodzie stawki jest znacznie, znacznie większa. Bariera wejścia jest znacznie niższa — w zasadzie potrzebujesz tylko komputera działającego 24/7.
 
@@ -97,11 +97,11 @@ Jeśli chodzi o argument "bogaci stają się bogatsi" w dowodzie stawki: postrze
 
 Jeśli chodzi o różnorodność klientów — przynajmniej kiedy ostatnio sprawdzałam, największy klient ma około 84% klientów Ethereum. Masz pewien stopień dywersyfikacji, ale jest to również częściowa iluzja. W praktyce jedną z kluczowych rzeczy, która chroni przed błędami, jest posiadanie możliwie najprostszej bazy kodu.
 
-#### NIST, komputery kwantowe i długoterminowe fundamenty (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, komputery kwantowe i długoterminowe fundamenty (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Jeśli chcemy być internetem pieniądza, potrzebujemy skali czasowej rzędu samego internetu — dekad, jeśli nie stuleci. Złożoność to coś, co ma okres półtrwania wynoszący może rok — można ją okiełznać i utwardzić. Z czasem, gdy zabezpieczona jest duża wartość, systemom można zaufać. Błędy zostaną naprawione, system się utwardzi. To, na co powinniśmy patrzeć, to długoterminowe fundamenty. Okazuje się, że dowód pracy zostanie całkowicie zdezorganizowany przez obliczenia kwantowe w ciągu najbliższych 20 do 30 lat. Tak, istnieją krótkoterminowe obawy związane ze złożonością, ale jeśli spojrzysz z szerszej perspektywy i skupisz się na fundamentach, istnieją fundamentalne powody, by być pesymistycznie nastawionym do dowodu pracy.
 
-#### Historyczny argument pieniądza towarowego (1:00:34) {#the-commodity-money-historical-argument-10034}
+### Historyczny argument pieniądza towarowego (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, w pewnym sensie przejęłaś inicjatywę jako komentatorka makro skupiająca się na rynkach towarowych. Zwolennicy Bitcoina mają tendencję do skupiania się na właściwościach towarowych i na tym, jak Bitcoin zużywa energię jako towar. Czy jest to po części argument moralny — że pieniądz towarowy jest po prostu pieniądzem lepiej dopasowanym do świata?
 
@@ -113,13 +113,13 @@ Z czasem ma to tendencję do centralizacji. W miarę narastania długu system je
 
 **Lyn Alden:** Osobiście podchodzę do tego z perspektywy ryzyka taktycznego. Który system jest najmniej narażony na ryzyko ogona (tail risks)? Co jest zoptymalizowane pod kątem tego, co próbuje osiągnąć? Jeśli chodzi o argument uczciwości, częściowo miesza się to z różnymi rzeczami — dowód pracy kontra dowód stawki to jeden aspekt, a rzadkość tokenów to drugi.
 
-#### Silnik rzadkości kontra silnik płynności (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### Silnik rzadkości kontra silnik płynności (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Dowód pracy i dowód stawki z perspektywy memów są niemal swoim dokładnym przeciwieństwem. W dowodzie stawki masz to, co nazywam silnikiem rzadkości — mechanizm zamiany płynnego ETH w zamrożone ETH używane jako zabezpieczenie. Moje prognozy mówią, że ostatecznie około połowa całej podaży ETH będzie stakowana. W przypadku dowodu pracy jest odwrotnie — emisja i opłaty transakcyjne, które zarabiają górnicy, muszą zostać sprzedane na pokrycie kosztów prądu i sprzętu. Stworzyłeś silnik płynności, który nieustannie zrzuca na rynek. Jeśli zapytasz, który system jest najlepszy do stworzenia pieniądza dla internetu — ten, który ciągle zrzuca, czy ten, który zachęca ludzi do trzymania — myślę, że jest oczywiste, który z nich jest bardziej wartościowy z perspektywy memów.
 
 **Lyn Alden:** Im więcej system próbuje zrobić, tym gorszy będzie w każdej z tych rzeczy. W miarę jak Ethereum próbowało utwardzić swoją politykę monetarną, można argumentować, że straciło udział w rynku zdecentralizowanych finansów (DeFi) — z 97% całkowitej wartości zablokowanej (TVL) pod koniec 2020 roku do 55% obecnie. Jak dotąd Bitcoin nie ma tak naprawdę konkurencji ze strony innych systemów. Krótkie okresy konkurencji — memy Dogecoina, Bitcoin Cash — z czasem zanikają. Jeden świat opiera się na zarządzaniu i czynieniu swojego ekosystemu atrakcyjnym. Drugi sprowadza się do tego, co jest najtwardsze — co jest najlepsze w byciu pieniądzem.
 
-#### Zarządzanie, niezmienność i samosuwerenność (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Zarządzanie, niezmienność i samosuwerenność (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Co najmniej, system dowodu stawki daje posiadaczom jednostek więcej do powiedzenia w kwestii tego, które transakcje są przetwarzane, a które cenzurowane. Ale kto może zmienić protokół i w jaki sposób — to wykracza poza debatę dowód pracy kontra dowód stawki. Możesz mieć systemy dowodu pracy, które wyglądają bardziej jak akcje — z bombami trudności lub super dużymi blokami, przez co ludzie nie mogą uruchomić własnego węzła.
 
@@ -129,13 +129,13 @@ Memem Bitcoina jest samosuwerenność. Uruchamiasz własny węzeł, węzły są 
 
 **Lyn Alden:** W przypadku pieniędzy towarowych producenci rzadko mają dużą kontrolę. Złoto ma bardzo wysoki stosunek zapasów do przepływów (stock-to-flow) — górnicy złota nie mają praktycznie żadnej kontroli nad systemem. To samo dotyczy ekosystemu Bitcoina. Podczas wojen o rozmiar bloku większość górników opowiadała się za zwiększeniem bloku, a i tak nie udało im się tego przeforsować. Operatorzy węzłów to odrzucili. Ta kombinacja podziału władzy — gdzie możesz po prostu uruchomić węzeł i stać się samosuwerennym, a oddzielnie kopanie daje ci tymczasową zdolność do porządkowania transakcji, ale bez stałej alokacji — jest tym, co utrzymuje zdecentralizowany system.
 
-#### Obalenie argumentu "bogaci stają się bogatsi" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### Obalenie argumentu "bogaci stają się bogatsi" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Jeśli chodzi o "bogaci stają się bogatsi" w dowodzie stawki — postrzegam to jako ochronę majątku, a nie jego pomnażanie. Podczas stakingu płacisz koszt alternatywny w wysokości około 3% i otrzymujesz rekompensatę. Netto, dokonujesz ochrony majątku. Profesjonalni górnicy robią to samo — zabezpieczają ryzyko za pomocą kontraktów futures, blokując zwroty, które w przybliżeniu odpowiadają kosztowi alternatywnemu. Tak naprawdę dowód pracy to po prostu dowód stawki z dodatkowymi krokami. Ryzyko można wyeliminować za pomocą produktów finansowych, a na koniec dnia masz w zasadzie ten sam produkt finansowy.
 
 **Lyn Alden:** Tym, co czyni system towarowy zdecentralizowanym, jest połączenie małych węzłów i oddzielnego kopania. Bez względu na to, ile Bitcoina ktoś posiada, ma zerową kontrolę nad kolejnością transakcji. To jest podział władzy. Jeśli zamierzasz jak najbardziej zbliżyć się do niezmienności w świecie cyfrowym, projektujesz system, który jest bardzo zdecentralizowany, w którym bardzo trudno wymusić zmiany, z brakiem zmian lub zmianami dobrowolnymi (opt-in). Wszystko, co odbiega od tego modelu — ciągłe wymuszone zaangażowanie ze strony małego zespołu deweloperów, centrów deweloperskich, fundacji — jest z natury bardziej podobne do akcji, niezależnie od mechanizmu konsensusu.
 
-#### Mowy końcowe (1:30:42) {#closing-arguments-13042}
+### Mowy końcowe (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** To była fantastyczna rozmowa. To była prawdopodobnie najlepsza rozmowa o dowodzie stawki kontra dowodzie pracy w historii. Czas na mowy końcowe. Justin, dlaczego dowód stawki to najlepszy sposób na stworzenie pieniądza krypto?
 
@@ -151,7 +151,7 @@ Gdybyś projektował blockchain w celu maksymalizacji właściwości monetarnych
 
 Jeśli chodzi o pieniądze odpowiednie do umieszczenia w nich skarbca korporacyjnego, alokacji części kapitału żelaznego lub trzymania 10% lub więcej wartości netto — albo zarządzania rezerwami państwowymi reprezentującymi dekady zgromadzonych nadwyżek handlowych — historycznie najlepsze było złoto. Teraz mamy nowych konkurentów. Wybrałbyś ten najbardziej zdecentralizowany, najbardziej niezmienny, ten, który nie poświęca żadnej z tych cech. To nie znaczy, że inne systemy nie są wartościowe — to, że złoto ma wartość, nie oznacza, że akcje Tesli jej nie mają. To różne rzeczy robiące różne rzeczy. Idealny pieniądz jest gotów poświęcić prawie wszystko inne, aby mieć idealne atrybuty pieniądza — którego głównym celem jest bycie trzymanym i okazjonalne przeprowadzanie transakcji, w porównaniu do czegoś, co próbuje być szwajcarskim scyzorykiem.
 
-#### Podsumowanie (1:40:14) {#wrap-up-14014}
+### Podsumowanie (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Chcę jeszcze raz podziękować Lyn Alden i Justinowi Drake'owi za dołączenie do nas i przeprowadzenie najlepszej debaty, jaką kiedykolwiek słyszałem na temat dowodu pracy kontra dowodu stawki. Szczególne podziękowania również dla Lyn za przyjście do czegoś, co niektórzy mogliby postrzegać jako "drużynę gości".
 

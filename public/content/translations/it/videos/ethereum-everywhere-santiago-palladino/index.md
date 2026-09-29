@@ -19,7 +19,7 @@ Un intervento di **Santiago Palladino** all'Ethereum Day durante il Devconnect A
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=FzJBV3oSUns) pubblicata dalla Fondazione Ethereum. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Crescere lontano (0:07) {#growing-up-far-away-007}
+### Crescere lontano (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Grazie, Binji. Grazie a tutti voi per essere qui. È un onore assoluto essere qui sul palco ed è un onore ancora più grande avere il Devconnect qui a Buenos Aires.
 
@@ -39,13 +39,13 @@ Il cliché ricorrente che vedevamo è l'Argentina come luogo in cui fuggire: un 
 
 Quella citazione è tratta da un episodio di Dexter di anni fa. In realtà sono andato sulla wiki di Dexter per cercare di trovarla e ho trovato questa bellissima descrizione: "L'Argentina è un luogo in una serie TV". Oh, e a proposito, è anche un posto reale, giusto per farvelo sapere.
 
-#### La decentralizzazione come funzionalità (4:47) {#decentralization-as-a-feature-447}
+### La decentralizzazione come funzionalità (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Quindi siamo lontani, siamo tagliati fuori. E per lontani non intendo solo geograficamente, come la maggior parte di voi che ha viaggiato fin qui ha sopportato in aereo. Ehi, è il momento della rivincita: noi dobbiamo sempre fare i conti con questo quando andiamo da qualche altra parte.
 
 Il mio punto è: essendo così lontani, così tagliati fuori dal resto del mondo, penso non ci sia da meravigliarsi se, quando abbiamo trovato una tecnologia in cui la decentralizzazione non è un bug ma una funzionalità (che è una risorsa), ci siamo buttati a capofitto.
 
-#### Un decennio di cripto argentina (5:27) {#a-decade-of-argentine-crypto-527}
+### Un decennio di cripto argentina (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Ora che vi ho dato un po' di contesto su da dove vengo, voglio parlare di due cose. Primo, promuovere ciò che gli argentini hanno fatto nel mondo cripto in questi ultimi dieci anni o più. E anche esaminare le diverse persone, i diversi profili, i diversi background di cui abbiamo bisogno per costruire Ethereum. Il punto che voglio sottolineare è: abbiamo bisogno di diversità in Ethereum. Abbiamo bisogno di diversità geografica. Abbiamo bisogno di diverse aree di competenza, diversi domini. Abbiamo bisogno che quante più persone possibile si uniscano per costruire ciò che vogliamo costruire.
 
@@ -59,7 +59,7 @@ Dalla Voltaire sono emersi alcuni dei progetti argentini più riconoscibili: Ope
 
 Il rapporto tra sviluppatori Web3 e Web2 in Argentina è quasi tre volte quello degli Stati Uniti. Persino in Aztec Labs, un ingegnere su sei è argentino, e sto parlando di un'azienda creata nel Regno Unito. Amiamo il Web3. Ne siamo naturalmente attratti. Penso che le ragioni siano per metà quelle menzionate da Isabelle nel suo intervento durante questo evento, e anche questa sensazione di essere tagliati fuori e di trovare in Ethereum un posto in cui possiamo costruire, in cui possiamo prosperare e in cui siamo i benvenuti.
 
-#### Infiltrarsi nell'ecosistema (9:37) {#infiltrating-the-ecosystem-937}
+### Infiltrarsi nell'ecosistema (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Lasciatemi condividere qualche altro aneddoto: di nuovo, non sui soldi, ma sul tipo di cose che questi argentini che si sono infiltrati nell'ecosistema Web3 hanno costruito. Per me, la mia prima esperienza nel Web3 è stata l'auditing di un linguaggio per smart contract: Serpent. Se non ne avete mai sentito parlare, è perché lo abbiamo distrutto.
 
@@ -67,7 +67,7 @@ Venendo da dieci anni di sviluppo professionale e atterrando all'improvviso in u
 
 La community della sicurezza qui in Argentina è incredibile. Ci sono state importanti vulnerabilità critiche individuate da argentini in ENS: quella è di Red Guild, uno dei team di sicurezza più sottovalutati dell'intero ecosistema, se me lo chiedete. Questi ragazzi sono fantastici. Anche argentini che hanno individuato attacchi critici a MakerDAO, o persino un attacco alla supply chain sugli SMS che stava portando al furto di centinaia di account Telegram. A proposito, promemoria quotidiano: non usate gli SMS per l'autenticazione a due fattori (2FA).
 
-#### Standard e infrastruttura (11:17) {#standards-and-infrastructure-1117}
+### Standard e infrastruttura (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Abbiamo anche contribuito molto agli standard. I miei primi cinque anni nel mondo cripto sono stati in OpenZeppelin. Ho avuto la possibilità di costruire il contratto ERC-721 insieme a un ragazzo che è seduto proprio laggiù, e anche a Facu. Quel codice avrebbe poi alimentato la mania degli NFT un paio di anni dopo: è stato scritto da qui.
 
@@ -83,7 +83,7 @@ Tutto questo è raccolto in una bellissima iniziativa del team Crecimiento. Pote
 
 Stanno anche dando contributi importanti. Voglio soffermarmi su uno. Ieri c'è stato l'Ethereum Cypherpunk Congress sulla privacy. Sul palco principale, Vitalik stava facendo una demo di Kohaku, il nuovo portafoglio per la privacy. Un'ora dopo, sul palco secondario (quasi nascosto all'ultimo piano), c'era un panel che includeva uno degli sviluppatori che sta effettivamente costruendo Kohaku, che è argentino e lavora a un paio di isolati da qui.
 
-#### Portare Ethereum a casa (15:07) {#bringing-ethereum-home-1507}
+### Portare Ethereum a casa (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Ma tutti questi contributi, tutte queste cose che l'Argentina porta al Web3, non erano abbastanza. Volevamo fare di più. Volevamo portare Ethereum qui. E allerta spoiler, dato che siete seduti qui: sì, ci siamo riusciti.
 
@@ -91,13 +91,13 @@ Tutto è iniziato nel 2018 con ETH Buenos Aires, il primo hackathon della commun
 
 E sì, alla fine questo ha portato a un intervento di Mariano alla Devcon 5. L'intervento si intitolava "Vivere di finanza decentralizzata (DeFi): come siamo sopravvissuti all'inflazione del 50% in Argentina". Quel numero sembra carino dopo essere passati a un'inflazione del 300%. Avete già visto quella foto nella presentazione di Mariano. Quello che non ha mostrato è che ho ancora la maglietta. In realtà abbiamo stampato delle magliette con la scritta "Devcon Buenos Aires 2020" per cercare di trasformarlo in realtà tramite un meme. L'ho conservata per oltre cinque anni. Sono orgoglioso di mostrarvela ora.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Ce l'abbiamo fatta. Non riesco a spiegare quanto sia orgoglioso, quanto sia onorato che il Devconnect sia finalmente arrivato qui. È praticamente un sogno che si avvera.
 
 Penso che abbia senso, non solo perché amo questo paese, ma perché dimostra davvero che Ethereum sta mettendo in pratica ciò che predica con la sua conferenza. Tutta questa etica sulla decentralizzazione viene effettivamente messa in atto ospitando la conferenza qui, sfruttando il talento esistente (che spero di avervi convinto che esista) e anche appoggiandosi alla base di utenti esistente. Praticamente un argentino su cinque possiede cripto, decentralizzate o centralizzate. Possiamo discutere a lungo se detenere cripto su un exchange centralizzato significhi effettivamente detenere cripto o meno, ma queste sono persone che le hanno già, che vi sono già state esposte. C'è una base di utenti esistente a cui potete attingere per provare a lanciare nuove cose, nuovi prodotti e vedere cosa si può costruire.
 
-#### Ethereum per tutti (17:46) {#ethereum-for-everyone-1746}
+### Ethereum per tutti (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Lasciatemi cambiare marcia per un secondo. So che ho elogiato quanto sia fantastica l'Argentina per ospitare un evento, per il talento locale, per tutto. Ma il punto che voglio davvero sottolineare è che se Ethereum ha funzionato qui, in questo angolo di mondo, così lontano, può funzionare ovunque. L'Argentina è solo un esempio che dimostra che Ethereum è una tecnologia veramente senza confini e può funzionare in qualsiasi angolo del mondo.
 
@@ -125,7 +125,7 @@ Gli operatori dei nodi gestiscono la rete, eseguendo di fatto il software in cui
 
 Tutto questo è stato alimentato da un gruppo di persone molto eterogeneo. Se prendi solo un gruppo di sviluppatori (e io stesso sono uno sviluppatore), non possiamo costruire questo.
 
-#### L'Aleph (23:59) {#the-aleph-2359}
+### L'Aleph (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** So che probabilmente non è popolare dirlo a una conferenza chiamata Devconnect, ma il mio punto è: Ethereum è una tecnologia pensata per funzionare ovunque e pensata per tutti, per essere costruita da tutti, da ogni background, da ogni luogo del mondo.
 
@@ -133,7 +133,7 @@ Con il minuto che mi resta, voglio prendere una citazione di Jorge Luis Borges. 
 
 Quello che vi chiedo di fare in questi giorni è di connettervi con altre persone. Raccogliete feedback su ciò che state costruendo. Cercate di trovare partner, costruttori, utenti, investitori. Uscite dalla vostra bolla, dalla vostra zona di comfort, e parlate con quante più persone possibile. Incontrate nuove persone, interagite con nuove persone. Ricordate che l'innovazione prospera sulla diversità, che sia geografica, di background o di ideologie. Connettetevi, costruite insieme e godetevi questa settimana. Grazie.
 
-#### Domande e risposte (25:35) {#qa-2535}
+### Domande e risposte (25:35) {#qa-2535}
 
 **Binji:** È stato incredibile. Grazie mille. Penso che tu abbia coperto praticamente tutto ciò che riguarda Ethereum (la cultura, le proprietà tecniche) in un solo intervento. È molto impressionante. Non credo di aver mai visto nessuno fare tutto questo in una volta sola. Quindi, un paio di domande. Quella che ho trovato più interessante, specialmente quando parli di casi d'uso: qual è qualcosa che ti piacerebbe vedere costruito su Ethereum e che non è ancora stato costruito?
 

@@ -17,7 +17,7 @@ Pierwszy odcinek serii *Community.eth* autorstwa **Optimist**. Aby uczcić 9. ur
 
 *Poniższa transkrypcja to dostępna kopia [oryginalnego wideo](https://www.youtube.com/watch?v=onCwaj1FM-4) opublikowanego przez Optimist. Została ona poddana lekkiej redakcji w celu poprawy czytelności. Wypowiadające się osoby są członkami społeczności Ethereum i nie wszystkie zostały indywidualnie zidentyfikowane w materiale wideo.*
 
-#### Czym jest Ethereum? (0:00) {#what-is-ethereum-000}
+### Czym jest Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Osoba 1:** Czym jest Ethereum?
 
@@ -29,7 +29,7 @@ Pierwszy odcinek serii *Community.eth* autorstwa **Optimist**. Aby uczcić 9. ur
 
 **Osoba 4:** Ethereum to wiele rzeczy dla wielu ludzi.
 
-#### Co stanowi o jego sile (0:40) {#what-makes-it-powerful-040}
+### Co stanowi o jego sile (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Potencjał, jaki ma Ethereum, jest ogromny, ponieważ nie potrafimy go nawet zdefiniować. I myślę, że to stanowi o jego wielkiej sile.
 
@@ -43,7 +43,7 @@ Pierwszy odcinek serii *Community.eth* autorstwa **Optimist**. Aby uczcić 9. ur
 
 **Simona Pop:** Ethereum jest dla mnie kolejnym etapem ewolucji internetu.
 
-#### Dlaczego budujemy (2:00) {#why-we-build-200}
+### Dlaczego budujemy (2:00) {#why-we-build-200}
 
 **Simona Pop:** Tak, oczywiście jest szum, gdy cena rośnie, ale ludzie i prawdziwi wyznawcy są tam, gdy spada, gdy rośnie – to nie ma większego znaczenia. Robimy to, ponieważ szczerze wierzymy w to, co budujemy.
 
@@ -51,7 +51,7 @@ Pierwszy odcinek serii *Community.eth* autorstwa **Optimist**. Aby uczcić 9. ur
 
 **Alexis Ohanian:** Mamy szansę na nowo wyobrazić sobie tak wiele instytucji społecznych z prawdziwą własnością, z realną możliwością gromadzenia wartości do końca życia, dla przyszłych pokoleń – w zasadzie w nieskończoność. Naprawdę bardzo chcę zobaczyć, jak to się uwalnia.
 
-#### Społeczność (3:00) {#the-community-300}
+### Społeczność (3:00) {#the-community-300}
 
 **Amber Baldet:** Jedną z rzeczy, która od samego początku naprawdę wyróżnia społeczność Ethereum, jest to, że nie boją się być trochę głupkowaci. Widać to w jednorożcach, zabawnych tęczowych kolorach, tańcach i piosenkach – i ta głupkowatość jest tym, co daje całemu ekosystemowi poczucie nadziei. A jedną z rzeczy, której ludzie w dzisiejszych czasach naprawdę potrzebują, jest nadzieja.
 

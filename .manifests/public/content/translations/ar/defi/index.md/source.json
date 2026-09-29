@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/defi/index.md",
   "generatedAt": "2026-06-18T20:38:25.895Z",
-  "rootHash": "3dd80df4c7e1",
+  "rootHash": "582fe29bf052",
   "tree": {
-    "contentHash": "ac681783681e",
-    "anchorHash": "76f2fde02db6",
+    "contentHash": "baae44716b79",
+    "anchorHash": "f8bd4e778d35",
     "children": {
       "frontmatter:title": {
         "contentHash": "6143770ec287",
@@ -40,8 +40,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "dfec6df28c79",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "bc03443ff372",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "e5b91c54187b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e50cd99b1cce",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:0": {
         "contentHash": "ee0c49ea51e9",

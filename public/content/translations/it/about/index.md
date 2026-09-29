@@ -92,7 +92,7 @@ Ethereum è una cosa grande: include una community, una tecnologia, un insieme d
 Ciò significa che il sito web deve gestire molti percorsi utente diversi, da "uno sviluppatore che desidera uno strumento specifico" a "un nuovo arrivato che ha appena acquistato degli ETH e non sa cosa sia un portafoglio".
 "Qual è il miglior sito web per una piattaforma blockchain?" rimane una domanda aperta: siamo dei pionieri. Costruire tutto questo richiede sperimentazione.
 
-## Roadmap del prodotto {#roadmap}
+## Roadmap del prodotto {#get-involved}
 
 Per rendere il nostro lavoro più accessibile e promuovere una maggiore collaborazione con la community, il team principale di ethereum.org pubblica una panoramica degli obiettivi della nostra roadmap del [ciclo di shape up](https://www.productplan.com/glossary/shape-up-method/).
 

@@ -18,7 +18,7 @@ breadcrumb: "Ethereum in 30 minuti"
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=ei3tDRMjw6k) pubblicata dalla Ethereum Foundation. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione (0:02) {#introduction-002}
+### Introduzione (0:02) {#introduction-002}
 
 Ottimo, quindi Ethereum in 30 minuti. Questa è una presentazione che ho tenuto praticamente a ogni singola Devcon sin dal lancio. La cosa interessante è come, man mano che l'ecosistema di Ethereum cambia, e man mano che il protocollo di Ethereum cambia, con il passare del tempo, anche i contenuti finiscono per cambiare parecchio. Se tornate all'equivalente di questa presentazione del 2015, sentirete parlare molto di blocchi uncle. Naturalmente, i blocchi uncle sono una caratteristica della Prova di lavoro (PoW). Ora abbiamo la Proof-of-Stake, e quindi non abbiamo più i blocchi uncle. Ovviamente, ora Ethereum ha anche i layer 2, e all'epoca questa presentazione non avrebbe contenuto affatto i layer 2. Ora sappiamo che i layer 2 sono metà della storia. Ethereum è prima di tutto un ecosistema in evoluzione, e i contenuti di questa presentazione continueranno a cambiare con l'evolversi della tecnologia, e anche con lo spostamento dell'enfasi dell'ecosistema dalla costruzione dell'infrastruttura di base a un'enorme attenzione sulle applicazioni.
 
@@ -30,7 +30,7 @@ Come funziona il computer mondiale? Il modo in cui la vedo è che il layer 1 è 
 
 Il layer 2 è la GPU. Il layer 2 siete tutti voi in questa stanza che fate parte di un qualsiasi layer 2. Chi qui fa parte di un layer 2? Evviva. Chi qui ha usato un layer 2? Chi qui ha usato il layer 1? Bene, siamo tutti utenti qui. Ci sono molte di queste diverse GPU, ed Ethereum, il computer mondiale, è in grado di tenersi insieme perché ognuna di queste GPU è collegata alla macchina della fiducia attraverso sistemi di prova ottimistici, prove a conoscenza zero, SNARK, STARK, plonk o qualsiasi altra parola d'ordine ci sia. Tutti questi sistemi garantiscono che il layer 1 sia in grado di verificare in modo trustless ciò che accade all'interno dei layer 2, e che anche i layer 2 siano in grado di leggere in modo trustless ciò che accade sul layer 1.
 
-#### Decentralizzazione e diversità (5:11) {#decentralization-and-diversity-511}
+### Decentralizzazione e diversità (5:11) {#decentralization-and-diversity-511}
 
 C'è un'importante interazione tra questi due componenti, e insieme formano l'Ethereum che è qui oggi. Cos'è l'L1? È una catena. Esegue la Proof-of-Stake. Non si rompe. Cosa significa questo? L'L1 di Ethereum è una catena che esiste complessivamente da più di nove anni ormai, ed esiste nella sua attuale forma Proof-of-Stake da poco più di due anni. Una delle cose veramente importanti che un livello di base deve avere è la chiara evidenza che si sta costruendo su un livello di base che è decentralizzato, aperto, robusto e che probabilmente manterrà queste caratteristiche in futuro. 
 
@@ -42,7 +42,7 @@ Poi abbiamo i "non identificati". I non identificati non sono un attore, proprio
 
 Una proprietà che in realtà è migliorata molto è la diversità dei client. Ethereum circa cinque anni fa era fondamentalmente solo Geth. Quando si ha un ecosistema dominato da un solo client, questo diventa di per sé un punto centrale di vulnerabilità. Chi qui ricorda gli attacchi DoS del 2016? Ti svegli alle 5:17 del mattino, ricevi una sveglia in stile militare, scendi nella stanza dei bottoni e qualcuno ha scoperto un bug nel client. L'intera catena si ferma. Lo risolviamo, e poi due o tre giorni dopo qualcuno trova un altro bug. Questo va avanti per un mese intero finché alla fine non dobbiamo fare un hard fork. Ma durante quel periodo, la capacità di Ethereum di avere due client diversi — all'epoca erano Geth e Parity — ha fondamentalmente salvato la catena. Ci sono state volte in cui un bug colpiva Geth ma non Parity, e volte in cui un bug colpiva Parity ma non Geth. Ethereum ha guadagnato molto dall'avere implementazioni software multiple, e questo è qualcosa che, al 2024, è probabilmente al suo livello migliore nella storia di Ethereum.
 
-#### Client multipli e robustezza (10:40) {#multiple-clients-and-robustness-1040}
+### Client multipli e robustezza (10:40) {#multiple-clients-and-robustness-1040}
 
 Se guardiamo ai client di consenso, che gestiscono la parte Proof-of-Stake di Ethereum, e ai client di esecuzione, che gestiscono la parte EVM di Ethereum, possiamo vedere che il singolo client con la quota di mercato più alta è Geth, che si aggira intorno al 50%. Cosa succede se c'è un bug in un qualsiasi client di Ethereum letteralmente oggi, in questo momento? Controllate se Ethereum è ancora in funzione. Immagino di sì — scommetterei il 99,99% su PolyMarket. 
 
@@ -56,7 +56,7 @@ Due anni fa, questo grafico era peggiore. La decentralizzazione di Ethereum non 
 
 Se avete 32 ETH, o meno se vi unite a una pool, stanno comparendo sempre più opzioni di pool davvero interessanti — come lo squad staking di Obol, che vi permette di creare pool più piccole con i vostri amici. Ci sono molti modi diversi per diventare uno staker, e se lo fate, diventate parte di questa rete di nodi che proteggono la blockchain di Ethereum.
 
-#### Verifica dei nodi e scalabilità (15:06) {#node-verification-and-scale-1506}
+### Verifica dei nodi e scalabilità (15:06) {#node-verification-and-scale-1506}
 
 Immagino che sia così che la propaganda della fondazione lo descrive — ha un simpatico elefante. Quindi un bell'applauso per l'elefante! Anche voi potete unirvi alla rete e aiutare a proteggerla. Anche se non siete uno staker, potete anche eseguire un nodo di Ethereum sul vostro computer e verificare volontariamente la catena. 
 
@@ -70,7 +70,7 @@ Fare staking con meno ETH è anche un requisito di ricerca molto attivo. 32 ETH 
 
 Cosa gira sull'L1 di Ethereum? Alcune applicazioni di alto valore. Molta finanza decentralizzata (DeFi) di alto valore gira sull'L1. ENS è attualmente sull'L1, sebbene stia facendo sempre di più con i layer 2. Le persone detengono asset sul layer 1. Inoltre, il layer 1 gestisce le radici dei blocchi, le radici di stato e i sistemi di prova per i layer 2. Protegge i layer 2. Il layer 1 deve essere abbastanza potente da gestire le operazioni tra i layer, specialmente nel caso in cui un layer 2 fallisca. La differenza tra un layer 2 e una catena indipendente è che anche se il vostro layer 2 subisce un attacco del 51% o il team chiude, il layer 1 rimane lì a proteggere gli utenti. Gli utenti sono in grado di dimostrare la loro proprietà e il loro stato all'interno del layer 2 e di migrarli di nuovo sul layer 1. 
 
-#### Velocità dei L2 e roadmap (20:33) {#l2-speeds-and-roadmaps-2033}
+### Velocità dei L2 e roadmap (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Di recente, c'è stato un esperimento dal vivo con questo. dYdX v3 ha chiuso di recente, e i ragazzi di L2Beat hanno scritto la loro implementazione del software del meccanismo di salvaguardia. Senza alcun coinvolgimento da parte del team di dYdX, gli utenti sono stati in grado di prendere qualsiasi asset avessero all'interno di dYdX v3 e riportarlo sull'L1 di Ethereum. Uscire da un layer 2 senza il coinvolgimento del team non è solo teoria, è realtà.
 
@@ -82,7 +82,7 @@ Poi The Merge. A causa di un'interessante stranezza matematica, anche se il temp
 
 La storia di Ethereum: novembre 2013 è stato il whitepaper. Luglio 2015 è stato il lancio. Intorno al 2018, Ethereum ha stabilito il suo design approssimativo per la Proof-of-Stake e il campionamento della disponibilità dei dati. I documenti originali per il campionamento della disponibilità dei dati e la codifica a cancellazione li ho scritti nel 2017. 
 
-#### Casper e scalabilità dei rollup (25:27) {#casper-and-rollup-scaling-2527}
+### Casper e scalabilità dei rollup (25:27) {#casper-and-rollup-scaling-2527}
 
 Se scavate in GitHub, potete cercare la directory chiamata `simple_casper` e trovare contratti scritti in Serpent. Chi qui ricorda Serpent? Chi qui usa Serpent? Voglio dire, penso che Python sia davvero bellissimo, ma se volete quello, dovreste programmare in Vyper. Vyper è in realtà fantastico e ha continuato a migliorare parecchio. All'interno di quella repo nel 2017, abbiamo tentato di fare un'astrazione completa e scrivere la logica della Proof-of-Stake direttamente come uno smart contract. Abbiamo lanciato una demo alle 23:20 ora di Bangkok del 31 dicembre 2017 — volevamo far uscire qualcosa prima di Capodanno — e la demo ha finito per rompersi abbastanza in fretta. Erano i primi tempi.
 

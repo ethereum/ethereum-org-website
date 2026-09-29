@@ -19,13 +19,13 @@ Tato prezentace zkoumá typy reorganizací bloků (reorgů), které jsou možné
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=xcPxwhrg3Ao) zveřejněného konferencí LisCon. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod a kontext (0:03) {#introduction-and-background-003}
+### Úvod a kontext (0:03) {#introduction-and-background-003}
 
 Takže vítejte. Dnes budu mluvit o reorganizacích (reorzích), které jsou možné v Ethereu s důkazem podílem (PoS).
 
 Nedávno jsem se připojil k Nadaci Ethereum, konkrétně ke skupině Robust Incentives Group. V podstatě jsme výzkumný tým zaměřený na cokoliv, co se týká pobídek. Vezmu to stručně — tato přednáška je nabitá informacemi a většinu naší práce najdete na GitHubu.
 
-#### Dva typy reorganizací (0:44) {#two-types-of-reorgs-044}
+### Dva typy reorganizací (0:44) {#two-types-of-reorgs-044}
 
 Dnes chci mluvit o reorganizacích a konkrétně chci nastínit dva různé typy reorgů, které jsou možné v prostředí Etherea s důkazem podílem (PoS).
 
@@ -37,7 +37,7 @@ Ex-ante reorganizace jsou trochu jiné. Myšlenka je taková, že útočník mus
 
 Možná se ptáte, proč byste vůbec chtěli dělat tento typ reorganizace. No, stále je tu MEV, které lze získat. Pokud máte štěstí, blok N+2 má spoustu MEV — můžete ho získat prostým zkopírováním obsahu tohoto bloku. V nejhorším případě máte v podstatě k dispozici transakce ze dvou slotů, kterým můžete naslouchat.
 
-#### Ex-post reorganizace v důkazu prací (2:49) {#ex-post-reorgs-in-proof-of-work-249}
+### Ex-post reorganizace v důkazu prací (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Než se ponoříme do ex-ante reorganizací, což je hlavní téma této přednášky, dovolte mi stručně shrnout ex-post reorganizace a začít zejména kontextem důkazu prací (PoW).
 
@@ -45,7 +45,7 @@ V podstatě jde o shrnutí blogového příspěvku od obvyklých podezřelých �
 
 Stručně řečeno, v Ethereu s důkazem prací (PoW) jsou ex-post reorganizace těžké, ale nejsou neproveditelné. Těžař s 10 % výkonu má poměrně dobrou šanci vytěžit několik bloků v řadě, a pokud je pobídka dostatečně vysoká — představte si, že je tu jeden blok se 100 ETH v MEV k získání — pak může i jednoprocentní úspěšnost stačit k tomu, aby se pokus o reorganizaci vyplatil.
 
-#### Ex-post reorganizace v důkazu podílem (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
+### Ex-post reorganizace v důkazu podílem (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 V důkazu podílem (PoS) je to úplně jiná liga. Bavíme se o absurdním množství požadovaného staku. Provedu vás tím, jak by se na to dalo jít, jen abych zdůraznil, jak směšně obtížné to je.
 
@@ -63,7 +63,7 @@ Když to sečteme — blok N+1 má atestace v hodnotě jedné třetiny plus jedn
 
 Abyste měli představu, jak absurdní tyto předpoklady jsou — i kdybyste měli stakera s 65 %, pravděpodobnost, že budete ovládat dvě třetiny výboru v jakémkoli daném slotu, je 0,05 %. To ukazuje, že síla paralelních atestací je skutečná — ex-post reorganizace jsou v Ethereu s důkazem podílem (PoS) neuvěřitelně obtížné, ne-li prakticky nemožné.
 
-#### Mechanika útoku ex-ante reorganizace (7:34) {#ex-ante-reorg-attack-mechanics-734}
+### Mechanika útoku ex-ante reorganizace (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Nyní budu mluvit o ex-ante reorganizacích. Tento útok je založen na článku od Neudera a dalších. Nedávno jsme tento útok výrazně vylepšili. Také jsme o tom napsali článek a stihli ho nahrát na arXiv právě včas.
 
@@ -75,7 +75,7 @@ Stane se to, že poctiví lidé nevidí blok N+1, takže budou atestovat blok N.
 
 Pro tuto chvíli předpokládejme nulovou latenci. Ve slotu N+2 jako útočník uděláme to, že zveřejníme blok N+1 a soukromou atestaci současně. Poctiví validátoři ve slotu N+2 musí atestovat blok. Ze svého pohledu vidí blok N+2 a blok N+1 s touto jednou soukromou atestací. Pokud spustí volbu forku, zjistí, že blok N+1 má větší váhu než blok N+2, protože N+1 má soukromou atestaci, kterou N+2 nemá. Dokonce i všichni poctiví validátoři ve skutečnosti atestují blok N+1. Ve slotu N+3 bude N+1 triviálně považován za vrchol řetězce.
 
-#### Síťová latence a útok (10:25) {#network-latency-and-the-attack-1025}
+### Síťová latence a útok (10:25) {#network-latency-and-the-attack-1025}
 
 Předpokládal jsem nulovou latenci, což tak samozřejmě nefunguje. Existuje latence — šíření bloků a zpráv na P2P vrstvě nějakou dobu trvá.
 
@@ -83,7 +83,7 @@ Způsob, jakým může útočník stále provést tento typ útoku, spočívá v
 
 Abychom znovu zdůraznili, co se zde děje: máme navrhovatele s jediným atestujícím, kterému se podaří provést reorganizaci jednoho bloku. Přinejmenším to není ideální.
 
-#### Vyvažovací strategie pro delší reorganizace (11:42) {#balancing-strategies-for-longer-reorgs-1142}
+### Vyvažovací strategie pro delší reorganizace (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 Pokud chcete být sofistikovanější, můžete provést delší reorganizace pomocí vyvažovací strategie. Myšlenkou je rozdělit poctivý výbor do různých pohledů na řetězec.
 
@@ -97,7 +97,7 @@ K dokončení reorganizace dvou bloků: je navržen blok N+3, slyšíte ho brzy,
 
 Když se nad tím zamyslíte, je za těchto předpokladů poměrně levné tyto reorganizace provádět. I když nemáte dokonalá rozdělení, protože P2P vrstva je tak velká, máte rozdělení pravděpodobnosti, na které můžete cílit tak, že náklady na útok rostou s druhou odmocninou velikosti výboru.
 
-#### Zmírnění pomocí zvýhodnění navrhovatele (15:17) {#proposer-boost-mitigation-1517}
+### Zmírnění pomocí zvýhodnění navrhovatele (15:17) {#proposer-boost-mitigation-1517}
 
 Pojďme se bavit o zmírnění. Jaká je základní myšlenka? Dáme navrhovateli trochu více moci. Pokud platný blok dorazí včas, zvýšíme váhu tohoto bloku po dobu trvání slotu. Po skončení tohoto slotu obnovíme obvyklé skóre LMD-GHOST a vše pokračuje jako obvykle.
 
@@ -107,7 +107,7 @@ Vyvažování už také nefunguje, protože máte rozdělení 50/50, ale zvýhod
 
 Myšlenka je taková, že s tímto zavedeným zmírněním musí atestace protivníka soutěžit se zvýhodněním navrhovatele, aby přesvědčily poctivé validátory hlasovat podle jejich představ. To narušuje vyvažovací strategie a v podstatě zcela znemožňuje všechny reorganizace. Dobrá zpráva — existuje otevřený PR (Pull Request), takže to bude v podstatě začleněno ještě před Merge.
 
-#### Klíčové poznatky (16:48) {#key-takeaways-1648}
+### Klíčové poznatky (16:48) {#key-takeaways-1648}
 
 Několik klíčových poznatků. Mluvil jsem o rozdílech mezi ex-post a ex-ante reorganizacemi. Stručně jsem nastínil různá prostředí pro reorganizace v důkazu prací (PoW) oproti důkazu podílem (PoS). Ukázal jsem vám, jak provést ex-ante reorganizaci, ale také, což je důležité, jak ji opravit.
 

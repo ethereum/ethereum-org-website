@@ -19,7 +19,7 @@ Vysvětlení od **Finematics**, které pokrývá, jak fungují výběry ze staki
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=RwwU3P9n3uo) zveřejněného kanálem Finematics. Pro lepší čitelnost byl lehce upraven.*
 
-#### Beacon chain (0:31) {#the-beacon-chain-031}
+### Beacon chain (0:31) {#the-beacon-chain-031}
 
 S rychle se blížící aktualizací Šanghaj/Capella probíhá mnoho diskusí o výběrech ze stakingu na Ethereu a o tom, co to znamená pro celý ekosystém Etherea.
 
@@ -35,7 +35,7 @@ Další velký krok, Merge, spojil vrstvu konsensu na bázi důkazu podílem s e
 
 Aby se minimalizovalo riziko, byl rozsah Merge zmenšen a součástí aktualizace nebyly žádné další funkce – kromě přechodu z důkazu prací na důkaz podílem. Největší „škrt“, který musel být proveden, se týkal výběrů, které se staly středobodem nadcházející aktualizace Šanghaj/Capella.
 
-#### Výběry (2:09) {#withdrawals-209}
+### Výběry (2:09) {#withdrawals-209}
 
 Výběry ze stakingu, jak už název napovídá, umožní stakerům vybrat si své uzamčené ETH. Existují dva typy výběrů: „částečné“ a „úplné“.
 
@@ -47,7 +47,7 @@ Jakmile budou výběry ze stakingu povoleny, budou automaticky distribuovány ka
 
 Aby mohl validátor začít vybírat své odměny ze stakingu, bude muset poskytnout svou adresu pro výběr pouze jednou. Vzhledem k tomu, že výběry ovlivňují jak vrstvu konsensu, tak exekuční vrstvu Etherea, musí být aktualizovány obě části sítě. „Šanghaj“ je název aktualizace exekuční vrstvy obsahující výběry, které jsou specifikovány v EIP-4895. „Capella“ je název odpovídající aktualizace vrstvy konsensu, která se aktivuje ve stejnou dobu. Tyto dvě aktualizace se někdy také označují jako „Shapella“.
 
-#### Mechanismy (3:40) {#mechanics-340}
+### Mechanismy (3:40) {#mechanics-340}
 
 V ekosystému Etherea má každý validátor odpovídající index. Kromě toho mají také dva typy pověření k výběru, definované buď jako `0x00` nebo `0x01`.
 
@@ -77,7 +77,7 @@ Při sestavování nebo zpracování bloku aplikují klienti exekuční vrstvy t
 
 Návrh výběrů je jednoduchý, ale extrémně robustní.
 
-#### Mylné představy (6:30) {#misconceptions-630}
+### Mylné představy (6:30) {#misconceptions-630}
 
 První mylná představa tvrdí, že při zpracování výběrů existuje rozdíl mezi „úplným“ a „částečným“ výběrem z hlediska priority nebo pořadí. Úplné i částečné výběry probíhají, když lineární skenování sady validátorů dosáhne indexu validátora. Jediný rozdíl je v tom, že v případě úplných výběrů musí validátor opustit frontu pro výstup a dosáhnout „epochy pro výběr“ (withdrawable epoch), než jej lineární skenování může zachytit.
 
@@ -93,7 +93,7 @@ Zadruhé, aby se zajistilo, že mechanismus konsensu důkazu podílem a aktivní
 
 První skenování výběrů vybere spoustu nashromážděných odměn – v podstatě od vzniku Beacon chainu. Následující skenování však budou zpracovávat mnohem menší množství ETH.
 
-#### Důsledky (8:39) {#implications-839}
+### Důsledky (8:39) {#implications-839}
 
 Povolení výběrů vytvoří otevřený, oboustranný tok stakingu. V současné době je tok stakingu jednostranný – ETH může do sítě pouze proudit a nikdy z ní nevystoupit. Zajímavé je, že povolení výběrů může motivovat ještě více lidí ke stakingu, protože budou vědět, že si své ETH mohou vždy vybrat, pokud je budou potřebovat na něco jiného.
 
@@ -103,7 +103,7 @@ Výběry také ovlivní deriváty pro likvidní staking, jako jsou Lido, Rocket 
 
 Raní osvojitelé v oblasti likvidního stakingu a centralizovaného stakingu získali drtivou většinu trhu, protože neměli velkou konkurenci. Tržní podíl těchto zavedených hráčů by však mohl zaznamenat velkou změnu, jakmile budou výběry povoleny, zejména pokud nebudou nabízet konkurenceschopnou sazbu. Možnost volně přecházet mezi poskytovateli stakingu prospěje trhu se stakingem ETH.
 
-#### Shrnutí (10:01) {#summary-1001}
+### Shrnutí (10:01) {#summary-1001}
 
 Povolení výběrů ze stakingu je jednou z nejočekávanějších aktualizací Etherea. Bude nesmírně důležité zajistit, aby tato změna proběhla hladce. Aby se pomohlo s testováním, budou mít validátoři k dispozici několik devnetů a testnetů, aby si mohli projít celým procesem a vyřešit případné problémy před spuštěním na Mainnetu.
 

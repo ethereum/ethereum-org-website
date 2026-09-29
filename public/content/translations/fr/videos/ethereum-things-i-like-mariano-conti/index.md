@@ -18,7 +18,7 @@ Une présentation personnelle du développeur Ethereum de la première heure **M
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=S0-oO_4ZRfs) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:08) {#introduction-008}
+### Introduction (0:08) {#introduction-008}
 
 **Mariano Conti :** Buenos Aires. Bonsoir tout le monde. Je veux commencer par m'excuser. Je n'ai pas été très présent dans l'écosystème ces dernières années. Donc, quand les organisateurs m'ont dit qu'ils voulaient que je donne une conférence, j'ai d'abord refusé parce que j'ai été tellement éloigné de certaines choses que j'ai parfois vraiment oublié pourquoi nous sommes ici, pourquoi nous faisons ce que nous faisons. Je suis devenu un peu plus cynique à certains égards et optimiste à d'autres. Bref, j'ai 15 minutes pour vous parler de tout ça, alors commençons.
 
@@ -26,23 +26,23 @@ Comme je le dis toujours, en tant qu'Argentin, j'adore la thérapie. Ce sera pro
 
 Donc ça, c'est moi, en 2015 — j'ai commencé à acheter de l'ether. Un gars à l'air très humble. Et maintenant 2025, après 10 ans, c'est la coquille vide et brisée d'un homme que vous voyez aujourd'hui debout devant vous, avec un passage à investir frénétiquement dans des jetons pendant l'été de la finance décentralisée (DeFi), n'est-ce pas ? Et pour ceux d'entre vous qui ne le savent pas, j'ai passé quelques années chez Maker. J'ai aidé à lancer le DAI à garantie unique et multiple, qui était probablement le premier stablecoin décentralisé sur Ethereum. J'ai créé les premiers oracles décentralisés sur Ethereum. Tout cela en vivant dans un appartement à Almagro — bien sûr, en faisant partie d'un groupe beaucoup, beaucoup plus grand — mais je dirais que mes expériences dans Ethereum ont été assez vastes et pour la plupart très gratifiantes.
 
-#### Devcon à Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
+### Devcon à Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti :** Et en 2019, je suis sûr que vous avez vu cette photo plusieurs fois. Et je vois certaines des personnes ici qui étaient sur scène avec moi à Osaka en 2019. C'est à ce moment-là que nous avons vraiment commencé à faire pression pour avoir l'un de ces événements Devcon ici à Buenos Aires, n'est-ce pas ? Et la personne qui a probablement le moins travaillé pour que cela se produise, c'est moi. En gros, je n'ai fait que mettre le t-shirt et tweeter quelques fois. Tous les autres ont travaillé cent fois plus, et les personnes qui sont venues après ont travaillé mille fois plus. Donc, encore une fois, je suis incroyablement, incroyablement honoré que nous ayons Devconnect ici en Argentine.
 
 Et j'ai rayé « trop tard » pour mettre « plus tard ». Pendant un moment, j'étais très, très amer que nous n'ayons pas pu l'avoir quand nous l'avions dit — que cela allait avoir le plus d'impact. Et d'une certaine manière, c'est vrai, et d'une autre, ça ne l'est pas. D'une part, si nous avions eu la Devcon — je sais que 2020 n'a pas vraiment eu lieu à cause du COVID — mais peut-être en 2021, elle n'aurait pas été aussi grande. La technologie n'aurait pas été aussi enracinée dans notre communauté, dans notre société, qu'elle ne l'est maintenant. Les gens, quand ils viennent en Argentine pour la première fois, sont toujours impressionnés par l'utilisation que nous faisons des stablecoins — que ce soit lorsque nous avions des contrôles de capitaux, lorsque nous n'en avons pas, et tout ce qu'il y a entre les deux. Les Argentins ont la culture d'essayer de nouvelles choses, de toujours protéger leurs investissements. C'est quelque chose dont j'ai beaucoup parlé. Donc, encore une fois, je suis tellement heureux que la Devcon soit enfin là.
 
-#### Ce que j'aime dans Ethereum (4:28) {#things-i-like-about-ethereum-428}
+### Ce que j'aime dans Ethereum (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti :** Et il ne me reste vraiment que trois diapositives. Je vais donc parler un peu des choses que j'aime dans Ethereum. Et j'adore le fait qu'il soit toujours là après plus de 10 ans. Et le temps de disponibilité est de 100 %. C'est vraiment une technologie sur laquelle vous pouvez construire et vous pouvez être sûr qu'elle sera fiable — que vous envoyez une transaction et qu'elle finira par passer, quoi qu'il arrive, par un nœud RPC à l'autre bout de la terre, puis qu'elle sera répliquée sur des milliers d'ordinateurs dans le monde entier — en espérant que beaucoup d'entre eux soient chez des particuliers et pas seulement dans des centres de données — et que tout ce que vous avez envoyé ou avec lequel vous avez interagi sera ancré dans un bloc, espérons-le pour toujours.
 
 Quand j'ai commencé ce voyage, il n'y avait que moi. Ma femme — il y a presque un an maintenant — nous avons eu un enfant. Mon enfant a un ENS. Cela fait partie de qui nous sommes et de ce que nous sommes dans notre famille, le fait qu'Ethereum a rendu tellement de choses possibles pour nous que j'ai toujours l'impression de ne jamais avoir assez rendu la pareille. Et c'est aussi l'une des raisons pour lesquelles je me plains tant de certaines choses.
 
-#### La communauté (5:25) {#the-community-525}
+### La communauté (5:25) {#the-community-525}
 
 **Mariano Conti :** C'est parce que je ne veux pas aborder les choses que je n'aime pas si tôt. Laissez-moi donc passer à quelques autres que j'aime — la communauté, en particulier la communauté argentine, et le fait de voir tant d'amis ici, d'Argentine, d'Amérique latine, ainsi que du monde entier. C'est fou qu'ils soient venus ici pour une semaine ou deux ou pour un événement qui nous rassemble tous dans notre amour et notre respect pour — je dis amour, et c'est bizarre. Nous, du moins les gens de mon époque — je ne sais pas si c'est vrai pour les nouveaux venus — nous ne traitions pas cette technologie comme une simple pièce de monnaie ou une action de plus que l'on achèterait pour voir si elle montait ou descendait. Le prix nous affecte, bien sûr, mais cela nous a toujours plus touchés de voir que ce que nous construisions avait de l'importance, et que nous faisions quelque chose de significatif avec la technologie pour permettre des cas d'utilisation entièrement nouveaux, que ce soit le financement, les objets de collection ou la finance décentralisée (DeFi).
 
-#### Ce que je n'aime pas (7:00) {#things-i-dont-like-700}
+### Ce que je n'aime pas (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti :** Et donc, avec cette transition, je vais passer à certaines des choses que je n'aime pas — pas nécessairement seulement avec Ethereum, mais avec l'écosystème.
 
@@ -52,7 +52,7 @@ J'ai longtemps déploré que la Fondation Ethereum semble stagner et que l'une d
 
 Un peu comme il y a quelques années, Eric Connor et moi avons lancé ce petit site web appelé « Pump the Gas », qui a froissé beaucoup de gens. Nous voulions seulement que la communauté au sens large et les développeurs principaux reconnaissent qu'il était peut-être temps d'augmenter un peu la limite de gaz des blocs. Et c'était controversé à l'époque, mais au final, c'est devenu quelque chose d'accepté et qui a commencé à se produire à un rythme régulier. Et maintenant, nous avons même des EIP — Fusaka va être une augmentation requise à 60 millions — et il y a même des EIP qui veulent augmenter de force la limite de gaz à chaque itération. Je suis donc vraiment heureux que cela se soit produit.
 
-#### Appels à l'action (10:24) {#calls-to-action-1024}
+### Appels à l'action (10:24) {#calls-to-action-1024}
 
 **Mariano Conti :** Et je pense que je m'étends trop et que je manque de temps. Je vais donc simplement énoncer mes appels à l'action. Je n'en ai vraiment que deux, peut-être un troisième qui a passé la censure, mais nous verrons bien.
 
@@ -62,7 +62,7 @@ Un retour à la couche 1 (l1). Même si j'adore les L2 et que je connais beaucou
 
 Eh bien, je ne sais pas — celui-là n'aurait peut-être pas dû être là, mais je crois que c'est tout ce que je voulais dire. Je tiens à vous remercier — ou je suis désolé, selon la façon dont cela a été perçu — et je tiens à m'excuser car j'ai généralement plus de choses à dire. Et peut-être que si nous avons une petite session de questions-réponses, je les dirai. J'ai été en marge, comme je l'ai dit, ces deux dernières années, mais je n'ai jamais perdu de vue ce sur quoi les gens travaillent sur Ethereum, et cela fera toujours partie de ma vie. Et encore une fois, je suis tellement heureux que nous ayons une Devcon à Buenos Aires.
 
-#### Session de questions-réponses (12:10) {#qa-session-1210}
+### Session de questions-réponses (12:10) {#qa-session-1210}
 
 **Animateur :** Merci beaucoup. Tout d'abord, puis-je vous rencontrer ?
 
@@ -90,7 +90,7 @@ Eh bien, je ne sais pas — celui-là n'aurait peut-être pas dû être là, mai
 
 **Mariano Conti :** Je suppose que ce qui m'enthousiasme le plus en ce moment, c'est un Ethereum allégé — probablement la prochaine étape pour que la couche 1 (l1) d'Ethereum adopte vraiment, vraiment la technologie à divulgation nulle de connaissance, toutes les choses qui l'accompagnent — eh bien, même avant cela — Fusaka faisant la séparation des prouveurs avec les nœuds, avec les chercheurs, avec les constructeurs. Je ne sais pas si je peux isoler une seule chose. Je suis enthousiaste pour le prochain hard fork. C'est fou que nous allions en avoir deux en un an alors que nous en avions peut-être un tous les trois ans ces derniers temps. Je suis donc ravi que, pour une raison quelconque, la machine se soit mise en marche et que nous ayons tous décidé que nous pouvions faire les choses plus rapidement maintenant.
 
-#### Philosophie cypherpunk et conseils (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Philosophie cypherpunk et conseils (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Animateur :** De quoi êtes-vous heureux que nous nous soyons débarrassés depuis les premiers jours de la crypto dans son ensemble, et qu'auriez-vous aimé que nous gardions ?
 

@@ -92,7 +92,7 @@ Ethereum adalah hal yang besar: ini mencakup komunitas, teknologi, serangkaian i
 Ini berarti situs web perlu menangani banyak perjalanan pengguna yang berbeda, dari "seorang pengembang yang menginginkan alat tertentu" hingga "seorang pendatang baru yang baru saja membeli beberapa ETH dan tidak tahu apa itu dompet".
 "Apa situs web terbaik untuk platform rantai blok?" tetap menjadi pertanyaan terbuka - kami adalah pelopor. Membangun ini membutuhkan eksperimen.
 
-## Peta jalan produk {#roadmap}
+## Peta jalan produk {#get-involved}
 
 Untuk membuat pekerjaan kami lebih mudah diakses dan untuk mendorong lebih banyak kolaborasi komunitas, tim inti ethereum.org menerbitkan gambaran umum tentang tujuan peta jalan [siklus shape up](https://www.productplan.com/glossary/shape-up-method/) kami.
 

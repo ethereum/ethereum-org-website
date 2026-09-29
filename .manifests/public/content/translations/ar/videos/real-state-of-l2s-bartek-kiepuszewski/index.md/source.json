@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/real-state-of-l2s-bartek-kiepuszewski/index.md",
   "generatedAt": "2026-04-29T00:05:23.161Z",
-  "rootHash": "ee6de7e72348",
+  "rootHash": "58bc931bb4e0",
   "tree": {
-    "contentHash": "93495678128b",
-    "anchorHash": "ee70ba77ead3",
+    "contentHash": "d0001f40065d",
+    "anchorHash": "a3f490b93ac8",
     "children": {
       "frontmatter:title": {
-        "contentHash": "2c35981d414c",
+        "contentHash": "4cb8e720a021",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "66b8d1726696",
+        "contentHash": "5bc4da9fd5c7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2ced14be2537"
+        "anchorHash": "65c639f511cc"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6133d2c6befd"
+        "anchorHash": "1ccda6f92f76"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "aea455a25c84",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3b3e1a7dae17"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8bffd6eadddc"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6bdb18f83935"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "3b319c39c476"
+        "anchorHash": "d7ce3e8d57ff"
       },
       "prose:1": {
         "contentHash": "ca69a0bd2f15",

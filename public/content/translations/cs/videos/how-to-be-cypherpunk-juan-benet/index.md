@@ -18,7 +18,7 @@ Hlavní přednáška, kterou přednesl **Juan Benet** na Ethereum Cypherpunk Con
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=B08IXHLOQp4), který zveřejnila iniciativa Web3Privacy Now. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:05) {#introduction-005}
+### Úvod (0:05) {#introduction-005}
 
 **Moderátor:** [potlesk] Moc vám děkuji. A moc se mi líbí váš dnešní oblek. Je úžasný. Kilty jsou mimochodem skvělé. Nedávno jsem se v jednom z nich ženil a Skotsko je úžasné.
 
@@ -28,7 +28,7 @@ Jmenuji se Juan Benet. Pracoval jsem na IPFS, libp2p, Ethereu, Filecoinu, Protoc
 
 Existuje mnoho kroků, které můžete podniknout, abyste byli cypherpunkem. Toto jsou fotky první vlny cypherpunků. Jsou to obyčejní, normální lidé. Zde jsou fotky pozdější vlny cypherpunků. A jeden z nich byl mezi ranými i pozdějšími cypherpunky. Můžete vidět Zooka s delšími vlasy a Zooka s méně vlasy.
 
-#### Cypherpunkeři píšou kód (2:20) {#cypherpunks-write-code-220}
+### Cypherpunkeři píšou kód (2:20) {#cypherpunks-write-code-220}
 
 Cypherpunkeři píšou kód. To je jeden z hlavních principů tohoto hnutí. Hodně se o tom mluvilo, ale pamatujte, že nakonec musíme vytvořit skutečnou infrastrukturu, skutečný kód, který běží na hardwaru, skutečný kód, který pohání systémy, jež denně používáme. A nemůže to být kód jen pro malou elitní skupinu extrémně technických hackerů. Musí to být kód, který může používat kdokoli na světě. Musí to být věci, které jsou široce rozšířené. Musí to být věci, které konkurují na nejvyšších úrovních uživatelské zkušenosti s produktem. Musí to být kód, který je stejně dobrý a snadno použitelný jako jakákoli centralizovaná nebo méně bezpečná alternativa. Musíte konkurovat nejen v tom, co poskytuje větší soukromí, ale také v tom, co je pohodlnější, co je zábavnější používat. Co lidi víc baví? Protože nakonec si lidé budou vybírat na základě těchto vlastností, a ne na základě bezpečnosti. 
 
@@ -38,7 +38,7 @@ Cypherpunkeři bojují za svobody a práva. Zamyslete se nad klíčovými svobod
 
 Cypherpunkeři budují utopie a protopie. Máme pozitivní vize budoucnosti. Toužíme budovat nádherné světy, kde můžeme žít svobodně a společně vzkvétat. Jsme ze své podstaty pluralističtí. Také předcházíme dystopiím. Jsme si velmi dobře vědomi možných špatných budoucností. Jsme motivováni zabránit vzniku strašlivých scénářů. Kniha 1984 měla na cypherpunkové hnutí velký vliv. Mnoho jednotlivých cypherpunků se chtělo vyhnout Ministerstvu pravdy. Chtěli se vyhnout masovému sledování, o kterém Orwell psal, a vzali si z knihy toto velmi jednoduché morální ponaučení: Nedovolte, aby se to stalo. Záleží to na vás. A já vám dnes říkám, nedovolte, aby se to stalo. Záleží to konkrétně na vás. 
 
-#### Bezpečná komunikace a financování (5:26) {#secure-communications-and-funding-526}
+### Bezpečná komunikace a financování (5:26) {#secure-communications-and-funding-526}
 
 Cypherpunkeři umožňují bezpečnou a soukromou komunikaci, od přicházení s průlomovými výsledky v kryptografii, které umožnily krypto s veřejným klíčem, přes průlomové algoritmy, díky nimž je to praktické, ještě užitečnější a těžší na prolomení. Nebo to nemusí být inovace, jen důležitý čin v daném okamžiku. Můžete si všimnout, že někdy je potřeba podniknout nějaký důležitý krok, abyste napravili běh dějin. Mark Miller, jeden z nejplodnějších cypherpunků z raných dob, zobrazený zde, druhý zleva, spolu s mnoha dalšími kapacitami té doby, opět obyčejnými normálními lidmi, věděl, že RSA a veřejný klíč jsou zadržovány a nejsou publikovány. A tak si vzal za úkol ty dokumenty najít. Udělal si jednotlivé fotokopie těchto dokumentů, přičemž chodil do mnoha různých kopírovacích center, aby nezanechal stopu. A pak tyto dokumenty jednotlivě rozeslal celé řadě lidí, aby se ujistil, že pro případ, že by tyto dokumenty zůstaly utajeny, se znalosti o tom, jak tento druh kryptografie vybudovat, dostanou ven. Tento čin byl v daném okamžiku klíčový. 
 
@@ -48,7 +48,7 @@ Cypherpunkeři vzdorují cenzuře a předcházejí jí. Skupina z nás, když Tu
 
 Cypherpunkeři vydělávají peníze na vývoj a financování kryptografie a technologií pro soukromí. Tohle je pro vás všechny tady asi nejpřekvapivější. Cože? Bavíme se o soukromí a bezpečnosti, ne o penězích. Aha, ale cypherpunkeři, na rozdíl od mnoha jiných vývojářů v historii open source, rozumí kapitálu, chápou, jak to na světě chodí, a chápou, že musíte být schopni financovat velké skupiny lidí, aby vyvíjeli software. Chápou, že je extrémně drahé vytvořit vysoce kvalitní software, který mohou používat miliony lidí. A tak někteří z nás budují systémy, které mohou být cash-flow pozitivní, aby mohli financovat a vyvíjet spoustu softwaru. Vezměte si Ethereum, cash-flow pozitivní systém, který financoval tuny výzkumu s nulovým vědomím (ZK) a FHE a spoustu dalších technologií pro soukromí. Vezměte si Zcash, cash-flow pozitivní systém, který vyvinul a financoval práci na ZK. Vezměte si Protocol Labs a Filecoin, kteří mají cash-flow pozitivní systém vyvíjející a financující ZK a FHE, a novější účastníky, jako jsou Starknet a Zama, kteří sami dělají spoustu vývoje a také vytvářejí kapitálovou strukturu, aby mohli financovat spoustu tohoto výzkumu do budoucna. Všechny tyto skupiny nejenže vyvíjejí své vlastní věci, ale financují tisíce dalších lidí, kteří na těchto technologiích pracují. Takže jako cypherpunk, pokud dokážete vytvořit cash-flow pozitivní systém, udělejte to, abyste mohli financovat další práci. A dnes to dělají tuny projektů. 
 
-#### Právní bitvy a společné budování (10:17) {#legal-battles-and-building-together-1017}
+### Právní bitvy a společné budování (10:17) {#legal-battles-and-building-together-1017}
 
 Cypherpunkeři možná budou muset čelit právním bitvám. Doufejme, že se tomu vyhneme. Doufejme, že všude můžeme dělat všechno podle pravidel. Ale někdy, když mocné skupiny chtějí zasahovat do vašich svobod, zmanipulují každý systém kolem a někdy na vás zaútočí právními bitvami. Měli jsme krypto války, které se musely vybojovat, a musely se vybojovat u soudu. Naštěstí jsme je vyhráli. Byly tři, mnoho případů, které měly zabránit toku informací, zabránit publikaci důležitého výzkumu, vnutit určitý druh zařízení, jako byl čip Clipper. Každý z těchto bojů vyžadoval spoustu lidí, spoustu právníků, spoustu tvůrců politik, spoustu lidí, kteří mluvili o tom, proč na těchto otázkách záleží a proč by bylo hrozné takový problém opakovat. 
 
@@ -56,7 +56,7 @@ A dnes tu máme další verzi. Chat control v Evropě se snaží převzít kontr
 
 Cypherpunkeři budují společně. Někdy děláme věci na vlastní pěst, ale nakonec přispíváme svými nápady a naším kódem v open source spoustě dalších lidí a vylepšujeme to, co děláme, tím, že o tom spolu mluvíme, vylepšujeme naše nápady, vylepšujeme náš software, získáváme zpětnou vazbu. Děláme to prostřednictvím fór, jako je cypherpunkový mailing list, nebo takovýchto fór v komunitě Liberty či výzkumné komunitě Etherea. Děláme to spoluprací napříč mnoha projekty a týmy a děláme to prostřednictvím komunikačních platforem, jako je tato. Chaos Communication Congress v minulosti pomohl svolat mnoho z těchto skupin a nyní tu máme Ethereum Cypherpunk Congress, který svolává naši skupinu, abychom o těchto myšlenkách mluvili. A také jsme vytvořili Cypherpunk Retreat, místo, kde se může sejít skupina tvůrců těchto systémů a projektů a řešit klíčové problémy, které se týkají všech. Sdílené problémy, které možná můžeme řešit společně, protože to, čemu se často chceme vyhnout, je super fragmentované prostředí, kde spolu nic nekomunikuje a kde masivní centralizovaní hráči soutěží s malinkými sítěmi. Pokud budeme stavět na otevřených standardech, jako jsou otevřené standardy identity nebo otevřené standardy pro zasílání zpráv, pak můžeme budovat systémy chránící soukromí ve velmi velkém měřítku. Věci, které jsou bezpečné, ale také interoperabilní. 
 
-#### Tři otevřené problémy (15:27) {#three-open-problems-1527}
+### Tři otevřené problémy (15:27) {#three-open-problems-1527}
 
 Cypherpunkeři řeší otevřené problémy. Takže vás tu zanechám se třemi kritickými otevřenými problémy pro příštích 10 až 15 let a doufám, že se jeden z vás nebo několik z vás v této místnosti těmito otevřenými problémy inspiruje a bude na nich pracovat. 
 

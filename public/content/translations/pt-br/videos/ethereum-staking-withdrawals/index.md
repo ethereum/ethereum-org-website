@@ -19,7 +19,7 @@ Uma explicação da **Finematics** cobrindo como os saques de staking funcionam 
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=RwwU3P9n3uo) publicada pela Finematics. Ela foi levemente editada para facilitar a leitura.*
 
-#### A Beacon Chain (0:31) {#the-beacon-chain-031}
+### A Beacon Chain (0:31) {#the-beacon-chain-031}
 
 Com a atualização Shanghai/Capella se aproximando rapidamente, há muita discussão sobre os saques de staking no Ethereum e o que isso significa para o ecossistema do Ethereum como um todo.
 
@@ -35,7 +35,7 @@ O próximo grande passo, o The Merge, uniu a camada de consenso de Prova de Part
 
 Para minimizar os riscos, o escopo do The Merge foi reduzido, e nenhum outro recurso — fora a mudança da Prova de Trabalho para a Prova de Participação — foi incluído como parte da atualização. O maior "corte" que teve que ser feito impactou os saques, que se tornaram o foco da próxima atualização Shanghai/Capella.
 
-#### Saques (2:09) {#withdrawals-209}
+### Saques (2:09) {#withdrawals-209}
 
 Os saques de staking, como o nome sugere, permitirão que os stakers saquem seu ETH bloqueado. Existem dois tipos de saques: "parcial" e "total".
 
@@ -47,7 +47,7 @@ Uma vez ativados, os saques de staking serão distribuídos automaticamente a ca
 
 Para começar a sacar suas recompensas de staking, um validador terá que fornecer seu endereço de saque apenas uma vez. Como os saques afetam tanto a camada de consenso quanto a camada de execução do Ethereum, ambas as partes da rede devem ser atualizadas. "Shanghai" é o nome da atualização da camada de execução que contém os saques, que são especificados na EIP-4895. "Capella" é o nome da atualização correspondente da camada de consenso, ativada ao mesmo tempo. Essas duas atualizações às vezes também são chamadas de "Shapella".
 
-#### Mecânica (3:40) {#mechanics-340}
+### Mecânica (3:40) {#mechanics-340}
 
 No ecossistema do Ethereum, cada validador tem um número de índice correspondente. Além disso, eles também têm dois tipos de credenciais de saque, definidas como `0x00` ou `0x01`.
 
@@ -77,7 +77,7 @@ Ao construir ou processar um bloco, os clientes da camada de execução aplicam 
 
 O design dos saques é simples, mas extremamente robusto.
 
-#### Equívocos (6:30) {#misconceptions-630}
+### Equívocos (6:30) {#misconceptions-630}
 
 O primeiro equívoco afirma que, ao processar saques, há uma diferença entre um saque "total" e um "parcial" em termos de prioridade ou ordenação. Tanto os saques totais quanto os parciais acontecem quando a varredura linear sobre o conjunto de validadores atinge o índice de um validador. A única diferença é que, no caso de saques totais, um validador deve deixar a fila de saída e atingir a "época sacável" antes que a varredura linear possa capturá-lo.
 
@@ -93,7 +93,7 @@ Segundo, para garantir que o mecanismo de consenso de Prova de Participação e 
 
 A primeira varredura de saques sacará muitas recompensas acumuladas — basicamente desde o início da Beacon Chain. No entanto, as subsequentes processarão uma quantidade muito menor de ETH.
 
-#### Implicações (8:39) {#implications-839}
+### Implicações (8:39) {#implications-839}
 
 A ativação dos saques criará um fluxo de staking aberto e bilateral. Atualmente, o fluxo de staking é unilateral — o ETH só pode entrar na rede e nunca sair dela. Curiosamente, a ativação dos saques pode incentivar ainda mais pessoas a fazer stake, pois elas saberão que sempre podem sacar seu ETH se precisarem para outra coisa.
 
@@ -103,7 +103,7 @@ Os saques também impactarão os derivativos de staking líquido, como Lido, Roc
 
 Os primeiros adotantes no staking líquido e no staking centralizado capturaram a grande maioria do mercado, pois não tinham muita concorrência. No entanto, a participação de mercado desses players estabelecidos pode ver uma grande mudança assim que os saques forem ativados, especialmente se eles não oferecerem uma taxa competitiva. A capacidade de mudar livremente entre provedores de staking beneficiará o mercado de staking de ETH.
 
-#### Resumo (10:01) {#summary-1001}
+### Resumo (10:01) {#summary-1001}
 
 A ativação dos saques de staking é uma das atualizações mais esperadas do Ethereum. Será extremamente importante garantir que essa mudança seja executada sem problemas. Para ajudar nos testes, os validadores terão várias devnets e testnets disponíveis para executar o processo e resolver quaisquer problemas em potencial antes de entrar em operação na Mainnet.
 

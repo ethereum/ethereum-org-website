@@ -92,3 +92,20 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `Gas 上限计划` casing vs glossary `gas 上限`.
 - ASCII/full-width comma mixing inside single strings.
 - Zero Traditional-character leakage; the prior `slot`->`时段` collapse did not recur.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh/page-apps.json`. 6 critical, 11 warnings. Brand 9/10 | Technical 6/10 | Semantic 9/10 | Consistency 9/10 | Tone 6/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `accounts/index.md` flipped wholesale from 你 (21 on dev) to 您 (24) while the two sibling files changed in the same PR kept 你; the zh dev-docs corpus runs 840:69 for 你. Third recorded instance, so it wants a pipeline pin rather than per-run repair.
+- Zero ETHGlossary deviations across ~60 applicable terms, no Traditional leakage, and the run repaired three pre-existing errors: `原生 EVM` -> `原始 EVM`, the inverted Vyper "less features" clause, and an MMORPG/RPG over-expansion.
+

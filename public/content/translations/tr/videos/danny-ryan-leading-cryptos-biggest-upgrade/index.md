@@ -19,7 +19,7 @@ Etherealize'ın kurucu ortağı ve Ethereum Birleşmesi'nin (The Merge) eski ba�
 
 *Bu döküm, Ethereum Vakfı tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=GZPLTF5ds2A) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### İnterneti keşfetme ve erken dönem merakı (0:36) {#discovering-the-internet-and-early-curiosity-036}
+### İnterneti keşfetme ve erken dönem merakı (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Sunucu:** Nasıl gidiyor? En son ne zaman Jenga oynadın?
 
@@ -37,7 +37,7 @@ Etherealize'ın kurucu ortağı ve Ethereum Birleşmesi'nin (The Merge) eski ba�
 
 **Danny Ryan:** Her zaman bir şeyleri tamir edebilen kişi bendim. Büyükanne ve büyükbabam hep benim sözümü alıntılardı — muhtemelen yedi yaşlarındaydım — onlara bilgisayarları konusunda yardım ederdim ve bir keresinde "Bazen sadece kapatıp tekrar açmanız gerekir" demiştim. Bunu sonsuza dek alıntıladılar.
 
-#### Makine mühendisliğinden yazılıma (5:02) {#from-mechanical-engineering-to-software-502}
+### Makine mühendisliğinden yazılıma (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Sunucu:** Belirli bir yolu izlemeni sağlayan bir "işte bu" anı veya bir akıl hocan var mıydı?
 
@@ -47,7 +47,7 @@ Etrafta oldukları için bilgisayarlara her zaman biraz meraklıydım ama derin 
 
 Ben "altı yaşından beri programlama yapan" tiplerden değilim. Çılgın bir programcı değilim, çılgın bir matematikçi değilim. Sadece sorunları görme ve onları birbirine bağlama konusunda iyiyim.
 
-#### Louisiana'da serbest çalışma hayatı (7:17) {#the-freelance-life-in-louisiana-717}
+### Louisiana'da serbest çalışma hayatı (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Sunucu:** Üniversiteden sonra ne yaptın?
 
@@ -59,7 +59,7 @@ Ben "altı yaşından beri programlama yapan" tiplerden değilim. Çılgın bir 
 
 Ayrıca lisede bir serigrafi baskı işi kurdum. 20 yıldır devam ediyor. En iyi arkadaşım ve ortağım yönetiyor — adı Girraphic. Bunu grubumuz için yapmaya başladık, sonra lisemiz için tüm tişörtleri yapmaya başladık.
 
-#### DAO hack'i ve Ethereum'a giriş (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
+### DAO hack'i ve Ethereum'a giriş (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** 2016'da bir arkadaşım bana DAO hakkında bir New York Times makalesi gönderdi. Ne bileyim, 120 milyon dolar toplamıştı — tarihteki en büyük kitle fonlaması. Bitcoin'i biliyordum. Bitcoin ile işlem yapmıştım. Muhtemelen Bitcoin'de para kaybetmiştim. Kafama tam yatmamıştı.
 
@@ -73,7 +73,7 @@ Tavşan deliğinin giderek daha da derinlerine indim ve 2017'nin ilk günü, "Te
 
 Hisse Kanıtı (PoS) hakkında bilgi edindim ve "Bu hiç mantıklı değil" dedim. Sonra öğrenmeye devam ettim ve "Belki de bu mantıklıdır. Belki bir staking havuzu falan yapabilirim" dedim. Casper'ın geldiğini duydum — Hisse Kanıtı'na böyle deniyordu — bu yüzden kodu okumaya başladım. "Oh, biraz daha test yapabilirler" dedim. Bazı testler yazdım. 2017'nin sonunda araştırma ekibi, "Hey, bir iş ister misin?" dedi. "Tamam" dedim.
 
-#### Açık kaynakta topluluk bulmak (14:35) {#finding-community-in-open-source-1435}
+### Açık kaynakta topluluk bulmak (14:35) {#finding-community-in-open-source-1435}
 
 **Sunucu:** Topluluğunu ve kendi insanlarını nasıl buldun? Özgüvenini nasıl inşa ettin?
 
@@ -81,7 +81,7 @@ Hisse Kanıtı (PoS) hakkında bilgi edindim ve "Bu hiç mantıklı değil" dedi
 
 Kapılar komik derecede ardına kadar açıktı. Uzun zamandır o kapılardan geçmek zorunda kalmadım ama işin doğasının açık olması göz önüne alındığında, Ethereum'un birçok bölümü için kapıların oldukça açık olduğunu tahmin ediyorum.
 
-#### Birleşmeye öncülük etmek (16:58) {#leading-the-merge-1658}
+### Birleşmeye öncülük etmek (16:58) {#leading-the-merge-1658}
 
 **Sunucu:** Kızlarla konuştuğu için oyun oynamaya pek meraklı olmayan, bir grupta çalan, serigrafi baskı işi kuran, DAO hack'ini fonlayan bir adam — başlangıçta sadece yardımcı olarak bu vakfa katıldı ve sonunda tüm zamanların en çılgın mühendislik başarılarından birinin mimarı oldu. Birleşme'yi nasıl yaptın?
 
@@ -89,7 +89,7 @@ Kapılar komik derecede ardına kadar açıktı. Uzun zamandır o kapılardan ge
 
 Bu, Vitalik gibi insanların zamanının ve dikkatinin ne kadar değerli olduğunun bir göstergesiydi — o başka şeylere odaklanmıştı. Ve işi yapabileceğimi ama aynı zamanda diğer insanların yapmadığı şeyleri de yapabileceğimi fark ettim. Tüm bunları ileriye taşımak için ne olması gerektiğini bulabilirdim. İnsanların başı bulutlarda, inanılmaz derecede karmaşık ve zor şeyler üzerinde çalışıyorlar. Benim çerçevem her zaman "Bunu gerçeğe dönüştürmek için ne yapabilirim?" oldu. Bazen araştırma yapıyordum, bazen teknik özellikler yazıyordum ve giderek çok karmaşık bir proje genelinde iletişim kurmak ve koordine etmek haline geldi.
 
-#### İş-yaşam dengesi ve stresi yönetmek (18:07) {#work-life-balance-and-managing-stress-1807}
+### İş-yaşam dengesi ve stresi yönetmek (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Sunucu:** Stresi nasıl yönettin?
 
@@ -99,7 +99,7 @@ Bu, Vitalik gibi insanların zamanının ve dikkatinin ne kadar değerli olduğu
 
 Teknik sorunlar asla stresli sorunlar değildir. Stresli olan karmaşık teknopolitik alandır. İnsanlar işin zor kısmıdır.
 
-#### Etherealize'ı kurmak (20:02) {#co-founding-etherealize-2002}
+### Etherealize'ı kurmak (20:02) {#co-founding-etherealize-2002}
 
 **Sunucu:** Yakın zamanda Etherealize'ın kurucu ortağı oldun. Buna olan ilgin nereden geldi? Seni bu konuda heyecanlandıran şey ne ve sence bu çalışma neden önemli?
 
@@ -117,7 +117,7 @@ Bunun sivil bir kurum olduğunu öğreniyorsunuz, bu yüzden yapabilecekleri en 
 
 Sonra Ethereum Vakfı'na geri döndüm, sonra ayrıldım. Sonra Trump bir memecoin piyasaya sürdü — kelimenin tam anlamıyla şok edici. Sonra Ethereum Vakfı'na geri dönmeyi düşündüm ve o kapıyı kapattık. Önüme çıkan ilk ilginç şey Vivek ile tanışmaktı. "Oh — bu fırsat penceresinde aslında Ethereum'un benimsenmesini sağlayabiliriz" dedim. Vivek'in gerçekten tamamlayıcı bir enerjisi, Geleneksel Finans'tan (TradFi) gelen tamamlayıcı bir geçmişi var. Sadece "Tamam, yapalım. Dünyayı sisteme dahil edelim" dedim.
 
-#### Dünyanın neden Ethereum'a ihtiyacı var (24:10) {#why-the-world-needs-ethereum-2410}
+### Dünyanın neden Ethereum'a ihtiyacı var (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Sunucu:** Dünyanın neden Ethereum'a ihtiyacı var?
 
@@ -125,7 +125,7 @@ Sonra Ethereum Vakfı'na geri döndüm, sonra ayrıldım. Sonra Trump bir memeco
 
 Vivek 2020'de Wall Street'ten ayrılıp Ethereum'u öğrenirken o "işte bu" anını yaşadı — "Oh, tüm sermaye piyasaları Ethereum ile yükseltilmeli." Ve o haklı. Ve artık zamanı geldi.
 
-#### Merkeziyetsizlik argümanı (25:47) {#the-case-for-decentralization-2547}
+### Merkeziyetsizlik argümanı (25:47) {#the-case-for-decentralization-2547}
 
 **Sunucu:** Ethereum büyük ölçüde merkeziyetsizliğe, güvenilir bir şekilde tarafsız olmaya odaklanmıştır. Verimlilik için merkeziyetsizlikten vazgeçebileceğiniz, bugün daha fazla insanı sisteme dahil edebileceğiniz yönünde bir eleştiri var. Buna cevabın nedir?
 
@@ -135,13 +135,13 @@ Bu, bankalar ve finansal kurumlar için çok şey ifade edecek. Ve bu finansal �
 
 Ölçeklendirme açısından yapacak biraz işimiz var — gerçi Pectra piyasaya sürülüyor ve katman 2 (l2) çözümleriyle birlikte devasa miktarda ölçeklendirme için zemin hazırlayacak. Ayrıca bu şeylerin sadece mükemmel merkeziyetsiz protokoller değil, aynı zamanda mükemmel ürünler — güvenli ürünler, kullanımı kolay ürünler — olması için gelişme konusunda da yapacak işlerimiz var. Bu geçişi yaparken, dünyayı sisteme dahil etmek için en iyi cevap aslında Ethereum'dur.
 
-#### İnsanların daha nazik olmasını dilemek (27:38) {#wishing-people-were-nicer-2738}
+### İnsanların daha nazik olmasını dilemek (27:38) {#wishing-people-were-nicer-2738}
 
 **Sunucu:** Bugün dünyada daha fazla insanın neyin farkında olmasını isterdin — kripto ile ilgili bir şey olması bile gerekmez?
 
 **Danny Ryan:** Keşke insanlar birbirlerine biraz daha nazik olsaydı. Ve ayrıca modern toplumun bu çılgınlığının farkına varsalardı — dikkatli olun ve ona özenle yaklaşın. Bu karmaşık bir şey. Orta derecede istikrarlı bir dengede duruyor. Bence onu geliştirmeye devam edebiliriz ve etmeliyiz, ama her şeyi öylece çöpe atmamalıyız.
 
-#### Ethereum Vakfı liderlik geçişi ve tavır almak (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
+### Ethereum Vakfı liderlik geçişi ve tavır almak (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Sunucu:** Yılın başlarında, Ethereum Vakfı değişiklikler geçirmek üzereyken, bu ilgi odağının içine itildin. Tepkin ne oldu?
 
@@ -149,7 +149,7 @@ Bu, bankalar ve finansal kurumlar için çok şey ifade edecek. Ve bu finansal �
 
 Aya'ya büyük bir saygım var. Yakın arkadaşız ve uzun süre birlikte yakından çalıştık. Aldığı kararların birçoğunun alınmasına, desteklenmesine ve uygulanmasına yardımcı oldum. Bu yüzden, ondan felsefi olarak derinden ayrılmadığım halde kamusal bir alanda onunla karşı karşıya getirilmek komik. Nazik olmayı severim. İnsanlara, özellikle de halka açık forumlarda saygılı davranmayı severim. O çok incindi ve bu kesinlikle benim istediğim şey değildi. Dürüst olmak gerekirse, bunun yaşanması muhtemelen benim geri dönmemem için tabuta çakılan son çiviydi — ki bu güruhun amaçladığının tam tersiydi.
 
-#### Geleceğin şehirleri ve yapay zeka çağında insan olmak (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
+### Geleceğin şehirleri ve yapay zeka çağında insan olmak (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** Şimdi hatırladım — sekizinci sınıftayken bu Geleceğin Şehirleri projesi üzerinde çalışmıştım. İngilizce öğretmenim sınıftan bir kazanan seçer ve onlarla ulusal yarışmalara kadar çalışırdı. Büyük bir maket yaptık, bütün bir şehri planladık, bir sürü araştırma okuduk, gelecekteki bir toplumu kurguladık. Ulusal yarışmalara gittik. Belki de bu biraz geleceğin habercisiydi.
 
@@ -159,7 +159,7 @@ Aya'ya büyük bir saygım var. Yakın arkadaşız ve uzun süre birlikte yakın
 
 Bu yüzden üzerinde çalıştığım şeyler konusunda iyimserim — kurumsal sermayeyi Ethereum'a dahil etmek, bu piyasaları daha iyi hale getirmek. Ancak "sadece merkeziyetsiz harika bir teknoloji inşa ederseniz, dünya daha iyi olacak" şeklindeki dizginlenemez iyimserliğe sahip değilim.
 
-#### Çocuklar ve gelecek (39:00) {#kids-and-the-future-3900}
+### Çocuklar ve gelecek (39:00) {#kids-and-the-future-3900}
 
 **Sunucu:** Çocukların var. Diyelim ki yirmi yıl ileri sardık — inandığın şeyler işe yaradı. Bu, çocuklarının hayatını nasıl değiştirir?
 
@@ -167,7 +167,7 @@ Bu yüzden üzerinde çalıştığım şeyler konusunda iyimserim — kurumsal s
 
 Umarım en azından adil, açık ve özgür bir toplumumuz olur, kısmen kripto üzerine iyi sistemler inşa edebildiğimiz için. Ancak yapay zeka, "insan olmak nedir?" sorusunu karmaşıklaştıran bir faktör.
 
-#### Değerler ve kurumlarla konuşmak (42:34) {#values-and-speaking-to-institutions-4234}
+### Değerler ve kurumlarla konuşmak (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Sunucu:** Asla taviz vermeyeceğin bir değer nedir?
 
@@ -181,7 +181,7 @@ Umarım en azından adil, açık ve özgür bir toplumumuz olur, kısmen kripto 
 
 **Danny Ryan:** Standart bir yöntemim yok. Çok dinamiğim. Onların dilini okurum, ihtiyaçlarının ne olduğunu anlarım, neyi merak ettiklerini anlarım ve doğru giriş noktalarını ve metaforları bulurum. Büyük bir planlamacı değilim.
 
-#### Kripto dışındaki hayat (45:12) {#life-outside-crypto-4512}
+### Kripto dışındaki hayat (45:12) {#life-outside-crypto-4512}
 
 **Sunucu:** Teknoloji ve kripto dışında neye saygı duyarsın?
 
@@ -191,7 +191,7 @@ Umarım en azından adil, açık ve özgür bir toplumumuz olur, kısmen kripto 
 
 **Danny Ryan:** Ailemle vakit geçiriyorum. Egzersiz yapıyorum ve dışarıda oynuyorum. Piyano çalıyorum. Ve işimi yapıyorum.
 
-#### Sunucunun başlangıç hikayesi — Optimism'den ayrılıp Ethereum Vakfı'na geçiş (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
+### Sunucunun başlangıç hikayesi — Optimism'den ayrılıp Ethereum Vakfı'na geçiş (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Sunucu:** Optimism'den neden ayrıldın?
 
@@ -203,7 +203,7 @@ Okulda davranışsal ekonomi okudum. Oradan, toplumu programlarsanız teşvikler
 
 Sanırım ayrılma nedenim, orada yapabileceğim her şeyi yaptığımı hissetmemdi. Ethereum Vakfı çok şey yapmış olması bakımından çok benzersizdir — bunun için çok eleştiri aldı, ancak tarafsızlığını korumak, değerlerini korumak için çok şey yaptı. Birisiyle konuşmaya gittiğimde, onlardan bir şey istediğimi düşünmüyorlar çünkü Ethereum Vakfı bir girişim değil. Ve benim yeni bir zorluğa ihtiyacım vardı.
 
-#### Ethereum'un geleceğini güvence altına almak (59:26) {#securing-ethereums-future-5926}
+### Ethereum'un geleceğini güvence altına almak (59:26) {#securing-ethereums-future-5926}
 
 **Sunucu:** Ethereum'un kaybetmemesini nasıl sağlarız? Ethereum'un geleceğini güvence altına almak için sahip olduğun en tartışmalı görüş nedir?
 

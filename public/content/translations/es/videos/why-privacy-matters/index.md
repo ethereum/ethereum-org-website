@@ -17,7 +17,7 @@ Una charla TED de **Glenn Greenwald**, uno de los primeros reporteros en ver y e
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=pcSlowAhvUk) publicada por TED. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Una experiencia que todos han tenido (0:12) {#an-experience-everyone-has-had-012}
+### Una experiencia que todos han tenido (0:12) {#an-experience-everyone-has-had-012}
 
 Hay todo un género de videos de YouTube dedicado a una experiencia que estoy seguro de que todos en esta sala han tenido. Se trata de un individuo que, pensando que está solo, se involucra en algún comportamiento expresivo (cantar desenfrenadamente, bailar dando giros, alguna actividad sexual leve) solo para descubrir que, de hecho, no está solo, que hay una persona observando y acechando, cuyo descubrimiento hace que deje inmediatamente de hacer lo que estaba haciendo, horrorizado. 
 
@@ -25,7 +25,7 @@ La sensación de vergüenza y humillación en su rostro es palpable. Es la sensa
 
 Este es el punto crucial del trabajo en el que me he centrado singularmente durante los últimos 16 meses: la cuestión de por qué importa la privacidad, una pregunta que ha surgido en el contexto de un debate global, propiciado por las revelaciones de Edward Snowden de que Estados Unidos y sus socios, a espaldas de todo el mundo, han convertido a Internet, que alguna vez fue anunciada como una herramienta sin precedentes de liberación y democratización, en una zona sin precedentes de vigilancia masiva e indiscriminada.
 
-#### El argumento de "nada que ocultar" (1:29) {#the-nothing-to-hide-argument-129}
+### El argumento de "nada que ocultar" (1:29) {#the-nothing-to-hide-argument-129}
 
 Hay un sentimiento muy común que surge en este debate, incluso entre personas que se sienten incómodas con la vigilancia masiva, que dice que no hay un daño real que provenga de esta invasión a gran escala porque solo las personas que participan en malos actos tienen una razón para querer esconderse y preocuparse por su privacidad.
 
@@ -37,7 +37,7 @@ Pero, por el contrario, las personas buenas son aquellas que van a trabajar, vue
 
 Las personas que realmente dicen eso están participando en un acto muy extremo de autodesprecio. Lo que realmente están diciendo es: "He aceptado convertirme en una persona tan inofensiva, poco amenazante y poco interesante que en realidad no temo que el gobierno sepa lo que estoy haciendo".
 
-#### Incluso los críticos de la privacidad no creen lo que dicen (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Incluso los críticos de la privacidad no creen lo que dicen (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Esta mentalidad ha encontrado lo que creo que es su expresión más pura en una entrevista de 2009 con el antiguo director ejecutivo de Google, Eric Schmidt, quien, cuando se le preguntó sobre todas las diferentes formas en que su empresa está causando invasiones de la privacidad a cientos de millones de personas en todo el mundo, dijo esto: "Si estás haciendo algo que no quieres que otras personas sepan, tal vez no deberías estar haciéndolo en primer lugar".
 
@@ -49,7 +49,7 @@ El mismísimo Eric Schmidt, el director ejecutivo de Google, ordenó a sus emple
 
 Esta misma división se puede ver con el director ejecutivo de Facebook, Mark Zuckerberg, quien en una infame entrevista en 2010 pronunció que la privacidad ya no es una "norma social". El año pasado, Mark Zuckerberg y su nueva esposa compraron no solo su propia casa, sino también las cuatro casas adyacentes en Palo Alto por un total de 30 millones de dólares para asegurarse de disfrutar de una zona de privacidad que impidiera a otras personas monitorear lo que hacen en su vida personal.
 
-#### El desafío de la contraseña del correo electrónico (4:51) {#the-email-password-challenge-451}
+### El desafío de la contraseña del correo electrónico (4:51) {#the-email-password-challenge-451}
 
 Durante los últimos 16 meses, mientras he debatido este tema en todo el mundo, cada vez que alguien me ha dicho: "Realmente no me preocupan las invasiones a la privacidad porque no tengo nada que ocultar", siempre les digo lo mismo. 
 
@@ -65,7 +65,7 @@ Hay una razón por la que buscamos eso, y nuestra razón es que todos nosotros, 
 
 Todos los días emitimos juicios sobre el tipo de cosas que decimos, pensamos y hacemos que estamos dispuestos a que otras personas sepan, y el tipo de cosas que decimos, pensamos y hacemos que no queremos que nadie más sepa. Las personas pueden afirmar muy fácilmente con palabras que no valoran su privacidad, pero sus acciones niegan la autenticidad de esa creencia.
 
-#### Ser observados cambia nuestro comportamiento (7:02) {#being-watched-changes-our-behavior-702}
+### Ser observados cambia nuestro comportamiento (7:02) {#being-watched-changes-our-behavior-702}
 
 Ahora bien, hay una razón por la que la privacidad es tan anhelada universal e instintivamente. No es solo un movimiento reflejo como respirar aire o beber agua. La razón es que cuando estamos en un estado en el que podemos ser monitoreados, en el que podemos ser observados, nuestro comportamiento cambia drásticamente. 
 
@@ -73,7 +73,7 @@ El rango de opciones de comportamiento que consideramos cuando pensamos que esta
 
 La vergüenza humana es un motivador muy poderoso, al igual que el deseo de evitarla, y esa es la razón por la que las personas, cuando están en un estado de ser observadas, toman decisiones que no son el subproducto de su propia voluntad, sino que tienen que ver con las expectativas que otros tienen de ellas o los mandatos de la ortodoxia social.
 
-#### El panóptico de Bentham (8:09) {#benthams-panopticon-809}
+### El panóptico de Bentham (8:09) {#benthams-panopticon-809}
 
 Esta comprensión fue explotada de manera más poderosa con fines pragmáticos por el filósofo del siglo XVIII Jeremy Bentham, quien se propuso resolver un problema importante introducido por la era industrial, donde, por primera vez, las instituciones se habían vuelto tan grandes y centralizadas que ya no eran capaces de monitorear y, por lo tanto, controlar a cada uno de sus miembros individuales. 
 
@@ -81,7 +81,7 @@ Y la solución que ideó fue un diseño arquitectónico originalmente destinado 
 
 El filósofo francés del siglo XX Michel Foucault se dio cuenta de que ese modelo podía usarse no solo para las prisiones, sino para todas las instituciones que buscan controlar el comportamiento humano: escuelas, hospitales, fábricas, lugares de trabajo. Y lo que dijo fue que esta mentalidad, este marco descubierto por Bentham, era el medio clave de control social para las sociedades occidentales modernas, que ya no necesitan las armas abiertas de la tiranía (castigar, encarcelar o matar a los disidentes, u obligar legalmente a la lealtad a un partido en particular) porque la vigilancia masiva crea una prisión en la mente que es un medio mucho más sutil aunque mucho más efectivo de fomentar el cumplimiento de las normas sociales o de la ortodoxia social, mucho más efectivo de lo que la fuerza bruta podría ser jamás.
 
-#### Orwell, la religión y la prisión en la mente (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, la religión y la prisión en la mente (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 La obra literaria más icónica sobre la vigilancia y la privacidad es la novela de George Orwell *1984*, que todos aprendemos en la escuela y, por lo tanto, casi se ha convertido en un cliché. De hecho, cada vez que la mencionas en un debate sobre la vigilancia, la gente la descarta instantáneamente como inaplicable, y lo que dicen es: "Oh, bueno, en *1984*, había monitores en las casas de las personas, estaban siendo observadas en todo momento, y eso no tiene nada que ver con el estado de vigilancia al que nos enfrentamos". 
 
@@ -93,7 +93,7 @@ Lo que todas estas obras aparentemente dispares reconocen, la conclusión a la q
 
 Por el contrario, y aún más importante, es un ámbito de privacidad, la capacidad de ir a algún lugar donde podamos pensar, razonar, interactuar y hablar sin que las miradas críticas de los demás se posen sobre nosotros, en el que residen exclusivamente la creatividad, la exploración y la disidencia, y esa es la razón por la que, cuando permitimos que exista una sociedad en la que estamos sujetos a un monitoreo constante, permitimos que la esencia de la libertad humana se vea gravemente paralizada.
 
-#### Dos lecciones destructivas (12:30) {#two-destructive-lessons-1230}
+### Dos lecciones destructivas (12:30) {#two-destructive-lessons-1230}
 
 El último punto que quiero observar sobre esta mentalidad, la idea de que solo las personas que están haciendo algo malo tienen cosas que ocultar y, por lo tanto, razones para preocuparse por la privacidad, es que afianza dos mensajes muy destructivos, dos lecciones destructivas. La primera de ellas es que las únicas personas que se preocupan por la privacidad, las únicas personas que buscarán la privacidad, son por definición malas personas. 
 
@@ -111,7 +111,7 @@ La reconocida activista socialista Rosa Luxemburgo dijo una vez: "Quien no se mu
 
 Muchas gracias. (Aplausos)
 
-#### Preguntas y respuestas con Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Preguntas y respuestas con Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, gracias. El caso es bastante convincente, debo decir, pero quiero llevarte de vuelta a los últimos 16 meses y a Edward Snowden para hacerte algunas preguntas, si no te importa. La primera es personal para ti. Todos hemos leído sobre el arresto de tu pareja, David Miranda, en Londres, y otras dificultades, pero asumo que en términos de compromiso personal y riesgo, esa presión sobre ti no es tan fácil de soportar al enfrentarte a las organizaciones soberanas más grandes del mundo. Cuéntanos un poco sobre eso.
 

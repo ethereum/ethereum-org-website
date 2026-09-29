@@ -19,11 +19,11 @@ Une présentation de **Christine Kim** à la Devcon SEA couvrant les EIP inclus 
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=ufIDBCgdGwY) publiée par la Fondation Ethereum. Elle a été légèrement modifiée pour en faciliter la lecture.*
 
-#### Introduction (0:00) {#introduction-000}
+### Introduction (0:00) {#introduction-000}
 
 Nous allons parler de tous les EIP qui seront inclus dans la mise à jour Pectra. Un petit avertissement avant de commencer : tout ce que je vais dire est purement informatif — à des fins d'information — et ne doit pas être interprété comme un conseil financier ou d'investissement.
 
-#### Quand Pectra sera-t-elle sur le Réseau principal (0:23) {#when-is-pectra-mainnet-023}
+### Quand Pectra sera-t-elle sur le Réseau principal (0:23) {#when-is-pectra-mainnet-023}
 
 Avant d'aborder ce qui est inclus dans Pectra, la question que l'on me pose le plus souvent est « quand Pectra sera-t-elle déployée sur le Réseau principal ? ». Je vais donc répondre à cette question tout de suite pour que nous puissions passer aux aspects techniques.
 
@@ -43,7 +43,7 @@ Historiquement, les développeurs ont prévu environ deux semaines entre les mis
 
 Compte tenu de toutes les informations que je connais actuellement et des progrès réalisés par les développeurs jusqu'à présent sur Pectra, ma meilleure analyse et estimation est que le déploiement de Pectra sur le Réseau principal aura lieu de manière réaliste en avril 2025. Encore une fois, c'est très provisoire car beaucoup de choses peuvent changer. Le développement se fait de semaine en semaine — les développeurs participent à ces appels ACD pour parler de ce bug inattendu dans tel EIP ou de ce nouvel EIP qu'ils veulent ajouter à Pectra.
 
-#### EIP de la couche d'exécution (6:23) {#execution-layer-eips-623}
+### EIP de la couche d'exécution (6:23) {#execution-layer-eips-623}
 
 Passons au cœur de cette présentation — ce qui est inclus dans la mise à jour Pectra. Il y a dix EIP inclus dans Pectra, et quatre d'entre eux se concentrent sur la couche d'exécution.
 
@@ -55,7 +55,7 @@ Passons au cœur de cette présentation — ce qui est inclus dans la mise à jo
 
 **EIP-7702** — définir le code pour les comptes détenus par des entités externes (EOA). Un nouveau type de transaction arrive sur Ethereum. Ce type de transaction permettra temporairement à un EOA d'avoir une plus grande flexibilité, permettant des fonctionnalités telles que le traitement par lots de transactions, les transactions sponsorisées, les transactions conditionnelles et la sécurité déléguée. Vous vous demandez peut-être : « est-ce la vision de l'abstraction de compte qui prend vie sur Ethereum ? » Non, ce n'est pas le cas — c'est un petit pas. C'est une première étape pour voir à quoi pourrait ressembler la véritable feuille de route vers une véritable abstraction de compte native sur Ethereum. Il y a eu pas mal de débats sur la façon dont les développeurs devraient franchir cette première étape, et beaucoup de controverses autour de son intégration et de sa conception — mais il est inclus.
 
-#### EIP de la couche de consensus (12:00) {#consensus-layer-eips-1200}
+### EIP de la couche de consensus (12:00) {#consensus-layer-eips-1200}
 
 Il y en a six autres — ce sont des EIP de la couche de consensus.
 
@@ -69,11 +69,11 @@ Il y en a six autres — ce sont des EIP de la couche de consensus.
 
 **EIP-7549** — déplacer l'indice du comité en dehors de l'attestation. Il s'agit d'une restructuration et d'une refonte de la façon dont les attestations sont agrégées pour réduire la charge réseau sur Ethereum et économiser la bande passante des nœuds. Lorsque les développeurs ont inclus cela dans Pectra, ils pensaient que c'était un excellent changement avec de merveilleux avantages et qu'il serait facile à réaliser — mais en pratique, il s'est avéré beaucoup plus difficile à implémenter que prévu.
 
-#### Résumé (17:19) {#summary-1719}
+### Résumé (17:19) {#summary-1719}
 
 Pectra est un ensemble hétéroclite de mises à jour. Elle va faire trois choses : premièrement, corriger les lacunes critiques d'Ethereum en tant que chaîne de blocs à preuve d'enjeu — pensez au MaxEB, c'est une correction critique car la taille de l'ensemble des validateurs peut continuer à croître de manière incontrôlée. Deuxièmement, améliorer l'expérience utilisateur — le nouveau type de transaction, des conceptions plus flexibles, quelques améliorations pour des conceptions plus sans tiers de confiance pour les pools de staking. Et troisièmement, augmenter la capacité de disponibilité des données d'Ethereum — cela n'a pas été formellement inclus dans Pectra mais semble probable.
 
-#### EIP retirés de Pectra (18:02) {#eips-removed-from-pectra-1802}
+### EIP retirés de Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Voici tous les EIP qui ont été retirés de Pectra. C'est un peu une première pour une mise à jour d'avoir autant d'EIP retirés.
 
@@ -83,7 +83,7 @@ Voici tous les EIP qui ont été retirés de Pectra. C'est un peu une première 
 
 Ceux-ci sont maintenant déplacés vers Fusaka. Verkle était initialement prévu pour Fusaka mais a depuis été encore retardé. EOF et PeerDAS sont dans Fusaka pour le moment. Il y a d'autres EIP que les développeurs reconsidéreront pour inclusion dans Fusaka — la transition SSZ, les listes d'inclusion, les changements liés à l'émission, l'expiration de l'historique, l'ePBS, et la direction de l'abstraction de compte.
 
-#### Questions et réponses (22:02) {#qa-2202}
+### Questions et réponses (22:02) {#qa-2202}
 
 **Animateur :** À quand EOF ?
 

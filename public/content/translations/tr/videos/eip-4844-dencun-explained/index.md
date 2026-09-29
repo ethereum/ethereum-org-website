@@ -21,13 +21,13 @@ Ethereum'daki katman 2 (l2) toplamaları için maliyetleri önemli ölçüde aza
 
 *Bu transkript, Finematics tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=HT9PHWloIiU) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 Ethereum'un ölçeklendirmesi bir süredir hararetle tartışılan bir konu. Katman 2 (l2) çözümleri, tıkanıklığı hafifletmek ve ücretleri düşürmek için işlemleri ana Zincir dışında gerçekleştirmenin bir yolunu sunarak bu savaşın ön saflarında yer aldı. Ancak bir sorun var — l2'ler bile verimliliklerini ve ölçeklenebilirliklerini engelleyen sınırlamalarla karşı karşıya. EIP-4844, l2'nin potansiyelini artırmada ve Ethereum'u ölçeklendirme yol haritasıyla uyumlu hale getirmede bir sonraki adımdır.
 
 Peki, EIP-4844 tam olarak nedir? l2'leri ölçeklendirmeye tam olarak nasıl yardımcı olur? Hangi yeni olasılıkların kilidini açar? Ve l2'lerdeki işlem ücretlerini %90'ın üzerinde azaltabileceği doğru mu?
 
-#### EIP-4844 ve Proto-Danksharding nedir (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
+### EIP-4844 ve Proto-Danksharding nedir (0:52) {#what-is-eip-4844-and-proto-danksharding-052}
 
 Hatırlatmak gerekirse, EIP, geliştiricilerin Ethereum Protokolü üzerinde değişiklikler önerebileceği bir süreç olan Ethereum İyileştirme Teklifi (Ethereum Improvement Proposal) anlamına gelir. EIP-4844, özellikle Ethereum'da verilerin işlenme ve ele alınma şeklini önemli ölçüde geliştirebilecek yeni bir işlem türü önerir. Artık EIP-4844 ile birbirinin yerine kullanılan "Proto-Danksharding" adını da duymuş olabilirsiniz.
 
@@ -39,7 +39,7 @@ Toplamalardan birinde bir DEX takası yaptığınızı hayal edin. Böyle bir i�
 
 EIP-4844, diğer birkaç EIP ile birlikte yaklaşan Dencun güncellemesine dahil edilecektir.
 
-#### Teknik detaylar (2:50) {#technical-details-250}
+### Teknik detaylar (2:50) {#technical-details-250}
 
 Şimdi, EIP-4844'ün nasıl çalıştığına daha yakından bakalım.
 
@@ -65,7 +65,7 @@ Optimism veya Arbitrum gibi iyimser toplamalar söz konusu olduğunda, temel ver
 
 ZK toplamaları, işlem veya durum deltası verilerine iki taahhüt sağlar: blob taahhüdü ve Rollup'ın dahili olarak kullandığı kanıt sistemi ne olursa olsun ZK Rollup'ın kendi taahhüdü. Ayrıca, iki taahhüdün aynı veriye atıfta bulunduğunu kanıtlamak için daha önce bahsedilen nokta değerlendirmesi ön derlemesini kullanarak bir eşdeğerlik kanıtı Protokolü kullanırlar.
 
-#### Etki (6:25) {#impact-625}
+### Etki (6:25) {#impact-625}
 
 EIP-4844'ün Ethereum ekosistemi üzerindeki etkisi ne kadar vurgulansa azdır. Yeni başlayanlar için, katman 2 (l2) çözümlerinin ölçeklenebilirliğini önemli ölçüde artırır, operasyonel maliyetlerini düşürür ve onları diğer ucuz, alternatif Blokzincirlerle daha rekabetçi hale getirir. Operasyonel maliyetteki düşüş mümkündür çünkü şu anda toplamalar tarafından katlanılan maliyetin büyük çoğunluğu çağrı verisi için ödenen ücretlerden kaynaklanmaktadır.
 
@@ -77,7 +77,7 @@ Operasyonel maliyetlerin düşmesiyle birlikte, geliştiricileri toplamalar üze
 
 Kesin olan bir şey var — ana sonuç işlem kapasitesindeki artış olsa ve işlemlerin maliyeti aynı kalsa bile, EIP-4844 gelecekte kullanıcılar için daha ucuz işlemlerle sonuçlanacak daha da büyük bir ölçeklenebilirliğin temelini atıyor.
 
-#### Özet (8:04) {#summary-804}
+### Özet (8:04) {#summary-804}
 
 Ethereum topluluğu, 13 Mart'ta Ana Ağ lansmanı beklenen EIP-4844'ü çeşitli test ağlarında test etmeyi çoktan tamamladı. Bu, Ethereum için benzersiz bir ölçeklenebilirlik elde etme yolunda anıtsal bir adımdır. Büyük l2'lerin çoğunun, Dencun güncellemesi gerçekleşir gerçekleşmez yeni blob alanını kullanmaya başlama taahhüdünde bulunduğunu şimdiden görebiliyoruz.
 

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-evolution-glamsterdam/index.md",
   "generatedAt": "2026-04-29T05:24:47.735Z",
-  "rootHash": "07e1d66236ed",
+  "rootHash": "05433ae94a79",
   "tree": {
-    "contentHash": "3c1b42fff677",
-    "anchorHash": "efcbe6222c23",
+    "contentHash": "57bd7ba3626e",
+    "anchorHash": "2a29edef703e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "f3116fc12c5f",
+        "contentHash": "1355bcae6a01",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "e703e63510f5",
+        "contentHash": "7d9b23e4fe5a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ab72a5b47444"
+        "anchorHash": "646a50079828"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8b55fc65fbc9"
+        "anchorHash": "cd37f01751ab"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "72f759f48034",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3de1580490d2"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dc2963d21f5f"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c420f664c59c"
+        "anchorHash": "02c2a63bd881"
       },
       "prose:1": {
         "contentHash": "e5ab6389c4db",

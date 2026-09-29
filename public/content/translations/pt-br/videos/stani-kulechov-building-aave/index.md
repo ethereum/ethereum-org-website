@@ -18,7 +18,7 @@ Uma entrevista Offstage na Devconnect onde o apresentador Binji e o fundador da 
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=EWe-cjT9IQs) publicada pela Fundação Ethereum. Ela foi levemente editada para maior clareza.*
 
-#### Crescendo na Finlândia (0:28) {#growing-up-in-finland-028}
+### Crescendo na Finlândia (0:28) {#growing-up-in-finland-028}
 
 **Binji:** Então, vamos jogar Jenga aqui. Existem algumas perguntas associadas a ele. Se você quiser fazer o primeiro movimento, podemos começar.
 
@@ -48,7 +48,7 @@ Uma entrevista Offstage na Devconnect onde o apresentador Binji e o fundador da 
 
 **Stani Kulechov:** Meu pai sempre quis que eu trabalhasse com tecnologia porque ele via a importância dos computadores. A internet estava começando a surgir. As bibliotecas costumavam ter computadores — esse foi o primeiro lugar. Eles me apoiaram muito, para ser sincero.
 
-#### Ganhando o primeiro computador (3:00) {#getting-the-first-computer-300}
+### Ganhando o primeiro computador (3:00) {#getting-the-first-computer-300}
 
 **Binji:** Como você explica para eles o que você faz? Eles estão familiarizados com finanças descentralizadas (DeFi) agora?
 
@@ -58,7 +58,7 @@ Uma entrevista Offstage na Devconnect onde o apresentador Binji e o fundador da 
 
 **Stani Kulechov:** Totalmente. A internet e os computadores deram acesso à informação — você não precisava mais ir às bibliotecas para aprender algo ou perguntar aos seus pais ou amigos. E acho que, de forma semelhante, DeFi e cripto estão dando acesso a ferramentas financeiras. É isso que realmente me motiva. É pessoal porque vi diretamente como isso pode ser útil.
 
-#### Descobrindo o Ethereum (5:30) {#discovering-ethereum-530}
+### Descobrindo o Ethereum (5:30) {#discovering-ethereum-530}
 
 **Binji:** Como você acabou abandonando a faculdade de direito e entrando no Ethereum?
 
@@ -70,7 +70,7 @@ Comecei a desenvolver contratos inteligentes e estava fazendo todo esse trabalho
 
 **Stani Kulechov:** Acreditamos na liberdade e no que as finanças descentralizadas (DeFi) podem fazer por muitas pessoas — capacitando-as. Construir em torno de uma comunidade de indivíduos com ideias semelhantes realmente une tudo.
 
-#### Construindo a ETHLend e nomeando a Aave (9:00) {#building-ethlend-and-naming-aave-900}
+### Construindo a ETHLend e nomeando a Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** De onde veio o nome Aave?
 
@@ -82,7 +82,7 @@ Vamos ser maiores que o JPMorgan e todos esses bancos e redes. Por que dar um no
 
 **Stani Kulechov:** Sim. E vindo de uma cidade menor na Finlândia, o que percebi é que há muitas pessoas que realmente estão procurando pelo que estamos construindo — tanto dentro quanto fora do nosso espaço.
 
-#### Aave vs finanças tradicionais (12:00) {#aave-vs-traditional-finance-1200}
+### Aave vs finanças tradicionais (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** Como você diferencia o JPMorgan da Aave?
 
@@ -90,7 +90,7 @@ Vamos ser maiores que o JPMorgan e todos esses bancos e redes. Por que dar um no
 
 Eu compartilhei isso no Reddit do Ethereum em 2017 e recebi muito entusiasmo da comunidade desde o início. É assim que a comunidade cripto funciona. Você não precisa de um plano de negócios ou de um pitch. Você apenas mostra às pessoas algo sobre o qual elas podem construir.
 
-#### Segurança e experiência do usuário (14:30) {#security-and-user-experience-1430}
+### Segurança e experiência do usuário (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Melhor acesso também significa melhor segurança. Como você garante que os usuários não sejam comprometidos por tentativas de phishing, e como fazemos isso melhor do que no mundo tradicional da internet? Resolver isso é importante porque não podemos depender de um processo onde os usuários estão perdendo o que têm, certo? Acho que a coisa mais comum é o phishing. A experiência do usuário (UX) ao interagir com uma blockchain não tem validação.
 
@@ -102,7 +102,7 @@ Eu compartilhei isso no Reddit do Ethereum em 2017 e recebi muito entusiasmo da 
 
 **Stani Kulechov:** Às vezes a ideia não tem validação. Às vezes a ideia pode ter validação, mas a execução é ruim. Então, existem diferentes componentes que são importantes. Eu continuei apenas pensando, continuei melhorando o produto, e acho que esse foi o caminho certo.
 
-#### Investimento anjo (17:00) {#angel-investing-1700}
+### Investimento anjo (17:00) {#angel-investing-1700}
 
 **Binji:** Você é um investidor anjo prolífico. O que você procura ao avaliar novos construtores?
 
@@ -112,7 +112,7 @@ Eu compartilhei isso no Reddit do Ethereum em 2017 e recebi muito entusiasmo da 
 
 **Stani Kulechov:** Na verdade não, porque sempre há algum valor. Você aprende bastante, você faz o espaço progredir. E normalmente você gera muitos talentos como resultado. Às vezes o investimento não funciona, mas então a mesma equipe pode ir e abrir outra empresa onde eles têm mais experiência e podem ser mais bem-sucedidos. Alguns são mais bem-sucedidos que outros, mas no geral são todas apostas nas quais confiamos.
 
-#### Retenção vs aquisição (19:00) {#retention-vs-acquisition-1900}
+### Retenção vs aquisição (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** Qual é uma métrica com a qual você se importa em cripto?
 
@@ -122,7 +122,7 @@ Eu compartilhei isso no Reddit do Ethereum em 2017 e recebi muito entusiasmo da 
 
 **Stani Kulechov:** Normalmente agora, no lado da aquisição, as pessoas pensam mais em retenção do que em aquisição. Isso destaca por que as pessoas não se engajam mais — normalmente é porque falta um produto que possa ser envolvente para esses usuários. Passamos uma década focando em infraestrutura. Acho que a camada de aplicação é a próxima década, e isso nos ajudará a escalar a base de usuários.
 
-#### Volatilidade cripto e ativos institucionais (20:30) {#crypto-volatility-and-institutional-assets-2030}
+### Volatilidade cripto e ativos institucionais (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Cripto é constantemente vista como essa coisa volátil — mercado de baixa, mercado de alta. A Aave é como um contraponto a isso, certo? É simplesmente estável o tempo todo.
 
@@ -132,7 +132,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 É ótimo para quem toma empréstimo porque eles podem acessar liquidez a qualquer momento. É ótimo para quem faz empréstimo porque eles podem emprestar contra ativos tradicionais, mas fazer isso onchain com stablecoins. Acho que, para as instituições, perceber o benefício das stablecoins e dos ativos tokenizados as ajuda a pensar além da volatilidade — e a parar de pensar que cripto é puramente sobre volatilidade.
 
-#### Ethereum como uma camada de confiança (22:00) {#ethereum-as-a-trust-layer-2200}
+### Ethereum como uma camada de confiança (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** Para o Ethereum, uma das coisas pelas quais sou bastante apaixonado é que ele é uma camada de confiança. Protocolos como a Aave mostram a confiança em ação no mundo real. É emprestar, tomar emprestado, respaldado pela segurança econômica e pelo peso da confiança que vem com essas plataformas.
 
@@ -142,7 +142,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 **Stani Kulechov:** Obviamente, ela não vê quanto trabalho é investido no que fazemos no dia a dia. Muitas coisas são aceitas sem questionamento. Mas acho que tem que ser um processo divertido. Construir tem que ser um processo divertido. Você não deveria estar aqui se for algo opressor. Você deveria estar aqui para aproveitar o que faz.
 
-#### Se divertindo enquanto constrói (24:00) {#having-fun-while-building-2400}
+### Se divertindo enquanto constrói (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave é um ótimo exemplo de como se divertir. É simplesmente irreal para mim que a mesma equipe que está mudando a cara das finanças modernas — o que, o 30º maior banco do mundo sem considerar a colateralização, provavelmente mais alto — também esteja fazendo o GrAave. Isso prova que vocês estão trazendo a cultura cripto para a próxima geração de finanças sem abrir mão da comunidade e da cultura que os trouxeram para este mundo.
 
@@ -152,7 +152,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 **Stani Kulechov:** Acho que o aplicativo da Aave. Apenas focar na simplicidade. A simplicidade escala. Estamos muito animados com essa direção — trazer mais finanças descentralizadas (DeFi) para o público em geral e fazer isso da maneira certa, onde tudo é abstraído e é simples e fácil de usar.
 
-#### O que faz você se sentir mais vivo (26:00) {#what-makes-you-feel-most-alive-2600}
+### O que faz você se sentir mais vivo (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** O que faz você se sentir mais vivo?
 
@@ -166,7 +166,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 **Stani Kulechov:** Eu simplesmente não gosto do elemento de seriedade. Gosto da seriedade de fazer as coisas acontecerem, mas gosto do fato de que você tem que se divertir na vida, se divertir no trabalho. Tive muita liberdade enquanto crescia, e isso criou experiências que de outra forma eu não teria tido.
 
-#### Por que Londres (28:30) {#why-london-2830}
+### Por que Londres (28:30) {#why-london-2830}
 
 **Binji:** Vocês escolheram se basear em Londres como uma de suas sedes principais. Por que Londres?
 
@@ -176,7 +176,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 **Stani Kulechov:** Viajamos recentemente, sim.
 
-#### Inspiração e quase desistir (30:00) {#inspiration-and-almost-quitting-3000}
+### Inspiração e quase desistir (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Quem é alguém fora de cripto e tecnologia que te inspirou, seja no seu estilo de liderança ou quando você estava começando?
 
@@ -186,7 +186,7 @@ Com os ativos institucionais, como o mercado Horizon que lançamos, você usa at
 
 **Stani Kulechov:** Sim, às vezes. Mas é meio que uma desistência pelo dia. Você apenas desiste pelo dia para descansar e sempre há o dia seguinte. Especialmente se você tem algo que é difícil de resolver — como o quebra-cabeça aqui.
 
-#### Produtos para o usuário final e a comunidade Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
+### Produtos para o usuário final e a comunidade Ethereum (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** Qual é a coisa mais importante que precisamos fazer como comunidade Ethereum?
 
@@ -198,7 +198,7 @@ Descobrir como podemos canalizar essa energia, especialmente dentro de produtos 
 
 **Stani Kulechov:** Definitivamente. Construímos essa infraestrutura incrível na camada de rede, na camada de finanças descentralizadas (DeFi), e agora a próxima camada é basicamente construir o que funciona e distribuir para todos. DeFi para todos.
 
-#### Encerramento (36:00) {#closing-3600}
+### Encerramento (36:00) {#closing-3600}
 
 **Binji:** Acho que a maioria das pessoas que descobrem o Ethereum o descobrirão através dessas superfícies.
 

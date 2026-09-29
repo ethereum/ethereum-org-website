@@ -18,7 +18,7 @@ Wasilisho la **Juan Benet**, mwanzilishi wa Protocol Labs na mvumbuzi wa IPFS na
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=zkXM9H90g_E) iliyochapishwa na EthCC. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Utangulizi wa sayansi na maendeleo (0:10) {#introduction-to-science-and-progress-010}
+### Utangulizi wa sayansi na maendeleo (0:10) {#introduction-to-science-and-progress-010}
 
 Sawa, habari zenu nyote. Jina langu ni Juan. Niko hapa kuzungumzia sayansi iliyogatuliwa (desci). Nataka kuzungumzia jinsi tunavyoweza kutumia desci kufadhili, kupanga, na kufungua sayansi. Kwanza kabisa, haya ndiyo tutakayozungumzia: Nitazungumzia sayansi kwa ujumla kwa muda mfupi, kisha nitazungumzia vuguvugu la desci ni nini, kisha jinsi tunavyoweza kufadhili bidhaa za umma za sayansi. Kisha jinsi desci inavyopanga watu, miradi, na kazi zinazohusu sayansi. Kisha nataka kuzungumza kidogo kuhusu ufikiaji wazi na sayansi inayoweza kurudiwa, na nataka kumalizia na wito wa kuchukua hatua. Kwa hivyo hii itakuwa ya haraka sana. Tuna mambo mengi ya kuangazia, kwa hivyo nitaenda haraka.
 
@@ -34,7 +34,7 @@ Sasa, sayansi ina matatizo mengi sana. Kuna kila aina ya masuala na shughuli za 
 
 Mara tu tafiti zinapokamilika na kuzalishwa, ni sehemu ndogo tu ya hizo inayoweza kurudiwa. Kwa hivyo kuna kila aina ya sayansi ambayo imechapishwa na kukubaliwa na kufikiriwa kuwa sahihi, na kugundulika baadaye kwamba sehemu kubwa yake haiwezi kurudiwa. Kwa hivyo kuna mgogoro mkubwa wa urudiaji. Na kuna hata ugunduzi wa kisayansi ambao kazi zake zinapotea. Fikiria karatasi halisi, msimbo, au data inayohusishwa na matokeo fulani ikipotea kutoka kwenye benki zetu za maarifa. Kwa hivyo kuna kila aina ya masuala yanayozunguka sayansi ambayo yanahitaji kurekebishwa, na hii ni sehemu ya kile ambacho desci inahusu. Hii inashughulikia anuwai ya matatizo haya, sio yote kwa ujumla, sio kabisa, lakini jamii ya desci inajaribu kushughulikia baadhi ya masuala haya.
 
-#### Vuguvugu la desci (5:11) {#the-desci-movement-511}
+### Vuguvugu la desci (5:11) {#the-desci-movement-511}
 
 Kwa hivyo sayansi iliyogatuliwa (desci) ni nini? Desci ni vuguvugu la kuboresha sayansi kwa kutumia teknolojia na zana za Web3. Fikiria kuweza kutumia maajabu yote ya uunganishaji wa heshi, blockchains, na mikataba mahiri (smart contracts) kuunda mifumo na miundo inayoweza kuboresha jinsi tunavyofanya sayansi katika nyanja mbalimbali kote ulimwenguni.
 
@@ -46,7 +46,7 @@ Sasa kuna vikundi kadhaa vinavyofanya ufadhili wa teknolojia ya kibayolojia iliy
 
 Pia sasa kuna mikutano na makongamano mengi tofauti yanayokusanya jamii hizi. Mambo kama DeSci Day, DeSci Berlin, Schelling Point kutoka kwa jamii ya Gitcoin, na Funding the Commons. Makongamano haya yanakusanya mazungumzo mengi yanayohusu desci.
 
-#### Kufadhili bidhaa za umma (10:40) {#funding-the-commons-1040}
+### Kufadhili bidhaa za umma (10:40) {#funding-the-commons-1040}
 
 Hebu tuzungumzie kufadhili bidhaa za umma. Labda baadhi yenu mmeona mchoro huu nilioutumia zamani kuhusu pengo la uvumbuzi. Katika tafsiri ya sayansi hadi teknolojia, sehemu ya sayansi iliyogatuliwa (desci) inalenga zaidi sehemu ya kushoto—sehemu ya sayansi pekee—ikijaribu kufikiria miundo bora ya motisha na njia bora za kuratibu vikundi ili kuzalisha matokeo bora ya kisayansi. Inafaa kuzingatia kwamba jumla ya ufadhili wa R&D duniani, kwa mtazamo mmoja, ni mkubwa sana, lakini kwa mtazamo mwingine, sio mkubwa sana na haujabadilika sana katika miongo michache iliyopita, ingawa uwezo wa upitishaji na matokeo ya teknolojia tunayojenga yamekua kwa kiasi kikubwa.
 
@@ -64,7 +64,7 @@ Kwa mfano, vikundi kama VitaDAO vinaunda muundo wa data unaotoa ruzuku kwa vikun
 
 Vyeti vya athari ni muundo mwingine wa kuvutia unaowakilisha ufadhili wa kurudi nyuma. Vinawawezesha washiriki, mara tu wanapofikia athari fulani, kufua cheti kuhusu athari hiyo na kukiuzwa sokoni kwa mtu yeyote anayetaka kudai athari hiyo. Hiyo inawezesha soko la kubahatisha kuibuka, kufunga mzunguko kwa wakati ili kufadhili kazi muhimu sana kwa kurudi nyuma. Hili ni muhimu kwa sababu mara nyingi unagundua tu jinsi kitu kilivyo na thamani muda mrefu baada ya kazi kufanywa.
 
-#### Kupanga watu na Data DAOs (15:28) {#organizing-people-and-data-daos-1528}
+### Kupanga watu na Data DAOs (15:28) {#organizing-people-and-data-daos-1528}
 
 Sasa mawazo machache ya haraka kuhusu kupanga watu. Hapo zamani, GitHub imekuwa na mafanikio makubwa katika kusaidia kupanga ugunduzi wa kisayansi. Vitabu vyote vya kiada na nyanja zimekua kupitia GitHub. Vikundi vingi vimetumia misingi ya GitHub kuhusu masuala, ushirikiano wa msimbo, na udhibiti wa matoleo ili kupanga jamii za mazoezi na sayansi. Lakini kile ambacho hakijakamilika hapo ni kwamba huna njia ya kuunda mashirika yanayofanya utafiti, kushughulika na mtaji, au kulipa wachangiaji.
 
@@ -78,7 +78,7 @@ Unaweza kufikiria kuunganisha aina hiyo ya shughuli na uzalishaji wa data na kit
 
 Baadhi ya maelezo ya mwisho kuhusu ufikiaji wazi na sayansi inayoweza kurudiwa. IPFS imetumika tayari sana kwa aina nyingi za kazi za sayansi wazi. Tayari inaishi ndoto ya kufungua ufikiaji wa sayansi nyingi, kusaidia nakala za Wikipedia zilizosambazwa, kumbukumbu kubwa za karatasi, na seti za data.
 
-#### Ufikiaji wazi, sayansi inayoweza kurudiwa, na wito wa kuchukua hatua (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
+### Ufikiaji wazi, sayansi inayoweza kurudiwa, na wito wa kuchukua hatua (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 Bado hatujafika hapo kabisa na urudiaji kamili. Hili ni eneo linalohitaji kazi zaidi, lakini watu wengi tayari wamefanya fikira. Kuna vipimo na mawazo mazuri sana kuhusu kutumia urudiaji wa kawaida na IPFS kugandisha rasilimali zote na kujenga mfumo unaoweza kurudiwa kikamilifu. Unaweza kurejesha majaribio mahususi kutoka zamani, kurudisha VMs au kontena zilizogandishwa kabisa, kuendesha tena mifumo yote ya data, na kuthibitisha majaribio ni sahihi.
 

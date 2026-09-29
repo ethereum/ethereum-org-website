@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-staking-withdrawals/index.md",
   "generatedAt": "2026-04-29T05:33:06.228Z",
-  "rootHash": "b5cf246fa9f3",
+  "rootHash": "dedf010684c9",
   "tree": {
-    "contentHash": "b367030d075e",
-    "anchorHash": "2960d04a5ebe",
+    "contentHash": "18a631fb8bde",
+    "anchorHash": "ff9c995a23de",
     "children": {
       "frontmatter:title": {
-        "contentHash": "47d6b26100d8",
+        "contentHash": "b80dadf6e016",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "24ec7cfcba7b",
+        "contentHash": "c1773ea5a837",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7f8236b8803e"
+        "anchorHash": "0f569684b8ee"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "64a601e752dd"
+        "anchorHash": "8cd066beca62"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "9466c182868c",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d9a998cac660"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b81bfa2c496f"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b89edaaeebe5"
+        "anchorHash": "953c39159e4c"
       },
       "prose:1": {
         "contentHash": "0dd0373bfa55",

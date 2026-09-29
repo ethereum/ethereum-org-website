@@ -19,7 +19,7 @@ Sebuah penjelasan oleh **Finematics** yang mencakup bagaimana cara kerja penarik
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=RwwU3P9n3uo) yang diterbitkan oleh Finematics. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Rantai suar (0:31) {#the-beacon-chain-031}
+### Rantai suar (0:31) {#the-beacon-chain-031}
 
 Dengan peningkatan Shanghai/Capella yang semakin dekat, ada banyak diskusi tentang penarikan staking Ethereum dan apa artinya ini bagi ekosistem Ethereum secara keseluruhan.
 
@@ -35,7 +35,7 @@ Langkah besar berikutnya, The Merge, menyatukan lapisan konsensus Bukti Kepemili
 
 Untuk meminimalkan risiko, ruang lingkup The Merge dikurangi, dan tidak ada fitur lain — di luar peralihan Bukti Kerja (PoW) ke Bukti Kepemilikan (PoS) — yang disertakan sebagai bagian dari peningkatan. "Pemotongan" terbesar yang harus dilakukan berdampak pada penarikan, yang menjadi fokus dari peningkatan Shanghai/Capella yang akan datang.
 
-#### Penarikan (2:09) {#withdrawals-209}
+### Penarikan (2:09) {#withdrawals-209}
 
 Penarikan staking, seperti namanya, akan memungkinkan staker untuk melakukan penarikan ETH mereka yang terkunci. Ada dua jenis penarikan: "sebagian" dan "penuh."
 
@@ -47,7 +47,7 @@ Setelah diaktifkan, penarikan staking akan didistribusikan secara otomatis setia
 
 Untuk mulai melakukan penarikan imbalan staking mereka, seorang validator harus memberikan alamat penarikan mereka hanya sekali. Mengingat penarikan memengaruhi lapisan konsensus dan lapisan eksekusi Ethereum, kedua bagian jaringan harus diperbarui. "Shanghai" adalah nama peningkatan lapisan eksekusi yang berisi penarikan, yang ditentukan dalam EIP-4895. "Capella" adalah nama peningkatan lapisan konsensus pasangannya, yang diaktifkan pada saat yang sama. Kedua peningkatan ini terkadang juga disebut sebagai "Shapella."
 
-#### Mekanisme (3:40) {#mechanics-340}
+### Mekanisme (3:40) {#mechanics-340}
 
 Dalam ekosistem Ethereum, setiap validator memiliki nomor indeks yang sesuai. Selain itu, mereka juga memiliki dua jenis kredensial penarikan, yang didefinisikan sebagai `0x00` atau `0x01`.
 
@@ -77,7 +77,7 @@ Saat membangun atau memproses blok, klien lapisan eksekusi menerapkan penarikan 
 
 Desain penarikan ini sederhana namun sangat kuat.
 
-#### Kesalahpahaman (6:30) {#misconceptions-630}
+### Kesalahpahaman (6:30) {#misconceptions-630}
 
 Kesalahpahaman pertama menyatakan bahwa saat memproses penarikan, ada perbedaan antara penarikan "penuh" dan "sebagian" dalam hal prioritas atau urutan. Baik penarikan penuh maupun sebagian terjadi ketika pemindaian linier atas set validator mencapai indeks validator. Satu-satunya perbedaan adalah bahwa dalam kasus penarikan penuh, validator harus meninggalkan antrean keluar dan mencapai "Epok yang dapat ditarik" sebelum pemindaian linier dapat mengambilnya.
 
@@ -93,7 +93,7 @@ Kedua, untuk memastikan bahwa mekanisme konsensus Bukti Kepemilikan (PoS) dan se
 
 Pemindaian penarikan pertama akan menarik banyak imbalan yang terakumulasi — pada dasarnya sejak awal mula Rantai suar. Namun, pemindaian berikutnya akan memproses jumlah ETH yang jauh lebih kecil.
 
-#### Implikasi (8:39) {#implications-839}
+### Implikasi (8:39) {#implications-839}
 
 Mengaktifkan penarikan akan menciptakan aliran staking dua arah yang terbuka. Saat ini, aliran staking bersifat satu arah — ETH hanya dapat mengalir ke dalam jaringan dan tidak pernah keluar darinya. Menariknya, mengaktifkan penarikan dapat mendorong lebih banyak orang untuk melakukan staking, karena mereka akan tahu bahwa mereka selalu dapat melakukan penarikan ETH mereka jika diperlukan untuk hal lain.
 
@@ -103,7 +103,7 @@ Penarikan juga akan berdampak pada derivatif staking likuid seperti Lido, Rocket
 
 Pengadopsi awal dalam staking likuid dan staking terpusat menguasai sebagian besar pasar karena mereka tidak memiliki banyak persaingan. Namun, pangsa pasar dari para pemain lama ini dapat melihat perubahan besar setelah penarikan diaktifkan, terutama jika mereka tidak menawarkan tingkat yang kompetitif. Kemampuan untuk berpindah secara bebas di antara penyedia staking akan menguntungkan pasar staking ETH.
 
-#### Ringkasan (10:01) {#summary-1001}
+### Ringkasan (10:01) {#summary-1001}
 
 Mengaktifkan penarikan staking adalah salah satu peningkatan yang paling diantisipasi pada Ethereum. Akan sangat penting untuk memastikan perubahan ini dieksekusi dengan lancar. Untuk membantu pengujian, validator akan memiliki beberapa devnet dan testnet yang tersedia untuk menjalankan proses dan menyelesaikan potensi masalah apa pun sebelum ditayangkan di Mainnet.
 

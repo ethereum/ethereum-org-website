@@ -17,7 +17,7 @@ Một video giải thích của **Finematics** khám phá khái niệm "mã là 
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=pWGLtjG-F5c) được xuất bản bởi Finematics. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Bạn đã bao giờ nghe đến thành ngữ "mã là luật", nơi công nghệ được sử dụng để thực thi các quy tắc chưa? Trong trường hợp đó, liệu chúng ta có cần đến luật sư nữa không? Hoặc có lẽ chúng ta có thể sống trong một thế giới hoàn toàn tự động, nơi mã ra lệnh cho những gì chúng ta có thể và không thể làm. Với sự phát triển hiện tại của hợp đồng thông minh, viễn cảnh tương lai này có thể gần hơn chúng ta nghĩ.
 
@@ -29,23 +29,23 @@ Máy bán hàng tự động rất thường được đưa ra như một sự s
 
 Hợp đồng thông minh có thể hoàn toàn dựa vào thông tin có sẵn trên chuỗi khối — ví dụ: "nếu bạn đưa cho tôi mười token A, tôi sẽ đưa cho bạn mười token B." Hoặc nó có thể dựa vào một nguồn dữ liệu bên ngoài, ví dụ, vào giá ETH hoặc S&P 500. Ví dụ sau làm cho hợp đồng thông minh trở nên khó khăn hơn, vì chúng phải tin tưởng vào dữ liệu thế giới thực. Sự tin cậy cần thiết có thể được giảm thiểu bằng cách sử dụng các dịch vụ nguồn cấp dữ liệu, nhưng ngay cả các dịch vụ nguồn cấp dữ liệu cũng phải được tin cậy. Đã có một vài dự án, bằng cách sử dụng các ưu đãi nhất định, làm cho các nguồn cấp dữ liệu có nhiều khả năng cung cấp dữ liệu chính xác hơn. Chainlink là một dự án thực sự nổi bật trong danh mục này.
 
-#### Hợp đồng thông minh Ethereum (3:09) {#ethereum-smart-contracts-309}
+### Hợp đồng thông minh Ethereum (3:09) {#ethereum-smart-contracts-309}
 
 Ethereum là một chuỗi khối hỗ trợ hợp đồng thông minh và giúp lập trình viên có thể triển khai các hợp đồng thông minh của riêng họ. Một hợp đồng thông minh có thể được viết bằng một ngôn ngữ lập trình gọi là Solidity, được tạo ra đặc biệt cho mục đích đó. Trong Ethereum, tất cả các hợp đồng thông minh được triển khai đều bất biến — điều này có nghĩa là một khi được triển khai, chúng không thể bị sửa đổi, điều này tạo ra những rủi ro nhất định mà chúng ta sẽ thảo luận sau.
 
 Hợp đồng thông minh trên Ethereum cũng phi tập trung, có nghĩa là không có một máy tính đơn lẻ nào kiểm soát hợp đồng. Trên thực tế, tất cả các nút trên mạng lưới Ethereum đều lưu trữ cùng một hợp đồng với cùng một trạng thái chính xác. Mặc dù Ethereum hiện là nền tảng hợp đồng thông minh đa mục đích phổ biến nhất, nhưng nó không phải là nền tảng duy nhất và nó có một vài đối thủ cạnh tranh, bao gồm Cardano, Tezos, EOS và Tron — nhưng không phải tất cả chúng đều chia sẻ các đặc điểm giống nhau.
 
-#### Định nghĩa hợp đồng thông minh (4:23) {#smart-contract-definition-423}
+### Định nghĩa hợp đồng thông minh (4:23) {#smart-contract-definition-423}
 
 Thuật ngữ "hợp đồng thông minh" được đặt ra bởi nhà mật mã học nổi tiếng Nick Szabo vào đầu những năm 1990. Cái tên này, mặc dù không phải là cái tên dễ hiểu nhất, nhưng đã gắn liền và nó được sử dụng phổ biến, đặc biệt là trong ngành công nghiệp chuỗi khối. Để thấy được lợi ích của hợp đồng thông minh, hãy so sánh một hợp đồng thông minh giả định với hợp đồng tương đương của nó trong không gian truyền thống.
 
-#### Ví dụ về hợp đồng thông minh (4:46) {#smart-contract-example-446}
+### Ví dụ về hợp đồng thông minh (4:46) {#smart-contract-example-446}
 
 Giả sử chúng ta muốn viết hợp đồng sau: nếu Alice gửi X số lượng token A và Bob gửi cùng số lượng token B, các token sẽ được hoán đổi — Alice sẽ nhận được token của Bob và Bob sẽ nhận được token của Alice.
 
 Trong một thế giới không có hợp đồng thông minh, một cách để đạt được điều đó mà Alice không cần phải tin tưởng Bob và Bob không cần phải tin tưởng Alice sẽ là tạo một hợp đồng ký quỹ với một bên thứ ba. Bên thứ ba sẽ thu thập token A từ Alice, đợi cùng số lượng token B từ Bob, và gửi cho Alice và Bob các token đã được hoán đổi tương ứng.
 
-#### Các vấn đề của hợp đồng thông minh (5:45) {#smart-contract-problems-545}
+### Các vấn đề của hợp đồng thông minh (5:45) {#smart-contract-problems-545}
 
 Cách tiếp cận này đã cho thấy một vài vấn đề mà Alice và Bob có thể phải đối mặt:
 
@@ -54,36 +54,36 @@ Cách tiếp cận này đã cho thấy một vài vấn đề mà Alice và Bob
 
 Mặt khác, một hợp đồng thông minh sẽ hoạt động theo một cách hoàn toàn tự động và xác định, đảm bảo cả hai bên đều nhận được tiền khi họ đáp ứng các tiêu chí ban đầu về việc nạp token. Hợp đồng thông minh cũng có thể tự giữ tiền bên trong chúng, điều không thể đạt được trong thế giới truyền thống.
 
-#### Tốc độ (6:47) {#speed-647}
+### Tốc độ (6:47) {#speed-647}
 
 Tùy thuộc vào bên trung gian, Alice và Bob có thể phải đợi thậm chí vài ngày hoặc vài tuần để giải quyết việc chuyển giao token. Điều gì sẽ xảy ra nếu họ muốn hoán đổi token vào Chủ nhật và bên trung gian không hoạt động? Với hợp đồng thông minh, những loại vấn đề này sẽ biến mất và hợp đồng có thể được hoàn thành vài giây sau khi các tiêu chí ban đầu được đáp ứng.
 
-#### Chi phí (7:16) {#cost-716}
+### Chi phí (7:16) {#cost-716}
 
 Các hợp đồng truyền thống không chỉ đắt đỏ vì bên trung gian phải kiếm lợi nhuận — mà còn có rủi ro rất lớn về các chi phí ẩn cho những thứ như trọng tài và thực thi nếu có bất kỳ vấn đề nào với hợp đồng.
 
 Khả năng tái sử dụng là một lợi thế khác: cùng một hợp đồng thông minh chịu trách nhiệm hoán đổi token của Alice và Bob có thể được sử dụng bởi bất kỳ ai khác muốn hoán đổi token. Trong thế giới truyền thống, tất cả họ sẽ phải ký các hợp đồng riêng biệt và trả các khoản phí tương ứng cho bên trung gian.
 
-#### Gian lận (7:58) {#fraud-758}
+### Gian lận (7:58) {#fraud-758}
 
 Gian lận lại là một chi phí ẩn khác, lần này là đối với chính bên trung gian. Bên trung gian sẽ phải đảm bảo rằng token của cả Alice và Bob đều hợp pháp trước khi khởi tạo một giao dịch hoán đổi. Gian lận rất phổ biến trong tài chính truyền thống và hầu hết các công ty đều có những đội ngũ khổng lồ làm việc hoàn toàn để ngăn chặn gian lận. Với hợp đồng thông minh, các token có thể được xác minh trên chuỗi khối và với chữ ký số, có thể thấy rõ ngay lập tức liệu cả Alice và Bob có đủ điều kiện để chi tiêu token của họ hay không.
 
-#### Các trường hợp sử dụng (8:42) {#use-cases-842}
+### Các trường hợp sử dụng (8:42) {#use-cases-842}
 
 Hợp đồng thông minh có số lượng trường hợp sử dụng ngày càng tăng, từ thanh toán và tài chính phi tập trung (DeFi) đến chuỗi cung ứng và huy động vốn cộng đồng. Hợp đồng thông minh cũng là những khối xây dựng cơ bản cho các ứng dụng phi tập trung (dapp).
 
-#### DeFi (9:07) {#defi-907}
+### DeFi (9:07) {#defi-907}
 
 Tài chính phi tập trung (DeFi) là một trong những ngành công nghiệp mới phụ thuộc rất nhiều vào hợp đồng thông minh. Một số thứ đã được xây dựng trong không gian này bao gồm:
 
 - **Stablecoin phi tập trung** — với việc sử dụng khéo léo các hợp đồng thông minh và các ưu đãi nhất định, chúng ta có thể tạo ra một stablecoin được neo giá với đồng đô la Mỹ mà không cần phải lưu trữ đô la trong thế giới thực. MakerDAO là một trong những dự án biến điều này thành hiện thực.
 - **Cung cấp thanh khoản tự động** — một tập hợp các hợp đồng thông minh có thể cho phép người dùng cung cấp thanh khoản và hoán đổi token theo một cách hoàn toàn không cần cấp phép và phi tập trung. Uniswap và Kyber Network là những ví dụ điển hình về các giao thức như vậy.
 
-#### Huy động vốn cộng đồng và chuỗi cung ứng (10:05) {#crowdfunding-and-supply-chains-1005}
+### Huy động vốn cộng đồng và chuỗi cung ứng (10:05) {#crowdfunding-and-supply-chains-1005}
 
 Một trường hợp sử dụng khác là cung cấp sự minh bạch hơn cho các chuỗi cung ứng, nơi các giao thức như OriginTrail phát huy tác dụng. Khi nói đến huy động vốn cộng đồng, bạn có thể tưởng tượng một hợp đồng sẽ mở khóa tiền ngay khi các mục tiêu nhất định được đáp ứng và được cộng đồng xác minh.
 
-#### Hợp đồng thông minh trong tương lai (10:29) {#future-smart-contracts-1029}
+### Hợp đồng thông minh trong tương lai (10:29) {#future-smart-contracts-1029}
 
 Sẽ ra sao nếu hợp đồng thông minh có thể tạo điều kiện cho những việc như đi chung xe, cho thuê căn hộ và nhiều hơn thế nữa? Còn về từ thiện thì sao? Bạn có thể tưởng tượng một quỹ hoàn toàn tự động sẽ gửi tiền trực tiếp đến những người cần nó nhất mà không cần bất kỳ bên trung gian nào. Ví dụ, quỹ có thể xác định rằng một khu vực nhất định đã bị bão tấn công và chuyển hướng tiền đến khu vực đó trên thế giới. Hiện tại, điều đó nghe có vẻ khá bất khả thi, nhưng tất cả các yếu tố cần thiết để biến điều gì đó như thế này thành hiện thực đang được xây dựng ngay lúc này.
 
@@ -95,11 +95,11 @@ Các trường hợp sử dụng cho hợp đồng thông minh gần như là v�
 
 Bên cạnh những điều trên, cũng có những rủi ro liên quan đến quy định và thuế, nhưng tất cả những điều này cuối cùng đều có thể được giải quyết.
 
-#### Chúng ta có thể thay thế luật sư không? (13:58) {#can-we-replace-lawyers-1358}
+### Chúng ta có thể thay thế luật sư không? (13:58) {#can-we-replace-lawyers-1358}
 
 Vậy chúng ta có thực sự có thể thay thế luật sư bằng mã không? Không hẳn — ít nhất là không phải ngay bây giờ. Trong tương lai, ngày càng có nhiều hợp đồng có khả năng được tự động hóa, đặc biệt là trong lĩnh vực tài chính. Nhưng ngay cả trong một thế giới hoàn toàn tự động, các luật sư có thể cung cấp kiến thức có giá trị có thể được dịch thành mã. Cũng có rất nhiều thách thức về quy định xung quanh ngành công nghiệp tiền mã hóa sẽ khiến các luật sư rất bận rộn trong một thời gian. Tuy nhiên, nếu tôi là một luật sư, tôi sẽ bắt đầu tìm hiểu về hợp đồng thông minh và lập trình, vì chúng sẽ đóng một vai trò lớn trong tương lai.
 
-#### Tóm tắt (14:53) {#summary-1453}
+### Tóm tắt (14:53) {#summary-1453}
 
 Ưu điểm của hợp đồng thông minh:
 

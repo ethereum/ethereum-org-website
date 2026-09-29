@@ -17,7 +17,7 @@ breadcrumb: "Community.eth 第一集"
 
 *本文字稿是 Optimist 发布的[原视频](https://www.youtube.com/watch?v=onCwaj1FM-4)的无障碍副本。为了提高可读性，已进行了轻微编辑。发言者均为以太坊社区成员，视频中并未对所有人进行单独标识。*
 
-#### 什么是以太坊？(0:00) {#what-is-ethereum-000}
+### 什么是以太坊？(0:00) {#what-is-ethereum-000}
 
 <strong>发言者 1：</strong>什么是以太坊？
 
@@ -29,7 +29,7 @@ breadcrumb: "Community.eth 第一集"
 
 <strong>发言者 4：</strong>对许多人来说，以太坊意味着许多不同的事物。
 
-#### 是什么让它如此强大 (0:40) {#what-makes-it-powerful-040}
+### 是什么让它如此强大 (0:40) {#what-makes-it-powerful-040}
 
 <strong>Aya Miyaguchi：</strong>以太坊的潜力是巨大的，因为我们甚至无法定义它。我认为这非常强大。
 
@@ -43,7 +43,7 @@ breadcrumb: "Community.eth 第一集"
 
 <strong>Simona Pop：</strong>对我来说，以太坊是互联网进化的下一个阶段。
 
-#### 我们为何建设 (2:00) {#why-we-build-200}
+### 我们为何建设 (2:00) {#why-we-build-200}
 
 <strong>Simona Pop：</strong>是的，当价格上涨时当然会有热度，但当价格下跌或上涨时，那些真正信仰它的人依然在那里——这其实并不重要。我们这样做是因为我们真心相信我们正在建设的东西。
 
@@ -51,7 +51,7 @@ breadcrumb: "Community.eth 第一集"
 
 <strong>Alexis Ohanian：</strong>我们有机会以真正的所有权重新构想社会的众多机构，拥有在余生、世世代代——基本上是无限期地积累价值的真正能力。我真的非常渴望看到这种潜力被释放出来。
 
-#### 社区 (3:00) {#the-community-300}
+### 社区 (3:00) {#the-community-300}
 
 <strong>Amber Baldet：</strong>从一开始，让以太坊社区脱颖而出的一点就是，他们不怕表现得有点傻气。你可以从独角兽、傻乎乎的彩虹色、舞蹈和歌曲中看到这一点——正是这种傻气给整个生态系统带来了一种希望感。而如今人们真正需要的一样东西就是希望。
 

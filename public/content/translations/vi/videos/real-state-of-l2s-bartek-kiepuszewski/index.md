@@ -19,7 +19,7 @@ Một bài phát biểu chính của **Bartek Kiepuszewski**, nhà sáng lập L
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=ik2JxmHDmyw) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Là một nhà sáng lập của L2BEAT, tôi có một cơ hội đặc biệt để làm việc với hầu hết mọi nhóm L2 ngoài kia, và chúng tôi đã làm việc với họ kể từ những ngày đầu tiên của không gian này — tức là khoảng bốn năm trước. Thật không thể tin được. Thời gian trôi qua quá nhanh. Chúng tôi đã làm việc với những người tiên phong đầu tiên trong công nghệ ZK, chúng tôi đã làm việc với Plasma Group (sau này đổi tên thành Optimism), chúng tôi đã làm việc với Arbitrum. Và từ sân khấu này, tôi muốn ghi nhận tất cả các nhóm này, bởi vì nếu không có sự hỗ trợ của các bạn, chúng tôi chắc chắn sẽ không có mặt ở đây. Với tư cách là L2BEAT, chúng tôi vô cùng biết ơn mọi sự hỗ trợ mà cộng đồng đã dành cho chúng tôi.
 
@@ -27,7 +27,7 @@ Vậy hãy cùng nhìn lại những gì chúng ta đã đạt được. Trướ
 
 Vấn đề là, đi kèm với tất cả sự tăng trưởng đó cũng là rất nhiều trách nhiệm. Chúng ta cần hiểu rằng những người dùng cuối đang sử dụng các hệ thống này đang đổ tiền vào các bản cuộn này vì họ tin rằng các bản cuộn kế thừa tính bảo mật của Ethereum. Với nhận thức đó, theo ý kiến của tôi, chúng ta cần bắt đầu nghiêm túc về vấn đề bảo mật.
 
-#### Mở rộng Ethereum (2:10) {#scaling-ethereum-210}
+### Mở rộng Ethereum (2:10) {#scaling-ethereum-210}
 
 Chúng ta cũng đã thành công trong việc mở rộng Ethereum. Ethereum đã hoạt động khá tốt, nhưng nó bắt đầu trở nên thực sự chậm chạp so với nhu cầu và phí giao dịch ngày càng cao. Vì vậy, chắc chắn là chúng ta đang mở rộng — những con số này cũng đang tăng lên. Điều này thật tuyệt vời.
 
@@ -35,7 +35,7 @@ Tuy nhiên, có một chữ "nhưng". Các bạn biết đấy, luôn luôn có 
 
 Bởi vì các bạn biết đấy, chúng ta đã sử dụng bánh xe phụ (training wheels) quá lâu rồi. Nếu bạn là một người lớn mà vẫn dùng bánh xe phụ — và tôi xin nhắc lại, đã bốn năm trôi qua — thì bạn thực sự chưa trưởng thành. Sẽ không sao nếu bạn dùng bánh xe phụ khi còn là một đứa trẻ. Nhưng sẽ không ổn chút nào nếu bạn dùng chúng khi đã là người lớn. Và tôi nghĩ đã đến lúc tất cả chúng ta thực sự ngừng e ngại về điều đó. Tất cả chúng ta nên lên tiếng, và chúng ta không nên mắc phải hội chứng "bộ quần áo mới của hoàng đế".
 
-#### Chữ "nhưng" lớn: thiếu các hệ thống bằng chứng (4:30) {#the-big-but-missing-proof-systems-430}
+### Chữ "nhưng" lớn: thiếu các hệ thống bằng chứng (4:30) {#the-big-but-missing-proof-systems-430}
 
 Vậy chữ "nhưng" lớn này là gì? Chà, trước hết, hầu hết các L2 hiện nay đều không có hệ thống bằng chứng, điều này khá đáng ngạc nhiên vì những người tiên phong đầu tiên như StarkNet, như zkSync, như Aztec — bốn năm trước khi họ ra mắt các bản cuộn dành riêng cho ứng dụng đầu tiên của mình, họ đã có các hệ thống bằng chứng. Vì vậy, đúng là ngày nay bạn có thể ra mắt một L2 chỉ bằng một cú nhấp chuột. Tuy nhiên, đó có thực sự là một L2 không? Đó có thực sự là một Rollup không? Những gì bạn đang làm là ra mắt một thứ được bảo mật bằng một đa chữ ký. Tôi không nghĩ như vậy là đủ tốt.
 
@@ -43,13 +43,13 @@ Trạng thái của hệ sinh thái ngày nay giống như trên biểu đồ n�
 
 Biểu đồ bên phải đó cũng sẽ bao gồm tất cả các ngăn xếp Orbit, vốn có hệ thống bằng chứng, tuy nhiên nó thực sự nằm sau một danh sách trắng có cấp phép thường rất ngắn. Đôi khi danh sách trắng này chỉ có một tác nhân — đó chính là người đề xuất trạng thái. Về cơ bản, đó là người đề xuất trạng thái và chỉ có họ mới có thể thách thức chính mình. Kiểu như, cái gì cơ? Thật sự đấy.
 
-#### Hội đồng bảo mật (6:00) {#security-councils-600}
+### Hội đồng bảo mật (6:00) {#security-councils-600}
 
 Hiện tại, hầu hết các L2 không sử dụng hội đồng bảo mật. Chúng ta hiểu thế nào là một hội đồng bảo mật? Một hội đồng bảo mật về cơ bản là một đa chữ ký bao gồm ít nhất tám người tham gia và yêu cầu ngưỡng đồng thuận 75%. Vì vậy, bạn có thể coi nó như một đa chữ ký lớn, nhưng vấn đề không chỉ nằm ở kích thước — mà là thực tế chúng ta muốn những người tham gia được phi tập trung về mặt địa lý. Hôm qua, bạn có thể đã nghe một bài thuyết trình tuyệt vời về sự cần thiết của việc đa dạng hóa địa lý. Đó là những gì chúng ta muốn từ các cấu trúc này. Và về cơ bản, quan trọng nhất là chúng ta muốn những người tham gia đến từ các công ty khác nhau và các khu vực pháp lý khác nhau. Điều đó cực kỳ quan trọng, và tôi sẽ cho bạn thấy một số ví dụ về lý do tại sao.
 
 Hãy coi các hội đồng bảo mật như những đa chữ ký được tăng cường sức mạnh. Có một lớp xã hội rất quan trọng đằng sau chúng. Vì vậy, đây là trạng thái hiện tại của mọi thứ, và một lần nữa, nó rất tệ. Chúng ta chỉ có các hội đồng bảo mật ở Arbitrum, Optimism, Polygon, zkSync — và tôi biết rằng StarkNet, Scroll, và thú vị là Fuel đang ra mắt với một hội đồng bảo mật. Tất cả những người khác về cơ bản là một đa chữ ký rất nhỏ, nội bộ, thường là riêng tư, và thành thật mà nói, cực kỳ khó để phân biệt sự khác biệt giữa các đa chữ ký này và các EOA đơn giản.
 
-#### Các giả định tin cậy về tính khả dụng của dữ liệu (7:25) {#data-availability-trust-assumptions-725}
+### Các giả định tin cậy về tính khả dụng của dữ liệu (7:25) {#data-availability-trust-assumptions-725}
 
 Vấn đề lớn thứ ba mà chúng ta đã làm sai là hầu hết các L2 không phải Rollup đều được thiết lập với các giả định tin cậy về tính khả dụng của dữ liệu (DA) tồi tệ. Và tôi sử dụng từ "tồi tệ" — thứ nhất, vì tôi thích từ đó, và thứ hai, vì nó thực sự, thực sự rất tệ.
 
@@ -59,7 +59,7 @@ Một ủy ban tính khả dụng của dữ liệu ban đầu được tạo ra
 
 Vì vậy, tóm lại, tôi rất tiếc phải nói rằng, nhưng hiện tại ở hầu hết các L2, các nhà điều hành có cấp phép có thể đánh cắp hoặc đóng băng tiền của bạn. Chúng tôi ở đây để làm cho tất cả các bạn nhận thức được điều đó. Xin lỗi vì phải nói ra, nhưng chúng ta cần thay đổi thái độ.
 
-#### Tại sao các hệ thống bằng chứng lại quan trọng (8:40) {#why-proof-systems-matter-840}
+### Tại sao các hệ thống bằng chứng lại quan trọng (8:40) {#why-proof-systems-matter-840}
 
 Tại sao chúng ta nên quan tâm đến các hệ thống bằng chứng? Theo ý kiến của chúng tôi, có ít nhất ba lý do chính đáng giải thích tại sao tất cả chúng ta nên có một hệ thống bằng chứng hoạt động.
 
@@ -71,7 +71,7 @@ Một khi bạn giới thiệu một hệ thống bằng chứng, tình hình s�
 
 Cuối cùng, các hệ thống bằng chứng — nếu bạn ở Giai đoạn 2 — cho phép bạn loại bỏ bất kỳ trung gian nào. Bạn không cần một hội đồng bảo mật, hoặc nếu bạn có, nó chỉ dành cho các tình huống khẩn cấp. Vì vậy, điều đó thực sự có thể có những tác động sâu sắc về mặt pháp lý. Bạn có thể muốn ra mắt L2 của mình như một hệ thống Giai đoạn 2 ngay từ đầu. Điều đó là có thể, nhưng tất nhiên bạn cần phải có một hệ thống bằng chứng — lý tưởng nhất là bạn có thể muốn có nhiều hơn một. Đã có một số thông báo về các hệ thống làm điều đó, như thông báo gần đây từ nhóm Nethermind đang xây dựng một Rollup dự định sẽ là Giai đoạn 2 khi ra mắt.
 
-#### Tại sao lại là hội đồng bảo mật, chứ không phải đa chữ ký (11:29) {#why-security-councils-not-multisigs-1129}
+### Tại sao lại là hội đồng bảo mật, chứ không phải đa chữ ký (11:29) {#why-security-councils-not-multisigs-1129}
 
 Đó là về các hệ thống bằng chứng. Bây giờ, tại sao lại là hội đồng bảo mật chứ không chỉ là các đa chữ ký đơn giản? Lý do là: đừng tin rằng đa chữ ký là đa chữ ký. Đó là lý do — trừ khi có một lớp xã hội thực sự có thể thuyết phục bạn rằng chúng được đa dạng hóa về cơ bản.
 
@@ -83,7 +83,7 @@ Cuối cùng, khá gần đây chúng ta đã có một cuộc tấn công vào 
 
 Vì vậy, tóm lại: nếu bạn có một Rollup Giai đoạn 0 không có hội đồng bảo mật, về cơ bản một nhà điều hành độc hại có thể làm bất cứ điều gì họ muốn với tiền của bạn. Nếu bạn là một Rollup Giai đoạn 0 có hội đồng bảo mật, thì kẻ tấn công cần phải hối lộ một thiểu số hội đồng bảo mật — có thể là một việc khó làm, nhưng dễ dàng hơn nhiều so với việc hối lộ đa số hội đồng bảo mật, điều mà bạn sẽ cần làm nếu Rollup của bạn có một hệ thống bằng chứng. Và cuối cùng, không ai có thể đánh cắp tiền của bạn nếu bạn ở Giai đoạn 2. Đó là lời hứa của việc đạt đến Giai đoạn 2.
 
-#### Đề xuất phân loại lại (13:10) {#proposed-reclassification-1310}
+### Đề xuất phân loại lại (13:10) {#proposed-reclassification-1310}
 
 Câu hỏi đặt ra là: chúng ta có các động lực phù hợp để các dự án thực sự quan tâm không? Vấn đề là điều duy nhất chúng ta có thể làm — chúng ta với tư cách là L2BEAT và chúng ta với tư cách là cộng đồng Ethereum — là áp dụng áp lực xã hội. Vitalik đã nói rằng bắt đầu từ năm tới, anh ấy sẽ lên kế hoạch chỉ đề cập công khai đến các L2 ở Giai đoạn 1. Trước đây anh ấy thậm chí còn nói rằng anh ấy sẽ không gọi các hệ thống là Rollup nếu chúng không ở Giai đoạn 1.
 
@@ -93,7 +93,7 @@ Những gì chúng tôi đang đề xuất với cộng đồng — và điều 
 
 Sau đó, bạn có một hạng mục hệ thống khác không sử dụng DA của Ethereum. Chúng sử dụng các giả định tin cậy bổ sung đi kèm với DA bên ngoài. Chúng tôi gọi chúng là "alt-DA" nhưng chúng sẽ bao gồm Validium, optimium và bất kỳ cấu trúc lai nào mà bạn có thể tạo ra. Tuy nhiên, chúng phải cung cấp cho bạn các đảm bảo DA hợp lý — đó không thể là tầng hầm của bạn. Đó phải là một ủy ban tính khả dụng của dữ liệu có quy mô hợp lý, hoặc nếu bạn đang sử dụng Celestia hoặc Avail, bạn cần sử dụng cầu nối.
 
-#### Hạng mục "khác" và cam kết của L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### Hạng mục "khác" và cam kết của L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 Còn những hệ thống khác thì sao? Chúng tôi sẽ đưa chúng vào hạng mục thứ ba, mà chúng tôi gọi là — và bây giờ tôi đang chờ phản hồi của cộng đồng về cách đặt tên cho các hệ thống này — tên làm việc của chúng tôi là "khác" (others). Vấn đề là chúng được bảo mật bằng các đa chữ ký, và chúng tôi sẽ phơi bày bản chất thực sự của các đa chữ ký này. Đó là những gì chúng tôi muốn làm trong giao diện người dùng (UI) của mình.
 
@@ -107,7 +107,7 @@ Chỉ nói "Tôi có một hệ thống bằng chứng" liệu có đủ không?
 
 Chúng tôi đang tuyển dụng các nhà nghiên cứu. Chúng tôi sẽ làm tất cả công việc đó. Đây là cam kết của chúng tôi cho năm tới. Tôi hy vọng năm tới sẽ là năm của các L2 và các bản cuộn — tuy nhiên, vấn đề không phải là ra mắt một Rollup chỉ bằng một cú nhấp chuột. Vấn đề là bạn muốn có thể ra mắt một hệ thống với khả năng bảo mật tốt. Lý tưởng nhất là bạn muốn kế thừa càng nhiều tính bảo mật càng tốt từ Ethereum. Có rất nhiều việc phải làm để tất cả chúng ta đạt được điều đó. Nhưng nếu chúng ta không làm, thì tất cả những gì chúng ta đang làm về cơ bản là tạo ra hàng ngàn sidechain không an toàn. Tôi nghĩ rằng, với tư cách là một cộng đồng, chúng ta không muốn điều đó.
 
-#### Hỏi & Đáp (18:45) {#qa-1845}
+### Hỏi & Đáp (18:45) {#qa-1845}
 
 **Người dẫn chương trình:** Hãy đến với phần Hỏi & Đáp. Việc các bản cuộn có một bộ sắp xếp phi tập trung có quan trọng không, hay các cơ chế an toàn khác là đủ?
 

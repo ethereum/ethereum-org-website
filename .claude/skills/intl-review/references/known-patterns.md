@@ -36,6 +36,9 @@ These render successfully but say the wrong thing.
 - **Validator / miner swapped or conflated**.
 - **"Gas" → "Sprit"/"gasoline"** in some European languages — semantic translation of a domain term.
 - **"Wei"/"Gwei"/"ETH" translated** — units of value MUST remain in English/canonical form.
+- **"Holding" → "investing"** — recurring on long-term-storage copy (ru, pl, ko). Changes the claim, and can contradict a sibling key that correctly says "storage".
+- **Coordinated verbs with different case government** (Slavic) — "View, collect, and manage your NFTs": *управлять*/*керувати* take the instrumental while *просматривать*/*збирати* take the accusative, so one shared object cannot serve all three. Split the clause.
+- **Post-head modifier loses its first noun** — "custom RPCs and tokens" becomes "RPCs and custom tokens" wherever the adjective must follow and agree (ar, id). Prepose or repeat the modifier.
 
 ## High: visible quality issues
 

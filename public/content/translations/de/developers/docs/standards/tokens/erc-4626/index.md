@@ -4,7 +4,7 @@ description: "Ein Standard für renditebringende Tresore."
 lang: de
 ---
 
-## Einführung
+## Einführung {#introduction}
 
 ERC-4626 ist ein Standard zur Optimierung und Vereinheitlichung der technischen Parameter von renditebringenden Tresoren. Er bietet eine Standard-API für tokenisierte renditebringende Tresore, die Anteile an einem einzigen zugrunde liegenden ERC-20-Token repräsentieren. ERC-4626 skizziert außerdem eine optionale Erweiterung für tokenisierte Tresore, die ERC-20 nutzen, und bietet grundlegende Funktionen für die Einzahlung, Abhebung von Token und das Auslesen von Kontoständen.
 

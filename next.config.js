@@ -5,6 +5,7 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const mdRedirects = require("./md-redirects.config")
 const redirects = require("./redirects.config")
 
 const i18nConfigJson = require("./i18n.config.json")
@@ -172,6 +173,12 @@ module.exports = (phase) => {
               key: "X-Frame-Options",
               value: "DENY",
             },
+            {
+              // RFC 8288 discovery pointer for agents; static, so no Vary
+              // fragmentation of the CDN cache.
+              key: "Link",
+              value: '</llms.txt>; rel="describedby"; type="text/plain"',
+            },
           ],
         },
       ]
@@ -211,6 +218,8 @@ module.exports = (phase) => {
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
         ),
+        // Agent-facing markdown source redirects (see md-redirects.config.js)
+        ...mdRedirects,
       ]
     },
   }
@@ -269,8 +278,9 @@ module.exports = (phase) => {
           // Dev-only files that get traced from the package root but are never
           // read by the SSR handler at runtime. Keep dir excludes anchored with
           // "/**" -- Turbopack matches these globs as substrings during trace
-          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
-          // and drops it, 502ing ISR pages that use search.
+          // pruning, so a bare "docs" also matches the search modal's SSR chunk
+          // (the package name contains "docsearch") and drops it, 502ing ISR
+          // pages that use search.
           "tests/**",
           "docs/**",
           "README.md",

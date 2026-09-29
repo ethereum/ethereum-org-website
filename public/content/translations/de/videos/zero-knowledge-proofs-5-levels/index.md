@@ -19,13 +19,13 @@ Der Informatiker **Amit Sahai**, Professor an der UCLA Samueli School of Enginee
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=fOGdb1CTu5c), das von WIRED veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
 
-#### Einführung (0:00) {#introduction-000}
+### Einführung (0:00) {#introduction-000}
 
 **Amit Sahai:** Hallo, mein Name ist Amit Sahai und ich bin Professor für Informatik an der UCLA Samueli School of Engineering. Heute wurde ich gebeten, Zero-Knowledge-Beweise in fünf aufsteigenden Schwierigkeitsstufen zu erklären.
 
 Ein Zero-Knowledge-Beweis ist eine Möglichkeit für einen Beweiser, einen Verifizierer davon zu überzeugen, dass eine bestimmte Aussage wahr ist, und dabei dennoch keine zusätzlichen Informationen preiszugeben, außer der Tatsache, dass die Aussage wahr ist. Zero-Knowledge-Beweise werden in Blockchains und Kryptowährungen verwendet. Kryptographen sind von Zero-Knowledge begeistert, wegen seiner erstaunlichen mathematischen Eigenschaften, aber auch wegen seiner unglaublichen Anwendbarkeit auf so viele verschiedene Szenarien.
 
-#### Stufe 1: Kind (0:41) {#level-1-child-041}
+### Stufe 1: Kind (0:41) {#level-1-child-041}
 
 **Amit Sahai:** Was ist dein Lieblingsfach?
 
@@ -55,7 +55,7 @@ Also Chelsea, in deinen eigenen Worten, was ist ein Zero-Knowledge-Beweis?
 
 **Chelsea:** Ein Zero-Knowledge-Beweis ist der Beweis für eine Aussage. Man zeigt ihnen nicht das Warum oder Was. Man zeigt ihnen nur einen winzigen Ausschnitt oder macht einfach eine Art seltsamen Zaubertrick, der eigentlich kein Zaubertrick ist, und sie werden überzeugt sein. Und man hat ihnen nicht gezeigt, warum oder so etwas in der Art.
 
-#### Stufe 2: Teenager (3:31) {#level-2-teen-331}
+### Stufe 2: Teenager (3:31) {#level-2-teen-331}
 
 **Amit Sahai:** Hast du also schon einmal den Begriff Zero-Knowledge-Beweis gehört?
 
@@ -85,7 +85,7 @@ Basierend auf dem, was wir heute besprochen haben, in deinen eigenen Worten: Was
 
 **Teenager:** Es ist so, als hätte man dieses wirklich wichtige Geheimnis, von dem man möchte, dass jemand davon weiß, aber man möchte ihm nicht alles erzählen. Man kann einen Zero-Knowledge-Beweis verwenden, um ihm dieses Geheimnis zu beweisen, aber nicht alles davon preiszugeben.
 
-#### Stufe 3: Student (6:13) {#level-3-college-student-613}
+### Stufe 3: Student (6:13) {#level-3-college-student-613}
 
 **Amit Sahai:** Was studierst du?
 
@@ -131,7 +131,7 @@ Kannst du zwei Länder zufällig auswählen, und wir werden wieder zwei der Farb
 
 **Amit Sahai:** Ein großartiges Beispiel sind Wahlen. Wenn man beweisen könnte, dass eine Wahl korrekt durchgeführt wurde – dass jede Stimme gezählt wurde und alles dazu führte, dass eine Person mit einer bestimmten Gesamtzahl gewann – und zwar in Zero-Knowledge, dann muss man die tatsächlichen Stimmen keiner Person preisgeben. Und doch könnte jeder sehen, dass es korrekt gemacht wurde.
 
-#### Stufe 4: Doktorand (11:59) {#level-4-grad-student-1159}
+### Stufe 4: Doktorand (11:59) {#level-4-grad-student-1159}
 
 **Amit Sahai:** Es ist so toll, dich hier zu haben und mit dir zu sprechen, Eli. Kannst du mir ein wenig über deine Forschung erzählen?
 
@@ -165,7 +165,7 @@ Kannst du zwei Länder zufällig auswählen, und wir werden wieder zwei der Farb
 
 **Eli:** Ich denke, das ist einer der Gründe, warum ich mich so zur Multi-Party-Computation hingezogen fühlte. Eines der wichtigsten Probleme auf der Welt ist die Tatsache, dass so viele Menschen einander nicht vertrauen. In der Lage zu sein, Mathematik zu nutzen, um Technologie zu erschaffen, die es Menschen ermöglicht, zusammenzuarbeiten, ohne einander vertrauen zu müssen, ist eine wirklich coole und großartige Mission.
 
-#### Stufe 5: Experte (17:10) {#level-5-expert-1710}
+### Stufe 5: Experte (17:10) {#level-5-expert-1710}
 
 **Amit Sahai:** Shang-Hua, es ist so toll, dich wiederzusehen. Ich glaube, das letzte Mal haben wir uns 2017 oder so getroffen.
 

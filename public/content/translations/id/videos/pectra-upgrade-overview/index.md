@@ -19,11 +19,11 @@ Sebuah presentasi oleh **Christine Kim** di Devcon SEA yang membahas EIP yang di
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=ufIDBCgdGwY) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah sedikit diedit agar lebih mudah dibaca.*
 
-#### Pengantar (0:00) {#introduction-000}
+### Pengantar (0:00) {#introduction-000}
 
 Kita akan membahas semua EIP yang akan masuk ke dalam peningkatan Pectra. Penafian singkat sebelum saya mulai: semua yang akan saya katakan sepenuhnya bersifat informasional — untuk tujuan informasi — dan tidak boleh ditafsirkan sebagai nasihat keuangan atau investasi.
 
-#### Kapan Pectra Mainnet (0:23) {#when-is-pectra-mainnet-023}
+### Kapan Pectra Mainnet (0:23) {#when-is-pectra-mainnet-023}
 
 Sebelum kita membahas apa saja yang masuk ke dalam Pectra, pertanyaan yang paling sering diajukan kepada saya adalah "kapan Pectra akan diluncurkan di Mainnet?" Jadi saya akan menjawabnya terlebih dahulu agar kita bisa masuk ke hal-hal teknis.
 
@@ -43,7 +43,7 @@ Secara historis, pengembang telah menganggarkan sekitar dua minggu di antara pen
 
 Mengingat semua informasi yang saya ketahui saat ini dan kemajuan yang telah dicapai pengembang sejauh ini pada Pectra, analisis dan tebakan terbaik saya adalah bahwa Pectra Mainnet secara realistis akan terjadi pada bulan April 2025 mendatang. Sekali lagi, ini sangat tentatif karena banyak hal dapat berubah. Pengembangan terjadi dari minggu ke minggu — pengembang berada di panggilan ACD ini membicarakan tentang bug yang tidak mereka duga di EIP ini atau EIP baru ini yang ingin mereka tambahkan ke dalam Pectra.
 
-#### EIP lapisan eksekusi (6:23) {#execution-layer-eips-623}
+### EIP lapisan eksekusi (6:23) {#execution-layer-eips-623}
 
 Mari kita beralih ke inti dari pembicaraan ini — apa saja yang masuk ke dalam peningkatan Pectra. Ada sepuluh EIP yang masuk ke Pectra, dan empat di antaranya difokuskan pada lapisan eksekusi.
 
@@ -55,7 +55,7 @@ Mari kita beralih ke inti dari pembicaraan ini — apa saja yang masuk ke dalam 
 
 **EIP-7702** — menetapkan kode untuk akun yang dimiliki secara eksternal (EOA). Jenis transaksi baru akan hadir di Ethereum. Jenis transaksi ini untuk sementara akan memungkinkan EOA memiliki fleksibilitas yang lebih besar, mengaktifkan fitur seperti pemrosesan batch transaksi, transaksi bersponsor, transaksi bersyarat, dan keamanan yang didelegasikan. Anda mungkin berpikir, "apakah ini visi abstraksi akun yang menjadi kenyataan di Ethereum?" Tidak, bukan — ini adalah langkah kecil. Ini adalah langkah awal untuk melihat seperti apa peta jalan nyata menuju abstraksi akun asli yang sebenarnya di Ethereum. Ada cukup banyak perdebatan dalam hal bagaimana pengembang harus mengambil langkah pertama itu, dan banyak kontroversi seputar masuknya EIP ini dan desainnya — tetapi ini sudah masuk.
 
-#### EIP lapisan konsensus (12:00) {#consensus-layer-eips-1200}
+### EIP lapisan konsensus (12:00) {#consensus-layer-eips-1200}
 
 Ada enam lainnya — ini adalah EIP lapisan konsensus.
 
@@ -69,11 +69,11 @@ Ada enam lainnya — ini adalah EIP lapisan konsensus.
 
 **EIP-7549** — memindahkan indeks komite ke luar atestasi. Ini adalah restrukturisasi dan pemfaktoran ulang cara atestasi diagregasi untuk mengurangi beban jaringan di Ethereum dan menghemat bandwidth node. Ketika pengembang menyertakan ini di Pectra, mereka pikir ini adalah perubahan besar dengan manfaat luar biasa dan mudah dilakukan — tetapi dalam praktiknya, ternyata jauh lebih sulit untuk diimplementasikan daripada yang diharapkan.
 
-#### Ringkasan (17:19) {#summary-1719}
+### Ringkasan (17:19) {#summary-1719}
 
 Pectra adalah campuran dari berbagai pembaruan. Ini akan melakukan tiga hal: pertama, memperbaiki kekurangan kritis Ethereum sebagai rantai blok Bukti Kepemilikan (PoS) — pikirkan tentang MaxEB, itu adalah perbaikan kritis karena ukuran set validator dapat terus tumbuh tanpa terkendali. Kedua, meningkatkan pengalaman pengguna — jenis transaksi baru, desain yang lebih fleksibel, beberapa peningkatan untuk desain yang lebih tanpa kepercayaan untuk pool staking. Dan ketiga, meningkatkan kapasitas Ketersediaan data Ethereum — itu belum secara formal disertakan ke dalam Pectra tetapi tampaknya mungkin terjadi.
 
-#### EIP yang dihapus dari Pectra (18:02) {#eips-removed-from-pectra-1802}
+### EIP yang dihapus dari Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Berikut adalah semua EIP yang dihapus dari Pectra. Ini adalah semacam hal yang pertama kali terjadi untuk sebuah peningkatan yang memiliki begitu banyak EIP yang dihapus.
 
@@ -83,7 +83,7 @@ Berikut adalah semua EIP yang dihapus dari Pectra. Ini adalah semacam hal yang p
 
 Ini sekarang dipindahkan ke Fusaka. Verkle awalnya dijadwalkan untuk Fusaka tetapi sejak itu telah ditunda lebih lanjut. EOF dan PeerDAS ada di Fusaka untuk saat ini. Ada EIP lain yang akan dipertimbangkan kembali oleh pengembang untuk disertakan di Fusaka — transisi SSZ, daftar inklusi, perubahan pada penerbitan, kedaluwarsa riwayat, ePBS, dan arah abstraksi akun.
 
-#### Tanya Jawab (22:02) {#qa-2202}
+### Tanya Jawab (22:02) {#qa-2202}
 
 **Host:** Kapan EOF?
 

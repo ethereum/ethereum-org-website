@@ -92,7 +92,7 @@ Ethereum to wielka rzecz: obejmuje społeczność, technologię, zestaw pomysł�
 Oznacza to, że witryna musi obsługiwać wiele różnych ścieżek użytkowników, od „dewelopera, który potrzebuje konkretnego narzędzia” po „nowicjusza, który właśnie kupił trochę ETH i nie wie, czym jest portfel”.
 „Jaka jest najlepsza witryna dla platformy blockchain?” pozostaje otwartym pytaniem – jesteśmy pionierami. Zbudowanie tego wymaga eksperymentowania.
 
-## Mapa drogowa produktu {#roadmap}
+## Mapa drogowa produktu {#get-involved}
 
 Aby uczynić naszą pracę bardziej przystępną i wspierać współpracę ze społecznością, główny zespół ethereum.org publikuje przegląd naszych celów mapy drogowej w ramach [cyklu Shape Up](https://www.productplan.com/glossary/shape-up-method/).
 

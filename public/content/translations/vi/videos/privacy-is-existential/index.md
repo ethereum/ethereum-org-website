@@ -18,7 +18,7 @@ Một bài thuyết trình của **Peter Van Valkenburgh**, Giám đốc Điều
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=GQML0c1_4Gs) được xuất bản bởi Tổ chức Ethereum. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu (0:00) {#introduction-000}
+### Giới thiệu (0:00) {#introduction-000}
 
 Đây là một sân khấu lớn với một lối đi dài và tôi e rằng mình thuộc thế hệ cũ, vì vậy tôi có chuẩn bị sẵn một bài phát biểu bằng văn bản, nhưng hy vọng các bạn sẽ thích. Vì vậy, cảm ơn vì đã mời tôi. Coin Center, tổ chức của tôi, đã hoạt động được 11 năm. Chúng tôi đang bảo vệ các nhà phát triển và người dùng Bitcoin, Ethereum, và các công nghệ tiền mã hóa tiếp theo khỏi các quy định không phù hợp của chính phủ tại Washington DC. Chúng tôi nhận biết được các mối đe dọa khi nhìn thấy chúng. Vì vậy, cách đây hơn 9 năm, tôi đã đứng trên sân khấu ở Thượng Hải tại DevCon lần thứ hai của Ethereum và tôi đã cảnh báo về những nguy hiểm khi thực hiện ICO. Đó thực sự là bài thuyết trình mở màn tại DevCon lần thứ hai. Đó là năm 2016. Ngay tại thời điểm bắt đầu của cái gọi là sự bùng nổ ICO. Đó là rất lâu trước khi Gary Gensler làm việc tại SEC. Đó là trước khi bất kỳ ai nhận được thông báo Wells. Thậm chí là trước cả vụ hack DAO, mà nếu bạn còn nhớ hoặc đã ở đó vào thời điểm đó, đã châm ngòi cho báo cáo DAO từ SEC trong giai đoạn đầu của cuộc điều tra và truy tố những người trong lĩnh vực tiền mã hóa.
 
@@ -28,7 +28,7 @@ Người Mỹ có thể sử dụng công nghệ này. Và có lẽ quan trọng
 
 Anh ấy là một nhà phát triển phần mềm. Và anh ấy đang kiện Bộ Tư pháp tại một tòa án ở Texas để có được phán quyết tuyên bố rằng việc xuất bản phần mềm vì quyền riêng tư không phải là tội phạm và không yêu cầu giấy phép ở Hoa Kỳ. Vì vậy, bạn có thể không biết nhiều về tôi hoặc
 
-#### Quyền riêng tư là vấn đề sống còn (3:15) {#privacy-is-existential-315}
+### Quyền riêng tư là vấn đề sống còn (3:15) {#privacy-is-existential-315}
 
 Coin Center, nhưng hy vọng bạn biết rằng bạn nên tin tưởng tôi khi tôi gióng lên hồi chuông cảnh báo, khi một cảnh báo là chính đáng. Nếu chúng ta muốn thành công trong việc xây dựng và duy trì cơ sở hạ tầng tài chính tự do và mở, chúng ta cần phải bước đi cẩn thận. Và đó là lý do tại sao hôm nay tôi muốn nói về quyền riêng tư. Quyền riêng tư là vấn đề sống còn đối với Ethereum. Quyền riêng tư không phải là một bề mặt tấn công pháp lý. Tôi sẽ không đứng đây và bảo bạn đừng xây dựng quyền riêng tư theo cách tôi đã bảo bạn đừng làm ICO vào năm 2016.
 
@@ -36,7 +36,7 @@ Quyền riêng tư thực sự là một cách để thu hẹp bề mặt tấn 
 
 Và để chứng minh điều đó với bạn, vụ án mà tôi muốn hướng sự chú ý của bạn đến hôm nay không phải là một vụ truy tố luật chứng khoán. Nó thậm chí không phải là một vụ truy tố rửa tiền hay tài chính bất hợp pháp. Nó liên quan đến giá trị có thể trích xuất của thợ đào (MEV). Nhưng trước khi chúng ta đi vào vấn đề đó, hãy nói ngắn gọn về Frankenstein. Như vị bác sĩ đáng kính đã nói, việc tiếp thu kiến thức nguy hiểm biết bao, và người đàn ông tin rằng quê hương của mình là cả thế giới sẽ hạnh phúc hơn nhiều so với kẻ khao khát trở nên vĩ đại hơn những gì bản chất của anh ta cho phép.
 
-#### Mary Shelley và bánh cóc một chiều của kiến thức (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
+### Mary Shelley và bánh cóc một chiều của kiến thức (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Đây là những gì tôi nghĩ Mary Shelley đang nói trong cuốn tiểu thuyết đó. Quyền riêng tư không chỉ là về nhân phẩm con người. Nó là về sự vắng mặt hiệu quả của kiến thức. Giống như việc sẽ rất khó khăn để sống một cuộc sống với sự giám sát liên tục, mọi người luôn xâm phạm quyền riêng tư của bạn, thì cũng sẽ rất khó khăn để sống một cuộc sống với kiến thức sâu sắc liên tục về các vấn đề riêng tư của mọi người khác. Bạn liên tục xâm phạm quyền riêng tư của mọi người khác. Tại sao lại như vậy? Bởi vì trở nên toàn tri mà không toàn năng, nhìn thấy mọi thứ mà không có khả năng sửa chữa mọi thứ, sẽ khiến con người phát điên. Nó phá hủy nhân tính của chúng ta bằng sự lo lắng, kiêu ngạo và việc theo đuổi sự kiểm soát đối với những thứ không thể kiểm soát.
 
@@ -46,7 +46,7 @@ Nó không phải về Bằng chứng công việc (PoW). Nó không phải về
 
 Chi phí hòa giải làm tăng chi phí giao dịch, giới hạn quy mô giao dịch thực tế tối thiểu và cắt đứt khả năng cho các giao dịch nhỏ thông thường. Và có một chi phí rộng lớn hơn, đó là việc mất khả năng thực hiện các khoản thanh toán không thể đảo ngược cho các dịch vụ không thể đảo ngược. Với khả năng đảo ngược, nhu cầu về sự tin cậy lan rộng. Vì vậy, mục tiêu của Satoshi thực sự là tính trung lập cũng nhiều như tính không thể đảo ngược. Khả năng đảo ngược đối với ông là nguồn gốc của các chi phí giao dịch khổng lồ liên quan đến sự tin cậy. Ông ấy đã không nói thẳng ra điều đó trong sách trắng,
 
-#### Chi phí hòa giải tranh chấp (7:50) {#the-cost-of-mediating-disputes-750}
+### Chi phí hòa giải tranh chấp (7:50) {#the-cost-of-mediating-disputes-750}
 
 nhưng tôi nghĩ những gì ông ấy muốn nói về việc hòa giải tranh chấp cũng là kiểm soát gian lận, ngăn chặn tội phạm, tuân thủ luật pháp và quyền lực của các quốc gia dân tộc, và kiểm soát con người. Chúng ta thường nói về việc các Chuỗi khối kém hiệu quả về mặt tính toán như thế nào, và đúng là như vậy. rằng ngay cả nỗ lực tính toán khổng lồ của việc xác minh chữ ký kỹ thuật số trên toàn cầu mà không có sự song song hóa cũng mờ nhạt so với sự kém hiệu quả vốn có trong một cuộc tranh chấp của con người về giá trị đạo đức của mọi giao dịch và liệu nó có nên được đưa vào Chuỗi hay không.
 
@@ -58,7 +58,7 @@ Tốt hơn là nếu họ thậm chí không thể nhận thức được quyề
 
 Không. Lập luận tốt nhất cho quyền riêng tư là tính trung lập của trình xác thực phụ thuộc vào nó bởi vì tính trung lập thông qua sự phi tập trung sẽ không bao giờ là đủ. Tính trung lập đòi hỏi sự mù quáng (không nhìn thấy dữ liệu). Tôi xin khiêm tốn đề xuất rằng có
 
-#### Hai quy luật về kiến thức và quyền lực (10:24) {#two-rules-of-knowledge-and-power-1024}
+### Hai quy luật về kiến thức và quyền lực (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 hai quy luật cơ bản về kiến thức và quyền lực trong các Chuỗi khối. Quy luật đầu tiên, không có gì minh bạch mà vẫn giữ được tính trung lập. Một sổ cái có thể nhìn thấy sẽ trở thành một sổ cái bị can thiệp. Nó sẽ bị can thiệp bởi tư lợi của các trình xác thực hùng mạnh, thông qua sự thao túng vì tư lợi như giá trị có thể trích xuất của thợ đào (MEV). Nó sẽ bị can thiệp bởi áp lực ngoài chuỗi của các thực thể hùng mạnh như các tập đoàn và các quốc gia dân tộc thông qua việc áp đặt các nghĩa vụ pháp lý và trách nhiệm pháp lý đối với việc không thực hiện các nghĩa vụ đó. Nếu một trình xác thực có dù chỉ một lượng nhỏ quyền lực, họ sẽ bị buộc phải khai thác quyền lực đó. Một thế giới đã được lập bản đồ là một thế giới sẽ bị chia cắt.
 
@@ -70,7 +70,7 @@ Câu chuyện về Tornado Cash đã cho thấy rằng các công cụ quyền r
 
 Các pool quyền riêng tư là một cách tiếp cận khôn ngoan để hạn chế mối đe dọa đó. Cố gắng hết sức có thể để từ chối những người xấu truy cập vào công cụ trung lập tốt, nhưng lưu ý rằng công cụ đó sẽ không còn trung lập nữa. Và ngay cả khi đó, đôi khi bất kỳ ai đang cung cấp tập ẩn danh cho pool đó sẽ thất bại trong việc từ chối những người xấu truy cập vào công cụ đó. Và giao dịch tiếp nhận người dùng của những người xấu đó sẽ vẫn hiển thị trên lớp 1 (l1). Và nó sẽ là đạn dược mạnh mẽ cho đối thủ của chúng ta.
 
-#### Vụ án Pereira Bueno và MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
+### Vụ án Pereira Bueno và MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 Nhưng vụ án thực sự thuyết phục tôi về nhu cầu cấp thiết đối với quyền riêng tư ở lớp cơ sở không phải là Tornado Cash. Đó là một vụ án khác ở Quận Nam New York, vụ án Pereira Bueno. Hai anh em đang bị buộc tội lừa đảo qua mạng. Họ đã tìm ra cách sử dụng phần mềm MEV Boost để thực hiện tấn công sandwich đối với những người dùng MEV Boost khác, những người mà bản thân họ đang tấn công sandwich những người dùng Ethereum thông thường. Họ đã kiếm được hơn 20 triệu đô la khi làm việc này. Họ không nói dối bất kỳ ai hoặc trình bày sai về bản thân với bất kỳ đối tác quan hệ ủy thác hoặc hợp đồng nào. Tuy nhiên, các công tố viên Quận Nam New York cho rằng họ phạm tội lừa đảo qua mạng, một trọng tội liên bang, bởi vì họ không phải là, xin trích dẫn, một trình xác thực trung thực.
 
@@ -78,7 +78,7 @@ Khi thuật ngữ xác thực trung thực và trình xác thực trung thực x
 
 Giá trị có thể trích xuất của thợ đào (MEV) là một thực tế đáng ghê tởm của Ethereum. Nó cũng có nguồn gốc từ sự thiếu hụt quyền riêng tư. Chính bản chất công khai của các giao dịch DEX cho phép chúng dễ dàng bị tấn công sandwich bởi các trình xác thực. Sẽ khó hơn nhiều, có lẽ không phải là không thể, nhưng khó hơn nhiều để tấn công sandwich các giao dịch nếu bạn không thể nhìn thấy các nguyên tắc kinh tế cơ bản của chúng. Nhưng tôi không chỉ muốn quyền riêng tư ở lớp cơ sở như một cách để ngăn cản MEV. Tôi muốn nó như một cách để bảo vệ các trình xác thực.
 
-#### Các nghĩa vụ có thể thực thi về mặt pháp lý của trình xác thực (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Các nghĩa vụ có thể thực thi về mặt pháp lý của trình xác thực (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 Nước cờ lớn hơn của DOJ trong vụ án Pereira Bueno là các trình xác thực có các nghĩa vụ có thể thực thi về mặt pháp lý đối với nhau do bản chất công khai của các giao dịch mà họ xác thực. Và nếu những nghĩa vụ đó bị vi phạm, các trình xác thực, tôi nghĩ họ nghĩ vậy, nên kiện lẫn nhau. Và nếu họ không làm vậy, nhà nước, Quận Nam New York, nên truy tố các trình xác thực không trung thực vì tội phạm. Và điều này không chỉ dừng lại ở tội lừa đảo qua mạng. Nếu bạn có thể nhìn thấy một giao dịch rửa tiền hoặc có thể đã nhìn thấy nó bằng cách sử dụng phân tích Chuỗi khối, thì làm sao bạn lại không đồng lõa trong vụ rửa tiền đó?
 
@@ -86,7 +86,7 @@ Nếu bạn xây dựng trên một phiên bản của Chuỗi có chứa các g
 
 Sự nhắm mắt làm ngơ có chủ ý không phải là một lời bào chữa, nhưng sự mù quáng thực sự (không thể nhìn thấy) thì có. Vì vậy, nếu bạn thực sự muốn tính không cần tin cậy, nếu bạn thực sự muốn cơ sở hạ tầng trung lập, nếu bạn muốn những đường ống câm (dumb pipes), thì những đường ống đó cần phải thực sự mù quáng trước những gì chảy qua chúng.
 
-#### Các đường ống tài chính truyền thống và SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
+### Các đường ống tài chính truyền thống và SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Bây giờ, một lời chỉ trích tốt về tất cả những điều này, bạn có thể nói, Peter, chúng ta đã có những đường ống câm trong ngành tài chính truyền thống, trong hệ thống tài chính toàn cầu truyền thống, và rằng các nhà điều hành của những đường ống câm đó không bị mù quáng về mặt mật mã đối với các thực tế kinh tế và các khía cạnh tội phạm của các giao dịch mà họ đưa vào sổ cái của mình. Đường ống lớn nhất trong số đó được gọi là SWIFT. Và đây là một lập luận mạnh mẽ chống lại những gì tôi vừa nói.
 
@@ -100,7 +100,7 @@ Thứ hai, SWIFT không giống như Tornado Cash và thậm chí không giống
 
 Và cuối cùng, ngay cả khi SWIFT sống sót qua cuộc khủng hoảng diễn biến chậm hiện tại đang mở ra với một số biểu hiện của tính trung lập còn nguyên vẹn, SWIFT là một hệ thống cần cấp phép chỉ bao gồm các ngân hàng trong mạng lưới của nó. người dùng phải chịu sự chi phối của các ngân hàng và các giao dịch của họ hoàn toàn hiển thị với những bên được tin cậy đó, những người cuối cùng lại hợp tác với các quốc gia dân tộc tham nhũng và độc tài. Vì vậy, chắc chắn, bạn có thể nói rằng lập luận của tôi về việc quyền riêng tư ở lớp cơ sở là điều cần thiết cho tính trung lập là chưa đủ căn cứ, nhưng bạn có thực sự chỉ muốn xây dựng lại hệ thống tài chính toàn cầu bằng Solidity với tất cả những khiếm khuyết của hệ thống tài chính toàn cầu và tất cả những khiếm khuyết của Solidity không? Hay chúng ta thực sự ở đây vì sự tự do và cởi mở? Chúng ta có thực sự ở đây vì những đường ống câm không?
 
-#### Kết luận và bảo vệ cơ sở hạ tầng trung lập (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
+### Kết luận và bảo vệ cơ sở hạ tầng trung lập (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 Tóm lại, Coin Center sẽ không đi đâu cả, và chúng tôi sẽ luôn ở đây để giúp bảo vệ các nhà phát triển Giao thức và cơ sở hạ tầng khỏi sự truy tố bất công và các quy định quá rộng. Nhưng nếu không có quyền riêng tư thực sự, cuộc chiến đó ngày càng trở nên khó khăn hơn. Chúng ta có thể làm gì? Một, tôi tin rằng Ethereum nên có quyền riêng tư ở lớp cơ sở hoặc ít nhất trở thành sổ cái gốc cho các L2 có các trình tự sắp xếp (sequencer) mù và thực sự phi tập trung.
 
@@ -110,7 +110,7 @@ Và chúng tôi có một dự án John Hancock mới được công bố, ừm,
 
 Quyền riêng tư là vấn đề sống còn. Cảm ơn các bạn.
 
-#### Phiên hỏi đáp (24:21) {#qa-session-2421}
+### Phiên hỏi đáp (24:21) {#qa-session-2421}
 
 **Người dẫn chương trình:** Cảm ơn bạn. Đã chia sẻ điều mà tôi nghĩ là một trong những chủ đề quan trọng nhất của thời đại chúng ta cho đến nay. Tôi nghĩ câu hỏi đầu tiên của chúng ta thực sự nằm trong phạm vi — bạn nhìn nhận thế nào về việc giải thích quyền riêng tư cho những người mới? Trong một thời gian dài, khái niệm về quyền riêng tư đã bị gắn liền với ý tưởng về sự bí mật này — nó dành cho những người mặc áo choàng trùm đầu, v.v. Bạn cảm thấy đó là một trở ngại lớn như thế nào, đặc biệt là khi bạn nghĩ về những nỗ lực vận động hành lang? Bạn cần người bình thường cũng cảm thấy như đây là thứ dành cho họ. Bạn có cảm thấy đó là một cuộc đấu tranh lớn không? Làm thế nào để chúng ta giảm thiểu điều đó?
 

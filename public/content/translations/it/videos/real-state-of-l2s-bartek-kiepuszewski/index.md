@@ -19,7 +19,7 @@ Un keynote di **Bartek Kiepuszewski**, fondatore di L2BEAT, alla Devcon SEA che 
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=ik2JxmHDmyw) pubblicata dalla Fondazione Ethereum. È stata leggermente modificata per facilitarne la lettura.*
 
-#### Introduzione (0:00) {#introduction-000}
+### Introduzione (0:00) {#introduction-000}
 
 Essendo uno dei fondatori di L2BEAT, ho l'opportunità unica di lavorare praticamente con ogni singolo team di L2 in circolazione, e collaboriamo con loro fin dagli albori di questo settore, ovvero circa quattro anni fa. È incredibile. Il tempo vola davvero in fretta. Abbiamo lavorato con i primi pionieri della tecnologia a conoscenza zero (ZK), abbiamo lavorato con il Plasma Group che poi è stato rinominato in Optimism, abbiamo lavorato con Arbitrum. E da questo palco voglio ringraziare tutti questi team, perché senza il vostro supporto non saremmo certamente qui. Come L2BEAT, siamo estremamente grati per tutto il supporto che la community ci offre.
 
@@ -27,7 +27,7 @@ Diamo quindi un'occhiata a ciò che siamo riusciti a realizzare. Prima di tutto,
 
 Il punto è che, con tutta questa crescita, arrivano anche molte responsabilità. Dobbiamo capire che gli utenti finali che utilizzano questi sistemi stanno investendo denaro in questi rollup perché credono che i rollup ereditino la sicurezza di Ethereum. Con questa consapevolezza, a mio parere, dobbiamo iniziare a fare sul serio riguardo alla sicurezza.
 
-#### Scalare Ethereum (2:10) {#scaling-ethereum-210}
+### Scalare Ethereum (2:10) {#scaling-ethereum-210}
 
 Siamo anche riusciti a scalare Ethereum. Ethereum procedeva piuttosto bene, ma ha iniziato a diventare davvero lento rispetto alla domanda e le commissioni stavano diventando molto alte. Quindi stiamo sicuramente scalando: anche questi numeri stanno salendo. È incredibile.
 
@@ -35,7 +35,7 @@ Tuttavia, c'è un "ma". Sapete, ragazzi, c'è sempre un "ma", giusto? E sono qui
 
 Perché sapete, abbiamo usato le rotelle per troppo tempo. Se sei un adulto che usa le rotelle (e ripeto, sono passati quattro anni), allora sei davvero immaturo. Va bene usare le rotelle se sei un bambino. Non va bene usarle se sei un adulto. E penso che sia giunto il momento per tutti noi di smettere di essere timidi al riguardo. Dovremmo tutti farci sentire e non dovremmo soffrire della sindrome dei vestiti nuovi dell'imperatore.
 
-#### Il grande "ma": la mancanza di sistemi di prova (4:30) {#the-big-but-missing-proof-systems-430}
+### Il grande "ma": la mancanza di sistemi di prova (4:30) {#the-big-but-missing-proof-systems-430}
 
 Quindi qual è questo grande "ma"? Beh, prima di tutto, la maggior parte dei L2 oggi non ha un sistema di prova, il che è in qualche modo sorprendente perché i primi pionieri come StarkNet, zkSync, Aztec, quattro anni fa, quando lanciavano i loro primi rollup specifici per le applicazioni, avevano sistemi di prova. Quindi sì, oggi puoi lanciare un L2 con un clic. Tuttavia, è davvero un L2? È davvero un rollup? Quello che stai facendo è lanciare qualcosa che è protetto da un multisig. Non credo che sia sufficiente.
 
@@ -43,13 +43,13 @@ Lo stato dell'ecosistema oggi è un po' come in questo diagramma. A sinistra pot
 
 Quel grafico a destra includerà anche tutti gli stack Orbit, che hanno un sistema di prova, tuttavia è in realtà dietro una whitelist autorizzata spesso molto breve. A volte questa whitelist è composta da un solo attore: è lo stesso del proponente di stato. È essenzialmente il proponente di stato e sono solo loro a potersi sfidare da soli. Cioè, cosa? Sul serio.
 
-#### Consigli di sicurezza (6:00) {#security-councils-600}
+### Consigli di sicurezza (6:00) {#security-councils-600}
 
 Ora, la maggior parte dei L2 non utilizza consigli di sicurezza. Cosa intendiamo per consiglio di sicurezza? Un consiglio di sicurezza è essenzialmente un multisig composto da almeno otto partecipanti e che richiede una soglia di consenso del 75%. Quindi potete pensarlo come un grande multisig, ma non si tratta solo delle dimensioni: si tratta del fatto che vogliamo che i partecipanti siano geograficamente decentralizzati. Potreste aver sentito ieri una fantastica presentazione sulla necessità di diversificazione geografica. Questo è ciò che vogliamo da queste strutture. Ed essenzialmente, vogliamo che i partecipanti provengano soprattutto da aziende diverse e giurisdizioni diverse. Questo è importantissimo e vi mostrerò alcuni esempi del perché.
 
 Pensate ai consigli di sicurezza come a questi multisig potenziati. C'è un livello sociale molto importante dietro di essi. Quindi questo è lo stato attuale delle cose e, ripeto, è molto negativo. Abbiamo consigli di sicurezza solo in Arbitrum, Optimism, Polygon, zkSync (e so che StarkNet, Scroll e, curiosamente, Fuel stanno per essere lanciati con un consiglio di sicurezza). Tutti gli altri sono essenzialmente un multisig molto piccolo, interno, spesso privato e, francamente, è estremamente difficile distinguere tra questi multisig e dei semplici EOA.
 
-#### Assunzioni di fiducia sulla disponibilità dei dati (7:25) {#data-availability-trust-assumptions-725}
+### Assunzioni di fiducia sulla disponibilità dei dati (7:25) {#data-availability-trust-assumptions-725}
 
 Il terzo grande errore che abbiamo commesso è che la maggior parte dei L2 non rollup sono configurati con assunzioni di fiducia sulla disponibilità dei dati (DA) pessime. E uso la parola "pessime": A, perché mi piace, e B, perché è davvero, davvero un disastro.
 
@@ -59,7 +59,7 @@ Un comitato per la disponibilità dei dati è stato originariamente creato e pro
 
 Quindi, nel complesso, mi dispiace dirlo, ma al momento nella maggior parte dei L2, gli operatori autorizzati possono rubare o congelare i vostri fondi. Siamo qui per rendervi tutti consapevoli di questo. Mi dispiace dirlo, ma dobbiamo cambiare atteggiamento.
 
-#### Perché i sistemi di prova sono importanti (8:40) {#why-proof-systems-matter-840}
+### Perché i sistemi di prova sono importanti (8:40) {#why-proof-systems-matter-840}
 
 Perché dovremmo preoccuparci dei sistemi di prova? Ci sono almeno tre buone ragioni, secondo noi, per cui dovremmo tutti avere un sistema di prova funzionante.
 
@@ -71,7 +71,7 @@ Una volta introdotto un sistema di prova, la situazione è molto più difficile 
 
 Infine, i sistemi di prova (se si è nella Fase 2) consentono di rimuovere qualsiasi intermediario. Non c'è bisogno di un consiglio di sicurezza o, se lo si ha, è solo per situazioni di emergenza. Quindi questo potrebbe effettivamente avere profonde implicazioni normative. Si potrebbe voler lanciare il proprio L2 come sistema di Fase 2 fin dall'inizio. È possibile, ma ovviamente è necessario disporre di un sistema di prova: idealmente se ne potrebbe volere più di uno. Ci sono già alcuni annunci di sistemi che lo fanno, come il recente annuncio del team di Nethermind che sta costruendo un rollup destinato a essere di Fase 2 al momento del lancio.
 
-#### Perché i consigli di sicurezza e non i multisig (11:29) {#why-security-councils-not-multisigs-1129}
+### Perché i consigli di sicurezza e non i multisig (11:29) {#why-security-councils-not-multisigs-1129}
 
 Questo riguardava i sistemi di prova. Ora, perché i consigli di sicurezza e non dei semplici multisig? Il motivo è: non credete che i multisig siano multisig. Questo è il motivo, a meno che non ci sia un livello sociale che possa effettivamente convincervi che siano fondamentalmente diversificati.
 
@@ -83,7 +83,7 @@ Infine, molto di recente abbiamo avuto un attacco a un multisig. Non pensate nem
 
 Quindi, per riassumere: se si ha un rollup di Fase 0 senza consiglio di sicurezza, essenzialmente un operatore malintenzionato può fare quello che vuole con i vostri fondi. Se si è un rollup di Fase 0 con un consiglio di sicurezza, allora un utente malintenzionato deve corrompere una minoranza del consiglio di sicurezza: forse una cosa difficile da fare, ma molto più facile che corrompere la maggioranza del consiglio di sicurezza, cosa che si dovrebbe fare se il rollup avesse un sistema di prova. E infine, nessuno può rubare i vostri fondi se siete nella Fase 2. Questa è la promessa di arrivare alla Fase 2.
 
-#### Riclassificazione proposta (13:10) {#proposed-reclassification-1310}
+### Riclassificazione proposta (13:10) {#proposed-reclassification-1310}
 
 La domanda è: abbiamo gli incentivi giusti affinché i progetti se ne preoccupino davvero? Il problema è che l'unica cosa che possiamo fare (noi come L2BEAT e noi come community di Ethereum) è applicare pressione sociale. Vitalik ha detto che a partire dal prossimo anno ha in programma di menzionare pubblicamente solo i L2 che sono di Fase 1. In precedenza aveva persino detto che non chiamerà i sistemi rollup se non sono di Fase 1.
 
@@ -93,7 +93,7 @@ Quello che stiamo proponendo alla community (e questo andrà sul forum per il fe
 
 Poi c'è un'altra categoria di sistemi che non utilizzano la DA di Ethereum. Utilizzano assunzioni di fiducia aggiuntive che derivano da una DA esterna. Li chiamiamo "alt-DA" ma includerebbero validium, optimium e qualsiasi costruzione ibrida si possa creare. Tuttavia, devono fornire garanzie di DA ragionevoli: non può essere la vostra cantina. Deve essere un comitato per la disponibilità dei dati di dimensioni ragionevoli o, se si utilizza Celestia o Avail, è necessario utilizzare il ponte.
 
-#### La categoria "altri" e l'impegno di L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
+### La categoria "altri" e l'impegno di L2BEAT (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 E gli altri? Li inseriremo in una terza categoria, che chiamiamo (e ora aspetto il feedback della community su come nominare questi sistemi) con il nome provvisorio di "altri". Il punto è che sono protetti da multisig e noi esporremo questi multisig per quello che sono. Questo è ciò che vogliamo fare nella nostra interfaccia utente.
 
@@ -107,7 +107,7 @@ Questo è l'aspetto che pensiamo avrebbe la categoria "altri": questi sono i dat
 
 Stiamo assumendo ricercatori. Faremo tutto questo lavoro. Questo è il nostro impegno per il prossimo anno. Spero che il prossimo anno sarà l'anno dei L2 e dei rollup; tuttavia, non si tratta di lanciare un rollup con un clic. Il punto è che si vuole essere in grado di lanciare un sistema con una buona sicurezza. Idealmente si vuole ereditare quanta più sicurezza possibile da Ethereum. C'è molto lavoro da fare per tutti noi per raggiungere questo obiettivo. Ma se non lo facciamo, allora tutto ciò che stiamo facendo è essenzialmente creare migliaia di sidechain insicure. Non credo che lo vogliamo, come community.
 
-#### Domande e risposte (18:45) {#qa-1845}
+### Domande e risposte (18:45) {#qa-1845}
 
 **Presentatore:** Passiamo alle domande e risposte. È importante che i rollup abbiano un sequencer decentralizzato o sono sufficienti altri meccanismi di sicurezza?
 

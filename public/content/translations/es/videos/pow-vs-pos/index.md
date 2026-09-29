@@ -19,7 +19,7 @@ Un debate entre **Lyn Alden** y **Justin Drake** sobre las compensaciones fundam
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=1m12zgJ42dI) publicada por Bankless. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:00) {#introduction-000}
+### Introducción (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Bienvenidos a Bankless, donde exploramos la frontera del dinero y las finanzas de internet. Soy Ryan Sean Adams, estoy aquí con David Hoffman, y estamos aquí para ayudarles a ser más "bankless" (independientes de los bancos). Chicos, hoy les espera un regalo. Tenemos a dos expertos en prueba de participación (PoS) y prueba de trabajo (PoW), y están debatiendo cuál es mejor para crear un sistema monetario global —un sistema monetario cripto—: la prueba de trabajo o la prueba de participación. Lyn Alden y Justin Drake en el episodio de hoy. Vamos a hablar de varias cosas. Número uno: ¿cuál proporciona la mayor seguridad económica, la prueba de trabajo o la prueba de participación? Número dos: ¿cuál proporciona la mejor disuasión y capacidad de recuperación frente al temido ataque del 51%? Número tres: ¿cuál minimiza el poder de gobernanza de las élites? ¿Cuál da más "poder al pueblo"? Número cuatro: ¿cuál es económicamente el sistema más justo para participar? Y número cinco —esta es personalmente mi favorita— esta conversación sobre que la prueba de trabajo es más un dinero mercancía y la prueba de participación es más un dinero capital.
 
@@ -29,7 +29,7 @@ Un debate entre **Lyn Alden** y **Justin Drake** sobre las compensaciones fundam
 
 **Justin Drake:** Muy bien, gracias de nuevo por invitarme, chicos.
 
-#### Enmarcando el debate: prima monetaria (7:30) {#framing-the-debate-monetary-premium-730}
+### Enmarcando el debate: prima monetaria (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** Quiero empezar con la gran pregunta. Creo que estamos intentando responder a la metapregunta de si la prueba de trabajo o la prueba de participación es más propensa a la acumulación de prima monetaria; básicamente, cuál de esos dos protocolos de consenso es más propenso a convertir una criptomoneda en dinero. Justin, ¿estás de acuerdo en que este es el enfoque correcto?
 
@@ -41,7 +41,7 @@ Un debate entre **Lyn Alden** y **Justin Drake** sobre las compensaciones fundam
 
 **Justin Drake:** Quiero intervenir y argumentar por qué esta analogía entre las acciones y la prueba de participación es quizás una mala analogía. En el contexto de las acciones, tienes derecho a voto sobre cualquier cosa: puedes cambiar por completo las reglas de la empresa. En el consenso de prueba de participación, los participantes del consenso no pueden simplemente cambiar las reglas de forma arbitraria. No pueden decir "simplemente nos vamos a dar mil ETH a cada uno"; eso sería una transacción inválida. En última instancia, los participantes del consenso se deben a la comunidad, y esa es una gran diferencia en relación con las acciones.
 
-#### Dinero mercancía vs. dinero capital (10:06) {#commodity-money-vs-equity-money-1006}
+### Dinero mercancía vs. dinero capital (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, ¿quieres continuar con esa conversación sobre la prueba de trabajo como mercancía y la prueba de participación como capital?
 
@@ -53,7 +53,7 @@ Un debate entre **Lyn Alden** y **Justin Drake** sobre las compensaciones fundam
 
 **Lyn Alden:** Creo que hay cierto grado de espectro, pero en su mayor parte es una calle bastante unidireccional. Hay múltiples formas de convertirse en capital, pero muy pocas formas de convertirse en una mercancía. Las mercancías, por su naturaleza, son algo raras e inmutables. Las formas de crear una verdadera mercancía en el ámbito digital son extremadamente limitadas.
 
-#### Ataques del 51%: disuasión y recuperación (15:30) {#51-attacks-deterrence-and-recovery-1530}
+### Ataques del 51%: disuasión y recuperación (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** Quiero comparar la prueba de trabajo y la prueba de participación sobre cuál es menos propensa a los ataques de censura. Una de las enormes ventajas de la prueba de participación es que la capa social tiene herramientas para intervenir. En la prueba de trabajo, si entra un atacante del 51%, recauda cada recompensa, cada emisión, cada tarifa de transacción. Los mineros honestos se apagan porque no tiene sentido gastar electricidad sin ingresos. Luego quieren liquidar, vendiendo su hardware. El atacante puede comprar este hardware por unos centavos y reforzarse. Incluso si la comunidad logra un contraataque, tomaría meses, si no años, organizarlo.
 
@@ -65,7 +65,7 @@ Cuando se trata de seguridad, no se trata solo de ataques del 51%, también se t
 
 Para recuperarse de los ataques del 51%: la única forma en la prueba de participación es hacer una bifurcación suave y tomar el capital de las personas. Si lo expresas como tomar el capital del atacante, suena bien. Pero el atacante podría ser un custodio regulado: estás tomando capital de personas que no tuvieron nada que ver con el ataque.
 
-#### Complejidad, errores y diversidad de clientes (30:35) {#complexity-bugs-and-client-diversity-3035}
+### Complejidad, errores y diversidad de clientes (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** La complejidad no es necesariamente mala. La humanidad prospera gracias a ella. En términos de la complejidad de la prueba de participación: sí, es más compleja, al menos 10 veces, tal vez 100 veces. Pero es una complejidad que a estas alturas hemos dominado. Tenemos cinco clientes diferentes que han implementado el protocolo, cada uno con pequeños equipos de cinco a diez personas. La diversidad de clientes permite a la comunidad comprar un seguro contra errores.
 
@@ -75,7 +75,7 @@ Sobre el tema de estar continuamente en línea —lo que llamamos subjetividad d
 
 Si observamos la dirección de la prueba de trabajo a largo plazo, veremos una integración cada vez mayor entre los mineros y los productores de energía. La red eléctrica, por naturaleza, tiene que sobreproducir electricidad. Los sistemas de prueba de trabajo son un muy buen equilibrador de carga para la energía varada. La fuente de electricidad más barata es la energía varada de costo prácticamente nulo. En este momento, la instalación de minería de Bitcoin más grande del mundo tiene aproximadamente el 1% de la tasa de hash total; ya está estructuralmente descentralizada.
 
-#### Equidad y el argumento de "los ricos se hacen más ricos" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
+### Equidad y el argumento de "los ricos se hacen más ricos" (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** En la prueba de participación, tienes una equidad perfecta: aportas una unidad de capital y obtienes exactamente la misma cantidad de recompensas, sin importar cuán grande o pequeña sea. En la prueba de trabajo, los peces gordos tienen ventajas injustas. Si eres un minero minorista que compra un equipo, estás pagando de más 2x, 3x, 4x, 5x en relación con los mineros profesionales que compran al por mayor. Debido a la ley de Moore, los atacantes que quieren atacar tienen una ventaja: pueden elegir el hardware más reciente y de vanguardia. Para ellos, el precio de la electricidad es en gran medida irrelevante, porque un ataque del 51% solo necesita ejecutarse durante un día o una semana. El 99% del costo está en los equipos y la infraestructura, no en la electricidad.
 
@@ -85,7 +85,7 @@ El hecho de que la prueba de trabajo sea inherentemente injusta crea ventajas pa
 
 En la prueba de trabajo, esencialmente estás alquilando tu capacidad para gobernar el sistema. Tus máquinas se degradan, tu fuente de energía podría volverse menos eficiente, tu hardware se vuelve menos vanguardista. Es una serie constante de decisiones en lugar de un sistema que beneficia inherentemente a las personas que compraron primero. No importa cuánto Bitcoin tenga Michael Saylor, tiene cero control sobre qué transacciones se procesan.
 
-#### La prueba de trabajo como "prueba de participación con pasos adicionales" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
+### La prueba de trabajo como "prueba de participación con pasos adicionales" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** No conozco a nadie —y he estado en este espacio durante casi una década— que mine Bitcoin como individuo en este momento. Todo es industrial. Por otro lado, con la prueba de participación, todos en esta llamada —tal vez excepto tú, Lyn— están haciendo staking como individuos. La diversidad en la prueba de participación es mucho, mucho mayor. La barrera de entrada es mucho más baja: básicamente solo necesitas una computadora funcionando las 24 horas del día, los 7 días de la semana.
 
@@ -97,11 +97,11 @@ Sobre el argumento de "los ricos se hacen más ricos" en la prueba de participac
 
 Sobre la diversidad de clientes: al menos la última vez que lo comprobé, el cliente más grande tiene aproximadamente el 84% de los clientes de Ethereum. Tienes cierto grado de diversificación, pero también es una ilusión parcial. En la práctica, una de las cosas clave que protege contra los errores es tener la base de código más simple posible.
 
-#### NIST, cuántica y fundamentos a largo plazo (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
+### NIST, cuántica y fundamentos a largo plazo (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** Si queremos ser el internet del dinero, necesitamos una escala de tiempo del orden del propio internet: décadas, si no siglos. La complejidad es algo que tiene una vida media de tal vez un año: puede ser dominada y endurecida. Con el tiempo, a medida que se asegura mucho valor, se puede confiar en los sistemas. Los errores se solucionarán, el sistema se endurecerá. Lo que deberíamos estar analizando son los fundamentos a largo plazo. Resulta que la prueba de trabajo va a ser completamente alterada por la computación cuántica en los próximos 20 a 30 años. Sí, hay preocupaciones a corto plazo con la complejidad, pero si te alejas y te enfocas en los fundamentos, hay razones fundamentales para ser pesimista sobre la prueba de trabajo.
 
-#### El argumento histórico del dinero mercancía (1:00:34) {#the-commodity-money-historical-argument-10034}
+### El argumento histórico del dinero mercancía (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, de alguna manera has tomado la iniciativa como comentarista macro enfocada en los mercados de materias primas. Los bitcoiners tienden a centrarse en las propiedades de las mercancías y en cómo Bitcoin consume energía como una mercancía. ¿Es esto en parte un argumento moral: que el dinero mercancía es simplemente un dinero más adecuado para el mundo?
 
@@ -113,13 +113,13 @@ Con el tiempo, eso tiende hacia la centralización. A medida que se acumula la d
 
 **Lyn Alden:** Personalmente lo abordo desde una perspectiva de riesgo táctico. ¿Cuál es el sistema con menos probabilidades de tener riesgos de cola? ¿Qué está optimizado para lo que intenta hacer? Cuando se trata del argumento de la equidad, en parte eso se mezcla con diferentes cosas: la prueba de trabajo frente a la prueba de participación es un aspecto, y la escasez de tokens es otro.
 
-#### El motor de escasez vs. el motor de liquidez (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
+### El motor de escasez vs. el motor de liquidez (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** La prueba de trabajo y la prueba de participación desde la perspectiva de los memes son casi exactamente lo opuesto. Con la prueba de participación, tienes lo que yo llamo un motor de escasez: un mecanismo para convertir ETH líquido en ETH congelado utilizado como colateral. Mis proyecciones dicen que aproximadamente la mitad de todo el suministro de ETH eventualmente estará en staking. Para la prueba de trabajo, es lo contrario: la emisión y las tarifas de transacción que ganan los mineros deben venderse para cubrir los gastos de electricidad y hardware. Has creado un motor de liquidez, que constantemente inunda el mercado. Si preguntas cuál es el mejor sistema para crear dinero para internet —el que constantemente inunda el mercado o el que anima a la gente a retenerlo—, creo que es obvio cuál es más valioso desde la perspectiva de los memes.
 
 **Lyn Alden:** Cuanto más intente hacer un sistema, peor será en cualquier cosa en particular. A medida que Ethereum ha intentado endurecer su política monetaria, podría decirse que ha perdido cuota de mercado en las finanzas descentralizadas (DeFi): del 97% del valor total bloqueado (TVL) a finales de 2020 al 55% en la actualidad. Hasta ahora, Bitcoin realmente no tiene competencia de otros sistemas. Los breves períodos de competencia —los memes de Dogecoin, Bitcoin Cash— se desvanecen con el tiempo. Un mundo se basa en la gobernanza y en hacer que tu ecosistema sea atractivo. El otro se reduce a cuál es el más duro: cuál es el mejor siendo dinero.
 
-#### Gobernanza, inmutabilidad y autosoberanía (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
+### Gobernanza, inmutabilidad y autosoberanía (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** Como mínimo, un sistema de prueba de participación da a los titulares de las unidades más voz sobre qué transacciones se procesan y cuáles se censuran. Pero quién puede cambiar el protocolo y cómo, eso va más allá del debate entre la prueba de trabajo y la prueba de participación. Puedes tener sistemas de prueba de trabajo que se parezcan más al capital: con bombas de dificultad o bloques súper grandes para que la gente no pueda ejecutar su propio nodo.
 
@@ -129,13 +129,13 @@ El meme de Bitcoin es la autosoberanía. Ejecutas tu propio nodo, los nodos son 
 
 **Lyn Alden:** Con los dineros mercancía, los productores rara vez tienen mucho control. El oro tiene una relación existencias-flujo (stock-to-flow) muy alta: los mineros de oro prácticamente no tienen control sobre el sistema. Eso ha sido cierto en el ecosistema de Bitcoin. Durante las guerras por el tamaño del bloque, la mayoría de los mineros estaban a favor del aumento del bloque y aun así no pudieron lograrlo. Los operadores de nodos lo rechazaron. Esa combinación de división de poderes —donde simplemente puedes ejecutar un nodo y volverte autosoberano, y por separado la minería te da la capacidad temporal de ordenar transacciones pero ninguna asignación permanente— es lo que mantiene un sistema descentralizado.
 
-#### La refutación de "los ricos se hacen más ricos" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
+### La refutación de "los ricos se hacen más ricos" (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** Sobre "los ricos se hacen más ricos" en la prueba de participación: lo veo como preservación de la riqueza, no como multiplicación de la riqueza. Al hacer staking, estás pagando un costo de oportunidad de aproximadamente el 3% y recibiendo una compensación. En términos netos, estás haciendo preservación de la riqueza. Los mineros profesionales hacen lo mismo: cubren el riesgo con futuros, asegurando rendimientos que coinciden aproximadamente con el costo de oportunidad. En realidad, la prueba de trabajo es solo prueba de participación con pasos adicionales. El riesgo se puede eliminar con productos financieros y, al final del día, tienes esencialmente el mismo producto financiero.
 
 **Lyn Alden:** Lo que hace que un sistema de mercancías sea descentralizado es la combinación de nodos pequeños y minería separada. No importa cuánto Bitcoin tenga alguien, tiene cero control sobre el ordenamiento de las transacciones. Esa es la división de poderes. Si vas a aproximarte a la inmutabilidad en el ámbito digital tanto como sea posible, estás diseñando un sistema que es muy descentralizado, muy difícil de forzar cambios, ya sea sin cambios o con cambios opcionales. Cualquier cosa que se desvíe de ese modelo —la aceptación forzada continua por parte de un pequeño equipo de desarrolladores, centros de desarrollo, fundaciones— es inherentemente más parecida al capital, independientemente del mecanismo de consenso.
 
-#### Argumentos finales (1:30:42) {#closing-arguments-13042}
+### Argumentos finales (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** Esta ha sido una conversación fantástica. Esta ha sido probablemente la mejor conversación sobre la prueba de participación frente a la prueba de trabajo de la historia. Hora de los argumentos finales. Justin, ¿por qué la prueba de participación es la mejor manera de crear un dinero cripto?
 
@@ -151,7 +151,7 @@ Si estuvieras diseñando una cadena de bloques para maximizar las propiedades mo
 
 Cuando se trata de dinero adecuado para poner tu tesorería corporativa, asignar parte de tu dotación o mantener el 10% o más de tu patrimonio neto —o gestionar reservas soberanas que representan décadas de superávits comerciales acumulados—, históricamente el mejor ha sido el oro. Ahora tenemos nuevos competidores. Elegirías el más descentralizado, el más inmutable, el que no sacrifica ninguna de esas características. Eso no significa que otros sistemas no sean valiosos: el hecho de que el oro tenga valor no significa que las acciones de Tesla no lo tengan. Son cosas diferentes haciendo cosas diferentes. El dinero perfecto está dispuesto a sacrificar casi todo lo demás para tener los atributos perfectos del dinero —cuyo propósito principal es ser retenido y ocasionalmente transaccionado—, en comparación con algo que intenta ser una navaja suiza.
 
-#### Conclusión (1:40:14) {#wrap-up-14014}
+### Conclusión (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** Quiero agradecer una vez más a Lyn Alden y Justin Drake por acompañarnos y tener el mejor debate que he escuchado sobre la prueba de trabajo frente a la prueba de participación. También un agradecimiento especial a Lyn por venir a lo que algunos podrían percibir como el "equipo visitante".
 

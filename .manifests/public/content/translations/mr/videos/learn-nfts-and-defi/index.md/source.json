@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/learn-nfts-and-defi/index.md",
   "generatedAt": "2026-04-28T23:48:15.955Z",
-  "rootHash": "44d022832df1",
+  "rootHash": "73ffed463f53",
   "tree": {
-    "contentHash": "8a694f6a4dfc",
-    "anchorHash": "f28376d1fcd5",
+    "contentHash": "fce723f32d8d",
+    "anchorHash": "76506e63b970",
     "children": {
       "frontmatter:title": {
-        "contentHash": "33a5db9f043e",
+        "contentHash": "67da23849055",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ad05ff3799d5",
+        "contentHash": "9155f63b5786",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9c5612782668"
+        "anchorHash": "2a15fee4820b"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,44 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "235f3e870d5b"
+        "anchorHash": "81b01bad09e0"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "58df6e0693de",
+        "anchorHash": "4eb2723074df",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "160317613119"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "da9fa35c3fa6"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "39d40b1bb241"
+          },
+          "3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2636f4747580"
+          },
+          "4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "33ec8d9d589c"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +78,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2d58ebd19a26"
+        "anchorHash": "c6b6b75311f0"
       },
       "prose:1": {
         "contentHash": "8cceb05b632f",

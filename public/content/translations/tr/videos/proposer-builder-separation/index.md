@@ -19,13 +19,13 @@ Bu sunum, Ethereum'un blok üretiminin basit bir modelden doğrulayıcıları, o
 
 *Bu transkript, CBER Forum tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=u8XvkTrjITs) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için hafifçe düzenlenmiştir.*
 
-#### Giriş (0:00) {#introduction-000}
+### Giriş (0:00) {#introduction-000}
 
 Benim adım Barnabé Monnot. Protokolün dışında neler olup bittiğinden ve özellikle teklifçi-oluşturucu ayrımı (PBS) kavramından ve bunun röleler ve birçok zincir dışı altyapı ile nasıl işletildiğinden biraz bahsedeceğim.
 
 Protokolü belirli güçlere sahip soyut bir nesne olarak düşünmeyi seviyorum. Protokolün sahip olduğu güçlerden biri, belirli katılımcılara haklar verebilmesidir. Önceki konuşmada protokolün doğrulayıcıları mutabakat görevlerini yerine getirmeleri için yetkilendirdiğini gördük, ancak yaptıkları tek şey bu değil — aynı zamanda blokları işlemlerle doldurmamız gerekiyor. Buna yürütme görevleri diyoruz ve bu konuşmada odaklanmak istediğim şey de bu.
 
-#### Doğrulayıcılar neden oluşturucuları kullanır (0:46) {#why-validators-use-builders-046}
+### Doğrulayıcılar neden oluşturucuları kullanır (0:46) {#why-validators-use-builders-046}
 
 İlginç olan şu ki, bu hakları ortaya çıkaran ve doğrulayıcılara veren protokol olmasına rağmen, pratikte gözlemlediğimiz şey birçok doğrulayıcının bu hakkı kendilerinin kullanmamayı seçmesidir. Bu hakkı kendi adlarına yerine getirmesi için başka birine vermeyi seçiyorlar. Ve bu "başka birini" Ethereum'da oluşturucular olarak biliyoruz.
 
@@ -33,7 +33,7 @@ Dolayısıyla gözlemlediğimiz şey, doğrulayıcıların bu mutabakat görevle
 
 Bugün doğrulayıcıların neden oluşturucuları kullandığını, bu ilişkinin nereden geldiğini tartışmak istiyorum — bu arada MEV ve arayıcılar hakkında biraz bilgi vereceğim — sonra bu ilişkiye nasıl aracılık edildiğini anlatacağım ve bugün var olan röleler ile üzerinde düşündüğümüz protokol içi çözümlerden bahsedeceğim. Ayrıca biraz büyük resme bakmak istiyorum, çünkü bu resimleri görüp "oh bu çok korkutucu, peki ya merkeziyetsizlik?" diye düşünmek kolaydır. Bunların yapılan ödünleşimler olduğu, ancak bana göre doğru yönde yapıldığı hissini size vermek istiyorum.
 
-#### Naif model ve MEV (3:04) {#the-naive-model-and-mev-304}
+### Naif model ve MEV (3:04) {#the-naive-model-and-mev-304}
 
 Doğrulayıcının bir lider seçimi sürecine göre seçildiği ve bellek havuzundan bir işlem listesi içeren bir blok oluşturmak zorunda olduğu naif bir blok üretimi modeli düşünebilirsiniz. En naif modelde, gerçekten sadece iki tarafınız vardır — bellek havuzunu dinleyen bir doğrulayıcı ve blok oluşturma sırası onlara geldiğinde, en çok ücret ödeyen işlemleri çıkarır ve genellikle çok karmaşık olmayan paketleme algoritmaları kullanarak bunları eklerler.
 
@@ -43,7 +43,7 @@ En iyi durumda bu kâr, arbitraj gibi doğal piyasa işlevlerinden gelir. En kö
 
 Bu gerçekten üreticiye çok fazla güç verir ve blok üreticisi olma konumunu son derece değerli kılar. Bu üretici ayrıcalığı, artık **maksimum çıkarılabilir değer (MEV)** olarak adlandırdığımız bir şeydir.
 
-#### Arayıcıların rolü (5:43) {#the-role-of-searchers-543}
+### Arayıcıların rolü (5:43) {#the-role-of-searchers-543}
 
 Pratikte, üreticiler değerin nerede olduğunu bilmeyebilir. Biraz deneyimsiz blok üreticileriniz olabilir — belirtildiği gibi, yeterli sermayeye sahip olduğu ve bir düğüm çalıştırabildiği sürece herkes doğrulayıcı olabilir. Pratikte, arbitrajın nasıl yapılacağını veya finansal piyasalar hakkında hiçbir şey bilmeyebilirim. İsteyeceğim şey, birinin bana bu fırsatların nerede olduğunu söylemesidir — blok üreticisi olarak yapılacak en iyi şeyin ne olduğunu bana söylemek için rekabet eden insanlardan oluşan bir pazar.
 
@@ -51,7 +51,7 @@ Fırsatları bulmada çok iyi olan bu varlıklara **arayıcılar** diyoruz. Blok
 
 Bu model, arayıcı paketi atomik tutması konusunda üreticiye güvenirse pratikte iyi çalışır. Yakın zamanda Ethereum'da bir grup sandviçleyiciye 25 milyon dolara mal olan bir saldırı duymuş olabilirsiniz — temel neden, saldırganın paketlerin atomikliğini kırmayı başarması, içerikleri alması ve bunları yeniden düzenlemeye ve değiştirmeye çalışmasıydı. Bu, gerçekten yalnızca üreticinin bu atomikliği bozmayacağına güvenilebildiği sürece geçerli olan çok önemli bir özelliktir.
 
-#### Neden oluşturuculara ihtiyacımız var (8:16) {#why-we-need-builders-816}
+### Neden oluşturuculara ihtiyacımız var (8:16) {#why-we-need-builders-816}
 
 Bir üretici güvenilmezse ne yaparsınız? Ethereum'da Birleşme sonrasında, tanımadığımız solo staker'lar — ağın yaklaşık %6'sı — var. Arayıcılar bu blok teklif edicilere paket göndermek istemeyeceklerdir çünkü bu biraz fazla tehlikelidir.
 
@@ -59,7 +59,7 @@ Bu nedenle ulaşılan tasarım şudur: Arayıcıların, üreticinin bloğuna dah
 
 Artık daha da derin bir zinciriniz var: Bir uçta doğrulayıcı, diğer uçta kullanıcı ve arada zamanla daha da yoğunlaşmaya devam eden bu aracı zincirinin tamamı. Doğrulayıcı mutabakatı sağlarken oluşturucu yürütme kısmını yapar.
 
-#### MEV-Boost röleleri nasıl çalışır (13:01) {#how-mev-boost-relays-work-1301}
+### MEV-Boost röleleri nasıl çalışır (13:01) {#how-mev-boost-relays-work-1301}
 
 Diyelim ki bir teklif edicisiniz ve bu pazara girmek istiyorsunuz. Bu blok üretim hizmeti klasik bir adil değişim problemidir — anlaşmaya varmaya çalışan ancak birbirine güvenmeyen iki taraf. Klasik literatür, güvenilir bir üçüncü taraf olmadan adil değişim yapamayacağınızı söyler.
 
@@ -71,19 +71,19 @@ Rölenin birkaç rolü vardır. İlk olarak, bir oluşturucunun yükünü doğru
 
 Rölelerin ekonomisi karmaşıktır. Bazıları kamusal mallar gibi ücretsizdir. Diğerleri gelir modelleri geliştirmiştir — örneğin Ultrasound rölesi, en iyi teklif ile en iyi ikinci teklif arasındaki farkı gelir olarak aldıkları bir "teklif ayarlamasına" sahiptir.
 
-#### Güven ve röle (17:01) {#trust-and-the-relay-1701}
+### Güven ve röle (17:01) {#trust-and-the-relay-1701}
 
 Röle, sistemdeki güvenilir üçüncü taraftır. Diyelim ki bir röle geçersiz bir blok sunuyor — imzalı olduğu için insanlar bunu hemen görecek ve o röleyle bağlantılarını çok hızlı bir şekilde keseceklerdir. Hatta bir tür hata kanıtı dedikodusu bile yayabilirsiniz. Beş blok içinde, eğer röle iyi performans göstermezse, insanlar ona güvenmeyi bırakacak ve sadece bağlantıyı kesecektir.
 
 Yani güvene dayanır, ancak bir şekilde hızlıca değiştirilebileceği varsayımıyla. Röleler doğrulayıcı değildir — mutlaka stake'leri olması gerekmez ve Ethereum ile hiçbir ilgileri olmak zorunda değildir. Bugün tanıdığımız ve sevdiğimiz insanlar olabilirler, ancak yarın herhangi biri olabilirler.
 
-#### PBS'yi protokole yerleştirmek (20:01) {#enshrining-pbs-in-the-protocol-2001}
+### PBS'yi protokole yerleştirmek (20:01) {#enshrining-pbs-in-the-protocol-2001}
 
 Rölenin güvenilir üçüncü taraf statüsünü ortadan kaldırmaya çalışıyoruz. Ethereum'da sevdiğimiz güvenilir bir üçüncü tarafımız var — ve bu Ethereum'un kendisidir. Temel olarak rölenin rolünü yerleştirmeye ve ona olan bağımlılığı isteğe bağlı hale getirmeye çalışan protokol içi çözümler tasarlayabilirsiniz.
 
 Şu anda Ethereum protokolü, doğrulayıcıların ne yaptığının bir kısmını görüyor ancak oluşturucular ağına tamamen kör. Ethereum protokolünün teklif edici ve oluşturucu arasındaki etkileşimde güvenilir üçüncü taraf olmasını sağlamaya çalışıyoruz — bu anlamda artık röleye güvenmemize gerek kalmıyor.
 
-#### Oluşturucuları kısıtlamak, merkeziyetsizliği artırmak (22:05) {#constraining-builders-amplifying-decentralization-2205}
+### Oluşturucuları kısıtlamak, merkeziyetsizliği artırmak (22:05) {#constraining-builders-amplifying-decentralization-2205}
 
 Büyük resim önemlidir. Her katmanda farklı oyunlar oynanıyor ve farklı oyuncular birbirinden para alıyor gibi görünüyor — bu geleneksel finansın ta kendisi mi? Bu ödünleşimlerin kötü bir yerden gelmediğini savunmak istiyorum. Bunları ölçeklendirmeye ve daha kullanışlı hale getirmeye yardımcı olduğunu düşündüğümüz bu sistemlerin özelliklerine eğilmeye çalışıyorlar.
 
@@ -104,7 +104,7 @@ Doğrulayıcı merkeziyetsizliğini artırmak için:
 - **Onaylayıcı-teklif edici ayrımı** — doğrulayıcıyı varsayılan olarak blok üreticisi yapmak yerine, blok üreticisi olmak için farklı bir insan grubu seçmek ve rolleri ayırmak
 - **Geliştirilmiş staking mekanizmaları** — Ethereum'daki staking bugün biraz ilkeldir ve geliştirilebilir
 
-#### Sorular ve kapanış (27:03) {#questions-and-closing-2703}
+### Sorular ve kapanış (27:03) {#questions-and-closing-2703}
 
 İzleyicilerden bir soru: Geleneksel finans dünyasında uzlaşma süresi iki günden bir güne indiriliyor. Uzlaşma süresini 12 saniyeden daha kısa bir aralığa indirmek, önden koşma sorunlarının bazılarıyla başa çıkabilir mi?
 

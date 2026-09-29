@@ -19,7 +19,7 @@ Kripto tarihindeki en büyük dijital soygunlardan biri olan 2016'daki DAO sald�
 
 *Bu döküm, Junion tarafından yayımlanan [orijinal video dökümünün](https://www.youtube.com/watch?v=rNeLuBOVe8A) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Keşif (0:00) {#the-discovery-000}
+### Keşif (0:00) {#the-discovery-000}
 
 Tarih 13 Haziran 2016 Pazartesi. Cornell'de bir bilgisayar bilimi profesörü, kripto alanındaki en iddialı projelerden biri olan DAO'nun kodunu inceliyor. Aylardır, tüm projeyi tehlikeye atabilecek bazı kusurlar olduğuna inandığı için projenin beklemeye alınmasını savunuyordu. Ancak bugün ciddi bir güvenlik açığı buluyor: 666. satırda bir hata.
 
@@ -33,7 +33,7 @@ Tıpkı 81 milyon dolarlık SWIFT saldırısının merkezi bankacılık endüstr
 
 Bu, gelmiş geçmiş en büyük dijital soygunlardan birinin ve hiç yaşanmamış gibi tarihi yeniden yazmaya yönelik cesur girişimin hikayesidir.
 
-#### DAO neydi? (2:00) {#what-was-the-dao-200}
+### DAO neydi? (2:00) {#what-was-the-dao-200}
 
 Karşınızda DAO — merkeziyetsiz otonom organizasyonun (decentralized autonomous organization) kısaltması. Fikir, kitle fonlamasından ilham almıştı. Farklı projeler için birden fazla fon yerine, hepsini yönetecek tek bir fon olacaktı ve bunu yapmanın bir DAO'dan daha iyi bir yolu yoktu.
 
@@ -45,7 +45,7 @@ Oylama süresi dolduğunda ve tüm Token'ların %20'lik nisabına ulaşıldığ�
 
 Ancak yine de azınlığın çoğunluk tarafından ezilmesini önlemenin bir yolu olmalıydı. Eğer bir azınlık grubu, Oylamada üstün gelemedikleri bir teklife şiddetle karşı çıkıyorsa, hayır Oyu vermek yerine bir bölme (split) işlevini çağırabilir ve Ether'lerini ana DAO'dan bir alt DAO'ya taşıyarak esasen DAO'yu ikiye bölebilirdi. Bu bölme işlevi daha sonra çok önemli olacaktır.
 
-#### Kitle fonlaması (4:01) {#the-crowdfund-401}
+### Kitle fonlaması (4:01) {#the-crowdfund-401}
 
 DAO, o zamanlar 150 milyon dolar değerinde olan 12,7 milyon Ether toplayarak gelmiş geçmiş en büyük kitle fonlaması projesi oldu. Projenin büyük bir heyecana ve yatırımcı FOMO'suna maruz kaldığı Ethereum'un erken döneminde gerçekleşti.
 
@@ -53,7 +53,7 @@ Bundan önce, Ethereum projeleri temel olarak rastgele kavram kanıtlarıydı, a
 
 Bu, dünyanın en güvenli bilgisayarında barındırılan değişmez bir koddu ve bir DAO'nun temel özelliklerini sağlıyordu: tamamen merkeziyetsiz ve otonom bir organizasyon. Sözleşmeler 30 Nisan'da dağıtıldıktan sonra, hiçbir tekil varlık — Slock.it bile — Protokol üzerinde değişiklik yapamaz veya varlığını durduramazdı. Kodu çeşitli Ethereum geliştiricileri tarafından sayısız kez denetlenmişti ve herkesin incelemesine açıktı.
 
-#### Saldırı (5:02) {#the-hack-502}
+### Saldırı (5:02) {#the-hack-502}
 
 "Yalnız, çok yalnız" — 59 numaralı DAO Teklifinin adı. Bu sadece normal bir bölme teklifi, ancak aslında saldırının başladığı yer burası. Bilgisayar korsanı teklifi sunduktan sonra, herkesin katılmakta özgür olduğu standart yedi günlük bir tartışma süresi vardır. Ancak bu bölünmeye kimse katılmaz.
 
@@ -65,7 +65,7 @@ Dört gün önce gerçekleşen o hata düzeltmesini hatırlıyor musunuz? Dağı
 
 Ancak bu düzeltme olmadan, Sözleşme bakiyelerini güncellemeden önce herkes Ether çekmek için işlevi defalarca çağırabilirdi. Size parayı verene kadar bakiyenizi değiştirmeyen bir ATM gibi. "On dolar çekebilir miyim? Bekle, ondan önce on dolar çekebilir miyim? Bekle, ondan önce..."
 
-#### Robin Hood grubu (6:55) {#the-robin-hood-group-655}
+### Robin Hood grubu (6:55) {#the-robin-hood-group-655}
 
 DAO Token sahipleri, yatırımlarının ana DAO'dan karanlık DAO olarak da bilinen alt DAO'ya yavaş yavaş boşaltılmasını izlediler. Ayrıca, haberlerin ardından Ethereum'un fiyatı 20 dolardan 15 dolara ani bir düşüş yaşadı. Bir şeyler yapılması gerekiyordu ve tek yol, bilgisayar korsanından önce geri kalanını boşaltmaktı. Ve böylece boşaltma yarışı başladı.
 
@@ -79,13 +79,13 @@ Bu arada Alex, fonların kalan %70'ini güvence altına almak için beyaz şapka
 
 Ertesi sabah Alex, başka bir bölünme teklifine sızmak için grubu yeniden toplamaya çalıştı, ancak diğerleri meşguldü. "Tarihteki en kötü bilgisayar korsanları gibi hissettik. Kötü internet ve ailevi yükümlülükler yüzünden engellendik."
 
-#### Boşaltma yarışı (9:10) {#the-race-to-empty-910}
+### Boşaltma yarışı (9:10) {#the-race-to-empty-910}
 
 İlk saldırıdan dört gün sonra DAO tekrar saldırı altındaydı. Yavaş yavaş boşalıyordu — tur başına birkaç Ether — ancak şimdiden birkaç bin dolar biriktirmişti. Suları test eden bir saldırgandan gelmiş gibi görünüyordu. Bu noktada Robin Hood'un bir şeyler yapması gerekiyordu.
 
 78 numaralı Bölünmeye sızmayı seçtiler çünkü teklifin küratörünü tespit etmişlerdi ve yakında sona eriyordu. DAO Token'larını bağışlamaktan mutluluk duyan bazı balinalarla temasa geçtiler ve ekibin altı milyon Token'ı güvence altına almasını sağladılar. Robin Sözleşmesi ne kadar çok Token'a sahip olursa, Ether'i o kadar hızlı çekebilirdi. Saldırgan hızını artırdı ve diğer saldırganlar da katıldı. Ancak bağışlar sayesinde Robin Hood onları geride bırakmayı başardı. Bu, 7,2 milyon Ether'i — DAO'nun %55'ini — güvence altına almalarını sağladı.
 
-#### Çatallanma (10:08) {#the-fork-1008}
+### Çatallanma (10:08) {#the-fork-1008}
 
 Ana DAO artık boşaltılmıştı ve tüm fonlar, ikisi beyaz şapkalı DAO ve karanlık DAO olmak üzere birkaç alt DAO'ya dağıtılmıştı. Ancak tüm para zaman kilitliydi. 27 günlük bekleme süresi bitene kadar bir alt DAO altında hiçbir teklif öne sürülemezdi. Ve ondan sonra bile, harici bir Adrese fon göndermek, bir teklif sunmayı ve iki hafta beklemeyi gerektiriyordu. Esasen, bilgisayar korsanının Ethereum'un toplam arzının %5'ine denk gelen miktarı nakde çevirebilmesine hala 41 gün vardı.
 
@@ -93,7 +93,7 @@ Ancak bilgisayar korsanı Ethereum'una asla dokunamayacaktı. Bundan sonra olanl
 
 Bir Blokzincir, çıkarılan her Blok ile büyümeye devam eden bir işlemler listesi gibidir. Her işlem Blokzincir'e sonsuza dek kazınır. Ancak madencilerin %50'sinden fazlası gizlice anlaşırsa, Blokzincir'i yanlış bir şekilde değiştirebilir ve tarihi istedikleri gibi yeniden yazabilirler. Genellikle buna %51 saldırısı denir. Ancak bu çatallanmada kötü niyetli hiçbir şey yoktu — topluluk sadece kendilerinden çalınan parayı geri alıyordu.
 
-#### Kod kanundur (11:48) {#code-is-law-1148}
+### Kod kanundur (11:48) {#code-is-law-1148}
 
 Yine de herkes önerilen çatallanmaya katılmıyordu. Kodun kanun olduğunu savundular. Bu görüşe göre saldırgan, bir bilgisayar korsanından ziyade bir Sözleşmenin şartlarını dikkatlice okuyan akıllı bir avukattı. Bu nedenle, aslında hiçbir fon çalınmamıştı ve karanlık DAO'daki Ether üzerinde hak sahibi olmalıydılar.
 
@@ -107,7 +107,7 @@ Daha fazla inceleme üzerine insanlar imzanın geçersiz olduğunu fark ettiler,
 
 Öte yandan destekçiler, "kod kanundur" ifadesinin çok sert bir ifade olduğunu ve sosyal mutabakat yoluyla son sözü insanların söylemesi gerektiğini savundular. Etik olarak yanlış ve büyük olasılıkla yasa dışı olduğu için bilgisayar korsanının bu açıktan kâr etmesine izin verilmemelidir. Ancak en önemlisi, DAO başarısız olamayacak kadar büyüktü. Toplam Ether arzının yaklaşık %15'ini elinde tutuyordu.
 
-#### Ethereum Classic (14:34) {#ethereum-classic-1434}
+### Ethereum Classic (14:34) {#ethereum-classic-1434}
 
 2008 mali krizini yansıtan bir olayda, Ethereum geliştiricileri DAO'yu kurtardı. Ethereum'un yaratıcısı ve baş geliştiricisi Vitalik Buterin, bir çatallanma için baskı yapma konusunda tavizsizdi. Daha sonra bir röportajda şunları söyledi: "Bazı Bitcoin kullanıcıları sert çatallanmayı bir bakıma en temel değerlerini ihlal etmek olarak görüyor. Kişisel olarak bu temel değerlerin bu kadar uç noktalara itilmesinin aptalca olduğunu düşünüyorum."
 
@@ -117,7 +117,7 @@ Ancak bununla bitmiyor. Orijinal Ethereum Blokzincir'i — DAO saldırısının 
 
 Çatallanmadan önce Ether tuttuysanız, artık bir Ethereum'unuz ve bir Ethereum Classic'iniz olacaktı. DAO'da bir Ether tuttuysanız, iade Sözleşmesinden bir Ethereum çekebilecektiniz. Ve eğer DAO'yu yeni hacklemiş olsaydınız, Ethereum Classic'te iyi bir servet — yaklaşık yedi milyon dolar — kazanmış olurdunuz.
 
-#### DAO'nun mirası (16:14) {#legacy-of-the-dao-1614}
+### DAO'nun mirası (16:14) {#legacy-of-the-dao-1614}
 
 Başlangıçta Ethereum Classic, kurtarma paketine katılmayan güçlü bir Blokzincir köktendincileri topluluğuyla bir alternatif olarak ivme kazandı. Ancak o zamandan beri Ethereum Classic ilgi görmeyi başaramadı ve yalnızca çok az faydası olan bir fikir olarak varlığını sürdürüyor. Ethereum binlerce Protokole ev sahipliği yaparken, Ethereum Classic'te yalnızca birkaç temel Protokol bulunuyor. Çatallanmanın kazandığı açık.
 
@@ -125,7 +125,7 @@ Başlangıçta Ethereum Classic, kurtarma paketine katılmayan güçlü bir Blok
 
 Bilgisayar korsanına gelince, bugün 150 milyon dolar değerinde olan 3,6 milyon Ethereum Classic ile çekip gittiler. Ancak çatallanma olmasaydı, o 3,6 milyon Ethereum bugün yedi milyar doların üzerinde bir değere sahip olacaktı.
 
-#### DAO'nun kalıcı etkisi (17:26) {#the-daos-lasting-impact-1726}
+### DAO'nun kalıcı etkisi (17:26) {#the-daos-lasting-impact-1726}
 
 Karışıklığı önlemek için DAO'nun artık genellikle Genesis DAO olarak anıldığını belirtmek önemlidir, çünkü bu ilk DAO'ydu ancak kesinlikle sonuncusu değildi. İlk aksiliklere rağmen, DAO'lar giderek daha popüler hale geldi. MakerDAO, sabitcoin DAI'yi yönetir ve UNI Token'ı ile Uniswap gibi merkeziyetsiz finans (DeFi) Protokolleri genellikle bir yönetişim DAO'suna sahiptir. Bu DAO'ların tümü, daha da çok yönlü ve başarılı organizasyonlar yaratmak için önceki projelerin deneyimlerinden yararlanılarak oluşturulmuştur.
 

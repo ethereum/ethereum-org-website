@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/stani-kulechov-building-aave/index.md",
   "generatedAt": "2026-04-29T00:13:43.422Z",
-  "rootHash": "c0c5ec789eea",
+  "rootHash": "0ce4ad10bdc1",
   "tree": {
-    "contentHash": "00f29f2abd2a",
-    "anchorHash": "bd2b8944b54c",
+    "contentHash": "230726c50d50",
+    "anchorHash": "283c4bfdf231",
     "children": {
       "frontmatter:title": {
-        "contentHash": "50b1fe17890c",
+        "contentHash": "efbd290e1362",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "28402995854b",
+        "contentHash": "4d907d06020e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "dc2c23bdaf64"
+        "anchorHash": "f28d7539d995"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f44c7cbe6256"
+        "anchorHash": "b386f76854f9"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "d0ca918e24fd",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9af2994fe66a"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f354ee99e2bc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2ac55e7faa9c"
+        "anchorHash": "44894eb346cb"
       },
       "prose:1": {
         "contentHash": "0e864c704aad",

@@ -18,7 +18,7 @@ Una charla personal del desarrollador veterano (OG) de Ethereum **Mariano Conti*
 
 *Esta transcripción es una copia accesible de la [transcripción original del video](https://www.youtube.com/watch?v=S0-oO_4ZRfs) publicada por la Fundación Ethereum. Ha sido ligeramente editada para facilitar su lectura.*
 
-#### Introducción (0:08) {#introduction-008}
+### Introducción (0:08) {#introduction-008}
 
 **Mariano Conti:** Buenos Aires. Buenas noches a todos. Quiero empezar pidiendo disculpas. No he estado mucho en el ecosistema durante los últimos años. Así que cuando los organizadores me dijeron que querían que diera una charla, al principio me negué porque he estado tan alejado de ciertas cosas que a veces realmente he olvidado por qué estamos aquí, por qué hacemos las cosas que hacemos. Me he vuelto un poco más cínico en ciertos aspectos y optimista en otros. Así que, de todos modos, tengo 15 minutos para hablarles de todo esto, y vamos a empezar.
 
@@ -26,23 +26,23 @@ Como siempre digo, como argentino, me encanta la terapia. Esta probablemente ser
 
 Así que este soy yo, 2015 — empecé a comprar ether. Un tipo de aspecto muy humilde. Y ahora 2025, después de 10 años, ese es el cascarón roto de hombre que ven hoy de pie frente a ustedes, con una temporada invirtiendo a lo loco en tokens durante el verano de las finanzas descentralizadas (DeFi), ¿verdad? Y para aquellos de ustedes que no lo saben, pasé unos años en Maker. Ayudé a lanzar DAI con colateral único y múltiple, que probablemente fue la primera moneda estable descentralizada en Ethereum. Creé los primeros oráculos descentralizados en Ethereum. Todo desde vivir en un apartamento en Almagro — por supuesto, como parte de un grupo mucho, mucho más grande — pero diría que mis experiencias en Ethereum han sido bastante amplias y en su mayoría muy gratificantes.
 
-#### Devcon en Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
+### Devcon en Buenos Aires (2:20) {#devcon-in-buenos-aires-220}
 
 **Mariano Conti:** Y en 2019, estoy seguro de que han visto esta foto un par de veces. Y veo a algunas de las personas aquí que estuvieron en el escenario conmigo en Osaka en 2019. Aquí es cuando realmente comenzamos el gran impulso para tener uno de estos eventos de Devcon aquí en Buenos Aires, ¿verdad? Y probablemente la persona que menos trabajó para que esto sucediera soy yo. Básicamente solo me puse la camiseta y tuiteé un par de veces. Todos los que estaban allí trabajaron cien veces más, y las personas que vinieron después trabajaron mil veces más. Así que, una vez más, me siento increíblemente, increíblemente honrado de que tengamos Devconnect aquí en Argentina.
 
 Y taché "demasiado tarde" y puse "más tarde". Durante un tiempo estuve muy, muy amargado de que no pudiéramos tenerlo cuando dijimos — que iba a ser lo más impactante. Y en cierto modo eso es cierto, y en otro no lo es. Por un lado, si hubiéramos tenido Devcon — sé que 2020 en realidad no sucedió debido al COVID — pero tal vez en 2021, no habría sido tan grande. La tecnología no habría estado tan arraigada en nuestra comunidad, en nuestra sociedad, como lo está ahora. La gente todavía, cuando viene a Argentina por primera vez, se asombra de la cantidad de uso que le damos a las monedas estables — ya sea cuando teníamos controles de capital y cuando no, y en cualquier punto intermedio. Los argentinos tienen una cultura de probar cosas nuevas, siempre protegiendo sus inversiones. Esto es algo de lo que he hablado extensamente. Así que, de nuevo, estoy muy feliz de que Devcon finalmente esté aquí.
 
-#### Cosas que me gustan de Ethereum (4:28) {#things-i-like-about-ethereum-428}
+### Cosas que me gustan de Ethereum (4:28) {#things-i-like-about-ethereum-428}
 
 **Mariano Conti:** Y en realidad solo me quedan tres diapositivas. Así que voy a hablar un poco sobre las cosas que me gustan de Ethereum. Y me encanta que siga existiendo después de más de 10 años. Y el tiempo de actividad es del 100%. Es realmente una tecnología sobre la que puedes construir y puedes confiar en que será fiable: que envías una transacción y eventualmente se completará, pase lo que pase, a través de un nodo RPC al otro lado de la tierra, para luego ser replicada en miles de computadoras en todo el mundo — con suerte, muchas de ellas en los hogares de las personas y no solo en centros de datos — y que sea lo que sea que hayas enviado o con lo que hayas interactuado quedará arraigado en un bloque, con suerte para siempre.
 
 Cuando comencé este viaje, solo estaba yo. Mi esposa — ahora, hace casi un año — tuvimos un hijo. Mi hijo tiene un ENS. Es parte de quiénes somos y lo que somos en nuestra familia, que Ethereum ha hecho tanto posible para nosotros que siempre siento que nunca devolví lo suficiente. Y esa es también una de las razones por las que me quejo tanto de ciertas cosas.
 
-#### La comunidad (5:25) {#the-community-525}
+### La comunidad (5:25) {#the-community-525}
 
 **Mariano Conti:** Es porque no quiero pasar a las cosas que no me gustan tan pronto. Así que permítanme saltar a un par de otras que sí me gustan: la comunidad, especialmente la comunidad argentina, y ver a tantos amigos aquí, tanto de Argentina, de América Latina, como de todo el mundo. Es una locura que hayan venido aquí por una semana o dos semanas o para un evento que nos une a todos en nuestro amor y respeto por... digo amor, y es raro. Nosotros, al menos la gente de mi época — no sé si esto es cierto para los recién llegados — no tratábamos esta tecnología como una moneda más o una acción más que comprarías y tratarías de ver si subía o bajaba. El precio nos afecta, por supuesto, pero siempre nos afectó más ver que lo que estábamos construyendo importaba, y que estábamos haciendo algo significativo con la tecnología para habilitar casos de uso completamente nuevos, ya sea financiamiento, coleccionables o DeFi.
 
-#### Cosas que no me gustan (7:00) {#things-i-dont-like-700}
+### Cosas que no me gustan (7:00) {#things-i-dont-like-700}
 
 **Mariano Conti:** Y así, con esa transición, voy a pasar a algunas de las cosas que no me gustan, no necesariamente solo de Ethereum, sino del ecosistema.
 
@@ -52,7 +52,7 @@ Me disgustó durante mucho tiempo que la Fundación Ethereum pareciera estar est
 
 Al igual que hace un par de años, Eric Connor y yo comenzamos este pequeño sitio web llamado "Pump the Gas", que molestó a mucha gente. Solo queríamos que la comunidad en general y los desarrolladores principales reconocieran que tal vez era hora de aumentar un poco el límite de gas de los bloques. Y fue controvertido en ese momento, pero al final se convirtió en algo que fue aceptado y comenzó a suceder con una cadencia regular. Y ahora incluso tenemos EIPs — Fusaka va a ser un aumento requerido a 60 millones — y luego hay incluso EIPs que quieren aumentar forzosamente el límite de gas con cada iteración. Así que estoy muy feliz de que eso haya sucedido.
 
-#### Llamados a la acción (10:24) {#calls-to-action-1024}
+### Llamados a la acción (10:24) {#calls-to-action-1024}
 
 **Mariano Conti:** Y creo que me estoy extendiendo demasiado y me estoy quedando sin tiempo. Así que, solo voy a decir mis llamados a la acción. En realidad solo tengo dos, tal vez un tercero que pasó la censura, pero ya veremos.
 
@@ -62,7 +62,7 @@ Un regreso a la capa 1 (l1). Aunque me encantan las L2 y conozco a mucha gente t
 
 Bueno, no sé, tal vez ese no debería haber estado ahí, pero creo que eso es todo lo que quería decir. Quiero darles las gracias — o pedirles perdón, dependiendo de cómo haya salido esto — y quiero disculparme porque normalmente tengo más cosas que decir. Y tal vez si tenemos una pequeña sesión de preguntas y respuestas, las diré. He estado al margen, como dije, durante los últimos dos años, pero nunca he perdido de vista en lo que la gente está trabajando en Ethereum, y siempre va a ser parte de mi vida. Y de nuevo, estoy muy feliz de que tengamos una Devcon en Buenos Aires.
 
-#### Sesión de preguntas y respuestas (12:10) {#qa-session-1210}
+### Sesión de preguntas y respuestas (12:10) {#qa-session-1210}
 
 **Presentador:** Muchas gracias. En primer lugar, ¿puedo conocerte?
 
@@ -90,7 +90,7 @@ Bueno, no sé, tal vez ese no debería haber estado ahí, pero creo que eso es t
 
 **Mariano Conti:** Supongo que lo que más me emociona en este momento es un Ethereum más ligero (lean Ethereum) — probablemente el siguiente paso para hacer que la capa 1 (l1) de Ethereum realmente, realmente adopte el conocimiento cero, todas las cosas que vienen con — bueno, incluso antes de eso — Fusaka haciendo la separación de probadores con nodos, con buscadores, con constructores. No sé si puedo señalar una sola cosa. Estoy emocionado por la próxima bifurcación dura. Es una locura que vayamos a tener dos en un año cuando tuvimos tal vez una cada tres años durante el último tiempo. Así que estoy emocionado de que por alguna razón las cosas se pusieron en marcha y todos decidimos que ahora podemos hacer las cosas más rápido.
 
-#### Ética cypherpunk y consejos (15:45) {#cypherpunk-ethos-and-advice-1545}
+### Ética cypherpunk y consejos (15:45) {#cypherpunk-ethos-and-advice-1545}
 
 **Presentador:** ¿De qué te alegras que nos hayamos deshecho de los días de los veteranos (OG) en las cripto en general, y qué desearías que hubiéramos conservado?
 

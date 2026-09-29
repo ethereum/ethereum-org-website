@@ -18,11 +18,11 @@ breadcrumb: "Gizliliği Geri Kazanmak"
 
 *Bu transkript, EthBoulder tarafından yayımlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=nvJSFR1Q_JE) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### İki bölümlük konuşma: uyarı + çözüm (00:00) {#two-part-talk-warning-solution-0000}
+### İki bölümlük konuşma: uyarı + çözüm (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Harika. Herkese hoş geldiniz. Burada olduğunuz için teşekkür ederim. Bu, iki bölümlük bir konuşma olacak. ilk bölümde, işler biraz yoğunlaşabilir. Gizlilik ve gözetim konuşmaları söz konusu olduğunda oldukça hararetli olduğum bilinir. ikinci bölüm biraz daha farklı bir tonda olacak. Yani ilk bölümde size bir hikaye anlatacağım ve ikinci bölümde dünyayı kurtaracağız. Eğer hepiniz için uygunsa başlayabiliriz. 
 
-#### İmparatorun yeni giysileri (00:44) {#the-emperors-new-clothes-0044}
+### İmparatorun yeni giysileri (00:44) {#the-emperors-new-clothes-0044}
 
 Birinci perde. Hikayemizin birinci perdesiyle başlayalım. Büyü. Bir zamanlar, kendisine muhteşem yeni giysiler satılan bir imparator varmış. Satıcı ona şöyle demiş: "Bu giysiler özeldir. Onları sadece zeki ve erdemli olanlar görebilir ve makamına layık olmayan hiç kimse hiçbir şey göremez." İmparator hiçbir giysi göremiyormuş ama bunu itiraf etmeye korkmuş. Bunu söylemek, yönetmeye layık olmadığını itiraf etmek anlamına geleceğinden hiçbir şey söylememiş. Ve imparator halkın karşısına çıkıp sokaklarda geçit töreni yaptığında, başka hiç kimse de giysileri görememiş. 
 
@@ -32,7 +32,7 @@ Yani, özünde, buraya geri dönelim. Özünde, bu hikaye açıkçası giysilerl
 
 Şimdi, hikayemizde herkes sorunun belki de kendilerinde olduğunu düşündü. Bu yüzden komşularına boyun eğdiler ve eğer gerçekten yanlış bir şey olsaydı, önce bir başkasının sesini çıkaracağını varsaydılar. Herkes kalabalığın bilgeliğine boyun eğdi. Ve bu kötü bir stratejiydi çünkü kalabalık yanılıyordu. İmparator çıplaktı. Ve herkes sessiz kaldığı için, mutabakat hakikatin yerini aldı. Kalabalığın sessizliği, her şeyin yolunda olduğunun kanıtı haline geldi. İşte modern dünyada gizlilik tam olarak böyle çöküyor.
 
-#### Makine (02:46) {#the-machine-0246}
+### Makine (02:46) {#the-machine-0246}
 
 Yani, ikinci perde, makine. İşte hikayenin modern versiyonu. İnsanlık tarihinin en büyük veri toplama rejiminin altında yaşıyoruz. Dünyanın daha önce hiç görmediği bir gözetim altyapısı inşa ettik ve onu beslemeye devam ediyoruz. ve gidişatımız tam bir felaket reçetesi. Peki, neden böyle? Çünkü şu anda, bunun iyi bir şekilde sonuçlanmasının tek yolu, kötü birinin bu sistemin kontrolünü asla ele geçirmeyeceğini garanti edebilmemizdir. Ancak kötü biri eninde sonunda kontrolü ele geçirirse, bu, bir nüfusu tamamen kontrol etmek için gereken tüm bileşenlerle dolu potansiyel enerjiye sahip atomik bir silah gibidir. 
 
@@ -42,13 +42,13 @@ Yani, ikinci perde, makine. İşte hikayenin modern versiyonu. İnsanlık tarihi
 
 Bir gizlilik politikasına göz attığımızda ve onu dikkatlice okumamız gerektiğini bildiğimizde bir şeylerin yanlış olduğunu hissederiz. Muhtemelen içinde bazı önemli şeyler vardır. Ve aslında orada açıkça yazıyor ki, evet, bu mahrem verileri kesinlikle paylaşacaklar ve kiminle paylaşacaklarını bile bilmiyoruz ama yine de kabul et'e tıklıyoruz çünkü sonuçta o kadar da kötü olamaz, yoksa bunları kabul etmek statüko olmazdı, değil mi? O kadar kötü olsaydı herkes bunu yapmazdı.
 
-#### Mevcut durum ne kadar kötü? (05:12) {#how-bad-is-the-status-quo-0512}
+### Mevcut durum ne kadar kötü? (05:12) {#how-bad-is-the-status-quo-0512}
 
 Peki mevcut durum ne kadar kötü? Bu işler gerçekten ne kadar kötü? Ya da belki de bunu konuşmalıyız çünkü bazı insanlar bunun sadece şirketlerin bize daha iyi bir çift ayakkabı satmaya çalışmasından ibaret olduğunu düşünüyor. Bu sadece tüketiciyle ilgili bir şey, değil mi? Ya da belki de sadece sosyal medya şirketlerinin daha ince ayarlanmış bir algoritma oluşturmak için hakkımızda bilgi edinmesiyle ilgilidir, değil mi? Bu o kadar da vahim görünmüyor. Tüm bunlardaki sorun ne?
 
 Ancak şu anda hepimiz, hayatımızın her özel alanını sessizce işgal eden yaygın bir gözetim makinesine rıza gösteriyoruz. Şimdi, otoriter rejimler gibi bazı yerlerde bu makine, potansiyel olarak sorunlu kişileri bir protesto hareketine katılma olasılığı daha yüksek olarak işaretleyip ardından bu kişileri hedef alarak muhalefeti daha gerçekleşmeden kontrol etmek için kullanılıyor. Bazen bu makine, kamuoyunun duyarlılığını şekillendirmek, fikirleri etkilemek, seçimleri yönlendirmek veya tüm toplumları, o grupların kendilerinden nefret ettiğine ikna ederek belirli insan türlerinden nefret etmelerini sağlamak için kullanılır. Ve bir de sosyal kredi puanları düşen vatandaşlar hakkındaki bilgileri kamuoyuna yayınlayan ve ardından bu puanları seyahatleri kısıtlamak, istihdamlarını sınırlamak, çocuklarının belirli okullara gitmesini engellemek veya onları fırsatlardan tamamen mahrum bırakmak için kullanan ülkeler var.
 
-#### Trilyon dolarlık ölçekte veri toplama (06:26) {#data-collection-at-trillion-dollar-scale-0626}
+### Trilyon dolarlık ölçekte veri toplama (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 Ve şimdi yapay zeka devrimiyle birlikte, makine sadece hayatınızın bir kaydı olmaktan çıkıyor ve bir tahmin motoruna dönüşüyor. İşte bu yüzden bu çok önemli. Bu yüzden bunu sizin için somutlaştırmak istiyorum. Bu yüzden şu anki gözetim durumunu kısaca gözden geçireceğim. 
  
@@ -56,7 +56,7 @@ Makineyi üç parçaya ayıracağım. Birincisi toplananlar. Bu bilginin nasıl 
  
 Ama diyelim ki gerçekten şanslısınız ve bu sistemin hedefi olmaktan kaçındınız. Ancak çocuklarınız muhtemelen bundan kaçamayacak ve kaçıp kaçamayacakları hakkında hiçbir fikriniz yok. Ve bugün rıza gösterdiğiniz bu mekanizma ortadan kaybolmuyor. Yarın kimin başta olacağını bilemezsiniz.
 
-#### Bu bilgi nasıl sızdırılıyor (08:03) {#how-this-information-is-leaked-0803}
+### Bu bilgi nasıl sızdırılıyor (08:03) {#how-this-information-is-leaked-0803}
  
 Yani ikinci kısım, bu bilginin daha sonra nasıl sızdırıldığıdır. Her yıl veri ihlallerinin sayısı tüm zamanların en yüksek seviyesine ulaşıyor. Şirketlerin en başta asla toplamaması gereken her türlü bilgiyi sızdırıyor. Yani konum geçmişleri ve tıbbi kayıtlar, finansal veriler, özel mesajlar; bu bilgiler ortalığa saçılıyor ve hepsi organize karteller, suç çeteleri ve ulus-devlet bilgisayar korsanları tarafından kullanılmak üzere dark web'e düşüyor. 
 
@@ -68,7 +68,7 @@ Buna rağmen şirketler, ne olur ne olmaz diye tüm bu gereksiz verileri, dağla
  
 Yani bu, geçit töreninde alkışlayan kalabalık, değil mi? Bunun nedeni her tıklamanın ve her kabulün güvenli olduğundan emin olmamız değil. Bunun nedeni, sesini çıkarmanın ve vazgeçmenin veya araçları değiştirmenin, ayak uydurmaktan daha zor gelmesidir.
 
-#### Arka kapılar ve hükümet müdahalesi (09:33) {#backdoors-government-interception-0933}
+### Arka kapılar ve hükümet müdahalesi (09:33) {#backdoors-government-interception-0933}
  
 Şimdi bu üçüncü kategoriden, yani silahlaştırılmış olandan bahsedelim. Düşman yabancı istihbarat operasyonları temel iletişim altyapısına çoktan sızmış durumda. Az önce insanlarla Salt Typhoon hakkında konuşuyordum, değil mi? Örneğin Çin, aramalarımızı ve mesajlarımızı büyük ölçekte ele geçiriyor. 
 
@@ -78,7 +78,7 @@ Hükümetlerin bu arka kapılara erişen tek taraf olduklarından emin olmaları
 
 Bunlardan birini, Salt Typhoon'u biliyoruz, ancak güvendiğimiz bu altyapıda hassas ve özel iletişimlerimizi kimlerin topladığına dair hiçbir fikrimiz yok.
 
-#### Denetim neden düşündüğünüzden daha nadirdir (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
+### Denetim neden düşündüğünüzden daha nadirdir (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 Yani, kral çıplak ve tüm bunların devam etmesinin tek nedeni kalabalığın alkışlamaya devam etmesidir. Ancak kalabalığın alkışlamaya devam etmesinin başka bir nedeni daha var. 
  
@@ -112,7 +112,7 @@ Yani, yüz milyonlarca insan Apple ürünlerini kullanıyor ve sadece bir adam a
 
 Birinin babasının eve şu akıllı ev merkezlerinden (home hub) birini getirdiği başka bir sunum daha var, değil mi? Kızı biraz araştırma yapmaya karar vermiş. Bazen evdeki farklı araçlarla oynuyormuş ve bunun nasıl çalıştığını anlamak istemiş. Ve herkesin satın alabileceği bu popüler tüketici cihazının devasa bir Çin botnet'inde bir merkez olarak kullanıldığı ortaya çıkmış. Sonra FBI bu sunumu görüyor. Soruşturmayı gizli hale getirerek sunumu yayından kaldırıyorlar. Bunun olduğunu bilmiyorlardı, ancak sadece "Hey millet, burada tuhaf şeyler olduğunu buldum" diyerek bu sunumu yapıp durumu onların dikkatine sunan kişi oydu. Ve devasa bir Çin botnet'inin bu tek bir spesifik cihaz aracılığıyla tüm evlerimizi işgal ettiğini işte böyle öğreniyoruz. Peki ya evimizdeki henüz kimsenin bakma zahmetine bile girmediği diğer tüm cihazlar ne olacak?
 
-#### Sessizlik sorunu ve sahte mutabakat (16:30) {#the-silence-problem-false-consensus-1630}
+### Sessizlik sorunu ve sahte mutabakat (16:30) {#the-silence-problem-false-consensus-1630}
 
 İşte şu anda tam olarak bu noktadayız. Gözetim günümüzde her yerde, görünmez, normalleştirilmiş ve gerekçelendirilmiş durumda; üstelik bunu endüstri standardı olarak kabul ediyoruz. Ve şu anda bulunduğumuz nokta burası.
 
@@ -134,7 +134,7 @@ Google'dan Eric Schmidt'in meşhur ve korkunç bir sözü var; kimsenin bilmesin
 
 Yani, neler olduğuna dikkat edin. Gizlilik bir suçluluk olarak, uyum ise bir erdem olarak çerçevelenmeye başlandı. İyi insanlar erişime teslim olanlardır ve şüpheli insanlar soru soranlardır. Ve artık karşı çıkmanın sosyal bir bedeli var. Sessizliğe bu ahlaki etiketi yapıştırdığınızda, geçit töreni kendi kendine yürür.
 
-#### İmparatorun geçit törenini nasıl durdururuz? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
+### İmparatorun geçit törenini nasıl durdururuz? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Hikayemize geri dönelim. İmparatorun yeni kıyafetleri. İmparator yeni kıyafetleriyle sokakta yürürken kalabalık alkışlar. İşçiliğe hayran kalırlar. Zarafeti överler. Kesimler, kumaş ve giysilerin ışığı yansıtma şekli hakkında yorum yaparlar. Ve en çok etkilenmiş gibi görünmek için yarışırlar. Saray mensupları öne eğilir ve aynı fikirde olduklarının görülmesi için can atarlar, yetkililer ciddiyetle başlarını sallar ve danışmanlar teknik övgüler ekleyerek neye baktıklarını anladıklarını kanıtlamak için detaylar uydururlar; bazıları duyulma umuduyla yüksek sesle konuşur, diğerleri ise kafası karışmış görünmemeye dikkat ederek gülümser ve hiçbir şey söylemez. Ve kimse tereddüt eden ilk kişi olmak istemez, kimse bariz soruları soran kişi olmak istemez ve her iltifatla birlikte yalanı geri almak daha da zorlaşır. 
 
@@ -158,7 +158,7 @@ Dolayısıyla, bunun değişmesinin yolu imparatorun durmasını beklemek değil
 
 Şimdi, insanlar, yeterince insan alkışlamayı bıraktığında, geçit töreni devam edemez. Ve bu, hikayenin burada hala yazmakta olduğumuz kısmıdır. Yani mesele imparatorun kıyafetlerinin olup olmaması değildir. Hepimiz onun hiçbir kıyafeti olmadığını biliyoruz. Geriye kalan tek soru, her şey yolundaymış gibi davranarak onunla birlikte yürümeye devam edip etmeyeceğimizdir.
 
-#### İkinci bölüm: dünyayı kurtaralım (25:22) {#part-two-lets-save-the-world-2522}
+### İkinci bölüm: dünyayı kurtaralım (25:22) {#part-two-lets-save-the-world-2522}
 
 Böylesine vahim bir notun ardından, ikinci bölüm: dünyayı kurtaralım. Kim daha iyi bir gelecek istiyor? Kim gelecek nesiller, çocukları için daha iyi bir gelecek istiyor? Kim bir şeyleri değiştirmek istiyor? Çünkü bir fark yaratmak için tamamen yetkilendirilmiş durumdayız. 
 
@@ -312,7 +312,7 @@ Bu yüzden her o dönüm noktasında olduğunuzda, bunun hayatınıza dahil edeb
 
 Bunun da ötesinde, eğer yasa koyucular bu şeyleri varoluştan men ederse, çünkü kimse bunun için savaşmıyor, çünkü hepimiz "Şey, saklayacak hiçbir şeyim yok" diyoruz. Bu şeyler yok olacak.
 
-#### Görmek istediğimiz gelecek hakkında yapmamız gereken seçimler (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
+### Görmek istediğimiz gelecek hakkında yapmamız gereken seçimler (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656}
 
 Bu yüzden, sözlerimi burada noktalayacağım çünkü sanırım burada zamanımız tükeniyor. Şu anda, görmek istediğimiz dünya hakkında bazı seçimler yapmamız gereken bir yol ayrımındayız. Ve biliyorum ki bu sistemlerden rahatsız olan pek çok insan var ve her şeyi başka bir yere taşımak çok fazla iş gibi görünüyor. 
 

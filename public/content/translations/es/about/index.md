@@ -92,7 +92,7 @@ Ethereum es algo grande: incluye una comunidad, una tecnología, un conjunto de 
 Esto significa que el sitio web debe manejar muchos recorridos de usuario diferentes, desde "un desarrollador que quiere una herramienta específica" hasta "un recién llegado que acaba de comprar algo de ETH y no sabe qué es una billetera".
 La pregunta "¿Cuál es el mejor sitio web para una plataforma de cadena de bloques?" sigue abierta: somos pioneros. Construir esto requiere experimentación.
 
-## Hoja de ruta del producto {#roadmap}
+## Hoja de ruta del producto {#get-involved}
 
 Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración de la comunidad, el equipo central de ethereum.org publica una descripción general de los objetivos de nuestra hoja de ruta del [ciclo de Shape Up](https://www.productplan.com/glossary/shape-up-method/).
 
