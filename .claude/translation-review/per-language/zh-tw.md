@@ -106,3 +106,20 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `測試設備` (equipment) for "test fixtures"; these are JSON test vectors.
 - `適度的硬體` parses as "an appropriate amount of hardware" rather than "low-end hardware".
 - Zero Simplified leakage; neither `智慧合約` nor the #19115 `礦池` PoW/PoS inversion recurred.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh-tw/page-apps.json`. 8 critical, 10 warnings. Brand 9/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh-tw affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DEX** left expanded, zh-tw has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `testing/index.md` flipped `使用者` -> `用戶` at all 14 sites. `用戶` is the zh-cn form; corpus-wide zh-tw runs 1723:162 for `使用者` and the three sibling files in this PR kept it. Left as a warning since "user" is not an ETHGlossary term, but it is a deterministic fix if the locale wants it.
+- Best glossary compliance in this locale's recorded series: `智能合約` x107 with zero `智慧合約`. The regression from #18344/#18772/#19115 finally did not fire.
+

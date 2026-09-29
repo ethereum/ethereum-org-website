@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/languages/index.md",
-  "generatedAt": "2026-07-22T23:25:59.696Z",
+  "generatedAt": "2026-09-25T23:25:05.933Z",
   "rootHash": "3540927d09e3",
   "tree": {
     "contentHash": "cbfb94df8a8e",
@@ -1113,5 +1113,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "027a25f99fe67512f2702ac590d965956a33f462"
 }

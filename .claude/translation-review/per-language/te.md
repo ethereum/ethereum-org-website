@@ -95,3 +95,24 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 **Fixed in this branch:**
 
 - `Devcon` -> `డెవ్కాన్` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), applying 6.1's te rule for consonant-final loanwords: standard written transliteration with the halant, not a colloquial vowel-appended form. `logo-alt` stays Latin.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/te/page-apps.json`. 7 critical, 6 warnings. Brand 10/10 | Technical 7/10 | Semantic 9/10 | Consistency 8/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: te affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (te-specific):**
+
+- `యానిట్` -> `యూనిట్`; the only occurrence in the te tree against 35 correct ones in the same file
+- `డాప్‌లను` -> `dappలను` per the glossary Latin form; the same file already used `dapp` four lines earlier. ZWNJ dropped to match the tree-dominant form
+
+**Notes:**
+
+- The `testing` page title now correctly matches its site-nav label, fixing the PR #19115 nav/title mismatch class here rather than repeating it.
+
