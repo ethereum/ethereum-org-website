@@ -146,6 +146,13 @@ const retrieve = async (
           per_page: RETRIEVE,
           sort_by: SORT_BY,
           text_match_type: TEXT_MATCH_TYPE,
+          // Without this the keyword pass is an AND, and one ordinary word excludes the
+          // page: "ethereum protect against quantum computer" returned everything except
+          // the quantum page, which does not say "protect". A lower threshold than the
+          // question pass, since these words are already the ones that carry the
+          // question and there is less to widen past.
+          drop_tokens_threshold: 10,
+          drop_tokens_mode: "both_sides:3",
         })
       : Promise.resolve([]),
   ])

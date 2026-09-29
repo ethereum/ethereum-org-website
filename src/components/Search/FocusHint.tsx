@@ -51,7 +51,7 @@ const FocusHint = () => {
   }, [slot])
 
   if (!slot || !away) return null
-  return createPortal(<KBD>/</KBD>, slot)
+  return createPortal(<KBD className="min-w-0">/</KBD>, slot)
 }
 
 export default FocusHint
