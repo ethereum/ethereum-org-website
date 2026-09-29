@@ -71,7 +71,12 @@ const AskAffordance = () => {
     // The answer stays put while the query changes: the results underneath it keep
     // updating on every keystroke, which is the point of showing both, and the panel
     // names the question it answered so the pair cannot be misread.
-    const read = () => setQuery(input.value.trim())
+    const read = () => {
+      setQuery(input.value.trim())
+      // Typing drops the highlight, as it does for the library's own rows -- otherwise
+      // Enter follows a source chosen for the previous query.
+      setActiveSource(null)
+    }
     /**
      * Enter asks, and the arrow keys walk the answer's sources before reaching the
      * results. Captured on the input so it runs before the library's own handler, and
@@ -126,9 +131,11 @@ const AskAffordance = () => {
         return
       }
 
+      // Up out of the first source releases to the input, and the library owns
+      // everything below. Re-entering the sources from the first result meant reading
+      // the library's index out of `aria-activedescendant`, which is state we do not
+      // own and got the cycle wrong.
       if (current !== null) return claim(current > 0 ? current - 1 : null)
-      // Coming back up out of the first result returns to the last source.
-      if (activeItem().endsWith("-item-0")) return claim(count - 1)
     }
 
     read()

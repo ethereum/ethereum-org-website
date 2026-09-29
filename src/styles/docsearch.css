@@ -63,6 +63,17 @@
    which sits in the higher-priority base layer vs the docsearch layer */
 .DocSearch-Modal {
   margin: 60px auto auto;
+  /* The vendor sets flex-direction without display, so the column never applied. With it
+     the modal owns its own height and the dropdown takes what is left -- the dropdown
+     cannot compute that itself, because the search bar above it is `fit-content` and so
+     cannot appear in a calc. Capped at the viewport less the 60px offset and a gutter,
+     so the footer with the key hints is always on screen. */
+  display: flex;
+  max-height: calc(100dvh - 60px - 2rem);
+}
+
+.DocSearch-SearchBar {
+  flex-shrink: 0;
 }
 
 .DocSearch-Form {
@@ -207,7 +218,8 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100dvh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100dvh-60px-4rem-var(--docsearch-footer-height))] md:overflow-y-auto md:px-8 md:pb-8;
+  max-height: none;
+  @apply min-h-0 flex-1 overflow-y-scroll px-4 pb-4 md:overflow-y-auto md:px-8 md:pb-8;
 }
 
 /* Explorer rows keep the library's own markup so their save/remove buttons survive, and
