@@ -96,7 +96,9 @@ export function restoreCodeBlocks(prose: string, blocks: CodeBlock[]): string {
     // Opening fence gets indent from the prose context (placeholder was indented).
     // Closing fence needs explicit indent since it's on a new line in the replacement.
     const restored = `${fence}${langTag}\n${block.content}\n${block.indent}${fence}`
-    result = result.replace(placeholder, restored)
+    // Function replacement: a string one would read `$&`, `$$`, "$`" and `$'`
+    // in the code as replacement patterns and corrupt the fence.
+    result = result.replace(placeholder, () => restored)
   }
 
   return result
@@ -181,17 +183,32 @@ export function applyBlockComments(
 ): void {
   found.forEach(({ block, comment }, i) => {
     const translated = translations[`c${i}`]
+    // The map came from JSON.parse, so a non-string value is possible; writing
+    // one in would put `123` or `null` in the comment.
+    if (typeof translated !== "string") return
     if (!translated || translated === comment.text) return
+
     const lines = block.content.split("\n")
-    const last = comment.endLine ?? comment.line
-    for (let ln = comment.line; ln <= last && ln < lines.length; ln++) {
-      if (!lines[ln].includes(comment.text)) continue
-      lines[ln] = lines[ln].replace(comment.text, translated)
-      block.content = lines.join("\n")
-      return
+    const last = Math.min(comment.endLine ?? comment.line, lines.length - 1)
+    const swap = (text: string) => text.replace(comment.text, () => translated)
+
+    const hit = lines.findIndex(
+      (line, ln) =>
+        ln >= comment.line && ln <= last && line.includes(comment.text)
+    )
+    if (hit !== -1) {
+      lines[hit] = swap(lines[hit])
+    } else {
+      // A multi-line comment's text spans lines, so no single line holds it
+      // all. Rewrite the span only -- a whole-block replace could land on an
+      // earlier copy of the same text.
+      lines.splice(
+        comment.line,
+        last - comment.line + 1,
+        ...swap(lines.slice(comment.line, last + 1).join("\n")).split("\n")
+      )
     }
-    // A multi-line comment's text spans lines, so no single line holds it all.
-    block.content = block.content.replace(comment.text, translated)
+    block.content = lines.join("\n")
   })
 }
 

@@ -972,9 +972,15 @@ async function translateNormalizedComments(
   for (let i = 0; i < commentNodes.length; i++) {
     const original = commentNodes[i].text
     const translated = translatedMap[`c${i}`]
-    if (translated && translated !== original) {
+    // typeof: the map came from JSON.parse. Function replacement: a string one
+    // would read `$&` and friends in the comment as replacement patterns.
+    if (
+      typeof translated === "string" &&
+      translated &&
+      translated !== original
+    ) {
       // Replace first occurrence (comments may repeat, handle one at a time)
-      content = content.replace(original, translated)
+      content = content.replace(original, () => translated)
     }
   }
 

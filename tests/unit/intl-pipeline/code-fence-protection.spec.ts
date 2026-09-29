@@ -205,6 +205,48 @@ test("a comment is replaced on its own line, not wherever the text repeats", () 
   expect(blocks[0].content).toBe("const owner = 1\nlet x = 2 // Eigentuemer")
 })
 
+test("a multi-line comment is rewritten in its own span", () => {
+  // The comment's text also sits in the code above it; a whole-block replace
+  // would rewrite that copy instead.
+  const md = [
+    "```js",
+    "const s = `the owner\nis here`",
+    "/*",
+    " the owner",
+    "is here",
+    "*/",
+    "```",
+  ].join("\n")
+  const { blocks } = extractCodeFencesOnly(md)
+  applyBlockComments(collectBlockComments(blocks), { c0: "der Eigentuemer" })
+  expect(blocks[0].content).toBe(
+    "const s = `the owner\nis here`\n/*\n der Eigentuemer\n*/"
+  )
+})
+
+test("a dollar pattern in the code survives restore", () => {
+  // String replacements read `$&`, `$$`, "$`" and `$'` as patterns.
+  const md = ["```bash", 'echo "pid=$$ all=$& tick=$`"', "```"].join("\n")
+  const { prose, blocks } = extractCodeFencesOnly(md)
+  expect(restoreCodeBlocksStrict(prose, blocks, "x.md")).toBe(md)
+})
+
+test("a dollar pattern in a comment translation survives", () => {
+  const md = ["```js", "let x = 1 // cost", "```"].join("\n")
+  const { blocks } = extractCodeFencesOnly(md)
+  applyBlockComments(collectBlockComments(blocks), { c0: "coût en $$" })
+  expect(blocks[0].content).toBe("let x = 1 // coût en $$")
+})
+
+test("a non-string from the model is skipped, not written in", () => {
+  const { blocks } = extractCodeFencesOnly(EN)
+  const before = blocks.map((b) => b.content)
+  applyBlockComments(collectBlockComments(blocks), {
+    c0: 123 as unknown as string,
+  })
+  expect(blocks.map((b) => b.content)).toEqual(before)
+})
+
 test("comment translation leaves the code untouched", () => {
   const { prose, blocks } = extractCodeFencesOnly(EN)
   applyBlockComments(collectBlockComments(blocks), { c0: "geaendert" })
