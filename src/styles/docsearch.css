@@ -432,7 +432,7 @@
 }
 
 .DocSearch-Focus-hint kbd {
-  @apply flex size-5 items-center justify-center rounded-sm border border-solid border-disabled text-sm text-disabled;
+  @apply text-sm;
 }
 
 /* Sits inside the vendor's form ahead of its reset button, which is why it is

@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 
+import KBD from "@/components/ui/kbd"
+
 /**
  * The `/` hint, shown in the search bar only while focus has left the input.
  *
@@ -49,7 +51,7 @@ const FocusHint = () => {
   }, [slot])
 
   if (!slot || !away) return null
-  return createPortal(<kbd>/</kbd>, slot)
+  return createPortal(<KBD>/</KBD>, slot)
 }
 
 export default FocusHint
