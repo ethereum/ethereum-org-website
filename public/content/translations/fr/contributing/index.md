@@ -43,7 +43,7 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 - [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée (DeSci)
 - [Ajouter une ressource](/contributing/adding-resources/) – Ajouter une ressource utile à n'importe quelle page pertinente
 
-Des questions ? 🤔 Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org)
+Des questions ? 🤔 Rejoignez notre [serveur Discord](/discord/)
 
 ## Bonnes premières tâches pour commencer à contribuer {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Toutes les mises à jour sont effectuées via le processus de PR (Pull Request) 
 Vous n'avez besoin d'aucune autorisation pour travailler sur quoi que ce soit, mais il est toujours préférable de nous faire savoir ce que vous prévoyez de faire. Vous pouvez le faire en :
 
 - Commentant un ticket ou une PR sur [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Envoyant un message sur notre [serveur Discord](https://discord.gg/ethereum-org)
+- Envoyant un message sur notre [serveur Discord](/discord/)
 
 Avant de contribuer, assurez-vous de bien connaître :
 
@@ -77,7 +77,7 @@ Les décisions concernant les PR individuelles, l'évolution du design et les mi
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Serveur Discord](https://discord.gg/ethereum-org)
+- [Serveur Discord](/discord/)
 
 ### Une note sur le plagiat {#plagiarism}
 
@@ -95,7 +95,7 @@ Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilit
 
 ### Comment réclamer {#how-to-claim}
 
-1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).
+1. Rejoignez notre [serveur Discord](/discord/).
 2. Collez un lien vers votre contribution dans le canal `#🥇 | proof-of-contribution`.
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre OAT.
 4. Réclamez votre OAT !

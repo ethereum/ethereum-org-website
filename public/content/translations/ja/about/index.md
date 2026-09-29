@@ -100,7 +100,7 @@ ethereum.orgは、誰もが貢献できる[イーサリアム](/)コミュニテ
 
 **いかがでしょうか？** 私たちは常にロードマップに対するフィードバックを歓迎しています。私たちが取り組むべきだと思うことがあれば、ぜひお知らせください！コミュニティの誰からのアイデアやPRも歓迎します。
 
-**参加したいですか？** [貢献についての詳細を学ぶ](/contributing/)か、[ツイッターで連絡する](https://x.com/ethdotorg)か、[ディスコードサーバー](https://discord.gg/ethereum-org)でのコミュニティのディスカッションに参加してください。
+**参加したいですか？** [貢献についての詳細を学ぶ](/contributing/)か、[ツイッターで連絡する](https://x.com/ethdotorg)か、[ディスコードサーバー](/discord/)でのコミュニティのディスカッションに参加してください。
 
 ## デザイン原則 {#design-principles}
 
@@ -110,7 +110,7 @@ ethereum.orgは、誰もが貢献できる[イーサリアム](/)コミュニテ
 
 機能をより迅速にリリースし、コミュニティメンバーがethereum.orgのオープンなデザインに参加できるように、[デザインシステム](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)を構築して公開しました。
 
-参加したいですか？ [Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)や[GitHubのissue](https://github.com/ethereum/ethereum-org-website/issues/6284)をフォローし、[ディスコードの#designチャンネル](https://discord.gg/ethereum-org)での会話に参加してください。
+参加したいですか？ [Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)や[GitHubのissue](https://github.com/ethereum/ethereum-org-website/issues/6284)をフォローし、[ディスコードの#designチャンネル](/discord/)での会話に参加してください。
 
 ## スタイルガイド {#style-guide}
 
@@ -128,6 +128,6 @@ ethereum.orgのウェブサイトはオープンソースであり、特に明�
 
 このウェブサイトはオープンソースであり、誰でも作業に参加できますが、ethereum.orgやその他のイーサリアム財団のウェブプロジェクトに専念するチームも存在します。
 
-求人情報がある場合はここに掲載します。ご希望の職種が見当たらない場合は、[ディスコードサーバー](https://discord.gg/ethereum-org)にアクセスして、どのように私たちと一緒に働きたいかをお知らせください！
+求人情報がある場合はここに掲載します。ご希望の職種が見当たらない場合は、[ディスコードサーバー](/discord/)にアクセスして、どのように私たちと一緒に働きたいかをお知らせください！
 
 ethereum.orgチーム以外の求人をお探しですか？ [その他のイーサリアム関連の求人をチェック](/community/get-involved/#ethereum-jobs/)してください。

@@ -89,4 +89,4 @@ ethereum.org-এর প্রেক্ষাপটে এই ডিজাইন�
 
 যদিও এই নীতিগুলো ethereum.org ওয়েবসাইটের ওপর নিবদ্ধ, আমরা আশা করি যে এর মধ্যে অনেকগুলো সামগ্রিকভাবে ইথেরিয়াম ইকোসিস্টেমের মূল্যবোধের প্রতিনিধিত্ব করে। হয়তো আপনি এর মধ্যে কিছু আপনার নিজের প্রজেক্টেও অন্তর্ভুক্ত করতে চাইবেন!
 
-[ডিসকর্ড সার্ভারে](https://discord.gg/ethereum-org) বা [একটি ইস্যু তৈরি করে](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) আপনার চিন্তাভাবনা আমাদের জানান।
+[ডিসকর্ড সার্ভারে](/discord/) বা [একটি ইস্যু তৈরি করে](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) আপনার চিন্তাভাবনা আমাদের জানান।

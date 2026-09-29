@@ -43,7 +43,7 @@ ethereum.orgは、ウェブサイトの翻訳、執筆、デザイン、保守�
 - [DeSciページにプロジェクトを提案する](/contributing/adding-desci-projects/) – 分散型科学に貢献する、イーサリアム上に構築されたプロジェクトを追加します
 - [リソースを追加する](/contributing/adding-resources/) – 関連するページに役立つリソースを追加します
 
-質問がありますか？ 🤔 私たちの[ディスコードサーバー](https://discord.gg/ethereum-org)に参加してください
+質問がありますか？ 🤔 私たちの[ディスコードサーバー](/discord/)に参加してください
 
 ## 貢献を始めるのに適した最初のタスク {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ ethereum.orgは、ウェブサイトの翻訳、執筆、デザイン、保守�
 作業を行うのに許可は必要ありませんが、何を計画しているかを事前にお知らせいただくのが常に最善です。以下の方法でお知らせいただけます：
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website)のIssueまたはPRにコメントする
-- 私たちの[ディスコードサーバー](https://discord.gg/ethereum-org)でメッセージを送る
+- 私たちの[ディスコードサーバー](/discord/)でメッセージを送る
 
 貢献する前に、以下について理解しておいてください：
 
@@ -77,7 +77,7 @@ ethereum.orgは、ウェブサイトの翻訳、執筆、デザイン、保守�
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [ディスコードサーバー](https://discord.gg/ethereum-org)
+- [ディスコードサーバー](/discord/)
 
 ### 盗用に関する注意 {#plagiarism}
 
@@ -95,7 +95,7 @@ ethereum.orgにコンテンツや成果物を貢献する際は、あなた自�
 
 ### 請求方法 {#how-to-claim}
 
-1. 私たちの[ディスコードサーバー](https://discord.gg/ethereum-org)に参加します。
+1. 私たちの[ディスコードサーバー](/discord/)に参加します。
 2. `#🥇 | proof-of-contribution` チャンネルにあなたの貢献へのリンクを貼り付けます。
 3. チームメンバーからOATへのリンクが送られてくるのを待ちます。
 4. OATを請求します！

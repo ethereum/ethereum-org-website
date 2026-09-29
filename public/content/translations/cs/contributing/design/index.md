@@ -15,7 +15,7 @@ Nakonec je to skvělý způsob, jak si vybudovat rozmanité a působivé portfol
 
 Někdy potřebujeme pomoci s testováním našich prvotních nápadů. Je to skvělý způsob, jak přispět bez jakýchkoli technických znalostí.
 
-1. Designérský tým bude sdílet návrh (mockup) na [Discordu](https://discord.com/invite/ethereum-org) a na [GitHubu](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Designérský tým bude sdílet návrh (mockup) na [Discordu](/discord/) a na [GitHubu](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Budete provedeni návrhy, abyste mohli poskytnout zpětnou vazbu prostřednictvím funkce komentářů.
 3. Výsledek bude sdílen v příslušném problému (issue) na GitHubu a tým jej následně uzavře.
 

@@ -15,7 +15,7 @@ lang: ko
 
 때로는 초기 아이디어를 테스트하는 데 도움이 필요합니다. 이는 기술적인 지식 없이도 기여할 수 있는 훌륭한 방법입니다.
 
-1. 디자인 팀이 [디스코드](https://discord.com/invite/ethereum-org)와 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)에 목업 디자인을 공유합니다.
+1. 디자인 팀이 [디스코드](/discord/)와 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)에 목업 디자인을 공유합니다.
 2. 댓글 기능을 통해 피드백을 제공할 수 있도록 디자인에 대한 안내를 받게 됩니다.
 3. 결과는 GitHub 이슈에 공유된 후 팀에 의해 종료됩니다.
 

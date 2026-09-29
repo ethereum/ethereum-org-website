@@ -43,7 +43,7 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Sarankan proyek untuk halaman DeSci kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di atas Ethereum yang berkontribusi pada sains terdesentralisasi (desci)
 - [Tambahkan sumber daya](/contributing/adding-resources/) – Tambahkan sumber daya yang berguna ke halaman mana pun yang relevan
 
-Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami
+Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](/discord/) kami
 
 ## Tugas pertama yang baik untuk mulai berkontribusi {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Semua pembaruan dilakukan melalui proses PR GitHub. Ini berarti Anda membuat sal
 Anda tidak memerlukan izin untuk mengerjakan apa pun, tetapi selalu lebih baik untuk memberi tahu kami apa yang Anda rencanakan. Anda dapat melakukannya dengan:
 
 - Berkomentar pada masalah (issue) atau PR di [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Mengirim pesan di [server Discord](https://discord.gg/ethereum-org) kami
+- Mengirim pesan di [server Discord](/discord/) kami
 
 Sebelum berkontribusi, pastikan Anda familier dengan:
 
@@ -77,7 +77,7 @@ Keputusan tentang PR individu, evolusi desain, dan peningkatan besar dibuat oleh
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Server Discord](https://discord.gg/ethereum-org)
+- [Server Discord](/discord/)
 
 ### Catatan tentang plagiarisme {#plagiarism}
 
@@ -95,7 +95,7 @@ Jika kontribusi Anda digabungkan (merged) ke ethereum.org, Anda akan memiliki ke
 
 ### Cara mengklaim {#how-to-claim}
 
-1. Bergabunglah dengan [server Discord](https://discord.gg/ethereum-org) kami.
+1. Bergabunglah dengan [server Discord](/discord/) kami.
 2. Tempelkan tautan ke kontribusi Anda di saluran `#🥇 | proof-of-contribution`.
 3. Tunggu anggota tim kami mengirimi Anda tautan ke OAT Anda.
 4. Klaim OAT Anda!

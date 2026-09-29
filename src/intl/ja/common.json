@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "このページは役に立ちましたか？",
   "feedback-widget-thank-you-cta": "短いアンケートを開く",
   "feedback-widget-thank-you-subtitle": "いくつかの質問に答えて、このページをさらに良くするのにご協力ください。",
-  "feedback-widget-thank-you-subtitle-ext": "サポートが必要な場合は、<a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">ディスコード</a>でコミュニティにお問い合わせください。",
+  "feedback-widget-thank-you-subtitle-ext": "サポートが必要な場合は、<a href=\"/discord/\" target=\"_blank\">ディスコード</a>でコミュニティにお問い合わせください。",
   "feedback-widget-thank-you-timing": "2〜3分",
   "feedback-widget-thank-you-title": "フィードバックありがとうございます！",
   "filter-bar-clear": "フィルターをクリア",

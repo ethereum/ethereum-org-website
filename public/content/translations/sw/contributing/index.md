@@ -43,7 +43,7 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum ambao unachangia katika sayansi iliyogatuliwa (desci)
 - [Ongeza rasilimali](/contributing/adding-resources/) – Ongeza rasilimali muhimu kwenye ukurasa wowote husika
 
-Una maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](https://discord.gg/ethereum-org)
+Una maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](/discord/)
 
 ## Kazi nzuri za kwanza ili kuanza kuchangia {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Masasisho yote yanafanywa kupitia mchakato wa PR wa GitHub. Hii inamaanisha unau
 Huhitaji ruhusa ili kufanyia kazi chochote, lakini daima ni vyema kutujulisha kile unachopanga kufanya. Unaweza kufanya hivi kwa:
 
 - Kutoa maoni kwenye suala au PR katika [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Kutuma ujumbe kwenye [seva yetu ya Discord](https://discord.gg/ethereum-org)
+- Kutuma ujumbe kwenye [seva yetu ya Discord](/discord/)
 
 Kabla ya kuchangia, hakikisha unafahamu:
 
@@ -77,7 +77,7 @@ Maamuzi kuhusu PR za kibinafsi, mabadiliko ya usanifu na masasisho makubwa yanaf
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Seva ya Discord](https://discord.gg/ethereum-org)
+- [Seva ya Discord](/discord/)
 
 ### Ujumbe kuhusu wizi wa maandishi {#plagiarism}
 
@@ -95,7 +95,7 @@ Ikiwa mchango wako utaunganishwa kwenye ethereum.org, utakuwa na nafasi ya kudai
 
 ### Jinsi ya kudai {#how-to-claim}
 
-1. Jiunge na [seva yetu ya Discord](https://discord.gg/ethereum-org).
+1. Jiunge na [seva yetu ya Discord](/discord/).
 2. Bandika kiungo cha mchango wako katika chaneli ya `#🥇 | proof-of-contribution`.
 3. Subiri mwanachama wa timu yetu akutumie kiungo cha OAT yako.
 4. Dai OAT yako!

@@ -15,7 +15,7 @@ lang: bn
 
 আমাদের প্রাথমিক আইডিয়াগুলো পরীক্ষা করার জন্য মাঝে মাঝে সাহায্যের প্রয়োজন হয়। কোনো প্রযুক্তিগত জ্ঞান ছাড়াই অবদান রাখার এটি একটি দুর্দান্ত উপায়।
 
-1. ডিজাইন টিম [ডিসকর্ড](https://discord.com/invite/ethereum-org) এবং [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)-এ একটি মকআপ ডিজাইন শেয়ার করবে।
+1. ডিজাইন টিম [ডিসকর্ড](/discord/) এবং [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)-এ একটি মকআপ ডিজাইন শেয়ার করবে।
 2. কমেন্ট ফাংশনের মাধ্যমে মতামত দেওয়ার জন্য আপনাকে ডিজাইনগুলোর বিষয়ে গাইড করা হবে।
 3. ফলাফলটি GitHub ইস্যুতে শেয়ার করা হবে এবং তারপর টিমের দ্বারা ক্লোজ করা হবে।
 

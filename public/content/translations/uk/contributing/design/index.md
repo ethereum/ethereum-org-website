@@ -15,7 +15,7 @@ lang: uk
 
 Іноді нам потрібна допомога в тестуванні наших сирих ідей. Це чудовий спосіб зробити свій внесок без будь-яких технічних знань.
 
-1. Команда дизайнерів поділиться макетом дизайну в [Discord](https://discord.com/invite/ethereum-org) та на [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Команда дизайнерів поділиться макетом дизайну в [Discord](/discord/) та на [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Вас проведуть по дизайнах, щоб ви могли надати відгук за допомогою функції коментарів.
 3. Результат буде опубліковано в проблемі (issue) на GitHub, після чого команда її закриє.
 

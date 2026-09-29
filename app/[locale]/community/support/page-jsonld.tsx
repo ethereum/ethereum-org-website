@@ -6,6 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { isExternal, normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { DISCORD_URL } from "@/lib/constants"
+
 import { sections } from "./data"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
@@ -40,7 +42,7 @@ export default async function SupportJsonLD({
     // Not part of the sections data struct, so appended manually.
     {
       labelKey: "page-community-support-discord",
-      href: "https://discord.gg/ethereum-org",
+      href: DISCORD_URL,
     },
   ]
 

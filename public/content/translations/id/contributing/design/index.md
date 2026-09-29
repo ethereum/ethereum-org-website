@@ -15,7 +15,7 @@ Pada akhirnya, ini adalah cara yang bagus untuk membangun portofolio yang beraga
 
 Terkadang kami membutuhkan bantuan untuk menguji ide-ide mentah kami. Ini adalah cara yang bagus untuk berkontribusi tanpa pengetahuan teknis apa pun.
 
-1. Tim desain akan membagikan desain mockup di [Discord](https://discord.com/invite/ethereum-org) dan di [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Tim desain akan membagikan desain mockup di [Discord](/discord/) dan di [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Anda akan dipandu melalui desain tersebut untuk memberikan umpan balik melalui fungsi komentar.
 3. Hasilnya akan dibagikan di isu GitHub dan kemudian ditutup oleh tim.
 
