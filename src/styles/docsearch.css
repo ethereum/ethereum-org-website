@@ -219,6 +219,10 @@
 
 .DocSearch-Dropdown {
   max-height: none;
+  /* The answer streams in above the results, and scroll anchoring reads that as content
+     inserted above the viewport: the browser pushes scrollTop down to hold the results
+     still, which walked the reader off the top of the answer as it was being written. */
+  overflow-anchor: none;
   @apply min-h-0 flex-1 overflow-y-scroll px-4 pb-4 md:overflow-y-auto md:px-8 md:pb-8;
 }
 
@@ -421,6 +425,15 @@
 /**
  * Ask AI
  */
+
+/* Desktop only: there is no keyboard to press it with on touch. */
+.DocSearch-Focus-hint {
+  @apply ms-2 hidden shrink-0 items-center md:flex;
+}
+
+.DocSearch-Focus-hint kbd {
+  @apply flex size-5 items-center justify-center rounded-xs border border-solid border-disabled text-sm text-disabled;
+}
 
 /* Sits inside the vendor's form ahead of its reset button, which is why it is
    end-aligned by the form's own flex row rather than positioned. */

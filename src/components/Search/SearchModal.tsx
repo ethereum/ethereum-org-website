@@ -32,6 +32,7 @@ import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import AskAffordance from "./AskAffordance"
+import FocusHint from "./FocusHint"
 
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
@@ -525,6 +526,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
           in English and measured against the English index. Elsewhere the button would
           answer from that locale's pages with none of that tested. */}
       {canAsk && <AskAffordance />}
+      <FocusHint />
     </div>
   )
 }

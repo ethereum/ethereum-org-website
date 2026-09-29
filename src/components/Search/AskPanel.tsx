@@ -207,17 +207,6 @@ const AskPanel = ({
       ?.scrollIntoView({ block: "nearest" })
   }, [activeTarget])
 
-  // Follow the stream, but only while the reader is already at the bottom.
-  useEffect(() => {
-    const element =
-      scroller.current?.closest<HTMLElement>(".DocSearch-Dropdown") ??
-      scroller.current
-    if (!element) return
-    const slack =
-      element.scrollHeight - element.clientHeight - element.scrollTop
-    if (slack < 80) element.scrollTop = element.scrollHeight
-  }, [answer])
-
   return (
     <section className="DocSearch-Ask" ref={scroller}>
       <header className="DocSearch-Ask-header">
