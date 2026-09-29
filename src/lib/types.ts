@@ -677,8 +677,9 @@ export type PhoneScreenProps = SimulatorNavProps & {
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
   title: string
-  logoImage: string
-  bannerImage: string
+  // Nullable: the feed sends null for events with no image.
+  logoImage: string | null
+  bannerImage: string | null
   startTime: string
   endTime: string | null
   location: string
@@ -700,6 +701,9 @@ export type EventType =
   | "other"
 
 export interface EventItem extends GeodeApiEventItem {
+  // Narrowed from the raw feed: transformEvent normalizes a missing image to "".
+  logoImage: string
+  bannerImage: string
   id: string // slugified title
   eventTypes: EventType[]
   eventTypesLabels?: string[]
