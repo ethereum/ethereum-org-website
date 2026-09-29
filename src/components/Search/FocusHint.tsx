@@ -21,7 +21,12 @@ const FocusHint = () => {
       if (!form) return
       const host = document.createElement("span")
       host.className = "DocSearch-Focus-hint"
-      form.append(host)
+      // Ahead of the clear button, so appearing and disappearing never shifts it or the
+      // Ask button beyond it. The clear button is always in the DOM -- the library only
+      // hides it while the query is empty -- so this lands in the same place either way.
+      const reset = form.querySelector(".DocSearch-Reset")
+      if (reset) form.insertBefore(host, reset)
+      else form.append(host)
       setSlot(host)
     })
     return () => cancelAnimationFrame(frame)
