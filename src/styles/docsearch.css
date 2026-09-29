@@ -459,16 +459,8 @@
 }
 
 /* The answer sits above the results rather than replacing them, so a reader can read it
-   and still scan what search found without going back for it. The panel is portalled into
-   the scroll container and therefore appended last; the column ordering is what puts it
-   first, and it inherits the dropdown's height and scrolling for free. */
-.DocSearch-Dropdown:has(.DocSearch-Ask) {
-  @apply flex flex-col;
-}
-
-.DocSearch-Ask {
-  order: -1;
-}
+   and still scan what search found without going back for it. Its slot is prepended to
+   the scroll container, so reading order, DOM order and tab order all agree. */
 
 /* A rule between the answer and the results it sits above. */
 .DocSearch-Dropdown:has(.DocSearch-Ask) .DocSearch-Hits:first-of-type {
@@ -566,8 +558,10 @@
   @apply m-0 flex list-inside list-decimal flex-col gap-1;
 }
 
-/* The keyboard highlight, matching how a result row reads when it is active. */
-.DocSearch-Ask-source--active {
+/* The highlight, matching how a result row reads when it is active. Applies to every
+   navigable target -- the tool link, the referral and each source -- and never to the
+   inline citation superscripts, which are part of the sentence. */
+.DocSearch-Ask-target--active {
   @apply -mx-2 rounded-sm bg-primary-low-contrast px-2;
 }
 

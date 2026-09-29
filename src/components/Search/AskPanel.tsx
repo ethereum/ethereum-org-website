@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -34,20 +34,27 @@ const isCitation = (
   )
 }
 
+/** Somewhere the answer can send the reader, in the order the panel renders them. */
+export interface AskTarget {
+  url: string
+}
+
 interface AskPanelProps {
   query: string
   onDismiss: () => void
   /** Reported upward so the input's arrow keys can walk them before the results. */
-  onSources: (sources: Source[]) => void
-  /** Index into `sources`, or null while the highlight is below in the results. */
-  activeSource: number | null
+  onTargets: (targets: AskTarget[]) => void
+  /** Index into the reported targets, or null while the highlight is elsewhere. */
+  activeTarget: number | null
+  onHoverTarget: (index: number | null) => void
 }
 
 const AskPanel = ({
   query,
   onDismiss,
-  onSources,
-  activeSource,
+  onTargets,
+  activeTarget,
+  onHoverTarget,
 }: AskPanelProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
@@ -129,7 +136,6 @@ const AskPanel = ({
             if (payload.type === "token") setAnswer((a) => a + payload.value)
             if (payload.type === "sources") {
               setSources(payload.sources)
-              onSources(payload.sources)
               setReferral(payload.referral ?? null)
               setFollowup(payload.followup ?? null)
               report(payload.sources.length ? "answered" : "refused")
@@ -151,7 +157,7 @@ const AskPanel = ({
     }
     run()
     return () => controller.abort()
-  }, [query, locale, t, onSources])
+  }, [query, locale, t])
 
   // A new question scrolls its answer into view: the reader may have been part-way down
   // the results when they asked, and the answer arrives above them.
@@ -161,12 +167,39 @@ const AskPanel = ({
       ?.scrollTo({ top: 0 })
   }, [query])
 
+  const targets = useMemo(
+    () => [
+      ...(followup ? [{ url: followup.url }] : []),
+      ...(referral ? [{ url: referral.url }] : []),
+      ...sources.map((source) => ({ url: source.url })),
+    ],
+    [followup, referral, sources]
+  )
+  const offset = (followup ? 1 : 0) + (referral ? 1 : 0)
+
+  /**
+   * Marks a navigable target and lets the mouse claim it, which is how the library's own
+   * rows behave. Focus stays in the input -- `aria-selected` would need listbox
+   * semantics, and the library's listbox already owns that relationship with the input.
+   */
+  const targetProps = (index: number) => ({
+    "aria-current": index === activeTarget,
+    className: index === activeTarget ? "DocSearch-Ask-target--active" : "",
+    onMouseMove: () => onHoverTarget(index),
+    onMouseLeave: () => onHoverTarget(null),
+  })
+
   useEffect(() => {
-    if (activeSource === null) return
+    if (!done) return
+    onTargets(targets)
+  }, [done, targets, onTargets])
+
+  useEffect(() => {
+    if (activeTarget === null) return
     scroller.current
-      ?.querySelector(".DocSearch-Ask-source--active")
+      ?.querySelector(".DocSearch-Ask-target--active")
       ?.scrollIntoView({ block: "nearest" })
-  }, [activeSource])
+  }, [activeTarget])
 
   // Follow the stream, but only while the reader is already at the bottom.
   useEffect(() => {
@@ -233,13 +266,16 @@ const AskPanel = ({
       {error && <p className="DocSearch-Ask-error">{error}</p>}
 
       {done && followup && (
-        <p className="DocSearch-Ask-followup">
+        <p {...targetProps(0)} className="DocSearch-Ask-followup">
           <BaseLink href={followup.url}>{followup.label}</BaseLink>
         </p>
       )}
 
       {done && referral && (
-        <p className="DocSearch-Ask-referral">
+        <p
+          {...targetProps(followup ? 1 : 0)}
+          className="DocSearch-Ask-referral"
+        >
           <BaseLink href={referral.url}>{referral.name}</BaseLink>
         </p>
       )}
@@ -249,17 +285,7 @@ const AskPanel = ({
           <span>{t("docsearch-ask-sources")}</span>
           <ol>
             {sources.map((source, index) => (
-              <li
-                key={source.n}
-                id={`docsearch-ask-source-${source.n}`}
-                // Focus stays in the input; the active row is described, never focused.
-                // `aria-selected` would need listbox semantics, and the library's own
-                // listbox already owns that relationship with the input.
-                aria-current={index === activeSource}
-                className={
-                  index === activeSource ? "DocSearch-Ask-source--active" : ""
-                }
-              >
+              <li key={source.n} {...targetProps(offset + index)}>
                 <BaseLink href={source.url} hideArrow>
                   {source.title}
                 </BaseLink>

@@ -5,10 +5,9 @@ import { Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { createPortal } from "react-dom"
 
-import type { Source } from "@/lib/utils/ask"
 import { cn } from "@/lib/utils/cn"
 
-import AskPanel from "./AskPanel"
+import AskPanel, { type AskTarget } from "./AskPanel"
 
 /**
  * The Ask button and the answer panel, mounted into markup the search library owns.
@@ -28,8 +27,8 @@ const AskAffordance = () => {
   const [dropdown, setDropdown] = useState<HTMLElement | null>(null)
   const [query, setQuery] = useState("")
   const [asked, setAsked] = useState("")
-  const [sources, setSources] = useState<Source[]>([])
-  /** Index into `sources` while the highlight is in the answer, else null. */
+  const [targets, setTargets] = useState<AskTarget[]>([])
+  /** Index into `targets` while the highlight is in the answer, else null. */
   const [activeSource, setActiveSource] = useState<number | null>(null)
   /**
    * Whether the library is holding a highlighted row. Watched rather than read on
@@ -43,7 +42,16 @@ const AskAffordance = () => {
     // The modal renders in the same commit, so one frame is enough to find it.
     const frame = requestAnimationFrame(() => {
       const form = document.querySelector<HTMLElement>(".DocSearch-Form")
-      setDropdown(document.querySelector<HTMLElement>(".DocSearch-Dropdown"))
+      const list = document.querySelector<HTMLElement>(".DocSearch-Dropdown")
+      if (list) {
+        // Prepended, not portalled straight into the dropdown: a portal appends, and Tab
+        // follows the DOM rather than the visual order, so Dismiss sat after every
+        // result. Being first in the DOM also retires the CSS ordering this needed.
+        const panelSlot = document.createElement("div")
+        panelSlot.className = "DocSearch-Ask-panel-slot"
+        list.prepend(panelSlot)
+        setDropdown(panelSlot)
+      }
       if (!form) return
       // Last in the form, after the clear button. Ahead of it reads better and tabs
       // better, but the clear button only appears once there is something to clear, and
@@ -57,11 +65,13 @@ const AskAffordance = () => {
     return () => cancelAnimationFrame(frame)
   }, [])
 
+  useEffect(() => () => dropdown?.remove(), [dropdown])
+
   useEffect(() => () => host?.remove(), [host])
 
   // The library owns the input and exposes neither its value nor a change event.
-  const handleSources = useCallback((next: Source[]) => {
-    setSources(next)
+  const handleTargets = useCallback((next: AskTarget[]) => {
+    setTargets(next)
     setActiveSource(null)
   }, [])
 
@@ -69,10 +79,10 @@ const AskAffordance = () => {
   const armed = !disabled && activeSource === null && !resultHighlighted
 
   const askedRef = useRef("")
-  const sourcesRef = useRef<Source[]>([])
+  const sourcesRef = useRef<AskTarget[]>([])
   const activeSourceRef = useRef<number | null>(null)
   askedRef.current = asked
-  sourcesRef.current = sources
+  sourcesRef.current = targets
   activeSourceRef.current = activeSource
 
   useEffect(() => {
@@ -111,6 +121,12 @@ const AskAffordance = () => {
      * claiming the key: the library's own index is still null, so its next ArrowDown
      * lands on the first result with nothing double-advancing.
      */
+    const scrollToAnswer = () =>
+      input
+        .closest(".DocSearch-Modal")
+        ?.querySelector(".DocSearch-Dropdown")
+        ?.scrollTo({ top: 0 })
+
     const activeItem = () =>
       input.getAttribute("aria-activedescendant")?.trim() || ""
 
@@ -131,7 +147,7 @@ const AskAffordance = () => {
         if (activeItem() || !value || value === askedRef.current) return
         thisEvent.preventDefault()
         thisEvent.stopPropagation()
-        setSources([])
+        setTargets([])
         setActiveSource(null)
         setAsked(value)
         return
@@ -148,17 +164,24 @@ const AskAffordance = () => {
       }
 
       if (thisEvent.key === "ArrowDown") {
-        if (current === null && !activeItem()) return claim(0)
+        if (current === null && !activeItem()) {
+          scrollToAnswer()
+          return claim(0)
+        }
         if (current !== null && current < count - 1) return claim(current + 1)
         if (current !== null) setActiveSource(null)
         return
       }
 
-      // Up out of the first source releases to the input, and the library owns
-      // everything below. Re-entering the sources from the first result meant reading
-      // the library's index out of `aria-activedescendant`, which is state we do not
-      // own and got the cycle wrong.
-      if (current !== null) return claim(current > 0 ? current - 1 : null)
+      if (current !== null) {
+        // Back at the top of the answer, so put the answer itself back in view: the
+        // reader may have scrolled past it on the way down.
+        if (current === 0) scrollToAnswer()
+        return claim(current > 0 ? current - 1 : null)
+      }
+      // The library moves from its first row to no row at all, since nothing is
+      // highlighted by default -- so that step is ours to take, back into the answer.
+      if (activeItem().endsWith("-item-0")) return claim(count - 1)
     }
 
     read()
@@ -196,8 +219,9 @@ const AskAffordance = () => {
           <AskPanel
             query={asked}
             onDismiss={() => setAsked("")}
-            onSources={handleSources}
-            activeSource={activeSource}
+            onTargets={handleTargets}
+            activeTarget={activeSource}
+            onHoverTarget={setActiveSource}
           />,
           dropdown
         )}
