@@ -25,13 +25,19 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { restoreCodeBlocksStrict } from "./lib/llm/code-block-extractor"
 import {
   callReserveUsd,
   minimumFuseUsd,
   runFuseUsd,
   usageTotals,
 } from "./lib/llm/cost-meter"
-import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
+import {
+  callGeminiRaw,
+  isLlmAvailable,
+  translateFenceComments,
+  translateFile,
+} from "./lib/llm/gemini"
 import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
@@ -374,7 +380,13 @@ async function buildGeminiTranslator(
     }
   }
 
-  const { batches: plan, budget, projectedBytes, translateCount } = planned
+  const {
+    batches: plan,
+    budget,
+    projectedBytes,
+    translateCount,
+    codeBlocks,
+  } = planned
 
   // A sane incremental update is a handful of batches. Hundreds means the
   // batching collapsed (see MAX_BATCHES_PER_FILE) and every batch would resend
@@ -438,6 +450,21 @@ async function buildGeminiTranslator(
     totalOutput += result.tokensUsed.output
   }
 
+  // Fence bodies never went to the model, so their comments are translated
+  // here, in place, before anything restores them. Skipping this would revert
+  // a retranslated section's comments to English.
+  const lifted = [...codeBlocks.values()].flat()
+  if (lifted.length > 0) {
+    const commentTokens = await translateFenceComments({
+      blocks: lifted,
+      targetLanguage: locale,
+      glossaryTerms,
+      filePath,
+    })
+    totalInput += commentTokens.input
+    totalOutput += commentTokens.output
+  }
+
   const translatedIds = Object.keys(allTranslations)
   log(
     `  LLM returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
@@ -451,7 +478,15 @@ async function buildGeminiTranslator(
 
   return {
     translator: (sectionId: string, englishFallback: string) => {
-      return allTranslations[sectionId] || englishFallback
+      const translated = allTranslations[sectionId]
+      if (!translated) return englishFallback
+      const blocks = codeBlocks.get(sectionId)
+      if (!blocks || blocks.length === 0) return translated
+      return restoreCodeBlocksStrict(
+        translated,
+        blocks,
+        `${filePath} (${locale}) section "${sectionId}"`
+      )
     },
     tokens: { input: totalInput, output: totalOutput },
   }
