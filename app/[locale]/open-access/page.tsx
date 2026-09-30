@@ -360,6 +360,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             <strong>{t("page-open-access-decides-description-5")}</strong>
           </p>
           <p>{t("page-open-access-decides-description-6")}</p>
+        </Section>
+
+        {/* Decorative break between sections: its own section rather than the
+            tail of the one above, and kept out of the ToC. */}
+        <Section>
           <Image
             src={lockedAtmImg}
             alt=""
@@ -507,6 +512,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </UnorderedList>
           <p>{t("page-open-access-how-description-2")}</p>
           <p>{t("page-open-access-how-description-3")}</p>
+        </Section>
+
+        <Section>
           <Image
             src={ethDiamondImg}
             alt=""
