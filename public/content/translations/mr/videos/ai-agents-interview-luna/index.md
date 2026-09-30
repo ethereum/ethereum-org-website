@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "व्हेन शिफ्ट हॅपन्स"
 breadcrumb: "एआय एजंट्स: लुना"
