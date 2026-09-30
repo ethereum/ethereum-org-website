@@ -1,7 +1,7 @@
 ---
-title: ethereum.org కు డిజైన్ సహకారం
-metaTitle: డిజైన్ సహకారం
-description: ethereum.org కు డిజైన్ సహకారం
+title: "ethereum.org కు డిజైన్ సహకారం"
+metaTitle: "డిజైన్ సహకారం"
+description: "ethereum.org కు డిజైన్ సహకారం"
 lang: te
 ---
 
