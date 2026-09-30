@@ -1,7 +1,7 @@
 ---
-title: ethereum.org में डिज़ाइन का योगदान
-metaTitle: डिज़ाइन का योगदान
-description: ethereum.org में डिज़ाइन का योगदान
+title: "ethereum.org में डिज़ाइन का योगदान"
+metaTitle: "डिज़ाइन का योगदान"
+description: "ethereum.org में डिज़ाइन का योगदान"
 lang: hi
 ---
 
