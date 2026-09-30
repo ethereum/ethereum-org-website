@@ -363,7 +363,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <Image
             src={lockedAtmImg}
             alt=""
-            className="mx-auto max-h-48 w-auto object-contain"
+            className="mx-auto max-h-64 w-auto object-contain"
             sizes="240px"
           />
         </Section>
