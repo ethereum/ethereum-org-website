@@ -1,7 +1,7 @@
 ---
-title: Về ethereum.org
-metaTitle: Về chúng tôi
-description: Về đội ngũ, cộng đồng và sứ mệnh của ethereum.org
+title: "Về ethereum.org"
+metaTitle: "Về chúng tôi"
+description: "Về đội ngũ, cộng đồng và sứ mệnh của ethereum.org"
 lang: vi
 ---
 
@@ -20,6 +20,8 @@ Ethereum là một mạng lưới công khai, một Chuỗi khối và một Gia
 [Tìm hiểu thêm về Ethereum](/what-is-ethereum/)
 
 [Tìm hiểu thêm về Quản trị Ethereum](/governance/)
+
+[Tìm hiểu thêm về các nguyên tắc cốt lõi của Ethereum](/values/)
 
 ### Ether (ETH) {#ether-or-eth}
 
@@ -82,9 +84,10 @@ Chúng tôi muốn người dùng của mình được khơi dậy sự hứng t
 
 ### 2. ethereum.org luôn không ngừng phát triển 🛠 {#core-principles-2}
 
-Ethereum và cộng đồng luôn không ngừng phát triển, vì vậy ethereum.org cũng sẽ như vậy. Đó là lý do tại sao trang web có một hệ thống thiết kế đơn giản và cấu trúc mô-đun. Chúng tôi thực hiện các thay đổi lặp đi lặp lại khi chúng tôi tìm hiểu thêm về cách mọi người sử dụng trang web và những gì cộng đồng mong muốn từ nó.
+Ethereum và cộng đồng luôn không ngừng phát triển, vì vậy ethereum.org cũng vậy. Đó là lý do tại sao trang web có một hệ thống thiết kế đơn giản và cấu trúc mô-đun. Chúng tôi thực hiện các thay đổi lặp đi lặp lại khi tìm hiểu thêm về cách mọi người sử dụng trang web và những gì cộng đồng mong muốn từ nó.
 Chúng tôi là mã nguồn mở, với một cộng đồng những người đóng góp, vì vậy bạn cũng có thể đề xuất các thay đổi hoặc giúp đỡ chúng tôi.
 [Tìm hiểu về việc đóng góp](/contributing/)
+[Tại sao mã nguồn mở lại quan trọng](/open-source/)
 
 ### 3. ethereum.org không phải là một trang web sản phẩm thông thường 🦄 {#core-principles-3}
 
@@ -92,15 +95,11 @@ Ethereum là một điều lớn lao: nó bao gồm một cộng đồng, một 
 Điều này có nghĩa là trang web cần xử lý nhiều hành trình người dùng khác nhau, từ "một nhà phát triển muốn một công cụ cụ thể" đến "một người mới vừa mua một ít ETH và không biết Ví là gì".
 "Đâu là trang web tốt nhất cho một nền tảng Chuỗi khối?" vẫn là một câu hỏi mở - chúng tôi là những người tiên phong. Việc xây dựng điều này đòi hỏi sự thử nghiệm.
 
-## Lộ trình sản phẩm {#get-involved}
+## Tham gia {#get-involved}
 
-Để làm cho công việc của chúng tôi dễ tiếp cận hơn và thúc đẩy sự hợp tác cộng đồng nhiều hơn, đội ngũ nòng cốt của ethereum.org công bố một cái nhìn tổng quan về các mục tiêu lộ trình [chu kỳ định hình (shape up cycle)](https://www.productplan.com/glossary/shape-up-method/) của chúng tôi.
+**Bạn thấy thế nào?** Chúng tôi luôn trân trọng các phản hồi về công việc của mình - nếu có điều gì bạn nghĩ chúng tôi nên cải thiện, vui lòng cho chúng tôi biết! Chúng tôi hoan nghênh các ý tưởng và PR từ bất kỳ ai trong cộng đồng.
 
-[Xem lộ trình sản phẩm Chu kỳ 1 năm 2025 của chúng tôi](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**Bạn thấy thế nào?** Chúng tôi luôn trân trọng các phản hồi về lộ trình của mình - nếu có điều gì bạn nghĩ chúng tôi nên thực hiện, vui lòng cho chúng tôi biết! Chúng tôi hoan nghênh các ý tưởng và PR từ bất kỳ ai trong cộng đồng.
-
-**Bạn muốn tham gia?** [Tìm hiểu thêm về việc đóng góp](/contributing/), [liên hệ với chúng tôi trên Twitter](https://x.com/ethdotorg), hoặc tham gia các cuộc thảo luận cộng đồng trong [máy chủ Discord của chúng tôi](/discord/).
+**Bạn muốn tham gia?** [Tìm hiểu thêm về việc đóng góp](/contributing/), [liên hệ với chúng tôi trên Twitter](https://x.com/ethdotorg), hoặc tham gia các cuộc thảo luận cộng đồng trên [máy chủ Discord của chúng tôi](/discord/).
 
 ## Các nguyên tắc thiết kế {#design-principles}
 
@@ -108,9 +107,9 @@ Chúng tôi sử dụng một bộ [nguyên tắc thiết kế](/contributing/de
 
 ## Hệ thống thiết kế {#design-system}
 
-Chúng tôi đã xây dựng và phát hành một [hệ thống thiết kế](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) để triển khai các tính năng nhanh hơn và cho phép các thành viên cộng đồng tham gia vào quá trình thiết kế mở của ethereum.org.
+Chúng tôi đã xây dựng và phát hành một [hệ thống thiết kế](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) để triển khai các tính năng nhanh hơn và cho phép các thành viên cộng đồng tham gia vào thiết kế mở của ethereum.org.
 
-Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [vấn đề trên GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) và tham gia cuộc trò chuyện trong [kênh Discord #design của chúng tôi](/discord/).
+Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) và tham gia trò chuyện trong [kênh Discord #design của chúng tôi](/discord/).
 
 ## Hướng dẫn văn phong {#style-guide}
 
@@ -124,10 +123,10 @@ Chúng tôi hoan nghênh các phản hồi về các nguyên tắc thiết kế,
 
 Trang web ethereum.org là mã nguồn mở và được xây dựng theo [Giấy phép MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) trừ khi có quy định khác. Tìm hiểu thêm về [điều khoản sử dụng](/terms-of-use/) của ethereum.org.
 
-## Cơ hội việc làm {#open-jobs}
+## Các vị trí đang tuyển dụng {#open-jobs}
 
-Mặc dù trang web này là mã nguồn mở và bất kỳ ai cũng có thể làm việc trên đó, chúng tôi vẫn có một đội ngũ chuyên trách cho ethereum.org và các dự án web khác của Tổ chức Ethereum.
+Mặc dù trang web này là mã nguồn mở và bất kỳ ai cũng có thể đóng góp, chúng tôi vẫn có một đội ngũ chuyên trách cho ethereum.org và các dự án web khác của Tổ chức Ethereum.
 
-Chúng tôi sẽ đăng bất kỳ cơ hội việc làm nào tại đây. Nếu bạn không thấy vai trò nào phù hợp với mình ở đây, hãy truy cập [máy chủ Discord của chúng tôi](/discord/) và cho chúng tôi biết bạn muốn làm việc với chúng tôi như thế nào!
+Khi có nhu cầu tuyển dụng, chúng tôi sẽ liệt kê các vị trí đang mở tại đây. Nếu bạn không thấy vị trí phù hợp với mình, hãy truy cập [máy chủ Discord của chúng tôi](/discord/) và cho chúng tôi biết bạn muốn làm việc với chúng tôi như thế nào!
 
-Bạn đang tìm kiếm cơ hội ngoài đội ngũ ethereum.org? [Hãy xem các công việc khác liên quan đến Ethereum](/community/get-involved/#ethereum-jobs/).
+Bạn đang tìm kiếm cơ hội ngoài đội ngũ ethereum.org? [Xem các công việc khác liên quan đến Ethereum](/community/get-involved/#ethereum-jobs).
