@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-community-events.json",
-  "generatedAt": "2026-05-13T10:41:25.151Z",
-  "rootHash": "7d795af799ad",
+  "generatedAt": "2026-09-30T18:08:26.075Z",
+  "rootHash": "89257be19155",
   "tree": {
-    "contentHash": "6b79d2027159",
-    "anchorHash": "16187ff783bd",
+    "contentHash": "14ea39c68324",
+    "anchorHash": "5b63e1bebd2b",
     "children": {
       "page-events-meta-title": {
         "contentHash": "2fed060a4030",
@@ -110,10 +110,6 @@
         "contentHash": "99d2b5dd6faf",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-events-hub-description-dubai": {
-        "contentHash": "92955a90fdbd",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-events-hub-description-hong-kong": {
         "contentHash": "439371c80762",
         "anchorHash": "e3b0c44298fc"
@@ -128,10 +124,6 @@
       },
       "page-events-hub-description-rome": {
         "contentHash": "12e4d1fda944",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-events-hub-description-sf": {
-        "contentHash": "30876eb63ba0",
         "anchorHash": "e3b0c44298fc"
       },
       "page-events-hub-description-buenos-aires": {
@@ -174,16 +166,16 @@
         "contentHash": "4db514a1400d",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-events-hub-apply-cta": {
-        "contentHash": "027cb7f3d515",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-events-hub-cowork-signup": {
         "contentHash": "9aa88186c18a",
         "anchorHash": "e3b0c44298fc"
       },
       "page-events-hub-meetups": {
         "contentHash": "ce225ab0270b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-events-hub-join-community": {
+        "contentHash": "2b44a1bd7856",
         "anchorHash": "e3b0c44298fc"
       },
       "page-events-section-find-events": {
@@ -599,12 +591,10 @@
       "page-events-section-hubs",
       "page-events-section-hubs-subtitle",
       "page-events-hub-description-berlin",
-      "page-events-hub-description-dubai",
       "page-events-hub-description-hong-kong",
       "page-events-hub-description-lagos",
       "page-events-hub-description-london",
       "page-events-hub-description-rome",
-      "page-events-hub-description-sf",
       "page-events-hub-description-buenos-aires",
       "page-events-hub-cta-buenos-aires",
       "page-events-hub-cta-berlin",
@@ -615,9 +605,9 @@
       "page-events-hub-cadence-wednesdays",
       "page-events-hub-coworking-cta",
       "page-events-hub-meetup-cta",
-      "page-events-hub-apply-cta",
       "page-events-hub-cowork-signup",
       "page-events-hub-meetups",
+      "page-events-hub-join-community",
       "page-events-section-find-events",
       "page-events-section-find-events-subtitle",
       "page-events-search-placeholder",
@@ -693,5 +683,5 @@
       "item-logo"
     ]
   },
-  "sourceCommitSha": "55ab71335443287379f21ad8326e2bb7c4601b61"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
