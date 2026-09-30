@@ -7,8 +7,7 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
+  - "use-cases"
 format: explainer
 author: CoinMarketCap
 breadcrumb: "去中心化社交"

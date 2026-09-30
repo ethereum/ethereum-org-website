@@ -13,9 +13,9 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 这次我们将深入探讨 The Graph，它在过去一年中基本上已成为开发去中心化应用 (dapp) 的标准技术栈的一部分。让我们首先看看传统方式是如何处理的……
 
-## 如果没有 The Graph…… {#without-the-graph}
+## 没有 The Graph 的情况…… {#without-the-graph}
 
-为了方便说明，我们来看一个简单的例子。我们都喜欢游戏，所以想象一个用户可以下注的简单游戏：
+为了方便说明，我们来看一个简单的例子。大家都喜欢游戏，所以想象一个用户可以下注的简单游戏：
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-现在假设在我们的 dapp 中，我们想要显示总下注数、输赢的总局数，并在有人再次玩游戏时更新这些数据。传统的方法将是：
+现在假设在我们的去中心化应用 (dapp) 中，我们想要显示总下注数、输/赢的总局数，并且在有人再次游玩时更新这些数据。我们的方法将是：
 
 1. 获取 `totalGamesPlayerWon`。
 2. 获取 `totalGamesPlayerLost`。
 3. 订阅 `BetPlaced` 事件。
 
-如右图所示，我们可以监听 [Web3 中的事件](https://docs.web3js.org/api/web3/class/Contract#events)，但这需要处理相当多的情况。
+我们可以像右侧所示那样监听 [Web3 中的事件](https://docs.web3js.org/api/web3/class/Contract#events)，但这需要处理相当多的情况。
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -64,17 +64,17 @@ GameContract.events.BetPlaced({
 });
 ```
 
-对于我们这个简单的例子来说，这还算可以接受。但假设我们现在只想显示当前玩家输赢的下注金额。那我们就倒霉了，你最好部署一个新合约来存储这些值并获取它们。现在想象一个复杂得多的智能合约和 dapp，事情很快就会变得一团糟。
+对于我们这个简单的例子来说，这还算可以接受。但假设我们现在只想显示当前玩家输/赢的下注金额。那我们运气就不太好了，你最好部署一个新合约来存储并获取这些值。现在想象一个复杂得多的智能合约和 dapp，事情很快就会变得一团糟。
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![不能简单地查询](./one-does-not-simply-query.jpg)
 
-你可以看出这并不是最优解：
+你可以看到这并不是最优解：
 
 - 对已经部署的合约不起作用。
 - 存储这些值需要额外的 Gas 成本。
-- 需要对以太坊节点进行另一次调用来获取数据。
+- 需要向以太坊节点发起另一次调用来获取数据。
 
-![Thats not good enough](./not-good-enough.jpg)
+![这还不够好](./not-good-enough.jpg)
 
 现在让我们来看一个更好的解决方案。
 
