@@ -53,7 +53,7 @@
   "page-open-access-property-neutral-description-2": "The network checks whether a transaction follows its rules, not whether it agrees with who sent it or why.",
   "page-open-access-property-no-off-switch-title": "No single off switch",
   "page-open-access-property-no-off-switch-description-1": "Ethereum does not run from one company's servers.",
-  "page-open-access-property-no-off-switch-description-2": "Independent computers called nodes operate the network around the world. Removing one node, company or service does not shut Ethereum down.",
+  "page-open-access-property-no-off-switch-description-2": "Independent computers operate the network around the world. Removing one computer, company or service does not shut Ethereum down.",
   "page-open-access-property-shared-record-title": "A shared record",
   "page-open-access-property-shared-record-description-1": "Once a transaction is confirmed, it becomes a permanent part of Ethereum's history.",
   "page-open-access-property-shared-record-description-2": "There is no administrator who can quietly edit the record or delete inconvenient history.",
