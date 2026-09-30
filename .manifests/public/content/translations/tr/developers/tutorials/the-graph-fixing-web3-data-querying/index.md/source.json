@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/the-graph-fixing-web3-data-querying/index.md",
-  "generatedAt": "2026-07-22T23:53:58.817Z",
-  "rootHash": "2e566e48f590",
+  "generatedAt": "2026-09-30T18:29:13.405Z",
+  "rootHash": "b847ae962157",
   "tree": {
-    "contentHash": "263dfe9ca44f",
+    "contentHash": "c57e16765e4f",
     "anchorHash": "83ee7c8793d1",
     "children": {
       "frontmatter:title": {
@@ -81,7 +81,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "without-the-graph": {
-        "contentHash": "c4396ae22509",
+        "contentHash": "64151c7433a1",
         "anchorHash": "830ff47fac4a",
         "labelHash": "2eba2f479b26",
         "children": {
@@ -162,7 +162,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "image:1": {
-            "contentHash": "567185e91c99",
+            "contentHash": "cac48d274327",
             "anchorHash": "40c16962e41c"
           }
         },
@@ -712,5 +712,5 @@
       "the-decentralized-future"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

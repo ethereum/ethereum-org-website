@@ -1,7 +1,7 @@
 ---
-title: ethereum.org'a tasarım katkısı
-metaTitle: Tasarım katkısı
-description: ethereum.org'a tasarım katkısı
+title: "ethereum.org'a tasarım katkısı"
+metaTitle: "Tasarım katkısı"
+description: "ethereum.org'a tasarım katkısı"
 lang: tr
 ---
 

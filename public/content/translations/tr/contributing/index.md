@@ -1,5 +1,5 @@
 ---
-title: "ethereum.org'a katkıda bulunmak 🦄"
+title: "ethereum.org'a Katkıda Bulunmak 🦄"
 metaTitle: "Katkıda Bulunmak"
 description: "ethereum.org'a katkıda bulunabileceğiniz farklı yollar hakkında bilgi edinin"
 lang: tr
@@ -7,7 +7,7 @@ lang: tr
 
 Ethereum.org, web sitesini çevirmeye, yazmaya, tasarlamaya ve sürdürmeye yardımcı olan **12.000'den fazla** katkıda bulunanı olan açık kaynaklı bir projedir.
 
-Sizi [Ethereum](/) ekosisteminde büyümeye ve eğitmeye yardımcı olacak, aynı zamanda anlamlı bir şekilde katkıda bulunmanızı ve ilgili pratik deneyimi kazanmanızı sağlayacak misafirperver bir topluluğuz!
+Biz, [Ethereum](/) ekosisteminde büyümenize ve eğitim almanıza yardımcı olurken aynı zamanda anlamlı bir şekilde katkıda bulunmanızı ve ilgili pratik deneyimi kazanmanızı sağlayacak misafirperver bir topluluğuz!
 
 ## Katkıda bulunma yolları {#ways-to-contribute}
 
@@ -40,7 +40,7 @@ Sizi [Ethereum](/) ekosisteminde büyümeye ve eğitmeye yardımcı olacak, ayn�
 - [Bir katman 2 (l2) ekleyin](/contributing/adding-layer-2s/) – İlgili bir sayfaya bir katman 2 (l2) ekleyin
 - [Bir staking ürünü veya hizmeti ekleyin](/contributing/adding-staking-products/) – Bireysel staking, havuzlu staking veya hizmet olarak staking'i kolaylaştırmaya yardımcı olan bir proje ekleyin
 - [Bir cüzdan ekleyin](/contributing/adding-wallets/) – [Cüzdan bulma sayfası](/wallets/find-wallet/) için bir cüzdan ekleyin
-- [DeSci sayfamız için bir proje önerin](/contributing/adding-desci-projects/) – Ethereum üzerinde inşa edilmiş, merkeziyetsiz bilime (DeSci) katkıda bulunan bir proje ekleyin
+- [DeSci sayfamız için bir proje önerin](/contributing/adding-desci-projects/) – Merkeziyetsiz bilime (DeSci) katkıda bulunan, Ethereum üzerinde oluşturulmuş bir proje ekleyin
 - [Bir kaynak ekleyin](/contributing/adding-resources/) – İlgili herhangi bir sayfaya yararlı bir kaynak ekleyin
 
 Sorularınız mı var? 🤔 [Discord sunucumuza](/discord/) katılın
@@ -66,7 +66,7 @@ Herhangi bir şey üzerinde çalışmak için izne ihtiyacınız yoktur, ancak n
 
 Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 
-- ethereum.org'un gelişen [vizyonu](/about/)
+- [ethereum.org'un gelişen vizyonu](/about/)
 - [tasarım ilkelerimiz](/contributing/design-principles/)
 - [stil rehberimiz](/contributing/style-guide/)
 - [davranış kurallarımız](/community/code-of-conduct)
@@ -85,7 +85,7 @@ ethereum.org'a herhangi bir içerik veya eser katkısında bulunurken yalnızca 
 
 ## Açık kaynağa yeni misiniz? {#new-to-open-source}
 
-GitHub depomuzda, açık kaynağa yeni başlayan geliştiriciler için özel olarak tasarlanmış, giriş engeli düşük ve [iyi ilk sorun (good first issue)](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) olarak etiketlenmiş sorunlarımız bulunmaktadır.
+GitHub depomuzda, açık kaynağa yeni başlayan geliştiriciler için özel olarak tasarlanmış, giriş engeli düşük ve [good first issue (iyi ilk sorun)](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) olarak etiketlenmiş sorunlarımız bulunmaktadır.
 
 ## Zincir İçi Başarı Token'ınızı (OAT) Talep Edin {#oat}
 
