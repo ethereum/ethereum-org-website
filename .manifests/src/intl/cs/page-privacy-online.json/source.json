@@ -1,0 +1,1110 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-privacy-online.json",
+  "generatedAt": "2026-09-30T18:13:20.569Z",
+  "rootHash": "0b31e72d2135",
+  "tree": {
+    "contentHash": "cfc163f82a66",
+    "anchorHash": "6653af5699ed",
+    "children": {
+      "page-privacy-online-meta-description": {
+        "contentHash": "8642280893f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-title": {
+        "contentHash": "4922d27f6627",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-hero-description": {
+        "contentHash": "3392d9c37c3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-hero-cta": {
+        "contentHash": "d98fb5c0b118",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-summary-title": {
+        "contentHash": "8e76a94ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-summary-item-1": {
+        "contentHash": "84f3305d52df",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "749d20a0ee3d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-summary-item-2": {
+        "contentHash": "5fb16b7d3690",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a80d9873ba61",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-summary-item-3": {
+        "contentHash": "c1ea00476e78",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "631b6f9e17cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-summary-item-4": {
+        "contentHash": "521379749ef6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9c6479a5f74c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-how-description-1": {
+        "contentHash": "24f09f6f2e86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-how-description-2": {
+        "contentHash": "291370d22b44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-title": {
+        "contentHash": "86bd8bad250e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-description": {
+        "contentHash": "10c28b727537",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-first": {
+        "contentHash": "9d8509a583bf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9acf8063aba4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-browser-callout-title": {
+        "contentHash": "9dfef55e4028",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-callout-description": {
+        "contentHash": "6354dfa7d1f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-callout-cta": {
+        "contentHash": "6a51d1abc008",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-callout-compare": {
+        "contentHash": "7decd9908157",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-tests": {
+        "contentHash": "1829631fb37b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-browser-tests-cta": {
+        "contentHash": "ef674fba2aad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-search-title": {
+        "contentHash": "ce0aa4963da4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-search-description": {
+        "contentHash": "2dced077f018",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4675df0b2687",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-blocking-title": {
+        "contentHash": "a8714545cecb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-blocking-description": {
+        "contentHash": "bd07f8af8834",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6f360eafa91d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-messaging-title": {
+        "contentHash": "565a33ad47ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-messaging-description": {
+        "contentHash": "5a0dfffc35f8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "80763dc90760",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-email-title": {
+        "contentHash": "2dedba751874",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-email-description": {
+        "contentHash": "a714bcdce1b0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4ab6ba05f8e8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-aliases-title": {
+        "contentHash": "407fdf1e92db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-aliases-description": {
+        "contentHash": "28b52d632274",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "89ca3cbbc202",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-signin-title": {
+        "contentHash": "4107c0403752",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-tools-signin-description": {
+        "contentHash": "310540c2ee61",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8f4a06905b5e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-tools-jump-to-apps": {
+        "contentHash": "a589f39bbaf0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-title": {
+        "contentHash": "b3077cddb5dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-alert-title": {
+        "contentHash": "89511489bfe1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-alert-description": {
+        "contentHash": "1a069e6c621f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "149dc989ffc0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-table-lead": {
+        "contentHash": "9c15cfa9381c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-does": {
+        "contentHash": "a7f1373e59ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-does-not": {
+        "contentHash": "db89b1b95ace",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-1-does": {
+        "contentHash": "da46ec3f9c86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-1-not": {
+        "contentHash": "41db95b33f92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-2-does": {
+        "contentHash": "2cac556ae56a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-2-not": {
+        "contentHash": "351e9bf5988c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-3-does": {
+        "contentHash": "f6252a172f71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-3-not": {
+        "contentHash": "5b5b5c151ff7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-4-does": {
+        "contentHash": "158ca428a082",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-table-4-not": {
+        "contentHash": "91920f2535c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-trust": {
+        "contentHash": "55750e14ec56",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "352a8ecd605f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-criteria-lead": {
+        "contentHash": "ef4438e238a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-criteria-1": {
+        "contentHash": "e8eceead38bf",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8e57d545e91e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-criteria-2": {
+        "contentHash": "b6322d4664b7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "94a5b5703316",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-criteria-3": {
+        "contentHash": "5f02f894397d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3f6087caefdc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-criteria-4": {
+        "contentHash": "42a5fcfbf272",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "da11b8830330",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-tor-title": {
+        "contentHash": "f7ad15e252be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-tor-description-1": {
+        "contentHash": "c4da3ac1d2ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-tor-description-2": {
+        "contentHash": "7ba54b09a923",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-tor-description-3": {
+        "contentHash": "0cbac7ed3603",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-tor-learn-more": {
+        "contentHash": "b1c9555ed8e9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "fb5f3d51c6fb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-vpn-relay-title": {
+        "contentHash": "a11003b5e661",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-vpn-relay-description": {
+        "contentHash": "7be985035022",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-title": {
+        "contentHash": "dbfc1f2f9ec2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-description": {
+        "contentHash": "c93f6023fe37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-gpc-title": {
+        "contentHash": "99572f6d782f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-gpc-description": {
+        "contentHash": "14731bb1b11f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-cookies-title": {
+        "contentHash": "6ab7bb52fc9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-cookies-description": {
+        "contentHash": "78954fa5a58a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-devices-title": {
+        "contentHash": "20338781b368",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-devices-description": {
+        "contentHash": "09edb345026d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-cookies-clip-alt": {
+        "contentHash": "cf5b7da87866",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-settings-cookies-clip-caption": {
+        "contentHash": "ddc0bcc3f3ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-title": {
+        "contentHash": "079ac99ad7d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-description": {
+        "contentHash": "9416577db524",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-services": {
+        "contentHash": "7f83c1d3f2cc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "fd958b793f33",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-policies-optout-title": {
+        "contentHash": "e3ca05b99b07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-optout-description": {
+        "contentHash": "39e31ba3aca4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-registry-title": {
+        "contentHash": "f5fb045de021",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-registry-description": {
+        "contentHash": "8e0a299bbed1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ab2d762012ff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-policies-manual-title": {
+        "contentHash": "88167ab6d757",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-policies-manual-description": {
+        "contentHash": "25be0160c15f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-apps-title": {
+        "contentHash": "53224bff9dcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-apps-description": {
+        "contentHash": "26c7c574d439",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-apps-more": {
+        "contentHash": "aabda75729c7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ce90dbc49332",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-category-browser": {
+        "contentHash": "d31de1a5c5c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-search": {
+        "contentHash": "49c266baaaa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-messaging": {
+        "contentHash": "eebdbb25cbbc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-passwords": {
+        "contentHash": "be146b37a009",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-phone": {
+        "contentHash": "ece6e50a3c38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-email": {
+        "contentHash": "969ccbd3cf63",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-aliases": {
+        "contentHash": "806c2715be8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-two-factor": {
+        "contentHash": "5bd4f3586ae6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-vpn": {
+        "contentHash": "2762a0671924",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-blocking": {
+        "contentHash": "592c75e35db2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-dns": {
+        "contentHash": "020965a2f08f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-photos": {
+        "contentHash": "5e3147ab51e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-file-encryption": {
+        "contentHash": "ca89dd65029b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-notes": {
+        "contentHash": "8a7525b1492f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-maps": {
+        "contentHash": "119e66d117ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-mobile-os": {
+        "contentHash": "b6b7de8639ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-desktop-os": {
+        "contentHash": "99d82d0b8847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-category-app-store": {
+        "contentHash": "65b647a75477",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-brave-name": {
+        "contentHash": "e7d91391c151",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-brave-description": {
+        "contentHash": "4fb7e8fa5821",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-firefox-name": {
+        "contentHash": "2f26233595d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-firefox-description": {
+        "contentHash": "3f48885a86fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mullvad-browser-name": {
+        "contentHash": "3a7ae73c5cbb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mullvad-browser-description": {
+        "contentHash": "94c43e2fab5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tor-browser-name": {
+        "contentHash": "9583652d0289",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tor-browser-description": {
+        "contentHash": "3ec8f83fc17d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-duckduckgo-name": {
+        "contentHash": "1f571f93ab71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-duckduckgo-description": {
+        "contentHash": "ed4562a1f590",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-brave-search-name": {
+        "contentHash": "44e13e1c7453",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-brave-search-description": {
+        "contentHash": "34efef684c31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-ublock-origin-name": {
+        "contentHash": "49ac7879d244",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-ublock-origin-description": {
+        "contentHash": "32001d872a49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-signal-name": {
+        "contentHash": "1e9806e4227b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-signal-description": {
+        "contentHash": "4b100ef6078f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-simplex-name": {
+        "contentHash": "05ed75fdb8cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-simplex-description": {
+        "contentHash": "b9ffa705137f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-session-name": {
+        "contentHash": "6959b4159575",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-session-description": {
+        "contentHash": "2338d138615e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-proton-mail-name": {
+        "contentHash": "6e8682329a4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-proton-mail-description": {
+        "contentHash": "baf8a20937b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tuta-name": {
+        "contentHash": "b559cf09bec8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tuta-description": {
+        "contentHash": "961e0a670aec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-addy-name": {
+        "contentHash": "1bda76f74343",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-addy-description": {
+        "contentHash": "a1ac718976f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-simplelogin-name": {
+        "contentHash": "12d7d2168786",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-simplelogin-description": {
+        "contentHash": "1ca605c52c25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-bitwarden-name": {
+        "contentHash": "fb54e0f95e21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-bitwarden-description": {
+        "contentHash": "77fc9369a97a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mysudo-name": {
+        "contentHash": "39bbca3883d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mysudo-description": {
+        "contentHash": "cee93dc0ffce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mullvad-vpn-name": {
+        "contentHash": "f63f58d6e0e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-mullvad-vpn-description": {
+        "contentHash": "d937a441c708",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-proton-vpn-name": {
+        "contentHash": "56e2529d85db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-proton-vpn-description": {
+        "contentHash": "b2bb03ca0faa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-quad9-name": {
+        "contentHash": "991ca1329462",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-quad9-description": {
+        "contentHash": "aebafe009a9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-2fas-name": {
+        "contentHash": "2b2f5b525c99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-2fas-description": {
+        "contentHash": "4a7e2f277d79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-ente-photos-name": {
+        "contentHash": "a8a9a432ef73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-ente-photos-description": {
+        "contentHash": "679b4ec47015",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-cryptomator-name": {
+        "contentHash": "accd43753f4f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-cryptomator-description": {
+        "contentHash": "cbc838526d0e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-notesnook-name": {
+        "contentHash": "ed4ed28f562e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-notesnook-description": {
+        "contentHash": "c2bfdbb666d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-organic-maps-name": {
+        "contentHash": "f014fb917298",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-organic-maps-description": {
+        "contentHash": "d4b3e48388f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-grapheneos-name": {
+        "contentHash": "bbd193338f1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-grapheneos-description": {
+        "contentHash": "5d84310ab3c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tails-name": {
+        "contentHash": "cc43566b300e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-tails-description": {
+        "contentHash": "d3aa67d0d46f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-f-droid-name": {
+        "contentHash": "ae307f05efc2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-app-f-droid-description": {
+        "contentHash": "4617fa9792ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resources-title": {
+        "contentHash": "117b650587a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resources-description": {
+        "contentHash": "a30c9f0d23b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resources-more": {
+        "contentHash": "d7f30adbbc7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-eff-name": {
+        "contentHash": "14230cceef99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-eff-description": {
+        "contentHash": "2c14db7cef74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-privacy-international-name": {
+        "contentHash": "77063c55b48f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-privacy-international-description": {
+        "contentHash": "f92a8979839a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-noyb-name": {
+        "contentHash": "d42d19f83413",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-noyb-description": {
+        "contentHash": "5fb31bb6bbcb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-tor-name": {
+        "contentHash": "ac05c1a080a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-tor-description": {
+        "contentHash": "e55799d9e3b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-ludlow-name": {
+        "contentHash": "f2fbd08b5e69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-ludlow-description": {
+        "contentHash": "4e94d89ba4c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-web3privacy-name": {
+        "contentHash": "75a4a556e1f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-web3privacy-description": {
+        "contentHash": "bb33256cbada",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-resource-access-now": {
+        "contentHash": "b14f51bdcb8c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "549c8c5cae26",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-resource-fpf": {
+        "contentHash": "62dcb31a2fe1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "73870e90a751",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-resource-security-in-a-box": {
+        "contentHash": "823464da65c4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "569427cbb445",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-resource-prc": {
+        "contentHash": "7e1e9be46e8c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1d73f631c379",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-resource-newsguild": {
+        "contentHash": "ea8a29efdc7f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6166577ba9bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-further-reading-title": {
+        "contentHash": "4082f515b2f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-reference-browser-share": {
+        "contentHash": "15f0a4080e3b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "53513a5c47ce",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-reference-search-share": {
+        "contentHash": "68196249c530",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b6881fb0030a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-reference-cr-removal-services": {
+        "contentHash": "7c5785f45ecc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "25fb73f9435c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-reference-privacy-guides-removals": {
+        "contentHash": "e05de0bd635f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "b99b77b7b4f4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-privacy-online-pathway-1-title": {
+        "contentHash": "d075380f5776",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-pathway-1-description": {
+        "contentHash": "493c9aeb55ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-pathway-2-title": {
+        "contentHash": "d452cb414fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-privacy-online-pathway-2-description": {
+        "contentHash": "0991440be564",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-privacy-online-meta-description",
+      "page-privacy-online-title",
+      "page-privacy-online-hero-description",
+      "page-privacy-online-hero-cta",
+      "page-privacy-online-summary-title",
+      "page-privacy-online-summary-item-1",
+      "page-privacy-online-summary-item-2",
+      "page-privacy-online-summary-item-3",
+      "page-privacy-online-summary-item-4",
+      "page-privacy-online-how-description-1",
+      "page-privacy-online-how-description-2",
+      "page-privacy-online-tools-title",
+      "page-privacy-online-tools-description",
+      "page-privacy-online-tools-browser-first",
+      "page-privacy-online-tools-browser-callout-title",
+      "page-privacy-online-tools-browser-callout-description",
+      "page-privacy-online-tools-browser-callout-cta",
+      "page-privacy-online-tools-browser-callout-compare",
+      "page-privacy-online-tools-browser-tests",
+      "page-privacy-online-tools-browser-tests-cta",
+      "page-privacy-online-tools-search-title",
+      "page-privacy-online-tools-search-description",
+      "page-privacy-online-tools-blocking-title",
+      "page-privacy-online-tools-blocking-description",
+      "page-privacy-online-tools-messaging-title",
+      "page-privacy-online-tools-messaging-description",
+      "page-privacy-online-tools-email-title",
+      "page-privacy-online-tools-email-description",
+      "page-privacy-online-tools-aliases-title",
+      "page-privacy-online-tools-aliases-description",
+      "page-privacy-online-tools-signin-title",
+      "page-privacy-online-tools-signin-description",
+      "page-privacy-online-tools-jump-to-apps",
+      "page-privacy-online-vpn-title",
+      "page-privacy-online-vpn-alert-title",
+      "page-privacy-online-vpn-alert-description",
+      "page-privacy-online-vpn-table-lead",
+      "page-privacy-online-vpn-table-does",
+      "page-privacy-online-vpn-table-does-not",
+      "page-privacy-online-vpn-table-1-does",
+      "page-privacy-online-vpn-table-1-not",
+      "page-privacy-online-vpn-table-2-does",
+      "page-privacy-online-vpn-table-2-not",
+      "page-privacy-online-vpn-table-3-does",
+      "page-privacy-online-vpn-table-3-not",
+      "page-privacy-online-vpn-table-4-does",
+      "page-privacy-online-vpn-table-4-not",
+      "page-privacy-online-vpn-trust",
+      "page-privacy-online-vpn-criteria-lead",
+      "page-privacy-online-vpn-criteria-1",
+      "page-privacy-online-vpn-criteria-2",
+      "page-privacy-online-vpn-criteria-3",
+      "page-privacy-online-vpn-criteria-4",
+      "page-privacy-online-vpn-tor-title",
+      "page-privacy-online-vpn-tor-description-1",
+      "page-privacy-online-vpn-tor-description-2",
+      "page-privacy-online-vpn-tor-description-3",
+      "page-privacy-online-vpn-tor-learn-more",
+      "page-privacy-online-vpn-relay-title",
+      "page-privacy-online-vpn-relay-description",
+      "page-privacy-online-settings-title",
+      "page-privacy-online-settings-description",
+      "page-privacy-online-settings-gpc-title",
+      "page-privacy-online-settings-gpc-description",
+      "page-privacy-online-settings-cookies-title",
+      "page-privacy-online-settings-cookies-description",
+      "page-privacy-online-settings-devices-title",
+      "page-privacy-online-settings-devices-description",
+      "page-privacy-online-settings-cookies-clip-alt",
+      "page-privacy-online-settings-cookies-clip-caption",
+      "page-privacy-online-policies-title",
+      "page-privacy-online-policies-description",
+      "page-privacy-online-policies-services",
+      "page-privacy-online-policies-optout-title",
+      "page-privacy-online-policies-optout-description",
+      "page-privacy-online-policies-registry-title",
+      "page-privacy-online-policies-registry-description",
+      "page-privacy-online-policies-manual-title",
+      "page-privacy-online-policies-manual-description",
+      "page-privacy-online-apps-title",
+      "page-privacy-online-apps-description",
+      "page-privacy-online-apps-more",
+      "page-privacy-online-category-browser",
+      "page-privacy-online-category-search",
+      "page-privacy-online-category-messaging",
+      "page-privacy-online-category-passwords",
+      "page-privacy-online-category-phone",
+      "page-privacy-online-category-email",
+      "page-privacy-online-category-aliases",
+      "page-privacy-online-category-two-factor",
+      "page-privacy-online-category-vpn",
+      "page-privacy-online-category-blocking",
+      "page-privacy-online-category-dns",
+      "page-privacy-online-category-photos",
+      "page-privacy-online-category-file-encryption",
+      "page-privacy-online-category-notes",
+      "page-privacy-online-category-maps",
+      "page-privacy-online-category-mobile-os",
+      "page-privacy-online-category-desktop-os",
+      "page-privacy-online-category-app-store",
+      "page-privacy-online-app-brave-name",
+      "page-privacy-online-app-brave-description",
+      "page-privacy-online-app-firefox-name",
+      "page-privacy-online-app-firefox-description",
+      "page-privacy-online-app-mullvad-browser-name",
+      "page-privacy-online-app-mullvad-browser-description",
+      "page-privacy-online-app-tor-browser-name",
+      "page-privacy-online-app-tor-browser-description",
+      "page-privacy-online-app-duckduckgo-name",
+      "page-privacy-online-app-duckduckgo-description",
+      "page-privacy-online-app-brave-search-name",
+      "page-privacy-online-app-brave-search-description",
+      "page-privacy-online-app-ublock-origin-name",
+      "page-privacy-online-app-ublock-origin-description",
+      "page-privacy-online-app-signal-name",
+      "page-privacy-online-app-signal-description",
+      "page-privacy-online-app-simplex-name",
+      "page-privacy-online-app-simplex-description",
+      "page-privacy-online-app-session-name",
+      "page-privacy-online-app-session-description",
+      "page-privacy-online-app-proton-mail-name",
+      "page-privacy-online-app-proton-mail-description",
+      "page-privacy-online-app-tuta-name",
+      "page-privacy-online-app-tuta-description",
+      "page-privacy-online-app-addy-name",
+      "page-privacy-online-app-addy-description",
+      "page-privacy-online-app-simplelogin-name",
+      "page-privacy-online-app-simplelogin-description",
+      "page-privacy-online-app-bitwarden-name",
+      "page-privacy-online-app-bitwarden-description",
+      "page-privacy-online-app-mysudo-name",
+      "page-privacy-online-app-mysudo-description",
+      "page-privacy-online-app-mullvad-vpn-name",
+      "page-privacy-online-app-mullvad-vpn-description",
+      "page-privacy-online-app-proton-vpn-name",
+      "page-privacy-online-app-proton-vpn-description",
+      "page-privacy-online-app-quad9-name",
+      "page-privacy-online-app-quad9-description",
+      "page-privacy-online-app-2fas-name",
+      "page-privacy-online-app-2fas-description",
+      "page-privacy-online-app-ente-photos-name",
+      "page-privacy-online-app-ente-photos-description",
+      "page-privacy-online-app-cryptomator-name",
+      "page-privacy-online-app-cryptomator-description",
+      "page-privacy-online-app-notesnook-name",
+      "page-privacy-online-app-notesnook-description",
+      "page-privacy-online-app-organic-maps-name",
+      "page-privacy-online-app-organic-maps-description",
+      "page-privacy-online-app-grapheneos-name",
+      "page-privacy-online-app-grapheneos-description",
+      "page-privacy-online-app-tails-name",
+      "page-privacy-online-app-tails-description",
+      "page-privacy-online-app-f-droid-name",
+      "page-privacy-online-app-f-droid-description",
+      "page-privacy-online-resources-title",
+      "page-privacy-online-resources-description",
+      "page-privacy-online-resources-more",
+      "page-privacy-online-resource-eff-name",
+      "page-privacy-online-resource-eff-description",
+      "page-privacy-online-resource-privacy-international-name",
+      "page-privacy-online-resource-privacy-international-description",
+      "page-privacy-online-resource-noyb-name",
+      "page-privacy-online-resource-noyb-description",
+      "page-privacy-online-resource-tor-name",
+      "page-privacy-online-resource-tor-description",
+      "page-privacy-online-resource-ludlow-name",
+      "page-privacy-online-resource-ludlow-description",
+      "page-privacy-online-resource-web3privacy-name",
+      "page-privacy-online-resource-web3privacy-description",
+      "page-privacy-online-resource-access-now",
+      "page-privacy-online-resource-fpf",
+      "page-privacy-online-resource-security-in-a-box",
+      "page-privacy-online-resource-prc",
+      "page-privacy-online-resource-newsguild",
+      "page-privacy-online-further-reading-title",
+      "page-privacy-online-reference-browser-share",
+      "page-privacy-online-reference-search-share",
+      "page-privacy-online-reference-cr-removal-services",
+      "page-privacy-online-reference-privacy-guides-removals",
+      "page-privacy-online-pathway-1-title",
+      "page-privacy-online-pathway-1-description",
+      "page-privacy-online-pathway-2-title",
+      "page-privacy-online-pathway-2-description"
+    ]
+  },
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+}
