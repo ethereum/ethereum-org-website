@@ -28,7 +28,7 @@ Beide Kontotypen haben die Fähigkeit:
 
 - Die Erstellung eines Kontos kostet nichts
 - Kann Transaktionen initiieren
-- Transaktionen zwischen externen Konten können nur ETH/Token-Überweisungen sein
+- Transaktionen zwischen externen Konten können nur ETH-/Token-Transfers sein
 - Besteht aus einem kryptographischen Schlüsselpaar: öffentliche und private Schlüssel, die die Kontoaktivitäten steuern
 
 **Contract**

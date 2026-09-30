@@ -1,6 +1,6 @@
 ---
 title: "イーサリアムのアカウント"
-description: "イーサリアムのアカウントについての説明。データ構造とキーペア暗号技術との関係について。"
+description: "イーサリアムのアカウントについての説明。データ構造と鍵ペア暗号技術との関係について。"
 lang: ja
 ---
 
@@ -50,7 +50,7 @@ lang: ja
 ![A diagram showing the make up of an account](./accounts.png)
 _図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用_
 
-## 外部所有アカウントとキーペア {#externally-owned-accounts-and-key-pairs}
+## 外部所有アカウントと鍵ペア {#externally-owned-accounts-and-key-pairs}
 
 アカウントは、公開鍵と秘密鍵の暗号鍵ペアで構成されています。これらは、トランザクションが実際に送信者によって署名されたことを証明し、偽造を防ぐのに役立ちます。秘密鍵はトランザクションに署名するために使用するものであり、アカウントに関連付けられた資金の保管権を付与します。暗号資産を実際に保持することはなく、秘密鍵を保持します。資金は常にイーサリアムの台帳上にあります。
 
@@ -76,7 +76,7 @@ _図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethere
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-以下の例は、[Clef](https://geth.ethereum.org/docs/tools/clef/introduction)と呼ばれる署名ツールを使用して新しいアカウントを生成する方法を示しています。Clefは、イーサリアム・クライアントである[ゴー・イーサリアム（ゲス）](https://geth.ethereum.org)にバンドルされているアカウント管理および署名ツールです。`clef newaccount`コマンドは新しいキーペアを作成し、暗号化されたキーストアに保存します。
+以下の例は、[Clef](https://geth.ethereum.org/docs/tools/clef/introduction)と呼ばれる署名ツールを使用して新しいアカウントを生成する方法を示しています。Clefは、イーサリアム・クライアントである[ゴー・イーサリアム（ゲス）](https://geth.ethereum.org)にバンドルされているアカウント管理および署名ツールです。`clef newaccount`コマンドは新しい鍵ペアを作成し、暗号化されたキーストアに保存します。
 
 ```
 > clef newaccount --keystore <path>
@@ -121,7 +121,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 ## 視覚的なデモ {#a-visual-demo}
 
-オースティンがハッシュ関数とキーペアについて解説する動画をご覧ください。
+オースティンがハッシュ関数と鍵ペアについて解説する動画をご覧ください。
 
 <VideoWatch slug="hash-function-eth-build" />
 
