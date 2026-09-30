@@ -1,7 +1,7 @@
 ---
-title: ethereum.org 소개
-metaTitle: 소개
-description: ethereum.org의 팀, 커뮤니티 및 미션 소개
+title: "ethereum.org 소개"
+metaTitle: "소개"
+description: "ethereum.org의 팀, 커뮤니티 및 미션 소개"
 lang: ko
 ---
 
@@ -15,11 +15,13 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 ### 이더리움 {#ethereum}
 
-이더리움은 퍼블릭 네트워크이자 블록체인, 그리고 오픈 소스 프로토콜입니다. 수만 명의 개발자, 노드 운영자, ETH 보유자 및 사용자로 구성된 글로벌 커뮤니티에 의해 운영, 거버넌스, 관리 및 소유됩니다.
+이더리움은 퍼블릭 네트워크이자 블록체인이며 오픈 소스 프로토콜입니다. 수만 명의 개발자, 노드 운영자, ETH 보유자 및 사용자로 구성된 글로벌 커뮤니티에 의해 운영, 거버넌스, 관리 및 소유됩니다.
 
 [이더리움에 대해 더 알아보기](/what-is-ethereum/)
 
 [이더리움 거버넌스에 대해 더 알아보기](/governance/)
+
+[이더리움의 핵심 원칙에 대해 더 알아보기](/values/)
 
 ### 이더(ETH) {#ether-or-eth}
 
@@ -82,25 +84,22 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 ### 2. ethereum.org는 항상 진화합니다 🛠 {#core-principles-2}
 
-이더리움과 커뮤니티는 항상 진화하고 있으며, ethereum.org 역시 마찬가지입니다. 이것이 바로 사이트가 단순한 디자인 시스템과 모듈식 구조를 갖춘 이유입니다. 우리는 사람들이 사이트를 어떻게 사용하고 커뮤니티가 무엇을 원하는지 알아가면서 반복적인 변경을 수행합니다.
-우리는 기여자 커뮤니티와 함께하는 오픈 소스이므로, 여러분도 변경 사항을 제안하거나 도움을 줄 수 있습니다.
+이더리움과 커뮤니티는 항상 진화하고 있으며, ethereum.org 역시 마찬가지입니다. 이것이 바로 이 사이트가 단순한 디자인 시스템과 모듈식 구조를 갖춘 이유입니다. 우리는 사람들이 사이트를 어떻게 사용하고 커뮤니티가 사이트에서 무엇을 원하는지 더 많이 알아가면서 반복적인 변경을 수행합니다.
+우리는 기여자 커뮤니티와 함께하는 오픈 소스이므로, 여러분도 변경 사항을 제안하거나 우리를 도울 수 있습니다.
 [기여에 대해 알아보기](/contributing/)
+[오픈 소스가 중요한 이유](/open-source/)
 
 ### 3. ethereum.org는 일반적인 제품 웹사이트가 아닙니다 🦄 {#core-principles-3}
 
 이더리움은 거대합니다. 커뮤니티, 기술, 일련의 아이디어와 이데올로기 등을 포함합니다.
 이는 웹사이트가 "특정 도구를 원하는 개발자"부터 "방금 ETH를 구매했지만 지갑이 무엇인지 모르는 초보자"에 이르기까지 다양한 사용자 여정을 처리해야 함을 의미합니다.
-"블록체인 플랫폼을 위한 최고의 웹사이트는 무엇인가?"라는 질문은 여전히 열려 있으며, 우리는 개척자입니다. 이를 구축하려면 실험이 필요합니다.
+"블록체인 플랫폼을 위한 최고의 웹사이트는 무엇인가?"라는 질문은 여전히 미해결 과제로 남아 있으며, 우리는 개척자입니다. 이를 구축하려면 실험이 필요합니다.
 
-## 제품 로드맵 {#get-involved}
+## 참여하기 {#get-involved}
 
-우리의 작업에 더 쉽게 접근하고 커뮤니티 협업을 촉진하기 위해, ethereum.org 핵심 팀은 [쉐이프 업 사이클(shape up cycle)](https://www.productplan.com/glossary/shape-up-method/) 로드맵 목표의 개요를 게시합니다.
+**어떠신가요?** 우리는 항상 우리의 작업에 대한 피드백을 환영합니다. 우리가 다루어야 한다고 생각하는 내용이 있다면 알려주세요! 커뮤니티의 누구라도 아이디어와 PR을 제안해 주시는 것을 환영합니다.
 
-[2025년 사이클 1 제품 로드맵 보기](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**어떻게 생각하시나요?** 우리는 로드맵에 대한 피드백을 항상 환영합니다. 우리가 작업해야 한다고 생각하는 부분이 있다면 알려주세요! 커뮤니티의 누구든 아이디어와 PR을 환영합니다.
-
-**참여하고 싶으신가요?** [기여에 대해 더 알아보기](/contributing/), [트위터로 연락하기](https://x.com/ethdotorg), 또는 [디스코드 서버](/discord/)의 커뮤니티 토론에 참여해 보세요.
+**참여하고 싶으신가요?** [기여에 대해 더 알아보기](/contributing/), [트위터로 연락하기](https://x.com/ethdotorg), 또는 [디스코드 서버](/discord/)에서 커뮤니티 토론에 참여해 보세요.
 
 ## 디자인 원칙 {#design-principles}
 
@@ -110,7 +109,7 @@ ethereum.org는 누구나 기여할 수 있는 [이더리움](/) 커뮤니티를
 
 우리는 기능을 더 빠르게 출시하고 커뮤니티 회원이 ethereum.org의 오픈 디자인에 참여할 수 있도록 [디자인 시스템](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)을 구축하고 출시했습니다.
 
-참여하고 싶으신가요? [Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)와 [GitHub 이슈](https://github.com/ethereum/ethereum-org-website/issues/6284)를 팔로우하고, [#design 디스코드 채널](/discord/)의 대화에 참여해 보세요.
+참여하고 싶으신가요? [Figma에서 팔로우](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)하고 [#design 디스코드 채널](/discord/)에서 대화에 참여해 보세요.
 
 ## 스타일 가이드 {#style-guide}
 
@@ -128,6 +127,6 @@ ethereum.org 웹사이트는 오픈 소스이며, 별도로 명시되지 않는 
 
 이 웹사이트는 오픈 소스이며 누구나 작업할 수 있지만, ethereum.org 및 기타 이더리움 재단 웹 프로젝트를 전담하는 팀이 있습니다.
 
-채용 공고가 있으면 이곳에 게시할 예정입니다. 자신에게 맞는 역할이 보이지 않는다면 [디스코드 서버](/discord/)로 이동하여 우리와 어떻게 함께 일하고 싶은지 알려주세요!
+채용 중일 때는 여기에 열린 직책을 나열합니다. 자신에게 맞는 직책이 보이지 않는다면 [디스코드 서버](/discord/)로 이동하여 우리와 어떻게 일하고 싶은지 알려주세요!
 
-ethereum.org 팀 외의 다른 기회를 찾고 계신가요? [다른 이더리움 관련 채용 정보 확인하기](/community/get-involved/#ethereum-jobs/).
+ethereum.org 팀 외의 다른 곳을 찾고 계신가요? [다른 이더리움 관련 채용 정보 확인하기](/community/get-involved/#ethereum-jobs).

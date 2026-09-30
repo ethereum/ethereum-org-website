@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "accounts"
-  - "cryptography"
+  - "how-ethereum-works"
 format: tutorial
 author: "오스틴 그리피스"
 breadcrumb: "해시 함수 (ETH.BUILD)"
