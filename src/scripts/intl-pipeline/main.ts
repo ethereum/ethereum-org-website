@@ -61,7 +61,11 @@ import {
   createOrUpdateTranslationPR,
   type SkippedPair,
 } from "./lib/workflows/pr-creation"
-import { logSection, shouldAbortRun } from "./lib/workflows/utils"
+import {
+  logSection,
+  matchTrailingNewline,
+  shouldAbortRun,
+} from "./lib/workflows/utils"
 import {
   config,
   getExcludedReason,
@@ -513,6 +517,8 @@ async function sanitizeAndGate(opts: {
   )
   const fixed = sanitized.changedFiles?.find((f) => f.path === opts.destPath)
   if (fixed) content = fixed.content
+
+  content = matchTrailingNewline(content, opts.file.content)
 
   const gate = await runGates({
     destPath: opts.destPath,
