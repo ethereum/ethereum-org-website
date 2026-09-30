@@ -1,7 +1,7 @@
 ---
-title: ethereum.org 디자인 기여
-metaTitle: 디자인 기여
-description: ethereum.org 디자인 기여
+title: "ethereum.org 디자인 기여"
+metaTitle: "디자인 기여"
+description: "ethereum.org 디자인 기여"
 lang: ko
 ---
 

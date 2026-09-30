@@ -21,6 +21,8 @@ Ethereum ni mtandao wa umma, mnyororo wa vitalu, na itifaki ya chanzo wazi -- in
 
 [Zaidi kuhusu utawala wa Ethereum](/governance/)
 
+[Zaidi kuhusu kanuni za msingi za Ethereum](/values/)
+
 ### Etha (ETH) {#ether-or-eth}
 
 Etha (inayojulikana pia kwa alama yake ya soko, ETH) ni sarafu ya asili inayofanyiwa muamala kwenye Ethereum. ETH inahitajika ili kulipia matumizi ya mtandao wa Ethereum (kwa njia ya ada za muamala). ETH pia inatumika kulinda mtandao kwa uwekaji dhamana. Watu wanapozungumzia bei ya Ethereum, wanamaanisha ETH kama rasilimali.
@@ -82,25 +84,22 @@ Tunataka watumiaji wetu wavutiwe na maswali yao yajibiwe. Kwa hivyo lango letu l
 
 ### 2. ethereum.org inabadilika kila wakati 🛠 {#core-principles-2}
 
-Ethereum na jamii inabadilika kila wakati, kwa hivyo ethereum.org pia itabadilika. Ndiyo maana tovuti ina mfumo rahisi wa muundo na muundo wa kawaida. Tunafanya mabadiliko ya mara kwa mara tunapojifunza zaidi kuhusu jinsi watu wanavyotumia tovuti na kile ambacho jamii inataka kutoka kwayo.
+Ethereum na jamii zinabadilika kila wakati, kwa hivyo ethereum.org pia itabadilika. Ndiyo maana tovuti ina mfumo rahisi wa muundo na muundo wa kawaida. Tunafanya mabadiliko ya mara kwa mara tunapojifunza zaidi kuhusu jinsi watu wanavyotumia tovuti na kile ambacho jamii inataka kutoka kwayo.
 Sisi ni chanzo wazi, tukiwa na jamii ya wachangiaji, kwa hivyo unaweza kupendekeza mabadiliko au kutusaidia pia.
 [Jifunze kuhusu kuchangia](/contributing/)
+[Kwa nini chanzo wazi ni muhimu](/open-source/)
 
 ### 3. ethereum.org si tovuti ya kawaida ya bidhaa 🦄 {#core-principles-3}
 
 Ethereum ni jambo kubwa: inajumuisha jamii, teknolojia, seti ya mawazo na itikadi, na zaidi.
-Hii inamaanisha tovuti inahitaji kushughulikia safari nyingi tofauti za watumiaji, kuanzia "mwendelezaji anayetaka zana maalum" na "mgeni ambaye amenunua tu baadhi ya ETH na hajui mkoba ni nini".
-"Ni tovuti gani bora kwa jukwaa la mnyororo wa vitalu?" linabaki kuwa swali wazi - sisi ni waanzilishi. Kujenga hili kunahitaji majaribio.
+Hii inamaanisha tovuti inahitaji kushughulikia safari nyingi tofauti za watumiaji, kuanzia "mwendelezaji anayetaka zana maalum" hadi "mgeni ambaye amenunua ETH na hajui mkoba ni nini".
+"Ni tovuti gani bora kwa jukwaa la mnyororo wa vitalu?" bado ni swali wazi - sisi ni waanzilishi. Kujenga hili kunahitaji majaribio.
 
-## Ramani ya njia ya bidhaa {#get-involved}
+## Jihusishe {#get-involved}
 
-Ili kufanya kazi yetu iweze kufikiwa zaidi na kukuza ushirikiano zaidi wa jamii, timu ya msingi ya ethereum.org inachapisha muhtasari wa malengo yetu ya ramani ya njia ya [mzunguko wa kuunda](https://www.productplan.com/glossary/shape-up-method/).
+**Inasikikaje?** Tunathamini maoni kila wakati kuhusu kazi yetu - ikiwa kuna jambo unalofikiri tunapaswa kulifanyia kazi, tafadhali tujulishe! Tunakaribisha mawazo na PR kutoka kwa mtu yeyote katika jamii.
 
-[Tazama ramani yetu ya njia ya bidhaa ya Mzunguko wa 1 wa 2025](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**Inasikikaje?** Tunathamini maoni kila wakati kwenye ramani yetu ya njia - ikiwa kuna jambo unalofikiri tunapaswa kulifanyia kazi, tafadhali tujulishe! Tunakaribisha mawazo na PR kutoka kwa mtu yeyote katika jamii.
-
-**Unataka kuhusika?** [Jifunze zaidi kuhusu kuchangia](/contributing/), [tuwasiliane kwenye Twitter](https://x.com/ethdotorg), au jiunge na majadiliano ya jamii katika [seva yetu ya Discord](/discord/).
+**Unataka kujihusisha?** [Jifunze zaidi kuhusu kuchangia](/contributing/), [wasiliana nasi kwenye Twitter](https://x.com/ethdotorg), au jiunge na majadiliano ya jamii katika [seva yetu ya Discord](/discord/).
 
 ## Kanuni za muundo {#design-principles}
 
@@ -110,7 +109,7 @@ Tunatumia seti ya [kanuni za muundo](/contributing/design-principles/) kuongoza 
 
 Tulijenga na kutoa [mfumo wa muundo](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) ili kusafirisha vipengele kwa haraka zaidi na kuruhusu wanajamii kushiriki katika muundo wazi wa ethereum.org.
 
-Unataka kuhusika? [Fuatilia katika Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [suala la GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) na ujiunge na mazungumzo katika [chaneli yetu ya Discord ya #design](/discord/).
+Unataka kujihusisha? [Fuatilia katika Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) na ujiunge na mazungumzo katika [chaneli yetu ya Discord ya #design](/discord/).
 
 ## Mwongozo wa mtindo {#style-guide}
 
@@ -126,8 +125,8 @@ Tovuti ya ethereum.org ni chanzo wazi na imejengwa chini ya [Leseni ya MIT](http
 
 ## Kazi zilizo wazi {#open-jobs}
 
-Ingawa tovuti hii ni chanzo wazi na mtu yeyote anaweza kuifanyia kazi, tuna timu iliyojitolea kwa ethereum.org na miradi mingine ya wavuti ya Taasisi ya Ethereum.
+Ingawa tovuti hii ni ya chanzo wazi na mtu yeyote anaweza kuifanyia kazi, tuna timu iliyojitolea kwa ethereum.org na miradi mingine ya wavuti ya Taasisi ya Ethereum.
 
-Tutachapisha nafasi zozote za kazi hapa. Ikiwa huoni jukumu lako hapa, nenda kwenye [seva yetu ya Discord](/discord/) na utujulishe jinsi ungependa kufanya kazi nasi!
+Tunapoajiri, tutaorodhesha nafasi zilizo wazi hapa. Ikiwa huoni nafasi inayokufaa, nenda kwenye [seva yetu ya Discord](/discord/) na utujulishe jinsi ungependa kufanya kazi nasi!
 
-Unatazama zaidi ya timu ya ethereum.org? [Angalia kazi nyingine zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs/).
+Unatazama zaidi ya timu ya ethereum.org? [Angalia kazi nyingine zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs).

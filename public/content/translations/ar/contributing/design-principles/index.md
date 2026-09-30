@@ -1,8 +1,8 @@
 ---
-title: مبادئ التصميم الخاصة بنا
-metaTitle: مبادئ التصميم
+title: "مبادئ التصميم الخاصة بنا"
+metaTitle: "مبادئ التصميم"
 lang: ar
-description: المبادئ الكامنة وراء قرارات التصميم والمحتوى في موقع ⁦ethereum.org⁩
+description: "المبادئ الكامنة وراء قرارات التصميم والمحتوى في موقع ⁦ethereum.org⁩"
 ---
 
 <Emoji text=":wave:" size={1} /> مرحبًا بك في مبادئ التصميم الخاصة بموقع <span dir="ltr">ethereum.org</span>. هذا جزء من عملية مستمرة لتطوير وتحسين <span dir="ltr">ethereum.org</span>.

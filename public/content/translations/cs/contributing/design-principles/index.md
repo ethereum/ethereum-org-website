@@ -1,8 +1,8 @@
 ---
-title: Naše principy designu
+title: "Naše principy designu"
 metaTitle: Principy designu
 lang: cs
-description: Principy, na kterých stojí rozhodnutí o designu a obsahu webu ethereum.org
+description: "Principy, na kterých stojí rozhodnutí o designu a obsahu webu ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Ahoj a vítejte u principů designu pro ethereum.org. Toto je součást probíhajícího procesu vývoje a vylepšování webu ethereum.org.

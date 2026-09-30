@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/rollups-scaling-strategy/index.md",
-  "generatedAt": "2026-04-29T06:13:40.458Z",
-  "rootHash": "320ec2e3faa7",
+  "generatedAt": "2026-09-30T19:16:57.125Z",
+  "rootHash": "f8924d94f3ed",
   "tree": {
-    "contentHash": "7e40c2155e7f",
-    "anchorHash": "27c93d6a51c5",
+    "contentHash": "0bdd651b2879",
+    "anchorHash": "0d1a4dd4b910",
     "children": {
       "frontmatter:title": {
         "contentHash": "5c0cfd975bea",
@@ -36,32 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "a9c58bef7f2f",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "b51d5ca1c5e2",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "567cf013bf70"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "8bffd6eadddc"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "5ab07e7fca0d"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "b766b24f0847"
+            "anchorHash": "3b3e1a7dae17"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2",
-          "3"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -285,5 +267,5 @@
       "threat-to-sidechains-1544"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

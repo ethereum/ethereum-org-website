@@ -1,14 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "fr",
-  "translatedAt": "2026-06-16T15:19:03.820Z",
-  "englishManifestHash": "312e8f816e6f",
+  "translatedAt": "2026-09-30T18:07:56.709Z",
+  "englishManifestHash": "4e6f812ec36d",
   "placeholderOrder": [
     "HTML-TAG-0",
     "ICU-VARIABLE-1",
     "ICU-VARIABLE-2",
-    "HTML-TAG-3",
-    "HTML-TAG-4"
+    "HTML-TAG-3"
   ],
   "placeholderMap": {
     "HTML-TAG-0": {
@@ -36,18 +35,11 @@
         "tagName": "a",
         "href": "/discord/"
       }
-    },
-    "HTML-TAG-4": {
-      "type": "html-tag",
-      "values": {
-        "tagName": "a",
-        "href": "https://crowdin.com/project/ethereum-org"
-      }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-16T15:19:03.820Z",
+      "translatedAt": "2026-09-30T18:07:56.709Z",
       "status": "success"
     }
   }

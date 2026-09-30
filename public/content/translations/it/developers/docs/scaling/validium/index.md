@@ -101,11 +101,11 @@ In uno schema di disponibilità dei dati vincolato, a chiunque può essere asseg
 
 ## Volition e validium {#volitions-and-validium}
 
-I validium offrono molti vantaggi ma comportano dei compromessi (in particolare, la disponibilità dei dati). Ma, come per molte soluzioni di ridimensionamento, i validium sono adatti a casi d'uso specifici, motivo per cui sono state create le volition.
+I validium offrono molti vantaggi ma comportano dei compromessi (in particolare, la disponibilità dei dati). Tuttavia, come per molte soluzioni di ridimensionamento, i validium sono adatti a casi d'uso specifici, motivo per cui sono stati creati i volition.
 
-Le volition combinano uno ZK-rollup e una catena validium e consentono agli utenti di passare da una soluzione di ridimensionamento all'altra. Con le volition, gli utenti possono sfruttare la disponibilità dei dati offchain del validium per determinate transazioni, pur mantenendo la libertà di passare a una soluzione di disponibilità dei dati onchain (ZK-rollup) se necessario. Ciò offre essenzialmente agli utenti la libertà di scegliere i compromessi in base alle loro circostanze uniche.
+I volition combinano un ZK-rollup e una catena validium e consentono agli utenti di passare da una soluzione di ridimensionamento all'altra. Con i volition, gli utenti possono sfruttare la disponibilità dei dati offchain del validium per determinate transazioni, pur mantenendo la libertà di passare a una soluzione di disponibilità dei dati onchain (ZK-rollup) se necessario. Questo essenzialmente dà agli utenti la libertà di scegliere i compromessi dettati dalle loro circostanze uniche.
 
-Un exchange decentralizzato (DEX) potrebbe preferire l'utilizzo dell'infrastruttura scalabile e privata di un validium per operazioni di alto valore. Può anche utilizzare uno ZK-rollup per gli utenti che desiderano le maggiori garanzie di sicurezza e l'assenza di necessità di fiducia di uno ZK-rollup.
+Un exchange decentralizzato (DEX) potrebbe preferire la scalabilità di un validium e la sua capacità di limitare l'accesso pubblico ai dati delle transazioni, per scambi di alto valore. Mantenere i dati offchain limita chi può vederli, ma di per sé non rende le transazioni crittograficamente private: la riservatezza dipende dai controlli di accesso e dai meccanismi di privacy della distribuzione, e i dati rimangono visibili all'operatore e a chiunque li detenga. Un DEX può anche utilizzare un ZK-rollup per gli utenti che desiderano le maggiori garanzie di sicurezza e l'assenza di necessità di fiducia di un ZK-rollup.
 
 ## Validium e compatibilità con l'EVM {#validiums-and-evm-compatibility}
 

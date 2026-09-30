@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md",
-  "generatedAt": "2026-06-17T21:39:22.968Z",
-  "rootHash": "9378b54fa9a0",
+  "generatedAt": "2026-09-30T18:21:30.225Z",
+  "rootHash": "006f8bcc2a3e",
   "tree": {
-    "contentHash": "b336a8a7cc6b",
-    "anchorHash": "006e4f0b2b2f",
+    "contentHash": "52f452634c50",
+    "anchorHash": "3ba28b0ab94f",
     "children": {
       "frontmatter:title": {
         "contentHash": "a229202f9eeb",
@@ -36,8 +36,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "rewards": {
-        "contentHash": "67b38f1c0a73",
-        "anchorHash": "b1f7ebb0033f",
+        "contentHash": "e6444e2fe419",
+        "anchorHash": "41d1db16a462",
         "labelHash": "d6824df5cc85",
         "children": {
           "_label": {
@@ -45,8 +45,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "rewards-2": {
-            "contentHash": "a74321f544df",
-            "anchorHash": "b772fb78c3c9",
+            "contentHash": "b78a55734170",
+            "anchorHash": "f2e40932bd5c",
             "labelHash": "59afe47d9d37",
             "children": {
               "_label": {
@@ -130,8 +130,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "code-fence:22": {
-                "contentHash": "e3b0c44298fc",
-                "anchorHash": "35f738e29001"
+                "contentHash": "35f738e29001",
+                "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
                 "contentHash": "57592596648e",
@@ -433,5 +433,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

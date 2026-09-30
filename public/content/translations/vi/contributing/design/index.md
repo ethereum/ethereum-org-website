@@ -1,7 +1,7 @@
 ---
-title: Đóng góp thiết kế cho ethereum.org
-metaTitle: Đóng góp thiết kế
-description: Đóng góp thiết kế cho ethereum.org
+title: "Đóng góp thiết kế cho ethereum.org"
+metaTitle: "Đóng góp thiết kế"
+description: "Đóng góp thiết kế cho ethereum.org"
 lang: vi
 ---
 

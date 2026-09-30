@@ -130,11 +130,11 @@ Budeme používat [Vite](https://vite.dev/) a [React](https://react.dev/). Jedn�
 
 #### Komponenta WASM {#wasm}
 
-Zdrojový kód, který se kompiluje do WASM, je napsán v [Rustu](https://rust-lang.org/). Můžete ho vidět v [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Tento kód je primárně rozhraním mezi kódem v JavaScriptu a [knihovnou `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Zdrojový kód, který se kompiluje do WASM, je napsán v jazyce [Rust](https://rust-lang.org/). Můžete si ho prohlédnout v souboru [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Tento kód slouží primárně jako rozhraní mezi kódem v JavaScriptu a [knihovnou `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
-[`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) v Rustu je obdobou [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) v JavaScriptu. Obsahuje informace o balíčku, deklarace závislostí atd.
+Soubor [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) v jazyce Rust je obdobou souboru [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) v JavaScriptu. Obsahuje informace o balíčku, deklarace závislostí atd.
 
 ```toml
 [package]
@@ -149,7 +149,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Balíček [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) potřebuje generovat náhodné hodnoty. To nelze provést čistě algoritmickými prostředky; vyžaduje to přístup k fyzikálnímu procesu jako zdroji entropie. Tato definice specifikuje, že tuto entropii získáme dotazem na prohlížeč, ve kterém běžíme.
+Balíček [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) potřebuje generovat náhodné hodnoty. To nelze provést čistě algoritmickými prostředky; vyžaduje to přístup k fyzickému procesu jako zdroji entropie. Tato definice určuje, že tuto entropii získáme dotazem na prohlížeč, ve kterém běžíme.
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -166,15 +166,15 @@ Typ výstupu potřebný k vytvoření kódu WASM.
 
 **`lib.rs`**
 
-Toto je samotný kód v Rustu.
+Toto je samotný kód v jazyce Rust.
 
 ```rust
 use wasm_bindgen::prelude::*;
 ```
 
-Definice pro vytvoření balíčku WASM z Rustu. Jsou zdokumentovány [zde](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
+Definice pro vytvoření balíčku WASM z jazyka Rust. Jsou zdokumentovány [zde](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,7 +188,7 @@ Funkce, které potřebujeme z [knihovny `eth-stealth-addresses`](https://github.
 use hex::{decode,encode};
 ```
 
-Rust pro hodnoty obvykle používá bajtová [pole](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`). Ale v JavaScriptu obvykle používáme hexadecimální řetězce. [Knihovna `hex`](https://docs.rs/hex/latest/hex/) za nás překládá z jedné reprezentace do druhé.
+Rust pro hodnoty obvykle používá bajtová [pole](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`). V JavaScriptu však obvykle používáme hexadecimální řetězce. [Knihovna `hex`](https://docs.rs/hex/latest/hex/) za nás zajišťuje převod z jedné reprezentace do druhé.
 
 ```rust
 #[wasm_bindgen]
@@ -200,18 +200,18 @@ Vygenerování vazeb (bindings) WASM, abychom mohli tuto funkci volat z JavaScri
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-Nejjednodušší způsob, jak vrátit objekt s více poli, je vrátit řetězec JSON. 
+Nejjednodušší způsob, jak vrátit objekt s více poli, je vrátit řetězec ve formátu JSON. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
         generate_stealth_meta_address();
 ```
 
-[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) vrací tři pole:
+Funkce [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) vrací tři pole:
 
 - Meta-adresu (*K<sub>pub</sub>* a *V<sub>pub</sub>*)
 - Soukromý klíč pro prohlížení (*V<sub>priv</sub>*)
-- Soukromý klíč pro utrácení (*K<sub>priv</sub>*)
+- Soukromý klíč pro útratu (*K<sub>priv</sub>*)
 
 Syntaxe [n-tice (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) nám umožňuje tyto hodnoty opět oddělit.
 
@@ -224,19 +224,19 @@ Syntaxe [n-tice (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) ná
 }
 ```
 
-Použijte makro [`format!`](https://doc.rust-lang.org/std/fmt/index.html) k vygenerování řetězce kódovaného v JSON. Použijte [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) ke změně polí na hexadecimální řetězce.
+K vygenerování řetězce kódovaného v JSON použijte makro [`format!`](https://doc.rust-lang.org/std/fmt/index.html). K převodu polí na hexadecimální řetězce použijte [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html).
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-Tato funkce mění hexadecimální řetězec (poskytnutý JavaScriptem) na bajtové pole. Používáme ji k parsování hodnot poskytnutých kódem v JavaScriptu. Tato funkce je složitá kvůli tomu, jak Rust zachází s poli a vektory.
+Tato funkce převádí hexadecimální řetězec (poskytnutý JavaScriptem) na bajtové pole. Používáme ji k parsování hodnot poskytnutých kódem v JavaScriptu. Tato funkce je složitá kvůli tomu, jak Rust zachází s poli a vektory.
 
-Výraz `<const N: usize>` se nazývá [generikum](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` je parametr, který řídí délku vráceného pole. Funkce se ve skutečnosti nazývá `str_to_array::<n>`, kde `n` je délka pole.
+Výraz `<const N: usize>` se nazývá [generikum](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` je parametr, který řídí délku vráceného pole. Funkce se ve skutečnosti jmenuje `str_to_array::<n>`, kde `n` je délka pole.
 
-Návratová hodnota je `Option<[u8; N]>`, což znamená, že vrácené pole je [volitelné (optional)](https://doc.rust-lang.org/std/option/). Toto je v Rustu typický vzor pro funkce, které mohou selhat.
+Návratová hodnota je `Option<[u8; N]>`, což znamená, že vrácené pole je [volitelné](https://doc.rust-lang.org/std/option/). Toto je v jazyce Rust typický vzor pro funkce, které mohou selhat.
 
-Pokud například zavoláme `str_to_array::10("bad060a7")`, funkce by měla vrátit pole o deseti hodnotách, ale vstup má pouze čtyři bajty. Funkce musí selhat a učiní tak vrácením `None`. Návratová hodnota pro `str_to_array::4("bad060a7")` by byla `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Pokud například zavoláme `str_to_array::10("bad060a7")`, funkce by měla vrátit pole o deseti hodnotách, ale vstup má pouze čtyři bajty. Funkce musí selhat, a to tak, že vrátí `None`. Návratová hodnota pro `str_to_array::4("bad060a7")` by byla `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode vrací Result<Vec<u8>, _>
@@ -245,9 +245,9 @@ Pokud například zavoláme `str_to_array::10("bad060a7")`, funkce by měla vrá
 
 Funkce [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) vrací `Result<Vec<u8>, FromHexError>`. Typ [`Result`](https://doc.rust-lang.org/std/result/) může obsahovat buď úspěšný výsledek (`Ok(value)`), nebo chybu (`Err(error)`).
 
-Metoda `.ok()` změní `Result` na `Option`, jehož hodnota je buď hodnota `Ok()` v případě úspěchu, nebo `None` v případě neúspěchu. Nakonec [operátor otazníku](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) přeruší aktuální funkci a vrátí `None`, pokud je `Option` prázdný. V opačném případě rozbalí (unwrap) hodnotu a vrátí ji (v tomto případě pro přiřazení hodnoty do `vec`).
+Metoda `.ok()` převede `Result` na `Option`, jehož hodnota je buď hodnota `Ok()` v případě úspěchu, nebo `None` v případě neúspěchu. Nakonec [operátor otazníku](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) přeruší aktuální funkci a vrátí `None`, pokud je `Option` prázdný. V opačném případě rozbalí (unwrap) hodnotu a vrátí ji (v tomto případě pro přiřazení hodnoty do `vec`).
 
-Vypadá to jako podivně spletitá metoda pro zpracování chyb, ale `Result` a `Option` zajišťují, že všechny chyby jsou tak či onak ošetřeny.
+Může to vypadat jako podivně složitá metoda zpracování chyb, ale `Result` a `Option` zajišťují, že všechny chyby budou tak či onak ošetřeny.
 
 ```rust
     if vec.len() != N { return None; }
@@ -283,7 +283,7 @@ Hodnota pro skenování je součástí sdíleného tajemství (*S = GR<sub>priv<
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-Používáme [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) z knihovny.
+Použijeme funkci knihovny [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html).
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -310,18 +310,18 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Tato funkce používá [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) z knihovny k výpočtu soukromého klíče pro výběr z adresy (*R<sub>priv</sub>*). Tento výpočet vyžaduje tyto hodnoty:
+Tato funkce používá funkci knihovny [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) k výpočtu soukromého klíče pro výběr z adresy (*R<sub>priv</sub>*). Tento výpočet vyžaduje tyto hodnoty:
 
 - Adresu (*Address=f(P<sub>pub</sub>)*)
 - Veřejný klíč vygenerovaný Billem (*R<sub>pub</sub>*)
 - Soukromý klíč pro prohlížení (*V<sub>priv</sub>*)
-- Soukromý klíč pro utrácení (*K<sub>priv</sub>*)
+- Soukromý klíč pro útratu (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) specifikuje, že se funkce provede při inicializaci kódu WASM.
+[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) určuje, že se funkce provede při inicializaci kódu WASM.
 
 ```rust
 pub fn main() {
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-Tento kód specifikuje, že výstup při panice (panic) se odešle do konzole JavaScriptu. Chcete-li to vidět v akci, použijte aplikaci a dejte Billovi neplatnou meta-adresu (stačí změnit jednu hexadecimální číslici). V konzoli JavaScriptu uvidíte tuto chybu:
+Tento kód určuje, že výstup při panice (panic) se odešle do konzole JavaScriptu. Chcete-li to vidět v akci, použijte aplikaci a zadejte Billovi neplatnou meta-adresu (stačí změnit jednu hexadecimální číslici). V konzoli JavaScriptu uvidíte tuto chybu:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -338,20 +338,20 @@ assertion `left == right` failed
  right: 1
 ```
 
-Následováno trasováním zásobníku (stack trace). Poté dejte Billovi platnou meta-adresu a Alici dejte buď neplatnou adresu, nebo neplatný veřejný klíč. Uvidíte tuto chybu:
+Následovanou výpisem zásobníku (stack trace). Poté zadejte Billovi platnou meta-adresu a Alici zadejte buď neplatnou adresu, nebo neplatný veřejný klíč. Uvidíte tuto chybu:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-Opět následováno trasováním zásobníku.
+Opět následovanou výpisem zásobníku.
 
 #### Uživatelské rozhraní {#ui}
 
-Uživatelské rozhraní je napsáno pomocí [React](https://react.dev/) a obsluhováno pomocí [Vite](https://vite.dev/). Můžete se o nich dozvědět pomocí [tohoto tutoriálu](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Není zde potřeba [Wagmi](https://wagmi.sh/), protože nekomunikujeme přímo s blockchainem ani peněženkou.
+Uživatelské rozhraní je napsáno pomocí [React](https://react.dev/) a servírováno pomocí [Vite](https://vite.dev/). Můžete se o nich dozvědět více v [tomto tutoriálu](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Zde není potřeba [Wagmi](https://wagmi.sh/), protože nekomunikujeme přímo s blockchainem ani peněženkou.
 
-Jedinou ne zcela zřejmou částí uživatelského rozhraní je připojení WASM. Zde je návod, jak to funguje.
+Jedinou ne zcela zřejmou částí uživatelského rozhraní je propojení s WASM. Zde je návod, jak to funguje.
 
 **`vite.config.js`**
 
@@ -372,13 +372,13 @@ Potřebujeme dva pluginy pro Vite: [react](https://www.npmjs.com/package/@vitejs
 
 **`App.jsx`**
 
-Tento soubor je hlavní komponentou aplikace. Je to kontejner, který obsahuje dvě komponenty: `Alice` a `Bill`, uživatelská rozhraní pro tyto uživatele. Relevantní částí pro WASM je inicializační kód.
+Tento soubor je hlavní komponentou aplikace. Je to kontejner, který obsahuje dvě komponenty: `Alice` a `Bill`, což jsou uživatelská rozhraní pro tyto uživatele. Relevantní částí pro WASM je inicializační kód.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Když použijeme [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), vytvoří to dva soubory, které zde používáme: soubor wasm se samotným kódem (zde `src/rust-wasm/pkg/rust_wasm_bg.wasm`) a soubor JavaScriptu s definicemi pro jeho použití (zde `src/rust_wasm/pkg/rust_wasm.js`). Výchozí export (default export) tohoto souboru JavaScriptu je kód, který je třeba spustit k inicializaci WASM.
+Když použijeme [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), vytvoří dva soubory, které zde používáme: soubor wasm se samotným kódem (zde `src/rust-wasm/pkg/rust_wasm_bg.wasm`) a soubor JavaScriptu s definicemi pro jeho použití (zde `src/rust-wasm/pkg/rust_wasm.js`). Výchozí export (default export) tohoto souboru JavaScriptu je kód, který je třeba spustit k inicializaci WASM.
 
 ```jsx
 function App() {
@@ -401,13 +401,13 @@ function App() {
   )
 ```
 
-Hook [`useEffect`](https://react.dev/reference/react/useEffect) umožňuje specifikovat funkci, která se provede při změně stavových proměnných. Zde je seznam stavových proměnných prázdný (`[]`), takže se tato funkce provede pouze jednou při načtení stránky.
+Hook [`useEffect`](https://react.dev/reference/react/useEffect) umožňuje zadat funkci, která se provede při změně stavových proměnných. Zde je seznam stavových proměnných prázdný (`[]`), takže se tato funkce provede pouze jednou při načtení stránky.
 
-Funkce efektu se musí vrátit okamžitě. Abychom mohli použít asynchronní kód, jako je WASM `init` (který musí načíst soubor `.wasm`, a proto to nějakou dobu trvá), definujeme interní [`async`](https://en.wikipedia.org/wiki/Async/await) funkci a spustíme ji bez `await`.
+Funkce efektu se musí vrátit okamžitě. Abychom mohli použít asynchronní kód, jako je `init` pro WASM (který musí načíst soubor `.wasm`, a proto to chvíli trvá), definujeme interní funkci [`async`](https://en.wikipedia.org/wiki/Async/await) a spustíme ji bez `await`.
 
 **`Bill.jsx`**
 
-Toto je uživatelské rozhraní pro Billa. Má jedinou akci, vytvoření adresy na základě skryté meta-adresy poskytnuté Alicí.
+Toto je uživatelské rozhraní pro Billa. Má jedinou akci, a to vytvoření adresy na základě skryté meta-adresy poskytnuté Alicí.
 
 ```jsx
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
@@ -421,11 +421,11 @@ Kromě výchozího exportu exportuje kód v JavaScriptu vygenerovaný pomocí `w
             }}>
 ```
 
-Pro volání funkcí WASM jednoduše zavoláme funkci exportovanou souborem JavaScriptu vytvořeným pomocí `wasm-pack`.
+Pro volání funkcí WASM stačí zavolat funkci exportovanou souborem JavaScriptu vytvořeným pomocí `wasm-pack`.
 
 **`Alice.jsx`**
 
-Kód v `Alice.jsx` je analogický, s tím rozdílem, že Alice má dvě akce:
+Kód v `Alice.jsx` je obdobný, s tím rozdílem, že Alice má dvě akce:
 
 - Vygenerovat meta-adresu
 - Získat soukromý klíč pro adresu zveřejněnou Billem

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/ethereum-core-governance-explained/index.md",
-  "generatedAt": "2026-04-28T23:22:54.879Z",
-  "rootHash": "0adf9408a508",
+  "generatedAt": "2026-09-30T18:38:51.231Z",
+  "rootHash": "6647a31d3b36",
   "tree": {
-    "contentHash": "8d17f6b52338",
-    "anchorHash": "89efb59164a7",
+    "contentHash": "44744042713d",
+    "anchorHash": "5c45cc8dc58f",
     "children": {
       "frontmatter:title": {
         "contentHash": "7ba44d4dab89",
@@ -36,8 +36,8 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "7b4e8f205e19",
+        "contentHash": "918e1f78a588",
+        "anchorHash": "b2aa1074fa9d",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
@@ -49,18 +49,13 @@
           },
           "2": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "bf9422a2a04a"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "dc2963d21f5f"
+            "anchorHash": "dd2026a793e9"
           }
         },
         "childrenOrder": [
           "0",
           "1",
-          "2",
-          "3"
+          "2"
         ]
       },
       "frontmatter:format": {
@@ -285,5 +280,5 @@
       "how-to-participate-2440"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -1,6 +1,6 @@
 {
   "page-collectibles-already-desc": "Kiểm tra tiến độ của bạn",
-  "page-collectibles-already-title": "Đã là người đóng góp?",
+  "page-collectibles-already-title": "Bạn đã là người đóng góp?",
   "page-collectibles-code-content-desc": "Sửa lỗi, viết hoặc cải thiện các bài viết hoặc đề xuất các cải tiến thiết kế cho trang web.",
   "page-collectibles-code-content-design-1issue": "Huy hiệu đã giải quyết vấn đề thiết kế",
   "page-collectibles-code-content-design-desc": "Thực hiện đánh giá thiết kế, cải thiện hệ thống thiết kế của chúng tôi hoặc tham gia thử nghiệm người dùng.",
@@ -21,7 +21,7 @@
   "page-collectibles-code-content-writing-badge-1": "Huy hiệu đóng góp nội dung",
   "page-collectibles-code-content-writing-desc": "Dành cho bất kỳ cải tiến nội dung nào được hợp nhất vào nhánh master.",
   "page-collectibles-code-content-writing-title": "Viết",
-  "page-collectibles-connect-wallet": "Kết nối Ví",
+  "page-collectibles-connect-wallet": "Kết nối ví",
   "page-collectibles-contributing-since": "Đóng góp từ",
   "page-collectibles-contributor-img-alt": "Hai người đóng góp đang trò chuyện",
   "page-collectibles-contributor-progress-label": "Đã yêu cầu nhận",
@@ -36,7 +36,7 @@
   "page-collectibles-how-step2-title": "Xác minh",
   "page-collectibles-how-step3-desc": "trên Galxe",
   "page-collectibles-how-step3-title": "Yêu cầu nhận NFT",
-  "page-collectibles-how-title": "Cách hoạt động",
+  "page-collectibles-how-title": "Cách thức hoạt động",
   "page-collectibles-improve-desc-1": "Kiếm các NFT độc đáo bằng cách giúp duy trì và mở rộng trang web ethereum.org. Những huy hiệu này <strong>công nhận sự tham gia của bạn trên chuỗi</strong>.",
   "page-collectibles-improve-desc-2": "Những người nắm giữ hàng đầu sẽ nhận được <a>quà tặng cho người đóng góp</a> hoặc vé giảm giá cho các sự kiện như Devcon. Các huy hiệu trên chuỗi của bạn giúp <strong>những người khác dễ dàng hỗ trợ bạn</strong>.",
   "page-collectibles-improve-title": "Cải thiện ethereum.org",
@@ -45,7 +45,7 @@
   "page-collectibles-previous-years-badge-count": "{count, plural, =0 {không có huy hiệu} =1 {1 huy hiệu} other {# huy hiệu}}",
   "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {không có người sưu tầm} =1 {1 người sưu tầm} other {# người sưu tầm}}",
   "page-collectibles-previous-years-no-badges": "Không có huy hiệu nào được đúc",
-  "page-collectibles-previous-years": "Các năm trước",
+  "page-collectibles-previous-years": "Những năm trước",
   "page-collectibles-social-desc": "Tham gia bất kỳ cuộc gọi Discord nào của chúng tôi để kiểm tra lỗi trang web trước khi phát hành hoặc cập nhật tin tức về ethereum.org trong các cuộc gọi cộng đồng hàng tháng của chúng tôi.",
   "page-collectibles-social-instructions-1": "Tham gia <a href=\"/discord/\">máy chủ Discord</a> của chúng tôi",
   "page-collectibles-social-instructions-2": "Xem lịch trình",
@@ -59,6 +59,6 @@
   "page-collectibles-translations-250": "Huy hiệu 250 từ",
   "page-collectibles-translations-50000": "Huy hiệu 50.000 từ",
   "page-collectibles-translations-badge-desc": "Sang bất kỳ ngôn ngữ nào.",
-  "page-collectibles-translations-desc": "Những huy hiệu này công nhận các đóng góp trước đây cho Chương trình Dịch thuật ethereum.org, chương trình này đang dần khép lại và không còn tiếp nhận dịch giả mới.",
+  "page-collectibles-translations-desc": "Những huy hiệu này công nhận các đóng góp trước đây cho Chương trình Dịch thuật ethereum.org, chương trình này đang dần khép lại và không còn tiếp nhận người dùng mới làm dịch giả.",
   "page-collectibles-translations-title": "Bản dịch"
 }

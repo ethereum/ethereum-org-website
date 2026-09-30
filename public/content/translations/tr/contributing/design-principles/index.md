@@ -1,8 +1,8 @@
 ---
-title: Tasarım ilkelerimiz
-metaTitle: Tasarım ilkeleri
+title: "Tasarım ilkelerimiz"
+metaTitle: "Tasarım ilkeleri"
 lang: tr
-description: ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler
+description: "ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler"
 ---
 
 <Emoji text=":wave:" size={1} /> Merhaba ve ethereum.org tasarım ilkelerine hoş geldiniz. Bu, ethereum.org'u geliştirme ve iyileştirme yönündeki devam eden sürecin bir parçasıdır.

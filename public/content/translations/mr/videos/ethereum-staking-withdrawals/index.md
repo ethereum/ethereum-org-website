@@ -8,8 +8,6 @@ duration: "0:11:39"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "staking"
-  - "withdrawals"
 format: explainer
 author: "फायनेमॅटिक्स"
 breadcrumb: "स्टेकिंगची रक्कम काढणे"

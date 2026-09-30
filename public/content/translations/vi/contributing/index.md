@@ -12,7 +12,7 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 ## Các cách đóng góp {#ways-to-contribute}
 
 **Dịch thuật**
-- [Báo cáo lỗi dịch thuật](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Chương trình Dịch thuật](/contributing/translation-program/) đang dần khép lại và không còn tiếp nhận người dùng mới làm dịch giả nữa
+- [Báo cáo lỗi dịch thuật](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Chương trình Dịch thuật](/contributing/translation-program/) đang dần khép lại và không còn tiếp nhận dịch giả mới nữa
 
 **Phát triển**
 - [Giải quyết một vấn đề đang mở](https://github.com/ethereum/ethereum-org-website/issues) – Những công việc chúng tôi đã xác định là cần thực hiện
@@ -22,12 +22,12 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 
 **Nội dung**
 - [Tạo/chỉnh sửa nội dung](/contributing/#how-to-update-content) – Đề xuất các trang mới hoặc tinh chỉnh những nội dung đã có
-- [Viết một bài viết cho trình xây dựng](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
+- [Viết bài cho nhà phát triển](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
 - [Thêm tài nguyên cộng đồng](/contributing/content-resources/) – Thêm một bài viết hoặc tài nguyên hữu ích vào một trang liên quan
 - [Đề xuất một báo cáo](/contributing/adding-reports/) - Đề xuất một báo cáo nghiên cứu cho trang [Báo cáo](/reports/)
-- [Chia sẻ câu chuyện của bạn](/contributing/adding-community-stories/) - Gửi một câu chuyện về trải nghiệm cá nhân của bạn với mã nguồn mở và các công nghệ bảo vệ quyền riêng tư (sanctuary technologies), cách hệ sinh thái Ethereum đã tác động đến cuộc sống của bạn, hoặc cách bạn và cộng đồng của bạn sử dụng Ethereum
+- [Chia sẻ câu chuyện của bạn](/contributing/adding-community-stories/) - Gửi một câu chuyện về trải nghiệm cá nhân của bạn với mã nguồn mở và các công nghệ bảo vệ quyền riêng tư, cách hệ sinh thái Ethereum đã tác động đến cuộc sống của bạn, hoặc cách bạn và cộng đồng của bạn sử dụng Ethereum
 - [Câu đố](/contributing/quizzes/) – Thêm, cập nhật và xóa các ngân hàng câu hỏi đố vui cho một trang liên quan
-- [Đề xuất một tài nguyên thiết kế](/contributing/design/adding-design-resources/) – Thêm, cập nhật và xóa các tài nguyên thiết kế hữu ích
+- [Đề xuất tài nguyên thiết kế](/contributing/design/adding-design-resources/) – Thêm, cập nhật và xóa các tài nguyên thiết kế hữu ích
 - [Đề xuất một video](/contributing/adding-videos/) – Đề xuất một video giáo dục cho thư viện video
 
 **Ý tưởng tính năng**
@@ -36,7 +36,7 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 **Danh sách sản phẩm**
 - [Thêm một sàn giao dịch](/contributing/adding-exchanges/) – Thêm một sàn giao dịch vào [công cụ tìm kiếm sàn giao dịch](/get-eth/#country-picker) của chúng tôi
 - [Thêm một sản phẩm](/contributing/adding-products/) – Thêm một ứng dụng phi tập trung (dapp) hoặc ví vào một trang liên quan
-- [Thêm công cụ dành cho nhà phát triển](/contributing/adding-developer-tools/) – Thêm một công cụ dành cho nhà phát triển vào một trang liên quan
+- [Thêm công cụ phát triển](/contributing/adding-developer-tools/) – Thêm một công cụ dành cho nhà phát triển vào một trang liên quan
 - [Thêm một lớp 2 (l2)](/contributing/adding-layer-2s/) – Thêm một lớp 2 (l2) vào một trang liên quan
 - [Thêm một sản phẩm hoặc dịch vụ đặt cọc](/contributing/adding-staking-products/) – Thêm một dự án giúp hỗ trợ đặt cọc độc lập, đặt cọc chung, hoặc staking như một dịch vụ
 - [Thêm một ví](/contributing/adding-wallets/) – Thêm một ví cho [trang tìm ví](/wallets/find-wallet/)
@@ -45,9 +45,9 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 
 Bạn có câu hỏi nào không? 🤔 Hãy tham gia [máy chủ Discord](/discord/) của chúng tôi
 
-## Những nhiệm vụ đầu tiên tốt nhất để bắt đầu đóng góp {#good-first-tasks-to-start-contributing}
+## Những nhiệm vụ đầu tiên phù hợp để bắt đầu đóng góp {#good-first-tasks-to-start-contributing}
 
-Dưới đây là một vài nhiệm vụ hiện tại mà bạn có thể giúp chúng tôi giải quyết và đảm nhận. Đối với hầu hết các nhiệm vụ, bạn sẽ cần một tài khoản GitHub vì phần lớn các thay đổi đối với trang web đều được thực hiện thông qua GitHub.
+Dưới đây là một vài nhiệm vụ hiện tại mà bạn có thể giúp chúng tôi giải quyết và đảm nhận. Đối với hầu hết các nhiệm vụ, bạn sẽ cần một tài khoản GitHub vì phần lớn các thay đổi trên trang web đều được thực hiện thông qua GitHub.
 
 <IssuesList my={8} />
 
@@ -59,7 +59,7 @@ Dưới đây là một vài nhiệm vụ hiện tại mà bạn có thể giúp
 
 Tất cả các bản cập nhật đều được thực hiện thông qua quy trình PR (Pull Request) trên GitHub. Điều này có nghĩa là bạn tạo một bản sao cục bộ của trang web, thực hiện các thay đổi của mình và yêu cầu hợp nhất các thay đổi đó. Nếu bạn chưa từng làm điều này trước đây, hãy làm theo các hướng dẫn ở cuối [kho lưu trữ GitHub](https://github.com/ethereum/ethereum-org-website) của chúng tôi.
 
-Bạn không cần sự cho phép để làm việc với bất kỳ điều gì, nhưng tốt nhất là luôn cho chúng tôi biết bạn đang dự định làm gì. Bạn có thể làm điều này bằng cách:
+Bạn không cần xin phép để làm việc với bất kỳ thứ gì, nhưng tốt nhất là luôn cho chúng tôi biết bạn dự định làm gì. Bạn có thể làm điều này bằng cách:
 
 - Bình luận về một vấn đề (issue) hoặc PR trên [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Nhắn tin trên [máy chủ Discord](/discord/) của chúng tôi
@@ -73,7 +73,7 @@ Trước khi đóng góp, hãy đảm bảo bạn đã quen thuộc với:
 
 ## Các quyết định về trang web được đưa ra như thế nào {#how-decisions-about-the-site-are-made}
 
-Các quyết định về từng PR riêng lẻ, sự phát triển thiết kế và các bản nâng cấp lớn được đưa ra bởi một nhóm từ khắp hệ sinh thái Ethereum. Nhóm này bao gồm các nhà quản lý dự án, nhà phát triển, nhà thiết kế, bộ phận tiếp thị và truyền thông, cùng các chuyên gia về chủ đề. Ý kiến đóng góp của cộng đồng định hình mọi quyết định: vì vậy, vui lòng đặt câu hỏi trong các vấn đề (issues), gửi PR hoặc liên hệ với nhóm:
+Các quyết định về từng PR riêng lẻ, sự phát triển thiết kế và các bản nâng cấp lớn được đưa ra bởi một nhóm từ khắp hệ sinh thái Ethereum. Nhóm này bao gồm các nhà quản lý dự án, nhà phát triển, nhà thiết kế, bộ phận tiếp thị và truyền thông, cùng các chuyên gia trong từng lĩnh vực. Ý kiến đóng góp của cộng đồng định hình mọi quyết định: vì vậy, vui lòng đặt câu hỏi trong các vấn đề (issues), gửi PR hoặc liên hệ với nhóm:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
@@ -81,7 +81,7 @@ Các quyết định về từng PR riêng lẻ, sự phát triển thiết kế
 
 ### Lưu ý về đạo văn {#plagiarism}
 
-Chỉ sử dụng tác phẩm gốc của bạn hoặc nội dung mà bạn được phép sử dụng khi đóng góp bất kỳ nội dung hoặc tạo tác nào cho ethereum.org. Nhiều dự án trong hệ sinh thái Ethereum sử dụng giấy phép mã nguồn mở cho phép chia sẻ thông tin miễn phí. Tuy nhiên, nếu bạn không thể tìm thấy thông tin này, đừng cố gắng thêm nó vào ethereum.org. Bất kỳ yêu cầu kéo (pull request) nào bị coi là đạo văn sẽ bị từ chối.
+Chỉ sử dụng tác phẩm gốc của bạn hoặc nội dung mà bạn được phép sử dụng khi đóng góp bất kỳ nội dung hoặc tài nguyên nào cho ethereum.org. Nhiều dự án trong hệ sinh thái Ethereum sử dụng giấy phép mã nguồn mở cho phép chia sẻ thông tin miễn phí. Tuy nhiên, nếu bạn không thể tìm thấy thông tin này, đừng cố gắng thêm nó vào ethereum.org. Bất kỳ yêu cầu kéo (pull request) nào bị coi là đạo văn sẽ bị từ chối.
 
 ## Bạn mới làm quen với mã nguồn mở? {#new-to-open-source}
 
@@ -96,7 +96,7 @@ Nếu đóng góp của bạn được hợp nhất vào ethereum.org, bạn s�
 ### Cách yêu cầu nhận {#how-to-claim}
 
 1. Tham gia [máy chủ Discord](/discord/) của chúng tôi.
-2. Dán liên kết đến đóng góp của bạn trong kênh `#🥇 | proof-of-contribution`.
+2. Dán liên kết đến đóng góp của bạn vào kênh `#🥇 | proof-of-contribution`.
 3. Đợi một thành viên trong nhóm của chúng tôi gửi cho bạn liên kết đến OAT của bạn.
 4. Yêu cầu nhận OAT của bạn!
 
@@ -111,7 +111,7 @@ GitPOAP cũng sẽ tự động nhận diện đóng góp đã được hợp nh
 
 1. Truy cập [GitPOAP](https://www.gitpoap.io).
 2. Kết nối với ví của bạn hoặc thậm chí bằng email của bạn thông qua tùy chọn đăng nhập.
-3. Tìm kiếm tên người dùng GitHub, địa chỉ ETH, tên ENS hoặc bất kỳ GitPOAP nào của bạn để kiểm tra xem bạn có đủ điều kiện hay không.
+3. Tìm kiếm tên người dùng GitHub, địa chỉ ETH, tên Dịch vụ Tên miền Ethereum (ENS) hoặc bất kỳ GitPOAP nào của bạn để kiểm tra xem bạn có đủ điều kiện hay không.
 4. Nếu tài khoản GitHub của bạn đủ điều kiện, thì bạn sẽ có thể đúc một GitPOAP!
 
 ## Những người đóng góp {#contributors}

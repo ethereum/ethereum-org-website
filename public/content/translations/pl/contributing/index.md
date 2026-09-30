@@ -5,9 +5,9 @@ description: "Dowiedz się o różnych sposobach, w jakie możesz współtworzy�
 lang: pl
 ---
 
-Ethereum.org to projekt open-source z ponad **12 000** współtwórców, którzy pomagają tłumaczyć, pisać, projektować i utrzymywać stronę internetową.
+Ethereum.org to projekt open-source z **12 000+** współtwórców, którzy pomagają tłumaczyć, pisać, projektować i utrzymywać stronę internetową.
 
-Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukować w ekosystemie [Ethereum](/), jednocześnie wnosząc znaczący wkład i zdobywając odpowiednie praktyczne doświadczenie!
+Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukować w ekosystemie [Ethereum](/), jednocześnie umożliwiając wniesienie znaczącego wkładu i zdobycie odpowiedniego praktycznego doświadczenia!
 
 ## Sposoby na współtworzenie {#ways-to-contribute}
 
@@ -15,17 +15,17 @@ Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukow
 - [Zgłoś błąd w tłumaczeniu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Program Tłumaczeń](/contributing/translation-program/) jest wygaszany i nie prowadzi już onboardingu nowych tłumaczy
 
 **Programowanie**
-- [Pracuj nad otwartym zgłoszeniem (issue)](https://github.com/ethereum/ethereum-org-website/issues) – Praca, którą zidentyfikowaliśmy jako wymagającą wykonania
+- [Pracuj nad otwartym zadaniem](https://github.com/ethereum/ethereum-org-website/issues) – Prace, które zidentyfikowaliśmy jako wymagające wykonania
 
 **Projektowanie**
-- [Pomóż w projektowaniu strony](/contributing/design/) – Projektanci na wszystkich poziomach mogą przyczynić się do ulepszenia strony internetowej
+- [Pomóż w projektowaniu strony](/contributing/design/) – Projektanci na wszystkich poziomach zaawansowania mogą przyczynić się do ulepszenia strony internetowej
 
 **Treść**
 - [Twórz/edytuj treść](/contributing/#how-to-update-content) – Zaproponuj nowe strony lub wprowadź poprawki do tego, co już tu jest
 - [Napisz artykuł dla budowniczych](/contributing/adding-articles/) - Prześlij artykuł do sekcji [Najnowsze](/latest/)
 - [Dodaj zasoby społeczności](/contributing/content-resources/) – Dodaj pomocny artykuł lub zasób do odpowiedniej strony
 - [Zaproponuj raport](/contributing/adding-reports/) - Zaproponuj raport badawczy na stronę [Raporty](/reports/)
-- [Podziel się swoją historią](/contributing/adding-community-stories/) - Prześlij historię o swoich osobistych doświadczeniach z technologiami open-source i sanctuary, o tym, jak ekosystem Ethereum wpłynął na Twoje życie, lub jak Ty i Twoja społeczność korzystacie z Ethereum
+- [Podziel się swoją historią](/contributing/adding-community-stories/) - Prześlij historię o swoich osobistych doświadczeniach z technologiami open-source i technologiami azylu (sanctuary technologies), o tym, jak ekosystem Ethereum wpłynął na Twoje życie, lub jak Ty i Twoja społeczność korzystacie z Ethereum
 - [Quizy](/contributing/quizzes/) – Dodawaj, aktualizuj i usuwaj bazy pytań do quizów dla odpowiedniej strony
 - [Zaproponuj zasób projektowy](/contributing/design/adding-design-resources/) – Dodawaj, aktualizuj i usuwaj pomocne zasoby projektowe
 - [Zaproponuj wideo](/contributing/adding-videos/) – Zaproponuj film edukacyjny do galerii wideo
@@ -38,7 +38,7 @@ Jesteśmy przyjazną społecznością, która pomoże Ci się rozwijać i edukow
 - [Dodaj produkt](/contributing/adding-products/) – Dodaj zdecentralizowaną aplikację (dapp) lub portfel do odpowiedniej strony
 - [Dodaj narzędzia deweloperskie](/contributing/adding-developer-tools/) – Dodaj narzędzie deweloperskie do odpowiedniej strony
 - [Dodaj warstwę 2 (L2)](/contributing/adding-layer-2s/) – Dodaj warstwę 2 (L2) do odpowiedniej strony
-- [Dodaj produkt lub usługę do stakingu](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
+- [Dodaj produkt lub usługę stakingową](/contributing/adding-staking-products/) – Dodaj projekt, który ułatwia staking solo, staking grupowy lub staking jako usługę
 - [Dodaj portfel](/contributing/adding-wallets/) – Dodaj portfel do strony [znajdź portfel](/wallets/find-wallet/)
 - [Zaproponuj projekt na naszą stronę DeSci](/contributing/adding-desci-projects/) – Dodaj projekt zbudowany na Ethereum, który przyczynia się do rozwoju zdecentralizowanej nauki (DeSci)
 - [Dodaj zasób](/contributing/adding-resources/) – Dodaj przydatny zasób do dowolnej odpowiedniej strony
@@ -55,9 +55,9 @@ Oto kilka bieżących zadań, w których rozwiązaniu możesz nam pomóc i za kt
 
 ## Jak pracować nad ethereum.org {#how-to-update-content}
 
-Aby współtworzyć (dodawać lub edytować treść lub elementy wizualne na stronie, naprawiać błędy, pracować nad otwartymi zadaniami), będziesz potrzebować konta na [GitHubie](https://github.com/).
+Aby współtworzyć (dodawać lub edytować treści i elementy wizualne na stronie, naprawiać błędy, pracować nad otwartymi zadaniami), będziesz potrzebować konta na [GitHubie](https://github.com/).
 
-Wszystkie aktualizacje są wprowadzane poprzez proces PR (Pull Request) na GitHubie. Oznacza to, że tworzysz lokalną kopię strony, wprowadzasz zmiany i prosisz o ich scalenie (merge). Jeśli nigdy wcześniej tego nie robiłeś, postępuj zgodnie z instrukcjami na dole naszego [repozytorium na GitHubie](https://github.com/ethereum/ethereum-org-website).
+Wszystkie aktualizacje są wprowadzane poprzez proces Pull Request (PR) na GitHubie. Oznacza to, że tworzysz lokalną kopię strony, wprowadzasz zmiany i prosisz o ich scalenie (merge). Jeśli nigdy wcześniej tego nie robiłeś, postępuj zgodnie z instrukcjami na dole naszego [repozytorium na GitHubie](https://github.com/ethereum/ethereum-org-website).
 
 Nie potrzebujesz pozwolenia, aby nad czymkolwiek pracować, ale zawsze najlepiej jest dać nam znać, co planujesz zrobić. Możesz to zrobić poprzez:
 
@@ -81,11 +81,11 @@ Decyzje dotyczące poszczególnych PR-ów, ewolucji projektu i głównych aktual
 
 ### Uwaga dotycząca plagiatu {#plagiarism}
 
-Wnosząc jakikolwiek wkład w postaci treści lub artefaktów do ethereum.org, używaj tylko swoich oryginalnych prac lub treści, do których masz pozwolenie. Wiele projektów w ekosystemie Ethereum korzysta z licencji open-source, które pozwalają na swobodne udostępnianie informacji. Jeśli jednak nie możesz znaleźć takich informacji, nie próbuj dodawać ich do ethereum.org. Wszelkie pull requesty uznane za plagiat zostaną odrzucone.
+Wnosząc jakikolwiek wkład w postaci treści lub artefaktów do ethereum.org, używaj wyłącznie swoich oryginalnych prac lub materiałów, do których masz prawa. Wiele projektów w ekosystemie Ethereum korzysta z licencji open-source, które pozwalają na swobodne udostępnianie informacji. Jeśli jednak nie możesz znaleźć takich informacji o licencji, nie próbuj dodawać tych treści do ethereum.org. Wszelkie pull requesty uznane za plagiat zostaną odrzucone.
 
 ## Zaczynasz przygodę z open-source? {#new-to-open-source}
 
-W naszym repozytorium na GitHubie mamy zgłoszenia o niskiej barierze wejścia, specjalnie zaprojektowane dla deweloperów, którzy dopiero zaczynają pracę z open-source, oznaczone jako [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+W naszym repozytorium na GitHubie mamy zadania o niskiej barierze wejścia, specjalnie zaprojektowane dla deweloperów, którzy dopiero zaczynają pracę z open-source, oznaczone etykietą [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 ## Odbierz swój Onchain Achievement Token (OAT) {#oat}
 
@@ -100,7 +100,7 @@ Jeśli Twój wkład zostanie scalony z ethereum.org, będziesz miał szansę ode
 3. Poczekaj, aż członek naszego zespołu wyśle Ci link do Twojego OAT.
 4. Odbierz swój OAT!
 
-Do odbierania OAT powinieneś używać wyłącznie portfeli do samodzielnego przechowywania. Nie używaj kont giełdowych ani innych kont, do których nie posiadasz kluczy prywatnych, ponieważ nie pozwolą Ci one na dostęp do Twoich OAT i zarządzanie nimi.
+Do odbierania OAT powinieneś używać wyłącznie portfeli z samodzielnym przechowywaniem (self-custody). Nie używaj kont giełdowych ani innych kont, do których nie posiadasz kluczy prywatnych, ponieważ nie pozwolą Ci one na dostęp do Twoich OAT i zarządzanie nimi.
 
 ## Odbierz swój GitPOAP {#claim-gitpoap}
 
@@ -111,7 +111,7 @@ GitPOAP również automatycznie rozpozna Twój scalony wkład i pozwoli Ci wybi�
 
 1. Odwiedź [GitPOAP](https://www.gitpoap.io).
 2. Połącz się za pomocą swojego portfela lub nawet adresu e-mail poprzez opcję logowania.
-3. Wyszukaj swoją nazwę użytkownika na GitHubie, adres ETH, nazwy ENS lub dowolny GitPOAP, aby sprawdzić, czy się kwalifikujesz.
+3. Wyszukaj swoją nazwę użytkownika na GitHubie, adres ETH, nazwy Ethereum Name Service (ENS) lub dowolny GitPOAP, aby sprawdzić, czy się kwalifikujesz.
 4. Jeśli Twoje konto na GitHubie się kwalifikuje, będziesz mógł wybić GitPOAP!
 
 ## Współtwórcy {#contributors}

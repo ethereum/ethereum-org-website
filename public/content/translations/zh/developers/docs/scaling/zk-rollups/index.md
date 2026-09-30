@@ -12,13 +12,13 @@ lang: zh
 
 ## 什么是零知识卷叠？ {#what-are-zk-rollups}
 
-**零知识卷叠 (ZK-rollup)** 将交易捆绑（或“汇总”）成批次并在链下执行。链下计算减少了必须发布到区块链的数据量。ZK-rollup 运营商提交代表批次中所有交易所需更改的摘要，而不是单独发送每笔交易。他们还生成[有效性证明](/glossary/#validity-proof)来证明其更改的正确性。
+**零知识卷叠 (ZK-rollup)** 将交易捆绑（或“汇总”）成批次，并在链下执行。链下计算减少了必须发布到区块链的数据量。ZK-rollup 运营商提交代表批次中所有交易所需更改的摘要，而不是单独发送每笔交易。他们还生成[有效性证明](/glossary/#validity-proof)来证明其更改的正确性。
 
-ZK-rollup 的状态由部署在以太坊网络上的智能合约维护。要更新此状态，ZK-rollup 节点必须提交有效性证明以供验证。如前所述，有效性证明是一种密码学保证，证明 Rollup 提议的状态更改确实是执行给定批次交易的结果。这意味着 ZK-rollup 只需要提供有效性证明即可在以太坊上最终确定交易，而不是像[乐观 Rollup (optimistic rollup)](/developers/docs/scaling/optimistic-rollups/) 那样将所有交易数据发布到链上。
+ZK-rollup 的状态由部署在以太坊网络上的智能合约维护。要更新此状态，ZK-rollup 节点必须提交有效性证明以供验证。如前所述，有效性证明是一种密码学保证，证明 Rollup 提议的状态更改确实是执行给定交易批次的结果。这意味着 ZK-rollup 不需要像[乐观 Rollup](/developers/docs/scaling/optimistic-rollups/) 那样将所有交易数据发布到链上，因为有效性证明最终确定了状态转换。它们仍然发布重建 Rollup 状态所需的数据，如下所述。
 
-将资金从 ZK-rollup 转移到以太坊时没有延迟，因为一旦 ZK-rollup 合约验证了有效性证明，就会执行退出交易。相反，从乐观 Rollup中提款会受到延迟，以允许任何人使用[欺诈证明](/glossary/#fraud-proof)对退出交易提出挑战。
+将资金从 ZK-rollup 转移到以太坊时没有延迟，因为一旦 ZK-rollup 合约验证了有效性证明，退出交易就会被执行。相反，从乐观 Rollup 中提款会受到延迟的影响，以允许任何人使用[欺诈证明](/glossary/#fraud-proof)对退出交易提出挑战。
 
-ZK-rollup 将交易作为 `calldata` 写入以太坊。`calldata` 是存储包含在对智能合约函数的外部调用中的数据的地方。`calldata` 中的信息发布在区块链上，允许任何人独立重建 Rollup 的状态。ZK-rollup 使用压缩技术来减少交易数据——例如，账户由索引而不是地址表示，这节省了 28 字节的数据。链上数据发布是 Rollup 的一项重大成本，因此数据压缩可以降低用户的费用。
+ZK-rollup 将交易作为 `calldata` 或在[斑点](/roadmap/danksharding/)中写入以太坊。`calldata` 是存储包含在对智能合约函数的外部调用中的数据的地方。无论哪种方式，数据都发布在区块链上，允许任何人独立重建 Rollup 的状态。ZK-rollup 使用压缩技术来减少交易数据——例如，账户由索引而不是地址表示，这节省了 28 字节的数据。链上数据发布是 Rollup 的一项重大成本，因此数据压缩可以降低用户的费用。
 
 ## ZK-rollup 如何与以太坊交互？ {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ ZK-rollup 依赖以太坊主协议来实现以下功能：
 
 ### 数据可用性 {#data-availability}
 
-ZK-rollup 将链下处理的每笔交易的状态数据发布到以太坊。借助这些数据，个人或企业可以重现 Rollup 的状态并自行验证该链。以太坊将这些数据作为 `calldata` 提供给网络的所有参与者。
+ZK-rollup 将链下处理的每笔交易的状态数据发布到以太坊。有了这些数据，个人或企业就可以自己重现 Rollup 的状态并验证链。以太坊将这些数据作为 `calldata` 或在[斑点](/roadmap/danksharding/)中提供给网络的所有参与者。
 
-ZK-rollup 不需要将大量交易数据发布到链上，因为有效性证明已经验证了状态转换的真实性。尽管如此，将数据存储在链上仍然很重要，因为它允许对 L2 链的状态进行无需许可的独立验证，这反过来又允许任何人提交批量交易，从而防止恶意运营商审查或冻结该链。
+ZK-rollup 不需要将大量交易数据发布到链上，因为有效性证明已经验证了状态转换的真实性。尽管如此，在链上存储数据仍然很重要，因为它允许对二层网络 (l2) 链的状态进行无需许可的独立验证，这反过来又允许任何人提交交易批次，从而防止恶意运营商审查或冻结链。
 
-用户与 Rollup 交互需要链上数据。如果没有访问状态数据的权限，用户将无法查询其账户余额或发起依赖于状态信息的交易（例如提款）。
+用户与 Rollup 交互需要链上数据。如果无法访问状态数据，用户就无法查询其账户余额或发起依赖于状态信息的交易（例如，提款）。
 
 ### 交易最终性 {#transaction-finality}
 
@@ -62,9 +62,13 @@ ZK-rollup 中的用户签署交易并提交给 L2 运营商进行处理并包含
 
 #### ZK-rollup 如何在以太坊上发布交易数据 {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-如前所述，交易数据作为 `calldata` 发布在以太坊上。`calldata` 是智能合约中的一个数据区域，用于将参数传递给函数，其行为类似于[内存](/developers/docs/smart-contracts/anatomy/#memory)。虽然 `calldata` 不作为以太坊状态的一部分存储，但它作为以太坊链的[历史日志](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs)的一部分保留在链上。`calldata` 不影响以太坊的状态，使其成为在链上存储数据的一种廉价方式。
+如前所述，交易数据作为 `calldata` 发布在以太坊上。`calldata` 是智能合约中的一个数据区域，用于向函数传递参数，其行为类似于[内存](/developers/docs/smart-contracts/anatomy/#memory)。虽然 `calldata` 不作为以太坊状态的一部分存储，但它作为以太坊链的[历史日志](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs)的一部分保留在链上。`calldata` 不影响以太坊的状态，这使其成为在链上存储数据的一种廉价方式。
 
 `calldata` 关键字通常标识交易正在调用的智能合约方法，并以任意字节序列的形式保存该方法的输入。ZK-rollup 使用 `calldata` 在链上发布压缩的交易数据；Rollup 运营商只需通过调用 Rollup 合约中所需的函数来添加新批次，并将压缩数据作为函数参数传递。这有助于降低用户的成本，因为很大一部分 Rollup 费用用于在链上存储交易数据。
+
+由于 [Dencun 升级](/roadmap/dencun/)引入了携带斑点的交易（[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)），Rollup 也可以将其数据发布在[斑点](/roadmap/danksharding/)中，斑点在单独的费用市场中定价，通常比 `calldata` 便宜。斑点不被执行层存储，协议仅定义了大约 18 天的最小窗口，在此期间网络必须提供斑点数据。这是一种服务义务，而不是删除截止日期：斑点数据不像执行层历史记录那样是永久的归档存储，长期访问取决于归档服务。`calldata` 仍然可用，不同的 Rollup 使用的方式也有所不同。
+
+无论 Rollup 使用哪种机制，发布的数据都是公开的。Rollup 发布的内容各不相同，有些发布压缩的交易数据，有些发布状态差异，但在任何一种情况下，都足以让任何人独立重建 Rollup 的状态。发布这些数据使得无需许可的验证成为可能；它不是一种隐私机制。
 
 ### 状态承诺 {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARK 也能抵御量子计算机的攻击，而 zk-SNARK 中使用的椭圆�
 #### 有效性证明在 ZK-rollup 中是如何工作的？ {#validity-proofs-in-zk-rollups}
 
 ##### 证明生成
+
 在接受交易之前，运营商将执行常规检查。这包括确认：
 
 - 发送者和接收者账户是状态树的一部分。
@@ -132,6 +137,7 @@ ZK-STARK 也能抵御量子计算机的攻击，而 zk-SNARK 中使用的椭圆�
 ZK 证明电路遍历整个交易批次，验证在最后一笔交易执行后产生最终状态根的更新序列。计算出的最后一个默克尔根成为 ZK-rollup 最新的规范状态根。
 
 ##### 证明验证
+
 在证明电路验证状态更新的正确性之后，L2 运营商将计算出的有效性证明提交给 L1 上的验证者合约。合约的验证电路验证证明的有效性，并检查构成证明一部分的公共输入：
 
 - **前状态根**：ZK-rollup 的旧状态根（即在执行批量交易之前），反映了 L2 链最后已知的有效状态。
@@ -172,13 +178,13 @@ Rollup 合约对交易数据进行哈希处理，检查批次根是否存在，�
 
 引入兼容 EVM 的 ZK-rollup 有望帮助开发者利用零知识证明的可扩展性和安全保证。更重要的是，与原生以太坊基础设施的兼容性意味着开发者可以使用熟悉（且经过实战检验）的工具和语言构建对 ZK 友好的去中心化应用 (dapp)。
 
-## ZK-rollup 费用是如何运作的？ {#how-do-zk-rollup-fees-work}
+## ZK-rollup 费用是如何工作的？ {#how-do-zk-rollup-fees-work}
 
-用户在 ZK-rollup 上为交易支付多少费用取决于 gas 费，就像在以太坊主网上一样。然而，gas 费在 L2 上的运作方式不同，并受以下成本的影响：
+用户在 ZK-rollup 上为交易支付多少费用取决于 gas 费，就像在以太坊主网上一样。然而，gas 费在二层网络 (l2) 上的工作方式不同，并受以下成本的影响：
 
 1. **状态写入**：写入以太坊状态（即在以太坊区块链上提交交易）有固定成本。ZK-rollup 通过批量处理交易并将固定成本分摊给多个用户来降低此成本。
 
-2. **数据发布**：ZK-rollup 将每笔交易的状态数据作为 `calldata` 发布到以太坊。`calldata` 成本目前受 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 管辖，该提案规定 `calldata` 的非零字节成本为 16 Gas，零字节成本为 4 Gas。每笔交易支付的成本受其需要在链上发布多少 `calldata` 的影响。
+2. **数据发布**：ZK-rollup 将每笔交易的状态数据作为 `calldata` 或在[斑点](/roadmap/danksharding/)中发布到以太坊。`calldata` 的内在 Gas 计划对每个非零字节收取 16 Gas，对每个零字节收取 4 Gas，这是由 [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) 引入的降低；[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 规定了每单位 Gas 支付的价格，而不是字节计划本身。[EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) 额外对数据密集型交易应用了底价成本，因此以 `calldata` 为主的交易可能比标准计划支付更多，而计算密集型交易则不受影响。每笔交易支付的成本受其需要发布到链上的数据量的影响。
 
 3. **L2 运营商费用**：这是支付给 Rollup 运营商的金额，作为处理交易产生的计算成本的补偿，很像以太坊主网上的[交易“优先费（小费）”](/developers/docs/gas/#how-are-gas-fees-calculated)。
 

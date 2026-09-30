@@ -102,7 +102,7 @@ Kama mnyororo wa vitalu, Ethereum imeundwa kwa ajili ya kutuma miamala kwa njia 
 
 #### Tiririsha pesa kote ulimwenguni... {#stream-money}
 
-Unaweza pia kutiririsha pesa kupitia Ethereum. Hii inakuruhusu kumlipa mtu mshahara wake kwa sekunde, na kuwapa ufikiaji wa pesa zao wakati wowote wanapozihitaji. Au kukodisha kitu kwa sekunde kama vile kabati la kuhifadhia au skuta ya umeme.
+Unaweza pia kutiririsha pesa kupitia Ethereum. Badala ya kutuma malipo moja makubwa, malipo ya kutiririsha huhamisha kiasi kidogo mfululizo kwa muda. Hii inakuruhusu kumlipa mtu mshahara wake kwa sekunde, ikiwapa ufikiaji wa pesa zao wakati wowote wanapozihitaji. Inaweza pia kutumika kulipia huduma zinazotozwa mfululizo, kama vile kukodisha kabati la kuhifadhia au skuta ya umeme.
 
 Na ikiwa hutaki kutuma au kutiririsha [ETH](/glossary/#ether) kwa sababu ya jinsi thamani yake inavyoweza kubadilika, kuna sarafu mbadala kwenye Ethereum: [sarafu thabiti](/glossary/#stablecoin).
 

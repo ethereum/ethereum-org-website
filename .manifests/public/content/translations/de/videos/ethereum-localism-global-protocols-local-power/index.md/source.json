@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/ethereum-localism-global-protocols-local-power/index.md",
-  "generatedAt": "2026-04-28T23:28:46.369Z",
-  "rootHash": "51ef55f66b65",
+  "generatedAt": "2026-09-30T18:39:58.452Z",
+  "rootHash": "f30c95942e53",
   "tree": {
-    "contentHash": "13b353b096ca",
-    "anchorHash": "fe61303f896e",
+    "contentHash": "a43fe34008f8",
+    "anchorHash": "443da239e3d6",
     "children": {
       "frontmatter:title": {
         "contentHash": "b3083b62c65d",
@@ -36,32 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "3be486f0b395",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "2290d7d70dea"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "6386713deb27"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "b38e227d5dea"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "3e860f41a5ea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2",
-          "3"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -285,5 +267,5 @@
       "global-citizens-with-local-responsibilities-3503"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
