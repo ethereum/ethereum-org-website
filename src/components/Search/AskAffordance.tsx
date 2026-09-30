@@ -187,10 +187,23 @@ const AskAffordance = () => {
       if (activeItem().endsWith("-item-0")) setActiveSource(count - 1)
     }
 
+    // The clear button is a form reset, which changes the value without dispatching
+    // `input` -- so without this the query went stale and the answer outlived the box
+    // that produced it. Clearing the query clears the answer: nothing on screen would
+    // say what it answered.
+    const clear = () => {
+      setQuery("")
+      setTargets([])
+      setActiveSource(null)
+      setAsked("")
+    }
+
     read()
+    input.form?.addEventListener("reset", clear)
     input.addEventListener("input", read)
     input.addEventListener("keydown", intercept, true)
     return () => {
+      input.form?.removeEventListener("reset", clear)
       input.removeEventListener("input", read)
       input.removeEventListener("keydown", intercept, true)
     }
