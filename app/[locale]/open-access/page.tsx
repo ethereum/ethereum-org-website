@@ -362,16 +362,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-decides-description-6")}</p>
         </Section>
 
-        {/* Decorative break between sections: its own section rather than the
-            tail of the one above, and kept out of the ToC. */}
-        <Section>
-          <Image
-            src={lockedAtmImg}
-            alt=""
-            className="mx-auto max-h-64 w-auto object-contain"
-            sizes="240px"
-          />
-        </Section>
+        {/* Decorative break between sections. */}
+        <Image
+          src={lockedAtmImg}
+          alt=""
+          className="mx-auto my-space-3x max-h-64 w-auto object-contain"
+          sizes="240px"
+        />
 
         <Section id={sections.freedoms.id}>
           <h2>{sections.freedoms.title}</h2>
@@ -514,14 +511,13 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-open-access-how-description-3")}</p>
         </Section>
 
-        <Section>
-          <Image
-            src={ethDiamondImg}
-            alt=""
-            className="mx-auto max-h-36 w-auto object-contain"
-            sizes="144px"
-          />
-        </Section>
+        {/* Decorative break between sections. */}
+        <Image
+          src={ethDiamondImg}
+          alt=""
+          className="mx-auto my-space-3x max-h-36 w-auto object-contain"
+          sizes="144px"
+        />
 
         <Section id={sections.eth.id}>
           <h2>{sections.eth.title}</h2>
