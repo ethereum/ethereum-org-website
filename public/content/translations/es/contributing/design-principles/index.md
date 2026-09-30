@@ -1,8 +1,8 @@
 ---
-title: Nuestros principios de diseño
-metaTitle: Principios de diseño
+title: "Nuestros principios de diseño"
+metaTitle: "Principios de diseño"
 lang: es
-description: Los principios detrás de las decisiones de diseño y contenido de ethereum.org
+description: "Los principios detrás de las decisiones de diseño y contenido de ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Hola y te damos la bienvenida a los principios de diseño de ethereum.org. Esto es parte de un proceso continuo para evolucionar y mejorar ethereum.org.
