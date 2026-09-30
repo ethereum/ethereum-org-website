@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-developers-tools.json",
-  "generatedAt": "2026-07-22T22:37:41.044Z",
-  "rootHash": "00b5b0edd977",
+  "generatedAt": "2026-09-30T18:08:41.831Z",
+  "rootHash": "e51d4d480ca2",
   "tree": {
-    "contentHash": "2fc5c5cfe4d8",
-    "anchorHash": "776f180e82ff",
+    "contentHash": "3691a5fe8b74",
+    "anchorHash": "52cca1e99b0e",
     "children": {
       "page-developers-tools-search-placeholder": {
         "contentHash": "dd886aee85fb",
@@ -143,8 +143,46 @@
         "contentHash": "adb911e968db",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-developers-tools-modal-links": {
-        "contentHash": "9024c197d849",
+      "page-developers-tools-modal-category": {
+        "contentHash": "292c06f0045a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-full-details": {
+        "contentHash": "723fcb8e8d6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-tags": {
+        "contentHash": "1331275bc537",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-type": {
+        "contentHash": "baaddf70fb5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-more": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "0a15a52cf103",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c3788e1699a0"
+          }
+        }
+      },
+      "page-developers-tools-modal-package": {
+        "contentHash": "59de121db1b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-packages": {
+        "contentHash": "40a2085371b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-repositories": {
+        "contentHash": "1e32af87ea74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-modal-repository": {
+        "contentHash": "13d6ff07b8a5",
         "anchorHash": "e3b0c44298fc"
       },
       "page-developers-tools-modal-social": {
@@ -603,7 +641,15 @@
       "page-developers-tools-subcategory-standards-specifications-title",
       "page-developers-tools-meta-description",
       "page-developers-tools-meta-title",
-      "page-developers-tools-modal-links",
+      "page-developers-tools-modal-category",
+      "page-developers-tools-modal-full-details",
+      "page-developers-tools-modal-tags",
+      "page-developers-tools-modal-type",
+      "page-developers-tools-modal-more",
+      "page-developers-tools-modal-package",
+      "page-developers-tools-modal-packages",
+      "page-developers-tools-modal-repositories",
+      "page-developers-tools-modal-repository",
       "page-developers-tools-modal-social",
       "page-developers-tools-modal-website",
       "page-developers-tools-no-results",
@@ -711,5 +757,5 @@
       "page-developers-tools-title"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
