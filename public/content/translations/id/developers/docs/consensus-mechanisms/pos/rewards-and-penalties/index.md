@@ -18,27 +18,27 @@ Baca terus untuk detail lebih lanjut...
 
 ### Imbalan {#rewards-2}
 
-Validator menerima imbalan ketika mereka memberikan suara yang konsisten dengan mayoritas validator lainnya, ketika mereka mengusulkan blok, dan ketika mereka berpartisipasi dalam komite sinkronisasi. Nilai imbalan di setiap Epok dihitung dari `base_reward`. Ini adalah unit dasar yang menjadi acuan perhitungan imbalan lainnya. `base_reward` mewakili imbalan rata-rata yang diterima oleh validator dalam kondisi optimal per Epok. Ini dihitung dari saldo efektif validator dan jumlah total validator aktif sebagai berikut:
+Validator menerima imbalan ketika mereka memberikan suara yang konsisten dengan mayoritas validator lainnya, ketika mereka mengusulkan blok, dan ketika mereka berpartisipasi dalam komite sinkronisasi. Nilai imbalan di setiap Epok dihitung dari `base_reward`. Ini adalah unit dasar yang menjadi asal perhitungan imbalan lainnya. `base_reward` mewakili rata-rata imbalan yang diterima oleh validator dalam kondisi optimal per Epok. Ini dihitung dari saldo efektif validator dan jumlah total validator aktif sebagai berikut:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-di mana `base_reward_factor` adalah 64, `base_rewards_per_epoch` adalah 4 dan `sum(active balance)` adalah total ether yang di-stake di seluruh validator aktif.
+di mana `base_reward_factor` adalah 64, `base_rewards_per_epoch` adalah 4 dan `sum(active balance)` adalah total Ether yang di-stake di seluruh validator aktif.
 
-Ini berarti imbalan dasar sebanding dengan saldo efektif validator dan berbanding terbalik dengan jumlah validator di jaringan. Semakin banyak validator, semakin besar penerbitan keseluruhan (karena `sqrt(N)` tetapi semakin kecil `base_reward` per validator (karena `1/sqrt(N)`). Faktor-faktor ini memengaruhi APR untuk node staking. Baca alasan untuk hal ini di [catatan Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Ini berarti imbalan dasar sebanding dengan saldo efektif validator dan berbanding terbalik dengan jumlah validator di jaringan. Semakin banyak validator, semakin besar penerbitan keseluruhan (sebagai `sqrt(N)`) tetapi semakin kecil `base_reward` per validator (sebagai `1/sqrt(N)`). Faktor-faktor ini memengaruhi APR untuk node staking. Baca alasan untuk ini di [catatan Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
-Total imbalan kemudian dihitung sebagai jumlah dari lima komponen yang masing-masing memiliki bobot yang menentukan seberapa besar setiap komponen menambah total imbalan. Komponen-komponen tersebut adalah:
+Total imbalan kemudian dihitung sebagai jumlah dari lima komponen yang masing-masing memiliki pembobotan yang menentukan seberapa banyak setiap komponen menambah total imbalan. Komponen-komponen tersebut adalah:
 
+```text
+1. suara sumber: validator telah memberikan suara tepat waktu untuk checkpoint sumber yang benar
+2. suara target: validator telah memberikan suara tepat waktu untuk checkpoint target yang benar
+3. suara head: validator telah memberikan suara tepat waktu untuk blok head yang benar
+4. imbalan komite sinkronisasi: validator telah berpartisipasi dalam komite sinkronisasi
+5. imbalan pengusul: validator telah mengusulkan blok di slot yang benar
 ```
-1. source vote: validator telah memberikan suara tepat waktu untuk checkpoint sumber yang benar
-2. target vote: validator telah memberikan suara tepat waktu untuk checkpoint target yang benar
-3. head vote: validator telah memberikan suara tepat waktu untuk blok head yang benar
-4. sync committee reward: validator telah berpartisipasi dalam komite sinkronisasi
-5. proposer reward: validator telah mengusulkan blok di slot yang benar
-```
 
-Bobot untuk setiap komponen adalah sebagai berikut:
+Pembobotan untuk setiap komponen adalah sebagai berikut:
 
 ```
 TIMELY_SOURCE_WEIGHT	uint64(14)
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Jumlah dari bobot-bobot ini adalah 64. Imbalan dihitung sebagai jumlah dari bobot yang berlaku dibagi 64. Seorang validator yang telah memberikan suara sumber, target, dan head tepat waktu, mengusulkan blok, dan berpartisipasi dalam komite sinkronisasi dapat menerima `64/64 * base_reward == base_reward`. Namun, seorang validator biasanya bukan pengusul blok, sehingga imbalan maksimum mereka adalah `64-8 /64 * base_reward == 7/8 * base_reward`. Validator yang bukan pengusul blok maupun anggota komite sinkronisasi dapat menerima `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Jumlah bobot ini adalah 64. Imbalan dihitung sebagai jumlah bobot yang berlaku dibagi 64. Validator yang telah memberikan suara sumber, target, dan head tepat waktu, mengusulkan blok, dan berpartisipasi dalam komite sinkronisasi dapat menerima `64/64 * base_reward == base_reward`. Namun, validator biasanya bukan pengusul blok, sehingga imbalan maksimum mereka adalah `64-8 /64 * base_reward == 7/8 * base_reward`. Validator yang bukan pengusul blok maupun tidak berada dalam komite sinkronisasi dapat menerima `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
 Imbalan tambahan ditambahkan untuk memberi insentif pada atestasi yang cepat. Ini adalah `inclusion_delay_reward`. Ini memiliki nilai yang sama dengan `base_reward` dikalikan dengan `1/delay` di mana `delay` adalah jumlah slot yang memisahkan proposal blok dan atestasi. Misalnya, jika atestasi dikirimkan dalam satu slot dari proposal blok, pembuat atestasi menerima `base_reward * 1/1 == base_reward`. Jika atestasi tiba di slot berikutnya, pembuat atestasi menerima `base_reward * 1/2` dan seterusnya.
 
-Pengusul blok menerima `8 / 64 * base_reward` untuk **setiap atestasi valid** yang disertakan dalam blok, sehingga nilai aktual dari imbalan berskala dengan jumlah validator yang melakukan atestasi. Pengusul blok juga dapat meningkatkan imbalan mereka dengan menyertakan bukti perilaku buruk oleh validator lain dalam blok yang mereka usulkan. Imbalan ini adalah "wortel" (insentif) yang mendorong kejujuran validator. Pengusul blok yang menyertakan pemotongan akan diberi imbalan dengan `slashed_validators_effective_balance / 512`.
+Pengusul blok menerima `8 / 64 * base_reward` untuk **setiap atestasi yang valid** yang disertakan dalam blok, sehingga nilai imbalan yang sebenarnya berskala dengan jumlah validator yang melakukan atestasi. Pengusul blok juga dapat meningkatkan imbalan mereka dengan menyertakan bukti perilaku buruk oleh validator lain dalam blok yang mereka usulkan. Imbalan ini adalah insentif yang mendorong kejujuran validator. Pengusul blok yang menyertakan pemotongan akan diberi imbalan sebesar `slashed_validators_effective_balance / 512`.
 
 ### Penalti {#penalties}
 
