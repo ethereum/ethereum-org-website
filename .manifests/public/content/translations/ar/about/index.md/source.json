@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/about/index.md",
-  "generatedAt": "2026-06-08T07:02:07.352Z",
-  "rootHash": "25691cc45f42",
+  "generatedAt": "2026-09-30T18:17:46.600Z",
+  "rootHash": "2c02605ff6a3",
   "tree": {
-    "contentHash": "7517b373ed6e",
-    "anchorHash": "c5f5ed5f8a0c",
+    "contentHash": "3259ccd9ce64",
+    "anchorHash": "379201dca062",
     "children": {
       "frontmatter:title": {
         "contentHash": "9aafb3686977",
@@ -36,8 +36,8 @@
         "anchorHash": "e3b0c44298fc"
       },
       "a-note-on-names": {
-        "contentHash": "49d7b74e24ab",
-        "anchorHash": "02c1dfb70342",
+        "contentHash": "d1418b759f8c",
+        "anchorHash": "51d3e11ff68d",
         "labelHash": "b366f5ef9b2d",
         "children": {
           "_label": {
@@ -49,15 +49,15 @@
             "anchorHash": "e3b0c44298fc"
           },
           "ethereum": {
-            "contentHash": "07de50da8ff1",
-            "anchorHash": "4186ed74a63a",
+            "contentHash": "bbabb1e2f662",
+            "anchorHash": "0371c1482109",
             "labelHash": "a13bebeb57e1",
             "children": {
               "_label": {
                 "contentHash": "a13bebeb57e1",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:2": {
+              "prose:3": {
                 "contentHash": "1fefdd0c45fb",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -68,13 +68,18 @@
               "link:1": {
                 "contentHash": "c3d750da762c",
                 "anchorHash": "7528295ec365"
+              },
+              "link:2": {
+                "contentHash": "9074341e9da1",
+                "anchorHash": "7f4f334e5f5c"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:2",
+              "prose:3",
               "link:0",
-              "link:1"
+              "link:1",
+              "link:2"
             ]
           },
           "ether-or-eth": {
@@ -219,12 +224,12 @@
         ]
       },
       "core-principles": {
-        "contentHash": "74cbfcdc17a7",
-        "anchorHash": "6a9bbcd391fd",
-        "labelHash": "b02a5a93fe18",
+        "contentHash": "4a6f663c1f3f",
+        "anchorHash": "c290185620b3",
+        "labelHash": "4080f993023d",
         "children": {
           "_label": {
-            "contentHash": "b02a5a93fe18",
+            "contentHash": "4080f993023d",
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
@@ -261,31 +266,36 @@
             ]
           },
           "core-principles-2": {
-            "contentHash": "47a92f9974a1",
-            "anchorHash": "ac7e0df4a427",
+            "contentHash": "33ab13cafcec",
+            "anchorHash": "c55bf38fdc76",
             "labelHash": "2753c1f13a3a",
             "children": {
               "_label": {
                 "contentHash": "2753c1f13a3a",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:1": {
+              "prose:2": {
                 "contentHash": "11406baf2589",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
                 "contentHash": "abc23c63e5ec",
                 "anchorHash": "73847946c646"
+              },
+              "link:1": {
+                "contentHash": "70eb72081c62",
+                "anchorHash": "fee8ae4824c8"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:1",
-              "link:0"
+              "prose:2",
+              "link:0",
+              "link:1"
             ]
           },
           "core-principles-3": {
-            "contentHash": "3341b7366fc6",
+            "contentHash": "c78c04b22431",
             "anchorHash": "4b9f7d802648",
             "labelHash": "ce0a4e4d4649",
             "children": {
@@ -294,7 +304,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "3ee8681b28e6",
+                "contentHash": "bac5c15d4fe4",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -312,73 +322,53 @@
           "core-principles-3"
         ]
       },
-      "roadmap": {
-        "contentHash": "8cb5fdd62b4a",
-        "anchorHash": "7db863dbf412",
-        "labelHash": "eb27eea71c9f",
+      "get-involved": {
+        "contentHash": "0f41c5605d10",
+        "anchorHash": "bb697429bab7",
+        "labelHash": "2cba40c2541b",
         "children": {
           "_label": {
-            "contentHash": "eb27eea71c9f",
+            "contentHash": "2cba40c2541b",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:5": {
-            "contentHash": "8c8571c062c0",
+          "prose:3": {
+            "contentHash": "c9fc71f049a6",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "b261b13b2653",
-            "anchorHash": "c1978fa4af56"
-          },
-          "prose:6": {
-            "contentHash": "a1f5db72f2a3",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:1": {
-            "contentHash": "8bcb264ab967",
-            "anchorHash": "45d7155c63f3"
-          },
-          "prose:7": {
-            "contentHash": "22dca9221d9e",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
             "contentHash": "ad0d5b2b004a",
             "anchorHash": "73847946c646"
           },
-          "prose:8": {
+          "prose:4": {
             "contentHash": "d03502c43d74",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
+          "link:1": {
             "contentHash": "671cd2a3ae13",
             "anchorHash": "4cfa8d764e12"
           },
-          "prose:9": {
+          "prose:5": {
             "contentHash": "c6762bdac08f",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:4": {
+          "link:2": {
             "contentHash": "8857d2a88868",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
-          "prose:10": {
+          "prose:6": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:5",
+          "prose:3",
           "link:0",
-          "prose:6",
+          "prose:4",
           "link:1",
-          "prose:7",
+          "prose:5",
           "link:2",
-          "prose:8",
-          "link:3",
-          "prose:9",
-          "link:4",
-          "prose:10"
+          "prose:6"
         ]
       },
       "design-principles": {
@@ -411,15 +401,15 @@
         ]
       },
       "design-system": {
-        "contentHash": "b3de7ff0480c",
-        "anchorHash": "eaa65b28b43a",
+        "contentHash": "e2d897665de1",
+        "anchorHash": "49a5deb7fd04",
         "labelHash": "4a866105af15",
         "children": {
           "_label": {
             "contentHash": "4a866105af15",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
+          "prose:3": {
             "contentHash": "a249f9ce03df",
             "anchorHash": "e3b0c44298fc"
           },
@@ -427,7 +417,7 @@
             "contentHash": "935b1d1de719",
             "anchorHash": "36e5908260cc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "cd7c13f2a9d5",
             "anchorHash": "e3b0c44298fc"
           },
@@ -435,38 +425,28 @@
             "contentHash": "0669cdbbc090",
             "anchorHash": "d09f6ca47cd6"
           },
-          "prose:6": {
-            "contentHash": "3538a0b69856",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
-            "contentHash": "7d94e2e7acad",
-            "anchorHash": "9d6519085e74"
-          },
-          "prose:7": {
+          "prose:5": {
             "contentHash": "94b48c5f3708",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
+          "link:2": {
             "contentHash": "122e2868797b",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
-          "prose:8": {
+          "prose:6": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
+          "prose:3",
           "link:0",
-          "prose:5",
+          "prose:4",
           "link:1",
-          "prose:6",
+          "prose:5",
           "link:2",
-          "prose:7",
-          "link:3",
-          "prose:8"
+          "prose:6"
         ]
       },
       "style-guide": {
@@ -568,8 +548,8 @@
         ]
       },
       "open-jobs": {
-        "contentHash": "093f4283d163",
-        "anchorHash": "646652934166",
+        "contentHash": "83dc583f9bd6",
+        "anchorHash": "45752f912009",
         "labelHash": "c07b65a7ed7e",
         "children": {
           "_label": {
@@ -577,12 +557,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:2": {
-            "contentHash": "83ab5be07805",
+            "contentHash": "5d6c2c382d3c",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
             "contentHash": "8857d2a88868",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "prose:3": {
             "contentHash": "64a50f4fdfec",
@@ -590,7 +570,7 @@
           },
           "link:1": {
             "contentHash": "8c9e7c98bc9b",
-            "anchorHash": "e1a5cf808291"
+            "anchorHash": "5cd1cf1f02a6"
           },
           "prose:4": {
             "contentHash": "cdb4ee2aea69",
@@ -618,7 +598,7 @@
       "a-note-on-names",
       "our-mission",
       "core-principles",
-      "roadmap",
+      "get-involved",
       "design-principles",
       "design-system",
       "style-guide",
@@ -626,5 +606,5 @@
       "open-jobs"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
