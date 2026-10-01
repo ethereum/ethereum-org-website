@@ -1,13 +1,3 @@
-/**
- * Playwright Test suite for the developer-tools GitHub enrichment.
- *
- * GraphQL aliases are positional, so the query and the loop that reads the
- * response have to walk the same array. When the query builder filtered
- * unqueryable owner/name pairs on its own, every alias after a rejected entry
- * landed on the wrong repo -- and because the result map still came back full,
- * neither the coverage gate nor the logs could see it.
- */
-
 import { expect, test } from "@playwright/test"
 
 import { fetchGitHub } from "@/data-layer/fetchers/developer-tools/fetchGitHub"

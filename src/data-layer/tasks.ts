@@ -70,16 +70,9 @@ export const KEYS = {
   QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
-// Derived from the SDK rather than hand-written so new presets stay in sync
-type MachinePreset = Extract<
-  NonNullable<Parameters<typeof task>[0]["machine"]>,
-  string
->
-
 // Per-task overrides for the config-wide defaults in trigger.config.ts
-type TaskOverrides = {
+interface TaskOverrides {
   maxDuration?: number
-  machine?: MachinePreset
 }
 
 // Task definition: storage key + fetch function + optional runtime overrides
@@ -103,10 +96,7 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  // The catalog grew ~47% in Sep 2026 and stopped fitting the shared 300s
-  // budget. Enrichment is paced against third-party rate limits, so the floor
-  // here is wall clock, not compute -- which is why this buys time, not a
-  // bigger machine.
+  // Enrichment is paced by third-party rate limits: needs wall clock, not a bigger machine
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
@@ -131,8 +121,7 @@ function createDataTask([key, fetchFn, overrides]: TaskDef) {
     retry: {
       maxAttempts: 2,
     },
-    ...(overrides?.maxDuration ? { maxDuration: overrides.maxDuration } : {}),
-    ...(overrides?.machine ? { machine: overrides.machine } : {}),
+    ...overrides,
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },

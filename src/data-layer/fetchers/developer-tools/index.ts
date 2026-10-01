@@ -1,6 +1,8 @@
 import type { BuilderResourcesCatalogResource } from "@/lib/types"
 
-import { mapWithConcurrency, uploadToS3 } from "@/data-layer/s3"
+import { mapWithConcurrency } from "@/lib/utils/concurrency"
+
+import { uploadToS3 } from "@/data-layer/s3"
 
 import { fetchBuilderResources } from "./fetchBuilderResources"
 import { fetchGitHub } from "./fetchGitHub"
@@ -11,7 +13,6 @@ import type { DeveloperToolsDataEnvelope } from "./utils"
 // Re-export types for consumers
 export type { DeveloperToolsDataEnvelope } from "./utils"
 
-// Every resource carries up to two images, so this is ~20 requests in flight.
 const IMAGE_UPLOAD_CONCURRENCY = 10
 
 async function uploadToolImages(
@@ -97,9 +98,7 @@ export async function fetchDeveloperTools(): Promise<DeveloperToolsDataEnvelope>
     packages: resource.packages ?? [],
   }))
 
-  // GitHub enriches `repos`, npm enriches `packages`, and neither reads the
-  // other's field. Chaining them spent both third-party pacing budgets in
-  // series, which was most of the task's wall clock.
+  // Disjoint fields (`repos` / `packages`), so the two rate-limited passes run in parallel
   const [withGitHubData, withNpmData] = await Promise.all([
     timed("github", () => fetchGitHub(resourcesWithPackageDefaults)),
     timed("npm", () => fetchNpmJs(resourcesWithPackageDefaults)),

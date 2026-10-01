@@ -34,12 +34,7 @@ function parseGitHubUrl(href: string): RepoInfo | null {
 
 const VALID_REPO_PATTERN = /^[a-zA-Z0-9._-]+$/
 
-/**
- * GraphQL aliases are positional (`repo0`, `repo1`, ...), so the query and the
- * loop that reads the response must walk the same array. Filtering inside the
- * query builder alone shifted every alias after a rejected name onto the wrong
- * repo, writing plausible-but-wrong stats that no coverage check can see.
- */
+// Aliases are positional, so the query and the result loop must walk this same array
 function queryableRepos(repos: RepoInfo[]): RepoInfo[] {
   return repos.filter(
     (repo) =>
@@ -84,15 +79,12 @@ function buildGraphQLQuery(repos: RepoInfo[]): string {
 /** Extra attempts for a rate-limited batch, on top of what fetchRetry covers. */
 const RATE_LIMIT_RETRIES = 2
 
-/**
- * Ceiling on time the whole run may spend waiting out GitHub rate limits.
- * Per-batch retries alone are unbounded in aggregate: 20 batches honoring a
- * `Retry-After: 60` twice each is ~40 minutes, so the task gets killed by
- * maxDuration instead of failing into the readable coverage error below.
- */
+/** Run-wide cap on rate-limit waits, so a bad GitHub day fails before maxDuration. */
 const RATE_LIMIT_BUDGET_MS = 120_000
 
-type RateLimitBudget = { remainingMs: number }
+interface RateLimitBudget {
+  remainingMs: number
+}
 
 /** Below this share of repos resolved, the run fails instead of publishing. */
 const MIN_REPO_COVERAGE = 0.75
@@ -114,8 +106,7 @@ async function requestRepoBatch(
 
     if (response.ok) return response
 
-    // GitHub reports secondary rate limits as 403, which fetchRetry's status
-    // list does not cover. Honor Retry-After when the response offers one.
+    // Secondary rate limits come back as 403, which fetchRetry doesn't retry
     const retryAfter = Number(response.headers.get("retry-after") ?? "")
     const rateLimited = response.status === 403 || response.status === 429
     const waitMs = (retryAfter + 1) * 1000
@@ -276,9 +267,7 @@ export async function fetchGitHub<T extends ToolWithRepoUrls>(
 
   console.log(`Successfully fetched data for ${repoDataMap.size} repos`)
 
-  // Ranking reads a missing stargazer count as zero, so a partly-failed fetch
-  // does not degrade gracefully -- it quietly demotes every repo it missed.
-  // Keeping yesterday's data beats publishing a corrupted ranking.
+  // Ranking reads missing stars as zero; keep yesterday's blob over a demoted ranking
   const coverage =
     allRepos.length === 0 ? 1 : repoDataMap.size / allRepos.length
   if (coverage < MIN_REPO_COVERAGE) {

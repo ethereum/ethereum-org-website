@@ -21,6 +21,8 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3"
 
+import { mapWithConcurrency } from "@/lib/utils/concurrency"
+
 // Lazy init S3 client
 let s3Client: S3Client | null = null
 
@@ -41,12 +43,7 @@ function getS3Client(): S3Client {
       endpoint,
       credentials: { accessKeyId, secretAccessKey },
       forcePathStyle: true, // Required for S3-compatible services
-      // The SDK ships no socket timeout, so a stalled endpoint hangs the caller
-      // until the task's maxDuration kills the entire run. `requestTimeout` is
-      // the wrong knob: without `throwOnRequestTimeout` it only warns, and it
-      // caps total wall clock, which would abort a legitimately slow multi-MB
-      // PUT. `socketTimeout` fires on inactivity, so slow-but-moving uploads
-      // survive and genuinely dead sockets do not.
+      // No socket timeout by default; a stalled endpoint would hang the task
       requestHandler: { connectionTimeout: 5_000, socketTimeout: 20_000 },
     })
   }
@@ -323,27 +320,6 @@ export async function uploadToS3(
     console.error(`[S3] Upload failed for ${sourceUrl}:`, error)
     return null
   }
-}
-
-/**
- * Map over items with a bounded number in flight. Unbounded fan-out breaks two
- * ways here: every upload buffers a whole image before the size check, and each
- * one starts its own 10s fetch deadline at call time, so queued requests expire
- * before they are ever dispatched.
- *
- * @returns Results in input order
- */
-export async function mapWithConcurrency<T, R>(
-  items: T[],
-  fn: (item: T) => Promise<R>,
-  concurrency = 5
-): Promise<R[]> {
-  const results: R[] = []
-  for (let i = 0; i < items.length; i += concurrency) {
-    const chunk = items.slice(i, i + concurrency)
-    results.push(...(await Promise.all(chunk.map((item) => fn(item)))))
-  }
-  return results
 }
 
 /**
