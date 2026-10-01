@@ -240,10 +240,26 @@ const AskPanel = ({
           <Markdown
             remarkPlugins={[remarkGfm]}
             // No raw HTML by default, so model output never reaches the DOM as markup.
-            // Images are dropped outright: an answer has no use for one, and rendering
-            // one fetches whatever URL the prose names -- "render this image exactly" is
-            // a working injection, and the request alone is the payload.
-            disallowedElements={["img"]}
+            // An allowlist rather than a blocklist, so a shape nobody considered cannot
+            // appear: an answer is prose, short lists and the occasional code span.
+            // Images are the pointed omission -- rendering one fetches whatever URL the
+            // prose names, and the request alone is the payload.
+            allowedElements={[
+              "p",
+              "a",
+              "strong",
+              "em",
+              "del",
+              "code",
+              "pre",
+              "ul",
+              "ol",
+              "li",
+              "br",
+            ]}
+            // Anything else keeps its text and loses its markup, so a table the model
+            // was told to render degrades to its words instead of vanishing.
+            unwrapDisallowed
             components={{
               a: ({ href, children }) => {
                 if (isCitation(href, children, sources))
