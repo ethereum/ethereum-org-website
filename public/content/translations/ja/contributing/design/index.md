@@ -15,7 +15,7 @@ lang: ja
 
 私たちは時折、初期のアイデアをテストするための助けを必要とします。これは、技術的な知識がなくても貢献できる素晴らしい方法です。
 
-1. デザインチームが[ディスコード](https://discord.com/invite/ethereum-org)および[GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)でモックアップデザインを共有します。
+1. デザインチームが[ディスコード](/discord/)および[GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8)でモックアップデザインを共有します。
 2. コメント機能を通じてフィードバックを提供できるよう、デザインの案内が行われます。
 3. 結果はGitHubのIssueで共有され、その後チームによってクローズされます。
 

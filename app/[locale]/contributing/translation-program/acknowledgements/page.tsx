@@ -203,7 +203,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1"
               )}{" "}
-              <InlineLink href="https://discord.gg/ethereum-org">
+              <InlineLink href="/discord/">
                 {t(
                   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
                 )}

@@ -100,7 +100,7 @@ Ili kufanya kazi yetu iweze kufikiwa zaidi na kukuza ushirikiano zaidi wa jamii,
 
 **Inasikikaje?** Tunathamini maoni kila wakati kwenye ramani yetu ya njia - ikiwa kuna jambo unalofikiri tunapaswa kulifanyia kazi, tafadhali tujulishe! Tunakaribisha mawazo na PR kutoka kwa mtu yeyote katika jamii.
 
-**Unataka kuhusika?** [Jifunze zaidi kuhusu kuchangia](/contributing/), [tuwasiliane kwenye Twitter](https://x.com/ethdotorg), au jiunge na majadiliano ya jamii katika [seva yetu ya Discord](https://discord.gg/ethereum-org).
+**Unataka kuhusika?** [Jifunze zaidi kuhusu kuchangia](/contributing/), [tuwasiliane kwenye Twitter](https://x.com/ethdotorg), au jiunge na majadiliano ya jamii katika [seva yetu ya Discord](/discord/).
 
 ## Kanuni za muundo {#design-principles}
 
@@ -110,7 +110,7 @@ Tunatumia seti ya [kanuni za muundo](/contributing/design-principles/) kuongoza 
 
 Tulijenga na kutoa [mfumo wa muundo](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) ili kusafirisha vipengele kwa haraka zaidi na kuruhusu wanajamii kushiriki katika muundo wazi wa ethereum.org.
 
-Unataka kuhusika? [Fuatilia katika Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [suala la GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) na ujiunge na mazungumzo katika [chaneli yetu ya Discord ya #design](https://discord.gg/ethereum-org).
+Unataka kuhusika? [Fuatilia katika Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [suala la GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) na ujiunge na mazungumzo katika [chaneli yetu ya Discord ya #design](/discord/).
 
 ## Mwongozo wa mtindo {#style-guide}
 
@@ -128,6 +128,6 @@ Tovuti ya ethereum.org ni chanzo wazi na imejengwa chini ya [Leseni ya MIT](http
 
 Ingawa tovuti hii ni chanzo wazi na mtu yeyote anaweza kuifanyia kazi, tuna timu iliyojitolea kwa ethereum.org na miradi mingine ya wavuti ya Taasisi ya Ethereum.
 
-Tutachapisha nafasi zozote za kazi hapa. Ikiwa huoni jukumu lako hapa, nenda kwenye [seva yetu ya Discord](https://discord.gg/ethereum-org) na utujulishe jinsi ungependa kufanya kazi nasi!
+Tutachapisha nafasi zozote za kazi hapa. Ikiwa huoni jukumu lako hapa, nenda kwenye [seva yetu ya Discord](/discord/) na utujulishe jinsi ungependa kufanya kazi nasi!
 
 Unatazama zaidi ya timu ya ethereum.org? [Angalia kazi nyingine zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs/).

@@ -89,4 +89,4 @@ ethereum.orgの文脈において、これらのデザイン原則は、私た�
 
 これらの原則はethereum.orgのウェブサイトに焦点を当てていますが、その多くがイーサリアムエコシステム全体の価値観を代表するものであることを願っています。あなた自身のプロジェクトにいくつか取り入れたいと思うかもしれません！
 
-[ディスコードサーバー](https://discord.gg/ethereum-org)、または[Issueの作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)を通じて、あなたのご意見をお聞かせください。
+[ディスコードサーバー](/discord/)、または[Issueの作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)を通じて、あなたのご意見をお聞かせください。

@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "Ist diese Seite hilfreich?",
   "feedback-widget-thank-you-cta": "Kurze Umfrage öffnen",
   "feedback-widget-thank-you-subtitle": "Mache diese Seite noch besser, indem du ein paar Fragen beantwortest.",
-  "feedback-widget-thank-you-subtitle-ext": "Wenn du Hilfe benötigst, kannst du dich auf unserem <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">Discord</a> an die Community wenden.",
+  "feedback-widget-thank-you-subtitle-ext": "Wenn du Hilfe benötigst, kannst du dich auf unserem <a href=\"/discord/\" target=\"_blank\">Discord</a> an die Community wenden.",
   "feedback-widget-thank-you-timing": "2–3 Min.",
   "feedback-widget-thank-you-title": "Vielen Dank für dein Feedback!",
   "filter-bar-clear": "Filter löschen",

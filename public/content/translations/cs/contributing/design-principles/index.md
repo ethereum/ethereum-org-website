@@ -89,4 +89,4 @@ Naše principy designu můžete vidět v praxi [napříč naším webem](/).
 
 Ačkoli jsou tyto principy zaměřeny na web ethereum.org, doufáme, že mnohé z nich reprezentují hodnoty ekosystému Etherea jako celku. Možná dokonce budete chtít některé z nich začlenit do svého vlastního projektu!
 
-Dejte nám vědět své myšlenky na [serveru Discord](https://discord.gg/ethereum-org) nebo [založením issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Dejte nám vědět své myšlenky na [serveru Discord](/discord/) nebo [založením issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

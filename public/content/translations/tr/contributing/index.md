@@ -43,7 +43,7 @@ Sizi [Ethereum](/) ekosisteminde büyümeye ve eğitmeye yardımcı olacak, ayn�
 - [DeSci sayfamız için bir proje önerin](/contributing/adding-desci-projects/) – Ethereum üzerinde inşa edilmiş, merkeziyetsiz bilime (DeSci) katkıda bulunan bir proje ekleyin
 - [Bir kaynak ekleyin](/contributing/adding-resources/) – İlgili herhangi bir sayfaya yararlı bir kaynak ekleyin
 
-Sorularınız mı var? 🤔 [Discord sunucumuza](https://discord.gg/ethereum-org) katılın
+Sorularınız mı var? 🤔 [Discord sunucumuza](/discord/) katılın
 
 ## Katkıda bulunmaya başlamak için iyi ilk görevler {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Tüm güncellemeler GitHub PR (Çekme İsteği) süreci aracılığıyla yapıl�
 Herhangi bir şey üzerinde çalışmak için izne ihtiyacınız yoktur, ancak ne yapmayı planladığınızı bize bildirmeniz her zaman en iyisidir. Bunu şu şekilde yapabilirsiniz:
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website)'da bir soruna veya PR'a yorum yaparak
-- [Discord sunucumuzda](https://discord.gg/ethereum-org) mesajlaşarak
+- [Discord sunucumuzda](/discord/) mesajlaşarak
 
 Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 
@@ -77,7 +77,7 @@ Bireysel PR'lar, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord sunucusu](https://discord.gg/ethereum-org)
+- [Discord sunucusu](/discord/)
 
 ### İntihal üzerine bir not {#plagiarism}
 
@@ -95,7 +95,7 @@ Katkınız ethereum.org'da birleştirilirse, [Galxe](https://app.galxe.com/quest
 
 ### Nasıl talep edilir {#how-to-claim}
 
-1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
+1. [Discord sunucumuza](/discord/) katılın.
 2. Katkınızın bir bağlantısını `#🥇 | proof-of-contribution` kanalına yapıştırın.
 3. Ekibimizden bir üyenin size OAT'nizin bağlantısını göndermesini bekleyin.
 4. OAT'nizi talep edin!

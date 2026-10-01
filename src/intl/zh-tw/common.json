@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "這個頁面對您有幫助嗎？",
   "feedback-widget-thank-you-cta": "開啟簡短問卷",
   "feedback-widget-thank-you-subtitle": "回答幾個問題，讓這個頁面變得更好。",
-  "feedback-widget-thank-you-subtitle-ext": "如果您需要協助，可以在我們的 <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">Discord</a> 上聯絡社群。",
+  "feedback-widget-thank-you-subtitle-ext": "如果您需要協助，可以在我們的 <a href=\"/discord/\" target=\"_blank\">Discord</a> 上聯絡社群。",
   "feedback-widget-thank-you-timing": "2–3 分鐘",
   "feedback-widget-thank-you-title": "感謝您的回饋！",
   "filter-bar-clear": "清除篩選",

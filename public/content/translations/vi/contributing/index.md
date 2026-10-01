@@ -43,7 +43,7 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 - [Đề xuất một dự án cho trang khoa học phi tập trung (desci) của chúng tôi](/contributing/adding-desci-projects/) – Thêm một dự án được xây dựng trên Ethereum có đóng góp cho khoa học phi tập trung (desci)
 - [Thêm một tài nguyên](/contributing/adding-resources/) – Thêm một tài nguyên hữu ích vào bất kỳ trang liên quan nào
 
-Bạn có câu hỏi nào không? 🤔 Hãy tham gia [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi
+Bạn có câu hỏi nào không? 🤔 Hãy tham gia [máy chủ Discord](/discord/) của chúng tôi
 
 ## Những nhiệm vụ đầu tiên tốt nhất để bắt đầu đóng góp {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Tất cả các bản cập nhật đều được thực hiện thông qua quy 
 Bạn không cần sự cho phép để làm việc với bất kỳ điều gì, nhưng tốt nhất là luôn cho chúng tôi biết bạn đang dự định làm gì. Bạn có thể làm điều này bằng cách:
 
 - Bình luận về một vấn đề (issue) hoặc PR trên [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Nhắn tin trên [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi
+- Nhắn tin trên [máy chủ Discord](/discord/) của chúng tôi
 
 Trước khi đóng góp, hãy đảm bảo bạn đã quen thuộc với:
 
@@ -77,7 +77,7 @@ Các quyết định về từng PR riêng lẻ, sự phát triển thiết kế
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Máy chủ Discord](https://discord.gg/ethereum-org)
+- [Máy chủ Discord](/discord/)
 
 ### Lưu ý về đạo văn {#plagiarism}
 
@@ -95,7 +95,7 @@ Nếu đóng góp của bạn được hợp nhất vào ethereum.org, bạn s�
 
 ### Cách yêu cầu nhận {#how-to-claim}
 
-1. Tham gia [máy chủ Discord](https://discord.gg/ethereum-org) của chúng tôi.
+1. Tham gia [máy chủ Discord](/discord/) của chúng tôi.
 2. Dán liên kết đến đóng góp của bạn trong kênh `#🥇 | proof-of-contribution`.
 3. Đợi một thành viên trong nhóm của chúng tôi gửi cho bạn liên kết đến OAT của bạn.
 4. Yêu cầu nhận OAT của bạn!

@@ -125,7 +125,7 @@
   "feedback-widget-prompt": "이 페이지가 도움이 되나요?",
   "feedback-widget-thank-you-cta": "짧은 설문조사 열기",
   "feedback-widget-thank-you-subtitle": "몇 가지 질문에 답하여 이 페이지를 개선하는 데 도움을 주세요.",
-  "feedback-widget-thank-you-subtitle-ext": "도움이 필요하시다면 <a href=\"https://discord.gg/ethereum-org\" target=\"_blank\">디스코드</a> 커뮤니티에 문의하실 수 있습니다.",
+  "feedback-widget-thank-you-subtitle-ext": "도움이 필요하시다면 <a href=\"/discord/\" target=\"_blank\">디스코드</a> 커뮤니티에 문의하실 수 있습니다.",
   "feedback-widget-thank-you-timing": "2~3분",
   "feedback-widget-thank-you-title": "피드백을 주셔서 감사합니다!",
   "filter-bar-clear": "필터 지우기",

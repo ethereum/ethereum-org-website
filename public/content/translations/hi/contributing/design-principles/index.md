@@ -89,4 +89,4 @@ ethereum.org के संदर्भ में, ये डिज़ाइन �
 
 हालांकि ये सिद्धांत ethereum.org वेबसाइट पर केंद्रित हैं, हमें उम्मीद है कि इनमें से कई समग्र रूप से इथेरियम इकोसिस्टम के मूल्यों के प्रतिनिधि हैं। हो सकता है कि आप उनमें से कुछ को अपने स्वयं के प्रोजेक्ट में भी शामिल करना चाहें!
 
-[डिस्कॉर्ड सर्वर](https://discord.gg/ethereum-org) पर या [एक समस्या (issue) बनाकर](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) हमें अपने विचार बताएं।
+[डिस्कॉर्ड सर्वर](/discord/) पर या [एक समस्या (issue) बनाकर](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) हमें अपने विचार बताएं।

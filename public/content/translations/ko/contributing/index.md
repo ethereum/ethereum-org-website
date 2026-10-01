@@ -43,7 +43,7 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 - [DeSci 페이지에 프로젝트 제안하기](/contributing/adding-desci-projects/) – 탈중앙화 과학에 기여하는 이더리움 기반 프로젝트를 추가합니다.
 - [리소스 추가하기](/contributing/adding-resources/) – 관련 페이지에 유용한 리소스를 추가합니다.
 
-질문이 있으신가요? 🤔 [디스코드 서버](https://discord.gg/ethereum-org)에 참여하세요.
+질문이 있으신가요? 🤔 [디스코드 서버](/discord/)에 참여하세요.
 
 ## 기여를 시작하기 좋은 첫 작업 {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 작업을 수행하는 데 허락을 받을 필요는 없지만, 무엇을 할 계획인지 미리 알려주는 것이 항상 좋습니다. 다음과 같은 방법으로 알려주실 수 있습니다:
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website)의 이슈나 PR에 댓글 남기기
-- [디스코드 서버](https://discord.gg/ethereum-org)에서 메시지 보내기
+- [디스코드 서버](/discord/)에서 메시지 보내기
 
 기여하기 전에 다음 사항을 숙지하시기 바랍니다:
 
@@ -77,7 +77,7 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [디스코드 서버](https://discord.gg/ethereum-org)
+- [디스코드 서버](/discord/)
 
 ### 표절에 대한 주의 사항 {#plagiarism}
 
@@ -95,7 +95,7 @@ ethereum.org에 콘텐츠나 결과물을 기여할 때는 본인의 창작물�
 
 ### 청구 방법 {#how-to-claim}
 
-1. [디스코드 서버](https://discord.gg/ethereum-org)에 참여하세요.
+1. [디스코드 서버](/discord/)에 참여하세요.
 2. `#🥇 | proof-of-contribution` 채널에 기여한 링크를 붙여넣으세요.
 3. 팀원이 OAT 링크를 보내줄 때까지 기다리세요.
 4. OAT를 청구하세요!

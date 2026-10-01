@@ -100,7 +100,7 @@ lang: ur
 
 **یہ کیسا لگتا ہے؟** ہم ہمیشہ اپنے روڈ میپ پر تاثرات کی تعریف کرتے ہیں - اگر آپ کو لگتا ہے کہ ہمیں کسی چیز پر کام کرنا چاہیے، تو براہ کرم ہمیں بتائیں! ہم کمیونٹی میں کسی کے بھی خیالات اور <span dir="ltr">PRs</span> کا خیرمقدم کرتے ہیں۔
 
-**شامل ہونا چاہتے ہیں؟** [تعاون کرنے کے بارے میں مزید جانیں](/contributing/)، [ہمیں ٹوئٹر پر میسج کریں](https://x.com/ethdotorg)، یا [ہمارے ڈسکارڈ سرور](https://discord.gg/ethereum-org) میں کمیونٹی کی بات چیت میں شامل ہوں۔
+**شامل ہونا چاہتے ہیں؟** [تعاون کرنے کے بارے میں مزید جانیں](/contributing/)، [ہمیں ٹوئٹر پر میسج کریں](https://x.com/ethdotorg)، یا [ہمارے ڈسکارڈ سرور](/discord/) میں کمیونٹی کی بات چیت میں شامل ہوں۔
 
 ## ڈیزائن کے اصول {#design-principles}
 
@@ -110,7 +110,7 @@ lang: ur
 
 ہم نے خصوصیات کو زیادہ تیزی سے بھیجنے اور کمیونٹی کے اراکین کو <span dir="ltr">ethereum.org</span> کے کھلے ڈیزائن میں حصہ لینے دینے کے لیے ایک [ڈیزائن سسٹم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) بنایا اور جاری کیا۔
 
-شامل ہونا چاہتے ہیں؟ [<span dir="ltr">Figma</span> میں ساتھ چلیں](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)، [<span dir="ltr">GitHub</span> ایشو](https://github.com/ethereum/ethereum-org-website/issues/6284) اور ہمارے [<span dir="ltr">#design</span> ڈسکارڈ چینل](https://discord.gg/ethereum-org) میں گفتگو میں شامل ہوں۔
+شامل ہونا چاہتے ہیں؟ [<span dir="ltr">Figma</span> میں ساتھ چلیں](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)، [<span dir="ltr">GitHub</span> ایشو](https://github.com/ethereum/ethereum-org-website/issues/6284) اور ہمارے [<span dir="ltr">#design</span> ڈسکارڈ چینل](/discord/) میں گفتگو میں شامل ہوں۔
 
 ## اسٹائل گائیڈ {#style-guide}
 
@@ -128,6 +128,6 @@ lang: ur
 
 اگرچہ یہ ویب سائٹ اوپن سورس ہے اور کوئی بھی اس پر کام کر سکتا ہے، لیکن ہمارے پاس ایک ٹیم ہے جو <span dir="ltr">ethereum.org</span> اور دیگر ایتھیریم فاؤنڈیشن ویب پروجیکٹس کے لیے وقف ہے۔
 
-ہم یہاں ملازمت کے کسی بھی مواقع کو پوسٹ کریں گے۔ اگر آپ کو یہاں اپنے لیے کوئی کردار نظر نہیں آتا ہے، تو [ہمارے ڈسکارڈ سرور](https://discord.gg/ethereum-org) پر جائیں اور ہمیں بتائیں کہ آپ ہمارے ساتھ کیسے کام کرنا چاہیں گے!
+ہم یہاں ملازمت کے کسی بھی مواقع کو پوسٹ کریں گے۔ اگر آپ کو یہاں اپنے لیے کوئی کردار نظر نہیں آتا ہے، تو [ہمارے ڈسکارڈ سرور](/discord/) پر جائیں اور ہمیں بتائیں کہ آپ ہمارے ساتھ کیسے کام کرنا چاہیں گے!
 
 <span dir="ltr">ethereum.org</span> ٹیم سے آگے دیکھ رہے ہیں؟ [ایتھیریم سے متعلق دیگر ملازمتیں دیکھیں](/community/get-involved/#ethereum-jobs/)۔
