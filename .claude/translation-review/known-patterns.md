@@ -1092,3 +1092,19 @@ Short-form availability is not universal, so the rule has to be conditional:
 **Reviewer rule:** severity depends on the slot. In a `-name` chip label or a `meta-title`/`meta-description` it is critical (layout and SERP truncation). In body prose it is a warning. Watch for the inverse too: `page-apps-category-dao-description`'s English spells the phrase out with no acronym attached, so a locale appending `(DAO)` there is over-expansion of a *correct* translation -- strip the parenthetical, keep the phrase.
 
 **Collapsing it safely:** restore the acronym-bearing token exactly as the locale wrote it pre-PR, not a bare ASCII acronym. Agglutinative locales carry a suffix (`NFTகள்`) and RTL locales wrap the run in bidi isolates (`U+2066 NFT U+2069`). A naive collapse in ar orphaned the closing isolate in three keys; reverting those keys wholesale to their pre-PR values was the correct repair.
+
+### 81. Renamed JSON key ships the English value in every locale (CRITICAL -- pipeline gap)
+
+PR #19357: #19266 renamed `page-find-wallet-privacy{,-desc}` to `page-find-wallet-private-transactions{,-desc}` with identical English text. The title key came back translated, but `-desc` shipped as the English string in all 24 locales. verify-structure cannot see it (keys and placeholders match) and the candidate glossary pass cannot either (no glossary term). Detection: for every key added in the PR, flag a locale value byte-identical to English when English is prose. Repair: when the English value is unchanged across a rename, restore the locale's old-key value from `dev` -- no retranslation needed.
+
+### 82. "Both" dropped from a two-fact privacy claim (PATTERN -- semantic, fleet-wide)
+
+PR #19357 `page-privacy-online.json` `vpn-tor-description-1`, `vpn-relay-description`, `app-tor-browser-description`: "no single relay knows *both* who you are and where you go" became "no relay knows who you are or where you go" in at least bn, ta, te, es, pt-br. The rewrite overstates Tor/Private Relay (each hop knows one fact). Same file also produced "very few [people] earn a recommendation" for VPNs (hi, mr, te) and "place you by location" read as "put you somewhere" (hi, mr). Treat as a warning unless the claim inverts; fix by adding the language's "both / at the same time" particle.
+
+### 83. "Free software" rendered as gratis (PATTERN -- semantic)
+
+PR #19357 `app-f-droid-description`: F-Droid's "free software" became the price sense in pl `darmowego`, tr `ücretsiz`, ru `бесплатного`, uk `безкоштовного`, ar `المجانية`. The libre forms are `wolnego`, `özgür`, `свободного`, `вільного`, `الحرة`. Same confusion class as the #19034 tr `ücretsiz kişi` fix. Warning.
+
+### 84. Pre-pass glossary matching is dominated by unchanged lines (INFORMATIONAL -- review method)
+
+A naive "English has term X, locale lacks form Y" scan over PR files produced ~3.7k candidate rows for PR #19357; well over 80% sat on lines the PR never touched (the ~70 `videos/*` files only gained a `topic:` tag and an EOF newline). Real pre-existing deviations surfaced this way (ru `Бинанс Академи`, uk `Майкрософт Сек'юріті`, mr `वेब3`, te `లిడో`, mr `डेंकुन`, ur `ڈینکون`) are out of scope for the PR but worth a cleanup pass. Restrict candidate rows to added lines before handing them to review agents.

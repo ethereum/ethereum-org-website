@@ -85,7 +85,7 @@
   "page-open-access-how-point-headquarters": "沒有可以被命令關閉網路的以太坊總部。",
   "page-open-access-how-point-accounts": "沒有可以將使用者停權的中央以太坊帳戶系統。",
   "page-open-access-how-description-2": "這使得持續的審查更難以協調，因為它需要控制或影響系統的許多獨立部分，而不是單一管理員。",
-  "page-open-access-how-description-3": "驗證者或區塊構建者可以將某筆交易排除在區塊之外。但另一個參與者可以將其包含在後續的區塊中。交易可能會被延遲，但永遠不會被完全阻止。",
+  "page-open-access-how-description-3": "驗證者或區塊建構者可以將某筆交易排除在區塊之外。但另一個參與者可以將其包含在後續的區塊中。交易可能會被延遲，但永遠不會被完全阻止。",
   "page-open-access-eth-title": "ETH 不同於其他加密貨幣資產",
   "page-open-access-eth-description-1": "許多加密貨幣資產是由對其保留部分控制權的公司所發行。例如，USDC 和 USDT 等穩定幣的發行商可以在需要時阻擋地址並凍結代幣。",
   "page-open-access-eth-description-2": "ETH 的運作方式不同。它是以太坊的原生資產，而不是由公司發行或由智能合約控制的代幣。沒有任何管理員金鑰可以凍結特定帳戶中的 ETH。",

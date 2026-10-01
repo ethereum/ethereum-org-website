@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Žádné výsledky",
   "page-find-wallet-empty-results-desc": "Vašim kritériím neodpovídají žádné peněženky, zkuste odebrat některé filtry.",
   "page-find-wallet-private-transactions": "Soukromé transakce",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Peněženky, které podporují vestavěné soukromé transakce",
   "page-find-wallet-smart-accounts": "Chytré účty",
   "page-find-wallet-smart-accounts-desc": "Používejte chytrý kontrakt jako svůj účet peněženky. Plaťte poplatky za plyn jinými tokeny než ETH, obnovte svou peněženku, pokud ztratíte klíče, a spojte více akcí do jedné transakce.",
   "page-find-wallet-account-upgrades": "Vylepšení účtu",

@@ -121,3 +121,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Acronym over-expansion pushed `page-apps-meta-description` from 145 to 257 chars while leaving `DeFi`/`DAO` bare elsewhere in the same file.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/privacy:120` `nulovým vědomím` -> `nulovou znalostí` (regression of the #18925 fix).
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (gas = gas standing rule).
+
+**Open (warnings):**
+
+- `plyn` persists on unchanged lines (fusaka 140/142, page-roadmap 104, zk-rollups 183) -- whole-file cleanup owed.
+- shielded pool split `stíněné`/`chráněný fond`; `updatu` vs `upgrade`; `Odsloužená doba` prison-sense calque.

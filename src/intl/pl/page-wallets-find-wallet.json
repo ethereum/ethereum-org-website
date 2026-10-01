@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Brak wyników",
   "page-find-wallet-empty-results-desc": "Nie ma portfeli spełniających Twoje kryteria, spróbuj usunąć niektóre filtry.",
   "page-find-wallet-private-transactions": "Prywatne transakcje",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Portfele obsługujące wbudowane prywatne transakcje",
   "page-find-wallet-smart-accounts": "Inteligentne konta",
   "page-find-wallet-smart-accounts-desc": "Używaj inteligentnego kontraktu jako konta swojego portfela. Opłacaj opłaty za gaz tokenami innymi niż ETH, odzyskaj swój portfel w przypadku utraty kluczy i grupuj wiele działań w jedną transakcję.",
   "page-find-wallet-account-upgrades": "Ulepszenia konta",

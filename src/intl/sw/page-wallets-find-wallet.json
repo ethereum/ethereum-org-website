@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Hakuna matokeo",
   "page-find-wallet-empty-results-desc": "Hakuna mikoba inayolingana na vigezo vyako, jaribu kuondoa baadhi ya vichujio.",
   "page-find-wallet-private-transactions": "Miamala ya faragha",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Mikoba inayoauni miamala ya faragha iliyojengewa ndani",
   "page-find-wallet-smart-accounts": "Akaunti mahiri",
   "page-find-wallet-smart-accounts-desc": "Tumia mkataba mahiri kama akaunti yako ya mkoba. Lipa ada za gesi kwa kutumia tokeni nyingine badala ya ETH, rejesha mkoba wako ukipoteza funguo zako, na unganisha vitendo vingi katika muamala mmoja.",
   "page-find-wallet-account-upgrades": "Maboresho ya akaunti",

@@ -95,3 +95,17 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - The `akun milik eksternal (EOA)` / `disebarkan` glossary migration and the cross-contract and testnet corrections are real upstream fixes.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-fixes video L42 `melakukan Log` (glossary casing leaked into a verb) -> `mencatat`.
+- zk-rollups:43 `diwajibkan` over-applied for "required"; API/ENS over-expansion.

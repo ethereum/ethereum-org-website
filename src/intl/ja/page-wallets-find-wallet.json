@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "結果なし",
   "page-find-wallet-empty-results-desc": "条件に一致するウォレットはありません。いくつかのフィルターを外してみてください。",
   "page-find-wallet-private-transactions": "プライベート・トランザクション",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "組み込みのプライベートなトランザクションをサポートするウォレット",
   "page-find-wallet-smart-accounts": "スマート・アカウント",
   "page-find-wallet-smart-accounts-desc": "スマート・コントラクトをウォレットのアカウントとして使用します。ETH以外のトークンでガス代を支払い、鍵を紛失した場合でもウォレットを復元し、複数のアクションを1つのトランザクションにまとめることができます。",
   "page-find-wallet-account-upgrades": "アカウントのアップグレード",

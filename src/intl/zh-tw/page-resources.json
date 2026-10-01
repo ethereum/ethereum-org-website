@@ -80,7 +80,7 @@
   "page-resources-wallets-title": "錢包",
   "page-resources-wallets-wallet-beat-description": "一個簡單的以太坊錢包儀表板與摘要工具。",
   "page-resources-wallets-bundlebear-description": "針對 ERC-4337 與 EIP-7702 智能帳戶的儀表板與分析。",
-  "page-resources-wallets-jiffyscan-description": "針對 ERC-4337 使用者操作與打包者的區塊鏈瀏覽器。",
+  "page-resources-wallets-jiffyscan-description": "針對 ERC-4337 使用者操作與打包器的區塊鏈瀏覽器。",
   "page-resources-wallets-erc4337-description": "ERC-4337 帳戶抽象化生態系的社群中心與文件。",
   "page-resources-zk-adoption-title": "ZK 採用",
   "page-resources-zk-adoption-ethproofs-description": "擴容以太坊的 SNARKs。",

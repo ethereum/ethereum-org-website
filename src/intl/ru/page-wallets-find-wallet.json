@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Нет результатов",
   "page-find-wallet-empty-results-desc": "Нет кошельков, соответствующих вашим критериям, попробуйте убрать некоторые фильтры.",
   "page-find-wallet-private-transactions": "Приватные транзакции",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Кошельки, поддерживающие встроенные приватные транзакции",
   "page-find-wallet-smart-accounts": "Смарт-аккаунты",
   "page-find-wallet-smart-accounts-desc": "Используйте смарт-контракт в качестве аккаунта вашего кошелька. Оплачивайте комиссии за газ токенами, отличными от ETH, восстанавливайте кошелек при потере ключей и объединяйте несколько действий в одну транзакцию.",
   "page-find-wallet-account-upgrades": "Обновления аккаунта",

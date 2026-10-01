@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Sem resultados",
   "page-find-wallet-empty-results-desc": "Não há carteiras que correspondam aos seus critérios, tente remover alguns filtros.",
   "page-find-wallet-private-transactions": "Transações privadas",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Carteiras que suportam transações privadas integradas",
   "page-find-wallet-smart-accounts": "Contas inteligentes",
   "page-find-wallet-smart-accounts-desc": "Use um contrato inteligente como a conta da sua carteira. Pague taxas de gas com outros tokens além de ETH, recupere sua carteira se perder suas chaves e agrupe várias ações em uma única transação.",
   "page-find-wallet-account-upgrades": "Atualizações de conta",

@@ -110,7 +110,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "預先映射依賴關係，以實現更快的同步、平行執行和平行磁碟讀取",
   "page-roadmap-glamsterdam-bal-item-3": "降低狀態繁重應用程式的燃料，並提高燃料成本的可預測性",
   "page-roadmap-hegota-focil-title": "分叉選擇強制包含清單 (FOCIL)",
-  "page-roadmap-hegota-focil-item-1": "讓驗證者委員會可以要求包含有效的交易，因此沒有任何單一區塊構建者可以將其遺漏",
+  "page-roadmap-hegota-focil-item-1": "讓驗證者委員會可以要求包含有效的交易，因此沒有任何單一區塊建構者可以將其遺漏",
   "page-roadmap-hegota-focil-item-2": "將抗審查性與本地區塊構建解耦，消除了擴展第一層 (L1) 的限制",
   "page-roadmap-hegota-focil-item-3": "強化了第二層 (L2) 的結算保證，這可以縮短樂觀匯總的退出時間窗",
   "page-roadmap-hegota-frame-title": "框架交易",

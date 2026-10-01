@@ -95,3 +95,17 @@ Scope: `developers/docs/accounts/index.md` (first successful retranslation after
 **Notes:**
 
 - Code-fence protection (#19348) worked: the clef transcript kept `<path>`/`<password>` byte-exact, so the jsx-tags gate passed and the quarantine entry cleared. `Virtuelle Ethereum-Maschine` now matches ETHGlossary (pre-PR used the English name).
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- hegota `Fork-Wahl` vs tree `Fork-Choice` (83:1).
+- privacy-online `No-Logs-Anspruch` (entitlement) should be `-Versprechen`; `Suchanfragen` for DNS lookups; `Weitere Wissenswerte` grammar.

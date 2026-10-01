@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Keine Ergebnisse",
   "page-find-wallet-empty-results-desc": "Es gibt keine Wallets, die deinen Kriterien entsprechen. Versuche, einige Filter zu entfernen.",
   "page-find-wallet-private-transactions": "Private Transaktionen",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Wallets, die integrierte private Transaktionen unterstützen",
   "page-find-wallet-smart-accounts": "Smart-Konten",
   "page-find-wallet-smart-accounts-desc": "Nutze einen Smart Contract als dein Wallet-Konto. Bezahle Gasgebühren mit anderen Token als ETH, stelle deine Wallet wieder her, wenn du deine Schlüssel verlierst, und bündle mehrere Aktionen in einer einzigen Transaktion.",
   "page-find-wallet-account-upgrades": "Konto-Upgrades",

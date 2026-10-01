@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "لا توجد نتائج",
   "page-find-wallet-empty-results-desc": "لا توجد محافظ تطابق معاييرك، جرب إزالة بعض عوامل التصفية.",
   "page-find-wallet-private-transactions": "معاملات خاصة",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "المحافظ التي تدعم المعاملات الخاصة المدمجة",
   "page-find-wallet-smart-accounts": "حسابات ذكية",
   "page-find-wallet-smart-accounts-desc": "استخدم عقدًا ذكيًا كحساب لمحفظتك. ادفع رسوم الغاز برموز مميزة بخلاف ⁦ETH⁩، واسترد محفظتك إذا فقدت مفاتيحك، واجمع إجراءات متعددة في معاملة واحدة.",
   "page-find-wallet-account-upgrades": "ترقيات الحساب",

@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Aucun résultat",
   "page-find-wallet-empty-results-desc": "Il n'y a aucun portefeuille correspondant à vos critères, essayez de retirer quelques filtres.",
   "page-find-wallet-private-transactions": "Transactions privées",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Portefeuilles prenant en charge les transactions privées intégrées",
   "page-find-wallet-smart-accounts": "Comptes intelligents",
   "page-find-wallet-smart-accounts-desc": "Utilisez un contrat intelligent comme compte de portefeuille. Payez les frais de gaz avec des jetons autres que l'ETH, récupérez votre portefeuille si vous perdez vos clés et regroupez plusieurs actions en une seule transaction.",
   "page-find-wallet-account-upgrades": "Mises à niveau de compte",

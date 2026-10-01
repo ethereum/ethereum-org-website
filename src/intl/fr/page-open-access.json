@@ -87,7 +87,7 @@
   "page-open-access-how-description-2": "Cela rend la censure prolongée beaucoup plus difficile à coordonner car elle nécessite de contrôler ou d'influencer de nombreuses parties indépendantes du système plutôt qu'un seul administrateur.",
   "page-open-access-how-description-3": "Un validateur ou un constructeur de blocs peut omettre une transaction d'un bloc. Mais un autre participant peut l'inclure dans un bloc ultérieur. Une transaction peut être retardée mais jamais complètement arrêtée.",
   "page-open-access-eth-title": "L'ETH n'est pas comme les autres actifs crypto",
-  "page-open-access-eth-description-1": "De nombreux actifs crypto sont émis par des entreprises qui conservent un certain contrôle sur eux. Par exemple, les émetteurs de pièces stables (stablecoins) tels que l'USDC et l'USDT peuvent bloquer des adresses et geler des jetons lorsque cela est nécessaire.",
+  "page-open-access-eth-description-1": "De nombreux actifs crypto sont émis par des entreprises qui conservent un certain contrôle sur eux. Par exemple, les émetteurs de stablecoins tels que l'USDC et l'USDT peuvent bloquer des adresses et geler des jetons lorsque cela est nécessaire.",
   "page-open-access-eth-description-2": "L'ETH fonctionne différemment. C'est l'actif natif d'Ethereum, et non un jeton émis par une entreprise ou contrôlé par un contrat intelligent. Il n'y a pas de clé d'administrateur qui puisse geler les ETH d'un compte particulier.",
   "page-open-access-eth-description-3": "Si vous contrôlez votre compte et pouvez accéder au réseau Ethereum, personne, y compris une entreprise ou un gouvernement, ne peut révoquer votre capacité à utiliser vos ETH.",
   "page-open-access-started-title": "Faire ses premiers pas sur Ethereum",

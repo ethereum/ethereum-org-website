@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "کوئی نتیجہ نہیں",
   "page-find-wallet-empty-results-desc": "آپ کے معیار سے مماثل کوئی والیٹس نہیں ہیں، کچھ فلٹرز ہٹانے کی کوشش کریں۔",
   "page-find-wallet-private-transactions": "نجی ٹرانزیکشنز",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "وہ والیٹس جو بلٹ ان نجی ٹرانزیکشنز کو سپورٹ کرتے ہیں",
   "page-find-wallet-smart-accounts": "سمارٹ اکاؤنٹس",
   "page-find-wallet-smart-accounts-desc": "اپنے والیٹ اکاؤنٹ کے طور پر ایک سمارٹ کنٹریکٹ استعمال کریں۔ ⁦ETH⁩ کے علاوہ دیگر ٹوکنز کے ساتھ گیس فیس ادا کریں، اگر آپ اپنی کلیدیں کھو دیں تو اپنا والیٹ بحال کریں، اور متعدد کارروائیوں کو ایک ہی ٹرانزیکشن میں یکجا کریں۔",
   "page-find-wallet-account-upgrades": "اکاؤنٹ اپ گریڈز",

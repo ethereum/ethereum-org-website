@@ -253,7 +253,7 @@ Nodi za kawaida zisizo na wathibitishaji wowote zitajiandikisha kwa vijitandao 4
 
 Ikiwa nodi inatumiwa kwa mteja wa mthibitishaji, inabidi ihifadhi safu wima zaidi na hivyo kuchakata data zaidi. Pamoja na mthibitishaji kuongezwa, nodi hujiandikisha kwa angalau vijitandao 8 vya safu wima na hivyo kuchakata data mara mbili zaidi ya nodi ya kawaida lakini bado ni chini ya kabla ya Fusaka. Ikiwa salio la mthibitishaji liko juu ya ETH 287, vijitandao zaidi na zaidi vitajiandikishwa.
 
-Kwa mweka dhamana binafsi, hii inamaanisha matumizi yao ya diski na kipimo data cha kupakua kitapungua kwa karibu 50%. Hata hivyo ili kuunda vitalu kwenye mashine ya ndani na kupakia mablobu yote kwenye mtandao, kipimo data zaidi cha kupakia kinahitajika. Waundaji wa ndani watahitaji kipimo data cha kupakia cha juu mara 2-3 kuliko hapo awali wakati wa Fusaka na kwa lengo la BPO2 la mablobu 15/21, kipimo data cha mwisho cha kupakia kinachohitajika kitapaswa kuwa juu mara 5 zaidi, kwa 100Mbps.
+Kwa mweka dhamana binafsi, hii inamaanisha matumizi yao ya diski na kipimo data cha kupakua kitapungua kwa karibu 50%. Hata hivyo ili kuunda vitalu kwenye mashine ya ndani na kupakia mablobu yote kwenye mtandao, kipimo data zaidi cha kupakia kinahitajika. Wajenzi wa ndani watahitaji kipimo data cha kupakia cha juu mara 2-3 kuliko hapo awali wakati wa Fusaka na kwa lengo la BPO2 la mablobu 15/21, kipimo data cha mwisho cha kupakia kinachohitajika kitapaswa kuwa juu mara 5 zaidi, kwa 100Mbps.
 
 #### Wathibitishaji wakubwa {#large-validators}
 

@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "முடிவுகள் இல்லை",
   "page-find-wallet-empty-results-desc": "உங்கள் அளவுகோல்களுடன் பொருந்தும் பணப்பைகள் எதுவும் இல்லை, சில வடிகட்டிகளை நீக்கி முயற்சிக்கவும்.",
   "page-find-wallet-private-transactions": "தனிப்பட்ட பரிவர்த்தனைகள்",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "உள்ளமைக்கப்பட்ட தனிப்பட்ட பரிவர்த்தனைகளை ஆதரிக்கும் பணப்பைகள்",
   "page-find-wallet-smart-accounts": "திறன் கணக்குகள்",
   "page-find-wallet-smart-accounts-desc": "உங்கள் பணப்பைக் கணக்காக ஒரு திறன் ஒப்பந்தத்தைப் பயன்படுத்துங்கள். ETH அல்லாத பிற வில்லைகளைக் கொண்டு எரிவாயு கட்டணங்களைச் செலுத்துங்கள், உங்கள் திறவுகோல்களை இழந்தால் உங்கள் பணப்பையை மீட்டுக்கொள்ளுங்கள், மற்றும் பல செயல்களை ஒரே பரிவர்த்தனையாகத் தொகுங்கள்.",
   "page-find-wallet-account-upgrades": "கணக்கு மேம்படுத்தல்கள்",

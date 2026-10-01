@@ -109,7 +109,7 @@
   "page-find-wallet-empty-results-title": "Tidak ada hasil",
   "page-find-wallet-empty-results-desc": "Tidak ada dompet yang sesuai dengan kriteria Anda, coba hapus beberapa filter.",
   "page-find-wallet-private-transactions": "Transaksi privat",
-  "page-find-wallet-private-transactions-desc": "Wallets that support built-in private transactions",
+  "page-find-wallet-private-transactions-desc": "Dompet yang mendukung transaksi privat bawaan",
   "page-find-wallet-smart-accounts": "Akun pintar",
   "page-find-wallet-smart-accounts-desc": "Gunakan kontrak pintar sebagai akun dompet Anda. Bayar biaya gas dengan token selain ETH, pulihkan dompet Anda jika Anda kehilangan kunci, dan gabungkan beberapa tindakan ke dalam satu transaksi.",
   "page-find-wallet-account-upgrades": "Peningkatan akun",
