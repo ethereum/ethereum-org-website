@@ -2,7 +2,7 @@
 
 /** @type { [string, string, boolean | undefined][] } */
 module.exports = [
-  ["/discord", "https://discord.com/invite/ethereum-org"],
+  ["/discord", "https://discord.gg/MWpjbnsfNE"],
   ["/writing-cohort", "https://ethereumwriterscohort.carrd.co/"],
   ["/pdfs/:path*", "/"],
   ["/brand", "/assets/"],
