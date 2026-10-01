@@ -1,7 +1,6 @@
 import type { BuilderResourcesCatalogResource } from "@/lib/types"
 
-import { mapWithConcurrency } from "@/lib/utils/concurrency"
-
+import { parallelBatch } from "@/data-layer/fetchers/fetchRetry"
 import { uploadToS3 } from "@/data-layer/s3"
 
 import { fetchBuilderResources } from "./fetchBuilderResources"
@@ -18,7 +17,7 @@ const IMAGE_UPLOAD_CONCURRENCY = 10
 async function uploadToolImages(
   resources: BuilderResourcesCatalogResource[]
 ): Promise<BuilderResourcesCatalogResource[]> {
-  return mapWithConcurrency(
+  return parallelBatch(
     resources,
     async (resource) => {
       const uploadedThumbnail = resource.thumbnail_url

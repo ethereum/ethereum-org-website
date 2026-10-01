@@ -21,7 +21,7 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3"
 
-import { mapWithConcurrency } from "@/lib/utils/concurrency"
+import { parallelBatch } from "./fetchers/fetchRetry"
 
 // Lazy init S3 client
 let s3Client: S3Client | null = null
@@ -334,5 +334,5 @@ export async function uploadManyToS3(
   prefix: string,
   concurrency = 5
 ): Promise<(string | null)[]> {
-  return mapWithConcurrency(urls, (url) => uploadToS3(url, prefix), concurrency)
+  return parallelBatch(urls, (url) => uploadToS3(url, prefix), concurrency)
 }
