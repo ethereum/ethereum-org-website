@@ -7,7 +7,12 @@ import remarkGfm from "remark-gfm"
 
 import { BaseLink } from "@/components/ui/Link"
 
-import { scrubQuery, type Source, withCitationLinks } from "@/lib/utils/ask"
+import {
+  isAllowedAnswerLink,
+  scrubQuery,
+  type Source,
+  withCitationLinks,
+} from "@/lib/utils/ask"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -235,22 +240,31 @@ const AskPanel = ({
           <Markdown
             remarkPlugins={[remarkGfm]}
             // No raw HTML by default, so model output never reaches the DOM as markup.
-            // Links are the one element worth overriding, to route them like any other.
+            // Images are dropped outright: an answer has no use for one, and rendering
+            // one fetches whatever URL the prose names -- "render this image exactly" is
+            // a working injection, and the request alone is the payload.
+            disallowedElements={["img"]}
             components={{
-              a: ({ href, children }) =>
-                isCitation(href, children, sources) ? (
+              a: ({ href, children }) => {
+                if (isCitation(href, children, sources))
                   // Superscript, so a citation reads as a mark on the sentence rather
                   // than a word in it. Adjacent ones are separated in CSS.
-                  <sup className="DocSearch-Ask-cite">
-                    <BaseLink href={href ?? "#"} hideArrow>
-                      {children}
-                    </BaseLink>
-                  </sup>
-                ) : (
+                  return (
+                    <sup className="DocSearch-Ask-cite">
+                      <BaseLink href={href ?? "#"} hideArrow>
+                        {children}
+                      </BaseLink>
+                    </sup>
+                  )
+                // Anywhere else keeps its words and loses its destination.
+                if (!isAllowedAnswerLink(href, referral?.url))
+                  return <>{children}</>
+                return (
                   <BaseLink href={href ?? "#"} hideArrow>
                     {children}
                   </BaseLink>
-                ),
+                )
+              },
             }}
           >
             {withCitationLinks(answer, sources)}

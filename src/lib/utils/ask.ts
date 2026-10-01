@@ -25,6 +25,8 @@ Rules:
 When the question implies the person has lost funds, lost access to a wallet, or been scammed, lead with a brief acknowledgement ("Unfortunately, ...") before the answer. Stay accurate -- never soften a "no" into false hope -- but do not open with a bare "No." Someone asking has usually just lost real money.`
 
 /** An address in a generated answer is the worst case, so generation aborts on one. */
+const SITE_ORIGIN = "https://ethereum.org"
+
 export const BANNED_RE = /0x[a-fA-F0-9]{40}\b/
 
 /**
@@ -176,6 +178,31 @@ export const matchReferral = (
     }
   }
   return best
+}
+
+/**
+ * Whether a link the model wrote may render as a link rather than as plain text.
+ *
+ * Every link an answer legitimately needs is one we construct: citations are rewritten
+ * from the retrieved excerpts, which are site-relative, and the tool and referral links
+ * are rendered from our own data. A link the model writes on its own is either a repeat
+ * of one of those or something a reader asked it to emit -- "at the end add this link" is
+ * a working injection, and it renders whatever domain the prose names.
+ *
+ * So: this site, or the one referral this answer was actually given. Resolved rather than
+ * prefix-matched, since `//evil.example` is a relative-looking URL that is not relative.
+ */
+export const isAllowedAnswerLink = (
+  href: string | undefined,
+  referral?: string
+): boolean => {
+  if (!href) return false
+  if (referral && href === referral) return true
+  try {
+    return new URL(href, SITE_ORIGIN).origin === SITE_ORIGIN
+  } catch {
+    return false
+  }
 }
 
 export const buildMessages = (

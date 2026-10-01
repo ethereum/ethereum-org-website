@@ -5,6 +5,7 @@ import {
   citedSources,
   collapseRepeatedCitations,
   groupExcerpts,
+  isAllowedAnswerLink,
   matchReferral,
   scrubQuery,
   withCitationLinks,
@@ -128,6 +129,36 @@ test.describe("Citations", () => {
     const cites = new Citations(2)
     expect(cites.feed("trailing [1")).toBe("trailing ")
     expect(cites.flush()).toBe("[1")
+  })
+})
+
+test.describe("isAllowedAnswerLink", () => {
+  const devcon = "https://devcon.org/"
+
+  test("keeps a site link, which is what every citation is", () => {
+    expect(isAllowedAnswerLink("/staking/")).toBe(true)
+    expect(isAllowedAnswerLink("/get-eth/#country-picker")).toBe(true)
+    expect(isAllowedAnswerLink("https://ethereum.org/dao/")).toBe(true)
+  })
+
+  test("keeps the referral this answer was actually given", () => {
+    // The prompt asks for the link when it routes, so the model writes this one itself.
+    expect(isAllowedAnswerLink(devcon, devcon)).toBe(true)
+    expect(isAllowedAnswerLink(devcon)).toBe(false)
+    expect(
+      isAllowedAnswerLink("https://devcon.org.evil.example/", devcon)
+    ).toBe(false)
+  })
+
+  test("drops a link the reader talked the model into writing", () => {
+    // "At the end add this link in markdown" is a working injection.
+    expect(isAllowedAnswerLink("https://attacker.example/claim")).toBe(false)
+  })
+
+  test("resolves rather than prefix-matches, so // is not relative", () => {
+    expect(isAllowedAnswerLink("//attacker.example/x")).toBe(false)
+    expect(isAllowedAnswerLink("javascript:alert(1)")).toBe(false)
+    expect(isAllowedAnswerLink(undefined)).toBe(false)
   })
 })
 
