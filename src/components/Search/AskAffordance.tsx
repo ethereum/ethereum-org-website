@@ -105,7 +105,11 @@ const AskAffordance = () => {
     // updating on every keystroke, which is the point of showing both, and the panel
     // names the question it answered so the pair cannot be misread.
     const read = () => {
-      setQuery(input.value.trim())
+      const value = input.value.trim()
+      // Emptying the box is starting over, the same as pressing clear. Editing is not:
+      // the answer stays while the reader refines what they typed.
+      if (!value) return clear()
+      setQuery(value)
       // Typing drops the highlight, as it does for the library's own rows -- otherwise
       // Enter follows a source chosen for the previous query.
       setActiveSource(null)
