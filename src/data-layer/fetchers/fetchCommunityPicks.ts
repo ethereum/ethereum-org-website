@@ -1,6 +1,7 @@
 import type { CommunityPick } from "@/lib/types"
 
 import { uploadToS3 } from "../s3"
+import { get } from "../storage"
 
 import { fetchRetry } from "./fetchRetry"
 
@@ -8,24 +9,28 @@ export const FETCH_COMMUNITY_PICKS_TASK_ID = "fetch-community-picks"
 
 const AVATAR_PREFIX = "community/picks"
 
-/**
- * Re-host each pick's Twitter avatar (served by unavatar.io) on our S3 bucket
- * so /apps never hot-links a third-party avatar host. Leaves avatarImage empty
- * on failure, letting the card fall back to the member's initial.
- */
 async function withMirroredAvatars(
   picks: CommunityPick[]
 ): Promise<CommunityPick[]> {
+  const previous =
+    (await get<CommunityPick[]>(FETCH_COMMUNITY_PICKS_TASK_ID)) ?? []
+  const previousAvatars = new Map(
+    previous.map((pick) => [pick.twitterHandle, pick.avatarImage])
+  )
+
   return Promise.all(
     picks.map(async (pick) => {
       const handle = pick.twitterHandle?.replace("@", "").trim()
       if (!handle) return { ...pick, avatarImage: "" }
 
-      const avatarImage = await uploadToS3(
+      const uploaded = await uploadToS3(
         `https://unavatar.io/twitter/${handle}`,
         AVATAR_PREFIX
       )
-      return { ...pick, avatarImage: avatarImage ?? "" }
+      // Keep the existing mirror when the source has since died upstream
+      const avatarImage =
+        uploaded ?? previousAvatars.get(pick.twitterHandle) ?? ""
+      return { ...pick, avatarImage }
     })
   )
 }
