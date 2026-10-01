@@ -111,3 +111,17 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - The run fixed real prior defects: the invented "smallest fraction of ETH" claim, the MolochDAO possessive, and `Спадкування`.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `Майкрософт Сек'юріті`, `крипто-твіттері`.
+- contributing:92 `злито з` (drained from) regression; open-access `призупинити дію користувача`; `будівник` vs `будівельник`; Hegotá Cyrillic `Гегота` outlier.

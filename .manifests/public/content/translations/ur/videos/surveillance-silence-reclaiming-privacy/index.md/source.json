@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/surveillance-silence-reclaiming-privacy/index.md",
-  "generatedAt": "2026-04-29T06:27:09.823Z",
-  "rootHash": "51c0b0dacba0",
+  "generatedAt": "2026-09-30T19:18:04.894Z",
+  "rootHash": "8bf8e1b679bd",
   "tree": {
-    "contentHash": "fb13e7da15c3",
-    "anchorHash": "03c5d516c85b",
+    "contentHash": "49abef1f5171",
+    "anchorHash": "af1b7188f79c",
     "children": {
       "frontmatter:title": {
         "contentHash": "7ac7f94c08cf",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "f82179af788e",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "38344bba4684"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
             "anchorHash": "a4cc6bc01a92"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -335,5 +327,5 @@
       "the-choices-we-have-to-make-about-the-future-we-want-to-see-4656"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

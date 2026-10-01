@@ -130,3 +130,18 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `لامركزی` Arabic kaf: matches the glossary entry verbatim; per #19034 this is upstream plus a tree-wide sweep
 - frontmatter LRI wrap: a no-op at render time since the isolated run is all strong-RTL, so it belongs in the sanitizer, not a hand edit
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- English months/"million" inside isolates: open-access argentina/myanmar/ukraine references + `emergency-description-2`; fusaka:138 February/September -> `فروری`/`ستمبر`, `⁦$60⁩ ملین`.
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `ڈینکون` x7 vs glossary `ڈینکن`.
+- zk-rollups `آپٹیمسٹک` vs `آپٹمسٹک` drift; `18 days` untranslated; `انخلا` for bank withdrawals.

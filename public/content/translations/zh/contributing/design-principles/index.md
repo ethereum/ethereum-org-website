@@ -1,8 +1,8 @@
 ---
-title: 我们的设计原则
-metaTitle: 设计原则
+title: "我们的设计原则"
+metaTitle: "设计原则"
 lang: zh
-description: ethereum.org 设计与内容决策背后的原则
+description: "ethereum.org 设计与内容决策背后的原则"
 ---
 
 <Emoji text=":wave:" size={1} /> 你好，欢迎了解 ethereum.org 的设计原则。这是不断发展和改进 ethereum.org 过程的一部分。

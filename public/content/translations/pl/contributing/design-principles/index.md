@@ -2,7 +2,7 @@
 title: Nasze zasady projektowania
 metaTitle: Zasady projektowania
 lang: pl
-description: Zasady stojące za decyzjami dotyczącymi projektowania i treści na ethereum.org
+description: "Zasady stojące za decyzjami dotyczącymi projektowania i treści na ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Witaj w zasadach projektowania ethereum.org. Jest to część trwającego procesu rozwoju i ulepszania ethereum.org.

@@ -1,7 +1,7 @@
 ---
-title: Design-Beiträge zu ethereum.org
-metaTitle: Design-Beiträge
-description: Design-Beiträge zu ethereum.org
+title: "Design-Beiträge zu ethereum.org"
+metaTitle: "Design-Beiträge"
+description: "Design-Beiträge zu ethereum.org"
 lang: de
 ---
 

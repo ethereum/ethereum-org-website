@@ -43,9 +43,9 @@ Baca pembahasan mendalam tentang MaxEB [di sini](/roadmap/pectra/maxeb/)
 
 ### Peningkatan laju pemrosesan blob {#7691}
 
-Blob menyediakan ketersediaan data untuk L2. Blob diperkenalkan pada [pembaruan jaringan sebelumnya](/roadmap/dencun/). 
+Blob menyediakan [ketersediaan data](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) untuk L2. Blob diperkenalkan pada [pembaruan jaringan sebelumnya](/roadmap/dencun/). 
 
-Saat ini, jaringan menargetkan rata-rata 3 blob per blok dengan maksimum 6 blob. Dengan [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), jumlah blob rata-rata akan ditingkatkan menjadi 6, dengan maksimum 9 per blok, yang menghasilkan peningkatan kapasitas untuk rollup Ethereum. EIP ini membantu menjembatani kesenjangan hingga [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) memungkinkan jumlah blob yang lebih tinggi.
+Sebelum Pectra, jaringan menargetkan rata-rata 3 blob per blok dengan maksimum 6. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) menaikkan target menjadi 6 dan maksimum menjadi 9 per blok, meningkatkan kapasitas untuk rollup Ethereum. Ini menjembatani kesenjangan hingga [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), yang dirilis di [Fusaka](/roadmap/fusaka/) dan memungkinkan jumlah blob yang lebih tinggi lagi.
 
 ### Peningkatan biaya calldata {#7623}
 

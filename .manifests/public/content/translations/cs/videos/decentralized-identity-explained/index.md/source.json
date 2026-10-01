@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/decentralized-identity-explained/index.md",
-  "generatedAt": "2026-04-28T23:07:21.981Z",
-  "rootHash": "eb26dd220f11",
+  "generatedAt": "2026-09-30T18:35:33.804Z",
+  "rootHash": "22ab6c317385",
   "tree": {
     "contentHash": "191ccee1f431",
-    "anchorHash": "7bad2a1c2829",
+    "anchorHash": "9f6fba94706a",
     "children": {
       "frontmatter:title": {
         "contentHash": "f202c5ae2081",
@@ -37,11 +37,11 @@
       },
       "frontmatter:topic": {
         "contentHash": "4b9f7d802648",
-        "anchorHash": "b1b10c497ee8",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "689f6a627384"
+            "anchorHash": "2290d7d70dea"
           }
         }
       },
@@ -167,5 +167,5 @@
       "privacy-and-control-227"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -15,11 +15,13 @@ Sangat umum bagi orang-orang untuk bingung dengan nama-nama di dalam lanskap Eth
 
 ### Ethereum {#ethereum}
 
-Ethereum adalah jaringan publik, rantai blok, dan protokol sumber terbuka -- dioperasikan, diatur, dikelola, dan dimiliki oleh komunitas global yang terdiri dari puluhan ribu pengembang, operator node, pemegang ETH, dan pengguna.
+Ethereum adalah jaringan publik, rantai blok, dan protokol sumber terbuka -- yang dioperasikan, diatur, dikelola, dan dimiliki oleh komunitas global yang terdiri dari puluhan ribu pengembang, operator node, pemegang ETH, dan pengguna.
 
 [Lebih lanjut tentang Ethereum](/what-is-ethereum/)
 
 [Lebih lanjut tentang tata kelola Ethereum](/governance/)
+
+[Lebih lanjut tentang prinsip inti Ethereum](/values/)
 
 ### Ether (ETH) {#ether-or-eth}
 
@@ -82,23 +84,20 @@ Kami ingin pengguna kami merasa tertarik dan pertanyaan mereka terjawab. Jadi po
 
 ### 2. ethereum.org selalu berkembang 🛠 {#core-principles-2}
 
-Ethereum dan komunitasnya selalu berkembang, begitu pula ethereum.org. Itulah sebabnya situs ini memiliki sistem desain yang sederhana & struktur modular. Kami membuat perubahan berulang saat kami mempelajari lebih lanjut tentang bagaimana orang menggunakan situs ini dan apa yang diinginkan komunitas darinya.
+Ethereum dan komunitasnya selalu berkembang, begitu pula dengan ethereum.org. Itulah sebabnya situs ini memiliki sistem desain yang sederhana & struktur modular. Kami membuat perubahan berulang seiring dengan semakin banyaknya hal yang kami pelajari tentang bagaimana orang menggunakan situs ini dan apa yang diinginkan komunitas darinya.
 Kami adalah sumber terbuka, dengan komunitas kontributor, sehingga Anda dapat mengusulkan perubahan atau membantu kami juga.
 [Pelajari tentang berkontribusi](/contributing/)
+[Mengapa sumber terbuka itu penting](/open-source/)
 
 ### 3. ethereum.org bukanlah situs web produk pada umumnya 🦄 {#core-principles-3}
 
 Ethereum adalah hal yang besar: ini mencakup komunitas, teknologi, serangkaian ide dan ideologi, dan banyak lagi.
-Ini berarti situs web perlu menangani banyak perjalanan pengguna yang berbeda, dari "seorang pengembang yang menginginkan alat tertentu" hingga "seorang pendatang baru yang baru saja membeli beberapa ETH dan tidak tahu apa itu dompet".
-"Apa situs web terbaik untuk platform rantai blok?" tetap menjadi pertanyaan terbuka - kami adalah pelopor. Membangun ini membutuhkan eksperimen.
+Ini berarti situs web perlu menangani banyak perjalanan pengguna yang berbeda, dari "seorang pengembang yang menginginkan alat tertentu" hingga "seorang pendatang baru yang baru saja membeli sejumlah ETH dan tidak tahu apa itu dompet".
+"Apa situs web terbaik untuk platform rantai blok?" masih menjadi pertanyaan terbuka - kami adalah pelopor. Membangun ini membutuhkan eksperimen.
 
-## Peta jalan produk {#get-involved}
+## Terlibatlah {#get-involved}
 
-Untuk membuat pekerjaan kami lebih mudah diakses dan untuk mendorong lebih banyak kolaborasi komunitas, tim inti ethereum.org menerbitkan gambaran umum tentang tujuan peta jalan [siklus shape up](https://www.productplan.com/glossary/shape-up-method/) kami.
-
-[Lihat peta jalan produk Siklus 1 2025 kami](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**Bagaimana kedengarannya?** Kami selalu menghargai umpan balik pada peta jalan kami - jika ada sesuatu yang menurut Anda harus kami kerjakan, beri tahu kami! Kami menyambut ide dan PR dari siapa saja di komunitas.
+**Bagaimana kedengarannya?** Kami selalu menghargai umpan balik atas pekerjaan kami - jika ada sesuatu yang menurut Anda harus kami kerjakan, beri tahu kami! Kami menyambut ide dan PR dari siapa saja di komunitas.
 
 **Ingin terlibat?** [Pelajari lebih lanjut tentang berkontribusi](/contributing/), [hubungi kami di Twitter](https://x.com/ethdotorg), atau bergabunglah dengan diskusi komunitas di [server Discord kami](/discord/).
 
@@ -108,9 +107,9 @@ Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) 
 
 ## Sistem desain {#design-system}
 
-Kami membangun dan merilis [sistem desain](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) untuk mengirimkan fitur lebih cepat dan membiarkan anggota komunitas berpartisipasi dalam desain terbuka ethereum.org.
+Kami membangun dan merilis [sistem desain](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) untuk meluncurkan fitur dengan lebih cepat dan membiarkan anggota komunitas berpartisipasi dalam desain terbuka ethereum.org.
 
-Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [isu GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) dan bergabunglah dalam percakapan di [saluran Discord #design kami](/discord/).
+Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) dan bergabunglah dengan percakapan di [saluran Discord #design kami](/discord/).
 
 ## Panduan gaya {#style-guide}
 
@@ -128,6 +127,6 @@ Situs web ethereum.org adalah sumber terbuka dan dibangun di bawah [Lisensi MIT]
 
 Meskipun situs web ini adalah sumber terbuka dan siapa saja dapat mengerjakannya, kami memiliki tim yang berdedikasi untuk ethereum.org dan proyek web Yayasan Ethereum lainnya.
 
-Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat peran untuk Anda di sini, kunjungi [server Discord kami](/discord/) dan beri tahu kami bagaimana Anda ingin bekerja sama dengan kami!
+Saat kami merekrut, kami akan mencantumkan peran yang terbuka di sini. Jika Anda tidak melihat peran untuk Anda, kunjungi [server Discord kami](/discord/) dan beri tahu kami bagaimana Anda ingin bekerja sama dengan kami!
 
-Mencari di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/get-involved/#ethereum-jobs/).
+Mencari di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/get-involved/#ethereum-jobs).

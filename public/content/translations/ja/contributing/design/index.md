@@ -1,7 +1,7 @@
 ---
-title: ethereum.orgへのデザインの貢献
-metaTitle: デザインの貢献
-description: ethereum.orgへのデザインの貢献
+title: "ethereum.orgへのデザインの貢献"
+metaTitle: "デザインの貢献"
+description: "ethereum.orgへのデザインの貢献"
 lang: ja
 ---
 

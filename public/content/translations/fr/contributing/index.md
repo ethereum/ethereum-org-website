@@ -7,7 +7,7 @@ lang: fr
 
 Ethereum.org est un projet open source géré par plus de **12 000** contributeurs qui aident à traduire, rédiger, concevoir et maintenir le site Web.
 
-Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en contribuant de manière significative et en acquérant une expérience pratique pertinente !
+Nous sommes une communauté accueillante qui vous aidera à vous développer et à vous former dans l'écosystème [Ethereum](/) tout en apportant une contribution significative et en acquérant une expérience pratique pertinente !
 
 ## Façons de contribuer {#ways-to-contribute}
 
@@ -15,7 +15,7 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 - [Signaler une erreur de traduction](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Le [Programme de traduction](/contributing/translation-program/) touche à sa fin et n'intègre plus de nouveaux traducteurs
 
 **Développement**
-- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Tâches que nous avons identifiées et qui doivent être accomplies
+- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Les tâches que nous avons identifiées et qui doivent être accomplies
 
 **Design**
 - [Aider à concevoir le site Web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à l'amélioration du site Web
@@ -47,7 +47,7 @@ Des questions ? 🤔 Rejoignez notre [serveur Discord](/discord/)
 
 ## Bonnes premières tâches pour commencer à contribuer {#good-first-tasks-to-start-contributing}
 
-Voici quelques tâches actuelles que vous pourriez nous aider à résoudre et dont vous pourriez prendre la responsabilité. Pour la plupart, vous aurez besoin d'un compte GitHub, car la majorité des modifications apportées au site Web sont effectuées via GitHub.
+Voici quelques tâches actuelles que vous pourriez nous aider à résoudre et prendre en charge. Pour la plupart, vous aurez besoin d'un compte GitHub, car la majorité des modifications apportées au site Web sont effectuées via GitHub.
 
 <IssuesList my={8} />
 
@@ -59,7 +59,7 @@ Pour contribuer (ajouter ou modifier du contenu ou des visuels sur le site Web, 
 
 Toutes les mises à jour sont effectuées via le processus de PR (Pull Request) de GitHub. Cela signifie que vous créez une copie locale du site Web, apportez vos modifications et demandez à fusionner vos modifications. Si vous n'avez jamais fait cela auparavant, suivez les instructions au bas de notre [dépôt GitHub](https://github.com/ethereum/ethereum-org-website).
 
-Vous n'avez besoin d'aucune autorisation pour travailler sur quoi que ce soit, mais il est toujours préférable de nous faire savoir ce que vous prévoyez de faire. Vous pouvez le faire en :
+Vous n'avez pas besoin de permission pour travailler sur quoi que ce soit, mais il est toujours préférable de nous faire savoir ce que vous prévoyez de faire. Vous pouvez le faire en :
 
 - Commentant un ticket ou une PR sur [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Envoyant un message sur notre [serveur Discord](/discord/)
@@ -81,7 +81,7 @@ Les décisions concernant les PR individuelles, l'évolution du design et les mi
 
 ### Une note sur le plagiat {#plagiarism}
 
-N'utilisez que votre travail original ou du contenu que vous avez l'autorisation d'utiliser lorsque vous contribuez à ethereum.org avec du contenu ou un artefact. De nombreux projets au sein de l'écosystème Ethereum utilisent des licences open source qui permettent le libre partage de l'information. Cependant, si vous ne trouvez pas cette information, n'essayez pas de l'ajouter à ethereum.org. Toute pull request considérée comme du plagiat sera rejetée.
+N'utilisez que votre travail original ou du contenu que vous avez l'autorisation d'utiliser lorsque vous contribuez à ethereum.org, qu'il s'agisse de contenu ou d'artefacts. De nombreux projets au sein de l'écosystème Ethereum utilisent des licences open source qui permettent le libre partage de l'information. Cependant, si vous ne trouvez pas cette information, n'essayez pas de l'ajouter à ethereum.org. Toute pull request considérée comme du plagiat sera rejetée.
 
 ## Nouveau dans l'open source ? {#new-to-open-source}
 
@@ -89,7 +89,7 @@ Nous avons des tickets avec une faible barrière à l'entrée sur notre dépôt 
 
 ## Réclamer votre Onchain Achievement Token (OAT) {#oat}
 
-Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilité de réclamer un badge spécial sur [Galxe](https://app.galxe.com/quest/ethereumorg). Un Onchain Achievement Token (OAT) est la preuve que vous avez contribué à rendre l'écosystème un peu plus génial.
+Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilité de réclamer un badge spécial sur [Galxe](https://app.galxe.com/quest/ethereumorg). Un Onchain Achievement Token (OAT) est une preuve que vous avez contribué à rendre l'écosystème un peu plus génial.
 
 [En savoir plus sur les OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
@@ -100,18 +100,18 @@ Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilit
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre OAT.
 4. Réclamez votre OAT !
 
-Vous ne devez utiliser que des portefeuilles à auto-garde pour réclamer des OAT. N'utilisez pas de comptes de plateforme d'échange ou d'autres comptes dont vous ne détenez pas les clés privées, car ceux-ci ne vous permettront pas d'accéder à vos OAT et de les gérer.
+Vous ne devez utiliser que des portefeuilles en auto-garde pour réclamer des OAT. N'utilisez pas de comptes de plateforme d'échange ou d'autres comptes dont vous ne détenez pas les clés privées, car ceux-ci ne vous permettront pas d'accéder à vos OAT et de les gérer.
 
 ## Réclamer votre GitPOAP {#claim-gitpoap}
 
-GitPOAP reconnaîtra également automatiquement votre contribution fusionnée et vous permettra de frapper un POAP de contributeur unique et distinct sur leur plateforme elle-même !
+GitPOAP reconnaîtra également automatiquement votre contribution fusionnée et vous permettra de frapper un POAP de contributeur unique et distinct sur leur propre plateforme !
 
 
 ### Comment réclamer {#how-to-claim-2}
 
 1. Visitez [GitPOAP](https://www.gitpoap.io).
 2. Connectez-vous avec votre portefeuille ou même avec votre adresse e-mail via l'option de connexion.
-3. Recherchez votre nom d'utilisateur GitHub, votre adresse ETH, vos noms ENS ou tout GitPOAP pour vérifier si vous êtes éligible.
+3. Recherchez votre nom d'utilisateur GitHub, votre adresse ETH, vos noms du Service de Noms Ethereum (ENS) ou tout GitPOAP pour vérifier si vous êtes éligible.
 4. Si votre compte GitHub est éligible, vous pourrez alors frapper un GitPOAP !
 
 ## Contributeurs {#contributors}

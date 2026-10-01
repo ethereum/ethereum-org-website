@@ -15,7 +15,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 ## The Graphを使用しない場合... {#without-the-graph}
 
-説明のために簡単な例を見てみましょう。誰もがゲームを好きなので、ユーザーが賭けをする簡単なゲームを想像してみてください。
+説明のために、簡単な例を見てみましょう。誰もがゲームを好きなので、ユーザーが賭けをする簡単なゲームを想像してみてください。
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,30 +41,30 @@ contract Game {
 }
 ```
 
-さて、このdappで、合計の賭け金、負け/勝ちの合計ゲーム数を表示し、誰かが再びプレイするたびにそれを更新したいとします。そのアプローチは次のようになります。
+ここで、分散型アプリケーション (dapp) で、賭けの総額、負けた/勝ったゲームの総数を表示し、誰かが再びプレイするたびにそれを更新したいとします。そのアプローチは次のようになります。
 
 1. `totalGamesPlayerWon` を取得する。
 2. `totalGamesPlayerLost` を取得する。
 3. `BetPlaced` イベントをサブスクライブする。
 
-右に示されているように、[Web3でイベント](https://docs.web3js.org/api/web3/class/Contract#events)をリッスンすることはできますが、かなり多くのケースを処理する必要があります。
+右側に示すように、[Web3のイベント](https://docs.web3js.org/api/web3/class/Contract#events)をリッスンすることはできますが、かなり多くのケースを処理する必要があります。
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // イベント発火
+    // イベントが発火しました
 })
 .on('changed', function(event) {
-    // イベントが再度削除された
+    // イベントが再び削除されました
 })
 .on('error', function(error, receipt) {
-    // トランザクションが拒否された
+    // トランザクションが拒否されました
 });
 ```
 
-この簡単な例であれば、まだ何とかなります。しかし、現在のプレイヤーの負け/勝ちの賭け金のみを表示したいとします。残念ながら、それらの値を保存する新しいコントラクトをデプロイして取得するしかありません。さらに複雑なスマート・コントラクトとdappを想像してみてください。事態はすぐに収拾がつかなくなる可能性があります。
+さて、この簡単な例ではまだ何とかなります。しかし、現在のプレイヤーの負けた/勝った賭けの金額だけを表示したいとしましょう。残念ながらお手上げです。それらの値を保存する新しいコントラクトをデプロイして取得するしかありません。さらに、はるかに複雑なスマート・コントラクトとdappを想像してみてください。事態はすぐに収拾がつかなくなるでしょう。
 
 ![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
@@ -72,9 +72,9 @@ GameContract.events.BetPlaced({
 
 - すでにデプロイされたコントラクトでは機能しない。
 - それらの値を保存するための追加のガスコストがかかる。
-- イーサリアムのノードからデータを取得するために別の呼び出しが必要になる。
+- イーサリアムのノードからデータを取得するために、別の呼び出しが必要になる。
 
-![Thats not good enough](./not-good-enough.jpg)
+![That's not good enough](./not-good-enough.jpg)
 
 では、より良い解決策を見てみましょう。
 

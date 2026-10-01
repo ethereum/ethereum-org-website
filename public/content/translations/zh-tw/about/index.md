@@ -1,7 +1,7 @@
 ---
-title: 關於 ethereum.org
-metaTitle: 關於我們
-description: 關於 ethereum.org 的團隊、社群與使命
+title: "關於 ethereum.org"
+metaTitle: "關於我們"
+description: "關於 ethereum.org 的團隊、社群與使命"
 lang: zh-tw
 ---
 
@@ -15,11 +15,13 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 ### 以太坊 {#ethereum}
 
-以太坊是一個公共網路、一條區塊鏈，也是一個開源協定——由數以萬計的開發者、節點營運者、ETH 持有者和使用者組成的全球社群所營運、治理、管理和擁有。
+以太坊是一個公共網路、一個區塊鏈，也是一個開源協定——由全球數以萬計的開發者、節點營運者、ETH 持有者和使用者組成的社群共同營運、治理、管理和擁有。
 
 [更多關於以太坊的資訊](/what-is-ethereum/)
 
 [更多關於以太坊治理的資訊](/governance/)
+
+[更多關於以太坊核心原則的資訊](/values/)
 
 ### 以太幣 (ETH) {#ether-or-eth}
 
@@ -80,27 +82,24 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 我們希望激發使用者的興趣並解答他們的問題。因此，我們的入口網站需要結合資訊、「神奇時刻」以及連結到現有出色社群資源的連結。我們內容的目的是成為一個「入門引導入口網站」，而不是取代已經存在的豐富資源。我們非常樂意支援並整合社群建立的資源，賦予它們更高的能見度，並讓它們更容易被發現。
 [以太坊的社群](/community/) 是這一切的核心：我們不僅需要服務社群，還要與他們合作並納入他們的回饋。這個網站不僅是為了我們現有的社群，也是為了我們希望發展成的社群。我們必須記住，我們的社群是全球性的，包含來自許多語言、地區和文化的人們。
 
-### 2. ethereum.org 不斷在進化 🛠 {#core-principles-2}
+### 2. ethereum.org 不斷發展 🛠 {#core-principles-2}
 
-以太坊和社群總是在不斷進化，因此 ethereum.org 也會如此。這就是為什麼該網站擁有簡單的設計系統和模組化結構。隨著我們對人們如何使用網站以及社群對網站的期望有更多了解，我們會進行反覆運算的更改。
-我們是開源的，擁有一個貢獻者社群，因此你也可以提出更改建議或協助我們。
+以太坊和社群都在不斷發展，因此 ethereum.org 也會與時俱進。這就是為什麼這個網站採用簡單的設計系統和模組化結構。隨著我們對人們如何使用網站以及社群對網站的期望有更多了解，我們會進行反覆運算的修改。
+我們是開源的，擁有一個貢獻者社群，因此你也可以提出修改建議或協助我們。
 [了解如何貢獻](/contributing/)
+[為什麼開源很重要](/open-source/)
 
 ### 3. ethereum.org 不是典型的產品網站 🦄 {#core-principles-3}
 
 以太坊是一個龐大的事物：它包含了一個社群、一項技術、一套理念和意識形態等等。
 這意味著網站需要處理許多不同的使用者旅程，從「想要特定工具的開發者」到「剛買了一些 ETH 卻不知道錢包是什麼的新手」。
-「區塊鏈平台最好的網站是什麼樣子？」仍然是一個懸而未決的問題——我們是先驅者。建立這個網站需要不斷地實驗。
+「什麼樣的網站最適合區塊鏈平台？」仍然是一個懸而未決的問題——我們是先驅者。建立這樣的網站需要不斷嘗試。
 
-## 產品路線圖 {#get-involved}
+## 參與其中 {#get-involved}
 
-為了讓我們的工作更容易被了解，並促進更多的社群協作，ethereum.org 核心團隊發布了我們 [Shape Up 週期](https://www.productplan.com/glossary/shape-up-method/) 路線圖目標的概覽。
+**覺得如何呢？** 我們始終感謝對我們工作的回饋——如果你認為我們有什麼需要改進的地方，請告訴我們！我們歡迎社群中任何人提出想法和 PR（拉取請求）。
 
-[查看我們 2025 年第 1 週期的產品路線圖](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**覺得如何呢？** 我們始終感謝對我們路線圖的回饋——如果你認為有什麼是我們應該著手進行的，請告訴我們！我們歡迎社群中任何人的想法和 PR。
-
-**想要參與其中嗎？** [了解更多關於貢獻的資訊](/contributing/)、[在推特上聯絡我們](https://x.com/ethdotorg)，或加入 [我們的 Discord 伺服器](/discord/) 中的社群討論。
+**想要參與其中嗎？** [了解更多關於貢獻的資訊](/contributing/)、[在推特上聯絡我們](https://x.com/ethdotorg)，或加入[我們的 Discord 伺服器](/discord/)參與社群討論。
 
 ## 設計原則 {#design-principles}
 
@@ -108,9 +107,9 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 ## 設計系統 {#design-system}
 
-我們建立並發布了一個 [設計系統](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快速地推出功能，並讓社群成員參與 ethereum.org 的開放設計。
+我們建立並發布了一個[設計系統](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快速地推出功能，並讓社群成員參與 ethereum.org 的開放設計。
 
-想要參與其中嗎？ [在 Figma 上關注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)、查看 [GitHub 議題](https://github.com/ethereum/ethereum-org-website/issues/6284)，並加入我們 [#design Discord 頻道](/discord/) 的對話。
+想要參與其中嗎？[在 Figma 上關注我們](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)，並加入我們 [#design Discord 頻道](/discord/)的討論。
 
 ## 風格指南 {#style-guide}
 
@@ -124,10 +123,10 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 除非另有說明，ethereum.org 網站是開源的，並在 [MIT 授權條款](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) 下建立。更多關於 ethereum.org 的 [使用條款](/terms-of-use/)。
 
-## 職缺招募 {#open-jobs}
+## 職缺 {#open-jobs}
 
 雖然這個網站是開源的，任何人都可以參與開發，但我們確實有一個專門負責 ethereum.org 和其他以太坊基金會網頁專案的團隊。
 
-我們會在這裡發布任何職缺。如果你在這裡沒有看到適合你的職位，請前往 [我們的 Discord 伺服器](/discord/)，告訴我們你想如何與我們合作！
+當我們招募人員時，我們會在這裡列出職缺。如果你沒有看到適合你的職位，請前往[我們的 Discord 伺服器](/discord/)，告訴我們你想如何與我們合作！
 
-想尋找 ethereum.org 團隊以外的機會嗎？[查看其他與以太坊相關的職缺](/community/get-involved/#ethereum-jobs/)。
+想尋找 ethereum.org 團隊以外的機會嗎？[查看其他與以太坊相關的職缺](/community/get-involved/#ethereum-jobs)。

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/atoms-institutions-blockchains-josh-stark/index.md",
-  "generatedAt": "2026-04-28T22:43:53.271Z",
-  "rootHash": "962a4acfd80f",
+  "generatedAt": "2026-09-30T18:34:15.045Z",
+  "rootHash": "4cd8325c8f1f",
   "tree": {
-    "contentHash": "fa5d96083ef3",
-    "anchorHash": "cc32ed829417",
+    "contentHash": "48c205cb18d7",
+    "anchorHash": "e2afb4e8c0d0",
     "children": {
       "frontmatter:title": {
         "contentHash": "eaf413198a03",
@@ -36,27 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "31a9b18839f5",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "3ddeb596fa81"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "ef7797e13d3a"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "b60d7bdd334c"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -300,5 +287,5 @@
       "raising-our-ambitions-2700"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

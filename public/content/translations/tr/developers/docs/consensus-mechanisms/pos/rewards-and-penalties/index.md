@@ -18,7 +18,7 @@ Daha fazla detay için okumaya devam edin...
 
 ### Ödüller {#rewards-2}
 
-Doğrulayıcılar, diğer doğrulayıcıların çoğunluğuyla tutarlı oylar verdiklerinde, blok teklif ettiklerinde ve senkronizasyon komitelerine katıldıklarında ödül alırlar. Her dönemdeki ödüllerin değeri bir `base_reward` üzerinden hesaplanır. Bu, diğer ödüllerin hesaplandığı temel birimdir. `base_reward`, bir doğrulayıcının her dönemde optimal koşullar altında aldığı ortalama ödülü temsil eder. Bu, doğrulayıcının etkin bakiyesi ve aktif doğrulayıcıların toplam sayısından aşağıdaki gibi hesaplanır:
+Doğrulayıcılar, diğer doğrulayıcıların çoğunluğuyla tutarlı oylar verdiklerinde, blok teklif ettiklerinde ve senkronizasyon komitelerine katıldıklarında ödül alırlar. Her dönemdeki ödüllerin değeri bir `base_reward` üzerinden hesaplanır. Bu, diğer ödüllerin hesaplandığı temel birimdir. `base_reward`, bir doğrulayıcının her dönemde optimal koşullar altında aldığı ortalama ödülü temsil eder. Bu, doğrulayıcının etkin bakiyesinden ve toplam aktif doğrulayıcı sayısından aşağıdaki gibi hesaplanır:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,14 +26,14 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 burada `base_reward_factor` 64, `base_rewards_per_epoch` 4 ve `sum(active balance)` tüm aktif doğrulayıcılar genelinde stake edilen toplam Ether'dir.
 
-Bu, temel ödülün doğrulayıcının etkin bakiyesiyle doğru orantılı ve ağdaki doğrulayıcı sayısıyla ters orantılı olduğu anlamına gelir. Ne kadar çok doğrulayıcı olursa, genel ihraç o kadar büyük olur (`sqrt(N)` olduğu için) ancak doğrulayıcı başına düşen `base_reward` o kadar küçük olur (`1/sqrt(N)` olduğu için). Bu faktörler, bir staking düğümü için APR'yi etkiler. Bunun mantığını [Vitalik'in notlarında](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards) okuyun.
+Bu, temel ödülün doğrulayıcının etkin bakiyesiyle doğru orantılı ve ağdaki doğrulayıcı sayısıyla ters orantılı olduğu anlamına gelir. Doğrulayıcı sayısı ne kadar fazlaysa, genel ihraç o kadar büyük olur (`sqrt(N)` olarak) ancak doğrulayıcı başına düşen `base_reward` o kadar küçük olur (`1/sqrt(N)` olarak). Bu faktörler, bir staking düğümü için APR'yi etkiler. Bunun mantığını [Vitalik'in notlarında](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards) okuyun.
 
 Toplam ödül daha sonra, her bir bileşenin toplam ödüle ne kadar katkıda bulunacağını belirleyen bir ağırlığa sahip olduğu beş bileşenin toplamı olarak hesaplanır. Bileşenler şunlardır:
 
-```
-1. kaynak oyu: doğrulayıcı doğru kaynak kontrol noktası için zamanında oy vermiştir
-2. hedef oyu: doğrulayıcı doğru hedef kontrol noktası için zamanında oy vermiştir
-3. baş oyu: doğrulayıcı doğru baş blok için zamanında oy vermiştir
+```text
+1. kaynak oyu: doğrulayıcı, doğru kaynak kontrol noktası için zamanında oy vermiştir
+2. hedef oyu: doğrulayıcı, doğru hedef kontrol noktası için zamanında oy vermiştir
+3. baş oyu: doğrulayıcı, doğru baş blok için zamanında oy vermiştir
 4. senkronizasyon komitesi ödülü: doğrulayıcı bir senkronizasyon komitesine katılmıştır
 5. teklifçi ödülü: doğrulayıcı doğru slotta bir blok teklif etmiştir
 ```
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Bu ağırlıkların toplamı 64'tür. Ödül, geçerli ağırlıkların toplamının 64'e bölünmesiyle hesaplanır. Zamanında kaynak, hedef ve baş oyları veren, bir blok teklif eden ve bir senkronizasyon komitesine katılan bir doğrulayıcı `64/64 * base_reward == base_reward` alabilir. Ancak, bir doğrulayıcı genellikle bir blok teklifçisi değildir, bu nedenle maksimum ödülleri `64-8 /64 * base_reward == 7/8 * base_reward` olur. Ne blok teklifçisi olan ne de bir senkronizasyon komitesinde yer alan doğrulayıcılar `64-8-2 / 64 * base_reward == 6.75/8 * base_reward` alabilir.
+Bu ağırlıkların toplamı 64'tür. Ödül, geçerli ağırlıkların toplamının 64'e bölünmesiyle hesaplanır. Zamanında kaynak, hedef ve baş oyları veren, bir blok teklif eden ve bir senkronizasyon komitesine katılan bir doğrulayıcı `64/64 * base_reward == base_reward` alabilir. Ancak, bir doğrulayıcı genellikle bir blok teklifçisi değildir, bu nedenle maksimum ödülleri `64-8 /64 * base_reward == 7/8 * base_reward` olur. Ne blok teklifçisi olan ne de bir senkronizasyon komitesinde yer alan doğrulayıcılar `64-8-2 / 64 * base_reward == 6.75/8 * base_reward` alabilirler.
 
-Hızlı onayları teşvik etmek için ek bir ödül eklenir. Bu, `inclusion_delay_reward` ödülüdür. Bunun değeri, `base_reward` ile `1/delay` çarpımına eşittir; burada `delay`, blok teklifi ile onay arasındaki slot sayısıdır. Örneğin, onay blok teklifinden sonraki bir slot içinde sunulursa, onaylayan `base_reward * 1/1 == base_reward` alır. Onay bir sonraki slotta ulaşırsa, onaylayan `base_reward * 1/2` alır ve bu böyle devam eder.
+Hızlı onayları teşvik etmek için ek bir ödül eklenir. Bu, `inclusion_delay_reward` ödülüdür. Bu, `base_reward` değerinin `1/delay` ile çarpımına eşit bir değere sahiptir; burada `delay`, blok teklifi ile onay arasındaki slot sayısıdır. Örneğin, onay blok teklifinden sonraki bir slot içinde sunulursa, onaylayan kişi `base_reward * 1/1 == base_reward` alır. Onay bir sonraki slotta gelirse, onaylayan kişi `base_reward * 1/2` alır ve bu böyle devam eder.
 
-Blok teklifçileri, bloğa dahil edilen **her geçerli onay** için `8 / 64 * base_reward` alırlar, bu nedenle ödülün gerçek değeri onaylayan doğrulayıcıların sayısıyla orantılı olarak artar. Blok teklifçileri ayrıca, teklif ettikleri bloğa diğer doğrulayıcıların kötü davranışlarına dair kanıtlar ekleyerek ödüllerini artırabilirler. Bu ödüller, doğrulayıcı dürüstlüğünü teşvik eden "havuçlardır". Ceza kesintisi içeren bir blok teklifçisi `slashed_validators_effective_balance / 512` ile ödüllendirilecektir.
+Blok teklifçileri, bloğa dahil edilen **her geçerli onay** için `8 / 64 * base_reward` alırlar, bu nedenle ödülün gerçek değeri onay veren doğrulayıcıların sayısıyla ölçeklenir. Blok teklifçileri ayrıca, teklif ettikleri bloğa diğer doğrulayıcıların kötü davranışlarına dair kanıtlar ekleyerek ödüllerini artırabilirler. Bu ödüller, doğrulayıcı dürüstlüğünü teşvik eden "havuçlardır". Ceza kesintisi içeren bir blok teklifçisi, `slashed_validators_effective_balance / 512` ile ödüllendirilecektir.
 
 ### Cezalar {#penalties}
 

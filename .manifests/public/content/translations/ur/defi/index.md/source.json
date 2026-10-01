@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/defi/index.md",
-  "generatedAt": "2026-06-18T20:36:36.149Z",
-  "rootHash": "582fe29bf052",
+  "generatedAt": "2026-09-30T18:20:24.331Z",
+  "rootHash": "2e6f2d552236",
   "tree": {
-    "contentHash": "baae44716b79",
+    "contentHash": "a3bc6eaf9287",
     "anchorHash": "f8bd4e778d35",
     "children": {
       "frontmatter:title": {
@@ -287,7 +287,7 @@
         ]
       },
       "defi-use-cases": {
-        "contentHash": "e2e364d2b75a",
+        "contentHash": "639d8bbd781a",
         "anchorHash": "d719a63242f0",
         "labelHash": "2ea6b471c2b6",
         "children": {
@@ -388,7 +388,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "send-money": {
-            "contentHash": "0a3fc26d6284",
+            "contentHash": "b0ea5fb566a6",
             "anchorHash": "ef7aa145b1d2",
             "labelHash": "c393a4669d88",
             "children": {
@@ -443,7 +443,7 @@
                 ]
               },
               "stream-money": {
-                "contentHash": "1bd8dfb34bf4",
+                "contentHash": "189d06d1546d",
                 "anchorHash": "f96fde6eebcd",
                 "labelHash": "c8ae12044b99",
                 "children": {
@@ -452,7 +452,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:2": {
-                    "contentHash": "516ec6084efc",
+                    "contentHash": "7021b2413d22",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:0": {
@@ -1562,5 +1562,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "aaeb4f67fd616782cfcbaceb7a776b26c0578df4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

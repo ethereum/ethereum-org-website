@@ -1,7 +1,7 @@
 ---
 title: "Přispívání na ethereum.org 🦄"
 metaTitle: "Přispívání"
-description: "Zjistěte více o různých způsobech, jak můžete přispět na ethereum.org"
+description: "Zjistěte, jakými různými způsoby můžete přispět na ethereum.org"
 lang: cs
 ---
 
@@ -43,7 +43,7 @@ Jsme přátelská komunita, která vám pomůže růst a vzdělávat se v ekosys
 - [Navrhnout projekt pro naši stránku DeSci](/contributing/adding-desci-projects/) – Přidejte projekt postavený na Ethereu, který přispívá k decentralizované vědě (DeSci)
 - [Přidat zdroj](/contributing/adding-resources/) – Přidejte užitečný zdroj na jakoukoli příslušnou stránku
 
-Máte nějaké dotazy? 🤔 Připojte se na náš [server na Discordu](/discord/)
+Máte nějaké dotazy? 🤔 Připojte se na náš [Discord server](/discord/)
 
 ## Dobré první úkoly pro začátek přispívání {#good-first-tasks-to-start-contributing}
 
@@ -57,12 +57,12 @@ Zde je několik aktuálních úkolů, které byste nám mohli pomoci vyřešit a
 
 Pro přispívání (přidávání nebo úpravu obsahu či vizuálů na webu, opravu chyb, práci na otevřených úkolech) budete potřebovat účet na [GitHubu](https://github.com/).
 
-Všechny aktualizace se provádějí prostřednictvím procesu PR (Pull Request) na GitHubu. To znamená, že si vytvoříte lokální kopii webu, provedete změny a požádáte o jejich sloučení (merge). Pokud jste to ještě nikdy nedělali, postupujte podle pokynů ve spodní části našeho [repozitáře na GitHubu](https://github.com/ethereum/ethereum-org-website).
+Všechny aktualizace se provádějí prostřednictvím procesu PR (Pull Request) na GitHubu. To znamená, že si vytvoříte lokální kopii webu, provedete změny a požádáte o jejich sloučení. Pokud jste to ještě nikdy nedělali, postupujte podle pokynů ve spodní části našeho [repozitáře na GitHubu](https://github.com/ethereum/ethereum-org-website).
 
 K práci na čemkoli nepotřebujete povolení, ale vždy je nejlepší nám dát vědět, co plánujete udělat. Můžete to udělat takto:
 
 - Okometováním problému (issue) nebo PR na [GitHubu](https://github.com/ethereum/ethereum-org-website)
-- Napsáním zprávy na náš [server na Discordu](/discord/)
+- Napsáním zprávy na náš [Discord server](/discord/)
 
 Předtím, než začnete přispívat, se ujistěte, že jste obeznámeni s:
 
@@ -73,15 +73,15 @@ Předtím, než začnete přispívat, se ujistěte, že jste obeznámeni s:
 
 ## Jak se rozhoduje o webu {#how-decisions-about-the-site-are-made}
 
-Rozhodnutí o jednotlivých PR, vývoji designu a velkých upgradech dělá tým z celého ekosystému Etherea. Tento tým zahrnuje projektové manažery, vývojáře, designéry, marketing a komunikaci a odborníky na danou problematiku. Vstupy od komunity formují každé rozhodnutí: proto prosím pokládejte otázky v issues, posílejte PR nebo kontaktujte tým:
+Rozhodnutí o jednotlivých PR, vývoji designu a velkých inovacích dělá tým napříč ekosystémem Etherea. Tento tým zahrnuje projektové manažery, vývojáře, designéry, marketing a komunikaci a odborníky na danou problematiku. Vstupy od komunity formují každé rozhodnutí: proto prosím pokládejte otázky v issues, posílejte PR nebo kontaktujte tým:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Server na Discordu](/discord/)
+- [Discord server](/discord/)
 
 ### Poznámka k plagiátorství {#plagiarism}
 
-Při přispívání jakýmkoli obsahem nebo artefaktem na ethereum.org používejte pouze svou původní práci nebo obsah, ke kterému máte oprávnění. Mnoho projektů v ekosystému Etherea používá open-source licence, které umožňují bezplatné sdílení informací. Pokud však tyto informace nemůžete najít, nepokoušejte se je přidat na ethereum.org. Jakékoli pull requesty považované za plagiátorství budou zamítnuty.
+Při přispívání jakýmkoli obsahem nebo artefaktem na ethereum.org používejte pouze svou původní práci nebo obsah, ke kterému máte oprávnění. Mnoho projektů v ekosystému Etherea používá open-source licence, které umožňují volné sdílení informací. Pokud však tyto informace nemůžete najít, nepokoušejte se je přidat na ethereum.org. Jakékoli pull requesty považované za plagiátorství budou zamítnuty.
 
 ## Jste v open-source noví? {#new-to-open-source}
 
@@ -89,13 +89,13 @@ V našem repozitáři na GitHubu máme úkoly s nízkou bariérou vstupu, které
 
 ## Nárokujte si svůj Onchain Achievement Token (OAT) {#oat}
 
-Pokud bude váš příspěvek sloučen (merged) do ethereum.org, budete mít šanci nárokovat si speciální odznak na [Galxe](https://app.galxe.com/quest/ethereumorg). Onchain Achievement Token (OAT) je důkazem, že jste pomohli udělat ekosystém o něco úžasnějším.
+Pokud bude váš příspěvek sloučen do ethereum.org, budete mít šanci nárokovat si speciální odznak na [Galxe](https://app.galxe.com/quest/ethereumorg). Onchain Achievement Token (OAT) je důkazem, že jste pomohli udělat ekosystém o něco úžasnějším.
 
 [Více o OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jak uplatnit nárok {#how-to-claim}
 
-1. Připojte se na náš [server na Discordu](/discord/).
+1. Připojte se na náš [Discord server](/discord/).
 2. Vložte odkaz na svůj příspěvek do kanálu `#🥇 | proof-of-contribution`.
 3. Počkejte, až vám člen našeho týmu pošle odkaz na váš OAT.
 4. Nárokujte si svůj OAT!
@@ -111,7 +111,7 @@ GitPOAP také automaticky rozpozná váš sloučený příspěvek a umožní vá
 
 1. Navštivte [GitPOAP](https://www.gitpoap.io).
 2. Připojte se pomocí své peněženky nebo dokonce pomocí e-mailu přes možnost přihlášení.
-3. Vyhledejte své uživatelské jméno na GitHubu, ETH adresu, ENS jména nebo jakýkoli GitPOAP, abyste zjistili, zda máte nárok.
+3. Vyhledejte své uživatelské jméno na GitHubu, ETH adresu, jména z Ethereum Name Service (ENS) nebo jakýkoli GitPOAP, abyste zjistili, zda máte nárok.
 4. Pokud má váš účet na GitHubu nárok, budete si moci vyrazit GitPOAP!
 
 ## Přispěvatelé {#contributors}

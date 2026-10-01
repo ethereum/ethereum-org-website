@@ -116,3 +116,18 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - The `testing` page title now correctly matches its site-nav label, fixing the PR #19115 nav/title mismatch class here rather than repeating it.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `policies-services` Consumer Reports stat: `సున్నా మరియు 59 శాతం మధ్య నిర్వహించబడ్డాయి` -> `సున్నా నుండి 59 శాతం మాత్రమే తొలగించగలిగాయి`; `70 శాతాన్ని కోల్పోయారు` -> `70 శాతం తొలగించబడ్డాయి` (native check welcome).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `లిడో` (glossary Lido), `డెన్‌కున్` (glossary Dencun).
+- "both" dropped (#82); `ఒక పార్టీ` political sense again (hegota:21).

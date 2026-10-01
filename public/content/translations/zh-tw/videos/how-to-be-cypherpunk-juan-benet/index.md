@@ -8,7 +8,7 @@ duration: "0:18:00"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "privacy"
 format: presentation
 author: Web3Privacy Now
 breadcrumb: "如何成為密碼龐克"

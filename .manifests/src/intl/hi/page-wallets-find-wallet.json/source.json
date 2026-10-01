@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-09-09T21:40:55.934Z",
-  "rootHash": "4e7ed1bd4371",
+  "generatedAt": "2026-09-30T18:17:11.375Z",
+  "rootHash": "04f67d1cb9e9",
   "tree": {
-    "contentHash": "7cb1b6866c64",
-    "anchorHash": "2b972c6a5934",
+    "contentHash": "a35002b3409f",
+    "anchorHash": "1087fd24b283",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
@@ -249,10 +249,6 @@
       },
       "page-find-wallet-info-updated-on": {
         "contentHash": "5d2e0d798d4b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-see-all-wallets": {
-        "contentHash": "a44cf6ec46ae",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-iOS": {
@@ -519,11 +515,11 @@
         "contentHash": "2503f86c48d0",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-find-wallet-privacy": {
-        "contentHash": "54a57c3147c4",
+      "page-find-wallet-private-transactions": {
+        "contentHash": "1816e64a3a45",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-find-wallet-privacy-desc": {
+      "page-find-wallet-private-transactions-desc": {
         "contentHash": "7968aebf1133",
         "anchorHash": "e3b0c44298fc"
       },
@@ -919,7 +915,6 @@
       "page-find-wallet-advanced",
       "page-find-wallet-advanced-filters",
       "page-find-wallet-info-updated-on",
-      "page-find-wallet-see-all-wallets",
       "page-find-wallet-iOS",
       "page-find-wallet-android",
       "page-find-wallet-linux",
@@ -979,8 +974,8 @@
       "page-find-wallet-crops-secure",
       "page-find-wallet-empty-results-title",
       "page-find-wallet-empty-results-desc",
-      "page-find-wallet-privacy",
-      "page-find-wallet-privacy-desc",
+      "page-find-wallet-private-transactions",
+      "page-find-wallet-private-transactions-desc",
       "page-find-wallet-smart-accounts",
       "page-find-wallet-smart-accounts-desc",
       "page-find-wallet-account-upgrades",
@@ -1023,5 +1018,5 @@
       "page-find-wallet-fee-value-variable"
     ]
   },
-  "sourceCommitSha": "c09d096eb65daf5f1c48cd93252e07c9acc50d71"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
