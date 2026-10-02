@@ -4,6 +4,7 @@ import { expect, test } from "@playwright/test"
 
 import {
   type ExplorerNetwork,
+  isExplorerLookup,
   parseExplorerQuery,
   truncateHex,
 } from "@/lib/utils/explorerQuery"
@@ -274,5 +275,20 @@ test.describe("naming-service names", () => {
     ]) {
       expect(parse(q), q).toBeNull()
     }
+  })
+})
+
+test.describe("isExplorerLookup", () => {
+  test("a bare value is a lookup, not a question", () => {
+    // Nothing to ground an answer in, and the explorer rows already answer it.
+    expect(isExplorerLookup(ADDRESS)).toBe(true)
+    expect(isExplorerLookup(` ${TX} `)).toBe(true)
+    expect(isExplorerLookup("base:" + ADDRESS)).toBe(true)
+    expect(isExplorerLookup("vitalik.eth")).toBe(true)
+  })
+
+  test("a question that mentions one is still a question", () => {
+    expect(isExplorerLookup(`is ${ADDRESS} the deposit contract?`)).toBe(false)
+    expect(isExplorerLookup("what is an address")).toBe(false)
   })
 })

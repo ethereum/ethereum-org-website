@@ -555,12 +555,20 @@
   @apply text-primary hover:underline;
 }
 
+.DocSearch-Ask-notice {
+  @apply text-sm text-body-medium;
+}
+
 .DocSearch-Ask-error {
   @apply text-sm text-error;
 }
 
+.DocSearch-Ask-footer {
+  @apply flex flex-col gap-2 border-t border-solid border-disabled pt-3;
+}
+
 .DocSearch-Ask-sources {
-  @apply flex flex-col gap-1 border-t border-solid border-disabled pt-3 text-sm;
+  @apply flex flex-col gap-1 text-sm;
 }
 
 .DocSearch-Ask-sources span {
@@ -580,6 +588,25 @@
 
 .DocSearch-Ask-sources a {
   @apply text-primary hover:underline;
+}
+
+/* Sized to the text it sits in, so the icons read as part of the sentence. */
+.DocSearch-Ask-feedback {
+  @apply flex items-center gap-2 text-sm text-body-medium;
+}
+
+.DocSearch-Ask-feedback-buttons {
+  @apply flex items-center;
+}
+
+/* Inherits the line's colour: a thumb is not a call to action, and a primary fill at
+   rest pulled the eye off the answer. */
+.DocSearch-Ask-feedback button {
+  @apply rounded-xs p-1 text-body-medium hover:text-primary-hover;
+}
+
+.DocSearch-Ask-feedback svg {
+  @apply size-4;
 }
 
 .DocSearch-Ask-disclaimer {

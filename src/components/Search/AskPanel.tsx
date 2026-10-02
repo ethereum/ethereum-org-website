@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
+import { ThumbsDown, ThumbsUp } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -15,6 +16,7 @@ import {
 } from "@/lib/utils/ask"
 import { type AskAllowance, takeAskAllowance } from "@/lib/utils/askRateLimit"
 import { cn } from "@/lib/utils/cn"
+import { isExplorerLookup } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
@@ -70,7 +72,9 @@ const AskPanel = ({
   const [referral, setReferral] = useState<ReferralNote | null>(null)
   const [followup, setFollowup] = useState<Followup | null>(null)
   const [error, setError] = useState("")
+  const [notice, setNotice] = useState("")
   const [done, setDone] = useState(false)
+  const [rated, setRated] = useState(false)
   const scroller = useRef<HTMLDivElement>(null)
   /** The allowance already taken for a question, and its verdict. */
   const spent = useRef<{ query: string; allowance: AskAllowance } | null>(null)
@@ -82,7 +86,9 @@ const AskPanel = ({
     setReferral(null)
     setFollowup(null)
     setError("")
+    setNotice("")
     setDone(false)
+    setRated(false)
 
     /**
      * One event per question, once the outcome is known. Abandoning mid-stream records
@@ -106,6 +112,16 @@ const AskPanel = ({
     }
 
     const run = async () => {
+      // A bare address or name has nothing to ground an answer in, and the explorer rows
+      // beneath already answer it. Said plainly rather than spending an ask to fail, and
+      // not in the error style -- nothing went wrong.
+      if (isExplorerLookup(query)) {
+        setNotice(t("docsearch-ask-explorer"))
+        report("explorer")
+        setDone(true)
+        return
+      }
+
       // Checked here rather than at the button, so one place renders the message and the
       // allowance is only spent on an ask that actually happens.
       //
@@ -206,6 +222,28 @@ const AskPanel = ({
    * rows behave. Focus stays in the input -- `aria-selected` would need listbox
    * semantics, and the library's listbox already owns that relationship with the input.
    */
+  /**
+   * The question and what the answer was grounded in, not the prose. Bad answers have
+   * almost always been bad grounding, so the cited paths are the diagnostic field -- and
+   * they aggregate, where a generated answer never repeats.
+   */
+  const rate = (helpful: boolean) => {
+    setRated(true)
+    const safe = scrubQuery(query)
+    if (!safe) return
+    trackCustomEvent({
+      eventCategory: "search",
+      eventAction: `ask feedback ${helpful ? "up" : "down"}`,
+      eventName: safe,
+    })
+    if (helpful) return
+    trackCustomEvent({
+      eventCategory: "search",
+      eventAction: "ask feedback down sources",
+      eventName: sources.map((source) => source.url).join(" ") || "none",
+    })
+  }
+
   const targetProps = (index: number, className?: string) => ({
     "aria-current": index === activeTarget,
     // Merged, not assigned: a `className` written after the spread silently replaced
@@ -247,7 +285,7 @@ const AskPanel = ({
           results below keep updating -- so it has to say which question it answered. */}
       <p className="DocSearch-Ask-question">{query}</p>
 
-      {!answer && !error && (
+      {!answer && !error && !notice && (
         <p className="DocSearch-Ask-status" role="status">
           {t("docsearch-ask-thinking")}
         </p>
@@ -308,6 +346,8 @@ const AskPanel = ({
 
       {error && <p className="DocSearch-Ask-error">{error}</p>}
 
+      {notice && <p className="DocSearch-Ask-notice">{notice}</p>}
+
       {done && followup && (
         <p {...targetProps(0, "DocSearch-Ask-followup")}>
           <BaseLink href={followup.url}>{followup.label}</BaseLink>
@@ -320,25 +360,57 @@ const AskPanel = ({
         </p>
       )}
 
-      {done && sources.length > 0 && (
-        <footer className="DocSearch-Ask-sources">
-          <span>{t("docsearch-ask-sources")}</span>
-          <ol>
-            {sources.map((source, index) => (
-              <li key={source.n} {...targetProps(offset + index)}>
-                <BaseLink href={source.url} hideArrow>
-                  {source.title}
-                </BaseLink>
-              </li>
-            ))}
-          </ol>
-        </footer>
-      )}
-
       {done && (
-        <p className="DocSearch-Ask-disclaimer">
-          {t("docsearch-ask-disclaimer")}
-        </p>
+        <footer className="DocSearch-Ask-footer">
+          {sources.length > 0 && (
+            <div className="DocSearch-Ask-sources">
+              <span>{t("docsearch-ask-sources")}</span>
+              <ol>
+                {sources.map((source, index) => (
+                  <li key={source.n} {...targetProps(offset + index)}>
+                    <BaseLink href={source.url} hideArrow>
+                      {source.title}
+                    </BaseLink>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {answer && (
+            <div className="DocSearch-Ask-feedback">
+              {rated ? (
+                <span role="status">{t("docsearch-ask-feedback-thanks")}</span>
+              ) : (
+                <>
+                  <span>{t("docsearch-ask-feedback-prompt")}</span>
+                  <span className="DocSearch-Ask-feedback-buttons">
+                    <button
+                      type="button"
+                      title={t("docsearch-ask-feedback-yes")}
+                      aria-label={t("docsearch-ask-feedback-yes")}
+                      onClick={() => rate(true)}
+                    >
+                      <ThumbsUp />
+                    </button>
+                    <button
+                      type="button"
+                      title={t("docsearch-ask-feedback-no")}
+                      aria-label={t("docsearch-ask-feedback-no")}
+                      onClick={() => rate(false)}
+                    >
+                      <ThumbsDown />
+                    </button>
+                  </span>
+                </>
+              )}
+            </div>
+          )}
+
+          <p className="DocSearch-Ask-disclaimer">
+            {t("docsearch-ask-disclaimer")}
+          </p>
+        </footer>
       )}
     </section>
   )
