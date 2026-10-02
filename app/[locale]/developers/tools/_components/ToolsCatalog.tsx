@@ -28,6 +28,7 @@ type ToolsCatalogProps = {
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   countByCategory: Record<string, number>
+  countBySubcategory: Record<string, number>
   totalCount: number
   labels: {
     searchPlaceholder: string
@@ -197,17 +198,22 @@ export default function ToolsCatalog({
   categoryLabels,
   subcategoryLabels,
   countByCategory,
+  countBySubcategory,
   totalCount,
   labels,
   currentCategoryId,
 }: ToolsCatalogProps) {
-  const countBySubcategory = useMemo(() => {
-    const result: Record<string, number> = {}
-    for (const tool of tools) {
-      result[tool.subcategory_id] = (result[tool.subcategory_id] || 0) + 1
-    }
-    return result
-  }, [tools])
+  // A `?sub=` that matches no tool on this page (stale link, other category) is ignored.
+  const pageSubcategoryIds = useMemo(
+    () => new Set(tools.map((tool) => tool.subcategory_id)),
+    [tools]
+  )
+  const getSubcategoryFilter = (state: CatalogFilterState) => {
+    const raw = state[SUBCATEGORY_FILTER_KEY]
+    return typeof raw === "string" && pageSubcategoryIds.has(raw)
+      ? raw
+      : undefined
+  }
 
   const navConfig: CatalogNavGroupConfig = {
     allLabel: labels.allCategories,
@@ -228,9 +234,7 @@ export default function ToolsCatalog({
         children: category.subcategories.map((subcategory) => ({
           id: subcategory.id,
           label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
-          count: isFilterable
-            ? countBySubcategory[subcategory.id] || 0
-            : undefined,
+          count: countBySubcategory[subcategory.id] || 0,
           href: isFilterable
             ? undefined
             : `${href}?${SUBCATEGORY_FILTER_KEY}=${subcategory.id}`,
@@ -244,13 +248,8 @@ export default function ToolsCatalog({
     state: CatalogFilterState,
     query: string
   ) => {
-    const subcategoryId = state[SUBCATEGORY_FILTER_KEY]
-    if (
-      typeof subcategoryId === "string" &&
-      tool.subcategory_id !== subcategoryId
-    ) {
-      return false
-    }
+    const subcategoryId = getSubcategoryFilter(state)
+    if (subcategoryId && tool.subcategory_id !== subcategoryId) return false
 
     const normalizedQuery = normalize(query)
     if (!normalizedQuery) return true
@@ -283,19 +282,16 @@ export default function ToolsCatalog({
       mobileVariant="sheet"
       urlParamKey={SUBCATEGORY_FILTER_KEY}
       closeMobileOnSelect
-      renderSidebar={({ state, setFilter }) => {
-        const raw = state[SUBCATEGORY_FILTER_KEY]
-        return (
-          <CatalogNavGroup
-            locale={locale}
-            config={navConfig}
-            selectedChildId={typeof raw === "string" ? raw : undefined}
-            onSelectChild={(childId) =>
-              setFilter(SUBCATEGORY_FILTER_KEY, childId)
-            }
-          />
-        )
-      }}
+      renderSidebar={({ state, setFilter }) => (
+        <CatalogNavGroup
+          locale={locale}
+          config={navConfig}
+          selectedChildId={getSubcategoryFilter(state)}
+          onSelectChild={(childId) =>
+            setFilter(SUBCATEGORY_FILTER_KEY, childId)
+          }
+        />
+      )}
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}

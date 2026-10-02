@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronDown } from "lucide-react"
+import { useTranslations } from "next-intl"
 import type { ReactNode } from "react"
 
 import {
@@ -61,6 +62,7 @@ export default function CatalogFilterGroup({
   scrollable,
   children,
 }: CatalogFilterGroupProps) {
+  const t = useTranslations("common")
   const chevron = (
     <ChevronDown className="size-4 shrink-0 text-primary transition-transform group-data-[state=closed]:-rotate-90 rtl:group-data-[state=closed]:rotate-90" />
   )
@@ -80,8 +82,7 @@ export default function CatalogFilterGroup({
             )}
           >
             {chevron}
-            {/* The toggle is icon-only, so it borrows the group's name. */}
-            <span className="sr-only">{label}</span>
+            <span className="sr-only">{t("expand-group", { label })}</span>
           </CollapsibleTrigger>
           <BaseLink
             href={labelHref}

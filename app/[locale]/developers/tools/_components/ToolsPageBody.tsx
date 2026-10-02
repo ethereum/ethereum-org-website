@@ -22,6 +22,7 @@ type ToolsPageBodyProps = {
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   countByCategory: Record<string, number>
+  countBySubcategory: Record<string, number>
   totalCount: number
   currentCategoryId?: string
 }
@@ -38,6 +39,7 @@ const ToolsPageBody = async ({
   categoryLabels,
   subcategoryLabels,
   countByCategory,
+  countBySubcategory,
   totalCount,
   currentCategoryId,
 }: ToolsPageBodyProps) => {
@@ -59,6 +61,7 @@ const ToolsPageBody = async ({
           categories={categories}
           currentCategoryId={currentCategoryId}
           countByCategory={countByCategory}
+          countBySubcategory={countBySubcategory}
           totalCount={totalCount}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}
