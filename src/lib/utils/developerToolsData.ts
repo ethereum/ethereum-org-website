@@ -8,6 +8,7 @@ import type {
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
+import { isExternal } from "@/lib/utils/url"
 
 export { getToolKey }
 
@@ -60,6 +61,29 @@ export function normalizeDeveloperToolsData(
 
 const repoEntries = (tool: DeveloperTool) =>
   tool.repos.map((repo) => (typeof repo === "string" ? { href: repo } : repo))
+
+/** External repos, most-starred first. Shared by ToolLinks and the modal. */
+export function getRankedRepos(tool: DeveloperTool) {
+  return repoEntries(tool)
+    .filter((repo) => isExternal(repo.href))
+    .sort((a, b) => (b.stargazers ?? -1) - (a.stargazers ?? -1))
+}
+
+/** External packages, most-downloaded first. */
+export function getRankedPackages(tool: DeveloperTool) {
+  return (tool.packages ?? [])
+    .map((pkg) => (typeof pkg === "string" ? { href: pkg } : pkg))
+    .filter((pkg) => isExternal(pkg.href))
+    .sort((a, b) => (b.downloads ?? -1) - (a.downloads ?? -1))
+}
+
+/** `ethpm/ethpm-spec` from a GitHub URL, or the bare URL for other hosts. */
+export const getRepoLabel = (href: string) =>
+  href.replace(/^https:\/\/github\.com\//, "")
+
+/** `ethpm` from an npm URL, or the bare URL for other registries. */
+export const getPackageLabel = (href: string) =>
+  href.replace(/^https:\/\/(www\.)?npmjs\.com\/package\//, "")
 
 /** Repo hrefs, most-starred first (matching the ordering shown in ToolLinks). */
 export function getToolRepoHrefs(tool: DeveloperTool): string[] {

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/zero-knowledge-proofs-5-levels/index.md",
-  "generatedAt": "2026-04-29T06:29:20.678Z",
-  "rootHash": "43cd560409ff",
+  "generatedAt": "2026-09-30T19:19:10.862Z",
+  "rootHash": "3648378ab210",
   "tree": {
-    "contentHash": "83f3a831a50c",
-    "anchorHash": "89bfc960894c",
+    "contentHash": "19c6942e91b3",
+    "anchorHash": "ee15caafa874",
     "children": {
       "frontmatter:title": {
-        "contentHash": "bc137d7ec3f5",
+        "contentHash": "9e9d1bd72102",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ceed7b56a15a",
+        "contentHash": "6d39e684e7ae",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ba9497792820"
+        "anchorHash": "9f799c4263e8"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4811b7223aab"
+        "anchorHash": "d97c4ff6c30d"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "78b2868763a9",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "78ebb06ef2aa"
+        "anchorHash": "27cba1f8a0c9"
       },
       "prose:1": {
         "contentHash": "c727b509481c",
@@ -201,5 +215,5 @@
       "level-5-expert-1710"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

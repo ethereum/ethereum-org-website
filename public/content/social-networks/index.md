@@ -69,7 +69,7 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
+[Farcaster](https://farcaster.xyz/) is a "sufficiently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
 
 ## Use decentralized social networks {#use-decentralized-social-networks}
 

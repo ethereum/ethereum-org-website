@@ -51,7 +51,7 @@ Pierwsza linia importuje interfejs, a druga określa, że implementujemy go w ty
 ```python
 #pragma version >0.3.10
 ```
-### Interfejs ERC721Receiver
+### Interfejs ERC721Receiver {#receiver-interface}
 
 ```python
 # Interfejs dla kontraktu wywoływanego przez safeTransferFrom()
@@ -90,7 +90,7 @@ Identyfikatory tokenów ERC-721 mają 256 bitów. Zazwyczaj są one tworzone pop
 ```
 
 Aby zapobiec przypadkom, w których kontrakt przypadkowo akceptuje transfer, wartość zwracana nie jest wartością logiczną, ale określoną wartością czterobajtową, selektorem funkcji `onERC721Received`. Funkcja jest `nonpayable`, ponieważ kontrakt odbierający może zmienić swój własny stan, gdy zaakceptuje token.
-### Zdarzenia
+### Zdarzenia {#events}
 
 [Zdarzenia](/developers/docs/smart-contracts/anatomy/#events-and-logs) są emitowane, aby informować użytkowników i serwery poza blockchainem o zdarzeniach. Zauważ, że zawartość zdarzeń nie jest dostępna dla kontraktów na blockchainie. Trzy zdarzenia ERC-721 są zdefiniowane przez interfejs `IERC721`, który zaimportowaliśmy, więc ten kontrakt nie deklaruje ich sam; emituje je za pomocą `log IERC721.<Event>(...)`, jak zobaczymy w funkcjach transferu poniżej.
 
@@ -99,7 +99,7 @@ Aby zapobiec przypadkom, w których kontrakt przypadkowo akceptuje transfer, war
 Zatwierdzenie (approval) w ERC-721 jest podobne do limitu wydatków w ERC-20: określony adres ma pozwolenie na transfer określonego tokena, a zdarzenie `Approval` (`owner`, `approved`, `token_id`) jest emitowane za każdym razem, gdy ten zatwierdzony adres zostanie ustawiony lub potwierdzony. Daje to mechanizm kontraktom do reagowania, gdy akceptują token. Kontrakty nie mogą nasłuchiwać zdarzeń, więc jeśli po prostu wykonasz transfer tokena do nich, "nie wiedzą" o tym. W ten sposób właściciel najpierw przesyła zatwierdzenie, a następnie wysyła żądanie do kontraktu: "Zatwierdziłem dla ciebie transfer tokena X, proszę zrób...". Jest to wybór projektowy, aby standard ERC-721 był podobny do standardu ERC-20. Ponieważ tokeny ERC-721 nie są wymienialne, kontrakt może również zidentyfikować, że otrzymał konkretny token, patrząc na własność tokena.
 
 Wreszcie, `ApprovalForAll` (`owner`, `operator`, `approved`) jest emitowane, gdy _operator_ zostanie włączony lub wyłączony dla właściciela. Czasami przydatne jest posiadanie operatora, który może zarządzać wszystkimi tokenami konta określonego typu (tymi, które są zarządzane przez określony kontrakt), podobnie do pełnomocnictwa. Na przykład, mogę chcieć dać takie uprawnienie kontraktowi, który sprawdza, czy nie kontaktowałem się z nim przez sześć miesięcy, a jeśli tak, rozdziela moje aktywa moim spadkobiercom (jeśli jeden z nich o to poprosi, kontrakty nie mogą nic zrobić bez wywołania przez transakcję). W ERC-20 możemy po prostu dać wysoki limit wydatków kontraktowi spadkowemu, ale to nie działa dla ERC-721, ponieważ tokeny nie są wymienialne. To jest jego odpowiednik. Wartość `approved` mówi nam, czy zdarzenie dotyczy zatwierdzenia, czy wycofania zatwierdzenia.
-### Zmienne stanu
+### Zmienne stanu {#state-vars}
 
 Te zmienne zawierają obecny stan tokenów: które z nich są dostępne i kto jest ich właścicielem. Większość z nich to obiekty `HashMap`, [jednokierunkowe mapowania, które istnieją między dwoma typami](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -151,7 +151,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Są to funkcje, które faktycznie implementują ERC-721.
 
-#### Konstruktor
+#### Konstruktor {#constructor}
 
 ```python
 @deploy
@@ -173,7 +173,7 @@ W języku Python i w Vyper można również utworzyć komentarz, określając wi
 ```
 
 Aby uzyskać dostęp do zmiennych stanu, używasz `self.<nazwa zmiennej>` (ponownie, tak samo jak w języku Python). Konstruktor zapisuje konto, które wdrożyło kontrakt, jako `minter`.
-#### Funkcje widoku
+#### Funkcje widoku {#views}
 
 Są to funkcje, które nie modyfikują stanu blockchaina, a zatem mogą być wykonywane za darmo, jeśli są wywoływane zewnętrznie. Jeśli funkcje widoku są wywoływane przez kontrakt, nadal muszą być wykonywane na każdym węźle, a zatem kosztują gaz.
 
@@ -271,7 +271,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 Ta funkcja sprawdza, czy `_operator` ma uprawnienia do zarządzania wszystkimi tokenami `_owner` w tym kontrakcie. Ponieważ może być wielu operatorów, jest to dwupoziomowa HashMapa.
-#### Funkcje pomocnicze transferu
+#### Funkcje pomocnicze transferu {#transfer-helpers}
 
 Te funkcje implementują operacje, które są częścią transferu lub zarządzania tokenami.
 
@@ -387,7 +387,7 @@ Mamy tę wewnętrzną funkcję, ponieważ istnieją dwa sposoby na transfer toke
 ```
 
 Aby wyemitować zdarzenie w języku Vyper, używasz instrukcji `log` ([zobacz tutaj po więcej szczegółów](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)). Ponieważ zdarzenia należą do zaimportowanego interfejsu, odnosimy się do nich jako `IERC721.Transfer` i przekazujemy ich pola jako argumenty nazwane.
-#### Funkcje transferu
+#### Funkcje transferu {#transfer-funs}
 
 ```python
 

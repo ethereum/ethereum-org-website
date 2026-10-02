@@ -1,8 +1,8 @@
-/* Algolia DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
+/* DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
 
 /**
  * DocSearch Button
- * https://docsearch.algolia.com/docs/styling
+ * https://typesense.org/docs/guide/docsearch.html
  */
 .DocSearch-Button-Container {
   @apply hidden lg:flex;
@@ -27,7 +27,7 @@
 }
 
 .DocSearch-Button-Key {
-  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm lowercase text-disabled shadow-none first:pt-1 first:text-md;
+  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm text-disabled lowercase shadow-none first:pt-1 first:text-md;
 }
 
 /**
@@ -45,8 +45,18 @@
 }
 
 .dark {
+  /* The vendor ships its dark palette under `html[data-theme="dark"]`, which this site
+     never sets -- it uses `.dark`. So dark mode silently inherited the light values,
+     including a near-black hit colour on a near-black background. */
   --docsearch-modal-background: hsla(var(--background));
   --docsearch-highlight-color: hsla(var(--primary-hover));
+  --docsearch-text-color: hsla(var(--body));
+  --docsearch-hit-color: hsla(var(--body));
+  --docsearch-muted-color: hsla(var(--body-medium));
+  --docsearch-hit-background: hsla(var(--background));
+  --docsearch-footer-background: hsla(var(--background));
+  --docsearch-searchbox-background: hsla(var(--background));
+  --docsearch-searchbox-focus-background: hsla(var(--background));
 }
 
 /* Restore library padding/margin stripped by TW preflight (* {margin:0; padding:0})
@@ -104,6 +114,58 @@
   width: 80%;
 }
 
+/* Tailwind's preflight makes every svg `display: block`, which takes these icons out of
+   the inline flow the vendor centers with `text-align`. The vendor's own bottom padding
+   is zeroed by the same preflight reset, so it is restored here too. */
+.DocSearch-Screen-Icon {
+  padding-bottom: 2rem;
+}
+
+.DocSearch-Screen-Icon > svg {
+  margin-inline: auto;
+}
+
+/* Kept on one line so the quotes stay with the value they wrap. An unmatched hash has no
+   break opportunity, and truncating the value alone was not enough: as an inline-block at
+   `max-width: 100%` it could not fit beside the opening quote, so it wrapped to its own
+   line and stranded both quotes on lines of their own. Truncating the whole message
+   instead keeps them adjacent -- the point of it is that nothing matched, not the value. */
+.DocSearch-NoResults .DocSearch-Title {
+  margin-bottom: 1rem;
+  @apply truncate;
+}
+
+/* One suggestion per line. The vendor shrink-wraps both lists with `inline-block`, so
+   there is no width for an overflow to act against and long titles wrapped instead --
+   leaving the "»" marker orphaned above its own text. */
+.DocSearch-NoResults-Prefill-List,
+.DocSearch-NoResults-Prefill-List ul {
+  display: block;
+  max-width: 100%;
+}
+
+/* The marker sits outside the truncated text. `text-overflow` cannot clip inside an
+   atomic inline box, and the vendor makes each suggestion an `inline-block` button -- so
+   truncating the list item replaced the whole button with an ellipsis, rendering a
+   suggestion as a bare "» ...". Truncating the button instead trims its own text, and
+   `min-width: 0` is what lets a flex item shrink below its content. */
+.DocSearch-NoResults-Prefill-List li {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+}
+
+.DocSearch-NoResults-Prefill-List li::before {
+  content: "» ";
+  flex: none;
+  white-space: pre;
+}
+
+.DocSearch-Prefill {
+  min-width: 0;
+  @apply truncate;
+}
+
 .DocSearch.DocSearch-Container {
   @apply fixed inset-0;
 }
@@ -128,6 +190,10 @@
 }
 
 .DocSearch-Cancel {
+  /* The vendor's own margin is zeroed by the preflight reset, leaving the button flush
+     against the input on mobile, where it is the only place it shows. Logical so it
+     stays on the correct side in RTL. */
+  margin-inline-start: 1rem;
   @apply text-primary hover:text-primary md:text-primary-high-contrast;
 }
 
@@ -141,11 +207,97 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll pe-2 ps-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:pe-4 md:ps-8;
+  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+}
+
+/* Explorer rows keep the library's own markup so their save/remove buttons survive, and
+   are decorated from here instead. The logo arrives as --explorer-icon on the anchor. */
+.DocSearch-Hit-explorer .DocSearch-Hit-icon > svg {
+  display: none;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-icon {
+  background-image: var(--explorer-icon);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply rounded-full;
+}
+
+/* One arrow shape, placed differently depending on the row. Mirrors lucide's
+   external-link, drawn as a mask so it takes the row's current colour. */
+.DocSearch-Hit-explorer {
+  --explorer-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-title::after,
+.DocSearch-Hit-explorer .DocSearch-Hit-action::after {
+  content: "";
+  display: inline-block;
+  background-color: currentColor;
+  mask-image: var(--explorer-arrow);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  @apply rtl:-scale-x-100;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-title::after {
+  width: 0.875em;
+  height: 0.875em;
+  margin-inline-start: 0.3em;
+  vertical-align: -0.1em;
+}
+
+.DocSearch-Hit-explorer .DocSearch-Hit-action::after {
+  @apply size-4;
+}
+
+/* What a results row leaves out. The arrow moves to the row end in place of the return
+   icon, which only ever appeared on the highlighted row; and the value is dropped
+   entirely, being identical on every row and already sitting in the input just above.
+   Recent rows are the ones carrying save/remove buttons -- that is the discriminator. */
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-title::after,
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-action
+  > svg,
+.DocSearch-Hit:not(:has(.DocSearch-Hit-action-button))
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-path {
+  display: none;
+}
+
+/* Recent and Favorite rows: the row end belongs to the save and remove buttons, so the
+   arrow sits beside the label instead. */
+.DocSearch-Hit:has(.DocSearch-Hit-action-button)
+  .DocSearch-Hit-explorer
+  .DocSearch-Hit-action::after {
+  display: none;
+}
+
+/* Groups otherwise read as one list: the next sticky heading sits directly on the
+   previous group's last row. Only between sections, never above the first. */
+.DocSearch-Hits + .DocSearch-Hits {
+  @apply mt-4 md:mt-6;
+}
+
+/* Vendor spaces the last group with its own margin, which stacks with the padding above
+   and leaves the final row sitting against the footer when a list is short -- visible on
+   the Recent list before a query, not just on results. One source of spacing instead. */
+.DocSearch-Hits:last-of-type {
+  margin-bottom: 0;
 }
 
 .DocSearch-Hit-source {
   @apply pb-0.5 leading-6 text-body;
+}
+/* A results group leads with its page row, whose title is the header repeated. Recent
+   and explorer groups have no page row and keep theirs. */
+.DocSearch-Hits:has(> ul > li:first-child > a[data-page-row])
+  > .DocSearch-Hit-source {
+  @apply hidden;
 }
 
 .DocSearch-Hit {
@@ -160,8 +312,49 @@
   @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-visited)];
 }
 
+/* A child row is a section of the page named directly above it, so it reads as part of
+   that row rather than as its own entry. The container inside already carries spacing. */
+.DocSearch-Hit--Child a {
+  @apply pt-2 pb-1;
+}
+
+/* A page and its sections are one entry, so the rules inside a block are lightened and
+   only the rule closing the block stays at full strength. Matched to the elbow connector
+   beside them by reading the same variable at the same 50%, rather than naming a token:
+   `--docsearch-muted-color` is themed in `.dark` only, so in light mode that elbow is
+   still the vendor's own blue-grey. Recoloured rather than removed because the border is
+   in the row's height, so dropping it would shorten every row with sections under it. */
+.DocSearch-Hit:has(+ .DocSearch-Hit--Child) a {
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--docsearch-muted-color) 50%,
+    transparent
+  );
+}
+
 .DocSearch-Hit-content-wrapper {
   @apply whitespace-normal;
+}
+
+/* Wrapping is deliberate -- the vendor truncates to one line and titles read badly cut
+   off. Two lines is the bound because that is what Typesense's snippets need: the longest
+   title measured over 357 rows was 115 characters, so rows vary between one line and two
+   rather than being cut at a fixed height. */
+.DocSearch-Hit-title {
+  @apply line-clamp-2;
+}
+
+.DocSearch-Hit-path {
+  @apply line-clamp-1;
+}
+
+/* Vendor sizes this connector from `--docsearch-hit-height`, which we set to
+   `fit-content` so a row can wrap onto two lines. `fit-content` on a replaced element is
+   not defined, and Safari resolves it enormous -- only child rows render this svg, so
+   only they stretched. Filling the row is what the vendor's fixed height did anyway. */
+.DocSearch-Hit-Tree {
+  height: auto;
+  align-self: stretch;
 }
 
 .DocSearch-Hit-icon {
@@ -169,6 +362,10 @@
 }
 
 .DocSearch-Footer {
+  /* Vendor uses row-reverse, which parks the shortcut keys at the far end now that the
+     logo is hidden. `row` keeps them at the inline start and stays correct in RTL. */
+  flex-direction: row;
+  justify-content: flex-start;
   --docsearch-logo-color: hsla(var(--body-light));
   --docsearch-footer-shadow: none;
   height: 40px;
@@ -176,8 +373,9 @@
   @apply border-t-2 border-primary bg-primary-low-contrast;
 }
 
-.DocSearch-Logo a {
-  color: var(--docsearch-logo-color);
+/* The vendor attribution adds nothing for readers and takes a row of a small modal. */
+.DocSearch-Logo {
+  display: none;
 }
 
 .DocSearch-Commands {
@@ -188,28 +386,17 @@
 }
 
 .DocSearch-Label {
-  @apply lowercase text-body;
+  @apply text-body lowercase;
 }
 
 .DocSearch-Commands-Key {
-  @apply me-1.5 grid h-4 w-4 place-items-center rounded border border-solid border-primary bg-background bg-none p-0 text-primary shadow-none;
+  /* Auto width so multi-character keys like `esc` get breathing room instead of being
+     squeezed into a square. */
+  @apply me-1.5 grid h-4 w-auto min-w-4 place-items-center rounded border border-solid border-primary bg-background bg-none px-0.5 py-0 text-primary shadow-none;
 }
 
 .DocSearch-Commands-Key svg {
   @apply bg-transparent;
-}
-
-.DocSearch-Logo .DocSearch-Label {
-  @apply uppercase text-body-medium;
-}
-
-svg[aria-label="Algolia"] {
-  margin-left: 0;
-  margin-inline-start: 8px;
-}
-
-svg[aria-label="Algolia"] * {
-  @apply fill-body-medium;
 }
 
 @media (max-width: 768px) {

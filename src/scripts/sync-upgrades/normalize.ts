@@ -189,8 +189,8 @@ const resolveMainnetTarget = (
 
 /**
  * Public testnet forks, from the phase timeline. Deprecated networks are
- * skipped, and status must agree with the date claim: completed forks have
- * actual dates while upcoming forks can only have proposed or projected dates.
+ * skipped, and completed forks must have actual dates. Forkcast writes an
+ * agreed future fork date with the same `date` key, so upcoming means confirmed.
  */
 const normalizeTestnets = (
   source: ForkcastSource,
@@ -215,11 +215,6 @@ const normalizeTestnets = (
         `Completed testnet "${testnet.name}" on ${upgradeId} does not state an actual date`
       )
     }
-    if (testnet.status === "upcoming" && testnet.stated?.claim === "actual") {
-      throw new ForkcastSyncError(
-        `Upcoming testnet "${testnet.name}" on ${upgradeId} states an actual date`
-      )
-    }
     if (!testnet.stated) return []
 
     const when = parsePartialDate(testnet.stated.value)
@@ -233,7 +228,10 @@ const normalizeTestnets = (
         kind: "testnet",
         network: testnet.name,
         when,
-        status: TESTNET_STATUS[testnet.stated.claim],
+        status:
+          testnet.status === "upcoming" && testnet.stated.claim === "actual"
+            ? "confirmed"
+            : TESTNET_STATUS[testnet.stated.claim],
       } satisfies Milestone,
     ]
   })

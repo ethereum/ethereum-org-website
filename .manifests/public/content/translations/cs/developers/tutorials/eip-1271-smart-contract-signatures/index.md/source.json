@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/eip-1271-smart-contract-signatures/index.md",
   "generatedAt": "2026-06-17T23:26:33.092Z",
-  "rootHash": "0580aecbc61e",
+  "rootHash": "7e3789170625",
   "tree": {
-    "contentHash": "d96f43b9a118",
-    "anchorHash": "015f8429e7e7",
+    "contentHash": "cd7bbb20437d",
+    "anchorHash": "7910cde96bb4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "bc7e47cde2bb",
+        "contentHash": "153f1ec85a6e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,32 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "67a6373ecc24"
+        "contentHash": "3299b59d443b",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "7fef5aec018f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "2de53d4a9add",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "bdefc259426b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -52,7 +52,7 @@ La première ligne importe l'interface, et la seconde spécifie que nous l'impl�
 ```python
 #pragma version >0.3.10
 ```
-### L'interface ERC721Receiver
+### L'interface ERC721Receiver {#receiver-interface}
 
 ```python
 # Interface pour le contrat appelé par safeTransferFrom()
@@ -91,7 +91,7 @@ La requête peut contenir jusqu'à 1024 octets de données utilisateur.
 ```
 
 Pour éviter les cas où un contrat accepte accidentellement un transfert, la valeur de retour n'est pas un booléen, mais une valeur spécifique de quatre octets, le sélecteur de fonction de `onERC721Received`. La fonction est `nonpayable` car un contrat récepteur peut modifier son propre état lorsqu'il accepte un jeton.
-### Événements
+### Événements {#events}
 
 Les [événements](/developers/docs/smart-contracts/anatomy/#events-and-logs) sont émis pour informer les utilisateurs et les serveurs en dehors de la chaîne de blocs des événements. Notez que le contenu des événements n'est pas disponible pour les contrats sur la chaîne de blocs. Les trois événements ERC-721 sont définis par l'interface `IERC721` que nous avons importée, donc ce contrat ne les déclare pas lui-même ; il les émet avec `log IERC721.<Event>(...)`, comme nous le verrons dans les fonctions de transfert ci-dessous.
 
@@ -100,7 +100,7 @@ Les [événements](/developers/docs/smart-contracts/anatomy/#events-and-logs) so
 Une approbation ERC-721 est similaire à une allocation ERC-20 : une adresse spécifique est autorisée à transférer un jeton spécifique, et `Approval` (`owner`, `approved`, `token_id`) est émis chaque fois que cette adresse approuvée est définie ou réaffirmée. Cela donne un mécanisme aux contrats pour répondre lorsqu'ils acceptent un jeton. Les contrats ne peuvent pas écouter les événements, donc si vous leur transférez simplement le jeton, ils ne le « savent » pas. De cette façon, le propriétaire soumet d'abord une approbation, puis envoie une requête au contrat : « J'ai approuvé que vous transfériez le jeton X, veuillez faire... ». C'est un choix de conception pour rendre le standard ERC-721 similaire au standard ERC-20. Parce que les jetons ERC-721 ne sont pas fongibles, un contrat peut également identifier qu'il a obtenu un jeton spécifique en regardant la propriété du jeton.
 
 Enfin, `ApprovalForAll` (`owner`, `operator`, `approved`) est émis lorsqu'un _opérateur_ est activé ou désactivé pour un propriétaire. Il est parfois utile d'avoir un opérateur qui peut gérer tous les jetons d'un compte d'un type spécifique (ceux qui sont gérés par un contrat spécifique), similaire à une procuration. Par exemple, je pourrais vouloir donner un tel pouvoir à un contrat qui vérifie si je ne l'ai pas contacté depuis six mois, et si c'est le cas, distribue mes actifs à mes héritiers (si l'un d'eux le demande, les contrats ne peuvent rien faire sans être appelés par une transaction). Dans l'ERC-20, nous pouvons simplement donner une allocation élevée à un contrat d'héritage, mais cela ne fonctionne pas pour l'ERC-721 car les jetons ne sont pas fongibles. C'est l'équivalent. La valeur `approved` nous indique si l'événement concerne une approbation ou le retrait d'une approbation.
-### Variables d'État
+### Variables d'État {#state-vars}
 
 Ces variables contiennent l'état actuel des jetons : lesquels sont disponibles et qui les possède. La plupart d'entre elles sont des objets `HashMap`, [des mappages unidirectionnels qui existent entre deux types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -152,7 +152,7 @@ L'[ERC-165](https://eips.ethereum.org/EIPS/eip-165) spécifie un mécanisme pour
 
 Ce sont les fonctions qui implémentent réellement l'ERC-721.
 
-#### Constructeur
+#### Constructeur {#constructor}
 
 ```python
 @deploy
@@ -174,7 +174,7 @@ En Python, et en Vyper, vous pouvez également créer un commentaire en spécifi
 ```
 
 Pour accéder aux variables d'état, vous utilisez `self.<nom de la variable>` (encore une fois, comme en Python). Le constructeur enregistre le compte qui a déployé le contrat en tant que `minter` (frappeur).
-#### Fonctions de Vue
+#### Fonctions de Vue {#views}
 
 Ce sont des fonctions qui ne modifient pas l'état de la chaîne de blocs, et peuvent donc être exécutées gratuitement si elles sont appelées en externe. Si les fonctions de vue sont appelées par un contrat, elles doivent toujours être exécutées sur chaque nœud et coûtent donc du gaz.
 
@@ -272,7 +272,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 Cette fonction vérifie si `_operator` est autorisé à gérer tous les jetons de `_owner` dans ce contrat. Parce qu'il peut y avoir plusieurs opérateurs, il s'agit d'un HashMap à deux niveaux.
-#### Fonctions d'Aide au Transfert
+#### Fonctions d'Aide au Transfert {#transfer-helpers}
 
 Ces fonctions implémentent des opérations qui font partie du transfert ou de la gestion des jetons.
 
@@ -388,7 +388,7 @@ Nous avons cette fonction interne car il y a deux façons de transférer des jet
 ```
 
 Pour émettre un événement en Vyper, vous utilisez une instruction `log` ([voir ici pour plus de détails](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)). Parce que les événements appartiennent à l'interface importée, nous nous y référons en tant que `IERC721.Transfer` et passons leurs champs par mot-clé.
-#### Fonctions de Transfert
+#### Fonctions de Transfert {#transfer-funs}
 
 ```python
 

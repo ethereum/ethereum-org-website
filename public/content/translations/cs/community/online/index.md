@@ -48,7 +48,7 @@ Pokud se domníváte, že by nějaká komunita měla být na základě těchto p
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - Discord chat provozovaný ETHGlobal: online komunita pro hackery Etherea z celého světa</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - komunita na Discordu zaměřená na vývoj Etherea</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - komunitou vedené poradenství, vzdělávání, podpora a zdroje pro stávající i potenciální stakery</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Tým webu Ethereum.org</Link> - zastavte se a popovídejte si o vývoji a designu webu ethereum.org s týmem a lidmi z komunity</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Tým webu Ethereum.org</Link> - zastavte se a popovídejte si o vývoji a designu webu ethereum.org s týmem a lidmi z komunity</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - komunita tvůrců Web3, kde se scházejí vývojáři, vůdčí osobnosti oboru a nadšenci do Etherea. Jsme nadšení do vývoje, designu a kultury Web3. Pojďte tvořit s námi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat pro vývoj v Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- fórum pro otázky a odpovědi</i></SocialListItem>

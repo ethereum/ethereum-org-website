@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "Уэн Шифт Хэппенс"
 breadcrumb: "ИИ-агенты: Луна"

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/next-10-years-of-ethereum/index.md",
   "generatedAt": "2026-04-28T23:50:13.839Z",
-  "rootHash": "265356611279",
+  "rootHash": "2852402d3130",
   "tree": {
-    "contentHash": "0c7109f38b71",
-    "anchorHash": "f5b8d1a486f2",
+    "contentHash": "daa7dc3202e4",
+    "anchorHash": "28700c17de16",
     "children": {
       "frontmatter:title": {
-        "contentHash": "322e4d13bbd0",
+        "contentHash": "58ae492b55ee",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "46db41c7061b",
+        "contentHash": "03922ab0044d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "44dd073e7e41"
+        "anchorHash": "608932a1cf01"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4307b0ea1ab9"
+        "anchorHash": "ed7b9d786c85"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "df571735a772",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "93d5ec5ca6a6"
+        "anchorHash": "214546a355f8"
       },
       "prose:1": {
         "contentHash": "75d98e226dca",

@@ -1,0 +1,231 @@
+{
+  "version": 2,
+  "sourceFile": "public/content/videos/privacy-fixes-most-people-never-make/index.md",
+  "generatedAt": "2026-09-30T19:15:15.806Z",
+  "rootHash": "c59e21f72ce8",
+  "tree": {
+    "contentHash": "2ec025fd7dab",
+    "anchorHash": "051659272a48",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "91a0f3c44044",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "c46d4c8d14e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "524af548cdab"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "aa939a761f41"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b7c5794d7433"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "df6241a99cf9"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6f7d5da00fe1"
+      },
+      "prose:2": {
+        "contentHash": "ad812f326f31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "f2fbd08b5e69",
+        "anchorHash": "f88875e5ea24"
+      },
+      "prose:3": {
+        "contentHash": "b5819a9c8064",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "b70083f42b08"
+      },
+      "prose:4": {
+        "contentHash": "a5f692f2a176",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "a-new-year-a-new-start-000": {
+        "contentHash": "b532d8662e25",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "980bcf27e087",
+        "children": {
+          "_label": {
+            "contentHash": "980bcf27e087",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ade77b9a1dc0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "email-033": {
+        "contentHash": "775f12b0502e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "629ff9105af6",
+        "children": {
+          "_label": {
+            "contentHash": "629ff9105af6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d17714cc71f5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "messaging-219": {
+        "contentHash": "93af2b4f21b1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d63f423257a7",
+        "children": {
+          "_label": {
+            "contentHash": "d63f423257a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a124d1cd4cdc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "browser-423": {
+        "contentHash": "c6c9eb88650c",
+        "anchorHash": "ebf2a1b0efa1",
+        "labelHash": "43ee37b44803",
+        "children": {
+          "_label": {
+            "contentHash": "43ee37b44803",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "10a89ac7ccaf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e8d2073f6caf",
+            "anchorHash": "1fb12eb68868"
+          },
+          "prose:2": {
+            "contentHash": "0d5a6c5a032b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "disclaimer-618": {
+        "contentHash": "8d07a2097ba4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "453c86327b9c",
+        "children": {
+          "_label": {
+            "contentHash": "453c86327b9c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0195b3b9361f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "privacy-does-not-have-to-be-extreme-656": {
+        "contentHash": "1a59d2e3939c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0fc9198f14bb",
+        "children": {
+          "_label": {
+            "contentHash": "0fc9198f14bb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e1af6b165fa2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:2",
+      "link:0",
+      "prose:3",
+      "link:1",
+      "prose:4",
+      "a-new-year-a-new-start-000",
+      "email-033",
+      "messaging-219",
+      "browser-423",
+      "disclaimer-618",
+      "privacy-does-not-have-to-be-extreme-656"
+    ]
+  },
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+}

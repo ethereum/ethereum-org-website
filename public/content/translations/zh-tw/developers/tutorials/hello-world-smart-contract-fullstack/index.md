@@ -32,7 +32,7 @@ published: 2021-10-25
 
 有許多方法可以向以太坊鏈發出請求。為了簡單起見，我們將在 Alchemy 上使用免費帳戶，這是一個區塊鏈開發者平台和 API，允許我們與以太坊鏈通訊，而無需自己執行節點。Alchemy 也有用於監控和分析的開發者工具；我們將在本教學中利用這些工具來了解智能合約部署在底層是如何運作的。
 
-### 建立你的應用程式與 API 金鑰
+### 建立你的應用程式與 API 金鑰 {#create-your-app-and-api-key}
 
 建立 Alchemy 帳戶後，你可以透過建立應用程式來產生 API 金鑰。這將允許你向 Sepolia 測試網發出請求。如果你對測試網不熟悉，可以[閱讀 Alchemy 的選擇網路指南](https://www.alchemy.com/docs/choosing-a-web3-network)。
 
@@ -47,12 +47,12 @@ published: 2021-10-25
 _注意：請務必選擇 **Sepolia**，否則本教學將無法運作。_
 
 點擊 **Create app**。你的應用程式將會出現在下方的表格中。
-### 建立以太坊帳戶
+### 建立以太坊帳戶 {#create-an-ethereum-account}
 
 你需要一個以太坊帳戶來發送和接收交易。我們將使用梅塔馬斯克，這是一個瀏覽器中的虛擬錢包，可讓使用者管理他們的以太坊帳戶地址。
 
 你可以[在此](https://metamask.io/download)免費下載並建立一個梅塔馬斯克帳戶。當你在建立帳戶時，或者如果你已經有一個帳戶，請確保切換到右上角的「Sepolia 測試網路」（這樣我們就不會使用真實的資金進行交易）。
-### 第 4 步：從水龍頭新增以太幣
+### 第 4 步：從水龍頭新增以太幣 {#step-4-add-ether-from-a-faucet}
 要將你的智能合約部署到測試網路，你需要一些假的 ETH。要在 Sepolia 網路上獲取 ETH，請前往 Sepolia 水龍頭並輸入你的 Sepolia 帳戶地址。請參閱[測試網路頁面](/developers/docs/networks/#sepolia)以獲取可嘗試的選項列表：
 
 _注意：由於網路壅塞，這可能需要一些時間。_
@@ -337,7 +337,7 @@ const hello_world = await HelloWorld.deploy()
 
 在 `ContractFactory` 上呼叫 `deploy()` 將開始部署，並返回一個解析為 `Contract` 物件的 `Promise`。這是一個為我們每個智能合約函式提供方法的物件。
 
-### 第 16 步：部署我們的合約
+### 第 16 步：部署我們的合約 {#step-16-deploy-our-contract}
 
 我們終於準備好部署我們的智能合約了！導覽至命令列並執行：
 
@@ -508,7 +508,7 @@ main()
 
 請注意，在第 11 行，我們對回傳的交易物件呼叫了 `.wait()`。這確保了我們的腳本在退出函式之前，會等待交易在區塊鏈上被開採。如果沒有包含 `.wait()` 呼叫，腳本可能無法在合約中看到更新後的 `message` 值。
 
-### 讀取新訊息
+### 讀取新訊息 {#read-the-new-message}
 
 你應該能夠重複[上一個步驟](#read-the-init-message)來讀取更新後的 `message` 值。花點時間看看你是否能進行必要的更改，將這個新值印出來！
 
@@ -634,7 +634,7 @@ module.exports = {
 }
 ```
 
-#### 在 Etherscan 上驗證你的智能合約
+#### 在 Etherscan 上驗證你的智能合約 {#verify-your-smart-contract-on-etherscan}
 
 確保所有檔案都已儲存，且所有 `.env` 變數都已正確設定。
 
@@ -937,7 +937,7 @@ const web3 = createAlchemyWeb3(alchemyKey)
 
 要載入您的 Hello World 智能合約，您需要它的合約地址和 ABI，如果您完成了[本教學的第 3 部分](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)，這兩者都可以在 Etherscan 上找到。
 
-#### 如何從 Etherscan 取得你的合約 ABI
+#### 如何從 Etherscan 取得你的合約 ABI {#how-to-get-your-contract-abi-from-etherscan}
 
 如果你跳過了本教學的第 3 部分，請先部署並驗證你自己的 HelloWorld 合約。然後在 [Sepolia Etherscan](https://sepolia.etherscan.io) 上開啟你的合約頁面以複製其 ABI。
 
@@ -1112,10 +1112,10 @@ useEffect(async () => {
 
 如果您想進一步了解以太坊上的交易如何運作，請查看以太坊基金會的[這個頁面](/developers/docs/transactions/)。
 
-#### 下載梅塔馬斯克
+#### 下載梅塔馬斯克 {#download-metamask}
 
 您可以在[這裡](https://metamask.io/download)免費下載並建立梅塔馬斯克帳戶。當您在建立帳戶時，或者如果您已經擁有帳戶，請務必切換到右上角的「Sepolia 測試網路」\(這樣我們就不會動用到真實的資金\)。
-#### 從水龍頭新增以太幣
+#### 從水龍頭新增以太幣 {#add-ether-from-a-faucet}
 要在以太坊區塊鏈上簽署交易，我們需要一些假的 ETH。要取得 ETH，您可以前往[測試網頁面](/developers/docs/networks/#sepolia)上列出的 Sepolia 水龍頭，並輸入您的 Sepolia 帳戶地址。不久之後，您應該就會在您的梅塔馬斯克帳戶中看到 ETH！
 #### 檢查你的餘額 {#check-your-balance}
 

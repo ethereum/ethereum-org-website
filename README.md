@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
 [![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors)
-[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/ethereum-org)
+[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://ethereum.org/discord/)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://x.com/ethdotorg)
 
 <div align="center" style="margin-top: 1em; margin-bottom: 3em;">
@@ -166,7 +166,7 @@ git push
   - ex. `Updates out of date content [Fixes #1234]`
 - Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.,: ![Netlify deploy preview](public/images/preview-deploy.png)
 - _Confirm that your Netlify preview deploy looks and functions as expected_
-- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
+- Why not say hi and draw attention to your PR in [our discord server](https://ethereum.org/discord/)?
 
 ### 6. Wait for review
 
@@ -207,7 +207,7 @@ If you have committed any changes in 2026 so far that were merged into our repo 
 
 There are OATs for GitHub, content, design and translation contributions.
 
-  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
+  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://ethereum.org/discord/)
 
 - 👆 To claim your Contributor OATs, join our Discord server, create a post and paste links to your contributions in the `#🥇 | proof-of-contribution` [channel](https://discord.com/channels/714888181740339261/1212737737916948530)
 
@@ -1045,7 +1045,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><img src="https://avatars.githubusercontent.com/u/94481845?v=4?s=100" width="100px;" alt="0xdie"/><br /><sub><b>0xdie</b></sub><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xdie" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Taimoor0217"><img src="https://avatars.githubusercontent.com/u/48244930?v=4?s=100" width="100px;" alt="Taimoor Ali"/><br /><sub><b>Taimoor Ali</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Taimoor0217" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ATaimoor0217" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/andrejrakic/"><img src="https://avatars.githubusercontent.com/u/37881789?v=4?s=100" width="100px;" alt="Andrej"/><br /><sub><b>Andrej</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=andrejrakic" title="Documentation">📖</a> <a href="#content-andrejrakic" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.daita.tech"><img src="https://avatars.githubusercontent.com/u/25297591?v=4?s=100" width="100px;" alt="Pascal Marco Caversaccio"/><br /><sub><b>Pascal Marco Caversaccio</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pcaversaccio" title="Documentation">📖</a> <a href="#content-pcaversaccio" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://pcaversaccio.com"><img src="https://avatars.githubusercontent.com/u/25297591?v=4?s=100" width="100px;" alt="pcaversaccio"/><br /><sub><b>pcaversaccio</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pcaversaccio" title="Documentation">📖</a> <a href="#content-pcaversaccio" title="Content">🖋</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.slip.so"><img src="https://avatars.githubusercontent.com/u/22961671?v=4?s=100" width="100px;" alt="kennethcassel"/><br /><sub><b>kennethcassel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kennethcassel" title="Documentation">📖</a></td>
@@ -2251,6 +2251,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pillowtalk-Qy"><img src="https://avatars.githubusercontent.com/u/190499865?v=4?s=100" width="100px;" alt="Qy"/><br /><sub><b>Qy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apillowtalk-Qy" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BonganiN-KhulaIQ"><img src="https://avatars.githubusercontent.com/u/288278264?v=4?s=100" width="100px;" alt="Bongani Nkosi"/><br /><sub><b>Bongani Nkosi</b></sub></a><br /><a href="#content-BonganiN-KhulaIQ" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kriss39"><img src="https://avatars.githubusercontent.com/u/93033289?v=4?s=100" width="100px;" alt="Kanan"/><br /><sub><b>Kanan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akriss39" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pepcoiro"><img src="https://avatars.githubusercontent.com/u/313789529?v=4?s=100" width="100px;" alt="PepCoiro"/><br /><sub><b>PepCoiro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apepcoiro" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://pingify.io"><img src="https://avatars.githubusercontent.com/u/33478820?v=4?s=100" width="100px;" alt="David"/><br /><sub><b>David</b></sub></a><br /><a href="#tool-Web3Dave" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://toyeshh.com"><img src="https://avatars.githubusercontent.com/u/184831353?v=4?s=100" width="100px;" alt="Toyeshh Medikonda"/><br /><sub><b>Toyeshh Medikonda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atoyeshhm" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://discord.com/invite/JTkeNXX"><img src="https://avatars.githubusercontent.com/u/54760103?v=4?s=100" width="100px;" alt="Arunim Shukla"/><br /><sub><b>Arunim Shukla</b></sub></a><br /><a href="#maintenance-arunimshukla" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
@@ -2264,6 +2270,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ### Join our Discord server
 
-We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
+We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://ethereum.org/discord/).
 
 [🔼Back to top!](#Table-of-contents)

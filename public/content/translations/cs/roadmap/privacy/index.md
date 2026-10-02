@@ -107,21 +107,21 @@ Soukromé dokazování také umožňuje **soukromí s ohledem na dodržování p
 
 zkEVM mohou tyto kontroly dodržování předpisů provádět soukromě, ověřovat regulační status bez odhalení podrobností o transakcích nebo identit uživatelů.
 
-## Aktuální pokrok plánu rozvoje {#current-progress}
+## Současný pokrok v plánu rozvoje {#current-progress}
 
-Směr vývoje soukromí na Ethereu je utvářen spíše shodou v rámci celého ekosystému než jakoukoli jedinou organizací. Plán rozvoje [strawmap.org](https://strawmap.org/) shromažďuje navrhované aktualizace z celého ekosystému, aby sledoval a navrhoval, kde komunita dosáhla konsenzu. Výzkumníci z Nadace Ethereum pomáhají spravovat paralelní plán výzkumu a vývoje napříč výzkumným ekosystémem, zaměřený na pokrok v nástrojích pro soukromí na přístupové vrstvě, infrastruktuře identity a systémech s ohledem na dodržování předpisů. Oba příklady odrážejí stejnou základní prioritu učinit soukromí na Ethereu strukturálním, nikoli volitelným.
+Směr vývoje soukromí na Ethereu je utvářen spíše shodou napříč celým ekosystémem než jakoukoli jedinou organizací. Plán rozvoje [strawmap.org](https://strawmap.org/) shromažďuje navrhovaná vylepšení z celého ekosystému, aby sledoval a navrhoval, kde komunita dosáhla konsensu. Výzkumníci v Nadaci Ethereum pomáhají spravovat paralelní plán výzkumu a vývoje napříč výzkumným ekosystémem, zaměřený na pokrok v nástrojích pro soukromí na přístupové vrstvě, infrastruktuře identity a systémech s ohledem na dodržování předpisů. Oba příklady odrážejí stejnou základní prioritu: učinit soukromí na Ethereu spíše strukturálním než volitelným.
 
-Výzkum a vývoj v oblasti soukromí na Ethereu zahrnuje desítky týmů napříč ekosystémem. Práce postupují na aktualizacích protokolu, řešeních na přístupové vrstvě, infrastruktuře identity a nástrojích s ohledem na dodržování předpisů.
+Výzkum a vývoj v oblasti soukromí na Ethereu zahrnuje desítky týmů napříč ekosystémem. Práce postupují na vylepšeních protokolu, řešeních přístupové vrstvy, infrastruktuře identity a nástrojích s ohledem na dodržování předpisů.
 
-**Aktualizace protokolu**: EIP-8141 (Rámcové transakce), EIP-7805 (FOCIL), EIP-8250 (Klíčované nonce) a EIP-8182 (Chráněné fondy na úrovni protokolu) jsou v aktivním vývoji a zvažují se pro aktualizaci [Hegotá](https://forkcast.org/upgrade/hegota/), další aktualizaci sítě po [Glamsterdam](/roadmap/glamsterdam/). EIP-8025 (volitelné exekuční důkazy) a Verkle stromy jsou také cíleny pro Hegotá, čímž poskytují základ pro soukromé výpočty založené na zkEVM na Ethereum Mainnet. Paralelně dozrává výzkum kolem koprocesorů FHE, které umožní vícestranné šifrované chytré kontrakty.
+**Vylepšení protokolu**: EIP-8141 (Rámcové transakce), EIP-7805 (FOCIL), EIP-8250 (Klíčované nonce) a EIP-8182 (Stíněné fondy na úrovni protokolu) jsou v aktivním vývoji a zvažují se pro [aktualizaci Hegotá](https://forkcast.org/upgrade/hegota/), další aktualizaci sítě po [Glamsterdamu](/roadmap/glamsterdam/). EIP-8025 (volitelné důkazy exekuce) a Verkle stromy jsou také cíleny pro Hegotá, čímž poskytují základ pro soukromé výpočty založené na zkEVM na Ethereum Mainnetu. Paralelně dozrává výzkum kolem koprocesorů FHE, které umožní vícestranné šifrované chytré kontrakty.
 
-**Přístupová vrstva**: Výzkum PIR postupuje s aktivními implementacemi, které testují infrastrukturní týmy. SDK peněženky Kohaku je ve vývoji jako open-source reference pro peněženky zachovávající soukromí.
+**Přístupová vrstva**: Výzkum PIR postupuje s aktivními implementacemi, jako je [Raven](https://github.com/hisoka-io/raven), které testují infrastrukturní týmy. SDK peněženky Kohaku je ve vývoji jako open-source reference pro peněženky zachovávající soukromí.
 
 **Dokazování na straně klienta**: Týmy aktivně využívají výsledky testů založených na benchmarcích k optimalizaci toho, jak důkazy s nulovou znalostí běží na standardních zařízeních. Projekty jako Spartan-WHIR posouvají vpřed bezpečné, kvantově odolné důkazy, které lze snadno ověřit přímo v síti Ethereum. Výzkumné iniciativy jako leanVM poskytují odlehčený zkVM navržený tak, aby spojil více kryptografických podpisů dohromady, čímž zmenšuje velikost dat kvantově bezpečných podpisů 250krát, aby se ušetřilo místo a snížily náklady na síť.
 
-**Identita a dokazování**: Iniciativa zkID vytváří optimalizovaná dokazovací schémata pro mobilní zařízení. MACI nadále zabezpečuje kola kvadratického financování a správu DAO, nástroje jako Freedom Tool od Rarimo přinášejí hlasování s nulovým vědomím do voleb v reálném světě a pokračuje probíhající výzkum standardů identity zachovávajících soukromí.
+**Identita a dokazování**: Iniciativa zkID vytváří optimalizovaná schémata dokazování pro mobilní zařízení. MACI nadále zabezpečuje kola kvadratického financování a správu decentralizovaných autonomních organizací (DAO), nástroje jako Freedom Tool od Rarimo přinášejí hlasování s nulovým vědomím do skutečných voleb a pokračuje probíhající výzkum standardů identity zachovávajících soukromí.
 
-Žádná část této práce není dokončena. Časové osy jsou cíle, nikoli záruky, a [proces správy Etherea založený na konsenzu](/governance/) znamená, že plán rozvoje se může s postupem výzkumu měnit. Rozsah aktivního vývoje a počet týmů pracujících na soukromí však představují jasný závazek učinit Ethereum ve výchozím nastavení odolným vůči extrakci.
+Žádná část této práce není dokončena. Časové osy jsou cíle, nikoli záruky, a [proces správy Etherea založený na konsensu](/governance/) znamená, že plán rozvoje se může měnit s tím, jak postupuje výzkum. Ale rozsah aktivního vývoje a počet týmů pracujících na soukromí představují jasný závazek učinit Ethereum ve výchozím nastavení odolným vůči extrakci.
 
 ## Další čtení {#further-reading}
 

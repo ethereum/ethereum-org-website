@@ -18,7 +18,7 @@ The entry ships the acronym in lowercase, so it renders lowercase mid-sentence i
 | --- | --- | --- | --- |
 | hi | `distributed validator technology (DVT)` | `वितरित सत्यापनकर्ता तकनीक (dvt)` | `(DVT)` |
 | hi | `Go Ethereum (Geth)` | `गो इथेरियम (geth)` | `(Geth)` |
-| hi, id, tr, ur, mr, bn, vi, ko, pt-br | `layer 2 (L2)` | `... (l2)` | `(L2)` |
+| bn, cs, es, fr, hi, id, it, ko, mr, pt-br, ru, sw, ta, te, tr, uk, ur, vi, zh (19 of 24) | `layer 2 (L2)` | `... (l2)` | `(L2)` |
 | id, ur | `liquid staking token (LST)` | `token staking likuid (lst)` | `(LST)` |
 | bn | `distributed validator technology (DVT)` | `... (dvt)` | `(DVT)` |
 | ur | `Go Ethereum (Geth)` | `... (geth)` | `(Geth)` |
@@ -167,3 +167,40 @@ The blocking question is not linguistic. If devcon.org's hi and mr ticket pages 
 Until then the shipped forms stand. Two worth noting as furthest from a tier name if the answer comes back "keep Latin": ru `стандартный входной билет` and zh `普通门票` describe a generic ticket class rather than naming the tier.
 
 **Related:** this entry and section 9's `Devcon` are the same request shape and should land together -- both are Devcon-campaign proper nouns that the pipeline re-decides on every run.
+
+## 11. `zk-rollup` compound entries that conflict with their own parts or with shipped content (PR #19291)
+
+The `zk-rollup` entry (English head `zero-knowledge rollup`) is the compound the pipeline correctly applies for "zero-knowledge rollups", and all 24 locales currently match it. Three of those entries conflict with something else the glossary or the site already says.
+
+| Locale | `zk-rollup` entry | Conflicts with | Consequence |
+| --- | --- | --- | --- |
+| zh-tw | `零知識卷疊` (confidence **medium**) | `rollups` -> `匯總` (high), and the zh-tw page the `<zkrollups>` link points at is titled `零知識匯總` (59 uses of `匯總`, 0 of `卷疊`) | Reader clicks `零知識卷疊` and lands on a page called `零知識匯總`. `卷疊` is 11 occurrences repo-wide against 666 for `匯總`; it looks like a Simplified-to-Traditional carryover of zh's legitimate `卷叠` |
+| ta | `பூஜ்ஜிய அறிவு சுருக்கம்` (confidence **medium**, translated, unhyphenated) | `rollups` -> `ரோலப்கள்` (high), whose note says direct transliteration is preferred; the bare `zero-knowledge` entry is hyphenated `பூஜ்ய-அறிவு` | The compound translates what the base entry says to transliterate, and drops the hyphen the bare entry carries. Within one page, `சுருக்கம்` then does double duty for "rollup" and for "succinct" (`சுருக்கமான சான்று`) |
+| te | `జీరో-నాలెడ్జ్ రోలప్` | `rollups` -> `రోల్అప్‌లు`, i.e. a different base spelling (`రోలప్` vs `రోల్అప్`) | The glossary ships two spellings of the same base noun, so singular and plural of one term disagree depending on which entry the pipeline hits |
+
+zh is the control case and needs no change: its `零知识卷叠` matches the zh page title, `src/intl/zh/glossary.json`, and 67 repo-wide uses.
+
+Resolving these upstream is what stops a reviewer re-litigating them: because `/filter` returns only the single-word parts, a compound that disagrees with its parts reads at review time like a pipeline defect. See `intl-review/references/ethglossary-usage.md` step 0.
+
+## 12. Gaps and conflicts surfaced by PR #19326
+
+Five items, all found reviewing the same four source files across 24 locales.
+
+**a. Missing short forms block an otherwise mechanical fix.** Collapsing an over-expanded acronym back to the bare form (known-patterns #80) depends on the term's `ui`/`tag` context holding the acronym. Six locale/term pairs have no short form, so 21 keys had to ship expanded: `DAO` in ar/hi/mr, `DEX` in ar/hi/mr/ur/zh-tw, `DeFi` in ko. Every other locale has them. Adding a bare-acronym `ui`/`tag` context to these entries closes the gap without touching the prose form.
+
+**b. Missing entries: `Python`, `Rust`, `Foundation`, `salt`.** Each caused a real defect this run that had to be argued from the general always-Latin rule rather than from an entry:
+
+| Term | Defect | Locale |
+| --- | --- | --- |
+| `Python` | `पायथन-आधारित` at 4 sites, while the same file kept `Python` Latin elsewhere | mr |
+| `Rust` | `रस्ट-आधारित` | mr |
+| `Foundation` (the foundation.app marketplace) | transliterated to `파운데이션`; 21/24 locales keep it Latin | ko |
+| `salt` (cryptographic) | rendered `chumvi`, the edible kind | sw |
+
+`salt` is the instructive one: English scare-quotes it as a coinage, and PR #18942's sw review had already established English `"salt"` as the correct sw rendering. Without an entry that decision gets re-litigated every run.
+
+**c. `Keccak-256` numerals contradict the cross-cutting rule.** bn `কেক্যাক-২৫৬` and mr `केकाक-256` disagree with each other and with the always-Latin treatment applied to hash-function names elsewhere; ar's entry notes "Western Arabic numerals are retained as per instructions" while bn's uses Bengali digits. This is the long-standing issue #53 and it stays deliberately unfixed in the locale files until the entries agree.
+
+**d. hi `contract` / `smart contract` notes invite the deviation they should prevent.** The entries are `अनुबंध` and `स्मार्ट अनुबंध`, but both carry notes pointing at the other form: "'कॉन्ट्रैक्ट' is very frequently used in developer communities" and "स्मार्ट कॉन्ट्रैक्ट is widely accepted in conversational Hindi tech discussions". PR #19326 flipped `languages/index.md` wholesale to the note's form (25 sites) while its sibling `testing/index.md` kept the entry's form, splitting one page pair two ways. Either demote the note to an `accepted` alias or change the entry; as written it reads as permission.
+
+**e. fr `mainnet` vs `Ethereum Mainnet` is correct but trap-shaped.** `mainnet` -> `Réseau principal` (capitalized) and `Ethereum Mainnet` -> `réseau principal Ethereum` (lowercase). Both are right, and a reviewer who sweeps one form across a file will corrupt the other: `testing/index.md` holds four of the first and one of the second. Worth a cross-reference note on each entry rather than a data change.

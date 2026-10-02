@@ -1,6 +1,6 @@
 "use client"
 
-import { memo } from "react"
+import { memo, useEffect, useState } from "react"
 
 import Checkbox from "@/components/ui/checkbox"
 
@@ -42,12 +42,20 @@ function CatalogCheckboxGroup({
   const selectedCount = options.filter((option) =>
     selectedIds.includes(option.id)
   ).length
+  const [open, setOpen] = useState(defaultOpen || selectedCount > 0)
+
+  // URL filters arrive after mount, so a collapsed group can gain a selection
+  // it would otherwise hide. Never auto-closes: that is the reader's call.
+  useEffect(() => {
+    if (selectedCount > 0) setOpen(true)
+  }, [selectedCount])
 
   return (
     <CatalogFilterGroup
       label={label}
       count={selectedCount > 0 ? nf.format(selectedCount) : undefined}
-      defaultOpen={defaultOpen}
+      open={open}
+      onOpenChange={setOpen}
       scrollable={scrollable}
     >
       {options.map((option) => (

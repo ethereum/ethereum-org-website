@@ -29,7 +29,7 @@ Berikut adalah beberapa standar token paling populer di Ethereum:
 
 Daftar lengkap proposal [ERC](https://eips.ethereum.org/erc).
 
-## Bacaan lebih lanjut
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 

@@ -101,11 +101,11 @@ Ve schématu dostupnosti dat s kaucí může být kdokoli pověřen uchováván�
 
 ## Volitions a Validium {#volitions-and-validium}
 
-Validia nabízejí mnoho výhod, ale přinášejí s sebou kompromisy (nejvýrazněji dostupnost dat). Ale stejně jako u mnoha řešení škálování jsou Validia vhodná pro specifické případy použití – a proto byly vytvořeny volitions.
+Validia nabízejí mnoho výhod, ale přinášejí s sebou kompromisy (nejvýrazněji dostupnost dat). Ale stejně jako u mnoha řešení pro škálování jsou Validia vhodná pro specifické případy použití – a proto byly vytvořeny Volitions.
 
-Volitions kombinují ZK-rollup a řetězec Validia a umožňují uživatelům přepínat mezi těmito dvěma řešeními škálování. S volitions mohou uživatelé využít offchain dostupnost dat Validia pro určité transakce, přičemž si zachovávají svobodu přepnout na řešení s onchain dostupností dat (ZK-rollup), pokud je to potřeba. To v podstatě dává uživatelům svobodu zvolit si kompromisy tak, jak to diktují jejich jedinečné okolnosti.
+Volitions kombinují ZK-rollup a řetězec Validia a umožňují uživatelům přepínat mezi těmito dvěma řešeními pro škálování. S Volitions mohou uživatelé využít offchain dostupnost dat Validia pro určité transakce, zatímco si zachovávají svobodu přepnout na řešení s onchain dostupností dat (ZK-rollup), pokud je to potřeba. To v podstatě dává uživatelům svobodu zvolit si kompromisy tak, jak to vyžadují jejich jedinečné okolnosti.
 
-Decentralizovaná burza (DEX) může preferovat použití škálovatelné a soukromé infrastruktury Validia pro obchody s vysokou hodnotou. Může také použít ZK-rollup pro uživatele, kteří chtějí vyšší bezpečnostní záruky a bezdůvěrnost ZK-rollupu.
+Decentralizovaná burza (DEX) může pro obchody s vysokou hodnotou preferovat škálovatelnost Validia a jeho schopnost omezit veřejný přístup k transakčním datům. Udržování dat offchain omezuje, kdo je může vidět, ale samo o sobě to nečiní transakce kryptograficky soukromými: důvěrnost závisí na řízení přístupu a mechanismech soukromí daného nasazení a data zůstávají viditelná pro operátora a pro kohokoli, kdo je drží. DEX může také použít ZK-rollup pro uživatele, kteří chtějí vyšší bezpečnostní záruky a bezdůvěrnost ZK-rollupu.
 
 ## Validia a kompatibilita s EVM {#validiums-and-evm-compatibility}
 

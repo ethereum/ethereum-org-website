@@ -73,7 +73,7 @@ non-Latin scripts, transliterated author names are correct (e.g.,
 The sanitizer should detect semantic translations (wrong meaning) but NOT
 flag phonetic transliterations.
 
-**Transliteration authority:** ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
+**Transliteration authority:** ETHGlossary (https://glossary.ethereum.org) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
 
 **Authority hierarchy — terms ETHGlossary covers vs. items it doesn't (READ THIS before flagging a transliteration/calque/keep-Latin "error"):**
 
@@ -1051,3 +1051,60 @@ In ar and ur the sanitizer wraps the Latin run as `⁦ETHORG10⁩` (LRI/PDI), wh
 Both are right for rendering and both mean a reader who *selects* the code gets more than the code: invisible U+2066/U+2069 in ar/ur, a trailing particle in ja/ko/te. Reading and retyping is unaffected, which is the normal path for a voucher code.
 
 **Reviewer rule:** do not "fix" either one -- stripping the isolates breaks RTL ordering and detaching the particle breaks the grammar. Flag it as a product question instead (is the code presented anywhere copy-clickable?) and leave the locale files alone.
+
+### 79. Translated program output inside a code fence, and why nothing catches it (PATTERN -- pipeline blind spot)
+
+PR #19326 shipped the `clef newaccount` terminal transcript in `developers/docs/accounts/index.md` translated into **17 of 24 locales** (clean: de, hi, id, it, ja, tr, uk). Three variants appeared: the full block (ar, bn, fr, ko, mr, sw, ta, te, ur, vi, zh, zh-tw), the full block plus the `<path>`/`<password>` argument placeholders (cs, pl, pt-br), and the placeholders alone (es, ru). This is a recurrence -- the same defect was fixed fleet-wide once already in commit `0ded5412`.
+
+It recurs because **the two translation paths protect code fences differently, and only one of them uses a mechanism.**
+
+- The **full-file** path (`gemini.ts:172`) calls `extractCodeBlocks`, which replaces every fence with an `<!-- CODE_BLOCK_N -->` placeholder before the model sees the file, then `restoreCodeBlocks` (`:210`) puts the original bytes back. `output-validation.ts` additionally asserts the placeholders survived and that the model did not hallucinate new fences. Code cannot be translated on this path.
+- The **incremental** path (`incremental-translate.ts:305`, `extractSections`) slices the file on headings and takes each section `body` as raw lines. Fences ride along as plain text. There is no placeholder and no post-hoc comparison; the only protection is a prompt line (`prompt-builder.ts:114`, "never translate the functional code inside it").
+
+Verified against the real file. For `developers/docs/accounts/index.md`, `extractCodeBlocks` yields one block (`language: ""`) and the resulting prose does **not** contain `Your new key was generated`; `extractSections` yields 15 sections, of which `account-creation` carries the whole fence, program output included, with no placeholder. A prompt-only guarantee holds exactly as often as the model obeys it: 7 of 24 times in this run.
+
+Two nearby mechanisms are *not* the cause, and were ruled out rather than assumed:
+
+- `extractComments` skips untagged blocks outright (`if (!block.language || !block.content.trim()) continue`), and this fence has no language tag, so the comment-translation path never touched it. (Note the latent trap for tagged blocks: `getCommentSyntax` falls through to `return "js"` for any unrecognized tag, so an unfamiliar language is scanned for `//` and `/* */`.)
+- `intl-sanitizer.ts` splits fences out at ten call sites so its prose rules cannot corrupt code. That is correct and deliberate; it means the sanitizer is not where this should be caught.
+
+**The check that would close it:** a `code-fence-content` rule in `verify-structure` asserting that, for each fence pair, every **non-comment** line inside the translated fence is byte-identical to its English counterpart. Comment lines are exempt by policy -- ETHGlossary's `llms.txt` says so directly: "Fenced code blocks and inline code (single backticks) are non-translatable in full... Code comments are the exception." That single invariant catches the defect on both paths, needs no language knowledge, and would have caught all 17 locales here plus every prior recurrence. Two caveats for whoever builds it: comment detection must key off the fence info string rather than guessing, and a legitimately changed English fence must surface as a re-translate signal rather than a hard gate, or a routine English code edit blocks the whole run.
+
+**Reviewer rule until it exists:** check the fence bodies of every changed markdown file explicitly -- do not assume the sanitizer looked. The fix is a wholesale replacement of the fence body from the English source, which preserves column-alignment space runs and hex addresses byte-for-byte; do not hand-edit line by line.
+
+### 80. Glossary expansion substituted for an acronym the English source leaves bare (PATTERN -- context selection)
+
+PR #19326 expanded bare `NFT` / `DeFi` / `DAO` / `DEX` into their full localized phrases across **22 of 24 locales and 155 `page-apps.json` keys** (clean: de, ja), pushing 34 SEO meta strings past cap -- worst cases pt-br `category-dao-meta-title` 29 -> 81 chars and it `meta-description` 151 -> 241. It also hit short UI chip labels, turning vi's 4-character `DeFi` category name into a 30-character phrase that renders beside one-word siblings as a breadcrumb, hero title and card title.
+
+This is not translator error and not a sanitizer bug -- it is **context selection**. ETHGlossary already carries the right answer: each term is translated once per context (`prose`, `heading`, `tag`, `ui`), and the `ui`/`tag` contexts hold the bare acronym for nearly every language. The `decentralized-finance-defi` entry goes further and marks `DeFi` an alias with `status: preferred`, note "Acronym preferred in all contexts". The pipeline fed the prose/full form into UI and meta strings.
+
+Short-form availability is not universal, so the rule has to be conditional:
+
+| Acronym | Locales with NO bare short form in `ui`/`tag` |
+| --- | --- |
+| DAO | ar, hi, mr |
+| DEX | ar, hi, mr, ur, zh-tw |
+| DeFi | ko |
+| NFT | none |
+
+**Pipeline rule:** when the English string uses a bare acronym, select the term's `ui` (or `tag`) context, not `prose`. Where that context is itself the expanded phrase, leave it expanded -- the gap belongs in the glossary (normalization queue section 12a), not in the locale file.
+
+**Reviewer rule:** severity depends on the slot. In a `-name` chip label or a `meta-title`/`meta-description` it is critical (layout and SERP truncation). In body prose it is a warning. Watch for the inverse too: `page-apps-category-dao-description`'s English spells the phrase out with no acronym attached, so a locale appending `(DAO)` there is over-expansion of a *correct* translation -- strip the parenthetical, keep the phrase.
+
+**Collapsing it safely:** restore the acronym-bearing token exactly as the locale wrote it pre-PR, not a bare ASCII acronym. Agglutinative locales carry a suffix (`NFTகள்`) and RTL locales wrap the run in bidi isolates (`U+2066 NFT U+2069`). A naive collapse in ar orphaned the closing isolate in three keys; reverting those keys wholesale to their pre-PR values was the correct repair.
+
+### 81. Renamed JSON key ships the English value in every locale (CRITICAL -- pipeline gap)
+
+PR #19357: #19266 renamed `page-find-wallet-privacy{,-desc}` to `page-find-wallet-private-transactions{,-desc}` with identical English text. The title key came back translated, but `-desc` shipped as the English string in all 24 locales. verify-structure cannot see it (keys and placeholders match) and the candidate glossary pass cannot either (no glossary term). Detection: for every key added in the PR, flag a locale value byte-identical to English when English is prose. Repair: when the English value is unchanged across a rename, restore the locale's old-key value from `dev` -- no retranslation needed.
+
+### 82. "Both" dropped from a two-fact privacy claim (PATTERN -- semantic, fleet-wide)
+
+PR #19357 `page-privacy-online.json` `vpn-tor-description-1`, `vpn-relay-description`, `app-tor-browser-description`: "no single relay knows *both* who you are and where you go" became "no relay knows who you are or where you go" in at least bn, ta, te, es, pt-br. The rewrite overstates Tor/Private Relay (each hop knows one fact). Same file also produced "very few [people] earn a recommendation" for VPNs (hi, mr, te) and "place you by location" read as "put you somewhere" (hi, mr). Treat as a warning unless the claim inverts; fix by adding the language's "both / at the same time" particle.
+
+### 83. "Free software" rendered as gratis (PATTERN -- semantic)
+
+PR #19357 `app-f-droid-description`: F-Droid's "free software" became the price sense in pl `darmowego`, tr `ücretsiz`, ru `бесплатного`, uk `безкоштовного`, ar `المجانية`. The libre forms are `wolnego`, `özgür`, `свободного`, `вільного`, `الحرة`. Same confusion class as the #19034 tr `ücretsiz kişi` fix. Warning.
+
+### 84. Pre-pass glossary matching is dominated by unchanged lines (INFORMATIONAL -- review method)
+
+A naive "English has term X, locale lacks form Y" scan over PR files produced ~3.7k candidate rows for PR #19357; well over 80% sat on lines the PR never touched (the ~70 `videos/*` files only gained a `topic:` tag and an EOF newline). Real pre-existing deviations surfaced this way (ru `Бинанс Академи`, uk `Майкрософт Сек'юріті`, mr `वेब3`, te `లిడో`, mr `डेंकुन`, ur `ڈینکون`) are out of scope for the PR but worth a cleanup pass. Restrict candidate rows to added lines before handing them to review agents.

@@ -19,7 +19,7 @@ Seperti hampir semua hal lain di Ethereum, Kertas Kuning berevolusi seiring wakt
 
 Kertas kuning asli ditulis tepat pada awal pengembangan Ethereum. Dokumen ini menjelaskan mekanisme konsensus berbasis Bukti Kerja (PoW) asli yang pada awalnya digunakan untuk mengamankan jaringan. Namun, Ethereum mematikan Bukti Kerja dan mulai menggunakan konsensus berbasis Bukti Kepemilikan (PoS) pada bulan September 2022. Tutorial ini akan berfokus pada bagian-bagian kertas kuning yang mendefinisikan Mesin Virtual Ethereum (EVM). EVM tidak berubah oleh transisi ke Bukti Kepemilikan (kecuali untuk nilai kembalian dari opcode DIFFICULTY).
 
-## 9 Model eksekusi
+## 9 Model eksekusi {#9-execution-model}
 
 Bagian ini (hlm. 14-16) mencakup sebagian besar definisi EVM.
 
@@ -59,7 +59,7 @@ Istilah eksekusi luar biasa (exceptional execution) berarti pengecualian yang me
 
 Bagian ini menjelaskan bagaimana biaya gas dihitung. Ada tiga biaya:
 
-### Biaya opcode
+### Biaya opcode {#opcode-cost}
 
 Biaya inheren dari opcode tertentu. Untuk mendapatkan nilai ini, temukan grup biaya opcode di Lampiran H (hlm. 29, di bawah persamaan (329)), dan temukan grup biaya di persamaan (326). Ini memberi Anda fungsi biaya, yang dalam banyak kasus menggunakan parameter dari Lampiran G (hlm. 28).
 
@@ -73,7 +73,7 @@ Biaya menjalankan kode yang kita panggil.
 - Dalam kasus [`CREATE`](https://www.evm.codes/#f0) dan [`CREATE2`](https://www.evm.codes/#f5), konstruktor untuk kontrak baru.
 - Dalam kasus [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), atau [`DELEGATECALL`](https://www.evm.codes/#f4), kontrak yang kita panggil.
 
-### Biaya perluasan memori
+### Biaya perluasan memori {#expanding-memory-cost}
 
 Biaya perluasan memori (jika perlu).
 
@@ -84,7 +84,7 @@ Fungsi _C<sub>mem</sub>_ didefinisikan dalam persamaan 328: _C<sub>mem</sub>(a) 
 **Catatan** bahwa faktor-faktor ini hanya memengaruhi biaya gas _inheren_ - ini tidak memperhitungkan pasar biaya atau tip kepada validator yang menentukan berapa banyak pengguna akhir diharuskan membayar - ini hanyalah biaya mentah untuk menjalankan operasi tertentu di EVM.
 
 [Baca lebih lanjut tentang gas](/developers/docs/gas/).
-## 9.3 Lingkungan eksekusi
+## 9.3 Lingkungan eksekusi {#93-execution-env}
 
 Lingkungan eksekusi adalah sebuah tuple, _I_, yang mencakup informasi yang bukan bagian dari state rantai blok atau EVM.
 
@@ -109,7 +109,7 @@ Beberapa parameter lain diperlukan untuk memahami sisa bagian 9:
 | _g_       | 9.3 (hlm. 14)          | Gas yang tersisa                                                                                                                                                                                                            |
 | _A_       | 6.1 (hlm. 9)           | Substate yang terakumulasi (perubahan yang dijadwalkan saat transaksi berakhir)                                                                                                                                                       |
 | _o_       | 9.3 (hlm. 14)          | Output - hasil yang dikembalikan dalam kasus transaksi internal (ketika satu kontrak memanggil kontrak lain) dan panggilan ke fungsi view (ketika Anda hanya meminta informasi, sehingga tidak perlu menunggu transaksi) |
-## 9.4 Gambaran umum eksekusi
+## 9.4 Gambaran umum eksekusi {#94-execution-overview}
 
 Sekarang setelah kita memiliki semua pendahuluan, kita akhirnya dapat mulai mempelajari cara kerja EVM.
 
@@ -136,7 +136,7 @@ Bagian ini menjelaskan state mesin secara lebih rinci. Ini menentukan bahwa _w_ 
 
 Karena ini adalah [mesin tumpukan](https://en.wikipedia.org/wiki/Stack_machine), kita perlu melacak jumlah item yang dikeluarkan (_δ_) dan dimasukkan (_α_) oleh setiap opcode.
 
-## 9.4.2 Penghentian Luar Biasa
+## 9.4.2 Penghentian Luar Biasa {#942-exceptional-halt}
 
 Bagian ini mendefinisikan fungsi _Z_, yang menentukan kapan kita mengalami penghentian abnormal. Ini adalah fungsi [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), sehingga menggunakan [_∨_ untuk logika or (atau)](https://en.wikipedia.org/wiki/Logical_disjunction) dan [_∧_ untuk logika and (dan)](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Kita mengalami penghentian luar biasa jika salah satu dari kondisi ini benar:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Anda tidak dapat menjalankan [`SSTORE`](https://www.evm.codes/#55) kecuali Anda memiliki lebih dari G<sub>callstipend</sub> (didefinisikan sebagai 2300 di Lampiran G) gas.
-## 9.4.3 Validitas Tujuan Lompatan
+## 9.4.3 Validitas Tujuan Lompatan {#943-jump-dest-valid}
 
 Di sini kita secara formal mendefinisikan apa itu opcode [`JUMPDEST`](https://www.evm.codes/#5b). Kita tidak bisa hanya mencari nilai byte 0x5B, karena itu mungkin berada di dalam PUSH (dan karenanya merupakan data dan bukan opcode).
 
@@ -198,7 +198,7 @@ Fungsi penghentian _H_, dapat mengembalikan tiga jenis nilai.
 - Jika kita memiliki opcode penghentian yang tidak menghasilkan output (baik [`STOP`](https://www.evm.codes/#00) atau [`SELFDESTRUCT`](https://www.evm.codes/#ff)), kembalikan urutan byte berukuran nol sebagai nilai kembalian. Perhatikan bahwa ini sangat berbeda dari himpunan kosong. Nilai ini berarti bahwa EVM benar-benar berhenti, hanya saja tidak ada data kembalian untuk dibaca.
 - Jika kita memiliki opcode penghentian yang menghasilkan output (baik [`RETURN`](https://www.evm.codes/#f3) atau [`REVERT`](https://www.evm.codes/#fd)), kembalikan urutan byte yang ditentukan oleh opcode tersebut. Urutan ini diambil dari memori, nilai di bagian atas tumpukan (_μ<sub>s</sub>[0]_) adalah byte pertama, dan nilai setelahnya (_μ<sub>s</sub>[1]_) adalah panjangnya.
 
-## H.2 Set instruksi
+## H.2 Set instruksi {#h2-instruction-set}
 
 Sebelum kita beralih ke subbagian terakhir dari EVM, 9.5, mari kita lihat instruksinya sendiri. Instruksi tersebut didefinisikan dalam Lampiran H.2 yang dimulai pada hlm. 30. Apa pun yang tidak ditentukan sebagai berubah dengan opcode tertentu tersebut diharapkan tetap sama. Variabel yang berubah ditentukan dengan sebagai \<sesuatu\>′.
 
@@ -242,7 +242,7 @@ Persamaan kedua, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Perhatikan bahwa untuk menggunakan item tumpukan apa pun, kita perlu mengeluarkannya (pop), yang berarti kita juga perlu mengeluarkan semua item tumpukan di atasnya. Dalam kasus [`DUP<n>`](https://www.evm.codes/#8f) dan [`SWAP<n>`](https://www.evm.codes/#9f), ini berarti harus mengeluarkan dan kemudian memasukkan (push) hingga enam belas nilai.
-## 9.5 Siklus eksekusi
+## 9.5 Siklus eksekusi {#95-exec-cycle}
 
 Sekarang setelah kita memiliki semua bagiannya, kita akhirnya dapat memahami bagaimana siklus eksekusi EVM didokumentasikan.
 

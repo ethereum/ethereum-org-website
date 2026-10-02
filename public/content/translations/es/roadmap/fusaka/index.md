@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Aprende sobre la actualización del protocolo Fusaka
+description: "Aprende sobre la actualización del protocolo Fusaka"
 lang: es
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ La actualización Fusaka es solo un paso en los objetivos de desarrollo a largo 
 
 Este es el _atractivo principal_ de la bifurcación Fusaka, la característica principal añadida en esta actualización. Las capas 2 (L2) actualmente publican sus datos en Ethereum en blobs, el tipo de datos efímero creado específicamente para las capas 2. Antes de Fusaka, cada nodo completo tenía que almacenar cada blob para garantizar que los datos existieran. A medida que aumenta la capacidad de procesamiento de blobs, tener que descargar todos estos datos se vuelve insosteniblemente intensivo en recursos.
 
-Con el [muestreo de disponibilidad de datos](https://notes.ethereum.org/@fradamt/das-fork-choice), en lugar de tener que almacenar todos los datos del blob, cada nodo será responsable de un subconjunto de los datos del blob. Los blobs se distribuyen de manera uniforme y aleatoria entre los nodos de la red, y cada nodo completo contiene solo 1/8 de los datos, lo que permite un escalado teórico de hasta 8 veces. Para garantizar la disponibilidad de los datos, cualquier porción de los datos se puede reconstruir a partir de cualquier 50 % existente del total con métodos que reducen la probabilidad de datos incorrectos o faltantes a un nivel criptográficamente insignificante (~uno en 10<sup>20</sup> a uno en 10<sup>24</sup>).
+Con el [muestreo de disponibilidad de datos](https://notes.ethereum.org/@fradamt/das-fork-choice), en lugar de tener que almacenar todos los datos del blob, cada nodo será responsable de un subconjunto de los datos del blob. Los blobs se distribuyen de manera uniforme y aleatoria entre los nodos de la red, y cada nodo completo contiene solo 1/8 de los datos, lo que permite un escalado teórico de hasta 8 veces. Para garantizar la disponibilidad de los datos, cualquier porción de los datos se puede reconstruir a partir de cualquier 50 % existente del total con métodos que reducen la probabilidad de datos incorrectos o faltantes a un nivel criptográficamente insignificante (\~uno en 10<sup>20</sup> a uno en 10<sup>24</sup>).
 
 Esto mantiene los requisitos de hardware y ancho de banda para los nodos sostenibles al tiempo que permite el escalado de blobs, lo que resulta en una mayor escala con tarifas más pequeñas para las capas 2.
 
@@ -135,11 +135,11 @@ El objetivo es limitar el tiempo de propagación/validación en el peor de los c
 
 #### Establecer el límite de gas predeterminado en 60 millones {#set-default-gas-limit-to-60-million}
 
-Antes de aumentar el límite de gas de 30M a 36M en febrero de 2025 (y posteriormente a 45M), este valor no había cambiado desde La Fusión (septiembre de 2022). Esta EIP tiene como objetivo hacer del escalado consistente una prioridad.
+Antes de aumentar el límite de gas de 30M a 36M en febrero de 2025 (y posteriormente a 45M), este valor no había cambiado desde La Fusión (septiembre de 2022). Esta EIP tiene como objetivo hacer del escalado constante una prioridad.
 
-EIP-7935 coordina a los equipos de clientes de la capa de ejecución para elevar el límite de gas predeterminado por encima de los 45M actuales para Fusaka. Es una EIP informativa, pero pide explícitamente a los clientes que prueben límites más altos en las redes de desarrollo, converjan en un valor seguro y envíen ese número en sus lanzamientos de Fusaka.
+EIP-7935 coordinó a los equipos de clientes de la capa de ejecución para elevar el límite de gas predeterminado por encima de los 45M que precedieron a Fusaka. Es una EIP informativa, pero solicitó explícitamente a los clientes que probaran límites más altos en las redes de desarrollo, convergieran en un valor seguro y publicaran ese número en sus lanzamientos de Fusaka.
 
-La planificación de la red de desarrollo apunta a un estrés de ~60M (bloques completos con carga sintética) y aumentos iterativos; la investigación dice que las patologías del tamaño del bloque en el peor de los casos no deberían vincularse por debajo de ~150M. El despliegue debe combinarse con el límite máximo de gas por transacción (EIP-7825) para que ninguna transacción individual pueda dominar a medida que aumentan los límites.
+Las pruebas en la red de desarrollo apuntaron a ~60M bajo estrés (bloques completos con carga sintética) con aumentos iterativos; la investigación dice que las patologías del tamaño del bloque en el peor de los casos no deberían ser limitantes por debajo de ~150M. El lanzamiento se combinó con el tope del límite de gas por transacción (EIP-7825) para que ninguna transacción individual pueda dominar a medida que aumentan los límites. Los clientes implementaron 60M como el valor predeterminado para Fusaka.
 
 **Recursos**: [Especificación técnica de EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ Los requisitos de los nodos todavía están dentro de los [márgenes recomendado
 
 Los nodos regulares sin ningún validador se suscribirán a solo 4 subredes, proporcionando custodia para 1/8 de los datos originales. Esto significa que con la misma cantidad de datos de blob, el ancho de banda del nodo para descargarlos sería menor por un factor de ocho (8). El uso del disco y el ancho de banda de descarga de blobs para un nodo completo normal podría disminuir alrededor del 80 %, a solo unos pocos Mb.
 
-#### Participantes en solitario (solo stakers) {#solo-stakers}
+#### Stakers en solitario {#solo-stakers}
 
-Si el nodo se utiliza para un cliente de validador, tiene que custodiar más columnas y, por lo tanto, procesar más datos. Con un validador añadido, el nodo se suscribe a al menos 8 subredes de columnas y, por lo tanto, procesa el doble de datos que un nodo regular, pero aún menos que antes de Fusaka. Si el saldo del validador es superior a 287 ETH, se suscribirá a más y más subredes.
+Si el nodo se utiliza para un cliente de validador, tiene que custodiar más columnas y, por lo tanto, procesar más datos. Con un validador añadido, el nodo se suscribe a al menos 8 subredes de columnas y, por lo tanto, procesa el doble de datos que un nodo regular, pero aún menos que antes de Fusaka. Si el saldo del validador es superior a 287 ETH, se suscribirá a cada vez más subredes.
 
-Para un participante en solitario, esto significa que su uso de disco y ancho de banda de descarga disminuirán alrededor del 50 %. Sin embargo, para construir bloques localmente y cargar todos los blobs a la red, se necesita más ancho de banda de carga. Los constructores locales necesitarán un ancho de banda de carga 2-3 veces mayor que antes en el momento de Fusaka y con el objetivo BPO2 de 15/21 blobs, el ancho de banda de carga final necesario tendrá que ser alrededor de 5 veces mayor, a 100 Mbps.
+Para un staker en solitario, esto significa que su uso de disco y ancho de banda de descarga disminuirán alrededor del 50 %. Sin embargo, para construir bloques localmente y subir todos los blobs a la red, se necesita más ancho de banda de subida. Los constructores locales necesitarán un ancho de banda de subida de 2 a 3 veces mayor que antes en el momento de Fusaka y con el objetivo BPO2 de 15/21 blobs, el ancho de banda de subida final necesario tendrá que ser alrededor de 5 veces mayor, a 100 Mbps.
 
 #### Grandes validadores {#large-validators}
 

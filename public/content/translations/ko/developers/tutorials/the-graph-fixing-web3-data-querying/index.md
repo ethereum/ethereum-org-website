@@ -41,20 +41,20 @@ contract Game {
 }
 ```
 
-이제 우리의 dapp에서 총 베팅 횟수, 승패가 결정된 총 게임 수를 표시하고, 누군가 다시 플레이할 때마다 이를 업데이트하고 싶다고 가정해 보겠습니다. 접근 방식은 다음과 같습니다.
+이제 탈중앙화 애플리케이션 (dapp)에서 총 베팅 수, 승리/패배한 총 게임 수를 표시하고, 누군가 다시 플레이할 때마다 이를 업데이트하고 싶다고 가정해 보겠습니다. 접근 방식은 다음과 같습니다.
 
-1. `totalGamesPlayerWon`를 가져옵니다.
+1. `totalGamesPlayerWon`을 가져옵니다.
 2. `totalGamesPlayerLost`를 가져옵니다.
 3. `BetPlaced` 이벤트를 구독합니다.
 
-오른쪽에 표시된 것처럼 [Web3에서 이벤트를](https://docs.web3js.org/api/web3/class/Contract#events) 수신할 수 있지만, 꽤 많은 경우를 처리해야 합니다.
+오른쪽에 표시된 것처럼 [Web3의 이벤트](https://docs.web3js.org/api/web3/class/Contract#events)를 수신할 수 있지만, 꽤 많은 경우를 처리해야 합니다.
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // 이벤트 발생함
+    // 이벤트 발생
 })
 .on('changed', function(event) {
     // 이벤트가 다시 제거됨
@@ -64,17 +64,17 @@ GameContract.events.BetPlaced({
 });
 ```
 
-간단한 예시에서는 이 정도도 괜찮습니다. 하지만 이제 현재 플레이어의 승패 베팅 금액만 표시하고 싶다고 가정해 보겠습니다. 안타깝게도 운이 나쁘네요. 해당 값을 저장하는 새로운 컨트랙트를 배포하고 가져오는 것이 좋습니다. 이제 훨씬 더 복잡한 스마트 컨트랙트와 dapp을 상상해 보세요. 상황은 금방 복잡해질 수 있습니다.
+간단한 예시에서는 이 정도도 괜찮습니다. 하지만 이제 현재 플레이어의 승리/패배 베팅 금액만 표시하고 싶다고 가정해 보겠습니다. 안타깝게도 방법이 없으며, 해당 값을 저장하는 새로운 컨트랙트를 배포하고 데이터를 가져와야 합니다. 이제 훨씬 더 복잡한 스마트 컨트랙트와 dapp을 상상해 보세요. 상황은 금방 복잡해질 수 있습니다.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![그냥 쿼리할 수는 없습니다](./one-does-not-simply-query.jpg)
 
-이 방식이 왜 최적이 아닌지 알 수 있습니다.
+이것이 왜 최적이 아닌지 알 수 있습니다.
 
 - 이미 배포된 컨트랙트에는 작동하지 않습니다.
 - 해당 값을 저장하기 위한 추가 가스 비용이 발생합니다.
-- 이더리움 노드에서 데이터를 가져오기 위해 또 다른 호출이 필요합니다.
+- 이더리움 노드에서 데이터를 가져오기 위한 추가 호출이 필요합니다.
 
-![Thats not good enough](./not-good-enough.jpg)
+![충분하지 않습니다](./not-good-enough.jpg)
 
 이제 더 나은 해결책을 살펴보겠습니다.
 

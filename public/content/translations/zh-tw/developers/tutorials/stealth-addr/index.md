@@ -135,7 +135,7 @@ sidebarDepth: 3
 
 #### WASM 元件 {#wasm}
 
-編譯成 WASM 的原始碼是用 [Rust](https://rust-lang.org/) 編寫的。你可以在 [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) 中看到它。這段程式碼主要作為 JavaScript 程式碼與 [`eth-stealth-addresses` 函式庫](https://github.com/kassandraoftroy/eth-stealth-addresses)之間的介面。
+編譯成 WASM 的原始碼是使用 [Rust](https://rust-lang.org/) 編寫的。你可以在 [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) 中查看。這段程式碼主要是 JavaScript 程式碼與 [`eth-stealth-addresses` 函式庫](https://github.com/kassandraoftroy/eth-stealth-addresses)之間的介面。
 
 **`Cargo.toml`**
 
@@ -154,13 +154,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 套件需要產生隨機值。這無法透過純演算法的方式完成；它需要存取物理過程作為熵 (entropy) 的來源。這個定義指定我們將透過詢問我們正在執行的瀏覽器來獲取該熵。
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 套件需要產生隨機值。這無法透過純演算法的方式完成；它需要存取物理過程作為熵的來源。這個定義指定我們將透過向執行程式碼的瀏覽器請求來獲取該熵。
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-當 WASM 程式碼發生恐慌 (panic) 且無法繼續執行時，[這個函式庫](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)會為我們提供更有意義的錯誤訊息。
+當 WASM 程式碼發生恐慌 (panic) 且無法繼續執行時，[這個函式庫](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)會提供我們更有意義的錯誤訊息。
 
 ```toml
 [lib]
@@ -177,9 +177,9 @@ crate-type = ["cdylib", "rlib"]
 use wasm_bindgen::prelude::*;
 ```
 
-從 Rust 建立 WASM 套件的定義。它們記錄在[這裡](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)。
+從 Rust 建立 WASM 套件的定義。它們的說明文件在[這裡](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)。
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -193,7 +193,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust 通常使用位元組[陣列](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) 來表示值。但在 JavaScript 中，我們通常使用十六進位字串。[`hex` 函式庫](https://docs.rs/hex/latest/hex/)為我們將一種表示形式轉換為另一種表示形式。
+Rust 通常使用位元組[陣列](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) 來表示值。但在 JavaScript 中，我們通常使用十六進位字串。[`hex` 函式庫](https://docs.rs/hex/latest/hex/)為我們在兩種表示法之間進行轉換。
 
 ```rust
 #[wasm_bindgen]
@@ -205,7 +205,7 @@ Rust 通常使用位元組[陣列](https://doc.rust-lang.org/std/primitive.array
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-傳回具有多個欄位的物件最簡單的方法是傳回一個 JSON 字串。 
+傳回具有多個欄位的物件最簡單的方法是傳回 JSON 字串。
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -214,11 +214,11 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) 傳回三個欄位：
 
-- 元地址（*K<sub>pub</sub>* 和 *V<sub>pub</sub>*）
-- 查看私鑰（*V<sub>priv</sub>*）
-- 花費私鑰（*K<sub>priv</sub>*）
+- 元地址 (*K<sub>pub</sub>* 和 *V<sub>pub</sub>*)
+- 檢視私鑰 (*V<sub>priv</sub>*)
+- 支出私鑰 (*K<sub>priv</sub>*)
 
-[元組 (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) 語法讓我們可以再次分離這些值。
+[元組 (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) 語法讓我們可以再次將這些值分開。
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -235,13 +235,13 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-此函式將十六進位字串（由 JavaScript 提供）轉換為位元組陣列。我們使用它來解析 JavaScript 程式碼提供的值。由於 Rust 處理陣列和向量 (vectors) 的方式，這個函式比較複雜。
+這個函式將十六進位字串（由 JavaScript 提供）轉換為位元組陣列。我們使用它來解析 JavaScript 程式碼提供的值。這個函式比較複雜，因為 Rust 處理陣列和向量 (vector) 的方式。
 
 `<const N: usize>` 表達式被稱為[泛型 (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html)。`N` 是一個控制傳回陣列長度的參數。該函式實際上被稱為 `str_to_array::<n>`，其中 `n` 是陣列長度。
 
 傳回值是 `Option<[u8; N]>`，這意味著傳回的陣列是[可選的 (optional)](https://doc.rust-lang.org/std/option/)。這是 Rust 中可能失敗的函式的典型模式。
 
-例如，如果我們呼叫 `str_to_array::10("bad060a7")`，該函式應該傳回一個包含十個值的陣列，但輸入只有四個位元組。該函式需要失敗，而它透過傳回 `None` 來實現這一點。`str_to_array::4("bad060a7")` 的傳回值將會是 `Some<[0xba, 0xd0, 0x60, 0xa7]>`。
+例如，如果我們呼叫 `str_to_array::10("bad060a7")`，該函式應該傳回一個包含十個值的陣列，但輸入只有四個位元組。該函式需要失敗，而它透過傳回 `None` 來實現。`str_to_array::4("bad060a7")` 的傳回值將會是 `Some<[0xba, 0xd0, 0x60, 0xa7]>`。
 
 ```rust
     // decode 回傳 Result<Vec<u8>, _>
@@ -250,9 +250,9 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) 函式傳回一個 `Result<Vec<u8>, FromHexError>`。[`Result`](https://doc.rust-lang.org/std/result/) 類型可以包含成功的結果 (`Ok(value)`) 或錯誤 (`Err(error)`)。
 
-`.ok()` 方法將 `Result` 轉換為 `Option`，如果成功，其值為 `Ok()` 的值，否則為 `None`。最後，如果 `Option` 為空，[問號運算子](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)會中止目前的函式並傳回 `None`。否則，它會解開 (unwrap) 該值並將其傳回（在這種情況下，是為了將值指派給 `vec`）。
+`.ok()` 方法將 `Result` 轉換為 `Option`，如果成功，其值為 `Ok()` 的值，否則為 `None`。最後，[問號運算子](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)會中止目前的函式，如果 `Option` 為空則傳回 `None`。否則，它會解開 (unwrap) 該值並將其傳回（在這種情況下，是為了將值指派給 `vec`）。
 
-這看起來像是一種處理錯誤的奇怪且複雜的方法，但 `Result` 和 `Option` 確保了所有錯誤都能以某種方式被處理。
+這看起來像是一種處理錯誤的奇怪且複雜的方法，但 `Result` 和 `Option` 確保所有錯誤都能以某種方式被處理。
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,7 +265,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust 有兩種陣列類型。[陣列 (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) 具有固定大小。[向量 (Vectors)](https://doc.rust-lang.org/std/vec/index.html) 可以增長和縮小。`hex::decode` 傳回一個向量，但 `eth_stealth_addresses` 函式庫希望接收陣列。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) 將一個值轉換為另一種類型，例如，將向量轉換為陣列。
+Rust 有兩種陣列類型。[陣列 (Array)](https://doc.rust-lang.org/std/primitive.array.html) 具有固定大小。[向量 (Vector)](https://doc.rust-lang.org/std/vec/index.html) 可以增長和縮小。`hex::decode` 傳回一個向量，但 `eth_stealth_addresses` 函式庫希望接收陣列。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) 將一個值轉換為另一種類型，例如，將向量轉換為陣列。
 
 ```rust
     Some(array)
@@ -279,7 +279,7 @@ Rust 有兩種陣列類型。[陣列 (Arrays)](https://doc.rust-lang.org/std/pri
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-此函式接收一個公開的元地址，其中包含 *V<sub>pub</sub>* 和 *K<sub>pub</sub>*。它傳回隱形地址、要發布的公鑰 (*R<sub>pub</sub>*)，以及一個單字節的掃描值，該值可加速識別哪些已發布的地址可能屬於愛麗絲。
+這個函式接收一個公開的元地址，其中包含 *V<sub>pub</sub>* 和 *K<sub>pub</sub>*。它傳回隱形地址、要發布的公鑰 (*R<sub>pub</sub>*)，以及一個單一位元組的掃描值，該值可加速識別哪些已發布的地址可能屬於愛麗絲。
 
 掃描值是共享秘密 (*S = GR<sub>priv</sub>V<sub>priv</sub>*) 的一部分。這個值對愛麗絲是可用的，而且檢查它比檢查 *f(K<sub>pub</sub>+G\*hash(S))* 是否等於已發布的地址要快得多。
 
@@ -288,7 +288,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-我們使用該函式庫的 [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html)。
+我們使用函式庫的 [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html)。
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -315,12 +315,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-此函式使用該函式庫的 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) 來計算從該地址提取資金的私鑰 (*R<sub>priv</sub>*)。此計算需要以下值：
+這個函式使用函式庫的 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) 來計算從該地址提取資金的私鑰 (*R<sub>priv</sub>*)。這個計算需要以下值：
 
 - 地址 (*Address=f(P<sub>pub</sub>)*)
 - 比爾產生的公鑰 (*R<sub>pub</sub>*)
-- 查看私鑰 (*V<sub>priv</sub>*)
-- 花費私鑰 (*K<sub>priv</sub>*)
+- 檢視私鑰 (*V<sub>priv</sub>*)
+- 支出私鑰 (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
@@ -334,7 +334,7 @@ pub fn main() {
 }
 ```
 
-此程式碼指定將恐慌 (panic) 輸出發送到 JavaScript 主控台。要查看其實際運作，請使用該應用程式並給比爾一個無效的元地址（只需更改一個十六進位數字）。你將在 JavaScript 主控台中看到此錯誤：
+這段程式碼指定將恐慌 (panic) 輸出傳送到 JavaScript 主控台。要查看其實際運作情況，請使用該應用程式並給比爾一個無效的元地址（只需更改一個十六進位數字）。你將在 JavaScript 主控台中看到此錯誤：
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -354,7 +354,7 @@ keys do not generate stealth address
 
 #### 使用者介面 {#ui}
 
-使用者介面是使用 [React](https://react.dev/) 編寫的，並由 [Vite](https://vite.dev/) 提供服務。你可以透過[本教學](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)來了解它們。這裡不需要 [Wagmi](https://wagmi.sh/)，因為我們不直接與區塊鏈或錢包互動。
+使用者介面是使用 [React](https://react.dev/) 編寫的，並由 [Vite](https://vite.dev/) 提供服務。你可以透過[本教學](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)了解它們。這裡不需要 [Wagmi](https://wagmi.sh/)，因為我們不直接與區塊鏈或錢包互動。
 
 使用者介面中唯一不直觀的部分是 WASM 連線。以下是它的運作方式。
 
@@ -383,7 +383,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-當我們使用 [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) 時，它會建立我們在這裡使用的兩個檔案：一個包含實際程式碼的 wasm 檔案（此處為 `src/rust-wasm/pkg/rust_wasm_bg.wasm`），以及一個包含使用定義的 JavaScript 檔案（此處為 `src/rust_wasm/pkg/rust_wasm.js`）。該 JavaScript 檔案的預設匯出是啟動 WASM 所需執行的程式碼。
+當我們使用 [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) 時，它會建立我們在這裡使用的兩個檔案：一個包含實際程式碼的 wasm 檔案（這裡是 `src/rust-wasm/pkg/rust_wasm_bg.wasm`），以及一個包含使用定義的 JavaScript 檔案（這裡是 `src/rust-wasm/pkg/rust_wasm.js`）。該 JavaScript 檔案的預設匯出 (default export) 是初始化 WASM 需要執行的程式碼。
 
 ```jsx
 function App() {
@@ -406,9 +406,9 @@ function App() {
   )
 ```
 
-[`useEffect` 鉤子 (hook)](https://react.dev/reference/react/useEffect) 讓你指定一個在狀態變數改變時執行的函式。在這裡，狀態變數列表是空的 (`[]`)，因此這個函式只會在頁面載入時執行一次。
+[`useEffect` hook](https://react.dev/reference/react/useEffect) 讓你指定一個在狀態變數改變時執行的函式。在這裡，狀態變數清單是空的 (`[]`)，所以這個函式只會在頁面載入時執行一次。
 
-effect 函式必須立即傳回。要使用非同步程式碼，例如 WASM 的 `init`（它必須載入 `.wasm` 檔案，因此需要時間），我們定義一個內部的 [`async`](https://en.wikipedia.org/wiki/Async/await) 函式，並在沒有 `await` 的情況下執行它。
+effect 函式必須立即傳回。要使用非同步程式碼，例如 WASM 的 `init`（它必須載入 `.wasm` 檔案，因此需要時間），我們定義一個內部的 [`async`](https://en.wikipedia.org/wiki/Async/await) 函式，並在不使用 `await` 的情況下執行它。
 
 **`Bill.jsx`**
 
@@ -418,7 +418,7 @@ effect 函式必須立即傳回。要使用非同步程式碼，例如 WASM 的 
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-除了預設匯出之外，由 `wasm-pack` 產生的 JavaScript 程式碼還會為 WASM 程式碼中的每個函式匯出一個函式。
+除了預設匯出之外，由 `wasm-pack` 產生的 JavaScript 程式碼還為 WASM 程式碼中的每個函式匯出一個函式。
 
 ```jsx
             <button onClick={() => {
@@ -430,9 +430,9 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 
 **`Alice.jsx`**
 
-`Alice.jsx` 中的程式碼是類似的，差別在於愛麗絲有兩個動作：
+`Alice.jsx` 中的程式碼類似，只是愛麗絲有兩個動作：
 
-- 產生一個元地址
+- 產生元地址
 - 獲取比爾發布的地址的私鑰
 
 ## 結論 {#conclusion}

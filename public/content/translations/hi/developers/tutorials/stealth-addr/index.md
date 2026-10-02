@@ -135,11 +135,11 @@ sidebarDepth: 3
 
 #### WASM घटक {#wasm}
 
-WASM में संकलित होने वाला स्रोत कोड [Rust](https://rust-lang.org/) में लिखा गया है। आप इसे [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) में देख सकते हैं। यह कोड मुख्य रूप से JavaScript कोड और [`eth-stealth-addresses` लाइब्रेरी](https://github.com/kassandraoftroy/eth-stealth-addresses) के बीच एक इंटरफ़ेस है।
+WASM में संकलित (compile) होने वाला स्रोत कोड [Rust](https://rust-lang.org/) में लिखा गया है। आप इसे [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) में देख सकते हैं। यह कोड मुख्य रूप से JavaScript कोड और [`eth-stealth-addresses` लाइब्रेरी](https://github.com/kassandraoftroy/eth-stealth-addresses) के बीच एक इंटरफ़ेस है।
 
 **`Cargo.toml`**
 
-Rust में [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) JavaScript में [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) के समान है। इसमें पैकेज की जानकारी, निर्भरता घोषणाएं (dependency declarations) आदि शामिल हैं।
+Rust में [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html), JavaScript में [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) के समान है। इसमें पैकेज की जानकारी, निर्भरता (dependency) घोषणाएं आदि शामिल हैं।
 
 ```toml
 [package]
@@ -154,13 +154,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) पैकेज को यादृच्छिक (random) मान उत्पन्न करने की आवश्यकता है। यह शुद्ध एल्गोरिथम साधनों द्वारा नहीं किया जा सकता है; इसके लिए एन्ट्रोपी के स्रोत के रूप में एक भौतिक प्रक्रिया तक पहुंच की आवश्यकता होती है। यह परिभाषा निर्दिष्ट करती है कि हम उस ब्राउज़र से पूछकर वह एन्ट्रोपी प्राप्त करेंगे जिसमें हम चल रहे हैं।
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) पैकेज को रैंडम मान उत्पन्न करने की आवश्यकता होती है। यह केवल एल्गोरिथम के माध्यम से नहीं किया जा सकता है; इसके लिए एन्ट्रोपी के स्रोत के रूप में एक भौतिक प्रक्रिया तक पहुंच की आवश्यकता होती है। यह परिभाषा निर्दिष्ट करती है कि हम उस ब्राउज़र से पूछकर वह एन्ट्रोपी प्राप्त करेंगे जिसमें हम चल रहे हैं।
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[यह लाइब्रेरी](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) हमें अधिक सार्थक त्रुटि संदेश देती है जब WASM कोड पैनिक (panic) करता है और जारी नहीं रह सकता है।
+[यह लाइब्रेरी](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) हमें अधिक सार्थक त्रुटि संदेश देती है जब WASM कोड पैनिक (panic) करता है और आगे नहीं बढ़ सकता है।
 
 ```toml
 [lib]
@@ -177,9 +177,9 @@ WASM कोड उत्पन्न करने के लिए आवश्�
 use wasm_bindgen::prelude::*;
 ```
 
-Rust से WASM पैकेज बनाने की परिभाषाएँ। उन्हें [यहाँ](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) प्रलेखित किया गया है।
+Rust से WASM पैकेज बनाने की परिभाषाएं। उन्हें [यहाँ](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) प्रलेखित (documented) किया गया है।
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -193,7 +193,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust आमतौर पर मानों के लिए बाइट [ऐरे (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) का उपयोग करता है। लेकिन JavaScript में, हम आमतौर पर हेक्साडेसिमल स्ट्रिंग्स का उपयोग करते हैं। [`hex` लाइब्रेरी](https://docs.rs/hex/latest/hex/) हमारे लिए एक प्रतिनिधित्व से दूसरे में अनुवाद करती है।
+Rust आमतौर पर मानों के लिए बाइट [ऐरे (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) का उपयोग करता है। लेकिन JavaScript में, हम आमतौर पर हेक्साडेसिमल स्ट्रिंग का उपयोग करते हैं। [`hex` लाइब्रेरी](https://docs.rs/hex/latest/hex/) हमारे लिए एक प्रतिनिधित्व (representation) से दूसरे में अनुवाद करती है।
 
 ```rust
 #[wasm_bindgen]
@@ -205,7 +205,7 @@ JavaScript से इस फ़ंक्शन को कॉल करने म
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-कई फ़ील्ड वाले ऑब्जेक्ट को वापस करने का सबसे आसान तरीका JSON स्ट्रिंग वापस करना है।
+कई फ़ील्ड वाले ऑब्जेक्ट को वापस करने का सबसे आसान तरीका JSON स्ट्रिंग वापस करना है। 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -215,10 +215,10 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) तीन फ़ील्ड देता है:
 
 - मेटा-पता (*K<sub>pub</sub>* और *V<sub>pub</sub>*)
-- देखने की निजी कुंजी (*V<sub>priv</sub>*)
-- खर्च करने की निजी कुंजी (*K<sub>priv</sub>*)
+- देखने वाली निजी कुंजी (*V<sub>priv</sub>*)
+- खर्च करने वाली निजी कुंजी (*K<sub>priv</sub>*)
 
-[टुपल (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) सिंटैक्स हमें उन मानों को फिर से अलग करने देता है।
+[ट्यूपल (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) सिंटैक्स हमें उन मानों को फिर से अलग करने देता है।
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -229,17 +229,17 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-JSON-एन्कोडेड स्ट्रिंग उत्पन्न करने के लिए [`format!`](https://doc.rust-lang.org/std/fmt/index.html) मैक्रो का उपयोग करें। ऐरे को हेक्स स्ट्रिंग्स में बदलने के लिए [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) का उपयोग करें।
+JSON-एन्कोडेड स्ट्रिंग उत्पन्न करने के लिए [`format!`](https://doc.rust-lang.org/std/fmt/index.html) मैक्रो का उपयोग करें। ऐरे को हेक्स स्ट्रिंग में बदलने के लिए [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) का उपयोग करें।
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-यह फ़ंक्शन (JavaScript द्वारा प्रदान की गई) हेक्स स्ट्रिंग को बाइट ऐरे में बदल देता है। हम इसका उपयोग JavaScript कोड द्वारा प्रदान किए गए मानों को पार्स करने के लिए करते हैं। यह फ़ंक्शन जटिल है क्योंकि Rust ऐरे और वैक्टर को कैसे संभालता है।
+यह फ़ंक्शन (JavaScript द्वारा प्रदान की गई) हेक्स स्ट्रिंग को बाइट ऐरे में बदल देता है। हम इसका उपयोग JavaScript कोड द्वारा प्रदान किए गए मानों को पार्स करने के लिए करते हैं। यह फ़ंक्शन इसलिए जटिल है क्योंकि Rust ऐरे और वैक्टर (vectors) को कैसे संभालता है।
 
-`<const N: usize>` अभिव्यक्ति को [जेनेरिक (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) कहा जाता है। `N` एक पैरामीटर है जो लौटाए गए ऐरे की लंबाई को नियंत्रित करता है। फ़ंक्शन को वास्तव में `str_to_array::<n>` कहा जाता है, जहाँ `n` ऐरे की लंबाई है।
+`<const N: usize>` एक्सप्रेशन को [जेनेरिक (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) कहा जाता है। `N` एक पैरामीटर है जो वापस किए गए ऐरे की लंबाई को नियंत्रित करता है। फ़ंक्शन को वास्तव में `str_to_array::<n>` कहा जाता है, जहाँ `n` ऐरे की लंबाई है।
 
-रिटर्न मान `Option<[u8; N]>` है, जिसका अर्थ है कि लौटाया गया ऐरे [वैकल्पिक (optional)](https://doc.rust-lang.org/std/option/) है। यह उन फ़ंक्शंस के लिए Rust में एक विशिष्ट पैटर्न है जो विफल हो सकते हैं।
+रिटर्न मान `Option<[u8; N]>` है, जिसका अर्थ है कि वापस किया गया ऐरे [वैकल्पिक (optional)](https://doc.rust-lang.org/std/option/) है। यह उन फ़ंक्शन के लिए Rust में एक विशिष्ट पैटर्न है जो विफल हो सकते हैं।
 
 उदाहरण के लिए, यदि हम `str_to_array::10("bad060a7")` को कॉल करते हैं, तो फ़ंक्शन को दस-मान वाला ऐरे वापस करना चाहिए, लेकिन इनपुट केवल चार बाइट्स है। फ़ंक्शन को विफल होने की आवश्यकता है, और यह `None` वापस करके ऐसा करता है। `str_to_array::4("bad060a7")` के लिए रिटर्न मान `Some<[0xba, 0xd0, 0x60, 0xa7]>` होगा।
 
@@ -248,11 +248,11 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) फ़ंक्शन एक `Result<Vec<u8>, FromHexError>` देता है। [`Result`](https://doc.rust-lang.org/std/result/) प्रकार में या तो एक सफल परिणाम (`Ok(value)`) या एक त्रुटि (`Err(error)`) हो सकती है।
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) फ़ंक्शन `Result<Vec<u8>, FromHexError>` वापस करता है। [`Result`](https://doc.rust-lang.org/std/result/) प्रकार में या तो एक सफल परिणाम (`Ok(value)`) या एक त्रुटि (`Err(error)`) हो सकती है।
 
-`.ok()` विधि `Result` को `Option` में बदल देती है, जिसका मान सफल होने पर `Ok()` मान होता है या नहीं होने पर `None` होता है। अंत में, [प्रश्न चिह्न ऑपरेटर](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) वर्तमान फ़ंक्शंस को निरस्त कर देता है और यदि `Option` खाली है तो `None` देता है। अन्यथा, यह मान को अनरैप (unwrap) करता है और उसे वापस कर देता है (इस मामले में, `vec` को एक मान निर्दिष्ट करने के लिए)।
+`.ok()` विधि `Result` को `Option` में बदल देती है, जिसका मान सफल होने पर `Ok()` मान होता है या नहीं होने पर `None` होता है। अंत में, [प्रश्न चिह्न ऑपरेटर (question mark operator)](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) वर्तमान फ़ंक्शन को निरस्त कर देता है और यदि `Option` खाली है तो `None` वापस कर देता है। अन्यथा, यह मान को अनरैप (unwrap) करता है और उसे वापस कर देता है (इस मामले में, `vec` को एक मान असाइन करने के लिए)।
 
-यह त्रुटियों को संभालने के लिए एक अजीब तरह से जटिल तरीका लगता है, लेकिन `Result` और `Option` यह सुनिश्चित करते हैं कि सभी त्रुटियों को किसी न किसी तरह से संभाला जाए।
+यह त्रुटियों को संभालने के लिए एक अजीब तरह से जटिल विधि की तरह लगता है, लेकिन `Result` और `Option` यह सुनिश्चित करते हैं कि सभी त्रुटियों को किसी न किसी तरह से संभाला जाए।
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,21 +265,21 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust में दो ऐरे प्रकार हैं। [ऐरे (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) का आकार निश्चित होता है। [वैक्टर (Vectors)](https://doc.rust-lang.org/std/vec/index.html) बढ़ और सिकुड़ सकते हैं। `hex::decode` एक वेक्टर देता है, लेकिन `eth_stealth_addresses` लाइब्रेरी ऐरे प्राप्त करना चाहती है। [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) एक मान को दूसरे प्रकार में परिवर्तित करता है, उदाहरण के लिए, एक वेक्टर को ऐरे में।
+Rust में दो ऐरे प्रकार हैं। [ऐरे (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) का आकार निश्चित होता है। [वैक्टर (Vectors)](https://doc.rust-lang.org/std/vec/index.html) बढ़ और सिकुड़ सकते हैं। `hex::decode` एक वेक्टर वापस करता है, लेकिन `eth_stealth_addresses` लाइब्रेरी ऐरे प्राप्त करना चाहती है। [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) एक मान को दूसरे प्रकार में परिवर्तित करता है, उदाहरण के लिए, एक वेक्टर को ऐरे में।
 
 ```rust
     Some(array)
 }
 ```
 
-किसी फ़ंक्शन के अंत में मान वापस करते समय Rust को आपको [`return`](https://doc.rust-lang.org/std/keyword.return.html) कीवर्ड का उपयोग करने की आवश्यकता नहीं होती है।
+Rust में किसी फ़ंक्शन के अंत में मान वापस करते समय आपको [`return`](https://doc.rust-lang.org/std/keyword.return.html) कीवर्ड का उपयोग करने की आवश्यकता नहीं होती है।
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-यह फ़ंक्शन एक सार्वजनिक मेटा-पता प्राप्त करता है, जिसमें *V<sub>pub</sub>* और *K<sub>pub</sub>* दोनों शामिल हैं। यह गुप्त पता, प्रकाशित करने के लिए सार्वजनिक कुंजी (*R<sub>pub</sub>*), और एक-बाइट स्कैन मान देता है जो यह पहचानने में गति लाता है कि कौन से प्रकाशित पते ऐलिस के हो सकते हैं।
+यह फ़ंक्शन एक सार्वजनिक मेटा-पता प्राप्त करता है, जिसमें *V<sub>pub</sub>* और *K<sub>pub</sub>* दोनों शामिल हैं। यह गुप्त पता, प्रकाशित करने के लिए सार्वजनिक कुंजी (*R<sub>pub</sub>*), और एक-बाइट स्कैन मान वापस करता है जो यह पहचानने में गति लाता है कि कौन से प्रकाशित पते ऐलिस के हो सकते हैं।
 
 स्कैन मान साझा रहस्य (*S = GR<sub>priv</sub>V<sub>priv</sub>*) का हिस्सा है। यह मान ऐलिस के लिए उपलब्ध है, और इसकी जाँच करना यह जाँचने की तुलना में बहुत तेज़ है कि क्या *f(K<sub>pub</sub>+G\*hash(S))* प्रकाशित पते के बराबर है।
 
@@ -319,14 +319,14 @@ pub fn wasm_compute_stealth_key(
 
 - पता (*Address=f(P<sub>pub</sub>)*)
 - बिल द्वारा उत्पन्न सार्वजनिक कुंजी (*R<sub>pub</sub>*)
-- देखने की निजी कुंजी (*V<sub>priv</sub>*)
-- खर्च करने की निजी कुंजी (*K<sub>priv</sub>*)
+- देखने वाली निजी कुंजी (*V<sub>priv</sub>*)
+- खर्च करने वाली निजी कुंजी (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) निर्दिष्ट करता है कि WASM कोड प्रारंभ होने पर फ़ंक्शन निष्पादित होता है।
+[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) निर्दिष्ट करता है कि WASM कोड के प्रारंभ होने पर फ़ंक्शन निष्पादित होता है।
 
 ```rust
 pub fn main() {
@@ -334,7 +334,7 @@ pub fn main() {
 }
 ```
 
-यह कोड निर्दिष्ट करता है कि पैनिक आउटपुट JavaScript कंसोल पर भेजा जाए। इसे काम करते हुए देखने के लिए, एप्लिकेशन का उपयोग करें और बिल को एक अमान्य मेटा-पता दें (बस एक हेक्साडेसिमल अंक बदलें)। आप JavaScript कंसोल में यह त्रुटि देखेंगे:
+यह कोड निर्दिष्ट करता है कि पैनिक आउटपुट को JavaScript कंसोल पर भेजा जाए। इसे काम करते हुए देखने के लिए, एप्लिकेशन का उपयोग करें और बिल को एक अमान्य मेटा-पता दें (बस एक हेक्साडेसिमल अंक बदलें)। आपको JavaScript कंसोल में यह त्रुटि दिखाई देगी:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -343,7 +343,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-इसके बाद एक स्टैक ट्रेस (stack trace) होगा। फिर बिल को मान्य मेटा-पता दें, और ऐलिस को या तो एक अमान्य पता या एक अमान्य सार्वजनिक कुंजी दें। आप यह त्रुटि देखेंगे:
+इसके बाद एक स्टैक ट्रेस (stack trace) होगा। फिर बिल को मान्य मेटा-पता दें, और ऐलिस को या तो एक अमान्य पता या एक अमान्य सार्वजनिक कुंजी दें। आपको यह त्रुटि दिखाई देगी:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -377,13 +377,13 @@ export default defineConfig({
 
 **`App.jsx`**
 
-यह फ़ाइल एप्लिकेशन का मुख्य घटक है। यह एक कंटेनर है जिसमें दो घटक शामिल हैं: `Alice` और `Bill`, उन उपयोगकर्ताओं के लिए यूजर इंटरफेस। WASM के लिए प्रासंगिक भाग इनिशियलाइज़ेशन कोड है।
+यह फ़ाइल एप्लिकेशन का मुख्य घटक है। यह एक कंटेनर है जिसमें दो घटक शामिल हैं: `Alice` और `Bill`, जो उन उपयोगकर्ताओं के लिए यूजर इंटरफेस हैं। WASM के लिए प्रासंगिक हिस्सा इनिशियलाइज़ेशन (initialization) कोड है।
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-जब हम [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) का उपयोग करते हैं, तो यह दो फ़ाइलें बनाता है जिनका हम यहाँ उपयोग करते हैं: वास्तविक कोड वाली एक wasm फ़ाइल (यहाँ, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) और इसका उपयोग करने के लिए परिभाषाओं वाली एक JavaScript फ़ाइल (यहाँ, `src/rust_wasm/pkg/rust_wasm.js`)। उस JavaScript फ़ाइल का डिफ़ॉल्ट निर्यात (export) वह कोड है जिसे WASM आरंभ करने के लिए चलाने की आवश्यकता होती है।
+जब हम [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) का उपयोग करते हैं, तो यह दो फ़ाइलें बनाता है जिनका हम यहाँ उपयोग करते हैं: वास्तविक कोड वाली एक wasm फ़ाइल (यहाँ, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) और इसका उपयोग करने के लिए परिभाषाओं वाली एक JavaScript फ़ाइल (यहाँ, `src/rust-wasm/pkg/rust_wasm.js`)। उस JavaScript फ़ाइल का डिफ़ॉल्ट एक्सपोर्ट वह कोड है जिसे WASM को आरंभ करने के लिए चलाने की आवश्यकता होती है।
 
 ```jsx
 function App() {
@@ -406,9 +406,9 @@ function App() {
   )
 ```
 
-[`useEffect` हुक](https://react.dev/reference/react/useEffect) आपको एक फ़ंक्शन निर्दिष्ट करने देता है जो स्थिति (state) चर (variables) बदलने पर निष्पादित होता है। यहाँ, स्थिति चरों की सूची खाली है (`[]`), इसलिए यह फ़ंक्शन पेज लोड होने पर केवल एक बार निष्पादित होता है।
+[`useEffect` हुक](https://react.dev/reference/react/useEffect) आपको एक फ़ंक्शन निर्दिष्ट करने देता है जो स्थिति (state) चर (variables) के बदलने पर निष्पादित होता है। यहाँ, स्थिति चरों की सूची खाली (`[]`) है, इसलिए यह फ़ंक्शन पृष्ठ लोड होने पर केवल एक बार निष्पादित होता है।
 
-इफ़ेक्ट (effect) फ़ंक्शन को तुरंत वापस आना होता है। एसिंक्रोनस (asynchronous) कोड का उपयोग करने के लिए, जैसे कि WASM `init` (जिसे `.wasm` फ़ाइल लोड करनी होती है और इसलिए इसमें समय लगता है) हम एक आंतरिक [`async`](https://en.wikipedia.org/wiki/Async/await) फ़ंक्शन परिभाषित करते हैं और इसे बिना `await` के चलाते हैं।
+इफ़ेक्ट फ़ंक्शन को तुरंत वापस आना होता है। एसिंक्रोनस (asynchronous) कोड का उपयोग करने के लिए, जैसे कि WASM `init` (जिसे `.wasm` फ़ाइल लोड करनी होती है और इसलिए इसमें समय लगता है) हम एक आंतरिक [`async`](https://en.wikipedia.org/wiki/Async/await) फ़ंक्शन परिभाषित करते हैं और इसे बिना `await` के चलाते हैं।
 
 **`Bill.jsx`**
 
@@ -418,7 +418,7 @@ function App() {
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-डिफ़ॉल्ट निर्यात के अलावा, `wasm-pack` द्वारा उत्पन्न JavaScript कोड WASM कोड में प्रत्येक फ़ंक्शन के लिए एक फ़ंक्शन निर्यात करता है।
+डिफ़ॉल्ट एक्सपोर्ट के अलावा, `wasm-pack` द्वारा उत्पन्न JavaScript कोड WASM कोड में प्रत्येक फ़ंक्शन के लिए एक फ़ंक्शन एक्सपोर्ट करता है।
 
 ```jsx
             <button onClick={() => {
@@ -426,7 +426,7 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-WASM फ़ंक्शंस को कॉल करने के लिए, हम बस `wasm-pack` द्वारा बनाई गई JavaScript फ़ाइल द्वारा निर्यात किए गए फ़ंक्शन को कॉल करते हैं।
+WASM फ़ंक्शंस को कॉल करने के लिए, हम बस `wasm-pack` द्वारा बनाई गई JavaScript फ़ाइल द्वारा एक्सपोर्ट किए गए फ़ंक्शन को कॉल करते हैं।
 
 **`Alice.jsx`**
 

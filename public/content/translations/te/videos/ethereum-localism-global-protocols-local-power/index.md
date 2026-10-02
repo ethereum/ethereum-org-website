@@ -8,9 +8,6 @@ duration: "0:50:15"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "dao"
-  - "decentralization"
-  - "social"
 format: interview
 author: "ఎత్‌బోల్డర్"
 breadcrumb: "ఎథీరియం స్థానికత"

@@ -712,3 +712,36 @@ test("completed testnets require an actual date claim", () => {
     /Completed testnet "Sepolia".*does not state an actual date/
   )
 })
+
+test("an upcoming testnet with an agreed date is confirmed, not complete", () => {
+  const agreed: ForkcastSource = {
+    ...source,
+    phases: {
+      ...source.phases,
+      glamsterdam: source.phases.glamsterdam.map((phase) =>
+        phase.phaseId === "public-testnets"
+          ? {
+              ...phase,
+              testnets: [
+                {
+                  name: "Sepolia",
+                  status: "upcoming",
+                  stated: { claim: "actual", value: "Oct 6, 2026" },
+                },
+              ],
+            }
+          : phase
+      ),
+    },
+  }
+
+  const [sepolia] = normalize(agreed).glamsterdam.milestones.filter(
+    (milestone) => milestone.kind === "testnet"
+  )
+  expect(sepolia).toEqual({
+    kind: "testnet",
+    network: "Sepolia",
+    when: { year: 2026, month: 10, day: 6 },
+    status: "confirmed",
+  })
+})

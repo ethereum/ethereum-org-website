@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/restaking-explained/index.md",
-  "generatedAt": "2026-04-29T06:12:45.878Z",
-  "rootHash": "516101d6dee7",
+  "generatedAt": "2026-09-30T19:16:55.988Z",
+  "rootHash": "30b2c6c126a6",
   "tree": {
-    "contentHash": "172d0ef02eb3",
-    "anchorHash": "d9dac51b3ed1",
+    "contentHash": "0cb97c5bdf8f",
+    "anchorHash": "22add6f2cc57",
     "children": {
       "frontmatter:title": {
-        "contentHash": "89f83cd5a01b",
+        "contentHash": "5185b4d19595",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "42f4571bd835",
+        "contentHash": "4bd1456e8d0e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "79c34e2226aa"
+        "anchorHash": "f7634f559fca"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "329ca82fa2c1"
+        "anchorHash": "5d89dad9cba2"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f8ff31877a80"
+        "anchorHash": "fee35e745a2c"
       },
       "prose:1": {
         "contentHash": "7dc5c906fef2",
@@ -221,5 +227,5 @@
       "slashing-and-restaking-1355"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

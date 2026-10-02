@@ -47,7 +47,7 @@ Arayüz tanımı Vyper yerine Python ile yazılmıştır, çünkü arayüzler ya
 ```python
 #pragma version >0.3.10
 ```
-### ERC721Receiver Arayüzü
+### ERC721Receiver Arayüzü {#receiver-interface}
 
 ```python
 # safeTransferFrom() tarafından çağrılan Sözleşme için arayüz
@@ -86,7 +86,7 @@ ERC-721 Token kimlikleri (ID) 256 bittir. Genellikle Token'ın temsil ettiği ş
 ```
 
 Bir sözleşmenin yanlışlıkla bir transferi kabul etmesini önlemek için dönüş değeri bir boolean değil, belirli bir dört baytlık değerdir: `onERC721Received` fonksiyon seçicisi. Fonksiyon `nonpayable` olarak işaretlenmiştir çünkü alıcı bir Sözleşme bir Token'ı kabul ettiğinde kendi durumunu değiştirebilir.
-### Olaylar
+### Olaylar {#events}
 
 [Olaylar](/developers/docs/smart-contracts/anatomy/#events-and-logs), Blokzincir dışındaki kullanıcıları ve sunucuları olaylar hakkında bilgilendirmek için yayınlanır. Olayların içeriğinin Blokzincir üzerindeki sözleşmeler tarafından erişilebilir olmadığını unutmayın. Üç ERC-721 olayı, içe aktardığımız `IERC721` arayüzü tarafından tanımlanır, bu nedenle bu Sözleşme bunları kendisi bildirmez; aşağıdaki transfer fonksiyonlarında göreceğimiz gibi bunları `log IERC721.<Event>(...)` ile yayınlar.
 
@@ -95,7 +95,7 @@ Bir sözleşmenin yanlışlıkla bir transferi kabul etmesini önlemek için dö
 Bir ERC-721 onayı, bir ERC-20 harcama iznine benzer: belirli bir adresin belirli bir Token'ı transfer etmesine izin verilir ve bu onaylanmış Adres ayarlandığında veya yeniden onaylandığında `Approval` (`owner`, `approved`, `token_id`) yayınlanır. Bu, sözleşmelerin bir Token'ı kabul ettiklerinde yanıt vermeleri için bir mekanizma sağlar. Sözleşmeler olayları dinleyemez, bu nedenle Token'ı onlara sadece transfer ederseniz bundan "haberleri" olmaz. Bu şekilde sahip önce bir onay gönderir ve ardından sözleşmeye bir istek gönderir: "X Token'ını transfer etmenizi onayladım, lütfen ... yapın". Bu, ERC-721 standardını ERC-20 standardına benzer hale getirmek için bir tasarım seçimidir. ERC-721 Token'ları değiştirilemez olduğundan, bir Sözleşme Token'ın sahipliğine bakarak belirli bir Token'ı aldığını da belirleyebilir.
 
 Son olarak, bir sahip için bir _operatör_ etkinleştirildiğinde veya devre dışı bırakıldığında `ApprovalForAll` (`owner`, `operator`, `approved`) yayınlanır. Bazen, bir vekaletnameye benzer şekilde, bir Hesabın belirli bir türdeki (belirli bir Sözleşme tarafından yönetilen) tüm Token'larını yönetebilen bir operatöre sahip olmak yararlıdır. Örneğin, altı ay boyunca onunla iletişime geçip geçmediğimi kontrol eden ve eğer geçmediysem varlıklarımı mirasçılarıma dağıtan bir sözleşmeye böyle bir yetki vermek isteyebilirim (eğer onlardan biri bunu isterse, sözleşmeler bir işlem tarafından çağrılmadan hiçbir şey yapamaz). ERC-20'de bir miras sözleşmesine yüksek bir harcama izni verebiliriz, ancak bu ERC-721 için işe yaramaz çünkü Token'lar değiştirilemez. Bu onun eşdeğeridir. `approved` değeri, olayın bir onay için mi yoksa bir onayın geri alınması için mi olduğunu bize söyler.
-### Durum Değişkenleri
+### Durum Değişkenleri {#state-vars}
 
 Bu değişkenler Token'ların mevcut durumunu içerir: hangilerinin mevcut olduğu ve kime ait oldukları. Bunların çoğu, [iki tür arasında var olan tek yönlü eşlemeler](https://vyper.readthedocs.io/en/latest/types.html#mappings) olan `HashMap` nesneleridir.
 
@@ -147,7 +147,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Bunlar, ERC-721'i fiilen uygulayan fonksiyonlardır.
 
-#### Kurucu
+#### Kurucu {#constructor}
 
 ```python
 @deploy
@@ -169,7 +169,7 @@ Python'da ve Vyper'da, çok satırlı bir dize ( `"""` ile başlayıp biten) bel
 ```
 
 Durum değişkenlerine erişmek için `self.<variable name>` kullanırsınız (yine Python'daki gibi). Kurucu, sözleşmeyi dağıtan Hesabı `minter` olarak kaydeder.
-#### Görünüm Fonksiyonları
+#### Görünüm Fonksiyonları {#views}
 
 Bunlar, Blokzincirin durumunu değiştirmeyen ve bu nedenle harici olarak çağrıldıklarında ücretsiz olarak yürütülebilen fonksiyonlardır. Görünüm fonksiyonları bir Sözleşme tarafından çağrılırsa, yine de her Düğüm üzerinde yürütülmeleri gerekir ve bu nedenle Gaz maliyeti oluştururlar.
 
@@ -267,7 +267,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 Bu fonksiyon, `_operator`'ün bu sözleşmedeki `_owner`'ın tüm Token'larını yönetmesine izin verilip verilmediğini kontrol eder. Birden fazla operatör olabileceğinden, bu iki seviyeli bir HashMap'tir.
-#### Transfer Yardımcı Fonksiyonları
+#### Transfer Yardımcı Fonksiyonları {#transfer-helpers}
 
 Bu fonksiyonlar, Token'ları transfer etmenin veya yönetmenin bir parçası olan işlemleri uygular.
 
@@ -383,7 +383,7 @@ Bu dahili fonksiyona sahibiz çünkü Token'ları transfer etmenin iki yolu vard
 ```
 
 Vyper'da bir olay yayınlamak için bir `log` ifadesi kullanırsınız ([daha fazla ayrıntı için buraya bakın](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)). Olaylar içe aktarılan arayüze ait olduğundan, onlara `IERC721.Transfer` olarak atıfta bulunuruz ve alanlarını anahtar kelimeyle geçiririz.
-#### Transfer Fonksiyonları
+#### Transfer Fonksiyonları {#transfer-funs}
 
 ```python
 

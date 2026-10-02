@@ -7,9 +7,7 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
-  - "dapps"
+  - "use-cases"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "கிரிப்டோ செயலிகள் & பரவலாக்கப்பட்ட சமூக ஊடகம்"

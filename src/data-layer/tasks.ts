@@ -70,8 +70,13 @@ export const KEYS = {
   QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
-// Task definition: storage key + fetch function
-type TaskDef = [string, () => Promise<unknown>]
+// Per-task overrides for the config-wide defaults in trigger.config.ts
+interface TaskOverrides {
+  maxDuration?: number
+}
+
+// Task definition: storage key + fetch function + optional runtime overrides
+type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
@@ -91,7 +96,8 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  // Enrichment is paced by third-party rate limits: needs wall clock, not a bigger machine
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
@@ -109,12 +115,13 @@ const HOURLY: TaskDef[] = [
 ]
 
 // ─── Dynamic task creation ───
-function createDataTask([key, fetchFn]: TaskDef) {
+function createDataTask([key, fetchFn, overrides]: TaskDef) {
   return task({
     id: key,
     retry: {
       maxAttempts: 2,
     },
+    ...overrides,
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },

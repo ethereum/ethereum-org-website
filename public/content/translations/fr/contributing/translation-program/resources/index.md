@@ -23,7 +23,7 @@ Vous trouverez ci-dessous des guides et des outils utiles pour les traducteurs d
 
 ## Communautés {#communities}
 
-- [Groupes de traduction Discord spécifiques à chaque langue](https://discord.gg/ethereum-org)
+- [Groupes de traduction Discord spécifiques à chaque langue](/discord/)
   _– une initiative visant à connecter les traducteurs d'ethereum.org aux groupes de traduction_
 - [Groupe des traducteurs chinois](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– page Notion pour faciliter la coordination entre les traducteurs chinois_
@@ -39,7 +39,7 @@ Pour vous tenir au courant des dernières avancées du programme de traduction, 
 
 ## Heures de permanence pour les traducteurs {#office-hours}
 
-Nous organisons des heures de permanence pour les traducteurs le deuxième mercredi de chaque mois. Celles-ci se déroulent dans le salon vocal #office-hours sur le [Discord d'ethereum.org](https://discord.gg/ethereum-org), où vous pouvez également trouver les horaires exacts et des détails supplémentaires.
+Nous organisons des heures de permanence pour les traducteurs le deuxième mercredi de chaque mois. Celles-ci se déroulent dans le salon vocal #office-hours sur le [Discord d'ethereum.org](/discord/), où vous pouvez également trouver les horaires exacts et des détails supplémentaires.
 
 Les heures de permanence permettent à nos traducteurs de poser des questions sur le processus de traduction, de donner leur avis sur le programme, de partager leurs idées ou simplement de discuter avec l'équipe principale d'ethereum.org.
 Enfin, nous souhaitons utiliser ces appels pour communiquer les récents développements du programme de traduction et partager des conseils et des instructions clés avec nos contributeurs.

@@ -7,8 +7,7 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "consensus"
-  - "pos"
+  - "how-ethereum-works"
   - "security"
 format: presentation
 author: LisCon

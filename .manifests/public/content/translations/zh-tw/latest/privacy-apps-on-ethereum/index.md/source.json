@@ -1,31 +1,45 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/latest/privacy-apps-on-ethereum/index.md",
   "generatedAt": "2026-06-03T07:03:07.938Z",
-  "rootHash": "5fbac46b8d27",
+  "rootHash": "4ce59e26be55",
   "tree": {
-    "contentHash": "4b3843a26f05",
-    "anchorHash": "195ab75d17ff",
+    "contentHash": "e339ba3bb698",
+    "anchorHash": "bc69fdd726ca",
     "children": {
       "frontmatter:title": {
-        "contentHash": "599533aa231b",
+        "contentHash": "25602d1b9f5d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "40565513499d",
+        "contentHash": "c2382ca7b8d7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "320fc488a16e"
+        "anchorHash": "fc7c73a89b18"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d0b40ef7405d"
+        "anchorHash": "9e847484a658"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "25e61b0fbfb1",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "dd34ba59731d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "a4cc6bc01a92",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",

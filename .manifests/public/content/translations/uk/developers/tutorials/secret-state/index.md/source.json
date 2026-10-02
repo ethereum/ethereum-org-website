@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/secret-state/index.md",
   "generatedAt": "2026-06-19T23:26:12.907Z",
-  "rootHash": "d15347d80166",
+  "rootHash": "b0c71f35881f",
   "tree": {
-    "contentHash": "f4b34951fcc7",
-    "anchorHash": "898d61c78c32",
+    "contentHash": "202153615d30",
+    "anchorHash": "122ee0e76349",
     "children": {
       "frontmatter:title": {
         "contentHash": "6ff1aa8fc5e0",
@@ -20,8 +20,47 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "88a1775feb1a"
+        "contentHash": "0be4dfd4c731",
+        "anchorHash": "d956e4dd69c7",
+        "children": {
+          "0": {
+            "contentHash": "b3eacd33433b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "65a407718f00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "c5a5a7ee0518",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "c947fbe4f460",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "4587a26623dc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "5": {
+            "contentHash": "af07ff91ab7c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "6": {
+            "contentHash": "a4cc6bc01a92",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
