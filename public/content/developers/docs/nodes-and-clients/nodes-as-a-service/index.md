@@ -352,6 +352,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay-per-hour pricing
     - Direct support
 
+- [**SwiftNodes**](https://swiftnodes.io/)
+  - [Docs](https://swiftnodes.io/docs/getting-started)
+  - Features
+    - Free tier (250k requests/month) with no KYC required
+    - Flat-rate paid plans with no compute-unit metering
+    - One API key for 75+ networks, including non-EVM chains
+    - HTTP and WebSocket endpoints on every chain
+    - Archive access included on paid plans
+    - Crypto and card payments accepted
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Features
