@@ -88,6 +88,8 @@ export default async function PersonaPageJsonLD({
         name,
         description: t(persona.descKey),
         numberOfItems: wallets.length,
+        // Wallets are shuffled within locale groups, so positions are not a ranking.
+        itemListOrder: "https://schema.org/ItemListUnordered",
         itemListElement: wallets.map((wallet, index) => {
           const detailUrl = normalizeUrlForJsonLd(
             locale,
