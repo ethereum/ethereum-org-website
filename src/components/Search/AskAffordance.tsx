@@ -27,6 +27,14 @@ const AskAffordance = () => {
   const [dropdown, setDropdown] = useState<HTMLElement | null>(null)
   const [query, setQuery] = useState("")
   const [asked, setAsked] = useState("")
+  /** Bumped per ask, so the same question can be asked again after a throttle. */
+  const [attempt, setAttempt] = useState(0)
+  /**
+   * A throttled ask never reached the model, so the question is still unanswered and the
+   * button has to come back -- being the same text as last time is not a reason to stay
+   * disabled when last time did not happen.
+   */
+  const [retryable, setRetryable] = useState(false)
   const [targets, setTargets] = useState<AskTarget[]>([])
   /** Index into `targets` while the highlight is in the answer, else null. */
   const [activeSource, setActiveSource] = useState<number | null>(null)
@@ -70,6 +78,19 @@ const AskAffordance = () => {
   useEffect(() => () => host?.remove(), [host])
 
   // The library owns the input and exposes neither its value nor a change event.
+  const ask = useCallback((value: string) => {
+    setTargets([])
+    setActiveSource(null)
+    setRetryable(false)
+    setAttempt((count) => count + 1)
+    setAsked(value)
+  }, [])
+
+  const handleThrottled = useCallback((retryAfter: number) => {
+    const timer = setTimeout(() => setRetryable(true), retryAfter * 1000)
+    throttleTimer.current = timer
+  }, [])
+
   const handleTargets = useCallback((next: AskTarget[]) => {
     setTargets(next)
     setActiveSource(null)
@@ -78,12 +99,15 @@ const AskAffordance = () => {
   const disabled = !query || query === asked
   const armed = !disabled && activeSource === null && !resultHighlighted
 
+  const throttleTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
   const askedRef = useRef("")
   const sourcesRef = useRef<AskTarget[]>([])
   const activeSourceRef = useRef<number | null>(null)
   askedRef.current = asked
   sourcesRef.current = targets
   activeSourceRef.current = activeSource
+  const retryableRef = useRef(false)
+  retryableRef.current = retryable
 
   useEffect(() => {
     const input =
@@ -148,12 +172,11 @@ const AskAffordance = () => {
           return
         }
         // A highlighted result belongs to the library.
-        if (activeItem() || !value || value === askedRef.current) return
+        const repeat = value === askedRef.current && !retryableRef.current
+        if (activeItem() || !value || repeat) return
         thisEvent.preventDefault()
         thisEvent.stopPropagation()
-        setTargets([])
-        setActiveSource(null)
-        setAsked(value)
+        ask(value)
         return
       }
 
@@ -196,6 +219,8 @@ const AskAffordance = () => {
     // that produced it. Clearing the query clears the answer: nothing on screen would
     // say what it answered.
     const clear = () => {
+      clearTimeout(throttleTimer.current)
+      setRetryable(false)
       setQuery("")
       setTargets([])
       setActiveSource(null)
@@ -211,7 +236,7 @@ const AskAffordance = () => {
       input.removeEventListener("input", read)
       input.removeEventListener("keydown", intercept, true)
     }
-  }, [host])
+  }, [host, ask])
 
   return (
     <>
@@ -225,7 +250,7 @@ const AskAffordance = () => {
               armed && "DocSearch-Ask-trigger--armed"
             )}
             title={t("docsearch-ask-ai")}
-            onClick={() => setAsked(query)}
+            onClick={() => ask(query)}
             disabled={disabled}
           >
             <Sparkles />
@@ -239,6 +264,8 @@ const AskAffordance = () => {
           <AskPanel
             query={asked}
             onDismiss={() => setAsked("")}
+            attempt={attempt}
+            onThrottled={handleThrottled}
             onTargets={handleTargets}
             activeTarget={activeSource}
             onHoverTarget={setActiveSource}

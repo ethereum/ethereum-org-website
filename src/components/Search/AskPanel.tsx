@@ -55,6 +55,10 @@ interface AskPanelProps {
   onTargets: (targets: AskTarget[]) => void
   /** Index into the reported targets, or null while the highlight is elsewhere. */
   activeTarget: number | null
+  /** Bumped to ask the same question again, which a throttled ask needs. */
+  attempt: number
+  /** The ask never reached the model, so the question is still unanswered. */
+  onThrottled: (retryAfter: number) => void
   onHoverTarget: (index: number | null) => void
 }
 
@@ -64,6 +68,8 @@ const AskPanel = ({
   onTargets,
   activeTarget,
   onHoverTarget,
+  attempt,
+  onThrottled,
 }: AskPanelProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
@@ -127,14 +133,16 @@ const AskPanel = ({
       //
       // Once per question, not once per effect run: StrictMode runs an effect twice on
       // mount, so the first ask was spending two and the limit arrived one ask early.
-      if (spent.current?.query !== query) {
-        spent.current = { query, allowance: takeAskAllowance() }
+      const key = `${attempt}:${query}`
+      if (spent.current?.query !== key) {
+        spent.current = { query: key, allowance: takeAskAllowance() }
       }
       const { allowance } = spent.current
       if (!allowance.allowed) {
         setError(t("docsearch-ask-busy", { seconds: allowance.retryAfter }))
         report("throttled")
         setDone(true)
+        onThrottled(allowance.retryAfter)
         return
       }
       try {
@@ -197,7 +205,7 @@ const AskPanel = ({
     }
     run()
     return () => controller.abort()
-  }, [query, locale, t])
+  }, [query, locale, t, attempt, onThrottled])
 
   // A new question scrolls its answer into view: the reader may have been part-way down
   // the results when they asked, and the answer arrives above them.
