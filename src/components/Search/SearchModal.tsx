@@ -29,6 +29,13 @@ import { isExternal, sanitizeHitUrl } from "@/lib/utils/url"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import AskAffordance from "./AskAffordance"
+import FocusHint from "./FocusHint"
+
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
+
 // `DocSearchHit` isn't re-exported from the package root, so derive it from the
 // modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
 // object, this fork exposes flattened dotted keys (e.g. `item["hierarchy.lvl0"]`).
@@ -152,6 +159,41 @@ interface SearchModalProps {
   className?: string
 }
 
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
+interface SearchModalProps {
+  onClose: () => void
+  className?: string
+}
+
 /**
  * Everything the search modal needs, kept in this file because it is loaded lazily.
  * `Search` sits in the global header and ships on every page; the explorer data reaches
@@ -164,6 +206,16 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
 
+  // English only: the prompt, the guardrails and the referral records are written in
+  // English and measured against the English index.
+  const canAsk = locale === DEFAULT_LOCALE
+
+  // Tabbing through the answer's links takes focus out of the input, and every other key
+  // then goes nowhere useful. The hook skips this while the reader is typing, so a slash
+  // typed into the box is still a slash.
+  useKeyboardShortcut("searchFocusInput", () => {
+    document.querySelector<HTMLInputElement>(".DocSearch-Input")?.focus()
+  })
   const host = process.env.NEXT_PUBLIC_TYPESENSE_HOST || ""
   const port = Number(process.env.NEXT_PUBLIC_TYPESENSE_PORT) || 443
   const protocol = process.env.NEXT_PUBLIC_TYPESENSE_PROTOCOL || "https"
@@ -340,13 +392,18 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     [buildExplorerHits, locale]
   )
 
-  const searchModalProps = {
-    typesenseCollectionName: collectionName,
-    typesenseServerConfig: {
-      nodes: [{ host, port, protocol }],
-      apiKey,
-    },
-    typesenseSearchParameters: {
+  /**
+   * The vendor rebuilds its autocomplete -- and with it the input's state -- whenever one
+   * of these changes identity. They are memoized because this component now re-renders on
+   * its own state: without it a keystroke tore down the input and cleared what was typed.
+   */
+  const typesenseServerConfig = useMemo(
+    () => ({ nodes: [{ host, port, protocol }], apiKey }),
+    [host, port, protocol, apiKey]
+  )
+
+  const typesenseSearchParameters = useMemo(
+    () => ({
       // The library groups by `url`, which is anchor-scoped, so one page can occupy
       // several rows and its page-level record need not be among them -- results then
       // deep-link into sections with no parent to click. Grouping by page instead caps
@@ -376,15 +433,12 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
       // labeled queries misspelled one character each, this alone moves hit@5 from 65% to
       // 71% and leaves hit@1 on the correctly spelled set where it was.
       drop_tokens_threshold: 5,
-    },
-    onClose,
-    hitComponent,
-    navigator,
-    // The prop is typed against typesense's SearchClient; the object the hook builds
-    // is the narrower shape above.
-    transformSearchClient:
-      transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
-    transformItems: (items: DocSearchHit[]) =>
+    }),
+    []
+  )
+
+  const transformItems = useCallback(
+    (items: DocSearchHit[]) =>
       // The page leads, with its sections beneath. The renderer nests children under an
       // `lvl1` sibling but never reorders, so a section that scored higher would
       // otherwise render above the page it belongs to.
@@ -403,7 +457,28 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
         newItem.url = sanitizeHitUrl(item.url)
         return withPageName(newItem)
       }),
-    placeholder: t("search-ethereum-org"),
+    []
+  )
+
+  const searchModalProps = {
+    typesenseCollectionName: collectionName,
+    typesenseServerConfig,
+    typesenseSearchParameters,
+    onClose,
+    // Nothing is highlighted until the reader arrows into the list, which leaves Enter
+    // free to ask. Where there is no Ask, the library's own default stands and Enter
+    // opens the first result as it always has.
+    defaultActiveItemId: canAsk ? null : 0,
+    hitComponent,
+    navigator,
+    // The prop is typed against typesense's SearchClient; the object the hook builds
+    // is the narrower shape above.
+    transformSearchClient:
+      transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
+    transformItems,
+    placeholder: canAsk
+      ? t("docsearch-ask-placeholder")
+      : t("search-ethereum-org"),
     translations: {
       searchBox: {
         resetButtonTitle: t("clear"),
@@ -449,6 +524,11 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   return (
     <div className={className} data-testid="search-modal">
       <DocSearchModal initialScrollY={windowScrollY} {...searchModalProps} />
+      {/* English only: the prompt, the guardrails and the referral records are written
+          in English and measured against the English index. Elsewhere the button would
+          answer from that locale's pages with none of that tested. */}
+      {canAsk && <AskAffordance />}
+      <FocusHint />
     </div>
   )
 }

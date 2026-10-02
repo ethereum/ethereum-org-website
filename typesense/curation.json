@@ -153,6 +153,18 @@
       ]
     },
     {
+      "q": "exchange",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
+      "q": "exchanges",
+      "pin": [
+        "/get-eth/#country-picker"
+      ]
+    },
+    {
       "q": "exodus",
       "pin": [
         "/wallets/find-wallet/exodus/"

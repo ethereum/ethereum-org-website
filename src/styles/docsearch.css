@@ -63,6 +63,17 @@
    which sits in the higher-priority base layer vs the docsearch layer */
 .DocSearch-Modal {
   margin: 60px auto auto;
+  /* The vendor sets flex-direction without display, so the column never applied. With it
+     the modal owns its own height and the dropdown takes what is left -- the dropdown
+     cannot compute that itself, because the search bar above it is `fit-content` and so
+     cannot appear in a calc. Capped at the viewport less the 60px offset and a gutter,
+     so the footer with the key hints is always on screen. */
+  display: flex;
+  max-height: calc(100dvh - 60px - 2rem);
+}
+
+.DocSearch-SearchBar {
+  flex-shrink: 0;
 }
 
 .DocSearch-Form {
@@ -207,7 +218,12 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+  max-height: none;
+  /* The answer streams in above the results, and scroll anchoring reads that as content
+     inserted above the viewport: the browser pushes scrollTop down to hold the results
+     still, which walked the reader off the top of the answer as it was being written. */
+  overflow-anchor: none;
+  @apply min-h-0 flex-1 overflow-y-scroll px-4 pb-4 md:overflow-y-auto md:px-8 md:pb-8;
 }
 
 /* Explorer rows keep the library's own markup so their save/remove buttons survive, and
@@ -402,6 +418,197 @@
 @media (max-width: 768px) {
   .DocSearch-Modal {
     --inset: var(--spacing-4);
-    @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
+    @apply fixed inset-[var(--inset)] max-h-[calc(100dvh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
   }
+}
+
+/**
+ * Ask AI
+ */
+
+/* Desktop only: there is no keyboard to press it with on touch. */
+.DocSearch-Focus-hint {
+  @apply mx-2 hidden shrink-0 items-center md:flex;
+}
+
+.DocSearch-Focus-hint kbd {
+  @apply text-sm;
+}
+
+/* Sits inside the vendor's form ahead of its reset button, which is why it is
+   end-aligned by the form's own flex row rather than positioned. */
+.DocSearch-Ask-slot {
+  @apply flex shrink-0 items-center;
+}
+
+.DocSearch-Ask-trigger {
+  @apply ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary;
+}
+
+/* Armed: Enter reaches the button. Distinct from merely enabled, which says only that
+   there is something to ask. An outline rather than a shadow, so nothing reflows when it
+   appears -- the button sits in the search bar's flex row beside the clear button. */
+.DocSearch-Ask-trigger--armed {
+  @apply outline outline-2 outline-offset-2 outline-primary-hover;
+}
+
+.DocSearch-Ask-trigger svg {
+  @apply size-3.5;
+}
+
+.DocSearch-Ask-trigger:hover:not(:disabled) {
+  @apply bg-primary-low-contrast;
+}
+
+.DocSearch-Ask-trigger:disabled {
+  @apply border-disabled text-disabled;
+}
+
+/* The label is the first thing to go when the input needs the room. */
+@media (max-width: 480px) {
+  .DocSearch-Ask-trigger span {
+    @apply sr-only;
+  }
+}
+
+/* The answer sits above the results rather than replacing them, so a reader can read it
+   and still scan what search found without going back for it. Its slot is prepended to
+   the scroll container, so reading order, DOM order and tab order all agree. */
+
+/* A rule between the answer and the results it sits above. */
+.DocSearch-Dropdown:has(.DocSearch-Ask) .DocSearch-Hits:first-of-type {
+  @apply border-t border-solid border-disabled pt-4;
+}
+
+/* Prose, not a row: the results this replaces are clickable and this is not. */
+.DocSearch-Ask {
+  @apply flex cursor-auto flex-col gap-4 py-4;
+}
+
+.DocSearch-Ask-header {
+  @apply flex items-center justify-between text-xs text-body-medium uppercase;
+}
+
+/* Rides the label rather than sitting beside it, so the header stays one line on a
+   phone. The header uppercases, so the string stays sentence case. Inherits the header's
+   colour deliberately: primary is the link colour, and this is not a link. */
+.DocSearch-Ask-beta {
+  @apply ms-1 lowercase;
+}
+
+.DocSearch-Ask-header button {
+  @apply text-primary normal-case hover:underline;
+}
+
+.DocSearch-Ask-question {
+  @apply line-clamp-2 text-md font-bold text-body;
+}
+
+.DocSearch-Ask-status {
+  @apply text-sm text-body-medium;
+}
+
+/* Model output: spacing only. Anything that needs a heading is too long an answer. */
+.DocSearch-Ask-answer {
+  @apply flex flex-col gap-3 text-md text-body;
+}
+
+.DocSearch-Ask-answer :is(ul, ol) {
+  @apply m-0 flex list-outside flex-col gap-1 ps-5;
+}
+
+.DocSearch-Ask-answer ul {
+  @apply list-disc;
+}
+
+.DocSearch-Ask-answer ol {
+  @apply list-decimal;
+}
+
+.DocSearch-Ask-answer code {
+  @apply rounded-sm bg-background-highlight px-1 py-0.5 text-sm;
+}
+
+.DocSearch-Ask-answer a {
+  @apply text-primary underline;
+}
+
+/* A citation marks the sentence rather than sitting in it. Runs carry their own
+   separator, set where the links are built -- an adjacency rule here could not tell which
+   superscripts belonged to the same run. */
+.DocSearch-Ask-cite {
+  @apply text-xs;
+}
+
+.DocSearch-Ask-cite a {
+  @apply text-primary no-underline hover:underline;
+}
+
+/* A tool the question is better served by than by prose. Its own line, so it reads as a
+   next step rather than as part of the sentence above it. */
+.DocSearch-Ask-followup a {
+  @apply text-primary hover:underline;
+}
+
+/* The site that owns the question, when the answer routed rather than answered. */
+.DocSearch-Ask-referral a {
+  @apply text-primary hover:underline;
+}
+
+.DocSearch-Ask-notice {
+  @apply text-sm text-body-medium;
+}
+
+.DocSearch-Ask-error {
+  @apply text-sm text-error;
+}
+
+.DocSearch-Ask-footer {
+  @apply flex flex-col gap-2 border-t border-solid border-disabled pt-3;
+}
+
+.DocSearch-Ask-sources {
+  @apply flex flex-col gap-1 text-sm;
+}
+
+.DocSearch-Ask-sources span {
+  @apply text-xs text-body-medium uppercase;
+}
+
+.DocSearch-Ask-sources ol {
+  @apply m-0 flex list-inside list-decimal flex-col gap-1;
+}
+
+/* The highlight, matching how a result row reads when it is active. Applies to every
+   navigable target -- the tool link, the referral and each source -- and never to the
+   inline citation superscripts, which are part of the sentence. */
+.DocSearch-Ask-target--active {
+  @apply rounded-xs bg-primary-low-contrast outline outline-4 outline-primary-low-contrast;
+}
+
+.DocSearch-Ask-sources a {
+  @apply text-primary hover:underline;
+}
+
+/* Sized to the text it sits in, so the icons read as part of the sentence. */
+.DocSearch-Ask-feedback {
+  @apply flex items-center gap-2 text-sm text-body-medium;
+}
+
+.DocSearch-Ask-feedback-buttons {
+  @apply flex items-center;
+}
+
+/* Inherits the line's colour: a thumb is not a call to action, and a primary fill at
+   rest pulled the eye off the answer. */
+.DocSearch-Ask-feedback button {
+  @apply rounded-xs p-1 text-body-medium hover:text-primary-hover;
+}
+
+.DocSearch-Ask-feedback svg {
+  @apply size-4;
+}
+
+.DocSearch-Ask-disclaimer {
+  @apply text-xs text-body-medium;
 }
