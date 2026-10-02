@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/defi-history-inception-to-2021/index.md",
-  "generatedAt": "2026-04-28T23:12:55.680Z",
-  "rootHash": "b4d7ecde4859",
+  "generatedAt": "2026-09-30T18:36:39.327Z",
+  "rootHash": "c5d3339ec2a1",
   "tree": {
-    "contentHash": "af5957b95fc8",
-    "anchorHash": "768d10f795c9",
+    "contentHash": "e18864719f56",
+    "anchorHash": "a31f1aa2592e",
     "children": {
       "frontmatter:title": {
         "contentHash": "b77029ee0134",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "938ab6212652",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "da9fa35c3fa6"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "259aa8ef98a8"
+            "anchorHash": "2290d7d70dea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -335,5 +327,5 @@
       "looking-ahead-to-2021-and-beyond-1656"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

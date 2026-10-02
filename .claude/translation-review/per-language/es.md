@@ -85,3 +85,17 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - The `cadena principal` vs `Red principal` collision reverted, because English line 207 literally says "the main Ethereum chain" while the rest of the file says "Mainnet". The durable fix is on the English source, not the translation.
 - Full tu -> usted harmonization of `accounts/index.md`, reversing the PR #19115 register regression.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Acronym over-expansion (#80) regressed correct pre-PR text: API, DAO, DeSci, ENS, L2 `(l2)`, dapp, L1 across open-access, privacy, contributing, zk-rollups, glamsterdam, quantum-resistance.
+- "both" dropped (#82); `reclamo` for no-logs claim; `en absoluto` misuse; tú/ustedes mix in privacy-fixes video L24/26.

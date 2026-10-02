@@ -135,7 +135,7 @@ sidebarDepth: 3
 
 #### WASMコンポーネント {#wasm}
 
-WASMにコンパイルされるソースコードは[Rust](https://rust-lang.org/)で書かれています。[`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)で確認できます。このコードは主に、JavaScriptコードと[`eth-stealth-addresses`ライブラリ](https://github.com/kassandraoftroy/eth-stealth-addresses)の間のインターフェースです。
+WASMにコンパイルされるソースコードは[Rust](https://rust-lang.org/)で書かれています。[`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)で確認できます。このコードは主に、JavaScriptコードと[`eth-stealth-addresses`ライブラリ](https://github.com/kassandraoftroy/eth-stealth-addresses)の間のインターフェースです。
 
 **`Cargo.toml`**
 
@@ -154,7 +154,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/)パッケージはランダムな値を生成する必要があります。それは純粋なアルゴリズムの手段では実行できません。エントロピーの源として物理的プロセスへのアクセスが必要です。この定義は、実行中のブラウザに要求することでそのエントロピーを取得することを指定しています。
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/)パッケージはランダムな値を生成する必要があります。これは純粋なアルゴリズムの手段では実行できず、エントロピーのソースとして物理的プロセスへのアクセスを必要とします。この定義は、実行中のブラウザに要求することでそのエントロピーを取得することを指定しています。
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -179,7 +179,7 @@ use wasm_bindgen::prelude::*;
 
 RustからWASMパッケージを作成するための定義です。これらは[こちら](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)に文書化されています。
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -215,7 +215,7 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html)は3つのフィールドを返します。
 
 - メタアドレス（*K<sub>pub</sub>*と*V<sub>pub</sub>*）
-- 表示用秘密鍵（*V<sub>priv</sub>*）
+- 閲覧用秘密鍵（*V<sub>priv</sub>*）
 - 支払い用秘密鍵（*K<sub>priv</sub>*）
 
 [タプル](https://doc.rust-lang.org/std/primitive.tuple.html)構文を使用すると、これらの値を再び分離できます。
@@ -229,30 +229,30 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-[`format!`](https://doc.rust-lang.org/std/fmt/index.html)マクロを使用して、JSONエンコードされた文字列を生成します。[`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html)を使用して、配列を16進数の文字列に変更します。
+[`format!`](https://doc.rust-lang.org/std/fmt/index.html)マクロを使用して、JSONエンコードされた文字列を生成します。[`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html)を使用して、配列を16進数文字列に変更します。
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-この関数は、（JavaScriptによって提供された）16進数の文字列をバイト配列に変換します。JavaScriptコードによって提供された値を解析するために使用します。この関数は、Rustが配列とベクターを処理する方法のために複雑になっています。
+この関数は、（JavaScriptによって提供された）16進数文字列をバイト配列に変換します。JavaScriptコードによって提供された値を解析するために使用します。Rustが配列とベクターを処理する方法のため、この関数は複雑になっています。
 
-`<const N: usize>`式は[ジェネリック](https://doc.rust-lang.org/book/ch10-01-syntax.html)と呼ばれます。`N`は、返される配列の長さを制御するパラメータです。この関数は実際には`str_to_array::<n>`と呼ばれ、ここで`n`は配列の長さです。
+`<const N: usize>`という式は[ジェネリック](https://doc.rust-lang.org/book/ch10-01-syntax.html)と呼ばれます。`N`は返される配列の長さを制御するパラメータです。この関数は実際には`str_to_array::<n>`と呼ばれ、`n`は配列の長さです。
 
-戻り値は`Option<[u8; N]>`であり、これは返される配列が[オプショナル](https://doc.rust-lang.org/std/option/)であることを意味します。これは、失敗する可能性のある関数に対するRustの典型的なパターンです。
+戻り値は`Option<[u8; N]>`であり、返される配列が[オプショナル](https://doc.rust-lang.org/std/option/)であることを意味します。これは、失敗する可能性のある関数に対するRustの典型的なパターンです。
 
-たとえば、`str_to_array::10("bad060a7")`を呼び出した場合、関数は10個の値の配列を返すはずですが、入力は4バイトしかありません。関数は失敗する必要があり、`None`を返すことで失敗します。`str_to_array::4("bad060a7")`の戻り値は`Some<[0xba, 0xd0, 0x60, 0xa7]>`になります。
+たとえば、`str_to_array::10("bad060a7")`を呼び出すと、関数は10個の値を持つ配列を返すはずですが、入力は4バイトしかありません。関数は失敗する必要があり、`None`を返すことで失敗します。`str_to_array::4("bad060a7")`の戻り値は`Some<[0xba, 0xd0, 0x60, 0xa7]>`になります。
 
 ```rust
     // decodeはResult<Vec<u8>, _>を返す
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html)関数は`Result<Vec<u8>, FromHexError>`を返します。[`Result`](https://doc.rust-lang.org/std/result/)型は、成功した結果（`Ok(value)`）またはエラー（`Err(error)`）のいずれかを含めることができます。
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html)関数は`Result<Vec<u8>, FromHexError>`を返します。[`Result`](https://doc.rust-lang.org/std/result/)型は、成功した結果（`Ok(value)`）またはエラー（`Err(error)`）のいずれかを含むことができます。
 
-`.ok()`メソッドは、`Result`を`Option`に変換します。その値は、成功した場合は`Ok()`の値、そうでない場合は`None`になります。最後に、[クエスチョンマーク演算子](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)は、`Option`が空の場合、現在の関数を中止して`None`を返します。それ以外の場合は、値をアンラップしてそれを返します（この場合、`vec`に値を割り当てます）。
+`.ok()`メソッドは`Result`を`Option`に変換し、その値は成功した場合は`Ok()`の値、そうでない場合は`None`になります。最後に、[疑問符演算子](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)は現在の関数を中止し、`Option`が空の場合は`None`を返します。それ以外の場合は、値をアンラップして返します（この場合、`vec`に値を割り当てます）。
 
-これはエラーを処理するための奇妙に複雑な方法のように見えますが、`Result`と`Option`は、すべてのエラーが何らかの形で確実に処理されるようにします。
+これはエラーを処理するための奇妙に複雑な方法のように見えますが、`Result`と`Option`は、すべてのエラーが何らかの形で確実に処理されることを保証します。
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,7 +265,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rustには2つの配列タイプがあります。[配列](https://doc.rust-lang.org/std/primitive.array.html)は固定サイズです。[ベクター](https://doc.rust-lang.org/std/vec/index.html)は拡大および縮小できます。`hex::decode`はベクターを返しますが、`eth_stealth_addresses`ライブラリは配列を受け取ることを求めています。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods)は、値を別の型（たとえば、ベクターから配列）に変換します。
+Rustには2つの配列型があります。[配列](https://doc.rust-lang.org/std/primitive.array.html)は固定サイズです。[ベクター](https://doc.rust-lang.org/std/vec/index.html)は拡大および縮小できます。`hex::decode`はベクターを返しますが、`eth_stealth_addresses`ライブラリは配列を受け取ることを想定しています。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods)は、値を別の型（たとえば、ベクターから配列）に変換します。
 
 ```rust
     Some(array)
@@ -279,7 +279,7 @@ Rustでは、関数の最後で値を返すときに[`return`](https://doc.rust-
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-この関数は、*V<sub>pub</sub>*と*K<sub>pub</sub>*の両方を含む公開メタアドレスを受け取ります。ステルス・アドレス、公開する公開鍵（*R<sub>pub</sub>*）、および公開されたアドレスのどれがアリスに属している可能性があるかの識別を高速化する1バイトのスキャン値を返します。
+この関数は、*V<sub>pub</sub>*と*K<sub>pub</sub>*の両方を含む公開メタアドレスを受け取ります。ステルス・アドレス、公開する公開鍵（*R<sub>pub</sub>*）、および公開されたアドレスのどれがアリスのものであるかの特定を高速化する1バイトのスキャン値を返します。
 
 スキャン値は共有シークレット（*S = GR<sub>priv</sub>V<sub>priv</sub>*）の一部です。この値はアリスが利用でき、これを確認することは、*f(K<sub>pub</sub>+G\*hash(S))*が公開されたアドレスと等しいかどうかを確認するよりもはるかに高速です。
 
@@ -319,7 +319,7 @@ pub fn wasm_compute_stealth_key(
 
 - アドレス（*Address=f(P<sub>pub</sub>)*）
 - ビルによって生成された公開鍵（*R<sub>pub</sub>*）
-- 表示用秘密鍵（*V<sub>priv</sub>*）
+- 閲覧用秘密鍵（*V<sub>priv</sub>*）
 - 支払い用秘密鍵（*K<sub>priv</sub>*）
 
 ```rust
@@ -334,7 +334,7 @@ pub fn main() {
 }
 ```
 
-このコードは、パニック出力がJavaScriptコンソールに送信されることを指定します。実際の動作を確認するには、アプリケーションを使用して、ビルに無効なメタアドレスを与えます（16進数の数字を1つ変更するだけです）。JavaScriptコンソールに次のエラーが表示されます。
+このコードは、パニックの出力がJavaScriptコンソールに送信されることを指定します。実際の動作を確認するには、アプリケーションを使用してビルに無効なメタアドレスを渡します（16進数の数字を1つ変更するだけです）。JavaScriptコンソールに次のエラーが表示されます。
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -343,20 +343,20 @@ assertion `left == right` failed
  right: 1
 ```
 
-その後にスタックトレースが続きます。次に、ビルに有効なメタアドレスを与え、アリスに無効なアドレスまたは無効な公開鍵のいずれかを与えます。次のエラーが表示されます。
+その後にスタックトレースが続きます。次に、ビルに有効なメタアドレスを渡し、アリスに無効なアドレスまたは無効な公開鍵のいずれかを渡します。次のエラーが表示されます。
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-ここでも、スタックトレースが続きます。
+ここでも、その後にスタックトレースが続きます。
 
 #### ユーザーインターフェース {#ui}
 
-ユーザーインターフェースは[React](https://react.dev/)を使用して書かれており、[Vite](https://vite.dev/)によって提供されます。[このチュートリアル](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)を使用してそれらについて学ぶことができます。ここではブロックチェーンやウォレットと直接やり取りしないため、[Wagmi](https://wagmi.sh/)は必要ありません。
+ユーザーインターフェースは[React](https://react.dev/)を使用して書かれており、[Vite](https://vite.dev/)によって提供されます。これらについては、[このチュートリアル](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)を使用して学ぶことができます。ここではブロックチェーンやウォレットと直接やり取りしないため、[Wagmi](https://wagmi.sh/)は必要ありません。
 
-ユーザーインターフェースの唯一の自明ではない部分は、WASMの接続性です。その仕組みは次のとおりです。
+ユーザーインターフェースの唯一の自明ではない部分は、WASMの接続性です。その仕組みは以下の通りです。
 
 **`vite.config.js`**
 
@@ -373,7 +373,7 @@ export default defineConfig({
 })
 ```
 
-2つのViteプラグインが必要です: [react](https://www.npmjs.com/package/@vitejs/plugin-react)と[wasm](https://github.com/Menci/vite-plugin-wasm#readme)。
+2つのViteプラグインが必要です。[react](https://www.npmjs.com/package/@vitejs/plugin-react)と[wasm](https://github.com/Menci/vite-plugin-wasm#readme)です。
 
 **`App.jsx`**
 
@@ -383,7 +383,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)を使用すると、ここで使用する2つのファイルが作成されます。実際のコードを含むwasmファイル（ここでは`src/rust-wasm/pkg/rust_wasm_bg.wasm`）と、それを使用するための定義を含むJavaScriptファイル（ここでは`src/rust_wasm/pkg/rust_wasm.js`）です。そのJavaScriptファイルのデフォルトエクスポートは、WASMを初期化するために実行する必要があるコードです。
+[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)を使用すると、ここで使用する2つのファイルが作成されます。実際のコードを含むwasmファイル（ここでは`src/rust-wasm/pkg/rust_wasm_bg.wasm`）と、それを使用するための定義を含むJavaScriptファイル（ここでは`src/rust-wasm/pkg/rust_wasm.js`）です。そのJavaScriptファイルのデフォルトエクスポートは、WASMを初期化するために実行する必要があるコードです。
 
 ```jsx
 function App() {
@@ -408,7 +408,7 @@ function App() {
 
 [`useEffect`フック](https://react.dev/reference/react/useEffect)を使用すると、状態変数が変更されたときに実行される関数を指定できます。ここでは、状態変数のリストが空（`[]`）であるため、この関数はページが読み込まれたときに1回だけ実行されます。
 
-エフェクト関数はすぐに戻る必要があります。WASMの`init`（`.wasm`ファイルを読み込む必要があるため時間がかかります）などの非同期コードを使用するには、内部の[`async`](https://en.wikipedia.org/wiki/Async/await)関数を定義し、`await`なしで実行します。
+エフェクト関数はすぐに返す必要があります。WASMの`init`（`.wasm`ファイルを読み込む必要があり、時間がかかる）などの非同期コードを使用するには、内部の[`async`](https://en.wikipedia.org/wiki/Async/await)関数を定義し、`await`なしで実行します。
 
 **`Bill.jsx`**
 
@@ -432,8 +432,8 @@ WASM関数を呼び出すには、`wasm-pack`によって作成されたJavaScri
 
 `Alice.jsx`のコードも同様ですが、アリスには2つのアクションがある点が異なります。
 
-- メタアドレスの生成
-- ビルによって公開されたアドレスの秘密鍵の取得
+- メタアドレスを生成する
+- ビルによって公開されたアドレスの秘密鍵を取得する
 
 ## 結論 {#conclusion}
 

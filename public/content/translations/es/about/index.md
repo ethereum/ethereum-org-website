@@ -1,7 +1,7 @@
 ---
 title: Acerca de ethereum.org
 metaTitle: Acerca de nosotros
-description: Acerca del equipo, la comunidad y la misión de ethereum.org
+description: "Acerca del equipo, la comunidad y la misión de ethereum.org"
 lang: es
 ---
 
@@ -15,11 +15,13 @@ Es común que las personas confundan los nombres dentro del entorno de Ethereum,
 
 ### Ethereum {#ethereum}
 
-Ethereum es una red pública, una cadena de bloques y un protocolo de código abierto, operado, gobernado, administrado y propiedad de una comunidad global de decenas de miles de desarrolladores, operadores de nodos, poseedores de ETH y usuarios.
+Ethereum es una red pública, una cadena de bloques y un protocolo de código abierto, operado, gobernado, administrado y propiedad de una comunidad global de decenas de miles de desarrolladores, operadores de nodos, titulares de ETH y usuarios.
 
 [Más sobre Ethereum](/what-is-ethereum/)
 
 [Más sobre la gobernanza de Ethereum](/governance/)
+
+[Más sobre los principios fundamentales de Ethereum](/values/)
 
 ### Ether (ETH) {#ether-or-eth}
 
@@ -82,25 +84,22 @@ La [comunidad de Ethereum](/community/) está en el centro de esto: no solo nece
 
 ### 2. ethereum.org siempre está evolucionando 🛠 {#core-principles-2}
 
-Ethereum y la comunidad siempre están evolucionando, por lo que ethereum.org también lo hará. Es por eso que el sitio tiene un sistema de diseño simple y una estructura modular. Hacemos cambios iterativos a medida que aprendemos más sobre cómo las personas usan el sitio y qué quiere la comunidad de él.
+Ethereum y la comunidad siempre están evolucionando, por lo que ethereum.org también lo hará. Es por eso que el sitio tiene un sistema de diseño simple y una estructura modular. Hacemos cambios iterativos a medida que aprendemos más sobre cómo las personas usan el sitio y lo que la comunidad espera de él.
 Somos de código abierto, con una comunidad de colaboradores, por lo que también puedes proponer cambios o ayudarnos.
 [Aprende sobre cómo contribuir](/contributing/)
+[Por qué es importante el código abierto](/open-source/)
 
 ### 3. ethereum.org no es un sitio web de producto típico 🦄 {#core-principles-3}
 
 Ethereum es algo grande: incluye una comunidad, una tecnología, un conjunto de ideas e ideologías, y más.
 Esto significa que el sitio web debe manejar muchos recorridos de usuario diferentes, desde "un desarrollador que quiere una herramienta específica" hasta "un recién llegado que acaba de comprar algo de ETH y no sabe qué es una billetera".
-La pregunta "¿Cuál es el mejor sitio web para una plataforma de cadena de bloques?" sigue abierta: somos pioneros. Construir esto requiere experimentación.
+"¿Cuál es el mejor sitio web para una plataforma de cadena de bloques?" sigue siendo una pregunta abierta: somos pioneros. Construir esto requiere experimentación.
 
-## Hoja de ruta del producto {#get-involved}
+## Involúcrate {#get-involved}
 
-Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración de la comunidad, el equipo central de ethereum.org publica una descripción general de los objetivos de nuestra hoja de ruta del [ciclo de Shape Up](https://www.productplan.com/glossary/shape-up-method/).
+**¿Qué te parece?** Siempre agradecemos los comentarios sobre nuestro trabajo; si hay algo en lo que crees que deberíamos trabajar, ¡háznoslo saber! Aceptamos ideas y solicitudes de extracción (PR) de cualquier persona de la comunidad.
 
-[Ver nuestra hoja de ruta del producto del Ciclo 1 de 2025](https://github.com/ethereum/ethereum-org-website/issues/14726)
-
-**¿Qué te parece?** Siempre agradecemos los comentarios sobre nuestra hoja de ruta; si hay algo en lo que crees que deberíamos trabajar, ¡háznoslo saber! Aceptamos ideas y solicitudes de extracción (PR) de cualquier persona de la comunidad.
-
-**¿Quieres participar?** [Aprende más sobre cómo contribuir](/contributing/), [contáctanos en Twitter](https://x.com/ethdotorg) o únete a las discusiones de la comunidad en [nuestro servidor de Discord](/discord/).
+**¿Quieres involucrarte?** [Aprende más sobre cómo contribuir](/contributing/), [contáctanos en Twitter](https://x.com/ethdotorg) o únete a las discusiones de la comunidad en [nuestro servidor de Discord](/discord/).
 
 ## Principios de diseño {#design-principles}
 
@@ -110,7 +109,7 @@ Utilizamos un conjunto de [principios de diseño](/contributing/design-principle
 
 Construimos y lanzamos un [sistema de diseño](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar funciones más rápidamente y permitir que los miembros de la comunidad participen en el diseño abierto de ethereum.org.
 
-¿Quieres participar? [Sigue el progreso en Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), el [problema (issue) de GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) y únete a la conversación en nuestro [canal de Discord #design](/discord/).
+¿Quieres involucrarte? [Sigue el proceso en Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) y únete a la conversación en nuestro [canal de Discord #design](/discord/).
 
 ## Guía de estilo {#style-guide}
 
@@ -124,10 +123,10 @@ Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de 
 
 El sitio web ethereum.org es de código abierto y está construido bajo una [Licencia MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) a menos que se especifique lo contrario. Más sobre los [términos de uso](/terms-of-use/) de ethereum.org.
 
-## Ofertas de trabajo {#open-jobs}
+## Puestos de trabajo vacantes {#open-jobs}
 
 Aunque este sitio web es de código abierto y cualquiera puede trabajar en él, tenemos un equipo dedicado a ethereum.org y otros proyectos web de la Fundación Ethereum.
 
-Publicaremos cualquier vacante de trabajo aquí. Si no ves un puesto para ti aquí, dirígete a [nuestro servidor de Discord](/discord/) y haznos saber cómo te gustaría trabajar con nosotros.
+Cuando estemos contratando, enumeraremos los puestos vacantes aquí. Si no ves un puesto para ti, dirígete a [nuestro servidor de Discord](/discord/) y cuéntanos cómo te gustaría trabajar con nosotros.
 
-¿Buscas más allá del equipo de ethereum.org? [Echa un vistazo a otros trabajos relacionados con Ethereum](/community/get-involved/#ethereum-jobs/).
+¿Buscas más allá del equipo de ethereum.org? [Echa un vistazo a otros trabajos relacionados con Ethereum](/community/get-involved/#ethereum-jobs).

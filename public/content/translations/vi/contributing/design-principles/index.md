@@ -1,8 +1,8 @@
 ---
-title: Các nguyên tắc thiết kế của chúng tôi
-metaTitle: Các nguyên tắc thiết kế
+title: "Các nguyên tắc thiết kế của chúng tôi"
+metaTitle: "Các nguyên tắc thiết kế"
 lang: vi
-description: Các nguyên tắc đằng sau các quyết định về thiết kế và nội dung của ethereum.org
+description: "Các nguyên tắc đằng sau các quyết định về thiết kế và nội dung của ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Xin chào và chào mừng bạn đến với các nguyên tắc thiết kế của ethereum.org. Đây là một phần của quá trình liên tục nhằm phát triển và cải thiện ethereum.org.

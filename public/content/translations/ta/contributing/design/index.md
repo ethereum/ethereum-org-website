@@ -1,7 +1,7 @@
 ---
-title: ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு
-metaTitle: வடிவமைப்பு பங்களிப்பு
-description: ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு
+title: "ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு"
+metaTitle: "வடிவமைப்பு பங்களிப்பு"
+description: "ethereum.org-க்கு வடிவமைப்பு பங்களிப்பு"
 lang: ta
 ---
 

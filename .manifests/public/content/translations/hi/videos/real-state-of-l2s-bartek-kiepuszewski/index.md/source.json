@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/real-state-of-l2s-bartek-kiepuszewski/index.md",
-  "generatedAt": "2026-04-29T00:06:31.467Z",
-  "rootHash": "58bc931bb4e0",
+  "generatedAt": "2026-09-30T19:15:51.171Z",
+  "rootHash": "e1a230705449",
   "tree": {
-    "contentHash": "d0001f40065d",
-    "anchorHash": "a3f490b93ac8",
+    "contentHash": "7502ef4a46b8",
+    "anchorHash": "5511b1fafe7c",
     "children": {
       "frontmatter:title": {
         "contentHash": "4cb8e720a021",
@@ -36,27 +36,14 @@
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "aea455a25c84",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "b51d5ca1c5e2",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "3b3e1a7dae17"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "8bffd6eadddc"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "6bdb18f83935"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -300,5 +287,5 @@
       "qa-1845"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

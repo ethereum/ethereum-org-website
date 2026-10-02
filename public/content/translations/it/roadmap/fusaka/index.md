@@ -133,13 +133,13 @@ L'obiettivo è limitare il tempo di propagazione/convalida nel caso peggiore e a
 
 **Risorse**: [Specifica tecnica dell'EIP-7934](https://eips.ethereum.org/EIPS/eip-7934)
 
-#### Impostazione del limite di gas predefinito a 60 milioni {#set-default-gas-limit-to-60-million}
+#### Impostare il limite di gas predefinito a 60 milioni {#set-default-gas-limit-to-60-million}
 
-Prima di aumentare il limite di gas da 30M a 36M a febbraio 2025 (e successivamente a 45M), questo valore non era cambiato da The Merge (settembre 2022). Questo EIP mira a rendere la scalabilità coerente una priorità.
+Prima di aumentare il limite di gas da 30M a 36M a febbraio 2025 (e successivamente a 45M), questo valore non era cambiato dal The Merge (settembre 2022). Questa EIP mira a rendere la scalabilità coerente una priorità.
 
-L'EIP-7935 coordina i team dei client del livello di esecuzione per aumentare il limite di gas predefinito oltre gli attuali 45M per Fusaka. È un EIP informativo, ma chiede esplicitamente ai client di testare limiti più elevati sulle devnet, convergere su un valore sicuro e distribuire quel numero nelle loro versioni di Fusaka.
+L'EIP-7935 ha coordinato i team dei client EL per aumentare il limite di gas predefinito oltre i 45M che hanno preceduto Fusaka. Si tratta di una EIP informativa, ma ha esplicitamente chiesto ai client di testare limiti più elevati sulle devnet, convergere su un valore sicuro e distribuire quel numero nelle loro versioni di Fusaka.
 
-La pianificazione delle devnet punta a uno stress di ~60M (blocchi completi con carico sintetico) e ad aumenti iterativi; la ricerca afferma che le patologie della dimensione del blocco nel caso peggiore non dovrebbero vincolare al di sotto di ~150M. Il lancio dovrebbe essere abbinato al limite massimo di gas per transazione (EIP-7825) in modo che nessuna singola transazione possa dominare man mano che i limiti aumentano.
+I test sulle devnet hanno puntato a ~60M sotto stress (blocchi pieni con carico sintetico) con incrementi iterativi; la ricerca afferma che le patologie relative alle dimensioni dei blocchi nel caso peggiore non dovrebbero essere vincolanti al di sotto di ~150M. Il lancio è stato abbinato al tetto massimo del limite di gas per transazione (EIP-7825) in modo che nessuna singola transazione possa dominare man mano che i limiti aumentano. I client hanno distribuito 60M come impostazione predefinita di Fusaka.
 
 **Risorse**: [Specifica tecnica dell'EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ I requisiti dei nodi rientrano ancora nei [margini consigliati](https://eips.eth
 
 I nodi regolari senza alcun validatore si iscriveranno a sole 4 sottoreti, fornendo la custodia per 1/8 dei dati originali. Ciò significa che con la stessa quantità di dati dei blob, la larghezza di banda del nodo per scaricarli sarebbe inferiore di un fattore otto (8). L'utilizzo del disco e la larghezza di banda di download dei blob per un normale nodo completo potrebbero diminuire di circa l'80%, a soli pochi Mb.
 
-#### Staker solitari {#solo-stakers}
+#### Solo staker {#solo-stakers}
 
 Se il nodo viene utilizzato per un client del validatore, deve custodire più colonne e quindi elaborare più dati. Con l'aggiunta di un validatore, il nodo si iscrive ad almeno 8 sottoreti di colonne e quindi elabora il doppio dei dati rispetto a un nodo regolare, ma comunque meno rispetto a prima di Fusaka. Se il saldo del validatore è superiore a 287 ETH, verranno sottoscritte sempre più sottoreti.
 
-Per uno staker solitario, ciò significa che l'utilizzo del disco e la larghezza di banda di download diminuiranno di circa il 50%. Tuttavia, per costruire blocchi localmente e caricare tutti i blob sulla rete, è necessaria una maggiore larghezza di banda di upload. I costruttori locali avranno bisogno di una larghezza di banda di upload 2-3 volte superiore rispetto a prima al momento di Fusaka e con il target BPO2 di 15/21 blob, la larghezza di banda di upload finale necessaria dovrà essere circa 5 volte superiore, a 100 Mbps.
+Per un solo staker, ciò significa che l'utilizzo del disco e la larghezza di banda di download diminuiranno di circa il 50%. Tuttavia, per costruire blocchi localmente e caricare tutti i blob sulla rete, è necessaria una maggiore larghezza di banda di upload. I builder locali avranno bisogno di una larghezza di banda di upload 2-3 volte superiore rispetto a prima al momento di Fusaka e, con il target BPO2 di 15/21 blob, la larghezza di banda di upload finale necessaria dovrà essere circa 5 volte superiore, a 100 Mbps.
 
 #### Grandi validatori {#large-validators}
 

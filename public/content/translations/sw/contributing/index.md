@@ -5,9 +5,9 @@ description: Jifunze kuhusu njia tofauti unazoweza kuchangia kwenye ethereum.org
 lang: sw
 ---
 
-Ethereum.org ni mradi unaoendeshwa kwa programu huria wenye wachangiaji **12 000+** wanaosaidia kutafsiri, kuandika, kusanifu na kudumisha tovuti.
+Ethereum.org ni mradi unaoendeshwa kwa programu huria wenye wachangiaji **12,000+** wanaosaidia kutafsiri, kuandika, kusanifu na kudumisha tovuti.
 
-Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo wa ikolojia wa [Ethereum](/) huku pia ukichangia kwa maana na kupata uzoefu unaofaa kwa vitendo!
+Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo wa ikolojia wa [Ethereum](/) huku pia ukichangia kwa maana na kupata uzoefu unaofaa wa vitendo!
 
 ## Njia za kuchangia {#ways-to-contribute}
 
@@ -15,7 +15,7 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Ripoti hitilafu ya tafsiri](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Programu ya Tafsiri](/contributing/translation-program/) inafungwa na haifanyi tena uingizaji wa watafsiri wapya
 
 **Uendelezaji**
-- [Fanyia kazi suala lililo wazi](https://github.com/ethereum/ethereum-org-website/issues) – Kazi tuliyotambua ambayo inahitaji kufanywa
+- [Fanyia kazi suala lililo wazi](https://github.com/ethereum/ethereum-org-website/issues) – Kazi tuliyotambua inayohitaji kufanywa
 
 **Usanifu**
 - [Saidia kusanifu tovuti](/contributing/design/) – Wasanifu wa viwango vyote wanaweza kuchangia ili kuboresha tovuti
@@ -25,7 +25,7 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Andika makala ya mjenzi](/contributing/adding-articles/) - Changia makala kwa ajili ya sehemu ya [Hivi Karibuni](/latest/)
 - [Ongeza rasilimali za jamii](/contributing/content-resources/) – Ongeza makala au rasilimali muhimu kwenye ukurasa husika
 - [Pendekeza ripoti](/contributing/adding-reports/) - Pendekeza ripoti ya utafiti kwa ajili ya ukurasa wa [Ripoti](/reports/)
-- [Shiriki hadithi yako](/contributing/adding-community-stories/) - Wasilisha hadithi kuhusu uzoefu wako binafsi na teknolojia za programu huria na patakatifu, jinsi mfumo wa ikolojia wa Ethereum umeathiri maisha yako, au jinsi wewe na jamii yako mnavyotumia Ethereum
+- [Shiriki hadithi yako](/contributing/adding-community-stories/) - Wasilisha hadithi kuhusu uzoefu wako binafsi na teknolojia za programu huria na hifadhi, jinsi mfumo wa ikolojia wa Ethereum umeathiri maisha yako, au jinsi wewe na jamii yako mnavyotumia Ethereum
 - [Maswali](/contributing/quizzes/) – Ongeza, sasisha, na ufute benki za maswali kwa ajili ya ukurasa husika
 - [Pendekeza rasilimali ya usanifu](/contributing/design/adding-design-resources/) – Ongeza, sasisha, na ufute rasilimali muhimu za usanifu
 - [Pendekeza video](/contributing/adding-videos/) – Pendekeza video ya kuelimisha kwa ajili ya matunzio ya video
@@ -40,7 +40,7 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 - [Ongeza tabaka la 2 (l2)](/contributing/adding-layer-2s/) – Ongeza tabaka la 2 (l2) kwenye ukurasa husika
 - [Ongeza bidhaa au huduma ya uwekaji dhamana](/contributing/adding-staking-products/) – Ongeza mradi unaosaidia kuwezesha uwekaji dhamana wa kujitegemea, uwekaji dhamana wa pamoja, au kuweka hisa kama huduma
 - [Ongeza mkoba](/contributing/adding-wallets/) – Ongeza mkoba kwa ajili ya [ukurasa wa kutafuta mikoba](/wallets/find-wallet/)
-- [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum ambao unachangia katika sayansi iliyogatuliwa (desci)
+- [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum unaochangia katika sayansi iliyogatuliwa (desci)
 - [Ongeza rasilimali](/contributing/adding-resources/) – Ongeza rasilimali muhimu kwenye ukurasa wowote husika
 
 Una maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](/discord/)
@@ -55,7 +55,7 @@ Hizi ni baadhi ya kazi za sasa ambazo unaweza kutusaidia kutatua na kuwajibika n
 
 ## Jinsi ya kufanya kazi kwenye ethereum.org {#how-to-update-content}
 
-Kwa ajili ya kuchangia (kuongeza au kuhariri maudhui au vielelezo kwenye tovuti, kurekebisha hitilafu, kufanyia kazi kazi zilizo wazi) utahitaji akaunti ya [GitHub](https://github.com/).
+Ili kuchangia (kuongeza au kuhariri maudhui au vielelezo kwenye tovuti, kurekebisha hitilafu, kufanyia kazi kazi zilizo wazi) utahitaji akaunti ya [GitHub](https://github.com/).
 
 Masasisho yote yanafanywa kupitia mchakato wa PR wa GitHub. Hii inamaanisha unaunda nakala ya ndani ya tovuti, unafanya mabadiliko yako na kuomba kuunganisha mabadiliko yako. Ikiwa hujawahi kufanya hivi hapo awali, fuata maagizo yaliyo chini ya [hazina yetu ya GitHub](https://github.com/ethereum/ethereum-org-website).
 
@@ -79,9 +79,9 @@ Maamuzi kuhusu PR za kibinafsi, mabadiliko ya usanifu na masasisho makubwa yanaf
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Seva ya Discord](/discord/)
 
-### Ujumbe kuhusu wizi wa maandishi {#plagiarism}
+### Ujumbe kuhusu wizi wa kazi za wengine {#plagiarism}
 
-Tumia tu kazi yako asili au maudhui ambayo una ruhusa ya kutumia unapochangia maudhui au kazi yoyote kwenye ethereum.org. Miradi mingi ndani ya mfumo wa ikolojia wa Ethereum hutumia leseni za programu huria zinazoruhusu ushiriki wa habari bila malipo. Hata hivyo, ikiwa huwezi kupata habari hii, usijaribu kuiongeza kwenye ethereum.org. Maombi yoyote ya kuvuta (pull requests) yatakayoonekana kama wizi wa maandishi yatakataliwa.
+Tumia tu kazi yako asili au maudhui ambayo una ruhusa ya kutumia unapochangia maudhui au kazi yoyote kwenye ethereum.org. Miradi mingi ndani ya mfumo wa ikolojia wa Ethereum hutumia leseni za programu huria zinazoruhusu ushiriki wa habari bila malipo. Hata hivyo, ikiwa huwezi kupata habari hii, usijaribu kuiongeza kwenye ethereum.org. Maombi yoyote ya kuvuta (pull requests) yanayoonekana kama wizi wa kazi za wengine yatakataliwa.
 
 ## Mgeni kwenye programu huria? {#new-to-open-source}
 
@@ -104,7 +104,7 @@ Unapaswa kutumia tu mikoba ya uhifadhi binafsi kudai OAT. Usitumie akaunti za ub
 
 ## Dai GitPOAP yako {#claim-gitpoap}
 
-GitPOAP pia itatambua kiotomatiki mchango wako uliounganishwa na kukuruhusu kufua POAP tofauti ya kipekee ya wachangiaji kwenye jukwaa lao lenyewe!
+GitPOAP pia itatambua kiotomatiki mchango wako uliounganishwa na kukuruhusu kufua POAP ya kipekee ya wachangiaji kwenye jukwaa lao lenyewe!
 
 
 ### Jinsi ya kudai {#how-to-claim-2}

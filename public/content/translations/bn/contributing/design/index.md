@@ -1,7 +1,7 @@
 ---
-title: ethereum.org-এ ডিজাইন অবদান
-metaTitle: ডিজাইন অবদান
-description: ethereum.org-এ ডিজাইন অবদান
+title: "ethereum.org-এ ডিজাইন অবদান"
+metaTitle: "ডিজাইন অবদান"
+description: "ethereum.org-এ ডিজাইন অবদান"
 lang: bn
 ---
 

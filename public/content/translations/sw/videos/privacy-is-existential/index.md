@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Faragha"
@@ -76,13 +75,13 @@ Wakati neno hilo uthibitishaji mwaminifu na mthibitishaji mwaminifu lilipoonekan
 
 Thamani inayoweza kutolewa na mchimbaji (MEV) ni ukweli wa kuchukiza wa Ethereum. Hiyo pia ina asili yake katika ukosefu wa faragha. Ni asili ya umma ya miamala ya DEX inayoruhusu kufanyiwa shambulio la sandwichi kwa urahisi na wathibitishaji. Ni vigumu zaidi, labda si jambo lisilowezekana, lakini ni vigumu zaidi kufanya sandwichi miamala ikiwa huwezi kuona misingi yao ya kiuchumi. Lakini sitaki tu faragha ya tabaka la msingi kama njia ya kukatisha tamaa MEV. Ninaitaka kama njia ya kuwatetea wathibitishaji.
 
-### Majukumu yanayoweza kutekelezwa kisheria ya wathibitishaji (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Majukumu ya wathibitishaji yanayoweza kutekelezwa kisheria (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Mbinu kubwa zaidi ya DOJ katika kesi ya Pereira Bueno ni kwamba wathibitishaji wana majukumu yanayoweza kutekelezwa kisheria kwa kila mmoja kutokana na asili ya umma ya miamala wanayothibitisha. Na ikiwa majukumu hayo yatakiukwa, wathibitishaji, nadhani wanafikiri, wanapaswa kushtakiana. Na ikiwa hawatafanya hivyo, serikali, Wilaya ya Kusini ya New York, inapaswa kuwashtaki wathibitishaji wasio waaminifu kwa uhalifu. Na hii haiishii tu kwenye ulaghai wa kielektroniki. Ikiwa unaweza kuona muamala wa utakatishaji fedha au ungeweza kuuona kwa kutumia uchambuzi wa mnyororo wa vitalu, basi inakuwaje wewe si mshiriki katika utakatishaji fedha huo?
+Mkakati mkubwa zaidi wa DOJ katika kesi ya Pereira Bueno ni kwamba wathibitishaji wana majukumu yanayoweza kutekelezwa kisheria kwa kila mmoja wao kutokana na asili ya umma ya miamala wanayoithibitisha. Na ikiwa majukumu hayo yatakiukwa, wathibitishaji, nadhani wanafikiri, wanapaswa kushtakiana. Na ikiwa hawatafanya hivyo, serikali, Wilaya ya Kusini ya New York, inapaswa kuwashtaki wathibitishaji wasio waaminifu kwa uhalifu. Na hii haiishii tu kwenye ulaghai wa kielektroniki. Ikiwa unaweza kuona muamala wa utakatishaji fedha au ungeweza kuuona kwa kutumia uchanganuzi wa mnyororo wa vitalu, basi inakuwaje wewe si mshiriki katika utakatishaji fedha huo?
 
-Ikiwa unajenga kwenye toleo la mnyororo ambalo lina miamala iliyowekewa vikwazo ndani yake, je, wewe si mshiriki katika ukwepaji wa vikwazo? Ikiwa utaweka miamala ya ulaghai ya mabilioni ya dola kwenye leja, labda unapaswa kufanywa uirudishe nyuma. Na upofu wa makusudi si utetezi. Huwezi kusema tu kwamba uliamua kutotumia zana inayopatikana kwa wingi kama uchambuzi wa mnyororo. Kupuuza kwa makusudi maarifa yote yaliyopo katika mnyororo wa vitalu wa umma bado kunaweza kusababisha mashtaka ya jinai na daima kutashtakiwa hivyo.
+Ikiwa unajenga kwenye toleo la mnyororo ambalo lina miamala iliyowekewa vikwazo ndani yake, je, wewe si mshiriki katika ukwepaji wa vikwazo? Ikiwa utaweka miamala ya ulaghai ya mabilioni ya dola kwenye leja, labda unapaswa kulazimishwa kuirejesha nyuma. Na upofu wa makusudi si utetezi. Huwezi kusema tu kwamba uliamua kutotumia zana inayopatikana kwa wingi kama uchanganuzi wa mnyororo. Kupuuza kwa makusudi maarifa yote yaliyomo kwenye mnyororo wa vitalu wa umma bado kunaweza kusababisha mashtaka ya jinai na daima kutashtakiwa kama hivyo.
 
-Upofu wa makusudi si utetezi, lakini upofu halisi ndio utetezi. Kwa hivyo ikiwa kweli unataka kutohitaji uaminifu, ikiwa kweli unataka miundombinu isiyoegemea upande wowote, ikiwa unataka mabomba bubu, basi mabomba yanahitaji kuwa vipofu kweli kwa kile kinachotiririka kupitia kwao.
+Upofu wa makusudi si utetezi, lakini upofu halisi ni utetezi. Kwa hivyo ikiwa kweli unataka hali ya kutohitaji kuamini, ikiwa kweli unataka miundombinu isiyoegemea upande wowote, ikiwa unataka mabomba bubu, basi mabomba hayo yanahitaji kuwa vipofu kweli kwa kile kinachopita ndani yake.
 
 ### Mabomba ya fedha za jadi na SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -129,3 +128,4 @@ Nadhani hii pia inawagusa wataalamu wa usalama wa taifa. Unarudi kwenye historia
 **Peter Van Valkenburgh:** Ninafurahi tu kwa watu kujifunza kuhusu dhamira yetu — kutetea uhuru wa kuvumbua kwa kutumia teknolojia wazi za mnyororo wa vitalu na uwezo wa watu kutumia teknolojia hizi kwa faragha. Ikiwa hiyo ni dhamira unayoijali, tafadhali tembelea coincenter.org. Asante kwa kunipa nafasi ya kutangaza. Sisi ni shirika lisilo la faida linalofadhiliwa na wafadhili na tunategemea nia njema ya watu kama wewe wanaoamini katika dhamira yetu ili kuendelea kufanya kazi tunayofanya. Asante kwa fursa hii na asante kwa kusikiliza mazungumzo yangu kuhusu kutoegemea upande wowote.
 
 **Mwenyeji:** Asante sana, Peter. Ninapenda fulana yako.
+

@@ -2,7 +2,7 @@
 title: Nos principes de conception
 metaTitle: Principes de conception
 lang: fr
-description: Les principes qui sous-tendent les décisions de conception et de contenu d'ethereum.org
+description: "Les principes qui sous-tendent les décisions de conception et de contenu d'ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Bonjour et bienvenue dans les principes de conception d'ethereum.org. Cela fait partie d'un processus continu visant à faire évoluer et à améliorer ethereum.org.

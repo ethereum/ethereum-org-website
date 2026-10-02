@@ -109,3 +109,18 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `accounts/index.md` flipped wholesale from 你 (21 on dev) to 您 (24) while the two sibling files changed in the same PR kept 你; the zh dev-docs corpus runs 840:69 for 你. Third recorded instance, so it wants a pipeline pin rather than per-run repair.
 - Zero ETHGlossary deviations across ~60 applicable terms, no Traditional leakage, and the run repaired three pre-existing errors: `原生 EVM` -> `原始 EVM`, the inverted Vyper "less features" clause, and an MMORPG/RPG over-expansion.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` (builder alias) -> `打包器`.
+
+**Open (warnings):**
+
+- 您/你 split: new page-privacy-online all 您, page-open-access all 你; glamsterdam:33 lone 您.
+- whitepaper:301 data chunks as `区块`; privacy-online `句柄`, `遭到破坏`, `暗黑模式`; Hegotá `赫戈塔` nav label vs Latin elsewhere.

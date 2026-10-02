@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/index.md",
-  "generatedAt": "2026-07-28T22:15:59.027Z",
-  "rootHash": "2ac25e647efa",
+  "generatedAt": "2026-09-30T18:19:05.216Z",
+  "rootHash": "ebf8c8d43388",
   "tree": {
     "contentHash": "1d6d707c2a09",
-    "anchorHash": "b1aa08a2d95a",
+    "anchorHash": "bf19ff08a3e9",
     "children": {
       "frontmatter:title": {
         "contentHash": "96d260ee8d3e",
@@ -37,7 +37,7 @@
       },
       "ways-to-contribute": {
         "contentHash": "5490ff2da459",
-        "anchorHash": "3dfb6b8e8b86",
+        "anchorHash": "eadaca089205",
         "labelHash": "ca9e7065cc38",
         "children": {
           "_label": {
@@ -250,7 +250,7 @@
           },
           "link:25": {
             "contentHash": "3a9884e3ad9a",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           }
         },
         "childrenOrder": [
@@ -346,7 +346,7 @@
       },
       "how-to-update-content": {
         "contentHash": "ab5af48ea109",
-        "anchorHash": "b23c113eb7ac",
+        "anchorHash": "8502c92c9b10",
         "labelHash": "b4dd210b73e8",
         "children": {
           "_label": {
@@ -383,7 +383,7 @@
           },
           "link:3": {
             "contentHash": "3a9884e3ad9a",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "prose:12": {
             "contentHash": "45c7a02265f7",
@@ -440,7 +440,7 @@
       },
       "how-decisions-about-the-site-are-made": {
         "contentHash": "a4dfb884b61c",
-        "anchorHash": "ba5d6eded42c",
+        "anchorHash": "b9c9d7fd4318",
         "labelHash": "3f8ec60df2a7",
         "children": {
           "_label": {
@@ -469,7 +469,7 @@
           },
           "link:2": {
             "contentHash": "3a9884e3ad9a",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "plagiarism": {
             "contentHash": "4fe2b8bad1ca",
@@ -533,7 +533,7 @@
       },
       "oat": {
         "contentHash": "2e15c1cb024b",
-        "anchorHash": "6249c6168d66",
+        "anchorHash": "1d7e838a6fbf",
         "labelHash": "49697c99ca95",
         "children": {
           "_label": {
@@ -558,7 +558,7 @@
           },
           "how-to-claim": {
             "contentHash": "2b5ac3aa1985",
-            "anchorHash": "214e2b211abc",
+            "anchorHash": "74670d6b08e0",
             "labelHash": "cc90c87a530e",
             "children": {
               "_label": {
@@ -571,7 +571,7 @@
               },
               "link:0": {
                 "contentHash": "3a9884e3ad9a",
-                "anchorHash": "d06d348772a4"
+                "anchorHash": "416d56f793cb"
               },
               "prose:3": {
                 "contentHash": "6ed763121b4a",
@@ -692,5 +692,5 @@
       "contributors"
     ]
   },
-  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

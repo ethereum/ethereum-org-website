@@ -1,8 +1,8 @@
 ---
-title: ہمارے ڈیزائن کے اصول
-metaTitle: ڈیزائن کے اصول
+title: "ہمارے ڈیزائن کے اصول"
+metaTitle: "ڈیزائن کے اصول"
 lang: ur
-description: ⁦ethereum.org⁩ کے ڈیزائن اور مواد کے فیصلوں کے پیچھے کارفرما اصول
+description: "⁦ethereum.org⁩ کے ڈیزائن اور مواد کے فیصلوں کے پیچھے کارفرما اصول"
 ---
 
 <Emoji text=":wave:" size={1} /> ہیلو، اور <span dir="ltr">ethereum.org</span> کے ڈیزائن کے اصولوں میں خوش آمدید۔ یہ <span dir="ltr">ethereum.org</span> کو تیار کرنے اور بہتر بنانے کے جاری عمل کا حصہ ہے۔
