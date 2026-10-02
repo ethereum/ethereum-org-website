@@ -94,6 +94,11 @@ function NavItemGroup({
     if (holdsSelectedChild) setOpen(true)
   }, [holdsSelectedChild])
 
+  const childCount = (count?: number) =>
+    typeof count === "number" && (
+      <span className="text-2xs text-body-medium">{nf.format(count)}</span>
+    )
+
   return (
     <CatalogFilterGroup
       label={item.label}
@@ -114,6 +119,7 @@ function NavItemGroup({
             className={cn(childRowClasses, "text-body")}
           >
             <span>{child.label}</span>
+            {childCount(child.count)}
           </BaseLink>
         ) : (
           <Button
@@ -130,11 +136,7 @@ function NavItemGroup({
             }}
           >
             <span>{child.label}</span>
-            {typeof child.count === "number" && (
-              <span className="text-2xs text-body-medium">
-                {nf.format(child.count)}
-              </span>
-            )}
+            {childCount(child.count)}
           </Button>
         )
       )}
