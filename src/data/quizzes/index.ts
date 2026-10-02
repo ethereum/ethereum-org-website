@@ -107,7 +107,18 @@ const quizzes = {
   },
   defi: {
     title: "defi-page",
-    questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
+    questions: [
+      "defi-1",
+      "defi-2",
+      "defi-3",
+      "defi-4",
+      "defi-5",
+      "defi-6",
+      "defi-7",
+      "defi-8",
+      "defi-9",
+      "defi-10",
+    ],
   },
   "smart-contracts": {
     title: "smart-contracts",
