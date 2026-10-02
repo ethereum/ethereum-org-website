@@ -8,6 +8,7 @@ import type {
   CatalogFilterState,
   CatalogNavGroupConfig,
 } from "@/components/FilterableCatalog/types"
+import InlineLink from "@/components/ui/Link"
 
 import type {
   DeveloperToolsCategory,
@@ -17,6 +18,9 @@ import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
+
+const SUGGEST_RESOURCE_ISSUE_URL =
+  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
 const SUBCATEGORY_FILTER_KEY = "subcategory"
 
@@ -39,6 +43,7 @@ type ToolsCatalogProps = {
     allCategories: string
     resultsLabel: string
     noResults: string
+    suggestButton: string
   }
   currentCategoryId?: string
 }
@@ -309,6 +314,13 @@ export default function ToolsCatalog({
           />
         )
       }}
+      renderSidebarHeader={({ variant }) =>
+        variant === "desktop" ? (
+          <InlineLink href={SUGGEST_RESOURCE_ISSUE_URL} className="text-sm">
+            {labels.suggestButton}
+          </InlineLink>
+        ) : null
+      }
       renderResultsHeader={renderResultsHeader}
       renderResults={(filteredTools) => (
         <ToolsResults
