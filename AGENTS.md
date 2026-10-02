@@ -152,7 +152,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 
 ## SEO & Meta
 
-- Sitemap generation in `app/sitemap.ts`
+- Sitemap generation in `app/sitemaps/sitemap.ts` (one sitemap per locale, indexed by `app/sitemap.xml/route.ts`)
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
