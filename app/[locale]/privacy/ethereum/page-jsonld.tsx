@@ -20,6 +20,7 @@ export default async function PrivacyEthereumPageJsonLD({
 }) {
   const t = await getTranslations("page-privacy-ethereum")
   const tPrivacy = await getTranslations("page-privacy")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/privacy/ethereum/`)
 
@@ -58,12 +59,18 @@ export default async function PrivacyEthereumPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
+              name: tCommon("values"),
+              item: normalizeUrlForJsonLd(locale, "/values/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
               name: tPrivacy("page-privacy-title"),
               item: normalizeUrlForJsonLd(locale, "/privacy/"),
             },
             {
               "@type": "ListItem",
-              position: 3,
+              position: 4,
               name: t("page-privacy-ethereum-title"),
               item: url,
             },
