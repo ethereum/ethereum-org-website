@@ -1435,10 +1435,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null
