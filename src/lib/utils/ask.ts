@@ -8,6 +8,7 @@
 import { type Referral, SEARCH_REFERRALS } from "@/data/search-referrals"
 
 import { sanitizeHitTitle } from "./sanitizeHitTitle"
+import { redactSeedPhrase } from "./seedPhrase"
 
 export const SYSTEM_PROMPT = `You are the ethereum.org search assistant. Answer using ONLY the numbered excerpts provided.
 
@@ -414,29 +415,27 @@ export const withCitationLinks = (text: string, sources: Source[]) => {
  *
  * People paste addresses and hashes into this box -- the explorer results exist because
  * they do -- and a wallet recovery phrase is the thing someone panicking is most likely
- * to type. None of that can be allowed into an analytics event, and redacting it in place
- * would still leave the surrounding words, so a question carrying any of it is dropped
- * whole. What survives is the ordinary question, which is the part worth knowing.
+ * to type. None of that can reach an analytics event, so each is replaced in place and
+ * the question around it survives. A redacted phrase is also worth seeing in the logs:
+ * it says someone tried, which is the thing we would want to know.
  */
-const SECRET_SHAPES = [
-  /0x[a-fA-F0-9]{20,}/,
-  /\b[a-fA-F0-9]{40,}\b/,
-  /\S+@\S+\.\S+/,
+/**
+ * Redacted rather than dropped. Each of these is a span inside a real question -- "what
+ * is 0x71C7..." -- so replacing the span keeps what made the question worth knowing and
+ * loses only the part that must not be stored.
+ */
+const REDACTIONS: [RegExp, string][] = [
+  [/0x[a-fA-F0-9]{20,}/g, "[redacted address]"],
+  [/\b[a-fA-F0-9]{40,}\b/g, "[redacted hash]"],
+  [/\S+@\S+\.\S+/g, "[redacted email]"],
 ]
-
-/** Mnemonics come in fixed lengths; ordinary questions are not 12 bare words long. */
-const MNEMONIC_LENGTHS = new Set([12, 15, 18, 21, 24])
 
 export const scrubQuery = (query: string): string | null => {
   const trimmed = query.trim()
   if (!trimmed) return null
-  if (SECRET_SHAPES.some((shape) => shape.test(trimmed))) return null
-  const words = trimmed.split(/\s+/)
-  if (
-    MNEMONIC_LENGTHS.has(words.length) &&
-    words.every((word) => /^[a-z]{3,8}$/.test(word))
-  ) {
-    return null
-  }
-  return trimmed.slice(0, 120)
+  const safe = REDACTIONS.reduce(
+    (text, [shape, label]) => text.replace(shape, label),
+    redactSeedPhrase(trimmed)
+  )
+  return safe.slice(0, 120)
 }

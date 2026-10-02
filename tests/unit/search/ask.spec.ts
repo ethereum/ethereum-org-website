@@ -313,36 +313,42 @@ test.describe("scrubQuery", () => {
     expect(scrubQuery("  how do rollups work  ")).toBe("how do rollups work")
   })
 
-  test("drops a question carrying an address or a hash", () => {
+  test("redacts an address or a hash and keeps the question", () => {
     // The explorer results exist because people paste these, so they reach this box.
+    // The words around them are what made the question worth knowing.
     expect(
       scrubQuery("what is 0x71C7656EC7ab88b098defB751B7401B5f6d8976F")
-    ).toBeNull()
+    ).toBe("what is [redacted address]")
     expect(
       scrubQuery("why did a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0 fail")
-    ).toBeNull()
+    ).toBe("why did [redacted hash] fail")
   })
 
-  test("drops a recovery phrase rather than redacting around it", () => {
-    // What someone panicking is most likely to type. Redacting in place would still
-    // leave the surrounding words, so the whole question goes.
-    const mnemonic =
+  test("redacts an email", () => {
+    expect(scrubQuery("mail me at nobody@example.com please")).toBe(
+      "mail me at [redacted email] please"
+    )
+  })
+
+  test("redacts a recovery phrase but keeps what was asked around it", () => {
+    // What someone panicking is most likely to type. A redacted phrase in the logs is
+    // worth seeing: it says someone tried.
+    const phrase =
       "legal winner thank year wave sausage worth useful legal winner thank yellow"
-    expect(scrubQuery(mnemonic)).toBeNull()
-    // Twelve ordinary words are not a mnemonic: real ones are short and unpunctuated.
-    expect(
-      scrubQuery(
-        "what happens to my staked eth if the validator I chose goes offline"
-      )
-    ).not.toBeNull()
+    expect(scrubQuery(`is this my seed phrase ${phrase} i was scammed`)).toBe(
+      "is this my [redacted seed phrase] i was scammed"
+    )
+    expect(scrubQuery(phrase)).toBe("[redacted seed phrase]")
   })
 
-  test("drops an email, and anything empty", () => {
-    expect(scrubQuery("contact me at someone@example.com")).toBeNull()
+  test("leaves a twelve-word question that is not a phrase alone", () => {
+    // Matched against the wordlist, so ordinary words at a phrase length survive.
+    const question =
+      "could someone explain which wallet works best when staking ether without running nodes"
+    expect(scrubQuery(question)).toBe(question)
+  })
+
+  test("drops nothing but an empty query", () => {
     expect(scrubQuery("   ")).toBeNull()
-  })
-
-  test("caps the length", () => {
-    expect(scrubQuery("gas ".repeat(60))!.length).toBe(120)
   })
 })
