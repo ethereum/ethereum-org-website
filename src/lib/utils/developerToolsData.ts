@@ -143,13 +143,14 @@ export function withCategories({
   })
 }
 
-/** Tally how many tools fall under each category id. */
-export function countToolsByCategory(
-  tools: DeveloperToolWithCategory[]
+/** Tally how many tools fall under each category (or subcategory) id. */
+export function countTools(
+  tools: DeveloperToolWithCategory[],
+  key: "categoryId" | "subcategory_id"
 ): Record<string, number> {
   const counts: Record<string, number> = {}
   for (const tool of tools) {
-    counts[tool.categoryId] = (counts[tool.categoryId] || 0) + 1
+    counts[tool[key]] = (counts[tool[key]] || 0) + 1
   }
   return counts
 }

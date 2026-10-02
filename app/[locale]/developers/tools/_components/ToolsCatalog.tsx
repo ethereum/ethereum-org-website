@@ -18,13 +18,8 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
 
-const SUBCATEGORY_FILTER_KEY = "subcategory"
-
-const PATH_SEPARATOR = "\u00A0\u00A0/\u00A0\u00A0"
-
-function formatPathSegment(value: string): string {
-  return value.toLocaleUpperCase()
-}
+/** Doubles as the URL query param, so a subcategory is linkable: `?sub=<id>` */
+const SUBCATEGORY_FILTER_KEY = "sub"
 
 type ToolsCatalogProps = {
   locale: string
@@ -33,12 +28,16 @@ type ToolsCatalogProps = {
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   countByCategory: Record<string, number>
+  countBySubcategory: Record<string, number>
   totalCount: number
   labels: {
     searchPlaceholder: string
     allCategories: string
     resultsLabel: string
     noResults: string
+    filtersToggle: string
+    applyLabel: string
+    closeLabel: string
   }
   currentCategoryId?: string
 }
@@ -199,34 +198,49 @@ export default function ToolsCatalog({
   categoryLabels,
   subcategoryLabels,
   countByCategory,
+  countBySubcategory,
   totalCount,
   labels,
   currentCategoryId,
 }: ToolsCatalogProps) {
-  const countBySubcategory = useMemo(() => {
-    const result: Record<string, number> = {}
-    for (const tool of tools) {
-      result[tool.subcategory_id] = (result[tool.subcategory_id] || 0) + 1
-    }
-    return result
-  }, [tools])
+  // A `?sub=` that matches no tool on this page (stale link, other category) is ignored.
+  const pageSubcategoryIds = useMemo(
+    () => new Set(tools.map((tool) => tool.subcategory_id)),
+    [tools]
+  )
+  const getSubcategoryFilter = (state: CatalogFilterState) => {
+    const raw = state[SUBCATEGORY_FILTER_KEY]
+    return typeof raw === "string" && pageSubcategoryIds.has(raw)
+      ? raw
+      : undefined
+  }
 
   const navConfig: CatalogNavGroupConfig = {
     allLabel: labels.allCategories,
     allHref: "/developers/tools/",
     allCount: totalCount,
-    items: categories.map((category) => ({
-      id: category.id,
-      label: getCategoryLabel(category.id, categoryLabels),
-      href: `/developers/tools/categories/${category.id}/`,
-      count: countByCategory[category.id] || 0,
-      isCurrent: currentCategoryId === category.id,
-      children: category.subcategories.map((subcategory) => ({
-        id: subcategory.id,
-        label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
-        count: countBySubcategory[subcategory.id] || 0,
-      })),
-    })),
+    items: categories.map((category) => {
+      const href = `/developers/tools/categories/${category.id}/`
+      // A category page holds only its own tools, so every other category's
+      // subcategories link out instead of filtering.
+      const isFilterable =
+        !currentCategoryId || currentCategoryId === category.id
+      return {
+        id: category.id,
+        label: getCategoryLabel(category.id, categoryLabels),
+        href,
+        count: countByCategory[category.id] || 0,
+        isCurrent: currentCategoryId === category.id,
+        children: category.subcategories.map((subcategory) => ({
+          id: subcategory.id,
+          label: getSubcategoryLabel(subcategory.id, subcategoryLabels),
+          count: countBySubcategory[subcategory.id] || 0,
+          href: isFilterable
+            ? undefined
+            : `${href}?${SUBCATEGORY_FILTER_KEY}=${subcategory.id}`,
+        })),
+      }
+    }),
   }
 
   const filterTool = (
@@ -234,13 +248,8 @@ export default function ToolsCatalog({
     state: CatalogFilterState,
     query: string
   ) => {
-    const subcategoryId = state[SUBCATEGORY_FILTER_KEY]
-    if (
-      typeof subcategoryId === "string" &&
-      tool.subcategory_id !== subcategoryId
-    ) {
-      return false
-    }
+    const subcategoryId = getSubcategoryFilter(state)
+    if (subcategoryId && tool.subcategory_id !== subcategoryId) return false
 
     const normalizedQuery = normalize(query)
     if (!normalizedQuery) return true
@@ -257,24 +266,6 @@ export default function ToolsCatalog({
     return searchableText.includes(normalizedQuery)
   }
 
-  const renderResultsHeader = (state: CatalogFilterState) => {
-    const raw = state[SUBCATEGORY_FILTER_KEY]
-    const selectedSubcategoryId = typeof raw === "string" ? raw : undefined
-    if (!currentCategoryId && !selectedSubcategoryId) return null
-    return (
-      <p className="text-sm text-body-medium">
-        {currentCategoryId &&
-          formatPathSegment(
-            getCategoryLabel(currentCategoryId, categoryLabels)
-          )}
-        {selectedSubcategoryId &&
-          `${PATH_SEPARATOR}${formatPathSegment(
-            getSubcategoryLabel(selectedSubcategoryId, subcategoryLabels)
-          )}`}
-      </p>
-    )
-  }
-
   return (
     <FilterableCatalog
       locale={locale}
@@ -284,32 +275,23 @@ export default function ToolsCatalog({
         searchPlaceholder: labels.searchPlaceholder,
         resultsLabel: labels.resultsLabel,
         noResults: labels.noResults,
+        filtersToggle: labels.filtersToggle,
+        applyLabel: labels.applyLabel,
+        closeLabel: labels.closeLabel,
       }}
-      mobileVariant="collapsible"
-      mobileFilterSummary={{
-        label: currentCategoryId
-          ? getCategoryLabel(currentCategoryId, categoryLabels)
-          : labels.allCategories,
-        count: currentCategoryId
-          ? countByCategory[currentCategoryId] || 0
-          : totalCount,
-      }}
-      renderSidebar={({ state, setFilter, variant }) => {
-        const raw = state[SUBCATEGORY_FILTER_KEY]
-        return (
-          <CatalogNavGroup
-            locale={locale}
-            config={navConfig}
-            selectedChildId={typeof raw === "string" ? raw : undefined}
-            onSelectChild={(childId) =>
-              setFilter(SUBCATEGORY_FILTER_KEY, childId)
-            }
-            // Collapsed mobile trigger already names the all-resources view
-            showAllItem={variant === "desktop" || !!currentCategoryId}
-          />
-        )
-      }}
-      renderResultsHeader={renderResultsHeader}
+      mobileVariant="sheet"
+      urlParamKey={SUBCATEGORY_FILTER_KEY}
+      closeMobileOnSelect
+      renderSidebar={({ state, setFilter }) => (
+        <CatalogNavGroup
+          locale={locale}
+          config={navConfig}
+          selectedChildId={getSubcategoryFilter(state)}
+          onSelectChild={(childId) =>
+            setFilter(SUBCATEGORY_FILTER_KEY, childId)
+          }
+        />
+      )}
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}

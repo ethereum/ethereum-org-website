@@ -22,6 +22,7 @@ type ToolsPageBodyProps = {
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   countByCategory: Record<string, number>
+  countBySubcategory: Record<string, number>
   totalCount: number
   currentCategoryId?: string
 }
@@ -38,6 +39,7 @@ const ToolsPageBody = async ({
   categoryLabels,
   subcategoryLabels,
   countByCategory,
+  countBySubcategory,
   totalCount,
   currentCategoryId,
 }: ToolsPageBodyProps) => {
@@ -45,6 +47,8 @@ const ToolsPageBody = async ({
     locale,
     namespace: "page-developers-tools",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const tTable = await getTranslations({ locale, namespace: "table" })
 
   return (
     <main className="pb-page">
@@ -57,6 +61,7 @@ const ToolsPageBody = async ({
           categories={categories}
           currentCategoryId={currentCategoryId}
           countByCategory={countByCategory}
+          countBySubcategory={countBySubcategory}
           totalCount={totalCount}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}
@@ -65,6 +70,9 @@ const ToolsPageBody = async ({
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
+            filtersToggle: tTable("table-filters"),
+            applyLabel: t("page-developers-tools-show-results"),
+            closeLabel: tCommon("close"),
           }}
         />
         <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
