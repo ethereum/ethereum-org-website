@@ -89,6 +89,17 @@ jobs:
             - On any error, print the error and exit non-zero so the workflow
               fails and the team is notified.
 
+      # A failed composite step does not reliably expose action outputs. Upload
+      # the raw execution file so API status and error details survive the runner.
+      - name: Upload prepare execution log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: prepare-release-execution-log
+          path: ${{ runner.temp }}/claude-execution-output*.json
+          retention-days: 30
+          if-no-files-found: ignore
+
       - name: Capture PR number / URL / version
         if: steps.skip_check.outputs.skip == 'false'
         id: capture_pr
@@ -148,7 +159,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_number: ${{ needs.prepare.outputs.pr_number }}
-          required_checks: "Build website,Lint,netlify/ethereumorg/deploy-preview"
+          required_checks: "Release gate,netlify/ethereumorg/deploy-preview"
           timeout_seconds: "3600"
           poll_interval_seconds: "120"
 
@@ -217,14 +228,18 @@ jobs:
           node "$(npm root -g)/@playwright/cli/node_modules/playwright-core/cli.js" \
             install --with-deps chromium
 
+      # An agent error leaves the release unreviewed; it does not prove the
+      # release is broken. Preserve the failure outcome for an explicit handoff.
       - name: Run /review-release
+        id: review
         if: steps.wait.outputs.outcome == 'success'
+        continue-on-error: true
         uses: anthropics/claude-code-action@v1
         timeout-minutes: 20
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
-            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Bash(playwright-cli:*),Skill"
+            --allowedTools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(curl:*),Bash(playwright-cli:*),Skill" --max-budget-usd 4
           prompt: |
             Execute /review-release for PR #${{ needs.prepare.outputs.pr_number }}
             with the --post-comment flag, per .claude/commands/review-release.md.
@@ -251,8 +266,17 @@ jobs:
             - The full summary goes in the PR comment (--post-comment). Do NOT
               write it anywhere else — Discord only gets a pass/fail line.
 
+      - name: Upload review execution log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-release-execution-log
+          path: ${{ runner.temp }}/claude-execution-output*.json
+          retention-days: 30
+          if-no-files-found: ignore
+
       - name: Announce ready for human
-        if: steps.wait.outputs.outcome == 'success'
+        if: steps.wait.outputs.outcome == 'success' && steps.review.outcome == 'success'
         uses: ./.github/actions/discord-notify
         with:
           webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
@@ -264,6 +288,20 @@ jobs:
             ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
             ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
             Remaining manual steps: approve Chromatic, approve PR, merge.
+
+      - name: Announce review incomplete
+        if: steps.wait.outputs.outcome == 'success' && steps.review.outcome == 'failure'
+        uses: ./.github/actions/discord-notify
+        with:
+          webhook: ${{ secrets.DISCORD_RELEASE_WEBHOOK_URL }}
+          message_id: ${{ needs.prepare.outputs.discord_message_id }}
+          message: |
+            :warning: **Release ${{ needs.prepare.outputs.version }} — CI green, but the automated review did not finish**  •  ${{ needs.prepare.outputs.pr_url }}
+            The release is not known to be broken. Review the `review-release-execution-log` artifact, then complete the preview and Chromatic checks manually.
+            Run: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
+            ${{ steps.links.outputs.preview && format(':eyes: Preview: <{0}>', steps.links.outputs.preview) || '' }}
+            ${{ steps.links.outputs.components && format(':art: Chromatic (components): <{0}>', steps.links.outputs.components) || '' }}
+            ${{ steps.links.outputs.pages && format(':framed_picture: Chromatic (pages): <{0}>', steps.links.outputs.pages) || '' }}
 
       - name: Announce wait-and-review failure
         if: failure()
