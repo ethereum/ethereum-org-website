@@ -13,6 +13,7 @@ import {
   type Source,
   withCitationLinks,
 } from "@/lib/utils/ask"
+import { takeAskAllowance } from "@/lib/utils/askRateLimit"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -103,6 +104,15 @@ const AskPanel = ({
     }
 
     const run = async () => {
+      // Checked here rather than at the button, so one place renders the message and the
+      // allowance is only spent on an ask that actually happens.
+      const allowance = takeAskAllowance()
+      if (!allowance.allowed) {
+        setError(t("docsearch-ask-busy", { seconds: allowance.retryAfter }))
+        report("throttled")
+        setDone(true)
+        return
+      }
       try {
         const response = await fetch("/api/ask", {
           method: "POST",
