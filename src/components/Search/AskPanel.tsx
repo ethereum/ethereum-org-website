@@ -13,7 +13,7 @@ import {
   type Source,
   withCitationLinks,
 } from "@/lib/utils/ask"
-import { takeAskAllowance } from "@/lib/utils/askRateLimit"
+import { type AskAllowance, takeAskAllowance } from "@/lib/utils/askRateLimit"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -72,6 +72,8 @@ const AskPanel = ({
   const [error, setError] = useState("")
   const [done, setDone] = useState(false)
   const scroller = useRef<HTMLDivElement>(null)
+  /** The allowance already taken for a question, and its verdict. */
+  const spent = useRef<{ query: string; allowance: AskAllowance } | null>(null)
 
   useEffect(() => {
     const controller = new AbortController()
@@ -106,7 +108,13 @@ const AskPanel = ({
     const run = async () => {
       // Checked here rather than at the button, so one place renders the message and the
       // allowance is only spent on an ask that actually happens.
-      const allowance = takeAskAllowance()
+      //
+      // Once per question, not once per effect run: StrictMode runs an effect twice on
+      // mount, so the first ask was spending two and the limit arrived one ask early.
+      if (spent.current?.query !== query) {
+        spent.current = { query, allowance: takeAskAllowance() }
+      }
+      const { allowance } = spent.current
       if (!allowance.allowed) {
         setError(t("docsearch-ask-busy", { seconds: allowance.retryAfter }))
         report("throttled")
