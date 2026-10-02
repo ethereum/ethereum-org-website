@@ -19,6 +19,7 @@ export default async function OpenAccessPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-open-access")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/open-access/`)
 
@@ -57,6 +58,12 @@ export default async function OpenAccessPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
+              name: tCommon("values"),
+              item: normalizeUrlForJsonLd(locale, "/values/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
               name: t("page-open-access-title"),
               item: url,
             },
