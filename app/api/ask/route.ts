@@ -317,7 +317,9 @@ export async function POST(request: Request) {
             answer += delta
             if (BANNED_RE.test(answer)) {
               await reader.cancel()
-              return finish("The generated answer was withheld.")
+              return finish(
+                "This answer mentioned a wallet address, so it was stopped. An address is far too easy to get wrong to take from a generated answer -- open the page and copy it from there."
+              )
             }
             controller.enqueue(
               event({ type: "token", value: citations.feed(delta) })

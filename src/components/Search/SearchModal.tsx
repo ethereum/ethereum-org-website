@@ -476,7 +476,9 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     transformSearchClient:
       transformSearchClient as unknown as DocSearchModalProps["transformSearchClient"],
     transformItems,
-    placeholder: t("search-ethereum-org"),
+    placeholder: canAsk
+      ? t("docsearch-ask-placeholder")
+      : t("search-ethereum-org"),
     translations: {
       searchBox: {
         resetButtonTitle: t("clear"),

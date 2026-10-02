@@ -493,7 +493,7 @@
    phone. The header uppercases, so the string stays sentence case. Inherits the header's
    colour deliberately: primary is the link colour, and this is not a link. */
 .DocSearch-Ask-beta {
-  @apply ms-1;
+  @apply ms-1 lowercase;
 }
 
 .DocSearch-Ask-header button {
