@@ -132,6 +132,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "build",
   "participate",
   "research",
+  "organizations",
 ]
 
 // Glossary Definition Component

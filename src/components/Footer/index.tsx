@@ -76,7 +76,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
         </BaseLink>
       </div>
 
-      <div className="grid auto-cols-auto justify-between gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+      <div className="grid auto-cols-auto justify-between gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
             <h3 className="my-5 text-sm">{section.title}</h3>

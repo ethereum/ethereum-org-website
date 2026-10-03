@@ -35,6 +35,14 @@ const pages: Array<{ name: string; path: string }> = [
   { name: "Roadmap - Security", path: "/roadmap/security/" }, // md/RoadmapLayout
   { name: "Roadmap - Merge", path: "/roadmap/merge/" }, // md/UpgradeLayout
   { name: "DeFi", path: "/defi/" }, // md/UseCasesLayout
+
+  // Organizations section. Two entries, not nine: the nine routes share one
+  // composition (PageHero/HubHero + Section + the shared _components), so these
+  // two cover every new region between them -- the hub covers HubHero, the
+  // audience cards and the SVG adoption figure; enterprise covers the stat row,
+  // the tinted checklist band, the comparison table and the expert cards.
+  { name: "Organizations", path: "/organizations/" },
+  { name: "Organizations - Enterprise", path: "/organizations/enterprise/" },
 ]
 
 test.describe("Page Visual Tests", () => {
