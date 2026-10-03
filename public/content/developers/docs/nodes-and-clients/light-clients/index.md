@@ -44,6 +44,7 @@ There are several light clients in development, including execution, consensus a
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): consensus light client in TypeScript
 - [Helios](https://github.com/a16z/helios): combined execution and consensus light client in Rust
+- [colibri.stateless](https://corpuscore.tech/colibri): production ready stateless lightclient (execution and consensus), in C with bindings to other languages
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim
 
@@ -59,3 +60,4 @@ Other [roadmap](/roadmap/) items such as [Verkle trees](/roadmap/verkle-trees/) 
 - [Etan Kissling on light client networking](https://www.youtube.com/watch?v=85MeiMA4dD8)
 - [Etan Kissling on light clients after The Merge](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
 - [Piper Merriam: The winding road to functional light clients](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Steffen Kux on light clients and stateless clients](https://www.corpuscore.tech/blog/blockchain-client-types)
