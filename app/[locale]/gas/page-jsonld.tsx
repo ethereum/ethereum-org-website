@@ -11,11 +11,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function GasPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-gas")
@@ -75,7 +75,7 @@ export default async function GasPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }
