@@ -32,6 +32,7 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 - [Etherscan Grant Directory](https://etherscan.io/directory/Others/Grant) - Curated list of grants on the Ethereum block explorer
+- [Web3 Grants Tracker](https://zkprime-capital.xyz/tracker/) - Live table of 27 active web3 grant programs (ecosystem foundations, L2s, DAOs, public goods rounds) with amounts, stage and application links, re-checked monthly; companion to the open-source [awesome-web3-grants](https://github.com/zkprimecapital/awesome-web3-grants) list
 
 ### For developers and builders {#for-developers-and-builders}
 
