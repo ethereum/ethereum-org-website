@@ -42,11 +42,18 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ComponentRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
+>(({ className, forceMount = true, ...props }, ref) => (
+  // forceMount also clears the `hidden` attribute Radix would otherwise put on
+  // inactive panels, so hiding them is CSS-only. display:none (rather than the
+  // accordion's invisible + 0fr collapse) because tab panels are siblings in
+  // normal flow: they must take up no space, stay out of the tab order despite
+  // the tabIndex=0 Radix sets on every panel, and stay out of the a11y tree.
   <TabsPrimitive.Content
     ref={ref}
+    forceMount={forceMount} // forceMount keeps content in DOM for SEO crawlers
     className={cn(
       "mt-4 rounded-lg border p-6 ring-offset-background focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover",
+      "data-[state=inactive]:hidden",
       className
     )}
     {...props}
