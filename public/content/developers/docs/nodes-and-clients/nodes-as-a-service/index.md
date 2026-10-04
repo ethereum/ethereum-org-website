@@ -250,6 +250,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Consensus-Based Data Integrity
     - Multi-chain Support
 
+- [**Lyftium**](https://lyftium.com/)
+  - [Docs](https://app.lyftium.com/docs)
+  - Features
+    - Ethereum Mainnet JSON-RPC with X-Api-Key header authentication
+    - Flat requests-per-minute pricing - $29/mo (100 rpm), $99/mo (500 rpm), custom rpm for Enterprise
+    - Fail-closed freshness: a stale head is refused with HTTP 503 instead of serving old state
+    - No per-method compute-unit metering
+    - Pay with card or USDC on Ethereum Mainnet
+    - Public status page and tip-gate state
+    - viem and ethers integration examples
+
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
