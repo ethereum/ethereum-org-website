@@ -16,6 +16,12 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
+  # Version skew protection: Next.js stamps every asset URL with the deploy ID
+  # (?dpl=...) and Netlify's CDN serves it from the matching deploy. Without it,
+  # HTML fetched before a deploy references hashed /_next/static chunks that 404
+  # after it (SEO crawls flagged ~7.6k pages with broken JavaScript).
+  # https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/
+  NETLIFY_NEXT_SKEW_PROTECTION="true"
 
 [[headers]]
   for = "/*"
