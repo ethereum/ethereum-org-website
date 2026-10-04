@@ -11,8 +11,17 @@ interface ContributorsViewProps {
   contributors: Contributor[]
 }
 
-const cardClassName =
-  "hover:bg-background-highlight m-2 block max-w-[132px] shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded"
+// Card styles live on the grid and target its children: with ~1,500 cards,
+// per-card class strings cost ~0.9 MB across the HTML and the RSC payload,
+// which pushed /contributing/ past crawlers' 2 MB page limit.
+const gridClassName = [
+  "flex-wrap",
+  "*:m-2 *:block *:max-w-[132px] *:shadow *:transition-transform *:duration-100",
+  "*:hover:scale-[1.02] *:hover:rounded *:hover:bg-background-highlight",
+  "*:focus:scale-[1.02] *:focus:rounded",
+  "*:text-body *:no-underline *:hover:no-underline",
+  "[&_img]:size-[132px] [&_h3]:mt-2 [&_h3]:mb-4 [&_h3]:text-md [&_h3]:text-body",
+].join(" ")
 
 const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
   const body = (
@@ -25,14 +34,13 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
        */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="size-[132px]"
         src={contributor.avatar_url}
         alt=""
         loading="lazy"
         decoding="async"
       />
       <div className="p-4">
-        <h3 className="mt-2 mb-4 text-md text-body">{contributor.name}</h3>
+        <h3>{contributor.name}</h3>
       </div>
     </>
   )
@@ -41,18 +49,13 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
     // target="_blank" preserves the behavior of the original <InlineLink>
     // wrapper, which auto-applied it for external hrefs.
     return (
-      <a
-        href={contributor.profile}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${cardClassName} text-body no-underline hover:no-underline`}
-      >
+      <a href={contributor.profile} target="_blank" rel="noopener noreferrer">
         {body}
       </a>
     )
   }
 
-  return <div className={cardClassName}>{body}</div>
+  return <div>{body}</div>
 }
 
 const ContributorsView = ({ contributors }: ContributorsViewProps) => (
@@ -62,7 +65,7 @@ const ContributorsView = ({ contributors }: ContributorsViewProps) => (
       contributed so far!
     </p>
 
-    <Flex className="flex-wrap">
+    <Flex className={gridClassName}>
       {contributors.map((contributor) => (
         <ContributorCard key={contributor.login} contributor={contributor} />
       ))}
