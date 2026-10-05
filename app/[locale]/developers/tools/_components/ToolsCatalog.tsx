@@ -11,7 +11,7 @@ import type {
 
 import type {
   DeveloperToolsCategory,
-  DeveloperToolWithCategory,
+  ToolCardData,
 } from "@/lib/utils/developerToolsData"
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -23,7 +23,8 @@ const SUBCATEGORY_FILTER_KEY = "sub"
 
 type ToolsCatalogProps = {
   locale: string
-  tools: DeveloperToolWithCategory[]
+  /** Slim projection: only what this island reads crosses to the client. */
+  tools: ToolCardData[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -60,27 +61,20 @@ function getSubcategoryLabel(
   return subcategoryLabels[subcategoryId] || subcategoryId
 }
 
-function getToolStars(tool: DeveloperToolWithCategory): number {
-  let maxStars = 0
-  for (const repo of tool.repos) {
-    if (typeof repo === "string") continue
-    if (typeof repo.stargazers === "number" && repo.stargazers > maxStars) {
-      maxStars = repo.stargazers
-    }
-  }
-  return maxStars
-}
-
-function getToolSortScore(tool: DeveloperToolWithCategory): number {
+/**
+ * Ranking score, falling back to the star count `toToolCard` already reduced
+ * from the repo list — the client never sees the repos themselves.
+ */
+function getToolSortScore(tool: ToolCardData): number {
   if (typeof tool.resource_score === "number") {
     return tool.resource_score
   }
-  return getToolStars(tool)
+  return tool.stargazers ?? 0
 }
 
 type ToolsResultsProps = {
   locale: string
-  tools: DeveloperToolWithCategory[]
+  tools: ToolCardData[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -96,7 +90,7 @@ const ToolsResults = memo(function ToolsResults({
   const nf = numberFormat(locale)
 
   const groupedTools = useMemo(() => {
-    const toolsByCategory = new Map<string, DeveloperToolWithCategory[]>()
+    const toolsByCategory = new Map<string, ToolCardData[]>()
     for (const tool of tools) {
       const existing = toolsByCategory.get(tool.categoryId)
       if (existing) {
@@ -109,10 +103,7 @@ const ToolsResults = memo(function ToolsResults({
     return categories
       .map((category) => {
         const categoryTools = toolsByCategory.get(category.id) || []
-        const toolsBySubcategory = new Map<
-          string,
-          DeveloperToolWithCategory[]
-        >()
+        const toolsBySubcategory = new Map<string, ToolCardData[]>()
 
         for (const tool of categoryTools) {
           const existing = toolsBySubcategory.get(tool.subcategory_id)
@@ -244,7 +235,7 @@ export default function ToolsCatalog({
   }
 
   const filterTool = (
-    tool: DeveloperToolWithCategory,
+    tool: ToolCardData,
     state: CatalogFilterState,
     query: string
   ) => {

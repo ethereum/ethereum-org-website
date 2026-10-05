@@ -5,9 +5,10 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
-import type {
-  DeveloperToolsCategory,
-  DeveloperToolWithCategory,
+import {
+  type DeveloperToolsCategory,
+  type DeveloperToolWithCategory,
+  toToolCard,
 } from "@/lib/utils/developerToolsData"
 
 import ToolsCatalog from "./ToolsCatalog"
@@ -17,6 +18,7 @@ const SUGGEST_RESOURCE_ISSUE_URL =
 
 type ToolsPageBodyProps = {
   locale: string
+  /** Full records; projected to `ToolCardData` here, before the client boundary. */
   tools: DeveloperToolWithCategory[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
@@ -57,7 +59,8 @@ const ToolsPageBody = async ({
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
           locale={locale}
-          tools={tools}
+          // Slim projection: only what the island reads crosses to the client.
+          tools={tools.map(toToolCard)}
           categories={categories}
           currentCategoryId={currentCategoryId}
           countByCategory={countByCategory}
