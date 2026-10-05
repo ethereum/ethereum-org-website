@@ -10,7 +10,7 @@ export const listenToPlaylists = {
     {
       title: "what-is-ether",
       audioFile: "/audio/eth.mp3",
-      slug: "/eth/",
+      slug: "/what-is-ether/",
     },
     {
       title: "wallets",
