@@ -4,6 +4,10 @@ import { useLocale } from "next-intl"
 import { WagmiProvider } from "wagmi"
 import { type Locale, RainbowKitProvider } from "@rainbow-me/rainbowkit"
 
+// Scoped here rather than in the root layout so only routes that render wallet
+// UI download RainbowKit's stylesheet
+import "@rainbow-me/rainbowkit/styles.css"
+
 import { rainbowkitConfig } from "@/config/rainbow-kit"
 
 interface WalletProvidersProps {
