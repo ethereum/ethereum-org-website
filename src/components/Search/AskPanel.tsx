@@ -140,7 +140,7 @@ const AskPanel = ({
       const { allowance } = spent.current
       if (!allowance.allowed) {
         setError(t("docsearch-ask-busy", { seconds: allowance.retryAfter }))
-        report("throttled")
+        report("throttled locally")
         setDone(true)
         onThrottled(allowance.retryAfter)
         return
@@ -165,7 +165,7 @@ const AskPanel = ({
               ? t("docsearch-ask-busy", { seconds: seconds ?? 20 })
               : t("docsearch-ask-error")
           )
-          report(response.status === 429 ? "rate limited" : "failed")
+          report(response.status === 429 ? "rate limited upstream" : "failed")
           setDone(true)
           return
         }
@@ -244,10 +244,9 @@ const AskPanel = ({
       eventAction: `ask feedback ${helpful ? "up" : "down"}`,
       eventName: safe,
     })
-    if (helpful) return
     trackCustomEvent({
       eventCategory: "search",
-      eventAction: "ask feedback down sources",
+      eventAction: `ask feedback ${helpful ? "up" : "down"} sources`,
       eventName: sources.map((source) => source.url).join(" ") || "none",
     })
   }
@@ -352,6 +351,36 @@ const AskPanel = ({
         </div>
       )}
 
+      {done && answer && (
+        <div className="DocSearch-Ask-feedback">
+          {rated ? (
+            <span role="status">{t("docsearch-ask-feedback-thanks")}</span>
+          ) : (
+            <>
+              <span>{t("docsearch-ask-feedback-prompt")}</span>
+              <span className="DocSearch-Ask-feedback-buttons">
+                <button
+                  type="button"
+                  title={t("docsearch-ask-feedback-yes")}
+                  aria-label={t("docsearch-ask-feedback-yes")}
+                  onClick={() => rate(true)}
+                >
+                  <ThumbsUp />
+                </button>
+                <button
+                  type="button"
+                  title={t("docsearch-ask-feedback-no")}
+                  aria-label={t("docsearch-ask-feedback-no")}
+                  onClick={() => rate(false)}
+                >
+                  <ThumbsDown />
+                </button>
+              </span>
+            </>
+          )}
+        </div>
+      )}
+
       {error && <p className="DocSearch-Ask-error">{error}</p>}
 
       {notice && <p className="DocSearch-Ask-notice">{notice}</p>}
@@ -382,36 +411,6 @@ const AskPanel = ({
                   </li>
                 ))}
               </ol>
-            </div>
-          )}
-
-          {answer && (
-            <div className="DocSearch-Ask-feedback">
-              {rated ? (
-                <span role="status">{t("docsearch-ask-feedback-thanks")}</span>
-              ) : (
-                <>
-                  <span>{t("docsearch-ask-feedback-prompt")}</span>
-                  <span className="DocSearch-Ask-feedback-buttons">
-                    <button
-                      type="button"
-                      title={t("docsearch-ask-feedback-yes")}
-                      aria-label={t("docsearch-ask-feedback-yes")}
-                      onClick={() => rate(true)}
-                    >
-                      <ThumbsUp />
-                    </button>
-                    <button
-                      type="button"
-                      title={t("docsearch-ask-feedback-no")}
-                      aria-label={t("docsearch-ask-feedback-no")}
-                      onClick={() => rate(false)}
-                    >
-                      <ThumbsDown />
-                    </button>
-                  </span>
-                </>
-              )}
             </div>
           )}
 

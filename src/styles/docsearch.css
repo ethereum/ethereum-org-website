@@ -464,13 +464,6 @@
   @apply border-disabled text-disabled;
 }
 
-/* The label is the first thing to go when the input needs the room. */
-@media (max-width: 480px) {
-  .DocSearch-Ask-trigger span {
-    @apply sr-only;
-  }
-}
-
 /* The answer sits above the results rather than replacing them, so a reader can read it
    and still scan what search found without going back for it. Its slot is prepended to
    the scroll container, so reading order, DOM order and tab order all agree. */
