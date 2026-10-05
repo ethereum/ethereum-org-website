@@ -153,6 +153,18 @@ const AskPanel = ({
           signal: controller.signal,
         })
         if (!response.ok || !response.body) {
+          // Nothing retrieved, which on an English-only index is usually a question
+          // asked in another language. Its own outcome and its own message: not red,
+          // and not the generic failure it was indistinguishable from.
+          if (response.status === 502) {
+            const body = await response.json().catch(() => null)
+            if (body?.code === "no-match") {
+              setNotice(t("docsearch-ask-english-only"))
+              report("no match")
+              setDone(true)
+              return
+            }
+          }
           const seconds =
             response.status === 429
               ? await response
@@ -351,6 +363,22 @@ const AskPanel = ({
         </div>
       )}
 
+      {error && <p className="DocSearch-Ask-error">{error}</p>}
+
+      {notice && <p className="DocSearch-Ask-notice">{notice}</p>}
+
+      {done && followup && (
+        <p {...targetProps(0, "DocSearch-Ask-followup")}>
+          <BaseLink href={followup.url}>{followup.label}</BaseLink>
+        </p>
+      )}
+
+      {done && referral && (
+        <p {...targetProps(followup ? 1 : 0, "DocSearch-Ask-referral")}>
+          <BaseLink href={referral.url}>{referral.name}</BaseLink>
+        </p>
+      )}
+
       {done && answer && (
         <div className="DocSearch-Ask-feedback">
           {rated ? (
@@ -379,22 +407,6 @@ const AskPanel = ({
             </>
           )}
         </div>
-      )}
-
-      {error && <p className="DocSearch-Ask-error">{error}</p>}
-
-      {notice && <p className="DocSearch-Ask-notice">{notice}</p>}
-
-      {done && followup && (
-        <p {...targetProps(0, "DocSearch-Ask-followup")}>
-          <BaseLink href={followup.url}>{followup.label}</BaseLink>
-        </p>
-      )}
-
-      {done && referral && (
-        <p {...targetProps(followup ? 1 : 0, "DocSearch-Ask-referral")}>
-          <BaseLink href={referral.url}>{referral.name}</BaseLink>
-        </p>
       )}
 
       {done && (

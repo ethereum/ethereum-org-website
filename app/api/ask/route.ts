@@ -221,7 +221,7 @@ export async function POST(request: Request) {
   })
   if (!excerpts.length) {
     return Response.json(
-      { error: "Nothing to ground an answer in" },
+      { error: "Nothing to ground an answer in", code: "no-match" },
       { status: 502 }
     )
   }
@@ -277,14 +277,18 @@ export async function POST(request: Request) {
         if (tail) controller.enqueue(event({ type: "token", value: tail }))
         if (error) controller.enqueue(event({ type: "error", value: error }))
         else {
-          // Offered only from a page the answer was already grounded in.
-          const followup = excerpts
-            .map((excerpt) => excerpt.url.split("#")[0])
-            .find((path) => ASK_FOLLOWUPS[path])
+          // Offered only from the page the answer leaned on most -- its first citation.
+          // Any page merely present in retrieval put "Compare ways to stake ETH" under a
+          // refusal about contract addresses, which reads as an answer and is not one.
+          const cited = citedSources(excerpts, citations.used)
+          const lead = citations.used.length
+            ? cited[0]?.url.split("#")[0]
+            : undefined
+          const followup = lead && ASK_FOLLOWUPS[lead] ? lead : undefined
           controller.enqueue(
             event({
               type: "sources",
-              sources: citedSources(excerpts, citations.used),
+              sources: cited,
               referral: referral && { name: referral.name, url: referral.url },
               followup: followup && {
                 url: followup,

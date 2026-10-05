@@ -75,6 +75,7 @@
   "docsearch-ask-busy": "Too many questions at once. Try again in about {seconds} seconds.",
   "docsearch-ask-disclaimer": "Generated from ethereum.org pages. This feature is currently in beta. Check the sources before acting on it.",
   "docsearch-ask-error": "The answer could not be generated. Try the search results instead.",
+  "docsearch-ask-english-only": "No ethereum.org pages matched that. Ask AI answers in English only for now. The search results below may still help.",
   "docsearch-ask-explorer": "That looks like a value to look up rather than a question. The explorer links below will find it.",
   "docsearch-ask-feedback-no": "Not helpful",
   "docsearch-ask-feedback-prompt": "Is this answer helpful?",
