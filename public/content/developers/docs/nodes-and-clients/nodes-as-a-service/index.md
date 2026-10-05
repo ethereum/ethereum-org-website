@@ -250,17 +250,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Consensus-Based Data Integrity
     - Multi-chain Support
 
-- [**Lyftium**](https://lyftium.com/)
-  - [Docs](https://app.lyftium.com/docs)
-  - Features
-    - Ethereum Mainnet JSON-RPC with X-Api-Key header authentication
-    - Flat requests-per-minute pricing - $29/mo (100 rpm), $99/mo (500 rpm), custom rpm for Enterprise
-    - Fail-closed freshness: a stale head is refused with HTTP 503 instead of serving old state
-    - No per-method compute-unit metering
-    - Pay with card or USDC on Ethereum Mainnet
-    - Public status page and tip-gate state
-    - viem and ethers integration examples
-
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
@@ -422,6 +411,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Provides both managed cloud and bring your own cloud options to choose from and supports all major cloud providers like AWS, Azure, Google Cloud, Digital Ocean and on-premise.
     - We use intelligent routing to hit the node closest to your user every time
 
+
+
+- [**Lyftium**](https://www.lyftium.com/)
+  - [Docs](https://www.lyftium.com/docs)
+  - Features
+    - Ethereum mainnet-only JSON-RPC endpoint with flat monthly pricing per requests-per-minute tier
+    - No compute-unit metering; one endpoint and one auth header, swap-in compatible with existing web3 libraries
+    - Fail-closed freshness policy: requests are refused with 503 when the node falls behind head instead of serving stale blocks
+    - Public status page with freshness metrics
 
 ## Further reading {#further-reading}
 
