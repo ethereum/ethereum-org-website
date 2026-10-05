@@ -1,11 +1,12 @@
 import { Suspense } from "react"
 import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
 import { ChevronNext } from "@/components/Chevron"
+import HomeSearchCTA from "@/components/Homepage/HomeSearchCTA"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -15,6 +16,8 @@ const PersonaModalCTA = dynamic(
 
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import heroBase from "@/public/images/home/hero.png"
 import hero2xl from "@/public/images/home/hero-2xl.png"
@@ -34,6 +37,9 @@ const HomeHero = async ({
   eventCategory = "Homepage",
 }: HomeHeroProps) => {
   const t = await getTranslations("page-index")
+  const tCommon = await getTranslations("common")
+  // Asking is offered on the default locale only; elsewhere the button searches.
+  const canAsk = (await getLocale()) === DEFAULT_LOCALE
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
   const alt = altProp ?? t("page-index-hero-image-alt")
@@ -100,16 +106,23 @@ const HomeHero = async ({
               {t("page-index-hero-subtitle")}
             </p>
 
-            <Suspense
-              fallback={
-                <Button variant="solid" size="lg" className="gap-2">
-                  {t("page-index-hero-cta")}
-                  <ChevronNext className="size-5" />
-                </Button>
-              }
-            >
-              <PersonaModalCTA eventCategory={eventCategory} />
-            </Suspense>
+            <div className="flex flex-col items-center gap-4 max-sm:w-full sm:flex-row">
+              <Suspense
+                fallback={
+                  <Button variant="solid" size="lg" className="gap-2 pe-6!">
+                    {t("page-index-hero-cta")}
+                    <ChevronNext className="size-5" />
+                  </Button>
+                }
+              >
+                <PersonaModalCTA eventCategory={eventCategory} />
+              </Suspense>
+
+              <HomeSearchCTA
+                ask={canAsk}
+                label={canAsk ? tCommon("docsearch-ask-ai") : tCommon("search")}
+              />
+            </div>
           </div>
         </div>
       </div>
