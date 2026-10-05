@@ -411,8 +411,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Provides both managed cloud and bring your own cloud options to choose from and supports all major cloud providers like AWS, Azure, Google Cloud, Digital Ocean and on-premise.
     - We use intelligent routing to hit the node closest to your user every time
 
-
-
 - [**Lyftium**](https://www.lyftium.com/)
   - [Docs](https://www.lyftium.com/docs)
   - Features
