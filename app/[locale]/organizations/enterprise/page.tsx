@@ -27,6 +27,7 @@ import ChecklistPanel from "../_components/checklist-panel"
 import ComparisonTable from "../_components/comparison-table"
 import ExpertContacts from "../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../_components/hero-stats"
+import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 import { ETHEREUM_GENESIS_TIMESTAMP, uptimeYearsSince } from "../_lib/uptime"
 
@@ -231,6 +232,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           <ExpertContacts />
+
+          <OrganizationPathways
+            pathways={["tokenization", "onchain-finance"]}
+          />
         </MainArticle>
 
         <ContentFeedback />

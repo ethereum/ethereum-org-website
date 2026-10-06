@@ -25,6 +25,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import AdoptionChart from "../_components/adoption-chart"
+import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 
 import CryptoHoldersChart from "./_components/crypto-holders-chart"
@@ -290,6 +291,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </ListItem>
             </OrderedList>
           </Section>
+
+          <OrganizationPathways pathways={["founders", "enterprise"]} />
         </MainArticle>
 
         <ContentFeedback />

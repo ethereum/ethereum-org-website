@@ -33,6 +33,7 @@ import {
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
@@ -234,6 +235,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
+
+          <OrganizationPathways pathways={["enterprise", "small-business"]} />
         </MainArticle>
 
         <ContentFeedback />

@@ -22,6 +22,8 @@ import { Tag } from "@/components/ui/tag"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import OrganizationPathways from "../_components/organization-pathways"
+
 import Alliance from "./logos/alliance.svg"
 import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
@@ -418,6 +420,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             ))}
           </Tabs>
         </Section>
+
+        <OrganizationPathways pathways={["small-business", "enterprise"]} />
       </MainArticle>
     </>
   )

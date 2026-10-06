@@ -36,8 +36,8 @@ import StablecoinsTable, {
 import { stablecoins } from "../../../stablecoins/data"
 import ComparisonTable from "../../_components/comparison-table"
 import ExpertContacts from "../../_components/expert-contacts"
-import FurtherReading from "../../_components/further-reading"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
+import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
@@ -367,10 +367,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
-
-          <FurtherReading current="tokenization" />
-
           <ExpertContacts />
+
+          <OrganizationPathways current="tokenization" />
         </MainArticle>
 
         <ContentFeedback />

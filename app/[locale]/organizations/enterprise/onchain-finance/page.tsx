@@ -26,8 +26,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ExpertContacts from "../../_components/expert-contacts"
-import FurtherReading from "../../_components/further-reading"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
+import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
@@ -290,10 +290,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
-
-          <FurtherReading current="onchain-finance" />
-
           <ExpertContacts />
+
+          <OrganizationPathways current="onchain-finance" />
         </MainArticle>
 
         <ContentFeedback />

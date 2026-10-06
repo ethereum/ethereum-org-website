@@ -34,8 +34,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
 import ExpertContacts from "../../_components/expert-contacts"
-import FurtherReading from "../../_components/further-reading"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
+import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
@@ -397,10 +397,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
-
-          <FurtherReading current="privacy" />
-
           <ExpertContacts experts={["ethsystems"]} />
+
+          <OrganizationPathways current="privacy" />
         </MainArticle>
 
         <ContentFeedback />
