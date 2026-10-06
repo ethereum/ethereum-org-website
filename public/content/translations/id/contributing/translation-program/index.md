@@ -16,7 +16,7 @@ Kami sangat berterima kasih kepada ribuan penerjemah komunitas yang telah membua
 
 Jika Anda menemukan kesalahan dalam terjemahan yang ada, silakan [buka isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Bergabunglah dengan [Discord ethereum.org](https://discord.gg/ethereum-org) untuk mengajukan pertanyaan atau membagikan umpan balik._
+_Bergabunglah dengan [Discord ethereum.org](/discord/) untuk mengajukan pertanyaan atau membagikan umpan balik._
 
 ## Tentang Program Terjemahan {#about-us}
 
@@ -63,7 +63,7 @@ Untuk alat terjemahan berguna lainnya, komunitas penerjemah, dan pos blog Progra
 
 ## Hubungi kami {#get-in-touch}
 
-Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan penerjemah lainnya? Silakan kirim pesan di saluran #translations di [server Discord ethereum.org](https://discord.gg/ethereum-org) kami
+Apakah Anda memiliki pertanyaan? Atau ingin berkolaborasi dengan tim kami dan penerjemah lainnya? Silakan kirim pesan di saluran #translations di [server Discord ethereum.org](/discord/) kami
 
 Anda juga dapat menghubungi kami di translations@ethereum.org
 

@@ -5921,9 +5921,9 @@
     },
     {
       "login": "pcaversaccio",
-      "name": "Pascal Marco Caversaccio",
+      "name": "pcaversaccio",
       "avatar_url": "https://avatars.githubusercontent.com/u/25297591?v=4",
-      "profile": "http://www.daita.tech",
+      "profile": "https://pcaversaccio.com",
       "contributions": [
         "doc",
         "content"
@@ -14495,6 +14495,60 @@
       "profile": "https://github.com/pillowtalk-Qy",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "BonganiN-KhulaIQ",
+      "name": "Bongani Nkosi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/288278264?v=4",
+      "profile": "https://github.com/BonganiN-KhulaIQ",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "kriss39",
+      "name": "Kanan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93033289?v=4",
+      "profile": "https://github.com/kriss39",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "pepcoiro",
+      "name": "PepCoiro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/313789529?v=4",
+      "profile": "https://github.com/pepcoiro",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Web3Dave",
+      "name": "David",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33478820?v=4",
+      "profile": "https://pingify.io",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "toyeshhm",
+      "name": "Toyeshh Medikonda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184831353?v=4",
+      "profile": "http://toyeshh.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "arunimshukla",
+      "name": "Arunim Shukla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54760103?v=4",
+      "profile": "https://discord.com/invite/JTkeNXX",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],

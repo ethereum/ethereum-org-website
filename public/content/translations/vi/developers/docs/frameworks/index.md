@@ -20,7 +20,7 @@ Các framework đi kèm với nhiều chức năng có sẵn theo mặc định,
 
 Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước tiên nên đọc qua phần giới thiệu của chúng tôi về [dapp](/developers/docs/dapps/) và [ngăn xếp Ethereum](/developers/docs/ethereum-stack/).
 
-## Các framework có sẵn
+## Các framework có sẵn {#available-frameworks}
 
 **Foundry** - **_Foundry là một bộ công cụ cực kỳ nhanh, có tính di động và mô-đun hóa để phát triển ứng dụng Ethereum_**
 

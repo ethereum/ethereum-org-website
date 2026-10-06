@@ -89,3 +89,48 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `klienty` (md) vs `klienci` (JSON) for the same referent.
 - `solidność` for cryptographic soundness is a loose calque.
 - Masculine-gendered past/conditional forms address a male reader at 3 sites.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Open (native call needed):**
+
+- `Spotkaj się z ciekawymi na Devcon 8` -- bare `ciekawymi` is ambiguous between "curious (people)" and "interesting (things)". `z ciekawymi świata` or `z ciekawskimi` disambiguates toward the English "the curious".
+
+**Open (upstream, do not fix in locale):**
+
+- `Odbierz 10% zniżki` deviates from ETHGlossary `claim` = `roszczenie`. Not auto-fixed for the same reason as ru -- a `roszczenie`-based imperative is worse copy on a discount banner. See known-patterns #75.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/pl/page-apps.json`. 8 critical, 12 warnings. Brand 10/10 | Technical 6/10 | Semantic 9/10 | Consistency 8/10 | Tone 7/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: pl affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (pl-specific):**
+
+- `-dao-description`: `zarządzać` (instrumental) and `tworzyć` (accusative) shared one object -> `tworzyć ... (DAO) i zarządzać nimi`
+
+**Notes:**
+
+- The run corrects more ETHGlossary deviations than it introduces: `Maszyna Wirtualna Ethereum (EVM)`, capitalized `Sieć główna`, six acronym expansions.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-online `vpn-table-3-not` `już nie` negation shift; "among the weakest" -> "the weakest"; F-Droid `darmowego` (#83).
+- hegota:21 committee referent (each member proposes).

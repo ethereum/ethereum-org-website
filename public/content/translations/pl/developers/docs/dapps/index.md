@@ -47,7 +47,7 @@ Inteligentny kontrakt to kod, który istnieje na blockchainie Ethereum i działa
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Narzędzia do tworzenia dappów
+## Narzędzia do tworzenia dappów {#dapp-tools}
 
 **Scaffold-ETH 2 _– Szybko eksperymentuj z Solidity, używając frontendu, który dostosowuje się do Twojego inteligentnego kontraktu._**
 

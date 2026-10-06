@@ -29,6 +29,7 @@ import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
+import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
@@ -66,10 +67,16 @@ export const KEYS = {
   ACCOUNT_HOLDERS: "fetch-account-holders",
   TRANSLATION_GLOSSARY: "fetch-translation-glossary",
   VIDEO_THUMBNAILS: "fetch-video-thumbnails",
+  QUIZ_STATS: "fetch-quiz-stats",
 } as const
 
-// Task definition: storage key + fetch function
-type TaskDef = [string, () => Promise<unknown>]
+// Per-task overrides for the config-wide defaults in trigger.config.ts
+interface TaskOverrides {
+  maxDuration?: number
+}
+
+// Task definition: storage key + fetch function + optional runtime overrides
+type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
@@ -89,10 +96,12 @@ const DAILY: TaskDef[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  // Enrichment is paced by third-party rate limits: needs wall clock, not a bigger machine
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
+  [KEYS.QUIZ_STATS, fetchQuizStats],
 ]
 
 const HOURLY: TaskDef[] = [
@@ -106,12 +115,13 @@ const HOURLY: TaskDef[] = [
 ]
 
 // ─── Dynamic task creation ───
-function createDataTask([key, fetchFn]: TaskDef) {
+function createDataTask([key, fetchFn, overrides]: TaskDef) {
   return task({
     id: key,
     retry: {
       maxAttempts: 2,
     },
+    ...overrides,
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },

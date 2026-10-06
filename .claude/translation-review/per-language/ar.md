@@ -163,3 +163,77 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - `hexary` -> `السداسية` ("six-fold") against 30+ tree uses of `سداسية عشرية`.
 - ETHGlossary's ar `validator` entry `مُدَقِّق` has SHADDA U+0651 before KASRA U+0650 -- non-canonical order. It appears 8x here and flipped this file from NFC to non-NFC. Upstream glossary fix, not a per-file one.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ديفكون` in `title` and `subtitle`, and the U+2066/U+2069 bidi isolates were re-wrapped: the pair around the name is gone (it is no longer an LTR run) while the pairs around `8` and `10%` are kept. Verified balanced 4/4 and NFC-clean.
+
+**Low confidence on the spelling -- flag for native review.** Policy 6.3 permits either ف or ڤ for English "v" and requires consistency. Gemini 3.1 Pro proposed `ديڤكون` (ڤ, strict phonetic accuracy); `blog.ethereum.org/ar` ships `ديفكون` (ف) in all 6 occurrences, and that is what shipped here. But the blog is produced by this same pipeline against this same glossary gap, so it is not independent evidence -- the tie is effectively unbroken. One character, on a banner; settle it in the glossary entry.
+
+**Open (native call needed):**
+
+- `اجتمع مع الفضوليين` for "Gather with the curious" -- `فضولي` carries a nosy/prying connotation in MSA, so it reads closer to "gather with the busybodies". Candidates: `الشغوفين بالمعرفة`, `أصحاب الفضول المعرفي`.
+
+**Notes:**
+
+- `طالب بخصمك` matches the ETHGlossary `claim` entry (`مطالبة`); see known-patterns #75 for why that entry reads bureaucratic here.
+- Western numerals retained per the 6.3 default for ar.
+
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ar/page-apps.json`, `roadmap/pectra/index.md`. 8 critical, 14 warnings. Brand 8/10 | Technical 7/10 | Semantic 8/10 | Consistency 8/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ar affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DAO, DEX** left expanded, ar has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ar-specific):**
+
+- `OpenZeppelin` -> `أوبن زبلن` (ETHGlossary transliterates this product name; every context is the transliteration)
+- "operators" rendered `المعاملات`, which the glossary assigns to *transactions* -> `العوامل`, 2 sites
+
+**Deliberately not fixed:**
+
+- the third `معامل`-root hit in `languages/index.md` is a code comment genuinely about a *transaction*: false positive
+
+**Notes:**
+
+- Structure spotless: anchors, `dir="ltr"` spans, links, JSX, fences and backticks all match English, isolates balanced, zero cross-script contamination.
+- Three `page-apps` keys were restored to their pre-PR values rather than machine-collapsed, because collapsing orphaned the U+2069 in the isolate pair around `NFT`. See known-patterns #80.
+
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 9.0/10
+
+Scope: `consensus-mechanisms/pos/rewards-and-penalties/index.md` only (fence retagged `text` upstream). 0 critical, 1 warning (fixed on request). Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 9/10 | Tone 9/10.
+
+**Fixed in this branch:**
+
+- `rewards-and-penalties:29` "(as `sqrt(N)`)" -> `(مثل ...)` ("like") -> `(بما يتناسب مع ...)` ("in proportion to"), 2 sites.
+
+**Notes:**
+
+- Glossary terms (`مُدَقِّق`, `حقبة`, `خانة`, `لجنة المزامنة`, `مقترح الكتلة`) all match; `dir="ltr"` APR span intact. Passive `يتم حساب` -> `تُحسب` is a fluency improvement.
+- `tutorials/send-token-ethersjs` is NOT in this PR and still carries the old `cdn.ethers.io` URLs and `npm install --save ethers` that English replaced with jsdelivr `ethers@5.7.2`; ar was not retranslated for that source change.
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/glamsterdam:20` blob `الكتل الثنائية` (binary blocks) -> glossary `كتل البيانات`; same phrase remains on unchanged L71/L274.
+
+**Open (warnings):**
+
+- `zk-rollups:69` `<span dir="ltr">18 days</span>` untranslated.
+- learn-quizzes `سحب` for "drawn at random" collides with glossary withdrawal; `أقل اختبارًا في المعارك` calques battle-tested.
+- F-Droid `البرامج المجانية` (gratis, #83); cookie banner `شعار` (logo) should be `شريط`.

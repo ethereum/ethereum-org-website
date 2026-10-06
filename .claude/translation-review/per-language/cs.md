@@ -101,3 +101,39 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `konsenzu`/`konsensus` stem mix introduced by this PR, incl. a direct hit on the `consensus layer => vrstva konsensu` glossary compound.
 - Validator animacy flipped to inanimate in human-operator contexts.
 - `Robust Incentives Group` translated against 7 English occurrences elsewhere in the cs tree.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/cs/page-apps.json`. 2 critical, 9 warnings. Brand 10/10 | Technical 7/10 | Semantic 7/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: cs affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (cs-specific):**
+
+- `-defi-description`: `obchodovat` needs `s`+instrumental and cannot share the accusative object, and `úročit svá krypto aktiva` inverted the interest agent -> restored the glossary-aligned verbal-noun phrasing
+
+**Notes:**
+
+- Acronym over-expansion pushed `page-apps-meta-description` from 145 to 257 chars while leaving `DeFi`/`DAO` bare elsewhere in the same file.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/privacy:120` `nulovým vědomím` -> `nulovou znalostí` (regression of the #18925 fix).
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (gas = gas standing rule).
+
+**Open (warnings):**
+
+- `plyn` persists on unchanged lines (fusaka 140/142, page-roadmap 104, zk-rollups 183) -- whole-file cleanup owed.
+- shielded pool split `stíněné`/`chráněný fond`; `updatu` vs `upgrade`; `Odsloužená doba` prison-sense calque.

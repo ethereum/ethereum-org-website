@@ -68,9 +68,7 @@ One sentence = one key. Put inline markup **inside** the message and render it w
 {t("list-security")}
 ```
 
-The bad form forces every locale to reproduce **English word order** across a join the translator cannot see or change. Real damage from this on `/values` (PR #18938): German needs a comma before the relative clause and could not insert one, because the space was hard-coded in the component; Turkish had to repeat the head noun to stay grammatical, rendering "**Güvenlik** güvenlik ..." ("Security security you cannot inspect"). Splitting on punctuation is worse still -- a continuation key beginning `". It's the result of ..."` strands the sentence boundary in the wrong file.
-
-Same rule for a bolded lead-in, a trailing link, or a parenthetical: keep the sentence whole and tag it inline. `Emphasis` and `Strong` exist precisely so the markup can travel inside the message.
+The bad form forces every locale to reproduce **English word order** across a join the translator cannot see or change -- languages that need a comma, a repeated noun, or a different clause order at the join point have no way to express it. Same rule for a bolded lead-in, a trailing link, or a parenthetical: keep the sentence whole and tag it inline. `Emphasis` and `Strong` exist precisely so the markup can travel inside the message.
 
 ## RTL: Logical CSS Properties
 

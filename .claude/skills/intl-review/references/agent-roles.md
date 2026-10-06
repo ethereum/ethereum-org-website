@@ -77,47 +77,10 @@ Load this reference when planning a review, splitting work, or debugging "agent 
 | Single-language standalone review | 3 agents per `/review-translations` Phase 3 default |
 | Single-language quick spot-check | Single combined agent with a targeted file list |
 | Language with no native-script complications (Latin-script langs) | Skip the role split; Structural + Terminology in one pass is enough |
-
-## Agent prompts (what each role gets)
-
-`/review-translations` Phase 3 builds the prompt per role. Common to all:
-
-- Worktree path
-- File list for this agent's chunk
-- Known-patterns digest (from `references/known-patterns.md`)
-- Glossary terms for the language (from `/filter` per file)
-- Prior findings from `.claude/translation-review/per-language/{lang}.md`
-- Review methodology (per-mode: incremental since last review SHA, or full PR diff)
-
-Role-specific section in the prompt: the checklist relevant to that role only. Reduces context bloat and keeps each agent's focus tight.
-
-## Combining outputs
-
-After the agents return, Phase 4 of `/review-translations`:
-
-1. Aggregates critical issues by language and category
-2. Computes per-category quality scores (5-category rubric in `references/scoring-rubric.md`)
-3. Produces the combined report block per language
-4. Displays the full report to the user
-
-Phase 5 then auto-fixes the critical issues (unless `--no-fix`).
+| Debugging a specific reported issue | Single-purpose agent with the issue + the affected file(s) |
 
 ## What if an agent reports outside its scope?
 
 The role boundaries aren't strict. If the Structural agent notices a brand-name issue while inspecting MDX, it can report it — the aggregation phase deduplicates by file+line+issue.
 
 The boundaries exist for **focus during analysis**, not for **scope of output**. A finding from any agent is valid; the role just informs what the agent prioritized.
-
-## When to skip the role split
-
-- Small reviews (< 25 files): overhead exceeds benefit
-- Latin-script languages: structural + terminology in one pass; semantic concerns are simpler
-- Spot-checks: targeted file list with combined agent
-- Debugging a specific reported issue: single-purpose agent with the issue + the affected file(s)
-
-## See also
-
-- `references/scoring-rubric.md` for how each role's findings map to score categories
-- `references/critical-vs-warning.md` for severity classification each role applies
-- `references/known-patterns.md` for the pattern catalog each role draws from
-- `.claude/commands/review-translations.md` for the slash command's full Phase 3 prompt-building logic

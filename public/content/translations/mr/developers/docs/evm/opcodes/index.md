@@ -4,7 +4,7 @@ description: "इथेरियम व्हर्च्युअल मशी�
 lang: mr
 ---
 
-## विहंगावलोकन
+## विहंगावलोकन {#overview}
 
 ही [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) वरील EVM संदर्भ पृष्ठाची अद्ययावत आवृत्ती आहे.
 तसेच [येलो पेपर](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/), आणि [geth](https://github.com/ethereum/go-ethereum) अंमलबजावणीमधून घेतलेले आहे.

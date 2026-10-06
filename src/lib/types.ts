@@ -24,7 +24,6 @@ import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { screens } from "./utils/screen"
-import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/layouts"
 
@@ -235,12 +234,20 @@ export type RawQuiz = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-type QuizLevel = "beginner" | "intermediate" | "advanced"
+export type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: QuizKey
   level: QuizLevel
   next?: QuizKey
+}
+
+/** A hub section. Adding one here is enough: the hub and getNextQuiz both derive from it. */
+export type QuizzesHubSection = {
+  id: string
+  titleKey: string
+  descriptionKey: string
+  quizzes: QuizzesSection[]
 }
 
 export type RawQuizzes = Record<string, RawQuiz>
@@ -670,8 +677,9 @@ export type PhoneScreenProps = SimulatorNavProps & {
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
   title: string
-  logoImage: string
-  bannerImage: string
+  // Nullable: the feed sends null for events with no image.
+  logoImage: string | null
+  bannerImage: string | null
   startTime: string
   endTime: string | null
   location: string
@@ -693,6 +701,9 @@ export type EventType =
   | "other"
 
 export interface EventItem extends GeodeApiEventItem {
+  // Narrowed from the raw feed: transformEvent normalizes a missing image to "".
+  logoImage: string
+  bannerImage: string
   id: string // slugified title
   eventTypes: EventType[]
   eventTypesLabels?: string[]
@@ -746,7 +757,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]
@@ -892,16 +903,6 @@ export type WalletData = {
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
-}
-
-export type WalletRow = Wallet & { id: string }
-
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
 }
 
 export type FilterInputState = boolean | Lang | string | string[] | null

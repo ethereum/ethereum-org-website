@@ -77,3 +77,54 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 
 - `attestations` -> `सत्यापन`, colliding with `सत्यापक` (validator) in the same sentence; tree form is `अनुप्रमाणन` (279).
 - `peer review` rendered two ways within one PR.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.8/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `डेवकॉन` in `title` and `subtitle`, matching devcon.org's own Hindi site. `logo-alt` stays Latin (title lockup / alt text).
+
+**Note:** devcon.org ships `डेवकॉन` (retroflex ड, the standard IT-loanword form -- cf. `डेवलपर`) while `blog.ethereum.org/hi` ships `देवकॉन` (dental द). devcon.org wins: it is the event's own India-facing site and more recent, and the blog is pipeline output rather than independent authority. Record `डेवकॉन` in the glossary entry so the two stop disagreeing.
+
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/hi/page-apps.json`. 7 critical, 8 warnings. Brand 8/10 | Technical 9/10 | Semantic 7/10 | Consistency 5/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: hi not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DAO, DEX** left expanded, hi has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (hi-specific):**
+
+- `कॉन्ट्रैक्ट` -> glossary `अनुबंध` across `languages/index.md`, 25 sites: the PR flipped this file wholesale while its sibling `testing/index.md` kept the entry form. Plural-oblique phrases were restored first so the blanket pass did not bake in singulars
+- "unsound" `अस्वस्थ` (= *unwell*) -> `अविश्वसनीय`
+- "property" `संपत्ति` (= *wealth/asset*) -> `गुण`, 33 of 34 sites, with gender agreement corrected (`गुण` masc. vs `संपत्ति` fem.); `वित्तीय संपत्तियों` left alone, English there is "financial assets"
+- `page-apps-ready-button` shipped untranslated English `"Go"` -> `जाएं`; hi was the only locale of 25 doing so
+- `लेनदेन` -> `लेन-देन`; `इनाम` -> `पुरस्कार`
+
+**Notes:**
+
+- Acronym expansion hit 18 `page-apps` keys including short category-chip `-name` labels, where the Indic UI-tag rule mandates Latin. `DAO` and `DEX` have no hi short form so 6 keys stay expanded.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-criteria-lead` `बहुत कम लोग` -> `बहुत कम VPN`.
+- privacy-online `vpn-table-2-does` -> `साइटें आपका स्थान पता न लगा सकें`.
+- `social-networks:72` `लेनदेन` -> `लेन-देन`; page-learn `रिवॉर्ड कमाएं` -> `पुरस्कार कमाएं`.
+
+**Open (warnings):**
+
+- EIP/API/DeFi/NFT over-expansion (#80), incl. duplicated `(EIP) (EIP-8081)` in hegota:42.
+- `खाता` oblique-case errors in open-access (4 keys); Geth back to Latin in bug-bounty.

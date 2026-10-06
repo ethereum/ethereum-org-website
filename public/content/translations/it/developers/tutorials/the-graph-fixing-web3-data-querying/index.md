@@ -15,7 +15,7 @@ Questa volta daremo un'occhiata più da vicino a The Graph, che nell'ultimo anno
 
 ## Senza The Graph... {#without-the-graph}
 
-Quindi procediamo con un semplice esempio a scopo illustrativo. A tutti piacciono i giochi, quindi immagina un semplice gioco in cui gli utenti piazzano scommesse:
+Quindi procediamo con un semplice esempio a scopo illustrativo. A tutti piacciono i giochi, quindi immagina un semplice gioco con utenti che piazzano scommesse:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,7 +41,7 @@ contract Game {
 }
 ```
 
-Ora supponiamo che nella nostra dapp vogliamo mostrare le scommesse totali, il totale delle partite perse/vinte e anche aggiornarlo ogni volta che qualcuno gioca di nuovo. L'approccio sarebbe:
+Ora supponiamo che nella nostra dapp vogliamo mostrare le scommesse totali, i giochi totali persi/vinti e anche aggiornarli ogni volta che qualcuno gioca di nuovo. L'approccio sarebbe:
 
 1. Recuperare `totalGamesPlayerWon`.
 2. Recuperare `totalGamesPlayerLost`.
@@ -60,21 +60,21 @@ GameContract.events.BetPlaced({
     // evento rimosso di nuovo
 })
 .on('error', function(error, receipt) {
-    // tx rifiutata
+    // transazione rifiutata
 });
 ```
 
-Ora, questo va ancora abbastanza bene per il nostro semplice esempio. Ma supponiamo di voler mostrare ora gli importi delle scommesse perse/vinte solo per il giocatore attuale. Beh, siamo sfortunati, faresti meglio a distribuire un nuovo contratto che memorizzi quei valori e li recuperi. E ora immagina uno smart contract e una dapp molto più complicati, le cose possono sfuggire di mano rapidamente.
+Ora, questo va ancora abbastanza bene per il nostro semplice esempio. Ma supponiamo di voler mostrare ora gli importi delle scommesse perse/vinte solo per il giocatore attuale. Beh, siamo sfortunati, faresti meglio a distribuire un nuovo contratto che memorizzi quei valori e li recuperi. E ora immagina uno smart contract e una dapp molto più complicati, le cose possono complicarsi rapidamente.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Non si interroga semplicemente](./one-does-not-simply-query.jpg)
 
 Puoi vedere come questo non sia ottimale:
 
 - Non funziona per i contratti già distribuiti.
-- Costi extra in gas per memorizzare quei valori.
+- Costi di gas aggiuntivi per memorizzare quei valori.
 - Richiede un'altra chiamata per recuperare i dati per un nodo Ethereum.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Non è abbastanza buono](./not-good-enough.jpg)
 
 Ora diamo un'occhiata a una soluzione migliore.
 

@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import type { CompletedQuizzes } from "@/lib/types"
 
-import { ethereumBasicsQuizzes } from "@/data/quizzes"
+import { quizzesSections } from "@/data/quizzes"
 
 import QuizzesListComponent from "../QuizzesList"
 
@@ -19,9 +19,10 @@ const meta = {
   component: QuizzesListComponent,
   tags: ["autodocs"],
   args: {
-    content: ethereumBasicsQuizzes,
-    headingId: "basics",
-    descriptionId: "basics-description",
+    sectionId: quizzesSections[0].id,
+    content: quizzesSections[0].quizzes,
+    headingId: quizzesSections[0].titleKey,
+    descriptionId: quizzesSections[0].descriptionKey,
     userStats: {
       score: 0,
       average: [],

@@ -19,6 +19,8 @@ That's the whole inventory. If a UI need can be met by configuring one of these 
 
 **A missing `template:` fails silently.** The router resolves `frontmatter.template || getLayoutFromSlug(slug)`, and that fallback only recognizes `developers/docs`, `developers/tutorials` and `latest` -- everything else lands on `static`. So a markdown page sitting in a topic directory does **not** inherit its siblings' layout: `/staking/dvt/` shipped with the docs-style ToC and no staking dropdown until `template: staking` was added. When adding a page to an existing topic, copy the siblings' frontmatter keys, and remember each translated copy carries its own frontmatter (the intl pipeline propagates it; don't hand-edit locales).
 
+**The hero comes with the template.** `static` renders only a title hero (`PageHero variant="no-divider"`, no image) -- a side-image hero in the design means a Topic template, never `static` plus custom hero markup. A Topic template renders the full side-image `PageHero` from frontmatter `image` / `summary` / `buttons`; if the page has no sub-nav across sibling pages, keep the Topic template and add `showDropdown: false` (exemplar: `public/content/what-are-apps/index.md`).
+
 ## The Habit: Configure, Don't Add a New Layout
 
 When you have a page or section that "needs its own layout," walk this list top-to-bottom and stop at the first match:
@@ -188,7 +190,7 @@ If you encounter a `src/layouts/md/<Something>.tsx` that exports its own `<Somet
 4. Delete the layout export from the file; keep the MDX components export
 5. Smoke the section's pages
 
-See `docs/topic-layout-refactor.md` for the worked example.
+The before/after shape is in `cleanup-playbook.md` ("Per-section layout -> `TopicLayout` config").
 
 ## Where end-of-page actions live (`<article>` vs `<main>`)
 
@@ -223,7 +225,6 @@ Before opening a PR that touches anything in `src/layouts/`:
 - [ ] Am I sure this isn't a `TopicLayout` config addition?
 - [ ] Am I sure this isn't a slot/prop addition to an existing layout?
 - [ ] Have I checked the `layoutMapping` to confirm no existing layout fits?
-- [ ] Have I read `docs/topic-layout-refactor.md` for context on why the topic layouts were consolidated?
 - [ ] If introducing a new layout (very rare), do I have explicit signoff from a maintainer?
 - [ ] If extending `ContentLayout`, is the new prop genuinely shared across multiple consumers — not a one-section special case?
 - [ ] End-of-page actions (`ContentFeedback`, `DocsNav`, `CallToContribute`) sit _outside_ `MainArticle` as siblings in `<main>`; only `FileContributors` stays inside the `<article>`.

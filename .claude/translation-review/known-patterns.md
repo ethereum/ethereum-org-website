@@ -73,7 +73,7 @@ non-Latin scripts, transliterated author names are correct (e.g.,
 The sanitizer should detect semantic translations (wrong meaning) but NOT
 flag phonetic transliterations.
 
-**Transliteration authority:** ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
+**Transliteration authority:** ETHGlossary (https://glossary.ethereum.org) is the canonical source for term translations, including per-language transliterated forms for non-Latin scripts. The pipeline queries ETHGlossary directly; reviewers verify against the per-term `script_rule` returned by the API. The previous local bank at `.claude/translation-review/transliterations/` has been removed as of ETHGlossary v0.3.0.
 
 **Authority hierarchy — terms ETHGlossary covers vs. items it doesn't (READ THIS before flagging a transliteration/calque/keep-Latin "error"):**
 
@@ -977,3 +977,134 @@ The 13 central sweeps run alongside the agents earned their keep in both directi
 - **Two sweeps were themselves invalid** and were discarded rather than reported: intra-word script mixing and length-ratio truncation (see #68). Design the sweep against a known-true instance first; if it does not fire cleanly on that, it is not ready to run on 24 locales.
 
 Fleet avg **8.67**, median 8.80, range it 9.5 to ta 7.6. Zero criticals in **it fr ja mr uk zh-tw**. The prose quality was high across the board; nearly every critical was a single wrong word with a tree-backed correct form already available, which is why 47 of them were mechanically fixable in one verified pass.
+
+### 74. `Devcon` is missing from ETHGlossary, and the tree's Latin-everywhere habit was the defect -- not the one locale that transliterated (HIGH -- glossary gap, resolved in PR #19142)
+
+`Devcon` is not in ETHGlossary (532 ko terms scanned via `/filter`; only `claim` matched) and is not in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. Term role is `brand-or-project`, whose policy default is `transliterate` per group rules -- it is not a developer tool, so the "Latin allowed for technical brands in UI tags" carve-out does not apply. On arrival the fleet split 12-1: twelve non-Latin locales kept Latin, ko alone shipped `데브콘`.
+
+**The review error this pattern exists to prevent:** the reviewer flagged ko as the outlier and "fixed" it to Latin, reasoning from (a) `src/intl/*/common.json` carrying `"devcon": "Devcon"` in 24/24 locales and (b) the CJK-phonetic UI-tag rule. Both inputs were real; the conclusion was backwards. `common.json` unanimity is 24 copies of one untested habit, not authority. And an annual conference name is ordinary prose, not a dev tool. Reverted; ko became the reference and eight locales were brought in line with it.
+
+**Resolved forms (PR #19142):**
+
+| Locale | Form | Evidence class |
+|---|---|---|
+| hi, mr | `डेवकॉन` | devcon.org's own hi/mr sites -- independent of this pipeline |
+| ko | `데브콘` | pre-existing tree precedent (`데브콘` x10 in ko content) |
+| ja | Latin `Devcon` | independent JP crypto press (fisco, neweconomy, hedge.guide, pocketcampus, Yahoo) -- all Latin, zero katakana |
+| ar | `ديفكون` | LOW confidence, tie unbroken -- see #76 |
+| bn, ta, te, ur | `ডেভকন`, `டெவ்கான்`, `డెవ్కాన్`, `ڈیوکان` | derived (Gemini 3.1 Pro), no independent precedent found |
+| ru, uk | Latin | 6.2 Cyrillic default; ru additionally blocked on case/apposition, uk has no candidate form |
+| zh, zh-tw | Latin | 6.5 `keep_latin` default -- do NOT auto-generate phonetic Hanzi |
+| `logo-alt` (all 24) | Latin | the formal title lockup and image alt text stay Latin in every locale, per devcon.org |
+
+**Rules:**
+
+1. A unanimous form in `src/intl/*/common.json` is evidence of consistency, not correctness. Never cite it to overrule the ETHGlossary fallback.
+2. Reserve "Latin allowed in UI tags" for developer tooling. Event, org and program names are prose.
+3. Separate the title lockup and asset `alt` text from running text. They take Latin even where the name transliterates.
+
+### 75. ETHGlossary `claim` is scoped to on-chain claiming and reads bureaucratic in marketing copy (INFORMATIONAL -- glossary scope)
+
+The `claim` entry defines itself as "the act of collecting tokens from an airdrop, reward, or vesting contract" and its per-language terms carry that legal-instrument weight: ru `востребование`, pl `roszczenie`, cs `nárok`, uk `затребування`, fr `réclamation`, ur `دعویٰ`, ja `請求`, ko `청구`. On "Claim your 10% discount" -- marketing, not a vesting contract -- 22 of 24 locales followed the glossary and 2 did not (ru `Получите`, pl `Odbierz`, both the more natural discount verb).
+
+`claim` has `script_rule: null` / `term_role: null`, so per the severity matrix a deviation is **High, not critical, and not auto-fixable** -- "no, flag for review". Do not auto-fix these toward the glossary: `востребуйте скидку` and a `roszczenie`-based Polish imperative are worse copy than what shipped. The fix belongs upstream (a `contexts.ui`/marketing sense on the entry, or a separate `redeem` entry), not in the locale files.
+
+**Reviewer rule:** when a glossary hit is a generic English verb rather than an Ethereum term, check the entry's own `definition` before calling a deviation. An out-of-domain glossary hit is a glossary-scope finding, not a locale defect.
+
+### 76. `blog.ethereum.org` is not independent evidence -- it is this pipeline's own output (METHODOLOGY)
+
+While resolving #74 the reviewer cited `blog.ethereum.org/{ar,ja,ko,hi,ru}` as authoritative for the `Devcon` transliteration. It is not. The EF blog is translated by **this same LLM pipeline against this same ETHGlossary**, so on any term the glossary is missing it inherits the identical gap. Citing it to settle a glossary gap is circular: it reports what the pipeline already guessed, in a more confident-looking venue.
+
+This cost real accuracy. The `ar` choice between `ديفكون` (ف) and `ديڤكون` (ڤ) -- both legal under 6.3 -- was called for ف on the blog's usage, when in truth the tie was never broken. The `hi` case is the tell: the blog ships `देवकॉन` (dental द) while devcon.org ships `डेवकॉन` (retroflex ड). Two EF-adjacent sources, two different answers, because only one of them involved a human deciding.
+
+**Evidence hierarchy for a term the glossary does not cover:**
+
+1. **The brand owner's own localized site** (devcon.org/hi, devcon.org/mr) -- a human made that call.
+2. **Independent target-language press and community usage** -- what the ja resolution actually rests on.
+3. **Pre-existing tree precedent** in this repo, if a human wrote it.
+4. **A fresh LLM-derived transliteration**, labeled as derived, pending native review.
+5. **Never:** other output of this same pipeline (blog.ethereum.org, sibling locale files from the same run) dressed up as corroboration.
+
+Also from the same episode: an LLM's "established form, confidence High" claim is checkable and is sometimes false. Gemini 3.1 Pro asserted that Japanese crypto press "consistently use デブコン, e.g. CoinPost"; every outlet found writes Latin 「Devcon」. Its supporting reasoning was internally broken too -- it cited デベロッパー as evidence for ブ, but that word uses ベ. **Verify "established" claims with one search before shipping the form.** Its bn "established" claim failed the same check; the form was kept on phonetic merit and relabeled derived.
+
+### 77. A ticket-tier proper noun absent from the glossary splits the fleet four ways (PATTERN -- glossary gap)
+
+`General Admission` is a named Devcon ticket tier, not a generic phrase, and it is in neither ETHGlossary (`/filter` against the banner source still matches only `claim`) nor `PROTECTED_BRAND_NAMES`. With nothing to anchor it, PR #19228 produced four different treatments of one string:
+
+| Treatment | Locales |
+| --- | --- |
+| Kept Latin `General Admission` | bn, id, pl, vi |
+| Transliterated | hi `जनरल एडमिशन`, mr `जनरल ॲडमिशन`, te `జనరల్ అడ్మిషన్`, ur `جنرل ایڈمیشن` |
+| Translated as the tier | cs, de, es, fr, it, ja, ko, pt-br, sw, ta, tr, uk, zh-tw, ar |
+| Translated as a generic ticket class | ru `стандартный входной билет` (standard entry ticket), zh `普通门票` (ordinary ticket) |
+
+This is #74's shape exactly -- an event-adjacent proper noun with no entry, re-decided every run -- so the durable fix is the same: an ETHGlossary entry, requested in normalization-queue section 10. Do NOT hand-normalize the 24 locale files toward one treatment. Unlike #74's `Devcon`, there is no reference locale here: the right treatment depends on what a ticket buyer will actually see at checkout, which is a devcon.org question, not a linguistic one.
+
+**Reviewer rule:** the tier name and the code are two different risks. The code (`ETHORG10`) must survive byte-identical because the user types it -- that is checkable and was 24/24 clean. The tier name only has to be recognizable at the checkout page, so treat its variance as a warning pending the glossary entry, never as a critical.
+
+**What raises the stakes here:** the campaign URL no longer carries `voucher=ETHORG10` (dropped in PR #19227 so the link can be locale-routed to devcon.org/{en,hi,mr}/tickets). The code is now transcribed by hand, which makes any mutation of it -- including invisible characters adjacent to it -- user-visible failure rather than cosmetic drift. See #78.
+
+### 78. Bidi isolates and agglutinative suffixes touching a user-typed code (INFORMATIONAL -- RTL/script correctness, copy-paste caveat)
+
+In ar and ur the sanitizer wraps the Latin run as `⁦ETHORG10⁩` (LRI/PDI), which is correct -- it is what keeps the code from reordering against surrounding RTL text, and isolates were balanced 4/4 in both files. In ja, ko and te the case particle or suffix attaches with no separator (`ETHORG10を`, `ETHORG10을`, `ETHORG10ని`), which is likewise correct typography for those scripts.
+
+Both are right for rendering and both mean a reader who *selects* the code gets more than the code: invisible U+2066/U+2069 in ar/ur, a trailing particle in ja/ko/te. Reading and retyping is unaffected, which is the normal path for a voucher code.
+
+**Reviewer rule:** do not "fix" either one -- stripping the isolates breaks RTL ordering and detaching the particle breaks the grammar. Flag it as a product question instead (is the code presented anywhere copy-clickable?) and leave the locale files alone.
+
+### 79. Translated program output inside a code fence, and why nothing catches it (PATTERN -- pipeline blind spot)
+
+PR #19326 shipped the `clef newaccount` terminal transcript in `developers/docs/accounts/index.md` translated into **17 of 24 locales** (clean: de, hi, id, it, ja, tr, uk). Three variants appeared: the full block (ar, bn, fr, ko, mr, sw, ta, te, ur, vi, zh, zh-tw), the full block plus the `<path>`/`<password>` argument placeholders (cs, pl, pt-br), and the placeholders alone (es, ru). This is a recurrence -- the same defect was fixed fleet-wide once already in commit `0ded5412`.
+
+It recurs because **the two translation paths protect code fences differently, and only one of them uses a mechanism.**
+
+- The **full-file** path (`gemini.ts:172`) calls `extractCodeBlocks`, which replaces every fence with an `<!-- CODE_BLOCK_N -->` placeholder before the model sees the file, then `restoreCodeBlocks` (`:210`) puts the original bytes back. `output-validation.ts` additionally asserts the placeholders survived and that the model did not hallucinate new fences. Code cannot be translated on this path.
+- The **incremental** path (`incremental-translate.ts:305`, `extractSections`) slices the file on headings and takes each section `body` as raw lines. Fences ride along as plain text. There is no placeholder and no post-hoc comparison; the only protection is a prompt line (`prompt-builder.ts:114`, "never translate the functional code inside it").
+
+Verified against the real file. For `developers/docs/accounts/index.md`, `extractCodeBlocks` yields one block (`language: ""`) and the resulting prose does **not** contain `Your new key was generated`; `extractSections` yields 15 sections, of which `account-creation` carries the whole fence, program output included, with no placeholder. A prompt-only guarantee holds exactly as often as the model obeys it: 7 of 24 times in this run.
+
+Two nearby mechanisms are *not* the cause, and were ruled out rather than assumed:
+
+- `extractComments` skips untagged blocks outright (`if (!block.language || !block.content.trim()) continue`), and this fence has no language tag, so the comment-translation path never touched it. (Note the latent trap for tagged blocks: `getCommentSyntax` falls through to `return "js"` for any unrecognized tag, so an unfamiliar language is scanned for `//` and `/* */`.)
+- `intl-sanitizer.ts` splits fences out at ten call sites so its prose rules cannot corrupt code. That is correct and deliberate; it means the sanitizer is not where this should be caught.
+
+**The check that would close it:** a `code-fence-content` rule in `verify-structure` asserting that, for each fence pair, every **non-comment** line inside the translated fence is byte-identical to its English counterpart. Comment lines are exempt by policy -- ETHGlossary's `llms.txt` says so directly: "Fenced code blocks and inline code (single backticks) are non-translatable in full... Code comments are the exception." That single invariant catches the defect on both paths, needs no language knowledge, and would have caught all 17 locales here plus every prior recurrence. Two caveats for whoever builds it: comment detection must key off the fence info string rather than guessing, and a legitimately changed English fence must surface as a re-translate signal rather than a hard gate, or a routine English code edit blocks the whole run.
+
+**Reviewer rule until it exists:** check the fence bodies of every changed markdown file explicitly -- do not assume the sanitizer looked. The fix is a wholesale replacement of the fence body from the English source, which preserves column-alignment space runs and hex addresses byte-for-byte; do not hand-edit line by line.
+
+### 80. Glossary expansion substituted for an acronym the English source leaves bare (PATTERN -- context selection)
+
+PR #19326 expanded bare `NFT` / `DeFi` / `DAO` / `DEX` into their full localized phrases across **22 of 24 locales and 155 `page-apps.json` keys** (clean: de, ja), pushing 34 SEO meta strings past cap -- worst cases pt-br `category-dao-meta-title` 29 -> 81 chars and it `meta-description` 151 -> 241. It also hit short UI chip labels, turning vi's 4-character `DeFi` category name into a 30-character phrase that renders beside one-word siblings as a breadcrumb, hero title and card title.
+
+This is not translator error and not a sanitizer bug -- it is **context selection**. ETHGlossary already carries the right answer: each term is translated once per context (`prose`, `heading`, `tag`, `ui`), and the `ui`/`tag` contexts hold the bare acronym for nearly every language. The `decentralized-finance-defi` entry goes further and marks `DeFi` an alias with `status: preferred`, note "Acronym preferred in all contexts". The pipeline fed the prose/full form into UI and meta strings.
+
+Short-form availability is not universal, so the rule has to be conditional:
+
+| Acronym | Locales with NO bare short form in `ui`/`tag` |
+| --- | --- |
+| DAO | ar, hi, mr |
+| DEX | ar, hi, mr, ur, zh-tw |
+| DeFi | ko |
+| NFT | none |
+
+**Pipeline rule:** when the English string uses a bare acronym, select the term's `ui` (or `tag`) context, not `prose`. Where that context is itself the expanded phrase, leave it expanded -- the gap belongs in the glossary (normalization queue section 12a), not in the locale file.
+
+**Reviewer rule:** severity depends on the slot. In a `-name` chip label or a `meta-title`/`meta-description` it is critical (layout and SERP truncation). In body prose it is a warning. Watch for the inverse too: `page-apps-category-dao-description`'s English spells the phrase out with no acronym attached, so a locale appending `(DAO)` there is over-expansion of a *correct* translation -- strip the parenthetical, keep the phrase.
+
+**Collapsing it safely:** restore the acronym-bearing token exactly as the locale wrote it pre-PR, not a bare ASCII acronym. Agglutinative locales carry a suffix (`NFTகள்`) and RTL locales wrap the run in bidi isolates (`U+2066 NFT U+2069`). A naive collapse in ar orphaned the closing isolate in three keys; reverting those keys wholesale to their pre-PR values was the correct repair.
+
+### 81. Renamed JSON key ships the English value in every locale (CRITICAL -- pipeline gap)
+
+PR #19357: #19266 renamed `page-find-wallet-privacy{,-desc}` to `page-find-wallet-private-transactions{,-desc}` with identical English text. The title key came back translated, but `-desc` shipped as the English string in all 24 locales. verify-structure cannot see it (keys and placeholders match) and the candidate glossary pass cannot either (no glossary term). Detection: for every key added in the PR, flag a locale value byte-identical to English when English is prose. Repair: when the English value is unchanged across a rename, restore the locale's old-key value from `dev` -- no retranslation needed.
+
+### 82. "Both" dropped from a two-fact privacy claim (PATTERN -- semantic, fleet-wide)
+
+PR #19357 `page-privacy-online.json` `vpn-tor-description-1`, `vpn-relay-description`, `app-tor-browser-description`: "no single relay knows *both* who you are and where you go" became "no relay knows who you are or where you go" in at least bn, ta, te, es, pt-br. The rewrite overstates Tor/Private Relay (each hop knows one fact). Same file also produced "very few [people] earn a recommendation" for VPNs (hi, mr, te) and "place you by location" read as "put you somewhere" (hi, mr). Treat as a warning unless the claim inverts; fix by adding the language's "both / at the same time" particle.
+
+### 83. "Free software" rendered as gratis (PATTERN -- semantic)
+
+PR #19357 `app-f-droid-description`: F-Droid's "free software" became the price sense in pl `darmowego`, tr `ücretsiz`, ru `бесплатного`, uk `безкоштовного`, ar `المجانية`. The libre forms are `wolnego`, `özgür`, `свободного`, `вільного`, `الحرة`. Same confusion class as the #19034 tr `ücretsiz kişi` fix. Warning.
+
+### 84. Pre-pass glossary matching is dominated by unchanged lines (INFORMATIONAL -- review method)
+
+A naive "English has term X, locale lacks form Y" scan over PR files produced ~3.7k candidate rows for PR #19357; well over 80% sat on lines the PR never touched (the ~70 `videos/*` files only gained a `topic:` tag and an EOF newline). Real pre-existing deviations surfaced this way (ru `Бинанс Академи`, uk `Майкрософт Сек'юріті`, mr `वेब3`, te `లిడో`, mr `डेंकुन`, ur `ڈینکون`) are out of scope for the PR but worth a cleanup pass. Restrict candidate rows to added lines before handing them to review agents.

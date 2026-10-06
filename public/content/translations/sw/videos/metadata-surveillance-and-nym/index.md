@@ -17,23 +17,23 @@ Kipengele kutoka **Nym** na Mwanasayansi Mkuu wa Nym Claudia Diaz, kinachochungu
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=QBX5AK3DXqw) iliyochapishwa na Nym. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:04) {#intro-004}
+### Utangulizi (0:04) {#intro-004}
 
 Data fafanuzi ya mawasiliano ni nini? Inarejelea kila kitu kuhusu mawasiliano ambacho si maudhui ya kile kinachosemwa haswa. Hii inajumuisha, kwa mfano, asili ya mawasiliano, mahali yanapoenda, wakati ambapo taarifa inatumwa, kiasi cha taarifa kinachotumwa, na mifumo yoyote inayoweza kutambulika, ikiwa ni pamoja na muda na ukubwa wa pakiti zinazobadilishwa.
 
-#### Data fafanuzi ya mawasiliano (0:27) {#communications-metadata-027}
+### Data fafanuzi ya mawasiliano (0:27) {#communications-metadata-027}
 
 Data fafanuzi ya mawasiliano hufichuliwa kwa chaguomsingi katika itifaki zote za intaneti: TCP/IP, HTTP, UDP, FTP. Hata itifaki salama kama vile TLS au DNS salama, ambazo hulinda maudhui kwa usimbaji fiche wa mwisho hadi mwisho, bado huonyesha data fafanuzi ya mawasiliano: asili, mahali inapoenda, muda, urefu, na kadhalika.
 
 Kwa hivyo taarifa hii inafichuliwa, lakini kwa nani? Nani anaweza kuipata?
 
-#### Nani anapata ufikiaji wa data fafanuzi (1:10) {#who-gets-access-to-metadata-110}
+### Nani anapata ufikiaji wa data fafanuzi (1:10) {#who-gets-access-to-metadata-110}
 
 Kuna idadi ya mashirika ambayo ni waamuzi katika mawasiliano ya intaneti ambayo yanaweza kufikia data fafanuzi hii ya mawasiliano. Hii inajumuisha wahusika wakuu katika miundombinu ya intaneti, kama vile watoa huduma za intaneti, mabadilishano, mifumo inayojitegemea, ruta za BGP, na washiriki wa uti wa mgongo wa intaneti kwa ujumla; wanaweza kupata ufikiaji wa data fafanuzi nyingi za mawasiliano. 
 
 Lakini hata wahusika wadogo, kama vile yeyote anayeendesha ruta ya Wi-Fi au mtandao wa eneo la karibu, au mtu ambaye anaweza kusikiliza kwa siri ndani ya eneo, pia hupata ufikiaji wa data fafanuzi ya mawasiliano. Na bila shaka, maadui wa kiwango cha taifa kama vile NSA wamejulikana kukusanya data fafanuzi kwa kiwango kikubwa na kuichanganua ili kutoa kila aina ya ujasusi.
 
-#### Kwa nini data fafanuzi ni muhimu (2:00) {#why-is-metadata-important-200}
+### Kwa nini data fafanuzi ni muhimu (2:00) {#why-is-metadata-important-200}
 
 Kuna sababu zaidi kwa nini data fafanuzi ni aina ya data inayovutia sana kukusanya na kutumia. Inasomeka kwa mashine, kwa sababu inazungumza lugha ya kompyuta; kimsingi ni lugha ya kompyuta kuweza kuelekeza mawasiliano kutoka chanzo chake hadi mahali yanapoenda kwa njia ifaayo. Kwa hivyo inasomeka kwa mashine, na hiyo inamaanisha kuwa mashine zinaweza kuielewa kwa kiwango kikubwa kwa urahisi sana, tofauti na lugha asilia ya binadamu, ambayo ni ngumu zaidi kufasiri, kwa sababu labda watu wanatumia maneno kwa njia fulani, au wana tofauti ndogo za maana, na hii ni ngumu zaidi kufasiri. Data fafanuzi, kwa upande mwingine, ni rahisi sana.
 
@@ -51,7 +51,7 @@ Uchanganuzi wa trafiki wa data fafanuzi unaweza hata kutumika kurejesha maudhui 
 
 Hata hivyo, kuna hali nyingi ambapo uchanganuzi wa trafiki wa data fafanuzi ya mawasiliano unaweza kufanya kazi kama njia ya kando inayofichua maudhui haya yaliyosimbwa fiche.
 
-#### Ufuatiliaji wa data fafanuzi (5:15) {#metadata-surveillance-515}
+### Ufuatiliaji wa data fafanuzi (5:15) {#metadata-surveillance-515}
 
 Mfano mmoja ni unapovinjari tovuti yenye HTTPS. Kimsingi, kwa sababu mawasiliano na tovuti hii yana usimbaji fiche, mtu anayechunguza mawasiliano yako hawezi kujua ni ukurasa gani mahususi unaofikia kwenye tovuti. Kwa mfano, ikiwa unaenda kwenye WebMD kuangalia magonjwa, mwangalizi au msikilizaji wa siri ataweza kuona, "Sawa, unaangalia taarifa za matibabu za WebMD," lakini hawawezi kujua ni ugonjwa gani mahususi unaotafuta.
 
@@ -61,7 +61,7 @@ Kwa kufanya hivi, unaweza kujenga alama ya vidole ya kila moja ya kurasa hizi, k
 
 Hili ni jambo la kutia wasiwasi waziwazi. Ingawa tunaweza kuwa na usimbaji fiche wa mwisho hadi mwisho, tuko mbali sana na kumaliza katika suala la kulinda faragha ya mawasiliano yetu.
 
-#### Orodha ya matamanio kwa mawasiliano ya faragha (6:40) {#a-wish-list-for-private-communications-640}
+### Orodha ya matamanio kwa mawasiliano ya faragha (6:40) {#a-wish-list-for-private-communications-640}
 
 Kwa hivyo ikiwa tungetaka kuwa na orodha ya matamanio ya kile ambacho mtandao wa mawasiliano salama kabisa ungetoa, ni sifa gani tunazotaka? 
 

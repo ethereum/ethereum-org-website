@@ -14,8 +14,8 @@ Per aiutarti a comprendere meglio questa pagina, ti consigliamo di leggere prima
 
 Ethereum ha due tipi di account:
 
-- Account di proprietà esterna (EOA) – controllato da chiunque possieda le chiavi private
-- Account di contratto – uno smart contract distribuito sulla rete, controllato dal codice. Scopri di più sugli [smart contract](/developers/docs/smart-contracts/)
+- Account di proprietà esterna (EOA): controllato da chiunque possieda le chiavi private
+- Account di contratto: uno smart contract distribuito sulla rete, controllato dal codice. Scopri di più sugli [smart contract](/developers/docs/smart-contracts/)
 
 Entrambi i tipi di account hanno la capacità di:
 
@@ -29,7 +29,7 @@ Entrambi i tipi di account hanno la capacità di:
 - La creazione di un account non costa nulla
 - Può avviare transazioni
 - Le transazioni tra account di proprietà esterna possono essere solo trasferimenti di ETH/token
-- Composto da una coppia di chiavi crittografiche: chiavi pubbliche e private che controllano le attività dell'account
+- È composto da una coppia di chiavi crittografiche: chiavi pubbliche e private che controllano le attività dell'account
 
 **Di contratto**
 
@@ -42,9 +42,9 @@ Entrambi i tipi di account hanno la capacità di:
 
 Gli account di Ethereum hanno quattro campi:
 
-- `nonce` – Un contatore che indica il numero di transazioni inviate da un account di proprietà esterna o il numero di contratti creati da un account di contratto. Per ogni account può essere eseguita solo una transazione con un dato nonce, proteggendo dagli attacchi di replay in cui le transazioni firmate vengono ripetutamente trasmesse e rieseguite.
+- `nonce` – Un contatore che indica il numero di transazioni inviate da un account di proprietà esterna o il numero di contratti creati da un account di contratto. Per ogni account può essere eseguita una sola transazione con un dato nonce, proteggendo dagli attacchi di replay in cui le transazioni firmate vengono ripetutamente trasmesse e rieseguite.
 - `balance` – Il numero di Wei posseduti da questo indirizzo. Il Wei è una denominazione di ETH e ci sono 1e+18 Wei per ETH.
-- `codeHash` – Questo hash si riferisce al _codice_ di un account sulla macchina virtuale di Ethereum (EVM). Gli account di contratto hanno frammenti di codice programmati al loro interno che possono eseguire diverse operazioni. Questo codice EVM viene eseguito se l'account riceve una chiamata di messaggio. Non può essere modificato, a differenza degli altri campi dell'account. Tutti questi frammenti di codice sono contenuti nel database di stato sotto i loro hash corrispondenti per un successivo recupero. Questo valore di hash è noto come codeHash. Per gli account di proprietà esterna, il campo codeHash è l'hash di una stringa vuota.
+- `codeHash` – Questo hash si riferisce al _codice_ di un account sulla Macchina Virtuale di Ethereum (EVM). Gli account di contratto hanno frammenti di codice programmati al loro interno che possono eseguire diverse operazioni. Questo codice della EVM viene eseguito se l'account riceve una chiamata di messaggio. Non può essere modificato, a differenza degli altri campi dell'account. Tutti questi frammenti di codice sono contenuti nel database di stato sotto i loro hash corrispondenti per un successivo recupero. Questo valore di hash è noto come codeHash. Per gli account di proprietà esterna, il campo codeHash è l'hash di una stringa vuota.
 - `storageRoot` – A volte noto come hash di archiviazione. Un hash a 256 bit del nodo radice di un [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) che codifica i contenuti di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come una mappatura dall'hash Keccak-256 delle chiavi intere a 256 bit ai valori interi a 256 bit codificati in RLP. Questo trie codifica l'hash dei contenuti di archiviazione di questo account ed è vuoto per impostazione predefinita.
 
 ![A diagram showing the make up of an account](./accounts.png)
@@ -56,7 +56,7 @@ Un account è composto da una coppia di chiavi crittografiche: pubblica e privat
 
 Questo impedisce ad attori malintenzionati di trasmettere transazioni false perché puoi sempre verificare il mittente di una transazione.
 
-Se Alice vuole inviare ether dal proprio account all'account di Bob, Alice deve creare una richiesta di transazione e inviarla alla rete per la verifica. L'uso della crittografia a chiave pubblica da parte di Ethereum garantisce che Alice possa dimostrare di aver originariamente avviato la richiesta di transazione. Senza meccanismi crittografici, un avversario malintenzionato, Eve, potrebbe semplicemente trasmettere pubblicamente una richiesta simile a "invia 5 ETH dall'account di Alice all'account di Eve" e nessuno sarebbe in grado di verificare che non provenga da Alice.
+Se Alice vuole inviare ether dal proprio account all'account di Bob, Alice deve creare una richiesta di transazione e inviarla alla rete per la verifica. L'uso della crittografia a chiave pubblica da parte di Ethereum garantisce che Alice possa dimostrare di aver originariamente avviato la richiesta di transazione. Senza meccanismi crittografici, un avversario malintenzionato, Eve, potrebbe semplicemente trasmettere pubblicamente una richiesta del tipo "invia 5 ETH dall'account di Alice all'account di Eve" e nessuno sarebbe in grado di verificare che non provenga da Alice.
 
 ## Creazione dell'account {#account-creation}
 
@@ -68,15 +68,15 @@ Esempio:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-La chiave pubblica viene generata dalla chiave privata utilizzando l'[Algoritmo per la firma digitale a curva ellittica](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (Elliptic Curve Digital Signature Algorithm). Ottieni un indirizzo pubblico per il tuo account prendendo gli ultimi 20 byte dell'hash Keccak-256 della chiave pubblica e aggiungendo `0x` all'inizio.
+La chiave pubblica viene generata dalla chiave privata utilizzando l'[Algoritmo per la Firma Digitale a Curva Ellittica](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Ottieni un indirizzo pubblico per il tuo account prendendo gli ultimi 20 byte dell'hash Keccak-256 della chiave pubblica e aggiungendo `0x` all'inizio.
 
-Ciò significa che un account di proprietà esterna (EOA) ha un indirizzo di 42 caratteri (segmento di 20 byte che corrisponde a 40 caratteri esadecimali più il prefisso `0x`).
+Questo significa che un account di proprietà esterna (EOA) ha un indirizzo di 42 caratteri (un segmento di 20 byte che corrisponde a 40 caratteri esadecimali più il prefisso `0x`).
 
 Esempio:
 
 `0x5e97870f263700f46aa00d967821199b9bc5a120`
 
-L'esempio seguente mostra come utilizzare uno strumento di firma chiamato [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) per generare un nuovo account. Clef è uno strumento di gestione degli account e di firma fornito in bundle con il client Ethereum, [Geth](https://geth.ethereum.org). Il comando `clef newaccount` crea una nuova coppia di chiavi e le salva in un keystore crittografato.
+L'esempio seguente mostra come utilizzare uno strumento di firma chiamato [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) per generare un nuovo account. Clef è uno strumento di gestione degli account e di firma fornito in bundle con il client Ethereum, [Go Ethereum (Geth)](https://geth.ethereum.org). Il comando `clef newaccount` crea una nuova coppia di chiavi e le salva in un keystore crittografato.
 
 ```
 > clef newaccount --keystore <path>
@@ -93,7 +93,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Documentazione di Geth](https://geth.ethereum.org/docs)
 
-È possibile derivare nuove chiavi pubbliche dalla tua chiave privata, ma non puoi derivare una chiave privata dalle chiavi pubbliche. È vitale mantenere le tue chiavi private al sicuro e, come suggerisce il nome, **PRIVATE**.
+È possibile derivare nuove chiavi pubbliche dalla tua chiave privata, ma non puoi derivare una chiave privata dalle chiavi pubbliche. È fondamentale mantenere le tue chiavi private al sicuro e, come suggerisce il nome, **PRIVATE**.
 
 Hai bisogno di una chiave privata per firmare messaggi e transazioni che producono una firma. Altri possono quindi prendere la firma per derivare la tua chiave pubblica, dimostrando l'autore del messaggio. Nella tua applicazione, puoi utilizzare una libreria JavaScript per inviare transazioni alla rete.
 
@@ -105,13 +105,13 @@ Esempio:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-L'indirizzo del contratto viene solitamente assegnato quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da tale indirizzo (il "nonce"). Questo è il modo in cui l'operazione `CREATE` deriva un indirizzo.
+L'indirizzo del contratto viene solitamente fornito quando un contratto viene distribuito sulla blockchain di Ethereum. L'indirizzo deriva dall'indirizzo del creatore e dal numero di transazioni inviate da quell'indirizzo (il "nonce"). È così che l'operazione `CREATE` deriva un indirizzo.
 
-I contratti possono anche essere distribuiti con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), che deriva l'indirizzo dall'indirizzo del creatore, da un valore scelto dal creatore (il "salt") e da un hash del codice di creazione del contratto. Non è coinvolto alcun nonce, quindi l'indirizzo può essere calcolato prima che il contratto esista e rimane lo stesso indipendentemente da quante altre transazioni il creatore invia nel frattempo. Ciò rende possibile fare riferimento a un contratto che non è stato ancora distribuito.
+I contratti possono anche essere distribuiti con [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014), che deriva l'indirizzo dall'indirizzo del creatore, da un valore scelto dal creatore (il "salt") e da un hash del codice di creazione del contratto. Non è coinvolto alcun nonce, quindi l'indirizzo può essere calcolato prima che il contratto esista e rimane lo stesso indipendentemente da quante altre transazioni il creatore invia nel frattempo. Questo rende possibile fare riferimento a un contratto che non è ancora stato distribuito.
 
 ## Chiavi del validatore {#validators-keys}
 
-C'è anche un altro tipo di chiave in Ethereum, introdotto quando Ethereum è passato dal consenso basato sulla Prova di lavoro (PoW) alla Proof-of-Stake (PoS). Queste sono le chiavi "BLS" e vengono utilizzate per identificare i validatori. Queste chiavi possono essere aggregate in modo efficiente per ridurre la larghezza di banda richiesta alla rete per raggiungere il consenso. Senza questa aggregazione di chiavi, lo stake minimo per un validatore sarebbe molto più alto.
+Esiste anche un altro tipo di chiave in Ethereum, introdotto quando Ethereum è passato dal consenso basato sulla Prova di lavoro (PoW) alla Proof-of-Stake (PoS). Queste sono le chiavi "BLS" e vengono utilizzate per identificare i validatori. Queste chiavi possono essere aggregate in modo efficiente per ridurre la larghezza di banda richiesta alla rete per raggiungere il consenso. Senza questa aggregazione di chiavi, lo stake minimo per un validatore sarebbe molto più alto.
 
 [Maggiori informazioni sulle chiavi del validatore](/developers/docs/consensus-mechanisms/pos/keys/).
 
@@ -127,7 +127,7 @@ Guarda Austin che ti guida attraverso le funzioni di hash e le coppie di chiavi.
 
 <VideoWatch slug="key-pair-eth-build" />
 
-## Letture consigliate {#further-reading}
+## Letture di approfondimento {#further-reading}
 
 - [Comprendere gli account di Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - Etherscan
 
@@ -137,3 +137,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 - [Smart contract](/developers/docs/smart-contracts/)
 - [Transazioni](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />

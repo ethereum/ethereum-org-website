@@ -17,7 +17,7 @@ The first episode of **Optimist**'s *Community.eth* series. To celebrate the 9th
 
 *This transcript is an accessible copy of the [original video](https://www.youtube.com/watch?v=onCwaj1FM-4) published by Optimist. It has been lightly edited for readability. Speakers are members of the Ethereum community and not all were individually identified in the video.*
 
-#### What is Ethereum? (0:00) {#what-is-ethereum-000}
+### What is Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Person 1:** What is Ethereum?
 
@@ -29,7 +29,7 @@ The first episode of **Optimist**'s *Community.eth* series. To celebrate the 9th
 
 **Person 4:** Ethereum is a lot of things for a lot of people.
 
-#### What makes it powerful (0:40) {#what-makes-it-powerful-040}
+### What makes it powerful (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** The potential that Ethereum has is great because we can't even define it. And I think that's very powerful.
 
@@ -43,7 +43,7 @@ The first episode of **Optimist**'s *Community.eth* series. To celebrate the 9th
 
 **Simona Pop:** Ethereum, for me, is the next stage in the evolution of the internet.
 
-#### Why we build (2:00) {#why-we-build-200}
+### Why we build (2:00) {#why-we-build-200}
 
 **Simona Pop:** Yes, of course there's buzz when the price goes up, but the people and the true believers are there when it goes down, when it goes up—it doesn't really matter. We're doing it because we genuinely believe in what we're building.
 
@@ -51,7 +51,7 @@ The first episode of **Optimist**'s *Community.eth* series. To celebrate the 9th
 
 **Alexis Ohanian:** We have the chance to reimagine so many institutions of society with real ownership, with the real ability to accrue value for the rest of your life, for generations—for infinity, basically. I really desperately want to see that get unlocked.
 
-#### The community (3:00) {#the-community-300}
+### The community (3:00) {#the-community-300}
 
 **Amber Baldet:** One thing that really sets the Ethereum community apart has been, from the beginning, that they're not afraid to be a little bit silly. You see that in the unicorns and the silly rainbow colors and the dances and the songs—and that silliness is what lends the entire ecosystem a sense of hope. And one thing people really need these days is hope.
 

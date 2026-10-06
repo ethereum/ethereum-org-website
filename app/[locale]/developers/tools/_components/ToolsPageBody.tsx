@@ -4,20 +4,23 @@ import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
-import type {
-  DeveloperToolsCategory,
-  DeveloperToolWithCategory,
+import {
+  type DeveloperToolsCategory,
+  type DeveloperToolWithCategory,
+  toToolCard,
 } from "@/lib/utils/developerToolsData"
 
 import ToolsCatalog from "./ToolsCatalog"
 
 type ToolsPageBodyProps = {
   locale: string
+  /** Full records; projected to `ToolCardData` here, before the client boundary. */
   tools: DeveloperToolWithCategory[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
   countByCategory: Record<string, number>
+  countBySubcategory: Record<string, number>
   totalCount: number
   currentCategoryId?: string
 }
@@ -34,6 +37,7 @@ const ToolsPageBody = async ({
   categoryLabels,
   subcategoryLabels,
   countByCategory,
+  countBySubcategory,
   totalCount,
   currentCategoryId,
 }: ToolsPageBodyProps) => {
@@ -41,6 +45,8 @@ const ToolsPageBody = async ({
     locale,
     namespace: "page-developers-tools",
   })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const tTable = await getTranslations({ locale, namespace: "table" })
 
   return (
     <main className="pb-page">
@@ -49,10 +55,12 @@ const ToolsPageBody = async ({
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
           locale={locale}
-          tools={tools}
+          // Slim projection: only what the island reads crosses to the client.
+          tools={tools.map(toToolCard)}
           categories={categories}
           currentCategoryId={currentCategoryId}
           countByCategory={countByCategory}
+          countBySubcategory={countBySubcategory}
           totalCount={totalCount}
           categoryLabels={categoryLabels}
           subcategoryLabels={subcategoryLabels}
@@ -61,6 +69,9 @@ const ToolsPageBody = async ({
             allCategories: t("page-developers-tools-categories-title"),
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
+            filtersToggle: tTable("table-filters"),
+            applyLabel: t("page-developers-tools-show-results"),
+            closeLabel: tCommon("close"),
             suggestButton: t("page-developers-tools-suggest-resource-button"),
           }}
         />

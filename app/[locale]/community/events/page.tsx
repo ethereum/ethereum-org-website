@@ -3,7 +3,6 @@ import {
   Banknote,
   ChartNoAxesCombined,
   Handshake,
-  Plus,
   Presentation,
 } from "lucide-react"
 import {
@@ -14,6 +13,7 @@ import {
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
+import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -53,6 +53,8 @@ import organizerImage from "@/public/images/people-learning.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const _events = (await getEventsData()) ?? []
 
@@ -137,6 +139,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
       />
+
+      {/* Devcon VIII India callout banner */}
+      <DevconIndiaLargeCallout sourcePage="events" preload />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
@@ -226,17 +231,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </div>
                       <p>{t(descriptionKey)}</p>
                       <div className="mt-auto flex flex-wrap gap-x-6 gap-y-2 pt-2">
-                        <Link
-                          href={coworkingSignupUrl}
-                          className="font-bold no-underline"
-                          customEventOptions={{
-                            eventCategory: "Events",
-                            eventAction: "hubs",
-                            eventName: `${location}_cowork`,
-                          }}
-                        >
-                          {t("page-events-hub-cowork-signup")}
-                        </Link>
+                        {coworkingSignupUrl && (
+                          <Link
+                            href={coworkingSignupUrl}
+                            className="font-bold no-underline"
+                            customEventOptions={{
+                              eventCategory: "Events",
+                              eventAction: "hubs",
+                              eventName: `${location}_cowork`,
+                            }}
+                          >
+                            {t("page-events-hub-cowork-signup")}
+                          </Link>
+                        )}
                         <Link
                           href={meetupUrl}
                           className="font-bold no-underline"
@@ -246,7 +253,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             eventName: `${location}_meetup`,
                           }}
                         >
-                          {t("page-events-hub-meetups")}
+                          {t(
+                            coworkingSignupUrl
+                              ? "page-events-hub-meetups"
+                              : "page-events-hub-join-community"
+                          )}
                         </Link>
                       </div>
                     </div>
@@ -254,21 +265,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )
               )}
             </Grid>
-            <ButtonLink
-              href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
-              variant="outline"
-              className="group w-full gap-2 rounded-4xl border-body-light p-5"
-              customEventOptions={{
-                eventCategory: "Events",
-                eventAction: "hubs",
-                eventName: "apply",
-              }}
-            >
-              <div className="rounded-full border border-dashed border-primary p-3">
-                <Plus className="size-4 transition-transform group-hover:scale-150" />
-              </div>
-              {t("page-events-hub-apply-cta")}
-            </ButtonLink>
           </Section>
 
           {/* Find events near you */}

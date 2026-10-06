@@ -95,3 +95,53 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `روبسٹ انسیٹوز گروپ` -- garbled transliteration dropping the ن of *-cen-*.
 - U+2066 LRI wrapping pure-Urdu frontmatter title/description (KB #64).
 - Numeral system split within one new file: `۲۰۰۹` vs `1990`.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ڈیوکان` in `title` and `subtitle`, with the bidi isolates re-wrapped (pair around the name removed, pairs around `8` and `10%` kept). Verified balanced 4/4, NFC-clean. Derived form (Gemini 3.1 Pro): retroflex ڈ, و for English "v" per standard Urdu tech transliteration (cf. `ویڈیو`). Consistent with 6.3's instruction to transliterate aggressively in Nastaliq. `logo-alt` stays Latin.
+
+**Notes:**
+
+- Western numerals retained. 6.3 mandates native Eastern Arabic-Indic numerals for ur *prose*, but does not carve out UI the way the bn rule does, and 7.5 says default conservative when the surface is ambiguous. The tree is overwhelmingly Western anyway (`src/intl/ur` 4547 Western vs 423 native), so this is a pre-existing tree-wide gap, not a defect introduced here.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ur/page-apps.json`. 16 critical, 18 warnings. Brand 9/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ur affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DEX** left expanded, ur has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ur-specific):**
+
+- `لین دین` -> `ٹرانزیکشنز`; the glossary entry names the former as the form to avoid (recurrence of #18942/#19015)
+- `C++` (1 site) and `Yul+` (8 sites) un-isolated in RTL prose, rendering as `++C` / `+Yul` -> wrapped in the file's existing `<span dir="ltr">`
+- whitehat parenthetical: ur was the inverted case, a stray extra `)` rather than a dropped one
+
+**Deliberately not fixed:**
+
+- `Ethers.js` -> `ethers.js`: false positive, the English source itself reads `ethers.js`
+- `لامركزی` Arabic kaf: matches the glossary entry verbatim; per #19034 this is upstream plus a tree-wide sweep
+- frontmatter LRI wrap: a no-op at render time since the isolated run is all strong-RTL, so it belongs in the sanitizer, not a hand edit
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- English months/"million" inside isolates: open-access argentina/myanmar/ukraine references + `emergency-description-2`; fusaka:138 February/September -> `فروری`/`ستمبر`, `⁦$60⁩ ملین`.
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `ڈینکون` x7 vs glossary `ڈینکن`.
+- zk-rollups `آپٹیمسٹک` vs `آپٹمسٹک` drift; `18 days` untranslated; `انخلا` for bank withdrawals.

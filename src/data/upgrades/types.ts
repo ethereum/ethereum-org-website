@@ -14,6 +14,7 @@ export type UpgradeStatus = "live" | "upcoming" | "planning" | "research"
  *
  * `complete` is the only settled value. The rest are claims about the future,
  * strongest to weakest; the UI must never render a weaker one as settled.
+ * `anticipated` is a specific testnet date proposed upstream but not agreed.
  */
 export type MilestoneStatus =
   | "complete"
@@ -67,8 +68,8 @@ export interface UpgradeEip {
   id: number
   /**
    * The full upstream vocabulary is modelled so the mapping stays exhaustive,
-   * but only `scheduled` and `included` are stored — an EIP that is not
-   * expected to ship simply has no entry.
+   * but only `considered`, `scheduled` and `included` are stored. Everything
+   * else, whether never weighed or weighed and descoped, has no entry.
    */
   status: EipStatus
   networking: boolean

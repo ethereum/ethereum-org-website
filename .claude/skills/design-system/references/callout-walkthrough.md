@@ -45,7 +45,7 @@ The only optical anchor is `image`:
 - `image` renders a `<CalloutBanner>` with the image. Banner area reserves 96px above the gradient card for the overlap effect.
 - Omit `image` for a content-only callout. The aside skips the 96px reservation entirely (via the `has-[[data-label=callout-banner]]:` gate), so the gradient card sits flush at the top.
 
-The legacy `emoji` prop / `CalloutEmoji` slot was removed in May 2026 — the single in-tree consumer was migrated to a banner-less callout, and the pattern was retired. Do not reintroduce.
+There is no `emoji` prop / `CalloutEmoji` slot — do not reintroduce it; use an `image` banner or go banner-less.
 
 ## Step 4: Side-by-side equalization (automatic)
 
@@ -79,7 +79,7 @@ Two size variants, both fully responsive across the `@3xl/callout` container bre
 | `base` (default) | `text-2xl` (24px) → `text-3xl` (30px)       | `text-lg` (18px) → `text-xl` (20px)               | Default scale; use for prominent CTAs                                                           |
 | `sm`             | `text-xl` (20px) → `text-2xl` (24px)        | `text-base` (16px) → `text-lg` (18px)             | Tighter; use when the callout is secondary to surrounding content or stacked at narrower widths |
 
-Variant naming reflects visual prominence (text scale only). Gap and padding are unchanged across variants. The previous `large` / `medium` / `small` triad was consolidated into `base` / `sm` in May 2026 — descriptions are now responsive in both variants (they were fixed-size before).
+Variant naming reflects visual prominence (text scale only); gap and padding are unchanged across variants. Only `base` / `sm` exist — the old `large` / `medium` / `small` names are gone.
 
 ## Step 6: Heading level (`as` prop)
 
@@ -100,20 +100,7 @@ Layout values are driven by CSS variables on the aside. Variants override these;
 | `--title-font-size`   | Variant-driven, responsive at `@3xl/callout`             | Variants | See Step 5 table                                                                                                                                                                           |
 | `--content-font-size` | Variant-driven, responsive at `@3xl/callout`             | Variants | See Step 5 table                                                                                                                                                                           |
 
-Adding a variant follows the existing pattern — set the variable on the aside in the variant's `cn()` block, mirroring the responsive shape used by `base` / `sm`:
-
-```tsx
-// In ui/callout.tsx, inside variants:
-xl: cn(
-  "[--callout-padding:--spacing(16)]",
-  "[--title-font-size:var(--text-3xl)] *:@3xl/callout:[--title-font-size:var(--text-4xl)]",
-  "[--content-font-size:var(--text-xl)] *:@3xl/callout:[--content-font-size:var(--text-2xl)]",
-),
-```
-
-The `*:@3xl/callout:[--var:...]` shape is required (not `@3xl/callout:[--var:...]`) because the `@container/callout` lives on the aside itself — the override has to descend through a child before the container query resolves.
-
-Avoid the `**:data-[label=callout-content]:...` descendant-selector pattern for new variants — push the rule onto `CalloutContent` directly, or use a CSS variable hook so the slot owns its own behavior. The one remaining instance of that pattern (on `base`, for `w-[inherit]`) is preserved from the pre-consolidation default and should not be propagated.
+Adding a variant follows the existing pattern — set the variables on the aside in the variant's `cn()` block, mirroring `base` / `sm`. Two authoring constraints (visible in `ui/callout.tsx`): responsive overrides need the `*:@3xl/callout:[--var:...]` shape (the `@container/callout` lives on the aside itself, so the override must descend through a child), and new variants shouldn't use `**:data-[label=...]` descendant selectors — push rules onto the slot component or a CSS variable hook instead.
 
 ## Step 8: When the shape doesn't quite match
 

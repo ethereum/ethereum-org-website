@@ -29,6 +29,9 @@ tools:
     max-patch-size: 262144
     format-json: true
 safe-outputs:
+  github-app:
+    client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+    private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
   jobs:
     decision-digest:
       description: Publish the decision digest to the team Discord channel, and to the run summary

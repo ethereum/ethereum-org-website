@@ -52,7 +52,7 @@ type MyComponentProps = React.ComponentPropsWithoutRef<"div"> & {
   customProp: string
 } & VariantProps<typeof myComponentVariants>
 
-// Or use ComponentPropsWithRef if forwarding refs:
+// Use ComponentPropsWithRef when callers may need the DOM node (ref is a regular prop in React 19):
 type MyComponentProps = React.ComponentPropsWithRef<"div"> & { ... }
 
 // Standalone interface for feature components that don't wrap a single HTML element:
@@ -105,33 +105,25 @@ return (
 )
 ```
 
-### `forwardRef` (when applicable)
+### Refs: accept `ref` as a regular prop (React 19)
 
-Use `forwardRef` when:
-
-- The component wraps a single interactive HTML element (button, input, anchor)
-- It wraps a Radix primitive that accepts refs
-- It needs to participate in focus management
+**Don't write new `forwardRef` components.** React 19 passes `ref` as a regular prop -- when the component needs to expose its DOM node (it wraps an interactive element, a ref-accepting Radix primitive, or participates in focus management), just accept and spread it:
 
 ```tsx
-const MyComponent = React.forwardRef<HTMLDivElement, MyComponentProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn(myComponentVariants({ variant, size }), className)}
-        {...props}
-      />
-    )
-  }
-)
-MyComponent.displayName = "MyComponent"
+type MyComponentProps = React.ComponentPropsWithRef<"div"> &
+  VariantProps<typeof myComponentVariants>
+
+function MyComponent({ className, variant, size, ...props }: MyComponentProps) {
+  return (
+    <div
+      className={cn(myComponentVariants({ variant, size }), className)}
+      {...props} // `ref` rides along in props
+    />
+  )
+}
 ```
 
-Don't use `forwardRef` on:
-
-- Feature/business components (they aren't composed into other UI)
-- Pure layout components (Flex, Stack) unless they need DOM measurement
+Many existing `ui/` files still use `React.forwardRef` -- that's legacy; leave it in place when you're not otherwise touching the component, but don't copy it into new ones. Components that never need a ref (feature/business components, pure layout wrappers) just don't accept one.
 
 ## Server vs Client
 
@@ -200,25 +192,7 @@ export const Variants: StoryObj = {
 }
 ```
 
-Title hierarchy (reorganized August 2026, issue #18967). The **section is derived from the file path**, so it is never a judgment call -- and `tests/unit/storybook/story-titles.spec.ts` enforces it:
-
-| Path                                  | Section         |
-| ------------------------------------- | --------------- |
-| `src/styles/**`                       | `Design System` |
-| `src/components/ui/**`                | `UI`            |
-| `src/components/**` (everything else) | `Components`    |
-| `src/layouts/**`                      | `Layouts`       |
-| `app/**`                              | `Pages`         |
-
-The `UI / Primitives /` middle tier is **gone** -- everything in `ui/` is a primitive, so the tier carried no information.
-
-The second level is a light functional group (Actions, Forms, Layout, Navigation, Overlays, Data Display for `UI /`; Cards, Heroes, Navigation, Site Chrome, Content, Data Viz, Features for `Components /`). Use one only if it already fits. **Never invent a group for a single component** -- a flat `Components / Morpher` is correct, and inventing categories is how the previous six competing schemes accumulated.
-
-The test also requires an explicit title on every story and rejects duplicates: Storybook merges two files sharing a title into one sidebar entry with no warning, which is how three separate Hero stories hid behind one entry for months.
-
-> **Deprecated components get no story.** A rendered example reads as an endorsement whatever the caption says, so a component on the way out is left out of Storybook entirely and its deprecation noted in prose (see `HR`'s `narrow` variant, and `Swiper`, which has no story). A component whose status is merely undecided keeps its story plus a blurb saying it isn't for new work (see `Carousel`).
-
-> **A green build does not prove a story renders.** `pnpm build-storybook` compiles without executing, and every `ui/` story disables Chromatic snapshots -- so neither CI signal catches a story that throws. Open it in `pnpm storybook`. Async server components rely on the `next-intl/server` shim (`.storybook/next-intl-server.tsx`); `usePathname` consumers need `parameters.nextjs.navigation.pathname`; and a new i18n namespace has to be added to `ns` in `.storybook/next-intl.ts` or its strings render as raw key tails.
+The title convention (path-derived section, second-level groups, uniqueness, the deprecated-no-story rule, and the "green build doesn't prove a story renders" caveat) lives in **CLAUDE.md's "Storybook stories" section** -- follow it; `tests/unit/storybook/story-titles.spec.ts` enforces the title rules.
 
 ## Pre-Merge Checklist
 
@@ -229,7 +203,7 @@ The test also requires an explicit title on every story and rejects duplicates: 
 - [ ] Accepts `className?: string`
 - [ ] Uses `tv()` for variants (not `cva`)
 - [ ] Uses `cn()` for className merging
-- [ ] `forwardRef` if appropriate (and not if not)
+- [ ] Accepts `ref` as a regular prop if callers need the DOM node; no new `forwardRef`
 - [ ] No raw color hex / `rgb()` -- semantic tokens only
 - [ ] No `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` -- logical equivalents
 - [ ] No raw `<a>` or `<button>` inside -- uses project primitives

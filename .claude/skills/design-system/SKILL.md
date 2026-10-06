@@ -34,70 +34,27 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 10. **Storybook stories ship with new UI components.** No automated unit tests; Storybook + Chromatic + types are the verification layer.
 11. **Don't add new layouts.** There are six canonical layouts (`TopicLayout`, `StaticLayout`, `DocsLayout`, `TutorialLayout`, `ContentLayout`, `BaseLayout`). New sectioned content goes in `src/data/topics/<key>.ts` as a `TopicLayout` config -- not a new layout component. See `references/layouts.md`.
 
-## Highest-Value Gotchas (read these now)
+## Highest-Value Gotchas (index)
 
-These are landmines where the code looks reasonable but the pattern is wrong. The full set is in `references/gotchas.md`; these are the ones that come up most often.
+Landmines where the code looks reasonable but the pattern is wrong. One line each; the canonical write-ups live in the named reference.
 
-### Imports that look right but aren't
+- **Look-alike imports** -- Tooltip (`@/components/Tooltip`, not `ui/tooltip`), Modal (`ui/dialog-modal` vs `ui/dialog`; don't mix sources within a feature), Card (`ui/card` for app code, not `MarkdownCard`), Heroes (named exports of `@/components/Hero`; `title` is always the `<h1>`, no `header` prop). Decision trees: `references/canonical-imports.md`.
+- **Stale shadcn token names** (`bg-popover`, `bg-muted`, `text-muted-foreground`, ...) linger in a few `ui/` files but don't resolve in this project's tokens. Don't add new uses. List: `references/tokens.md`; replacements: `references/cleanup-playbook.md`.
+- **`useColorModeValue` is a deprecated Chakra leftover** -- use `dark:` + semantic tokens.
+- **`Card` is variant-driven, not `className`-driven.** Padding/spacing/background/radius/text color go through `variant`/`size`; a `className` override means a missing variant case. Full system: `references/card-walkthrough.md`. Surprise behaviors (`isSecondary` no-op on `solid`, `CardBanner fit="contain"` auto-backdrop, `LinkBox` needs `LinkOverlay`, `commonControlClasses` shared with `Switch`): `references/gotchas.md`.
+- **No `Heading` primitive** -- `base.css` styles `<h1>`-`<h6>`; just write the tag. To match a heading level's size anywhere, use `text-h1`-`text-h6` (size + line-height only) -- never the raw `text-3xl lg:text-4xl` pair, and never re-apply a weight on a real heading. Canonical write-up: `references/spacing-typography.md`.
+- **Spacing is `.flow` + the `page`/`space`/`hero` tokens**, not hand-rolled margins. App pages follow a `<main className="p-page"> > <MainArticle className="flow"> > <Section id>` skeleton. Details: `references/spacing-typography.md`; token table: `references/tokens.md`.
+- **Locale formatting** -- one stray `toLocaleString` remains in `ui/chart.tsx`; don't add more. Use `numberFormat()`.
 
-- **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
-- **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
-- **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
-- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering image, component-aside (`heroComponent`), text-only, and article-style heroes (`variant="no-divider"`, no aside). `title` is always the `<h1>` (no `header` prop); an optional `eyebrow` sits above it. The old `MdxHero` was removed -- use `PageHero` text-only for the breadcrumb + h1 article shape it used to provide.
+### Shadows: default to the Tailwind scale
 
-### Stale shadcn token names that don't resolve
+Pick by surface: dropdowns/tooltips `shadow-md`, cards/popovers/modals `shadow-lg`, large framed boxes/sheets `shadow-xl`. Three rules:
 
-`bg-popover`, `text-popover-foreground`, `bg-accent`, `text-accent-foreground`, `bg-muted`, `text-muted-foreground`, `focus:ring-ring`, `ring-offset-background` appear in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx`, `ui/tabs.tsx` but are **NOT defined** in this project's tokens. They render incorrectly. If you touch these files, replace with project semantic tokens (`bg-background-highlight`, `text-body`, `bg-accent-a`, `text-body-medium`, etc.). Don't introduce new uses.
+1. Only two custom shadows exist (`shadow-primary-xl`, `shadow-primary-no-blur-*`, both in `utilities.css`) -- anything new needs a brand-tint justification.
+2. Hover elevation is the `hover-lift-*` utility or `Card hoverLift` (both `motion-safe`-gated), never a per-component resting/hover shadow pair.
+3. A genuinely-needed custom shadow is a raw `box-shadow` `@utility`, never an arbitrary `shadow-[...]` -- arbitrary shadows route color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule grays out in dark mode.
 
-### `useColorModeValue` is a Chakra leftover
-
-Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + semantic tokens.
-
-### Subtle component behaviors
-
-- `<Button isSecondary>` only takes effect on `outline` and `ghost` variants. Silent no-op on `solid`/`link`.
-- **`Card` is variant-driven, not `className`-driven.** Padding, spacing, background, border-radius, and text color are owned by the `variant` / `size` variants and the CSS vars they set (`--card-pad`, `--content-space`, `--banner-radius`). Adjusting any of those via `className` on `Card`/`CardContent`/`CardHeader`/`CardFooter` is the wrong escape hatch — add a variant case in `card.tsx` instead. See `references/card-walkthrough.md`.
-- `<CardBanner fit="contain">` with a single `<Image>` child auto-clones it as a blurred backdrop. Pass two children and you lose this magic.
-- `LinkBox` requires a `LinkOverlay` somewhere inside; without it, the whole-card-clickable pattern doesn't work.
-- `commonControlClasses` in `ui/checkbox.tsx` is shared by `Switch`. Editing it changes both.
-
-### No `Heading` primitive -- use semantic tags
-
-`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-black`. Just write `<h1>Title</h1>`. Override the size on a heading element when really needed (`<h2 className="text-h1">` for an `h2` at `h1` size), but don't re-apply a weight -- a utility-layer `font-bold` silently overrides the base `font-black`. Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
-
-### Match a heading size with `text-h1`-`text-h6`, never the raw responsive pair
-
-There are six size utilities -- `text-h1` through `text-h6` (`src/styles/utilities.css`) -- one per heading level. Each bundles the **font-size and line-height** for that level (responsive, e.g. `text-h2` = `text-3xl lg:text-4xl`). `base.css` itself `@apply`s these to the real `<h1>`-`<h6>` tags, so they are the single source of truth for heading sizing.
-
-Whenever you want a non-heading element (or a heading you're resizing) to read at a given heading level's size, use the utility -- **not** the responsive pair it expands to:
-
-```tsx
-// Wrong -- reconstructs h2 sizing by hand; drifts if the scale changes
-<p className="text-3xl lg:text-4xl">Looks like an h2</p>
-
-// Right -- one token, stays in sync with the heading scale
-<p className="text-h2">Looks like an h2</p>
-```
-
-`text-h*` sets size and line-height **only** -- it does *not* set `font-black`. Real headings get their weight from `base.css`; on other elements, set weight separately if you want it.
-
-### Spacing: `.flow` + the `page`/`space`/`hero` tokens, not hand-rolled margins
-
-Vertical rhythm between prose blocks is the opt-in `.flow` system -- wrap a region in `flow`, write semantic tags, and skip `mt-*`/`mb-*`. Page/section padding, the flow unit (used manually), and hero padding come from named responsive tokens -- `px-page`/`p-page`, `mt-space`/`gap-space`, `p-hero` -- not `px-4 md:px-8` chains or arbitrary `p-(--var)`. App pages follow a `<main className="p-page"> > <MainArticle className="flow"> > <Section id>` skeleton. Details in `references/spacing-typography.md`; token table in `references/tokens.md`.
-
-### Shadows: default to the Tailwind scale; almost never add a custom one
-
-Elevation uses the **Tailwind default scale** -- `shadow-sm`/`-md`/`-lg`/`-xl`/`-2xl`, `shadow-none` to reset. Pick by surface: dropdowns/tooltips `shadow-md`, cards/popovers/modals `shadow-lg`, large framed boxes/sheets `shadow-xl`. There is **no custom multi-layer token set**.
-
-Only **two** project shadows exist, both in `utilities.css`, for the brand-tinted look defaults can't express:
-- `shadow-primary-xl` -- `shadow-xl` tinted with `primary-low-contrast`, for large framed / window-style boxes.
-- `shadow-primary-no-blur-*` -- functional, spacing-scaled solid (no-blur) offset (`-1` = 4px, `-0.5` = 2px) in `primary-low-contrast`, for hard hover offsets.
-
-Before reaching for anything new: a default almost always fits, and a **hover lift is the `hover-lift-*` utility** (`-xs`/`-base`/`-sm`/`-md`) or `Card hoverLift` -- not a bespoke shadow swap. Those utilities gate their scale behind `motion-safe:`, so the shadow step alone carries the cue under `prefers-reduced-motion`; do the same for any new hover transform. If you genuinely need a custom shadow, write it as a **raw `box-shadow`** (like the two above), never an arbitrary `shadow-[...]`: arbitrary shadows route their color through `--tw-shadow-color`, which the global `* { dark:shadow-body }` rule overrides in dark mode, silently graying your color. Raw `box-shadow` utilities are immune.
-
-### One stray `toLocaleString` in `ui/chart.tsx:241`
-
-Don't add more. Use `numberFormat()`.
+Old-shadow-token mapping table: `references/cleanup-playbook.md`.
 
 ## Quick "Where Do I Import From?" Cheatsheet
 
@@ -125,21 +82,21 @@ For full decision trees with all the look-alike landmines, see `references/canon
 
 Pull these in only when the trigger applies. Don't read them all upfront.
 
-- **`references/canonical-imports.md`** -- Load when you're about to import a component and aren't sure which file is canonical (Card, Modal, Tooltip, Hero, Tabs all have multiple plausible imports).
-- **`references/components.md`** -- Load when you need the full inventory: what each component is for, its variants, its canonical usage example.
-- **`references/tokens.md`** -- Load when you need to add a new token, define a gradient, choose a z-index, or are unsure which semantic token applies. Also: when working in `src/styles/`.
-- **`references/spacing-typography.md`** -- Load when laying out a page or section, deciding heading sizes, choosing spacing rhythms, or working with text density.
-- **`references/gotchas.md`** -- Load when you hit unexpected behavior in a primitive (auto-blur backdrop, slot-prop coupling, hidden client boundary, etc.) or want the long-tail confusion patterns beyond what's inline above.
-- **`references/variant-vs-new.md`** -- Load when you're tempted to create a new component file. Read this first to confirm whether a variant is the right answer.
-- **`references/cleanup-playbook.md`** -- Load when refactoring existing code that has anti-patterns (one-off styling, raw `<a>`/`<button>`, hex colors, hard-coded English, etc.). The "old pattern -> new pattern" map.
-- **`references/i18n-rtl.md`** -- Load when adding user-facing text, formatting numbers/dates, working with directional spacing, writing translation keys, or authoring an `app/[locale]/` page or `generateMetadata` (the `setRequestLocale`-first rule).
-- **`references/server-vs-client.md`** -- Load when deciding whether to mark a component `"use client"`, structuring a page that mixes static and interactive parts, or refactoring across the SSR boundary.
-- **`references/a11y.md`** -- Load when adding interactive elements (modals, dropdowns, custom click targets), building forms, or working with images and headings.
-- **`references/card-walkthrough.md`** -- Load when starting any card-shaped UI work; an end-to-end worked example.
-- **`references/callout-walkthrough.md`** -- Load when adding or modifying an in-content `Callout` (image/emoji + title + description + CTA); covers banner shape, side-by-side equalization, variants, and the CSS variable hooks.
-- **`references/page-hero-walkthrough.md`** -- Load when starting a new page that needs a hero; an end-to-end worked example.
-- **`references/layouts.md`** -- Load when you're tempted to create a new layout, when adding a new topic-hub section, or when refactoring a one-off `src/layouts/md/<Section>Layout` file. The canonical inventory plus the rule that new layouts are very rare.
-- **`references/new-component-checklist.md`** -- Load before opening a PR for a new component. The pre-merge checklist.
+- **`references/canonical-imports.md`** -- unsure which of several look-alike imports is canonical.
+- **`references/components.md`** -- the full component inventory with variants and usage.
+- **`references/tokens.md`** -- adding a token, gradients, z-index, semantic-token choices, work in `src/styles/`.
+- **`references/spacing-typography.md`** -- page/section layout, heading sizes, spacing rhythm, the `.flow` system.
+- **`references/gotchas.md`** -- unexpected primitive behavior; the long-tail confusion patterns.
+- **`references/variant-vs-new.md`** -- before creating any new component file.
+- **`references/cleanup-playbook.md`** -- refactoring existing anti-patterns; the "old pattern -> new pattern" map.
+- **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys, `setRequestLocale`.
+- **`references/server-vs-client.md`** -- `"use client"` decisions and SSR-boundary structure.
+- **`references/a11y.md`** -- interactive elements, forms, images, heading hierarchy.
+- **`references/card-walkthrough.md`** -- any card-shaped UI work.
+- **`references/callout-walkthrough.md`** -- adding or modifying an in-content `Callout`.
+- **`references/page-hero-walkthrough.md`** -- a new page that needs a hero.
+- **`references/layouts.md`** -- layout selection, new topic hubs, one-off layout refactors.
+- **`references/new-component-checklist.md`** -- before opening a PR for a new component.
 
 ## Other Project Skills That May Apply
 

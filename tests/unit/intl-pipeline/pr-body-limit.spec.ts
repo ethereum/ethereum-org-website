@@ -33,6 +33,42 @@ test.describe("PR body limits", () => {
     expect(clamped).toContain("truncated") // notice prefixed
   })
 
+  test("generateRunSummary lists skipped pairs and how to force them", () => {
+    const summary = generateRunSummary(
+      ["de"],
+      [{ path: "src/intl/de/common.json", content: "{}" }],
+      "auto",
+      undefined,
+      [],
+      [
+        {
+          locale: "zh",
+          file: "public/content/whitepaper/index.md",
+          class: "validation",
+          reason: "Suspiciously short: 378 chars vs 1571 English chars",
+          expiresAt: "2026-10-07T05:12:00.429Z",
+        },
+      ]
+    )
+    expect(summary).toContain("1 pair(s) skipped")
+    expect(summary).toContain("public/content/whitepaper/index.md")
+    expect(summary).toContain("validation, until 2026-10-07")
+    expect(summary).toContain("mode=full")
+  })
+
+  test("a quarantined failure is marked and its rerun forces mode=full", () => {
+    const summary = generateRunSummary(["fr"], [], "auto", undefined, [
+      {
+        locale: "fr",
+        file: "public/content/x/index.md",
+        message: "Output validation failed after 3 attempts",
+        quarantined: true,
+      },
+    ])
+    expect(summary).toContain("_(quarantined)_")
+    expect(summary).toContain('-f target_languages="fr" -f mode=full')
+  })
+
   test("generateRunSummary caps a huge failure list and still fits", () => {
     const failures: RunFailure[] = Array.from({ length: 600 }, (_, i) => ({
       locale: "fr",

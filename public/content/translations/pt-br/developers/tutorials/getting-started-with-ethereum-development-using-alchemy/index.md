@@ -39,7 +39,7 @@ Você também pode obter chaves de API existentes passando o mouse sobre “Apps
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Faça uma solicitação a partir da linha de comando
+## 3. Faça uma solicitação a partir da linha de comando {#make-a-request-from-the-command-line}
 
 Interaja com a blockchain do Ethereum através da Alchemy usando JSON-RPC e curl.
 
@@ -66,7 +66,7 @@ _**NOTA:** Substitua `https://eth-mainnet.alchemyapi.io/v2/demo` pela sua própr
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Configure seu cliente Web3
+## 4. Configure seu cliente Web3 {#set-up-your-web3-client}
 
 **Se você tiver um cliente existente,** altere a URL do seu provedor de nó atual para uma URL da Alchemy com sua chave de API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Escreva seu primeiro script Web3!
+## 5. Escreva seu primeiro script Web3! {#write-your-first-web3-script}
 
 Agora, para colocar a mão na massa com um pouco de programação Web3, escreveremos um script simples que imprime o número do bloco mais recente da Rede Principal do Ethereum.
 

@@ -90,9 +90,3 @@ Overall = average of the five (one decimal place).
 ## When to refuse to score
 
 If a language has < 5 files in the PR or you don't have a confident handle on the language (e.g., a script you genuinely can't read), report `unable to score` rather than guessing. Don't manufacture confidence.
-
-## See also
-
-- `references/critical-vs-warning.md` for severity rubric (separate from scoring)
-- `references/agent-roles.md` for multi-agent review (structural / terminology / semantic roles align with category subsets)
-- `.claude/commands/review-translations.md` for the slash command that produces these reports

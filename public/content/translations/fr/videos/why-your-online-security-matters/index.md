@@ -17,7 +17,7 @@ Une courte vidéo explicative animée d'**Amnesty International** sur les raison
 
 *Cette transcription est une copie accessible de la [transcription originale de la vidéo](https://www.youtube.com/watch?v=5GTD14irFvQ) publiée par Amnesty International. Elle a été légèrement modifiée pour en faciliter la lecture, et des étiquettes d'interlocuteurs ont été ajoutées.*
 
-#### « Vous n'avez rien à cacher, n'est-ce pas ? » (0:00) {#youve-got-nothing-to-hide-right-000}
+### « Vous n'avez rien à cacher, n'est-ce pas ? » (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agent :** Vous ne vous souciez pas de la sécurité numérique, n'est-ce pas ?
 
@@ -79,7 +79,7 @@ Une courte vidéo explicative animée d'**Amnesty International** sur les raison
 
 **Citoyen :** Si.
 
-#### Le droit à la confidentialité (1:30) {#the-right-to-privacy-130}
+### Le droit à la confidentialité (1:30) {#the-right-to-privacy-130}
 
 **Citoyen :** Et mon pays est composé de personnes. Des personnes qui ont droit à leur propre confidentialité. Si les gouvernements veulent collecter sans discernement toutes vos données — e-mails, appels téléphoniques, images de webcam et recherches sur Internet — ce n'est pas acceptable.
 

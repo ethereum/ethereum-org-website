@@ -17,7 +17,7 @@ Video penjelasan animasi singkat dari **Amnesty International** tentang mengapa 
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=5GTD14irFvQ) yang diterbitkan oleh Amnesty International. Transkrip ini telah sedikit diedit agar lebih mudah dibaca, dan label pembicara telah ditambahkan.*
 
-#### "Anda tidak punya apa pun untuk disembunyikan, kan?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Anda tidak punya apa pun untuk disembunyikan, kan?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agen:** Anda tidak peduli dengan keamanan digital, kan?
 
@@ -79,7 +79,7 @@ Video penjelasan animasi singkat dari **Amnesty International** tentang mengapa 
 
 **Warga:** Ya, saya mendukung.
 
-#### Hak atas privasi (1:30) {#the-right-to-privacy-130}
+### Hak atas privasi (1:30) {#the-right-to-privacy-130}
 
 **Warga:** Dan negara saya terdiri dari orang-orang. Orang-orang yang memiliki hak atas privasi mereka sendiri. Jika pemerintah ingin mengumpulkan semua data Anda secara sembarangan—email, panggilan telepon, gambar webcam, dan pencarian internet—itu tidak benar.
 

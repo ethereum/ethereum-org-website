@@ -19,7 +19,7 @@ Jako téměř všechno ostatní v Ethereu se i yellow paper postupem času vyví
 
 Původní yellow paper byl napsán hned na začátku vývoje Etherea. Popisuje původní mechanismus konsensu založený na důkazu prací (PoW), který se původně používal k zabezpečení sítě. Ethereum však v září 2022 vypnulo důkaz prací a začalo používat konsensus založený na důkazu podílem (PoS). Tento tutoriál se zaměří na části yellow paperu definující virtuální stroj Etherea (EVM). EVM zůstal přechodem na důkaz podílem nezměněn (s výjimkou návratové hodnoty operačního kódu DIFFICULTY).
 
-## 9 Model provádění
+## 9 Model provádění {#9-execution-model}
 
 Tato sekce (str. 14-16) obsahuje většinu definice EVM.
 
@@ -59,7 +59,7 @@ Pojem výjimečné provedení (exceptional execution) znamená výjimku, která 
 
 Tato sekce vysvětluje, jak se počítají poplatky za gas. Existují tři druhy nákladů:
 
-### Cena operačního kódu
+### Cena operačního kódu {#opcode-cost}
 
 Základní cena konkrétního operačního kódu. Chcete-li získat tuto hodnotu, najděte nákladovou skupinu operačního kódu v příloze H (str. 29, pod rovnicí (329)) a najděte nákladovou skupinu v rovnici (326). Tím získáte nákladovou funkci, která ve většině případů používá parametry z přílohy G (str. 28).
 
@@ -73,7 +73,7 @@ Cena za spuštění kódu, který voláme.
 - V případě [`CREATE`](https://www.evm.codes/#f0) a [`CREATE2`](https://www.evm.codes/#f5) jde o konstruktor nového kontraktu.
 - V případě [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa) nebo [`DELEGATECALL`](https://www.evm.codes/#f4) jde o kontrakt, který voláme.
 
-### Cena za rozšíření paměti
+### Cena za rozšíření paměti {#expanding-memory-cost}
 
 Cena za rozšíření paměti (pokud je to nutné).
 
@@ -84,7 +84,7 @@ Funkce _C<sub>mem</sub>_ je definována v rovnici 328: _C<sub>mem</sub>(a) = G<s
 **Poznámka:** Tyto faktory ovlivňují pouze _základní_ cenu za gas – nezohledňují trh s poplatky ani spropitné pro validátory, které určují, kolik musí koncový uživatel zaplatit – jedná se pouze o hrubou cenu za spuštění konkrétní operace v EVM.
 
 [Přečtěte si více o gasu](/developers/docs/gas/).
-## 9.3 Prostředí provádění
+## 9.3 Prostředí provádění {#93-execution-env}
 
 Prostředí provádění (execution environment) je n-tice, _I_, která obsahuje informace, jež nejsou součástí stavu blockchainu ani EVM.
 
@@ -109,7 +109,7 @@ K pochopení zbytku sekce 9 je nezbytných několik dalších parametrů:
 | _g_      | 9.3 (str. 14)        | Zbývající gas                                                                                                                                                                                                            |
 | _A_      | 6.1 (str. 9)         | Nahromaděný podstav (změny naplánované na konec transakce)                                                                                                                                                               |
 | _o_      | 9.3 (str. 14)        | Výstup – vrácený výsledek v případě interní transakce (když jeden kontrakt volá jiný) a volání view funkcí (když pouze žádáte o informace, takže není nutné čekat na transakci)                                          |
-## 9.4 Přehled provádění
+## 9.4 Přehled provádění {#94-execution-overview}
 
 Nyní, když máme všechny přípravy za sebou, můžeme konečně začít pracovat na tom, jak EVM funguje.
 
@@ -136,7 +136,7 @@ Tato sekce podrobněji vysvětluje stav stroje. Specifikuje, že _w_ je aktuáln
 
 Jelikož se jedná o [zásobníkový stroj](https://en.wikipedia.org/wiki/Stack_machine), musíme sledovat počet položek vyjmutých (_δ_) a vložených (_α_) každým operačním kódem.
 
-## 9.4.2 Výjimečné zastavení
+## 9.4.2 Výjimečné zastavení {#942-exceptional-halt}
 
 Tato sekce definuje funkci _Z_, která specifikuje, kdy dojde k abnormálnímu ukončení. Jedná se o [booleovskou](https://en.wikipedia.org/wiki/Boolean_data_type) funkci, takže používá [_∨_ pro logické nebo (OR)](https://en.wikipedia.org/wiki/Logical_disjunction) a [_∧_ pro logické a (AND)](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ K výjimečnému zastavení (exceptional halt) dojde, pokud je splněna kteráko
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Nemůžete spustit [`SSTORE`](https://www.evm.codes/#55), pokud nemáte více než G<sub>callstipend</sub> (definováno jako 2300 v příloze G) gasu.
-## 9.4.3 Platnost cíle skoku
+## 9.4.3 Platnost cíle skoku {#943-jump-dest-valid}
 
 Zde formálně definujeme, co jsou operační kódy [`JUMPDEST`](https://www.evm.codes/#5b). Nemůžeme jen hledat bajtovou hodnotu 0x5B, protože by mohla být uvnitř PUSH (a tedy by šlo o data, nikoli o operační kód).
 
@@ -198,7 +198,7 @@ Funkce zastavení _H_ může vracet tři typy hodnot.
 - Pokud máme operační kód zastavení, který neprodukuje výstup (buď [`STOP`](https://www.evm.codes/#00) nebo [`SELFDESTRUCT`](https://www.evm.codes/#ff)), vraťte jako návratovou hodnotu sekvenci o velikosti nula bajtů. Všimněte si, že se to velmi liší od prázdné množiny. Tato hodnota znamená, že se EVM skutečně zastavil, jen nejsou k dispozici žádná návratová data ke čtení.
 - Pokud máme operační kód zastavení, který produkuje výstup (buď [`RETURN`](https://www.evm.codes/#f3) nebo [`REVERT`](https://www.evm.codes/#fd)), vraťte sekvenci bajtů specifikovanou tímto operačním kódem. Tato sekvence je převzata z paměti, hodnota na vrcholu zásobníku (_μ<sub>s</sub>[0]_) je první bajt a hodnota za ní (_μ<sub>s</sub>[1]_) je délka.
 
-## H.2 Sada instrukcí
+## H.2 Sada instrukcí {#h2-instruction-set}
 
 Než přejdeme k poslední podsekci EVM, 9.5, podívejme se na samotné instrukce. Jsou definovány v příloze H.2, která začíná na str. 30. Očekává se, že cokoli, co není specifikováno jako měnící se s daným konkrétním operačním kódem, zůstane stejné. Proměnné, které se mění, jsou specifikovány jako \<něco\>′.
 
@@ -242,7 +242,7 @@ Druhá rovnice, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<
 |         |               |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Všimněte si, že k použití jakékoli položky zásobníku ji musíme vyjmout, což znamená, že musíme vyjmout i všechny položky zásobníku nad ní. V případě [`DUP<n>`](https://www.evm.codes/#8f) a [`SWAP<n>`](https://www.evm.codes/#9f) to znamená, že musíme vyjmout a poté vložit až šestnáct hodnot.
-## 9.5 Cyklus provádění
+## 9.5 Cyklus provádění {#95-exec-cycle}
 
 Nyní, když máme všechny části, můžeme konečně pochopit, jak je dokumentován cyklus provádění EVM.
 

@@ -19,6 +19,7 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
 import type { BlobStats } from "./fetchers/fetchBlobStats"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
+import type { QuizStatsData } from "./fetchers/fetchQuizStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
 import { get } from "./storage"
@@ -53,3 +54,4 @@ export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDER
 export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
 export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)
 export const getVideoThumbnails = () => get<Record<string, string>>(KEYS.VIDEO_THUMBNAILS)
+export const getQuizStats = () => get<QuizStatsData>(KEYS.QUIZ_STATS)

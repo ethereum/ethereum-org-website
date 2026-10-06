@@ -113,25 +113,6 @@ export const communityHubSchemas: Record<string, CommunityHubSchemaData> = {
     },
   },
 
-  dubai: {
-    eventDescription:
-      "Open community coworking for Ethereum builders at Hadron Founders Club in Dubai.",
-    address: {
-      streetAddress: "Warehouse 21-22, Al Qouz Industrial Third, Al Quoz",
-      addressLocality: "Dubai",
-      addressCountry: "AE",
-    },
-    containedInPlace: {
-      name: "Hadron Founders Club",
-      url: "https://luma.com/HadronFC",
-    },
-    schedule: {
-      repeatFrequency: "P1D",
-      byDay: WEEKDAYS,
-      scheduleTimezone: "Asia/Dubai",
-    },
-  },
-
   lagos: {
     eventDescription:
       "Open community coworking for Ethereum builders at Web3Bridge in Lagos.",
@@ -149,26 +130,6 @@ export const communityHubSchemas: Record<string, CommunityHubSchemaData> = {
       repeatFrequency: "P1D",
       byDay: WEEKDAYS,
       scheduleTimezone: "Africa/Lagos",
-    },
-  },
-
-  sf: {
-    eventDescription:
-      "Open community coworking for Ethereum builders at Frontier Tower in San Francisco.",
-    address: {
-      streetAddress: "995 Market St",
-      addressLocality: "San Francisco",
-      postalCode: "94103",
-      addressCountry: "US",
-    },
-    containedInPlace: {
-      name: "Frontier Tower",
-      url: "https://frontiertower.io/",
-    },
-    schedule: {
-      repeatFrequency: "P1D",
-      byDay: WEEKDAYS,
-      scheduleTimezone: "America/Los_Angeles",
     },
   },
 }

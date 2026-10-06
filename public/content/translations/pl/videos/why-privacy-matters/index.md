@@ -17,7 +17,7 @@ Prelekcja TED wygłoszona przez **Glenna Greenwalda**, jednego z pierwszych dzie
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=pcSlowAhvUk) opublikowanego przez TED. Został on nieznacznie zredagowany w celu poprawy czytelności.*
 
-#### Doświadczenie, które miał każdy (0:12) {#an-experience-everyone-has-had-012}
+### Doświadczenie, które miał każdy (0:12) {#an-experience-everyone-has-had-012}
 
 Istnieje cały gatunek filmów na YouTube poświęcony doświadczeniu, które, jestem pewien, miał każdy w tym pokoju. Polega ono na tym, że osoba, myśląc, że jest sama, angażuje się w jakieś ekspresyjne zachowanie – dzikie śpiewy, zmysłowy taniec, łagodną aktywność seksualną – tylko po to, by odkryć, że w rzeczywistości nie jest sama, że ktoś ją obserwuje i czai się w pobliżu, a to odkrycie sprawia, że w przerażeniu natychmiast przerywa to, co robiła. 
 
@@ -25,7 +25,7 @@ Poczucie wstydu i upokorzenia na ich twarzach jest namacalne. To poczucie: „To
 
 To jest sedno pracy, na której byłem całkowicie skupiony przez ostatnie 16 miesięcy: pytanie, dlaczego prywatność ma znaczenie, pytanie, które pojawiło się w kontekście globalnej debaty, zapoczątkowanej przez rewelacje Edwarda Snowdena, że Stany Zjednoczone i ich partnerzy, bez wiedzy całego świata, przekształcili Internet, niegdyś okrzyknięty bezprecedensowym narzędziem wyzwolenia i demokratyzacji, w bezprecedensową strefę masowej, nieograniczonej inwigilacji.
 
-#### Argument „nie mam nic do ukrycia” (1:29) {#the-nothing-to-hide-argument-129}
+### Argument „nie mam nic do ukrycia” (1:29) {#the-nothing-to-hide-argument-129}
 
 W tej debacie bardzo często pojawia się pogląd, nawet wśród osób, które czują się niekomfortowo z masową inwigilacją, mówiący, że z tej inwazji na dużą skalę nie wynika żadna rzeczywista krzywda, ponieważ tylko ludzie, którzy angażują się w złe czyny, mają powód, by chcieć się ukrywać i dbać o swoją prywatność.
 
@@ -37,7 +37,7 @@ Z kolei dobrzy ludzie to ci, którzy chodzą do pracy, wracają do domu, wychowu
 
 Ludzie, którzy tak mówią, w rzeczywistości angażują się w bardzo skrajny akt samoponiżenia. Tak naprawdę mówią: „Zgodziłem się uczynić siebie tak nieszkodliwą, niegroźną i nieciekawą osobą, że w ogóle nie boję się tego, że rząd wie, co robię”.
 
-#### Nawet krytycy prywatności nie wierzą w to, co mówią (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Nawet krytycy prywatności nie wierzą w to, co mówią (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Ten sposób myślenia znalazł, jak sądzę, swój najczystszy wyraz w wywiadzie z 2009 roku z wieloletnim dyrektorem generalnym Google, Erikiem Schmidtem, który zapytany o wszystkie różne sposoby, w jakie jego firma narusza prywatność setek milionów ludzi na całym świecie, powiedział: „Jeśli robisz coś, o czym nie chcesz, by wiedzieli inni, być może w ogóle nie powinieneś tego robić”.
 
@@ -49,7 +49,7 @@ Ten sam Eric Schmidt, dyrektor generalny Google, nakazał swoim pracownikom w Go
 
 Ten sam rozdźwięk można dostrzec w przypadku dyrektora generalnego Facebooka, Marka Zuckerberga, który w niesławnym wywiadzie w 2010 roku ogłosił, że prywatność nie jest już „normą społeczną”. W zeszłym roku Mark Zuckerberg i jego nowa żona kupili nie tylko własny dom, ale także wszystkie cztery sąsiednie domy w Palo Alto za łączną kwotę 30 milionów dolarów, aby zapewnić sobie strefę prywatności, która uniemożliwiłaby innym ludziom monitorowanie tego, co robią w życiu osobistym.
 
-#### Wyzwanie z hasłem do e-maila (4:51) {#the-email-password-challenge-451}
+### Wyzwanie z hasłem do e-maila (4:51) {#the-email-password-challenge-451}
 
 Przez ostatnie 16 miesięcy, kiedy debatowałem na ten temat na całym świecie, za każdym razem, gdy ktoś mówił mi: „Naprawdę nie martwię się naruszaniem prywatności, ponieważ nie mam nic do ukrycia”, zawsze odpowiadałem im to samo. 
 
@@ -65,7 +65,7 @@ Jest powód, dla którego tego szukamy, a naszym powodem jest to, że wszyscy, n
 
 Każdego dnia podejmujemy decyzje o tym, jakie rzeczy mówimy, myślimy i robimy, o których chcemy, by wiedzieli inni, oraz o tym, czego nie chcemy, by ktokolwiek inny się dowiedział. Ludzie mogą bardzo łatwo twierdzić w słowach, że nie cenią swojej prywatności, ale ich działania zaprzeczają autentyczności tego przekonania.
 
-#### Bycie obserwowanym zmienia nasze zachowanie (7:02) {#being-watched-changes-our-behavior-702}
+### Bycie obserwowanym zmienia nasze zachowanie (7:02) {#being-watched-changes-our-behavior-702}
 
 Istnieje powód, dla którego prywatność jest tak powszechnie i instynktownie pożądana. To nie jest tylko odruch bezwarunkowy, jak oddychanie czy picie wody. Powodem jest to, że kiedy znajdujemy się w stanie, w którym możemy być monitorowani, w którym możemy być obserwowani, nasze zachowanie drastycznie się zmienia. 
 
@@ -73,7 +73,7 @@ Zakres opcji zachowań, które bierzemy pod uwagę, gdy myślimy, że jesteśmy 
 
 Ludzki wstyd jest bardzo potężnym motywatorem, podobnie jak pragnienie jego uniknięcia, i to jest powód, dla którego ludzie, gdy są obserwowani, podejmują decyzje, które nie są produktem ubocznym ich własnej sprawczości, ale dotyczą oczekiwań, jakie mają wobec nich inni, lub nakazów społecznej ortodoksji.
 
-#### Panoptykon Benthama (8:09) {#benthams-panopticon-809}
+### Panoptykon Benthama (8:09) {#benthams-panopticon-809}
 
 To spostrzeżenie zostało najsilniej wykorzystane do celów pragmatycznych przez XVIII-wiecznego filozofa Jeremy'ego Benthama, który postanowił rozwiązać ważny problem zapoczątkowany przez epokę przemysłową, w której po raz pierwszy instytucje stały się tak duże i scentralizowane, że nie były już w stanie monitorować, a tym samym kontrolować każdego ze swoich poszczególnych członków. 
 
@@ -81,7 +81,7 @@ Rozwiązaniem, które opracował, był projekt architektoniczny pierwotnie przez
 
 XX-wieczny francuski filozof Michel Foucault zdał sobie sprawę, że ten model może być wykorzystany nie tylko w więzieniach, ale w każdej instytucji, która dąży do kontrolowania ludzkiego zachowania: w szkołach, szpitalach, fabrykach, miejscach pracy. Powiedział on, że ten sposób myślenia, te ramy odkryte przez Benthama, były kluczowym środkiem kontroli społecznej dla nowoczesnych społeczeństw zachodnich, które nie potrzebują już jawnych narzędzi tyranii – karania, więzienia lub zabijania dysydentów, czy też prawnego wymuszania lojalności wobec określonej partii – ponieważ masowa inwigilacja tworzy więzienie w umyśle, które jest znacznie subtelniejszym, choć o wiele skuteczniejszym sposobem wspierania uległości wobec norm społecznych lub społecznej ortodoksji, znacznie skuteczniejszym niż kiedykolwiek mogłaby być brutalna siła.
 
-#### Orwell, religia i więzienie w umyśle (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, religia i więzienie w umyśle (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Najbardziej kultowym dziełem literackim na temat inwigilacji i prywatności jest powieść George'a Orwella *Rok 1984*, o której wszyscy uczymy się w szkole, przez co stała się niemal banałem. W rzeczywistości, ilekroć wspomina się o niej w debacie na temat inwigilacji, ludzie natychmiast odrzucają ją jako nieadekwatną, mówiąc: „Och, cóż, w *Roku 1984* w domach ludzi były monitory, byli obserwowani w każdym momencie, a to nie ma nic wspólnego z państwem inwigilacyjnym, z którym mamy do czynienia”. 
 
@@ -93,7 +93,7 @@ To, co dostrzegają wszystkie te pozornie odmienne dzieła, wniosek, do którego
 
 Z drugiej strony, co jeszcze ważniejsze, to właśnie w sferze prywatności, w możliwości udania się w miejsce, gdzie możemy myśleć, rozumować, wchodzić w interakcje i mówić bez oceniających spojrzeń innych, wyłącznie kryje się kreatywność, eksploracja i sprzeciw. To jest powód, dla którego, kiedy pozwalamy na istnienie społeczeństwa, w którym podlegamy ciągłemu monitorowaniu, pozwalamy na to, by istota ludzkiej wolności została poważnie okaleczona.
 
-#### Dwie destrukcyjne lekcje (12:30) {#two-destructive-lessons-1230}
+### Dwie destrukcyjne lekcje (12:30) {#two-destructive-lessons-1230}
 
 Ostatnia uwaga, jaką chcę poczynić na temat tego sposobu myślenia, idei, że tylko ludzie robiący coś złego mają coś do ukrycia, a zatem powody, by dbać o prywatność, jest taka, że utrwala on dwa bardzo destrukcyjne przesłania, dwie destrukcyjne lekcje. Pierwsza z nich mówi, że jedynymi ludźmi, którym zależy na prywatności, jedynymi ludźmi, którzy będą jej szukać, są z definicji źli ludzie. 
 
@@ -111,7 +111,7 @@ Słynna działaczka socjalistyczna Róża Luksemburg powiedziała kiedyś: „Kt
 
 Bardzo dziękuję. (Oklaski)
 
-#### Sesja pytań i odpowiedzi z Bruno Giussanim (15:25) {#qa-with-bruno-giussani-1525}
+### Sesja pytań i odpowiedzi z Bruno Giussanim (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, dziękuję. Muszę przyznać, że argumentacja jest dość przekonująca, ale chciałbym wrócić do ostatnich 16 miesięcy i do Edwarda Snowdena, aby zadać ci kilka pytań, jeśli nie masz nic przeciwko. Pierwsze z nich dotyczy ciebie osobiście. Wszyscy czytaliśmy o aresztowaniu twojego partnera, Davida Mirandy, w Londynie i o innych trudnościach, ale zakładam, że pod względem osobistego zaangażowania i ryzyka, presja wywierana na ciebie nie ułatwia rzucenia wyzwania największym suwerennym organizacjom na świecie. Opowiedz nam o tym trochę.
 

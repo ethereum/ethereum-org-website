@@ -132,6 +132,28 @@ const COUNTRY_NAME_ALIASES: Record<string, string> = {
   // Add more here as needed
 }
 
+// i18n-iso-countries is keyed by base language and ships no Traditional
+// Chinese or Telugu data, so zh-tw fell back to Simplified zh and te to English.
+const ICU_LOCALES = new Set(["zh-tw", "te"])
+
+// CLDR's long form for the SARs is a descriptor ("中國香港特別行政區"); its short
+// form is the plain city name. Elsewhere the short form is an abbreviation.
+const SHORT_FORM_REGIONS = new Set(["HK", "MO"])
+
+const regionNamesCache = new Map<string, Intl.DisplayNames>()
+
+function getRegionName(code: string, locale: string): string | undefined {
+  const style = SHORT_FORM_REGIONS.has(code) ? "short" : "long"
+  const cacheKey = `${locale}:${style}`
+
+  let displayNames = regionNamesCache.get(cacheKey)
+  if (!displayNames) {
+    displayNames = new Intl.DisplayNames([locale], { type: "region", style })
+    regionNamesCache.set(cacheKey, displayNames)
+  }
+  return displayNames.of(code)
+}
+
 /**
  * Translate an English country name into the target locale.
  *
@@ -149,7 +171,11 @@ export function getCountryTranslation(country: string, locale: string): string {
   const code = countries.getAlpha2Code(normalized, "en")
   if (!code) return country
 
-  // Strip region suffix: "pt-br" -> "pt", "zh-tw" -> "zh"
+  if (ICU_LOCALES.has(locale)) {
+    return getRegionName(code, locale) ?? country
+  }
+
+  // Strip region suffix: "pt-br" -> "pt"
   // (i18n-iso-countries uses base language codes)
   const baseLocale = locale.split("-")[0]
   return countries.getName(code, baseLocale) ?? country

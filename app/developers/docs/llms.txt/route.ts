@@ -16,7 +16,7 @@ const INTRO = `# Ethereum Developer Documentation
 
 > Technical reference for building on Ethereum: protocol concepts, the Ethereum stack, smart contracts, scaling solutions, and developer tooling.
 
-This file indexes the developer documentation under ${SITE_URL}/developers/docs/. For the full ethereum.org index including learner content, guides, and community resources, see ${SITE_URL}/llms.txt.`
+This file indexes the developer documentation under ${SITE_URL}/developers/docs/. Every page indexed below serves its raw markdown source at the page URL plus a \`.md\` suffix — e.g. ${SITE_URL}/developers/docs/intro-to-ethereum.md. For the full ethereum.org index including learner content, guides, and community resources, see ${SITE_URL}/llms.txt.`
 
 const links = docLinks as unknown as DocLink[]
 

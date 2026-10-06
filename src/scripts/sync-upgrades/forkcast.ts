@@ -54,10 +54,17 @@ export interface ForkcastDevnetLaunch {
   dateISO: string
 }
 
+export type ForkcastDateClaim = "actual" | "proposed" | "projected"
+
+export interface ForkcastStatedDate {
+  claim: ForkcastDateClaim
+  value: string
+}
+
 export interface ForkcastTestnet {
   name: string
   status: string
-  projectedDate: string | null
+  stated: ForkcastStatedDate | null
 }
 
 /**
@@ -82,6 +89,44 @@ export interface ForkcastSource {
 }
 
 export class ForkcastSyncError extends Error {}
+
+const TESTNET_DATE_KEYS = [
+  ["date", "actual"],
+  ["proposedDate", "proposed"],
+  ["projectedDate", "projected"],
+] as const satisfies readonly (readonly [string, ForkcastDateClaim])[]
+
+const parseTestnetDate = (
+  entry: string,
+  context: string
+): ForkcastStatedDate | null => {
+  const dateKeys = [
+    ...entry.matchAll(/\b(date|[A-Za-z][A-Za-z0-9]*Date)\s*:/g),
+  ].map((match) => match[1])
+  const knownKeys = new Map<string, ForkcastDateClaim>(TESTNET_DATE_KEYS)
+  const unknown = dateKeys.find((key) => !knownKeys.has(key))
+  if (unknown) {
+    throw new ForkcastSyncError(
+      `Unknown testnet date key "${unknown}" on ${context}`
+    )
+  }
+  if (dateKeys.length > 1) {
+    throw new ForkcastSyncError(
+      `Conflicting testnet date keys ${dateKeys.join("+")} on ${context}`
+    )
+  }
+  if (dateKeys.length === 0) return null
+
+  const key = dateKeys[0]
+  const claim = knownKeys.get(key)
+  const value = entry.match(new RegExp(`\\b${key}:\\s*'([^']*)'`))?.[1]
+  if (!claim || value === undefined) {
+    throw new ForkcastSyncError(
+      `Testnet date key "${key}" has no string value on ${context}`
+    )
+  }
+  return { claim, value }
+}
 
 const download = async (): Promise<{ root: string; cleanup: () => void }> => {
   const dir = mkdtempSync(join(tmpdir(), "forkcast-"))
@@ -269,8 +314,7 @@ export const parsePhases = (
           testnets.push({
             name,
             status,
-            projectedDate:
-              entry.match(/projectedDate:\s*'([^']+)'/)?.[1] ?? null,
+            stated: parseTestnetDate(entry, `${phaseMatch[1]} (${name})`),
           })
         }
       }
