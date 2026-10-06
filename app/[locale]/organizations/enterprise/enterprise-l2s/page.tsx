@@ -33,7 +33,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import ChecklistPanel from "../../_components/checklist-panel"
@@ -42,18 +42,17 @@ import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
+import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
 
 import PageJsonLD from "./page-jsonld"
 
-import { getL2beatData } from "@/lib/data"
+import { getL2beatActivityData, getL2beatData } from "@/lib/data"
 import arbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
 import ethereumLogo from "@/public/images/layer-2/ethereum.png"
 import optimismLogo from "@/public/images/layer-2/optimism.png"
 import zksyncLogo from "@/public/images/layer-2/zksyncEra.jpg"
 import heroImg from "@/public/images/organizations/isometric-l2-stack.png"
 import issuanceImg from "@/public/images/organizations/l2-issuance-partners.png"
-
-const L2BEAT = { sourceName: "L2BEAT", sourceUrl: "https://l2beat.com/" }
 
 const BENEFITS = [
   { key: "scalable", Icon: ChevronsUp },
@@ -83,26 +82,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-enterprise-l2s")
 
-  const [l2beatData, { contributors }] = await Promise.all([
+  const [l2beatData, l2beatActivity, { contributors }] = await Promise.all([
     getL2beatData(),
+    getL2beatActivityData(),
     getAppPageContributorInfo(
       "organizations/enterprise/enterprise-l2s",
       locale as Lang
     ),
   ])
 
-  const l2Tvl = l2beatData
-    ? Object.values(l2beatData.projects).reduce(
-        (sum, project) => sum + (project.tvs?.breakdown?.total ?? 0),
-        0
-      )
-    : undefined
+  const l2ValueSecured = sumL2Breakdown(l2beatData, "total")
 
   const stats: HeroStat[] = [
     {
-      value: l2Tvl !== undefined ? formatLargeUSD(l2Tvl, locale) : undefined,
+      value: l2ValueSecured && formatLargeUSD(l2ValueSecured, locale),
       label: t("page-organizations-enterprise-l2s-stat-l2-tvl"),
-      ...L2BEAT,
+      ...L2BEAT_SOURCE,
+    },
+    {
+      value:
+        l2beatActivity && "value" in l2beatActivity
+          ? numberFormat(locale, {
+              notation: "compact",
+              maximumSignificantDigits: 3,
+            }).format(l2beatActivity.value)
+          : undefined,
+      label: t("page-organizations-enterprise-l2s-stat-uops"),
+      lastUpdated:
+        l2beatActivity && "timestamp" in l2beatActivity
+          ? l2beatActivity.timestamp
+          : undefined,
+      sourceName: "L2BEAT",
+      sourceUrl: "https://l2beat.com/scaling/activity",
     },
   ]
 

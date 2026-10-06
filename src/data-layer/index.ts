@@ -29,6 +29,7 @@ export { KEYS }
 
 export const getEthPrice = () => get<EthPriceData>(KEYS.ETH_PRICE)
 export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
+export const getL2beatActivityData = () => get<MetricReturnData>(KEYS.L2BEAT_ACTIVITY)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)
 export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)
 export const getGrowThePieBlockspaceData = () => get<Record<string, BlockspaceData>>(KEYS.GROW_THE_PIE_BLOCKSPACE)

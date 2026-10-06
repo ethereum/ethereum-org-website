@@ -28,6 +28,7 @@ import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
+import { fetchL2beatActivity } from "./fetchers/fetchL2beatActivity"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
@@ -51,6 +52,7 @@ export const KEYS = {
   GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
   GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
   L2BEAT: "fetch-l2beat",
+  L2BEAT_ACTIVITY: "fetch-l2beat-activity",
   POSTS: "fetch-posts",
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
@@ -92,6 +94,7 @@ const DAILY: TaskDef[] = [
   [KEYS.GROW_THE_PIE_BLOCKSPACE, fetchGrowThePieBlockspace],
   [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
   [KEYS.L2BEAT, fetchL2beat],
+  [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
   [KEYS.POSTS, fetchAttestantPosts],
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],

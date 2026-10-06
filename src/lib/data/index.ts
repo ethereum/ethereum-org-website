@@ -47,6 +47,12 @@ export const getL2beatData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getL2beatActivityData = createCachedGetter(
+  dataLayer.getL2beatActivityData,
+  ["l2beat-activity-data"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getAppsData = createCachedGetter(
   dataLayer.getAppsData,
   ["apps-data"],

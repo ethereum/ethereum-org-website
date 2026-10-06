@@ -37,10 +37,15 @@ import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
+import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
 
 import PageJsonLD from "./page-jsonld"
 
-import { getEthereumStablecoinsMcapData, getStablecoinsData } from "@/lib/data"
+import {
+  getEthereumStablecoinsMcapData,
+  getL2beatData,
+  getStablecoinsData,
+} from "@/lib/data"
 import heroImg from "@/public/images/organizations/isometric-tokenization.png"
 
 const DEFILLAMA = {
@@ -48,8 +53,7 @@ const DEFILLAMA = {
   sourceUrl: "https://defillama.com/",
 }
 
-// TODO(data): unsourced; no data-layer getter matches -- source or drop before ship
-const STABLECOINS_L2_USD = 12_100_000_000
+// TODO(data): unsourced -- see PR discussion for candidate sources
 const VALUE_SECURED_USD = 336_000_000_000
 
 const STABLECOINS_SHOWN = 12
@@ -77,15 +81,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     getRequiredNamespacesForPage("/organizations/enterprise/tokenization")
   )
 
-  const [stablecoinsMcap, stablecoinsData, { contributors }] =
+  const [stablecoinsMcap, stablecoinsData, l2beatData, { contributors }] =
     await Promise.all([
       nullOnError(getEthereumStablecoinsMcapData()),
       nullOnError(getStablecoinsData()),
+      nullOnError(getL2beatData()),
       getAppPageContributorInfo(
         "organizations/enterprise/tokenization",
         locale as Lang
       ),
     ])
+
+  const l2Stablecoins = sumL2Breakdown(l2beatData, "stablecoin")
 
   const stats: HeroStat[] = [
     {
@@ -103,10 +110,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ...DEFILLAMA,
     },
     {
-      value: formatLargeUSD(STABLECOINS_L2_USD, locale),
+      value: l2Stablecoins && formatLargeUSD(l2Stablecoins, locale),
       label: t(
         "page-organizations-enterprise-tokenization-stat-stablecoins-l2"
       ),
+      ...L2BEAT_SOURCE,
     },
     {
       value: formatLargeUSD(VALUE_SECURED_USD, locale),
