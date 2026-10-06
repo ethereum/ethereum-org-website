@@ -12,6 +12,7 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import StablecoinsTable from "@/components/StablecoinsTable"
 import {
   Card,
   CardContent,
@@ -27,13 +28,10 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
+import { formatLargeUSD } from "@/lib/utils/numbers"
+import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import StablecoinsTable, {
-  type TableRow as StablecoinsTableRow,
-} from "../../../stablecoins/_components/stablecoins-table"
-import { stablecoins } from "../../../stablecoins/data"
 import ComparisonTable from "../../_components/comparison-table"
 import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
@@ -53,9 +51,6 @@ const DEFILLAMA = {
 // TODO(data): unsourced; no data-layer getter matches -- source or drop before ship
 const STABLECOINS_L2_USD = 12_100_000_000
 const VALUE_SECURED_USD = 336_000_000_000
-
-// Matches /stablecoins/
-const MIN_MARKET_CAP_USD = 500_000
 
 const STABLECOINS_SHOWN = 12
 const STABLECOINS_PAGE_SIZE = 6
@@ -144,26 +139,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ),
   }))
 
-  const marketCapFormatter = numberFormat(locale, {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  })
-
-  // Mirrors /stablecoins/
-  const coinDetails: StablecoinsTableRow[] = stablecoins
-    .flatMap(({ id, ...rest }) => {
-      const coinMarketData = stablecoinsData?.find((coin) => coin.id === id)
-      return coinMarketData ? [{ ...coinMarketData, ...rest }] : []
-    })
-    .filter((coin) => coin.market_cap >= MIN_MARKET_CAP_USD)
-    .sort((a, b) => b.market_cap - a.market_cap)
-    .slice(0, STABLECOINS_SHOWN)
-    .map(({ market_cap, ...rest }) => ({
-      ...rest,
-      marketCap: marketCapFormatter.format(market_cap),
-    }))
+  const coinDetails = stablecoinsData
+    ? buildStablecoinRows(stablecoinsData, locale).slice(0, STABLECOINS_SHOWN)
+    : []
 
   const marketsHasError = !stablecoinsData
 

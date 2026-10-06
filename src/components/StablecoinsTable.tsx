@@ -21,7 +21,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-export type TableRow = {
+export type StablecoinsTableRow = {
   name: string
   marketCap: string
   image?: string
@@ -32,7 +32,7 @@ export type TableRow = {
 }
 
 export type StablecoinsTableProps = {
-  content: Array<TableRow>
+  content: StablecoinsTableRow[]
   hasError: boolean
   /** Rows shown initially and added per "Show more" */
   pageSize?: number
