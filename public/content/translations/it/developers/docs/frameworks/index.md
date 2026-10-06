@@ -20,7 +20,7 @@ I framework sono dotati di molte funzionalità pronte all'uso, come:
 
 Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzione alle [dapp](/developers/docs/dapps/) e allo [stack di Ethereum](/developers/docs/ethereum-stack/).
 
-## Framework disponibili
+## Framework disponibili {#available-frameworks}
 
 **Foundry** - **_Foundry è un toolkit incredibilmente veloce, portabile e modulare per lo sviluppo di applicazioni su Ethereum_**
 

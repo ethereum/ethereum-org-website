@@ -10,11 +10,11 @@ import {
 } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import type { ReactNode } from "react"
 
-import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import AppsExpander from "@/components/AppsExpander"
 import ExpandableCard from "@/components/ExpandableCard"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
@@ -47,19 +47,13 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getDayOfYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { createPageTracking } from "@/lib/utils/pageTracking"
 import { seededShuffle } from "@/lib/utils/random"
 
-import AppsExpander from "./_components/apps-expander"
 import PromptCard from "./_components/prompt-card"
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import effBannerImg from "@/public/assets/open-source/electronic-frontier-foundation-banner.png"
-import fightForTheFutureBannerImg from "@/public/assets/open-source/fight-for-the-future-banner.png"
-import fsfBannerImg from "@/public/assets/open-source/free-software-foundation-banner.png"
-import internetArchiveBannerImg from "@/public/assets/open-source/internet-archive-banner.png"
-import osiBannerImg from "@/public/assets/open-source/open-source-initiative-banner.png"
-import torBannerImg from "@/public/assets/open-source/tor-project-banner.png"
 import heroImg from "@/public/images/future_transparent.png"
 import alternativeToImg from "@/public/images/open-source/alternativeto-logo.png"
 import bitwardenImg from "@/public/images/open-source/bitwarden.png"
@@ -67,13 +61,17 @@ import blenderImg from "@/public/images/open-source/blender.png"
 import braveImg from "@/public/images/open-source/brave.png"
 import cryptomatorImg from "@/public/images/open-source/cryptomator.png"
 import debianImg from "@/public/images/open-source/debian.png"
+import effBannerImg from "@/public/images/open-source/electronic-frontier-foundation-banner.png"
 import entePhotosImg from "@/public/images/open-source/ente-photos.png"
+import fightForTheFutureBannerImg from "@/public/images/open-source/fight-for-the-future-banner.png"
 import firefoxImg from "@/public/images/open-source/firefox.png"
+import fsfBannerImg from "@/public/images/open-source/free-software-foundation-banner.png"
 import gimpImg from "@/public/images/open-source/gimp.png"
 import grapheneosImg from "@/public/images/open-source/grapheneos.png"
 import homeAssistantImg from "@/public/images/open-source/home-assistant.png"
 import immichImg from "@/public/images/open-source/immich.png"
 import inkscapeImg from "@/public/images/open-source/inkscape.png"
+import internetArchiveBannerImg from "@/public/images/open-source/internet-archive-banner.png"
 import janImg from "@/public/images/open-source/jan.png"
 import libreOfficeImg from "@/public/images/open-source/libreoffice.png"
 import lmStudioImg from "@/public/images/open-source/lm-studio.png"
@@ -81,9 +79,11 @@ import localSendImg from "@/public/images/open-source/localsend.png"
 import logseqImg from "@/public/images/open-source/logseq.png"
 import obsImg from "@/public/images/open-source/obs.png"
 import ollamaImg from "@/public/images/open-source/ollama.png"
+import osiBannerImg from "@/public/images/open-source/open-source-initiative-banner.png"
 import organicMapsImg from "@/public/images/open-source/organic-maps.png"
 import signalImg from "@/public/images/open-source/signal.png"
 import thunderbirdImg from "@/public/images/open-source/thunderbird.png"
+import torBannerImg from "@/public/images/open-source/tor-project-banner.png"
 import ubuntuImg from "@/public/images/open-source/ubuntu.png"
 import vlcImg from "@/public/images/open-source/vlc.png"
 
@@ -183,33 +183,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   // Matomo: one category for the page, the section id as the action, and a
   // stable English name for the element. Section titles and most element titles
   // are translated -- ids and slugs keep a locale from splitting its own row.
-  const track = (section: string, name: string): MatomoEventOptions => ({
-    eventCategory: "open-source",
-    eventAction: section,
-    eventName: name,
-  })
-
-  // Footnote marker for the numbered citations under Further reading. Rendered
-  // outside the strings so translators never carry the numbering.
-  const footnote = (n: number, section: string) => (
-    <sup>
-      <Link
-        href="#further-reading"
-        customEventOptions={track(section, `Footnote ${n}`)}
-      >{`[${n}]`}</Link>
-    </sup>
-  )
-
-  // `t.rich` link placeholder, pre-wired to Matomo.
-  const linkTo = (href: string, section: string, name: string) => {
-    const TrackedLink = (chunks: ReactNode) => (
-      <Link href={href} customEventOptions={track(section, name)}>
-        {chunks}
-      </Link>
-    )
-    TrackedLink.displayName = "TrackedLink"
-    return TrackedLink
-  }
+  const { track, footnote, linkTo } = createPageTracking("open-source")
 
   // The four freedoms, in the order the design lists them.
   const freedoms = [
@@ -656,7 +630,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "open-source" }}
+            breadcrumbs={{ slug: "open-source", parentSlug: "values" }}
             heroImg={heroImg}
             title={t("page-open-source-title")}
             description={

@@ -30,6 +30,33 @@
 export const FENCED_BLOCK_RE =
   /^([ \t]*)(```|~~~)([^\n]*)\n([\s\S]*?)\n\1\2[ \t]*$|^([ \t]*)(```|~~~)([^\n]*)\n\5\6[ \t]*$/gm
 
+/**
+ * Fence language tags whose body is prose, not code -- the only fences whose
+ * contents may be translated.
+ *
+ * An untagged fence (`""`) is deliberately absent. It used to be treated as
+ * prose, which sent every untagged fence body to the model and is how German
+ * words ended up inside a reproduced `clef` console transcript. Prose that
+ * wants translating must say so with an explicit ```text tag. Matches
+ * `intl-content-tree`'s `proseFenceTags` default.
+ *
+ * Lives here so the normalizer (which decides what to send) and
+ * `verify-structure` (which checks what came back) cannot drift apart -- them
+ * disagreeing is the bug this constant was extracted to prevent.
+ */
+export const PROSE_FENCE_TAGS: ReadonlySet<string> = new Set([
+  "md",
+  "markdown",
+  "mdx",
+  "text",
+  "txt",
+])
+
+/** Normalize a fence info string to its bare language tag. */
+export function fenceLanguage(infoString: string): string {
+  return infoString.trim().toLowerCase().split(/\s+/)[0] || ""
+}
+
 // ---------------------------------------------------------------------------
 // JSX/HTML attributes
 // ---------------------------------------------------------------------------
@@ -60,6 +87,10 @@ export const TRANSLATABLE_ATTRIBUTES = [
   "caption",
   "contentPreview",
   "location",
+  // Frontmatter-only fields. Rendered to readers, so the LLM translates them;
+  // `topic` and other taxonomy slugs stay inert.
+  "summaryPoints",
+  "tags",
 ] as const
 
 export type TranslatableAttribute = (typeof TRANSLATABLE_ATTRIBUTES)[number]

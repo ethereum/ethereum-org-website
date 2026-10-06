@@ -41,7 +41,7 @@ contract Game {
 }
 ```
 
-Agora digamos que em nosso dapp, queremos exibir o total de apostas, o total de jogos perdidos/ganhos e também atualizá-lo sempre que alguém jogar novamente. A abordagem seria:
+Agora, digamos que em nosso aplicativo descentralizado (dapp), queremos exibir o total de apostas, o total de jogos perdidos/ganhos e também atualizá-lo sempre que alguém jogar novamente. A abordagem seria:
 
 1. Buscar `totalGamesPlayerWon`.
 2. Buscar `totalGamesPlayerLost`.
@@ -64,17 +64,17 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Agora, isso ainda é aceitável para o nosso exemplo simples. Mas digamos que agora queremos exibir os valores das apostas perdidas/ganhas apenas para o jogador atual. Bem, estamos sem sorte, é melhor você implantar um novo contrato que armazene esses valores e buscá-los. E agora imagine um contrato inteligente e um dapp muito mais complicados, as coisas podem ficar confusas rapidamente.
+Isso ainda é aceitável para o nosso exemplo simples. Mas digamos que agora queremos exibir as quantidades de apostas perdidas/ganhas apenas para o jogador atual. Bem, estamos sem sorte, é melhor você implantar um novo contrato que armazene esses valores e buscá-los. E agora imagine um contrato inteligente e um dapp muito mais complicados, as coisas podem ficar confusas rapidamente.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Não se pode simplesmente consultar](./one-does-not-simply-query.jpg)
 
 Você pode ver como isso não é o ideal:
 
 - Não funciona para contratos já implantados.
 - Custos extras de gás para armazenar esses valores.
-- Requer outra chamada para buscar os dados de um nó Ethereum.
+- Requer outra chamada a um nó Ethereum para buscar os dados.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Isso não é bom o suficiente](./not-good-enough.jpg)
 
 Agora vamos ver uma solução melhor.
 

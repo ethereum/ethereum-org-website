@@ -48,38 +48,38 @@ contract Game {
 
 Sekarang katakanlah di aplikasi terdesentralisasi (dapp) kita, kita ingin menampilkan total taruhan, total permainan yang kalah/menang, dan juga memperbaruinya setiap kali seseorang bermain lagi. Pendekatannya adalah:
 
-1. Mengambil `totalGamesPlayerWon`.
-2. Mengambil `totalGamesPlayerLost`.
-3. Berlangganan peristiwa `BetPlaced`.
+1. Ambil `totalGamesPlayerWon`.
+2. Ambil `totalGamesPlayerLost`.
+3. Berlangganan kejadian `BetPlaced`.
 
-Kita dapat mendengarkan [peristiwa di Web3](https://docs.web3js.org/api/web3/class/Contract#events) seperti yang ditunjukkan di sebelah kanan, tetapi ini memerlukan penanganan beberapa kasus.
+Kita dapat mendengarkan [kejadian di Web3](https://docs.web3js.org/api/web3/class/Contract#events) seperti yang ditunjukkan di sebelah kanan, tetapi ini memerlukan penanganan beberapa kasus.
 
 ```solidity
 GameContract.events.BetPlaced({
     fromBlock: 0
 }, function(error, event) { console.log(event); })
 .on('data', function(event) {
-    // peristiwa dipicu
+    // kejadian dipicu
 })
 .on('changed', function(event) {
-    // peristiwa dihapus kembali
+    // kejadian dihapus lagi
 })
 .on('error', function(error, receipt) {
     // transaksi ditolak
 });
 ```
 
-Sekarang ini masih agak baik-baik saja untuk contoh sederhana kita. Tetapi katakanlah kita sekarang ingin menampilkan jumlah taruhan yang kalah/menang hanya untuk pemain saat ini. Sayangnya kita kurang beruntung, Anda lebih baik menyebarkan kontrak baru yang menyimpan nilai-nilai tersebut dan mengambilnya. Dan sekarang bayangkan kontrak pintar dan dapp yang jauh lebih rumit, segalanya bisa menjadi berantakan dengan cepat.
+Sekarang ini masih cukup baik untuk contoh sederhana kita. Tetapi katakanlah kita sekarang ingin menampilkan jumlah taruhan yang kalah/menang hanya untuk pemain saat ini. Sayangnya kita kurang beruntung, Anda lebih baik menyebarkan kontrak baru yang menyimpan nilai-nilai tersebut dan mengambilnya. Dan sekarang bayangkan kontrak pintar dan dapp yang jauh lebih rumit, segalanya bisa menjadi berantakan dengan cepat.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Seseorang Tidak Bisa Begitu Saja Melakukan Kueri](./one-does-not-simply-query.jpg)
 
 Anda dapat melihat bagaimana ini tidak optimal:
 
 - Tidak berfungsi untuk kontrak yang sudah disebarkan.
-- Biaya gas ekstra untuk menyimpan nilai-nilai tersebut.
+- Biaya gas tambahan untuk menyimpan nilai-nilai tersebut.
 - Memerlukan panggilan lain untuk mengambil data untuk node Ethereum.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Itu tidak cukup baik](./not-good-enough.jpg)
 
 Sekarang mari kita lihat solusi yang lebih baik.
 

@@ -4,18 +4,18 @@ description: "Eine Erklärung von Ethereum-Konten – ihre Datenstrukturen und i
 lang: de
 ---
 
-Ein [Ethereum](/)-Konto ist eine Entität mit einem Ether-Guthaben (ETH), die Nachrichten auf Ethereum senden kann. Konten können benutzergesteuert sein oder als Smart Contracts bereitgestellt werden.
+Ein [Ethereum](/)-Konto ist eine Entität mit einem Ether (ETH)-Guthaben, die Nachrichten auf Ethereum senden kann. Konten können benutzergesteuert sein oder als Smart Contracts bereitgestellt werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Um Ihnen zu helfen, diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Kontotypen {#types-of-account}
 
 Ethereum hat zwei Kontotypen:
 
-- Externes Konto (Externally-owned account, EOA) – kontrolliert von jedem, der die privaten Schlüssel besitzt
-- Contract-Konto – ein im Netzwerk bereitgestellter Smart Contract, der durch Code kontrolliert wird. Erfahren Sie mehr über [Smart Contracts](/developers/docs/smart-contracts/)
+- Externes Konto (EOA) – kontrolliert von jedem, der die privaten Schlüssel besitzt
+- Contract-Konto – ein im Netzwerk bereitgestellter Smart Contract, der durch Code gesteuert wird. Erfahren Sie mehr über [Smart Contracts](/developers/docs/smart-contracts/)
 
 Beide Kontotypen haben die Fähigkeit:
 
@@ -31,11 +31,11 @@ Beide Kontotypen haben die Fähigkeit:
 - Transaktionen zwischen externen Konten können nur ETH-/Token-Transfers sein
 - Besteht aus einem kryptographischen Schlüsselpaar: öffentliche und private Schlüssel, die die Kontoaktivitäten steuern
 
-**Contract-Konto**
+**Contract**
 
-- Die Erstellung eines Vertrags ist mit Kosten verbunden, da Sie Netzwerkspeicherplatz nutzen
+- Die Erstellung eines Vertrags ist mit Kosten verbunden, da Sie Netzwerkspeicher nutzen
 - Kann Nachrichten nur als Reaktion auf den Empfang einer Transaktion senden
-- Transaktionen von einem externen Konto an ein Contract-Konto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. das Übertragen von Token oder sogar das Erstellen eines neuen Vertrags
+- Transaktionen von einem externen Konto an ein Contract-Konto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. das Überweisen von Token oder sogar das Erstellen eines neuen Vertrags
 - Contract-Konten haben keine privaten Schlüssel. Stattdessen werden sie durch die Logik des Smart-Contract-Codes gesteuert
 
 ## Ein Konto im Detail {#an-account-examined}
@@ -43,16 +43,16 @@ Beide Kontotypen haben die Fähigkeit:
 Ethereum-Konten haben vier Felder:
 
 - `nonce` – Ein Zähler, der die Anzahl der von einem externen Konto gesendeten Transaktionen oder die Anzahl der von einem Contract-Konto erstellten Verträge angibt. Für jedes Konto kann nur eine Transaktion mit einer bestimmten Nonce ausgeführt werden, was vor Replay-Angriffen schützt, bei denen signierte Transaktionen wiederholt gesendet und erneut ausgeführt werden.
-- `balance` – Die Anzahl der Wei, die diese Adresse besitzt. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
-- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Ethereum Virtual Machine (EVM). In Contract-Konten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Er kann im Gegensatz zu den anderen Kontofeldern nicht geändert werden. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes für den späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Bei externen Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge.
-- `storageRoot` – Manchmal auch als Speicher-Hash (storage hash) bezeichnet. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle-Patricia-Tries](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos kodiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), kodiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-kodierten 256-Bit-Ganzzahlwerten. Dieser Trie kodiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
+- `balance` – Die Anzahl der Wei, die dieser Adresse gehören. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
+- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Virtuellen Ethereum-Maschine (EVM). In Contract-Konten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Er kann im Gegensatz zu den anderen Kontofeldern nicht geändert werden. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes zum späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Bei externen Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge.
+- `storageRoot` – Manchmal auch als Speicher-Hash bekannt. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle-Patricia-Tries](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos kodiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), kodiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-kodierten 256-Bit-Ganzzahlwerten. Dieser Trie kodiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
 
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Externe Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
 
-Ein Konto besteht aus einem kryptographischen Schlüsselpaar: öffentlich und privat. Sie helfen zu beweisen, dass eine Transaktion tatsächlich vom Absender signiert wurde, und verhindern Fälschungen. Ihr privater Schlüssel ist das, was Sie zum Signieren von Transaktionen verwenden, er gewährt Ihnen also die Verwahrung über die mit Ihrem Konto verbundenen Gelder. Sie halten nie wirklich Kryptowährung, Sie halten private Schlüssel – die Gelder befinden sich immer auf dem Ledger von Ethereum.
+Ein Konto besteht aus einem Paar kryptographischer Schlüssel: öffentlich und privat. Sie helfen zu beweisen, dass eine Transaktion tatsächlich vom Absender signiert wurde, und verhindern Fälschungen. Ihr privater Schlüssel ist das, was Sie zum Signieren von Transaktionen verwenden, er gewährt Ihnen also die Verwahrung über die mit Ihrem Konto verbundenen Gelder. Sie halten nie wirklich Kryptowährung, Sie halten private Schlüssel – die Gelder befinden sich immer auf dem Ledger von Ethereum.
 
 Dies hindert böswillige Akteure daran, gefälschte Transaktionen zu senden, da Sie den Absender einer Transaktion immer verifizieren können.
 
@@ -68,7 +68,7 @@ Beispiel:
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-Der öffentliche Schlüssel wird aus dem privaten Schlüssel unter Verwendung des [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) generiert. Sie erhalten eine öffentliche Adresse für Ihr Konto, indem Sie die letzten 20 Bytes des Keccak-256-Hashes des öffentlichen Schlüssels nehmen und `0x` an den Anfang setzen.
+Der öffentliche Schlüssel wird aus dem privaten Schlüssel unter Verwendung des [Algorithmus für digitale Signaturen mit elliptischen Kurven](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) generiert. Sie erhalten eine öffentliche Adresse für Ihr Konto, indem Sie die letzten 20 Bytes des Keccak-256-Hashes des öffentlichen Schlüssels nehmen und `0x` an den Anfang setzen.
 
 Das bedeutet, dass ein externes Konto (EOA) eine 42-stellige Adresse hat (20-Byte-Segment, was 40 hexadezimalen Zeichen entspricht, plus das Präfix `0x`).
 
@@ -105,9 +105,9 @@ Beispiel:
 
 `0x06012c8cf97bead5deae237070f9587f8e7a266d`
 
-Die Vertragsadresse wird normalerweise vergeben, wenn ein Vertrag auf der Ethereum-Blockchain bereitgestellt wird. Die Adresse ergibt sich aus der Adresse des Erstellers und der Anzahl der von dieser Adresse gesendeten Transaktionen (der „Nonce“). Auf diese Weise leitet die `CREATE`-Operation eine Adresse ab.
+Die Vertragsadresse wird normalerweise vergeben, wenn ein Vertrag auf der Ethereum-Blockchain bereitgestellt wird. Die Adresse ergibt sich aus der Adresse des Erstellers und der Anzahl der von dieser Adresse gesendeten Transaktionen (der „Nonce“). Auf diese Weise leitet die Operation `CREATE` eine Adresse ab.
 
-Verträge können auch mit [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014) bereitgestellt werden, was die Adresse aus der Adresse des Erstellers, einem vom Ersteller gewählten Wert (dem „Salt“) und einem Hash des Erstellungscodes des Vertrags ableitet. Dabei ist keine Nonce involviert, sodass die Adresse berechnet werden kann, bevor der Vertrag existiert, und sie bleibt gleich, unabhängig davon, wie viele andere Transaktionen der Ersteller in der Zwischenzeit sendet. Dies macht es möglich, auf einen Vertrag zu verweisen, der noch nicht bereitgestellt wurde.
+Verträge können auch mit [`CREATE2`](https://eips.ethereum.org/EIPS/eip-1014) bereitgestellt werden, was die Adresse aus der Adresse des Erstellers, einem vom Ersteller gewählten Wert (dem „Salt“) und einem Hash des Erstellungscodes des Vertrags ableitet. Es ist keine Nonce beteiligt, sodass die Adresse berechnet werden kann, bevor der Vertrag existiert, und sie bleibt gleich, unabhängig davon, wie viele andere Transaktionen der Ersteller in der Zwischenzeit sendet. Dies macht es möglich, auf einen Vertrag zu verweisen, der noch nicht bereitgestellt wurde.
 
 ## Validator-Schlüssel {#validators-keys}
 
@@ -117,11 +117,11 @@ Es gibt auch eine andere Art von Schlüssel in Ethereum, die eingeführt wurde, 
 
 ## Eine Anmerkung zu Wallets {#a-note-on-wallets}
 
-Ein Konto ist keine Wallet. Eine Wallet ist eine Schnittstelle oder Anwendung, mit der Sie mit Ihrem Ethereum-Konto interagieren können, entweder mit einem externen Konto oder einem Contract-Konto.
+Ein Konto ist keine Wallet. Eine Wallet ist eine Schnittstelle oder Anwendung, mit der Sie mit Ihrem Ethereum-Konto interagieren können, entweder einem externen Konto oder einem Contract-Konto.
 
 ## Eine visuelle Demo {#a-visual-demo}
 
-Sehen Sie sich an, wie Austin Sie durch Hash-Funktionen und Schlüsselpaare führt.
+Sehen Sie zu, wie Austin Sie durch Hash-Funktionen und Schlüsselpaare führt.
 
 <VideoWatch slug="hash-function-eth-build" />
 
@@ -137,3 +137,7 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Transaktionen](/developers/docs/transactions/)
+
+<Divider />
+
+<QuizWidget quizKey="accounts" />

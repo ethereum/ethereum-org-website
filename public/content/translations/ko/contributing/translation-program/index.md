@@ -16,7 +16,7 @@ ethereum.org 번역 프로그램은 마무리 단계에 있으며 더 이상 새
 
 기존 번역에서 오류를 발견하면 [GitHub에 이슈를 등록](https://github.com/ethereum/ethereum-org-website/issues/new/choose)해 주세요.
 
-_질문이 있거나 피드백을 공유하려면 [ethereum.org 디스코드](https://discord.gg/ethereum-org)에 참여하세요._
+_질문이 있거나 피드백을 공유하려면 [ethereum.org 디스코드](/discord/)에 참여하세요._
 
 ## 번역 프로그램 소개 {#about-us}
 
@@ -63,7 +63,7 @@ Ethereum.org는 수천 명의 커뮤니티 구성원에 의해 번역되었으�
 
 ## 문의하기 {#get-in-touch}
 
-질문이 있으신가요? 아니면 저희 팀 및 다른 번역가들과 협업하고 싶으신가요? [ethereum.org 디스코드 서버](https://discord.gg/ethereum-org)의 #translations 채널에 글을 남겨주세요.
+질문이 있으신가요? 아니면 저희 팀 및 다른 번역가들과 협업하고 싶으신가요? [ethereum.org 디스코드 서버](/discord/)의 #translations 채널에 글을 남겨주세요.
 
 translations@ethereum.org로 문의하실 수도 있습니다.
 

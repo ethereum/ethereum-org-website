@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/account-abstraction/index.md",
   "generatedAt": "2026-07-23T00:16:05.957Z",
-  "rootHash": "4054ddfdac63",
+  "rootHash": "cdd3ef7d00db",
   "tree": {
-    "contentHash": "7420e2ba5fad",
-    "anchorHash": "bc59de42fb3c",
+    "contentHash": "413101c5e2b4",
+    "anchorHash": "ec9225313a8d",
     "children": {
       "frontmatter:title": {
         "contentHash": "2ebcf10050c2",
@@ -24,8 +24,27 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "ac4a112f045b",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "6fbb98d401a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "346c16f982ee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "4f8382f0ed3d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:5": {
         "contentHash": "09d15c636bb3",

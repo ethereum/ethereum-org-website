@@ -48,7 +48,7 @@ lang: ru
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> — чат в Дискорде, управляемый ETHGlobal: онлайн-сообщество для хакеров Эфириума со всего мира</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> — сообщество в Дискорде, ориентированное на разработку для Эфириума</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">Дискорд EthStaker</Link> — управляемое сообществом руководство, обучение, поддержка и ресурсы для существующих и потенциальных участников стейкинга</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Команда сайта Ethereum.org</Link> — заходите и обсуждайте веб-разработку и дизайн ethereum.org с командой и участниками сообщества</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Команда сайта Ethereum.org</Link> — заходите и обсуждайте веб-разработку и дизайн ethereum.org с командой и участниками сообщества</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Дискорд Matos</Link> — сообщество создателей Web3, где общаются разработчики, лидеры индустрии и энтузиасты Эфириума. Мы увлечены разработкой, дизайном и культурой Web3. Присоединяйтесь к нам.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для разработки на Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>— форум вопросов и ответов</i></SocialListItem>

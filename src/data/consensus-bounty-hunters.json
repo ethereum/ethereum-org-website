@@ -80,6 +80,11 @@
     "score": 4000
   },
   {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 3500
+  }, 
+  {
     "username": "karalabe",
     "name": "Peter Szilagyi",
     "score": 3000
@@ -110,10 +115,10 @@
     "score": 2500
   },  
   {
-    "username": "ustas-eth",
-    "name": "ustas",
-    "score": 2500
-  }, 
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 2000
+  },
   {
     "username": "",
     "name": "Akincibor",
@@ -160,7 +165,7 @@
     "score": 1000
   },
   {
-    "username": "Jeongmin Choi",
+    "username": "",
     "name": "Jeongmin Choi",
     "score": 1000
   },
@@ -177,11 +182,6 @@
   {
     "username": "lgandx",
     "name": "LAURENT GAFFIE",
-    "score": 1000
-  },
-  {
-    "username": "hyunmini",
-    "name": "secuholic",
     "score": 1000
   },
   {
@@ -209,6 +209,16 @@
     "name": "Trail of Bits",
     "score": 500
   },
+  {
+    "username": "Stassi99",
+    "name": "Sta",
+    "score": 500
+  }, 
+  {
+    "username": "sujithsomraaj",
+    "name": "sujith",
+    "score": 500
+  },  
   {
     "username": "0xSorryNotSorry",
     "name": "sorryNotsorry",

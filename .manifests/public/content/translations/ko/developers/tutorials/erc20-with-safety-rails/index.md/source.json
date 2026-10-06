@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/erc20-with-safety-rails/index.md",
   "generatedAt": "2026-06-19T22:45:17.112Z",
-  "rootHash": "ec39101bc693",
+  "rootHash": "8d92ff1ca86c",
   "tree": {
-    "contentHash": "18231ddaed23",
-    "anchorHash": "0a6ac511447c",
+    "contentHash": "a17c88cb6b85",
+    "anchorHash": "21c05a3de28d",
     "children": {
       "frontmatter:title": {
         "contentHash": "25e0de403ec3",
@@ -24,8 +24,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "b06c2505b5bb"
+        "contentHash": "61a06841e7dc",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "0": {
+            "contentHash": "845516ec99f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

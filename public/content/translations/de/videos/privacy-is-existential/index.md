@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privatsphäre"
@@ -80,11 +79,11 @@ Miner Extractable Value ist eine widerwärtige Realität von Ethereum. Auch sie 
 
 ### Rechtlich durchsetzbare Pflichten von Validatoren (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Der größere Schachzug des DOJ im Fall Pereira Bueno ist, dass Validatoren aufgrund der öffentlichen Natur der von ihnen validierten Transaktionen rechtlich durchsetzbare Pflichten gegeneinander haben. Und wenn diese Pflichten verletzt werden, sollten Validatoren, so denken sie wohl, einander verklagen. Und wenn sie das nicht tun, sollte der Staat, der südliche Bezirk von New York, unehrliche Validatoren wegen Verbrechen strafrechtlich verfolgen. Und das hört nicht beim Überweisungsbetrug auf. Wenn Sie eine Geldwäsche-Transaktion sehen können oder sie mithilfe von Blockchain-Analyse hätten sehen können, wie sind Sie dann nicht mitschuldig an dieser Geldwäsche?
+Der größere Schachzug des DOJ im Fall Pereira Bueno besteht darin, dass Validatoren aufgrund der öffentlichen Natur der von ihnen validierten Transaktionen rechtlich durchsetzbare Pflichten einander gegenüber haben. Und wenn diese Pflichten verletzt werden, sollten Validatoren, so denken sie meiner Meinung nach, einander verklagen. Und wenn sie das nicht tun, sollte der Staat, der südliche Bezirk von New York, unehrliche Validatoren wegen Verbrechen strafrechtlich verfolgen. Und das hört nicht einfach bei Überweisungsbetrug auf. Wenn Sie eine Geldwäsche-Transaktion sehen können oder sie mithilfe von Blockchain-Analyse hätten sehen können, wie sind Sie dann nicht an dieser Geldwäsche mitschuldig?
 
-Wenn Sie auf einer Version der Chain aufbauen, die sanktionierte Transaktionen enthält, sind Sie dann nicht mitschuldig an der Umgehung von Sanktionen? Wenn Sie betrügerische Transaktionen in Milliardenhöhe in das Ledger aufnehmen, sollten Sie vielleicht dazu gezwungen werden, diese rückgängig zu machen. Und bewusste Unwissenheit (willful blindness) ist keine Verteidigung. Sie können nicht einfach sagen, dass Sie sich entschieden haben, ein weithin verfügbares Tool wie Chain-Analyse nicht zu nutzen. Das bewusste Ignorieren all des Wissens, das der öffentlichen Blockchain innewohnt, kann immer noch zu potenziellen strafrechtlichen Anklagen führen und wird immer als solches verfolgt werden.
+Wenn Sie auf einer Version der Chain aufbauen, die sanktionierte Transaktionen enthält, sind Sie dann nicht an der Umgehung von Sanktionen mitschuldig? Wenn Sie betrügerische Transaktionen in Milliardenhöhe in das Ledger aufnehmen, sollten Sie vielleicht dazu gezwungen werden, diese rückgängig zu machen. Und vorsätzliche Blindheit ist keine Verteidigung. Sie können nicht einfach sagen, dass Sie sich entschieden haben, ein weithin verfügbares Tool wie die Chain-Analyse nicht zu nutzen. Das bewusste Ignorieren all des Wissens, das der öffentlichen Blockchain innewohnt, kann dennoch zu potenziellen strafrechtlichen Anklagen führen und wird immer als solches verfolgt werden.
 
-Bewusste Unwissenheit ist keine Verteidigung, aber tatsächliche Blindheit schon. Wenn Sie also wirklich Vertrauenslosigkeit wollen, wenn Sie wirklich eine neutrale Infrastruktur wollen, wenn Sie dumme Leitungen (dumb pipes) wollen, dann müssen die Leitungen tatsächlich blind für das sein, was durch sie fließt.
+Vorsätzliche Blindheit ist keine Verteidigung, aber tatsächliche Blindheit schon. Wenn Sie also wirklich Vertrauenslosigkeit wollen, wenn Sie wirklich eine neutrale Infrastruktur wollen, wenn Sie dumme Leitungen wollen, dann müssen die Leitungen tatsächlich blind für das sein, was durch sie hindurchfließt.
 
 ### Traditionelle Finanzpipelines und SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Ich denke, das findet auch bei Fachleuten für nationale Sicherheit Anklang. Wen
 **Peter Van Valkenburgh:** Ich bin einfach froh, wenn die Leute von unserer Mission erfahren – die Freiheit zu verteidigen, mit offenen Blockchain-Technologien zu innovieren, und die Fähigkeit der Menschen, diese Technologien privat zu nutzen. Wenn Ihnen diese Mission am Herzen liegt, besuchen Sie bitte coincenter.org. Danke, dass Sie mir die Chance gegeben haben, Werbung zu machen. Wir sind eine spendenfinanzierte Non-Profit-Organisation und wir sind auf den guten Willen von Menschen wie Ihnen angewiesen, die an unsere Mission glauben, um die Arbeit, die wir tun, fortzusetzen. Vielen Dank für diese Gelegenheit und danke, dass Sie sich meinen Vortrag über Neutralität angehört haben.
 
 **Moderator:** Vielen Dank, Peter. Ich liebe das T-Shirt.
+

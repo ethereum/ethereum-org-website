@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/crypto-apps-desocial-linda-xie/index.md",
-  "generatedAt": "2026-04-29T04:49:21.435Z",
-  "rootHash": "9b083c6b3138",
+  "generatedAt": "2026-09-30T18:34:24.166Z",
+  "rootHash": "b350cfab498e",
   "tree": {
-    "contentHash": "b08d6737fa10",
-    "anchorHash": "38b19268a61e",
+    "contentHash": "ebc4c8916410",
+    "anchorHash": "afa7cd2abecf",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a1232879b0f9",
+        "contentHash": "95a80573f34b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b86b6e3bf8a0",
+        "contentHash": "e08c79d64cf7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "29001a97e391"
+        "anchorHash": "df42200fe0a3"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "410833e7b67f"
+        "anchorHash": "8c7b61223b0a"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "49c00761e209"
+        "anchorHash": "f12930ca479f"
       },
       "prose:1": {
         "contentHash": "956a1413dc92",
@@ -301,5 +307,5 @@
       "qa-2347"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

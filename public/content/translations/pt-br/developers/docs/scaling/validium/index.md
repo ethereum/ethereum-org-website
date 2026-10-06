@@ -101,11 +101,11 @@ Em um esquema de disponibilidade de dados vinculada, qualquer pessoa pode ser de
 
 ## Volitions e validium {#volitions-and-validium}
 
-Os validiums oferecem muitos benefícios, mas vêm com concessões (mais notavelmente, a disponibilidade de dados). Mas, como acontece com muitas soluções de escalabilidade, os validiums são adequados para casos de uso específicos — e é por isso que as volitions foram criadas.
+Os validiums oferecem muitos benefícios, mas vêm com concessões (mais notavelmente, a disponibilidade de dados). Mas, como em muitas soluções de escalabilidade, os validiums são adequados para casos de uso específicos — e é por isso que as volitions foram criadas.
 
 As volitions combinam um ZK-rollup e uma cadeia validium e permitem que os usuários alternem entre as duas soluções de escalabilidade. Com as volitions, os usuários podem aproveitar a disponibilidade de dados offchain do validium para certas transações, mantendo a liberdade de mudar para uma solução de disponibilidade de dados onchain (ZK-rollup) se necessário. Isso essencialmente dá aos usuários a liberdade de escolher as concessões conforme ditado por suas circunstâncias únicas.
 
-Uma exchange descentralizada (DEX) pode preferir usar a infraestrutura escalável e privada de um validium para negociações de alto valor. Ela também pode usar um ZK-rollup para usuários que desejam as maiores garantias de segurança e a desnecessidade de confiança de um ZK-rollup.
+Uma corretora descentralizada (DEX) pode preferir a escalabilidade de um validium, e sua capacidade de restringir o acesso público aos dados de transação, para negociações de alto valor. Manter os dados offchain limita quem pode vê-los, mas isso por si só não torna as transações criptograficamente privadas: a confidencialidade depende dos controles de acesso e mecanismos de privacidade da implantação, e os dados permanecem visíveis para o operador e para quem os detém. Uma DEX também pode usar um ZK-rollup para usuários que desejam as maiores garantias de segurança e a desnecessidade de confiança de um ZK-rollup.
 
 ## Validiums e compatibilidade com a EVM {#validiums-and-evm-compatibility}
 

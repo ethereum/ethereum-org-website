@@ -7,10 +7,7 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "scaling"
-  - "rollups"
-  - "optimistic-rollups"
-  - "zk-rollups"
+  - "scaling-and-layer-2"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "ரோலப்கள்"

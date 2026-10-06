@@ -7,9 +7,7 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "roadmap"
-  - "pectra"
-  - "upgrades"
+  - "network-upgrades"
 format: presentation
 author: "이더리움 재단"
 breadcrumb: "펙트라 개요"
