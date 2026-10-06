@@ -15,6 +15,16 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutMain,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
 import {
   Card,
   CardContent,
@@ -34,7 +44,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
-import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
@@ -42,6 +51,7 @@ import SectionIntro from "../../_components/section-intro"
 import PageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/organizations/hero-privacy.png"
+import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 import scalesImg from "@/public/images/organizations/privacy-scales.png"
 
 // TODO(data): no live source yet -- figures hard-coded from the design
@@ -151,7 +161,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
-  const tOrganizations = await getTranslations("page-organizations")
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations/enterprise/privacy",
@@ -395,12 +404,37 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
-          <ExpertContacts
-            experts={["ethsystems"]}
-            description={tOrganizations(
-              "page-organizations-experts-privacy-description"
-            )}
-          />
+          <Section id="experts">
+            <SectionIntro
+              title={t("page-organizations-enterprise-privacy-experts-title")}
+              description={t(
+                "page-organizations-enterprise-privacy-experts-description"
+              )}
+            />
+            <CalloutRoot data-flow="cta">
+              <CalloutBanner>
+                <EthSystemsLogo
+                  aria-hidden="true"
+                  className="h-48 w-auto text-body @3xl/callout:h-56"
+                />
+              </CalloutBanner>
+              <CalloutMain>
+                <CalloutContent>
+                  <CalloutTitle as="h3">EthSystems</CalloutTitle>
+                  <CalloutDescription>
+                    {t(
+                      "page-organizations-enterprise-privacy-experts-ethsystems-description"
+                    )}
+                  </CalloutDescription>
+                </CalloutContent>
+                <CalloutButtons>
+                  <ButtonLink href="https://ethsystems.org/">
+                    {t("page-organizations-enterprise-privacy-experts-cta")}
+                  </ButtonLink>
+                </CalloutButtons>
+              </CalloutMain>
+            </CalloutRoot>
+          </Section>
 
           <OrganizationPathways current="privacy" />
         </MainArticle>
