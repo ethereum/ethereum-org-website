@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/cn"
 import { normalizeIntlSpaces } from "@/lib/utils/intl"
 import { numberFormat } from "@/lib/utils/numbers"
 
-// TODO(data): confirm each figure against the NCA report (or its own source)
+// a16z State of Crypto 2025 (Oct 2025); static until a newer edition
 const OWNERS = 716_000_000
 const ADDRESSES = 181_000_000
 const USERS_RANGE = [40_000_000, 70_000_000] as const

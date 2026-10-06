@@ -21,7 +21,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../_components/checklist-panel"
 import ComparisonTable from "../_components/comparison-table"
@@ -29,12 +29,21 @@ import ExpertContacts from "../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../_components/hero-stats"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
+import {
+  DEFI_RUNNER_UP_FALLBACK,
+  metricStat,
+  nullOnError,
+  RWA_SHARE_FALLBACK,
+  SOURCES,
+} from "../_lib/metrics"
 import { ETHEREUM_GENESIS_TIMESTAMP, uptimeYearsSince } from "../_lib/uptime"
 
 import PageJsonLD from "./page-jsonld"
 
 import {
+  getDefiTvlShareData,
   getEthereumStablecoinsMcapData,
+  getRwaMarketShareData,
   getTotalValueLockedData,
 } from "@/lib/data"
 import heroImg from "@/public/images/organizations/hero-enterprise.png"
@@ -42,11 +51,6 @@ import defiImg from "@/public/images/organizations/isometric-defi.png"
 import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
 import privacyImg from "@/public/images/organizations/isometric-privacy.png"
 import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
-
-const DEFILLAMA = {
-  sourceName: "DefiLlama",
-  sourceUrl: "https://defillama.com/",
-}
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -56,12 +60,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-enterprise")
 
-  const [stablecoinsMcap, totalValueLocked, { contributors }] =
-    await Promise.all([
-      getEthereumStablecoinsMcapData(),
-      getTotalValueLockedData(),
-      getAppPageContributorInfo("organizations/enterprise", locale as Lang),
-    ])
+  const [
+    stablecoinsMcap,
+    totalValueLocked,
+    rwaShare,
+    defiShare,
+    { contributors },
+  ] = await Promise.all([
+    nullOnError(getEthereumStablecoinsMcapData()),
+    nullOnError(getTotalValueLockedData()),
+    nullOnError(getRwaMarketShareData()),
+    nullOnError(getDefiTvlShareData()),
+    getAppPageContributorInfo("organizations/enterprise", locale as Lang),
+  ])
 
   const uptimeYears = uptimeYearsSince(ETHEREUM_GENESIS_TIMESTAMP)
 
@@ -73,28 +84,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       label: t("page-organizations-enterprise-stat-uptime"),
     },
     {
-      value:
-        stablecoinsMcap && "value" in stablecoinsMcap
-          ? formatLargeUSD(stablecoinsMcap.value, locale)
-          : undefined,
+      ...metricStat(stablecoinsMcap, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-stat-stablecoin-tvl"),
-      lastUpdated:
-        stablecoinsMcap && "timestamp" in stablecoinsMcap
-          ? stablecoinsMcap.timestamp
-          : undefined,
-      ...DEFILLAMA,
+      ...SOURCES.defillama,
     },
     {
-      value:
-        totalValueLocked && "value" in totalValueLocked
-          ? formatLargeUSD(totalValueLocked.value, locale)
-          : undefined,
+      ...metricStat(totalValueLocked, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-stat-defi-tvl"),
-      lastUpdated:
-        totalValueLocked && "timestamp" in totalValueLocked
-          ? totalValueLocked.timestamp
-          : undefined,
-      ...DEFILLAMA,
+      ...SOURCES.defillama,
     },
   ]
 
@@ -124,10 +121,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const whyItems = ["neutrality", "composable", "liquidity", "resilience"].map(
     (key) => ({
       title: t(`page-organizations-enterprise-why-${key}-title`),
-      // `years` keeps the uptime/network-effect figures in the liquidity and
-      // resilience copy in step with the hero stat above
+      // `years` keeps the copy in step with the uptime stat above
       description: t(`page-organizations-enterprise-why-${key}-description`, {
         years: uptimeYears,
+        rwaShare: numberFormat(locale, { style: "percent" }).format(
+          (rwaShare && "rwas" in rwaShare ? rwaShare : RWA_SHARE_FALLBACK).rwas
+        ),
+        multiplier: numberFormat(locale, { maximumFractionDigits: 0 }).format(
+          defiShare && "runnerUpMultiplier" in defiShare
+            ? defiShare.runnerUpMultiplier
+            : DEFI_RUNNER_UP_FALLBACK
+        ),
       }),
     })
   )

@@ -28,7 +28,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -38,32 +38,25 @@ import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
+import {
+  metricStat,
+  nullOnError,
+  RWA_SHARE_FALLBACK,
+  SOURCES,
+} from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
 import {
   getEthereumStablecoinsMcapData,
   getL2beatData,
+  getRwaMarketShareData,
   getStablecoinsData,
+  getTotalValueSecuredData,
 } from "@/lib/data"
 import heroImg from "@/public/images/organizations/isometric-tokenization.png"
 
-const DEFILLAMA = {
-  sourceName: "DefiLlama",
-  sourceUrl: "https://defillama.com/",
-}
-
-// TODO(data): unsourced -- see PR discussion for candidate sources
-const VALUE_SECURED_USD = 336_000_000_000
-
 const STABLECOINS_PAGE_SIZE = 6
-
-// Netlify Blobs throws without credentials; degrade per-getter instead of a 500
-const nullOnError = <T,>(promise: Promise<T>): Promise<T | null> =>
-  promise.catch((error) => {
-    console.error(error)
-    return null
-  })
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -80,33 +73,37 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     getRequiredNamespacesForPage("/organizations/enterprise/tokenization")
   )
 
-  const [stablecoinsMcap, stablecoinsData, l2beatData, { contributors }] =
-    await Promise.all([
-      nullOnError(getEthereumStablecoinsMcapData()),
-      nullOnError(getStablecoinsData()),
-      nullOnError(getL2beatData()),
-      getAppPageContributorInfo(
-        "organizations/enterprise/tokenization",
-        locale as Lang
-      ),
-    ])
+  const [
+    stablecoinsMcap,
+    stablecoinsData,
+    l2beatData,
+    valueSecured,
+    rwaShare,
+    { contributors },
+  ] = await Promise.all([
+    nullOnError(getEthereumStablecoinsMcapData()),
+    nullOnError(getStablecoinsData()),
+    nullOnError(getL2beatData()),
+    nullOnError(getTotalValueSecuredData()),
+    nullOnError(getRwaMarketShareData()),
+    getAppPageContributorInfo(
+      "organizations/enterprise/tokenization",
+      locale as Lang
+    ),
+  ])
 
   const l2Stablecoins = sumL2Breakdown(l2beatData, "stablecoin")
+  const rwa = rwaShare && "rwas" in rwaShare ? rwaShare : RWA_SHARE_FALLBACK
+  const percent = (share: number) =>
+    numberFormat(locale, { style: "percent" }).format(share)
 
   const stats: HeroStat[] = [
     {
-      value:
-        stablecoinsMcap && "value" in stablecoinsMcap
-          ? formatLargeUSD(stablecoinsMcap.value, locale)
-          : undefined,
+      ...metricStat(stablecoinsMcap, (value) => formatLargeUSD(value, locale)),
       label: t(
         "page-organizations-enterprise-tokenization-stat-stablecoins-l1"
       ),
-      lastUpdated:
-        stablecoinsMcap && "timestamp" in stablecoinsMcap
-          ? stablecoinsMcap.timestamp
-          : undefined,
-      ...DEFILLAMA,
+      ...SOURCES.defillama,
     },
     {
       value: l2Stablecoins && formatLargeUSD(l2Stablecoins, locale),
@@ -116,8 +113,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ...L2BEAT_SOURCE,
     },
     {
-      value: formatLargeUSD(VALUE_SECURED_USD, locale),
+      ...metricStat(valueSecured, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-tokenization-stat-value-secured"),
+      ...SOURCES.ultrasound,
     },
   ]
 
@@ -176,7 +174,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         description={
           <>
             <p>
-              {t("page-organizations-enterprise-tokenization-hero-description")}
+              {t(
+                "page-organizations-enterprise-tokenization-hero-description",
+                {
+                  rwaShare: percent(rwa.rwas),
+                  stablecoinShare: percent(rwa.stablecoins),
+                }
+              )}
             </p>
             <div className="mt-space-3x">
               <HeroStats stats={stats} />

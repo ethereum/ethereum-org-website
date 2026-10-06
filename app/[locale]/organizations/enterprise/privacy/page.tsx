@@ -41,25 +41,25 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { formatLargeUSD } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
+import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
+import { getTotalValueSecuredData } from "@/lib/data"
 import heroImg from "@/public/images/organizations/hero-privacy.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 import scalesImg from "@/public/images/organizations/privacy-scales.png"
 
-// TODO(data): no live source yet -- figures hard-coded from the design
+// TODO(data): no public source found -- cite one or drop
 const STAT_TEAMS_BUILDING = "750+"
-// TODO(data): no live source yet -- figures hard-coded from the design
 const STAT_YEARS_RESEARCH = "7+"
-// TODO(data): no live source yet -- figures hard-coded from the design
-const STAT_VALUE_SECURED = "$400B+"
 
 const COMPLIANCE_CARDS: { key: string; icon: LucideIcon }[] = [
   { key: "selective-disclosure", icon: ScanEye },
@@ -162,10 +162,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
 
-  const { contributors } = await getAppPageContributorInfo(
-    "organizations/enterprise/privacy",
-    locale as Lang
-  )
+  const [valueSecured, { contributors }] = await Promise.all([
+    nullOnError(getTotalValueSecuredData()),
+    getAppPageContributorInfo(
+      "organizations/enterprise/privacy",
+      locale as Lang
+    ),
+  ])
 
   const stats: HeroStat[] = [
     {
@@ -177,8 +180,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       label: t("page-organizations-enterprise-privacy-stat-years"),
     },
     {
-      value: STAT_VALUE_SECURED,
+      ...metricStat(valueSecured, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-privacy-stat-value-secured"),
+      ...SOURCES.ultrasound,
     },
   ]
 

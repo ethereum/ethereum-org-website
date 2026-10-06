@@ -29,10 +29,15 @@ import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
+import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
-import { getTotalValueLockedData } from "@/lib/data"
+import {
+  getDefiTvlShareData,
+  getDexVolumeData,
+  getTotalValueLockedData,
+} from "@/lib/data"
 import aaveImg from "@/public/images/dapps/aave.png"
 import compoundImg from "@/public/images/dapps/compound.png"
 import morphoImg from "@/public/images/dapps/morpho.png"
@@ -40,11 +45,6 @@ import sparkImg from "@/public/images/dapps/sparkfi.png"
 import uniswapImg from "@/public/images/exchanges/uniswap.png"
 import heroImg from "@/public/images/organizations/isometric-defi.png"
 import makerImg from "@/public/images/stablecoins/maker.png"
-
-const DEFILLAMA = {
-  sourceName: "DefiLlama",
-  sourceUrl: "https://defillama.com/",
-}
 
 const PRIMITIVES = [
   { key: "open-standards", Icon: BookOpenCheck },
@@ -82,12 +82,6 @@ const PROTOCOLS: {
   { key: "compound", href: "https://compound.finance/", logo: compoundImg },
 ]
 
-// TODO(data): live source for Ethereum's share of global DeFi TVL
-const GLOBAL_DEFI_TVL_SHARE = 0.56
-
-// TODO(data): live source for 24h DEX volume (12-month avg)
-const DEX_VOLUME_24H_USD = 1.89e9
-
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
@@ -98,38 +92,41 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     "page-organizations-enterprise-onchain-finance"
   )
 
-  const [totalValueLocked, { contributors }] = await Promise.all([
-    getTotalValueLockedData(),
-    getAppPageContributorInfo(
-      "organizations/enterprise/onchain-finance",
-      locale as Lang
-    ),
-  ])
+  const [totalValueLocked, defiShare, dexVolume, { contributors }] =
+    await Promise.all([
+      nullOnError(getTotalValueLockedData()),
+      nullOnError(getDefiTvlShareData()),
+      nullOnError(getDexVolumeData()),
+      getAppPageContributorInfo(
+        "organizations/enterprise/onchain-finance",
+        locale as Lang
+      ),
+    ])
 
   const stats: HeroStat[] = [
     {
-      value:
-        totalValueLocked && "value" in totalValueLocked
-          ? formatLargeUSD(totalValueLocked.value, locale)
-          : undefined,
+      ...metricStat(totalValueLocked, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-onchain-finance-stat-defi-tvl"),
-      lastUpdated:
-        totalValueLocked && "timestamp" in totalValueLocked
-          ? totalValueLocked.timestamp
-          : undefined,
-      ...DEFILLAMA,
+      ...SOURCES.defillama,
     },
     {
-      value: numberFormat(locale, { style: "percent" }).format(
-        GLOBAL_DEFI_TVL_SHARE
-      ),
+      ...(defiShare && "mainnetShare" in defiShare
+        ? {
+            value: numberFormat(locale, { style: "percent" }).format(
+              defiShare.mainnetShare
+            ),
+            lastUpdated: defiShare.timestamp,
+          }
+        : {}),
       label: t(
         "page-organizations-enterprise-onchain-finance-stat-global-share"
       ),
+      ...SOURCES.defillama,
     },
     {
-      value: formatLargeUSD(DEX_VOLUME_24H_USD, locale),
+      ...metricStat(dexVolume, (value) => formatLargeUSD(value, locale)),
       label: t("page-organizations-enterprise-onchain-finance-stat-dex-volume"),
+      ...SOURCES.defillama,
     },
   ]
 

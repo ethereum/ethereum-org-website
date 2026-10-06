@@ -63,7 +63,7 @@
   "page-organizations-enterprise-tokenization-compare-row-tenure-private-dlt": "2 years or less",
   "page-organizations-enterprise-tokenization-compare-row-tenure-traditional": "Incumbent",
   "page-organizations-enterprise-tokenization-compare-title": "Comparison matrix",
-  "page-organizations-enterprise-tokenization-hero-description": "Ethereum is the market leader for asset tokenization, home to over 60% of all tokenized assets and about half of global stablecoin supply.",
+  "page-organizations-enterprise-tokenization-hero-description": "Ethereum is the market leader for asset tokenization, home to {rwaShare} of all tokenized assets and {stablecoinShare} of global stablecoin supply.",
   "page-organizations-enterprise-tokenization-hero-title": "Tokenization",
   "page-organizations-enterprise-tokenization-infrastructure-capital-description": "Put collateral to work through onchain yield opportunities and seamless integration with DeFi.",
   "page-organizations-enterprise-tokenization-infrastructure-capital-title": "More efficient capital",
