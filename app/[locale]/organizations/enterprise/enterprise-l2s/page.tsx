@@ -104,11 +104,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       label: t("page-organizations-enterprise-l2s-stat-l2-tvl"),
       ...L2BEAT,
     },
-    {
-      // TODO(data): no live source yet for average L2 user operations per second
-      value: t("page-organizations-enterprise-l2s-stat-uops-value"),
-      label: t("page-organizations-enterprise-l2s-stat-uops"),
-    },
   ]
 
   const trustItems = [

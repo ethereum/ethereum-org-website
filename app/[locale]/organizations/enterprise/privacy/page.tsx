@@ -66,14 +66,14 @@ const SOLUTIONS: {
   {
     key: "prividium",
     examples: [
-      { name: "zkSync Prividium", href: "https://www.zksync.io/prividium" },
+      { name: "ZKsync Prividium", href: "https://www.zksync.io/prividium" },
     ],
   },
   {
     key: "programmable",
     examples: [
       { name: "Aztec", href: "https://aztec.network/" },
-      { name: "EY Nightfall", href: EY_URL },
+      { name: "EY Starlight", href: EY_URL },
       { name: "Miden", href: "https://miden.xyz/" },
     ],
   },
@@ -85,7 +85,7 @@ const SOLUTIONS: {
     key: "shielded",
     examples: [
       { name: "Railgun", href: "https://railgun.org/" },
-      { name: "EY Starlight", href: EY_URL },
+      { name: "EY Nightfall", href: EY_URL },
     ],
   },
 ]

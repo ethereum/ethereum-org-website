@@ -6,7 +6,6 @@ import {
   UserStar,
 } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import type { ReactNode } from "react"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -26,13 +25,13 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import InlineLink from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { createPageTracking } from "@/lib/utils/pageTracking"
 
 import AdoptionChart from "./_components/adoption-chart"
 import SectionIntro from "./_components/section-intro"
@@ -43,37 +42,13 @@ import heroImg from "@/public/images/organizations/ethereum-city.png"
 import whatImg from "@/public/images/organizations/hub-what-organizations-do.png"
 import whyImg from "@/public/images/organizations/hub-why-building.png"
 
-const NCA_REPORT_URL =
-  "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
+const A16Z_REPORT_URL =
+  "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
 
 /** Matomo category suffix, matching the `_open_source` convention. */
 const TRACK_CATEGORY_SUFFIX = "_organizations"
 
-/**
- * Target of the footnote marker. The marker points at the on-page source list
- * rather than straight out to the PDF, so the citation itself carries the link
- * -- the `[n]` / numbered-list pattern the open-source page established.
- */
 const REFERENCES_ID = "references"
-
-/**
- * Footnote marker. Rendered outside the strings so translators never carry the
- * numbering.
- */
-const footnote = (n: number) => (
-  <sup>
-    <InlineLink
-      href={`#${REFERENCES_ID}`}
-      hideArrow
-      className="inline-flex h-6 items-center justify-center"
-    >{`[${n}]`}</InlineLink>
-  </sup>
-)
-
-/** `t.rich` link placeholder for the citation in the source list. */
-const ncaLink = (chunks: ReactNode) => (
-  <InlineLink href={NCA_REPORT_URL}>{chunks}</InlineLink>
-)
 
 type Audience = {
   key: string
@@ -149,6 +124,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations")
   const tCommon = await getTranslations("common")
+  const { footnote, linkTo } = createPageTracking(
+    "organizations",
+    REFERENCES_ID
+  )
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations",
@@ -269,7 +248,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-hub-adoption-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-hub-adoption-description")}
-                {footnote(1)}
+                {footnote(1, "adoption")}
               </p>
             </div>
             <AdoptionChart />
@@ -336,8 +315,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>{tCommon("references")}</h2>
             <OrderedList className="ms-0 list-inside list-decimal text-sm text-body-medium">
               <ListItem>
-                {t.rich("page-organizations-hub-reference-nca", {
-                  link: ncaLink,
+                {t.rich("page-organizations-hub-reference-a16z", {
+                  link: linkTo(
+                    A16Z_REPORT_URL,
+                    REFERENCES_ID,
+                    "a16z State of Crypto"
+                  ),
                 })}
               </ListItem>
             </OrderedList>

@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from "react"
+import { Fragment } from "react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -16,13 +16,13 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import InlineLink from "@/components/ui/Link"
 import { ListItem, OrderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat } from "@/lib/utils/numbers"
+import { createPageTracking } from "@/lib/utils/pageTracking"
 
 import AdoptionChart from "../_components/adoption-chart"
 import OrganizationPathways from "../_components/organization-pathways"
@@ -43,30 +43,10 @@ import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
+const A16Z_REPORT_URL =
+  "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
 
-/** Target of every footnote marker; the source link itself lives on the citation. */
 const REFERENCES_ID = "references"
-
-/**
- * Footnote marker. It points at the on-page source list (not straight out to
- * the PDF, which skipped the citation entirely), and the numbering is rendered
- * outside the strings so translators never carry it -- the `[n]` pattern the
- * open-source page established.
- */
-const footnote = (n: number) => (
-  <sup>
-    <InlineLink
-      href={`#${REFERENCES_ID}`}
-      hideArrow
-      className="inline-flex h-6 items-center justify-center"
-    >{`[${n}]`}</InlineLink>
-  </sup>
-)
-
-/** `t.rich` link placeholder for the citation in the source list. */
-const ncaLink = (chunks: ReactNode) => (
-  <InlineLink href={NCA_REPORT_URL}>{chunks}</InlineLink>
-)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -76,6 +56,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-small-business")
   const tCommon = await getTranslations("common")
+  const { footnote, linkTo } = createPageTracking(
+    "organizations-small-business",
+    REFERENCES_ID
+  )
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations/small-business",
@@ -178,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-purchases-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-purchases-description")}
-                {footnote(1)}
+                {footnote(1, "everyday-purchases")}
               </p>
             </div>
             {/* Recharts renders nothing server-side, so the six values live in a
@@ -241,7 +225,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-adoption-description")}
-                {footnote(1)}
+                {footnote(2, "adoption")}
               </p>
             </div>
             <AdoptionChart />
@@ -256,7 +240,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-holders-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-small-business-holders-description")}
-                {footnote(1)}
+                {footnote(1, "crypto-holders")}
               </p>
             </div>
             <CryptoHoldersChart
@@ -286,7 +270,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <OrderedList className="ms-0 list-inside list-decimal text-sm text-body-medium">
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-nca", {
-                  link: ncaLink,
+                  link: linkTo(NCA_REPORT_URL, REFERENCES_ID, "NCA report"),
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-organizations-small-business-reference-a16z", {
+                  link: linkTo(
+                    A16Z_REPORT_URL,
+                    REFERENCES_ID,
+                    "a16z State of Crypto"
+                  ),
                 })}
               </ListItem>
             </OrderedList>
