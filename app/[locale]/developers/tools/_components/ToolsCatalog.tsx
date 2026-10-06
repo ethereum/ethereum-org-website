@@ -8,6 +8,7 @@ import type {
   CatalogFilterState,
   CatalogNavGroupConfig,
 } from "@/components/FilterableCatalog/types"
+import { BaseLink } from "@/components/ui/Link"
 
 import type {
   DeveloperToolsCategory,
@@ -17,6 +18,9 @@ import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
+
+const SUGGEST_RESOURCE_ISSUE_URL =
+  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
 /** Doubles as the URL query param, so a subcategory is linkable: `?sub=<id>` */
 const SUBCATEGORY_FILTER_KEY = "sub"
@@ -39,6 +43,7 @@ type ToolsCatalogProps = {
     filtersToggle: string
     applyLabel: string
     closeLabel: string
+    suggestButton: string
   }
   currentCategoryId?: string
 }
@@ -283,6 +288,14 @@ export default function ToolsCatalog({
           }
         />
       )}
+      sidebarFooter={
+        <BaseLink
+          href={SUGGEST_RESOURCE_ISSUE_URL}
+          className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
+        >
+          {labels.suggestButton}
+        </BaseLink>
+      }
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}
