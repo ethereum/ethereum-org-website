@@ -175,7 +175,7 @@ Baadhi ya viwango mbadala vimetokana na suala hili kama vile [ERC-223](/develope
 - [OpenZeppelin - Utekelezaji wa ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Mwongozo wa Tokeni za ERC20 za Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Viwango vingine vya tokheni mbadala
+## Viwango vingine vya tokheni mbadala {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

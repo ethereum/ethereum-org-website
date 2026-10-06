@@ -101,11 +101,11 @@ Validium 在数据可用性管理的方法上有所不同。一些依赖受信�
 
 ## Volition 和 Validium {#volitions-and-validium}
 
-Validium 提供了许多好处，但也伴随着权衡（最显著的是数据可用性）。但是，与许多扩容解决方案一样，Validium 适用于特定的用例——这就是创建 Volition 的原因。
+Validium 提供了许多优势，但也伴随着权衡（最显著的是数据可用性）。但是，与许多扩容解决方案一样，Validium 适用于特定的用例——这就是创建 Volition 的原因。
 
-Volition 结合了 ZK-rollup 和 Validium 链，允许用户在这两种扩容解决方案之间切换。借助 Volition，用户可以在某些交易中利用 Validium 的链下数据可用性，同时保留在需要时切换到链上数据可用性解决方案 (ZK-rollup) 的自由。这本质上赋予了用户根据其独特情况自由选择权衡的权利。
+Volition 结合了 ZK-rollup 和 Validium 链，允许用户在这两种扩容解决方案之间切换。借助 Volition，用户可以在某些交易中利用 Validium 的链下数据可用性，同时保留在需要时切换到链上数据可用性解决方案（ZK-rollup）的自由。这实际上赋予了用户根据其独特情况自由选择权衡的权利。
 
-去中心化交易所 (DEX) 可能更喜欢使用 Validium 的可扩展和私密基础设施进行高价值交易。它也可以为希望获得 ZK-rollup 更高安全保障和去信任化的用户使用 ZK-rollup。
+去中心化交易所 (DEX) 可能更喜欢 Validium 的可扩展性及其限制公众访问交易数据的能力，以进行高价值交易。将数据保留在链下限制了谁可以看到它，但这本身并不能使交易在密码学上具有隐私性：机密性取决于部署的访问控制和隐私机制，并且数据对运营商和任何持有它的人仍然可见。DEX 也可以为希望获得 ZK-rollup 更高安全保证和去信任化的用户使用 ZK-rollup。
 
 ## Validium 和 EVM 兼容性 {#validiums-and-evm-compatibility}
 

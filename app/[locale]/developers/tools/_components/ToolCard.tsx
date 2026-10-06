@@ -3,7 +3,7 @@ import { AppWindowMac } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
 
-import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
+import type { ToolCardData } from "@/lib/utils/developerToolsData"
 import { getToolKey } from "@/lib/utils/getToolKey"
 
 /**
@@ -15,7 +15,7 @@ const ToolCard = memo(function ToolCard({
   tool,
   cropsNativeLabel,
 }: {
-  tool: DeveloperToolWithCategory
+  tool: ToolCardData
   /** Translated badge text; the badge renders only when `tool.crops_native` is set */
   cropsNativeLabel?: string
 }) {

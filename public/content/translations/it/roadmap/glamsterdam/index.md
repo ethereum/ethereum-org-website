@@ -7,11 +7,8 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam è un imminente aggiornamento di Ethereum previsto per il Q4 2026
-</AlertTitle>
 <AlertDescription>
-L'aggiornamento Glamsterdam è solo un singolo passo negli obiettivi di sviluppo a lungo termine di Ethereum. Scopri di più sulla [roadmap del protocollo](/roadmap/) e sui [precedenti aggiornamenti](/ethereum-forks/).
+L'aggiornamento Glamsterdam è solo un singolo passo negli obiettivi di sviluppo a lungo termine di Ethereum. Scopri di più sulla [roadmap del protocollo](/roadmap/) e sugli [aggiornamenti precedenti](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -20,9 +17,9 @@ L'imminente aggiornamento Glamsterdam di [Ethereum](/) è progettato per spianar
 
 A seguito dei progressi compiuti nell'aggiornamento [Fusaka](/roadmap/fusaka/), Glamsterdam si concentra sulla scalabilità del layer 1 (l1) riorganizzando il modo in cui la rete elabora le transazioni e gestisce il suo database in crescita, aggiornando fondamentalmente il modo in cui Ethereum crea e verifica i blocchi.
 
-Mentre Fusaka si è concentrato su perfezionamenti fondamentali, Glamsterdam porta avanti gli obiettivi "Scale L1" e "Scale Blobs" integrando la separazione dei compiti tra i diversi partecipanti alla rete e introducendo modi più efficienti per gestire i dati per preparare lo [stato](/glossary/#state) a una parallelizzazione ad alta capacità transazionale.
+Mentre Fusaka si è concentrato su perfezionamenti fondamentali, Glamsterdam porta avanti gli obiettivi "Scalare il layer 1 (l1)" e "Scalare i blob" integrando la separazione dei compiti tra i diversi partecipanti alla rete e introducendo modi più efficienti per gestire i dati per preparare lo [stato](/glossary/#state) a una parallelizzazione ad alta capacità transazionale.
 
-Questi miglioramenti assicurano che Ethereum rimanga veloce, conveniente e decentralizzato man mano che gestisce più attività, mantenendo al contempo i requisiti hardware gestibili per le persone che eseguono [nodi](/glossary/#node) a casa.
+Questi miglioramenti assicurano che Ethereum rimanga veloce, conveniente e decentralizzato mentre gestisce più attività, mantenendo al contempo i requisiti hardware gestibili per le persone che eseguono [nodi](/glossary/#node) a casa.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,9 +28,9 @@ Questi miglioramenti assicurano che Ethereum rimanga veloce, conveniente e decen
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: questo articolo evidenzia una selezione di EIP programmati per l'inclusione in Glamsterdam. Ulteriori proposte programmate in fase di test nelle devnet includono EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ed EIP-8282. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: questo articolo evidenzia una selezione di Proposte di Miglioramento di Ethereum (EIP) programmate per l'inclusione in Glamsterdam. Ulteriori proposte programmate in fase di test nelle devnet includono EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ed EIP-8282. L'ambito è congelato ma può ancora cambiare prima della Mainnet, poiché la EIP meta rimane in bozza. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se desideri aggiungere un EIP in fase di valutazione per Glamsterdam, ma che non è ancora stato aggiunto a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
+Se desideri aggiungere una EIP in fase di valutazione per Glamsterdam, ma che non è ancora stata aggiunta a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -44,7 +41,7 @@ L'aggiornamento Glamsterdam si concentra su tre obiettivi principali:
 - Espandere la capacità: suddividere il lavoro pesante di creazione e verifica dei blocchi, dando alla rete più tempo per propagare quantità maggiori di dati senza rallentare.
 - Prevenire il gonfiamento del database (sostenibilità): adeguare le commissioni di rete per riflettere accuratamente il costo hardware a lungo termine dell'archiviazione di nuovi dati, sbloccando futuri aumenti del limite di gas e prevenendo al contempo il degrado delle prestazioni hardware.
 
-In breve, Glamsterdam introdurrà modifiche strutturali per garantire che, man mano che la rete aumenta la capacità, rimanga sostenibile e le prestazioni restino elevate.
+In breve, Glamsterdam introdurrà cambiamenti strutturali per garantire che, man mano che la rete aumenta la capacità, rimanga sostenibile e le prestazioni restino elevate.
 
 ## Scalare il layer 1 (l1) e l'elaborazione parallela {#scale-l1}
 

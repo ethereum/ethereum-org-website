@@ -8,8 +8,6 @@ duration: "0:26:15"
 educationLevel: advanced
 topic:
   - "scaling-and-layer-2"
-  - "rollups"
-  - "layer-2"
 format: presentation
 author: "以太坊基金會"
 breadcrumb: "L2 的狀態"

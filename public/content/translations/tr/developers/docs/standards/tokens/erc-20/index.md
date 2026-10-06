@@ -175,7 +175,7 @@ Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) veya [E
 - [OpenZeppelin - ERC-20 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 Token'ları Rehberi](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Diğer misli token standartları
+## Diğer misli token standartları {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

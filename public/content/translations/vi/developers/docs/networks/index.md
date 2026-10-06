@@ -60,7 +60,7 @@ Hai mạng thử nghiệm công khai mà các nhà phát triển máy khách hi�
 - [Vòi PoW](https://sepolia-faucet.pk910.de/)
 - [Vòi QuickNode Sepolia](https://faucet.quicknode.com/ethereum/sepolia)
 
-#### Hoodi {#faucets}
+#### Hoodi {#hoodi}
 
 Hoodi là một mạng thử nghiệm để thử nghiệm việc xác thực và đặt cọc. Mạng lưới Hoodi mở cho những người dùng muốn chạy một trình xác thực mạng thử nghiệm. Do đó, những người đặt cọc muốn thử nghiệm các bản nâng cấp giao thức trước khi chúng được triển khai lên Mạng chính nên sử dụng Hoodi.
 
@@ -83,7 +83,7 @@ Hoodi là một mạng thử nghiệm để thử nghiệm việc xác thực v�
 - [Vòi Hoodi](https://hoodi.ethpandaops.io/)
 - [Vòi PoW](https://hoodi-faucet.pk910.de/)
 
-#### Ephemery {#arbitrum-sepolia}
+#### Ephemery {#ephemery}
 
 Ephemery là một loại mạng thử nghiệm độc đáo được đặt lại hoàn toàn mỗi tháng. Trạng thái thực thi và đồng thuận sẽ quay trở lại khối nguyên thủy (genesis) sau mỗi 28 ngày, điều này có nghĩa là bất cứ điều gì xảy ra trên mạng thử nghiệm đều là tạm thời. Điều này làm cho nó trở nên lý tưởng cho việc thử nghiệm ngắn hạn, khởi động nút nhanh chóng và các loại ứng dụng 'hello world' không cần tính vĩnh viễn.
 
@@ -103,23 +103,23 @@ Ephemery là một loại mạng thử nghiệm độc đáo được đặt l�
 - [Đồng bộ hóa điểm kiểm tra](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Các vòi {#starknet-sepolia}
+#### Các vòi {#faucets}
 
 - [Vòi Bordel](https://faucet.bordel.wtf/)
 - [Vòi Pk910 PoW](https://ephemery-faucet.pk910.de/)
 
-#### Holesky (đã ngừng hoạt động) {#private-networks}
+#### Holesky (đã ngừng hoạt động) {#holesky}
 
 Mạng thử nghiệm Holesky đã ngừng hoạt động kể từ tháng 9 năm 2025. Các nhà điều hành đặt cọc và nhà cung cấp cơ sở hạ tầng nên sử dụng Hoodi để thử nghiệm trình xác thực thay thế.
 
 - [Thông báo ngừng hoạt động mạng thử nghiệm Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _Blog EF, 1-Tháng 9-2025_
 - [Cập nhật mạng thử nghiệm Holesky và Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _Blog EF, 18-Tháng 3-2025_
 
-### Các mạng thử nghiệm lớp 2 (l2) {#development-networks}
+### Các mạng thử nghiệm lớp 2 (l2) {#layer-2-testnets}
 
 [Lớp 2 (l2)](/layer-2/) là một thuật ngữ chung để mô tả một tập hợp cụ thể các giải pháp mở rộng quy mô Ethereum. Lớp 2 (l2) là một chuỗi khối riêng biệt mở rộng Ethereum và kế thừa các đảm bảo bảo mật của Ethereum. Các mạng thử nghiệm lớp 2 (l2) thường được liên kết chặt chẽ với các mạng thử nghiệm Ethereum công khai.
 
-#### Arbitrum Sepolia {#consortium-networks}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Một mạng thử nghiệm cho [Arbitrum](https://arbitrum.io/).
 
@@ -135,7 +135,7 @@ Một mạng thử nghiệm cho [Arbitrum](https://arbitrum.io/).
 - [Vòi ethfaucet.com Arbitrum Sepolia](https://ethfaucet.com/networks/arbitrum)
 - [Vòi QuickNode Arbitrum Sepolia](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#other-testnets}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Một mạng thử nghiệm cho [Optimism](https://www.optimism.io/).
 
@@ -151,7 +151,7 @@ Một mạng thử nghiệm cho [Optimism](https://www.optimism.io/).
 - [Vòi ethfaucet.com Optimism Sepolia](https://ethfaucet.com/networks/optimism)
 - [Vòi mạng thử nghiệm](https://docs.optimism.io/app-developers/tools/faucets)
 
-#### Starknet Sepolia
+#### Starknet Sepolia {#starknet-sepolia}
 
 Một mạng thử nghiệm cho [Starknet](https://www.starknet.io).
 
@@ -165,27 +165,27 @@ Một mạng thử nghiệm cho [Starknet](https://www.starknet.io).
 - [Vòi Blast Starknet Sepolia](https://blastapi.io/faucets/starknet-sepolia-eth)
 - [Vòi Starknet](https://starknet-faucet.vercel.app/)
 
-## Các mạng lưới riêng tư
+## Các mạng lưới riêng tư {#private-networks}
 
 Một mạng lưới Ethereum là một mạng lưới riêng tư nếu các nút của nó không được kết nối với một mạng lưới công khai (tức là Mạng chính hoặc một mạng thử nghiệm). Trong bối cảnh này, riêng tư chỉ có nghĩa là được dành riêng hoặc bị cô lập, chứ không phải là được bảo vệ hoặc an toàn.
 
-### Các mạng lưới phát triển
+### Các mạng lưới phát triển {#development-networks}
 
 Để phát triển một ứng dụng Ethereum, bạn sẽ muốn chạy nó trên một mạng lưới riêng tư để xem nó hoạt động như thế nào trước khi triển khai nó. Tương tự như cách bạn tạo một máy chủ cục bộ trên máy tính của mình để phát triển web, bạn có thể tạo một phiên bản chuỗi khối cục bộ để thử nghiệm ứng dụng phi tập trung (dapp) của mình. Điều này cho phép lặp lại nhanh hơn nhiều so với một mạng thử nghiệm công khai.
 
 Có các dự án và công cụ chuyên dụng để hỗ trợ việc này. Tìm hiểu thêm về [các mạng lưới phát triển](/developers/docs/development-networks/).
 
-### Các mạng lưới liên minh
+### Các mạng lưới liên minh {#consortium-networks}
 
 Quá trình đồng thuận được kiểm soát bởi một tập hợp các nút được xác định trước và đáng tin cậy. Ví dụ: một mạng lưới riêng tư của các tổ chức học thuật đã biết, mỗi tổ chức quản lý một nút duy nhất và các khối được xác thực bởi một ngưỡng những người ký kết trong mạng lưới.
 
 Nếu một mạng lưới Ethereum công khai giống như internet công cộng, thì một mạng lưới liên minh giống như một mạng nội bộ (intranet) riêng tư.
 
-## <Emoji text="🚉" /> Tại sao các mạng thử nghiệm Ethereum được đặt tên theo các ga tàu điện ngầm?
+## <Emoji text="🚉" /> Tại sao các mạng thử nghiệm Ethereum được đặt tên theo các ga tàu điện ngầm? {#why-naming}
 
 Nhiều mạng thử nghiệm Ethereum được đặt tên theo các ga tàu điện ngầm hoặc ga xe lửa trong thế giới thực. Truyền thống đặt tên này bắt đầu từ sớm và phản ánh các thành phố toàn cầu nơi những người đóng góp đã sống hoặc làm việc. Nó mang tính biểu tượng, dễ nhớ và thiết thực. Giống như các mạng thử nghiệm bị cô lập khỏi Mạng chính Ethereum, các tuyến tàu điện ngầm chạy tách biệt với giao thông trên mặt đất.
 
-### <Emoji text="🚧" /> Các mạng thử nghiệm thường được sử dụng và cũ
+### <Emoji text="🚧" /> Các mạng thử nghiệm thường được sử dụng và cũ {#common-and-legacy-testnets}
 
 - **Sepolia** - Một khu phố có kết nối tàu điện ngầm ở Athens, Hy Lạp. Hiện được sử dụng để thử nghiệm hợp đồng thông minh và dapp.
 - **Hoodi** - Được đặt tên theo ga tàu điện ngầm Hoodi ở Bengaluru, Ấn Độ. Được sử dụng để thử nghiệm trình xác thực và nâng cấp giao thức.
@@ -195,7 +195,7 @@ Nhiều mạng thử nghiệm Ethereum được đặt tên theo các ga tàu đ
 - **Kovan** _(đã ngừng hoạt động)_ - Được đặt tên theo một ga tàu điện ngầm (MRT) ở Singapore.
 - **Morden** _(đã ngừng hoạt động)_ - Được đặt tên theo một ga tàu điện ngầm ở London. Mạng thử nghiệm công khai đầu tiên của Ethereum.
 
-### <Emoji text="🧪" /> Các mạng thử nghiệm chuyên biệt khác
+### <Emoji text="🧪" /> Các mạng thử nghiệm chuyên biệt khác {#other-testnets}
 
 Một số mạng thử nghiệm được tạo ra cho việc thử nghiệm ngắn hạn hoặc dành riêng cho bản nâng cấp và không nhất thiết phải theo chủ đề tàu điện ngầm:
 
@@ -204,12 +204,12 @@ Một số mạng thử nghiệm được tạo ra cho việc thử nghiệm ng�
 
 Việc sử dụng tên các ga tàu điện ngầm giúp các nhà phát triển nhanh chóng xác định và ghi nhớ các mạng thử nghiệm mà không cần phải dựa vào ID chuỗi bằng số. Nó cũng phản ánh văn hóa của Ethereum: thiết thực, toàn cầu và lấy con người làm trung tâm.
 
-## Các công cụ liên quan
+## Các công cụ liên quan {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _danh sách các mạng lưới EVM để kết nối ví và nhà cung cấp với ID Chuỗi và ID Mạng lưới phù hợp_
 - [Các chuỗi dựa trên EVM](https://github.com/ethereum-lists/chains) _kho lưu trữ GitHub về siêu dữ liệu chuỗi cung cấp sức mạnh cho Chainlist_
 
-## Đọc thêm
+## Đọc thêm {#further-reading}
 
 - [Đề xuất: Vòng đời mạng thử nghiệm Ethereum có thể dự đoán được](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Sự tiến hóa của các mạng thử nghiệm Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

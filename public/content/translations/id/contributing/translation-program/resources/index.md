@@ -23,7 +23,7 @@ Anda dapat menemukan beberapa panduan dan alat yang berguna untuk penerjemah eth
 
 ## Komunitas {#communities}
 
-- [Grup terjemahan Discord khusus bahasa](https://discord.gg/ethereum-org)
+- [Grup terjemahan Discord khusus bahasa](/discord/)
   _– sebuah inisiatif untuk menghubungkan penerjemah ethereum.org ke Grup Terjemahan_
 - [Grup penerjemah bahasa Mandarin](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Halaman Notion untuk koordinasi yang lebih mudah antara penerjemah bahasa Mandarin_
@@ -39,7 +39,7 @@ Untuk terus mengikuti perkembangan terbaru Program Terjemahan, Anda dapat mengik
 
 ## Jam konsultasi untuk penerjemah {#office-hours}
 
-Kami memiliki jam konsultasi untuk penerjemah pada hari Rabu minggu kedua setiap bulannya. Sesi ini diadakan di saluran suara #office-hours di [Discord ethereum.org](https://discord.gg/ethereum-org), di mana Anda juga dapat menemukan waktu yang tepat dan detail tambahan.
+Kami memiliki jam konsultasi untuk penerjemah pada hari Rabu minggu kedua setiap bulannya. Sesi ini diadakan di saluran suara #office-hours di [Discord ethereum.org](/discord/), di mana Anda juga dapat menemukan waktu yang tepat dan detail tambahan.
 
 Jam konsultasi memungkinkan penerjemah kami untuk mengajukan pertanyaan tentang proses terjemahan, memberikan umpan balik pada program, membagikan ide mereka, atau sekadar mengobrol dengan tim inti ethereum.org.
 Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan perkembangan terbaru dengan Program Terjemahan dan membagikan kiat serta instruksi utama kepada kontributor kami.

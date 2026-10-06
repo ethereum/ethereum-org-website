@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/server-components/index.md",
-  "generatedAt": "2026-06-18T00:18:26.999Z",
-  "rootHash": "ab55bb4d8808",
+  "generatedAt": "2026-09-30T18:25:46.324Z",
+  "rootHash": "14f8fc94cc0f",
   "tree": {
-    "contentHash": "d5c5f52fa1e9",
-    "anchorHash": "5750d1e8e2f0",
+    "contentHash": "02e0c6cfb6d4",
+    "anchorHash": "fec5ad10e05b",
     "children": {
       "frontmatter:title": {
-        "contentHash": "915622c198a5",
+        "contentHash": "56a48a830f91",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,32 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "99cf97df2bff"
+        "contentHash": "578e44c27087",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "d4f0bc5a29de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "b3eacd33433b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "65a407718f00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -109,7 +133,7 @@
         ]
       },
       "sample-program": {
-        "contentHash": "78fbb9b2f719",
+        "contentHash": "db723ad3cd8c",
         "anchorHash": "cff200d25332",
         "labelHash": "ac877aef861a",
         "children": {
@@ -166,7 +190,7 @@
             "anchorHash": "06bf4af99102"
           },
           "how-it-works": {
-            "contentHash": "a24d485a35ac",
+            "contentHash": "bce270f2b703",
             "anchorHash": "afa12cb65c58",
             "labelHash": "c3f15799af50",
             "children": {
@@ -179,7 +203,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "src-app-ts": {
-                "contentHash": "a6223562e928",
+                "contentHash": "1d6d01de2c05",
                 "anchorHash": "19099b6b86e2",
                 "labelHash": "75694c06dbf4",
                 "children": {
@@ -200,7 +224,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "_auto:creating-the-prerequisite-objects": {
-                    "contentHash": "1c4332d23986",
+                    "contentHash": "cb2cc2289db9",
                     "anchorHash": "2ad03cc11c90",
                     "labelHash": "a3936b1dc8b5",
                     "children": {
@@ -237,7 +261,7 @@
                         "anchorHash": "595d2f97f098"
                       },
                       "prose:7": {
-                        "contentHash": "56a404c0558c",
+                        "contentHash": "6382af642c64",
                         "anchorHash": "e3b0c44298fc"
                       },
                       "link:3": {
@@ -951,5 +975,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

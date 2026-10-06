@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "வென் ஷிஃப்ட் ஹேப்பன்ஸ்"
 breadcrumb: "செயற்கை நுண்ணறிவு முகவர்கள்: Luna"

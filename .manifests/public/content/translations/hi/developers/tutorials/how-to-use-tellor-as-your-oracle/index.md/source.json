@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md",
   "generatedAt": "2026-06-17T00:18:16.113Z",
-  "rootHash": "c15fddc0499d",
+  "rootHash": "d942bef29af7",
   "tree": {
-    "contentHash": "5538a8daf430",
-    "anchorHash": "01cd549c2e57",
+    "contentHash": "32223c6bb2a2",
+    "anchorHash": "ad0bb62735d3",
     "children": {
       "frontmatter:title": {
         "contentHash": "1228c8dd983a",
@@ -17,15 +17,34 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ad36f50d1fbf"
+        "anchorHash": "f897592a8338"
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "a291b867fc3b"
+        "contentHash": "61ea48694575",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "9cac8d9560dd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

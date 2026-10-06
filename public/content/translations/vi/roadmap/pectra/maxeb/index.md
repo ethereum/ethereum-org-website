@@ -143,7 +143,7 @@ Có một số công cụ có sẵn để quản lý việc hợp nhất. Công 
 
 ## Câu hỏi thường gặp {#faq}
 
-### Việc chọn tham gia có thay đổi sự may mắn khi đề xuất hoặc phần thưởng của tôi không?
+### Việc chọn tham gia có thay đổi sự may mắn khi đề xuất hoặc phần thưởng của tôi không? {#change-luck-or-rewards}
 Không. Việc chọn tham gia không làm giảm cơ hội đề xuất của bạn - nhiệm vụ và việc lựa chọn đề xuất của bạn vẫn giữ nguyên. Ví dụ: nếu bạn có hai trình xác thực 32 ETH so với một trình xác thực 64 ETH, bạn sẽ có tổng cơ hội như nhau để được chọn đề xuất một khối và kiếm phần thưởng.
 ### Việc chọn tham gia có thay đổi rủi ro bị phạt cắt giảm của tôi không? {#change-slashing-risk}
 

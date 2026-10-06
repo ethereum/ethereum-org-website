@@ -26,6 +26,7 @@ import {
   getToolKey,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
+  toToolCard,
   withCategories,
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -198,7 +199,9 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                 {relatedTools.map((related) => (
                   <ToolCard
                     key={getToolKey(related)}
-                    tool={related}
+                    // Cards only read the slim projection; the detail itself
+                    // still renders from the full record above.
+                    tool={toToolCard(related)}
                     cropsNativeLabel={t("page-developers-tools-crops-native")}
                   />
                 ))}

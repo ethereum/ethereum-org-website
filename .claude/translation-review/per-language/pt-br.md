@@ -63,3 +63,37 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - ETHGlossary *context* forms (`o Nethermind`, `a linguagem Solidity`) leaked into a bare product-name enumeration.
 - `(dapps)` acronym injected into the 2013 whitepaper where the source has none.
 - Namecoin gender flips masculine/feminine within the file.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/pt-br/page-apps.json`. 14 critical, 20 warnings. Brand 8/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: pt-br affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (pt-br-specific):**
+
+- `RLP` expansion reverted per the glossary note preferring the bare acronym
+
+**Notes:**
+
+- Every acronym critical in `page-apps.json` was a glossary expansion substituted for an acronym English leaves bare: 7 keys, worst `category-dao-meta-title` at 29 -> 81 chars.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Same acronym over-expansion regressions as es (#80); `rollups de l2` / `servidor do Discord` lowercased.
+- open-access pronoun agreement `Elas forneceram` / `Eles não decidem`; `agência financeira` calque.

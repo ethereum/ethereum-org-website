@@ -41,11 +41,11 @@ authors: ["Nixo", "ماريو هافيل"]
 
 اقرأ استكشافًا مفصلاً حول <span dir="ltr">MaxEB</span> [هنا](/roadmap/pectra/maxeb/)
 
-### زيادة قدرة المعالجة لكتل البيانات (البلوب) {#7691}
+### زيادة قدرة معالجة كتل البيانات (البلوب) {#7691}
 
-توفر كتل البيانات (البلوب) [توفر البيانات](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) لشبكات الطبقة الثانية (<span dir="ltr">L2s</span>). تم تقديمها في [ترقية الشبكة السابقة](/roadmap/dencun/). 
+تُتيح كتل البيانات (البلوب) [توفر البيانات](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) لشبكات الطبقة الثانية (<span dir="ltr">L2s</span>). تم تقديمها في [ترقية الشبكة السابقة](/roadmap/dencun/).
 
-حاليًا، تستهدف الشبكة متوسط <span dir="ltr">3</span> بلوب لكل كتلة بحد أقصى <span dir="ltr">6</span> بلوب. مع [<span dir="ltr">EIP-7691</span>](https://eips.ethereum.org/EIPS/eip-7691)، سيتم زيادة متوسط عدد البلوب إلى <span dir="ltr">6</span>، بحد أقصى <span dir="ltr">9</span> لكل كتلة، مما يؤدي إلى زيادة السعة لتجميعات إيثيريوم. يساعد هذا الـ <span dir="ltr">EIP</span> في سد الفجوة حتى يتيح [<span dir="ltr">PeerDAS</span>](https://eips.ethereum.org/EIPS/eip-7594) أعدادًا أعلى من البلوب.
+قبل بيكترا، كانت الشبكة تستهدف متوسط <span dir="ltr">3</span> بلوب لكل كتلة بحد أقصى <span dir="ltr">6</span>. رفع [<span dir="ltr">EIP-7691</span>](https://eips.ethereum.org/EIPS/eip-7691) الهدف إلى <span dir="ltr">6</span> والحد الأقصى إلى <span dir="ltr">9</span> لكل كتلة، مما زاد من سعة تجميعات إيثيريوم. لقد سد الفجوة حتى [<span dir="ltr">PeerDAS</span>](https://eips.ethereum.org/EIPS/eip-7594)، والذي تم إصداره في [فوساكا](/roadmap/fusaka/) ويسمح بعدد أكبر من البلوب.
 
 ### زيادة تكلفة بيانات الاستدعاء {#7623}
 

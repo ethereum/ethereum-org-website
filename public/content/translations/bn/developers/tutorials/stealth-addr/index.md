@@ -130,7 +130,7 @@ sidebarDepth: 3
 
 #### WASM কম্পোনেন্ট {#wasm}
 
-যে সোর্স কোডটি WASM-এ কম্পাইল হয় তা [Rust](https://rust-lang.org/)-এ লেখা। আপনি এটি [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)-এ দেখতে পারেন। এই কোডটি মূলত JavaScript কোড এবং [`eth-stealth-addresses` লাইব্রেরির](https://github.com/kassandraoftroy/eth-stealth-addresses) মধ্যে একটি ইন্টারফেস।
+যে সোর্স কোডটি WASM-এ কম্পাইল হয় তা [Rust](https://rust-lang.org/)-এ লেখা। আপনি এটি [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)-এ দেখতে পারেন। এই কোডটি মূলত JavaScript কোড এবং [`eth-stealth-addresses` লাইব্রেরি](https://github.com/kassandraoftroy/eth-stealth-addresses)-এর মধ্যে একটি ইন্টারফেস।
 
 **`Cargo.toml`**
 
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) প্যাকেজটির র‍্যান্ডম মান তৈরি করা প্রয়োজন। এটি কেবল অ্যালগরিদমিক উপায়ে করা যায় না; এনট্রপি-এর উৎস হিসেবে একটি ফিজিক্যাল প্রসেসে অ্যাক্সেস প্রয়োজন। এই সংজ্ঞাটি নির্দিষ্ট করে যে আমরা যে ব্রাউজারে চলছি তাকে জিজ্ঞাসা করে সেই এনট্রপি পাব।
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) প্যাকেজটির র‍্যান্ডম মান তৈরি করা প্রয়োজন। এটি কেবল অ্যালগরিদমিক উপায়ে করা সম্ভব নয়; এনট্রপি-র উৎস হিসেবে এর একটি ফিজিক্যাল প্রসেসে অ্যাক্সেস প্রয়োজন। এই সংজ্ঞায় উল্লেখ করা হয়েছে যে আমরা যে ব্রাউজারে রান করছি, তার কাছে অনুরোধ করে আমরা সেই এনট্রপি পাব।
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-যখন WASM কোড প্যানিক করে এবং চলতে পারে না, তখন [এই লাইব্রেরিটি](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) আমাদের আরও অর্থপূর্ণ এরর মেসেজ দেয়।
+[এই লাইব্রেরিটি](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) আমাদের আরও অর্থবহ এরর মেসেজ দেয় যখন WASM কোড প্যানিক করে এবং আর চলতে পারে না।
 
 ```toml
 [lib]
@@ -172,9 +172,9 @@ WASM কোড তৈরি করার জন্য প্রয়োজন�
 use wasm_bindgen::prelude::*;
 ```
 
-Rust থেকে একটি WASM প্যাকেজ তৈরি করার সংজ্ঞা। এগুলো [এখানে](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) নথিভুক্ত করা আছে।
+Rust থেকে একটি WASM প্যাকেজ তৈরি করার সংজ্ঞা। এগুলো [এখানে](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) ডকুমেন্ট করা আছে।
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,13 +188,13 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust সাধারণত মানের জন্য বাইট [অ্যারে](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) ব্যবহার করে। কিন্তু JavaScript-এ, আমরা সাধারণত হেক্সাডেসিমাল স্ট্রিং ব্যবহার করি। [`hex` লাইব্রেরিটি](https://docs.rs/hex/latest/hex/) আমাদের জন্য একটি রূপ থেকে অন্য রূপে অনুবাদ করে।
+Rust সাধারণত মানগুলোর জন্য বাইট [অ্যারে](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) ব্যবহার করে। কিন্তু JavaScript-এ, আমরা সাধারণত হেক্সাডেসিমাল স্ট্রিং ব্যবহার করি। [`hex` লাইব্রেরি](https://docs.rs/hex/latest/hex/) আমাদের জন্য একটি রূপ থেকে অন্য রূপে অনুবাদ করে।
 
 ```rust
 #[wasm_bindgen]
 ```
 
-JavaScript থেকে এই ফাংশনটি কল করতে সক্ষম হওয়ার জন্য WASM বাইন্ডিং তৈরি করুন।
+JavaScript থেকে এই ফাংশনটি কল করতে পারার জন্য WASM বাইন্ডিং তৈরি করুন।
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
@@ -224,30 +224,30 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-JSON-এনকোড করা স্ট্রিং তৈরি করতে [`format!`](https://doc.rust-lang.org/std/fmt/index.html) ম্যাক্রো ব্যবহার করুন। অ্যারেগুলোকে হেক্স স্ট্রিংয়ে পরিবর্তন করতে [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) ব্যবহার করুন।
+JSON-এনকোড করা স্ট্রিং তৈরি করতে [`format!`](https://doc.rust-lang.org/std/fmt/index.html) ম্যাক্রো ব্যবহার করুন। অ্যারেগুলোকে হেক্স স্ট্রিং-এ পরিবর্তন করতে [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) ব্যবহার করুন।
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-এই ফাংশনটি একটি হেক্স স্ট্রিংকে (JavaScript দ্বারা প্রদত্ত) একটি বাইট অ্যারেতে পরিণত করে। JavaScript কোড দ্বারা প্রদত্ত মানগুলো পার্স করতে আমরা এটি ব্যবহার করি। Rust কীভাবে অ্যারে এবং ভেক্টর পরিচালনা করে তার কারণে এই ফাংশনটি জটিল।
+এই ফাংশনটি একটি হেক্স স্ট্রিংকে (JavaScript দ্বারা প্রদত্ত) একটি বাইট অ্যারেতে পরিণত করে। JavaScript কোড দ্বারা প্রদত্ত মানগুলো পার্স করতে আমরা এটি ব্যবহার করি। Rust কীভাবে অ্যারে এবং ভেক্টরগুলো পরিচালনা করে তার কারণে এই ফাংশনটি জটিল।
 
 `<const N: usize>` এক্সপ্রেশনটিকে একটি [জেনেরিক (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) বলা হয়। `N` হলো একটি প্যারামিটার যা রিটার্ন করা অ্যারের দৈর্ঘ্য নিয়ন্ত্রণ করে। ফাংশনটিকে আসলে `str_to_array::<n>` বলা হয়, যেখানে `n` হলো অ্যারের দৈর্ঘ্য।
 
-রিটার্ন মান হলো `Option<[u8; N]>`, যার মানে রিটার্ন করা অ্যারেটি [ঐচ্ছিক (optional)](https://doc.rust-lang.org/std/option/)। ব্যর্থ হতে পারে এমন ফাংশনগুলোর জন্য এটি Rust-এ একটি সাধারণ প্যাটার্ন।
+রিটার্ন ভ্যালু হলো `Option<[u8; N]>`, যার মানে রিটার্ন করা অ্যারেটি [ঐচ্ছিক (optional)](https://doc.rust-lang.org/std/option/)। এটি Rust-এ এমন ফাংশনগুলোর জন্য একটি সাধারণ প্যাটার্ন যা ব্যর্থ হতে পারে।
 
-উদাহরণস্বরূপ, যদি আমরা `str_to_array::10("bad060a7")` কল করি, তবে ফাংশনটির একটি দশ-মানের অ্যারে রিটার্ন করার কথা, কিন্তু ইনপুটটি কেবল চার বাইটের। ফাংশনটিকে ব্যর্থ হতে হবে, এবং এটি `None` রিটার্ন করে তা করে। `str_to_array::4("bad060a7")`-এর রিটার্ন মান হবে `Some<[0xba, 0xd0, 0x60, 0xa7]>`।
+উদাহরণস্বরূপ, যদি আমরা `str_to_array::10("bad060a7")` কল করি, তবে ফাংশনটির একটি দশ-মানের অ্যারে রিটার্ন করার কথা, কিন্তু ইনপুটটি মাত্র চার বাইটের। ফাংশনটিকে ব্যর্থ হতে হবে, এবং এটি `None` রিটার্ন করে তা করে। `str_to_array::4("bad060a7")`-এর রিটার্ন ভ্যালু হবে `Some<[0xba, 0xd0, 0x60, 0xa7]>`।
 
 ```rust
-    // decode Result<Vec<u8>, _> রিটার্ন করে
+    // decode Result<Vec<u8>, _> ফেরত দেয়
     let vec = decode(s).ok()?;
 ```
 
 [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) ফাংশনটি একটি `Result<Vec<u8>, FromHexError>` রিটার্ন করে। [`Result`](https://doc.rust-lang.org/std/result/) টাইপে একটি সফল ফলাফল (`Ok(value)`) বা একটি এরর (`Err(error)`) থাকতে পারে।
 
-`.ok()` মেথডটি `Result`-কে একটি `Option`-এ পরিণত করে, যার মান সফল হলে `Ok()` মান হয় অথবা না হলে `None` হয়। সবশেষে, [প্রশ্নবোধক চিহ্ন অপারেটর](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) বর্তমান ফাংশনগুলোকে বাতিল করে এবং `Option` খালি থাকলে একটি `None` রিটার্ন করে। অন্যথায়, এটি মানটিকে আনর‍্যাপ (unwrap) করে এবং সেটি রিটার্ন করে (এই ক্ষেত্রে, `vec`-এ একটি মান অ্যাসাইন করতে)।
+`.ok()` মেথডটি `Result`-কে একটি `Option`-এ পরিণত করে, যার মান সফল হলে `Ok()` মান অথবা না হলে `None` হয়। সবশেষে, [প্রশ্নবোধক চিহ্ন অপারেটর](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) বর্তমান ফাংশনগুলোকে বাতিল করে এবং `Option` খালি থাকলে একটি `None` রিটার্ন করে। অন্যথায়, এটি মানটিকে আনর‍্যাপ করে এবং সেটি রিটার্ন করে (এই ক্ষেত্রে, `vec`-এ একটি মান অ্যাসাইন করতে)।
 
-এররগুলো পরিচালনা করার জন্য এটি একটি অদ্ভুত জটিল পদ্ধতি বলে মনে হতে পারে, তবে `Result` এবং `Option` নিশ্চিত করে যে সমস্ত এরর কোনো না কোনোভাবে পরিচালিত হয়।
+এটি এররগুলো পরিচালনা করার জন্য একটি অদ্ভুতভাবে জটিল পদ্ধতি বলে মনে হতে পারে, তবে `Result` এবং `Option` নিশ্চিত করে যে সমস্ত এরর কোনো না কোনোভাবে পরিচালিত হয়।
 
 ```rust
     if vec.len() != N { return None; }
@@ -256,7 +256,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 যদি বাইটের সংখ্যা ভুল হয়, তবে এটি একটি ব্যর্থতা, এবং আমরা `None` রিটার্ন করি।
 
 ```rust
-    // try_into vec কনজিউম করে এবং [u8; N] তৈরি করার চেষ্টা করে
+    // try_into vec গ্রহণ করে এবং [u8; N] তৈরি করার চেষ্টা করে
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
@@ -267,16 +267,16 @@ Rust-এ দুটি অ্যারে টাইপ রয়েছে। [অ
 }
 ```
 
-একটি ফাংশনের শেষে কোনো মান রিটার্ন করার সময় Rust-এ আপনাকে [`return`](https://doc.rust-lang.org/std/keyword.return.html) কীওয়ার্ড ব্যবহার করতে হয় না।
+কোনো ফাংশনের শেষে একটি মান রিটার্ন করার সময় Rust-এ আপনাকে [`return`](https://doc.rust-lang.org/std/keyword.return.html) কীওয়ার্ড ব্যবহার করতে হয় না।
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-এই ফাংশনটি একটি পাবলিক মেটা-ঠিকানা গ্রহণ করে, যার মধ্যে *V<sub>pub</sub>* এবং *K<sub>pub</sub>* উভয়ই অন্তর্ভুক্ত থাকে। এটি গোপন ঠিকানা, প্রকাশ করার জন্য পাবলিক কী (*R<sub>pub</sub>*) এবং একটি এক-বাইট স্ক্যান মান রিটার্ন করে যা প্রকাশিত ঠিকানাগুলোর মধ্যে কোনটি অ্যালিসের হতে পারে তা শনাক্ত করার গতি বাড়ায়।
+এই ফাংশনটি একটি পাবলিক মেটা-ঠিকানা গ্রহণ করে, যার মধ্যে *V<sub>pub</sub>* এবং *K<sub>pub</sub>* উভয়ই অন্তর্ভুক্ত থাকে। এটি গোপন ঠিকানা, প্রকাশ করার জন্য পাবলিক কী (*R<sub>pub</sub>*), এবং একটি এক-বাইট স্ক্যান মান রিটার্ন করে যা প্রকাশিত ঠিকানাগুলোর মধ্যে কোনটি অ্যালিসের হতে পারে তা শনাক্তকরণকে ত্বরান্বিত করে।
 
-স্ক্যান মানটি শেয়ার্ড সিক্রেটের (*S = GR<sub>priv</sub>V<sub>priv</sub>*) অংশ। এই মানটি অ্যালিসের কাছে উপলব্ধ, এবং *f(K<sub>pub</sub>+G\*hash(S))* প্রকাশিত ঠিকানার সমান কি না তা পরীক্ষা করার চেয়ে এটি পরীক্ষা করা অনেক দ্রুত।
+স্ক্যান মানটি শেয়ার্ড সিক্রেটের (*S = GR<sub>priv</sub>V<sub>priv</sub>*) অংশ। এই মানটি অ্যালিসের কাছে উপলব্ধ, এবং *f(K<sub>pub</sub>+G\*hash(S))* প্রকাশিত ঠিকানার সমান কি না তা চেক করার চেয়ে এটি চেক করা অনেক দ্রুত।
 
 ```rust
     let (address, r_pub, scan) = 
@@ -310,7 +310,7 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-এই ফাংশনটি ঠিকানা থেকে অর্থ তোলার প্রাইভেট কী (*R<sub>priv</sub>*) হিসাব করতে লাইব্রেরির [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) ব্যবহার করে। এই হিসাবের জন্য এই মানগুলো প্রয়োজন:
+এই ফাংশনটি ঠিকানা থেকে অর্থ উত্তোলনের জন্য প্রাইভেট কী (*R<sub>priv</sub>*) গণনা করতে লাইব্রেরির [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) ব্যবহার করে। এই গণনার জন্য এই মানগুলোর প্রয়োজন:
 
 - ঠিকানা (*Address=f(P<sub>pub</sub>)*)
 - বিল দ্বারা তৈরি করা পাবলিক কী (*R<sub>pub</sub>*)
@@ -338,7 +338,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-এরপরে একটি স্ট্যাক ট্রেস থাকবে। তারপর বিলকে বৈধ মেটা-ঠিকানা দিন এবং অ্যালিসকে একটি অবৈধ ঠিকানা বা একটি অবৈধ পাবলিক কী দিন। আপনি এই এররটি দেখতে পাবেন:
+এরপরে একটি স্ট্যাক ট্রেস থাকবে। তারপর বিলকে বৈধ মেটা-ঠিকানা দিন, এবং অ্যালিসকে একটি অবৈধ ঠিকানা বা একটি অবৈধ পাবলিক কী দিন। আপনি এই এররটি দেখতে পাবেন:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -349,9 +349,9 @@ keys do not generate stealth address
 
 #### ইউজার ইন্টারফেস {#ui}
 
-ইউজার ইন্টারফেসটি [React](https://react.dev/) ব্যবহার করে লেখা হয়েছে এবং [Vite](https://vite.dev/) দ্বারা সার্ভ করা হয়েছে। আপনি [এই টিউটোরিয়ালটি](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) ব্যবহার করে এগুলো সম্পর্কে জানতে পারেন। এখানে [Wagmi](https://wagmi.sh/)-এর কোনো প্রয়োজন নেই কারণ আমরা সরাসরি কোনো ব্লকচেইন বা ওয়ালেট-এর সাথে ইন্টারঅ্যাক্ট করি না।
+ইউজার ইন্টারফেসটি [React](https://react.dev/) ব্যবহার করে লেখা হয়েছে এবং [Vite](https://vite.dev/) দ্বারা পরিবেশিত হয়। আপনি [এই টিউটোরিয়ালটি](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) ব্যবহার করে এগুলো সম্পর্কে জানতে পারেন। এখানে [Wagmi](https://wagmi.sh/)-এর কোনো প্রয়োজন নেই কারণ আমরা সরাসরি কোনো ব্লকচেইন বা ওয়ালেটের সাথে ইন্টারঅ্যাক্ট করি না।
 
-ইউজার ইন্টারফেসের একমাত্র অস্পষ্ট অংশ হলো WASM কানেক্টিভিটি। এটি যেভাবে কাজ করে তা নিচে দেওয়া হলো।
+ইউজার ইন্টারফেসের একমাত্র অস্পষ্ট অংশ হলো WASM কানেক্টিভিটি। এটি কীভাবে কাজ করে তা নিচে দেওয়া হলো।
 
 **`vite.config.js`**
 
@@ -378,7 +378,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-যখন আমরা [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) ব্যবহার করি, তখন এটি দুটি ফাইল তৈরি করে যা আমরা এখানে ব্যবহার করি: আসল কোডসহ একটি wasm ফাইল (এখানে, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) এবং এটি ব্যবহার করার সংজ্ঞাসহ একটি JavaScript ফাইল (এখানে, `src/rust_wasm/pkg/rust_wasm.js`)। সেই JavaScript ফাইলের ডিফল্ট এক্সপোর্ট হলো সেই কোড যা WASM ইনিশিয়েট করার জন্য চালাতে হয়।
+যখন আমরা [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) ব্যবহার করি, তখন এটি দুটি ফাইল তৈরি করে যা আমরা এখানে ব্যবহার করি: আসল কোডসহ একটি wasm ফাইল (এখানে, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) এবং এটি ব্যবহার করার সংজ্ঞাসহ একটি JavaScript ফাইল (এখানে, `src/rust-wasm/pkg/rust_wasm.js`)। সেই JavaScript ফাইলের ডিফল্ট এক্সপোর্ট হলো সেই কোড যা WASM ইনিশিয়েট করার জন্য রান করতে হবে।
 
 ```jsx
 function App() {
@@ -403,7 +403,7 @@ function App() {
 
 [`useEffect` হুক](https://react.dev/reference/react/useEffect) আপনাকে এমন একটি ফাংশন নির্দিষ্ট করতে দেয় যা স্টেট ভেরিয়েবলগুলো পরিবর্তিত হলে এক্সিকিউট হয়। এখানে, স্টেট ভেরিয়েবলের তালিকাটি খালি (`[]`), তাই পৃষ্ঠাটি লোড হওয়ার সময় এই ফাংশনটি কেবল একবার এক্সিকিউট হয়।
 
-ইফেক্ট ফাংশনটিকে সাথে সাথে রিটার্ন করতে হয়। অ্যাসিনক্রোনাস কোড ব্যবহার করতে, যেমন WASM `init` (যাকে `.wasm` ফাইলটি লোড করতে হয় এবং তাই সময় নেয়) আমরা একটি অভ্যন্তরীণ [`async`](https://en.wikipedia.org/wiki/Async/await) ফাংশন সংজ্ঞায়িত করি এবং এটিকে কোনো `await` ছাড়াই চালাই।
+ইফেক্ট ফাংশনটিকে অবিলম্বে রিটার্ন করতে হবে। অ্যাসিনক্রোনাস কোড ব্যবহার করতে, যেমন WASM `init` (যাকে `.wasm` ফাইলটি লোড করতে হয় এবং তাই সময় নেয়) আমরা একটি অভ্যন্তরীণ [`async`](https://en.wikipedia.org/wiki/Async/await) ফাংশন সংজ্ঞায়িত করি এবং এটিকে কোনো `await` ছাড়াই রান করি।
 
 **`Bill.jsx`**
 
@@ -413,7 +413,7 @@ function App() {
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-ডিফল্ট এক্সপোর্ট ছাড়াও, `wasm-pack` দ্বারা তৈরি করা JavaScript কোডটি WASM কোডের প্রতিটি ফাংশনের জন্য একটি ফাংশন এক্সপোর্ট করে।
+ডিফল্ট এক্সপোর্ট ছাড়াও, `wasm-pack` দ্বারা জেনারেট করা JavaScript কোড WASM কোডের প্রতিটি ফাংশনের জন্য একটি ফাংশন এক্সপোর্ট করে।
 
 ```jsx
             <button onClick={() => {
@@ -421,11 +421,11 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-WASM ফাংশনগুলো কল করতে, আমরা কেবল `wasm-pack` দ্বারা তৈরি করা JavaScript ফাইলের এক্সপোর্ট করা ফাংশনটিকে কল করি।
+WASM ফাংশনগুলো কল করতে, আমরা কেবল `wasm-pack` দ্বারা তৈরি JavaScript ফাইল দ্বারা এক্সপোর্ট করা ফাংশনটিকে কল করি।
 
 **`Alice.jsx`**
 
-`Alice.jsx`-এর কোডটি প্রায় একই রকম, তবে অ্যালিসের দুটি কাজ রয়েছে:
+`Alice.jsx`-এর কোডটি অনুরূপ, তবে অ্যালিসের দুটি কাজ রয়েছে:
 
 - একটি মেটা-ঠিকানা তৈরি করা
 - বিল দ্বারা প্রকাশিত একটি ঠিকানার জন্য প্রাইভেট কী পাওয়া

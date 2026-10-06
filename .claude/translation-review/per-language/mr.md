@@ -73,3 +73,45 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 
 - `title` renders "the curious" as `उत्सुक` (eager, keen) where `जिज्ञासू` (inquisitive) is the precise match; hi used `जिज्ञासु` correctly on the same string.
 
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.4/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/mr/page-apps.json`. 9 critical, 14 warnings. Brand 7/10 | Technical 7/10 | Semantic 8/10 | Consistency 6/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: mr affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DAO, DEX** left expanded, mr has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (mr-specific):**
+
+- `पायथन-आधारित` -> `Python-आधारित` (4 sites) and `रस्ट-आधारित` -> `Rust-आधारित`; the same file already kept both Latin at line 139
+- `असर्शन लायब्ररी` -> `दृढकथन लायब्ररी`; the file uses `दृढकथन` 7x
+- whitehat parenthetical: the dropped appositive `म्हणून वर्णन केले जाते)` was restored rather than just appending a bare `)`
+
+**Deliberately not fixed:**
+
+- `Keccak-256` de-transliteration: the mr entry says `केकाक-256` while the cross-cutting rule lists Keccak as always-Latin. Upstream conflict, not a one-string revert
+
+**Notes:**
+
+- "Prerequisites" rotated into three different renderings across the three files this PR touched (31/21/14 locale-wide): needs a sweep, not a point edit.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `zk-rollups:183,189`, `roadmap/privacy:116` `इथरियम` -> `इथेरियम`.
+- privacy-online: at-rest `विश्रांतीच्या वेळी` -> `संग्रहित स्थितीत`; `फार कमी जण` -> `फार कमी VPN`; `स्थानानुसार ठेवू` -> `स्थान ओळखू`.
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `server-components` `वेब3` (always_latin Web3), `डेंकुन` x10 vs `डेन्कन्`.
+- useroperation `वापरकर्ता ऑपरेशन्स` vs `वापरकर्ता कार्य`; DAS half-translated; mainnet `मुख्यनेट`/`मेननेट` split.

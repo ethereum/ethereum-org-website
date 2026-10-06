@@ -8,8 +8,6 @@ duration: "0:26:15"
 educationLevel: advanced
 topic:
   - "scaling-and-layer-2"
-  - "rollups"
-  - "layer-2"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "L2-களின் நிலை"

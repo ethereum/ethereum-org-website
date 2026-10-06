@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "accounts"
-  - "cryptography"
+  - "how-ethereum-works"
 format: tutorial
 author: "অস্টিন গ্রিফিথ"
 breadcrumb: "কী পেয়ার (ETH.BUILD)"

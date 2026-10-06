@@ -1,35 +1,54 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/stories/argentinian-builders/index.md",
   "generatedAt": "2026-06-30T00:56:03.321Z",
-  "rootHash": "07239d461174",
+  "rootHash": "018d0eecf5d1",
   "tree": {
-    "contentHash": "7526dd41a12f",
-    "anchorHash": "dc2b928bb4bb",
+    "contentHash": "b0fedaf66313",
+    "anchorHash": "374e12e4f6d8",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a753e88080c6",
+        "contentHash": "a219f1e8d212",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "8f09996a06d3",
+        "contentHash": "8b581ab6fc50",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6aadb314782a"
+        "anchorHash": "0ef43a7b3495"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "173ad61b14fe"
+        "anchorHash": "d28a9d9c1118"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "0728beb04b7b",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "a68dea7509a7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "1f81818d27cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "f354ee99e2bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bb73a1a15d6b"
+        "anchorHash": "c4f54519a803"
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",

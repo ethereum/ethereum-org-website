@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Erfahre mehr über das Fusaka-Protokoll-Upgrade
+description: "Erfahre mehr über das Fusaka-Protokoll-Upgrade"
 lang: de
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ Das Fusaka-Upgrade ist nur ein einzelner Schritt in Ethereums langfristigen Entw
 
 Dies ist das _Hauptmerkmal_ des Fusaka-Forks, die wichtigste Funktion, die in diesem Upgrade hinzugefügt wurde. Layer 2 (L2) veröffentlichen ihre Daten derzeit in Blobs auf Ethereum, dem flüchtigen Datentyp, der speziell für Layer 2 (L2) erstellt wurde. Vor Fusaka muss jeder Full Node jeden Blob speichern, um sicherzustellen, dass die Daten existieren. Da der Blob-Transaktionsdurchsatz steigt, wird das Herunterladen all dieser Daten unhaltbar ressourcenintensiv.
 
-Mit [Data Availability Sampling (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) wird jeder Knoten für eine Teilmenge der Blob-Daten verantwortlich sein, anstatt alle Blob-Daten speichern zu müssen. Blobs werden gleichmäßig und zufällig über die Knoten im Netzwerk verteilt, wobei jeder Full Node nur 1/8 der Daten hält, was eine theoretische Skalierung um das 8-fache ermöglicht. Um die Verfügbarkeit der Daten sicherzustellen, kann jeder Teil der Daten aus beliebigen vorhandenen 50 % des Ganzen rekonstruiert werden, mit Methoden, die die Wahrscheinlichkeit falscher oder fehlender Daten auf ein kryptografisch vernachlässigbares Niveau senken (~eins zu 10<sup>20</sup> bis eins zu 10<sup>24</sup>).
+Mit [Data Availability Sampling (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) wird jeder Knoten für eine Teilmenge der Blob-Daten verantwortlich sein, anstatt alle Blob-Daten speichern zu müssen. Blobs werden gleichmäßig und zufällig über die Knoten im Netzwerk verteilt, wobei jeder Full Node nur 1/8 der Daten hält, was eine theoretische Skalierung um das 8-fache ermöglicht. Um die Verfügbarkeit der Daten sicherzustellen, kann jeder Teil der Daten aus beliebigen vorhandenen 50 % des Ganzen rekonstruiert werden, mit Methoden, die die Wahrscheinlichkeit falscher oder fehlender Daten auf ein kryptografisch vernachlässigbares Niveau senken (\~eins zu 10<sup>20</sup> bis eins zu 10<sup>24</sup>).
 
 Dies hält die Hardware- und Bandbreitenanforderungen für Knoten vertretbar, während die Blob-Skalierung ermöglicht wird, was zu mehr Skalierung mit geringeren Gebühren für Layer 2 (L2) führt.
 
@@ -135,11 +135,11 @@ Das Ziel ist es, die Worst-Case-Verbreitungs-/Validierungszeit zu begrenzen und 
 
 #### Standard-Gaslimit auf 60 Millionen festlegen {#set-default-gas-limit-to-60-million}
 
-Vor der Erhöhung des Gaslimits von 30 Mio. auf 36 Mio. im Februar 2025 (und anschließend auf 45 Mio.) hatte sich dieser Wert seit dem Merge (September 2022) nicht geändert. Dieses EIP zielt darauf ab, konsistente Skalierung zu einer Priorität zu machen.
+Bevor das Gaslimit im Februar 2025 von 30 Mio. auf 36 Mio. (und anschließend auf 45 Mio.) angehoben wurde, hatte sich dieser Wert seit dem Merge (September 2022) nicht geändert. Dieser Ethereum-Verbesserungsvorschlag (EIP) zielt darauf ab, eine konsistente Skalierung zu einer Priorität zu machen.
 
-EIP-7935 koordiniert die EL-Client-Teams, um das Standard-Gaslimit für Fusaka über die heutigen 45 Mio. anzuheben. Es ist ein informatives EIP, aber es fordert Clients ausdrücklich auf, höhere Limits auf Devnets zu testen, sich auf einen sicheren Wert zu einigen und diese Zahl in ihren Fusaka-Releases auszuliefern.
+EIP-7935 koordinierte die Teams der Ausführungsschicht-Clients (EL-Clients), um das Standard-Gaslimit über die 45 Mio. anzuheben, die vor Fusaka galten. Es handelt sich um ein informatives EIP, das die Clients jedoch ausdrücklich aufforderte, höhere Limits in Devnets zu testen, sich auf einen sicheren Wert zu einigen und diese Zahl in ihren Fusaka-Releases auszuliefern.
 
-Die Devnet-Planung zielt auf eine Belastung von ~60 Mio. (volle Blöcke mit synthetischer Last) und iterative Erhöhungen ab; die Forschung besagt, dass Worst-Case-Blockgrößen-Pathologien nicht unter ~150 Mio. binden sollten. Der Rollout sollte mit der Obergrenze für das Transaktions-Gaslimit (EIP-7825) gekoppelt werden, damit keine einzelne Transaktion dominieren kann, wenn die Limits steigen.
+Devnet-Tests zielten auf ~60 Mio. unter Stress (volle Blöcke mit synthetischer Last) mit iterativen Erhöhungen ab; die Forschung besagt, dass Worst-Case-Blockgrößen-Pathologien nicht unter ~150 Mio. limitierend wirken sollten. Die Einführung wurde mit der Obergrenze für das Transaktions-Gaslimit (EIP-7825) gekoppelt, sodass keine einzelne Transaktion dominieren kann, wenn die Limits steigen. Die Clients lieferten 60 Mio. als Fusaka-Standard aus.
 
 **Ressourcen**: [Technische Spezifikation zu EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -253,7 +253,7 @@ Reguläre Knoten ohne Validatoren abonnieren nur 4 Subnetze und übernehmen die 
 
 Wenn der Knoten für einen Validator-Client verwendet wird, muss er mehr Spalten verwahren und daher mehr Daten verarbeiten. Wenn ein Validator hinzugefügt wird, abonniert der Knoten mindestens 8 Spalten-Subnetze und verarbeitet daher doppelt so viele Daten wie ein regulärer Knoten, aber immer noch weniger als vor Fusaka. Wenn das Validator-Guthaben über 287 ETH liegt, werden immer mehr Subnetze abonniert.
 
-Für einen Solo-Staker bedeutet dies, dass seine Festplattennutzung und Download-Bandbreite um etwa 50 % sinken werden. Um jedoch Blöcke lokal zu erstellen und alle Blobs in das Netzwerk hochzuladen, wird mehr Upload-Bandbreite benötigt. Lokale Builder werden zum Zeitpunkt von Fusaka eine 2-3-mal höhere Upload-Bandbreite als zuvor benötigen, und mit dem BPO2-Ziel von 15/21 Blobs muss die endgültig erforderliche Upload-Bandbreite etwa 5-mal höher sein, bei 100 Mbit/s.
+Für einen Solo-Staker bedeutet dies, dass seine Festplattennutzung und Download-Bandbreite um etwa 50 % sinken werden. Um jedoch Blöcke lokal zu erstellen und alle Blobs in das Netzwerk hochzuladen, wird mehr Upload-Bandbreite benötigt. Lokale Builder werden zum Zeitpunkt von Fusaka eine 2- bis 3-mal höhere Upload-Bandbreite als zuvor benötigen, und mit dem BPO2-Ziel von 15/21 Blobs muss die letztendlich erforderliche Upload-Bandbreite etwa 5-mal höher sein, bei 100 Mbit/s.
 
 #### Große Validatoren {#large-validators}
 

@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Quyền riêng tư"
@@ -78,13 +77,13 @@ Khi thuật ngữ xác thực trung thực và trình xác thực trung thực x
 
 Giá trị có thể trích xuất của thợ đào (MEV) là một thực tế đáng ghê tởm của Ethereum. Nó cũng có nguồn gốc từ sự thiếu hụt quyền riêng tư. Chính bản chất công khai của các giao dịch DEX cho phép chúng dễ dàng bị tấn công sandwich bởi các trình xác thực. Sẽ khó hơn nhiều, có lẽ không phải là không thể, nhưng khó hơn nhiều để tấn công sandwich các giao dịch nếu bạn không thể nhìn thấy các nguyên tắc kinh tế cơ bản của chúng. Nhưng tôi không chỉ muốn quyền riêng tư ở lớp cơ sở như một cách để ngăn cản MEV. Tôi muốn nó như một cách để bảo vệ các trình xác thực.
 
-### Các nghĩa vụ có thể thực thi về mặt pháp lý của trình xác thực (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Nghĩa vụ có thể thực thi về mặt pháp lý của các trình xác thực (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Nước cờ lớn hơn của DOJ trong vụ án Pereira Bueno là các trình xác thực có các nghĩa vụ có thể thực thi về mặt pháp lý đối với nhau do bản chất công khai của các giao dịch mà họ xác thực. Và nếu những nghĩa vụ đó bị vi phạm, các trình xác thực, tôi nghĩ họ nghĩ vậy, nên kiện lẫn nhau. Và nếu họ không làm vậy, nhà nước, Quận Nam New York, nên truy tố các trình xác thực không trung thực vì tội phạm. Và điều này không chỉ dừng lại ở tội lừa đảo qua mạng. Nếu bạn có thể nhìn thấy một giao dịch rửa tiền hoặc có thể đã nhìn thấy nó bằng cách sử dụng phân tích Chuỗi khối, thì làm sao bạn lại không đồng lõa trong vụ rửa tiền đó?
+Nước cờ lớn hơn của Bộ Tư pháp (DOJ) trong vụ án Pereira Bueno là các trình xác thực có những nghĩa vụ có thể thực thi về mặt pháp lý với nhau do tính chất công khai của các giao dịch mà họ xác thực. Và nếu những nghĩa vụ đó bị vi phạm, tôi nghĩ họ cho rằng các trình xác thực nên kiện lẫn nhau. Và nếu họ không làm vậy, nhà nước, Quận Nam New York, nên truy tố các trình xác thực không trung thực vì tội phạm. Và điều này không chỉ dừng lại ở tội lừa đảo qua mạng. Nếu bạn có thể nhìn thấy một giao dịch rửa tiền hoặc có thể đã nhìn thấy nó bằng cách sử dụng phân tích Chuỗi khối, thì làm sao bạn lại không đồng lõa trong vụ rửa tiền đó?
 
-Nếu bạn xây dựng trên một phiên bản của Chuỗi có chứa các giao dịch bị trừng phạt, bạn có phải là đồng lõa trong việc trốn tránh lệnh trừng phạt không? Nếu bạn đưa các giao dịch gian lận trị giá hàng tỷ đô la vào sổ cái, có lẽ bạn nên bị buộc phải đảo ngược chúng. Và sự nhắm mắt làm ngơ có chủ ý không phải là một lời bào chữa. Bạn không thể đơn giản nói rằng bạn đã quyết định không sử dụng một công cụ có sẵn rộng rãi như phân tích chuỗi. Việc cố tình phớt lờ tất cả các kiến thức vốn có trong Chuỗi khối công khai vẫn có thể dẫn đến các cáo buộc hình sự tiềm ẩn và sẽ luôn bị truy tố như vậy.
+Nếu bạn xây dựng trên một phiên bản của Chuỗi có chứa các giao dịch bị trừng phạt, chẳng phải bạn đang đồng lõa trong việc trốn tránh trừng phạt sao? Nếu bạn đưa các giao dịch gian lận trị giá hàng tỷ đô la vào sổ cái, có lẽ bạn nên bị buộc phải hoàn tác chúng. Và việc cố tình làm ngơ không phải là một lời bào chữa. Bạn không thể đơn giản nói rằng bạn đã quyết định không sử dụng một công cụ có sẵn rộng rãi như phân tích Chuỗi. Việc cố tình phớt lờ tất cả những kiến thức vốn có trong Chuỗi khối công khai vẫn có thể dẫn đến các cáo buộc hình sự tiềm ẩn và sẽ luôn bị truy tố như vậy.
 
-Sự nhắm mắt làm ngơ có chủ ý không phải là một lời bào chữa, nhưng sự mù quáng thực sự (không thể nhìn thấy) thì có. Vì vậy, nếu bạn thực sự muốn tính không cần tin cậy, nếu bạn thực sự muốn cơ sở hạ tầng trung lập, nếu bạn muốn những đường ống câm (dumb pipes), thì những đường ống đó cần phải thực sự mù quáng trước những gì chảy qua chúng.
+Việc cố tình làm ngơ không phải là một lời bào chữa, nhưng việc thực sự không thể nhìn thấy thì có. Vì vậy, nếu bạn thực sự muốn tính không cần niềm tin, nếu bạn thực sự muốn cơ sở hạ tầng trung lập, nếu bạn muốn những đường ống thụ động, thì các đường ống đó cần phải thực sự không nhìn thấy những gì chảy qua chúng.
 
 ### Các đường ống tài chính truyền thống và SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -129,3 +128,4 @@ Tôi nghĩ điều này cũng gây tiếng vang với các chuyên gia an ninh q
 **Peter Van Valkenburgh:** Tôi chỉ rất vui khi mọi người tìm hiểu về sứ mệnh của chúng tôi — bảo vệ quyền tự do đổi mới bằng cách sử dụng các công nghệ Chuỗi khối mở và khả năng mọi người sử dụng các công nghệ này một cách riêng tư. Nếu đó là một sứ mệnh mà bạn quan tâm, vui lòng truy cập coincenter.org. Cảm ơn vì đã cho tôi cơ hội để quảng bá. Chúng tôi là một tổ chức phi lợi nhuận được tài trợ bởi các nhà tài trợ và chúng tôi dựa vào thiện chí của những người như bạn, những người tin tưởng vào sứ mệnh của chúng tôi để tiếp tục thực hiện công việc mà chúng tôi đang làm. Cảm ơn vì cơ hội này và cảm ơn các bạn đã lắng nghe bài nói chuyện của tôi về tính trung lập.
 
 **Người dẫn chương trình:** Cảm ơn bạn rất nhiều, Peter. Tôi rất thích chiếc áo phông đó.
+

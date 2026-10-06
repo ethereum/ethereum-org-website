@@ -4,7 +4,7 @@ description: "Lista wszystkich dostępnych kodów operacji dla maszyny wirtualne
 lang: pl
 ---
 
-## Przegląd
+## Przegląd {#overview}
 
 To jest zaktualizowana wersja strony referencyjnej EVM dostępnej pod adresem [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Oparta również na [żółtej księdze](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/) oraz implementacji [geth](https://github.com/ethereum/go-ethereum).
