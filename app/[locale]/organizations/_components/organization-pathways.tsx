@@ -100,7 +100,7 @@ const OrganizationPathways = async ({
       <h2>{t("page-organizations-pathways-title")}</h2>
       <p className="text-lg text-body-medium">
         {current
-          ? t("page-organizations-pathways-enterprise-description")
+          ? t("page-organizations-pathways-subpages-description")
           : t("page-organizations-pathways-description")}
       </p>
       {current ? (

@@ -335,7 +335,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
             <div className="flex-1 rounded-4xl bg-tint-primary p-page">
-              <ul className="divide-y divide-background">
+              <ul className="ms-0 list-none divide-y divide-background">
                 {NETWORKS.map(({ key, href, logo }) => (
                   <li key={key} className="py-2 first:pt-0">
                     <BaseLink

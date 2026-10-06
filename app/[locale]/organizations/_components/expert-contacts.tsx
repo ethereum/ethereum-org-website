@@ -117,7 +117,12 @@ const ExpertContacts = async ({
         {experts.map((key) => {
           const { href, logo } = EXPERTS[key]
           return (
-            <Card key={key} href={href} size="lg">
+            <Card
+              key={key}
+              href={href}
+              size="lg"
+              className="row-span-3 grid grid-rows-subgrid gap-0"
+            >
               <CardHeader className="flex flex-row items-center gap-4">
                 <Image
                   src={logo}
