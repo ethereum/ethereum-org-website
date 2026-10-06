@@ -15,6 +15,8 @@ import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
 import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
+import { fetchDefiTvlShare } from "./fetchers/fetchDefiTvlShare"
+import { fetchDexVolume } from "./fetchers/fetchDexVolume"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
@@ -32,10 +34,12 @@ import { fetchL2beatActivity } from "./fetchers/fetchL2beatActivity"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
+import { fetchRwaMarketShare } from "./fetchers/fetchRwaMarketShare"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
+import { fetchTotalValueSecured } from "./fetchers/fetchTotalValueSecured"
 import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
 import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { set } from "./storage"
@@ -53,6 +57,10 @@ export const KEYS = {
   GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
   L2BEAT: "fetch-l2beat",
   L2BEAT_ACTIVITY: "fetch-l2beat-activity",
+  DEFI_TVL_SHARE: "fetch-defi-tvl-share",
+  DEX_VOLUME: "fetch-dex-volume",
+  RWA_MARKET_SHARE: "fetch-rwa-market-share",
+  TOTAL_VALUE_SECURED: "fetch-total-value-secured",
   POSTS: "fetch-posts",
   RSS: "fetch-rss",
   GITHUB_REPO_DATA: "fetch-github-repo-data",
@@ -95,6 +103,10 @@ const DAILY: TaskDef[] = [
   [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
   [KEYS.L2BEAT, fetchL2beat],
   [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
+  [KEYS.DEFI_TVL_SHARE, fetchDefiTvlShare],
+  [KEYS.DEX_VOLUME, fetchDexVolume],
+  [KEYS.RWA_MARKET_SHARE, fetchRwaMarketShare],
+  [KEYS.TOTAL_VALUE_SECURED, fetchTotalValueSecured],
   [KEYS.POSTS, fetchAttestantPosts],
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
