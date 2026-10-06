@@ -56,7 +56,6 @@ const DEFILLAMA = {
 // TODO(data): unsourced -- see PR discussion for candidate sources
 const VALUE_SECURED_USD = 336_000_000_000
 
-const STABLECOINS_SHOWN = 12
 const STABLECOINS_PAGE_SIZE = 6
 
 // Netlify Blobs throws without credentials; degrade per-getter instead of a 500
@@ -148,7 +147,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   }))
 
   const coinDetails = stablecoinsData
-    ? buildStablecoinRows(stablecoinsData, locale).slice(0, STABLECOINS_SHOWN)
+    ? buildStablecoinRows(stablecoinsData, locale)
     : []
 
   const marketsHasError = !stablecoinsData
