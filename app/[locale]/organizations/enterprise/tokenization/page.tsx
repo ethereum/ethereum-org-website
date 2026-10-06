@@ -65,6 +65,9 @@ const VALUE_SECURED_USD = 336_000_000_000
 /** Same floor /stablecoins/ applies, so both pages list the same coins. */
 const MIN_MARKET_CAP_USD = 500_000
 
+const STABLECOINS_SHOWN = 12
+const STABLECOINS_PAGE_SIZE = 6
+
 /**
  * The data-layer getters read Netlify Blobs, whose client *throws* when its
  * credentials are missing rather than returning null. Unguarded, that failure
@@ -174,6 +177,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     })
     .filter((coin) => coin.market_cap >= MIN_MARKET_CAP_USD)
     .sort((a, b) => b.market_cap - a.market_cap)
+    .slice(0, STABLECOINS_SHOWN)
     .map(({ market_cap, ...rest }) => ({
       ...rest,
       marketCap: marketCapFormatter.format(market_cap),
@@ -301,6 +305,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StablecoinsTable
                 content={coinDetails}
                 hasError={marketsHasError}
+                pageSize={STABLECOINS_PAGE_SIZE}
               />
             </I18nProvider>
           </Section>
@@ -310,7 +315,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid gap-space-2x lg:grid-cols-3"
           >
-            <div className="flow">
+            <div className="flow lg:sticky lg:top-28 lg:self-start">
               <h2>
                 {t("page-organizations-enterprise-tokenization-assets-title")}
               </h2>

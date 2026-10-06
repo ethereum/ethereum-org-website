@@ -28,6 +28,7 @@ import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -115,7 +116,7 @@ const PROBLEM_CARDS = [
   "abstractions",
 ] as const
 
-/** Comparison cell: verdict icon stacked above the copy, with a sr-only verdict */
+/** Comparison cell: verdict icon inline before the copy, with a sr-only verdict */
 const VerdictCell = ({
   tone,
   verdict,
@@ -127,13 +128,18 @@ const VerdictCell = ({
 }) => {
   const Icon = tone === "warning" ? CircleAlert : ThumbsUp
   return (
-    <span className="flex flex-col gap-2">
+    <span className="flex items-start gap-2">
       <Icon
-        className={tone === "warning" ? "text-warning" : "text-success"}
+        className={cn(
+          "size-5 shrink-0",
+          tone === "warning" ? "text-warning" : "text-success"
+        )}
         aria-hidden
       />
-      <span className="sr-only">{verdict}</span>
-      <span>{children}</span>
+      <span>
+        <span className="sr-only">{verdict} </span>
+        {children}
+      </span>
     </span>
   )
 }

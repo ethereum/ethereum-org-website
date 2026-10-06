@@ -10,6 +10,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { cn } from "@/lib/utils/cn"
+
 export type ComparisonRow = {
   label: ReactNode
   cells: ReactNode[]
@@ -92,7 +94,7 @@ const ComparisonTable = ({
                 stray rule under each label rather than a column edge. */}
             <TableHead
               scope="row"
-              className={onTint ? "border-b-0 font-bold" : undefined}
+              className={cn("align-top", onTint && "border-b-0 font-bold")}
             >
               {label}
             </TableHead>

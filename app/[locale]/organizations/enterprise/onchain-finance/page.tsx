@@ -224,7 +224,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
               <Grid balanced={4} data-flow="cta" className="text-start">
                 {INNOVATIONS.map((key) => (
-                  <Card key={key} variant="nested">
+                  <Card
+                    key={key}
+                    variant="nested"
+                    className="row-span-2 grid grid-rows-subgrid gap-0"
+                  >
                     <CardContent>
                       <CardTitle>
                         {t(
@@ -260,7 +264,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="flex gap-space-2x max-lg:flex-col"
           >
-            <div className="flow lg:basis-1/3">
+            <div className="flow lg:sticky lg:top-28 lg:basis-1/3 lg:self-start">
               <h2>
                 {t(
                   "page-organizations-enterprise-onchain-finance-ecosystem-title"

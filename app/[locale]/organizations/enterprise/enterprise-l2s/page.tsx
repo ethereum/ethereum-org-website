@@ -15,9 +15,9 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -27,12 +27,14 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
+import { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatLargeUSD } from "@/lib/utils/numbers"
+import { isExternal } from "@/lib/utils/url"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
@@ -291,7 +293,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="flex gap-space-2x max-lg:flex-col"
           >
-            <div className="flow lg:w-1/3 lg:shrink-0">
+            <div className="flow lg:sticky lg:top-28 lg:w-1/3 lg:shrink-0 lg:self-start">
               <h2>
                 {t("page-organizations-enterprise-l2s-case-studies-title")}
               </h2>
@@ -338,7 +340,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="flex gap-space-2x max-lg:flex-col"
           >
-            <div className="flow lg:w-1/3 lg:shrink-0">
+            <div className="flow lg:sticky lg:top-28 lg:w-1/3 lg:shrink-0 lg:self-start">
               <h2>{t("page-organizations-enterprise-l2s-deployment-title")}</h2>
               <p className="text-lg text-body-medium">
                 {t("page-organizations-enterprise-l2s-deployment-description")}
@@ -347,39 +349,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <div className="flex-1 rounded-4xl bg-tint-primary p-page">
               <ul className="divide-y divide-background">
                 {NETWORKS.map(({ key, href, logo }) => (
-                  <li
-                    key={key}
-                    className="flex flex-wrap items-center gap-4 py-4 first:pt-0"
-                  >
-                    <Image
-                      src={logo}
-                      alt=""
-                      className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
-                      sizes="56px"
-                    />
-                    <div className="min-w-48 flex-1">
-                      <h3 className="text-h5">
-                        {t(
-                          `page-organizations-enterprise-l2s-deployment-${key}-name`
-                        )}
-                      </h3>
-                      <p className="text-body-medium">
-                        {t(
-                          `page-organizations-enterprise-l2s-deployment-${key}-description`
-                        )}
-                      </p>
-                    </div>
-                    <ButtonLink href={href} variant="outline" size="sm">
-                      {t("page-organizations-enterprise-l2s-deployment-cta")}
-                      {/* the three CTAs share the visible label "Go", so the
-                          network name keeps their accessible names distinct */}
-                      <span className="sr-only">
-                        &nbsp;
-                        {t(
-                          `page-organizations-enterprise-l2s-deployment-${key}-name`
-                        )}
-                      </span>
-                    </ButtonLink>
+                  <li key={key} className="py-2 first:pt-0">
+                    <BaseLink
+                      href={href}
+                      hideArrow
+                      data-external={isExternal(href) || undefined}
+                      className="group/link -mx-3 flex flex-wrap items-center gap-4 rounded-2xl p-3 text-body no-underline hover:bg-background/50 hover:text-body"
+                    >
+                      <Image
+                        src={logo}
+                        alt=""
+                        className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
+                        sizes="56px"
+                      />
+                      <div className="min-w-48 flex-1">
+                        <h3 className="text-h5">
+                          {t(
+                            `page-organizations-enterprise-l2s-deployment-${key}-name`
+                          )}
+                        </h3>
+                        <p className="text-body-medium">
+                          {t(
+                            `page-organizations-enterprise-l2s-deployment-${key}-description`
+                          )}
+                        </p>
+                      </div>
+                      <CardButtonFake variant="outline" size="sm">
+                        {t("page-organizations-enterprise-l2s-deployment-cta")}
+                      </CardButtonFake>
+                    </BaseLink>
                   </li>
                 ))}
               </ul>
