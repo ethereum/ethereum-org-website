@@ -1,4 +1,4 @@
-import { AppWindowMac, Info } from "lucide-react"
+import { AppWindowMac } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
 
@@ -8,7 +8,6 @@ import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
 import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
 import Twitter from "@/components/icons/twitter.svg"
-import Tooltip from "@/components/Tooltip"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
@@ -22,6 +21,7 @@ import {
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
+import CropsNativeTag from "./CropsNativeTag"
 import ToolDescription from "./ToolDescription"
 import ToolLinkRows from "./ToolLinkRows"
 
@@ -89,18 +89,14 @@ const InterceptedToolDetail = async ({
                 {categoryLabels[tool.categoryId] || tool.categoryId}
               </Tag>
               {tool.crops_native && (
-                <Tooltip
-                  content={
-                    <p className="text-body">
-                      {t("page-developers-tools-crops-native-description")}
-                    </p>
-                  }
-                >
-                  <Tag size="small" status="success" className="gap-1">
-                    {t("page-developers-tools-crops-native")}
-                    <Info className="size-3 shrink-0" />
-                  </Tag>
-                </Tooltip>
+                <CropsNativeTag
+                  size="small"
+                  label={t("page-developers-tools-crops-native")}
+                  description={t(
+                    "page-developers-tools-crops-native-description"
+                  )}
+                  learnMoreLabel={tCommon("learn-more")}
+                />
               )}
             </div>
           </DetailRow>

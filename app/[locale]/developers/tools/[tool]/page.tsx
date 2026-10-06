@@ -1,4 +1,3 @@
-import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -7,7 +6,6 @@ import type { Lang, PageParams } from "@/lib/types"
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import Tooltip from "@/components/Tooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -31,6 +29,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
 import ToolDescription from "../_components/ToolDescription"
 import ToolLinks from "../_components/ToolLinks"
@@ -147,18 +146,13 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                 <div className="flex flex-wrap gap-2">
                   <Tag status="tag">{categoryLabel}</Tag>
                   {tool.crops_native && (
-                    <Tooltip
-                      content={
-                        <p className="text-body">
-                          {t("page-developers-tools-crops-native-description")}
-                        </p>
-                      }
-                    >
-                      <Tag status="success" className="gap-1">
-                        {t("page-developers-tools-crops-native")}
-                        <Info className="size-3 shrink-0" />
-                      </Tag>
-                    </Tooltip>
+                    <CropsNativeTag
+                      label={t("page-developers-tools-crops-native")}
+                      description={t(
+                        "page-developers-tools-crops-native-description"
+                      )}
+                      learnMoreLabel={tCommon("learn-more")}
+                    />
                   )}
                 </div>
                 <h1 className="mt-0">{tool.name}</h1>
