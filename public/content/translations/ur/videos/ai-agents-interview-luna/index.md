@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "وین شفٹ ہیپنز"
 breadcrumb: "مصنوعی ذہانت کے ایجنٹس: لونا"

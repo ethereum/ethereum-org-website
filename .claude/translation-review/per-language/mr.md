@@ -99,3 +99,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - "Prerequisites" rotated into three different renderings across the three files this PR touched (31/21/14 locale-wide): needs a sweep, not a point edit.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `zk-rollups:183,189`, `roadmap/privacy:116` `इथरियम` -> `इथेरियम`.
+- privacy-online: at-rest `विश्रांतीच्या वेळी` -> `संग्रहित स्थितीत`; `फार कमी जण` -> `फार कमी VPN`; `स्थानानुसार ठेवू` -> `स्थान ओळखू`.
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `server-components` `वेब3` (always_latin Web3), `डेंकुन` x10 vs `डेन्कन्`.
+- useroperation `वापरकर्ता ऑपरेशन्स` vs `वापरकर्ता कार्य`; DAS half-translated; mainnet `मुख्यनेट`/`मेननेट` split.

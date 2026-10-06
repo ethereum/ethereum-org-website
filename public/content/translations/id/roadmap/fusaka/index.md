@@ -29,7 +29,7 @@ Pembaruan Fusaka hanyalah satu langkah dalam tujuan pengembangan jangka panjang 
 
 Ini adalah _sorotan utama_ dari percabangan Fusaka, fitur utama yang ditambahkan dalam pembaruan ini. Lapisan 2 (l2) saat ini memposting data mereka ke Ethereum dalam blob, tipe data sementara yang dibuat khusus untuk lapisan 2. Sebelum Fusaka, setiap full node harus menyimpan setiap blob untuk memastikan bahwa data tersebut ada. Seiring meningkatnya laju pemrosesan blob, keharusan mengunduh semua data ini menjadi sangat memakan sumber daya.
 
-Dengan [pengambilan sampel ketersediaan data (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), alih-alih harus menyimpan semua data blob, setiap node akan bertanggung jawab atas sebagian data blob. Blob didistribusikan secara acak dan seragam di seluruh node dalam jaringan dengan setiap full node hanya menyimpan 1/8 dari data, sehingga memungkinkan penskalaan teoretis hingga 8x. Untuk memastikan ketersediaan data, bagian mana pun dari data dapat direkonstruksi dari 50% keseluruhan data yang ada dengan metode yang menurunkan probabilitas data yang salah atau hilang ke tingkat yang dapat diabaikan secara kriptografis (~satu dari 10<sup>20</sup> hingga satu dari 10<sup>24</sup>).
+Dengan [pengambilan sampel ketersediaan data (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), alih-alih harus menyimpan semua data blob, setiap node akan bertanggung jawab atas sebagian data blob. Blob didistribusikan secara acak dan seragam di seluruh node dalam jaringan dengan setiap full node hanya menyimpan 1/8 dari data, sehingga memungkinkan penskalaan teoretis hingga 8x. Untuk memastikan ketersediaan data, bagian mana pun dari data dapat direkonstruksi dari 50% keseluruhan data yang ada dengan metode yang menurunkan probabilitas data yang salah atau hilang ke tingkat yang dapat diabaikan secara kriptografis (\~satu dari 10<sup>20</sup> hingga satu dari 10<sup>24</sup>).
 
 Hal ini menjaga persyaratan perangkat keras dan bandwidth untuk node tetap masuk akal sambil memungkinkan penskalaan blob yang menghasilkan lebih banyak skala dengan biaya yang lebih kecil untuk lapisan 2.
 
@@ -133,13 +133,13 @@ Tujuannya adalah untuk membatasi waktu propagasi/validasi kasus terburuk dan men
 
 **Sumber Daya**: [Spesifikasi teknis EIP-7934](https://eips.ethereum.org/EIPS/eip-7934)
 
-#### Menetapkan batas gas default ke 60 juta {#set-default-gas-limit-to-60-million}
+#### Menetapkan batas gas bawaan menjadi 60 juta {#set-default-gas-limit-to-60-million}
 
-Sebelum menaikkan batas gas dari 30Jt menjadi 36Jt pada Februari 2025 (dan selanjutnya menjadi 45Jt), nilai ini belum berubah sejak The Merge (September 2022). EIP ini bertujuan untuk menjadikan penskalaan yang konsisten sebagai prioritas.
+Sebelum menaikkan batas gas dari 30 juta menjadi 36 juta pada Februari 2025 (dan selanjutnya menjadi 45 juta), nilai ini belum berubah sejak The Merge (September 2022). EIP ini bertujuan untuk menjadikan penskalaan yang konsisten sebagai prioritas.
 
-EIP-7935 mengoordinasikan tim klien EL untuk menaikkan batas gas default di atas 45Jt saat ini untuk Fusaka. Ini adalah EIP Informasional, tetapi secara eksplisit meminta klien untuk menguji batas yang lebih tinggi di devnet, menyatu pada nilai yang aman, dan mengirimkan angka tersebut dalam rilis Fusaka mereka.
+EIP-7935 mengoordinasikan tim klien EL untuk menaikkan batas gas bawaan di atas 45 juta yang mendahului Fusaka. Ini adalah EIP Informasional, tetapi secara eksplisit meminta klien untuk menguji batas yang lebih tinggi di devnet, menyepakati nilai yang aman, dan merilis angka tersebut dalam rilis Fusaka mereka.
 
-Perencanaan devnet menargetkan tekanan ~60Jt (blok penuh dengan beban sintetis) dan lonjakan berulang; penelitian mengatakan patologi ukuran blok kasus terburuk tidak boleh mengikat di bawah ~150Jt. Peluncuran harus dipasangkan dengan batas maksimal batas gas transaksi (EIP-7825) sehingga tidak ada transaksi tunggal yang dapat mendominasi saat batas naik.
+Pengujian devnet menargetkan ~60 juta di bawah tekanan (blok penuh dengan beban sintetis) dengan peningkatan berulang; penelitian mengatakan patologi ukuran blok kasus terburuk seharusnya tidak membatasi di bawah ~150 juta. Peluncuran ini dipasangkan dengan batas atas batas gas transaksi (EIP-7825) sehingga tidak ada satu transaksi pun yang dapat mendominasi saat batas naik. Klien merilis 60 juta sebagai bawaan Fusaka.
 
 **Sumber Daya**: [Spesifikasi teknis EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ Persyaratan node masih dalam [margin yang disarankan](https://eips.ethereum.org/
 
 Node reguler tanpa validator apa pun hanya akan berlangganan 4 subnet, menyediakan penyimpanan untuk 1/8 dari data asli. Ini berarti bahwa dengan jumlah data blob yang sama, bandwidth node untuk mengunduhnya akan lebih kecil dengan faktor delapan (8). Penggunaan disk dan bandwidth unduhan blob untuk full node normal mungkin menurun sekitar 80%, menjadi hanya beberapa Mb.
 
-#### Solo staker {#solo-stakers}
+#### Staker solo {#solo-stakers}
 
-Jika node digunakan untuk klien validator, ia harus menyimpan lebih banyak kolom dan karenanya memproses lebih banyak data. Dengan penambahan validator, node berlangganan setidaknya 8 subnet kolom dan karenanya memproses data dua kali lebih banyak dari node reguler tetapi masih lebih sedikit daripada sebelum Fusaka. Jika saldo validator di atas 287 ETH, semakin banyak subnet yang akan dilanggan.
+Jika node digunakan untuk klien validator, node tersebut harus menyimpan lebih banyak kolom dan karenanya memproses lebih banyak data. Dengan penambahan validator, node berlangganan setidaknya 8 subnet kolom dan karenanya memproses data dua kali lipat lebih banyak daripada node reguler tetapi masih lebih sedikit daripada sebelum Fusaka. Jika saldo validator di atas 287 ETH, akan semakin banyak subnet yang dilanggan.
 
-Bagi solo staker, ini berarti penggunaan disk dan bandwidth unduhan mereka akan menurun sekitar 50%. Namun untuk membangun blok secara lokal dan mengunggah semua blob ke jaringan, diperlukan lebih banyak bandwidth unggahan. Pembangun lokal akan membutuhkan bandwidth unggahan 2-3 kali lebih tinggi dari sebelumnya pada saat Fusaka dan dengan target BPO2 sebesar 15/21 blob, bandwidth unggahan akhir yang diperlukan harus sekitar 5 kali lebih tinggi, pada 100Mbps.
+Bagi staker solo, ini berarti penggunaan disk dan bandwidth unduhan mereka akan berkurang sekitar 50%. Namun, untuk membangun blok secara lokal dan mengunggah semua blob ke jaringan, diperlukan lebih banyak bandwidth unggahan. Pembangun lokal akan membutuhkan bandwidth unggahan 2-3 kali lebih tinggi dari sebelumnya pada saat Fusaka dan dengan target BPO2 sebesar 15/21 blob, bandwidth unggahan akhir yang diperlukan harus sekitar 5 kali lebih tinggi, pada 100Mbps.
 
 #### Validator besar {#large-validators}
 

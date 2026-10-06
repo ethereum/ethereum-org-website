@@ -110,3 +110,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - A single-file `গুলো` -> `গুলি` dialect flip and an English `-s` plural on `অ্যাপ` in `page-apps.json` point the same direction as the acronym expansion; worth watching next run.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-relay-description` "hundreds of millions" -> `কয়েকশো মিলিয়ন` (was `কয়েক মিলিয়ন`).
+- learn-quizzes `proof-of-stake-3-d-explanation` broken negation `পারে কক্ষনো না` -> `পারে না` (same family as `থাকেবিধা নেই`).
+
+**Open (warnings):**
+
+- `roadmap/privacy:120` `জিরো-নলেজ প্রুফগুলো` (alias) replaced compound `শূন্য-জ্ঞান প্রমাণ`.
+- "both" dropped in Tor/Relay keys (#82); "time served" `পরিবেশন করা সময়`.

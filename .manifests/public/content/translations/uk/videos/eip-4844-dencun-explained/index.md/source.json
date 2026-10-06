@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/eip-4844-dencun-explained/index.md",
-  "generatedAt": "2026-04-29T05:21:44.057Z",
-  "rootHash": "5d7c4555fcfb",
+  "generatedAt": "2026-09-30T18:37:51.551Z",
+  "rootHash": "00d09598641f",
   "tree": {
-    "contentHash": "f03ee21460d1",
-    "anchorHash": "77d7cf4a49fb",
+    "contentHash": "2b2eaf9cd100",
+    "anchorHash": "9ab932c72878",
     "children": {
       "frontmatter:title": {
         "contentHash": "d2de02a7d0b3",
@@ -36,8 +36,8 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "58df6e0693de",
-        "anchorHash": "e729a0f578d9",
+        "contentHash": "f5818652a990",
+        "anchorHash": "73973db0141d",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
@@ -45,27 +45,12 @@
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "567cf013bf70"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "008a17248813"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "400986f48a80"
-          },
-          "4": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "dc2963d21f5f"
+            "anchorHash": "3b3e1a7dae17"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2",
-          "3",
-          "4"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -210,5 +195,5 @@
       "summary-804"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

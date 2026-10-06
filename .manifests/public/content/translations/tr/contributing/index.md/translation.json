@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "tr",
-  "translatedAt": "2026-07-28T22:16:49.867Z",
-  "englishManifestHash": "2ac25e647efa",
+  "translatedAt": "2026-09-30T18:20:17.347Z",
+  "englishManifestHash": "ebf8c8d43388",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-ac6f75",
@@ -30,22 +30,22 @@
     "LINK-039efd",
     "LINK-a0bdd3",
     "LINK-02e5c7",
-    "LINK-8eab9b",
+    "LINK-f0fd86",
     "LINK-72f811",
     "LINK-c1da92",
     "LINK-4eeac0",
-    "LINK-8eab9b",
+    "LINK-f0fd86",
     "LINK-54992c",
     "LINK-8b3c8c",
     "LINK-9eb8b1",
     "LINK-bcc978",
     "LINK-c2821f",
     "LINK-3c2e71",
-    "LINK-8eab9b",
+    "LINK-f0fd86",
     "LINK-be5a55",
     "LINK-04ca22",
     "LINK-7db671",
-    "LINK-8eab9b",
+    "LINK-f0fd86",
     "CODE-b3c8a8",
     "LINK-228dbd"
   ],
@@ -212,7 +212,7 @@
         "url": "/contributing/adding-resources/"
       }
     },
-    "LINK-8eab9b": {
+    "LINK-f0fd86": {
       "type": "link",
       "values": {
         "url": "/discord/"
@@ -299,7 +299,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-07-28T22:16:49.867Z",
+      "translatedAt": "2026-09-30T18:20:17.347Z",
       "status": "success"
     }
   }

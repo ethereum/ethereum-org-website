@@ -1,7 +1,7 @@
 ---
-title: 參與 ethereum.org 的設計貢獻
-metaTitle: 設計貢獻
-description: 參與 ethereum.org 的設計貢獻
+title: "參與 ethereum.org 的設計貢獻"
+metaTitle: "設計貢獻"
+description: "參與 ethereum.org 的設計貢獻"
 lang: zh-tw
 ---
 

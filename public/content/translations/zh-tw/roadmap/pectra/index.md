@@ -45,9 +45,9 @@ authors:
 
 ### 資料塊吞吐量增加 {#7691}
 
-資料塊為 L2 提供了[資料可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)。它們是在[上一次網路升級](/roadmap/dencun/)中引入的。 
+資料塊為 L2 提供[資料可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)。它們是在[上一次網路升級](/roadmap/dencun/)中引入的。
 
-目前，網路的目標是每個區塊平均 3 個資料塊，最多 6 個資料塊。透過 [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)，平均資料塊數量將增加到 6 個，每個區塊最多 9 個，從而增加了以太坊匯總的容量。這個 EIP 有助於在 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) 實現更高的資料塊數量之前作為過渡。
+在佩克特拉之前，網路的目標是每個區塊平均 3 個資料塊，上限為 6 個。[EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) 將目標提高到 6 個，每個區塊的上限提高到 9 個，從而增加了以太坊匯總的容量。它作為過渡方案，直到在[富薩卡](/roadmap/fusaka/)中發布的 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) 允許更高的資料塊數量為止。
 
 ### 增加呼叫資料成本 {#7623}
 

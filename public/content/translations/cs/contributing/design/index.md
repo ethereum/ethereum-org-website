@@ -1,7 +1,7 @@
 ---
-title: Příspěvky k designu na ethereum.org
-metaTitle: Příspěvky k designu
-description: Příspěvky k designu na ethereum.org
+title: "Příspěvky k designu na ethereum.org"
+metaTitle: "Příspěvky k designu"
+description: "Příspěvky k designu na ethereum.org"
 lang: cs
 ---
 

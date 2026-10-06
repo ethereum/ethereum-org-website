@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/dao-build-next-great-city/index.md",
-  "generatedAt": "2026-04-28T23:01:37.817Z",
-  "rootHash": "fb500e6d9219",
+  "generatedAt": "2026-09-30T18:35:30.934Z",
+  "rootHash": "53b0df4c002b",
   "tree": {
-    "contentHash": "0ba97381d5eb",
-    "anchorHash": "a1ac7f6c7ff5",
+    "contentHash": "4d22c01de5d7",
+    "anchorHash": "4d38b7ff3e43",
     "children": {
       "frontmatter:title": {
         "contentHash": "5cdb5e8c7655",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "272295c30ebb",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "6386713deb27"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "bf9422a2a04a"
+            "anchorHash": "2290d7d70dea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -255,5 +247,5 @@
       "challenges-and-the-future-840"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

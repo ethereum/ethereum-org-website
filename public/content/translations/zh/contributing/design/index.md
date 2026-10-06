@@ -1,7 +1,7 @@
 ---
-title: 为 ethereum.org 贡献设计
-metaTitle: 设计贡献
-description: 为 ethereum.org 贡献设计
+title: "为 ethereum.org 贡献设计"
+metaTitle: "设计贡献"
+description: "为 ethereum.org 贡献设计"
 lang: zh
 ---
 

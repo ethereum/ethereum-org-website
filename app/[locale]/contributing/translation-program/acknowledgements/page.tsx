@@ -29,6 +29,7 @@ import quarterData from "@/data/translation-reports/quarter/quarter-data.json"
 import ThemedCertificate from "./_components/themed-certificate"
 import TranslationLeaderboard from "./_components/translation-leaderboard"
 import PageJsonLD from "./page-jsonld"
+import { getTranslationLeaderboardRows } from "./utils"
 
 import heroImg from "@/public/images/doge-computer.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
@@ -54,6 +55,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     "contributing/translation-program/acknowledgements",
     locale as Lang
   )
+
+  // Sort and trim the raw reports here so only the rows the leaderboard can
+  // render reach the client component.
+  const monthRows = getTranslationLeaderboardRows(monthData)
+  const quarterRows = getTranslationLeaderboardRows(quarterData)
+  const allTimeRows = getTranslationLeaderboardRows(allTimeData)
 
   return (
     <>
@@ -108,9 +115,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </h2>
           <I18nProvider locale={locale} messages={messages}>
             <TranslationLeaderboard
-              monthData={monthData}
-              quarterData={quarterData}
-              allTimeData={allTimeData}
+              monthData={monthRows}
+              quarterData={quarterRows}
+              allTimeData={allTimeRows}
             />
           </I18nProvider>
           <p>

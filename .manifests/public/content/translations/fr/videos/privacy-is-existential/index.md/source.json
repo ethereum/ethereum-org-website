@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/privacy-is-existential/index.md",
-  "generatedAt": "2026-06-30T01:04:16.042Z",
-  "rootHash": "5636524bc405",
+  "generatedAt": "2026-09-30T19:15:09.098Z",
+  "rootHash": "df79f6332b50",
   "tree": {
-    "contentHash": "7e688cf500ff",
+    "contentHash": "37d2af414f40",
     "anchorHash": "2c00cb45e519",
     "children": {
       "frontmatter:title": {
@@ -184,7 +184,7 @@
         ]
       },
       "legally-enforceable-duties-of-validators-1523": {
-        "contentHash": "8827311c38d9",
+        "contentHash": "4e3e34e106f0",
         "anchorHash": "4b9f7d802648",
         "labelHash": "aa8f9bb05b91",
         "children": {
@@ -193,7 +193,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "66ec9cfabf31",
+            "contentHash": "27391d332bb3",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -287,5 +287,5 @@
       "qa-session-2421"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

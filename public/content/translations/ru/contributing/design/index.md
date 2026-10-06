@@ -1,7 +1,7 @@
 ---
-title: Вклад в дизайн ethereum.org
-metaTitle: Вклад в дизайн
-description: Вклад в дизайн ethereum.org
+title: "Вклад в дизайн ethereum.org"
+metaTitle: "Вклад в дизайн"
+description: "Вклад в дизайн ethereum.org"
 lang: ru
 ---
 

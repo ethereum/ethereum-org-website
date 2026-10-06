@@ -8,8 +8,7 @@ duration: "0:21:34"
 educationLevel: intermediate
 topic:
   - "roadmap-and-priorities"
-  - "roadmap"
-  - "upgrades"
+  - "network-upgrades"
 format: presentation
 author: "ईटीएचडेन्व्हर"
 breadcrumb: "इथेरियमची उत्क्रांती"

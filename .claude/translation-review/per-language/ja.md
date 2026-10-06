@@ -129,3 +129,18 @@ Scope: `developers/docs/accounts/index.md`, `consensus-mechanisms/pos/rewards-an
 
 - `accounts:79` `[Geth]` -> `[ゴー・イーサリアム（ゲス）]` is ETHGlossary-compliant (`Go Ethereum (Geth)`), but line 94 of the same file keeps `Gethのドキュメント`.
 - `accounts` bullet lists switched from です/ます to plain/noun-ending forms while prose stays polite; acceptable list style, but a register shift from the pre-PR text.
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/glamsterdam:20` `Blob` -> `ブロブ`; `:31` `devnet` -> `デブネット`.
+
+**Open (warnings):**
+
+- open-access bank `アカウント` -> `口座`; hybrid `ユニスワップLabs`; `ノーログの証明` overstates claim.
+- `鍵ペア` held -- no `キーペア` regression.

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/defi-future-of-finance/index.md",
-  "generatedAt": "2026-04-28T23:10:40.846Z",
-  "rootHash": "35ab198b5542",
+  "generatedAt": "2026-09-30T18:36:37.053Z",
+  "rootHash": "c4f66c624e60",
   "tree": {
-    "contentHash": "4387c2b58db9",
-    "anchorHash": "334b6ae65584",
+    "contentHash": "3dd56424bf66",
+    "anchorHash": "7e8c0bd1723b",
     "children": {
       "frontmatter:title": {
         "contentHash": "4fd214e896f5",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "fbc85e849662",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "da9fa35c3fa6"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "eab762a03fd9"
+            "anchorHash": "2290d7d70dea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -235,5 +227,5 @@
       "the-future-of-finance-1238"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

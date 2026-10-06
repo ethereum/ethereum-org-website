@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/zero-knowledge-proofs-5-levels/index.md",
-  "generatedAt": "2026-04-29T00:23:26.528Z",
-  "rootHash": "64386805fdf5",
+  "generatedAt": "2026-09-30T19:19:10.092Z",
+  "rootHash": "3648378ab210",
   "tree": {
-    "contentHash": "cdc5a570db0f",
-    "anchorHash": "19fd366b27e5",
+    "contentHash": "19c6942e91b3",
+    "anchorHash": "ee15caafa874",
     "children": {
       "frontmatter:title": {
         "contentHash": "9e9d1bd72102",
@@ -36,26 +36,21 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "192624f5df52",
+        "contentHash": "f5818652a990",
+        "anchorHash": "78b2868763a9",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "38344bba4684"
+            "anchorHash": "a4cc6bc01a92"
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "7a13e7cfb990"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "e06554818e90"
+            "anchorHash": "3ddeb596fa81"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -220,5 +215,5 @@
       "level-5-expert-1710"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
