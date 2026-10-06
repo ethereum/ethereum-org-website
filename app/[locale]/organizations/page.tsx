@@ -54,7 +54,7 @@ const TRACK_CATEGORY_SUFFIX = "_organizations"
  * rather than straight out to the PDF, so the citation itself carries the link
  * -- the `[n]` / numbered-list pattern the open-source page established.
  */
-const SOURCES_ID = "sources"
+const REFERENCES_ID = "references"
 
 /**
  * Footnote marker. Rendered outside the strings so translators never carry the
@@ -63,7 +63,7 @@ const SOURCES_ID = "sources"
 const footnote = (n: number) => (
   <sup>
     <InlineLink
-      href={`#${SOURCES_ID}`}
+      href={`#${REFERENCES_ID}`}
       hideArrow
       className="inline-flex h-6 items-center justify-center"
     >{`[${n}]`}</InlineLink>
@@ -156,7 +156,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   )
 
   const featureRows = (prefix: string, keys: string[]) => (
-    <UnorderedList className="m-0 list-none p-0">
+    <UnorderedList className="ms-0 mt-space-2x list-none p-0">
       {keys.map((key) => (
         <ListItem key={key} className="m-0 border-b py-4">
           <h3 className="text-h5">{t(`${prefix}-${key}-title`)}</h3>
@@ -187,11 +187,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             />
             <Grid balanced={4} data-flow="cta">
               {AUDIENCES.map(({ key, href, icon: Icon, tile, marker }) => (
-                <Card key={key} href={href} variant="ghost" border size="lg">
-                  <CardHeader className="flex flex-row items-center gap-3">
+                <Card
+                  key={key}
+                  href={href}
+                  variant="ghost"
+                  border
+                  size="lg"
+                  className="row-span-4 grid grid-rows-subgrid gap-0"
+                >
+                  <CardHeader className="flex flex-row items-start gap-3">
                     <div
                       className={cn(
-                        "grid size-10 shrink-0 place-items-center rounded",
+                        "grid size-10 shrink-0 place-items-center rounded-lg",
                         tile
                       )}
                     >
@@ -201,7 +208,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       {t(`page-organizations-hub-audiences-${key}-title`)}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="row-span-2 grid grid-rows-subgrid gap-(--content-space) space-y-0">
                     <CardParagraph>
                       {t(`page-organizations-hub-audiences-${key}-description`)}
                     </CardParagraph>
@@ -234,7 +241,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 max-lg:max-w-md">
+            <div className="relative aspect-3/4 max-lg:max-w-md lg:sticky lg:top-28">
               <Image
                 src={whyImg}
                 alt=""
@@ -265,27 +272,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {footnote(1)}
               </p>
             </div>
-            {/* TODO(data): two of the three figures ("monthly active
-                addresses", "monthly active users") are on-chain metrics that a
-                holder survey is unlikely to contain, so each figure needs
-                confirming against the report (or its own source) before
-                launch. */}
-            <AdoptionChart
-              items={[
-                {
-                  value: t("page-organizations-hub-adoption-owners-value"),
-                  label: t("page-organizations-hub-adoption-owners-label"),
-                },
-                {
-                  value: t("page-organizations-hub-adoption-addresses-value"),
-                  label: t("page-organizations-hub-adoption-addresses-label"),
-                },
-                {
-                  value: t("page-organizations-hub-adoption-users-value"),
-                  label: t("page-organizations-hub-adoption-users-label"),
-                },
-              ]}
-            />
+            <AdoptionChart />
           </Section>
 
           <Section
@@ -293,7 +280,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 max-lg:max-w-md">
+            <div className="relative aspect-3/4 max-lg:max-w-md lg:sticky lg:top-28">
               <Image
                 src={whatImg}
                 alt=""
@@ -315,9 +302,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section
             id="faq"
             data-flow="skip"
-            className="grid items-center gap-space-2x lg:grid-cols-2"
+            className="grid items-start gap-space-2x lg:grid-cols-2"
           >
-            <div className="relative aspect-[1000/715] max-lg:max-w-md">
+            <div className="relative aspect-[1000/715] max-lg:max-w-md lg:sticky lg:top-28">
               <Image
                 src={ethBlocksImg}
                 alt=""
@@ -345,9 +332,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           {/* Target of the `[1]` marker above. */}
-          <Section id={SOURCES_ID}>
-            <h2>{tCommon("sources")}</h2>
-            <OrderedList className="m-0 list-decimal text-sm text-body-medium">
+          <Section id={REFERENCES_ID}>
+            <h2>{tCommon("references")}</h2>
+            <OrderedList className="ms-0 list-inside list-decimal text-sm text-body-medium">
               <ListItem>
                 {t.rich("page-organizations-hub-reference-nca", {
                   link: ncaLink,

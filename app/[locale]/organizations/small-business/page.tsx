@@ -44,7 +44,7 @@ const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
 
 /** Target of every footnote marker; the source link itself lives on the citation. */
-const SOURCES_ID = "sources"
+const REFERENCES_ID = "references"
 
 /**
  * Footnote marker. It points at the on-page source list (not straight out to
@@ -55,7 +55,7 @@ const SOURCES_ID = "sources"
 const footnote = (n: number) => (
   <sup>
     <InlineLink
-      href={`#${SOURCES_ID}`}
+      href={`#${REFERENCES_ID}`}
       hideArrow
       className="inline-flex h-6 items-center justify-center"
     >{`[${n}]`}</InlineLink>
@@ -112,10 +112,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   }))
 
   // TODO(data): no live source yet -- NCA 2026 Annual State of Crypto Holders Report
-  const holders = [
-    { key: "now", value: 40 },
-    { key: "expected", value: 72 },
-  ] as const
+  const holders = { now: 40, expected: 72 }
 
   return (
     <>
@@ -246,35 +243,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {footnote(1)}
               </p>
             </div>
-            {/* TODO(data): no live source yet -- figures from the design (NCA footnote) */}
-            <AdoptionChart
-              items={[
-                {
-                  value: t(
-                    "page-organizations-small-business-adoption-owners-value"
-                  ),
-                  label: t(
-                    "page-organizations-small-business-adoption-owners-label"
-                  ),
-                },
-                {
-                  value: t(
-                    "page-organizations-small-business-adoption-addresses-value"
-                  ),
-                  label: t(
-                    "page-organizations-small-business-adoption-addresses-label"
-                  ),
-                },
-                {
-                  value: t(
-                    "page-organizations-small-business-adoption-users-value"
-                  ),
-                  label: t(
-                    "page-organizations-small-business-adoption-users-label"
-                  ),
-                },
-              ]}
-            />
+            <AdoptionChart />
           </Section>
 
           <Section
@@ -293,15 +262,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               className="lg:col-start-1 lg:row-start-1"
               callouts={[
                 {
-                  key: holders[0].key,
-                  display: percent(holders[0].value),
+                  value: holders.now,
+                  display: percent(holders.now),
                   label: t(
                     "page-organizations-small-business-holders-now-label"
                   ),
                 },
                 {
-                  key: holders[1].key,
-                  display: percent(holders[1].value),
+                  value: holders.expected,
+                  display: percent(holders.expected),
                   label: t(
                     "page-organizations-small-business-holders-expected-label"
                   ),
@@ -311,9 +280,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           {/* Target of the `[1]` markers above. */}
-          <Section id={SOURCES_ID}>
-            <h2>{tCommon("sources")}</h2>
-            <OrderedList className="m-0 list-decimal text-sm text-body-medium">
+          <Section id={REFERENCES_ID}>
+            <h2>{tCommon("references")}</h2>
+            <OrderedList className="ms-0 list-inside list-decimal text-sm text-body-medium">
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-nca", {
                   link: ncaLink,

@@ -1,63 +1,105 @@
 import { cn } from "@/lib/utils/cn"
 
-import HoldersFigure from "./crypto-holders-chart.svg"
-
 export type CryptoHoldersCallout = {
-  key: string
+  /** Share of all holders, 0-100 */
+  value: number
   /** Locale-formatted value, e.g. "40%" */
   display: string
   label: string
 }
 
 type CryptoHoldersChartProps = {
-  /** Exactly two callouts: current share first, expected share second */
+  /** Smaller share first; both wedges start from the same edge */
   callouts: [CryptoHoldersCallout, CryptoHoldersCallout]
   className?: string
 }
 
+// viewBox units, from the Figma frame (node 399:451)
+const WIDTH = 567
+const HEIGHT = 400
+const R = 200
+const CX = R
+const CY = R
+const START = 180 // degrees, the 9 o'clock edge; wedges sweep down through 6
+
+const point = (deg: number, r = R) => {
+  const rad = (deg * Math.PI) / 180
+  return [CX + r * Math.cos(rad), CY + r * Math.sin(rad)] as const
+}
+
+const wedge = (share: number) => {
+  const sweep = (share / 100) * 360
+  const [x0, y0] = point(START)
+  const [x1, y1] = point(START - sweep)
+  return `M${CX} ${CY}L${x0} ${y0}A${R} ${R} 0 ${sweep > 180 ? 1 : 0} 0 ${x1} ${y1}Z`
+}
+
+/** Leader line: horizontal from the inline-end edge into the band it labels */
+const leader = (fromShare: number, toShare: number) => {
+  const mid = START - ((fromShare + toShare) / 2 / 100) * 360
+  const [x, y] = point(mid, R * 0.7)
+  return { x, y }
+}
+
+const pct = (n: number, of: number) => `${(n / of) * 100}%`
+
 /**
- * The design's pie with its two callouts, exported from the Figma frame
- * (node 399:451). Drawn as one figure rather than a Recharts pie beside a list
- * of values: the design's leader lines run from each figure back to the pie's
- * edge, and keeping that join correct across breakpoints meant pinning the
- * text to the wedge it points at -- which is exactly what the export already
- * encodes.
- *
- * The labels are baked in as outlined glyphs, so every locale shows the
- * English text and the figures cannot be selected. They are therefore repeated
- * in the `sr-only` list below, which is the accessible representation and
- * keeps them translatable.
- *
- * The wedge colours come from the wrapper. The frame's own purples only work
- * on a white page -- `purple-800` sinks into a black one -- so each wedge
- * takes a custom property with a dark value, the same per-theme mapping the
- * Recharts version carried. Text and leader lines inherit `currentColor`.
+ * Two overlapping shares of one whole: the full disc is all holders, each wedge
+ * is drawn to scale from the same edge, and each leader line lands in the band
+ * only its own share covers.
  */
 const CryptoHoldersChart = ({
   callouts,
   className,
-}: CryptoHoldersChartProps) => (
-  <div className={cn("min-w-0", className)}>
-    <HoldersFigure
-      aria-hidden="true"
-      focusable="false"
-      className={cn(
-        "h-auto w-full text-body",
-        "[--holders-deep:hsla(var(--purple-800))] dark:[--holders-deep:hsla(var(--purple-300))]",
-        "[--holders-mid:hsla(var(--purple-600))] dark:[--holders-mid:hsla(var(--purple-500))]",
-        "[--holders-pale:hsla(var(--purple-100))] dark:[--holders-pale:hsla(var(--purple-700))]"
-      )}
-    />
+}: CryptoHoldersChartProps) => {
+  const [inner, outer] = callouts
+  const leaders = [leader(0, inner.value), leader(inner.value, outer.value)]
 
-    <dl className="sr-only">
-      {callouts.map(({ key, display, label }) => (
-        <div key={key}>
-          <dt>{label}</dt>
-          <dd>{display}</dd>
-        </div>
-      ))}
-    </dl>
-  </div>
-)
+  return (
+    <figure
+      className={cn(
+        "@container relative m-0 aspect-567/400 min-w-0 text-body",
+        className
+      )}
+    >
+      <svg
+        viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+        aria-hidden="true"
+        focusable="false"
+        className="absolute inset-0 size-full rtl:-scale-x-100"
+      >
+        <circle cx={CX} cy={CY} r={R} className="fill-primary/20" />
+        <path d={wedge(outer.value)} className="fill-primary/55" />
+        <path d={wedge(inner.value)} className="fill-primary" />
+        {leaders.map(({ x, y }) => (
+          <line
+            key={y}
+            x1={x}
+            x2={WIDTH}
+            y1={y}
+            y2={y}
+            stroke="currentColor"
+            vectorEffect="non-scaling-stroke"
+          />
+        ))}
+      </svg>
+
+      <dl className="m-0">
+        {callouts.map(({ display, label }, idx) => (
+          <div
+            key={label}
+            className="absolute end-0 flex max-w-[40%] flex-col items-end pb-1 text-end"
+            style={{ bottom: pct(HEIGHT - leaders[idx].y, HEIGHT) }}
+          >
+            <dd className="order-first m-0 text-lg leading-tight font-bold @lg:text-2xl">
+              <bdi>{display}</bdi>
+            </dd>
+            <dt className="text-sm leading-snug @lg:text-md">{label}</dt>
+          </div>
+        ))}
+      </dl>
+    </figure>
+  )
+}
 
 export default CryptoHoldersChart
