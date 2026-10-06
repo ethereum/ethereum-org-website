@@ -151,7 +151,9 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                       description={t(
                         "page-developers-tools-crops-native-description"
                       )}
-                      learnMoreLabel={tCommon("learn-more")}
+                      infoLabel={t(
+                        "page-developers-tools-crops-native-info-label"
+                      )}
                     />
                   )}
                 </div>
