@@ -49,12 +49,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  // None of the four cards links out. No page on the site covers public
-  // registries or government-to-citizen disbursement, and the nearest
-  // candidates ("Introduction to smart contracts", "Ethereum grants") answer a
-  // different question for a different audience. Rather than link two of four
-  // and leave the row half-interactive, all four stay informational until the
-  // destination pages exist.
+  // TODO(content): unlinked until destination pages exist
   const useCases: { key: string; image: StaticImageData }[] = [
     { key: "identity", image: identityImg },
     { key: "records", image: recordsImg },
@@ -88,9 +83,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       badge: <CardEmoji text="🇺🇳" />,
     },
     {
-      // TODO(content): the india title and description were narrowed to a
-      // pilot for this PR — the only source is a UNDP blog post about a
-      // single-district proof of concept, not a production deployment.
+      // TODO(content): india case study only sourced as a single-district pilot
       key: "india",
       href: "https://www.undp.org/blog/using-blockchain-make-land-registry-more-reliable-india",
       badge: <CardEmoji text="🇮🇳" />,
@@ -196,9 +189,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       )}
                     </CardParagraph>
                   </CardContent>
-                  {/* Default `responsive`, not `compact`: the button fills the
-                      card while it is narrow and shrinks to its content once
-                      the card is wide enough. */}
                   <CardFooter>
                     <CardButtonFake>
                       {t("page-organizations-public-sector-case-studies-cta")}

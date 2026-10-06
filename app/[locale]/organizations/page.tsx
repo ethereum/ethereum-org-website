@@ -65,8 +65,7 @@ const AUDIENCES: Audience[] = [
     key: "public-sector",
     href: "/organizations/public-sector/",
     icon: Landmark,
-    // `accent-a` is the semantic alias for this blue; the raw `blue-600`
-    // palette entry is only defined in `:root`, so it never adapts in dark.
+    // Not `blue-600`: it's only defined in `:root`, so it doesn't adapt in dark
     tile: "text-accent-a bg-accent-a/10",
     marker: "marker:text-accent-a",
   },
@@ -93,16 +92,7 @@ const AUDIENCES: Audience[] = [
   },
 ]
 
-/**
- * Temporary overlay reproducing the "NOT FINAL IMAGE" stamp the Figma frames
- * carry on both of these illustrations (nodes 266:12127 and 266:12174), so the
- * preview reads as placeholder art rather than a finished page.
- *
- * Intentionally not a translation key: it is scaffolding to delete along with
- * the placeholder images, and routing it through the intl pipeline would push a
- * throwaway string to 24 locales. Remove this component and both call sites
- * when the final artwork lands.
- */
+// TODO(content): final artwork; then delete this untranslated placeholder stamp and its call sites
 const PlaceholderArtLabel = () => (
   <p
     aria-hidden="true"
@@ -204,8 +194,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </UnorderedList>
                   </CardContent>
                   <CardFooter>
-                    {/* `withChevron` is the RTL-aware stand-in for the
-                        design's trailing arrow-right glyph. */}
                     <CardButtonFake withChevron>
                       {t(`page-organizations-hub-audiences-${key}-cta`)}
                     </CardButtonFake>

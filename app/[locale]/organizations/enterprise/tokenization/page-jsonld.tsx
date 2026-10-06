@@ -61,10 +61,7 @@ export default async function TokenizationPageJsonLD({
               name: tCommon("organizations"),
               item: normalizeUrlForJsonLd(locale, "/organizations/"),
             },
-            // Positions 3 and 4 use the `common.json` crumb labels so the
-            // structured data mirrors the visible breadcrumb trail exactly
-            // ("ethereum.org / Organizations / Enterprise / Tokenization")
-            // rather than the longer page/meta titles.
+            // `common.json` crumb labels, matching the visible breadcrumb
             {
               "@type": "ListItem",
               position: 3,

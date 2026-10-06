@@ -21,12 +21,6 @@ type ChecklistPanelProps = {
   tint?: "primary" | "success"
 }
 
-/**
- * Tinted full-width band with a centered heading and lead, holding a nested
- * card with a 2x2 grid of check-marked points. Used for the "Why enterprises
- * choose Ethereum" / "Ethereum as the trust layer" style arguments across the
- * /organizations/ pages.
- */
 const ChecklistPanel = ({
   id,
   title,
@@ -38,10 +32,7 @@ const ChecklistPanel = ({
     id={id}
     className={cn(
       "rounded-4xl px-page py-space-3x text-center",
-      // The `/12` base lifts the wash in dark mode. At the token default the
-      // band composites to ~1.1:1 against the `nested` card's `bg-background`
-      // (both near-black), so the card read as a hole punched in the band
-      // rather than a raised surface.
+      // `/12` lifts the wash so the nested card doesn't vanish into it in dark mode
       tint === "success" ? "bg-tint-success/12" : "bg-tint-primary/12"
     )}
   >
@@ -58,10 +49,6 @@ const ChecklistPanel = ({
             <div key={idx} className="flex items-start gap-3">
               <CheckCircle className="shrink-0" />
               <div>
-                {/* `<h3>` keeps the outline (page h1 > panel h2 > point h3);
-                    `text-h5` is the size the design calls for. At `text-h6`
-                    the title rendered smaller than its own paragraph on
-                    mobile (14px against 16px). */}
                 <h3 className="text-h5">{title}</h3>
                 <p>{description}</p>
               </div>

@@ -26,9 +26,7 @@ const chartConfig = {
   apparel: { color: "hsla(var(--accent-a))" },
   travel: { color: "hsla(var(--accent-b))" },
   convenience: { color: "hsla(var(--accent-c))" },
-  // `--warning-dark` resolves to the same near-black yellow-900 in both themes,
-  // so a single colour leaves this bar invisible on the dark background. The
-  // theme pair keeps the design's yellow while stepping light in dark mode.
+  // `--warning-dark` is near-black in both themes
   cafes: {
     theme: {
       light: "hsla(var(--warning-dark))",
@@ -76,18 +74,7 @@ const CategoryTick = ({ x = 0, y = 0, payload }: TickProps) => {
   )
 }
 
-/**
- * Six-bar vertical column chart: value label above each bar, wrapped category
- * label below, one theme color per bar. Data is static (NCA 2026 report).
- * The wrapper is a CSS container so the category labels can step down in size
- * when six columns share a phone-width track.
- *
- * The figure is `aria-hidden` and carries no accessible name: Recharts renders
- * nothing server-side, so the six values would be missing from the DOM for
- * assistive tech and for no-JS visitors alike. The caller owns the accessible
- * (and no-JS) representation -- a server-rendered `sr-only` description list
- * of the same six pairs, inside the `<figure>` that wraps this chart.
- */
+/** `aria-hidden`: the caller must supply an sr-only server-rendered list of the values */
 const PurchaseIntentChart = ({
   items,
   className,

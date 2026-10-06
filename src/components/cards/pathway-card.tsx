@@ -24,11 +24,7 @@ export type PathwayCardProps = {
    * renders text-only.
    */
   banner?: ReactNode
-  /**
-   * Optional text CTA under the description, for designs that name the action
-   * rather than relying on the trailing chevron alone. Rendered as a
-   * `CardLinkFake`, so it stays non-interactive inside the card's own anchor.
-   */
+  /** Non-interactive text CTA; the card itself is the link */
   ctaLabel?: ReactNode
   className?: string
 }

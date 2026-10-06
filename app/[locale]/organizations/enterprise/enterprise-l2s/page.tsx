@@ -191,11 +191,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               ))}
             </Grid>
-            {/* Wide, short outlined callout: 96px sparkle on the inline-start
-                side with the text beside it, whole card anchored to the
-                "Choosing the right L2 approach" comparison below. The Figma
-                sparkle is a hex-coloured export, so the equivalent lucide glyph
-                is used instead -- it inherits `text-primary` in both themes. */}
             <PathwayCard
               href="#approach"
               title={t(

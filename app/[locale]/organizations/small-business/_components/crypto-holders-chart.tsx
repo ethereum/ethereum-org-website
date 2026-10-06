@@ -43,11 +43,6 @@ const leader = (fromShare: number, toShare: number) => {
 
 const pct = (n: number, of: number) => `${(n / of) * 100}%`
 
-/**
- * Two overlapping shares of one whole: the full disc is all holders, each wedge
- * is drawn to scale from the same edge, and each leader line lands in the band
- * only its own share covers.
- */
 const CryptoHoldersChart = ({
   callouts,
   className,

@@ -60,9 +60,7 @@ const INNOVATIONS = [
   "fx",
 ] as const
 
-// `logo` is omitted where the repo has no logo for the protocol -- AppCard then
-// renders its own generic app icon in the same 64px frame.
-// TODO(content): add Ethena and Pendle logos to `public/images/` and wire them up
+// TODO(content): Ethena and Pendle logos
 const PROTOCOLS: {
   key: string
   href: string
@@ -84,10 +82,10 @@ const PROTOCOLS: {
   { key: "compound", href: "https://compound.finance/", logo: compoundImg },
 ]
 
-// TODO(data): no live source yet — Ethereum's share of global DeFi TVL is hard-coded from the design
+// TODO(data): live source for Ethereum's share of global DeFi TVL
 const GLOBAL_DEFI_TVL_SHARE = 0.56
 
-// TODO(data): no live source yet — 24h DEX volume (12-month avg) is hard-coded from the design
+// TODO(data): live source for 24h DEX volume (12-month avg)
 const DEX_VOLUME_24H_USD = 1.89e9
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -162,9 +160,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         }
       />
 
-      {/* Padding and max-width sit on each section rather than on `main`, so a
-          non-section wrapper can span the full viewport -- the arrangement
-          `/stablecoins/` uses for its own full-bleed band below. */}
+      {/* Width lives on each section so a non-section wrapper can go full-bleed */}
       <main className="pb-page">
         <MainArticle className="flow *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
           <Section id="defi-primitives">
@@ -201,12 +197,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          {/* Full-bleed wash: the coloured wrapper spans the viewport while the
-              inner Section keeps content at max-w-7xl. `bg-tint-primary` inset
-              inside the page gutter all but vanished on a phone -- there the
-              band is only a hair narrower than the text it sits behind, so a
-              5-15% wash reads as no band at all. `mt-space-3x` restores the
-              section-boundary gap the non-section wrapper misses in `flow`. */}
+          {/* `mt-space-3x`: `flow` skips non-section wrappers */}
           <div className="mt-space-3x w-full bg-radial-primary transition-[border-radius] 2xl:rounded-4xl">
             <Section
               id="enterprise-innovation"
@@ -271,7 +262,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               </h2>
               <p className="text-lg text-body-medium">
-                {/* TODO(content): ecosystem lead — written for this PR, not from Figma */}
+                {/* TODO(content): ecosystem lead needs content-owner copy */}
                 {t(
                   "page-organizations-enterprise-onchain-finance-ecosystem-description"
                 )}
@@ -286,8 +277,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   )}
                   nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
                   thumbnail={logo?.src}
-                  // TODO(content): no descriptions or category tags for these
-                  // eight protocols yet -- needs a content owner, not invented copy
+                  // TODO(content): protocol descriptions and category tags
                   href={href}
                   className={cn(invertOnDark && "dark:[&_img]:invert")}
                 />
@@ -321,7 +311,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["organizations", "enterprise", "onchain-finance"],
     title: t("page-organizations-enterprise-onchain-finance-meta-title"),
-    // TODO(content): meta description — written for this PR, not from Figma
+    // TODO(content): meta description needs content-owner copy
     description: t(
       "page-organizations-enterprise-onchain-finance-meta-description"
     ),

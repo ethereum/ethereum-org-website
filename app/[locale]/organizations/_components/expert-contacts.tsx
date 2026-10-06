@@ -62,11 +62,6 @@ type ExpertContactsProps = {
   description?: string
 }
 
-/**
- * "Contact enterprise experts" section shared by the enterprise pages: one link
- * card per organization, or a Callout when only one is listed. Strings live in
- * the `page-organizations` namespace.
- */
 const ExpertContacts = async ({
   id = "experts",
   experts = ALL_EXPERTS,
@@ -139,9 +134,6 @@ const ExpertContacts = async ({
                   {t(`page-organizations-experts-${key}-description`)}
                 </CardParagraph>
               </CardContent>
-              {/* Default `responsive`, not `compact`: the button fills the
-                  card while it is narrow and shrinks to its content once the
-                  card is wide enough. */}
               <CardFooter>
                 <CardButtonFake>
                   {t("page-organizations-experts-cta")}

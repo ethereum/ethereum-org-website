@@ -79,7 +79,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { key: "sell", image: privacyImg },
   ] as const
 
-  // TODO(data): no live source yet -- NCA 2026 Annual State of Crypto Holders Report
+  // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
   const purchaseIntent: PurchaseIntentItem[] = (
     [
       ["retailers", 54],
@@ -96,7 +96,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     label: t(`page-organizations-small-business-purchases-${key}`),
   }))
 
-  // TODO(data): no live source yet -- NCA 2026 Annual State of Crypto Holders Report
+  // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
   const holders = { now: 40, expected: 72 }
 
   return (
@@ -165,9 +165,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {footnote(1, "everyday-purchases")}
               </p>
             </div>
-            {/* Recharts renders nothing server-side, so the six values live in a
-                server-rendered sr-only list: the accessible representation, and
-                the no-JS fallback for what would otherwise be an empty box. */}
+            {/* Recharts renders nothing server-side; the sr-only list is the a11y/no-JS fallback */}
             <figure className="m-0 min-w-0">
               <PurchaseIntentChart items={purchaseIntent} />
               <dl className="sr-only">
@@ -195,19 +193,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p className="mt-space max-w-3xl text-lg text-body-medium">
                 {t("page-organizations-small-business-payments-description")}
               </p>
-              {/* TODO(content): this panel had "Shopify" and "WordPress" CTAs
-                  that opened a Crypto.com support article and an unaudited
-                  third-party plugin -- a button must not be labelled with a
-                  destination it does not open, and neither target clears the
-                  product-listing bar in
-                  public/content/contributing/adding-products/index.md. Approved
-                  first-party destinations are needed before any CTA returns
-                  here. */}
+              {/* TODO(content): approved first-party Shopify/WordPress CTAs */}
             </div>
-            {/* Named rather than decorative: with the CTAs gone this is the
-                panel's only mention of Shopify, so `alt=""` would drop it for
-                screen readers entirely. The art is transparent, so it sits on
-                the dark page without the glare the opaque hub images have. */}
+            {/* Not decorative: the panel's only mention of Shopify */}
             <Image
               src={shopifyImg}
               alt="Shopify"

@@ -265,13 +265,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Grid>
           </Section>
 
-          {/* Tinted band: the solutions grid and the trust-vs-cryptographic
-              comparison are one argument in the design, so a single panel
-              carries both. Same wrapper rationale as the stablecoins page
-              bands -- the wrapper owns the background and radius, each
-              <Section> inside owns its max-width and padding (the
-              `*:[section]:py-space-3x` rule on MainArticle only reaches its
-              direct children). */}
+          {/* `*:[section]` rules only reach direct children, so inner Sections own their padding */}
           <div className="mt-space-3x w-full rounded-4xl bg-tint-primary">
             <Section
               id="solutions"

@@ -50,31 +50,17 @@ const DEFILLAMA = {
   sourceUrl: "https://defillama.com/",
 }
 
-// TODO(data): these two figures come from the Figma frame and carry no source
-// or as-of date, so they render without BigNumber's source tooltip while the
-// stat beside them is live. No data-layer getter matches either label: the
-// L2BEAT getter is L2-only total value secured (~$40B, already shipped as
-// "L2 TVL" on the enterprise-l2s page) and `getTotalValueLockedData` is
-// DefiLlama Ethereum DeFi TVL (~$140B, already shipped as "DeFi TVL" on the
-// enterprise hub) -- binding either one here would put an
-// order-of-magnitude-different number under these words.
-// MUST be sourced or dropped before this page ships. See the PR description.
+// TODO(data): unsourced; no data-layer getter matches -- source or drop before ship
 const STABLECOINS_L2_USD = 12_100_000_000
 const VALUE_SECURED_USD = 336_000_000_000
 
-/** Same floor /stablecoins/ applies, so both pages list the same coins. */
+// Matches /stablecoins/
 const MIN_MARKET_CAP_USD = 500_000
 
 const STABLECOINS_SHOWN = 12
 const STABLECOINS_PAGE_SIZE = 6
 
-/**
- * The data-layer getters read Netlify Blobs, whose client *throws* when its
- * credentials are missing rather than returning null. Unguarded, that failure
- * takes the whole page down with a 500, so each getter degrades to `null` here
- * and the render falls back -- the `hasError` degradation /stablecoins/ uses,
- * expressed per-getter so one failure doesn't blank the others.
- */
+// Netlify Blobs throws without credentials; degrade per-getter instead of a 500
 const nullOnError = <T,>(promise: Promise<T>): Promise<T | null> =>
   promise.catch((error) => {
     console.error(error)
@@ -89,9 +75,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-enterprise-tokenization")
 
-  // `StablecoinsTable` is the client component from /stablecoins/ and binds the
-  // `page-stablecoins` namespace itself, so its messages have to reach the
-  // client -- the route's extra namespaces are registered in `translations.ts`.
+  // `StablecoinsTable` needs `page-stablecoins` client-side (see `translations.ts`)
   const allMessages = await getMessages({ locale })
   const messages = pick(
     allMessages,
@@ -167,9 +151,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     maximumFractionDigits: 0,
   })
 
-  // Built exactly as /stablecoins/ builds it, so both tables carry the same
-  // rows and fields (CoinGecko logo, ticker, peg, project URL, collateral
-  // type). A failed getter degrades to the component's own error row.
+  // Mirrors /stablecoins/
   const coinDetails: StablecoinsTableRow[] = stablecoins
     .flatMap(({ id, ...rest }) => {
       const coinMarketData = stablecoinsData?.find((coin) => coin.id === id)
@@ -185,14 +167,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const marketsHasError = !stablecoinsData
 
-  // TODO(content): the "treasuries" and "credit" cards ship with no body copy.
-  // The Figma grid is a draft ("Suggestion (Paul)") whose bodies were pasted
-  // from the L2s page and contradicted their own titles -- one described two
-  // firms building L2s under "Tokenized Treasuries & Cash-Equivalents", the
-  // other payments pilots under "Private Credit & Structured Credit". Both were
-  // dropped rather than rewritten, since replacement prose would invent claims
-  // about named institutions. Each card stands on its title plus its on-topic
-  // Example list until a content owner writes real bodies.
+  // TODO(content): body copy for the "treasuries" and "credit" cards
   const assetCards = [
     { key: "treasuries", hasDescription: false, hasExamples: true },
     { key: "credit", hasDescription: false, hasExamples: true },
@@ -298,9 +273,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-enterprise-tokenization-stablecoins-description"
               )}
             />
-            {/* The shared table is a client component and brings its own
-                column headers, collateral-type labels, error row and
-                "Show more" paging, so the section adds none of those. */}
             <I18nProvider locale={locale} messages={messages}>
               <StablecoinsTable
                 content={coinDetails}

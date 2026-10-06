@@ -68,10 +68,6 @@ type OrganizationPathwaysProps = {
     }
 )
 
-/**
- * Closing section of every /organizations/ page, pointing to the next pages in
- * the section. Strings live in the `page-organizations` namespace.
- */
 const OrganizationPathways = async ({
   id = "keep-exploring",
   pathways,

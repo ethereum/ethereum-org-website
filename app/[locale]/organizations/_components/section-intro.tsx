@@ -5,11 +5,7 @@ type SectionIntroProps = {
   description?: ReactNode
 }
 
-/**
- * Centered section opener used across the /organizations/ pages: an `<h2>`
- * plus an optional lead paragraph. Renders a fragment so the parent
- * `<Section>` (inside a `.flow` article) owns the vertical rhythm.
- */
+/** Renders a fragment so the parent `<Section>` owns the `.flow` rhythm */
 const SectionIntro = ({ title, description }: SectionIntroProps) => (
   <>
     <h2 className="text-center">{title}</h2>

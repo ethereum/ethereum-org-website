@@ -21,13 +21,7 @@ type HeroStatsProps = {
   stats: HeroStat[]
 }
 
-/**
- * Row of headline metrics rendered *inside* a `PageHero`'s `description`, which
- * is where the site puts hero KPIs -- see `StakingStatsBox` on `/staking/`,
- * whose Cell/Value/Label shape and monospace value this mirrors so the two
- * read as the same component. Keep it in the hero: as a separate `<Section>`
- * below the hero it reads as page content rather than part of the masthead.
- */
+/** Render inside `PageHero`'s `description`; mirrors `StakingStatsBox` */
 const HeroStats = async ({ stats }: HeroStatsProps) => {
   const locale = await getLocale()
   const t = await getTranslations("common")
