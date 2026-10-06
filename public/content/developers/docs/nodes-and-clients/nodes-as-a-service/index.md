@@ -250,6 +250,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Consensus-Based Data Integrity
     - Multi-chain Support
 
+- [**LYFTIUM**](https://www.lyftium.com/)
+  - [Docs](https://www.lyftium.com/docs)
+  - Features
+    - Ethereum Mainnet RPC only (`https://eth-mainnet-rpc.lyftium.com`)
+    - Plain requests-per-minute pricing (no compute-unit metering)
+    - Authenticate with `X-Api-Key` header (never put the key in the URL)
+    - Fail-closed tip: stale head refused with HTTP 503 / JSON-RPC `-32003`
+
 - [**Moralis**](https://moralis.io/)
   - [Docs](https://docs.moralis.io/)
   - Features
@@ -424,3 +432,4 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 - [Getting started with Ethereum development using Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+
