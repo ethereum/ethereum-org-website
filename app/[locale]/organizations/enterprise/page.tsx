@@ -29,13 +29,7 @@ import ExpertContacts from "../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../_components/hero-stats"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
-import {
-  DEFI_RUNNER_UP_FALLBACK,
-  metricStat,
-  nullOnError,
-  RWA_SHARE_FALLBACK,
-  SOURCES,
-} from "../_lib/metrics"
+import { metricStat, nullOnError, SOURCES } from "../_lib/metrics"
 import { ETHEREUM_GENESIS_TIMESTAMP, uptimeYearsSince } from "../_lib/uptime"
 
 import PageJsonLD from "./page-jsonld"
@@ -118,22 +112,39 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ] as const
 
-  const whyItems = ["neutrality", "composable", "liquidity", "resilience"].map(
-    (key) => ({
-      title: t(`page-organizations-enterprise-why-${key}-title`),
-      // `years` keeps the copy in step with the uptime stat above
-      description: t(`page-organizations-enterprise-why-${key}-description`, {
-        years: uptimeYears,
+  // Live-figure sentences render only when their data loaded
+  const liquidityFigures = [
+    rwaShare &&
+      "rwas" in rwaShare &&
+      t("page-organizations-enterprise-why-liquidity-rwa-share", {
         rwaShare: numberFormat(locale, { style: "percent" }).format(
-          (rwaShare && "rwas" in rwaShare ? rwaShare : RWA_SHARE_FALLBACK).rwas
-        ),
-        multiplier: numberFormat(locale, { maximumFractionDigits: 0 }).format(
-          defiShare && "runnerUpMultiplier" in defiShare
-            ? defiShare.runnerUpMultiplier
-            : DEFI_RUNNER_UP_FALLBACK
+          rwaShare.rwas
         ),
       }),
-    })
+    defiShare &&
+      "runnerUpMultiplier" in defiShare &&
+      t("page-organizations-enterprise-why-liquidity-multiplier", {
+        multiplier: numberFormat(locale, { maximumFractionDigits: 0 }).format(
+          defiShare.runnerUpMultiplier
+        ),
+      }),
+  ].filter(Boolean)
+
+  const whyItems = ["neutrality", "composable", "liquidity", "resilience"].map(
+    (key) => {
+      // `years` keeps the copy in step with the uptime stat above
+      const description = t(
+        `page-organizations-enterprise-why-${key}-description`,
+        { years: uptimeYears }
+      )
+      return {
+        title: t(`page-organizations-enterprise-why-${key}-title`),
+        description:
+          key === "liquidity"
+            ? [description, ...liquidityFigures].join(" ")
+            : description,
+      }
+    }
   )
 
   const compareColumns = ["ethereum", "l1", "private-dlt", "traditional"]

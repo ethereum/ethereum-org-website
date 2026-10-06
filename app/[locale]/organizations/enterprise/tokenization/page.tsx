@@ -38,12 +38,7 @@ import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
-import {
-  metricStat,
-  nullOnError,
-  RWA_SHARE_FALLBACK,
-  SOURCES,
-} from "../../_lib/metrics"
+import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -93,7 +88,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ])
 
   const l2Stablecoins = sumL2Breakdown(l2beatData, "stablecoin")
-  const rwa = rwaShare && "rwas" in rwaShare ? rwaShare : RWA_SHARE_FALLBACK
   const percent = (share: number) =>
     numberFormat(locale, { style: "percent" }).format(share)
 
@@ -174,12 +168,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         description={
           <>
             <p>
-              {t(
-                "page-organizations-enterprise-tokenization-hero-description",
-                {
-                  rwaShare: percent(rwa.rwas),
-                  stablecoinShare: percent(rwa.stablecoins),
-                }
+              {t("page-organizations-enterprise-tokenization-hero-description")}
+              {rwaShare && "rwas" in rwaShare && (
+                <>
+                  {" "}
+                  {t(
+                    "page-organizations-enterprise-tokenization-hero-description-share",
+                    {
+                      rwaShare: percent(rwaShare.rwas),
+                      stablecoinShare: percent(rwaShare.stablecoins),
+                    }
+                  )}
+                </>
               )}
             </p>
             <div className="mt-space-3x">
