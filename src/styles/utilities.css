@@ -272,10 +272,7 @@
   }
 }
 
-/* Heading permalink (IdAnchor). The lucide `link` icon is drawn here once as a
-   mask instead of an inline SVG per anchor: long pages carry hundreds of
-   anchors (199 on /glossary/), and each SVG was serialized into both the HTML
-   and the RSC payload. */
+/* Heading permalink icon as a CSS mask, so long pages don't ship an SVG per anchor */
 @utility id-anchor {
   @apply absolute end-full flex h-full items-center opacity-0 transition-opacity duration-100 ease-in-out group-hover:opacity-100 focus:opacity-100;
 
