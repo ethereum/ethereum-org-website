@@ -36,6 +36,8 @@ Because the account chooses its own rules, it can also choose a signature scheme
 
 Not decided yet. FOCIL and frame transactions are the two changes scheduled so far; dozens more have been proposed and none of them are settled. This page will stay short until the scope firms up — for the current state of the discussion, see the resources below.
 
+Proposals currently considered for inclusion include EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279, and EIP-8365. Being considered means client teams are evaluating a proposal, not that it will ship in Hegotá.
+
 ## Further reading {#further-reading}
 
 - [Forkcast: Hegotá](https://forkcast.org/upgrade/hegota) — live status of every proposal
