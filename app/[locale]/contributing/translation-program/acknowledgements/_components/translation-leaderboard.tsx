@@ -9,7 +9,7 @@ import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 
-import type { TranslationLeaderboardRow } from "../_utils/translation-leaderboard"
+import type { TranslationLeaderboardRow } from "../utils"
 
 const AvatarWithFallback = ({
   username,
@@ -100,7 +100,7 @@ const TranslationLeaderboard = ({
   allTimeData,
 }: TranslationLeaderboardProps) => {
   // Already sorted by descending total cost and trimmed to the maximum
-  // renderable rows on the server -- see `_utils/translation-leaderboard.ts`.
+  // renderable rows on the server -- see `../utils.ts`.
   const leaderboardData = {
     monthData,
     quarterData,

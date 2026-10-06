@@ -28,8 +28,8 @@ import quarterData from "@/data/translation-reports/quarter/quarter-data.json"
 
 import ThemedCertificate from "./_components/themed-certificate"
 import TranslationLeaderboard from "./_components/translation-leaderboard"
-import { getTranslationLeaderboardRows } from "./_utils/translation-leaderboard"
 import PageJsonLD from "./page-jsonld"
+import { getTranslationLeaderboardRows } from "./utils"
 
 import heroImg from "@/public/images/doge-computer.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
