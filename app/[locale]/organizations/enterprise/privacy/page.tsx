@@ -145,6 +145,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
+  const tOrganizations = await getTranslations("page-organizations")
 
   const { contributors } = await getAppPageContributorInfo(
     "organizations/enterprise/privacy",
@@ -397,7 +398,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               ))}
             </Grid>
           </Section>
-          <ExpertContacts experts={["ethsystems"]} />
+          <ExpertContacts
+            experts={["ethsystems"]}
+            description={tOrganizations(
+              "page-organizations-experts-privacy-description"
+            )}
+          />
 
           <OrganizationPathways current="privacy" />
         </MainArticle>

@@ -1,6 +1,16 @@
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutMain,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
 import {
   Card,
   CardButtonFake,
@@ -13,6 +23,7 @@ import {
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
+import EthSystemsLogo from "./ethsystems-logo.svg"
 import SectionIntro from "./section-intro"
 
 import eeaLogo from "@/public/images/organizations/logos/enterprise-ethereum-alliance.png"
@@ -47,26 +58,67 @@ type ExpertContactsProps = {
   id?: string
   /** Subset (and order) of organizations to show; defaults to all four */
   experts?: ExpertKey[]
+  /** Lead override, e.g. when a page lists a single organization */
+  description?: string
 }
 
 /**
- * "Contact enterprise experts" section shared by the enterprise pages: a grid
- * of link cards, one per organization that helps institutions evaluate
- * Ethereum. Strings live in the `page-organizations` namespace.
+ * "Contact enterprise experts" section shared by the enterprise pages: one link
+ * card per organization, or a Callout when only one is listed. Strings live in
+ * the `page-organizations` namespace.
  */
 const ExpertContacts = async ({
   id = "experts",
   experts = ALL_EXPERTS,
+  description,
 }: ExpertContactsProps) => {
   const t = await getTranslations("page-organizations")
 
+  const intro = (
+    <SectionIntro
+      title={t("page-organizations-experts-title")}
+      description={description ?? t("page-organizations-experts-description")}
+    />
+  )
+
+  if (experts.length === 1) {
+    const [key] = experts
+    return (
+      <Section id={id}>
+        {intro}
+        <CalloutRoot data-flow="cta">
+          {key === "ethsystems" && (
+            <CalloutBanner>
+              <EthSystemsLogo
+                aria-hidden="true"
+                className="h-48 w-auto text-body @3xl/callout:h-56"
+              />
+            </CalloutBanner>
+          )}
+          <CalloutMain>
+            <CalloutContent>
+              <CalloutTitle as="h3">
+                {t(`page-organizations-experts-${key}-name`)}
+              </CalloutTitle>
+              <CalloutDescription>
+                {t(`page-organizations-experts-${key}-description`)}
+              </CalloutDescription>
+            </CalloutContent>
+            <CalloutButtons>
+              <ButtonLink href={EXPERTS[key].href}>
+                {t("page-organizations-experts-cta")}
+              </ButtonLink>
+            </CalloutButtons>
+          </CalloutMain>
+        </CalloutRoot>
+      </Section>
+    )
+  }
+
   return (
     <Section id={id}>
-      <SectionIntro
-        title={t("page-organizations-experts-title")}
-        description={t("page-organizations-experts-description")}
-      />
-      <Grid balanced={2} data-flow="cta" className="gap-8 text-start">
+      {intro}
+      <Grid balanced={4} data-flow="cta" className="text-start">
         {experts.map((key) => {
           const { href, logo } = EXPERTS[key]
           return (
