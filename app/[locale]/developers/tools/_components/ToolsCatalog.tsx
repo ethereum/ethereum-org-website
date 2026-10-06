@@ -8,7 +8,7 @@ import type {
   CatalogFilterState,
   CatalogNavGroupConfig,
 } from "@/components/FilterableCatalog/types"
-import InlineLink from "@/components/ui/Link"
+import { BaseLink } from "@/components/ui/Link"
 
 import type {
   DeveloperToolsCategory,
@@ -288,12 +288,13 @@ export default function ToolsCatalog({
           }
         />
       )}
-      renderSidebarHeader={({ variant }) =>
-        variant === "desktop" ? (
-          <InlineLink href={SUGGEST_RESOURCE_ISSUE_URL} className="text-sm">
-            {labels.suggestButton}
-          </InlineLink>
-        ) : null
+      sidebarFooter={
+        <BaseLink
+          href={SUGGEST_RESOURCE_ISSUE_URL}
+          className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
+        >
+          {labels.suggestButton}
+        </BaseLink>
       }
       renderResults={(filteredTools) => (
         <ToolsResults
