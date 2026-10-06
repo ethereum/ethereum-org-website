@@ -148,7 +148,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
+        <MainArticle className="flow *:[section]:py-space-3x">
           <Section id="audiences">
             <SectionIntro
               title={t("page-organizations-hub-audiences-title")}
@@ -208,7 +208,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 max-lg:max-w-md lg:sticky lg:top-28">
+            <div className="relative aspect-3/4 lg:sticky lg:top-28">
               <Image
                 src={whyImg}
                 alt=""
@@ -220,7 +220,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-why-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-hub-why-description")}
               </p>
               {featureRows("page-organizations-hub-why", WHY_ITEMS)}
@@ -234,7 +234,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             <div className="flow">
               <h2>{t("page-organizations-hub-adoption-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-hub-adoption-description")}
                 {footnote(1, "adoption")}
               </p>
@@ -247,7 +247,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 max-lg:max-w-md lg:sticky lg:top-28">
+            <div className="relative aspect-3/4 lg:sticky lg:top-28">
               <Image
                 src={whatImg}
                 alt=""
@@ -259,7 +259,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-what-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-hub-what-description")}
               </p>
               {featureRows("page-organizations-hub-what", WHAT_ITEMS)}
@@ -271,7 +271,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-2"
           >
-            <div className="relative aspect-[1000/715] max-lg:max-w-md lg:sticky lg:top-28">
+            <div className="relative aspect-1000/715 w-full max-w-md justify-self-center lg:sticky lg:top-28 lg:max-w-none">
               <Image
                 src={ethBlocksImg}
                 alt=""

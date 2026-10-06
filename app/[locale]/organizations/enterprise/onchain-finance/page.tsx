@@ -160,9 +160,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         }
       />
 
-      {/* Width lives on each section so a non-section wrapper can go full-bleed */}
+      {/* px-page on each section so the band wrapper can go full-bleed */}
       <main className="pb-page">
-        <MainArticle className="flow *:[section]:mx-auto *:[section]:w-full *:[section]:max-w-7xl *:[section]:px-page *:[section]:py-space-3x">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="defi-primitives">
             <SectionIntro
               title={t(
@@ -201,14 +201,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <div className="mt-space-3x w-full bg-radial-primary transition-[border-radius] 2xl:rounded-4xl">
             <Section
               id="enterprise-innovation"
-              className="mx-auto w-full max-w-7xl px-page py-space-3x text-center"
+              className="px-page py-space-3x text-center"
             >
               <h2>
                 {t(
                   "page-organizations-enterprise-onchain-finance-innovation-title"
                 )}
               </h2>
-              <p className="mx-auto max-w-3xl text-lg text-body-medium">
+              <p className="mx-auto max-w-3xl text-lg text-pretty text-body-medium">
                 {t(
                   "page-organizations-enterprise-onchain-finance-innovation-description"
                 )}
@@ -261,7 +261,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   "page-organizations-enterprise-onchain-finance-ecosystem-title"
                 )}
               </h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {/* TODO(content): ecosystem lead needs content-owner copy */}
                 {t(
                   "page-organizations-enterprise-onchain-finance-ecosystem-description"

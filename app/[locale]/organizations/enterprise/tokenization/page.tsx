@@ -201,7 +201,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
+        <MainArticle className="flow *:[section]:py-space-3x">
           <Section id="infrastructure">
             <SectionIntro
               title={t(
@@ -240,7 +240,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>
               {t("page-organizations-enterprise-tokenization-compare-title")}
             </h2>
-            <p className="text-lg text-body-medium">
+            <p className="text-lg text-pretty text-body-medium">
               {t(
                 "page-organizations-enterprise-tokenization-compare-description"
               )}
@@ -291,7 +291,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>
                 {t("page-organizations-enterprise-tokenization-assets-title")}
               </h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t(
                   "page-organizations-enterprise-tokenization-assets-description"
                 )}

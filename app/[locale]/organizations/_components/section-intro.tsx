@@ -10,7 +10,7 @@ const SectionIntro = ({ title, description }: SectionIntroProps) => (
   <>
     <h2 className="text-center">{title}</h2>
     {description && (
-      <p className="mx-auto max-w-3xl text-center text-lg text-body-medium">
+      <p className="mx-auto max-w-3xl text-center text-lg text-pretty text-body-medium">
         {description}
       </p>
     )}

@@ -38,7 +38,7 @@ const ChecklistPanel = ({
   >
     <h2>{title}</h2>
     {description && (
-      <p className="mx-auto max-w-3xl text-lg text-body-medium">
+      <p className="mx-auto max-w-3xl text-lg text-pretty text-body-medium">
         {description}
       </p>
     )}

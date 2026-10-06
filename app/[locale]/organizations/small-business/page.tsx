@@ -116,7 +116,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
+        <MainArticle className="flow *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-small-business-use-cases-title")}
@@ -160,7 +160,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             <div className="flow">
               <h2>{t("page-organizations-small-business-purchases-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-purchases-description")}
                 {footnote(1, "everyday-purchases")}
               </p>
@@ -190,7 +190,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2 className="text-h3">
                 {t("page-organizations-small-business-payments-title")}
               </h2>
-              <p className="mt-space max-w-3xl text-lg text-body-medium">
+              <p className="mt-space max-w-3xl text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-payments-description")}
               </p>
               {/* TODO(content): approved first-party Shopify/WordPress CTAs */}
@@ -211,7 +211,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             <div className="flow">
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-adoption-description")}
                 {footnote(2, "adoption")}
               </p>
@@ -226,7 +226,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             <div className="flow lg:col-start-2">
               <h2>{t("page-organizations-small-business-holders-title")}</h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-holders-description")}
                 {footnote(1, "crypto-holders")}
               </p>

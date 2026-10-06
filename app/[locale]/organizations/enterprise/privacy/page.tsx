@@ -230,7 +230,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <main className="px-page pb-page">
-        <MainArticle className="flow mx-auto max-w-7xl *:[section]:py-space-3x">
+        <MainArticle className="flow *:[section]:py-space-3x">
           <Section id="compliance">
             <SectionIntro
               title={t(
@@ -267,10 +267,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           {/* `*:[section]` rules only reach direct children, so inner Sections own their padding */}
           <div className="mt-space-3x w-full rounded-4xl bg-tint-primary">
-            <Section
-              id="solutions"
-              className="mx-auto w-full max-w-7xl px-page py-space-3x"
-            >
+            <Section id="solutions" className="px-page py-space-3x">
               <SectionIntro
                 title={t(
                   "page-organizations-enterprise-privacy-solutions-title"
@@ -316,7 +313,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id="trust-vs-cryptographic"
-              className="mx-auto w-full max-w-7xl px-page py-space-3x"
+              className="px-page py-space-3x"
             >
               <div className="flex gap-space-2x max-lg:flex-col lg:items-center">
                 <div className="shrink-0 max-lg:max-w-64 lg:w-64">
@@ -331,7 +328,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <h2>
                     {t("page-organizations-enterprise-privacy-compare-title")}
                   </h2>
-                  <p className="text-lg text-body-medium">
+                  <p className="text-lg text-pretty text-body-medium">
                     {t(
                       "page-organizations-enterprise-privacy-compare-description"
                     )}
@@ -373,7 +370,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>
                 {t("page-organizations-enterprise-privacy-problems-title")}
               </h2>
-              <p className="text-lg text-body-medium">
+              <p className="text-lg text-pretty text-body-medium">
                 {t(
                   "page-organizations-enterprise-privacy-problems-description"
                 )}

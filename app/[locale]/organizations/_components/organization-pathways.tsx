@@ -22,6 +22,11 @@ const PATHWAYS = {
     image: publicSectorImg,
   },
   enterprise: { href: "/organizations/enterprise/", image: enterpriseImg },
+  // Same target as `enterprise`, with the copy the subpage row was designed with
+  "enterprise-hub": {
+    href: "/organizations/enterprise/",
+    image: enterpriseImg,
+  },
   "small-business": {
     href: "/organizations/small-business/",
     image: smallBusinessImg,
@@ -45,10 +50,10 @@ const PATHWAYS = {
 export type PathwayKey = keyof typeof PATHWAYS
 
 const ENTERPRISE_SUBPAGES = [
-  "tokenization",
-  "onchain-finance",
-  "enterprise-l2s",
   "privacy",
+  "onchain-finance",
+  "tokenization",
+  "enterprise-l2s",
 ] as const satisfies PathwayKey[]
 
 export type EnterpriseSubpage = (typeof ENTERPRISE_SUBPAGES)[number]
@@ -76,7 +81,10 @@ const OrganizationPathways = async ({
   const t = await getTranslations("page-organizations")
 
   const keys: PathwayKey[] = current
-    ? ["enterprise", ...ENTERPRISE_SUBPAGES.filter((key) => key !== current)]
+    ? [
+        "enterprise-hub",
+        ...ENTERPRISE_SUBPAGES.filter((key) => key !== current),
+      ]
     : pathways
 
   const cards = keys.map((key, idx) => (
@@ -91,14 +99,14 @@ const OrganizationPathways = async ({
           : undefined
       }
       banner={<Image src={PATHWAYS[key].image} alt="" sizes="160px" />}
-      className="h-full"
+      className={current ? "h-full" : "max-w-3xl"}
     />
   ))
 
   return (
     <Section id={id}>
       <h2>{t("page-organizations-pathways-title")}</h2>
-      <p className="text-lg text-body-medium">
+      <p className="text-lg text-pretty text-body-medium">
         {current
           ? t("page-organizations-pathways-subpages-description")
           : t("page-organizations-pathways-description")}
