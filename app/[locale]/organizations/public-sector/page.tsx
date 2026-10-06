@@ -20,19 +20,11 @@ import {
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import ComparisonTable from "../_components/comparison-table"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 
@@ -166,38 +158,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-public-sector-fits-description"
               )}
             />
-            <Table variant="highlight-first-column">
-              <TableCaption className="sr-only">
-                {/* TODO(content): caption written for this PR, not from Figma — it exists so screen readers do not hear the section heading twice */}
-                {t("page-organizations-public-sector-fits-caption")}
-              </TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>
-                    {t("page-organizations-public-sector-fits-col-need")}
-                  </TableHead>
-                  <TableHead>
-                    {t("page-organizations-public-sector-fits-col-help")}
-                  </TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {fitsRows.map((row) => (
-                  <TableRow key={row}>
-                    <TableCell>
-                      {t(
-                        `page-organizations-public-sector-fits-row-${row}-need`
-                      )}
-                    </TableCell>
-                    <TableCell>
-                      {t(
-                        `page-organizations-public-sector-fits-row-${row}-help`
-                      )}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+            <ComparisonTable
+              caption={t("page-organizations-public-sector-fits-caption")}
+              rowHeader={t("page-organizations-public-sector-fits-col-need")}
+              columns={[t("page-organizations-public-sector-fits-col-help")]}
+              rows={fitsRows.map((row) => ({
+                label: t(
+                  `page-organizations-public-sector-fits-row-${row}-need`
+                ),
+                cells: [
+                  t(`page-organizations-public-sector-fits-row-${row}-help`),
+                ],
+              }))}
+            />
           </Section>
 
           <Section id="case-studies">

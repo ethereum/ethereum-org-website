@@ -287,7 +287,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
               <Grid balanced={4} data-flow="cta">
                 {SOLUTIONS.map(({ key, examples }) => (
-                  <Card key={key} variant="nested" hoverLift>
+                  <Card key={key} variant="nested">
                     <CardContent>
                       <CardTitle>
                         {t(

@@ -6,7 +6,6 @@ import {
   Sparkles,
 } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import type { ReactNode } from "react"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -14,6 +13,7 @@ import PathwayCard from "@/components/cards/pathway-card"
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
+import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import {
   Card,
@@ -140,8 +140,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     )),
   }))
 
-  const strong = (chunks: ReactNode) => <strong>{chunks}</strong>
-
   return (
     <>
       <PageJsonLD locale={locale} contributors={contributors} />
@@ -237,13 +235,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p>
                 {t.rich(
                   "page-organizations-enterprise-l2s-issuance-transparency",
-                  { strong }
+                  { strong: Strong }
                 )}
               </p>
               <p>
                 {t.rich(
                   "page-organizations-enterprise-l2s-issuance-recoverability",
-                  { strong }
+                  { strong: Strong }
                 )}
               </p>
             </div>

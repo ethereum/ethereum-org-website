@@ -88,9 +88,8 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
-  // Reuses /stablecoins/'s client-side StablecoinsTable, which binds the
-  // `page-stablecoins` namespace for its column headers and type labels.
-  "/organizations/enterprise/tokenization/": ["page-stablecoins", "table"],
+  // Client-side StablecoinsTable from /stablecoins/
+  "/organizations/enterprise/tokenization/": ["page-stablecoins"],
   "/community/": ["component-story-card"],
   "/developers/": ["component-swiper"],
   "/roadmap/": ["component-swiper"],
