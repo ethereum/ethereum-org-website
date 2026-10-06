@@ -159,41 +159,6 @@ interface SearchModalProps {
   className?: string
 }
 
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
-interface SearchModalProps {
-  onClose: () => void
-  className?: string
-}
-
 /**
  * Everything the search modal needs, kept in this file because it is loaded lazily.
  * `Search` sits in the global header and ships on every page; the explorer data reaches
