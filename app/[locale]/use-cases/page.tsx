@@ -184,7 +184,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("prediction-markets-cta")}
             />
             <UseCaseCard
-              href="https://institutions.ethereum.org/"
+              href="/organizations/enterprise/"
               image={restaking}
               title={t("institutions-title")}
               description={t("institutions-description")}
