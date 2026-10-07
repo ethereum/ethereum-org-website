@@ -357,9 +357,9 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier (250k requests/month) with no KYC required
     - Flat-rate paid plans with no compute-unit metering
-    - One API key for 75+ networks, including non-EVM chains
-    - HTTP and WebSocket endpoints on every chain
-    - Archive access included on paid plans
+    - One API key for 125+ networks, including non-EVM chains
+    - HTTP endpoints on every chain, WebSocket on most
+    - Archive access included on paid plans for most EVM chains
     - Crypto and card payments accepted
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
