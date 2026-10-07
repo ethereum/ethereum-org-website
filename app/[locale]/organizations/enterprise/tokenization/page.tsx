@@ -28,7 +28,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
+import { formatLargeUSD } from "@/lib/utils/numbers"
 import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -45,7 +45,6 @@ import PageJsonLD from "./page-jsonld"
 import {
   getEthereumStablecoinsMcapData,
   getL2beatData,
-  getRwaMarketShareData,
   getStablecoinsData,
   getTotalValueSecuredData,
 } from "@/lib/data"
@@ -73,14 +72,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     stablecoinsData,
     l2beatData,
     valueSecured,
-    rwaShare,
     { contributors },
   ] = await Promise.all([
     nullOnError(getEthereumStablecoinsMcapData()),
     nullOnError(getStablecoinsData()),
     nullOnError(getL2beatData()),
     nullOnError(getTotalValueSecuredData()),
-    nullOnError(getRwaMarketShareData()),
     getAppPageContributorInfo(
       "organizations/enterprise/tokenization",
       locale as Lang
@@ -88,8 +85,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ])
 
   const l2Stablecoins = sumL2Breakdown(l2beatData, "stablecoin")
-  const percent = (share: number) =>
-    numberFormat(locale, { style: "percent" }).format(share)
 
   const stats: HeroStat[] = [
     {
@@ -169,18 +164,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <>
             <p>
               {t("page-organizations-enterprise-tokenization-hero-description")}
-              {rwaShare && "rwas" in rwaShare && (
-                <>
-                  {" "}
-                  {t(
-                    "page-organizations-enterprise-tokenization-hero-description-share",
-                    {
-                      rwaShare: percent(rwaShare.rwas),
-                      stablecoinShare: percent(rwaShare.stablecoins),
-                    }
-                  )}
-                </>
-              )}
             </p>
             <div className="mt-space-3x">
               <HeroStats stats={stats} />

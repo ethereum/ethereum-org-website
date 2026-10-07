@@ -37,7 +37,6 @@ import PageJsonLD from "./page-jsonld"
 import {
   getDefiTvlShareData,
   getEthereumStablecoinsMcapData,
-  getRwaMarketShareData,
   getTotalValueLockedData,
 } from "@/lib/data"
 import heroImg from "@/public/images/organizations/hero-enterprise.png"
@@ -54,19 +53,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-enterprise")
 
-  const [
-    stablecoinsMcap,
-    totalValueLocked,
-    rwaShare,
-    defiShare,
-    { contributors },
-  ] = await Promise.all([
-    nullOnError(getEthereumStablecoinsMcapData()),
-    nullOnError(getTotalValueLockedData()),
-    nullOnError(getRwaMarketShareData()),
-    nullOnError(getDefiTvlShareData()),
-    getAppPageContributorInfo("organizations/enterprise", locale as Lang),
-  ])
+  const [stablecoinsMcap, totalValueLocked, defiShare, { contributors }] =
+    await Promise.all([
+      nullOnError(getEthereumStablecoinsMcapData()),
+      nullOnError(getTotalValueLockedData()),
+      nullOnError(getDefiTvlShareData()),
+      getAppPageContributorInfo("organizations/enterprise", locale as Lang),
+    ])
 
   const uptimeYears = uptimeYearsSince(ETHEREUM_GENESIS_TIMESTAMP)
 
@@ -114,13 +107,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   // Live-figure sentences render only when their data loaded
   const liquidityFigures = [
-    rwaShare &&
-      "rwas" in rwaShare &&
-      t("page-organizations-enterprise-why-liquidity-rwa-share", {
-        rwaShare: numberFormat(locale, { style: "percent" }).format(
-          rwaShare.rwas
-        ),
-      }),
     defiShare &&
       "runnerUpMultiplier" in defiShare &&
       t("page-organizations-enterprise-why-liquidity-multiplier", {

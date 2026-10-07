@@ -21,7 +21,6 @@ import type { BlobStats } from "./fetchers/fetchBlobStats"
 import type { DefiTvlShareData } from "./fetchers/fetchDefiTvlShare"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { QuizStatsData } from "./fetchers/fetchQuizStats"
-import type { RwaMarketShareData } from "./fetchers/fetchRwaMarketShare"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
 import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
 import { get } from "./storage"
@@ -34,7 +33,6 @@ export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
 export const getL2beatActivityData = () => get<MetricReturnData>(KEYS.L2BEAT_ACTIVITY)
 export const getDefiTvlShareData = () => get<DefiTvlShareData>(KEYS.DEFI_TVL_SHARE)
 export const getDexVolumeData = () => get<MetricReturnData>(KEYS.DEX_VOLUME)
-export const getRwaMarketShareData = () => get<RwaMarketShareData>(KEYS.RWA_MARKET_SHARE)
 export const getTotalValueSecuredData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_SECURED)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)
 export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)

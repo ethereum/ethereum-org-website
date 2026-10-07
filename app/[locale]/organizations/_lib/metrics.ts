@@ -6,7 +6,6 @@ export const SOURCES = {
     sourceName: "ultrasound.money",
     sourceUrl: "https://ultrasound.money/",
   },
-  rwa: { sourceName: "rwa.xyz", sourceUrl: "https://www.rwa.xyz/" },
 }
 
 /** Netlify Blobs throws without credentials; degrade per-getter instead of a 500 */

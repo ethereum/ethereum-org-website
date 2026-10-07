@@ -34,7 +34,6 @@ import { fetchL2beatActivity } from "./fetchers/fetchL2beatActivity"
 import { fetchAttestantPosts } from "./fetchers/fetchPosts"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
-import { fetchRwaMarketShare } from "./fetchers/fetchRwaMarketShare"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
@@ -59,7 +58,6 @@ export const KEYS = {
   L2BEAT_ACTIVITY: "fetch-l2beat-activity",
   DEFI_TVL_SHARE: "fetch-defi-tvl-share",
   DEX_VOLUME: "fetch-dex-volume",
-  RWA_MARKET_SHARE: "fetch-rwa-market-share",
   TOTAL_VALUE_SECURED: "fetch-total-value-secured",
   POSTS: "fetch-posts",
   RSS: "fetch-rss",
@@ -105,7 +103,6 @@ const DAILY: TaskDef[] = [
   [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
   [KEYS.DEFI_TVL_SHARE, fetchDefiTvlShare],
   [KEYS.DEX_VOLUME, fetchDexVolume],
-  [KEYS.RWA_MARKET_SHARE, fetchRwaMarketShare],
   [KEYS.TOTAL_VALUE_SECURED, fetchTotalValueSecured],
   [KEYS.POSTS, fetchAttestantPosts],
   [KEYS.RSS, fetchRSS],

@@ -65,12 +65,6 @@ export const getDexVolumeData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getRwaMarketShareData = createCachedGetter(
-  dataLayer.getRwaMarketShareData,
-  ["rwa-market-share-data"],
-  CACHE_REVALIDATE_DAY
-)
-
 export const getTotalValueSecuredData = createCachedGetter(
   dataLayer.getTotalValueSecuredData,
   ["total-value-secured-data"],
