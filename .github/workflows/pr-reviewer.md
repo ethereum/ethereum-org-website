@@ -9,7 +9,12 @@ on:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
-if: github.event.pull_request.head.repo.full_name == github.repository
+if: >-
+  github.event.pull_request.head.repo.full_name == github.repository &&
+  github.event.pull_request.head.ref != 'staging' &&
+  github.event.pull_request.head.ref != 'dev' &&
+  !startsWith(github.event.pull_request.head.ref, 'intl/') &&
+  !startsWith(github.event.pull_request.head.ref, 'automated')
 permissions:
   contents: read
   issues: read
@@ -17,6 +22,7 @@ permissions:
   actions: read
 engine:
   id: claude
+max-ai-credits: 300
 network: defaults
 strict: true
 timeout-minutes: 10
@@ -56,6 +62,10 @@ safe-outputs:
   noop:
     report-as-issue: false
   report-failure-as-issue: false
+  threat-detection:
+    engine:
+      id: claude
+      model: claude-sonnet-5
 pre-agent-steps:
   - name: Pre-fetch PR diff and metadata
     env:
@@ -74,5 +84,3 @@ imports:
 ---
 
 Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below.
-
-This run handles same-repo (team) pull requests. Team authors know the codebase — skip the pleasantries you would give a first-time contributor, keep the verdict and findings tight, and hold code to full convention depth.
