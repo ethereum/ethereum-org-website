@@ -2,7 +2,7 @@
 # Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their diffs.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
-# branch, and either never reviewed or with a new commit or author comment
+# branch of this repo, and either never reviewed or with a new commit or author comment
 # since the latest "First-pass review" comment. Oldest first, at most $LIMIT.
 #
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
@@ -23,7 +23,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
     pullRequests(states: OPEN, first: 50, after: $endCursor) {
       pageInfo { hasNextPage endCursor }
       nodes {
-        number createdAt isDraft headRefName
+        number createdAt isDraft headRefName isCrossRepository
         author { login __typename }
         commits(last: 1) { nodes { commit { committedDate } } }
         comments(last: 50) { nodes { createdAt body author { login __typename } } }
@@ -35,7 +35,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
   map(
     select((.isDraft | not)
       and .author.__typename != "Bot"
-      and (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not))
+      and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
     | .author.login as $author
     | ([.comments.nodes[]
         | select(.author.__typename == "Bot" and (.body | contains("First-pass review — ")))
@@ -49,6 +49,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
 for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   mkdir -p "$OUT_DIR/pr-$n"
   { gh pr diff "$n" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > "$OUT_DIR/pr-$n/pr-diff.patch"
+  [ -s "$OUT_DIR/pr-$n/pr-diff.patch" ] || echo "TRUNCATED: diff unavailable (too large for the API)" > "$OUT_DIR/pr-$n/pr-diff.patch"
   gh pr view "$n" --repo "$REPO" \
     --json number,title,body,author,isDraft,baseRefName,headRefName,additions,deletions,changedFiles,files,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
