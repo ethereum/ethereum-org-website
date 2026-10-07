@@ -73,7 +73,12 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },  
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 4750
+  },
   {
     "username": "asanso",
     "name": "Antonio Sanso",
@@ -157,11 +162,6 @@
   {
     "username": "0xfadam",
     "name": "fadam",
-    "score": 1000
-  },
-  {
-    "username": "therealgregoai",
-    "name": "Grego AI",
     "score": 1000
   },
   {
