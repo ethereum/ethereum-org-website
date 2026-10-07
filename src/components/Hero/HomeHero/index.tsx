@@ -63,7 +63,7 @@ const HomeHero = async ({
 
   return (
     <section className={cn("w-full", className)}>
-      <div className="h-[clamp(200px,calc(100svh_-_560px_-_var(--home-banner-h,0px)),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_540px_-_var(--home-banner-h,0px)),380px)] lg:h-[clamp(320px,calc(100svh_-_536px_-_var(--home-banner-h,0px)),480px)]">
+      <div className="h-[clamp(200px,calc(100svh_-_560px_-_var(--home-banner-h,0px)),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_540px_-_var(--home-banner-h,0px)),380px)] lg:h-[clamp(350px,calc(100svh_-_536px_-_var(--home-banner-h,0px)),480px)]">
         <picture>
           <source
             media={`(min-width: ${breakpointAsNumber["2xl"]}px)`}
