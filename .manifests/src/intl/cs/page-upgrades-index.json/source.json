@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-upgrades-index.json",
-  "generatedAt": "2026-07-22T22:42:40.543Z",
-  "rootHash": "f17dc9ca64bf",
+  "generatedAt": "2026-09-30T18:16:32.463Z",
+  "rootHash": "e39930ad2724",
   "tree": {
-    "contentHash": "3be05475620e",
-    "anchorHash": "80ae6e2a33c6",
+    "contentHash": "e48442027460",
+    "anchorHash": "80147fc91198",
     "children": {
       "consensus-client-besu-logo-alt": {
         "contentHash": "21ea71975913",
@@ -850,6 +850,10 @@
       "page-upgrades-get-involved-ethresearch-2": {
         "contentHash": "c09500586c2c",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-upgrades-hegota": {
+        "contentHash": "72bdb517afef",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -1063,8 +1067,9 @@
       "docs-nav-proof-of-stake",
       "docs-nav-proof-of-work",
       "page-upgrades-get-involved-ethresearch-1",
-      "page-upgrades-get-involved-ethresearch-2"
+      "page-upgrades-get-involved-ethresearch-2",
+      "page-upgrades-upgrades-hegota"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

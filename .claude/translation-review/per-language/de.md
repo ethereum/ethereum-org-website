@@ -80,3 +80,32 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `accounts/index.md` is correctly absent: quarantined with a matching `class: gate` entry in `.manifests/quarantine.json` after the jsx-tags check caught `<Pfad>` / `<Passwort>` twice. Quarantine behaved as designed.
 - `.manifests/.../de/roadmap/pectra/index.md/translation.json` was not refreshed alongside its `source.json`; its `englishManifestHash` matches neither the old nor the new source rootHash. Predates this PR.
 
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md` (first successful retranslation after the #19326 quarantine), `consensus-mechanisms/pos/rewards-and-penalties/index.md`, `tutorials/send-token-ethersjs/index.md`. 0 critical, 3 warnings (all fixed on request). Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10.
+
+**Fixed in this branch:**
+
+- Trailing newline stripped at EOF on `accounts` and `send-token-ethersjs`; restored.
+- `rewards-and-penalties:55` "carrots" calqued as `die „Karotten“` -> `das „Zuckerbrot“` (the pre-PR line had it, and `attack-and-defense` uses it).
+- `accounts:31` `ETH/Token-Überweisungen` (bank-transfer register) -> `ETH-/Token-Transfers`, glossary `transfer` = `Transfer`, matching the pre-PR line.
+- `rewards-and-penalties:29` "(as `sqrt(N)`)" -> `(als ...)` read as "in the role of"; now `(proportional zu ...)`, 2 sites.
+
+**Notes:**
+
+- Code-fence protection (#19348) worked: the clef transcript kept `<path>`/`<password>` byte-exact, so the jsx-tags gate passed and the quarantine entry cleared. `Virtuelle Ethereum-Maschine` now matches ETHGlossary (pre-PR used the English name).
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- hegota `Fork-Wahl` vs tree `Fork-Choice` (83:1).
+- privacy-online `No-Logs-Anspruch` (entitlement) should be `-Versprechen`; `Suchanfragen` for DNS lookups; `Weitere Wissenswerte` grammar.

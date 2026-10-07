@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 wobei `base_reward_factor` 64 ist, `base_rewards_per_epoch` 4 ist und `sum(active balance)` die gesamten gestakten Ether aller aktiven Validatoren sind.
 
-Das bedeutet, dass die Basisbelohnung proportional zum effektiven Guthaben des Validators und umgekehrt proportional zur Anzahl der Validatoren im Netzwerk ist. Je mehr Validatoren, desto größer die gesamte Emission (da `sqrt(N)`), aber desto kleiner die `base_reward` pro Validator (da `1/sqrt(N)`). Diese Faktoren beeinflussen die APR für einen Staking-Knoten. Lesen Sie die Begründung dafür in [Vitaliks Notizen](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Das bedeutet, dass die Basisbelohnung proportional zum effektiven Guthaben des Validators und umgekehrt proportional zur Anzahl der Validatoren im Netzwerk ist. Je mehr Validatoren, desto größer ist die Gesamtemission (proportional zu `sqrt(N)`), aber desto kleiner ist die `base_reward` pro Validator (proportional zu `1/sqrt(N)`). Diese Faktoren beeinflussen die APR für einen Staking-Knoten. Lesen Sie die Begründung dafür in [Vitaliks Notizen](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 Die Gesamtbelohnung wird dann als Summe von fünf Komponenten berechnet, die jeweils eine Gewichtung haben, die bestimmt, wie viel jede Komponente zur Gesamtbelohnung beiträgt. Die Komponenten sind:
 
-```
-1. source vote: Der Validator hat rechtzeitig eine Stimme für den korrekten Quell-Checkpoint abgegeben
-2. target vote: Der Validator hat rechtzeitig eine Stimme für den korrekten Ziel-Checkpoint abgegeben
-3. head vote: Der Validator hat rechtzeitig eine Stimme für den korrekten Head-Block abgegeben
-4. sync committee reward: Der Validator hat an einem Sync-Komitee teilgenommen
-5. proposer reward: Der Validator hat einen Block im korrekten Slot vorgeschlagen
+```text
+1. Source-Stimme: Der Validator hat rechtzeitig eine Stimme für den korrekten Source-Checkpoint abgegeben.
+2. Target-Stimme: Der Validator hat rechtzeitig eine Stimme für den korrekten Target-Checkpoint abgegeben.
+3. Head-Stimme: Der Validator hat rechtzeitig eine Stimme für den korrekten Head-Block abgegeben.
+4. Sync-Komitee-Belohnung: Der Validator hat an einem Sync-Komitee teilgenommen.
+5. Proposer-Belohnung: Der Validator hat einen Block im korrekten Slot vorgeschlagen.
 ```
 
 Die Gewichtungen für jede Komponente sind wie folgt:
@@ -52,7 +52,7 @@ Diese Gewichtungen summieren sich auf 64. Die Belohnung wird als Summe der anwen
 
 Eine zusätzliche Belohnung wird hinzugefügt, um schnelle Attestierungen zu fördern. Dies ist die `inclusion_delay_reward`. Diese hat einen Wert, der der `base_reward` multipliziert mit `1/delay` entspricht, wobei `delay` die Anzahl der Slots ist, die den Block-Vorschlag und die Attestierung trennen. Wenn die Attestierung beispielsweise innerhalb eines Slots nach dem Block-Vorschlag eingereicht wird, erhält der Attestierende `base_reward * 1/1 == base_reward`. Wenn die Attestierung im nächsten Slot eintrifft, erhält der Attestierende `base_reward * 1/2` und so weiter.
 
-Block-Proposer erhalten `8 / 64 * base_reward` für **jede gültige Attestierung**, die im Block enthalten ist, sodass der tatsächliche Wert der Belohnung mit der Anzahl der attestierenden Validatoren skaliert. Block-Proposer können ihre Belohnung auch erhöhen, indem sie Beweise für Fehlverhalten anderer Validatoren in ihren vorgeschlagenen Block aufnehmen. Diese Belohnungen sind das „Zuckerbrot“, das die Ehrlichkeit der Validatoren fördert. Ein Block-Proposer, der ein Slashing einschließt, wird mit der `slashed_validators_effective_balance / 512` belohnt.
+Block-Proposer erhalten `8 / 64 * base_reward` für **jede gültige Attestierung**, die im Block enthalten ist, sodass der tatsächliche Wert der Belohnung mit der Anzahl der attestierenden Validatoren skaliert. Block-Proposer können ihre Belohnung auch erhöhen, indem sie Beweise für Fehlverhalten anderer Validatoren in ihren vorgeschlagenen Block aufnehmen. Diese Belohnungen sind das „Zuckerbrot“, das die Ehrlichkeit der Validatoren fördert. Ein Block-Proposer, der ein Slashing einschließt, wird mit `slashed_validators_effective_balance / 512` belohnt.
 
 ### Strafen {#penalties}
 

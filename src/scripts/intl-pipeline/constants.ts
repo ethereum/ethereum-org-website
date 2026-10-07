@@ -84,13 +84,7 @@ export const MAX_SPLIT_DEPTH = 2
 // Structure: {MANIFESTS_DIR}/{dest-file-path}/source.json | translation.json
 export const MANIFESTS_DIR = ".manifests"
 
-// Paths that should never be translated
-export const DO_NOT_TRANSLATE_PATHS = [
-  // Legal pages
-  "/cookie-policy/",
-  "/privacy-policy/",
-  "/terms-of-use/",
-  "/terms-and-conditions/",
-  // Contributing pages
-  "/style-guide/",
-]
+// Paths that should never be translated. Defined in a leaf module because the
+// client-side TranslationBanner reads it, and importing this file would pull
+// the LLM adapters into the browser bundle.
+export { DO_NOT_TRANSLATE_PATHS } from "./do-not-translate-paths"

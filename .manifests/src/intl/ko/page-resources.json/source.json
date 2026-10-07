@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-resources.json",
-  "generatedAt": "2026-07-22T22:40:48.849Z",
-  "rootHash": "e2fb119d31f3",
+  "generatedAt": "2026-09-30T18:15:31.172Z",
+  "rootHash": "ec76908d88e8",
   "tree": {
-    "contentHash": "3bf475a82a1f",
-    "anchorHash": "7fe23631ad6f",
+    "contentHash": "9601c3a5896b",
+    "anchorHash": "33d949285a08",
     "children": {
       "page-resources-network-title": {
         "contentHash": "1b32d67cd02d",
@@ -41,6 +41,14 @@
       },
       "page-resources-network-layer2-growthepie-description": {
         "contentHash": "ef0822fd4f66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-rollupwtf-description": {
+        "contentHash": "639cc2f33121",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-network-layer2-l2safety-description": {
+        "contentHash": "4abd195e8eb1",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-block-explorers-title": {
@@ -105,6 +113,10 @@
       },
       "page-resources-gas-blocknative-description": {
         "contentHash": "695d21c70b57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-gas-l2fees-description": {
+        "contentHash": "dfe269caf56e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-defi-title": {
@@ -193,6 +205,14 @@
       },
       "page-resources-roadmap-ethroadmap-description": {
         "contentHash": "6d29d31d727d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-roadmap-forkcast-description": {
+        "contentHash": "ae00a7e4d849",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-roadmap-eipsinsight-description": {
+        "contentHash": "5620bafaafd3",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-blobs-title": {
@@ -292,7 +312,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-mev-mevboost-description": {
-        "contentHash": "9008ec110f1c",
+        "contentHash": "59c4e539a240",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-mev-mevwatch-description": {
@@ -309,6 +329,14 @@
       },
       "page-resources-wallets-bundlebear-description": {
         "contentHash": "dfbf926bedf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-wallets-jiffyscan-description": {
+        "contentHash": "f4e4e885806d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-wallets-erc4337-description": {
+        "contentHash": "d5672be03587",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-zk-adoption-title": {
@@ -329,6 +357,10 @@
       },
       "page-resources-mempool-mempool-description": {
         "contentHash": "a74751df3485",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-resources-mempool-mempoolpics-description": {
+        "contentHash": "c84789d03fb3",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-meta-title": {
@@ -394,6 +426,8 @@
       "page-resources-network-layer2-chart-label",
       "page-resources-network-layer2-l2beat-description",
       "page-resources-network-layer2-growthepie-description",
+      "page-resources-network-layer2-rollupwtf-description",
+      "page-resources-network-layer2-l2safety-description",
       "page-resources-block-explorers-title",
       "page-resources-block-explorers-chart-label",
       "page-resources-block-explorers-blockscout-description",
@@ -410,6 +444,7 @@
       "page-resources-gas-etherscan-description",
       "page-resources-gas-ethgastracker-description",
       "page-resources-gas-blocknative-description",
+      "page-resources-gas-l2fees-description",
       "page-resources-defi-title",
       "page-resources-defi-defillama-description",
       "page-resources-defi-eigenphi-description",
@@ -432,6 +467,8 @@
       "page-resources-roadmap-title",
       "page-resources-roadmap-metric-label",
       "page-resources-roadmap-ethroadmap-description",
+      "page-resources-roadmap-forkcast-description",
+      "page-resources-roadmap-eipsinsight-description",
       "page-resources-blobs-title",
       "page-resources-blobs-metric-total-label",
       "page-resources-blobs-metric-fee-label",
@@ -461,11 +498,14 @@
       "page-resources-wallets-title",
       "page-resources-wallets-wallet-beat-description",
       "page-resources-wallets-bundlebear-description",
+      "page-resources-wallets-jiffyscan-description",
+      "page-resources-wallets-erc4337-description",
       "page-resources-zk-adoption-title",
       "page-resources-zk-adoption-ethproofs-description",
       "page-resources-zk-adoption-l2beat-description",
       "page-resources-mempool-title",
       "page-resources-mempool-mempool-description",
+      "page-resources-mempool-mempoolpics-description",
       "page-resources-meta-title",
       "page-resources-meta-description",
       "page-resources-hero-title",
@@ -481,5 +521,5 @@
       "page-resources-share-feedback"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

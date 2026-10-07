@@ -8,7 +8,7 @@ duration: "0:18:00"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "privacy"
 format: presentation
 author: "웹3프라이버시 나우"
 breadcrumb: "사이퍼펑크가 되는 방법"

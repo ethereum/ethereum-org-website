@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam to nadchodząca aktualizacja Ethereum zaplanowana na IV kwartał 2026 roku
-</AlertTitle>
 <AlertDescription>
 Aktualizacja Glamsterdam to tylko jeden krok w długoterminowych celach rozwojowych Ethereum. Dowiedz się więcej o [mapie drogowej protokołu](/roadmap/) i [poprzednich aktualizacjach](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Nadchodząca aktualizacja Glamsterdam w sieci [Ethereum](/) ma na celu utorowanie drogi dla nowej generacji skalowania. Nazwa Glamsterdam pochodzi z połączenia słów „Amsterdam” (aktualizacja warstwy wykonawczej, nazwana na cześć poprzedniej lokalizacji Devconnect) i „Gloas” (aktualizacja warstwy konsensusu, nazwana na cześć gwiazdy).
+Nadchodząca aktualizacja Glamsterdam w sieci [Ethereum](/) ma na celu utorowanie drogi dla następnej generacji skalowania. Nazwa Glamsterdam pochodzi z połączenia słów „Amsterdam” (aktualizacja warstwy wykonawczej, nazwana na cześć poprzedniej lokalizacji Devconnect) i „Gloas” (aktualizacja warstwy konsensusu, nazwana na cześć gwiazdy).
 
-W ślad za postępami poczynionymi w aktualizacji [Fusaka](/roadmap/fusaka/), Glamsterdam skupia się na skalowaniu warstwy 1 (L1) poprzez reorganizację sposobu, w jaki sieć przetwarza transakcje i zarządza swoją rosnącą bazą danych, fundamentalnie aktualizując sposób, w jaki Ethereum tworzy i weryfikuje bloki.
+W ślad za postępami poczynionymi w aktualizacji [Fusaka](/roadmap/fusaka/), Glamsterdam koncentruje się na skalowaniu warstwy 1 (L1) poprzez reorganizację sposobu, w jaki sieć przetwarza transakcje i zarządza swoją rosnącą bazą danych, fundamentalnie aktualizując sposób, w jaki Ethereum tworzy i weryfikuje bloki.
 
-Podczas gdy Fusaka skupiała się na fundamentalnych ulepszeniach, Glamsterdam posuwa naprzód cele „Skalowania L1” i „Skalowania blobów” poprzez włączenie do protokołu podziału obowiązków między różnymi uczestnikami sieci oraz wprowadzenie bardziej wydajnych sposobów obsługi danych, aby przygotować [stan](/glossary/#state) na równoległość o wysokiej przepustowości.
+Podczas gdy Fusaka skupiała się na fundamentalnych ulepszeniach, Glamsterdam posuwa naprzód cele „Skalowania L1” i „Skalowania blobów” poprzez włączenie do protokołu podziału obowiązków między różnymi uczestnikami sieci oraz wprowadzenie bardziej wydajnych sposobów obsługi danych, aby przygotować [stan](/glossary/#state) na zrównoleglenie o wysokiej przepustowości.
 
-Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i zdecentralizowane w miarę obsługiwania większej aktywności, przy jednoczesnym utrzymaniu wymagań sprzętowych na rozsądnym poziomie dla osób uruchamiających [węzły](/glossary/#node) w domu.
+Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i zdecentralizowane w miarę obsługi większej aktywności, przy jednoczesnym utrzymaniu wymagań sprzętowych na rozsądnym poziomie dla osób uruchamiających [węzły](/glossary/#node) w domu.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,20 +28,20 @@ Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Uwaga: Ten artykuł wyróżnia wybrane propozycje EIP zaplanowane do włączenia w aktualizacji Glamsterdam. Dodatkowe zaplanowane propozycje testowane w sieciach deweloperskich (devnets) obejmują EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 i EIP-8282. Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Uwaga: Ten artykuł wyróżnia wybrane Propozycje Ulepszenia Ethereum (EIP) zaplanowane do włączenia w aktualizacji Glamsterdam. Dodatkowe zaplanowane propozycje testowane w sieciach deweloperskich (devnets) obejmują EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 i EIP-8282. Zakres jest zamrożony, ale nadal może ulec zmianie przed wdrożeniem w Sieci głównej, ponieważ meta EIP pozostaje w fazie roboczej (draft). Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jeśli chcesz dodać EIP, który jest rozważany dla Glamsterdam, ale nie został jeszcze dodany do tej strony, [dowiedz się, jak współtworzyć ethereum.org tutaj](/contributing/).
+Jeśli chcesz dodać EIP, które jest rozważane dla Glamsterdam, ale nie zostało jeszcze dodane do tej strony, [dowiedz się, jak wnieść wkład w ethereum.org tutaj](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Aktualizacja Glamsterdam skupia się na trzech głównych celach:
+Aktualizacja Glamsterdam koncentruje się na trzech głównych celach:
 
-- Przyspieszenie przetwarzania (równoległość): Reorganizacja sposobu, w jaki sieć rejestruje zależności danych, aby mogła bezpiecznie przetwarzać wiele transakcji w tym samym czasie, zamiast w powolnej sekwencji jedna po drugiej.
+- Przyspieszenie przetwarzania (zrównoleglenie): Reorganizacja sposobu, w jaki sieć rejestruje zależności danych, aby mogła bezpiecznie przetwarzać wiele transakcji w tym samym czasie, zamiast w powolnej sekwencji jedna po drugiej.
 - Zwiększenie pojemności: Podział ciężkiej pracy związanej z tworzeniem i weryfikacją bloków, dając sieci więcej czasu na propagację większych ilości danych bez spowalniania.
-- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowy koszt sprzętowy przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu, jednocześnie zapobiegając spadkowi wydajności sprzętu.
+- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowy koszt sprzętowy przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu przy jednoczesnym zapobieganiu spadkowi wydajności sprzętu.
 
-Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę jak sieć zwiększa pojemność, pozostaje zrównoważona, a wydajność utrzymuje się na wysokim poziomie.
+Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania pojemności sieci, pozostanie ona zrównoważona, a wydajność utrzyma się na wysokim poziomie.
 
 ## Skalowanie warstwy 1 (L1) i przetwarzanie równoległe {#scale-l1}
 

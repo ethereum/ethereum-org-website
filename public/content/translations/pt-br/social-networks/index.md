@@ -69,7 +69,7 @@ Os usuários usam o token [ERC-20](/glossary/#erc-20) nativo da plataforma, $MIN
 
 ### Farcaster {#farcaster}
 
-O [Farcaster](https://farcaster.xyz/) é uma rede social "suficientemente descentralizada" semelhante ao X e ao Reddit que permite aos usuários compartilhar e descobrir "casts". Ele é construído na rede de camada 2 (l2) Optimism para manter as transações relativamente baratas.
+[Farcaster](https://farcaster.xyz/) é uma rede social "suficientemente descentralizada" semelhante ao X e ao Reddit que permite aos usuários compartilhar e descobrir "casts". Ela é construída na rede de camada 2 (l2) Optimism para manter as transações relativamente baratas.
 
 ## Use redes sociais descentralizadas {#use-decentralized-social-networks}
 

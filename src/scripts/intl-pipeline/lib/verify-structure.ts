@@ -13,6 +13,13 @@ import path from "path"
 
 import matter from "gray-matter"
 
+import { extractComments } from "./llm/code-block-extractor"
+import {
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  PROSE_FENCE_TAGS,
+} from "./shared-patterns"
+
 /**
  * `error` -- a structural invariant that can never legitimately differ between
  * a source file and its translation. Always a defect; fails the gate.
@@ -83,6 +90,38 @@ const all = (src: string, re: RegExp) => [...src.matchAll(re)].map((m) => m[1])
 /** Component tag names, opening and closing, in document order. */
 const tags = (src: string) => all(src, /<\/?([A-Z][A-Za-z0-9]*)/g)
 const fences = (src: string) => src.match(/```[\s\S]*?```/g) ?? []
+
+type Fence = { language: string; body: string }
+
+/** Fences with their language tag and body, in document order. */
+function fenceBlocks(src: string): Fence[] {
+  const out: Fence[] = []
+  // FENCED_BLOCK_RE is a global regex shared across modules; reset lastIndex
+  // so a previous caller's position cannot make this scan start mid-file.
+  FENCED_BLOCK_RE.lastIndex = 0
+  for (const m of src.matchAll(FENCED_BLOCK_RE)) {
+    out.push({
+      language: fenceLanguage(m[3] ?? m[7] ?? ""),
+      body: m[4] ?? "",
+    })
+  }
+  return out
+}
+
+/**
+ * The part of a fence body that must be byte-identical to English.
+ *
+ * Comments are dropped: a translated code comment is wanted, not a defect, and
+ * comparing them would bury the real signal under 8,431 corpus findings.
+ * Trailing whitespace goes too -- invisible, and Prettier rewrites it per
+ * file. What is left is the code, which no translation may touch.
+ */
+const fenceBody = (body: string, language: string) =>
+  extractComments(body, language)
+    .strippedCode.split("\n")
+    .map((l) => l.replace(/[ \t]+$/, ""))
+    .filter((l) => l !== "")
+    .join("\n")
 const hrefs = (src: string) => all(src, /(?:\]\(|href=")(\/[^)"\s]*)/g)
 const altText = (src: string) => all(src, /!\[([^\]]*)\]/g)
 const attrValues = (src: string, attr: string) =>
@@ -137,6 +176,32 @@ export function verifyMarkdown(
   const tf = fences(trSrc)
   if (ef.length !== tf.length)
     add("code-fence-count", `en=${ef.length} tr=${tf.length}`)
+  else {
+    // Body-level comparison, not just the count. Only a prose-tagged fence
+    // (```text and friends) is ever sent to the model, so any other fence
+    // whose contents differ from English has been translated by accident --
+    // the `clef` transcript whose `<path>` placeholder came back German.
+    const eb = fenceBlocks(enSrc)
+    const tb = fenceBlocks(trSrc)
+    if (eb.length === tb.length) {
+      for (let i = 0; i < eb.length; i++) {
+        if (eb[i].language !== tb[i].language) {
+          add(
+            "code-fence-lang",
+            `fence ${i + 1}: en=\`${eb[i].language || "(none)"}\` tr=\`${tb[i].language || "(none)"}\``
+          )
+          continue
+        }
+        if (PROSE_FENCE_TAGS.has(eb[i].language)) continue
+        const lang = eb[i].language
+        if (fenceBody(eb[i].body, lang) !== fenceBody(tb[i].body, lang))
+          add(
+            "code-fence-content",
+            `fence ${i + 1} (\`${eb[i].language || "untagged"}\`) body differs from English`
+          )
+      }
+    }
+  }
 
   // Translatable attributes: same count, and none left identical to English
   // while the file was otherwise translated.

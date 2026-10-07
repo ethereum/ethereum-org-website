@@ -1,8 +1,8 @@
 ---
-title: Nossos princípios de design
-metaTitle: Princípios de design
+title: "Nossos princípios de design"
+metaTitle: "Princípios de design"
 lang: pt-br
-description: Os princípios por trás das decisões de design e conteúdo do ethereum.org
+description: "Os princípios por trás das decisões de design e conteúdo do ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Olá, e boas-vindas aos princípios de design do ethereum.org. Isso faz parte de um processo contínuo para evoluir e melhorar o ethereum.org.
@@ -89,4 +89,4 @@ Você pode ver nossos princípios de design em ação [em todo o nosso site](/).
 
 Embora esses princípios sejam focados no site ethereum.org, esperamos que muitos deles sejam representativos dos valores do ecossistema Ethereum em geral. Talvez você até queira incorporar alguns deles em seu próprio projeto!
 
-Deixe-nos saber o que você pensa no [servidor do Discord](https://discord.gg/ethereum-org) ou [criando uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Deixe-nos saber o que você pensa no [servidor do Discord](/discord/) ou [criando uma issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

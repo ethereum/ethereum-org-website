@@ -7,8 +7,7 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "consensus"
-  - "pow"
+  - "how-ethereum-works"
 format: explainer
 author: "बाइनेंस अकादमी"
 breadcrumb: "प्रूफ-ऑफ-वर्क"

@@ -16,7 +16,7 @@ Jsme hluboce vděční tisícům komunitních překladatelů, díky nimž byl we
 
 Pokud v existujícím překladu objevíte chybu, prosím [nahlaste problém na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Připojte se na [Discord ethereum.org](https://discord.gg/ethereum-org), kde se můžete ptát nebo sdílet zpětnou vazbu._
+_Připojte se na [Discord ethereum.org](/discord/), kde se můžete ptát nebo sdílet zpětnou vazbu._
 
 ## O překladatelském programu {#about-us}
 
@@ -63,7 +63,7 @@ Další užitečné překladatelské nástroje, komunity překladatelů a blogov
 
 ## Kontaktujte nás {#get-in-touch}
 
-Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Napište nám do kanálu #translations na našem [Discord serveru ethereum.org](https://discord.gg/ethereum-org)
+Máte nějaké dotazy? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Napište nám do kanálu #translations na našem [Discord serveru ethereum.org](/discord/)
 
 Můžete nás také kontaktovat na adrese translations@ethereum.org
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-learn.json",
-  "generatedAt": "2026-04-27T16:17:52.939Z",
-  "rootHash": "ba94c7d393f8",
+  "generatedAt": "2026-09-30T18:09:15.794Z",
+  "rootHash": "94791a737545",
   "tree": {
-    "contentHash": "143a163b5a15",
-    "anchorHash": "3133994ce73f",
+    "contentHash": "06a4ed9e1662",
+    "anchorHash": "630346a9ebc3",
     "children": {
       "about-ethereum-video-series": {
         "contentHash": "5560b6bc4617",
@@ -167,6 +167,10 @@
         "contentHash": "9b97f477e998",
         "anchorHash": "e3b0c44298fc"
       },
+      "values-hub-desc": {
+        "contentHash": "ada04c6b5804",
+        "anchorHash": "e3b0c44298fc"
+      },
       "guides-hub-desc": {
         "contentHash": "59a57558deb8",
         "anchorHash": "e3b0c44298fc"
@@ -219,6 +223,42 @@
         "contentHash": "fb29b6111e16",
         "anchorHash": "e3b0c44298fc"
       },
+      "staking-card-title": {
+        "contentHash": "5190ff487713",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "staking-card-description": {
+        "contentHash": "8e1471cf0389",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "staking-cta": {
+        "contentHash": "5d56afa80190",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-learn-card-title": {
+        "contentHash": "0524acd8a386",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-learn-card-description": {
+        "contentHash": "f97e0fb4eb09",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2-learn-cta": {
+        "contentHash": "4c4b2e9e2566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stories-card-title": {
+        "contentHash": "4b892042c3b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stories-card-description": {
+        "contentHash": "f808995a0572",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stories-cta": {
+        "contentHash": "b31ed2645860",
+        "anchorHash": "e3b0c44298fc"
+      },
       "ethereum-networks-card-title": {
         "contentHash": "52281e65571f",
         "anchorHash": "e3b0c44298fc"
@@ -257,6 +297,18 @@
       },
       "additional-reading-how-to-use-a-wallet": {
         "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-security": {
+        "contentHash": "a1c33d8a5544",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-gas": {
+        "contentHash": "eb759566d397",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "additional-reading-support": {
+        "contentHash": "111d5a875726",
         "anchorHash": "e3b0c44298fc"
       },
       "additional-reading-layer-2": {
@@ -601,6 +653,7 @@
       "wallets-card-description",
       "wallets-cta",
       "additional-reading-more-on-ethereum-basics",
+      "values-hub-desc",
       "guides-hub-desc",
       "quiz-hub-desc",
       "additional-reading-what-are-smart-contracts",
@@ -614,6 +667,15 @@
       "find-a-wallet-card-title",
       "find-a-wallet-card-description",
       "find-a-wallet-button",
+      "staking-card-title",
+      "staking-card-description",
+      "staking-cta",
+      "layer-2-learn-card-title",
+      "layer-2-learn-card-description",
+      "layer-2-learn-cta",
+      "stories-card-title",
+      "stories-card-description",
+      "stories-cta",
       "ethereum-networks-card-title",
       "ethereum-networks-card-description",
       "ethereum-networks-card-button",
@@ -624,6 +686,9 @@
       "additional-reading-more-on-using-ethereum",
       "additional-reading-how-to-create-an-ethereum-account",
       "additional-reading-how-to-use-a-wallet",
+      "additional-reading-security",
+      "additional-reading-gas",
+      "additional-reading-support",
       "additional-reading-layer-2",
       "what-is-ethereum-used-for-1",
       "defi-card-title",
@@ -701,5 +766,5 @@
       "the-daily-gwei-description"
     ]
   },
-  "sourceCommitSha": "2d028c1f6f2e405835b098e3340933118e98589a"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -43,7 +43,7 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-developers-docs:page-calltocontribute-desc-4" />{" "}
-          <InlineLink href="https://discord.gg/ethereum-org">
+          <InlineLink href="/discord/">
             <Translation id="page-developers-docs:page-calltocontribute-link-2" />
           </InlineLink>{" "}
         </DescriptionParagraph>

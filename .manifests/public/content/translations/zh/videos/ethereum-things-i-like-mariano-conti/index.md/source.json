@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/ethereum-things-i-like-mariano-conti/index.md",
-  "generatedAt": "2026-04-29T05:34:37.486Z",
-  "rootHash": "97c74f29c0cf",
+  "generatedAt": "2026-09-30T18:40:03.545Z",
+  "rootHash": "1e557d7518bb",
   "tree": {
-    "contentHash": "94b95717525f",
-    "anchorHash": "494d7362391c",
+    "contentHash": "ecfab1177742",
+    "anchorHash": "ef4058f1626a",
     "children": {
       "frontmatter:title": {
         "contentHash": "faf0dd2c6539",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "d0ca918e24fd",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "26a509f97223",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "9af2994fe66a"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "f354ee99e2bc"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -255,5 +247,5 @@
       "cypherpunk-ethos-and-advice-1545"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

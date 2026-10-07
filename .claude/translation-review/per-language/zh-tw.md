@@ -123,3 +123,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `testing/index.md` flipped `使用者` -> `用戶` at all 14 sites. `用戶` is the zh-cn form; corpus-wide zh-tw runs 1723:162 for `使用者` and the three sibling files in this PR kept it. Left as a warning since "user" is not an ETHGlossary term, but it is a deterministic fix if the locale wants it.
 - Best glossary compliance in this locale's recorded series: `智能合約` x107 with zero `智慧合約`. The regression from #18344/#18772/#19115 finally did not fire.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` -> `打包器`.
+- builder `區塊構建者` -> `區塊建構者` (hegota x2, page-open-access, page-roadmap).
+
+**Open (warnings):**
+
+- Mainland vocabulary: `用戶` (validium), `數據` (the-graph), `檔案` for archival (zk-rollups).
+- 您/你 split across the new privacy pages; `樂觀匯總` vs `樂觀 Rollup`.

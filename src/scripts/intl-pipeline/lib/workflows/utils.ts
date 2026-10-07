@@ -56,3 +56,20 @@ export function shouldAbortRun(run: {
     !run.stampedManifests
   )
 }
+
+/**
+ * Give the output the same file ending as its English source.
+ *
+ * The full path emits whatever the model returned, and a model does not
+ * reliably end a file with a newline -- all four `mode: full` outputs of run
+ * 36636650455 lost theirs while all three incremental outputs kept them, since
+ * incremental splices into the existing file. Mirroring English rather than
+ * imposing a house rule keeps this consistent with every other thing the
+ * pipeline asserts about structure, and leaves the six English files that end
+ * without a newline alone.
+ */
+export function matchTrailingNewline(output: string, english: string): string {
+  if (!output) return output
+  const wanted = english.match(/\n*$/)?.[0] ?? ""
+  return output.replace(/\n*$/, wanted)
+}

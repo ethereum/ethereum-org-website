@@ -7,8 +7,7 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "community-stories"
-  - "community"
+  - "events"
 format: explainer
 author: "以太坊基金會"
 breadcrumb: "Devconnect 回顧"

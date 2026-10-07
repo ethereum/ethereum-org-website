@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/design/index.md",
-  "generatedAt": "2026-06-08T08:22:31.157Z",
-  "rootHash": "c2516db218de",
+  "generatedAt": "2026-09-30T18:17:57.200Z",
+  "rootHash": "ebf5587275e3",
   "tree": {
     "contentHash": "e0dd567f5795",
-    "anchorHash": "cf9ed9e1ba54",
+    "anchorHash": "0bf818b972a8",
     "children": {
       "frontmatter:title": {
         "contentHash": "aba7c7ad9593",
@@ -29,7 +29,7 @@
       },
       "how-to-contribute": {
         "contentHash": "ba22d3dde359",
-        "anchorHash": "9c7aed9a95f6",
+        "anchorHash": "664259525a9c",
         "labelHash": "791596f6d49c",
         "children": {
           "_label": {
@@ -38,7 +38,7 @@
           },
           "design-critique": {
             "contentHash": "544c94b807c6",
-            "anchorHash": "8eea59919e61",
+            "anchorHash": "595668065d20",
             "labelHash": "f3f3b9c97107",
             "children": {
               "_label": {
@@ -51,7 +51,7 @@
               },
               "link:0": {
                 "contentHash": "053bc65874ad",
-                "anchorHash": "ac4ae417760d"
+                "anchorHash": "416d56f793cb"
               },
               "prose:3": {
                 "contentHash": "56baf039f52f",
@@ -321,5 +321,5 @@
       "how-to-contribute"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

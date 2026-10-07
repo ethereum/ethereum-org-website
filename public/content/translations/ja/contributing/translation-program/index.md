@@ -16,7 +16,7 @@ ethereum.org翻訳プログラムは縮小しており、現在新しい翻訳�
 
 既存の翻訳に誤りを見つけた場合は、[GitHubでIssueを作成](https://github.com/ethereum/ethereum-org-website/issues/new/choose)してください。
 
-_質問やフィードバックの共有については、[ethereum.orgのディスコード](https://discord.gg/ethereum-org)に参加してください。_
+_質問やフィードバックの共有については、[ethereum.orgのディスコード](/discord/)に参加してください。_
 
 ## 翻訳プログラムについて {#about-us}
 
@@ -63,7 +63,7 @@ ethereum.orgは何千人ものコミュニティメンバーによって翻訳�
 
 ## お問い合わせ {#get-in-touch}
 
-質問がありますか？または、私たちのチームや他の翻訳者と協力したいですか？[ethereum.orgのディスコードサーバー](https://discord.gg/ethereum-org)の#translationsチャンネルに投稿してください。
+質問がありますか？または、私たちのチームや他の翻訳者と協力したいですか？[ethereum.orgのディスコードサーバー](/discord/)の#translationsチャンネルに投稿してください。
 
 translations@ethereum.org までご連絡いただくことも可能です。
 

@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ta",
-  "translatedAt": "2026-07-27T19:09:46.150Z",
-  "englishManifestHash": "db6adba6b14d",
+  "translatedAt": "2026-09-30T18:35:34.124Z",
+  "englishManifestHash": "f51f3a14db86",
   "placeholderOrder": [
     "LINK-80c564",
     "LINK-af6d29",
@@ -30,6 +30,7 @@
     "LINK-d50956",
     "LINK-1c8218",
     "LINK-d08112",
+    "LINK-437473",
     "LINK-c0ee0b",
     "LINK-e459f2",
     "LINK-dd9889",
@@ -188,6 +189,12 @@
         "url": "/roadmap/glamsterdam/"
       }
     },
+    "LINK-437473": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/hisoka-io/raven"
+      }
+    },
     "LINK-c0ee0b": {
       "type": "link",
       "values": {
@@ -239,7 +246,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-07-27T19:09:46.150Z",
+      "translatedAt": "2026-09-30T18:35:34.124Z",
       "status": "success"
     }
   }

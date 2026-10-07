@@ -208,3 +208,32 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - Structure spotless: anchors, `dir="ltr"` spans, links, JSX, fences and backticks all match English, isolates balanced, zero cross-script contamination.
 - Three `page-apps` keys were restored to their pre-PR values rather than machine-collapsed, because collapsing orphaned the U+2069 in the isolate pair around `NFT`. See known-patterns #80.
 
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 9.0/10
+
+Scope: `consensus-mechanisms/pos/rewards-and-penalties/index.md` only (fence retagged `text` upstream). 0 critical, 1 warning (fixed on request). Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 9/10 | Tone 9/10.
+
+**Fixed in this branch:**
+
+- `rewards-and-penalties:29` "(as `sqrt(N)`)" -> `(مثل ...)` ("like") -> `(بما يتناسب مع ...)` ("in proportion to"), 2 sites.
+
+**Notes:**
+
+- Glossary terms (`مُدَقِّق`, `حقبة`, `خانة`, `لجنة المزامنة`, `مقترح الكتلة`) all match; `dir="ltr"` APR span intact. Passive `يتم حساب` -> `تُحسب` is a fluency improvement.
+- `tutorials/send-token-ethersjs` is NOT in this PR and still carries the old `cdn.ethers.io` URLs and `npm install --save ethers` that English replaced with jsdelivr `ethers@5.7.2`; ar was not retranslated for that source change.
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/glamsterdam:20` blob `الكتل الثنائية` (binary blocks) -> glossary `كتل البيانات`; same phrase remains on unchanged L71/L274.
+
+**Open (warnings):**
+
+- `zk-rollups:69` `<span dir="ltr">18 days</span>` untranslated.
+- learn-quizzes `سحب` for "drawn at random" collides with glossary withdrawal; `أقل اختبارًا في المعارك` calques battle-tested.
+- F-Droid `البرامج المجانية` (gratis, #83); cookie banner `شعار` (logo) should be `شريط`.

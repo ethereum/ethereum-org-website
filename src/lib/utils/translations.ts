@@ -27,6 +27,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/open-access/": "page-open-access",
   "/open-source/": "page-open-source",
   "/privacy/": "page-privacy",
   "/privacy/ethereum/": "page-privacy-ethereum",
@@ -91,7 +92,6 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
-  ["/glossary/", ["glossary"]],
   [
     "/10years/",
     ["page-10-year-anniversary", "component-swiper", "component-story-card"],

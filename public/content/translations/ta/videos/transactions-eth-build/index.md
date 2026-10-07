@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "transactions"
+  - "how-ethereum-works"
 format: tutorial
 author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "பரிவர்த்தனைகள் (ETH.BUILD)"

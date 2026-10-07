@@ -101,3 +101,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - The report claimed the missing trailing newline would fail Prettier. It would not: `format` covers only `js/jsx/ts/tsx`, lint-staged runs prettier on the same set, `lint:md` excludes translations, and ci.yml has no prettier job.
 - `mteja wa Ethereum` at `accounts/index.md:79` is glossary-sanctioned per PR #19115. Do not sweep it to `kiteja`.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- open-access `wakala wa kifedha` (agent/broker, inverts "financial agency") -> `uhuru wa kujiamulia kifedha` (native check welcome).
+- learn-quizzes staking pool `makusanyiko` -> `mabwawa`; page-resources `shughuli za mtumiaji` -> `operesheni za mtumiaji`; fusaka:256 `Waundaji` -> `Wajenzi` (regression).
+
+**Open (warnings):**
+
+- stealth-addr swapped all 21 `kitendaji` for `fomula` -- revert recommended (tree 164:47).
+- Bare `mteja` for software client recurs in new sentences; glamsterdam:20 `Blobs` kept Latin in quoted track name.

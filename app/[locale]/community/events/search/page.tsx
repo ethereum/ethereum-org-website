@@ -159,9 +159,11 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["community", "events", "meetups"],
+    slug: ["community", "events", "search"],
     title: t("page-events-search-hero-title"),
     description: t("page-events-search-metadata-description"),
+    // Query-driven results page: empty without ?q=, so keep it out of the index
+    noIndex: true,
   })
 }
 
