@@ -4,7 +4,7 @@
     "intent": "intl deterministic propagation dropped added/removed frontmatter keys; team fix #19295 landed, obsoleting external PR #18896 and issues #18891/#19031",
     "state": "suggest-close",
     "recommended_disposition": "close",
-    "next_human_decision": "Confirm #19295 shipped the frontmatter fix, then close the obsolete trio or re-scope #19031 if a gap remains",
+    "next_human_decision": "Day 4 unactioned: confirm #19295 covered the frontmatter gap and bulk-close the trio, or re-scope #19031 if a real gap remains",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -23,20 +23,20 @@
     "owner_lane": "tooling",
     "confidence": 0.6,
     "evidence": [
-      "#18896 green but idle 39d, Stale",
+      "#18896 conflicting+stale, idle 40",
       "#18891/#19031 still open, no team reply",
-      "3rd morning on the same close rec, no action"
+      "4th morning on the same close rec"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-24",
-    "runs_seen": 3
+    "runs_seen": 4
   },
   {
-    "item": "Green review-gate PRs (#19017/#19261/#19043 + team #19372/#19371/#19404)",
-    "intent": "Small standalone green fixes stuck only on the required-review gate; no reviewer/merger assigned",
+    "item": "Green review-gate PRs (#19017/#19261/#19043)",
+    "intent": "Small standalone green fixes stuck only on the required-review gate; team PRs #19371/#19372/#19404 that shared the gate merged this week, external ones did not",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "17 mornings unactioned: appoint a weekly merge-duty owner, or relax the 1-review gate for <5-file green PRs, rather than name a reviewer again",
+    "next_human_decision": "18 mornings: the team cleared its own gated PRs but not the external ones — appoint a weekly merge-duty owner for external green PRs, or relax the 1-review gate for <5-file green diffs",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -49,28 +49,25 @@
     "related_items": [
       "PR #19017",
       "PR #19261",
-      "PR #19043",
-      "PR #19044",
-      "PR #19372",
-      "PR #19371"
+      "PR #19043"
     ],
     "owner_lane": "code",
     "confidence": 0.75,
     "evidence": [
-      "#19017/#19261/#19043 green, BLOCKED on review, idle 2-25d",
-      "new team PRs #19372/#19371 joining the same gate",
-      "recommended 17 mornings, zero action"
+      "#19017/#19261/#19043 green, BLOCKED on review",
+      "team-authored #19371/#19372/#19404 merged, externals left",
+      "recommended 18 mornings, zero action on externals"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-10",
-    "runs_seen": 17
+    "runs_seen": 18
   },
   {
-    "item": "Node/listing product-review backlog (24 green PRs + 20 suggest-* issues)",
-    "intent": "24 one-file listing PRs + ~20 suggest-a-tool/exchange/wallet issues all stalled with no product reviewer; grew ~10 PRs since last run",
+    "item": "Node/listing product-review backlog (+ #18696 valve)",
+    "intent": "~12 one-file listing PRs + ~20 suggest-a-tool/exchange/wallet issues stalled with no product reviewer; keystone #18696 (stale-bot close valve) would auto-drain them",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
-    "next_human_decision": "No product owner in 12 mornings; merge the stale-bot valve #18696 so the backlog auto-closes, OR run one product-triage pass over the 24 green PRs",
+    "next_human_decision": "No product owner in 13 mornings: resolve the open policy thread on #18696 and merge it so the backlog + 106 stale items auto-close, OR run one product-triage pass",
     "waiting_on": [
       {
         "actor": "product",
@@ -83,31 +80,35 @@
     "related_items": [
       "PR #18696",
       "PR #19382",
+      "PR #19380",
       "PR #19378",
+      "PR #19373",
+      "PR #19359",
+      "PR #19358",
+      "PR #19338",
       "PR #19334",
       "PR #19333",
       "PR #19327",
-      "PR #19268",
-      "PR #19132",
-      "PR #18872"
+      "PR #19281",
+      "PR #19268"
     ],
     "owner_lane": "product",
     "confidence": 0.8,
     "evidence": [
-      "24 green needs-product-review PRs, 20 suggest-* issues",
-      "~10 new listing PRs since last run",
-      "82 external issues awaiting team reply; day 12, naming an owner has produced nothing"
+      "~12 green needs-product-review listing PRs, ~20 suggest-* issues",
+      "82 external issues awaiting team reply",
+      "day 13, naming an owner has produced nothing"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-02",
-    "runs_seen": 12
+    "runs_seen": 13
   },
   {
     "item": "PR #18696",
     "intent": "Let the stale bot close items after a 30-day warning; 106 stale items have accumulated since 2021 because days-before-close is -1",
     "state": "decision-needed",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Settle the open 5-comment thread on the 30-day close window, then merge; this is the keystone that drains both the listing backlog and 106 stale items",
+    "next_human_decision": "Settle the open 5-comment thread on the 30-day close window, then merge; keystone that drains the listing backlog and 106 stale items",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -123,17 +124,17 @@
     "owner_lane": "tooling",
     "confidence": 0.7,
     "evidence": [
-      "1 file, ci=SUCCESS, 91d old, idle 25",
-      "5 human comments, last is non-team (ball with team)",
-      "ms=UNKNOWN - not merge-verified; policy call still open"
+      "1 file, ci=SUCCESS, ms=BLOCKED, idle 26",
+      "5 human comments, last is author pinging wackerow",
+      "ball with team; policy call still open"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
-    "item": "Recovery crash cluster (#19340 new + #19311/#19306/#19263/#19238/#19233/#19221)",
-    "intent": "Unassigned live production crashes: new Typesense 403 breaking homepage search, plus two RangeError stack-overflows (homepage + /get-eth) that read as one recursion regression, plus 3 older recovery issues",
+    "item": "Recovery crash cluster (#19340/#19311/#19306/#19263/#19238/#19233/#19221)",
+    "intent": "Unassigned live production crashes: Typesense 403 breaking homepage search, two RangeError stack-overflows (homepage + /get-eth) reading as one recursion regression, plus older recovery issues",
     "state": "decision-needed",
     "recommended_disposition": "needs_domain_review",
     "next_human_decision": "Assign one owner; triage #19340 (search auth) separately from the shared RangeError recursion regression (#19311/#19306)",
@@ -156,12 +157,120 @@
     "owner_lane": "code",
     "confidence": 0.75,
     "evidence": [
-      "#19340 search returns 403 from Typesense on homepage (10d, unassigned)",
+      "#19340 homepage search returns 403 from Typesense, unassigned",
       "#19311/#19306 same RangeError 'Maximum call stack size exceeded', 0 team reply",
-      "all bot-filed, unassigned, no owner in 5 mornings"
+      "all bot-filed, unassigned, no owner"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
+    "runs_seen": 2
+  },
+  {
+    "item": "Issue #19408",
+    "intent": "security.txt clearsign broke (a Sept-2025 link-rewrite commit changed the signed Hiring: URL) and the named PGP key expired 2026-02-22 while the file claims Expires 2026-12-31; SECURITY.md sends reporters here",
+    "state": "decision-needed",
+    "recommended_disposition": "needs_domain_review",
+    "next_human_decision": "Who holds the security.txt signing key — re-sign with a renewed key and correct the Expires date, or drop the clearsign/key reference so reporters stop getting an expired key",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Decide key ownership + re-sign or de-reference"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "tooling",
+    "confidence": 0.7,
+    "evidence": [
+      "signature no longer verifies after commit 96e65e81 edited the signed block",
+      "key AE96 ED96... expired 2026-02-22, file says Expires 2026-12-31",
+      "SECURITY.md routes disclosures through this file"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-10-07",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19401",
+    "intent": "Defer loading the Sentry browser SDK until the page is idle to cut its cost on every page; author buffers early errors and drains them on SDK load",
+    "state": "decision-needed",
+    "recommended_disposition": "hold",
+    "next_human_decision": "pettinarip (Sentry owner): accept the deferred-init trade-off (brief early-error window buffered) or keep eager init — PR is explicitly 'for discussion, not ready to merge'",
+    "waiting_on": [
+      {
+        "actor": "pettinarip",
+        "action": "Decide Sentry init trade-off"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "medium",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.6,
+    "evidence": [
+      "8 files, ci=SUCCESS, ms=BLOCKED",
+      "author addressed first-pass review (double-report window)",
+      "explicitly flagged for-discussion, awaits Sentry-owner call"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-10-07",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19409",
+    "intent": "Preserve the cached apps data when a single Google Sheets category fetch fails, instead of writing an empty category and wiping the cache that feeds /dapps images",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "data-layer reviewer: confirm the failed-category path preserves prior cache and the added test covers it, then merge",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review + merge"
+      }
+    ],
+    "impact": "medium",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "code",
+    "confidence": 0.75,
+    "evidence": [
+      "2 files (+60/-4) incl new fetch-apps test, ci=SUCCESS",
+      "fixes cache-wipe that breaks /dapps images on partial Sheets failure",
+      "ms=BLOCKED, 0 reviews, new contributor"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-10-07",
+    "runs_seen": 1
+  },
+  {
+    "item": "PR #19411",
+    "intent": "Strip invisible Unicode characters from code blocks in two developer tutorials so copied snippets actually run",
+    "state": "verify-then-merge",
+    "recommended_disposition": "verify_then_merge",
+    "next_human_decision": "Any reviewer: spot-check the two diffs are whitespace-only (no code changed), then merge as low-hanging fruit",
+    "waiting_on": [
+      {
+        "actor": "maintainer",
+        "action": "Review + merge"
+      }
+    ],
+    "impact": "low",
+    "effort_to_unblock": "small",
+    "risk": "low",
+    "related_items": [],
+    "owner_lane": "content",
+    "confidence": 0.8,
+    "evidence": [
+      "2 md files (+47/-47), ci=SUCCESS",
+      "fixes copy-paste-broken code in how-to-mint-an-nft and merkle-proofs tutorials",
+      "ms=BLOCKED, 0 reviews"
+    ],
+    "analyzed_sha": null,
+    "first_seen": "2026-10-07",
     "runs_seen": 1
   },
   {
@@ -169,7 +278,7 @@
     "intent": "CopyToClipboard/CopyButton default to type=submit and submit their containing form on click; PR sets type=button by default with a Storybook repro",
     "state": "verify-then-merge",
     "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "wackerow or pettinarip: confirm the type=button default doesn't break existing submit-button usages, then merge",
+    "next_human_decision": "wackerow or pettinarip: confirm the type=button default doesn't break existing submit usages, then merge",
     "waiting_on": [
       {
         "actor": "maintainer",
@@ -185,43 +294,13 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "2 files (+37/-1), ci=SUCCESS, reviewers wackerow/pettinarip requested",
-      "fixes linked bug #19360 with a reproduced Storybook example",
-      "ms=UNKNOWN, awaiting first review"
-    ],
-    "analyzed_sha": "9deaf03",
-    "first_seen": "2026-10-06",
-    "runs_seen": 1
-  },
-  {
-    "item": "PR #19366",
-    "intent": "List the 13 Hegota EIPs Forkcast marks as considered, so the page matches synced upgrade data (same pattern as merged #19272, implements bot review #19171)",
-    "state": "verify-then-merge",
-    "recommended_disposition": "verify_then_merge",
-    "next_human_decision": "Any reviewer: confirm the 13 EIPs match the generated upgrade data, then merge",
-    "waiting_on": [
-      {
-        "actor": "maintainer",
-        "action": "Review + merge"
-      }
-    ],
-    "impact": "medium",
-    "effort_to_unblock": "small",
-    "risk": "low",
-    "related_items": [
-      "Issue #19171",
-      "PR #19272"
-    ],
-    "owner_lane": "technical-content",
-    "confidence": 0.75,
-    "evidence": [
-      "team PR, 1 file, ci=SUCCESS, 0 reviews, idle 3",
-      "implements content-review #19171, replaces merged #19272",
-      "ms=UNKNOWN, awaiting review"
+      "2 files, ci=SUCCESS, ms=BLOCKED, idle 5",
+      "fixes linked bug #19360 with reproduced Storybook example",
+      "day 2, still awaiting first review"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #19217",
@@ -244,13 +323,13 @@
     "owner_lane": "content",
     "confidence": 0.7,
     "evidence": [
-      "ci=SUCCESS, BLOCKED, 0 reviews, idle 28",
+      "ci=SUCCESS, BLOCKED, 0 reviews, idle 29",
       "implements linked #17280",
-      "day 10, unchanged"
+      "day 11, unchanged"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-04",
-    "runs_seen": 10
+    "runs_seen": 11
   },
   {
     "item": "PR #19234",
@@ -272,11 +351,11 @@
     "confidence": 0.8,
     "evidence": [
       "team asked for wallet issue form",
-      "needs product review, idle 11, day 8"
+      "needs product review, idle 12, day 9"
     ],
-    "analyzed_sha": "fd780f0",
+    "analyzed_sha": null,
     "first_seen": "2026-09-11",
-    "runs_seen": 8
+    "runs_seen": 9
   },
   {
     "item": "PR #19097 / Issue #19098",
@@ -299,13 +378,13 @@
     "owner_lane": "product",
     "confidence": 0.7,
     "evidence": [
-      "ci=PENDING, rd=CHANGES_REQUESTED, hc=6, idle 1",
+      "ci=PENDING, rd=CHANGES_REQUESTED, hc=6, idle 2",
       "last human comment non-team; ball with team",
-      "contributor replaces #11568 that wackerow pre-approved in 2024"
+      "day 6"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-09-04",
-    "runs_seen": 5
+    "runs_seen": 6
   },
   {
     "item": "PR #19184",
@@ -316,7 +395,7 @@
     "waiting_on": [
       {
         "actor": "nloureiro",
-        "action": "Address CHANGES_REQUESTED and fix the 1 failing check"
+        "action": "Rebase the conflict, address CHANGES_REQUESTED, fix the 1 failing check"
       }
     ],
     "impact": "medium",
@@ -326,12 +405,12 @@
     "owner_lane": "code",
     "confidence": 0.7,
     "evidence": [
-      "ci=FAILURE (1), rd=CHANGES_REQUESTED, 1 review, idle 21",
+      "ci=FAILURE (1), ms=DIRTY, rd=CHANGES_REQUESTED, idle 22",
       "11 files, feature-size"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "PR #18918",
@@ -354,12 +433,12 @@
     "owner_lane": "technical-content",
     "confidence": 0.7,
     "evidence": [
-      "ci=FAILURE (4 checks), CHANGES_REQUESTED, Stale",
-      "idle 11, day 21 on the same close rec"
+      "ci=FAILURE (4 checks), CHANGES_REQUESTED, Stale, idle 12",
+      "day 22 on the same close rec"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-04",
-    "runs_seen": 21
+    "runs_seen": 22
   },
   {
     "item": "PR #17263",
@@ -380,12 +459,12 @@
     "owner_lane": "code",
     "confidence": 0.8,
     "evidence": [
-      "draft, Blocked+Stale, idle 190",
-      "day 18, no action"
+      "draft, Blocked+Stale, idle 191",
+      "day 19, no action"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-08-07",
-    "runs_seen": 18
+    "runs_seen": 19
   },
   {
     "item": "PR #18636",
@@ -409,11 +488,11 @@
     "confidence": 0.75,
     "evidence": [
       "'recommend close' label + aiReview likely-close",
-      "idle 27"
+      "conflicting, idle 28"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
-    "runs_seen": 1
+    "runs_seen": 2
   },
   {
     "item": "Issue #17765",
@@ -434,11 +513,11 @@
     "owner_lane": "product",
     "confidence": 0.6,
     "evidence": [
-      "age 208, idle 60, Stale",
+      "age 209, idle 61, Stale",
       "terse body, no reproduction steps"
     ],
     "analyzed_sha": null,
     "first_seen": "2026-10-06",
-    "runs_seen": 1
+    "runs_seen": 2
   }
 ]
