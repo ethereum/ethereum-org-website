@@ -62,8 +62,6 @@ Format (keep the visible part under ~250 words; put detail in a `<details>` bloc
 </details>
 ```
 
-<!-- Coupling: .github/scripts/intake-evidence.sh parses this rendered header — it matches the full "First-pass review — <emoji> <wording>" line, emoji included, to build `aiReview.verdict` for the intake digest. Change the header format, an emoji, or any verdict wording and that script must be updated too, or the detection silently becomes always-false. -->
-
 `<VERDICT>` is exactly one of the following, with nothing appended to the header line (put qualifiers in the summary paragraph):
 - `✅ Looks mergeable` — scope is sound, conventions pass, no failing checks (CI may still be running)
 - `🔧 Needs work` — actionable blocking items exist; list them
