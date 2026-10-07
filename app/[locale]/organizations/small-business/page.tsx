@@ -34,10 +34,10 @@ import PurchaseIntentChart, {
 } from "./_components/purchase-intent-chart"
 import PageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/organizations/hero-small-business.png"
 import defiImg from "@/public/images/organizations/isometric-defi.png"
 import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
 import privacyImg from "@/public/images/organizations/isometric-privacy.png"
+import heroImg from "@/public/images/organizations/isometric-small-shop-payments-network.png"
 import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
 import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
