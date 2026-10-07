@@ -11,7 +11,7 @@ permissions:
   actions: read
 engine:
   id: claude
-  model: claude-opus-4-8
+  model: claude-opus-5-5
 max-ai-credits: 800
 network: defaults
 strict: true
@@ -56,7 +56,7 @@ safe-outputs:
   threat-detection:
     engine:
       id: claude
-      model: claude-sonnet-5
+      model: claude-sonnet-5-5
 pre-agent-steps:
   - name: Select PRs and pre-fetch their diffs
     env:
