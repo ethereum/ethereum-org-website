@@ -115,3 +115,32 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Anchor sets, heading counts, code fences, link targets, JSX tags and JSON keys/ICU placeholders all byte-identical to English across 5 files; the Vyper 0.4 `@deploy`, Moccasin and Pectra content updates propagated correctly.
 
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 8.4/10 (pre-fix)
+
+Scope: `developers/docs/accounts/index.md`, `consensus-mechanisms/pos/rewards-and-penalties/index.md`, `tutorials/send-token-ethersjs/index.md`. 1 regression fix, 2 warnings. Brand 9/10 | Technical 9/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10.
+
+**Fixed in this branch:**
+
+- `キーペア` -> `鍵ペア`, 4 sites (description, heading, clef sentence, Austin video line). Regression: #19326 fixed this one day earlier and the full retranslation reintroduced it. `key pair` is not an ETHGlossary entry (only `key` -> `鍵`), so the pipeline has no signal to hold it; worth adding upstream.
+- Trailing newline stripped at EOF on `accounts` and `send-token-ethersjs`; restored.
+
+**Open (native call needed):**
+
+- `accounts:79` `[Geth]` -> `[ゴー・イーサリアム（ゲス）]` is ETHGlossary-compliant (`Go Ethereum (Geth)`), but line 94 of the same file keeps `Gethのドキュメント`.
+- `accounts` bullet lists switched from です/ます to plain/noun-ending forms while prose stays polite; acceptable list style, but a register shift from the pre-PR text.
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/glamsterdam:20` `Blob` -> `ブロブ`; `:31` `devnet` -> `デブネット`.
+
+**Open (warnings):**
+
+- open-access bank `アカウント` -> `口座`; hybrid `ユニスワップLabs`; `ノーログの証明` overstates claim.
+- `鍵ペア` held -- no `キーペア` regression.

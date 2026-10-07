@@ -7,8 +7,7 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
+  - "use-cases"
 format: explainer
 author: "காயின்மார்க்கெட்கேப்"
 breadcrumb: "பரவலாக்கப்பட்ட சமூகம்"

@@ -94,6 +94,7 @@ export function classifyFailure(message: string): QuarantineClass | null {
   if (/^\[gate\]/.test(message)) return "gate"
   if (/Failed to parse incremental translation response/.test(message))
     return "parse"
+  if (/dropped \d+ code block placeholder/.test(message)) return "parse"
   if (/jsx-attr leaf\(s\) failed to translate/.test(message)) return "parse"
   return null
 }

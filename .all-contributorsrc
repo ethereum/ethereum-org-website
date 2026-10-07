@@ -14532,6 +14532,24 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "toyeshhm",
+      "name": "Toyeshh Medikonda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184831353?v=4",
+      "profile": "http://toyeshh.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "arunimshukla",
+      "name": "Arunim Shukla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54760103?v=4",
+      "profile": "https://discord.com/invite/JTkeNXX",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

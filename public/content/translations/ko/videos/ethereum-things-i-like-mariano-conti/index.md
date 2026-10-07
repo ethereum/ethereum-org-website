@@ -8,7 +8,6 @@ duration: "0:16:30"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: presentation
 author: "이더리움 재단"
 breadcrumb: "내가 좋아하는 것들"

@@ -36,7 +36,7 @@ const socialLinks = [
   },
   {
     icon: Discord,
-    href: "https://discord.gg/ethereum-org",
+    href: "/discord/",
     ariaLabel: "Discord",
   },
 ]

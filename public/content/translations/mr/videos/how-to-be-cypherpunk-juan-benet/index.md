@@ -8,7 +8,7 @@ duration: "0:18:00"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "privacy"
 format: presentation
 author: "वेब3प्रायव्हसी नाऊ"
 breadcrumb: "सायफरपंक कसे बनावे"

@@ -1,7 +1,7 @@
 ---
-title: ethereum.org मध्ये डिझाइनचे योगदान
-metaTitle: डिझाइनचे योगदान
-description: ethereum.org मध्ये डिझाइनचे योगदान
+title: "ethereum.org मध्ये डिझाइनचे योगदान"
+metaTitle: "डिझाइनचे योगदान"
+description: "ethereum.org मध्ये डिझाइनचे योगदान"
 lang: mr
 ---
 
@@ -15,7 +15,7 @@ lang: mr
 
 आम्हाला कधीकधी आमच्या कच्च्या कल्पनांची चाचणी करण्यासाठी मदतीची आवश्यकता असते. कोणत्याही तांत्रिक ज्ञानाशिवाय योगदान देण्याचा हा एक उत्तम मार्ग आहे.
 
-1. डिझाइन टीम [डिस्कॉर्ड्](https://discord.com/invite/ethereum-org) आणि [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) वर मॉकअप डिझाइन शेअर करेल.
+1. डिझाइन टीम [डिस्कॉर्ड्](/discord/) आणि [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) वर मॉकअप डिझाइन शेअर करेल.
 2. कमेंट्स फंक्शनद्वारे अभिप्राय देण्यासाठी तुम्हाला डिझाइन्सबद्दल मार्गदर्शन केले जाईल.
 3. परिणाम GitHub इश्यूमध्ये शेअर केला जाईल आणि नंतर टीमद्वारे बंद केला जाईल.
 

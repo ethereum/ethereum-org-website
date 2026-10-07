@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam ni uboreshaji ujao wa Ethereum uliopangwa kufanyika katika robo ya nne ya mwaka 2026
-</AlertTitle>
 <AlertDescription>
-Uboreshaji wa Glamsterdam ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya Ethereum. Jifunze zaidi kuhusu [ramani ya njia ya itifaki](/roadmap/) na [uboreshaji uliopita](/ethereum-forks/).
+Uboreshaji wa Glamsterdam ni hatua moja tu katika malengo ya muda mrefu ya maendeleo ya Ethereum. Jifunze zaidi kuhusu [ramani ya njia ya itifaki](/roadmap/) na [maboresho ya awali](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Uboreshaji ujao wa Glamsterdam wa [Ethereum](/) umeundwa ili kufungua njia kwa kizazi kijacho cha kuongeza uwezo. Glamsterdam imepewa jina kutokana na mchanganyiko wa "Amsterdam" (uboreshaji wa tabaka la utekelezaji, uliopewa jina la eneo la awali la Devconnect) na "Gloas" (uboreshaji wa tabaka la mwafaka, uliopewa jina la nyota).
+Uboreshaji ujao wa Glamsterdam wa [Ethereum](/) umeundwa ili kusafisha njia kwa kizazi kijacho cha uongezaji uwezo. Glamsterdam imepewa jina kutokana na mchanganyiko wa "Amsterdam" (uboreshaji wa tabaka la utekelezaji, uliopewa jina la eneo la awali la Devconnect) na "Gloas" (uboreshaji wa tabaka la mwafaka, uliopewa jina la nyota).
 
-Kufuatia maendeleo yaliyofanywa katika uboreshaji wa [Fusaka](/roadmap/fusaka/), Glamsterdam inalenga katika kuongeza uwezo wa tabaka la 1 (l1) kwa kupanga upya jinsi mtandao unavyochakata miamala na kusimamia hifadhidata yake inayokua, kimsingi ikisasisha jinsi Ethereum inavyounda na kuthibitisha vitalu.
+Kufuatia maendeleo yaliyofanywa katika uboreshaji wa [Fusaka](/roadmap/fusaka/), Glamsterdam inalenga katika kuongeza uwezo wa tabaka la 1 (l1) kwa kupanga upya jinsi mtandao unavyochakata miamala na kusimamia hifadhidata yake inayokua, ikisasisha kimsingi jinsi Ethereum inavyounda na kuthibitisha vitalu.
 
-Wakati Fusaka ililenga katika maboresho ya kimsingi, Glamsterdam inaendeleza malengo ya "Kuongeza Uwezo wa tabaka la 1 (l1)" na "Kuongeza Uwezo wa Blobs" kwa kuweka rasmi utengano wa majukumu kati ya washiriki tofauti wa mtandao, na kuanzisha njia bora zaidi za kushughulikia data ili kuandaa [hali](/glossary/#state) kwa ajili ya usambamba wa uwezo wa upitishaji wa juu.
+Wakati Fusaka ililenga katika uboreshaji wa kimsingi, Glamsterdam inaendeleza malengo ya "Kuongeza uwezo wa tabaka la 1 (l1)" na "Kuongeza uwezo wa Blobs" kwa kuweka rasmi utengano wa majukumu kati ya washiriki tofauti wa mtandao, na kuanzisha njia bora zaidi za kushughulikia data ili kuandaa [hali](/glossary/#state) kwa uchakataji sambamba wa uwezo wa upitishaji wa juu.
 
-Maboresho haya yanahakikisha Ethereum inasalia kuwa ya haraka, nafuu, na iliyogatuliwa inaposhughulikia shughuli nyingi zaidi, huku ikiweka mahitaji ya maunzi yakiwa yanadhibitika kwa watu wanaoendesha [nodi](/glossary/#node) nyumbani.
+Maboresho haya yanahakikisha Ethereum inasalia kuwa ya haraka, nafuu, na iliyogatuliwa inaposhughulikia shughuli zaidi, huku ikiweka mahitaji ya maunzi yakiwa yanadhibitika kwa watu wanaoendesha [nodi](/glossary/#node) nyumbani.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,20 +28,20 @@ Maboresho haya yanahakikisha Ethereum inasalia kuwa ya haraka, nafuu, na iliyoga
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Kumbuka: Makala haya yanaangazia uteuzi wa EIPs zilizopangwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yaliyopangwa ambayo yanajaribiwa katika mitandao ya wasanidi (devnets) yanajumuisha EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, na EIP-8282. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Kumbuka: Makala haya yanaangazia uteuzi wa Mapendekezo ya Kuboresha Ethereum (EIPs) yaliyopangwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yaliyopangwa ambayo yanajaribiwa katika mitandao ya majaribio ya wasanidi (devnets) yanajumuisha EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, na EIP-8282. Upeo umesitishwa lakini bado unaweza kubadilika kabla ya Mtandao Mkuu, kwani EIP kuu bado iko kwenye rasimu. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Ikiwa unataka kuongeza EIP ambayo inazingatiwa kwa Glamsterdam, lakini haijaongezwa kwenye ukurasa huu bado, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
+Ikiwa unataka kuongeza EIP ambayo inafikiriwa kwa Glamsterdam, lakini haijaongezwa kwenye ukurasa huu bado, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Uboreshaji wa Glamsterdam unalenga malengo makuu matatu:
+Uboreshaji wa Glamsterdam unajikita katika malengo makuu matatu:
 
-- Kuharakisha uchakataji (usambamba): Kupanga upya jinsi mtandao unavyorekodi utegemezi wa data, ili uweze kuchakata kwa usalama miamala mingi kwa wakati mmoja badala ya mfululizo wa polepole, wa moja baada ya nyingine.
-- Kupanua uwezo: Kugawanya kazi nzito ya kuunda na kuthibitisha vitalu, kuupa mtandao muda zaidi wa kueneza kiasi kikubwa cha data bila kupunguza kasi.
-- Kuzuia uvimbe wa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuakisi kwa usahihi gharama ya muda mrefu ya maunzi ya kuhifadhi data mpya, kufungulia ongezeko la kikomo cha gesi la siku zijazo huku ikizuia kushuka kwa utendaji wa maunzi.
+- Kuharakisha uchakataji (uchakataji sambamba): Kupanga upya jinsi mtandao unavyorekodi utegemezi wa data, ili uweze kuchakata kwa usalama miamala mingi kwa wakati mmoja badala ya mfululizo wa polepole, wa moja baada ya nyingine.
+- Kupanua uwezo: Kugawanya kazi nzito ya kuunda na kuthibitisha vitalu, kutoa mtandao muda zaidi wa kueneza kiasi kikubwa cha data bila kupunguza kasi.
+- Kuzuia uvimbe wa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuonyesha kwa usahihi gharama ya muda mrefu ya maunzi ya kuhifadhi data mpya, kufungulia ongezeko la kikomo cha gesi la baadaye huku kuzuia kushuka kwa utendaji wa maunzi.
 
-Kwa ufupi, Glamsterdam italeta mabadiliko ya kisanifu ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki kuwa wa juu.
+Kwa ufupi, Glamsterdam italeta mabadiliko ya kimuundo ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki kuwa wa juu.
 
 ## Kuongeza uwezo wa tabaka la 1 (l1) na uchakataji sambamba {#scale-l1}
 

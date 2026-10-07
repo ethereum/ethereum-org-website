@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/restaking-explained/index.md",
-  "generatedAt": "2026-04-29T00:08:22.696Z",
-  "rootHash": "91c7b39841b4",
+  "generatedAt": "2026-09-30T19:16:55.259Z",
+  "rootHash": "30b2c6c126a6",
   "tree": {
-    "contentHash": "31165ba241db",
-    "anchorHash": "6cc3f4039b7c",
+    "contentHash": "0cb97c5bdf8f",
+    "anchorHash": "22add6f2cc57",
     "children": {
       "frontmatter:title": {
         "contentHash": "5185b4d19595",
@@ -36,22 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "3d4994855095",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "afdb2470b343"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "5d2d3ceb7abe"
+            "anchorHash": "2290d7d70dea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -235,5 +227,5 @@
       "slashing-and-restaking-1355"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

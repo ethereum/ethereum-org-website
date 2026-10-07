@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-Sasa tuseme katika programu tumizi iliyogatuliwa (dapp) yetu, tunataka kuonyesha jumla ya dau, jumla ya michezo iliyopotezwa/iliyoshindwa na pia kuisasisha kila wakati mtu anapocheza tena. Njia itakuwa:
+Sasa tuseme katika programu tumizi iliyogatuliwa (dapp) yetu, tunataka kuonyesha jumla ya dau, jumla ya michezo iliyopotezwa/kushindwa na pia kuisasisha kila wakati mtu anapocheza tena. Njia itakuwa:
 
 1. Leta `totalGamesPlayerWon`.
 2. Leta `totalGamesPlayerLost`.
-3. Jisajili kwenye matukio ya `BetPlaced`.
+3. Jisajili kwa matukio ya `BetPlaced`.
 
-Tunaweza kusikiliza [tukio katika Web3](https://docs.web3js.org/api/web3/class/Contract#events) kama inavyoonyeshwa upande wa kulia, lakini inahitaji kushughulikia matukio machache.
+Tunaweza kusikiliza [tukio katika Web3](https://docs.web3js.org/api/web3/class/Contract#events) kama inavyoonyeshwa upande wa kulia, lakini inahitaji kushughulikia visa kadhaa.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -64,19 +64,19 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Sasa hii bado ni sawa kwa mfano wetu rahisi. Lakini tuseme sasa tunataka kuonyesha kiasi cha dau zilizopotezwa/zilizoshindwa kwa mchezaji wa sasa pekee. Kweli hatuna bahati, ni afadhali usambaze mkataba mpya unaohifadhi thamani hizo na kuzileta. Na sasa fikiria mkataba mahiri na programu tumizi iliyogatuliwa (dapp) ngumu zaidi, mambo yanaweza kuwa magumu haraka.
+Sasa hii bado ni sawa kwa kiasi fulani kwa mfano wetu rahisi. Lakini tuseme sasa tunataka kuonyesha kiasi cha dau zilizopotezwa/kushindwa kwa mchezaji wa sasa pekee. Kweli hatuna bahati, ni afadhali usambaze mkataba mpya unaohifadhi thamani hizo na kuzileta. Na sasa fikiria mkataba mahiri na dapp ngumu zaidi, mambo yanaweza kuwa magumu haraka.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Mtu Hawezi Kuulizia Tu](./one-does-not-simply-query.jpg)
 
 Unaweza kuona jinsi hii sio bora:
 
-- Haifanyi kazi kwa mikataba ambayo tayari imesambazwa.
+- Haifanyi kazi kwa mikataba iliyosambazwa tayari.
 - Gharama za ziada za gesi kwa kuhifadhi thamani hizo.
 - Inahitaji wito mwingine ili kuleta data kwa nodi ya Ethereum.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Hiyo haitoshi](./not-good-enough.jpg)
 
-Sasa hebu tuangalie suluhisho bora.
+Sasa hebu tuangalie suluhisho bora zaidi.
 
 ## Hebu nikutambulishe kwa GraphQL {#let-me-introduce-to-you-graphql}
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/understanding-consensus-mechanisms/index.md",
-  "generatedAt": "2026-04-29T06:24:25.968Z",
-  "rootHash": "828705ff33ac",
+  "generatedAt": "2026-09-30T19:18:08.202Z",
+  "rootHash": "58c0746393df",
   "tree": {
-    "contentHash": "9c6800d319b3",
-    "anchorHash": "bf8ba2db70f9",
+    "contentHash": "654b55918416",
+    "anchorHash": "16a756f785df",
     "children": {
       "frontmatter:title": {
         "contentHash": "94915bd5fc9f",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "c2d17db7286b",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "c983c585ac3c"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "ef7797e13d3a"
+            "anchorHash": "3ddeb596fa81"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -235,5 +227,5 @@
       "closing-337"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

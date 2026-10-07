@@ -69,7 +69,7 @@ Nutzer verwenden den plattformeigenen [ERC-20](/glossary/#erc-20)-Token $MIND, u
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) ist ein „ausreichend dezentrales“ soziales Netzwerk ähnlich wie X und Reddit, das es Nutzern ermöglicht, „Casts“ zu teilen und zu entdecken. Es ist auf dem Optimism-L2-Netzwerk aufgebaut, um Transaktionen relativ günstig zu halten.
+[Farcaster](https://farcaster.xyz/) ist ein „ausreichend dezentrales“ soziales Netzwerk ähnlich wie X und Reddit, das es Nutzern ermöglicht, „Casts“ zu teilen und zu entdecken. Es basiert auf dem Optimism L2-Netzwerk, um Transaktionen relativ kostengünstig zu halten.
 
 ## Dezentrale soziale Netzwerke nutzen {#use-decentralized-social-networks}
 

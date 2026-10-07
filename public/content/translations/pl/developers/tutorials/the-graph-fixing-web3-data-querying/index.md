@@ -15,7 +15,7 @@ Tym razem przyjrzymy się bliżej The Graph, który w zeszłym roku stał się w
 
 ## Bez The Graph... {#without-the-graph}
 
-Posłużmy się więc prostym przykładem w celach ilustracyjnych. Wszyscy lubimy gry, więc wyobraźmy sobie prostą grę, w której użytkownicy obstawiają zakłady:
+Posłużmy się prostym przykładem w celach ilustracyjnych. Wszyscy lubimy gry, więc wyobraź sobie prostą grę, w której użytkownicy obstawiają zakłady:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,7 +41,7 @@ contract Game {
 }
 ```
 
-Załóżmy teraz, że w naszej zdecentralizowanej aplikacji (dapp) chcemy wyświetlać łączną liczbę zakładów, łączną liczbę przegranych/wygranych gier, a także aktualizować te dane za każdym razem, gdy ktoś ponownie zagra. Podejście wyglądałoby następująco:
+Załóżmy teraz, że w naszej zdecentralizowanej aplikacji (dapp) chcemy wyświetlać łączną liczbę zakładów, łączną liczbę przegranych/wygranych gier, a także aktualizować te dane za każdym razem, gdy ktoś zagra ponownie. Podejście wyglądałoby następująco:
 
 1. Pobranie `totalGamesPlayerWon`.
 2. Pobranie `totalGamesPlayerLost`.
@@ -64,7 +64,7 @@ GameContract.events.BetPlaced({
 });
 ```
 
-To wciąż jest w miarę w porządku dla naszego prostego przykładu. Ale powiedzmy, że chcemy teraz wyświetlać kwoty przegranych/wygranych zakładów tylko dla obecnego gracza. Cóż, mamy pecha, lepiej wdrożyć nowy kontrakt, który przechowuje te wartości i je pobiera. A teraz wyobraź sobie znacznie bardziej skomplikowany inteligentny kontrakt i dapp – sprawy mogą się szybko skomplikować.
+To wciąż jest w miarę w porządku dla naszego prostego przykładu. Ale załóżmy, że chcemy teraz wyświetlać kwoty przegranych/wygranych zakładów tylko dla obecnego gracza. Cóż, mamy pecha, lepiej wdrożyć nowy kontrakt, który przechowuje te wartości i je pobierać. A teraz wyobraź sobie znacznie bardziej skomplikowany inteligentny kontrakt i dapp – sprawy mogą się szybko skomplikować.
 
 ![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
@@ -72,9 +72,9 @@ Widać, że nie jest to optymalne:
 
 - Nie działa dla już wdrożonych kontraktów.
 - Dodatkowe koszty gazu za przechowywanie tych wartości.
-- Wymaga kolejnego wywołania w celu pobrania danych z węzła Ethereum.
+- Wymaga kolejnego wywołania do węzła Ethereum w celu pobrania danych.
 
-![Thats not good enough](./not-good-enough.jpg)
+![That's not good enough](./not-good-enough.jpg)
 
 Spójrzmy teraz na lepsze rozwiązanie.
 

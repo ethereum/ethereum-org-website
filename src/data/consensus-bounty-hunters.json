@@ -73,7 +73,17 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },  
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 4750
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 4500
+  },
   {
     "username": "asanso",
     "name": "Antonio Sanso",
@@ -115,11 +125,6 @@
     "score": 2500
   },  
   {
-    "username": "hyunmini",
-    "name": "secuholic",
-    "score": 2000
-  },
-  {
     "username": "",
     "name": "Akincibor",
     "score": 1750
@@ -127,6 +132,11 @@
   {
     "username": "quasar",
     "name": "Evgeny Legerov",
+    "score": 1500
+  },
+  {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
     "score": 1500
   },
   {
@@ -160,12 +170,7 @@
     "score": 1000
   },
   {
-    "username": "therealgregoai",
-    "name": "Grego AI",
-    "score": 1000
-  },
-  {
-    "username": "Jeongmin Choi",
+    "username": "",
     "name": "Jeongmin Choi",
     "score": 1000
   },
@@ -190,6 +195,11 @@
     "score": 1000
   },
   {
+    "username": "uShure",
+    "name": "moguchever",
+    "score": 1000
+  },
+  {
     "username": "sko94",
     "name": "XDZIBECX",
     "score": 500
@@ -200,15 +210,20 @@
     "score": 500
   },
   {
-    "username": "eclipse07077",
-    "name": "eclipse07077",
-    "score": 500
-  },
-  {
     "username": "trailofbits",
     "name": "Trail of Bits",
     "score": 500
   },
+  {
+    "username": "Stassi99",
+    "name": "Sta",
+    "score": 500
+  }, 
+  {
+    "username": "sujithsomraaj",
+    "name": "sujith",
+    "score": 500
+  },  
   {
     "username": "0xSorryNotSorry",
     "name": "sorryNotsorry",

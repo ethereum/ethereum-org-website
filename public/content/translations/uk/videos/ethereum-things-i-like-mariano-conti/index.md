@@ -8,7 +8,6 @@ duration: "0:16:30"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: presentation
 author: "Фундація Ethereum"
 breadcrumb: "Що мені подобається"

@@ -157,3 +157,19 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `page-apps.json` turned the `DAO` category chip from 3 into 44 characters, where it renders as a breadcrumb, hero title and card title beside one-word siblings.
 - "framework" and "compiler" were each retranslated in opposite directions across two files in this one PR: needs a locale-wide sweep, not point edits.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-tor-description-2` trade-offs `பரிமாற்றங்களுடன்` -> `சமரசங்களுடன்` (4th recurrence).
+- `zk-rollups:17` deploy `பயன்படுத்தப்பட்ட` -> `நிலைநிறுத்தப்பட்ட`.
+
+**Open (warnings):**
+
+- glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
+- zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.

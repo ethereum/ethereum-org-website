@@ -111,3 +111,20 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Acronym expansion hit 18 `page-apps` keys including short category-chip `-name` labels, where the Indic UI-tag rule mandates Latin. `DAO` and `DEX` have no hi short form so 6 keys stay expanded.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-criteria-lead` `बहुत कम लोग` -> `बहुत कम VPN`.
+- privacy-online `vpn-table-2-does` -> `साइटें आपका स्थान पता न लगा सकें`.
+- `social-networks:72` `लेनदेन` -> `लेन-देन`; page-learn `रिवॉर्ड कमाएं` -> `पुरस्कार कमाएं`.
+
+**Open (warnings):**
+
+- EIP/API/DeFi/NFT over-expansion (#80), incl. duplicated `(EIP) (EIP-8081)` in hegota:42.
+- `खाता` oblique-case errors in open-access (4 keys); Geth back to Latin in bug-bounty.

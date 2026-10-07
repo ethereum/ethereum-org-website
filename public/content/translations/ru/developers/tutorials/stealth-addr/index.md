@@ -130,7 +130,7 @@ sidebarDepth: 3
 
 #### Компонент WASM {#wasm}
 
-Исходный код, который компилируется в WASM, написан на [Rust](https://rust-lang.org/). Вы можете посмотреть его в [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Этот код в первую очередь является интерфейсом между кодом на JavaScript и [библиотекой `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Исходный код, который компилируется в WASM, написан на [Rust](https://rust-lang.org/). Вы можете посмотреть его в [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Этот код в первую очередь является интерфейсом между кодом на JavaScript и [библиотекой `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -149,7 +149,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Пакету [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) необходимо генерировать случайные значения. Это невозможно сделать чисто алгоритмическими средствами; требуется доступ к физическому процессу как источнику энтропии. Это определение указывает, что мы получим эту энтропию, запросив ее у браузера, в котором мы работаем.
+Пакет [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) необходим для генерации случайных значений. Это невозможно сделать чисто алгоритмическими средствами; требуется доступ к физическому процессу как источнику энтропии. Это определение указывает, что мы получим эту энтропию, запросив ее у браузера, в котором мы работаем.
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Определения для создания пакета WASM из Rust. Они задокументированы [здесь](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -207,11 +207,11 @@ pub fn wasm_generate_stealth_meta_address() -> String {
         generate_stealth_meta_address();
 ```
 
-[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) возвращает три поля:
+Функция [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) возвращает три поля:
 
 - Мета-адрес (*K<sub>pub</sub>* и *V<sub>pub</sub>*)
-- Приватный ключ просмотра (*V<sub>priv</sub>*)
-- Приватный ключ траты (*K<sub>priv</sub>*)
+- Приватный ключ для просмотра (*V<sub>priv</sub>*)
+- Приватный ключ для траты (*K<sub>priv</sub>*)
 
 Синтаксис [кортежа](https://doc.rust-lang.org/std/primitive.tuple.html) позволяет нам снова разделить эти значения.
 
@@ -224,19 +224,19 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-Используйте макрос [`format!`](https://doc.rust-lang.org/std/fmt/index.html) для генерации строки в формате JSON. Используйте [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) для преобразования массивов в шестнадцатеричные строки.
+Используйте макрос [`format!`](https://doc.rust-lang.org/std/fmt/index.html) для генерации строки в формате JSON. Используйте [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html), чтобы преобразовать массивы в шестнадцатеричные строки.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-Эта функция превращает шестнадцатеричную строку (предоставленную JavaScript) в байтовый массив. Мы используем ее для разбора значений, предоставленных кодом JavaScript. Эта функция сложна из-за того, как Rust обрабатывает массивы и векторы.
+Эта функция превращает шестнадцатеричную строку (предоставленную JavaScript) в массив байтов. Мы используем ее для разбора значений, предоставленных кодом на JavaScript. Эта функция сложна из-за того, как Rust обрабатывает массивы и векторы.
 
 Выражение `<const N: usize>` называется [обобщением (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` — это параметр, который контролирует длину возвращаемого массива. На самом деле функция называется `str_to_array::<n>`, где `n` — длина массива.
 
 Возвращаемое значение — `Option<[u8; N]>`, что означает, что возвращаемый массив является [опциональным](https://doc.rust-lang.org/std/option/). Это типичный паттерн в Rust для функций, которые могут завершиться ошибкой.
 
-Например, если мы вызываем `str_to_array::10("bad060a7")`, функция должна вернуть массив из десяти значений, но на входе всего четыре байта. Функция должна завершиться ошибкой, и она делает это, возвращая `None`. Возвращаемым значением для `str_to_array::4("bad060a7")` будет `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Например, если мы вызовем `str_to_array::10("bad060a7")`, функция должна вернуть массив из 10 значений, но на входе всего 4 байта. Функция должна завершиться ошибкой, и она делает это, возвращая `None`. Возвращаемым значением для `str_to_array::4("bad060a7")` будет `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode возвращает Result<Vec<u8>, _>
@@ -245,7 +245,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 Функция [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) возвращает `Result<Vec<u8>, FromHexError>`. Тип [`Result`](https://doc.rust-lang.org/std/result/) может содержать либо успешный результат (`Ok(value)`), либо ошибку (`Err(error)`).
 
-Метод `.ok()` превращает `Result` в `Option`, значение которого равно либо значению `Ok()` в случае успеха, либо `None` в противном случае. Наконец, [оператор вопросительного знака](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) прерывает текущую функцию и возвращает `None`, если `Option` пуст. В противном случае он извлекает значение и возвращает его (в данном случае, чтобы присвоить значение `vec`).
+Метод `.ok()` превращает `Result` в `Option`, значение которого равно либо значению `Ok()` в случае успеха, либо `None` в противном случае. Наконец, [оператор вопросительного знака](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) прерывает текущую функцию и возвращает `None`, если `Option` пуст. В противном случае он извлекает значение и возвращает его (в данном случае, чтобы присвоить значение переменной `vec`).
 
 Это выглядит как странно запутанный метод обработки ошибок, но `Result` и `Option` гарантируют, что все ошибки будут обработаны так или иначе.
 
@@ -274,7 +274,7 @@ Rust не требует использования ключевого слов�
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-Эта функция получает публичный мета-адрес, который включает в себя как *V<sub>pub</sub>*, так и *K<sub>pub</sub>*. Она возвращает скрытый адрес, открытый ключ для публикации (*R<sub>pub</sub>*) и однобайтовое значение сканирования, которое ускоряет идентификацию того, какие опубликованные адреса могут принадлежать Алисе.
+Эта функция получает открытый мета-адрес, который включает как *V<sub>pub</sub>*, так и *K<sub>pub</sub>*. Она возвращает скрытый адрес, открытый ключ для публикации (*R<sub>pub</sub>*) и однобайтовое значение сканирования, которое ускоряет идентификацию того, какие опубликованные адреса могут принадлежать Алисе.
 
 Значение сканирования является частью общего секрета (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Это значение доступно Алисе, и его проверка происходит намного быстрее, чем проверка того, равно ли *f(K<sub>pub</sub>+G\*hash(S))* опубликованному адресу.
 
@@ -283,7 +283,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-Мы используем [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) из библиотеки.
+Мы используем функцию библиотеки [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html).
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -310,18 +310,18 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Эта функция использует [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) из библиотеки для вычисления приватного ключа для вывода средств с адреса (*R<sub>priv</sub>*). Для этого вычисления требуются следующие значения:
+Эта функция использует функцию библиотеки [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) для вычисления приватного ключа для вывода средств с адреса (*R<sub>priv</sub>*). Для этого вычисления требуются следующие значения:
 
 - Адрес (*Address=f(P<sub>pub</sub>)*)
 - Открытый ключ, сгенерированный Биллом (*R<sub>pub</sub>*)
-- Приватный ключ просмотра (*V<sub>priv</sub>*)
-- Приватный ключ траты (*K<sub>priv</sub>*)
+- Приватный ключ для просмотра (*V<sub>priv</sub>*)
+- Приватный ключ для траты (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) указывает, что функция выполняется при инициализации кода WASM.
+Атрибут [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) указывает, что функция выполняется при инициализации кода WASM.
 
 ```rust
 pub fn main() {
@@ -338,14 +338,14 @@ assertion `left == right` failed
  right: 1
 ```
 
-За которым следует трассировка стека. Затем дайте Биллу действительный мета-адрес, а Алисе — либо недействительный адрес, либо недействительный открытый ключ. Вы увидите эту ошибку:
+За которой следует трассировка стека. Затем дайте Биллу действительный мета-адрес, а Алисе — либо недействительный адрес, либо недействительный открытый ключ. Вы увидите эту ошибку:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-И снова за ней следует трассировка стека.
+Снова с последующей трассировкой стека.
 
 #### Пользовательский интерфейс {#ui}
 
@@ -378,7 +378,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Когда мы используем [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), он создает два файла, которые мы здесь используем: файл wasm с самим кодом (здесь `src/rust-wasm/pkg/rust_wasm_bg.wasm`) и файл JavaScript с определениями для его использования (здесь `src/rust_wasm/pkg/rust_wasm.js`). Экспорт по умолчанию этого файла JavaScript — это код, который необходимо запустить для инициализации WASM.
+Когда мы используем [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), он создает два файла, которые мы здесь используем: файл wasm с самим кодом (здесь `src/rust-wasm/pkg/rust_wasm_bg.wasm`) и файл JavaScript с определениями для его использования (здесь `src/rust-wasm/pkg/rust_wasm.js`). Экспорт по умолчанию этого файла JavaScript — это код, который необходимо запустить для инициализации WASM.
 
 ```jsx
 function App() {
@@ -403,7 +403,7 @@ function App() {
 
 Хук [`useEffect`](https://react.dev/reference/react/useEffect) позволяет указать функцию, которая выполняется при изменении переменных состояния. Здесь список переменных состояния пуст (`[]`), поэтому эта функция выполняется только один раз при загрузке страницы.
 
-Функция эффекта должна возвращать значение немедленно. Чтобы использовать асинхронный код, такой как `init` для WASM (который должен загрузить файл `.wasm` и поэтому требует времени), мы определяем внутреннюю функцию [`async`](https://en.wikipedia.org/wiki/Async/await) и запускаем ее без `await`.
+Функция эффекта должна возвращать результат немедленно. Чтобы использовать асинхронный код, такой как `init` для WASM (который должен загрузить файл `.wasm` и поэтому требует времени), мы определяем внутреннюю функцию [`async`](https://en.wikipedia.org/wiki/Async/await) и запускаем ее без `await`.
 
 **`Bill.jsx`**
 

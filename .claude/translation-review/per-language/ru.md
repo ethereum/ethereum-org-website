@@ -100,3 +100,17 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - `Ethereum Virtual Machine` is now capitalized mid-sentence in `languages`/`testing` but lowercase in `accounts`: a glossary-lemma-capitalization trap worth a standing rule rather than a per-run edit.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `Бинанс Академи` (glossary Binance, Latin).
+- `Хром` left undeclined (4 keys); F-Droid `бесплатного` (#83); `Предложение по улучшению Ethereum (EIP)-7805` expansion; Hegotá Cyrillic `Хегота` in page-upgrades-index only.

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-09-03T12:37:45.618Z",
-  "rootHash": "9a40e61f8088",
+  "generatedAt": "2026-09-30T18:03:28.078Z",
+  "rootHash": "7eb7b2b96e07",
   "tree": {
-    "contentHash": "9e5b8d0f24f6",
-    "anchorHash": "85546ce2e107",
+    "contentHash": "0c6ed993dd5c",
+    "anchorHash": "7e0e8335c7f2",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -310,6 +310,68 @@
         "contentHash": "d8819ac88d31",
         "anchorHash": "e3b0c44298fc"
       },
+      "docsearch-explorer-address": {
+        "contentHash": "b1c70851e9c3",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "e0d529a45371",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-contract": {
+        "contentHash": "ee01624ca56e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-explorer-hash": {
+        "contentHash": "0eb9a9ca9548",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "ed29327c2b4c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-name": {
+        "contentHash": "2ff6f02d2b7d",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "3464b32db149",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-transaction": {
+        "contentHash": "eec26ddd9a40",
+        "anchorHash": "e3b0c44298fc"
+      },
       "docsearch-no-results-missing": {
         "contentHash": "d258ae019466",
         "anchorHash": "e3b0c44298fc"
@@ -551,7 +613,7 @@
       },
       "feedback-widget-thank-you-subtitle-ext": {
         "contentHash": "4916546f2dde",
-        "anchorHash": "499de7b4e55f",
+        "anchorHash": "b11049d4502f",
         "children": {
           "prose:1": {
             "contentHash": "96f25d0af4e8",
@@ -559,7 +621,7 @@
           },
           "html-tag:0": {
             "contentHash": "053bc65874ad",
-            "anchorHash": "36f38461c003"
+            "anchorHash": "a2e696488cae"
           },
           "prose:2": {
             "contentHash": "cdb4ee2aea69",
@@ -666,6 +728,10 @@
       },
       "jobs": {
         "contentHash": "2f17a0f8d518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "keyboard-shortcuts": {
+        "contentHash": "e9bef0b0f3c2",
         "anchorHash": "e3b0c44298fc"
       },
       "language-am": {
@@ -1673,7 +1739,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-values-label": {
-        "contentHash": "b3bb96be5919",
+        "contentHash": "1d90adac25c9",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-videos-description": {
@@ -1744,8 +1810,16 @@
         "contentHash": "ed077f3d8125",
         "anchorHash": "e3b0c44298fc"
       },
+      "open-access": {
+        "contentHash": "4099a2c228b1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "open-source": {
         "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "online": {
+        "contentHash": "0d21bd52022c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-actions": {
@@ -1791,11 +1865,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "participate": {
-        "contentHash": "bb501d7877eb",
+        "contentHash": "38301e6935f3",
         "anchorHash": "e3b0c44298fc"
       },
       "participate-menu": {
-        "contentHash": "a1dd20f59ab4",
+        "contentHash": "0ff5d9fb49b4",
         "anchorHash": "e3b0c44298fc"
       },
       "payments-page": {
@@ -1812,6 +1886,10 @@
       },
       "prediction-markets": {
         "contentHash": "3b50eae8b6b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy": {
+        "contentHash": "54a57c3147c4",
         "anchorHash": "e3b0c44298fc"
       },
       "privacy-policy": {
@@ -1849,11 +1927,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "research": {
-        "contentHash": "92375f997ffe",
+        "contentHash": "979d6300fd98",
         "anchorHash": "e3b0c44298fc"
       },
       "research-menu": {
-        "contentHash": "20cf04fc7f9f",
+        "contentHash": "b5985ec8963a",
         "anchorHash": "e3b0c44298fc"
       },
       "resources": {
@@ -1914,6 +1992,58 @@
       },
       "start-building": {
         "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-close-dialog": {
+        "contentHash": "b956204c048c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-display": {
+        "contentHash": "34e108c0896d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-general": {
+        "contentHash": "c910d474dcd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-navigation": {
+        "contentHash": "3db65f8c2a7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-search": {
+        "contentHash": "49c266baaaa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-nav-sections": {
+        "contentHash": "5c116068720d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-open-language-picker": {
+        "contentHash": "e9e5157f06f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-open-search": {
+        "contentHash": "50ce48b9c623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-or": {
+        "contentHash": "7175517a370b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-search-navigate": {
+        "contentHash": "3dc301a4fb9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-search-select": {
+        "contentHash": "7e4bc474a333",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-show-shortcuts": {
+        "contentHash": "3d0ced5dc621",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-toggle-theme": {
+        "contentHash": "b16821e584a1",
         "anchorHash": "e3b0c44298fc"
       },
       "show-all": {
@@ -2201,6 +2331,11 @@
       "docs",
       "docsearch-error-help",
       "docsearch-error-title",
+      "docsearch-explorer-address",
+      "docsearch-explorer-contract",
+      "docsearch-explorer-hash",
+      "docsearch-explorer-name",
+      "docsearch-explorer-transaction",
       "docsearch-no-results-missing",
       "docsearch-no-results-missing-link",
       "docsearch-no-results-suggested-query",
@@ -2281,6 +2416,7 @@
       "how-to-use-a-wallet",
       "image",
       "jobs",
+      "keyboard-shortcuts",
       "language-am",
       "language-be",
       "language-ar",
@@ -2550,7 +2686,9 @@
       "on-this-page",
       "onchain-gaming",
       "open",
+      "open-access",
       "open-source",
+      "online",
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
@@ -2566,6 +2704,7 @@
       "pbs",
       "pools",
       "prediction-markets",
+      "privacy",
       "privacy-policy",
       "product-disclaimer",
       "quantum-resistance",
@@ -2590,6 +2729,19 @@
       "security-testing",
       "see-contributors",
       "start-building",
+      "shortcut-close-dialog",
+      "shortcut-group-display",
+      "shortcut-group-general",
+      "shortcut-group-navigation",
+      "shortcut-group-search",
+      "shortcut-nav-sections",
+      "shortcut-open-language-picker",
+      "shortcut-open-search",
+      "shortcut-or",
+      "shortcut-search-navigate",
+      "shortcut-search-select",
+      "shortcut-show-shortcuts",
+      "shortcut-toggle-theme",
       "show-all",
       "show-more",
       "show-less",
@@ -2645,5 +2797,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "3de2d54f82963c5e92e7b0fd51dd7ab70bbb7e1c"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }
