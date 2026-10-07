@@ -160,7 +160,7 @@ git commit -m "brief description of changes [Fixes #1234]"
 4. Push to your GitHub account
 
 ```sh
-git push --set-upstream origin new_branch_name
+git push -u origin HEAD
 ```
 
 ### 5. Submit your PR
