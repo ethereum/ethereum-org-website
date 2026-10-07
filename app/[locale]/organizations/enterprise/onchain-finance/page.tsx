@@ -1,10 +1,9 @@
 import { Blocks, BookOpenCheck, Coins, Move } from "lucide-react"
-import type { StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import AppCard from "@/components/AppCard"
+import CategoryAppsGrid from "@/components/Content/apps/CategoryAppsGrid"
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -20,7 +19,6 @@ import {
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
@@ -38,13 +36,7 @@ import {
   getDexVolumeData,
   getTotalValueLockedData,
 } from "@/lib/data"
-import aaveImg from "@/public/images/dapps/aave.png"
-import compoundImg from "@/public/images/dapps/compound.png"
-import morphoImg from "@/public/images/dapps/morpho.png"
-import sparkImg from "@/public/images/dapps/sparkfi.png"
-import uniswapImg from "@/public/images/exchanges/uniswap.png"
 import heroImg from "@/public/images/organizations/isometric-defi.png"
-import makerImg from "@/public/images/stablecoins/maker.png"
 
 const PRIMITIVES = [
   { key: "open-standards", Icon: BookOpenCheck },
@@ -59,28 +51,6 @@ const INNOVATIONS = [
   "digital-bonds",
   "fx",
 ] as const
-
-// TODO(content): Ethena and Pendle logos
-const PROTOCOLS: {
-  key: string
-  href: string
-  logo?: StaticImageData
-  invertOnDark?: boolean
-}[] = [
-  { key: "aave", href: "https://aave.com/", logo: aaveImg },
-  { key: "sky", href: "https://sky.money/", logo: makerImg },
-  { key: "ethena", href: "https://ethena.fi/" },
-  {
-    key: "uniswap",
-    href: "https://uniswap.org/",
-    logo: uniswapImg,
-    invertOnDark: true,
-  },
-  { key: "pendle", href: "https://www.pendle.finance/" },
-  { key: "spark", href: "https://spark.finance/", logo: sparkImg },
-  { key: "morpho", href: "https://morpho.org/", logo: morphoImg },
-  { key: "compound", href: "https://compound.finance/", logo: compoundImg },
-]
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -265,22 +235,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               </p>
             </div>
-            <Grid columns={3} size="narrow" className="lg:basis-2/3">
-              {PROTOCOLS.map(({ key, href, logo, invertOnDark }) => (
-                <AppCard
-                  key={key}
-                  name={t(
-                    `page-organizations-enterprise-onchain-finance-ecosystem-${key}-name`
-                  )}
-                  nameClassName="line-clamp-2 text-base leading-tight sm:text-lg"
-                  thumbnail={logo?.src}
-                  // TODO(content): protocol descriptions and category tags
-                  href={href}
-                  className={cn(invertOnDark && "dark:[&_img]:invert")}
-                />
-              ))}
-            </Grid>
+            <CategoryAppsGrid
+              category="defi"
+              limit={8}
+              hideFilter
+              className="lg:basis-2/3"
+            />
           </Section>
+
           <ExpertContacts />
 
           <OrganizationPathways current="onchain-finance" />
