@@ -11,6 +11,8 @@ Start from these files (do NOT re-fetch the diff; it is already capped):
 - `/tmp/gh-aw/agent/pr-meta.json` — PR metadata (title, body, author, files, base/head)
 - `/tmp/gh-aw/agent/pr-diff.patch` — the diff, capped at 3000 lines
 
+If the diff ends with a `TRUNCATED: showing 3000 of N lines` line, you have not seen the whole change. Read the remaining changed files (listed in `pr-meta.json`) with the GitHub tools, or say in the verdict summary that the review covered only the first 3000 lines.
+
 ## Step 2 — classify the lane
 
 Pick exactly one lane from the changed file paths (labels are a hint, paths are the truth):

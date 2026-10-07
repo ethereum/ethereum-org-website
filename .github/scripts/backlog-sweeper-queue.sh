@@ -8,7 +8,7 @@
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
-#   pr-<n>/pr-diff.patch   diff, capped at 3000 lines
+#   pr-<n>/pr-diff.patch   diff, capped at 3000 lines with a TRUNCATED marker line
 set -euo pipefail
 
 OUT_DIR="${OUT_DIR:-/tmp/gh-aw/agent}"
@@ -48,7 +48,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
 
 for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   mkdir -p "$OUT_DIR/pr-$n"
-  { gh pr diff "$n" --repo "$REPO" || true; } | head -n 3000 > "$OUT_DIR/pr-$n/pr-diff.patch"
+  { gh pr diff "$n" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > "$OUT_DIR/pr-$n/pr-diff.patch"
   gh pr view "$n" --repo "$REPO" \
     --json number,title,body,author,isDraft,baseRefName,headRefName,additions,deletions,changedFiles,files,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"

@@ -75,7 +75,7 @@ pre-agent-steps:
     run: |
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
-      { gh pr diff "$PR_NUMBER" --repo "$REPO" || true; } | head -n 3000 > /tmp/gh-aw/agent/pr-diff.patch
+      { gh pr diff "$PR_NUMBER" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > /tmp/gh-aw/agent/pr-diff.patch
       gh pr view "$PR_NUMBER" --repo "$REPO" \
         --json number,title,body,author,isDraft,baseRefName,headRefName,additions,deletions,changedFiles,files,labels \
         > /tmp/gh-aw/agent/pr-meta.json
