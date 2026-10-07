@@ -3,9 +3,8 @@ import { getTranslations } from "next-intl/server"
 import { Image } from "@/components/Image"
 import {
   Card,
-  CardButtonFake,
+  CardBanner,
   CardContent,
-  CardFooter,
   CardHeader,
   CardParagraph,
   CardTitle,
@@ -15,28 +14,22 @@ import { Section } from "@/components/ui/section"
 
 import SectionIntro from "./section-intro"
 
-import eeaLogo from "@/public/images/organizations/logos/enterprise-ethereum-alliance.png"
-import etherealizeLogo from "@/public/images/organizations/logos/etherealize.png"
-import ethereumInstitutionalLogo from "@/public/images/organizations/logos/ethereum-institutional.png"
-import ethsystemsLogo from "@/public/images/organizations/logos/ethsystems.png"
+import eeaBanner from "@/public/images/organizations/experts/enterprise-ethereum-alliance-banner.png"
+import etherealizeBanner from "@/public/images/organizations/experts/etherealize-banner.jpg"
+import ethereumInstitutionalBanner from "@/public/images/organizations/experts/ethereum-institutional-banner.png"
+import ethsystemsBanner from "@/public/images/organizations/experts/ethsystems-banner.png"
 
 const EXPERTS = {
   "ethereum-institutional": {
     href: "https://www.ethereuminstitutional.org/",
-    logo: ethereumInstitutionalLogo,
+    banner: ethereumInstitutionalBanner,
   },
-  ethsystems: {
-    href: "https://ethsystems.org/",
-    logo: ethsystemsLogo,
-  },
+  ethsystems: { href: "https://ethsystems.org/", banner: ethsystemsBanner },
   etherealize: {
     href: "https://www.etherealize.com/",
-    logo: etherealizeLogo,
+    banner: etherealizeBanner,
   },
-  eea: {
-    href: "https://entethalliance.org/",
-    logo: eeaLogo,
-  },
+  eea: { href: "https://entethalliance.org/", banner: eeaBanner },
 } as const
 
 type ExpertKey = keyof typeof EXPERTS
@@ -52,35 +45,26 @@ const ExpertContacts = async () => {
       />
       <Grid balanced={4} data-flow="cta" className="text-start">
         {(Object.keys(EXPERTS) as ExpertKey[]).map((key) => {
-          const { href, logo } = EXPERTS[key]
+          const { href, banner } = EXPERTS[key]
           return (
-            <Card
-              key={key}
-              href={href}
-              size="lg"
-              className="row-span-3 grid grid-rows-subgrid gap-0"
-            >
-              <CardHeader className="flex flex-row items-center gap-4">
-                <Image
-                  src={logo}
-                  alt=""
-                  className="size-16 shrink-0 rounded-full"
-                  sizes="64px"
-                />
-                <CardTitle>
-                  {t(`page-organizations-experts-${key}-name`)}
-                </CardTitle>
+            <Card key={key} href={href} variant="ghost" size="sm">
+              <CardHeader>
+                <CardBanner size="sm">
+                  <Image
+                    src={banner}
+                    alt=""
+                    sizes="(max-width: 768px) calc(100vw - 2rem), 300px"
+                  />
+                </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardParagraph>
+                <CardTitle size="sm" asChild>
+                  <h3>{t(`page-organizations-experts-${key}-name`)}</h3>
+                </CardTitle>
+                <CardParagraph size="sm">
                   {t(`page-organizations-experts-${key}-description`)}
                 </CardParagraph>
               </CardContent>
-              <CardFooter>
-                <CardButtonFake>
-                  {t("page-organizations-experts-cta")}
-                </CardButtonFake>
-              </CardFooter>
             </Card>
           )
         })}
