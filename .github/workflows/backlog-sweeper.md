@@ -56,16 +56,11 @@ safe-outputs:
       id: claude
       model: claude-sonnet-5
 pre-agent-steps:
-  - name: Pre-fetch open PR queue
+  - name: Select PRs and pre-fetch their diffs
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
-    run: |
-      set -euo pipefail
-      mkdir -p /tmp/gh-aw/agent
-      gh pr list --repo "$REPO" --state open \
-        --json number,title,createdAt,updatedAt,isDraft,labels,author,reviewDecision,headRefName \
-        --limit 200 > /tmp/gh-aw/agent/open-prs.json
+    run: bash .github/scripts/backlog-sweeper-queue.sh
 imports:
   - shared/pr-review-core.md
 ---
@@ -74,12 +69,12 @@ You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. From the rest, take the **5 oldest by createdAt** that do not already carry a comment from this workflow or the PR Reviewer workflow (check each candidate's comments for the marker `First-pass review`). A PR that already has one is only eligible again if a commit was pushed or the PR author commented after the latest `First-pass review` comment; label changes and bot comments do not count.
+The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop.
 
 ## For each selected PR
 
-Fetch its diff and metadata via the GitHub tools, then produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels).
+Produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch` — use them in place of the paths named in Step 1.
 
-## Budget and termination
+## Termination
 
-Do not exceed 5 reviewed PRs per run. Every run MUST end with at least one safe-output call; if the backlog is empty or fully covered, call `noop` with a one-line reason.
+Every run MUST end with at least one safe-output call.
