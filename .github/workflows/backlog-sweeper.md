@@ -24,10 +24,12 @@ safe-outputs:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
     private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
   add-comment:
+    target: "*"
     max: 5
     hide-older-comments:
       match: [pr-reviewer]
   add-labels:
+    target: "*"
     max: 15
     allowed:
       - "needs review 👀"
@@ -42,6 +44,7 @@ safe-outputs:
       - "tooling 🔧"
       - "config ⚙️"
   remove-labels:
+    target: "*"
     max: 5
     allowed:
       - "content 🖋️"
