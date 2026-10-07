@@ -5,6 +5,7 @@ import {
   ShoppingCart,
   UserStar,
 } from "lucide-react"
+import { getImageProps, type StaticImageData } from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -32,15 +33,18 @@ import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { createPageTracking } from "@/lib/utils/pageTracking"
+import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import AdoptionChart from "./_components/adoption-chart"
 import SectionIntro from "./_components/section-intro"
 import PageJsonLD from "./page-jsonld"
 
 import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
-import heroImg from "@/public/images/organizations/ethereum-city.png"
-import whatImg from "@/public/images/organizations/hub-what-organizations-do.png"
-import whyImg from "@/public/images/organizations/hub-why-building.png"
+import whyImg from "@/public/images/organizations/civic-district-on-shared-platform.png"
+import whyPortraitImg from "@/public/images/organizations/civic-district-on-shared-platform-portrait.png"
+import heroImg from "@/public/images/organizations/sunrise-over-organizations-city-skyline.png"
+import whatImg from "@/public/images/organizations/waterfront-trade-hub-with-rail-network.png"
+import whatPortraitImg from "@/public/images/organizations/waterfront-trade-hub-with-rail-network-portrait.png"
 
 const A16Z_REPORT_URL =
   "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
@@ -92,15 +96,44 @@ const AUDIENCES: Audience[] = [
   },
 ]
 
-// TODO(content): final artwork; then delete this untranslated placeholder stamp and its call sites
-const PlaceholderArtLabel = () => (
-  <p
-    aria-hidden="true"
-    className="absolute inset-0 flex items-center justify-center p-8 text-center text-h2 font-black text-primary/70"
-  >
-    NOT FINAL IMAGE
-  </p>
-)
+/** Landscape art when stacked (below lg), its portrait crop beside the text (lg+) */
+const SectionPicture = ({
+  landscape,
+  portrait,
+}: {
+  landscape: StaticImageData
+  portrait: StaticImageData
+}) => {
+  const lg = breakpointAsNumber["lg"]
+  const portraitSizes = "40vw"
+  const landscapeSizes = "100vw"
+  const {
+    props: { srcSet: portraitSrcSet },
+  } = getImageProps({ alt: "", src: portrait, sizes: portraitSizes })
+  const {
+    props: { srcSet: landscapeSrcSet, ...img },
+  } = getImageProps({ alt: "", src: landscape, sizes: landscapeSizes })
+
+  return (
+    <picture>
+      <source
+        media={`(min-width: ${lg}px)`}
+        srcSet={portraitSrcSet}
+        sizes={portraitSizes}
+      />
+      <source
+        media={`(max-width: ${lg - 1}px)`}
+        srcSet={landscapeSrcSet}
+        sizes={landscapeSizes}
+      />
+      <img
+        {...img}
+        alt=""
+        className="absolute inset-0 size-full rounded-4xl object-cover"
+      />
+    </picture>
+  )
+}
 
 const WHY_ITEMS = ["neutral", "resilient", "interoperable", "programmable"]
 const WHAT_ITEMS = ["payments", "tokenized", "identity", "custom"]
@@ -208,15 +241,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 lg:sticky lg:top-28">
-              <Image
-                src={whyImg}
-                alt=""
-                fill
-                className="rounded-4xl border border-primary object-cover"
-                sizes="(max-width: 992px) 100vw, 40vw"
-              />
-              <PlaceholderArtLabel />
+            <div className="relative aspect-3/2 lg:aspect-auto lg:min-h-192 lg:self-stretch">
+              <SectionPicture landscape={whyImg} portrait={whyPortraitImg} />
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-why-title")}</h2>
@@ -247,15 +273,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             data-flow="skip"
             className="grid items-start gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
-            <div className="relative aspect-3/4 lg:sticky lg:top-28">
-              <Image
-                src={whatImg}
-                alt=""
-                fill
-                className="rounded-4xl border border-primary object-cover"
-                sizes="(max-width: 992px) 100vw, 40vw"
-              />
-              <PlaceholderArtLabel />
+            <div className="relative aspect-3/2 lg:aspect-auto lg:min-h-192 lg:self-stretch">
+              <SectionPicture landscape={whatImg} portrait={whatPortraitImg} />
             </div>
             <div className="flow">
               <h2>{t("page-organizations-hub-what-title")}</h2>
