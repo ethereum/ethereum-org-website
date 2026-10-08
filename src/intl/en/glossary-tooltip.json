@@ -46,7 +46,7 @@
   "ens-term": "Ethereum Name Service (ENS)",
   "ens-definition": "Ethereum Name Service is like an internet phonebook for Ethereum addresses. Instead of using long  wallet addresses, ENS lets you use simple names like \"john.eth\" to send and receive digital money and assets.",
   "epoch-term": "Epoch",
-  "epoch-definition": "A period of 32 <a href=\"/glossary/#slot\">slots</a>, each slot being 12 seconds, totalling 6.4 minutes. Validator <a href=\"/glossary/#committee\">committees</a> are shuffled every epoch for security reasons. Each epoch has an opportunity for the chain to be <a href=\"/glossary/#finality\">finalized</a>. Each validator is assigned new responsibilities at the start of each epoch. <a href=\"/developers/docs/consensus-mechanisms/pos/#how-does-validation-work\">More on proof-of-stake</a>",
+  "epoch-definition": "A period of 32 <a href=\"/glossary/#slot\">slots</a>, each slot being 12 seconds, totalling 6.4 minutes. Validator <a href=\"/glossary/#committee\">committees</a> are shuffled every epoch for security reasons. Each epoch has an opportunity for the chain to be <a href=\"/glossary/#finality\">finalized</a>. Each validator is assigned new responsibilities at the start of each epoch. <a href=\"/developers/docs/consensus-mechanisms/pos/#validators\">More on proof-of-stake</a>",
   "eoa-term": "Externally owned account (EOA)",
   "eoa-definition": "Externally Owned Accounts (EOAs) are the most common type of Ethereum account. They are controlled by a person through private keys/recovery phrase. <a href=\"/wallets/\">More on Ethereum wallets</a>.",
   "erc-term": "Ethereum Request for Comments (ERC)",
