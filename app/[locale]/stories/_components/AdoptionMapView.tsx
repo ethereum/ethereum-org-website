@@ -10,6 +10,7 @@ import {
 } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { Button } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -28,6 +29,8 @@ interface Point {
   x: number
   y: number
 }
+
+type View = [x: number, y: number, w: number, h: number]
 
 const BUCKETS = [
   {
@@ -78,6 +81,29 @@ const tooltipPosition = ({ x, y }: Point): CSSProperties => ({
   }`,
 })
 
+// Frames a country with padding, never tighter than a quarter of the world, inside the map
+const frame = (
+  [x0, y0, x1, y1]: WorldMapShape["bbox"],
+  width: number,
+  height: number
+): View => {
+  const ratio = width / height
+  const w = Math.min(
+    width,
+    Math.max((x1 - x0) * 2, (y1 - y0) * 2 * ratio, width / 4)
+  )
+  const h = w / ratio
+  const clamp = (v: number, max: number) => Math.min(Math.max(v, 0), max)
+  return [
+    clamp((x0 + x1 - w) / 2, width - w),
+    clamp((y0 + y1 - h) / 2, height - h),
+    w,
+    h,
+  ]
+}
+
+const ZOOM_MS = 600
+
 interface AdoptionMapViewProps {
   countries: MapCountry[]
   width: number
@@ -98,6 +124,8 @@ const AdoptionMapView = ({
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
   const pointer = useRef<Point>(undefined)
   const tooltip = useRef<HTMLDivElement>(null)
+  const [view, setView] = useState<View>([0, 0, width, height])
+  const viewRef = useRef(view)
 
   useEffect(() => {
     fetch("/world-map.json")
@@ -123,6 +151,13 @@ const AdoptionMapView = ({
     [countries]
   )
 
+  const selectedShape = shapes.find((s) => s.code === selected)
+  const target = selectedShape
+    ? frame(selectedShape.bbox, width, height)
+    : ([0, 0, width, height] as View)
+  const targetKey = target.join()
+  const targetZoom = target[2] / width
+
   const paths = useMemo(() => {
     const handlers = (code: string) => ({
       onPointerEnter: (e: PointerEvent) => {
@@ -147,28 +182,66 @@ const AdoptionMapView = ({
           />
         ))}
         {shapes
-          .filter((s) => s.small)
+          // Once zoomed, countries that render big enough to tap drop their circle so it can't cover neighbours
+          .filter(
+            ({ small, bbox: [x0, y0, x1, y1] }) =>
+              small &&
+              (targetZoom === 1 || Math.max(x1 - x0, y1 - y0) < 16 * targetZoom)
+          )
           .map(({ code, x, y }) => (
             // Circles, not stroked outlines: wide strokes on complex paths triple touch hit-test cost
             <circle
               key={code}
               cx={x * width}
               cy={y * height}
-              r={11}
               fill="transparent"
-              className="cursor-pointer max-md:[r:26px]"
+              className="cursor-pointer [r:calc(11px*var(--zoom))] max-md:[r:calc(var(--touch-r)*var(--zoom))]"
               {...handlers(code)}
             />
           ))}
       </>
     )
-  }, [shapes, byCode, width, height])
+  }, [shapes, byCode, width, height, targetZoom])
+
+  useEffect(() => {
+    const from = viewRef.current
+    const to = targetKey.split(",").map(Number) as View
+    const apply = (v: View) => {
+      viewRef.current = v
+      setView(v)
+    }
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return apply(to)
+    let frameId = 0
+    const start = performance.now()
+    const step = (now: number) => {
+      const p = Math.min((now - start) / ZOOM_MS, 1)
+      const e = 1 - (1 - p) ** 4
+      apply(from.map((v, i) => v + (to[i] - v) * e) as View)
+      if (p < 1) frameId = requestAnimationFrame(step)
+    }
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
+  }, [targetKey])
+
+  const zoom = view[2] / width
+  const toView = ({ x, y }: Point): Point => ({
+    x: (x * width - view[0]) / view[2],
+    y: (y * height - view[1]) / view[3],
+  })
 
   const activeCode = hovered ?? selected
   const active = activeCode ? byCode.get(activeCode) : undefined
   const activeShape = shapes.find((s) => s.code === activeCode)
   const activeBucket = getBucket(active?.value)
-  const anchor = hovered && pointer.current ? pointer.current : activeShape
+  const pinned = activeShape && toView(activeShape)
+  const anchor =
+    hovered && pointer.current
+      ? pointer.current
+      : pinned &&
+          Math.min(pinned.x, pinned.y) >= 0 &&
+          Math.max(pinned.x, pinned.y) <= 1
+        ? pinned
+        : undefined
 
   // Follows the cursor without re-rendering: position is written straight to the tooltip
   const trackPointer = (e: PointerEvent<SVGSVGElement>) => {
@@ -186,10 +259,18 @@ const AdoptionMapView = ({
     <div className="mx-auto max-w-screen-lg space-y-8">
       <div className="relative">
         <svg
-          viewBox={`0 0 ${width} ${height}`}
+          viewBox={view.join(" ")}
+          style={
+            {
+              "--zoom": zoom,
+              // Smaller touch targets once zoomed, so a microstate's circle doesn't swallow its neighbours
+              "--touch-r": targetZoom === 1 ? "26px" : "18px",
+            } as CSSProperties
+          }
           className="h-auto w-full touch-manipulation"
           role="img"
           aria-label={t("page-stories-map-aria-label")}
+          onPointerOver={trackPointer}
           onPointerMove={trackPointer}
           onPointerLeave={() => setHovered(undefined)}
           onClick={(e) => {
@@ -213,7 +294,7 @@ const AdoptionMapView = ({
                 <circle
                   cx={activeShape.x * width}
                   cy={activeShape.y * height}
-                  r={8}
+                  r={8 * zoom}
                   vectorEffect="non-scaling-stroke"
                   className="fill-none"
                 />
@@ -221,6 +302,17 @@ const AdoptionMapView = ({
             </g>
           )}
         </svg>
+
+        {selected && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="absolute end-0 top-0 bg-background"
+            onClick={() => setSelected(undefined)}
+          >
+            {t("page-stories-map-show-world")}
+          </Button>
+        )}
 
         <div aria-live="polite">
           {active && anchor && (
