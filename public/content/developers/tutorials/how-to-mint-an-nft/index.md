@@ -182,7 +182,7 @@ Your `mint-nft.js` file should look like this now:
        'gas': 500000,
        'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
      };
-   }​
+   }
 ```
 
 ## Step 8: Sign the transaction {#sign-txn}
