@@ -93,7 +93,12 @@
     "username": "ustas-eth",
     "name": "ustas",
     "score": 3500
-  }, 
+  },
+  {
+    "username": "quasar",
+    "name": "Evgeny Legerov",
+    "score": 3250
+  },
   {
     "username": "karalabe",
     "name": "Peter Szilagyi",
@@ -128,11 +133,6 @@
     "username": "",
     "name": "Akincibor",
     "score": 1750
-  },
-  {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 1500
   },
   {
     "username": "eclipse07077",
