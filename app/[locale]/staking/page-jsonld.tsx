@@ -11,11 +11,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function StakingPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-staking")
@@ -82,7 +82,7 @@ export default async function StakingPageJsonLD({
           description:
             "Guide to staking ETH, earning rewards, and securing the Ethereum network",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
       {
         "@type": "FAQPage",
