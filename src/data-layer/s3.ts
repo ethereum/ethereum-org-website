@@ -181,8 +181,19 @@ export async function uploadToS3(
     return null
   }
 
-  // Already hosted by us: pass through untouched
-  if (isAlreadyOnS3(sourceUrl)) return sourceUrl
+  // Already hosted by us: pass through untouched, unless the object is gone.
+  // The bucket answers a missing key with a 200 HTML page rather than a 404,
+  // so judge by the served type. A failed HEAD keeps the URL (fail open).
+  if (isAlreadyOnS3(sourceUrl)) {
+    const servedType = await headContentType(sourceUrl)
+    if (servedType && !servedType.startsWith("image/")) {
+      console.warn(
+        `[S3] Existing object is not an image (${servedType}): ${sourceUrl}`
+      )
+      return null
+    }
+    return sourceUrl
+  }
 
   const bucket = getBucket()
   const s3 = getS3Client()
