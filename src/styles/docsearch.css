@@ -207,7 +207,7 @@
 }
 
 .DocSearch-Dropdown {
-  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+  @apply overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
 }
 
 /* Explorer rows keep the library's own markup so their save/remove buttons survive, and
@@ -400,8 +400,36 @@
 }
 
 @media (max-width: 768px) {
+  /* Pinned 2rem clear of top and bottom and close to the edges sideways, where a phone
+     has no room to spare -- the vendor's own rule went full-bleed in every direction.
+     `dvh` rather than `vh`, so browser chrome does not push the bottom off screen. */
   .DocSearch-Modal {
-    --inset: var(--spacing-4);
-    @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
+    margin: 0;
+    @apply fixed inset-x-2 top-8 h-[calc(100dvh-4rem)] w-auto max-w-none overflow-hidden rounded-base;
+    /* The vendor sets a column direction without a display, so it never applied. With it
+       the modal owns its height and the results take what is left. */
+    display: flex;
+  }
+
+  /* Close moves above the input and sits at the end, where the input is the first thing
+     reached and the way out is still obvious. */
+  .DocSearch-SearchBar {
+    @apply flex-col items-stretch;
+  }
+
+  .DocSearch-Cancel {
+    @apply order-first ms-0 mb-2 self-end;
+  }
+
+  /* Only keyboard hints live down there, and a phone has no keys to hint at. The vendor
+     absolutely positions it at the bottom, so it was overlaying the last result rather
+     than being cut off. */
+  .DocSearch-Footer {
+    @apply hidden;
+  }
+
+  .DocSearch-Dropdown {
+    max-height: none;
+    @apply h-auto min-h-0 flex-1;
   }
 }
