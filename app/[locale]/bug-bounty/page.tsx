@@ -674,8 +674,20 @@ export default async function Page(props: { params: Promise<Params> }) {
             <h2 className="max-w-[100ch]">
               {t("page-upgrades-bug-bounty-severity-qualifications-title")}
             </h2>
-            <p className="mb-8 max-w-[100ch] text-body-medium">
+            <p className="mb-0 max-w-[100ch] text-body-medium">
               {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
+            </p>
+            <p className="mt-1 mb-8 max-w-[100ch] text-body-medium italic">
+              {t.rich(
+                "page-upgrades-bug-bounty-severity-qualifications-hardware",
+                {
+                  a: (chunks) => (
+                    <InlineLink href="https://eips.ethereum.org/EIPS/eip-7870">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                }
+              )}
             </p>
             <Grid balanced={4}>
               {/* Low */}
