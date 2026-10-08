@@ -77,6 +77,13 @@ export const KEYBOARD_SHORTCUTS = {
     // Escape that closes the modal). Search registers this entry anyway, with
     // no handler, so the keypress still lands in the shortcut count.
   },
+  // Inside the modal only, where DocSearch's own `/` binding does not run: it opens
+  // search when the modal is closed, so the key is free once it is open.
+  searchFocusInput: {
+    combos: [["/"]],
+    labelKey: "shortcut-search-focus-input",
+    group: "search",
+  },
   searchNavigate: {
     combos: [["ArrowUp"], ["ArrowDown"]],
     labelKey: "shortcut-search-navigate",
@@ -86,6 +93,14 @@ export const KEYBOARD_SHORTCUTS = {
   searchSelect: {
     combos: [["Enter"]],
     labelKey: "shortcut-search-select",
+    group: "search",
+    documentedOnly: true,
+  },
+  // English only, since that is where Ask AI is offered. Elsewhere Enter keeps the
+  // library's own meaning and opens the highlighted result.
+  searchAsk: {
+    combos: [["Enter"]],
+    labelKey: "shortcut-search-ask",
     group: "search",
     documentedOnly: true,
   },
