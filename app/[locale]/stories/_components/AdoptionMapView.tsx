@@ -1,20 +1,29 @@
 "use client"
 
-import { type PointerEvent, useMemo, useState } from "react"
+import {
+  type CSSProperties,
+  type PointerEvent,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-export interface MapCountry {
+import type { WorldMapShape } from "@/lib/world-map"
+
+interface MapCountry {
   code: string
   name: string
-  d: string
-  /** Label anchor as a fraction of the map's width/height */
+  score?: number
+}
+
+interface Point {
   x: number
   y: number
-  small: boolean
-  score?: number
 }
 
 const BUCKETS = [
@@ -57,6 +66,15 @@ const getBucket = (score?: number) =>
     ? undefined
     : BUCKETS.findLast((bucket) => score >= bucket.min)
 
+// Keeps the tooltip inside the map: anchored left/right near the edges, below near the top
+const tooltipPosition = ({ x, y }: Point): CSSProperties => ({
+  left: `${x * 100}%`,
+  top: `${y * 100}%`,
+  translate: `${x < 0.2 ? "-1rem" : x > 0.8 ? "calc(-100% + 1rem)" : "-50%"} ${
+    y < 0.35 ? "1rem" : "calc(-100% - 1rem)"
+  }`,
+})
+
 interface AdoptionMapViewProps {
   countries: MapCountry[]
   width: number
@@ -72,15 +90,29 @@ const AdoptionMapView = ({
   const locale = useLocale()
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
-  const [pointer, setPointer] = useState<{ x: number; y: number }>()
+  const [shapes, setShapes] = useState<WorldMapShape[]>([])
+  const pointer = useRef<Point>(undefined)
+  const tooltip = useRef<HTMLDivElement>(null)
 
-  const format = numberFormat(locale)
+  useEffect(() => {
+    fetch("/world-map.json")
+      .then((res) => res.json())
+      .then((map: { shapes: WorldMapShape[] }) => setShapes(map.shapes))
+      .catch(() => {})
+  }, [])
+
+  const format = useMemo(() => numberFormat(locale), [locale])
   const sorted = useMemo(
     () => [...countries].sort((a, b) => a.name.localeCompare(b.name, locale)),
     [countries, locale]
   )
 
-  const shapes = useMemo(() => {
+  const byCode = useMemo(
+    () => new Map(countries.map((c) => [c.code, c])),
+    [countries]
+  )
+
+  const paths = useMemo(() => {
     const handlers = (code: string) => ({
       onPointerEnter: (e: PointerEvent) => {
         if (e.pointerType === "mouse") setHovered(code)
@@ -89,7 +121,7 @@ const AdoptionMapView = ({
     })
     return (
       <>
-        {countries.map(({ code, d, score }) => (
+        {shapes.map(({ code, d }) => (
           <path
             key={code}
             d={d}
@@ -98,42 +130,45 @@ const AdoptionMapView = ({
             vectorEffect="non-scaling-stroke"
             className={cn(
               "cursor-pointer stroke-background",
-              getBucket(score)?.fill ?? NO_DATA_FILL
+              getBucket(byCode.get(code)?.score)?.fill ?? NO_DATA_FILL
             )}
             {...handlers(code)}
           />
         ))}
-        {countries
-          .filter((c) => c.small)
-          .map(({ code, d }) => (
-            <path
+        {shapes
+          .filter((s) => s.small)
+          .map(({ code, x, y }) => (
+            // Circles, not stroked outlines: wide strokes on complex paths triple touch hit-test cost
+            <circle
               key={code}
-              d={d}
+              cx={x * width}
+              cy={y * height}
+              r={11}
               fill="transparent"
-              stroke="transparent"
-              strokeWidth={16}
-              strokeLinejoin="round"
-              vectorEffect="non-scaling-stroke"
-              pointerEvents="all"
-              className="cursor-pointer"
+              className="cursor-pointer max-md:[r:26px]"
               {...handlers(code)}
             />
           ))}
       </>
     )
-  }, [countries])
+  }, [shapes, byCode, width, height])
 
-  const active = countries.find((c) => c.code === (hovered ?? selected))
+  const activeCode = hovered ?? selected
+  const active = activeCode ? byCode.get(activeCode) : undefined
+  const activeShape = shapes.find((s) => s.code === activeCode)
   const activeBucket = getBucket(active?.score)
-  const anchor = hovered && pointer ? pointer : active
+  const anchor = hovered && pointer.current ? pointer.current : activeShape
 
+  // Follows the cursor without re-rendering: position is written straight to the tooltip
   const trackPointer = (e: PointerEvent<SVGSVGElement>) => {
     if (e.pointerType !== "mouse") return
     const rect = e.currentTarget.getBoundingClientRect()
-    setPointer({
+    pointer.current = {
       x: (e.clientX - rect.left) / rect.width,
       y: (e.clientY - rect.top) / rect.height,
-    })
+    }
+    if (tooltip.current)
+      Object.assign(tooltip.current.style, tooltipPosition(pointer.current))
   }
 
   return (
@@ -150,23 +185,23 @@ const AdoptionMapView = ({
             if (e.target === e.currentTarget) setSelected(undefined)
           }}
         >
-          {shapes}
-          {active && (
+          {paths}
+          {activeShape && (
             <g
-              key={active.code}
+              key={activeShape.code}
               strokeWidth={1.25}
               strokeLinejoin="round"
               className="pointer-events-none stroke-body/70 brightness-110 drop-shadow-md motion-safe:animate-in motion-safe:duration-200 motion-safe:ease-out motion-safe:fade-in"
             >
               <path
-                d={active.d}
+                d={activeShape.d}
                 vectorEffect="non-scaling-stroke"
                 className={activeBucket?.fill ?? NO_DATA_FILL}
               />
-              {active.small && (
+              {activeShape.small && (
                 <circle
-                  cx={active.x * width}
-                  cy={active.y * height}
+                  cx={activeShape.x * width}
+                  cy={activeShape.y * height}
                   r={8}
                   vectorEffect="non-scaling-stroke"
                   className="fill-none"
@@ -179,18 +214,9 @@ const AdoptionMapView = ({
         <div aria-live="polite">
           {active && anchor && (
             <div
-              className={cn(
-                "pointer-events-none absolute z-10 w-max max-w-56 rounded-lg border bg-background px-3 py-2 shadow-md motion-safe:animate-in motion-safe:duration-150 motion-safe:fade-in",
-                anchor.x < 0.2
-                  ? "-translate-x-4"
-                  : anchor.x > 0.8
-                    ? "-translate-x-[calc(100%-1rem)]"
-                    : "-translate-x-1/2",
-                anchor.y < 0.35
-                  ? "translate-y-4"
-                  : "-translate-y-[calc(100%+1rem)]"
-              )}
-              style={{ left: `${anchor.x * 100}%`, top: `${anchor.y * 100}%` }}
+              ref={tooltip}
+              className="pointer-events-none absolute z-10 w-max max-w-56 rounded-lg border bg-background px-3 py-2 shadow-md motion-safe:animate-in motion-safe:duration-150 motion-safe:fade-in"
+              style={tooltipPosition(anchor)}
             >
               <p className="font-bold">{active.name}</p>
               {active.score !== undefined && activeBucket ? (
