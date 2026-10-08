@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { useCallback, useMemo } from "react"
+import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 import {
   DocSearchModal,
@@ -31,10 +32,12 @@ import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import AskAffordance from "./AskAffordance"
 import FocusHint from "./FocusHint"
 
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
+
+// Only English renders it, so other locales never download the markdown renderer.
+const AskAffordance = dynamic(() => import("./AskAffordance"))
 
 // `DocSearchHit` isn't re-exported from the package root, so derive it from the
 // modal's transformItems signature. Note: unlike Algolia's nested `hierarchy`
@@ -171,13 +174,10 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
 
-  // English only: the prompt, the guardrails and the referral records are written in
-  // English and measured against the English index.
+  // English only: the prompt, guardrails and referrals are tuned on the English index.
   const canAsk = locale === DEFAULT_LOCALE
 
-  // Tabbing through the answer's links takes focus out of the input, and every other key
-  // then goes nowhere useful. The hook skips this while the reader is typing, so a slash
-  // typed into the box is still a slash.
+  // `/` returns focus to the input after tabbing into the answer.
   useKeyboardShortcut("searchFocusInput", () => {
     document.querySelector<HTMLInputElement>(".DocSearch-Input")?.focus()
   })
@@ -357,11 +357,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     [buildExplorerHits, locale]
   )
 
-  /**
-   * The vendor rebuilds its autocomplete -- and with it the input's state -- whenever one
-   * of these changes identity. They are memoized because this component now re-renders on
-   * its own state: without it a keystroke tore down the input and cleared what was typed.
-   */
+  // Memoized: the vendor rebuilds its autocomplete, clearing the input, when these change.
   const typesenseServerConfig = useMemo(
     () => ({ nodes: [{ host, port, protocol }], apiKey }),
     [host, port, protocol, apiKey]
@@ -430,9 +426,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     typesenseServerConfig,
     typesenseSearchParameters,
     onClose,
-    // Nothing is highlighted until the reader arrows into the list, which leaves Enter
-    // free to ask. Where there is no Ask, the library's own default stands and Enter
-    // opens the first result as it always has.
+    // Nothing pre-highlighted where Ask exists, so Enter asks.
     defaultActiveItemId: canAsk ? null : 0,
     hitComponent,
     navigator,
@@ -489,9 +483,6 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   return (
     <div className={className} data-testid="search-modal">
       <DocSearchModal initialScrollY={windowScrollY} {...searchModalProps} />
-      {/* English only: the prompt, the guardrails and the referral records are written
-          in English and measured against the English index. Elsewhere the button would
-          answer from that locale's pages with none of that tested. */}
       {canAsk && <AskAffordance />}
       <FocusHint />
     </div>

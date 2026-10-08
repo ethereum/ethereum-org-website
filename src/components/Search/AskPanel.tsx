@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react"
 import { ThumbsDown, ThumbsUp } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 import Markdown from "react-markdown"
@@ -9,26 +9,24 @@ import remarkGfm from "remark-gfm"
 import { BaseLink } from "@/components/ui/Link"
 
 import {
+  type AskAllowance,
+  type AskErrorCode,
   isAllowedAnswerLink,
   scrubQuery,
   type Source,
+  takeAskAllowance,
   withCitationLinks,
 } from "@/lib/utils/ask"
-import { type AskAllowance, takeAskAllowance } from "@/lib/utils/askRateLimit"
 import { cn } from "@/lib/utils/cn"
 import { isExplorerLookup } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { ASK_FOLLOWUPS, type AskFollowupPath } from "@/data/ask-followups"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
 interface ReferralNote {
   name: string
   url: string
-}
-
-/** A page that answers better than prose can -- a comparison tool, usually. */
-interface Followup {
-  url: string
-  label: string
 }
 
 /** A citation is a link whose whole text is `[n]` for a source it points at. */
@@ -43,6 +41,9 @@ const isCitation = (
   )
 }
 
+// The container's unlayered link reset beats plain utilities, hence `!`.
+const LINK = "text-primary! hover:underline!"
+
 /** Somewhere the answer can send the reader, in the order the panel renders them. */
 export interface AskTarget {
   url: string
@@ -55,20 +56,18 @@ interface AskPanelProps {
   onTargets: (targets: AskTarget[]) => void
   /** Index into the reported targets, or null while the highlight is elsewhere. */
   activeTarget: number | null
-  /** Bumped to ask the same question again, which a throttled ask needs. */
-  attempt: number
   /** The ask never reached the model, so the question is still unanswered. */
   onThrottled: (retryAfter: number) => void
   onHoverTarget: (index: number | null) => void
 }
 
+/** One question's answer. Remounted per ask, so its state starts fresh. */
 const AskPanel = ({
   query,
   onDismiss,
   onTargets,
   activeTarget,
   onHoverTarget,
-  attempt,
   onThrottled,
 }: AskPanelProps) => {
   const t = useTranslations("common")
@@ -76,34 +75,23 @@ const AskPanel = ({
   const [answer, setAnswer] = useState("")
   const [sources, setSources] = useState<Source[]>([])
   const [referral, setReferral] = useState<ReferralNote | null>(null)
-  const [followup, setFollowup] = useState<Followup | null>(null)
+  const [followup, setFollowup] = useState<AskFollowupPath | null>(null)
   const [error, setError] = useState("")
   const [notice, setNotice] = useState("")
   const [done, setDone] = useState(false)
   const [rated, setRated] = useState(false)
   const scroller = useRef<HTMLDivElement>(null)
-  /** The allowance already taken for a question, and its verdict. */
-  const spent = useRef<{ query: string; allowance: AskAllowance } | null>(null)
+  // StrictMode runs the effect twice per mount; spend one allowance, not two.
+  const allowance = useRef<AskAllowance | null>(null)
+
+  const throttled = useEffectEvent((retryAfter: number) =>
+    onThrottled(retryAfter)
+  )
 
   useEffect(() => {
     const controller = new AbortController()
-    setAnswer("")
-    setSources([])
-    setReferral(null)
-    setFollowup(null)
-    setError("")
-    setNotice("")
-    setDone(false)
-    setRated(false)
 
-    /**
-     * One event per question, once the outcome is known. Abandoning mid-stream records
-     * nothing, which is the trade for not firing twice per ask.
-     *
-     * A refusal is read off the citations rather than the prose: the model was told to
-     * cite everything, so an answer grounded in nothing cited nothing, and that holds in
-     * every language the question might be asked in.
-     */
+    // One event per question, once the outcome is known.
     let reported = false
     const report = (outcome: string) => {
       if (reported) return
@@ -118,9 +106,7 @@ const AskPanel = ({
     }
 
     const run = async () => {
-      // A bare address or name has nothing to ground an answer in, and the explorer rows
-      // beneath already answer it. Said plainly rather than spending an ask to fail, and
-      // not in the error style -- nothing went wrong.
+      // A bare address or name: the explorer rows beneath already answer it.
       if (isExplorerLookup(query)) {
         setNotice(t("docsearch-ask-explorer"))
         report("explorer")
@@ -128,21 +114,14 @@ const AskPanel = ({
         return
       }
 
-      // Checked here rather than at the button, so one place renders the message and the
-      // allowance is only spent on an ask that actually happens.
-      //
-      // Once per question, not once per effect run: StrictMode runs an effect twice on
-      // mount, so the first ask was spending two and the limit arrived one ask early.
-      const key = `${attempt}:${query}`
-      if (spent.current?.query !== key) {
-        spent.current = { query: key, allowance: takeAskAllowance() }
-      }
-      const { allowance } = spent.current
-      if (!allowance.allowed) {
-        setError(t("docsearch-ask-busy", { seconds: allowance.retryAfter }))
+      allowance.current ??= takeAskAllowance()
+      if (!allowance.current.allowed) {
+        setError(
+          t("docsearch-ask-busy", { seconds: allowance.current.retryAfter })
+        )
         report("throttled locally")
         setDone(true)
-        onThrottled(allowance.retryAfter)
+        throttled(allowance.current.retryAfter)
         return
       }
       try {
@@ -153,17 +132,12 @@ const AskPanel = ({
           signal: controller.signal,
         })
         if (!response.ok || !response.body) {
-          // Nothing retrieved, which on an English-only index is usually a question
-          // asked in another language. Its own outcome and its own message: not red,
-          // and not the generic failure it was indistinguishable from.
-          if (response.status === 502) {
-            const body = await response.json().catch(() => null)
-            if (body?.code === "no-match") {
-              setNotice(t("docsearch-ask-english-only"))
-              report("no match")
-              setDone(true)
-              return
-            }
+          // Nothing retrieved, usually a question asked in another language.
+          if (response.status === 422) {
+            setNotice(t("docsearch-ask-english-only"))
+            report("no match")
+            setDone(true)
+            return
           }
           const seconds =
             response.status === 429
@@ -198,10 +172,11 @@ const AskPanel = ({
               setSources(payload.sources)
               setReferral(payload.referral ?? null)
               setFollowup(payload.followup ?? null)
+              // A refusal cites nothing, in any language.
               report(payload.sources.length ? "answered" : "refused")
             }
             if (payload.type === "error") {
-              setError(payload.value)
+              setError(t(`docsearch-ask-error-${payload.code as AskErrorCode}`))
               report("failed")
             }
           }
@@ -212,24 +187,25 @@ const AskPanel = ({
           report("failed")
         }
       } finally {
-        setDone(true)
+        // An aborted run (StrictMode's first, or a dismiss) must not end the live one.
+        if (!controller.signal.aborted) setDone(true)
       }
     }
     run()
     return () => controller.abort()
-  }, [query, locale, t, attempt, onThrottled])
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Effect Events are not deps; this plugin predates them
+  }, [query, locale, t])
 
-  // A new question scrolls its answer into view: the reader may have been part-way down
-  // the results when they asked, and the answer arrives above them.
+  // The answer arrives above the results, which the reader may have scrolled down.
   useEffect(() => {
     scroller.current
       ?.closest<HTMLElement>(".DocSearch-Dropdown")
       ?.scrollTo({ top: 0 })
-  }, [query])
+  }, [])
 
   const targets = useMemo(
     () => [
-      ...(followup ? [{ url: followup.url }] : []),
+      ...(followup ? [{ url: followup }] : []),
       ...(referral ? [{ url: referral.url }] : []),
       ...sources.map((source) => ({ url: source.url })),
     ],
@@ -237,16 +213,8 @@ const AskPanel = ({
   )
   const offset = (followup ? 1 : 0) + (referral ? 1 : 0)
 
-  /**
-   * Marks a navigable target and lets the mouse claim it, which is how the library's own
-   * rows behave. Focus stays in the input -- `aria-selected` would need listbox
-   * semantics, and the library's listbox already owns that relationship with the input.
-   */
-  /**
-   * The question and what the answer was grounded in, not the prose. Bad answers have
-   * almost always been bad grounding, so the cited paths are the diagnostic field -- and
-   * they aggregate, where a generated answer never repeats.
-   */
+  // Records the question and the cited paths, not the prose: bad answers have almost
+  // always been bad grounding.
   const rate = (helpful: boolean) => {
     setRated(true)
     const safe = scrubQuery(query)
@@ -263,62 +231,68 @@ const AskPanel = ({
     })
   }
 
+  // Highlight and hover for a navigable target. Focus stays in the input, as it does
+  // for the library's own rows.
   const targetProps = (index: number, className?: string) => ({
     "aria-current": index === activeTarget,
-    // Merged, not assigned: a `className` written after the spread silently replaced
-    // this one, which left the tool link highlighted invisibly.
     className: cn(
       className,
-      index === activeTarget && "DocSearch-Ask-target--active"
+      index === activeTarget &&
+        "rounded-xs bg-primary-low-contrast outline outline-4 outline-primary-low-contrast"
     ),
     onMouseMove: () => onHoverTarget(index),
     onMouseLeave: () => onHoverTarget(null),
   })
 
+  const reportTargets = useEffectEvent((next: AskTarget[]) => onTargets(next))
+
   useEffect(() => {
-    if (!done) return
-    onTargets(targets)
-  }, [done, targets, onTargets])
+    if (done) reportTargets(targets)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Effect Events are not deps; this plugin predates them
+  }, [done, targets])
 
   useEffect(() => {
     if (activeTarget === null) return
     scroller.current
-      ?.querySelector(".DocSearch-Ask-target--active")
+      ?.querySelector("[aria-current='true']")
       ?.scrollIntoView({ block: "nearest" })
   }, [activeTarget])
 
   return (
-    <section className="DocSearch-Ask" ref={scroller}>
-      <header className="DocSearch-Ask-header">
+    <section
+      className="DocSearch-Ask flex cursor-auto flex-col gap-4 py-4"
+      ref={scroller}
+    >
+      <header className="flex items-center justify-between text-xs text-body-medium uppercase">
         <span>
           {t("docsearch-ask-answer")}
-          {/* Not a citation, so no brackets -- see the design-system skill. */}
-          <sup className="DocSearch-Ask-beta">{t("docsearch-ask-beta")}</sup>
+          {/* Not a citation, so no brackets. */}
+          <sup className="ms-1 lowercase">{t("docsearch-ask-beta")}</sup>
         </span>
-        <button type="button" onClick={onDismiss}>
+        <button
+          type="button"
+          className="text-primary normal-case hover:underline"
+          onClick={onDismiss}
+        >
           {t("docsearch-ask-dismiss")}
         </button>
       </header>
 
-      {/* The answer outlives the query that produced it -- the reader keeps typing and the
-          results below keep updating -- so it has to say which question it answered. */}
-      <p className="DocSearch-Ask-question">{query}</p>
+      {/* Names the question, since the results below keep changing as the reader types. */}
+      <p className="line-clamp-2 text-md font-bold text-body">{query}</p>
 
       {!answer && !error && !notice && (
-        <p className="DocSearch-Ask-status" role="status">
+        <p className="text-sm text-body-medium" role="status">
           {t("docsearch-ask-thinking")}
         </p>
       )}
 
       {answer && (
-        <div className="DocSearch-Ask-answer">
+        <div className="DocSearch-Ask-answer flex flex-col gap-3 text-md text-body">
           <Markdown
             remarkPlugins={[remarkGfm]}
-            // No raw HTML by default, so model output never reaches the DOM as markup.
-            // An allowlist rather than a blocklist, so a shape nobody considered cannot
-            // appear: an answer is prose, short lists and the occasional code span.
-            // Images are the pointed omission -- rendering one fetches whatever URL the
-            // prose names, and the request alone is the payload.
+            // An allowlist, so model output can only be prose. No images: rendering one
+            // fetches whatever URL the prose names.
             allowedElements={[
               "p",
               "a",
@@ -332,26 +306,30 @@ const AskPanel = ({
               "li",
               "br",
             ]}
-            // Anything else keeps its text and loses its markup, so a table the model
-            // was told to render degrades to its words instead of vanishing.
             unwrapDisallowed
             components={{
               a: ({ href, children }) => {
                 if (isCitation(href, children, sources))
-                  // Superscript, so a citation reads as a mark on the sentence rather
-                  // than a word in it. Adjacent ones are separated in CSS.
                   return (
-                    <sup className="DocSearch-Ask-cite">
-                      <BaseLink href={href ?? "#"} hideArrow>
+                    <sup className="text-xs">
+                      <BaseLink
+                        href={href ?? "#"}
+                        hideArrow
+                        className="text-primary! hover:underline!"
+                      >
                         {children}
                       </BaseLink>
                     </sup>
                   )
-                // Anywhere else keeps its words and loses its destination.
+                // Any other link keeps its words and loses its destination.
                 if (!isAllowedAnswerLink(href, referral?.url))
                   return <>{children}</>
                 return (
-                  <BaseLink href={href ?? "#"} hideArrow>
+                  <BaseLink
+                    href={href ?? "#"}
+                    hideArrow
+                    className="text-primary! underline!"
+                  >
                     {children}
                   </BaseLink>
                 )
@@ -363,45 +341,51 @@ const AskPanel = ({
         </div>
       )}
 
-      {error && <p className="DocSearch-Ask-error">{error}</p>}
+      {error && <p className="text-sm text-error">{error}</p>}
 
-      {notice && <p className="DocSearch-Ask-notice">{notice}</p>}
+      {notice && <p className="text-sm text-body-medium">{notice}</p>}
 
       {done && followup && (
-        <p {...targetProps(0, "DocSearch-Ask-followup")}>
-          <BaseLink href={followup.url}>{followup.label}</BaseLink>
+        <p {...targetProps(0)}>
+          <BaseLink href={followup} className={LINK}>
+            {t(ASK_FOLLOWUPS[followup])}
+          </BaseLink>
         </p>
       )}
 
       {done && referral && (
-        <p {...targetProps(followup ? 1 : 0, "DocSearch-Ask-referral")}>
-          <BaseLink href={referral.url}>{referral.name}</BaseLink>
+        <p {...targetProps(followup ? 1 : 0)}>
+          <BaseLink href={referral.url} className={LINK}>
+            {referral.name}
+          </BaseLink>
         </p>
       )}
 
       {done && answer && (
-        <div className="DocSearch-Ask-feedback">
+        <div className="flex items-center gap-2 text-sm text-body-medium">
           {rated ? (
             <span role="status">{t("docsearch-ask-feedback-thanks")}</span>
           ) : (
             <>
               <span>{t("docsearch-ask-feedback-prompt")}</span>
-              <span className="DocSearch-Ask-feedback-buttons">
+              <span className="flex items-center">
                 <button
                   type="button"
+                  className="rounded-xs p-1 text-body-medium hover:text-primary-hover"
                   title={t("docsearch-ask-feedback-yes")}
                   aria-label={t("docsearch-ask-feedback-yes")}
                   onClick={() => rate(true)}
                 >
-                  <ThumbsUp />
+                  <ThumbsUp className="size-4" />
                 </button>
                 <button
                   type="button"
+                  className="rounded-xs p-1 text-body-medium hover:text-primary-hover"
                   title={t("docsearch-ask-feedback-no")}
                   aria-label={t("docsearch-ask-feedback-no")}
                   onClick={() => rate(false)}
                 >
-                  <ThumbsDown />
+                  <ThumbsDown className="size-4" />
                 </button>
               </span>
             </>
@@ -410,14 +394,16 @@ const AskPanel = ({
       )}
 
       {done && (
-        <footer className="DocSearch-Ask-footer">
+        <footer className="flex flex-col gap-2 border-t border-solid border-disabled pt-3">
           {sources.length > 0 && (
-            <div className="DocSearch-Ask-sources">
-              <span>{t("docsearch-ask-sources")}</span>
-              <ol>
+            <div className="flex flex-col gap-1 text-sm">
+              <span className="text-xs text-body-medium uppercase">
+                {t("docsearch-ask-sources")}
+              </span>
+              <ol className="m-0 flex list-inside list-decimal flex-col gap-1">
                 {sources.map((source, index) => (
                   <li key={source.n} {...targetProps(offset + index)}>
-                    <BaseLink href={source.url} hideArrow>
+                    <BaseLink href={source.url} hideArrow className={LINK}>
                       {source.title}
                     </BaseLink>
                   </li>
@@ -426,7 +412,7 @@ const AskPanel = ({
             </div>
           )}
 
-          <p className="DocSearch-Ask-disclaimer">
+          <p className="text-xs text-body-medium">
             {t("docsearch-ask-disclaimer")}
           </p>
         </footer>

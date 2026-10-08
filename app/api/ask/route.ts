@@ -1,14 +1,13 @@
-/**
- * Grounded answers over the search index, streamed.
- *
- * Retrieval reuses the collection search already queries -- no second index and no
- * embedding step, which is also the honest baseline: keyword retrieval is what dense
- * retrieval has to beat before it earns its own infrastructure.
- *
- * Preview-only for now. There is no auth and no rate limit, so the inference key belongs
- * in the deploy-preview context alone; on a public URL this route is a model proxy to
- * anyone who finds it.
- */
+// Grounded answers over the search index, streamed. No auth and no server-side rate
+// limit: the provider's cap on the key is the backstop, and an environment without a
+// key answers 503. The per-browser limit in the UI is a courtesy, not a defence.
+
+import { type AskErrorCode, SITE_ORIGIN } from "@/lib/utils/ask"
+import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
+
+import { ASK_FOLLOWUPS } from "@/data/ask-followups"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
   BANNED_RE,
@@ -20,17 +19,12 @@ import {
   matchReferral,
   type RetrievedRecord,
   sitePath,
-} from "@/lib/utils/ask"
-import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
-
-import { ASK_FOLLOWUPS } from "@/data/ask-followups"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
+  withLeads,
+} from "./grounding"
 
 /** Records pulled for grounding, before grouping collapses them to one per page. */
 const RETRIEVE = 60
 const MAX_PAGES = 8
-/** Reasoning is disabled, but a truncated answer is still worse than a slow one. */
 const MAX_TOKENS = 1200
 const TIMEOUT_MS = 45_000
 
@@ -45,18 +39,14 @@ const typesenseOrigin = () => {
   return `${protocol}://${host}${suffix}`
 }
 
-const SITE_ORIGIN = "https://ethereum.org"
-
-const collection = () => {
-  const prefix =
-    process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"
-  return prefix
-}
+const collectionFor = (locale: string) =>
+  `${process.env.NEXT_PUBLIC_TYPESENSE_COLLECTION_PREFIX || "ethereumorg"}-${locale}`
 
 const search = async (
   params: Record<string, unknown>
 ): Promise<Record<string, string>[]> => {
   const origin = typesenseOrigin()
+  // The public key is scoped to the search action, so the fallback grants nothing new.
   const key =
     process.env.TYPESENSE_SEARCH_KEY ||
     process.env.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY
@@ -75,11 +65,10 @@ const search = async (
             "type",
             "description",
           ].join(","),
-          // The crawl that built the live collections predates `only_content_level`, so
-          // it holds thousands of heading records with no text. They match a title hard
-          // and ground nothing, and one of them took an excerpt slot per query.
+          // Heading-only records match titles hard and ground nothing. Drop once the
+          // crawl uses `only_content_level`.
           filter_by: "type:=content",
-          // Grounding wants the whole section, not the matched fragment a row displays.
+          // Grounding wants the whole section, not the highlighted fragment.
           highlight_fields: "none",
           ...params,
         },
@@ -108,69 +97,41 @@ const asRecord = (document: Record<string, string>): RetrievedRecord => ({
 })
 
 /**
- * Two passes over the same index: the question as asked, and its content words alone.
- *
- * A question is a poor keyword query. Its scaffolding matches everywhere and a landing
- * page does not repeat its own topic densely, so "how do I get eth?" ranked /staking/solo/
- * first and never returned /get-eth/ at all. The content words alone do return it -- and
- * they are also what the curated head-term pins match, which a whole sentence never will.
- * Neither pass subsumes the other: "what is a DAO?" only works as a question.
- *
- * Keyword pages lead, since that pass names the topic rather than matching around it.
+ * Two passes: the question as asked, and its content words alone. Neither subsumes the
+ * other ("how do I get eth?" needs the keywords, "what is a DAO?" the question), and
+ * keyword hits lead because they name the topic.
  */
 const retrieve = async (
   query: string,
   locale: string
 ): Promise<RetrievedRecord[]> => {
-  const name = `${collection()}-${locale}`
+  const base = {
+    collection: collectionFor(locale),
+    query_by: [...LVLS, "content"].join(","),
+    per_page: RETRIEVE,
+    sort_by: SORT_BY,
+    text_match_type: TEXT_MATCH_TYPE,
+    // Every token has to match by default, which starved long questions of results.
+    drop_tokens_mode: "both_sides:3",
+  }
   const keywords = keywordQuery(query)
   const [asked, named] = await Promise.all([
-    search({
-      collection: name,
-      q: query,
-      query_by: [...LVLS, "content"].join(","),
-      per_page: RETRIEVE,
-      sort_by: SORT_BY,
-      text_match_type: TEXT_MATCH_TYPE,
-      // A question is long and every token has to match, so retrieval was starving:
-      // "how do I stake my eth" returned one page and 289 characters to ground an
-      // answer in. Dropping from both ends reaches the words that carry the question.
-      drop_tokens_threshold: 30,
-      drop_tokens_mode: "both_sides:3",
-    }),
+    search({ ...base, q: query, drop_tokens_threshold: 30 }),
     keywords && keywords !== query.toLowerCase()
-      ? search({
-          collection: name,
-          q: keywords,
-          query_by: [...LVLS, "content"].join(","),
-          per_page: RETRIEVE,
-          sort_by: SORT_BY,
-          text_match_type: TEXT_MATCH_TYPE,
-          // Without this the keyword pass is an AND, and one ordinary word excludes the
-          // page: "ethereum protect against quantum computer" returned everything except
-          // the quantum page, which does not say "protect". A lower threshold than the
-          // question pass, since these words are already the ones that carry the
-          // question and there is less to widen past.
-          drop_tokens_threshold: 10,
-          drop_tokens_mode: "both_sides:3",
-        })
+      ? search({ ...base, q: keywords, drop_tokens_threshold: 10 })
       : Promise.resolve([]),
   ])
   return [...named, ...asked].map(asRecord)
 }
 
-/**
- * Each page's opening paragraph, which ranking will not surface on its own: a page
- * defines its subject once, where a section about it repeats the word throughout.
- * `item_priority` counts down from the end of the page, so the highest is position one.
- */
+/** Each page's opening paragraph; `item_priority` is highest at the top of the page. */
 const leadParagraphs = async (
   paths: string[],
   locale: string
 ): Promise<Map<string, string>> => {
   if (!paths.length) return new Map()
   const documents = await search({
-    collection: `${collection()}-${locale}`,
+    collection: collectionFor(locale),
     q: "*",
     filter_by: `type:=content && url_without_anchor:=[${paths
       .map((path) => `${SITE_ORIGIN}${path}`)
@@ -183,7 +144,6 @@ const leadParagraphs = async (
   return new Map(
     documents
       .filter((document) => document.content)
-      // Keyed by page: a lead record keeps its own anchor, and the lookup is by page.
       .map((document) => [
         sitePath(document.url).split("#")[0],
         document.content,
@@ -196,15 +156,16 @@ const event = (payload: unknown) =>
   encoder.encode(`${JSON.stringify(payload)}\n`)
 
 export async function POST(request: Request) {
-  const { q, locale = "en" } = await request.json().catch(() => ({ q: "" }))
+  const { q, locale = DEFAULT_LOCALE } = await request
+    .json()
+    .catch(() => ({ q: "" }))
   if (typeof q !== "string" || !q.trim()) {
     return Response.json({ error: "Missing query" }, { status: 400 })
   }
   if (!process.env.INFERENCE_API_KEY || !process.env.INFERENCE_URL) {
     return Response.json({ error: "Not configured" }, { status: 503 })
   }
-  // English only, and enforced here as well as in the UI: this is a public endpoint, so
-  // the button not being rendered elsewhere is not what keeps other locales out.
+  // Enforced here too: the button not rendering elsewhere does not close the endpoint.
   if (locale !== DEFAULT_LOCALE) {
     return Response.json({ error: "Unsupported locale" }, { status: 400 })
   }
@@ -212,19 +173,19 @@ export async function POST(request: Request) {
   const question = q.slice(0, 500)
   const records = await retrieve(question, locale)
   const grouped = groupExcerpts(records, { maxPages: MAX_PAGES })
-  const excerpts = groupExcerpts(records, {
-    maxPages: MAX_PAGES,
-    leads: await leadParagraphs(
-      grouped.map((excerpt) => excerpt.url.split("#")[0]),
-      locale
-    ),
-  })
-  if (!excerpts.length) {
+  if (!grouped.length) {
     return Response.json(
       { error: "Nothing to ground an answer in", code: "no-match" },
-      { status: 502 }
+      { status: 422 }
     )
   }
+  const excerpts = withLeads(
+    grouped,
+    await leadParagraphs(
+      grouped.map((excerpt) => excerpt.url.split("#")[0]),
+      locale
+    )
+  )
 
   const referral = matchReferral(question)
   const citations = new Citations(excerpts.length)
@@ -244,16 +205,13 @@ export async function POST(request: Request) {
         temperature: 0.2,
         max_tokens: MAX_TOKENS,
         stream: true,
-        // Qwen3 thinks by default and an unbudgeted reasoning pass spends `max_tokens`
-        // before emitting a single character, so the answer comes back empty with no error.
+        // Qwen3 otherwise spends `max_tokens` reasoning and returns an empty answer.
         chat_template_kwargs: { enable_thinking: false },
       }),
     }
   ).catch(() => null)
 
-  // A rate limit is the one upstream failure worth telling apart: waiting fixes it, and
-  // the key is shared by everyone on the deploy, so it is the failure to expect. Passed
-  // through with its own status and `Retry-After` rather than folded into a generic 502.
+  // Passed through so the client can say how long to wait.
   if (upstream?.status === 429) {
     const retryAfter = upstream.headers.get("retry-after") ?? "20"
     return Response.json(
@@ -272,28 +230,20 @@ export async function POST(request: Request) {
       let sse = ""
       let answer = ""
 
-      const finish = (error?: string) => {
+      const finish = (code?: AskErrorCode) => {
         const tail = citations.flush()
         if (tail) controller.enqueue(event({ type: "token", value: tail }))
-        if (error) controller.enqueue(event({ type: "error", value: error }))
+        if (code) controller.enqueue(event({ type: "error", code }))
         else {
-          // Offered only from the page the answer leaned on most -- its first citation.
-          // Any page merely present in retrieval put "Compare ways to stake ETH" under a
-          // refusal about contract addresses, which reads as an answer and is not one.
+          // Follow-up only from the page the answer leaned on most: its first citation.
           const cited = citedSources(excerpts, citations.used)
-          const lead = citations.used.length
-            ? cited[0]?.url.split("#")[0]
-            : undefined
-          const followup = lead && ASK_FOLLOWUPS[lead] ? lead : undefined
+          const lead = cited[0]?.url.split("#")[0]
           controller.enqueue(
             event({
               type: "sources",
               sources: cited,
               referral: referral && { name: referral.name, url: referral.url },
-              followup: followup && {
-                url: followup,
-                label: ASK_FOLLOWUPS[followup],
-              },
+              followup: lead && lead in ASK_FOLLOWUPS ? lead : undefined,
             })
           )
         }
@@ -321,21 +271,17 @@ export async function POST(request: Request) {
             answer += delta
             if (BANNED_RE.test(answer)) {
               await reader.cancel()
-              return finish(
-                "This answer mentioned a wallet address, so it was stopped. An address is far too easy to get wrong to take from a generated answer -- open the page and copy it from there."
-              )
+              return finish("address")
             }
             controller.enqueue(
               event({ type: "token", value: citations.feed(delta) })
             )
           }
         }
-        // Empty with no error is the reasoning-budget failure; say so rather than
-        // showing a blank panel.
-        if (!answer.trim()) return finish("No answer was returned.")
+        if (!answer.trim()) return finish("empty")
         finish()
       } catch {
-        finish("The answer was cut short.")
+        finish("truncated")
       }
     },
   })
