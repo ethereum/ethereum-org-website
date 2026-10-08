@@ -123,7 +123,17 @@
     "username": "sonny2k",
     "name": "Thanh Luu (sonny2k)",
     "score": 2500
-  },  
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 2500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
+    "score": 2000
+  },
   {
     "username": "",
     "name": "Akincibor",
@@ -143,11 +153,6 @@
     "username": "nerolation",
     "name": "Toni Wahrstätter",
     "score": 1000
-  },
-  {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 2000
   },
   {
     "username": "DragonDev1906",
