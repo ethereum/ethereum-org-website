@@ -1,6 +1,9 @@
 import { getCountryNameByCode } from "@/lib/utils/geography"
 
-import { ADOPTION_SCORES } from "@/data/ethereum-adoption"
+import {
+  CRYPTO_OWNERSHIP,
+  CRYPTO_OWNERSHIP_SOURCE,
+} from "@/data/crypto-ownership"
 
 import AdoptionMapView from "./AdoptionMapView"
 
@@ -10,7 +13,7 @@ const AdoptionMap = ({ locale }: { locale: string }) => {
   const countries = WORLD_MAP.shapes.map(({ code }) => ({
     code,
     name: getCountryNameByCode(code, locale) ?? code,
-    score: ADOPTION_SCORES[code],
+    value: CRYPTO_OWNERSHIP[code],
   }))
 
   return (
@@ -18,6 +21,7 @@ const AdoptionMap = ({ locale }: { locale: string }) => {
       countries={countries}
       width={WORLD_MAP.width}
       height={WORLD_MAP.height}
+      source={CRYPTO_OWNERSHIP_SOURCE}
     />
   )
 }

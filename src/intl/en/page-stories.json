@@ -9,11 +9,11 @@
   "page-stories-discover-read-full-story": "Read full story",
   "page-stories-map-title": "Ethereum adoption on planet earth",
   "page-stories-map-subtitle": "A glimpse into how people around the world are using Ethereum every day.",
-  "page-stories-map-aria-label": "World map shaded by each country's Ethereum adoption score",
+  "page-stories-map-aria-label": "World map shaded by the share of each country's population that owns crypto",
   "page-stories-map-select-placeholder": "Choose a country",
   "page-stories-map-prompt": "Hover over or tap a country, or pick one from the list.",
-  "page-stories-map-no-data": "No data yet",
-  "page-stories-map-legend": "Adoption score",
+  "page-stories-map-no-data": "No data",
+  "page-stories-map-legend": "Share of people who own crypto",
   "page-stories-map-level-nascent": "Nascent",
   "page-stories-map-level-emerging": "Emerging",
   "page-stories-map-level-growing": "Growing",
@@ -25,5 +25,7 @@
   "page-stories-community-subtitle": "Voices from the Ethereum community, sharing how the network has made a difference in their lives.",
   "page-stories-banner-title": "Tell us how you use Ethereum",
   "page-stories-banner-description": "Help us showcase how Ethereum is being used across the world and join others who have already shared their story.",
-  "page-stories-banner-cta": "Submit your story"
+  "page-stories-banner-cta": "Submit your story",
+  "page-stories-map-ownership": "<strong>{value}</strong> own crypto",
+  "page-stories-map-source": "Source: <link>{name}</link>, {year}"
 }

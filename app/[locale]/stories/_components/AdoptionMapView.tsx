@@ -10,6 +10,8 @@ import {
 } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
+import InlineLink from "@/components/ui/Link"
+
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
@@ -18,7 +20,8 @@ import type { WorldMapShape } from "@/lib/world-map"
 interface MapCountry {
   code: string
   name: string
-  score?: number
+  /** Share of the population that owns crypto, in percent */
+  value?: number
 }
 
 interface Point {
@@ -34,25 +37,25 @@ const BUCKETS = [
     bg: "bg-purple-100",
   },
   {
-    min: 20,
+    min: 1,
     label: "emerging",
     fill: "fill-purple-300",
     bg: "bg-purple-300",
   },
   {
-    min: 40,
+    min: 2,
     label: "growing",
     fill: "fill-purple-500",
     bg: "bg-purple-500",
   },
   {
-    min: 60,
+    min: 5,
     label: "established",
     fill: "fill-purple-700",
     bg: "bg-purple-700",
   },
   {
-    min: 80,
+    min: 10,
     label: "leading",
     fill: "fill-purple-800",
     bg: "bg-purple-800",
@@ -61,16 +64,16 @@ const BUCKETS = [
 
 const NO_DATA_FILL = "fill-background-medium"
 
-const getBucket = (score?: number) =>
-  score === undefined
+const getBucket = (value?: number) =>
+  value === undefined
     ? undefined
-    : BUCKETS.findLast((bucket) => score >= bucket.min)
+    : BUCKETS.findLast((bucket) => value >= bucket.min)
 
 // Keeps the tooltip inside the map: anchored left/right near the edges, below near the top
 const tooltipPosition = ({ x, y }: Point): CSSProperties => ({
   left: `${x * 100}%`,
   top: `${y * 100}%`,
-  translate: `${x < 0.2 ? "-1rem" : x > 0.8 ? "calc(-100% + 1rem)" : "-50%"} ${
+  translate: `${x < 0.3 ? "-1rem" : x > 0.7 ? "calc(-100% + 1rem)" : "-50%"} ${
     y < 0.35 ? "1rem" : "calc(-100% - 1rem)"
   }`,
 })
@@ -79,12 +82,14 @@ interface AdoptionMapViewProps {
   countries: MapCountry[]
   width: number
   height: number
+  source: { name: string; url: string; year: number }
 }
 
 const AdoptionMapView = ({
   countries,
   width,
   height,
+  source,
 }: AdoptionMapViewProps) => {
   const t = useTranslations("page-stories")
   const locale = useLocale()
@@ -101,7 +106,13 @@ const AdoptionMapView = ({
       .catch(() => {})
   }, [])
 
-  const format = useMemo(() => numberFormat(locale), [locale])
+  const percent = useMemo(() => {
+    const format = numberFormat(locale, {
+      style: "percent",
+      maximumFractionDigits: 1,
+    })
+    return (value: number) => format.format(value / 100)
+  }, [locale])
   const sorted = useMemo(
     () => [...countries].sort((a, b) => a.name.localeCompare(b.name, locale)),
     [countries, locale]
@@ -130,7 +141,7 @@ const AdoptionMapView = ({
             vectorEffect="non-scaling-stroke"
             className={cn(
               "cursor-pointer stroke-background",
-              getBucket(byCode.get(code)?.score)?.fill ?? NO_DATA_FILL
+              getBucket(byCode.get(code)?.value)?.fill ?? NO_DATA_FILL
             )}
             {...handlers(code)}
           />
@@ -156,7 +167,7 @@ const AdoptionMapView = ({
   const activeCode = hovered ?? selected
   const active = activeCode ? byCode.get(activeCode) : undefined
   const activeShape = shapes.find((s) => s.code === activeCode)
-  const activeBucket = getBucket(active?.score)
+  const activeBucket = getBucket(active?.value)
   const anchor = hovered && pointer.current ? pointer.current : activeShape
 
   // Follows the cursor without re-rendering: position is written straight to the tooltip
@@ -219,20 +230,25 @@ const AdoptionMapView = ({
               style={tooltipPosition(anchor)}
             >
               <p className="font-bold">{active.name}</p>
-              {active.score !== undefined && activeBucket ? (
-                <p className="flex items-baseline gap-1.5 text-sm text-body-medium">
-                  <span className="text-xl font-bold text-body tabular-nums">
-                    {format.format(active.score)}
-                  </span>
-                  / {format.format(100)}
-                  <span
-                    className={cn(
-                      "ms-1 inline-block size-2.5 self-center rounded-full",
-                      activeBucket.bg
-                    )}
-                  />
-                  {t(`page-stories-map-level-${activeBucket.label}`)}
-                </p>
+              {active.value !== undefined && activeBucket ? (
+                <>
+                  <p className="text-sm whitespace-nowrap text-body-medium">
+                    {t.rich("page-stories-map-ownership", {
+                      value: percent(active.value),
+                      strong: (chunks) => (
+                        <span className="text-xl font-bold text-body tabular-nums">
+                          {chunks}
+                        </span>
+                      ),
+                    })}
+                  </p>
+                  <p className="flex items-center gap-1.5 text-sm text-body-medium">
+                    <span
+                      className={cn("size-2.5 rounded-full", activeBucket.bg)}
+                    />
+                    {t(`page-stories-map-level-${activeBucket.label}`)}
+                  </p>
+                </>
               ) : (
                 <p className="text-sm text-body-medium">
                   {t("page-stories-map-no-data")}
@@ -278,12 +294,28 @@ const AdoptionMapView = ({
                   {t(`page-stories-map-level-${bucket.label}`)}
                 </span>
                 <span className="tabular-nums">
-                  {format.format(bucket.min)}–
-                  {format.format(BUCKETS[i + 1] ? BUCKETS[i + 1].min - 1 : 100)}
+                  {BUCKETS[i + 1]
+                    ? `${percent(bucket.min)}–${percent(BUCKETS[i + 1].min)}`
+                    : `≥ ${percent(bucket.min)}`}
                 </span>
               </li>
             ))}
           </ol>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-body-medium">
+            <span className="flex items-center gap-1.5">
+              <span className="h-3 w-5 rounded-xs bg-background-medium" />
+              {t("page-stories-map-no-data")}
+            </span>
+            <span>
+              {t.rich("page-stories-map-source", {
+                year: source.year,
+                link: (chunks) => (
+                  <InlineLink href={source.url}>{chunks}</InlineLink>
+                ),
+                name: source.name,
+              })}
+            </span>
+          </p>
         </figure>
       </div>
     </div>
