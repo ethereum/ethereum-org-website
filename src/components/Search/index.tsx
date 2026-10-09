@@ -19,12 +19,25 @@ import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
+const noop = () => {}
+
 interface SearchProps {
   asChild?: boolean
   children?: React.ReactElement<unknown>
+  /**
+   * Whether this instance answers the global open shortcut. Exactly one mounted instance
+   * may: the hook binds at the document, so a second would open a second modal on the
+   * same keypress. The nav's instance owns it; a trigger elsewhere on the page opts out
+   * and opens on click alone. Escape still closes whichever one is open.
+   */
+  ownsShortcut?: boolean
 }
 
-const Search = ({ asChild = false, children }: SearchProps) => {
+const Search = ({
+  asChild = false,
+  children,
+  ownsShortcut = true,
+}: SearchProps) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
@@ -42,7 +55,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
 
   useDocSearchKeyboardEvents({
     isOpen,
-    onOpen: handleOpen,
+    onOpen: ownsShortcut ? handleOpen : noop,
     onClose,
     // The fork's React 18-era types want a non-null ref; React 19's useRef
     // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.

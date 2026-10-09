@@ -204,7 +204,7 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
     <>
       <Dialog open={isOpen} onOpenChange={handleOpenChange}>
         <DialogTrigger asChild>
-          <Button variant="solid" size="lg" className="gap-2">
+          <Button variant="solid" size="lg" className="gap-2 pe-6 max-sm:w-full">
             {t("page-index-hero-cta")}
             <ChevronNext className="size-5" />
           </Button>
