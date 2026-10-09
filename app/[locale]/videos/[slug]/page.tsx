@@ -49,12 +49,7 @@ const VideoLandingPage = async (props: {
 
   return (
     <>
-      <VideoPageJsonLD
-        locale={locale}
-        slug={slug}
-        frontmatter={frontmatter}
-        transcript={transcriptMdx}
-      />
+      <VideoPageJsonLD locale={locale} slug={slug} frontmatter={frontmatter} />
 
       <main className="max-w-4xl p-page pt-hero lg:pt-hero-2x">
         <MainArticle className="flow">
