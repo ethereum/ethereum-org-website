@@ -236,6 +236,12 @@ export const getResources = async ({
           href: "https://l2fees.info",
           imgSrc: IconEthGlyphBlack,
         },
+        {
+          title: "L2 Gas Tracker",
+          description: t("page-resources-gas-l2gastracker-description"),
+          href: "https://l2gastracker.com",
+          imgSrc: IconEthGlyphBlack,
+        },
       ],
     },
   ]
