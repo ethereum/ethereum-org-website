@@ -1,135 +1,56 @@
-import * as Sentry from "@sentry/nextjs"
+import {
+  getLoadedSentry,
+  onSentryLoad,
+  preloadSentry,
+} from "@/lib/sentry/client"
 
-import { getDropReason } from "@/lib/sentry/filter-event"
+// Sentry is loaded after the page is idle instead of before hydration: the SDK
+// is the largest script on every page. Pageload traces still start at the
+// navigation's time origin and Web Vitals are read from buffered performance
+// entries, so late initialisation keeps them. Uncaught errors from before it
+// loads are buffered here and replayed.
+const MAX_EARLY_ERRORS = 20
+const earlyErrors: unknown[] = []
 
-const environment = process.env.NEXT_PUBLIC_CONTEXT || "development"
-
-/**
- * Finds the closest element (including the element itself) that has an id attribute
- * @param element - The starting element to search from
- * @param maxDepth - Maximum number of parent levels to search (default: 3)
- * @returns The first found attribute value in priority order, null otherwise
- */
-function findClosestElementId(
-  element: Element | null | undefined,
-  maxDepth: number = 3
-): string | null {
-  if (!element || maxDepth < 0) return null
-
-  const sentryId = element.getAttribute("data-testid")
-  if (sentryId) return sentryId
-
-  const ariaLabel = element.getAttribute("aria-label")
-  if (ariaLabel) return ariaLabel
-
-  const id = element.getAttribute("id")
-  if (id) return id
-
-  // Recursively check parent elements up to maxDepth
-  return findClosestElementId(element.parentElement, maxDepth - 1)
+const onEarlyError = (event: ErrorEvent) => {
+  if (earlyErrors.length < MAX_EARLY_ERRORS) {
+    earlyErrors.push(event.error ?? event.message)
+  }
+}
+const onEarlyRejection = (event: PromiseRejectionEvent) => {
+  if (earlyErrors.length < MAX_EARLY_ERRORS) earlyErrors.push(event.reason)
 }
 
-Sentry.init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  tracesSampler(samplingContext) {
-    // 10% of pageloads for reliable Web Vitals data
-    if (samplingContext.attributes?.["sentry.op"] === "pageload") {
-      return 0.1
-    }
-    // 1% for everything else
-    return 0.01
-  },
-  // Web Vitals ride on the pageload span; its resource children are pure quota
-  // cost. browser.* and LoAF stay: TTFB and INP diagnosis needs them.
-  ignoreSpans: [
-    { op: /^resource\./ },
-    { op: "paint" },
-    { op: "mark" },
-    { op: "measure" },
-  ],
-  debug: environment === "development",
-  environment,
-  enabled: environment === "production",
-  initialScope: { tags: { module: "app" } },
+window.addEventListener("error", onEarlyError)
+window.addEventListener("unhandledrejection", onEarlyRejection)
 
-  // Filter errors from browser extensions and third-party scripts
-  denyUrls: [
-    // Browser extension protocols
-    /chrome-extension:\/\//,
-    /moz-extension:\/\//,
-    /safari(-web)?-extension:\/\//,
-    // Netlify RUM analytics (blocked by ad blockers, not actionable)
-    /\.netlify\/scripts\/rum/,
-  ],
-
-  // Filter common extension error messages and non-actionable errors
-  ignoreErrors: [
-    // Wallet extension proxy/property conflicts (ETHORG-Z1, ETHORG-115)
-    /on proxy: trap returned falsish/i,
-    /Cannot set property ethereum of #<Window>/,
-    /Cannot set property isMetaMask of #<.+> which has only a getter/,
-    // Extension messaging errors (ETHORG-7E)
-    /Could not establish connection\. Receiving end does not exist/,
-    /Attempting to use a disconnected port object/,
-    /Invalid call to runtime\.sendMessage\(\)/,
-    // Netlify RUM fetch blocked by ad blockers - the host is only in the
-    // message, so denyUrls cannot match it (ETHORG-76)
-    /\(ingesteer\.services-prod\.nsvcs\.net\)/,
-    // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
-    /JSON\.stringify cannot serialize cyclic structures/,
-    // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)
-    /Object Not Found Matching Id:\d+/,
-    /DApp request timeout/,
-    // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
-    /^Error: invalid origin$/,
-  ],
-
-  beforeSend(event) {
-    return getDropReason(event) ? null : event
-  },
-
-  // Normalize transaction names to strip locale prefixes so all locales
-  // group under one page (e.g., "/en/staking/", "/ko/staking/" → "/staking/")
-  beforeSendTransaction(event) {
-    const op = event.contexts?.trace?.op
-    if (op !== "pageload" && op !== "navigation") return event
-
-    const localePrefix = /^\/[a-z]{2,3}(-[a-z]{2})?(?=\/|$)/
-
-    // Try to resolve from the actual URL first (most reliable)
-    const url = event.request?.url || (event.tags?.url as string | undefined)
-    if (url) {
-      try {
-        const pathname = new URL(url).pathname
-        event.transaction = pathname.replace(localePrefix, "") || "/"
-        return event
-      } catch {
-        // Fall through to transaction name normalization
-      }
-    }
-
-    // Fallback: normalize the transaction name directly
-    // Handles parameterized names like "/:locale/:slug*" → "/:slug*"
-    if (event.transaction) {
-      event.transaction =
-        event.transaction.replace(localePrefix, "").replace(/^\/:locale/, "") ||
-        "/"
-    }
-    return event
-  },
-
-  beforeBreadcrumb(breadcrumb, hint) {
-    if (breadcrumb.category === "ui.click") {
-      const element = hint?.event?.target
-
-      const id = findClosestElementId(element)
-      if (id) {
-        breadcrumb.message = id + " (" + breadcrumb.message + ")"
-      }
-    }
-
-    return breadcrumb
-  },
+// Drain on whichever load comes first: the scheduled one below, or an earlier
+// load triggered by a component reporting an error. Draining only from the
+// scheduled start would leave these listeners attached alongside Sentry's own
+// handlers, buffering (and later replaying) errors Sentry already captured.
+onSentryLoad((sentry) => {
+  // Sentry's own global handlers take over from here
+  window.removeEventListener("error", onEarlyError)
+  window.removeEventListener("unhandledrejection", onEarlyRejection)
+  earlyErrors.splice(0).forEach((error) => sentry.captureException(error))
 })
 
-export const onRouterTransitionStart = Sentry.captureRouterTransitionStart
+const start = () => preloadSentry()
+
+const scheduleStart = () => {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(start, { timeout: 5000 })
+  } else {
+    setTimeout(start, 2000)
+  }
+}
+
+if (document.readyState === "complete") {
+  scheduleStart()
+} else {
+  window.addEventListener("load", scheduleStart, { once: true })
+}
+
+// Client-side navigations before Sentry has loaded are not traced
+export const onRouterTransitionStart = (href: string, navigationType: string) =>
+  getLoadedSentry()?.captureRouterTransitionStart(href, navigationType)
