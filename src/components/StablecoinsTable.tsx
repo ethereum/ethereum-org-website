@@ -21,7 +21,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-export type TableRow = {
+export type StablecoinsTableRow = {
   name: string
   marketCap: string
   image?: string
@@ -32,16 +32,20 @@ export type TableRow = {
 }
 
 export type StablecoinsTableProps = {
-  content: Array<TableRow>
+  content: StablecoinsTableRow[]
   hasError: boolean
+  /** Rows shown initially and added per "Show more" */
+  pageSize?: number
 }
 
-const PAGE_SIZE = 10
-
-const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
+const StablecoinsTable = ({
+  content,
+  hasError,
+  pageSize = 10,
+}: StablecoinsTableProps) => {
   const t = useTranslations("page-stablecoins")
 
-  const [visibleRows, setVisibleRows] = useState(PAGE_SIZE)
+  const [visibleRows, setVisibleRows] = useState(pageSize)
 
   const hasMoreRows = content.length > visibleRows
   const displayedContent = content.slice(0, visibleRows)
@@ -143,7 +147,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
       </Table>
       {hasMoreRows && (
         <Flex className="mt-6 justify-center">
-          <Button onClick={() => setVisibleRows((prev) => prev + PAGE_SIZE)}>
+          <Button onClick={() => setVisibleRows((prev) => prev + pageSize)}>
             {t("page-stablecoins-show-more")}
           </Button>
         </Flex>

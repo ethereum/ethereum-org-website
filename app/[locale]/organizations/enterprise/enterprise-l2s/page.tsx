@@ -1,0 +1,432 @@
+import {
+  ArrowRightLeft,
+  ChevronsUp,
+  Paintbrush,
+  ShieldPlus,
+  Sparkles,
+} from "lucide-react"
+import { getTranslations, setRequestLocale } from "next-intl/server"
+
+import type { Lang, PageParams } from "@/lib/types"
+
+import PathwayCard from "@/components/cards/pathway-card"
+import ContentFeedback from "@/components/ContentFeedback"
+import { PageHero } from "@/components/Hero"
+import { Image } from "@/components/Image"
+import { Strong } from "@/components/IntlStringElements"
+import MainArticle from "@/components/MainArticle"
+import {
+  Card,
+  CardButtonFake,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardIconContainer,
+  CardLinkFake,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
+import { BaseLink } from "@/components/ui/Link"
+import { ListItem, UnorderedList } from "@/components/ui/list"
+import { Section } from "@/components/ui/section"
+
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getMetadata } from "@/lib/utils/metadata"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
+import { isExternal } from "@/lib/utils/url"
+
+import ChecklistPanel from "../../_components/checklist-panel"
+import ComparisonTable from "../../_components/comparison-table"
+import ExpertContacts from "../../_components/expert-contacts"
+import HeroStats, { type HeroStat } from "../../_components/hero-stats"
+import OrganizationPathways from "../../_components/organization-pathways"
+import SectionIntro from "../../_components/section-intro"
+import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
+
+import PageJsonLD from "./page-jsonld"
+
+import { getL2beatActivityData, getL2beatData } from "@/lib/data"
+import arbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
+import ethereumLogo from "@/public/images/layer-2/ethereum.png"
+import optimismLogo from "@/public/images/layer-2/optimism.png"
+import zksyncLogo from "@/public/images/layer-2/zksyncEra.jpg"
+import issuanceImg from "@/public/images/organizations/l2-issuance-partners.png"
+import heroImg from "@/public/images/organizations/layered-islands-rollup-network.png"
+
+const BENEFITS = [
+  { key: "scalable", Icon: ChevronsUp },
+  { key: "customizable", Icon: Paintbrush },
+  { key: "security", Icon: ShieldPlus },
+  { key: "interoperability", Icon: ArrowRightLeft },
+] as const
+
+const CASE_STUDIES = [
+  { key: "tokenization", href: "/organizations/enterprise/tokenization/" },
+  { key: "finance", href: "/organizations/enterprise/onchain-finance/" },
+  { key: "infrastructure", href: "/organizations/enterprise/privacy/" },
+  { key: "consumer" },
+] as const
+
+const NETWORKS = [
+  { key: "arbitrum", href: "https://arbitrum.io/", logo: arbitrumLogo },
+  { key: "zksync", href: "https://www.zksync.io/", logo: zksyncLogo },
+  { key: "optimism", href: "https://www.optimism.io/", logo: optimismLogo },
+] as const
+
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
+  const { locale } = params
+
+  setRequestLocale(locale)
+
+  const t = await getTranslations("page-organizations-enterprise-l2s")
+
+  const [l2beatData, l2beatActivity, { contributors }] = await Promise.all([
+    getL2beatData(),
+    getL2beatActivityData(),
+    getAppPageContributorInfo(
+      "organizations/enterprise/enterprise-l2s",
+      locale as Lang
+    ),
+  ])
+
+  const l2ValueSecured = sumL2Breakdown(l2beatData, "total")
+
+  const stats: HeroStat[] = [
+    {
+      value: l2ValueSecured && formatLargeUSD(l2ValueSecured, locale),
+      label: t("page-organizations-enterprise-l2s-stat-l2-tvl"),
+      ...L2BEAT_SOURCE,
+    },
+    {
+      value:
+        l2beatActivity && "value" in l2beatActivity
+          ? numberFormat(locale, {
+              notation: "compact",
+              maximumSignificantDigits: 3,
+            }).format(l2beatActivity.value)
+          : undefined,
+      label: t("page-organizations-enterprise-l2s-stat-uops"),
+      lastUpdated:
+        l2beatActivity && "timestamp" in l2beatActivity
+          ? l2beatActivity.timestamp
+          : undefined,
+      sourceName: "L2BEAT",
+      sourceUrl: "https://l2beat.com/scaling/activity",
+    },
+  ]
+
+  const trustItems = [
+    "elegance",
+    "future-proof",
+    "reduced-risk",
+    "battle-tested",
+  ].map((key) => ({
+    title: t(`page-organizations-enterprise-l2s-trust-${key}-title`),
+    description: t(
+      `page-organizations-enterprise-l2s-trust-${key}-description`
+    ),
+  }))
+
+  const approachColumns = ["existing", "custom"]
+  const approachRows = [
+    "time-to-market",
+    "integration",
+    "compliance",
+    "security",
+  ].map((row) => ({
+    label: t(`page-organizations-enterprise-l2s-approach-row-${row}`),
+    cells: approachColumns.map((col) => (
+      <>
+        <strong className="block text-body">
+          {t(
+            `page-organizations-enterprise-l2s-approach-row-${row}-${col}-title`
+          )}
+        </strong>
+        {t(
+          `page-organizations-enterprise-l2s-approach-row-${row}-${col}-description`
+        )}
+      </>
+    )),
+  }))
+
+  return (
+    <>
+      <PageJsonLD locale={locale} contributors={contributors} />
+
+      <PageHero
+        breadcrumbs={{ slug: "organizations/enterprise/enterprise-l2s" }}
+        heroImg={heroImg}
+        title={t("page-organizations-enterprise-l2s-hero-title")}
+        description={
+          <>
+            <p>{t("page-organizations-enterprise-l2s-hero-description-1")}</p>
+            <p>{t("page-organizations-enterprise-l2s-hero-description-2")}</p>
+            <div className="mt-space-3x">
+              <HeroStats stats={stats} />
+            </div>
+          </>
+        }
+      />
+
+      <main className="px-page pb-page">
+        <MainArticle className="flow *:[section]:py-space-3x">
+          <Section id="benefits">
+            <SectionIntro
+              title={t("page-organizations-enterprise-l2s-benefits-title")}
+              description={t(
+                "page-organizations-enterprise-l2s-benefits-description"
+              )}
+            />
+            <Grid balanced={4} data-flow="cta">
+              {BENEFITS.map(({ key, Icon }) => (
+                <Card key={key}>
+                  <CardHeader>
+                    <CardIconContainer>
+                      <Icon />
+                    </CardIconContainer>
+                  </CardHeader>
+                  <CardContent>
+                    <CardTitle>
+                      {t(
+                        `page-organizations-enterprise-l2s-benefits-${key}-title`
+                      )}
+                    </CardTitle>
+                    <CardParagraph>
+                      {t(
+                        `page-organizations-enterprise-l2s-benefits-${key}-description`
+                      )}
+                    </CardParagraph>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
+            <PathwayCard
+              href="#approach"
+              title={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-title"
+              )}
+              description={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-description"
+              )}
+              banner={<Sparkles className="size-24 text-primary" />}
+              ctaLabel={t(
+                "page-organizations-enterprise-l2s-benefits-ecosystem-cta"
+              )}
+            />
+          </Section>
+
+          <Section
+            id="issuance"
+            data-flow="skip"
+            className="flex gap-space-2x max-lg:flex-col lg:*:flex-1"
+          >
+            <div className="flow">
+              <h2>{t("page-organizations-enterprise-l2s-issuance-title")}</h2>
+              <p className="text-xl font-bold text-body-medium">
+                {t("page-organizations-enterprise-l2s-issuance-lead")}
+              </p>
+              <UnorderedList className="text-lg text-body-medium">
+                <ListItem>
+                  {t("page-organizations-enterprise-l2s-issuance-bullet-1")}
+                </ListItem>
+                <ListItem>
+                  {t("page-organizations-enterprise-l2s-issuance-bullet-2")}
+                </ListItem>
+                <ListItem>
+                  {t("page-organizations-enterprise-l2s-issuance-bullet-3")}
+                </ListItem>
+              </UnorderedList>
+              <p>
+                {t.rich(
+                  "page-organizations-enterprise-l2s-issuance-transparency",
+                  { strong: Strong }
+                )}
+              </p>
+              <p>
+                {t.rich(
+                  "page-organizations-enterprise-l2s-issuance-recoverability",
+                  { strong: Strong }
+                )}
+              </p>
+            </div>
+            <div className="relative max-lg:min-h-64">
+              <Image
+                src={issuanceImg}
+                alt=""
+                className="absolute inset-0 size-full object-contain"
+                sizes="(max-width: 992px) 100vw, 512px"
+              />
+            </div>
+          </Section>
+
+          <ChecklistPanel
+            id="trust-layer"
+            tint="success"
+            title={t("page-organizations-enterprise-l2s-trust-title")}
+            description={t(
+              "page-organizations-enterprise-l2s-trust-description"
+            )}
+            items={trustItems}
+          />
+
+          <Section id="approach">
+            <SectionIntro
+              title={t("page-organizations-enterprise-l2s-approach-title")}
+              description={t(
+                "page-organizations-enterprise-l2s-approach-description"
+              )}
+            />
+            <ComparisonTable
+              caption={t("page-organizations-enterprise-l2s-approach-title")}
+              columns={approachColumns.map((col) =>
+                t(`page-organizations-enterprise-l2s-approach-col-${col}`)
+              )}
+              rows={approachRows}
+            />
+          </Section>
+
+          <Section
+            id="case-studies"
+            data-flow="skip"
+            className="flex gap-space-2x max-lg:flex-col"
+          >
+            <div className="flow lg:sticky lg:top-28 lg:w-1/3 lg:shrink-0 lg:self-start">
+              <h2>
+                {t("page-organizations-enterprise-l2s-case-studies-title")}
+              </h2>
+              <p className="text-lg text-pretty text-body-medium">
+                {t(
+                  "page-organizations-enterprise-l2s-case-studies-description"
+                )}
+              </p>
+            </div>
+            <Grid balanced={2} className="flex-1">
+              {CASE_STUDIES.map((study) => (
+                <Card
+                  key={study.key}
+                  href={"href" in study ? study.href : undefined}
+                >
+                  <CardContent>
+                    <CardTitle>
+                      {t(
+                        `page-organizations-enterprise-l2s-case-studies-${study.key}-title`
+                      )}
+                    </CardTitle>
+                    <CardParagraph>
+                      {t(
+                        `page-organizations-enterprise-l2s-case-studies-${study.key}-description`
+                      )}
+                    </CardParagraph>
+                  </CardContent>
+                  {"href" in study && (
+                    <CardFooter buttons="inherit">
+                      <CardLinkFake>
+                        {t(
+                          `page-organizations-enterprise-l2s-case-studies-${study.key}-cta`
+                        )}
+                      </CardLinkFake>
+                    </CardFooter>
+                  )}
+                </Card>
+              ))}
+            </Grid>
+          </Section>
+
+          <Section
+            id="deployment"
+            data-flow="skip"
+            className="flex gap-space-2x max-lg:flex-col"
+          >
+            <div className="flow lg:sticky lg:top-28 lg:w-1/3 lg:shrink-0 lg:self-start">
+              <h2>{t("page-organizations-enterprise-l2s-deployment-title")}</h2>
+              <p className="text-lg text-pretty text-body-medium">
+                {t("page-organizations-enterprise-l2s-deployment-description")}
+              </p>
+            </div>
+            <div className="flex-1 rounded-4xl bg-tint-primary p-page">
+              <ul className="ms-0 list-none divide-y divide-background">
+                {NETWORKS.map(({ key, href, logo }) => (
+                  <li key={key} className="py-2 first:pt-0">
+                    <BaseLink
+                      href={href}
+                      hideArrow
+                      data-external={isExternal(href) || undefined}
+                      className="group/link -mx-3 flex flex-wrap items-center gap-4 rounded-2xl p-3 text-body no-underline hover:bg-background/50 hover:text-body"
+                    >
+                      <Image
+                        src={logo}
+                        alt=""
+                        className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
+                        sizes="56px"
+                      />
+                      <div className="min-w-48 flex-1">
+                        <h3 className="text-h5">
+                          {t(
+                            `page-organizations-enterprise-l2s-deployment-${key}-name`
+                          )}
+                        </h3>
+                        <p className="text-body-medium">
+                          {t(
+                            `page-organizations-enterprise-l2s-deployment-${key}-description`
+                          )}
+                        </p>
+                      </div>
+                      <CardButtonFake variant="outline" size="sm">
+                        {t("page-organizations-enterprise-l2s-deployment-cta")}
+                      </CardButtonFake>
+                    </BaseLink>
+                  </li>
+                ))}
+              </ul>
+              {/* Same badge markup as the network list on /layer-2/ */}
+              <div className="mt-space flex">
+                <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
+                  <Image
+                    src={ethereumLogo}
+                    // decorative: the adjacent label already names Ethereum
+                    alt=""
+                    className="size-6 object-contain"
+                    sizes="24px"
+                  />
+                  <p>
+                    {t(
+                      "page-organizations-enterprise-l2s-deployment-powered-by"
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Section>
+          <ExpertContacts />
+
+          <OrganizationPathways current="enterprise-l2s" />
+        </MainArticle>
+
+        <ContentFeedback />
+      </main>
+    </>
+  )
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
+}) {
+  const params = await props.params
+  const { locale } = params
+
+  setRequestLocale(locale)
+
+  const t = await getTranslations("page-organizations-enterprise-l2s")
+
+  return await getMetadata({
+    locale,
+    slug: ["organizations", "enterprise", "enterprise-l2s"],
+    title: t("page-organizations-enterprise-l2s-meta-title"),
+    description: t("page-organizations-enterprise-l2s-meta-description"),
+    image: "/images/organizations/layered-islands-rollup-network.png",
+  })
+}
+
+export default Page

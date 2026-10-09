@@ -83,3 +83,35 @@ export const InARow: Story = {
     </HStack>
   ),
 }
+
+export const Ruled: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          '`variant="ruled"`: start-ruled cell, monospace primary value, uppercase caption -- the KPI row in the /staking/ and /organizations/ heroes. Pair it with `center={false}` and lay siblings out in a `flex md:flex-row` row. `sourceDescription` adds context above the attribution.',
+      },
+    },
+  },
+  args: { children: "Total ETH staked" },
+  render: () => (
+    <div className="flex flex-col md:flex-row">
+      <BigNumber
+        variant="ruled"
+        center={false}
+        value="36,812,453"
+        sourceName="Dune Analytics"
+        sourceUrl="https://dune.com/"
+        sourceDescription="Total ETH deposited into the staking contract"
+      >
+        Total ETH staked
+      </BigNumber>
+      <BigNumber variant="ruled" center={false} value="30%">
+        Share of supply staked
+      </BigNumber>
+      <BigNumber variant="ruled" center={false} value="2.9%">
+        Current APR
+      </BigNumber>
+    </div>
+  ),
+}

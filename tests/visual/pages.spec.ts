@@ -35,6 +35,10 @@ const pages: Array<{ name: string; path: string }> = [
   { name: "Roadmap - Security", path: "/roadmap/security/" }, // md/RoadmapLayout
   { name: "Roadmap - Merge", path: "/roadmap/merge/" }, // md/UpgradeLayout
   { name: "DeFi", path: "/defi/" }, // md/UseCasesLayout
+
+  // These two cover every shared organizations component
+  { name: "Organizations", path: "/organizations/" },
+  { name: "Organizations - Enterprise", path: "/organizations/enterprise/" },
 ]
 
 test.describe("Page Visual Tests", () => {

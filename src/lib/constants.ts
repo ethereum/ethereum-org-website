@@ -33,7 +33,6 @@ export const IS_PRODUCTION_DEPLOY =
 export const DISCORD_PATH = "/discord/"
 /** Absolute form of DISCORD_PATH, for link hrefs and JSON-LD. */
 export const DISCORD_URL = new URL(DISCORD_PATH, SITE_URL).href
-export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -132,6 +131,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "build",
   "participate",
   "research",
+  "organizations",
 ]
 
 // Glossary Definition Component

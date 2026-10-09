@@ -643,8 +643,9 @@ export type L2beatData = {
     string,
     {
       stage: string
+      type?: "layer2" | "layer3"
       tvl: { total: number }
-      tvs: { breakdown: { total: number } }
+      tvs: { breakdown: { total: number; stablecoin?: number } }
       risks: Array<{ name: string; sentiment: string }>
     }
   >
