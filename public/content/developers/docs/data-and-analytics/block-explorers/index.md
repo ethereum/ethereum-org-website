@@ -21,6 +21,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
+- [Blockchain.info](https://www.blockchain.com/explorer) - Multichain block explorer with wallet, price, and transaction data
 - [Blockchair](https://blockchair.com/ethereum) - Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
