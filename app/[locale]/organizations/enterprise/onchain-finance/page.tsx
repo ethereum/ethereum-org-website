@@ -36,7 +36,7 @@ import {
   getDexVolumeData,
   getTotalValueLockedData,
 } from "@/lib/data"
-import heroImg from "@/public/images/organizations/isometric-defi.png"
+import heroImg from "@/public/images/organizations/defi-market-square-liquidity-pool.png"
 
 const PRIMITIVES = [
   { key: "open-standards", Icon: BookOpenCheck },
@@ -274,7 +274,7 @@ export async function generateMetadata(props: {
     description: t(
       "page-organizations-enterprise-onchain-finance-meta-description"
     ),
-    image: "/images/organizations/isometric-defi.png",
+    image: "/images/organizations/defi-market-square-liquidity-pool.png",
   })
 }
 

@@ -51,8 +51,8 @@ import arbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
 import ethereumLogo from "@/public/images/layer-2/ethereum.png"
 import optimismLogo from "@/public/images/layer-2/optimism.png"
 import zksyncLogo from "@/public/images/layer-2/zksyncEra.jpg"
-import heroImg from "@/public/images/organizations/isometric-l2-stack.png"
 import issuanceImg from "@/public/images/organizations/l2-issuance-partners.png"
+import heroImg from "@/public/images/organizations/layered-islands-rollup-network.png"
 
 const BENEFITS = [
   { key: "scalable", Icon: ChevronsUp },
@@ -425,7 +425,7 @@ export async function generateMetadata(props: {
     slug: ["organizations", "enterprise", "enterprise-l2s"],
     title: t("page-organizations-enterprise-l2s-meta-title"),
     description: t("page-organizations-enterprise-l2s-meta-description"),
-    image: "/images/organizations/isometric-l2-stack.png",
+    image: "/images/organizations/layered-islands-rollup-network.png",
   })
 }
 

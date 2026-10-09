@@ -27,7 +27,7 @@ const imageForSlug = [
   { section: "10years", image: "/images/10-year-anniversary/10-year-og.png" },
   {
     section: "organizations",
-    image: "/images/organizations/ethereum-city.png",
+    image: "/images/organizations/sunrise-over-organizations-city-skyline.png",
   },
 ] as const
 

@@ -38,7 +38,7 @@ import ProtogolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
 import PageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/upgrades/merge.png"
+import heroImg from "@/public/images/organizations/startup-warehouse-founders-workspace.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -442,7 +442,7 @@ export async function generateMetadata(props: {
     slug: ["organizations", "founders"],
     title: t("page-founders-metadata-title"),
     description: t("page-founders-metadata-description"),
-    image: "/images/upgrades/merge.png",
+    image: "/images/organizations/startup-warehouse-founders-workspace.png",
   })
 }
 export default Page

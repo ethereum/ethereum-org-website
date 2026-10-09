@@ -355,7 +355,7 @@ export async function generateMetadata(props: {
     slug: ["organizations"],
     title: t("page-organizations-hub-meta-title"),
     description: t("page-organizations-hub-meta-description"),
-    image: "/images/organizations/ethereum-city.png",
+    image: "/images/organizations/sunrise-over-organizations-city-skyline.png",
   })
 }
 

@@ -53,7 +53,7 @@ import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 import PageJsonLD from "./page-jsonld"
 
 import { getTotalValueSecuredData } from "@/lib/data"
-import heroImg from "@/public/images/organizations/hero-privacy.png"
+import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 import scalesImg from "@/public/images/organizations/privacy-scales.png"
 
@@ -464,7 +464,8 @@ export async function generateMetadata(props: {
     slug: ["organizations", "enterprise", "privacy"],
     title: t("page-organizations-enterprise-privacy-meta-title"),
     description: t("page-organizations-enterprise-privacy-meta-description"),
-    image: "/images/organizations/hero-privacy.png",
+    image:
+      "/images/organizations/frosted-glass-pavilion-private-settlement.png",
   })
 }
 

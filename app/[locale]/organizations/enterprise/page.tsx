@@ -39,11 +39,11 @@ import {
   getEthereumStablecoinsMcapData,
   getTotalValueLockedData,
 } from "@/lib/data"
-import heroImg from "@/public/images/organizations/hero-enterprise.png"
-import defiImg from "@/public/images/organizations/isometric-defi.png"
-import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
-import privacyImg from "@/public/images/organizations/isometric-privacy.png"
-import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
+import defiImg from "@/public/images/organizations/defi-market-square-liquidity-pool.png"
+import heroImg from "@/public/images/organizations/financial-district-plaza-with-settlement.png"
+import privacyImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
+import l2StackImg from "@/public/images/organizations/layered-islands-rollup-network.png"
+import tokenizationImg from "@/public/images/organizations/tokenization-workshop-assets-to-tokens.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -260,7 +260,7 @@ export async function generateMetadata(props: {
     slug: ["organizations", "enterprise"],
     title: t("page-organizations-enterprise-meta-title"),
     description: t("page-organizations-enterprise-meta-description"),
-    image: "/images/organizations/hero-enterprise.png",
+    image: "/images/organizations/financial-district-plaza-with-settlement.png",
   })
 }
 

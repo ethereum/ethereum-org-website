@@ -34,11 +34,11 @@ import PurchaseIntentChart, {
 } from "./_components/purchase-intent-chart"
 import PageJsonLD from "./page-jsonld"
 
-import defiImg from "@/public/images/organizations/isometric-defi.png"
-import l2StackImg from "@/public/images/organizations/isometric-l2-stack.png"
-import privacyImg from "@/public/images/organizations/isometric-privacy.png"
-import heroImg from "@/public/images/organizations/isometric-small-shop-payments-network.png"
-import tokenizationImg from "@/public/images/organizations/isometric-tokenization.png"
+import paymentsImg from "@/public/images/organizations/cafe-counter-tap-to-pay.png"
+import sellImg from "@/public/images/organizations/online-store-wallet-checkout.png"
+import suppliersImg from "@/public/images/organizations/payment-arc-to-overseas-supplier.png"
+import payrollImg from "@/public/images/organizations/payouts-to-remote-freelancers.png"
+import heroImg from "@/public/images/organizations/shop-street-corner-digital-payments.png"
 import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
 const NCA_REPORT_URL =
@@ -73,10 +73,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     }).format(value / 100)
 
   const useCases = [
-    { key: "payments", image: tokenizationImg },
-    { key: "suppliers", image: defiImg },
-    { key: "payroll", image: l2StackImg },
-    { key: "sell", image: privacyImg },
+    { key: "payments", image: paymentsImg },
+    { key: "suppliers", image: suppliersImg },
+    { key: "payroll", image: payrollImg },
+    { key: "sell", image: sellImg },
   ] as const
 
   // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
@@ -297,7 +297,7 @@ export async function generateMetadata(props: {
     slug: ["organizations", "small-business"],
     title: t("page-organizations-small-business-meta-title"),
     description: t("page-organizations-small-business-meta-description"),
-    image: "/images/organizations/hero-small-business.png",
+    image: "/images/organizations/shop-street-corner-digital-payments.png",
   })
 }
 

@@ -48,7 +48,7 @@ import {
   getStablecoinsData,
   getTotalValueSecuredData,
 } from "@/lib/data"
-import heroImg from "@/public/images/organizations/isometric-tokenization.png"
+import heroImg from "@/public/images/organizations/tokenization-workshop-assets-to-tokens.png"
 
 const STABLECOINS_PAGE_SIZE = 6
 
@@ -344,7 +344,7 @@ export async function generateMetadata(props: {
     description: t(
       "page-organizations-enterprise-tokenization-meta-description"
     ),
-    image: "/images/organizations/isometric-tokenization.png",
+    image: "/images/organizations/tokenization-workshop-assets-to-tokens.png",
   })
 }
 

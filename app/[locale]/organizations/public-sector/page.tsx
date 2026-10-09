@@ -30,11 +30,11 @@ import SectionIntro from "../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/organizations/hero-public-sector.png"
-import recordsImg from "@/public/images/organizations/isometric-defi.png"
-import fundingImg from "@/public/images/organizations/isometric-l2-stack.png"
-import financeImg from "@/public/images/organizations/isometric-privacy.png"
-import identityImg from "@/public/images/organizations/isometric-tokenization.png"
+import fundingImg from "@/public/images/organizations/aid-delivery-transparent-funds.png"
+import financeImg from "@/public/images/organizations/municipal-bond-digital-settlement.png"
+import recordsImg from "@/public/images/organizations/property-deed-registry-with-seal.png"
+import identityImg from "@/public/images/organizations/resident-sharing-digital-credential.png"
+import heroImg from "@/public/images/organizations/town-hall-plaza-public-services.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -223,7 +223,7 @@ export async function generateMetadata(props: {
     slug: ["organizations", "public-sector"],
     title: t("page-organizations-public-sector-meta-title"),
     description: t("page-organizations-public-sector-meta-description"),
-    image: "/images/organizations/hero-public-sector.png",
+    image: "/images/organizations/town-hall-plaza-public-services.png",
   })
 }
 
