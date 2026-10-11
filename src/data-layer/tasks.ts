@@ -13,6 +13,7 @@ import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
+import { fetchCollectibles } from "./fetchers/fetchCollectibles"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
@@ -45,6 +46,7 @@ const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
+  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.BLOB_STATS, fetchBlobStats],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],

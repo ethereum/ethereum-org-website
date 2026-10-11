@@ -13,6 +13,7 @@ export const mockTaskIds = [
   "fetch-apps",
   "fetch-events",
   "fetch-blob-stats",
+  "fetch-collectibles",
   "fetch-community-picks",
   "fetch-ethereum-marketcap",
   "fetch-eth-price",

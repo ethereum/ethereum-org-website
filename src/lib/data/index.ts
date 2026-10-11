@@ -121,6 +121,12 @@ export const getGFIs = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getCollectiblesData = createCachedGetter(
+  dataLayer.getCollectiblesData,
+  ["collectibles-data"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getQuizStats = createCachedGetter(
   dataLayer.getQuizStats,
   ["quiz-stats"],
