@@ -43,7 +43,9 @@ function getBlobs() {
   const token = process.env.NETLIFY_BLOBS_TOKEN
 
   if (!siteID || !token) {
-    throw new Error("Missing SITE_ID or NETLIFY_BLOBS_TOKEN")
+    throw new Error(
+      "Missing NETLIFY_SITE_ID or NETLIFY_BLOBS_TOKEN. Set USE_MOCK_DATA=true for local development."
+    )
   }
 
   const storeName = process.env.BLOB_STORE_NAME || "data-layer"
