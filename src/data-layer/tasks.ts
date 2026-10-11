@@ -46,8 +46,8 @@ const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
-  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.BLOB_STATS, fetchBlobStats],
+  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
   [KEYS.GROW_THE_PIE, fetchGrowThePie],
