@@ -7,6 +7,30 @@ import * as path from "path"
 
 import { getStore } from "@netlify/blobs"
 
+export const KEYS = {
+  APPS: "fetch-apps",
+  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
+  COMMUNITY_PICKS: "fetch-community-picks",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
+  GFIS: "fetch-gfis",
+  GROW_THE_PIE: "fetch-grow-the-pie",
+  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
+  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
+  L2BEAT: "fetch-l2beat",
+  RSS: "fetch-rss",
+  EVENTS: "fetch-events",
+  BLOB_STATS: "fetch-blob-stats",
+  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
+  ETH_PRICE: "fetch-eth-price",
+  GAS_PRICE: "fetch-gas-price",
+  STAKED_PERCENTAGE: "fetch-staked-percentage",
+  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
+  STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
+  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
+  QUIZ_STATS: "fetch-quiz-stats",
+} as const
+
 const USE_MOCK = process.env.USE_MOCK_DATA === "true"
 
 // Netlify Blobs store (lazy init)

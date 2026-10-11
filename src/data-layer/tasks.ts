@@ -30,31 +30,7 @@ import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
-import { set } from "./storage"
-
-export const KEYS = {
-  APPS: "fetch-apps",
-  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
-  COMMUNITY_PICKS: "fetch-community-picks",
-  DEVELOPER_TOOLS: "fetch-developer-tools",
-  GFIS: "fetch-gfis",
-  GROW_THE_PIE: "fetch-grow-the-pie",
-  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
-  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
-  L2BEAT: "fetch-l2beat",
-  RSS: "fetch-rss",
-  EVENTS: "fetch-events",
-  BLOB_STATS: "fetch-blob-stats",
-  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
-  ETH_PRICE: "fetch-eth-price",
-  GAS_PRICE: "fetch-gas-price",
-  STAKED_PERCENTAGE: "fetch-staked-percentage",
-  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
-  STABLECOINS_DATA: "fetch-stablecoins-data",
-  ACCOUNT_HOLDERS: "fetch-account-holders",
-  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
-  QUIZ_STATS: "fetch-quiz-stats",
-} as const
+import { KEYS, set } from "./storage"
 
 // Per-task overrides for the config-wide defaults in trigger.config.ts
 interface TaskOverrides {
