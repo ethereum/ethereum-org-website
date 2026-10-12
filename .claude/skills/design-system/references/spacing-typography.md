@@ -276,6 +276,24 @@ Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-p
 
 Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For responsive card/item grids, use the `Grid` component (`@/components/ui/grid`) or its `grid-cols-auto-*` utility rather than arbitrary track sizes; `grid-cols-bento` covers the bento layout -- documented in `tokens.md` under "Grid templates."
 
+## Citations and Footnote Markers
+
+A numbered citation or footnote marker is a `<sup>` wrapping a link whose text keeps its square brackets -- `[1]`, never a bare `1`.
+
+```tsx
+<sup>
+  <Link href="#further-reading">{`[${n}]`}</Link>
+</sup>
+```
+
+The brackets are load-bearing, not decoration. Superscript alone is easy to miss at small sizes and reads as a typo next to a number in the prose ("costs 21000 gas 2"), and a run of adjacent markers needs separating -- brackets do that without a comma, which would otherwise have to live in the link text or be faked with a CSS adjacency rule that cannot tell which markers belong to the same run.
+
+Keep the number out of the translated string. Render the marker around or beside the string so translators never carry the numbering -- see `/open-source`, where a `footnote(n, section)` helper builds it.
+
+A marker that is not a number -- a single `*` for one aside -- is still a bare `<sup>`, with no brackets. See `/bug-bounty`.
+
+In generated or markdown-sourced text where the marker arrives as literal `[1]` in the prose, keep the brackets when you turn it into a link: `[[1]](url)` parses as a link whose text is `[1]`. The search modal's AI answers do this in `withCitationLinks` (`src/lib/utils/ask.ts`).
+
 ## Common One-Off Styling Anti-Patterns
 
 These are the recurring patterns that cause "every page looks slightly different":
