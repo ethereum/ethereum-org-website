@@ -38,7 +38,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
     | .author.login as $author
     | ([.comments.nodes[]
-        | select(.author.__typename == "Bot" and (.body | contains("First-pass review — ")))
+        | select(.author.__typename == "Bot" and (.body | contains("First-pass review")))
         | .createdAt] | max) as $reviewed
     | select($reviewed == null
         or (.commits.nodes[0].commit.committedDate > $reviewed)

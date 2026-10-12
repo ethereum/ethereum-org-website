@@ -95,12 +95,17 @@ Format (keep the visible part under ~300 words; put detail in a `<details>` bloc
 </details>
 ```
 
-`<STATUS>` is exactly one of the following, with nothing else on the header line:
+Copy the header prefix `## 🔎 First-pass review — ` exactly, em dash included. `<STATUS>` is exactly one of the following, with nothing else on the header line:
 - `<n> findings (<b> blocking)` — e.g. `3 findings (1 blocking)` or `1 finding (0 blocking)`
 - `no findings`
 - `🗑️ likely close` — spam, duplicate of a merged change, or contradicts documented policy; say why in one sentence, politely
 
-Order findings by severity. `blocking` means merging as-is ships a bug, a regression, or broken content; `should fix` means a real problem with limited impact; `nit` means optional. Omit the **Findings** section when there are none. Be concrete and welcoming — many authors are first-time contributors. Never demand changes you cannot name precisely.
+Rate severity by the impact if the problem triggers, not by how likely the trigger is:
+- `blocking` — merging as-is can lose or delete data, silently disable a safety check or gate, break a feature for a group of users (a locale, mobile, keyboard users), corrupt analytics, or ship broken content.
+- `should fix` — a real defect with limited impact: a confusing failure mode, a wrong count, a missed convention with user-visible effect.
+- `nit` — optional: naming, comments, small cleanups with no behavior change.
+
+`path:line` is the line number in the file at the PR head — read it from the `+c,d` side of the hunk header (`@@ -a,b +c,d @@`) or from the file itself — never the line's position in the patch. Order findings by severity. Omit the **Findings** section when there are none. Be concrete and welcoming — many authors are first-time contributors. Never demand changes you cannot name precisely.
 
 ## Step 6 — apply labels
 
