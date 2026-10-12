@@ -74,7 +74,7 @@ const PurchaseIntentChart = ({
           <li
             key={key}
             // balance: no lone trailing glyph; strict: no small kana opening a line; keep-all: Korean breaks between words
-            className="m-0 text-balance break-words [line-break:strict] [&:lang(ko)]:break-keep"
+            className="m-0 text-balance wrap-break-word [line-break:strict] [&:lang(ko)]:break-keep"
           >
             {label}
           </li>

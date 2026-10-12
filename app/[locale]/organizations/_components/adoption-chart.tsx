@@ -89,7 +89,7 @@ const AdoptionChart = async ({ className }: AdoptionChartProps) => {
         {items.map(({ value, label }, idx) => (
           <div
             key={idx}
-            className="absolute start-0 flex max-w-[75%] flex-wrap items-baseline gap-x-2 pb-0.5 @lg:max-w-(--label-max) @lg:flex-col @lg:items-start @lg:pb-1"
+            className="absolute inset-s-0 flex max-w-[75%] flex-wrap items-baseline gap-x-2 pb-0.5 @lg:max-w-(--label-max) @lg:flex-col @lg:items-start @lg:pb-1"
             style={{
               bottom: pct(HEIGHT - RINGS[idx].lineY, HEIGHT),
               ["--label-max" as string]: pct(

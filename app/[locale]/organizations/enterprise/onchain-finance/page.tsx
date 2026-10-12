@@ -1,4 +1,5 @@
 import { Blocks, BookOpenCheck, Coins, Move } from "lucide-react"
+import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
@@ -256,7 +257,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
-}) {
+}): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
 
