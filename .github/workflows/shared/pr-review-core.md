@@ -85,7 +85,7 @@ Format (keep the visible part under ~300 words; put detail in a `<details>` bloc
 1. **<blocking|should fix|nit>** `path/to/file.ts:123` — <the problem, the input or state that triggers it, and its effect>. <the fix, if obvious>
 ...
 
-**Verified** — <specific checks that passed, so a reviewer can skip them, e.g. "every caller of `buildUrl` passes the new arg", "RTL: all new classes are logical">
+**Verified** — <specific checks that passed, so a reviewer can skip them, each with the evidence you read, e.g. "every caller of `buildUrl` passes the new arg (`a.ts:12`, `b.tsx:40`)", "RTL: all new classes are logical (`Card.tsx:18-30`)">
 
 **Human focus** — <what only a human can judge: UX, visual, copy, product intent, anything you could not confirm; with a rough time estimate, e.g. "~5 min on the preview at mobile width">
 
@@ -105,7 +105,7 @@ Rate severity by the impact if the problem triggers, not by how likely the trigg
 - `should fix` — a real defect with limited impact: a confusing failure mode, a wrong count, a missed convention with user-visible effect.
 - `nit` — optional: naming, comments, small cleanups with no behavior change.
 
-`path:line` is the line number in the file at the PR head — read it from the `+c,d` side of the hunk header (`@@ -a,b +c,d @@`) or from the file itself — never the line's position in the patch. Order findings by severity. Omit the **Findings** section when there are none. Be concrete and welcoming — many authors are first-time contributors. Never demand changes you cannot name precisely.
+`path:line` is the line number in the file at the PR head — read it from the `+c,d` side of the hunk header (`@@ -a,b +c,d @@`) or from the file itself — never the line's position in the patch. Order findings by severity. List a check under **Verified** only if you read the code on every side of it and can cite where; a reviewer will skip whatever you list there, so a wrong entry is worse than a missing one. Anything you did not fully trace goes under **Human focus** instead. Omit the **Findings** section when there are none. Be concrete and welcoming — many authors are first-time contributors. Never demand changes you cannot name precisely.
 
 ## Step 6 — apply labels
 
