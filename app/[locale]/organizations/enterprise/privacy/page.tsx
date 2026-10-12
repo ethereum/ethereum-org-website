@@ -279,7 +279,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           {/* `*:[section]` rules only reach direct children, so inner Sections own their padding */}
-          <div className="mt-space-3x w-full rounded-4xl bg-radial-primary">
+          <div className="mt-space-3x w-full rounded-4xl bg-tint-primary gradient-reverse">
             <Section id="solutions" className="px-page py-space-3x">
               <SectionIntro
                 title={t(

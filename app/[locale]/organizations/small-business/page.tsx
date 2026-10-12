@@ -6,6 +6,7 @@ import type { Lang, PageParams } from "@/lib/types"
 import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
+import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -20,12 +21,19 @@ import { Grid } from "@/components/ui/grid"
 import { ListItem, OrderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { numberFormat } from "@/lib/utils/numbers"
+import {
+  formatPriceUSD,
+  numberFormat,
+  numberToPercent,
+} from "@/lib/utils/numbers"
 import { createPageTracking } from "@/lib/utils/pageTracking"
 
 import AdoptionChart from "../_components/adoption-chart"
+import ChecklistPanel from "../_components/checklist-panel"
+import ComparisonTable from "../_components/comparison-table"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 
@@ -44,6 +52,11 @@ import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
 const NCA_REPORT_URL =
   "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
+const DISPUTE_TIMEFRAMES_URL =
+  "https://docs.adyen.com/risk-management/understanding-disputes/dispute-timeframes"
+const STRIPE_PRICING_URL = "https://stripe.com/pricing"
+const NILSON_FEES_URL =
+  "https://markets.financialcontent.com/stocks/article/gnwcq-2025-3-19-merchant-processing-fees-in-the-united-states-exceeded-187-billion-in-2024"
 const A16Z_REPORT_URL =
   "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
 
@@ -57,7 +70,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-organizations-small-business")
   const tCommon = await getTranslations("common")
-  const { footnote, linkTo } = createPageTracking(
+
+  const { footnote, cite, linkTo } = createPageTracking(
     "organizations-small-business",
     REFERENCES_ID
   )
@@ -96,6 +110,60 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     display: percent(value),
     label: t(`page-organizations-small-business-purchases-${key}`),
   }))
+
+  const settlementItems = ["final", "keep-more", "flat-fees", "no-till"].map(
+    (key) => ({
+      title: t(`page-organizations-small-business-settlement-${key}-title`),
+      description: t.rich(
+        `page-organizations-small-business-settlement-${key}-description`,
+        {
+          link: linkTo(
+            "/roadmap/account-abstraction/#beyond-seed-phrases",
+            "settlement",
+            "Smart accounts"
+          ),
+        }
+      ),
+    })
+  )
+
+  const compareColumns = ["stablecoins", "cash", "card"] as const
+  const compareRows = [
+    "fees",
+    "final",
+    "access",
+    "theft",
+    "moving",
+    "reach",
+    "refunds",
+  ].map((row) => ({
+    label: t(`page-organizations-small-business-compare-row-${row}`),
+    cells: compareColumns.map((col) =>
+      t(`page-organizations-small-business-compare-row-${row}-${col}`)
+    ),
+  }))
+
+  // TODO(content): confirm the illustrative card rate
+  const example = {
+    price: 100,
+    cardRate: 0.029,
+    cardFixed: 0.3,
+    discount: 0.02,
+  }
+  const usd = (value: number) => formatPriceUSD(value, locale)
+  const pct = (value: number) =>
+    numberToPercent(value, locale, { maximumFractionDigits: 1 })
+  const cardFee = example.price * example.cardRate + example.cardFixed
+  const cardNet = example.price - cardFee
+  const exampleSales = [
+    { key: "card", fee: cardFee, net: cardNet, toneClass: "text-error" },
+    {
+      key: "stablecoin",
+      fee: 0,
+      net: example.price,
+      toneClass: "text-success",
+    },
+  ] as const
 
   // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
   const holders = { now: 40, expected: 72 }
@@ -183,6 +251,115 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </figure>
           </Section>
 
+          <ChecklistPanel
+            id="settlement"
+            tint="success"
+            title={t("page-organizations-small-business-settlement-title")}
+            description={t(
+              "page-organizations-small-business-settlement-description"
+            )}
+            items={settlementItems}
+          />
+
+          <Section id="compare">
+            <SectionIntro
+              title={t("page-organizations-small-business-compare-title")}
+              description={t.rich(
+                "page-organizations-small-business-compare-description",
+                { disputes: cite(2, "compare"), fees: cite(3, "compare") }
+              )}
+            />
+            <ComparisonTable
+              caption={t("page-organizations-small-business-compare-caption")}
+              columns={compareColumns.map((col) =>
+                t(`page-organizations-small-business-compare-col-${col}`)
+              )}
+              rows={compareRows}
+            />
+
+            <h3 className="text-center">
+              {t("page-organizations-small-business-example-title", {
+                price: formatPriceUSD(example.price, locale, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                }),
+              })}
+            </h3>
+            <Grid balanced={2} className="mx-auto max-w-4xl">
+              {exampleSales.map(({ key, fee, net, toneClass }) => (
+                <Card key={key} variant="header-bar">
+                  <CardHeader>
+                    <CardTitle className="text-xl">
+                      {t(
+                        `page-organizations-small-business-example-${key}-title`
+                      )}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <dl className="grid grid-cols-[1fr_auto] gap-x-4 gap-y-2">
+                      <dt className="text-body-medium">
+                        {t("page-organizations-small-business-example-price")}
+                      </dt>
+                      <dd className="text-end tabular-nums">
+                        {usd(example.price)}
+                      </dd>
+                      <dt className="text-body-medium">
+                        {t("page-organizations-small-business-example-fee")}*
+                      </dt>
+                      <dd className="text-end tabular-nums">{usd(fee)}</dd>
+                      <dt className="font-bold">
+                        {t("page-organizations-small-business-example-net")}
+                      </dt>
+                      <dd
+                        className={cn(
+                          "text-end font-bold tabular-nums",
+                          toneClass
+                        )}
+                      >
+                        {usd(net)}
+                      </dd>
+                      <dt className="text-body-medium">
+                        {t("page-organizations-small-business-example-final")}
+                      </dt>
+                      <dd className={cn("text-end", toneClass)}>
+                        {t(
+                          `page-organizations-small-business-example-${key}-final`
+                        )}
+                      </dd>
+                    </dl>
+                  </CardContent>
+                </Card>
+              ))}
+            </Grid>
+            <p className="mx-auto max-w-4xl text-sm text-body-medium">
+              *{" "}
+              {t.rich("page-organizations-small-business-example-note", {
+                cardRate: pct(example.cardRate),
+                cardFixed: usd(example.cardFixed),
+                rate: cite(4, "compare"),
+              })}
+            </p>
+            <p className="mx-auto max-w-4xl text-body-medium">
+              {t.rich(
+                "page-organizations-small-business-example-discount-tip",
+                {
+                  cardRate: pct(example.cardRate),
+                  discount: pct(example.discount),
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p className="mx-auto max-w-4xl text-body-medium">
+              {t.rich("page-organizations-small-business-compare-privacy", {
+                link: linkTo(
+                  "/privacy/ethereum/#protecting-your-digital-privacy-on-ethereum-today",
+                  "compare",
+                  "Stealth addresses"
+                ),
+              })}
+            </p>
+          </Section>
+
           <Section
             id="accept-payments"
             className="flex items-center gap-space-2x rounded-4xl bg-tint-primary px-page py-space-3x max-md:flex-col"
@@ -225,7 +402,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
               <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-adoption-description")}
-                {footnote(2, "adoption")}
+                {footnote(5, "adoption")}
               </p>
             </div>
             <AdoptionChart />
@@ -271,6 +448,32 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-nca", {
                   link: linkTo(NCA_REPORT_URL, REFERENCES_ID, "NCA report"),
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich(
+                  "page-organizations-small-business-reference-disputes",
+                  {
+                    link: linkTo(
+                      DISPUTE_TIMEFRAMES_URL,
+                      REFERENCES_ID,
+                      "Adyen dispute timeframes"
+                    ),
+                  }
+                )}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-organizations-small-business-reference-nilson", {
+                  link: linkTo(NILSON_FEES_URL, REFERENCES_ID, "Nilson Report"),
+                })}
+              </ListItem>
+              <ListItem>
+                {t.rich("page-organizations-small-business-reference-stripe", {
+                  link: linkTo(
+                    STRIPE_PRICING_URL,
+                    REFERENCES_ID,
+                    "Stripe pricing"
+                  ),
                 })}
               </ListItem>
               <ListItem>

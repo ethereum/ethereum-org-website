@@ -165,7 +165,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           {/* `mt-space-3x`: `flow` skips non-section wrappers */}
-          <div className="mt-space-3x w-full bg-radial-primary transition-[border-radius] 2xl:rounded-4xl">
+          <div className="mt-space-3x w-full bg-tint-primary transition-[border-radius] gradient-reverse 2xl:rounded-4xl">
             <Section
               id="enterprise-innovation"
               className="px-page py-space-3x text-center"

@@ -53,7 +53,8 @@ const ComparisonTable = ({
           ))}
         </TableRow>
       </TableHeader>
-      <TableBody>
+      {/* The row hover fill is page-colored too */}
+      <TableBody className={cn(onTint && "[&_tr:hover]:bg-transparent")}>
         {rows.map(({ label, cells }, rowIdx) => (
           <TableRow key={rowIdx}>
             {/* Without the fill, the `th` underline reads as a stray rule */}
