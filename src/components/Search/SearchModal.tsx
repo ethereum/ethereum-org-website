@@ -177,7 +177,8 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
   // English only: the prompt, guardrails and referrals are tuned on the English index.
   const canAsk = locale === DEFAULT_LOCALE
 
-  // `/` returns focus to the input after tabbing into the answer.
+  // `/` returns focus to the input after tabbing out of it, into the answer's links
+  // or the modal's own buttons.
   useKeyboardShortcut("searchFocusInput", () => {
     document.querySelector<HTMLInputElement>(".DocSearch-Input")?.focus()
   })
