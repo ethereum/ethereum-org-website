@@ -73,9 +73,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       badge: <CardEmoji text="🇧🇹" />,
     },
     {
-      key: "buenos-aires",
-      href: "https://buenosaires.gob.ar/innovacionytransformaciondigital/quarkid/quarkid",
-      badge: <CardEmoji text="🇦🇷" />,
+      key: "itcilo",
+      href: "https://www.uninnovation.network/blog/credentials-without-borders-itcilos-digital-revolution",
+      badge: <CardEmoji text="🎓" />,
     },
     {
       key: "unicef",
@@ -83,10 +83,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       badge: <CardEmoji text="🇺🇳" />,
     },
     {
-      // TODO(content): india case study only sourced as a single-district pilot
-      key: "india",
-      href: "https://www.undp.org/blog/using-blockchain-make-land-registry-more-reliable-india",
-      badge: <CardEmoji text="🇮🇳" />,
+      key: "giga",
+      href: "https://giga.global/unicef-and-government-of-rwanda-collaborate-to-demonstrate-proof-of-concept-for-gigas-crypto-connectivity-pilot/",
+      badge: <CardEmoji text="🇷🇼" />,
     },
   ] as const
 
