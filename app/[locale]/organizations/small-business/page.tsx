@@ -7,6 +7,7 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -193,9 +194,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p className="mt-space max-w-3xl text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-payments-description")}
               </p>
-              {/* TODO(content): approved first-party Shopify/WordPress CTAs */}
+              <div className="mt-space-2x flex flex-wrap gap-4">
+                <ButtonLink href="https://help.shopify.com/en/manual/payments/shopify-payments/local-payment-methods/usdc-payments">
+                  {t("page-organizations-small-business-payments-shopify-cta")}
+                </ButtonLink>
+                <ButtonLink
+                  href="https://woocommerce.com/cryptocurrency/"
+                  variant="outline"
+                >
+                  {t(
+                    "page-organizations-small-business-payments-wordpress-cta"
+                  )}
+                </ButtonLink>
+              </div>
             </div>
-            {/* Not decorative: the panel's only mention of Shopify */}
             <Image
               src={shopifyImg}
               alt="Shopify"
