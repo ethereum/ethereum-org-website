@@ -125,7 +125,7 @@ const AskPanel = ({
         return
       }
       try {
-        const response = await fetch("/api/ask", {
+        const response = await fetch("/api/ask/", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ q: query, locale }),
