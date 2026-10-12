@@ -46,12 +46,6 @@ import heroImg from "@/public/images/organizations/sunrise-over-organizations-ci
 import whatImg from "@/public/images/organizations/waterfront-trade-hub-with-rail-network.png"
 import whatPortraitImg from "@/public/images/organizations/waterfront-trade-hub-with-rail-network-portrait.png"
 
-const A16Z_REPORT_URL =
-  "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
-
-/** Matomo category suffix, matching the `_open_source` convention. */
-const TRACK_CATEGORY_SUFFIX = "_organizations"
-
 const REFERENCES_ID = "references"
 
 type Audience = {
@@ -306,7 +300,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <ExpandableCard
                     key={n}
                     title={t(`page-organizations-hub-faq-${n}-question`)}
-                    eventCategory={TRACK_CATEGORY_SUFFIX}
+                    // Matomo category suffix, matching the `_open_source` convention
+                    eventCategory="_organizations"
                     eventAction="faq"
                     eventName={`Question ${n}`}
                   >
@@ -324,7 +319,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ListItem>
                 {t.rich("page-organizations-hub-reference-a16z", {
                   link: linkTo(
-                    A16Z_REPORT_URL,
+                    "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/",
                     REFERENCES_ID,
                     "a16z State of Crypto"
                   ),

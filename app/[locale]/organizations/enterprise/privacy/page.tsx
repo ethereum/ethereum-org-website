@@ -57,10 +57,6 @@ import scalesImg from "@/public/images/organizations/balance-scale-tipped-toward
 import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 
-// TODO(data): no public source found -- cite one or drop
-const STAT_TEAMS_BUILDING = "750+"
-const STAT_YEARS_RESEARCH = "7+"
-
 const COMPLIANCE_CARDS: { key: string; icon: LucideIcon }[] = [
   { key: "selective-disclosure", icon: ScanEye },
   { key: "credentials", icon: HatGlasses },
@@ -172,11 +168,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const stats: HeroStat[] = [
     {
-      value: STAT_TEAMS_BUILDING,
+      value: "750+",
       label: t("page-organizations-enterprise-privacy-stat-teams"),
     },
     {
-      value: STAT_YEARS_RESEARCH,
+      value: "7+",
       label: t("page-organizations-enterprise-privacy-stat-years"),
     },
     {

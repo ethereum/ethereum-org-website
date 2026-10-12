@@ -50,8 +50,6 @@ import {
 } from "@/lib/data"
 import heroImg from "@/public/images/organizations/tokenization-workshop-assets-to-tokens.png"
 
-const STABLECOINS_PAGE_SIZE = 6
-
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
@@ -249,7 +247,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StablecoinsTable
                 content={coinDetails}
                 hasError={marketsHasError}
-                pageSize={STABLECOINS_PAGE_SIZE}
+                pageSize={6}
               />
             </I18nProvider>
           </Section>

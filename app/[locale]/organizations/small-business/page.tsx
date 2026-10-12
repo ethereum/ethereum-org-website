@@ -50,16 +50,6 @@ import payrollImg from "@/public/images/organizations/payouts-to-remote-freelanc
 import heroImg from "@/public/images/organizations/shop-street-corner-digital-payments.png"
 import shopifyImg from "@/public/images/organizations/shopify-logo.png"
 
-const NCA_REPORT_URL =
-  "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf"
-const DISPUTE_TIMEFRAMES_URL =
-  "https://docs.adyen.com/risk-management/understanding-disputes/dispute-timeframes"
-const STRIPE_PRICING_URL = "https://stripe.com/pricing"
-const NILSON_FEES_URL =
-  "https://markets.financialcontent.com/stocks/article/gnwcq-2025-3-19-merchant-processing-fees-in-the-united-states-exceeded-187-billion-in-2024"
-const A16Z_REPORT_URL =
-  "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/"
-
 const REFERENCES_ID = "references"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -447,7 +437,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <OrderedList className="ms-0 list-inside list-decimal text-sm text-body-medium">
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-nca", {
-                  link: linkTo(NCA_REPORT_URL, REFERENCES_ID, "NCA report"),
+                  link: linkTo(
+                    "https://nca.org/2026%20Annual%20State%20of%20Crypto%20Holders%20Report.pdf",
+                    REFERENCES_ID,
+                    "NCA report"
+                  ),
                 })}
               </ListItem>
               <ListItem>
@@ -455,7 +449,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   "page-organizations-small-business-reference-disputes",
                   {
                     link: linkTo(
-                      DISPUTE_TIMEFRAMES_URL,
+                      "https://docs.adyen.com/risk-management/understanding-disputes/dispute-timeframes",
                       REFERENCES_ID,
                       "Adyen dispute timeframes"
                     ),
@@ -464,13 +458,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </ListItem>
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-nilson", {
-                  link: linkTo(NILSON_FEES_URL, REFERENCES_ID, "Nilson Report"),
+                  link: linkTo(
+                    "https://markets.financialcontent.com/stocks/article/gnwcq-2025-3-19-merchant-processing-fees-in-the-united-states-exceeded-187-billion-in-2024",
+                    REFERENCES_ID,
+                    "Nilson Report"
+                  ),
                 })}
               </ListItem>
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-stripe", {
                   link: linkTo(
-                    STRIPE_PRICING_URL,
+                    "https://stripe.com/pricing",
                     REFERENCES_ID,
                     "Stripe pricing"
                   ),
@@ -479,7 +477,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ListItem>
                 {t.rich("page-organizations-small-business-reference-a16z", {
                   link: linkTo(
-                    A16Z_REPORT_URL,
+                    "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/",
                     REFERENCES_ID,
                     "a16z State of Crypto"
                   ),
