@@ -53,9 +53,9 @@ import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 import PageJsonLD from "./page-jsonld"
 
 import { getTotalValueSecuredData } from "@/lib/data"
+import scalesImg from "@/public/images/organizations/balance-scale-tipped-toward-cryptographic-proof.png"
 import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
-import scalesImg from "@/public/images/organizations/privacy-scales.png"
 
 // TODO(data): no public source found -- cite one or drop
 const STAT_TEAMS_BUILDING = "750+"
