@@ -270,7 +270,6 @@ export async function generateMetadata(props: {
     locale,
     slug: ["organizations", "enterprise", "onchain-finance"],
     title: t("page-organizations-enterprise-onchain-finance-meta-title"),
-    // TODO(content): meta description needs content-owner copy
     description: t(
       "page-organizations-enterprise-onchain-finance-meta-description"
     ),
