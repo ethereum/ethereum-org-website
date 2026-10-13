@@ -47,7 +47,7 @@ Two protocol-level upgrades address this problem together:
 
 [**EIP-8141 (Frame Transactions)**](https://eips.ethereum.org/EIPS/eip-8141) introduces a new transaction type that splits transactions into segments for signature validation and fee authorization, and for the actual transaction instructions. Frame transactions allow [smart accounts](/roadmap/account-abstraction/) to define their own signature schemes and use external contracts to cover gas fees. Strict sandboxing rules in the mempool prevent these transactions from opening the network to denial-of-service attacks.
 
-Frame transactions are being considered for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/security/quantum-resistance/) before the full post-quantum network transition is complete.
+Frame transactions are scheduled for Ethereum's [Hegotá upgrade](https://forkcast.org/upgrade/hegota/) as one of its headline features, the next network upgrade after the upcoming [Glamsterdam upgrade](/roadmap/glamsterdam/). The same upgrade will also allow smart accounts to adopt [quantum-safe signatures](/roadmap/security/quantum-resistance/) before the full post-quantum network transition is complete.
 
 <ExpandableCard title="How do frame transactions (EIP-8141) enable privacy?" eventCategory="/roadmap/privacy" eventName="clicked how do frame transactions enable privacy?">
 
@@ -55,7 +55,7 @@ Frame transactions allow accounts to choose their own signature verification met
 
 </ExpandableCard>
 
-[**EIP-7805 (Fork-Choice Enforced Inclusion Lists, or FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805) provides the enforcement mechanism for private writes. Block proposers are required by consensus rules to include transactions in their blocks from aggregated local inclusion lists, which collect transactions from multiple sources. If a block builder attempts to censor a transaction that appeared on the inclusion lists, attesting nodes reject the proposed block entirely. FOCIL is currently being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/).
+[**EIP-7805 (Fork-Choice Enforced Inclusion Lists, or FOCIL)**](https://eips.ethereum.org/EIPS/eip-7805) provides the enforcement mechanism for private writes. Block proposers are required by consensus rules to include transactions in their blocks from aggregated local inclusion lists, which collect transactions from multiple sources. If a block builder attempts to censor a transaction that appeared on the inclusion lists, attesting nodes reject the proposed block entirely. FOCIL is scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/) as one of its headline features.
 
 Frame transactions give users the flexibility to build privacy-preserving transactions with custom signature schemes, while FOCIL ensures those transactions cannot be selectively censored once they enter the mempool. Together they address two different failure points: one enables the format of private transactions, the other guarantees their inclusion. No central actor can block a valid private transfer.
 
@@ -113,7 +113,7 @@ The direction of privacy development on Ethereum is shaped by ecosystem-wide ali
 
 Research and development into privacy on Ethereum spans dozens of teams across the ecosystem. Work is advancing on protocol upgrades, access-layer solutions, identity infrastructure, and compliance-aware tools.
 
-**Protocol upgrades**: EIP-8141 (Frame Transactions), EIP-7805 (FOCIL), EIP-8250 (Keyed Nonces), and EIP-8182 (Protocol-Level Shielded Pools) are in active development and being considered for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8025 (optional execution proofs) and Verkle Trees are also targeted for Hegotá, providing the foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
+**Protocol upgrades**: EIP-8141 (Frame Transactions) and EIP-7805 (FOCIL) are scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8250 (Keyed Nonces) and EIP-8182 (Protocol-Level Shielded Pools) are in active development. EIP-8025 (optional execution proofs) and Verkle Trees are also targeted for Hegotá, providing the foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
 
 **Access layer**: PIR research is progressing with active implementations like [Raven](https://github.com/hisoka-io/raven) being tested by infrastructure teams. The Kohaku wallet SDK is under development as an open-source reference for privacy-preserving wallets.
 
