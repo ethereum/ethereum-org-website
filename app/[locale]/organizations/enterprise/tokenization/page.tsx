@@ -40,6 +40,7 @@ import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
 import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
+import { organizationPages } from "../../_lib/pages"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -146,7 +147,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       key: "infrastructure",
       hasDescription: true,
       hasExamples: false,
-      href: "/organizations/enterprise/privacy/",
+      href: organizationPages.privacy.href,
     },
     { key: "consumer", hasDescription: true, hasExamples: false },
   ] as const
@@ -164,15 +165,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>
               {t("page-organizations-enterprise-tokenization-hero-description")}
             </p>
-            <div className="mt-space-3x">
-              <HeroStats stats={stats} />
-            </div>
+            <HeroStats stats={stats} />
           </>
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow *:[section]:py-space-3x">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="infrastructure">
             <SectionIntro
               title={t(
@@ -234,7 +233,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="stablecoins"
-            className="rounded-4xl bg-tint-primary px-page py-space-3x gradient-reverse"
+            className="bg-tint-primary px-page py-space-3x transition-[border-radius] gradient-reverse 2xl:rounded-4xl"
           >
             <SectionIntro
               title={t(
@@ -320,7 +319,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <OrganizationPathways current="tokenization" />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

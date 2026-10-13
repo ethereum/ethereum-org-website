@@ -17,6 +17,7 @@ export default async function OrganizationsPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-organizations")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, "/organizations/")
 
@@ -55,13 +56,13 @@ export default async function OrganizationsPageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
               "@type": "ListItem",
               position: 2,
-              name: t("page-organizations-hub-meta-title"),
+              name: tCommon("organizations"),
               item: url,
             },
           ],

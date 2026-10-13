@@ -89,7 +89,7 @@ const AdoptionChart = async ({ className }: AdoptionChartProps) => {
         {items.map(({ value, label }, idx) => (
           <div
             key={idx}
-            className="absolute inset-s-0 flex max-w-[75%] flex-wrap items-baseline gap-x-2 pb-0.5 @lg:max-w-(--label-max) @lg:flex-col @lg:items-start @lg:pb-1"
+            className="absolute inset-s-0 flex max-w-3/4 flex-wrap items-baseline gap-x-2 pb-0.5 @lg:max-w-(--label-max) @lg:flex-col @lg:items-start @lg:pb-1"
             style={{
               bottom: pct(HEIGHT - RINGS[idx].lineY, HEIGHT),
               ["--label-max" as string]: pct(
@@ -98,13 +98,13 @@ const AdoptionChart = async ({ className }: AdoptionChartProps) => {
               ),
             }}
           >
+            <dt className="text-xs leading-snug @md:text-sm @lg:text-base">
+              {label}
+            </dt>
             <dd className="order-first m-0 text-base leading-tight font-bold @lg:text-2xl">
               {/* `<bdi>` keeps a range's digits in order inside RTL text */}
               <bdi>{value}</bdi>
             </dd>
-            <dt className="text-xs leading-snug @md:text-sm @lg:text-md">
-              {label}
-            </dt>
           </div>
         ))}
       </dl>

@@ -31,7 +31,7 @@ const ChecklistPanel = ({
   <Section
     id={id}
     className={cn(
-      "rounded-4xl px-page py-space-3x text-center",
+      "px-page py-space-3x text-center transition-[border-radius] 2xl:rounded-4xl",
       // `/12` lifts the wash so the nested card doesn't vanish into it in dark mode
       tint === "success" ? "bg-tint-success/12" : "bg-tint-primary/12"
     )}

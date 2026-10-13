@@ -69,7 +69,8 @@ const BigNumber = async ({
 
   const { root, valueSlot, label, icon } = bigNumberVariants({
     variant,
-    center,
+    // `ruled` cells sit in a start-aligned row, so they default to uncentered
+    center: center ?? variant !== "ruled",
   })
 
   const lastUpdatedDisplay =

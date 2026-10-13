@@ -25,11 +25,7 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import {
-  formatPriceUSD,
-  numberFormat,
-  numberToPercent,
-} from "@/lib/utils/numbers"
+import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 import { createPageTracking } from "@/lib/utils/pageTracking"
 
 import AdoptionChart from "../_components/adoption-chart"
@@ -73,10 +69,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   )
 
   const percent = (value: number) =>
-    numberFormat(locale, {
-      style: "percent",
-      maximumFractionDigits: 0,
-    }).format(value / 100)
+    numberToPercent(value, locale, { maximumFractionDigits: 1 })
 
   const useCases = [
     { key: "payments", image: paymentsImg },
@@ -98,7 +91,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ).map(([key, value]) => ({
     key,
     value,
-    display: percent(value),
+    display: percent(value / 100),
     label: t(`page-organizations-small-business-purchases-${key}`),
   }))
 
@@ -134,7 +127,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ),
   }))
 
-  // TODO(content): confirm the illustrative card rate
   const example = {
     price: 100,
     cardRate: 0.029,
@@ -142,8 +134,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     discount: 0.02,
   }
   const usd = (value: number) => formatPriceUSD(value, locale)
-  const pct = (value: number) =>
-    numberToPercent(value, locale, { maximumFractionDigits: 1 })
   const cardFee = example.price * example.cardRate + example.cardFixed
   const cardNet = example.price - cardFee
   const exampleSales = [
@@ -175,8 +165,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow *:[section]:py-space-3x">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-small-business-use-cases-title")}
@@ -280,10 +270,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {exampleSales.map(({ key, fee, net, toneClass }) => (
                 <Card key={key} variant="header-bar">
                   <CardHeader>
-                    <CardTitle className="text-xl">
-                      {t(
-                        `page-organizations-small-business-example-${key}-title`
-                      )}
+                    <CardTitle size="sm" asChild>
+                      <h4>
+                        {t(
+                          `page-organizations-small-business-example-${key}-title`
+                        )}
+                      </h4>
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -325,7 +317,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p className="mx-auto max-w-4xl text-sm text-body-medium">
               *{" "}
               {t.rich("page-organizations-small-business-example-note", {
-                cardRate: pct(example.cardRate),
+                cardRate: percent(example.cardRate),
                 cardFixed: usd(example.cardFixed),
                 rate: cite(4, "compare"),
               })}
@@ -334,8 +326,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {t.rich(
                 "page-organizations-small-business-example-discount-tip",
                 {
-                  cardRate: pct(example.cardRate),
-                  discount: pct(example.discount),
+                  cardRate: percent(example.cardRate),
+                  discount: percent(example.discount),
                   strong: Strong,
                 }
               )}
@@ -353,16 +345,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <Section
             id="accept-payments"
-            className="flex items-center gap-space-2x rounded-4xl bg-tint-primary px-page py-space-3x max-md:flex-col"
+            data-flow="skip"
+            className="flex items-center gap-space-2x bg-tint-primary transition-[border-radius] max-md:flex-col 2xl:rounded-4xl"
           >
-            <div className="flex-1">
+            <div className="flow flex-1 max-md:self-stretch">
               <h2 className="text-h3">
                 {t("page-organizations-small-business-payments-title")}
               </h2>
-              <p className="mt-space max-w-3xl text-lg text-pretty text-body-medium">
+              <p className="max-w-3xl text-lg text-pretty text-body-medium">
                 {t("page-organizations-small-business-payments-description")}
               </p>
-              <div className="mt-space-2x flex flex-wrap gap-4">
+              <div
+                data-flow="cta"
+                className="flex gap-4 max-sm:flex-col sm:flex-wrap"
+              >
                 <ButtonLink href="https://help.shopify.com/en/manual/payments/shopify-payments/local-payment-methods/usdc-payments">
                   {t("page-organizations-small-business-payments-shopify-cta")}
                 </ButtonLink>
@@ -378,7 +374,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <Image
               src={shopifyImg}
-              alt="Shopify"
+              alt=""
               className="h-auto w-32 shrink-0 md:w-48"
               sizes="(max-width: 768px) 128px, 192px"
             />
@@ -387,7 +383,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section
             id="adoption"
             data-flow="skip"
-            className="grid items-center gap-space-2x lg:grid-cols-[2fr_3fr]"
+            className="grid items-center gap-space-2x lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]"
           >
             <div className="flow">
               <h2>{t("page-organizations-small-business-adoption-title")}</h2>
@@ -416,14 +412,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               callouts={[
                 {
                   value: holders.now,
-                  display: percent(holders.now),
+                  display: percent(holders.now / 100),
                   label: t(
                     "page-organizations-small-business-holders-now-label"
                   ),
                 },
                 {
                   value: holders.expected,
-                  display: percent(holders.expected),
+                  display: percent(holders.expected / 100),
                   label: t(
                     "page-organizations-small-business-holders-expected-label"
                   ),
@@ -490,7 +486,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <OrganizationPathways pathways={["founders", "enterprise"]} />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

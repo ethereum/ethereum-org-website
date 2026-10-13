@@ -39,18 +39,11 @@ import {
 } from "@/lib/data"
 import heroImg from "@/public/images/organizations/defi-market-square-liquidity-pool.png"
 
-const PRIMITIVES = [
+const primitives = [
   { key: "open-standards", Icon: BookOpenCheck },
   { key: "deep-liquidity", Icon: Coins },
   { key: "composable", Icon: Blocks },
   { key: "permissionless", Icon: Move },
-] as const
-
-const INNOVATIONS = [
-  "stablecoins",
-  "tokenized-assets",
-  "digital-bonds",
-  "fx",
 ] as const
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -121,9 +114,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-enterprise-onchain-finance-hero-description-2"
               )}
             </p>
-            <div className="mt-space-3x">
-              <HeroStats stats={stats} />
-            </div>
+            <HeroStats stats={stats} />
           </>
         }
       />
@@ -141,7 +132,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             />
             <Grid balanced={4} data-flow="cta">
-              {PRIMITIVES.map(({ key, Icon }) => (
+              {primitives.map(({ key, Icon }) => (
                 <Card key={key} size="lg">
                   <CardHeader>
                     <CardIconContainer>
@@ -182,38 +173,40 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               </p>
               <Grid balanced={4} data-flow="cta" className="text-start">
-                {INNOVATIONS.map((key) => (
-                  <Card
-                    key={key}
-                    variant="nested"
-                    className="row-span-2 grid grid-rows-subgrid gap-0"
-                  >
-                    <CardContent>
-                      <CardTitle>
-                        {t(
-                          `page-organizations-enterprise-onchain-finance-innovation-${key}-title`
-                        )}
-                      </CardTitle>
-                      <CardParagraph>
-                        {t(
-                          `page-organizations-enterprise-onchain-finance-innovation-${key}-description`
-                        )}
-                      </CardParagraph>
-                    </CardContent>
-                    <CardFooter buttons="inherit">
-                      <CardParagraph>
-                        {t(
-                          "page-organizations-enterprise-onchain-finance-innovation-examples-label"
-                        )}
-                      </CardParagraph>
-                      <CardParagraph textColor="body">
-                        {t(
-                          `page-organizations-enterprise-onchain-finance-innovation-${key}-examples`
-                        )}
-                      </CardParagraph>
-                    </CardFooter>
-                  </Card>
-                ))}
+                {["stablecoins", "tokenized-assets", "digital-bonds", "fx"].map(
+                  (key) => (
+                    <Card
+                      key={key}
+                      variant="nested"
+                      className="row-span-2 grid grid-rows-subgrid gap-0"
+                    >
+                      <CardContent>
+                        <CardTitle>
+                          {t(
+                            `page-organizations-enterprise-onchain-finance-innovation-${key}-title`
+                          )}
+                        </CardTitle>
+                        <CardParagraph>
+                          {t(
+                            `page-organizations-enterprise-onchain-finance-innovation-${key}-description`
+                          )}
+                        </CardParagraph>
+                      </CardContent>
+                      <CardFooter buttons="inherit">
+                        <CardParagraph>
+                          {t(
+                            "page-organizations-enterprise-onchain-finance-innovation-examples-label"
+                          )}
+                        </CardParagraph>
+                        <CardParagraph textColor="body">
+                          {t(
+                            `page-organizations-enterprise-onchain-finance-innovation-${key}-examples`
+                          )}
+                        </CardParagraph>
+                      </CardFooter>
+                    </Card>
+                  )
+                )}
               </Grid>
             </Section>
           </div>
@@ -249,7 +242,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <OrganizationPathways current="onchain-finance" />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

@@ -19,7 +19,6 @@ export default async function OnchainFinancePageJsonLD({
   const t = await getTranslations(
     "page-organizations-enterprise-onchain-finance"
   )
-  const tEnterprise = await getTranslations("page-organizations-enterprise")
   const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(
@@ -55,7 +54,7 @@ export default async function OnchainFinancePageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
@@ -67,15 +66,13 @@ export default async function OnchainFinancePageJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: tEnterprise("page-organizations-enterprise-hero-title"),
+              name: tCommon("enterprise"),
               item: normalizeUrlForJsonLd(locale, "/organizations/enterprise/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: t(
-                "page-organizations-enterprise-onchain-finance-meta-title"
-              ),
+              name: tCommon("onchain-finance"),
               item: url,
             },
           ],

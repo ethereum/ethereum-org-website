@@ -47,7 +47,7 @@ export default async function FoundersPageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
@@ -59,7 +59,7 @@ export default async function FoundersPageJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-founders-metadata-title"),
+              name: tCommon("founders"),
               item: normalizeUrlForJsonLd(locale, "/organizations/founders/"),
             },
           ],

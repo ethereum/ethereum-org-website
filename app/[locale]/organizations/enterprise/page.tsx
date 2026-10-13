@@ -31,6 +31,7 @@ import HeroStats, { type HeroStat } from "../_components/hero-stats"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
 import { metricStat, nullOnError, SOURCES } from "../_lib/metrics"
+import { organizationPages } from "../_lib/pages"
 import { ETHEREUM_GENESIS_TIMESTAMP, uptimeYearsSince } from "../_lib/uptime"
 
 import PageJsonLD from "./page-jsonld"
@@ -40,11 +41,7 @@ import {
   getEthereumStablecoinsMcapData,
   getTotalValueLockedData,
 } from "@/lib/data"
-import defiImg from "@/public/images/organizations/defi-market-square-liquidity-pool.png"
 import heroImg from "@/public/images/organizations/financial-district-plaza-with-settlement.png"
-import privacyImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
-import l2StackImg from "@/public/images/organizations/layered-islands-rollup-network.png"
-import tokenizationImg from "@/public/images/organizations/tokenization-workshop-assets-to-tokens.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -63,12 +60,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ])
 
   const uptimeYears = uptimeYearsSince(ETHEREUM_GENESIS_TIMESTAMP)
+  // `years` picks the plural form; `count` is the locale-formatted figure
+  const uptime = {
+    years: uptimeYears,
+    count: numberFormat(locale).format(uptimeYears),
+  }
 
   const stats: HeroStat[] = [
     {
-      value: t("page-organizations-enterprise-stat-uptime-value", {
-        years: uptimeYears,
-      }),
+      value: t("page-organizations-enterprise-stat-uptime-value", uptime),
       label: t("page-organizations-enterprise-stat-uptime"),
     },
     {
@@ -84,54 +84,35 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   const useCases = [
-    {
-      key: "tokenization",
-      href: "/organizations/enterprise/tokenization/",
-      image: tokenizationImg,
-    },
-    {
-      key: "defi",
-      href: "/organizations/enterprise/onchain-finance/",
-      image: defiImg,
-    },
-    {
-      key: "l2s",
-      href: "/organizations/enterprise/enterprise-l2s/",
-      image: l2StackImg,
-    },
-    {
-      key: "privacy",
-      href: "/organizations/enterprise/privacy/",
-      image: privacyImg,
-    },
-  ] as const
+    { key: "tokenization", ...organizationPages.tokenization },
+    { key: "defi", ...organizationPages["onchain-finance"] },
+    { key: "l2s", ...organizationPages["enterprise-l2s"] },
+    { key: "privacy", ...organizationPages.privacy },
+  ]
 
-  // Live-figure sentences render only when their data loaded
-  const liquidityFigures = [
-    defiShare &&
-      "runnerUpMultiplier" in defiShare &&
-      t("page-organizations-enterprise-why-liquidity-multiplier", {
-        multiplier: numberFormat(locale, { maximumFractionDigits: 0 }).format(
+  // The multiplier sentence renders only when its data loaded
+  const multiplier =
+    defiShare && "runnerUpMultiplier" in defiShare
+      ? numberFormat(locale, { maximumFractionDigits: 0 }).format(
           defiShare.runnerUpMultiplier
-        ),
-      }),
-  ].filter(Boolean)
+        )
+      : undefined
 
   const whyItems = ["neutrality", "composable", "liquidity", "resilience"].map(
-    (key) => {
-      // `years` keeps the copy in step with the uptime stat above
-      const description = t(
-        `page-organizations-enterprise-why-${key}-description`,
-        { years: uptimeYears }
-      )
-      return {
-        title: t(`page-organizations-enterprise-why-${key}-title`),
-        description:
-          key === "liquidity"
-            ? [description, ...liquidityFigures].join(" ")
-            : description,
-      }
-    }
+    (key) => ({
+      title: t(`page-organizations-enterprise-why-${key}-title`),
+      // `uptime` keeps the copy in step with the uptime stat above
+      description:
+        key === "liquidity" && multiplier
+          ? t(
+              "page-organizations-enterprise-why-liquidity-description-multiplier",
+              {
+                ...uptime,
+                multiplier,
+              }
+            )
+          : t(`page-organizations-enterprise-why-${key}-description`, uptime),
+    })
   )
 
   const compareColumns = ["ethereum", "l1", "private-dlt", "traditional"]
@@ -159,15 +140,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <>
             <p>{t("page-organizations-enterprise-hero-description-1")}</p>
             <p>{t("page-organizations-enterprise-hero-description-2")}</p>
-            <div className="mt-space-3x">
-              <HeroStats stats={stats} />
-            </div>
+            <HeroStats stats={stats} />
           </>
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow *:[section]:py-space-3x">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="use-cases">
             <SectionIntro
               title={t("page-organizations-enterprise-use-cases-title")}
@@ -240,7 +219,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

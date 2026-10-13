@@ -38,6 +38,7 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import AdoptionChart from "./_components/adoption-chart"
 import SectionIntro from "./_components/section-intro"
+import { organizationPages } from "./_lib/pages"
 import PageJsonLD from "./page-jsonld"
 
 import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
@@ -59,10 +60,10 @@ type Audience = {
   marker: string
 }
 
-const AUDIENCES: Audience[] = [
+const audiences: Audience[] = [
   {
     key: "public-sector",
-    href: "/organizations/public-sector/",
+    href: organizationPages["public-sector"].href,
     icon: Landmark,
     // Not `blue-600`: it's only defined in `:root`, so it doesn't adapt in dark
     tile: "text-accent-a bg-accent-a/10",
@@ -70,21 +71,21 @@ const AUDIENCES: Audience[] = [
   },
   {
     key: "enterprise",
-    href: "/organizations/enterprise/",
+    href: organizationPages.enterprise.href,
     icon: Building,
     tile: "text-primary bg-primary/10",
     marker: "marker:text-primary",
   },
   {
     key: "small-business",
-    href: "/organizations/small-business/",
+    href: organizationPages["small-business"].href,
     icon: ShoppingCart,
     tile: "text-accent-c bg-accent-c/10",
     marker: "marker:text-accent-c",
   },
   {
     key: "founders",
-    href: "/organizations/founders/",
+    href: organizationPages.founders.href,
     icon: UserStar,
     tile: "text-accent-b bg-accent-b/10",
     marker: "marker:text-accent-b",
@@ -130,10 +131,6 @@ const SectionPicture = ({
   )
 }
 
-const WHY_ITEMS = ["neutral", "resilient", "interoperable", "programmable"]
-const WHAT_ITEMS = ["payments", "tokenized", "identity", "custom"]
-const FAQ_ITEMS = [1, 2, 3, 4]
-
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
@@ -153,7 +150,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   )
 
   const featureRows = (prefix: string, keys: string[]) => (
-    <UnorderedList className="ms-0 mt-space-2x list-none p-0">
+    <UnorderedList className="ms-0 list-none p-0">
       {keys.map((key) => (
         <ListItem key={key} className="m-0 border-b py-4">
           <h3 className="text-h5">{t(`${prefix}-${key}-title`)}</h3>
@@ -183,7 +180,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               description={t("page-organizations-hub-audiences-description")}
             />
             <Grid balanced={4} data-flow="cta">
-              {AUDIENCES.map(({ key, href, icon: Icon, tile, marker }) => (
+              {audiences.map(({ key, href, icon: Icon, tile, marker }) => (
                 <Card
                   key={key}
                   href={href}
@@ -244,7 +241,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-hub-why-description")}
               </p>
-              {featureRows("page-organizations-hub-why", WHY_ITEMS)}
+              {featureRows("page-organizations-hub-why", [
+                "neutral",
+                "resilient",
+                "interoperable",
+                "programmable",
+              ])}
             </div>
           </Section>
 
@@ -276,7 +278,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <p className="text-lg text-pretty text-body-medium">
                 {t("page-organizations-hub-what-description")}
               </p>
-              {featureRows("page-organizations-hub-what", WHAT_ITEMS)}
+              {featureRows("page-organizations-hub-what", [
+                "payments",
+                "tokenized",
+                "identity",
+                "custom",
+              ])}
             </div>
           </Section>
 
@@ -294,10 +301,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 sizes="(max-width: 992px) 100vw, 50vw"
               />
             </div>
-            <div>
+            <div className="flow">
               <h2>{t("page-organizations-hub-faq-title")}</h2>
-              <AccordionContainer className="mt-space">
-                {FAQ_ITEMS.map((n) => (
+              <AccordionContainer>
+                {[1, 2, 3, 4].map((n) => (
                   <ExpandableCard
                     key={n}
                     title={t(`page-organizations-hub-faq-${n}-question`)}

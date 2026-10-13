@@ -47,7 +47,7 @@ export default async function PublicSectorPageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
@@ -59,7 +59,7 @@ export default async function PublicSectorPageJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: t("page-organizations-public-sector-meta-title"),
+              name: tCommon("public-sector"),
               item: url,
             },
           ],

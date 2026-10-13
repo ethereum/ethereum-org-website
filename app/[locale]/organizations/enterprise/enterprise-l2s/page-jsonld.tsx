@@ -17,7 +17,6 @@ export default async function EnterpriseL2sPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-organizations-enterprise-l2s")
-  const tEnterprise = await getTranslations("page-organizations-enterprise")
   const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(
@@ -51,7 +50,7 @@ export default async function EnterpriseL2sPageJsonLD({
             {
               "@type": "ListItem",
               position: 1,
-              name: "Home",
+              name: tCommon("home"),
               item: normalizeUrlForJsonLd(locale, "/"),
             },
             {
@@ -63,7 +62,7 @@ export default async function EnterpriseL2sPageJsonLD({
             {
               "@type": "ListItem",
               position: 3,
-              name: tEnterprise("page-organizations-enterprise-meta-title"),
+              name: tCommon("enterprise"),
               item: normalizeUrlForJsonLd(locale, "/organizations/enterprise/"),
             },
             {

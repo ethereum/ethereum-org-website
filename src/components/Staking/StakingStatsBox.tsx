@@ -37,7 +37,6 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
     <div className="flex flex-col md:flex-row">
       <BigNumber
         variant="ruled"
-        center={false}
         value={totalEth}
         sourceDescription={t("page-staking-stats-box-metric-1-tooltip")}
         {...DUNE}
@@ -46,7 +45,6 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
       </BigNumber>
       <BigNumber
         variant="ruled"
-        center={false}
         value={percentStaked}
         sourceDescription={t("page-staking-stats-box-metric-2-tooltip")}
         {...DUNE}
@@ -55,7 +53,6 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
       </BigNumber>
       <BigNumber
         variant="ruled"
-        center={false}
         value={currentApr}
         sourceDescription={t("page-staking-stats-box-metric-3-tooltip")}
         {...DUNE}

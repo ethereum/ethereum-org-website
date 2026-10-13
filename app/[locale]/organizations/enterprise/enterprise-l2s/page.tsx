@@ -44,6 +44,8 @@ import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
+import { metricStat, nullOnError } from "../../_lib/metrics"
+import { organizationPages } from "../../_lib/pages"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -55,21 +57,21 @@ import zksyncLogo from "@/public/images/layer-2/zksyncEra.jpg"
 import issuanceImg from "@/public/images/organizations/l2-issuance-partners.png"
 import heroImg from "@/public/images/organizations/layered-islands-rollup-network.png"
 
-const BENEFITS = [
+const benefits = [
   { key: "scalable", Icon: ChevronsUp },
   { key: "customizable", Icon: Paintbrush },
   { key: "security", Icon: ShieldPlus },
   { key: "interoperability", Icon: ArrowRightLeft },
 ] as const
 
-const CASE_STUDIES = [
-  { key: "tokenization", href: "/organizations/enterprise/tokenization/" },
-  { key: "finance", href: "/organizations/enterprise/onchain-finance/" },
-  { key: "infrastructure", href: "/organizations/enterprise/privacy/" },
+const caseStudies = [
+  { key: "tokenization", href: organizationPages.tokenization.href },
+  { key: "finance", href: organizationPages["onchain-finance"].href },
+  { key: "infrastructure", href: organizationPages.privacy.href },
   { key: "consumer" },
 ] as const
 
-const NETWORKS = [
+const networks = [
   { key: "arbitrum", href: "https://arbitrum.io/", logo: arbitrumLogo },
   { key: "zksync", href: "https://www.zksync.io/", logo: zksyncLogo },
   { key: "optimism", href: "https://www.optimism.io/", logo: optimismLogo },
@@ -84,8 +86,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-organizations-enterprise-l2s")
 
   const [l2beatData, l2beatActivity, { contributors }] = await Promise.all([
-    getL2beatData(),
-    getL2beatActivityData(),
+    nullOnError(getL2beatData()),
+    nullOnError(getL2beatActivityData()),
     getAppPageContributorInfo(
       "organizations/enterprise/enterprise-l2s",
       locale as Lang
@@ -101,19 +103,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ...L2BEAT_SOURCE,
     },
     {
-      value:
-        l2beatActivity && "value" in l2beatActivity
-          ? numberFormat(locale, {
-              notation: "compact",
-              maximumSignificantDigits: 3,
-            }).format(l2beatActivity.value)
-          : undefined,
+      ...metricStat(l2beatActivity, (value) =>
+        numberFormat(locale, {
+          notation: "compact",
+          maximumSignificantDigits: 3,
+        }).format(value)
+      ),
       label: t("page-organizations-enterprise-l2s-stat-uops"),
-      lastUpdated:
-        l2beatActivity && "timestamp" in l2beatActivity
-          ? l2beatActivity.timestamp
-          : undefined,
-      sourceName: "L2BEAT",
+      ...L2BEAT_SOURCE,
       sourceUrl: "https://l2beat.com/scaling/activity",
     },
   ]
@@ -164,15 +161,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <>
             <p>{t("page-organizations-enterprise-l2s-hero-description-1")}</p>
             <p>{t("page-organizations-enterprise-l2s-hero-description-2")}</p>
-            <div className="mt-space-3x">
-              <HeroStats stats={stats} />
-            </div>
+            <HeroStats stats={stats} />
           </>
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow *:[section]:py-space-3x">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="benefits">
             <SectionIntro
               title={t("page-organizations-enterprise-l2s-benefits-title")}
@@ -181,7 +176,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             />
             <Grid balanced={4} data-flow="cta">
-              {BENEFITS.map(({ key, Icon }) => (
+              {benefits.map(({ key, Icon }) => (
                 <Card key={key}>
                   <CardHeader>
                     <CardIconContainer>
@@ -304,7 +299,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
             <Grid balanced={2} className="flex-1">
-              {CASE_STUDIES.map((study) => (
+              {caseStudies.map((study) => (
                 <Card
                   key={study.key}
                   href={"href" in study ? study.href : undefined}
@@ -348,7 +343,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="flex-1 rounded-4xl bg-tint-primary p-page">
               <ul className="ms-0 list-none divide-y divide-background">
-                {NETWORKS.map(({ key, href, logo }) => (
+                {networks.map(({ key, href, logo }) => (
                   <li key={key} className="py-2 first:pt-0">
                     <BaseLink
                       href={href}
@@ -405,7 +400,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <OrganizationPathways current="enterprise-l2s" />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

@@ -89,7 +89,7 @@ export const Ruled: Story = {
     docs: {
       description: {
         story:
-          '`variant="ruled"`: start-ruled cell, monospace primary value, uppercase caption -- the KPI row in the /staking/ and /organizations/ heroes. Pair it with `center={false}` and lay siblings out in a `flex md:flex-row` row. `sourceDescription` adds context above the attribution.',
+          '`variant="ruled"`: start-ruled cell, monospace primary value, uppercase caption -- the KPI row in the /staking/ and /organizations/ heroes. Uncentered by default; lay siblings out in a `flex md:flex-row` row. `sourceDescription` adds context above the attribution.',
       },
     },
   },
@@ -98,7 +98,6 @@ export const Ruled: Story = {
     <div className="flex flex-col md:flex-row">
       <BigNumber
         variant="ruled"
-        center={false}
         value="36,812,453"
         sourceName="Dune Analytics"
         sourceUrl="https://dune.com/"

@@ -83,13 +83,13 @@ const CryptoHoldersChart = ({
         {callouts.map(({ display, label }, idx) => (
           <div
             key={label}
-            className="absolute inset-e-0 flex max-w-[40%] flex-col items-end pb-1 text-end"
+            className="absolute inset-e-0 flex max-w-2/5 flex-col items-end pb-1 text-end"
             style={{ bottom: pct(HEIGHT - leaders[idx].y, HEIGHT) }}
           >
+            <dt className="text-sm leading-snug @lg:text-base">{label}</dt>
             <dd className="order-first m-0 text-lg leading-tight font-bold @lg:text-2xl">
               <bdi>{display}</bdi>
             </dd>
-            <dt className="text-sm leading-snug @lg:text-md">{label}</dt>
           </div>
         ))}
       </dl>

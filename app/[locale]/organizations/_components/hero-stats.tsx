@@ -13,12 +13,11 @@ export type HeroStat = {
 
 /** Row of hero KPIs, rendered inside a `PageHero` description */
 const HeroStats = ({ stats }: { stats: HeroStat[] }) => (
-  <div className="flex flex-col gap-y-4 md:flex-row md:flex-wrap">
+  <div className="mt-space-3x flex flex-col gap-y-4 md:flex-row md:flex-wrap">
     {stats.map(({ label, ...stat }, idx) => (
       <BigNumber
         key={idx}
         variant="ruled"
-        center={false}
         // Share the row and let labels wrap; wrap the cell below ~11rem
         className="md:min-w-44 md:flex-1 md:pe-4"
         {...stat}

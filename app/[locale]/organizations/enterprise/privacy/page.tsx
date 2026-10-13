@@ -42,7 +42,7 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
@@ -58,7 +58,7 @@ import scalesImg from "@/public/images/organizations/balance-scale-tipped-toward
 import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 
-const COMPLIANCE_CARDS: { key: string; icon: LucideIcon }[] = [
+const complianceCards: { key: string; icon: LucideIcon }[] = [
   { key: "selective-disclosure", icon: ScanEye },
   { key: "credentials", icon: HatGlasses },
   { key: "composable", icon: Blocks },
@@ -66,7 +66,7 @@ const COMPLIANCE_CARDS: { key: string; icon: LucideIcon }[] = [
 
 const EY_URL = "https://blockchain.ey.com/technology"
 
-const SOLUTIONS: {
+const solutions: {
   key: string
   examples: { name: string; href: string }[]
 }[] = [
@@ -96,32 +96,6 @@ const SOLUTIONS: {
     ],
   },
 ]
-
-const COMPARE_ROWS = [
-  "guarantee",
-  "mechanism",
-  "incentives",
-  "vendor",
-  "regulatory",
-] as const
-
-const WHY_ITEMS = [
-  "resilience",
-  "censorship",
-  "counterparty",
-  "interoperability",
-] as const
-
-const PROBLEM_CARDS = [
-  "vendor",
-  "interoperability",
-  "talent",
-  "fragility",
-  "instability",
-  "auditability",
-  "offchain",
-  "abstractions",
-] as const
 
 /** Comparison cell: verdict icon inline before the copy, with a sr-only verdict */
 const VerdictCell = ({
@@ -158,6 +132,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
+  const tOrganizations = await getTranslations("page-organizations")
 
   const [valueSecured, { contributors }] = await Promise.all([
     nullOnError(getTotalValueSecuredData()),
@@ -169,11 +144,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const stats: HeroStat[] = [
     {
-      value: "750+",
+      value: t("page-organizations-enterprise-privacy-stat-plus", {
+        count: numberFormat(locale).format(750),
+      }),
       label: t("page-organizations-enterprise-privacy-stat-teams"),
     },
     {
-      value: "7+",
+      value: t("page-organizations-enterprise-privacy-stat-plus", {
+        count: numberFormat(locale).format(7),
+      }),
       label: t("page-organizations-enterprise-privacy-stat-years"),
     },
     {
@@ -183,7 +162,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ]
 
-  const compareRows = COMPARE_ROWS.map((row) => ({
+  const compareRows = [
+    "guarantee",
+    "mechanism",
+    "incentives",
+    "vendor",
+    "regulatory",
+  ].map((row) => ({
     label: t(`page-organizations-enterprise-privacy-compare-row-${row}`),
     cells: [
       <VerdictCell
@@ -209,7 +194,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ],
   }))
 
-  const whyItems = WHY_ITEMS.map((key) => ({
+  const whyItems = [
+    "resilience",
+    "censorship",
+    "counterparty",
+    "interoperability",
+  ].map((key) => ({
     title: t(`page-organizations-enterprise-privacy-why-${key}-title`),
     description: t(
       `page-organizations-enterprise-privacy-why-${key}-description`
@@ -232,15 +222,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>
               {t("page-organizations-enterprise-privacy-hero-description-2")}
             </p>
-            <div className="mt-space-3x">
-              <HeroStats stats={stats} />
-            </div>
+            <HeroStats stats={stats} />
           </>
         }
       />
 
-      <main className="px-page pb-page">
-        <MainArticle className="flow *:[section]:py-space-3x">
+      <main className="pb-page">
+        <MainArticle className="flow *:[section]:px-page *:[section]:py-space-3x">
           <Section id="compliance">
             <SectionIntro
               title={t(
@@ -251,7 +239,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             />
             <Grid columns={3} data-flow="cta">
-              {COMPLIANCE_CARDS.map(({ key, icon: Icon }) => (
+              {complianceCards.map(({ key, icon: Icon }) => (
                 <Card key={key}>
                   <CardHeader>
                     <CardIconContainer>
@@ -276,7 +264,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </Section>
 
           {/* `*:[section]` rules only reach direct children, so inner Sections own their padding */}
-          <div className="mt-space-3x w-full rounded-4xl bg-tint-primary gradient-reverse">
+          <div className="mt-space-3x w-full bg-tint-primary transition-[border-radius] gradient-reverse 2xl:rounded-4xl">
             <Section id="solutions" className="px-page py-space-3x">
               <SectionIntro
                 title={t(
@@ -287,7 +275,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               />
               <Grid balanced={4} data-flow="cta">
-                {SOLUTIONS.map(({ key, examples }) => (
+                {solutions.map(({ key, examples }) => (
                   <Card key={key} variant="nested">
                     <CardContent>
                       <CardTitle>
@@ -308,12 +296,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             "page-organizations-enterprise-privacy-solutions-examples-label"
                           )}
                         </span>
-                        {examples.map(({ name, href }, idx) => (
-                          <Fragment key={name}>
-                            {idx > 0 && ", "}
-                            <InlineLink href={href}>{name}</InlineLink>
-                          </Fragment>
-                        ))}
+                        {new Intl.ListFormat(locale, { type: "unit" })
+                          .formatToParts(examples.map(({ name }) => name))
+                          .map(({ type, value }, idx) => {
+                            const example = examples.find(
+                              ({ name }) => name === value
+                            )
+                            return type === "element" && example ? (
+                              <InlineLink key={idx} href={example.href}>
+                                {value}
+                              </InlineLink>
+                            ) : (
+                              <Fragment key={idx}>{value}</Fragment>
+                            )
+                          })}
                       </p>
                     </CardFooter>
                   </Card>
@@ -387,7 +383,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
             <Grid balanced={2} className="lg:flex-1">
-              {PROBLEM_CARDS.map((key) => (
+              {[
+                "vendor",
+                "interoperability",
+                "talent",
+                "fragility",
+                "instability",
+                "auditability",
+                "offchain",
+                "abstractions",
+              ].map((key) => (
                 <Card key={key}>
                   <CardContent>
                     <CardTitle>
@@ -421,7 +426,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </CalloutBanner>
               <CalloutMain>
                 <CalloutContent>
-                  <CalloutTitle as="h3">EthSystems</CalloutTitle>
+                  <CalloutTitle as="h3">
+                    {tOrganizations(
+                      "page-organizations-experts-ethsystems-name"
+                    )}
+                  </CalloutTitle>
                   <CalloutDescription>
                     {t(
                       "page-organizations-enterprise-privacy-experts-ethsystems-description"
@@ -440,7 +449,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <OrganizationPathways current="privacy" />
         </MainArticle>
 
-        <ContentFeedback />
+        <div className="px-page">
+          <ContentFeedback />
+        </div>
       </main>
     </>
   )

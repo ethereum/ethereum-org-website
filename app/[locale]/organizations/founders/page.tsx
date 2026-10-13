@@ -35,7 +35,7 @@ import EthGlobal from "./logos/ethglobal.svg"
 import Kernel from "./logos/kernel.svg"
 import Optimism from "./logos/optimism.svg"
 import Polygon from "./logos/polygon.svg"
-import ProtogolGuild from "./logos/protocol-guild.svg"
+import ProtocolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
 import PageJsonLD from "./page-jsonld"
 
@@ -280,7 +280,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         },
         {
           name: "Protocol Guild",
-          Logo: ProtogolGuild,
+          Logo: ProtocolGuild,
           tags: ["active", "fundraising"],
           description: t(
             "page-founders-partnerships-protocol-guild-description"

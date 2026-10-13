@@ -25,7 +25,7 @@ export type StablecoinsTableRow = {
   name: string
   marketCap: string
   image?: string
-  type: string
+  type: StablecoinType
   url?: string
   symbol: string
   peg: string

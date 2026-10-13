@@ -2,16 +2,18 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 
 import StablecoinsTable, { type StablecoinsTableRow } from "./StablecoinsTable"
 
-const rows: StablecoinsTableRow[] = [
-  ["Tether", "USDT", "FIAT", "$183,305,140,370"],
-  ["USDC", "USDC", "FIAT", "$73,777,616,768"],
-  ["USDS", "USDS", "CRYPTO", "$9,563,931,588"],
-  ["Ethena USDe", "USDE", "CRYPTO", "$4,772,934,515"],
-  ["Dai", "DAI", "CRYPTO", "$4,575,366,738"],
-  ["PayPal USD", "PYUSD", "FIAT", "$2,774,115,912"],
-  ["Paxos Gold", "PAXG", "ASSET", "$1,203,515,104"],
-  ["Tether Gold", "XAUT", "ASSET", "$1,042,880,516"],
-].map(([name, symbol, type, marketCap]) => ({
+const rows: StablecoinsTableRow[] = (
+  [
+    ["Tether", "USDT", "FIAT", "$183,305,140,370"],
+    ["USDC", "USDC", "FIAT", "$73,777,616,768"],
+    ["USDS", "USDS", "CRYPTO", "$9,563,931,588"],
+    ["Ethena USDe", "USDE", "CRYPTO", "$4,772,934,515"],
+    ["Dai", "DAI", "CRYPTO", "$4,575,366,738"],
+    ["PayPal USD", "PYUSD", "FIAT", "$2,774,115,912"],
+    ["Paxos Gold", "PAXG", "ASSET", "$1,203,515,104"],
+    ["Tether Gold", "XAUT", "ASSET", "$1,042,880,516"],
+  ] as const
+).map(([name, symbol, type, marketCap]) => ({
   name,
   symbol,
   type,
