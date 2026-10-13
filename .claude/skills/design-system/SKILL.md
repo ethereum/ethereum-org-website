@@ -85,7 +85,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/canonical-imports.md`** -- unsure which of several look-alike imports is canonical.
 - **`references/components.md`** -- the full component inventory with variants and usage.
 - **`references/tokens.md`** -- adding a token, gradients, z-index, semantic-token choices, work in `src/styles/`.
-- **`references/spacing-typography.md`** -- page/section layout, heading sizes, spacing rhythm, the `.flow` system.
+- **`references/spacing-typography.md`** -- page/section layout, heading sizes, spacing rhythm, the `.flow` system, citation and footnote markers.
 - **`references/gotchas.md`** -- unexpected primitive behavior; the long-tail confusion patterns.
 - **`references/variant-vs-new.md`** -- before creating any new component file.
 - **`references/cleanup-playbook.md`** -- refactoring existing anti-patterns; the "old pattern -> new pattern" map.

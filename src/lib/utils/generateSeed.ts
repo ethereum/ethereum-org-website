@@ -1,4 +1,4 @@
-const WORDLISTS = {
+export const WORDLISTS = {
   en: [
     "abandon",
     "ability",
