@@ -65,6 +65,18 @@ export const getDexVolumeData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getEthereumStablecoinsMcapData = createCachedGetter(
+  dataLayer.getEthereumStablecoinsMcapData,
+  ["ethereum-stablecoins-mcap-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getTotalValueLockedData = createCachedGetter(
+  dataLayer.getTotalValueLockedData,
+  ["total-value-locked-data"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getTotalValueSecuredData = createCachedGetter(
   dataLayer.getTotalValueSecuredData,
   ["total-value-secured-data"],
@@ -115,21 +127,9 @@ export const getCommunityPicks = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getCalendarEvents = createCachedGetter(
-  dataLayer.getCalendarEvents,
-  ["calendar-events"],
-  CACHE_REVALIDATE_DAY
-)
-
 export const getRSSData = createCachedGetter(
   dataLayer.getRSSData,
   ["rss-data"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getAttestantPosts = createCachedGetter(
-  dataLayer.getAttestantPosts,
-  ["attestant-posts"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -151,28 +151,11 @@ export const getEthereumMarketcapData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getEthereumStablecoinsMcapData = createCachedGetter(
-  dataLayer.getEthereumStablecoinsMcapData,
-  ["ethereum-stablecoins-mcap-data"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGFIs = createCachedGetter(
+// Static: rendered inside MDX (contributing page), where ISR breaks on Netlify
+export const getStaticGFIs = createCachedGetter(
   dataLayer.getGFIs,
-  ["gfis"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGitHistory = createCachedGetter(
-  dataLayer.getGitHistory,
-  ["git-history"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGithubRepoData = createCachedGetter(
-  dataLayer.getGithubRepoData,
-  ["github-repo-data"],
-  CACHE_REVALIDATE_DAY
+  ["gfis-static"],
+  false
 )
 
 export const getQuizStats = createCachedGetter(
@@ -193,15 +176,15 @@ export const getTotalEthStakedData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getTotalValueLockedData = createCachedGetter(
-  dataLayer.getTotalValueLockedData,
-  ["total-value-locked-data"],
-  CACHE_REVALIDATE_DAY
-)
-
 export const getEventsData = createCachedGetter(
   dataLayer.getEventsData,
   ["events-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getMeetupImages = createCachedGetter(
+  dataLayer.getMeetupImages,
+  ["meetup-images"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -227,12 +210,6 @@ export const getStaticDeveloperToolsData = createCachedGetter(
 export const getAccountHolders = createCachedGetter(
   dataLayer.getAccountHolders,
   ["account-holders"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getTranslationGlossary = createCachedGetter(
-  dataLayer.getTranslationGlossary,
-  ["translation-glossary"],
   CACHE_REVALIDATE_DAY
 )
 

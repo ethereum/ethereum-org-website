@@ -63,6 +63,14 @@
    which sits in the higher-priority base layer vs the docsearch layer */
 .DocSearch-Modal {
   margin: 60px auto auto;
+  /* The vendor sets flex-direction without display. As a column capped to the viewport,
+     the dropdown takes the remaining height and the footer stays on screen (desktop). */
+  display: flex;
+  @apply md:max-h-[calc(100dvh-60px-2rem)];
+}
+
+.DocSearch-SearchBar {
+  flex-shrink: 0;
 }
 
 .DocSearch-Form {
@@ -207,7 +215,10 @@
 }
 
 .DocSearch-Dropdown {
-  @apply overflow-y-scroll px-4 pb-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:px-8 md:pb-8;
+  max-height: none;
+  /* Scroll anchoring would push the reader off the answer as it streams in above. */
+  overflow-anchor: none;
+  @apply min-h-0 flex-1 overflow-y-scroll px-4 pb-4 md:overflow-y-auto md:px-8 md:pb-8;
 }
 
 /* Explorer rows keep the library's own markup so their save/remove buttons survive, and
@@ -432,4 +443,29 @@
     max-height: none;
     @apply h-auto min-h-0 flex-1;
   }
+}
+
+/**
+ * Ask AI. The panel styles itself; these rules reach vendor markup and model output.
+ */
+
+.DocSearch-Dropdown:has(.DocSearch-Ask) .DocSearch-Hits:first-of-type {
+  @apply border-t border-solid border-disabled pt-4;
+}
+
+/* Markdown output, which the container's unlayered list reset would otherwise flatten. */
+.DocSearch-Ask-answer :is(ul, ol) {
+  @apply m-0 flex list-outside flex-col gap-1 ps-5;
+}
+
+.DocSearch-Ask-answer ul {
+  @apply list-disc;
+}
+
+.DocSearch-Ask-answer ol {
+  @apply list-decimal;
+}
+
+.DocSearch-Ask-answer code {
+  @apply rounded-sm bg-background-highlight px-1 py-0.5 text-sm;
 }
