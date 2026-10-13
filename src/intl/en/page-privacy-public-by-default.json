@@ -25,6 +25,7 @@
   "page-privacy-public-by-default-nav-keyboard-hint": "Tip: use the arrow keys to move between chapters.",
   "page-privacy-public-by-default-nav-progress-aria": "Lesson progress",
   "page-privacy-public-by-default-nav-error": "Something went wrong while showing this part of the lesson. Try reloading the page.",
+  "page-privacy-public-by-default-nav-chapter-placeholder": "This chapter is still being built.",
   "page-privacy-public-by-default-nav-route-aria": "The payment's route",
   "page-privacy-public-by-default-nav-route-stop-you": "You",
   "page-privacy-public-by-default-nav-route-stop-wallet": "Wallet app",
