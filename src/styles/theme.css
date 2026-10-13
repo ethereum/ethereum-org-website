@@ -223,6 +223,9 @@
   --color-diagram-pipe: hsla(var(--diagram-pipe));
   --color-diagram-entity: hsla(var(--diagram-entity));
   --color-diagram-gas: hsla(var(--diagram-gas));
+  /* Outlines at rest: the hue, a little softer in dark mode. */
+  --color-diagram-entity-rest: color-mix(in oklab, hsla(var(--diagram-entity)) var(--diagram-rest-mix), hsla(var(--diagram-bg)));
+  --color-diagram-gas-rest: color-mix(in oklab, hsla(var(--diagram-gas)) var(--diagram-rest-mix), hsla(var(--diagram-bg)));
 
   /* Border radius */
   --radius-base: var(--radius-2xl);

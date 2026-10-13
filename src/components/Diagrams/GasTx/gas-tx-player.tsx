@@ -1,15 +1,18 @@
 "use client"
 
-import { type ReactNode, useEffect, useId, useState } from "react"
+import { type ReactNode, useEffect, useState } from "react"
 import { Send } from "lucide-react"
 import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 
-import { ChevronNext, ChevronPrev } from "@/components/Chevron"
-import { DiagramStage, useCountUp } from "@/components/Diagrams/anatomy"
-import { DiagramFigure } from "@/components/Diagrams/diagram-figure"
-import { ButtonGroup } from "@/components/ui/button-group"
-import { Button } from "@/components/ui/buttons/Button"
+import { useCountUp } from "@/components/Diagrams/anatomy"
+import {
+  DiagramCaption,
+  DiagramPresets,
+  DiagramReadout,
+  DiagramTransport,
+  InteractiveDiagram,
+} from "@/components/Diagrams/interactive-diagram"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
@@ -86,7 +89,6 @@ export function GasTxPlayer({
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
   const { prefersReducedMotion } = usePrefersReducedMotion()
-  const presetsLabelId = useId()
 
   const [presetId, setPresetId] = useState<GasTxPresetId>(initialPreset)
   const [stepIndex, setStepIndex] = useState(clampGasTxStep(initialStep))
@@ -142,130 +144,83 @@ export function GasTxPlayer({
     setStepIndex(clampGasTxStep(index))
   }
 
+  // Every caption this preset can show, so the caption area keeps the height
+  // of the longest one.
+  const allCaptions = [GAS_TX_IDLE_STEP, ...GAS_TX_STEPS.keys()].map((i) =>
+    t(getGasTxView(presetId, i).captionKey, values)
+  )
+
   return (
-    <div>
-      <DiagramFigure
-        caption={t("gas-tx-caption")}
-        captionPlacement="top"
-        description={t("gas-tx-description")}
-      >
-        <DiagramStage
-          illustration={
-            // Room above and below for labels outside the plate.
-            <div className="mx-auto w-full max-w-2xl py-1">
-              <GasRig
-                view={view}
-                runKey={`${presetId}-${stepIndex}`}
-                labels={textFor("label")}
-                tooltips={textFor("tooltip")}
-                revertedLabel={t("gas-tx-reverted")}
-              />
-            </div>
-          }
-          panel={
-            <>
-              <div className="flex flex-col gap-2">
-                <span id={presetsLabelId} className="text-sm text-body-medium">
-                  {t("gas-tx-presets-label")}
-                </span>
-                <ButtonGroup
-                  aria-labelledby={presetsLabelId}
-                  className="w-full"
-                >
-                  {GAS_TX_PRESET_IDS.map((id) => (
-                    <Button
-                      key={id}
-                      size="sm"
-                      variant={id === presetId ? "solid" : "outline"}
-                      aria-pressed={id === presetId}
-                      onClick={() => selectPreset(id)}
-                      className="flex-1"
-                      customEventOptions={{
-                        eventCategory: "Diagram",
-                        eventAction: "gas-tx preset",
-                        eventName: id,
-                      }}
-                    >
-                      {t(`gas-tx-preset-${id}`)}
-                    </Button>
-                  ))}
-                </ButtonGroup>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-2">
-                <Button
-                  size="sm"
-                  onClick={send}
-                  customEventOptions={{
-                    eventCategory: "Diagram",
-                    eventAction: "gas-tx send",
-                    eventName: presetId,
-                  }}
-                >
-                  <Send />
-                  {t("gas-tx-send")}
-                </Button>
-                <ButtonGroup aria-label={t("gas-tx-steps-label")}>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    aria-label={t("gas-tx-previous-step")}
-                    disabled={stepIndex <= 0}
-                    onClick={() => goToStep(stepIndex - 1)}
-                  >
-                    <ChevronPrev />
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    aria-label={t("gas-tx-next-step")}
-                    data-diagram-next=""
-                    disabled={stepIndex >= LAST_STEP}
-                    onClick={() => goToStep(stepIndex + 1)}
-                  >
-                    <ChevronNext />
-                  </Button>
-                </ButtonGroup>
-                {stepIndex !== GAS_TX_IDLE_STEP && (
-                  <span className="text-sm text-body-medium">
-                    {t("gas-tx-step-counter", {
-                      current: format(stepIndex + 1),
-                      total: format(GAS_TX_STEPS.length),
-                    })}
-                  </span>
-                )}
-              </div>
-
-              <p role="status" className="m-0 min-h-[2lh] text-sm text-body">
-                {t(view.captionKey, values)}
-              </p>
-
-              <dl
-                aria-label={t("gas-tx-readout-label")}
-                className="m-0 flex flex-col gap-1 border-t border-border pt-3"
-              >
-                {(
-                  [
-                    ["gas-tx-readout-limit", values.limit],
-                    ["gas-tx-readout-used", format(usedShown)],
-                    ["gas-tx-readout-returned", format(returnedShown)],
-                  ] as const
-                ).map(([key, value]) => (
-                  <div
-                    key={key}
-                    className="flex items-baseline justify-between gap-3"
-                  >
-                    <dt className="text-sm text-body-medium">{t(key)}</dt>
-                    <dd className="m-0 font-mono text-base font-bold text-body">
-                      {value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </>
-          }
+    <InteractiveDiagram
+      caption={t("gas-tx-caption")}
+      description={t("gas-tx-description")}
+      illustration={
+        <div className="mx-auto w-full max-w-2xl py-1">
+          <GasRig
+            view={view}
+            runKey={`${presetId}-${stepIndex}`}
+            labels={textFor("label")}
+            tooltips={textFor("tooltip")}
+            revertedLabel={t("gas-tx-reverted")}
+          />
+        </div>
+      }
+      presets={
+        <DiagramPresets
+          label={t("gas-tx-presets-label")}
+          options={GAS_TX_PRESET_IDS.map((id) => ({
+            id,
+            label: t(`gas-tx-preset-${id}`),
+          }))}
+          value={presetId}
+          onChange={selectPreset}
+          eventAction="gas-tx preset"
         />
-      </DiagramFigure>
-    </div>
+      }
+      transport={
+        <DiagramTransport
+          primary={{
+            label: t("gas-tx-send"),
+            icon: <Send />,
+            onClick: send,
+          }}
+          counter={t("gas-tx-step-counter", {
+            current: format(stepIndex + 1),
+            total: format(GAS_TX_STEPS.length),
+          })}
+          onPrevious={() => goToStep(stepIndex - 1)}
+          onNext={() => goToStep(stepIndex + 1)}
+          onReset={() => goToStep(GAS_TX_IDLE_STEP)}
+          canGoPrevious={stepIndex > 0}
+          canGoNext={stepIndex < LAST_STEP}
+          canReset={stepIndex !== GAS_TX_IDLE_STEP}
+          labels={{
+            previous: t("gas-tx-previous-step"),
+            next: t("gas-tx-next-step"),
+            reset: t("diagram-reset"),
+          }}
+          eventAction="gas-tx transport"
+        />
+      }
+      stepCaption={
+        <DiagramCaption
+          current={t(view.captionKey, values)}
+          all={allCaptions}
+        />
+      }
+      readout={
+        <DiagramReadout
+          label={t("gas-tx-readout-label")}
+          rows={[
+            { label: t("gas-tx-readout-limit"), value: values.limit },
+            { label: t("gas-tx-readout-used"), value: format(usedShown) },
+            {
+              label: t("gas-tx-readout-returned"),
+              value: format(returnedShown),
+            },
+          ]}
+        />
+      }
+    />
   )
 }

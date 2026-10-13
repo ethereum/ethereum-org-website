@@ -26,12 +26,13 @@ export const DIAGRAM_COLOR = {
 export type AnatomyHue = "entity" | "gas" | "neutral"
 export type AnatomyFace = "top" | "start" | "end"
 
-// Share of the hue in each face's tint: lightest on top. Mixing with the
-// background token makes the same formula adapt to dark mode by itself.
+// Share of the hue in each face's tint: lightest on top. The shares are
+// tokens (15/30/45% light, about double in dark so blue and orange still read
+// as colour), and mixing with the background adapts each theme.
 const FACE_MIX: Record<AnatomyFace, string> = {
-  top: "15%",
-  start: "30%",
-  end: "45%",
+  top: "var(--diagram-mix-top, 15%)",
+  start: "var(--diagram-mix-start, 30%)",
+  end: "var(--diagram-mix-end, 45%)",
 }
 // The plate is neutral: its top is the plate token, its sides a slightly
 // darker tint of the same neutral.
@@ -56,10 +57,10 @@ export const anatomyFill = (hue: AnatomyHue, face: AnatomyFace) => {
 export const anatomyStrong = (hue: Exclude<AnatomyHue, "neutral">) =>
   `color-mix(in oklab, ${DIAGRAM_COLOR[hue]} 70%, ${DIAGRAM_COLOR.bg})`
 
-/** Outline class per hue. */
+/** Outline class per hue, at rest (a little softer in dark mode). */
 export const ANATOMY_STROKE: Record<AnatomyHue, string> = {
-  entity: "stroke-diagram-entity",
-  gas: "stroke-diagram-gas",
+  entity: "stroke-diagram-entity-rest",
+  gas: "stroke-diagram-gas-rest",
   neutral: "stroke-diagram-edge",
 }
 

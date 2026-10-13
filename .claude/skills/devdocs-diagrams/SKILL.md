@@ -89,14 +89,29 @@ Anatomy).
   `AnatomyLabels` drops any label that would leave the drawing, touch any
   shape (the plate included) or touch another label or leader, earlier spots
   winning, so narrow screens fall back to fewer labels plus the figcaption.
-- **One container.** `DiagramStage` puts the illustration (centred, with a
-  tight viewBox) and the controls panel in one `Card`. A container query on
-  the card: at 860px and wider the panel (18.5rem) sits on the inline-end
-  side, vertically centred; narrower, as in the docs column, it sits directly
-  under the illustration with a small gap. Panel order: presets, play/step
-  buttons, step caption (`role="status"`, reserving two lines), readout. Only
-  the figcaption intro sits outside, above (`DiagramFigure
-captionPlacement="top"`).
+- **One shell: `InteractiveDiagram`** (`src/components/Diagrams/interactive-diagram.tsx`).
+  Every interactive diagram uses it, so controls sit in the same places
+  everywhere. It wraps `DiagramFigure` (intro text as the figcaption, above)
+  and `DiagramStage` (one card). From a 640px card width (container query)
+  the illustration takes the remaining width and a 15rem panel sits on the
+  inline-end side, vertically centred; narrower, the panel sits directly
+  under the illustration, same order. Slots, top to bottom:
+  1. `presets`: `DiagramPresets`, "Example values" as a segmented control
+     (vertical full-width rows in the side panel, a row when stacked).
+  2. `transport`: `DiagramTransport`, the primary action (full width in the
+     side panel; "Send transaction", "Run", ...), then previous, "Step x of
+     n", next, reset as 32px icon buttons. Same icons and order everywhere;
+     next carries `data-diagram-next` for the stroke guard.
+  3. `stepCaption`: `DiagramCaption`, a polite live region sized to its
+     longest step (pass every caption), so nothing jumps.
+  4. `readout`: `DiagramReadout`, a compact two-column list with right-aligned
+     tabular mono numbers.
+- **Dark mode.** The face tints are tokens: `--diagram-mix-top/-start/-end`
+  are 15/30/45% in light and 30/50/70% in dark, so blue and orange still read
+  as colour. Dark uses one step lighter hues (`blue-300`, `yellow-500`).
+  Outlines at rest use `stroke-diagram-entity-rest` / `-gas-rest` (75% of the
+  hue in dark), so the active part's full-strength 2px outline reads clearly
+  brighter. No glow beyond the active state.
 - **Verify.** Screenshot light and dark at 1440px, 1024px and 390px (2x),
   with reduced motion and RTL, and each step of each preset. Check no black
   paint, no label collisions, no labels on shapes or the plate, no leader

@@ -88,6 +88,12 @@
     --diagram-pipe: var(--body-medium);
     --diagram-entity: var(--accent-a);
     --diagram-gas: var(--diagram-state);
+    /* Face tints: share of the hue mixed into each face (top, inline-start,
+       inline-end), and how strong an outline is at rest (active is 100%). */
+    --diagram-mix-top: 15%;
+    --diagram-mix-start: 30%;
+    --diagram-mix-end: 45%;
+    --diagram-rest-mix: 100%;
 
     /* Fonts */
     --font-inter: Inter, sans-serif;
@@ -172,7 +178,13 @@
     --diagram-plate: var(--background-highlight);
     --diagram-edge: var(--border-high-contrast);
     --diagram-pipe: var(--body-medium);
-    --diagram-entity: var(--accent-a);
-    --diagram-gas: var(--diagram-state);
+    /* Dark: one step lighter hues, about double the face tints, and outlines
+       at rest slightly softer so the active one reads brighter. */
+    --diagram-entity: var(--blue-300);
+    --diagram-gas: var(--yellow-500);
+    --diagram-mix-top: 30%;
+    --diagram-mix-start: 50%;
+    --diagram-mix-end: 70%;
+    --diagram-rest-mix: 75%;
   }
 }

@@ -262,7 +262,9 @@ export default function GasRig({
             cy={dialY}
             r={DIAL_R}
             className={
-              isLit("meter") ? ANATOMY_LIT_STROKE.gas : "stroke-diagram-gas"
+              isLit("meter")
+                ? ANATOMY_LIT_STROKE.gas
+                : "stroke-diagram-gas-rest"
             }
             style={{ fill: anatomyFill("gas", "top") }}
           />
