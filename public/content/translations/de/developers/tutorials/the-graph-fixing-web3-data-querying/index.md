@@ -15,7 +15,7 @@ Dieses Mal werfen wir einen genaueren Blick auf The Graph, das im letzten Jahr i
 
 ## Ohne The Graph... {#without-the-graph}
 
-Nehmen wir also ein einfaches Beispiel zur Veranschaulichung. Wir alle mögen Spiele, stell dir also ein einfaches Spiel vor, bei dem Benutzer Wetten platzieren:
+Nehmen wir also zur Veranschaulichung ein einfaches Beispiel. Wir alle mögen Spiele, stell dir also ein einfaches Spiel vor, bei dem Benutzer Wetten platzieren:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-Nehmen wir nun an, wir möchten in unserer Dapp die gesamten Wetten sowie die insgesamt verlorenen/gewonnenen Spiele anzeigen und diese auch aktualisieren, sobald jemand erneut spielt. Der Ansatz wäre:
+Nehmen wir nun an, wir möchten in unserer Dezentralen Anwendung (Dapp) die gesamten Wetten sowie die insgesamt verlorenen/gewonnenen Spiele anzeigen und diese auch aktualisieren, wann immer jemand erneut spielt. Der Ansatz wäre:
 
 1. `totalGamesPlayerWon` abrufen.
 2. `totalGamesPlayerLost` abrufen.
 3. `BetPlaced`-Ereignisse abonnieren.
 
-Wir können auf das [Ereignis in Web3](https://docs.web3js.org/api/web3/class/Contract#events) hören, wie rechts gezeigt, aber das erfordert die Handhabung ziemlich vieler Fälle.
+Wir können auf das [Ereignis in Web3](https://docs.web3js.org/api/web3/class/Contract#events) hören, wie rechts gezeigt, aber das erfordert die Behandlung ziemlich vieler Fälle.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -64,7 +64,7 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Für unser einfaches Beispiel ist das noch einigermaßen in Ordnung. Aber nehmen wir an, wir möchten nun die Anzahl der verlorenen/gewonnenen Wetten nur für den aktuellen Spieler anzeigen. Da haben wir Pech gehabt; du musst wohl einen neuen Vertrag bereitstellen, der diese Werte speichert, und sie dann abrufen. Und nun stell dir einen viel komplizierteren Smart Contract und eine komplexere Dapp vor – da kann es schnell unübersichtlich werden.
+Für unser einfaches Beispiel ist das noch einigermaßen in Ordnung. Aber nehmen wir an, wir möchten nun die Anzahl der verlorenen/gewonnenen Wetten nur für den aktuellen Spieler anzeigen. Da haben wir Pech gehabt; du müsstest einen neuen Vertrag bereitstellen, der diese Werte speichert, und sie dann abrufen. Und nun stell dir einen viel komplizierteren Smart Contract und eine komplexere Dapp vor – da kann es schnell unübersichtlich werden.
 
 ![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
@@ -72,9 +72,9 @@ Du siehst, dass dies nicht optimal ist:
 
 - Funktioniert nicht für bereits bereitgestellte Verträge.
 - Zusätzliche Gas-Kosten für die Speicherung dieser Werte.
-- Erfordert einen weiteren Aufruf, um die Daten für einen Ethereum-Knoten abzurufen.
+- Erfordert einen weiteren Aufruf, um die Daten von einem Ethereum-Knoten abzurufen.
 
-![Thats not good enough](./not-good-enough.jpg)
+![That's not good enough](./not-good-enough.jpg)
 
 Schauen wir uns nun eine bessere Lösung an.
 

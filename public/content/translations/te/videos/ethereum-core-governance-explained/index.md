@@ -9,8 +9,7 @@ educationLevel: intermediate
 topic:
   - "how-ethereum-works"
   - "roadmap-and-priorities"
-  - "governance"
-  - "upgrades"
+  - "network-upgrades"
 format: presentation
 author: "ఎథ్‌బోల్డర్"
 breadcrumb: "కోర్ పరిపాలన"

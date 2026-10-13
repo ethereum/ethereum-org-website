@@ -7,8 +7,7 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "refi"
-  - "sustainability"
+  - "use-cases"
 format: explainer
 author: "సిఎన్‌బిసి టెలివిజన్"
 breadcrumb: "పునరుత్పత్తి ఫైనాన్స్"

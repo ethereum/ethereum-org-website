@@ -135,3 +135,41 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 
 - `உரிமைக்கோர்` is the correct stem of the ETHGlossary `claim` term (`உரிமைக்கோரல்`) -- the finding is register, not terminology.
 
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ta/page-apps.json`. 10 critical, 20 warnings. Brand 9/10 | Technical 7/10 | Semantic 7/10 | Consistency 6/10 | Tone 7/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ta affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ta-specific):**
+
+- "clients" rendered `வாடிக்கையாளர்கள்` (= *customers*) -> `கிளையன்ட்கள்`
+- `deploy` -> glossary `நிலைநிறுத்து`, 6 sites. One is line 23, outside the PR diff, taken deliberately so the file ships one convention (open since PR #18942). The 6 remaining `பயன்படுத்த*` sites were each checked against English and are genuine "use"; note L98 shares the exact surface form with the L110 deploy site
+
+**Notes:**
+
+- `page-apps.json` turned the `DAO` category chip from 3 into 44 characters, where it renders as a breadcrumb, hero title and card title beside one-word siblings.
+- "framework" and "compiler" were each retranslated in opposite directions across two files in this one PR: needs a locale-wide sweep, not point edits.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-tor-description-2` trade-offs `பரிமாற்றங்களுடன்` -> `சமரசங்களுடன்` (4th recurrence).
+- `zk-rollups:17` deploy `பயன்படுத்தப்பட்ட` -> `நிலைநிறுத்தப்பட்ட`.
+
+**Open (warnings):**
+
+- glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
+- zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.

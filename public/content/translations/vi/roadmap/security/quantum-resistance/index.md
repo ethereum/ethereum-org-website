@@ -78,13 +78,13 @@ Cả hai cách tiếp cận vẫn đang được nghiên cứu về tính hiệu
 
 Đây là một cách tiếp cận thực dụng. Người dùng và ví muốn có sự bảo vệ hậu lượng tử sớm có thể tự nguyện áp dụng nó, trong khi quá trình di chuyển rộng lớn hơn sẽ diễn ra theo thời gian.
 
-### 4. Bằng chứng ZK ở lớp ứng dụng {#zk-proofs}
+### 4. Bằng chứng không kiến thức ở lớp ứng dụng {#zk-proofs}
 
-**Chức năng**: Các hệ thống bằng chứng không kiến thức được sử dụng bởi các bản cuộn lớp 2 (L2) và các ứng dụng khác để xác minh các tính toán mà không tiết lộ dữ liệu cơ bản.
+**Chức năng**: Các hệ thống bằng chứng được sử dụng bởi các bản cuộn lớp 2 (l2) để xác minh các tính toán mà không cần thực thi lại chúng, và, trong trường hợp một ứng dụng triển khai thuộc tính không tri thức, để chứng minh các tuyên bố mà không tiết lộ các đầu vào riêng tư đằng sau chúng.
 
-**Tại sao nó dễ bị tổn thương**: Nhiều hệ thống bằng chứng ZK phổ biến (SNARK sử dụng các cặp đường cong elliptic) dựa trên các giả định dễ bị tổn thương bởi lượng tử.
+**Tại sao nó dễ bị tổn thương**: Nhiều hệ thống bằng chứng không kiến thức phổ biến (các SNARK sử dụng các cặp đường cong elliptic) dựa trên các giả định dễ bị tổn thương trước lượng tử.
 
-**Cách tiếp cận**: STARK, dựa vào các hàm băm thay vì đường cong elliptic, đã có khả năng kháng lượng tử và được sử dụng bởi một số bản cuộn. Việc hệ sinh thái áp dụng tự nhiên các hệ thống dựa trên STARK đã và đang cung cấp bảo mật hậu lượng tử ở lớp ứng dụng.
+**Cách tiếp cận**: Các STARK, dựa vào các hàm băm thay vì đường cong elliptic, đã có khả năng kháng lượng tử và được sử dụng bởi một số bản cuộn. Việc hệ sinh thái áp dụng tự nhiên các hệ thống dựa trên STARK đã và đang cung cấp bảo mật hậu lượng tử ở lớp ứng dụng.
 
 ## Tiêu chuẩn NIST {#nist-standards}
 

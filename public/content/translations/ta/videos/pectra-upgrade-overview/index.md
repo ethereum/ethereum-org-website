@@ -7,9 +7,7 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "roadmap"
-  - "pectra"
-  - "upgrades"
+  - "network-upgrades"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "பெக்ட்ரா மேலோட்டம்"

@@ -101,11 +101,11 @@ Teminatlı bir veri kullanılabilirliği şemasında, gerekli stake'i sağladık
 
 ## Volition'lar ve Validium {#volitions-and-validium}
 
-Validium'lar birçok fayda sunar ancak ödünleşimlerle (en önemlisi veri kullanılabilirliği) birlikte gelir. Ancak, birçok ölçeklendirme çözümünde olduğu gibi, Validium'lar belirli kullanım durumlarına uygundur; Volition'ların yaratılmasının nedeni de budur.
+Validium'lar birçok avantaj sunar ancak bazı ödünleşimleri (en önemlisi veri kullanılabilirliği) de beraberinde getirir. Ancak birçok ölçeklendirme çözümünde olduğu gibi, Validium'lar da belirli kullanım durumlarına uygundur; Volition'ların yaratılma nedeni de budur.
 
-Volition'lar, bir ZK-Rollup ve Validium zincirini birleştirir ve kullanıcıların iki ölçeklendirme çözümü arasında geçiş yapmasına olanak tanır. Volition'lar ile kullanıcılar, belirli işlemler için Validium'un zincir dışı veri kullanılabilirliğinden yararlanabilirken, gerektiğinde zincir içi bir veri kullanılabilirliği çözümüne (ZK-Rollup) geçme özgürlüğünü koruyabilirler. Bu, temel olarak kullanıcılara kendi benzersiz koşullarının gerektirdiği şekilde ödünleşimleri seçme özgürlüğü verir.
+Volition'lar, bir sıfır bilgi toplaması (ZK-toplama) ile Validium zincirini birleştirir ve kullanıcıların bu iki ölçeklendirme çözümü arasında geçiş yapmasına olanak tanır. Volition'lar sayesinde kullanıcılar, belirli işlemler için Validium'un zincir dışı veri kullanılabilirliğinden yararlanabilirken, gerektiğinde zincir içi veri kullanılabilirliği çözümüne (ZK-toplama) geçme özgürlüğünü de korurlar. Bu, temel olarak kullanıcılara kendi benzersiz koşullarının gerektirdiği ödünleşimleri seçme özgürlüğü verir.
 
-Merkeziyetsiz bir borsa (DEX), yüksek değerli işlemler için bir Validium'un ölçeklenebilir ve gizli altyapısını kullanmayı tercih edebilir. Ayrıca, bir ZK-Rollup'ın daha yüksek güvenlik garantilerini ve güven gereksinimsizliğini isteyen kullanıcılar için bir ZK-Rollup da kullanabilir.
+Bir merkeziyetsiz borsa (DEX), yüksek değerli alım satımlar için Validium'un ölçeklenebilirliğini ve işlem verilerine genel erişimi kısıtlama yeteneğini tercih edebilir. Verileri zincir dışı tutmak, onları kimlerin görebileceğini sınırlar, ancak bu tek başına işlemleri kriptografik olarak gizli yapmaz: gizlilik, dağıtımın erişim kontrollerine ve gizlilik mekanizmalarına bağlıdır ve veriler operatör ile onları elinde tutan her kimse için görünür kalır. Bir DEX, bir ZK-toplamanın daha yüksek güvenlik garantilerini ve güven gereksinimsizliğini isteyen kullanıcılar için bir ZK-toplama da kullanabilir.
 
 ## Validium'lar ve EVM uyumluluğu {#validiums-and-evm-compatibility}
 

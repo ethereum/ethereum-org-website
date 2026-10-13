@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/verkle-trees/index.md",
   "generatedAt": "2026-07-23T00:25:49.578Z",
-  "rootHash": "d41459cf98c6",
+  "rootHash": "61304227afcb",
   "tree": {
-    "contentHash": "b1271bfb020a",
-    "anchorHash": "fd4d41bb5bf7",
+    "contentHash": "a2a17bdb1f40",
+    "anchorHash": "c0285ce9d901",
     "children": {
       "frontmatter:title": {
         "contentHash": "fdf6b8b2922f",
@@ -24,8 +24,22 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "e974fc81ce47",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "1edcdf824bc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "18745704af65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:1": {
         "contentHash": "77350120e389",

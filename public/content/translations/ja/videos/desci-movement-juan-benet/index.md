@@ -7,8 +7,7 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "desci"
-  - "funding"
+  - "use-cases"
 format: presentation
 author: "イーサシーシー"
 breadcrumb: "分散型科学 (DeSci) ムーブメント"

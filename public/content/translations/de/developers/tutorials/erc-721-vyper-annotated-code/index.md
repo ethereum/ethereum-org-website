@@ -52,7 +52,7 @@ Die erste Zeile importiert die Schnittstelle, und die zweite gibt an, dass wir s
 ```python
 #pragma version >0.3.10
 ```
-### Die ERC721Receiver-Schnittstelle
+### Die ERC721Receiver-Schnittstelle {#receiver-interface}
 
 ```python
 # Schnittstelle für den Vertrag, der von safeTransferFrom() aufgerufen wird
@@ -91,7 +91,7 @@ Die Anfrage kann bis zu 1024 Bytes an Benutzerdaten enthalten.
 ```
 
 Um Fälle zu verhindern, in denen ein Vertrag versehentlich einen Transfer akzeptiert, ist der Rückgabewert kein Boolean, sondern ein spezifischer Vier-Byte-Wert, der Funktionsselektor von `onERC721Received`. Die Funktion ist `nonpayable`, da ein empfangender Vertrag seinen eigenen Zustand ändern kann, wenn er ein Token akzeptiert.
-### Ereignisse
+### Ereignisse {#events}
 
 [Ereignisse](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 werden ausgegeben, um Benutzer und Server außerhalb der Blockchain über Ereignisse zu informieren. Beachten Sie, dass der Inhalt von Ereignissen für Verträge auf der Blockchain nicht verfügbar ist. Die drei ERC-721-Ereignisse werden durch die von uns importierte `IERC721`-Schnittstelle definiert, sodass dieser Vertrag sie nicht selbst deklariert; er gibt sie mit `log IERC721.<Event>(...)` aus, wie wir in den Transfer-Funktionen unten sehen werden.
@@ -101,7 +101,7 @@ werden ausgegeben, um Benutzer und Server außerhalb der Blockchain über Ereign
 Eine ERC-721-Genehmigung (Approval) ist ähnlich einem ERC-20-Freigabebetrag: Einer bestimmten Adresse ist es erlaubt, ein bestimmtes Token zu transferieren, und `Approval` (`owner`, `approved`, `token_id`) wird ausgegeben, wann immer diese genehmigte Adresse festgelegt oder bestätigt wird. Dies bietet einen Mechanismus für Verträge, um zu reagieren, wenn sie ein Token akzeptieren. Verträge können nicht auf Ereignisse lauschen, wenn Sie also das Token einfach an sie transferieren, "wissen" sie nichts davon. Auf diese Weise reicht der Eigentümer zuerst eine Genehmigung ein und sendet dann eine Anfrage an den Vertrag: "Ich habe Ihnen genehmigt, Token X zu transferieren, bitte tun Sie ...". Dies ist eine Designentscheidung, um den ERC-721-Standard dem ERC-20-Standard ähnlich zu machen. Da ERC-721-Token nicht fungibel sind, kann ein Vertrag auch identifizieren, dass er ein bestimmtes Token erhalten hat, indem er sich das Eigentum des Tokens ansieht.
 
 Schließlich wird `ApprovalForAll` (`owner`, `operator`, `approved`) ausgegeben, wenn ein _Operator_ für einen Eigentümer aktiviert oder deaktiviert wird. Es ist manchmal nützlich, einen Operator zu haben, der alle Token eines Kontos eines bestimmten Typs (diejenigen, die von einem bestimmten Vertrag verwaltet werden) verwalten kann, ähnlich einer Vollmacht. Zum Beispiel möchte ich vielleicht einem Vertrag eine solche Vollmacht geben, der überprüft, ob ich ihn seit sechs Monaten nicht kontaktiert habe, und wenn ja, mein Vermögen an meine Erben verteilt (wenn einer von ihnen danach fragt, Verträge können nichts tun, ohne durch eine Transaktion aufgerufen zu werden). Bei ERC-20 können wir einem Erbvertrag einfach einen hohen Freigabebetrag geben, aber das funktioniert bei ERC-721 nicht, da die Token nicht fungibel sind. Dies ist das Äquivalent. Der `approved`-Wert sagt uns, ob das Ereignis für eine Genehmigung oder den Widerruf einer Genehmigung steht.
-### Zustandsvariablen
+### Zustandsvariablen {#state-vars}
 
 Diese Variablen enthalten den aktuellen Zustand der Token: welche verfügbar sind und wem sie gehören. Die meisten davon sind `HashMap`-Objekte, [unidirektionale Zuordnungen, die zwischen zwei Typen existieren](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -153,7 +153,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Dies sind die Funktionen, die ERC-721 tatsächlich implementieren.
 
-#### Konstruktor
+#### Konstruktor {#constructor}
 
 ```python
 @deploy
@@ -175,7 +175,7 @@ In Python und in Vyper können Sie auch einen Kommentar erstellen, indem Sie ein
 ```
 
 Um auf Zustandsvariablen zuzugreifen, verwenden Sie `self.<variable name>` (wiederum wie in Python). Der Konstruktor zeichnet das Konto, das den Vertrag bereitgestellt hat, als den `minter` auf.
-#### View-Funktionen
+#### View-Funktionen {#views}
 
 Dies sind Funktionen, die den Zustand der Blockchain nicht verändern und daher kostenlos ausgeführt werden können, wenn sie extern aufgerufen werden. Wenn die View-Funktionen von einem Vertrag aufgerufen werden, müssen sie dennoch auf jedem Knoten ausgeführt werden und kosten daher Gas.
 
@@ -276,7 +276,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Diese Funktion überprüft, ob es `_operator` erlaubt ist, alle Token von `_owner` in diesem Vertrag zu verwalten.
 Da es mehrere Operatoren geben kann, ist dies eine zweistufige HashMap.
-#### Transfer-Hilfsfunktionen
+#### Transfer-Hilfsfunktionen {#transfer-helpers}
 
 Diese Funktionen implementieren Operationen, die Teil des Transfers oder der Verwaltung von Token sind.
 
@@ -393,7 +393,7 @@ Wir haben diese interne Funktion, da es zwei Möglichkeiten gibt, Token zu trans
 
 Um ein Ereignis in Vyper auszugeben, verwenden Sie eine `log`-Anweisung ([siehe hier für weitere Details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 Da die Ereignisse zur importierten Schnittstelle gehören, beziehen wir uns auf sie als `IERC721.Transfer` und übergeben ihre Felder per Schlüsselwort.
-#### Transfer-Funktionen
+#### Transfer-Funktionen {#transfer-funs}
 
 ```python
 

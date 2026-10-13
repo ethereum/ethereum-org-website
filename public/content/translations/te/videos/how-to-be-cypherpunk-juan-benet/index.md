@@ -8,7 +8,7 @@ duration: "0:18:00"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "privacy"
 format: presentation
 author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "సైఫర్‌పంక్ ఎలా అవ్వాలి"

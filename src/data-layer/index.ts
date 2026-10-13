@@ -1,29 +1,24 @@
 import type {
   AppData,
   BlockspaceData,
-  Commit,
   CommunityPick,
   EthPriceData,
   EventItem,
   GHIssue,
   GitHubContributorsData,
-  GithubRepoData,
   GrowThePieData,
   GrowThePieMasterData,
   L2beatData,
   MetricReturnData,
   RSSItem,
 } from "@/lib/types"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
 import type { BlobStats } from "./fetchers/fetchBlobStats"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { QuizStatsData } from "./fetchers/fetchQuizStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
-import type { GlossaryEntry } from "./fetchers/fetchTranslationGlossary"
-import { get } from "./storage"
-import { KEYS } from "./tasks"
+import { get, KEYS } from "./storage"
 
 export { KEYS }
 
@@ -34,24 +29,18 @@ export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)
 export const getGrowThePieBlockspaceData = () => get<Record<string, BlockspaceData>>(KEYS.GROW_THE_PIE_BLOCKSPACE)
 export const getGrowThePieMasterData = () => get<GrowThePieMasterData>(KEYS.GROW_THE_PIE_MASTER)
 export const getCommunityPicks = () => get<CommunityPick[]>(KEYS.COMMUNITY_PICKS)
-export const getCalendarEvents = () => get<CommunityEventsReturnType>(KEYS.CALENDAR_EVENTS)
 export const getRSSData = () => get<RSSItem[][]>(KEYS.RSS)
-export const getAttestantPosts = () => get<RSSItem[]>(KEYS.POSTS)
 export const getBlobStats = () => get<BlobStats>(KEYS.BLOB_STATS)
 export const getEthereumMarketcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_MARKETCAP)
-export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
 export const getGasPriceData = () => get<GasPriceData>(KEYS.GAS_PRICE)
 export const getGFIs = () => get<GHIssue[]>(KEYS.GFIS)
-export const getGitHistory = () => get<Commit[]>(KEYS.GIT_HISTORY)
-export const getGithubRepoData = () => get<Record<string, GithubRepoData>>(KEYS.GITHUB_REPO_DATA)
 export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.STABLECOINS_DATA)
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
 export const getStakedPercentageData = () => get<MetricReturnData>(KEYS.STAKED_PERCENTAGE)
-export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
+export const getMeetupImages = () => get<Record<string, string>>(KEYS.MEETUP_IMAGES)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
-export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
 export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)
 export const getVideoThumbnails = () => get<Record<string, string>>(KEYS.VIDEO_THUMBNAILS)
 export const getQuizStats = () => get<QuizStatsData>(KEYS.QUIZ_STATS)

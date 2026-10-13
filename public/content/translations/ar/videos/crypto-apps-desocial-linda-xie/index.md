@@ -7,9 +7,7 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
-  - "dapps"
+  - "use-cases"
 format: presentation
 author: "مؤسسة إيثيريوم"
 breadcrumb: "تطبيقات الكريبتو والشبكات الاجتماعية اللامركزية"

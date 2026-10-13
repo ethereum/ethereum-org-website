@@ -8,10 +8,7 @@ duration: "0:10:56"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "scaling"
-  - "eip-4844"
-  - "dencun"
-  - "upgrades"
+  - "scaling-and-layer-2"
 format: explainer
 author: "ফাইনেম্যাটিক্স"
 breadcrumb: "EIP-4844 এর ব্যাখ্যা"

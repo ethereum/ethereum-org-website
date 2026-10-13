@@ -8,7 +8,6 @@ duration: "0:16:30"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: presentation
 author: "एथेरियम फाउंडेशन"
 breadcrumb: "चीज़ें जो मुझे पसंद हैं"

@@ -7,8 +7,7 @@ uploadDate: 2021-02-19
 duration: "0:17:47"
 educationLevel: beginner
 topic:
-  - "defi"
-  - "history"
+  - "use-cases"
 format: explainer
 author: "芬尼馬蒂克斯"
 breadcrumb: "DeFi 歷史"

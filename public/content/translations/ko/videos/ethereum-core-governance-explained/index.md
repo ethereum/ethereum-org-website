@@ -9,8 +9,7 @@ educationLevel: intermediate
 topic:
   - "how-ethereum-works"
   - "roadmap-and-priorities"
-  - "governance"
-  - "upgrades"
+  - "network-upgrades"
 format: presentation
 author: "이더볼더"
 breadcrumb: "코어 거버넌스"

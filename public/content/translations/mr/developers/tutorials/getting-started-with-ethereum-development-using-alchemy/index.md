@@ -44,7 +44,7 @@ Alchemy वर खाते तयार करणे सोपे आहे, [�
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. कमांड लाईनवरून विनंती करा
+## 3. कमांड लाईनवरून विनंती करा {#make-a-request-from-the-command-line}
 
 जेसॉन-आरपीसी आणि curl वापरून Alchemy द्वारे इथेरियम ब्लॉकचेनशी संवाद साधा.
 
@@ -71,7 +71,7 @@ _**टीप:** `https://eth-mainnet.alchemyapi.io/v2/demo` ला तुमच�
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. तुमचा Web3 क्लायंट सेट करा
+## 4. तुमचा Web3 क्लायंट सेट करा {#set-up-your-web3-client}
 
 **जर तुमच्याकडे आधीपासूनच क्लायंट असेल,** तर तुमचा सध्याचा नोड प्रोव्हायडर URL तुमच्या API की सह Alchemy URL मध्ये बदला: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -101,7 +101,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. तुमची पहिली Web3 स्क्रिप्ट लिहा!
+## 5. तुमची पहिली Web3 स्क्रिप्ट लिहा! {#write-your-first-web3-script}
 
 आता थोड्या Web3 प्रोग्रामिंगचा प्रत्यक्ष अनुभव घेण्यासाठी आपण एक साधी स्क्रिप्ट लिहू जी इथरियम मेननेट मधील नवीनतम ब्लॉक क्रमांक प्रिंट करेल.
 

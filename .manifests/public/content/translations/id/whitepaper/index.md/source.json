@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/whitepaper/index.md",
   "generatedAt": "2026-06-30T01:02:17.263Z",
-  "rootHash": "376cfa692380",
+  "rootHash": "8dda3a783fcc",
   "tree": {
-    "contentHash": "d3c7bc94395a",
-    "anchorHash": "b429ecf90ed3",
+    "contentHash": "120e6ac2ba75",
+    "anchorHash": "b9cc8edcbecc",
     "children": {
       "frontmatter:title": {
         "contentHash": "9c16c962b9f8",
@@ -28,8 +28,14 @@
         "anchorHash": "b5bea41b6c62"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "20b091c1fd2c"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "4614d83b9d32",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "48b4f92b82f3"
+          }
+        }
       },
       "component:6": {
         "contentHash": "e3b0c44298fc",

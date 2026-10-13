@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/pectra-upgrade-overview/index.md",
-  "generatedAt": "2026-04-28T23:52:14.760Z",
-  "rootHash": "11d5e16d6739",
+  "generatedAt": "2026-09-30T18:42:14.900Z",
+  "rootHash": "244cd2ed2fda",
   "tree": {
-    "contentHash": "96b8688b2806",
-    "anchorHash": "f2859f75ec96",
+    "contentHash": "4b34f39ea80a",
+    "anchorHash": "3dd0d3ae3bf8",
     "children": {
       "frontmatter:title": {
-        "contentHash": "705ebff09bf4",
+        "contentHash": "5d1c5cfd1495",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "64173269cdb4",
+        "contentHash": "4df134a7f1f9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "fc1b59a64699"
+        "anchorHash": "c788a18ba467"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ddb2bde71f78"
+        "anchorHash": "6eaad9d2160c"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "231d2624772c",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dd2026a793e9"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "606d69475f2c"
+        "anchorHash": "44eec1fef25a"
       },
       "prose:1": {
         "contentHash": "acbd1afeb800",
@@ -221,5 +227,5 @@
       "qa-2202"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

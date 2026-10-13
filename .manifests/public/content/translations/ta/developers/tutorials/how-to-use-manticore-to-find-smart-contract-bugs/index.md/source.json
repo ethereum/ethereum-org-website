@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md",
   "generatedAt": "2026-06-17T00:14:29.457Z",
-  "rootHash": "f0c62c4ae24d",
+  "rootHash": "60502ac21011",
   "tree": {
-    "contentHash": "3993a732f2fe",
-    "anchorHash": "1c0f8b946453",
+    "contentHash": "ea3e244b03d7",
+    "anchorHash": "8835a5077fcd",
     "children": {
       "frontmatter:title": {
         "contentHash": "21be7c86bea2",
@@ -24,8 +24,37 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "636975d70702",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "cf80cd8aed48",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "7a7068d8981b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -78,13 +78,13 @@ Beide Ansätze werden noch auf ihre Effizienz und Praktikabilität in der Größ
 
 Dies ist ein pragmatischer Ansatz. Nutzer und Wallets, die frühzeitig einen Post-Quanten-Schutz wünschen, können diesen freiwillig übernehmen, während die breitere Migration im Laufe der Zeit stattfindet.
 
-### 4. ZK-Beweise auf Anwendungsebene {#zk-proofs}
+### 4. ZK-Beweise auf der Anwendungsschicht {#zk-proofs}
 
-**Was sie tun**: Zero-Knowledge-Beweissysteme werden von L2-Rollups und anderen Anwendungen verwendet, um Berechnungen zu verifizieren, ohne die zugrunde liegenden Daten preiszugeben.
+**Was sie tun**: Beweissysteme werden von Layer-2-Rollups (L2) verwendet, um Berechnungen zu verifizieren, ohne sie erneut auszuführen, und, wo eine Anwendung die Zero-Knowledge-Eigenschaft implementiert, um Aussagen zu beweisen, ohne die dahinterliegenden privaten Eingaben preiszugeben.
 
 **Warum sie anfällig sind**: Viele beliebte ZK-Beweissysteme (SNARKs, die Paarungen elliptischer Kurven verwenden) beruhen auf quantenanfälligen Annahmen.
 
-**Der Ansatz**: STARKs, die sich auf Hash-Funktionen anstelle von elliptischen Kurven verlassen, sind bereits quantenresistent und werden von mehreren Rollups verwendet. Die natürliche Übernahme von STARK-basierten Systemen im Ökosystem bietet bereits Post-Quanten-Sicherheit auf der Anwendungsebene.
+**Der Ansatz**: STARKs, die sich auf Hash-Funktionen anstelle von elliptischen Kurven verlassen, sind bereits quantenresistent und werden von mehreren Rollups verwendet. Die natürliche Adaption von STARK-basierten Systemen im Ökosystem bietet bereits Post-Quanten-Sicherheit auf der Anwendungsschicht.
 
 ## NIST-Standards {#nist-standards}
 

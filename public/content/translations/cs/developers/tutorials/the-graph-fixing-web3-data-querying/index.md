@@ -15,7 +15,7 @@ Tentokrát se podíváme blíže na The Graph, který se v posledním roce v pod
 
 ## Bez The Graph... {#without-the-graph}
 
-Pro ilustraci si tedy vezměme jednoduchý příklad. Všichni máme rádi hry, takže si představte jednoduchou hru, kde uživatelé uzavírají sázky:
+Pro ilustraci si tedy uveďme jednoduchý příklad. Všichni máme rádi hry, takže si představte jednoduchou hru, kde uživatelé uzavírají sázky:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-Řekněme, že v naší decentralizované aplikaci (dapp) chceme zobrazit celkové sázky, celkový počet prohraných/vyhraných her a také to aktualizovat, kdykoli někdo hraje znovu. Postup by byl následující:
+Řekněme, že v naší decentralizované aplikaci (dapp) chceme zobrazit celkový počet sázek, celkový počet prohraných/vyhraných her a také tyto údaje aktualizovat, kdykoli někdo hraje znovu. Postup by byl následující:
 
 1. Načíst `totalGamesPlayerWon`.
 2. Načíst `totalGamesPlayerLost`.
 3. Přihlásit se k odběru událostí `BetPlaced`.
 
-Můžeme naslouchat [události ve Web3](https://docs.web3js.org/api/web3/class/Contract#events), jak je znázorněno vpravo, ale vyžaduje to ošetření poměrně velkého množství případů.
+Můžeme naslouchat [události ve Web3](https://docs.web3js.org/api/web3/class/Contract#events), jak je znázorněno vpravo, ale to vyžaduje ošetření poměrně velkého množství případů.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -64,17 +64,17 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Pro náš jednoduchý příklad je to stále ještě docela v pořádku. Ale řekněme, že nyní chceme zobrazit částky prohraných/vyhraných sázek pouze pro aktuálního hráče. Máme smůlu, raději byste měli nasadit nový kontrakt, který tyto hodnoty ukládá, a načítat je z něj. A teď si představte mnohem složitější chytrý kontrakt a dapp, věci se mohou rychle zkomplikovat.
+Pro náš jednoduchý příklad je to ještě docela v pořádku. Ale řekněme, že nyní chceme zobrazit částky prohraných/vyhraných sázek pouze pro aktuálního hráče. To máme smůlu, nezbývá než nasadit nový kontrakt, který tyto hodnoty ukládá, a načítat je z něj. A teď si představte mnohem složitější chytrý kontrakt a dapp, situace se může rychle zkomplikovat.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Nelze se prostě jen tak dotazovat](./one-does-not-simply-query.jpg)
 
 Sami vidíte, že to není optimální:
 
-- Nefunguje pro již nasazené kontrakty.
+- Nefunguje to pro již nasazené kontrakty.
 - Dodatečné náklady na gas za ukládání těchto hodnot.
 - Vyžaduje další volání pro načtení dat z uzlu Etherea.
 
-![Thats not good enough](./not-good-enough.jpg)
+![To není dost dobré](./not-good-enough.jpg)
 
 Nyní se podívejme na lepší řešení.
 

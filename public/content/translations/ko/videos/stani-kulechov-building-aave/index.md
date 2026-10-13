@@ -8,7 +8,7 @@ duration: "0:36:34"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "use-cases"
 format: interview
 author: "이더리움 파운데이션"
 breadcrumb: "에이브(Aave) 구축하기"

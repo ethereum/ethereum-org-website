@@ -113,3 +113,40 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - Full-file retranslation re-termed two settled locale words: `Kâhinler` -> `Oracle'lar` (the link target page is still titled `Kâhinler` in tr), and `borç ver/al` -> `ödünç ver/al`.
 - `gizlilik` used for both "secrecy" (negative) and "privacy" (positive) on the same page.
 - None of tr's historical brand failure modes recurred -- no `katillik`, no `MeFi`, no `Müşteri`-for-client.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/tr/page-apps.json`. 2 critical, 11 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: tr not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (tr-specific):**
+
+- "Linting" rendered `Hata ayıklama` (= *debugging*) in a sentence about static analysis -> `[Linting]`. The 3 genuine debugging uses in the same file were left
+- "arbitrary properties" rendered `isteğe bağlı` (= *optional*) -> `keyfi özellikleri`
+
+**Notes:**
+
+- Zero cross-script contamination; the tr Devanagari-leak pattern did not recur.
+- `bulanıklaştırma (fuzzing)` and `ticaret` verified as established tr corpus conventions, not drift. `` `CREATE` işlemi `` is faithful since English says "operation", not "opcode": closes a prior KB open item.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online L162 `araştır` (imperative) -> `araştırır`.
+- open-access `sabit coin` -> `sabitcoin` (4th recurrence after #18772/#19015/#19076).
+
+**Open (warnings):**
+
+- F-Droid `ücretsiz` (#83); `düşük engelli` (low-disabled); proposer `teklifçi` vs glossary `teklif edici` needs one locale call.

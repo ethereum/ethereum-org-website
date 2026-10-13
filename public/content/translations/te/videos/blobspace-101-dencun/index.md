@@ -7,10 +7,8 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "scaling"
-  - "blobs"
-  - "dencun"
-  - "upgrades"
+  - "roadmap-and-priorities"
+  - "scaling-and-layer-2"
 format: interview
 author: "బ్యాంక్‌లెస్"
 breadcrumb: "బ్లాబ్‌స్పేస్ 101"

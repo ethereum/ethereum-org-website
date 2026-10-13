@@ -47,6 +47,7 @@ import {
   MANIFESTS_DIR,
   MAX_PROMPT_BYTES,
   OUTPUT_RATE_USD_PER_1M,
+  REASONING_TOKENS_PER_CALL,
 } from "./constants"
 import { getLlmSectionIds } from "./pipeline"
 
@@ -83,7 +84,6 @@ const outputTokensPerSourceByte = (locale: string) =>
 // incremental updates, so it is modelled per call rather than per byte.
 // Both transports now report thinking: OpenRouter inside completion_tokens,
 // Gemini via thoughtsTokenCount, so this applies to either.
-const REASONING_TOKENS_PER_CALL = 5_200
 
 interface Row {
   file: string

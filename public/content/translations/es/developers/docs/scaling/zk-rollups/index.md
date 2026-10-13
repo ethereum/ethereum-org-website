@@ -12,13 +12,13 @@ Debería haber leído y comprendido nuestra página sobre [escalabilidad de Ethe
 
 ## ¿Qué son los rollups de conocimiento cero? {#what-are-zk-rollups}
 
-Los **rollups de conocimiento cero (ZK-rollups)** agrupan (o 'enrollan') transacciones en lotes que se ejecutan fuera de la cadena. La computación fuera de la cadena reduce la cantidad de datos que deben publicarse en la cadena de bloques. Los operadores de ZK-rollups envían un resumen de los cambios requeridos para representar todas las transacciones en un lote en lugar de enviar cada transacción individualmente. También producen [pruebas de validez](/glossary/#validity-proof) para demostrar la exactitud de sus cambios.
+Los **rollups de conocimiento cero (ZK-rollups)** agrupan (o "enrollan") transacciones en lotes que se ejecutan fuera de la cadena. La computación fuera de la cadena reduce la cantidad de datos que se deben publicar en la cadena de bloques. Los operadores de ZK-rollups envían un resumen de los cambios requeridos para representar todas las transacciones en un lote en lugar de enviar cada transacción individualmente. También producen [pruebas de validez](/glossary/#validity-proof) para demostrar la exactitud de sus cambios.
 
-El estado del ZK-rollup es mantenido por un contrato inteligente implementado en la red de Ethereum. Para actualizar este estado, los nodos del ZK-rollup deben enviar una prueba de validez para su verificación. Como se mencionó, la prueba de validez es una garantía criptográfica de que el cambio de estado propuesto por el rollup es realmente el resultado de ejecutar el lote de transacciones dado. Esto significa que los ZK-rollups solo necesitan proporcionar pruebas de validez para finalizar transacciones en Ethereum en lugar de publicar todos los datos de las transacciones en cadena como los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/).
+El estado del ZK-rollup es mantenido por un contrato inteligente implementado en la red de Ethereum. Para actualizar este estado, los nodos del ZK-rollup deben enviar una prueba de validez para su verificación. Como se mencionó, la prueba de validez es una garantía criptográfica de que el cambio de estado propuesto por el rollup es realmente el resultado de ejecutar el lote de transacciones dado. Esto significa que los ZK-rollups no necesitan publicar todos los datos de las transacciones en cadena de la forma en que lo hacen los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/), ya que la prueba de validez es lo que finaliza la transición de estado. Aún así, publican los datos requeridos para reconstruir el estado del rollup, como se describe a continuación.
 
-No hay demoras al mover fondos de un ZK-rollup a Ethereum porque las transacciones de salida se ejecutan una vez que el contrato del ZK-rollup verifica la prueba de validez. Por el contrario, el retiro de fondos de los rollups optimistas está sujeto a una demora para permitir que cualquiera impugne la transacción de salida con una [prueba de fraude](/glossary/#fraud-proof).
+No hay demoras al mover fondos de un ZK-rollup a Ethereum porque las transacciones de salida se ejecutan una vez que el contrato del ZK-rollup verifica la prueba de validez. Por el contrario, el retiro de fondos de los rollups optimistas está sujeto a una demora para permitir que cualquiera cuestione la transacción de salida con una [prueba de fraude](/glossary/#fraud-proof).
 
-Los ZK-rollups escriben transacciones en Ethereum como `calldata`. `calldata` es donde se almacenan los datos que se incluyen en llamadas externas a funciones de contratos inteligentes. La información en `calldata` se publica en la cadena de bloques, lo que permite a cualquiera reconstruir el estado del rollup de forma independiente. Los ZK-rollups utilizan técnicas de compresión para reducir los datos de las transacciones; por ejemplo, las cuentas se representan mediante un índice en lugar de una dirección, lo que ahorra 28 bytes de datos. La publicación de datos en cadena es un costo significativo para los rollups, por lo que la compresión de datos puede reducir las tarifas para los usuarios.
+Los ZK-rollups escriben transacciones en Ethereum como `calldata` o en [blobs](/roadmap/danksharding/). `calldata` es donde se almacenan los datos que se incluyen en llamadas externas a funciones de contratos inteligentes. De cualquier manera, los datos se publican en la cadena de bloques, lo que permite a cualquiera reconstruir el estado del rollup de forma independiente. Los ZK-rollups utilizan técnicas de compresión para reducir los datos de las transacciones; por ejemplo, las cuentas se representan mediante un índice en lugar de una dirección, lo que ahorra 28 bytes de datos. La publicación de datos en cadena es un costo significativo para los rollups, por lo que la compresión de datos puede reducir las tarifas para los usuarios.
 
 ## ¿Cómo interactúan los ZK-rollups con Ethereum? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ Los ZK-rollups dependen del protocolo principal de Ethereum para lo siguiente:
 
 ### Disponibilidad de datos {#data-availability}
 
-Los ZK-rollups publican datos de estado para cada transacción procesada fuera de la cadena en Ethereum. Con estos datos, es posible que individuos o empresas reproduzcan el estado del rollup y validen la cadena por sí mismos. Ethereum pone estos datos a disposición de todos los participantes de la red como `calldata`.
+Los ZK-rollups publican datos de estado para cada transacción procesada fuera de la cadena en Ethereum. Con estos datos, es posible que individuos o empresas reproduzcan el estado del rollup y validen la cadena por sí mismos. Ethereum pone estos datos a disposición de todos los participantes de la red como `calldata` o en [blobs](/roadmap/danksharding/).
 
-Los ZK-rollups no necesitan publicar muchos datos de transacciones en cadena porque las pruebas de validez ya verifican la autenticidad de las transiciones de estado. Sin embargo, almacenar datos en cadena sigue siendo importante porque permite la verificación independiente y sin permisos del estado de la cadena de L2, lo que a su vez permite a cualquiera enviar lotes de transacciones, evitando que operadores maliciosos censuren o congelen la cadena.
+Los ZK-rollups no necesitan publicar muchos datos de transacciones en cadena porque las pruebas de validez ya verifican la autenticidad de las transiciones de estado. Sin embargo, almacenar datos en cadena sigue siendo importante porque permite la verificación independiente y sin permisos del estado de la cadena de capa 2 (l2), lo que a su vez permite a cualquiera enviar lotes de transacciones, evitando que operadores maliciosos censuren o congelen la cadena.
 
-Estar en cadena es necesario para que los usuarios interactúen con el rollup. Sin acceso a los datos de estado, los usuarios no pueden consultar el saldo de su cuenta ni iniciar transacciones (por ejemplo, retiros) que dependan de la información del estado.
+La disponibilidad en cadena es necesaria para que los usuarios interactúen con el rollup. Sin acceso a los datos de estado, los usuarios no pueden consultar el saldo de su cuenta ni iniciar transacciones (por ejemplo, retiros) que dependan de la información del estado.
 
 ### Finalidad de la transacción {#transaction-finality}
 
@@ -60,11 +60,15 @@ Los usuarios en el ZK-rollup firman transacciones y las envían a los operadores
 
 Otros ZK-rollups pueden rotar el rol de operador utilizando un conjunto de validadores de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/). Los posibles operadores depositan fondos en el contrato del rollup, y el tamaño de cada participación influye en las posibilidades del participante de ser seleccionado para producir el siguiente lote del rollup. La participación del operador puede sufrir un recorte si actúa de forma maliciosa, lo que lo incentiva a publicar bloques válidos.
 
-#### Cómo publican los ZK-rollups los datos de las transacciones en Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Cómo los ZK-rollups publican datos de transacciones en Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Como se explicó, los datos de las transacciones se publican en Ethereum como `calldata`. `calldata` es un área de datos en un contrato inteligente que se utiliza para pasar argumentos a una función y se comporta de manera similar a la [memoria](/developers/docs/smart-contracts/anatomy/#memory). Si bien `calldata` no se almacena como parte del estado de Ethereum, persiste en cadena como parte de los [registros históricos](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) de la cadena de Ethereum. `calldata` no afecta el estado de Ethereum, lo que lo convierte en una forma económica de almacenar datos en cadena.
+Como se explicó, los datos de las transacciones se publican en Ethereum como `calldata`. `calldata` es un área de datos en un contrato inteligente que se utiliza para pasar argumentos a una función y se comporta de manera similar a la [memoria](/developers/docs/smart-contracts/anatomy/#memory). Aunque `calldata` no se almacena como parte del estado de Ethereum, persiste en cadena como parte de los [registros históricos](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) de la cadena de Ethereum. `calldata` no afecta el estado de Ethereum, lo que lo convierte en una forma económica de almacenar datos en cadena.
 
 La palabra clave `calldata` a menudo identifica el método del contrato inteligente que está siendo llamado por una transacción y contiene las entradas al método en forma de una secuencia arbitraria de bytes. Los ZK-rollups utilizan `calldata` para publicar datos de transacciones comprimidos en cadena; el operador del rollup simplemente agrega un nuevo lote llamando a la función requerida en el contrato del rollup y pasa los datos comprimidos como argumentos de la función. Esto ayuda a reducir los costos para los usuarios, ya que una gran parte de las tarifas del rollup se destina a almacenar datos de transacciones en cadena.
+
+Dado que la [actualización Dencun](/roadmap/dencun/) introdujo transacciones que transportan blobs ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), los rollups también pueden publicar sus datos en [blobs](/roadmap/danksharding/), que se cotizan en un mercado de tarifas separado y generalmente son más baratos que `calldata`. Los blobs no son almacenados por la capa de ejecución, y el protocolo define solo una ventana mínima de aproximadamente 18 días durante la cual la red debe servir los datos de los blobs. Esa es una obligación de servicio en lugar de una fecha límite de eliminación: los datos de los blobs no son un almacenamiento de archivo permanente de la forma en que lo es el historial de la capa de ejecución, y el acceso a más largo plazo depende de los servicios de archivo. `calldata` sigue estando disponible, y los rollups difieren en cuál utilizan.
+
+Cualquiera que sea el mecanismo que utilice un rollup, los datos publicados son públicos. Los rollups difieren en lo que publican, algunos publican datos de transacciones comprimidos y otros publican diferencias de estado, pero en ambos casos es suficiente para que cualquiera reconstruya el estado del rollup de forma independiente. La publicación de estos datos es lo que hace posible la verificación sin permisos; no es un mecanismo de privacidad.
 
 ### Compromisos de estado {#state-commitments}
 
@@ -107,6 +111,7 @@ Los ZK-STARKs también son seguros contra computadoras cuánticas, mientras que 
 #### ¿Cómo funcionan las pruebas de validez en los ZK-rollups? {#validity-proofs-in-zk-rollups}
 
 ##### Generación de pruebas
+
 Antes de aceptar transacciones, el operador realizará las comprobaciones habituales. Esto incluye confirmar que:
 
 - Las cuentas del remitente y del receptor forman parte del árbol de estado.
@@ -132,6 +137,7 @@ El proceso se repite para cada transacción; cada "iteración" crea una nueva ra
 El circuito de prueba ZK itera sobre todo el lote de transacciones, verificando la secuencia de actualizaciones que dan como resultado una raíz de estado final después de que se ejecuta la última transacción. La última raíz de Merkle calculada se convierte en la raíz de estado canónica más reciente del ZK-rollup.
 
 ##### Verificación de pruebas
+
 Después de que el circuito de prueba verifica la exactitud de las actualizaciones de estado, el operador de L2 envía la prueba de validez calculada al contrato verificador en L1. El circuito de verificación del contrato verifica la validez de la prueba y también comprueba las entradas públicas que forman parte de la prueba:
 
 - **Raíz de estado previo**: La antigua raíz de estado del ZK-rollup (es decir, antes de que se ejecutaran las transacciones por lotes), que refleja el último estado válido conocido de la cadena de L2.
@@ -174,15 +180,15 @@ Se espera que la introducción de ZK-rollups compatibles con la EVM ayude a los 
 
 ## ¿Cómo funcionan las tarifas de los ZK-rollups? {#how-do-zk-rollup-fees-work}
 
-Cuánto pagan los usuarios por las transacciones en los ZK-rollups depende de la tarifa de gas, al igual que en la red principal de Ethereum. Sin embargo, las tarifas de gas funcionan de manera diferente en L2 y están influenciadas por los siguientes costos:
+Cuánto pagan los usuarios por las transacciones en los ZK-rollups depende de la tarifa de gas, al igual que en la red principal de Ethereum. Sin embargo, las tarifas de gas funcionan de manera diferente en la capa 2 (l2) y están influenciadas por los siguientes costos:
 
 1. **Escritura de estado**: Hay un costo fijo por escribir en el estado de Ethereum (es decir, enviar una transacción en la cadena de bloques de Ethereum). Los ZK-rollups reducen este costo mediante el procesamiento por lotes de transacciones y distribuyendo los costos fijos entre múltiples usuarios.
 
-2. **Publicación de datos**: Los ZK-rollups publican datos de estado para cada transacción en Ethereum como `calldata`. Los costos de `calldata` se rigen actualmente por [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que estipula un costo de 16 de gas para bytes distintos de cero y 4 de gas para bytes cero de `calldata`, respectivamente. El costo pagado en cada transacción está influenciado por la cantidad de `calldata` que debe publicarse en cadena para ella.
+2. **Publicación de datos**: Los ZK-rollups publican datos de estado para cada transacción en Ethereum como `calldata` o en [blobs](/roadmap/danksharding/). El programa de gas intrínseco para `calldata` cobra 16 de gas por byte distinto de cero y 4 de gas por byte cero, una reducción introducida por [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) rige el precio pagado por unidad de gas en lugar del programa de bytes en sí. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) aplica adicionalmente un costo mínimo a las transacciones con gran cantidad de datos, por lo que una transacción dominada por `calldata` puede pagar más que el programa estándar, mientras que las transacciones con gran cantidad de computación no se ven afectadas. El costo pagado en cada transacción está influenciado por la cantidad de datos que deben publicarse en cadena para ella.
 
 3. **Tarifas del operador de L2**: Esta es la cantidad pagada al operador del rollup como compensación por los costos computacionales incurridos en el procesamiento de transacciones, de manera muy similar a las ["tarifas de prioridad (propinas)" de las transacciones](/developers/docs/gas/#how-are-gas-fees-calculated) en la red principal de Ethereum.
 
-4. **Generación y verificación de pruebas**: Los operadores de ZK-rollups deben producir pruebas de validez para los lotes de transacciones, lo que requiere muchos recursos. Verificar pruebas de conocimiento cero en la Red principal también cuesta gas (~ 500.000 de gas).
+4. **Generación y verificación de pruebas**: Los operadores de ZK-rollups deben producir pruebas de validez para los lotes de transacciones, lo que requiere muchos recursos. Verificar pruebas de conocimiento cero en la Red principal también cuesta gas (~ 500,000 de gas).
 
 Aparte del procesamiento por lotes de transacciones, los ZK-rollups reducen las tarifas para los usuarios al comprimir los datos de las transacciones. Puede [ver una descripción general en tiempo real](https://l2fees.info/) de cuánto cuesta usar los ZK-rollups de Ethereum.
 

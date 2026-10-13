@@ -6,24 +6,24 @@ lang: zh
 
 [以太坊](/)的一大优势在于，可以使用对开发者相对友好的语言来编写智能合约。如果你有 Python 或任何[大括号语言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)的经验，你可以找到语法熟悉的语言。
 
-两种最活跃且维护良好的语言是：
+最活跃且维护良好的两种语言是：
 
 - Solidity
 - Vyper
 
-Remix IDE 提供了一个全面的开发环境，用于创建和测试 Solidity 和 Vyper 合约。[尝试使用浏览器中的 Remix IDE](https://remix.ethereum.org) 开始编写代码。
+Remix 集成开发环境 (IDE) 提供了一个全面的开发环境，用于创建和测试 Solidity 和 Vyper 合约。[尝试使用浏览器中的 Remix IDE](https://remix.ethereum.org) 开始编码。
 
 更有经验的开发者可能还想使用 Yul（一种用于[以太坊虚拟机 (EVM)](/developers/docs/evm/)的中间语言）或 Yul+（Yul 的扩展）。
 
-如果你很好奇，并且喜欢帮助测试仍在大量开发中的新语言，你可以尝试使用 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
+如果你很好奇，并且乐于帮助测试仍在大量开发中的新语言，你可以尝试 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
 
 ## 前提条件 {#prerequisites}
 
-具备编程语言（尤其是 JavaScript 或 Python）的基础知识，有助于你理解智能合约语言之间的差异。我们还建议你在深入了解语言比较之前，先理解智能合约的概念。[智能合约简介](/developers/docs/smart-contracts/)。
+具备编程语言（尤其是 JavaScript 或 Python）的基础知识，有助于你理解不同智能合约语言之间的差异。我们还建议你在深入比较语言之前，先了解智能合约的概念。[智能合约简介](/developers/docs/smart-contracts/)。
 
 ## Solidity {#solidity}
 
-- 用于实现智能合约的面向对象的高级语言。
+- 用于实现智能合约的面向对象高级语言。
 - 受 C++ 影响最深的大括号语言。
 - 静态类型（变量的类型在编译时已知）。
 - 支持：
@@ -83,25 +83,27 @@ contract Coin {
 }
 ```
 
-这个示例应该能让你对 Solidity 合约的语法有所了解。有关函数和变量的更详细描述，[请参阅文档](https://docs.soliditylang.org/en/latest/contracts.html)。
+这个示例应该能让你对 Solidity 合约的语法有所了解。有关函数和变量的更详细说明，[请参阅文档](https://docs.soliditylang.org/en/latest/contracts.html)。
 
 ## Vyper {#vyper}
 
 - Python 风格的编程语言
 - 强类型
-- 编译器代码小巧易懂
+- 编译器代码小巧且易于理解
 - 高效的字节码生成
-- 故意减少了比 Solidity 更多的功能，旨在使合约更安全、更容易审计。Vyper 不支持：
-  - 修饰符
+- 故意减少了功能（与 Solidity 相比），旨在使合约更安全、更易于审计。Vyper 不支持：
+  - 修饰符 (Modifiers)
   - 继承
   - 内联汇编
   - 函数重载
   - 运算符重载
   - 递归调用
-  - 无限长度循环
+  - 无限循环
   - 二进制定点数
 
-欲了解更多信息，[请阅读 Vyper 的设计原理](https://vyper.readthedocs.io/en/latest/index.html)。
+从 v0.4.0 开始，Vyper 支持[模块系统](https://docs.vyperlang.org/en/stable/using-modules.html)。代码重用是通过组合而不是类继承来实现的。
+
+有关更多信息，请[阅读 Vyper 的设计原理](https://vyper.readthedocs.io/en/latest/index.html)。
 
 ### 重要链接 {#important-links-1}
 
@@ -123,7 +125,7 @@ contract Coin {
 # 公开拍卖
 
 # 拍卖参数
-# 受益人从最高出价者处收到资金
+# 受益人从最高出价者那里收到资金
 beneficiary: public(address)
 auctionStart: public(uint256)
 auctionEnd: public(uint256)
@@ -141,16 +143,16 @@ pendingReturns: public(HashMap[address, uint256])
 # 创建一个简单的拍卖，竞价时间为 `_bidding_time`
 # 秒，代表
 # 受益人地址 `_beneficiary`。
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# 使用与此交易一起发送的
-# 价值对拍卖进行出价。
+# 使用发送的价值参与拍卖竞价
+# （该价值与此交易一起发送）。
 # 仅当未赢得拍卖时，
-# 该价值才会被退还。
+# 才会退还该价值。
 @external
 @payable
 def bid():
@@ -165,8 +167,8 @@ def bid():
     self.highestBid = msg.value
 
 # 提取先前退还的出价。此处使用提款模式
-# 是为了避免安全问题。如果退款作为 bid() 的一部分直接
-# 发送，恶意的竞价合约可能会阻止
+# 是为了避免安全问题。如果退款直接
+# 作为 bid() 的一部分发送，恶意的竞价合约可能会阻止
 # 这些退款，从而阻止新的更高出价进入。
 @external
 def withdraw():
@@ -178,15 +180,15 @@ def withdraw():
 # 发送给受益人。
 @external
 def endAuction():
-    # 将交互的函数结构化是一个很好的准则
-    # （与其他合约交互，即调用函数或发送以太币）
+    # 将发生交互的函数结构化是一个很好的准则
+    # 与其他合约交互（即它们调用函数或发送以太币）
     # 分为三个阶段：
     # 1. 检查条件
     # 2. 执行操作（可能会改变条件）
     # 3. 与其他合约交互
-    # 如果这些阶段混合在一起，其他合约可能会回调
-    # 到当前合约中并修改状态或导致
-    # 多次执行效果（以太币支付）。
+    # 如果这些阶段混合在一起，另一个合约可能会回调
+    # 到当前合约中并修改状态，或者导致
+    # 效果（以太币支付）被多次执行。
     # 如果内部调用的函数包含与外部
     # 合约的交互，它们也必须被视为与
     # 外部合约的交互。
@@ -204,11 +206,11 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-这个示例应该能让你对 Vyper 合约的语法有所了解。有关函数和变量的更详细描述，[请参阅文档](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
+这个示例应该能让你对 Vyper 合约的语法有所了解。有关函数和变量的更详细说明，[请参阅文档](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
 
 ## Yul 和 Yul+ {#yul}
 
-如果你是以太坊新手，并且还没有使用智能合约语言编写过任何代码，我们建议你从 Solidity 或 Vyper 开始。只有当你熟悉了智能合约安全最佳实践以及使用 EVM 的具体细节后，再去研究 Yul 或 Yul+。
+如果你刚接触以太坊，并且还没有使用智能合约语言编写过任何代码，我们建议你从 Solidity 或 Vyper 开始。只有当你熟悉了智能合约安全最佳实践以及使用以太坊虚拟机 (EVM) 的具体细节后，再去研究 Yul 或 Yul+。
 
 **Yul**
 
@@ -218,7 +220,7 @@ def endAuction():
 
 **Yul+**
 
-- Yul 的一种低级、高效的扩展。
+- Yul 的一种底层、高效的扩展。
 - 最初是为[乐观 Rollup](/developers/docs/scaling/optimistic-rollups/) 合约设计的。
 - Yul+ 可以被视为 Yul 的实验性升级提案，为其添加了新功能。
 
@@ -230,7 +232,7 @@ def endAuction():
 
 ### 示例合约 {#example-contract-2}
 
-以下简单示例实现了一个幂函数。可以使用 `solc --strict-assembly --bin input.yul` 进行编译。该示例应存储在 input.yul 文件中。
+以下简单示例实现了一个幂函数。可以使用 `solc --strict-assembly --bin input.yul` 对其进行编译。该示例应存储在 input.yul 文件中。
 
 ```
 {
@@ -251,7 +253,7 @@ def endAuction():
 }
 ```
 
-如果你已经对智能合约有丰富的经验，可以在[这里](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)找到 Yul 中完整的 ERC-20 实现。
+如果你在智能合约方面已经经验丰富，可以在[此处](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)找到 Yul 编写的完整 ERC-20 实现。
 
 ## Fe {#fe}
 
@@ -292,13 +294,13 @@ contract GuestBook:
 
 ## 如何选择 {#how-to-choose}
 
-与任何其他编程语言一样，这主要取决于为合适的工作选择合适的工具，以及个人的偏好。
+与其他任何编程语言一样，这主要取决于为合适的工作选择合适的工具，以及个人的偏好。
 
-如果你还没有尝试过任何一种语言，这里有一些需要考虑的事情：
+如果你还没有尝试过任何一种语言，以下是一些需要考虑的事项：
 
 ### Solidity 有什么优点？ {#solidity-advantages}
 
-- 如果你是初学者，外面有很多教程和学习工具。在[通过编码学习](/developers/learning-tools/)部分查看更多相关信息。
+- 如果你是初学者，外面有很多教程和学习工具。请在[通过编码学习](/developers/learning-tools/)部分查看更多相关信息。
 - 拥有良好的开发者工具。
 - Solidity 拥有庞大的开发者社区，这意味着你很可能很快就能找到问题的答案。
 
@@ -310,14 +312,14 @@ contract GuestBook:
 
 ### Yul 和 Yul+ 有什么优点？ {#yul-advantages}
 
-- 简单且实用的低级语言。
-- 允许更接近原生 EVM，这有助于优化合约的 Gas 使用。
+- 简单实用的底层语言。
+- 允许更接近原始 EVM，这有助于优化合约的 Gas 使用。
 
 ## 语言比较 {#language-comparisons}
 
-有关基本语法、合约生命周期、接口、运算符、数据结构、函数、控制流等方面的比较，请查看这份 [Auditless 制作的速查表](https://reference.auditless.com/cheatsheet/)。
+有关基本语法、合约生命周期、接口、运算符、数据结构、函数、控制流等方面的比较，请查看 [Auditless 提供的速查表](https://reference.auditless.com/cheatsheet/)。
 
 ## 延伸阅读 {#further-reading}
 
-- [欧本齐柏林 (OpenZeppelin) 的 Solidity 合约库](https://docs.openzeppelin.com/contracts/5.x/)
+- [欧本齐柏林 提供的 Solidity 合约库](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity 示例](https://solidity-by-example.org)

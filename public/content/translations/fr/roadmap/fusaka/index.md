@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Découvrez la mise à jour du protocole Fusaka
+description: "Découvrez la mise à jour du protocole Fusaka"
 lang: fr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ La mise à jour Fusaka n'est qu'une étape parmi les objectifs de développement
 
 C'est la _tête d'affiche_ du fork Fusaka, la fonctionnalité principale ajoutée dans cette mise à jour. Les couches 2 (l2) publient actuellement leurs données sur Ethereum sous forme de blobs, le type de données éphémère créé spécifiquement pour les couches 2. Avant Fusaka, chaque nœud complet devait stocker chaque blob pour s'assurer que les données existaient. À mesure que le débit des blobs augmente, devoir télécharger toutes ces données devient insoutenable en termes de ressources.
 
-Avec l'[échantillonnage de la disponibilité des données](https://notes.ethereum.org/@fradamt/das-fork-choice), au lieu de devoir stocker toutes les données des blobs, chaque nœud sera responsable d'un sous-ensemble des données de blob. Les blobs sont distribués de manière uniformément aléatoire sur les nœuds du réseau, chaque nœud complet ne détenant qu'un huitième (1/8) des données, ce qui permet une mise à l'échelle théorique jusqu'à 8x. Pour garantir la disponibilité des données, n'importe quelle portion des données peut être reconstruite à partir de n'importe quel 50 % existant de l'ensemble, avec des méthodes qui réduisent la probabilité de données erronées ou manquantes à un niveau cryptographiquement négligeable (~une sur 10<sup>20</sup> à une sur 10<sup>24</sup>).
+Avec l'[échantillonnage de la disponibilité des données](https://notes.ethereum.org/@fradamt/das-fork-choice), au lieu de devoir stocker toutes les données des blobs, chaque nœud sera responsable d'un sous-ensemble des données de blob. Les blobs sont distribués de manière uniformément aléatoire sur les nœuds du réseau, chaque nœud complet ne détenant qu'un huitième (1/8) des données, ce qui permet une mise à l'échelle théorique jusqu'à 8x. Pour garantir la disponibilité des données, n'importe quelle portion des données peut être reconstruite à partir de n'importe quel 50 % existant de l'ensemble, avec des méthodes qui réduisent la probabilité de données erronées ou manquantes à un niveau cryptographiquement négligeable (\~une sur 10<sup>20</sup> à une sur 10<sup>24</sup>).
 
 Cela permet de maintenir les exigences matérielles et de bande passante des nœuds à un niveau acceptable tout en permettant la mise à l'échelle des blobs, ce qui se traduit par une plus grande capacité de mise à l'échelle avec des frais réduits pour les couches 2.
 
@@ -137,9 +137,9 @@ L'objectif est de limiter le temps de propagation/validation dans le pire des ca
 
 Avant d'augmenter la limite de gaz de 30M à 36M en février 2025 (puis à 45M), cette valeur n'avait pas changé depuis La Fusion (septembre 2022). Cet EIP vise à faire de la mise à l'échelle cohérente une priorité.
 
-L'EIP-7935 coordonne les équipes clientes de la couche d'exécution pour augmenter la limite de gaz par défaut au-dessus des 45M actuels pour Fusaka. Il s'agit d'un EIP informatif, mais il demande explicitement aux clients de tester des limites plus élevées sur les devnets, de converger vers une valeur sûre et d'intégrer ce nombre dans leurs versions Fusaka.
+L'EIP-7935 a coordonné les équipes clientes de la couche d'exécution pour augmenter la limite de gaz par défaut au-dessus des 45M qui précédaient Fusaka. Il s'agit d'un EIP informatif, mais il a explicitement demandé aux clients de tester des limites plus élevées sur les devnets, de converger vers une valeur sûre et d'intégrer ce nombre dans leurs versions pour Fusaka.
 
-La planification sur devnet vise un stress d'environ 60M (blocs pleins avec charge synthétique) et des augmentations itératives ; la recherche indique que les pathologies de taille de bloc dans le pire des cas ne devraient pas être contraignantes en dessous d'environ 150M. Le déploiement doit être associé au plafond de la limite de gaz par transaction (EIP-7825) afin qu'aucune transaction unique ne puisse dominer à mesure que les limites augmentent.
+Les tests sur devnet visaient environ 60M sous contrainte (blocs pleins avec une charge synthétique) avec des augmentations itératives ; la recherche indique que les pathologies de taille de bloc dans le pire des cas ne devraient pas poser de problème en dessous d'environ 150M. Le déploiement a été associé au plafond de la limite de gaz par transaction (EIP-7825) afin qu'aucune transaction unique ne puisse dominer à mesure que les limites augmentent. Les clients ont intégré 60M comme valeur par défaut pour Fusaka.
 
 **Ressources** : [Spécification technique de l'EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -251,9 +251,9 @@ Les nœuds réguliers sans aucun validateur ne s'abonneront qu'à 4 sous-réseau
 
 #### Stakers en solo {#solo-stakers}
 
-Si le nœud est utilisé pour un client validateur, il doit conserver plus de colonnes et donc traiter plus de données. Avec un validateur ajouté, le nœud s'abonne à au moins 8 sous-réseaux de colonnes et traite donc deux fois plus de données qu'un nœud régulier, mais toujours moins qu'avant Fusaka. Si le solde du validateur est supérieur à 287 ETH, il s'abonnera à de plus en plus de sous-réseaux.
+Si le nœud est utilisé pour un client validateur, il doit conserver plus de colonnes et donc traiter plus de données. Avec l'ajout d'un validateur, le nœud s'abonne à au moins 8 sous-réseaux de colonnes et traite donc deux fois plus de données qu'un nœud régulier, mais toujours moins qu'avant Fusaka. Si le solde du validateur est supérieur à 287 ETH, il s'abonnera à de plus en plus de sous-réseaux.
 
-Pour un staker en solo, cela signifie que son utilisation du disque et sa bande passante de téléchargement diminueront d'environ 50 %. Cependant, pour construire des blocs localement et télécharger tous les blobs sur le réseau, une plus grande bande passante d'envoi (upload) est nécessaire. Les constructeurs locaux auront besoin d'une bande passante d'envoi 2 à 3 fois plus élevée qu'auparavant au moment de Fusaka et avec la cible BPO2 de 15/21 blobs, la bande passante d'envoi finale nécessaire devra être environ 5 fois plus élevée, à 100 Mbps.
+Pour un staker en solo, cela signifie que son utilisation du disque et sa bande passante de téléchargement diminueront d'environ 50 %. Cependant, pour construire des blocs localement et envoyer tous les blobs sur le réseau, une plus grande bande passante d'envoi est nécessaire. Les constructeurs locaux auront besoin d'une bande passante d'envoi 2 à 3 fois supérieure à celle d'avant au moment de Fusaka et avec la cible BPO2 de 15/21 blobs, la bande passante d'envoi finale nécessaire devra être environ 5 fois plus élevée, à 100 Mbps.
 
 #### Grands validateurs {#large-validators}
 

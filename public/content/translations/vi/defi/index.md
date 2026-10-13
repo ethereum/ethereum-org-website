@@ -102,9 +102,9 @@ Là một chuỗi khối, Ethereum được thiết kế để gửi các giao d
 
 #### Truyền phát tiền trên toàn cầu... {#stream-money}
 
-Bạn cũng có thể truyền phát (stream) tiền qua Ethereum. Điều này cho phép bạn trả lương cho ai đó theo từng giây, cho phép họ truy cập vào tiền của mình bất cứ khi nào họ cần. Hoặc thuê một thứ gì đó theo từng giây như tủ đựng đồ hoặc xe máy điện.
+Bạn cũng có thể truyền phát (stream) tiền trên Ethereum. Thay vì gửi một khoản thanh toán lớn, các khoản thanh toán dạng truyền phát sẽ chuyển các số tiền nhỏ liên tục theo thời gian. Điều này cho phép bạn trả lương cho ai đó theo từng giây, giúp họ có thể tiếp cận tiền của mình bất cứ khi nào họ cần. Nó cũng có thể được sử dụng để thanh toán cho các dịch vụ được tính phí liên tục, chẳng hạn như thuê tủ đựng đồ hoặc xe máy điện.
 
-Và nếu bạn không muốn gửi hoặc truyền phát [ETH](/glossary/#ether) vì giá trị của nó có thể thay đổi nhiều như thế nào, thì có các loại tiền tệ thay thế trên Ethereum: [stablecoin](/glossary/#stablecoin).
+Và nếu bạn không muốn gửi hoặc truyền phát [ETH](/glossary/#ether) vì giá trị của nó có thể thay đổi nhiều, thì có các loại tiền tệ thay thế trên Ethereum: [stablecoin](/glossary/#stablecoin).
 
 <Divider />
 

@@ -7,9 +7,6 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam adalah peningkatan Ethereum mendatang yang direncanakan untuk Q4 2026
-</AlertTitle>
 <AlertDescription>
 Peningkatan Glamsterdam hanyalah satu langkah dalam tujuan pengembangan jangka panjang Ethereum. Pelajari lebih lanjut tentang [peta jalan protokol](/roadmap/) dan [peningkatan sebelumnya](/ethereum-forks/).
 </AlertDescription>
@@ -18,31 +15,31 @@ Peningkatan Glamsterdam hanyalah satu langkah dalam tujuan pengembangan jangka p
 
 Peningkatan Glamsterdam [Ethereum](/) yang akan datang dirancang untuk membuka jalan bagi generasi penskalaan berikutnya. Glamsterdam dinamai dari kombinasi "Amsterdam" (peningkatan lapisan eksekusi, dinamai dari lokasi Devconnect sebelumnya) dan "Gloas" (peningkatan lapisan konsensus, dinamai dari sebuah bintang).
 
-Mengikuti kemajuan yang dicapai dalam peningkatan [Fusaka](/roadmap/fusaka/), Glamsterdam berfokus pada penskalaan lapisan 1 (l1) dengan mengatur ulang cara jaringan memproses transaksi dan mengelola basis datanya yang terus berkembang, yang secara fundamental memperbarui cara Ethereum membuat dan memverifikasi blok.
+Mengikuti kemajuan yang dibuat dalam peningkatan [Fusaka](/roadmap/fusaka/), Glamsterdam berfokus pada penskalaan lapisan 1 (l1) dengan mengatur ulang cara jaringan memproses transaksi dan mengelola basis datanya yang terus berkembang, yang secara mendasar memperbarui cara Ethereum membuat dan memverifikasi blok.
 
-Sementara Fusaka berfokus pada penyempurnaan mendasar, Glamsterdam memajukan tujuan "Skalakan L1" dan "Skalakan Blob" dengan mengabadikan pemisahan tugas di antara berbagai peserta jaringan, dan memperkenalkan cara yang lebih efisien untuk menangani data guna mempersiapkan [state](/glossary/#state) untuk paralelisasi laju pemrosesan tinggi.
+Sementara Fusaka berfokus pada penyempurnaan dasar, Glamsterdam memajukan tujuan "Skalakan lapisan 1 (l1)" dan "Skalakan Blob" dengan mengabadikan pemisahan tugas di antara berbagai peserta jaringan, dan memperkenalkan cara yang lebih efisien untuk menangani data guna mempersiapkan [state](/glossary/#state) untuk paralelisasi laju pemrosesan tinggi.
 
 Peningkatan ini memastikan Ethereum tetap cepat, terjangkau, dan terdesentralisasi saat menangani lebih banyak aktivitas, sambil menjaga persyaratan perangkat keras tetap dapat dikelola oleh orang-orang yang menjalankan [node](/glossary/#node) di rumah.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Peningkatan yang dipertimbangkan untuk Glamsterdam {#improvements-in-glamsterdam}
+## Peningkatan di Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Catatan: Artikel ini menyoroti pilihan EIP yang dijadwalkan untuk disertakan dalam Glamsterdam. Proposal terjadwal tambahan yang sedang diuji di devnet meliputi EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, dan EIP-8282. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Catatan: Artikel ini menyoroti pilihan Proposal Peningkatan Ethereum (EIP) yang dijadwalkan untuk disertakan dalam Glamsterdam. Proposal terjadwal tambahan yang sedang diuji di devnet meliputi EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, dan EIP-8282. Cakupan telah dibekukan tetapi masih dapat berubah sebelum Mainnet, karena meta EIP masih dalam bentuk draf. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi pada ethereum.org di sini](/contributing/).
+Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi ke ethereum.org di sini](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 Peningkatan Glamsterdam berpusat pada tiga tujuan utama:
 
-- Mempercepat pemrosesan (paralelisasi): Mengatur ulang cara jaringan mencatat dependensi data, sehingga dapat memproses banyak transaksi secara bersamaan dengan aman alih-alih dalam urutan satu per satu yang lambat.
+- Mempercepat pemrosesan (paralelisasi): Mengatur ulang cara jaringan mencatat dependensi data, sehingga dapat memproses banyak transaksi dengan aman pada saat yang sama alih-alih dalam urutan satu per satu yang lambat.
 - Memperluas kapasitas: Membagi tugas berat dalam membuat dan memverifikasi blok, memberi jaringan lebih banyak waktu untuk menyebarkan jumlah data yang lebih besar tanpa melambat.
-- Mencegah pembengkakan basis data (keberlanjutan): Menyesuaikan biaya jaringan untuk secara akurat mencerminkan biaya perangkat keras jangka panjang dari penyimpanan data baru, membuka blokir peningkatan batas gas di masa mendatang sambil mencegah penurunan kinerja perangkat keras.
+- Mencegah pembengkakan basis data (keberlanjutan): Menyesuaikan biaya jaringan untuk secara akurat mencerminkan biaya perangkat keras jangka panjang dari penyimpanan data baru, membuka jalan bagi peningkatan batas gas di masa mendatang sambil mencegah penurunan kinerja perangkat keras.
 
 Singkatnya, Glamsterdam akan memperkenalkan perubahan struktural untuk memastikan bahwa seiring dengan peningkatan kapasitas jaringan, jaringan tersebut tetap berkelanjutan dan kinerjanya tetap tinggi.
 

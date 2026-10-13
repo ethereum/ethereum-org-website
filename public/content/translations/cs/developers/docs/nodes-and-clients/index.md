@@ -158,7 +158,7 @@ Rozsáhlá [dokumentace](https://besu.hyperledger.org/en/stable/) Besu vás prov
 Erigon, dříve známý jako Turbo-Geth, začal jako fork Go Etherea orientovaný na rychlost a efektivitu využití místa na disku. Erigon je kompletně přepracovaná implementace Etherea, v současnosti napsaná v jazyce Go, ale s implementacemi v dalších jazycích ve vývoji. Cílem Erigonu je poskytnout rychlejší, modulárnější a optimalizovanější implementaci Etherea. Dokáže provést plnou synchronizaci archivního uzlu s využitím přibližně 2 TB místa na disku za méně než 3 dny.
 
 
-### ethrex
+### ethrex {#ethrex}
 
 ethrex je minimalistický, modulární exekuční klient Etherea napsaný v jazyce Rust a vyvíjený společností LambdaClass. Je postaven s ohledem na dokazování s nulovou znalostí a stejná kódová základna může běžet jak jako exekuční klient l1, tak jako ZK-Rollup s více dokazovateli (l2). Má dvojí licenci pod licencemi Apache 2.0 a MIT.
 

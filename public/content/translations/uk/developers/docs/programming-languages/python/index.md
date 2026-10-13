@@ -55,7 +55,7 @@ incomplete: true
 
 ## Проєкти та інструменти Python {#python-projects-and-tools}
 
-### Активні:
+### Активні: {#active}
 - [Web3.py](https://github.com/ethereum/web3.py) — _бібліотека Python для взаємодії з Етеріумом_
 - [Vyper](https://github.com/ethereum/vyper/) — _мова смарт-контрактів у стилі Python для EVM_
 - [Titanoboa](https://github.com/vyperlang/titanoboa/) — _власний інструмент тестування Vyper; інтерпретатор із форкінгом Головної мережі, налагодженням та зручним трасуванням_

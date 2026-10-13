@@ -18,24 +18,24 @@ Lisez la suite pour plus de détails...
 
 ### Récompenses {#rewards-2}
 
-Les validateurs reçoivent des récompenses lorsqu'ils émettent des votes qui sont cohérents avec la majorité des autres validateurs, lorsqu'ils proposent des blocs et lorsqu'ils participent à des comités de synchronisation. La valeur des récompenses à chaque époque est calculée à partir d'une `base_reward`. Il s'agit de l'unité de base à partir de laquelle les autres récompenses sont calculées. La `base_reward` représente la récompense moyenne reçue par un validateur dans des conditions optimales par époque. Elle est calculée à partir du solde effectif du validateur et du nombre total de validateurs actifs comme suit :
+Les validateurs reçoivent des récompenses lorsqu'ils effectuent des votes qui sont cohérents avec la majorité des autres validateurs, lorsqu'ils proposent des blocs et lorsqu'ils participent à des comités de synchronisation. La valeur des récompenses à chaque époque est calculée à partir d'une `base_reward` (récompense de base). Il s'agit de l'unité de base à partir de laquelle les autres récompenses sont calculées. La `base_reward` représente la récompense moyenne reçue par un validateur dans des conditions optimales par époque. Elle est calculée à partir du solde effectif du validateur et du nombre total de validateurs actifs comme suit :
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-où `base_reward_factor` est 64, `base_rewards_per_epoch` est 4 et `sum(active balance)` est le total d'ether mis en jeu par l'ensemble des validateurs actifs.
+où `base_reward_factor` est 64, `base_rewards_per_epoch` est 4 et `sum(active balance)` est le total d'ether mis en jeu par tous les validateurs actifs.
 
-Cela signifie que la récompense de base est proportionnelle au solde effectif du validateur et inversement proportionnelle au nombre de validateurs sur le réseau. Plus il y a de validateurs, plus l'émission globale est importante (car `sqrt(N)`) mais plus la `base_reward` par validateur est faible (car `1/sqrt(N)`). Ces facteurs influencent l'APR pour un nœud de staking. Lisez la justification de cela dans les [notes de Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Cela signifie que la récompense de base est proportionnelle au solde effectif du validateur et inversement proportionnelle au nombre de validateurs sur le réseau. Plus il y a de validateurs, plus l'émission globale est importante (en `sqrt(N)`) mais plus la `base_reward` par validateur est faible (en `1/sqrt(N)`). Ces facteurs influencent l'APR d'un nœud de staking. Lisez la justification de cela dans les [notes de Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
-La récompense totale est ensuite calculée comme la somme de cinq composantes qui ont chacune une pondération déterminant la contribution de chaque composante à la récompense totale. Les composantes sont :
+La récompense totale est ensuite calculée comme la somme de cinq composantes qui ont chacune une pondération déterminant combien chaque composante ajoute à la récompense totale. Les composantes sont :
 
-```
-1. vote source : le validateur a voté à temps pour le bon point de contrôle source
-2. vote cible : le validateur a voté à temps pour le bon point de contrôle cible
-3. vote de tête : le validateur a voté à temps pour le bon bloc de tête
-4. récompense du comité de synchronisation : le validateur a participé à un comité de synchronisation
-5. récompense du proposeur : le validateur a proposé un bloc dans le bon créneau
+```text
+1. vote source : le validateur a effectué un vote à temps pour le point de contrôle source correct
+2. vote cible : le validateur a effectué un vote à temps pour le point de contrôle cible correct
+3. vote de tête : le validateur a effectué un vote à temps pour le bloc de tête correct
+4. récompense de comité de synchronisation : le validateur a participé à un comité de synchronisation
+5. récompense de proposeur : le validateur a proposé un bloc dans le créneau correct
 ```
 
 Les pondérations pour chaque composante sont les suivantes :
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-La somme de ces pondérations est de 64. La récompense est calculée comme la somme des pondérations applicables divisée par 64. Un validateur qui a effectué des votes source, cible et de tête en temps opportun, proposé un bloc et participé à un comité de synchronisation pourrait recevoir `64/64 * base_reward == base_reward`. Cependant, un validateur n'est généralement pas un proposeur de bloc, sa récompense maximale est donc de `64-8 /64 * base_reward == 7/8 * base_reward`. Les validateurs qui ne sont ni des proposeurs de blocs ni dans un comité de synchronisation peuvent recevoir `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+La somme de ces pondérations est de 64. La récompense est calculée comme la somme des pondérations applicables divisée par 64. Un validateur qui a effectué des votes source, cible et de tête à temps, proposé un bloc et participé à un comité de synchronisation pourrait recevoir `64/64 * base_reward == base_reward`. Cependant, un validateur n'est généralement pas un proposeur de bloc, donc sa récompense maximale est `64-8 /64 * base_reward == 7/8 * base_reward`. Les validateurs qui ne sont ni des proposeurs de bloc ni dans un comité de synchronisation peuvent recevoir `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Une récompense supplémentaire est ajoutée pour encourager les attestations rapides. Il s'agit de la `inclusion_delay_reward`. Sa valeur est égale à la `base_reward` multipliée par `1/delay` où `delay` est le nombre de créneaux séparant la proposition de bloc et l'attestation. Par exemple, si l'attestation est soumise dans le créneau suivant la proposition de bloc, l'attestateur reçoit `base_reward * 1/1 == base_reward`. Si l'attestation arrive dans le créneau d'après, l'attestateur reçoit `base_reward * 1/2` et ainsi de suite.
+Une récompense supplémentaire est ajoutée pour encourager les attestations rapides. Il s'agit de la `inclusion_delay_reward`. Sa valeur est égale à la `base_reward` multipliée par `1/delay` où `delay` est le nombre de créneaux séparant la proposition de bloc et l'attestation. Par exemple, si l'attestation est soumise dans un délai d'un créneau après la proposition de bloc, l'attestateur reçoit `base_reward * 1/1 == base_reward`. Si l'attestation arrive dans le créneau suivant, l'attestateur reçoit `base_reward * 1/2` et ainsi de suite.
 
-Les proposeurs de blocs reçoivent `8 / 64 * base_reward` pour **chaque attestation valide** incluse dans le bloc, de sorte que la valeur réelle de la récompense évolue avec le nombre de validateurs attestant. Les proposeurs de blocs peuvent également augmenter leur récompense en incluant des preuves de mauvais comportement d'autres validateurs dans le bloc qu'ils proposent. Ces récompenses sont les « carottes » qui encouragent l'honnêteté des validateurs. Un proposeur de bloc qui inclut une réduction sera récompensé par la `slashed_validators_effective_balance / 512`.
+Les proposeurs de bloc reçoivent `8 / 64 * base_reward` pour **chaque attestation valide** incluse dans le bloc, de sorte que la valeur réelle de la récompense évolue avec le nombre de validateurs attestataires. Les proposeurs de bloc peuvent également augmenter leur récompense en incluant des preuves de mauvais comportement d'autres validateurs dans leur bloc proposé. Ces récompenses sont les « carottes » qui encouragent l'honnêteté des validateurs. Un proposeur de bloc qui inclut une réduction sera récompensé par le `slashed_validators_effective_balance / 512`.
 
 ### Sanctions {#penalties}
 

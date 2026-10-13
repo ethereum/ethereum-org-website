@@ -29,7 +29,7 @@ Aqui estão alguns dos padrões de token mais populares no Ethereum:
 
 A lista completa de propostas [ERC](https://eips.ethereum.org/erc).
 
-## Leitura adicional
+## Leitura adicional {#further-reading}
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
 

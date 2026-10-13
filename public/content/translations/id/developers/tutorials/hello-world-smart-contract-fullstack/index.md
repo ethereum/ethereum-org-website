@@ -32,7 +32,7 @@ Jika Anda memiliki pertanyaan kapan saja, jangan ragu untuk menghubungi kami di 
 
 Ada banyak cara untuk membuat permintaan ke rantai Ethereum. Untuk mempermudah, kita akan menggunakan akun gratis di Alchemy, sebuah platform pengembang rantai blok dan API yang memungkinkan kita untuk berkomunikasi dengan rantai Ethereum tanpa harus menjalankan node sendiri. Alchemy juga memiliki alat pengembang untuk pemantauan dan analitik; kita akan memanfaatkan alat-alat ini dalam tutorial ini untuk memahami bagaimana cara kerjanya secara teknis dalam penyebaran kontrak pintar kita.
 
-### Buat aplikasi dan kunci API Anda
+### Buat aplikasi dan kunci API Anda {#create-your-app-and-api-key}
 Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat aplikasi. Ini akan memungkinkan Anda untuk membuat permintaan ke testnet Sepolia. Jika Anda belum familier dengan testnet, Anda dapat [membaca panduan Alchemy tentang cara memilih jaringan](https://www.alchemy.com/docs/choosing-a-web3-network).
 
 Pada dasbor Alchemy, temukan dropdown **Apps** di bilah navigasi dan klik **Create App**.
@@ -46,11 +46,11 @@ Beri nama aplikasi Anda '_Hello World_' dan tulis deskripsi singkat. Pilih **Sta
 _Catatan: pastikan untuk memilih **Sepolia**, atau tutorial ini tidak akan berfungsi._
 
 Klik **Create app**. Aplikasi Anda akan muncul di tabel di bawah ini.
-### Membuat akun Ethereum
+### Membuat akun Ethereum {#create-an-ethereum-account}
 Anda memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Kita akan menggunakan MetaMask, sebuah dompet virtual di peramban yang memungkinkan pengguna untuk mengelola alamat akun Ethereum mereka.
 
 Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Sepolia Test Network" di kanan atas (sehingga kita tidak berurusan dengan uang sungguhan).
-### Langkah 4: Tambahkan ether dari Faucet
+### Langkah 4: Tambahkan ether dari Faucet {#step-4-add-ether-from-a-faucet}
 Untuk menyebarkan kontrak pintar Anda ke jaringan testnet, Anda akan memerlukan beberapa ETH palsu. Untuk mendapatkan ETH di jaringan Sepolia, buka faucet Sepolia dan masukkan alamat akun Sepolia Anda. Lihat [halaman jaringan testnet](/developers/docs/networks/#sepolia) untuk daftar opsi yang dapat dicoba:
 
 _Catatan: karena kepadatan jaringan, ini mungkin memakan waktu beberapa saat._
@@ -335,7 +335,7 @@ const hello_world = await HelloWorld.deploy()
 
 Memanggil `deploy()` pada `ContractFactory` akan memulai penyebaran, dan mengembalikan `Promise` yang diselesaikan menjadi objek `Contract`. Ini adalah objek yang memiliki metode untuk setiap fungsi kontrak pintar kita.
 
-### Langkah 16: Sebarkan kontrak kita
+### Langkah 16: Sebarkan kontrak kita {#step-16-deploy-our-contract}
 
 Kita akhirnya siap untuk menyebarkan kontrak pintar kita! Navigasikan ke baris perintah dan jalankan:
 
@@ -506,7 +506,7 @@ main()
 
 Perhatikan bahwa pada baris 11, kita melakukan panggilan ke `.wait()` pada objek transaksi yang dikembalikan. Ini memastikan bahwa skrip kita menunggu transaksi ditambang di rantai blok sebelum keluar dari fungsi. Jika panggilan `.wait()` tidak disertakan, skrip mungkin tidak melihat nilai `message` yang diperbarui dalam kontrak.
 
-### Baca pesan baru
+### Baca pesan baru {#read-the-new-message}
 Anda seharusnya dapat mengulangi [langkah sebelumnya](#read-the-init-message) untuk membaca nilai `message` yang diperbarui. Luangkan waktu sejenak dan lihat apakah Anda dapat membuat perubahan yang diperlukan untuk mencetak nilai baru tersebut!
 
 Jika Anda butuh petunjuk, berikut adalah tampilan file `interact.js` Anda pada titik ini:
@@ -631,7 +631,7 @@ module.exports = {
 }
 ```
 
-#### Verifikasi kontrak pintar Anda di Etherscan
+#### Verifikasi kontrak pintar Anda di Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Pastikan semua file telah disimpan dan semua variabel `.env` dikonfigurasi dengan benar.
 
@@ -934,7 +934,7 @@ Dengan titik akhir ini siap, saatnya untuk memuat kontrak pintar kita!
 
 Untuk memuat kontrak pintar Hello World Anda, Anda akan memerlukan alamat kontrak dan ABI-nya, yang keduanya dapat ditemukan di Etherscan jika Anda menyelesaikan [Bagian 3 dari tutorial ini.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Cara mendapatkan ABI kontrak Anda dari Etherscan
+#### Cara mendapatkan ABI kontrak Anda dari Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 Jika Anda melewati Bagian 3 dari tutorial ini, sebarkan dan verifikasi kontrak HelloWorld Anda sendiri terlebih dahulu. Kemudian buka halaman kontrak Anda di [Sepolia Etherscan](https://sepolia.etherscan.io) untuk menyalin ABI-nya.
 
 ABI kontrak diperlukan untuk menentukan fungsi mana yang akan dipanggil oleh kontrak serta memastikan bahwa fungsi tersebut akan mengembalikan data dalam format yang Anda harapkan. Setelah kita menyalin ABI kontrak kita, mari kita simpan sebagai file JSON bernama `contract-abi.json` di direktori `src` Anda.
@@ -1107,10 +1107,10 @@ Untuk menulis apa pun ke rantai Ethereum, pengguna harus menandatangani transaks
 
 Jika Anda ingin memahami lebih lanjut tentang cara kerja transaksi di Ethereum, periksa [halaman ini](/developers/docs/transactions/) dari yayasan Ethereum.
 
-#### Unduh MetaMask
+#### Unduh MetaMask {#download-metamask}
 
 Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Sepolia Test Network" di kanan atas \(sehingga kita tidak berurusan dengan uang sungguhan\).
-#### Tambahkan ether dari Faucet
+#### Tambahkan ether dari Faucet {#add-ether-from-a-faucet}
 Untuk menandatangani transaksi di rantai blok Ethereum, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat mengunjungi faucet Sepolia yang terdaftar di [halaman jaringan pengujian](/developers/docs/networks/#sepolia) dan memasukkan alamat akun Sepolia Anda. Anda akan segera melihat ETH di akun MetaMask Anda setelahnya!
 #### Periksa Saldo Anda {#check-your-balance}
 

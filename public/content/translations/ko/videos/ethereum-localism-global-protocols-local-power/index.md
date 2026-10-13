@@ -8,9 +8,6 @@ duration: "0:50:15"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "dao"
-  - "decentralization"
-  - "social"
 format: interview
 author: "이더볼더"
 breadcrumb: "이더리움 로컬리즘"

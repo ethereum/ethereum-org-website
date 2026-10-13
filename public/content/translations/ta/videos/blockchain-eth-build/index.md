@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "mining"
-  - "blockchain"
+  - "how-ethereum-works"
 format: tutorial
 author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "தொகுதிச்சங்கிலி (ETH.BUILD)"

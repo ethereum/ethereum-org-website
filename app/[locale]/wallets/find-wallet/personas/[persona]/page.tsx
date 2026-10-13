@@ -10,7 +10,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
   getLastUpdatedDisplay,
-  getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
   getWalletsByPersona,
@@ -43,17 +42,22 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
     namespace: "page-wallets-find-wallet",
   })
 
-  const allWallets = getCatalogWallets(locale)
-  const wallets = getWalletsByPersona(allWallets, personaId)
+  // The catalog gets every wallet with this persona pre-selected, so a second
+  // persona can be added client-side; only the structured data stays subset-only.
+  const wallets = getCatalogWallets(locale)
+  const personaWallets = getWalletsByPersona(wallets, personaId)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
-  const personaCounts = getPersonaCounts(allWallets)
 
-  const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
+  const lastUpdatedDisplay = getLastUpdatedDisplay(personaWallets, locale)
 
   return (
     <>
-      <PersonaPageJsonLD locale={locale} persona={persona} wallets={wallets} />
+      <PersonaPageJsonLD
+        locale={locale}
+        persona={persona}
+        wallets={personaWallets}
+      />
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={
@@ -68,9 +72,8 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
           wallets={wallets}
           networks={networks}
           languages={languages}
-          personaCounts={personaCounts}
           lastUpdatedDisplay={lastUpdatedDisplay}
-          currentPersonaId={personaId}
+          initialPersonaId={personaId}
         />
       </MainArticle>
     </>

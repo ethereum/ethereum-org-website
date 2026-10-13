@@ -8,8 +8,6 @@ duration: "0:26:15"
 educationLevel: advanced
 topic:
   - "scaling-and-layer-2"
-  - "rollups"
-  - "layer-2"
 format: presentation
 author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "l2-এর স্টেট"

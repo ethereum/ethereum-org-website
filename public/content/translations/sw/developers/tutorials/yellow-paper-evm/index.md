@@ -19,7 +19,7 @@ Kama karibu kila kitu kingine katika Ethereum, Waraka wa Manjano hubadilika kadi
 
 Waraka wa manjano wa asili uliandikwa mwanzoni kabisa mwa maendeleo ya Ethereum. Inaelezea utaratibu wa makubaliano wa asili unaotegemea Uthibitisho wa Kazi (PoW) ambao ulitumiwa hapo awali kulinda mtandao. Hata hivyo, Ethereum ilizima Uthibitisho wa Kazi (PoW) na kuanza kutumia mwafaka unaotegemea Uthibitisho wa Dau (PoS) mnamo Septemba 2022. Mafunzo haya yataangazia sehemu za waraka wa manjano zinazofafanua Mashine Pepe ya Ethereum (EVM). EVM haikubadilishwa na mpito kwenda kwenye Uthibitisho wa Dau (PoS) (isipokuwa kwa thamani ya kurejesha ya msimbo wa operesheni wa DIFFICULTY).
 
-## 9 Muundo wa utekelezaji
+## 9 Muundo wa utekelezaji {#9-execution-model}
 
 Sehemu hii (uk. 14-16) inajumuisha sehemu kubwa ya ufafanuzi wa EVM.
 
@@ -59,7 +59,7 @@ Neno utekelezaji wa kipekee linamaanisha ubaguzi unaosababisha utekelezaji wa mk
 
 Sehemu hii inaelezea jinsi ada za gesi zinavyohesabiwa. Kuna gharama tatu:
 
-### Gharama ya msimbo wa operesheni
+### Gharama ya msimbo wa operesheni {#opcode-cost}
 
 Gharama ya asili ya msimbo wa operesheni mahususi. Ili kupata thamani hii, tafuta kikundi cha gharama cha msimbo wa operesheni katika Kiambatisho H (uk. 29, chini ya mlinganyo (329)), na utafute kikundi cha gharama katika mlinganyo (326). Hii inakupa chaguo la kukokotoa la gharama, ambalo katika hali nyingi hutumia vigezo kutoka Kiambatisho G (uk. 28).
 
@@ -73,7 +73,7 @@ Gharama ya kuendesha msimbo tunaouita.
 - Katika kesi ya [`CREATE`](https://www.evm.codes/#f0) na [`CREATE2`](https://www.evm.codes/#f5), konstrukta wa mkataba mpya.
 - Katika kesi ya [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), au [`DELEGATECALL`](https://www.evm.codes/#f4), mkataba tunaouita.
 
-### Gharama ya kupanua kumbukumbu
+### Gharama ya kupanua kumbukumbu {#expanding-memory-cost}
 
 Gharama ya kupanua kumbukumbu (ikiwa ni lazima).
 
@@ -84,7 +84,7 @@ Chaguo la kukokotoa _C<sub>mem</sub>_ linafafanuliwa katika mlinganyo 328: _C<su
 **Kumbuka** kwamba mambo haya huathiri tu gharama ya _asili_ ya gesi - haizingatii soko la ada au vidokezo kwa wathibitishaji ambavyo huamua ni kiasi gani mtumiaji wa mwisho anahitajika kulipa - hii ni gharama ghafi tu ya kuendesha operesheni fulani kwenye EVM.
 
 [Soma zaidi kuhusu gesi](/developers/docs/gas/).
-## 9.3 Mazingira ya utekelezaji
+## 9.3 Mazingira ya utekelezaji {#93-execution-env}
 
 Mazingira ya utekelezaji ni tuple, _I_, ambayo inajumuisha taarifa ambazo si sehemu ya hali ya mnyororo wa vitalu au EVM.
 
@@ -109,7 +109,7 @@ Vigezo vingine vichache ni muhimu ili kuelewa sehemu iliyosalia ya sehemu ya 9:
 | _g_       | 9.3 (uk. 14)          | Gesi iliyosalia                                                                                                                                                                                                            |
 | _A_       | 6.1 (uk. 9)           | Hali ndogo iliyokusanywa (mabadiliko yaliyopangwa kwa wakati muamala unapokamilika)                                                                                                                                                       |
 | _o_       | 9.3 (uk. 14)          | Pato - matokeo yaliyorejeshwa katika kesi ya muamala wa ndani (wakati mkataba mmoja unaita mwingine) na miito ya kutazama vipengele (unapouliza tu taarifa, kwa hivyo hakuna haja ya kusubiri muamala) |
-## 9.4 Muhtasari wa utekelezaji
+## 9.4 Muhtasari wa utekelezaji {#94-execution-overview}
 
 Sasa kwa kuwa tuna mambo yote ya awali, hatimaye tunaweza kuanza kufanyia kazi jinsi EVM inavyofanya kazi.
 
@@ -136,7 +136,7 @@ Sehemu hii inaelezea hali ya mashine kwa undani zaidi. Inabainisha kuwa _w_ ni m
 
 Kwa kuwa hii ni [mashine ya staki](https://en.wikipedia.org/wiki/Stack_machine), tunahitaji kufuatilia idadi ya vipengee vilivyotolewa (_δ_) na kusukumwa ndani (_α_) na kila msimbo wa operesheni.
 
-## 9.4.2 Kusimama kwa Kipekee
+## 9.4.2 Kusimama kwa Kipekee {#942-exceptional-halt}
 
 Sehemu hii inafafanua chaguo la kukokotoa la _Z_, ambalo hubainisha wakati tuna usitishaji usio wa kawaida. Hili ni chaguo la kukokotoa la [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), kwa hivyo linatumia [_∨_ kwa ajili ya 'au' ya kimantiki](https://en.wikipedia.org/wiki/Logical_disjunction) na [_∧_ kwa ajili ya 'na' ya kimantiki](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Tuna kusimama kwa kipekee ikiwa mojawapo ya masharti haya ni kweli:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Huwezi kuendesha [`SSTORE`](https://www.evm.codes/#55) isipokuwa uwe na gesi zaidi ya G<sub>callstipend</sub> (iliyofafanuliwa kama 2300 katika Kiambatisho G).
-## 9.4.3 Uhalali wa Lengwa la Mruko
+## 9.4.3 Uhalali wa Lengwa la Mruko {#943-jump-dest-valid}
 
 Hapa tunafafanua rasmi misimbo ya operesheni ya [`JUMPDEST`](https://www.evm.codes/#5b) ni nini. Hatuwezi tu kutafuta thamani ya baiti 0x5B, kwa sababu inaweza kuwa ndani ya PUSH (na kwa hivyo ni data na sio msimbo wa operesheni).
 
@@ -198,7 +198,7 @@ Chaguo la kukokotoa la kusimama _H_, linaweza kurejesha aina tatu za thamani.
 - Ikiwa tuna msimbo wa operesheni wa kusimama ambao hautoi pato (ama [`STOP`](https://www.evm.codes/#00) au [`SELFDESTRUCT`](https://www.evm.codes/#ff)), rejesha mlolongo wa baiti za ukubwa wa sifuri kama thamani ya kurejesha. Kumbuka kwamba hii ni tofauti sana na seti tupu. Thamani hii inamaanisha kuwa EVM ilisimama kweli, tu hakuna data ya kurejesha ya kusoma.
 - Ikiwa tuna msimbo wa operesheni wa kusimama ambao hutoa pato (ama [`RETURN`](https://www.evm.codes/#f3) au [`REVERT`](https://www.evm.codes/#fd)), rejesha mlolongo wa baiti uliobainishwa na msimbo huo wa operesheni. Mlolongo huu unachukuliwa kutoka kwenye kumbukumbu, thamani iliyo juu ya staki (_μ<sub>s</sub>[0]_) ni baiti ya kwanza, na thamani baada yake (_μ<sub>s</sub>[1]_) ni urefu.
 
-## H.2 Seti ya maagizo
+## H.2 Seti ya maagizo {#h2-instruction-set}
 
 Kabla ya kwenda kwenye kifungu kidogo cha mwisho cha EVM, 9.5, hebu tuangalie maagizo yenyewe. Yamefafanuliwa katika Kiambatisho H.2 ambacho kinaanza kwenye uk. 30. Chochote ambacho hakijabainishwa kama kinachobadilika na msimbo huo mahususi wa operesheni kinatarajiwa kubaki vile vile. Vigezo vinavyobadilika vinabainishwa na kama \<kitu\>′.
 
@@ -242,7 +242,7 @@ Mlinganyo wa pili, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Kumbuka kwamba ili kutumia kipengee chochote cha staki, tunahitaji kukitoa, ambayo inamaanisha tunahitaji pia kutoa vipengee vyote vya staki vilivyo juu yake. Katika kesi ya [`DUP<n>`](https://www.evm.codes/#8f) na [`SWAP<n>`](https://www.evm.codes/#9f), hii inamaanisha kulazimika kutoa na kisha kusukuma hadi thamani kumi na sita.
-## 9.5 Mzunguko wa utekelezaji
+## 9.5 Mzunguko wa utekelezaji {#95-exec-cycle}
 
 Sasa kwa kuwa tuna sehemu zote, hatimaye tunaweza kuelewa jinsi mzunguko wa utekelezaji wa EVM unavyorekodiwa.
 

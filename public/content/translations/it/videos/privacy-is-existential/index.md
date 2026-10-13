@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privacy"
@@ -78,13 +77,13 @@ Quando quel termine, validazione onesta e validatore onesto, è apparso nelle is
 
 Il Maximal Extractable Value (MEV) è una realtà disgustosa di Ethereum. Anch'esso ha la sua genesi in una mancanza di privacy. È la natura pubblica delle transazioni sui DEX che permette loro di subire facilmente un attacco sandwich dai validatori. È molto più difficile, probabilmente non impossibile, ma molto più difficile fare un attacco sandwich alle transazioni se non se ne possono vedere i fondamentali economici. Ma non voglio la privacy a livello di base solo come modo per scoraggiare il MEV. La voglio come modo per difendere i validatori.
 
-### Doveri legalmente applicabili dei validatori (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Obblighi legalmente vincolanti dei validatori (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-La mossa più ampia del Dipartimento di Giustizia nel caso Pereira Bueno è che i validatori hanno doveri legalmente applicabili gli uni verso gli altri a causa della natura pubblica delle transazioni che convalidano. E se quei doveri vengono violati, i validatori, credo che pensino, dovrebbero farsi causa a vicenda. E se non lo fanno, lo stato, il Distretto Sud di New York, dovrebbe perseguire i validatori disonesti per crimini. E questo non si ferma solo alla frode telematica. Se puoi vedere una transazione di riciclaggio di denaro o avresti potuto vederla usando l'analisi della blockchain, allora come fai a non essere complice di quel riciclaggio di denaro?
+La mossa più ampia del DOJ nel caso Pereira Bueno è che i validatori hanno obblighi legalmente vincolanti gli uni verso gli altri a causa della natura pubblica delle transazioni che convalidano. E se questi obblighi vengono violati, i validatori, credo che pensino, dovrebbero farsi causa a vicenda. E se non lo fanno, lo stato, il Distretto Sud di New York, dovrebbe perseguire i validatori disonesti per reati. E questo non si ferma solo alla frode telematica. Se puoi vedere una transazione di riciclaggio di denaro o avresti potuto vederla usando l'analisi della blockchain, allora come fai a non essere complice di quel riciclaggio di denaro?
 
-Se costruisci su una versione della catena che contiene transazioni sanzionate, non sei complice dell'evasione delle sanzioni? Se inserisci transazioni fraudolente multimiliardarie nel registro, forse dovresti essere costretto ad annullarle. E la cecità volontaria non è una difesa. Non puoi semplicemente dire che hai deciso di non usare uno strumento ampiamente disponibile come l'analisi della catena. Ignorare volontariamente tutta la conoscenza inerente alla blockchain pubblica può comunque portare a potenziali accuse penali e sarà sempre perseguito come tale.
+Se costruisci su una versione della catena che contiene transazioni sanzionate, non sei complice dell'evasione delle sanzioni? Se inserisci transazioni fraudolente multimiliardarie nel registro, forse dovresti essere costretto ad annullarle. E la cecità volontaria non è una difesa. Non puoi semplicemente dire che hai deciso di non usare uno strumento ampiamente disponibile come l'analisi della catena. Ignorare intenzionalmente tutta la conoscenza inerente alla blockchain pubblica può comunque portare a potenziali accuse penali e sarà sempre perseguito come tale.
 
-La cecità volontaria non è una difesa, ma la cecità effettiva lo è. Quindi, se volete davvero l'assenza di fiducia (trustlessness), se volete veramente un'infrastruttura neutrale, se volete dei 'tubi stupidi' (dumb pipes), allora i tubi devono essere effettivamente ciechi a ciò che scorre attraverso di essi.
+La cecità volontaria non è una difesa, ma la cecità effettiva lo è. Quindi, se volete davvero l'assenza di necessità di fiducia, se volete veramente un'infrastruttura neutrale, se volete dei 'tubi stupidi', allora i tubi devono essere effettivamente ciechi a ciò che vi scorre attraverso.
 
 ### I canali della finanza tradizionale e SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Penso che questo risuoni anche con i professionisti della sicurezza nazionale. T
 **Peter Van Valkenburgh:** Sono solo felice che le persone conoscano la nostra missione: difendere la libertà di innovare utilizzando tecnologie blockchain aperte e la capacità delle persone di utilizzare queste tecnologie in modo privato. Se è una missione a cui tenete, visitate coincenter.org. Grazie per avermi dato la possibilità di fare un po' di promozione. Siamo un'organizzazione no-profit finanziata da donatori e facciamo affidamento sulla buona volontà di persone come voi che credono nella nostra missione per continuare a fare il lavoro che stiamo facendo. Grazie per questa opportunità e grazie per aver ascoltato il mio discorso sulla neutralità.
 
 **Host:** Grazie mille, Peter. Adoro la maglietta.
+

@@ -89,4 +89,4 @@ Anda dapat melihat prinsip desain kami diterapkan [di seluruh situs kami](/).
 
 Meskipun prinsip-prinsip ini difokuskan pada situs web ethereum.org, kami berharap banyak di antaranya mewakili nilai-nilai ekosistem Ethereum secara keseluruhan. Mungkin Anda bahkan ingin memasukkan beberapa di antaranya ke dalam proyek Anda sendiri!
 
-Beri tahu kami pendapat Anda di [server Discord](https://discord.gg/ethereum-org) atau dengan [membuat isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Beri tahu kami pendapat Anda di [server Discord](/discord/) atau dengan [membuat isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

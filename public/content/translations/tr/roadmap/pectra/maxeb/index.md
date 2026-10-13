@@ -143,7 +143,7 @@ Birleştirmeleri yönetmek için kullanılabilecek çeşitli araçlar vardır. E
 
 ## SSS {#faq}
 
-### Geçiş yapmak teklif şansımı veya ödüllerimi değiştirir mi?
+### Geçiş yapmak teklif şansımı veya ödüllerimi değiştirir mi? {#change-luck-or-rewards}
 Hayır. Geçiş yapmak teklif şansınızı azaltmaz - görevleriniz ve teklif seçiminiz aynı kalır. Örneğin, iki adet 32 ETH'lik doğrulayıcıya kıyasla bir adet 64 ETH'lik doğrulayıcınız olması durumunda, bir blok teklif etmek ve ödül kazanmak için seçilme şansınız toplamda aynı olacaktır.
 ### Geçiş yapmak ceza kesintisi (slashing) riskimi değiştirir mi? {#change-slashing-risk}
 

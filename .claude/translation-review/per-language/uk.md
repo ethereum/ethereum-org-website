@@ -90,3 +90,38 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 
 - `Devcon` kept Latin. No EF Ukrainian localization exists for the reference post (404), and policy 6.2 explicitly forbids deriving Ukrainian transliterations from Russian ("Vitalik is Віталік, not Виталик"). So unlike ru there is not even a weak candidate form. Needs native input; filed in `ethglossary-normalization-queue.md` section 9.
 - `Затребуйте` follows the ETHGlossary `claim` entry (`затребування`); reads bureaucratic on a discount banner, same class as ru/pl. See known-patterns #75.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.4/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/uk/page-apps.json`. 3 critical, 13 warnings. Brand 9/10 | Technical 9/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: uk not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (uk-specific):**
+
+- `-dao-description`: `керувати` (instrumental) shared one accusative object with `створювати` -> `керувати DAO та створювати їх`; the indeclinable bare `DAO` dissolves the clash outright
+- `облікові записи` -> glossary `акаунти`, accusative plural as `матиме` requires
+
+**Notes:**
+
+- The run fixed real prior defects: the invented "smallest fraction of ETH" claim, the MolochDAO possessive, and `Спадкування`.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `Майкрософт Сек'юріті`, `крипто-твіттері`.
+- contributing:92 `злито з` (drained from) regression; open-access `призупинити дію користувача`; `будівник` vs `будівельник`; Hegotá Cyrillic `Гегота` outlier.

@@ -79,3 +79,41 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `madaraja` for "classes" collides with `madaraja` = bridges in the same file.
 - `au kuendelea` ("or continues") for "or moves on" -- near-opposite.
 - Glossary entries wanted for `custodial`/`locally`/`derivatives` (`viingilio` = "entrance fees" is tree-established but semantically wrong).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/sw/page-apps.json`. 3 critical, 20 warnings. Brand 8/10 | Technical 6/10 | Semantic 6/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: sw affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (sw-specific):**
+
+- cryptographic `"salt"` rendered `chumvi`, the edible kind -> restored to English `"salt"` per PR #18942's decision; no glossary entry exists and English scare-quotes it as a coinage
+- "manual" rendered `mwongozo` (= *a guide*) at 16 sites, worst at "difficult to carry out **by guide**" -> `mikono`. The 5 plural `miongozo` ("guidelines") and 3 capitalized `Mwongozo` link labels were deliberately left; the strings share no substring so no match was possible
+
+**Notes:**
+
+- The report claimed the missing trailing newline would fail Prettier. It would not: `format` covers only `js/jsx/ts/tsx`, lint-staged runs prettier on the same set, `lint:md` excludes translations, and ci.yml has no prettier job.
+- `mteja wa Ethereum` at `accounts/index.md:79` is glossary-sanctioned per PR #19115. Do not sweep it to `kiteja`.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- open-access `wakala wa kifedha` (agent/broker, inverts "financial agency") -> `uhuru wa kujiamulia kifedha` (native check welcome).
+- learn-quizzes staking pool `makusanyiko` -> `mabwawa`; page-resources `shughuli za mtumiaji` -> `operesheni za mtumiaji`; fusaka:256 `Waundaji` -> `Wajenzi` (regression).
+
+**Open (warnings):**
+
+- stealth-addr swapped all 21 `kitendaji` for `fomula` -- revert recommended (tree 164:47).
+- Bare `mteja` for software client recurs in new sentences; glamsterdam:20 `Blobs` kept Latin in quoted track name.

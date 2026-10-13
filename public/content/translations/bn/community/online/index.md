@@ -48,7 +48,7 @@ lang: bn
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal দ্বারা পরিচালিত ডিসকর্ড চ্যাট: সারা বিশ্বের ইথেরিয়াম হ্যাকারদের জন্য একটি অনলাইন কমিউনিটি</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - ইথেরিয়াম ডেভেলপমেন্ট-কেন্দ্রিক ডিসকর্ড কমিউনিটি</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - বিদ্যমান এবং সম্ভাব্য স্টেকারদের জন্য কমিউনিটি-পরিচালিত দিকনির্দেশনা, শিক্ষা, সহায়তা এবং রিসোর্স</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - এখানে আসুন এবং টিম ও কমিউনিটির লোকজনের সাথে ethereum.org ওয়েব ডেভেলপমেন্ট এবং ডিজাইন নিয়ে চ্যাট করুন</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org website team</Link> - এখানে আসুন এবং টিম ও কমিউনিটির লোকজনের সাথে ethereum.org ওয়েব ডেভেলপমেন্ট এবং ডিজাইন নিয়ে চ্যাট করুন</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 ক্রিয়েটরদের কমিউনিটি যেখানে বিল্ডার, ইন্ডাস্ট্রির শীর্ষস্থানীয় ব্যক্তি এবং ইথেরিয়াম উৎসাহীরা আড্ডা দেন। আমরা Web3 ডেভেলপমেন্ট, ডিজাইন এবং সংস্কৃতি নিয়ে আগ্রহী। আসুন আমাদের সাথে তৈরি করুন।</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity ডেভেলপমেন্টের জন্য চ্যাট (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- প্রশ্নোত্তর ফোরাম</i></SocialListItem>

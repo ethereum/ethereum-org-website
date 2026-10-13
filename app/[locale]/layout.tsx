@@ -15,7 +15,6 @@ import { ibmPlexMono, inter } from "../fonts"
 
 import Providers from "./providers"
 
-import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"

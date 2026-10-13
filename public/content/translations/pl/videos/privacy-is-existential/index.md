@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Prywatność"
@@ -80,11 +79,11 @@ Maksymalna wartość do wyciągnięcia (MEV) to obrzydliwa rzeczywistość Ether
 
 ### Prawnie egzekwowalne obowiązki walidatorów (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Większym manewrem Departamentu Sprawiedliwości (DOJ) w sprawie braci Pereira Bueno jest to, że walidatorzy mają wobec siebie prawnie egzekwowalne obowiązki ze względu na publiczny charakter transakcji, które walidują. A jeśli te obowiązki zostaną naruszone, walidatorzy – jak sądzę, że oni myślą – powinni pozywać się nawzajem. A jeśli tego nie zrobią, państwo, czyli Południowy Dystrykt Nowego Jorku, powinno ścigać nieuczciwych walidatorów za przestępstwa. I to nie kończy się tylko na oszustwach telekomunikacyjnych. Jeśli widzisz transakcję prania brudnych pieniędzy lub mogłeś ją zobaczyć za pomocą analizy blockchaina, to jak możesz nie być współwinnym tego prania brudnych pieniędzy?
+Szerszą strategią Departamentu Sprawiedliwości (DOJ) w sprawie braci Pereira Bueno jest to, że walidatorzy mają wobec siebie prawnie egzekwowalne obowiązki ze względu na publiczny charakter transakcji, które walidują. A jeśli te obowiązki zostaną naruszone, walidatorzy – jak sądzę, tak właśnie myślą – powinni się nawzajem pozywać. A jeśli tego nie zrobią, państwo, czyli Południowy Dystrykt Nowego Jorku, powinno ścigać nieuczciwych walidatorów za przestępstwa. I to nie kończy się tylko na oszustwie telekomunikacyjnym. Jeśli możesz zobaczyć transakcję prania brudnych pieniędzy lub mogłeś ją zobaczyć za pomocą analizy blockchaina, to jak możesz nie być współwinny temu praniu brudnych pieniędzy?
 
-Jeśli budujesz na wersji łańcucha, która zawiera objęte sankcjami transakcje, czy nie jesteś współwinnym omijania sankcji? Jeśli wprowadzasz do księgi wielomiliardowe oszukańcze transakcje, być może powinieneś zostać zmuszony do ich cofnięcia. A celowa ślepota nie jest obroną. Nie możesz po prostu powiedzieć, że zdecydowałeś się nie używać powszechnie dostępnego narzędzia, takiego jak analiza łańcucha. Celowe ignorowanie całej wiedzy nieodłącznie związanej z publicznym blockchainem może nadal prowadzić do potencjalnych zarzutów karnych i zawsze będzie jako takie ścigane.
+Jeśli budujesz na wersji łańcucha, która zawiera objęte sankcjami transakcje, czy nie jesteś współwinny omijania sankcji? Jeśli wprowadzisz do księgi oszukańcze transakcje warte miliardy dolarów, być może powinieneś zostać zmuszony do ich cofnięcia. A celowa ślepota nie jest obroną. Nie możesz po prostu powiedzieć, że zdecydowałeś się nie używać powszechnie dostępnego narzędzia, takiego jak analiza łańcucha. Celowe ignorowanie całej wiedzy nieodłącznie związanej z publicznym blockchainem nadal może prowadzić do potencjalnych zarzutów karnych i zawsze będzie jako takie ścigane.
 
-Celowa ślepota nie jest obroną, ale rzeczywista ślepota już tak. Więc jeśli naprawdę chcesz braku konieczności zaufania, jeśli naprawdę chcesz neutralnej infrastruktury, jeśli chcesz „głupich rur” (dumb pipes), to te rury muszą być faktycznie ślepe na to, co przez nie przepływa.
+Celowa ślepota nie jest obroną, ale rzeczywista ślepota już tak. Więc jeśli naprawdę zależy ci na bezzaufaniowości, jeśli naprawdę chcesz neutralnej infrastruktury, jeśli chcesz „głupich rur”, to te rury muszą być faktycznie ślepe na to, co przez nie przepływa.
 
 ### Tradycyjne rurociągi finansowe i SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Myślę, że to również rezonuje ze specjalistami od bezpieczeństwa narodoweg
 **Peter Van Valkenburgh:** Cieszę się po prostu, że ludzie dowiadują się o naszej misji – obronie wolności do innowacji przy użyciu otwartych technologii blockchain oraz możliwości prywatnego korzystania z tych technologii przez ludzi. Jeśli jest to misja, na której wam zależy, odwiedźcie stronę coincenter.org. Dziękuję za danie mi szansy na małą reklamę (shill). Jesteśmy organizacją non-profit finansowaną przez darczyńców i polegamy na dobrej woli ludzi takich jak wy, którzy wierzą w naszą misję, abyśmy mogli nadal wykonywać naszą pracę. Dziękuję za tę możliwość i dziękuję za wysłuchanie mojego przemówienia na temat neutralności.
 
 **Prowadzący:** Bardzo dziękuję, Peter. Uwielbiam tę koszulkę.
+

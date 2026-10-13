@@ -7,6 +7,31 @@ import * as path from "path"
 
 import { getStore } from "@netlify/blobs"
 
+export const KEYS = {
+  APPS: "fetch-apps",
+  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
+  COMMUNITY_PICKS: "fetch-community-picks",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
+  GFIS: "fetch-gfis",
+  GROW_THE_PIE: "fetch-grow-the-pie",
+  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
+  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
+  L2BEAT: "fetch-l2beat",
+  MEETUP_IMAGES: "fetch-meetup-images",
+  RSS: "fetch-rss",
+  EVENTS: "fetch-events",
+  BLOB_STATS: "fetch-blob-stats",
+  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
+  ETH_PRICE: "fetch-eth-price",
+  GAS_PRICE: "fetch-gas-price",
+  STAKED_PERCENTAGE: "fetch-staked-percentage",
+  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
+  STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
+  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
+  QUIZ_STATS: "fetch-quiz-stats",
+} as const
+
 const USE_MOCK = process.env.USE_MOCK_DATA === "true"
 
 // Netlify Blobs store (lazy init)
@@ -19,7 +44,9 @@ function getBlobs() {
   const token = process.env.NETLIFY_BLOBS_TOKEN
 
   if (!siteID || !token) {
-    throw new Error("Missing SITE_ID or NETLIFY_BLOBS_TOKEN")
+    throw new Error(
+      "Missing NETLIFY_SITE_ID or NETLIFY_BLOBS_TOKEN. Set USE_MOCK_DATA=true for local development."
+    )
   }
 
   const storeName = process.env.BLOB_STORE_NAME || "data-layer"

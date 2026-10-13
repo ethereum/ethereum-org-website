@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Vitendaji vya matumizi vya Web3js](https://docs.web3js.org/api/web3-utils)
 - [Vitendaji vya matumizi vya Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Maktaba zinazopatikana
+## Maktaba zinazopatikana {#available-libraries}
 **Web3.js -** **_API ya JavaScript ya Ethereum._**
 
 - [Nyaraka](https://docs.web3js.org)

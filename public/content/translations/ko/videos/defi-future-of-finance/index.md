@@ -7,8 +7,7 @@ uploadDate: 2020-09-24
 duration: "0:14:48"
 educationLevel: beginner
 topic:
-  - "defi"
-  - "finance"
+  - "use-cases"
 format: explainer
 author: "파인매틱스"
 breadcrumb: "DeFi: 금융의 미래"

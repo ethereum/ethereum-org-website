@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam, 2026'nın 4. çeyreği için planlanan yaklaşan bir Ethereum yükseltmesidir
-</AlertTitle>
 <AlertDescription>
-Glamsterdam yükseltmesi, Ethereum'un uzun vadeli gelişim hedeflerinde yalnızca tek bir adımdır. [Protokol yol haritası](/roadmap/) ve [önceki yükseltmeler](/ethereum-forks/) hakkında daha fazla bilgi edinin.
+Glamsterdam yükseltmesi, Ethereum'un uzun vadeli geliştirme hedeflerinde yalnızca tek bir adımdır. [Protokol yol haritası](/roadmap/) ve [önceki yükseltmeler](/ethereum-forks/) hakkında daha fazla bilgi edinin.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-[Ethereum'un](/) yaklaşan Glamsterdam yükseltmesi, yeni nesil ölçeklendirme için yolu açmak üzere tasarlanmıştır. Glamsterdam, "Amsterdam" (önceki bir Devconnect konumunun adını taşıyan yürütme katmanı yükseltmesi) ve "Gloas" (bir yıldızın adını taşıyan mutabakat katmanı yükseltmesi) kelimelerinin birleşiminden adını almıştır.
+[Ethereum'un](/) yaklaşan Glamsterdam yükseltmesi, yeni nesil ölçeklendirme için yolu açmak üzere tasarlanmıştır. Glamsterdam, "Amsterdam" (yürütme katmanı yükseltmesi, adını önceki bir Devconnect konumundan alır) ve "Gloas" (mutabakat katmanı yükseltmesi, adını bir yıldızdan alır) kelimelerinin birleşiminden adını almıştır.
 
 [Fusaka](/roadmap/fusaka/) yükseltmesinde kaydedilen ilerlemenin ardından Glamsterdam, ağın işlemleri nasıl işlediğini ve büyüyen veritabanını nasıl yönettiğini yeniden düzenleyerek katman 1'i (L1) ölçeklendirmeye odaklanır ve Ethereum'un blokları nasıl oluşturduğunu ve doğruladığını temelden günceller.
 
-Fusaka temel iyileştirmelere odaklanırken, Glamsterdam farklı ağ katılımcıları arasındaki görev ayrımını protokole dahil ederek ve [durumu](/glossary/#state) yüksek işlem kapasiteli paralelleştirmeye hazırlamak için verileri işlemenin daha verimli yollarını sunarak "L1'i Ölçeklendir" ve "Blob'ları Ölçeklendir" hedeflerini ileriye taşır.
+Fusaka temel iyileştirmelere odaklanırken, Glamsterdam farklı ağ katılımcıları arasındaki görev ayrımını protokole dahil ederek ve [durumu](/glossary/#state) yüksek işlem kapasiteli paralelleştirmeye hazırlamak için verileri işlemenin daha verimli yollarını sunarak "L1'i Ölçeklendirme" ve "Blob'ları Ölçeklendirme" hedeflerini ileriye taşır.
 
-Bu iyileştirmeler, evde [düğüm](/glossary/#node) çalıştıran kişiler için donanım gereksinimlerini yönetilebilir tutarken, Ethereum'un daha fazla aktiviteyi idare ederken hızlı, uygun fiyatlı ve merkeziyetsiz kalmasını sağlar.
+Bu iyileştirmeler, Ethereum'un daha fazla aktiviteyi idare ederken hızlı, uygun fiyatlı ve merkeziyetsiz kalmasını sağlarken, evde [düğüm](/glossary/#node) çalıştıran kişiler için donanım gereksinimlerini yönetilebilir tutar.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,20 +28,20 @@ Bu iyileştirmeler, evde [düğüm](/glossary/#node) çalıştıran kişiler iç
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Not: Bu makale, Glamsterdam'a dahil edilmesi planlanan EIP'lerin bir seçkisini öne çıkarmaktadır. Geliştirici ağlarında (devnet) test edilen diğer planlanmış teklifler arasında EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ve EIP-8282 bulunmaktadır. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
+Not: Bu makale, Glamsterdam'a dahil edilmesi planlanan seçili Ethereum Geliştirme Önerilerini (EIP) öne çıkarmaktadır. Geliştirici ağlarında (devnet) test edilen diğer planlanmış teklifler arasında EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ve EIP-8282 bulunmaktadır. Kapsam dondurulmuştur ancak meta EIP taslak aşamasında kaldığı için Ana Ağ'dan önce hala değişebilir. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
 
 Glamsterdam için değerlendirilen ancak henüz bu sayfaya eklenmemiş bir EIP eklemek istiyorsanız, [ethereum.org'a nasıl katkıda bulunacağınızı buradan öğrenin](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Glamsterdam yükseltmesi üç ana hedefe odaklanmaktadır:
+Glamsterdam yükseltmesi üç ana hedefe odaklanır:
 
 - İşlemleri hızlandırma (paralelleştirme): Ağın veri bağımlılıklarını kaydetme şeklini yeniden düzenleyerek, yavaş ve tek tek ilerleyen bir sıra yerine birçok işlemi aynı anda güvenli bir şekilde işleyebilmesini sağlamak.
 - Kapasiteyi genişletme: Blok oluşturma ve doğrulamanın ağır yükünü bölerek, ağa yavaşlamadan daha büyük miktarda veriyi yayması için daha fazla zaman tanımak.
 - Veritabanı şişkinliğini önleme (sürdürülebilirlik): Ağ ücretlerini, yeni verileri depolamanın uzun vadeli donanım maliyetini doğru bir şekilde yansıtacak şekilde ayarlamak, donanım performansının düşmesini önlerken gelecekteki gaz limiti artışlarının önünü açmak.
 
-Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler sunacaktır.
+Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler getirecektir.
 
 ## L1'i ölçeklendirme ve paralel işleme {#scale-l1}
 

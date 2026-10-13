@@ -7,20 +7,17 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam é uma futura atualização do Ethereum planejada para o quarto trimestre de 2026
-</AlertTitle>
 <AlertDescription>
 A atualização Glamsterdam é apenas um único passo nos objetivos de desenvolvimento de longo prazo do Ethereum. Saiba mais sobre [o roteiro do protocolo](/roadmap/) e [atualizações anteriores](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-A futura atualização Glamsterdam do [Ethereum](/) foi projetada para abrir caminho para a próxima geração de escalabilidade. Glamsterdam recebe esse nome a partir da combinação de "Amsterdam" (atualização da camada de execução, nomeada em homenagem a um local anterior da Devconnect) e "Gloas" (atualização da camada de consenso, nomeada em homenagem a uma estrela).
+A próxima atualização Glamsterdam do [Ethereum](/) foi projetada para abrir caminho para a próxima geração de escalabilidade. Glamsterdam recebe esse nome a partir da combinação de "Amsterdam" (atualização da camada de execução, nomeada em homenagem a um local anterior da Devconnect) e "Gloas" (atualização da camada de consenso, nomeada em homenagem a uma estrela).
 
-Seguindo o progresso feito na atualização [Fusaka](/roadmap/fusaka/), a Glamsterdam foca em escalar a camada 1 (l1) reorganizando como a rede processa transações e gerencia seu banco de dados crescente, atualizando fundamentalmente como o Ethereum cria e verifica blocos.
+Seguindo o progresso feito na atualização [Fusaka](/roadmap/fusaka/), a Glamsterdam se concentra em escalar a camada 1 (l1) reorganizando como a rede processa transações e gerencia seu banco de dados crescente, atualizando fundamentalmente como o Ethereum cria e verifica blocos.
 
-Enquanto a Fusaka focou em refinamentos fundamentais, a Glamsterdam avança os objetivos de "Escalar a L1" e "Escalar Blobs" ao consagrar a separação de funções entre diferentes participantes da rede e introduzir maneiras mais eficientes de lidar com dados para preparar o [estado](/glossary/#state) para paralelização de alta vazão.
+Enquanto a Fusaka se concentrou em refinamentos fundamentais, a Glamsterdam avança os objetivos de "Escalar a L1" e "Escalar Blobs" ao consagrar a separação de funções entre diferentes participantes da rede e introduzir maneiras mais eficientes de lidar com dados para preparar o [estado](/glossary/#state) para paralelização de alta vazão.
 
 Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descentralizado à medida que lida com mais atividades, mantendo os requisitos de hardware gerenciáveis para pessoas que executam [nós](/glossary/#node) em casa.
 
@@ -31,7 +28,7 @@ Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descent
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: Este artigo destaca uma seleção de EIPs programadas para inclusão na Glamsterdam. Propostas adicionais programadas que estão sendo testadas em devnets incluem EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 e EIP-8282. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: Este artigo destaca uma seleção de Propostas de Melhoria do Ethereum (EIPs) programadas para inclusão na Glamsterdam. Propostas adicionais programadas que estão sendo testadas em redes de desenvolvimento (devnets) incluem EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 e EIP-8282. O escopo está congelado, mas ainda pode mudar antes da Mainnet, já que a meta EIP permanece em rascunho. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Se você quiser adicionar uma EIP que está sob consideração para a Glamsterdam, mas ainda não foi adicionada a esta página, [saiba como contribuir para o ethereum.org aqui](/contributing/).
 </AlertDescription>
@@ -44,7 +41,7 @@ A atualização Glamsterdam concentra-se em três objetivos principais:
 - Expandir a capacidade: Dividir o trabalho pesado de criar e verificar blocos, dando à rede mais tempo para propagar quantidades maiores de dados sem desacelerar.
 - Prevenir o inchaço do banco de dados (sustentabilidade): Ajustar as taxas da rede para refletir com precisão o custo de hardware a longo prazo de armazenar novos dados, desbloqueando futuros aumentos no limite de gas enquanto previne a degradação do desempenho do hardware.
 
-Em suma, a Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
+Em resumo, a Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
 
 ## Escalar a L1 e processamento paralelo {#scale-l1}
 

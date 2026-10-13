@@ -41,7 +41,7 @@ Wir sind eine einladende Community, die dir hilft, im [Ethereum](/)-Ökosystem z
 - [Schlage ein Projekt für unsere DeSci-Seite vor](/contributing/adding-desci-projects/) – Füge ein auf Ethereum basierendes Projekt hinzu, das zur Dezentralisierten Wissenschaft (DeSci) beiträgt
 - [Füge eine Ressource hinzu](/contributing/adding-resources/) – Füge einer beliebigen relevanten Seite eine nützliche Ressource hinzu
 
-Hast du Fragen? 🤔 Tritt unserem [Discord-Server](https://discord.gg/ethereum-org) bei
+Hast du Fragen? 🤔 Tritt unserem [Discord-Server](/discord/) bei
 
 ## Gute erste Aufgaben für den Einstieg {#good-first-tasks-to-start-contributing}
 
@@ -60,7 +60,7 @@ Alle Aktualisierungen erfolgen über den GitHub-PR-Prozess. Das bedeutet, dass d
 Du brauchst keine Erlaubnis, um an etwas zu arbeiten, aber es ist immer am besten, uns wissen zu lassen, was du vorhast. Das kannst du tun, indem du:
 
 - Einen Kommentar zu einem Issue oder PR auf [GitHub](https://github.com/ethereum/ethereum-org-website) hinterlässt
-- Eine Nachricht auf unserem [Discord-Server](https://discord.gg/ethereum-org) schreibst
+- Eine Nachricht auf unserem [Discord-Server](/discord/) schreibst
 
 Bevor du etwas beiträgst, stelle sicher, dass du mit Folgendem vertraut bist:
 
@@ -75,7 +75,7 @@ Entscheidungen über einzelne PRs, die Weiterentwicklung des Designs und größe
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord-Server](https://discord.gg/ethereum-org)
+- [Discord-Server](/discord/)
 
 ### Ein Hinweis zu Plagiaten {#plagiarism}
 
@@ -93,7 +93,7 @@ Wenn dein Beitrag in ethereum.org zusammengeführt wird, hast du die Möglichkei
 
 ### So kannst du ihn beanspruchen {#how-to-claim}
 
-1. Tritt unserem [Discord-Server](https://discord.gg/ethereum-org) bei.
+1. Tritt unserem [Discord-Server](/discord/) bei.
 2. Füge einen Link zu deinem Beitrag im Kanal `#🥇 | proof-of-contribution` ein.
 3. Warte darauf, dass dir ein Mitglied unseres Teams einen Link zu deinem OAT sendet.
 4. Beanspruche deinen OAT!

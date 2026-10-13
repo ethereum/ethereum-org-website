@@ -78,11 +78,11 @@ Ambas as abordagens ainda estão sendo pesquisadas quanto à eficiência e prati
 
 Esta é uma abordagem pragmática. Usuários e carteiras que desejam proteção pós-quântica antecipadamente podem adotá-la voluntariamente, enquanto a migração mais ampla acontece ao longo do tempo.
 
-### 4. Provas de conhecimento zero (ZK) na camada de aplicação {#zk-proofs}
+### 4. Provas ZK da camada de aplicação {#zk-proofs}
 
-**O que faz**: Sistemas de prova de conhecimento zero são usados por rollups da camada 2 (l2) e outras aplicações para verificar computações sem revelar os dados subjacentes.
+**O que faz**: Sistemas de prova são usados por rollups de l2 para verificar computações sem reexecutá-las e, onde uma aplicação implementa a propriedade de conhecimento zero, para provar declarações sem revelar as entradas privadas por trás delas.
 
-**Por que é vulnerável**: Muitos sistemas populares de prova de conhecimento zero (SNARKs usando emparelhamentos de curva elíptica) dependem de suposições vulneráveis a computadores quânticos.
+**Por que é vulnerável**: Muitos sistemas populares de prova ZK (SNARKs usando emparelhamentos de curva elíptica) dependem de suposições vulneráveis a computadores quânticos.
 
 **A abordagem**: Os STARKs, que dependem de funções de hash em vez de curvas elípticas, já são resistentes a computadores quânticos e são usados por vários rollups. A adoção natural do ecossistema de sistemas baseados em STARK já está fornecendo segurança pós-quântica na camada de aplicação.
 

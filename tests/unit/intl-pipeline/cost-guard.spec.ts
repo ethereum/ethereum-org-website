@@ -8,14 +8,19 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  INPUT_RATE_USD_PER_1M,
   MAX_CHUNK_BYTES,
   MAX_PROMPT_BYTES,
+  OUTPUT_RATE_USD_PER_1M,
+  REASONING_TOKENS_PER_CALL,
 } from "../../../src/scripts/intl-pipeline/constants"
 import {
   assertRunFuse,
+  callReserveUsd,
   createFileBudget,
   estimatedCostUsd,
   FileBudgetExceededError,
+  minimumFuseUsd,
   recordUsage,
   reserveForCall,
   resetMeter,
@@ -286,5 +291,65 @@ test.describe("Run fuse", () => {
     }
     expect(calls).toBeLessThan(120)
     expect(estimatedCostUsd()).toBeLessThan(11)
+  })
+})
+
+test.describe("In-flight reservation is sized from the prompt", () => {
+  test.beforeEach(() => resetMeter(100))
+
+  test("reservation is priced from the prompt, not the ceiling", () => {
+    // Prompt tokens in, the same out, plus the per-call reasoning.
+    const priced = (bytes: number) =>
+      (bytes / 3 / 1_000_000) * INPUT_RATE_USD_PER_1M +
+      ((bytes / 3 + REASONING_TOKENS_PER_CALL) / 1_000_000) *
+        OUTPUT_RATE_USD_PER_1M
+    expect(callReserveUsd(8_192)).toBeCloseTo(priced(8_192), 6)
+    expect(callReserveUsd(MAX_PROMPT_BYTES)).toBeCloseTo(
+      priced(MAX_PROMPT_BYTES),
+      6
+    )
+    // An 8KB incremental prompt reserves well under a third of the ceiling
+    expect(callReserveUsd(8_192)).toBeLessThan(
+      callReserveUsd(MAX_PROMPT_BYTES) / 3
+    )
+  })
+
+  test("a settled reservation is released", () => {
+    const one = callReserveUsd(8_192)
+    resetMeter(one * 1.5)
+    const first = reserveForCall("first", 8_192)
+    reserveForCall("second", 8_192)
+    // Two in flight exceed a fuse sized for one and a half
+    expect(() => assertRunFuse("third")).toThrow(RunFuseExceededError)
+    first(0)
+    expect(() => assertRunFuse("third after one settled")).not.toThrow()
+  })
+
+  test("run 35252423844: a $5 fuse at concurrency 16 no longer trips on reservations", () => {
+    resetMeter(5)
+    // 16 incremental calls of ~16KB in flight, nothing spent yet
+    const settles = Array.from({ length: 16 }, (_, i) =>
+      reserveForCall(`call ${i}`, 16_803)
+    )
+    expect(() => assertRunFuse("17th call")).not.toThrow()
+    settles.forEach((s) => s(0))
+  })
+
+  test("a fuse below one minimal wave is rejected up front", () => {
+    expect(minimumFuseUsd(16)).toBeGreaterThan(0)
+    expect(minimumFuseUsd(16)).toBeLessThan(5)
+    expect(minimumFuseUsd(32)).toBe(2 * minimumFuseUsd(16))
+  })
+
+  test("the abort message counts calls in flight", () => {
+    resetMeter(0.01)
+    reserveForCall("first", 65_536)
+    let message = ""
+    try {
+      assertRunFuse("second")
+    } catch (err) {
+      message = err instanceof Error ? err.message : String(err)
+    }
+    expect(message).toContain("reserved for 1 call(s) in flight")
   })
 })

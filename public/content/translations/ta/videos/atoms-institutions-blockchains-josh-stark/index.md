@@ -8,8 +8,6 @@ duration: "0:29:13"
 educationLevel: beginner
 topic:
   - "how-ethereum-works"
-  - "blockchain"
-  - "ethereum"
 format: presentation
 author: "ஈடிஎச்குளோபல்"
 breadcrumb: "அணுக்கள், நிறுவனங்கள், தொகுதிச்சங்கிலிகள்"

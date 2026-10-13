@@ -101,11 +101,11 @@ Trong một cơ chế tính khả dụng của dữ liệu có thế chấp, b�
 
 ## Volition và Validium {#volitions-and-validium}
 
-Các Validium mang lại nhiều lợi ích nhưng đi kèm với những đánh đổi (đáng chú ý nhất là tính khả dụng của dữ liệu). Nhưng, giống như nhiều giải pháp mở rộng quy mô khác, các Validium phù hợp với các trường hợp sử dụng cụ thể—đó là lý do tại sao các Volition được tạo ra.
+Các Validium mang lại nhiều lợi ích nhưng đi kèm với những sự đánh đổi (đáng chú ý nhất là tính khả dụng của dữ liệu). Nhưng, giống như nhiều giải pháp mở rộng quy mô khác, các Validium phù hợp với các trường hợp sử dụng cụ thể—đó là lý do tại sao các Volition được tạo ra.
 
-Các Volition kết hợp một ZK-rollup và Chuỗi Validium và cho phép người dùng chuyển đổi giữa hai giải pháp mở rộng quy mô. Với các Volition, người dùng có thể tận dụng tính khả dụng của dữ liệu ngoài chuỗi của Validium cho một số giao dịch nhất định, trong khi vẫn giữ quyền tự do chuyển sang giải pháp tính khả dụng của dữ liệu trên chuỗi (ZK-rollup) nếu cần. Điều này về cơ bản mang lại cho người dùng sự tự do lựa chọn các đánh đổi theo hoàn cảnh riêng của họ.
+Các Volition kết hợp một ZK-rollup và Chuỗi Validium, đồng thời cho phép người dùng chuyển đổi giữa hai giải pháp mở rộng quy mô này. Với các Volition, người dùng có thể tận dụng tính khả dụng của dữ liệu ngoài chuỗi của Validium cho một số giao dịch nhất định, trong khi vẫn giữ được quyền tự do chuyển sang giải pháp tính khả dụng của dữ liệu trên chuỗi (ZK-rollup) nếu cần. Điều này về cơ bản mang lại cho người dùng quyền tự do lựa chọn các sự đánh đổi tùy theo hoàn cảnh riêng của họ.
 
-Một sàn giao dịch phi tập trung (DEX) có thể thích sử dụng cơ sở hạ tầng có thể mở rộng và riêng tư của Validium cho các giao dịch giá trị cao. Nó cũng có thể sử dụng một ZK-rollup cho những người dùng muốn có các đảm bảo bảo mật cao hơn và tính không cần niềm tin của ZK-rollup.
+Một sàn giao dịch phi tập trung (DEX) có thể thích khả năng mở rộng của Validium và khả năng hạn chế quyền truy cập công khai vào dữ liệu giao dịch đối với các giao dịch có giá trị cao. Việc giữ dữ liệu ngoài chuỗi giới hạn những ai có thể nhìn thấy nó, nhưng bản thân điều đó không làm cho các giao dịch trở nên riêng tư về mặt mật mã: tính bảo mật phụ thuộc vào các kiểm soát truy cập và cơ chế quyền riêng tư của việc triển khai, và dữ liệu vẫn hiển thị với nhà điều hành cũng như bất kỳ ai nắm giữ nó. Một DEX cũng có thể sử dụng ZK-rollup cho những người dùng muốn có các đảm bảo bảo mật cao hơn và tính không cần niềm tin của ZK-rollup.
 
 ## Các Validium và khả năng tương thích EVM {#validiums-and-evm-compatibility}
 

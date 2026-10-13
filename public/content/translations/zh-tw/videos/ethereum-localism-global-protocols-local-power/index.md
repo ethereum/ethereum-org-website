@@ -8,9 +8,6 @@ duration: "0:50:15"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "dao"
-  - "decentralization"
-  - "social"
 format: interview
 author: "伊瑟波德"
 breadcrumb: "以太坊地方主義"

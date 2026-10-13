@@ -1,12 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ja",
-  "translatedAt": "2026-06-18T00:16:08.866Z",
-  "englishManifestHash": "b29466903deb",
+  "translatedAt": "2026-09-29T21:59:37.864Z",
+  "englishManifestHash": "772cdff4f0b3",
   "placeholderOrder": [
-    "CODEBLOCK-18138c",
-    "CODEBLOCK-8dc6d8",
-    "CODEBLOCK-e5679e",
+    "CODEBLOCK-939278",
+    "CODEBLOCK-f12386",
+    "CODEBLOCK-930355",
     "CODE-29137d",
     "CODE-5a14a1",
     "CODE-66a40c",
@@ -32,15 +32,15 @@
     "CODEBLOCK-de01f2"
   ],
   "placeholderMap": {
-    "CODEBLOCK-18138c": {
+    "CODEBLOCK-939278": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-8dc6d8": {
+    "CODEBLOCK-f12386": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-e5679e": {
+    "CODEBLOCK-930355": {
       "type": "code-fence",
       "values": {}
     },
@@ -151,7 +151,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:16:08.866Z",
+      "translatedAt": "2026-09-29T21:59:37.864Z",
       "status": "success"
     }
   }

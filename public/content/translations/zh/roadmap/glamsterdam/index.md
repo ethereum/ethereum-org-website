@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-格拉姆斯特丹是计划于 2026 年第四季度进行的以太坊升级
-</AlertTitle>
 <AlertDescription>
 格拉姆斯特丹升级只是以太坊长期发展目标中的一步。了解更多关于[协议路线图](/roadmap/)和[以往升级](/ethereum-forks/)的信息。
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-[以太坊](/)即将到来的格拉姆斯特丹升级旨在为下一代扩容扫清道路。格拉姆斯特丹（Glamsterdam）的名称由“阿姆斯特丹（Amsterdam）”（执行层升级，以之前的 Devconnect 举办地命名）和“Gloas”（共识层升级，以一颗恒星命名）组合而成。
+[以太坊](/)即将进行的格拉姆斯特丹升级旨在为下一代扩容扫清道路。格拉姆斯特丹 (Glamsterdam) 的名字来源于“阿姆斯特丹 (Amsterdam)”（执行层升级，以之前的 Devconnect 举办地命名）和“Gloas”（共识层升级，以一颗恒星命名）的组合。
 
-继[弗萨卡](/roadmap/fusaka/)升级取得进展之后，格拉姆斯特丹侧重于通过重组网络处理交易和管理其不断增长的数据库的方式来扩展一层网络 (l1)，从根本上更新以太坊创建和验证区块的方式。
+继[弗萨卡](/roadmap/fusaka/)升级取得进展之后，格拉姆斯特丹专注于通过重组网络处理交易和管理其不断增长的数据库的方式来扩展一层网络 (l1)，从根本上更新以太坊创建和验证区块的方式。
 
-虽然弗萨卡侧重于基础性改进，但格拉姆斯特丹通过将不同网络参与者之间的职责分离写入协议，并引入更高效的数据处理方式，为高吞吐量并行化准备[状态](/glossary/#state)，从而推进“扩展一层网络 (l1)”和“扩展 Blob”的目标。
+虽然弗萨卡专注于基础性改进，但格拉姆斯特丹通过将不同网络参与者之间的职责分离写入协议，并引入更高效的数据处理方式，为[状态](/glossary/#state)的高吞吐量并行化做准备，从而推进了“扩展一层网络 (l1)”和“扩展 Blob”的目标。
 
-这些改进确保以太坊在处理更多活动时保持快速、经济且去中心化的特性，同时使在家运行[节点](/glossary/#node)的人的硬件要求保持在可控范围内。
+这些改进确保以太坊在处理更多活动时保持快速、经济且去中心化，同时使在家运行[节点](/glossary/#node)的人的硬件要求保持在可控范围内。
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,9 +28,9 @@ template: upgrade
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-注意：本文重点介绍了计划包含在格拉姆斯特丹中的部分 EIP。正在开发网中测试的其他计划提案包括 EIP-7610、EIP-7688、EIP-7778、EIP-7843、EIP-7976、EIP-7981、EIP-8024、EIP-8246 和 EIP-8282。有关最新状态更新，请查看 [Forkcast 上的格拉姆斯特丹升级](https://forkcast.org/upgrade/glamsterdam)。
+注意：本文重点介绍了计划包含在格拉姆斯特丹中的部分以太坊改进提案 (EIP)。正在开发测试网中测试的其他计划提案包括 EIP-7610、EIP-7688、EIP-7778、EIP-7843、EIP-7976、EIP-7981、EIP-8024、EIP-8246 和 EIP-8282。范围已冻结，但在主网之前仍可能发生变化，因为元 EIP 仍处于草案阶段。有关最新状态更新，请在 [Forkcast 上查看格拉姆斯特丹升级](https://forkcast.org/upgrade/glamsterdam)。
 
-如果你想添加一个正在考虑纳入格拉姆斯特丹但尚未添加到此页面的 EIP，请[在此处了解如何为 ethereum.org 做出贡献](/contributing/)。
+如果您想添加一个正在考虑纳入格拉姆斯特丹但尚未添加到此页面的 EIP，请[在此处了解如何为 ethereum.org 做出贡献](/contributing/)。
 </AlertDescription>
 </AlertContent>
 </Alert>

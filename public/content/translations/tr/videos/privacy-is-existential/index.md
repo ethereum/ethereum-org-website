@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Gizlilik"
@@ -78,13 +77,13 @@ Bu yargılamadaki jüri talimatlarında dürüst doğrulama ve dürüst doğrula
 
 Madenci çıkarılabilir değeri (MEV), Ethereum'un iğrenç bir gerçeğidir. Onun da kökeni gizlilik eksikliğine dayanır. DEX işlemlerinin doğrulayıcılar tarafından kolayca sandviç saldırısına uğramasına izin veren şey, halka açık doğalarıdır. İşlemlerin ekonomik temellerini göremiyorsanız, onlara sandviç saldırısı yapmak muhtemelen imkansız olmasa da çok daha zordur. Ancak temel katman gizliliğini sadece MEV'i caydırmanın bir yolu olarak istemiyorum. Bunu doğrulayıcıları savunmanın bir yolu olarak istiyorum.
 
-### Doğrulayıcıların yasal olarak uygulanabilir görevleri (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Doğrulayıcıların yasal olarak uygulanabilir yükümlülükleri (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Adalet Bakanlığı'nın (DOJ) Pereira Bueno davasındaki daha büyük hamlesi, doğrulayıcıların doğruladıkları işlemlerin halka açık doğası nedeniyle birbirlerine karşı yasal olarak uygulanabilir görevleri olduğudur. Ve eğer bu görevler ihlal edilirse, sanırım doğrulayıcıların birbirlerine dava açması gerektiğini düşünüyorlar. Ve eğer yapmazlarsa, devletin, yani New York Güney Bölgesi'nin, dürüst olmayan doğrulayıcıları suçlardan dolayı yargılaması gerektiğini düşünüyorlar. Ve bu sadece elektronik dolandırıcılıkla bitmiyor. Eğer bir kara para aklama işlemini görebiliyorsanız veya Blokzincir analizi kullanarak görebilseydiniz, o zaman bu kara para aklamaya nasıl suç ortağı olmazsınız?
+DOJ'nin Pereira Bueno davasındaki daha büyük hamlesi, doğrulayıcıların doğruladıkları işlemlerin halka açık doğası nedeniyle birbirlerine karşı yasal olarak uygulanabilir yükümlülükleri olduğudur. Ve eğer bu yükümlülükler ihlal edilirse, sanırım doğrulayıcıların birbirlerine dava açmaları gerektiğini düşünüyorlar. Ve eğer açmazlarsa, devletin, New York Güney Bölgesi'nin, dürüst olmayan doğrulayıcıları suçlarından dolayı yargılaması gerektiğini düşünüyorlar. Ve bu sadece elektronik dolandırıcılıkla bitmiyor. Eğer bir kara para aklama işlemini görebiliyorsanız veya Blokzincir analizi kullanarak görebilseydiniz, o zaman bu kara para aklamaya nasıl suç ortağı olmazsınız?
 
-İçinde yaptırım uygulanan işlemler bulunan bir zincir versiyonu üzerine inşa ederseniz, yaptırımlardan kaçınmaya suç ortağı olmaz mısınız? Deftere milyarlarca dolarlık hileli işlemler koyarsanız, belki de bunları geri almanız sağlanmalıdır. Ve kasıtlı körlük bir savunma değildir. Zincir analizi gibi yaygın olarak bulunan bir aracı kullanmamaya karar verdiğinizi öylece söyleyemezsiniz. Halka açık Blokzincirde doğasında var olan tüm bilgileri kasıtlı olarak görmezden gelmek, yine de potansiyel cezai suçlamalara yol açabilir ve her zaman bu şekilde yargılanacaktır.
+Eğer Zincirin yaptırımlı işlemler içeren bir versiyonu üzerine inşa ediyorsanız, yaptırımlardan kaçınmaya suç ortağı olmuyor musunuz? Eğer deftere milyarlarca dolarlık hileli işlemler koyarsanız, belki de bunları geri almanız sağlanmalıdır. Ve kasıtlı körlük bir savunma değildir. Sadece Zincir analizi gibi yaygın olarak bulunan bir aracı kullanmamaya karar verdiğinizi söyleyemezsiniz. Halka açık Blokzincirde var olan tüm bilgileri kasıtlı olarak görmezden gelmek, yine de potansiyel cezai suçlamalara yol açabilir ve her zaman bu şekilde yargılanacaktır.
 
-Kasıtlı körlük bir savunma değildir, ancak gerçek körlük öyledir. Yani gerçekten güven gerektirmeyen bir yapı istiyorsanız, gerçekten tarafsız bir altyapı istiyorsanız, aptal borular istiyorsanız, o zaman boruların içlerinden akan şeye gerçekten kör olması gerekir.
+Kasıtlı körlük bir savunma değildir, ancak gerçek körlük öyledir. Bu yüzden eğer gerçekten güven gereksinimsizliği istiyorsanız, eğer gerçekten tarafsız bir altyapı istiyorsanız, eğer aptal borular istiyorsanız, o zaman boruların içlerinden akanlara karşı gerçekten kör olması gerekir.
 
 ### Geleneksel finans boru hatları ve SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Bunun ulusal güvenlik profesyonellerinde de yankı bulduğunu düşünüyorum. 
 **Peter Van Valkenburgh:** İnsanların misyonumuzu öğrenmesinden memnunum — açık Blokzincir teknolojilerini kullanarak yenilik yapma özgürlüğünü ve insanların bu teknolojileri gizli bir şekilde kullanma yeteneğini savunmak. Eğer bu önemsediğiniz bir misyonsa, lütfen coincenter.org'u ziyaret edin. Bana reklam yapma şansı verdiğiniz için teşekkür ederim. Biz bağışçılar tarafından finanse edilen kâr amacı gütmeyen bir kuruluşuz ve yaptığımız işi yapmaya devam etmek için misyonumuza inanan sizin gibi insanların iyi niyetine güveniyoruz. Bu fırsat için teşekkür ederim ve tarafsızlık hakkındaki konuşmamı dinlediğiniz için teşekkür ederim.
 
 **Sunucu:** Çok teşekkür ederim, Peter. Tişörte bayıldım.
+

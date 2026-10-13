@@ -7,9 +7,7 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "roadmap"
-  - "pectra"
-  - "staking"
+  - "network-upgrades"
 format: explainer
 author: "布洛克迪蒙"
 breadcrumb: "面向质押者的佩克特拉"

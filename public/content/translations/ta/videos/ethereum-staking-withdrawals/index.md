@@ -8,8 +8,6 @@ duration: "0:11:39"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "staking"
-  - "withdrawals"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "பங்குவைப்பு திரும்பப் பெறுதல்கள்"

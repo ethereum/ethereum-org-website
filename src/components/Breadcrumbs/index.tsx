@@ -19,6 +19,8 @@ import {
 export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
   startDepth?: number
+  /** Logical parent route not present in the URL, e.g. "values" for /privacy */
+  parentSlug?: string
 }
 
 type Crumb = {
@@ -41,7 +43,12 @@ type Crumb = {
 //   { fullPath: "/eth2/", text: "ETH2" },
 //   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
+const Breadcrumbs = ({
+  slug,
+  startDepth = 0,
+  parentSlug,
+  ...props
+}: BreadcrumbsProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
@@ -50,6 +57,9 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const hasHome = normalizedSlug !== ""
   const slugChunk = normalizedSlug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
+  const parentSliced = parentSlug
+    ? normalizeSlug(parentSlug).split("/").filter(Boolean)
+    : []
 
   const crumbs = [
     // If homepage (e.g., "en"), set text to "home" translation
@@ -61,6 +71,10 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
           },
         ]
       : []),
+    ...parentSliced.map((path, idx) => ({
+      fullPath: "/" + parentSliced.slice(0, idx + 1).join("/"),
+      text: t(path),
+    })),
     ...sliced.map((path, idx) => ({
       fullPath: "/" + sliced.slice(0, idx + 1).join("/"),
       text: t(path),

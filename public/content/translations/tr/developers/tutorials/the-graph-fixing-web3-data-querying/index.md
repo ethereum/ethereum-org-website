@@ -13,7 +13,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 Bu sefer, geçtiğimiz yıl merkeziyetsiz uygulamalar (dapp'ler) geliştirmek için standart yığının (stack) bir parçası haline gelen The Graph'e daha yakından bakacağız. Öncelikle işleri geleneksel yolla nasıl yapacağımızı görelim...
 
-## The Graph Olmadan... {#without-the-graph}
+## The Graph olmadan... {#without-the-graph}
 
 Örnekleme amacıyla basit bir örnekle başlayalım. Hepimiz oyunları severiz, bu yüzden kullanıcıların bahis oynadığı basit bir oyun hayal edin:
 
@@ -41,7 +41,7 @@ contract Game {
 }
 ```
 
-Şimdi dapp'imizde toplam bahisleri, kaybedilen/kazanılan toplam oyunları göstermek ve ayrıca biri tekrar oynadığında bunu güncellemek istediğimizi varsayalım. Yaklaşım şu şekilde olacaktır:
+Şimdi merkeziyetsiz uygulamamızda (dapp) toplam bahisleri, kaybedilen/kazanılan toplam oyunları görüntülemek ve ayrıca biri tekrar oynadığında bunu güncellemek istediğimizi varsayalım. Yaklaşım şu şekilde olacaktır:
 
 1. `totalGamesPlayerWon` değerini getirin.
 2. `totalGamesPlayerLost` değerini getirin.
@@ -64,7 +64,7 @@ GameContract.events.BetPlaced({
 });
 ```
 
-Şimdi bu, basit örneğimiz için hala bir dereceye kadar iyi. Ancak şimdi kaybedilen/kazanılan bahis miktarlarını yalnızca mevcut oyuncu için göstermek istediğimizi varsayalım. Şansımıza küselim, bu değerleri saklayan yeni bir sözleşme dağıtmanız ve bunları getirmeniz daha iyi olur. Ve şimdi çok daha karmaşık bir akıllı sözleşme ve dapp hayal edin, işler hızla karışabilir.
+Şimdi bu, basit örneğimiz için hala bir dereceye kadar uygundur. Ancak şimdi sadece mevcut oyuncu için kaybedilen/kazanılan bahis miktarlarını görüntülemek istediğimizi varsayalım. Maalesef şansımız yok, bu değerleri saklayan yeni bir sözleşme dağıtmanız ve bunları getirmeniz gerekecek. Ve şimdi çok daha karmaşık bir akıllı sözleşme ve merkeziyetsiz uygulama (dapp) hayal edin, işler hızla karışabilir.
 
 ![One Does Not Simply Query](./one-does-not-simply-query.jpg)
 
@@ -72,9 +72,9 @@ Bunun neden optimal olmadığını görebilirsiniz:
 
 - Zaten dağıtılmış sözleşmeler için çalışmaz.
 - Bu değerleri saklamak için ekstra gaz maliyetleri.
-- Bir Ethereum düğümü için verileri getirmek üzere başka bir çağrı gerektirir.
+- Bir Ethereum düğümünden verileri getirmek için başka bir çağrı gerektirir.
 
-![Thats not good enough](./not-good-enough.jpg)
+![That's not good enough](./not-good-enough.jpg)
 
 Şimdi daha iyi bir çözüme bakalım.
 

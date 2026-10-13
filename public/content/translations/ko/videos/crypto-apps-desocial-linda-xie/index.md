@@ -7,9 +7,7 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
-  - "dapps"
+  - "use-cases"
 format: presentation
 author: "이더리움 재단"
 breadcrumb: "암호화폐 앱 및 탈중앙화 소셜"

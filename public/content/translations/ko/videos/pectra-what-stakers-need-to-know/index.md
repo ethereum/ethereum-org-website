@@ -7,9 +7,7 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "roadmap"
-  - "pectra"
-  - "staking"
+  - "network-upgrades"
 format: explainer
 author: "블록데몬"
 breadcrumb: "스테이커를 위한 펙트라"

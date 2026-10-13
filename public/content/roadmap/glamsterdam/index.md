@@ -28,7 +28,7 @@ These improvements ensure Ethereum remains fast, affordable, and decentralized a
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Note: This article highlights a selection of EIPs scheduled for inclusion in Glamsterdam. Additional scheduled proposals being tested in devnets include EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, and EIP-8282. Scope is frozen but can still change before mainnet, as the meta EIP remains in draft. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Note: This article highlights a selection of EIPs scheduled for inclusion in Glamsterdam. Additional scheduled proposals being tested in devnets include EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246, and EIP-8282. Scope is frozen but can still change before mainnet, as the meta EIP remains in draft. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 If you want to add an EIP that's under consideration for Glamsterdam, but hasn't been added to this page yet, [learn how to contribute to ethereum.org here](/contributing/).
 </AlertDescription>

@@ -80,7 +80,7 @@ This is a pragmatic approach. Users and wallets that want post-quantum protectio
 
 ### 4. Application-layer ZK-proofs {#zk-proofs}
 
-**What it does**: Zero-knowledge proof systems are used by L2 rollups and other applications to verify computations without revealing underlying data.
+**What it does**: Proof systems are used by L2 rollups to verify computations without re-executing them, and, where an application implements the zero-knowledge property, to prove statements without revealing the private inputs behind them.
 
 **Why it is vulnerable**: Many popular ZK-proof systems (SNARKs using elliptic curve pairings) rely on quantum-vulnerable assumptions.
 

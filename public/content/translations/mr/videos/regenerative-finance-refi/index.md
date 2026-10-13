@@ -7,8 +7,7 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "refi"
-  - "sustainability"
+  - "use-cases"
 format: explainer
 author: "सीएनबीसी टेलिव्हिजन"
 breadcrumb: "पुनरुत्पादक वित्त (रेफाय)"

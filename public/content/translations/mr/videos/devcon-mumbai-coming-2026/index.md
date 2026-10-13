@@ -7,8 +7,7 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "community-stories"
-  - "community"
+  - "events"
 format: explainer
 author: "इथेरियम फाउंडेशन"
 breadcrumb: "Devcon मुंबई"

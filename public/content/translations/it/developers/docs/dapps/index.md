@@ -47,7 +47,7 @@ Uno smart contract è un codice che risiede sulla blockchain di Ethereum e viene
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Strumenti per creare dapp
+## Strumenti per creare dapp {#dapp-tools}
 **Scaffold-ETH 2 _- Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo smart contract._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)

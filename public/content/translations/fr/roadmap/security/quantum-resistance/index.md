@@ -78,13 +78,13 @@ Les deux approches font toujours l'objet de recherches pour évaluer leur effica
 
 C'est une approche pragmatique. Les utilisateurs et les portefeuilles qui souhaitent une protection post-quantique de manière anticipée peuvent l'adopter volontairement, tandis que la migration plus large se déroule au fil du temps.
 
-### 4. Preuves ZK de la couche d'application {#zk-proofs}
+### 4. Preuves à divulgation nulle de connaissance de la couche applicative {#zk-proofs}
 
-**Ce que cela fait** : Les systèmes de preuve à divulgation nulle de connaissance sont utilisés par les rollup de couche 2 (l2) et d'autres applications pour vérifier les calculs sans révéler les données sous-jacentes.
+**Ce que cela fait** : Les systèmes de preuve sont utilisés par les rollup de couche 2 (l2) pour vérifier les calculs sans les réexécuter, et, lorsqu'une application implémente la propriété à divulgation nulle de connaissance, pour prouver des affirmations sans révéler les entrées privées sous-jacentes.
 
-**Pourquoi c'est vulnérable** : De nombreux systèmes de preuve ZK populaires (les SNARK utilisant des couplages de courbes elliptiques) reposent sur des hypothèses vulnérables aux ordinateurs quantiques.
+**Pourquoi c'est vulnérable** : De nombreux systèmes de preuve à divulgation nulle de connaissance populaires (les SNARK utilisant des couplages de courbes elliptiques) reposent sur des hypothèses vulnérables aux ordinateurs quantiques.
 
-**L'approche** : Les STARK, qui reposent sur des fonctions de hash plutôt que sur des courbes elliptiques, sont déjà résistants aux ordinateurs quantiques et sont utilisés par plusieurs rollup. L'adoption naturelle par l'écosystème des systèmes basés sur les STARK fournit déjà une sécurité post-quantique au niveau de la couche d'application.
+**L'approche** : Les STARK, qui reposent sur des fonctions de hash plutôt que sur des courbes elliptiques, sont déjà résistants aux ordinateurs quantiques et sont utilisés par plusieurs rollup. L'adoption naturelle par l'écosystème de systèmes basés sur les STARK offre déjà une sécurité post-quantique au niveau de la couche applicative.
 
 ## Normes du NIST {#nist-standards}
 
@@ -165,7 +165,8 @@ Non. Ethereum possède l'un des programmes post-quantiques les plus structurés 
 
 </ExpandableCard>
 
-<ExpandableCard title="Qu'est-ce que « récolter maintenant, déchiffrer plus tard » ?" eventCategory="/roadmap/security/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Qu'est-ce que « récolter maintenant, déchiffrer plus tard >
+ ?" eventCategory="/roadmap/security/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 « Récolter maintenant, déchiffrer plus tard » (Harvest now, decrypt later) est une attaque où quelqu'un enregistre des données chiffrées ou des clés publiques exposées aujourd'hui, puis casse le chiffrement plus tard lorsqu'un ordinateur quantique suffisamment puissant existera. Pour Ethereum, cela concerne principalement les comptes dont les clés publiques sont déjà exposées onchain (tout compte ayant envoyé une transaction). C'est l'une des raisons pour lesquelles la communauté considère la migration post-quantique comme urgente, même si la menace quantique n'est pas encore immédiate.
 

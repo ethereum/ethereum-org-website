@@ -143,7 +143,7 @@ Existem várias ferramentas disponíveis para gerenciar consolidações. A ferra
 
 ## FAQ {#faq}
 
-### Aderir altera minha sorte nas propostas ou recompensas?
+### Aderir altera minha sorte nas propostas ou recompensas? {#change-luck-or-rewards}
 Não. Aderir não diminui sua chance de propor - seus deveres e a seleção de propostas permanecem os mesmos. Por exemplo, se você tem dois validadores de 32 ETH versus um validador de 64 ETH, você terá as mesmas chances totais de ser selecionado para propor um bloco e ganhar recompensas.
 ### Aderir altera meu risco de penalização? {#change-slashing-risk}
 

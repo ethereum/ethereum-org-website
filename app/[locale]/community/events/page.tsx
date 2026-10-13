@@ -3,7 +3,6 @@ import {
   Banknote,
   ChartNoAxesCombined,
   Handshake,
-  Plus,
   Presentation,
 } from "lucide-react"
 import {
@@ -43,8 +42,9 @@ import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
 import FilterEvents from "./_components/filter-events"
 import { SECTION_IDS } from "./constants"
+import { getMeetupGroups } from "./meetup-groups"
 import PageJsonLD from "./page-jsonld"
-import { getMeetupGroups, mapEventTranslations } from "./utils"
+import { mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
@@ -91,7 +91,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = await getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
@@ -142,7 +142,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       {/* Devcon VIII India callout banner */}
-      <DevconIndiaLargeCallout preload />
+      <DevconIndiaLargeCallout sourcePage="events" preload />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
@@ -232,17 +232,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </div>
                       <p>{t(descriptionKey)}</p>
                       <div className="mt-auto flex flex-wrap gap-x-6 gap-y-2 pt-2">
-                        <Link
-                          href={coworkingSignupUrl}
-                          className="font-bold no-underline"
-                          customEventOptions={{
-                            eventCategory: "Events",
-                            eventAction: "hubs",
-                            eventName: `${location}_cowork`,
-                          }}
-                        >
-                          {t("page-events-hub-cowork-signup")}
-                        </Link>
+                        {coworkingSignupUrl && (
+                          <Link
+                            href={coworkingSignupUrl}
+                            className="font-bold no-underline"
+                            customEventOptions={{
+                              eventCategory: "Events",
+                              eventAction: "hubs",
+                              eventName: `${location}_cowork`,
+                            }}
+                          >
+                            {t("page-events-hub-cowork-signup")}
+                          </Link>
+                        )}
                         <Link
                           href={meetupUrl}
                           className="font-bold no-underline"
@@ -252,7 +254,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             eventName: `${location}_meetup`,
                           }}
                         >
-                          {t("page-events-hub-meetups")}
+                          {t(
+                            coworkingSignupUrl
+                              ? "page-events-hub-meetups"
+                              : "page-events-hub-join-community"
+                          )}
                         </Link>
                       </div>
                     </div>
@@ -260,21 +266,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )
               )}
             </Grid>
-            <ButtonLink
-              href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
-              variant="outline"
-              className="group w-full gap-2 rounded-4xl border-body-light p-5"
-              customEventOptions={{
-                eventCategory: "Events",
-                eventAction: "hubs",
-                eventName: "apply",
-              }}
-            >
-              <div className="rounded-full border border-dashed border-primary p-3">
-                <Plus className="size-4 transition-transform group-hover:scale-150" />
-              </div>
-              {t("page-events-hub-apply-cta")}
-            </ButtonLink>
           </Section>
 
           {/* Find events near you */}

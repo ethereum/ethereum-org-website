@@ -78,13 +78,13 @@ Ambos enfoques todavía se están investigando en cuanto a eficiencia y viabilid
 
 Este es un enfoque pragmático. Los usuarios y las billeteras que deseen protección poscuántica de manera temprana pueden adoptarla voluntariamente, mientras que la migración más amplia ocurre con el tiempo.
 
-### 4. Pruebas ZK de la capa de aplicación {#zk-proofs}
+### 4. Pruebas de conocimiento cero de la capa de aplicación {#zk-proofs}
 
-**Qué hace**: Los sistemas de pruebas de conocimiento cero son utilizados por los rollups de capa 2 (L2) y otras aplicaciones para verificar cálculos sin revelar los datos subyacentes.
+**Qué hace**: Los sistemas de prueba son utilizados por los rollup de capa 2 (l2) para verificar cálculos sin volver a ejecutarlos y, cuando una aplicación implementa la propiedad de conocimiento cero, para probar afirmaciones sin revelar las entradas privadas subyacentes.
 
-**Por qué es vulnerable**: Muchos sistemas populares de pruebas ZK (SNARK que utilizan emparejamientos de curvas elípticas) dependen de suposiciones vulnerables a ataques cuánticos.
+**Por qué es vulnerable**: Muchos sistemas populares de pruebas de conocimiento cero (SNARK que utilizan emparejamientos de curvas elípticas) dependen de supuestos vulnerables a ataques cuánticos.
 
-**El enfoque**: Los STARK, que dependen de funciones hash en lugar de curvas elípticas, ya son resistentes a los ataques cuánticos y son utilizados por varios rollups. La adopción natural del ecosistema de sistemas basados en STARK ya está proporcionando seguridad poscuántica en la capa de aplicación.
+**El enfoque**: Los STARK, que dependen de funciones hash en lugar de curvas elípticas, ya son resistentes a los ataques cuánticos y son utilizados por varios rollup. La adopción natural de sistemas basados en STARK por parte del ecosistema ya está proporcionando seguridad poscuántica en la capa de aplicación.
 
 ## Estándares del NIST {#nist-standards}
 

@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ethereum"
-  - "proof-of-stake"
-  - "the-merge"
+  - "how-ethereum-works"
+  - "network-upgrades"
+  - "community-stories"
 format: interview
 author: "以太坊基金会"
 breadcrumb: "Danny Ryan 采访"

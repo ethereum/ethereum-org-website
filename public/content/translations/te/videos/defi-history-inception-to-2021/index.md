@@ -7,8 +7,7 @@ uploadDate: 2021-02-19
 duration: "0:17:47"
 educationLevel: beginner
 topic:
-  - "defi"
-  - "history"
+  - "use-cases"
 format: explainer
 author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "DeFi చరిత్ర"

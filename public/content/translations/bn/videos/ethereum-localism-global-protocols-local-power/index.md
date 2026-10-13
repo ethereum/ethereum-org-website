@@ -8,9 +8,6 @@ duration: "0:50:15"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "dao"
-  - "decentralization"
-  - "social"
 format: interview
 author: "ইথবোল্ডার"
 breadcrumb: "ইথেরিয়াম লোকালিজম"

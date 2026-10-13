@@ -7,9 +7,8 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "consensus-mechanisms"
+  - "how-ethereum-works"
   - "security"
-  - "consensus"
 format: interview
 author: "बँकलेस"
 breadcrumb: "PoW विरुद्ध PoS वादविवाद"

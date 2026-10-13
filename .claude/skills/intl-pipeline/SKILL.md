@@ -28,7 +28,8 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 5. **The sanitizer runs post-translation, not pre.** Its job is to fix Gemini-introduced artifacts (BiDi mistakes, code-fence drift, brand-name mistranslations). It receives translation outputs, never English source.
 6. **Don't add transliteration data here.** All term/brand/person transliteration policy lives in ETHGlossary's `docs/translation-policy.md` and per-language entries. The intl-pipeline consumes; it does not author.
 7. **Sanitizer fixes must split on code blocks first.** Every text transformation in `intl-sanitizer.ts` MUST start with the code-block split pattern. Modifying code-fence contents breaks Solidity / Python / TypeScript examples in tutorials.
-8. **Pipeline failures are not always pipeline bugs.** A "translation looks wrong" report may be: bad Gemini output (file upstream), missing ETHGlossary term (add there), correct per language-group policy (read translation-policy.md), or an actual pipeline bug. Triage before patching.
+8. **An untagged code fence is code.** Fence bodies never reach the model; only a prose-tagged fence (```` ```text ````, `txt`, `md`, `markdown`, `mdx` -- `PROSE_FENCE_TAGS` in `lib/shared-patterns.ts`) is translatable. To make a fence's prose translatable, tag it ```` ```text ```` in the English source. `code-fence-content` fails any other fence whose body drifts from English, comments excepted.
+9. **Pipeline failures are not always pipeline bugs.** A "translation looks wrong" report may be: bad Gemini output (file upstream), missing ETHGlossary term (add there), correct per language-group policy (read translation-policy.md), or an actual pipeline bug. Triage before patching.
 
 ## Highest-Value Gotchas
 
@@ -60,36 +61,44 @@ For Korean, Urdu, and other SOV (subject-object-verb) languages, inline elements
 
 JSX attribute values are NOT translated in the main Phase 4 LLM call. Phase 4b is a dedicated pass with an allow-list of translatable attribute names (`title`, `description`, `alt`, `label`, `aria-label`, `placeholder`, etc.) defined in `src/scripts/intl-pipeline/lib/shared-patterns.ts`. Touching attribute translation means touching that pass, not Phase 4.
 
+### The sanitizer runs inside each task, before the gates
+
+Since the gates landed, `runSanitizer` is called per task on that task's own output (`sanitizeAndGate` in `main.ts`), then the gates judge the sanitized bytes, then content and manifest are recorded together. There is no post-squash sanitize commit any more; a sanitizer change is exercised on the next run's tasks, not on a branch sweep.
+
 ### Sanitizer test scope is per-file, never per-language sweep
 
 NEVER run the sanitizer against an entire language. It processes thousands of files and hangs for 30+ minutes. There is no per-file env var — the only env-based scoping is per-language via `TARGET_LANGUAGES` (e.g. `TARGET_LANGUAGES=ja`), which still sweeps that whole language. Scope to specific files programmatically by calling the exported `runSanitizer(filesWithContent)` from `intl-sanitizer.ts` with just the affected file(s). The slash command `/fix-sanitizer-bug` enforces this; if you script around it, preserve the constraint.
 
 ## Quick "Where Do I Look?" Cheatsheet
 
-| I need...                              | Path                                                               |
-| -------------------------------------- | ------------------------------------------------------------------ |
-| Pipeline entry                         | `src/scripts/intl-pipeline/main.ts`                                |
-| Sanitizer                              | `src/scripts/intl-pipeline/intl-sanitizer.ts`                      |
-| Gemini adapter                         | `src/scripts/intl-pipeline/lib/llm/gemini.ts`                      |
-| OpenRouter transport                   | `src/scripts/intl-pipeline/lib/llm/openrouter.ts`                  |
-| Adapter registry / provider selection  | `src/scripts/intl-pipeline/lib/llm/adapters.ts`, `constants.ts`    |
-| Spend bounds (budget + run fuse)       | `src/scripts/intl-pipeline/lib/llm/cost-meter.ts`                  |
-| Work planner (shared with estimate)    | `src/scripts/intl-pipeline/lib/llm/plan.ts`                        |
-| Cost estimate, no LLM calls            | `pnpm intl:estimate` (`src/scripts/intl-pipeline/estimate.ts`)     |
-| Prompt builder                         | `src/scripts/intl-pipeline/lib/llm/prompt-builder.ts`              |
-| Content normalizer                     | `src/scripts/intl-pipeline/lib/llm/content-normalizer.ts`          |
-| Shared patterns (JSX attrs allow-list) | `src/scripts/intl-pipeline/lib/shared-patterns.ts`                 |
-| Glossary config                        | `src/scripts/intl-pipeline/config.ts`                              |
-| Workflow file                          | `.github/workflows/intl-pipeline.yml`                              |
-| Per-file pipeline spec (canonical)     | `tests/specs/PIPELINE-SPEC.md`                                     |
-| Concurrency / chunking spec            | `tests/specs/CONCURRENCY-SPEC.md`                                  |
-| Test fixture mutation table            | `tests/specs/SPEC.md`                                              |
-| Sanitizer test suite                   | `tests/unit/intl-pipeline/sanitizer/`                              |
-| Pipeline test suite                    | `tests/unit/intl-pipeline/`                                        |
-| Future-work backlog                    | `src/scripts/intl-pipeline/FUTURE.md`                              |
-| Language config (canonical list)       | `i18n.config.json`                                                 |
-| ETHGlossary repo                       | https://github.com/wackerow/ethglossary                            |
-| ETHGlossary API root                   | https://ethglossary.visual-20-hoists.workers.dev                   |
+| I need...                               | Path                                                                                  |
+| --------------------------------------- | ------------------------------------------------------------------------------------- |
+| Pipeline entry                          | `src/scripts/intl-pipeline/main.ts`                                                   |
+| Sanitizer                               | `src/scripts/intl-pipeline/intl-sanitizer.ts`                                         |
+| Gemini adapter                          | `src/scripts/intl-pipeline/lib/llm/gemini.ts`                                         |
+| OpenRouter transport                    | `src/scripts/intl-pipeline/lib/llm/openrouter.ts`                                     |
+| Adapter registry / provider selection   | `src/scripts/intl-pipeline/lib/llm/adapters.ts`, `constants.ts`                       |
+| Spend bounds (budget + run fuse)        | `src/scripts/intl-pipeline/lib/llm/cost-meter.ts`                                     |
+| Pre-commit gates (structure, MDX, JSON) | `src/scripts/intl-pipeline/lib/gates.ts`                                              |
+| Deterministic-failure quarantine        | `src/scripts/intl-pipeline/lib/quarantine.ts`, `.manifests/quarantine.json`           |
+| Work planner (shared with estimate)     | `src/scripts/intl-pipeline/lib/llm/plan.ts`                                           |
+| Cost estimate, no LLM calls             | `pnpm intl:estimate` (`src/scripts/intl-pipeline/estimate.ts`)                        |
+| Structural gate, standalone CLI         | `src/scripts/intl-pipeline/verify-structure.ts` (checks in `lib/verify-structure.ts`) |
+| One-off repairs (never run by a run)    | `migrate-manifests.ts`, `repair-anchors.ts` -- see "One-off repair scripts"           |
+| Prompt builder                          | `src/scripts/intl-pipeline/lib/llm/prompt-builder.ts`                                 |
+| Content normalizer                      | `src/scripts/intl-pipeline/lib/llm/content-normalizer.ts`                             |
+| Shared patterns (JSX attrs allow-list)  | `src/scripts/intl-pipeline/lib/shared-patterns.ts`                                    |
+| Glossary config                         | `src/scripts/intl-pipeline/config.ts`                                                 |
+| Workflow file                           | `.github/workflows/intl-pipeline.yml`                                                 |
+| Per-file pipeline spec (canonical)      | `tests/specs/PIPELINE-SPEC.md`                                                        |
+| Concurrency / chunking spec             | `tests/specs/CONCURRENCY-SPEC.md`                                                     |
+| Test fixture mutation table             | `tests/specs/SPEC.md`                                                                 |
+| Sanitizer test suite                    | `tests/unit/intl-pipeline/sanitizer/`                                                 |
+| Pipeline test suite                     | `tests/unit/intl-pipeline/`                                                           |
+| Future-work backlog                     | `src/scripts/intl-pipeline/FUTURE.md`                                                 |
+| Language config (canonical list)        | `i18n.config.json`                                                                    |
+| ETHGlossary repo                        | https://github.com/ethereum/ethglossary                                               |
+| ETHGlossary API root                    | https://glossary.ethereum.org                                                         |
 
 ## When to Load Each Reference
 

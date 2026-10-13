@@ -29,7 +29,7 @@ Oto niektóre z najpopularniejszych standardów tokenów w sieci Ethereum:
 
 Pełna lista propozycji [ERC](https://eips.ethereum.org/erc).
 
-## Dalsza lektura
+## Dalsza lektura {#further-reading}
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_
 

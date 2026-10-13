@@ -47,7 +47,7 @@ Bir akıllı sözleşme, Ethereum blokzinciri üzerinde yaşayan ve tam olarak p
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Dapp oluşturma araçları
+## Dapp oluşturma araçları {#dapp-tools}
 
 **Scaffold-ETH 2 _- Akıllı sözleşmenize uyum sağlayan bir ön uç kullanarak Solidity ile hızlıca denemeler yapın._**
 

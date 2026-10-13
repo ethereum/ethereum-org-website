@@ -78,13 +78,13 @@ Oba přístupy jsou stále zkoumány z hlediska efektivity a praktičnosti v mě
 
 Jedná se o pragmatický přístup. Uživatelé a peněženky, kteří chtějí postkvantovou ochranu dříve, ji mohou přijmout dobrovolně, zatímco širší migrace proběhne postupně.
 
-### 4. Důkazy s nulovou znalostí (ZK-proofs) na aplikační vrstvě {#zk-proofs}
+### 4. Důkazy s nulovou znalostí na aplikační vrstvě {#zk-proofs}
 
-**Co to dělá**: Systémy důkazů s nulovou znalostí používají rollupy na vrstvě 2 (L2) a další aplikace k ověřování výpočtů bez odhalení podkladových dat.
+**Co to dělá**: Systémy důkazů používají L2 rollupy k ověřování výpočtů bez jejich opětovného provedení, a tam, kde aplikace implementuje vlastnost nulového vědomí, k dokazování tvrzení bez odhalení soukromých vstupů, které za nimi stojí.
 
-**Proč je to zranitelné**: Mnoho populárních systémů ZK-proof (SNARK využívající párování eliptických křivek) spoléhá na předpoklady zranitelné vůči kvantovým počítačům.
+**Proč je to zranitelné**: Mnoho populárních systémů důkazů s nulovou znalostí (SNARKy využívající párování eliptických křivek) spoléhá na kvantově zranitelné předpoklady.
 
-**Přístup**: STARK, které spoléhají na hashovací funkce spíše než na eliptické křivky, jsou již kvantově odolné a používá je několik rollupů. Přirozené přijetí systémů založených na STARK v ekosystému již poskytuje postkvantovou bezpečnost na aplikační vrstvě.
+**Přístup**: STARKy, které spoléhají na hashovací funkce spíše než na eliptické křivky, jsou již kvantově odolné a používá je několik rollupů. Přirozené přijetí systémů založených na STARK ekosystémem již poskytuje postkvantovou bezpečnost na aplikační vrstvě.
 
 ## Standardy NIST {#nist-standards}
 

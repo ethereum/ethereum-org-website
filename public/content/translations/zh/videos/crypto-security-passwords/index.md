@@ -8,7 +8,6 @@ duration: "1:09:55"
 educationLevel: beginner
 topic:
   - "security"
-  - "authentication"
 format: presentation
 author: aantonop
 breadcrumb: "加密安全"

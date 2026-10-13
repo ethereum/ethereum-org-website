@@ -7,8 +7,7 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "community-stories"
-  - "community"
+  - "events"
 format: explainer
 author: "எத்திரியம் ஃபவுண்டேஷன்"
 breadcrumb: "Devconnect Buenos Aires"

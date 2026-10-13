@@ -41,16 +41,6 @@ const dialogVariant = tv({
       unstyled: {
         content: "block p-0 rounded-none bg-none gap",
       },
-      // Edge-to-edge media modal: no padding, a single scrolling body, and a
-      // close button that floats over the content (e.g. over a banner image).
-      media: {
-        content:
-          "flex flex-col gap-0 overflow-hidden rounded-lg p-0 max-h-[calc(100dvh-2rem)]",
-        header: "absolute end-0 top-0 z-10 pe-0",
-        close:
-          "static m-2 size-auto rounded bg-background/75 p-1 hover:bg-background hover:text-primary-hover [&_.lucide-x]:stroke-[3]",
-        body: "min-h-0 flex-1 overflow-y-auto",
-      },
     },
   },
   defaultVariants: {

@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/staking/saas/index.md",
   "generatedAt": "2026-08-19T20:53:24.985Z",
-  "rootHash": "66903cbe9f4c",
+  "rootHash": "b669ee358809",
   "tree": {
-    "contentHash": "beaa35661f50",
-    "anchorHash": "059d5f1cc331",
+    "contentHash": "ca3a9109616d",
+    "anchorHash": "62e951381e7a",
     "children": {
       "frontmatter:title": {
         "contentHash": "9c6e48c1bd4c",
@@ -32,8 +32,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "1f77f10ea684",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "56fec9711935",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "8dbe41355756",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5ffbcf31ee68",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-is-staking-as-a-service": {
         "contentHash": "5ce4160efc7d",

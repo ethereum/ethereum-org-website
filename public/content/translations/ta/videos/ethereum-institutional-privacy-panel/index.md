@@ -7,7 +7,6 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "privacy-and-security"
   - "privacy"
 format: panel
 author: "வெப்3பிரைவசி நவ்"
