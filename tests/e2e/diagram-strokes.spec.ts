@@ -18,6 +18,7 @@ import { expect, type Locator, test } from "@playwright/test"
 const pagesWithDiagrams = [
   "/developers/docs/transactions/",
   "/developers/docs/gas/",
+  "/developers/docs/evm/",
 ]
 
 const findPaintProblems = (stage: Locator) =>

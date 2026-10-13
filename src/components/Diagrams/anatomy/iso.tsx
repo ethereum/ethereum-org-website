@@ -278,10 +278,13 @@ export function IsoPipe({
   flowing,
   flowD,
   flowKey,
+  flowEmphasis,
   className,
 }: {
   d: string
   flowing?: boolean
+  /** A stronger, longer pulse (e.g. an expensive operation). */
+  flowEmphasis?: boolean
   /** The stretch gas flows along, if not the whole pipe. */
   flowD?: string
   flowKey?: string
@@ -301,7 +304,12 @@ export function IsoPipe({
           key={flowKey}
           d={flowD ?? d}
           strokeDasharray="5 6"
-          className="animate-diagram-flow stroke-diagram-gas [stroke-width:2.5] motion-reduce:animate-none"
+          className={cn(
+            "animate-diagram-flow stroke-diagram-gas motion-reduce:animate-none",
+            flowEmphasis
+              ? "[stroke-width:4] [animation-duration:1400ms]"
+              : "[stroke-width:2.5]"
+          )}
         />
       )}
     </g>

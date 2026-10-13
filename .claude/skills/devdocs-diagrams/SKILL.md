@@ -8,7 +8,7 @@ description: Use when converting a developer-docs schematic PNG (gas.png, evm.pn
 Developer docs schematics (adapted from _Ethereum EVM illustrated_) are being
 replaced, one PR per PNG, by theme-aware, translatable, accessible React
 figures built from a shared set of primitives. PR 1 converted `gas-tx.png` and
-introduced the primitives. Start every later PR here; also load the
+introduced the primitives. `gas.png` (`GasEvm`, on the gas and EVM pages) followed on `InteractiveDiagram`. Start every later PR here; also load the
 `design-system` skill.
 
 `GasTx` is drawn as a simple isometric fuel rig (`GasTx/gas-rig.tsx`) on the
@@ -244,21 +244,20 @@ strokes 3:1) before adding a token.
 All files sit next to the listed `index.md` under
 `public/content/developers/docs/`.
 
-| PNG                                     | Used in                                        | Extra grammar it needs beyond PR 1                                                                                        |
-| --------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `gas.png`                               | `gas/` and `evm/`                              | Circle entity (`shape="circle"`); dashed **entity** group; elbows; a line passing through badges; edge leaving the canvas |
-| `evm.png`                               | `evm/`                                         | Nested filled entity containers; large icon tiles; title + subtitle pair. No connectors                                   |
-| `tx.png`                                | `transactions/`                                | "?" glyph over a labelled dashed arrow (simplest one)                                                                     |
-| `tx-block.png`                          | `blocks/`                                      | State node holding pill chips                                                                                             |
-| `accounts.png`                          | `accounts/`                                    | Stacked "multiple" outline; bidirectional S-elbows; list of state rows                                                    |
-| `nodes.png`                             | `nodes-and-clients/`                           | Circle entity "You"; ETH logo badge; chip list in a node                                                                  |
-| `diagram.png`                           | `nodes-and-clients/run-a-node/`                | Group title at bottom; free-floating labels above/below a bidirectional line                                              |
-| `eth1eth2client.png`                    | `nodes-and-clients/`                           | Segmented node ("p2p" part); pills on elbow lines; fan-out network stubs                                                  |
-| `node-architecture-text-background.png` | `nodes-and-clients/node-architecture/`         | Dashed entity group; bullet lists in nodes; peer mesh with off-canvas dotted links                                        |
-| `attestation_schematic.png`             | `consensus-mechanisms/pos/attestations/`       | Merging lines; filled-orange circle; tab pills (`shape="tab"`); block chain row                                           |
-| `reorg-schematic.png`                   | `consensus-mechanisms/pos/attack-and-defense/` | Undirected edges (`arrow="none"`); free-text annotations                                                                  |
-| `multiple-keys.png`                     | `consensus-mechanisms/pos/keys/`               | Fan-out tree (several `DiagramElbow`s) with tab pills; row labels                                                         |
-| `validator-key-schematic.png`           | `consensus-mechanisms/pos/keys/`               | Three-way tree; bracket rail connector on the start side                                                                  |
+| PNG                                     | Used in                                        | Extra grammar it needs beyond PR 1                                                      |
+| --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `evm.png`                               | `evm/`                                         | Nested filled entity containers; large icon tiles; title + subtitle pair. No connectors |
+| `tx.png`                                | `transactions/`                                | "?" glyph over a labelled dashed arrow (simplest one)                                   |
+| `tx-block.png`                          | `blocks/`                                      | State node holding pill chips                                                           |
+| `accounts.png`                          | `accounts/`                                    | Stacked "multiple" outline; bidirectional S-elbows; list of state rows                  |
+| `nodes.png`                             | `nodes-and-clients/`                           | Circle entity "You"; ETH logo badge; chip list in a node                                |
+| `diagram.png`                           | `nodes-and-clients/run-a-node/`                | Group title at bottom; free-floating labels above/below a bidirectional line            |
+| `eth1eth2client.png`                    | `nodes-and-clients/`                           | Segmented node ("p2p" part); pills on elbow lines; fan-out network stubs                |
+| `node-architecture-text-background.png` | `nodes-and-clients/node-architecture/`         | Dashed entity group; bullet lists in nodes; peer mesh with off-canvas dotted links      |
+| `attestation_schematic.png`             | `consensus-mechanisms/pos/attestations/`       | Merging lines; filled-orange circle; tab pills (`shape="tab"`); block chain row         |
+| `reorg-schematic.png`                   | `consensus-mechanisms/pos/attack-and-defense/` | Undirected edges (`arrow="none"`); free-text annotations                                |
+| `multiple-keys.png`                     | `consensus-mechanisms/pos/keys/`               | Fan-out tree (several `DiagramElbow`s) with tab pills; row labels                       |
+| `validator-key-schematic.png`           | `consensus-mechanisms/pos/keys/`               | Three-way tree; bracket rail connector on the start side                                |
 
 Bracket rails, off-canvas mesh links and segmented nodes have no primitive
 yet. Add them as variants in the PR that first needs them.
