@@ -12,8 +12,8 @@ src/data-layer/
 ├── fetchers/         # Fetch functions (one per data source)
 │   └── developer-tools/  # Multi-file fetcher (builder resources, GitHub/npm stats, ranking)
 ├── index.ts          # Public API - typed getter functions
-├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
-├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
+├── tasks.ts          # Trigger.dev scheduled tasks
+├── storage.ts        # KEYS constant + get/set (Netlify Blobs or mock files)
 ├── s3.ts             # S3 image upload utility for external images
 ├── docs.md           # Module documentation
 ├── mocks/            # Mock data files for local development
@@ -29,7 +29,7 @@ The data-layer uses a **dedicated `.env.local`** at `src/data-layer/.env.local`,
 
 ## Key Files
 
-`tasks.ts` defines the `KEYS` constant and the `WEEKLY`/`DAILY`/`HOURLY` task tuples; `index.ts` holds the one-liner getters — snippets for both under "Adding a New Data Source" below.
+`storage.ts` defines the `KEYS` constant, `tasks.ts` the `WEEKLY`/`DAILY`/`HOURLY` task tuples; `index.ts` holds the one-liner getters — snippets for both under "Adding a New Data Source" below.
 
 ### storage.ts - Storage Abstraction
 
@@ -76,7 +76,7 @@ All transformations belong in the fetcher (`src/data-layer/fetchers/`).
 
 ### 2. KEYS is the single source of truth
 
-All task IDs are defined in `KEYS` in `tasks.ts`. The getter in `index.ts` and the task tuple in `WEEKLY`/`DAILY`/`HOURLY` must use the same key.
+All task IDs are defined in `KEYS` in `storage.ts`. The getter in `index.ts` and the task tuple in `WEEKLY`/`DAILY`/`HOURLY` must use the same key.
 
 ### 3. Expose via lib/data for caching
 
@@ -124,7 +124,7 @@ If a fetcher needs data that lives in the app — content files, frontmatter, et
    }
    ```
 
-2. **Add key** to `KEYS` in `src/data-layer/tasks.ts`:
+2. **Add key** to `KEYS` in `src/data-layer/storage.ts`:
 
    ```typescript
    export const KEYS = {

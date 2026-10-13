@@ -18,8 +18,7 @@ import type { BlobStats } from "./fetchers/fetchBlobStats"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { QuizStatsData } from "./fetchers/fetchQuizStats"
 import type { CoinGeckoCoinMarketResponse } from "./fetchers/fetchStablecoinsData"
-import { get } from "./storage"
-import { KEYS } from "./tasks"
+import { get, KEYS } from "./storage"
 
 export { KEYS }
 
