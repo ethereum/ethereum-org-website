@@ -1,4 +1,8 @@
-import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
+import {
+  fetchRetry,
+  parallelBatch,
+  sleep,
+} from "@/data-layer/fetchers/fetchRetry"
 
 type ParsedNpmUrl = {
   packageName: string
@@ -63,25 +67,15 @@ async function fetchBulkDownloads(
   const unscopedPackages = uniquePackages.filter((p) => !p.startsWith("@"))
 
   // Fetch scoped packages individually (in parallel with concurrency limit)
-  const CONCURRENCY = 10
-  for (let i = 0; i < scopedPackages.length; i += CONCURRENCY) {
-    const batch = scopedPackages.slice(i, i + CONCURRENCY)
-    const batchResults = await Promise.all(
-      batch.map(async (pkg) => ({
-        pkg,
-        downloads: await fetchSinglePackageDownloads(pkg),
-      }))
-    )
-
-    for (const { pkg, downloads } of batchResults) {
-      if (downloads !== null) {
-        results.set(pkg, downloads)
-      }
-    }
-
-    // Add 15 second delay between batches to avoid rate limits
-    if (i + CONCURRENCY < scopedPackages.length) {
-      await sleep(15000)
+  const scopedResults = await parallelBatch(
+    scopedPackages,
+    async (pkg) => ({ pkg, downloads: await fetchSinglePackageDownloads(pkg) }),
+    10,
+    15000
+  )
+  for (const { pkg, downloads } of scopedResults) {
+    if (downloads !== null) {
+      results.set(pkg, downloads)
     }
   }
 

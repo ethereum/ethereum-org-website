@@ -74,7 +74,7 @@ You can see how this is not optimal:
 - Extra gas costs for storing those values.
 - Requires another call to fetch the data for an Ethereum node.
 
-![Thats not good enough](./not-good-enough.jpg)
+![That's not good enough](./not-good-enough.jpg)
 
 Now let's look at a better solution.
 

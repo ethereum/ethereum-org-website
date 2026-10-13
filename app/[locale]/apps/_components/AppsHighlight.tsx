@@ -56,7 +56,6 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
           category={app.category}
           categoryTagStatus={APP_TAG_VARIANTS[app.category]}
           tags={app.subCategory}
-          layout="horizontal"
           imageSize="medium"
         />
       </LinkOverlay>

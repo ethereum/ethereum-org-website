@@ -22,7 +22,7 @@ kama vile:
 
 Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [dapps](/developers/docs/dapps/) na [mrundikano wa Ethereum](/developers/docs/ethereum-stack/).
 
-## Mifumo inayopatikana
+## Mifumo inayopatikana {#available-frameworks}
 
 **Foundry** - **_Foundry ni seti ya zana ya haraka sana, inayobebeka na ya kimoduli kwa uundaji wa programu za Ethereum_**
 

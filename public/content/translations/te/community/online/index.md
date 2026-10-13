@@ -48,7 +48,7 @@ lang: te
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal ద్వారా నిర్వహించబడే డిస్కార్డ్ చాట్: ప్రపంచవ్యాప్తంగా ఉన్న ఎథీరియం హ్యాకర్ల కోసం ఆన్‌లైన్ కమ్యూనిటీ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - ఎథీరియం అభివృద్ధిపై దృష్టి సారించిన డిస్కార్డ్ కమ్యూనిటీ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker డిస్కార్డ్</Link> - ప్రస్తుత మరియు సంభావ్య స్టేకర్ల కోసం కమ్యూనిటీ-నిర్వహించే మార్గదర్శకత్వం, విద్య, మద్దతు మరియు వనరులు</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org వెబ్‌సైట్ బృందం</Link> - బృందం మరియు కమ్యూనిటీ వ్యక్తులతో ethereum.org వెబ్ అభివృద్ధి మరియు డిజైన్ గురించి చాట్ చేయండి</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org వెబ్‌సైట్ బృందం</Link> - బృందం మరియు కమ్యూనిటీ వ్యక్తులతో ethereum.org వెబ్ అభివృద్ధి మరియు డిజైన్ గురించి చాట్ చేయండి</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos డిస్కార్డ్</Link> - బిల్డర్‌లు, పారిశ్రామిక ప్రముఖులు మరియు ఎథీరియం ఔత్సాహికులు సమావేశమయ్యే Web3 సృష్టికర్తల కమ్యూనిటీ. మేము Web3 అభివృద్ధి, డిజైన్ మరియు సంస్కృతి పట్ల మక్కువ కలిగి ఉన్నాము. మాతో కలిసి నిర్మించండి.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity అభివృద్ధి కోసం చాట్ (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- ప్రశ్న మరియు సమాధానాల ఫోరమ్</i></SocialListItem>

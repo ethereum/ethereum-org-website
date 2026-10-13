@@ -4,12 +4,14 @@ import { AppWindowMac } from "lucide-react"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
-import { Image } from "@/components/Image"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
+import { ExternalLinkIcon } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag, TagProps, TagsInlineText } from "@/components/ui/tag"
 import TruncatedText from "@/components/ui/TruncatedText"
 
 import { cn } from "@/lib/utils/cn"
+import { isExternal } from "@/lib/utils/url"
 
 // Outer wrapper variants (hover behavior)
 const appCardVariants = cva("group/appcard rounded-xl p-2 text-body", {
@@ -24,14 +26,11 @@ const appCardVariants = cva("group/appcard rounded-xl p-2 text-body", {
   },
 })
 
+// Horizontal is the base; `vertical` stacks the image above the content.
 const layoutVariants = cva("flex gap-3", {
   variants: {
     layout: {
-      horizontal: "",
       vertical: "flex-col",
-    },
-    defaultVariant: {
-      layout: "vertical",
     },
   },
 })
@@ -124,26 +123,29 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
     },
     ref
   ) => {
+    // Frame travels with the icon so a failed thumbnail looks like a missing one
+    const fallbackNode = fallbackIcon ? (
+      <div className="grid size-full place-items-center rounded-xl border">
+        {fallbackIcon}
+      </div>
+    ) : null
+
     const innerContent = (
       <div className={cn(layoutVariants({ layout }))}>
         {/* Image or fallback */}
         {(thumbnail || fallbackIcon) && (
-          <div
-            className={cn(
-              imageSizeVariants({ size: imageSize }),
-              !thumbnail && fallbackIcon && "grid place-items-center border"
-            )}
-          >
+          <div className={cn(imageSizeVariants({ size: imageSize }))}>
             {thumbnail ? (
-              <Image
+              <ImageWithFallback
                 src={thumbnail}
                 alt={name}
                 className="size-full object-contain"
                 width={imageSize ? imageSizePixels[imageSize] : 64}
                 height={imageSize ? imageSizePixels[imageSize] : 64}
+                fallback={fallbackNode}
               />
             ) : (
-              fallbackIcon
+              fallbackNode
             )}
           </div>
         )}
@@ -165,6 +167,9 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
             )}
           >
             {name}
+            {/* Beside the name, not where BaseLink appends it -- after the
+                last child, which on a card is the foot of the tag list */}
+            {href && isExternal(href) && <ExternalLinkIcon />}
           </p>
 
           {/* Description - shown if description is provided */}
@@ -209,6 +214,7 @@ const AppCard = React.forwardRef<HTMLDivElement, AppCardProps>(
       >
         <LinkOverlay
           href={href}
+          hideArrow
           scroll={href?.startsWith("?") ? false : undefined}
           className="no-underline"
           matomoEvent={customEventOptions}

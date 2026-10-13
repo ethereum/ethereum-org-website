@@ -19,7 +19,7 @@ Devconnect Arjantin 2025 sırasındaki Ethereum Günü'nde **Santiago Palladino*
 
 *Bu transkript, Ethereum Vakfı tarafından yayınlanan [orijinal video transkriptinin](https://www.youtube.com/watch?v=FzJBV3oSUns) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır.*
 
-#### Uzaklarda büyümek (0:07) {#growing-up-far-away-007}
+### Uzaklarda büyümek (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Teşekkürler Binji. Burada olduğunuz için hepinize teşekkür ederim. Burada sahnede olmak benim için büyük bir onur ve Devconnect'in burada, Buenos Aires'te gerçekleşmesi daha da büyük bir onur.
 
@@ -39,13 +39,13 @@ Sürekli karşımıza çıkan mecaz, Arjantin'in kaçılacak bir yer, baştan ba
 
 Bu alıntı yıllar önceki bir Dexter bölümünden. Aslında onu bulmak için Dexter wiki'sine girdim ve şu güzel açıklamayla karşılaştım: "Arjantin, dizideki bir mekandır." Oh, bu arada, orası aynı zamanda gerçek bir yer; bilginiz olsun.
 
-#### Bir özellik olarak merkeziyetsizlik (4:47) {#decentralization-as-a-feature-447}
+### Bir özellik olarak merkeziyetsizlik (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Yani çok uzaktayız, dünyadan kopuğuz. Ve çok uzak derken sadece coğrafi olarak kastetmiyorum; buraya seyahat eden çoğunuzun uçakta katlandığı gibi. Hey, ödeşme vakti; biz başka bir yere gittiğimizde hep bununla uğraşmak zorunda kalıyoruz.
 
 Demek istediğim şu: Dünyanın geri kalanından bu kadar uzak, bu kadar kopuk olduğumuz için, merkeziyetsizliğin bir hata değil, bir özellik, bir değer olduğu bir teknoloji bulduğumuzda hemen üzerine atlamamıza şaşmamak gerek.
 
-#### Arjantin kriptosunun on yılı (5:27) {#a-decade-of-argentine-crypto-527}
+### Arjantin kriptosunun on yılı (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Artık size nereden geldiğime dair biraz bağlam verdiğime göre, iki şeyden bahsetmek istiyorum. Birincisi, Arjantinlilerin son on yıl veya daha uzun süredir kripto alanında neler yaptığını övmek. İkincisi ise Ethereum'u inşa etmek için ihtiyaç duyduğumuz farklı insanları, farklı profilleri, farklı geçmişleri incelemek. Vurgulamak istediğim nokta şu: Ethereum'da çeşitliliğe ihtiyacımız var. Coğrafi çeşitliliğe ihtiyacımız var. Farklı uzmanlık alanlarına, farklı alanlara ihtiyacımız var. İnşa etmek istediğimiz şeyi inşa etmek için olabildiğince çok insanın bu işe dahil olmasına ihtiyacımız var.
 
@@ -59,7 +59,7 @@ Voltaire'den en tanınmış Arjantin projelerinden bazıları ortaya çıktı: O
 
 Arjantin'deki Web3 geliştiricilerinin Web2 geliştiricilerine oranı ABD'dekinin neredeyse üç katıdır. Aztec Labs'te bile her altı mühendisten biri Arjantinlidir; ve İngiltere'de kurulmuş bir şirketten bahsediyorum. Web3'ü seviyoruz. Doğal olarak ona çekiliyoruz. Bence bunun nedenleri, Isabelle'in bu etkinlikteki konuşmasında bahsettiklerinin yarısı ve aynı zamanda bu dünyadan kopuk olma hissi ile Ethereum'da inşa edebileceğimiz, gelişebileceğimiz ve hoş karşılandığımız bir yer bulmamızdır.
 
-#### Ekosisteme sızmak (9:37) {#infiltrating-the-ecosystem-937}
+### Ekosisteme sızmak (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Birkaç anı daha paylaşayım; yine parayla ilgili değil, Web3 ekosistemine sızan bu Arjantinlilerin inşa ettiği şeylerin türleri hakkında. Benim için Web3'teki ilk deneyimim, bir akıllı sözleşme dili olan Serpent'i denetlemekti. Eğer adını duymadıysanız, bunun nedeni onu yok etmiş olmamızdır.
 
@@ -67,7 +67,7 @@ On yıllık profesyonel geliştirme geçmişinden gelip, aniden bu mekana on be�
 
 Arjantin'deki güvenlik topluluğu inanılmaz. ENS'de Arjantinliler tarafından tespit edilen büyük kritik güvenlik açıkları oldu; bunlardan biri, bana sorarsanız tüm ekosistemde güvenlik alanında en az değer verilen ekiplerden biri olan Red Guild'den. Bu adamlar harika. Ayrıca Arjantinliler MakerDAO'daki kritik saldırıları veya yüzlerce Telegram hesabının çalınmasına yol açan SMS üzerindeki bir tedarik zinciri saldırısını bile tespit ettiler. Bu arada, günlük hatırlatma: İki faktörlü kimlik doğrulama (2FA) için SMS kullanmayın.
 
-#### Standartlar ve altyapı (11:17) {#standards-and-infrastructure-1117}
+### Standartlar ve altyapı (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Standartlara da çok katkıda bulunduk. Kriptodaki ilk beş yılım OpenZeppelin'de geçti. Hemen şurada oturan bir arkadaşla ve Facu ile birlikte ERC-721 sözleşmesini oluşturma şansım oldu. Bu kod, birkaç yıl sonra NFT çılgınlığına güç verecekti; buradan yazılmıştı.
 
@@ -83,7 +83,7 @@ Tüm bunlar Crecimiento ekibi tarafından güzel bir girişimde derlendi. Web si
 
 Onlar da büyük katkılarda bulunuyorlar. Biri üzerinde durmak istiyorum. Dün gizlilik üzerine Ethereum Cypherpunk Kongresi vardı. Ana sahnede Vitalik, yeni gizlilik cüzdanı Kohaku'nun demosunu yapıyordu. Bir saat sonra, ikincil sahnede (neredeyse en üst katta gizlenmiş bir şekilde) Kohaku'yu gerçekten inşa eden geliştiricilerden birinin yer aldığı bir panel vardı; kendisi Arjantinli ve buradan birkaç blok ötede çalışıyor.
 
-#### Ethereum'u eve getirmek (15:07) {#bringing-ethereum-home-1507}
+### Ethereum'u eve getirmek (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Ancak tüm bu katkılar, Arjantin'in Web3'e getirdiği tüm bu şeyler yeterli değildi. Daha fazlasını yapmak istedik. Ethereum'u buraya getirmek istedik. Ve sürprizbozan uyarısı, madem burada oturuyorsunuz; evet, başardık.
 
@@ -91,13 +91,13 @@ Her şey 2018'de ilk ETH Global topluluk hackathon'u olan ETH Buenos Aires ile b
 
 Ve evet, sonunda bu, Mariano'nun Devcon 5'teki bir konuşmasına yol açtı. Konuşmanın adı "DeFi Üzerinde Yaşamak: Arjantin'in %50 Enflasyonundan Nasıl Kurtulduk" idi. %300 enflasyona ulaştıktan sonra bu rakam kulağa sevimli geliyor. O resmi Mariano'nun sunumunda zaten gördünüz. Göstermediği şey ise tişörtün hala bende olduğu. Aslında bunu bir meme haline getirip gerçeğe dönüştürmeye çalışmak için "Devcon Buenos Aires 2020" yazılı tişörtler bastırmıştık. Bunu beş yıldan fazla bir süredir saklıyorum. Şimdi bunu göstermekten gurur duyuyorum.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Başardık. Devconnect'in sonunda buraya gelmesinden ne kadar gurur duyduğumu, ne kadar onurlandığımı anlatamam. Bu adeta bir rüyanın gerçeğe dönüşmesi.
 
 Bence bu çok mantıklı; sadece bu ülkeyi sevdiğim için değil, aynı zamanda Ethereum'un sözünün arkasında durduğunu ve konferansını buna göre konumlandırdığını gösterdiği için. Merkeziyetsizlik hakkındaki tüm bu değerler, konferansı burada düzenleyerek, var olduğuna sizi ikna ettiğimi umduğum mevcut yetenekten yararlanarak ve aynı zamanda mevcut kullanıcı tabanından güç alarak eyleme dönüştürülüyor. Neredeyse her beş Arjantinliden biri merkeziyetsiz veya merkezi kripto tutuyor. Merkezi bir borsada kripto tutmanın aslında kripto tutmak olup olmadığı konusunda uzun süre tartışabiliriz, ancak bunlar zaten buna sahip olan, zaten buna maruz kalmış insanlar. Yeni şeyler, yeni ürünler sunmaya çalışmak ve nelerin inşa edilebileceğini görmek için yararlanabileceğiniz mevcut bir kullanıcı tabanı var.
 
-#### Herkes için Ethereum (17:46) {#ethereum-for-everyone-1746}
+### Herkes için Ethereum (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Bir saniyeliğine konuyu değiştireyim. Arjantin'in bir etkinliğe ev sahipliği yapmak için, yerel yetenekler için, her şey için ne kadar harika olduğunu övdüğümü biliyorum. Ancak asıl belirtmek istediğim nokta şu: Eğer Ethereum burada, dünyanın bu uzak köşesinde işe yaradıysa, her yerde işe yarayabilir. Arjantin, Ethereum'un gerçekten sınırsız bir teknoloji olduğunu ve dünyanın her köşesinde çalışabileceğini gösteren sadece bir örnektir.
 
@@ -125,7 +125,7 @@ Düğüm operatörleri ağı çalıştırır, aslında protokolümüzün yaşad�
 
 Tüm bunlar çok çeşitli bir insan grubu tarafından desteklendi. Sadece bir grup geliştirici seçerseniz (ki ben de bir geliştiriciyim) bunu inşa edemeyiz.
 
-#### Alef (23:59) {#the-aleph-2359}
+### Alef (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** Devconnect adlı bir konferansta bunu söylemenin muhtemelen pek popüler olmadığını biliyorum, ancak demek istediğim şu: Ethereum her yerde çalışması ve herkes için olması amaçlanan bir teknolojidir; dünyanın her yerinden, her geçmişten, herkes tarafından inşa edilmesi amaçlanmıştır.
 
@@ -133,7 +133,7 @@ Kalan bir dakikamla Jorge Luis Borges'ten bir alıntı yapmak istiyorum. Crecimi
 
 Bu günlerde sizden yapmanızı istediğim şey diğer insanlarla bağlantı kurmanızdır. İnşa ettiğiniz şey hakkında geri bildirim toplayın. Ortaklar, geliştiriciler, kullanıcılar, yatırımcılar bulmaya çalışın. Balonunuzdan, konfor alanınızdan çıkın ve olabildiğince çok insanla konuşun. Yeni insanlarla tanışın, yeni insanlarla etkileşime geçin. İnovasyonun çeşitlilikle geliştiğini unutmayın; ister coğrafi olsun, ister geçmişlerden, isterse ideolojilerden. Bağlantı kurun, birlikte inşa edin ve bu haftanın tadını çıkarın. Teşekkür ederim.
 
-#### Soru-Cevap (25:35) {#qa-2535}
+### Soru-Cevap (25:35) {#qa-2535}
 
 **Binji:** Bu inanılmazdı. Çok teşekkür ederim. Sanırım Ethereum etrafındaki hemen hemen her şeyi (kültürü, teknik özellikleri) tek bir konuşmada ele aldınız. Bu çok etkileyici. Daha önce birinin tüm bunları tek seferde yaptığını gördüğümü sanmıyorum. O halde birkaç soru. En ilginç bulduğum şey (özellikle kullanım durumlarından bahsettiğinizde) Ethereum üzerinde henüz inşa edilmemiş ama inşa edildiğini görmek istediğiniz şey nedir?
 

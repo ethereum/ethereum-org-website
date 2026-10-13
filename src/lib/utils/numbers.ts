@@ -1,4 +1,5 @@
 import { safeLocale } from "./date"
+import { normalizeIntlSpaces } from "./intl"
 
 /**
  * A wrapper for Intl.NumberFormat that enforces Web3 numeral standards.
@@ -67,11 +68,13 @@ export const formatCompactNumber = (
   locale: string,
   options?: Intl.NumberFormatOptions
 ): string =>
-  numberFormat(locale, {
-    notation: "compact",
-    maximumSignificantDigits: 3,
-    ...options,
-  }).format(value)
+  normalizeIntlSpaces(
+    numberFormat(locale, {
+      notation: "compact",
+      maximumSignificantDigits: 3,
+      ...options,
+    }).format(value)
+  )
 
 export const formatPriceUSD = (
   value: number,

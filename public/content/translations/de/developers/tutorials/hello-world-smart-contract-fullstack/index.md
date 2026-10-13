@@ -32,7 +32,7 @@ Wenn du an irgendeinem Punkt Fragen hast, kannst du dich gerne im [Alchemy Disco
 
 Es gibt viele Möglichkeiten, Anfragen an die Ethereum-Chain zu stellen. Der Einfachheit halber verwenden wir ein kostenloses Konto bei Alchemy, einer Blockchain-Entwicklerplattform und API, die es uns ermöglicht, mit der Ethereum-Chain zu kommunizieren, ohne selbst einen Knoten betreiben zu müssen. Alchemy verfügt auch über Entwicklertools für Überwachung und Analysen; wir werden diese in diesem Tutorial nutzen, um zu verstehen, was bei unserer Smart-Contract-Bereitstellung im Hintergrund passiert.
 
-### Erstelle deine App und deinen API-Schlüssel
+### Erstelle deine App und deinen API-Schlüssel {#create-your-app-and-api-key}
 
 Sobald du ein Alchemy-Konto erstellt hast, kannst du einen API-Schlüssel generieren, indem du eine App erstellst. Dies ermöglicht es dir, Anfragen an das Sepolia-Testnetz zu stellen. Wenn du mit Testnetzen nicht vertraut bist, kannst du [Alchemys Leitfaden zur Auswahl eines Netzwerks lesen](https://www.alchemy.com/docs/choosing-a-web3-network).
 
@@ -47,12 +47,12 @@ Gib deiner App den Namen „_Hello World_“ und schreibe eine kurze Beschreibun
 _Hinweis: Stelle sicher, dass du **Sepolia** auswählst, da dieses Tutorial sonst nicht funktioniert._
 
 Klicke auf **Create app**. Deine App wird in der Tabelle unten angezeigt.
-### Ein Ethereum-Konto erstellen
+### Ein Ethereum-Konto erstellen {#create-an-ethereum-account}
 
 Sie benötigen ein Ethereum-Konto, um Transaktionen zu senden und zu empfangen. Wir verwenden MetaMask, eine virtuelle Wallet im Browser, mit der Benutzer ihre Ethereum-Konto-Adresse verwalten können.
 
 Sie können [hier](https://metamask.io/download) kostenlos MetaMask herunterladen und ein Konto erstellen. Wenn Sie ein Konto erstellen oder bereits eines haben, achten Sie darauf, oben rechts zum „Sepolia-Testnetz“ zu wechseln (damit wir nicht mit echtem Geld hantieren).
-### Schritt 4: Ether von einem Faucet hinzufügen
+### Schritt 4: Ether von einem Faucet hinzufügen {#step-4-add-ether-from-a-faucet}
 Um Ihren Smart Contract im Testnetzwerk bereitzustellen, benötigen Sie etwas falsches ETH. Um ETH im Sepolia-Netzwerk zu erhalten, gehen Sie zu einem Sepolia-Faucet und geben Sie Ihre Sepolia-Konto-Adresse ein. Auf der [Seite für Testnetzwerke](/developers/docs/networks/#sepolia) finden Sie eine Liste mit Optionen zum Ausprobieren:
 
 _Hinweis: Aufgrund von Netzwerküberlastung kann dies eine Weile dauern._
@@ -337,7 +337,7 @@ const hello_world = await HelloWorld.deploy()
 
 Der Aufruf von `deploy()` auf einer `ContractFactory` startet die Bereitstellung und gibt ein `Promise` zurück, das in ein `Contract`-Objekt aufgelöst wird. Dies ist das Objekt, das eine Methode für jede unserer Smart-Contract-Funktionen hat.
 
-### Schritt 16: Unseren Vertrag bereitstellen
+### Schritt 16: Unseren Vertrag bereitstellen {#step-16-deploy-our-contract}
 Wir sind endlich bereit, unseren Smart Contract bereitzustellen! Navigieren Sie zur Kommandozeile und führen Sie Folgendes aus:
 
 ```bash
@@ -507,7 +507,7 @@ main()
 
 Beachten Sie, dass wir in Zeile 11 einen Aufruf von `.wait()` auf dem zurückgegebenen Transaktionsobjekt durchführen. Dies stellt sicher, dass unser Skript darauf wartet, dass die Transaktion auf der Blockchain gemint wird, bevor die Funktion beendet wird. Wenn der Aufruf von `.wait()` nicht enthalten ist, sieht das Skript möglicherweise nicht den aktualisierten Wert von `message` im Vertrag.
 
-### Lesen der neuen Nachricht
+### Lesen der neuen Nachricht {#read-the-new-message}
 
 Sie sollten in der Lage sein, den [vorherigen Schritt](#read-the-init-message) zu wiederholen, um den aktualisierten Wert von `message` zu lesen. Nehmen Sie sich einen Moment Zeit und prüfen Sie, ob Sie die notwendigen Änderungen vornehmen können, um diesen neuen Wert auszugeben!
 
@@ -633,7 +633,7 @@ module.exports = {
 }
 ```
 
-#### Verifiziere deinen Smart Contract auf Etherscan
+#### Verifiziere deinen Smart Contract auf Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Stelle sicher, dass alle Dateien gespeichert und alle `.env`-Variablen korrekt konfiguriert sind.
 
@@ -936,7 +936,7 @@ Mit diesem bereiten Endpunkt ist es an der Zeit, unseren Smart Contract zu laden
 
 Um Ihren Hello World Smart Contract zu laden, benötigen Sie dessen Vertragsadresse und ABI. Beides finden Sie auf Etherscan, wenn Sie [Teil 3 dieses Tutorials](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) abgeschlossen haben.
 
-#### So erhalten Sie die ABI Ihres Vertrags von Etherscan
+#### So erhalten Sie die ABI Ihres Vertrags von Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 Wenn Sie Teil 3 dieses Tutorials übersprungen haben, stellen Sie zuerst Ihren eigenen HelloWorld-Vertrag bereit und verifizieren Sie ihn. Öffnen Sie dann Ihre Vertragsseite auf [Sepolia Etherscan](https://sepolia.etherscan.io), um dessen ABI zu kopieren.
 
@@ -1110,10 +1110,10 @@ Um etwas in die Ethereum-Chain zu schreiben, müssen Benutzer Transaktionen mit 
 
 Wenn Sie mehr darüber verstehen möchten, wie Transaktionen auf Ethereum funktionieren, sehen Sie sich [diese Seite](/developers/docs/transactions/) der Ethereum Foundation an.
 
-#### MetaMask herunterladen
+#### MetaMask herunterladen {#download-metamask}
 
 Du kannst MetaMask [hier](https://metamask.io/download) kostenlos herunterladen und ein Konto erstellen. Wenn du ein Konto erstellst oder bereits eines hast, achte darauf, oben rechts zum „Sepolia Test Network“ zu wechseln \(damit wir nicht mit echtem Geld hantieren\).
-#### Ether aus einem Faucet hinzufügen
+#### Ether aus einem Faucet hinzufügen {#add-ether-from-a-faucet}
 
 Um eine Transaktion auf der Ethereum-Blockchain zu signieren, benötigen wir etwas Test-ETH. Um ETH zu erhalten, können Sie zu einem Sepolia-Faucet gehen, das auf der [Seite für Testnetze](/developers/docs/networks/#sepolia) aufgeführt ist, und Ihre Sepolia-Konto-Adresse eingeben. Kurz darauf sollten Sie ETH in Ihrem MetaMask-Konto sehen!
 #### Überprüfen Sie Ihr Guthaben {#check-your-balance}

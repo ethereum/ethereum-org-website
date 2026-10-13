@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md",
   "generatedAt": "2026-07-22T23:48:55.555Z",
-  "rootHash": "c8ee63ef2713",
+  "rootHash": "219eeb7ce51c",
   "tree": {
-    "contentHash": "4777b39ecebb",
-    "anchorHash": "043e120af561",
+    "contentHash": "f2c5d1c202be",
+    "anchorHash": "9feac6ce3bed",
     "children": {
       "frontmatter:title": {
         "contentHash": "9b032f53b4d0",
@@ -17,15 +17,64 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0cf2727c3a2b"
+        "anchorHash": "0049064d3542"
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "84097b461449"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "7e8cf2fbcde8",
+        "anchorHash": "b49985368529",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "736900ad3b39",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "924b68a85ca1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "430895907c1c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "5": {
+            "contentHash": "b3196985577b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "6": {
+            "contentHash": "1cf387c012cd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "7": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "8": {
+            "contentHash": "06a61df042ad",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

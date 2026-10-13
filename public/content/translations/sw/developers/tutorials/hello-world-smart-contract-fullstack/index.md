@@ -32,7 +32,7 @@ Ikiwa una maswali wakati wowote, jisikie huru kuuliza katika [Discord ya Alchemy
 
 Kuna njia nyingi za kutuma maombi kwenye mnyororo wa Ethereum. Kwa urahisi, tutatumia akaunti ya bure kwenye Alchemy, jukwaa la wasanidi wa mnyororo wa vitalu na API inayoturuhusu kuwasiliana na mnyororo wa Ethereum bila kuendesha nodi sisi wenyewe. Alchemy pia ina zana za wasanidi za ufuatiliaji na uchanganuzi; tutatumia fursa hizi katika mafunzo haya ili kuelewa kinachoendelea kiufundi katika usambazaji wetu wa mkataba mahiri.
 
-### Unda programu yako na ufunguo wa API
+### Unda programu yako na ufunguo wa API {#create-your-app-and-api-key}
 
 Baada ya kuunda akaunti ya Alchemy, unaweza kutengeneza ufunguo wa API kwa kuunda programu. Hii itakuruhusu kutuma maombi kwenye mtandao wa majaribio wa Sepolia. Ikiwa hufahamu mitandao ya majaribio unaweza [kusoma mwongozo wa Alchemy wa kuchagua mtandao](https://www.alchemy.com/docs/choosing-a-web3-network).
 
@@ -47,11 +47,11 @@ Ipe programu yako jina la '_Hello World_' na uandike maelezo mafupi. Chagua **St
 _Kumbuka: hakikisha unachagua **Sepolia**, la sivyo mafunzo haya hayatafanya kazi._
 
 Ubofye **Create app**. Programu yako itaonekana kwenye jedwali hapa chini.
-### Unda akaunti ya Ethereum
+### Unda akaunti ya Ethereum {#create-an-ethereum-account}
 Unahitaji akaunti ya Ethereum ili kutuma na kupokea miamala. Tutatumia MetaMask, mkoba wa mtandaoni kwenye kivinjari unaoruhusu watumiaji kudhibiti anwani ya akaunti yao ya Ethereum.
 
 Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye “Mtandao wa Majaribio wa Sepolia” upande wa juu kulia (ili tusiwe tunashughulika na pesa halisi).
-### Hatua ya 4: Ongeza Etha kutoka kwenye Bomba
+### Hatua ya 4: Ongeza Etha kutoka kwenye Bomba {#step-4-add-ether-from-a-faucet}
 Ili kusambaza mkataba mahiri wako kwenye mtandao wa majaribio, utahitaji ETH bandia. Ili kupata ETH kwenye mtandao wa Sepolia, nenda kwenye bomba la Sepolia na uweke anwani yako ya akaunti ya Sepolia. Angalia [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#sepolia) kwa orodha ya chaguo za kujaribu:
 
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
@@ -336,7 +336,7 @@ const hello_world = await HelloWorld.deploy()
 
 Kuita `deploy()` kwenye `ContractFactory` kutaanzisha usambazaji, na kurejesha `Promise` ambayo inatatuliwa kuwa kipengee cha `Contract`. Hiki ndicho kipengee ambacho kina mbinu kwa kila moja ya vipengele vya utendaji vya mkataba mahiri wetu.
 
-### Hatua ya 16: Sambaza mkataba wetu
+### Hatua ya 16: Sambaza mkataba wetu {#step-16-deploy-our-contract}
 
 Hatimaye tuko tayari kusambaza mkataba mahiri wetu! Nenda kwenye mstari wa amri na uendeshe:
 
@@ -507,7 +507,7 @@ main()
 
 Kumbuka kwamba kwenye mstari wa 11, tunaita `.wait()` kwenye kipengee cha muamala kilichorejeshwa. Hii inahakikisha kwamba hati yetu inasubiri muamala kuchimbwa kwenye mnyororo wa vitalu kabla ya kutoka kwenye kitendaji. Ikiwa wito wa `.wait()` haujajumuishwa, hati inaweza isione thamani iliyosasishwa ya `message` katika mkataba.
 
-### Soma ujumbe mpya
+### Soma ujumbe mpya {#read-the-new-message}
 
 Unapaswa kuweza kurudia [hatua iliyopita](#read-the-init-message) ili kusoma thamani iliyosasishwa ya `message`. Chukua muda na uone ikiwa unaweza kufanya mabadiliko yanayohitajika ili kuchapisha thamani hiyo mpya!
 
@@ -633,7 +633,7 @@ module.exports = {
 }
 ```
 
-#### Thibitisha mkataba mahiri wako kwenye Etherscan
+#### Thibitisha mkataba mahiri wako kwenye Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Hakikisha faili zote zimehifadhiwa na vigezo vyote vya `.env` vimesanidiwa kwa usahihi.
 
@@ -936,7 +936,7 @@ Tukiwa na mwisho huu tayari, ni wakati wa kupakia mkataba mahiri wetu!
 
 Ili kupakia mkataba mahiri wako wa Hello World, utahitaji anwani yake ya mkataba na ABI, ambazo zote zinaweza kupatikana kwenye Etherscan ikiwa ulikamilisha [Sehemu ya 3 ya mafunzo haya.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Jinsi ya kupata ABI ya mkataba wako kutoka Etherscan
+#### Jinsi ya kupata ABI ya mkataba wako kutoka Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 Ikiwa uliruka Sehemu ya 3 ya mafunzo haya, sambaza na uthibitishe mkataba wako mwenyewe wa HelloWorld kwanza. Kisha fungua ukurasa wako wa mkataba kwenye [Sepolia Etherscan](https://sepolia.etherscan.io) ili kunakili ABI yake.
 
@@ -1110,10 +1110,10 @@ Ili kuandika chochote kwenye mnyororo wa Ethereum, watumiaji lazima watie saini 
 
 Ikiwa unataka kuelewa zaidi kuhusu jinsi miamala kwenye Ethereum inavyofanya kazi, angalia [ukurasa huu](/developers/docs/transactions/) kutoka kwa taasisi ya Ethereum.
 
-#### Pakua MetaMask
+#### Pakua MetaMask {#download-metamask}
 
 Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamask.io/download). Unapounda akaunti, au ikiwa tayari una akaunti, hakikisha unabadilisha kwenda kwenye “Mtandao wa Majaribio wa Sepolia” upande wa juu kulia \(ili tusiwe tunashughulika na pesa halisi\).
-#### Ongeza Etha kutoka kwenye Bomba
+#### Ongeza Etha kutoka kwenye Bomba {#add-ether-from-a-faucet}
 
 Ili kutia saini muamala kwenye mnyororo wa vitalu wa Ethereum, tutahitaji ETH bandia. Ili kupata ETH unaweza kwenda kwenye bomba la Sepolia lililoorodheshwa kwenye [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#sepolia) na uweke anwani yako ya akaunti ya Sepolia. Unapaswa kuona ETH kwenye akaunti yako ya MetaMask muda mfupi baadaye!
 #### Angalia Salio lako {#check-your-balance}

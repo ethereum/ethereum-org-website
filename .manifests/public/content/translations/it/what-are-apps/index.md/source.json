@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/what-are-apps/index.md",
   "generatedAt": "2026-08-07T06:17:23.226Z",
-  "rootHash": "96acd967f65b",
+  "rootHash": "894cfd0debae",
   "tree": {
     "contentHash": "3a8ec18852b3",
-    "anchorHash": "5a0acd623be8",
+    "anchorHash": "6ad1e51e5742",
     "children": {
       "frontmatter:title": {
         "contentHash": "0d502367792d",
@@ -29,7 +29,7 @@
       },
       "frontmatter:emoji": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7c3d9b9ac524"
+        "anchorHash": "d9433600ad3b"
       },
       "frontmatter:sidebarDepth": {
         "contentHash": "e3b0c44298fc",

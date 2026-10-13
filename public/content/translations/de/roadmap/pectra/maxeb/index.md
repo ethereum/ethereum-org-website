@@ -143,7 +143,7 @@ Es stehen mehrere Tools zur Verwaltung von Konsolidierungen zur Verfügung. Das 
 
 ## FAQ {#faq}
 
-### Ändert die Teilnahme mein Vorschlagsglück oder meine Belohnungen?
+### Ändert die Teilnahme mein Vorschlagsglück oder meine Belohnungen? {#change-luck-or-rewards}
 Nein. Die Teilnahme verringert nicht deine Chance auf einen Vorschlag – deine Aufgaben und die Vorschlagsauswahl bleiben gleich. Wenn du zum Beispiel zwei 32-ETH-Validatoren gegenüber einem 64-ETH-Validator hast, hast du insgesamt die gleichen Chancen, ausgewählt zu werden, um einen Block vorzuschlagen und Belohnungen zu verdienen.
 ### Ändert die Teilnahme mein Slashing-Risiko? {#change-slashing-risk}
 

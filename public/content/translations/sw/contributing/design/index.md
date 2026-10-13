@@ -15,7 +15,7 @@ Hatimaye, hii ni njia nzuri ya kujenga wasifu tofauti na wa kuvutia unaoonyesha 
 
 Wakati mwingine tunahitaji usaidizi wa kujaribu mawazo yetu ya awali. Hii ni njia nzuri ya jinsi ya kuchangia bila ujuzi wowote wa kiufundi.
 
-1. Timu ya muundo itashiriki muundo wa mfano kwenye [Discord](https://discord.com/invite/ethereum-org) na kwenye [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Timu ya muundo itashiriki muundo wa mfano kwenye [Discord](/discord/) na kwenye [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Utaongozwa kupitia miundo ili kutoa maoni kupitia kipengele cha maoni.
 3. Matokeo yatashirikiwa katika suala la GitHub na kisha kufungwa na timu.
 

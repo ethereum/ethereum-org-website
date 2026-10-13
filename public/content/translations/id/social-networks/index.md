@@ -69,7 +69,7 @@ Pengguna menggunakan token [ERC-20](/glossary/#erc-20) asli platform, yaitu $MIN
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) adalah jejaring sosial yang "cukup terdesentralisasi" yang mirip dengan X dan Reddit yang memungkinkan pengguna untuk berbagi dan menemukan "cast". Platform ini dibangun di atas jaringan lapisan 2 (l2) Optimism untuk menjaga agar transaksi tetap relatif murah.
+[Farcaster](https://farcaster.xyz/) adalah jejaring sosial yang "cukup terdesentralisasi" mirip dengan X dan Reddit, yang memungkinkan pengguna untuk membagikan dan menemukan "casts". Ini dibangun di atas jaringan lapisan 2 (l2) Optimism untuk menjaga transaksi tetap relatif murah.
 
 ## Gunakan jejaring sosial terdesentralisasi {#use-decentralized-social-networks}
 

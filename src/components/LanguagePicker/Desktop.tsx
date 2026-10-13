@@ -14,7 +14,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 import LanguagePicker from "."
 
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useEventListener } from "@/hooks/useEventListener"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 type DesktopLanguagePickerProps = {
   languages: LocaleDisplayInfo[]
@@ -31,11 +31,7 @@ const DesktopLanguagePicker = ({
 }: DesktopLanguagePickerProps) => {
   const { isOpen, setValue, onClose, onOpen } = useDisclosure()
 
-  useEventListener("keydown", (e) => {
-    if (e.key !== "\\" || e.metaKey || e.ctrlKey) return
-    e.preventDefault()
-    onOpen()
-  })
+  useKeyboardShortcut("language", onOpen)
 
   return (
     <Popover open={isOpen} onOpenChange={setValue}>

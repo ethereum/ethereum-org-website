@@ -128,13 +128,13 @@ sidebarDepth: 3
 
 ### كيف يعمل البرنامج {#how-the-program-works}
 
-#### مكون WASM {#wasm}
+#### مكون <span dir="ltr">WASM</span> {#wasm}
 
-الكود المصدري الذي يتم تجميعه في <span dir="ltr">WASM</span> مكتوب بلغة [<span dir="ltr">Rust</span>](https://rust-lang.org/). يمكنك رؤيته في [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). هذا الكود هو في الأساس واجهة بين كود <span dir="ltr">JavaScript</span> و [مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+كود المصدر الذي يتم تجميعه إلى <span dir="ltr">WASM</span> مكتوب بلغة [Rust](https://rust-lang.org/). يمكنك رؤيته في [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). هذا الكود هو في الأساس واجهة بين كود JavaScript و[مكتبة `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
-[`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) في <span dir="ltr">Rust</span> يشبه [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) في <span dir="ltr">JavaScript</span>. يحتوي على معلومات الحزمة، وإعلانات التبعية، إلخ.
+ملف [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) في Rust مشابه لملف [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) في JavaScript. يحتوي على معلومات الحزمة، وإعلانات التبعيات، وما إلى ذلك.
 
 ```toml
 [package]
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-تحتاج حزمة [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) إلى إنشاء قيم عشوائية. لا يمكن القيام بذلك بوسائل خوارزمية بحتة؛ فهو يتطلب الوصول إلى عملية فيزيائية كمصدر لـ إنتروبيا. يحدد هذا التعريف أننا سنحصل على هذه الـ إنتروبيا عن طريق سؤال المتصفح الذي نعمل فيه.
+تحتاج حزمة [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) إلى إنشاء قيم عشوائية. لا يمكن القيام بذلك بوسائل خوارزمية بحتة؛ بل يتطلب الوصول إلى عملية فيزيائية كمصدر للإنتروبيا. يحدد هذا التعريف أننا سنحصل على هذه الإنتروبيا عن طريق سؤال المتصفح الذي نعمل فيه.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-تمنحنا [هذه المكتبة](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) رسائل خطأ ذات مغزى أكبر عندما يصاب كود <span dir="ltr">WASM</span> بالذعر (panics) ولا يمكنه الاستمرار.
+تمنحنا [هذه المكتبة](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) رسائل خطأ ذات معنى أكبر عندما يصاب كود <span dir="ltr">WASM</span> بالذعر (panics) ولا يمكنه الاستمرار.
 
 ```toml
 [lib]
@@ -166,15 +166,15 @@ crate-type = ["cdylib", "rlib"]
 
 **`lib.rs`**
 
-هذا هو كود <span dir="ltr">Rust</span> الفعلي.
+هذا هو كود Rust الفعلي.
 
 ```rust
 use wasm_bindgen::prelude::*;
 ```
 
-التعريفات لإنشاء حزمة <span dir="ltr">WASM</span> من <span dir="ltr">Rust</span>. وهي موثقة [هنا](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
+التعريفات لإنشاء حزمة <span dir="ltr">WASM</span> من Rust. تم توثيقها [هنا](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,30 +188,30 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-تستخدم <span dir="ltr">Rust</span> عادةً [مصفوفات](https://doc.rust-lang.org/std/primitive.array.html) البايت (`[u8; <size>]`) للقيم. ولكن في <span dir="ltr">JavaScript</span>، نستخدم عادةً السلاسل السداسية العشرية. تترجم [مكتبة `hex`](https://docs.rs/hex/latest/hex/) لنا من تمثيل إلى آخر.
+تستخدم Rust عادةً [مصفوفات](https://doc.rust-lang.org/std/primitive.array.html) البايت (`[u8; <size>]`) للقيم. ولكن في JavaScript، نستخدم عادةً السلاسل السداسية العشرية. تقوم [مكتبة `hex`](https://docs.rs/hex/latest/hex/) بالترجمة لنا من تمثيل إلى آخر.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-قم بإنشاء روابط <span dir="ltr">WASM</span> لتتمكن من استدعاء هذه الدالة من <span dir="ltr">JavaScript</span>.
+إنشاء روابط <span dir="ltr">WASM</span> لنتمكن من استدعاء هذه الدالة من JavaScript.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-أسهل طريقة لإرجاع كائن بحقول متعددة هي إرجاع سلسلة <span dir="ltr">JSON</span>. 
+أسهل طريقة لإرجاع كائن بحقول متعددة هي إرجاع سلسلة <span dir="ltr">JSON</span>.
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
         generate_stealth_meta_address();
 ```
 
-تُرجع [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) ثلاثة حقول:
+تُرجع دالة [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) ثلاثة حقول:
 
 - العنوان الوصفي (*<span dir="ltr">K<sub>pub</sub></span>* و *<span dir="ltr">V<sub>pub</sub></span>*)
-- المفتاح الخاص للعرض (*<span dir="ltr">V<sub>priv</sub></span>*)
-- المفتاح الخاص للإنفاق (*<span dir="ltr">K<sub>priv</sub></span>*)
+- مفتاح العرض الخاص (*<span dir="ltr">V<sub>priv</sub></span>*)
+- مفتاح الإنفاق الخاص (*<span dir="ltr">K<sub>priv</sub></span>*)
 
 تتيح لنا صيغة [الصفوف (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) فصل هذه القيم مرة أخرى.
 
@@ -224,66 +224,66 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-استخدم ماكرو [`format!`](https://doc.rust-lang.org/std/fmt/index.html) لإنشاء السلسلة المشفرة بـ <span dir="ltr">JSON</span>. استخدم [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) لتغيير المصفوفات إلى سلاسل سداسية عشرية.
+استخدم ماكرو [`format!`](https://doc.rust-lang.org/std/fmt/index.html) لإنشاء السلسلة المشفرة بتنسيق <span dir="ltr">JSON</span>. استخدم [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) لتغيير المصفوفات إلى سلاسل سداسية عشرية.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-تحول هذه الدالة سلسلة سداسية عشرية (مقدمة من <span dir="ltr">JavaScript</span>) إلى مصفوفة بايت. نستخدمها لتحليل القيم المقدمة بواسطة كود <span dir="ltr">JavaScript</span>. هذه الدالة معقدة بسبب كيفية تعامل <span dir="ltr">Rust</span> مع المصفوفات والمتجهات.
+تحول هذه الدالة سلسلة سداسية عشرية (مقدمة من JavaScript) إلى مصفوفة بايتات. نستخدمها لتحليل القيم المقدمة من كود JavaScript. هذه الدالة معقدة بسبب كيفية تعامل Rust مع المصفوفات والمتجهات (vectors).
 
-يُطلق على تعبير `<const N: usize>` اسم [عام (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` هو معلمة تتحكم في طول المصفوفة المرجعة. تسمى الدالة في الواقع `str_to_array::<n>`، حيث `n` هو طول المصفوفة.
+يُطلق على التعبير `<const N: usize>` اسم [النوع العام (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` هو معامل يتحكم في طول المصفوفة المُرجعة. تُسمى الدالة فعليًا `str_to_array::<n>`، حيث `n` هو طول المصفوفة.
 
-القيمة المرجعة هي `Option<[u8; N]>`، مما يعني أن المصفوفة المرجعة [اختيارية](https://doc.rust-lang.org/std/option/). هذا نمط نموذجي في <span dir="ltr">Rust</span> للدوال التي قد تفشل.
+القيمة المُرجعة هي `Option<[u8; N]>`، مما يعني أن المصفوفة المُرجعة [اختيارية](https://doc.rust-lang.org/std/option/). هذا نمط نموذجي في Rust للدوال التي قد تفشل.
 
-على سبيل المثال، إذا استدعينا `str_to_array::10("bad060a7")`، فمن المفترض أن تُرجع الدالة مصفوفة من عشر قيم، لكن الإدخال هو أربعة بايتات فقط. يجب أن تفشل الدالة، وتفعل ذلك عن طريق إرجاع `None`. ستكون القيمة المرجعة لـ `str_to_array::4("bad060a7")` هي `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+على سبيل المثال، إذا استدعينا `str_to_array::10("bad060a7")`، فمن المفترض أن تُرجع الدالة مصفوفة من عشر قيم، ولكن الإدخال هو أربعة بايتات فقط. يجب أن تفشل الدالة، وتفعل ذلك بإرجاع `None`. ستكون القيمة المُرجعة لـ `str_to_array::4("bad060a7")` هي `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
-    // تُرجع decode Result<Vec<u8>, _>
+    // تُرجع decode القيمة Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-تُرجع دالة [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) `Result<Vec<u8>, FromHexError>`. يمكن أن يحتوي نوع [`Result`](https://doc.rust-lang.org/std/result/) إما على نتيجة ناجحة (`Ok(value)`) أو خطأ (`Err(error)`).
+تُرجع دالة [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) قيمة من نوع `Result<Vec<u8>, FromHexError>`. يمكن أن يحتوي نوع [`Result`](https://doc.rust-lang.org/std/result/) إما على نتيجة ناجحة (`Ok(value)`) أو خطأ (`Err(error)`).
 
-تحول طريقة `.ok()` الـ `Result` إلى `Option`، والتي تكون قيمتها إما قيمة `Ok()` إذا نجحت أو `None` إذا لم تنجح. أخيرًا، يقوم [عامل علامة الاستفهام](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) بإحباط الدوال الحالية وإرجاع `None` إذا كان `Option` فارغًا. بخلاف ذلك، فإنه يفك تغليف القيمة ويرجعها (في هذه الحالة، لتعيين قيمة لـ `vec`).
+تحول طريقة `.ok()` الـ `Result` إلى `Option`، وتكون قيمته إما قيمة `Ok()` في حالة النجاح أو `None` في حالة الفشل. أخيرًا، يقوم [عامل علامة الاستفهام](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) بإحباط الدوال الحالية وإرجاع `None` إذا كان الـ `Option` فارغًا. بخلاف ذلك، فإنه يستخرج القيمة ويُرجعها (في هذه الحالة، لتعيين قيمة لـ `vec`).
 
-تبدو هذه طريقة معقدة بشكل غريب للتعامل مع الأخطاء، لكن `Result` و `Option` يضمنان التعامل مع جميع الأخطاء، بطريقة أو بأخرى.
+يبدو هذا كطريقة معقدة بشكل غريب للتعامل مع الأخطاء، ولكن `Result` و `Option` يضمنان التعامل مع جميع الأخطاء، بطريقة أو بأخرى.
 
 ```rust
     if vec.len() != N { return None; }
 ```
 
-إذا كان عدد البايتات غير صحيح، فهذا فشل، ونرجع `None`.
+إذا كان عدد البايتات غير صحيح، فهذا يعتبر فشلًا، ونُرجع `None`.
 
 ```rust
     // تستهلك try_into vec وتحاول إنشاء [u8; N]
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-تحتوي <span dir="ltr">Rust</span> على نوعين من المصفوفات. [المصفوفات (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) لها حجم ثابت. يمكن أن تنمو [المتجهات (Vectors)](https://doc.rust-lang.org/std/vec/index.html) وتتقلص. تُرجع `hex::decode` متجهًا، لكن مكتبة `eth_stealth_addresses` تريد تلقي مصفوفات. تقوم [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) بتحويل قيمة إلى نوع آخر، على سبيل المثال، متجه إلى مصفوفة.
+تحتوي Rust على نوعين من المصفوفات. [المصفوفات (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) لها حجم ثابت. [المتجهات (Vectors)](https://doc.rust-lang.org/std/vec/index.html) يمكن أن تنمو وتتقلص. تُرجع `hex::decode` متجهًا، لكن مكتبة `eth_stealth_addresses` تريد استقبال مصفوفات. تقوم [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) بتحويل قيمة إلى نوع آخر، على سبيل المثال، متجه إلى مصفوفة.
 
 ```rust
     Some(array)
 }
 ```
 
-لا تتطلب منك <span dir="ltr">Rust</span> استخدام الكلمة الأساسية [`return`](https://doc.rust-lang.org/std/keyword.return.html) عند إرجاع قيمة في نهاية الدالة.
+لا تتطلب منك Rust استخدام الكلمة المفتاحية [`return`](https://doc.rust-lang.org/std/keyword.return.html) عند إرجاع قيمة في نهاية الدالة.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-تتلقى هذه الدالة عنوانًا وصفيًا عامًا، والذي يتضمن كلاً من *<span dir="ltr">V<sub>pub</sub></span>* و *<span dir="ltr">K<sub>pub</sub></span>*. تُرجع العنوان المتخفي، والمفتاح العام المراد نشره (*<span dir="ltr">R<sub>pub</sub></span>*)، وقيمة مسح ضوئي من بايت واحد تسرع من تحديد العناوين المنشورة التي قد تنتمي إلى أليس.
+تستقبل هذه الدالة عنوانًا وصفيًا عامًا، والذي يتضمن كلاً من *<span dir="ltr">V<sub>pub</sub></span>* و *<span dir="ltr">K<sub>pub</sub></span>*. وتُرجع العنوان المتخفي، والمفتاح العام المراد نشره (*<span dir="ltr">R<sub>pub</sub></span>*)، وقيمة فحص بحجم بايت واحد تسرع من تحديد العناوين المنشورة التي قد تنتمي إلى أليس.
 
-قيمة المسح الضوئي هي جزء من السر المشترك (*<span dir="ltr">S = GR<sub>priv</sub>V<sub>priv</sub></span>*). هذه القيمة متاحة لأليس، والتحقق منها أسرع بكثير من التحقق مما إذا كان *<span dir="ltr">f(K<sub>pub</sub>+G\*hash(S))</span>* يساوي العنوان المنشور.
+قيمة الفحص هي جزء من السر المشترك (*<span dir="ltr">S = GR<sub>priv</sub>V<sub>priv</sub></span>*). هذه القيمة متاحة لأليس، والتحقق منها أسرع بكثير من التحقق مما إذا كان *<span dir="ltr">f(K<sub>pub</sub>+G\*hash(S))</span>* يساوي العنوان المنشور.
 
 ```rust
     let (address, r_pub, scan) = 
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-نستخدم [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) الخاصة بالمكتبة.
+نستخدم دالة [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) الخاصة بالمكتبة.
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -294,7 +294,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 }
 ```
 
-قم بإعداد سلسلة المخرجات المشفرة بـ <span dir="ltr">JSON</span>.
+قم بإعداد سلسلة المخرجات المشفرة بتنسيق <span dir="ltr">JSON</span>.
 
 ```rust
 #[wasm_bindgen]
@@ -310,18 +310,18 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-تستخدم هذه الدالة [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) الخاصة بالمكتبة لحساب المفتاح الخاص للسحب من العنوان (*<span dir="ltr">R<sub>priv</sub></span>*). يتطلب هذا الحساب هذه القيم:
+تستخدم هذه الدالة دالة [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) الخاصة بالمكتبة لحساب المفتاح الخاص للسحب من العنوان (*<span dir="ltr">R<sub>priv</sub></span>*). يتطلب هذا الحساب هذه القيم:
 
 - العنوان (*<span dir="ltr">Address=f(P<sub>pub</sub>)</span>*)
 - المفتاح العام الذي أنشأه بيل (*<span dir="ltr">R<sub>pub</sub></span>*)
-- المفتاح الخاص للعرض (*<span dir="ltr">V<sub>priv</sub></span>*)
-- المفتاح الخاص للإنفاق (*<span dir="ltr">K<sub>priv</sub></span>*)
+- مفتاح العرض الخاص (*<span dir="ltr">V<sub>priv</sub></span>*)
+- مفتاح الإنفاق الخاص (*<span dir="ltr">K<sub>priv</sub></span>*)
 
 ```rust
 #[wasm_bindgen(start)]
 ```
 
-يحدد [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) أنه يتم تنفيذ الدالة عند تهيئة كود <span dir="ltr">WASM</span>.
+يحدد [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) أن الدالة يتم تنفيذها عند تهيئة كود <span dir="ltr">WASM</span>.
 
 ```rust
 pub fn main() {
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-يحدد هذا الكود إرسال مخرجات الذعر (panic) إلى وحدة تحكم <span dir="ltr">JavaScript</span>. لرؤية ذلك أثناء العمل، استخدم التطبيق وامنح بيل عنوانًا وصفيًا غير صالح (فقط قم بتغيير رقم سداسي عشري واحد). سترى هذا الخطأ في وحدة تحكم <span dir="ltr">JavaScript</span>:
+يحدد هذا الكود أن يتم إرسال مخرجات الذعر (panic) إلى وحدة تحكم JavaScript. لرؤية ذلك أثناء العمل، استخدم التطبيق وامنح بيل عنوانًا وصفيًا غير صالح (فقط قم بتغيير رقم سداسي عشري واحد). سترى هذا الخطأ في وحدة تحكم JavaScript:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -349,13 +349,13 @@ keys do not generate stealth address
 
 #### واجهة المستخدم {#ui}
 
-واجهة المستخدم مكتوبة باستخدام [<span dir="ltr">React</span>](https://react.dev/) ويتم تقديمها بواسطة [<span dir="ltr">Vite</span>](https://vite.dev/). يمكنك التعرف عليها باستخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). ليست هناك حاجة لـ [<span dir="ltr">Wagmi</span>](https://wagmi.sh/) هنا لأننا لا نتفاعل مباشرة مع سلسلة الكتل أو محفظة.
+تمت كتابة واجهة المستخدم باستخدام [React](https://react.dev/) ويتم تقديمها بواسطة [Vite](https://vite.dev/). يمكنك التعرف عليهما باستخدام [هذا البرنامج التعليمي](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). ليست هناك حاجة لـ [Wagmi](https://wagmi.sh/) هنا لأننا لا نتفاعل بشكل مباشر مع سلسلة الكتل أو المحفظة.
 
 الجزء الوحيد غير الواضح في واجهة المستخدم هو اتصال <span dir="ltr">WASM</span>. إليك كيف يعمل.
 
 **`vite.config.js`**
 
-يحتوي هذا الملف على [تكوين <span dir="ltr">Vite</span>](https://vite.dev/config/).
+يحتوي هذا الملف على [تكوين Vite](https://vite.dev/config/).
 
 ```js
 import { defineConfig } from 'vite'
@@ -368,17 +368,17 @@ export default defineConfig({
 })
 ```
 
-نحتاج إلى إضافتين لـ <span dir="ltr">Vite</span>: [react](https://www.npmjs.com/package/@vitejs/plugin-react) و [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
+نحتاج إلى إضافتين لـ Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) و [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
 
 **`App.jsx`**
 
-هذا الملف هو المكون الرئيسي للتطبيق. إنه حاوية تتضمن مكونين: `Alice` و `Bill`، وهما واجهتا المستخدم لهؤلاء المستخدمين. الجزء ذو الصلة بـ <span dir="ltr">WASM</span> هو كود التهيئة.
+هذا الملف هو المكون الرئيسي للتطبيق. إنه حاوية تتضمن مكونين: `Alice` و `Bill`، وهما واجهتا المستخدم لهذين المستخدمين. الجزء ذو الصلة بـ <span dir="ltr">WASM</span> هو كود التهيئة.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-عندما نستخدم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)، فإنه ينشئ ملفين نستخدمهما هنا: ملف <span dir="ltr">wasm</span> يحتوي على الكود الفعلي (هنا، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) وملف <span dir="ltr">JavaScript</span> يحتوي على التعريفات لاستخدامه (هنا، `src/rust_wasm/pkg/rust_wasm.js`). التصدير الافتراضي لملف <span dir="ltr">JavaScript</span> هذا هو الكود الذي يجب تشغيله لبدء <span dir="ltr">WASM</span>.
+عندما نستخدم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)، فإنه ينشئ ملفين نستخدمهما هنا: ملف wasm يحتوي على الكود الفعلي (هنا، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) وملف JavaScript يحتوي على التعريفات لاستخدامه (هنا، `src/rust-wasm/pkg/rust_wasm.js`). التصدير الافتراضي لملف JavaScript هذا هو الكود الذي يجب تشغيله لبدء <span dir="ltr">WASM</span>.
 
 ```jsx
 function App() {
@@ -401,19 +401,19 @@ function App() {
   )
 ```
 
-يتيح لك [خطاف (hook) `useEffect`](https://react.dev/reference/react/useEffect) تحديد دالة يتم تنفيذها عندما تتغير متغيرات الحالة (state). هنا، قائمة متغيرات الحالة فارغة (`[]`)، لذلك يتم تنفيذ هذه الدالة مرة واحدة فقط عند تحميل الصفحة.
+يتيح لك [خطاف `useEffect`](https://react.dev/reference/react/useEffect) تحديد دالة يتم تنفيذها عندما تتغير متغيرات الحالة. هنا، قائمة متغيرات الحالة فارغة (`[]`)، لذلك يتم تنفيذ هذه الدالة مرة واحدة فقط عند تحميل الصفحة.
 
-يجب أن تعود دالة التأثير (effect) على الفور. لاستخدام كود غير متزامن، مثل `init` الخاص بـ <span dir="ltr">WASM</span> (والذي يجب أن يحمل ملف `.wasm` وبالتالي يستغرق وقتًا) نحدد دالة [`async`](https://en.wikipedia.org/wiki/Async/await) داخلية ونقوم بتشغيلها بدون `await`.
+يجب أن تُرجع دالة التأثير فورًا. لاستخدام كود غير متزامن، مثل `init` الخاص بـ <span dir="ltr">WASM</span> (والذي يجب أن يحمل ملف `.wasm` وبالتالي يستغرق وقتًا) نحدد دالة [`async`](https://en.wikipedia.org/wiki/Async/await) داخلية ونقوم بتشغيلها بدون `await`.
 
 **`Bill.jsx`**
 
-هذه هي واجهة المستخدم الخاصة بـ بيل. لها إجراء واحد، وهو إنشاء عنوان بناءً على العنوان الوصفي المتخفي الذي قدمته أليس.
+هذه هي واجهة المستخدم الخاصة بـ بيل. تحتوي على إجراء واحد، وهو إنشاء عنوان بناءً على العنوان الوصفي المتخفي الذي قدمته أليس.
 
 ```jsx
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-بالإضافة إلى التصدير الافتراضي، يقوم كود <span dir="ltr">JavaScript</span> الذي تم إنشاؤه بواسطة `wasm-pack` بتصدير دالة لكل دالة في كود <span dir="ltr">WASM</span>.
+بالإضافة إلى التصدير الافتراضي، يقوم كود JavaScript الذي تم إنشاؤه بواسطة `wasm-pack` بتصدير دالة لكل دالة في كود <span dir="ltr">WASM</span>.
 
 ```jsx
             <button onClick={() => {
@@ -421,7 +421,7 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-لاستدعاء دوال <span dir="ltr">WASM</span>، نقوم فقط باستدعاء الدالة المصدرة بواسطة ملف <span dir="ltr">JavaScript</span> الذي تم إنشاؤه بواسطة `wasm-pack`.
+لاستدعاء دوال <span dir="ltr">WASM</span>، نقوم ببساطة باستدعاء الدالة المُصدرة بواسطة ملف JavaScript الذي تم إنشاؤه بواسطة `wasm-pack`.
 
 **`Alice.jsx`**
 

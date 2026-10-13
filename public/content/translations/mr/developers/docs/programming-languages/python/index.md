@@ -55,7 +55,7 @@ incomplete: true
 
 ## Python प्रोजेक्ट्स आणि टूल्स {#python-projects-and-tools}
 
-### सक्रिय:
+### सक्रिय: {#active}
 - [Web3.py](https://github.com/ethereum/web3.py) - _इथेरियमशी संवाद साधण्यासाठी Python लायब्ररी_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM साठी Pythonic स्मार्ट कॉन्ट्रॅक्ट भाषा_
 - [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper चे मूळ चाचणी टूल; मुख्यनेट फोर्किंग, डीबगिंग आणि सुंदर ट्रेसबॅकसह एक इंटरप्रिटर_

@@ -47,15 +47,15 @@ const TopApps = ({ appsData }: TopAppsProps) => {
       imageSize: "small",
     },
     lg: {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
     xl: {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
     "2xl": {
-      layout: "horizontal",
+      layout: null, // horizontal
       imageSize: "medium",
     },
   })

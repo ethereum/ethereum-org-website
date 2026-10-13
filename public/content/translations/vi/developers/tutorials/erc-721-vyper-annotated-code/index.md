@@ -47,7 +47,7 @@ Dòng đầu tiên nhập giao diện và dòng thứ hai chỉ định rằng c
 ```python
 #pragma version >0.3.10
 ```
-### Giao diện ERC721Receiver
+### Giao diện ERC721Receiver {#receiver-interface}
 
 ```python
 # Giao diện cho hợp đồng được gọi bởi safeTransferFrom()
@@ -86,7 +86,7 @@ Yêu cầu có thể có tối đa 1024 byte dữ liệu người dùng.
 ```
 
 Để ngăn chặn các trường hợp trong đó một hợp đồng vô tình chấp nhận một khoản chuyển, giá trị trả về không phải là một boolean, mà là một giá trị bốn byte cụ thể, bộ chọn hàm của `onERC721Received`. Hàm này là `nonpayable` bởi vì một hợp đồng nhận có thể thay đổi trạng thái của chính nó khi nó chấp nhận một token.
-### Các sự kiện
+### Các sự kiện {#events}
 
 [Các sự kiện](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 được phát ra để thông báo cho người dùng và máy chủ bên ngoài Chuỗi khối về các sự kiện. Lưu ý rằng nội dung của các sự kiện không có sẵn cho các hợp đồng trên Chuỗi khối. Ba sự kiện ERC-721 được định nghĩa bởi giao diện `IERC721` mà chúng ta đã nhập, vì vậy hợp đồng này không tự khai báo chúng; nó phát ra chúng bằng `log IERC721.<Event>(...)`, như chúng ta sẽ thấy trong các hàm chuyển bên dưới.
@@ -96,7 +96,7 @@ Yêu cầu có thể có tối đa 1024 byte dữ liệu người dùng.
 Một phê duyệt ERC-721 tương tự như một hạn mức ERC-20: một địa chỉ cụ thể được phép chuyển một token cụ thể, và `Approval` (`owner`, `approved`, `token_id`) được phát ra bất cứ khi nào địa chỉ được phê duyệt đó được thiết lập hoặc xác nhận lại. Điều này cung cấp một cơ chế để các hợp đồng phản hồi khi chúng chấp nhận một token. Các hợp đồng không thể lắng nghe các sự kiện, vì vậy nếu bạn chỉ chuyển token cho chúng, chúng sẽ không "biết" về điều đó. Bằng cách này, chủ sở hữu trước tiên gửi một phê duyệt và sau đó gửi một yêu cầu đến hợp đồng: "Tôi đã phê duyệt cho bạn chuyển token X, vui lòng thực hiện ...". Đây là một lựa chọn thiết kế để làm cho tiêu chuẩn ERC-721 tương tự như tiêu chuẩn ERC-20. Bởi vì các token ERC-721 không thể thay thế, một hợp đồng cũng có thể xác định rằng nó đã nhận được một token cụ thể bằng cách xem xét quyền sở hữu của token đó.
 
 Cuối cùng, `ApprovalForAll` (`owner`, `operator`, `approved`) được phát ra khi một _người điều hành_ (operator) được bật hoặc tắt cho một chủ sở hữu. Đôi khi sẽ hữu ích nếu có một người điều hành có thể quản lý tất cả các token của một tài khoản thuộc một loại cụ thể (những token được quản lý bởi một hợp đồng cụ thể), tương tự như giấy ủy quyền. Ví dụ: tôi có thể muốn trao quyền như vậy cho một hợp đồng kiểm tra xem tôi có liên lạc với nó trong sáu tháng hay không, và nếu không, nó sẽ phân phối tài sản của tôi cho những người thừa kế của tôi (nếu một trong số họ yêu cầu, các hợp đồng không thể làm gì nếu không được gọi bởi một giao dịch). Trong ERC-20, chúng ta có thể chỉ cần cấp một hạn mức cao cho một hợp đồng thừa kế, nhưng điều đó không hoạt động đối với ERC-721 vì các token không thể thay thế. Đây là điều tương đương. Giá trị `approved` cho chúng ta biết liệu sự kiện là dành cho một phê duyệt, hay việc rút lại một phê duyệt.
-### Các biến trạng thái
+### Các biến trạng thái {#state-vars}
 
 Các biến này chứa trạng thái hiện tại của các token: token nào có sẵn và ai sở hữu chúng. Hầu hết trong số này là các đối tượng `HashMap`, [các ánh xạ một chiều tồn tại giữa hai kiểu dữ liệu](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -148,7 +148,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Đây là các hàm thực sự triển khai ERC-721.
 
-#### Hàm khởi tạo
+#### Hàm khởi tạo {#constructor}
 
 ```python
 @deploy
@@ -170,7 +170,7 @@ Trong Python và trong Vyper, bạn cũng có thể tạo một chú thích bằ
 ```
 
 Để truy cập các biến trạng thái, bạn sử dụng `self.<tên biến>` (một lần nữa, giống như trong Python). Hàm khởi tạo ghi lại tài khoản đã triển khai hợp đồng là `minter`.
-#### Các hàm View
+#### Các hàm View {#views}
 
 Đây là các hàm không sửa đổi trạng thái của Chuỗi khối, và do đó có thể được thực thi miễn phí nếu chúng được gọi từ bên ngoài. Nếu các hàm view được gọi bởi một hợp đồng, chúng vẫn phải được thực thi trên mọi nút và do đó tốn Gas.
 
@@ -268,7 +268,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 Hàm này kiểm tra xem `_operator` có được phép quản lý tất cả các token của `_owner` trong hợp đồng này hay không. Bởi vì có thể có nhiều người điều hành, đây là một HashMap hai cấp.
-#### Các hàm trợ giúp chuyển
+#### Các hàm trợ giúp chuyển {#transfer-helpers}
 
 Các hàm này triển khai các thao tác là một phần của việc chuyển hoặc quản lý các token.
 
@@ -384,7 +384,7 @@ Chúng ta có hàm nội bộ này bởi vì có hai cách để chuyển các t
 ```
 
 Để phát ra một sự kiện trong Vyper, bạn sử dụng một câu lệnh `log` ([xem tại đây để biết thêm chi tiết](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)). Bởi vì các sự kiện thuộc về giao diện đã nhập, chúng ta gọi chúng là `IERC721.Transfer` và truyền các trường của chúng bằng từ khóa.
-#### Các hàm chuyển
+#### Các hàm chuyển {#transfer-funs}
 
 ```python
 

@@ -37,15 +37,15 @@ Then **check the route is free**: no existing `public/content/<route>/index.md` 
 
 Read the design **fresh** with the Figma MCP (designs change between runs — never rely on a read from an earlier turn): `get_metadata` for the frame tree, then `get_design_context` / `get_screenshot` on each region; `search_design_system` / `get_code_connect_map` for existing code mappings. Load the `figma-use` skill before any `use_figma` call.
 
-Produce a **component map** and **always show it to the user as a table** — three columns: **Region** (each design region, top to bottom) · **Maps to** (the existing primitive + variant that renders it — `PageHero`, `Card`, `BigNumber`, …) · **Status** (`reuse`, `missing asset`, `placeholder copy`, `missing data`, …). The map must be **exhaustive** — walk the frame top to bottom; a region you don't map is a region that silently won't ship. The table is the user's only window into what you saw in the frame — it's how they catch a misread or omission *before* it ships, so render it every run; never just reason about the mapping internally.
+Produce a **component map** and **always show it to the user as a table** — three columns: **Region** (each design region, top to bottom) · **Maps to** (the existing primitive + variant that renders it — `PageHero`, `Card`, `BigNumber`, …) · **Status** (`reuse`, `missing asset`, `placeholder copy`, `missing data`, …). Walk the frame top to bottom and map **every** region. The table is the user's only window into what you saw in the frame — render it every run; never just reason about the mapping internally.
 
 **Node names lie.** A node called `Screenshot 2026-…` or `Frame 1789` is routinely real content — a stat band (`BigNumber`), a video embed (`YouTube`), a callout (`Alert`) — not a throwaway. Never omit a region because its name *looks* like a draft; `get_screenshot` it and see what it actually is before deciding.
 
 **Missing data → ask, don't guess.** When a region needs a value the design doesn't carry — a YouTube ID behind a thumbnail, a real destination URL, a live data source — you can't extract it from the frame. Flag it and ask the user; a guessed embed or invented link is worse than an open question.
 
-**Match, don't mimic.** Reproduce the design with existing components and their variants. Do **not** layer custom Tailwind/CSS on a primitive to chase pixel parity. If a region has no fitting primitive or variant, the answer is *add a variant* (`references/variant-vs-new.md`) — never a one-off component or bespoke styles. Flag any such gap and confirm before inventing.
+**Match, don't mimic.** Reproduce the design with existing components and their variants. Do **not** layer custom Tailwind/CSS on a primitive to chase pixel parity. If a region has no fitting primitive or variant, the answer is *add a variant* (`design-system/references/variant-vs-new.md`) — never a one-off component or bespoke styles. Flag any such gap and confirm before inventing.
 
-**Pressure-test the authoring fork.** The map can reveal a region markdown shortcodes can't express — an interactive widget, a data-backed list, a bespoke multi-column grid, or cards with **lucide** icons (the markdown `<Card>`/`MarkdownCard` shortcode takes only an `emoji` prop, no lucide). Any of these means the page wants to be App Router. If Step 1 said markdown, surface the conflict and re-confirm before scaffolding — flipping it later is a rewrite.
+**Pressure-test the authoring fork.** The map can reveal a region markdown shortcodes can't express — an interactive widget, a data-backed list, a bespoke multi-column grid, or cards with **lucide** icons (`MarkdownCard` accepts `emoji` *or* `icon: ReactNode`, but a plain `.md` file can't author a ReactNode, so from markdown the `<Card>` shortcode is effectively emoji-only). Any of these means the page wants to be App Router. If Step 1 said markdown, surface the conflict and re-confirm before scaffolding — flipping it later is a rewrite.
 
 **Done when:** the component-map table has been shown to the user and they've confirmed or corrected it; every region is accounted for — mapped, flagged for an approved variant, or raised as missing data — and the authoring fork still holds.
 
@@ -65,8 +65,7 @@ The layout is selected by the `template:` frontmatter value (default `static`). 
 | `tutorial` | `TutorialLayout` | developer tutorial with author/date/skill metadata | — |
 
 - Each Topic template carries a distinct **MDX component list** (`componentsMapping`, `src/layouts/index.ts`) — pick the one whose shortcodes match the content.
-- **Side-image hero in the design → a Topic template.** If there's no sub-nav across sibling pages, add `showDropdown: false` (exemplar: `public/content/what-are-apps/index.md`). **`static` renders only a title hero, never a side-image one** — so a side-image design on `static` is wrong; switch templates, don't fight it with custom markup.
-- A new layout is essentially never the answer. A new topic hub is a `src/data/topics/<key>.ts` config + `layoutMapping`/`componentsMapping` entries + a translation namespace — not a new layout file.
+- **Side-image hero in the design → a Topic template** (`static` renders only a title hero). `showDropdown`, new-topic wiring, and the never-add-a-new-layout rule: `design-system/references/layouts.md`.
 
 ### App Router page — compose `ContentLayout`, pass the hero that fits
 
@@ -81,11 +80,11 @@ Build the `tocItems` array by hand and wrap each prose section in `<Section id>`
 
 ## Step 4 — Scaffold
 
-Build from the Step 2 component map. Reuse-first throughout — no raw `<a>`/`<button>`, no hex colors, logical CSS props (`ms-`/`me-`/…), locale-aware `numberFormat()`/`dateTimeFormat()`. Icons: **lucide in `.tsx`, emoji in markdown** (the `<Card>` shortcode is emoji-only).
+Build from the Step 2 component map. Reuse-first throughout — no raw `<a>`/`<button>`, no hex colors, logical CSS props (`ms-`/`me-`/…), locale-aware `numberFormat()`/`dateTimeFormat()`. Icons: **lucide in `.tsx`, emoji in markdown** (markdown can't pass the `icon` ReactNode prop).
 
 **Markdown page:**
 - Create `public/content/<route>/index.md` with frontmatter (`title`, `description`, `lang: en`, plus `template:` unless static). English only — never hand-write translated copies; the intl-pipeline propagates them.
-- **Inline images co-locate**: drop them next to `index.md` and reference them relatively (`![alt](./hero.png)`). A `/images/...` path on an inline image 500s the MDX render. (The frontmatter `image:` hero on `TopicLayout` is the exception — it takes a `/images/...` public path.)
+- **Inline images co-locate** next to `index.md`, referenced relatively — a `/images/...` inline path 500s the MDX render; the frontmatter `image:` hero is the exception. Details: `design-system/references/gotchas.md`.
 - Every h1–h4 needs a `{#kebab-id}`; run `pnpm lint:md:fix`.
 - If using `TopicLayout`: add `src/data/topics/<key>.ts`, wire `layoutMapping`/`componentsMapping` in `src/layouts/index.ts`, and add `src/intl/en/page-<key>.json`.
 
@@ -105,10 +104,10 @@ Build from the Step 2 component map. Reuse-first throughout — no raw `<a>`/`<b
 
 ## Step 6 — QA via the adversarial review loop
 
-Static checks pass on pages that are visibly broken — a wrong image path, a failed MDX compile, a section that silently didn't render. So the page must be run and audited. QA here is **not** an eyeball comparison — it's the **adversarial reviewer loop**: copy and design-system reviewer subagents audit the live page against the design, you triage and fix, and re-review until a fresh round comes back **green**. Scaffolding a page and not running this loop is leaving the job half-done.
+Static checks pass on pages that are visibly broken — a wrong image path, a failed MDX compile, a section that silently didn't render. So the page must be run and audited via the **adversarial reviewer loop**, not an eyeball comparison.
 
 1. **Run it.** Start `pnpm dev`, wait for "Ready", load the page (locale-stripped for `en`: `/<route>/`). Confirm **HTTP 200** — a 500 is almost always an MDX or asset error; read the dev log (a non-co-located inline image is the classic one). There is nothing to review on a broken page.
-2. **Run the review loop.** Read `review-page/SKILL.md` and execute its loop (its Steps 1–5) against this route: capture the Figma + live-page artifacts, spawn the two reviewers from `review-page/reviewers/` in parallel, triage their findings, fix, and re-review until green. You already hold the design source and route from Steps 1–2, so its Step 0 (running page + known design source) is already satisfied — go straight into capture-and-spawn. Read and run that procedure; don't try to invoke `/review-page` as a skill from here.
+2. **Run the review loop.** Read `review-page/SKILL.md` and execute its Steps 1–5 against this route until green. You already hold the design source and route from Steps 1–2, so its Step 0 (running page + known design source) is already satisfied. Read and run that procedure; don't try to invoke `/review-page` as a skill from here.
    - **A hero finding is a template bug, not a CSS gap.** When the design-system reviewer flags a title-only hero against a side-image design: on a markdown page that's a wrong-`template:` (use a Topic template, not `static`); on an App Router page, pass `heroImg` to `PageHero`. Never rebuild a hero with custom markup.
 3. **Hand off.** Leave the dev server running and give the user the local URL the server printed (e.g. `http://localhost:3000/<route>/`).
 

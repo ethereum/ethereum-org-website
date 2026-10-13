@@ -8,6 +8,19 @@ export interface ValidationResult {
   error?: string
 }
 
+// Truncation floor as a fraction of the English character count. CJK renders
+// the same content in roughly half the characters, so a flat floor reads
+// correct output as truncated (see intl-pipeline skill, references/gotchas.md).
+const LENGTH_FLOOR_DEFAULT = 0.3
+const LENGTH_FLOOR_CJK = 0.2
+const CJK_LOCALES = new Set(["zh", "zh-tw", "ja", "ko"])
+
+function lengthFloor(targetLanguage?: string): number {
+  return targetLanguage && CJK_LOCALES.has(targetLanguage)
+    ? LENGTH_FLOOR_CJK
+    : LENGTH_FLOOR_DEFAULT
+}
+
 /**
  * Validate translated JSON output.
  */
@@ -68,7 +81,8 @@ export function validateTranslatedJson(
  */
 export function validateTranslatedMarkdown(
   translated: string,
-  english: string
+  english: string,
+  targetLanguage?: string
 ): ValidationResult {
   const base = validateCommon(translated)
   if (!base.valid) return base
@@ -86,11 +100,13 @@ export function validateTranslatedMarkdown(
     }
   }
 
-  // Suspiciously short (truncated output)
-  if (translated.length < english.length * 0.3) {
+  // Suspiciously short (truncated output). This is the only truncation check in
+  // the run path -- verify-structure.ts is a standalone CLI, not wired in.
+  const floor = lengthFloor(targetLanguage)
+  if (translated.length < english.length * floor) {
     return {
       valid: false,
-      error: `Suspiciously short: ${translated.length} chars vs ${english.length} English chars`,
+      error: `Suspiciously short: ${translated.length} chars vs ${english.length} English chars (floor ${floor})`,
     }
   }
 

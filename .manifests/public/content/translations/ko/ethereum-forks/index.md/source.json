@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/ethereum-forks/index.md",
   "generatedAt": "2026-06-30T00:50:11.302Z",
-  "rootHash": "668e516d083d",
+  "rootHash": "0350650239df",
   "tree": {
-    "contentHash": "e2505e6e9dbb",
-    "anchorHash": "6b351f906bf2",
+    "contentHash": "e0c278f0f1c2",
+    "anchorHash": "fc27efdbf486",
     "children": {
       "2013": {
         "contentHash": "cc1266975854",
@@ -3804,8 +3804,14 @@
         "anchorHash": "6b86b273ff34"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "b7d87b50e08a"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "57972848fea8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          }
+        }
       },
       "prose:1": {
         "contentHash": "c6ddcb6e6ea2",

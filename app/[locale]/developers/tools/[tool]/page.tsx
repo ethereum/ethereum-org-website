@@ -24,6 +24,7 @@ import {
   getToolKey,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
+  toToolCard,
   withCategories,
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -180,7 +181,12 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {relatedTools.map((related) => (
-                  <ToolCard key={getToolKey(related)} tool={related} />
+                  <ToolCard
+                    key={getToolKey(related)}
+                    // Cards only read the slim projection; the detail itself
+                    // still renders from the full record above.
+                    tool={toToolCard(related)}
+                  />
                 ))}
               </div>
             </section>

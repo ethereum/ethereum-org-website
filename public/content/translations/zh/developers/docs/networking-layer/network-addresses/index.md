@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode
+## Enode {#enode}
 
 Enode 是一种使用 URL 地址格式来标识以太坊节点的方法。十六进制的节点 ID 编码在 URL 的用户名部分，并使用 @ 符号与主机分隔。规范仅将主机名定义为 IP 地址；然而，大多数客户端（如 Geth 和贝苏）也在此处接受 DNS 名称，并在启动时将其解析为 IP 地址。这是特定于客户端的行为，而不是标准的一部分。主机名部分中的端口是 TCP 监听端口。如果 TCP 和 UDP（发现）端口不同，则 UDP 端口将指定为查询参数“discport”。
 

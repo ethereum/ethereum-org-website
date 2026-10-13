@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-privacy-stack-andy-guzman/index.md",
   "generatedAt": "2026-07-27T19:21:46.522Z",
-  "rootHash": "4d842f8138f2",
+  "rootHash": "d4bea916359f",
   "tree": {
-    "contentHash": "67ab038cbb8b",
-    "anchorHash": "f52fc6594c80",
+    "contentHash": "470aff72abbc",
+    "anchorHash": "5c45cd6cce5c",
     "children": {
       "frontmatter:title": {
-        "contentHash": "1aca2e77312e",
+        "contentHash": "67e038231bd5",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "7d761cc6b2e3",
+        "contentHash": "2de0a8ae8a0d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c256d238300d"
+        "anchorHash": "6178521e299a"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9408a72a3a12"
+        "anchorHash": "dbdbd244bbed"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "95d0be1e23cc",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "81bab8d53a95"
+        "anchorHash": "5875e8d22e28"
       },
       "prose:1": {
         "contentHash": "bc2eadaadad1",

@@ -7,20 +7,17 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam est une prochaine mise à jour d'Ethereum prévue pour le quatrième trimestre 2026
-</AlertTitle>
 <AlertDescription>
-La mise à jour Glamsterdam n'est qu'une étape dans les objectifs de développement à long terme d'Ethereum. Apprenez-en plus sur [la feuille de route du protocole](/roadmap/) et [les mises à jour précédentes](/ethereum-forks/).
+La mise à jour Glamsterdam n'est qu'une étape parmi les objectifs de développement à long terme d'Ethereum. Apprenez-en plus sur [la feuille de route du protocole](/roadmap/) et [les mises à jour précédentes](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 La prochaine mise à jour Glamsterdam d'[Ethereum](/) est conçue pour ouvrir la voie à la prochaine génération de mise à l'échelle. Glamsterdam tire son nom de la combinaison d'« Amsterdam » (mise à jour de la couche d'exécution, nommée d'après un précédent lieu de Devconnect) et de « Gloas » (mise à jour de la couche de consensus, nommée d'après une étoile).
 
-Suite aux progrès réalisés lors de la mise à jour [Fusaka](/roadmap/fusaka/), Glamsterdam se concentre sur la mise à l'échelle de la couche 1 (l1) en réorganisant la façon dont le réseau traite les transactions et gère sa base de données croissante, mettant fondamentalement à jour la façon dont Ethereum crée et vérifie les blocs.
+Suite aux progrès réalisés lors de la mise à jour [Fusaka](/roadmap/fusaka/), Glamsterdam se concentre sur la mise à l'échelle de la couche 1 (l1) en réorganisant la façon dont le réseau traite les transactions et gère sa base de données croissante, mettant à jour fondamentalement la façon dont Ethereum crée et vérifie les blocs.
 
-Alors que Fusaka se concentrait sur des améliorations fondamentales, Glamsterdam fait avancer les objectifs « Scale L1 » et « Scale Blobs » en inscrivant la séparation des tâches entre les différents participants du réseau, et en introduisant des moyens plus efficaces de gérer les données pour préparer l'[état](/glossary/#state) à une parallélisation à haut débit.
+Alors que Fusaka se concentrait sur des améliorations fondamentales, Glamsterdam fait avancer les objectifs « Mettre à l'échelle la couche 1 (l1) » et « Mettre à l'échelle les blobs » en inscrivant la séparation des tâches entre les différents participants du réseau, et en introduisant des moyens plus efficaces de gérer les données pour préparer l'[état](/glossary/#state) à une parallélisation à haut débit.
 
 Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentralisé à mesure qu'il gère plus d'activité, tout en maintenant des exigences matérielles gérables pour les personnes exécutant des [nœuds](/glossary/#node) chez elles.
 
@@ -31,9 +28,9 @@ Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentra
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Remarque : Cet article met en évidence une sélection d'EIP dont l'inclusion est prévue dans Glamsterdam. D'autres propositions programmées en cours de test sur les devnets incluent EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 et EIP-8282. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Remarque : Cet article met en évidence une sélection de propositions d'amélioration d'Ethereum (EIP) dont l'inclusion est prévue dans Glamsterdam. D'autres propositions prévues en cours de test sur les réseaux de développement (devnets) incluent EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 et EIP-8282. La portée est gelée mais peut encore changer avant le réseau principal, car la méta-EIP reste à l'état de brouillon. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Si vous souhaitez ajouter une EIP en cours d'examen pour Glamsterdam, mais qui n'a pas encore été ajoutée à cette page, [découvrez comment contribuer à ethereum.org ici](/contributing/).
+Si vous souhaitez ajouter une EIP qui est envisagée pour Glamsterdam, mais qui n'a pas encore été ajoutée à cette page, [découvrez comment contribuer à ethereum.org ici](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -41,10 +38,10 @@ Si vous souhaitez ajouter une EIP en cours d'examen pour Glamsterdam, mais qui n
 La mise à jour Glamsterdam se concentre sur trois objectifs principaux :
 
 - Accélérer le traitement (parallélisation) : Réorganiser la façon dont le réseau enregistre les dépendances de données, afin qu'il puisse traiter en toute sécurité de nombreuses transactions en même temps au lieu d'une séquence lente, une par une.
-- Augmenter la capacité : Séparer la lourde tâche de création et de vérification des blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
+- Augmenter la capacité : Répartir le gros du travail de création et de vérification des blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
 - Prévenir l'encombrement de la base de données (durabilité) : Ajuster les frais du réseau pour refléter avec précision le coût matériel à long terme du stockage de nouvelles données, débloquant les futures augmentations de la limite de gaz tout en empêchant la dégradation des performances matérielles.
 
-En bref, Glamsterdam introduira des changements structurels pour garantir qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.
+En bref, Glamsterdam introduira des changements structurels pour s'assurer qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.
 
 ## Mise à l'échelle de la couche 1 (l1) et traitement parallèle {#scale-l1}
 

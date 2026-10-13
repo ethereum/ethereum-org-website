@@ -17,7 +17,7 @@ Komplexní prezentace, kterou přednesl **Tomasz Stańczak** na ETHBoulder, pokr
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=RBQwELDHXWk) zveřejněného ETHBoulder. Pro lepší čitelnost byl lehce upraven.*
 
-#### Pokrok Nadace Ethereum a kulturní posun (0:12) {#ef-progress-and-the-cultural-shift-012}
+### Pokrok Nadace Ethereum a kulturní posun (0:12) {#ef-progress-and-the-cultural-shift-012}
 
 Někteří z vás sem možná přišli s představou, že uslyší o vizi a směřování Nadace Ethereum. Předtím mi bylo řečeno, že budu mluvit o postkvantových penězích, takže na to jsem se připravil, ale rychle jsem si připravil i snímky pro to druhé téma. Takže možná projdeme obojí v rychlosti — myslím, že mám 20 až 25 minut.
 
@@ -29,7 +29,7 @@ Jednou velmi velkou a důležitou věcí byla restrukturalizace protokolového c
 
 Iniciativa Trillion Dollar Security byla velkým úsilím — revize ekosystému z hlediska největších slabin v bezpečnostních aspektech. Pak jsme nasadili dva forky. Velkou zpětnou vazbou z ekosystému bylo, že nedodáváme včas, že nám někdy trvalo rok a půl, než jsme dodali fork. Takže jsme ukázali, že dokážeme dodat dva forky ročně, a možná to letos zopakujeme — možná to bude spíše každých devět měsíců, ale jde to dobrým směrem. Změny v clusteru pro soukromí se stále strukturují. Mluvili jsme o 10 letech Etherea, které se slavily po celém světě. Byl založen tým pro decentralizovanou umělou inteligenci (AI). Spustili jsme fyzické huby s externími týmy — ve většině případů nejsou financovány vůbec, nebo jen minimálně Nadací Ethereum. Hodně tlačíme na to, aby lokální týmy byly soběstačné díky lokálním sponzorům, obvykle VC nebo živým komunitám. A zkVM (virtuální stroje s nulovým vědomím) byly opravdu velkým tématem.
 
-#### Strategie a priority pro rok 2026 (4:30) {#2026-strategy-and-priorities-430}
+### Strategie a priority pro rok 2026 (4:30) {#2026-strategy-and-priorities-430}
 
 Změny protokolu jsme oznámili v červnu. V květnu jsme oznámili iniciativu Trillion Dollar Security. Toto je dashboard, který byl nedávno spuštěn — spíše jako výsledek této práce pro rok 2026. Politika pokladny byla oznámena v červnu. Myslím, že další výsledky uvidíme za týden nebo dva — budeme oznamovat koordinační tým pro decentralizované finance (DeFi). Konečně jsme pro tento tým nabrali důležité lidi. Jsem nadšený z lidí, kteří budou podporovat DeFi v nadaci. Také jsem se právě dozvěděl, že jsme ve frontě pro validátory, abychom je protlačili na Mainnet, takže Nadace Ethereum bude udržovat některé validátory, aby stakovala svůj vlastní ETH. To jsou dvě části politiky pokladny. Tým pro AI nedávno oznámil velmi aktuální nasazení ERC-8004 na Mainnet pro podporu agentní AI.
 
@@ -39,7 +39,7 @@ Certifikace a pověření pro podnikové Ethereum — chceme, aby si instituce b
 
 ETHBoulder, ETHDenver — je to trochu naše snaha být tady, poslat mnohem více lidí z EF, aby přijeli, prezentovali a diskutovali se všemi. New York City vítá Ethereum na institucionální straně — nezávisle na nadaci pořádá EVE Global velkou konferenci v New Yorku, plánuje se zhruba 6 000 až 8 000 lidí. Tým pro globální politickou podporu byl spuštěn loni, abychom mohli podporovat tvůrce politik a regulátory po celém světě. Koordinační tým pro DeFi startuje příští týden. Tým platformy se zaměřuje na to, aby se o Ethereu mluvilo jako o nejlepší platformě pro budování vrstev 2 (L2) — před dvěma týdny se sešlo přes 70 lidí a více než 20 L2, aby diskutovali o strategii, plánu a technologii. Blíží se diskuse u kulatého stolu o emisi na EFCC a doufejme, že budeme hodně mluvit o kultuře a umění na Ethereu také prostřednictvím DevCon Mumbai.
 
-#### Proč na postkvantové bezpečnosti záleží právě teď (8:30) {#why-post-quantum-matters-now-830}
+### Proč na postkvantové bezpečnosti záleží právě teď (8:30) {#why-post-quantum-matters-now-830}
 
 Toto je téma, o kterém mi můj tým řekl, že bych měl mluvit, což je trochu vtipné, protože se v něm necítím nejsilnější — chápu myšlenku, chápu, proč je to pro nás nesmírně důležité, a snažím se vysvětlit proč. Ale po technické stránce jsem měl pocit, že přesně nevím, co děláme na úrovni EIP nebo jak to tým dodal. To neznamená, že nejsem připraven — strávil jsem dnes osm hodin přípravou pro vás a čtením všech materiálů, které mi tým poslal. Ale musíte mi odpustit, pokud některé technické detaily nevysvětlím nejlépe, nebo pokud budu sdílet informace, které mohou být několik měsíců staré.
 
@@ -47,7 +47,7 @@ Takže proč je postkvantová bezpečnost nyní tak důležitá? Možná ne prot
 
 Většina našeho úsilí nyní spočívá v tom ukázat, kolik práce jsme vložili do plánování, výzkumu, harmonogramů a vytváření plánů pro postkvantovou bezpečnost. Zejména Bitcoin se velmi obává postkvantových hrozeb. Největší obavou je, že v ohrožení je celkem asi 6 milionů BTC — část z účtů Taproot, asi 1,9 milionu BTC ze Satoshiho účtů a dalších starších účtů. Pak tu máte účty za běhu, které mohou být zachyceny při podepisování transakcí, ale to je menší hrozba, protože byste museli mít kvantové počítače schopné prolomit kryptografii velmi rychle. Většina těchto adres je v Bitcoinu v ohrožení i s kvantovými počítači, kterým prolomení těchto adres trvá týdny. To vytváří velkou nejistotu mezi lidmi, kteří si říkají — co když to přijde dříve, zvláště nyní s akcelerací AI? Spousta nových oznámení ohledně kvantových technologií přichází velmi rychle a panuje také nejistota ohledně toho, kolik toho o kvantových počítačích víme, protože velkou část této technologie mohou vyvíjet vlády v utajení.
 
-#### Úzkost trhu a institucionální reakce (12:00) {#market-anxiety-and-institutional-response-1200}
+### Úzkost trhu a institucionální reakce (12:00) {#market-anxiety-and-institutional-response-1200}
 
 Obrovská nejistota. Někteří lidé tvrdí, že investoři neprodávají BTC kvůli kvantovým počítačům, ale vidíme oznámení od velkých bank a investičních fondů, které říkají, že to je přesně ten důvod, proč jejich zákazníci říkají „prodejte BTC“ — nebo Ethereum. Některé problémy spočívají v přístupu „posbírej teď, dešifruj později“ — myšlenka, že s kvantovými počítači budete moci sledovat stávající šifrovaný provoz, uložit si ho do budoucna a pak ho dešifrovat. Když přemýšlíte o hrozbách pro blockchain — pokud ho používáte pro soukromí, pro šifrování a doufáte, že budete mít dopřednou bezpečnost — je to problém. Konkrétně u řetězců, které spoléhají na soukromí, jako je Monero, budete v budoucnu prakticky schopni dešifrovat celou minulost řetězce, všechny stavy a přechody.
 
@@ -59,13 +59,13 @@ Nick Carter zmiňuje, že existuje rozpor mezi tím, jak o postkvantové bezpeč
 
 Zde je oznámení od Jeffa — 10% alokace BTC byla odstraněna z asijského portfolia s odkazem na kvantovou technologii jako existenční hrozbu. První příklad velkého institucionálního portfolia, článek z Bloombergu. Citibank oznámila kvantovou hrozbu a bilionový bezpečnostní závod — nejen blockchain, mluvili o kryptografii používané v bankách a finančních institucích, ale zmínili také rizika spojená s Bitcoinem. 25 % bitcoinů je potenciálně vystaveno kvantové hrozbě a je velká pravděpodobnost, že se věci prolomí do roku 2034.
 
-#### Standardy NIST a Vitalikův test odchodu (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
+### Standardy NIST a Vitalikův test odchodu (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
 
 Zde NIST oznamuje standardy pro postkvantově bezpečnou kryptografii — podpisy, které by se měly používat. Říkají, že do roku 2030 by lidé měli být připraveni. Systémy by měly přestat používat starší algoritmy pro podpisy a do roku 2035 by měly být zcela zakázány. Neznamená to, že do té doby budeme mít s jistotou postkvantové počítače, které budou představovat hrozbu, ale očekává se, že do té doby budou všichni připraveni — instituce, vládní agentury, licencovaní operátoři v USA.
 
 Vitalik uvádí postkvantovou bezpečnost jako velmi důležitý požadavek pro test odchodu (walkaway test) pro Ethereum — že nemůžeme Ethereum zakonzervovat (ossify), dokud nebude kvantově bezpečné, protože by se opravdu všechno rozbilo. Během několika příštích let je velmi důležitým souborem dodávek zajištění kvantové bezpečnosti celého technologického stacku Etherea — všech aspektů: podpisů, dostupnosti dat, podpisů na exekuční vrstvě a podpisů na vrstvě konsensu.
 
-#### Schémata postkvantových podpisů (17:30) {#post-quantum-signature-schemes-1730}
+### Schémata postkvantových podpisů (17:30) {#post-quantum-signature-schemes-1730}
 
 Na výzkumném fóru Nadace Ethereum je série blogových příspěvků, které mluví o navrhovaných schématech pro podpisy transakcí a o tom, jak přistupovat k postkvantové bezpečnosti ze strany abstrakce účtu na Ethereu. Zaprvé, Falcon je schéma podpisu založené na mřížkách — jedno ze schémat navržených NIST jako standard. Dobrou zprávou je, že má velmi dobře definovanou dobu běhu v nejhorším případě, což je důležité v kontextu EVM, kde nechcete počítat náklady na gas na základě absolutně nejhorších scénářů. V Ethereu, když přemýšlíte o škálování, vždy se díváme na nejhorší možný scénář, ne na průměr. Bylo by hezké přemýšlet o průměrném výkonu, ale na tom nezáleží, protože v okamžiku, kdy to uděláte, útočník zaplaví síť transakcemi speciálně navrženými tak, aby spustily ten nejhorší případ. Takže je důležité vědět, jaký ten nejhorší případ je.
 
@@ -73,19 +73,19 @@ Na výzkumném fóru Nadace Ethereum je série blogových příspěvků, které 
 
 Jsou tu také problémy s agregací — existují řešení agregace pro podpisy založené na Falconu, ale ta ještě více snižují efektivitu. To, co se skutečně navrhuje, jsou řešení pro vícenásobný podpis založená na hashi. Ethereum si na vrstvě konsensu vybírá XMSS. Výzkum Etherea nyní navrhuje řešení kolem XMSS — to je to, na čem se většinou pracovalo pro plán Lean Ethereum. Integrujeme Lean Ethereum do návrhu plánu hlavního vývoje protokolu, což znamená, že budeme navrhovat plán postkvantové bezpečnosti skupině All Core Devs k posouzení. Máme implementace a sledujeme cíle a metriky týkající se rychlosti provádění.
 
-#### Výzva spojená s migrací (20:30) {#the-migration-challenge-2030}
+### Výzva spojená s migrací (20:30) {#the-migration-challenge-2030}
 
 Vracíme se k požadavkům na postkvantovou práci v Ethereu — přesně vědět, jaké jsou hrozby, jaké typy útoků lze provést, a mít velmi předvídatelné cesty migrace pro účty. To je jeden z největších problémů s postkvantovou bezpečností. Musíte vzít všechny existující účty na blockchainu a zajistit, aby uživatelé nějakým způsobem provedli akci upgradu na schémata postkvantových podpisů. Pokud neudělají nic, účty jsou v ohrožení. I když jsou tyto účty mrtvé — nikdo nedrží klíče, protože byly ztraceny — je to stále problém, protože kvantové útoky mohou tyto klíče obnovit. To může vytvořit obecný pocit nejistoty a dodatečného rizika kolem této technologie.
 
 Na Ethereu existují určitá řešení — nouzový přístup. Předpokládáte, že pokud někdo drží klíče, s největší pravděpodobností drží také předobraz (preimage) — seed frázi. Takže můžete zvolit nouzový přístup, kdy lidé pomocí důkazu s nulovým vědomím (ZK-prove) prokážou, že drží seed frázi, která vygenerovala veřejný klíč. Pak můžete tyto účty uzamknout, dokud někdo nezveřejní důkaz. Stále však riskujete, že ti, kteří vygenerovali klíče přímo bez seed fráze, možná nikdy nebudou schopni získat své prostředky zpět.
 
-#### Výkon, formální verifikace a pokrok v implementaci (23:00) {#performance-formal-verification-and-implementation-progress-2300}
+### Výkon, formální verifikace a pokrok v implementaci (23:00) {#performance-formal-verification-and-implementation-progress-2300}
 
 Chceme mít spoustu implementací s formální verifikací, což se nyní hodně zrychluje. Měli jsme příklady formální verifikace provedené velmi rychle díky AI. Chceme analyzovat změny výkonu — ekonomika blokového prostoru se mění. Jak rychle lze ověřit podpisy a jaké jsou náklady na hardware pro jejich provedení. Dobrou zprávou je, že škálováním vrstvy 1 (L1) vytváříme více prostoru pro nový typ podpisů. Základní transakce mohou být 10 až 20krát dražší než dnes kvůli větším podpisům v postkvantových schématech. Obecně očekáváme, že celý ekosystém bude připraven — peněženky, validátoři, operátoři — všichni přejdou a budou připraveni na společný upgrade. Jedna věc je provést výzkum a implementace; druhá věc je celý přechod migrace. Pokud první část může trvat dva až tři roky, pak integrace zabere další dva až tři roky, pokud lidé opravdu nebudou mít pocit, že jde o stav nouze.
 
 Jaké jsou mylné představy o této práci? Tu první opravdu rád zdůrazňuji — jen proto, že akce může být v určitém okamžiku omezená, neznamená to, že už nebylo odvedeno spoustu práce. Výzkumníci se mohou rozhodnout pro jednoduché změny a postupné vylepšování, ale to je výsledek tří nebo čtyř let zkoumání všech detailů a velmi dobrého pochopení všech možností a útoků. Nedorozumění spočívá v tom, že bychom to udělali jedinou změnou — s největší pravděpodobností to bude série změn a v průběhu času se bude měnit více modulů.
 
-#### Kompletní plán a pokrok devnetu (25:29) {#the-full-roadmap-and-devnet-progress-2529}
+### Kompletní plán a pokrok devnetu (25:29) {#the-full-roadmap-and-devnet-progress-2529}
 
 Toto je rychlý přehled věcí, které děláme — vrstva konsensu, Lean EVM, Lean Spec. Tři věci, na kterých pracujeme. Existují také prekompilace pro nové podpisy. Tady je plán — když byl prezentován v Bangkoku, lidé říkali, že Ethereum je pomalé a přemýšlí o plánech velmi pomalu. Ale teď se ukazuje, že už máme za sebou dva roky spousty příprav na postkvantovou éru, a to začíná lidi uklidňovat, protože říkají: „Aha, už jsme v polovině a budujeme řešení.“ Takže ten plán nakonec nebyl tak špatný — Ethereum ukazuje, že se jím řídí.
 

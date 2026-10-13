@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/erc20-annotated-code/index.md",
   "generatedAt": "2026-06-30T00:04:42.499Z",
-  "rootHash": "35310007102e",
+  "rootHash": "2adca293b035",
   "tree": {
-    "contentHash": "df2858ac0c61",
-    "anchorHash": "2885e5eb476e",
+    "contentHash": "95847de76576",
+    "anchorHash": "d0b0b2eecdbe",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0b4aaa89a1fe",
+        "contentHash": "47731cce3ab8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,22 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "ad5b67eae683"
+        "contentHash": "2d822bbbeb62",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "845516ec99f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

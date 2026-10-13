@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-view-nft-in-metamask/index.md",
   "generatedAt": "2026-07-22T23:53:22.555Z",
-  "rootHash": "f5abd8d1ab16",
+  "rootHash": "03e99bee6574",
   "tree": {
-    "contentHash": "4c33854e2b4e",
-    "anchorHash": "e3e6574697fb",
+    "contentHash": "a72a8f157239",
+    "anchorHash": "6f7d4bf199ca",
     "children": {
       "frontmatter:title": {
         "contentHash": "551a634fe1e2",
@@ -17,11 +17,30 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c053508019dd"
+        "anchorHash": "6ad22ddcb05f"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "82c28752ca5f"
+        "contentHash": "aa1dec5bc8b5",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "97d1823f0b00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "2805fc43d2b5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "7ead9d0680ad",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -17,7 +17,7 @@ Un breve video esplicativo animato di **Amnesty International** sul perché la s
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=5GTD14irFvQ) pubblicata da Amnesty International. È stata leggermente modificata per facilitarne la lettura e sono state aggiunte le etichette dei relatori.*
 
-#### "Non hai nulla da nascondere, giusto?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Non hai nulla da nascondere, giusto?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agente:** Non ti importa della sicurezza digitale, vero?
 
@@ -79,7 +79,7 @@ Un breve video esplicativo animato di **Amnesty International** sul perché la s
 
 **Cittadino:** Certo.
 
-#### Il diritto alla privacy (1:30) {#the-right-to-privacy-130}
+### Il diritto alla privacy (1:30) {#the-right-to-privacy-130}
 
 **Cittadino:** E il mio paese è fatto di persone. Persone con il diritto alla propria privacy. Se i governi vogliono raccogliere indiscriminatamente tutti i tuoi dati (email, telefonate, immagini della webcam e ricerche su internet), questo non va bene.
 

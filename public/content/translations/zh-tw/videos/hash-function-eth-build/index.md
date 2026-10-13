@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "accounts"
-  - "cryptography"
+  - "how-ethereum-works"
 format: tutorial
 author: "奧斯汀·格里菲斯"
 breadcrumb: "雜湊函數 (ETH.BUILD)"

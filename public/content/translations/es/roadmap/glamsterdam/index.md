@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam es una próxima actualización de Ethereum planeada para el cuarto trimestre de 2026
-</AlertTitle>
 <AlertDescription>
-La actualización Glamsterdam es solo un paso en los objetivos de desarrollo a largo plazo de Ethereum. Aprende más sobre [la hoja de ruta del protocolo](/roadmap/) y [las actualizaciones anteriores](/ethereum-forks/).
+La actualización Glamsterdam es solo un paso en los objetivos de desarrollo a largo plazo de Ethereum. Obtén más información sobre [la hoja de ruta del protocolo](/roadmap/) y las [actualizaciones anteriores](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-La próxima actualización Glamsterdam de [Ethereum](/) está diseñada para despejar el camino hacia la próxima generación de escalabilidad. Glamsterdam recibe su nombre de la combinación de "Amsterdam" (actualización de la capa de ejecución, nombrada por una ubicación anterior de Devconnect) y "Gloas" (actualización de la capa de consenso, nombrada por una estrella).
+La próxima actualización Glamsterdam de [Ethereum](/) está diseñada para despejar el camino hacia la próxima generación de escalado. Glamsterdam recibe su nombre de la combinación de "Amsterdam" (actualización de la capa de ejecución, nombrada por una ubicación anterior de Devconnect) y "Gloas" (actualización de la capa de consenso, nombrada por una estrella).
 
-Tras el progreso logrado en la actualización [Fusaka](/roadmap/fusaka/), Glamsterdam se centra en escalar la capa 1 (L1) reorganizando cómo la red procesa las transacciones y gestiona su creciente base de datos, actualizando fundamentalmente cómo Ethereum crea y verifica los bloques.
+Tras el progreso logrado en la actualización [Fusaka](/roadmap/fusaka/), Glamsterdam se centra en escalar la capa 1 (l1) reorganizando cómo la red procesa las transacciones y gestiona su creciente base de datos, actualizando fundamentalmente cómo Ethereum crea y verifica los bloques.
 
-Mientras que Fusaka se centró en refinamientos fundamentales, Glamsterdam avanza en los objetivos de "Escalar la L1" y "Escalar los blobs" al consagrar la separación de funciones entre los diferentes participantes de la red, e introducir formas más eficientes de manejar los datos para preparar el [estado](/glossary/#state) para una paralelización de alta capacidad de procesamiento.
+Mientras que Fusaka se centró en refinamientos fundamentales, Glamsterdam avanza en los objetivos de "Escalar la l1" y "Escalar los blobs" al consagrar la separación de funciones entre los diferentes participantes de la red e introducir formas más eficientes de manejar los datos para preparar el [estado](/glossary/#state) para la paralelización de alta capacidad de procesamiento.
 
-Estas mejoras aseguran que Ethereum siga siendo rápido, asequible y descentralizado a medida que maneja más actividad, al tiempo que mantiene los requisitos de hardware manejables para las personas que ejecutan [nodos](/glossary/#node) en casa.
+Estas mejoras garantizan que Ethereum siga siendo rápido, asequible y descentralizado a medida que maneja más actividad, al tiempo que mantiene los requisitos de hardware manejables para las personas que ejecutan [nodos](/glossary/#node) en casa.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,7 +28,7 @@ Estas mejoras aseguran que Ethereum siga siendo rápido, asequible y descentrali
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: Este artículo destaca una selección de EIP programadas para su inclusión en Glamsterdam. Otras propuestas programadas que se están probando en redes de desarrollo incluyen EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 y EIP-8282. Para conocer las últimas actualizaciones de estado, consulta la [actualización Glamsterdam en Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: Este artículo destaca una selección de Propuestas de Mejora de Ethereum (EIP) programadas para su inclusión en Glamsterdam. Las propuestas adicionales programadas que se están probando en redes de prueba (devnets) incluyen EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 y EIP-8282. El alcance está congelado, pero aún puede cambiar antes de la red principal, ya que la meta EIP permanece en borrador. Para conocer las últimas actualizaciones de estado, consulta la [actualización Glamsterdam en Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Si deseas agregar una EIP que se esté considerando para Glamsterdam, pero que aún no se haya agregado a esta página, [aprende cómo contribuir a ethereum.org aquí](/contributing/).
 </AlertDescription>
@@ -40,11 +37,11 @@ Si deseas agregar una EIP que se esté considerando para Glamsterdam, pero que a
 
 La actualización Glamsterdam se centra en tres objetivos principales:
 
-- Acelerar el procesamiento (paralelización): reorganizar cómo la red registra las dependencias de datos, para que pueda procesar de forma segura muchas transacciones al mismo tiempo en lugar de en una secuencia lenta, una por una.
-- Ampliar la capacidad: dividir el trabajo pesado de crear y verificar bloques, dando a la red más tiempo para propagar mayores cantidades de datos sin ralentizarse.
-- Prevenir la sobrecarga de la base de datos (sostenibilidad): ajustar las tarifas de la red para reflejar con precisión el costo de hardware a largo plazo de almacenar nuevos datos, desbloqueando futuros aumentos del límite de gas mientras se previene la degradación del rendimiento del hardware.
+- Acelerar el procesamiento (paralelización): Reorganizar cómo la red registra las dependencias de datos, para que pueda procesar de forma segura muchas transacciones al mismo tiempo en lugar de en una secuencia lenta, una por una.
+- Ampliar la capacidad: Dividir el trabajo pesado de crear y verificar bloques, dando a la red más tiempo para propagar mayores cantidades de datos sin ralentizarse.
+- Prevenir la sobrecarga de la base de datos (sostenibilidad): Ajustar las tarifas de la red para reflejar con precisión el costo de hardware a largo plazo de almacenar nuevos datos, desbloqueando futuros aumentos del límite de gas mientras se previene la degradación del rendimiento del hardware.
 
-En resumen, Glamsterdam introducirá cambios estructurales para asegurar que a medida que la red aumente su capacidad, siga siendo sostenible y el rendimiento se mantenga alto.
+En resumen, Glamsterdam introducirá cambios estructurales para garantizar que, a medida que la red aumente su capacidad, siga siendo sostenible y el rendimiento se mantenga alto.
 
 ## Escalar la L1 y procesamiento en paralelo {#scale-l1}
 

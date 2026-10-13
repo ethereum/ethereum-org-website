@@ -9,7 +9,7 @@ ethereum.org 翻译风格指南包含了一些对译者来说最重要的准则�
 
 本文档作为通用指南，并不针对任何特定语言。
 
-如果你有任何问题、建议或反馈，请随时通过 translations@ethereum.org 联系我们，在 Crowdin 上向 @ethdotorg 发送消息，或者[加入我们的 Discord](https://discord.gg/ethereum-org)，你可以在 #translations 频道中给我们发消息，或联系任何团队成员。
+如果你有任何问题、建议或反馈，请随时通过 translations@ethereum.org 联系我们，在 Crowdin 上向 @ethdotorg 发送消息，或者[加入我们的 Discord](/discord/)，你可以在 #translations 频道中给我们发消息，或联系任何团队成员。
 
 ## 使用 Crowdin {#using-crowdin}
 

@@ -10,20 +10,6 @@ Gemini's output token limit is ~65K. Per-section calls keep this manageable. Bul
 - JSON files use chunked translation via `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` — chunks are size-limited (64KB by default), preferring more smaller calls over fewer larger ones
 - If a section's output is truncated, the manifest does NOT stamp (Phase 6 only stamps on success). Next run retries.
 
-## `finishReason` non-STOP values explain silent failures
-
-The Gemini adapter at `src/scripts/intl-pipeline/lib/llm/gemini.ts` checks `response.candidates[0].finishReason` after every call. Values to know:
-
-- `STOP` — normal completion
-- `MAX_TOKENS` — output truncated; section probably too large
-- `SAFETY` — content filter blocked it. Safety settings are `BLOCK_NONE` in the adapter, but blocks can still trigger on some edge content (mining/attack descriptions in certain non-Latin languages). If `BLOCK_NONE` doesn't help, the prompt or content needs rework, not the safety settings.
-- `RECITATION` — model declined to reproduce training data. **Deterministic per file+language**, NOT transient: the adapter retries the byte-identical prompt up to 3x and gets the identical `RECITATION` every time (`tokens_out=0`), then gives up. The file+lang is then skipped — it ships untranslated (keeps its prior/English state), is recorded as a failed task, and listed in the PR body's failure block. Restarting the whole run will hit the exact same combos. Recurring victims are long reference docs (consensus-mechanisms `pos`/`poa`, `defi`, `ethash`, whitepaper) in fr/es/pt-br. The real fix is upstream of a plain retry: mutate before retrying (smaller chunks, secondary model, reworded prompt) or accept the skip and handle those files out-of-band. Don't burn time expecting a re-run to clear them.
-- `OTHER` — bucket catchall. Log shows full response; debug case-by-case.
-
-Non-STOP finish reasons are logged at WARNING level. Search workflow logs for `FINISH_REASON` if a section seems to be missing translation output.
-
-**Beware: a "success" workflow conclusion does not mean a clean run.** Per-file+lang tasks that fail (RECITATION, blob/build errors) are emitted as `[WARN]`, listed in the PR body's "N task(s) failed" block, and the run still goes green. Always read the PR body's failure block and grep the log before trusting a green run. See `recovery.md` -> "Diagnosing a completed run."
-
 ## `intl-content-tree` is a separate npm package
 
 Change detection, diffing, and tree parsing live in the `intl-content-tree` npm package (MPL-2.0). It's an independent artifact, with its own test suite (~182 tests). The pipeline consumes its API.
@@ -38,7 +24,7 @@ If a `ChangeSet` or `DiffResult` looks wrong, the bug may be in the package, not
 
 JSX attribute values with embedded characters that need escaping (`&` → `&amp;`, `<` inside quoted strings) require care. The Phase 4b prompt explicitly tells the model to escape; the regex-based replacement in `pipeline.ts` does NOT entity-escape (it preserves what the LLM returned).
 
-Known past failures: PR #18041 review caught cases where Gemini left raw `"` inside `title="..."` attributes, breaking MDX. The sanitizer added a fix for this (`fixInnerQuotesInJsxAttributes` or similar). When adding new attribute patterns, write a test that includes embedded special characters first.
+Known past failures: Gemini leaving raw `"` inside `title="..."` attributes, breaking MDX. The sanitizer covers this (`fixInnerQuotesInJsxAttributes`, `fixEscapedQuotesInJsxAttributes`). When adding new attribute patterns, write a test that includes embedded special characters first.
 
 ## Locale file naming mirrors English
 
@@ -90,9 +76,10 @@ There is no `TARGET_FILES` env var — the sanitizer only reads `TARGET_LANGUAGE
 
 ETHGlossary entries have `id` (slug, e.g., `"vitalik-buterin"`) and `term` (display form, e.g., `"Vitalik Buterin"`). Per-term lookups use the ID; the API also matches aliases intelligently. When searching, prefer the slug ID; for display, use the term.
 
-## See also
+## Output length floor is script-aware
 
-- `references/architecture.md` for phase-by-phase mechanics
-- `references/orchestration.md` for the pending-branch model
-- `references/recovery.md` for what to do when things break
-- `references/sanitizer.md` for sanitizer-specific gotchas
+`validateTranslatedMarkdown` rejects output below a fraction of the English character count as truncated. That fraction is not one number: CJK renders the same content in far fewer characters, so `zh`, `zh-tw`, `ja` and `ko` get a 0.2 floor and everything else 0.3 (`LENGTH_FLOOR_*` in `output-validation.ts`). Measured across `public/content`, whole-file translated/English ratios are median 0.49 / min 0.34 for zh and zh-tw, 0.64 / 0.47 for ja and ko, and >=0.76 for every other locale; chunk-level ratios run lower than whole-file ones.
+
+The flat 0.3 floor that predated this is what kept `whitepaper/index.md` zh + zh-tw failing every scheduled run from 2026-07-30 to 2026-08-20 — a correct 0.245-ratio chunk read as truncation, three retries burned, no manifest stamped, and the next run repeated the entire 90KB file. If you see `Suspiciously short` for a locale that legitimately compresses, check the floor before blaming the model. Keep in mind this floor is the only truncation check in the run path: `verify-structure.ts` exists but is a standalone CLI, not wired into `main.ts`.
+
+The call site must pass `targetLanguage` — omitting it silently falls back to the 0.3 default.

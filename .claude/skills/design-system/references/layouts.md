@@ -6,16 +6,20 @@
 
 The site has **six** layouts. All live in `src/layouts/`. Each maps to a `template:` value in markdown frontmatter via `layoutMapping` (`src/layouts/index.ts`).
 
-| Layout | File | When to use | `template:` values it serves |
-|---|---|---|---|
-| `TopicLayout` | `src/layouts/Topic.tsx` | A topic hub with a shared sub-nav dropdown linking sibling pages. The workhorse for sectioned educational content. | `staking`, `use-cases`, `roadmap`, `upgrade`, `ai-agents` |
-| `StaticLayout` | `src/layouts/Static.tsx` | One-off markdown pages with no sub-nav. | `static` (default fallback) |
-| `DocsLayout` | `src/layouts/Docs.tsx` | Developer docs with the docs sidebar. | `docs` |
-| `TutorialLayout` | `src/layouts/Tutorial.tsx` | Long-form developer tutorials with author/date/skill metadata. | `tutorial` |
-| `ContentLayout` | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Composition scaffold (hero + TOC aside + `MainArticle` + contributors + feedback). Consumed by `TopicLayout`, and composed directly by app-router content pages (`/learn/`, `/staking/`, `/use-cases/`, `/what-is-ethereum/`). NOT used by Docs/Static/Tutorial — they build their own scaffold. | n/a (composed, not selected) |
-| `BaseLayout` | `src/layouts/BaseLayout.tsx` | Root document scaffold (`<html>`, providers). Applied automatically by the App Router. | n/a |
+| Layout           | File                            | When to use                                                                                                                                                                                                                                                                                                                  | `template:` values it serves                              |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `TopicLayout`    | `src/layouts/Topic.tsx`         | A topic hub with a shared sub-nav dropdown linking sibling pages. The workhorse for sectioned educational content.                                                                                                                                                                                                           | `staking`, `use-cases`, `roadmap`, `upgrade`, `ai-agents` |
+| `StaticLayout`   | `src/layouts/Static.tsx`        | One-off markdown pages with no sub-nav.                                                                                                                                                                                                                                                                                      | `static` (default fallback)                               |
+| `DocsLayout`     | `src/layouts/Docs.tsx`          | Developer docs with the docs sidebar.                                                                                                                                                                                                                                                                                        | `docs`                                                    |
+| `TutorialLayout` | `src/layouts/Tutorial.tsx`      | Long-form developer tutorials with author/date/skill metadata.                                                                                                                                                                                                                                                               | `tutorial`                                                |
+| `ContentLayout`  | `src/layouts/ContentLayout.tsx` | **Not a top-level layout.** Composition scaffold (hero + TOC aside + `MainArticle` + contributors + feedback). Consumed by `TopicLayout`, and composed directly by app-router content pages (`/learn/`, `/staking/`, `/use-cases/`, `/what-is-ethereum/`). NOT used by Docs/Static/Tutorial — they build their own scaffold. | n/a (composed, not selected)                              |
+| `BaseLayout`     | `src/layouts/BaseLayout.tsx`    | Root document scaffold (`<html>`, providers). Applied automatically by the App Router.                                                                                                                                                                                                                                       | n/a                                                       |
 
 That's the whole inventory. If a UI need can be met by configuring one of these (especially `TopicLayout`), it should be.
+
+**A missing `template:` fails silently.** The router resolves `frontmatter.template || getLayoutFromSlug(slug)`, and that fallback only recognizes `developers/docs`, `developers/tutorials` and `latest` -- everything else lands on `static`. So a markdown page sitting in a topic directory does **not** inherit its siblings' layout: `/staking/dvt/` shipped with the docs-style ToC and no staking dropdown until `template: staking` was added. When adding a page to an existing topic, copy the siblings' frontmatter keys, and remember each translated copy carries its own frontmatter (the intl pipeline propagates it; don't hand-edit locales).
+
+**The hero comes with the template.** `static` renders only a title hero (`PageHero variant="no-divider"`, no image) -- a side-image hero in the design means a Topic template, never `static` plus custom hero markup. A Topic template renders the full side-image `PageHero` from frontmatter `image` / `summary` / `buttons`; if the page has no sub-nav across sibling pages, keep the Topic template and add `showDropdown: false` (exemplar: `public/content/what-are-apps/index.md`).
 
 ## The Habit: Configure, Don't Add a New Layout
 
@@ -49,9 +53,21 @@ export const developerPlatforms: TopicConfig = {
     ariaLabelKey: "page-developer-platforms-dropdown-aria",
     matomoCategory: "developer platforms menu",
     items: [
-      { textKey: "page-developer-platforms-dropdown-home", href: "/developer-platforms/", matomoEvent: "home" },
-      { textKey: "page-developer-platforms-dropdown-tools", href: "/developer-platforms/tools/", matomoEvent: "tools" },
-      { textKey: "page-developer-platforms-dropdown-frameworks", href: "/developer-platforms/frameworks/", matomoEvent: "frameworks" },
+      {
+        textKey: "page-developer-platforms-dropdown-home",
+        href: "/developer-platforms/",
+        matomoEvent: "home",
+      },
+      {
+        textKey: "page-developer-platforms-dropdown-tools",
+        href: "/developer-platforms/tools/",
+        matomoEvent: "tools",
+      },
+      {
+        textKey: "page-developer-platforms-dropdown-frameworks",
+        href: "/developer-platforms/frameworks/",
+        matomoEvent: "frameworks",
+      },
     ],
   },
 }
@@ -87,7 +103,7 @@ When the topic genuinely needs something extra:
 
 - **`config.hubHero`** — Swap `PageHero` for `HubHero` on a specific slug (used by Roadmap on `/roadmap/`). Declarative; lives in the topic config.
 - **`config.editBanner`** — Render the top-of-page "edit this page" banner on every page in the topic. Used by UseCases and AiAgents. Per-page opt-out via frontmatter `hideEditBanner: true` if a specific page needs to suppress.
-- **`afterContent` prop** — Render arbitrary JSX after the markdown content. Used by Staking for its community callout. Passed by the slug router for the one or two topics that need it. If you find yourself wanting a *third* `afterContent` consumer, consider promoting it to `config.afterContent` (still keyed by topic data).
+- **`afterContent` prop** — Render arbitrary JSX after the markdown content. Used by Staking for its community callout. Passed by the slug router for the one or two topics that need it. If you find yourself wanting a _third_ `afterContent` consumer, consider promoting it to `config.afterContent` (still keyed by topic data).
 
 If your topic needs something none of these expose, the right move is usually a narrow new slot on `TopicLayout`, not a new layout file.
 
@@ -119,12 +135,13 @@ If your topic needs something none of these expose, the right move is usually a 
 
 The one structural knob is `variant`, which sets the article column width:
 
-| `variant` | Article width | Use for |
-|---|---|---|
-| `"base"` (default) | `max-w-4xl` | wider content/hub pages — `TopicLayout` pages and `/staking/`; the default, so no `variant` prop needed |
-| `"narrow"` | `max-w-3xl` | standalone concept articles that read better in a tighter column — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also `/learn/` and `/use-cases/`. Must be declared explicitly |
+| `variant`          | Article width | Use for                                                                                                                                                                                                                                                                                |
+| ------------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"base"` (default) | `max-w-4xl`   | wider content/hub pages — `TopicLayout` pages and `/staking/`; the default, so no `variant` prop needed                                                                                                                                                                                |
+| `"narrow"`         | `max-w-3xl`   | standalone concept articles that read better in a tighter column — `/what-is-ethereum/` and siblings (`what-is-ether`, `ethereum-vs-bitcoin`, `what-is-the-ethereum-network`, `ethereum-history-founder-and-ownership`); also `/learn/` and `/use-cases/`. Must be declared explicitly |
 
 Notes:
+
 - The byline spacing (player `mt-space-half`, first-section gap) is owned by the layout — pages don't hand-tune it.
 - `FileContributors variant="compact"` is selected by the layout for the top byline; don't override `FileContributors` padding with `!`/`[&>div]` hacks at the call site.
 - `listenSlug` is the only thing that toggles the audio player — omit it on pages without a playlist.
@@ -173,11 +190,11 @@ If you encounter a `src/layouts/md/<Something>.tsx` that exports its own `<Somet
 4. Delete the layout export from the file; keep the MDX components export
 5. Smoke the section's pages
 
-See `docs/topic-layout-refactor.md` for the worked example.
+The before/after shape is in `cleanup-playbook.md` ("Per-section layout -> `TopicLayout` config").
 
 ## Where end-of-page actions live (`<article>` vs `<main>`)
 
-`MainArticle` renders the page's `<article>`, and it's reserved for **article content** -- the prose itself plus the `FileContributors` block that credits it. End-of-page *actions* are page-level UI, not part of the article, so they live **outside** the `<article>` as siblings: `DocsNav`, `ContentFeedback`, and `CallToContribute`.
+`MainArticle` renders the page's `<article>`, and it's reserved for **article content** -- the prose itself plus the `FileContributors` block that credits it. End-of-page _actions_ are page-level UI, not part of the article, so they live **outside** the `<article>` as siblings: `DocsNav`, `ContentFeedback`, and `CallToContribute`.
 
 The four content layouts (`Docs`, `Static`, `Tutorial`, `ContentLayout`) express this by closing `MainArticle` and rendering the actions after it, behind an `{/* End-of-page actions */}` marker comment:
 
@@ -208,9 +225,8 @@ Before opening a PR that touches anything in `src/layouts/`:
 - [ ] Am I sure this isn't a `TopicLayout` config addition?
 - [ ] Am I sure this isn't a slot/prop addition to an existing layout?
 - [ ] Have I checked the `layoutMapping` to confirm no existing layout fits?
-- [ ] Have I read `docs/topic-layout-refactor.md` for context on why the topic layouts were consolidated?
 - [ ] If introducing a new layout (very rare), do I have explicit signoff from a maintainer?
 - [ ] If extending `ContentLayout`, is the new prop genuinely shared across multiple consumers — not a one-section special case?
-- [ ] End-of-page actions (`ContentFeedback`, `DocsNav`, `CallToContribute`) sit *outside* `MainArticle` as siblings in `<main>`; only `FileContributors` stays inside the `<article>`.
+- [ ] End-of-page actions (`ContentFeedback`, `DocsNav`, `CallToContribute`) sit _outside_ `MainArticle` as siblings in `<main>`; only `FileContributors` stays inside the `<article>`.
 
 If you can't say yes to all of these and you're about to add `src/layouts/<NewName>.tsx`, stop and re-read the top of this file.

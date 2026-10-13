@@ -1,35 +1,54 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/stories/digital-feudalism/index.md",
   "generatedAt": "2026-06-30T00:57:09.074Z",
-  "rootHash": "15304f44b25f",
+  "rootHash": "e48d6f6fddd4",
   "tree": {
-    "contentHash": "a7ae2c06c270",
-    "anchorHash": "9a6bf8c8da38",
+    "contentHash": "68d802dbb8a1",
+    "anchorHash": "1d62d12f5400",
     "children": {
       "frontmatter:title": {
-        "contentHash": "d9fd5dde7f2f",
+        "contentHash": "e6271dacd02c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "70434afbc7a5",
+        "contentHash": "a30887b6d156",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "202792ba700c"
+        "anchorHash": "003b9872dbbf"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "09eb7c01f4e4"
+        "anchorHash": "af85365331ce"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "373d65c61823",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "8517b64a7dfa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "01b8016fdce4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "3c7fb9a54380",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "dad283c19568"
+        "anchorHash": "50e877e43fab"
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",

@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and discussion
-    url: https://discord.gg/ethereum-org
+    url: https://ethereum.org/discord/
     about: Join the ethereum.org Discord to ask questions or discuss ideas with the community.
   - name: Report a security vulnerability
     url: https://ethereum.org/en/security/

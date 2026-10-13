@@ -80,7 +80,7 @@ function useSlides(): Slide[] {
       subtitle: t("page-index-carousel-privacy-subtitle"),
       description: t("page-index-carousel-privacy-description"),
       cta: t("page-index-carousel-privacy-cta"),
-      href: "/apps/categories/privacy/",
+      href: "/privacy/",
       image: defiImage,
       imagePortrait: defiImagePortrait,
       comparison: {

@@ -32,36 +32,7 @@ Each fix function is one of:
 
 ## Adding a new fix function
 
-Use the `/fix-sanitizer-bug` slash command — it enforces the test-first workflow and the code-block-split pattern. See `references/runbooks/fix-sanitizer-bug.md`.
-
-Critical rules for fix functions (enforced by the runbook):
-
-1. **Split on code blocks FIRST.** Every text transformation MUST use:
-
-   ````typescript
-   const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-   const parts = content.split(codeBlockPattern)
-   for (let i = 0; i < parts.length; i++) {
-     if (i % 2 === 1) continue // Skip code blocks
-     // Transform parts[i] only
-   }
-   ````
-
-   Modifying code-fence contents breaks Solidity/Python/TypeScript examples in tutorials.
-
-2. **Return shape**:
-
-   - Fix functions: `(content: string) => { content: string; fixCount: number }`
-   - Fix-with-English (needs source comparison): `(translated: string, english: string) => { content: string; fixCount: number }`
-   - Warn functions (detect, don't fix): `(content: string, ...) => string[]`
-
-3. **Use `escapeRegex()`** when building regex from dynamic strings.
-
-4. **Word boundaries (`\b`)** for brand-name matches to avoid partial matches.
-
-5. **Add the function to `_testOnly` export** at the bottom of `intl-sanitizer.ts` so tests can import it.
-
-6. **Wire into `processMarkdownFile` or `processJsonFile`** via the `applyFix` helper.
+Use the `/fix-sanitizer-bug` slash command (`.claude/commands/fix-sanitizer-bug.md`) — it is the canonical workflow and carries the implementation rules: code-block-split first, return shapes, `escapeRegex()`, word boundaries for brand names, `_testOnly` export, wiring via `applyFix`. When (not) to invoke it: `references/runbooks/fix-sanitizer-bug.md`.
 
 ## Test files
 
@@ -79,9 +50,3 @@ Run all sanitizer tests:
 npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
-## What this reference does NOT cover
-
-- The runbook for fixing a specific bug (see `references/runbooks/fix-sanitizer-bug.md`)
-- The pattern catalog (live document at `docs/solutions/integration-issues/sanitizer-test-research.md`)
-- The `/fix-sanitizer-bug` slash command's full flow (see `.claude/commands/fix-sanitizer-bug.md`)
-- Transliteration policy / ETHGlossary integration (see `references/ethglossary.md`)

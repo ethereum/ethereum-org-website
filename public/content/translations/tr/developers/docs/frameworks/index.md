@@ -20,7 +20,7 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 
 Çerçevelere dalmadan önce, [dapp'lere](/developers/docs/dapps/) ve [Ethereum yığınına](/developers/docs/ethereum-stack/) giriş yazılarımızı okumanızı öneririz.
 
-## Mevcut çerçeveler
+## Mevcut çerçeveler {#available-frameworks}
 
 **Foundry** - **_Foundry, Ethereum uygulama geliştirmesi için son derece hızlı, taşınabilir ve modüler bir araç takımıdır_**
 

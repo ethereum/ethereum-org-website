@@ -78,16 +78,18 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 ##### Minimum requirements
 
 - CPU with 2+ cores
-- 8 GB RAM
-- 2TB SSD
-- 10+ MBit/s bandwidth
+- 16 GB RAM (32 GB recommended for stability)
+- 2 TB NVMe SSD (likely exceeded by 2027, read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 25+ MBit/s bandwidth
 
 ##### Recommended specifications
 
-- Fast CPU with 4+ cores
-- 16 GB+ RAM
-- Fast SSD with 2+TB
-- 25+ MBit/s bandwidth
+Current hardware guidance for node operators is identified in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). For a full node it recommends:
+
+- Fast CPU with 4+ cores (8+ cores if validating)
+- 32 GB RAM (64 GB recommended if validating to ensure stability)
+- 4 TB NVMe SSD (DRAM-less and QLC drives are discouraged)
+- 50 MBit/s down / 15+ MBit/s up bandwidth (25+ MBit/s up if validating)
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
 

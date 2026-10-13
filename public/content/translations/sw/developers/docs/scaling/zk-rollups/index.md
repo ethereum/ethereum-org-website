@@ -12,13 +12,13 @@ Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza uwezo wa Ethereum
 
 ## Mikusanyiko ya sifuri-maarifa ni nini? {#what-are-zk-rollups}
 
-**Mikusanyiko ya sifuri-maarifa (ZK-rollups)** hukusanya (au 'kujumuisha') miamala katika mafungu ambayo hutekelezwa nje ya mnyororo. Ukokotoaji wa nje ya mnyororo hupunguza kiasi cha data kinachopaswa kuchapishwa kwenye mnyororo wa vitalu. Waendeshaji wa ZK-rollup huwasilisha muhtasari wa mabadiliko yanayohitajika ili kuwakilisha miamala yote katika fungu badala ya kutuma kila muamala mmoja mmoja. Pia huzalisha [uthibitisho wa uhalali](/glossary/#validity-proof) ili kuthibitisha usahihi wa mabadiliko yao.
+**Mikusanyiko ya maarifa sifuri (ZK-rollups)** hukusanya (au 'kujumuisha') miamala katika mafungu ambayo hutekelezwa nje ya mnyororo. Ukokotoaji wa nje ya mnyororo hupunguza kiasi cha data kinachopaswa kuchapishwa kwenye mnyororo wa vitalu. Waendeshaji wa ZK-rollup huwasilisha muhtasari wa mabadiliko yanayohitajika ili kuwakilisha miamala yote katika fungu badala ya kutuma kila muamala mmoja mmoja. Pia huzalisha [uthibitisho wa uhalali](/glossary/#validity-proof) ili kuthibitisha usahihi wa mabadiliko yao.
 
-Hali ya ZK-rollup inadumishwa na mkataba mahiri uliowekwa kwenye mtandao wa Ethereum. Ili kusasisha hali hii, nodi za ZK-rollup lazima ziwasilishe uthibitisho wa uhalali kwa ajili ya uhakiki. Kama ilivyotajwa, uthibitisho wa uhalali ni hakikisho la kriptografia kwamba mabadiliko ya hali yaliyopendekezwa na rollup kwa kweli ni matokeo ya kutekeleza fungu fulani la miamala. Hii inamaanisha kuwa ZK-rollups zinahitaji tu kutoa uthibitisho wa uhalali ili kukamilisha miamala kwenye Ethereum badala ya kuchapisha data yote ya muamala mnyororoni kama [mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/).
+Hali ya ZK-rollup hudumishwa na mkataba mahiri uliowekwa kwenye mtandao wa Ethereum. Ili kusasisha hali hii, nodi za ZK-rollup lazima ziwasilishe uthibitisho wa uhalali kwa ajili ya uhakiki. Kama ilivyotajwa, uthibitisho wa uhalali ni hakikisho la kriptografia kwamba mabadiliko ya hali yaliyopendekezwa na rollup ni matokeo halisi ya kutekeleza fungu fulani la miamala. Hii inamaanisha kuwa ZK-rollups hazihitaji kuchapisha data yote ya muamala mnyororoni kama vile [mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/) inavyofanya, kwa kuwa uthibitisho wa uhalali ndio unaokamilisha mabadiliko ya hali. Bado huchapisha data inayohitajika ili kuunda upya hali ya rollup, kama ilivyoelezwa hapa chini.
 
-Hakuna ucheleweshaji wakati wa kuhamisha fedha kutoka kwenye ZK-rollup kwenda Ethereum kwa sababu miamala ya kujitoa hutekelezwa mara tu mkataba wa ZK-rollup unapohakiki uthibitisho wa uhalali. Kinyume chake, utoaji wa fedha kutoka kwenye mikusanyiko yenye matumaini unakabiliwa na ucheleweshaji ili kuruhusu mtu yeyote kupinga muamala wa kujitoa kwa [ushahidi wa udanganyifu](/glossary/#fraud-proof).
+Hakuna ucheleweshaji wakati wa kuhamisha fedha kutoka kwa ZK-rollup kwenda Ethereum kwa sababu miamala ya kujitoa hutekelezwa mara tu mkataba wa ZK-rollup unapohakiki uthibitisho wa uhalali. Kinyume chake, utoaji wa fedha kutoka kwa mikusanyiko yenye matumaini unakabiliwa na ucheleweshaji ili kuruhusu mtu yeyote kupinga muamala wa kujitoa kwa [ushahidi wa udanganyifu](/glossary/#fraud-proof).
 
-ZK-rollups huandika miamala kwenye Ethereum kama `calldata`. `calldata` ni mahali ambapo data inayojumuishwa katika miito ya nje kwa kazi za mkataba mahiri huhifadhiwa. Taarifa katika `calldata` huchapishwa kwenye mnyororo wa vitalu, ikiruhusu mtu yeyote kuunda upya hali ya rollup kwa kujitegemea. ZK-rollups hutumia mbinu za kubana ili kupunguza data ya muamala—kwa mfano, akaunti zinawakilishwa na faharisi badala ya anwani, ambayo huokoa baiti 28 za data. Uchapishaji wa data mnyororoni ni gharama kubwa kwa mikusanyiko, kwa hivyo kubana data kunaweza kupunguza ada kwa watumiaji.
+ZK-rollups huandika miamala kwenye Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). `calldata` ni mahali ambapo data inayojumuishwa katika miito ya nje kwa vitendaji vya mkataba mahiri huhifadhiwa. Kwa vyovyote vile, data huchapishwa kwenye mnyororo wa vitalu, ikiruhusu mtu yeyote kuunda upya hali ya rollup kwa kujitegemea. ZK-rollups hutumia mbinu za kubana ili kupunguza data ya muamala—kwa mfano, akaunti zinawakilishwa na faharisi badala ya anwani, jambo ambalo huokoa baiti 28 za data. Uchapishaji wa data mnyororoni ni gharama kubwa kwa mikusanyiko, kwa hivyo kubana data kunaweza kupunguza ada kwa watumiaji.
 
 ## ZK-rollups huingiliana vipi na Ethereum? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ ZK-rollups hutegemea itifaki kuu ya Ethereum kwa yafuatayo:
 
 ### Upatikanaji wa data {#data-availability}
 
-ZK-rollups huchapisha data ya hali kwa kila muamala uliochakatwa nje ya mnyororo kwenda Ethereum. Kwa data hii, inawezekana kwa watu binafsi au biashara kuunda upya hali ya rollup na kuthibitisha mnyororo wenyewe. Ethereum hufanya data hii ipatikane kwa washiriki wote wa mtandao kama `calldata`.
+ZK-rollups huchapisha data ya hali kwa kila muamala unaochakatwa nje ya mnyororo kwenda Ethereum. Kwa data hii, inawezekana kwa watu binafsi au biashara kuzalisha upya hali ya rollup na kuthibitisha mnyororo wenyewe. Ethereum hufanya data hii ipatikane kwa washiriki wote wa mtandao kama `calldata` au katika [mablobu](/roadmap/danksharding/).
 
-ZK-rollups hazihitaji kuchapisha data nyingi ya muamala mnyororoni kwa sababu uthibitisho wa uhalali tayari unahakiki uhalisi wa mabadiliko ya hali. Hata hivyo, kuhifadhi data mnyororoni bado ni muhimu kwa sababu inaruhusu uhakiki bila ruhusa, unaojitegemea wa hali ya mnyororo wa L2 ambao kwa upande wake unaruhusu mtu yeyote kuwasilisha mafungu ya miamala, kuzuia waendeshaji wenye nia mbaya kudhibiti au kufungia mnyororo.
+ZK-rollups hazihitaji kuchapisha data nyingi ya muamala mnyororoni kwa sababu uthibitisho wa uhalali tayari unahakiki uhalisi wa mabadiliko ya hali. Hata hivyo, kuhifadhi data mnyororoni bado ni muhimu kwa sababu inaruhusu uhakiki bila ruhusa na wa kujitegemea wa hali ya mnyororo wa L2 ambao kwa upande wake unaruhusu mtu yeyote kuwasilisha mafungu ya miamala, kuzuia waendeshaji wenye nia mbaya kudhibiti au kusimamisha mnyororo.
 
-Mnyororoni inahitajika kwa watumiaji kuingiliana na rollup. Bila ufikiaji wa data ya hali watumiaji hawawezi kuuliza salio la akaunti zao au kuanzisha miamala (k.m., utoaji) inayotegemea taarifa ya hali.
+Mnyororoni inahitajika kwa watumiaji kuingiliana na rollup. Bila ufikiaji wa data ya hali watumiaji hawawezi kuuliza salio la akaunti yao au kuanzisha miamala (k.m., utoaji) inayotegemea maelezo ya hali.
 
 ### Ukamilifu wa muamala {#transaction-finality}
 
@@ -62,9 +62,13 @@ ZK-rollups nyingine zinaweza kuzungusha jukumu la mwendeshaji kwa kutumia seti y
 
 #### Jinsi ZK-rollups huchapisha data ya muamala kwenye Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Kama ilivyoelezwa, data ya muamala huchapishwa kwenye Ethereum kama `calldata`. `calldata` ni eneo la data katika mkataba mahiri linalotumika kupitisha hoja kwenye kazi na hufanya kazi sawa na [kumbukumbu](/developers/docs/smart-contracts/anatomy/#memory). Ingawa `calldata` haihifadhiwi kama sehemu ya hali ya Ethereum, inaendelea kuwepo mnyororoni kama sehemu ya [kumbukumbu za historia](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) za mnyororo wa Ethereum. `calldata` haiathiri hali ya Ethereum, na kuifanya kuwa njia ya bei nafuu ya kuhifadhi data mnyororoni.
+Kama ilivyoelezwa, data ya muamala huchapishwa kwenye Ethereum kama `calldata`. `calldata` ni eneo la data katika mkataba mahiri linalotumika kupitisha hoja kwenye kitendaji na hufanya kazi sawa na [kumbukumbu](/developers/docs/smart-contracts/anatomy/#memory). Ingawa `calldata` haihifadhiwi kama sehemu ya hali ya Ethereum, inaendelea kuwepo mnyororoni kama sehemu ya [kumbukumbu za historia](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) ya mnyororo wa Ethereum. `calldata` haiathiri hali ya Ethereum, na kuifanya kuwa njia ya bei nafuu ya kuhifadhi data mnyororoni.
 
-Neno kuu la `calldata` mara nyingi hutambua mbinu ya mkataba mahiri inayoitwa na muamala na hushikilia pembejeo kwa mbinu hiyo katika mfumo wa mfuatano wa kiholela wa baiti. ZK-rollups hutumia `calldata` kuchapisha data ya muamala iliyobanwa mnyororoni; mwendeshaji wa rollup huongeza tu fungu jipya kwa kuita kazi inayohitajika katika mkataba wa rollup na kupitisha data iliyobanwa kama hoja za kazi. Hii husaidia kupunguza gharama kwa watumiaji kwa kuwa sehemu kubwa ya ada za rollup huenda kwenye kuhifadhi data ya muamala mnyororoni.
+Neno kuu la `calldata` mara nyingi hutambua mbinu ya mkataba mahiri inayoitwa na muamala na hushikilia pembejeo kwa mbinu hiyo kwa njia ya mfuatano wa kiholela wa baiti. ZK-rollups hutumia `calldata` kuchapisha data ya muamala iliyobanwa mnyororoni; mwendeshaji wa rollup huongeza tu fungu jipya kwa kuita kitendaji kinachohitajika katika mkataba wa rollup na kupitisha data iliyobanwa kama hoja za kitendaji. Hii husaidia kupunguza gharama kwa watumiaji kwa kuwa sehemu kubwa ya ada za rollup huenda kwenye kuhifadhi data ya muamala mnyororoni.
+
+Tangu [sasisho la Dencun](/roadmap/dencun/) lilipoanzisha miamala inayobeba blobu ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), mikusanyiko inaweza pia kuchapisha data zao katika [mablobu](/roadmap/danksharding/), ambayo hupangwa bei katika soko tofauti la ada na kwa kawaida ni nafuu kuliko `calldata`. Mablobu hayahifadhiwi na tabaka la utekelezaji, na itifaki inafafanua tu dirisha la chini la takriban siku 18 ambalo mtandao lazima utoe data ya blobu. Hilo ni jukumu la kutoa huduma badala ya tarehe ya mwisho ya kufuta: data ya blobu si hifadhi ya kudumu ya kumbukumbu kama ilivyo historia ya tabaka la utekelezaji, na ufikiaji wa muda mrefu unategemea huduma za kumbukumbu. `calldata` inasalia kupatikana, na mikusanyiko hutofautiana katika kile wanachotumia.
+
+Utaratibu wowote ambao rollup inatumia, data iliyochapishwa ni ya umma. Mikusanyiko hutofautiana katika kile wanachochapisha, huku baadhi wakichapisha data ya muamala iliyobanwa na wengine wakichapisha tofauti za hali, lakini katika visa vyote viwili inatosha kwa mtu yeyote kuunda upya hali ya rollup kwa kujitegemea. Kuchapisha data hii ndiko kunakofanya uhakiki bila ruhusa uwezekane; si utaratibu wa faragha.
 
 ### Mafungamanisho ya hali {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARKs pia ni salama dhidi ya kompyuta za kwanta, wakati Kriptografia ya Tao 
 #### Uthibitisho wa uhalali hufanyaje kazi katika ZK-rollups? {#validity-proofs-in-zk-rollups}
 
 ##### Uzalishaji wa uthibitisho
+
 Kabla ya kukubali miamala, mwendeshaji atafanya ukaguzi wa kawaida. Hii inajumuisha kuthibitisha kwamba:
 
 - Akaunti za mtumaji na mpokeaji ni sehemu ya mti wa hali.
@@ -132,6 +137,7 @@ Mchakato unajirudia kwa kila muamala; kila "mzunguko" huunda mzizi mpya wa hali 
 Saketi ya kuthibitisha ya ZK inarudia juu ya fungu zima la muamala, ikihakiki mfuatano wa masasisho yanayosababisha mzizi wa mwisho wa hali baada ya muamala wa mwisho kutekelezwa. Mzizi wa mwisho wa Merkle uliokokotolewa unakuwa mzizi mpya zaidi wa hali rasmi wa ZK-rollup.
 
 ##### Uhakiki wa uthibitisho
+
 Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendeshaji wa L2 huwasilisha uthibitisho wa uhalali uliokokotolewa kwenye mkataba wa mhakiki kwenye L1. Saketi ya uhakiki ya mkataba inahakiki uhalali wa uthibitisho na pia inakagua pembejeo za umma zinazounda sehemu ya uthibitisho:
 
 - **Mzizi wa hali ya awali**: Mzizi wa hali ya zamani wa ZK-rollup (yaani, kabla ya miamala iliyokusanywa katika mafungu kutekelezwa), unaoonyesha hali halali ya mwisho inayojulikana ya mnyororo wa L2.
@@ -174,15 +180,15 @@ Kuanzishwa kwa ZK-rollups zinazotangamana na EVM kunatarajiwa kusaidia wasanidi 
 
 ## Ada za ZK-rollup hufanyaje kazi? {#how-do-zk-rollup-fees-work}
 
-Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya gesi, kama tu kwenye Mtandao Mkuu wa Ethereum. Hata hivyo, ada za gesi hufanya kazi tofauti kwenye L2 na huathiriwa na gharama zifuatazo:
+Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya gesi, kama ilivyo kwenye Mtandao Mkuu wa Ethereum. Hata hivyo, ada za gesi hufanya kazi tofauti kwenye L2 na huathiriwa na gharama zifuatazo:
 
 1. **Uandishi wa hali**: Kuna gharama isiyobadilika ya kuandika kwenye hali ya Ethereum (yaani, kuwasilisha muamala kwenye mnyororo wa vitalu wa Ethereum). ZK-rollups hupunguza gharama hii kwa kukusanya miamala katika mafungu na kusambaza gharama zisizobadilika kwa watumiaji wengi.
 
-2. **Uchapishaji wa data**: ZK-rollups huchapisha data ya hali kwa kila muamala kwenda Ethereum kama `calldata`. Gharama za `calldata` kwa sasa zinasimamiwa na [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), ambayo inabainisha gharama ya gesi 16 kwa baiti zisizo sifuri na gesi 4 kwa baiti sifuri za `calldata`, mtawalia. Gharama inayolipwa kwa kila muamala inaathiriwa na kiasi gani cha `calldata` kinahitaji kuchapishwa mnyororoni kwa ajili yake.
+2. **Uchapishaji wa data**: ZK-rollups huchapisha data ya hali kwa kila muamala kwenda Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). Ratiba ya asili ya gesi kwa `calldata` hutoza gesi 16 kwa kila baiti isiyo sifuri na gesi 4 kwa kila baiti sifuri, punguzo lililoletwa na [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) inasimamia bei inayolipwa kwa kila uniti ya gesi badala ya ratiba ya baiti yenyewe. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) pia inatumia gharama ya chini kwa miamala yenye data nyingi, kwa hivyo muamala unaotawaliwa na `calldata` unaweza kulipa zaidi ya ratiba ya kawaida huku miamala yenye ukokotoaji mwingi haiathiriwi. Gharama inayolipwa kwa kila muamala huathiriwa na kiasi cha data kinachohitaji kuchapishwa mnyororoni kwa ajili yake.
 
-3. **Ada za mwendeshaji wa L2**: Hiki ni kiasi kinacholipwa kwa mwendeshaji wa rollup kama fidia kwa gharama za ukokotoaji zilizotumika katika kuchakata miamala, sawa na ["ada za kipaumbele (vidokezo)" za muamala](/developers/docs/gas/#how-are-gas-fees-calculated) kwenye Mtandao Mkuu wa Ethereum.
+3. **Ada za mwendeshaji wa L2**: Hiki ni kiasi kinacholipwa kwa mwendeshaji wa rollup kama fidia kwa gharama za ukokotoaji zinazotumika katika kuchakata miamala, sawa na ["ada za kipaumbele (vidokezo)" vya muamala](/developers/docs/gas/#how-are-gas-fees-calculated) kwenye Mtandao Mkuu wa Ethereum.
 
-4. **Uzalishaji na uhakiki wa uthibitisho**: Waendeshaji wa ZK-rollup lazima wazalishe uthibitisho wa uhalali kwa mafungu ya muamala, ambayo inahitaji rasilimali nyingi. Kuhakiki uthibitisho wa maarifa-sifuri kwenye Mtandao Mkuu pia hugharimu gesi (~ gesi 500,000).
+4. **Uzalishaji na uhakiki wa uthibitisho**: Waendeshaji wa ZK-rollup lazima wazalishe uthibitisho wa uhalali kwa mafungu ya muamala, jambo ambalo linahitaji rasilimali nyingi. Kuhakiki uthibitisho wa maarifa-sifuri kwenye Mtandao Mkuu pia hugharimu gesi (takriban gesi 500,000).
 
 Mbali na kukusanya miamala katika mafungu, ZK-rollups hupunguza ada kwa watumiaji kwa kubana data ya muamala. Unaweza [kuona muhtasari wa wakati halisi](https://l2fees.info/) wa jinsi inavyogharimu kutumia ZK-rollups za Ethereum.
 

@@ -102,7 +102,7 @@ En tant que chaîne de blocs, Ethereum est conçu pour envoyer des transactions 
 
 #### Diffuser de l'argent en continu dans le monde entier... {#stream-money}
 
-Vous pouvez également diffuser de l'argent en continu sur Ethereum. Cela vous permet de payer le salaire de quelqu'un à la seconde, lui donnant accès à son argent dès qu'il en a besoin. Ou de louer quelque chose à la seconde, comme un casier de rangement ou une trottinette électrique.
+Vous pouvez également diffuser de l'argent en continu sur Ethereum. Au lieu d'envoyer un seul paiement important, les paiements en continu transfèrent de petits montants de manière continue au fil du temps. Cela vous permet de payer le salaire de quelqu'un à la seconde, lui donnant accès à son argent dès qu'il en a besoin. Cela peut également servir à payer des services facturés en continu, comme la location d'un espace de stockage ou d'une trottinette électrique.
 
 Et si vous ne souhaitez pas envoyer ou diffuser de l'[ETH](/glossary/#ether) en raison de la fluctuation de sa valeur, il existe des monnaies alternatives sur Ethereum : les [stablecoins](/glossary/#stablecoin).
 

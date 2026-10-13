@@ -102,9 +102,9 @@ Como cadena de bloques, Ethereum está diseñada para enviar transacciones de fo
 
 #### Transmitir dinero a todo el mundo... {#stream-money}
 
-También puede transmitir dinero a través de Ethereum. Esto le permite pagar a alguien su salario por segundo, dándole acceso a su dinero cuando lo necesite. O alquilar algo por segundo, como un casillero de almacenamiento o un scooter eléctrico.
+También puede transmitir dinero a través de Ethereum. En lugar de enviar un pago grande, la transmisión de pagos transfiere pequeñas cantidades de forma continua a lo largo del tiempo. Esto le permite pagarle a alguien su salario por segundo, dándole acceso a su dinero cuando lo necesite. También se puede utilizar para pagar servicios que se facturan de forma continua, como el alquiler de un casillero de almacenamiento o un scooter eléctrico.
 
-Y si no desea enviar o transmitir [ETH](/glossary/#ether) debido a lo mucho que puede cambiar su valor, existen monedas alternativas en Ethereum: [monedas estables](/glossary/#stablecoin).
+Y si no desea enviar o transmitir [ETH](/glossary/#ether) debido a lo mucho que puede cambiar su valor, existen monedas alternativas en Ethereum: las [monedas estables](/glossary/#stablecoin).
 
 <Divider />
 

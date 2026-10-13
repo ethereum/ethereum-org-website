@@ -29,7 +29,7 @@ incomplete: true
 
 القائمة الكاملة لمقترحات [<span dir="ltr">ERC</span>](https://eips.ethereum.org/erc).
 
-## قراءات إضافية
+## قراءات إضافية {#further-reading}
 
 _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذه الصفحة وإضافته!_
 

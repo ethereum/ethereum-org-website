@@ -17,23 +17,23 @@ Um destaque da **Nym** com a Cientista-Chefe da Nym, Claudia Diaz, explorando a 
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=QBX5AK3DXqw) publicada pela Nym. Ela foi levemente editada para facilitar a leitura.*
 
-#### Introdução (0:04) {#intro-004}
+### Introdução (0:04) {#intro-004}
 
 O que são metadados de comunicação? Eles se referem a tudo sobre uma comunicação que não é o conteúdo do que está sendo dito de fato. Isso inclui, por exemplo, a origem da comunicação, o destino, o horário em que a informação é enviada, quanta informação é enviada e quaisquer padrões detectáveis, incluindo os tempos e tamanhos dos pacotes sendo trocados.
 
-#### Metadados de comunicação (0:27) {#communications-metadata-027}
+### Metadados de comunicação (0:27) {#communications-metadata-027}
 
 Os metadados de comunicação são expostos por padrão em todos os protocolos de internet: TCP/IP, HTTP, UDP, FTP. Mesmo protocolos seguros como TLS ou DNS seguro, que protegem o conteúdo com criptografia de ponta a ponta, ainda mostram os metadados de comunicação: a origem, o destino, o tempo, o tamanho e assim por diante.
 
 Então, essas informações estão expostas, mas para quem? Quem pode obtê-las?
 
-#### Quem tem acesso aos metadados (1:10) {#who-gets-access-to-metadata-110}
+### Quem tem acesso aos metadados (1:10) {#who-gets-access-to-metadata-110}
 
 Existem várias entidades que são intermediárias nas comunicações da internet que conseguem acessar esses metadados de comunicação. Isso inclui grandes participantes da infraestrutura da internet, como provedores de serviços de internet, pontos de troca de tráfego (exchanges), sistemas autônomos, roteadores BGP e participantes do backbone da internet em geral; eles podem ter acesso a muitos metadados de comunicação. 
 
 Mas até mesmo pequenos participantes, como quem quer que esteja operando o roteador Wi-Fi ou uma rede local, ou alguém que consiga interceptar dados localmente, também têm acesso aos metadados de comunicação. E, claro, sabe-se que adversários em nível de Estado-nação, como a NSA, coletam metadados em grande escala e os analisam para extrair todos os tipos de inteligência.
 
-#### Por que os metadados são importantes (2:00) {#why-is-metadata-important-200}
+### Por que os metadados são importantes (2:00) {#why-is-metadata-important-200}
 
 Existem mais razões pelas quais os metadados são um tipo de dado muito interessante para coletar e explorar. Eles são legíveis por máquina, porque falam a linguagem dos computadores; é basicamente a linguagem para que os computadores consigam rotear as comunicações de sua origem até seu destino de maneira adequada. Portanto, eles são legíveis por máquina, e isso significa que as máquinas podem compreendê-los em grande escala com muita facilidade, ao contrário da linguagem humana natural, que é muito mais difícil de interpretar, porque talvez as pessoas estejam usando palavras de uma certa maneira, ou elas têm nuances, e isso é muito mais difícil de interpretar. Os metadados, por outro lado, são muito fáceis.
 
@@ -51,7 +51,7 @@ A análise de tráfego de metadados pode até ser usada para recuperar conteúdo
 
 No entanto, existem muitas situações em que a análise de tráfego de metadados de comunicação pode atuar como um canal lateral que revela esse conteúdo criptografado.
 
-#### Vigilância de metadados (5:15) {#metadata-surveillance-515}
+### Vigilância de metadados (5:15) {#metadata-surveillance-515}
 
 Um exemplo é quando você está navegando em um site com HTTPS. Em princípio, como a comunicação com este site é criptografada, alguém que esteja observando sua comunicação não pode dizer qual página específica você está acessando no site. Por exemplo, se você for ao WebMD para verificar doenças, um observador ou bisbilhoteiro poderá ver: "Ok, você está verificando informações médicas no WebMD", mas eles não podem dizer qual doença específica você está procurando.
 
@@ -61,7 +61,7 @@ Ao fazer isso, você pode construir uma impressão digital de cada uma dessas p�
 
 Isso é obviamente preocupante. Mesmo que possamos ter criptografia de ponta a ponta, estamos muito longe de terminar em termos de proteger a privacidade de nossas comunicações.
 
-#### Uma lista de desejos para comunicações privadas (6:40) {#a-wish-list-for-private-communications-640}
+### Uma lista de desejos para comunicações privadas (6:40) {#a-wish-list-for-private-communications-640}
 
 Então, se quiséssemos ter uma lista de desejos do que uma rede de comunicação perfeitamente segura ofereceria, quais são as propriedades que queremos? 
 

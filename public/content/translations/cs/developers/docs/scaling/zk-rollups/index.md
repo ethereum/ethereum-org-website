@@ -12,13 +12,13 @@ Měli byste si přečíst a pochopit naši stránku o [škálování Etherea](/d
 
 ## Co jsou rollupy s nulovým vědomím? {#what-are-zk-rollups}
 
-**Rollupy s nulovým vědomím (ZK-rollupy)** sdružují (neboli „rolují“) transakce do dávek, které jsou prováděny offchain. Offchain výpočty snižují množství dat, která musí být odeslána na blockchain. Operátoři ZK-rollupů předkládají souhrn změn potřebných k reprezentaci všech transakcí v dávce, místo aby posílali každou transakci zvlášť. Vytvářejí také [důkazy platnosti](/glossary/#validity-proof), aby prokázali správnost svých změn.
+**Rollupy s nulovým vědomím (ZK-rollupy)** sdružují (neboli „rolují“) transakce do dávek, které jsou prováděny offchain. Offchain výpočty snižují množství dat, která musí být odeslána na blockchain. Operátoři ZK-rollupů odesílají souhrn změn potřebných k reprezentaci všech transakcí v dávce, místo aby posílali každou transakci jednotlivě. Vytvářejí také [důkazy platnosti](/glossary/#validity-proof), aby prokázali správnost svých změn.
 
-Stav ZK-rollupu je udržován chytrým kontraktem nasazeným v síti Ethereum. K aktualizaci tohoto stavu musí uzly ZK-rollupu předložit důkaz platnosti k ověření. Jak již bylo zmíněno, důkaz platnosti je kryptografická záruka, že změna stavu navržená rollupem je skutečně výsledkem provedení dané dávky transakcí. To znamená, že ZK-rollupy potřebují k finalizaci transakcí na Ethereu poskytnout pouze důkazy platnosti, místo aby odesílaly všechna transakční data onchain jako [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/).
+Stav ZK-rollupu je udržován chytrým kontraktem nasazeným v síti Ethereum. K aktualizaci tohoto stavu musí uzly ZK-rollupu odeslat důkaz platnosti k ověření. Jak již bylo zmíněno, důkaz platnosti je kryptografická záruka, že změna stavu navržená rollupem je skutečně výsledkem provedení dané dávky transakcí. To znamená, že ZK-rollupy nepotřebují odesílat všechna transakční data onchain tak, jak to dělají [optimistické rollupy](/developers/docs/scaling/optimistic-rollups/), protože důkaz platnosti je to, co finalizuje přechod stavu. Stále však publikují data potřebná k rekonstrukci stavu rollupu, jak je popsáno níže.
 
-Při přesunu prostředků ze ZK-rollupu na Ethereum nedochází k žádnému zpoždění, protože výstupní transakce jsou provedeny, jakmile kontrakt ZK-rollupu ověří důkaz platnosti. Naopak výběr prostředků z optimistických rollupů podléhá zpoždění, aby kdokoli mohl zpochybnit výstupní transakci pomocí [důkazu o podvodu](/glossary/#fraud-proof).
+Při přesunu prostředků ze ZK-rollupu na Ethereum nedochází k žádným zpožděním, protože výstupní transakce jsou provedeny, jakmile kontrakt ZK-rollupu ověří důkaz platnosti. Naopak výběr prostředků z optimistických rollupů podléhá zpoždění, aby kdokoli mohl zpochybnit výstupní transakci pomocí [důkazu o podvodu](/glossary/#fraud-proof).
 
-ZK-rollupy zapisují transakce na Ethereum jako `calldata`. `calldata` je místo, kam se ukládají data zahrnutá v externích voláních funkcí chytrých kontraktů. Informace v `calldata` jsou publikovány na blockchainu, což komukoli umožňuje nezávisle rekonstruovat stav rollupu. ZK-rollupy používají kompresní techniky ke snížení objemu transakčních dat – například účty jsou reprezentovány indexem spíše než adresou, což šetří 28 bajtů dat. Publikování dat onchain představuje pro rollupy značný náklad, takže komprese dat může uživatelům snížit poplatky.
+ZK-rollupy zapisují transakce na Ethereum jako `calldata` nebo v [blobech](/roadmap/danksharding/). `calldata` je místo, kam se ukládají data zahrnutá v externích voláních funkcí chytrých kontraktů. V obou případech jsou data publikována na blockchainu, což umožňuje komukoli nezávisle rekonstruovat stav rollupu. ZK-rollupy používají kompresní techniky ke snížení objemu transakčních dat – například účty jsou reprezentovány indexem místo adresy, což šetří 28 bajtů dat. Publikování dat onchain představuje pro rollupy významný náklad, takže komprese dat může uživatelům snížit poplatky.
 
 ## Jak ZK-rollupy interagují s Ethereem? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ ZK-rollupy spoléhají na hlavní protokol Etherea v následujících ohledech:
 
 ### Dostupnost dat {#data-availability}
 
-ZK-rollupy publikují stavová data pro každou transakci zpracovanou offchain na Ethereum. S těmito daty je možné, aby jednotlivci nebo podniky reprodukovali stav rollupu a sami validovali řetězec. Ethereum zpřístupňuje tato data všem účastníkům sítě jako `calldata`.
+ZK-rollupy publikují na Ethereum stavová data pro každou transakci zpracovanou offchain. S těmito daty mohou jednotlivci nebo podniky reprodukovat stav rollupu a sami validovat řetězec. Ethereum zpřístupňuje tato data všem účastníkům sítě jako `calldata` nebo v [blobech](/roadmap/danksharding/).
 
-ZK-rollupy nepotřebují publikovat mnoho transakčních dat onchain, protože důkazy platnosti již ověřují pravost přechodů stavu. Nicméně ukládání dat onchain je stále důležité, protože umožňuje nezávislé ověření stavu L2 řetězce nevyžadující povolení, což následně umožňuje komukoli odesílat dávky transakcí, a brání tak škodlivým operátorům v cenzuře nebo zmrazení řetězce.
+ZK-rollupy nepotřebují publikovat mnoho transakčních dat onchain, protože důkazy platnosti již ověřují pravost přechodů stavu. Nicméně ukládání dat onchain je stále důležité, protože umožňuje nezávislé ověření stavu L2 řetězce nevyžadující povolení, což následně umožňuje komukoli odesílat dávky transakcí a brání tak zlomyslným operátorům v cenzuře nebo zmrazení řetězce.
 
-Onchain data jsou vyžadována pro interakci uživatelů s rollupem. Bez přístupu ke stavovým datům nemohou uživatelé dotazovat zůstatek na svém účtu nebo iniciovat transakce (např. výběry), které spoléhají na informace o stavu.
+Onchain data jsou nezbytná pro interakci uživatelů s rollupem. Bez přístupu ke stavovým datům nemohou uživatelé dotazovat zůstatek na svém účtu nebo iniciovat transakce (např. výběry), které spoléhají na informace o stavu.
 
 ### Finalita transakcí {#transaction-finality}
 
@@ -62,9 +62,13 @@ Jiné ZK-rollupy mohou rotovat roli operátora pomocí sady validátorů na báz
 
 #### Jak ZK-rollupy publikují transakční data na Ethereu {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Jak bylo vysvětleno, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast v chytrém kontraktu používaná k předávání argumentů funkci a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Ačkoli `calldata` není uložena jako součást stavu Etherea, přetrvává onchain jako součást [historických logů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) řetězce Etherea. `calldata` neovlivňuje stav Etherea, což z ní činí levný způsob ukládání dat onchain.
+Jak bylo vysvětleno, transakční data jsou publikována na Ethereu jako `calldata`. `calldata` je datová oblast v chytrém kontraktu používaná k předávání argumentů funkci a chová se podobně jako [paměť](/developers/docs/smart-contracts/anatomy/#memory). Ačkoli `calldata` nejsou uložena jako součást stavu Etherea, přetrvávají onchain jako součást [historických logů](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) řetězce Etherea. `calldata` neovlivňují stav Etherea, což z nich dělá levný způsob ukládání dat onchain.
 
-Klíčové slovo `calldata` často identifikuje metodu chytrého kontraktu volanou transakcí a obsahuje vstupy do metody ve formě libovolné sekvence bajtů. ZK-rollupy používají `calldata` k publikování komprimovaných transakčních dat onchain; operátor rollupu jednoduše přidá novou dávku zavoláním požadované funkce v kontraktu rollupu a předá komprimovaná data jako argumenty funkce. To pomáhá snížit náklady pro uživatele, protože velká část poplatků za rollup jde na ukládání transakčních dat onchain.
+Klíčové slovo `calldata` často identifikuje metodu chytrého kontraktu volanou transakcí a obsahuje vstupy pro tuto metodu ve formě libovolné sekvence bajtů. ZK-rollupy používají `calldata` k publikování komprimovaných transakčních dat onchain; operátor rollupu jednoduše přidá novou dávku zavoláním požadované funkce v kontraktu rollupu a předá komprimovaná data jako argumenty funkce. To pomáhá snížit náklady pro uživatele, protože velká část poplatků za rollup jde na ukládání transakčních dat onchain.
+
+Od chvíle, kdy [aktualizace Dencun](/roadmap/dencun/) zavedla transakce nesoucí bloby ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), mohou rollupy také publikovat svá data v [blobech](/roadmap/danksharding/), které jsou oceňovány na samostatném trhu s poplatky a jsou obvykle levnější než `calldata`. Bloby nejsou ukládány exekuční vrstvou a protokol definuje pouze minimální okno zhruba 18 dnů, během kterého musí síť data blobů poskytovat. Jedná se spíše o povinnost poskytování než o termín smazání: data blobů nejsou trvalým archivním úložištěm tak, jako je historie exekuční vrstvy, a dlouhodobější přístup závisí na archivních službách. `calldata` zůstávají k dispozici a rollupy se liší v tom, co používají.
+
+Ať už rollup používá jakýkoli mechanismus, publikovaná data jsou veřejná. Rollupy se liší v tom, co publikují, přičemž některé zveřejňují komprimovaná transakční data a jiné rozdíly ve stavu, ale v obou případech to stačí k tomu, aby kdokoli mohl nezávisle rekonstruovat stav rollupu. Publikování těchto dat je to, co umožňuje ověření nevyžadující povolení; nejedná se o mechanismus ochrany soukromí.
 
 ### Závazky stavu {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARKy jsou také bezpečné proti kvantovým počítačům, zatímco kryptog
 #### Jak fungují důkazy platnosti v ZK-rollupech? {#validity-proofs-in-zk-rollups}
 
 ##### Generování důkazu
+
 Před přijetím transakcí provede operátor obvyklé kontroly. To zahrnuje potvrzení, že:
 
 - Účty odesílatele a příjemce jsou součástí stavového stromu.
@@ -132,6 +137,7 @@ Proces se opakuje pro každou transakci; každá „smyčka“ vytvoří nový k
 ZK-dokazovací obvod iteruje přes celou dávku transakcí a ověřuje sekvenci aktualizací, které vedou ke konečnému kořeni stavu po provedení poslední transakce. Poslední vypočítaný Merkleho kořen se stává nejnovějším kanonickým kořenem stavu ZK-rollupu.
 
 ##### Ověření důkazu
+
 Poté, co dokazovací obvod ověří správnost aktualizací stavu, L2 operátor odešle vypočítaný důkaz platnosti do kontraktu ověřovatele na L1. Ověřovací obvod kontraktu ověří platnost důkazu a také zkontroluje veřejné vstupy, které tvoří součást důkazu:
 
 - **Předchozí kořen stavu (Pre-state root)**: Starý kořen stavu ZK-rollupu (tj. před provedením dávkovaných transakcí), odrážející poslední známý platný stav L2 řetězce.
@@ -174,17 +180,17 @@ Očekává se, že zavedení ZK-rollupů kompatibilních s EVM pomůže vývojá
 
 ## Jak fungují poplatky u ZK-rollupů? {#how-do-zk-rollup-fees-work}
 
-Kolik uživatelé platí za transakce na ZK-rollupech, závisí na poplatku za plyn (gas fee), stejně jako na Ethereum Mainnetu. Poplatky za gas však na L2 fungují odlišně a jsou ovlivněny následujícími náklady:
+Kolik uživatelé platí za transakce na ZK-rollupech, závisí na poplatku za plyn, stejně jako na Ethereum Mainnetu. Poplatky za plyn však na L2 fungují odlišně a jsou ovlivněny následujícími náklady:
 
 1. **Zápis stavu**: Existuje fixní náklad na zápis do stavu Etherea (tj. odeslání transakce na blockchain Etherea). ZK-rollupy tento náklad snižují dávkováním transakcí a rozložením fixních nákladů mezi více uživatelů.
 
-2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereum jako `calldata`. Náklady na `calldata` se v současnosti řídí [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), který stanovuje náklad 16 gas za nenulové bajty a 4 gas za nulové bajty `calldata`. Náklad placený za každou transakci je ovlivněn tím, kolik `calldata` je pro ni potřeba odeslat onchain.
+2. **Publikování dat**: ZK-rollupy publikují stavová data pro každou transakci na Ethereum jako `calldata` nebo v [blobech](/roadmap/danksharding/). Vnitřní rozvrh gasu pro `calldata` účtuje 16 gasu za nenulový bajt a 4 gasy za nulový bajt, což je snížení zavedené [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) řídí cenu placenou za jednotku gasu spíše než samotný rozvrh bajtů. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) navíc uplatňuje minimální náklad na datově náročné transakce, takže transakce, ve které dominují `calldata`, může platit více než podle standardního rozvrhu, zatímco výpočetně náročné transakce nejsou ovlivněny. Náklad placený za každou transakci je ovlivněn tím, kolik dat pro ni musí být odesláno onchain.
 
-3. **Poplatky L2 operátorovi**: Jedná se o částku placenou operátorovi rollupu jako kompenzaci za výpočetní náklady vzniklé při zpracování transakcí, podobně jako [transakční „prioritní poplatky (spropitné)“](/developers/docs/gas/#how-are-gas-fees-calculated) na Ethereum Mainnetu.
+3. **Poplatky L2 operátorovi**: Jedná se o částku vyplacenou operátorovi rollupu jako kompenzaci za výpočetní náklady vzniklé při zpracování transakcí, podobně jako [„prioritní poplatky (spropitné)“ u transakcí](/developers/docs/gas/#how-are-gas-fees-calculated) na Ethereum Mainnetu.
 
-4. **Generování a ověřování důkazů**: Operátoři ZK-rollupů musí vytvářet důkazy platnosti pro dávky transakcí, což je náročné na zdroje. Ověřování důkazů s nulovou znalostí na Mainnetu také stojí gas (~ 500 000 gas).
+4. **Generování a ověřování důkazů**: Operátoři ZK-rollupů musí vytvářet důkazy platnosti pro dávky transakcí, což je náročné na zdroje. Ověřování důkazů s nulovou znalostí na Mainnetu také stojí gas (~ 500 000 gasu).
 
-Kromě dávkování transakcí snižují ZK-rollupy poplatky pro uživatele kompresí transakčních dat. Můžete se [podívat na přehled v reálném čase](https://l2fees.info/), kolik stojí používání ZK-rollupů na Ethereu.
+Kromě dávkování transakcí snižují ZK-rollupy uživatelům poplatky kompresí transakčních dat. Můžete se [podívat na přehled v reálném čase](https://l2fees.info/), kolik stojí používání ZK-rollupů na Ethereu.
 
 ## Jak ZK-rollupy škálují Ethereum? {#scaling-ethereum-with-zk-rollups}
 

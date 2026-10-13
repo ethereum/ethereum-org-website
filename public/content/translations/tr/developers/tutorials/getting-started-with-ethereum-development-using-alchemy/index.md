@@ -39,7 +39,7 @@ Ayrıca “Apps” (Uygulamalar) üzerine gelip birini seçerek mevcut API anaht
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Komut Satırından Bir İstek Yapın
+## 3. Komut Satırından Bir İstek Yapın {#make-a-request-from-the-command-line}
 
 JSON-RPC ve curl kullanarak Alchemy aracılığıyla Ethereum Blokzinciri ile etkileşime geçin.
 
@@ -66,7 +66,7 @@ _**NOT:** `https://eth-mainnet.alchemyapi.io/v2/demo` adresini kendi API anahtar
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Web3 İstemcinizi Kurun
+## 4. Web3 İstemcinizi Kurun {#set-up-your-web3-client}
 
 **Mevcut bir istemciniz varsa,** mevcut düğüm sağlayıcı URL'nizi API anahtarınızı içeren bir Alchemy URL'si ile değiştirin: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. İlk Web3 Betiğinizi Yazın!
+## 5. İlk Web3 Betiğinizi Yazın! {#write-your-first-web3-script}
 
 Şimdi biraz Web3 programlaması için kolları sıvamak adına Ethereum Ana Ağı'ndan en son blok numarasını yazdıran basit bir betik yazacağız.
 

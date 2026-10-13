@@ -6,16 +6,16 @@ lang: ko
 
 [이더리움](/)의 훌륭한 점 중 하나는 비교적 개발자 친화적인 언어를 사용하여 스마트 컨트랙트를 프로그래밍할 수 있다는 것입니다. Python이나 [중괄호를 사용하는 언어(curly-bracket language)](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)에 익숙하다면 친숙한 구문을 가진 언어를 찾을 수 있습니다.
 
-가장 활발하게 유지 관리되는 두 가지 언어는 다음과 같습니다.
+가장 활발하게 유지보수되는 두 가지 언어는 다음과 같습니다.
 
 - Solidity
 - Vyper
 
-Remix IDE는 Solidity와 Vyper 모두에서 컨트랙트를 생성하고 테스트할 수 있는 포괄적인 개발 환경을 제공합니다. 코딩을 시작하려면 [브라우저 기반 Remix IDE를 사용해 보세요](https://remix.ethereum.org).
+Remix 통합 개발 환경 (IDE)은 Solidity와 Vyper 모두에서 컨트랙트를 생성하고 테스트할 수 있는 포괄적인 개발 환경을 제공합니다. 코딩을 시작하려면 [브라우저 기반 Remix IDE를 사용해 보세요](https://remix.ethereum.org).
 
-경험이 많은 개발자라면 [이더리움 가상 머신(EVM)](/developers/docs/evm/)을 위한 중간 언어인 Yul이나 Yul의 확장인 Yul+를 사용하고 싶을 수도 있습니다.
+경험이 많은 개발자라면 [이더리움 가상 머신 (EVM)](/developers/docs/evm/)을 위한 중간 언어인 Yul이나 Yul의 확장인 Yul+를 사용하고 싶을 수도 있습니다.
 
-호기심이 많고 아직 활발히 개발 중인 새로운 언어를 테스트하는 데 도움을 주고 싶다면, 현재 초기 단계에 있는 새로운 스마트 컨트랙트 언어인 Fe를 실험해 볼 수 있습니다.
+호기심이 많고 아직 활발히 개발 중인 새로운 언어를 테스트하는 데 도움을 주고 싶다면, 현재 초기 단계에 있는 신흥 스마트 컨트랙트 언어인 Fe를 실험해 볼 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -24,11 +24,11 @@ Remix IDE는 Solidity와 Vyper 모두에서 컨트랙트를 생성하고 테스�
 ## Solidity {#solidity}
 
 - 스마트 컨트랙트 구현을 위한 객체 지향 고급 언어입니다.
-- C++의 영향을 가장 많이 받은 중괄호 언어입니다.
-- 정적 타입 언어입니다(컴파일 시점에 변수의 타입이 결정됨).
-- 지원 기능:
-  - 상속(다른 컨트랙트를 확장할 수 있습니다).
-  - 라이브러리(다른 객체 지향 프로그래밍 언어의 정적 클래스 내 정적 함수처럼, 여러 컨트랙트에서 호출할 수 있는 재사용 가능한 코드를 생성할 수 있습니다).
+- C++의 영향을 가장 많이 받은 중괄호 사용 언어입니다.
+- 정적 타입 언어입니다(컴파일 시점에 변수의 타입을 알 수 있음).
+- 다음을 지원합니다.
+  - 상속 (다른 컨트랙트를 확장할 수 있습니다).
+  - 라이브러리 (다른 객체 지향 프로그래밍 언어의 정적 클래스 내 정적 함수처럼, 여러 컨트랙트에서 호출할 수 있는 재사용 가능한 코드를 만들 수 있습니다).
   - 복잡한 사용자 정의 타입.
 
 ### 주요 링크 {#important-links}
@@ -54,17 +54,17 @@ contract Coin {
     address public minter;
     mapping (address => uint) public balances;
 
-    // 이벤트는 클라이언트가 선언한 특정
-    // 컨트랙트 변경에 반응할 수 있게 합니다
+    // 이벤트는 클라이언트가 선언된 특정
+    // 컨트랙트 변경 사항에 반응할 수 있게 합니다
     event Sent(address from, address to, uint amount);
 
     // 생성자 코드는 컨트랙트가
-    // 생성될 때만 실행됩니다
+    // 생성될 때 한 번만 실행됩니다
     constructor() {
         minter = msg.sender;
     }
 
-    // 새로 생성된 코인을 특정 주소로 보냅니다
+    // 새로 생성된 일정량의 코인을 주소로 보냅니다
     // 컨트랙트 생성자만 호출할 수 있습니다
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
@@ -72,8 +72,8 @@ contract Coin {
         balances[receiver] += amount;
     }
 
-    // 기존 코인을
-    // 호출자로부터 특정 주소로 보냅니다
+    // 기존 코인의 일정량을
+    // 호출자로부터 주소로 보냅니다
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -83,11 +83,11 @@ contract Coin {
 }
 ```
 
-이 예제를 통해 Solidity 컨트랙트 구문이 어떤 느낌인지 파악할 수 있습니다. 함수와 변수에 대한 더 자세한 설명은 [문서를 참조하세요](https://docs.soliditylang.org/en/latest/contracts.html).
+이 예제를 통해 Solidity 컨트랙트 구문이 어떤 느낌인지 파악할 수 있을 것입니다. 함수와 변수에 대한 더 자세한 설명은 [문서를 참조하세요](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
-- Pythonic 프로그래밍 언어
+- Pythonic(파이썬스러운) 프로그래밍 언어
 - 강력한 타입 지정(Strong typing)
 - 작고 이해하기 쉬운 컴파일러 코드
 - 효율적인 바이트코드 생성
@@ -101,7 +101,9 @@ contract Coin {
   - 무한 루프
   - 이진 고정 소수점
 
-자세한 내용은 [Vyper의 설계 원칙을 읽어보세요](https://vyper.readthedocs.io/en/latest/index.html).
+v0.4.0부터 Vyper는 [모듈 시스템](https://docs.vyperlang.org/en/stable/using-modules.html)을 지원합니다. 코드 재사용은 클래스 상속이 아닌 합성을 통해 이루어집니다.
+
+자세한 내용은 [Vyper의 기본 원리](https://vyper.readthedocs.io/en/latest/index.html)를 읽어보세요.
 
 ### 주요 링크 {#important-links-1}
 
@@ -113,8 +115,8 @@ contract Coin {
 - [치트 시트](https://reference.auditless.com/cheatsheet)
 - [Vyper를 위한 스마트 컨트랙트 개발 프레임워크 및 도구](/developers/docs/programming-languages/python/)
 - [VyperPunk - Vyper 스마트 컨트랙트 보안 및 해킹 배우기](https://github.com/SupremacyTeam/VyperPunk)
-- [개발을 위한 Vyper Hub](https://github.com/zcor/vyper-dev)
-- [Vyper 인기 스마트 컨트랙트 예제 모음](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [개발을 위한 Vyper 허브](https://github.com/zcor/vyper-dev)
+- [Vyper 최고 인기 스마트 컨트랙트 예제](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Awesome Vyper 큐레이션 리소스](https://github.com/spadebuilders/awesome-vyper)
 
 ### 예제 {#example}
@@ -138,17 +140,17 @@ ended: public(bool)
 # 출금 패턴을 따를 수 있도록 환불된 입찰을 추적합니다
 pendingReturns: public(HashMap[address, uint256])
 
-# `_bidding_time`의
-# 초 입찰 시간을 가진 간단한 경매를
-# 수혜자 주소 `_beneficiary`를 대신하여 생성합니다.
-@external
+# `_bidding_time` 초의 입찰 시간을 가진 간단한 경매를
+# 수혜자 주소 `_beneficiary`를
+# 대신하여 생성합니다.
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# 이 트랜잭션과 함께 전송된 값으로
-# 경매에 입찰합니다.
+# 이 트랜잭션과 함께 전송된
+# 값으로 경매에 입찰합니다.
 # 이 값은 경매에서 낙찰받지
 # 못한 경우에만 환불됩니다.
 @external
@@ -165,7 +167,7 @@ def bid():
     self.highestBid = msg.value
 
 # 이전에 환불된 입찰금을 출금합니다. 보안 문제를 피하기 위해
-# 여기서 출금 패턴이 사용됩니다. 환불이 bid()의 일부로
+# 여기서 출금 패턴이 사용되었습니다. 환불이 bid()의 일부로
 # 직접 전송된다면, 악의적인 입찰 컨트랙트가 해당 환불을 차단하여
 # 새로운 더 높은 입찰이 들어오는 것을 막을 수 있습니다.
 @external
@@ -178,13 +180,13 @@ def withdraw():
 # 수혜자에게 보냅니다.
 @external
 def endAuction():
-    # 다른 컨트랙트와 상호작용하는
-    # (즉, 함수를 호출하거나 이더를 전송하는) 함수를
-    # 다음 세 단계로 구조화하는 것이 좋은 지침입니다:
+    # 다른 컨트랙트와 상호작용하는(즉, 함수를 호출하거나 이더를 전송하는)
+    # 함수를 구조화할 때 다음 세 단계로
+    # 나누는 것이 좋은 지침입니다:
     # 1. 조건 확인
-    # 2. 작업 수행 (잠재적으로 조건 변경)
+    # 2. 작업 수행 (조건이 변경될 수 있음)
     # 3. 다른 컨트랙트와 상호작용
-    # 이러한 단계가 혼합되면, 다른 컨트랙트가 현재 컨트랙트를
+    # 이러한 단계가 섞이면, 다른 컨트랙트가 현재 컨트랙트를
     # 다시 호출하여 상태를 수정하거나 효과(이더 지급)가
     # 여러 번 수행되도록 할 수 있습니다.
     # 내부적으로 호출된 함수에 외부 컨트랙트와의 상호작용이
@@ -204,11 +206,11 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-이 예제를 통해 Vyper 컨트랙트 구문이 어떤 느낌인지 파악할 수 있습니다. 함수와 변수에 대한 더 자세한 설명은 [문서를 참조하세요](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
+이 예제를 통해 Vyper 컨트랙트 구문이 어떤 느낌인지 파악할 수 있을 것입니다. 함수와 변수에 대한 더 자세한 설명은 [문서를 참조하세요](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul 및 Yul+ {#yul}
 
-이더리움을 처음 접하고 아직 스마트 컨트랙트 언어로 코딩을 해본 적이 없다면, Solidity나 Vyper로 시작하는 것을 권장합니다. 스마트 컨트랙트 보안 모범 사례와 EVM 작업의 세부 사항에 익숙해진 후에만 Yul이나 Yul+를 살펴보세요.
+이더리움을 처음 접하고 아직 스마트 컨트랙트 언어로 코딩해 본 적이 없다면, Solidity나 Vyper로 시작하는 것을 권장합니다. 스마트 컨트랙트 보안 모범 사례와 EVM 작업의 세부 사항에 익숙해진 후에만 Yul이나 Yul+를 살펴보세요.
 
 **Yul**
 
@@ -219,7 +221,7 @@ def endAuction():
 **Yul+**
 
 - Yul의 저수준 고효율 확장입니다.
-- 처음에는 [옵티미스틱 롤업](/developers/docs/scaling/optimistic-rollups/) 컨트랙트를 위해 설계되었습니다.
+- 초기에 [옵티미스틱 롤업](/developers/docs/scaling/optimistic-rollups/) 컨트랙트를 위해 설계되었습니다.
 - Yul+는 Yul에 새로운 기능을 추가하는 실험적인 업그레이드 제안으로 볼 수 있습니다.
 
 ### 주요 링크 {#important-links-2}
@@ -251,11 +253,11 @@ def endAuction():
 }
 ```
 
-이미 스마트 컨트랙트에 대한 경험이 풍부하다면, Yul로 구현된 전체 ERC-20 코드를 [여기](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)에서 찾을 수 있습니다.
+이미 스마트 컨트랙트에 대한 경험이 풍부하다면, Yul로 작성된 전체 ERC-20 구현을 [여기](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)에서 찾을 수 있습니다.
 
 ## Fe {#fe}
 
-- 이더리움 가상 머신(EVM)을 위한 정적 타입 언어입니다.
+- 이더리움 가상 머신 (EVM)을 위한 정적 타입 언어입니다.
 - Python과 Rust에서 영감을 받았습니다.
 - 이더리움 생태계를 처음 접하는 개발자도 쉽게 배울 수 있도록 하는 것을 목표로 합니다.
 - Fe 개발은 아직 초기 단계에 있으며, 2021년 1월에 알파 버전이 출시되었습니다.
@@ -292,13 +294,13 @@ contract GuestBook:
 
 ## 선택 방법 {#how-to-choose}
 
-다른 프로그래밍 언어와 마찬가지로, 개인적인 선호도뿐만 아니라 작업에 적합한 도구를 선택하는 것이 가장 중요합니다.
+다른 프로그래밍 언어와 마찬가지로, 주로 개인적인 선호도뿐만 아니라 작업에 적합한 도구를 선택하는 것이 중요합니다.
 
-아직 어떤 언어도 사용해 보지 않았다면 다음 몇 가지 사항을 고려해 보세요.
+아직 어떤 언어도 사용해 보지 않았다면 고려해야 할 몇 가지 사항은 다음과 같습니다.
 
 ### Solidity의 장점은 무엇인가요? {#solidity-advantages}
 
-- 초보자를 위한 튜토리얼과 학습 도구가 많이 있습니다. 자세한 내용은 [코딩으로 배우기](/developers/learning-tools/) 섹션을 참조하세요.
+- 초보자를 위한 많은 튜토리얼과 학습 도구가 있습니다. 자세한 내용은 [코딩으로 배우기](/developers/learning-tools/) 섹션을 참조하세요.
 - 훌륭한 개발자 도구를 사용할 수 있습니다.
 - Solidity는 대규모 개발자 커뮤니티를 보유하고 있어, 질문에 대한 답변을 매우 빠르게 찾을 수 있습니다.
 
@@ -306,7 +308,7 @@ contract GuestBook:
 
 - 스마트 컨트랙트를 작성하려는 Python 개발자가 시작하기에 좋은 방법입니다.
 - Vyper는 기능 수가 적어 아이디어를 빠르게 프로토타이핑하는 데 적합합니다.
-- Vyper는 감사하기 쉽고 사람이 최대한 읽기 쉽게 만드는 것을 목표로 합니다.
+- Vyper는 감사하기 쉽고 사람이 읽기 편하도록 최대한 직관적으로 설계되었습니다.
 
 ### Yul과 Yul+의 장점은 무엇인가요? {#yul-advantages}
 

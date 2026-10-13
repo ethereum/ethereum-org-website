@@ -15,7 +15,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 ## 如果沒有 The Graph…… {#without-the-graph}
 
-為了方便說明，我們來看一個簡單的例子。我們都喜歡遊戲，所以想像一個讓使用者下注的簡單遊戲：
+為了方便說明，我們來看一個簡單的範例。我們都喜歡遊戲，所以想像一個讓使用者下注的簡單遊戲：
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-現在假設在我們的 dapp 中，我們想要顯示總下注次數、輸贏的總場數，並且在有人再次遊玩時更新這些數據。做法將會是：
+現在假設在我們的去中心化應用程式 (dapp) 中，我們想要顯示總下注次數、輸贏的總局數，並且在有人再次遊玩時更新這些數據。做法將會是：
 
 1. 獲取 `totalGamesPlayerWon`。
 2. 獲取 `totalGamesPlayerLost`。
 3. 訂閱 `BetPlaced` 事件。
 
-如右圖所示，我們可以監聽 [Web3 中的事件](https://docs.web3js.org/api/web3/class/Contract#events)，但這需要處理相當多的情況。
+我們可以如右圖所示監聽 [Web3 中的事件](https://docs.web3js.org/api/web3/class/Contract#events)，但這需要處理相當多的情況。
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -64,17 +64,17 @@ GameContract.events.BetPlaced({
 });
 ```
 
-對於我們這個簡單的例子來說，這還算可以接受。但假設我們現在只想顯示目前玩家輸贏的下注金額。那我們就倒楣了，你最好部署一個新的合約來儲存並獲取這些值。現在想像一個複雜得多的智能合約和 dapp，情況很快就會變得一團糟。
+對於我們這個簡單的範例來說，這還算可以接受。但假設我們現在只想顯示目前玩家輸贏的下注金額。那我們就運氣不好了，你最好部署一個新的合約來儲存這些值並獲取它們。現在想像一個複雜得多的智能合約和 dapp，事情很快就會變得一團糟。
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![無法簡單查詢](./one-does-not-simply-query.jpg)
 
 你可以看出這並非最佳方案：
 
-- 對已部署的合約無效。
-- 儲存這些值需要額外的燃料 (gas) 成本。
+- 對已經部署的合約無效。
+- 儲存這些值需要額外的燃料成本。
 - 需要對以太坊節點進行另一次呼叫來獲取資料。
 
-![Thats not good enough](./not-good-enough.jpg)
+![這還不夠好](./not-good-enough.jpg)
 
 現在讓我們來看一個更好的解決方案。
 

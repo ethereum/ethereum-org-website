@@ -10,9 +10,15 @@
 
 import { expect, test } from "@playwright/test"
 
-import { MAX_CHUNK_BYTES } from "../../../src/scripts/intl-pipeline/constants"
+import {
+  MAX_CHUNK_BYTES,
+  MAX_CONTEXT_BYTES,
+} from "../../../src/scripts/intl-pipeline/constants"
 import { chunkMarkdownProse } from "../../../src/scripts/intl-pipeline/lib/llm/code-block-extractor"
-import { batchSections } from "../../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
+import {
+  batchSections,
+  sectionWireBytes,
+} from "../../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
 // ---------------------------------------------------------------------------
 // Imports -- real for implemented modules, stubs for pending
 // ---------------------------------------------------------------------------
@@ -363,7 +369,7 @@ test.describe("Incremental section batching (byte-size-aware)", () => {
     expect(batches).toHaveLength(1)
   })
 
-  test("large CONTEXT sections counted toward batch byte budget", () => {
+  test("TRANSLATE budget is independent of CONTEXT size", () => {
     const sections = [
       {
         id: "big-ctx",
@@ -373,7 +379,71 @@ test.describe("Incremental section batching (byte-size-aware)", () => {
       { id: "tr-1", content: "x".repeat(20_000), action: "TRANSLATE" as const },
       { id: "tr-2", content: "x".repeat(20_000), action: "TRANSLATE" as const },
     ]
+    // 40KB of TRANSLATE over a 32KB budget -> 2 batches, regardless of context
+    expect(batchSections(sections)).toHaveLength(2)
+  })
+
+  test("oversized CONTEXT does not collapse into one batch per section", () => {
+    // Regression: run 31149083965 (2026-08-07). 89KB of CONTEXT made
+    // translateBudget = max(32768 - 89513, 1) = 1 byte, so each of 488 changed
+    // sections became its own full-context call -- 11,712 calls, $1,108.
+    const sections = [
+      ...Array.from({ length: 744 }, (_, i) => ({
+        id: `ctx-${i}`,
+        content: "x".repeat(120),
+        action: "CONTEXT" as const,
+      })),
+      ...Array.from({ length: 488 }, (_, i) => ({
+        id: `tr-${i}`,
+        content: "x".repeat(87),
+        action: "TRANSLATE" as const,
+      })),
+    ]
+    const batches = batchSections(sections)
+    // Batching splits on wire bytes (content plus <SECTION> envelope), which is
+    // what the prompt actually costs.
+    const translateBytes = sections
+      .filter((s) => s.action === "TRANSLATE")
+      .reduce((sum, s) => sum + sectionWireBytes(s), 0)
+    expect(batches).toHaveLength(Math.ceil(translateBytes / MAX_CHUNK_BYTES))
+    expect(batches.length).toBeLessThan(10)
+  })
+
+  test("per-batch CONTEXT stays within MAX_CONTEXT_BYTES", () => {
+    const sections = [
+      ...Array.from({ length: 200 }, (_, i) => ({
+        id: `ctx-${i}`,
+        content: "x".repeat(500),
+        action: "CONTEXT" as const,
+      })),
+      ...Array.from({ length: 20 }, (_, i) => ({
+        id: `tr-${i}`,
+        content: "x".repeat(5_000),
+        action: "TRANSLATE" as const,
+      })),
+    ]
     const batches = batchSections(sections)
     expect(batches.length).toBeGreaterThan(1)
+    for (const batch of batches) {
+      const contextBytes = batch
+        .filter((s) => s.action === "CONTEXT")
+        .reduce((sum, s) => sum + Buffer.byteLength(s.content, "utf-8"), 0)
+      expect(contextBytes).toBeLessThanOrEqual(MAX_CONTEXT_BYTES)
+    }
+  })
+
+  test("CONTEXT nearest the batch's TRANSLATE sections is the context kept", () => {
+    const sections = [
+      { id: "ctx-far", content: "f".repeat(6_000), action: "CONTEXT" as const },
+      {
+        id: "ctx-near",
+        content: "n".repeat(6_000),
+        action: "CONTEXT" as const,
+      },
+      { id: "tr-1", content: "t".repeat(100), action: "TRANSLATE" as const },
+    ]
+    // Both together exceed the 8KB per-batch cap; the neighbour wins.
+    const [batch] = batchSections(sections)
+    expect(batch.map((s) => s.id)).toEqual(["ctx-near", "tr-1"])
   })
 })

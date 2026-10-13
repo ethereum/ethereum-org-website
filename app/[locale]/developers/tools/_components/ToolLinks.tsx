@@ -5,8 +5,13 @@ import NpmJs from "@/components/icons/npmjs.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
+import {
+  getPackageLabel,
+  getRankedPackages,
+  getRankedRepos,
+  getRepoLabel,
+} from "@/lib/utils/developerToolsData"
 import { numberFormat } from "@/lib/utils/numbers"
-import { isExternal } from "@/lib/utils/url"
 
 export type ToolLinksLabels = {
   website: string
@@ -14,9 +19,10 @@ export type ToolLinksLabels = {
 }
 
 /**
- * Shared action links for a tool (website, social, ranked repos with stars,
- * ranked packages with downloads). Reused by the modal detail and the
- * standalone tool page so the link/format logic lives in one place.
+ * The exhaustive action links for a tool (website, social, ranked repos with
+ * stars, ranked packages with downloads). Used by the standalone tool page; the
+ * modal shows a capped `ToolLinkRows` instead so a tool with dozens of repos
+ * doesn't stretch it.
  */
 const ToolLinks = ({
   locale,
@@ -42,83 +48,58 @@ const ToolLinks = ({
           {labels.social}
         </ButtonLink>
       )}
-      {tool.repos
-        .map((repo) => (typeof repo === "string" ? { href: repo } : repo))
-        .filter((repo) => isExternal(repo.href))
-        .sort(
-          (a, b) =>
-            (typeof b.stargazers === "number" ? b.stargazers : -1) -
-            (typeof a.stargazers === "number" ? a.stargazers : -1)
+      {getRankedRepos(tool).map((repo) => {
+        const isGitHub = repo.href.includes("https://github.com")
+        const starsLabel =
+          typeof repo.stargazers === "number"
+            ? `(${compactNumber.format(repo.stargazers)} ☆)`
+            : null
+        return (
+          <ButtonLink
+            key={repo.href}
+            href={repo.href}
+            variant="outline"
+            className="flex w-fit"
+            hideArrow={isGitHub}
+            title={undefined}
+          >
+            {isGitHub && <GitHub className="!size-5" />}
+            <span>{getRepoLabel(repo.href)}</span>
+            {starsLabel && (
+              <span className="text-xs whitespace-nowrap text-primary">
+                {starsLabel}
+              </span>
+            )}
+          </ButtonLink>
         )
-        .map((repo) => {
-          const href = repo.href
-          const isGitHub = href.includes("https://github.com")
-          const sanitizeRegExp = /^https:\/\/github\.com\//
-          // TODO: Handle non-github/npmjs labels
-          const label = href.replace(sanitizeRegExp, "")
-          const starsLabel =
-            typeof repo.stargazers === "number"
-              ? `(${compactNumber.format(repo.stargazers)} ☆)`
-              : null
-          return (
-            <ButtonLink
-              key={href}
-              href={href}
-              variant="outline"
-              className="flex w-fit"
-              hideArrow={isGitHub}
-              title={undefined}
-            >
-              {isGitHub && <GitHub className="!size-5" />}
-              <span>{label}</span>
-              {starsLabel && (
-                <span className="text-xs whitespace-nowrap text-primary">
-                  {starsLabel}
-                </span>
-              )}
-            </ButtonLink>
-          )
-        })}
-      {(tool.packages || [])
-        .map((pkg) => (typeof pkg === "string" ? { href: pkg } : pkg))
-        .filter((pkg) => isExternal(pkg.href))
-        .sort(
-          (a, b) =>
-            (typeof b.downloads === "number" ? b.downloads : -1) -
-            (typeof a.downloads === "number" ? a.downloads : -1)
+      })}
+      {getRankedPackages(tool).map((pkg) => {
+        const isNpm =
+          pkg.href.includes("https://www.npmjs.com") ||
+          pkg.href.includes("https://npmjs.com")
+        const downloadsCount =
+          typeof pkg.downloads === "number"
+            ? compactNumber.format(pkg.downloads)
+            : null
+        return (
+          <ButtonLink
+            key={pkg.href}
+            href={pkg.href}
+            variant="outline"
+            className="flex w-fit"
+            hideArrow={isNpm}
+          >
+            {isNpm && <NpmJs className="!size-5" />}
+            <span>{getPackageLabel(pkg.href)}</span>
+            {downloadsCount && (
+              <span className="inline-flex items-center text-xs whitespace-nowrap text-primary">
+                ({downloadsCount}
+                <Download className="ms-1 size-3" aria-hidden="true" />)
+              </span>
+            )}
+          </ButtonLink>
         )
-        .map((pkg) => {
-          const href = pkg.href
-          const isNpm =
-            href.includes("https://www.npmjs.com") ||
-            href.includes("https://npmjs.com")
-          const label = href.replace(
-            /^https:\/\/(www\.)?npmjs\.com\/package\//,
-            ""
-          )
-          const downloadsCount =
-            typeof pkg.downloads === "number"
-              ? compactNumber.format(pkg.downloads)
-              : null
-          return (
-            <ButtonLink
-              key={href}
-              href={href}
-              variant="outline"
-              className="flex w-fit"
-              hideArrow={isNpm}
-            >
-              {isNpm && <NpmJs className="!size-5" />}
-              <span>{label}</span>
-              {downloadsCount && (
-                <span className="inline-flex items-center text-xs whitespace-nowrap text-primary">
-                  ({downloadsCount}
-                  <Download className="ms-1 size-3" aria-hidden="true" />)
-                </span>
-              )}
-            </ButtonLink>
-          )
-        })}
+      })}
     </div>
   )
 }

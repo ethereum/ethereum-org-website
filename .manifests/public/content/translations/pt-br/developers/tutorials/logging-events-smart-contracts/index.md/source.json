@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/logging-events-smart-contracts/index.md",
   "generatedAt": "2026-06-17T00:22:29.647Z",
-  "rootHash": "e9039eed4cc8",
+  "rootHash": "b11b15869dc5",
   "tree": {
-    "contentHash": "b12c74f2562c",
-    "anchorHash": "8022bd2093cd",
+    "contentHash": "93e56083ce60",
+    "anchorHash": "ee48942b6ee4",
     "children": {
       "frontmatter:title": {
         "contentHash": "5972dbd44df7",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d2d2f757e1aa"
+        "contentHash": "ced601ce0cf0",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "0c5d9661b4fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "862417b9e7c3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:1": {
         "contentHash": "2d782cca506e",

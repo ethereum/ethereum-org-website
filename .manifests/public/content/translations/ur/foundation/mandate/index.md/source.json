@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/foundation/mandate/index.md",
   "generatedAt": "2026-06-08T09:40:52.670Z",
-  "rootHash": "b905d5da8dec",
+  "rootHash": "9aa7934e0157",
   "tree": {
-    "contentHash": "0698991acb9d",
-    "anchorHash": "70213d26583b",
+    "contentHash": "e4961f79745d",
+    "anchorHash": "7ca1b3207927",
     "children": {
       "frontmatter:title": {
         "contentHash": "85e6a376b287",
@@ -32,8 +32,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e85c862b9afb"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "91b9c17952cc",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b1cc2e711844"
+          }
+        }
       },
       "prose:2": {
         "contentHash": "c66ab1416635",

@@ -7,22 +7,19 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam là một bản nâng cấp Ethereum sắp tới dự kiến vào quý 4 năm 2026
-</AlertTitle>
 <AlertDescription>
 Bản nâng cấp Glamsterdam chỉ là một bước duy nhất trong các mục tiêu phát triển dài hạn của Ethereum. Tìm hiểu thêm về [lộ trình Giao thức](/roadmap/) và [các bản nâng cấp trước đó](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-[Bản nâng cấp](/) Glamsterdam sắp tới của Ethereum được thiết kế để dọn đường cho thế hệ mở rộng quy mô tiếp theo. Glamsterdam được đặt tên từ sự kết hợp của "Amsterdam" (bản nâng cấp lớp thực thi, được đặt theo tên một địa điểm tổ chức Devconnect trước đây) và "Gloas" (bản nâng cấp lớp đồng thuận, được đặt theo tên một ngôi sao).
+Bản nâng cấp Glamsterdam sắp tới của [Ethereum](/) được thiết kế để dọn đường cho thế hệ mở rộng quy mô tiếp theo. Glamsterdam được đặt tên từ sự kết hợp của "Amsterdam" (bản nâng cấp lớp thực thi, được đặt theo tên một địa điểm tổ chức Devconnect trước đây) và "Gloas" (bản nâng cấp lớp đồng thuận, được đặt theo tên một ngôi sao).
 
-Tiếp nối tiến bộ đạt được trong bản nâng cấp [Fusaka](/roadmap/fusaka/), Glamsterdam tập trung vào việc mở rộng quy mô lớp 1 (l1) bằng cách tổ chức lại cách mạng lưới xử lý các giao dịch và quản lý cơ sở dữ liệu đang phát triển của nó, cập nhật cơ bản cách Ethereum tạo và xác thực các khối.
+Tiếp nối những tiến bộ đạt được trong bản nâng cấp [Fusaka](/roadmap/fusaka/), Glamsterdam tập trung vào việc mở rộng quy mô lớp 1 (l1) bằng cách tổ chức lại cách mạng lưới xử lý các giao dịch và quản lý cơ sở dữ liệu đang phát triển của nó, cập nhật cơ bản cách Ethereum tạo và xác thực các khối.
 
-Trong khi Fusaka tập trung vào các tinh chỉnh nền tảng, Glamsterdam thúc đẩy các mục tiêu "Mở rộng quy mô lớp 1 (l1)" và "Mở rộng quy mô Blob" bằng cách đưa vào giao thức sự phân chia nhiệm vụ giữa các thành viên tham gia mạng lưới khác nhau và giới thiệu các cách hiệu quả hơn để xử lý dữ liệu nhằm chuẩn bị [trạng thái](/glossary/#state) cho việc song song hóa thông lượng cao.
+Trong khi Fusaka tập trung vào các tinh chỉnh nền tảng, Glamsterdam thúc đẩy các mục tiêu "Mở rộng quy mô lớp 1 (l1)" và "Mở rộng quy mô Blob" bằng cách đưa vào giao thức sự phân chia nhiệm vụ giữa các thành viên tham gia mạng lưới khác nhau, và giới thiệu các cách hiệu quả hơn để xử lý dữ liệu nhằm chuẩn bị [trạng thái](/glossary/#state) cho việc xử lý song song với thông lượng cao.
 
-Những cải tiến này đảm bảo Ethereum vẫn nhanh chóng, giá cả phải chăng và phi tập trung khi nó xử lý nhiều hoạt động hơn, đồng thời giữ cho các yêu cầu phần cứng ở mức có thể quản lý được đối với những người chạy [nút](/glossary/#node) tại nhà.
+Những cải tiến này đảm bảo Ethereum vẫn nhanh chóng, giá cả phải chăng và phi tập trung khi nó xử lý nhiều hoạt động hơn, đồng thời giữ cho các yêu cầu phần cứng ở mức có thể quản lý được đối với những người chạy các [nút](/glossary/#node) tại nhà.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
@@ -31,7 +28,7 @@ Những cải tiến này đảm bảo Ethereum vẫn nhanh chóng, giá cả ph
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Lưu ý: Bài viết này nêu bật một số EIP được lên kế hoạch đưa vào Glamsterdam. Các đề xuất bổ sung đã được lên lịch đang được thử nghiệm trên các mạng phát triển bao gồm EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 và EIP-8282. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Lưu ý: Bài viết này nêu bật một số Đề xuất Cải tiến Ethereum (EIP) được lên lịch đưa vào Glamsterdam. Các đề xuất bổ sung đã được lên lịch đang được thử nghiệm trên các mạng phát triển (devnet) bao gồm EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 và EIP-8282. Phạm vi đã được chốt nhưng vẫn có thể thay đổi trước khi lên Mạng chính, vì meta EIP vẫn đang ở dạng bản nháp. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưng chưa được thêm vào trang này, [hãy tìm hiểu cách đóng góp cho ethereum.org tại đây](/contributing/).
 </AlertDescription>
@@ -40,11 +37,11 @@ Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưn
 
 Bản nâng cấp Glamsterdam tập trung vào ba mục tiêu chính:
 
-- Tăng tốc độ xử lý (song song hóa): Tổ chức lại cách mạng lưới ghi lại các phụ thuộc dữ liệu, để nó có thể xử lý an toàn nhiều giao dịch cùng một lúc thay vì theo một trình tự chậm chạp, từng cái một.
-- Mở rộng công suất: Chia nhỏ công việc nặng nhọc là tạo và xác minh các khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
+- Tăng tốc độ xử lý (xử lý song song): Tổ chức lại cách mạng lưới ghi lại các phụ thuộc dữ liệu, để nó có thể xử lý an toàn nhiều giao dịch cùng một lúc thay vì theo một trình tự chậm chạp, từng cái một.
+- Mở rộng dung lượng: Chia nhỏ công việc nặng nhọc là tạo và xác thực các khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
 - Ngăn chặn phình to cơ sở dữ liệu (tính bền vững): Điều chỉnh phí mạng lưới để phản ánh chính xác chi phí phần cứng dài hạn của việc lưu trữ dữ liệu mới, gỡ bỏ rào cản cho việc tăng giới hạn gas trong tương lai đồng thời ngăn chặn sự suy giảm hiệu suất phần cứng.
 
-Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi về cấu trúc để đảm bảo rằng khi mạng lưới tăng công suất, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
+Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi cấu trúc để đảm bảo rằng khi mạng lưới tăng dung lượng, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
 
 ## Mở rộng quy mô lớp 1 (l1) & xử lý song song {#scale-l1}
 

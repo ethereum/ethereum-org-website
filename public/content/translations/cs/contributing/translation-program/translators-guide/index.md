@@ -9,7 +9,7 @@ Průvodce stylem překladů pro ethereum.org obsahuje některé z nejdůležitě
 
 Tento dokument slouží jako obecný průvodce a není specifický pro žádný konkrétní jazyk.
 
-Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin, nebo [se připojte na náš Discord](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
+Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte se na nás obrátit na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na platformě Crowdin, nebo [se připojte na náš Discord](/discord/), kde nám můžete napsat do kanálu #translations nebo kontaktovat kteréhokoli člena týmu.
 
 ## Používání platformy Crowdin {#using-crowdin}
 

@@ -85,7 +85,6 @@ export class HomePage extends BasePage {
    */
   async navigateFromMobileMenu(
     section: string,
-    subsection: string,
     link: string,
     expectedUrl: string | RegExp
   ) {
@@ -94,12 +93,6 @@ export class HomePage extends BasePage {
       name: section,
     })
     await sectionButton.click()
-
-    // Click on subsection
-    const subsectionButton = this.mobileSidebar.getByRole("button", {
-      name: new RegExp(`^${subsection}`, "i"),
-    })
-    await subsectionButton.click()
 
     // Click on final link
     const finalLink = this.mobileSidebar.getByRole("link", {

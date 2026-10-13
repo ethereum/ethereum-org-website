@@ -8,7 +8,12 @@
  */
 
 import { MAX_CHUNK_BYTES } from "../../constants"
-import { FENCED_BLOCK_RE, FRONTMATTER_RE } from "../shared-patterns"
+import {
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  FRONTMATTER_RE,
+  PROSE_FENCE_TAGS,
+} from "../shared-patterns"
 
 /** A single extracted code block */
 export interface CodeBlock {
@@ -91,10 +96,120 @@ export function restoreCodeBlocks(prose: string, blocks: CodeBlock[]): string {
     // Opening fence gets indent from the prose context (placeholder was indented).
     // Closing fence needs explicit indent since it's on a new line in the replacement.
     const restored = `${fence}${langTag}\n${block.content}\n${block.indent}${fence}`
-    result = result.replace(placeholder, restored)
+    // Function replacement: a string one would read `$&`, `$$`, "$`" and `$'`
+    // in the code as replacement patterns and corrupt the fence.
+    result = result.replace(placeholder, () => restored)
   }
 
   return result
+}
+
+/**
+ * Extract only the fences whose bodies must never be translated, leaving
+ * prose-tagged fences (```text and friends) inline for the model to work on.
+ *
+ * Block indices stay those of the original scan, so the numbering is stable
+ * and unique even though the returned list is a subset.
+ */
+export function extractCodeFencesOnly(markdown: string): ExtractionResult {
+  const { prose, blocks } = extractCodeBlocks(markdown)
+  const proseBlocks = blocks.filter((b) =>
+    PROSE_FENCE_TAGS.has(fenceLanguage(b.language))
+  )
+  if (proseBlocks.length === 0) return { prose, blocks }
+  return {
+    prose: restoreCodeBlocks(prose, proseBlocks),
+    blocks: blocks.filter((b) => !proseBlocks.includes(b)),
+  }
+}
+
+/**
+ * Restore code blocks, refusing to proceed when the model dropped a
+ * placeholder. Restoring a partial set would leave bare
+ * `<!-- CODE_BLOCK_n -->` comments in the committed file and lose the fence
+ * entirely, so a missing placeholder fails the task and is retried instead.
+ */
+export function restoreCodeBlocksStrict(
+  prose: string,
+  blocks: CodeBlock[],
+  label: string
+): string {
+  // Count, don't just look: restoreCodeBlocks fills the FIRST match only, so a
+  // duplicated placeholder would ship as a bare HTML comment.
+  const wrong = blocks
+    .map((b) => ({
+      index: b.index,
+      seen: prose.split(makePlaceholder(b.index)).length - 1,
+    }))
+    .filter((b) => b.seen !== 1)
+  if (wrong.length > 0) {
+    throw new Error(
+      `${label}: dropped ${wrong.length} code block placeholder(s) ` +
+        `(${wrong.map((b) => `CODE_BLOCK_${b.index}x${b.seen}`).join(", ")}) of ${blocks.length}`
+    )
+  }
+  return restoreCodeBlocks(prose, blocks)
+}
+
+/** One comment found inside one lifted code block. */
+export interface BlockComment {
+  block: CodeBlock
+  comment: CodeComment
+}
+
+/** Every non-blank comment in a set of lifted code blocks, in order. */
+export function collectBlockComments(blocks: CodeBlock[]): BlockComment[] {
+  const found: BlockComment[] = []
+  for (const block of blocks) {
+    for (const comment of extractComments(block.content, block.language)
+      .comments) {
+      if (comment.text.trim()) found.push({ block, comment })
+    }
+  }
+  return found
+}
+
+/**
+ * Write translated comments back into their blocks, in place.
+ *
+ * Each translation is applied within its comment's own line span rather than
+ * by a whole-block replace, so a comment whose text also appears in the code
+ * cannot be swapped at the wrong place. Keys are `c<i>` over `found`, matching
+ * the comment prompt's payload.
+ */
+export function applyBlockComments(
+  found: BlockComment[],
+  translations: Record<string, string>
+): void {
+  found.forEach(({ block, comment }, i) => {
+    const translated = translations[`c${i}`]
+    // The map came from JSON.parse, so a non-string value is possible; writing
+    // one in would put `123` or `null` in the comment.
+    if (typeof translated !== "string") return
+    if (!translated || translated === comment.text) return
+
+    const lines = block.content.split("\n")
+    const last = Math.min(comment.endLine ?? comment.line, lines.length - 1)
+    const swap = (text: string) => text.replace(comment.text, () => translated)
+
+    const hit = lines.findIndex(
+      (line, ln) =>
+        ln >= comment.line && ln <= last && line.includes(comment.text)
+    )
+    if (hit !== -1) {
+      lines[hit] = swap(lines[hit])
+    } else {
+      // A multi-line comment's text spans lines, so no single line holds it
+      // all. Rewrite the span only -- a whole-block replace could land on an
+      // earlier copy of the same text.
+      lines.splice(
+        comment.line,
+        last - comment.line + 1,
+        ...swap(lines.slice(comment.line, last + 1).join("\n")).split("\n")
+      )
+    }
+    block.content = lines.join("\n")
+  })
 }
 
 // ---------------------------------------------------------------------------

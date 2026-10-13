@@ -29,7 +29,10 @@ export const SITE_URL =
 
 export const IS_PRODUCTION_DEPLOY =
   process.env.NEXT_PUBLIC_CONTEXT === "production"
-export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
+// Internal path; redirects.config.js holds the one canonical invite URL.
+export const DISCORD_PATH = "/discord/"
+/** Absolute form of DISCORD_PATH, for link hrefs and JSON-LD. */
+export const DISCORD_URL = new URL(DISCORD_PATH, SITE_URL).href
 export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
@@ -58,9 +61,6 @@ export const PROGRESS_BAR_GAP = "4px"
 export const PASSING_QUIZ_SCORE = 65
 export const USER_STATS_KEY = "quizzes-stats"
 export const INITIAL_QUIZ = "what-is-ethereum"
-export const TOTAL_QUIZ_QUESTIONS_ANSWERED = 100000
-export const TOTAL_QUIZ_AVERAGE_SCORE = 67.4
-export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
 export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
@@ -73,36 +73,6 @@ export const DUNE_API_URL = "https://api.dune.com"
 
 // Wallets
 export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
-
-export const WALLETS_FILTERS_DEFAULT = {
-  android: false,
-  ios: false,
-  linux: false,
-  windows: false,
-  macOS: false,
-  firefox: false,
-  chromium: false,
-  hardware: false,
-  open_source: false,
-  non_custodial: false,
-  hardware_support: false,
-  rpc_importing: false,
-  nft_support: false,
-  connect_to_dapps: false,
-  staking: false,
-  swaps: false,
-  layer_2: false,
-  gas_fee_customization: false,
-  ens_support: false,
-  erc_20_support: false,
-  buy_crypto: false,
-  withdraw_crypto: false,
-  multisig: false,
-  social_recovery: false,
-  eip_4337_support: false,
-  eip_7702_support: false,
-  new_to_crypto: false,
-}
 
 export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
 
@@ -253,3 +223,6 @@ export const LINE_CLAMP_CLASS_MAPPING = {
   3: "line-clamp-3",
   4: "line-clamp-4",
 } as const
+
+export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
+export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))

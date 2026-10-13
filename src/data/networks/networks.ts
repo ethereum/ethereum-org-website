@@ -14,6 +14,25 @@ import UnichainLogo from "@/public/images/layer-2/unichain.png"
 import ZircuitLogo from "@/public/images/layer-2/zircuit.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
+/** Which value shapes a network's addresses and hashes take. */
+export type AddressFormat = "evm" | "starknet"
+
+/**
+ * The explorer search results point at, which is not always the one the page links to:
+ * search prefers Blockscout because it is open source, while `blockExplorerLink` stays
+ * whatever that network's own users expect.
+ *
+ * `search` is a single route that resolves an address, transaction, block or name --
+ * what Blockscout offers. Explorers without one give `address` and `tx` instead, and the
+ * union makes it impossible to fill in half of a pair.
+ */
+export type SearchExplorer = {
+  /** Shown as the section heading, e.g. "Search this address on Blockscout" */
+  brand: string
+  /** EIP-3770 short name, so `base:0x...` narrows to this chain. From `chains.ts`. */
+  prefix?: string
+} & ({ search: string } | { address: string; tx: string })
+
 export interface Rollup {
   l2beatID: string
   growthepieID: string
@@ -25,7 +44,10 @@ export interface Rollup {
   description: string
   website: string
   applicationsLink: string
+  /** The explorer this network's own users expect; shown on /layer-2/networks. */
   blockExplorerLink: string
+  addressFormat: AddressFormat
+  searchExplorer: SearchExplorer
   bridgeLink: string
   l2BeatLink: string
   growthepieLink: string
@@ -37,6 +59,12 @@ export type Rollups = Rollup[]
 export const ethereumNetworkData = {
   name: "Ethereum Mainnet",
   chainName: "Ethereum Mainnet",
+  addressFormat: "evm" as AddressFormat,
+  searchExplorer: {
+    brand: "Blockscout",
+    prefix: "eth",
+    search: "https://eth.blockscout.com/search-results?q=",
+  },
   growthepieID: "ethereum",
   logo: EthereumLogo,
   networkMaturity: "n/a",
@@ -49,6 +77,12 @@ export const layer2Data: Rollups = [
     growthepieID: "arbitrum",
     name: "Arbitrum One",
     chainName: "Arbitrum One",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "arb1",
+      search: "https://arbitrum.blockscout.com/search-results?q=",
+    },
     logo: ArbitrumLogo,
     networkType: "optimistic",
     description: "page-layer-2-arbitrum-description",
@@ -65,6 +99,12 @@ export const layer2Data: Rollups = [
     growthepieID: "base",
     name: "Base",
     chainName: "Base",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "base",
+      search: "https://base.blockscout.com/search-results?q=",
+    },
     logo: BaseLogo,
     networkType: "optimistic",
     description: "page-layer-2-base-description",
@@ -81,6 +121,12 @@ export const layer2Data: Rollups = [
     growthepieID: "optimism",
     name: "Optimism",
     chainName: "OP Mainnet",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "oeth",
+      search: "https://explorer.optimism.io/search-results?q=",
+    },
     logo: OptimismLogo,
     networkType: "optimistic",
     description: "page-layer-2-optimism-description",
@@ -97,6 +143,12 @@ export const layer2Data: Rollups = [
     growthepieID: "zksync_era",
     name: "ZKSync Era",
     chainName: "zkSync Mainnet",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "zksync",
+      search: "https://zksync.blockscout.com/search-results?q=",
+    },
     logo: ZkSyncEraLogo,
     networkType: "zk",
     description: "page-layer-2-zksync2-description",
@@ -113,6 +165,12 @@ export const layer2Data: Rollups = [
     growthepieID: "linea",
     name: "Linea",
     chainName: "Linea",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "linea",
+      search: "https://explorer.linea.build/search-results?q=",
+    },
     logo: LineaLogo,
     networkType: "zk",
     description: "page-layer-2-linea-description",
@@ -129,6 +187,12 @@ export const layer2Data: Rollups = [
     growthepieID: "scroll",
     name: "Scroll",
     chainName: "Scroll",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "scr",
+      search: "https://scroll.blockscout.com/search-results?q=",
+    },
     logo: ScrollLogo,
     networkType: "zk",
     description: "page-layer-2-scroll-description",
@@ -145,6 +209,14 @@ export const layer2Data: Rollups = [
     growthepieID: "starknet",
     name: "Starknet",
     chainName: "Starknet",
+    addressFormat: "starknet",
+    // Not EVM, and no unified search route -- a felt gives no hint whether it is a
+    // contract or a transaction, so both are offered. Accounts are contracts here.
+    searchExplorer: {
+      brand: "Starkscan",
+      address: "https://starkscan.co/contract/",
+      tx: "https://starkscan.co/tx/",
+    },
     logo: StarknetLogo,
     networkType: "zk",
     description: "page-layer-2-starknet-description",
@@ -161,6 +233,12 @@ export const layer2Data: Rollups = [
     growthepieID: "unichain",
     name: "Unichain",
     chainName: "Unichain",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "unichain",
+      search: "https://unichain.blockscout.com/search-results?q=",
+    },
     logo: UnichainLogo,
     networkType: "optimistic",
     description: "page-layer-2-unichain-description",
@@ -177,6 +255,12 @@ export const layer2Data: Rollups = [
     growthepieID: "ink",
     name: "Ink",
     chainName: "Ink",
+    addressFormat: "evm",
+    searchExplorer: {
+      brand: "Blockscout",
+      prefix: "ink",
+      search: "https://explorer.inkonchain.com/search-results?q=",
+    },
     logo: InkLogo,
     networkType: "optimistic",
     description: "page-layer-2-ink-description",
@@ -193,6 +277,14 @@ export const layer2Data: Rollups = [
     growthepieID: "zircuit",
     name: "Zircuit",
     chainName: "Zircuit Mainnet",
+    addressFormat: "evm",
+    // Not on Blockscout, and not an Etherscan family explorer either.
+    searchExplorer: {
+      brand: "Zircuit",
+      prefix: "zircuit-mainnet",
+      address: "https://explorer.zircuit.com/address/",
+      tx: "https://explorer.zircuit.com/tx/",
+    },
     logo: ZircuitLogo,
     networkType: "zk",
     description: "page-layer-2-zircuit-description",

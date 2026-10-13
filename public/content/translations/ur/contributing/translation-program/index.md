@@ -16,7 +16,7 @@ description: "⁦ethereum.org⁩ کے ترجمہ پروگرام کے بارے م
 
 اگر آپ کو کسی موجودہ ترجمے میں کوئی غلطی نظر آئے، تو براہ کرم [GitHub پر ایک ایشو کھولیں](https://github.com/ethereum/ethereum-org-website/issues/new/choose)۔
 
-_سوالات پوچھنے یا آراء شیئر کرنے کے لیے [⁦ethereum.org⁩ ڈسکارڈ](https://discord.gg/ethereum-org) میں شامل ہوں۔_
+_سوالات پوچھنے یا آراء شیئر کرنے کے لیے [⁦ethereum.org⁩ ڈسکارڈ](/discord/) میں شامل ہوں۔_
 
 ## ترجمہ پروگرام کے بارے میں {#about-us}
 
@@ -63,7 +63,7 @@ _سوالات پوچھنے یا آراء شیئر کرنے کے لیے [⁦ether
 
 ## رابطہ کریں {#get-in-touch}
 
-کیا آپ کا کوئی سوال ہے؟ یا ہماری ٹیم اور دیگر مترجمین کے ساتھ تعاون کرنا چاہتے ہیں؟ براہ کرم ہمارے [⁦ethereum.org⁩ ڈسکارڈ سرور](https://discord.gg/ethereum-org) کے <span dir="ltr">#translations</span> چینل میں پوسٹ کریں۔
+کیا آپ کا کوئی سوال ہے؟ یا ہماری ٹیم اور دیگر مترجمین کے ساتھ تعاون کرنا چاہتے ہیں؟ براہ کرم ہمارے [⁦ethereum.org⁩ ڈسکارڈ سرور](/discord/) کے <span dir="ltr">#translations</span> چینل میں پوسٹ کریں۔
 
 آپ ہم سے <span dir="ltr">translations@ethereum.org</span> پر بھی رابطہ کر سکتے ہیں۔
 

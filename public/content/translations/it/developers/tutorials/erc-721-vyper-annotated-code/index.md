@@ -52,7 +52,7 @@ La prima riga importa l'interfaccia e la seconda specifica che la stiamo impleme
 ```python
 #pragma version >0.3.10
 ```
-### L'interfaccia ERC721Receiver
+### L'interfaccia ERC721Receiver {#receiver-interface}
 
 ```python
 # Interfaccia per il contratto chiamato da safeTransferFrom()
@@ -91,7 +91,7 @@ La richiesta può contenere fino a 1024 byte di dati utente.
 ```
 
 Per prevenire i casi in cui un contratto accetta accidentalmente un trasferimento, il valore di ritorno non è un booleano, ma uno specifico valore di quattro byte, il selettore di funzione di `onERC721Received`. La funzione è `nonpayable` perché un contratto ricevente potrebbe cambiare il proprio stato quando accetta un token.
-### Eventi
+### Eventi {#events}
 
 Gli [eventi](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 vengono emessi per informare gli utenti e i server all'esterno della blockchain degli eventi. Nota che il contenuto degli eventi
@@ -120,7 +120,7 @@ miei eredi (se uno di loro lo richiede, i contratti non possono fare nulla senza
 possiamo semplicemente dare un'alta autorizzazione di spesa a un contratto di eredità, ma questo non funziona per l'ERC-721 perché i token
 non sono fungibili. Questo è l'equivalente. Il valore `approved` ci dice se l'evento è per un'approvazione o per il
 ritiro di un'approvazione.
-### Variabili di stato
+### Variabili di stato {#state-vars}
 
 Queste variabili contengono lo stato attuale dei token: quali sono disponibili e chi li possiede. La maggior parte di questi
 sono oggetti `HashMap`, [mappature unidirezionali che esistono tra due tipi](https://vyper.readthedocs.io/en/latest/types.html#mappings).
@@ -187,7 +187,7 @@ a cui questo contratto è conforme: l'ERC-165 stesso e l'ERC-721.
 
 Queste sono le funzioni che implementano effettivamente l'ERC-721.
 
-#### Costruttore
+#### Costruttore {#constructor}
 
 ```python
 @deploy
@@ -213,7 +213,7 @@ con `"""`) e non usandola in alcun modo. Questi commenti possono anche includere
 
 Per accedere alle variabili di stato si usa `self.<nome variabile>` (di nuovo, come in Python). Il costruttore registra l'
 account che ha distribuito il contratto come `minter`.
-#### Funzioni View
+#### Funzioni View {#views}
 
 Queste sono funzioni che non modificano lo stato della blockchain e, pertanto, possono essere eseguite
 gratuitamente se chiamate esternamente. Se le funzioni view vengono chiamate da un contratto, devono comunque essere eseguite su
@@ -320,7 +320,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Questa funzione controlla se a `_operator` è consentito gestire tutti i token di `_owner` in questo contratto.
 Poiché possono esserci più operatori, si tratta di una HashMap a due livelli.
-#### Funzioni di supporto al trasferimento
+#### Funzioni di supporto al trasferimento {#transfer-helpers}
 
 Queste funzioni implementano operazioni che fanno parte del trasferimento o della gestione dei token.
 
@@ -444,7 +444,7 @@ vogliamo solo una singola posizione nel codice in cui lo facciamo per semplifica
 Per emettere un evento in Vyper si usa un'istruzione `log` ([vedi qui per maggiori dettagli](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 Poiché gli eventi appartengono all'interfaccia importata, ci riferiamo ad essi come `IERC721.Transfer` e passiamo i loro campi tramite
 parola chiave.
-#### Funzioni di trasferimento
+#### Funzioni di trasferimento {#transfer-funs}
 
 ```python
 

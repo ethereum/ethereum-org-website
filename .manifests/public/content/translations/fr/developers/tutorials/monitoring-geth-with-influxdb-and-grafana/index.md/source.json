@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md",
   "generatedAt": "2026-06-19T23:01:40.730Z",
-  "rootHash": "2d173de67e94",
+  "rootHash": "ccfe6c6476f2",
   "tree": {
-    "contentHash": "bd662c49ae21",
-    "anchorHash": "bb9d0fd97f74",
+    "contentHash": "160ce166b1af",
+    "anchorHash": "fc67167a9042",
     "children": {
       "frontmatter:title": {
         "contentHash": "eefa03ddfa88",
@@ -17,11 +17,25 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e86d13a07866"
+        "anchorHash": "8a2c0f8bbcfe"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "3cb7b36981c4"
+        "contentHash": "be4dee010c3b",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "8f4d9088121a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "45978ecb2996",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

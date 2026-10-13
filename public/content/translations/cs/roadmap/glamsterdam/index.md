@@ -7,20 +7,17 @@ template: upgrade
 
 <Alert variant="update">
 <AlertContent>
-<AlertTitle>
-Glamsterdam je nadcházející upgrade Etherea plánovaný na 4. čtvrtletí 2026
-</AlertTitle>
 <AlertDescription>
 Upgrade Glamsterdam je pouze jedním krokem v dlouhodobých cílech vývoje Etherea. Přečtěte si více o [plánu vývoje protokolu](/roadmap/) a [předchozích upgradech](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-[Ethereový](/) nadcházející upgrade Glamsterdam je navržen tak, aby uvolnil cestu pro další generaci škálování. Glamsterdam je pojmenován kombinací slov „Amsterdam“ (upgrade exekuční vrstvy, pojmenovaný podle předchozího místa konání Devconnectu) a „Gloas“ (upgrade vrstvy konsensu, pojmenovaný podle hvězdy).
+Nadcházející upgrade [Etherea](/) Glamsterdam je navržen tak, aby uvolnil cestu pro další generaci škálování. Název Glamsterdam vznikl spojením slov „Amsterdam“ (upgrade exekuční vrstvy, pojmenovaný podle předchozího místa konání Devconnectu) a „Gloas“ (upgrade vrstvy konsensu, pojmenovaný podle hvězdy).
 
 V návaznosti na pokrok dosažený v upgradu [Fusaka](/roadmap/fusaka/) se Glamsterdam zaměřuje na škálování vrstvy 1 (l1) reorganizací způsobu, jakým síť zpracovává transakce a spravuje svou rostoucí databázi, čímž zásadně aktualizuje způsob, jakým Ethereum vytváří a ověřuje bloky.
 
-Zatímco Fusaka se zaměřila na základní vylepšení, Glamsterdam posouvá cíle „Škálování l1“ a „Škálování blobů“ tím, že zakotvuje rozdělení povinností mezi různé účastníky sítě a zavádí efektivnější způsoby nakládání s daty, aby připravil [stav](/glossary/#state) na paralelizaci s vysokou propustností.
+Zatímco Fusaka se zaměřila na základní vylepšení, Glamsterdam posouvá vpřed cíle „Škálování l1“ a „Škálování blobů“ tím, že zakotvuje oddělení povinností mezi různými účastníky sítě a zavádí efektivnější způsoby zpracování dat, aby se [stav](/glossary/#state) připravil na paralelizaci s vysokou propustností.
 
 Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné a decentralizované i při zvládání větší aktivity, a zároveň udržují hardwarové požadavky zvládnutelné pro lidi provozující [uzly](/glossary/#node) doma.
 
@@ -31,18 +28,18 @@ Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Poznámka: Tento článek zdůrazňuje výběr EIP naplánovaných k zahrnutí do upgradu Glamsterdam. Mezi další plánované návrhy testované v devnetech patří EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 a EIP-8282. Nejnovější aktualizace stavu najdete na stránce [upgrade Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
+Poznámka: Tento článek zdůrazňuje výběr Návrhů na vylepšení Etherea (EIP), jejichž zahrnutí do Glamsterdamu je naplánováno. Mezi další plánované návrhy testované v devnetech patří EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 a EIP-8282. Rozsah je zmrazen, ale před nasazením na Mainnet se může ještě změnit, protože meta EIP zůstává ve fázi návrhu. Nejnovější aktualizace stavu najdete na stránce [upgradu Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
 
-Pokud chcete přidat EIP, o kterém se uvažuje pro Glamsterdam, ale ještě nebyl na tuto stránku přidán, [zjistěte, jak přispět na ethereum.org zde](/contributing/).
+Pokud chcete přidat EIP, o kterém se uvažuje pro Glamsterdam, ale ještě nebyl na tuto stránku přidán, [přečtěte si, jak přispět na ethereum.org zde](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Upgrade Glamsterdam se zaměřuje na tři hlavní cíle:
+Upgrade Glamsterdam se soustředí na tři hlavní cíle:
 
 - Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalého, postupného zpracování jedné po druhé.
 - Rozšíření kapacity: Rozdělení náročné práce při vytváření a ověřování bloků, což síti poskytne více času na šíření většího množství dat bez zpomalení.
-- Prevence bobtnání databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
+- Prevence nadměrného růstu databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvýšení limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
 
 Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s tím, jak síť zvyšuje kapacitu, zůstane udržitelná a výkon zůstane vysoký.
 

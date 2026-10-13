@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/restaking/index.md",
   "generatedAt": "2026-06-18T00:41:02.479Z",
-  "rootHash": "1140d2387c76",
+  "rootHash": "248c3059bc41",
   "tree": {
-    "contentHash": "2b4cf89f3cee",
-    "anchorHash": "0688b1bd336b",
+    "contentHash": "3d53b5026cb6",
+    "anchorHash": "cc2bb972716c",
     "children": {
       "frontmatter:title": {
         "contentHash": "fee35e745a2c",
@@ -40,24 +40,65 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "d410b8f528f7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "0": {
+            "contentHash": "f460f2321adf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "frontmatter:buttons": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "frontmatter:- content": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "c3f15799af50"
-      },
-      "frontmatter:toId": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d5ee39d15d7e"
-      },
-      "frontmatter:isSecondary": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "fcbcf165908d"
+        "contentHash": "e13a80477531",
+        "anchorHash": "068b2fb48376",
+        "children": {
+          "0": {
+            "contentHash": "f5818652a990",
+            "anchorHash": "7b27808f926c",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "04a4ca992676"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "33f6fb90a4da"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId"
+            ]
+          },
+          "1": {
+            "contentHash": "918e1f78a588",
+            "anchorHash": "55681789f299",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "c3f15799af50"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d5ee39d15d7e"
+              },
+              "isSecondary": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "fcbcf165908d"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId",
+              "isSecondary"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:2": {
         "contentHash": "63c56e7d3fcf",
@@ -79,7 +120,7 @@
         "contentHash": "829898eced49",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:20": {
+      "component:15": {
         "contentHash": "4b9f7d802648",
         "anchorHash": "4dda5411ceed",
         "children": {
@@ -786,17 +827,12 @@
       "frontmatter:sidebarDepth",
       "frontmatter:summaryPoints",
       "frontmatter:buttons",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:isSecondary",
       "prose:2",
       "link:0",
       "prose:3",
       "link:1",
       "prose:4",
-      "component:20",
+      "component:15",
       "what-is-restaking",
       "staking-vs-restaking",
       "why-do-we-need-restaking",

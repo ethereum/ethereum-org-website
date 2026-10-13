@@ -4,26 +4,24 @@ import { useLocale, useTranslations } from "next-intl"
 import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
-import { Flex, VStack } from "@/components/ui/flex"
+import { Flex } from "@/components/ui/flex"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
 import InlineLink from "../ui/Link"
 
 const Cell = ({ children }: ChildOnlyProp) => (
-  <VStack className="gap-2 px-8 py-4">{children}</VStack>
+  <Flex className="flex-col gap-2 border-s p-4 pe-12">{children}</Flex>
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
+  <div className="inline-block bg-none font-monospace text-3xl font-bold text-primary">
     {children}
-  </code>
+  </div>
 )
 
 const Label = ({ children }: ChildOnlyProp) => (
-  <Flex className="items-center justify-center gap-2 text-sm uppercase">
-    {children}
-  </Flex>
+  <Flex className="gap-2 text-sm uppercase">{children}</Flex>
 )
 
 // DataSourceTooltip component

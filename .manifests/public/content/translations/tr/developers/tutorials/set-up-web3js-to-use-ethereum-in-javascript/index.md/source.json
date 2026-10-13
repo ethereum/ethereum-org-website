@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md",
   "generatedAt": "2026-06-18T00:22:18.535Z",
-  "rootHash": "b022d7ff816a",
+  "rootHash": "b5cec89ef3e7",
   "tree": {
-    "contentHash": "c7a5d78674a2",
-    "anchorHash": "62f5036cf1af",
+    "contentHash": "1eb5b7344414",
+    "anchorHash": "04cef8268df9",
     "children": {
       "frontmatter:title": {
         "contentHash": "b29566c3ae6b",
@@ -17,11 +17,25 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "960ed510cd85"
+        "contentHash": "ad85783a3c24",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "20ba7fe89d26",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "eda71746c01c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:1": {
         "contentHash": "7cb9e93e0574",

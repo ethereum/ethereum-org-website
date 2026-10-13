@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/merge/index.md",
   "generatedAt": "2026-06-30T00:52:16.798Z",
-  "rootHash": "c3497eae6147",
+  "rootHash": "9d79e55a4446",
   "tree": {
-    "contentHash": "a2ecedbc0c89",
-    "anchorHash": "6fdaf18bc6f4",
+    "contentHash": "8dad1b61d1dd",
+    "anchorHash": "9721fd27f53a",
     "children": {
       "frontmatter:title": {
         "contentHash": "c09500586c2c",
@@ -32,8 +32,32 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "fdfa5997aa14",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "9835e2bcb03e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "ac255b1749e0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "1f346e3eb7a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "cf13bad32891",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "component:7": {
         "contentHash": "90cf45efc75f",

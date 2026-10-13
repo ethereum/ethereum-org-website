@@ -9,7 +9,7 @@ ethereum.org çeviri stil rehberi, web sitesini yerelleştirmemize yardımcı ol
 
 Bu belge genel bir rehber niteliğindedir ve belirli bir dile özgü değildir.
 
-Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, translations@ethereum.org adresinden bize ulaşmaktan, Crowdin'de @ethdotorg'a bir mesaj göndermekten veya #translations kanalında bize mesaj gönderebileceğiniz ya da ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord'umuza katılmaktan](https://discord.gg/ethereum-org) çekinmeyin.
+Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa, translations@ethereum.org adresinden bize ulaşmaktan, Crowdin'de @ethdotorg'a bir mesaj göndermekten veya #translations kanalında bize mesaj gönderebileceğiniz ya da ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord'umuza katılmaktan](/discord/) çekinmeyin.
 
 ## Crowdin Kullanımı {#using-crowdin}
 

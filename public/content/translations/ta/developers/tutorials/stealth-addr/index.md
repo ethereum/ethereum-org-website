@@ -130,11 +130,11 @@ sidebarDepth: 3
 
 #### WASM கூறு {#wasm}
 
-WASM-ஆகத் தொகுக்கப்படும் மூலக் குறியீடு [Rust](https://rust-lang.org/)-இல் எழுதப்பட்டுள்ளது. நீங்கள் அதை [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)-இல் பார்க்கலாம். இந்தக் குறியீடு முதன்மையாக JavaScript குறியீட்டிற்கும் [`eth-stealth-addresses` நிரலகத்திற்கும்](https://github.com/kassandraoftroy/eth-stealth-addresses) இடையிலான ஒரு இடைமுகமாகும்.
+WASM ஆகத் தொகுக்கப்படும் மூலக் குறியீடு [Rust](https://rust-lang.org/)-இல் எழுதப்பட்டுள்ளது. இதை நீங்கள் [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)-இல் காணலாம். இந்தக் குறியீடு முதன்மையாக JavaScript குறியீட்டிற்கும் [`eth-stealth-addresses` நிரலகத்திற்கும்](https://github.com/kassandraoftroy/eth-stealth-addresses) இடையிலான ஒரு இடைமுகமாகும்.
 
 **`Cargo.toml`**
 
-Rust-இல் உள்ள [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) என்பது JavaScript-இல் உள்ள [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)-க்கு ஒப்பானது. இது தொகுப்புத் தகவல், சார்புநிலை அறிவிப்புகள் (dependency declarations) போன்றவற்றைக் கொண்டுள்ளது.
+Rust-இல் உள்ள [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) ஆனது JavaScript-இல் உள்ள [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)-க்கு இணையானது. இது தொகுப்புத் தகவல், சார்புநிலை அறிவிப்புகள் (dependency declarations) போன்றவற்றைக் கொண்டுள்ளது.
 
 ```toml
 [package]
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) தொகுப்பு சீரற்ற மதிப்புகளை உருவாக்க வேண்டும். அதைத் தூய அல்காரிதமிக் வழிகளில் செய்ய முடியாது; அதற்கு என்ட்ரோபியின் ஆதாரமாக ஒரு இயற்பியல் செயல்முறைக்கான அணுகல் தேவை. நாம் இயங்கும் உலாவியைக் கேட்பதன் மூலம் அந்த என்ட்ரோபியைப் பெறுவோம் என்பதை இந்த வரையறை குறிப்பிடுகிறது.
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) தொகுப்பிற்கு சீரற்ற மதிப்புகளை (random values) உருவாக்க வேண்டும். அதைத் தூய அல்காரித முறைகள் மூலம் செய்ய முடியாது; அதற்கு என்ட்ரோபியின் ஆதாரமாக ஒரு பௌதிகச் செயல்முறைக்கான அணுகல் தேவை. நாம் இயங்கும் உலாவியைக் கேட்பதன் மூலம் அந்த என்ட்ரோபியைப் பெறுவோம் என்பதை இந்த வரையறை குறிப்பிடுகிறது.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-WASM குறியீடு பீதியடைந்து (panics) தொடர முடியாதபோது, [இந்த நிரலகம்](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) நமக்கு மிகவும் அர்த்தமுள்ள பிழைச் செய்திகளை வழங்குகிறது.
+WASM குறியீடு பேனிக் (panic) ஆகித் தொடர முடியாதபோது, [இந்த நிரலகம்](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) நமக்கு மிகவும் அர்த்தமுள்ள பிழைச் செய்திகளை வழங்குகிறது.
 
 ```toml
 [lib]
@@ -166,7 +166,7 @@ WASM குறியீட்டை உருவாக்கத் தேவை�
 
 **`lib.rs`**
 
-இது உண்மையான Rust குறியீடு.
+இதுதான் உண்மையான Rust குறியீடு.
 
 ```rust
 use wasm_bindgen::prelude::*;
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Rust-இலிருந்து ஒரு WASM தொகுப்பை உருவாக்குவதற்கான வரையறைகள். அவை [இங்கே](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) ஆவணப்படுத்தப்பட்டுள்ளன.
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -182,32 +182,32 @@ use eth_stealth_addresses::{
 };
 ```
 
-[`eth-stealth-addresses` நிரலகத்திலிருந்து](https://github.com/kassandraoftroy/eth-stealth-addresses) நமக்குத் தேவையான செயல்பாடுகள்.
+[`eth-stealth-addresses` நிரலகத்திலிருந்து](https://github.com/kassandraoftroy/eth-stealth-addresses) நமக்குத் தேவையான சார்புகள் (functions).
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust பொதுவாக மதிப்புகளுக்கு பைட் [அணிகளைப் (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) பயன்படுத்துகிறது. ஆனால் JavaScript-இல், நாம் பொதுவாக ஹெக்ஸாடெசிமல் சரங்களைப் பயன்படுத்துகிறோம். [`hex` நிரலகம்](https://docs.rs/hex/latest/hex/) நமக்காக ஒரு பிரதிநிதித்துவத்திலிருந்து மற்றொன்றுக்கு மொழிபெயர்க்கிறது.
+Rust பொதுவாக மதிப்புகளுக்கு பைட் [அணிகளை (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) பயன்படுத்துகிறது. ஆனால் JavaScript-இல், நாம் பொதுவாக ஹெக்ஸாடெசிமல் சரங்களைப் (hexadecimal strings) பயன்படுத்துகிறோம். [`hex` நிரலகம்](https://docs.rs/hex/latest/hex/) ஒரு பிரதிநிதித்துவத்திலிருந்து மற்றொன்றுக்கு நமக்காக மொழிபெயர்க்கிறது.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-JavaScript-இலிருந்து இந்தச் செயல்பாட்டை அழைக்க WASM பைண்டிங்குகளை (bindings) உருவாக்கவும்.
+JavaScript-இலிருந்து இந்தச் சார்பை அழைக்க WASM பிணைப்புகளை (bindings) உருவாக்கவும்.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-பல புலங்களைக் கொண்ட ஒரு பொருளைத் திருப்பி அனுப்புவதற்கான எளிதான வழி, ஒரு JSON சரத்தைத் திருப்பி அனுப்புவதாகும். 
+பல புலங்களைக் கொண்ட ஒரு பொருளை (object) வழங்குவதற்கான எளிதான வழி, ஒரு JSON சரத்தை வழங்குவதாகும்.
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
         generate_stealth_meta_address();
 ```
 
-[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) மூன்று புலங்களைத் திருப்பி அனுப்புகிறது:
+[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) மூன்று புலங்களை வழங்குகிறது:
 
 - மெட்டா-முகவரி (*K<sub>pub</sub>* மற்றும் *V<sub>pub</sub>*)
 - பார்க்கும் தனிப்பட்ட திறவுகோல் (*V<sub>priv</sub>*)
@@ -230,53 +230,53 @@ JSON-குறியிடப்பட்ட சரத்தை உருவா�
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-இந்தச் செயல்பாடு ஒரு ஹெக்ஸ் சரத்தை (JavaScript-ஆல் வழங்கப்பட்டது) பைட் அணியாக மாற்றுகிறது. JavaScript குறியீட்டால் வழங்கப்பட்ட மதிப்புகளைப் பாகுபடுத்த (parse) இதைப் பயன்படுத்துகிறோம். Rust அணிகள் மற்றும் வெக்டர்களைக் கையாளும் விதம் காரணமாக இந்தச் செயல்பாடு சிக்கலானது.
+இந்தச் சார்பு ஒரு ஹெக்ஸ் சரத்தை (JavaScript வழங்கியது) பைட் அணியாக மாற்றுகிறது. JavaScript குறியீட்டால் வழங்கப்பட்ட மதிப்புகளைப் பாகுபடுத்த (parse) இதைப் பயன்படுத்துகிறோம். Rust அணிகள் மற்றும் வெக்டர்களைக் கையாளும் விதம் காரணமாக இந்தச் சார்பு சிக்கலானது.
 
-`<const N: usize>` கோவை ஒரு [ஜெனரிக் (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) என்று அழைக்கப்படுகிறது. `N` என்பது திருப்பி அனுப்பப்பட்ட அணியின் நீளத்தைக் கட்டுப்படுத்தும் ஒரு அளவுருவாகும். செயல்பாடு உண்மையில் `str_to_array::<n>` என்று அழைக்கப்படுகிறது, இதில் `n` என்பது அணியின் நீளம்.
+`<const N: usize>` கோவை ஒரு [ஜெனரிக் (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) என்று அழைக்கப்படுகிறது. `N` என்பது வழங்கப்படும் அணியின் நீளத்தைக் கட்டுப்படுத்தும் ஒரு அளவுருவாகும். இந்தச் சார்பு உண்மையில் `str_to_array::<n>` என்று அழைக்கப்படுகிறது, இதில் `n` என்பது அணியின் நீளம்.
 
-திருப்பி அனுப்பும் மதிப்பு `Option<[u8; N]>` ஆகும், அதாவது திருப்பி அனுப்பப்பட்ட அணி [விருப்பத்திற்குரியது (optional)](https://doc.rust-lang.org/std/option/). தோல்வியடையக்கூடிய செயல்பாடுகளுக்கு இது Rust-இல் ஒரு பொதுவான முறையாகும்.
+வழங்கப்படும் மதிப்பு `Option<[u8; N]>` ஆகும், அதாவது வழங்கப்படும் அணி [விருப்பத்திற்குரியது (optional)](https://doc.rust-lang.org/std/option/). தோல்வியடையக்கூடிய சார்புகளுக்கான Rust-இல் இது ஒரு பொதுவான வடிவமாகும்.
 
-எடுத்துக்காட்டாக, நாம் `str_to_array::10("bad060a7")`-ஐ அழைத்தால், செயல்பாடு பத்து-மதிப்பு அணியைத் திருப்பி அனுப்ப வேண்டும், ஆனால் உள்ளீடு நான்கு பைட்டுகள் மட்டுமே. செயல்பாடு தோல்வியடைய வேண்டும், மேலும் அது `None`-ஐத் திருப்பி அனுப்புவதன் மூலம் அவ்வாறு செய்கிறது. `str_to_array::4("bad060a7")`-க்கான திருப்பி அனுப்பும் மதிப்பு `Some<[0xba, 0xd0, 0x60, 0xa7]>` ஆக இருக்கும்.
+எடுத்துக்காட்டாக, நாம் `str_to_array::10("bad060a7")`-ஐ அழைத்தால், சார்பு பத்து-மதிப்பு அணியை வழங்க வேண்டும், ஆனால் உள்ளீடு நான்கு பைட்டுகள் மட்டுமே. சார்பு தோல்வியடைய வேண்டும், மேலும் அது `None`-ஐ வழங்குவதன் மூலம் அவ்வாறு செய்கிறது. `str_to_array::4("bad060a7")`-க்கான வழங்கப்படும் மதிப்பு `Some<[0xba, 0xd0, 0x60, 0xa7]>` ஆக இருக்கும்.
 
 ```rust
-    // decode ஆனது Result<Vec<u8>, _> ஐ திருப்புகிறது
+    // decode Result<Vec<u8>, _> ஐ திருப்பித் தருகிறது
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) செயல்பாடு ஒரு `Result<Vec<u8>, FromHexError>`-ஐத் திருப்பி அனுப்புகிறது. [`Result`](https://doc.rust-lang.org/std/result/) வகையானது வெற்றிகரமான முடிவு (`Ok(value)`) அல்லது பிழையைக் (`Err(error)`) கொண்டிருக்கலாம்.
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) சார்பு ஒரு `Result<Vec<u8>, FromHexError>`-ஐ வழங்குகிறது. [`Result`](https://doc.rust-lang.org/std/result/) வகையானது வெற்றிகரமான முடிவை (`Ok(value)`) அல்லது பிழையை (`Err(error)`) கொண்டிருக்கலாம்.
 
-`.ok()` முறையானது `Result`-ஐ ஒரு `Option` ஆக மாற்றுகிறது, இதன் மதிப்பு வெற்றிகரமாக இருந்தால் `Ok()` மதிப்பாகவோ அல்லது இல்லையென்றால் `None` ஆகவோ இருக்கும். இறுதியாக, `Option` காலியாக இருந்தால், [கேள்விக்குறி ஆபரேட்டர்](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) தற்போதைய செயல்பாடுகளை நிறுத்திவிட்டு `None`-ஐத் திருப்பி அனுப்புகிறது. இல்லையெனில், அது மதிப்பை அன்ராப் (unwrap) செய்து அதைத் திருப்பி அனுப்புகிறது (இந்த நிலையில், `vec`-க்கு ஒரு மதிப்பை ஒதுக்க).
+`.ok()` முறையானது `Result`-ஐ `Option` ஆக மாற்றுகிறது, அதன் மதிப்பு வெற்றிகரமாக இருந்தால் `Ok()` மதிப்பாகவோ அல்லது இல்லையென்றால் `None` ஆகவோ இருக்கும். இறுதியாக, [கேள்விக்குறி ஆபரேட்டர்](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) தற்போதைய சார்புகளை நிறுத்தி, `Option` காலியாக இருந்தால் `None`-ஐ வழங்குகிறது. இல்லையெனில், அது மதிப்பை அன்ராப் (unwrap) செய்து அதை வழங்குகிறது (இந்த நிலையில், `vec`-க்கு ஒரு மதிப்பை ஒதுக்க).
 
-இது பிழைகளைக் கையாள ஒரு விசித்திரமான சிக்கலான முறை போல் தெரிகிறது, ஆனால் `Result` மற்றும் `Option` ஆகியவை அனைத்துப் பிழைகளும் ஏதோ ஒரு வகையில் கையாளப்படுவதை உறுதி செய்கின்றன.
+இது பிழைகளைக் கையாள ஒரு விசித்திரமான சிக்கலான முறை போல் தெரிகிறது, ஆனால் `Result` மற்றும் `Option` அனைத்துப் பிழைகளும் ஏதோ ஒரு வகையில் கையாளப்படுவதை உறுதி செய்கின்றன.
 
 ```rust
     if vec.len() != N { return None; }
 ```
 
-பைட்டுகளின் எண்ணிக்கை தவறாக இருந்தால், அது ஒரு தோல்வியாகும், மேலும் நாம் `None`-ஐத் திருப்பி அனுப்புகிறோம்.
+பைட்டுகளின் எண்ணிக்கை தவறாக இருந்தால், அது ஒரு தோல்வியாகும், மேலும் நாம் `None`-ஐ வழங்குகிறோம்.
 
 ```rust
-    // try_into ஆனது vec ஐ உட்கொண்டு [u8; N] ஐ உருவாக்க முயற்சிக்கிறது
+    // try_into vec ஐ உட்கொண்டு [u8; N] ஐ உருவாக்க முயற்சிக்கிறது
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust-இல் இரண்டு அணி வகைகள் உள்ளன. [அணிகள்](https://doc.rust-lang.org/std/primitive.array.html) நிலையான அளவைக் கொண்டுள்ளன. [வெக்டர்கள்](https://doc.rust-lang.org/std/vec/index.html) வளரலாம் மற்றும் சுருங்கலாம். `hex::decode` ஒரு வெக்டரைத் திருப்பி அனுப்புகிறது, ஆனால் `eth_stealth_addresses` நிரலகம் அணிகளைப் பெற விரும்புகிறது. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ஒரு மதிப்பை மற்றொரு வகையாக மாற்றுகிறது, எடுத்துக்காட்டாக, ஒரு வெக்டரை அணியாக மாற்றுகிறது.
+Rust-இல் இரண்டு அணி வகைகள் உள்ளன. [அணிகள் (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) நிலையான அளவைக் கொண்டுள்ளன. [வெக்டர்கள் (Vectors)](https://doc.rust-lang.org/std/vec/index.html) வளரலாம் மற்றும் சுருங்கலாம். `hex::decode` ஒரு வெக்டரை வழங்குகிறது, ஆனால் `eth_stealth_addresses` நிரலகம் அணிகளைப் பெற விரும்புகிறது. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ஒரு மதிப்பை மற்றொரு வகையாக மாற்றுகிறது, எடுத்துக்காட்டாக, ஒரு வெக்டரை அணியாக மாற்றுகிறது.
 
 ```rust
     Some(array)
 }
 ```
 
-ஒரு செயல்பாட்டின் முடிவில் ஒரு மதிப்பைத் திருப்பி அனுப்பும்போது [`return`](https://doc.rust-lang.org/std/keyword.return.html) முக்கியச் சொல்லைப் பயன்படுத்த Rust உங்களைக் கட்டாயப்படுத்துவதில்லை.
+ஒரு சார்பின் முடிவில் மதிப்பை வழங்கும்போது [`return`](https://doc.rust-lang.org/std/keyword.return.html) முக்கிய சொல்லைப் பயன்படுத்த Rust உங்களைக் கட்டாயப்படுத்துவதில்லை.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-இந்தச் செயல்பாடு ஒரு பொது மெட்டா-முகவரியைப் பெறுகிறது, இதில் *V<sub>pub</sub>* மற்றும் *K<sub>pub</sub>* ஆகிய இரண்டும் அடங்கும். இது மறைமுக முகவரி, வெளியிட வேண்டிய பொது விசை (*R<sub>pub</sub>*) மற்றும் வெளியிடப்பட்ட முகவரிகளில் எது ஆலிஸுக்குச் சொந்தமானது என்பதை அடையாளம் காண்பதை வேகப்படுத்தும் ஒரு-பைட் ஸ்கேன் மதிப்பையும் திருப்பி அனுப்புகிறது.
+இந்தச் சார்பு ஒரு பொது மெட்டா-முகவரியைப் பெறுகிறது, இதில் *V<sub>pub</sub>* மற்றும் *K<sub>pub</sub>* இரண்டும் அடங்கும். இது மறைமுக முகவரி, வெளியிட வேண்டிய பொது விசை (*R<sub>pub</sub>*) மற்றும் வெளியிடப்பட்ட முகவரிகளில் எவை ஆலிஸுக்குச் சொந்தமானவை என்பதை அடையாளம் காண்பதை வேகப்படுத்தும் ஒரு-பைட் ஸ்கேன் மதிப்பு ஆகியவற்றை வழங்குகிறது.
 
-ஸ்கேன் மதிப்பு என்பது பகிரப்பட்ட ரகசியத்தின் (*S = GR<sub>priv</sub>V<sub>priv</sub>*) ஒரு பகுதியாகும். இந்த மதிப்பு ஆலிஸுக்குக் கிடைக்கிறது, மேலும் *f(K<sub>pub</sub>+G\*hash(S))* வெளியிடப்பட்ட முகவரிக்குச் சமமாக உள்ளதா என்பதைச் சரிபார்ப்பதை விட இதைச் சரிபார்ப்பது மிகவும் வேகமானது.
+ஸ்கேன் மதிப்பு பகிரப்பட்ட ரகசியத்தின் ஒரு பகுதியாகும் (*S = GR<sub>priv</sub>V<sub>priv</sub>*). இந்த மதிப்பு ஆலிஸுக்குக் கிடைக்கிறது, மேலும் *f(K<sub>pub</sub>+G\*hash(S))* வெளியிடப்பட்ட முகவரிக்குச் சமமாக உள்ளதா என்பதைச் சரிபார்ப்பதை விட இதைச் சரிபார்ப்பது மிகவும் வேகமானது.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -310,7 +310,7 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-முகவரியிலிருந்து பணத்தை எடுப்பதற்கான தனிப்பட்ட திறவுகோலை (*R<sub>priv</sub>*) கணக்கிட, இந்தச் செயல்பாடு நிரலகத்தின் [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html)-ஐப் பயன்படுத்துகிறது. இந்தக் கணக்கீட்டிற்கு இந்த மதிப்புகள் தேவை:
+இந்தச் சார்பு முகவரியிலிருந்து திரும்பப் பெறுவதற்கான தனிப்பட்ட திறவுகோலைக் கணக்கிட (*R<sub>priv</sub>*) நிரலகத்தின் [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html)-ஐப் பயன்படுத்துகிறது. இந்தக் கணக்கீட்டிற்கு இந்த மதிப்புகள் தேவை:
 
 - முகவரி (*Address=f(P<sub>pub</sub>)*)
 - பில் உருவாக்கிய பொது விசை (*R<sub>pub</sub>*)
@@ -321,7 +321,7 @@ pub fn wasm_compute_stealth_key(
 #[wasm_bindgen(start)]
 ```
 
-WASM குறியீடு துவக்கப்படும்போது செயல்பாடு செயல்படுத்தப்படும் என்பதை [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) குறிப்பிடுகிறது.
+WASM குறியீடு துவக்கப்படும்போது சார்பு செயல்படுத்தப்படும் என்பதை [`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) குறிப்பிடுகிறது.
 
 ```rust
 pub fn main() {
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-பீதி வெளியீடு (panic output) JavaScript கன்சோலுக்கு அனுப்பப்பட வேண்டும் என்பதை இந்தக் குறியீடு குறிப்பிடுகிறது. இது செயல்படுவதைப் பார்க்க, பயன்பாட்டைப் பயன்படுத்தி பில்லுக்குத் தவறான மெட்டா-முகவரியைக் கொடுங்கள் (ஒரு ஹெக்ஸாடெசிமல் இலக்கத்தை மட்டும் மாற்றவும்). JavaScript கன்சோலில் இந்தப் பிழையை நீங்கள் காண்பீர்கள்:
+பேனிக் வெளியீடு JavaScript கன்சோலுக்கு அனுப்பப்பட வேண்டும் என்பதை இந்தக் குறியீடு குறிப்பிடுகிறது. இது செயல்படுவதைப் பார்க்க, பயன்பாட்டைப் பயன்படுத்தி பில்லுக்குத் தவறான மெட்டா-முகவரியைக் கொடுங்கள் (ஒரு ஹெக்ஸாடெசிமல் இலக்கத்தை மட்டும் மாற்றவும்). JavaScript கன்சோலில் இந்தப் பிழையை நீங்கள் காண்பீர்கள்:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -338,20 +338,20 @@ assertion `left == right` failed
  right: 1
 ```
 
-அதைத் தொடர்ந்து ஒரு ஸ்டாக் ட்ரேஸ் (stack trace) இருக்கும். பின்னர் பில்லுக்குச் சரியான மெட்டா-முகவரியைக் கொடுங்கள், மேலும் ஆலிஸுக்குத் தவறான முகவரி அல்லது தவறான பொது விசையைக் கொடுங்கள். நீங்கள் இந்தப் பிழையைக் காண்பீர்கள்:
+அதைத் தொடர்ந்து ஒரு ஸ்டேக் ட்ரேஸ் (stack trace) இருக்கும். பின்னர் பில்லுக்குச் சரியான மெட்டா-முகவரியைக் கொடுங்கள், மேலும் ஆலிஸுக்குத் தவறான முகவரி அல்லது தவறான பொது விசையைக் கொடுங்கள். நீங்கள் இந்தப் பிழையைக் காண்பீர்கள்:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-மீண்டும், அதைத் தொடர்ந்து ஒரு ஸ்டாக் ட்ரேஸ் இருக்கும்.
+மீண்டும், அதைத் தொடர்ந்து ஒரு ஸ்டேக் ட்ரேஸ் இருக்கும்.
 
 #### பயனர் இடைமுகம் {#ui}
 
-பயனர் இடைமுகம் [React](https://react.dev/)-ஐப் பயன்படுத்தி எழுதப்பட்டுள்ளது மற்றும் [Vite](https://vite.dev/)-ஆல் வழங்கப்படுகிறது. [இந்த வழிகாட்டியைப்](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) பயன்படுத்தி நீங்கள் அவற்றைப் பற்றி அறியலாம். நாம் நேரடியாக ஒரு தொகுதிச்சங்கிலி அல்லது பணப்பையுடன் தொடர்பு கொள்ளாததால், இங்கே [Wagmi](https://wagmi.sh/) தேவையில்லை.
+பயனர் இடைமுகம் [React](https://react.dev/)-ஐப் பயன்படுத்தி எழுதப்பட்டுள்ளது மற்றும் [Vite](https://vite.dev/)-ஆல் வழங்கப்படுகிறது. [இந்த வழிகாட்டியைப்](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) பயன்படுத்தி அவற்றைப் பற்றி நீங்கள் அறியலாம். நாம் நேரடியாக ஒரு தொகுதிச்சங்கிலி அல்லது பணப்பையுடன் தொடர்பு கொள்ளாததால், இங்கே [Wagmi](https://wagmi.sh/) தேவையில்லை.
 
-பயனர் இடைமுகத்தில் வெளிப்படையாகத் தெரியாத ஒரே பகுதி WASM இணைப்பு மட்டுமே. அது எவ்வாறு செயல்படுகிறது என்பது இங்கே.
+பயனர் இடைமுகத்தில் வெளிப்படையாகத் தெரியாத ஒரே பகுதி WASM இணைப்பு மட்டுமே. இது எவ்வாறு செயல்படுகிறது என்பது இங்கே.
 
 **`vite.config.js`**
 
@@ -378,7 +378,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-நாம் [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)-ஐப் பயன்படுத்தும்போது, அது நாம் இங்குப் பயன்படுத்தும் இரண்டு கோப்புகளை உருவாக்குகிறது: உண்மையான குறியீட்டைக் கொண்ட ஒரு wasm கோப்பு (இங்கே, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) மற்றும் அதைப் பயன்படுத்துவதற்கான வரையறைகளைக் கொண்ட ஒரு JavaScript கோப்பு (இங்கே, `src/rust_wasm/pkg/rust_wasm.js`). அந்த JavaScript கோப்பின் இயல்புநிலை ஏற்றுமதி (default export) என்பது WASM-ஐத் துவக்க இயங்க வேண்டிய குறியீடாகும்.
+நாம் [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)-ஐப் பயன்படுத்தும்போது, அது நாம் இங்குப் பயன்படுத்தும் இரண்டு கோப்புகளை உருவாக்குகிறது: உண்மையான குறியீட்டைக் கொண்ட ஒரு wasm கோப்பு (இங்கே, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) மற்றும் அதைப் பயன்படுத்துவதற்கான வரையறைகளைக் கொண்ட ஒரு JavaScript கோப்பு (இங்கே, `src/rust-wasm/pkg/rust_wasm.js`). அந்த JavaScript கோப்பின் இயல்புநிலை ஏற்றுமதி (default export) என்பது WASM-ஐத் துவக்க இயங்க வேண்டிய குறியீடாகும்.
 
 ```jsx
 function App() {
@@ -401,9 +401,9 @@ function App() {
   )
 ```
 
-நிலை மாறிகள் (state variables) மாறும்போது செயல்படுத்தப்படும் ஒரு செயல்பாட்டைக் குறிப்பிட [`useEffect` ஹூக் (hook)](https://react.dev/reference/react/useEffect) உங்களை அனுமதிக்கிறது. இங்கே, நிலை மாறிகளின் பட்டியல் காலியாக உள்ளது (`[]`), எனவே பக்கம் ஏற்றப்படும்போது இந்தச் செயல்பாடு ஒரு முறை மட்டுமே செயல்படுத்தப்படும்.
+[`useEffect` ஹூக்](https://react.dev/reference/react/useEffect) நிலை மாறிகள் (state variables) மாறும்போது செயல்படுத்தப்படும் ஒரு சார்பைக் குறிப்பிட உங்களை அனுமதிக்கிறது. இங்கே, நிலை மாறிகளின் பட்டியல் காலியாக உள்ளது (`[]`), எனவே பக்கம் ஏற்றப்படும்போது இந்தச் சார்பு ஒரு முறை மட்டுமே செயல்படுத்தப்படும்.
 
-எஃபெக்ட் (effect) செயல்பாடு உடனடியாகத் திரும்ப வேண்டும். WASM `init` போன்ற ஒத்திசைவற்ற (asynchronous) குறியீட்டைப் பயன்படுத்த (`.wasm` கோப்பை ஏற்ற வேண்டும், எனவே நேரம் எடுக்கும்) நாம் ஒரு உள் [`async`](https://en.wikipedia.org/wiki/Async/await) செயல்பாட்டை வரையறுத்து, அதை `await` இல்லாமல் இயக்குகிறோம்.
+எஃபெக்ட் (effect) சார்பு உடனடியாகத் திரும்ப வேண்டும். WASM `init` போன்ற ஒத்திசைவற்ற (asynchronous) குறியீட்டைப் பயன்படுத்த (இது `.wasm` கோப்பை ஏற்ற வேண்டும், எனவே நேரம் எடுக்கும்) நாம் ஒரு உள் [`async`](https://en.wikipedia.org/wiki/Async/await) சார்பை வரையறுத்து, அதை `await` இல்லாமல் இயக்குகிறோம்.
 
 **`Bill.jsx`**
 
@@ -413,7 +413,7 @@ function App() {
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-இயல்புநிலை ஏற்றுமதிக்குக் கூடுதலாக, `wasm-pack` உருவாக்கிய JavaScript குறியீடு WASM குறியீட்டில் உள்ள ஒவ்வொரு செயல்பாட்டிற்கும் ஒரு செயல்பாட்டை ஏற்றுமதி செய்கிறது.
+இயல்புநிலை ஏற்றுமதிக்குக் கூடுதலாக, `wasm-pack` உருவாக்கிய JavaScript குறியீடு WASM குறியீட்டில் உள்ள ஒவ்வொரு சார்புக்கும் ஒரு சார்பை ஏற்றுமதி செய்கிறது.
 
 ```jsx
             <button onClick={() => {
@@ -421,7 +421,7 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-WASM செயல்பாடுகளை அழைக்க, `wasm-pack` உருவாக்கிய JavaScript கோப்பால் ஏற்றுமதி செய்யப்பட்ட செயல்பாட்டை நாம் அழைக்கிறோம்.
+WASM சார்புகளை அழைக்க, `wasm-pack` உருவாக்கிய JavaScript கோப்பால் ஏற்றுமதி செய்யப்பட்ட சார்பை நாம் அழைக்கிறோம்.
 
 **`Alice.jsx`**
 

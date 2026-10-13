@@ -4,7 +4,6 @@ description: Page summarizing what staking push withdrawals are, how they work, 
 lang: en
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:
   - Validator operators must provide a withdrawal address to enable withdrawals
@@ -13,7 +12,7 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-**Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
+**Staking withdrawals** refer to transfers of ETH from a validator account on [Ethereum](/)'s consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
 > If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
@@ -34,7 +33,7 @@ How rewards are handled depends on the validator's credential type:
 
 ### How did we get here? {#how-did-we-get-here}
 
-Over the past few years [Ethereum](/) has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Users who follow the rules will be rewarded, while attempts to cheat can be penalized.
+Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Users who follow the rules will be rewarded, while attempts to cheat can be penalized.
 
 Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", special accounts that have the right to formally attest to and propose blocks, following network rules.
 
@@ -49,7 +48,7 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 Validator accounts are required to provide a withdrawal address before they can access and withdraw accrued network rewards, or process a full withdrawal upon exiting staking.
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 **Each validator account can only be assigned a single withdrawal address, one time.** Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
@@ -71,7 +70,7 @@ With compounding enabled:
 - Multiple validators can be **consolidated** into a single compounding validator, reducing operational overhead
 
 <Alert variant="warning">
-<AlertEmoji text="⚠️"/>
+<AlertIcon size="lg"><TriangleAlert /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 **Converting from Type 1 to Type 2 withdrawal credentials is irreversible.** Use the [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) as the official tool for this conversion. For more details on the conversion process, risks, and consolidation, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
@@ -107,7 +106,7 @@ Check out this explanation of Ethereum staking withdrawals by Finematics:
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
 <Alert variant="update">
-<AlertEmoji text="🕛"/>
+<AlertIcon size="xl"><Clock /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Think about an analog clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.
@@ -173,9 +172,9 @@ title="Why can a validator's withdrawal address only be set once?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
-Setting a validator's execution layer withdrawal address is permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered.
+Setting a validator's execution layer withdrawal address is a permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered.
 
-A validator's withdrawal address credentials can be set to point to either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently, these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
+A validator's withdrawal address credentials can be set to point to either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Although execution layer triggered withdrawals ([EIP-7002](https://eips.ethereum.org/EIPS/eip-7002)) now let the withdrawal address trigger exits and partial withdrawals, there is no protocol operation for changing a withdrawal address once it has been registered, and adding this functionality would add unnecessary complexity to the protocol.
 
 Users seeking flexible withdrawal management can set a smart contract wallet capable of key rotation (such as a [Safe](https://safe.global/)) as the validator's withdrawal address, effectively allowing the ultimate recipient EOA to be updated. If a user has already set an EOA as the withdrawal credential, they must initiate a full exit to recover their staked ETH and then use those funds to activate a new validator with different credentials.
 </ExpandableCard>
@@ -185,7 +184,7 @@ title="How do I withdraw from staking if I stake through a provider, staking poo
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
-If you use a staking pool or hold staking tokens, contact your provider to learn how they handle withdrawals, as processes vary by service. 
+If you use a [staking pool](/staking/pools/) or hold liquid staking tokens, you don't interact with the protocol's withdrawal mechanism directly; the pool's smart contracts and node operators control the validators, and withdrawal credentials typically point to the pool's contracts, not to you. Instead, you typically either redeem your tokens through the provider (subject to its redemption queue and available liquidity) or sell them on the open market. Contact your provider to learn how they handle withdrawals, as processes vary by service.
 
 In general, when staking through a provider or pool, you should be free to reclaim your underlying staked ETH, or to withdraw and change which staking provider you utilize. If a particular pool is getting too large, staked ETH can be exited, redeemed, and staked again with a [smaller provider](https://rated.network/). Or, if you've accumulated enough ETH, you could [stake from home](/staking/solo/).
 
@@ -274,3 +273,5 @@ The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into 
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+
+<StakingCommunityCallout className="my-16" />

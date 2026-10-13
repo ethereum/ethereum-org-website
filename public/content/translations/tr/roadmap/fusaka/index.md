@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Fusaka protokol güncellemesi hakkında bilgi edinin
+description: "Fusaka protokol güncellemesi hakkında bilgi edinin"
 lang: tr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ Fusaka güncellemesi, Ethereum'un uzun vadeli geliştirme hedeflerinde yalnızca
 
 Bu, Fusaka çatallanmasının _başrol oyuncusu_, bu güncellemede eklenen ana özelliktir. Katman 2'ler (L2) şu anda verilerini Ethereum'a, katman 2'ler için özel olarak oluşturulmuş geçici veri türü olan blob'lar halinde gönderir. Fusaka öncesinde, her tam düğüm verilerin var olduğundan emin olmak için her blob'u depolamak zorundadır. Blob işlem kapasitesi arttıkça, tüm bu verileri indirmek zorunda kalmak savunulamaz derecede kaynak yoğun hale gelir.
 
-[Veri kullanılabilirliği örneklemesi (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) ile, tüm blob verilerini depolamak zorunda kalmak yerine, her düğüm blob verilerinin bir alt kümesinden sorumlu olacaktır. Blob'lar ağdaki düğümler arasında tekdüze rastgele dağıtılır ve her tam düğüm verilerin yalnızca 1/8'ini tutar, böylece teorik olarak 8 kata kadar ölçeklendirme sağlanır. Verilerin kullanılabilirliğini sağlamak için, verilerin herhangi bir kısmı, yanlış veya eksik veri olasılığını kriptografik olarak ihmal edilebilir bir seviyeye (~10<sup>20</sup>'de bir ila 10<sup>24</sup>'te bir) düşüren yöntemlerle bütünün mevcut herhangi bir %50'sinden yeniden oluşturulabilir.
+[Veri kullanılabilirliği örneklemesi (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) ile, tüm blob verilerini depolamak zorunda kalmak yerine, her düğüm blob verilerinin bir alt kümesinden sorumlu olacaktır. Blob'lar ağdaki düğümler arasında tekdüze rastgele dağıtılır ve her tam düğüm verilerin yalnızca 1/8'ini tutar, böylece teorik olarak 8 kata kadar ölçeklendirme sağlanır. Verilerin kullanılabilirliğini sağlamak için, verilerin herhangi bir kısmı, yanlış veya eksik veri olasılığını kriptografik olarak ihmal edilebilir bir seviyeye (\~10<sup>20</sup>'de bir ila 10<sup>24</sup>'te bir) düşüren yöntemlerle bütünün mevcut herhangi bir %50'sinden yeniden oluşturulabilir.
 
 Bu, düğümler için donanım ve bant genişliği gereksinimlerini makul tutarken, katman 2'ler için daha küçük ücretlerle daha fazla ölçeklendirme sağlayan blob ölçeklendirmesini mümkün kılar.
 
@@ -135,11 +135,11 @@ Amaç, en kötü durum yayılım/doğrulama süresini sınırlandırmak ve mutab
 
 #### Varsayılan gaz limitini 60 milyona ayarlama {#set-default-gas-limit-to-60-million}
 
-Şubat 2025'te gaz limitini 30 milyondan 36 milyona (ve ardından 45 milyona) yükseltmeden önce, bu değer Birleşme'den (Eylül 2022) bu yana değişmemişti. Bu EIP, tutarlı ölçeklendirmeyi bir öncelik haline getirmeyi amaçlamaktadır.
+Şubat 2025'te gaz limitinin 30 milyondan 36 milyona (ve ardından 45 milyona) çıkarılmasından önce, bu değer Birleşme'den (Eylül 2022) bu yana değişmemişti. Bu EIP, tutarlı ölçeklendirmeyi bir öncelik haline getirmeyi amaçlamaktadır.
 
-EIP-7935, yürütme katmanı (EL) istemci ekiplerini Fusaka için varsayılan gaz limitini bugünün 45 milyonunun üzerine çıkarmak üzere koordine eder. Bu Bilgilendirici bir EIP'dir, ancak istemcilerden geliştirici ağlarında daha yüksek limitleri test etmelerini, güvenli bir değerde birleşmelerini ve bu sayıyı Fusaka sürümlerinde göndermelerini açıkça ister.
+EIP-7935, yürütme katmanı (EL) istemci ekiplerini, varsayılan gaz limitini Fusaka'dan önceki 45 milyonun üzerine çıkarmak için koordine etti. Bu Bilgilendirici bir EIP'dir, ancak istemcilerden geliştirici ağlarında daha yüksek limitleri test etmelerini, güvenli bir değerde birleşmelerini ve bu sayıyı Fusaka sürümlerinde yayınlamalarını açıkça istemiştir.
 
-Geliştirici ağı planlaması ~60 milyon stresi (sentetik yüklü tam bloklar) ve yinelemeli artışları hedefler; araştırmalar, en kötü durum blok boyutu patolojilerinin ~150 milyonun altında bağlanmaması gerektiğini söylüyor. Sunum, limitler yükseldikçe hiçbir tek işlemin baskın olamaması için işlem gaz limiti sınırı (EIP-7825) ile eşleştirilmelidir.
+Geliştirici ağı testi, yinelemeli artışlarla stres altında (sentetik yüklü tam bloklar) ~60 milyonu hedefledi; araştırmalar, en kötü durum blok boyutu patolojilerinin ~150 milyonun altında bağlayıcı olmaması gerektiğini söylüyor. Sunum, limitler yükseldikçe tek bir işlemin baskın olamaması için işlem gaz limiti sınırı (EIP-7825) ile eşleştirildi. İstemciler, Fusaka varsayılanı olarak 60 milyonu yayınladı.
 
 **Kaynaklar**: [EIP-7935 teknik spesifikasyonu](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -251,9 +251,9 @@ Herhangi bir doğrulayıcısı olmayan normal düğümler yalnızca 4 alt ağa a
 
 #### Bireysel staker'lar {#solo-stakers}
 
-Düğüm bir doğrulayıcı istemcisi için kullanılıyorsa, daha fazla sütunu koruması ve dolayısıyla daha fazla veri işlemesi gerekir. Bir doğrulayıcı eklendiğinde, düğüm en az 8 sütun alt ağına abone olur ve bu nedenle normal düğümden iki kat daha fazla veri işler ancak yine de Fusaka öncesinden daha azdır. Doğrulayıcı bakiyesi 287 ETH'nin üzerindeyse, giderek daha fazla alt ağa abone olunacaktır.
+Düğüm bir doğrulayıcı istemcisi için kullanılıyorsa, daha fazla sütunu koruması ve dolayısıyla daha fazla veriyi işlemesi gerekir. Bir doğrulayıcı eklendiğinde, düğüm en az 8 sütun alt ağına abone olur ve bu nedenle normal bir düğümden iki kat daha fazla veri işler, ancak yine de Fusaka'dan öncesine göre daha azdır. Doğrulayıcı bakiyesi 287 ETH'nin üzerindeyse, giderek daha fazla alt ağa abone olunacaktır.
 
-Bireysel bir staker için bu, disk kullanımlarının ve indirme bant genişliklerinin yaklaşık %50 azalacağı anlamına gelir. Ancak blokları yerel olarak oluşturmak ve tüm blob'ları ağa yüklemek için daha fazla yükleme bant genişliğine ihtiyaç vardır. Yerel oluşturucular, Fusaka zamanında eskisinden 2-3 kat daha yüksek yükleme bant genişliğine ihtiyaç duyacak ve 15/21 blob'luk BPO2 hedefiyle, nihai gerekli yükleme bant genişliğinin yaklaşık 5 kat daha yüksek, 100 Mbps civarında olması gerekecektir.
+Bireysel bir staker için bu, disk kullanımlarının ve indirme bant genişliklerinin yaklaşık %50 oranında azalacağı anlamına gelir. Ancak, blokları yerel olarak oluşturmak ve tüm blob'ları ağa yüklemek için daha fazla yükleme bant genişliğine ihtiyaç vardır. Yerel oluşturucular, Fusaka zamanında eskisinden 2-3 kat daha yüksek yükleme bant genişliğine ihtiyaç duyacak ve 15/21 blob'luk BPO2 hedefiyle, nihai gerekli yükleme bant genişliğinin yaklaşık 5 kat daha yüksek, yani 100 Mbps olması gerekecektir.
 
 #### Büyük doğrulayıcılar {#large-validators}
 

@@ -175,7 +175,7 @@ print("Addr Balance:", addr_balance)
 - [اوپن زیپلن - <span dir="ltr">ERC-20</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 ٹوکنز کے لیے گائیڈ](https://www.alchemy.com/overviews/erc20-solidity)
 
-## دیگر قابل تبادلہ ٹوکن سٹینڈرڈز
+## دیگر قابل تبادلہ ٹوکن سٹینڈرڈز {#fungible-token-standards}
 - [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223)
 - [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363)
 - [<span dir="ltr">ERC-777</span>](/developers/docs/standards/tokens/erc-777)
