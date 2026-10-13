@@ -152,6 +152,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             />
             <ComparisonTable
+              className="mx-auto max-w-5xl"
               caption={t("page-organizations-public-sector-fits-caption")}
               rowHeader={t("page-organizations-public-sector-fits-col-need")}
               columns={[t("page-organizations-public-sector-fits-col-help")]}

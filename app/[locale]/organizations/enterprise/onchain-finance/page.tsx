@@ -223,7 +223,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 )}
               </h2>
               <p className="text-lg text-pretty text-body-medium">
-                {/* TODO(content): ecosystem lead needs content-owner copy */}
                 {t(
                   "page-organizations-enterprise-onchain-finance-ecosystem-description"
                 )}

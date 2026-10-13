@@ -26,6 +26,7 @@ type ComparisonTableProps = {
   rows: ComparisonRow[]
   /** Pass `tint` on a colored band: drops the page-colored fills and separators */
   surface?: "page" | "tint"
+  className?: string
 }
 
 const ComparisonTable = ({
@@ -34,13 +35,14 @@ const ComparisonTable = ({
   columns,
   rows,
   surface = "page",
+  className,
 }: ComparisonTableProps) => {
   const onTint = surface === "tint"
 
   return (
     <Table
       variant={onTint ? "minimal" : "highlight-first-column"}
-      className="min-w-2xl"
+      className={cn("min-w-2xl", className)}
     >
       <TableCaption className="sr-only">{caption}</TableCaption>
       <TableHeader>
