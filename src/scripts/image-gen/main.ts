@@ -21,6 +21,12 @@ import { parseArgs } from "node:util"
 import sharp from "sharp"
 
 import {
+  GLYPH_SPEC,
+  type GlyphMode,
+  renderGlyphRef,
+  wantsGlyph,
+} from "./eth-glyph"
+import {
   enumValues,
   fetchModels,
   generate,
@@ -30,7 +36,7 @@ import {
 } from "./openrouter"
 import { type ImageType, KEY_HEX, type KeyColor, processImage } from "./process"
 
-const DEFAULT_MODEL = "google/gemini-3-pro-image"
+const DEFAULT_MODEL = "openai/gpt-image-2.5-sunburst"
 
 const fail = (msg: string): never => {
   console.error(scrub(msg))
@@ -41,6 +47,11 @@ const asType = (v: string | undefined): ImageType =>
   v === "cutout" || v === "full-bleed"
     ? v
     : fail("--type must be `cutout` or `full-bleed`")
+
+const asGlyph = (v: string | undefined): GlyphMode =>
+  v === "auto" || v === "on" || v === "off"
+    ? v
+    : fail("--eth-glyph must be `auto`, `on` or `off`")
 
 const asKey = (v: string | undefined): KeyColor =>
   v === "green" || v === "magenta"
@@ -64,8 +75,8 @@ const EXT: Record<string, string> = {
   "image/webp": "webp",
 }
 
-const encodeRef = async (path: string) => {
-  const buf = await sharp(path)
+const encodeRef = async (input: string | Buffer) => {
+  const buf = await sharp(input)
     .resize(2048, 2048, { fit: "inside", withoutEnlargement: true })
     .png()
     .toBuffer()
@@ -127,15 +138,17 @@ const cmdGenerate = async (argv: string[]) => {
       quality: { type: "string" },
       n: { type: "string", default: "1" },
       "key-color": { type: "string", default: "green" },
+      "eth-glyph": { type: "string", default: "auto" },
       "out-dir": { type: "string" },
       name: { type: "string", default: "image" },
-      pad: { type: "string", default: "0.02" },
+      pad: { type: "string", default: "0" },
       "max-size": { type: "string" },
       "dry-run": { type: "boolean", default: false },
     },
   })
   const type = asType(values.type)
   const key = asKey(values["key-color"])
+  const glyphMode = asGlyph(values["eth-glyph"])
   const userPrompt =
     values.prompt ??
     (values["prompt-file"]
@@ -157,14 +170,26 @@ const cmdGenerate = async (argv: string[]) => {
 
   const missing = values.ref.filter((p) => !existsSync(p))
   if (missing.length) fail(`Reference not found: ${missing.join(", ")}`)
+  // Appended last so "the first reference image" in user prompts keeps its meaning
+  const glyph = wantsGlyph(glyphMode, userPrompt)
+  const refNames = [...values.ref, ...(glyph ? ["<eth-glyph>"] : [])]
+  const refCount = refNames.length
   const maxRefs = rangeMax(model, "input_references") ?? 0
-  if (values.ref.length > maxRefs) {
-    fail(`${model.id} accepts at most ${maxRefs} reference images`)
+  if (refCount > maxRefs) {
+    fail(
+      `${model.id} accepts at most ${maxRefs} reference images${glyph ? " (one is taken by the ETH glyph reference; drop a --ref or pass --eth-glyph off)" : ""}`
+    )
   }
   const transparent =
     type === "cutout" &&
     !!enumValues(model, "background")?.includes("transparent")
-  const prompt = `${userPrompt}\n\n${promptSuffix(type, transparent, key)}`
+  const prompt = [
+    userPrompt,
+    glyph && GLYPH_SPEC,
+    promptSuffix(type, transparent, key),
+  ]
+    .filter(Boolean)
+    .join("\n\n")
 
   const perCall = Math.min(n, rangeMax(model, "n") ?? 1)
   const body: Record<string, unknown> = {
@@ -178,26 +203,40 @@ const cmdGenerate = async (argv: string[]) => {
       values.resolution ??
         (enumValues(model, "resolution")?.includes("2K") ? "2K" : undefined)
     ),
-    quality: pick(model, "quality", values.quality),
+    // Highest quality where offered
+    quality: pick(
+      model,
+      "quality",
+      values.quality ??
+        ["max", "high"].find((q) => enumValues(model, "quality")?.includes(q))
+    ),
     ...(transparent && { background: "transparent", output_format: "png" }),
     ...(perCall > 1 && { n: perCall }),
   }
 
   if (values["dry-run"]) {
     console.log(
-      JSON.stringify({ ...body, input_references: values.ref }, null, 2)
+      JSON.stringify(
+        {
+          ...body,
+          input_references: refNames,
+        },
+        null,
+        2
+      )
     )
     console.log(
-      `calls: ${Math.ceil(n / perCall)}  cutout via: ${transparent ? "native alpha" : type === "cutout" ? `${key} key` : "-"}`
+      `calls: ${Math.ceil(n / perCall)}  cutout via: ${transparent ? "native alpha" : type === "cutout" ? `${key} key` : "-"}  eth glyph: ${glyph ? "spec + reference" : "off"}`
     )
     return
   }
 
-  if (values.ref.length) {
+  if (refCount) {
+    const sources = [...values.ref, ...(glyph ? [await renderGlyphRef()] : [])]
     body.input_references = await Promise.all(
-      values.ref.map(async (p) => ({
+      sources.map(async (src) => ({
         type: "image_url",
-        image_url: { url: await encodeRef(p) },
+        image_url: { url: await encodeRef(src) },
       }))
     )
   }
@@ -222,7 +261,7 @@ const cmdGenerate = async (argv: string[]) => {
         : null,
     params: { ...body, input_references: undefined },
     prompt,
-    refs: values.ref,
+    refs: refNames,
   }
   let cost = 0
 
@@ -287,7 +326,7 @@ const cmdProcess = async (argv: string[]) => {
       out: { type: "string" },
       "key-color": { type: "string", default: "green" },
       "native-alpha": { type: "boolean", default: false },
-      pad: { type: "string", default: "0.02" },
+      pad: { type: "string", default: "0" },
       "max-size": { type: "string" },
     },
   })

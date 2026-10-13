@@ -199,7 +199,7 @@ export interface ProcessOptions {
   keyColor?: KeyColor
   /** Skip keying: the model already returned real alpha. */
   nativeAlpha?: boolean
-  /** Transparent padding around the trimmed subject, as a fraction of its larger side. */
+  /** Transparent padding around the trimmed subject, as a fraction of its larger side. Default 0: the page sets spacing. */
   pad?: number
   /** Resize so the longer side is at most this many px (never upscales). */
   maxSize?: number
@@ -229,7 +229,7 @@ export const processImage = async (
     : await chromaKey(input, opts.keyColor ?? "green")
   const issues = checkCutoutEdges(raw)
   const box = alphaBounds(raw)
-  const padPx = Math.round(Math.max(box.width, box.height) * (opts.pad ?? 0.02))
+  const padPx = Math.round(Math.max(box.width, box.height) * (opts.pad ?? 0))
   let img = sharp(raw.data, {
     raw: { width: raw.width, height: raw.height, channels: 4 },
   })
