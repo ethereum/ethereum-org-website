@@ -41,11 +41,17 @@ export const getUpgradeStage = (upgrade: UpgradeData): UpgradeStage => {
 
   if (upgrade.mainnetTarget.confirmed) return "scheduled"
 
-  const running = upgrade.milestones.find(
-    (milestone) => milestone.status === "live"
+  // A testnet fork is an event, not a phase: the sync records it `complete`
+  // once it happens and never `live`, while devnets stay `live` until the next
+  // one replaces them. So the stage is the furthest kind of milestone that has
+  // started, checked from testnet down, rather than whichever one is running.
+  const reached = upgrade.milestones.filter(
+    (milestone) =>
+      milestone.status === "complete" || milestone.status === "live"
   )
-  if (running?.kind === "testnet") return "testnet"
-  if (running?.kind === "devnet") return "devnet"
+  if (reached.some((milestone) => milestone.kind === "testnet"))
+    return "testnet"
+  if (reached.some((milestone) => milestone.kind === "devnet")) return "devnet"
 
   switch (upgrade.status) {
     case "planning":
@@ -87,6 +93,24 @@ export const UPGRADE_STAGE_TONES: Record<UpgradeStage, UpgradeStageTone> = {
   planning: "moving",
   research: "moving",
 }
+
+/**
+ * How many EIPs the fork ships, or will, matching Forkcast's own overview.
+ *
+ * Zero for forks Forkcast does not track (`sourceUrl: null`): their EIP lists
+ * are backfilled stubs, and Dencun's single entry would read as one change for
+ * a fork that shipped nine. `considered` EIPs are not commitments, and
+ * networking EIPs are their own bucket upstream rather than part of
+ * "Scheduled for Inclusion".
+ */
+export const getUpgradeEipCount = (upgrade: UpgradeData) =>
+  upgrade.sourceUrl
+    ? upgrade.eips.filter(
+        (eip) =>
+          (eip.status === "included" || eip.status === "scheduled") &&
+          !eip.networking
+      ).length
+    : 0
 
 export const isUpgradeShipped = (upgrade: UpgradeData) =>
   getUpgradeStage(upgrade) === "live"

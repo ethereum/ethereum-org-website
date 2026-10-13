@@ -21,7 +21,13 @@ import path from "path"
 import { expect, test } from "@playwright/test"
 
 import { upgrades } from "../../../src/data/upgrades"
+import type {
+  Milestone,
+  UpgradeData,
+  UpgradeEip,
+} from "../../../src/data/upgrades/types"
 import {
+  getUpgradeEipCount,
   getUpgradeStage,
   UPGRADE_STAGE_LABEL_KEYS,
   UPGRADE_STAGE_TONES,
@@ -110,5 +116,90 @@ test.describe("upgrade stage labels", () => {
     ]) {
       expect(messages, key).toHaveProperty(key)
     }
+  })
+})
+
+const fixture = (overrides: Partial<UpgradeData>): UpgradeData => ({
+  slug: "fixture",
+  name: "Fixture",
+  status: "upcoming",
+  mainnetTarget: { when: { year: 2027 }, confirmed: false },
+  milestones: [],
+  eips: [],
+  sourceUrl: "https://forkcast.org/upgrade/fixture",
+  ...overrides,
+})
+
+const when = { year: 2026, month: 8, day: 1 }
+
+const eip = (id: number, overrides: Partial<UpgradeEip> = {}): UpgradeEip => ({
+  id,
+  status: "scheduled",
+  networking: false,
+  decidedAt: null,
+  ...overrides,
+})
+
+test.describe("upgrade stage", () => {
+  const devnet = (version: number, status: Milestone["status"]): Milestone => ({
+    kind: "devnet",
+    version,
+    when,
+    status,
+  })
+
+  test("a forked public testnet outranks a still-running devnet", () => {
+    // Glamsterdam in Sep 2026: Platåberget forked (`complete`) while devnet-8
+    // stayed `live`. Testnets are never `live`, so keying on the running
+    // milestone left the label on "devnets" until mainnet.
+    const upgrade = fixture({
+      milestones: [
+        devnet(8, "live"),
+        { kind: "testnet", network: "Platåberget", when, status: "complete" },
+        { kind: "testnet", network: "Sepolia", when, status: "anticipated" },
+      ],
+    })
+    expect(getUpgradeStage(upgrade)).toBe("testnet")
+  })
+
+  test("devnets alone read as devnet, whether running or finished", () => {
+    expect(getUpgradeStage(fixture({ milestones: [devnet(0, "live")] }))).toBe(
+      "devnet"
+    )
+    expect(
+      getUpgradeStage(fixture({ milestones: [devnet(0, "complete")] }))
+    ).toBe("devnet")
+  })
+
+  test("an anticipated testnet is not a stage reached", () => {
+    const upgrade = fixture({
+      milestones: [
+        { kind: "testnet", network: "Sepolia", when, status: "anticipated" },
+      ],
+    })
+    expect(getUpgradeStage(upgrade)).toBe("development")
+  })
+})
+
+test.describe("upgrade EIP count", () => {
+  test("is zero for forks Forkcast does not track", () => {
+    // Dencun's store entry is a one-EIP stub for a nine-EIP fork.
+    const upgrade = fixture({
+      sourceUrl: null,
+      eips: [eip(4844, { status: "included" })],
+    })
+    expect(getUpgradeEipCount(upgrade)).toBe(0)
+  })
+
+  test("counts commitments only, leaving out considered and networking EIPs", () => {
+    const upgrade = fixture({
+      eips: [
+        eip(1, { status: "included" }),
+        eip(2, { status: "scheduled" }),
+        eip(3, { status: "considered" }),
+        eip(4, { status: "scheduled", networking: true }),
+      ],
+    })
+    expect(getUpgradeEipCount(upgrade)).toBe(2)
   })
 })
