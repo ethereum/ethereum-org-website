@@ -60,7 +60,12 @@ export default async function MeetupsJsonLD({
 
   // Only dated events belong in the Event ItemList; ongoing meetup groups
   // (no startTime) are rendered on the page but aren't schema.org Events.
-  const datedMeetups = meetups.filter((m) => m.startTime)
+  // Events the feed sends with no location and no online flag are left out
+  // too: a Place without a name is flagged by Search Console, and dropping
+  // `location` altogether is a critical error rather than a warning.
+  const datedMeetups = meetups.filter(
+    (m) => m.startTime && (m.isOnline || m.location)
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
