@@ -24,6 +24,7 @@ import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
+import { fetchMeetupImages } from "./fetchers/fetchMeetupImages"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
@@ -52,6 +53,7 @@ const DAILY: TaskDef[] = [
   [KEYS.GROW_THE_PIE_BLOCKSPACE, fetchGrowThePieBlockspace],
   [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
   [KEYS.L2BEAT, fetchL2beat],
+  [KEYS.MEETUP_IMAGES, fetchMeetupImages],
   [KEYS.RSS, fetchRSS],
   [KEYS.EVENTS, fetchEvents],
   // Enrichment is paced by third-party rate limits: needs wall clock, not a bigger machine

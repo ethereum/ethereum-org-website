@@ -17,6 +17,7 @@ export const KEYS = {
   GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
   GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
   L2BEAT: "fetch-l2beat",
+  MEETUP_IMAGES: "fetch-meetup-images",
   RSS: "fetch-rss",
   EVENTS: "fetch-events",
   BLOB_STATS: "fetch-blob-stats",

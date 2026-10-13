@@ -38,6 +38,7 @@ export const getStablecoinsData = () => get<CoinGeckoCoinMarketResponse>(KEYS.ST
 export const getTotalEthStakedData = () => get<MetricReturnData>(KEYS.TOTAL_ETH_STAKED)
 export const getStakedPercentageData = () => get<MetricReturnData>(KEYS.STAKED_PERCENTAGE)
 export const getEventsData = () => get<EventItem[]>(KEYS.EVENTS)
+export const getMeetupImages = () => get<Record<string, string>>(KEYS.MEETUP_IMAGES)
 export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.DEVELOPER_TOOLS)
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
 export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)
