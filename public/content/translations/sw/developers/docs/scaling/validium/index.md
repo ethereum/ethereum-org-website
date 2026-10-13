@@ -99,13 +99,13 @@ Katika mpango wa upatikanaji wa data uliowekewa dhamana, mtu yeyote anaweza kupa
 
 [Zaidi kuhusu upatikanaji wa data uliowekewa dhamana katika Validium](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Volitions na Validium {#volitions-and-validium}
+## Volition na Validium {#volitions-and-validium}
 
-Validium hutoa faida nyingi lakini huja na mabadilishano (hasa, upatikanaji wa data). Lakini, kama ilivyo kwa masuluhisho mengi ya kuongeza viwango, Validium zinafaa kwa matumizi maalum—ndiyo maana volitions ziliundwa.
+Validium hutoa faida nyingi lakini huja na maelewano (haswa, upatikanaji wa data). Lakini, kama ilivyo kwa masuluhisho mengi ya kuongeza viwango, Validium zinafaa kwa matumizi maalum—ndiyo maana Volition ziliundwa.
 
-Volitions zinachanganya ZK-rollup na mnyororo wa Validium na kuruhusu watumiaji kubadili kati ya masuluhisho hayo mawili ya kuongeza viwango. Kwa volitions, watumiaji wanaweza kutumia fursa ya upatikanaji wa data nje ya mnyororo wa Validium kwa miamala fulani, huku wakihifadhi uhuru wa kubadili kwenda kwenye suluhisho la upatikanaji wa data mnyororoni (ZK-rollup) ikihitajika. Hii kimsingi inawapa watumiaji uhuru wa kuchagua mabadilishano kama inavyoamriwa na mazingira yao ya kipekee.
+Volition zinachanganya mkusanyiko wa maarifa sifuri (ZK-rollup) na mnyororo wa Validium na kuruhusu watumiaji kubadili kati ya masuluhisho haya mawili ya kuongeza viwango. Kwa kutumia Volition, watumiaji wanaweza kufaidika na upatikanaji wa data nje ya mnyororo wa Validium kwa miamala fulani, huku wakibaki na uhuru wa kubadili kwenda kwenye suluhisho la upatikanaji wa data mnyororoni (mkusanyiko wa maarifa sifuri) ikihitajika. Kimsingi, hii inawapa watumiaji uhuru wa kuchagua maelewano kulingana na mazingira yao ya kipekee.
 
-Soko la kubadilishana lililogatuliwa (DEX) linaweza kupendelea kutumia miundombinu ya Validium inayoweza kuongezwa viwango na ya faragha kwa biashara za thamani ya juu. Inaweza pia kutumia ZK-rollup kwa watumiaji wanaotaka uhakikisho wa juu wa usalama wa ZK-rollup na hali ya kutohitaji kuamini.
+Soko la ubadilishanaji lililogatuliwa (DEX) linaweza kupendelea uwezo wa kuongeza viwango wa Validium, na uwezo wake wa kuzuia ufikiaji wa umma kwa data za muamala, kwa biashara zenye thamani kubwa. Kuweka data nje ya mnyororo kunazuia nani anaweza kuziona, lakini yenyewe haifanyi miamala kuwa ya siri kwa njia ya kificho: usiri unategemea vidhibiti vya ufikiaji na mifumo ya faragha ya usambazaji, na data inabaki kuonekana kwa mwendeshaji na kwa yeyote anayeishikilia. DEX pia inaweza kutumia mkusanyiko wa maarifa sifuri kwa watumiaji wanaotaka uhakikisho wa juu wa usalama na hali ya kutohitaji kuamini ya mkusanyiko wa maarifa sifuri.
 
 ## Validium na utangamano wa EVM {#validiums-and-evm-compatibility}
 

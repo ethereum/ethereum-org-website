@@ -5,7 +5,7 @@ description: "इथेरियमवरील एआय एजंट्सच�
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "टर्मिनल टेबलवर जमलेले लोक"
 summaryPoints:
   - "एआय जे ब्लॉकचेनशी संवाद साधते आणि स्वतंत्रपणे व्यापार करते"

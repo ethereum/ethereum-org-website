@@ -52,11 +52,8 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-// Video clips authored as `![](./x.mp4)` are standardized to fixed aspect
-// ratios at authoring time, so the pipeline doesn't measure them — orientation
-// is chosen by the renderer from a `-portrait` filename suffix. We only need to
-// recognize video here to skip image-only steps (dimension probing, blur
-// placeholders).
+// Videos are sized by the renderer (see `MarkdownVideo`); recognized here only
+// to skip image-only steps (dimension probing, blur placeholders)
 const VIDEO_EXTENSIONS = [".mp4", ".webm", ".mov"]
 
 const getImageSize = (src: string, dir: string) => {
@@ -88,9 +85,19 @@ const setImagePlaceholders = async (
     .replaceAll("/", "-")
     .slice(1)
 
+  // The on-disk placeholder cache is a build-time optimization. When MDX is
+  // compiled on-demand in the serverless runtime the filesystem is read-only
+  // (and this dir isn't bundled), so treat cache I/O as best-effort and fall
+  // back to generating placeholders in memory.
+  let canWriteCache = true
+
   // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
-    fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  try {
+    if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
+      fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  } catch {
+    canWriteCache = false
+  }
 
   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
   const existsCache = fs.existsSync(DATA_PATH)
@@ -108,9 +115,10 @@ const setImagePlaceholders = async (
 
     // Load image data from file system as buffer
     const buffer: Buffer = fs.readFileSync(path.join("public", src))
+    const imageBytes = Uint8Array.from(buffer)
 
     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, {
+    const hash = await getHashFromBuffer(imageBytes, {
       algorithm: "SHA-1",
       length: 8,
     })
@@ -136,15 +144,16 @@ const setImagePlaceholders = async (
 
   // If cache is still empty, delete JSON file and return
   if (Object.keys(placeholdersCached).length === 0) {
-    fs.rmSync(DATA_PATH, { recursive: true, force: true })
+    if (canWriteCache) fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
 
   // If cached value has not changed, return without writing to file system
   if (!isChanged) return
 
-  // Write results to cache file
-  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
+  // Write results to cache file (skipped when the FS is read-only at runtime)
+  if (canWriteCache)
+    fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
 }
 
 /**
@@ -170,11 +179,11 @@ const rehypeImg = (options: Options) => {
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
-        const ext = path.extname(src).toLowerCase()
+        // Strip any `#WxH` dimensions fragment before deriving the extension
+        const ext = path.extname(src.split("#")[0]).toLowerCase()
         const isVideo = VIDEO_EXTENSIONS.includes(ext)
 
-        // Videos are sized by the renderer (fixed aspect ratio), so they're not
-        // probed here; they still flow through for src rewriting.
+        // Videos still flow through (for src rewriting); only images are probed
         const dimensions = isVideo ? undefined : getImageSize(src, dir)
 
         // Skip non-video files that have no detectable dimensions

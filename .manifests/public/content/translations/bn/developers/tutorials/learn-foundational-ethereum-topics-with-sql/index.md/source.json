@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md",
   "generatedAt": "2026-06-19T22:58:54.718Z",
-  "rootHash": "483c0e342949",
+  "rootHash": "44032293caa3",
   "tree": {
-    "contentHash": "f4c98f3e84e1",
-    "anchorHash": "727f867ed399",
+    "contentHash": "a908c1a16558",
+    "anchorHash": "234c8c6b0cb4",
     "children": {
       "frontmatter:title": {
         "contentHash": "91091a00ed7a",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f5ebdb7ea97a"
+        "anchorHash": "118eb801fc0d"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "76d79135c040"
+        "contentHash": "4feb97dadd11",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "a7056a455639",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "37a2d04ead56",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "3e5136fd4b11",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "3f927dea414c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

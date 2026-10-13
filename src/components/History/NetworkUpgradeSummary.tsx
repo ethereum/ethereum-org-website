@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Flex, Stack } from "@/components/ui/flex"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { dateTimeFormat, getValidDate } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
@@ -13,16 +12,13 @@ import networkUpgradeSummaryData from "@/data/networkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 type NetworkUpgradeSummaryProps = {
   name: string
 }
 
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
-  const [formattedUTC, setFormattedUTC] = useState("")
   const locale = useLocale()
-  const { t } = useTranslation("page-history")
+  const t = useTranslations("page-history")
 
   const {
     dateTimeAsString,
@@ -32,22 +28,20 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
     epochNumber,
     slotNumber,
   } = networkUpgradeSummaryData[name]
-  // TODO fix dateTimeAsString
 
-  // calculate date format only on the client side to avoid hydration issues
-  useEffect(() => {
-    const date = new Date(dateTimeAsString as string)
-    const formattedDate = dateTimeFormat(locale, {
-      timeZone: "UTC",
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-    }).format(date)
-    setFormattedUTC(`${formattedDate} +UTC`)
-  }, [dateTimeAsString, locale])
+  const upgradeDate = getValidDate(dateTimeAsString)
+  const formattedUTC = upgradeDate
+    ? dateTimeFormat(locale, {
+        timeZone: "UTC",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZoneName: "short",
+      }).format(upgradeDate)
+    : null
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
@@ -63,7 +57,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   return (
     <Stack>
-      {dateTimeAsString && (
+      {formattedUTC && (
         <Flex>
           <Emoji className="me-2 text-sm" text=":calendar:" />
           <p className="font-monospace">{formattedUTC}</p>
@@ -71,26 +65,26 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       )}
       {blockNumber &&
         blockTypeTranslation(
-          "page-history:page-history-block-number",
+          "page-history-block-number",
           "https://eth.blockscout.com/block/",
           blockNumber
         )}
       {epochNumber &&
         blockTypeTranslation(
-          "page-history:page-history-epoch-number",
+          "page-history-epoch-number",
           "https://beaconcha.in/epoch/",
           epochNumber
         )}
       {slotNumber &&
         blockTypeTranslation(
-          "page-history:page-history-slot-number",
+          "page-history-slot-number",
           "https://beaconcha.in/slot/",
           slotNumber
         )}
       {ethPriceInUSD && (
         <Flex>
           <Emoji className="me-2 text-sm" text=":money_bag:" />
-          {t("page-history:page-history-eth-price")}:{" "}
+          {t("page-history-eth-price")}:{" "}
           {numberFormat(locale, {
             style: "currency",
             currency: "USD",
@@ -101,7 +95,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         <Flex>
           <Emoji className="me-2 text-sm" text=":desktop_computer:" />
           <InlineLink href={waybackLink}>
-            {t("page-history:page-history-ethereum-org-wayback")}
+            {t("page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>
       )}

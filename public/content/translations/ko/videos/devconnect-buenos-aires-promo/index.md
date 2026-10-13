@@ -7,8 +7,7 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "community-stories"
-  - "community"
+  - "events"
 format: explainer
 author: "이더리움 파운데이션"
 breadcrumb: "데브커넥트 부에노스아이레스"

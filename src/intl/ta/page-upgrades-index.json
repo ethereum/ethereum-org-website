@@ -169,6 +169,11 @@
   "page-upgrades-upgrades-beacon-chain": "பீக்கன் சங்கிலி",
   "page-upgrades-upgrades-guide": "எத்திரியம் மேம்பாடுகளுக்கான வழிகாட்டி",
   "page-upgrades-upgrades-docking": "ஒருங்கிணைப்பு",
+  "page-upgrades-upgrades-dencun": "டென்குன்",
+  "page-upgrades-upgrades-pectra": "பெக்ட்ரா",
+  "page-upgrades-upgrades-fusaka": "ஃபுசாகா",
+  "page-upgrades-upgrades-glamsterdam": "கிளாம்ஸ்டர்டாம்",
+  "page-upgrades-upgrades-forks": "எத்திரியம் ஃபோர்க்குகள்",
   "page-upgrades-energy-consumption": "எத்திரியம் ஆற்றல் நுகர்வு பற்றி மேலும் அறிய",
   "page-upgrades-upgrading": "எத்திரியத்தை தீவிரமான புதிய உயரங்களுக்கு மேம்படுத்துதல்",
   "page-roadmap-vision": "தொலைநோக்குப் பார்வை",
@@ -204,5 +209,6 @@
   "docs-nav-proof-of-stake": "உரிமைச் சான்று",
   "docs-nav-proof-of-work": "பணிச் சான்று",
   "page-upgrades-get-involved-ethresearch-1": "ஷார்டிங்",
-  "page-upgrades-get-involved-ethresearch-2": "ஒருங்கிணைப்பு"
+  "page-upgrades-get-involved-ethresearch-2": "ஒருங்கிணைப்பு",
+  "page-upgrades-upgrades-hegota": "ஹெகோட்டா"
 }

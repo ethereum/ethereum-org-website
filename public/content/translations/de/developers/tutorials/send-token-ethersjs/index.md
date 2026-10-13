@@ -9,29 +9,30 @@ lang: de
 published: 2021-04-06
 ---
 
-## Token senden mit ethers.js(5.0) {#send-token}
+## Token senden mit ethers.js v5 {#send-token}
 
 ### In diesem Tutorial lernen Sie Folgendes: {#you-learn-about}
 
 - ethers.js importieren
-- Token transferieren
+- Token übertragen
 - Den Gaspreis entsprechend der Netzwerkauslastung festlegen
 
 ### Erste Schritte {#to-get-started}
 
-Um zu beginnen, müssen wir zunächst die Ethers.js-Bibliothek in unser JavaScript importieren.
-Ethers.js v5 einbinden
+Um zu beginnen, müssen wir zunächst die ethers.js-Bibliothek in unser JavaScript importieren
+ethers.js v5 einbinden
+
 ### Installation {#install-ethersjs}
 
 ```shell
-/home/ricmoo> npm install --save ethers
+/home/ricmoo> npm install --save ethers@5
 ```
 
 ES6 im Browser
 
 ```html
 <script type="module">
-  import { ethers } from "https://cdn.ethers.io/lib/ethers-5.0.esm.min.js"
+  import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.esm.min.js"
   // Dein Code hier...
 </script>
 ```
@@ -40,18 +41,18 @@ ES3(UMD) im Browser
 
 ```html
 <script
-  src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+  src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"
   type="application/javascript"
 ></script>
 ```
 
 ### Parameter {#param}
 
-1. **`contract_address`**: Token-Vertragsadresse (die Vertragsadresse wird benötigt, wenn der Token, den Sie transferieren möchten, nicht Ether ist)
+1. **`contract_address`**: Token-Vertragsadresse (die Vertragsadresse wird benötigt, wenn der zu übertragende Token nicht Ether ist)
 2. **`send_token_amount`**: Der Betrag, den Sie an den Empfänger senden möchten
 3. **`to_address`**: Die Adresse des Empfängers
 4. **`send_account`**: Die Adresse des Senders
-5. **`private_key`**: Privater Schlüssel des Senders, um die Transaktion zu signieren und die Token tatsächlich zu transferieren
+5. **`private_key`**: Privater Schlüssel des Senders, um die Transaktion zu signieren und die Token tatsächlich zu übertragen
 
 ## Hinweis {#notice}
 
@@ -59,7 +60,7 @@ ES3(UMD) im Browser
 
 ## Sendevorgang {#procedure}
 
-### 1. Mit dem Netzwerk (Testnetz) verbinden {#connect-to-network}
+### 1. Mit dem Netzwerk verbinden (Testnetz) {#connect-to-network}
 
 #### Provider festlegen (Infura) {#set-provider}
 
@@ -89,7 +90,7 @@ window.ethersProvider.getGasPrice() // Gaspreis
 
 ### 5. Transaktion definieren {#define-transaction}
 
-Diese unten definierten Variablen sind abhängig von `send_token()`
+Die unten definierten Variablen sind abhängig von `send_token()`
 
 ### Transaktionsparameter {#transaction-params}
 

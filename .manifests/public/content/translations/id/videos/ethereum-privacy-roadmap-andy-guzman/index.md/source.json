@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "sourceFile": "public/content/videos/ethereum-privacy-roadmap-andy-guzman/index.md",
+  "generatedAt": "2026-07-29T05:53:30.308Z",
+  "rootHash": "134e96a5be58",
+  "tree": {
+    "contentHash": "44253323383a",
+    "anchorHash": "7069fac5b1d7",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "f8141813f04c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "23e79bb402a6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9c7684e8ed9a"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b28ca2de3544"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "581789059e57"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "f5818652a990",
+        "anchorHash": "95d0be1e23cc",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "75a4a556e1f3"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1be642127f4d"
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb"
+    ]
+  },
+  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+}

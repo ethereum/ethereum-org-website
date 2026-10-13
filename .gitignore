@@ -45,11 +45,13 @@ next-env.d.ts
 # rss feeds
 /feed.xml
 
-# Sitemaps
-sitemap*.xml
+# Sitemaps (root-level generated output only; anchored so the app/sitemap.xml/
+# route handler that serves the <sitemapindex> stays tracked -- mirrors /feed.xml)
+/sitemap*.xml
 
-# Robots.txt
-robots.txt
+# Robots.txt (root-level generated output only; anchored so the app/robots.txt/
+# route handler stays tracked -- mirrors /sitemap*.xml above)
+/robots.txt
 
 # Local Netlify folder
 .netlify
@@ -78,3 +80,6 @@ storybook-static-pages
 
 # Playwright CLI session state
 .playwright-cli
+
+# Claude Code worktrees
+.claude/worktrees/

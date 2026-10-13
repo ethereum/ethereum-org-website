@@ -18,7 +18,7 @@ lang: zh
 
 ### 奖励 {#rewards-2}
 
-当验证者做出与大多数其他验证者一致的投票、提议区块以及参与同步委员会时，他们会获得奖励。每个时段的奖励价值是根据 `base_reward` 计算得出的。这是计算其他奖励的基础单位。`base_reward` 代表验证者在最佳条件下每个时段获得的平均奖励。它是根据验证者的有效余额和活跃验证者的总数计算得出的，如下所示：
+当验证者做出与其他大多数验证者一致的投票、提议区块以及参与同步委员会时，他们会获得奖励。每个时段的奖励价值是根据 `base_reward`（基础奖励）计算的。这是计算其他奖励的基础单位。`base_reward` 代表验证者在最佳条件下每个时段获得的平均奖励。它是根据验证者的有效余额和活跃验证者的总数计算得出的，如下所示：
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 其中 `base_reward_factor` 为 64，`base_rewards_per_epoch` 为 4，`sum(active balance)` 是所有活跃验证者质押的以太币总额。
 
-这意味着基础奖励与验证者的有效余额成正比，与网络上的验证者数量成反比。验证者越多，整体发行量越大（因为 `sqrt(N)`），但每个验证者的 `base_reward` 越小（因为 `1/sqrt(N)`）。这些因素会影响质押节点的 APR。请在 [Vitalik 的笔记](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards)中阅读其基本原理。
+这意味着基础奖励与验证者的有效余额成正比，与网络上的验证者数量成反比。验证者越多，整体发行量越大（按 `sqrt(N)` 比例），但每个验证者的 `base_reward` 越小（按 `1/sqrt(N)` 比例）。这些因素会影响质押节点的 APR。请在 [Vitalik 的笔记](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards)中阅读其基本原理。
 
-然后，总奖励计算为五个组成部分的总和，每个组成部分都有一个权重，决定了每个组成部分对总奖励的贡献程度。这些组成部分是：
+然后，总奖励被计算为五个组成部分的总和，每个组成部分都有一个权重，决定了每个组成部分对总奖励的贡献程度。这些组成部分是：
 
-```
-1. source vote: 验证者及时为正确的来源检查点进行了投票
-2. target vote: 验证者及时为正确的目标检查点进行了投票
-3. head vote: 验证者及时为正确的链头区块进行了投票
-4. sync committee reward: 验证者参与了同步委员会
-5. proposer reward: 验证者在正确的时隙提议了区块
+```text
+1. 来源投票：验证者及时为正确的来源检查点进行了投票
+2. 目标投票：验证者及时为正确的目标检查点进行了投票
+3. 链头投票：验证者及时为正确的链头区块进行了投票
+4. 同步委员会奖励：验证者参与了同步委员会
+5. 提议者奖励：验证者在正确的时隙提议了区块
 ```
 
 每个组成部分的权重如下：
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-这些权重总和为 64。奖励计算为适用权重之和除以 64。一个及时进行了来源、目标和链头投票，提议了区块并参与了同步委员会的验证者可以获得 `64/64 * base_reward == base_reward`。然而，验证者通常不是区块提议者，因此他们的最大奖励是 `64-8 /64 * base_reward == 7/8 * base_reward`。既不是区块提议者也不在同步委员会中的验证者可以获得 `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`。
+这些权重总和为 64。奖励的计算方法是适用权重之和除以 64。一个及时进行了来源、目标和链头投票，提议了区块并参与了同步委员会的验证者可以获得 `64/64 * base_reward == base_reward`。然而，验证者通常不是区块提议者，因此他们的最大奖励是 `64-8 / 64 * base_reward == 7/8 * base_reward`。既不是区块提议者也不在同步委员会中的验证者可以获得 `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`。
 
-为了激励快速证明，还增加了一项额外奖励。这就是 `inclusion_delay_reward`。其价值等于 `base_reward` 乘以 `1/delay`，其中 `delay` 是区块提案和证明之间相隔的时隙数。例如，如果证明在区块提案的一个时隙内提交，证明者将获得 `base_reward * 1/1 == base_reward`。如果证明在下一个时隙到达，证明者将获得 `base_reward * 1/2`，依此类推。
+为了激励快速证明，还增加了一项额外奖励。这就是 `inclusion_delay_reward`（包含延迟奖励）。其价值等于 `base_reward` 乘以 `1/delay`，其中 `delay` 是区块提案和证明之间相隔的时隙数。例如，如果证明在区块提案的一个时隙内提交，证明者将获得 `base_reward * 1/1 == base_reward`。如果证明在下一个时隙到达，证明者将获得 `base_reward * 1/2`，依此类推。
 
-区块提议者会因区块中包含的**每个有效证明**而获得 `8 / 64 * base_reward`，因此奖励的实际价值与进行证明的验证者数量成正比。区块提议者还可以通过在其提议的区块中包含其他验证者不当行为的证据来增加奖励。这些奖励是鼓励验证者诚实守信的“胡萝卜”。包含罚没的区块提议者将获得 `slashed_validators_effective_balance / 512` 的奖励。
+区块提议者会因区块中包含的**每个有效证明**而获得 `8 / 64 * base_reward`，因此奖励的实际价值与进行证明的验证者数量成正比。区块提议者还可以通过在其提议的区块中包含其他验证者不当行为的证据来增加奖励。这些奖励是鼓励验证者保持诚实的“甜头”。包含罚没的区块提议者将获得 `slashed_validators_effective_balance / 512` 的奖励。
 
 ### 惩罚 {#penalties}
 

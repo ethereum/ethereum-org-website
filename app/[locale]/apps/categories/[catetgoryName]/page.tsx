@@ -49,6 +49,10 @@ const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
+// Revalidated daily to pick up apps data updates. Without generateStaticParams
+// this route would render on every request.
+export const revalidate = 86400
+
 const Page = async (props: {
   params: Promise<PageParams & { catetgoryName: string }>
 }) => {
@@ -217,11 +221,19 @@ const Page = async (props: {
   )
 }
 
+export function generateStaticParams() {
+  return Object.values(appsCategories).map(({ slug }) => ({
+    catetgoryName: slug,
+  }))
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; catetgoryName: string }>
 }) {
   const params = await props.params
   const { locale, catetgoryName } = params
+
+  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-apps")

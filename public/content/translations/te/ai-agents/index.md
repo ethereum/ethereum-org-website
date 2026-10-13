@@ -5,7 +5,7 @@ description: "ఎథీరియంపై కృత్రిమ మేధ ఏజ
 lang: te
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "టెర్మినల్ టేబుల్ వద్ద గుమిగూడిన ప్రజలు"
 summaryPoints:
   - "బ్లాక్‌చైన్‌తో ఇంటరాక్ట్ అయ్యే మరియు స్వతంత్రంగా ట్రేడ్ చేసే కృత్రిమ మేధ"

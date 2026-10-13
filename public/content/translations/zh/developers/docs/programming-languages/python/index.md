@@ -55,10 +55,10 @@ incomplete: true
 
 ## Python 项目和工具 {#python-projects-and-tools}
 
-### 活跃： {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
 - [Vyper](https://github.com/ethereum/vyper/) - _适用于 EVM 的 Python 风格智能合约语言_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper 的原生测试工具；一个具有主网分叉、调试和美观回溯功能的解释器_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _一个基于 Titanoboa 构建的，用于 Vyper 和 Python 的智能合约开发和测试框架_
 - [Ape](https://github.com/ApeWorX/ape) - _面向 Python 开发者、数据科学家和安全专业人员的智能合约开发工具_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试基于以太坊的应用的工具_
@@ -66,10 +66,9 @@ incomplete: true
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _支持 0.5.x 版本的 solc Solidity 编译器的 Python 包装器_
 - [pymaker](https://github.com/makerdao/pymaker) - _用于 Maker 合约的 Python API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _适用于 Python 的以太坊登录 (SIWE)_
-- [用于以太坊集成的 Web3 去中心化金融 (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个为 ERC-20、尤尼斯瓦普和其他热门项目提供现成集成的 Python 包_
-- [Wake](https://getwake.io) - _用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架（语言服务器 - [Solidity 工具](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)）_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _用于跨尤尼斯瓦普 V2/V3、Balancer 和 Curve 进行去中心化金融 (DeFi) 分析和自动做市商 (AMM) 模拟的 Python SDK_
-
+- [用于以太坊集成的 Web3 去中心化金融 (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个包含 ERC-20、尤尼斯瓦普和其他热门项目现成集成的 Python 包_
+- [Wake](https://getwake.io) - _用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架（语言服务器 - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)）_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _用于跨尤尼斯瓦普 V2/V3、Balancer 和 Curve 进行 DeFi 分析和自动做市商 (AMM) 模拟的 Python SDK_
 ### 已存档 / 不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊 Python 客户端_

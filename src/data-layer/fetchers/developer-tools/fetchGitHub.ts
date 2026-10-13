@@ -1,8 +1,4 @@
-import type { DeveloperToolsResponse } from "@/lib/types"
-
 import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
-
-import type { DeveloperTool } from "./utils"
 
 type RepoInfo = {
   owner: string
@@ -12,6 +8,13 @@ type RepoInfo = {
 
 type GraphQLRepoResult = {
   stargazerCount: number
+  forkCount: number
+  watcherCount: number
+  subscriberCount: number
+  openIssueCount: number
+  isArchived: boolean
+  isFork: boolean
+  pushedAt: string | null
   lastCommitDate: string | null
 }
 
@@ -29,19 +32,35 @@ function parseGitHubUrl(href: string): RepoInfo | null {
   }
 }
 
-function buildGraphQLQuery(repos: RepoInfo[]): string {
-  const VALID_REPO_PATTERN = /^[a-zA-Z0-9._-]+$/
+const VALID_REPO_PATTERN = /^[a-zA-Z0-9._-]+$/
 
+// Aliases are positional, so the query and the result loop must walk this same array
+function queryableRepos(repos: RepoInfo[]): RepoInfo[] {
+  return repos.filter(
+    (repo) =>
+      VALID_REPO_PATTERN.test(repo.owner) && VALID_REPO_PATTERN.test(repo.name)
+  )
+}
+
+function buildGraphQLQuery(repos: RepoInfo[]): string {
   const repoQueries = repos
-    .filter(
-      (repo) =>
-        VALID_REPO_PATTERN.test(repo.owner) &&
-        VALID_REPO_PATTERN.test(repo.name)
-    )
     .map(
       (repo, i) => `
     repo${i}: repository(owner: "${repo.owner}", name: "${repo.name}") {
       stargazerCount
+      forkCount
+      watchers {
+        totalCount
+      }
+      mentionableUsers {
+        totalCount
+      }
+      issues(states: OPEN) {
+        totalCount
+      }
+      isArchived
+      isFork
+      pushedAt
       defaultBranchRef {
         target {
           ... on Commit {
@@ -57,41 +76,108 @@ function buildGraphQLQuery(repos: RepoInfo[]): string {
   return `query { ${repoQueries} }`
 }
 
-async function fetchReposBatch(
-  repos: RepoInfo[]
-): Promise<Map<string, GraphQLRepoResult>> {
-  const results = new Map<string, GraphQLRepoResult>()
+/** Extra attempts for a rate-limited batch, on top of what fetchRetry covers. */
+const RATE_LIMIT_RETRIES = 2
 
-  if (repos.length === 0) return results
+/** Run-wide cap on rate-limit waits, so a bad GitHub day fails before maxDuration. */
+const RATE_LIMIT_BUDGET_MS = 120_000
 
-  const query = buildGraphQLQuery(repos)
+interface RateLimitBudget {
+  remainingMs: number
+}
 
-  const response = await fetchRetry("https://api.github.com/graphql", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-  })
+/** Below this share of repos resolved, the run fails instead of publishing. */
+const MIN_REPO_COVERAGE = 0.75
 
-  if (!response.ok) {
+async function requestRepoBatch(
+  query: string,
+  token: string,
+  budget: RateLimitBudget
+): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const response = await fetchRetry("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    })
+
+    if (response.ok) return response
+
+    // Secondary rate limits come back as 403, which fetchRetry doesn't retry
+    const retryAfter = Number(response.headers.get("retry-after") ?? "")
+    const rateLimited = response.status === 403 || response.status === 429
+    const waitMs = (retryAfter + 1) * 1000
+    if (
+      rateLimited &&
+      retryAfter > 0 &&
+      attempt < RATE_LIMIT_RETRIES &&
+      budget.remainingMs >= waitMs
+    ) {
+      budget.remainingMs -= waitMs
+      console.warn(
+        `GitHub rate limited (${response.status}), waiting ${retryAfter}s before retry ${attempt + 1}/${RATE_LIMIT_RETRIES} ` +
+          `(${Math.round(budget.remainingMs / 1000)}s of rate-limit budget left)`
+      )
+      await sleep(waitMs)
+      continue
+    }
+
+    // The bare status never said which limit was hit, so keep the body and the
+    // rate-limit headers: they are the only way to tell primary from secondary.
+    const body = await response.text().catch(() => "")
     throw new Error(
-      `GitHub GraphQL request failed with status ${response.status}`
+      `GitHub GraphQL request failed with status ${response.status} ` +
+        `(remaining=${response.headers.get("x-ratelimit-remaining") ?? "?"}, ` +
+        `reset=${response.headers.get("x-ratelimit-reset") ?? "?"}, ` +
+        `retry-after=${response.headers.get("retry-after") ?? "none"}, ` +
+        `rate-limit budget left=${Math.round(budget.remainingMs / 1000)}s): ` +
+        body.slice(0, 300)
     )
   }
+}
 
+async function fetchReposBatch(
+  repos: RepoInfo[],
+  budget: RateLimitBudget
+): Promise<Map<string, GraphQLRepoResult>> {
+  const results = new Map<string, GraphQLRepoResult>()
+  const token = process.env.GITHUB_TOKEN_READ_ONLY
+
+  if (repos.length === 0) return results
+  if (!token) {
+    throw new Error("GitHub token not set (GITHUB_TOKEN_READ_ONLY)")
+  }
+
+  // An all-rejected batch would otherwise post an empty `query { }` and 400
+  const batch = queryableRepos(repos)
+  if (batch.length === 0) return results
+
+  const response = await requestRepoBatch(
+    buildGraphQLQuery(batch),
+    token,
+    budget
+  )
   const json = await response.json()
 
   if (json.errors) {
     console.warn("GitHub GraphQL errors:", json.errors)
   }
 
-  repos.forEach((repo, i) => {
+  batch.forEach((repo, i) => {
     const data = json.data?.[`repo${i}`]
     if (data) {
       results.set(repo.originalHref, {
         stargazerCount: data.stargazerCount,
+        forkCount: data.forkCount ?? 0,
+        watcherCount: data.watchers?.totalCount ?? 0,
+        subscriberCount: data.mentionableUsers?.totalCount ?? 0,
+        openIssueCount: data.issues?.totalCount ?? 0,
+        isArchived: data.isArchived ?? false,
+        isFork: data.isFork ?? false,
+        pushedAt: data.pushedAt ?? null,
         lastCommitDate: data.defaultBranchRef?.target?.committedDate ?? null,
       })
     }
@@ -100,15 +186,46 @@ async function fetchReposBatch(
   return results
 }
 
-export async function fetchGitHub(
-  appData: DeveloperToolsResponse[]
-): Promise<DeveloperTool[]> {
+type ToolWithRepoUrls = {
+  repos: Array<string | { href: string }>
+} & Record<string, unknown>
+
+type ToolWithGitHubData<T extends ToolWithRepoUrls> = Omit<T, "repos"> & {
+  repos: {
+    href: string
+    stargazers?: number
+    forks?: number
+    watchers?: number
+    subscribers?: number
+    openIssues?: number
+    isArchived?: boolean
+    isFork?: boolean
+    daysSincePush?: number
+    lastUpdated?: string | null
+  }[]
+}
+
+function daysSince(dateIso: string | null): number | undefined {
+  if (!dateIso) return undefined
+  const timestamp = Date.parse(dateIso)
+  if (Number.isNaN(timestamp)) return undefined
+  return Math.max(0, (Date.now() - timestamp) / (1000 * 60 * 60 * 24))
+}
+
+export async function fetchGitHub<T extends ToolWithRepoUrls>(
+  appData: T[]
+): Promise<ToolWithGitHubData<T>[]> {
+  if (!process.env.GITHUB_TOKEN_READ_ONLY) {
+    throw new Error("GitHub token not set (GITHUB_TOKEN_READ_ONLY)")
+  }
+
   // Collect all unique repo URLs
   const allRepos: RepoInfo[] = []
   const seenHrefs = new Set<string>()
 
   for (const app of appData) {
-    for (const repoUrl of app.repos) {
+    for (const repoEntry of app.repos) {
+      const repoUrl = typeof repoEntry === "string" ? repoEntry : repoEntry.href
       if (seenHrefs.has(repoUrl)) continue
       seenHrefs.add(repoUrl)
 
@@ -121,20 +238,23 @@ export async function fetchGitHub(
 
   console.log(`Fetching stargazers for ${allRepos.length} GitHub repos`)
 
-  // GitHub GraphQL has a complexity limit; batch in chunks of ~100
-  const BATCH_SIZE = 100
+  // Keep queries small to avoid GraphQL resource-limit spikes on large batches.
+  const BATCH_SIZE = 25
   const repoDataMap = new Map<string, GraphQLRepoResult>()
+  const budget: RateLimitBudget = { remainingMs: RATE_LIMIT_BUDGET_MS }
+  let failedBatches = 0
 
   for (let i = 0; i < allRepos.length; i += BATCH_SIZE) {
     const batch = allRepos.slice(i, i + BATCH_SIZE)
 
     try {
-      const batchResults = await fetchReposBatch(batch)
+      const batchResults = await fetchReposBatch(batch, budget)
 
       for (const [href, data] of batchResults) {
         repoDataMap.set(href, data)
       }
     } catch (error) {
+      failedBatches++
       console.error(`Failed to fetch batch ${i / BATCH_SIZE + 1}:`, error)
       // Continue with next batch instead of failing entirely
     }
@@ -147,14 +267,32 @@ export async function fetchGitHub(
 
   console.log(`Successfully fetched data for ${repoDataMap.size} repos`)
 
+  // Ranking reads missing stars as zero; keep yesterday's blob over a demoted ranking
+  const coverage =
+    allRepos.length === 0 ? 1 : repoDataMap.size / allRepos.length
+  if (coverage < MIN_REPO_COVERAGE) {
+    throw new Error(
+      `GitHub enrichment covered ${(coverage * 100).toFixed(0)}% of ${allRepos.length} repos ` +
+        `(${failedBatches} batch(es) failed), below the ${MIN_REPO_COVERAGE * 100}% floor`
+    )
+  }
+
   // Transform the data with enriched repos
   return appData.map(({ repos, ...app }) => ({
-    ...app,
-    repos: repos.map((repoUrl) => {
+    ...(app as Omit<T, "repos">),
+    repos: repos.map((repoEntry) => {
+      const repoUrl = typeof repoEntry === "string" ? repoEntry : repoEntry.href
       const data = repoDataMap.get(repoUrl)
       return {
         href: repoUrl,
         stargazers: data?.stargazerCount,
+        forks: data?.forkCount,
+        watchers: data?.watcherCount,
+        subscribers: data?.subscriberCount,
+        openIssues: data?.openIssueCount,
+        isArchived: data?.isArchived,
+        isFork: data?.isFork,
+        daysSincePush: daysSince(data?.pushedAt ?? null),
         lastUpdated: data?.lastCommitDate,
       }
     }),

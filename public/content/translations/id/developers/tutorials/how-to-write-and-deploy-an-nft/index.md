@@ -227,7 +227,7 @@ Kemudian, buat file `.env` di direktori root proyek kita, dan tambahkan kunci pr
 
 - Lihat di bawah ini untuk mendapatkan URL API Alchemy HTTP dan salin ke papan klip Anda
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 `.env` Anda sekarang akan terlihat seperti ini:
 

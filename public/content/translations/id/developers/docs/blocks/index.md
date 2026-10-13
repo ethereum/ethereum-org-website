@@ -151,3 +151,5 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 - [Transaksi](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

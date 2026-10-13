@@ -2,6 +2,7 @@
 title: Verkle stromy
 description: Obecný popis Verkle stromů a toho, jak budou použity k aktualizaci Etherea
 lang: cs
+template: roadmap
 summaryPoints:
   - Zjistěte, co jsou Verkle stromy
   - Přečtěte si, proč jsou Verkle stromy užitečnou aktualizací pro Ethereum

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { EventItem } from "@/lib/types"
 
@@ -14,8 +14,6 @@ import { sanitize } from "../utils"
 import EventCard from "./event-card"
 import NoResultsAlert from "./no-results-alert"
 
-import useTranslation from "@/hooks/useTranslation"
-
 const MAX_RESULTS = 6
 
 type FilterProps = { events: EventItem[] }
@@ -23,7 +21,7 @@ type FilterProps = { events: EventItem[] }
 export default function FilterEvents({ events }: FilterProps) {
   const locale = useLocale()
 
-  const { t } = useTranslation("page-community-events")
+  const t = useTranslations("page-community-events")
 
   const [filter, setFilter] = useState<string>("")
 

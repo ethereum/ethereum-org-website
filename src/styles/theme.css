@@ -158,6 +158,7 @@
   --color-background-low: hsla(var(--background-low));
   --color-background-medium: hsla(var(--background-medium));
   --color-background-high: hsla(var(--background-high));
+  --color-overlay: hsla(var(--overlay));
 
   /* Colors: border */
   --color-border: hsla(var(--border));

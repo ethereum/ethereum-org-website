@@ -5,7 +5,7 @@ description: "Ein Überblick über KI-Agenten auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: Menschen versammelt an einem Terminal-Tisch
 summaryPoints:
   - "KI, die mit der Blockchain interagiert und eigenständig handelt"

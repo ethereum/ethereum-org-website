@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/smart-contract-security-guidelines/index.md",
   "generatedAt": "2026-06-17T00:56:11.911Z",
-  "rootHash": "ce637bad7c3b",
+  "rootHash": "c047896d5e44",
   "tree": {
-    "contentHash": "ef04c5b90a46",
-    "anchorHash": "0af4098f328a",
+    "contentHash": "38338a295ef3",
+    "anchorHash": "c652d2f5078b",
     "children": {
       "frontmatter:title": {
         "contentHash": "1ca096049f10",
@@ -17,11 +17,30 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f10cc36124c6"
+        "anchorHash": "d78efb663a1b"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "552d8183fdba"
+        "contentHash": "742c3eddde57",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

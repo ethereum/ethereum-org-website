@@ -81,7 +81,7 @@ node scripts/mint-nft.js
 
 अधिक विज़ुअल लर्नर्स के लिए, उपरोक्त चरणों को यहाँ संक्षेप में प्रस्तुत किया गया है:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 अब, हम Pinata पर एक और दस्तावेज़ अपलोड करना चाहेंगे। लेकिन ऐसा करने से पहले, हमें इसे बनाना होगा!
 
@@ -109,7 +109,7 @@ json में डेटा बदलने के लिए स्वतंत�
 
 एक बार जब आप JSON फ़ाइल का संपादन पूरा कर लें, तो इसे सहेजें और छवि अपलोड करने के लिए हमारे द्वारा किए गए समान चरणों का पालन करते हुए इसे Pinata पर अपलोड करें।
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## चरण 5: अपने अनुबंध का एक उदाहरण (instance) बनाएं {#instance-contract}
 

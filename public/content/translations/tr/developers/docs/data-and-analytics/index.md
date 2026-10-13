@@ -60,10 +60,18 @@ Başlamak için, [SubQuery'nin yönetilen hizmetinde](https://managedservice.sub
 
 Başlamak için [belgeleri](https://docs.codex.io) ziyaret edin, [Gezgini](https://docs.codex.io/explore) deneyin veya [panoya](https://dashboard.codex.io/signup) kaydolun.
 
+
+[Mobula](https://mobula.io/), 90'dan fazla blokzincirde gerçek zamanlı ve geçmiş piyasa verileri, Token meta verileri, Cüzdan portföyleri ve zincir içi analitikler sağlayan yüksek performanslı bir kripto veri API'sidir. Geliştiriciler, kendi altyapılarını çalıştırmadan Token fiyatları, piyasa değerleri, işlem hacimleri, Likidite verileri ve çok zincirli Cüzdan bakiyeleri için REST ve GraphQL uç noktalarına erişebilirler. Mobula, üretim uygulamaları için hem ücretsiz (ayda 100 bin istek) hem de ücretli planlar sunar.
+
+Başlamak için [belgeleri](https://docs.mobula.io) ziyaret edin, [API referansını](https://docs.mobula.io/reference/) keşfedin veya [panoya](https://mobula.io/) kaydolun.
 ## EVM Sorgu Dili {#evm-query-language}
 
 EVM Sorgu Dili (EQL), EVM (Ethereum Sanal Makinesi) zincirlerini sorgulamak için tasarlanmış SQL benzeri bir dildir. EQL'nin nihai amacı, geliştiricilere ve araştırmacılara günlük kullanım için ergonomik bir sözdizimi sağlarken EVM zincirinin birinci sınıf vatandaşları (bloklar, hesaplar ve işlemler) üzerinde karmaşık ilişkisel sorguları desteklemektir. EQL ile geliştiriciler, tanıdık SQL benzeri sözdizimini kullanarak blokzincir verilerini getirebilir ve karmaşık ortak kod (boilerplate) ihtiyacını ortadan kaldırabilir. EQL, standart blokzincir veri isteklerini (örneğin, Ethereum'da bir Hesabın nonce'unu ve bakiyesini almak veya mevcut Blok boyutunu ve zaman damgasını getirmek) destekler ve daha karmaşık istekler ile özellik setleri için sürekli olarak destek eklemektedir.
 
+
+[Envio](https://envio.dev/), zincir içi olayları sorgulanabilir bir GraphQL API'sine dönüştüren bir endeksleme çerçevesidir. Ethereum'u ve EVM uyumlu herhangi bir Zinciri destekler. Geliştiriciler; yeniden düzenleme desteği, çok zincirli endeksleme ve Envio Cloud üzerinde yönetilen barındırma veya kendi kendine barındırma seçenekleriyle gerçek zamanlı ve geçmiş verileri sunmak için TypeScript, JavaScript veya ReScript dillerinde olay işleyicileri yazarlar.
+
+Başlamak için, bir endeksleyici oluşturmak, dağıtmak ve sorgulamak üzere [HyperIndex hızlı başlangıç kılavuzunu](https://docs.envio.dev/docs/HyperIndex/quickstart) izleyin.
 ## Daha Fazla Okuma {#further-reading}
 
 - [Kripto Verilerini Keşfetmek I: Veri Akışı Mimarileri](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

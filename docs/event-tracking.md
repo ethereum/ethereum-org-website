@@ -69,7 +69,7 @@ Such division allows us to identify where a user clicked on the page precisely; 
 Ethereum.org has a utility function (`trackCustomEvent`) for easily creating Matomo events.
 
 ```javascript
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 ```
 
 The function requires an object of event options. See the example below.

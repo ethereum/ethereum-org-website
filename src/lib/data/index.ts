@@ -91,21 +91,9 @@ export const getCommunityPicks = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getCalendarEvents = createCachedGetter(
-  dataLayer.getCalendarEvents,
-  ["calendar-events"],
-  CACHE_REVALIDATE_DAY
-)
-
 export const getRSSData = createCachedGetter(
   dataLayer.getRSSData,
   ["rss-data"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getAttestantPosts = createCachedGetter(
-  dataLayer.getAttestantPosts,
-  ["attestant-posts"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -115,9 +103,9 @@ export const getStakedPercentageData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getBlobscanStats = createCachedGetter(
-  dataLayer.getBlobscanStats,
-  ["blobscan-stats"],
+export const getBlobStats = createCachedGetter(
+  dataLayer.getBlobStats,
+  ["blob-stats"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -127,27 +115,16 @@ export const getEthereumMarketcapData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getEthereumStablecoinsMcapData = createCachedGetter(
-  dataLayer.getEthereumStablecoinsMcapData,
-  ["ethereum-stablecoins-mcap-data"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGFIs = createCachedGetter(
+// Static: rendered inside MDX (contributing page), where ISR breaks on Netlify
+export const getStaticGFIs = createCachedGetter(
   dataLayer.getGFIs,
-  ["gfis"],
-  CACHE_REVALIDATE_DAY
+  ["gfis-static"],
+  false
 )
 
-export const getGitHistory = createCachedGetter(
-  dataLayer.getGitHistory,
-  ["git-history"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getGithubRepoData = createCachedGetter(
-  dataLayer.getGithubRepoData,
-  ["github-repo-data"],
+export const getQuizStats = createCachedGetter(
+  dataLayer.getQuizStats,
+  ["quiz-stats"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -163,15 +140,15 @@ export const getTotalEthStakedData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getTotalValueLockedData = createCachedGetter(
-  dataLayer.getTotalValueLockedData,
-  ["total-value-locked-data"],
-  CACHE_REVALIDATE_DAY
-)
-
 export const getEventsData = createCachedGetter(
   dataLayer.getEventsData,
   ["events-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getMeetupImages = createCachedGetter(
+  dataLayer.getMeetupImages,
+  ["meetup-images"],
   CACHE_REVALIDATE_DAY
 )
 
@@ -181,15 +158,22 @@ export const getDeveloperToolsData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+/**
+ * Static-cached version of getDeveloperToolsData -- no revalidation.
+ * Used by the force-static sitemap: a finite revalidate opts the route into
+ * ISR, whose serverless re-render can't read public/content (excluded from the
+ * function bundle), yielding a truncated/empty sitemap. Refreshes on deploy.
+ * See: docs/solutions/integration-issues/netlify-isr-404-async-server-components.md
+ */
+export const getStaticDeveloperToolsData = createCachedGetter(
+  dataLayer.getDeveloperToolsData,
+  ["developer-tools-data-static"],
+  false
+)
+
 export const getAccountHolders = createCachedGetter(
   dataLayer.getAccountHolders,
   ["account-holders"],
-  CACHE_REVALIDATE_DAY
-)
-
-export const getTranslationGlossary = createCachedGetter(
-  dataLayer.getTranslationGlossary,
-  ["translation-glossary"],
   CACHE_REVALIDATE_DAY
 )
 

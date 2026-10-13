@@ -2,6 +2,7 @@
 title: zkEVM für die L1-Blockvalidierung
 description: Erfahre, wie Zero-Knowledge-Beweise die Ausführung von Ethereum-Blöcken verifizieren können, was einen höheren Transaktionsdurchsatz und geringere Anforderungen an Validatoren ermöglicht.
 lang: de
+template: roadmap
 ---
 
 Die zkEVM ist eine Technologie, die [Zero-Knowledge-Beweise](/zero-knowledge-proofs/) verwendet, um die Ausführung von Ethereum-Blöcken zu verifizieren. Anstatt dass jeder [Validator](/glossary/#validator) alle Transaktionen in einem Block erneut ausführen muss, führt ein einzelner spezialisierter Akteur (ein sogenannter „Beweiser“) den Block aus und erstellt einen kryptografischen Beweis dafür, dass die Ausführung korrekt war. Jeder Knoten kann diesen Beweis dann verifizieren – ein Prozess, der um Größenordnungen günstiger ist als die erneute Ausführung aller Transaktionen.

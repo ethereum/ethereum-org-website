@@ -1,4 +1,4 @@
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { HStack, VStack } from "@/components/ui/flex"
 
@@ -7,7 +7,6 @@ import { numberToPercent } from "@/lib/utils/numbers"
 import { screens } from "@/lib/utils/screen"
 
 import { useMediaQuery } from "@/hooks/useMediaQuery"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type QuizSummaryProps = {
   numberOfCorrectAnswers: number
@@ -23,7 +22,7 @@ export const QuizSummary = ({
   isPassingScore,
 }: QuizSummaryProps) => {
   const locale = useLocale()
-  const { t } = useTranslation("learn-quizzes")
+  const t = useTranslations("learn-quizzes")
 
   const [largerThanMobile] = useMediaQuery([`(min-width: ${screens.sm})`])
 

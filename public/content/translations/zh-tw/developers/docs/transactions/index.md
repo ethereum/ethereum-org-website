@@ -238,3 +238,7 @@ _知道有什麼社群資源對你有幫助嗎？編輯此頁面並加入它！_
 - [帳戶](/developers/docs/accounts/)
 - [以太坊虛擬機 (EVM)](/developers/docs/evm/)
 - [燃料](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

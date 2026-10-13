@@ -18,7 +18,7 @@ Continua a leggere per maggiori dettagli...
 
 ### Ricompense {#rewards-2}
 
-I validatori ricevono ricompense quando esprimono voti coerenti con la maggioranza degli altri validatori, quando propongono blocchi e quando partecipano ai comitati di sincronizzazione. Il valore delle ricompense in ogni epoca è calcolato da una `base_reward`. Questa è l'unità di base da cui vengono calcolate le altre ricompense. La `base_reward` rappresenta la ricompensa media ricevuta da un validatore in condizioni ottimali per epoca. Questa viene calcolata dal saldo effettivo del validatore e dal numero totale di validatori attivi come segue:
+I validatori ricevono ricompense quando esprimono voti coerenti con la maggioranza degli altri validatori, quando propongono blocchi e quando partecipano ai comitati di sincronizzazione. Il valore delle ricompense in ogni epoca è calcolato a partire da una `base_reward`. Questa è l'unità di base da cui vengono calcolate le altre ricompense. La `base_reward` rappresenta la ricompensa media ricevuta da un validatore in condizioni ottimali per epoca. Questa viene calcolata dal saldo effettivo del validatore e dal numero totale di validatori attivi come segue:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 dove `base_reward_factor` è 64, `base_rewards_per_epoch` è 4 e `sum(active balance)` è l'ether totale in staking tra tutti i validatori attivi.
 
-Ciò significa che la ricompensa di base è proporzionale al saldo effettivo del validatore e inversamente proporzionale al numero di validatori sulla rete. Più validatori ci sono, maggiore è l'emissione complessiva (poiché `sqrt(N)` ma minore è la `base_reward` per validatore (poiché `1/sqrt(N)`). Questi fattori influenzano l'APR per un nodo di staking. Leggi la logica alla base di questo negli [appunti di Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Ciò significa che la ricompensa di base è proporzionale al saldo effettivo del validatore e inversamente proporzionale al numero di validatori sulla rete. Più validatori ci sono, maggiore è l'emissione complessiva (come `sqrt(N)`) ma minore è la `base_reward` per validatore (come `1/sqrt(N)`). Questi fattori influenzano l'APR per un nodo di staking. Leggi la logica alla base di questo negli [appunti di Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 La ricompensa totale viene quindi calcolata come la somma di cinque componenti, ognuna delle quali ha una ponderazione che determina quanto ciascuna componente aggiunge alla ricompensa totale. Le componenti sono:
 
-```
-1. source vote: il validatore ha espresso un voto tempestivo per il checkpoint di origine corretto
-2. target vote: il validatore ha espresso un voto tempestivo per il checkpoint di destinazione corretto
-3. head vote: il validatore ha espresso un voto tempestivo per il blocco di testa corretto
-4. sync committee reward: il validatore ha partecipato a un comitato di sincronizzazione
-5. proposer reward: il validatore ha proposto un blocco nello slot corretto
+```text
+1. voto di origine: il validatore ha espresso un voto tempestivo per il checkpoint di origine corretto
+2. voto di destinazione: il validatore ha espresso un voto tempestivo per il checkpoint di destinazione corretto
+3. voto di testa: il validatore ha espresso un voto tempestivo per il blocco di testa corretto
+4. ricompensa del comitato di sincronizzazione: il validatore ha partecipato a un comitato di sincronizzazione
+5. ricompensa del proponente: il validatore ha proposto un blocco nello slot corretto
 ```
 
 Le ponderazioni per ciascuna componente sono le seguenti:
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Questi pesi sommano a 64. La ricompensa è calcolata come la somma dei pesi applicabili divisa per 64. Un validatore che ha espresso voti tempestivi per l'origine, la destinazione e la testa, ha proposto un blocco e ha partecipato a un comitato di sincronizzazione potrebbe ricevere `64/64 * base_reward == base_reward`. Tuttavia, un validatore di solito non è un proponente del blocco, quindi la sua ricompensa massima è `64-8 /64 * base_reward == 7/8 * base_reward`. I validatori che non sono né proponenti del blocco né in un comitato di sincronizzazione possono ricevere `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Questi pesi sommano a 64. La ricompensa è calcolata come la somma dei pesi applicabili divisa per 64. Un validatore che ha espresso voti tempestivi di origine, destinazione e testa, ha proposto un blocco e ha partecipato a un comitato di sincronizzazione potrebbe ricevere `64/64 * base_reward == base_reward`. Tuttavia, un validatore di solito non è un proponente del blocco, quindi la sua ricompensa massima è `64-8 /64 * base_reward == 7/8 * base_reward`. I validatori che non sono né proponenti del blocco né in un comitato di sincronizzazione possono ricevere `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
 Viene aggiunta un'ulteriore ricompensa per incentivare attestazioni rapide. Questa è la `inclusion_delay_reward`. Ha un valore pari alla `base_reward` moltiplicata per `1/delay` dove `delay` è il numero di slot che separano la proposta del blocco e l'attestazione. Ad esempio, se l'attestazione viene inviata entro uno slot dalla proposta del blocco, l'attestatore riceve `base_reward * 1/1 == base_reward`. Se l'attestazione arriva nello slot successivo, l'attestatore riceve `base_reward * 1/2` e così via.
 
-I proponenti del blocco ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori attestanti. I proponenti del blocco possono anche aumentare la loro ricompensa includendo prove di comportamento scorretto da parte di altri validatori nel blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà dei validatori. Un proponente del blocco che include uno slashing verrà ricompensato con la `slashed_validators_effective_balance / 512`.
+I proponenti del blocco ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori che attestano. I proponenti del blocco possono anche aumentare la loro ricompensa includendo prove di comportamento scorretto da parte di altri validatori nel blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà dei validatori. Un proponente del blocco che include uno slashing verrà ricompensato con `slashed_validators_effective_balance / 512`.
 
 ### Penalità {#penalties}
 

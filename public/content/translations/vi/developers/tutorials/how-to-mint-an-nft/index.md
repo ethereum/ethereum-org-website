@@ -77,7 +77,7 @@ Sau khi bạn đã tạo tài khoản:
 
 Đối với những người học trực quan hơn, các bước trên được tóm tắt tại đây:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Bây giờ, chúng ta sẽ muốn tải thêm một tài liệu nữa lên Pinata. Nhưng trước khi làm điều đó, chúng ta cần tạo nó!
 
@@ -105,7 +105,7 @@ Bạn có thể thoải mái thay đổi dữ liệu trong json. Bạn có thể
 
 Sau khi bạn chỉnh sửa xong tệp JSON, hãy lưu nó và tải lên Pinata, làm theo các bước tương tự như chúng ta đã làm để tải hình ảnh lên.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Bước 5: Tạo một phiên bản của hợp đồng của bạn {#instance-contract}
 

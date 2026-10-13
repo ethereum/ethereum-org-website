@@ -1,0 +1,113 @@
+import { getConfig } from "./config.ts"
+import { sendMatomoHit } from "./http.ts"
+import { createLogger } from "./logger.ts"
+import { buildMatomoPayload } from "./matomo.ts"
+import type { MatomoConfig, NetlifyEdgeContext } from "./types.ts"
+
+declare const Netlify: {
+  env: {
+    toObject: () => Record<string, string | undefined>
+  }
+}
+
+// If the function itself errors at the platform level, skip it and continue
+// to origin rather than failing the user request
+export const config = { onError: "bypass" }
+
+const trackRequest = async (
+  request: Request,
+  response: Response,
+  durationMs: number,
+  config: MatomoConfig
+) => {
+  const log = createLogger(config.logLevel)
+
+  try {
+    const payload = buildMatomoPayload(
+      request,
+      response,
+      durationMs,
+      config,
+      new Date(Date.now() - durationMs)
+    )
+
+    if (!payload) {
+      log.debug("Tracking skipped")
+      return
+    }
+
+    await sendMatomoHit(
+      config.matomoUrl,
+      payload,
+      config.matomoTimeoutMs,
+      config.logLevel
+    )
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+
+    log.warn("Tracking failed", {
+      error: message,
+    })
+  }
+}
+
+export default async function handler(
+  request: Request,
+  context: NetlifyEdgeContext
+) {
+  const env = Netlify.env.toObject()
+
+  // Kill switch: tracking must be explicitly enabled per deploy context
+  if (env.MATOMO_AI_TRACKER_ENABLED !== "true") {
+    return context.next()
+  }
+
+  let config: MatomoConfig | null = null
+
+  try {
+    config = getConfig(env)
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+
+    console.error("Configuration error", {
+      error: message,
+    })
+
+    return context.next()
+  }
+
+  const log = createLogger(config.logLevel)
+
+  const start = Date.now()
+
+  try {
+    const response = await context.next()
+
+    const durationMs = Date.now() - start
+
+    context.waitUntil(trackRequest(request, response, durationMs, config))
+
+    return response
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+
+    log.error("Origin request failed", {
+      error: message,
+    })
+
+    const durationMs = Date.now() - start
+
+    // Record the failure for the report's 5xx column, then rethrow so
+    // onError: "bypass" serves origin instead of a hand-rolled error page
+    context.waitUntil(
+      trackRequest(
+        request,
+        new Response(null, { status: 502 }),
+        durationMs,
+        config
+      )
+    )
+
+    throw err
+  }
+}

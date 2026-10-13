@@ -17,7 +17,7 @@ breadcrumb: "Community.eth 1. Bölüm"
 
 *Bu döküm, Optimist tarafından yayınlanan [orijinal videonun](https://www.youtube.com/watch?v=onCwaj1FM-4) erişilebilir bir kopyasıdır. Okunabilirliği artırmak için üzerinde ufak düzenlemeler yapılmıştır. Konuşmacılar Ethereum topluluğunun üyeleridir ve videoda hepsinin kimliği tek tek belirtilmemiştir.*
 
-#### Ethereum nedir? (0:00) {#what-is-ethereum-000}
+### Ethereum nedir? (0:00) {#what-is-ethereum-000}
 
 **1. Kişi:** Ethereum nedir?
 
@@ -29,7 +29,7 @@ breadcrumb: "Community.eth 1. Bölüm"
 
 **4. Kişi:** Ethereum, birçok insan için birçok şey ifade ediyor.
 
-#### Onu güçlü kılan şey (0:40) {#what-makes-it-powerful-040}
+### Onu güçlü kılan şey (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Ethereum'un sahip olduğu potansiyel çok büyük çünkü onu henüz tanımlayamıyoruz bile. Bence bu çok güçlü bir şey.
 
@@ -43,7 +43,7 @@ breadcrumb: "Community.eth 1. Bölüm"
 
 **Simona Pop:** Ethereum, benim için internetin evrimindeki bir sonraki aşamadır.
 
-#### Neden inşa ediyoruz (2:00) {#why-we-build-200}
+### Neden inşa ediyoruz (2:00) {#why-we-build-200}
 
 **Simona Pop:** Evet, fiyat yükseldiğinde elbette bir heyecan oluyor, ancak insanlar ve gerçek inananlar fiyat düştüğünde de, yükseldiğinde de buradalar; bunun pek bir önemi yok. Bunu yapıyoruz çünkü inşa ettiğimiz şeye gerçekten inanıyoruz.
 
@@ -51,7 +51,7 @@ breadcrumb: "Community.eth 1. Bölüm"
 
 **Alexis Ohanian:** Toplumun pek çok kurumunu gerçek bir sahiplikle, hayatınızın geri kalanı boyunca, nesiller boyunca, temelde sonsuza dek değer biriktirme yeteneğiyle yeniden hayal etme şansına sahibiz. Bunun kilidinin açıldığını görmeyi gerçekten çok istiyorum.
 
-#### Topluluk (3:00) {#the-community-300}
+### Topluluk (3:00) {#the-community-300}
 
 **Amber Baldet:** Ethereum topluluğunu gerçekten farklı kılan şeylerden biri, başından beri biraz saçmalamaktan korkmamaları oldu. Bunu tek boynuzlu atlarda, saçma gökkuşağı renklerinde, danslarda ve şarkılarda görüyorsunuz; ve bu saçmalık, tüm ekosisteme bir umut duygusu veriyor. Ve bugünlerde insanların gerçekten ihtiyaç duyduğu şey umuttur.
 

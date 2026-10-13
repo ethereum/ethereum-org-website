@@ -231,7 +231,7 @@ Hardhat हे तुमचे इथेरियम सॉफ्टवेअर
 
 - HTTP Alchemy API URL मिळवण्यासाठी खाली पहा आणि ते तुमच्या क्लिपबोर्डवर कॉपी करा
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 तुमचे `.env` आता असे दिसले पाहिजे:
 

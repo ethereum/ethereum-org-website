@@ -188,6 +188,7 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)
+- [ERC-7540 - Asynchronous tokenized vaults](/developers/docs/standards/tokens/erc-7540)
 
 ## Tutorials: Build with ERC-20 on Ethereum {#tutorials}
 

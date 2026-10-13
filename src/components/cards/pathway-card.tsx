@@ -51,14 +51,12 @@ const PathwayCard = ({
       variant="nested"
       className={cn("@lg/pathway:flex-row", className)}
       border
-      hoverLift
     >
       {banner && (
         <CardBanner
           background="none"
           fit="contain"
           size="full"
-          zoom={false}
           className="flex h-32 w-full shrink-0 items-center justify-center p-2 pt-4 @lg/pathway:h-36 @lg/pathway:w-40 @lg/pathway:self-center @lg/pathway:p-2"
         >
           {banner}

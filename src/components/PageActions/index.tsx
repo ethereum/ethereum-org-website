@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 
 import CopyPageButton from "@/components/CopyPageButton"
 import Github from "@/components/icons/github.svg"
@@ -9,7 +10,6 @@ import { cn } from "@/lib/utils/cn"
 
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 
 type PageActionsProps = {
@@ -27,7 +27,7 @@ const PageActions = ({
   hideEditButton,
   className,
 }: PageActionsProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const pathname = usePathname()
   const hasListenToPlaylist = getPlaylistBySlug(slug).index !== -1
 

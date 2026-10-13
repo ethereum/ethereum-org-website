@@ -5,7 +5,7 @@ description: Gambaran umum tentang agen AI di Ethereum
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: Orang-orang berkumpul di meja terminal
 summaryPoints:
   - "AI yang berinteraksi dengan rantai blok dan berdagang secara mandiri"

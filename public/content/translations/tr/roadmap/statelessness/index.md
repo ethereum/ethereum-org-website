@@ -2,6 +2,7 @@
 title: "Durumsuzluk, durum zaman aşımı ve geçmiş sonlanması"
 description: "Geçmiş sonlanması ve durumsuz Ethereum'un açıklaması"
 lang: tr
+template: roadmap
 ---
 
 Mütevazı donanımlarda [Ethereum](/) düğümleri çalıştırabilme yeteneği, gerçek merkeziyetsizlik için kritik öneme sahiptir. Bunun nedeni, bir düğüm çalıştırmanın kullanıcılara, verileri sağlaması için üçüncü bir tarafa güvenmek yerine kriptografik kontrolleri bağımsız olarak gerçekleştirerek bilgileri doğrulama yeteneği vermesidir. Bir düğüm çalıştırmak, kullanıcıların bir aracıya güvenmek zorunda kalmadan işlemleri doğrudan Ethereum eşler arası ağına göndermesine olanak tanır. Bu avantajlar yalnızca pahalı donanıma sahip kullanıcılar için mevcutsa merkeziyetsizlik mümkün değildir. Bunun yerine düğümler, cep telefonlarında, mikro bilgisayarlarda veya bir ev bilgisayarında fark edilmeden çalışabilmeleri için son derece mütevazı işlem ve bellek gereksinimleriyle çalışabilmelidir.

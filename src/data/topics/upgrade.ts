@@ -43,11 +43,15 @@ export const upgrade: TopicConfig = {
         matomoEvent: "/roadmap/glamsterdam/",
       },
       {
+        textKey: "page-upgrades-upgrades-hegota",
+        href: "/roadmap/hegota/",
+        matomoEvent: "/roadmap/hegota/",
+      },
+      {
         textKey: "page-upgrades-upgrades-forks",
         href: "/ethereum-forks/",
         matomoEvent: "/ethereum-forks/",
       },
     ],
   },
-  showLastUpdatedInHero: true,
 }

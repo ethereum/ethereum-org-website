@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "locale": "mr",
+  "translatedAt": "2026-07-22T23:32:48.949Z",
+  "englishManifestHash": "b23145fed5b4",
+  "placeholderOrder": [
+    "LINK-715cf3",
+    "LINK-d0ae01",
+    "LINK-fb2e62",
+    "LINK-113369",
+    "IMAGE-ed7ecc",
+    "CODE-d89320",
+    "CODE-2df2ce",
+    "IMAGE-4d9c16",
+    "CODE-67f3b7",
+    "CODE-cef3c0",
+    "CODE-c3b9fb",
+    "CODE-dc6f17",
+    "CODE-c26f22",
+    "CODE-2e5106",
+    "CODE-0af57f",
+    "CODE-361b84",
+    "IMAGE-f1963a",
+    "CODEBLOCK-36a9c0",
+    "CODE-4c1029",
+    "CODE-8bf729",
+    "CODE-c14721",
+    "CODE-216375",
+    "CODEBLOCK-2d6fd4",
+    "CODE-c14721",
+    "CODE-216375",
+    "CODE-8bf729",
+    "CODEBLOCK-d594eb",
+    "CODE-c14721",
+    "CODE-216375",
+    "CODE-8bf729",
+    "LINK-4f9d05",
+    "CODE-c3b9fb",
+    "LINK-bdf99a",
+    "CODE-dc6f17",
+    "CODEBLOCK-916d10",
+    "CODE-4c1029",
+    "CODE-4a6460",
+    "CODE-c14721",
+    "CODEBLOCK-001602",
+    "CODE-c14721",
+    "CODE-216375",
+    "CODE-4a6460",
+    "CODEBLOCK-c8e7e6",
+    "CODE-c14721",
+    "CODE-216375",
+    "CODE-4a6460",
+    "LINK-7ea905",
+    "CODE-2e5106",
+    "LINK-72815c",
+    "CODE-c26f22",
+    "LINK-614971",
+    "CODEBLOCK-c1ab72",
+    "CODE-bfa3d0",
+    "CODE-06e55b",
+    "CODEBLOCK-767804",
+    "CODE-c14721",
+    "CODE-06e55b",
+    "CODE-216375",
+    "CODE-7646a3",
+    "CODE-c14721",
+    "LINK-165dea",
+    "CODE-0af57f",
+    "CODEBLOCK-021eb0",
+    "LINK-9e7dee",
+    "CODE-361b84",
+    "CODEBLOCK-a9573e",
+    "LINK-5667b7",
+    "CODE-ef8500",
+    "CODEBLOCK-1d6540",
+    "CODE-ab38cf",
+    "CODE-7d441a",
+    "CODE-8c577a",
+    "CODE-e33d41",
+    "LINK-0055e9",
+    "LINK-f8ffed",
+    "LINK-a3034a"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-36a9c0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2d6fd4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-d594eb": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-916d10": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-001602": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c8e7e6": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c1ab72": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-767804": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-021eb0": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a9573e": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1d6540": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-d89320": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestDeposit()"
+      }
+    },
+    "CODE-2df2ce": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit()"
+      }
+    },
+    "CODE-67f3b7": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestRedeem()"
+      }
+    },
+    "CODE-cef3c0": {
+      "type": "inline-code",
+      "values": {
+        "content": "redeem()"
+      }
+    },
+    "CODE-c3b9fb": {
+      "type": "inline-code",
+      "values": {
+        "content": "deposit"
+      }
+    },
+    "CODE-dc6f17": {
+      "type": "inline-code",
+      "values": {
+        "content": "mint"
+      }
+    },
+    "CODE-c26f22": {
+      "type": "inline-code",
+      "values": {
+        "content": "withdraw"
+      }
+    },
+    "CODE-2e5106": {
+      "type": "inline-code",
+      "values": {
+        "content": "redeem"
+      }
+    },
+    "CODE-0af57f": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestDeposit"
+      }
+    },
+    "CODE-361b84": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestRedeem"
+      }
+    },
+    "CODE-8bf729": {
+      "type": "inline-code",
+      "values": {
+        "content": "assets"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
+      }
+    },
+    "CODE-c14721": {
+      "type": "inline-code",
+      "values": {
+        "content": "controller"
+      }
+    },
+    "CODE-216375": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestId"
+      }
+    },
+    "CODE-4a6460": {
+      "type": "inline-code",
+      "values": {
+        "content": "shares"
+      }
+    },
+    "CODE-06e55b": {
+      "type": "inline-code",
+      "values": {
+        "content": "operator"
+      }
+    },
+    "CODE-bfa3d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "msg.sender"
+      }
+    },
+    "CODE-7646a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "requestId = 0"
+      }
+    },
+    "CODE-ef8500": {
+      "type": "inline-code",
+      "values": {
+        "content": "setOperator"
+      }
+    },
+    "CODE-ab38cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "previewDeposit"
+      }
+    },
+    "CODE-7d441a": {
+      "type": "inline-code",
+      "values": {
+        "content": "previewMint"
+      }
+    },
+    "CODE-8c577a": {
+      "type": "inline-code",
+      "values": {
+        "content": "previewRedeem"
+      }
+    },
+    "CODE-e33d41": {
+      "type": "inline-code",
+      "values": {
+        "content": "previewWithdraw"
+      }
+    },
+    "IMAGE-ed7ecc": {
+      "type": "image",
+      "values": {
+        "path": "./erc-4626-sync-flow.svg"
+      }
+    },
+    "IMAGE-4d9c16": {
+      "type": "image",
+      "values": {
+        "path": "./erc-7540-async-flow.svg"
+      }
+    },
+    "IMAGE-f1963a": {
+      "type": "image",
+      "values": {
+        "path": "./request-lifecycle.svg"
+      }
+    },
+    "LINK-715cf3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/"
+      }
+    },
+    "LINK-d0ae01": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-113369": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/"
+      }
+    },
+    "LINK-4f9d05": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/#deposit"
+      }
+    },
+    "LINK-bdf99a": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/#mint"
+      }
+    },
+    "LINK-7ea905": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/#redeem"
+      }
+    },
+    "LINK-72815c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-4626/#withdraw"
+      }
+    },
+    "LINK-614971": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-6909"
+      }
+    },
+    "LINK-165dea": {
+      "type": "link",
+      "values": {
+        "url": "#requestdeposit"
+      }
+    },
+    "LINK-9e7dee": {
+      "type": "link",
+      "values": {
+        "url": "#requestredeem"
+      }
+    },
+    "LINK-5667b7": {
+      "type": "link",
+      "values": {
+        "url": "#setoperator"
+      }
+    },
+    "LINK-0055e9": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7540"
+      }
+    },
+    "LINK-f8ffed": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4626"
+      }
+    },
+    "LINK-a3034a": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-22T23:32:48.949Z",
+      "status": "success"
+    }
+  }
+}

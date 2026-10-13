@@ -1,6 +1,6 @@
 "use client"
-
 import React, { type ReactNode, useState } from "react"
+import { useTranslations } from "next-intl"
 import type { AccordionContentProps } from "@radix-ui/react-accordion"
 
 import { HStack } from "@/components/ui/flex"
@@ -14,8 +14,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 export type ExpandableCardProps = {
   children?: ReactNode
@@ -42,7 +40,7 @@ const ExpandableCard = ({
   forceMount = true,
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,

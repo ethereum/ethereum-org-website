@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/payments/index.md",
-  "generatedAt": "2026-06-18T00:36:06.493Z",
-  "rootHash": "b1f0765ced73",
+  "generatedAt": "2026-08-07T06:11:31.315Z",
+  "rootHash": "28d9e5ddcb7f",
   "tree": {
-    "contentHash": "df186b638de6",
-    "anchorHash": "a8d6f9cd5ad7",
+    "contentHash": "02f01460281e",
+    "anchorHash": "0a2423c9bb52",
     "children": {
       "frontmatter:title": {
         "contentHash": "e731b2c33eaf",
@@ -40,8 +40,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "8ffe39f84891",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "4b4152948eaa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "6032169e962b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e1a9edc5873a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:0": {
         "contentHash": "29fab61a5eda",
@@ -606,8 +625,8 @@
         ]
       },
       "ethereum-vs-fiat": {
-        "contentHash": "7bab72d05ddc",
-        "anchorHash": "86f975fb3732",
+        "contentHash": "d3046e749313",
+        "anchorHash": "06eb81a77c81",
         "labelHash": "8fa8447b3b57",
         "children": {
           "_label": {
@@ -676,8 +695,8 @@
             ]
           },
           "transparency": {
-            "contentHash": "ff01134294dd",
-            "anchorHash": "8a9371acde63",
+            "contentHash": "9878b5e9e390",
+            "anchorHash": "30a5d8e92603",
             "labelHash": "8b773803e66e",
             "children": {
               "_label": {
@@ -767,6 +786,20 @@
                   "component:0",
                   "component:1"
                 ]
+              },
+              "component:5": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:6": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "5adb08677d65",
+                "children": {
+                  "attr:quizKey": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "df384ae97c77"
+                  }
+                }
               }
             },
             "childrenOrder": [
@@ -774,7 +807,9 @@
               "prose:0",
               "component:2",
               "prose:0",
-              "component:4"
+              "component:4",
+              "component:5",
+              "component:6"
             ]
           }
         },
@@ -810,5 +845,5 @@
       "ethereum-vs-fiat"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
 }

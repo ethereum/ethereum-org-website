@@ -60,6 +60,7 @@ const {
   fixEscapedQuotesInJsxAttributes,
   fixTranslatedJsonPlaceholders,
   fixBareRtlValues,
+  fixBareRtlDates,
   fixUnitOutsideSpan,
   fixMisalignedCodeFences,
   convertSpansToJsonBidi,
@@ -2959,6 +2960,51 @@ author: Ori Pomerantz
       const { content, fixCount } = fixBareRtlValues(input, "ur")
       expect(content).toBe('سائز <span dir="ltr">2x</span> ہے')
       expect(fixCount).toBe(1)
+    })
+
+    // Frontmatter-only files (e.g. /videos stubs) may have no trailing newline
+    // after the closing `---`; the guard must still treat it all as frontmatter.
+    test("skips frontmatter with no trailing newline", () => {
+      const input = "---\ntitle: 32 ETH staking\n---"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixBareRtlDates", () => {
+    test("wraps a bare date in body prose", () => {
+      const input = "اپ ڈیٹ 2025-12-09 کو جاری ہوئی"
+      const { content, fixCount } = fixBareRtlDates(input, "ur")
+      expect(content).toBe(
+        'اپ ڈیٹ <span dir="ltr">2025-12-09</span> کو جاری ہوئی'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips frontmatter", () => {
+      const input = "---\nuploadDate: 2025-12-09\n---\n\nمتن"
+      const { content, fixCount } = fixBareRtlDates(input, "ur")
+      expect(content).toContain("uploadDate: 2025-12-09")
+      expect(fixCount).toBe(0)
+    })
+
+    // Regression: PR #18938 shipped `uploadDate: <span dir="ltr">2025-12-09</span>`
+    // in ar/ur video stubs. Those files are frontmatter-only with no trailing
+    // newline, so the old guard failed to match and wrapped the YAML date,
+    // breaking formatDate() and the schema.org VideoObject uploadDate.
+    test("skips frontmatter-only file with no trailing newline", () => {
+      const input = '---\nuploadDate: 2025-12-09\nduration: "0:21:15"\n---'
+      const { content, fixCount } = fixBareRtlDates(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no-ops for non-RTL locales", () => {
+      const input = "released on 2025-12-09"
+      const { content, fixCount } = fixBareRtlDates(input, "es")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
     })
   })
 

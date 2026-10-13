@@ -19,7 +19,7 @@ published: 2021-04-22
 
 У верхній частині додатка натисніть кнопку «Гаманець» (Wallet), після чого вам буде запропоновано вибрати мережу. Оскільки наш NFT був викарбуваний у мережі Sepolia, вам потрібно вибрати Sepolia як вашу мережу.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Крок 2: Додайте свій предмет колекціонування до МетаМаск {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 Можливо, вам доведеться оновити сторінку кілька разів, щоб побачити свій NFT — але він буде там <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Вітаємо! Ви успішно викарбували NFT, і тепер можете його переглядати! Ми з нетерпінням чекаємо, щоб побачити, як ви підкорите світ NFT!

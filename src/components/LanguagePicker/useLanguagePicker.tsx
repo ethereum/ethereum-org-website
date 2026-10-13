@@ -41,7 +41,7 @@ export const useLanguagePicker = (languages: LocaleDisplayInfo[]) => {
     return [...languages]
       .map((displayInfo) => {
         const isBrowserDefault = intlLocalePreferences.includes(
-          displayInfo.localeOption as Lang
+          displayInfo.localeOption
         )
         return {
           ...displayInfo,
@@ -49,12 +49,8 @@ export const useLanguagePicker = (languages: LocaleDisplayInfo[]) => {
         }
       })
       .sort((a, b) => {
-        const aPreferenceIndex = intlLocalePreferences.indexOf(
-          a.localeOption as Lang
-        )
-        const bPreferenceIndex = intlLocalePreferences.indexOf(
-          b.localeOption as Lang
-        )
+        const aPreferenceIndex = intlLocalePreferences.indexOf(a.localeOption)
+        const bPreferenceIndex = intlLocalePreferences.indexOf(b.localeOption)
 
         // First, sort by browser preferences (all browser preferences come first)
         if (a.isBrowserDefault && !b.isBrowserDefault) return -1

@@ -1,7 +1,7 @@
 ---
-title: ব্লকচেইন সেতু
-metaTitle: ব্লকচেইন সেতুর পরিচিতি
-description: সেতু ব্যবহারকারীদের তাদের তহবিল বিভিন্ন ব্লকচেইনের মধ্যে স্থানান্তর করতে দেয়
+title: "ব্লকচেইন সেতু"
+metaTitle: "ব্লকচেইন সেতুর পরিচিতি"
+description: "সেতু ব্যবহারকারীদের তাদের তহবিল বিভিন্ন ব্লকচেইনের মধ্যে স্থানান্তর করতে দেয়"
 lang: bn
 ---
 
@@ -135,8 +135,11 @@ _Web3 এখন লেয়ার ১ (L1) ব্লকচেইন এবং �
 <Divider />
 
 ## আরও পড়ুন {#further-reading}
+
 - [EIP-5164: ক্রস-চেইন এক্সিকিউশন](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 জুন, 2022 - ব্রেন্ডন অ্যাসেলস্টাইন (Brendan Asselstine)_
 - [L2Bridge ঝুঁকি ফ্রেমওয়ার্ক](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 জুলাই, 2022 - বারটেক কিপুসজেউস্কি (Bartek Kiepuszewski)_
 - ["কেন ভবিষ্যৎ মাল্টি-চেইন হবে, কিন্তু ক্রস-চেইন হবে না।"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 জানুয়ারি, 2022 - ভিটালিক বুটেরিন (Vitalik Buterin)_
 - [নিরাপদ ক্রস-চেইন আন্তঃকার্যক্ষমতার জন্য শেয়ার্ড সিকিউরিটি কাজে লাগানো: ল্যাগ্রাঞ্জ স্টেট কমিটি এবং এর বাইরে](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 জুন, 2024 - ইমানুয়েল আওসিকা (Emmanuel Awosika)_
 - [রোলআপ আন্তঃকার্যক্ষমতা সলিউশনের স্টেট](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 জুন, 2024 - অ্যালেক্স হুক (Alex Hook)_
+
+<QuizWidget quizKey="bridges" />

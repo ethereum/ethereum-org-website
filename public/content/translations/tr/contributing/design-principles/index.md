@@ -1,8 +1,8 @@
 ---
-title: Tasarım ilkelerimiz
-metaTitle: Tasarım ilkeleri
+title: "Tasarım ilkelerimiz"
+metaTitle: "Tasarım ilkeleri"
 lang: tr
-description: ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler
+description: "ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler"
 ---
 
 <Emoji text=":wave:" size={1} /> Merhaba ve ethereum.org tasarım ilkelerine hoş geldiniz. Bu, ethereum.org'u geliştirme ve iyileştirme yönündeki devam eden sürecin bir parçasıdır.
@@ -89,4 +89,4 @@ Tasarım ilkelerimizi [sitemizin genelinde](/) iş başında görebilirsiniz.
 
 Bu ilkeler ethereum.org web sitesine odaklansa da, birçoğunun genel olarak Ethereum ekosisteminin değerlerini temsil ettiğini umuyoruz. Belki de bunlardan bazılarını kendi projenize dahil etmek istersiniz!
 
-Düşüncelerinizi [Discord sunucusunda](https://discord.gg/ethereum-org) veya [bir sorun oluşturarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize bildirin.
+Düşüncelerinizi [Discord sunucusunda](/discord/) veya [bir sorun oluşturarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize bildirin.

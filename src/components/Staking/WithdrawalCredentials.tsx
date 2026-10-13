@@ -1,6 +1,7 @@
 "use client"
 
 import { ChangeEvent, FC, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -9,10 +10,8 @@ import { CANONICAL_STAKING_TESTNET } from "@/lib/constants"
 import { Flex } from "../ui/flex"
 import Input from "../ui/input"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const WithdrawalCredentials: FC = () => {
-  const { t } = useTranslation("page-staking")
+  const t = useTranslations("page-staking")
   const [inputValue, setInputValue] = useState<string>("")
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
@@ -40,7 +39,7 @@ const WithdrawalCredentials: FC = () => {
             aria-disabled={isDisabled || undefined}
             tabIndex={isDisabled ? -1 : undefined}
           >
-            {t("page-staking:comp-withdrawal-credentials-verify", {
+            {t("comp-withdrawal-credentials-verify", {
               network: "Mainnet",
             })}
           </ButtonLink>
@@ -51,7 +50,7 @@ const WithdrawalCredentials: FC = () => {
             aria-disabled={isDisabled || undefined}
             tabIndex={isDisabled ? -1 : undefined}
           >
-            {t("page-staking:comp-withdrawal-credentials-verify", {
+            {t("comp-withdrawal-credentials-verify", {
               network: CANONICAL_STAKING_TESTNET,
             })}
           </ButtonLink>

@@ -2,6 +2,7 @@
 title: 秘密領袖選舉
 description: 解釋秘密領袖選舉如何協助保護驗證者免受攻擊
 lang: zh-tw
+template: roadmap
 summaryPoints:
   - 區塊提案者的 IP 位址可以被事先得知，使他們容易受到攻擊
   - 秘密領袖選舉隱藏了驗證者的身分，使他們無法被事先得知

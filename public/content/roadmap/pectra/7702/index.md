@@ -1,13 +1,13 @@
 ---
-title: Pectra 7702
-metaTitle: Pectra 7702 guidelines
-description: Learn more about 7702 in the Pectra release
+title: Pectra EIP-7702
+metaTitle: Pectra EIP-7702 guidelines
+description: Learn more about EIP-7702 in the Pectra release
 lang: en
 ---
 
 ## Abstract {#abstract}
 
-EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy Ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
+EIP-7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy Ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
 
 This new transaction type introduces an authorization list. Each authorization tuple in the list is defined as
 
@@ -28,7 +28,7 @@ The private key of the EOA retains full control over the account after the deleg
 
 **Account Abstraction**: A delegation contract should align with Ethereum’s broader account abstraction (AA) standards to maximize compatibility. In particular, it should ideally be ERC-4337 compliant or compatible.
 
-**Permissionless and Censorship-Resistant Design**: Ethereum values permissionless participation. A delegation contract MUST NOT hard-code or rely on any single “trusted” relayer or service. This would brick the account if the relayer goes offline. Features like batching (e.g., approve+transferFrom) can be used by the EOA itself without a relayer. For application developers that want to use advanced features enabled by 7702 (Gas Abstraction, Privacy-Preserving Withdrawals) you’ll need a relayer. While there are different relayer architectures, our recommendation is to use [4337 bundlers](https://www.erc4337.io/bundlers) pointing at least [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) because:
+**Permissionless and Censorship-Resistant Design**: Ethereum values permissionless participation. A delegation contract MUST NOT hard-code or rely on any single “trusted” relayer or service. This would brick the account if the relayer goes offline. Features like batching (e.g., approve+transferFrom) can be used by the EOA itself without a relayer. For application developers that want to use advanced features enabled by EIP-7702 (Gas Abstraction, Privacy-Preserving Withdrawals) you’ll need a relayer. While there are different relayer architectures, our recommendation is to use [ERC-4337 bundlers](https://www.erc4337.io/bundlers) pointing at least [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) because:
 
 - They provide standardized interfaces for relaying
 - Include built-in paymaster systems
@@ -40,7 +40,7 @@ In other words, anyone should be able to act as the transaction sponsor/relayer 
 
 **dApps Integration via Wallet Interfaces**:
 
-Given that wallets will whitelist specific delegation contracts for EIP-7702, dApps should not expect to directly request 7702 authorizations. Instead, integration should occur through standardized wallet interfaces:
+Given that wallets will whitelist specific delegation contracts for EIP-7702, dApps should not expect to directly request EIP-7702 authorizations. Instead, integration should occur through standardized wallet interfaces:
 
 - **ERC-5792 (`wallet_sendCalls`)**: Enables dApps to request wallets to execute batched calls, facilitating functionalities like transaction batching and gas abstraction.
 
@@ -48,7 +48,7 @@ Given that wallets will whitelist specific delegation contracts for EIP-7702, dA
 
 By utilizing these interfaces, dApps can access smart account functionalities provided by EIP-7702 without directly managing delegations, ensuring compatibility and security across different wallet implementations.
 
-> Note: There is no standardized method for dApps to request 7702 authorization signatures directly. DApps must rely on specific wallet interfaces like ERC-6900 to take advantage of EIP-7702 features.
+> Note: There is no standardized method for dApps to request EIP-7702 authorization signatures directly. DApps must rely on specific wallet interfaces like ERC-6900 to take advantage of EIP-7702 features.
 
 For more information:
 
@@ -104,11 +104,11 @@ By adopting these solutions, developers can enhance the security of EIP-7702 del
 
 When users perform delegated signatures, the target contract receiving the delegation should be clearly and prominently displayed to help mitigate phishing risks.
 
-**Minimal Trusted Surface & Security**: While offering flexibility, a delegation contract should keep its core logic minimal and auditable. The contract is effectively an extension of the user’s EOA, so any flaw can be catastrophic. Implementations should follow best practices from the smart contract security community. For instance, constructor or initializer functions must be carefully secured – as highlighted by Alchemy, if using a proxy pattern under 7702, an unprotected initializer could let an attacker take over the account. Teams should aim to keep the onchain code simple: Ambire’s 7702 contract is only ~200 lines of Solidity, deliberately minimizing complexity to reduce bugs. A balance must be struck between feature-rich logic and the simplicity that eases auditing.
+**Minimal Trusted Surface & Security**: While offering flexibility, a delegation contract should keep its core logic minimal and auditable. The contract is effectively an extension of the user’s EOA, so any flaw can be catastrophic. Implementations should follow best practices from the smart contract security community. For instance, constructor or initializer functions must be carefully secured – as highlighted by Alchemy, if using a proxy pattern under EIP-7702, an unprotected initializer could let an attacker take over the account. Teams should aim to keep the onchain code simple: Ambire’s EIP-7702 contract is only ~200 lines of Solidity, deliberately minimizing complexity to reduce bugs. A balance must be struck between feature-rich logic and the simplicity that eases auditing.
 
 ### Known implementations {#known-implementations}
 
-Due to the nature of EIP 7702, it is recommended wallets use caution when helping users delegate to a 3rd party contract. Listed below is a collection of known implementations that have been audited:
+Due to the nature of EIP-7702, it is recommended wallets use caution when helping users delegate to a 3rd party contract. Listed below is a collection of known implementations that have been audited:
 
 | Contract address                           | Source                                                                                                                                     | Audits                                                                                                                                                        |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -121,7 +121,7 @@ Due to the nature of EIP 7702, it is recommended wallets use caution when helpin
 
 ## Hardware wallet guidelines {#hardware-wallet-guidelines}
 
-Hardware wallets shouldn't expose arbitrary delegation. The consensus in the Hardware wallet space is to use a list of trusted delegator contracts. We suggest to allow known implementations listed above and to consider others on a case by case basis. As delegating your EOA to a contract gives control over all the assets, hardware wallets should be cautious with the way they implement 7702.
+Hardware wallets shouldn't expose arbitrary delegation. The consensus in the Hardware wallet space is to use a list of trusted delegator contracts. We suggest to allow known implementations listed above and to consider others on a case by case basis. As delegating your EOA to a contract gives control over all the assets, hardware wallets should be cautious with the way they implement EIP-7702.
 
 ### Integration scenarios for companion apps {#integration-scenarios-for-companion-apps}
 
@@ -137,12 +137,12 @@ Notify the user that a delegation is in place for the EOA by checking its code, 
 
 #### Common delegation {#common-delegation}
 
-Hardware provider whitelists known delegation contracts and implements their support in software companion. It is recommended to choose a contract with full ERC 4337 support.
+Hardware provider whitelists known delegation contracts and implements their support in software companion. It is recommended to choose a contract with full ERC-4337 support.
 
 EOAs delegated to a different one will be handled as standard EOAs.
 
 #### Custom delegation {#custom-delegation}
 
-Hardware provider implements its own delegation contract and adds it to the lists implements its support in softaware companion. It is recommended to build a contract with full ERC 4337 support.
+Hardware provider implements its own delegation contract and adds it to the lists implements its support in softaware companion. It is recommended to build a contract with full ERC-4337 support.
 
 EOAs delegated to a different one will be handled as standard EOAs.

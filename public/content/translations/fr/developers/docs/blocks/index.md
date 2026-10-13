@@ -151,3 +151,5 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 - [Transactions](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
 - [Preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

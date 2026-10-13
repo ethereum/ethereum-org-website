@@ -239,3 +239,7 @@ ZK-STARK вважається несприйнятливим до загрози
 - [Чому доведення з нульовим розголошенням (ZKP) змінюють правила гри для суверенної ідентифікації](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [Пояснення EIP-7503: уможливлення приватних переказів в Етеріумі за допомогою ZK-доведень](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Карткова гра ZK: гра для вивчення основ ZK та реальних варіантів використання](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

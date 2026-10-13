@@ -2,6 +2,7 @@
 title: zkEVM pro verifikaci bloků na vrstvě 1
 description: Zjistěte, jak mohou důkazy s nulovou znalostí verifikovat provádění bloků Etherea, což umožňuje vyšší propustnost a nižší požadavky na validátory.
 lang: cs
+template: roadmap
 ---
 
 zkEVM je technologie, která využívá [důkazy s nulovou znalostí](/zero-knowledge-proofs/) k verifikaci provádění bloků Etherea. Místo toho, aby každý [validátor](/glossary/#validator) musel znovu provádět všechny transakce v bloku, jediný specializovaný aktér (nazývaný „dokazovatel“) provede blok a vygeneruje kryptografický důkaz o tom, že provedení bylo správné. Jakýkoli uzel pak může tento důkaz verifikovat – tento proces je o několik řádů levnější než opětovné provádění všech transakcí.

@@ -29,10 +29,11 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) प्रस्तावों की पूरी सूची।
 
-## आगे की पढ़ाई {#further-reading}
+_क्या आप किसी ऐसे सामुदायिक संसाधन के बारे में जानते हैं जिसने आपकी मदद की हो? इस पेज को संपादित करें और इसे जोड़ें!_
 
-_क्या आप किसी ऐसे सामुदायिक संसाधन के बारे में जानते हैं जिसने आपकी मदद की? इस पेज को संपादित करें और इसे जोड़ें!_
-
+- [टोकन एकीकरण चेकलिस्ट](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [ओपनजेपेलिन दस्तावेज़ीकरण: टोकन](https://docs.openzeppelin.com/contracts/5.x/tokens) - _ओपनजेपेलिन_
+- [टोकन एकीकरण के खतरे (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ओपनजेपेलिन_
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
 - [टोकन एकीकरण चेकलिस्ट](/developers/tutorials/token-integration-checklist/) _– टोकन के साथ इंटरैक्ट करते समय विचार करने योग्य बातों की एक चेकलिस्ट।_

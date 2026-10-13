@@ -128,9 +128,9 @@ Rào cản kỹ thuật để gia nhập vào việc sử dụng Web3 hiện t�
 
 ### Giáo dục {#education}
 
-Web3 giới thiệu các mô hình mới đòi hỏi phải học các mô hình tư duy khác với những mô hình được sử dụng trong Web 2.0. Một nỗ lực giáo dục tương tự đã diễn ra khi Web 1.0 trở nên phổ biến vào cuối những năm 1990; những người ủng hộ world wide web đã sử dụng một loạt các kỹ thuật giáo dục để giáo dục công chúng từ những phép ẩn dụ đơn giản (xa lộ thông tin, trình duyệt, lướt web) cho đến [các chương trình phát sóng truyền hình](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 không khó, nhưng nó khác biệt. Các sáng kiến giáo dục thông báo cho người dùng Web2 về các mô hình Web3 này là rất quan trọng đối với sự thành công của nó.
+Web3 giới thiệu các mô hình mới yêu cầu học các mô hình tư duy khác so với những mô hình được sử dụng trong Web 2.0. Một nỗ lực giáo dục tương tự đã diễn ra khi Web 1.0 trở nên phổ biến vào cuối những năm 1990; những người ủng hộ World Wide Web đã sử dụng hàng loạt các kỹ thuật giáo dục để giáo dục công chúng từ những phép ẩn dụ đơn giản (xa lộ thông tin, trình duyệt, lướt web) cho đến [các chương trình phát sóng trên truyền hình](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 không khó, nhưng nó khác biệt. Các sáng kiến giáo dục nhằm cung cấp thông tin cho người dùng Web2 về các mô hình Web3 này là rất quan trọng đối với sự thành công của nó.
 
-Ethereum.org đóng góp vào việc giáo dục Web3 thông qua [Chương trình Dịch thuật](/contributing/translation-program/) của chúng tôi, nhằm mục đích dịch các nội dung quan trọng của Ethereum sang càng nhiều ngôn ngữ càng tốt.
+Ethereum.org đã đóng góp vào việc giáo dục Web3 thông qua [Chương trình Dịch thuật](/contributing/translation-program/) của mình, giúp cung cấp các nội dung quan trọng về Ethereum bằng hàng chục ngôn ngữ.
 
 ### Cơ sở hạ tầng tập trung {#centralized-infrastructure}
 

@@ -20,8 +20,6 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
-import { ChevronNext } from "../Chevron"
-
 import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
@@ -121,7 +119,7 @@ const GetStartedGrid = async ({
               border
             >
               <CardHeader>
-                <CardBanner zoom={false}>
+                <CardBanner>
                   <Image
                     src={card.image}
                     alt=""
@@ -164,10 +162,7 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <CardButtonFake>
-                  {card.cta}
-                  <ChevronNext className="size-5" />
-                </CardButtonFake>
+                <CardButtonFake withChevron>{card.cta}</CardButtonFake>
               </CardFooter>
             </Card>
           ))}

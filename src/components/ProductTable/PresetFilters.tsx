@@ -1,7 +1,7 @@
 "use client"
-
 import { useCallback, useId, useMemo } from "react"
 import { Check } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
@@ -16,7 +16,6 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import { getActivePresets } from "@/lib/product-table"
 
 export interface PresetFiltersProps {
@@ -68,7 +67,7 @@ const PresetCard = ({
   showMobileSidebar,
   onSelect,
 }: PresetCardProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const id = useId()
   const descriptionId = !showMobileSidebar ? `${id}-description` : undefined
   const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
@@ -115,7 +114,7 @@ const PresetCard = ({
           </span>
           <span
             className={cn(
-              "text-left text-xl hyphens-auto transition-all duration-50",
+              "text-left text-xl font-bold hyphens-auto transition-all duration-50",
               colors.text[colorIdx]
             )}
           >
@@ -128,10 +127,9 @@ const PresetCard = ({
                 </span>
                 <span className="sr-only">
                   {" "}
-                  {t(
-                    "page-wallets-find-wallet:page-find-wallet-persona-count-available",
-                    { count: presetFiltersCount }
-                  )}
+                  {t("page-find-wallet-persona-count-available", {
+                    count: presetFiltersCount,
+                  })}
                 </span>
               </>
             )}
@@ -157,7 +155,7 @@ const PresetFilters = ({
   showMobileSidebar = false,
   presetFiltersCounts,
 }: PresetFiltersProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const t = useTranslations("page-wallets-find-wallet")
   const activePresets = useMemo(() => {
     return getActivePresets(presets, filters)
   }, [presets, filters])

@@ -151,3 +151,5 @@ _知道有帮助过你的社区资源吗？编辑本页面并添加它！_
 - [交易](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [权益证明](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

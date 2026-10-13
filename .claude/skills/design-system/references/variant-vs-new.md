@@ -6,7 +6,7 @@ When something *close enough* exists, prefer reuse over reinvention. This is the
 
 When you need new UI, walk this list top-to-bottom and stop at the first match:
 
-1. **Use an existing variant** of the right component. If `Card` already has `decoration="purple-gradient"` and that's what you need, just use it.
+1. **Use an existing variant** of the right component. If `Card` already has `variant="ghost"` and that's what you need, just use it.
 2. **Add a new variant** to the right component. If the right component exists but no existing variant covers the case "closely enough," add a new variant rather than creating a new file. See "When the right component has no variants yet" below if the component isn't already variant-driven.
 3. **New component file** -- only if no existing component is the right shape (different *behavior*, not just different *styling*).
 
@@ -33,17 +33,11 @@ If your "new component" is mostly:
 
 ...it's a variant.
 
-### Example: A new "ghost" card style
+### Example: A new card surface treatment
 
-**Wrong**: Create `GhostCard.tsx` with the offset-shadow look.
+**Wrong**: Create `GradientCard.tsx` wrapping a `<div>` with the gradient-wash classes.
 
-**Right**: Add a `decoration="ghost-shadow"` variant to `Card`. The card primitive already supports composition; the variant just adds the shadow element.
-
-### Example: A horizontal layout for cards
-
-**Wrong**: Create `HorizontalCard.tsx` with `flex items-center gap-8`.
-
-**Right**: Add a `layout="horizontal"` variant to `Card`. Same composition, different flex direction.
+**Right**: If a `Card` variant covers it (`base`/`nested`/`ghost`/`header-bar`), use it; otherwise add the variant case to `card.tsx`. The card primitive already supports composition; the variant just adds the treatment. (The worked precedent: `BannerNotification` was absorbed into `Alert` as `variant="banner"`, and its one-off `BugBountyBanner` wrapper deleted -- a new variant on the existing primitive instead of a standalone file.)
 
 ### Example: A specialized button
 
@@ -71,29 +65,25 @@ The team prefers `tv` for new and refactored components. No bulk migration of ex
 ```tsx
 import { tv, type VariantProps } from "tailwind-variants"
 
-const cardVariants = tv({
+const boxVariants = tv({
   base: "rounded-base text-body",
   variants: {
-    decoration: {
-      none: "",
-      "ghost-shadow": "relative before:absolute before:inset-0 before:translate-x-2 before:translate-y-2 before:bg-background-medium before:rounded-base before:-z-10",
-      "purple-gradient": "border border-primary/10 bg-linear-primary",
+    tone: {
+      default: "bg-background-highlight",
+      gradient: "border border-primary/10 bg-linear-primary",
     },
-    layout: {
-      vertical: "flex flex-col",
-      horizontal: "flex flex-row items-center gap-8",
+    size: {
+      base: "p-4",
+      lg: "p-6",
     },
   },
-  defaultVariants: {
-    decoration: "none",
-    layout: "vertical",
-  },
+  defaultVariants: { tone: "default", size: "base" },
 })
 
-type CardProps = React.ComponentPropsWithoutRef<"div"> & VariantProps<typeof cardVariants>
+type BoxProps = React.ComponentPropsWithoutRef<"div"> & VariantProps<typeof boxVariants>
 
-export function Card({ decoration, layout, className, ...props }: CardProps) {
-  return <div className={cn(cardVariants({ decoration, layout }), className)} {...props} />
+export function Box({ tone, size, className, ...props }: BoxProps) {
+  return <div className={cn(boxVariants({ tone, size }), className)} {...props} />
 }
 ```
 
@@ -152,7 +142,7 @@ See `tailwind-variants` docs for slot patterns; the project's `Modal` (`ui/dialo
 Run through these. If you can't say "yes" to all of them, you should be adding a variant or composing existing primitives instead:
 
 - [ ] **Is the behavior fundamentally different from existing primitives?** (Not just styling.)
-- [ ] **Does it have a name that's not already a variant of an existing thing?** (`Card` with `decoration="ghost"` is not "GhostCard.")
+- [ ] **Does it have a name that's not already a variant of an existing thing?** (`Card` with `variant="ghost"` is not "GhostCard.")
 - [ ] **Will it be reused in multiple places?** (One-off doesn't justify a new file -- inline the JSX.)
 - [ ] **Is its API stable enough to commit to?** (Or is it actually a variant of something in flux?)
 - [ ] **Does it pull its weight?** (More than 50 lines of custom logic, or a complex composition pattern that simplifies callers significantly.)
@@ -166,19 +156,6 @@ If you're auditing existing code and find a long inline Tailwind chain that repr
 2. If the primitive doesn't quite fit, *add a variant to the primitive* and use it
 3. **Don't** create a new component file just to wrap the primitive with extra classes
 
-## Examples of Things That Should Be Variants
+## Absorbing a one-off you find
 
-These are all current candidates for absorption (each is a one-off that could be a variant on an existing primitive):
-
-| Existing one-off | Should be |
-|---|---|
-| `GhostCard.tsx` | `Card` `decoration="ghost-shadow"` |
-| `SubpageCard.tsx` | `Card` `decoration="purple-gradient"` |
-| `HorizontalCard.tsx` | `Card` `layout="horizontal"` |
-| `FloatingCard.tsx` | `Card` `tone="primary-gradient"` |
-
-See `cleanup-playbook.md` for the full list of cleanup-track items.
-
-### Recently absorbed (worked precedent)
-
-`BannerNotification` (a 27-line `Banners/BannerNotification/index.tsx` rendering a full-bleed `<aside>` with `shouldShow` early-return) was deleted in May 2026 and replaced with `<Alert variant="banner">`. The replacement adds a new variant to the existing `Alert` primitive rather than keeping a separate file; the `shouldShow` prop disappears (callers gate at the JSX level with `{condition && <Alert variant="banner">...</Alert>}`). `BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- callers inline `<Alert variant="banner">` directly. This is the canonical pattern for absorbing a single-purpose component file into a variant of an existing primitive.
+When you encounter a single-purpose component file that only re-styles an existing primitive, absorb it: add the variant to the primitive, migrate the call sites, delete the file (the `BannerNotification` -> `<Alert variant="banner">` precedent above). Replacement recipes for known anti-patterns: `cleanup-playbook.md`.

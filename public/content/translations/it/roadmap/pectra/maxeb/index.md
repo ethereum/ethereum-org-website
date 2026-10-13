@@ -143,10 +143,7 @@ Ci sono diversi strumenti disponibili per gestire i consolidamenti. Lo strumento
 
 ## FAQ {#faq}
 
-### L'adesione cambia la mia fortuna nelle proposte o le mie ricompense? {#change-luck-or-rewards}
-
 No. L'adesione non diminuisce le tue probabilità di proposta: i tuoi compiti e la selezione delle proposte rimangono gli stessi. Ad esempio, se hai due validatori da 32 ETH rispetto a un validatore da 64 ETH, avrai le stesse probabilità totali di essere selezionato per proporre un blocco e guadagnare ricompense.
-
 ### L'adesione cambia il mio rischio di slashing? {#change-slashing-risk}
 
 Per gli operatori più piccoli o non professionisti, la risposta breve è no. La risposta più lunga è che, per gli operatori professionisti che gestiscono molti validatori per nodo con sistemi di allerta rapidi, il consolidamento in un numero inferiore di validatori potrebbe ridurre la loro capacità di reagire a uno slashing e prevenire eventi a cascata. La *penalità* iniziale di slashing per tutti i validatori è stata drasticamente ridotta da 1 ETH (per 32 ETH) a 0,0078125 ETH (per 32 ETH) per compensare questo rischio.

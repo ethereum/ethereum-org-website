@@ -79,3 +79,7 @@ Khi các ứng dụng đều được xây dựng trên Ethereum, chúng đều 
 <ExpandableCard title="Ví tiền mã hóa nào tốt nhất?" visible>
   <p>Ví tiền mã hóa cho phép bạn nắm giữ các token của mình và quản lý tài khoản Ethereum của bạn. Có rất nhiều ví tuyệt vời, mỗi ví phục vụ một mục đích khác nhau. Để tìm ra ví nào tốt nhất cho bạn, hãy truy cập [danh sách các ví](/wallets/find-wallet) của chúng tôi.</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

@@ -77,7 +77,7 @@ Setelah Anda membuat akun:
 
 Bagi mereka yang lebih suka belajar secara visual, langkah-langkah di atas dirangkum di sini:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Sekarang, kita akan mengunggah satu dokumen lagi ke Pinata. Namun sebelum kita melakukannya, kita perlu membuatnya!
 
@@ -105,7 +105,7 @@ Jangan ragu untuk mengubah data di json. Anda dapat menghapus atau menambahkan k
 
 Setelah Anda selesai mengedit file JSON, simpan dan unggah ke Pinata, mengikuti langkah-langkah yang sama seperti yang kita lakukan untuk mengunggah gambar.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Langkah 5: Buat instans kontrak Anda {#instance-contract}
 

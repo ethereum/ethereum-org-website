@@ -60,10 +60,18 @@ A [Codex](https://www.codex.io/) é uma API de dados de blockchain em tempo real
 
 Para começar, visite a [documentação](https://docs.codex.io), experimente o [Explorer](https://docs.codex.io/explore) ou inscreva-se no [painel](https://dashboard.codex.io/signup).
 
+
+A [Mobula](https://mobula.io/) é uma API de dados cripto de alto desempenho que fornece dados de mercado históricos e em tempo real, metadados de tokens, portfólios de carteiras e análises onchain em mais de 90 blockchains. Os desenvolvedores podem acessar endpoints REST e GraphQL para preços de tokens, capitalizações de mercado, volumes de negociação, dados de liquidez e saldos de carteiras multicadeia sem executar sua própria infraestrutura. A Mobula oferece planos gratuitos (100 mil solicitações/mês) e pagos para aplicativos de produção.
+
+Para começar, visite a [documentação](https://docs.mobula.io), explore a [referência da API](https://docs.mobula.io/reference/) ou inscreva-se no [painel](https://mobula.io/).
 ## EVM Query Language {#evm-query-language}
 
 A EVM Query Language (EQL) é uma linguagem semelhante a SQL projetada para consultar cadeias EVM (Ethereum Virtual Machine). O objetivo final da EQL é suportar consultas relacionais complexas em cidadãos de primeira classe da cadeia EVM (blocos, contas e transações), ao mesmo tempo em que fornece aos desenvolvedores e pesquisadores uma sintaxe ergonômica para uso diário. Com a EQL, os desenvolvedores podem buscar dados da blockchain usando uma sintaxe familiar semelhante a SQL e eliminar a necessidade de código boilerplate complexo. A EQL suporta solicitações de dados de blockchain padrão (por exemplo, recuperar o nonce e o saldo de uma conta no Ethereum ou buscar o tamanho e o carimbo de data/hora do bloco atual) e está continuamente adicionando suporte para solicitações e conjuntos de recursos mais complexos.
 
+
+O [Envio](https://envio.dev/) é um framework de indexação que transforma eventos onchain em uma API GraphQL consultável. Ele suporta o Ethereum e qualquer cadeia compatível com a EVM. Os desenvolvedores escrevem manipuladores de eventos em TypeScript, JavaScript ou ReScript para fornecer dados históricos e em tempo real, com suporte a reorg, indexação multicadeia e hospedagem gerenciada na Envio Cloud ou auto-hospedagem.
+
+Para começar, siga o [guia de início rápido do HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) para criar, implantar e consultar um indexador.
 ## Leitura adicional {#further-reading}
 
 - [Explorando dados cripto I: arquiteturas de fluxo de dados](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

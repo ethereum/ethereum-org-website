@@ -227,7 +227,7 @@ Em seguida, crie um arquivo `.env` no diretório raiz do nosso projeto e adicion
 
 - Veja abaixo como obter a URL HTTP da API da Alchemy e copiá-la para a sua área de transferência
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Seu `.env` agora deve ficar assim:
 

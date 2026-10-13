@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
+import { useTranslations } from "next-intl"
 import {
   EffectCards,
   Grid,
@@ -21,8 +22,6 @@ import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "./buttons/Button"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,
@@ -140,7 +139,7 @@ const variants = cva("!flex gap-y-6", {
 export type SwiperProps = SwiperReactProps & VariantProps<typeof variants>
 const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
   ({ className, children, navigationPlacement, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("component-swiper")
     return (
       <SwiperReact
         ref={ref}
@@ -149,8 +148,8 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
           prevEl: ".ui-swiper-button-prev",
         }}
         a11y={{
-          prevSlideMessage: t("previous"),
-          nextSlideMessage: t("next"),
+          prevSlideMessage: t("swiper-previous-slide"),
+          nextSlideMessage: t("swiper-next-slide"),
         }}
         pagination={{
           clickable: true,

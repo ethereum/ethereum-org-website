@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/hash-function-eth-build/index.md",
-  "generatedAt": "2026-04-28T23:35:27.622Z",
-  "rootHash": "0a4fb52104c9",
+  "generatedAt": "2026-09-30T18:41:05.283Z",
+  "rootHash": "1c9774df415e",
   "tree": {
-    "contentHash": "81746415fc59",
-    "anchorHash": "4028eb423488",
+    "contentHash": "6c4853b54e64",
+    "anchorHash": "1ba463144e76",
     "children": {
       "frontmatter:title": {
-        "contentHash": "449a242c07e5",
+        "contentHash": "ba21b97fd69e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "e8b59479b4d4",
+        "contentHash": "bdae845aa0e9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8f5b15d75233"
+        "anchorHash": "a09ec6df823f"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "cfb1d341d936"
+        "anchorHash": "19c9e17df049"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4e5778473bb9"
+        "anchorHash": "12fd0878f70b"
       },
       "prose:1": {
         "contentHash": "a08bd79cb1e3",
@@ -221,5 +227,5 @@
       "key-takeaway-553"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -1,9 +1,6 @@
 "use client"
-
 import { useState } from "react"
-import { reverse, sortBy } from "lodash"
-
-import type { CostLeaderboardData } from "@/lib/types"
+import { useTranslations } from "next-intl"
 
 import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
@@ -12,7 +9,7 @@ import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import type { TranslationLeaderboardRow } from "../utils"
 
 const AvatarWithFallback = ({
   username,
@@ -91,13 +88,10 @@ const RadioCard = ({ value, children, checked, onChange }) => {
   )
 }
 
-const sortAndFilterData = (data: CostLeaderboardData[]) =>
-  reverse(sortBy(data, ({ totalCosts }) => totalCosts))
-
 type TranslationLeaderboardProps = {
-  allTimeData: CostLeaderboardData[]
-  monthData: CostLeaderboardData[]
-  quarterData: CostLeaderboardData[]
+  allTimeData: TranslationLeaderboardRow[]
+  monthData: TranslationLeaderboardRow[]
+  quarterData: TranslationLeaderboardRow[]
 }
 
 const TranslationLeaderboard = ({
@@ -105,10 +99,12 @@ const TranslationLeaderboard = ({
   quarterData,
   allTimeData,
 }: TranslationLeaderboardProps) => {
+  // Already sorted by descending total cost and trimmed to the maximum
+  // renderable rows on the server -- see `../utils.ts`.
   const leaderboardData = {
-    monthData: sortAndFilterData(monthData),
-    quarterData: sortAndFilterData(quarterData),
-    allTimeData: sortAndFilterData(allTimeData),
+    monthData,
+    quarterData,
+    allTimeData,
   }
 
   const [filterAmount, updateFilterAmount] = useState(10)
@@ -122,7 +118,7 @@ const TranslationLeaderboard = ({
     updateFilterAmount(50)
   }
 
-  const { t } = useTranslation(
+  const t = useTranslations(
     "page-contributing-translation-program-acknowledgements"
   )
 
@@ -175,7 +171,7 @@ const TranslationLeaderboard = ({
         </Flex>
         {leaderboardData[dateRangeType]
           .slice(0, filterAmount)
-          .map((item: CostLeaderboardData, idx: number) => {
+          .map((item: TranslationLeaderboardRow, idx: number) => {
             const { username, avatarUrl, totalCosts, langs } = item
 
             const transformedAvatarUrl = avatarUrl

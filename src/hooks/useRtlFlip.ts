@@ -5,8 +5,6 @@ import type { Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 type UseDirection = {
-  /** @deprecated */
-  flipForRtl: "scaleX(-1)" | undefined // transform (deprecated)
   twFlipForRtl: "rtl:-scale-x-100" // className
   isRtl: boolean
   direction: "ltr" | "rtl"
@@ -14,14 +12,13 @@ type UseDirection = {
 
 /**
  * Custom hook that determines the direction and transformation for right-to-left (RTL) languages.
- * @example const { flipForRtl } = useRtlFlip(); transform={flipForRtl}
+ * @example const { twFlipForRtl } = useRtlFlip()
  * @returns An object containing the Tailwind className, RTL flag, and direction.
  */
 export const useRtlFlip = (): UseDirection => {
   const locale = useLocale()
   const isRtl = isLangRightToLeft(locale as Lang)
   return {
-    flipForRtl: isRtl ? "scaleX(-1)" : undefined, // transform (deprecated)
     twFlipForRtl: "rtl:-scale-x-100", // className (preferred)
     isRtl,
     direction: isRtl ? "rtl" : "ltr",

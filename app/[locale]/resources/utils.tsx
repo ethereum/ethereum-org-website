@@ -26,16 +26,18 @@ import IconDefiLlama from "@/public/images/resources/defi-llama.png"
 import IconDefiScan from "@/public/images/resources/defi-scan.png"
 import IconEas from "@/public/images/resources/eas.png"
 import IconEigenphi from "@/public/images/resources/eigenphi.png"
+import IconEipsInsight from "@/public/images/resources/eipsinsight.png"
 import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
 import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
-import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow-frame.png"
 import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
+import IconForkcast from "@/public/images/resources/forkcast.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
+import IconJiffyScan from "@/public/images/resources/jiffyscan.png"
 import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconLuckyStaker from "@/public/images/resources/lucky-staker.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
@@ -46,13 +48,13 @@ import IconPectrified from "@/public/images/resources/pectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
 import IconReserves from "@/public/images/resources/reserves.png"
+import IconRollupWtf from "@/public/images/resources/rollup-wtf.png"
 import IconRwa from "@/public/images/resources/rwa.png"
 import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
-import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
 export const getResources = async ({
   txCostsMedianUsd,
@@ -94,10 +96,7 @@ export const getResources = async ({
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber
-          className="items-center"
-          value={"value" in medianTxCost ? medianTxCost.value : "—"}
-        >
+        <BigNumber value={"value" in medianTxCost ? medianTxCost.value : "—"}>
           {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),
@@ -115,6 +114,18 @@ export const getResources = async ({
           ),
           href: "https://www.growthepie.com/ethereum-ecosystem/metrics",
           imgSrc: IconGrowthepie,
+        },
+        {
+          title: "Rollup.wtf",
+          description: t("page-resources-network-layer2-rollupwtf-description"),
+          href: "https://rollup.wtf",
+          imgSrc: IconRollupWtf,
+        },
+        {
+          title: "L2Safety",
+          description: t("page-resources-network-layer2-l2safety-description"),
+          href: "https://l2safety.info",
+          imgSrc: IconL2beat,
         },
       ],
     },
@@ -177,7 +188,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-eth-asset-title"),
-      // TODO: Add RadialChart metric
       items: [
         {
           title: "Etherealize Dashboard",
@@ -201,7 +211,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-gas-title"),
-      // TODO: Add metric
       items: [
         {
           title: "Etherscan Gas",
@@ -222,10 +231,10 @@ export const getResources = async ({
           imgSrc: IconBlocknative,
         },
         {
-          title: "GasFees.io",
-          description: t("page-resources-gas-gasfees-description"),
-          href: "https://www.gasfees.io/",
-          imgSrc: IconEthGlyphBlueCircle,
+          title: "L2 Fees",
+          description: t("page-resources-gas-l2fees-description"),
+          href: "https://l2fees.info",
+          imgSrc: IconEthGlyphBlack,
         },
       ],
     },
@@ -234,7 +243,6 @@ export const getResources = async ({
   const usingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-defi-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "DeFi Llama",
@@ -258,7 +266,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-stablecoins-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "stablecoins.wtf",
@@ -285,7 +292,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-nft-title"),
-      // TODO: Add bar chart metric
       items: [
         {
           title: "Etherscan - Top NFT",
@@ -343,7 +349,7 @@ export const getResources = async ({
         },
         {
           title: "Strategic Ethereum Reserve",
-          description: t("page-resources-reserves-cryptowerk-description"),
+          description: t("page-resources-adoption-reserves-description"),
           href: "https://www.strategicethreserve.xyz",
           imgSrc: IconReserves,
         },
@@ -353,10 +359,10 @@ export const getResources = async ({
       title: t("page-resources-wallets-title"),
       items: [
         {
-          title: "Wallet Beat",
-          description: t("page-resources-wallets-wallet-beat-description"),
-          href: "https://wallet.page/",
-          imgSrc: IconWalletBeat,
+          title: "JiffyScan",
+          description: t("page-resources-wallets-jiffyscan-description"),
+          href: "https://jiffyscan.xyz",
+          imgSrc: IconJiffyScan,
         },
         {
           title: "BundleBear",
@@ -364,6 +370,12 @@ export const getResources = async ({
           href: "https://www.bundlebear.com",
           className: "dark:[&_img]:invert",
           imgSrc: IconBundleBear,
+        },
+        {
+          title: "ERC-4337",
+          description: t("page-resources-wallets-erc4337-description"),
+          href: "https://www.erc4337.io",
+          imgSrc: IconEthGlyphEOrg,
         },
       ],
     },
@@ -382,10 +394,17 @@ export const getResources = async ({
       ),
       items: [
         {
-          title: "Ethereum Roadmap",
-          description: t("page-resources-roadmap-ethroadmap-description"),
-          href: "https://ethroadmap.com",
-          imgSrc: IconEthGlyphRainbowFrame,
+          title: "Forkcast",
+          description: t("page-resources-roadmap-forkcast-description"),
+          href: "https://forkcast.org",
+          imgSrc: IconForkcast,
+        },
+        {
+          title: "EIPsInsight",
+          description: t("page-resources-roadmap-eipsinsight-description"),
+          href: "https://eipsinsight.com",
+          className: "dark:[&_img]:invert",
+          imgSrc: IconEipsInsight,
         },
       ],
     },
@@ -393,11 +412,10 @@ export const getResources = async ({
       title: t("page-resources-blobs-title"),
       metric: (
         <div className="flex gap-4">
-          <BigNumber className="items-center" value={totalBlobs}>
+          <BigNumber value={totalBlobs}>
             {t("page-resources-blobs-metric-total-label")}
           </BigNumber>
           <BigNumber
-            className="items-center"
             value={"value" in avgBlobFeeUsd ? avgBlobFeeUsd.value : "—"}
           >
             {t("page-resources-blobs-metric-fee-label")}
@@ -419,12 +437,22 @@ export const getResources = async ({
         },
       ],
     },
+    {
+      title: t("page-resources-mempool-title"),
+      items: [
+        {
+          title: "mempool.pics",
+          description: t("page-resources-mempool-mempoolpics-description"),
+          href: "https://mempool.pics",
+          imgSrc: IconEthGlyphBlack,
+        },
+      ],
+    },
   ]
 
   const resilienceBoxes: DashboardBox[] = [
     {
       title: t("page-resources-nodes-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Node Watch",
@@ -469,14 +497,6 @@ export const getResources = async ({
       title: t("page-resources-network-resilience-title"),
       items: [
         {
-          title: "Neutrality Watch",
-          description: t(
-            "page-resources-network-resilience-neutralitywatch-description"
-          ),
-          href: "https://eth.neutralitywatch.com",
-          imgSrc: IconEthGlyphBlueCircle,
-        },
-        {
           title: "Project Sunshine",
           description: t(
             "page-resources-network-resilience-sunshine-description"
@@ -518,7 +538,6 @@ export const getResources = async ({
   const privacySecurityBoxes: DashboardBox[] = [
     {
       title: t("page-resources-relays-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "Beaconchain Relays",
@@ -543,7 +562,6 @@ export const getResources = async ({
     },
     {
       title: t("page-resources-mev-title"),
-      // TODO: Add big number metric
       items: [
         {
           title: "MEV-Boost Dashboard",

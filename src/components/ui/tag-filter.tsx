@@ -2,14 +2,12 @@
 
 import { useState } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { TagButton } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
-
-import useTranslation from "@/hooks/useTranslation"
 
 export interface TagFilterProps {
   /**
@@ -47,7 +45,7 @@ const TagFilter = ({
   showCount = true,
   className,
 }: TagFilterProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const [expanded, setExpanded] = useState(false)
 

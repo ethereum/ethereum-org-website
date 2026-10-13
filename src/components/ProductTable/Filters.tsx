@@ -1,4 +1,5 @@
 import { RotateCcw } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { FilterOption } from "@/lib/types"
 
@@ -6,8 +7,6 @@ import { Accordion } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/buttons/Button"
 
 import Filter from "./Filter"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 interface PresetFiltersProps {
   filters: FilterOption[]
@@ -22,7 +21,7 @@ const Filters = ({
   resetFilters,
   activeFiltersCount,
 }: PresetFiltersProps) => {
-  const { t } = useTranslation("table")
+  const t = useTranslations("table")
 
   return (
     <div className="w-full lg:w-80" data-testid="filters-container">

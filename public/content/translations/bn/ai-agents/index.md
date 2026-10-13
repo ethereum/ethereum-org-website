@@ -5,7 +5,7 @@ description: "ইথেরিয়ামে এআই এজেন্টগু�
 lang: bn
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "টার্মিনাল টেবিলে জড়ো হওয়া মানুষ"
 summaryPoints:
   - "এআই যা ব্লকচেইনের সাথে যোগাযোগ করে এবং স্বাধীনভাবে ট্রেড করে"

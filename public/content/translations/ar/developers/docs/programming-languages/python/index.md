@@ -55,21 +55,22 @@ incomplete: true
 
 ## مشاريع وأدوات <span dir="ltr">Python</span> {#python-projects-and-tools}
 
-### نشطة: {#active}
+### Active: {#active}
 
-- [<span dir="ltr">Web3.py</span>](https://github.com/ethereum/web3.py) - _مكتبة <span dir="ltr">Python</span> للتفاعل مع إيثيريوم_
-- [<span dir="ltr">Vyper</span>](https://github.com/ethereum/vyper/) - _لغة عقود ذكية بأسلوب <span dir="ltr">Python</span> لآلة إيثيريوم الافتراضية (EVM)_
-- [<span dir="ltr">Ape</span>](https://github.com/ApeWorX/ape) - _أداة تطوير العقود الذكية لمبرمجي <span dir="ltr">Python</span> وعلماء البيانات ومحترفي الأمن_
-- [<span dir="ltr">py-evm</span>](https://github.com/ethereum/py-evm) - _تنفيذ لآلة إيثيريوم الافتراضية_
-- [<span dir="ltr">eth-tester</span>](https://github.com/ethereum/eth-tester) - _أدوات لاختبار التطبيقات المعتمدة على إيثيريوم_
-- [<span dir="ltr">eth-utils</span>](https://github.com/ethereum/eth-utils/) - _دوال مساعدة للعمل مع قواعد الأكواد البرمجية المتعلقة بإيثيريوم_
-- [<span dir="ltr">py-solc-x</span>](https://pypi.org/project/py-solc-x/) - _غلاف <span dir="ltr">Python</span> حول مُصَرِّف <span dir="ltr">Solidity</span> (<span dir="ltr">solc</span>) مع دعم للإصدار <span dir="ltr">0.5.x</span>_
-- [<span dir="ltr">pymaker</span>](https://github.com/makerdao/pymaker) - _واجهة برمجة تطبيقات (<span dir="ltr">API</span>) بـ <span dir="ltr">Python</span> لعقود <span dir="ltr">Maker</span>_
-- [<span dir="ltr">siwe</span>](https://github.com/signinwithethereum/siwe-py) - _تسجيل الدخول باستخدام إيثيريوم (<span dir="ltr">SIWE</span>) لـ <span dir="ltr">Python</span>_
-- [التمويل اللامركزي (<span dir="ltr">DeFi</span>) في <span dir="ltr">Web3</span> لتكاملات إيثيريوم](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _حزمة <span dir="ltr">Python</span> مع تكاملات جاهزة لـ <span dir="ltr">ERC-20</span> ويونيسواب ومشاريع شائعة أخرى_
-- [<span dir="ltr">Wake</span>](https://getwake.io) - _إطار عمل <span dir="ltr">Python</span> شامل لاختبار العقود، واختبار التشويش (fuzzing)، والنشر، ومسح الثغرات الأمنية، والتنقل في الكود (خادم اللغة - [أدوات لـ <span dir="ltr">Solidity</span>](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [<span dir="ltr">DeFiPy</span>](https://github.com/defipy-devs/defipy) - _حزمة تطوير برمجيات (SDK) بـ <span dir="ltr">Python</span> لتحليلات التمويل اللامركزي (<span dir="ltr">DeFi</span>) ومحاكاة صانع السوق الآلي (<span dir="ltr">AMM</span>) عبر يونيسواب <span dir="ltr">V2/V3</span> و<span dir="ltr">Balancer</span> و<span dir="ltr">Curve</span>_
-
+- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
+- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper's native testing tool; an interpreter with mainnet forking, debugging, and pretty tracebacks_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _A smart contract development and testing framework for Vyper and Python, built on Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
+- [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
+- [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Sign in with Ethereum (siwe) for Python_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
+- [Wake](https://getwake.io) - _All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _Python SDK for DeFi analytics and AMM simulation across Uniswap V2/V3, Balancer, and Curve_
 ### مؤرشفة / لم تعد مدعومة: {#archived--no-longer-maintained}
 
 - [<span dir="ltr">Trinity</span>](https://github.com/ethereum/trinity) - _عميل إيثيريوم بـ <span dir="ltr">Python</span>_

@@ -2,6 +2,7 @@
 title: Danksharding
 description: Ethereum'u ölçeklendirmek için birbirini izleyen iki güncelleme olan Proto-Danksharding ve Danksharding hakkında bilgi edinin.
 lang: tr
+template: roadmap
 summaryPoints:
   - Danksharding, Ethereum'un ölçeklenebilirliğini ve kapasitesini artırmak için çok aşamalı bir güncellemedir.
   - İlk aşama olan Proto-Danksharding, bloklara veri blob'ları ekler

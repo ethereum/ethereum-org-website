@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-07-22T23:25:39.284Z",
+  "englishManifestHash": "071420150073",
+  "placeholderOrder": [
+    "LINK-3ef2c7",
+    "LINK-b5d0b4",
+    "LINK-6d7eeb",
+    "LINK-9c1fcb",
+    "LINK-5f864b",
+    "LINK-7f43c7",
+    "LINK-a17794",
+    "LINK-c99643",
+    "LINK-3cb255",
+    "LINK-bb2ad3",
+    "LINK-0ada99",
+    "LINK-bb2ad3",
+    "LINK-121c88",
+    "LINK-cb1b95",
+    "CODEBLOCK-a3e525",
+    "CODEBLOCK-09ec79",
+    "CODEBLOCK-669fd2",
+    "CODE-17a675",
+    "CODEBLOCK-7c17c3",
+    "LINK-ed3632",
+    "LINK-bab92b",
+    "LINK-d03699",
+    "LINK-c71967",
+    "LINK-57213a",
+    "LINK-2561e5",
+    "LINK-952362",
+    "LINK-2102ab",
+    "LINK-ea60f2",
+    "LINK-69f075",
+    "LINK-5c9041",
+    "LINK-1ecd82"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-a3e525": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-09ec79": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-669fd2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7c17c3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-17a675": {
+      "type": "inline-code",
+      "values": {
+        "content": "eth_call"
+      }
+    },
+    "LINK-3ef2c7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-b5d0b4": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/"
+      }
+    },
+    "LINK-6d7eeb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-5f864b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/accounts/#types-of-account"
+      }
+    },
+    "LINK-7f43c7": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/account-abstraction/"
+      }
+    },
+    "LINK-a17794": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io"
+      }
+    },
+    "LINK-c99643": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-3cb255": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh"
+      }
+    },
+    "LINK-bb2ad3": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/"
+      }
+    },
+    "LINK-0ada99": {
+      "type": "link",
+      "values": {
+        "url": "https://web3js.org/"
+      }
+    },
+    "LINK-121c88": {
+      "type": "link",
+      "values": {
+        "url": "https://web3py.readthedocs.io/"
+      }
+    },
+    "LINK-cb1b95": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs/interact-with-geth"
+      }
+    },
+    "LINK-ed3632": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-bab92b": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/calling-a-smart-contract-from-javascript/"
+      }
+    },
+    "LINK-d03699": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+      }
+    },
+    "LINK-c71967": {
+      "type": "link",
+      "values": {
+        "url": "/developers/tutorials/how-to-view-nft-in-metamask/"
+      }
+    },
+    "LINK-57213a": {
+      "type": "link",
+      "values": {
+        "url": "https://viem.sh/docs/contract/readContract"
+      }
+    },
+    "LINK-2561e5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v6/api/contract/"
+      }
+    },
+    "LINK-952362": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/abi-spec.html"
+      }
+    },
+    "LINK-2102ab": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/what-is-an-abi"
+      }
+    },
+    "LINK-ea60f2": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/compiling/"
+      }
+    },
+    "LINK-69f075": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/deploying/"
+      }
+    },
+    "LINK-5c9041": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-1ecd82": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/apis/backend/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-07-22T23:25:39.284Z",
+      "status": "success"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { LatestArticle } from "@/lib/types"
 
@@ -23,8 +23,6 @@ import { getArticleByline } from "@/lib/utils/latestByline"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTagCounts } from "@/lib/utils/tags"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const INITIAL_SHOWN = 12
 const SHOW_MORE_STEP = 6
 const DEFAULT_VISIBLE_TAGS = 8
@@ -41,7 +39,7 @@ const LatestArticlesGrid = ({
   articles,
   disclaimer,
 }: LatestArticlesGridProps) => {
-  const { t } = useTranslation("page-latest")
+  const t = useTranslations("page-latest")
   const locale = useLocale()
 
   // Flat, count-descending tag pool. Each article's `tags` already includes its
@@ -127,20 +125,18 @@ const LatestArticlesGrid = ({
         >
           <SelectTrigger
             className="w-full sm:w-44 md:shrink-0"
-            aria-label={t("page-latest:page-latest-sort-label")}
+            aria-label={t("page-latest-sort-label")}
           >
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="newest">
-              {t("page-latest:page-latest-sort-newest")}
+              {t("page-latest-sort-newest")}
             </SelectItem>
             <SelectItem value="oldest">
-              {t("page-latest:page-latest-sort-oldest")}
+              {t("page-latest-sort-oldest")}
             </SelectItem>
-            <SelectItem value="az">
-              {t("page-latest:page-latest-sort-az")}
-            </SelectItem>
+            <SelectItem value="az">{t("page-latest-sort-az")}</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -166,7 +162,7 @@ const LatestArticlesGrid = ({
                     ? formatDate(article.date, locale, { month: "short" })
                     : undefined,
                   article.timeToRead
-                    ? t("page-latest:page-latest-minute-read", {
+                    ? t("page-latest-minute-read", {
                         minutes: article.timeToRead,
                       })
                     : undefined,
@@ -195,7 +191,7 @@ const LatestArticlesGrid = ({
               eventName: "show more",
             }}
           >
-            {t("page-latest:page-latest-see-more", { count: remaining })}
+            {t("page-latest-see-more", { count: remaining })}
           </Button>
         </div>
       )}

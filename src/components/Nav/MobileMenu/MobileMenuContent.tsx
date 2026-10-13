@@ -1,7 +1,7 @@
 "use client"
 
 import { Languages, Menu } from "lucide-react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import type { Lang } from "@/lib/types"
@@ -18,6 +18,7 @@ import {
 import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
 
@@ -29,14 +30,13 @@ import MenuHeader from "./MenuHeader"
 import ThemeToggleFooterButton from "./ThemeToggleFooterButton"
 
 import { useLanguagesDisplayInfo } from "@/hooks/useLanguagesDisplayInfo"
-import useTranslation from "@/hooks/useTranslation"
 
 /**
  * Client-side mobile menu content
  * Fetches navigation and language data on the client to avoid RSC payload bloat
  */
 export default function MobileMenuContent() {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const locale = useLocale()
   const isRtl = isLangRightToLeft(locale as Lang)
   const dir = isRtl ? "rtl" : "ltr"
@@ -102,6 +102,13 @@ function NavigationContent({ className }: { className?: string }) {
   const locale = useLocale()
   const { linkSections } = useNavigation()
 
+  const trackSectionToggle = (key: string, open: boolean) =>
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Section changed",
+      eventName: `${open ? "Open" : "Close"} section: ${locale} - ${key}`,
+    })
+
   return (
     <nav className={cn("p-0", className)}>
       {SECTION_LABELS.map((key) => {
@@ -111,6 +118,7 @@ function NavigationContent({ className }: { className?: string }) {
           <Collapsible
             key={key}
             className="border-b border-body-light first:border-t"
+            onOpenChange={(open) => trackSectionToggle(key, open)}
           >
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}

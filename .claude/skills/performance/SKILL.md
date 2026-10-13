@@ -13,7 +13,20 @@ Knowledge base. No runtime actions; authoring conventions for maintainers below.
 - **Diagnosing** an existing regression → `references/diagnose-table.md` (symptom → bucket).
 - **Reviewing** a proposed change before merge → `references/review-checklist.md` (diff pattern → rules to load).
 
-Both flows always also load `references/anti-patterns.md`.
+## Cross-cutting anti-patterns
+
+These look right but aren't. Check every review or diagnose pass against this table.
+
+| Looks like…                                                  | Actually…                                                                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Adding `CDN-Cache-Control` to fix TTFB                       | Netlify strips them; CF ignores due to `max-age=0`.                                                           |
+| Using `unstable_cache` in MDX routes                         | Triggers ISR → runtime 404s. See `edge-caching.md`.                                                           |
+| ``await import(`.../${locale}/${ns}.json`)``                 | Webpack enumerates all combinations → OOM. Use `fs.readFile`.                                                 |
+| Adding a `useSession` / `cookies()` in root layout           | Every route becomes dynamic. Edge caching dies silently.                                                      |
+| `priority: true` via `getImageProps()` on manual `<picture>` | `fetchPriority` attribute is not set; add it manually.                                                        |
+| Bumping `revalidate` to hourly to "fix staleness"            | Increases edge miss rate. Keep daily; add client `/api/*` for freshness.                                      |
+| Mocking DB/content in perf tests                             | Perf wins must be measured against real prod build (`pnpm build && start`).                                   |
+| Removing `common.json` keys without audit                    | Lookups of removed keys silently render the bare key (fallback). Grep the key across `src/` and `app/` first. |
 
 ## File map
 
@@ -22,12 +35,10 @@ Both flows always also load `references/anti-patterns.md`.
 | Symptom → bucket routing        | `references/diagnose-table.md`   |
 | Diff pattern → rules routing    | `references/review-checklist.md` |
 | TTFB, edge caching, CDN         | `references/edge-caching.md`     |
-| Bundle size, code splitting     | `references/bundle.md`           |
+| Bundle size, code splitting, RSC payload | `references/bundle.md`  |
 | Build OOM, ENOSPC, file tracing | `references/build.md`            |
-| RSC payload, HTML size          | `references/rsc.md`              |
 | INP, main-thread work           | `references/inp.md`              |
 | LCP, images                     | `references/images.md`           |
-| Cross-cutting anti-patterns     | `references/anti-patterns.md`    |
 
 For data-fetching patterns (Trigger.dev tasks, Netlify Blobs, `src/lib/data` caching, internal `/api/*` routes, fetcher retries), use the `data-layer` skill instead.
 

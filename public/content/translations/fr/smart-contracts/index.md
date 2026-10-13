@@ -71,7 +71,7 @@ Ils peuvent effectuer des calculs, créer de la monnaie, stocker des données, f
 
 - [Les stablecoins](/stablecoins/)
 - [La création et la distribution d'actifs numériques uniques](/nft/)
-- [Un bureau de change automatique et ouvert](/get-eth/#dex)
+- [Un bureau de change automatique et ouvert](/defi/#swaps)
 - [Les jeux décentralisés](/apps/categories/gaming)
 - [Une police d'assurance qui paie automatiquement](https://etherisc.com/)
 - [Une norme qui permet aux gens de créer des monnaies personnalisées et interopérables](/developers/docs/standards/tokens/)

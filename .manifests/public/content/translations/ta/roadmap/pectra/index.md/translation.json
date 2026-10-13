@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ta",
-  "translatedAt": "2026-06-08T10:34:54.292Z",
-  "englishManifestHash": "a2d0066392ec",
+  "translatedAt": "2026-09-30T18:33:57.624Z",
+  "englishManifestHash": "8964e2310baf",
   "placeholderOrder": [
     "LINK-b8e25d",
     "LINK-a21a82",
@@ -20,6 +20,7 @@
     "LINK-5b0209",
     "LINK-6e23f7",
     "LINK-cd5be1",
+    "LINK-f22107",
     "LINK-11b658",
     "LINK-5e0d61",
     "LINK-5b77a3",
@@ -41,7 +42,6 @@
     "LINK-0c0afc",
     "LINK-f9bbaf",
     "LINK-e47c05",
-    "LINK-4ee2b8",
     "LINK-6f2585",
     "LINK-dc6596",
     "LINK-db8d68"
@@ -162,6 +162,12 @@
         "url": "https://eips.ethereum.org/EIPS/eip-7594"
       }
     },
+    "LINK-f22107": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
     "LINK-5e0d61": {
       "type": "link",
       "values": {
@@ -270,12 +276,6 @@
         "url": "https://epf.wiki/#/wiki/pectra-faq"
       }
     },
-    "LINK-4ee2b8": {
-      "type": "link",
-      "values": {
-        "url": "https://pectra.wtf"
-      }
-    },
     "LINK-6f2585": {
       "type": "link",
       "values": {
@@ -297,7 +297,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T10:34:54.292Z",
+      "translatedAt": "2026-09-30T18:33:57.624Z",
       "status": "success"
     }
   }

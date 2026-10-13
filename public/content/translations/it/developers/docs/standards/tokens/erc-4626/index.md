@@ -4,34 +4,31 @@ description: Uno standard per i vault fruttiferi.
 lang: it
 ---
 
-## Introduzione {#introduction}
+L'ERC-4626 è uno standard per ottimizzare e unificare i parametri tecnici dei vault fruttiferi (yield-bearing). Fornisce un'API standard per i vault fruttiferi tokenizzati che rappresentano quote di un singolo token ERC-20 sottostante. L'ERC-4626 delinea anche un'estensione opzionale per i vault tokenizzati che utilizzano l'ERC-20, offrendo funzionalità di base per il deposito, il prelievo di token e la lettura dei saldi.
 
-ERC-4626 è uno standard per ottimizzare e unificare i parametri tecnici dei vault fruttiferi (yield-bearing). Fornisce un'API standard per i vault fruttiferi tokenizzati che rappresentano quote di un singolo token ERC-20 sottostante. ERC-4626 delinea anche un'estensione opzionale per i vault tokenizzati che utilizzano ERC-20, offrendo funzionalità di base per il deposito, il prelievo di token e la lettura dei saldi.
+**Il ruolo dell'ERC-4626 nei vault fruttiferi**
 
-**Il ruolo di ERC-4626 nei vault fruttiferi**
-
-I mercati di prestito, gli aggregatori e i token intrinsecamente fruttiferi aiutano gli utenti a trovare il miglior rendimento sui loro token cripto eseguendo diverse strategie. Queste strategie vengono realizzate con lievi variazioni, il che potrebbe essere soggetto a errori o sprecare risorse di sviluppo.
+I mercati di prestito, gli aggregatori e i token intrinsecamente fruttiferi aiutano gli utenti a trovare il miglior rendimento sui loro token cripto eseguendo diverse strategie. Queste strategie vengono eseguite con lievi variazioni, il che potrebbe essere soggetto a errori o sprecare risorse di sviluppo.
 
 L'ERC-4626 nei vault fruttiferi ridurrà lo sforzo di integrazione e sbloccherà l'accesso al rendimento in varie applicazioni con poco sforzo specializzato da parte degli sviluppatori, creando modelli di implementazione più coerenti e robusti.
 
-Il token ERC-4626 è descritto completamente nell'[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
+Il token ERC-4626 è descritto in modo completo nell'[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
-**Estensione asincrona del vault (ERC-7540)**
+**Estensione per vault asincroni (ERC-7540)**
 
 L'ERC-4626 è ottimizzato per depositi e rimborsi atomici fino a un limite. Se il limite viene raggiunto, non possono essere inviati nuovi depositi o rimborsi. Questa limitazione non funziona bene per alcun sistema di smart contract con azioni asincrone o ritardi come prerequisito per interfacciarsi con il vault (ad es. protocolli di asset del mondo reale, protocolli di prestito sottocollateralizzati, protocolli di prestito cross-chain, token di liquid staking (LST) o moduli di sicurezza assicurativi).
 
-L'ERC-7540 espande l'utilità dei vault ERC-4626 per i casi d'uso asincroni. L'interfaccia esistente del vault (`deposit`/`withdraw`/`mint`/`redeem`) è completamente utilizzata per il riscatto di richieste asincrone.
+L'ERC-7540 espande l'utilità dei vault ERC-4626 per i casi d'uso asincroni. L'interfaccia esistente del vault (`deposit`/`withdraw`/`mint`/`redeem`) è completamente utilizzata per riscattare le richieste asincrone.
 
-L'estensione ERC-7540 è descritta completamente nell'[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Scopri di più sui [vault tokenizzati asincroni ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
-**Estensione del vault multi-asset (ERC-7575)**
+**Estensione per vault multi-asset (ERC-7575)**
 
 Un caso d'uso mancante che non è supportato dall'ERC-4626 sono i vault che hanno più asset o punti di ingresso, come i token del fornitore di liquidità (LP). Questi sono generalmente poco maneggevoli o non conformi a causa del requisito dell'ERC-4626 di essere esso stesso un ERC-20.
 
 L'ERC-7575 aggiunge il supporto per i vault con più asset esternalizzando l'implementazione del token ERC-20 dall'implementazione dell'ERC-4626.
 
-L'estensione ERC-7575 è descritta completamente nell'[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
+L'estensione ERC-7575 è descritta in modo completo nell'[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
 ## Prerequisiti {#prerequisites}
 
 Per comprendere meglio questa pagina, ti consigliamo di leggere prima gli [standard dei token](/developers/docs/standards/tokens/) e l'[ERC-20](/developers/docs/standards/tokens/erc-20/).

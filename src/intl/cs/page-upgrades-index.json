@@ -169,6 +169,11 @@
   "page-upgrades-upgrades-beacon-chain": "Beacon chain",
   "page-upgrades-upgrades-guide": "Průvodce aktualizacemi Etherea",
   "page-upgrades-upgrades-docking": "Merge",
+  "page-upgrades-upgrades-dencun": "Dencun",
+  "page-upgrades-upgrades-pectra": "Pectra",
+  "page-upgrades-upgrades-fusaka": "Fusaka",
+  "page-upgrades-upgrades-glamsterdam": "Glamsterdam",
+  "page-upgrades-upgrades-forks": "Forky Etherea",
   "page-upgrades-energy-consumption": "Více o spotřebě energie Etherea",
   "page-upgrades-upgrading": "Aktualizace Etherea do radikálně nových výšin",
   "page-roadmap-vision": "Vize",
@@ -204,5 +209,6 @@
   "docs-nav-proof-of-stake": "Důkaz podílem (PoS)",
   "docs-nav-proof-of-work": "Důkaz prací (PoW)",
   "page-upgrades-get-involved-ethresearch-1": "Sharding",
-  "page-upgrades-get-involved-ethresearch-2": "Merge"
+  "page-upgrades-get-involved-ethresearch-2": "Merge",
+  "page-upgrades-upgrades-hegota": "Hegotá"
 }

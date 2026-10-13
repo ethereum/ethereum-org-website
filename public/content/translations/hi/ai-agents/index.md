@@ -5,7 +5,7 @@ description: "इथेरियम पर एआई एजेंट का अ�
 lang: hi
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "टर्मिनल टेबल पर इकट्ठा हुए लोग"
 summaryPoints:
   - "एआई जो ब्लॉकचेन के साथ इंटरैक्ट करता है और स्वतंत्र रूप से ट्रेड करता है"

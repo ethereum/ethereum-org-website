@@ -2,6 +2,7 @@
 title: 帳戶抽象化
 description: 關於以太坊讓使用者帳戶更簡單、更安全之計畫的概述
 lang: zh-tw
+template: roadmap
 summaryPoints:
   - 帳戶抽象化讓建立智能合約錢包變得容易許多
   - 智能合約錢包讓管理以太坊帳戶的存取權限變得容易許多

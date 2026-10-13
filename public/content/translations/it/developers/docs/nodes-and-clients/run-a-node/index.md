@@ -5,21 +5,21 @@ lang: it
 sidebarDepth: 2
 ---
 
-Eseguire il tuo nodo ti offre vari vantaggi, apre nuove possibilità e aiuta a supportare l'ecosistema. Questa pagina ti guiderà nell'avvio del tuo nodo e nella partecipazione alla convalida delle transazioni di [Ethereum](/).
+Eseguire il proprio nodo offre vari vantaggi, apre nuove possibilità e aiuta a supportare l'ecosistema. Questa pagina ti guiderà nell'avvio del tuo nodo e nella partecipazione alla convalida delle transazioni di [Ethereum](/).
 
-Nota che dopo [The Merge](/roadmap/merge), sono necessari due client per eseguire un nodo Ethereum; un client del **livello di esecuzione (EL)** e un client del **livello di consenso (CL)**. Questa pagina mostrerà come installare, configurare e connettere questi due client per eseguire un nodo Ethereum.
+Nota che dopo [The Merge](/roadmap/merge), sono richiesti due client per eseguire un nodo Ethereum; un client del **livello di esecuzione (EL)** e un client del **livello di consenso (CL)**. Questa pagina mostrerà come installare, configurare e connettere questi due client per eseguire un nodo Ethereum.
 
 ## Prerequisiti {#prerequisites}
 
-Dovresti capire cos'è un nodo Ethereum e perché potresti voler eseguire un client. Questo argomento è trattato in [Nodi e client](/developers/docs/nodes-and-clients/).
+Dovresti comprendere cos'è un nodo Ethereum e perché potresti voler eseguire un client. Questo argomento è trattato in [Nodi e client](/developers/docs/nodes-and-clients/).
 
 Se sei nuovo all'argomento dell'esecuzione di un nodo, o cerchi un percorso meno tecnico, ti consigliamo di dare prima un'occhiata alla nostra introduzione intuitiva sull'[esecuzione di un nodo Ethereum](/run-a-node).
 
 ## Scegliere un approccio {#choosing-approach}
 
-Il primo passo per avviare il tuo nodo è scegliere il tuo approccio. In base ai requisiti e alle varie possibilità, devi selezionare l'implementazione del client (sia per i client di esecuzione che di consenso), l'ambiente (hardware, sistema) e i parametri per le impostazioni del client.
+Il primo passo per avviare il tuo nodo è scegliere l'approccio. In base ai requisiti e alle varie possibilità, devi selezionare l'implementazione del client (sia per i client di esecuzione che per quelli di consenso), l'ambiente (hardware, sistema) e i parametri per le impostazioni del client.
 
-Questa pagina ti guiderà attraverso queste decisioni e ti aiuterà a trovare il modo più adatto per eseguire la tua istanza di Ethereum.
+Questa pagina ti guiderà attraverso queste decisioni e ti aiuterà a trovare il modo più adatto per eseguire la tua istanza Ethereum.
 
 Per scegliere tra le implementazioni dei client, vedi tutti i [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e i [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) pronti per la Mainnet disponibili e scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity).
 
@@ -29,13 +29,13 @@ Dopo aver preparato l'ambiente, installa i client scelti con un'[interfaccia ada
 
 Quando il nodo è in esecuzione e in sincronizzazione, sei pronto per [usarlo](#using-the-node), ma assicurati di tenere d'occhio la sua [manutenzione](#operating-the-node).
 
-![Client setup](./diagram.png)
+![Configurazione del client](./diagram.png)
 
 ### Ambiente e hardware {#environment-and-hardware}
 
 #### Locale o cloud {#local-vs-cloud}
 
-I client Ethereum sono in grado di funzionare su computer di livello consumer e non richiedono alcun hardware speciale, come ad esempio le macchine per il minaggio. Pertanto, hai varie opzioni per distribuire il nodo in base alle tue esigenze.
+I client Ethereum sono in grado di funzionare su computer di fascia consumer e non richiedono alcun hardware speciale, come ad esempio le macchine per il minaggio. Pertanto, hai varie opzioni per distribuire il nodo in base alle tue esigenze.
 Per semplificare, pensiamo all'esecuzione di un nodo sia su una macchina fisica locale che su un server cloud:
 
 - Cloud
@@ -43,13 +43,13 @@ Per semplificare, pensiamo all'esecuzione di un nodo sia su una macchina fisica 
   - Ottenere un server dedicato o virtuale può essere più comodo che costruirne uno proprio
   - Il compromesso è doversi fidare di una terza parte: il fornitore del server
   - A causa delle dimensioni di archiviazione richieste per un nodo completo, il prezzo di un server a noleggio potrebbe diventare alto
-- Hardware proprio
+- Proprio hardware
   - Approccio più trustless e sovrano
   - Investimento una tantum
   - Un'opzione per acquistare macchine preconfigurate
   - Devi preparare fisicamente, mantenere e potenzialmente risolvere i problemi della macchina e della rete
 
-Entrambe le opzioni presentano diversi vantaggi riassunti sopra. Se stai cercando una soluzione cloud, oltre a molti fornitori tradizionali di cloud computing, ci sono anche servizi incentrati sulla distribuzione di nodi. Dai un'occhiata ai [nodi come servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) per ulteriori opzioni sui nodi in hosting.
+Entrambe le opzioni presentano diversi vantaggi riassunti sopra. Se stai cercando una soluzione cloud, oltre a molti fornitori tradizionali di cloud computing, ci sono anche servizi focalizzati sulla distribuzione di nodi. Dai un'occhiata ai [nodi come servizio](/developers/docs/nodes-and-clients/nodes-as-a-service/) per ulteriori opzioni sui nodi ospitati.
 
 #### Hardware {#hardware}
 
@@ -57,11 +57,11 @@ Tuttavia, una rete decentralizzata e resistente alla censura non dovrebbe fare a
 
 I client Ethereum possono essere eseguiti sul tuo computer, laptop, server o persino su un computer a scheda singola. Sebbene sia possibile eseguire i client sul tuo personal computer, avere una macchina dedicata solo per il tuo nodo può migliorarne significativamente le prestazioni e la sicurezza, riducendo al minimo l'impatto sul tuo computer principale.
 
-Usare il proprio hardware può essere molto semplice. Ci sono molte opzioni semplici così come configurazioni avanzate per persone più tecniche. Diamo quindi un'occhiata ai requisiti e ai mezzi per eseguire i client Ethereum sulla tua macchina.
+Usare il proprio hardware può essere molto semplice. Ci sono molte opzioni semplici così come configurazioni avanzate per persone più tecniche. Quindi esaminiamo i requisiti e i mezzi per eseguire i client Ethereum sulla tua macchina.
 
 #### Requisiti {#requirements}
 
-I requisiti hardware differiscono in base al client, ma in genere non sono così elevati poiché il nodo deve solo rimanere in sincronizzazione. Non confonderlo con il minaggio, che richiede molta più potenza di calcolo. Il tempo di sincronizzazione e le prestazioni migliorano tuttavia con un hardware più potente.
+I requisiti hardware differiscono in base al client, ma in genere non sono così elevati poiché il nodo deve solo rimanere sincronizzato. Non confonderlo con il minaggio, che richiede molta più potenza di calcolo. Il tempo di sincronizzazione e le prestazioni migliorano tuttavia con un hardware più potente.
 
 Prima di installare qualsiasi client, assicurati che il tuo computer abbia risorse sufficienti per eseguirlo. Puoi trovare i requisiti minimi e consigliati di seguito.
 
@@ -69,7 +69,7 @@ Il collo di bottiglia per il tuo hardware è principalmente lo spazio su disco. 
 
 La dimensione del database e la velocità della sincronizzazione iniziale dipendono dal client scelto, dalla sua configurazione e dalla [strategia di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes).
 
-Assicurati inoltre che la tua connessione Internet non sia limitata da un [limite di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di utilizzare una connessione a consumo illimitato poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il tuo limite.
+Assicurati inoltre che la tua connessione Internet non sia limitata da un [limite di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di utilizzare una connessione a consumo illimitato poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il limite.
 
 ##### Sistema operativo
 
@@ -78,30 +78,32 @@ Tutti i client supportano i principali sistemi operativi: Linux, macOS, Windows.
 ##### Requisiti minimi
 
 - CPU con 2+ core
-- 8 GB di RAM
-- SSD da 2 TB
-- Larghezza di banda di 10+ MBit/s
+- 16 GB di RAM (32 GB consigliati per la stabilità)
+- SSD NVMe da 2 TB (probabilmente superati entro il 2027, leggi di più su [SSD ottimi e meno ottimi per i nodi Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- Larghezza di banda di 25+ MBit/s
 
 ##### Specifiche consigliate
 
-- CPU veloce con 4+ core
-- 16+ GB di RAM
-- SSD veloce da 2+ TB
-- Larghezza di banda di 25+ MBit/s
+Le attuali linee guida hardware per gli operatori dei nodi sono identificate nell'[EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Per un nodo completo si consiglia:
 
-La modalità di sincronizzazione e il client scelti influiranno sui requisiti di spazio, ma di seguito abbiamo stimato lo spazio su disco di cui avrai bisogno per ciascun client.
+- CPU veloce con 4+ core (8+ core se si esegue la convalida)
+- 32 GB di RAM (64 GB consigliati se si esegue la convalida per garantire la stabilità)
+- SSD NVMe da 4 TB (le unità senza DRAM e QLC sono sconsigliate)
+- Larghezza di banda di 50 MBit/s in download / 15+ MBit/s in upload (25+ MBit/s in upload se si esegue la convalida)
 
-| Client     | Spazio su disco (snap sync) | Spazio su disco (archivio completo) |
-| ---------- | --------------------------- | ----------------------------------- |
-| Besu       | 800GB+                      | 12TB+                               |
-| Erigon     | N/D                         | 2.5TB+                              |
-| Geth       | 500GB+                      | 12TB+                               |
-| Nethermind | 500GB+                      | 12TB+                               |
-| Reth       | N/D                         | 2.2TB+                              |
+La modalità di sincronizzazione e il client scelti influenzeranno i requisiti di spazio, ma abbiamo stimato lo spazio su disco di cui avrai bisogno per ciascun client di seguito.
 
-- Nota: Erigon e Reth non offrono la snap sync, ma è possibile il Full Pruning (\~2 TB per Erigon, ~1,2 TB per Reth)
+| Client     | Spazio su disco (sincronizzazione snap) | Spazio su disco (archivio completo) |
+| ---------- | --------------------- | ------------------------ |
+| Besu       | 800GB+                | 12TB+                    |
+| Erigon     | N/A                   | 2.5TB+                   |
+| Geth       | 500GB+                | 12TB+                    |
+| Nethermind | 500GB+                | 12TB+                    |
+| Reth       | N/A                   | 2.2TB+                   |
 
-Per i client di consenso, il requisito di spazio dipende anche dall'implementazione del client e dalle funzionalità abilitate (ad es. lo slasher del validatore), ma in genere metti in conto altri 200 GB necessari per i dati beacon. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare [dettagli sui requisiti dei client di consenso in questa analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+- Nota: Erigon e Reth non offrono la sincronizzazione snap, ma è possibile il Full Pruning (~2TB per Erigon, ~1.2TB per Reth)
+
+Per i client di consenso, il requisito di spazio dipende anche dall'implementazione del client e dalle funzionalità abilitate (ad es. lo slasher del validatore), ma in genere calcola altri 200 GB necessari per i dati beacon. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare [dettagli sui requisiti dei client di consenso in questa analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluzioni plug-and-play {#plug-and-play}
 
@@ -128,12 +130,12 @@ Diversi progetti intuitivi mirano a migliorare l'esperienza di configurazione di
 
 Di seguito sono riportati alcuni progetti che possono aiutarti a installare e controllare i client con pochi clic:
 
-- [DAppNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DAppNode non viene fornito solo con una macchina da un fornitore. Il software, il vero e proprio launcher del nodo e il centro di controllo con molte funzionalità possono essere utilizzati su hardware arbitrario.
+- [DAppNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DAppNode non viene fornito solo con una macchina da un fornitore. Il software, il launcher del nodo vero e proprio e il centro di controllo con molte funzionalità possono essere utilizzati su hardware arbitrario.
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Il modo più rapido e semplice per configurare un nodo completo. Strumento di configurazione a riga singola e TUI per la gestione del nodo. Gratuito. Open source. Beni pubblici per Ethereum da parte di chi fa solo staking. Supporto per ARM64 e AMD64.
-- [eth-docker](https://eth-docker.net/) - Configurazione automatizzata tramite Docker incentrata su uno staking facile e sicuro, richiede conoscenze di base del terminale e di Docker, consigliata per utenti un po' più avanzati.
+- [eth-docker](https://eth-docker.net/) - Configurazione automatizzata tramite Docker focalizzata su uno staking facile e sicuro, richiede conoscenze di base del terminale e di Docker, consigliata per utenti un po' più avanzati.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) - Launcher per l'installazione di client su un server remoto tramite connessione SSH con una guida di configurazione GUI, centro di controllo e molte altre funzionalità.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Strumento di configurazione del nodo che genera automaticamente una configurazione Docker utilizzando una procedura guidata CLI. Scritto in Go da Nethermind.
-- [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Interfaccia utente web e CLI per distribuire client di esecuzione e di consenso su Kubernetes. Bootstrap da snapshot e monitoraggio integrato inclusi. Gratuito. Nessun account Chainstack richiesto. Creato da Chainstack.
+- [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Interfaccia utente web e CLI per distribuire client di esecuzione e di consenso su Kubernetes. Bootstrap tramite snapshot e monitoraggio integrato inclusi. Gratuito. Nessun account Chainstack richiesto. Creato da Chainstack.
 
 ### Configurazione manuale dei client {#manual-setup}
 
@@ -143,13 +145,13 @@ Come spiegato in precedenza, la configurazione del tuo nodo Ethereum richiederà
 
 #### Ottenere il software del client {#getting-the-client}
 
-Per prima cosa, devi ottenere il software del tuo [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) preferito.
+Per prima cosa, devi ottenere il software del tuo [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e del tuo [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) preferiti.
 
 Puoi semplicemente scaricare un'applicazione eseguibile o un pacchetto di installazione adatto al tuo sistema operativo e alla tua architettura. Verifica sempre le firme e i checksum dei pacchetti scaricati. Alcuni client offrono anche repository o immagini Docker per un'installazione e aggiornamenti più semplici. Tutti i client sono open source, quindi puoi anche compilarli dal codice sorgente. Questo è un metodo più avanzato, ma in alcuni casi potrebbe essere richiesto.
 
 Le istruzioni per l'installazione di ciascun client sono fornite nella documentazione collegata negli elenchi dei client sopra.
 
-Ecco le pagine di rilascio dei client in cui puoi trovare i loro binari precompilati o le istruzioni sull'installazione:
+Ecco le pagine di rilascio dei client dove puoi trovare i loro binari precompilati o le istruzioni sull'installazione:
 
 ##### Client di esecuzione
 
@@ -177,7 +179,7 @@ La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/)
 
 Quando si scarica software da Internet, si consiglia di verificarne l'integrità. Questo passaggio è facoltativo, ma soprattutto con un pezzo di infrastruttura cruciale come il client Ethereum, è importante essere consapevoli dei potenziali vettori di attacco ed evitarli. Se hai scaricato un binario precompilato, devi fidarti di esso e rischiare che un utente malintenzionato possa scambiare l'eseguibile con uno dannoso.
 
-Gli sviluppatori firmano i binari rilasciati con le loro chiavi PGP in modo da poter verificare crittograficamente che stai eseguendo esattamente il software che hanno creato. Devi solo ottenere le chiavi pubbliche utilizzate dagli sviluppatori, che possono essere trovate nelle pagine di rilascio del client o nella documentazione. Dopo aver scaricato la versione del client e la sua firma, puoi utilizzare un'implementazione PGP, ad es. [GnuPG](https://gnupg.org/download/index.html) per verificarli facilmente. Dai un'occhiata a un tutorial sulla verifica del software open source utilizzando `gpg` su [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) o [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
+Gli sviluppatori firmano i binari rilasciati con le loro chiavi PGP in modo da poter verificare crittograficamente che stai eseguendo esattamente il software che hanno creato. Devi solo ottenere le chiavi pubbliche utilizzate dagli sviluppatori, che possono essere trovate nelle pagine di rilascio del client o nella documentazione. Dopo aver scaricato la versione del client e la sua firma, puoi utilizzare un'implementazione PGP, ad es. [GnuPG](https://gnupg.org/download/index.html) per verificarle facilmente. Dai un'occhiata a un tutorial sulla verifica del software open source utilizzando `gpg` su [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) o [Windows/macOS](https://freedom.press/training/verifying-open-source-software/).
 
 Un'altra forma di verifica consiste nell'assicurarsi che l'hash, un'impronta crittografica univoca, del software scaricato corrisponda a quello fornito dagli sviluppatori. Questo è ancora più semplice dell'utilizzo di PGP e alcuni client offrono solo questa opzione. Basta eseguire la funzione di hash sul software scaricato e confrontarlo con quello della pagina di rilascio. Ad esempio:
 
@@ -191,15 +193,15 @@ sha256sum teku-22.6.1.tar.gz
 
 Dopo aver installato, scaricato o compilato il software del client, sei pronto per eseguirlo. Questo significa solo che deve essere eseguito con la configurazione corretta. I client offrono ricche opzioni di configurazione, che possono abilitare varie funzionalità.
 
-Iniziamo con le opzioni che possono influenzare in modo significativo le prestazioni del client e l'utilizzo dei dati. Le [modalità di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) rappresentano diversi metodi di download e convalida dei dati della blockchain. Prima di avviare il nodo, dovresti decidere quale rete e modalità di sincronizzazione utilizzare. Le cose più importanti da considerare sono lo spazio su disco e il tempo di sincronizzazione di cui il client avrà bisogno. Presta attenzione alla documentazione del client per determinare quale modalità di sincronizzazione è quella predefinita. Se non ti soddisfa, scegline un'altra in base al livello di sicurezza, ai dati disponibili e ai costi. Oltre all'algoritmo di sincronizzazione, puoi anche impostare il pruning (potatura) di diversi tipi di vecchi dati. Il pruning consente di eliminare i dati obsoleti, ovvero rimuovere i nodi del trie di stato che non sono raggiungibili dai blocchi recenti.
+Iniziamo con le opzioni che possono influenzare in modo significativo le prestazioni del client e l'utilizzo dei dati. Le [modalità di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) rappresentano diversi metodi di download e convalida dei dati della blockchain. Prima di avviare il nodo, dovresti decidere quale rete e modalità di sincronizzazione utilizzare. Le cose più importanti da considerare sono lo spazio su disco e il tempo di sincronizzazione di cui il client avrà bisogno. Presta attenzione alla documentazione del client per determinare quale modalità di sincronizzazione è quella predefinita. Se non ti soddisfa, scegline un'altra in base al livello di sicurezza, ai dati disponibili e ai costi. Oltre all'algoritmo di sincronizzazione, puoi anche impostare il pruning di diversi tipi di vecchi dati. Il pruning consente di eliminare i dati obsoleti, ovvero rimuovere i nodi del trie di stato che non sono raggiungibili dai blocchi recenti.
 
-Altre opzioni di configurazione di base sono, ad esempio, la scelta di una rete (Mainnet o testnet), l'abilitazione dell'endpoint HTTP per RPC o WebSocket, ecc. Puoi trovare tutte le funzionalità e le opzioni nella documentazione del client. Varie configurazioni del client possono essere impostate eseguendo il client con i flag corrispondenti direttamente nella CLI o nel file di configurazione. Ogni client è un po' diverso; fai sempre riferimento alla sua documentazione ufficiale o alla pagina di aiuto per i dettagli sulle opzioni di configurazione.
+Altre opzioni di configurazione di base sono, ad es., la scelta di una rete (Mainnet o testnet), l'abilitazione dell'endpoint HTTP per RPC o WebSocket, ecc. Puoi trovare tutte le funzionalità e le opzioni nella documentazione del client. Varie configurazioni del client possono essere impostate eseguendo il client con i flag corrispondenti direttamente nella CLI o nel file di configurazione. Ogni client è un po' diverso; fai sempre riferimento alla sua documentazione ufficiale o alla pagina di aiuto per i dettagli sulle opzioni di configurazione.
 
 A scopo di test, potresti preferire eseguire un client su una delle reti testnet. [Vedi la panoramica delle reti supportate](/developers/docs/nodes-and-clients/#execution-clients).
 
 Esempi di esecuzione di client di esecuzione con configurazione di base possono essere trovati nella sezione successiva.
 
-#### Avviare il client di esecuzione {#starting-the-execution-client}
+#### Avvio del client di esecuzione {#starting-the-execution-client}
 
 Prima di avviare il software del client Ethereum, esegui un ultimo controllo per verificare che il tuo ambiente sia pronto. Ad esempio, assicurati che:
 
@@ -211,7 +213,7 @@ Prima di avviare il software del client Ethereum, esegui un ultimo controllo per
 
 Esegui prima il tuo client su una testnet per assicurarti che tutto funzioni correttamente.
 
-Devi dichiarare all'avvio tutte le impostazioni del client che non sono predefinite. Puoi utilizzare i flag o il file di configurazione per dichiarare la tua configurazione preferita. L'insieme di funzionalità e la sintassi di configurazione di ciascun client differiscono. Consulta la documentazione del tuo client per le specifiche.
+Devi dichiarare all'avvio eventuali impostazioni del client che non sono predefinite. Puoi utilizzare i flag o il file di configurazione per dichiarare la tua configurazione preferita. L'insieme di funzionalità e la sintassi di configurazione di ciascun client differiscono. Consulta la documentazione del tuo client per i dettagli.
 
 I client di esecuzione e di consenso comunicano tramite un endpoint autenticato specificato nell'[Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). Per connettersi a un client di consenso, il client di esecuzione deve generare un [`jwtsecret`](https://jwt.io/) in un percorso noto. Per motivi di sicurezza e stabilità, i client dovrebbero essere eseguiti sulla stessa macchina ed entrambi i client devono conoscere questo percorso poiché viene utilizzato per autenticare una connessione RPC locale tra di loro. Il client di esecuzione deve anche definire una porta in ascolto per le API autenticate.
 
@@ -221,24 +223,24 @@ Questo token viene generato automaticamente dal software del client, ma in alcun
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Eseguire un client di esecuzione {#running-an-execution-client}
+#### Esecuzione di un client di esecuzione {#running-an-execution-client}
 
 Questa sezione ti guiderà nell'avvio dei client di esecuzione. Serve solo come esempio di una configurazione di base, che avvierà il client con queste impostazioni:
 
 - Specifica la rete a cui connettersi, la Mainnet nei nostri esempi
   - Puoi invece scegliere [una delle testnet](/developers/docs/networks/) per test preliminari della tua configurazione
-- Definisce la directory dei dati, in cui verranno archiviati tutti i dati, inclusa la blockchain
-  - Assicurati di sostituire il percorso con uno reale, ad es. puntando al tuo disco esterno
+- Definisce la directory dei dati, dove verranno archiviati tutti i dati inclusa la blockchain
+  - Assicurati di sostituire il percorso con uno reale, ad es. puntando alla tua unità esterna
 - Abilita le interfacce per comunicare con il client
   - Inclusi JSON-RPC e Engine API per la comunicazione con il client di consenso
 - Definisce il percorso a `jwtsecret` per l'API autenticata
   - Assicurati di sostituire il percorso di esempio con uno reale a cui i client possano accedere, ad es. `/tmp/jwtsecret`
 
-Tieni presente che questo è solo un esempio di base, tutte le altre impostazioni saranno impostate sui valori predefiniti. Presta attenzione alla documentazione di ciascun client per conoscere i valori predefiniti, le impostazioni e le funzionalità. Per ulteriori funzionalità, ad esempio per l'esecuzione di validatori, il monitoraggio, ecc., fai riferimento alla documentazione del client specifico.
+Tieni presente che questo è solo un esempio di base, tutte le altre impostazioni verranno impostate sui valori predefiniti. Presta attenzione alla documentazione di ciascun client per conoscere i valori predefiniti, le impostazioni e le funzionalità. Per ulteriori funzionalità, ad esempio per l'esecuzione di validatori, il monitoraggio, ecc., fai riferimento alla documentazione del client specifico.
 
-> Nota che i backslash `\` negli esempi sono solo a scopo di formattazione; i flag di configurazione possono essere definiti in una singola riga.
+> Nota che le barre rovesciate `\` negli esempi sono solo a scopo di formattazione; i flag di configurazione possono essere definiti in una singola riga.
 
-##### Eseguire Besu
+##### Esecuzione di Besu
 
 Questo esempio avvia Besu sulla Mainnet, archivia i dati della blockchain nel formato predefinito in `/data/ethereum`, abilita JSON-RPC e Engine RPC per la connessione del client di consenso. L'Engine API è autenticata con il token `jwtsecret` e sono consentite solo le chiamate da `localhost`.
 
@@ -252,7 +254,7 @@ besu --network=mainnet \
     --engine-jwt-secret=/path/to/jwtsecret
 ```
 
-Besu include anche un'opzione launcher che porrà una serie di domande e genererà il file di configurazione. Esegui il launcher interattivo utilizzando:
+Besu è dotato anche di un'opzione launcher che porrà una serie di domande e genererà il file di configurazione. Esegui il launcher interattivo utilizzando:
 
 ```sh
 besu --Xlauncher
@@ -260,7 +262,7 @@ besu --Xlauncher
 
 La [documentazione di Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contiene opzioni aggiuntive e dettagli di configurazione.
 
-##### Eseguire Erigon
+##### Esecuzione di Erigon
 
 Questo esempio avvia Erigon sulla Mainnet, archivia i dati della blockchain in `/data/ethereum`, abilita JSON-RPC, definisce quali namespace sono consentiti e abilita l'autenticazione per la connessione del client di consenso che è definita dal percorso `jwtsecret`.
 
@@ -271,9 +273,9 @@ erigon --chain mainnet \
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Erigon per impostazione predefinita esegue una sincronizzazione completa con 8 GB di HDD che si tradurrà in oltre 2 TB di dati di archivio. Assicurati che `datadir` punti a un disco con spazio libero sufficiente o esamina il flag `--prune` che può tagliare diversi tipi di dati. Controlla la `--help` di Erigon per saperne di più.
+Erigon per impostazione predefinita esegue una sincronizzazione completa con un HDD da 8 GB che risulterà in oltre 2 TB di dati di archivio. Assicurati che `datadir` punti a un disco con spazio libero sufficiente o esamina il flag `--prune` che può tagliare diversi tipi di dati. Controlla la `--help` di Erigon per saperne di più.
 
-##### Eseguire Geth
+##### Esecuzione di Geth
 
 Questo esempio avvia Geth sulla Mainnet, archivia i dati della blockchain in `/data/ethereum`, abilita JSON-RPC e definisce quali namespace sono consentiti. Abilita anche l'autenticazione per la connessione del client di consenso che richiede il percorso a `jwtsecret` e anche l'opzione che definisce quali connessioni sono consentite, nel nostro esempio solo da `localhost`.
 
@@ -288,7 +290,7 @@ geth --mainnet \
 
 Controlla la [documentazione per tutte le opzioni di configurazione](https://geth.ethereum.org/docs/fundamentals/command-line-options) e scopri di più sull'[esecuzione di Geth con un client di consenso](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
-##### Eseguire Nethermind
+##### Esecuzione di Nethermind
 
 Nethermind offre varie [opzioni di installazione](https://docs.nethermind.io/get-started/installing-nethermind). Il pacchetto viene fornito con vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa, trovi Runner che è l'eseguibile stesso e puoi semplicemente eseguirlo con i flag di configurazione. JSON-RPC è abilitato per impostazione predefinita.
 
@@ -302,7 +304,7 @@ La documentazione di Nethermind offre una [guida completa](https://docs.nethermi
 
 Un client di esecuzione avvierà le sue funzioni principali, gli endpoint scelti e inizierà a cercare peer. Dopo aver scoperto con successo i peer, il client avvia la sincronizzazione. Il client di esecuzione attenderà una connessione dal client di consenso. I dati correnti della blockchain saranno disponibili una volta che il client sarà sincronizzato con successo allo stato corrente.
 
-##### Eseguire Reth
+##### Esecuzione di Reth
 
 Questo esempio avvia Reth sulla Mainnet, utilizzando la posizione dei dati predefinita. Abilita l'autenticazione JSON-RPC e Engine RPC per la connessione del client di consenso che è definita dal percorso `jwtsecret`, con solo le chiamate da `localhost` consentite.
 
@@ -315,19 +317,19 @@ reth node \
 
 Vedi [Configurazione di Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) per saperne di più sulle directory dei dati predefinite. La [documentazione di Reth](https://reth.rs/run/mainnet.html) contiene opzioni aggiuntive e dettagli di configurazione.
 
-#### Avviare il client di consenso {#starting-the-consensus-client}
+#### Avvio del client di consenso {#starting-the-consensus-client}
 
 Il client di consenso deve essere avviato con la corretta configurazione della porta per stabilire una connessione RPC locale al client di esecuzione. I client di consenso devono essere eseguiti con la porta del client di esecuzione esposta come argomento di configurazione.
 
-Il client di consenso necessita anche del percorso al `jwt-secret` del client di esecuzione per autenticare la connessione RPC tra di loro. Similmente agli esempi di esecuzione sopra, ogni client di consenso ha un flag di configurazione che accetta il percorso del file del token jwt come argomento. Questo deve essere coerente con il percorso `jwtsecret` fornito al client di esecuzione.
+Il client di consenso ha anche bisogno del percorso al `jwt-secret` del client di esecuzione per autenticare la connessione RPC tra di loro. Similmente agli esempi di esecuzione sopra, ogni client di consenso ha un flag di configurazione che accetta il percorso del file del token jwt come argomento. Questo deve essere coerente con il percorso `jwtsecret` fornito al client di esecuzione.
 
 Se prevedi di eseguire un validatore, assicurati di aggiungere un flag di configurazione che specifichi l'indirizzo Ethereum del destinatario delle commissioni. È qui che si accumulano le ricompense in ether per il tuo validatore. Ogni client di consenso ha un'opzione, ad es. `--suggested-fee-recipient=0xabcd1`, che accetta un indirizzo Ethereum come argomento.
 
-Quando si avvia un nodo beacon su una testnet, è possibile risparmiare molto tempo di sincronizzazione utilizzando un endpoint pubblico per la [sincronizzazione da checkpoint](https://notes.ethereum.org/@launchpad/checkpoint-sync).
+Quando si avvia un nodo beacon su una testnet, è possibile risparmiare molto tempo di sincronizzazione utilizzando un endpoint pubblico per la [sincronizzazione tramite checkpoint](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Eseguire un client di consenso {#running-a-consensus-client}
+#### Esecuzione di un client di consenso {#running-a-consensus-client}
 
-##### Eseguire Lighthouse
+##### Esecuzione di Lighthouse
 
 Prima di eseguire Lighthouse, scopri di più su come installarlo e configurarlo nel [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
@@ -340,7 +342,7 @@ lighthouse beacon_node \
     --execution-jwt /path/to/jwtsecret
 ```
 
-##### Eseguire Lodestar
+##### Esecuzione di Lodestar
 
 Installa il software Lodestar compilandolo o scaricando l'immagine Docker. Scopri di più nella [documentazione](https://chainsafe.github.io/lodestar/) e nella [guida di configurazione](https://hackmd.io/@philknows/rk5cDvKmK) più completa.
 
@@ -353,7 +355,7 @@ lodestar beacon \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Eseguire Nimbus
+##### Esecuzione di Nimbus
 
 Nimbus viene fornito con client sia di consenso che di esecuzione. Può essere eseguito su vari dispositivi anche con una potenza di calcolo molto modesta.
 Dopo aver [installato le dipendenze e Nimbus stesso](https://nimbus.guide/quick-start.html), puoi eseguire il suo client di consenso:
@@ -366,7 +368,7 @@ nimbus_beacon_node \
     --jwt-secret="/path/to/jwtsecret"
 ```
 
-##### Eseguire Prysm
+##### Esecuzione di Prysm
 
 Prysm viene fornito con uno script che consente una facile installazione automatica. I dettagli possono essere trovati nella [documentazione di Prysm](https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/).
 
@@ -378,7 +380,7 @@ Prysm viene fornito con uno script che consente una facile installazione automat
     --jwt-secret=/path/to/jwtsecret
 ```
 
-##### Eseguire Teku
+##### Esecuzione di Teku
 
 ```sh
 teku --network mainnet \
@@ -389,7 +391,7 @@ teku --network mainnet \
 
 Quando un client di consenso si connette al client di esecuzione per leggere il contratto di deposito e identificare i validatori, si connette anche ad altri peer del nodo beacon e inizia a sincronizzare gli slot di consenso dalla genesi. Una volta che il nodo beacon raggiunge l'epoca corrente, la Beacon API diventa utilizzabile per i tuoi validatori. Scopri di più sulle [API del nodo beacon](https://ethereum.github.io/beacon-APIs).
 
-### Aggiungere validatori {#adding-validators}
+### Aggiunta di validatori {#adding-validators}
 
 Un client di consenso funge da nodo beacon a cui i validatori possono connettersi. Ogni client di consenso ha il proprio software per validatori descritto in dettaglio nella rispettiva documentazione.
 
@@ -397,17 +399,17 @@ L'esecuzione del proprio validatore consente il [solo staking](/staking/solo/), 
 
 Il modo più semplice per iniziare con lo staking e la generazione delle chiavi del validatore è utilizzare l'[Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org/), che ti consente di testare la tua configurazione [eseguendo nodi su Hoodi](https://notes.ethereum.org/@launchpad/hoodi). Quando sei pronto per la Mainnet, puoi ripetere questi passaggi utilizzando il [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 
-Dai un'occhiata alla [pagina dello staking](/staking) per una panoramica sulle opzioni di staking.
+Consulta la [pagina dello staking](/staking) per una panoramica sulle opzioni di staking.
 
-### Usare il nodo {#using-the-node}
+### Utilizzo del nodo {#using-the-node}
 
-I client di esecuzione offrono [endpoint API RPC](/developers/docs/apis/json-rpc/) che puoi utilizzare per inviare transazioni, interagire con o distribuire contratti intelligenti sulla rete Ethereum in vari modi:
+I client di esecuzione offrono [endpoint API RPC](/developers/docs/apis/json-rpc/) che puoi utilizzare per inviare transazioni, interagire con o distribuire smart contract sulla rete Ethereum in vari modi:
 
 - Chiamandoli manualmente con un protocollo adatto (ad es. utilizzando `curl`)
 - Collegando una console fornita (ad es. `geth attach`)
-- Implementandoli nelle applicazioni utilizzando librerie Web3, ad es. [Web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
+- Implementandoli in applicazioni utilizzando librerie Web3, ad es. [Web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
 
-Client diversi hanno implementazioni diverse degli endpoint RPC. Ma esiste uno standard JSON-RPC che puoi utilizzare con ogni client. Per una panoramica [leggi la documentazione JSON-RPC](/developers/docs/apis/json-rpc/). Le applicazioni che necessitano di informazioni dalla rete Ethereum possono utilizzare questa RPC. Ad esempio, il popolare portafoglio MetaMask ti consente di [connetterti al tuo endpoint RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) che offre forti vantaggi in termini di privacy e sicurezza.
+Diversi client hanno diverse implementazioni degli endpoint RPC. Ma esiste uno standard JSON-RPC che puoi utilizzare con ogni client. Per una panoramica [leggi la documentazione JSON-RPC](/developers/docs/apis/json-rpc/). Le applicazioni che necessitano di informazioni dalla rete Ethereum possono utilizzare questa RPC. Ad esempio, il popolare portafoglio MetaMask ti consente di [connetterti al tuo endpoint RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) che offre forti vantaggi in termini di privacy e sicurezza.
 
 I client di consenso espongono tutti una [Beacon API](https://ethereum.github.io/beacon-APIs) che può essere utilizzata per controllare lo stato del client di consenso o scaricare blocchi e dati di consenso inviando richieste utilizzando strumenti come [Curl](https://curl.se). Maggiori informazioni al riguardo possono essere trovate nella documentazione di ciascun client di consenso.
 
@@ -421,31 +423,31 @@ Un modo per aggirare questo problema è impedire che metodi RPC potenzialmente d
 
 L'accesso all'interfaccia RPC può essere esteso attraverso lo sviluppo di API di livello edge o applicazioni server web, come Nginx, e collegandole all'indirizzo e alla porta locali del tuo client. Sfruttare un livello intermedio può anche consentire agli sviluppatori di impostare un certificato per connessioni `https` sicure all'interfaccia RPC.
 
-L'impostazione di un server web, un proxy o un'API Rest rivolta all'esterno non è l'unico modo per fornire l'accesso all'endpoint RPC del tuo nodo. Un altro modo per preservare la privacy per impostare un endpoint raggiungibile pubblicamente è ospitare il nodo sul tuo servizio onion [Tor](https://www.torproject.org/). Questo ti consentirà di raggiungere l'RPC al di fuori della tua rete locale senza un indirizzo IP pubblico statico o porte aperte. Tuttavia, l'utilizzo di questa configurazione potrebbe consentire l'accesso all'endpoint RPC solo tramite la rete Tor, che non è supportata da tutte le applicazioni e potrebbe causare problemi di connessione.
+L'impostazione di un server web, un proxy o un'API Rest rivolta all'esterno non è l'unico modo per fornire accesso all'endpoint RPC del tuo nodo. Un altro modo per preservare la privacy per impostare un endpoint raggiungibile pubblicamente è ospitare il nodo sul tuo servizio onion [Tor](https://www.torproject.org/). Questo ti consentirà di raggiungere l'RPC al di fuori della tua rete locale senza un indirizzo IP pubblico statico o porte aperte. Tuttavia, l'utilizzo di questa configurazione potrebbe consentire l'accesso all'endpoint RPC solo tramite la rete Tor, che non è supportata da tutte le applicazioni e potrebbe causare problemi di connessione.
 
 Per fare ciò, devi creare il tuo [servizio onion](https://community.torproject.org/onion-services/). Dai un'occhiata alla [documentazione](https://community.torproject.org/onion-services/setup/) sulla configurazione del servizio onion per ospitare il tuo. Puoi puntarlo a un server web con proxy alla porta RPC o semplicemente direttamente all'RPC.
 
-Infine, e uno dei modi più popolari per fornire l'accesso alle reti interne è attraverso una connessione VPN. A seconda del tuo caso d'uso e della quantità di utenti che necessitano di accedere al tuo nodo, una connessione VPN sicura potrebbe essere un'opzione. [OpenVPN](https://openvpn.net/) è una VPN SSL completa che implementa l'estensione di rete sicura OSI layer 2 o 3 utilizzando il protocollo SSL/TLS standard del settore, supporta metodi di autenticazione client flessibili basati su certificati, smart card e/o credenziali nome utente/password e consente criteri di controllo degli accessi specifici per utente o gruppo utilizzando regole firewall applicate all'interfaccia virtuale VPN.
+Infine, e uno dei modi più popolari per fornire accesso alle reti interne è attraverso una connessione VPN. A seconda del tuo caso d'uso e della quantità di utenti che necessitano di accedere al tuo nodo, una connessione VPN sicura potrebbe essere un'opzione. [OpenVPN](https://openvpn.net/) è una VPN SSL completa che implementa l'estensione di rete sicura OSI layer 2 o 3 utilizzando il protocollo SSL/TLS standard del settore, supporta metodi flessibili di autenticazione del client basati su certificati, smart card e/o credenziali nome utente/password e consente criteri di controllo degli accessi specifici per utente o gruppo utilizzando regole firewall applicate all'interfaccia virtuale VPN.
 
-### Gestire il nodo {#operating-the-node}
+### Operare il nodo {#operating-the-node}
 
 Dovresti monitorare regolarmente il tuo nodo per assicurarti che funzioni correttamente. Potrebbe essere necessario eseguire una manutenzione occasionale.
 
 #### Mantenere un nodo online {#keeping-node-online}
 
-Il tuo nodo non deve essere online tutto il tempo, ma dovresti mantenerlo online il più possibile per mantenerlo in sincronizzazione con la rete. Puoi spegnerlo per riavviarlo, ma tieni presente che:
+Il tuo nodo non deve essere online tutto il tempo, ma dovresti mantenerlo online il più possibile per mantenerlo sincronizzato con la rete. Puoi spegnerlo per riavviarlo, ma tieni presente che:
 
 - Lo spegnimento può richiedere alcuni minuti se lo stato recente è ancora in fase di scrittura su disco.
-- Gli spegnimenti forzati possono danneggiare il database richiedendoti di risincronizzare l'intero nodo.
-- Il tuo client andrà fuori sincronizzazione con la rete e dovrà risincronizzarsi quando lo riavvii. Sebbene il nodo possa iniziare la sincronizzazione da dove era stato spento l'ultima volta, il processo può richiedere tempo a seconda di quanto tempo è rimasto offline.
+- Gli spegnimenti forzati possono danneggiare il database richiedendo di risincronizzare l'intero nodo.
+- Il tuo client non sarà più sincronizzato con la rete e dovrà risincronizzarsi al riavvio. Sebbene il nodo possa iniziare la sincronizzazione da dove era stato spento l'ultima volta, il processo può richiedere tempo a seconda di quanto tempo è rimasto offline.
 
-_Questo non si applica ai nodi validatori del livello di consenso._ Portare il tuo nodo offline influenzerà tutti i servizi che dipendono da esso. Se stai eseguendo un nodo per scopi di _staking_ dovresti cercare di ridurre al minimo i tempi di inattività il più possibile.
+_Questo non si applica ai nodi validatori del livello di consenso._ Portare il tuo nodo offline influenzerà tutti i servizi che dipendono da esso. Se stai eseguendo un nodo per scopi di _staking_, dovresti cercare di ridurre al minimo i tempi di inattività il più possibile.
 
-#### Creare servizi client {#creating-client-services}
+#### Creazione di servizi client {#creating-client-services}
 
 Prendi in considerazione la creazione di un servizio per eseguire automaticamente i tuoi client all'avvio. Ad esempio, sui server Linux, una buona pratica sarebbe creare un servizio, ad es. con `systemd`, che esegue il client con la configurazione corretta, sotto un utente con privilegi limitati e si riavvia automaticamente.
 
-#### Aggiornare i client {#updating-clients}
+#### Aggiornamento dei client {#updating-clients}
 
 Devi mantenere aggiornato il software del tuo client con le ultime patch di sicurezza, funzionalità ed [EIP](/eips/). Soprattutto prima degli [hard fork](/ethereum-forks/), assicurati di eseguire le versioni corrette del client.
 
@@ -455,13 +457,13 @@ L'aggiornamento dei client è molto semplice. Ogni client ha istruzioni specific
 
 Ogni implementazione del client ha una stringa di versione leggibile dall'uomo utilizzata nel protocollo peer-to-peer ma è accessibile anche dalla riga di comando. Questa stringa di versione consente agli utenti di verificare che stiano eseguendo la versione corretta e consente agli esploratori di blocchi e ad altri strumenti analitici interessati di quantificare la distribuzione di client specifici sulla rete. Fai riferimento alla documentazione del singolo client per ulteriori informazioni sulle stringhe di versione.
 
-#### Eseguire servizi aggiuntivi {#running-additional-services}
+#### Esecuzione di servizi aggiuntivi {#running-additional-services}
 
-L'esecuzione del tuo nodo ti consente di utilizzare servizi che richiedono l'accesso diretto all'RPC del client Ethereum. Si tratta di servizi basati su Ethereum come [soluzioni layer 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend per portafogli, esploratori di blocchi, strumenti per sviluppatori e altre infrastrutture Ethereum.
+L'esecuzione del proprio nodo consente di utilizzare servizi che richiedono l'accesso diretto all'RPC del client Ethereum. Si tratta di servizi basati su Ethereum come [soluzioni layer 2](/developers/docs/scaling/#layer-2-scaling), backend per portafogli, esploratori di blocchi, strumenti per sviluppatori e altre infrastrutture Ethereum.
 
-#### Monitorare il nodo {#monitoring-the-node}
+#### Monitoraggio del nodo {#monitoring-the-node}
 
-Per monitorare correttamente il tuo nodo, prendi in considerazione la raccolta di metriche. I client forniscono endpoint di metriche in modo da poter ottenere dati completi sul tuo nodo. Usa strumenti come [InfluxDB](https://www.influxdata.com/get-influxdb/) o [Prometheus](https://prometheus.io/) per creare database che puoi trasformare in visualizzazioni e grafici in software come [Grafana](https://grafana.com/). Esistono molte configurazioni per l'utilizzo di questo software e diverse dashboard Grafana per visualizzare il tuo nodo e la rete nel suo complesso. Ad esempio, dai un'occhiata al [tutorial sul monitoraggio di Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
+Per monitorare correttamente il tuo nodo, prendi in considerazione la raccolta di metriche. I client forniscono endpoint per le metriche in modo da poter ottenere dati completi sul tuo nodo. Usa strumenti come [InfluxDB](https://www.influxdata.com/get-influxdb/) o [Prometheus](https://prometheus.io/) per creare database che puoi trasformare in visualizzazioni e grafici in software come [Grafana](https://grafana.com/). Ci sono molte configurazioni per l'utilizzo di questo software e diverse dashboard Grafana per visualizzare il tuo nodo e la rete nel suo complesso. Ad esempio, dai un'occhiata al [tutorial sul monitoraggio di Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 Come parte del tuo monitoraggio, assicurati di tenere d'occhio le prestazioni della tua macchina. Durante la sincronizzazione iniziale del tuo nodo, il software del client potrebbe essere molto pesante per CPU e RAM. Oltre a Grafana, puoi utilizzare gli strumenti offerti dal tuo sistema operativo come `htop` o `uptime` per farlo.
 
@@ -469,9 +471,9 @@ Come parte del tuo monitoraggio, assicurati di tenere d'occhio le prestazioni de
 
 - [Guide allo staking di Ethereum](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, aggiornato di frequente_
 - [Guida | Come configurare un validatore per lo staking di Ethereum sulla mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, aggiornato di frequente_
-- [Guide di EthStaker sull'esecuzione di validatori su testnet](https://github.com/remyroy/ethstaker#guides) – _EthStaker, aggiornato regolarmente_
+- [Guide di EthStaker sull'esecuzione di validatori sulle testnet](https://github.com/remyroy/ethstaker#guides) – _EthStaker, aggiornato regolarmente_
 - [App di esempio AWS Blockchain Node Runner per nodi Ethereum](https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum) - _AWS, aggiornato di frequente_
-- [FAQ su The Merge per gli operatori di nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Luglio 2022_
+- [FAQ su The Merge per gli operatori dei nodi](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Luglio 2022_
 - [Analisi dei requisiti hardware per essere un nodo Ethereum completamente convalidato](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 settembre 2018_
 - [Esecuzione di nodi completi Ethereum: una guida per i poco motivati](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_
 - [Esecuzione di un nodo Hyperledger Besu sulla Mainnet di Ethereum: vantaggi, requisiti e configurazione](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 maggio 2020_

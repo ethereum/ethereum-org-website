@@ -238,3 +238,7 @@ _Conhece um recurso comunitário que o ajudou? Edite esta página e adicione-o!_
 - [Contas](/developers/docs/accounts/)
 - [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/)
 - [Gás](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

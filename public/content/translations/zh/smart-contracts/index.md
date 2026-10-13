@@ -71,7 +71,7 @@ lang: zh
 
 - [稳定币](/stablecoins/)
 - [创建和分发独特的数字资产](/nft/)
-- [自动、开放的货币交易所](/get-eth/#dex)
+- [自动、开放的货币交易所](/defi/#swaps)
 - [去中心化游戏](/apps/categories/gaming)
 - [自动理赔的保险单](https://etherisc.com/)
 - [允许人们创建定制化、可互操作货币的标准](/developers/docs/standards/tokens/)

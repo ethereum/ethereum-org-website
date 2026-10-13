@@ -55,10 +55,10 @@ incomplete: true
 
 ## Python प्रोजेक्ट्स और टूल्स {#python-projects-and-tools}
 
-### सक्रिय: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _इथेरियम के साथ इंटरैक्ट करने के लिए Python लाइब्रेरी_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM के लिए Pythonic स्मार्ट अनुबंध भाषा_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper का मूल परीक्षण टूल; मेननेट फोर्किंग, डिबगिंग और सुंदर ट्रेसबैक के साथ एक इंटरप्रेटर_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Vyper और Python के लिए एक स्मार्ट अनुबंध विकास और परीक्षण फ्रेमवर्क, जो Titanoboa पर बनाया गया है_
 - [Ape](https://github.com/ApeWorX/ape) - _Pythonistas, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध विकास टूल_
 - [py-evm](https://github.com/ethereum/py-evm) - _इथेरियम वर्चुअल मशीन का कार्यान्वयन_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _इथेरियम-आधारित एप्लिकेशन के परीक्षण के लिए टूल_
@@ -67,9 +67,8 @@ incomplete: true
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker अनुबंधों के लिए Python API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python के लिए इथेरियम के साथ साइन इन करें (SIWE)_
 - [इथेरियम एकीकरण के लिए Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, यूनिस्वैप और अन्य लोकप्रिय प्रोजेक्ट्स के लिए तैयार एकीकरण के साथ एक Python पैकेज_
-- [Wake](https://getwake.io) - _अनुबंध परीक्षण, फ़ज़िंग, तैनाती, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन Python फ्रेमवर्क (भाषा सर्वर - [Solidity के लिए टूल](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _यूनिस्वैप V2/V3, Balancer और Curve में DeFi एनालिटिक्स और AMM सिमुलेशन के लिए Python SDK_
-
+- [Wake](https://getwake.io) - _अनुबंध परीक्षण, फ़ज़िंग, तैनाती, भेद्यता स्कैनिंग और कोड नेविगेशन के लिए ऑल-इन-वन Python फ्रेमवर्क (भाषा सर्वर - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _यूनिस्वैप V2/V3, Balancer, और Curve में विकेंद्रीकृत वित्त (DeFi) एनालिटिक्स और स्वचालित बाज़ार निर्माता (एएमएम) सिमुलेशन के लिए Python SDK_
 ### संग्रहीत / अब रखरखाव नहीं किया जाता: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _इथेरियम Python क्लाइंट_

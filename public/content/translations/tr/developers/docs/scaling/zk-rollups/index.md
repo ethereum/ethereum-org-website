@@ -12,13 +12,13 @@ Sıfır bilgi toplamaları (ZK-rollup'lar), hesaplama ve durum depolamayı zinci
 
 ## Sıfır bilgi toplamaları nelerdir? {#what-are-zk-rollups}
 
-**Sıfır bilgi toplamaları (ZK-rollup'lar)**, işlemleri zincir dışında yürütülen toplu işlemler (batch'ler) halinde bir araya getirir (veya 'toplar'). Zincir dışı hesaplama, blokzincire gönderilmesi gereken veri miktarını azaltır. ZK-rollup operatörleri, her bir işlemi ayrı ayrı göndermek yerine, bir toplu işlemdeki tüm işlemleri temsil etmek için gereken değişikliklerin bir özetini sunar. Ayrıca, değişikliklerinin doğruluğunu kanıtlamak için [geçerlilik kanıtları](/glossary/#validity-proof) üretirler.
+**Sıfır bilgi toplamaları (ZK-rollup'lar)**, işlemleri zincir dışı yürütülen toplu işlemler halinde bir araya getirir (veya 'toplar'). Zincir dışı hesaplama, blokzincire gönderilmesi gereken veri miktarını azaltır. ZK-rollup operatörleri, her bir işlemi ayrı ayrı göndermek yerine, bir toplu işlemdeki tüm işlemleri temsil etmek için gereken değişikliklerin bir özetini sunar. Ayrıca, değişikliklerinin doğruluğunu kanıtlamak için [geçerlilik kanıtları](/glossary/#validity-proof) üretirler.
 
-ZK-rollup'ın durumu, Ethereum ağında dağıtılan bir akıllı sözleşme tarafından sürdürülür. Bu durumu güncellemek için, ZK-rollup düğümleri doğrulama için bir geçerlilik kanıtı sunmalıdır. Belirtildiği gibi, geçerlilik kanıtı, rollup tarafından önerilen durum değişikliğinin gerçekten verilen toplu işlemlerin yürütülmesinin bir sonucu olduğuna dair kriptografik bir güvencedir. Bu, ZK-rollup'ların işlemleri Ethereum'da kesinleştirmek için [iyimser toplamalar (optimistic rollups)](/developers/docs/scaling/optimistic-rollups/) gibi tüm işlem verilerini zincir içine göndermek yerine yalnızca geçerlilik kanıtları sağlaması gerektiği anlamına gelir.
+ZK-rollup'ın durumu, Ethereum ağında dağıtılan bir akıllı sözleşme tarafından sürdürülür. Bu durumu güncellemek için ZK-rollup düğümleri, doğrulama için bir geçerlilik kanıtı sunmalıdır. Belirtildiği gibi, geçerlilik kanıtı, rollup tarafından önerilen durum değişikliğinin gerçekten verilen işlem toplu işleminin yürütülmesinin bir sonucu olduğuna dair kriptografik bir güvencedir. Bu, ZK-rollup'ların, durum geçişini kesinleştiren şey geçerlilik kanıtı olduğu için, [iyimser toplamaların](/developers/docs/scaling/optimistic-rollups/) yaptığı gibi tüm işlem verilerini zincir içi yayınlamasına gerek olmadığı anlamına gelir. Yine de, aşağıda açıklandığı gibi rollup'ın durumunu yeniden oluşturmak için gereken verileri yayınlarlar.
 
-Bir ZK-rollup'tan Ethereum'a fon taşırken hiçbir gecikme yaşanmaz çünkü çıkış işlemleri, ZK-rollup sözleşmesi geçerlilik kanıtını doğruladığında yürütülür. Buna karşılık, iyimser toplamalardan fon çekim işlemi, herkesin çıkış işlemine bir [sahtekarlık kanıtı](/glossary/#fraud-proof) ile itiraz etmesine olanak tanımak için bir gecikmeye tabidir.
+Fonları bir ZK-rollup'tan Ethereum'a taşırken herhangi bir gecikme olmaz çünkü çıkış işlemleri, ZK-rollup sözleşmesi geçerlilik kanıtını doğruladığında yürütülür. Aksine, iyimser toplamalardan fon çekmek, herkesin çıkış işlemine bir [sahtekarlık kanıtı](/glossary/#fraud-proof) ile itiraz etmesine olanak tanımak için bir gecikmeye tabidir.
 
-ZK-rollup'lar işlemleri Ethereum'a `calldata` olarak yazar. `calldata`, akıllı sözleşme işlevlerine yapılan harici çağrılara dahil edilen verilerin depolandığı yerdir. `calldata` içindeki bilgiler blokzincirde yayınlanır ve herkesin rollup'ın durumunu bağımsız olarak yeniden oluşturmasına olanak tanır. ZK-rollup'lar işlem verilerini azaltmak için sıkıştırma teknikleri kullanır; örneğin, hesaplar bir adres yerine bir endeks ile temsil edilir, bu da 28 bayt veri tasarrufu sağlar. Zincir içi veri yayını, rollup'lar için önemli bir maliyettir, bu nedenle veri sıkıştırma kullanıcılar için ücretleri azaltabilir.
+ZK-rollup'lar işlemleri Ethereum'a `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yazar. `calldata`, akıllı sözleşme işlevlerine yapılan harici çağrılara dahil edilen verilerin depolandığı yerdir. Her iki durumda da veriler blokzincirde yayınlanarak herkesin rollup'ın durumunu bağımsız olarak yeniden oluşturmasına olanak tanır. ZK-rollup'lar işlem verilerini azaltmak için sıkıştırma teknikleri kullanır; örneğin, hesaplar bir adres yerine bir endeks ile temsil edilir, bu da 28 bayt veri tasarrufu sağlar. Zincir içi veri yayını, rollup'lar için önemli bir maliyettir, bu nedenle veri sıkıştırma kullanıcılar için ücretleri azaltabilir.
 
 ## ZK-rollup'lar Ethereum ile nasıl etkileşime girer? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ ZK-rollup'lar aşağıdakiler için ana Ethereum protokolüne güvenir:
 
 ### Veri kullanılabilirliği {#data-availability}
 
-ZK-rollup'lar, zincir dışında işlenen her işlem için durum verilerini Ethereum'da yayınlar. Bu verilerle, bireylerin veya işletmelerin rollup'ın durumunu yeniden oluşturması ve zinciri kendilerinin doğrulaması mümkündür. Ethereum, bu verileri ağın tüm katılımcılarına `calldata` olarak sunar.
+ZK-rollup'lar, zincir dışı işlenen her işlem için durum verilerini Ethereum'da yayınlar. Bu verilerle, bireylerin veya işletmelerin rollup'ın durumunu yeniden üretmesi ve zinciri kendilerinin doğrulaması mümkündür. Ethereum, bu verileri ağın tüm katılımcılarına `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde sunar.
 
-ZK-rollup'ların zincir içinde çok fazla işlem verisi yayınlamasına gerek yoktur çünkü geçerlilik kanıtları durum geçişlerinin gerçekliğini zaten doğrular. Yine de, verileri zincir içinde depolamak hala önemlidir çünkü L2 zincirinin durumunun izinsiz, bağımsız bir şekilde doğrulanmasına olanak tanır; bu da herkesin toplu işlemler sunmasına izin vererek kötü niyetli operatörlerin zinciri sansürlemesini veya dondurmasını engeller.
+ZK-rollup'ların zincir içi çok fazla işlem verisi yayınlamasına gerek yoktur çünkü geçerlilik kanıtları durum geçişlerinin gerçekliğini zaten doğrular. Bununla birlikte, verileri zincir içi depolamak hala önemlidir çünkü L2 zincirinin durumunun izinsiz, bağımsız bir şekilde doğrulanmasına olanak tanır, bu da herkesin toplu işlemler sunmasına izin vererek kötü niyetli operatörlerin zinciri sansürlemesini veya dondurmasını engeller.
 
-Kullanıcıların rollup ile etkileşime girmesi için zincir içi gereklidir. Durum verilerine erişim olmadan kullanıcılar hesap bakiyelerini sorgulayamaz veya durum bilgilerine dayanan işlemleri (ör. çekim işlemleri) başlatamazlar.
+Kullanıcıların rollup ile etkileşime girmesi için zincir içi veriler gereklidir. Durum verilerine erişim olmadan kullanıcılar hesap bakiyelerini sorgulayamaz veya durum bilgisine dayanan işlemleri (ör. çekim işlemleri) başlatamazlar.
 
 ### İşlem kesinliği {#transaction-finality}
 
@@ -62,9 +62,13 @@ Diğer ZK-rollup'lar, bir [Hisse Kanıtı (PoS)](/developers/docs/consensus-mech
 
 #### ZK-rollup'lar işlem verilerini Ethereum'da nasıl yayınlar? {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Açıklandığı gibi, işlem verileri Ethereum'da `calldata` olarak yayınlanır. `calldata`, bir akıllı sözleşmede bir işleve argüman geçirmek için kullanılan bir veri alanıdır ve [belleğe (memory)](/developers/docs/smart-contracts/anatomy/#memory) benzer şekilde davranır. `calldata` Ethereum'un durumunun bir parçası olarak depolanmasa da, Ethereum zincirinin [geçmiş günlüklerinin](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) bir parçası olarak zincir içinde kalıcı olur. `calldata` Ethereum'un durumunu etkilemez, bu da onu verileri zincir içinde depolamanın ucuz bir yolu haline getirir.
+Açıklandığı gibi, işlem verileri Ethereum'da `calldata` olarak yayınlanır. `calldata`, bir akıllı sözleşmede bir işleve argüman iletmek için kullanılan bir veri alanıdır ve [belleğe](/developers/docs/smart-contracts/anatomy/#memory) benzer şekilde davranır. `calldata` Ethereum'un durumunun bir parçası olarak depolanmasa da, Ethereum zincirinin [geçmiş günlüklerinin](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) bir parçası olarak zincir içi kalıcı olur. `calldata` Ethereum'un durumunu etkilemez, bu da onu zincir içi veri depolamanın ucuz bir yolu haline getirir.
 
-`calldata` anahtar kelimesi genellikle bir işlem tarafından çağrılan akıllı sözleşme yöntemini tanımlar ve yönteme yönelik girdileri rastgele bir bayt dizisi biçiminde tutar. ZK-rollup'lar, sıkıştırılmış işlem verilerini zincir içinde yayınlamak için `calldata` kullanır; rollup operatörü, rollup sözleşmesindeki gerekli işlevi çağırarak yeni bir toplu işlem ekler ve sıkıştırılmış verileri işlev argümanları olarak geçirir. Rollup ücretlerinin büyük bir kısmı işlem verilerini zincir içinde depolamaya gittiğinden, bu durum kullanıcılar için maliyetleri azaltmaya yardımcı olur.
+`calldata` anahtar kelimesi genellikle bir işlem tarafından çağrılan akıllı sözleşme yöntemini tanımlar ve yönteme yönelik girdileri rastgele bir bayt dizisi biçiminde tutar. ZK-rollup'lar, sıkıştırılmış işlem verilerini zincir içi yayınlamak için `calldata` kullanır; rollup operatörü, rollup sözleşmesindeki gerekli işlevi çağırarak yeni bir toplu işlem ekler ve sıkıştırılmış verileri işlev argümanları olarak iletir. Rollup ücretlerinin büyük bir kısmı işlem verilerini zincir içi depolamaya gittiğinden, bu durum kullanıcılar için maliyetleri düşürmeye yardımcı olur.
+
+[Dencun yükseltmesi](/roadmap/dencun/) blob taşıyan işlemleri ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)) tanıttığından beri, rollup'lar verilerini ayrı bir ücret piyasasında fiyatlandırılan ve genellikle `calldata`'dan daha ucuz olan [blob'lar](/roadmap/danksharding/) içinde de yayınlayabilir. Blob'lar yürütme katmanı tarafından depolanmaz ve protokol, ağın blob verilerini sunması gereken yalnızca yaklaşık 18 günlük minimum bir pencere tanımlar. Bu bir silme son tarihinden ziyade bir sunma yükümlülüğüdür: blob verileri, yürütme katmanı geçmişinin olduğu gibi kalıcı bir arşiv depolaması değildir ve daha uzun vadeli erişim arşiv hizmetlerine bağlıdır. `calldata` kullanılabilir olmaya devam eder ve rollup'lar hangisini kullandıkları konusunda farklılık gösterir.
+
+Bir rollup hangi mekanizmayı kullanırsa kullansın, yayınlanan veriler herkese açıktır. Rollup'lar ne yayınladıkları konusunda farklılık gösterir; bazıları sıkıştırılmış işlem verilerini yayınlarken diğerleri durum farklılıklarını yayınlar, ancak her iki durumda da herkesin rollup'ın durumunu bağımsız olarak yeniden oluşturması için yeterlidir. Bu verilerin yayınlanması, izinsiz doğrulamayı mümkün kılan şeydir; bu bir gizlilik mekanizması değildir.
 
 ### Durum taahhütleri {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARK'lar ayrıca kuantum bilgisayarlara karşı da güvenlidir, oysa ZK-SNAR
 #### ZK-rollup'larda geçerlilik kanıtları nasıl çalışır? {#validity-proofs-in-zk-rollups}
 
 ##### Kanıt üretimi
+
 İşlemleri kabul etmeden önce operatör olağan kontrolleri gerçekleştirecektir. Bu, aşağıdakilerin onaylanmasını içerir:
 
 - Gönderen ve alıcı hesaplarının durum ağacının bir parçası olduğu.
@@ -132,6 +137,7 @@ Kanıtlama devresi aynı işlemi alıcının hesabında da gerçekleştirir. Al�
 ZK-kanıtlama devresi, son işlem yürütüldükten sonra nihai bir durum köküyle sonuçlanan güncelleme dizisini doğrulayarak tüm işlem toplu işlemi üzerinde yinelenir. Hesaplanan son Merkle kökü, ZK-rollup'ın en yeni kurallı durum kökü haline gelir.
 
 ##### Kanıt doğrulaması
+
 Kanıtlama devresi durum güncellemelerinin doğruluğunu doğruladıktan sonra, L2 operatörü hesaplanan geçerlilik kanıtını L1'deki doğrulayıcı sözleşmesine sunar. Sözleşmenin doğrulama devresi kanıtın geçerliliğini doğrular ve ayrıca kanıtın bir parçasını oluşturan açık girdileri kontrol eder:
 
 - **Ön durum kökü (Pre-state root)**: ZK-rollup'ın eski durum kökü (yani, toplu işlemler yürütülmeden önce), L2 zincirinin bilinen son geçerli durumunu yansıtır.
@@ -174,15 +180,15 @@ EVM uyumlu ZK-rollup'ların tanıtılmasının, geliştiricilerin sıfır bilgi 
 
 ## ZK-rollup ücretleri nasıl çalışır? {#how-do-zk-rollup-fees-work}
 
-Kullanıcıların ZK-rollup'lardaki işlemler için ne kadar ödeyeceği, tıpkı Ethereum Ana Ağı'nda olduğu gibi gaz ücretine bağlıdır. Ancak gaz ücretleri L2'de farklı çalışır ve aşağıdaki maliyetlerden etkilenir:
+Kullanıcıların ZK-rollup'lardaki işlemler için ne kadar ödeyeceği, tıpkı Ethereum Ana Ağı'nda olduğu gibi gaz ücretine bağlıdır. Ancak, gaz ücretleri L2'de farklı çalışır ve aşağıdaki maliyetlerden etkilenir:
 
-1. **Durum yazma**: Ethereum'un durumuna yazmanın (yani Ethereum blokzincirinde bir işlem sunmanın) sabit bir maliyeti vardır. ZK-rollup'lar, işlemleri toplu işleyerek ve sabit maliyetleri birden fazla kullanıcıya yayarak bu maliyeti azaltır.
+1. **Durum yazma**: Ethereum'un durumuna yazmanın (yani, Ethereum blokzincirinde bir işlem sunmanın) sabit bir maliyeti vardır. ZK-rollup'lar, işlemleri toplu işleyerek ve sabit maliyetleri birden fazla kullanıcıya yayarak bu maliyeti azaltır.
 
-2. **Veri yayını**: ZK-rollup'lar her işlem için durum verilerini Ethereum'da `calldata` olarak yayınlar. `calldata` maliyetleri şu anda, sıfır olmayan baytlar için 16 gaz ve sıfır baytlık `calldata` için 4 gaz maliyeti öngören [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) tarafından yönetilmektedir. Her işlemde ödenen maliyet, bunun için zincir içine ne kadar `calldata` gönderilmesi gerektiğinden etkilenir.
+2. **Veri yayını**: ZK-rollup'lar, her işlem için durum verilerini Ethereum'da `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yayınlar. `calldata` için temel gaz tarifesi, sıfır olmayan bayt başına 16 gaz ve sıfır olan bayt başına 4 gaz ücretlendirir; bu, [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) tarafından getirilen bir indirimdir; [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), bayt tarifesinin kendisinden ziyade birim gaz başına ödenen fiyatı yönetir. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) ek olarak veri yoğun işlemlere bir taban maliyet uygular, böylece `calldata` ağırlıklı bir işlem standart tarifeden daha fazlasını ödeyebilirken, hesaplama ağırlıklı işlemler etkilenmez. Her işlemde ödenen maliyet, onun için zincir içi ne kadar veri yayınlanması gerektiğinden etkilenir.
 
 3. **L2 operatör ücretleri**: Bu, tıpkı Ethereum Ana Ağı'ndaki [işlem "öncelik ücretleri (bahşişler)"](/developers/docs/gas/#how-are-gas-fees-calculated) gibi, işlemleri işlerken ortaya çıkan hesaplama maliyetlerinin telafisi olarak rollup operatörüne ödenen miktardır.
 
-4. **Kanıt üretimi ve doğrulaması**: ZK-rollup operatörleri, kaynak yoğun olan işlem toplu işlemleri için geçerlilik kanıtları üretmelidir. Ana Ağ'da sıfır bilgi ispatlarını doğrulamak da gaza mal olur (~ 500.000 gaz).
+4. **Kanıt oluşturma ve doğrulama**: ZK-rollup operatörleri, işlem toplu işlemleri için geçerlilik kanıtları üretmelidir ve bu kaynak yoğundur. Ana Ağ'da sıfır bilgi ispatlarını doğrulamak da gaz maliyetine neden olur (~ 500.000 gaz).
 
 İşlemleri toplu işlemenin yanı sıra, ZK-rollup'lar işlem verilerini sıkıştırarak kullanıcılar için ücretleri azaltır. Ethereum ZK-rollup'larını kullanmanın ne kadara mal olduğuna dair [gerçek zamanlı bir genel bakış görebilirsiniz](https://l2fees.info/).
 

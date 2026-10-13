@@ -5,7 +5,7 @@ description: "以太坊上的 AI 代理概述"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "聚集在终端桌旁的人们"
 summaryPoints:
   - "与区块链交互并独立交易的 AI"

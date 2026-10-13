@@ -4,8 +4,6 @@ description: "Une liste des programmes de subventions à travers l'écosystème 
 lang: fr
 ---
 
-# Subventions Ethereum {#ethereum-grants}
-
 Les programmes listés ci-dessous offrent une variété de subventions de financement pour les projets travaillant à promouvoir le succès et la croissance de l'écosystème [Ethereum](/). Utilisez ceci comme un guide pour trouver et demander des fonds afin de contribuer à la réussite de votre prochain projet Ethereum.
 
 Cette liste est gérée par notre communauté. S'il manque quelque chose ou si une information est incorrecte, n'hésitez pas à modifier cette page !

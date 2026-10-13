@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 Untuk memulai, buka WebSocket menggunakan URL WebSocket untuk aplikasi Anda. Anda dapat menemukan URL WebSocket aplikasi Anda dengan membuka halaman aplikasi di [dasbor Anda](https://dashboard.alchemy.com/) dan mengeklik "View Key". Perhatikan bahwa URL aplikasi Anda untuk WebSockets berbeda dari URL-nya untuk permintaan HTTP, tetapi keduanya dapat ditemukan dengan mengeklik "View Key".
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 Semua API yang tercantum dalam [Referensi API Alchemy](https://www.alchemy.com/docs/reference/api-overview) dapat digunakan melalui WebSocket. Untuk melakukannya, gunakan muatan (payload) yang sama yang akan dikirim sebagai badan permintaan HTTP POST, tetapi kirimkan muatan tersebut melalui WebSocket.
 

@@ -19,7 +19,7 @@ Sebagai prasyarat, Anda harus sudah menginstal MetaMask di ponsel, dan itu harus
 
 Di bagian atas aplikasi, tekan tombol “Dompet” (Wallet), setelah itu Anda akan diminta untuk memilih jaringan. Karena NFT kita dicetak di jaringan Sepolia, Anda harus memilih Sepolia sebagai jaringan Anda.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Langkah 2: Tambahkan barang koleksi Anda ke MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Setelah Anda berada di jaringan Sepolia, pilih tab “Koleksi” (Collectibles) 
 
 Anda mungkin perlu menyegarkan beberapa kali untuk melihat NFT Anda — tetapi itu akan ada di sana <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Selamat! Anda telah berhasil mencetak NFT, dan sekarang Anda dapat melihatnya! Kami tidak sabar untuk melihat bagaimana Anda akan menggemparkan dunia NFT!

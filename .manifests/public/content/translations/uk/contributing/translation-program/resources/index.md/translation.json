@@ -1,11 +1,10 @@
 {
   "version": 1,
   "locale": "uk",
-  "translatedAt": "2026-06-08T08:43:57.218Z",
-  "englishManifestHash": "d2cb2b3f9636",
+  "translatedAt": "2026-07-29T05:20:16.061Z",
+  "englishManifestHash": "329255b3e778",
   "placeholderOrder": [
     "LINK-c35225",
-    "LINK-78799d",
     "LINK-0f400d",
     "LINK-20421e",
     "LINK-e6243d",
@@ -24,12 +23,6 @@
       "type": "link",
       "values": {
         "url": "/contributing/translation-program/translators-guide/"
-      }
-    },
-    "LINK-78799d": {
-      "type": "link",
-      "values": {
-        "url": "/contributing/translation-program/faq/"
       }
     },
     "LINK-0f400d": {
@@ -59,7 +52,7 @@
     "LINK-4dc120": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/ethereum-org"
+        "url": "/discord/"
       }
     },
     "LINK-80b8a1": {
@@ -101,13 +94,13 @@
     "LINK-20d0cc": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/ethereum-org"
+        "url": "/discord/"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T08:43:57.218Z",
+      "translatedAt": "2026-07-29T05:20:16.061Z",
       "status": "success"
     }
   }

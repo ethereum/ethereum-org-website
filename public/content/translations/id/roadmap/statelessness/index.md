@@ -2,6 +2,7 @@
 title: Ketiadaan state, kedaluwarsa state, dan kedaluwarsa riwayat
 description: Penjelasan tentang kedaluwarsa riwayat dan ketiadaan state Ethereum
 lang: id
+template: roadmap
 ---
 
 Kemampuan untuk menjalankan node [Ethereum](/) pada perangkat keras yang sederhana sangat penting untuk desentralisasi sejati. Hal ini karena menjalankan node memberi pengguna kemampuan untuk memverifikasi informasi dengan melakukan pemeriksaan kriptografi secara mandiri daripada memercayai pihak ketiga untuk memberikan data kepada mereka. Menjalankan node memungkinkan pengguna untuk mengirimkan transaksi secara langsung ke jaringan peer-to-peer Ethereum daripada harus memercayai perantara. Desentralisasi tidak mungkin terjadi jika manfaat ini hanya tersedia bagi pengguna dengan perangkat keras yang mahal. Sebaliknya, node harus dapat berjalan dengan persyaratan pemrosesan dan memori yang sangat sederhana sehingga dapat berjalan di ponsel, komputer mikro, atau berjalan tanpa disadari di komputer rumah.

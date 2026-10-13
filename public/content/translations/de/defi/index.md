@@ -102,9 +102,9 @@ Als Blockchain ist Ethereum darauf ausgelegt, Transaktionen auf sichere und glob
 
 #### Geld rund um den Globus streamen... {#stream-money}
 
-Sie können auch Geld über Ethereum streamen. Dadurch können Sie jemandem sein Gehalt sekundengenau auszahlen, sodass er jederzeit Zugriff auf sein Geld hat, wenn er es braucht. Oder mieten Sie etwas sekundengenau, wie ein Schließfach oder einen Elektroroller.
+Sie können auch Geld über Ethereum streamen. Anstatt eine große Zahlung zu senden, übertragen Streaming-Zahlungen kontinuierlich kleine Beträge über die Zeit. Dadurch können Sie jemandem sein Gehalt sekundengenau auszahlen, sodass er jederzeit auf sein Geld zugreifen kann, wenn er es benötigt. Es kann auch verwendet werden, um für Dienstleistungen zu bezahlen, die kontinuierlich abgerechnet werden, wie z. B. die Miete eines Schließfachs oder eines E-Scooters.
 
-Und wenn Sie [ETH](/glossary/#ether) aufgrund seiner Wertschwankungen nicht senden oder streamen möchten, gibt es alternative Währungen auf Ethereum: [Stablecoins](/glossary/#stablecoin).
+Und wenn Sie [ETH](/glossary/#ether) nicht senden oder streamen möchten, weil sich sein Wert stark ändern kann, gibt es alternative Währungen auf Ethereum: [Stablecoins](/glossary/#stablecoin).
 
 <Divider />
 

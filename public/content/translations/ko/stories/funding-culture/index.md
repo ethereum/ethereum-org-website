@@ -64,7 +64,7 @@ lang: ko
 - 플레이어 내에서 줄거리 결정에 직접 투표하기 위해 스테이킹했습니다.
 - ERC-20(우리의 관심 토큰)을 획득했습니다. 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 이 ERC-20은 본딩 커브(bonding curve)에 따라 발행되었습니다. 더 일찍, 더 많이 참여할수록 더 많은 수익을 얻었습니다. (주인공 이름을 미라이로 짓는 것과 같은) 투표는 Snapshot을 통해 이루어졌습니다. 
 

@@ -62,14 +62,14 @@ This will serve your app at `http://localhost:3000` in production mode, minimizi
 ## Directory Layout
 
 ```
-tests/e2e/
+tests/
 ├── __results__/          # Test results (gitignored)
 ├── __report__/           # HTML reports (gitignored)
-├── fixtures/             # Test data and fixtures
-├── pages/                # Page Object Model classes
-├── utils/                # Test utilities and helpers
-├── *.spec.ts             # Test files
-└── .gitignore
+└── e2e/
+    ├── fixtures/         # Test data and fixtures
+    ├── pages/            # Page Object Model classes
+    ├── *.spec.ts         # Test files
+    └── .gitignore
 ```
 
 ## Writing Tests

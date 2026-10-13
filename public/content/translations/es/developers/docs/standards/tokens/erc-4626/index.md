@@ -4,8 +4,6 @@ description: "Un estándar para bóvedas que generan rendimiento."
 lang: es
 ---
 
-## Introducción {#introduction}
-
 ERC-4626 es un estándar para optimizar y unificar los parámetros técnicos de las bóvedas que generan rendimiento. Proporciona una API estándar para bóvedas tokenizadas que generan rendimiento y que representan participaciones de un único token ERC-20 subyacente. ERC-4626 también describe una extensión opcional para bóvedas tokenizadas que utilizan ERC-20, ofreciendo una funcionalidad básica para depositar, retirar tokens y leer saldos.
 
 **El papel de ERC-4626 en las bóvedas que generan rendimiento**
@@ -18,20 +16,19 @@ El token ERC-4626 se describe completamente en [EIP-4626](https://eips.ethereum.
 
 **Extensión de bóveda asíncrona (ERC-7540)**
 
-ERC-4626 está optimizado para depósitos y canjes atómicos hasta un límite. Si se alcanza el límite, no se pueden enviar nuevos depósitos ni canjes. Esta limitación no funciona bien para ningún sistema de contrato inteligente con acciones asíncronas o retrasos como requisito previo para interactuar con la bóveda (por ejemplo, protocolos de activos del mundo real, protocolos de préstamos subcolateralizados, protocolos de préstamos intercadena, tokens de staking líquido (LST) o módulos de seguridad de seguros).
+ERC-4626 está optimizado para depósitos y canjes atómicos hasta un límite. Si se alcanza el límite, no se pueden enviar nuevos depósitos ni canjes. Esta limitación no funciona bien para ningún sistema de contrato inteligente con acciones asíncronas o retrasos como requisito previo para interactuar con la bóveda (por ejemplo, protocolos de activos del mundo real, protocolos de préstamos con garantía insuficiente, protocolos de préstamos intercadena, tokens de staking líquido (LST) o módulos de seguridad de seguros).
 
-ERC-7540 amplía la utilidad de las bóvedas ERC-4626 para casos de uso asíncronos. La interfaz de bóveda existente (`deposit`/`withdraw`/`mint`/`redeem`) se utiliza completamente para reclamar solicitudes asíncronas.
+ERC-7540 amplía la utilidad de las bóvedas ERC-4626 para casos de uso asíncronos. La interfaz de bóveda existente (`deposit`/`withdraw`/`mint`/`redeem`) se utiliza por completo para reclamar solicitudes asíncronas.
 
-La extensión ERC-7540 se describe completamente en [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Obtenga más información sobre las [bóvedas tokenizadas asíncronas ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Extensión de bóveda multiactivo (ERC-7575)**
 
-Un caso de uso faltante que no es compatible con ERC-4626 son las bóvedas que tienen múltiples activos o puntos de entrada, como los tokens de proveedor de liquidez (LP). Estos son generalmente difíciles de manejar o no cumplen con los requisitos debido a la exigencia de que ERC-4626 sea en sí mismo un ERC-20.
+Un caso de uso faltante que no es compatible con ERC-4626 son las bóvedas que tienen múltiples activos o puntos de entrada, como los tokens de proveedor de liquidez (LP). Estos son generalmente difíciles de manejar o no conformes debido a la exigencia de que ERC-4626 sea en sí mismo un ERC-20.
 
-ERC-7575 añade soporte para bóvedas con múltiples activos al externalizar la implementación del token ERC-20 de la implementación de ERC-4626.
+ERC-7575 agrega soporte para bóvedas con múltiples activos al externalizar la implementación del token ERC-20 de la implementación de ERC-4626.
 
 La extensión ERC-7575 se describe completamente en [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Requisitos previos {#prerequisites}
 
 Para comprender mejor esta página, le recomendamos que primero lea sobre los [estándares de tokens](/developers/docs/standards/tokens/) y [ERC-20](/developers/docs/standards/tokens/erc-20/).

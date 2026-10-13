@@ -64,7 +64,7 @@ lang: ru
 - Стейкали их, чтобы голосовать за сюжетные решения прямо в плеере
 - Зарабатывали токены ERC-20 (наш токен внимания) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 Токены ERC-20 выпускались по кривой связывания (bonding curve). Чем раньше вы присоединялись и чем активнее участвовали, тем больше зарабатывали. Голосования (например, за выбор имени главной героини — Мирай) проходили через Snapshot. 
 

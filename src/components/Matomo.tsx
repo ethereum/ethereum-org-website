@@ -4,7 +4,11 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
-import { isOptedOut } from "@/lib/utils/matomo"
+import {
+  AUTOMATION_DIMENSION_ID,
+  detectAutomation,
+  isOptedOut,
+} from "@/lib/utils/matomo"
 
 // Module-level flag to prevent double initialization in React Strict Mode
 let matomoInitialized = false
@@ -19,6 +23,15 @@ export default function Matomo() {
       init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL!,
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
+        // Must reach _paq before init queues its own trackPageView, or
+        // single-action visits -- most automated ones -- arrive unlabelled.
+        onInitialization: () => {
+          push([
+            "setCustomDimension",
+            AUTOMATION_DIMENSION_ID,
+            detectAutomation(),
+          ])
+        },
       })
 
       // Use sendBeacon API for reliable tracking during page navigation
@@ -26,11 +39,6 @@ export default function Matomo() {
       // conditions with Next.js client-side routing
       // See: https://matomo.org/faq/how-to/faq_33087/
       push(["alwaysUseSendBeacon"])
-
-      console.log(
-        "[Matomo] initialized with URL:",
-        process.env.NEXT_PUBLIC_MATOMO_URL
-      )
       matomoInitialized = true
     }
   }, [])

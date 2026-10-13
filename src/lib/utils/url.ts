@@ -61,6 +61,9 @@ export const isHrefActive = (
 
 export const isHash = (href: string): boolean => href.startsWith("#")
 
+/** Extract the fragment id from a hash href (e.g. "#getting-started" -> "getting-started"). */
+export const getIdFromHash = (href: string): string => href.split("#")[1] ?? ""
+
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
   return join("/", href, "/")
@@ -138,3 +141,11 @@ export const normalizeUrlForJsonLd = (
   const url = new URL(path, SITE_URL)
   return url.toString()
 }
+
+/**
+ * devcon.org publishes its ticket page in English, Hindi, and Marathi only, so
+ * every other locale falls back to `en`. The mtm_* params attribute the
+ * referral on Devcon analytics. Removable once the Devcon banners come down.
+ */
+export const getDevconTicketLink = (locale: string) =>
+  `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/?mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral`

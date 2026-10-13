@@ -19,7 +19,7 @@ import {
   CheaperTransactionsIcon,
   DankshardingIcon,
   ExtraSecurityIcon,
-  FutureProofingIcon,
+  PrivacyIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
 } from "@/components/icons/roadmap"
@@ -102,12 +102,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
     },
     {
-      title: t("page-roadmap-future-proofing-title"),
-      icon: <FutureProofingIcon className="h-auto w-12" />,
-      description: t("page-roadmap-future-proofing-description"),
+      title: t("page-roadmap-privacy-title"),
+      icon: <PrivacyIcon className="h-auto w-12" />,
+      description: t("page-roadmap-privacy-description"),
       button: {
-        label: t("page-roadmap-future-proofing-button"),
-        href: "/roadmap/future-proofing",
+        label: t("page-roadmap-privacy-button"),
+        href: "/roadmap/privacy",
       },
     },
   ]
@@ -117,7 +117,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       icon: <Atom className="size-7" />,
       title: t("page-roadmap-post-quantum-title"),
       description: t("page-roadmap-post-quantum-description"),
-      href: "/roadmap/future-proofing/quantum-resistance",
+      href: "/roadmap/security/quantum-resistance",
     },
     {
       icon: <SingleSlotFinalityIcon className="size-7" />,
@@ -192,11 +192,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <main className="space-y-space-3x pb-page">
         <MainArticle className="flow **:data-[label=button-link]:max-md:w-full *:[section]:px-page">
-          <Section
-            id="releases"
-            dir="ltr"
-            className="mt-space-3x overflow-hidden"
-          >
+          <Section id="releases" className="mt-space-3x overflow-hidden">
             <I18nProvider locale={locale} messages={messages}>
               <ReleaseCarousel />
             </I18nProvider>
@@ -210,7 +206,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
             <Grid balanced={4}>
               {changesComingItems.map((item) => (
-                <Card key={item.title} hoverLift>
+                <Card key={item.title} href={item.button.href}>
                   <CardHeader className="flex items-center justify-between gap-4">
                     <CardTitle>{item.title}</CardTitle>
                     <div className="shrink-0 text-primary-action">
@@ -221,9 +217,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardParagraph>{item.description}</CardParagraph>
                   </CardContent>
                   <CardFooter>
-                    <ButtonLink href={item.button.href} variant="outline">
+                    <CardButtonFake variant="outline">
                       {item.button.label}
-                    </ButtonLink>
+                    </CardButtonFake>
                   </CardFooter>
                 </Card>
               ))}
@@ -282,7 +278,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <Card
                   key={item.title}
                   href={item.href}
-                  hoverLift
                   className="bg-linear-primary"
                 >
                   <CardContent>
@@ -369,6 +364,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-roadmap")
 

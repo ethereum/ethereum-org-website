@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ప్రారంభించడానికి, మీ యాప్ కోసం WebSocket URLని ఉపయోగించి WebSocketని తెరవండి. [మీ డ్యాష్‌బోర్డ్](https://dashboard.alchemy.com/)లో యాప్ పేజీని తెరిచి, "View Key"ని క్లిక్ చేయడం ద్వారా మీరు మీ యాప్ యొక్క WebSocket URLని కనుగొనవచ్చు. WebSockets కోసం మీ యాప్ యొక్క URL, HTTP అభ్యర్థనల కోసం దాని URLకి భిన్నంగా ఉంటుందని గమనించండి, అయితే "View Key"ని క్లిక్ చేయడం ద్వారా రెండింటినీ కనుగొనవచ్చు.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 [Alchemy API రిఫరెన్స్](https://www.alchemy.com/docs/reference/api-overview)లో జాబితా చేయబడిన ఏవైనా APIలను WebSocket ద్వారా ఉపయోగించవచ్చు. అలా చేయడానికి, HTTP POST అభ్యర్థన యొక్క బాడీగా పంపబడే అదే పేలోడ్‌ను ఉపయోగించండి, కానీ దానికి బదులుగా ఆ పేలోడ్‌ను WebSocket ద్వారా పంపండి.
 

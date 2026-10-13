@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 Để bắt đầu, hãy mở một WebSocket bằng cách sử dụng URL WebSocket cho ứng dụng của bạn. Bạn có thể tìm thấy URL WebSocket của ứng dụng bằng cách mở trang của ứng dụng trong [bảng điều khiển của bạn](https://dashboard.alchemy.com/) và nhấp vào "View Key". Lưu ý rằng URL của ứng dụng cho WebSockets khác với URL cho các yêu cầu HTTP, nhưng cả hai đều có thể được tìm thấy bằng cách nhấp vào "View Key".
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 Bất kỳ API nào được liệt kê trong [Tài liệu tham khảo API của Alchemy](https://www.alchemy.com/docs/reference/api-overview) đều có thể được sử dụng qua WebSocket. Để làm như vậy, hãy sử dụng cùng một payload sẽ được gửi dưới dạng phần thân của yêu cầu HTTP POST, nhưng thay vào đó hãy gửi payload đó thông qua WebSocket.
 

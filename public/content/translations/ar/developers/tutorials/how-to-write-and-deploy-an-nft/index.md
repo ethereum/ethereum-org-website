@@ -227,7 +227,7 @@ Hardhat هي بيئة تطوير لتجميع ونشر واختبار وتصحي
 
 - انظر أدناه للحصول على عنوان URL الخاص بـ <span dir="ltr">HTTP Alchemy API</span> وانسخه إلى الحافظة الخاصة بك
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 يجب أن يبدو ملف `.env` الخاص بك الآن هكذا:
 

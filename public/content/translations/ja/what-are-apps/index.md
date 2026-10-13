@@ -79,3 +79,7 @@ summary: "イーサリアム上のアプリは無料でグローバルであり�
 <ExpandableCard title="最適な暗号資産ウォレットはどれですか？" visible>
   <p>暗号資産ウォレットを使用すると、トークンを保持し、イーサリアムのアカウントを管理できます。それぞれ異なる目的を果たす優れたウォレットが多数あります。どのウォレットが自分に最適かを見つけるには、[ウォレットのリスト](/wallets/find-wallet)をご覧ください。</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

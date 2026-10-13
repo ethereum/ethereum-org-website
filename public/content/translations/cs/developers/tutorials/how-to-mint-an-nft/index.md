@@ -77,7 +77,7 @@ Jakmile si vytvoříte účet:
 
 Pro ty, kteří se učí spíše vizuálně, jsou výše uvedené kroky shrnuty zde:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Nyní budeme chtít na Pinata nahrát ještě jeden dokument. Ale než to uděláme, musíme ho vytvořit!
 
@@ -105,7 +105,7 @@ Data v JSON souboru můžete libovolně měnit. Můžete odebírat nebo přidáv
 
 Jakmile dokončíte úpravy JSON souboru, uložte jej a nahrajte na Pinata podle stejných kroků, které jsme provedli při nahrávání obrázku.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Krok 5: Vytvoření instance vašeho kontraktu {#instance-contract}
 

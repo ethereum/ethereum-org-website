@@ -48,7 +48,7 @@ If you believe a community should be added or removed based on these guidelines,
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Ethereum development focused Discord community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - community-run guidance, education, support, and resources for existing and potential stakers</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - stop by and chat ethereum.org web development and design with the team and folks from the community</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org website team</Link> - stop by and chat ethereum.org web development and design with the team and folks from the community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - web3 creators community where builders, industrial figureheads, and Ethereum enthusiasts hang out. We're passionate about web3 development, design, and culture. Come build with us.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat for solidity development (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>

@@ -5,7 +5,7 @@ description: "نظرة عامة على وكلاء الذكاء الاصطناع�
 lang: ar
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "أشخاص مجتمعون حول طاولة محطة عمل"
 summaryPoints:
   - "ذكاء اصطناعي يتفاعل مع سلسلة الكتل ويتداول بشكل مستقل"

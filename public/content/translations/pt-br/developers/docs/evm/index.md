@@ -91,3 +91,5 @@ Os [clientes de execução da Ethereum](/developers/docs/nodes-and-clients/#exec
 
 - [Entendendo as especificações da EVM do yellow paper](/developers/tutorials/yellow-paper-evm/) _– Um passo a passo guiado da especificação formal da EVM do yellow paper da Ethereum._
 - [Engenharia reversa de um contrato](/developers/tutorials/reverse-engineering-a-contract/) _– Como fazer engenharia reversa de um contrato inteligente compilado usando códigos de operação da EVM._
+
+<QuizWidget quizKey="evm" />

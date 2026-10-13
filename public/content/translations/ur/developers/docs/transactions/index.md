@@ -238,3 +238,7 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 - [اکاؤنٹس](/developers/docs/accounts/)
 - [ایتھیریم ورچوئل مشین (EVM)](/developers/docs/evm/)
 - [گیس](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

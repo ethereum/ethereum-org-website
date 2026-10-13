@@ -238,3 +238,7 @@ _உங்களுக்கு உதவிய சமூக வளம் பற
 - [கணக்குகள்](/developers/docs/accounts/)
 - [எத்திரியம் மெய்நிகர் இயந்திரம் (EVM)](/developers/docs/evm/)
 - [எரிவாயு](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

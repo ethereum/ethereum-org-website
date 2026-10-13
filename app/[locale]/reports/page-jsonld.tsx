@@ -12,6 +12,29 @@ import type { Report } from "./data"
 
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
+import { resolveKnownEntities } from "@/lib/jsonld/utils"
+
+/**
+ * Known entities for a report's publisher(s), resolved through the same
+ * alias map as markdown `authors:` frontmatter. Mirrors the
+ * `authors ?? author` convention: the `publishers` array wins over the
+ * `publisher` display string.
+ */
+const reportPublisherEntities = (report: Report) =>
+  resolveKnownEntities(report.publishers ?? report.publisher)
+
+/**
+ * Publisher value for a report item. Resolved publishers are emitted as
+ * @id references to the full Organization nodes in the page @graph;
+ * unresolved ones fall back to an anonymous name-only node.
+ */
+const reportPublisher = (report: Report) => {
+  const refs = reportPublisherEntities(report).map((entity) => ({
+    "@id": entity["@id"],
+  }))
+  if (!refs.length) return { "@type": "Organization", name: report.publisher }
+  return refs.length === 1 ? refs[0] : refs
+}
 
 const reportSchema = (
   report: Report,
@@ -35,10 +58,7 @@ const reportSchema = (
       image: imageUrl,
       datePublished: report.dateIso,
       inLanguage: "en",
-      publisher: {
-        "@type": "Organization",
-        name: report.publisher,
-      },
+      publisher: reportPublisher(report),
       ...(isPdf(report.href) && {
         encodingFormat: "application/pdf",
       }),
@@ -63,6 +83,21 @@ export default async function ReportsPageJsonLD({
   const url = normalizeUrlForJsonLd(locale, "/reports/")
   const itemListId = `${url}#reports-list`
 
+  // Full entity nodes for every resolved report publisher, so the @id
+  // references inside the ItemList resolve within this graph. Deduplicated
+  // across reports and against BASE_GRAPH_NODES (EF is both a publisher
+  // here and a base node).
+  const baseGraphIds = new Set<string>(
+    BASE_GRAPH_NODES.map((node) => node["@id"])
+  )
+  const publisherNodes = [
+    ...new Map(
+      reports
+        .flatMap(reportPublisherEntities)
+        .map((entity) => [entity["@id"], entity] as const)
+    ).values(),
+  ].filter((entity) => !baseGraphIds.has(entity["@id"]))
+
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
     name: contributor.login,
@@ -73,6 +108,7 @@ export default async function ReportsPageJsonLD({
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
+      ...publisherNodes,
       {
         "@type": "CollectionPage",
         "@id": url,

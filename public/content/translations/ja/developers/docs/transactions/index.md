@@ -238,3 +238,7 @@ _役に立つコミュニティ・リソースをご存知ですか？このペ�
 - [アカウント](/developers/docs/accounts/)
 - [イーサリアム仮想マシン（EVM）](/developers/docs/evm/)
 - [ガス](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

@@ -3,6 +3,7 @@ title: "⁦Cancun-Deneb (Dencun)⁩"
 metaTitle: "أسئلة شائعة حول ⁦Cancun-Deneb (Dencun)⁩"
 description: "أسئلة شائعة بخصوص ترقية شبكة ⁦Cancun-Deneb (Dencun)⁩"
 lang: ar
+template: upgrade
 ---
 
 <span dir="ltr">Cancun-Deneb (Dencun)</span> هي ترقية لشبكة إيثيريوم، والتي تُفعّل **بروتو-دانكشاردينغ (<span dir="ltr">EIP-4844</span>)**، مما يقدم **كتل بيانات** مؤقتة لتخزين تجميعات [طبقة 2 (<span dir="ltr">L2</span>)](/glossary/#layer-2) بتكلفة أرخص.

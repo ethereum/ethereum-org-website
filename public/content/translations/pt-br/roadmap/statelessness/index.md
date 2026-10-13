@@ -2,6 +2,7 @@
 title: "Ausência de estado, expiração de estado e expiração de histórico"
 description: "Explicação sobre a expiração de histórico e a ausência de estado no Ethereum"
 lang: pt-br
+template: roadmap
 ---
 
 A capacidade de executar nós do [Ethereum](/) em hardware modesto é fundamental para uma verdadeira descentralização. Isso ocorre porque a execução de um nó dá aos usuários a capacidade de verificar informações realizando verificações criptográficas de forma independente, em vez de confiar em terceiros para fornecer dados. Executar um nó permite que os usuários enviem transações diretamente para a rede ponto a ponto do Ethereum, em vez de ter que confiar em um intermediário. A descentralização não é possível se esses benefícios estiverem disponíveis apenas para usuários com hardware caro. Em vez disso, os nós devem ser capazes de funcionar com requisitos de processamento e memória extremamente modestos, para que possam ser executados em telefones celulares, microcomputadores ou de forma imperceptível em um computador doméstico.

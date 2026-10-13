@@ -5,6 +5,7 @@ import DesktopIcon from "./desktop.svg"
 import DevicesIcon from "./devices.svg"
 import ENSSupportIcon from "./ens-support.svg"
 import ERC20SupportIcon from "./erc20-support.svg"
+import FeeIcon from "./fee.svg"
 import GasFeeCustomizationIcon from "./gas-fee-customization.svg"
 import HardwareIcon from "./hardware.svg"
 import HardwareSupportIcon from "./hardware-support.svg"
@@ -29,6 +30,7 @@ export {
   DevicesIcon,
   ENSSupportIcon,
   ERC20SupportIcon,
+  FeeIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,

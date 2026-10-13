@@ -2,6 +2,7 @@
 title: Ostateczność w pojedynczym slocie
 description: Wyjaśnienie ostateczności w pojedynczym slocie
 lang: pl
+template: roadmap
 ---
 
 Sfinalizowanie bloku [Ethereum](/) zajmuje około 15 minut. Możemy jednak sprawić, by mechanizm konsensusu Ethereum weryfikował bloki wydajniej i drastycznie skrócić czas do ostateczności. Zamiast czekać piętnaście minut, bloki mogłyby być proponowane i finalizowane w tym samym slocie. Koncepcja ta jest znana jako **ostateczność w pojedynczym slocie (SSF)**.
@@ -31,7 +32,7 @@ Przy obecnym projekcie mechanizmu, aby skrócić czas do ostateczności, koniecz
 
 ## Drogi do SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Dlaczego nie możemy mieć SSF już dziś?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Obecny mechanizm konsensusu łączy poświadczenia od wielu walidatorów, znanych jako komitety, aby zmniejszyć liczbę wiadomości, które każdy walidator musi przetworzyć w celu zwalidowania bloku. Każdy walidator ma możliwość poświadczania w każdej epoce (32 sloty), ale w każdym slocie poświadcza tylko podzbiór walidatorów, znany jako „komitet”. Robią to, dzieląc się na podsieci, w których kilku walidatorów jest wybieranych na „agregatorów”. Każdy z tych agregatorów łączy wszystkie podpisy, które widzi od innych walidatorów w swojej podsieci, w jeden zbiorczy podpis. Agregator, który zawiera największą liczbę indywidualnych wkładów, przekazuje swój zbiorczy podpis proponującemu blok, który włącza go do bloku wraz ze zbiorczym podpisem z innych komitetów.
 

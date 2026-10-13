@@ -39,6 +39,12 @@ interface CategoryAppsGridProps {
   /** The app category slug (e.g. "defi", "gaming"). Derived from AppCategoryEnum values. */
   category: Lowercase<AppCategory>
   /**
+   * Optional subcategory to narrow the grid (e.g. "identity", "liquid-staking").
+   * Matched by slug against the category's subcategory tags. When provided,
+   * the grid is pre-filtered to that subcategory and the filter UI is hidden.
+   */
+  subcategory?: string
+  /**
    * Maximum number of apps to display. Defaults to 9.
    * Pass `Infinity` (or `"Infinity"`) to show all apps without a limit.
    * Accepts a number or a numeric string (e.g. from MDX props).
@@ -51,6 +57,7 @@ interface CategoryAppsGridProps {
 
 const CategoryAppsGrid = async ({
   category,
+  subcategory,
   limit = 9,
   hideFilter,
   className,
@@ -72,6 +79,20 @@ const CategoryAppsGrid = async ({
 
   if (!apps || apps.length === 0) return null
 
+  // Filter against raw (untranslated) tags so MDX authors pass English slugs
+  if (subcategory) {
+    const subcategorySlug = slugify(subcategory)
+    apps = apps.filter((app) =>
+      app.subCategory.some((tag) => slugify(tag) === subcategorySlug)
+    )
+    if (apps.length === 0) {
+      console.warn(
+        `No apps in category "${category}" match subcategory: ${subcategory}`
+      )
+      return null
+    }
+  }
+
   // Translate subcategory tags, falling back to the raw string
   let translatedApps = apps
   try {
@@ -89,7 +110,7 @@ const CategoryAppsGrid = async ({
 
   const sortedApps = getDailySortedApps(translatedApps)
 
-  if (hideFilter) {
+  if (hideFilter || subcategory) {
     return (
       <Grid className={className}>
         {sortedApps.slice(0, +limit).map((app) => (

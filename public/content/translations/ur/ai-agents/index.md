@@ -5,7 +5,7 @@ description: "ایتھیریم پر مصنوعی ذہانت کے ایجنٹس ک
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "ٹرمینل ٹیبل پر جمع لوگ"
 summaryPoints:
   - "مصنوعی ذہانت جو بلاک چین کے ساتھ تعامل کرتی ہے اور آزادانہ طور پر تجارت کرتی ہے"

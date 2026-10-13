@@ -4,34 +4,31 @@ description: Standar untuk brankas yang menghasilkan imbal hasil.
 lang: id
 ---
 
-## Pengantar {#introduction}
+ERC-4626 adalah standar untuk mengoptimalkan dan menyatukan parameter teknis dari brankas penghasil imbal hasil. Standar ini menyediakan API standar untuk brankas penghasil imbal hasil tertokenisasi yang mewakili saham dari satu token ERC-20 yang mendasarinya. ERC-4626 juga menguraikan ekstensi opsional untuk brankas tertokenisasi yang memanfaatkan ERC-20, menawarkan fungsionalitas dasar untuk menyetorkan, melakukan penarikan token, dan membaca saldo.
 
-ERC-4626 adalah standar untuk mengoptimalkan dan menyatukan parameter teknis dari brankas yang menghasilkan imbal hasil. Standar ini menyediakan API standar untuk brankas yang menghasilkan imbal hasil tertokenisasi yang mewakili saham dari satu token ERC-20 yang mendasarinya. ERC-4626 juga menguraikan ekstensi opsional untuk brankas tertokenisasi yang menggunakan ERC-20, menawarkan fungsionalitas dasar untuk menyetorkan, melakukan penarikan token, dan membaca saldo.
-
-**Peran ERC-4626 dalam brankas yang menghasilkan imbal hasil**
+**Peran ERC-4626 dalam brankas penghasil imbal hasil**
 
 Pasar peminjaman, agregator, dan token yang secara intrinsik menghasilkan bunga membantu pengguna menemukan imbal hasil terbaik pada token kripto mereka dengan mengeksekusi berbagai strategi. Strategi-strategi ini dilakukan dengan sedikit variasi, yang mungkin rentan terhadap kesalahan atau membuang-buang sumber daya pengembangan.
 
-ERC-4626 dalam brankas yang menghasilkan imbal hasil akan menurunkan upaya integrasi dan membuka akses ke imbal hasil di berbagai aplikasi dengan sedikit upaya khusus dari pengembang dengan menciptakan pola implementasi yang lebih konsisten dan tangguh.
+ERC-4626 dalam brankas penghasil imbal hasil akan menurunkan upaya integrasi dan membuka akses ke imbal hasil di berbagai aplikasi dengan sedikit upaya khusus dari pengembang dengan menciptakan pola implementasi yang lebih konsisten dan tangguh.
 
 Token ERC-4626 dijelaskan sepenuhnya dalam [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
 **Ekstensi brankas asinkron (ERC-7540)**
 
-ERC-4626 dioptimalkan untuk setoran dan penebusan atomik hingga batas tertentu. Jika batas tersebut tercapai, tidak ada setoran atau penebusan baru yang dapat diajukan. Keterbatasan ini tidak berfungsi dengan baik untuk sistem kontrak pintar apa pun dengan tindakan asinkron atau penundaan sebagai prasyarat untuk berinteraksi dengan Brankas (misalnya, protokol aset dunia nyata, protokol peminjaman dengan agunan rendah, protokol peminjaman lintas rantai, token staking likuid (LST), atau modul keamanan asuransi).
+ERC-4626 dioptimalkan untuk setoran dan penebusan atomik hingga batas tertentu. Jika batas tersebut tercapai, tidak ada setoran atau penebusan baru yang dapat diajukan. Keterbatasan ini tidak berfungsi dengan baik untuk sistem kontrak pintar apa pun dengan tindakan asinkron atau penundaan sebagai prasyarat untuk berinteraksi dengan Brankas (misalnya, protokol aset dunia nyata, protokol peminjaman dengan agunan kurang, protokol peminjaman lintas rantai, token staking likuid (LST), atau modul keamanan asuransi).
 
-ERC-7540 memperluas utilitas Brankas ERC-4626 untuk kasus penggunaan asinkron. Antarmuka Brankas yang ada (`deposit`/`withdraw`/`mint`/`redeem`) dimanfaatkan sepenuhnya untuk melakukan klaim Permintaan asinkron.
+ERC-7540 memperluas utilitas Brankas ERC-4626 untuk kasus penggunaan asinkron. Antarmuka Brankas yang ada (`deposit`/`withdraw`/`mint`/`redeem`) dimanfaatkan sepenuhnya untuk mengklaim Permintaan asinkron.
 
-Ekstensi ERC-7540 dijelaskan sepenuhnya dalam [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+Pelajari lebih lanjut tentang [Brankas Tertokenisasi Asinkron ERC-7540](/developers/docs/standards/tokens/erc-7540/).
 
 **Ekstensi brankas multi-aset (ERC-7575)**
 
-Salah satu kasus penggunaan yang hilang dan tidak didukung oleh ERC-4626 adalah Brankas yang memiliki banyak aset atau titik masuk seperti Token penyedia likuiditas (LP). Ini umumnya sulit dikelola atau tidak patuh karena persyaratan ERC-4626 untuk menjadi ERC-20 itu sendiri.
+Salah satu kasus penggunaan yang hilang yang tidak didukung oleh ERC-4626 adalah Brankas yang memiliki banyak aset atau titik masuk seperti Token penyedia likuiditas (LP). Ini umumnya tidak praktis atau tidak patuh karena persyaratan ERC-4626 untuk menjadi ERC-20 itu sendiri.
 
 ERC-7575 menambahkan dukungan untuk Brankas dengan banyak aset dengan mengeksternalisasi implementasi token ERC-20 dari implementasi ERC-4626.
 
 Ekstensi ERC-7575 dijelaskan sepenuhnya dalam [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
-
 ## Prasyarat {#prerequisites}
 
 Untuk lebih memahami halaman ini, kami sarankan Anda membaca terlebih dahulu tentang [standar token](/developers/docs/standards/tokens/) dan [ERC-20](/developers/docs/standards/tokens/erc-20/).

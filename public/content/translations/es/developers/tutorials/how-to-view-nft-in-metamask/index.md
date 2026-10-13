@@ -19,7 +19,7 @@ Como requisito previo, ya debería tener instalado MetaMask en su dispositivo m�
 
 En la parte superior de la aplicación, presione el botón «Billetera» (Wallet), después de lo cual se le pedirá que seleccione una red. Como nuestro NFT se acuñó en la red Sepolia, querrá seleccionar Sepolia como su red.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Paso 2: Agregue su coleccionable a MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Una vez que esté en la red Sepolia, seleccione la pestaña «Coleccionables» (
 
 Es posible que deba actualizar un par de veces para ver su NFT, ¡pero estará allí <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 ¡Felicidades! Ha acuñado con éxito un NFT y ahora puede verlo. ¡Estamos ansiosos por ver cómo arrasará en el mundo de los NFT!

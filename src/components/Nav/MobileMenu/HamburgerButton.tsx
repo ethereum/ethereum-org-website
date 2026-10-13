@@ -2,14 +2,13 @@
 
 import { forwardRef } from "react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
 
 import { Button, type ButtonProps } from "../../ui/buttons/Button"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
@@ -27,7 +26,7 @@ type HamburgerProps = ButtonProps & {
 
 const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
   ({ isMenuOpen, className, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("common")
 
     return (
       <Button

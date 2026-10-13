@@ -2,6 +2,7 @@
 title: Danksharding
 description: Přečtěte si o proto-dankshardingu a dankshardingu – dvou po sobě jdoucích aktualizacích pro škálování Etherea.
 lang: cs
+template: roadmap
 summaryPoints:
   - Danksharding je vícefázová aktualizace pro zlepšení škálovatelnosti a kapacity Etherea.
   - První fáze, proto-danksharding, přidává do bloků datové bloby.

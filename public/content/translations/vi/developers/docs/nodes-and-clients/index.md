@@ -157,6 +157,10 @@ Hyperledger Besu là một máy khách Ethereum cấp doanh nghiệp dành cho c
 
 Erigon, trước đây được gọi là Turbo-Geth, bắt đầu như một bản Phân nhánh của Go Ethereum hướng tới tốc độ và hiệu quả không gian đĩa. Erigon là một bản triển khai được thiết kế lại hoàn toàn của Ethereum, hiện được viết bằng Go nhưng với các bản triển khai bằng các ngôn ngữ khác đang được phát triển. Mục tiêu của Erigon là cung cấp một bản triển khai Ethereum nhanh hơn, mô-đun hơn và tối ưu hóa hơn. Nó có thể thực hiện đồng bộ hóa nút lưu trữ đầy đủ bằng cách sử dụng khoảng 2TB dung lượng đĩa, trong vòng chưa đầy 3 ngày.
 
+
+ethrex là một máy khách thực thi Ethereum tối giản, có tính mô-đun được viết bằng Rust và do LambdaClass phát triển. Nó được xây dựng với định hướng hỗ trợ việc chứng minh không tri thức và cùng một cơ sở mã có thể chạy cả dưới dạng máy khách thực thi L1 và dưới dạng ZK-Rollup đa trình chứng minh (L2). Nó được cấp phép kép theo giấy phép Apache 2.0 và MIT.
+
+Tìm hiểu thêm bằng cách đọc [tài liệu ethrex](https://docs.ethrex.xyz/) hoặc xem [kho lưu trữ GitHub của ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
 
 Go Ethereum (gọi tắt là Geth) là một trong những bản triển khai ban đầu của Giao thức Ethereum. Hiện tại, nó là máy khách phổ biến nhất với cơ sở người dùng lớn nhất và nhiều công cụ đa dạng cho người dùng và nhà phát triển. Nó được viết bằng Go, hoàn toàn mã nguồn mở và được cấp phép theo GNU LGPL v3.

@@ -64,7 +64,7 @@ Thử nghiệm đầu tiên của chúng tôi là một loạt phim anime có t�
 - Đã đặt cọc để bỏ phiếu cho các quyết định cốt truyện trực tiếp trong trình phát
 - Kiếm được một ERC-20 (token sự chú ý của chúng tôi) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 được phát hành trên một đường cong liên kết (bonding curve). Bạn càng tham gia sớm và tích cực, bạn càng kiếm được nhiều. Các lượt bỏ phiếu (như việc đặt tên cho nhân vật chính là Mirai) đã diễn ra thông qua Snapshot. 
 

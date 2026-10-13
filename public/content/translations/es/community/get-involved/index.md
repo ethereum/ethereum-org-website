@@ -59,10 +59,10 @@ Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum.
 
 - Hay muchas llamadas de la comunidad de código abierto, y contar con personas que tomen notas es de gran ayuda. Si le interesa, únase al [Discord de Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) y preséntese.
 
-### Traduzca contenido de Ethereum a su idioma nativo {#translate-ethereum}
+### Ayude a mejorar el contenido traducido de Ethereum {#translate-ethereum}
 
-- ethereum.org mantiene un Programa de Traducción que traduce el sitio web y otros recursos a muchos idiomas diferentes
-- Descubra cómo participar [aquí](/contributing/translation-program)
+- El Programa de traducción de ethereum.org está llegando a su fin y ya no está incorporando nuevos traductores; consulte la [página del programa](/contributing/translation-program/) para conocer su estado e historial
+- Aún puede ayudar [reportando errores en las traducciones existentes](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### Ejecute un nodo {#run-a-node}
 

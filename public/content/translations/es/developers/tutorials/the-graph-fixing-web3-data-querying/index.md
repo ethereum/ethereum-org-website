@@ -15,7 +15,7 @@ Esta vez analizaremos más de cerca The Graph, que esencialmente se convirtió e
 
 ## Sin The Graph... {#without-the-graph}
 
-Así que vamos con un ejemplo sencillo con fines ilustrativos. A todos nos gustan los juegos, así que imagina un juego simple con usuarios haciendo apuestas:
+Así que veamos un ejemplo sencillo a modo de ilustración. A todos nos gustan los juegos, así que imagina un juego simple en el que los usuarios hacen apuestas:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,7 +41,7 @@ contract Game {
 }
 ```
 
-Ahora digamos que en nuestra dapp, queremos mostrar el total de apuestas, el total de juegos perdidos/ganados y también actualizarlo cada vez que alguien vuelva a jugar. El enfoque sería:
+Ahora digamos que en nuestra aplicación descentralizada (dapp), queremos mostrar el total de apuestas, el total de juegos perdidos/ganados y también actualizarlo cada vez que alguien vuelva a jugar. El enfoque sería:
 
 1. Obtener `totalGamesPlayerWon`.
 2. Obtener `totalGamesPlayerLost`.
@@ -57,7 +57,7 @@ GameContract.events.BetPlaced({
     // evento emitido
 })
 .on('changed', function(event) {
-    // evento eliminado de nuevo
+    // el evento fue eliminado de nuevo
 })
 .on('error', function(error, receipt) {
     // tx rechazada
@@ -66,7 +66,7 @@ GameContract.events.BetPlaced({
 
 Ahora bien, esto todavía está más o menos bien para nuestro ejemplo sencillo. Pero digamos que ahora queremos mostrar las cantidades de apuestas perdidas/ganadas solo para el jugador actual. Bueno, no tenemos suerte, es mejor desplegar un nuevo contrato que almacene esos valores y obtenerlos. Y ahora imagina un contrato inteligente y una dapp mucho más complicados, las cosas pueden complicarse rápidamente.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Uno no simplemente consulta](./one-does-not-simply-query.jpg)
 
 Puedes ver que esto no es óptimo:
 
@@ -74,7 +74,7 @@ Puedes ver que esto no es óptimo:
 - Costos adicionales de gas por almacenar esos valores.
 - Requiere otra llamada para obtener los datos de un nodo de Ethereum.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Eso no es lo suficientemente bueno](./not-good-enough.jpg)
 
 Ahora veamos una solución mejor.
 
@@ -84,7 +84,7 @@ Primero hablemos de GraphQL, diseñado e implementado originalmente por Facebook
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.gif)
+![Animated demonstration of a GraphQL query in The Graph playground](./graphql-query.mp4#910x692)
 
 Las dos imágenes capturan bastante bien la esencia de GraphQL. Con la consulta de la derecha podemos definir exactamente qué datos queremos, por lo que ahí obtenemos todo en una sola solicitud y nada más que exactamente lo que necesitamos. Un servidor GraphQL se encarga de obtener todos los datos requeridos, por lo que es increíblemente fácil de usar para el lado del consumidor del frontend. [Esta es una buena explicación](https://www.apollographql.com/blog/graphql-explained) de cómo exactamente el servidor maneja una consulta si estás interesado.
 

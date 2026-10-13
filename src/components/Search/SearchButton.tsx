@@ -1,15 +1,14 @@
 import { forwardRef } from "react"
 import { Search } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
 
-import { useTranslation } from "@/hooks/useTranslation"
-
 const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("common")
 
     return (
       <Button

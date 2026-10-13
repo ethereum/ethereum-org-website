@@ -1,5 +1,6 @@
 import React from "react"
 import { ListFilter, RotateCcw, X } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { FilterOption, TPresetFilters } from "@/lib/types"
 
@@ -11,8 +12,6 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Button } from "../ui/buttons/Button"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]
@@ -39,7 +38,7 @@ const MobileFilters = ({
   resetFilters,
   mobileFiltersLabel,
 }: MobileFiltersProps) => {
-  const { t } = useTranslation("table")
+  const t = useTranslations("table")
   const triggerRef = React.useRef<HTMLButtonElement>(null)
 
   const handleOpenChange = (open: boolean) => {

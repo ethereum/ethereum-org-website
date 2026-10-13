@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/using-websockets/index.md",
-  "generatedAt": "2026-06-19T23:24:54.682Z",
-  "rootHash": "1c5732c054be",
+  "generatedAt": "2026-07-22T23:54:02.439Z",
+  "rootHash": "ebd83675bfae",
   "tree": {
-    "contentHash": "f54184b0d6b5",
-    "anchorHash": "d91ae1a294da",
+    "contentHash": "7cea75e26e33",
+    "anchorHash": "576900b21526",
     "children": {
       "frontmatter:title": {
         "contentHash": "67cc51a00913",
@@ -17,15 +17,39 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b941c9c8232d"
+        "anchorHash": "e4878d4c759a"
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "cd0d5d66a962"
+        "contentHash": "92a714984696",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "924b68a85ca1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "20c2c7718972",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "bf12a6d9cf9f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "eda71746c01c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -136,7 +160,7 @@
       },
       "how-to-use-websockets": {
         "contentHash": "883790c4fee5",
-        "anchorHash": "07a4ee3a078a",
+        "anchorHash": "a15bc81d8e86",
         "labelHash": "dd199c60f4dd",
         "children": {
           "_label": {
@@ -157,7 +181,7 @@
           },
           "image:1": {
             "contentHash": "dde5ea34d839",
-            "anchorHash": "e21c3da4d710"
+            "anchorHash": "97a140cd72df"
           },
           "prose:5": {
             "contentHash": "92941d6a45db",
@@ -689,5 +713,5 @@
       "subscription-api"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

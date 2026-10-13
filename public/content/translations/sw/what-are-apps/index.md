@@ -79,3 +79,7 @@ Wakati programu tumizi zote zinajengwa kwenye Ethereum, zote zinaendana. Tokeni 
 <ExpandableCard title="Ni mkoba gani bora wa kripto?" visible>
   <p>Mkoba wa kripto unakuruhusu kushikilia tokeni zako na kudhibiti akaunti yako ya Ethereum. Kuna mikoba mingi mizuri, kila mmoja ukitumika kwa madhumuni tofauti. Ili kujua ni mkoba upi ulio bora kwako, tembelea [orodha yetu ya mikoba](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

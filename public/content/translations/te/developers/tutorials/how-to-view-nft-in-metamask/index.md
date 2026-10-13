@@ -19,7 +19,7 @@ published: 2021-04-22
 
 యాప్ ఎగువన, “వాలెట్” బటన్‌ను నొక్కండి, ఆ తర్వాత నెట్‌వర్క్‌ను ఎంచుకోమని మిమ్మల్ని అడుగుతుంది. మన NFT Sepolia నెట్‌వర్క్‌లో ముద్రించబడినందున, మీరు మీ నెట్‌వర్క్‌గా Sepoliaని ఎంచుకోవాలి.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## దశ 2: మెటామాస్క్‌కి మీ కలెక్టబుల్‌ని జోడించండి {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 మీ NFTని చూడటానికి మీరు రెండు సార్లు రిఫ్రెష్ చేయాల్సి రావచ్చు — కానీ అది అక్కడే ఉంటుంది <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 అభినందనలు! మీరు విజయవంతంగా NFTని ముద్రించారు మరియు మీరు ఇప్పుడు దాన్ని చూడవచ్చు! మీరు NFT ప్రపంచాన్ని ఎలా ఆకట్టుకుంటారో చూడటానికి మేము వేచి ఉండలేము!

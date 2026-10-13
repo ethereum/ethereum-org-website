@@ -240,3 +240,7 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 - [Comptes](/developers/docs/accounts/)
 - [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

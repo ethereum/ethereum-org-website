@@ -37,7 +37,7 @@
   "page-layer-2-learn-rollupCards-optimistic-description": "Rollup optimis menggunakan bukti kesalahan di mana transaksi diasumsikan valid, tetapi dapat ditantang jika ada dugaan transaksi yang tidak valid. Jika ada dugaan transaksi yang tidak valid, bukti kesalahan dijalankan untuk melihat apakah hal ini telah terjadi.",
   "page-layer-2-learn-rollupCards-optimistic-childSentence": "Lebih lanjut tentang rollup optimis",
   "page-layer-2-learn-rollupCards-zk-title": "Rollup zero-knowledge",
-  "page-layer-2-learn-rollupCards-zk-description": "Rollup zero-knowledge menggunakan bukti validitas di mana perhitungan transaksi dikomputasi secara offchain, dan kemudian data ini diberikan ke Mainnet Ethereum dengan bukti validitasnya.",
+  "page-layer-2-learn-rollupCards-zk-description": "Rollup zero-knowledge menggunakan bukti validitas di mana perhitungan transaksi dilakukan secara offchain, dan kemudian data ini dikirimkan ke Mainnet Ethereum beserta bukti validitasnya.",
   "page-layer-2-learn-rollupCards-zk-childSentence": "Lebih lanjut tentang zk-rollup",
   "page-layer-2-learn-dyor-title": "Lakukan riset Anda sendiri: Risiko lapisan 2",
   "page-layer-2-learn-dyor-1": "Karena rantai lapisan 2 mewarisi keamanan dari Ethereum, dalam dunia yang ideal, mereka sama amannya dengan Ethereum l1. Namun, banyak dari <strong>proyek tersebut masih muda dan agak eksperimental</strong>. Setelah bertahun-tahun melakukan R&D, banyak teknologi l2 yang akan menskalakan Ethereum ditayangkan pada tahun 2021. Ini bukan berarti l2 ini tidak aman, hanya saja belum ada lapisan 2 yang teruji di lapangan seperti Mainnet Ethereum. Selalu lakukan riset Anda sendiri dan putuskan apakah Anda merasa nyaman dengan segala risiko yang ada.",

@@ -2,6 +2,7 @@
 title: Astrazione dell'account
 description: Una panoramica dei piani di Ethereum per rendere gli account degli utenti più semplici e sicuri
 lang: it
+template: roadmap
 summaryPoints:
   - L'astrazione dell'account rende molto più semplice creare portafogli smart contract
   - I portafogli smart contract rendono molto più semplice gestire l'accesso agli account Ethereum

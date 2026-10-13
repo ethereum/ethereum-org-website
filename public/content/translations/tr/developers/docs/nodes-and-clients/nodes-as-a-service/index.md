@@ -49,14 +49,14 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 
 ## Popüler düğüm hizmetleri {#popular-node-services}
 
-İşte en popüler Ethereum düğüm sağlayıcılarından bazılarının bir listesi, eksik olanları eklemekten çekinmeyin! Her düğüm hizmeti, ücretsiz veya ücretli katmanlara ek olarak farklı avantajlar ve özellikler sunar; bir karar vermeden önce hangilerinin ihtiyaçlarınıza en uygun olduğunu araştırmalısınız.
+İşte en popüler Ethereum düğüm sağlayıcılarından bazılarının bir listesi, eksik olanları eklemekten çekinmeyin! Her düğüm hizmeti, ücretsiz veya ücretli katmanlara ek olarak farklı avantajlar ve özellikler sunar, bir karar vermeden önce hangilerinin ihtiyaçlarınıza en uygun olduğunu araştırmalısınız.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Belgeler](https://www.alchemy.com/docs/)
   - Özellikler
-    - Ayda 300 milyon işlem birimiyle (\~30 milyon getLatestBlock isteği) en büyük ücretsiz katman
+    - Ayda 300 milyon işlem birimi (\~30 milyon getLatestBlock isteği) ile en büyük ücretsiz katman
     - Polygon, Starknet, Optimism, Arbitrum için çoklu zincir desteği
-    - En büyük Ethereum dapp'lerinin ve DeFi işlem hacminin ~%70'ine güç sağlar
+    - En büyük Ethereum merkeziyetsiz uygulamalarının (dapp) ve merkeziyetsiz finans (DeFi) işlem hacminin ~%70'ine güç sağlar
     - Alchemy Notify aracılığıyla gerçek zamanlı webhook uyarıları
     - Sınıfının en iyisi destek ve güvenilirlik / kararlılık
     - Alchemy'nin NFT API'si
@@ -67,9 +67,9 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 - [**Allnodes**](https://www.allnodes.com/)
   - [Belgeler](https://docs.allnodes.com/)
   - Özellikler
-    - Allnodes portföy sayfasında oluşturulan PublicNode token'ı ile hız sınırı yok.
-    - [PublicNode](https://www.publicnode.com) üzerinde gizlilik odaklı ücretsiz RPC uç noktaları (100'den fazla blokzincir)
-    - 90'dan fazla blokzincir için hız sınırı olmayan özel düğümler
+    - Allnodes portföy sayfasında oluşturulan PublicNode Token ile oran sınırı yok.
+    - [PublicNode](https://www.publicnode.com) üzerinde gizlilik odaklı ücretsiz rpc uç noktaları (100'den fazla blokzincir)
+    - 90'dan fazla blokzincir için oran sınırı olmayan özel düğümler
     - 30'dan fazla blokzincir için özel arşiv düğümleri
     - 3 bölgede mevcuttur (ABD, AB, Asya)
     - [PublicNode](https://www.publicnode.com/snapshots) üzerinde 100'den fazla blokzincir için anlık görüntüler
@@ -80,13 +80,13 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 - [**All That Node**](https://allthatnode.com/)
   - [Belgeler](https://docs.allthatnode.com/)
   - Özellikler
-    - Ücretsiz katmanla günde 50.000 istek
-    - 40'tan fazla protokol desteği
+    - Ücretsiz katman ile günde 50.000 istek
+    - 40'tan fazla Protokol için destek
     - JSON-RPC (EVM, Tendermint), REST ve Websocket API'leri desteklenir
     - Arşiv verilerine sınırsız erişim
     - 7/24 teknik destek ve %99,9'un üzerinde çalışma süresi
     - Çoklu zincirlerde musluk mevcuttur
-    - Sınırsız sayıda API anahtarıyla sınırsız uç nokta erişimi
+    - Sınırsız sayıda API anahtarı ile sınırsız uç nokta erişimi
     - Trace/Debug API desteklenir
     - Otomatik güncellemeler
 
@@ -104,9 +104,9 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - [Belgeler](https://docs.ankr.com/)
   - Özellikler
     - Ankr Protokolü - 8'den fazla zincir için Genel RPC API uç noktalarına açık erişim
-    - Mevcut en yakın düğüme hızlı ve güvenilir bir ağ geçidi için yük dengeleme ve düğüm sağlığı izleme
-    - WSS uç noktasını ve sınırsız hız limitini etkinleştiren Premium katman
-    - 40'tan fazla zincir için tek tıklamayla tam düğüm ve doğrulayıcı düğüm dağıtımı
+    - En yakın kullanılabilir düğüme hızlı ve güvenilir bir ağ geçidi için yük dengeleme ve düğüm sağlığı izleme
+    - WSS uç noktasını ve sınırsız oran sınırını etkinleştiren Premium katman
+    - 40'tan fazla zincir için tek tıkla tam düğüm ve doğrulayıcı düğüm dağıtımı
     - Kullandıkça ölçeklendirin
     - Analitik araçları
     - Kontrol paneli
@@ -117,7 +117,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - [Belgeler](https://docs.blastapi.io/)
   - Özellikler
     - RPC ve WSS desteği
-    - Çok bölgeli düğüm barındırma
+    - Çoklu bölge düğüm barındırma
     - Merkeziyetsiz altyapı
     - Genel API
     - Özel Ücretsiz Plan
@@ -171,17 +171,17 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 
 - [**dRPC**](https://drpc.org/)
   - [Belgeler](https://drpc.org/docs)
-  - NodeCloud: 10$'dan (USD) başlayan tak-çalıştır RPC altyapısı—tam hız, sınır yok
+  - NodeCloud: 10$'dan (USD) başlayan tak-çalıştır RPC altyapısı — tam hız, sınır yok
   - NodeCloud özellikleri:
     - 185 ağ için API desteği
     - 40'tan fazla sağlayıcıdan oluşan dağıtılmış havuz
-    - Dokuz (9) coğrafi kümeyle küresel kapsama alanı
+    - Dokuz (9) coğrafi küme ile küresel kapsama
     - Yapay zeka destekli yük dengeleme sistemi
-    - Kullandıkça öde sabit fiyatlandırma—zam yok, süre sonu yok, kilitlenme yok
+    - Kullandıkça öde sabit fiyatlandırma — zam yok, süre sonu yok, kilitlenme yok
     - Sınırsız anahtar, ayrıntılı anahtar ayarları, ekip rolleri, ön uç koruması
     - Yöntem başına 20 işlem birimi (CU) sabit oranlı yöntemler
     - [Genel uç nokta zincir listesi](https://drpc.org/chainlist)
-    - [Fiyatlandırma hesaplayıcı](https://drpc.org/pricing#calculator)
+    - [Fiyatlandırma hesaplayıcısı](https://drpc.org/pricing#calculator)
   - NodeCore: tam kontrol isteyen kuruluşlar için açık kaynaklı yığın
 
 - [**GetBlock**](https://getblock.io/)
@@ -221,19 +221,19 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
     - Ücretsiz başlangıç katmanı
-    - Tek tıklamayla Ethereum düğümü dağıtımı
+    - Tek tıkla Ethereum düğüm dağıtımı
     - Özelleştirilebilir istemciler ve algoritmalar (Geth, Quorum ve Besu || PoA, IBFT ve Raft)
     - 500'den fazla yönetim ve hizmet API'si
     - Ethereum işlem gönderimi için RESTful arayüzü (Apache Kafka destekli)
     - Olay teslimi için giden akışlar (Apache Kafka destekli)
-    - Derin "zincir dışı" ve yardımcı hizmetler koleksiyonu (ör. iki taraflı şifreli mesajlaşma aktarımı)
+    - "Zincir dışı" ve yardımcı hizmetlerin derin koleksiyonu (örn. iki taraflı şifreli mesajlaşma aktarımı)
     - Yönetişim ve rol tabanlı erişim kontrolü ile basit ağa sisteme katılım
     - Hem yöneticiler hem de son kullanıcılar için gelişmiş kullanıcı yönetimi
     - Yüksek düzeyde ölçeklenebilir, esnek, kurumsal düzeyde altyapı
     - Bulut HSM özel anahtar yönetimi
     - Ethereum Ana Ağı Bağlantısı
     - ISO 27k ve SOC 2, Tip 2 sertifikaları
-    - Dinamik çalışma zamanı yapılandırması (ör. bulut entegrasyonları ekleme, düğüm girişlerini değiştirme vb.)
+    - Dinamik çalışma zamanı yapılandırması (örn. bulut entegrasyonları ekleme, düğüm girişlerini değiştirme vb.)
     - Çoklu bulut, çoklu bölge ve hibrit dağıtım orkestrasyonları için destek
     - Basit saatlik SaaS tabanlı fiyatlandırma
     - SLA'lar ve 7/24 destek
@@ -243,10 +243,10 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - Özellikler
     - Ücretsiz Test Ağı Kullanımı
     - Yüksek Çalışma Süresi için Merkeziyetsiz Yedeklilik
-    - Açık kaynak
+    - Açık kaynaklı
     - Tamamen Merkeziyetsiz SDK
     - Ethers.js Entegrasyonu
-    - Sezgisel Proje Yönetimi Arayüzü
+    - Sezgisel Proje Yönetim Arayüzü
     - Mutabakat Tabanlı Veri Bütünlüğü
     - Çoklu zincir Desteği
 
@@ -274,10 +274,10 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
 - [**NodeFlare**](https://nodeflare.app/)
   - [Belgeler](https://nodeflare.app/docs/quick-start)
   - Özellikler
-    - Ethereum, Base, Arbitrum One ve Optimism dahil 8 EVM zinciri
-    - En yakın sağlıklı düğüme otomatik yük devretme ile 4 bölge (Avrupa, Asya, Kuzey Amerika)
+    - Ethereum, Base, Arbitrum One ve Nova, Optimism, Linea ve Unichain dahil 23 EVM zinciri
+    - En yakın sağlıklı düğüme otomatik yük devretme ile 5 bölge (Avrupa, Birleşik Krallık, Asya, ABD-Doğu, ABD-Batı)
     - Ücretsiz genel uç nokta (API anahtarı yok) + ayda 3 milyon işlem birimi içeren ücretsiz plan
-    - İşlem Birimi faturalandırması — yalnızca kullandığınız kadar ödeyin, daha ağır çağrılar daha pahalıdır
+    - İşlem Birimi faturalandırması — yalnızca kullandığınız kadar ödeyin, daha ağır çağrılar daha maliyetlidir
     - Ücretli planlarda kısıtlama yok
 
 - [**NOWNodes**](https://nownodes.io/)
@@ -295,7 +295,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - Özellikler
     - Merkeziyetsiz RPC Protokolü ve Pazaryeri
     - Günde 1 Milyon İstek Ücretsiz Katmanı (uç nokta başına, maks. 2)
-    - Pre-Stake+ Programı (günde 1 milyon istekten fazlasına ihtiyacınız varsa)
+    - Pre-Stake+ Programı (günde 1 milyondan fazla isteğe ihtiyacınız varsa)
     - 15'ten Fazla Blokzincir Desteklenir
     - Uygulamalara hizmet vererek POKT kazanan 6400'den fazla Düğüm
     - Arşiv Düğümü, İzlemeli Arşiv Düğümü ve Test Ağı Düğümü Desteği
@@ -314,8 +314,8 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - [Belgeler](https://www.quicknode.com/docs/)
   - Özellikler
     - 7/24 teknik destek ve geliştirici Discord topluluğu
-    - Coğrafi olarak dengelenmiş, çoklu bulut/metal, düşük gecikmeli ağ
-    - Çoklu zincir desteği (Optimism, Arbitrum, Polygon + 11 diğerleri)
+    - Coğrafi dengeli, çoklu bulut/metal, düşük gecikmeli ağ
+    - Çoklu zincir desteği (Optimism, Arbitrum, Polygon + 11 diğer)
     - Hız ve kararlılık için orta katmanlar (çağrı yönlendirme, önbellek, indeksleme)
     - Webhook'lar aracılığıyla Akıllı Sözleşme izleme
     - Sezgisel kontrol paneli, analitik paketi, RPC oluşturucu
@@ -361,7 +361,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
     - %100 tutarlı okuma erişimi
     - JSON-RPC uç noktaları
     - Kullanıcı arayüzü tabanlı RPC istek oluşturucu ve istek önizlemesi
-    - Tenderly'nin geliştirme, hata ayıklama ve test araçlarıyla sıkı bir şekilde entegre edilmiştir
+    - Tenderly'nin geliştirme, hata ayıklama ve test araçlarıyla sıkı bir şekilde entegre
     - İşlem simülasyonları
     - Kullanım analitiği ve filtreleme
     - Kolay erişim anahtarı yönetimi
@@ -410,8 +410,6 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
     - RPC uç noktaları, API'lere kimliği doğrulanmış erişim, sezgisel kontrol paneli ve analitik ile sorunsuz yönetim sunar.
     - Aralarından seçim yapabileceğiniz hem yönetilen bulut hem de kendi bulutunuzu getirme seçenekleri sunar ve AWS, Azure, Google Cloud, Digital Ocean ve şirket içi gibi tüm büyük bulut sağlayıcılarını destekler.
     - Her seferinde kullanıcınıza en yakın düğüme ulaşmak için akıllı yönlendirme kullanıyoruz
-
-
 ## Daha fazla bilgi {#further-reading}
 
 - [Ethereum düğüm hizmetleri listesi](https://ethereumnodes.com/)

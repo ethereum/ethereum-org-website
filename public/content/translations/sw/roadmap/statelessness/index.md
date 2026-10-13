@@ -2,6 +2,7 @@
 title: Ubilahali, ukomo wa hali na ukomo wa historia
 description: Maelezo ya ukomo wa historia na Ethereum ya ubilahali
 lang: sw
+template: roadmap
 ---
 
 Uwezo wa kuendesha nodi za [Ethereum](/) kwenye vifaa vya kawaida ni muhimu kwa ugatuzi wa kweli. Hii ni kwa sababu kuendesha nodi huwapa watumiaji uwezo wa kuthibitisha taarifa kwa kufanya ukaguzi wa kriptografia kwa kujitegemea badala ya kuamini mhusika wa tatu kuwapa data. Kuendesha nodi huruhusu watumiaji kuwasilisha miamala moja kwa moja kwenye mtandao wa rika-kwa-rika wa Ethereum badala ya kulazimika kuamini mpatanishi. Ugatuzi hauwezekani ikiwa manufaa haya yanapatikana tu kwa watumiaji wenye vifaa vya gharama kubwa. Badala yake, nodi zinapaswa kuwa na uwezo wa kufanya kazi zikiwa na mahitaji madogo sana ya uchakataji na kumbukumbu ili ziweze kufanya kazi kwenye simu za mkononi, kompyuta ndogo au bila kutambulika kwenye kompyuta ya nyumbani.

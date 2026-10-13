@@ -238,7 +238,7 @@ issues.push(...newWarnings)
 npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
-**All tests must pass** — both the new test and all existing 99+ tests.
+**All tests must pass** — both the new test and all existing 600+ tests.
 
 If a test fails:
 - New test fails → fix the implementation, not the test
@@ -248,15 +248,15 @@ If a test fails:
 
 **CRITICAL: NEVER run the sanitizer against an entire language. It processes thousands of files and will hang for 30+ minutes. Always scope to the specific files from the PR.**
 
-Determine which files to test from the PR context (e.g., `gaming/index.md`). Then run the sanitizer with `TARGET_FILES` to scope it to just those files:
+Determine which files to test from the PR context (e.g., `gaming/index.md`). The sanitizer's only env-var scoping is `TARGET_LANGUAGES` (per-language, not per-file) — there is no `TARGET_FILES`. For single files, write an inline script that calls `processMarkdownFile` directly:
 
 ```bash
-# If TARGET_FILES env var is supported:
-TARGET_FILES="public/content/translations/{LANGUAGE}/{PAGE_PATH}" \
-  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
+# Language-level scoping (still processes every file for that language):
+TARGET_LANGUAGES={LANGUAGE} \
+  pnpm exec tsx ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
-# If not, write a quick inline node script that calls processMarkdownFile directly:
-node -e '
+# Preferred for single files — inline script calling processMarkdownFile directly:
+pnpm exec tsx -e '
 const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
@@ -302,7 +302,7 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 ```bash
 # Test the same page path in a few other languages
 for lang in es tr ja; do
-  node -e "
+  pnpm exec tsx -e "
     const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
@@ -361,7 +361,7 @@ If the fix worked, move the pattern from "New Patterns Not Yet Covered" to "Patt
 ### Update existing bug docs if relevant
 
 Check if this relates to previously documented bugs:
-- `docs/solutions/integration-issues/post-import-sanitizer-bugs-found-japanese-review.md`
+- `docs/solutions/integration-issues/intl-pipeline-bugs-from-pr-18041-review.md`
 
 ### Report summary
 
@@ -381,40 +381,3 @@ Display to user:
   - docs/solutions/integration-issues/sanitizer-test-research.md (documentation)
 ```
 
-## Quick Reference
-
-### Run all sanitizer tests
-```bash
-npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
-```
-
-### Run sanitizer against a language
-```bash
-TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
-```
-
-### Key files
-| File | Purpose |
-|------|---------|
-| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~2100 lines) |
-| `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
-| `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts` | Tests needing English source |
-| `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
-| `tests/unit/intl-pipeline/sanitizer/integration.spec.ts` | End-to-end tests |
-| `docs/solutions/integration-issues/sanitizer-test-research.md` | Pattern catalog |
-
-### Code block awareness pattern
-Every text transformation MUST use this split pattern:
-```typescript
-const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-const parts = content.split(codeBlockPattern)
-for (let i = 0; i < parts.length; i++) {
-  if (i % 2 === 1) continue // Skip code blocks
-  // Transform parts[i] only
-}
-```
-
-### Function signature conventions
-- **Fix functions:** `(content: string) => { content: string; fixCount: number }`
-- **Fix w/ English:** `(translated: string, english: string) => { content: string; fixCount: number }`
-- **Warn functions:** `(content: string, ...) => string[]`

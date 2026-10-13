@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md",
   "generatedAt": "2026-06-17T00:03:37.136Z",
-  "rootHash": "523100f0188f",
+  "rootHash": "e7d5136abf36",
   "tree": {
-    "contentHash": "7fa2a040a9ea",
-    "anchorHash": "49d6396e4fa6",
+    "contentHash": "bc3f327c30a5",
+    "anchorHash": "fd491f16f1af",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0845a25d5d1b",
+        "contentHash": "ea5f72c019ee",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,27 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "133d23bd1af4"
+        "contentHash": "9b1d09c70f2b",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "49a25f9feefa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

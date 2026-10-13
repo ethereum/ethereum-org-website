@@ -169,6 +169,11 @@
   "page-upgrades-upgrades-beacon-chain": "Сигнальний ланцюг",
   "page-upgrades-upgrades-guide": "Посібник з оновлень Етеріуму",
   "page-upgrades-upgrades-docking": "Злиття",
+  "page-upgrades-upgrades-dencun": "Денкун",
+  "page-upgrades-upgrades-pectra": "Пектра",
+  "page-upgrades-upgrades-fusaka": "Фусака",
+  "page-upgrades-upgrades-glamsterdam": "Гламстердам",
+  "page-upgrades-upgrades-forks": "Форки Етеріуму",
   "page-upgrades-energy-consumption": "Більше про енергоспоживання Етеріуму",
   "page-upgrades-upgrading": "Оновлення Етеріуму до радикально нових висот",
   "page-roadmap-vision": "Бачення",
@@ -204,5 +209,6 @@
   "docs-nav-proof-of-stake": "Доказ частки (PoS)",
   "docs-nav-proof-of-work": "Доказ виконання роботи (PoW)",
   "page-upgrades-get-involved-ethresearch-1": "Шардинг",
-  "page-upgrades-get-involved-ethresearch-2": "Злиття"
+  "page-upgrades-get-involved-ethresearch-2": "Злиття",
+  "page-upgrades-upgrades-hegota": "Гегота"
 }

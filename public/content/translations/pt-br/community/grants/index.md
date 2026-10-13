@@ -4,8 +4,6 @@ description: "Uma lista dos programas de subsídios em todo o ecossistema Ethere
 lang: pt-br
 ---
 
-# Subsídios do Ethereum {#ethereum-grants}
-
 Os programas listados abaixo oferecem uma variedade de subsídios de financiamento para projetos que trabalham para promover o sucesso e o crescimento do ecossistema [Ethereum](/). Use isso como um guia para encontrar e solicitar fundos para ajudar a tornar seu próximo projeto Ethereum um sucesso.
 
 Esta lista é mantida pela nossa comunidade. Se houver algo faltando ou incorreto, por favor, edite esta página!

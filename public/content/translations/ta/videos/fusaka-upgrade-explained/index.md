@@ -7,10 +7,7 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "roadmap-and-priorities"
-  - "upgrades"
-  - "fusaka"
-  - "roadmap"
+  - "network-upgrades"
 format: explainer
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "ஃபுசாகா மேம்படுத்தல்"

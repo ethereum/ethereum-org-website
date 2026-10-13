@@ -55,21 +55,20 @@ Potrzebujesz najpierw bardziej podstawowego wprowadzenia? Sprawdź [ethereum.org
 
 ## Projekty i narzędzia w Pythonie {#python-projects-and-tools}
 
-### Aktywne: {#active}
-
-- [Web3.py](https://github.com/ethereum/web3.py) – _Biblioteka Pythona do interakcji z Ethereum_
-- [Vyper](https://github.com/ethereum/vyper/) – _Język inteligentnych kontraktów w stylu Pythona dla EVM_
-- [Ape](https://github.com/ApeWorX/ape) – _Narzędzie do tworzenia inteligentnych kontraktów dla programistów Pythona, analityków danych i specjalistów ds. bezpieczeństwa_
-- [py-evm](https://github.com/ethereum/py-evm) – _Implementacja Wirtualnej Maszyny Ethereum (EVM)_
-- [eth-tester](https://github.com/ethereum/eth-tester) – _Narzędzia do testowania aplikacji opartych na Ethereum_
-- [eth-utils](https://github.com/ethereum/eth-utils/) – _Funkcje narzędziowe do pracy z bazami kodu związanymi z Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) – _Wrapper Pythona dla kompilatora Solidity solc z obsługą wersji 0.5.x_
-- [pymaker](https://github.com/makerdao/pymaker) – _API Pythona dla kontraktów Maker_
-- [siwe](https://github.com/signinwithethereum/siwe-py) – _Sign in with Ethereum (SIWE) dla Pythona_
-- [Web3 DeFi dla integracji z Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) – _Pakiet Pythona z gotowymi integracjami dla ERC-20, Uniswap i innych popularnych projektów_
-- [Wake](https://getwake.io) – _Kompleksowy framework Pythona do testowania kontraktów, fuzzingu, wdrażania, skanowania podatności i nawigacji po kodzie (serwer językowy – [Narzędzia dla Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) – _SDK Pythona do analityki zdecentralizowanych finansów (DeFi) i symulacji zautomatyzowanego animatora rynku (AMM) w Uniswap V2/V3, Balancer i Curve_
-
+- [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteka Pythona do interakcji z Ethereum_
+- [Vyper](https://github.com/ethereum/vyper/) - _Pythonowy język inteligentnych kontraktów dla EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Natywne narzędzie testowe dla Vyper; interpreter z forkowaniem Sieci głównej, debugowaniem i czytelnymi śladami stosu_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Framework do tworzenia i testowania inteligentnych kontraktów dla Vyper i Pythona, zbudowany na Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _Narzędzie do tworzenia inteligentnych kontraktów dla programistów Pythona, analityków danych i specjalistów ds. bezpieczeństwa_
+- [py-evm](https://github.com/ethereum/py-evm) - _implementacja maszyny wirtualnej Ethereum_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _narzędzia do testowania aplikacji opartych na Ethereum_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _funkcje narzędziowe do pracy z bazami kodu związanymi z Ethereum_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Pythona dla kompilatora Solidity solc z obsługą wersji 0.5.x_
+- [pymaker](https://github.com/makerdao/pymaker) - _API Pythona dla kontraktów Maker_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Zaloguj się przez Ethereum (SIWE) dla Pythona_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Pakiet Pythona z gotowymi integracjami dla ERC-20, Uniswap i innych popularnych projektów_
+- [Wake](https://getwake.io) - _Wszechstronny framework Pythona do testowania kontraktów, fuzzingu, wdrażania, skanowania podatności i nawigacji po kodzie (serwer językowy - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Pythona do analityki zdecentralizowanych finansów (DeFi) i symulacji zautomatyzowanego animatora rynku (AMM) dla Uniswap V2/V3, Balancer i Curve_
 ### Zarchiwizowane / Niewspierane: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) – _Klient Ethereum w Pythonie_

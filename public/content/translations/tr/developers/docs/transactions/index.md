@@ -238,3 +238,7 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [Hesaplar](/developers/docs/accounts/)
 - [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

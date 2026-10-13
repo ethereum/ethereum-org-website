@@ -55,21 +55,20 @@ incomplete: true
 
 ## Python திட்டங்கள் மற்றும் கருவிகள் {#python-projects-and-tools}
 
-### செயல்பாட்டில் உள்ளவை: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _எத்திரியத்துடன் தொடர்புகொள்வதற்கான Python நிரலகம்_
-- [Vyper](https://github.com/ethereum/vyper/) - _EVM-க்கான பைத்தானிக் திறன் ஒப்பந்த மொழி_
-- [Ape](https://github.com/ApeWorX/ape) - _பைத்தானிஸ்டாக்கள், தரவு விஞ்ஞானிகள் மற்றும் பாதுகாப்பு நிபுணர்களுக்கான திறன் ஒப்பந்த மேம்பாட்டுக் கருவி_
-- [py-evm](https://github.com/ethereum/py-evm) - _எத்திரியம் மெய்நிகர் இயந்திரத்தின் (EVM) செயலாக்கம்_
+- [Vyper](https://github.com/ethereum/vyper/) - _EVM-க்கான Pythonic திறன் ஒப்பந்த மொழி_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper-இன் சொந்த சோதனைக் கருவி; முதன்மை வலைப்பின்னல் ஃபோர்க்கிங், பிழைத்திருத்தம் மற்றும் தெளிவான ட்ரேஸ்பேக்குகளைக் கொண்ட ஒரு இன்டர்ப்ரெட்டர்_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa-வில் கட்டமைக்கப்பட்ட, Vyper மற்றும் Python-க்கான திறன் ஒப்பந்த மேம்பாடு மற்றும் சோதனைக் கட்டமைப்பு_
+- [Ape](https://github.com/ApeWorX/ape) - _Pythonistas, தரவு விஞ்ஞானிகள் மற்றும் பாதுகாப்பு நிபுணர்களுக்கான திறன் ஒப்பந்த மேம்பாட்டுக் கருவி_
+- [py-evm](https://github.com/ethereum/py-evm) - _எத்திரியம் விர்ச்சுவல் மெஷினின் செயலாக்கம்_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _எத்திரியம் அடிப்படையிலான செயலிகளைச் சோதிப்பதற்கான கருவிகள்_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _எத்திரியம் தொடர்பான குறியீட்டுத் தளங்களுடன் பணியாற்றுவதற்கான பயன்பாட்டுச் சார்புகள்_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x ஆதரவுடன் solc Solidity தொகுப்பியைச் சுற்றியுள்ள Python ரேப்பர்_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x ஆதரவுடன் solc Solidity கம்பைலரைச் சுற்றியுள்ள Python ரேப்பர்_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker ஒப்பந்தங்களுக்கான Python API_
-- [siwe](https://github.com/signinwithethereum/siwe-py) - _Python-க்கான எத்திரியம் மூலம் உள்நுழைக (SIWE)_
-- [எத்திரியம் ஒருங்கிணைப்புகளுக்கான Web3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, யூனிஸ்வாப் மற்றும் பிற பிரபலமான திட்டங்களுக்கான ஆயத்த ஒருங்கிணைப்புகளைக் கொண்ட ஒரு Python தொகுப்பு_
-- [Wake](https://getwake.io) - _ஒப்பந்தங்கள் சோதனை, ஃபஸ்ஸிங், நிலைநிறுத்தம், பாதிப்பு ஸ்கேனிங் மற்றும் குறியீடு வழிசெலுத்தலுக்கான ஆல்-இன்-ஒன் Python கட்டமைப்பு (மொழி சேவையகம் - [Solidity-க்கான கருவிகள்](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _யூனிஸ்வாப் V2/V3, Balancer மற்றும் Curve முழுவதும் DeFi பகுப்பாய்வு மற்றும் தானியங்கு சந்தை உருவாக்கி (AMM) உருவகப்படுத்துதலுக்கான Python SDK_
-
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Python-க்கான Sign in with Ethereum (SIWE)_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, யூனிஸ்வாப் மற்றும் பிற பிரபலமான திட்டங்களுக்கான ஆயத்த ஒருங்கிணைப்புகளைக் கொண்ட ஒரு Python தொகுப்பு_
+- [Wake](https://getwake.io) - _ஒப்பந்தங்கள் சோதனை, ஃபஸ்ஸிங், நிலைநிறுத்தம், பாதிப்பு ஸ்கேனிங் மற்றும் குறியீட்டு வழிசெலுத்தலுக்கான ஆல்-இன்-ஒன் Python கட்டமைப்பு (மொழி சேவையகம் - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _யூனிஸ்வாப் V2/V3, Balancer மற்றும் Curve முழுவதும் பரவலாக்கப்பட்ட நிதி (DeFi) பகுப்பாய்வு மற்றும் தானியங்கு சந்தை உருவாக்கி (AMM) உருவகப்படுத்துதலுக்கான Python SDK_
 ### காப்பகப்படுத்தப்பட்டவை / இனி பராமரிக்கப்படாதவை: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _எத்திரியம் Python கிளையண்ட்_

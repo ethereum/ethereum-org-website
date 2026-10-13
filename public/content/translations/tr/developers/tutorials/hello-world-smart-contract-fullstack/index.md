@@ -32,35 +32,29 @@ Herhangi bir noktada sorularınız olursa, [Alchemy Discord](https://discord.gg/
 
 Ethereum zincirine istek yapmanın birçok yolu vardır. Basitlik adına, kendi başımıza bir düğüm çalıştırmadan Ethereum zinciriyle iletişim kurmamızı sağlayan bir Blokzincir geliştirici platformu ve API'si olan Alchemy'de ücretsiz bir hesap kullanacağız. Alchemy ayrıca izleme ve analitik için geliştirici araçlarına sahiptir; akıllı sözleşme dağıtımımızın arka planında neler olup bittiğini anlamak için bu eğitimde bunlardan yararlanacağız.
 
-### Uygulamanızı ve API anahtarınızı oluşturun {#create-your-app-and-api-key}
+### Uygulamanızı ve API anahtarınızı oluşturun
+Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı üretebilirsiniz. Bu, Sepolia test ağına istek yapmanızı sağlayacaktır. Test ağlarına aşina değilseniz [Alchemy'nin ağ seçme rehberini okuyabilirsiniz](https://www.alchemy.com/docs/choosing-a-web3-network).
 
-Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı üretebilirsiniz. Bu, Goerli test ağına istek yapmanızı sağlayacaktır. Test ağlarına aşina değilseniz [Alchemy'nin ağ seçme kılavuzunu okuyabilirsiniz](https://www.alchemy.com/docs/choosing-a-web3-network).
-
-Alchemy kontrol panelinde, gezinme çubuğundaki **Apps** (Uygulamalar) açılır menüsünü bulun ve **Create App** (Uygulama Oluştur) seçeneğine tıklayın.
+Alchemy kontrol panelinde, gezinme çubuğundaki **Apps** açılır menüsünü bulun ve **Create App** düğmesine tıklayın.
 
 ![Hello world create app](./hello-world-create-app.png)
 
-Uygulamanıza '_Hello World_' adını verin ve kısa bir açıklama yazın. Ortamınız olarak **Staging**'i ve ağınız olarak **Goerli**'yi seçin.
+Uygulamanıza '_Hello World_' adını verin ve kısa bir açıklama yazın. Ortamınız olarak **Staging**'i ve ağınız olarak **Sepolia**'yı seçin.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
-_Not: **Goerli**'yi seçtiğinizden emin olun, aksi takdirde bu eğitim çalışmayacaktır._
+_Not: **Sepolia**'yı seçtiğinizden emin olun, aksi takdirde bu eğitim çalışmayacaktır._
 
-**Create app** (Uygulama oluştur) düğmesine tıklayın. Uygulamanız aşağıdaki tabloda görünecektir.
+**Create app** düğmesine tıklayın. Uygulamanız aşağıdaki tabloda görünecektir.
+### Bir Ethereum hesabı oluşturun
+İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacınız var. Kullanıcıların Ethereum hesap adreslerini yönetmelerini sağlayan, tarayıcıdaki sanal bir cüzdan olan MetaMask'ı kullanacağız.
 
-### Bir Ethereum hesabı oluşturun {#create-an-ethereum-account}
+[Buradan](https://metamask.io/download) ücretsiz olarak MetaMask'ı indirebilir ve bir hesap oluşturabilirsiniz. Bir hesap oluştururken veya zaten bir hesabınız varsa, sağ üst köşeden “Sepolia Test Ağı”na geçtiğinizden emin olun (böylece gerçek parayla işlem yapmamış oluruz).
+### Adım 4: Bir musluktan Ether ekleyin
+Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacınız olacak. Sepolia ağında ETH almak için bir Sepolia musluğuna gidin ve Sepolia hesap adresinizi girin. Deneyebileceğiniz seçeneklerin bir listesi için [test ağları sayfasına](/developers/docs/networks/#sepolia) göz atın:
 
-İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacınız var. Kullanıcıların Ethereum hesap adreslerini yönetmelerini sağlayan tarayıcı içi sanal bir cüzdan olan MetaMask'ı kullanacağız.
-
-MetaMask'ı ücretsiz olarak indirebilir ve [buradan](https://metamask.io/download) bir hesap oluşturabilirsiniz. Bir hesap oluştururken veya zaten bir hesabınız varsa, sağ üstteki "Goerli Test Network" (Goerli Test Ağı) seçeneğine geçtiğinizden emin olun (böylece gerçek parayla işlem yapmamış oluruz).
-
-### Adım 4: Bir Musluktan Ether Ekleyin {#step-4-add-ether-from-a-faucet}
-
-Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacınız olacak. Goerli ağında ETH almak için bir Goerli musluğuna gidin ve Goerli hesap adresinizi girin. Goerli musluklarının son zamanlarda biraz güvenilmez olabileceğini unutmayın - denenebilecek seçeneklerin bir listesi için [test ağları sayfasına](/developers/docs/networks/#goerli) bakın:
-
-_Not: ağ yoğunluğu nedeniyle bu biraz zaman alabilir._
+_Not: Ağ yoğunluğu nedeniyle bu biraz zaman alabilir._
 ``
-
 ### Adım 5: Bakiyenizi Kontrol Edin {#step-5-check-your-balance}
 
 ETH'nin cüzdanınızda olduğundan emin olmak için, [Alchemy'nin sandbox aracını](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. Daha fazla bilgi edinmek için [Alchemy'nin composer aracının nasıl kullanılacağına dair kısa eğitimine](https://youtu.be/r6sjRxBZJuU) göz atın.
@@ -240,7 +234,7 @@ Ortam dosyanızın adı `.env` olmalıdır, aksi takdirde bir ortam dosyası ola
 - Özel anahtarınızı dışa aktarmak için [bu talimatları](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) izleyin
 - HTTP Alchemy API URL'sini almak için aşağıya bakın
 
-![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.gif)
+![Animated walkthrough of getting an Alchemy API key](./get-alchemy-api-key.mp4#1280x696)
 
 `.env` dosyanız şu şekilde görünmelidir:
 
@@ -341,15 +335,14 @@ const hello_world = await HelloWorld.deploy()
 
 Bir `ContractFactory` üzerinde `deploy()` çağırmak dağıtımı başlatacak ve bir `Contract` nesnesine çözümlenen bir `Promise` döndürecektir. Bu, akıllı sözleşme işlevlerimizin her biri için bir yöntemi olan nesnedir.
 
-### Adım 16: Sözleşmemizi dağıtalım {#step-16-deploy-our-contract}
-
-Sonunda akıllı sözleşmemizi dağıtmaya hazırız! Komut satırına gidin ve şunu çalıştırın:
+### Adım 16: Sözleşmemizi dağıtalım
+Nihayet akıllı sözleşmemizi dağıtmaya hazırız! Komut satırına gidin ve şunu çalıştırın:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-Daha sonra şuna benzer bir şey görmelisiniz:
+Ardından şuna benzer bir şey görmelisiniz:
 
 ```bash
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
@@ -357,22 +350,21 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **Lütfen bu adresi kaydedin**. Bunu eğitimin ilerleyen kısımlarında kullanacağız.
 
-[Goerli Etherscan](https://goerli.etherscan.io)'e gider ve sözleşme adresimizi aratırsak, başarıyla dağıtıldığını görebilmeliyiz. İşlem şuna benzer görünecektir:
+[Sepolia Etherscan](https://sepolia.etherscan.io) adresine gidip sözleşme adresimizi aratırsak, başarıyla dağıtıldığını görebilmeliyiz. İşlem şuna benzer görünecektir:
 
 ![](./etherscan-contract.png)
 
-`From` adresi MetaMask hesap adresinizle eşleşmelidir ve `To` adresi **Contract Creation** (Sözleşme Oluşturma) diyecektir. İşleme tıklarsak, sözleşme adresimizi `To` alanında göreceğiz.
+`From` adresi MetaMask hesap adresinizle eşleşmeli ve `To` adresi **Contract Creation** (Sözleşme Oluşturma) demelidir. İşleme tıklarsak, `To` alanında sözleşme adresimizi göreceğiz.
 
 ![](./etherscan-transaction.png)
 
-Tebrikler! Az önce bir Ethereum test ağına bir akıllı sözleşme dağıttınız.
+Tebrikler! Bir Ethereum test ağına bir akıllı sözleşme dağıttınız.
 
 Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemy.com/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve **Hello World**'ü seçtiğinizden emin olun.
 
 ![](./hello-world-explorer.png)
 
-Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC yöntemini göreceksiniz. Buradaki iki önemli yöntem, sözleşmemizi Goerli zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ve hash değeri verilen işlemimiz hakkında bilgi okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)'dir. İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme hakkındaki eğitimimize](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
-
+Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın arka planda bizim için yaptığı bir avuç JSON-RPC yöntemini göreceksiniz. Buradaki iki önemli yöntem, sözleşmemizi Sepolia zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ve hash değeri verildiğinde işlemimiz hakkında bilgi okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)'tir. İşlem gönderme hakkında daha fazla bilgi edinmek için [Web3 kullanarak işlem gönderme hakkındaki eğitimimize](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
 ## Bölüm 2: Akıllı Sözleşmenizle Etkileşime Geçin {#part-2-interact-with-your-smart-contract}
 
 Artık Goerli ağına başarılı bir şekilde bir akıllı sözleşme dağıttığımıza göre, onunla nasıl etkileşime geçeceğimizi öğrenelim.
@@ -513,11 +505,10 @@ main()
 
 11. satırda, döndürülen işlem nesnesi üzerinde `.wait()` çağrısı yaptığımıza dikkat edin. Bu, betiğimizin fonksiyondan çıkmadan önce işlemin Blokzincir'de kazılmasını beklemesini sağlar. Eğer `.wait()` çağrısı dahil edilmezse, betik sözleşmedeki güncellenmiş `message` değerini göremeyebilir.
 
-### Yeni mesajı okuyun {#read-the-new-message}
+### Yeni mesajı okuyun
+Güncellenmiş `message` değerini okumak için [önceki adımı](#read-the-init-message) tekrarlayabilmeniz gerekir. Bir dakikanızı ayırın ve bu yeni değeri yazdırmak için gerekli değişiklikleri yapıp yapamayacağınızı görün!
 
-Güncellenmiş `message` değerini okumak için [önceki adımı](#read-the-init-message) tekrarlayabilmelisiniz. Bir dakikanızı ayırın ve bu yeni değeri yazdırmak için gerekli değişiklikleri yapıp yapamayacağınızı görün!
-
-Eğer bir ipucuna ihtiyacınız varsa, bu noktada `interact.js` dosyanızın nasıl görünmesi gerektiği aşağıda verilmiştir:
+İpucuna ihtiyacınız varsa, `interact.js` dosyanızın bu noktada nasıl görünmesi gerektiği aşağıda açıklanmıştır:
 
 ```javascript
 // interact.js
@@ -530,14 +521,14 @@ const contract = require("../artifacts/contracts/HelloWorld.sol/HelloWorld.json"
 
 // sağlayıcı - Alchemy
 const alchemyProvider = new ethers.providers.AlchemyProvider(
-  (network = "goerli"),
+  (network = "sepolia"),
   API_KEY
 )
 
 // imzalayıcı - siz
 const signer = new ethers.Wallet(PRIVATE_KEY, alchemyProvider)
 
-// Sözleşme örneği
+// sözleşme örneği
 const helloWorldContract = new ethers.Contract(
   CONTRACT_ADDRESS,
   contract.abi,
@@ -561,7 +552,7 @@ main()
 
 Şimdi sadece betiği çalıştırın; eski mesajı, güncelleme durumunu ve yeni mesajı terminalinize yazdırılmış olarak görebilmelisiniz!
 
-`npx hardhat run scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network sepolia`
 
 ```
 The message is: Hello World!
@@ -569,8 +560,7 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-Bu betiği çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının yüklenmesinin biraz zaman aldığını fark edebilirsiniz. Bunun nedeni madencilik sürecidir; işlemlerin kazılırken nasıl takip edileceğini merak ediyorsanız, bir işlemin durumunu görmek için [Alchemy bellek havuzunu (mempool)](https://dashboard.alchemy.com/mempool) ziyaret edin. Eğer işlem düşerse, [Goerli Etherscan](https://goerli.etherscan.io)'i kontrol etmek ve işlem özetinizi (hash) aramak da faydalı olacaktır.
-
+Bu betiği çalıştırırken, yeni mesaj yüklenmeden önce `Updating the message...` adımının biraz zaman aldığını fark edebilirsiniz. Bunun nedeni madencilik sürecidir; işlemler kazılırken onları izlemek isterseniz, bir işlemin durumunu görmek için [Alchemy mempool](https://dashboard.alchemy.com/mempool) sayfasını ziyaret edebilirsiniz. İşlem düşerse, [Sepolia Etherscan](https://sepolia.etherscan.io) üzerinden işlem hash'inizi aramak da faydalı olacaktır.
 ## Bölüm 3: Akıllı Sözleşmenizi Etherscan'de Yayınlayın {#part-3-publish-your-smart-contract-to-etherscan}
 
 Akıllı sözleşmenizi hayata geçirmek için tüm zor işleri yaptınız; şimdi onu dünyayla paylaşma zamanı!
@@ -640,17 +630,17 @@ module.exports = {
 }
 ```
 
-#### Akıllı sözleşmenizi Etherscan'de doğrulayın {#verify-your-smart-contract-on-etherscan}
+#### Akıllı sözleşmenizi Etherscan'de doğrulayın
 
 Tüm dosyaların kaydedildiğinden ve tüm `.env` değişkenlerinin doğru şekilde yapılandırıldığından emin olun.
 
-Sözleşme adresini ve dağıtıldığı ağı ileterek `verify` görevini çalıştırın:
+Sözleşme adresini ve dağıtıldığı ağı geçirerek `verify` görevini çalıştırın:
 
 ```text
-npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
+npx hardhat verify --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-`DEPLOYED_CONTRACT_ADDRESS` değerinin Goerli test ağında dağıtılan akıllı sözleşmenizin adresi olduğundan emin olun. Ayrıca, son argüman (`'Hello World!'`), [1. bölümdeki dağıtım adımı sırasında](#step-15-write-our-deploy-script) kullanılan dize değeriyle aynı olmalıdır.
+`DEPLOYED_CONTRACT_ADDRESS` değerinin Sepolia test ağında dağıtılan akıllı sözleşmenizin adresi olduğundan emin olun. Ayrıca, son argüman (`'Hello World!'`), [bölüm 1'deki dağıtım adımı sırasında](#step-15-write-our-deploy-script) kullanılan dize değeriyle aynı olmalıdır.
 
 Her şey yolunda giderse, terminalinizde aşağıdaki mesajı göreceksiniz:
 
@@ -661,11 +651,10 @@ for verification on Etherscan. Waiting for verification result...
 
 
 Successfully verified contract HelloWorld on Etherscan.
-https://goerli.etherscan.io/address/<contract-address>#contracts
+https://sepolia.etherscan.io/address/<contract-address>#contracts
 ```
 
 Tebrikler! Akıllı sözleşme kodunuz Etherscan'de!
-
 ### Akıllı sözleşmenizi Etherscan'de inceleyin! {#check-out-your-smart-contract-on-etherscan}
 
 Terminalinizde sağlanan bağlantıya gittiğinizde, Etherscan'de yayınlanan akıllı sözleşme kodunuzu ve ABI'nizi görebilmelisiniz!
@@ -944,13 +933,13 @@ Bu uç nokta hazır olduğuna göre, akıllı sözleşmemizi yükleme zamanı ge
 
 Hello World akıllı sözleşmenizi yüklemek için sözleşme adresine ve ABI'sine ihtiyacınız olacak; [bu eğitimin 3. Bölümünü](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan) tamamladıysanız her ikisi de Etherscan'de bulunabilir.
 
-#### Etherscan'den sözleşme ABI'nizi nasıl alırsınız {#how-to-get-your-contract-abi-from-etherscan}
+#### Etherscan'den sözleşme ABI'nizi nasıl alırsınız
 
-Bu eğitimin 3. Bölümünü atladıysanız, [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) adresine sahip HelloWorld sözleşmesini kullanabilirsiniz. ABI'si [burada](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code) bulunabilir.
+Bu eğitimin 3. Bölümünü atladıysanız, öncelikle kendi HelloWorld sözleşmenizi dağıtın ve doğrulayın. Ardından ABI'sini kopyalamak için [Sepolia Etherscan](https://sepolia.etherscan.io) üzerinde sözleşme sayfanızı açın.
 
-Bir sözleşme ABI'si, bir sözleşmenin hangi işlevi çağıracağını belirlemek ve işlevin verileri beklediğiniz biçimde döndürmesini sağlamak için gereklidir. Sözleşme ABI'mizi kopyaladıktan sonra, onu `src` dizininize `contract-abi.json` adlı bir JSON dosyası olarak kaydedelim.
+Bir sözleşme ABI'si, bir sözleşmenin hangi işlevi çağıracağını belirlemek ve işlevin verileri beklediğiniz formatta döndüreceğinden emin olmak için gereklidir. Sözleşme ABI'mizi kopyaladıktan sonra, onu `src` dizininize `contract-abi.json` adında bir JSON dosyası olarak kaydedelim.
 
-contract-abi.json dosyanız src klasörünüzde saklanmalıdır.
+`contract-abi.json` dosyanız `src` klasörünüzde saklanmalıdır.
 
 Sözleşme adresimiz, ABI'miz ve Alchemy Web3 uç noktamızla donanmış olarak, akıllı sözleşmemizin bir örneğini yüklemek için [sözleşme yöntemini](https://docs.web3js.org/api/web3-eth-contract/class/Contract) kullanabiliriz. Sözleşme ABI'nizi `interact.js` dosyasına içe aktarın ve sözleşme adresinizi ekleyin.
 
@@ -958,7 +947,8 @@ Sözleşme adresimiz, ABI'miz ve Alchemy Web3 uç noktamızla donanmış olarak,
 // interact.js
 
 const contractABI = require("../contract-abi.json")
-const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
+// Sözleşme adresinizi burada kullanın
+const contractAddress = "0x..."
 ```
 
 Artık nihayet `helloWorldContract` değişkenimizi yorum satırı olmaktan çıkarabilir ve AlchemyWeb3 uç noktamızı kullanarak akıllı sözleşmeyi yükleyebiliriz:
@@ -990,8 +980,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-Sözleşmemizi yüklediğimize göre, artık `loadCurrentMessage` işlevimizi uygulayabiliriz!
-
+Artık sözleşmemiz yüklendiğine göre, `loadCurrentMessage` işlevimizi uygulayabiliriz!
 #### `interact.js` dosyanızda `loadCurrentMessage` işlevini uygulama {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 Bu işlev son derece basittir. Sözleşmemizden okuma yapmak için basit bir asenkron web3 çağrısı yapacağız. İşlevimiz akıllı sözleşmede saklanan mesajı döndürecektir:
@@ -1118,14 +1107,10 @@ Ethereum zincirine herhangi bir şey yazmak için kullanıcıların sanal cüzda
 
 Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
-#### MetaMask'ı İndirin {#download-metamask}
+[Buradan](https://metamask.io/download) ücretsiz olarak MetaMask'ı indirebilir ve bir MetaMask hesabı oluşturabilirsiniz. Bir hesap oluştururken veya zaten bir hesabınız varsa, sağ üst köşeden "Sepolia Test Ağı"na geçtiğinizden emin olun \(böylece gerçek parayla işlem yapmamış oluruz\).
+#### Bir musluktan Ether ekleyin
 
-[Buradan](https://metamask.io/download) ücretsiz olarak MetaMask'ı indirebilir ve bir hesap oluşturabilirsiniz. Bir hesap oluştururken veya zaten bir hesabınız varsa, sağ üstteki "Goerli Test Network" (Goerli Test Ağı) seçeneğine geçtiğinizden emin olun (böylece gerçek parayla işlem yapmamış oluruz).
-
-#### Bir Musluktan (Faucet) Ether Ekleyin {#add-ether-from-a-faucet}
-
-Ethereum blokzincirinde bir işlemi imzalamak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [FaucETH](https://fauceth.komputing.org)'e gidebilir ve Goerli hesap adresinizi girebilir, "Request funds" (Fon talep et) seçeneğine tıklayabilir, ardından açılır menüden "Ethereum Testnet Goerli"yi seçebilir ve son olarak tekrar "Request funds" düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
-
+Ethereum Blokzinciri üzerinde bir işlemi imzalamak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [test ağları sayfasında](/developers/docs/networks/#sepolia) listelenen bir Sepolia musluğuna gidebilir ve Sepolia hesap adresinizi girebilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
 #### Bakiyenizi Kontrol Edin {#check-your-balance}
 
 Bakiyemizin orada olduğundan emin olmak için, [Alchemy'nin korumalı alan aracını (sandbox)](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. MetaMask hesap adresinizi girip "Send Request" (İsteği Gönder) düğmesine tıkladıktan sonra, şuna benzer bir yanıt görmelisiniz:

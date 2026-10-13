@@ -39,22 +39,6 @@ test.describe("Data-Layer Getters", () => {
         expect(result.value).toBeGreaterThan(0)
       }
     })
-
-    test("getEthereumStablecoinsMcapData returns MetricReturnData or null", async () => {
-      const result = await dataLayer.getEthereumStablecoinsMcapData()
-      if (result !== null && "value" in result) {
-        expect(typeof result.value).toBe("number")
-        expect(result.value).toBeGreaterThan(0)
-      }
-    })
-
-    test("getTotalValueLockedData returns MetricReturnData or null", async () => {
-      const result = await dataLayer.getTotalValueLockedData()
-      if (result !== null && "value" in result) {
-        expect(typeof result.value).toBe("number")
-        expect(result.value).toBeGreaterThan(0)
-      }
-    })
   })
 
   test.describe("Layer 2 Data", () => {
@@ -172,16 +156,6 @@ test.describe("Data-Layer Getters", () => {
         }
       }
     })
-
-    test("getCalendarEvents returns calendar events or null", async () => {
-      const result = await dataLayer.getCalendarEvents()
-      if (result !== null) {
-        expect(result).toHaveProperty("pastEventData")
-        expect(result).toHaveProperty("upcomingEventData")
-        expect(Array.isArray(result.pastEventData)).toBe(true)
-        expect(Array.isArray(result.upcomingEventData)).toBe(true)
-      }
-    })
   })
 
   test.describe("Content & RSS", () => {
@@ -200,21 +174,6 @@ test.describe("Data-Layer Getters", () => {
             expect(typeof firstItem.title).toBe("string")
             expect(typeof firstItem.link).toBe("string")
           }
-        }
-      }
-    })
-
-    test("getAttestantPosts returns array of RSS items or null", async () => {
-      const result = await dataLayer.getAttestantPosts()
-      if (result !== null) {
-        expect(Array.isArray(result)).toBe(true)
-        if (result.length > 0) {
-          const firstPost = result[0]
-          expect(firstPost).toHaveProperty("title")
-          expect(firstPost).toHaveProperty("link")
-          expect(firstPost).toHaveProperty("pubDate")
-          expect(typeof firstPost.title).toBe("string")
-          expect(typeof firstPost.link).toBe("string")
         }
       }
     })
@@ -239,8 +198,8 @@ test.describe("Data-Layer Getters", () => {
   })
 
   test.describe("Stats & Analytics", () => {
-    test("getBlobscanStats returns blobscan stats or null", async () => {
-      const result = await dataLayer.getBlobscanStats()
+    test("getBlobStats returns blob stats or null", async () => {
+      const result = await dataLayer.getBlobStats()
       if (result !== null) {
         expect(result).toHaveProperty("totalBlobs")
         expect(result).toHaveProperty("avgBlobFee")
@@ -271,39 +230,6 @@ test.describe("Data-Layer Getters", () => {
           expect(typeof firstIssue.title).toBe("string")
           expect(typeof firstIssue.html_url).toBe("string")
           expect(typeof firstIssue.created_at).toBe("string")
-        }
-      }
-    })
-
-    test("getGitHistory returns array of commits or null", async () => {
-      const result = await dataLayer.getGitHistory()
-      if (result !== null) {
-        expect(Array.isArray(result)).toBe(true)
-        if (result.length > 0) {
-          const firstCommit = result[0]
-          expect(firstCommit).toHaveProperty("commit")
-          expect(firstCommit).toHaveProperty("author")
-          expect(firstCommit.commit).toHaveProperty("author")
-          expect(firstCommit.commit.author).toHaveProperty("date")
-          expect(typeof firstCommit.commit.author.date).toBe("string")
-          expect(firstCommit.author).toHaveProperty("login")
-          expect(typeof firstCommit.author.login).toBe("string")
-        }
-      }
-    })
-
-    test("getGithubRepoData returns repo data or null", async () => {
-      const result = await dataLayer.getGithubRepoData()
-      if (result !== null) {
-        expect(typeof result).toBe("object")
-        expect(Array.isArray(result)).toBe(false)
-        const repoKeys = Object.keys(result)
-        if (repoKeys.length > 0) {
-          const firstRepo = result[repoKeys[0]]
-          expect(firstRepo).toHaveProperty("starCount")
-          expect(firstRepo).toHaveProperty("languages")
-          expect(typeof firstRepo.starCount).toBe("number")
-          expect(Array.isArray(firstRepo.languages)).toBe(true)
         }
       }
     })

@@ -19,7 +19,7 @@ published: 2021-04-22
 
 ॲपच्या शीर्षस्थानी, “Wallet” बटण दाबा, त्यानंतर तुम्हाला नेटवर्क निवडण्यास सांगितले जाईल. आपला NFT Sepolia नेटवर्कवर मिंट केला गेला असल्याने, तुम्हाला तुमचे नेटवर्क म्हणून Sepolia निवडायचे आहे.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## पायरी 2: मेटामास्कमध्ये तुमचे कलेक्टेबल जोडा {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 तुमचा NFT पाहण्यासाठी तुम्हाला कदाचित दोनदा रिफ्रेश करावे लागेल — पण तो तिथे असेल <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 अभिनंदन! तुम्ही यशस्वीरित्या एक NFT मिंट केला आहे, आणि आता तुम्ही तो पाहू शकता! तुम्ही NFT विश्वात कशी खळबळ उडवून द्याल हे पाहण्यासाठी आम्ही उत्सुक आहोत!

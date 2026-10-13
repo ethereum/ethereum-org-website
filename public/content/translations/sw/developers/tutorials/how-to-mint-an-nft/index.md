@@ -77,7 +77,7 @@ Mara tu unapounda akaunti:
 
 Kwa wale wanaojifunza zaidi kwa kuona, hatua zilizo hapo juu zimefupishwa hapa:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Sasa, tutataka kupakia hati moja zaidi kwenye Pinata. Lakini kabla ya kufanya hivyo, tunahitaji kuiunda!
 
@@ -105,7 +105,7 @@ Jisikie huru kubadilisha data katika json. Unaweza kuondoa au kuongeza kwenye se
 
 Ukimaliza kuhariri faili ya JSON, ihifadhi na uipakie kwenye Pinata, ukifuata hatua zilezile tulizofanya kwa kupakia picha.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Hatua ya 5: Unda mfano wa mkataba wako {#instance-contract}
 

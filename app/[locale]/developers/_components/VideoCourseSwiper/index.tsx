@@ -1,6 +1,6 @@
 "use client"
 
-import { Swiper, SwiperSlide } from "@/components/ui/swiper"
+import { Swiper, SwiperNavigation, SwiperSlide } from "@/components/ui/swiper"
 
 import type { VideoCourse } from "../../types"
 import VideoCourseCard from "../VideoCourseCard"
@@ -14,11 +14,12 @@ const VideoCourseSwiper = ({ courses }: VideoCourseSwiperProps) => (
     {courses.map((course, idx) => (
       <SwiperSlide
         key={idx}
-        className="max-xl://[&:last-child_div]:pe-16 max-2xl:first:ms-8 max-2xl:last:pe-16"
+        className="py-px max-2xl:first:ms-page max-2xl:last:pe-page-2x"
       >
         <VideoCourseCard course={course} />
       </SwiperSlide>
     ))}
+    <SwiperNavigation />
   </Swiper>
 )
 

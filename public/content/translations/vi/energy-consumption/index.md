@@ -1,11 +1,11 @@
 ---
-title: Mức tiêu thụ năng lượng của Ethereum
-metaTitle: Mức tiêu thụ năng lượng của Ethereum
-description: Những thông tin cơ bản bạn cần để hiểu về mức tiêu thụ năng lượng của Ethereum.
+title: "Mức tiêu thụ năng lượng của Ethereum"
+metaTitle: "Mức tiêu thụ năng lượng của Ethereum"
+description: "Những thông tin cơ bản bạn cần để hiểu về mức tiêu thụ năng lượng của Ethereum."
 lang: vi
 ---
 
-[Ethereum](/) là một Chuỗi khối xanh. Cơ chế đồng thuận [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos) của Ethereum sử dụng ETH thay vì [năng lượng để bảo mật mạng lưới](/developers/docs/consensus-mechanisms/pow). Mức tiêu thụ năng lượng của Ethereum xấp xỉ [~0,0026 TWh/năm](https://carbon-ratings.com/eth-report-2022) trên toàn bộ mạng lưới toàn cầu.
+[Ethereum](/) là một Chuỗi khối xanh. Cơ chế đồng thuận [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos) của Ethereum sử dụng ETH thay vì [năng lượng để bảo mật mạng lưới](/developers/docs/consensus-mechanisms/pow). Mức tiêu thụ năng lượng của Ethereum xấp xỉ [\~0,0026 TWh/năm](https://carbon-ratings.com/eth-report-2022) trên toàn bộ mạng lưới toàn cầu.
 
 Ước tính mức tiêu thụ năng lượng của Ethereum đến từ một nghiên cứu của [CCRI (Viện Xếp hạng Carbon Tiền mã hóa)](https://carbon-ratings.com). Họ đã tạo ra các ước tính từ dưới lên về mức tiêu thụ điện năng và lượng khí thải carbon của mạng lưới Ethereum ([xem báo cáo](https://carbon-ratings.com/eth-report-2022)). Họ đã đo lường mức tiêu thụ điện năng của các node khác nhau với nhiều cấu hình phần cứng và phần mềm client khác nhau. Ước tính **2.601 MWh** (0,0026 TWh) cho mức tiêu thụ điện năng hàng năm của mạng lưới tương đương với lượng khí thải carbon hàng năm là **870 tấn CO2e** khi áp dụng các hệ số cường độ carbon đặc thù của từng khu vực. Giá trị này thay đổi khi các node tham gia và rời khỏi mạng lưới - bạn có thể theo dõi bằng cách sử dụng ước tính trung bình động 7 ngày của [Chỉ số Bền vững Mạng lưới Chuỗi khối Cambridge](https://ccaf.io/cbnsi/ethereum) (lưu ý rằng họ sử dụng một phương pháp hơi khác cho các ước tính của mình - chi tiết có sẵn trên trang web của họ).
 
@@ -83,3 +83,5 @@ Các nền tảng tài trợ hàng hóa công cộng gốc Web3 như [Gitcoin](h
 
 - [Chuỗi Beacon](/roadmap/beacon-chain)
 - [The Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

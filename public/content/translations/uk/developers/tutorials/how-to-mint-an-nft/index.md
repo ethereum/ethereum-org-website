@@ -81,7 +81,7 @@ node scripts/mint-nft.js
 
 Для тих, хто краще сприймає візуальну інформацію, наведені вище кроки підсумовані тут:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Тепер ми хочемо завантажити ще один документ у Pinata. Але перш ніж це зробити, нам потрібно його створити!
 
@@ -109,7 +109,7 @@ node scripts/mint-nft.js
 
 Після завершення редагування файлу JSON збережіть його та завантажте в Pinata, дотримуючись тих самих кроків, що й для завантаження зображення.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## Крок 5: Створіть екземпляр вашого контракту {#instance-contract}
 

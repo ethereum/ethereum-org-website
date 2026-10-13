@@ -1,6 +1,8 @@
-import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
-
-import type { DeveloperTool } from "./utils"
+import {
+  fetchRetry,
+  parallelBatch,
+  sleep,
+} from "@/data-layer/fetchers/fetchRetry"
 
 type ParsedNpmUrl = {
   packageName: string
@@ -65,25 +67,15 @@ async function fetchBulkDownloads(
   const unscopedPackages = uniquePackages.filter((p) => !p.startsWith("@"))
 
   // Fetch scoped packages individually (in parallel with concurrency limit)
-  const CONCURRENCY = 10
-  for (let i = 0; i < scopedPackages.length; i += CONCURRENCY) {
-    const batch = scopedPackages.slice(i, i + CONCURRENCY)
-    const batchResults = await Promise.all(
-      batch.map(async (pkg) => ({
-        pkg,
-        downloads: await fetchSinglePackageDownloads(pkg),
-      }))
-    )
-
-    for (const { pkg, downloads } of batchResults) {
-      if (downloads !== null) {
-        results.set(pkg, downloads)
-      }
-    }
-
-    // Add 15 second delay between batches to avoid rate limits
-    if (i + CONCURRENCY < scopedPackages.length) {
-      await sleep(15000)
+  const scopedResults = await parallelBatch(
+    scopedPackages,
+    async (pkg) => ({ pkg, downloads: await fetchSinglePackageDownloads(pkg) }),
+    10,
+    15000
+  )
+  for (const { pkg, downloads } of scopedResults) {
+    if (downloads !== null) {
+      results.set(pkg, downloads)
     }
   }
 
@@ -134,33 +126,46 @@ async function fetchBulkDownloads(
   return results
 }
 
-export async function fetchNpmJs(
-  appData: DeveloperTool[]
-): Promise<DeveloperTool[]> {
+type ToolWithPackageUrls = {
+  packages: Array<string | { href: string }>
+} & Record<string, unknown>
+
+type ToolWithNpmData<T extends ToolWithPackageUrls> = Omit<T, "packages"> & {
+  packages: {
+    href: string
+    downloads?: number
+  }[]
+}
+
+export async function fetchNpmJs<T extends ToolWithPackageUrls>(
+  appData: T[]
+): Promise<ToolWithNpmData<T>[]> {
   // Collect all unique npm URLs and their package names
   const parsedUrls: ParsedNpmUrl[] = []
   const seenHrefs = new Set<string>()
 
   for (const app of appData) {
-    for (const repo of app.repos) {
-      if (seenHrefs.has(repo.href)) continue
-      seenHrefs.add(repo.href)
+    for (const pkgEntry of app.packages) {
+      const pkgUrl = typeof pkgEntry === "string" ? pkgEntry : pkgEntry.href
+      if (seenHrefs.has(pkgUrl)) continue
+      seenHrefs.add(pkgUrl)
 
-      const parsed = parseNpmUrl(repo.href)
+      const parsed = parseNpmUrl(pkgUrl)
       if (parsed) {
         parsedUrls.push(parsed)
       }
     }
   }
 
-  if (parsedUrls.length === 0) {
-    return appData
+  const downloadsMap = new Map<string, number>()
+  if (parsedUrls.length > 0) {
+    console.log(`Fetching npm downloads for ${parsedUrls.length} packages`)
+    const packageNames = parsedUrls.map((p) => p.packageName)
+    const fetchedMap = await fetchBulkDownloads(packageNames)
+    for (const [pkg, downloads] of fetchedMap) {
+      downloadsMap.set(pkg, downloads)
+    }
   }
-
-  console.log(`Fetching npm downloads for ${parsedUrls.length} packages`)
-
-  const packageNames = parsedUrls.map((p) => p.packageName)
-  const downloadsMap = await fetchBulkDownloads(packageNames)
 
   // Create lookup from original href to downloads
   const hrefToDownloads = new Map<string, number>()
@@ -177,10 +182,13 @@ export async function fetchNpmJs(
 
   // Enrich the existing data with downloads
   return appData.map((app) => ({
-    ...app,
-    repos: app.repos.map((repo) => {
-      const downloads = hrefToDownloads.get(repo.href)
-      return downloads !== undefined ? { ...repo, downloads } : repo
+    ...(app as Omit<T, "packages">),
+    packages: app.packages.map((pkgEntry) => {
+      const pkgUrl = typeof pkgEntry === "string" ? pkgEntry : pkgEntry.href
+      const downloads = hrefToDownloads.get(pkgUrl)
+      return downloads !== undefined
+        ? { href: pkgUrl, downloads }
+        : { href: pkgUrl }
     }),
   }))
 }

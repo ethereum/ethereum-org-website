@@ -170,7 +170,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             id="still-need-help"
             header={t("page-community-support-still-need-help")}
             paragraph={t("page-community-support-still-need-help-description")}
-            href="https://discord.gg/ethereum-org"
+            href="/discord/"
             customEventOptions={{
               eventCategory: EVENT_CATEGORY,
               eventAction: "Still need help?",
@@ -191,6 +191,8 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-community-support")
 

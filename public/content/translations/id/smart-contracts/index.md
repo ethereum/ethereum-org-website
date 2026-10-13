@@ -71,7 +71,7 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak [N
 
 - [Stablecoin](/stablecoins/)
 - [Membuat dan mendistribusikan aset digital unik](/nft/)
-- [Pertukaran mata uang terbuka dan otomatis](/get-eth/#dex)
+- [Pertukaran mata uang terbuka dan otomatis](/defi/#swaps)
 - [Permainan terdesentralisasi](/apps/categories/gaming)
 - [Polis asuransi yang membayar secara otomatis](https://etherisc.com/)
 - [Standar yang memungkinkan orang membuat mata uang yang disesuaikan dan interoperabel](/developers/docs/standards/tokens/)

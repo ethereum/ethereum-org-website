@@ -71,7 +71,7 @@ Pueden realizar cálculos, crear moneda, almacenar datos, acuñar [NFT](/glossar
 
 - [Monedas estables](/stablecoins/)
 - [Creación y distribución de activos digitales únicos](/nft/)
-- [Un intercambio de divisas automático y abierto](/get-eth/#dex)
+- [Un intercambio de divisas automático y abierto](/defi/#swaps)
 - [Juegos descentralizados](/apps/categories/gaming)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear monedas personalizadas e interoperables](/developers/docs/standards/tokens/)

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import type { SVGTextElementAttributes } from "react"
 
 import Translation from "@/components/Translation"
@@ -7,8 +8,6 @@ import { cn } from "@/lib/utils/cn"
 import { HStack } from "../ui/flex"
 
 import Background from "./background.svg"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const Text = ({
   className,
@@ -21,38 +20,39 @@ const Text = ({
 )
 
 const SvgTextInternal = () => {
-  const { t } = useTranslation(["page-upgrades-index"])
+  const t = useTranslations("page-upgrades-index")
+  const tCommon = useTranslations("common")
   const [sm, lg] = ["text-[7px]", "text-[8px]"]
 
   return (
     <>
       <Text className={lg} x="2%" y="35%">
-        ⛏ {t("page-upgrades-index:docs-nav-proof-of-work")}
+        ⛏ {t("docs-nav-proof-of-work")}
       </Text>
       <Text className={lg} x="47%" y="35%">
-        🌱 {t("page-upgrades-index:docs-nav-proof-of-stake")}
+        🌱 {t("docs-nav-proof-of-stake")}
       </Text>
       <Text className={sm} x="11%" y="70%">
-        🚀 {t("common:beacon-chain")}
+        🚀 {tCommon("beacon-chain")}
       </Text>
       <Text className={sm} x="43%" y="12.5%">
-        🐼 {t("page-upgrades-index:page-upgrades-get-involved-ethresearch-2")}
+        🐼 {t("page-upgrades-get-involved-ethresearch-2")}
       </Text>
       <Text className={sm} x="63%" y="95%">
-        🌳 {t("page-upgrades-index:page-upgrades-get-involved-ethresearch-1")}
+        🌳 {t("page-upgrades-get-involved-ethresearch-1")}
       </Text>
     </>
   )
 }
 
 const MergeInfographic = () => {
-  const { t } = useTranslation()
+  const t = useTranslations("page-upgrades")
 
   return (
     <div
       className="relative isolate aspect-[25/11] w-full"
       role="img"
-      aria-label={t("page-upgrades:page-upgrades-merge-infographic-alt-text")}
+      aria-label={t("page-upgrades-merge-infographic-alt-text")}
     >
       <div>
         <HStack

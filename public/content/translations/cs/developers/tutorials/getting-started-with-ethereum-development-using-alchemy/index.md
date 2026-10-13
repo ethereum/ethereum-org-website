@@ -37,7 +37,7 @@ Vyplňte podrobnosti v části „Create App“, abyste získali svůj nový kl�
 
 Existující API klíče můžete také získat najetím myší na „Apps“ (Aplikace) a výběrem jedné z nich. Zde můžete kliknout na „View Key“, stejně jako na „Edit App“ (Upravit aplikaci) pro přidání konkrétních domén na whitelist, zobrazení několika vývojářských nástrojů a prohlížení analytiky.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. Vytvořte požadavek z příkazového řádku {#make-a-request-from-the-command-line}
 

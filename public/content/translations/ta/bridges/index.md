@@ -1,7 +1,7 @@
 ---
-title: தொகுதிச்சங்கிலி பாலங்கள்
-metaTitle: தொகுதிச்சங்கிலி பாலங்கள் பற்றிய அறிமுகம்
-description: பயனர்கள் தங்கள் நிதியை வெவ்வேறு தொகுதிச்சங்கிலிகளுக்கு இடையே நகர்த்த பாலங்கள் அனுமதிக்கின்றன
+title: "தொகுதிச்சங்கிலி பாலங்கள்"
+metaTitle: "தொகுதிச்சங்கிலி பாலங்கள் பற்றிய அறிமுகம்"
+description: "பயனர்கள் தங்கள் நிதியை வெவ்வேறு தொகுதிச்சங்கிலிகளுக்கு இடையே நகர்த்த பாலங்கள் அனுமதிக்கின்றன"
 lang: ta
 ---
 
@@ -135,8 +135,11 @@ _Web3 ஆனது அடுக்கு 1 (l1) தொகுதிச்சங�
 <Divider />
 
 ## மேலும் படிக்க {#further-reading}
+
 - [EIP-5164: குறுக்கு-சங்கிலி செயலாக்கம்](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _ஜூன் 18, 2022 - பிரெண்டன் அசெல்ஸ்டைன்_
 - [L2Bridge இடர் கட்டமைப்பு](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _ஜூலை 5, 2022 - பார்டெக் கீபுஸ்ஸெவ்ஸ்கி_
 - ["எதிர்காலம் ஏன் பல-சங்கிலியாக இருக்கும், ஆனால் அது குறுக்கு-சங்கிலியாக இருக்காது."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _ஜனவரி 8, 2022 - விட்டாலிக் புட்டெரின்_
 - [பாதுகாப்பான குறுக்கு-சங்கிலி பரிமாற்று இயங்குதன்மைக்கு பகிரப்பட்ட பாதுகாப்பைப் பயன்படுத்துதல்: லாக்ரேஞ்ச் நிலை குழுக்கள் மற்றும் அதற்கு அப்பால்](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ஜூன் 12, 2024 - இம்மானுவேல் அவோசிகா_
 - [ரோலப் பரிமாற்று இயங்குதன்மை தீர்வுகளின் நிலை](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _ஜூன் 20, 2024 - அலெக்ஸ் ஹூக்_
+
+<QuizWidget quizKey="bridges" />

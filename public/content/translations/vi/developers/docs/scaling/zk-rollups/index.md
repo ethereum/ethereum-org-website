@@ -10,15 +10,15 @@ Bản cuộn không tri thức (ZK-rollup) là các [giải pháp mở rộng qu
 
 Bạn nên đọc và hiểu trang của chúng tôi về [mở rộng quy mô Ethereum](/developers/docs/scaling/) và [lớp 2 (l2)](/layer-2).
 
-## Bản cuộn không tri thức là gì? {#what-are-zk-rollups}
+## Rollup không tri thức là gì? {#what-are-zk-rollups}
 
-**Bản cuộn không tri thức (ZK-rollup)** gom (hoặc 'cuộn lại') các giao dịch thành các lô được thực thi ngoài chuỗi. Tính toán ngoài chuỗi làm giảm lượng dữ liệu phải được đăng lên Chuỗi khối. Các nhà điều hành ZK-rollup gửi một bản tóm tắt các thay đổi cần thiết để đại diện cho tất cả các giao dịch trong một lô thay vì gửi từng giao dịch riêng lẻ. Họ cũng tạo ra các [bằng chứng tính hợp lệ](/glossary/#validity-proof) để chứng minh tính chính xác của các thay đổi của họ.
+**Các rollup không tri thức (ZK-rollup)** gom (hoặc 'cuộn lại') các giao dịch thành các lô được thực thi ngoài chuỗi. Việc tính toán ngoài chuỗi làm giảm lượng dữ liệu phải được đăng lên Chuỗi khối. Các nhà điều hành ZK-rollup gửi một bản tóm tắt các thay đổi cần thiết để đại diện cho tất cả các giao dịch trong một lô thay vì gửi từng giao dịch riêng lẻ. Họ cũng tạo ra các [bằng chứng tính hợp lệ](/glossary/#validity-proof) để chứng minh tính chính xác của các thay đổi của họ.
 
-Trạng thái của ZK-rollup được duy trì bởi một hợp đồng thông minh được triển khai trên mạng lưới Ethereum. Để cập nhật trạng thái này, các nút ZK-rollup phải gửi một bằng chứng tính hợp lệ để xác minh. Như đã đề cập, bằng chứng tính hợp lệ là một sự đảm bảo mật mã học rằng thay đổi trạng thái do Rollup đề xuất thực sự là kết quả của việc thực thi lô giao dịch đã cho. Điều này có nghĩa là các ZK-rollup chỉ cần cung cấp các bằng chứng tính hợp lệ để chốt các giao dịch trên Ethereum thay vì đăng tất cả dữ liệu giao dịch trên chuỗi như [các bản cuộn optimistic](/developers/docs/scaling/optimistic-rollups/).
+Trạng thái của ZK-rollup được duy trì bởi một hợp đồng thông minh được triển khai trên mạng lưới Ethereum. Để cập nhật trạng thái này, các nút ZK-rollup phải gửi một bằng chứng tính hợp lệ để xác minh. Như đã đề cập, bằng chứng tính hợp lệ là một sự đảm bảo về mặt mật mã học rằng sự thay đổi trạng thái do Rollup đề xuất thực sự là kết quả của việc thực thi lô giao dịch đã cho. Điều này có nghĩa là các ZK-rollup không cần phải đăng tất cả dữ liệu giao dịch trên chuỗi theo cách mà các [optimistic rollup](/developers/docs/scaling/optimistic-rollups/) làm, vì bằng chứng tính hợp lệ là thứ chốt lại quá trình chuyển đổi trạng thái. Chúng vẫn xuất bản dữ liệu cần thiết để tái tạo lại trạng thái của Rollup, như được mô tả bên dưới.
 
-Không có sự chậm trễ nào khi chuyển tiền từ ZK-rollup sang Ethereum vì các giao dịch thoát được thực thi ngay khi hợp đồng ZK-rollup xác minh bằng chứng tính hợp lệ. Ngược lại, việc rút tiền từ các bản cuộn optimistic phải chịu một khoảng thời gian trễ để cho phép bất kỳ ai thách thức giao dịch thoát bằng một [bằng chứng gian lận](/glossary/#fraud-proof).
+Không có sự chậm trễ nào khi chuyển tiền từ ZK-rollup sang Ethereum vì các giao dịch thoát được thực thi ngay khi hợp đồng ZK-rollup xác minh bằng chứng tính hợp lệ. Ngược lại, việc rút tiền từ các optimistic rollup phải chịu một khoảng thời gian trễ để cho phép bất kỳ ai thách thức giao dịch thoát bằng một [bằng chứng gian lận](/glossary/#fraud-proof).
 
-Các ZK-rollup ghi các giao dịch lên Ethereum dưới dạng `calldata`. `calldata` là nơi lưu trữ dữ liệu được bao gồm trong các lệnh gọi bên ngoài đến các hàm của hợp đồng thông minh. Thông tin trong `calldata` được xuất bản trên Chuỗi khối, cho phép bất kỳ ai tái tạo lại trạng thái của Rollup một cách độc lập. Các ZK-rollup sử dụng các kỹ thuật nén để giảm dữ liệu giao dịch—ví dụ: các Tài khoản được biểu diễn bằng một chỉ số thay vì một Địa chỉ, giúp tiết kiệm 28 byte dữ liệu. Việc xuất bản dữ liệu trên chuỗi là một chi phí đáng kể đối với các bản cuộn, vì vậy việc nén dữ liệu có thể giảm phí cho người dùng.
+Các ZK-rollup ghi các giao dịch lên Ethereum dưới dạng `calldata` hoặc trong các [khối dữ liệu](/roadmap/danksharding/). `calldata` là nơi lưu trữ dữ liệu được bao gồm trong các lệnh gọi bên ngoài đến các hàm của hợp đồng thông minh. Dù bằng cách nào, dữ liệu cũng được xuất bản trên Chuỗi khối, cho phép bất kỳ ai tái tạo lại trạng thái của Rollup một cách độc lập. Các ZK-rollup sử dụng các kỹ thuật nén để giảm dữ liệu giao dịch—ví dụ: các Tài khoản được biểu diễn bằng một chỉ số thay vì một Địa chỉ, điều này giúp tiết kiệm 28 byte dữ liệu. Việc xuất bản dữ liệu trên chuỗi là một chi phí đáng kể đối với các bản cuộn, vì vậy việc nén dữ liệu có thể giảm phí cho người dùng.
 
 ## Các ZK-rollup tương tác với Ethereum như thế nào? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ Các ZK-rollup dựa vào Giao thức Ethereum chính cho những điều sau:
 
 ### Tính khả dụng của dữ liệu {#data-availability}
 
-Các ZK-rollup xuất bản dữ liệu trạng thái cho mọi giao dịch được xử lý ngoài chuỗi lên Ethereum. Với dữ liệu này, các cá nhân hoặc doanh nghiệp có thể tái tạo lại trạng thái của Rollup và tự mình xác thực chuỗi. Ethereum cung cấp dữ liệu này cho tất cả những người tham gia mạng lưới dưới dạng `calldata`.
+Các ZK-rollup xuất bản dữ liệu trạng thái cho mọi giao dịch được xử lý ngoài chuỗi lên Ethereum. Với dữ liệu này, các cá nhân hoặc doanh nghiệp có thể tự mình tái tạo lại trạng thái của Rollup và xác thực Chuỗi. Ethereum làm cho dữ liệu này khả dụng đối với tất cả những người tham gia mạng lưới dưới dạng `calldata` hoặc trong các [khối dữ liệu](/roadmap/danksharding/).
 
-Các ZK-rollup không cần xuất bản nhiều dữ liệu giao dịch trên chuỗi vì các bằng chứng tính hợp lệ đã xác minh tính xác thực của các quá trình chuyển đổi trạng thái. Tuy nhiên, việc lưu trữ dữ liệu trên chuỗi vẫn quan trọng vì nó cho phép xác minh độc lập, không cần cấp phép đối với trạng thái của chuỗi L2, từ đó cho phép bất kỳ ai gửi các lô giao dịch, ngăn chặn các nhà điều hành độc hại kiểm duyệt hoặc đóng băng chuỗi.
+Các ZK-rollup không cần phải xuất bản nhiều dữ liệu giao dịch trên chuỗi vì các bằng chứng tính hợp lệ đã xác minh tính xác thực của các quá trình chuyển đổi trạng thái. Tuy nhiên, việc lưu trữ dữ liệu trên chuỗi vẫn rất quan trọng vì nó cho phép xác minh trạng thái của Chuỗi l2 một cách độc lập, không cần cấp phép, từ đó cho phép bất kỳ ai gửi các lô giao dịch, ngăn chặn các nhà điều hành độc hại kiểm duyệt hoặc đóng băng Chuỗi.
 
-Dữ liệu trên chuỗi là bắt buộc để người dùng tương tác với Rollup. Nếu không có quyền truy cập vào dữ liệu trạng thái, người dùng không thể truy vấn số dư Tài khoản của họ hoặc bắt đầu các giao dịch (ví dụ: rút tiền) dựa trên thông tin trạng thái.
+Dữ liệu trên chuỗi là bắt buộc để người dùng tương tác với Rollup. Nếu không có quyền truy cập vào dữ liệu trạng thái, người dùng không thể truy vấn số dư Tài khoản của họ hoặc khởi tạo các giao dịch (ví dụ: rút tiền) dựa trên thông tin trạng thái.
 
 ### Tính chung cuộc của giao dịch {#transaction-finality}
 
@@ -60,11 +60,15 @@ Người dùng trong ZK-rollup ký các giao dịch và gửi cho các nhà đi�
 
 Các ZK-rollup khác có thể luân phiên vai trò nhà điều hành bằng cách sử dụng một tập hợp trình xác thực [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos/). Các nhà điều hành tiềm năng gửi tiền vào hợp đồng Rollup, với quy mô của mỗi khoản đặt cọc ảnh hưởng đến cơ hội của người đặt cọc được chọn để tạo ra lô Rollup tiếp theo. Khoản đặt cọc của nhà điều hành có thể bị phạt cắt giảm nếu họ hành động ác ý, điều này khuyến khích họ đăng các khối hợp lệ.
 
-#### Các ZK-rollup xuất bản dữ liệu giao dịch trên Ethereum như thế nào {#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Cách các ZK-rollup xuất bản dữ liệu giao dịch trên Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
-Như đã giải thích, dữ liệu giao dịch được xuất bản trên Ethereum dưới dạng `calldata`. `calldata` là một vùng dữ liệu trong một hợp đồng thông minh được sử dụng để truyền các đối số cho một hàm và hoạt động tương tự như [bộ nhớ](/developers/docs/smart-contracts/anatomy/#memory). Mặc dù `calldata` không được lưu trữ như một phần của trạng thái Ethereum, nó vẫn tồn tại trên chuỗi như một phần của [nhật ký lịch sử](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) của chuỗi Ethereum. `calldata` không ảnh hưởng đến trạng thái của Ethereum, khiến nó trở thành một cách rẻ tiền để lưu trữ dữ liệu trên chuỗi.
+Như đã giải thích, dữ liệu giao dịch được xuất bản trên Ethereum dưới dạng `calldata`. `calldata` là một vùng dữ liệu trong một hợp đồng thông minh được sử dụng để truyền các đối số cho một hàm và hoạt động tương tự như [bộ nhớ](/developers/docs/smart-contracts/anatomy/#memory). Mặc dù `calldata` không được lưu trữ như một phần của trạng thái Ethereum, nó vẫn tồn tại trên chuỗi như một phần của [nhật ký lịch sử](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) của Chuỗi Ethereum. `calldata` không ảnh hưởng đến trạng thái của Ethereum, khiến nó trở thành một cách rẻ tiền để lưu trữ dữ liệu trên chuỗi.
 
 Từ khóa `calldata` thường xác định phương thức hợp đồng thông minh đang được gọi bởi một giao dịch và chứa các đầu vào cho phương thức dưới dạng một chuỗi byte tùy ý. Các ZK-rollup sử dụng `calldata` để xuất bản dữ liệu giao dịch đã nén trên chuỗi; nhà điều hành Rollup chỉ cần thêm một lô mới bằng cách gọi hàm được yêu cầu trong hợp đồng Rollup và truyền dữ liệu đã nén dưới dạng các đối số của hàm. Điều này giúp giảm chi phí cho người dùng vì một phần lớn phí Rollup được dùng để lưu trữ dữ liệu giao dịch trên chuỗi.
+
+Kể từ khi [bản nâng cấp Dencun](/roadmap/dencun/) giới thiệu các giao dịch mang khối dữ liệu ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), các bản cuộn cũng có thể xuất bản dữ liệu của chúng trong các [khối dữ liệu](/roadmap/danksharding/), được định giá trong một thị trường phí riêng biệt và thường rẻ hơn `calldata`. Các khối dữ liệu không được lưu trữ bởi lớp thực thi và Giao thức chỉ xác định một khoảng thời gian tối thiểu khoảng 18 ngày mà mạng lưới phải phục vụ dữ liệu của khối dữ liệu. Đó là một nghĩa vụ phục vụ chứ không phải là thời hạn xóa: dữ liệu của khối dữ liệu không phải là bộ lưu trữ vĩnh viễn theo cách của lịch sử lớp thực thi và việc truy cập dài hạn phụ thuộc vào các dịch vụ lưu trữ. `calldata` vẫn khả dụng và các bản cuộn khác nhau ở chỗ chúng sử dụng loại nào.
+
+Bất kể Rollup sử dụng cơ chế nào, dữ liệu được xuất bản đều là công khai. Các bản cuộn khác nhau ở những gì chúng xuất bản, với một số đăng dữ liệu giao dịch đã nén và một số khác đăng các khác biệt về trạng thái, nhưng trong cả hai trường hợp, điều đó là đủ để bất kỳ ai tái tạo lại trạng thái của Rollup một cách độc lập. Việc xuất bản dữ liệu này là điều làm cho việc xác minh không cần cấp phép trở nên khả thi; nó không phải là một cơ chế quyền riêng tư.
 
 ### Cam kết trạng thái {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARK cũng an toàn trước các máy tính lượng tử, trong khi Mật 
 #### Các bằng chứng tính hợp lệ hoạt động như thế nào trong các ZK-rollup? {#validity-proofs-in-zk-rollups}
 
 ##### Proof generation
+
 Trước khi chấp nhận các giao dịch, nhà điều hành sẽ thực hiện các kiểm tra thông thường. Điều này bao gồm việc xác nhận rằng:
 
 - Các Tài khoản người gửi và người nhận là một phần của cây trạng thái.
@@ -132,6 +137,7 @@ Quá trình lặp lại cho mọi giao dịch; mỗi "vòng lặp" tạo ra mộ
 Mạch chứng minh ZK lặp qua toàn bộ lô giao dịch, xác minh chuỗi các bản cập nhật dẫn đến một gốc trạng thái cuối cùng sau khi giao dịch cuối cùng được thực thi. Gốc Merkle cuối cùng được tính toán trở thành gốc trạng thái chính tắc mới nhất của ZK-rollup.
 
 ##### Proof verification
+
 Sau khi mạch chứng minh xác minh tính chính xác của các bản cập nhật trạng thái, nhà điều hành L2 gửi bằng chứng tính hợp lệ đã tính toán cho hợp đồng trình xác minh trên L1. Mạch xác minh của hợp đồng xác minh tính hợp lệ của bằng chứng và cũng kiểm tra các đầu vào công khai tạo thành một phần của bằng chứng:
 
 - **Gốc tiền trạng thái**: Gốc trạng thái cũ của ZK-rollup (tức là trước khi các giao dịch được gom lô được thực thi), phản ánh trạng thái hợp lệ được biết đến cuối cùng của chuỗi L2.
@@ -174,17 +180,17 @@ Sự ra đời của các ZK-rollup tương thích với EVM được kỳ vọn
 
 ## Phí ZK-rollup hoạt động như thế nào? {#how-do-zk-rollup-fees-work}
 
-Số tiền người dùng trả cho các giao dịch trên ZK-rollup phụ thuộc vào phí gas, giống như trên Mạng chính Ethereum. Tuy nhiên, phí gas hoạt động khác nhau trên L2 và bị ảnh hưởng bởi các chi phí sau:
+Số tiền người dùng trả cho các giao dịch trên ZK-rollup phụ thuộc vào phí gas, giống như trên Mạng chính Ethereum. Tuy nhiên, phí gas hoạt động khác nhau trên l2 và bị ảnh hưởng bởi các chi phí sau:
 
 1. **Ghi trạng thái**: Có một chi phí cố định cho việc ghi vào trạng thái của Ethereum (tức là gửi một giao dịch trên Chuỗi khối Ethereum). Các ZK-rollup giảm chi phí này bằng cách gom lô các giao dịch và phân bổ chi phí cố định cho nhiều người dùng.
 
-2. **Xuất bản dữ liệu**: Các ZK-rollup xuất bản dữ liệu trạng thái cho mọi giao dịch lên Ethereum dưới dạng `calldata`. Chi phí `calldata` hiện được điều chỉnh bởi [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), quy định chi phí tương ứng là 16 Gas cho các byte khác không và 4 Gas cho các byte bằng không của `calldata`. Chi phí phải trả cho mỗi giao dịch bị ảnh hưởng bởi lượng `calldata` cần được đăng trên chuỗi cho giao dịch đó.
+2. **Xuất bản dữ liệu**: Các ZK-rollup xuất bản dữ liệu trạng thái cho mọi giao dịch lên Ethereum dưới dạng `calldata` hoặc trong các [khối dữ liệu](/roadmap/danksharding/). Biểu phí Gas nội tại cho `calldata` tính 16 Gas cho mỗi byte khác 0 và 4 Gas cho mỗi byte bằng 0, một sự sụt giảm được giới thiệu bởi [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) chi phối mức giá phải trả cho mỗi đơn vị Gas thay vì bản thân biểu phí byte. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) bổ sung thêm một chi phí sàn cho các giao dịch nặng về dữ liệu, do đó một giao dịch bị chi phối bởi `calldata` có thể phải trả nhiều hơn biểu phí tiêu chuẩn trong khi các giao dịch nặng về tính toán không bị ảnh hưởng. Chi phí phải trả cho mỗi giao dịch bị ảnh hưởng bởi lượng dữ liệu cần được đăng trên chuỗi cho giao dịch đó.
 
-3. **Phí nhà điều hành L2**: Đây là số tiền được trả cho nhà điều hành Rollup như một khoản bồi thường cho các chi phí tính toán phát sinh trong quá trình xử lý các giao dịch, rất giống với ["phí ưu tiên (tiền boa)" của giao dịch](/developers/docs/gas/#how-are-gas-fees-calculated) trên Mạng chính Ethereum.
+3. **Phí nhà điều hành l2**: Đây là số tiền được trả cho nhà điều hành Rollup như một khoản bồi thường cho các chi phí tính toán phát sinh trong quá trình xử lý các giao dịch, rất giống với ["phí ưu tiên (tiền boa)" của giao dịch](/developers/docs/gas/#how-are-gas-fees-calculated) trên Mạng chính Ethereum.
 
 4. **Tạo và xác minh bằng chứng**: Các nhà điều hành ZK-rollup phải tạo ra các bằng chứng tính hợp lệ cho các lô giao dịch, điều này tốn nhiều tài nguyên. Việc xác minh các Bằng chứng không kiến thức trên Mạng chính cũng tốn Gas (~ 500.000 Gas).
 
-Ngoài việc gom lô các giao dịch, các ZK-rollup giảm phí cho người dùng bằng cách nén dữ liệu giao dịch. Bạn có thể [xem tổng quan theo thời gian thực](https://l2fees.info/) về chi phí sử dụng các ZK-rollup của Ethereum.
+Ngoài việc gom lô các giao dịch, các ZK-rollup còn giảm phí cho người dùng bằng cách nén dữ liệu giao dịch. Bạn có thể [xem tổng quan theo thời gian thực](https://l2fees.info/) về chi phí sử dụng các ZK-rollup của Ethereum.
 
 ## Các ZK-rollup mở rộng quy mô Ethereum như thế nào? {#scaling-ethereum-with-zk-rollups}
 

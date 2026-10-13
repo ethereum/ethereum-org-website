@@ -55,21 +55,20 @@ incomplete: true
 
 ## Pythonのプロジェクトとツール {#python-projects-and-tools}
 
-### アクティブ: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _イーサリアムと対話するためのPythonライブラリ_
-- [Vyper](https://github.com/ethereum/vyper/) - _EVM向けのPythonicなスマート・コントラクト言語_
+- [Vyper](https://github.com/ethereum/vyper/) - _EVM向けのPython風スマート・コントラクト言語_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyperのネイティブテストツール。メインネットのフォーク、デバッグ、見やすいトレースバックを備えたインタープリタ_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa上に構築された、VyperとPythonのためのスマート・コントラクト開発およびテストフレームワーク_
 - [Ape](https://github.com/ApeWorX/ape) - _Pythonista、データサイエンティスト、セキュリティ専門家のためのスマート・コントラクト開発ツール_
-- [py-evm](https://github.com/ethereum/py-evm) - _イーサリアム仮想マシンの実装_
+- [py-evm](https://github.com/ethereum/py-evm) - _イーサリアム仮想マシン (EVM) の実装_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _イーサリアムベースのアプリケーションをテストするためのツール_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _イーサリアム関連のコードベースを扱うためのユーティリティ関数_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.xをサポートするsolc SolidityコンパイラのPythonラッパー_
 - [pymaker](https://github.com/makerdao/pymaker) - _Makerコントラクト用のPython API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python向けのSign in with Ethereum (SIWE)_
-- [イーサリアム統合のためのWeb3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20、ユニスワップ、その他の人気プロジェクトとの統合が用意されたPythonパッケージ_
-- [Wake](https://getwake.io) - _コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションのためのオールインワンPythonフレームワーク (言語サーバー - [Solidity用ツール](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _ユニスワップ V2/V3、Balancer、Curveにわたる分散型金融 (DeFi) 分析と自動マーケットメーカー (AMM) シミュレーションのためのPython SDK_
-
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20、ユニスワップ、その他の人気プロジェクトとのすぐに使える統合を備えたPythonパッケージ_
+- [Wake](https://getwake.io) - _コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションのためのオールインワンPythonフレームワーク (言語サーバー - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _ユニスワップV2/V3、Balancer、Curveにわたる分散型金融 (DeFi) 分析と自動マーケットメーカー (AMM) シミュレーションのためのPython SDK_
 ### アーカイブ済み / メンテナンス終了: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _イーサリアムのPythonクライアント_

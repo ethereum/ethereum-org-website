@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 import { FilterOption } from "@/lib/types"
 
 import {
@@ -11,10 +13,8 @@ import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilt
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import useTranslation from "@/hooks/useTranslation"
-
 export const useNetworkFilters = (): FilterOption[] => {
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
 
   return [
     {

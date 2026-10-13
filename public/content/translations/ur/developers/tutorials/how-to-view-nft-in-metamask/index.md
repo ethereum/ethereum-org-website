@@ -19,7 +19,7 @@ published: 2021-04-22
 
 ایپ کے اوپری حصے میں، "والیٹ" بٹن دبائیں، جس کے بعد آپ کو ایک نیٹ ورک منتخب کرنے کا کہا جائے گا۔ چونکہ ہمارا <span dir="ltr">NFT</span> <span dir="ltr">Sepolia</span> نیٹ ورک پر ڈھالا گیا تھا، اس لیے آپ کو اپنا نیٹ ورک <span dir="ltr">Sepolia</span> منتخب کرنا ہوگا۔
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## مرحلہ 2: اپنے کلیکٹ ایبل کو میٹاماسک میں شامل کریں {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 اپنا <span dir="ltr">NFT</span> دیکھنے کے لیے آپ کو چند بار ریفریش کرنے کی ضرورت پڑ سکتی ہے — لیکن یہ وہاں موجود ہوگا <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 مبارک ہو! آپ نے کامیابی کے ساتھ ایک <span dir="ltr">NFT</span> ڈھال لیا ہے، اور اب آپ اسے دیکھ سکتے ہیں! ہم یہ دیکھنے کے لیے بے تاب ہیں کہ آپ <span dir="ltr">NFT</span> کی دنیا میں کیسے تہلکہ مچاتے ہیں!

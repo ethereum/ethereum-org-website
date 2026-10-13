@@ -245,3 +245,7 @@ ZK-STARKは、そのセキュリティを衝突耐性のあるハッシュ関数
 - [ゼロ知識証明（ZKP）が自己主権型アイデンティティのゲームチェンジャーである理由](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503の解説：ZK証明を使用したイーサリアム上のプライベートな移転の有効化](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZKカードゲーム：ZKの基礎と現実世界のユースケースを学ぶためのゲーム](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

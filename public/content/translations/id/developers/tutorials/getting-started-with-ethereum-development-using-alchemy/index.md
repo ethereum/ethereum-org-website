@@ -37,7 +37,7 @@ Isi detail di bawah “Create App” untuk mendapatkan kunci baru Anda. Anda jug
 
 Anda juga dapat menarik kunci API yang ada dengan mengarahkan kursor ke “Apps” (Aplikasi) dan memilih salah satunya. Anda dapat mengeklik “View Key” di sini, serta “Edit App” (Edit Aplikasi) untuk memasukkan domain tertentu ke daftar putih, melihat beberapa alat pengembang, dan melihat analitik.
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. Buat Permintaan dari Baris Perintah {#make-a-request-from-the-command-line}
 

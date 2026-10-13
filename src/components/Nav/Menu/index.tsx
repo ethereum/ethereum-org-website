@@ -24,8 +24,14 @@ type NavMenuProps = BaseHTMLAttributes<HTMLDivElement>
 
 const Menu = ({ ...props }: NavMenuProps) => {
   const { linkSections } = useNavigation()
-  const { activeSection, direction, handleSectionChange, isOpen } =
-    useNavMenu(linkSections)
+  const {
+    activeSection,
+    containerVariants,
+    direction,
+    handleSectionChange,
+    isOpen,
+    onClose,
+  } = useNavMenu(linkSections)
 
   return (
     <div {...props}>
@@ -65,7 +71,9 @@ const Menu = ({ ...props }: NavMenuProps) => {
                 <MenuContent
                   items={items}
                   isOpen={isOpen}
-                  sections={linkSections}
+                  activeSection={activeSection}
+                  containerVariants={containerVariants}
+                  onClose={onClose}
                 />
               </Item>
             )

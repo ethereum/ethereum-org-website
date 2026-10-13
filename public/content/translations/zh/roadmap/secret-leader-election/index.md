@@ -2,6 +2,7 @@
 title: 秘密领导者选举
 description: 解释秘密领导者选举如何帮助保护验证者免受攻击
 lang: zh
+template: roadmap
 summaryPoints:
   - 区块提议者的 IP 地址可以被提前知晓，这使他们容易受到攻击
   - 秘密领导者选举隐藏了验证者的身份，使他们无法被提前知晓

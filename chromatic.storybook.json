@@ -1,0 +1,9 @@
+{
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
+  "untraced": [
+    "public/content/**",
+    "src/intl/**",
+    "src/data/**",
+    ".storybook/*.mdx"
+  ]
+}

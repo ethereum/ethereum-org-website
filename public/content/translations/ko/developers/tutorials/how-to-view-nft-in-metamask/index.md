@@ -19,7 +19,7 @@ published: 2021-04-22
 
 앱 상단에서 "지갑(Wallet)" 버튼을 누르면 네트워크를 선택하라는 메시지가 표시됩니다. 우리의 NFT는 Sepolia 네트워크에서 발행되었으므로, 네트워크로 Sepolia를 선택해야 합니다.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## 2단계: 메타마스크에 수집품 추가하기 {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Sepolia 네트워크에 접속한 후, 오른쪽에 있는 "수집품(Collectibl
 
 NFT를 보려면 몇 번 새로고침해야 할 수도 있지만, 곧 나타날 것입니다 <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 축하합니다! 성공적으로 NFT를 발행했으며, 이제 이를 확인할 수 있습니다! 여러분이 NFT 세계에 어떤 돌풍을 일으킬지 무척 기대됩니다!

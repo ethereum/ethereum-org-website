@@ -178,7 +178,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 
 স্মার্ট কন্ট্রাক্ট জড়িত এমন যেকোনো ট্রানজ্যাকশনের জন্য গ্যাস প্রয়োজন।
 
-স্মার্ট কন্ট্রাক্টগুলোতে [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) বা [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) ফাংশন নামে পরিচিত ফাংশনও থাকতে পারে, যা কন্ট্রাক্টের স্টেট পরিবর্তন করে না। তাই, একটি EOA থেকে এই ফাংশনগুলো কল করার জন্য কোনো গ্যাসের প্রয়োজন হবে ঘন। এই পরিস্থিতির জন্য অন্তর্নিহিত RPC কল হলো [`eth_call`](/developers/docs/apis/json-rpc#eth_call)।
+স্মার্ট কন্ট্রাক্টগুলোতে [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) বা [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) ফাংশন নামে পরিচিত ফাংশনও থাকতে পারে, যা কন্ট্রাক্টের স্টেট পরিবর্তন করে না। তাই, একটি EOA থেকে এই ফাংশনগুলো কল করার জন্য কোনো গ্যাসের প্রয়োজন হবে না। এই পরিস্থিতির জন্য অন্তর্নিহিত RPC কল হলো [`eth_call`](/developers/docs/apis/json-rpc#eth_call)।
 
 `eth_call` ব্যবহার করে অ্যাক্সেস করার বিপরীতে, এই `view` বা `pure` ফাংশনগুলো সাধারণত অভ্যন্তরীণভাবেও কল করা হয় (অর্থাৎ, কন্ট্রাক্ট থেকে বা অন্য কোনো কন্ট্রাক্ট থেকে) যার জন্য গ্যাস খরচ হয়।
 
@@ -238,3 +238,7 @@ _আপনাকে সাহায্য করেছে এমন কোনো
 - [অ্যাকাউন্ট](/developers/docs/accounts/)
 - [ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)](/developers/docs/evm/)
 - [গ্যাস](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

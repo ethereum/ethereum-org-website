@@ -102,7 +102,7 @@ As a blockchain, Ethereum is designed for sending transactions in a secure and g
 
 #### Stream money around the globe... {#stream-money}
 
-You can also stream money over Ethereum. This lets you pay someone their salary by the second, giving them access to their money whenever they need it. Or rent something by the second like a storage locker or electric scooter.
+You can also stream money over Ethereum. Instead of sending one large payment, streaming payments transfer small amounts continuously over time. This lets you pay someone their salary by the second, giving them access to their money whenever they need it. It can also be used to pay for services that are billed continuously, such as renting a storage locker or an electric scooter.
 
 And if you don't want to send or stream [ETH](/glossary/#ether) because of how much its value can change, there are alternative currencies on Ethereum: [stablecoins](/glossary/#stablecoin).
 

@@ -30,17 +30,11 @@ import { EXAMPLE_APP_URL } from "./constants"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
 
-import NFTImage from "@/public/images/deep-panic.png"
+import nftImage from "@/public/images/deep-panic.png"
 
 export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const t = useTranslations("component-wallet-simulator")
   const { progressStepper, step } = nav
-  const NFTs = [
-    {
-      title: t("sim-cw-nft-title"),
-      image: NFTImage,
-    },
-  ]
   const { ethPrice: fetchedPrice } = useGasEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
@@ -60,7 +54,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const nfts = [
     {
       title: t("sim-cw-nft-title"),
-      image: NFTImage,
+      image: nftImage,
     },
   ]
   const fadeInProps = {
@@ -121,19 +115,18 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
               <p className="mb-4 font-bold">
                 {t("sim-cw-your-collection", { count: 1 })}
               </p>
-              <Flex className="mb-6 gap-2">
+              <Flex className="mb-6 items-center gap-2">
                 <Image
-                  src={NFTs[0].image}
-                  width={120}
-                  height={120}
-                  alt="NFT Image"
+                  src={nfts[0].image}
+                  alt={t("sim-cw-nft-alt")}
+                  className="size-28"
                 />
                 <NotificationPopover
                   title={t("sim-example-walkthrough")}
                   content={t("sim-cw-nft-actions-tooltip")}
                   side="top"
                 >
-                  <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
+                  <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm *:[button]:text-start">
                     <p className="ms-2 mb-auto text-md font-bold">
                       {t("sim-cw-nft-title")}
                     </p>

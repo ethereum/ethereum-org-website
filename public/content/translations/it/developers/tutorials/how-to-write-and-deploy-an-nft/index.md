@@ -227,7 +227,7 @@ Quindi, crea un file `.env` nella directory principale del nostro progetto e agg
 
 - Vedi sotto per ottenere l'URL HTTP dell'API di Alchemy e copialo negli appunti
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Il tuo `.env` dovrebbe ora apparire così:
 

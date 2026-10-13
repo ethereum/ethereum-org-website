@@ -3,6 +3,7 @@ title: 坎昆-Deneb (Dencun)
 metaTitle: 坎昆-Deneb (Dencun) 常見問題
 description: 關於坎昆-Deneb (Dencun) 網路升級的常見問題
 lang: zh-tw
+template: upgrade
 ---
 
 坎昆-Deneb (Dencun) 是以太坊網路的升級，它啟動了**原始 Danksharding (EIP-4844)**，引入了臨時資料**資料塊 (blob)**，為 [第二層 (L2)](/glossary/#layer-2) 匯總提供更便宜的儲存空間。

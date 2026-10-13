@@ -72,8 +72,4 @@ Example: ja `イサ` where canonical is `イーサ` (missing chōonpu). Critical
 
 A locale can have one critical issue and still score 9/10 overall — the critical-issue list and the quality score are separate signals. Don't conflate them in reports.
 
-## See also
-
-- `references/scoring-rubric.md` for the 0-10 quality score (separate from severity)
-- `references/known-patterns.md` for specific patterns with their severity assignments
-- `references/ethglossary-usage.md` for the deviation severity matrix by `script_rule` and `term_role`
+The per-`script_rule` deviation-to-severity matrix (with auto-fix behavior) is in `references/ethglossary-usage.md`.

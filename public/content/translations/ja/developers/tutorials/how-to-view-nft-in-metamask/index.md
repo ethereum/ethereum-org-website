@@ -19,7 +19,7 @@ published: 2021-04-22
 
 アプリの上部にある「ウォレット」ボタンを押すと、ネットワークを選択するように求められます。私たちのNFTはSepoliaネットワークでミントされたため、ネットワークとしてSepoliaを選択します。
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## ステップ2：コレクティブルをメタマスクに追加する {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Sepoliaネットワークに接続したら、右側の「コレクティブル�
 
 NFTを表示するには数回更新する必要があるかもしれませんが、そこに表示されるはずです <Emoji text="😄" size={1} />！
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 おめでとうございます！NFTのミントに成功し、表示できるようになりました！あなたがNFTの世界でどのように旋風を巻き起こすのか、楽しみにしています！

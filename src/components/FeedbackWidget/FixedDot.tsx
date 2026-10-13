@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useTranslations } from "next-intl"
 import type { ButtonHTMLAttributes } from "react"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -6,8 +7,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { FeedbackGlyphIcon } from "../icons"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isExpanded: boolean
@@ -17,7 +16,7 @@ type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
   ({ offsetBottom, isExpanded, suppressScale, className, ...props }, ref) => {
-    const { t } = useTranslation("common")
+    const t = useTranslations("common")
     return (
       <Button
         ref={ref}

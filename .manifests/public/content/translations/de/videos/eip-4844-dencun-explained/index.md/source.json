@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/eip-4844-dencun-explained/index.md",
-  "generatedAt": "2026-04-28T23:18:07.448Z",
-  "rootHash": "326d693a7202",
+  "generatedAt": "2026-09-30T18:37:48.288Z",
+  "rootHash": "00d09598641f",
   "tree": {
-    "contentHash": "1d63d54fa3f3",
-    "anchorHash": "a4968fe25383",
+    "contentHash": "2b2eaf9cd100",
+    "anchorHash": "9ab932c72878",
     "children": {
       "frontmatter:title": {
-        "contentHash": "52d7f2b82ded",
+        "contentHash": "d2de02a7d0b3",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6344e09c5547",
+        "contentHash": "3c7543d414e4",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9d1de56758d2"
+        "anchorHash": "0f47222573a3"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0c8fa6127a9e"
+        "anchorHash": "5f6c31eea876"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "73973db0141d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3b3e1a7dae17"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "78f03750356d"
+        "anchorHash": "92345ffa2b24"
       },
       "prose:1": {
         "contentHash": "722ee00828e3",
@@ -181,5 +195,5 @@
       "summary-804"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

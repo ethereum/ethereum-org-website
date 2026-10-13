@@ -23,13 +23,7 @@ import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
-import {
-  DeveloperToolCategory,
-  DeveloperToolTag,
-} from "../../app/[locale]/developers/tools/types"
-
 import { screens } from "./utils/screen"
-import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/layouts"
 
@@ -240,12 +234,20 @@ export type RawQuiz = {
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-type QuizLevel = "beginner" | "intermediate" | "advanced"
+export type QuizLevel = "beginner" | "intermediate" | "advanced"
 
 export type QuizzesSection = {
   id: QuizKey
   level: QuizLevel
   next?: QuizKey
+}
+
+/** A hub section. Adding one here is enough: the hub and getNextQuiz both derive from it. */
+export type QuizzesHubSection = {
+  id: string
+  titleKey: string
+  descriptionKey: string
+  quizzes: QuizzesSection[]
 }
 
 export type RawQuizzes = Record<string, RawQuiz>
@@ -303,7 +305,7 @@ export type LocaleContributions = {
 }
 
 export type LocaleDisplayInfo = {
-  localeOption: string
+  localeOption: Lang
   sourceName: string
   targetName: string
   englishName: string
@@ -378,22 +380,6 @@ export type CostLeaderboardData = Pick<
   }
 
 // GitHub contributors
-
-export type Commit = {
-  commit: {
-    author: {
-      name: string
-      email: string
-      date: string
-    }
-    message: string
-  }
-  author: {
-    avatar_url: string
-    login: string
-    html_url: string
-  }
-}
 
 export type Author = {
   name: string
@@ -545,18 +531,11 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =
   | { value: number; timestamp?: number; percentChange24h?: number }
   | { error: string }
-
-export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
@@ -633,11 +612,6 @@ export type GrowThePieMasterData = {
   launchDates: Record<string, string>
 }
 
-export type GithubRepoData = {
-  starCount: number
-  languages: string[]
-}
-
 export type L2beatData = {
   projects: Record<
     string,
@@ -654,17 +628,6 @@ export type L2beatData = {
   }
 }
 
-export type HomepageActivityMetric =
-  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
-  | "totalEthStaked"
-  | "totalValueLocked"
-  | GrowThePieMetricKey
-
-export type AllHomepageActivityData = Record<
-  HomepageActivityMetric,
-  MetricReturnData
->
-
 export type EnterpriseActivityMetric =
   | "txCount"
   | "txCostsMedianUsd"
@@ -677,14 +640,6 @@ export type AllEnterpriseActivityData = Record<
   MetricReturnData
 >
 
-export type StatsBoxMetric = {
-  label: string
-  description?: string
-  state: StatsBoxState
-  apiUrl?: string
-  apiProvider?: string
-}
-
 export type SimulatorNavProps = {
   nav: SimulatorNav
 }
@@ -696,8 +651,9 @@ export type PhoneScreenProps = SimulatorNavProps & {
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
   title: string
-  logoImage: string
-  bannerImage: string
+  // Nullable: the feed sends null for events with no image.
+  logoImage: string | null
+  bannerImage: string | null
   startTime: string
   endTime: string | null
   location: string
@@ -719,6 +675,9 @@ export type EventType =
   | "other"
 
 export interface EventItem extends GeodeApiEventItem {
+  // Narrowed from the raw feed: transformEvent normalizes a missing image to "".
+  logoImage: string
+  bannerImage: string
   id: string // slugified title
   eventTypes: EventType[]
   eventTypesLabels?: string[]
@@ -772,7 +731,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]
@@ -799,9 +758,70 @@ export type ExtendedRollup = Rollup & {
 }
 
 // Wallets
+/** Fee category; maps to the `page-find-wallet-fee-label-*` intl strings */
+export type WalletFeeType =
+  | "swap"
+  | "swap-bridge"
+  | "buy"
+  | "buy-sell"
+  | "staking"
+  | "shield-unshield"
+  | "device"
+  /** One-off: renders the whole "Free tier, paid plans from {usd}/month" template */
+  | "free-tier-plans"
+
+/** Non-numeric fee values; maps to the `page-find-wallet-fee-value-*` intl strings */
+export type WalletFeeText = "variable" | "undisclosed" | "set-by-provider"
+
+/** Wraps the formatted value; maps to the `page-find-wallet-fee-qualifier-*` intl strings */
+export type WalletFeeQualifier =
+  | "of-rewards"
+  | "per-card"
+  | "lower-with-premium"
+  | "tpt-holder-discounts"
+  /** Requires `qualifierPercent` */
+  | "stablecoins"
+  /** Requires `qualifierPercent` */
+  | "stablecoins-lower-l2"
+  /** Requires `qualifierUsd` */
+  | "free-under-fox-discounts"
+
+/** Exact amount, or [min, max] range */
+export type WalletFeeAmount = number | [min: number, max: number]
+
+export type WalletFee = (
+  | {
+      /** Human-readable percent: 0.875 renders as "0.875%" */
+      percent: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      usd?: never
+      text?: never
+    }
+  | {
+      usd: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      percent?: never
+      text?: never
+    }
+  | { text: WalletFeeText; percent?: never; usd?: never; from?: never }
+) & {
+  type: WalletFeeType
+  qualifier?: WalletFeeQualifier
+  /** Human-readable percent interpolated into the qualifier string */
+  qualifierPercent?: number
+  /** USD amount interpolated into the qualifier string */
+  qualifierUsd?: number
+}
+
 export type WalletData = {
   last_updated: string
   name: string
+  /** Set only to keep a URL stable across a rename; defaults to slugified name. */
+  slug?: string
+  /** Optional forever — cards and search degrade gracefully without it. */
+  description?: string
   image: StaticImageData
   twBackgroundColor: string
   twGradiantBrandColor: string
@@ -848,20 +868,15 @@ export type WalletData = {
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  /**
+   * Fees shown on the wallet card, e.g. "Swap fee: 0.85%" or "Device: $149".
+   * Rendered by formatWalletFees; omitted when the wallet has no fee to surface.
+   */
+  fees?: WalletFee[]
 }
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
-}
-
-export type WalletRow = Wallet & { id: string }
-
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
 }
 
 export type FilterInputState = boolean | Lang | string | string[] | null
@@ -1010,11 +1025,15 @@ export type GHIssue = {
   title: string
   html_url: string
   created_at: string
+  /**
+   * The issue author. GitHub's REST API returns `null` for issues authored by
+   * deleted ("ghost") accounts, so consumers must guard against it.
+   */
   user: {
     login: string
     html_url: string
     avatar_url: string
-  }
+  } | null
   labels: GHLabel[]
 }
 
@@ -1195,16 +1214,6 @@ export type AtomResult = {
 export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
-
-type NestedDivs = {
-  div: NestedDivs[]
-}
-
-export type HTMLResult = {
-  html: {
-    body: Record<string, NestedDivs>[]
-  }
-}
 
 export type EventCardProps = {
   title: string
@@ -1390,10 +1399,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null
@@ -1426,9 +1445,28 @@ export type TimeLeftLabels = Record<
   TimeLeftLabel
 >
 
-export type Story = {
+/** Community story as authored in src/data/tenYearStories.ts */
+export type StoryData = {
+  /** Key in the "community-stories" namespace holding the translatable story copy */
+  storyKey: string
+  /** Story text verbatim as submitted (English for English submissions) */
+  storyOriginal: string
+  /** BCP-47 language code of the original submission (not necessarily a site locale) */
+  originalLocale: string
+  category: string
   name: string
-  storyEnglish: string
+  date: string
+  country: string
+  twitter: string
+  region: string
+}
+
+/** Community story resolved for rendering; see getCommunityStories */
+export type Story = {
+  storyKey: string
+  name: string
+  /** Story copy resolved to the viewer's locale (falls back to English) */
+  story: string
   storyOriginal: string | null
   twitter: string | null
   country: string | null
@@ -1451,15 +1489,80 @@ export interface MatomoEventOptions {
   eventValue?: string
 }
 
-export type DeveloperToolsResponse = {
+export type DeveloperToolsRepoLink = {
+  href: string
+  stargazers?: number
+  forks?: number
+  watchers?: number
+  subscribers?: number
+  openIssues?: number
+  isArchived?: boolean
+  isFork?: boolean
+  daysSincePush?: number
+  officialScore?: number
+  inferredScore?: number
+  finalScore?: number
+  scoreSource?: "official-weight" | "github-inferred" | "unscored"
+  lastUpdated?: string | null
+}
+
+export type DeveloperToolsPackageLink = {
+  href: string
+  downloads?: number
+}
+
+export type BuilderResourcesCatalogResource = {
+  name: string
+  description: string
+  thumbnail_url?: string | null
+  banner_url?: string | null
+  twitter?: string | null
+  repos: Array<string | DeveloperToolsRepoLink>
+  packages?: Array<string | DeveloperToolsPackageLink>
+  tags: string[]
+  website?: string | null
+  llmstext?: string | null
+  subcategory_id: string
+  resource_raw_score?: number
+  resource_score?: number
+  resource_rank?: number
+  resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+}
+
+export type DeveloperToolsRankingCoverage = {
+  totalResources: number
+  scoredResources: number
+  usedMedianFallbackCount: number
+  matchedOfficialRepoCount: number
+  inferredRepoCount: number
+  unscoredRepoCount: number
+  trainingSampleCount: number
+}
+
+export type DeveloperToolsRankingMetadata = {
+  rankingAlgorithmVersion: string
+  damping: number
+  maxIterations: number
+  rules: Record<string, number>
+  coverage: DeveloperToolsRankingCoverage
+}
+
+export interface BuilderResourcesTaxonomySubcategory {
   id: string
   name: string
   description: string
-  thumbnail_url?: string
-  banner_url?: string
-  twitter?: string
-  repos: string[]
-  tags: DeveloperToolTag[]
-  website?: string
-  category: DeveloperToolCategory
+}
+
+export interface BuilderResourcesTaxonomyCategory {
+  id: string
+  name: string
+  description: string
+  subcategories: BuilderResourcesTaxonomySubcategory[]
+}
+
+export interface BuilderResourcesTaxonomy {
+  categories: {
+    definitions: BuilderResourcesTaxonomyCategory[]
+  }
+  tags: string[]
 }

@@ -55,21 +55,20 @@ Bạn cần một tài liệu cơ bản hơn trước? Hãy xem [ethereum.org/le
 
 ## Các dự án và công cụ Python {#python-projects-and-tools}
 
-### Đang hoạt động: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Thư viện Python để tương tác với Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Ngôn ngữ hợp đồng thông minh kiểu Python cho EVM_
-- [Ape](https://github.com/ApeWorX/ape) - _Công cụ phát triển hợp đồng thông minh dành cho các lập trình viên Python, nhà khoa học dữ liệu và chuyên gia bảo mật_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Công cụ kiểm thử gốc của Vyper; một trình thông dịch với tính năng phân nhánh Mạng chính, gỡ lỗi và truy xuất nguồn gốc rõ ràng_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Một khung phát triển và kiểm thử hợp đồng thông minh cho Vyper và Python, được xây dựng trên Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _Công cụ phát triển hợp đồng thông minh dành cho các lập trình viên Python, Nhà khoa học dữ liệu và Chuyên gia bảo mật_
 - [py-evm](https://github.com/ethereum/py-evm) - _bản triển khai của Máy ảo Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _các công cụ để kiểm thử các ứng dụng dựa trên Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _các hàm tiện ích để làm việc với các cơ sở mã liên quan đến Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Trình bao bọc Python cho trình biên dịch Solidity solc với hỗ trợ 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python cho các hợp đồng Maker_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Đăng nhập bằng Ethereum (SIWE) cho Python_
-- [Web3 DeFi cho các tích hợp Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Một gói Python với các tích hợp sẵn sàng cho ERC-20, Uniswap và các dự án phổ biến khác_
-- [Wake](https://getwake.io) - _Khung Python tất cả trong một để kiểm thử hợp đồng, fuzzing, triển khai, quét lỗ hổng và điều hướng mã (máy chủ ngôn ngữ - [Công cụ cho Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python cho phân tích tài chính phi tập trung (DeFi) và mô phỏng nhà tạo lập thị trường tự động (AMM) trên Uniswap V2/V3, Balancer và Curve_
-
+- [Tích hợp Web3 DeFi cho Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Một gói Python với các tích hợp sẵn sàng cho ERC-20, Uniswap và các dự án phổ biến khác_
+- [Wake](https://getwake.io) - _Khung Python tất cả trong một để kiểm thử hợp đồng, fuzzing, việc triển khai, quét lỗ hổng bảo mật và điều hướng mã (máy chủ ngôn ngữ - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python để phân tích DeFi và mô phỏng nhà tạo lập thị trường tự động (AMM) trên Uniswap V2/V3, Balancer và Curve_
 ### Đã lưu trữ / Không còn được bảo trì: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Máy khách Ethereum bằng Python_

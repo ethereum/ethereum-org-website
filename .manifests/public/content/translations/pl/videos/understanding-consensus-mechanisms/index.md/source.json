@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/understanding-consensus-mechanisms/index.md",
-  "generatedAt": "2026-04-29T06:22:42.783Z",
-  "rootHash": "84506cd0baec",
+  "generatedAt": "2026-09-30T19:18:07.564Z",
+  "rootHash": "58c0746393df",
   "tree": {
-    "contentHash": "ff95755566f3",
-    "anchorHash": "e14d14156985",
+    "contentHash": "654b55918416",
+    "anchorHash": "16a756f785df",
     "children": {
       "frontmatter:title": {
-        "contentHash": "2513fee6af52",
+        "contentHash": "94915bd5fc9f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ab3d8d4805ee",
+        "contentHash": "5570f4c48c22",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7c58a2b66917"
+        "anchorHash": "3ed44e616e13"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5aaa69e1b248"
+        "anchorHash": "5986f4b7f758"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "caa32a83056f"
+        "anchorHash": "a7220e642781"
       },
       "prose:1": {
         "contentHash": "16716183ad44",
@@ -221,5 +227,5 @@
       "closing-337"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

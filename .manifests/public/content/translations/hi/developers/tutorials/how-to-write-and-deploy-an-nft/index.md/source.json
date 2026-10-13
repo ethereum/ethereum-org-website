@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md",
-  "generatedAt": "2026-06-30T00:44:50.406Z",
-  "rootHash": "afb7cb50184b",
+  "generatedAt": "2026-07-22T23:53:28.535Z",
+  "rootHash": "e77e4b7df6ad",
   "tree": {
-    "contentHash": "1fb7b4462f64",
-    "anchorHash": "004cc8728db2",
+    "contentHash": "44fa08495446",
+    "anchorHash": "e1d09871b5da",
     "children": {
       "frontmatter:title": {
         "contentHash": "c1c31fe6c863",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c053508019dd"
+        "anchorHash": "6ad22ddcb05f"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "ff73f8f076cb"
+        "contentHash": "9f9abbc4de54",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "97d1823f0b00",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "2805fc43d2b5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "7ead9d0680ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -582,7 +606,7 @@
       },
       "connect-metamask-and-alchemy": {
         "contentHash": "40cd40d8c04f",
-        "anchorHash": "acaa7c53f325",
+        "anchorHash": "c188e7168a68",
         "labelHash": "0c681fd2b66e",
         "children": {
           "_label": {
@@ -619,7 +643,7 @@
           },
           "image:3": {
             "contentHash": "df5739995b21",
-            "anchorHash": "a8f03a6d731d"
+            "anchorHash": "bb6fb68b3c8b"
           },
           "prose:9": {
             "contentHash": "a204943256ea",
@@ -988,5 +1012,5 @@
       "deploy-contract"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

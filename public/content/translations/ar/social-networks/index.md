@@ -69,7 +69,7 @@ summaryPoints:
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) هي شبكة اجتماعية "لامركزية بشكل كافٍ" تشبه <span dir="ltr">X</span> وريديت وتسمح للمستخدمين بمشاركة واكتشاف "المنشورات" (<span dir="ltr">casts</span>). تم بناؤها على شبكة أوبتيميزم من الطبقة الثانية (L2) للحفاظ على المعاملات رخيصة نسبيًا.
+[Farcaster](https://farcaster.xyz/) هي شبكة اجتماعية "لامركزية بشكل كافٍ" تشبه <span dir="ltr">X</span> وريديت، وتتيح للمستخدمين مشاركة واكتشاف "<span dir="ltr">casts</span>". تم بناؤها على شبكة أوبتيميزم طبقة 2 (L2) لإبقاء المعاملات رخيصة نسبيًا.
 
 ## استخدام الشبكات الاجتماعية اللامركزية {#use-decentralized-social-networks}
 

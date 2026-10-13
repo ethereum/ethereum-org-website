@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/account-abstraction/index.md",
-  "generatedAt": "2026-06-08T10:05:27.890Z",
-  "rootHash": "9ee6b13d994f",
+  "generatedAt": "2026-07-23T00:16:02.454Z",
+  "rootHash": "cdd3ef7d00db",
   "tree": {
-    "contentHash": "7ec44f7c203f",
-    "anchorHash": "354177be3af4",
+    "contentHash": "413101c5e2b4",
+    "anchorHash": "ec9225313a8d",
     "children": {
       "frontmatter:title": {
         "contentHash": "2ebcf10050c2",
@@ -19,9 +19,32 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "frontmatter:summaryPoints": {
+      "frontmatter:template": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "anchorHash": "3de1580490d2"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "ac4a112f045b",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "6fbb98d401a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "346c16f982ee",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "4f8382f0ed3d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:5": {
         "contentHash": "09d15c636bb3",
@@ -272,6 +295,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:summaryPoints",
       "prose:5",
       "link:0",
@@ -291,5 +315,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

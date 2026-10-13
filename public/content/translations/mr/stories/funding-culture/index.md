@@ -64,7 +64,7 @@ lang: mr
 - थेट प्लेयरमध्ये कथानकाच्या निर्णयांवर मत देण्यासाठी स्टेक केले
 - ERC-20 (आमचे अटेन्शन टोकन) मिळवले 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 ERC-20 बाँडिंग कर्व्हवर जारी केले गेले. तुम्ही जितक्या लवकर आणि जितके जास्त सहभागी झालात, तितके जास्त तुम्ही मिळवले. मते (जसे की मुख्य पात्राला मिराई नाव देणे) Snapshot द्वारे दिली गेली. 
 

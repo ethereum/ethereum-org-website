@@ -22,7 +22,7 @@ published: 2021-04-22
 
 В верхней части приложения нажмите кнопку «Кошелек» (Wallet), после чего вам будет предложено выбрать сеть. Поскольку наш NFT был отчеканен в сети Sepolia, вам нужно будет выбрать Sepolia в качестве вашей сети.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Шаг 2: Добавьте ваш предмет коллекционирования в МетаМаск {#add-nft-to-metamask}
 
@@ -32,6 +32,6 @@ published: 2021-04-22
 
 Возможно, вам придется обновить страницу пару раз, чтобы увидеть свой NFT — но он будет там <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Поздравляем! Вы успешно отчеканили NFT, и теперь можете его просмотреть! Нам не терпится увидеть, как вы покорите мир NFT!

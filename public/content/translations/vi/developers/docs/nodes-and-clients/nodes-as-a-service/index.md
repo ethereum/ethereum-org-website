@@ -49,15 +49,15 @@ Bằng cách sử dụng dịch vụ nút, bạn đang tập trung hóa khía c�
 
 ## Các dịch vụ nút phổ biến {#popular-node-services}
 
-Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ biến nhất, hãy thoải mái bổ sung bất kỳ nhà cung cấp nào còn thiếu! Mỗi dịch vụ nút cung cấp các lợi ích và tính năng khác nhau bên cạnh các cấp độ miễn phí hoặc trả phí, bạn nên tìm hiểu xem dịch vụ nào phù hợp nhất với nhu cầu của mình trước khi đưa ra quyết định.
+Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ biến nhất, hãy thoải mái bổ sung bất kỳ nhà cung cấp nào còn thiếu! Mỗi dịch vụ nút cung cấp các lợi ích và tính năng khác nhau bên cạnh các gói miễn phí hoặc trả phí, bạn nên tìm hiểu xem dịch vụ nào phù hợp nhất với nhu cầu của mình trước khi đưa ra quyết định.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Tài liệu](https://www.alchemy.com/docs/)
   - Tính năng
     - Gói miễn phí lớn nhất với 300 triệu đơn vị tính toán mỗi tháng (\~30 triệu yêu cầu getLatestBlock)
-    - Hỗ trợ đa chuỗi cho Polygon, Starknet, Optimism, Arbitrum
+    - Hỗ trợ đa Chuỗi cho Polygon, Starknet, Optimism, Arbitrum
     - Cung cấp sức mạnh cho ~70% các ứng dụng phi tập trung (dapp) Ethereum lớn nhất và khối lượng giao dịch tài chính phi tập trung (DeFi)
-    - Cảnh báo webhook theo thời gian thực qua Alchemy Notify
+    - Cảnh báo webhook theo thời gian thực thông qua Alchemy Notify
     - Hỗ trợ và độ tin cậy / tính ổn định tốt nhất trong phân khúc
     - API NFT của Alchemy
     - Bảng điều khiển với Request Explorer, Mempool Watcher và Composer
@@ -75,7 +75,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Ảnh chụp nhanh cho hơn 100 Chuỗi khối trên [PublicNode](https://www.publicnode.com/snapshots)
     - Hỗ trợ kỹ thuật 24/7 với SLA thời gian hoạt động 99,90%-99,98% (tùy thuộc vào gói).
     - Định giá trả theo giờ
-    - Thanh toán bằng Thẻ tín dụng, PayPal hoặc Tiền mã hóa
+    - Thanh toán bằng Thẻ tín dụng, PayPal hoặc tiền mã hóa
 
 - [**All That Node**](https://allthatnode.com/)
   - [Tài liệu](https://docs.allthatnode.com/)
@@ -85,8 +85,8 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Hỗ trợ các API JSON-RPC (EVM, Tendermint), REST và Websocket
     - Quyền truy cập không giới hạn vào dữ liệu lưu trữ
     - Hỗ trợ kỹ thuật 24/7 và thời gian hoạt động trên 99,9%
-    - Vòi có sẵn trên nhiều chuỗi
-    - Quyền truy cập điểm cuối không giới hạn với số lượng khóa API vô hạn
+    - Vòi có sẵn trên nhiều Chuỗi
+    - Quyền truy cập điểm cuối không giới hạn với số lượng khóa API không giới hạn
     - Hỗ trợ API Trace/Debug
     - Cập nhật tự động
 
@@ -96,18 +96,18 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Các nút Ethereum được quản lý hoàn toàn
     - Có sẵn ở sáu khu vực
     - JSON-RPC qua HTTP và WebSockets bảo mật
-    - Hỗ trợ 3 chuỗi
+    - Hỗ trợ 3 Chuỗi
     - SLA, Hỗ trợ AWS 24/7
     - Go-ethereum và Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Tài liệu](https://docs.ankr.com/)
   - Tính năng
-    - Giao thức Ankr - quyền truy cập mở vào các điểm cuối API RPC công khai cho hơn 8 chuỗi
-    - Cân bằng tải và giám sát tình trạng nút để có cổng kết nối nhanh và đáng tin cậy đến nút khả dụng gần nhất
+    - Giao thức Ankr - quyền truy cập mở vào các điểm cuối API RPC công khai cho hơn 8 Chuỗi
+    - Cân bằng tải và giám sát tình trạng nút để có một cổng kết nối nhanh chóng và đáng tin cậy đến nút khả dụng gần nhất
     - Gói cao cấp cho phép điểm cuối WSS và không giới hạn tỷ lệ
-    - Việc triển khai nút đầy đủ và nút trình xác thực chỉ bằng một cú nhấp chuột cho hơn 40 chuỗi
-    - Mở rộng quy mô khi bạn phát triển
+    - Việc triển khai nút đầy đủ và nút trình xác thực chỉ bằng một cú nhấp chuột cho hơn 40 Chuỗi
+    - Mở rộng quy mô theo nhu cầu
     - Các công cụ phân tích
     - Bảng điều khiển
     - Các điểm cuối RPC, HTTPS và WSS
@@ -121,7 +121,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Cơ sở hạ tầng phi tập trung
     - API công khai
     - Gói miễn phí chuyên dụng
-    - Hỗ trợ đa chuỗi (hơn 17 Chuỗi khối)
+    - Hỗ trợ đa Chuỗi (hơn 17 Chuỗi khối)
     - Các nút lưu trữ
     - Hỗ trợ Discord 24/7
     - Giám sát và cảnh báo 24/7
@@ -138,10 +138,10 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
 - [**BlockPI**](https://blockpi.io/)
   - [Tài liệu](https://docs.blockpi.io/)
   - Tính năng
-    - Cấu trúc nút mạnh mẽ & phân tán
+    - Cấu trúc nút mạnh mẽ và phân tán
     - Lên đến 40 điểm cuối HTTPS và WSS
     - Gói đăng ký miễn phí và gói hàng tháng
-    - Hỗ trợ phương thức Trace + Dữ liệu lưu trữ
+    - Phương thức Trace + Hỗ trợ dữ liệu lưu trữ
     - Các gói có hiệu lực lên đến 90 ngày
     - Gói tùy chỉnh và thanh toán theo mức sử dụng
     - Thanh toán bằng tiền mã hóa
@@ -151,8 +151,8 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - [Tài liệu](https://docs.chainbase.com)
   - Tính năng
     - Dịch vụ RPC có tính khả dụng cao, nhanh chóng và có thể mở rộng
-    - Hỗ trợ đa chuỗi
-    - Các gói cước miễn phí
+    - Hỗ trợ đa Chuỗi
+    - Các mức giá miễn phí
     - Bảng điều khiển thân thiện với người dùng
     - Cung cấp các dịch vụ dữ liệu Chuỗi khối vượt ra ngoài RPC
 
@@ -163,8 +163,8 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Các nút lưu trữ dùng chung
     - Hỗ trợ GraphQL
     - Các điểm cuối RPC và WSS
-    - Các nút đầy đủ và nút lưu trữ chuyên dụng
-    - Thời gian đồng bộ hóa nhanh cho các đợt triển khai chuyên dụng
+    - Các nút đầy đủ và lưu trữ chuyên dụng
+    - Thời gian đồng bộ hóa nhanh cho các việc triển khai chuyên dụng
     - Mang theo đám mây của bạn
     - Định giá trả theo giờ
     - Hỗ trợ trực tiếp 24/7
@@ -178,9 +178,9 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Phạm vi phủ sóng toàn cầu với chín (9) cụm địa lý
     - Hệ thống cân bằng tải được hỗ trợ bởi AI
     - Định giá cố định trả theo mức sử dụng—không tăng giá, không hết hạn, không ràng buộc
-    - Không giới hạn khóa, tinh chỉnh khóa chi tiết, vai trò nhóm, bảo vệ front-end
+    - Khóa không giới hạn, tinh chỉnh khóa chi tiết, vai trò nhóm, bảo vệ front-end
     - Mức giá cố định cho các phương thức ở mức 20 đơn vị tính toán (CU) cho mỗi phương thức
-    - [Danh sách chuỗi điểm cuối công khai](https://drpc.org/chainlist)
+    - [Danh sách Chuỗi điểm cuối công khai](https://drpc.org/chainlist)
     - [Công cụ tính giá](https://drpc.org/pricing#calculator)
   - NodeCore: ngăn xếp mã nguồn mở dành cho các tổ chức muốn kiểm soát hoàn toàn
 
@@ -189,7 +189,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - Tính năng
     - Quyền truy cập vào hơn 40 nút Chuỗi khối
     - 40 nghìn yêu cầu miễn phí hàng ngày
-    - Không giới hạn số lượng khóa API
+    - Số lượng khóa API không giới hạn
     - Tốc độ kết nối cao ở mức 1GB/giây
     - Trace+Archive
     - Phân tích nâng cao
@@ -199,12 +199,12 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
 - [**InfStones**](https://infstones.com/)
   - Tính năng
     - Tùy chọn gói miễn phí
-    - Mở rộng quy mô khi bạn phát triển
+    - Mở rộng quy mô theo nhu cầu
     - Phân tích
     - Bảng điều khiển
     - Các điểm cuối API độc đáo
     - Các nút đầy đủ chuyên dụng
-    - Thời gian đồng bộ hóa nhanh cho các đợt triển khai chuyên dụng
+    - Thời gian đồng bộ hóa nhanh cho các việc triển khai chuyên dụng
     - Hỗ trợ trực tiếp 24/7
     - Quyền truy cập vào hơn 50 nút Chuỗi khối
 
@@ -212,7 +212,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - [Tài liệu](https://infura.io/docs)
   - Tính năng
     - Tùy chọn gói miễn phí
-    - Mở rộng quy mô khi bạn phát triển
+    - Mở rộng quy mô theo nhu cầu
     - Dữ liệu lưu trữ trả phí
     - Hỗ trợ trực tiếp
     - Bảng điều khiển
@@ -248,7 +248,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Tích hợp Ethers.js
     - Giao diện quản lý dự án trực quan
     - Tính toàn vẹn dữ liệu dựa trên đồng thuận
-    - Hỗ trợ đa chuỗi
+    - Hỗ trợ đa Chuỗi
 
 - [**Moralis**](https://moralis.io/)
   - [Tài liệu](https://docs.moralis.io/)
@@ -256,8 +256,8 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Các nút dùng chung miễn phí
     - Các nút lưu trữ dùng chung miễn phí
     - Tập trung vào quyền riêng tư (chính sách không lưu nhật ký)
-    - Hỗ trợ chéo chuỗi
-    - Mở rộng quy mô khi bạn phát triển
+    - Hỗ trợ chéo Chuỗi
+    - Mở rộng quy mô theo nhu cầu
     - Bảng điều khiển
     - SDK Ethereum độc đáo
     - Các điểm cuối API độc đáo
@@ -268,17 +268,17 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - Tính năng
     - Các dịch vụ API RPC đáng tin cậy, nhanh chóng và có thể mở rộng
     - API nâng cao cho các nhà phát triển Web3
-    - Hỗ trợ đa chuỗi
+    - Hỗ trợ đa Chuỗi
     - Bắt đầu miễn phí
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [Tài liệu](https://nodeflare.app/docs/quick-start)
   - Tính năng
-    - 8 chuỗi EVM bao gồm Ethereum, Base, Arbitrum One và Optimism
-    - 4 khu vực (Châu Âu, Châu Á, Bắc Mỹ) với tính năng tự động chuyển đổi dự phòng sang nút khỏe mạnh gần nhất
+    - 23 Chuỗi EVM bao gồm Ethereum, Base, Arbitrum One & Nova, Optimism, Linea và Unichain
+    - 5 khu vực (Châu Âu, Vương quốc Anh, Châu Á, Đông Mỹ, Tây Mỹ) với tính năng tự động chuyển đổi dự phòng sang nút khỏe mạnh gần nhất
     - Điểm cuối công khai miễn phí (không cần khóa API) + gói miễn phí với 3 triệu đơn vị tính toán/tháng
     - Thanh toán theo Đơn vị tính toán — chỉ trả tiền cho những gì bạn sử dụng, các lệnh gọi nặng hơn sẽ tốn nhiều chi phí hơn
-    - Không bị bóp băng thông trên các gói trả phí
+    - Không điều tiết trên các gói trả phí
 
 - [**NOWNodes**](https://nownodes.io/)
   - Tính năng
@@ -286,7 +286,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Khóa API miễn phí
     - Trình khám phá khối
     - Thời gian phản hồi API ⩽ 1 giây
-    - Nhóm hỗ trợ 24/7
+    - Đội ngũ hỗ trợ 24/7
     - Người quản lý tài khoản cá nhân
     - Các nút dùng chung, lưu trữ, sao lưu và chuyên dụng
 
@@ -302,10 +302,10 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Sự đa dạng máy khách nút Mạng chính Ethereum
     - Không có điểm lỗi duy nhất
     - Không có thời gian chết
-    - Tokenomics gần như bằng không hiệu quả về chi phí (đặt cọc POKT một lần cho băng thông mạng lưới)
+    - Tokenomics hiệu quả về chi phí gần như bằng không (đặt cọc POKT một lần cho băng thông mạng lưới)
     - Không có chi phí chìm hàng tháng, biến cơ sở hạ tầng của bạn thành tài sản
     - Cân bằng tải được tích hợp vào Giao thức
-    - Mở rộng vô hạn số lượng yêu cầu mỗi ngày và số nút mỗi giờ khi bạn phát triển
+    - Mở rộng vô hạn số lượng yêu cầu mỗi ngày và số nút mỗi giờ theo nhu cầu
     - Tùy chọn riêng tư nhất, chống kiểm duyệt
     - Hỗ trợ nhà phát triển thực tế
     - Bảng điều khiển và phân tích [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
@@ -315,9 +315,9 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - Tính năng
     - Hỗ trợ kỹ thuật 24/7 & cộng đồng Discord dành cho nhà phát triển
     - Mạng lưới cân bằng địa lý, đa đám mây/kim loại, độ trễ thấp
-    - Hỗ trợ đa chuỗi (Optimism, Arbitrum, Polygon + 11 chuỗi khác)
-    - Các lớp trung gian cho tốc độ & tính ổn định (định tuyến cuộc gọi, bộ nhớ đệm, lập chỉ mục)
-    - Giám sát hợp đồng thông minh qua Webhooks
+    - Hỗ trợ đa Chuỗi (Optimism, Arbitrum, Polygon + 11 Chuỗi khác)
+    - Các lớp trung gian cho tốc độ & tính ổn định (định tuyến cuộc gọi, bộ nhớ cache, lập chỉ mục)
+    - Giám sát Hợp đồng thông minh qua Webhooks
     - Bảng điều khiển trực quan, bộ phân tích, trình soạn thảo RPC
     - Các tính năng bảo mật nâng cao (JWT, che giấu, danh sách trắng)
     - API dữ liệu và phân tích NFT
@@ -328,7 +328,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - [Tài liệu](https://rivet.readthedocs.io/en/latest/)
   - Tính năng
     - Tùy chọn gói miễn phí
-    - Mở rộng quy mô khi bạn phát triển
+    - Mở rộng quy mô theo nhu cầu
 
 - [**SenseiNode**](https://senseinode.com)
   - [Tài liệu](https://docs.senseinode.com/)
@@ -342,7 +342,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - [Tài liệu](https://docs.settlemint.com/)
   - Tính năng
     - Dùng thử miễn phí
-    - Mở rộng quy mô khi bạn phát triển
+    - Mở rộng quy mô theo nhu cầu
     - Hỗ trợ GraphQL
     - Các điểm cuối RPC và WSS
     - Các nút đầy đủ chuyên dụng
@@ -371,12 +371,12 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
   - [Tài liệu](https://services.tokenview.io/docs?type=nodeService)
   - Tính năng
     - Hỗ trợ kỹ thuật 24/7 & cộng đồng Telegram dành cho nhà phát triển
-    - Hỗ trợ đa chuỗi (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Hỗ trợ đa Chuỗi (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Cả hai điểm cuối RPC và WSS đều mở để sử dụng
     - Quyền truy cập không giới hạn vào API dữ liệu lưu trữ
     - Bảng điều khiển với Request Explorer và Mempool Watcher
     - API dữ liệu NFT và thông báo Webhook
-    - Thanh toán bằng Tiền mã hóa
+    - Thanh toán bằng tiền mã hóa
     - Hỗ trợ bên ngoài cho các yêu cầu hành vi bổ sung
 
 - [**Watchdata**](https://watchdata.io/)
@@ -385,17 +385,17 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Độ tin cậy của dữ liệu
     - Kết nối không bị gián đoạn mà không có thời gian chết
     - Tự động hóa quy trình
-    - Các gói cước miễn phí
+    - Các mức giá miễn phí
     - Giới hạn cao phù hợp với mọi người dùng
     - Hỗ trợ cho nhiều nút khác nhau
-    - Mở rộng tài nguyên
+    - Mở rộng quy mô tài nguyên
     - Tốc độ xử lý cao
 
 - [**ZMOK**](https://zmok.io/)
   - [Tài liệu](https://docs.zmok.io/)
   - Tính năng
-    - Chạy trước dưới dạng dịch vụ
-    - Mempool giao dịch toàn cầu với các phương thức tìm kiếm/lọc
+    - Chạy trước như một dịch vụ
+    - mempool giao dịch toàn cầu với các phương thức tìm kiếm/lọc
     - Phí giao dịch không giới hạn và Gas vô hạn để gửi giao dịch
     - Lấy khối mới và đọc Chuỗi khối nhanh nhất
     - Đảm bảo mức giá tốt nhất cho mỗi lệnh gọi API
@@ -406,12 +406,10 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Nền tảng tự động hóa không cần mã cấp doanh nghiệp cung cấp việc triển khai, giám sát và quản lý các nút và mạng lưới Chuỗi khối
     - Hơn 30 Giao thức & Tích hợp được hỗ trợ và đang bổ sung thêm
     - Các dịch vụ cơ sở hạ tầng Web3 giá trị gia tăng như lưu trữ phi tập trung, danh tính phi tập trung và API dữ liệu Sổ cái Chuỗi khối cho các trường hợp sử dụng trong thế giới thực
-    - Hỗ trợ 24/7 và giám sát chủ động đảm bảo tình trạng của các nút luôn tốt.
+    - Hỗ trợ 24/7 và giám sát chủ động đảm bảo tình trạng của các nút mọi lúc.
     - Các điểm cuối RPC cung cấp quyền truy cập được xác thực vào các API, quản lý dễ dàng với bảng điều khiển trực quan và phân tích.
     - Cung cấp cả tùy chọn đám mây được quản lý và mang theo đám mây của riêng bạn để lựa chọn và hỗ trợ tất cả các nhà cung cấp đám mây lớn như AWS, Azure, Google Cloud, Digital Ocean và tại chỗ.
-    - Chúng tôi sử dụng định tuyến thông minh để luôn kết nối với nút gần người dùng của bạn nhất
-
-
+    - Chúng tôi sử dụng định tuyến thông minh để luôn kết nối đến nút gần nhất với người dùng của bạn
 ## Đọc thêm {#further-reading}
 
 - [Danh sách các dịch vụ nút Ethereum](https://ethereumnodes.com/)

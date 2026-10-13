@@ -15,6 +15,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import EventCard from "../_components/event-card"
 import NoResultsAlert from "../_components/no-results-alert"
 import OrganizerCTA from "../_components/organizer-cta"
+import { getMeetupGroups } from "../meetup-groups"
 import { mapEventTranslations, sanitize } from "../utils"
 
 import PageJsonLD from "./page-jsonld"
@@ -44,7 +45,9 @@ const Page = async (props: {
   const t = await getTranslations("page-community-events")
   const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t, locale)
+  const apiEvents = mapEventTranslations(_events, t, locale)
+  const meetupGroups = await getMeetupGroups(locale)
+  const events = [...apiEvents, ...meetupGroups]
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []
@@ -150,13 +153,18 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-community-events")
 
   return await getMetadata({
     locale,
-    slug: ["community", "events", "meetups"],
+    slug: ["community", "events", "search"],
     title: t("page-events-search-hero-title"),
     description: t("page-events-search-metadata-description"),
+    // Query-driven results page: empty without ?q=, so keep it out of the index
+    noIndex: true,
   })
 }
 

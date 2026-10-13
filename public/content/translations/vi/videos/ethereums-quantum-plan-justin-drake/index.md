@@ -17,7 +17,7 @@ Một cuộc phỏng vấn với **Justin Drake**, nhà nghiên cứu của Tổ
 
 *Bản ghi lời thoại này là một bản sao có thể truy cập của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=wURmzLKhJco) do Bankless xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Giới thiệu và mối đe dọa lượng tử (0:00) {#introduction-and-the-quantum-threat-000}
+### Giới thiệu và mối đe dọa lượng tử (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Một sự thay đổi tư duy thú vị đối với tôi trong vài tháng qua là tôi đã ngừng coi hậu lượng tử (post-quantum) như một rào cản mà chúng ta phải vượt qua và tôi coi đó giống như một cơ hội hơn. Đây là cơ hội để Ethereum nổi bật như hệ thống tài chính toàn cầu đầu tiên an toàn trước lượng tử, không chỉ so với các đối thủ cạnh tranh như Bitcoin hay những thứ tương tự, mà còn so với tiền pháp định và tài chính truyền thống (TradFi). Và tôi nghĩ điều đó sẽ gửi đi một thông điệp rất mạnh mẽ và trở thành một điểm nhấn bảo mật rất tự nhiên để thế giới chuyển sang sử dụng Ethereum.
 
@@ -35,7 +35,7 @@ Vì vậy, đích đến đang ngày càng gần hơn, và theo một khía cạ
 
 Bây giờ dự phóng về tương lai, Ngày Q cá nhân của tôi là vào năm 2032. Đây là một góc nhìn hơi lạc quan theo nghĩa là có thể họ sẽ đến muộn hơn một chút, nhưng chúng ta cần chuẩn bị cho kịch bản tồi tệ nhất. Vì vậy, tôi muốn nói rằng có ít nhất 1% khả năng Ngày Q là vào năm 2032, nhiều khả năng là một tỷ lệ phần trăm ở mức hai con số. Các chuyên gia khác nhau sẽ nói với bạn là khoảng từ năm 2031 đến 2038. Một trong những người bạn của tôi trong ngành, Steve Bryley, người sáng lập và CEO của một trong những công ty sửa lỗi lượng tử lớn nhất thế giới, tình cờ có trụ sở tại Cambridge nơi tôi đang sống — Ngày Q cá nhân của anh ấy là năm 2032, nhưng anh ấy đã giữ mốc thời gian này trong suốt 15 năm qua
 
-#### Q-Day là khi nào và chúng ta chuẩn bị như thế nào? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Q-Day là khi nào và chúng ta chuẩn bị như thế nào? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 và nó luôn giữ nguyên như vậy.
 
@@ -51,7 +51,7 @@ và nó luôn giữ nguyên như vậy.
 
 **Justin Drake:** Tôi không thể nói thay cho ông ấy, nhưng một điều chúng ta nên lưu ý là Scott chủ yếu là một nhà lý thuyết. Trong một thời gian rất dài, ông ấy đã làm việc về lý thuyết, không quá nhiều về hoạt động hàng ngày của máy tính lượng tử, và tôi nghĩ đó một phần là lý do tại sao ông ấy lại dè dặt như vậy. Điều đang xảy ra ngày càng nhiều là có những công ty thực sự, những doanh nhân thực sự đang xây dựng những thứ này và ông ấy có một cái nhìn của người trong cuộc. Về cơ bản, ông ấy đang tiếp thu tất cả thông tin này. Một trong những điều ông ấy nói gần đây là chính phủ Hoa Kỳ đang bắt đầu can thiệp vào việc công bố các ý tưởng. Vì vậy, chúng ta có các công ty và học giả có thể đưa ra những cải tiến cho thuật toán Shor, và những điều đó không được tiết lộ hoàn toàn, có khả năng là vì lý do an ninh quốc gia.
 
-#### Qubit vật lý, qubit logic và việc phá vỡ ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Qubit vật lý, qubit logic và việc phá vỡ ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Chà. Được rồi. Có vẻ như các chính phủ đang tham gia vào việc này. Chúng ta thực sự không chắc chắn về tất cả những công việc đang diễn ra ở hậu trường — ở thời điểm hiện tại, chúng ta chỉ nhận thức được những công việc có tính khả thi về mặt thương mại. Về phần qubit logic, bạn nói rằng chúng ta hiện có một qubit logic. Có qubit vật lý và qubit logic, và thứ cần mở rộng quy mô là qubit logic. Để phá vỡ ECDSA, chúng ta thực sự cần bao nhiêu qubit logic? Đó là một số liệu mà tôi đang xem xét, nhưng liệu đó có phải là con số chính xác không? Tôi nghe mọi người nói về việc cần một nghìn, hoặc có thể là 1.500. Đây có phải là con số mà chúng ta nên chú ý không?
 
@@ -69,7 +69,7 @@ Bây giờ về thời gian chạy, điều này khá thú vị vì có hai lo�
 
 **Justin Drake:** Đúng vậy. Và nếu thực sự một quốc gia sẽ là bên đầu tiên có quyền truy cập vào các máy tính lượng tử này, trừ khi tiền mã hóa đóng một vai trò hệ thống lớn trên thế giới, nhiều khả năng họ sẽ sử dụng sức mạnh của mình để tấn công mọi thứ một cách lén lút — ví dụ, theo dõi đối thủ của họ. Vì vậy, điều đó có lợi cho chúng ta. Nhưng nếu bạn đang đối phó với một thực thể hoàn toàn lý trí được thúc đẩy bởi tiền bạc, họ thực sự có thể nhắm đến Bitcoin hoặc Ethereum.
 
-#### Các trung tâm dữ liệu lượng tử và kịch bản tấn công Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Các trung tâm dữ liệu lượng tử và kịch bản tấn công Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Câu hỏi cuối cùng về qubit. Các trung tâm dữ liệu điện toán lượng tử có đang được xây dựng ngay lúc này không? Chúng ta đang có sự phát triển trung tâm dữ liệu khổng lồ cho AI. Liệu một điều tương tự có đang bắt đầu xảy ra với máy tính lượng tử không?
 
@@ -93,7 +93,7 @@ Bây giờ về thời gian chạy, điều này khá thú vị vì có hai lo�
 
 **Justin Drake:** Chính xác. Đúng vậy. Và sau đó bạn có thể sẽ đi tấn công những con cá lớn nhất, có thể là một số sàn giao dịch chưa thiết lập cơ sở hạ tầng phù hợp để tự bảo vệ mình. Hóa ra có một cách giảm thiểu rất dễ dàng đối với máy tính lượng tử, ít nhất là những máy tính đầu tiên — đừng tái sử dụng các Địa chỉ của bạn. Khi bạn tái sử dụng Địa chỉ của mình, bạn tái sử dụng khóa công khai, và điều đó có nghĩa là kẻ tấn công có thời gian để bẻ khóa khóa riêng tư tương ứng và sau đó đánh cắp tiền của bạn trong lần thứ hai bạn sử dụng Địa chỉ đó. Vì vậy, phương pháp tốt nhất nên là nếu bạn đang giữ bất kỳ khoản tiền nào trong kho lưu trữ lạnh dài hạn, nó phải là một Địa chỉ sạch mà khóa công khai tương ứng chưa bao giờ bị tiết lộ. Chỉ để làm cho điều này hoàn toàn rõ ràng: những gì một máy tính lượng tử cho phép bạn làm
 
-#### Các địa chỉ Bitcoin dễ bị tấn công và những đồng coin của Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Các địa chỉ Bitcoin dễ bị tấn công và những đồng coin của Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 làm là đi từ khóa công khai ngược lại khóa riêng tư. Vì vậy, nó thực sự gây nguy hiểm cho nền tảng của quyền sở hữu.
 
@@ -119,7 +119,7 @@ làm là đi từ khóa công khai ngược lại khóa riêng tư. Vì vậy, n
 
 **Justin Drake:** Đúng vậy, con số ước chừng mà tôi nghĩ đến cũng phù hợp với những con số đó. Khoảng 2 triệu Bitcoin, cứ cho là 10%. Chúng ta có 1 triệu từ Satoshi và sau đó khoảng một triệu nữa đã không di chuyển trong một thời gian rất dài. Chúng ta cần chiết khấu một phần trong số đó vì một số Địa chỉ thây ma là hợp pháp và sẽ hồi sinh, nhưng chúng ta cũng nên tăng nó lên vì có thể có một số Địa chỉ mới chi tiêu gần đây sẽ bị mất. Vì vậy, 5 đến 15% là phạm vi chính xác. Tôi sẽ cá là khoảng 10–12%, một con số rất lớn — chắc chắn là hàng trăm tỷ đô la.
 
-#### Cuộc tranh luận giữa việc đốt và trục vớt đối với Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### Cuộc tranh luận giữa việc đốt và trục vớt đối với Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Người ta có thể suy nghĩ về lý thuyết trò chơi ở đây. Lựa chọn A là cố gắng đốt các đồng tiền này. Lợi thế là bạn không phải chịu áp lực bán lên tới hàng trăm tỷ đô la. Nếu bạn phân tích điều này dưới góc độ ngắn hạn, đó là một động thái hợp lý. Nhưng toàn bộ câu chuyện của Bitcoin là quyền tài sản mạnh mẽ, vì vậy nếu bạn có tầm nhìn dài hạn hơn, bạn sẽ không muốn đốt các đồng tiền này. Rất khó để biết cộng đồng sẽ đi theo hướng nào. Có khả năng cuối cùng quyết định sẽ được đưa ra bởi những người nắm giữ lớn — ví dụ như Michael Saylor và MicroStrategy. Bởi vì những người nắm giữ lớn này sẽ nhận được một bản sao của cả hai phiên bản Bitcoin — phiên bản có đốt và phiên bản không đốt — và họ có thể chọn bán tháo phiên bản mà họ không thích. Và chúng ta biết rằng Saylor ủng hộ việc đốt, vì vậy ông ấy có khả năng một tay thao túng thị trường và đạt được kết quả mà ông ấy muốn.
 
@@ -131,7 +131,7 @@ Lựa chọn khác là họ cứ để lại 10% đó cho bất kỳ ai có th�
 
 **Justin Drake:** Đúng vậy, bạn nói rất chuẩn. Nhưng có một sửa đổi nhỏ: điều này không nhất thiết phải xảy ra vào Q-Day hoặc sau Q-Day. Nó có thể xảy ra trước đó. Tại bất kỳ thời điểm nào, cộng đồng Bitcoin hoặc một nhóm nhỏ trong đó có thể đề xuất tạo ra một phân nhánh. Tại số khối phân nhánh, sẽ có hai phiên bản của tài sản Bitcoin — giống như phân nhánh Bitcoin Cash. Và cuối cùng điều này được quyết định bởi thị trường. Các sàn giao dịch sẽ thiết lập hai phiên bản của tài sản và thị trường sẽ quyết định phiên bản nào là Bitcoin thực sự. Và có khả năng chỉ vì động lực thanh khoản ngắn hạn, phiên bản đốt các đồng tiền, có khả năng diễn ra trước Q-Day, sẽ là phiên bản giành chiến thắng.
 
-#### Kịch bản Michael Saylor và các điểm Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### Kịch bản Michael Saylor và các điểm Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Đúng vậy. Giả sử tôi là Michael Saylor, tôi sở hữu 2–3% nguồn cung Bitcoin, đặc biệt là nguồn cung thanh khoản. Tôi nhận được cả hai bản sao. Chúng ta đang phân nhánh Chuỗi khối Bitcoin giống như các cuộc chiến phân nhánh Bitcoin năm 2017. Tôi muốn bảo toàn giá trị của mình, vì vậy tôi bán tất cả các bitcoin dễ bị tấn công lượng tử và giữ lại tất cả các bitcoin trên phiên bản đã đốt các đồng tiền dễ bị tấn công lượng tử. Giá của Chuỗi khối không bị đụng chạm sẽ giảm xuống. Giá của phiên bản đốt vẫn ở mức cao vì không ai bán nó — Saylor không bán, BlackRock không bán. Vậy ý bạn là giá của Bitcoin đã giải quyết được vấn đề lượng tử sẽ cao hơn và nhờ các lực lượng thị trường mà trở thành Bitcoin chính thống.
 
@@ -155,7 +155,7 @@ Lựa chọn khác là họ cứ để lại 10% đó cho bất kỳ ai có th�
 
 Chắc chắn là thật khó tin khi điều này sẽ xảy ra với một mạng lưới trị giá hàng nghìn tỷ đô la với một khoản tiền thưởng lớn như vậy. Điều này là chưa từng có. Nhưng điều đó cũng có thể xảy ra, và có lẽ đó là một kết quả tốt hơn cho Bitcoin.
 
-#### Bằng chứng cụm từ hạt giống và vấn đề kích thước chữ ký hậu lượng tử (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Bằng chứng cụm từ hạt giống và vấn đề kích thước chữ ký hậu lượng tử (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Vâng. Tôi có một vài suy nghĩ. Điều đầu tiên là có một cách khá tinh vi để chứng minh quyền sở hữu Bitcoin mà không cần thông qua khóa riêng tư. Điều này được gọi là bằng chứng cụm từ hạt giống. Cách bạn tạo ra một địa chỉ Bitcoin gồm ba bước: bước một, bạn tạo cụm từ hạt giống của mình; bước hai, bạn thực hiện một số thao tác trên cụm từ hạt giống bao gồm quá trình băm để tạo ra khóa riêng tư của bạn; sau đó từ khóa riêng tư, bạn tạo ra khóa công khai, đây chính là địa chỉ được đưa lên trên chuỗi. Giờ đây, thật không may, khóa riêng tư không còn là thứ có thể chứng minh quyền sở hữu nữa. Nhưng nhờ vào bước băm, nếu bạn biết cụm từ hạt giống của mình, đó vẫn là một bằng chứng về quyền sở hữu. Vì vậy, một điều có thể xảy ra — và về mặt kỹ thuật là hướng đi hợp lý nhất — là đóng băng Bitcoin nhưng cho phép bất kỳ ai khôi phục Bitcoin của họ bằng bằng chứng cụm từ hạt giống.
 
@@ -177,7 +177,7 @@ Những gì chúng tôi đang xây dựng cho Ethereum là công nghệ tổng h
 
 Nhưng thực ra có một cách để phòng ngừa rủi ro giá Bitcoin, rất dễ dàng — bạn chỉ cần bán khống BTC. Giả sử bạn biết chắc chắn rằng mình đã bẻ khóa được khóa riêng tư của một ví chứa 100.000 BTC. Bạn bán khống 100.000 BTC. Điều đó chốt lại lợi nhuận của bạn. Và sau đó, bất kể giá Bitcoin biến động ra sao, bạn đã chốt được lợi nhuận của mình, có thể lên tới hàng chục tỷ đô la.
 
-#### Thách thức ở lớp xã hội của Bitcoin và lợi thế của Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### Thách thức ở lớp xã hội của Bitcoin và lợi thế của Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Bây giờ, tôi muốn lưu ý rằng Justin, bạn có một cách suy nghĩ đặc thù, và cách bạn suy nghĩ là lý do tại sao bạn tham gia vào Ethereum. Nếu bạn là một người ủng hộ Bitcoin (Bitcoiner), bạn sẽ suy nghĩ theo một cách khác. Cách suy nghĩ của Bitcoiner rất độc đáo, rất khác biệt — kiểu như một người theo chủ nghĩa tối đa hóa quyền tài sản. Tôi nghĩ những gì Justin sẽ làm nếu anh ấy phụ trách Bitcoin sẽ rất khác so với những gì mà phần lớn các Bitcoiner nói chung sẽ làm. Tôi không có một câu hỏi cụ thể nào ở đây, nhưng tôi chỉ muốn nhấn mạnh điều đó.
 
@@ -205,7 +205,7 @@ Khi tôi làm việc với dự án Ultrasound, một trong những điều chú
 
 **Justin Drake:** Chính xác. Đúng vậy. Nếu tôi phải đưa ra một dự đoán cụ thể, tôi sẽ nói khoảng 2%, tức là ít hơn Bitcoin khoảng một bậc độ lớn. Và sự khác biệt về mặt định lượng này dẫn đến những hệ quả về mặt định tính: trong trường hợp của Ethereum, tôi sẽ cực lực ủng hộ việc không làm gì cả và thực sự tôn trọng quyền tài sản, bởi vì suy cho cùng, 2% không phải là vấn đề lớn. Trong trường hợp của Bitcoin, 15% là một vấn đề khổng lồ.
 
-#### Bản nâng cấp hậu lượng tử ba lớp của Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### Bản nâng cấp hậu lượng tử ba lớp của Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Vì vậy, Ethereum sẽ phải đưa ra cùng một lựa chọn này. Giả sử là 3% — liệu có nên đóng băng và đốt hay chỉ để nó trở thành một cuộc săn tìm kho báu. Hy vọng của bạn là chúng ta sẽ chọn phương án săn tìm kho báu, nghĩa là một kẻ tấn công lượng tử nào đó sẽ cuỗm đi 1–3% ether đó. Và nếu bạn nhìn toàn cảnh, về cơ bản chúng ta đang hướng tới việc ether trở thành một loại tiền tốt hơn nhiều so với BTC. Nó sẽ không can thiệp, tôn trọng quyền tài sản, bảo mật lượng tử và sẽ không gặp phải vấn đề ngân sách bảo mật vốn sẽ gây rắc rối cho Bitcoin trong một vài kỳ halving tới. Vì vậy, tôi nghĩ đây là một cơ hội lớn cho tài sản này.
 
@@ -225,7 +225,7 @@ Nhưng khi bạn nhìn toàn cảnh, tôi cho rằng vấn đề lớn hơn — 
 
 *(50:00)*
 
-#### Nâng cấp lớp thực thi: tổng hợp chữ ký (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Nâng cấp lớp thực thi: tổng hợp chữ ký (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 thực sự trình bày chi tiết một số cột mốc quan trọng để thực hiện những nâng cấp này.
 
@@ -243,7 +243,7 @@ Tổ chức Ethereum đã nỗ lực rất nhiều để bắt đầu với các
 
 Và một trong những điều trớ trêu về phương pháp này là nó thực sự làm tăng khả năng mở rộng so với những gì chúng ta có ngày nay. Lý do là bạn không có chi phí cố định 64 byte cho mỗi giao dịch. Các giao dịch có không byte dữ liệu chữ ký, và sau đó bạn có một chữ ký chính này được khấu hao trên tất cả các giao dịch trong khối.
 
-#### Thiết lập tiêu chuẩn ngành với sự hợp tác cùng Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Thiết lập tiêu chuẩn ngành với sự hợp tác cùng Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Được rồi. Vậy đây là một bản nâng cấp cho nhiều Chuỗi khối hợp đồng thông minh khác theo sau Ethereum, đặc biệt là những chuỗi tối ưu hóa về tốc độ—
 
@@ -263,7 +263,7 @@ Quay lại với một điều khác mà tôi đã nói — nó chỉ dựa vào
 
 Bây giờ có hai lưu ý mà tôi muốn nhấn mạnh. Lưu ý thứ nhất là chúng ta đang giải quyết các đối tượng phức tạp hơn và giải pháp mà chúng ta có ở đây là thứ mà chúng tôi gọi là xác minh hình thức đầu cuối chuyên sâu.
 
-#### Xác minh hình thức, Poseidon và lớp đồng thuận (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Xác minh hình thức, Poseidon và lớp đồng thuận (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Chúng ta có đối tượng mật mã học của mình và chúng ta muốn chứng minh về mặt toán học rằng nó vững chắc — rằng việc giả mạo chữ ký là điều không thể. Và chúng ta không chỉ muốn làm điều này đối với toán học, mà còn đối với cả mã nguồn. Nếu bạn hỏi tôi 2–3 năm trước liệu điều này có khả thi không, tôi sẽ nói có, nhưng nó cực kỳ tốn công sức và đắt đỏ. Những gì chúng ta đang thấy với sự ra đời của AI là công việc tốn công sức và đắt đỏ này có thể được thực hiện nhanh hơn 100 lần và rẻ hơn 100 lần.
 
@@ -279,7 +279,7 @@ Thật không may, cách bạn thiết kế các hàm băm là bạn không th�
 
 Để mở khóa một tối ưu hóa hiệu suất nhất định chỉ có ở lớp đồng thuận, chúng ta có khái niệm về chữ ký có trạng thái — các thông điệp bạn ký có một bộ đếm tăng lên mỗi lần. Điều đó không làm bạn nhớ đến thứ gì sao? Số khe. Trong Ethereum tại lớp đồng thuận, bạn sẽ chỉ ký một thông điệp duy nhất cho mỗi khe. Nếu bạn ký hai thông điệp, bạn sẽ bị phạt cắt giảm. Chúng tôi sử dụng ràng buộc này để có các chữ ký hiệu quả hơn gấp 10 lần trong việc tổng hợp.
 
-#### Lean VM, lộ trình Lean Consensus và dòng thời gian năm 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, lộ trình Lean Consensus và dòng thời gian năm 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 Đây là điểm khác biệt chính — các hàm băm phi trạng thái ở lớp thực thi so với các chữ ký có trạng thái ở lớp đồng thuận nơi số lượng khe tăng lên. Công nghệ tổng hợp này có một cái tên: Lean VM, một zkVM tối giản dành cho mật mã học dựa trên hàm băm. Về cơ bản, Lean VM sẽ chứng minh rằng đây là một gốc Merkle chính xác. Điều chính mà chúng tôi vẫn chưa hoàn toàn chắc chắn là liệu phương pháp này có thể mở khóa thứ mà tôi gọi là "biên giới tera Gas" hay không — 1 giga Gas mỗi giây ở lớp 1 (l1), 10.000 TPS, nhưng thậm chí còn tham vọng hơn, 1 tera Gas, 10 triệu giao dịch mỗi giây ở lớp 2 (l2) bằng cách sử dụng tính khả dụng của dữ liệu.
 
@@ -297,7 +297,7 @@ Hiện tại chúng tôi có các mạng phát triển (devnet) cho Lean Consens
 
 Tôi nghĩ điều này sẽ có những hệ quả thú vị đối với tính bền vững cũng như quản trị. Về mặt quản trị, cách chúng ta thực hiện ngày nay nói một cách khái quát là
 
-#### Quản trị Ethereum và ngày hoàn thành năm 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Quản trị Ethereum và ngày hoàn thành năm 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 rằng chúng ta có năm client lớp đồng thuận và tất cả đều cần triển khai bản nâng cấp để có thể tiến lên phía trước. Trong tương lai, khi chúng ta có 10 hoặc 15 client, chúng ta có thể chỉ yêu cầu 80% client hàng đầu hoặc 80% client nhanh nhất để tiếp tục. Đó giống như một cuộc cạnh tranh kiểu Darwin cho phép chúng ta tiến nhanh hơn nhiều mà không phải chờ đợi client chậm nhất.
 
@@ -325,7 +325,7 @@ Một tin tốt khác là chúng ta không có lựa chọn nào khác. Chúng t
 
 Điều đó làm cho việc điều phối và đi đến đồng thuận trở nên đơn giản hơn nhiều.
 
-#### Lượng tử không chỉ là vấn đề của tiền mã hóa (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### Lượng tử không chỉ là vấn đề của tiền mã hóa (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Tôi đoán chúng ta nên nhấn mạnh rằng không chỉ Ethereum không có sự lựa chọn — không ai trong lĩnh vực tiền mã hóa có giải pháp thay thế cho điều này. Mọi người trong lĩnh vực tiền mã hóa đều phải viết lại mã. Với Bitcoin, nó chỉ là ECDSA, nhưng bản thân điều đó đã là đủ.
 
@@ -341,7 +341,7 @@ Một tin tốt khác là chúng ta không có lựa chọn nào khác. Chúng t
 
 **Justin Drake:** Tôi không đồng ý. Bạn chỉ cần nhìn vào phân tích lịch sử — vỏ sò đã bị thay thế bởi muối, sau đó là bạc, rồi đến vàng, và bây giờ có khả năng Bitcoin sẽ thay thế vàng. Chỉ vì vàng thất bại không có nghĩa là thứ tiếp theo cũng phải thất bại. Tôi muốn nói rằng Ethereum là người kế nhiệm rất tự nhiên của Bitcoin với tư cách là tiền tệ internet. Và chỉ vì Bitcoin thất bại không có nghĩa là Ethereum cũng phải thất bại. Tôi đồng ý rằng có thể có một số nỗi đau ngắn hạn, nhưng chúng ta cũng đang nói về lợi ích dài hạn.
 
-#### Cơ hội hậu lượng tử và tính toán ngân sách bảo mật (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### Cơ hội hậu lượng tử và tính toán ngân sách bảo mật (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Vậy chúng ta sẽ nhận được gì vào cuối quá trình này? Năm 2030, Ethereum an toàn hậu lượng tử vì Justin đã hứa. Ethereum sẽ trở thành gì? Liệu nó có phải là duy nhất trong phân khúc của mình, hay bạn mong đợi các chuỗi khối khác sẽ làm theo và cũng đạt được bảo mật hậu lượng tử? Bạn có thể mô tả hệ thống mà chúng ta có vào năm 2030 nếu tất cả những điều này trở thành hiện thực không?
 
@@ -357,7 +357,7 @@ Một điểm dữ liệu thú vị: Chuỗi Beacon OG đã ra mắt vào năm 2
 
 Chúng ta đã bắt đầu thấy — mới hôm qua, Dario Amodei, một trong những OG về AI, đã bắt đầu để AI tự động cải thiện bản thân một cách đệ quy, điều này cực kỳ đáng sợ. Về cơ bản, đây là thứ sẽ bắt đầu sự phát triển theo cấp số nhân hướng tới siêu trí tuệ.
 
-#### Khủng hoảng ngân sách bảo mật của Bitcoin và ngày phán xét năm 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### Khủng hoảng ngân sách bảo mật của Bitcoin và ngày phán xét năm 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Chúng ta có năm 2032 có khả năng là Q-Day, và chúng ta cũng có năm 2032 là thời điểm mà Bitcoin sẽ có đợt halving mà tôi tin là cuối cùng của nó. Bạn có thể gọi đó là B-Day — ngày của Bitcoin nơi có một loại phán xét nào đó, bởi vì lượng phát hành sẽ quá thấp để bảo mật cho nó.
 
@@ -379,7 +379,7 @@ Có khả năng là tài sản BTC có thể tách rời khỏi Chuỗi Bitcoin 
 
 **Justin Drake:** Và nếu tôi nói những lời khác như, "Chúng ta sẽ chỉ cần loại bỏ giới hạn 21 triệu vì ngân sách bảo mật không đủ" — những người ủng hộ Bitcoin cũng không nghĩ như vậy. Họ đang lao rất nhanh vào một bức tường, và năm 2032 là ngày phán xét.
 
-#### Thu thập bây giờ, giải mã sau — những rủi ro lượng tử vượt ra ngoài tiền mã hóa (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Thu thập bây giờ, giải mã sau — những rủi ro lượng tử vượt ra ngoài tiền mã hóa (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** Thế còn lượng tử khi liên quan đến phần còn lại của xã hội thì sao? Đây không chỉ là vấn đề của tiền mã hóa. Các chuỗi khối đặc biệt dễ bị tổn thương, nhưng các thành phần khác của xã hội cũng vậy. Ở mức độ nào thì một Ethereum hậu lượng tử đại diện cho một công cụ để xã hội giải quyết và ngăn chặn các vấn đề trong một thế giới hậu lượng tử, hậu AI?
 
@@ -387,7 +387,7 @@ Có khả năng là tài sản BTC có thể tách rời khỏi Chuỗi Bitcoin 
 
 Sau đó, có một vấn đề khác với mã hóa: nếu tài liệu đã được mã hóa ngày hôm nay và bạn không sử dụng mã hóa an toàn hậu lượng tử, dữ liệu đó có thể bị giải mã trong tương lai. Có toàn bộ một lớp tấn công được gọi là "thu thập bây giờ, giải mã sau". Tôi nghĩ thực tế là chúng ta sẽ có những đợt giải mã hàng loạt trong xã hội — rất nhiều thông điệp Signal, thông điệp Telegram hoặc kho thông điệp Gmail đều bị giải mã đồng thời. Điều đó có thể có tác động rất đáng kể đến xã hội.
 
-#### Ethereum như một chủ nghĩa tăng tốc phòng thủ và rủi ro hiện sinh từ AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Ethereum như một chủ nghĩa tăng tốc phòng thủ và rủi ro hiện sinh từ AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, khi chúng ta nói về ba công nghệ máy tính này, có vẻ như công nghệ nổi bật nhất là AI. Bạn đã nói về năm 2032 như một khoảnh khắc kiểu AGI. Một câu hỏi chung: là một chuyên gia mật mã học cực kỳ tài năng, bạn không phải là một AGI. Mối quan tâm là khi chúng ta bước vào điểm kỳ dị của máy tính, mọi dự đoán đều không còn chắc chắn. Tất cả những kế hoạch được chuẩn bị kỹ lưỡng mà chúng ta lập ra vào năm 2026 để các chuỗi khối của chúng ta có khả năng kháng lượng tử — điều gì sẽ xảy ra nếu AGI tìm ra cách bẻ khóa mật mã học kháng lượng tử của chúng ta theo một cách nào đó khác? Là một chuyên gia mật mã học, bạn có lo lắng về những điều chưa biết của trí tuệ nhân tạo tổng hợp và những thứ nó có thể bẻ khóa không? Điều gì sẽ xảy ra nếu chúng ta chuẩn bị cho một thế giới hậu lượng tử nhưng lại không chuẩn bị cho một thế giới hậu AGI?
 
@@ -401,7 +401,7 @@ Tôi nghĩ rất có thể nếu nhân loại sống sót, Ethereum sẽ đóng 
 
 Làm việc trên Ethereum đã mang một ý nghĩa hoàn toàn mới đối với tôi trong vài tháng qua. Tôi hầu như phớt lờ AI, một phần vì tôi bị ám ảnh bởi những thứ liên quan đến chuỗi khối, nhưng cũng vì nó chỉ là một món đồ chơi cách đây không lâu. Nhưng thông qua công việc của mình, đặc biệt là với xác minh hình thức và việc phát triển
 
-#### Ý nghĩa của việc làm việc trên Ethereum trong kỷ nguyên AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### Ý nghĩa của việc làm việc trên Ethereum trong kỷ nguyên AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 và lập trình, tôi đang thấy những thứ này mạnh mẽ đến mức nào. Trong vài tuần và vài tháng qua, tôi đã bị ám ảnh bởi AI, học hỏi nhiều nhất có thể. Tôi hoàn toàn không phải là một chuyên gia, và có lẽ đây chỉ là một giai đoạn mà mọi người trải qua khi họ mở chiếc hộp Pandora. Nhưng đối với tôi, việc làm việc trên Ethereum hiện nay hoàn toàn là về chủ nghĩa tăng tốc phòng thủ.
 
@@ -417,7 +417,7 @@ Tôi nghĩ có khả năng trong những tháng và năm tới, chúng ta sẽ c
 
 **Justin Drake:** Tôi khá bình thản về điều đó. Tôi đã đạt đến một điểm mà tôi sẵn sàng ra đi. Tôi đã sống một cuộc đời rất hạnh phúc.
 
-#### Những suy nghĩ cuối cùng về xác suất diệt vong (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Những suy nghĩ cuối cùng về xác suất diệt vong (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** Cái gì cơ?
 

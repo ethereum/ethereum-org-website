@@ -5,7 +5,7 @@ description: "Огляд ШІ-агентів в Етеріумі"
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "Люди зібралися за столом з терміналом"
 summaryPoints:
   - "ШІ, який взаємодіє з блокчейном і торгує самостійно"

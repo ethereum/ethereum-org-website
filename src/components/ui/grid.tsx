@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils/cn"
 const gridVariants = cva("grid gap-4", {
   variants: {
     columns: {
+      1: "grid-cols-auto-1",
       2: "grid-cols-auto-2",
       3: "grid-cols-auto-3",
       4: "grid-cols-auto-4",
@@ -36,6 +37,7 @@ const gridVariants = cva("grid gap-4", {
     size: {
       small: "[--grid-item-min:7rem]",
       narrow: "[--grid-item-min:12rem]",
+      slim: "[--grid-item-min:15rem]",
       base: "[--grid-item-min:18rem]",
       wide: "[--grid-item-min:22rem]",
       wider: "[--grid-item-min:26rem]",
@@ -57,17 +59,24 @@ const gridVariants = cva("grid gap-4", {
   },
 })
 
-const Grid = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof gridVariants>
->(({ className, columns, size, fit, balanced, ...props }, ref) => (
-  <div
-    ref={ref}
-    data-label="grid"
-    className={cn(gridVariants({ columns, size, fit, balanced }), className)}
-    {...props}
-  />
-))
+type GridProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof gridVariants>
+
+const Grid = React.forwardRef<HTMLDivElement, GridProps>(
+  ({ className, columns, size, fit, balanced, ...props }, ref) => {
+    return (
+      <div
+        ref={ref}
+        data-label="grid"
+        className={cn(
+          gridVariants({ columns, size, fit, balanced }),
+          className
+        )}
+        {...props}
+      />
+    )
+  }
+)
 Grid.displayName = "Grid"
 
-export { Grid }
+export { Grid, type GridProps }

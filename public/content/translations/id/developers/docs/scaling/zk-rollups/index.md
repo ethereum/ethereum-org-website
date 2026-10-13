@@ -12,13 +12,13 @@ Anda harus sudah membaca dan memahami halaman kami tentang [penskalaan Ethereum]
 
 ## Apa itu rollup zero-knowledge? {#what-are-zk-rollups}
 
-**Rollup zero-knowledge (ZK-rollup)** menggabungkan (atau 'menggulung') transaksi ke dalam batch yang dieksekusi secara offchain. Komputasi offchain mengurangi jumlah data yang harus diposting ke rantai blok. Operator ZK-rollup mengirimkan ringkasan perubahan yang diperlukan untuk mewakili semua transaksi dalam satu batch daripada mengirimkan setiap transaksi secara individual. Mereka juga menghasilkan [bukti validitas](/glossary/#validity-proof) untuk membuktikan kebenaran perubahan mereka.
+**Rollup zero-knowledge (ZK-rollup)** menggabungkan (atau 'menggulung') transaksi ke dalam batch yang dieksekusi secara offchain. Komputasi offchain mengurangi jumlah data yang harus diposting ke rantai blok. Operator ZK-rollup mengirimkan ringkasan perubahan yang diperlukan untuk merepresentasikan semua transaksi dalam sebuah batch daripada mengirimkan setiap transaksi secara individual. Mereka juga menghasilkan [bukti validitas](/glossary/#validity-proof) untuk membuktikan kebenaran perubahan mereka.
 
-State ZK-rollup dikelola oleh kontrak pintar yang diterapkan di jaringan Ethereum. Untuk memperbarui state ini, node ZK-rollup harus mengirimkan bukti validitas untuk verifikasi. Seperti yang disebutkan, bukti validitas adalah jaminan kriptografi bahwa perubahan state yang diusulkan oleh rollup benar-benar merupakan hasil dari eksekusi batch transaksi yang diberikan. Ini berarti bahwa ZK-rollup hanya perlu memberikan bukti validitas untuk memfinalisasi transaksi di Ethereum alih-alih memposting semua data transaksi secara onchain seperti [rollup optimistik](/developers/docs/scaling/optimistic-rollups/).
+State ZK-rollup dikelola oleh kontrak pintar yang diterapkan di jaringan Ethereum. Untuk memperbarui state ini, node ZK-rollup harus mengirimkan bukti validitas untuk verifikasi. Seperti yang disebutkan, bukti validitas adalah jaminan kriptografi bahwa perubahan state yang diusulkan oleh rollup benar-benar merupakan hasil dari eksekusi batch transaksi yang diberikan. Ini berarti bahwa ZK-rollup tidak perlu memposting semua data transaksi secara onchain seperti yang dilakukan [rollup optimistik](/developers/docs/scaling/optimistic-rollups/), karena bukti validitas adalah hal yang memfinalisasi transisi state. Mereka tetap memublikasikan data yang diperlukan untuk merekonstruksi state rollup, seperti yang dijelaskan di bawah ini.
 
-Tidak ada penundaan saat memindahkan dana dari ZK-rollup ke Ethereum karena transaksi keluar dieksekusi setelah kontrak ZK-rollup memverifikasi bukti validitas. Sebaliknya, penarikan dana dari rollup optimistik tunduk pada penundaan untuk memungkinkan siapa saja menantang transaksi keluar dengan [bukti penipuan](/glossary/#fraud-proof).
+Tidak ada penundaan saat memindahkan dana dari ZK-rollup ke Ethereum karena transaksi keluar dieksekusi setelah kontrak ZK-rollup memverifikasi bukti validitas. Sebaliknya, penarikan dana dari rollup optimistik tunduk pada penundaan untuk memungkinkan siapa pun menantang transaksi keluar dengan [bukti penipuan](/glossary/#fraud-proof).
 
-ZK-rollup menulis transaksi ke Ethereum sebagai `calldata`. `calldata` adalah tempat data yang disertakan dalam panggilan eksternal ke fungsi kontrak pintar disimpan. Informasi dalam `calldata` dipublikasikan di rantai blok, memungkinkan siapa saja untuk merekonstruksi state rollup secara independen. ZK-rollup menggunakan teknik kompresi untuk mengurangi data transaksi—misalnya, akun diwakili oleh indeks alih-alih alamat, yang menghemat 28 byte data. Publikasi data onchain adalah biaya yang signifikan untuk rollup, sehingga kompresi data dapat mengurangi biaya bagi pengguna.
+ZK-rollup menulis transaksi ke Ethereum sebagai `calldata` atau dalam [blob](/roadmap/danksharding/). `calldata` adalah tempat penyimpanan data yang disertakan dalam panggilan eksternal ke fungsi kontrak pintar. Apa pun itu, data dipublikasikan di rantai blok, memungkinkan siapa pun untuk merekonstruksi state rollup secara independen. ZK-rollup menggunakan teknik kompresi untuk mengurangi data transaksi—misalnya, akun direpresentasikan oleh indeks alih-alih alamat, yang menghemat 28 byte data. Publikasi data onchain adalah biaya yang signifikan untuk rollup, sehingga kompresi data dapat mengurangi biaya bagi pengguna.
 
 ## Bagaimana ZK-rollup berinteraksi dengan Ethereum? {#zk-rollups-and-ethereum}
 
@@ -36,11 +36,11 @@ ZK-rollup bergantung pada protokol utama Ethereum untuk hal-hal berikut:
 
 ### Ketersediaan data {#data-availability}
 
-ZK-rollup mempublikasikan data state untuk setiap transaksi yang diproses secara offchain ke Ethereum. Dengan data ini, individu atau bisnis dapat mereproduksi state rollup dan memvalidasi rantai itu sendiri. Ethereum membuat data ini tersedia untuk semua peserta jaringan sebagai `calldata`.
+ZK-rollup memublikasikan data state untuk setiap transaksi yang diproses secara offchain ke Ethereum. Dengan data ini, individu atau bisnis dapat mereproduksi state rollup dan memvalidasi rantai itu sendiri. Ethereum membuat data ini tersedia untuk semua peserta jaringan sebagai `calldata` atau dalam [blob](/roadmap/danksharding/).
 
-ZK-rollup tidak perlu mempublikasikan banyak data transaksi secara onchain karena bukti validitas sudah memverifikasi keaslian transisi state. Meskipun demikian, menyimpan data secara onchain tetap penting karena memungkinkan verifikasi independen tanpa izin dari state rantai l2 yang pada gilirannya memungkinkan siapa saja untuk mengirimkan batch transaksi, mencegah operator jahat menyensor atau membekukan rantai.
+ZK-rollup tidak perlu memublikasikan banyak data transaksi secara onchain karena bukti validitas sudah memverifikasi keaslian transisi state. Meskipun demikian, menyimpan data secara onchain tetap penting karena memungkinkan verifikasi state rantai l2 yang independen dan tanpa izin, yang pada gilirannya memungkinkan siapa pun untuk mengirimkan batch transaksi, mencegah operator jahat menyensor atau membekukan rantai.
 
-Onchain diperlukan agar pengguna dapat berinteraksi dengan rollup. Tanpa akses ke data state, pengguna tidak dapat menanyakan saldo akun mereka atau memulai transaksi (misalnya, penarikan) yang bergantung pada informasi state.
+Onchain diwajibkan bagi pengguna untuk berinteraksi dengan rollup. Tanpa akses ke data state, pengguna tidak dapat menanyakan saldo akun mereka atau memulai transaksi (misalnya, penarikan) yang bergantung pada informasi state.
 
 ### Finalitas transaksi {#transaction-finality}
 
@@ -60,11 +60,15 @@ Pengguna di ZK-rollup menandatangani transaksi dan mengirimkannya ke operator l2
 
 ZK-rollup lainnya mungkin merotasi peran operator dengan menggunakan set validator [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/). Calon operator mendepositkan dana di kontrak rollup, dengan ukuran setiap stake memengaruhi peluang staker untuk dipilih guna menghasilkan batch rollup berikutnya. Stake operator dapat mengalami pemotongan jika mereka bertindak jahat, yang memberi insentif kepada mereka untuk memposting blok yang valid.
 
-#### Bagaimana ZK-rollup mempublikasikan data transaksi di Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Bagaimana ZK-rollup memublikasikan data transaksi di Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
 Seperti yang dijelaskan, data transaksi dipublikasikan di Ethereum sebagai `calldata`. `calldata` adalah area data dalam kontrak pintar yang digunakan untuk meneruskan argumen ke suatu fungsi dan berperilaku mirip dengan [memori](/developers/docs/smart-contracts/anatomy/#memory). Meskipun `calldata` tidak disimpan sebagai bagian dari state Ethereum, ia tetap ada secara onchain sebagai bagian dari [log riwayat](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) rantai Ethereum. `calldata` tidak memengaruhi state Ethereum, menjadikannya cara yang murah untuk menyimpan data secara onchain.
 
-Kata kunci `calldata` sering kali mengidentifikasi metode kontrak pintar yang dipanggil oleh suatu transaksi dan menyimpan input ke metode tersebut dalam bentuk urutan byte arbitrer. ZK-rollup menggunakan `calldata` untuk mempublikasikan data transaksi terkompresi secara onchain; operator rollup cukup menambahkan batch baru dengan memanggil fungsi yang diperlukan dalam kontrak rollup dan meneruskan data terkompresi sebagai argumen fungsi. Ini membantu mengurangi biaya bagi pengguna karena sebagian besar biaya rollup digunakan untuk menyimpan data transaksi secara onchain.
+Kata kunci `calldata` sering kali mengidentifikasi metode kontrak pintar yang dipanggil oleh suatu transaksi dan menyimpan input ke metode tersebut dalam bentuk urutan byte arbitrer. ZK-rollup menggunakan `calldata` untuk memublikasikan data transaksi terkompresi secara onchain; operator rollup cukup menambahkan batch baru dengan memanggil fungsi yang diperlukan dalam kontrak rollup dan meneruskan data terkompresi sebagai argumen fungsi. Hal ini membantu mengurangi biaya bagi pengguna karena sebagian besar biaya rollup digunakan untuk menyimpan data transaksi secara onchain.
+
+Sejak [peningkatan Dencun](/roadmap/dencun/) memperkenalkan transaksi pembawa blob ([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)), rollup juga dapat memublikasikan data mereka dalam [blob](/roadmap/danksharding/), yang dihargai di pasar biaya terpisah dan biasanya lebih murah daripada `calldata`. Blob tidak disimpan oleh lapisan eksekusi, dan protokol hanya mendefinisikan jendela minimum sekitar 18 hari di mana jaringan harus menyajikan data blob. Itu adalah kewajiban penyajian alih-alih tenggat waktu penghapusan: data blob bukanlah penyimpanan arsip permanen seperti halnya riwayat lapisan eksekusi, dan akses jangka panjang bergantung pada layanan pengarsipan. `calldata` tetap tersedia, dan rollup berbeda dalam hal mana yang mereka gunakan.
+
+Mekanisme apa pun yang digunakan rollup, data yang dipublikasikan bersifat publik. Rollup berbeda dalam hal apa yang mereka publikasikan, dengan beberapa memposting data transaksi terkompresi dan yang lainnya memposting perbedaan state, tetapi dalam kedua kasus tersebut, itu sudah cukup bagi siapa pun untuk merekonstruksi state rollup secara independen. Memublikasikan data ini adalah hal yang memungkinkan verifikasi tanpa izin; ini bukanlah mekanisme privasi.
 
 ### Komitmen state {#state-commitments}
 
@@ -107,6 +111,7 @@ ZK-STARK juga aman terhadap komputer kuantum, sementara Kriptografi Kurva Elipti
 #### Bagaimana cara kerja bukti validitas di ZK-rollup? {#validity-proofs-in-zk-rollups}
 
 ##### Pembuatan bukti
+
 Sebelum menerima transaksi, operator akan melakukan pemeriksaan biasa. Ini termasuk mengonfirmasi bahwa:
 
 - Akun pengirim dan penerima adalah bagian dari pohon state.
@@ -132,6 +137,7 @@ Proses ini berulang untuk setiap transaksi; setiap "loop" membuat akar state bar
 Sirkuit pembuktian ZK melakukan iterasi pada seluruh batch transaksi, memverifikasi urutan pembaruan yang menghasilkan akar state akhir setelah transaksi terakhir dieksekusi. Akar Merkle terakhir yang dihitung menjadi akar state kanonis terbaru dari ZK-rollup.
 
 ##### Verifikasi bukti
+
 Setelah sirkuit pembuktian memverifikasi kebenaran pembaruan state, operator l2 mengirimkan bukti validitas yang dihitung ke kontrak pemverifikasi di l1. Sirkuit verifikasi kontrak memverifikasi validitas bukti dan juga memeriksa input publik yang menjadi bagian dari bukti:
 
 - **Akar pra-state**: Akar state lama ZK-rollup (yaitu, sebelum transaksi yang diproses secara batch dieksekusi), yang mencerminkan state valid terakhir yang diketahui dari rantai l2.
@@ -178,9 +184,9 @@ Berapa banyak yang dibayar pengguna untuk transaksi di ZK-rollup bergantung pada
 
 1. **Penulisan state**: Ada biaya tetap untuk menulis ke state Ethereum (yaitu, mengirimkan transaksi di rantai blok Ethereum). ZK-rollup mengurangi biaya ini dengan melakukan pemrosesan batch transaksi dan menyebarkan biaya tetap ke beberapa pengguna.
 
-2. **Publikasi data**: ZK-rollup mempublikasikan data state untuk setiap transaksi ke Ethereum sebagai `calldata`. Biaya `calldata` saat ini diatur oleh [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang menetapkan biaya masing-masing sebesar 16 gas untuk byte bukan nol dan 4 gas untuk byte nol dari `calldata`. Biaya yang dibayarkan pada setiap transaksi dipengaruhi oleh seberapa banyak `calldata` yang perlu diposting secara onchain untuk transaksi tersebut.
+2. **Publikasi data**: ZK-rollup memublikasikan data state untuk setiap transaksi ke Ethereum sebagai `calldata` atau dalam [blob](/roadmap/danksharding/). Jadwal gas intrinsik untuk `calldata` mengenakan biaya 16 gas per byte bukan nol dan 4 gas per byte nol, sebuah pengurangan yang diperkenalkan oleh [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) mengatur harga yang dibayarkan per unit gas alih-alih jadwal byte itu sendiri. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) juga menerapkan biaya dasar untuk transaksi yang sarat data, sehingga transaksi yang didominasi oleh `calldata` dapat membayar lebih dari jadwal standar sementara transaksi yang sarat komputasi tidak terpengaruh. Biaya yang dibayarkan pada setiap transaksi dipengaruhi oleh seberapa banyak data yang perlu diposting secara onchain untuk transaksi tersebut.
 
-3. **Biaya operator l2**: Ini adalah jumlah yang dibayarkan kepada operator rollup sebagai kompensasi atas biaya komputasi yang timbul dalam memproses transaksi, mirip seperti ["biaya prioritas (tip)" transaksi](/developers/docs/gas/#how-are-gas-fees-calculated) di Mainnet Ethereum.
+3. **Biaya operator l2**: Ini adalah jumlah yang dibayarkan kepada operator rollup sebagai kompensasi atas biaya komputasi yang dikeluarkan dalam memproses transaksi, mirip seperti ["biaya prioritas (tip)" transaksi](/developers/docs/gas/#how-are-gas-fees-calculated) di Mainnet Ethereum.
 
 4. **Pembuatan dan verifikasi bukti**: Operator ZK-rollup harus menghasilkan bukti validitas untuk batch transaksi, yang memakan banyak sumber daya. Memverifikasi bukti tanpa pengetahuan di Mainnet juga membutuhkan gas (~ 500.000 gas).
 

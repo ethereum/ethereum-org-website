@@ -5,7 +5,7 @@ description: "이더리움의 AI 에이전트 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "터미널 테이블에 모여 있는 사람들"
 summaryPoints:
   - "블록체인과 상호작용하며 독립적으로 거래하는 AI"

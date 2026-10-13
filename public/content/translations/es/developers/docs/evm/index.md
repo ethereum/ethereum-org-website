@@ -91,3 +91,5 @@ Los [clientes de ejecución de Ethereum](/developers/docs/nodes-and-clients/#exe
 
 - [Comprendiendo las especificaciones de la EVM del Libro Amarillo](/developers/tutorials/yellow-paper-evm/) _– Un recorrido guiado por la especificación formal de la EVM del Libro Amarillo de Ethereum._
 - [Ingeniería inversa de un contrato](/developers/tutorials/reverse-engineering-a-contract/) _– Cómo aplicar ingeniería inversa a un contrato inteligente compilado utilizando códigos de operación de la EVM._
+
+<QuizWidget quizKey="evm" />

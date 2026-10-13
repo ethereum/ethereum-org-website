@@ -77,7 +77,7 @@ node scripts/mint-nft.js
 
 للمتعلمين البصريين، تم تلخيص الخطوات المذكورة أعلاه هنا:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 الآن، سنرغب في تحميل مستند آخر إلى Pinata. ولكن قبل أن نفعل ذلك، نحتاج إلى إنشائه!
 
@@ -105,7 +105,7 @@ node scripts/mint-nft.js
 
 بمجرد الانتهاء من تحرير ملف JSON، احفظه وقم بتحميله إلى Pinata، باتباع نفس الخطوات التي قمنا بها لتحميل الصورة.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## الخطوة 5: إنشاء نسخة من العقد الخاص بك {#instance-contract}
 

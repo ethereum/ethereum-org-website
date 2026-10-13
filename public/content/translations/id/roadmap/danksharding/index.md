@@ -2,6 +2,7 @@
 title: Danksharding
 description: Pelajari tentang Proto-Danksharding dan Danksharding - dua pembaruan berurutan untuk menskalakan Ethereum.
 lang: id
+template: roadmap
 summaryPoints:
   - Danksharding adalah pembaruan multi-fase untuk meningkatkan skalabilitas dan kapasitas Ethereum.
   - Tahap pertama, Proto-Danksharding, menambahkan blob data ke dalam blok.

@@ -77,7 +77,7 @@ Bir hesap oluşturduktan sonra:
 
 Daha görsel öğrenenler için yukarıdaki adımlar burada özetlenmiştir:
 
-![How to upload your image to Pinata](./instructionsPinata.gif)
+![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
 
 Şimdi, Pinata'ya bir belge daha yüklemek isteyeceğiz. Ancak bunu yapmadan önce onu oluşturmamız gerekiyor!
 
@@ -105,7 +105,7 @@ Json'daki verileri değiştirmekten çekinmeyin. Nitelikler (attributes) bölüm
 
 JSON dosyasını düzenlemeyi bitirdiğinizde, kaydedin ve görüntüyü yüklemek için yaptığımız adımların aynısını izleyerek Pinata'ya yükleyin.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.gif)
+![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
 
 ## 5. Adım: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
 

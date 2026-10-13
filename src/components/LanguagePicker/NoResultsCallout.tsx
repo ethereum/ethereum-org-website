@@ -1,24 +1,27 @@
-import { BaseLink } from "../ui/Link"
+import { useTranslations } from "next-intl"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import { BaseLink } from "../ui/Link"
 
 type NoResultsCalloutProps = { onClose: () => void }
 
 const NoResultsCallout = ({ onClose }: NoResultsCalloutProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   return (
     <div>
       <p className="mb-2 font-bold">{t("page-languages-want-more-header")}</p>
       <p className="text-body-medium">
-        {t("page-languages-want-more-paragraph")}
+        {t.rich("page-languages-want-more-paragraph", {
+          a: (chunks) => (
+            <BaseLink
+              key="item-no-results"
+              href="/contributing/translation-program/"
+              onClick={onClose}
+            >
+              {chunks}
+            </BaseLink>
+          ),
+        })}
       </p>
-      <BaseLink
-        key="item-no-results"
-        href="contributing/translation-program"
-        onClick={onClose}
-      >
-        {t("page-languages-want-more-link")}
-      </BaseLink>
     </div>
   )
 }

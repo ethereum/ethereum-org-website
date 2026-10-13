@@ -63,7 +63,7 @@ const NFTMintCard = async () => {
       <CardFooter>
         <Alert
           variant="update"
-          className="rounded-(--banner-radius) border-none"
+          className="w-full rounded-(--banner-radius) border-none"
         >
           <AlertContent>
             <AlertTitle>{t("page-10-year-mint-card-ended-title")}</AlertTitle>

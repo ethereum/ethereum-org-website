@@ -151,3 +151,5 @@ _உங்களுக்கு உதவிய சமூக வளத்தை�
 - [பரிவர்த்தனைகள்](/developers/docs/transactions/)
 - [எரிவாயு](/developers/docs/gas/)
 - [உரிமைச் சான்று (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

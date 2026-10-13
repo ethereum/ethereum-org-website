@@ -37,7 +37,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 你也可以將滑鼠懸停在「Apps」（應用程式）上並選擇其中一個來提取現有的 API 金鑰。你可以在這裡「View Key」（檢視金鑰），也可以「Edit App」（編輯應用程式）以將特定網域加入白名單、查看多種開發者工具以及檢視分析數據。
 
-![Gif showing a user how to pull API keys](./pull-api-keys.gif)
+![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
 ## 3. 從命令列發出請求 {#make-a-request-from-the-command-line}
 

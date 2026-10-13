@@ -71,7 +71,7 @@ lang: zh-tw
 
 - [穩定幣](/stablecoins/)
 - [建立和分發獨特的數位資產](/nft/)
-- [自動化、開放的貨幣交易所](/get-eth/#dex)
+- [自動化、開放的貨幣交易所](/defi/#swaps)
 - [去中心化遊戲](/apps/categories/gaming)
 - [自動理賠的保險單](https://etherisc.com/)
 - [讓人們建立客製化、可互操作的貨幣標準](/developers/docs/standards/tokens/)

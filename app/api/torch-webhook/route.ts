@@ -3,9 +3,6 @@ import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-
-  console.log("Torch webhook", body)
-
   const webhookId = body.webhookId
 
   if (webhookId !== process.env.TORCH_WEBHOOK_ID) {

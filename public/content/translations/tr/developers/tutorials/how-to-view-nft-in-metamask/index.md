@@ -19,7 +19,7 @@ Tebrikler! NFT eğitim serimizin en kısa ve en basit kısmına ulaştınız —
 
 Uygulamanın üst kısmındaki “Cüzdan” (Wallet) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Sepolia ağında basıldığı için ağınız olarak Sepolia'yı seçmek isteyeceksiniz.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## 2. Adım: Koleksiyonluk öğenizi MetaMask'a ekleyin {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Sepolia ağında olduğunuzda, sağdaki “Koleksiyonluklar” (Collectibles) se
 
 NFT'nizi görüntülemek için birkaç kez yenilemeniz gerekebilir — ancak orada olacaktır <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Tebrikler! Başarıyla bir NFT bastınız ve artık onu görüntüleyebilirsiniz! NFT dünyasını nasıl kasıp kavuracağınızı görmek için sabırsızlanıyoruz!

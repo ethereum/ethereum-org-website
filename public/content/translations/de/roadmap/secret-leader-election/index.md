@@ -2,6 +2,7 @@
 title: Geheime Leader-Wahl
 description: Erklärung, wie eine geheime Leader-Wahl helfen kann, Validatoren vor Angriffen zu schützen
 lang: de
+template: roadmap
 summaryPoints:
   - Die IP-Adresse von Block-Proposern kann im Voraus bekannt sein, was sie anfällig für Angriffe macht.
   - Die geheime Leader-Wahl verbirgt die Identität der Validatoren, sodass sie nicht im Voraus bekannt sind.

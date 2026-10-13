@@ -33,6 +33,9 @@ Pełna lista propozycji [ERC](https://eips.ethereum.org/erc).
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_
 
+- [Lista kontrolna integracji tokenów](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md) - _Trail of Bits_
+- [Dokumentacja OpenZeppelin: Tokeny](https://docs.openzeppelin.com/contracts/5.x/tokens) - _OpenZeppelin_
+- [Niebezpieczeństwa związane z integracją tokenów (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Powiązane samouczki {#related-tutorials}
 
 - [Lista kontrolna integracji tokenów](/developers/tutorials/token-integration-checklist/) _– Lista rzeczy do rozważenia podczas interakcji z tokenami._

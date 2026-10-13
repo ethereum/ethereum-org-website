@@ -19,7 +19,7 @@ Comme prérequis, vous devriez déjà avoir installé MetaMask sur mobile, et il
 
 En haut de l'application, appuyez sur le bouton « Portefeuille », après quoi vous serez invité à sélectionner un réseau. Comme notre NFT a été frappé sur le réseau Sepolia, vous devrez sélectionner Sepolia comme réseau.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## Étape 2 : Ajoutez votre objet de collection à MetaMask {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ Une fois que vous êtes sur le réseau Sepolia, sélectionnez l'onglet « Objets
 
 Vous devrez peut-être rafraîchir la page quelques fois pour afficher votre NFT — mais il sera là <Emoji text="😄" size={1} /> !
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 Félicitations ! Vous avez frappé un NFT avec succès, et vous pouvez maintenant l'afficher ! Nous avons hâte de voir comment vous allez conquérir le monde des NFT !

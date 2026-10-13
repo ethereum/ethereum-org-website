@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/fusaka/index.md",
-  "generatedAt": "2026-06-08T10:15:28.533Z",
-  "rootHash": "67f558495c4b",
+  "generatedAt": "2026-09-30T18:29:41.217Z",
+  "rootHash": "07b668ab22d4",
   "tree": {
-    "contentHash": "a8319ae7868f",
-    "anchorHash": "bc4d4c823d6a",
+    "contentHash": "8886bd13fece",
+    "anchorHash": "2fe8b8927415",
     "children": {
       "frontmatter:title": {
-        "contentHash": "364ef645943a",
+        "contentHash": "9667d69eae81",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:metaTitle": {
@@ -23,9 +23,27 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "frontmatter:authors": {
+      "frontmatter:template": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bd71957f15b3"
+        "anchorHash": "7fef9479c8bc"
+      },
+      "frontmatter:authors": {
+        "contentHash": "f5818652a990",
+        "anchorHash": "bd3ff7caf85d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e979deb28b2f"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "8a2c0f8bbcfe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:2": {
         "contentHash": "fc8454eb8e11",
@@ -47,7 +65,7 @@
         "contentHash": "269295e11d33",
         "anchorHash": "e3b0c44298fc"
       },
-      "component:10": {
+      "component:11": {
         "contentHash": "1330129f33a0",
         "anchorHash": "f3451d4448cb",
         "children": {
@@ -100,7 +118,7 @@
           "component:0"
         ]
       },
-      "component:11": {
+      "component:12": {
         "contentHash": "4b9f7d802648",
         "anchorHash": "5774dffda81d",
         "children": {
@@ -111,7 +129,7 @@
         }
       },
       "improvements-in-fusaka": {
-        "contentHash": "866200856e8c",
+        "contentHash": "1c3b4ce62571",
         "anchorHash": "4d46d59adc96",
         "labelHash": "fe24a5ee3275",
         "children": {
@@ -299,7 +317,7 @@
             ]
           },
           "scale-l1": {
-            "contentHash": "79e7febfe676",
+            "contentHash": "41e424a663a6",
             "anchorHash": "4caecd1e334f",
             "labelHash": "595782b5e8d2",
             "children": {
@@ -498,7 +516,7 @@
                 ]
               },
               "set-default-gas-limit-to-60-million": {
-                "contentHash": "aabf10d0a572",
+                "contentHash": "4c4c957d94ac",
                 "anchorHash": "29d7a8cc169e",
                 "labelHash": "bdf597a6d433",
                 "children": {
@@ -507,7 +525,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:1": {
-                    "contentHash": "854808654767",
+                    "contentHash": "126ced1f3e98",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:0": {
@@ -755,7 +773,7 @@
         ]
       },
       "faq": {
-        "contentHash": "747d577d40da",
+        "contentHash": "59e3336ee754",
         "anchorHash": "2984f36f83af",
         "labelHash": "dbc468a14b60",
         "children": {
@@ -1025,7 +1043,7 @@
             ]
           },
           "how-does-fusaka-affect-bandwidth-requirements-for-nodes-and-validators": {
-            "contentHash": "e8303925275c",
+            "contentHash": "3dd2c7a0475e",
             "anchorHash": "26c3d92d88b6",
             "labelHash": "1e62415449dc",
             "children": {
@@ -1065,7 +1083,7 @@
                 ]
               },
               "solo-stakers": {
-                "contentHash": "e7ad40734df5",
+                "contentHash": "d8479042567f",
                 "anchorHash": "4b9f7d802648",
                 "labelHash": "99b82be383a1",
                 "children": {
@@ -1074,7 +1092,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:0": {
-                    "contentHash": "7ba790e58a94",
+                    "contentHash": "7695f662f004",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
@@ -1383,18 +1401,19 @@
       "frontmatter:metaTitle",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:authors",
       "prose:2",
       "link:0",
       "prose:3",
       "link:1",
       "prose:4",
-      "component:10",
       "component:11",
+      "component:12",
       "improvements-in-fusaka",
       "faq",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

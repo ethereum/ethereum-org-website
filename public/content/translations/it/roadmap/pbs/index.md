@@ -2,6 +2,7 @@
 title: Separazione proponente-costruttore
 description: Scopri come e perché i validatori di Ethereum divideranno le loro responsabilità di costruzione e trasmissione dei blocchi.
 lang: it
+template: roadmap
 ---
 
 Gli attuali validatori di [Ethereum](/) creano _e_ trasmettono i blocchi. Raggruppano le transazioni di cui sono venuti a conoscenza tramite la rete gossip e le confezionano in un blocco che viene inviato ai peer sulla rete Ethereum. La **separazione proponente-costruttore (PBS)** divide questi compiti tra più validatori. I costruttori di blocchi diventano responsabili della creazione dei blocchi e della loro offerta al proponente del blocco in ogni slot. Il proponente del blocco non può vedere i contenuti del blocco, sceglie semplicemente quello più redditizio, ricevendo una commissione dal costruttore di blocchi (o il costruttore paga un'offerta al proponente) prima di inviare il blocco ai suoi peer.

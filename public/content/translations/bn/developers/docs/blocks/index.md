@@ -151,3 +151,5 @@ _আপনাকে সাহায্য করেছে এমন কোনো
 - [ট্রানজ্যাকশন](/developers/docs/transactions/)
 - [গ্যাস](/developers/docs/gas/)
 - [প্রুফ-অফ-স্টেক (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

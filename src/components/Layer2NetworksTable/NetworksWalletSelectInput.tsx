@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { FilterInputState } from "@/lib/types"
 
@@ -12,8 +13,6 @@ import {
 } from "@/components/ui/select"
 
 import { walletsData } from "@/data/wallets/wallet-data"
-
-import useTranslation from "@/hooks/useTranslation"
 
 interface NetworksWalletSelectInputProps {
   filterIndex: number
@@ -33,7 +32,7 @@ const NetworksWalletSelectInput = ({
   updateFilterState,
 }: NetworksWalletSelectInputProps) => {
   const [searchQuery, setSearchQuery] = useState("")
-  const { t } = useTranslation("page-layer-2-networks")
+  const t = useTranslations("page-layer-2-networks")
 
   const filteredWallets = walletsData
     .filter((wallet) =>

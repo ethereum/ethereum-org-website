@@ -169,6 +169,11 @@
   "page-upgrades-upgrades-beacon-chain": "La Beacon Chain",
   "page-upgrades-upgrades-guide": "Guida agli aggiornamenti di Ethereum",
   "page-upgrades-upgrades-docking": "The Merge",
+  "page-upgrades-upgrades-dencun": "Dencun",
+  "page-upgrades-upgrades-pectra": "Pectra",
+  "page-upgrades-upgrades-fusaka": "Fusaka",
+  "page-upgrades-upgrades-glamsterdam": "Glamsterdam",
+  "page-upgrades-upgrades-forks": "Fork di Ethereum",
   "page-upgrades-energy-consumption": "Maggiori informazioni sul consumo energetico di Ethereum",
   "page-upgrades-upgrading": "Aggiornare Ethereum a nuove vette radicali",
   "page-roadmap-vision": "La visione",
@@ -204,5 +209,6 @@
   "docs-nav-proof-of-stake": "Proof-of-Stake",
   "docs-nav-proof-of-work": "Prova di lavoro (PoW)",
   "page-upgrades-get-involved-ethresearch-1": "Sharding",
-  "page-upgrades-get-involved-ethresearch-2": "The Merge"
+  "page-upgrades-get-involved-ethresearch-2": "The Merge",
+  "page-upgrades-upgrades-hegota": "Hegotá"
 }

@@ -227,7 +227,7 @@ Ardından, projemizin kök dizininde bir `.env` dosyası oluşturun ve MetaMask 
 
 - HTTP Alchemy API URL'sini almak ve panonuza kopyalamak için aşağıya bakın
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 `.env` dosyanız artık şu şekilde görünmelidir:
 

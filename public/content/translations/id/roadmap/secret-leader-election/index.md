@@ -2,6 +2,7 @@
 title: Pemilihan pemimpin rahasia
 description: Penjelasan tentang bagaimana pemilihan pemimpin rahasia dapat membantu melindungi validator dari serangan
 lang: id
+template: roadmap
 summaryPoints:
   - Alamat IP dari pengusul blok dapat diketahui sebelumnya, membuat mereka rentan terhadap serangan
   - Pemilihan pemimpin rahasia menyembunyikan identitas validator sehingga mereka tidak dapat diketahui sebelumnya

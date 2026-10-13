@@ -238,3 +238,7 @@ _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 - [Akun](/developers/docs/accounts/)
 - [Mesin virtual Ethereum (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

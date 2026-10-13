@@ -238,3 +238,7 @@ _知道对您有帮助的社区资源吗？编辑本页面并添加它！_
 - [账户](/developers/docs/accounts/)
 - [以太坊虚拟机 (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

@@ -2,6 +2,7 @@
 title: Pemisahan pengusul-pembangun
 description: Pelajari bagaimana dan mengapa validator Ethereum akan memisahkan tanggung jawab pembangunan blok dan penyiaran blok mereka.
 lang: id
+template: roadmap
 ---
 
 Validator [Ethereum](/) saat ini membuat _dan_ menyiarkan blok. Mereka menggabungkan transaksi yang telah mereka dengar melalui jaringan gosip dan mengemasnya ke dalam sebuah blok yang dikirimkan ke rekan-rekan (peers) di jaringan Ethereum. **Pemisahan pengusul-pembangun (PBS)** membagi tugas-tugas ini ke beberapa validator. Pembangun blok menjadi bertanggung jawab untuk membuat blok dan menawarkannya kepada pengusul blok di setiap slot. Pengusul blok tidak dapat melihat isi blok tersebut, mereka hanya memilih yang paling menguntungkan, menerima biaya dari pembangun blok (atau pembangun membayar tawaran kepada pengusul) sebelum mengirimkan blok tersebut ke rekan-rekannya.

@@ -8,7 +8,7 @@ import type { TopicConfig, TopicDropdownItem } from "@/data/topics"
 /**
  * Maps a topic's `dropdown` config into the `ButtonDropdownList` the
  * `ButtonDropdown` component consumes, translating `textKey`s and preserving
- * nested `items` (rendered indented). `eventAction` is parameterized so each
+ * nested `items` (rendered with a leading dash). `eventAction` is parameterized so each
  * call site keeps its existing Matomo casing.
  */
 export const buildTopicDropdown = (

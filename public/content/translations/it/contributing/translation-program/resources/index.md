@@ -10,7 +10,6 @@ Di seguito puoi trovare alcune guide e strumenti utili per i traduttori di ether
 ## Guide {#guides}
 
 - [Guida di stile per la traduzione](/contributing/translation-program/translators-guide/) _– istruzioni e suggerimenti per i traduttori di ethereum.org_
-- [Domande frequenti (FAQ) sulla traduzione](/contributing/translation-program/faq/) _– domande e risposte frequenti sul Programma di Traduzione di ethereum.org_
 - [Guida all'editor online di Crowdin](https://support.crowdin.com/online-editor/) _– una guida approfondita all'uso dell'editor online di Crowdin e ad alcune delle sue funzionalità avanzate_
 
 ## Strumenti {#tools}
@@ -24,7 +23,7 @@ Di seguito puoi trovare alcune guide e strumenti utili per i traduttori di ether
 
 ## Comunità {#communities}
 
-- [Gruppi di traduzione Discord specifici per lingua](https://discord.gg/ethereum-org)
+- [Gruppi di traduzione Discord specifici per lingua](/discord/)
   _– un'iniziativa per connettere i traduttori di ethereum.org ai Gruppi di Traduzione_
 - [Gruppo dei traduttori cinesi](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– pagina Notion per facilitare il coordinamento tra i traduttori cinesi_
@@ -40,9 +39,9 @@ Per rimanere aggiornato sugli ultimi progressi del Programma di Traduzione, puoi
 
 ## Orari di ricevimento per i traduttori {#office-hours}
 
-Teniamo degli orari di ricevimento per i traduttori il secondo mercoledì di ogni mese. Si svolgono nel canale vocale #office-hours sul [Discord di ethereum.org](https://discord.gg/ethereum-org), dove puoi trovare anche gli orari esatti e ulteriori dettagli.
+Teniamo degli orari di ricevimento per i traduttori il secondo mercoledì di ogni mese. Si svolgono nel canale vocale #office-hours sul [Discord di ethereum.org](/discord/), dove puoi trovare anche gli orari esatti e ulteriori dettagli.
 
-Gli orari di ricevimento consentono ai nostri traduttori di fare domande sul processo di traduzione, fornire feedback sul programma, condividere le proprie idee o semplicemente chiacchierare con il team principale di ethereum.org.
+Gli orari di ricevimento consentono ai nostri traduttori di fare domande sul processo di traduzione, fornire feedback sul programma, condividere le loro idee o semplicemente chiacchierare con il team principale di ethereum.org.
 Infine, vogliamo utilizzare queste chiamate per comunicare i recenti sviluppi del Programma di Traduzione e condividere suggerimenti e istruzioni chiave con i nostri collaboratori.
 
 Se sei un traduttore di ethereum.org o vorresti diventarlo, sentiti libero di unirti a noi durante una di queste sessioni.

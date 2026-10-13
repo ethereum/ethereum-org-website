@@ -55,21 +55,20 @@ Potřebujete nejprve základnější úvod? Podívejte se na [ethereum.org/learn
 
 ## Projekty a nástroje v Pythonu {#python-projects-and-tools}
 
-### Aktivní: {#active}
-
-- [Web3.py](https://github.com/ethereum/web3.py) – _Knihovna v Pythonu pro interakci s Ethereem_
-- [Vyper](https://github.com/ethereum/vyper/) – _Jazyk pro chytré kontrakty v pythonovském stylu pro EVM_
-- [Ape](https://github.com/ApeWorX/ape) – _Nástroj pro vývoj chytrých kontraktů pro programátory v Pythonu, datové vědce a bezpečnostní experty_
-- [py-evm](https://github.com/ethereum/py-evm) – _Implementace Ethereum Virtual Machine_
-- [eth-tester](https://github.com/ethereum/eth-tester) – _Nástroje pro testování aplikací založených na Ethereu_
-- [eth-utils](https://github.com/ethereum/eth-utils/) – _Užitečné funkce pro práci s kódovými základnami souvisejícími s Ethereem_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) – _Python wrapper pro kompilátor Solidity solc s podporou verze 0.5.x_
-- [pymaker](https://github.com/makerdao/pymaker) – _API v Pythonu pro kontrakty Maker_
-- [siwe](https://github.com/signinwithethereum/siwe-py) – _Přihlášení pomocí Etherea (SIWE) pro Python_
-- [Web3 DeFi pro integrace s Ethereem](https://github.com/tradingstrategy-ai/web3-ethereum-defi) – _Balíček v Pythonu s hotovými integracemi pro ERC-20, Uniswap a další populární projekty_
-- [Wake](https://getwake.io) – _Komplexní framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu (jazykový server – [Nástroje pro Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) – _SDK v Pythonu pro analytiku decentralizovaných financí (DeFi) a simulaci automatizovaného tvůrce trhu (AMM) napříč Uniswap V2/V3, Balancer a Curve_
-
+- [Web3.py](https://github.com/ethereum/web3.py) - _Knihovna v Pythonu pro interakci s Ethereem_
+- [Vyper](https://github.com/ethereum/vyper/) - _Jazyk pro chytré kontrakty v pythonovském stylu pro EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Nativní testovací nástroj pro Vyper; interpret s forkováním Mainnetu, laděním a přehlednými výpisy chyb (tracebacks)_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Framework pro vývoj a testování chytrých kontraktů pro Vyper a Python, postavený na Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _Nástroj pro vývoj chytrých kontraktů pro programátory v Pythonu, datové vědce a bezpečnostní profesionály_
+- [py-evm](https://github.com/ethereum/py-evm) - _Implementace virtuálního stroje Etherea_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _Nástroje pro testování aplikací založených na Ethereu_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _Pomocné funkce pro práci s kódovými základnami souvisejícími s Ethereem_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper v Pythonu pro kompilátor Solidity solc s podporou verze 0.5.x_
+- [pymaker](https://github.com/makerdao/pymaker) - _API v Pythonu pro kontrakty Maker_
+- [siwe](https://github.com/signinwithethereum/siwe-py) - _Přihlášení pomocí Etherea (SIWE) pro Python_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Balíček v Pythonu s hotovými integracemi pro ERC-20, Uniswap a další populární projekty_
+- [Wake](https://getwake.io) - _Komplexní framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu (jazykový server – [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK v Pythonu pro analytiku decentralizovaných financí (DeFi) a simulaci automatizovaných tvůrců trhu (AMM) napříč Uniswap V2/V3, Balancer a Curve_
 ### Archivované / Již neudržované: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) – _Klient Etherea v Pythonu_

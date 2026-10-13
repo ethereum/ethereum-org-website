@@ -101,6 +101,8 @@ This example should give you a sense of what Solidity contract syntax is like. F
   - Infinite-length loops
   - Binary fixed points
 
+Since v0.4.0, Vyper supports a [module system](https://docs.vyperlang.org/en/stable/using-modules.html). Code reuse is achieved through composition, rather than class inheritance.
+
 For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Important links {#important-links-1}

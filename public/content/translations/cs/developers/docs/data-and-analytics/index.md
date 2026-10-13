@@ -60,10 +60,18 @@ Chcete-li začít, navštivte [průvodce pro rychlý start na Ethereu](https://a
 
 Chcete-li začít, navštivte [dokumentaci](https://docs.codex.io), vyzkoušejte [Explorer](https://docs.codex.io/explore) nebo se zaregistrujte na [řídicím panelu](https://dashboard.codex.io/signup).
 
+
+[Mobula](https://mobula.io/) je vysoce výkonné krypto datové API poskytující tržní data v reálném čase i historická data, metadata tokenů, portfolia peněženek a onchain analytiku napříč více než 90 blockchainy. Vývojáři mají přístup k REST a GraphQL koncovým bodům pro ceny tokenů, tržní kapitalizace, objemy obchodů, data o likviditě a zůstatky peněženek napříč více řetězci, aniž by museli provozovat vlastní infrastrukturu. Mobula nabízí jak bezplatné (100 tisíc požadavků/měsíc), tak placené plány pro produkční aplikace.
+
+Chcete-li začít, navštivte [dokumentaci](https://docs.mobula.io), prozkoumejte [referenční příručku API](https://docs.mobula.io/reference/) nebo se zaregistrujte na [řídicím panelu](https://mobula.io/).
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) je jazyk podobný SQL navržený pro dotazování na řetězce EVM (Ethereum Virtual Machine). Konečným cílem EQL je podporovat složité relační dotazy na prvotřídní entity EVM řetězce (bloky, účty a transakce) a zároveň poskytnout vývojářům a výzkumníkům ergonomickou syntaxi pro každodenní použití. S EQL mohou vývojáři načítat blockchainová data pomocí známé syntaxe podobné SQL a eliminovat potřebu složitého standardního (boilerplate) kódu. EQL podporuje standardní požadavky na blockchainová data (např. získání nonce a zůstatku účtu na Ethereu nebo načtení aktuální velikosti bloku a časového razítka) a neustále přidává podporu pro složitější požadavky a sady funkcí.
 
+
+[Envio](https://envio.dev/) je indexovací framework, který mění onchain události na dotazovatelné GraphQL API. Podporuje Ethereum a jakýkoli řetězec kompatibilní s EVM. Vývojáři píší obslužné rutiny událostí v TypeScriptu, JavaScriptu nebo ReScriptu, aby poskytovali data v reálném čase i historická data, s podporou reorganizací, víceřetězcovým indexováním a spravovaným hostingem na Envio Cloud nebo vlastním hostingem.
+
+Chcete-li začít, postupujte podle [průvodce pro rychlý start HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) a vytvořte, nasaďte a dotazujte se na indexer.
 ## Další čtení {#further-reading}
 
 - [Zkoumání krypto dat I: Architektury toku dat](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

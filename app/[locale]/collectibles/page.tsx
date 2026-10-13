@@ -44,8 +44,10 @@ async function fetchStats() {
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-collectibles")
+
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-collectibles")
 
   // Fetch data
   const [badges, stats]: [Badge[], Stats] = await Promise.all([
@@ -159,6 +161,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-collectibles")
   return await getMetadata({
     locale,

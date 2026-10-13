@@ -55,21 +55,20 @@ Besoin d'une introduction plus basique d'abord ? Consultez [ethereum.org/learn](
 
 ## Projets et outils Python {#python-projects-and-tools}
 
-### Actifs : {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _Bibliothèque Python pour interagir avec Ethereum_
-- [Vyper](https://github.com/ethereum/vyper/) - _Langage de contrat intelligent de type Python pour l'EVM_
-- [Ape](https://github.com/ApeWorX/ape) - _L'outil de développement de contrats intelligents pour les Pythonistes, les scientifiques des données et les professionnels de la sécurité_
+- [Vyper](https://github.com/ethereum/vyper/) - _Langage de contrat intelligent pythonique pour l'EVM_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Outil de test natif de Vyper ; un interpréteur avec forking du Réseau principal, débogage et traces d'exécution lisibles_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Un framework de développement et de test de contrats intelligents pour Vyper et Python, basé sur Titanoboa_
+- [Ape](https://github.com/ApeWorX/ape) - _L'outil de développement de contrats intelligents pour les Pythonistas, les Data Scientists et les professionnels de la sécurité_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implémentation de la machine virtuelle Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Outils pour tester les applications basées sur Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Fonctions utilitaires pour travailler avec des bases de code liées à Ethereum_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python autour du compilateur Solidity solc avec prise en charge de la version 0.5.x_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python pour le compilateur Solidity solc avec prise en charge de la version 0.5.x_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python pour les contrats Maker_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Se connecter avec Ethereum (SIWE) pour Python_
-- [Web3 DeFi pour les intégrations Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un paquet Python avec des intégrations prêtes à l'emploi pour ERC-20, Uniswap et d'autres projets populaires_
-- [Wake](https://getwake.io) - _Framework Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, l'analyse des vulnérabilités et la navigation dans le code (serveur de langage - [Outils pour Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un paquet Python avec des intégrations prêtes à l'emploi pour ERC-20, Uniswap et d'autres projets populaires_
+- [Wake](https://getwake.io) - _Framework Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, l'analyse de vulnérabilités et la navigation dans le code (serveur de langage - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 - [DeFiPy](https://github.com/defipy-devs/defipy) - _SDK Python pour l'analyse de la finance décentralisée (DeFi) et la simulation de teneur de marché automatisé (AMM) sur Uniswap V2/V3, Balancer et Curve_
-
 ### Archivés / Plus maintenus : {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Client Ethereum en Python_

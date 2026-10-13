@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/secret-leader-election/index.md",
-  "generatedAt": "2026-06-08T10:38:52.227Z",
-  "rootHash": "77b423f0ac62",
+  "generatedAt": "2026-07-23T00:25:00.440Z",
+  "rootHash": "c3322f4e5b5a",
   "tree": {
-    "contentHash": "8a40ba09e0f8",
-    "anchorHash": "f5254d082b3a",
+    "contentHash": "0b5f319562ea",
+    "anchorHash": "63a46722f4b0",
     "children": {
       "frontmatter:title": {
         "contentHash": "9d1a2ca7f4a1",
@@ -19,9 +19,32 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
-      "frontmatter:summaryPoints": {
+      "frontmatter:template": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "anchorHash": "3de1580490d2"
+      },
+      "frontmatter:summaryPoints": {
+        "contentHash": "13022021f066",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "26b589ffe981",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "2d18588b626c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "64fd4fbbfa4f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:4": {
         "contentHash": "06138b2a5332",
@@ -185,6 +208,7 @@
       "frontmatter:title",
       "frontmatter:description",
       "frontmatter:lang",
+      "frontmatter:template",
       "frontmatter:summaryPoints",
       "prose:4",
       "link:0",
@@ -201,5 +225,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
 }

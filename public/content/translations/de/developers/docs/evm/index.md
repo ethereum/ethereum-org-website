@@ -91,3 +91,5 @@ Im Laufe der zehnjährigen Geschichte von Ethereum wurde die EVM mehrfach übera
 
 - [Die EVM-Spezifikationen des Yellow Papers verstehen](/developers/tutorials/yellow-paper-evm/) _– Ein geführter Durchgang durch die formale EVM-Spezifikation aus dem Ethereum Yellow Paper._
 - [Reverse Engineering eines Vertrags](/developers/tutorials/reverse-engineering-a-contract/) _– Wie man einen kompilierten Smart Contract mithilfe von EVM-Opcodes zurückentwickelt (Reverse Engineering)._
+
+<QuizWidget quizKey="evm" />

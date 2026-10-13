@@ -231,7 +231,7 @@ Hardhat — это среда разработки для компиляции, 
 
 - См. ниже, чтобы получить HTTP URL API Alchemy и скопировать его в буфер обмена.
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 Ваш `.env` теперь должен выглядеть так:
 

@@ -79,3 +79,7 @@ summary: "이더리움의 앱은 무료이고 전 세계에서 사용할 수 있
 <ExpandableCard title="최고의 암호화폐 지갑은 무엇인가요?" visible>
   <p>암호화폐 지갑을 사용하면 토큰을 보관하고 이더리움 계정을 관리할 수 있습니다. 각각 다른 목적을 가진 훌륭한 지갑들이 많이 있습니다. 자신에게 가장 적합한 지갑을 찾으려면 [지갑 목록](/wallets/find-wallet)을 방문하세요.</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

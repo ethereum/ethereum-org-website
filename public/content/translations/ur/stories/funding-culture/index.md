@@ -64,7 +64,7 @@ lang: ur
 - پلیئر میں براہ راست کہانی کے فیصلوں پر ووٹ دینے کے لیے اسٹیک کیا
 - ایک <span dir="ltr">ERC-20</span> (ہمارا اٹینشن ٹوکن) کمایا 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 <span dir="ltr">ERC-20</span> کو ایک بانڈنگ کرو (bonding curve) پر جاری کیا گیا تھا۔ آپ جتنی جلدی اور جتنا زیادہ شامل ہوتے، اتنا ہی زیادہ کماتے۔ ووٹ (جیسے مرکزی کردار کا نام میرائی رکھنا) <span dir="ltr">Snapshot</span> کے ذریعے ہوئے۔ 
 

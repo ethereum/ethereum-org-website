@@ -19,7 +19,7 @@ published: 2021-04-22
 
 في الجزء العلوي من التطبيق، اضغط على زر "المحفظة" (Wallet)، وبعد ذلك سيُطلب منك تحديد شبكة. نظرًا لأن <span dir="ltr">NFT</span> الخاص بنا تم سكه على شبكة <span dir="ltr">Sepolia</span>، فستحتاج إلى تحديد <span dir="ltr">Sepolia</span> كشبكتك.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## الخطوة 2: إضافة العنصر القابل للجمع الخاص بك إلى ميتاماسك {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 قد تحتاج إلى التحديث بضع مرات لعرض <span dir="ltr">NFT</span> الخاص بك — ولكنه سيكون هناك <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 تهانينا! لقد قمت بنجاح بسك <span dir="ltr">NFT</span>، ويمكنك الآن عرضه! لا يسعنا الانتظار لرؤية كيف ستكتسح عالم <span dir="ltr">NFT</span>!

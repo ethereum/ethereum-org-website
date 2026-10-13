@@ -71,7 +71,7 @@ Finematicsによるスマート・コントラクトの解説をご覧くださ�
 
 - [ステーブルコイン](/stablecoins/)
 - [ユニークなデジタル資産の作成と配布](/nft/)
-- [自動化されたオープンな通貨取引所](/get-eth/#dex)
+- [自動化されたオープンな通貨取引所](/defi/#swaps)
 - [分散型ゲーム](/apps/categories/gaming)
 - [自動的に支払いが行われる保険契約](https://etherisc.com/)
 - [カスタマイズされた相互運用可能な通貨を作成できる標準](/developers/docs/standards/tokens/)

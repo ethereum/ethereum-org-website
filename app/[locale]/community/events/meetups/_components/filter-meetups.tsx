@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { EventItem } from "@/lib/types"
 
@@ -12,13 +12,11 @@ import EventCard from "../../_components/event-card"
 import NoResultsAlert from "../../_components/no-results-alert"
 import { sanitize } from "../../utils"
 
-import useTranslation from "@/hooks/useTranslation"
-
 type FilterMeetupsProps = { events: EventItem[] }
 
 export default function FilterMeetups({ events }: FilterMeetupsProps) {
   const locale = useLocale()
-  const { t } = useTranslation("page-community-events")
+  const t = useTranslations("page-community-events")
   const [filter, setFilter] = useState<string>("")
 
   const filterEvents = (query: string): EventItem[] => {

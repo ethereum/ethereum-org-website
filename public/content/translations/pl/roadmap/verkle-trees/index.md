@@ -2,6 +2,7 @@
 title: Drzewa Verkle
 description: Opis wysokiego poziomu drzew Verkle i tego, jak zostaną wykorzystane do aktualizacji Ethereum
 lang: pl
+template: roadmap
 summaryPoints:
   - Dowiedz się, czym są drzewa Verkle
   - Przeczytaj, dlaczego drzewa Verkle są przydatną aktualizacją dla Ethereum

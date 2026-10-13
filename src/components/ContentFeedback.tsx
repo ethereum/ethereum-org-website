@@ -1,7 +1,7 @@
 "use client"
 
 import { type ReactNode, useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -15,7 +15,6 @@ import { Button } from "./ui/buttons/Button"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
-import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 
 type ContentFeedbackProps = {
@@ -28,7 +27,7 @@ const ContentFeedback = ({
   isArticle,
   ...props
 }: ContentFeedbackProps) => {
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
   const locale = useLocale()

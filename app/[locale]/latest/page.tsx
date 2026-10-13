@@ -101,7 +101,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {highlights.length > 0 && (
             <Section className="space-y-8 px-4 md:px-8">
               <h2>{t("page-latest-highlights-heading")}</h2>
-              <Grid balanced={2} className="gap-6">
+              <Grid balanced={2}>
                 {highlights.map((highlight) => (
                   <LatestCard
                     key={highlight.href}
@@ -204,6 +204,8 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-latest")
 
   const metadata = await getMetadata({
@@ -218,10 +220,7 @@ export async function generateMetadata(props: {
     alternates: {
       ...(metadata.alternates ?? {}),
       types: {
-        "application/rss+xml": getFullUrl(locale, "/latest/feed.xml").replace(
-          /\/$/,
-          ""
-        ),
+        "application/rss+xml": getFullUrl(locale, "/latest/feed/"),
       },
     },
   }

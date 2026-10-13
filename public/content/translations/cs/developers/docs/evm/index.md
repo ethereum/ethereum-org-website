@@ -91,3 +91,5 @@ Během desetileté historie Etherea prošlo EVM několika revizemi a existuje n�
 
 - [Porozumění specifikacím EVM v Yellow Paperu](/developers/tutorials/yellow-paper-evm/) _– Průvodce formální specifikací EVM z dokumentu Ethereum Yellow Paper._
 - [Reverzní inženýrství kontraktu](/developers/tutorials/reverse-engineering-a-contract/) _– Jak provést reverzní inženýrství zkompilovaného chytrého kontraktu pomocí operačních kódů EVM._
+
+<QuizWidget quizKey="evm" />

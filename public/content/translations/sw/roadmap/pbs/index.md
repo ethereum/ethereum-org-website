@@ -2,6 +2,7 @@
 title: Utengano wa mpendekezaji na mjengaji
 description: Jifunze jinsi na kwa nini wathibitishaji wa Ethereum watagawanya majukumu yao ya kujenga kitalu na kutangaza kitalu.
 lang: sw
+template: roadmap
 ---
 
 Wathibitishaji wa [Ethereum](/) wa sasa wanaunda _na_ kutangaza vitalu. Wanakusanya pamoja miamala ambayo wamesikia kupitia mtandao wa tetesi na kuifunga katika kitalu ambacho kinatumwa kwa wenzao kwenye mtandao wa Ethereum. **Utengano wa mpendekezaji na mjengaji (PBS)** unagawanya majukumu haya kwa wathibitishaji wengi. Wajenga kizuizi wanakuwa na jukumu la kuunda vitalu na kuvitoa kwa mpendekezaji wa bloku katika kila sloti. Mpendekezaji wa bloku hawezi kuona yaliyomo kwenye kitalu, anachagua tu kile chenye faida zaidi, akipokea ada kutoka kwa mjenga kizuizi (au mjenzi analipa zabuni kwa mpendekezaji) kabla ya kutuma kitalu kwa wenzao.

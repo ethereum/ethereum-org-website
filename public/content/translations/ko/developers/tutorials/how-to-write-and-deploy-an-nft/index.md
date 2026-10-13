@@ -231,7 +231,7 @@ ERC-721 생성자에서 "MyNFT"와 "NFT"라는 두 개의 문자열을 전달하
 
 - HTTP Alchemy API URL을 가져와 클립보드에 복사하려면 아래를 참조하세요.
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
 
 이제 `.env` 파일은 다음과 같은 모습이어야 합니다.
 

@@ -91,3 +91,5 @@ EVM च्या सर्व अंमलबजावणींनी इथे�
 
 - [येलो पेपरचे EVM तपशील समजून घेणे](/developers/tutorials/yellow-paper-evm/) _– इथेरियम येलो पेपरमधील औपचारिक EVM तपशीलाचे मार्गदर्शित वॉकथ्रू._
 - [कॉन्ट्रॅक्टचे रिव्हर्स इंजिनिअरिंग](/developers/tutorials/reverse-engineering-a-contract/) _– EVM ऑपकोड्स वापरून संकलित स्मार्ट कॉन्ट्रॅक्टचे रिव्हर्स-इंजिनिअरिंग कसे करावे._
+
+<QuizWidget quizKey="evm" />

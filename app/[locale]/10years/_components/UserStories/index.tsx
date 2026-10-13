@@ -1,13 +1,11 @@
 "use client"
-
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { Story } from "@/lib/types"
 
 import StoryCard from "@/components/StoryCard"
 import { Button } from "@/components/ui/buttons/Button"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type StoriesProps = {
   stories: Story[]
@@ -16,7 +14,7 @@ type StoriesProps = {
 const STORIES_SHOWN = 5
 
 const Stories = ({ stories }: StoriesProps) => {
-  const { t } = useTranslation("page-10-year-anniversary")
+  const tCommon = useTranslations("common")
   const [storiesToShow, setStoriesToShow] = useState(STORIES_SHOWN)
 
   const visibleStories = stories.slice(0, storiesToShow)
@@ -24,7 +22,7 @@ const Stories = ({ stories }: StoriesProps) => {
   return (
     <div className="flex flex-1 flex-col gap-8">
       {visibleStories.map((story) => (
-        <StoryCard key={story.name} story={story} />
+        <StoryCard key={story.storyKey} story={story} />
       ))}
       {/* Show more button only if there are more stories to show */}
       {storiesToShow < stories.length && (
@@ -42,7 +40,7 @@ const Stories = ({ stories }: StoriesProps) => {
             }}
             variant="outline"
           >
-            {t("common:show-more")}
+            {tCommon("show-more")}
           </Button>
         </div>
       )}

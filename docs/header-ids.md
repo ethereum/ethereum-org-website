@@ -24,6 +24,10 @@ For example:
 
 Note that for short headers, simply lowercasing and using hyphens instead of spaces is sufficient. For longer headers, a shortened concise version of the header is encouraged. Must not repeat the same ID on the same page.
 
+## Automated enforcement
+
+Header IDs are enforced automatically for English content files (`public/content/`, excluding translations) by markdownlint via the pre-commit hook (config in `.markdownlint-cli2.jsonc`, custom rules in `.markdownlint-rules/`). Run `pnpm lint:md:fix` to auto-add missing IDs and fix duplicates.
+
 ## How are these used?
 
 When these headers are rendered, they come with a link icon attached to it that can be used to quickly link to that section of the document.

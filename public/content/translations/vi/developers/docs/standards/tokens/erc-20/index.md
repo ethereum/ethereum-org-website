@@ -176,12 +176,11 @@ Một số tiêu chuẩn thay thế đã ra đời từ vấn đề này như [E
 - [Alchemy - Hướng dẫn về các token ERC20 trong Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Các tiêu chuẩn token có thể thay thế khác {#fungible-token-standards}
-
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
-- [ERC-4626 - Các kho tiền được token hóa](/developers/docs/standards/tokens/erc-4626)
-
+- [ERC-4626 - Kho tiền được token hóa](/developers/docs/standards/tokens/erc-4626)
+- [ERC-7540 - Kho tiền được token hóa không đồng bộ](/developers/docs/standards/tokens/erc-7540)
 ## Hướng dẫn: Xây dựng với ERC-20 trên Ethereum {#tutorials}
 
 - [Hướng dẫn chi tiết về hợp đồng ERC-20](/developers/tutorials/erc20-annotated-code/) _– Hướng dẫn chi tiết có chú thích từng dòng về bản triển khai hợp đồng ERC-20 của OpenZeppelin._

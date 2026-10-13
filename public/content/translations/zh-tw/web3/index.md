@@ -128,9 +128,9 @@ Web3 使用像 [ETH](/glossary/#ether) 這樣的代幣直接在瀏覽器中匯�
 
 ### 教育 {#education}
 
-Web3 引入了新的典範，需要學習與 Web 2.0 中使用的不同心智模型。在 1990 年代後期 Web 1.0 逐漸普及時，也發生了類似的教育推動；全球資訊網的支持者使用了大量的教育技術來教育大眾，從簡單的比喻（資訊高速公路、瀏覽器、上網衝浪）到[電視廣播](https://www.youtube.com/watch?v=SzQLI7BxfYI)。Web3 並不困難，但它有所不同。向 Web2 使用者宣導這些 Web3 典範的教育計畫對其成功至關重要。
+Web3 引入了新的典範，這要求人們學習與 Web 2.0 不同的心智模型。在 1990 年代後期 Web 1.0 逐漸普及時，也發生過類似的教育推廣活動；全球資訊網的倡導者使用了一系列教育技術來教育大眾，從簡單的比喻（資訊高速公路、瀏覽器、上網衝浪）到[電視廣播](https://www.youtube.com/watch?v=SzQLI7BxfYI)。Web3 並不困難，但它與眾不同。向 Web2 使用者宣導這些 Web3 典範的教育計畫，對其成功至關重要。
 
-Ethereum.org 透過我們的[翻譯計畫](/contributing/translation-program/)為 Web3 教育做出貢獻，旨在將重要的以太坊內容翻譯成盡可能多的語言。
+Ethereum.org 透過其[翻譯計畫](/contributing/translation-program/)為 Web3 教育做出了貢獻，該計畫讓重要的以太坊內容得以提供數十種語言版本。
 
 ### 中心化基礎設施 {#centralized-infrastructure}
 

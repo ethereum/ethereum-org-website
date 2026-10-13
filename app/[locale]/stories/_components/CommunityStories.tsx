@@ -1,6 +1,6 @@
 "use client"
-
 import { useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 
 import type { Story } from "@/lib/types"
 
@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import TagFilter from "@/components/ui/tag-filter"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type CommunityStoriesProps = {
   stories: Story[]
@@ -27,7 +25,7 @@ const parseCategories = (raw?: string) =>
     .filter(Boolean)
 
 const CommunityStories = ({ stories }: CommunityStoriesProps) => {
-  const { t } = useTranslation("page-stories")
+  const tCommon = useTranslations("common")
 
   // Distinct categories as [label, count] entries, sorted by frequency and
   // deduped case-insensitively (the data has casing drift, e.g. "Self-custody"
@@ -94,9 +92,9 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
       {/* CSS multi-column gives true masonry packing with zero JS, so the
           server and client render identical markup (no hydration mismatch). */}
       <div className="gap-6 sm:columns-2 lg:columns-3 xl:columns-4">
-        {visibleStories.map((story, index) => (
+        {visibleStories.map((story) => (
           <StoryCard
-            key={`${story.name}-${index}`}
+            key={story.storyKey}
             story={story}
             expandable={false}
             showDate={false}
@@ -113,6 +111,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
                 Math.min(n + STORIES_SHOWN, filteredStories.length)
               )
             }
+            className="max-sm:w-full"
             variant="outline"
             customEventOptions={{
               eventAction: "click",
@@ -120,7 +119,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
               eventCategory: "community-stories",
             }}
           >
-            {t("common:show-more")}
+            {tCommon("show-more")}
           </Button>
         </div>
       )}

@@ -55,10 +55,10 @@ incomplete: true
 
 ## Python 프로젝트 및 도구 {#python-projects-and-tools}
 
-### 활성: {#active}
-
 - [Web3.py](https://github.com/ethereum/web3.py) - _이더리움과 상호작용하기 위한 Python 라이브러리_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM을 위한 Pythonic 스마트 컨트랙트 언어_
+- [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper의 네이티브 테스트 도구; 메인넷 포킹, 디버깅 및 깔끔한 트레이스백을 지원하는 인터프리터_
+- [Moccasin](https://github.com/Cyfrin/moccasin) - _Titanoboa를 기반으로 구축된 Vyper 및 Python용 스마트 컨트랙트 개발 및 테스트 프레임워크_
 - [Ape](https://github.com/ApeWorX/ape) - _Python 개발자, 데이터 과학자 및 보안 전문가를 위한 스마트 컨트랙트 개발 도구_
 - [py-evm](https://github.com/ethereum/py-evm) - _이더리움 가상 머신(EVM) 구현체_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _이더리움 기반 애플리케이션 테스트를 위한 도구_
@@ -66,10 +66,9 @@ incomplete: true
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x 버전을 지원하는 solc Solidity 컴파일러용 Python 래퍼_
 - [pymaker](https://github.com/makerdao/pymaker) - _Maker 컨트랙트를 위한 Python API_
 - [siwe](https://github.com/signinwithethereum/siwe-py) - _Python용 이더리움으로 로그인(SIWE)_
-- [이더리움 연동을 위한 Web3 탈중앙화 금융 (DeFi)](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, 유니스왑 및 기타 인기 프로젝트를 위한 연동 기능이 준비된 Python 패키지_
-- [Wake](https://getwake.io) - _컨트랙트 테스트, 퍼징, 배포, 취약점 스캐닝 및 코드 탐색을 위한 올인원 Python 프레임워크 (언어 서버 - [Solidity용 도구](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
-- [DeFiPy](https://github.com/defipy-devs/defipy) - _유니스왑 V2/V3, Balancer 및 Curve 전반의 탈중앙화 금융 (DeFi) 분석 및 자동화된 마켓 메이커 (AMM) 시뮬레이션을 위한 Python SDK_
-
+- [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20, 유니스왑 및 기타 인기 있는 프로젝트를 위한 통합 기능이 준비된 Python 패키지_
+- [Wake](https://getwake.io) - _컨트랙트 테스트, 퍼징, 배포, 취약점 스캐닝 및 코드 탐색을 위한 올인원 Python 프레임워크 (언어 서버 - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
+- [DeFiPy](https://github.com/defipy-devs/defipy) - _유니스왑 V2/V3, Balancer 및 Curve 전반의 탈중앙화 금융(DeFi) 분석 및 자동화된 마켓 메이커(AMM) 시뮬레이션을 위한 Python SDK_
 ### 보관됨 / 더 이상 유지보수되지 않음: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _이더리움 Python 클라이언트_

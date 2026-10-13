@@ -29,6 +29,7 @@ import KBD from "@/components/ui/kbd"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
+import WideTable from "@/components/ui/wide-table"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -117,6 +118,7 @@ export const reactComponents = {
   Tag,
   TweetEmbed,
   WhatAreAppsStories,
+  WideTable,
   YouTube,
 }
 

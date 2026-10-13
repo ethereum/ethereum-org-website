@@ -2,6 +2,7 @@
 title: 沃克尔树
 description: 关于沃克尔树及其将如何用于升级以太坊的高级概述
 lang: zh
+template: roadmap
 summaryPoints:
   - 了解什么是沃克尔树
   - 了解为什么沃克尔树对以太坊来说是一次有用的升级

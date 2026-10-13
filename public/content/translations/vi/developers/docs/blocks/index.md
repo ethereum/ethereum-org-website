@@ -151,3 +151,5 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 - [Giao dịch](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 শুরু করতে, আপনার অ্যাপের জন্য WebSocket URL ব্যবহার করে একটি WebSocket খুলুন। আপনি [আপনার ড্যাশবোর্ডে](https://dashboard.alchemy.com/) অ্যাপের পেজটি খুলে এবং "View Key"-তে ক্লিক করে আপনার অ্যাপের WebSocket URL খুঁজে পেতে পারেন। মনে রাখবেন যে WebSockets-এর জন্য আপনার অ্যাপের URL এবং HTTP রিকোয়েস্টের জন্য এর URL আলাদা, তবে "View Key"-তে ক্লিক করে উভয়ই পাওয়া যেতে পারে।
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
+![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
 
 [Alchemy API রেফারেন্সে](https://www.alchemy.com/docs/reference/api-overview) তালিকাভুক্ত যেকোনো API WebSocket-এর মাধ্যমে ব্যবহার করা যেতে পারে। এটি করার জন্য, একটি HTTP POST রিকোয়েস্টের বডি হিসেবে যে পেলোড পাঠানো হতো সেটিই ব্যবহার করুন, তবে এর পরিবর্তে সেই পেলোডটি WebSocket-এর মাধ্যমে পাঠান।
 

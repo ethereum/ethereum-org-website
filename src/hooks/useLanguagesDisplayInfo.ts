@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
@@ -9,7 +9,6 @@ import { filterRealLocales } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import useTranslation from "@/hooks/useTranslation"
 import { localeToDisplayInfo } from "@/lib/nav/localeToDisplayInfo"
 
 // Pre-filtered locales
@@ -23,7 +22,7 @@ export const useLanguagesDisplayInfo = (): LocaleDisplayInfo[] => {
   const locale = useLocale()
   // Use common namespace - translations may not exist, but localeToDisplayInfo
   // has fallbacks using Intl.DisplayNames
-  const { t } = useTranslation("common")
+  const t = useTranslations("common")
 
   return useMemo(() => {
     if (!FILTERED_LOCALES?.length) return []

@@ -2,6 +2,7 @@
 title: Jednoslotová finalita
 description: Vysvětlení jednoslotové finality
 lang: cs
+template: roadmap
 ---
 
 Trvá přibližně 15 minut, než je blok [Etherea](/) finalizován. Můžeme však zajistit, aby mechanismus konsensu Etherea validoval bloky efektivněji a dramaticky zkrátil čas do finality. Místo patnáctiminutového čekání by bloky mohly být navrženy a finalizovány ve stejném slotu. Tento koncept je známý jako **jednoslotová finalita (SSF)**.
@@ -31,7 +32,7 @@ Při současném návrhu mechanismu je pro zkrácení času do finality nutné s
 
 ## Cesty k SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Proč nemůžeme mít SSF už dnes?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Současný mechanismus konsensu kombinuje atestace od více validátorů, známých jako výbory, aby se snížil počet zpráv, které musí každý validátor zpracovat k validaci bloku. Každý validátor má příležitost atestovat v každé epoše (32 slotů), ale v každém slotu atestuje pouze podmnožina validátorů, známá jako „výbor“. Dělají to tak, že se rozdělí do podsítí, ve kterých je několik validátorů vybráno jako „agregátoři“. Tito agregátoři pak zkombinují všechny podpisy, které vidí od ostatních validátorů ve své podsíti, do jednoho agregovaného podpisu. Agregátor, který zahrne největší počet individuálních příspěvků, předá svůj agregovaný podpis navrhovateli bloku, který jej zahrne do bloku spolu s agregovanými podpisy od ostatních výborů.
 

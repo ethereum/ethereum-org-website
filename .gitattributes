@@ -4,3 +4,5 @@ README.md linguist-documentation
 *.md linguist-generated=false
 *.md linguist-documentation=false
 *.md linguist-detectable=true
+
+.github/workflows/*.lock.yml linguist-generated=true merge=ours

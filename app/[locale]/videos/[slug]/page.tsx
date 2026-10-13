@@ -29,8 +29,10 @@ const VideoLandingPage = async (props: {
 }) => {
   const { locale, slug } = await props.params
 
-  const t = await getTranslations("page-videos")
+  // Set locale before next-intl APIs so on-demand renders stay static
   setRequestLocale(locale)
+
+  const t = await getTranslations("page-videos")
 
   let data: VideoData | undefined
   try {
@@ -109,6 +111,9 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
+
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
 
   let data
   try {

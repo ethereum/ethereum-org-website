@@ -1,6 +1,6 @@
 "use client"
-
 import { useMemo } from "react"
+import { useTranslations } from "next-intl"
 import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 import { useQuery } from "@tanstack/react-query"
@@ -18,7 +18,6 @@ import CollectiblesCurrentYear from "../CollectiblesCurrentYear"
 import CollectiblesPreviousYears from "../CollectiblesPreviousYears"
 import CollectiblesProgress from "../CollectiblesProgress/lazy"
 
-import useTranslation from "@/hooks/useTranslation"
 import alreadyContributorImg from "@/public/images/10-year-anniversary/adoption-1.png"
 
 export type BadgeWithOwned = Badge & {
@@ -28,7 +27,7 @@ export type BadgeWithOwned = Badge & {
 const ADDRESS_STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats/`
 
 const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
-  const { t } = useTranslation("page-collectibles")
+  const t = useTranslations("page-collectibles")
 
   const currentYear = new Date().getFullYear().toString()
 

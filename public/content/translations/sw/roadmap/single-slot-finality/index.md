@@ -2,6 +2,7 @@
 title: Uthibitisho wa mwisho wa sloti moja
 description: Maelezo ya uthibitisho wa mwisho wa sloti moja
 lang: sw
+template: roadmap
 ---
 
 Inachukua takriban dakika 15 kwa kitalu cha [Ethereum](/) kukamilishwa. Hata hivyo, tunaweza kufanya utaratibu wa makubaliano wa Ethereum kuthibitisha vitalu kwa ufanisi zaidi na kupunguza muda wa ukamilifu kwa kiasi kikubwa. Badala ya kusubiri kwa dakika kumi na tano, vitalu vinaweza kupendekezwa na kukamilishwa katika sloti hiyo hiyo. Dhana hii inajulikana kama **uthibitisho wa mwisho wa sloti moja (SSF)**.
@@ -31,7 +32,7 @@ Kwa muundo wa sasa wa utaratibu, ili kupunguza muda wa ukamilifu, ni lazima kupu
 
 ## Njia za kuelekea SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
+<ExpandableCard title="Kwa nini hatuwezi kuwa na SSF leo?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Utaratibu wa sasa wa makubaliano unachanganya uthibitisho kutoka kwa wathibitishaji wengi, wanaojulikana kama kamati, ili kupunguza idadi ya jumbe ambazo kila mthibitishaji anapaswa kuchakata ili kuthibitisha kitalu. Kila mthibitishaji ana fursa ya kuthibitisha katika kila kipindi (sloti 32) lakini katika kila sloti, ni kikundi kidogo tu cha wathibitishaji, kinachojulikana kama 'kamati' ndicho kinachothibitisha. Wanafanya hivyo kwa kugawanyika katika mitandao midogo ambapo wathibitishaji wachache huchaguliwa kuwa 'wajumuishaji'. Wajumuishaji hao kila mmoja huchanganya sahihi zote wanazoziona kutoka kwa wathibitishaji wengine katika mtandao wao mdogo kuwa sahihi moja iliyojumuishwa. Mjumuishaji anayejumuisha idadi kubwa zaidi ya michango ya mtu binafsi hupitisha sahihi yao iliyojumuishwa kwa mpendekezaji wa bloku, ambaye huiweka kwenye kitalu pamoja na sahihi iliyojumuishwa kutoka kwa kamati nyingine.
 

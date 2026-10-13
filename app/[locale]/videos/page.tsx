@@ -17,7 +17,7 @@ import { getVideos } from "@/lib/utils/videos"
 
 import VideoGalleryFilter from "./_components/VideoGalleryFilter"
 import { VIDEO_CATEGORIES } from "./constants"
-import VideosPageJsonLD from "./page-jsonld"
+import PageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
 
@@ -37,21 +37,24 @@ const VideoGalleryPage = async (props: {
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
-    <I18nProvider locale={locale} messages={messages}>
-      <VideosPageJsonLD locale={locale} videos={videos} />
-      <MainArticle className="space-y-12">
-        <PageHero
-          breadcrumbs={{ slug: "/videos/" }}
-          title={t("page-videos-hero-title")}
-          description={t("page-videos-hero-description")}
-          variant="no-divider"
-        />
+    <>
+      <PageJsonLD locale={locale} videos={videos} />
 
-        <Section id="videos" className="space-y-6 px-4 md:px-8">
-          <VideoGalleryFilter videos={videos} categories={VIDEO_CATEGORIES} />
-        </Section>
-      </MainArticle>
-    </I18nProvider>
+      <PageHero
+        breadcrumbs={{ slug: "/videos/" }}
+        title={t("page-videos-hero-title")}
+        description={t("page-videos-hero-description")}
+        variant="no-divider"
+      />
+
+      <I18nProvider locale={locale} messages={messages}>
+        <MainArticle className="flow p-page">
+          <Section id="videos">
+            <VideoGalleryFilter videos={videos} categories={VIDEO_CATEGORIES} />
+          </Section>
+        </MainArticle>
+      </I18nProvider>
+    </>
   )
 }
 
@@ -63,6 +66,8 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations("page-videos")
 

@@ -5,7 +5,7 @@ description: "Tổng quan về các tác nhân AI trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/ai-agents/hero-image.png
+image: /images/community-campfire-people-robot-cut-out.png
 alt: "Mọi người tụ tập tại bàn thiết bị đầu cuối"
 summaryPoints:
   - "AI tương tác với chuỗi khối và giao dịch độc lập"

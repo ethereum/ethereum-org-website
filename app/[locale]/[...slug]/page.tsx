@@ -19,8 +19,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
 
-import StakingCommunityCallout from "../staking/_components/StakingCommunityCallout"
-
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping, TopicLayout } from "@/layouts"
@@ -72,11 +70,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   if (topicConfig) {
-    const afterContent =
-      layout === "staking" ? (
-        <StakingCommunityCallout className="my-16" />
-      ) : undefined
-
     return (
       <>
         <SlugJsonLD
@@ -96,7 +89,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
             config={topicConfig}
           >
             {content}
-            {afterContent}
           </TopicLayout>
         </I18nProvider>
       </>
@@ -153,6 +145,9 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, slug } = params
+
+  // Set locale before next-intl APIs so on-demand renders stay static
+  setRequestLocale(locale)
 
   try {
     return await getMdMetadata({

@@ -47,17 +47,17 @@ Používáním služby pro uzly centralizujete infrastrukturní aspekt vašeho p
 
 Přečtěte si více o [výhodách provozování vlastního uzlu](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Oblíbené služby pro uzly {#popular-node-services}
+## Populární služby pro uzly {#popular-node-services}
 
-Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, neváhejte přidat jakékoli, které chybí! Každá služba pro uzly nabízí kromě bezplatných nebo placených úrovní různé výhody a funkce, před rozhodnutím byste měli prozkoumat, které z nich nejlépe vyhovují vašim potřebám.
+Zde je seznam některých z nejpopulárnějších poskytovatelů uzlů Etherea, neváhejte přidat jakékoli, které chybí! Každá služba pro uzly nabízí kromě bezplatných nebo placených úrovní různé výhody a funkce, před rozhodnutím byste měli prozkoumat, které z nich nejlépe vyhovují vašim potřebám.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentace](https://www.alchemy.com/docs/)
   - Funkce
     - Největší bezplatná úroveň s 300 miliony výpočetních jednotek měsíčně (\~30 milionů požadavků getLatestBlock)
     - Podpora více řetězců pro Polygon, Starknet, Optimism, Arbitrum
-    - Pohání ~70 % největších decentralizovaných aplikací (dapp) na Ethereu a objemu transakcí decentralizovaných financí (DeFi)
-    - Upozornění webhooků v reálném čase prostřednictvím Alchemy Notify
+    - Pohání ~70 % největších decentralizovaných aplikací (dapp) na Ethereu a objemu transakcí v decentralizovaných financích (DeFi)
+    - Upozornění webhooků v reálném čase přes Alchemy Notify
     - Nejlepší podpora ve své třídě a spolehlivost / stabilita
     - NFT API od Alchemy
     - Řídicí panel s Request Explorer, Mempool Watcher a Composer
@@ -74,15 +74,15 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Dostupné ve 3 regionech (USA, EU, Asie)
     - Snímky pro 100+ blockchainů na [PublicNode](https://www.publicnode.com/snapshots)
     - Technická podpora 24/7 s SLA dostupností 99,90 % - 99,98 % (v závislosti na plánu).
-    - Ceny za hodinu
+    - Hodinové účtování
     - Platba kreditní kartou, přes PayPal nebo krypto
 
 - [**All That Node**](https://allthatnode.com/)
   - [Dokumentace](https://docs.allthatnode.com/)
   - Funkce
-    - 50 000 požadavků denně s bezplatnou úrovní
+    - 50 000 požadavků denně v bezplatné úrovni
     - Podpora pro více než 40 protokolů
-    - Podporována rozhraní JSON-RPC (EVM, Tendermint), REST a Websocket API
+    - Podpora JSON-RPC (EVM, Tendermint), REST a Websocket API
     - Neomezený přístup k archivním datům
     - Technická podpora 24/7 a dostupnost přes 99,9 %
     - Faucet dostupný na více řetězcích
@@ -98,7 +98,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - JSON-RPC přes HTTP a zabezpečené WebSockets
     - Podporuje 3 řetězce
     - SLA, podpora AWS 24/7
-    - Go Ethereum (Geth) a Lighthouse
+    - Go-ethereum a Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentace](https://docs.ankr.com/)
@@ -117,7 +117,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - [Dokumentace](https://docs.blastapi.io/)
   - Funkce
     - Podpora RPC a WSS
-    - Hostování uzlů ve více regionech
+    - Hosting uzlů ve více regionech
     - Decentralizovaná infrastruktura
     - Veřejné API
     - Vyhrazený bezplatný plán
@@ -132,7 +132,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - [Dokumentace](https://ubiquity.docs.blockdaemon.com/)
   - Výhody
     - Řídicí panel
-    - Na bázi jednotlivých uzlů
+    - Na bázi uzlu
     - Analytika
 
 - [**BlockPI**](https://blockpi.io/)
@@ -143,7 +143,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Bezplatný registrační balíček a měsíční balíček
     - Metoda Trace + podpora archivních dat
     - Balíčky s platností až 90 dní
-    - Vlastní plán a platba podle využití (pay-as-you-go)
+    - Vlastní plán a platba podle využití
     - Platba v kryptu
     - Přímá podpora a technická podpora
 
@@ -154,7 +154,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Podpora více řetězců
     - Bezplatné tarify
     - Uživatelsky přívětivý řídicí panel
-    - Poskytuje datové služby blockchainu nad rámec RPC
+    - Poskytuje služby blockchainových dat nad rámec RPC
 
 - [**Chainstack**](https://chainstack.com/)
   - [Dokumentace](https://docs.chainstack.com/)
@@ -165,8 +165,8 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Koncové body RPC a WSS
     - Vyhrazené plné a archivní uzly
     - Rychlá doba synchronizace pro vyhrazená nasazení
-    - Přineste si vlastní cloud (Bring your cloud)
-    - Ceny za hodinu
+    - Přineste si vlastní cloud
+    - Hodinové účtování
     - Přímá podpora 24/7
 
 - [**dRPC**](https://drpc.org/)
@@ -177,7 +177,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Distribuovaný fond 40+ poskytovatelů
     - Globální pokrytí s devíti (9) geoklastry
     - Systém vyrovnávání zátěže poháněný umělou inteligencí
-    - Paušální ceny podle využití (pay-as-you-go) – žádné zdražování, žádné vypršení platnosti, žádné vázanosti
+    - Paušální ceny podle využití – žádné zdražování, žádné vypršení platnosti, žádné vázanosti
     - Neomezené klíče, granulární úpravy klíčů, týmové role, ochrana front-endu
     - Paušální sazba metod na 20 výpočetních jednotek (CU) za metodu
     - [Seznam řetězců veřejných koncových bodů](https://drpc.org/chainlist)
@@ -187,7 +187,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
 - [**GetBlock**](https://getblock.io/)
   - [Dokumentace](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Funkce
-    - Přístup k 40+ uzlům blockchainu
+    - Přístup k 40+ blockchainovým uzlům
     - 40 tisíc bezplatných požadavků denně
     - Neomezený počet klíčů API
     - Vysoká rychlost připojení 1 GB/s
@@ -206,7 +206,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Vyhrazené plné uzly
     - Rychlá doba synchronizace pro vyhrazená nasazení
     - Přímá podpora 24/7
-    - Přístup k 50+ uzlům blockchainu
+    - Přístup k 50+ blockchainovým uzlům
 
 - [**Infura**](https://infura.io/)
   - [Dokumentace](https://infura.io/docs)
@@ -226,17 +226,17 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - 500+ administrativních a servisních API
     - RESTful rozhraní pro odesílání transakcí Etherea (podporováno Apache Kafka)
     - Odchozí streamy pro doručování událostí (podporováno Apache Kafka)
-    - Hluboká sbírka offchain a doplňkových služeb (např. bilaterální šifrovaný přenos zpráv)
+    - Hluboká sbírka offchain a doplňkových služeb (např. obousměrný šifrovaný přenos zpráv)
     - Přímý onboarding do sítě se správou a řízením přístupu na základě rolí
     - Sofistikovaná správa uživatelů pro administrátory i koncové uživatele
-    - Vysoce škálovatelná, odolná infrastruktura podnikové třídy
+    - Vysoce škálovatelná, odolná infrastruktura podnikové úrovně
     - Správa soukromých klíčů Cloud HSM
     - Tethering na Ethereum Mainnet
     - Certifikace ISO 27k a SOC 2, Type 2
     - Dynamická konfigurace za běhu (např. přidávání cloudových integrací, změna vstupů uzlů atd.)
-    - Podpora pro orchestraci nasazení ve více cloudech, více regionech a hybridních nasazeních
-    - Jednoduché hodinové ceny na bázi SaaS
-    - SLA a podpora 24x7
+    - Podpora pro orchestrace nasazení ve více cloudech, více regionech a hybridních nasazeních
+    - Jednoduché hodinové účtování na bázi SaaS
+    - SLA a podpora 24/7
 
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Dokumentace](https://docs.lavanet.xyz/)
@@ -246,7 +246,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Open-source
     - Plně decentralizované SDK
     - Integrace Ethers.js
-    - Intuitivní rozhraní pro řízení projektů
+    - Intuitivní rozhraní pro správu projektů
     - Integrita dat založená na konsensu
     - Podpora více řetězců
 
@@ -255,8 +255,8 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - Funkce
     - Bezplatné sdílené uzly
     - Bezplatné sdílené archivní uzly
-    - Zaměřeno na soukromí (zásada neuchovávání protokolů)
-    - Podpora napříč řetězci
+    - Zaměřeno na soukromí (zásada neuchovávání záznamů)
+    - Podpora napříč řetězci (cross-chain)
     - Škálování podle potřeby
     - Řídicí panel
     - Unikátní Ethereum SDK
@@ -274,15 +274,15 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
 - [**NodeFlare**](https://nodeflare.app/)
   - [Dokumentace](https://nodeflare.app/docs/quick-start)
   - Funkce
-    - 8 EVM řetězců včetně Etherea, Base, Arbitrum One a Optimism
-    - 4 regiony (Evropa, Asie, Severní Amerika) s automatickým převzetím služeb při selhání na nejbližší zdravý uzel
+    - 23 EVM řetězců včetně Etherea, Base, Arbitrum One a Nova, Optimism, Linea a Unichain
+    - 5 regionů (Evropa, Velká Británie, Asie, Východ USA, Západ USA) s automatickým přepnutím na nejbližší zdravý uzel
     - Bezplatný veřejný koncový bod (bez klíče API) + bezplatný plán s 3 miliony výpočetních jednotek měsíčně
-    - Účtování výpočetních jednotek – platíte jen za to, co využijete, náročnější volání stojí více
+    - Účtování podle výpočetních jednotek – platíte jen za to, co využijete, náročnější volání stojí více
     - Žádné omezování rychlosti u placených plánů
 
 - [**NOWNodes**](https://nownodes.io/)
   - Funkce
-    - Přístup k 50+ uzlům blockchainu
+    - Přístup k 50+ blockchainovým uzlům
     - Bezplatný klíč API
     - Průzkumníky bloků
     - Doba odezvy API ⩽ 1 s
@@ -298,7 +298,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Program Pre-Stake+ (pokud potřebujete více než 1 milion požadavků denně)
     - Podpora 15+ blockchainů
     - 6400+ uzlů vydělávajících POKT za obsluhu aplikací
-    - Podpora archivních uzlů, archivních uzlů s trasováním a testnetových uzlů
+    - Podpora archivního uzlu, archivního uzlu s trasováním a testnetového uzlu
     - Klientská diverzita uzlů na Ethereum Mainnet
     - Žádný jediný bod selhání
     - Nulové prostoje
@@ -314,10 +314,10 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - [Dokumentace](https://www.quicknode.com/docs/)
   - Funkce
     - Technická podpora 24/7 a vývojářská komunita na Discordu
-    - Geograficky vyvážená síť s nízkou latencí, využívající více cloudů/bare metal
+    - Geograficky vyvážená síť s nízkou latencí využívající více cloudů/bare-metal
     - Podpora více řetězců (Optimism, Arbitrum, Polygon + 11 dalších)
     - Střední vrstvy pro rychlost a stabilitu (směrování volání, mezipaměť, indexování)
-    - Monitorování chytrých kontraktů prostřednictvím webhooků
+    - Monitorování chytrých kontraktů přes webhooky
     - Intuitivní řídicí panel, analytická sada, RPC composer
     - Pokročilé bezpečnostní funkce (JWT, maskování, whitelisting)
     - API pro data a analytiku NFT
@@ -335,7 +335,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - Funkce
     - Vyhrazené a sdílené uzly
     - Řídicí panel
-    - Hostování mimo AWS u více poskytovatelů hostingu v různých lokalitách v Latinské Americe
+    - Hosting mimo AWS u více poskytovatelů hostingu v různých lokalitách v Latinské Americe
     - Klienti Prysm a Lighthouse
 
 - [**SettleMint**](https://console.settlemint.com/)
@@ -346,10 +346,10 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Podpora GraphQL
     - Koncové body RPC a WSS
     - Vyhrazené plné uzly
-    - Přineste si vlastní cloud (Bring your cloud)
+    - Přineste si vlastní cloud
     - Analytické nástroje
     - Řídicí panel
-    - Ceny za hodinu
+    - Hodinové účtování
     - Přímá podpora
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
@@ -357,15 +357,15 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - Funkce
     - Bezplatná úroveň zahrnující 25 milionů jednotek Tenderly měsíčně
     - Bezplatný přístup k historickým datům
-    - Až 8x rychlejší pracovní zátěže náročné na čtení
+    - Až 8x rychlejší zátěže náročné na čtení
     - 100% konzistentní přístup ke čtení
     - Koncové body JSON-RPC
-    - Nástroj pro tvorbu požadavků RPC a náhled požadavků na bázi uživatelského rozhraní
+    - Nástroj pro tvorbu a náhled požadavků RPC založený na uživatelském rozhraní
     - Úzce integrováno s vývojovými, ladicími a testovacími nástroji Tenderly
     - Simulace transakcí
     - Analytika využití a filtrování
     - Snadná správa přístupových klíčů
-    - Vyhrazená inženýrská podpora prostřednictvím chatu, e-mailu a Discordu
+    - Vyhrazená inženýrská podpora přes chat, e-mail a Discord
 
 - [**Tokenview**](https://services.tokenview.io/)
   - [Dokumentace](https://services.tokenview.io/docs?type=nodeService)
@@ -377,7 +377,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Řídicí panel s Request Explorer a Mempool Watcher
     - API pro data NFT a upozornění webhooků
     - Platba v kryptu
-    - Externí podpora pro dodatečné požadavky na chování
+    - Externí podpora pro požadavky na dodatečné chování
 
 - [**Watchdata**](https://watchdata.io/)
   - [Dokumentace](https://docs.watchdata.io/)
@@ -387,7 +387,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Automatizace procesů
     - Bezplatné tarify
     - Vysoké limity, které vyhovují každému uživateli
-    - Podpora různých uzlů
+    - Podpora pro různé uzly
     - Škálování zdrojů
     - Vysoké rychlosti zpracování
 
@@ -403,15 +403,13 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
 - [**Zeeve**](https://www.zeeve.io/)
   - [Dokumentace](https://www.zeeve.io/docs/)
   - Funkce
-    - No-code automatizační platforma podnikové třídy poskytující nasazení, monitorování a správu uzlů a sítí blockchainu
+    - No-code automatizační platforma podnikové úrovně poskytující nasazení, monitorování a správu blockchainových uzlů a sítí
     - 30+ podporovaných protokolů a integrací a další přibývají
-    - Služby infrastruktury Web3 s přidanou hodnotou, jako je decentralizované úložiště, decentralizovaná identita (DID) a datová API blockchainové účetní knihy pro reálné případy použití
-    - Podpora 24/7 a proaktivní monitorování zajišťují neustálé zdraví uzlů.
+    - Služby infrastruktury Web3 s přidanou hodnotou, jako je decentralizované úložiště, decentralizovaná identita (DID) a API pro data blockchainové účetní knihy pro reálné případy použití
+    - Podpora 24/7 a proaktivní monitorování neustále zajišťují zdraví uzlů.
     - Koncové body RPC nabízejí ověřený přístup k API, bezproblémovou správu s intuitivním řídicím panelem a analytikou.
-    - Poskytuje na výběr možnosti spravovaného cloudu i vlastního cloudu (bring your own cloud) a podporuje všechny hlavní poskytovatele cloudu, jako jsou AWS, Azure, Google Cloud, Digital Ocean a on-premise řešení.
+    - Poskytuje na výběr možnosti spravovaného cloudu i vlastního cloudu a podporuje všechny hlavní poskytovatele cloudu, jako jsou AWS, Azure, Google Cloud, Digital Ocean a on-premise.
     - Používáme inteligentní směrování, abychom pokaždé zasáhli uzel nejblíže vašemu uživateli
-
-
 ## Další čtení {#further-reading}
 
 - [Seznam služeb pro uzly Etherea](https://ethereumnodes.com/)

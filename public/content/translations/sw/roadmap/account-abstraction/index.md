@@ -2,6 +2,7 @@
 title: Udhanifu wa akaunti
 description: Muhtasari wa mipango ya Ethereum ya kufanya akaunti za watumiaji kuwa rahisi na salama zaidi
 lang: sw
+template: roadmap
 summaryPoints:
   - Udhanifu wa akaunti hurahisisha sana kuunda mikoba ya mkataba mahiri
   - Mikoba ya mkataba mahiri hurahisisha sana kudhibiti ufikiaji wa akaunti za Ethereum

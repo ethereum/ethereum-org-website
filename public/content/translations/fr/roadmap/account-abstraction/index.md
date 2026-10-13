@@ -2,6 +2,7 @@
 title: Abstraction de compte
 description: Un aperçu des projets d'Ethereum visant à rendre les comptes d'utilisateurs plus simples et plus sûrs
 lang: fr
+template: roadmap
 summaryPoints:
   - L'abstraction de compte facilite grandement la création de portefeuilles de contrats intelligents
   - Les portefeuilles de contrats intelligents facilitent grandement la gestion de l'accès aux comptes Ethereum

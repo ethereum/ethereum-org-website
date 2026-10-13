@@ -2,6 +2,7 @@
 title: Uchaguzi wa kiongozi wa siri
 description: Maelezo ya jinsi uchaguzi wa kiongozi wa siri unavyoweza kusaidia kulinda wathibitishaji dhidi ya mashambulizi
 lang: sw
+template: roadmap
 summaryPoints:
   - Anwani ya IP ya wapendekezaji wa bloku inaweza kujulikana mapema, na kuwafanya wawe katika hatari ya kushambuliwa
   - Uchaguzi wa kiongozi wa siri huficha utambulisho wa wathibitishaji ili wasijulikane mapema

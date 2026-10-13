@@ -19,7 +19,7 @@ published: 2021-04-22
 
 অ্যাপের শীর্ষে, "Wallet" বোতাম টিপুন, যার পরে আপনাকে একটি নেটওয়ার্ক নির্বাচন করতে বলা হবে। যেহেতু আমাদের NFT Sepolia নেটওয়ার্কে মিন্ট করা হয়েছিল, তাই আপনি আপনার নেটওয়ার্ক হিসেবে Sepolia নির্বাচন করতে চাইবেন।
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
+![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
 
 ## ধাপ 2: মেটামাস্ক-এ আপনার কালেক্টেবল যোগ করুন {#add-nft-to-metamask}
 
@@ -29,6 +29,6 @@ published: 2021-04-22
 
 আপনার NFT দেখতে আপনাকে কয়েকবার রিফ্রেশ করতে হতে পারে — তবে এটি সেখানেই থাকবে <Emoji text="😄" size={1} />!
 
-![How to upload your NFT to MetaMask](./findNFTMetamask.gif)
+![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
 
 অভিনন্দন! আপনি সফলভাবে একটি NFT মিন্ট করেছেন এবং আপনি এখন এটি দেখতে পারেন! আপনি কীভাবে NFT বিশ্বে আলোড়ন সৃষ্টি করবেন তা দেখার জন্য আমরা অধীর আগ্রহে অপেক্ষা করছি!

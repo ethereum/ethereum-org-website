@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import isChromatic from "chromatic"
 import { shuffle } from "lodash"
+import { useTranslations } from "next-intl"
 
 import type {
   AnswerChoice,
@@ -18,9 +19,7 @@ import { PASSING_QUIZ_SCORE } from "@/lib/constants"
 
 import { getNextQuiz } from "../utils"
 
-import { QuizWidgetProps } from "."
-
-import useTranslation from "@/hooks/useTranslation"
+import type { QuizWidgetProps } from "./QuizWidgetClient"
 
 export type AnswerStatus = "correct" | "incorrect" | null
 
@@ -28,7 +27,8 @@ export const useQuizWidget = ({
   quizKey,
   updateUserStats,
 }: Pick<QuizWidgetProps, "quizKey" | "updateUserStats">) => {
-  const { t } = useTranslation()
+  const tCommon = useTranslations("common")
+  const tQuizzes = useTranslations("learn-quizzes")
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [nextQuiz, setNextQuiz] = useState<QuizKey | undefined>(undefined)
@@ -57,7 +57,12 @@ export const useQuizWidget = ({
     // ! Do not shuffle questions in Chromatic to keep the modal story snapshot stable
     const shuffledQuestions = isChromatic() ? questions : shuffle(questions)
     const quiz: Quiz = {
-      title: t(rawQuiz.title),
+      // Quiz titles are common-namespace keys, except one legacy
+      // "learn-quizzes:" pointer in data/quizzes; non-key titles ("DAOs",
+      // "DeFi") pass through untranslated via getMessageFallback
+      title: rawQuiz.title.startsWith("learn-quizzes:")
+        ? tQuizzes(rawQuiz.title.slice("learn-quizzes:".length))
+        : tCommon(rawQuiz.title),
       questions: shuffledQuestions,
     }
 

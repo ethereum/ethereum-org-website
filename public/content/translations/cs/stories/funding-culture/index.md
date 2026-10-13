@@ -64,7 +64,7 @@ Naším prvním experimentem byl anime seriál s názvem [White Rabbit](https://
 - Stakovali je, aby mohli hlasovat o rozhodnutích v ději přímo v přehrávači
 - Získávali ERC-20 (náš token pozornosti) 
 
-![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4)
+![White Rabbit choose-your-own-adventure anime demo](./white-rabbit.mp4#800x400)
 
 Token ERC-20 byl vydáván na základě bonding křivky (bonding curve). Čím dříve a více jste se zapojili, tím více jste získali. Hlasování (například o pojmenování hlavní postavy Mirai) probíhalo přes Snapshot. 
 

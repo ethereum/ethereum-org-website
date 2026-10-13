@@ -2,6 +2,7 @@
 title: zkEVM do weryfikacji bloków L1
 description: Dowiedz się, jak dowody z wiedzą zerową mogą weryfikować wykonanie bloków Ethereum, umożliwiając wyższą przepustowość i niższe wymagania dla walidatorów.
 lang: pl
+template: roadmap
 ---
 
 zkEVM to technologia, która wykorzystuje [dowody z wiedzą zerową](/zero-knowledge-proofs/) do weryfikacji wykonania bloków Ethereum. Zamiast wymagać od każdego [walidatora](/glossary/#validator) ponownego wykonania wszystkich transakcji w bloku, pojedynczy wyspecjalizowany podmiot (zwany „proverem”) wykonuje blok i generuje kryptograficzny dowód na to, że wykonanie było poprawne. Każdy węzeł może następnie zweryfikować ten dowód — proces ten jest o rzędy wielkości tańszy niż ponowne wykonanie wszystkich transakcji.
