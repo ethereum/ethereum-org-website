@@ -201,14 +201,16 @@ export function IsoSolid({
 /** The world-state plate: a neutral slab under everything. */
 export function IsoPlate({
   box,
+  lit,
   className,
 }: {
   box: IsoBox
+  lit?: boolean
   className?: string
 }) {
   return (
     <g data-anatomy-plate="">
-      <IsoSolid box={box} hue="neutral" className={className} />
+      <IsoSolid box={box} hue="neutral" lit={lit} className={className} />
     </g>
   )
 }

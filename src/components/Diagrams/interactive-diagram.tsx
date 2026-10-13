@@ -26,7 +26,8 @@ export interface InteractiveDiagramProps {
   /** Screen-reader description of the whole figure. */
   description: ReactNode
   illustration: ReactNode
-  presets: ReactNode
+  /** A `DiagramPresets`, for diagrams with example values. */
+  presets?: ReactNode
   transport: ReactNode
   /** A `DiagramCaption`. */
   stepCaption: ReactNode
