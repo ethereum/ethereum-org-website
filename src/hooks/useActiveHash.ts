@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 /**
  * A hook to determine which section of the page is currently in the viewport.
- * @param {*} itemIds Array of document ids to observe
+ * @param {*} itemIds Array of document ids to observe, with or without a leading `#`
  * @param {*} rootMargin
  * @returns id of the element currently in viewport
  */
@@ -12,7 +12,13 @@ export const useActiveHash = (
 ): string => {
   const [activeHash, setActiveHash] = useState(``)
 
+  // Callers often build the array inline on every render; keying the effect on
+  // its contents stops the observer from being torn down and rebuilt each time.
+  const idsKey = (itemIds ?? []).map((id) => id.replace(/^#/, "")).join(" ")
+
   useEffect(() => {
+    if (!idsKey) return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,23 +30,15 @@ export const useActiveHash = (
       { rootMargin }
     )
 
-    itemIds?.forEach((id) => {
-      // Remove # from id. EX: #element-id -> element-id
-      const element = document.getElementById(id.replace("#", ""))
+    idsKey.split(" ").forEach((id) => {
+      const element = document.getElementById(id)
       if (element !== null) {
         observer.observe(element)
       }
     })
 
-    return () => {
-      itemIds?.forEach((id) => {
-        const element = document.getElementById(id)
-        if (element !== null) {
-          observer.unobserve(element)
-        }
-      })
-    }
-  }, [itemIds, rootMargin])
+    return () => observer.disconnect()
+  }, [idsKey, rootMargin])
 
   return activeHash
 }
