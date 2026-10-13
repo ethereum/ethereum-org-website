@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
 
 import { routing } from "./src/i18n/routing"
-import { DEFAULT_LOCALE } from "./src/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "./src/lib/constants"
 import { getFirstSegment } from "./src/lib/utils/url"
 
 const handleI18nRouting = createMiddleware(routing)
@@ -69,23 +69,19 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Catch malformed percent-encoding (e.g. `%GG`, a bare `%`) before route
-  // params are decoded. Otherwise the framework-level decodeURIComponent in
-  // the [locale]/[...slug] catch-all throws "failed to decode param",
-  // surfacing as an unhandled 500 (#17967). Redirect to a well-formed slug
-  // that fails validation in the catch-all, which calls notFound() — so the
-  // visitor lands on the styled, localized 404 page. This must be a
-  // redirect, not a rewrite: on a rewrite Next still decodes the original
-  // request URL and throws the same 500, whereas the redirect produces a
-  // fresh request with a clean path. (A bare NextResponse with status 400
-  // would render as a browser-default dead-end page.)
+  // Malformed percent-encoding (`%GG`, a bare `%`) makes the catch-all's
+  // param decoding throw an unhandled 500 (#17967). Redirect (a rewrite still
+  // decodes the original URL) to an invalid slug so the catch-all renders the
+  // localized 404, keeping a non-default locale prefix to avoid a second hop.
   try {
     decodeURIComponent(pathname)
   } catch {
-    return NextResponse.redirect(
-      new URL(`/${DEFAULT_LOCALE}/__bad-request__`, request.url),
-      302
-    )
+    const segment = getFirstSegment(pathname.toLowerCase())
+    const prefix =
+      segment !== DEFAULT_LOCALE && LOCALES_CODES.includes(segment)
+        ? `/${segment}`
+        : ""
+    return redirectTo(request, `${prefix}/__bad-request__`, 302)
   }
 
   const lowerPath = pathname.toLowerCase()
