@@ -113,7 +113,7 @@ The direction of privacy development on Ethereum is shaped by ecosystem-wide ali
 
 Research and development into privacy on Ethereum spans dozens of teams across the ecosystem. Work is advancing on protocol upgrades, access-layer solutions, identity infrastructure, and compliance-aware tools.
 
-**Protocol upgrades**: EIP-8141 (Frame Transactions) and EIP-7805 (FOCIL) are scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8250 (Keyed Nonces) and EIP-8182 (Protocol-Level Shielded Pools) are in active development. EIP-8025 (optional execution proofs) has also been proposed for Hegotá, and would provide a foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
+**Protocol upgrades**: EIP-8141 (Frame Transactions) and EIP-7805 (FOCIL) are scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8250 (Keyed Nonces) is in active development, and EIP-8182 (Protocol-Level Shielded Pools) is an open proposal. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
 
 **Access layer**: PIR research is progressing with active implementations like [Raven](https://github.com/hisoka-io/raven) being tested by infrastructure teams. The Kohaku wallet SDK is under development as an open-source reference for privacy-preserving wallets.
 
