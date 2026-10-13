@@ -20,6 +20,7 @@ import {
   formatUpgradeDate,
   getMainnetActivationDate,
   getNextMilestoneBeforeMainnet,
+  getUpgradeEipCount,
   getUpgradeStage,
   UPGRADE_STAGE_LABEL_KEYS,
   UPGRADE_STAGE_TONES,
@@ -79,7 +80,7 @@ const ReleaseCarousel = () => {
           nextMilestone: next
             ? `${formatMilestoneLabel(next, t)}, ${formatUpgradeDate(next.when, locale, t)}`
             : null,
-          eipCount: upgrade.eips.length,
+          eipCount: getUpgradeEipCount(upgrade),
         }
       }),
     [t, locale]
