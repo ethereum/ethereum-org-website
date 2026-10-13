@@ -11,6 +11,86 @@ one diagram at a time with theme-aware, translatable, accessible React figures.
 `gas-tx.png` (`GasTx`) is the first; `.claude/skills/devdocs-diagrams/SKILL.md`
 has the recipe and the list of the PNGs still to convert.
 
+`GasTx` itself is drawn as a simple isometric "anatomy" figure (a fuel rig,
+`GasTx/gas-rig.tsx`), built from the shared anatomy primitives in
+`Diagrams/anatomy/`: `isoProjection`, `IsoPlate`, `IsoSolid`, `IsoCylinder`,
+`IsoPipe`, `AnatomyLabels` and `DiagramStage`, coloured by the `--diagram-*`
+tokens (defined in `src/styles/semantic-tokens.css`, registered as Tailwind
+colours in `theme.css`, read through `anatomy/tokens.ts`). It is lazy-loaded
+with `next/dynamic`.
+
+## Rules for every diagram
+
+Later diagrams must follow these. The shared pieces live in
+`src/components/Diagrams/anatomy/` (story: Components / Data Viz / Diagrams /
+Anatomy).
+
+- **No vanishing lines.** Colours come only from the `--diagram-*` tokens in
+  `src/styles` (`--diagram-bg`, `-plate`, `-edge`, `-pipe`, `-entity`, `-gas`,
+  `-revert`), used through static literal classes (`stroke-diagram-pipe`,
+  never a string-built class) or `DIAGRAM_COLOR` values that carry a
+  fallback. The drawing's root `<svg>` spreads `DIAGRAM_SVG_FALLBACKS`
+  (`fill="none" stroke="currentColor"`), so a missing utility degrades to a
+  neutral line instead of nothing or black. Shapes that must not be stroked
+  say so (`stroke="none"` or `stroke-none`).
+- **Guard.** `tests/e2e/diagram-strokes.spec.ts` walks every shape of every
+  `DiagramStage` on the pages it lists, for every preset and step, in light
+  and dark, and fails if a shape that should be stroked has no visible stroke
+  or any fill is black. Add each new diagram's page to it, and give the
+  next-step button `data-diagram-next`.
+- **Nothing black, nothing unresolved.** Every fill and stroke resolves to a
+  site token in both themes. An unset SVG fill renders black, so set one on
+  every shape (even clip-path geometry). Audit with a script, not by eye.
+- **Shading formula.** A solid's three faces are tints of one hue mixed with
+  the background token: `color-mix(in oklab, var(<hue>) N%, var(--background))`
+  with N = 15% (top), 30% (inline-start face), 45% (inline-end face). Mixing
+  with the dark background makes the same formula adapt to dark mode.
+  `anatomyFill(hue, face)` implements it.
+- **Plate (world state).** `--background-highlight` fill, a thin
+  `--border-high-contrast` edge, side faces a slightly darker tint of that
+  neutral (25% / 40%). Never black.
+- **Colour roles.** Blue (`accent-a`) = accounts and contracts. Orange
+  (`diagram-state`; `yellow-700` light, `yellow-600` dark, a true orange,
+  not gold) = gas and value: tanks, levels, flowing gas, glow, meters.
+  Neutral = structure: plate (`border-high-contrast` edge), pipes at rest
+  (`body-medium`), leader lines. The failure state uses `diagram-revert`.
+- **Active state.** The part to watch keeps its own role colour at full
+  strength with a 2px outline (blue for accounts and contracts, orange for
+  gas), and its label and leader switch to that colour. Never the site
+  `primary`.
+- **Strokes.** Outlines 1px, leaders 0.75px, all non-scaling. Pipes are
+  tubes: a 2.5px `body-medium` stroke with a thin plate-coloured highlight
+  down the middle, so they read as pipes, not grooves. A pipe turns orange
+  (one-shot dash flow) only while gas flows through it.
+- **Show the quantity moving.** Levels change with the step (a tank fills,
+  drains as gas burns, drains the rest back), a burning part glows orange in
+  proportion (`IsoSolid glow`: top face and outline tinted toward the gas
+  hue alone, never blended with blue), and readouts count up in step with the
+  drawing (`useCountUp`, the one JS-driven motion: a one-shot ~700ms tween,
+  instant under reduced motion).
+- **Simple parts.** One simple solid per object, at most one icon per object,
+  each object on its own footprint (no overlaps).
+- **Labels.** Concept names only, single line, 12px, fully outside the plate
+  (including its sloping front edge across the label's whole width), each
+  with a short straight (or single-elbow) leader that never crosses a pipe, a
+  solid or another label. The metaphor goes in the label's tooltip.
+  `AnatomyLabels` drops any label that would leave the drawing, touch any
+  shape (the plate included) or touch another label or leader, earlier spots
+  winning, so narrow screens fall back to fewer labels plus the figcaption.
+- **One container.** `DiagramStage` puts the illustration (centred, with a
+  tight viewBox) and the controls panel in one `Card`. A container query on
+  the card: at 860px and wider the panel (18.5rem) sits on the inline-end
+  side, vertically centred; narrower, as in the docs column, it sits directly
+  under the illustration with a small gap. Panel order: presets, play/step
+  buttons, step caption (`role="status"`, reserving two lines), readout. Only
+  the figcaption intro sits outside, above (`DiagramFigure
+captionPlacement="top"`).
+- **Verify.** Screenshot light and dark at 1440px, 1024px and 390px (2x),
+  with reduced motion and RTL, and each step of each preset. Check no black
+  paint, no label collisions, no labels on shapes or the plate, no leader
+  crossings, nothing clipped. Translated pages keep the old image until the
+  intl pipeline runs, so check RTL with `dir="rtl"` or the `ar` story.
+
 ## Visual grammar
 
 <table>
@@ -104,8 +184,8 @@ icons 3:1.
         "State stroke, icons",
         "diagram-state",
         "yellow-700",
-        "yellow-400",
-        "5.0 / 12.6 on page; 4.5 / 8.3 on fill",
+        "yellow-600",
+        "5.0 / 6.6 on page; 4.5 / 4.4 on fill",
       ],
       [
         "State fill",

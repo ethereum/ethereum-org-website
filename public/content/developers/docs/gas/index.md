@@ -107,7 +107,7 @@ Although a transaction includes a limit, any gas not used in a transaction is re
 
 <GasTxDiagram />
 
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+_Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## What is the gas limit? {#what-is-gas-limit}
 

@@ -19,7 +19,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'Interactive replacement for `gas-tx.png` on `/developers/docs/transactions/` and `/developers/docs/gas/`, used in markdown as `<GasTxDiagram />`. The drawing is a Server Component; `GasTxPlayer` is the client island (presets, playback, readout, caption). Everything reads from the plain-TS model in `model.ts`, so the drawing, numbers and screen-reader text cannot disagree.\n\nThe step stories set `initialStep` so each snapshot is a deterministic end state. Chromatic runs with `prefersReducedMotion: "reduce"` globally, which is the motion-free path the diagram supports.',
+          'Interactive replacement for `gas-tx.png` on `/developers/docs/transactions/` and `/developers/docs/gas/`, used in markdown as `<GasTxDiagram />`. Drawn as a fuel rig: a pump (externally owned account) fills a tank to the gas limit, a feed pipe carries the message to an engine (contract account) that burns fuel per operation, and unused fuel flows back through a meter; out of gas, the engine stalls and the contract shows a Reverted tag.\n\n`GasTxPlayer` renders the figure and the controls panel in one `DiagramStage` card (panel on the inline-end side from a 46rem container width, stacked below it when narrower): presets, Send and step buttons, caption and readout. The isometric drawing (`gas-rig.tsx`) is lazy-loaded with `next/dynamic`. Everything reads from the plain-TS model in `model.ts`. Colours come from the `--anatomy-*` tokens in `anatomy-tokens.ts`, mapped to the site\'s semantic tokens.\n\nStep stories set `initialStep` so each snapshot is a deterministic end state. Chromatic runs with `prefersReducedMotion: "reduce"` globally.',
       },
     },
   },
@@ -87,7 +87,7 @@ export const Rtl: Story = {
     docs: {
       description: {
         story:
-          "Arabic: the grid and connectors mirror, so the flow runs from the inline-start (right) side. Strings fall back to English until the intl pipeline translates the namespace.",
+          "Arabic: the rig, its labels and the controls panel mirror, so the flow runs from the inline-start (right) side. Strings fall back to English until the intl pipeline translates the namespace.",
       },
     },
   },
@@ -100,7 +100,7 @@ export const Mobile: Story = {
     docs: {
       description: {
         story:
-          "Below `md` the layout stacks vertically and the lanes turn into downward/upward connectors.",
+          "At phone width the controls panel sits under the illustration inside the same card, and labels that wouldn't fit on one line are dropped (their tooltips and the figcaption carry the meaning).",
       },
     },
   },
@@ -113,7 +113,7 @@ export const ReducedMotion: Story = {
     docs: {
       description: {
         story:
-          "With `prefers-reduced-motion: reduce` nothing moves: the travelling dot is hidden, the flame and dash flow jump to their end state, and **Send transaction** still steps through the cycle with longer reading time. Emulate it in your browser's dev tools to try it here.",
+          "With `prefers-reduced-motion: reduce` nothing moves: the transaction slip doesn't drop, pipe flows and the exhaust are static, and the tank and meter jump to their end state, and **Send transaction** still steps through the cycle with longer reading time. Emulate it in your browser's dev tools to try it here.",
       },
     },
   },

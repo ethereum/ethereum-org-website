@@ -25,8 +25,36 @@ export const GAS_TX_PRESETS: Record<GasTxPresetId, GasTxPreset> = {
 export const GAS_TX_STEPS = ["enter", "reserve", "execute", "return"] as const
 export type GasTxStep = (typeof GAS_TX_STEPS)[number]
 
-/** -1 is the idle state: the complete diagram, before "Send transaction". */
+/** -1 is the idle state: the rig at rest, before "Send transaction". */
 export const GAS_TX_IDLE_STEP = -1
+
+/** Labelled parts of the fuel-rig drawing. */
+export const GAS_RIG_PARTS = [
+  "deck",
+  "order",
+  "pump",
+  "tank",
+  "feed",
+  "engine",
+  "returnLine",
+  "meter",
+] as const
+export type GasRigPart = (typeof GAS_RIG_PARTS)[number]
+
+/** The step at which each part is first shown at full strength. */
+export const GAS_RIG_PART_STEP: Record<GasRigPart, GasTxStep> = {
+  deck: "enter",
+  order: "enter",
+  pump: "enter",
+  tank: "reserve",
+  feed: "execute",
+  engine: "execute",
+  returnLine: "return",
+  meter: "return",
+}
+
+/** viewBox of the rig; the lazy-load placeholder reserves the same box. */
+export const GAS_RIG_SIZE = { width: 500, height: 342 }
 
 export type GasTxOutcome = "success" | "out-of-gas"
 
@@ -43,13 +71,44 @@ export interface GasTxView {
   /** Index into GAS_TX_STEPS, or GAS_TX_IDLE_STEP. */
   stepIndex: number
   motion: GasTxMotion | null
+  /** The one part the reader should watch now (drawn in its role colour, heavier). */
+  litPart: GasRigPart | null
   /** Which parts of the drawing are shown at full strength. */
   reached: Record<GasTxStep, boolean>
+  /** Out of gas, from step 3: the call failed and its state is reverted. */
   reverted: boolean
-  /** Flame gauge level to display now. */
-  levelShown: number
+  /** Step 3: how hot the contract glows, as gas used / gas limit (0-1). */
+  glowLevel: number
+  /** Readout values: start at 0 and fill in as the cycle reaches them. */
+  shownUsed: number
+  shownReturned: number
+  /** Fill levels (0-1) the moving parts show now. */
+  tankLevel: number
+  meterLevel: number
   /** Key in the `component-diagrams` namespace for the step caption. */
   captionKey: string
+}
+
+/**
+ * What the tank (reserved gas, drained as it burns) and the meter (gas
+ * returned) show. Idle is the starting state: everything empty.
+ */
+const getLevels = (
+  step: GasTxStep | null,
+  burnRatio: number,
+  returnRatio: number
+) => {
+  switch (step) {
+    case null:
+    case "enter":
+      return { tankLevel: 0, meterLevel: 0 }
+    case "reserve":
+      return { tankLevel: 1, meterLevel: 0 }
+    case "execute":
+      return { tankLevel: 1 - burnRatio, meterLevel: 0 }
+    default:
+      return { tankLevel: 0, meterLevel: returnRatio }
+  }
 }
 
 export const clampGasTxStep = (stepIndex: number) =>
@@ -82,6 +141,14 @@ export const getGasTxView = (
     return: success ? "gas-tx-step-return" : "gas-tx-step-revert",
   }
 
+  const litParts: Record<GasTxMotion, GasRigPart> = {
+    enter: "order",
+    reserve: "tank",
+    execute: "feed",
+    return: "meter",
+    revert: "engine",
+  }
+
   return {
     gasLimit,
     gasUsed,
@@ -90,15 +157,19 @@ export const getGasTxView = (
     burnRatio,
     stepIndex,
     motion,
+    litPart: motion ? litParts[motion] : null,
     reached: {
       enter: isReached("enter"),
       reserve: isReached("reserve"),
       execute: isReached("execute"),
       // Nothing flows back when out of gas, so the refund lane stays dimmed.
-      return: isReached("return") && success,
+      return: idle || (isReached("return") && success),
     },
-    reverted: isReached("return") && !success,
-    levelShown: isReached("execute") ? burnRatio : 0,
+    reverted: !success && (step === "execute" || step === "return"),
+    glowLevel: step === "execute" ? burnRatio : 0,
+    shownUsed: !idle && isReached("execute") ? gasUsed : 0,
+    shownReturned: step === "return" ? gasReturned : 0,
+    ...getLevels(step, burnRatio, gasReturned / gasLimit),
     captionKey: step ? captionKeys[step] : "gas-tx-step-idle",
   }
 }

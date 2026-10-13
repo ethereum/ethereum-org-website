@@ -217,6 +217,12 @@
   --color-diagram-state-fill: hsla(var(--diagram-state-fill));
   --color-diagram-group-fill: hsla(var(--diagram-group-fill));
   --color-diagram-revert: hsla(var(--diagram-revert));
+  --color-diagram-bg: hsla(var(--diagram-bg));
+  --color-diagram-plate: hsla(var(--diagram-plate));
+  --color-diagram-edge: hsla(var(--diagram-edge));
+  --color-diagram-pipe: hsla(var(--diagram-pipe));
+  --color-diagram-entity: hsla(var(--diagram-entity));
+  --color-diagram-gas: hsla(var(--diagram-gas));
 
   /* Border radius */
   --radius-base: var(--radius-2xl);

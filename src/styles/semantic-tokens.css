@@ -80,6 +80,14 @@
     --diagram-state-fill: var(--orange-100);
     --diagram-group-fill: var(--yellow-50);
     --diagram-revert: var(--red-700);
+    /* Isometric diagrams. Aliases, redeclared under .dark so they always
+       resolve where the theme class applies. */
+    --diagram-bg: var(--background);
+    --diagram-plate: var(--background-highlight);
+    --diagram-edge: var(--border-high-contrast);
+    --diagram-pipe: var(--body-medium);
+    --diagram-entity: var(--accent-a);
+    --diagram-gas: var(--diagram-state);
 
     /* Fonts */
     --font-inter: Inter, sans-serif;
@@ -155,9 +163,16 @@
 
     /* Diagrams */
     --diagram-entity-fill: var(--blue-900);
-    --diagram-state: var(--yellow-400);
+    /* yellow-600 is the warm orange; yellow-400 read as gold. 6.6:1 on black. */
+    --diagram-state: var(--yellow-600);
     --diagram-state-fill: var(--orange-900);
     --diagram-group-fill: var(--orange-900), 0.5;
     --diagram-revert: var(--red-300);
+    --diagram-bg: var(--background);
+    --diagram-plate: var(--background-highlight);
+    --diagram-edge: var(--border-high-contrast);
+    --diagram-pipe: var(--body-medium);
+    --diagram-entity: var(--accent-a);
+    --diagram-gas: var(--diagram-state);
   }
 }
