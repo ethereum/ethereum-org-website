@@ -9,7 +9,8 @@ export const inter = Inter({
 
 export const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   display: "swap",
   variable: "--font-mono",
 })

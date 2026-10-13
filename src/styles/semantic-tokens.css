@@ -74,6 +74,13 @@
     --staking-red: 4, 36%, 46%;
     --staking-red-fill: 140, 27%, 98%;
 
+    /* Diagrams (devdocs schematics). Strokes/icons on entities use --accent-a. */
+    --diagram-entity-fill: var(--blue-100);
+    --diagram-state: var(--yellow-700);
+    --diagram-state-fill: var(--orange-100);
+    --diagram-group-fill: var(--yellow-50);
+    --diagram-revert: var(--red-700);
+
     /* Fonts */
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
@@ -145,5 +152,12 @@
     --staking-blue-fill: 150, 10%, 19%;
     --staking-red: 6, 24%, 78%;
     --staking-red-fill: 140, 3%, 19%;
+
+    /* Diagrams */
+    --diagram-entity-fill: var(--blue-900);
+    --diagram-state: var(--yellow-400);
+    --diagram-state-fill: var(--orange-900);
+    --diagram-group-fill: var(--orange-900), 0.5;
+    --diagram-revert: var(--red-300);
   }
 }

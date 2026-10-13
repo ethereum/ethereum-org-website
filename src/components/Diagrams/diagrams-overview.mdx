@@ -1,0 +1,235 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title="Components / Data Viz / Diagrams / Overview" />
+
+# Diagrams
+
+The developer docs explain protocol mechanics with schematic PNGs (adapted from
+_Ethereum EVM illustrated_). PNGs don't follow the theme, can't be translated,
+and give screen readers one alt string. This set of primitives replaces them
+one diagram at a time with theme-aware, translatable, accessible React figures.
+`gas-tx.png` (`GasTx`) is the first; `.claude/skills/devdocs-diagrams/SKILL.md`
+has the recipe and the list of the PNGs still to convert.
+
+## Visual grammar
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Element</th>
+      <th align="left">Meaning</th>
+      <th align="left">Primitive</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      [
+        "Blue box",
+        "Entity: an account, actor or program",
+        'DiagramNode tone="entity"',
+      ],
+      ["Orange box", "State or data", 'DiagramNode tone="state"'],
+      [
+        "Pale sub-box",
+        "Part of a node (e.g. EVM code)",
+        'DiagramNode tone="chip"',
+      ],
+      [
+        "Grey outlined container",
+        "Scope boundary (e.g. World state)",
+        'DiagramGroup variant="outlined"',
+      ],
+      [
+        "Dashed tinted container",
+        "Group of related nodes",
+        'DiagramGroup variant="dashed"',
+      ],
+      ["Solid grey line", "Call", 'DiagramConnector line="solid"'],
+      ["Dashed grey line", "Message or flow", 'DiagramConnector line="dashed"'],
+      ["Rounded bend", "Static elbow or tree branch", "DiagramElbow"],
+      ["Grey pill", "Label on a connector", "DiagramPill"],
+      [
+        "Round badge",
+        "A quantity with an icon (gas supply, refund)",
+        "DiagramBadge",
+      ],
+      ["Mono italic", "Node and badge labels", "built into the primitives"],
+      ["Bold mono", "Section titles", "DiagramTitle"],
+    ].map(([element, meaning, primitive]) => (
+      <tr key={element}>
+        <td align="left">{element}</td>
+        <td align="left">{meaning}</td>
+        <td align="left">
+          <code>{primitive}</code>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Tokens
+
+Every colour is a semantic token; there are no hex values in components. Five
+`diagram-*` tokens were added (following the `staking-*` precedent) because no
+existing pair passed AA in both themes. Contrast is text 4.5:1, strokes and
+icons 3:1.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Role</th>
+      <th align="left">Token</th>
+      <th align="left">Light</th>
+      <th align="left">Dark</th>
+      <th align="left">Contrast (light / dark)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      [
+        "Entity stroke, icons",
+        "accent-a",
+        "blue-600",
+        "blue-400",
+        "6.1 / 7.2 on page; 5.4 / 5.2 on fill",
+      ],
+      [
+        "Entity fill",
+        "diagram-entity-fill",
+        "blue-100",
+        "blue-900",
+        "body text 16.5 / 12.8",
+      ],
+      [
+        "State stroke, icons",
+        "diagram-state",
+        "yellow-700",
+        "yellow-400",
+        "5.0 / 12.6 on page; 4.5 / 8.3 on fill",
+      ],
+      [
+        "State fill",
+        "diagram-state-fill",
+        "orange-100",
+        "orange-900",
+        "body text 16.7 / 11.8",
+      ],
+      [
+        "Dashed group fill",
+        "diagram-group-fill",
+        "yellow-50",
+        "orange-900 at 50%",
+        "stroke 4.8 / 8+",
+      ],
+      [
+        "Revert (out of gas)",
+        "diagram-revert",
+        "red-700",
+        "red-300",
+        "6.5 / 11.1",
+      ],
+      [
+        "Connectors, titles",
+        "body-medium",
+        "gray-500",
+        "gray-400",
+        "6.2 / 6.3",
+      ],
+      [
+        "Outlined container",
+        "border-high-contrast",
+        "gray-400",
+        "gray-300",
+        "3.4 / 9.1",
+      ],
+      [
+        "Pill",
+        "background-low + body",
+        "gray-100",
+        "gray-700",
+        "text 16.0 / 13.6",
+      ],
+      [
+        "The one moving element",
+        "primary",
+        "purple-600",
+        "purple-400",
+        "7.1 / 8.0",
+      ],
+    ].map(([role, token, light, dark, contrast]) => (
+      <tr key={role}>
+        <td align="left">{role}</td>
+        <td align="left">
+          <code>{token}</code>
+        </td>
+        <td align="left">{light}</td>
+        <td align="left">{dark}</td>
+        <td align="left">{contrast}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+Inside tinted fills, labels use `text-body`, never `text-body-medium` (4.1:1 on
+the dark state fill). Fonts: the site's `font-mono` (IBM Plex Mono, now loaded
+at 400 and 700, upright and italic).
+
+## Primitives
+
+- `DiagramFigure`: `figure` + screen-reader `description` (`aria-describedby`) +
+  visible `caption`. Every diagram starts here.
+- `DiagramNode`: `tone` (entity, state, chip), `shape` (box, circle, pill),
+  `layout` (stack, inline), optional `icon`, `definition` (Tooltip), children.
+- `DiagramGroup`: `variant` (outlined, dashed), `tone` (state, entity), `title`.
+- `DiagramConnector`: `orientation` (inline, block, responsive), `line`
+  (solid, dashed), `arrow` (end, start, both, none), `label`, `labelPlacement`,
+  `lineClassName` and `tokenClassName` animation hooks.
+- `DiagramElbow`: `from` (top, bottom), `to` (start, end), static only.
+- `DiagramBadge`: `border` (dashed, solid), `tone`, `icon`, `label`,
+  `definition`, `level` (gauge, a number or `"inherit"`).
+- `DiagramPill` (`shape` pill, tab; `tone` neutral, revert) and `DiagramTitle`.
+
+Layout is HTML in CSS grid: nodes in columns, connectors in their own lanes
+between them. Text wraps instead of clipping, grid columns follow `dir` so RTL
+mirrors for free, and nothing is measured in JS.
+
+## Motion
+
+- CSS only, on SVG and HTML: `stroke-dashoffset` flow, a travelling dot
+  (`transform`), opacity, and the badge gauge (`scaleY`). No Motion library,
+  canvas, WebGL or JS animation loop. A diagram's client island only flips
+  `data-*` attributes on a `group/diagram` wrapper.
+- 500-700 ms per step, ease-out, one-shot (`animate-diagram-*` in `theme.css`).
+  No idle or looping animation.
+- One thing moves at a time, and it is the only element in `primary`.
+- Under `prefers-reduced-motion` nothing moves: each step shows its end state,
+  and the controls still work.
+
+## Accessibility
+
+- `figure` + `figcaption`, plus a `description` that narrates the whole flow.
+- Nodes and badges with a `definition` are focusable and show it on hover and
+  focus. Containers expose only their label as the trigger.
+- Controls are design-system `Button`s in a `ButtonGroup`, with `aria-pressed`
+  on presets and labelled icon buttons for previous/next.
+- Step changes are announced in a polite `role="status"` caption.
+- Labels never use `whitespace-nowrap`; German-length strings wrap.
+
+## How to convert the next PNG
+
+1. **Read the PNG** and list its nodes, groups, connectors, pills and badges.
+   Map each one to a primitive. If something doesn't fit, add a variant to a
+   primitive rather than a new component.
+2. **Write the strings** in `src/intl/en/component-diagrams.json` under a
+   `<diagram>-*` prefix: labels, one-line definitions, a caption, and a
+   `description` that narrates the whole drawing.
+3. **Build the Server Component** in `src/components/Diagrams/<Name>/index.tsx`:
+   `DiagramFigure` > grid of nodes and connector lanes. Add a small
+   `"use client"` island only if the diagram is interactive, with a plain-TS
+   model that everything reads from.
+4. **Wire it into content.** Register it in `docsComponents`
+   (`src/layouts/Docs.tsx`) and swap the image line in the English markdown
+   only. Leave the PNG and translated markdown alone.
+5. **Add stories** (each state, dark, `ar`, mobile, reduced motion), check them
+   at 2x in both themes and at 360 px, then run `pnpm lint`, `pnpm type-check`
+   and `pnpm build-storybook`.
