@@ -115,10 +115,11 @@ export const getEthereumMarketcapData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getGFIs = createCachedGetter(
+// Static: rendered inside MDX (contributing page), where ISR breaks on Netlify
+export const getStaticGFIs = createCachedGetter(
   dataLayer.getGFIs,
-  ["gfis"],
-  CACHE_REVALIDATE_DAY
+  ["gfis-static"],
+  false
 )
 
 export const getQuizStats = createCachedGetter(
