@@ -69,7 +69,7 @@ A second vulnerable point for user privacy is how Ethereum tracks the order of t
 
 Beyond transaction routing and nonce management, protecting writes requires shielding the identities and assets involved in a transfer. Even when a user queries privately and broadcasts a transaction without censorship, the transaction data recorded onchain remains publicly visible. Anyone can see who sent how much to whom, and chain analysis firms aggregate this data into searchable profiles that persist indefinitely.
 
-[**EIP-8182 (Private ETH and ERC-20 Transfers)**](https://eips.ethereum.org/EIPS/eip-8182), proposed for the Hegotá upgrade, introduces a native, shared shielded pool directly into the Ethereum protocol for ETH and ERC-20 transfers. Privacy pools use cryptographic mixing to sever the link between deposit and withdrawal, but are only available via privacy apps, wallets, and layer 2 networks today.
+[**EIP-8182 (Private ETH and ERC-20 Transfers)**](https://eips.ethereum.org/EIPS/eip-8182) would introduce a native, shared shielded pool directly into the Ethereum protocol for ETH and ERC-20 transfers. It was proposed for the Hegotá upgrade but not included, and remains an open proposal. Privacy pools use cryptographic mixing to sever the link between deposit and withdrawal, but are only available via privacy apps, wallets, and layer 2 networks today.
 
 Historically, app-level privacy solutions have fractured liquidity and suffered from low anonymity sets. EIP-8182 consolidates shielded transfers at the protocol level, allowing users to route funds via hidden delivery keys without requiring specialized wallet architectures or interacting with fragmented, opt-in applications.
 
@@ -113,7 +113,7 @@ The direction of privacy development on Ethereum is shaped by ecosystem-wide ali
 
 Research and development into privacy on Ethereum spans dozens of teams across the ecosystem. Work is advancing on protocol upgrades, access-layer solutions, identity infrastructure, and compliance-aware tools.
 
-**Protocol upgrades**: EIP-8141 (Frame Transactions) and EIP-7805 (FOCIL) are scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8250 (Keyed Nonces) and EIP-8182 (Protocol-Level Shielded Pools) are in active development. EIP-8025 (optional execution proofs) and Verkle Trees are also targeted for Hegotá, providing the foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
+**Protocol upgrades**: EIP-8141 (Frame Transactions) and EIP-7805 (FOCIL) are scheduled for the [Hegotá upgrade](https://forkcast.org/upgrade/hegota/), the next network upgrade after [Glamsterdam](/roadmap/glamsterdam/). EIP-8250 (Keyed Nonces) and EIP-8182 (Protocol-Level Shielded Pools) are in active development. EIP-8025 (optional execution proofs) has also been proposed for Hegotá, and would provide a foundation for zkEVM-based private computation on Ethereum Mainnet. In parallel, research is maturing around FHE coprocessors to enable multi-party encrypted smart contracts.
 
 **Access layer**: PIR research is progressing with active implementations like [Raven](https://github.com/hisoka-io/raven) being tested by infrastructure teams. The Kohaku wallet SDK is under development as an open-source reference for privacy-preserving wallets.
 
