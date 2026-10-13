@@ -78,7 +78,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { key: "sell", image: sellImg },
   ] as const
 
-  // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
   const purchaseIntent: PurchaseIntentItem[] = (
     [
       ["retailers", 54],
@@ -146,7 +145,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ] as const
 
-  // TODO(data): live source (NCA 2026 Annual State of Crypto Holders Report)
   const holders = { now: 40, expected: 72 }
 
   return (
