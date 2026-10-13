@@ -381,22 +381,6 @@ export type CostLeaderboardData = Pick<
 
 // GitHub contributors
 
-export type Commit = {
-  commit: {
-    author: {
-      name: string
-      email: string
-      date: string
-    }
-    message: string
-  }
-  author: {
-    avatar_url: string
-    login: string
-    html_url: string
-  }
-}
-
 export type Author = {
   name: string
   email: string
@@ -547,11 +531,6 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =
@@ -631,11 +610,6 @@ export type BlockspaceData = {
 
 export type GrowThePieMasterData = {
   launchDates: Record<string, string>
-}
-
-export type GithubRepoData = {
-  starCount: number
-  languages: string[]
 }
 
 export type L2beatData = {
@@ -1240,16 +1214,6 @@ export type AtomResult = {
 export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
-
-type NestedDivs = {
-  div: NestedDivs[]
-}
-
-export type HTMLResult = {
-  html: {
-    body: Record<string, NestedDivs>[]
-  }
-}
 
 export type EventCardProps = {
   title: string

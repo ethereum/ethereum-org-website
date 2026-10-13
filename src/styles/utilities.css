@@ -271,3 +271,15 @@
     border-radius: var(--gr-radius, var(--radius-4xl));
   }
 }
+
+/* Heading permalink icon as a CSS mask, so long pages don't ship an SVG per anchor */
+@utility id-anchor {
+  @apply absolute end-full flex h-full items-center opacity-0 transition-opacity duration-100 ease-in-out group-hover:opacity-100 focus:opacity-100;
+
+  &::before {
+    content: "";
+    @apply me-1 size-3 bg-current;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E")
+      center / contain no-repeat;
+  }
+}

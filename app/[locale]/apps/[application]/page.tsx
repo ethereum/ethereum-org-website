@@ -50,6 +50,11 @@ import AppsAppJsonLD from "./page-jsonld"
 
 import { getAppsData } from "@/lib/data"
 
+// Rendered on demand and revalidated daily to pick up apps data updates.
+// Without generateStaticParams this route would render on every request.
+export const revalidate = 86400
+export const dynamicParams = true
+
 const Page = async (props: {
   params: Promise<PageParams & { application: string }>
 }) => {
@@ -427,6 +432,10 @@ const Page = async (props: {
       </I18nProvider>
     </>
   )
+}
+
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata(props: {

@@ -464,7 +464,7 @@ export const generated = {
           month: 10,
           day: 6,
         },
-        status: "anticipated",
+        status: "confirmed",
       },
       {
         kind: "testnet",
@@ -795,6 +795,15 @@ export const generated = {
         },
       },
       {
+        id: 8198,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/188",
+          date: "2026-10-01",
+        },
+      },
+      {
         id: 8250,
         status: "considered",
         networking: false,
@@ -828,6 +837,15 @@ export const generated = {
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
+        },
+      },
+      {
+        id: 8365,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/188",
+          date: "2026-10-01",
         },
       },
     ],

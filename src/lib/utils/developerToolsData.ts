@@ -77,6 +77,67 @@ export function getRankedPackages(tool: DeveloperTool) {
     .sort((a, b) => (b.downloads ?? -1) - (a.downloads ?? -1))
 }
 
+/** Highest star count across a tool's repos, or 0 when none report one. */
+function getToolStars(tool: DeveloperTool): number {
+  let maxStars = 0
+  for (const repo of repoEntries(tool)) {
+    if (typeof repo.stargazers === "number" && repo.stargazers > maxStars) {
+      maxStars = repo.stargazers
+    }
+  }
+  return maxStars
+}
+
+/**
+ * The only tool fields the catalog island reads: the card copy, the search
+ * haystack, the grouping/filter keys, and the sort score's two inputs. The
+ * index ships ~285 records, so the fields only server components touch
+ * (banner, socials, website, packages, repo hrefs, raw ranking data) stay out
+ * of the client payload entirely.
+ */
+export type ToolCardData = Pick<
+  DeveloperToolWithCategory,
+  | "name"
+  | "description"
+  | "descriptionStripped"
+  | "thumbnail_url"
+  | "tags"
+  | "categoryId"
+  | "subcategory_id"
+  | "resource_score"
+> & {
+  /**
+   * Best star count across the tool's repos, precomputed here so the client
+   * sort doesn't need the repo list. Repo hrefs are never read client-side.
+   */
+  stargazers?: number
+}
+
+/**
+ * Project a tool down to `ToolCardData`. Everything dropped here — `banner_url`,
+ * `twitter`, `website`, `packages`, the raw ranking fields — is read only by
+ * server components, so it never needs to cross into the client payload.
+ */
+export const toToolCard = (tool: DeveloperToolWithCategory): ToolCardData => {
+  const stargazers = getToolStars(tool)
+  return {
+    name: tool.name,
+    description: tool.description,
+    // Omit the keys rather than serialize an undefined.
+    ...(tool.descriptionStripped !== undefined && {
+      descriptionStripped: tool.descriptionStripped,
+    }),
+    ...(tool.thumbnail_url && { thumbnail_url: tool.thumbnail_url }),
+    tags: tool.tags,
+    categoryId: tool.categoryId,
+    subcategory_id: tool.subcategory_id,
+    ...(typeof tool.resource_score === "number" && {
+      resource_score: tool.resource_score,
+    }),
+    ...(stargazers > 0 && { stargazers }),
+  }
+}
+
 /** `ethpm/ethpm-spec` from a GitHub URL, or the bare URL for other hosts. */
 export const getRepoLabel = (href: string) =>
   href.replace(/^https:\/\/github\.com\//, "")
@@ -143,13 +204,14 @@ export function withCategories({
   })
 }
 
-/** Tally how many tools fall under each category id. */
-export function countToolsByCategory(
-  tools: DeveloperToolWithCategory[]
+/** Tally how many tools fall under each category (or subcategory) id. */
+export function countTools(
+  tools: DeveloperToolWithCategory[],
+  key: "categoryId" | "subcategory_id"
 ): Record<string, number> {
   const counts: Record<string, number> = {}
   for (const tool of tools) {
-    counts[tool.categoryId] = (counts[tool.categoryId] || 0) + 1
+    counts[tool[key]] = (counts[tool[key]] || 0) + 1
   }
   return counts
 }
