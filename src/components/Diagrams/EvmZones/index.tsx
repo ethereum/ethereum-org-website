@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { EvmZonesPlayer } from "./evm-zones-player"
+import { EvmZonesPlayer } from "./lazy-player"
 
 export interface EvmZonesDiagramProps {
   /** Step to start on (0 = idle, 1-4), for static stories. */

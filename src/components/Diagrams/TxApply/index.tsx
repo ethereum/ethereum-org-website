@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { TxApplyPlayer } from "./tx-apply-player"
+import { TxApplyPlayer } from "./lazy-player"
 
 export interface TxApplyDiagramProps {
   /** Step to start on (0 = idle, 1-4), for static stories. */
