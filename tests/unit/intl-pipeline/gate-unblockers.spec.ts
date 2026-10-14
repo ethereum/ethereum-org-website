@@ -105,3 +105,21 @@ test("the guard reaches setFrontmatterFieldText", () => {
   expect(setFrontmatterFieldText(doc, "title", 'title: "Neu"')).toBe(true)
   expect(doc.get("title")).toBe("Neu")
 })
+
+test("a ``` line inside a ~~~ block does not reopen the fence", () => {
+  // A toggle would treat the inner ``` as a close and start editing fenced
+  // content; verify-structure's headings() tracks the fence character, so the
+  // fixer must too or the two disagree about what is code.
+  const s = [
+    "~~~text",
+    "```",
+    "##### Not a heading {#}",
+    "~~~",
+    "",
+    "##### Real heading {#}",
+  ].join("\n")
+  const r = _testOnly.fixEmptyHeadingAnchors(s)
+  expect(r.fixCount).toBe(1)
+  expect(r.content).toContain("##### Not a heading {#}")
+  expect(r.content.endsWith("##### Real heading")).toBe(true)
+})

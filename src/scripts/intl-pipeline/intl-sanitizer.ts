@@ -3770,16 +3770,20 @@ function fixEmptyHeadingAnchors(content: string): {
   fixCount: number
 } {
   const lines = content.split("\n")
-  const fenceRe = /^\s*(```|~~~)/
-  let inFence = false
+  let fence: string | null = null
   let fixCount = 0
 
   for (let i = 0; i < lines.length; i++) {
-    if (fenceRe.test(lines[i])) {
-      inFence = !inFence
+    // Track the fence CHARACTER, like verify-structure's headings() does, so a
+    // ``` line inside a ~~~ block does not close it and leave the fixer
+    // editing fenced content. A toggle gets that wrong.
+    const f = lines[i].match(/^\s*(`{3,}|~{3,})/)
+    if (f) {
+      if (!fence) fence = f[1][0]
+      else if (lines[i].trim().startsWith(fence)) fence = null
       continue
     }
-    if (inFence) continue
+    if (fence) continue
     // \r is matched explicitly: split("\n") leaves it on a CRLF file, and 25
     // corpus files are CRLF (including one English source).
     const fixed = lines[i].replace(
