@@ -468,8 +468,22 @@ function tagsBalanced(s: string): boolean {
   return stack.length === 0
 }
 
-/** Plural categories whose wording commonly omits the number entirely. */
-const IDIOMATIC_WITHOUT_NUMBER = new Set(["one", "zero", "=0", "=1"])
+/**
+ * Plural categories whose wording commonly omits the number entirely.
+ *
+ * `two` is here for the dual: Arabic "سنتان" already means "two years", and
+ * Slovenian and Hebrew behave the same way. Each of these categories matches
+ * exactly one count, so the noun form carries it and the numeral is optional.
+ * `few`, `many` and `other` cover ranges and genuinely need their number.
+ */
+const IDIOMATIC_WITHOUT_NUMBER = new Set([
+  "zero",
+  "one",
+  "two",
+  "=0",
+  "=1",
+  "=2",
+])
 
 const setsEqual = (a: Set<string>, b: Set<string>) =>
   a.size === b.size && [...a].every((x) => b.has(x))

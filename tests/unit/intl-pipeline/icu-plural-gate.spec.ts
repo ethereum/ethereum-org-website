@@ -102,6 +102,25 @@ test("one and zero may omit the number, as a warning", () => {
   ])
 })
 
+test("the arabic dual may omit the number", () => {
+  // "سنتان" already means "two years"; the dual noun carries the count. This
+  // failed ar/page-organizations-enterprise on the first recovery run.
+  const ar =
+    "{years, plural, zero {{count} سنة} one {سنة} two {سنتان} few {{count} سنوات} many {{count} سنة} other {{count} سنة}}"
+  const f = verifyJson(json(EN_UPTIME), json(ar), "f.json")
+  expect(f.filter((x) => x.severity === "error")).toEqual([])
+})
+
+test("few and many still need their number", () => {
+  const ar =
+    "{years, plural, zero {{count} سنة} one {سنة} two {سنتان} few {سنوات} many {{count} سنة} other {{count} سنة}}"
+  expect(
+    verifyJson(json(EN_UPTIME), json(ar), "f.json")
+      .filter((x) => x.severity === "error")
+      .map((x) => x.check)
+  ).toEqual(["json-plural-branch"])
+})
+
 test("malformed plural syntax fails", () => {
   expect(
     checks(EN_UPTIME, "{years, plural, one {{count} rok} other {")

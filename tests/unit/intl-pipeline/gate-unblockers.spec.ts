@@ -51,6 +51,21 @@ test("a heading containing inline code is still fixed", () => {
   )
 })
 
+test("an anchor that is not at end of line is stripped", () => {
+  // verify-structure finds the anchor anywhere in the heading text, so an
+  // end-anchored strip left these for the gate to fail on.
+  expect(stripAnchors("##### Ressourcen {#} (Fortsetzung)").content).toBe(
+    "##### Ressourcen (Fortsetzung)"
+  )
+  expect(stripAnchors("##### {#} Ressourcen").content).toBe("##### Ressourcen")
+})
+
+test("a tab after the hashes is still a heading", () => {
+  expect(stripAnchors("#####\tRessourcen {#}").content).toBe(
+    "#####\tRessourcen"
+  )
+})
+
 test("a real anchor is left alone", () => {
   const s = "## Titel {#titel}"
   expect(stripAnchors(s).content).toBe(s)

@@ -3784,12 +3784,17 @@ function fixEmptyHeadingAnchors(content: string): {
       continue
     }
     if (fence) continue
-    // \r is matched explicitly: split("\n") leaves it on a CRLF file, and 25
-    // corpus files are CRLF (including one English source).
-    const fixed = lines[i].replace(
-      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t\r]*$/,
-      "$1"
-    )
+    // Match the gate's own heading test (`^#{1,6}\s+`), and strip `{#}`
+    // ANYWHERE on the line rather than only at its end. verify-structure finds
+    // the anchor with `\{#[^}]*\}` positioned anywhere in the heading text, so
+    // an end-anchored strip left `##### Resources {#} (cont.)` and
+    // `#####\tResources {#}` for the gate to fail on -- which is how 2 of the
+    // 11 anchors in `networks` survived in all 24 locales. `{#}` is never
+    // valid, so removing every occurrence is safe.
+    if (!/^#{1,6}\s+\S/.test(lines[i])) continue
+    const fixed = lines[i]
+      .replace(/[ \t]*\{#[ \t]*\}[ \t]*/g, " ")
+      .replace(/[ \t\r]+$/, "")
     if (fixed !== lines[i]) {
       lines[i] = fixed
       fixCount++
