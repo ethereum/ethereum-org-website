@@ -47,7 +47,8 @@ export const richTags = ({
 
 /** Technical values (addresses, IPs, hashes, hosts) keep LTR order in RTL text */
 export const Ltr = ({ children }: { children: ReactNode }) => (
-  <span dir="ltr" className="font-mono">
+  // <bdi> isolates the value so neighbouring RTL text can't reorder it
+  <bdi dir="ltr" className="font-mono">
     {children}
-  </span>
+  </bdi>
 )
