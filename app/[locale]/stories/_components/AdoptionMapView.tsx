@@ -241,15 +241,23 @@ const AdoptionMapView = ({
             >
               <p className="font-bold">{active.name}</p>
               {active.value !== undefined ? (
-                <p className="text-sm whitespace-nowrap text-body-medium">
-                  {t.rich("page-stories-map-ownership", {
-                    value: percent(active.value),
-                    strong: (chunks) => (
-                      <span className="text-xl font-bold text-body tabular-nums">
-                        {chunks}
-                      </span>
-                    ),
-                  })}
+                <p className="flex items-center gap-2 text-sm whitespace-nowrap text-body-medium">
+                  <span
+                    className={cn(
+                      "size-2.5 shrink-0 rounded-full",
+                      activeBucket?.bg
+                    )}
+                  />
+                  <span>
+                    {t.rich("page-stories-map-ownership", {
+                      value: percent(active.value),
+                      strong: (chunks) => (
+                        <span className="text-xl font-bold text-body tabular-nums">
+                          {chunks}
+                        </span>
+                      ),
+                    })}
+                  </span>
                 </p>
               ) : (
                 <p className="text-sm text-body-medium">
