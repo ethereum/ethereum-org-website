@@ -49,7 +49,7 @@ Afin de déployer notre contrat intelligent sur le réseau de test, nous aurons 
 
 ## Étape 5 : Vérifier votre solde {#step-5}
 
-Pour vérifier que notre solde est bien là, effectuons une requête [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) à l'aide de [l'outil Composer d'Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Cela renverra le montant d'ETH dans notre portefeuille. Après avoir saisi l'adresse de votre compte MetaMask et cliqué sur « Send Request » (Envoyer la requête), vous devriez voir une réponse comme celle-ci :
+Pour vérifier que notre solde est bien là, effectuons une requête [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) à l'aide de [l'outil Composer d'Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Cela renverra le montant d'ETH dans notre portefeuille. Après avoir saisi l'adresse de votre compte MetaMask et cliqué sur « Send Request » (Envoyer la requête), vous devriez voir une réponse comme celle-ci :
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
