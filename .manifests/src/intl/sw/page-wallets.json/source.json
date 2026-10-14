@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-wallets.json",
-  "generatedAt": "2026-07-08T20:24:17.115Z",
-  "rootHash": "ffae765c20f4",
+  "generatedAt": "2026-10-14T17:44:32.664Z",
+  "rootHash": "b2fd7edae16c",
   "tree": {
-    "contentHash": "56c64deaf003",
+    "contentHash": "145922df374b",
     "anchorHash": "60f16093cc56",
     "children": {
       "page-wallets-accounts-addresses": {
@@ -143,7 +143,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-find-wallet-link": {
-        "contentHash": "dec67e871e24",
+        "contentHash": "8aa57e279241",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-get-some": {
@@ -183,11 +183,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-meta-description": {
-        "contentHash": "62aea234bb76",
+        "contentHash": "88f1e6f26876",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-meta-title": {
-        "contentHash": "bb18cb32a6e9",
+        "contentHash": "43131b117479",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-mobile": {
@@ -247,7 +247,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-slogan": {
-        "contentHash": "6dcb7ff39623",
+        "contentHash": "9ea7f6da74f2",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-stay-safe": {
@@ -265,7 +265,7 @@
         }
       },
       "page-wallets-subtitle": {
-        "contentHash": "41397474e013",
+        "contentHash": "2a2841ba88b6",
         "anchorHash": "e3b0c44298fc"
       },
       "page-wallets-take-responsibility": {
@@ -431,5 +431,5 @@
       "additional-reading-how-to-use-a-wallet"
     ]
   },
-  "sourceCommitSha": "a77613a9678f5a4deeebf95cfc1299103aeaf03a"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

@@ -348,6 +348,6 @@ From 주소는 메타마스크 계정 주소와 일치해야 하며 To 주소에
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-여기서 .deploy() 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 수행한 몇 가지 JSON-RPC 호출을 볼 수 있습니다. 여기서 주목해야 할 두 가지 중요한 호출은 실제로 Sepolia 체인에 스마트 컨트랙트를 기록하라는 요청인 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)과 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽어오라는 요청인 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)(트랜잭션을 보낼 때의 일반적인 패턴)입니다. 트랜잭션 전송에 대해 더 자세히 알아보려면 [Web3를 사용하여 트랜잭션을 전송하는 방법](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)에 대한 이 튜토리얼을 확인하세요.
+여기서 .deploy() 함수를 호출했을 때 Hardhat/Ethers가 내부적으로 수행한 몇 가지 JSON-RPC 호출을 볼 수 있습니다. 여기서 주목해야 할 두 가지 중요한 호출은 실제로 Sepolia 체인에 스마트 컨트랙트를 기록하라는 요청인 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth-sendrawtransaction)과 해시가 주어졌을 때 트랜잭션에 대한 정보를 읽어오라는 요청인 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash)(트랜잭션을 보낼 때의 일반적인 패턴)입니다. 트랜잭션 전송에 대해 더 자세히 알아보려면 [Web3를 사용하여 트랜잭션을 전송하는 방법](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)에 대한 이 튜토리얼을 확인하세요.
 
 이것으로 이 튜토리얼의 1부를 마칩니다. [2부에서는 NFT를 발행하여 스마트 컨트랙트와 실제로 상호작용해 보고](/developers/tutorials/how-to-mint-an-nft/), [3부에서는 이더리움 지갑에서 NFT를 확인하는 방법을 보여드리겠습니다](/developers/tutorials/how-to-view-nft-in-metamask/)!

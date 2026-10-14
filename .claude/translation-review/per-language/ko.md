@@ -136,3 +136,15 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - privacy-online L162 "outside wealthy countries" rendered as outskirts; L57 `강력 옵션` missing adnominal.
 - Brand script mixed within privacy-online (`크롬`/`페이스북` Hangul, Google/Safari/Brave Latin) -- native convention call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` truncated `프라이빗 체에서` -> `프라이빗 체인에서`.
+
+**Open (warnings):**
+
+- `보장` (guarantee) for promise blurs the page's promise-vs-guarantee contrast; Visa/Revolut script split; 그랜트/보조금.

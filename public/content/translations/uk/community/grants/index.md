@@ -10,7 +10,7 @@ lang: uk
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Засновники, потрібна допомога з прискоренням вашого бізнесу? [Перейдіть до підтримки засновників (Founders Support)](/founders/)</div>
+<div>Засновники, потрібна допомога з прискоренням вашого бізнесу? [Перейдіть до підтримки засновників (Founders Support)](/organizations/founders/)</div>
 </Alert>
 
 ## Широка екосистема Етеріуму {#broad-ethereum-ecosystem}

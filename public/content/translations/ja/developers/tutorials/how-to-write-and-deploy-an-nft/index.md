@@ -344,6 +344,6 @@ Fromアドレスはメタマスクのアカウントのアドレスと一致し�
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-ここでは、.deploy()関数を呼び出したときにHardhat/Ethersが内部で行ったいくつかのJSON-RPC呼び出しを確認できます。ここで注目すべき2つの重要な呼び出しは、スマート・コントラクトを実際にSepoliaチェーンに書き込むためのリクエストである[eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)と、ハッシュを指定してトランザクションに関する情報を読み取るためのリクエストである[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)（トランザクションを送信する際の典型的なパターン）です。トランザクションの送信について詳しく知りたい場合は、[Web3を使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)に関するこちらのチュートリアルを確認してください。
+ここでは、.deploy()関数を呼び出したときにHardhat/Ethersが内部で行ったいくつかのJSON-RPC呼び出しを確認できます。ここで注目すべき2つの重要な呼び出しは、スマート・コントラクトを実際にSepoliaチェーンに書き込むためのリクエストである[eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth-sendrawtransaction)と、ハッシュを指定してトランザクションに関する情報を読み取るためのリクエストである[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash)（トランザクションを送信する際の典型的なパターン）です。トランザクションの送信について詳しく知りたい場合は、[Web3を使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)に関するこちらのチュートリアルを確認してください。
 
 このチュートリアルのパート1は以上です。[パート2では、NFTをミントすることで実際にスマート・コントラクトと対話します](/developers/tutorials/how-to-mint-an-nft/)。そして[パート3では、イーサリアムのウォレットでNFTを表示する方法を紹介します](/developers/tutorials/how-to-view-nft-in-metamask/)！

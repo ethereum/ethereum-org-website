@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ar",
-  "translatedAt": "2026-06-19T19:20:05.142Z",
-  "englishManifestHash": "28d8e4a08705",
+  "translatedAt": "2026-10-14T17:56:15.958Z",
+  "englishManifestHash": "b217db3738e7",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-db1122",
@@ -29,7 +29,7 @@
     "CODE-bcc52f",
     "CODEBLOCK-78f58a",
     "LINK-149ae7",
-    "LINK-8865f7",
+    "LINK-82570c",
     "LINK-531f38",
     "LINK-851715",
     "LINK-36965a",
@@ -432,10 +432,10 @@
         "url": "/developers/docs/evm/"
       }
     },
-    "LINK-8865f7": {
+    "LINK-82570c": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/smart-contracts/testing/#unit-testing"
+        "url": "/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts"
       }
     },
     "LINK-531f38": {
@@ -957,7 +957,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T19:20:05.142Z",
+      "translatedAt": "2026-10-14T17:56:15.958Z",
       "status": "success"
     }
   }

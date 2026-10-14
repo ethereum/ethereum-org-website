@@ -96,3 +96,16 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - learn-quizzes `fornitura` for coin supply (6 keys) -> `offerta`.
 - open-access bank `account` should be `conto`; `non devono` modality shift (must not vs need not).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `security/index.md` dropped closing backtick on `withdraw()`.
+- `page-wallets-subtitle` `chain` -> `catene`; `enterprise-privacy` `scambi` -> `swap`; `enterprise-l2s` `bridge` -> `ponte` (glossary).
+
+**Open (warnings):**
+
+- Reviewer flagged lowercase-l1/l2 glossary deviations: NOT applied (upstream glossary casing bug, #53).

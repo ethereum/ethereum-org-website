@@ -82,7 +82,7 @@ Entwickler verwenden typischerweise eine JavaScript/TypeScript-Bibliothek, um vo
 
 - **[ethers.js](https://docs.ethers.org/)** - Funktioniert auch in Node.js für serverseitige Skripte und Bots
 - **[Web3.py](https://web3py.readthedocs.io/)** - Python-Bibliothek für die Ethereum-Interaktion
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Offizielle Go-Bibliothek vom Geth-Team
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Offizielle Go-Bibliothek vom Geth-Team
 
 ### Beispiel: Lesen eines Token-Guthabens mit Viem {#example-viem}
 

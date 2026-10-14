@@ -10,7 +10,7 @@ Danh sách này được tuyển chọn bởi cộng đồng của chúng tôi. 
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Các nhà sáng lập, bạn cần trợ giúp để tăng tốc doanh nghiệp của mình? [Hãy truy cập Hỗ trợ Nhà sáng lập (Founders Support)](/founders/)</div>
+<div>Các nhà sáng lập, bạn cần trợ giúp để tăng tốc doanh nghiệp của mình? [Hãy truy cập Hỗ trợ Nhà sáng lập (Founders Support)](/organizations/founders/)</div>
 </Alert>
 
 ## Hệ sinh thái Ethereum rộng lớn {#broad-ethereum-ecosystem}

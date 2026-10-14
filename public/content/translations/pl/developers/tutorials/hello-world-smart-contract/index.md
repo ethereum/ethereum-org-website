@@ -49,7 +49,7 @@ Aby wdrożyć nasz inteligentny kontrakt w sieci testowej, będziemy potrzebowa�
 
 ## Krok 5: Sprawdź swoje saldo {#step-5}
 
-Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) za pomocą [narzędzia composer od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request” (Wyślij żądanie), powinieneś zobaczyć odpowiedź podobną do tej:
+Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) za pomocą [narzędzia composer od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request” (Wyślij żądanie), powinieneś zobaczyć odpowiedź podobną do tej:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
