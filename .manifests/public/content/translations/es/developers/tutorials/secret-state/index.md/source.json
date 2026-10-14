@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/secret-state/index.md",
-  "generatedAt": "2026-06-19T23:19:06.195Z",
-  "rootHash": "b0c71f35881f",
+  "generatedAt": "2026-10-14T21:26:38.225Z",
+  "rootHash": "358503068822",
   "tree": {
     "contentHash": "202153615d30",
-    "anchorHash": "122ee0e76349",
+    "anchorHash": "9e2e7c5f3236",
     "children": {
       "frontmatter:title": {
         "contentHash": "6ff1aa8fc5e0",
@@ -2748,7 +2748,7 @@
       },
       "design": {
         "contentHash": "4f94a127a6bd",
-        "anchorHash": "a5671effc654",
+        "anchorHash": "e3cbb876ac47",
         "labelHash": "97af0f35cba2",
         "children": {
           "_label": {
@@ -2966,7 +2966,7 @@
           },
           "where-flatten": {
             "contentHash": "b931b5b590bf",
-            "anchorHash": "1e4c9c7998d2",
+            "anchorHash": "c4da77ba9900",
             "labelHash": "d9aa28046035",
             "children": {
               "_label": {
@@ -2987,7 +2987,7 @@
               },
               "inline-code:1": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "e036613aac7d"
+                "anchorHash": "bf187700d6bf"
               },
               "prose:5": {
                 "contentHash": "99e6a2100d04",
@@ -3162,5 +3162,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "1d108007c381bf3350d7e706746f624a9050ea3e"
+  "sourceCommitSha": "3a4f9534cdcda772448aa3a8191e1bf0ee618d8e"
 }
