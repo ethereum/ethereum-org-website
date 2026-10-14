@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-09-30T18:17:13.642Z",
-  "rootHash": "04f67d1cb9e9",
+  "generatedAt": "2026-10-14T17:44:04.734Z",
+  "rootHash": "ef9d91527ebf",
   "tree": {
-    "contentHash": "a35002b3409f",
+    "contentHash": "8af57b5a6ea5",
     "anchorHash": "1087fd24b283",
     "children": {
       "page-find-wallet-clear": {
@@ -20,11 +20,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-description": {
-        "contentHash": "1f3c795f2c85",
+        "contentHash": "7e2f75ce81b1",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-title": {
-        "contentHash": "30eddc01525e",
+        "contentHash": "20874703b633",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-meta-description-fallback": {
@@ -76,7 +76,7 @@
         ]
       },
       "page-find-wallet-title": {
-        "contentHash": "30eddc01525e",
+        "contentHash": "20874703b633",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-table-title": {
@@ -340,7 +340,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-hardware-hero-title": {
-        "contentHash": "48823975c206",
+        "contentHash": "dcae5feb8998",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-hardware-hero-description": {
@@ -348,11 +348,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-hardware-meta-title": {
-        "contentHash": "48823975c206",
+        "contentHash": "bc84558bd45c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-hardware-meta-description": {
-        "contentHash": "0138e778e954",
+        "contentHash": "ce9e76fc52ec",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-finance-title": {
@@ -1018,5 +1018,5 @@
       "page-find-wallet-fee-value-variable"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }
