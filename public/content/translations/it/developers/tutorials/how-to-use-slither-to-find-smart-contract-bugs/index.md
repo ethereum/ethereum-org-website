@@ -230,5 +230,5 @@ Un oggetto `Function` o `Modifier` ha:
 - `entry_point (Node)`: Punto di ingresso del CFG
 - `variables_read (list(Variable))`: Elenco delle variabili lette
 - `variables_written (list(Variable))`: Elenco delle variabili scritte
-- `state_variables_read (list(StateVariable))`: Elenco delle variabili di stato lette (sottoinsieme di variables`read)
-- `state_variables_written (list(StateVariable))`: Elenco delle variabili di stato scritte (sottoinsieme di variables`written)
+- `state_variables_read (list(StateVariable))`: Elenco delle variabili di stato lette (sottoinsieme di `variables_read`)
+- `state_variables_written (list(StateVariable))`: Elenco delle variabili di stato scritte (sottoinsieme di `variables_written`)

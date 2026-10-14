@@ -55,7 +55,6 @@ Możesz pobrać i utworzyć konto MetaMask za darmo [tutaj](https://metamask.io/
 Aby wdrożyć swój inteligentny kontrakt w sieci testowej, będziesz potrzebować trochę fałszywego ETH. Aby zdobyć ETH w sieci Sepolia, przejdź do kranika Sepolii i wprowadź adres swojego konta Sepolii. Zobacz [stronę sieci testowych](/developers/docs/networks/#sepolia), aby uzyskać listę opcji do wypróbowania:
 
 _Uwaga: ze względu na przeciążenie sieci może to chwilę potrwać._
-``
 ### Krok 5: Sprawdź swoje saldo {#step-5-check-your-balance}
 
 Aby upewnić się, że ETH znajduje się w Twoim portfelu, wykonajmy żądanie [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) za pomocą [narzędzia sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Aby dowiedzieć się więcej, sprawdź [krótki samouczek Alchemy na temat korzystania z narzędzia composer](https://youtu.be/r6sjRxBZJuU).

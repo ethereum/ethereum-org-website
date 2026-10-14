@@ -234,5 +234,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: точка входа CFG
 - `variables_read (list(Variable))`: список прочитанных переменных
 - `variables_written (list(Variable))`: список записанных переменных
-- `state_variables_read (list(StateVariable))`: список прочитанных переменных состояния (подмножество variables`read)
-- `state_variables_written (list(StateVariable))`: список записанных переменных состояния (подмножество variables`written)
+- `state_variables_read (list(StateVariable))`: список прочитанных переменных состояния (подмножество `variables_read`)
+- `state_variables_written (list(StateVariable))`: список записанных переменных состояния (подмножество `variables_written`)

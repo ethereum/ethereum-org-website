@@ -55,7 +55,6 @@ _참고: 반드시 **Sepolia**를 선택해야 합니다. 그렇지 않으면 �
 스마트 컨트랙트를 테스트 네트워크에 배포하려면 가짜 ETH가 필요합니다. Sepolia 네트워크에서 ETH를 얻으려면 Sepolia 퍼싯으로 이동하여 Sepolia 계정 주소를 입력하세요. 시도해 볼 수 있는 옵션 목록은 [테스트 네트워크 페이지](/developers/docs/networks/#sepolia)를 참조하세요:
 
 _참고: 네트워크 혼잡으로 인해 시간이 다소 걸릴 수 있습니다._
-``
 ### 5단계: 잔액 확인하기 {#step-5-check-your-balance}
 
 지갑에 ETH가 있는지 다시 확인하기 위해 [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 자세한 내용은 [컴포저(composer) 도구 사용 방법에 대한 Alchemy의 짧은 튜토리얼](https://youtu.be/r6sjRxBZJuU)을 확인하세요.

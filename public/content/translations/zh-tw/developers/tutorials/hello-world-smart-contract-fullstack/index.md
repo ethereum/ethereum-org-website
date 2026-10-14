@@ -56,7 +56,6 @@ _注意：請務必選擇 **Sepolia**，否則本教學將無法運作。_
 要將你的智能合約部署到測試網路，你需要一些假的 ETH。要在 Sepolia 網路上獲取 ETH，請前往 Sepolia 水龍頭並輸入你的 Sepolia 帳戶地址。請參閱[測試網路頁面](/developers/docs/networks/#sepolia)以獲取可嘗試的選項列表：
 
 _注意：由於網路壅塞，這可能需要一些時間。_
-``
 ### 第 5 步：檢查你的餘額 {#step-5-check-your-balance}
 
 為了再次確認 ETH 已存入你的錢包，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。要了解更多資訊，請查看 [Alchemy 關於如何使用 composer 工具的簡短教學](https://youtu.be/r6sjRxBZJuU)。

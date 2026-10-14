@@ -710,8 +710,7 @@ Genel olarak, işleme TypeScript veya Zokrates'te yapılabildiğinde, bunu çok 
 
 Ancak, bunu TypeScript'te yapabilecekken yine de [haritayı Zokrates'te düzleştiriyoruz](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20). Bunun nedeni, diğer seçeneklerin bence daha kötü olmasıdır.
 
-- Zokrates koduna tek boyutlu bir boolean dizisi sağlayın ve iki boyutlu haritayı elde etmek için `x*(height+2)
-+y` gibi bir ifade kullanın. Bu, [kodu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) biraz daha karmaşık hale getirecekti, bu yüzden performans kazancının bir eğitim için buna değmeyeceğine karar verdim.
+- Zokrates koduna tek boyutlu bir boolean dizisi sağlayın ve iki boyutlu haritayı elde etmek için `x*(height+2)+y` gibi bir ifade kullanın. Bu, [kodu](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) biraz daha karmaşık hale getirecekti, bu yüzden performans kazancının bir eğitim için buna değmeyeceğine karar verdim.
 
 - Zokrates'e hem tek boyutlu diziyi hem de iki boyutlu diziyi gönderin. Ancak bu çözüm bize hiçbir şey kazandırmaz. Zokrates kodunun, sağlanan tek boyutlu dizinin gerçekten iki boyutlu dizinin doğru temsili olduğunu doğrulaması gerekecektir. Yani herhangi bir performans kazancı olmayacaktır.
 

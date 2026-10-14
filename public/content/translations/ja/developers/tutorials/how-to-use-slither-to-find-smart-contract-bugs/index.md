@@ -230,5 +230,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFGのエントリポイント
 - `variables_read (list(Variable))`: 読み取られた変数のリスト
 - `variables_written (list(Variable))`: 書き込まれた変数のリスト
-- `state_variables_read (list(StateVariable))`: 読み取られた状態変数のリスト（variables`readのサブセット）
-- `state_variables_written (list(StateVariable))`: 書き込まれた状態変数のリスト（variables`writtenのサブセット）
+- `state_variables_read (list(StateVariable))`: 読み取られた状態変数のリスト（`variables_read`のサブセット）
+- `state_variables_written (list(StateVariable))`: 書き込まれた状態変数のリスト（`variables_written`のサブセット）

@@ -710,8 +710,7 @@ proof.proof = {
 
 然而，我们仍然[在 Zokrates 中展平地图](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)，尽管我们本可以在 TypeScript 中完成。原因在于，在我看来，其他选项更糟。
 
-- 向 Zokrates 代码提供一个一维布尔数组，并使用诸如 `x*(height+2)
-+y` 的表达式来获取二维地图。这会使[代码](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)变得有些复杂，所以我认为对于一篇教程来说，性能提升是不值得的。
+- 向 Zokrates 代码提供一个一维布尔数组，并使用诸如 `x*(height+2)+y` 的表达式来获取二维地图。这会使[代码](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)变得有些复杂，所以我认为对于一篇教程来说，性能提升是不值得的。
 
 - 将一维数组和二维数组都发送给 Zokrates。然而，这个解决方案并没有给我们带来任何好处。Zokrates 代码必须验证提供给它的一维数组确实是二维数组的正确表示。因此不会有任何性能提升。
 

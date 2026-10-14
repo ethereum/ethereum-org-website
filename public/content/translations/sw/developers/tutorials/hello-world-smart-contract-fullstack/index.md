@@ -55,7 +55,6 @@ Unaweza kupakua na kuunda akaunti ya MetaMask bila malipo [hapa](https://metamas
 Ili kusambaza mkataba mahiri wako kwenye mtandao wa majaribio, utahitaji ETH bandia. Ili kupata ETH kwenye mtandao wa Sepolia, nenda kwenye bomba la Sepolia na uweke anwani yako ya akaunti ya Sepolia. Angalia [ukurasa wa mitandao ya majaribio](/developers/docs/networks/#sepolia) kwa orodha ya chaguo za kujaribu:
 
 _Kumbuka: kutokana na msongamano wa mtandao, hii inaweza kuchukua muda._
-``
 ### Hatua ya 5: Angalia Salio lako {#step-5-check-your-balance}
 
 Ili kuhakikisha mara mbili kuwa ETH ipo kwenye mkoba wako, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Ili kujifunza zaidi angalia [mafunzo mafupi ya Alchemy kuhusu jinsi ya kutumia zana ya composer](https://youtu.be/r6sjRxBZJuU).

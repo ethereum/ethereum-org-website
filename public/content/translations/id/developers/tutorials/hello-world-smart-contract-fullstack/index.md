@@ -54,7 +54,6 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 Untuk menyebarkan kontrak pintar Anda ke jaringan testnet, Anda akan memerlukan beberapa ETH palsu. Untuk mendapatkan ETH di jaringan Sepolia, buka faucet Sepolia dan masukkan alamat akun Sepolia Anda. Lihat [halaman jaringan testnet](/developers/docs/networks/#sepolia) untuk daftar opsi yang dapat dicoba:
 
 _Catatan: karena kepadatan jaringan, ini mungkin memakan waktu beberapa saat._
-``
 ### Langkah 5: Periksa Saldo Anda {#step-5-check-your-balance}
 
 Untuk memeriksa kembali apakah ETH ada di dompet Anda, mari kita buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Untuk mempelajari lebih lanjut, lihat [tutorial singkat Alchemy tentang cara menggunakan alat komposer](https://youtu.be/r6sjRxBZJuU).

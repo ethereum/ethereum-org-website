@@ -54,7 +54,6 @@ _గమనిక: తప్పకుండా **Sepolia**ని ఎంచుక�
 మీ స్మార్ట్ కాంట్రాక్ట్‌ను టెస్ట్ నెట్‌వర్క్‌కి డిప్లాయ్ చేయడానికి, మీకు కొంత నకిలీ ETH అవసరం. Sepolia నెట్‌వర్క్‌లో ETHని పొందడానికి, Sepolia ఫాసెట్‌కి వెళ్లి మీ Sepolia ఖాతా చిరునామాను నమోదు చేయండి. ప్రయత్నించడానికి ఎంపికల జాబితా కోసం [టెస్ట్ నెట్‌వర్క్‌ల పేజీ](/developers/docs/networks/#sepolia)ని చూడండి:
 
 _గమనిక: నెట్‌వర్క్ రద్దీ కారణంగా, దీనికి కొంత సమయం పట్టవచ్చు._
-``
 ### దశ 5: మీ బ్యాలెన్స్‌ని తనిఖీ చేయండి {#step-5-check-your-balance}
 
 మీ వాలెట్‌లో ETH ఉందో లేదో ఒకసారి నిర్ధారించుకోవడానికి, [Alchemy యొక్క శాండ్‌బాక్స్ టూల్](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ఉపయోగించి [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) అభ్యర్థనను చేద్దాం. ఇది మన వాలెట్‌లో ఉన్న ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మరింత తెలుసుకోవడానికి [కంపోజర్ టూల్‌ను ఎలా ఉపయోగించాలో తెలిపే Alchemy యొక్క చిన్న ట్యుటోరియల్‌ని](https://youtu.be/r6sjRxBZJuU) చూడండి.

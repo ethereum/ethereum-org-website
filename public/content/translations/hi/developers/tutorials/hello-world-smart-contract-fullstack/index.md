@@ -56,7 +56,6 @@ _नोट: **Sepolia** चुनना सुनिश्चित करें
 अपने स्मार्ट अनुबंध को टेस्ट नेटवर्क पर तैनात करने के लिए, आपको कुछ नकली ETH की आवश्यकता होगी। Sepolia नेटवर्क पर ETH प्राप्त करने के लिए, Sepolia फॉसेट पर जाएं और अपना Sepolia खाता पता दर्ज करें। आजमाने के विकल्पों की सूची के लिए [टेस्ट नेटवर्क पेज](/developers/docs/networks/#sepolia) देखें:
 
 _नोट: नेटवर्क कंजेशन के कारण, इसमें कुछ समय लग सकता है।_
-``
 ### चरण 5: अपना बैलेंस जांचें {#step-5-check-your-balance}
 
 यह दोबारा जांचने के लिए कि आपके वॉलेट में ETH है, आइए [Alchemy के सैंडबॉक्स टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) का उपयोग करके एक [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) अनुरोध करें। यह हमारे वॉलेट में ETH की मात्रा वापस कर देगा। अधिक जानने के लिए [कंपोज़र टूल का उपयोग कैसे करें, इस पर Alchemy का संक्षिप्त ट्यूटोरियल](https://youtu.be/r6sjRxBZJuU) देखें।

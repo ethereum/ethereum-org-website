@@ -56,7 +56,6 @@ _注: 必ず**Sepolia**を選択してください。そうしないと、この
 スマート・コントラクトをテストネットワークにデプロイするには、テスト用のETHが必要です。SepoliaネットワークでETHを取得するには、Sepoliaのフォーセットにアクセスし、Sepoliaのアカウントアドレスを入力します。試すことができるオプションのリストについては、[テストネットワークのページ](/developers/docs/networks/#sepolia)を参照してください。
 
 _注: ネットワークの混雑状況により、これにはしばらく時間がかかる場合があります。_
-``
 ### ステップ5: 残高を確認する {#step-5-check-your-balance}
 
 ウォレットにETHがあることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。詳細については、[コンポーザーツールの使用方法に関するAlchemyの短いチュートリアル](https://youtu.be/r6sjRxBZJuU)を確認してください。

@@ -703,8 +703,7 @@ Em geral, quando o processamento pode ser feito no TypeScript ou no Zokrates, é
 
 No entanto, ainda [achatamos o mapa no Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), enquanto poderíamos ter feito isso no TypeScript. O motivo é que as outras opções são, na minha opinião, piores.
 
-- Fornecer uma matriz unidimensional de booleanos para o código Zokrates e usar uma expressão como `x*(height+2)
-+y` para obter o mapa bidimensional. Isso tornaria [o código](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) um pouco mais complicado, então decidi que o ganho de desempenho não vale a pena para um tutorial.
+- Fornecer uma matriz unidimensional de booleanos para o código Zokrates e usar uma expressão como `x*(height+2)+y` para obter o mapa bidimensional. Isso tornaria [o código](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) um pouco mais complicado, então decidi que o ganho de desempenho não vale a pena para um tutorial.
 
 - Enviar ao Zokrates tanto a matriz unidimensional quanto a matriz bidimensional. No entanto, essa solução não nos traz nenhum ganho. O código Zokrates teria que verificar se a matriz unidimensional fornecida é realmente a representação correta da matriz bidimensional. Portanto, não haveria nenhum ganho de desempenho.
 

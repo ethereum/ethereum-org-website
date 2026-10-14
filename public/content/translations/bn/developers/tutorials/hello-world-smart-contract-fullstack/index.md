@@ -56,7 +56,6 @@ _দ্রষ্টব্য: অবশ্যই **Sepolia** নির্বা�
 আপনার স্মার্ট কন্ট্রাক্টটি টেস্ট নেটওয়ার্কে ডিপ্লয় করতে, আপনার কিছু নকল ETH প্রয়োজন হবে। Sepolia নেটওয়ার্কে ETH পেতে, একটি Sepolia ফসেটে যান এবং আপনার Sepolia অ্যাকাউন্ট ঠিকানা লিখুন। চেষ্টা করার মতো বিকল্পগুলোর একটি তালিকার জন্য [টেস্ট নেটওয়ার্ক পেজ](/developers/docs/networks/#sepolia) দেখুন:
 
 _দ্রষ্টব্য: নেটওয়ার্কে ভিড়ের কারণে, এতে কিছুটা সময় লাগতে পারে।_
-``
 ### ধাপ 5: আপনার ব্যালেন্স চেক করুন {#step-5-check-your-balance}
 
 আপনার ওয়ালেটে ETH আছে কিনা তা নিশ্চিত করতে, চলুন [Alchemy-এর স্যান্ডবক্স টুল](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ব্যবহার করে একটি [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) রিকোয়েস্ট করি। এটি আমাদের ওয়ালেটে থাকা ETH-এর পরিমাণ রিটার্ন করবে। আরও জানতে [কম্পোজার টুল কীভাবে ব্যবহার করতে হয় সে সম্পর্কে Alchemy-এর ছোট টিউটোরিয়ালটি](https://youtu.be/r6sjRxBZJuU) দেখুন।

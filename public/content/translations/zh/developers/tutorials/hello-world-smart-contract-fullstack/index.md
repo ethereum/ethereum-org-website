@@ -56,7 +56,6 @@ _注意：请务必选择 **Sepolia**，否则本教程将无法运行。_
 要将你的智能合约部署到测试网络，你需要一些假 ETH。要在 Sepolia 网络上获取 ETH，请前往 Sepolia 水龙头并输入你的 Sepolia 账户地址。请参阅[测试网络页面](/developers/docs/networks/#sepolia)以获取可供尝试的选项列表：
 
 _注意：由于网络拥堵，这可能需要一些时间。_
-``
 ### 第 5 步：检查你的余额 {#step-5-check-your-balance}
 
 为了仔细检查 ETH 是否在你的钱包中，让我们使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)发出一个 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 请求。这将返回我们钱包中的 ETH 数量。要了解更多信息，请查看 [Alchemy 关于如何使用 composer 工具的简短教程](https://youtu.be/r6sjRxBZJuU)。

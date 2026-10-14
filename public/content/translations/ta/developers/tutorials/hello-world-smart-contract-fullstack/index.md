@@ -55,7 +55,6 @@ _குறிப்பு: **Sepolia** என்பதைத் தேர்ந�
 உங்கள் திறன் ஒப்பந்தத்தை சோதனைப் பிணையத்தில் நிலைநிறுத்த, உங்களுக்குச் சில போலி ETH தேவைப்படும். Sepolia பிணையத்தில் ETH-ஐப் பெற, ஒரு Sepolia பாசெட்டிற்குச் சென்று உங்கள் Sepolia கணக்கு முகவரியை உள்ளிடவும். முயற்சிப்பதற்கான விருப்பங்களின் பட்டியலுக்கு [சோதனைப் பிணையங்கள் பக்கத்தைப்](/developers/docs/networks/#sepolia) பார்க்கவும்:
 
 _குறிப்பு: பிணைய நெரிசல் காரணமாக, இதற்குச் சிறிது நேரம் ஆகலாம்._
-``
 ### படி 5: உங்கள் இருப்பைச் சரிபார்க்கவும் {#step-5-check-your-balance}
 
 உங்கள் பணப்பையில் ETH இருப்பதை உறுதிசெய்ய, [Alchemy-யின் சாண்ட்பாக்ஸ் கருவியைப்](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) பயன்படுத்தி [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) கோரிக்கையைச் செய்வோம். இது நமது பணப்பையில் உள்ள ETH-இன் அளவை வழங்கும். மேலும் அறிய, [கம்போசர் கருவியை எவ்வாறு பயன்படுத்துவது என்பது குறித்த Alchemy-யின் சிறிய டுடோரியலைப்](https://youtu.be/r6sjRxBZJuU) பார்க்கவும்.

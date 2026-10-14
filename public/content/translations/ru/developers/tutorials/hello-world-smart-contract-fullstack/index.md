@@ -55,7 +55,6 @@ _Примечание: обязательно выберите **Sepolia**, ин
 Чтобы развернуть ваш смарт-контракт в тестовой сети, вам понадобится немного ненастоящих ETH. Чтобы получить ETH в сети Sepolia, перейдите к крану Sepolia и введите адрес вашего аккаунта Sepolia. Ознакомьтесь со [страницей тестовых сетей](/developers/docs/networks/#sepolia) для получения списка доступных вариантов:
 
 _Примечание: из-за перегруженности сети это может занять некоторое время._
-``
 ### Шаг 5. Проверка баланса {#step-5-check-your-balance}
 
 Чтобы убедиться, что ETH находится в вашем кошельке, давайте сделаем запрос [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) с помощью [инструмента песочницы Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Это вернет количество ETH в нашем кошельке. Чтобы узнать больше, посмотрите [короткое руководство Alchemy по использованию инструмента composer](https://youtu.be/r6sjRxBZJuU).
