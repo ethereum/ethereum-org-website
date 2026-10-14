@@ -54,7 +54,7 @@ published: 2021-03-31
 
 ## Крок 5: Перевірка балансу {#step-5}
 
-Щоб переконатися, що наш баланс поповнено, давайте зробимо запит [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) за допомогою [інструмента composer від Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Це поверне суму ETH у нашому гаманці. Після того, як ви введете адресу свого акаунта МетаМаск і натиснете «Send Request» (Надіслати запит), ви побачите таку відповідь:
+Щоб переконатися, що наш баланс поповнено, давайте зробимо запит [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) за допомогою [інструмента composer від Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Це поверне суму ETH у нашому гаманці. Після того, як ви введете адресу свого акаунта МетаМаск і натиснете «Send Request» (Надіслати запит), ви побачите таку відповідь:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
