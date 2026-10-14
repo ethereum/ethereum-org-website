@@ -18,10 +18,10 @@ shared anatomy primitives in `Diagrams/anatomy/`:
 | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `isoProjection(x, y)`                                   | `P`, `line`, `path`, `box`, `disc`, `cylinder` for one plate origin                 |
 | `IsoPlate`                                              | the world-state slab (`data-anatomy-plate`)                                         |
-| `IsoSolid`                                              | a box with the three-tint shading and a 1px outline (`lit` for the active part)     |
+| `IsoSolid`                                              | a box with three-tint shading and a hairline outline (`state`: rest, lit, hover)    |
 | `IsoCylinder`                                           | a cylinder with an optional level fill                                              |
 | `IsoPipe`                                               | neutral 1.25px pipe; `flowing` turns it orange with a one-shot dash flow            |
-| `AnatomyLabels`                                         | concept labels + leaders + tooltips; drops what doesn't fit                         |
+| `AnatomyLabels`                                         | concept labels + leaders, focusable, drive hover; drops what doesn't fit            |
 | `DiagramStage`                                          | the single Card container: illustration + controls panel                            |
 | `DIAGRAM_COLOR`, `anatomyFill`, `DIAGRAM_SVG_FALLBACKS` | `--diagram-*` colour values with fallbacks, the shading formula, root SVG fallbacks |
 
@@ -66,14 +66,30 @@ Anatomy).
   not gold) = gas and value: tanks, levels, flowing gas, glow, meters.
   Neutral = structure: plate (`border-high-contrast` edge), pipes at rest
   (`body-medium`), leader lines. The failure state uses `diagram-revert`.
-- **Active state.** The part to watch keeps its own role colour at full
-  strength with a 2px outline (blue for accounts and contracts, orange for
+- **Line weight: hairlines, hierarchy by colour.** Every outline and leader
+  is 0.6px (non-scaling). `--diagram-line-faint` for seams and panel lines,
+  `--diagram-line` for outlines at rest, `--diagram-line-strong` for the
+  hovered part. Pipes are thin tubes: a 1.4px `body-medium` stroke with a
+  0.4px plate-coloured highlight; a one-shot orange dash flows along a pipe
+  only while gas moves through it.
+- **Fills.** Light role tints at rest (`--diagram-mix-*`: 7/14/22% light,
+  20/32/45% dark, top lightest); the active or hovered part takes the
+  stronger `--diagram-mix-*-active` shares (15/30/45%, 30/50/70% dark).
+- **Active state.** The part to watch takes its role colour: stronger tints
+  and a role-coloured hairline (blue for accounts and contracts, orange for
   gas), and its label and leader switch to that colour. Never the site
-  `primary`.
-- **Strokes.** Outlines 1px, leaders 0.75px, all non-scaling. Pipes are
-  tubes: a 2.5px `body-medium` stroke with a thin plate-coloured highlight
-  down the middle, so they read as pipes, not grooves. A pipe turns orange
-  (one-shot dash flow) only while gas flows through it.
+  `primary`, never a heavier stroke.
+- **Detail (static).** 2 to 4 small marks per object that say what it is,
+  from `isoDetail` (`anatomy/detail.tsx`): a bevel on the plate, seams and a
+  base band on boxes, a name plate on accounts, a rim and level marks on a
+  tank, cells on memory and storage, lines on a slip. Build every detail
+  element once at module level (`const SENDER_DETAIL = ...`) and render it
+  as-is: React skips an element it has seen, so steps and hovers never
+  re-render it. Budget: about 300 SVG nodes per diagram (they run 80-110).
+- **Shadow.** One soft ground shadow under the plate and a small contact
+  shadow under each object, both `isoShadow` (a footprint filled with the
+  drawing's radial gradient from `IsoDefs`). No SVG filters, no CSS blur.
+  Labels may sit on shadows (`data-anatomy-shadow` is skipped in the hit test).
 - **Show the quantity moving.** Levels change with the step (a tank fills,
   drains as gas burns, drains the rest back), a burning part glows orange in
   proportion (`IsoSolid glow`: top face and outline tinted toward the gas
@@ -85,7 +101,7 @@ Anatomy).
 - **Labels.** Concept names only, single line, 12px, fully outside the plate
   (including its sloping front edge across the label's whole width), each
   with a short straight (or single-elbow) leader that never crosses a pipe, a
-  solid or another label. The metaphor goes in the label's tooltip.
+  solid or another label. Labels are focusable; there is no tooltip.
   `AnatomyLabels` drops any label that would leave the drawing, touch any
   shape (the plate included) or touch another label or leader, earlier spots
   winning, so narrow screens fall back to fewer labels plus the figcaption.
@@ -106,12 +122,28 @@ Anatomy).
      longest step (pass every caption), so nothing jumps.
   4. `readout`: `DiagramReadout`, a compact two-column list with right-aligned
      tabular mono numbers.
-- **Dark mode.** The face tints are tokens: `--diagram-mix-top/-start/-end`
-  are 15/30/45% in light and 30/50/70% in dark, so blue and orange still read
-  as colour. Dark uses one step lighter hues (`blue-300`, `yellow-500`).
-  Outlines at rest use `stroke-diagram-entity-rest` / `-gas-rest` (75% of the
-  hue in dark), so the active part's full-strength 2px outline reads clearly
-  brighter. No glow beyond the active state.
+- **Hover and focus (built into the shell).** Wrap each part's shapes (and
+  its static detail) in `<g data-part="id">`, with the same id as its label
+  spot. Pointing at a part or its label, or focusing the label, draws the
+  part's outline in `line-strong` (`usePartState(...).state(id)` returns
+  `"hover"`), turns its label to its role colour, dims the other parts to
+  70% and shows "Label: definition" in the status line. Touch: a tap selects
+  a part. Screen readers get the definition through the label's
+  `aria-describedby`.
+- **Framing (built into the shell).** A figure header in small mono caps
+  ("Fig. N · Title"; pass `fig={N}` from the markdown), a status line under
+  the drawing (mono, two lines reserved; the step at rest, the hovered
+  part's definition on hover) and a legend of the role colours, one word
+  each.
+- **Performance.** Animate only opacity, transform and stroke-dashoffset (no
+  fill or stroke transitions). Each player uses `useDiagramInView`: the
+  drawing chunk loads when the figure comes within 200px of the viewport,
+  and runs, timers and CSS animations pause while it is off screen
+  (`paused` → `data-paused`). `Docs.tsx` imports every diagram with
+  `next/dynamic`, so its client code loads only on pages that use it.
+- **Dark mode.** The same tint tokens, about double light mode's, with one
+  step lighter hues (`blue-300`, `yellow-500`), so blue and orange still read
+  as colour.
 - **Verify.** Screenshot light and dark at 1440px, 1024px and 390px (2x),
   with reduced motion and RTL, and each step of each preset. Check no black
   paint, no label collisions, no labels on shapes or the plate, no leader

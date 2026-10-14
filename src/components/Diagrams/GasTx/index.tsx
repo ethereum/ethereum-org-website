@@ -7,6 +7,8 @@ export interface GasTxDiagramProps {
   initialPreset?: GasTxPresetId
   /** Step to start on (0-3), for static stories; idle by default. */
   initialStep?: number
+  /** Figure number on the page, shown as "Fig. N" in the figure header. */
+  fig?: number
   className?: string
 }
 
@@ -23,10 +25,15 @@ export interface GasTxDiagramProps {
 const GasTxDiagram = ({
   initialPreset,
   initialStep,
+  fig,
   className,
 }: GasTxDiagramProps) => (
   <div className={cn("not-prose my-8", className)}>
-    <GasTxPlayer initialPreset={initialPreset} initialStep={initialStep} />
+    <GasTxPlayer
+      initialPreset={initialPreset}
+      initialStep={initialStep}
+      fig={fig}
+    />
   </div>
 )
 

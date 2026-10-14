@@ -1,13 +1,14 @@
 "use client"
 
-import { type ReactNode, useLayoutEffect, useRef, useState } from "react"
+import { type ReactNode, useId, useLayoutEffect, useRef, useState } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-import { DiagramTooltipTarget } from "../diagram-tooltip-target"
+import { useDiagramHover } from "../diagram-hover"
 
 import { ISO_SVG_CLASS, type Point, r1 } from "./iso"
 import {
+  ANATOMY_HOVER_STROKE,
   ANATOMY_LIT_STROKE,
   ANATOMY_LIT_TEXT,
   type AnatomyHue,
@@ -57,17 +58,22 @@ const GAP_PX = 4
 
 /**
  * Concept labels for an anatomy diagram: single-line HTML text pinned beside
- * each part, joined by a short 0.75px leader, with a Tooltip (the metaphor).
- * Labels never wrap: one that would leave the drawing, or touch an earlier
- * label or leader in `spots`, is dropped with its leader. On narrow screens
- * the figure then relies on the remaining labels and the figcaption.
+ * each part, joined by a short hairline leader. Labels never wrap: one that
+ * would leave the drawing, sit on a shape, or touch an earlier label or
+ * leader in `spots` is dropped with its leader. On narrow screens the figure
+ * then relies on the remaining labels and the figcaption.
+ *
+ * Each label is focusable. Pointing at or focusing it highlights its part
+ * (shared hover state, see diagram-hover.tsx), which shows the part's
+ * definition in the status line; screen readers get the definition through
+ * `aria-describedby`.
  */
 export function AnatomyLabels({
   width,
   height,
   spots,
   labels,
-  tooltips,
+  definitions,
   litId,
 }: {
   /** The drawing's viewBox size. */
@@ -76,9 +82,12 @@ export function AnatomyLabels({
   /** In priority order: when two collide, the earlier one stays. */
   spots: AnatomyLabelSpot[]
   labels: Record<string, ReactNode>
-  tooltips: Record<string, ReactNode>
+  /** One-line definition per part, read with the label. */
+  definitions: Record<string, ReactNode>
   litId?: string | null
 }) {
+  const idPrefix = useId()
+  const { hovered, setHovered } = useDiagramHover()
   const containerRef = useRef<HTMLDivElement>(null)
   const labelRefs = useRef<Record<string, HTMLSpanElement | null>>({})
   const [hidden, setHidden] = useState<string[]>([])
@@ -127,35 +136,59 @@ export function AnatomyLabels({
         "svg[data-anatomy-drawing]"
       )
       // Geometric hit test (works off-screen, unlike elementsFromPoint).
+      // Each shape's paint and inverse transform are read once per measure,
+      // and a label only tests the shapes whose box it overlaps.
       const shapes = drawing
-        ? [...drawing.querySelectorAll("*")].filter(
-            (el): el is SVGGeometryElement =>
-              el instanceof SVGGeometryElement && !el.closest("clipPath")
-          )
+        ? [...drawing.querySelectorAll("*")].flatMap((el) => {
+            // Shadows are soft ground tone, not shapes: labels may sit on them.
+            if (
+              !(el instanceof SVGGeometryElement) ||
+              el.closest("clipPath") ||
+              el.hasAttribute("data-anatomy-shadow")
+            )
+              return []
+            const ctm = el.getScreenCTM()
+            // A shape scaled to nothing (e.g. an empty level) is invisible
+            // and has no inverse; skip it rather than throw.
+            if (!ctm || ctm.a * ctm.d - ctm.b * ctm.c === 0) return []
+            const style = getComputedStyle(el)
+            return [
+              {
+                el,
+                box: el.getBoundingClientRect(),
+                inverse: ctm.inverse(),
+                fill: style.fill !== "none",
+                stroke: style.stroke !== "none",
+              },
+            ]
+          })
         : []
-      const hitsShape = (x: number, y: number) =>
-        shapes.some((el) => {
-          const ctm = el.getScreenCTM()
-          // A shape scaled to nothing (e.g. an empty level) is invisible and
-          // has no inverse; skip it rather than throw.
-          if (!ctm || ctm.a * ctm.d - ctm.b * ctm.c === 0) return false
-          const point = new DOMPoint(x, y).matrixTransform(ctm.inverse())
-          const style = getComputedStyle(el)
+      const shapesNear = (rect: DOMRect) =>
+        shapes.filter(({ box }) => overlaps(rect, box, 0))
+      const hitsShape = (near: typeof shapes, x: number, y: number) =>
+        near.some(({ el, inverse, fill, stroke }) => {
+          const point = new DOMPoint(x, y).matrixTransform(inverse)
           return (
-            (style.fill !== "none" && el.isPointInFill(point)) ||
-            (style.stroke !== "none" && el.isPointInStroke(point))
+            (fill && el.isPointInFill(point)) ||
+            (stroke && el.isPointInStroke(point))
           )
         })
       // Sample the label box edge to edge, so corners count too.
-      const onDrawing = (rect: DOMRect) =>
-        [0, 0.25, 0.5, 0.75, 1].some((fx) =>
-          [0, 0.5, 1].some((fy) =>
-            hitsShape(
-              rect.left + 1 + (rect.width - 2) * fx,
-              rect.top + 1 + (rect.height - 2) * fy
+      const onDrawing = (rect: DOMRect) => {
+        const near = shapesNear(rect)
+        return (
+          near.length > 0 &&
+          [0, 0.25, 0.5, 0.75, 1].some((fx) =>
+            [0, 0.5, 1].some((fy) =>
+              hitsShape(
+                near,
+                rect.left + 1 + (rect.width - 2) * fx,
+                rect.top + 1 + (rect.height - 2) * fy
+              )
             )
           )
         )
+      }
 
       const placedLabels: DOMRect[] = []
       const placedLeaders: DOMRect[] = []
@@ -214,10 +247,11 @@ export function AnatomyLabels({
               fill="none"
               strokeLinejoin="round"
               className={cn(
-                "transition-colors duration-300 motion-reduce:transition-none",
-                litId === spot.id
-                  ? ANATOMY_LIT_STROKE[spot.tone]
-                  : "stroke-diagram-edge [stroke-width:0.75]"
+                hovered === spot.id
+                  ? ANATOMY_HOVER_STROKE
+                  : litId === spot.id
+                    ? ANATOMY_LIT_STROKE[spot.tone]
+                    : "stroke-diagram-line"
               )}
             />
           )
@@ -227,6 +261,7 @@ export function AnatomyLabels({
       {spots.map((spot) => (
         <span
           key={spot.id}
+          data-part={spot.id}
           ref={(el) => {
             labelRefs.current[spot.id] = el
           }}
@@ -240,16 +275,24 @@ export function AnatomyLabels({
             top: pct(spot.anchor[1], height),
           }}
         >
-          <DiagramTooltipTarget
-            as="span"
-            definition={tooltips[spot.id]}
+          <span
+            tabIndex={0}
+            aria-describedby={`${idPrefix}-${spot.id}`}
+            onFocus={() => setHovered(spot.id)}
+            onBlur={() => setHovered(null)}
             className={cn(
-              "cursor-help rounded-sm font-bold outline-offset-2 transition-colors duration-300 hover:underline focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
-              litId === spot.id ? ANATOMY_LIT_TEXT[spot.tone] : "text-body"
+              "cursor-default rounded-sm font-bold outline-offset-2 transition-opacity duration-200 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
+              hovered === spot.id || litId === spot.id
+                ? ANATOMY_LIT_TEXT[spot.tone]
+                : "text-body",
+              hovered !== null && hovered !== spot.id && "opacity-70"
             )}
           >
             {labels[spot.id]}
-          </DiagramTooltipTarget>
+          </span>
+          <span id={`${idPrefix}-${spot.id}`} className="sr-only">
+            {definitions[spot.id]}
+          </span>
         </span>
       ))}
     </div>

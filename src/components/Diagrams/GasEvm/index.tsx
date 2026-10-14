@@ -7,6 +7,8 @@ export interface GasEvmDiagramProps {
   initialPreset?: GasEvmPresetId
   /** Step to start on (0 = intrinsic gas, then one per opcode), for stories. */
   initialStep?: number
+  /** Figure number on the page, shown as "Fig. N" in the figure header. */
+  fig?: number
   className?: string
 }
 
@@ -18,10 +20,15 @@ export interface GasEvmDiagramProps {
 const GasEvmDiagram = ({
   initialPreset,
   initialStep,
+  fig,
   className,
 }: GasEvmDiagramProps) => (
   <div className={cn("not-prose my-8", className)}>
-    <GasEvmPlayer initialPreset={initialPreset} initialStep={initialStep} />
+    <GasEvmPlayer
+      initialPreset={initialPreset}
+      initialStep={initialStep}
+      fig={fig}
+    />
   </div>
 )
 

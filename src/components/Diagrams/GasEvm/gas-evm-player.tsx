@@ -6,6 +6,7 @@ import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 
 import { useCountUp } from "@/components/Diagrams/anatomy"
+import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
   DiagramCaption,
   DiagramPresets,
@@ -29,15 +30,16 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 // Decorative SVG, not needed for the first paint: its own chunk after
 // hydration, behind a placeholder of the same size.
+const RigPlaceholder = () => (
+  <div
+    aria-hidden
+    className="w-full"
+    style={{ aspectRatio: `${GAS_EVM_SIZE.width} / ${GAS_EVM_SIZE.height}` }}
+  />
+)
 const GasEvmRig = dynamic(() => import("./gas-evm-rig"), {
   ssr: false,
-  loading: () => (
-    <div
-      aria-hidden
-      className="w-full"
-      style={{ aspectRatio: `${GAS_EVM_SIZE.width} / ${GAS_EVM_SIZE.height}` }}
-    />
-  ),
+  loading: RigPlaceholder,
 })
 
 const RUN_DWELL_MS = 1100
@@ -55,6 +57,8 @@ const PARTS: GasEvmPart[] = [
 interface GasEvmPlayerProps {
   initialPreset?: GasEvmPresetId
   initialStep?: number
+  /** Figure number on the page, if the page numbers its figures. */
+  fig?: number
 }
 
 /**
@@ -64,10 +68,12 @@ interface GasEvmPlayerProps {
 export function GasEvmPlayer({
   initialPreset = "enough",
   initialStep = GAS_EVM_IDLE_STEP,
+  fig,
 }: GasEvmPlayerProps) {
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
   const { prefersReducedMotion } = usePrefersReducedMotion()
+  const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<GasEvmPresetId>(initialPreset)
   const [stepIndex, setStepIndex] = useState(initialStep)
@@ -77,7 +83,8 @@ export function GasEvmPlayer({
   const atEnd = view.stepIndex >= view.lastStep
 
   useEffect(() => {
-    if (!isRunning || atEnd) return
+    // Off screen, a run holds where it is and carries on when it is back.
+    if (!isRunning || !inView.visible || atEnd) return
     const timeout = window.setTimeout(
       () => {
         setStepIndex(view.stepIndex + 1)
@@ -86,7 +93,14 @@ export function GasEvmPlayer({
       prefersReducedMotion ? RUN_DWELL_REDUCED_MS : RUN_DWELL_MS
     )
     return () => window.clearTimeout(timeout)
-  }, [isRunning, atEnd, view.stepIndex, view.lastStep, prefersReducedMotion])
+  }, [
+    isRunning,
+    inView.visible,
+    atEnd,
+    view.stepIndex,
+    view.lastStep,
+    prefersReducedMotion,
+  ])
 
   const usedShown = useCountUp(view.gasUsed, { instant: prefersReducedMotion })
   const leftShown = useCountUp(view.gasLeft, { instant: prefersReducedMotion })
@@ -96,10 +110,12 @@ export function GasEvmPlayer({
       Object.entries(v.captionValues).map(([k, n]) => [k, format(n)])
     )
 
-  const textFor = (kind: "label" | "tooltip") =>
+  const textFor = (kind: "label" | "definition") =>
     Object.fromEntries(
       PARTS.map((part) => [part, t(`gas-evm-${kind}-${part}`)])
     ) as Record<GasEvmPart, ReactNode>
+  const labels = textFor("label")
+  const definitions = textFor("definition")
 
   // Every caption this preset can show, so the caption area keeps the height
   // of the longest one.
@@ -122,16 +138,49 @@ export function GasEvmPlayer({
     <InteractiveDiagram
       caption={t("gas-evm-caption")}
       description={t("gas-evm-description")}
+      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      title={t("gas-evm-title")}
+      status={
+        view.stepIndex < 0
+          ? t("gas-evm-status-idle")
+          : view.stepIndex === 0
+            ? t("gas-evm-status-intrinsic", {
+                intrinsic: format(view.lastCost),
+              })
+            : view.failed
+              ? t("gas-evm-status-out-of-gas")
+              : t("gas-evm-status-op", {
+                  pc: format(view.pc ?? 0),
+                  op: view.instruction?.op ?? "",
+                  cost: format(view.lastCost),
+                })
+      }
+      parts={Object.fromEntries(
+        PARTS.map((part) => [
+          part,
+          { label: labels[part], definition: definitions[part] },
+        ])
+      )}
+      legend={[
+        { hue: "entity", label: t("diagram-legend-evm") },
+        { hue: "gas", label: t("diagram-legend-gas") },
+        { hue: "neutral", label: t("diagram-legend-structure") },
+      ]}
+      inViewRef={inView.ref}
+      paused={!inView.visible}
       illustration={
-        <div className="mx-auto w-full max-w-2xl py-1">
+        // The drawing loads once the diagram comes near the viewport.
+        inView.seen ? (
           <GasEvmRig
             view={view}
             runKey={`${presetId}-${view.stepIndex}`}
-            labels={textFor("label")}
-            tooltips={textFor("tooltip")}
+            labels={labels}
+            definitions={definitions}
             revertedLabel={t("gas-tx-reverted")}
           />
-        </div>
+        ) : (
+          <RigPlaceholder />
+        )
       }
       presets={
         <DiagramPresets

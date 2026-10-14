@@ -6,17 +6,23 @@ import {
   anatomyFill,
   AnatomyLabels,
   type AnatomyLabelSpot,
+  anatomyStroke,
   DIAGRAM_COLOR,
   DIAGRAM_SVG_FALLBACKS,
+  ISO_DIM_CLASS,
   ISO_SVG_CLASS,
   IsoCylinder,
+  IsoDefs,
+  isoDetail,
   IsoPipe,
   IsoPlate,
   isoProjection,
+  isoShadow,
   IsoSolid,
   type Point,
   r1,
 } from "../anatomy"
+import { usePartState } from "../diagram-hover"
 
 import { GAS_EVM_SIZE } from "./layout"
 import { type GasEvmPart, type GasEvmView, PROGRAM } from "./model"
@@ -33,7 +39,10 @@ import { type GasEvmPart, type GasEvmView, PROGRAM } from "./model"
  */
 
 const { width: W, height: H } = GAS_EVM_SIZE
-const { P, path, box, cylinder } = isoProjection(112, 78)
+const PROJECTION = isoProjection(112, 78)
+const { P, path, box, cylinder, footprint } = PROJECTION
+const D = isoDetail(PROJECTION)
+const SHADOW = "gas-evm-shadow"
 
 const pts = (...ps: Point[]) => ps.map((p) => p.join(",")).join(" ")
 /** Quad on a front (y = const) face. */
@@ -82,6 +91,36 @@ const GAS_PIPE = path(9, [40, 66], [40, 84], [156, 84], [156, 62])
 const STORAGE_PIPE = path(12, [186, 62], [186, 86], [266, 86])
 
 const REVERTED_AT = P(156, 47, 42)
+
+/* ---------- Static detail and shadows (built once, never re-rendered) ---------- */
+
+const GROUND_SHADOW = isoShadow(
+  footprint(-4, 4, PLATE_W + 8, PLATE_D + 6, -22, 6),
+  SHADOW
+)
+const CONTACT_SHADOWS = (
+  <g className="pointer-events-none">
+    {isoShadow(footprint(22, 28, 40, 40, 0, 4), SHADOW)}
+    {isoShadow(footprint(88, 30, 148, 42, 0, 4), SHADOW)}
+    {isoShadow(footprint(264, 56, 42, 40, 0, 4), SHADOW)}
+  </g>
+)
+const PLATE_DETAIL = D.inset([0, 0, 0, PLATE_W, PLATE_D], 5)
+const PLINTH_DETAIL = D.inset([86, 28, 6, 146, 40], 2)
+const TANK_DETAIL = D.cylinderMarks(TANK)
+const TANK_FLANGE = D.flange(40, 46, 0, 23)
+const EVM_DETAIL = (
+  <>
+    {D.seams([124, 32, 6, 64, 30, 36], { end: [0.5], ring: 0.88 })}
+    {D.vents(62, 132, 150, [36])}
+  </>
+)
+const STORAGE_DETAIL = (
+  <>
+    {D.seams([262, 54, 0, 40, 38, 30], { end: [0.5], ring: 0.85 })}
+    {D.seams([262, 54, 0, 40, 38, 30], { ring: 0.12 })}
+  </>
+)
 
 /* ---------- Labels: each rises from its part's top back corner ---------- */
 
@@ -149,7 +188,7 @@ interface GasEvmRigProps {
   view: GasEvmView
   runKey: string
   labels: Record<GasEvmPart, ReactNode>
-  tooltips: Record<GasEvmPart, ReactNode>
+  definitions: Record<GasEvmPart, ReactNode>
   revertedLabel: string
   className?: string
 }
@@ -158,12 +197,17 @@ export default function GasEvmRig({
   view,
   runKey,
   labels,
-  tooltips,
+  definitions,
   revertedLabel,
   className,
 }: GasEvmRigProps) {
   const id = useId()
-  const isLit = (part: GasEvmPart) => view.litPart === part
+  const { state, dimmed } = usePartState(view.litPart)
+  const part = (name: GasEvmPart) => ({
+    "data-part": name,
+    className: ISO_DIM_CLASS,
+    style: { opacity: dimmed(name) ? 0.7 : 1 },
+  })
 
   // Written values are a stronger blue (machine and world state), not orange:
   // orange is only ever gas.
@@ -185,71 +229,87 @@ export default function GasEvmRig({
         {...DIAGRAM_SVG_FALLBACKS}
         className={ISO_SVG_CLASS}
       >
-        <IsoPlate box={PLATE} />
+        <IsoDefs id={SHADOW} />
+        {GROUND_SHADOW}
+        <g {...part("deck")}>
+          <IsoPlate box={PLATE} state={state("deck")} />
+          {PLATE_DETAIL}
+        </g>
+        {CONTACT_SHADOWS}
 
         {/* Gas supply. */}
-        <IsoCylinder
-          geometry={TANK}
-          hue="gas"
-          clipId={`${id}-tank`}
-          level={view.tankLevel}
-          lit={isLit("tank")}
-        />
-
-        {/* The EVM's plinth with the stack, the EVM and memory on it. */}
-        <IsoSolid box={PLINTH} hue="entity" />
-
-        {view.stack.length === 0 ? (
-          // An empty slot, so the Stack label never points at nothing.
-          <polygon
-            points={STACK_SLABS[0].top}
-            fill="none"
-            strokeDasharray="3 3"
-            className="stroke-diagram-entity-rest"
+        <g {...part("tank")}>
+          {TANK_FLANGE}
+          <IsoCylinder
+            geometry={TANK}
+            hue="gas"
+            clipId={`${id}-tank`}
+            level={view.tankLevel}
+            state={state("tank")}
           />
-        ) : (
-          STACK_SLABS.map((slab, k) =>
-            k < view.stack.length ? (
-              <IsoSolid
-                key={slab.top}
-                box={slab}
-                hue="entity"
-                lit={isLit("stack") && k === view.stack.length - 1}
-              />
-            ) : null
-          )
-        )}
-
-        <IsoSolid box={EVM} hue="entity" lit={isLit("evm")} />
-        <g className="stroke-diagram-entity-rest [stroke-width:0.75]">
-          {CODE_CELLS.map((cell, i) => (
-            <polygon
-              key={cell}
-              points={cell}
-              className={cn(
-                "transition-[fill] duration-300 motion-reduce:transition-none",
-                view.pc === i && "stroke-diagram-entity [stroke-width:2]"
-              )}
-              style={{ fill: cellFill(i) }}
-            />
-          ))}
+          {TANK_DETAIL}
         </g>
 
-        <IsoSolid box={MEMORY} hue="entity" lit={isLit("memory")} />
-        <g className="stroke-diagram-entity-rest [stroke-width:0.75]">
-          {MEMORY_CELLS.map((cell, k) => (
+        {/* The EVM's plinth with the stack, the EVM and memory on it. */}
+        <g {...part("evm")}>
+          <IsoSolid box={PLINTH} hue="entity" />
+          {PLINTH_DETAIL}
+        </g>
+
+        <g {...part("stack")}>
+          {view.stack.length === 0 ? (
+            // An empty slot, so the Stack label never points at nothing.
             <polygon
-              key={cell}
-              points={cell}
-              className="transition-[fill] duration-500 motion-reduce:transition-none"
-              style={{
-                fill:
-                  k === 0 && view.memoryWord !== null
-                    ? written
-                    : anatomyFill("entity", "top"),
-              }}
+              points={STACK_SLABS[0].top}
+              fill="none"
+              strokeDasharray="3 3"
+              className={anatomyStroke("entity", state("stack"))}
             />
-          ))}
+          ) : (
+            STACK_SLABS.map((slab, k) =>
+              k < view.stack.length ? (
+                <IsoSolid
+                  key={slab.top}
+                  box={slab}
+                  hue="entity"
+                  state={k === view.stack.length - 1 ? state("stack") : "rest"}
+                />
+              ) : null
+            )
+          )}
+        </g>
+
+        <g {...part("evm")}>
+          <IsoSolid box={EVM} hue="entity" state={state("evm")} />
+          {EVM_DETAIL}
+          <g className="stroke-diagram-line">
+            {CODE_CELLS.map((cell, i) => (
+              <polygon
+                key={cell}
+                points={cell}
+                className={cn(view.pc === i && "stroke-diagram-entity")}
+                style={{ fill: cellFill(i) }}
+              />
+            ))}
+          </g>
+        </g>
+
+        <g {...part("memory")}>
+          <IsoSolid box={MEMORY} hue="entity" state={state("memory")} />
+          <g className="stroke-diagram-line-faint">
+            {MEMORY_CELLS.map((cell, k) => (
+              <polygon
+                key={cell}
+                points={cell}
+                style={{
+                  fill:
+                    k === 0 && view.memoryWord !== null
+                      ? written
+                      : anatomyFill("entity", "top"),
+                }}
+              />
+            ))}
+          </g>
         </g>
 
         {/* Gas: a pulse along the pipe for every step, stronger for SSTORE. */}
@@ -262,22 +322,22 @@ export default function GasEvmRig({
 
         {/* Storage, apart on the plate, on its own pipe from the EVM. */}
         <IsoPipe d={STORAGE_PIPE} />
-        <IsoSolid box={STORAGE} hue="entity" lit={isLit("storage")} />
-        <polygon
-          points={STORAGE_SLOT}
-          className={cn(
-            "transition-[fill] duration-500 motion-reduce:transition-none",
-            view.failed
-              ? "stroke-diagram-revert [stroke-width:1.5]"
-              : "stroke-diagram-entity-rest"
-          )}
-          style={{
-            fill:
-              view.storageSlot !== null
-                ? written
-                : anatomyFill("entity", "top"),
-          }}
-        />
+        <g {...part("storage")}>
+          <IsoSolid box={STORAGE} hue="entity" state={state("storage")} />
+          {STORAGE_DETAIL}
+          <polygon
+            points={STORAGE_SLOT}
+            className={
+              view.failed ? "stroke-diagram-revert" : "stroke-diagram-line"
+            }
+            style={{
+              fill:
+                view.storageSlot !== null
+                  ? written
+                  : anatomyFill("entity", "top"),
+            }}
+          />
+        </g>
       </svg>
 
       <AnatomyLabels
@@ -285,7 +345,7 @@ export default function GasEvmRig({
         height={H}
         spots={SPOTS}
         labels={labels}
-        tooltips={tooltips}
+        definitions={definitions}
         litId={view.litPart}
       />
 
