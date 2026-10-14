@@ -2,25 +2,26 @@ import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { ChainName, Lang, PageParams } from "@/lib/types"
+import type { CatalogItem, ChainName, PageParams } from "@/lib/types"
 
-import ChainImages, { getRenderableChains } from "@/components/ChainImages"
-import ContentFeedback from "@/components/ContentFeedback"
+import CatalogItemLayout, {
+  CatalogItemLanguages,
+  RelatedCatalogItems,
+} from "@/components/CatalogItem"
 import { CheckCircle } from "@/components/icons/CheckCircle"
-import Discord from "@/components/icons/discord.svg"
-import Twitter from "@/components/icons/twitter.svg"
 import { XCircle } from "@/components/icons/XCircle"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import { getLocaleFormattedDate } from "@/lib/utils/date"
+import { formatDaysAgo } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
+  type CatalogWallet,
+  getNextWallet,
   getRelatedWallets,
   getWalletBySlug,
+  getWalletSlug,
+  getWalletSocialLinks,
   toCatalogCard,
 } from "@/lib/utils/walletData"
 import { formatWalletFees } from "@/lib/utils/wallets"
@@ -32,9 +33,7 @@ import {
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
 
-import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletCard from "../_components/WalletCard"
-import WalletPersonaTags from "../_components/WalletPersonaTags"
 
 import WalletDetailPageJsonLD from "./page-jsonld"
 
@@ -44,34 +43,70 @@ export const dynamicParams = true
 
 type WalletPageParams = PageParams & { wallet: string }
 
-const WALLET_LINK_EVENT = {
-  eventCategory: "WalletExternalLinkList",
-  eventAction: "Go to wallet",
-} as const
-
 /** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
 
-  const wallet = getWalletBySlug(walletSlug, locale)
+  const [t, tCommon, tItem, walletDescriptions] = await Promise.all([
+    getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
+    getTranslations({ locale, namespace: "common" }),
+    getTranslations({ locale, namespace: "component-catalog-item" }),
+    getTranslations({ locale, namespace: "page-wallet-descriptions" }),
+  ])
+
+  const wallet = getWalletBySlug(walletSlug, locale, walletDescriptions)
   if (!wallet) notFound()
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
-
   const deviceLabelMap = buildDeviceLabels(t)
-  const deviceLabels = getDeviceLabels(wallet.devices, deviceLabelMap)
-  const chains = getRenderableChains(wallet.supported_chains as ChainName[])
   const personaLabels = buildPersonaLabels(t)
-  const relatedWallets = getRelatedWallets(wallet, locale)
+  const nextWallet = getNextWallet(wallet)
+  const relatedWallets = getRelatedWallets(wallet, locale, walletDescriptions, {
+    exclude: getWalletSlug(nextWallet),
+  })
+  const lastUpdated = formatDaysAgo(locale, wallet.last_updated)
 
-  const lastUpdated = getLocaleFormattedDate(
-    locale as Lang,
-    wallet.last_updated
-  )
+  const item: CatalogItem = {
+    kind: "wallet",
+    slug: wallet.slug,
+    name: wallet.name,
+    logo: wallet.image,
+    banner: wallet.banner,
+    screenshots: wallet.screenshots ?? [],
+    tags: wallet.personas.map((persona) => ({ label: personaLabels[persona] })),
+    subtitle:
+      getDeviceLabels(wallet.devices, deviceLabelMap).join(" · ") || undefined,
+    chains: wallet.supported_chains as ChainName[],
+    description: wallet.descriptionStripped,
+    primaryLink: {
+      href: wallet.url,
+      label: tItem("catalog-item-visit-website"),
+    },
+    socialLinks: getWalletSocialLinks(wallet),
+    infoRows: [
+      wallet.supportedLanguages.length > 0 && {
+        label: t("page-find-wallet-info-languages"),
+        value: <CatalogItemLanguages names={wallet.supportedLanguages} />,
+      },
+      wallet.fees?.length && {
+        label: t("page-find-wallet-info-fees"),
+        value: formatWalletFees(wallet.fees, locale, t),
+      },
+      lastUpdated && {
+        label: t("page-find-wallet-info-last-updated"),
+        value: lastUpdated,
+      },
+    ].filter((row) => !!row),
+    breadcrumbs: [
+      { label: "ethereum.org", href: "/" },
+      { label: tCommon("wallets"), href: "/wallets/" },
+      { label: tCommon("find-wallet"), href: "/wallets/find-wallet/" },
+    ],
+    next: {
+      name: nextWallet.name,
+      href: `/wallets/find-wallet/${getWalletSlug(nextWallet)}/`,
+    },
+  }
 
   const renderFeature = (feature: WalletFeature) => {
     const supported = Boolean(wallet[feature.key])
@@ -98,154 +133,40 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   return (
     <>
       <WalletDetailPageJsonLD locale={locale} wallet={wallet} />
-      {/* Outside <main>, matching the catalog page inset. */}
-      <div className="px-page py-hero lg:py-hero-2x">
-        <FindWalletBreadcrumbs locale={locale} leaf={wallet.name} />
-      </div>
-
-      <main className="px-page pb-page">
-        <MainArticle className="max-w-5xl">
-          <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
-              <Image
-                src={wallet.image}
-                alt=""
-                className="size-16 shrink-0 rounded-xl object-contain xl:size-32"
-              />
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  <WalletPersonaTags
-                    personas={wallet.personas}
-                    labels={personaLabels}
-                  />
-
-                  <h1 className="mt-0">{wallet.name}</h1>
-
-                  {deviceLabels.length > 0 && (
-                    <p className="text-sm text-body-medium">
-                      {deviceLabels.join(" · ")}
-                    </p>
-                  )}
-
-                  {chains.length > 0 && <ChainImages chains={chains} nested />}
-
-                  {wallet.supportedLanguages.length > 0 && (
-                    <p className="text-sm text-body-medium">
-                      {wallet.supportedLanguages.join(", ")}
-                    </p>
-                  )}
-
-                  {wallet.fees?.length ? (
-                    <p className="flex items-center gap-1.5 text-sm text-body-medium">
-                      {formatWalletFees(wallet.fees, locale, t)}
-                      <Tooltip
-                        nested
-                        content={
-                          <p className="text-body">
-                            {t("page-find-wallet-fee-row-tooltip")}
-                          </p>
-                        }
-                      >
-                        <Info className="size-4 shrink-0" />
-                      </Tooltip>
-                    </p>
-                  ) : null}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <ButtonLink
-                    href={wallet.url}
-                    className="w-fit"
-                    customEventOptions={{
-                      ...WALLET_LINK_EVENT,
-                      eventAction: "Tap main button",
-                      eventName: wallet.name,
-                    }}
-                  >
-                    {t("page-find-wallet-visit-website")}
-                  </ButtonLink>
-                  {wallet.twitter && (
-                    <ButtonLink
-                      href={wallet.twitter}
-                      variant="outline"
-                      hideArrow
-                      className="flex w-fit"
-                      customEventOptions={{
-                        ...WALLET_LINK_EVENT,
-                        eventName: `Twitter: ${wallet.name}`,
-                      }}
-                    >
-                      <Twitter className="!size-5" />
-                      <span>Twitter</span>
-                    </ButtonLink>
-                  )}
-                  {wallet.discord && (
-                    <ButtonLink
-                      href={wallet.discord}
-                      variant="outline"
-                      hideArrow
-                      className="flex w-fit"
-                      customEventOptions={{
-                        ...WALLET_LINK_EVENT,
-                        eventName: `Discord: ${wallet.name}`,
-                      }}
-                    >
-                      <Discord className="!size-5" />
-                      <span>Discord</span>
-                    </ButtonLink>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {wallet.descriptionStripped && (
-              <p className="max-w-3xl text-body-medium">
-                {wallet.descriptionStripped}
-              </p>
-            )}
-
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {WALLET_FEATURE_GROUPS.map((group) => (
-                <div key={group.titleKey}>
-                  <h3 className="mb-2 text-md">{t(group.titleKey)}</h3>
-                  <ul className="m-0 list-none">
-                    {[...group.features]
-                      .sort(
-                        (a, b) =>
-                          Number(Boolean(wallet[b.key])) -
-                          Number(Boolean(wallet[a.key]))
-                      )
-                      .map(renderFeature)}
-                  </ul>
-                </div>
+      <CatalogItemLayout
+        item={item}
+        related={
+          relatedWallets.length > 0 && (
+            <RelatedCatalogItems title={t("page-find-wallet-related-title")}>
+              {relatedWallets.map((related: CatalogWallet) => (
+                <WalletCard
+                  key={related.slug}
+                  wallet={toCatalogCard(related, { t, locale })}
+                  deviceLabels={deviceLabelMap}
+                  personaLabels={personaLabels}
+                />
               ))}
+            </RelatedCatalogItems>
+          )
+        }
+      >
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {WALLET_FEATURE_GROUPS.map((group) => (
+            <div key={group.titleKey}>
+              <h3 className="mb-2 text-md">{t(group.titleKey)}</h3>
+              <ul className="m-0 list-none">
+                {[...group.features]
+                  .sort(
+                    (a, b) =>
+                      Number(Boolean(wallet[b.key])) -
+                      Number(Boolean(wallet[a.key]))
+                  )
+                  .map(renderFeature)}
+              </ul>
             </div>
-
-            <p className="text-body-medium italic">
-              {`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${lastUpdated}`}
-            </p>
-
-            {relatedWallets.length > 0 && (
-              <section className="space-y-4">
-                <h2 className="text-h4">
-                  {t("page-find-wallet-related-title")}
-                </h2>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  {relatedWallets.map((related) => (
-                    <WalletCard
-                      key={related.slug}
-                      wallet={toCatalogCard(related, { t, locale })}
-                      deviceLabels={deviceLabelMap}
-                      personaLabels={personaLabels}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
-          </div>
-        </MainArticle>
-        <ContentFeedback />
-      </main>
+          ))}
+        </div>
+      </CatalogItemLayout>
     </>
   )
 }
@@ -261,13 +182,14 @@ export async function generateMetadata(props: {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
 
-  const wallet = getWalletBySlug(walletSlug, locale)
+  const [t, walletDescriptions] = await Promise.all([
+    getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
+    getTranslations({ locale, namespace: "page-wallet-descriptions" }),
+  ])
+
+  const wallet = getWalletBySlug(walletSlug, locale, walletDescriptions)
   if (!wallet) return {}
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
   const description =
     wallet.descriptionStripped ??
     buildWalletMetaDescription(wallet, t, locale) ??
