@@ -154,7 +154,7 @@ Importez les bibliothèques dont nous avons besoin, ainsi que [le composant `Gre
 const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-L'ID de la chaîne Sepolia.
+L'identifiant de chaîne de Sepolia.
 
 ```
 function App() {
@@ -166,7 +166,7 @@ C'est la manière standard de créer un composant React : définir une fonction 
   const connection = useConnection()
 ```
 
-Utilisez [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) pour obtenir des informations relatives à la connexion actuelle, telles que l'adresse et `chainId`.
+Utilisez [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) pour obtenir des informations relatives à la connexion actuelle, telles que l'adresse et le `chainId`.
 
 Par convention, dans React, les fonctions appelées `use...` sont des [hooks](https://www.w3schools.com/react/react_hooks.asp). Ces fonctions ne se contentent pas de renvoyer des données au composant ; elles s'assurent également qu'il est rendu à nouveau (la fonction du composant est exécutée à nouveau, et sa sortie remplace la précédente dans le HTML) lorsque ces données changent.
 
@@ -235,9 +235,9 @@ Fournissez des informations sur la connexion actuelle. Dans JSX, `{<expression>}
       {connection.status === 'connected' && (
 ```
 
-La syntaxe `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`».
+La syntaxe `{<condition> && <valeur>}` signifie « si la condition est `true`, évaluer à la valeur ; si elle ne l'est pas, évaluer à `false` ».
 
-C'est la manière standard de mettre des instructions if à l'intérieur de JSX.
+C'est la manière standard de placer des instructions if à l'intérieur de JSX.
 
 ```tsx
         <div>
@@ -279,7 +279,7 @@ Dans `connectors`, nous avons une liste de connecteurs. Nous utilisons [`map`](h
               key={connector.uid}
 ```
 
-Dans JSX, il est nécessaire que les balises « sœurs » (balises qui descendent du même parent) aient des identifiants différents.
+Dans JSX, il est nécessaire que les balises « sœurs » (les balises qui descendent du même parent) aient des identifiants différents.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -300,7 +300,7 @@ Les boutons de connecteur.
       )}
 ```
 
-Fournissez des informations supplémentaires. La syntaxe d'expression `<variable>?.<field>` indique à JavaScript que si la variable est définie, il faut évaluer ce champ. Si la variable n'est pas définie, alors cette expression est évaluée à `undefined`.
+Fournissez des informations supplémentaires. La syntaxe d'expression `<variable>?.<champ>` indique à JavaScript que si la variable est définie, il faut évaluer ce champ. Si la variable n'est pas définie, alors cette expression est évaluée à `undefined`.
 
 L'expression `error.message`, lorsqu'il n'y a pas d'erreur, lèverait une exception. L'utilisation de `error?.message` nous permet d'éviter ce problème.
 

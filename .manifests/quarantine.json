@@ -2,6 +2,270 @@
   "version": 1,
   "entries": [
     {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ar",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:00.574Z",
+      "lastSeen": "2026-10-14T21:59:00.574Z",
+      "expiresAt": "2026-10-28T21:59:00.574Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "bn",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/bn/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:30.682Z",
+      "lastSeen": "2026-10-14T21:59:30.682Z",
+      "expiresAt": "2026-10-28T21:59:30.682Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "cs",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/cs/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:58:45.985Z",
+      "lastSeen": "2026-10-14T21:58:45.985Z",
+      "expiresAt": "2026-10-28T21:58:45.985Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "de",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/de/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:14.357Z",
+      "lastSeen": "2026-10-14T21:59:14.357Z",
+      "expiresAt": "2026-10-28T21:59:14.357Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "es",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/es/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:13.047Z",
+      "lastSeen": "2026-10-14T21:59:13.047Z",
+      "expiresAt": "2026-10-28T21:59:13.047Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "fr",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/fr/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:26.895Z",
+      "lastSeen": "2026-10-14T21:59:26.895Z",
+      "expiresAt": "2026-10-28T21:59:26.895Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "hi",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/hi/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:20.474Z",
+      "lastSeen": "2026-10-14T21:59:20.474Z",
+      "expiresAt": "2026-10-28T21:59:20.474Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "id",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/id/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:09.910Z",
+      "lastSeen": "2026-10-14T21:59:09.910Z",
+      "expiresAt": "2026-10-28T21:59:09.910Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "it",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/it/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:13.190Z",
+      "lastSeen": "2026-10-14T21:59:13.190Z",
+      "expiresAt": "2026-10-28T21:59:13.190Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ja",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ja/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:36.587Z",
+      "lastSeen": "2026-10-14T21:59:36.587Z",
+      "expiresAt": "2026-10-28T21:59:36.587Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ko",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ko/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:58:49.272Z",
+      "lastSeen": "2026-10-14T21:58:49.272Z",
+      "expiresAt": "2026-10-28T21:58:49.272Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "mr",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/mr/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:29.577Z",
+      "lastSeen": "2026-10-14T21:59:29.577Z",
+      "expiresAt": "2026-10-28T21:59:29.577Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "pl",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/pl/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:05.368Z",
+      "lastSeen": "2026-10-14T21:59:05.368Z",
+      "expiresAt": "2026-10-28T21:59:05.368Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "pt-br",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/pt-br/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:11.976Z",
+      "lastSeen": "2026-10-14T21:59:11.976Z",
+      "expiresAt": "2026-10-28T21:59:11.976Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ru",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ru/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:59:24.593Z",
+      "lastSeen": "2026-10-14T21:59:24.593Z",
+      "expiresAt": "2026-10-28T21:59:24.593Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "sw",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/sw/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T21:58:49.625Z",
+      "lastSeen": "2026-10-14T21:58:49.625Z",
+      "expiresAt": "2026-10-28T21:58:49.625Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ta",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ta/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:23.497Z",
+      "lastSeen": "2026-10-14T22:01:23.497Z",
+      "expiresAt": "2026-10-28T22:01:23.497Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "te",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/te/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:41.378Z",
+      "lastSeen": "2026-10-14T22:01:41.378Z",
+      "expiresAt": "2026-10-28T22:01:41.378Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "tr",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/tr/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:00:32.198Z",
+      "lastSeen": "2026-10-14T22:00:32.198Z",
+      "expiresAt": "2026-10-28T22:00:32.198Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "uk",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/uk/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:55.547Z",
+      "lastSeen": "2026-10-14T22:01:55.547Z",
+      "expiresAt": "2026-10-28T22:01:55.547Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "ur",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ur/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:53.708Z",
+      "lastSeen": "2026-10-14T22:01:53.708Z",
+      "expiresAt": "2026-10-28T22:01:53.708Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "vi",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/vi/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:49.254Z",
+      "lastSeen": "2026-10-14T22:01:49.254Z",
+      "expiresAt": "2026-10-28T22:01:49.254Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "zh",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/zh/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:36.451Z",
+      "lastSeen": "2026-10-14T22:01:36.451Z",
+      "expiresAt": "2026-10-28T22:01:36.451Z"
+    },
+    {
+      "file": "public/content/developers/docs/networks/index.md",
+      "locale": "zh-tw",
+      "englishHash": "c156e12b98a8",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/zh-tw/developers/docs/networks/index.md: 4 check(s) failed -- structure heading-anchor: line N: expected (none), found {#}; structure heading-anchor: line N: expected (none), found {#}; structure empty-anchor: found `{#}` (+1 more)",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:01:32.263Z",
+      "lastSeen": "2026-10-14T22:01:32.263Z",
+      "expiresAt": "2026-10-28T22:01:32.263Z"
+    },
+    {
       "file": "src/intl/en/page-developers-tools-descriptions.json",
       "locale": "ar",
       "englishHash": "2c275841b0c5",
@@ -264,6 +528,17 @@
       "firstSeen": "2026-09-30T18:08:34.020Z",
       "lastSeen": "2026-09-30T18:08:34.020Z",
       "expiresAt": "2026-10-14T18:08:34.020Z"
+    },
+    {
+      "file": "src/intl/en/page-organizations-enterprise.json",
+      "locale": "ar",
+      "englishHash": "7067fb1aa602",
+      "class": "gate",
+      "reason": "[gate] src/intl/ar/page-organizations-enterprise.json: 1 check(s) failed -- structure json-plural-branch: page-organizations-enterprise-stat-uptime-value: {years} \"two\" branch omits {count}",
+      "attempts": 1,
+      "firstSeen": "2026-10-14T22:04:14.230Z",
+      "lastSeen": "2026-10-14T22:04:14.230Z",
+      "expiresAt": "2026-10-28T22:04:14.230Z"
     }
   ]
 }
