@@ -12,6 +12,7 @@
   "component-address-poisoning-legend-same": "Matches Sam's address",
   "component-address-poisoning-legend-diff": "Differs from Sam's address",
   "component-address-poisoning-idle": "Pick the row you'd copy Sam's address from.",
+  "component-address-poisoning-copy-button": "Copy this address",
   "component-address-poisoning-wrong-copied": "You copied {address}.",
   "component-address-poisoning-wrong-reason-zero-value": "It was a zero-value transfer the scammer made look like it came from you.",
   "component-address-poisoning-wrong-reason-dust": "It was a tiny deposit from the scammer's lookalike address.",
