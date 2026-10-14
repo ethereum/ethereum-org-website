@@ -438,17 +438,30 @@ function namesIn(nodes: MessageFormatElement[]): Set<string> {
   return out
 }
 
-/** Bare `<tag>` names, in order, with opens and closes distinguished. */
+/** HTML elements that never close, so they must not sit on the balance stack. */
+const VOID_TAGS = new Set(["br", "hr", "img", "input", "meta", "link"])
+
+/**
+ * Tag names in order, opens and closes distinguished.
+ *
+ * Attributes are matched too: 213 English strings carry `<a href="...">`, and
+ * seeing only their `</a>` made every one of them look unbalanced, which
+ * silently skipped the balance check for the whole string.
+ */
 const bareTags = (s: string) =>
-  [...String(s).matchAll(/<(\/?)([a-zA-Z][a-zA-Z0-9]*)>/g)].map((m) => ({
+  [
+    ...String(s).matchAll(/<(\/?)([a-zA-Z][a-zA-Z0-9]*)(\s[^<>]*?)?(\/?)>/g),
+  ].map((m) => ({
     close: m[1] === "/",
     name: m[2],
+    void: m[4] === "/" || VOID_TAGS.has(m[2].toLowerCase()),
   }))
 
-/** True when every bare tag opens and closes in order. */
+/** True when every tag opens and closes in order. */
 function tagsBalanced(s: string): boolean {
   const stack: string[] = []
   for (const t of bareTags(s)) {
+    if (t.void) continue
     if (!t.close) stack.push(t.name)
     else if (stack.pop() !== t.name) return false
   }

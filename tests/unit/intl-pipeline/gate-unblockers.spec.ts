@@ -96,6 +96,14 @@ test("a different key's name is not stripped", () => {
   expect(stripEmittedKeyPrefix("title", v)).toBe(v)
 })
 
+test("quotes are only unwrapped when they wrap the whole value", () => {
+  // `"foo" and "bar"` starts and ends with a quote without being a quoted
+  // string; unwrapping would hand back `foo" and "bar`.
+  expect(stripEmittedKeyPrefix("title", 'title: "foo" and "bar"')).toBe(
+    '"foo" and "bar"'
+  )
+})
+
 test("stripping to nothing keeps the original", () => {
   expect(stripEmittedKeyPrefix("title", 'title: ""')).toBe('title: ""')
 })

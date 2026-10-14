@@ -138,6 +138,19 @@ test("html with attributes is left to the tag check, not ICU", () => {
   expect(checks(en, tr)).toEqual([])
 })
 
+test("a string with an attribute-bearing tag still gets the balance check", () => {
+  // 213 English strings carry `<a href=...>`. Seeing only their `</a>` made
+  // them look unbalanced, which skipped the check for the whole string.
+  const en = 'See our <a href="/contributing">guide</a>.'
+  const tr = 'Viz <a href="/contributing">pruvodce.'
+  expect(checks(en, tr)).toEqual(["json-tag-unbalanced"])
+})
+
+test("a void tag does not unbalance", () => {
+  expect(checks("a<br>b", "x<br>y")).toEqual([])
+  expect(checks("a<br />b", "x<br />y")).toEqual([])
+})
+
 test("placeholder residue is still reported", () => {
   expect(checks("{a}", "{a} HTML-PLACEHOLDER-LINK-ab12")).toEqual([
     "placeholder-residue",

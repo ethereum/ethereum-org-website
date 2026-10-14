@@ -130,8 +130,11 @@ export function stripEmittedKeyPrefix(key: string, text: string): string {
   const prefix = new RegExp(`^${escaped}:[ \\t]+`)
   if (!prefix.test(text)) return text
   let out = text.replace(prefix, "")
+  // Only when the quotes genuinely wrap the value: `"foo" and "bar"` starts and
+  // ends with a quote without being a quoted string, and unwrapping it would
+  // hand back `foo" and "bar`.
   const quoted = out.match(/^(["'])([\s\S]*)\1$/)
-  if (quoted) out = quoted[2]
+  if (quoted && !quoted[2].includes(quoted[1])) out = quoted[2]
   return out.trim() === "" ? text : out
 }
 
