@@ -23,23 +23,23 @@ Bu iyileştirmeler, Ethereum'un daha fazla aktiviteyi idare ederken hızlı, uyg
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Glamsterdam için düşünülen iyileştirmeler {#improvements-in-glamsterdam}
+## Glamsterdam'daki iyileştirmeler {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Not: Bu makale, Glamsterdam'a dahil edilmesi planlanan seçili Ethereum Geliştirme Önerilerini (EIP) öne çıkarmaktadır. Geliştirici ağlarında (devnet) test edilen diğer planlanmış teklifler arasında EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ve EIP-8282 bulunmaktadır. Kapsam dondurulmuştur ancak meta EIP taslak aşamasında kaldığı için Ana Ağ'dan önce hala değişebilir. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
+Not: Bu makale, Glamsterdam'a dahil edilmesi planlanan EIP'lerin bir seçkisini öne çıkarmaktadır. Devnet'lerde test edilen diğer planlanmış teklifler arasında EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 ve EIP-8282 bulunmaktadır. Kapsam dondurulmuştur ancak meta EIP taslak aşamasında kaldığı için Ana Ağ'dan önce hala değişebilir. En son durum güncellemeleri için [Forkcast'teki Glamsterdam yükseltmesini](https://forkcast.org/upgrade/glamsterdam) görüntüleyin.
 
-Glamsterdam için değerlendirilen ancak henüz bu sayfaya eklenmemiş bir EIP eklemek istiyorsanız, [ethereum.org'a nasıl katkıda bulunacağınızı buradan öğrenin](/contributing/).
+Glamsterdam için değerlendirilen ancak henüz bu sayfaya eklenmemiş bir EIP eklemek isterseniz, [ethereum.org'a nasıl katkıda bulunacağınızı buradan öğrenin](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Glamsterdam yükseltmesi üç ana hedefe odaklanır:
+Glamsterdam yükseltmesi üç ana hedefe odaklanmaktadır:
 
 - İşlemleri hızlandırma (paralelleştirme): Ağın veri bağımlılıklarını kaydetme şeklini yeniden düzenleyerek, yavaş ve tek tek ilerleyen bir sıra yerine birçok işlemi aynı anda güvenli bir şekilde işleyebilmesini sağlamak.
-- Kapasiteyi genişletme: Blok oluşturma ve doğrulamanın ağır yükünü bölerek, ağa yavaşlamadan daha büyük miktarda veriyi yayması için daha fazla zaman tanımak.
-- Veritabanı şişkinliğini önleme (sürdürülebilirlik): Ağ ücretlerini, yeni verileri depolamanın uzun vadeli donanım maliyetini doğru bir şekilde yansıtacak şekilde ayarlamak, donanım performansının düşmesini önlerken gelecekteki gaz limiti artışlarının önünü açmak.
+- Kapasiteyi genişletme: Blok oluşturma ve doğrulamanın ağır yükünü bölerek, ağa yavaşlamadan daha büyük miktarlarda veriyi yayması için daha fazla zaman tanımak.
+- Veritabanı şişkinliğini önleme (sürdürülebilirlik): Ağ ücretlerini, yeni verileri depolamanın uzun vadeli donanım maliyetini doğru bir şekilde yansıtacak şekilde ayarlamak, böylece donanım performansının düşmesini önlerken gelecekteki gaz limiti artışlarının önünü açmak.
 
 Kısacası Glamsterdam, ağ kapasitesini artırırken sürdürülebilir kalmasını ve performansın yüksek kalmasını sağlamak için yapısal değişiklikler getirecektir.
 
