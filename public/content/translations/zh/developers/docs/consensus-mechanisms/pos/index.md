@@ -25,7 +25,7 @@ lang: zh
 以下提供了关于交易在以太坊权益证明中如何执行的端到端解释。
 
 1. 用户使用其私钥创建并签名一笔[交易](/developers/docs/transactions/)。这通常由钱包或诸如 [Ethers.js](https://docs.ethers.org/v6/)、[web3js](https://docs.web3js.org/)、[web3py](https://web3py.readthedocs.io/en/v5/) 等库来处理，但在底层，用户是使用以太坊 [JSON-RPC API](/developers/docs/apis/json-rpc/) 向节点发出请求。用户定义他们准备支付的 Gas 量作为给验证者的优先费，以鼓励他们将交易包含在区块中。[优先费](/developers/docs/gas/#priority-fee)支付给验证者，而[基础费用](/developers/docs/gas/#base-fee)则被销毁。
-2. 交易被提交给以太坊[执行客户端](/developers/docs/nodes-and-clients/#execution-client)，该客户端会验证其有效性。这意味着确保发送者有足够的 ETH 来完成交易，并且他们使用了正确的密钥进行签名。
+2. 交易被提交给以太坊[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)，该客户端会验证其有效性。这意味着确保发送者有足够的 ETH 来完成交易，并且他们使用了正确的密钥进行签名。
 3. 如果交易有效，执行客户端会将其添加到其本地内存池（待处理交易列表）中，并通过执行层 Gossip 网络将其广播给其他节点。当其他节点收到该交易时，它们也会将其添加到自己的本地内存池中。高级用户可能会避免广播他们的交易，而是将其转发给专门的区块构建者，例如 [Flashbots Auction](https://docs.flashbots.net/flashbots-auction/overview)。这允许他们在即将到来的区块中组织交易以获取最大利润（[最大可提取价值 (MEV)](/developers/docs/mev/#mev-extraction)）。
 4. 网络上的一个验证者节点是当前时隙的区块提议者，该节点之前已使用 RANDAO 伪随机选出。该节点负责构建并广播要添加到以太坊区块链的下一个区块，并更新全局状态。该节点由三部分组成：执行客户端、共识客户端和验证者客户端。执行客户端将本地内存池中的交易打包成“执行负载”，并在本地执行它们以生成状态更改。此信息传递给共识客户端，在共识客户端中，执行负载被包装为“信标区块”的一部分，该信标区块还包含有关奖励、惩罚、罚没、证明等信息，这些信息使网络能够就链头部的区块顺序达成共识。执行客户端和共识客户端之间的通信在[连接共识客户端和执行客户端](/developers/docs/networking-layer/#connecting-clients)中有更详细的描述。
 5. 其他节点在共识层 Gossip 网络上接收新的信标区块。它们将其传递给自己的执行客户端，在执行客户端中，交易会在本地重新执行，以确保提议的状态更改是有效的。然后，验证者客户端证明该区块是有效的，并且在他们对链的视图中是逻辑上的下一个区块（这意味着它建立在具有最大证明权重的链上，如[分叉选择规则](/developers/docs/consensus-mechanisms/pos/#fork-choice)中所定义）。该区块被添加到每个对其进行证明的节点的本地数据库中。

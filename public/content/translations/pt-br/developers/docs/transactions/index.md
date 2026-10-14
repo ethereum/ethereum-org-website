@@ -178,7 +178,7 @@ Qualquer gás não utilizado em uma transação é reembolsado para a conta do u
 
 O gás é necessário para qualquer transação que envolva um contrato inteligente.
 
-Os contratos inteligentes também podem conter funções conhecidas como funções [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), que não alteram o estado do contrato. Como tal, chamar essas funções a partir de uma EOA não exigirá nenhum gás. A chamada RPC subjacente para este cenário é [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Os contratos inteligentes também podem conter funções conhecidas como funções [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), que não alteram o estado do contrato. Como tal, chamar essas funções a partir de uma EOA não exigirá nenhum gás. A chamada RPC subjacente para este cenário é [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Diferentemente de quando acessadas usando `eth_call`, essas funções `view` ou `pure` também são comumente chamadas internamente (ou seja, do próprio contrato ou de outro contrato), o que custa gás.
 

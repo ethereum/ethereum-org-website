@@ -215,7 +215,7 @@ Kama tungeweza kusoma siku zijazo, tusingehitaji AI kwa biashara.
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Sintaksia ya kuita kazi kwenye EVM kutoka Web3 ni hii: `<contract object>.functions.<function name>().call(<parameters>)`. Vigezo vinaweza kuwa vigezo vya kazi ya EVM (kama vipo; hapa hakuna) au [vigezo vilivyotajwa](https://en.wikipedia.org/wiki/Named_parameter) kwa kurekebisha tabia ya mnyororo wa vitalu. Hapa tunatumia kimoja, `block_identifier`, kubainisha [nambari ya kitalu](/developers/docs/apis/json-rpc/#default-block) tunayotaka kuendesha.
+Sintaksia ya kuita kazi kwenye EVM kutoka Web3 ni hii: `<contract object>.functions.<function name>().call(<parameters>)`. Vigezo vinaweza kuwa vigezo vya kazi ya EVM (kama vipo; hapa hakuna) au [vigezo vilivyotajwa](https://en.wikipedia.org/wiki/Named_parameter) kwa kurekebisha tabia ya mnyororo wa vitalu. Hapa tunatumia kimoja, `block_identifier`, kubainisha [nambari ya kitalu](/developers/docs/apis/json-rpc/#block-parameter) tunayotaka kuendesha.
 
 Matokeo ni [muundo huu, katika umbo la safu](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Thamani ya kwanza ni kazi ya kiwango cha ubadilishaji kati ya tokeni mbili.
 

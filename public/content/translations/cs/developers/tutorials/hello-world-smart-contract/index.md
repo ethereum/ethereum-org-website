@@ -49,7 +49,7 @@ Abychom mohli nasadit náš chytrý kontrakt do testovací sítě, budeme potře
 
 ## Krok 5: Kontrola zůstatku {#step-5}
 
-Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) pomocí [nástroje composer od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ (Odeslat požadavek) byste měli vidět podobnou odpověď:
+Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) pomocí [nástroje composer od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu MetaMask a kliknutí na „Send Request“ (Odeslat požadavek) byste měli vidět podobnou odpověď:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

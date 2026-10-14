@@ -348,6 +348,6 @@ From 地址應與您的梅塔馬斯克帳戶地址相符，而 To 地址將顯�
 
 ![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-在這裡，您會看到當我們呼叫 .deploy() 函式時，Hardhat/Ethers 在底層為我們發出的一些 JSON-RPC 呼叫。這裡要特別指出的兩個重要呼叫是 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)（這是實際將我們的智能合約寫入 Sepolia 鏈的請求），以及 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)（這是在給定雜湊值的情況下讀取有關我們交易資訊的請求，這是發送交易時的典型模式）。要了解更多關於發送交易的資訊，請查看這篇關於[使用 Web3 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學。
+在這裡，您會看到當我們呼叫 .deploy() 函式時，Hardhat/Ethers 在底層為我們發出的一些 JSON-RPC 呼叫。這裡要特別指出的兩個重要呼叫是 [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth-sendrawtransaction)（這是實際將我們的智能合約寫入 Sepolia 鏈的請求），以及 [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash)（這是在給定雜湊值的情況下讀取有關我們交易資訊的請求，這是發送交易時的典型模式）。要了解更多關於發送交易的資訊，請查看這篇關於[使用 Web3 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)的教學。
 
 本教學的第 1 部分就到此結束。在[第 2 部分中，我們將透過鑄造 NFT 來實際與我們的智能合約互動](/developers/tutorials/how-to-mint-an-nft/)，而在[第 3 部分中，我們將向您展示如何在您的以太坊錢包中檢視您的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)！
