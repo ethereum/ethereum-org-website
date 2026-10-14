@@ -104,10 +104,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "what-is-ether",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-ether" }}
             heroImg={heroImg}
             title={t("page-what-is-ether-title")}
             description={t("page-what-is-ether-hero-description-1")}
@@ -617,7 +614,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </ListItem>
           </UnorderedList>
           <p>{t("page-what-is-ether-what-is-wrapping-eth-description-6")}</p>
-          <LinkWithArrow href="/wrapped-eth/">
+          <LinkWithArrow href="/what-is-ether/wrapped-eth/">
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>

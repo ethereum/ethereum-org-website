@@ -328,7 +328,7 @@ You can think of DeFi in layers:
 3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/apps/) – the products we use to manage and access the protocols.
 
-Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications in DeFi use a wrapper for ETH called Wrapped ether (WETH). [Learn more about wrapped ether](/wrapped-eth).
+Note: much of DeFi uses the [ERC-20 standard](/glossary/#erc-20). Applications in DeFi use a wrapper for ETH called Wrapped ether (WETH). [Learn more about wrapped ether](/what-is-ether/wrapped-eth/).
 
 ## Build DeFi {#build-defi}
 
