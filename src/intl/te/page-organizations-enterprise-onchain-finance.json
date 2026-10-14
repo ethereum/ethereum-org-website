@@ -20,7 +20,7 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "వీసా",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "టోకనైజ్ చేయబడిన ఆస్తులు",
   "page-organizations-enterprise-onchain-finance-meta-description": "సంస్థలు ఎథీరియం వికేంద్రీకృత ఫైనాన్స్ (DeFi)ను ఎలా ఉపయోగిస్తాయి: స్టేబుల్‌కాయిన్‌లు, టోకనైజ్ చేయబడిన ఆస్తులు, టోకనైజ్ చేయబడిన బాండ్లు మరియు FX కోసం ఓపెన్ స్టాండర్డ్స్, లోతైన ద్రవ్యత మరియు కూర్చదగిన ప్రోటోకాల్‌లు.",
-  "page-organizations-enterprise-onchain-finance-meta-title": "సంస్థాగత వికేంద్రీకృత ఫైనాన్స్ (DeFi) మరియు ఆన్‌చైన్ ఫైనాన్స్",
+  "page-organizations-enterprise-onchain-finance-meta-title": "సంస్థాగత DeFi మరియు ఆన్‌చైన్ ఫైనాన్స్",
   "page-organizations-enterprise-onchain-finance-primitives-composable-description": "ఓపెన్-సోర్స్ బిల్డింగ్ బ్లాక్‌లు మరియు ప్రోటోకాల్‌లు 'మనీ లెగోస్' వలె పనిచేస్తాయి, వీటిని డెవలపర్‌లు కలిపి సాంప్రదాయ వ్యవస్థలలో ప్రస్తుతం సాధ్యంకాని అధునాతన ఉత్పత్తులను నిర్మించగలరు",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "కూర్చదగిన ప్రాథమికాలు",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "ఎథీరియం ఏ బ్లాక్‌చైన్‌లోనైనా అత్యంత లోతైన DeFi ద్రవ్యతను కలిగి ఉంది, ఇది డిజిటల్ ఆస్తుల కోసం సమర్థవంతమైన ప్రపంచ మార్కెట్‌ప్లేస్‌ను నిర్వహిస్తుంది",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "ఎవరైనా DeFi సాధనాలను నిర్మించవచ్చు లేదా యాక్సెస్ చేయవచ్చు, గేట్‌కీపర్‌లు లేకుండా ఆవిష్కరణల యొక్క ప్రపంచ డైనమిక్ ల్యాండ్‌స్కేప్‌ను అన్‌లాక్ చేయవచ్చు",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "అనుమతి రహిత ఆవిష్కరణ",
   "page-organizations-enterprise-onchain-finance-primitives-title": "ఎథీరియం అనేది వికేంద్రీకృత ఫైనాన్స్ (DeFi) ప్రాథమికాల కోసం ప్లాట్‌ఫారమ్",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "వికేంద్రీకృత ఫైనాన్స్ (DeFi) లాక్ చేయబడిన మొత్తం విలువ (TVL)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24గం వికేంద్రీకృత ఎక్స్ఛేంజ్ (DEX) వాల్యూమ్ (12-నెలల సగటు)",
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "DeFi లాక్ చేయబడిన మొత్తం విలువ (TVL)",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24గం DEX వాల్యూమ్ (12-నెలల సగటు)",
   "page-organizations-enterprise-onchain-finance-stat-global-share": "అన్ని గ్లోబల్ DeFi TVL లో"
 }

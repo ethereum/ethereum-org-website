@@ -1,5 +1,5 @@
 {
-  "page-organizations-enterprise-onchain-finance-ecosystem-description": "構成以太坊去中心化金融 (DeFi) 生態系統的精選借貸、穩定幣、交易和收益協議。",
+  "page-organizations-enterprise-onchain-finance-ecosystem-description": "構成以太坊去中心化金融 (DeFi) 生態系統的精選借貸、穩定幣、交易和收益協定。",
   "page-organizations-enterprise-onchain-finance-ecosystem-title": "以太坊的去中心化金融 (DeFi) 生態系統",
   "page-organizations-enterprise-onchain-finance-hero-description-1": "以太坊向世界引入了去中心化金融 (DeFi)：建立在可編程智能合約上的開放金融系統。",
   "page-organizations-enterprise-onchain-finance-hero-description-2": "100% 的正常運行時間、久經考驗且安全的基礎設施，以及所有區塊鏈中最深厚的流動性層——以太坊專為去中心化金融 (DeFi) 而生。",
@@ -19,9 +19,9 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-description": "推出 Visa 代幣化資產平台 (VTAP)，供金融機構在以太坊上發行由法幣支持的 ERC-20 代幣",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "Visa",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "代幣化資產",
-  "page-organizations-enterprise-onchain-finance-meta-description": "機構如何使用以太坊去中心化金融 (DeFi)：用於穩定幣、代幣化資產、代幣化債券和外匯的開放標準、深厚流動性與可組合的協議。",
-  "page-organizations-enterprise-onchain-finance-meta-title": "機構級去中心化金融 (DeFi) 與鏈上金融",
-  "page-organizations-enterprise-onchain-finance-primitives-composable-description": "開源的構建區塊和協議就像「貨幣樂高」，開發人員可以將其組合起來，構建出目前在傳統金融軌道上無法實現的複雜產品",
+  "page-organizations-enterprise-onchain-finance-meta-description": "機構如何使用以太坊去中心化金融 (DeFi)：用於穩定幣、代幣化資產、代幣化債券和外匯的開放標準、深厚流動性與可組合的協定。",
+  "page-organizations-enterprise-onchain-finance-meta-title": "機構級 DeFi 與鏈上金融",
+  "page-organizations-enterprise-onchain-finance-primitives-composable-description": "開源的構建區塊和協定就像「貨幣樂高」，開發人員可以將其組合起來，構建出目前在傳統金融軌道上無法實現的複雜產品",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "可組合的原語",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "以太坊擁有所有區塊鏈中最深厚的去中心化金融 (DeFi) 流動性，為數位資產提供了一個高效的全球市場",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-title": "深厚的流動性",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "任何人都可以構建或存取去中心化金融 (DeFi) 工具，解鎖一個沒有守門人的全球動態創新版圖",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "無需許可的創新",
   "page-organizations-enterprise-onchain-finance-primitives-title": "以太坊是去中心化金融 (DeFi) 原語的平台",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "去中心化金融 (DeFi) 總鎖倉量 (TVL)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 小時去中心化交易所 (DEX) 交易量（12 個月平均值）",
-  "page-organizations-enterprise-onchain-finance-stat-global-share": "佔全球去中心化金融 (DeFi) 總鎖倉量 (TVL) 的比例"
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "DeFi 總鎖倉量 (TVL)",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 小時 DEX 交易量（12 個月平均值）",
+  "page-organizations-enterprise-onchain-finance-stat-global-share": "佔全球 DeFi TVL 的比例"
 }

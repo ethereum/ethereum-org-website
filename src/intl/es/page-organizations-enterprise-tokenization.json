@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Tesorerías tokenizadas y equivalentes de efectivo",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Funciones",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternativas de capa 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternativas de L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "DLT privada",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Sistemas tradicionales",
   "page-organizations-enterprise-tokenization-compare-description": "Cómo se comparan entre sí las diferentes plataformas de tokenización:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Tokenización de activos institucionales en Ethereum",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Siga el panorama de las monedas estables en Ethereum para comprender el tamaño del mercado, la adopción y el respaldo del colateral.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Monedas estables en Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Monedas estables en la capa 1 (l1) de Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Monedas estables en las capas 2 (l2) de Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Monedas estables en la L1 de Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Monedas estables en las L2 de Ethereum",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Valor asegurado en Ethereum"
 }

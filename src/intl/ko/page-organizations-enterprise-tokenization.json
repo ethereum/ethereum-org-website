@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "토큰화된 트레저리 및 현금성 자산",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "이더리움",
   "page-organizations-enterprise-tokenization-compare-col-functions": "기능",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "레이어 1 (l1) 대안",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 대안",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "프라이빗 DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "전통적인 시스템",
   "page-organizations-enterprise-tokenization-compare-description": "다양한 토큰화 플랫폼 비교:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "이더리움의 기관 자산 토큰화",
   "page-organizations-enterprise-tokenization-stablecoins-description": "이더리움의 스테이블코인 환경을 추적하여 시장 규모, 채택 및 담보 지원을 이해하세요.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "이더리움의 스테이블코인",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "이더리움 레이어 1 (l1)의 스테이블코인",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "이더리움 레이어 2 (l2)의 스테이블코인",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "이더리움 L1의 스테이블코인",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "이더리움 L2의 스테이블코인",
   "page-organizations-enterprise-tokenization-stat-value-secured": "이더리움에 확보된 가치"
 }

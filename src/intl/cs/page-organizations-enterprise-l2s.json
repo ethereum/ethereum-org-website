@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "Emise na l1 Etherea",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>Transparentnost</strong>: Rollupy dědí transparentnost Etherea tím, že zpřístupňují svá transakční data na l1, což umožňuje komukoli nezávisle ověřit stav rollupu. I když sekvencer zmizí nebo cenzuruje uživatele, celá historie transakcí zůstává na Ethereu přístupná a neměnná.",
   "page-organizations-enterprise-l2s-meta-description": "Vrstvy 2 (l2) poskytují podnikům rychlé a přizpůsobitelné provádění zabezpečené Ethereem. Porovnejte stavění na existující l2 se spuštěním vlastního aplikačního řetězce nebo rollupu.",
-  "page-organizations-enterprise-l2s-meta-title": "Podnikové vrstvy 2 (l2) a aplikační řetězce na Ethereu",
+  "page-organizations-enterprise-l2s-meta-title": "Podnikové vrstvy 2 a aplikační řetězce na Ethereu",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "Hodnota zabezpečená napříč l2",
   "page-organizations-enterprise-l2s-stat-uops": "Průměrné denní uživatelské operace (30 dní)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "Jediná programovatelná infrastruktura distribuované účetní knihy, která nikdy neměla výpadek a úspěšně překonala několik existenčních hrozeb.",

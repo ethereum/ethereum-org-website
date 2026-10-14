@@ -20,7 +20,7 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "व्हिसा (Visa)",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "टोकनाइज्ड मालमत्ता",
   "page-organizations-enterprise-onchain-finance-meta-description": "संस्था इथेरियम विकेंद्रित वित्त (DeFi) कसे वापरतात: स्टेबलकॉइन्स, टोकनाइज्ड मालमत्ता, टोकनाइज्ड बाँड्स आणि FX साठी खुली मानके, सखोल तरलता आणि संयोज्य प्रोटोकॉल.",
-  "page-organizations-enterprise-onchain-finance-meta-title": "संस्थात्मक विकेंद्रित वित्त (DeFi) आणि ऑनचेन फायनान्स",
+  "page-organizations-enterprise-onchain-finance-meta-title": "संस्थात्मक DeFi आणि ऑनचेन फायनान्स",
   "page-organizations-enterprise-onchain-finance-primitives-composable-description": "ओपन-सोर्स बिल्डिंग ब्लॉक्स आणि प्रोटोकॉल 'मनी लेगोस' म्हणून काम करतात जे डेव्हलपर एकत्र करून अत्याधुनिक उत्पादने तयार करू शकतात जे सध्या पारंपारिक प्रणालींवर शक्य नाही",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "संयोज्य प्रिमिटिव्ह्ज",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "इथेरियमकडे कोणत्याही ब्लॉकचेनची सर्वात सखोल विकेंद्रित वित्त (DeFi) तरलता आहे, जी डिजिटल मालमत्तेसाठी एक कार्यक्षम जागतिक बाजारपेठ होस्ट करते",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "कोणीही विकेंद्रित वित्त (DeFi) साधने तयार करू शकतो किंवा त्यात प्रवेश करू शकतो, ज्यामुळे गेटकीपर्सशिवाय इनोव्हेशनचे जागतिक गतिमान परिदृश्य खुले होते",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "परवानगीमुक्त इनोव्हेशन",
   "page-organizations-enterprise-onchain-finance-primitives-title": "इथेरियम हे विकेंद्रित वित्त (DeFi) प्रिमिटिव्ह्जसाठी प्लॅटफॉर्म आहे",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "विकेंद्रित वित्त (DeFi) एकूण लॉक केलेले मूल्य (TVL)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24h विकेंद्रित एक्सचेंज (DEX) व्हॉल्यूम (12-महिन्यांची सरासरी)",
-  "page-organizations-enterprise-onchain-finance-stat-global-share": "सर्व जागतिक विकेंद्रित वित्त (DeFi) TVL पैकी"
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "DeFi एकूण लॉक केलेले मूल्य (TVL)",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24h DEX व्हॉल्यूम (12-महिन्यांची सरासरी)",
+  "page-organizations-enterprise-onchain-finance-stat-global-share": "सर्व जागतिक DeFi TVL पैकी"
 }

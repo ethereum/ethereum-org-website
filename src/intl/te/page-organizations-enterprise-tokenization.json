@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "టోకనీకరించబడిన ఖజానాలు మరియు నగదు సమానమైనవి",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "ఎథీరియం",
   "page-organizations-enterprise-tokenization-compare-col-functions": "విధులు",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "లేయర్ 1 (l1) ప్రత్యామ్నాయాలు",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 ప్రత్యామ్నాయాలు",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "ప్రైవేట్ DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "సాంప్రదాయ వ్యవస్థలు",
   "page-organizations-enterprise-tokenization-compare-description": "వివిధ టోకనీకరణ ప్లాట్‌ఫారమ్‌లు ఒకదానితో ఒకటి ఎలా పోల్చబడతాయి:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "ఎథీరియంపై సంస్థాగత ఆస్తి టోకనీకరణ",
   "page-organizations-enterprise-tokenization-stablecoins-description": "మార్కెట్ పరిమాణం, స్వీకరణ మరియు తాకట్టు మద్దతును అర్థం చేసుకోవడానికి ఎథీరియంపై స్టేబుల్‌కాయిన్ ల్యాండ్‌స్కేప్‌ను ట్రాక్ చేయండి.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "ఎథీరియంపై స్టేబుల్‌కాయిన్‌లు",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "ఎథీరియం లేయర్ 1 (l1) పై స్టేబుల్‌కాయిన్‌లు",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "ఎథీరియం లేయర్ 2 (l2) లపై స్టేబుల్‌కాయిన్‌లు",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "ఎథీరియం L1 పై స్టేబుల్‌కాయిన్‌లు",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "ఎథీరియం L2లపై స్టేబుల్‌కాయిన్‌లు",
   "page-organizations-enterprise-tokenization-stat-value-secured": "ఎథీరియంపై సురక్షితం చేయబడిన విలువ"
 }

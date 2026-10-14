@@ -46,7 +46,7 @@
   "page-organizations-enterprise-privacy-problems-fragility-title": "운영 환경의 취약성",
   "page-organizations-enterprise-privacy-problems-instability-description": "런타임 마이그레이션, 아키텍처 전환 및 전략 변경은 엔터프라이즈 배포에 혼란을 줍니다. 기관은 10년 동안 보증할 수 있는 인프라가 필요합니다. 프라이빗 체인은 그러한 안정성을 입증하지 못했습니다.",
   "page-organizations-enterprise-privacy-problems-instability-title": "플랫폼 불안정성",
-  "page-organizations-enterprise-privacy-problems-interoperability-description": "프라이빗 체에서 발행된 자산은 폐쇄된 생태계에 존재합니다. 탈중앙화 금융 (DeFi) 유동성에 접근할 수 없고, 다른 프로토콜과의 조합성도 없으며, 유통 시장이나 활용도도 없습니다.",
+  "page-organizations-enterprise-privacy-problems-interoperability-description": "프라이빗 체인에서 발행된 자산은 폐쇄된 생태계에 존재합니다. 탈중앙화 금융 (DeFi) 유동성에 접근할 수 없고, 다른 프로토콜과의 조합성도 없으며, 유통 시장이나 활용도도 없습니다.",
   "page-organizations-enterprise-privacy-problems-interoperability-title": "상호운용성 및 활용도 부재",
   "page-organizations-enterprise-privacy-problems-offchain-description": "프라이빗 체인에서 프라이버시는 핵심 작업을 위해 오프체인 구성 요소에 의존하는 경우가 많으며, 이는 분산 애플리케이션이 원장 상에서 독립적으로 작동할 수 있다는 기대를 저버립니다. 이는 진정한 암호학적 프라이버시가 아니며, 기능으로 위장한 아키텍처의 복잡성일 뿐입니다.",
   "page-organizations-enterprise-privacy-problems-offchain-title": "오프체인 구성 요소에 의존하는 프라이버시",

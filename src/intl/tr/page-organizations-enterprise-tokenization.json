@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Tokenlaştırılmış hazineler ve nakit benzerleri",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "İşlevler",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Katman 1 (l1) alternatifleri",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 alternatifleri",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "Özel DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Geleneksel altyapılar",
   "page-organizations-enterprise-tokenization-compare-description": "Farklı tokenlaştırma platformları birbirleriyle nasıl karşılaştırılır:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Ethereum'da kurumsal varlık tokenlaştırma",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Pazar büyüklüğünü, benimsenmeyi ve teminat desteğini anlamak için Ethereum'daki sabitcoin ortamını takip edin.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Ethereum'daki Sabitcoin'ler",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Ethereum katman 1'deki (l1) sabitcoin'ler",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Ethereum L1'deki sabitcoin'ler",
   "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Ethereum katman 2'lerindeki (l2'lerindeki) sabitcoin'ler",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Ethereum'da güvence altına alınan değer"
 }

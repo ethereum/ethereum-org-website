@@ -1,6 +1,6 @@
 {
   "page-organizations-enterprise-compare-col-ethereum": "Ethereum",
-  "page-organizations-enterprise-compare-col-l1": "Katman 1 (L1) alternatifleri",
+  "page-organizations-enterprise-compare-col-l1": "L1 alternatifleri",
   "page-organizations-enterprise-compare-col-private-dlt": "Özel DLT",
   "page-organizations-enterprise-compare-col-traditional": "Geleneksel sistemler",
   "page-organizations-enterprise-compare-description": "Mimari bir sorudan kapsamlı ve kanıta dayalı bir karara geçmek için bu rehberleri kullanın.",
@@ -30,7 +30,7 @@
   "page-organizations-enterprise-hero-title": "Kurumlar için Ethereum",
   "page-organizations-enterprise-meta-description": "Tokenlaştırılmış varlıklar, sabitcoin'ler ve kurumsal finans için kurumsal Blokzincir. Ethereum'u özel DLT ile karşılaştırın ve üretimdeki kullanım durumlarını görün.",
   "page-organizations-enterprise-meta-title": "Ethereum üzerinde kurumsal Blokzincir çözümleri",
-  "page-organizations-enterprise-stat-defi-tvl": "DeFi Kilitlenmiş Toplam Değer (TVL)",
+  "page-organizations-enterprise-stat-defi-tvl": "DeFi TVL",
   "page-organizations-enterprise-stat-stablecoin-tvl": "Sabitcoin piyasa değeri",
   "page-organizations-enterprise-stat-uptime": "Kesintisiz çalışma süresi",
   "page-organizations-enterprise-stat-uptime-value": "{years, plural, one {{count} yıl} other {{count} yıl}}",

@@ -1,6 +1,6 @@
 {
-  "page-organizations-enterprise-l2s-approach-col-custom": "Lançar uma camada 2 (l2) personalizada",
-  "page-organizations-enterprise-l2s-approach-col-existing": "Usar uma camada 2 (l2) existente",
+  "page-organizations-enterprise-l2s-approach-col-custom": "Lançar uma L2 personalizada",
+  "page-organizations-enterprise-l2s-approach-col-existing": "Usar uma L2 existente",
   "page-organizations-enterprise-l2s-approach-description": "As empresas podem aproveitar uma camada 2 (l2) existente para obter velocidade e escala ou implantar a sua própria para maior controle e personalização.",
   "page-organizations-enterprise-l2s-approach-row-compliance": "Conformidade",
   "page-organizations-enterprise-l2s-approach-row-compliance-custom-description": "Implemente acesso permissionado, camadas de privacidade, ganchos de conformidade ou integração de sistemas internos.",
@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "Emissão na camada 1 (l1) do Ethereum",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>Transparência</strong>: Os rollups herdam a transparência do Ethereum ao disponibilizar seus dados de transação na l1, permitindo que qualquer pessoa verifique de forma independente o estado do rollup. Mesmo que o sequenciador desapareça ou censure os usuários, o histórico completo de transações permanece acessível e imutável no Ethereum.",
   "page-organizations-enterprise-l2s-meta-description": "As camadas 2 (l2s) oferecem às empresas uma execução rápida e personalizável, protegida pelo Ethereum. Compare a construção em uma l2 existente com o lançamento de sua própria appchain ou rollup.",
-  "page-organizations-enterprise-l2s-meta-title": "Camadas 2 (l2s) corporativas e appchains no Ethereum",
+  "page-organizations-enterprise-l2s-meta-title": "Camadas 2 corporativas e appchains no Ethereum",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "Valor garantido em todas as l2s",
   "page-organizations-enterprise-l2s-stat-uops": "Média diária de operações de usuários (30 dias)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "A única infraestrutura de livro-razão distribuído programável que nunca caiu e prosperou em meio a várias ameaças existenciais.",

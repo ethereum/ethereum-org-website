@@ -30,7 +30,7 @@
   "page-organizations-enterprise-hero-title": "기업을 위한 이더리움",
   "page-organizations-enterprise-meta-description": "토큰화된 자산, 스테이블코인 및 기관 금융을 위한 기업용 블록체인입니다. 이더리움을 프라이빗 DLT와 비교하고 프로덕션 사용 사례를 확인하세요.",
   "page-organizations-enterprise-meta-title": "이더리움 기반 기업용 블록체인 솔루션",
-  "page-organizations-enterprise-stat-defi-tvl": "DeFi 총 예치 가치 (TVL)",
+  "page-organizations-enterprise-stat-defi-tvl": "DeFi TVL",
   "page-organizations-enterprise-stat-stablecoin-tvl": "스테이블코인 시가총액",
   "page-organizations-enterprise-stat-uptime": "무중단 가동 시간",
   "page-organizations-enterprise-stat-uptime-value": "{years, plural, one {{count}년} other {{count}년}}",

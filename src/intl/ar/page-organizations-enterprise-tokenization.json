@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "الخزانات المرمزة وما يعادلها من النقد",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "إيثيريوم",
   "page-organizations-enterprise-tokenization-compare-col-functions": "الوظائف",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "بدائل طبقة 1 (L1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "بدائل ⁦L1⁩",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "تقنية دفتر الأستاذ الموزع (DLT) الخاصة",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "الأنظمة التقليدية",
   "page-organizations-enterprise-tokenization-compare-description": "كيف تقارن منصات الترميز المختلفة ببعضها البعض:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "ترميز الأصول المؤسسية على إيثيريوم",
   "page-organizations-enterprise-tokenization-stablecoins-description": "تتبع مشهد العملات المستقرة على إيثيريوم لفهم حجم السوق، والاعتماد، ودعم الضمانات.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "العملات المستقرة على إيثيريوم",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "العملات المستقرة على طبقة 1 (L1) لإيثيريوم",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "العملات المستقرة على شبكات طبقة 2 (L2) لإيثيريوم",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "العملات المستقرة على ⁦L1⁩ لإيثيريوم",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "العملات المستقرة على شبكات ⁦L2⁩ لإيثيريوم",
   "page-organizations-enterprise-tokenization-stat-value-secured": "القيمة المضمونة على إيثيريوم"
 }

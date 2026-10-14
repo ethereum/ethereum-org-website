@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "টোকেনিকৃত ট্রেজারি এবং নগদ সমতুল্য",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "ইথেরিয়াম",
   "page-organizations-enterprise-tokenization-compare-col-functions": "ফাংশন",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "লেয়ার ১ (l1) বিকল্প",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 বিকল্প",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "প্রাইভেট DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "ঐতিহ্যবাহী ব্যবস্থা",
   "page-organizations-enterprise-tokenization-compare-description": "বিভিন্ন টোকেনিকরণ প্ল্যাটফর্ম একে অপরের সাথে কীভাবে তুলনীয়:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "ইথেরিয়াম-এ প্রাতিষ্ঠানিক অ্যাসেট টোকেনিকরণ",
   "page-organizations-enterprise-tokenization-stablecoins-description": "মার্কেটের আকার, গ্রহণ এবং জামানত ব্যাকিং বুঝতে ইথেরিয়াম-এ স্টেবলকয়েন ল্যান্ডস্কেপ ট্র্যাক করুন।",
   "page-organizations-enterprise-tokenization-stablecoins-title": "ইথেরিয়াম-এ স্টেবলকয়েন",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "ইথেরিয়াম লেয়ার ১ (l1)-এ স্টেবলকয়েন",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "ইথেরিয়াম লেয়ার ২ (l2)-এ স্টেবলকয়েন",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "ইথেরিয়াম L1-এ স্টেবলকয়েন",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "ইথেরিয়াম L2-গুলোতে স্টেবলকয়েন",
   "page-organizations-enterprise-tokenization-stat-value-secured": "ইথেরিয়াম-এ সুরক্ষিত মান"
 }

@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "トークン化されたトレジャリーと現金同等物",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "イーサリアム",
   "page-organizations-enterprise-tokenization-compare-col-functions": "機能",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "代替レイヤー1 (L1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "代替L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "プライベートDLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "従来のシステム",
   "page-organizations-enterprise-tokenization-compare-description": "さまざまなトークン化プラットフォームの比較：",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "イーサリアム上の機関投資家向け資産のトークン化",
   "page-organizations-enterprise-tokenization-stablecoins-description": "イーサリアム上のステーブルコインの状況を追跡し、市場規模、普及率、および担保の裏付けを理解します。",
   "page-organizations-enterprise-tokenization-stablecoins-title": "イーサリアム上のステーブルコイン",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "イーサリアム レイヤー1 (L1) 上のステーブルコイン",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "イーサリアム レイヤー2 (L2) 上のステーブルコイン",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "イーサリアムL1上のステーブルコイン",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "イーサリアムL2上のステーブルコイン",
   "page-organizations-enterprise-tokenization-stat-value-secured": "イーサリアム上で保護されている価値"
 }

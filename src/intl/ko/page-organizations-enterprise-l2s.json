@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "이더리움 l1에서의 발행",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>투명성</strong>: 롤업은 트랜잭션 데이터를 l1에서 사용할 수 있게 함으로써 이더리움의 투명성을 상속받아, 누구나 독립적으로 롤업 상태를 확인할 수 있도록 합니다. 시퀀서가 사라지거나 사용자를 검열하더라도 전체 트랜잭션 기록은 이더리움에서 접근 가능하고 불변으로 유지됩니다.",
   "page-organizations-enterprise-l2s-meta-description": "레이어 2 (l2)는 기업에 이더리움으로 보호되는 빠르고 맞춤 설정 가능한 실행을 제공합니다. 기존 l2에 구축하는 것과 자체 앱체인 또는 롤업을 출시하는 것을 비교해 보세요.",
-  "page-organizations-enterprise-l2s-meta-title": "이더리움의 기업용 레이어 2 (l2) 및 앱체인",
+  "page-organizations-enterprise-l2s-meta-title": "이더리움의 기업용 레이어 2 및 앱체인",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "l2 전반에 걸쳐 보호되는 가치",
   "page-organizations-enterprise-l2s-stat-uops": "일일 평균 사용자 작업(30일)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "단 한 번도 중단된 적이 없으며 여러 실존적 위협 속에서도 번창해 온 유일한 프로그래밍 가능한 분산 원장 인프라입니다.",

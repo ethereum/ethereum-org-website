@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Токенизированные казначейские облигации и денежные эквиваленты",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Эфириум",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Функции",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Альтернативы уровня 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Альтернативы L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "Частные DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Традиционная инфраструктура",
   "page-organizations-enterprise-tokenization-compare-description": "Как различные платформы для токенизации соотносятся друг с другом:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Институциональная токенизация активов в Эфириуме",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Отслеживайте ландшафт стейблкоинов в Эфириуме, чтобы понять размер рынка, уровень внедрения и обеспечение залогом.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Стейблкоины в Эфириуме",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Стейблкоины на уровне 1 (l1) Эфириума",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Стейблкоины на уровнях 2 (l2) Эфириума",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Стейблкоины на L1 Эфириума",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Стейблкоины на L2 Эфириума",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Стоимость, обеспеченная в Эфириуме"
 }

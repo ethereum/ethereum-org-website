@@ -1,5 +1,5 @@
 {
-  "page-organizations-enterprise-l2s-approach-col-custom": "एक कस्टम लेयर 2 (L2) लॉन्च करें",
+  "page-organizations-enterprise-l2s-approach-col-custom": "एक कस्टम L2 लॉन्च करें",
   "page-organizations-enterprise-l2s-approach-col-existing": "मौजूदा L2 का उपयोग करें",
   "page-organizations-enterprise-l2s-approach-description": "उद्यम गति और पैमाने के लिए मौजूदा L2 का लाभ उठा सकते हैं या अधिक नियंत्रण और अनुकूलन के लिए अपना स्वयं का L2 तैनात कर सकते हैं।",
   "page-organizations-enterprise-l2s-approach-row-compliance": "अनुपालन",
@@ -51,7 +51,7 @@
   "page-organizations-enterprise-l2s-case-studies-tokenization-title": "एसेट टोकनीकरण",
   "page-organizations-enterprise-l2s-deployment-arbitrum-description": "आर्बिट्रम वन सीधी तैनाती और एक हलचल भरे विकेंद्रीकृत वित्त (DeFi) इकोसिस्टम के साथ मजबूत सुरक्षा, तेज़ पुष्टिकरण और कम शुल्क प्रदान करता है।",
   "page-organizations-enterprise-l2s-deployment-arbitrum-name": "आर्बिट्रम",
-  "page-organizations-enterprise-l2s-deployment-cta": "Go",
+  "page-organizations-enterprise-l2s-deployment-cta": "जाएं",
   "page-organizations-enterprise-l2s-deployment-description": "अपना स्वयं का L2 लॉन्च करें या मौजूदा L2 पर तैनात करें।",
   "page-organizations-enterprise-l2s-deployment-optimism-description": "ऑप्टिमिज़्म एक ऑप्टिमिस्टिक रोलअप के रूप में इथेरियम की डेटा उपलब्धता और निपटान गारंटी प्राप्त करता है, जिसमें EVM समानता यह सुनिश्चित करती है कि मौजूदा अनुबंध और टूलिंग डिफ़ॉल्ट रूप से काम करें।",
   "page-organizations-enterprise-l2s-deployment-optimism-name": "ऑप्टिमिज़्म",

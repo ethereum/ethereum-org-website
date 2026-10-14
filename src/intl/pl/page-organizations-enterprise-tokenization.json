@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Stokenizowane obligacje skarbowe i ekwiwalenty gotówki",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Funkcje",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatywy warstwy 1 (L1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatywy L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "Prywatne DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Tradycyjne systemy",
   "page-organizations-enterprise-tokenization-compare-description": "Jak różne platformy do tokenizacji wypadają w porównaniu ze sobą:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Instytucjonalna tokenizacja aktywów w Ethereum",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Śledź krajobraz stablecoinów w Ethereum, aby zrozumieć wielkość rynku, adopcję i pokrycie w zabezpieczeniu.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Stablecoiny w Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoiny w warstwie 1 (L1) Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoiny w warstwach 2 (L2) Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoiny w L1 Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoiny w L2 Ethereum",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Wartość zabezpieczona w Ethereum"
 }

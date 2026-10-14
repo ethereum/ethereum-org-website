@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "Emisión en la l1 de Ethereum",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>Transparencia</strong>: Los rollups heredan la transparencia de Ethereum al hacer que los datos de sus transacciones estén disponibles en la l1, lo que permite a cualquier persona verificar de forma independiente el estado del rollup. Incluso si el secuenciador desaparece o censura a los usuarios, el historial completo de transacciones permanece accesible e inmutable en Ethereum.",
   "page-organizations-enterprise-l2s-meta-description": "Las capas 2 (l2) brindan a las empresas una ejecución rápida y personalizable asegurada por Ethereum. Compare la construcción en una l2 existente con el lanzamiento de su propia cadena de aplicaciones o rollup.",
-  "page-organizations-enterprise-l2s-meta-title": "Capas 2 (l2) empresariales y cadenas de aplicaciones en Ethereum",
+  "page-organizations-enterprise-l2s-meta-title": "Capas 2 empresariales y cadenas de aplicaciones en Ethereum",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "Valor asegurado en todas las l2",
   "page-organizations-enterprise-l2s-stat-uops": "Promedio de operaciones diarias de usuarios (30 días)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "La única infraestructura de libro mayor distribuido programable que nunca se ha caído y ha prosperado a través de múltiples amenazas existenciales.",

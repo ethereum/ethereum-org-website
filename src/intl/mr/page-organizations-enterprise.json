@@ -1,6 +1,6 @@
 {
   "page-organizations-enterprise-compare-col-ethereum": "इथेरियम",
-  "page-organizations-enterprise-compare-col-l1": "स्तर १ (l1) पर्याय",
+  "page-organizations-enterprise-compare-col-l1": "L1 पर्याय",
   "page-organizations-enterprise-compare-col-private-dlt": "खाजगी DLT",
   "page-organizations-enterprise-compare-col-traditional": "पारंपारिक प्रणाली",
   "page-organizations-enterprise-compare-description": "आर्किटेक्चरल प्रश्नापासून व्याप्ती असलेल्या, पुराव्यांवर आधारित निर्णयाकडे जाण्यासाठी या मार्गदर्शकांचा वापर करा.",
@@ -30,7 +30,7 @@
   "page-organizations-enterprise-hero-title": "एंटरप्रायजेससाठी इथेरियम",
   "page-organizations-enterprise-meta-description": "टोकनीकृत मालमत्ता, स्टेबलकॉइन्स आणि संस्थात्मक वित्तासाठी एंटरप्राइज ब्लॉकचेन. खाजगी DLT सोबत इथेरियमची तुलना करा आणि उत्पादनातील उपयोग प्रकरणे पहा.",
   "page-organizations-enterprise-meta-title": "इथेरियमवरील एंटरप्राइज ब्लॉकचेन सोल्यूशन्स",
-  "page-organizations-enterprise-stat-defi-tvl": "DeFi एकूण लॉक केलेले मूल्य (TVL)",
+  "page-organizations-enterprise-stat-defi-tvl": "DeFi TVL",
   "page-organizations-enterprise-stat-stablecoin-tvl": "स्टेबलकॉइन मार्केट कॅप",
   "page-organizations-enterprise-stat-uptime": "अखंडित अपटाइम",
   "page-organizations-enterprise-stat-uptime-value": "{years, plural, one {{count} वर्ष} other {{count} वर्षे}}",

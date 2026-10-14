@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Kho bạc được token hóa & các khoản tương đương tiền",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Chức năng",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Các lớp 1 (L1) thay thế",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Các L1 thay thế",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "DLT riêng tư",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Hệ thống truyền thống",
   "page-organizations-enterprise-tokenization-compare-description": "Các nền tảng token hóa khác nhau so sánh với nhau như thế nào:",
@@ -48,7 +48,7 @@
   "page-organizations-enterprise-tokenization-compare-row-liquidity-private-dlt": "N/A",
   "page-organizations-enterprise-tokenization-compare-row-liquidity-traditional": "N/A",
   "page-organizations-enterprise-tokenization-compare-row-neutrality": "Tính trung lập",
-  "page-organizations-enterprise-tokenization-compare-row-neutrality-ethereum": "Không có nhà điều hành đơn lẻ, hàng ngàn node",
+  "page-organizations-enterprise-tokenization-compare-row-neutrality-ethereum": "Không có nhà điều hành đơn lẻ, hàng ngàn nút",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-l1": "Client đơn lẻ, kho bạc bị kiểm soát, số lượng nhà điều hành trình xác thực thấp",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-private-dlt": "Do nhà cung cấp kiểm soát",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-traditional": "Ràng buộc theo khu vực tài phán",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Token hóa tài sản tổ chức trên Ethereum",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Theo dõi bối cảnh stablecoin trên Ethereum để hiểu quy mô thị trường, sự tiếp nhận và sự hỗ trợ của tài sản thế chấp.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Stablecoin trên Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoin trên lớp 1 (L1) của Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoin trên các lớp 2 (L2) của Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoin trên L1 của Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoin trên các L2 của Ethereum",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Giá trị được bảo đảm trên Ethereum"
 }

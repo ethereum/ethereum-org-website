@@ -20,7 +20,7 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "Visa",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "टोकनाइज़्ड एसेट्स",
   "page-organizations-enterprise-onchain-finance-meta-description": "संस्थान इथेरियम विकेंद्रीकृत वित्त (DeFi) का उपयोग कैसे करते हैं: स्टेबलकॉइन, टोकनाइज़्ड एसेट्स, टोकनाइज़्ड बॉन्ड और FX के लिए खुले मानक, गहरी तरलता और संयोज्य प्रोटोकॉल।",
-  "page-organizations-enterprise-onchain-finance-meta-title": "संस्थागत विकेंद्रीकृत वित्त (DeFi) और ऑनचेन फाइनेंस",
+  "page-organizations-enterprise-onchain-finance-meta-title": "संस्थागत DeFi और ऑनचेन फाइनेंस",
   "page-organizations-enterprise-onchain-finance-primitives-composable-description": "ओपन-सोर्स बिल्डिंग ब्लॉक्स और प्रोटोकॉल 'मनी लेगोस' के रूप में कार्य करते हैं जिन्हें डेवलपर्स परिष्कृत उत्पाद बनाने के लिए जोड़ सकते हैं जो वर्तमान में पारंपरिक प्रणालियों पर संभव नहीं है",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "संयोज्य प्रिमिटिव्स",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "इथेरियम में किसी भी ब्लॉकचेन की सबसे गहरी DeFi तरलता है, जो डिजिटल एसेट्स के लिए एक कुशल वैश्विक बाज़ार की मेज़बानी करता है",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "कोई भी व्यक्ति DeFi उपकरणों का निर्माण या उन तक पहुँच प्राप्त कर सकता है, जिससे बिना किसी गेटकीपर के इनोवेशन का एक वैश्विक गतिशील परिदृश्य खुलता है",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "अनुमति-रहित इनोवेशन",
   "page-organizations-enterprise-onchain-finance-primitives-title": "इथेरियम DeFi प्रिमिटिव्स के लिए प्लेटफ़ॉर्म है",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "विकेंद्रीकृत वित्त (DeFi) कुल लॉक किया गया मूल्य (टीवीएल)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 घंटे का विकेंद्रीकृत एक्सचेंज (DEX) वॉल्यूम (12-महीने का औसत)",
-  "page-organizations-enterprise-onchain-finance-stat-global-share": "सभी वैश्विक DeFi टीवीएल का"
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "DeFi कुल लॉक किया गया मूल्य (TVL)",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 घंटे का DEX वॉल्यूम (12-महीने का औसत)",
+  "page-organizations-enterprise-onchain-finance-stat-global-share": "सभी वैश्विक DeFi TVL का"
 }

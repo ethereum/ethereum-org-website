@@ -20,7 +20,7 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "Visa",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "代币化资产",
   "page-organizations-enterprise-onchain-finance-meta-description": "机构如何使用以太坊去中心化金融 (DeFi)：用于稳定币、代币化资产、代币化债券和外汇的开放标准、深厚流动性和可组合协议。",
-  "page-organizations-enterprise-onchain-finance-meta-title": "机构级去中心化金融 (DeFi) 与链上金融",
+  "page-organizations-enterprise-onchain-finance-meta-title": "机构级 DeFi 与链上金融",
   "page-organizations-enterprise-onchain-finance-primitives-composable-description": "开源构建块和协议充当“货币乐高”，开发人员可以将其组合起来，构建传统金融轨道上目前无法实现的复杂产品",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "可组合原语",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "以太坊拥有所有区块链中最深厚的去中心化金融 (DeFi) 流动性，为数字资产提供了一个高效的全球市场",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "任何人都可以构建或访问去中心化金融 (DeFi) 工具，从而解锁一个没有看门人的全球动态创新格局",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "无需许可的创新",
   "page-organizations-enterprise-onchain-finance-primitives-title": "以太坊是去中心化金融 (DeFi) 原语的平台",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "去中心化金融 (DeFi) 总锁仓量 (TVL)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 小时去中心化交易所 (DEX) 交易量（12 个月平均值）",
-  "page-organizations-enterprise-onchain-finance-stat-global-share": "占全球去中心化金融 (DeFi) 总锁仓量 (TVL) 的比例"
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "DeFi 总锁仓量 (TVL)",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "24 小时 DEX 交易量（12 个月平均值）",
+  "page-organizations-enterprise-onchain-finance-stat-global-share": "占全球 DeFi TVL 的比例"
 }

@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Perbendaharaan yang ditokenisasi & setara kas",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Fungsi",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatif lapisan 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatif L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "DLT Privat",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Jalur tradisional",
   "page-organizations-enterprise-tokenization-compare-description": "Bagaimana perbandingan berbagai platform tokenisasi satu sama lain:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Tokenisasi aset institusional di Ethereum",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Lacak lanskap stablecoin di Ethereum untuk memahami ukuran pasar, adopsi, dan dukungan kolateral.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Stablecoin di Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoin di lapisan 1 (l1) Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoin di lapisan 2 (l2) Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoin di L1 Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoin di L2 Ethereum",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Nilai yang diamankan di Ethereum"
 }

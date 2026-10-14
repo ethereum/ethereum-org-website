@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "टोकनीकृत कोषागार आणि रोख समतुल्य",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "इथेरियम",
   "page-organizations-enterprise-tokenization-compare-col-functions": "कार्ये",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "स्तर १ (l1) पर्याय",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 पर्याय",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "खाजगी DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "पारंपारिक प्रणाली",
   "page-organizations-enterprise-tokenization-compare-description": "विविध टोकनीकरण प्लॅटफॉर्म्स एकमेकांशी कसे तुलना करतात:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "इथेरियमवर संस्थात्मक मालमत्ता टोकनीकरण",
   "page-organizations-enterprise-tokenization-stablecoins-description": "बाजाराचा आकार, अवलंब आणि तारण पाठबळ समजून घेण्यासाठी इथेरियमवरील स्टेबलकॉइन लँडस्केपचा मागोवा घ्या.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "इथेरियमवरील स्टेबलकॉइन्स",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "इथेरियम स्तर १ (l1) वरील स्टेबलकॉइन्स",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "इथेरियम स्तर २ (l2) वरील स्टेबलकॉइन्स",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "इथेरियम L1 वरील स्टेबलकॉइन्स",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "इथेरियम L2s वरील स्टेबलकॉइन्स",
   "page-organizations-enterprise-tokenization-stat-value-secured": "इथेरियमवर सुरक्षित केलेले मूल्य"
 }

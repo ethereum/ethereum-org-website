@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "Penerbitan di l1 Ethereum",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>Transparansi</strong>: Rollup mewarisi transparansi Ethereum dengan membuat data transaksi mereka tersedia di l1, memungkinkan siapa saja untuk memverifikasi state rollup secara independen. Bahkan jika sekuenser menghilang atau menyensor pengguna, riwayat transaksi lengkap tetap dapat diakses dan tidak dapat diubah di Ethereum.",
   "page-organizations-enterprise-l2s-meta-description": "Lapisan 2 (l2) memberi perusahaan eksekusi yang cepat dan dapat disesuaikan yang diamankan oleh Ethereum. Bandingkan membangun di l2 yang sudah ada dengan meluncurkan rantai aplikasi atau rollup Anda sendiri.",
-  "page-organizations-enterprise-l2s-meta-title": "Lapisan 2 (l2) perusahaan dan rantai aplikasi di Ethereum",
+  "page-organizations-enterprise-l2s-meta-title": "Lapisan 2 perusahaan dan rantai aplikasi di Ethereum",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "Nilai yang diamankan di seluruh l2",
   "page-organizations-enterprise-l2s-stat-uops": "Rata-rata operasi pengguna harian (30 hari)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "Satu-satunya infrastruktur buku besar terdistribusi yang dapat diprogram yang tidak pernah mati, dan telah berkembang pesat melalui berbagai ancaman eksistensial.",

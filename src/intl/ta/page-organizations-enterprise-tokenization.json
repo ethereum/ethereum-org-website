@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "டோக்கனாக்கப்பட்ட கருவூலங்கள் மற்றும் பணத்திற்கு நிகரானவை",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "எத்திரியம்",
   "page-organizations-enterprise-tokenization-compare-col-functions": "செயல்பாடுகள்",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "அடுக்கு 1 (l1) மாற்றுகள்",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 மாற்றுகள்",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "தனியார் DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "பாரம்பரிய அமைப்புகள்",
   "page-organizations-enterprise-tokenization-compare-description": "வெவ்வேறு டோக்கனாக்க தளங்கள் ஒன்றுக்கொன்று எவ்வாறு ஒப்பிடப்படுகின்றன:",
@@ -48,7 +48,7 @@
   "page-organizations-enterprise-tokenization-compare-row-liquidity-private-dlt": "பொருந்தாது",
   "page-organizations-enterprise-tokenization-compare-row-liquidity-traditional": "பொருந்தாது",
   "page-organizations-enterprise-tokenization-compare-row-neutrality": "நடுநிலைமை",
-  "page-organizations-enterprise-tokenization-compare-row-neutrality-ethereum": "ஒற்றை ஆபரேட்டர் இல்லை, ஆயிரக்கணக்கான நோடுகள்",
+  "page-organizations-enterprise-tokenization-compare-row-neutrality-ethereum": "ஒற்றை ஆபரேட்டர் இல்லை, ஆயிரக்கணக்கான கணுக்கள்",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-l1": "ஒற்றை கிளையண்ட், கட்டுப்படுத்தப்பட்ட கருவூலம், குறைந்த எண்ணிக்கையிலான சரிபார்ப்பான் ஆபரேட்டர்கள்",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-private-dlt": "விற்பனையாளரால் கட்டுப்படுத்தப்படுவது",
   "page-organizations-enterprise-tokenization-compare-row-neutrality-traditional": "அதிகார வரம்பிற்கு உட்பட்டது",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "எத்திரியத்தில் நிறுவன சொத்து டோக்கனாக்கம்",
   "page-organizations-enterprise-tokenization-stablecoins-description": "சந்தை அளவு, ஏற்பு மற்றும் பிணைய ஆதரவைப் புரிந்துகொள்ள எத்திரியத்தில் உள்ள ஸ்டேபிள்காயின் நிலப்பரப்பைக் கண்காணிக்கவும்.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "எத்திரியத்தில் ஸ்டேபிள்காயின்கள்",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "எத்திரியம் அடுக்கு 1 (l1)இல் ஸ்டேபிள்காயின்கள்",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "எத்திரியம் அடுக்கு 2 (l2)களில் ஸ்டேபிள்காயின்கள்",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "எத்திரியம் L1-இல் ஸ்டேபிள்காயின்கள்",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "எத்திரியம் L2-களில் ஸ்டேபிள்காயின்கள்",
   "page-organizations-enterprise-tokenization-stat-value-secured": "எத்திரியத்தில் பாதுகாக்கப்பட்ட மதிப்பு"
 }

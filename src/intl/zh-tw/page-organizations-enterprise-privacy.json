@@ -63,7 +63,7 @@
   "page-organizations-enterprise-privacy-solutions-prividium-title": "企業級 Prividium",
   "page-organizations-enterprise-privacy-solutions-programmable-description": "透過私有智能合約在交易、狀態與運算中實現完整的隱私。用戶端證明生成將敏感資料保留在使用者裝置上。可與更廣泛的以太坊虛擬機 (EVM) 生態系統組合。",
   "page-organizations-enterprise-privacy-solutions-programmable-title": "可程式化隱私",
-  "page-organizations-enterprise-privacy-solutions-shielded-description": "零知識 (ZK) 隱私池在以太坊及其第二層 (L2) 網路上處理數十億的屏蔽交易量。成熟的中介軟體支援私密的去中心化金融 (DeFi) 互動，包括轉帳、交換與借貸——已在大規模生產環境中經過測試。",
+  "page-organizations-enterprise-privacy-solutions-shielded-description": "零知識 (ZK) 隱私池在以太坊及其第二層 (L2) 網路上處理數十億的屏蔽交易量。成熟的中介軟體支援私密的去中心化金融 (DeFi) 互動，包括轉帳、兌換與借貸——已在大規模生產環境中經過測試。",
   "page-organizations-enterprise-privacy-solutions-shielded-title": "屏蔽交易",
   "page-organizations-enterprise-privacy-solutions-title": "以太坊上的隱私解決方案",
   "page-organizations-enterprise-privacy-stat-plus": "{count}+",

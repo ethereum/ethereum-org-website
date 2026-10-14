@@ -70,7 +70,7 @@
   "page-organizations-enterprise-l2s-issuance-title": "Émission sur la l1 d'Ethereum",
   "page-organizations-enterprise-l2s-issuance-transparency": "<strong>Transparence</strong> : Les rollups héritent de la transparence d'Ethereum en rendant leurs données de transaction disponibles sur la l1, permettant à quiconque de vérifier indépendamment l'état du rollup. Même si le séquenceur disparaît ou censure les utilisateurs, l'historique complet des transactions reste accessible et immuable sur Ethereum.",
   "page-organizations-enterprise-l2s-meta-description": "Les couches 2 (l2) offrent aux entreprises une exécution rapide et personnalisable sécurisée par Ethereum. Comparez la construction sur une l2 existante avec le lancement de votre propre chaîne d'applications ou rollup.",
-  "page-organizations-enterprise-l2s-meta-title": "Couches 2 (l2) d'entreprise et chaînes d'applications sur Ethereum",
+  "page-organizations-enterprise-l2s-meta-title": "Couches 2 d'entreprise et chaînes d'applications sur Ethereum",
   "page-organizations-enterprise-l2s-stat-l2-tvl": "Valeur sécurisée à travers les l2",
   "page-organizations-enterprise-l2s-stat-uops": "Moyenne quotidienne des opérations utilisateurs (30 jours)",
   "page-organizations-enterprise-l2s-trust-battle-tested-description": "La seule infrastructure de registre distribué programmable qui n'a jamais connu de panne et qui a prospéré face à de multiples menaces existentielles.",

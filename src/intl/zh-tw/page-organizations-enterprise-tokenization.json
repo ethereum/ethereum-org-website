@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "代幣化國庫券與約當現金",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "以太坊",
   "page-organizations-enterprise-tokenization-compare-col-functions": "功能",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "第一層 (L1) 替代方案",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "L1 替代方案",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "私有分散式帳本技術 (DLT)",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "傳統支付軌道",
   "page-organizations-enterprise-tokenization-compare-description": "不同的代幣化平台之間有何差異：",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "以太坊上的機構資產代幣化",
   "page-organizations-enterprise-tokenization-stablecoins-description": "追蹤以太坊上的穩定幣概況，以了解市場規模、採用情況和抵押品支持。",
   "page-organizations-enterprise-tokenization-stablecoins-title": "以太坊上的穩定幣",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "以太坊第一層 (L1) 上的穩定幣",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "以太坊第二層 (L2) 上的穩定幣",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "以太坊 L1 上的穩定幣",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "以太坊 L2 上的穩定幣",
   "page-organizations-enterprise-tokenization-stat-value-secured": "以太坊上保障的價值"
 }

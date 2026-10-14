@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Токенізовані казначейські зобов'язання та грошові еквіваленти",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Етеріум",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Функції",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Альтернативи рівня 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Альтернативи L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "Приватні DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Традиційні системи",
   "page-organizations-enterprise-tokenization-compare-description": "Порівняння різних платформ для токенізації:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Інституційна токенізація активів у мережі Етеріум",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Відстежуйте середовище стейблкоїнів у мережі Етеріум, щоб зрозуміти розмір ринку, рівень впровадження та заставне забезпечення.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Стейблкоїни в мережі Етеріум",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Стейблкоїни на рівні 1 (l1) мережі Етеріум",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Стейблкоїни на рівнях 2 (l2) мережі Етеріум",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Стейблкоїни на L1 мережі Етеріум",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Стейблкоїни на L2 мережі Етеріум",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Вартість, захищена в мережі Етеріум"
 }

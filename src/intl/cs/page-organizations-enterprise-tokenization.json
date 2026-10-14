@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Tokenizované státní dluhopisy a peněžní ekvivalenty",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Funkce",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternativy vrstvy 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternativy L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "Soukromé DLT",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Tradiční systémy",
   "page-organizations-enterprise-tokenization-compare-description": "Jak si vedou různé tokenizační platformy v porovnání:",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Institucionální tokenizace aktiv na Ethereu",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Sledujte prostředí stablecoinů na Ethereu, abyste porozuměli velikosti trhu, přijetí a krytí zajištěním.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Stablecoiny na Ethereu",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoiny na vrstvě 1 (l1) Etherea",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoiny na vrstvách 2 (l2) Etherea",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoiny na L1 Etherea",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoiny na L2 Etherea",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Hodnota zajištěná na Ethereu"
 }

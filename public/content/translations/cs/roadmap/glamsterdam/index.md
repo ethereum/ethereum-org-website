@@ -39,7 +39,7 @@ Upgrade Glamsterdam se zaměřuje na tři hlavní cíle:
 
 - Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalého, postupného zpracování jedné po druhé.
 - Rozšíření kapacity: Rozdělení náročné práce při vytváření a ověřování bloků, což síti poskytne více času na šíření většího množství dat bez zpomalení.
-- Prevence nadměrného růstu databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu plynu a zároveň zabrání zhoršení výkonu hardwaru.
+- Prevence nadměrného růstu databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
 
 Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s rostoucí kapacitou sítě zůstane udržitelná a výkon zůstane vysoký.
 

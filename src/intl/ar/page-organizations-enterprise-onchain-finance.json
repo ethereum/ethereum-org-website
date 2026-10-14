@@ -20,7 +20,7 @@
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": "فيزا",
   "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": "الأصول المرمزة",
   "page-organizations-enterprise-onchain-finance-meta-description": "كيف تستخدم المؤسسات التمويل اللامركزي (DeFi) في إيثيريوم: معايير مفتوحة، وسيولة عميقة، وبروتوكولات قابلة للتركيب للعملات المستقرة، والأصول المرمزة، والسندات المرمزة، والصرف الأجنبي.",
-  "page-organizations-enterprise-onchain-finance-meta-title": "التمويل اللامركزي (DeFi) المؤسسي والتمويل على السلسلة",
+  "page-organizations-enterprise-onchain-finance-meta-title": "⁦DeFi⁩ المؤسسي والتمويل على السلسلة",
   "page-organizations-enterprise-onchain-finance-primitives-composable-description": "تعمل اللبنات الأساسية والبروتوكولات مفتوحة المصدر بمثابة 'مكعبات ليغو مالية' يمكن للمطورين دمجها لبناء منتجات متطورة غير ممكنة حاليًا على الأنظمة التقليدية.",
   "page-organizations-enterprise-onchain-finance-primitives-composable-title": "أساسيات قابلة للتركيب",
   "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": "تمتلك إيثيريوم أعمق سيولة في التمويل اللامركزي (DeFi) مقارنة بأي سلسلة كتل أخرى، حيث تستضيف سوقًا عالميًا فعالًا للأصول الرقمية.",
@@ -31,7 +31,7 @@
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": "يمكن لأي شخص بناء أو الوصول إلى أدوات التمويل اللامركزي (DeFi)، مما يفتح مشهدًا ديناميكيًا عالميًا للابتكار دون حراس بوابات.",
   "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": "ابتكار غير مقيد بإذن",
   "page-organizations-enterprise-onchain-finance-primitives-title": "إيثيريوم هي المنصة لأساسيات التمويل اللامركزي (DeFi)",
-  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "إجمالي القيمة المقفلة (TVL) في التمويل اللامركزي (DeFi)",
-  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "حجم التداول في منصات التداول اللامركزية (DEX) خلال 24 ساعة (متوسط 12 شهرًا)",
-  "page-organizations-enterprise-onchain-finance-stat-global-share": "من إجمالي القيمة المقفلة (TVL) للتمويل اللامركزي (DeFi) العالمي"
+  "page-organizations-enterprise-onchain-finance-stat-defi-tvl": "إجمالي القيمة المقفلة (⁦TVL⁩) في ⁦DeFi⁩",
+  "page-organizations-enterprise-onchain-finance-stat-dex-volume": "حجم التداول في ⁦DEX⁩ خلال 24 ساعة (متوسط 12 شهرًا)",
+  "page-organizations-enterprise-onchain-finance-stat-global-share": "من إجمالي ⁦TVL⁩ العالمي في ⁦DeFi⁩"
 }

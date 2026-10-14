@@ -1,6 +1,6 @@
 {
   "page-organizations-enterprise-compare-col-ethereum": "イーサリアム",
-  "page-organizations-enterprise-compare-col-l1": "代替レイヤー1 (L1)",
+  "page-organizations-enterprise-compare-col-l1": "代替L1",
   "page-organizations-enterprise-compare-col-private-dlt": "プライベートDLT",
   "page-organizations-enterprise-compare-col-traditional": "従来のシステム",
   "page-organizations-enterprise-compare-description": "これらのガイドを使用して、アーキテクチャに関する疑問から、範囲が明確で証拠に基づいた意思決定へと移行してください。",
@@ -30,7 +30,7 @@
   "page-organizations-enterprise-hero-title": "企業向けイーサリアム",
   "page-organizations-enterprise-meta-description": "トークン化された資産、ステーブルコイン、機関金融のためのエンタープライズ向けブロックチェーン。イーサリアムとプライベートDLTを比較し、本番環境でのユースケースを確認してください。",
   "page-organizations-enterprise-meta-title": "イーサリアム上のエンタープライズ向けブロックチェーンソリューション",
-  "page-organizations-enterprise-stat-defi-tvl": "DeFiのトータル・バリュー・ロックト (TVL)",
+  "page-organizations-enterprise-stat-defi-tvl": "DeFi TVL",
   "page-organizations-enterprise-stat-stablecoin-tvl": "ステーブルコインの時価総額",
   "page-organizations-enterprise-stat-uptime": "無停止の稼働時間",
   "page-organizations-enterprise-stat-uptime-value": "{years, plural, one {{count} 年} other {{count} 年}}",

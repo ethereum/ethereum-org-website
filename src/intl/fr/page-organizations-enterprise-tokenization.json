@@ -13,7 +13,7 @@
   "page-organizations-enterprise-tokenization-assets-treasuries-title": "Trésoreries tokenisées et équivalents de trésorerie",
   "page-organizations-enterprise-tokenization-compare-col-ethereum": "Ethereum",
   "page-organizations-enterprise-tokenization-compare-col-functions": "Fonctions",
-  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatives de couche 1 (l1)",
+  "page-organizations-enterprise-tokenization-compare-col-l1": "Alternatives L1",
   "page-organizations-enterprise-tokenization-compare-col-private-dlt": "DLT privé",
   "page-organizations-enterprise-tokenization-compare-col-traditional": "Infrastructures traditionnelles",
   "page-organizations-enterprise-tokenization-compare-description": "Comment les différentes plateformes de tokenisation se comparent-elles les unes aux autres :",
@@ -79,7 +79,7 @@
   "page-organizations-enterprise-tokenization-meta-title": "Tokenisation institutionnelle d'actifs sur Ethereum",
   "page-organizations-enterprise-tokenization-stablecoins-description": "Suivez le paysage des stablecoins sur Ethereum pour comprendre la taille du marché, l'adoption et la couverture par collatéral.",
   "page-organizations-enterprise-tokenization-stablecoins-title": "Stablecoins sur Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoins sur la couche 1 (l1) d'Ethereum",
-  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoins sur les couches 2 (l2) d'Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l1": "Stablecoins sur la L1 d'Ethereum",
+  "page-organizations-enterprise-tokenization-stat-stablecoins-l2": "Stablecoins sur les L2 d'Ethereum",
   "page-organizations-enterprise-tokenization-stat-value-secured": "Valeur sécurisée sur Ethereum"
 }
