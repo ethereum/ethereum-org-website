@@ -3,14 +3,17 @@
 import {
   type CSSProperties,
   type PointerEvent,
+  useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
 } from "react"
+import { Minus, Plus } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import Select from "@/components/Select"
+import { Button } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -35,6 +38,8 @@ interface Point {
   x: number
   y: number
 }
+
+type View = [x: number, y: number, w: number, h: number]
 
 const BUCKETS = [
   {
@@ -80,6 +85,55 @@ const tooltipPosition = ({ x, y }: Point): CSSProperties => ({
   }`,
 })
 
+const MAX_SCALE = 8
+const ZOOM_MS = 400
+const TAP_SLOP = 6
+const CENTER = { x: 0.5, y: 0.5 }
+
+const clamp = (v: number, min: number, max: number) =>
+  Math.min(Math.max(v, min), max)
+
+// Scales the view by k and pans it so the map point at screen fraction `from` lands at `to`
+const zoomView = (
+  v: View,
+  k: number,
+  from: Point,
+  to: Point,
+  width: number,
+  height: number
+): View => {
+  const w = clamp(v[2] / k, width / MAX_SCALE, width)
+  const h = (w * height) / width
+  return [
+    clamp(v[0] + from.x * v[2] - to.x * w, 0, width - w),
+    clamp(v[1] + from.y * v[3] - to.y * h, 0, height - h),
+    w,
+    h,
+  ]
+}
+
+// Frames a country with padding, never tighter than a quarter of the world
+const frame = (
+  [x0, y0, x1, y1]: WorldMapShape["bbox"],
+  width: number,
+  height: number
+): View => {
+  const ratio = width / height
+  const w = Math.max((x1 - x0) * 2, (y1 - y0) * 2 * ratio, width / 4)
+  const scale = 1 / Math.min(w / width, 1)
+  const at = { x: (x0 + x1) / 2 / width, y: (y0 + y1) / 2 / height }
+  return zoomView([0, 0, width, height], scale, at, CENTER, width, height)
+}
+
+const midpoint = ([a, b = a]: Point[]): Point => ({
+  x: (a.x + b.x) / 2,
+  y: (a.y + b.y) / 2,
+})
+const spread = ([a, b = a]: Point[]) => Math.hypot(a.x - b.x, a.y - b.y)
+
+const codeOf = (target: EventTarget) =>
+  (target as Element).getAttribute("data-code") ?? undefined
+
 interface AdoptionMapViewProps {
   countries: MapCountry[]
   width: number
@@ -98,8 +152,17 @@ const AdoptionMapView = ({
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
+  const [view, setView] = useState<View>([0, 0, width, height])
   const pointer = useRef<Point>(undefined)
   const tooltip = useRef<HTMLDivElement>(null)
+  const svg = useRef<SVGSVGElement>(null)
+  const viewRef = useRef(view)
+  const renderFrame = useRef(0)
+  const animation = useRef(0)
+  const pointers = useRef(new Map<number, Point>())
+  const gesture = useRef<{ view: View; mid: Point; spread: number }>(undefined)
+  const origin = useRef<Point>(undefined)
+  const dragged = useRef(false)
 
   useEffect(() => {
     fetch("/world-map.json")
@@ -146,80 +209,228 @@ const AdoptionMapView = ({
     [countries]
   )
 
-  const paths = useMemo(() => {
-    const handlers = (code: string) => ({
-      onPointerEnter: (e: PointerEvent) => {
-        if (e.pointerType === "mouse") setHovered(code)
-      },
-      onClick: () => setSelected(code),
+  const paths = useMemo(
+    () =>
+      shapes.map(({ code, d }) => (
+        <path
+          key={code}
+          data-code={code}
+          d={d}
+          strokeWidth={0.6}
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+          className={cn(
+            "stroke-background",
+            getBucket(byCode.get(code)?.value)?.fill ?? NO_DATA_FILL
+          )}
+        />
+      )),
+    [shapes, byCode]
+  )
+
+  const commit = useCallback((v: View) => {
+    viewRef.current = v
+    renderFrame.current ||= requestAnimationFrame(() => {
+      renderFrame.current = 0
+      setView(viewRef.current)
     })
-    return (
-      <>
-        {shapes.map(({ code, d }) => (
-          <path
-            key={code}
-            d={d}
-            strokeWidth={0.6}
-            strokeLinejoin="round"
-            vectorEffect="non-scaling-stroke"
-            className={cn(
-              "cursor-pointer stroke-background",
-              getBucket(byCode.get(code)?.value)?.fill ?? NO_DATA_FILL
-            )}
-            {...handlers(code)}
-          />
-        ))}
-        {shapes
-          .filter((s) => s.small)
-          .map(({ code, x, y }) => (
-            // Circles, not stroked outlines: wide strokes on complex paths triple touch hit-test cost
-            <circle
-              key={code}
-              cx={x * width}
-              cy={y * height}
-              r={11}
-              fill="transparent"
-              className="cursor-pointer max-md:[r:26px]"
-              {...handlers(code)}
-            />
-          ))}
-      </>
+  }, [])
+
+  const animateTo = (to: View) => {
+    cancelAnimationFrame(animation.current)
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+      return commit(to)
+    const from = viewRef.current
+    const start = performance.now()
+    const step = (now: number) => {
+      const p = Math.min((now - start) / ZOOM_MS, 1)
+      const e = 1 - (1 - p) ** 4
+      commit(p < 1 ? (from.map((v, i) => v + (to[i] - v) * e) as View) : to)
+      if (p < 1) animation.current = requestAnimationFrame(step)
+    }
+    animation.current = requestAnimationFrame(step)
+  }
+
+  const zoomBy = (k: number) =>
+    animateTo(zoomView(viewRef.current, k, CENTER, CENTER, width, height))
+
+  useEffect(() => {
+    const el = svg.current
+    if (!el) return
+    const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return
+      e.preventDefault()
+      cancelAnimationFrame(animation.current)
+      const rect = el.getBoundingClientRect()
+      const at = {
+        x: (e.clientX - rect.left) / rect.width,
+        y: (e.clientY - rect.top) / rect.height,
+      }
+      const delta = e.deltaY * (e.deltaMode ? 33 : 1)
+      commit(
+        zoomView(viewRef.current, 2 ** (-delta / 200), at, at, width, height)
+      )
+    }
+    // iOS Safari ignores touch-action for pinch, so stop page zoom on the map directly
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1) e.preventDefault()
+    }
+    const prevent = (e: Event) => e.preventDefault()
+    el.addEventListener("wheel", onWheel, { passive: false })
+    el.addEventListener("touchmove", onTouchMove, { passive: false })
+    el.addEventListener("gesturestart", prevent)
+    el.addEventListener("gesturechange", prevent)
+    return () => {
+      el.removeEventListener("wheel", onWheel)
+      el.removeEventListener("touchmove", onTouchMove)
+      el.removeEventListener("gesturestart", prevent)
+      el.removeEventListener("gesturechange", prevent)
+    }
+  }, [commit, width, height])
+
+  useEffect(
+    () => () => {
+      cancelAnimationFrame(renderFrame.current)
+      cancelAnimationFrame(animation.current)
+    },
+    []
+  )
+
+  const relative = ({ x, y }: Point): Point => {
+    const rect = svg.current!.getBoundingClientRect()
+    return { x: (x - rect.left) / rect.width, y: (y - rect.top) / rect.height }
+  }
+
+  // Re-anchored whenever a finger lands or lifts, so the view never jumps
+  const startGesture = () => {
+    const points = [...pointers.current.values()]
+    gesture.current = points.length
+      ? { view: viewRef.current, mid: midpoint(points), spread: spread(points) }
+      : undefined
+  }
+
+  // Follows the cursor without re-rendering: position is written straight to the tooltip
+  const trackPointer = (e: PointerEvent<SVGSVGElement>) => {
+    if (e.pointerType !== "mouse") return
+    pointer.current = relative({ x: e.clientX, y: e.clientY })
+    if (tooltip.current)
+      Object.assign(tooltip.current.style, tooltipPosition(pointer.current))
+  }
+
+  const onPointerDown = (e: PointerEvent<SVGSVGElement>) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return
+    cancelAnimationFrame(animation.current)
+    if (!pointers.current.size) {
+      dragged.current = false
+      origin.current = { x: e.clientX, y: e.clientY }
+    } else dragged.current = true
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    startGesture()
+  }
+
+  const onPointerMove = (e: PointerEvent<SVGSVGElement>) => {
+    trackPointer(e)
+    if (!pointers.current.has(e.pointerId)) return
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    if (
+      !dragged.current &&
+      origin.current &&
+      Math.hypot(e.clientX - origin.current.x, e.clientY - origin.current.y) >
+        TAP_SLOP
+    ) {
+      dragged.current = true
+      if (e.pointerType === "mouse")
+        e.currentTarget.setPointerCapture(e.pointerId)
+    }
+    const g = gesture.current
+    if (!g) return
+    const points = [...pointers.current.values()]
+    const k = points.length > 1 && g.spread ? spread(points) / g.spread : 1
+    commit(
+      zoomView(
+        g.view,
+        k,
+        relative(g.mid),
+        relative(midpoint(points)),
+        width,
+        height
+      )
     )
-  }, [shapes, byCode, width, height])
+  }
+
+  const onPointerEnd = (e: PointerEvent<SVGSVGElement>) => {
+    pointers.current.delete(e.pointerId)
+    startGesture()
+  }
+
+  const scale = width / view[2]
+  const zoomed = scale > 1
+  const toView = ({ x, y }: Point): Point => ({
+    x: (x * width - view[0]) / view[2],
+    y: (y * height - view[1]) / view[3],
+  })
 
   const activeCode = hovered ?? selected
   const active = activeCode ? byCode.get(activeCode) : undefined
   const activeShape = shapes.find((s) => s.code === activeCode)
   const activeBucket = getBucket(active?.value)
-  const anchor = hovered && pointer.current ? pointer.current : activeShape
-
-  // Follows the cursor without re-rendering: position is written straight to the tooltip
-  const trackPointer = (e: PointerEvent<SVGSVGElement>) => {
-    if (e.pointerType !== "mouse") return
-    const rect = e.currentTarget.getBoundingClientRect()
-    pointer.current = {
-      x: (e.clientX - rect.left) / rect.width,
-      y: (e.clientY - rect.top) / rect.height,
-    }
-    if (tooltip.current)
-      Object.assign(tooltip.current.style, tooltipPosition(pointer.current))
-  }
+  const pinned = activeShape && toView(activeShape)
+  const anchor =
+    hovered && pointer.current
+      ? pointer.current
+      : pinned &&
+          Math.min(pinned.x, pinned.y) >= 0 &&
+          Math.max(pinned.x, pinned.y) <= 1
+        ? pinned
+        : undefined
 
   return (
     <div className="mx-auto max-w-screen-lg space-y-8">
       <div className="relative">
         <svg
-          viewBox={`0 0 ${width} ${height}`}
-          className="h-auto w-full touch-manipulation"
+          ref={svg}
+          viewBox={view.join(" ")}
+          style={{ "--scale": scale } as CSSProperties}
+          className={cn(
+            "h-auto w-full select-none",
+            zoomed
+              ? "cursor-grab touch-none active:cursor-grabbing"
+              : "touch-pan-x touch-pan-y [&_[data-code]]:cursor-pointer"
+          )}
           role="img"
           aria-label={t("page-stories-map-aria-label")}
-          onPointerMove={trackPointer}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerEnd}
+          onPointerCancel={onPointerEnd}
+          onPointerOver={(e) => {
+            if (e.pointerType !== "mouse" || e.buttons) return
+            trackPointer(e)
+            setHovered(codeOf(e.target))
+          }}
           onPointerLeave={() => setHovered(undefined)}
           onClick={(e) => {
-            if (e.target === e.currentTarget) setSelected(undefined)
+            if (!dragged.current) setSelected(codeOf(e.target))
           }}
         >
           {paths}
+          {shapes
+            .filter((s) => s.small)
+            .map(({ code, x, y, bbox: [x0, y0, x1, y1] }) => (
+              // Circles, not stroked outlines: wide strokes on complex paths triple touch hit-test cost
+              <circle
+                key={code}
+                data-code={code}
+                cx={x * width}
+                cy={y * height}
+                fill="transparent"
+                className={cn(
+                  "[r:calc(11px/var(--scale))] max-md:[r:calc(26px/var(--scale))]",
+                  // Once big enough to hit directly, the circle would only cover neighbours
+                  Math.max(x1 - x0, y1 - y0) * scale >= 16 && "hidden"
+                )}
+              />
+            ))}
           {activeShape && (
             <g
               key={activeShape.code}
@@ -236,7 +447,7 @@ const AdoptionMapView = ({
                 <circle
                   cx={activeShape.x * width}
                   cy={activeShape.y * height}
-                  r={8}
+                  r={8 / scale}
                   vectorEffect="non-scaling-stroke"
                   className="fill-none"
                 />
@@ -244,6 +455,42 @@ const AdoptionMapView = ({
             </g>
           )}
         </svg>
+
+        <div className="absolute end-2 top-2 flex gap-1">
+          {zoomed && (
+            <Button
+              variant="outline"
+              isSecondary
+              size="sm"
+              className="bg-background"
+              onClick={() => animateTo([0, 0, width, height])}
+            >
+              {t("page-stories-map-show-world")}
+            </Button>
+          )}
+          <Button
+            variant="outline"
+            isSecondary
+            size="sm"
+            className="bg-background"
+            aria-label={t("page-stories-map-zoom-out")}
+            disabled={!zoomed}
+            onClick={() => zoomBy(1 / 2)}
+          >
+            <Minus />
+          </Button>
+          <Button
+            variant="outline"
+            isSecondary
+            size="sm"
+            className="bg-background"
+            aria-label={t("page-stories-map-zoom-in")}
+            disabled={scale >= MAX_SCALE}
+            onClick={() => zoomBy(2)}
+          >
+            <Plus />
+          </Button>
+        </div>
 
         <div aria-live="polite">
           {active && anchor && (
@@ -295,7 +542,11 @@ const AdoptionMapView = ({
             inputValue={query}
             onInputChange={setQuery}
             value={options.find((o) => o.value === selected) ?? null}
-            onChange={(option) => setSelected(option?.value)}
+            onChange={(option) => {
+              const shape = shapes.find((s) => s.code === option?.value)
+              if (shape) animateTo(frame(shape.bbox, width, height))
+              setSelected(option?.value)
+            }}
             placeholder={t("page-stories-map-select-placeholder")}
             noOptionsMessage={() => t("page-stories-map-no-results")}
             formatOptionLabel={({ label, share }, { context }) =>

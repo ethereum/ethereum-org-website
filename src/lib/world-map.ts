@@ -22,6 +22,38 @@ const miller = (lambda: number, phi: number): [number, number] => [
   1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * phi)),
 ]
 
+type Box = [number, number, number, number]
+
+// Unions ring boxes from largest down, skipping rings that would span half the map:
+// those were wrapped across the edge (Aleutians, Chukotka) and would frame the whole world
+const ringBounds = (d: string): Box =>
+  d
+    .split("M")
+    .filter(Boolean)
+    .map((ring): Box => {
+      const n = ring.match(/-?\d+(\.\d+)?/g)!.map(Number)
+      const xs = n.filter((_, i) => i % 2 === 0)
+      const ys = n.filter((_, i) => i % 2 === 1)
+      return [
+        Math.min(...xs),
+        Math.min(...ys),
+        Math.max(...xs),
+        Math.max(...ys),
+      ]
+    })
+    .sort(
+      (a, b) => (b[2] - b[0]) * (b[3] - b[1]) - (a[2] - a[0]) * (a[3] - a[1])
+    )
+    .reduce((box, r) => {
+      const union: Box = [
+        Math.min(box[0], r[0]),
+        Math.min(box[1], r[1]),
+        Math.max(box[2], r[2]),
+        Math.max(box[3], r[3]),
+      ]
+      return union[2] - union[0] < WIDTH / 2 ? union : box
+    })
+
 export const WORLD_MAP = (() => {
   const toFeatures = (json: unknown) => {
     const topology = json as Parameters<typeof feature>[0]
@@ -72,12 +104,14 @@ export const WORLD_MAP = (() => {
     )
     const [x, y] = path.centroid(largest)
     const area = features.reduce((sum, f) => sum + path.area(f), 0)
+    const d = features.map((f) => path(f)).join("")
     return {
       code,
-      d: features.map((f) => path(f)).join(""),
+      d,
       x: x / WIDTH,
       y: y / height,
       small: area < SMALL_AREA,
+      bbox: ringBounds(d),
     }
   })
   return { width: WIDTH, height, shapes }
