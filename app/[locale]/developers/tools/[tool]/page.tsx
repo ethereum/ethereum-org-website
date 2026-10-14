@@ -3,17 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -47,17 +40,15 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon, toolDescriptions] =
-    await Promise.all([
-      getDeveloperToolsData(),
-      getAppPageContributorInfo("developers/tools", locale as Lang),
-      getTranslations({ locale, namespace: "page-developers-tools" }),
-      getTranslations({ locale, namespace: "common" }),
-      getTranslations({
-        locale,
-        namespace: "page-developers-tools-descriptions",
-      }),
-    ])
+  const [data, { contributors }, t, toolDescriptions] = await Promise.all([
+    getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({
+      locale,
+      namespace: "page-developers-tools-descriptions",
+    }),
+  ])
 
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) notFound()
@@ -87,35 +78,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
       {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
           the catalog/category pages so it stays aligned across navigation. */}
       <div className="px-page py-hero lg:py-hero-2x">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/developers/">
-                {tCommon("developers")}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/developers/tools/">
-                {tCommon("tools")}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>{tool.name}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <Breadcrumbs slug={`/developers/tools/${toolKey}`} label={tool.name} />
       </div>
 
       <main className="px-page pb-page">

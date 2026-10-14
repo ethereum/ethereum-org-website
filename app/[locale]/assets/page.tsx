@@ -5,6 +5,7 @@ import type { Lang, PageParams } from "@/lib/types"
 import AssetDownload, {
   type AssetDownloadProps,
 } from "@/components/AssetDownload"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -361,6 +362,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <main className="p-page pt-page-2x">
         <MainArticle className="flow space-y-space-4x">
           <Section className="flex flex-col items-center gap-space text-center">
+            <Breadcrumbs slug="assets" className="[&_ol]:justify-center" />
             <Image
               className="w-20 dark:hidden"
               src={ethDiamondBlack}

@@ -59,7 +59,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <PageHero
-          breadcrumbs={{ slug: "developers/tutorials", startDepth: 1 }}
+          breadcrumbs={{ slug: "developers/tutorials" }}
           heroImg={heroImg}
           title={t("page-tutorial-title")}
           description={t("page-tutorial-subtitle")}

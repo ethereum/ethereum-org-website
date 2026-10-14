@@ -47,7 +47,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <PageHero
-        breadcrumbs={{ slug: "/community/support", startDepth: 1 }}
+        breadcrumbs={{ slug: "/community/support" }}
         title={t("page-community-support-hero-title")}
         description={
           <>

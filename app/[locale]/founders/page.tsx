@@ -324,7 +324,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <PageHero
-        breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
+        breadcrumbs={{ slug: "founders" }}
         heroImg={heroImg}
         title={t("page-founders-title")}
         description={t("page-founders-description")}

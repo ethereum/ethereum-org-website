@@ -2,6 +2,7 @@ import { ReactElement } from "react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
+import Breadcrumbs, { type BreadcrumbsProps } from "@/components/Breadcrumbs"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 import { Stack } from "@/components/ui/flex"
@@ -11,8 +12,13 @@ import { cn } from "@/lib/utils/cn"
 export type HubHeroProps = Omit<
   CommonHeroProps,
   "breadcrumbs" | "blurDataURL"
-> & { className?: string }
+> & {
+  className?: string
+  /** Replaces the `title` eyebrow; `header` then becomes the h1 */
+  breadcrumbs?: BreadcrumbsProps
+}
 const HubHero = ({
+  breadcrumbs,
   heroImg,
   title,
   header,
@@ -50,7 +56,12 @@ const HubHero = ({
           "xl:start-[32px]"
         )}
       >
-        {title ? (
+        {breadcrumbs ? (
+          <Breadcrumbs
+            {...breadcrumbs}
+            className="[&_ol]:justify-center xl:[&_ol]:justify-start"
+          />
+        ) : title ? (
           <h1
             data-label="breadcrumb"
             className="text-md font-normal text-body-medium uppercase"
@@ -59,7 +70,7 @@ const HubHero = ({
           </h1>
         ) : null}
         <Stack className="max-w-screen-md gap-2 self-center md:gap-1">
-          {title ? (
+          {title && !breadcrumbs ? (
             <h2 className="text-4xl lg:text-5xl">{header}</h2>
           ) : (
             <h1 className="text-4xl lg:text-5xl">{header}</h1>

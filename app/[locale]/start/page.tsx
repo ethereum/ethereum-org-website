@@ -7,6 +7,7 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -61,6 +62,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         preload
       />
       <div className="flow mx-auto max-w-3xl px-page text-center">
+        <Breadcrumbs slug="start" className="[&_ol]:justify-center" />
         <h1>{t("page-start-title")}</h1>
         <p>{t("page-start-subtitle")}</p>
       </div>

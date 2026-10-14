@@ -3,15 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import { PageHero } from "@/components/Hero"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
@@ -43,17 +36,15 @@ const Page = async (props: {
 
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon, toolDescriptions] =
-    await Promise.all([
-      getDeveloperToolsData(),
-      getAppPageContributorInfo("developers/tools", locale as Lang),
-      getTranslations({ locale, namespace: "page-developers-tools" }),
-      getTranslations({ locale, namespace: "common" }),
-      getTranslations({
-        locale,
-        namespace: "page-developers-tools-descriptions",
-      }),
-    ])
+  const [data, { contributors }, t, toolDescriptions] = await Promise.all([
+    getDeveloperToolsData(),
+    getAppPageContributorInfo("developers/tools", locale as Lang),
+    getTranslations({ locale, namespace: "page-developers-tools" }),
+    getTranslations({
+      locale,
+      namespace: "page-developers-tools-descriptions",
+    }),
+  ])
 
   const normalized = normalizeDeveloperToolsData(data)
   if (!normalized) throw Error("No developer tools data available")
@@ -75,39 +66,11 @@ const Page = async (props: {
 
   const categoryTools = allTools.filter((tool) => tool.categoryId === category)
 
-  // Hand-built breadcrumb: the `/categories/` URL segment has no page of its
-  // own, so a slug-derived crumb would link to a 404. Skip it and link the
-  // real ancestors instead.
   const breadcrumb = (
-    <Breadcrumb>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-          /
-        </BreadcrumbSeparator>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/developers/">
-            {tCommon("developers")}
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-          /
-        </BreadcrumbSeparator>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/developers/tools/">
-            {tCommon("tools")}
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-          /
-        </BreadcrumbSeparator>
-        <BreadcrumbItem>
-          <BreadcrumbPage>{categoryLabels[category]}</BreadcrumbPage>
-        </BreadcrumbItem>
-      </BreadcrumbList>
-    </Breadcrumb>
+    <Breadcrumbs
+      slug={`/developers/tools/categories/${category}`}
+      label={categoryLabels[category]}
+    />
   )
 
   return (

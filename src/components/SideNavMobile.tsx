@@ -12,6 +12,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 import { Center, HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
 import {
+  BackToDevelopersLink,
   dropdownIconContainerVariant,
   type NavLinkProps as SideNavLinkProps,
 } from "./SideNav"
@@ -175,6 +176,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
               },
             }}
           >
+            <BackToDevelopersLink />
             {docLinks.map((item, idx) => (
               <NavLink
                 item={item}

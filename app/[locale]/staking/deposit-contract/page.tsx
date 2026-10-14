@@ -76,7 +76,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <DepositContractJsonLD locale={locale} />
 
       <main className="flow px-page pt-space-2x pb-page">
-        <Breadcrumbs slug="/staking/deposit-contract" startDepth={1} />
+        <Breadcrumbs slug="/staking/deposit-contract" />
 
         <MainArticle className="flex gap-x-16 gap-y-8 border-b pb-space-2x *:flex-1 max-lg:flex-col">
           <div className="flow">
