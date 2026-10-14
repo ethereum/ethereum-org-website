@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट कॉन्ट्रॅक्ट्ससोबत संवाद साधणे
-description: इथेरियमवर आधीपासूनच प्रस्थापित केलेल्या स्मार्ट कॉन्ट्रॅक्ट्समधून कसे वाचायचे आणि त्यात कसे लिहायचे ते शिका.
+title: "स्मार्ट कॉन्ट्रॅक्ट्ससोबत संवाद साधणे"
+description: "इथेरियमवर आधीपासूनच प्रस्थापित केलेल्या स्मार्ट कॉन्ट्रॅक्ट्समधून कसे वाचायचे आणि त्यात कसे लिहायचे ते शिका."
 lang: mr
 ---
 
@@ -82,7 +82,7 @@ ABI ला कॉन्ट्रॅक्टचे सूचना पुस्�
 
 - **[ethers.js](https://docs.ethers.org/)** - सर्व्हर-साइड स्क्रिप्ट्स आणि बॉट्ससाठी Node.js मध्ये देखील काम करते
 - **[web3.py](https://web3py.readthedocs.io/)** - इथेरियम संवादासाठी Python लायब्ररी
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Geth टीमकडून अधिकृत Go लायब्ररी
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Geth टीमकडून अधिकृत Go लायब्ररी
 
 ### उदाहरण: Viem वापरून टोकन शिल्लक वाचणे {#example-viem}
 
