@@ -8,9 +8,23 @@ import {
   useRef,
   useState,
 } from "react"
+import { Check, ChevronDown } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { Button } from "@/components/ui/buttons/Button"
+import {
+  Command,
+  CommandEmpty,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command"
 import InlineLink from "@/components/ui/Link"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -32,31 +46,26 @@ interface Point {
 const BUCKETS = [
   {
     min: 0,
-    label: "nascent",
     fill: "fill-purple-100",
     bg: "bg-purple-100",
   },
   {
     min: 1,
-    label: "emerging",
     fill: "fill-purple-300",
     bg: "bg-purple-300",
   },
   {
     min: 2,
-    label: "growing",
     fill: "fill-purple-500",
     bg: "bg-purple-500",
   },
   {
     min: 5,
-    label: "established",
     fill: "fill-purple-700",
     bg: "bg-purple-700",
   },
   {
     min: 10,
-    label: "leading",
     fill: "fill-purple-800",
     bg: "bg-purple-800",
   },
@@ -95,6 +104,7 @@ const AdoptionMapView = ({
   const locale = useLocale()
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
+  const [pickerOpen, setPickerOpen] = useState(false)
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
   const pointer = useRef<Point>(undefined)
   const tooltip = useRef<HTMLDivElement>(null)
@@ -230,25 +240,17 @@ const AdoptionMapView = ({
               style={tooltipPosition(anchor)}
             >
               <p className="font-bold">{active.name}</p>
-              {active.value !== undefined && activeBucket ? (
-                <>
-                  <p className="text-sm whitespace-nowrap text-body-medium">
-                    {t.rich("page-stories-map-ownership", {
-                      value: percent(active.value),
-                      strong: (chunks) => (
-                        <span className="text-xl font-bold text-body tabular-nums">
-                          {chunks}
-                        </span>
-                      ),
-                    })}
-                  </p>
-                  <p className="flex items-center gap-1.5 text-sm text-body-medium">
-                    <span
-                      className={cn("size-2.5 rounded-full", activeBucket.bg)}
-                    />
-                    {t(`page-stories-map-level-${activeBucket.label}`)}
-                  </p>
-                </>
+              {active.value !== undefined ? (
+                <p className="text-sm whitespace-nowrap text-body-medium">
+                  {t.rich("page-stories-map-ownership", {
+                    value: percent(active.value),
+                    strong: (chunks) => (
+                      <span className="text-xl font-bold text-body tabular-nums">
+                        {chunks}
+                      </span>
+                    ),
+                  })}
+                </p>
               ) : (
                 <p className="text-sm text-body-medium">
                   {t("page-stories-map-no-data")}
@@ -259,64 +261,110 @@ const AdoptionMapView = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <label className="flex flex-col gap-2 text-sm text-body-medium">
-          {t("page-stories-map-prompt")}
-          <select
-            value={selected ?? ""}
-            onChange={(e) => setSelected(e.target.value || undefined)}
-            className="h-10 w-full rounded-md border border-body-light bg-background px-3 text-md text-body md:w-72"
-          >
-            <option value="">{t("page-stories-map-select-placeholder")}</option>
-            {sorted.map(({ code, name }) => (
-              <option key={code} value={code}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <figure className="flex flex-col gap-2 md:w-[30rem]">
-          <figcaption className="text-sm text-body-medium">
-            {t("page-stories-map-legend")}
-          </figcaption>
-          <ol className="m-0 grid list-none grid-cols-5 gap-1 p-0">
-            {BUCKETS.map((bucket, i) => (
-              <li
-                key={bucket.label}
-                className={cn(
-                  "flex flex-col gap-1 text-xs",
-                  activeBucket === bucket ? "text-body" : "text-body-medium"
-                )}
+      <div className="flex flex-col items-center gap-6">
+        <div className="flex w-full flex-col items-center gap-2">
+          <span id="adoption-map-picker" className="text-sm text-body-medium">
+            {t("page-stories-map-prompt")}
+          </span>
+          <Popover open={pickerOpen} onOpenChange={setPickerOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                isSecondary
+                role="combobox"
+                aria-expanded={pickerOpen}
+                aria-labelledby="adoption-map-picker"
+                className="w-full justify-between sm:w-80"
               >
-                <span className={cn("h-3 rounded-xs", bucket.bg)} />
-                <span className="hidden font-bold sm:block">
-                  {t(`page-stories-map-level-${bucket.label}`)}
+                <span className="truncate">
+                  {(selected && byCode.get(selected)?.name) ??
+                    t("page-stories-map-select-placeholder")}
                 </span>
-                <span className="tabular-nums">
-                  {BUCKETS[i + 1]
-                    ? `${percent(bucket.min)}–${percent(BUCKETS[i + 1].min)}`
-                    : `≥ ${percent(bucket.min)}`}
-                </span>
-              </li>
-            ))}
-          </ol>
-          <p className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-body-medium">
-            <span className="flex items-center gap-1.5">
-              <span className="h-3 w-5 rounded-xs bg-background-medium" />
-              {t("page-stories-map-no-data")}
+                <ChevronDown className="shrink-0" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-(--radix-popover-trigger-width) p-0">
+              <Command
+                className="[&>div]:first:border-none"
+                filter={(value, search) => {
+                  const name = value.toLocaleLowerCase(locale)
+                  const query = search.toLocaleLowerCase(locale)
+                  return name.startsWith(query)
+                    ? 1
+                    : name.includes(query)
+                      ? 0.5
+                      : 0
+                }}
+              >
+                <CommandInput placeholder={t("page-stories-map-search")} />
+                <CommandList>
+                  <CommandEmpty>
+                    {t("page-stories-map-no-results")}
+                  </CommandEmpty>
+                  {sorted.map(({ code, name, value }) => (
+                    <CommandItem
+                      key={code}
+                      value={name}
+                      keywords={[code]}
+                      onSelect={() => {
+                        setSelected(selected === code ? undefined : code)
+                        setPickerOpen(false)
+                      }}
+                      className="gap-2"
+                    >
+                      <Check
+                        className={cn(
+                          "size-4 shrink-0",
+                          selected !== code && "invisible"
+                        )}
+                      />
+                      <span className="flex-1 truncate">{name}</span>
+                      {value !== undefined && (
+                        <span className="text-body-medium tabular-nums">
+                          {percent(value)}
+                        </span>
+                      )}
+                    </CommandItem>
+                  ))}
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
+        </div>
+
+        <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-body-medium">
+          <span className="sr-only">{t("page-stories-map-legend")}</span>
+          <span className="flex items-center gap-1.5" aria-hidden>
+            {t("page-stories-map-less")}
+            <span className="flex gap-0.5">
+              {BUCKETS.map((bucket) => (
+                <span
+                  key={bucket.min}
+                  className={cn(
+                    "h-3 w-6 rounded-xs",
+                    bucket.bg,
+                    activeBucket === bucket &&
+                      "ring-2 ring-body ring-offset-1 ring-offset-background"
+                  )}
+                />
+              ))}
             </span>
-            <span>
-              {t.rich("page-stories-map-source", {
-                year: source.year,
-                link: (chunks) => (
-                  <InlineLink href={source.url}>{chunks}</InlineLink>
-                ),
-                name: source.name,
-              })}
-            </span>
-          </p>
-        </figure>
+            {t("page-stories-map-more")}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="h-3 w-6 rounded-xs bg-background-medium" />
+            {t("page-stories-map-no-data")}
+          </span>
+          <span>
+            {t.rich("page-stories-map-source", {
+              year: source.year,
+              link: (chunks) => (
+                <InlineLink href={source.url}>{chunks}</InlineLink>
+              ),
+              name: source.name,
+            })}
+          </span>
+        </p>
       </div>
     </div>
   )
