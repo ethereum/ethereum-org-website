@@ -153,6 +153,22 @@ export const getLocaleFormattedDate = (locale: Lang, date: string) => {
   return dateTimeFormat(locale).format(walletLastUpdatedDate)
 }
 
+/** "today", "yesterday", "445 days ago"; undefined for an unparseable date. */
+export const formatDaysAgo = (
+  locale: string,
+  date: string | null | undefined,
+  now: Date = new Date()
+): string | undefined => {
+  if (!isValidDate(date)) return undefined
+  const days = Math.floor(
+    (now.getTime() - new Date(date!).getTime()) / (1000 * 60 * 60 * 24)
+  )
+  return new Intl.RelativeTimeFormat(locale, {
+    numeric: "auto",
+    numberingSystem: locale === "ur" ? "arabext" : "latn",
+  } as Intl.RelativeTimeFormatOptions).format(-Math.max(days, 0), "day")
+}
+
 /**
  * Get ISO week number for a given date
  * Used as seed for deterministic weekly rotation
