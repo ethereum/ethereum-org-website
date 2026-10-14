@@ -169,7 +169,7 @@ module.exports = [
   ["/deprecated-software", "/apps/"],
   ["/enterprise", "/organizations/enterprise/"],
   ["/enterprise/private-ethereum", "/organizations/enterprise/enterprise-l2s/"],
-  ["/enterprise/use-cases", "/organizations/enterprise/", false],
+  ["/enterprise/use-cases", "/organizations/enterprise/"],
   ["/founders", "/organizations/founders/"],
   ["/dashboards", "/resources/"],
   ["/tds", "/reports/trillion-dollar-security/"],
