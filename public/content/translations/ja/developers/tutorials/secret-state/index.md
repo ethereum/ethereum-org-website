@@ -705,8 +705,7 @@ proof.proof = {
 
 しかし、TypeScriptで実行できたにもかかわらず、依然として[Zokratesでマップをフラット化](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)しています。その理由は、私の意見では、他の選択肢の方が悪いからです。
 
-- Zokratesコードにブール値の1次元配列を提供し、`x*(height+2)
-+y` のような式を使用して2次元マップを取得する。これにより[コード](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)がやや複雑になるため、チュートリアルとしてはパフォーマンスの向上に見合わないと判断しました。
+- Zokratesコードにブール値の1次元配列を提供し、`x*(height+2)+y` のような式を使用して2次元マップを取得する。これにより[コード](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)がやや複雑になるため、チュートリアルとしてはパフォーマンスの向上に見合わないと判断しました。
 
 - 1次元配列と2次元配列の両方をZokratesに送信する。しかし、このソリューションでは何も得られません。Zokratesコードは、提供された1次元配列が本当に2次元配列の正しい表現であることを検証する必要があります。そのため、パフォーマンスの向上はありません。
 
