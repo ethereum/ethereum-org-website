@@ -27,6 +27,14 @@ const STRINGS = {
     ],
     limit: "Gas limit",
     used: "Gas used",
+    fig: "Fig. 1",
+    title: "Message call",
+    status: "Ready: pick an example and run it",
+    part: "Illustration",
+    definition: "Hovering a part shows its one-line definition here.",
+    accounts: "Accounts",
+    gas: "Gas",
+    structure: "Structure",
   },
   de: {
     intro:
@@ -45,6 +53,15 @@ const STRINGS = {
     ],
     limit: "Gaslimit",
     used: "Verbrauchtes Gas",
+    fig: "Abb. 1",
+    title: "Nachrichtenaufruf",
+    status: "Bereit: Beispiel wählen und ausführen",
+    part: "Illustration",
+    definition:
+      "Beim Überfahren eines Teils erscheint hier seine einzeilige Definition.",
+    accounts: "Konten",
+    gas: "Gas",
+    structure: "Struktur",
   },
 }
 
@@ -57,9 +74,23 @@ function Demo({ lang = "en" }: { lang?: keyof typeof STRINGS }) {
     <InteractiveDiagram
       caption={s.intro}
       description="A placeholder illustration."
+      figLabel={s.fig}
+      title={s.title}
+      status={s.status}
+      parts={{
+        box: { label: s.part, definition: s.definition },
+      }}
+      legend={[
+        { hue: "entity", label: s.accounts },
+        { hue: "gas", label: s.gas },
+        { hue: "neutral", label: s.structure },
+      ]}
       illustration={
-        <div className="flex aspect-[3/2] w-full items-center justify-center rounded-base border border-dashed border-border text-sm text-body-medium">
-          Illustration
+        <div
+          data-part="box"
+          className="flex aspect-[3/2] w-full items-center justify-center rounded-base border border-dashed border-border text-sm text-body-medium"
+        >
+          Illustration (hover me)
         </div>
       }
       presets={
@@ -125,7 +156,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "The shell every interactive diagram uses, so controls sit in the same places everywhere. One card holds the illustration and a panel: from a 640px card width the panel (15rem) sits on the inline-end side, vertically centred; narrower, it stacks under the illustration. The panel always reads presets, transport (primary action, then previous / Step x of n / next / reset), caption (sized to its longest step, polite live region), readout (two columns, tabular numbers). Slots: `illustration`, `presets` (`DiagramPresets`), `transport` (`DiagramTransport`), `stepCaption` (`DiagramCaption`), `readout` (`DiagramReadout`).",
+          "The shell every interactive diagram uses, so controls and framing sit in the same places everywhere. The illustration column reads: figure header (`figLabel` and `title` in small mono caps), the drawing, a status line (the step at rest, the hovered part's definition on hover or focus) and a legend of role colours. Hover and focus are built in: parts opt in with `data-part`. One card holds the illustration and a panel: from a 640px card width the panel (15rem) sits on the inline-end side, vertically centred; narrower, it stacks under the illustration. The panel always reads presets, transport (primary action, then previous / Step x of n / next / reset), caption (sized to its longest step, polite live region), readout (two columns, tabular numbers). Slots: `illustration`, `presets` (`DiagramPresets`), `transport` (`DiagramTransport`), `stepCaption` (`DiagramCaption`), `readout` (`DiagramReadout`).",
       },
     },
   },

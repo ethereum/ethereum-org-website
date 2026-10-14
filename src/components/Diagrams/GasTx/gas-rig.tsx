@@ -3,20 +3,25 @@ import { type ReactNode, useId } from "react"
 import { cn } from "@/lib/utils/cn"
 
 import {
-  ANATOMY_LIT_STROKE,
   anatomyFill,
   AnatomyLabels,
   type AnatomyLabelSpot,
+  anatomyStroke,
   DIAGRAM_SVG_FALLBACKS,
+  ISO_DIM_CLASS,
   ISO_LEVEL_CLASS,
   ISO_SVG_CLASS,
   IsoCylinder,
+  IsoDefs,
+  isoDetail,
   IsoPipe,
   IsoPlate,
   isoProjection,
+  isoShadow,
   IsoSolid,
   r1,
 } from "../anatomy"
+import { usePartState } from "../diagram-hover"
 
 import {
   GAS_RIG_PART_STEP,
@@ -32,7 +37,10 @@ import {
  */
 
 const { width: W, height: H } = GAS_RIG_SIZE
-const { P, line, path, box, cylinder } = isoProjection(180, 74)
+const PROJECTION = isoProjection(180, 74)
+const { P, line, path, box, cylinder, footprint } = PROJECTION
+const D = isoDetail(PROJECTION)
+const SHADOW = "gas-tx-shadow"
 
 /* ---------- Geometry (world units; see anatomy/iso.tsx for the axes) ---------- */
 
@@ -67,6 +75,68 @@ const [dialX, dialY] = P(100, 90, 16)
 const DIAL_R = 8
 
 const REVERTED_AT = P(272, 72, 26)
+
+/* ---------- Static detail and shadows (built once, never re-rendered) ---------- */
+
+// One soft ground shadow under the plate, nudged forward so it shows below
+// the front edges; contact shadows under each object so it sits on the plate.
+const GROUND_SHADOW = isoShadow(footprint(-6, 4, 372, 104, -22, 6), SHADOW)
+const CONTACT_SHADOWS = (
+  <g className="pointer-events-none">
+    {isoShadow(footprint(14, 28, 38, 38, 0, 5), SHADOW)}
+    {isoShadow(footprint(103, 19, 54, 54, 0, 4), SHADOW)}
+    {isoShadow(footprint(243, 23, 66, 54, 0, 5), SHADOW)}
+    {isoShadow(footprint(96, 87, 11, 9, 0, 3), SHADOW)}
+  </g>
+)
+
+const PLATE_DETAIL = D.inset([0, 0, 0, 360, 96], 5)
+const PUMP_DETAIL = (
+  <>
+    {D.seams([12, 26, 0, 36, 36, 54], { end: [0.5], ring: 0.14 })}
+    {D.plate(62, 18, 42, 32, 42)}
+  </>
+)
+const SLIP_DETAIL = (
+  <>
+    {D.slot(56, 18, 36, 34)}
+    {D.slot(56, 18, 30, 40)}
+  </>
+)
+const TANK_DETAIL = D.cylinderMarks(TANK)
+const TANK_FLANGE = D.flange(128, 44, 0, 29)
+const ENGINE_DETAIL = (
+  <>
+    {D.seams([240, 20, 0, 64, 52, 38], { end: [0.3, 0.7], ring: 0.82 })}
+    {D.vents(72, 290, 298, [8, 11, 14])}
+  </>
+)
+const METER_TICKS = (
+  <g className="pointer-events-none stroke-diagram-line-faint" fill="none">
+    {[-60, 0, 60].map((deg) => {
+      const a = ((deg - 90) * Math.PI) / 180
+      return (
+        <path
+          key={deg}
+          d={`M${r1(dialX + Math.cos(a) * 5.5)},${r1(dialY + Math.sin(a) * 5.5)} L${r1(dialX + Math.cos(a) * 7.5)},${r1(dialY + Math.sin(a) * 7.5)}`}
+        />
+      )
+    })}
+  </g>
+)
+const CODE_ICON_PATHS = (
+  <g
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    // Counter the RTL mirror so the icon still reads "</>".
+    className="pointer-events-none origin-center stroke-diagram-entity [stroke-width:1] [transform-box:fill-box] rtl:-scale-x-100"
+  >
+    {CODE_ICON.map((d) => (
+      <path key={d} d={d} />
+    ))}
+  </g>
+)
 
 /* ---------- Labels: outside the plate, short straight leaders ---------- */
 
@@ -142,8 +212,8 @@ interface GasRigProps {
   runKey: string
   /** Translated concept name per part. */
   labels: Record<GasRigPart, ReactNode>
-  /** Translated tooltip per part (the metaphor). */
-  tooltips: Record<GasRigPart, ReactNode>
+  /** Translated one-line definition per part. */
+  definitions: Record<GasRigPart, ReactNode>
   /** Translated text of the out-of-gas tag on the contract. */
   revertedLabel: string
   className?: string
@@ -153,18 +223,23 @@ export default function GasRig({
   view,
   runKey,
   labels,
-  tooltips,
+  definitions,
   revertedLabel,
   className,
 }: GasRigProps) {
   const id = useId()
-  const isLit = (part: GasRigPart) => view.litPart === part
+  const { state, dimmed } = usePartState(view.litPart)
 
-  const reach = (part: GasRigPart) =>
-    cn(
-      "transition-opacity duration-500 ease-out motion-reduce:transition-none",
-      !view.reached[GAS_RIG_PART_STEP[part]] && "opacity-40"
-    )
+  // A part not reached yet sits back; while another part is hovered, it dims.
+  const part = (name: GasRigPart) => ({
+    "data-part": name,
+    className: ISO_DIM_CLASS,
+    style: {
+      opacity:
+        (view.reached[GAS_RIG_PART_STEP[name]] ? 1 : 0.4) *
+        (dimmed(name) ? 0.7 : 1),
+    },
+  })
 
   return (
     <div className={cn("relative", className)}>
@@ -175,35 +250,45 @@ export default function GasRig({
         {...DIAGRAM_SVG_FALLBACKS}
         className={ISO_SVG_CLASS}
       >
-        <g className={reach("deck")}>
-          <IsoPlate box={PLATE} />
+        <IsoDefs id={SHADOW} />
+        {GROUND_SHADOW}
+        <g {...part("deck")}>
+          <IsoPlate box={PLATE} state={state("deck")} />
+          {PLATE_DETAIL}
         </g>
+        {CONTACT_SHADOWS}
 
-        <IsoPipe
-          d={MESSAGE}
-          flowing={view.motion === "reserve" || view.motion === "execute"}
-          flowD={view.motion === "reserve" ? MESSAGE_FILL : MESSAGE_FEED}
-          flowKey={runKey}
-          className={reach("feed")}
-        />
+        <g {...part("feed")}>
+          <IsoPipe
+            d={MESSAGE}
+            state={state("feed")}
+            flowing={view.motion === "reserve" || view.motion === "execute"}
+            flowD={view.motion === "reserve" ? MESSAGE_FILL : MESSAGE_FEED}
+            flowKey={runKey}
+          />
+        </g>
 
         {/* Sender account (pump), with the transaction slip on top. */}
-        <g className={reach("pump")}>
-          <IsoSolid box={PUMP} hue="entity" />
+        <g {...part("pump")}>
+          <IsoSolid box={PUMP} hue="entity" state={state("pump")} />
+          {PUMP_DETAIL}
         </g>
-        <g
-          key={view.motion === "enter" ? runKey : "order"}
-          className={cn(
-            reach("order"),
-            view.motion === "enter" &&
-              "animate-diagram-travel-y [transform-box:fill-box] motion-reduce:animate-none"
-          )}
-        >
-          <IsoSolid box={SLIP} hue="entity" lit={isLit("order")} />
+        <g {...part("order")}>
+          <g
+            key={view.motion === "enter" ? runKey : "order"}
+            className={cn(
+              view.motion === "enter" &&
+                "animate-diagram-travel-y [transform-box:fill-box] motion-reduce:animate-none"
+            )}
+          >
+            <IsoSolid box={SLIP} hue="entity" state={state("order")} />
+            {SLIP_DETAIL}
+          </g>
         </g>
 
         {/* Gas supply (tank): fills to the gas limit, drains as gas burns. */}
-        <g className={reach("tank")}>
+        <g {...part("tank")}>
+          {TANK_FLANGE}
           <IsoCylinder
             geometry={TANK}
             hue="gas"
@@ -212,47 +297,41 @@ export default function GasRig({
             levelStyle={{
               transitionDelay: view.motion === "execute" ? "700ms" : "0ms",
             }}
-            lit={isLit("tank")}
+            state={state("tank")}
           />
+          {TANK_DETAIL}
         </g>
 
-        {/* Contract (engine). */}
-        <g className={reach("engine")}>
-          {/* Glows orange in step 3, as hot as the share of gas it burns. */}
+        {/* Contract (engine). Glows orange in step 3, as hot as the share
+            of gas it burns. */}
+        <g {...part("engine")}>
           <IsoSolid
             box={ENGINE}
             hue="entity"
-            lit={isLit("engine")}
+            state={state("engine")}
             glow={view.glowLevel}
             glowDelay={view.motion === "execute" ? "700ms" : "0ms"}
           />
-          <g
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            // Counter the RTL mirror so the icon still reads "</>".
-            className="origin-center stroke-diagram-entity [stroke-width:1.5] [transform-box:fill-box] rtl:-scale-x-100"
-          >
-            {CODE_ICON.map((d) => (
-              <path key={d} d={d} />
-            ))}
-          </g>
+          {ENGINE_DETAIL}
+          {CODE_ICON_PATHS}
         </g>
 
-        <IsoPipe
-          d={UNUSED}
-          flowing={view.motion === "return"}
-          flowKey={runKey}
-          className={reach("returnLine")}
-        />
+        <g {...part("returnLine")}>
+          <IsoPipe
+            d={UNUSED}
+            state={state("returnLine")}
+            flowing={view.motion === "return"}
+            flowKey={runKey}
+          />
+        </g>
 
         {/* Gas returned (meter). */}
-        <g className={reach("meter")}>
-          <IsoSolid box={METER_PLINTH} hue="gas" />
+        <g {...part("meter")}>
+          <IsoSolid box={METER_PLINTH} hue="gas" state={state("meter")} />
           <g
             fill="none"
             strokeLinecap="round"
-            className="stroke-diagram-pipe [stroke-width:2]"
+            className="stroke-diagram-pipe [stroke-width:1.4]"
           >
             <path d={METER_STUB} />
             <path d={METER_STEM} />
@@ -261,19 +340,16 @@ export default function GasRig({
             cx={dialX}
             cy={dialY}
             r={DIAL_R}
-            className={
-              isLit("meter")
-                ? ANATOMY_LIT_STROKE.gas
-                : "stroke-diagram-gas-rest"
-            }
-            style={{ fill: anatomyFill("gas", "top") }}
+            className={anatomyStroke("gas", state("meter"))}
+            style={{ fill: anatomyFill("gas", "top", state("meter")) }}
           />
+          {METER_TICKS}
           <rect
-            x={r1(dialX - 0.75)}
+            x={r1(dialX - 0.5)}
             y={r1(dialY - DIAL_R + 2)}
-            width={1.5}
+            width={1}
             height={DIAL_R - 2}
-            rx={0.75}
+            rx={0.5}
             className={cn("fill-diagram-gas stroke-none", ISO_LEVEL_CLASS)}
             style={{ transform: `rotate(${-90 + 180 * view.meterLevel}deg)` }}
           />
@@ -285,7 +361,7 @@ export default function GasRig({
         height={H}
         spots={SPOTS}
         labels={labels}
-        tooltips={tooltips}
+        definitions={definitions}
         litId={view.litPart}
       />
 

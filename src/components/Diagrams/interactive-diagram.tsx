@@ -1,4 +1,6 @@
-import { type ReactNode, useId } from "react"
+"use client"
+
+import { type ReactNode, type Ref, useId } from "react"
 import { RotateCcw } from "lucide-react"
 
 import type { MatomoEventOptions } from "@/lib/types"
@@ -9,23 +11,56 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { DiagramStage } from "./anatomy/stage"
+import { anatomyFill, type AnatomyHue } from "./anatomy/tokens"
 import { DiagramFigure } from "./diagram-figure"
+import {
+  DiagramHoverProvider,
+  useDiagramHover,
+  useHoverTargets,
+} from "./diagram-hover"
 
 /*
- * The shell every interactive diagram uses, so controls sit in the same
- * places everywhere. One card holds the illustration and a panel; from a
- * 640px card width the panel (15rem) sits on the inline-end side, narrower it
- * stacks under the illustration. The panel always reads, top to bottom:
- * presets ("Example values"), transport (primary action, then previous /
- * "Step x of n" / next / reset), caption, readout.
+ * The shell every interactive diagram uses, so controls and framing sit in
+ * the same places everywhere. One card holds the illustration and a panel;
+ * from a 640px card width the panel (15rem) sits on the inline-end side,
+ * narrower it stacks under the illustration.
+ *
+ * Illustration column, top to bottom: the figure header ("Fig. N", title, in
+ * small mono caps), the drawing, a status line (the step, or the hovered
+ * part's definition) and a legend of the role colours.
+ * Panel, top to bottom: presets ("Example values"), transport (primary
+ * action, then previous / "Step x of n" / next / reset), caption, readout.
+ *
+ * Hover and focus are built in (see diagram-hover.tsx). Pass `inViewRef`
+ * and `paused` from `useDiagramInView` so animations hold while the diagram
+ * is off screen.
  */
+
+export interface DiagramPartText {
+  label: ReactNode
+  definition: ReactNode
+}
+
+export interface DiagramLegendItem {
+  hue: AnatomyHue
+  label: ReactNode
+}
 
 export interface InteractiveDiagramProps {
   /** Intro text, shown above the card as the figcaption. */
   caption: ReactNode
   /** Screen-reader description of the whole figure. */
   description: ReactNode
+  /** e.g. "Fig. 2"; omitted when the page does not number its figures. */
+  figLabel?: ReactNode
+  /** Short title, shown in the figure header. */
+  title: ReactNode
   illustration: ReactNode
+  /** The status line at rest: what the current step does, in a few words. */
+  status: ReactNode
+  /** Label and definition per part id, for the status line on hover. */
+  parts: Record<string, DiagramPartText>
+  legend: DiagramLegendItem[]
   /** A `DiagramPresets`, for diagrams with example values. */
   presets?: ReactNode
   transport: ReactNode
@@ -33,38 +68,133 @@ export interface InteractiveDiagramProps {
   stepCaption: ReactNode
   /** A `DiagramReadout`. */
   readout: ReactNode
+  inViewRef?: Ref<HTMLDivElement>
+  /** Off screen: hold animations still. */
+  paused?: boolean
   className?: string
 }
 
 export function InteractiveDiagram({
   caption,
   description,
+  figLabel,
+  title,
   illustration,
+  status,
+  parts,
+  legend,
   presets,
   transport,
   stepCaption,
   readout,
+  inViewRef,
+  paused,
   className,
 }: InteractiveDiagramProps) {
   return (
-    <DiagramFigure
-      caption={caption}
-      captionPlacement="top"
-      description={description}
-      className={className}
-    >
-      <DiagramStage
-        illustration={illustration}
-        panel={
+    <DiagramHoverProvider>
+      <DiagramFigure
+        caption={caption}
+        captionPlacement="top"
+        description={description}
+        className={className}
+      >
+        <div ref={inViewRef} data-paused={paused ? "" : undefined}>
+          <DiagramStage
+            illustration={
+              <DiagramIllustration
+                figLabel={figLabel}
+                title={title}
+                status={status}
+                parts={parts}
+                legend={legend}
+              >
+                {illustration}
+              </DiagramIllustration>
+            }
+            panel={
+              <>
+                {presets}
+                {transport}
+                {stepCaption}
+                {readout}
+              </>
+            }
+          />
+        </div>
+      </DiagramFigure>
+    </DiagramHoverProvider>
+  )
+}
+
+const LEGEND_BORDER: Record<AnatomyHue, string> = {
+  entity: "border-diagram-entity",
+  gas: "border-diagram-gas",
+  neutral: "border-diagram-line",
+}
+
+function DiagramIllustration({
+  figLabel,
+  title,
+  status,
+  parts,
+  legend,
+  children,
+}: Pick<
+  InteractiveDiagramProps,
+  "figLabel" | "title" | "status" | "parts" | "legend"
+> & { children: ReactNode }) {
+  const { hovered } = useDiagramHover()
+  const hoverTargets = useHoverTargets()
+  const part = hovered ? parts[hovered] : undefined
+
+  return (
+    <div className="flex w-full min-w-0 flex-col gap-2">
+      <p className="m-0 font-mono text-xs tracking-wider text-body-medium uppercase">
+        {figLabel && (
           <>
-            {presets}
-            {transport}
-            {stepCaption}
-            {readout}
+            <span className="text-body">{figLabel}</span>
+            <span aria-hidden> · </span>
           </>
-        }
-      />
-    </DiagramFigure>
+        )}
+        {title}
+      </p>
+      <div className="mx-auto w-full max-w-2xl py-1" {...hoverTargets}>
+        {children}
+      </div>
+      {/* Visual only: the step is announced by the caption, and a focused
+          label carries its definition itself. Two lines are reserved, so
+          nothing below moves when the text changes. */}
+      <p
+        aria-hidden
+        className="m-0 line-clamp-2 min-h-[2lh] font-mono text-xs leading-snug text-body-medium"
+      >
+        {part ? (
+          <>
+            <span className="font-bold text-body">{part.label}</span>
+            {": "}
+            {part.definition}
+          </>
+        ) : (
+          status
+        )}
+      </p>
+      <ul className="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 text-xs text-body-medium">
+        {legend.map((item) => (
+          <li key={item.hue} className="m-0 flex items-center gap-1.5">
+            <span
+              aria-hidden
+              className={cn(
+                "size-2.5 rounded-[2px] border",
+                LEGEND_BORDER[item.hue]
+              )}
+              style={{ background: anatomyFill(item.hue, "end", "lit") }}
+            />
+            {item.label}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 

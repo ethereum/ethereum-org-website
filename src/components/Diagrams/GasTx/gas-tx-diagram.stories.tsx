@@ -1,4 +1,5 @@
 import { pickBy } from "lodash"
+import { within } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { viewportModes } from "@/storybook/modes"
@@ -9,6 +10,7 @@ const meta = {
   title: "Components / Data Viz / Diagrams / GasTx",
   component: GasTxDiagram,
   tags: ["autodocs"],
+  args: { fig: 1 },
   parameters: {
     layout: "padded",
     chromatic: {
@@ -100,7 +102,7 @@ export const Mobile: Story = {
     docs: {
       description: {
         story:
-          "At phone width the controls panel sits under the illustration inside the same card, and labels that wouldn't fit on one line are dropped (their tooltips and the figcaption carry the meaning).",
+          "At phone width the controls panel sits under the illustration inside the same card, and labels that wouldn't fit on one line are dropped (the status line, legend and figcaption carry the meaning).",
       },
     },
   },
@@ -117,4 +119,18 @@ export const ReducedMotion: Story = {
       },
     },
   },
+}
+
+/** Focusing a label highlights its part and shows its definition in the status line. */
+export const HoverPart: Story = {
+  args: { initialStep: 3, fig: 1 },
+  play: async ({ canvasElement }) => {
+    const label = await within(canvasElement).findByText("Gas supply")
+    label.focus()
+  },
+}
+
+export const HoverPartDark: Story = {
+  ...HoverPart,
+  globals: { theme: "dark" },
 }

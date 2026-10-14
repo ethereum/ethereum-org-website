@@ -13,6 +13,8 @@ import { expect, type Locator, test } from "@playwright/test"
  * Diagrams opt in by rendering `DiagramStage` (`data-diagram-stage`), marking
  * their drawing `data-anatomy-drawing` and their next-step button
  * `data-diagram-next`; presets are the `aria-pressed` buttons in the stage.
+ * At the last step it also focuses every visible label, checking each part's
+ * hover state.
  */
 
 const pagesWithDiagrams = [
@@ -86,6 +88,19 @@ for (const theme of ["light", "dark"] as const) {
               await next.click()
               step++
             }
+          }
+
+          // Hover state: focusing a label highlights its part.
+          const labels = stage.locator("span[data-part] > span[tabindex]")
+          for (let l = 0; l < (await labels.count()); l++) {
+            const label = labels.nth(l)
+            if (!(await label.isVisible())) continue
+            await label.focus()
+            const problems = await findPaintProblems(stage)
+            expect(
+              problems,
+              `diagram ${s}, hovering label ${l} (${theme})`
+            ).toEqual([])
           }
         }
       })
