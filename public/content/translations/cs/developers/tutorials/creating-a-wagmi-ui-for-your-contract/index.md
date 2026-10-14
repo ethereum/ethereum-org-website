@@ -160,7 +160,7 @@ ID řetězce Sepolia.
 function App() {
 ```
 
-Toto je standardní způsob vytvoření komponenty React: definujte funkci, která se volá, kdykoli je potřeba ji vykreslit. Tato funkce obvykle obsahuje kód v TypeScript nebo JavaScript, následovaný příkazem `return`, který vrací kód JSX.
+Toto je standardní způsob vytvoření komponenty React: definujte funkci, která se volá, kdykoli je potřeba ji vykreslit. Tato funkce obvykle obsahuje kód v TypeScriptu nebo JavaScriptu, následovaný příkazem `return`, který vrací kód JSX.
 
 ```tsx
   const connection = useConnection()
@@ -168,7 +168,7 @@ Toto je standardní způsob vytvoření komponenty React: definujte funkci, kter
 
 Použijte [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) k získání informací souvisejících s aktuálním připojením, jako je adresa a `chainId`.
 
-Podle konvence se v Reactu funkce nazývané `use...` označují jako [hooky](https://www.w3schools.com/react/react_hooks.asp). Tyto funkce nejenže vracejí data komponentě; také zajišťují její opětovné vykreslení (funkce komponenty se znovu spustí a její výstup nahradí ten předchozí v HTML), když se tato data změní.
+Podle konvence se v Reactu funkce nazývané `use...` označují jako [hooky](https://www.w3schools.com/react/react_hooks.asp). Tyto funkce nejenže vracejí data komponentě, ale také zajišťují její opětovné vykreslení (funkce komponenty se znovu spustí a její výstup nahradí ten předchozí v HTML), když se tato data změní.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -202,13 +202,13 @@ Hook Reactu [`useEffect`](https://react.dev/reference/react/useEffect) vám umo�
     }
 ```
 
-Pokud jsme připojeni, ale ne k blockchainu Sepolia, přepněte na síť Sepolia.
+Pokud jsme připojeni, ale ne k blockchainu Sepolia, přepněte na Sepolia.
 
 ```tsx
   }, [connection.status, connection.chainId])
 ```
 
-Znovu spusťte funkci pokaždé, když se změní stav připojení nebo chainId připojení.
+Znovu spusťte funkci pokaždé, když se změní stav připojení nebo `chainId` připojení.
 
 ```tsx
   return (
@@ -229,13 +229,13 @@ JSX komponenty React _musí_ vracet jedinou HTML komponentu. Když máme více k
 </div>
 ```
 
-Poskytněte informace o aktuálním připojení. V rámci JSX znamená `{<expression>}` vyhodnotit výraz jako JavaScript.
+Poskytněte informace o aktuálním připojení. V rámci JSX znamená `{<výraz>}`, že se výraz vyhodnotí jako JavaScript.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-Syntaxe `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`“.
+Syntaxe `{<podmínka> && <hodnota>}` znamená „pokud je podmínka `true`, vyhodnoť na hodnotu; pokud není, vyhodnoť na `false`“.
 
 Toto je standardní způsob, jak vkládat podmínky if do JSX.
 
@@ -247,7 +247,7 @@ Toto je standardní způsob, jak vkládat podmínky if do JSX.
 
 JSX se řídí standardem XML, který je přísnější než HTML. Pokud značka nemá odpovídající koncovou značku, _musí_ mít na konci lomítko (`/`), které ji ukončí.
 
-Zde máme dvě takové značky, `<Greeter />` (která ve skutečnosti obsahuje HTML kód komunikující s kontraktem) a [`<hr />` pro vodorovnou čáru](https://www.w3schools.com/tags/tag_hr.asp).
+Zde máme dvě takové značky, `<Greeter />` (která ve skutečnosti obsahuje HTML kód, jenž komunikuje s kontraktem) a [`<hr />` pro vodorovnou čáru](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -272,7 +272,7 @@ Pokud _nejsme_ připojeni, zobrazte potřebné možnosti pro připojení k peně
           {connectors.map((connector) => (
 ```
 
-V `connectors` máme seznam konektorů. Použijeme [`map`](https://www.w3schools.com/jsref/jsref_map.asp), abychom jej přeměnili na seznam JSX tlačítek k zobrazení.
+V `connectors` máme seznam konektorů. Používáme [`map`](https://www.w3schools.com/jsref/jsref_map.asp), abychom jej přeměnili na seznam JSX tlačítek k zobrazení.
 
 ```tsx
             <button
@@ -300,9 +300,9 @@ Tlačítka konektorů.
       )}
 ```
 
-Poskytněte další informace. Syntaxe výrazu `<variable>?.<field>` říká JavaScriptu, že pokud je proměnná definována, má se vyhodnotit na toto pole. Pokud proměnná definována není, pak se tento výraz vyhodnotí jako `undefined`.
+Poskytněte další informace. Syntaxe výrazu `<proměnná>?.<pole>` říká JavaScriptu, že pokud je proměnná definována, má se vyhodnotit na toto pole. Pokud proměnná definována není, pak se tento výraz vyhodnotí jako `undefined`.
 
-Výraz `error.message` by v případě, že nedojde k žádné chybě, vyvolal výjimku. Použití `error?.message` nám umožňuje tomuto problému předejít.
+Výraz `error.message` by v případě, že nedošlo k žádné chybě, vyvolal výjimku. Použití `error?.message` nám umožňuje tomuto problému předejít.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 
