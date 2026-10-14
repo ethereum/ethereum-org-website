@@ -144,3 +144,15 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - open-access bank `アカウント` -> `口座`; hybrid `ユニスワップLabs`; `ノーログの証明` overstates claim.
 - `鍵ペア` held -- no `キーペア` regression.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `スマートコントラクト` -> `スマート・コントラクト` x3 (glossary middle dot; tree 1741 vs 149).
+
+**Open (warnings):**
+
+- onchain finance rendered 3 ways; 機関/機関投資家; `アービトラム One` hybrid; glamsterdam `devnets` -> `開発ネット` regressed from #19357's `デブネット`.

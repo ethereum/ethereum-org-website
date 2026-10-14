@@ -150,3 +150,11 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 **Open (warnings):**
 
 - F-Droid `ücretsiz` (#83); `düşük engelli` (low-disabled); proposer `teklifçi` vs glossary `teklif edici` needs one locale call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `İşletmeler için Ethereum` used for both enterprise and business pathways; `tekil` for single recurs; PostgreSQL sidecars translated literally.

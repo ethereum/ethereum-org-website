@@ -99,3 +99,15 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Acronym over-expansion (#80) regressed correct pre-PR text: API, DAO, DeSci, ENS, L2 `(l2)`, dapp, L1 across open-access, privacy, contributing, zk-rollups, glamsterdam, quantum-resistance.
 - "both" dropped (#82); `reclamo` for no-logs claim; `en absoluto` misuse; tú/ustedes mix in privacy-fixes video L24/26.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` `compare-privacy` `direcciones ocultas` -> `direcciones sigilosas` (glossary).
+
+**Open (warnings):**
+
+- `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.

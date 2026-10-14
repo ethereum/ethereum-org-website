@@ -131,3 +131,16 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `లిడో` (glossary Lido), `డెన్‌కున్` (glossary Dencun).
 - "both" dropped (#82); `ఒక పార్టీ` political sense again (hegota:21).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` database corruption `అవినీతి` -> `పాడైపోవడం`; relational against `వ్యతిరేకంగా` -> `ఉపయోగించి`.
+- `small-business` `compare-privacy` reused address inverted to used-once -> `పదే పదే ఉపయోగించే`.
+
+**Open (warnings):**
+
+- `ఉత్పత్తి` for production recurs; rollup `రోలప్`/`రోల్అప్` mirrors glossary inconsistency; treasuries `ఖజానాలు`.
