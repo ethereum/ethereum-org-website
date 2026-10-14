@@ -5,11 +5,15 @@ import {
   type ReactNode,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useRef,
+  useState,
 } from "react"
 
 import type { PrivacyLessonDossierId, PrivacyLessonFixId } from "@/lib/types"
+
+import { trackPrivacyLessonEvent } from "@/components/PrivacyWidgets/shared/track"
 
 import { catalogue, totalWeight } from "@/data/privacy-lesson/catalogue"
 import { fixes } from "@/data/privacy-lesson/fixes"
@@ -116,6 +120,8 @@ interface LessonContextValue extends LessonState, LessonDerived {
   setFix: (id: PrivacyLessonFixId, on: boolean) => void
   setPrivateMode: (on: boolean) => void
   reset: () => void
+  /** Increments on every reset; chapter state (useLessonStorage) clears itself on change */
+  resetCount: number
 }
 
 const LessonContext = createContext<LessonContextValue | null>(null)
@@ -146,6 +152,7 @@ export const LessonProvider = ({ children }: { children: ReactNode }) => {
     [storedFixes]
   )
   const privateMode = storedMode === "private"
+  const [resetCount, setResetCount] = useState(0)
 
   // Chapters may collect several times in one tick (before a re-render), so
   // each call builds on the latest value rather than the rendered one.
@@ -180,12 +187,16 @@ export const LessonProvider = ({ children }: { children: ReactNode }) => {
         : current.filter((fix) => fix !== id)
       latestFixes.current = next
       setStoredFixes(next)
+      trackPrivacyLessonEvent("fix-toggled")
     },
     [setStoredFixes]
   )
 
   const setPrivateMode = useCallback(
-    (on: boolean) => setStoredMode(on ? "private" : "public"),
+    (on: boolean) => {
+      setStoredMode(on ? "private" : "public")
+      trackPrivacyLessonEvent("private-mode-toggled")
+    },
     [setStoredMode]
   )
 
@@ -195,6 +206,8 @@ export const LessonProvider = ({ children }: { children: ReactNode }) => {
     setStoredDossier(EMPTY_DOSSIER)
     setStoredFixes(EMPTY_FIXES)
     setStoredMode(DEFAULT_MODE)
+    setResetCount((count) => count + 1)
+    trackPrivacyLessonEvent("lesson-reset")
   }, [setStoredDossier, setStoredFixes, setStoredMode])
 
   const value = useMemo<LessonContextValue>(() => {
@@ -206,8 +219,18 @@ export const LessonProvider = ({ children }: { children: ReactNode }) => {
       setFix,
       setPrivateMode,
       reset,
+      resetCount,
     }
-  }, [collected, fixesOn, privateMode, collect, setFix, setPrivateMode, reset])
+  }, [
+    collected,
+    fixesOn,
+    privateMode,
+    collect,
+    setFix,
+    setPrivateMode,
+    reset,
+    resetCount,
+  ])
 
   return (
     <LessonContext.Provider value={value}>{children}</LessonContext.Provider>
@@ -218,4 +241,25 @@ export const useLesson = () => {
   const context = useContext(LessonContext)
   if (!context) throw new Error("useLesson must be used within LessonProvider")
   return context
+}
+
+/**
+ * Per-chapter progress (answers, which bridges are linked, whether Send was
+ * pressed) kept in this browser under the lesson's storage prefix, and
+ * cleared by "Start over". Pass a module-level `initialValue` so it is stable.
+ * Values are only ever read back by the lesson; validate them before use.
+ */
+export const useLessonStorage = <T,>(name: string, initialValue: T) => {
+  const { resetCount } = useLesson()
+  const [value, setValue] = useLocalStorage<T>(
+    `${STORAGE_PREFIX}.${name}`,
+    initialValue
+  )
+  const seenReset = useRef(resetCount)
+  useEffect(() => {
+    if (seenReset.current === resetCount) return
+    seenReset.current = resetCount
+    setValue(initialValue)
+  }, [resetCount, initialValue, setValue])
+  return [value, setValue] as const
 }

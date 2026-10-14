@@ -16,7 +16,6 @@ import MainArticle from "@/components/MainArticle"
 import Eyebrow from "@/components/ui/eyebrow"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
-import { SkeletonLines } from "@/components/ui/skeleton"
 import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -28,8 +27,8 @@ import { chapters } from "@/data/privacy-lesson/chapters"
 import { persona } from "@/data/privacy-lesson/persona"
 
 import ChapterNav from "./_components/chapter-nav"
+import { chapterBodies } from "./_components/chapters"
 import { DossierAside } from "./_components/dossier-rail"
-import LessonDevTools from "./_components/lesson-dev-tools"
 import { LessonProvider } from "./_components/lesson-provider"
 import PageJsonLD from "./page-jsonld"
 
@@ -115,11 +114,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   lastEditLocaleTimestamp={lastEditLocaleTimestamp}
                   variant="compact"
                 />
-                <LessonDevTools />
 
                 <div id={LESSON_ID} className="flow">
                   {chapters.map(({ id, number, part }, index) => {
                     const startsPart = chapters[index - 1]?.part !== part
+                    const ChapterBody = chapterBodies[id]
                     const vars = {
                       ...headingVars,
                       number: formatChapterNumber.format(number),
@@ -165,14 +164,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                               )}
                             </p>
                           )}
-                          <div className="rounded-base border border-dashed p-6">
-                            <p className="mb-4 text-sm text-body-medium">
-                              {t(
-                                "page-privacy-public-by-default-nav-chapter-placeholder"
-                              )}
-                            </p>
-                            <SkeletonLines noOfLines={4} />
-                          </div>
+                          <ChapterBody locale={locale} />
                         </Section>
                       </Fragment>
                     )
