@@ -29,7 +29,6 @@ import { persona } from "@/data/privacy-lesson/persona"
 import ChapterNav from "./_components/chapter-nav"
 import { chapterBodies } from "./_components/chapters"
 import { DossierAside } from "./_components/dossier-rail"
-import LessonDevTools from "./_components/lesson-dev-tools"
 import { LessonProvider } from "./_components/lesson-provider"
 import PageJsonLD from "./page-jsonld"
 
@@ -115,7 +114,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   lastEditLocaleTimestamp={lastEditLocaleTimestamp}
                   variant="compact"
                 />
-                <LessonDevTools />
 
                 <div id={LESSON_ID} className="flow">
                   {chapters.map(({ id, number, part }, index) => {
