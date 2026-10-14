@@ -148,8 +148,10 @@ Anatomy).
   fill or stroke transitions). Each player uses `useDiagramInView`: the
   drawing chunk loads when the figure comes within 200px of the viewport,
   and runs, timers and CSS animations pause while it is off screen
-  (`paused` → `data-paused`). `Docs.tsx` imports every diagram with
-  `next/dynamic`, so its client code loads only on pages that use it.
+  (`paused` → `data-paused`). The docs layout knows every diagram, so the
+  server wrapper (`index.tsx`) imports its player through a client
+  `lazy-player.tsx` (`next/dynamic`): the player is still server-rendered,
+  but its client code loads only on pages that render it.
 - **Dark mode.** The same tint tokens, about double light mode's, with one
   step lighter hues (`blue-300`, `yellow-500`), so blue and orange still read
   as colour.

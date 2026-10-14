@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { GasTxPlayer } from "./gas-tx-player"
+import { GasTxPlayer } from "./lazy-player"
 import type { GasTxPresetId } from "./model"
 
 export interface GasTxDiagramProps {

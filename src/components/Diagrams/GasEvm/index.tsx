@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { GasEvmPlayer } from "./gas-evm-player"
+import { GasEvmPlayer } from "./lazy-player"
 import type { GasEvmPresetId } from "./model"
 
 export interface GasEvmDiagramProps {
