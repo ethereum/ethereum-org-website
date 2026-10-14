@@ -34,7 +34,9 @@ Bởi vì tài khoản chọn các quy tắc của riêng mình, nó cũng có t
 
 ## Còn gì khác trong Hegotá {#scope}
 
-Vẫn chưa được quyết định. FOCIL và giao dịch khung là hai thay đổi được lên lịch cho đến nay; hàng chục đề xuất khác đã được đưa ra và chưa có đề xuất nào được chốt. Trang này sẽ được giữ ngắn gọn cho đến khi phạm vi được xác định rõ ràng — để biết trạng thái hiện tại của cuộc thảo luận, hãy xem các tài nguyên bên dưới.
+Vẫn chưa được quyết định. FOCIL và giao dịch khung là hai thay đổi được lên lịch cho đến nay; hàng chục thay đổi khác đã được đề xuất và chưa có thay đổi nào được chốt. Trang này sẽ được giữ ngắn gọn cho đến khi phạm vi được xác định rõ ràng — để biết trạng thái hiện tại của cuộc thảo luận, hãy xem các tài nguyên bên dưới.
+
+Các đề xuất hiện đang được xem xét để đưa vào bao gồm EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 và EIP-8365. Việc được xem xét có nghĩa là các nhóm client đang đánh giá một đề xuất, chứ không phải là nó chắc chắn sẽ được phát hành trong Hegotá.
 
 ## Đọc thêm {#further-reading}
 

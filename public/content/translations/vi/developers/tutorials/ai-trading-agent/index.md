@@ -219,7 +219,7 @@ Nếu chúng ta có thể đọc được tương lai, chúng ta sẽ không c�
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Cú pháp để gọi một hàm trên EVM từ Web3 là thế này: `<contract object>.functions.<function name>().call(<parameters>)`. Các tham số có thể là các tham số của hàm EVM (nếu có; ở đây thì không) hoặc [các tham số được đặt tên](https://en.wikipedia.org/wiki/Named_parameter) để sửa đổi hành vi của Chuỗi khối. Ở đây chúng ta sử dụng một tham số, `block_identifier`, để chỉ định [số khối](/developers/docs/apis/json-rpc/#default-block) mà chúng ta muốn chạy.
+Cú pháp để gọi một hàm trên EVM từ Web3 là thế này: `<contract object>.functions.<function name>().call(<parameters>)`. Các tham số có thể là các tham số của hàm EVM (nếu có; ở đây thì không) hoặc [các tham số được đặt tên](https://en.wikipedia.org/wiki/Named_parameter) để sửa đổi hành vi của Chuỗi khối. Ở đây chúng ta sử dụng một tham số, `block_identifier`, để chỉ định [số khối](/developers/docs/apis/json-rpc/#block-parameter) mà chúng ta muốn chạy.
 
 Kết quả là [cấu trúc này, ở dạng mảng](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Giá trị đầu tiên là một hàm của tỷ giá hối đoái giữa hai token.
 
