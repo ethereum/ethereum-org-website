@@ -18,6 +18,7 @@ import YouTube from "@/components/YouTube"
 
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { slugify } from "@/lib/utils/url"
 import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
 import VideoPageJsonLD from "./page-jsonld"
@@ -81,7 +82,12 @@ const VideoLandingPage = async (props: {
             <Accordion type="single" collapsible>
               <AccordionItem value="transcript">
                 <AccordionTrigger className="py-4">
-                  <h2 className="text-h5">
+                  <h2
+                    id={slugify(t("page-videos-view-transcript"), {
+                      unicode: true,
+                    })}
+                    className="text-h5"
+                  >
                     {t("page-videos-view-transcript")}
                   </h2>
                 </AccordionTrigger>

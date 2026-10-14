@@ -7,6 +7,7 @@ import { HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { slugify } from "@/lib/utils/url"
 
 import {
   Accordion,
@@ -19,6 +20,8 @@ export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
+  /** Heading anchor; defaults to a slug of `title` when it is a string */
+  id?: string
   svg?: ReactNode
   eventAction?: string
   eventCategory?: string
@@ -31,6 +34,7 @@ const ExpandableCard = ({
   children,
   contentPreview,
   title,
+  id,
   svg,
   eventAction = "Clicked",
   eventCategory = "",
@@ -41,6 +45,12 @@ const ExpandableCard = ({
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
   const t = useTranslations("common")
+  // Stable anchor so search/deep links don't fall back to Radix's per-build useId
+  const headingId =
+    id ??
+    (typeof title === "string"
+      ? slugify(title, { unicode: true }) || undefined
+      : undefined)
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
@@ -82,7 +92,9 @@ const ExpandableCard = ({
             <div className="flex-1 space-y-4">
               <HStack className="gap-6">
                 {svg}
-                <h3 className="text-xl font-semibold">{title}</h3>
+                <h3 id={headingId} className="text-xl font-semibold">
+                  {title}
+                </h3>
               </HStack>
               {contentPreview && (
                 <p className="w-fit text-sm text-pretty text-body-medium">
