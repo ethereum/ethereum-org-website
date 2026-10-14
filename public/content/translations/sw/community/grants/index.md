@@ -10,7 +10,7 @@ Orodha hii inasimamiwa na jamii yetu. Ikiwa kuna kitu kinakosekana au si sahihi,
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Waanzilishi, mnahitaji msaada wa kuharakisha biashara yenu? [Nendeni kwenye Usaidizi wa Waanzilishi](/founders/)</div>
+<div>Waanzilishi, mnahitaji msaada wa kuharakisha biashara yenu? [Nendeni kwenye Usaidizi wa Waanzilishi](/organizations/founders/)</div>
 </Alert>
 
 ## Mfumo mpana wa ikolojia wa Ethereum {#broad-ethereum-ecosystem}

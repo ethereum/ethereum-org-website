@@ -54,7 +54,7 @@ published: 2021-03-31
 
 ## 第 5 步：檢查你的餘額 {#step-5}
 
-為了再次確認我們的餘額已入帳，讓我們使用 [Alchemy 的 composer 工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) 請求。這將回傳我們錢包中的 ETH 數量。輸入你的梅塔馬斯克 (MetaMask) 帳戶地址並點擊「Send Request (發送請求)」後，你應該會看到類似以下的響應：
+為了再次確認我們的餘額已入帳，讓我們使用 [Alchemy 的 composer 工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) 請求。這將回傳我們錢包中的 ETH 數量。輸入你的梅塔馬斯克 (MetaMask) 帳戶地址並點擊「Send Request (發送請求)」後，你應該會看到類似以下的響應：
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

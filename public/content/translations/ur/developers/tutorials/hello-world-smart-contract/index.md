@@ -49,7 +49,7 @@ published: 2021-03-31
 
 ## مرحلہ 5: اپنا بیلنس چیک کریں {#step-5}
 
-یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [Alchemy کے کمپوزر ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں ETH کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور <span dir="ltr">“Send Request”</span> پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
+یہ دوبارہ چیک کرنے کے لیے کہ ہمارا بیلنس موجود ہے، آئیے [Alchemy کے کمپوزر ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) درخواست کریں۔ یہ ہمارے والیٹ میں ETH کی مقدار واپس کرے گا۔ اپنا میٹاماسک اکاؤنٹ کا پتہ درج کرنے اور <span dir="ltr">“Send Request”</span> پر کلک کرنے کے بعد، آپ کو اس طرح کا جواب نظر آنا چاہیے:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

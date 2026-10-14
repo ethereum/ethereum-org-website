@@ -1,0 +1,190 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-enterprise-onchain-finance.json",
+  "generatedAt": "2026-10-14T17:30:37.941Z",
+  "rootHash": "65fe176ace75",
+  "tree": {
+    "contentHash": "69e626773e0b",
+    "anchorHash": "32c5ea785a2e",
+    "children": {
+      "page-organizations-enterprise-onchain-finance-ecosystem-description": {
+        "contentHash": "38cc9a915865",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-ecosystem-title": {
+        "contentHash": "ebf69ba0ca1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-hero-description-1": {
+        "contentHash": "74b772ef9802",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-hero-description-2": {
+        "contentHash": "8cae02fc405c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-hero-title": {
+        "contentHash": "7e8ed1d280d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-description": {
+        "contentHash": "fcc56febb483",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-description": {
+        "contentHash": "0a824c6435c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-examples": {
+        "contentHash": "1f35120568f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-title": {
+        "contentHash": "23e98ec995be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-examples-label": {
+        "contentHash": "e68ee04dff59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-fx-description": {
+        "contentHash": "c9b5652654d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-fx-examples": {
+        "contentHash": "af9bccacfd0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-fx-title": {
+        "contentHash": "cf8b80120dba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-description": {
+        "contentHash": "c6f11fa8c403",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-examples": {
+        "contentHash": "9f2191f365d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-title": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-title": {
+        "contentHash": "9f8f234547c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-description": {
+        "contentHash": "d7c806bcf493",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples": {
+        "contentHash": "a725bda1f33e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title": {
+        "contentHash": "c17cf8aec270",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-meta-description": {
+        "contentHash": "cdc5cbf4c921",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-meta-title": {
+        "contentHash": "f84aa4ae4371",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-composable-description": {
+        "contentHash": "8bf90d537dfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-composable-title": {
+        "contentHash": "bdb65f6db8fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description": {
+        "contentHash": "c6516436ee66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-title": {
+        "contentHash": "d1659a41f2a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-description": {
+        "contentHash": "6949aa600d99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-open-standards-description": {
+        "contentHash": "4ac562082e25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-open-standards-title": {
+        "contentHash": "9eddb785142f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-permissionless-description": {
+        "contentHash": "645980ba4d05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-permissionless-title": {
+        "contentHash": "c2d2977b9e0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-primitives-title": {
+        "contentHash": "ff5e1f077f30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-stat-defi-tvl": {
+        "contentHash": "15c3130d0eec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-stat-dex-volume": {
+        "contentHash": "cb9ad18351b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-onchain-finance-stat-global-share": {
+        "contentHash": "4ec703c6cf74",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-enterprise-onchain-finance-ecosystem-description",
+      "page-organizations-enterprise-onchain-finance-ecosystem-title",
+      "page-organizations-enterprise-onchain-finance-hero-description-1",
+      "page-organizations-enterprise-onchain-finance-hero-description-2",
+      "page-organizations-enterprise-onchain-finance-hero-title",
+      "page-organizations-enterprise-onchain-finance-innovation-description",
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-description",
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-examples",
+      "page-organizations-enterprise-onchain-finance-innovation-digital-bonds-title",
+      "page-organizations-enterprise-onchain-finance-innovation-examples-label",
+      "page-organizations-enterprise-onchain-finance-innovation-fx-description",
+      "page-organizations-enterprise-onchain-finance-innovation-fx-examples",
+      "page-organizations-enterprise-onchain-finance-innovation-fx-title",
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-description",
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-examples",
+      "page-organizations-enterprise-onchain-finance-innovation-stablecoins-title",
+      "page-organizations-enterprise-onchain-finance-innovation-title",
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-description",
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-examples",
+      "page-organizations-enterprise-onchain-finance-innovation-tokenized-assets-title",
+      "page-organizations-enterprise-onchain-finance-meta-description",
+      "page-organizations-enterprise-onchain-finance-meta-title",
+      "page-organizations-enterprise-onchain-finance-primitives-composable-description",
+      "page-organizations-enterprise-onchain-finance-primitives-composable-title",
+      "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-description",
+      "page-organizations-enterprise-onchain-finance-primitives-deep-liquidity-title",
+      "page-organizations-enterprise-onchain-finance-primitives-description",
+      "page-organizations-enterprise-onchain-finance-primitives-open-standards-description",
+      "page-organizations-enterprise-onchain-finance-primitives-open-standards-title",
+      "page-organizations-enterprise-onchain-finance-primitives-permissionless-description",
+      "page-organizations-enterprise-onchain-finance-primitives-permissionless-title",
+      "page-organizations-enterprise-onchain-finance-primitives-title",
+      "page-organizations-enterprise-onchain-finance-stat-defi-tvl",
+      "page-organizations-enterprise-onchain-finance-stat-dex-volume",
+      "page-organizations-enterprise-onchain-finance-stat-global-share"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

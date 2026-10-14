@@ -178,7 +178,7 @@ _مخطط مقتبس من [توضيح آلة إيثيريوم الافتراضي
 
 الغاز مطلوب لأي معاملة تتضمن عقدًا ذكيًا.
 
-يمكن أن تحتوي العقود الذكية أيضًا على وظائف تُعرف بوظائف [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) أو [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)، والتي لا تغير حالة العقد. على هذا النحو، فإن استدعاء هذه الوظائف من حساب مملوك خارجيًا (EOA) لن يتطلب أي غاز. استدعاء <span dir="ltr">RPC</span> الأساسي لهذا السيناريو هو [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+يمكن أن تحتوي العقود الذكية أيضًا على وظائف تُعرف بوظائف [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) أو [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)، والتي لا تغير حالة العقد. على هذا النحو، فإن استدعاء هذه الوظائف من حساب مملوك خارجيًا (EOA) لن يتطلب أي غاز. استدعاء <span dir="ltr">RPC</span> الأساسي لهذا السيناريو هو [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 على عكس الوصول إليها باستخدام `eth_call`، يتم أيضًا استدعاء وظائف `view` أو `pure` هذه بشكل شائع داخليًا (أي من العقد نفسه أو من عقد آخر) مما يكلف غازًا.
 

@@ -35,6 +35,7 @@ Kusajili anwani moja kama `Owner` katika mkataba mahiri huleta hatari ya uwekaji
 Katika udhibiti wa ufikiaji unaotegemea jukumu, ufikiaji wa vipengele nyeti vya utendaji husambazwa kati ya kundi la washiriki wanaoaminika. Kwa mfano, akaunti moja inaweza kuwajibika kwa ufuzi wa tokeni, huku akaunti nyingine ikifanya uboreshaji au kusitisha mkataba. Kugatua udhibiti wa ufikiaji kwa njia hii huondoa hatua moja ya kutofaulu na kupunguza dhana za uaminifu kwa watumiaji.
 
 ##### Kutumia mikoba ya saini-nyingi
+
 Mbinu nyingine ya kutekeleza udhibiti salama wa ufikiaji ni kutumia [akaunti ya saini-nyingi](/developers/docs/smart-contracts/#multisig) kusimamia mkataba. Tofauti na EOA ya kawaida, akaunti za saini-nyingi zinamilikiwa na huluki nyingi na zinahitaji saini kutoka kwa idadi ya chini ya akaunti—tuseme 3-kati-ya-5—ili kutekeleza miamala.
 
 Kutumia saini-nyingi kwa udhibiti wa ufikiaji huleta tabaka la ziada la usalama kwa kuwa vitendo kwenye mkataba lengwa vinahitaji idhini kutoka kwa pande nyingi. Hili ni muhimu hasa ikiwa kutumia muundo wa Umiliki ni muhimu, kwani inafanya iwe vigumu zaidi kwa mshambuliaji au mtu wa ndani mpotovu kuchezea vipengele nyeti vya utendaji vya mkataba kwa madhumuni mabaya.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 Kutobadilika kwa msimbo unaoendeshwa katika [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/) kunamaanisha mikataba mahiri inahitaji kiwango cha juu cha tathmini ya ubora wakati wa awamu ya uundaji. Kujaribu mkataba wako kwa kina na kuuangalia kwa matokeo yoyote yasiyotarajiwa kutaboresha usalama kwa kiasi kikubwa na kuwalinda watumiaji wako kwa muda mrefu.
 
-Mbinu ya kawaida ni kuandika majaribio madogo ya vipengele (unit tests) kwa kutumia data ya majaribio ambayo mkataba unatarajiwa kupokea kutoka kwa watumiaji. [Majaribio ya vipengele](/developers/docs/smart-contracts/testing/#unit-testing) ni mazuri kwa kujaribu utendaji wa vipengele fulani na kuhakikisha mkataba mahiri unafanya kazi kama inavyotarajiwa.
+Mbinu ya kawaida ni kuandika majaribio madogo ya vipengele (unit tests) kwa kutumia data ya majaribio ambayo mkataba unatarajiwa kupokea kutoka kwa watumiaji. [Majaribio ya vipengele](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) ni mazuri kwa kujaribu utendaji wa vipengele fulani na kuhakikisha mkataba mahiri unafanya kazi kama inavyotarajiwa.
 
 Kwa bahati mbaya, majaribio ya vipengele yana ufanisi mdogo katika kuboresha usalama wa mkataba mahiri yanapotumika pekee. Jaribio la kipengele linaweza kuthibitisha kuwa kipengele cha utendaji kinatekelezwa ipasavyo kwa data ya majaribio, lakini majaribio ya vipengele yana ufanisi sawa tu na majaribio yaliyoandikwa. Hii inafanya iwe vigumu kugundua hali za kipekee zilizokosekana na udhaifu ambao unaweza kuvunja usalama wa mkataba mahiri wako.
 
@@ -306,6 +307,7 @@ Hakuna kosa hapa, isipokuwa kwamba `Attacker` ina kipengele kingine cha utendaji
 Muhtasari ni kwamba kwa sababu salio la mpigaji halijawekwa kuwa 0 hadi utekelezaji wa kipengele cha utendaji ukamilike, uanzishaji unaofuata utafaulu na kuruhusu mpigaji kutoa salio lake mara nyingi. Aina hii ya shambulio inaweza kutumika kukausha mkataba mahiri wa fedha zake, kama kile kilichotokea katika [udukuzi wa DAO wa 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Mashambulizi ya uingiaji upya bado ni suala muhimu kwa mikataba mahiri leo kama [orodha za umma za unyonyaji wa uingiaji upya](https://github.com/pcaversaccio/reentrancy-attacks) zinavyoonyesha.
 
 ##### Jinsi ya kuzuia mashambulizi ya uingiaji upya
+
 Mbinu ya kushughulikia uingiaji upya ni kufuata [muundo wa ukaguzi-athari-mwingiliano](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Muundo huu hupanga utekelezaji wa vipengele vya utendaji kwa njia ambayo msimbo unaofanya ukaguzi muhimu kabla ya kuendelea na utekelezaji unakuja kwanza, ukifuatiwa na msimbo unaodhibiti hali ya mkataba, na msimbo unaoingiliana na mikataba mingine au EOAs ukifika mwisho.
 
 Muundo wa ukaguzi-athari-mwingiliano unatumika katika toleo lililorekebishwa la mkataba wa `Victim` ulioonyeshwa hapa chini:
@@ -430,6 +432,7 @@ contract Attack {
 ```
 
 ##### Jinsi ya kuzuia mizidio ya chini na mizidio ya nambari kamili
+
 Kuanzia toleo la 0.8.0, kikusanyaji cha Solidity kinakataa msimbo unaosababisha mizidio ya chini na mizidio ya nambari kamili. Hata hivyo, mikataba iliyokusanywa na toleo la chini la kikusanyaji inapaswa kufanya ukaguzi kwenye vipengele vya utendaji vinavyohusisha operesheni za hesabu au kutumia maktaba (k.m., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) ambayo hukagua mzidio wa chini/mzidio.
 
 #### Udanganyifu wa orakeli {#oracle-manipulation}
@@ -445,6 +448,7 @@ Bei za DEX mara nyingi ni sahihi, kwa kiasi kikubwa kutokana na wafanyabiashara 
 Kwa mfano, mshambuliaji anaweza kupandisha bei ya papo hapo ya rasilimali kwa njia isiyo ya asili kwa kuchukua mkopo wa ghafla kabla tu ya kuingiliana na mkataba wako wa ukopeshaji. Kuuliza DEX kwa bei ya rasilimali kungerudisha thamani ya juu kuliko kawaida (kutokana na "agizo la kununua" kubwa la mshambuliaji kupotosha mahitaji ya rasilimali), na kuwaruhusu kukopa zaidi ya wanavyopaswa. "Mashambulizi ya mkopo wa ghafla" kama haya yametumika kutumia vibaya utegemezi wa orakeli za bei kati ya programu za DeFi, na kugharimu itifaki mamilioni ya fedha zilizopotea.
 
 ##### Jinsi ya kuzuia udanganyifu wa orakeli
+
 Sharti la chini kabisa la [kuepuka udanganyifu wa orakeli](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) ni kutumia mtandao wa orakeli uliogatuliwa ambao unauliza taarifa kutoka kwa vyanzo vingi ili kuepuka hatua moja ya kutofaulu. Katika hali nyingi, orakeli zilizogatuliwa zina motisha za kiuchumi za kripto zilizojengewa ndani ili kuhimiza nodi za orakeli kuripoti taarifa sahihi, na kuzifanya kuwa salama zaidi kuliko orakeli zilizowekwa kati.
 
 Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutumia ile inayotekeleza utaratibu wa bei ya wastani iliyopimwa kwa wakati (TWAP). [Orakeli ya TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) huuliza bei ya rasilimali katika nyakati mbili tofauti (ambazo unaweza kurekebisha) na kukokotoa bei ya papo hapo kulingana na wastani uliopatikana. Kuchagua vipindi virefu vya muda hulinda itifaki yako dhidi ya udanganyifu wa bei kwa kuwa maagizo makubwa yaliyotekelezwa hivi karibuni hayawezi kuathiri bei za rasilimali.

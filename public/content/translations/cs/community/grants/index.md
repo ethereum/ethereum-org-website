@@ -10,7 +10,7 @@ Tento seznam spravuje naše komunita. Pokud zde něco chybí nebo je nesprávné
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Zakladatelé, potřebujete pomoci s rozvojem vašeho podnikání? [Přejděte na podporu pro zakladatele](/founders/)</div>
+<div>Zakladatelé, potřebujete pomoci s rozvojem vašeho podnikání? [Přejděte na podporu pro zakladatele](/organizations/founders/)</div>
 </Alert>
 
 ## Široký ekosystém Etherea {#broad-ethereum-ecosystem}

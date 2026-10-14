@@ -35,6 +35,7 @@ Registrace jediné adresy jako `Owner` v chytrém kontraktu přináší riziko c
 Při řízení přístupu na základě rolí je přístup k citlivým funkcím rozdělen mezi skupinu důvěryhodných účastníků. Například jeden účet může být zodpovědný za ražení tokenů, zatímco jiný účet provádí upgrady nebo pozastavuje kontrakt. Decentralizace řízení přístupu tímto způsobem eliminuje jediné body selhání a snižuje předpoklady důvěry pro uživatele.
 
 ##### Použití peněženek s vícenásobným podpisem
+
 Dalším přístupem k implementaci bezpečného řízení přístupu je použití [účtu s vícenásobným podpisem](/developers/docs/smart-contracts/#multisig) ke správě kontraktu. Na rozdíl od běžného EOA jsou účty s vícenásobným podpisem vlastněny více subjekty a k provedení transakcí vyžadují podpisy od minimálního počtu účtů – řekněme 3 z 5.
 
 Použití multisig pro řízení přístupu přináší další vrstvu zabezpečení, protože akce na cílovém kontraktu vyžadují souhlas více stran. To je obzvláště užitečné, pokud je nutné použít vzor Ownable, protože to ztěžuje útočníkovi nebo zlomyslnému insiderovi manipulaci s citlivými funkcemi kontraktu pro škodlivé účely.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 Neměnnost kódu běžícího v [Ethereum Virtual Machine](/developers/docs/evm/) znamená, že chytré kontrakty vyžadují vyšší úroveň hodnocení kvality během fáze vývoje. Rozsáhlé testování vašeho kontraktu a jeho sledování z hlediska jakýchkoli neočekávaných výsledků výrazně zlepší bezpečnost a z dlouhodobého hlediska ochrání vaše uživatele.
 
-Obvyklou metodou je psaní malých jednotkových testů (unit tests) pomocí mock dat, která se očekává, že kontrakt obdrží od uživatelů. [Jednotkové testování](/developers/docs/smart-contracts/testing/#unit-testing) je dobré pro testování funkčnosti určitých funkcí a zajištění toho, že chytrý kontrakt funguje podle očekávání.
+Obvyklou metodou je psaní malých jednotkových testů (unit tests) pomocí mock dat, která se očekává, že kontrakt obdrží od uživatelů. [Jednotkové testování](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) je dobré pro testování funkčnosti určitých funkcí a zajištění toho, že chytrý kontrakt funguje podle očekávání.
 
 Bohužel, jednotkové testování je při izolovaném použití minimálně efektivní pro zlepšení bezpečnosti chytrých kontraktů. Jednotkový test může prokázat, že se funkce správně provádí pro mock data, ale jednotkové testy jsou jen tak efektivní, jak dobře jsou napsány. To ztěžuje detekci opomenutých okrajových případů a zranitelností, které by mohly narušit bezpečnost vašeho chytrého kontraktu.
 
@@ -306,6 +307,7 @@ Na tom není nic špatného, kromě toho, že `Attacker` má další funkci, kte
 Shrnutí je takové, že protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provádění funkce, následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát. Tento druh útoku lze použít k vysátí prostředků z chytrého kontraktu, jako se to stalo při [hacku DAO v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky reentrance jsou pro chytré kontrakty dodnes kritickým problémem, jak ukazují [veřejné seznamy exploitů reentrance](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Jak zabránit útokům reentrance
+
 Jedním z přístupů k řešení reentrance je dodržování [vzoru checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Tento vzor řadí provádění funkcí tak, že kód, který provádí nezbytné kontroly před pokračováním v provádění, je na prvním místě, následován kódem, který manipuluje se stavem kontraktu, a kód, který interaguje s jinými kontrakty nebo EOA, přichází na řadu jako poslední.
 
 Vzor checks-effect-interaction je použit v revidované verzi kontraktu `Victim` zobrazené níže:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Jak zabránit podtečení a přetečení celých čísel
+
 Od verze 0.8.0 kompilátor Solidity odmítá kód, který vede k podtečení a přetečení celých čísel. Kontrakty kompilované s nižší verzí kompilátoru by však měly buď provádět kontroly funkcí zahrnujících aritmetické operace, nebo používat knihovnu (např. [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)), která kontroluje podtečení/přetečení.
 
 #### Manipulace s orákulem {#oracle-manipulation}
@@ -447,6 +450,7 @@ Ceny na DEX jsou často přesné, a to z velké části díky arbitrážérům, 
 Útočník by například mohl uměle napumpovat spotovou cenu aktiva tím, že si vezme bleskovou půjčku těsně před interakcí s vaším kontraktem pro půjčování. Dotaz na DEX ohledně ceny aktiva by vrátil vyšší než normální hodnotu (kvůli velké „nákupní objednávce“ útočníka, která zkresluje poptávku po aktivu), což by mu umožnilo půjčit si více, než by měl. Takové „útoky pomocí bleskových půjček“ (flash loan attacks) byly použity ke zneužití spoléhání se na cenová orákula mezi DeFi aplikacemi, což protokoly stálo miliony ve ztracených prostředcích.
 
 ##### Jak zabránit manipulaci s orákulem
+
 Minimálním požadavkem pro [zabránění manipulaci s orákulem](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) je použití decentralizované sítě orákul, která získává informace z více zdrojů, aby se zabránilo jediným bodům selhání. Ve většině případů mají decentralizovaná orákula zabudované kryptoekonomické pobídky, které povzbuzují uzly orákula k hlášení správných informací, což je činí bezpečnějšími než centralizovaná orákula.
 
 Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití takového, které implementuje mechanismus časově vážené průměrné ceny (TWAP). [TWAP orákulum](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) dotazuje cenu aktiva ve dvou různých časových okamžicích (které můžete upravit) a vypočítá spotovou cenu na základě získaného průměru. Výběr delších časových období chrání váš protokol před manipulací s cenami, protože velké objednávky provedené v nedávné době nemohou ovlivnit ceny aktiv.

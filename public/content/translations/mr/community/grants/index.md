@@ -10,7 +10,7 @@ lang: mr
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>संस्थापकांनो, तुमच्या व्यवसायाला गती देण्यासाठी मदत हवी आहे का? [फाउंडर्स सपोर्टला भेट द्या](/founders/)</div>
+<div>संस्थापकांनो, तुमच्या व्यवसायाला गती देण्यासाठी मदत हवी आहे का? [फाउंडर्स सपोर्टला भेट द्या](/organizations/founders/)</div>
 </Alert>
 
 ## व्यापक इथेरियम इकोसिस्टम {#broad-ethereum-ecosystem}

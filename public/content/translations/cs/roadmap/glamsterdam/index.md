@@ -28,20 +28,20 @@ Tato vylepšení zajišťují, že Ethereum zůstane rychlé, cenově dostupné 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Poznámka: Tento článek zdůrazňuje výběr Návrhů na vylepšení Etherea (EIP), jejichž zahrnutí do Glamsterdamu je naplánováno. Mezi další plánované návrhy testované v devnetech patří EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 a EIP-8282. Rozsah je zmrazen, ale před nasazením na Mainnet se může ještě změnit, protože meta EIP zůstává ve fázi návrhu. Nejnovější aktualizace stavu najdete na stránce [upgradu Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
+Poznámka: Tento článek zdůrazňuje výběr Návrhů na vylepšení Etherea (EIP) naplánovaných k zahrnutí do upgradu Glamsterdam. Mezi další plánované návrhy testované v devnetech patří EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 a EIP-8282. Rozsah je zmrazen, ale před spuštěním na Mainnetu se může ještě změnit, protože meta EIP zůstává ve fázi návrhu. Pro nejnovější aktualizace stavu se podívejte na [upgrade Glamsterdam na Forkcastu](https://forkcast.org/upgrade/glamsterdam).
 
 Pokud chcete přidat EIP, o kterém se uvažuje pro Glamsterdam, ale ještě nebyl na tuto stránku přidán, [přečtěte si, jak přispět na ethereum.org zde](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Upgrade Glamsterdam se soustředí na tři hlavní cíle:
+Upgrade Glamsterdam se zaměřuje na tři hlavní cíle:
 
 - Zrychlení zpracování (paralelizace): Reorganizace způsobu, jakým síť zaznamenává datové závislosti, aby mohla bezpečně zpracovávat mnoho transakcí současně namísto pomalého, postupného zpracování jedné po druhé.
 - Rozšíření kapacity: Rozdělení náročné práce při vytváření a ověřování bloků, což síti poskytne více času na šíření většího množství dat bez zpomalení.
-- Prevence nadměrného růstu databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvýšení limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
+- Prevence nadměrného růstu databáze (udržitelnost): Úprava síťových poplatků tak, aby přesně odrážely dlouhodobé hardwarové náklady na ukládání nových dat, což odblokuje budoucí zvyšování limitu gasu a zároveň zabrání zhoršení výkonu hardwaru.
 
-Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s tím, jak síť zvyšuje kapacitu, zůstane udržitelná a výkon zůstane vysoký.
+Stručně řečeno, Glamsterdam zavede strukturální změny, které zajistí, že s rostoucí kapacitou sítě zůstane udržitelná a výkon zůstane vysoký.
 
 ## Škálování l1 a paralelní zpracování {#scale-l1}
 

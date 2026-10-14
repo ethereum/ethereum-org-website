@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-بناء الجملة لاستدعاء دالة على آلة إيثيريوم الافتراضية (EVM) من Web3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعاملات هي معاملات دالة EVM (إن وجدت؛ هنا لا يوجد) أو [معاملات مسماة (named parameters)](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل. هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#default-block) الذي نرغب في التشغيل فيه.
+بناء الجملة لاستدعاء دالة على آلة إيثيريوم الافتراضية (EVM) من Web3 هو كالتالي: `<contract object>.functions.<function name>().call(<parameters>)`. يمكن أن تكون المعاملات هي معاملات دالة EVM (إن وجدت؛ هنا لا يوجد) أو [معاملات مسماة (named parameters)](https://en.wikipedia.org/wiki/Named_parameter) لتعديل سلوك سلسلة الكتل. هنا نستخدم واحدًا، `block_identifier`، لتحديد [رقم الكتلة](/developers/docs/apis/json-rpc/#block-parameter) الذي نرغب في التشغيل فيه.
 
 النتيجة هي [هذا الهيكل (struct)، في شكل مصفوفة](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). القيمة الأولى هي دالة لسعر الصرف بين الرمزين المميزين.
 
