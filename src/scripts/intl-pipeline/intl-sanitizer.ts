@@ -3780,8 +3780,10 @@ function fixEmptyHeadingAnchors(content: string): {
       continue
     }
     if (inFence) continue
+    // \r is matched explicitly: split("\n") leaves it on a CRLF file, and 25
+    // corpus files are CRLF (including one English source).
     const fixed = lines[i].replace(
-      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/,
+      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t\r]*$/,
       "$1"
     )
     if (fixed !== lines[i]) {

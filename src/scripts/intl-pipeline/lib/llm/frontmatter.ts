@@ -126,7 +126,8 @@ function copyStyle(from: unknown, to: Scalar): void {
  * translation that merely happens to contain a colon is untouched.
  */
 export function stripEmittedKeyPrefix(key: string, text: string): string {
-  const prefix = new RegExp(`^${key}:[ \\t]+`)
+  const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const prefix = new RegExp(`^${escaped}:[ \\t]+`)
   if (!prefix.test(text)) return text
   let out = text.replace(prefix, "")
   const quoted = out.match(/^(["'])([\s\S]*)\1$/)
