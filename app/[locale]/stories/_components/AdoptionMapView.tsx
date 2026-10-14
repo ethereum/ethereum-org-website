@@ -46,28 +46,28 @@ interface Point {
 const BUCKETS = [
   {
     min: 0,
-    fill: "fill-purple-100",
-    bg: "bg-purple-100",
+    fill: "fill-purple-100 dark:fill-purple-800",
+    bg: "bg-purple-100 dark:bg-purple-800",
   },
   {
     min: 1,
-    fill: "fill-purple-300",
-    bg: "bg-purple-300",
+    fill: "fill-purple-300 dark:fill-purple-700",
+    bg: "bg-purple-300 dark:bg-purple-700",
   },
   {
     min: 2,
-    fill: "fill-purple-500",
-    bg: "bg-purple-500",
+    fill: "fill-purple-500 dark:fill-purple-500",
+    bg: "bg-purple-500 dark:bg-purple-500",
   },
   {
     min: 5,
-    fill: "fill-purple-700",
-    bg: "bg-purple-700",
+    fill: "fill-purple-700 dark:fill-purple-300",
+    bg: "bg-purple-700 dark:bg-purple-300",
   },
   {
     min: 10,
-    fill: "fill-purple-800",
-    bg: "bg-purple-800",
+    fill: "fill-purple-800 dark:fill-purple-100",
+    bg: "bg-purple-800 dark:bg-purple-100",
   },
 ] as const
 
