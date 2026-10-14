@@ -20,6 +20,7 @@ import Telegram from "@/components/icons/telegram.svg"
 import X from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -31,6 +32,10 @@ import {
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
+
+import { formatStringList } from "@/lib/utils/wallets"
+
+import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
 import CatalogItemDescription from "./Description"
 import ExpandableDescription from "./ExpandableDescription"
@@ -123,6 +128,14 @@ export const CatalogItemInfo = async ({
     </div>
   )
 }
+
+/** Info-card value for a language list; callers put the viewer's language first. */
+export const CatalogItemLanguages = ({ names }: { names: string[] }) => (
+  <>
+    {formatStringList(names, NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)}{" "}
+    <SupportedLanguagesTooltip supportedLanguages={names} />
+  </>
+)
 
 const CatalogItemNext = async ({ item }: { item: CatalogItem }) => {
   if (!item.next) return null
