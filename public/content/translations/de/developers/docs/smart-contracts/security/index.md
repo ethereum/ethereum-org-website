@@ -288,7 +288,7 @@ Dieser Vertrag ist darauf ausgelegt, drei Dinge zu tun:
 2. 1 ETH in den Victim-Vertrag einzahlen
 3. Die im Smart Contract gespeicherten 1 ETH abheben
 
-Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `withdraw() in `Victim` erneut aufruft, wenn das vom eingehenden `msg.sender.call.value` übrig gebliebene Gas mehr als 40.000 beträgt. Dies gibt `Attacker` die Möglichkeit, wieder in `Victim` einzutreten und mehr Gelder abzuheben, _bevor_ der erste Aufruf von `withdraw` abgeschlossen ist. Der Zyklus sieht so aus:
+Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `withdraw()` in `Victim` erneut aufruft, wenn das vom eingehenden `msg.sender.call.value` übrig gebliebene Gas mehr als 40.000 beträgt. Dies gibt `Attacker` die Möglichkeit, wieder in `Victim` einzutreten und mehr Gelder abzuheben, _bevor_ der erste Aufruf von `withdraw` abgeschlossen ist. Der Zyklus sieht so aus:
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH

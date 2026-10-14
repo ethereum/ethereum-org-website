@@ -56,7 +56,6 @@ Sie können [hier](https://metamask.io/download) kostenlos MetaMask herunterlade
 Um Ihren Smart Contract im Testnetzwerk bereitzustellen, benötigen Sie etwas falsches ETH. Um ETH im Sepolia-Netzwerk zu erhalten, gehen Sie zu einem Sepolia-Faucet und geben Sie Ihre Sepolia-Konto-Adresse ein. Auf der [Seite für Testnetzwerke](/developers/docs/networks/#sepolia) finden Sie eine Liste mit Optionen zum Ausprobieren:
 
 _Hinweis: Aufgrund von Netzwerküberlastung kann dies eine Weile dauern._
-``
 ### Schritt 5: Ihr Guthaben überprüfen {#step-5-check-your-balance}
 
 Um sicherzugehen, dass sich die ETH in Ihrer Wallet befinden, stellen wir eine [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)-Anfrage über [Alchemys Sandbox-Tool](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Dies gibt die Menge an ETH in unserer Wallet zurück. Um mehr zu erfahren, sehen Sie sich [Alchemys kurzes Tutorial zur Verwendung des Composer-Tools](https://youtu.be/r6sjRxBZJuU) an.

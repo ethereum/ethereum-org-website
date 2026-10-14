@@ -55,7 +55,6 @@ _نوٹ: **<span dir="ltr">Sepolia</span>** کو منتخب کرنا یقینی 
 اپنے سمارٹ کنٹریکٹ کو آزمائشی نیٹ ورک پر تعینات کرنے کے لیے، آپ کو کچھ نقلی <span dir="ltr">ETH</span> کی ضرورت ہوگی۔ <span dir="ltr">Sepolia</span> نیٹ ورک پر <span dir="ltr">ETH</span> حاصل کرنے کے لیے، <span dir="ltr">Sepolia</span> فوسٹ پر جائیں اور اپنا <span dir="ltr">Sepolia</span> اکاؤنٹ کا پتہ درج کریں۔ آزمانے کے لیے اختیارات کی فہرست کے لیے [آزمائشی نیٹ ورکس کا صفحہ](/developers/docs/networks/#sepolia) دیکھیں:
 
 _نوٹ: نیٹ ورک کے ہجوم کی وجہ سے، اس میں کچھ وقت لگ سکتا ہے۔_
-``
 ### مرحلہ 5: اپنا بیلنس چیک کریں {#step-5-check-your-balance}
 
 یہ دوبارہ چیک کرنے کے لیے کہ <span dir="ltr">ETH</span> آپ کے والیٹ میں موجود ہے، آئیے [<span dir="ltr">Alchemy</span> کے سینڈ باکس ٹول](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) کا استعمال کرتے ہوئے ایک [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) درخواست کریں۔ یہ ہمارے والیٹ میں موجود <span dir="ltr">ETH</span> کی رقم واپس کرے گا۔ مزید جاننے کے لیے [کمپوزر ٹول استعمال کرنے کے طریقے پر <span dir="ltr">Alchemy</span> کا مختصر ٹیوٹوریل](https://youtu.be/r6sjRxBZJuU) دیکھیں۔
