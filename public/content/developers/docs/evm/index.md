@@ -16,7 +16,7 @@ The analogy of a 'distributed ledger' is often used to describe blockchains like
 
 While Ethereum has its own native cryptocurrency (ether) that follows almost exactly the same intuitive rules, it also enables a much more powerful function: [smart contracts](/developers/docs/smart-contracts/). For this more complex feature, a more sophisticated analogy is required. Instead of a distributed ledger, Ethereum is a distributed [state machine](https://wikipedia.org/wiki/Finite-state_machine). Ethereum's state is a large data structure which holds not only all accounts and balances, but a _machine state_, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
 
-<EvmZonesDiagram />
+<EvmZonesDiagram fig={1} />
 
 _Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -58,7 +58,7 @@ Contracts contain a Merkle Patricia _storage_ trie (as a word-addressable word a
 
 Compiled smart contract bytecode executes as a number of EVM [opcodes](/developers/docs/evm/opcodes), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. The opcode set also includes `TSTORE` and `TLOAD`, which provide access to transient storage.
 
-<GasEvmDiagram fig={1} />
+<GasEvmDiagram fig={2} />
 
 _Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

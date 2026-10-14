@@ -15,11 +15,14 @@ export function useStepPlayer({
   initialStep = 0,
   dwellMs = 2000,
   dwellReducedMs = 2400,
+  paused = false,
 }: {
   lastStep: number
   initialStep?: number
   dwellMs?: number
   dwellReducedMs?: number
+  /** Off screen: a run holds where it is and carries on when unpaused. */
+  paused?: boolean
 }) {
   const { prefersReducedMotion } = usePrefersReducedMotion()
   const [step, setStep] = useState(Math.min(Math.max(initialStep, 0), lastStep))
@@ -27,7 +30,7 @@ export function useStepPlayer({
   const atEnd = step >= lastStep
 
   useEffect(() => {
-    if (!isRunning || atEnd) return
+    if (!isRunning || paused || atEnd) return
     const timeout = window.setTimeout(
       () => {
         setStep(step + 1)
@@ -38,6 +41,7 @@ export function useStepPlayer({
     return () => window.clearTimeout(timeout)
   }, [
     isRunning,
+    paused,
     atEnd,
     step,
     lastStep,

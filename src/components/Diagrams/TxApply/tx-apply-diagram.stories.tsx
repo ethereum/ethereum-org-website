@@ -1,3 +1,4 @@
+import { within } from "storybook/test"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import TxApplyDiagram from "."
@@ -6,6 +7,7 @@ const meta = {
   title: "Components / Data Viz / Diagrams / TxApply",
   component: TxApplyDiagram,
   tags: ["autodocs"],
+  args: { fig: 1 },
   parameters: {
     layout: "padded",
     chromatic: { modes: { lg: { viewport: "lg" } } },
@@ -64,4 +66,18 @@ export const ReducedMotion: Story = {
       },
     },
   },
+}
+
+/** Focusing a label highlights its part and shows its definition in the status line. */
+export const HoverPart: Story = {
+  args: { initialStep: 3, fig: 1 },
+  play: async ({ canvasElement }) => {
+    const label = await within(canvasElement).findByText("Sender")
+    label.focus()
+  },
+}
+
+export const HoverPartDark: Story = {
+  ...HoverPart,
+  globals: { theme: "dark" },
 }

@@ -5,6 +5,7 @@ import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 import type { ReactNode } from "react"
 
+import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
   DiagramCaption,
   DiagramReadout,
@@ -27,22 +28,25 @@ import {
 
 // Decorative SVG, not needed for the first paint: its own chunk after
 // hydration, behind a placeholder of the same size.
+const RigPlaceholder = () => (
+  <div
+    aria-hidden
+    className="w-full"
+    style={{
+      aspectRatio: `${EVM_ZONES_SIZE.width} / ${EVM_ZONES_SIZE.height}`,
+    }}
+  />
+)
 const EvmZonesRig = dynamic(() => import("./evm-zones-rig"), {
   ssr: false,
-  loading: () => (
-    <div
-      aria-hidden
-      className="w-full"
-      style={{
-        aspectRatio: `${EVM_ZONES_SIZE.width} / ${EVM_ZONES_SIZE.height}`,
-      }}
-    />
-  ),
+  loading: RigPlaceholder,
 })
 
 interface EvmZonesPlayerProps {
   /** Step to start on (0 = idle, 1-4), for stories. */
   initialStep?: number
+  /** Figure number on the page, if the page numbers its figures. */
+  fig?: number
 }
 
 /**
@@ -50,12 +54,14 @@ interface EvmZonesPlayerProps {
  * keeps what. Machine state fills and then clears, the code never changes,
  * and the storage write is all that survives.
  */
-export function EvmZonesPlayer({ initialStep = 0 }: EvmZonesPlayerProps) {
+export function EvmZonesPlayer({ initialStep = 0, fig }: EvmZonesPlayerProps) {
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
+  const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo } = useStepPlayer({
     lastStep: EVM_ZONES_LAST_STEP,
     initialStep,
+    paused: !inView.visible,
   })
   const view = getEvmZonesView(step)
   const format = (value: number) => numberFormat(locale).format(value)
@@ -64,15 +70,13 @@ export function EvmZonesPlayer({ initialStep = 0 }: EvmZonesPlayerProps) {
     EVM_ZONES_PARTS.map((part) => [part, t(`evm-zones-label-${part}`)])
   ) as Record<EvmZonesPart, ReactNode>
   // Each part's one-line definition, then the zone it belongs to.
-  const tooltips = Object.fromEntries(
+  const definitions = Object.fromEntries(
     EVM_ZONES_PARTS.map((part) => [
       part,
-      <>
-        <span className="block">{t(`evm-zones-tooltip-${part}`)}</span>
-        <span className="mt-1 block font-bold">
-          {t(`evm-zones-zone-${EVM_ZONE_OF[part]}`)}
-        </span>
-      </>,
+      t("evm-zones-definition-with-zone", {
+        definition: t(`evm-zones-definition-${part}`),
+        zone: t(`evm-zones-zone-${EVM_ZONE_OF[part]}`),
+      }),
     ])
   ) as Record<EvmZonesPart, ReactNode>
 
@@ -80,15 +84,34 @@ export function EvmZonesPlayer({ initialStep = 0 }: EvmZonesPlayerProps) {
     <InteractiveDiagram
       caption={t("evm-zones-caption")}
       description={t("evm-zones-description")}
+      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      title={t("evm-zones-title")}
+      status={t(`evm-zones-status-${view.motion}`)}
+      parts={Object.fromEntries(
+        EVM_ZONES_PARTS.map((part) => [
+          part,
+          { label: labels[part], definition: definitions[part] },
+        ])
+      )}
+      legend={[
+        { hue: "entity", label: t("diagram-legend-evm") },
+        { hue: "gas", label: t("diagram-legend-gas") },
+        { hue: "neutral", label: t("diagram-legend-structure") },
+      ]}
+      inViewRef={inView.ref}
+      paused={!inView.visible}
       illustration={
-        <div className="mx-auto w-full max-w-2xl py-1">
+        // The drawing loads once the diagram comes near the viewport.
+        inView.seen ? (
           <EvmZonesRig
             view={view}
             runKey={`step-${view.step}`}
             labels={labels}
-            tooltips={tooltips}
+            definitions={definitions}
           />
-        </div>
+        ) : (
+          <RigPlaceholder />
+        )
       }
       transport={
         <DiagramTransport

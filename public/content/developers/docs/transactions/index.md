@@ -14,7 +14,7 @@ To help you better understand this page, we recommend you first read [Accounts](
 
 An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.
 
-<TxApplyDiagram />
+<TxApplyDiagram fig={1} />
 
 _Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -170,7 +170,7 @@ The base fee will be burned **-0.00399 ETH**
 Validator keeps the tip **+0.000210 ETH**
 
 
-<GasTxDiagram fig={1} />
+<GasTxDiagram fig={2} />
 
 _Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 

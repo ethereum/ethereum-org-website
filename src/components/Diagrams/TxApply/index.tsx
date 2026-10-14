@@ -5,6 +5,8 @@ import { TxApplyPlayer } from "./tx-apply-player"
 export interface TxApplyDiagramProps {
   /** Step to start on (0 = idle, 1-4), for static stories. */
   initialStep?: number
+  /** Figure number on the page, shown as "Fig. N" in the figure header. */
+  fig?: number
   className?: string
 }
 
@@ -14,9 +16,13 @@ export interface TxApplyDiagramProps {
  * example: Bob sends Alice 1 ETH, pays a 0.0042 ETH fee (0.00399 ETH burned,
  * 0.00021 ETH tip to the validator), and his nonce goes up by one.
  */
-const TxApplyDiagram = ({ initialStep, className }: TxApplyDiagramProps) => (
+const TxApplyDiagram = ({
+  initialStep,
+  fig,
+  className,
+}: TxApplyDiagramProps) => (
   <div className={cn("not-prose my-8", className)}>
-    <TxApplyPlayer initialStep={initialStep} />
+    <TxApplyPlayer initialStep={initialStep} fig={fig} />
   </div>
 )
 

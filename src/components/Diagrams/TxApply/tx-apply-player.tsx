@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl"
 import type { ReactNode } from "react"
 
 import { useCountUp } from "@/components/Diagrams/anatomy"
+import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
   DiagramCaption,
   DiagramReadout,
@@ -32,22 +33,25 @@ import {
 
 // Decorative SVG, not needed for the first paint: its own chunk after
 // hydration, behind a placeholder of the same size.
+const RigPlaceholder = () => (
+  <div
+    aria-hidden
+    className="w-full"
+    style={{
+      aspectRatio: `${TX_APPLY_SIZE.width} / ${TX_APPLY_SIZE.height}`,
+    }}
+  />
+)
 const TxApplyRig = dynamic(() => import("./tx-apply-rig"), {
   ssr: false,
-  loading: () => (
-    <div
-      aria-hidden
-      className="w-full"
-      style={{
-        aspectRatio: `${TX_APPLY_SIZE.width} / ${TX_APPLY_SIZE.height}`,
-      }}
-    />
-  ),
+  loading: RigPlaceholder,
 })
 
 interface TxApplyPlayerProps {
   /** Step to start on (0 = idle, 1-4), for stories. */
   initialStep?: number
+  /** Figure number on the page, if the page numbers its figures. */
+  fig?: number
 }
 
 /**
@@ -55,11 +59,16 @@ interface TxApplyPlayerProps {
  * to t+1. Value flows to the recipient, the fee splits into a burn and a tip,
  * and the sender's nonce goes up by one.
  */
-export function TxApplyPlayer({ initialStep = 0 }: TxApplyPlayerProps) {
+export function TxApplyPlayer({ initialStep = 0, fig }: TxApplyPlayerProps) {
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
+  const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, prefersReducedMotion } =
-    useStepPlayer({ lastStep: TX_APPLY_LAST_STEP, initialStep })
+    useStepPlayer({
+      lastStep: TX_APPLY_LAST_STEP,
+      initialStep,
+      paused: !inView.visible,
+    })
   const view = getTxApplyView(step)
 
   const instant = prefersReducedMotion
@@ -97,8 +106,8 @@ export function TxApplyPlayer({ initialStep = 0 }: TxApplyPlayerProps) {
         : t(`tx-apply-label-${part}`),
     ])
   ) as Record<TxApplyPart, ReactNode>
-  const tooltips = Object.fromEntries(
-    TX_APPLY_PARTS.map((part) => [part, t(`tx-apply-tooltip-${part}`)])
+  const definitions = Object.fromEntries(
+    TX_APPLY_PARTS.map((part) => [part, t(`tx-apply-definition-${part}`)])
   ) as Record<TxApplyPart, ReactNode>
 
   const captionFor = (motion: string) => t(`tx-apply-step-${motion}`, amounts)
@@ -107,15 +116,34 @@ export function TxApplyPlayer({ initialStep = 0 }: TxApplyPlayerProps) {
     <InteractiveDiagram
       caption={t("tx-apply-caption")}
       description={t("tx-apply-description", amounts)}
+      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      title={t("tx-apply-title")}
+      status={t(`tx-apply-status-${view.motion}`, amounts)}
+      parts={Object.fromEntries(
+        TX_APPLY_PARTS.map((part) => [
+          part,
+          { label: labels[part], definition: definitions[part] },
+        ])
+      )}
+      legend={[
+        { hue: "entity", label: t("diagram-legend-accounts") },
+        { hue: "gas", label: t("diagram-legend-value") },
+        { hue: "neutral", label: t("diagram-legend-structure") },
+      ]}
+      inViewRef={inView.ref}
+      paused={!inView.visible}
       illustration={
-        <div className="mx-auto w-full max-w-2xl py-1">
+        // The drawing loads once the diagram comes near the viewport.
+        inView.seen ? (
           <TxApplyRig
             view={view}
             runKey={`step-${view.step}`}
             labels={labels}
-            tooltips={tooltips}
+            definitions={definitions}
           />
-        </div>
+        ) : (
+          <RigPlaceholder />
+        )
       }
       transport={
         <DiagramTransport

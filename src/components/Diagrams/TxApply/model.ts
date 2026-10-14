@@ -33,15 +33,16 @@ export const TX_APPLY_STEPS = [
 export type TxApplyStep = (typeof TX_APPLY_STEPS)[number]
 export const TX_APPLY_LAST_STEP = TX_APPLY_STEPS.length - 1
 
-/** Labelled parts of the drawing; `tip` is the pipe's branch to the validator. */
+/** Parts of the drawing; every one but `fee` carries a label. */
 export const TX_APPLY_PARTS = [
   "deck",
   "sender",
   "recipient",
   "slip",
-  "burn",
-  "tip",
   "pipe",
+  "fee",
+  "burn",
+  "validator",
 ] as const
 export type TxApplyPart = (typeof TX_APPLY_PARTS)[number]
 
