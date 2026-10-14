@@ -219,7 +219,7 @@ Python-এ একটি ফাংশন সংজ্ঞায়িত করা
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3 থেকে EVM-এ একটি ফাংশন কল করার সিনট্যাক্স হলো এটি: `<contract object>.functions.<function name>().call(<parameters>)`। প্যারামিটারগুলো হতে পারে EVM ফাংশনের প্যারামিটার (যদি থাকে; এখানে নেই) অথবা ব্লকচেইনের আচরণ পরিবর্তন করার জন্য [নেমড প্যারামিটার](https://en.wikipedia.org/wiki/Named_parameter)। এখানে আমরা একটি ব্যবহার করছি, `block_identifier`, যাতে আমরা যে [ব্লক নম্বরে](/developers/docs/apis/json-rpc/#default-block) রান করতে চাই তা নির্দিষ্ট করতে পারি।
+Web3 থেকে EVM-এ একটি ফাংশন কল করার সিনট্যাক্স হলো এটি: `<contract object>.functions.<function name>().call(<parameters>)`। প্যারামিটারগুলো হতে পারে EVM ফাংশনের প্যারামিটার (যদি থাকে; এখানে নেই) অথবা ব্লকচেইনের আচরণ পরিবর্তন করার জন্য [নেমড প্যারামিটার](https://en.wikipedia.org/wiki/Named_parameter)। এখানে আমরা একটি ব্যবহার করছি, `block_identifier`, যাতে আমরা যে [ব্লক নম্বরে](/developers/docs/apis/json-rpc/#block-parameter) রান করতে চাই তা নির্দিষ্ট করতে পারি।
 
 ফলাফল হলো [এই স্ট্রাক্ট, অ্যারে ফর্মে](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)। প্রথম মানটি হলো দুটি টোকেনের মধ্যে এক্সচেঞ্জ রেটের একটি ফাংশন।
 
