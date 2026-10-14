@@ -150,19 +150,36 @@ export const normalizeUrlForJsonLd = (
 export const getDevconTicketLink = (locale: string) =>
   `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/?mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral`
 
-/** Drops empty and non-https URLs; a repo off github.com gets the generic code icon. */
+const X_HANDLE = /^@?([A-Za-z0-9_]{1,15})$/
+
+/** http(s) URLs, or bare domains read as https; anything else is undefined. */
+const toWebUrl = (href: string | null | undefined): URL | undefined => {
+  const value = href?.trim()
+  if (!value) return undefined
+  try {
+    const hasScheme = /^[a-z][a-z0-9+.-]*:/i.test(value)
+    const url = new URL(hasScheme ? value : `https://${value}`)
+    const isWeb = url.protocol === "https:" || url.protocol === "http:"
+    return isWeb && url.hostname.includes(".") ? url : undefined
+  } catch {
+    return undefined
+  }
+}
+
+export const toWebHref = (href: string | null | undefined) =>
+  toWebUrl(href)?.href
+
+/**
+ * Normalises hand-entered links (bare domains, `@handle` for X) and drops
+ * anything that isn't http(s); a repo off github.com gets the generic code icon.
+ */
 export const toCatalogItemLink = (
   kind: CatalogItemLinkKind,
   href: string | null | undefined
 ): CatalogItemLink | undefined => {
-  if (!href) return undefined
-  let url: URL
-  try {
-    url = new URL(href.trim())
-  } catch {
-    return undefined
-  }
-  if (url.protocol !== "https:") return undefined
+  const handle = kind === "x" ? href?.trim().match(X_HANDLE)?.[1] : undefined
+  const url = toWebUrl(handle ? `https://x.com/${handle}` : href)
+  if (!url) return undefined
   const isGitHub = url.hostname.replace(/^www\./, "") === "github.com"
   return {
     kind: kind === "github" && !isGitHub ? "code" : kind,

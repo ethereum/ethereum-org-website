@@ -3,35 +3,27 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CatalogItemDescription from "@/components/CatalogItem/Description"
-import ContentFeedback from "@/components/ContentFeedback"
-import { Image } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Tag, TagsInlineText } from "@/components/ui/tag"
+import CatalogItemLayout, {
+  RelatedCatalogItems,
+} from "@/components/CatalogItem"
+import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   buildToolLabels,
   findToolBySlug,
-  getRelatedTools,
   getToolKey,
+  getToolNeighbours,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
+  toolToCatalogItem,
   toToolCard,
   withCategories,
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolCard from "../_components/ToolCard"
-import ToolLinks from "../_components/ToolLinks"
+import ToolLinkRows from "../_components/ToolLinkRows"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -47,12 +39,13 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon, toolDescriptions] =
+  const [data, { contributors }, t, tCommon, tItem, toolDescriptions] =
     await Promise.all([
       getDeveloperToolsData(),
       getAppPageContributorInfo("developers/tools", locale as Lang),
       getTranslations({ locale, namespace: "page-developers-tools" }),
       getTranslations({ locale, namespace: "common" }),
+      getTranslations({ locale, namespace: "component-catalog-item" }),
       getTranslations({
         locale,
         namespace: "page-developers-tools-descriptions",
@@ -69,132 +62,69 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const tool = findToolBySlug(allTools, toolKey)
   if (!tool) notFound()
 
-  const relatedTools = getRelatedTools(allTools, tool)
-  const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(
+  const labels = buildToolLabels(t, normalized.taxonomy)
+  const { next, related } = getToolNeighbours(allTools, tool)
+  const item = toolToCatalogItem(tool, {
+    locale,
     t,
-    normalized.taxonomy
-  )
-  const categoryLabel = categoryLabels[tool.categoryId] || tool.categoryId
+    tCommon,
+    tItem,
+    labels,
+    next,
+  })
 
   return (
     <>
       <PageJsonLD
         locale={locale}
         tool={tool}
-        categoryLabel={categoryLabel}
+        categoryLabel={
+          labels.categoryLabels[tool.categoryId] || tool.categoryId
+        }
         contributors={contributors}
       />
-      {/* Breadcrumb sits outside <main>, matching PageHero's eyebrow inset on
-          the catalog/category pages so it stays aligned across navigation. */}
-      <div className="px-page py-hero lg:py-hero-2x">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">ethereum.org</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/developers/">
-                {tCommon("developers")}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/developers/tools/">
-                {tCommon("tools")}
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-              /
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              <BreadcrumbPage>{tool.name}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
-
-      <main className="px-page pb-page">
-        <MainArticle className="flex flex-col gap-10">
-          {tool.banner_url && (
-            <Image
-              src={tool.banner_url}
-              alt=""
-              width={1200}
-              height={300}
-              className="h-40 w-full rounded-base object-cover sm:h-56"
-            />
-          )}
-
-          <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
-            {tool.thumbnail_url && (
-              <Image
-                src={tool.thumbnail_url}
-                alt={tool.name}
-                width={124}
-                height={124}
-                className="size-16 shrink-0 rounded-xl object-cover xl:size-32"
-              />
-            )}
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-col gap-2">
-                <div>
-                  <Tag status="tag">{categoryLabel}</Tag>
-                </div>
-                <h1 className="mt-0">{tool.name}</h1>
-                <p className="text-sm text-body-medium">
-                  {subcategoryLabels[tool.subcategory_id] ||
-                    tool.subcategory_id}
-                </p>
-                <TagsInlineText
-                  list={tool.tags.map((tag) => tagLabels[tag] || tag)}
-                  variant="light"
-                  className="lowercase"
+      <CatalogItemLayout
+        item={item}
+        related={
+          related.length > 0 && (
+            <RelatedCatalogItems
+              title={t("page-developers-tools-related-title")}
+            >
+              {related.map((relatedTool) => (
+                <ToolCard
+                  key={getToolKey(relatedTool)}
+                  tool={toToolCard(relatedTool)}
                 />
-              </div>
-              <ToolLinks
-                locale={locale}
-                tool={tool}
-                labels={{
-                  website: t("page-developers-tools-modal-website"),
-                  social: t("page-developers-tools-modal-social"),
-                }}
-              />
-            </div>
+              ))}
+            </RelatedCatalogItems>
+          )
+        }
+      >
+        {tool.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {tool.tags.map((tag) => (
+              <Tag key={tag} size="small" status="normal">
+                {labels.tagLabels[tag] || tag}
+              </Tag>
+            ))}
           </div>
-
-          {tool.description && (
-            <CatalogItemDescription
-              description={tool.description}
-              className="max-w-3xl"
-            />
-          )}
-
-          {relatedTools.length > 0 && (
-            <section className="space-y-4">
-              <h2 className="text-h4">
-                {t("page-developers-tools-related-title")}
-              </h2>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {relatedTools.map((related) => (
-                  <ToolCard
-                    key={getToolKey(related)}
-                    // Cards only read the slim projection; the detail itself
-                    // still renders from the full record above.
-                    tool={toToolCard(related)}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-        </MainArticle>
-
-        <ContentFeedback />
-      </main>
+        )}
+        <div className="flex flex-col gap-2 empty:hidden [&>div]:bg-background">
+          <ToolLinkRows
+            locale={locale}
+            tool={tool}
+            detailHref={`/developers/tools/${toolKey}/`}
+            shown={Infinity}
+            labels={{
+              repository: t("page-developers-tools-modal-repository"),
+              repositories: t("page-developers-tools-modal-repositories"),
+              package: t("page-developers-tools-modal-package"),
+              packages: t("page-developers-tools-modal-packages"),
+              more: (count) => t("page-developers-tools-modal-more", { count }),
+            }}
+          />
+        </div>
+      </CatalogItemLayout>
     </>
   )
 }
@@ -229,7 +159,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["developers", "tools", toolKey],
     title: tool.name,
-    description: tool.description.slice(0, 160),
+    description: (tool.descriptionStripped ?? "").slice(0, 160),
   })
 }
 

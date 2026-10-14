@@ -45,10 +45,8 @@
   "page-developers-tools-modal-packages": "Packages",
   "page-developers-tools-modal-repositories": "Repositories",
   "page-developers-tools-modal-repository": "Repository",
-  "page-developers-tools-modal-social": "Social",
-  "page-developers-tools-modal-website": "Website",
   "page-developers-tools-no-results": "No resources found. Try adjusting your search or filters.",
-  "page-developers-tools-related-title": "Related resources",
+  "page-developers-tools-related-title": "Similar tools",
   "page-developers-tools-results-label": "Resources found",
   "page-developers-tools-show-results": "Show resources",
   "page-developers-tools-suggest-resource-button": "Suggest a resource",
@@ -148,5 +146,10 @@
   "page-developers-tools-tag-vscode-extension": "VSCode extension",
   "page-developers-tools-tag-vyper": "Vyper",
   "page-developers-tools-tag-wallet": "Wallet",
-  "page-developers-tools-title": "Builder resources"
+  "page-developers-tools-title": "Builder resources",
+  "page-developers-tools-archived": "Archived",
+  "page-developers-tools-info-stars": "GitHub stars",
+  "page-developers-tools-info-downloads": "Weekly downloads",
+  "page-developers-tools-info-last-updated": "Last updated",
+  "page-developers-tools-info-license": "License"
 }

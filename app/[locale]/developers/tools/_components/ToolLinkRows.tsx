@@ -16,10 +16,10 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 /**
  * A handful of tools list dozens of repos (Hats Protocol has 31), which would
- * stretch the modal past the rest of the catalog's rhythm. Show the top few by
- * stars/downloads and send the rest to the standalone page.
+ * stretch the modal past the rest of the catalog's rhythm. The modal shows the
+ * top few by stars/downloads; the standalone page passes `shown` to list all.
  */
-const SHOWN = 3
+const DEFAULT_SHOWN = 3
 
 export type ToolLinkRowsLabels = {
   repository: string
@@ -87,19 +87,20 @@ const LinkList = ({
 
 /**
  * Repos and packages as spec rows rather than a growing grid of buttons, so a
- * tool with 31 repos reads the same as one with a single repo. The standalone
- * page keeps the exhaustive `ToolLinks` list.
+ * tool with 31 repos reads the same as one with a single repo.
  */
 const ToolLinkRows = ({
   locale,
   tool,
   detailHref,
   labels,
+  shown = DEFAULT_SHOWN,
 }: {
   locale: string
   tool: DeveloperToolWithCategory
   detailHref: string
   labels: ToolLinkRowsLabels
+  shown?: number
 }) => {
   const compactNumber = numberFormat(locale, { notation: "compact" })
   const repos = getRankedRepos(tool)
@@ -116,9 +117,9 @@ const ToolLinkRows = ({
           <LinkList
             icon="github"
             detailHref={detailHref}
-            moreLabel={labels.more(repos.length - SHOWN)}
-            hidden={repos.length - SHOWN}
-            entries={repos.slice(0, SHOWN).map((repo) => ({
+            moreLabel={labels.more(repos.length - shown)}
+            hidden={repos.length - shown}
+            entries={repos.slice(0, shown).map((repo) => ({
               href: repo.href,
               label: getRepoLabel(repo.href),
               count:
@@ -139,9 +140,9 @@ const ToolLinkRows = ({
           <LinkList
             icon="npm"
             detailHref={detailHref}
-            moreLabel={labels.more(packages.length - SHOWN)}
-            hidden={packages.length - SHOWN}
-            entries={packages.slice(0, SHOWN).map((pkg) => ({
+            moreLabel={labels.more(packages.length - shown)}
+            hidden={packages.length - shown}
+            entries={packages.slice(0, shown).map((pkg) => ({
               href: pkg.href,
               label: getPackageLabel(pkg.href),
               count:
