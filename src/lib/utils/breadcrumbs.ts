@@ -1,4 +1,5 @@
 import {
+  BREADCRUMB_ANCESTOR_LABEL_KEYS,
   BREADCRUMB_HUBS,
   BREADCRUMB_LABEL_KEYS,
   BREADCRUMB_PARENTS,
@@ -57,6 +58,11 @@ export const getBreadcrumbTrail = (slug: string): BreadcrumbTrailItem[] => {
 
   return [
     ...(insideHub ? [] : [{ href: ROOT, labelKey: null }]),
-    ...paths.map((href) => ({ href, labelKey: getBreadcrumbLabelKey(href) })),
+    ...paths.map((href, idx) => ({
+      href,
+      labelKey:
+        (idx < paths.length - 1 && BREADCRUMB_ANCESTOR_LABEL_KEYS[href]) ||
+        getBreadcrumbLabelKey(href),
+    })),
   ]
 }

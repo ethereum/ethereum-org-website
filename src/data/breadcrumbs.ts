@@ -25,6 +25,7 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   // About
   "/assets/": "/about/",
   "/foundation/": "/about/",
+  "/bug-bounty/": "/foundation/",
 
   // Community
   "/10years/": "/community/",
@@ -42,6 +43,7 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/layer-2/": "/learn/",
   "/quizzes/": "/learn/",
   "/resources/": "/learn/",
+  "/run-a-node/": "/learn/",
   "/smart-contracts/": "/learn/",
   "/start/": "/learn/",
   "/web3/": "/learn/",
@@ -52,9 +54,9 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/whitepaper/": "/learn/",
   "/zero-knowledge-proofs/": "/learn/",
   "/get-eth/": "/what-is-ether/",
+  "/wrapped-eth/": "/what-is-ether/",
 
   // Roadmap
-  "/bug-bounty/": "/roadmap/",
   "/ethereum-forks/": "/roadmap/",
   "/governance/": "/roadmap/",
   "/eips/": "/governance/",
@@ -92,5 +94,12 @@ export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
   "/layer-2/learn/": "breadcrumb-overview",
   "/reports/trillion-dollar-security/":
     "breadcrumb-security-challenges-overview",
+  "/real-world-assets/": "breadcrumb-rwa",
   "/resources/": "breadcrumb-resources",
+  "/what-is-ether/": "breadcrumb-what-is-ether",
+}
+
+/** Label override when the page appears as an ancestor rather than the leaf */
+export const BREADCRUMB_ANCESTOR_LABEL_KEYS: Record<string, string> = {
+  "/apps/": "breadcrumb-all-apps",
 }

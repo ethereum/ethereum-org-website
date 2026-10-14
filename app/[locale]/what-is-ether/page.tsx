@@ -614,7 +614,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </ListItem>
           </UnorderedList>
           <p>{t("page-what-is-ether-what-is-wrapping-eth-description-6")}</p>
-          <LinkWithArrow href="/what-is-ether/wrapped-eth/">
+          <LinkWithArrow href="/wrapped-eth/">
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>

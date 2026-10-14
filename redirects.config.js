@@ -10,7 +10,6 @@ module.exports = [
   ["/ether", "/what-is-ether/"],
   ["/eth", "/what-is-ether/"],
   ["/eth/supply", "/what-is-ether/supply/"],
-  ["/wrapped-eth", "/what-is-ether/wrapped-eth/"],
   ["/token", "/developers/"],
   ["/crowdsale", "/developers/"],
   ["/cli", "/developers/"],

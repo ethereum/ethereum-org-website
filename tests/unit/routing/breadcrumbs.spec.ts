@@ -81,6 +81,13 @@ test.describe("getBreadcrumbTrail", () => {
     ])
   })
 
+  test("uses the ancestor label override only above the leaf", () => {
+    expect(getBreadcrumbTrail("/apps/")[1].labelKey).toBe("apps")
+    expect(getBreadcrumbTrail("/apps/uniswap")[1].labelKey).toBe(
+      "breadcrumb-all-apps"
+    )
+  })
+
   test("renders nothing for the homepage", () => {
     expect(getBreadcrumbTrail("/")).toEqual([])
   })
