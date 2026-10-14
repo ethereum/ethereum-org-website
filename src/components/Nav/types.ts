@@ -18,6 +18,7 @@ export type NavSectionKey =
   | "build"
   | "participate"
   | "research"
+  | "organizations"
 
 export type NavSectionDetail = {
   label: string

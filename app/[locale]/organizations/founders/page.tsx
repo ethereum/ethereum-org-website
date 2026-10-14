@@ -1,5 +1,6 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
+import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
@@ -22,6 +23,8 @@ import { Tag } from "@/components/ui/tag"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import OrganizationPathways from "../_components/organization-pathways"
+
 import Alliance from "./logos/alliance.svg"
 import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
@@ -32,11 +35,11 @@ import EthGlobal from "./logos/ethglobal.svg"
 import Kernel from "./logos/kernel.svg"
 import Optimism from "./logos/optimism.svg"
 import Polygon from "./logos/polygon.svg"
-import ProtogolGuild from "./logos/protocol-guild.svg"
+import ProtocolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
 import PageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/upgrades/merge.png"
+import heroImg from "@/public/images/organizations/startup-warehouse-founders-workspace.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -277,7 +280,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         },
         {
           name: "Protocol Guild",
-          Logo: ProtogolGuild,
+          Logo: ProtocolGuild,
           tags: ["active", "fundraising"],
           description: t(
             "page-founders-partnerships-protocol-guild-description"
@@ -315,7 +318,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   const { contributors } = await getAppPageContributorInfo(
-    "founders",
+    "organizations/founders",
     locale as Lang
   )
 
@@ -324,7 +327,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <PageHero
-        breadcrumbs={{ slug: "founders" }}
+        breadcrumbs={{ slug: "organizations/founders" }}
         heroImg={heroImg}
         title={t("page-founders-title")}
         description={t("page-founders-description")}
@@ -418,6 +421,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             ))}
           </Tabs>
         </Section>
+
+        <OrganizationPathways pathways={["small-business", "enterprise"]} />
       </MainArticle>
     </>
   )
@@ -425,7 +430,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
-}) {
+}): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
 
@@ -435,10 +440,10 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["founders"],
+    slug: ["organizations", "founders"],
     title: t("page-founders-metadata-title"),
     description: t("page-founders-metadata-description"),
-    image: "/images/upgrades/merge.png",
+    image: "/images/organizations/startup-warehouse-founders-workspace.png",
   })
 }
 export default Page
