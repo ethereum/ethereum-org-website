@@ -3749,10 +3749,19 @@ function fixBackslashBeforeClosingTag(content: string): {
 /**
  * Strip empty heading anchors ({#} or {# }) from markdown headings.
  *
- * English h5 headings have no anchor, but the pipeline can inject an empty
- * {#} onto translated h5 headings. MDX parses {#} as a JS expression and
- * acorn rejects it, breaking the build (PR #18438 hit 70 files / 24 locales).
- * An empty {#} is never valid, so stripping it is always correct.
+ * English requires an anchor on h1-h4 only, so an h5 legitimately has none;
+ * the translation prompt tells the model to preserve anchors and it invents an
+ * empty one. MDX parses {#} as a JS expression and acorn rejects it, breaking
+ * the build (PR #18438 hit 70 files / 24 locales).
+ *
+ * Scans line by line, tracking fenced blocks. The previous implementation
+ * split the file on a code-block regex whose inline-code alternative,
+ * `` `[^`]+` ``, matches across newlines: one stray backtick paired with the
+ * next one anywhere later in the file, and every heading in between was
+ * treated as code and skipped. That is why PR #19474 stripped 9 of the 11
+ * anchors in `developers/docs/networks` and still failed the gate on the other
+ * two, across all 24 locales. A heading is a line construct and real inline
+ * code never spans lines, so lines are the right unit.
  *
  * Example: "##### Operating system {#}" -> "##### Operating system"
  */
@@ -3760,24 +3769,28 @@ function fixEmptyHeadingAnchors(content: string): {
   content: string
   fixCount: number
 } {
+  const lines = content.split("\n")
+  const fenceRe = /^\s*(```|~~~)/
+  let inFence = false
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
-
-  for (let i = 0; i < parts.length; i++) {
-    if (i % 2 === 1) continue // Skip code blocks
-
-    parts[i] = parts[i].replace(
-      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/gm,
-      (_, heading) => {
-        fixCount++
-        return heading
-      }
+  for (let i = 0; i < lines.length; i++) {
+    if (fenceRe.test(lines[i])) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const fixed = lines[i].replace(
+      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/,
+      "$1"
     )
+    if (fixed !== lines[i]) {
+      lines[i] = fixed
+      fixCount++
+    }
   }
 
-  return { content: parts.join(""), fixCount }
+  return { content: fixCount ? lines.join("\n") : content, fixCount }
 }
 
 function fixJunkAfterHeadingAnchors(content: string): {
