@@ -6,27 +6,26 @@ import { cn } from "@/lib/utils/cn"
 
 import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
-type ToolDescriptionProps = {
+type CatalogItemDescriptionProps = {
   description: string
   className?: string
 }
 
 /**
- * Tool descriptions in the builder-resources catalog are authored in markdown
- * (bold, lists, links, the occasional heading), so render them as MDX to keep
- * that formatting. The catalog is community-submitted: if a description holds
- * something MDX can't parse (a stray `<` or `{`), fall back to the raw text so
- * a single bad entry can't break the page.
+ * Descriptions are markdown (plain text is valid markdown), and some are
+ * community-submitted: if one holds something MDX can't parse (a stray `<` or
+ * `{`), fall back to the raw text so a single bad entry can't break the page.
  */
-const ToolDescription = async ({
+const CatalogItemDescription = async ({
   description,
   className,
-}: ToolDescriptionProps) => {
+}: CatalogItemDescriptionProps) => {
   try {
     const content = await renderSimpleMarkdown(description, {
-      // Demote any headings: the tool name owns the page's heading hierarchy,
-      // and anchored headings don't belong inside a description block.
-      h1: htmlElements.h2,
+      // Headings sit under the "About {name}" h2, so nothing may outrank an h3.
+      h1: htmlElements.h3,
+      h2: htmlElements.h3,
+      h3: htmlElements.h4,
       // Description images come from external repos with no known dimensions.
       // The default MarkdownImage feeds those into next/image, which throws on
       // the resulting NaN width — so render a plain responsive <img> instead.
@@ -42,10 +41,21 @@ const ToolDescription = async ({
           />
         ) : null,
     })
-    return <div className={cn("flow", className)}>{content}</div>
+    return (
+      <div
+        dir="auto"
+        className={cn("flow [&_h3]:text-h5 [&_h4]:text-h6", className)}
+      >
+        {content}
+      </div>
+    )
   } catch {
-    return <p className={cn("whitespace-pre-line", className)}>{description}</p>
+    return (
+      <p dir="auto" className={cn("whitespace-pre-line", className)}>
+        {description}
+      </p>
+    )
   }
 }
 
-export default ToolDescription
+export default CatalogItemDescription

@@ -7,6 +7,7 @@ import type { Lang } from "@/lib/types"
 import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
 import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
+import CatalogItemDescription from "@/components/CatalogItem/Description"
 import Twitter from "@/components/icons/twitter.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
@@ -21,7 +22,6 @@ import {
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
-import ToolDescription from "./ToolDescription"
 import ToolLinkRows from "./ToolLinkRows"
 
 import { getPathname } from "@/i18n/navigation"
@@ -79,7 +79,7 @@ const InterceptedToolDetail = async ({
       closeLabel={tCommon("close")}
     >
       <div className="flex flex-col gap-6">
-        <ToolDescription description={tool.description} />
+        <CatalogItemDescription description={tool.description} />
 
         <div className="flex flex-col gap-2">
           <DetailRow label={t("page-developers-tools-modal-category")}>

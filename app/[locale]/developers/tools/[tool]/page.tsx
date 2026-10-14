@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import CatalogItemDescription from "@/components/CatalogItem/Description"
 import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -30,7 +31,6 @@ import {
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolCard from "../_components/ToolCard"
-import ToolDescription from "../_components/ToolDescription"
 import ToolLinks from "../_components/ToolLinks"
 
 import PageJsonLD from "./page-jsonld"
@@ -168,7 +168,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
           </div>
 
           {tool.description && (
-            <ToolDescription
+            <CatalogItemDescription
               description={tool.description}
               className="max-w-3xl"
             />
