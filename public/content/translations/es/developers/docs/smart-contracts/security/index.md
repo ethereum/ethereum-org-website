@@ -35,6 +35,7 @@ Registrar una sola dirección como `Owner` en un contrato inteligente introduce 
 En el control de acceso basado en roles, el acceso a funciones sensibles se distribuye entre un conjunto de participantes de confianza. Por ejemplo, una cuenta puede ser responsable de la acuñación de tokens, mientras que otra cuenta realiza actualizaciones o pausa el contrato. Descentralizar el control de acceso de esta manera elimina los puntos únicos de falla y reduce los supuestos de confianza para los usuarios.
 
 ##### Uso de billeteras multifirma
+
 Otro enfoque para implementar un control de acceso seguro es usar una [cuenta multifirma](/developers/docs/smart-contracts/#multisig) para administrar un contrato. A diferencia de una EOA normal, las cuentas multifirma son propiedad de múltiples entidades y requieren firmas de un número mínimo de cuentas (por ejemplo, 3 de 5) para ejecutar transacciones.
 
 El uso de una multifirma para el control de acceso introduce una capa adicional de seguridad, ya que las acciones en el contrato objetivo requieren el consentimiento de múltiples partes. Esto es particularmente útil si es necesario usar el patrón Ownable, ya que hace que sea más difícil para un atacante o un infiltrado malicioso manipular funciones sensibles del contrato con fines maliciosos.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 La inmutabilidad del código que se ejecuta en la [Máquina Virtual de Ethereum](/developers/docs/evm/) significa que los contratos inteligentes exigen un mayor nivel de evaluación de calidad durante la fase de desarrollo. Probar su contrato exhaustivamente y observarlo en busca de resultados inesperados mejorará en gran medida la seguridad y protegerá a sus usuarios a largo plazo.
 
-El método habitual es escribir pequeñas pruebas unitarias utilizando datos simulados que se espera que el contrato reciba de los usuarios. Las [pruebas unitarias](/developers/docs/smart-contracts/testing/#unit-testing) son buenas para probar la funcionalidad de ciertas funciones y asegurar que un contrato inteligente funcione como se espera.
+El método habitual es escribir pequeñas pruebas unitarias utilizando datos simulados que se espera que el contrato reciba de los usuarios. Las [pruebas unitarias](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) son buenas para probar la funcionalidad de ciertas funciones y asegurar que un contrato inteligente funcione como se espera.
 
 Desafortunadamente, las pruebas unitarias son mínimamente efectivas para mejorar la seguridad de los contratos inteligentes cuando se usan de forma aislada. Una prueba unitaria podría demostrar que una función se ejecuta correctamente para datos simulados, pero las pruebas unitarias solo son tan efectivas como las pruebas que se escriben. Esto dificulta la detección de casos extremos omitidos y vulnerabilidades que podrían romper la seguridad de su contrato inteligente.
 
@@ -306,6 +307,7 @@ No hay nada de malo aquí, excepto que `Attacker` tiene otra función que llama 
 El resumen es que debido a que el saldo de la persona que llama no se establece en 0 hasta que se completa la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán a la persona que llama retirar su saldo varias veces. Este tipo de ataque se puede usar para drenar los fondos de un contrato inteligente, como lo que sucedió en el [hackeo de la DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes en la actualidad, como muestran las [listas públicas de exploits de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cómo prevenir los ataques de reentrada
+
 Un enfoque para lidiar con la reentrada es seguir el [patrón de verificaciones-efectos-interacciones](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Este patrón ordena la ejecución de las funciones de manera que el código que realiza las verificaciones necesarias antes de avanzar con la ejecución va primero, seguido del código que manipula el estado del contrato, y el código que interactúa con otros contratos o EOA llega al final.
 
 El patrón de verificaciones-efectos-interacciones se usa en una versión revisada del contrato `Victim` que se muestra a continuación:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Cómo prevenir los desbordamientos de enteros (underflows y overflows)
+
 A partir de la versión 0.8.0, el compilador de Solidity rechaza el código que da como resultado desbordamientos de enteros (underflows y overflows). Sin embargo, los contratos compilados con una versión de compilador inferior deben realizar verificaciones en funciones que involucren operaciones aritméticas o usar una biblioteca (por ejemplo, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) que verifique el desbordamiento (underflow/overflow).
 
 #### Manipulación de oráculos {#oracle-manipulation}
@@ -447,6 +450,7 @@ Los precios de los DEX a menudo son precisos, en gran parte debido a que los arb
 Por ejemplo, un atacante podría inflar artificialmente el precio al contado de un activo obteniendo un préstamo relámpago justo antes de interactuar con su contrato de préstamo. Consultar el DEX por el precio del activo devolvería un valor más alto de lo normal (debido a la gran "orden de compra" del atacante que sesga la demanda del activo), lo que le permitiría pedir prestado más de lo que debería. Tales "ataques de préstamos relámpago" se han utilizado para explotar la dependencia de los oráculos de precios entre las aplicaciones DeFi, costando a los protocolos millones en fondos perdidos.
 
 ##### Cómo prevenir la manipulación de oráculos
+
 El requisito mínimo para [evitar la manipulación de oráculos](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) es usar una red de oráculos descentralizada que consulte información de múltiples fuentes para evitar puntos únicos de falla. En la mayoría de los casos, los oráculos descentralizados tienen incentivos criptoeconómicos incorporados para alentar a los nodos del oráculo a informar información correcta, haciéndolos más seguros que los oráculos centralizados.
 
 Si planea consultar un oráculo en cadena para conocer los precios de los activos, considere usar uno que implemente un mecanismo de precio promedio ponderado en el tiempo (TWAP). Un [oráculo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) consulta el precio de un activo en dos puntos diferentes en el tiempo (que puede modificar) y calcula el precio al contado en función del promedio obtenido. Elegir períodos de tiempo más largos protege su protocolo contra la manipulación de precios, ya que las grandes órdenes ejecutadas recientemente no pueden afectar los precios de los activos.
