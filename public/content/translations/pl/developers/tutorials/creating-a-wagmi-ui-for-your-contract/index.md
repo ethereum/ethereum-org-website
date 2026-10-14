@@ -160,21 +160,21 @@ Identyfikator łańcucha Sepolia.
 function App() {
 ```
 
-To standardowy sposób tworzenia komponentu React: definiujemy funkcję, która jest wywoływana za każdym razem, gdy musi zostać wyrenderowana. Ta funkcja zazwyczaj zawiera kod TypeScript lub JavaScript, po którym następuje instrukcja `return` zwracająca kod JSX.
+Jest to standardowy sposób tworzenia komponentu React: definiujemy funkcję, która jest wywoływana za każdym razem, gdy musi zostać wyrenderowana. Funkcja ta zazwyczaj zawiera kod TypeScript lub JavaScript, po którym następuje instrukcja `return` zwracająca kod JSX.
 
 ```tsx
   const connection = useConnection()
 ```
 
-Używamy [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection), aby uzyskać informacje związane z bieżącym połączeniem, takie jak adres i `chainId`.
+Użyj [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection), aby uzyskać informacje związane z bieżącym połączeniem, takie jak adres i `chainId`.
 
-Zgodnie z konwencją, w React funkcje nazywane `use...` to [hooki](https://www.w3schools.com/react/react_hooks.asp). Te funkcje nie tylko zwracają dane do komponentu; zapewniają również jego ponowne wyrenderowanie (funkcja komponentu jest wykonywana ponownie, a jej wynik zastępuje poprzedni w HTML), gdy te dane ulegną zmianie.
+Zgodnie z konwencją, w bibliotece React funkcje o nazwach zaczynających się od `use...` to [hooki](https://www.w3schools.com/react/react_hooks.asp). Funkcje te nie tylko zwracają dane do komponentu; zapewniają również jego ponowne wyrenderowanie (funkcja komponentu jest wykonywana ponownie, a jej wynik zastępuje poprzedni w kodzie HTML), gdy te dane ulegną zmianie.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
 ```
 
-Używamy [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect), aby uzyskać informacje o połączeniu z portfelem.
+Użyj [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect), aby uzyskać informacje o połączeniu z portfelem.
 
 ```tsx
   const { disconnect } = useDisconnect()
@@ -186,13 +186,13 @@ Używamy [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect), aby uzyska
   const { switchChain } = useSwitchChain()
 ```
 
-[Ten hook](https://wagmi.sh/react/api/hooks/useSwitchChain) pozwala nam przełączać łańcuchy.
+[Ten hook](https://wagmi.sh/react/api/hooks/useSwitchChain) pozwala nam na przełączanie łańcuchów.
 
 ```tsx
   useEffect(() => {
 ```
 
-Hook Reacta [`useEffect`](https://react.dev/reference/react/useEffect) pozwala na uruchomienie funkcji za każdym razem, gdy zmienia się wartość zmiennej, w celu synchronizacji systemu zewnętrznego.
+Hook React [`useEffect`](https://react.dev/reference/react/useEffect) pozwala na uruchomienie funkcji za każdym razem, gdy zmienia się wartość zmiennej, w celu zsynchronizowania systemu zewnętrznego.
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -202,20 +202,20 @@ Hook Reacta [`useEffect`](https://react.dev/reference/react/useEffect) pozwala n
     }
 ```
 
-Jeśli jesteśmy połączeni, ale nie z blockchainem Sepolia, przełączamy się na sieć Sepolia.
+Jeśli jesteśmy połączeni, ale nie z blockchainem Sepolia, przełącz się na sieć Sepolia.
 
 ```tsx
   }, [connection.status, connection.chainId])
 ```
 
-Uruchamiamy funkcję ponownie za każdym razem, gdy zmienia się status połączenia lub chainId połączenia.
+Uruchom funkcję ponownie za każdym razem, gdy zmieni się status połączenia lub `chainId` połączenia.
 
 ```tsx
   return (
     <>
 ```
 
-JSX komponentu React _musi_ zwracać pojedynczy komponent HTML. Kiedy mamy wiele komponentów i nie potrzebujemy kontenera, aby je wszystkie owinąć, używamy pustego komponentu (`<> ... </>`), aby połączyć je w jeden komponent.
+Kod JSX komponentu React _musi_ zwracać pojedynczy komponent HTML. Kiedy mamy wiele komponentów i nie potrzebujemy kontenera, aby je wszystkie opakować, używamy pustego komponentu (`<> ... </>`), aby połączyć je w jeden komponent.
 
 ```tsx
       <h2>Connection</h2>
@@ -229,15 +229,15 @@ JSX komponentu React _musi_ zwracać pojedynczy komponent HTML. Kiedy mamy wiele
 </div>
 ```
 
-Dostarczamy informacje o bieżącym połączeniu. W JSX `{<expression>}` oznacza ewaluację wyrażenia jako JavaScript.
+Podaj informacje o bieżącym połączeniu. W JSX `{<wyrażenie>}` oznacza obliczenie wyrażenia jako JavaScript.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-Składnia `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+Składnia `{<warunek> && <wartość>}` oznacza „jeśli warunek jest prawdziwy (`true`), oblicz wartość; jeśli nie jest, oblicz jako fałsz (`false`)”.
 
-To standardowy sposób umieszczania instrukcji warunkowych if wewnątrz JSX.
+Jest to standardowy sposób umieszczania instrukcji warunkowych if wewnątrz JSX.
 
 ```tsx
         <div>
@@ -247,7 +247,7 @@ To standardowy sposób umieszczania instrukcji warunkowych if wewnątrz JSX.
 
 JSX jest zgodny ze standardem XML, który jest bardziej rygorystyczny niż HTML. Jeśli znacznik nie ma odpowiadającego mu znacznika zamykającego, _musi_ mieć ukośnik (`/`) na końcu, aby go zakończyć.
 
-Tutaj mamy dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera kod HTML komunikujący się z kontraktem) oraz [`<hr />` dla linii poziomej](https://www.w3schools.com/tags/tag_hr.asp).
+Mamy tutaj dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera kod HTML komunikujący się z kontraktem) oraz [`<hr />` dla linii poziomej](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -258,13 +258,13 @@ Tutaj mamy dwa takie znaczniki: `<Greeter />` (który w rzeczywistości zawiera 
       )}
 ```
 
-Jeśli użytkownik kliknie ten przycisk, wywołujemy funkcję `disconnect`.
+Jeśli użytkownik kliknie ten przycisk, wywołaj funkcję `disconnect`.
 
 ```tsx
       {connection.status !== 'connected' && (
 ```
 
-Jeśli _nie_ jesteśmy połączeni, pokazujemy niezbędne opcje do połączenia z portfelem.
+Jeśli _nie_ jesteśmy połączeni, pokaż niezbędne opcje, aby połączyć się z portfelem.
 
 ```tsx
         <div>
@@ -272,7 +272,7 @@ Jeśli _nie_ jesteśmy połączeni, pokazujemy niezbędne opcje do połączenia 
           {connectors.map((connector) => (
 ```
 
-W `connectors` mamy listę konektorów. Używamy [`map`](https://www.w3schools.com/jsref/jsref_map.asp), aby zamienić ją w listę przycisków JSX do wyświetlenia.
+W `connectors` mamy listę konektorów. Używamy funkcji [`map`](https://www.w3schools.com/jsref/jsref_map.asp), aby przekształcić ją w listę przycisków JSX do wyświetlenia.
 
 ```tsx
             <button
@@ -300,7 +300,7 @@ Przyciski konektorów.
       )}
 ```
 
-Dostarczamy dodatkowe informacje. Składnia wyrażenia `<variable>?.<field>` mówi JavaScriptowi, że jeśli zmienna jest zdefiniowana, ma ewaluować do tego pola. Jeśli zmienna nie jest zdefiniowana, to wyrażenie ewaluuje do `undefined`.
+Podaj dodatkowe informacje. Składnia wyrażenia `<zmienna>?.<pole>` mówi językowi JavaScript, że jeśli zmienna jest zdefiniowana, należy obliczyć to pole. Jeśli zmienna nie jest zdefiniowana, to wyrażenie to jest obliczane jako `undefined`.
 
 Wyrażenie `error.message`, gdy nie ma błędu, zgłosiłoby wyjątek. Użycie `error?.message` pozwala nam uniknąć tego problemu.
 
