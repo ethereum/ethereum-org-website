@@ -10,7 +10,7 @@ lang: ar
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>أيها المؤسسون، هل تحتاجون إلى مساعدة في تسريع أعمالكم؟ [توجهوا إلى دعم المؤسسين](/founders/)</div>
+<div>أيها المؤسسون، هل تحتاجون إلى مساعدة في تسريع أعمالكم؟ [توجهوا إلى دعم المؤسسين](/organizations/founders/)</div>
 </Alert>
 
 ## نظام إيثيريوم البيئي الواسع {#broad-ethereum-ecosystem}
