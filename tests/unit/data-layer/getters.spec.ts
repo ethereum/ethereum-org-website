@@ -39,6 +39,22 @@ test.describe("Data-Layer Getters", () => {
         expect(result.value).toBeGreaterThan(0)
       }
     })
+
+    test("getEthereumStablecoinsMcapData returns MetricReturnData or null", async () => {
+      const result = await dataLayer.getEthereumStablecoinsMcapData()
+      if (result !== null && "value" in result) {
+        expect(typeof result.value).toBe("number")
+        expect(result.value).toBeGreaterThan(0)
+      }
+    })
+
+    test("getTotalValueLockedData returns MetricReturnData or null", async () => {
+      const result = await dataLayer.getTotalValueLockedData()
+      if (result !== null && "value" in result) {
+        expect(typeof result.value).toBe("number")
+        expect(result.value).toBeGreaterThan(0)
+      }
+    })
   })
 
   test.describe("Layer 2 Data", () => {

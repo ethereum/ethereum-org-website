@@ -248,3 +248,15 @@ test.describe("Storybook title taxonomy", () => {
     ).toEqual([])
   })
 })
+
+test("stories import images instead of loading /images/ by URL", () => {
+  // Storybook doesn't serve public/images (see staticDirs in .storybook/main.ts).
+  const offenders = storyFiles.filter((f) =>
+    /["'`]\/images\//.test(readFileSync(path.join(REPO_ROOT, f), "utf8"))
+  )
+  expect(
+    offenders,
+    'import the image (import logo from "@/public/images/...") so it renders ' +
+      "and Chromatic traces changes to it"
+  ).toEqual([])
+})

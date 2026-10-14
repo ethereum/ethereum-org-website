@@ -1,3 +1,50 @@
+diff --git a/dist/esm/DocSearchModal.d.ts b/dist/esm/DocSearchModal.d.ts
+index 7160bd94309db18d72c48213a5d8347ec1d77031..3e19184799dace00979e848eafd261e238b89003 100644
+--- a/dist/esm/DocSearchModal.d.ts
++++ b/dist/esm/DocSearchModal.d.ts
+@@ -7,8 +7,10 @@ export declare type ModalTranslations = Partial<{
+     footer: FooterTranslations;
+ }> & ScreenStateTranslations;
+ export declare type DocSearchModalProps = DocSearchProps & {
++    /** `null` leaves no item highlighted until the reader arrows into the list. */
++    defaultActiveItemId?: number | null;
+     initialScrollY: number;
+     onClose?: () => void;
+     translations?: ModalTranslations;
+ };
+-export declare function DocSearchModal({ typesenseCollectionName, typesenseServerConfig, typesenseSearchParameters, placeholder, onClose, transformItems, hitComponent, resultsFooterComponent, navigator, initialScrollY, transformSearchClient, disableUserPersonalization, initialQuery: initialQueryFromProp, translations, getMissingResultsUrl, }: DocSearchModalProps): JSX.Element;
++export declare function DocSearchModal({ typesenseCollectionName, typesenseServerConfig, typesenseSearchParameters, placeholder, onClose, transformItems, hitComponent, resultsFooterComponent, navigator, defaultActiveItemId, initialScrollY, transformSearchClient, disableUserPersonalization, initialQuery: initialQueryFromProp, translations, getMissingResultsUrl, }: DocSearchModalProps): JSX.Element;
+diff --git a/dist/esm/DocSearchModal.js b/dist/esm/DocSearchModal.js
+index d71026f3c7354866e26b3947ddf8e7de9d1fcd99..8398c4bb361632f26d2ba8439754a3f4bf90f9ee 100644
+--- a/dist/esm/DocSearchModal.js
++++ b/dist/esm/DocSearchModal.js
+@@ -34,6 +34,8 @@ export function DocSearchModal(_ref) {
+       return null;
+     } : _ref$resultsFooterCom,
+     navigator = _ref.navigator,
++    _ref$defaultActiveIte = _ref.defaultActiveItemId,
++    defaultActiveItemId = _ref$defaultActiveIte === void 0 ? 0 : _ref$defaultActiveIte,
+     _ref$initialScrollY = _ref.initialScrollY,
+     initialScrollY = _ref$initialScrollY === void 0 ? 0 : _ref$initialScrollY,
+     _ref$transformSearchC = _ref.transformSearchClient,
+@@ -98,7 +100,7 @@ export function DocSearchModal(_ref) {
+   var autocomplete = React.useMemo(function () {
+     return createAutocomplete({
+       id: 'docsearch',
+-      defaultActiveItemId: 0,
++      defaultActiveItemId: defaultActiveItemId,
+       placeholder: placeholder,
+       openOnFocus: true,
+       initialState: {
+@@ -232,7 +234,7 @@ export function DocSearchModal(_ref) {
+         });
+       }
+     });
+-  }, [typesenseCollectionName, typesenseSearchParameters, searchClient, onClose, recentSearches, favoriteSearches, saveRecentSearch, initialQuery, placeholder, navigator, transformItems, disableUserPersonalization]);
++  }, [typesenseCollectionName, typesenseSearchParameters, searchClient, onClose, recentSearches, favoriteSearches, saveRecentSearch, initialQuery, placeholder, navigator, transformItems, disableUserPersonalization, defaultActiveItemId]);
+   var getEnvironmentProps = autocomplete.getEnvironmentProps,
+     getRootProps = autocomplete.getRootProps,
+     refresh = autocomplete.refresh;
 diff --git a/dist/esm/constants.d.ts b/dist/esm/constants.d.ts
 index b44c01456dad31b63f2d7f618f79073775631528..3d4bef816951d268335da4f71b6489de74d407d9 100644
 --- a/dist/esm/constants.d.ts
@@ -15,7 +62,7 @@ index 9325780c8ad4375b6c37b20f26954bca2be8d6d5..175cf4ca30430a051d0dfb1f48b81af9
 +export var MAX_QUERY_SIZE = 512;
 \ No newline at end of file
 diff --git a/dist/esm/utils/groupBy.js b/dist/esm/utils/groupBy.js
-index b6ce1dc626dca397261f0c7af44f34ed93fbc37f..1975bafcb2c267d13d0bb5f27a94d40b3ed33fac 100644
+index b6ce1dc626dca397261f0c7af44f34ed93fbc37f..0751d3f26b75166cc57d9dd5c1c1f3c614b30752 100644
 --- a/dist/esm/utils/groupBy.js
 +++ b/dist/esm/utils/groupBy.js
 @@ -7,7 +7,11 @@ export function groupBy(values, predicate) {

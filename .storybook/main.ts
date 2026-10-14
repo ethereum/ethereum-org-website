@@ -27,7 +27,11 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
   ],
 
-  staticDirs: ["../public"],
+  // Not public/images: a staticDir change bails TurboSnap, imported images trace per story.
+  staticDirs: [
+    { from: "../public/content", to: "/content" },
+    { from: "../public/audio", to: "/audio" },
+  ],
 
   framework: {
     name: "@storybook/nextjs",

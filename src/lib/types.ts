@@ -617,8 +617,9 @@ export type L2beatData = {
     string,
     {
       stage: string
+      type?: "layer2" | "layer3"
       tvl: { total: number }
-      tvs: { breakdown: { total: number } }
+      tvs: { breakdown: { total: number; stablecoin?: number } }
       risks: Array<{ name: string; sentiment: string }>
     }
   >
@@ -1399,10 +1400,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null

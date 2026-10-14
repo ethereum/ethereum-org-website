@@ -18,8 +18,6 @@ import { Section, SectionHeader } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
@@ -87,7 +85,7 @@ const GetStartedGrid = async ({
       ],
       bulletColor: "bg-accent-c",
       cta: t("page-index-get-started-enterprise-cta"),
-      href: ENTERPRISE_ETHEREUM_URL,
+      href: "/organizations/enterprise/",
       image: enterpriseImage,
     },
   ]
