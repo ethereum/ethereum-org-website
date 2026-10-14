@@ -1,0 +1,133 @@
+/**
+ * The two deterministic model artifacts that blocked 27 file+locale pairs in
+ * PR #19474: an invented empty `{#}` heading anchor, and a frontmatter value
+ * returned with its YAML key still attached.
+ */
+
+import { parseDocument } from "yaml"
+import { expect, test } from "@playwright/test"
+
+import { _testOnly } from "../../../src/scripts/intl-pipeline/intl-sanitizer"
+import {
+  setFrontmatterFieldText,
+  stripEmittedKeyPrefix,
+} from "../../../src/scripts/intl-pipeline/lib/llm/frontmatter"
+
+const stripAnchors = (s: string) => _testOnly.fixEmptyHeadingAnchors(s)
+
+// --- empty {#} heading anchors ---------------------------------------------
+
+test("strips an empty anchor", () => {
+  expect(stripAnchors("##### Ressourcen {#}").content).toBe("##### Ressourcen")
+})
+
+test("strips an empty anchor with inner space", () => {
+  expect(stripAnchors("##### Ressourcen {# }").content).toBe("##### Ressourcen")
+})
+
+test("a stray backtick does not hide later headings", () => {
+  // The #19474 failure: inline-code matching spanned newlines, so one unpaired
+  // backtick swallowed every heading up to the next one. 9 of 11 were stripped
+  // and the gate failed on the rest, in all 24 locales.
+  const doc = [
+    "##### Ressourcen {#}",
+    "",
+    "Ein Preis von 5` pro Einheit.",
+    "",
+    "##### Wasserhähne {#}",
+    "",
+    "Mehr `code` hier.",
+    "",
+    "##### Ressourcen {#}",
+  ].join("\n")
+  const r = stripAnchors(doc)
+  expect(r.fixCount).toBe(3)
+  expect(r.content).not.toContain("{#}")
+})
+
+test("a heading containing inline code is still fixed", () => {
+  expect(stripAnchors("##### Nutzung von `eth_call` {#}").content).toBe(
+    "##### Nutzung von `eth_call`"
+  )
+})
+
+test("a real anchor is left alone", () => {
+  const s = "## Titel {#titel}"
+  expect(stripAnchors(s).content).toBe(s)
+  expect(stripAnchors(s).fixCount).toBe(0)
+})
+
+test("{#} inside a fenced block is left alone", () => {
+  const s = ["```js", "const x = {#}", "```"].join("\n")
+  expect(stripAnchors(s).content).toBe(s)
+})
+
+test("{#} in body text is left alone", () => {
+  const s = "Dies ist {#} kein Heading."
+  expect(stripAnchors(s).content).toBe(s)
+})
+
+test("unchanged content is returned untouched", () => {
+  const s = "## A {#a}\n\nText"
+  expect(stripAnchors(s).content).toBe(s)
+})
+
+// --- frontmatter key echoed into the value ---------------------------------
+
+test("strips a key the model echoed back", () => {
+  expect(stripEmittedKeyPrefix("title", 'title: "Ich interviewte Luna"')).toBe(
+    "Ich interviewte Luna"
+  )
+})
+
+test("strips the key without quotes", () => {
+  expect(stripEmittedKeyPrefix("title", "title: Ich interviewte Luna")).toBe(
+    "Ich interviewte Luna"
+  )
+})
+
+test("a value that merely contains a colon is untouched", () => {
+  const v = "Ich interviewte Luna: ein KI-Agent"
+  expect(stripEmittedKeyPrefix("title", v)).toBe(v)
+})
+
+test("a different key's name is not stripped", () => {
+  const v = "description: steht hier im Text"
+  expect(stripEmittedKeyPrefix("title", v)).toBe(v)
+})
+
+test("quotes are only unwrapped when they wrap the whole value", () => {
+  // `"foo" and "bar"` starts and ends with a quote without being a quoted
+  // string; unwrapping would hand back `foo" and "bar`.
+  expect(stripEmittedKeyPrefix("title", 'title: "foo" and "bar"')).toBe(
+    '"foo" and "bar"'
+  )
+})
+
+test("stripping to nothing keeps the original", () => {
+  expect(stripEmittedKeyPrefix("title", 'title: ""')).toBe('title: ""')
+})
+
+test("the guard reaches setFrontmatterFieldText", () => {
+  const doc = parseDocument('title: "Old"\nlang: te\n')
+  expect(setFrontmatterFieldText(doc, "title", 'title: "Neu"')).toBe(true)
+  expect(doc.get("title")).toBe("Neu")
+})
+
+test("a ``` line inside a ~~~ block does not reopen the fence", () => {
+  // A toggle would treat the inner ``` as a close and start editing fenced
+  // content; verify-structure's headings() tracks the fence character, so the
+  // fixer must too or the two disagree about what is code.
+  const s = [
+    "~~~text",
+    "```",
+    "##### Not a heading {#}",
+    "~~~",
+    "",
+    "##### Real heading {#}",
+  ].join("\n")
+  const r = _testOnly.fixEmptyHeadingAnchors(s)
+  expect(r.fixCount).toBe(1)
+  expect(r.content).toContain("##### Not a heading {#}")
+  expect(r.content.endsWith("##### Real heading")).toBe(true)
+})
