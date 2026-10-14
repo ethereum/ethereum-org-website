@@ -59,7 +59,6 @@ You can download and create a MetaMask account for free [here](https://metamask.
 To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Sepolia network, go to a Sepolia faucet and enter your Sepolia account address. See the [test networks page](/developers/docs/networks/#sepolia) for a list of options to try:
 
 _Note: due to network congestion, this might take a while._
-``
 
 ### Step 5: Check your Balance {#step-5-check-your-balance}
 

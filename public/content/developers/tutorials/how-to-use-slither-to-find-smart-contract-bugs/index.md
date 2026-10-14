@@ -225,10 +225,10 @@ A `Contract` object has:
 A `Function` or a `Modifier` object has:
 
 - `name (str)`: Name of the function
-- `contract (contract)`: the contract where the function is declared
+- `contract (contract)`: The contract where the function is declared
 - `nodes (list(Node))`: List of the nodes composing the CFG of the function/modifier
 - `entry_point (Node)`: Entry point of the CFG
 - `variables_read (list(Variable))`: List of variables read
 - `variables_written (list(Variable))`: List of variables written
-- `state_variables_read (list(StateVariable))`: List of state variables read (subset of variables`read)
-- `state_variables_written (list(StateVariable))`: List of state variables written (subset of variables`written)
+- `state_variables_read (list(StateVariable))`: List of state variables read (subset of `variables_read`)
+- `state_variables_written (list(StateVariable))`: List of state variables written (subset of `variables_written`)

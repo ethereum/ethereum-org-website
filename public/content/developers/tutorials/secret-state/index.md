@@ -703,8 +703,7 @@ In general, when processing can be done either in TypeScript or Zokrates, it is 
 
 However, we still [flatten the map in Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), whereas we could have done it in TypeScript. The reason is that the other options are, in my opinion, worse.
 
-- Provide a one dimensional array of boolean to the Zokrates code, and use an expression such as `x*(height+2)
-+y` to get the two dimensional map. This would make [the code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) somewhat more complicated, so I decided the performance gain isn't worth it for a tutorial.
+- Provide a one dimensional array of boolean to the Zokrates code, and use an expression such as `x*(height+2)+y` to get the two dimensional map. This would make [the code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) somewhat more complicated, so I decided the performance gain isn't worth it for a tutorial.
 
 - Send Zokrates both the one dimensional array and the two dimensional array. However, this solution doesn't gain us anything. The Zokrates code would have to verify that the one dimensional array it is provided really is the correct representation of the two dimensional array. So there wouldn't be any performance gain.
 
