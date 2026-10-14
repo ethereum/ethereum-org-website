@@ -12,6 +12,17 @@
 import path from "path"
 
 import matter from "gray-matter"
+import {
+  isArgumentElement,
+  isDateElement,
+  isNumberElement,
+  isPluralElement,
+  isSelectElement,
+  isTagElement,
+  isTimeElement,
+  type MessageFormatElement,
+  parse,
+} from "@formatjs/icu-messageformat-parser"
 
 import { extractComments } from "./llm/code-block-extractor"
 import {
@@ -329,10 +340,90 @@ export function verifyMarkdown(
 
 // --- json checks -----------------------------------------------------------
 
-const icu = (s: string) =>
-  [...String(s).matchAll(/\{[a-zA-Z0-9_]+\}|<\/?[a-zA-Z][a-zA-Z0-9]*>/g)]
-    .map((m) => m[0])
-    .sort()
+/**
+ * What a message's placeholders look like, in the two ways worth comparing.
+ *
+ * Counting every occurrence -- the original implementation -- rejects correct
+ * translations: a plural has one branch per CLDR category, so Czech
+ * (one/few/other) repeats `{count}` three times where English (one/other)
+ * repeats it twice, and the message is right in both. Comparing only the set
+ * of names would then stop catching a genuinely dropped repeat in flat prose.
+ * So names are compared as a set, and occurrences are counted only for names
+ * that no plural or select branch uses.
+ */
+interface IcuShape {
+  names: Set<string>
+  /** Names used inside a plural/select branch, where counts are language-specific */
+  inBranch: Set<string>
+  /** Occurrences per name, branch contents excluded */
+  flatCounts: Map<string, number>
+}
+
+function icuShape(message: string): IcuShape | null {
+  const shape: IcuShape = {
+    names: new Set(),
+    inBranch: new Set(),
+    flatCounts: new Map(),
+  }
+  let ast: MessageFormatElement[]
+  try {
+    // ignoreTag: our strings carry HTML with attributes (`<a href="...">`),
+    // which ICU tag syntax rejects -- 200 English strings fail to parse without
+    // this. Tags are checked separately, below.
+    ast = parse(message, { ignoreTag: true })
+  } catch {
+    return null
+  }
+
+  const record = (name: string, branch: boolean) => {
+    shape.names.add(name)
+    if (branch) shape.inBranch.add(name)
+    else shape.flatCounts.set(name, (shape.flatCounts.get(name) ?? 0) + 1)
+  }
+
+  const walk = (nodes: MessageFormatElement[], branch: boolean): void => {
+    for (const node of nodes) {
+      if (
+        isArgumentElement(node) ||
+        isNumberElement(node) ||
+        isDateElement(node) ||
+        isTimeElement(node)
+      ) {
+        record(node.value, branch)
+      } else if (isPluralElement(node) || isSelectElement(node)) {
+        record(node.value, branch)
+        for (const option of Object.values(node.options))
+          walk(option.value, true)
+      } else if (isTagElement(node)) {
+        walk(node.children, branch)
+      }
+    }
+  }
+  walk(ast, false)
+  return shape
+}
+
+/** Bare `<tag>` names, in order, with opens and closes distinguished. */
+const bareTags = (s: string) =>
+  [...String(s).matchAll(/<(\/?)([a-zA-Z][a-zA-Z0-9]*)>/g)].map((m) => ({
+    close: m[1] === "/",
+    name: m[2],
+  }))
+
+/** True when every bare tag opens and closes in order. */
+function tagsBalanced(s: string): boolean {
+  const stack: string[] = []
+  for (const t of bareTags(s)) {
+    if (!t.close) stack.push(t.name)
+    else if (stack.pop() !== t.name) return false
+  }
+  return stack.length === 0
+}
+
+const setsEqual = (a: Set<string>, b: Set<string>) =>
+  a.size === b.size && [...a].every((x) => b.has(x))
+
+const sorted = (xs: Iterable<string>) => [...xs].sort().join(",")
 
 export function verifyJson(
   enRaw: string,
@@ -369,12 +460,43 @@ export function verifyJson(
 
   for (const k of Object.keys(en)) {
     if (!(k in tr)) continue
-    const a = icu(String(en[k]))
-    const b = icu(String(tr[k]))
-    if (a.join(",") !== b.join(","))
-      add("json-placeholder", `${k}: en=[${a}] tr=[${b}]`)
-    if (String(tr[k]).includes("HTML-PLACEHOLDER"))
-      add("placeholder-residue", k)
+    const enStr = String(en[k])
+    const trStr = String(tr[k])
+
+    const a = icuShape(enStr)
+    const b = icuShape(trStr)
+    if (a === null) {
+      // English does not parse: not this file's problem.
+    } else if (b === null) {
+      add("json-icu-parse", `${k}: translation is not valid ICU`)
+    } else {
+      if (!setsEqual(a.names, b.names))
+        add(
+          "json-placeholder",
+          `${k}: en={${sorted(a.names)}} tr={${sorted(b.names)}}`
+        )
+      else
+        for (const [name, count] of a.flatCounts) {
+          // A name a plural branch uses repeats once per CLDR category, which
+          // is language-specific; only flat occurrences are comparable.
+          if (a.inBranch.has(name) || b.inBranch.has(name)) continue
+          const got = b.flatCounts.get(name) ?? 0
+          if (got !== count)
+            add(
+              "json-placeholder",
+              `${k}: {${name}} appears ${count}x in en, ${got}x in tr`
+            )
+        }
+
+      const enTags = new Set(bareTags(enStr).map((t) => t.name))
+      const trTags = new Set(bareTags(trStr).map((t) => t.name))
+      if (!setsEqual(enTags, trTags))
+        add("json-tag", `${k}: en=<${sorted(enTags)}> tr=<${sorted(trTags)}>`)
+      else if (tagsBalanced(enStr) && !tagsBalanced(trStr))
+        add("json-tag-unbalanced", k)
+    }
+
+    if (trStr.includes("HTML-PLACEHOLDER")) add("placeholder-residue", k)
   }
   return f
 }
