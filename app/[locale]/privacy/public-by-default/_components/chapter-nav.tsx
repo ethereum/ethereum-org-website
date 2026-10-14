@@ -6,6 +6,7 @@ import { useLocale } from "next-intl"
 
 import type { PrivacyLessonPart } from "@/lib/types"
 
+import { trackPrivacyLessonEvent } from "@/components/PrivacyWidgets/shared/track"
 import { Button } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 import {
@@ -119,7 +120,10 @@ const ChapterNav = ({ lessonId }: { lessonId: string }) => {
                         <li key={id}>
                           <Link
                             href={`#${id}`}
-                            onClick={() => setOpen(false)}
+                            onClick={() => {
+                              setOpen(false)
+                              trackPrivacyLessonEvent("chapter-viewed", id)
+                            }}
                             aria-current={
                               active.id === id ? "location" : undefined
                             }
