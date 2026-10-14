@@ -8,23 +8,10 @@ import {
   useRef,
   useState,
 } from "react"
-import { Check, ChevronDown } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
-import { Button } from "@/components/ui/buttons/Button"
-import {
-  Command,
-  CommandEmpty,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command"
+import Select from "@/components/Select"
 import InlineLink from "@/components/ui/Link"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -36,6 +23,12 @@ interface MapCountry {
   name: string
   /** Share of the population that owns crypto, in percent */
   value?: number
+}
+
+interface CountryOption {
+  value: string
+  label: string
+  share?: number
 }
 
 interface Point {
@@ -104,7 +97,6 @@ const AdoptionMapView = ({
   const locale = useLocale()
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
-  const [pickerOpen, setPickerOpen] = useState(false)
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
   const pointer = useRef<Point>(undefined)
   const tooltip = useRef<HTMLDivElement>(null)
@@ -127,6 +119,27 @@ const AdoptionMapView = ({
     () => [...countries].sort((a, b) => a.name.localeCompare(b.name, locale)),
     [countries, locale]
   )
+
+  const [query, setQuery] = useState("")
+  const options = useMemo<CountryOption[]>(
+    () =>
+      sorted.map(({ code, name, value }) => ({
+        value: code,
+        label: name,
+        share: value,
+      })),
+    [sorted]
+  )
+  // react-select keeps option order, so rank names starting with the query first
+  const matches = useMemo(() => {
+    const q = query.trim().toLocaleLowerCase(locale)
+    if (!q) return options
+    const lower = (o: CountryOption) => o.label.toLocaleLowerCase(locale)
+    return [
+      ...options.filter((o) => lower(o).startsWith(q)),
+      ...options.filter((o) => !lower(o).startsWith(q) && lower(o).includes(q)),
+    ]
+  }, [options, query, locale])
 
   const byCode = useMemo(
     () => new Map(countries.map((c) => [c.code, c])),
@@ -269,101 +282,66 @@ const AdoptionMapView = ({
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-6">
-        <div className="flex w-full flex-col items-center gap-2">
+      <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="flex w-full flex-col gap-2 md:w-96">
           <span id="adoption-map-picker" className="text-sm text-body-medium">
             {t("page-stories-map-prompt")}
           </span>
-          <Popover open={pickerOpen} onOpenChange={setPickerOpen}>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                isSecondary
-                role="combobox"
-                aria-expanded={pickerOpen}
-                aria-labelledby="adoption-map-picker"
-                className="w-full justify-between sm:w-80"
-              >
-                <span className="truncate">
-                  {(selected && byCode.get(selected)?.name) ??
-                    t("page-stories-map-select-placeholder")}
+          <Select<CountryOption>
+            instanceId="adoption-map-picker"
+            aria-labelledby="adoption-map-picker"
+            options={matches}
+            filterOption={null}
+            inputValue={query}
+            onInputChange={setQuery}
+            value={options.find((o) => o.value === selected) ?? null}
+            onChange={(option) => setSelected(option?.value)}
+            placeholder={t("page-stories-map-select-placeholder")}
+            noOptionsMessage={() => t("page-stories-map-no-results")}
+            formatOptionLabel={({ label, share }, { context }) =>
+              context === "menu" && share !== undefined ? (
+                <span className="flex justify-between gap-4">
+                  {label}
+                  <span className="text-body-medium tabular-nums">
+                    {percent(share)}
+                  </span>
                 </span>
-                <ChevronDown className="shrink-0" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-(--radix-popover-trigger-width) p-0">
-              <Command
-                className="[&>div]:first:border-none"
-                filter={(value, search) => {
-                  const name = value.toLocaleLowerCase(locale)
-                  const query = search.toLocaleLowerCase(locale)
-                  return name.startsWith(query)
-                    ? 1
-                    : name.includes(query)
-                      ? 0.5
-                      : 0
-                }}
-              >
-                <CommandInput placeholder={t("page-stories-map-search")} />
-                <CommandList>
-                  <CommandEmpty>
-                    {t("page-stories-map-no-results")}
-                  </CommandEmpty>
-                  {sorted.map(({ code, name, value }) => (
-                    <CommandItem
-                      key={code}
-                      value={name}
-                      keywords={[code]}
-                      onSelect={() => {
-                        setSelected(selected === code ? undefined : code)
-                        setPickerOpen(false)
-                      }}
-                      className="gap-2"
-                    >
-                      <Check
-                        className={cn(
-                          "size-4 shrink-0",
-                          selected !== code && "invisible"
-                        )}
-                      />
-                      <span className="flex-1 truncate">{name}</span>
-                      {value !== undefined && (
-                        <span className="text-body-medium tabular-nums">
-                          {percent(value)}
-                        </span>
-                      )}
-                    </CommandItem>
-                  ))}
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
+              ) : (
+                label
+              )
+            }
+            isSearchable
+            isClearable
+            variant="outline"
+          />
         </div>
 
-        <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-body-medium">
-          <span className="sr-only">{t("page-stories-map-legend")}</span>
-          <span className="flex items-center gap-1.5" aria-hidden>
-            {t("page-stories-map-less")}
-            <span className="flex gap-0.5">
-              {BUCKETS.map((bucket) => (
-                <span
-                  key={bucket.min}
-                  className={cn(
-                    "h-3 w-6 rounded-xs",
-                    bucket.bg,
-                    activeBucket === bucket &&
-                      "ring-2 ring-body ring-offset-1 ring-offset-background"
-                  )}
-                />
-              ))}
+        <div className="flex flex-col gap-2 text-xs text-body-medium md:items-end">
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="sr-only">{t("page-stories-map-legend")}</span>
+            <span className="flex items-center gap-1.5" aria-hidden>
+              {t("page-stories-map-less")}
+              <span className="flex gap-0.5">
+                {BUCKETS.map((bucket) => (
+                  <span
+                    key={bucket.min}
+                    className={cn(
+                      "h-3 w-6 rounded-xs",
+                      bucket.bg,
+                      activeBucket === bucket &&
+                        "ring-2 ring-body ring-offset-1 ring-offset-background"
+                    )}
+                  />
+                ))}
+              </span>
+              {t("page-stories-map-more")}
             </span>
-            {t("page-stories-map-more")}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-3 w-6 rounded-xs bg-background-medium" />
-            {t("page-stories-map-no-data")}
-          </span>
-          <span>
+            <span className="flex items-center gap-1.5">
+              <span className="h-3 w-6 rounded-xs bg-background-medium" />
+              {t("page-stories-map-no-data")}
+            </span>
+          </p>
+          <p>
             {t.rich("page-stories-map-source", {
               year: source.year,
               link: (chunks) => (
@@ -371,8 +349,8 @@ const AdoptionMapView = ({
               ),
               name: source.name,
             })}
-          </span>
-        </p>
+          </p>
+        </div>
       </div>
     </div>
   )

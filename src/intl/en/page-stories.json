@@ -11,7 +11,6 @@
   "page-stories-map-subtitle": "A glimpse into how people around the world are using Ethereum every day.",
   "page-stories-map-aria-label": "World map shaded by the share of each country's population that owns crypto",
   "page-stories-map-select-placeholder": "Choose a country",
-  "page-stories-map-search": "Search countries",
   "page-stories-map-no-results": "No country found",
   "page-stories-map-prompt": "Hover over or tap a country, or pick one from the list.",
   "page-stories-map-no-data": "No data",
