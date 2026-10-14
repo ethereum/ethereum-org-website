@@ -15,6 +15,7 @@ import type {
 
 import type { DeveloperToolsDataEnvelope } from "./fetchers/developer-tools/utils"
 import type { BlobStats } from "./fetchers/fetchBlobStats"
+import type { CollectiblesData } from "./fetchers/fetchCollectibles"
 import type { DefiTvlShareData } from "./fetchers/fetchDefiTvlShare"
 import type { GasPriceData } from "./fetchers/fetchGasPrice"
 import type { QuizStatsData } from "./fetchers/fetchQuizStats"
@@ -36,6 +37,7 @@ export const getTotalValueLockedData = async (): Promise<MetricReturnData | null
 export const getDexVolumeData = () => get<MetricReturnData>(KEYS.DEX_VOLUME)
 export const getTotalValueSecuredData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_SECURED)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)
+export const getCollectiblesData = () => get<CollectiblesData>(KEYS.COLLECTIBLES)
 export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)
 export const getGrowThePieBlockspaceData = () => get<Record<string, BlockspaceData>>(KEYS.GROW_THE_PIE_BLOCKSPACE)
 export const getGrowThePieMasterData = () => get<GrowThePieMasterData>(KEYS.GROW_THE_PIE_MASTER)
