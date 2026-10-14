@@ -13,6 +13,7 @@ export const BREADCRUMB_HUBS = [
   "/learn/",
   "/roadmap/",
   "/staking/",
+  "/start/",
   "/use-cases/",
   "/values/",
 ] as const
@@ -45,7 +46,6 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/resources/": "/learn/",
   "/run-a-node/": "/learn/",
   "/smart-contracts/": "/learn/",
-  "/start/": "/learn/",
   "/web3/": "/learn/",
   "/what-are-apps/": "/learn/",
   "/what-is-ether/": "/learn/",
@@ -53,8 +53,12 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/what-is-the-ethereum-network/": "/learn/",
   "/whitepaper/": "/learn/",
   "/zero-knowledge-proofs/": "/learn/",
-  "/get-eth/": "/what-is-ether/",
   "/wrapped-eth/": "/what-is-ether/",
+
+  // Start
+  "/apps/": "/start/",
+  "/get-eth/": "/start/",
+  "/wallets/": "/start/",
 
   // Roadmap
   "/ethereum-forks/": "/roadmap/",
@@ -91,6 +95,7 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 
 /** `common` translation key where it differs from the final URL segment */
 export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
+  "/developers/": "breadcrumb-builders",
   "/layer-2/learn/": "breadcrumb-overview",
   "/reports/trillion-dollar-security/":
     "breadcrumb-security-challenges-overview",

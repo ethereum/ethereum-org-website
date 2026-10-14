@@ -66,7 +66,7 @@ test.describe("getBreadcrumbTrail", () => {
       href: "/",
       labelKey: null,
     })
-    expect(getBreadcrumbTrail("/apps/uniswap")[0].href).toBe("/")
+    expect(getBreadcrumbTrail("/bug-bounty/")[0].href).toBe("/")
   })
 
   test("skips URL segments that have no page", () => {
@@ -82,8 +82,8 @@ test.describe("getBreadcrumbTrail", () => {
   })
 
   test("uses the ancestor label override only above the leaf", () => {
-    expect(getBreadcrumbTrail("/apps/")[1].labelKey).toBe("apps")
-    expect(getBreadcrumbTrail("/apps/uniswap")[1].labelKey).toBe(
+    expect(getBreadcrumbTrail("/apps/").at(-1)?.labelKey).toBe("apps")
+    expect(getBreadcrumbTrail("/apps/uniswap").at(-2)?.labelKey).toBe(
       "breadcrumb-all-apps"
     )
   })
