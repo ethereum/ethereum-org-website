@@ -531,11 +531,6 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =

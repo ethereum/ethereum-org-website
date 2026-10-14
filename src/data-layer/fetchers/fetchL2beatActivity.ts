@@ -27,7 +27,8 @@ export async function fetchL2beatActivity(): Promise<MetricReturnData> {
   const json: L2beatActivityResponse = await response.json()
   const { types, data } = json.data.chart
   const uopsIdx = types.indexOf("uopsCount")
-  const rows = data.slice(-DAYS)
+  // The last row is today's partial day
+  const rows = data.slice(-DAYS - 1, -1)
 
   if (uopsIdx < 0 || rows.length === 0) {
     throw new Error("L2BEAT activity response has no uopsCount data")

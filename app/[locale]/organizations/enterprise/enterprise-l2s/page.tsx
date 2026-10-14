@@ -33,7 +33,9 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { L2BEAT_SOURCE, sumL2Breakdown } from "@/lib/utils/l2beat"
 import { getMetadata } from "@/lib/utils/metadata"
+import { metricStat } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
@@ -43,8 +45,6 @@ import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
-import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
-import { metricStat, nullOnError } from "../../_lib/metrics"
 import { organizationPages } from "../../_lib/pages"
 
 import PageJsonLD from "./page-jsonld"
@@ -86,8 +86,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-organizations-enterprise-l2s")
 
   const [l2beatData, l2beatActivity, { contributors }] = await Promise.all([
-    nullOnError(getL2beatData()),
-    nullOnError(getL2beatActivityData()),
+    getL2beatData(),
+    getL2beatActivityData(),
     getAppPageContributorInfo(
       "organizations/enterprise/enterprise-l2s",
       locale as Lang

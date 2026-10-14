@@ -42,6 +42,7 @@ import { Section } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../../_components/checklist-panel"
@@ -49,11 +50,10 @@ import ComparisonTable from "../../_components/comparison-table"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
-import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
-import { getTotalValueSecuredData } from "@/lib/data"
+import { getTotalValueLockedData, getTotalValueSecuredData } from "@/lib/data"
 import scalesImg from "@/public/images/organizations/balance-scale-tipped-toward-cryptographic-proof.png"
 import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
 import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
@@ -134,8 +134,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-organizations-enterprise-privacy")
   const tOrganizations = await getTranslations("page-organizations")
 
-  const [valueSecured, { contributors }] = await Promise.all([
-    nullOnError(getTotalValueSecuredData()),
+  const [valueSecured, totalValueLocked, { contributors }] = await Promise.all([
+    getTotalValueSecuredData(),
+    getTotalValueLockedData(),
     getAppPageContributorInfo(
       "organizations/enterprise/privacy",
       locale as Lang
@@ -194,6 +195,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ],
   }))
 
+  // The TVL figure renders only when its data loaded
+  const tvl =
+    totalValueLocked && "value" in totalValueLocked
+      ? formatLargeUSD(totalValueLocked.value, locale)
+      : undefined
+
   const whyItems = [
     "resilience",
     "censorship",
@@ -201,9 +208,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     "interoperability",
   ].map((key) => ({
     title: t(`page-organizations-enterprise-privacy-why-${key}-title`),
-    description: t(
-      `page-organizations-enterprise-privacy-why-${key}-description`
-    ),
+    description:
+      key === "interoperability" && tvl
+        ? t(
+            "page-organizations-enterprise-privacy-why-interoperability-description-tvl",
+            { tvl }
+          )
+        : t(`page-organizations-enterprise-privacy-why-${key}-description`),
   }))
 
   return (

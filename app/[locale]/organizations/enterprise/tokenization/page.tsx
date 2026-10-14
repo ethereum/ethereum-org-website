@@ -28,7 +28,9 @@ import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { L2BEAT_SOURCE, sumL2Breakdown } from "@/lib/utils/l2beat"
 import { getMetadata } from "@/lib/utils/metadata"
+import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD } from "@/lib/utils/numbers"
 import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -38,8 +40,6 @@ import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
-import { L2BEAT_SOURCE, sumL2Breakdown } from "../../_lib/l2beat"
-import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 import { organizationPages } from "../../_lib/pages"
 
 import PageJsonLD from "./page-jsonld"
@@ -74,10 +74,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     valueSecured,
     { contributors },
   ] = await Promise.all([
-    nullOnError(getEthereumStablecoinsMcapData()),
-    nullOnError(getStablecoinsData()),
-    nullOnError(getL2beatData()),
-    nullOnError(getTotalValueSecuredData()),
+    getEthereumStablecoinsMcapData(),
+    getStablecoinsData(),
+    getL2beatData(),
+    getTotalValueSecuredData(),
     getAppPageContributorInfo(
       "organizations/enterprise/tokenization",
       locale as Lang

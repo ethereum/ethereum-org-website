@@ -28,7 +28,11 @@ export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
 export const getL2beatActivityData = () => get<MetricReturnData>(KEYS.L2BEAT_ACTIVITY)
 export const getDefiTvlShareData = () => get<DefiTvlShareData>(KEYS.DEFI_TVL_SHARE)
 export const getEthereumStablecoinsMcapData = () => get<MetricReturnData>(KEYS.ETHEREUM_STABLECOINS_MCAP)
-export const getTotalValueLockedData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_LOCKED)
+// Ethereum DeFi TVL rides along on the chains fetch; no fetch of its own
+export const getTotalValueLockedData = async (): Promise<MetricReturnData | null> => {
+  const data = await getDefiTvlShareData()
+  return data && "tvl" in data ? { value: data.tvl, timestamp: data.timestamp } : data
+}
 export const getDexVolumeData = () => get<MetricReturnData>(KEYS.DEX_VOLUME)
 export const getTotalValueSecuredData = () => get<MetricReturnData>(KEYS.TOTAL_VALUE_SECURED)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)

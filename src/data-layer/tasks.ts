@@ -34,7 +34,6 @@ import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
-import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
 import { fetchTotalValueSecured } from "./fetchers/fetchTotalValueSecured"
 import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { KEYS, set } from "./storage"
@@ -61,6 +60,7 @@ const DAILY: TaskDef[] = [
   [KEYS.L2BEAT, fetchL2beat],
   [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
   [KEYS.DEFI_TVL_SHARE, fetchDefiTvlShare],
+  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.DEX_VOLUME, fetchDexVolume],
   [KEYS.TOTAL_VALUE_SECURED, fetchTotalValueSecured],
   [KEYS.MEETUP_IMAGES, fetchMeetupImages],
@@ -75,11 +75,9 @@ const DAILY: TaskDef[] = [
 
 const HOURLY: TaskDef[] = [
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
-  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
   [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
-  [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
 ]
 

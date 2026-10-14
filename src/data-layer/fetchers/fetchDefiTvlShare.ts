@@ -2,6 +2,8 @@ import { fetchRetry } from "./fetchRetry"
 
 export type DefiTvlShareData =
   | {
+      /** Ethereum L1 DeFi TVL in USD */
+      tvl: number
       /** Ethereum L1 share of DeFi TVL across all chains, 0-1 */
       mainnetShare: number
       /** Ethereum L1 TVL divided by the next-largest chain's */
@@ -11,7 +13,8 @@ export type DefiTvlShareData =
   | { error: string }
 
 /**
- * Ethereum's share of global DeFi TVL and its lead over the runner-up chain.
+ * Ethereum's DeFi TVL, its share of the global total, and its lead over the
+ * runner-up chain.
  *
  * @see https://api.llama.fi/v2/chains
  */
@@ -36,6 +39,7 @@ export async function fetchDefiTvlShare(): Promise<DefiTvlShareData> {
   }
 
   return {
+    tvl: ethereum.tvl,
     mainnetShare: ethereum.tvl / total,
     runnerUpMultiplier: ethereum.tvl / runnerUp.tvl,
     timestamp: Date.now(),

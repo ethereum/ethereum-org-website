@@ -22,13 +22,13 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
-import { metricStat, nullOnError, SOURCES } from "../../_lib/metrics"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -58,9 +58,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const [totalValueLocked, defiShare, dexVolume, { contributors }] =
     await Promise.all([
-      nullOnError(getTotalValueLockedData()),
-      nullOnError(getDefiTvlShareData()),
-      nullOnError(getDexVolumeData()),
+      getTotalValueLockedData(),
+      getDefiTvlShareData(),
+      getDexVolumeData(),
       getAppPageContributorInfo(
         "organizations/enterprise/onchain-finance",
         locale as Lang

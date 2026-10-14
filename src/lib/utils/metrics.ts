@@ -8,13 +8,6 @@ export const SOURCES = {
   },
 }
 
-/** Netlify Blobs throws without credentials; degrade per-getter instead of a 500 */
-export const nullOnError = <T>(promise: Promise<T>): Promise<T | null> =>
-  promise.catch((error) => {
-    console.error(error)
-    return null
-  })
-
 /** Value + timestamp props for a `HeroStat`, or an error dash when missing */
 export const metricStat = (
   metric: MetricReturnData | null | undefined,

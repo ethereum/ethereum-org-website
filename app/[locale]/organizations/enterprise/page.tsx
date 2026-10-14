@@ -22,6 +22,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../_components/checklist-panel"
@@ -30,7 +31,6 @@ import ExpertContacts from "../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../_components/hero-stats"
 import OrganizationPathways from "../_components/organization-pathways"
 import SectionIntro from "../_components/section-intro"
-import { metricStat, nullOnError, SOURCES } from "../_lib/metrics"
 import { organizationPages } from "../_lib/pages"
 import { ETHEREUM_GENESIS_TIMESTAMP, uptimeYearsSince } from "../_lib/uptime"
 
@@ -53,9 +53,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const [stablecoinsMcap, totalValueLocked, defiShare, { contributors }] =
     await Promise.all([
-      nullOnError(getEthereumStablecoinsMcapData()),
-      nullOnError(getTotalValueLockedData()),
-      nullOnError(getDefiTvlShareData()),
+      getEthereumStablecoinsMcapData(),
+      getTotalValueLockedData(),
+      getDefiTvlShareData(),
       getAppPageContributorInfo("organizations/enterprise", locale as Lang),
     ])
 
