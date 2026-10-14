@@ -215,7 +215,7 @@ Jika kita bisa membaca masa depan, kita tidak akan membutuhkan AI untuk perdagan
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Sintaks untuk memanggil fungsi pada EVM dari Web3 adalah ini: `<contract object>.functions.<function name>().call(<parameters>)`. Parameternya bisa berupa parameter fungsi EVM (jika ada; di sini tidak ada) atau [parameter bernama](https://en.wikipedia.org/wiki/Named_parameter) untuk memodifikasi perilaku rantai blok. Di sini kita menggunakan satu, `block_identifier`, untuk menentukan [nomor blok](/developers/docs/apis/json-rpc/#default-block) yang ingin kita jalankan.
+Sintaks untuk memanggil fungsi pada EVM dari Web3 adalah ini: `<contract object>.functions.<function name>().call(<parameters>)`. Parameternya bisa berupa parameter fungsi EVM (jika ada; di sini tidak ada) atau [parameter bernama](https://en.wikipedia.org/wiki/Named_parameter) untuk memodifikasi perilaku rantai blok. Di sini kita menggunakan satu, `block_identifier`, untuk menentukan [nomor blok](/developers/docs/apis/json-rpc/#block-parameter) yang ingin kita jalankan.
 
 Hasilnya adalah [struct ini, dalam bentuk array](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Nilai pertama adalah fungsi dari nilai tukar antara kedua token.
 
