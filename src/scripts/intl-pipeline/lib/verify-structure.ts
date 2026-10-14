@@ -357,6 +357,12 @@ interface IcuShape {
   inBranch: Set<string>
   /** Occurrences per name, branch contents excluded */
   flatCounts: Map<string, number>
+  /**
+   * Per plural/select argument, the names each branch uses. Branch COUNTS are
+   * language-specific, but a branch that silently drops a placeholder is a
+   * defect the set comparison alone cannot see.
+   */
+  branchNames: Map<string, Map<string, Set<string>>>
 }
 
 function icuShape(message: string): IcuShape | null {
@@ -364,6 +370,7 @@ function icuShape(message: string): IcuShape | null {
     names: new Set(),
     inBranch: new Set(),
     flatCounts: new Map(),
+    branchNames: new Map(),
   }
   let ast: MessageFormatElement[]
   try {
@@ -392,8 +399,12 @@ function icuShape(message: string): IcuShape | null {
         record(node.value, branch)
       } else if (isPluralElement(node) || isSelectElement(node)) {
         record(node.value, branch)
-        for (const option of Object.values(node.options))
+        const perBranch = new Map<string, Set<string>>()
+        for (const [branchName, option] of Object.entries(node.options)) {
           walk(option.value, true)
+          perBranch.set(branchName, namesIn(option.value))
+        }
+        shape.branchNames.set(node.value, perBranch)
       } else if (isTagElement(node)) {
         walk(node.children, branch)
       }
@@ -401,6 +412,30 @@ function icuShape(message: string): IcuShape | null {
   }
   walk(ast, false)
   return shape
+}
+
+/** Placeholder names directly reachable in a branch body. */
+function namesIn(nodes: MessageFormatElement[]): Set<string> {
+  const out = new Set<string>()
+  const visit = (ns: MessageFormatElement[]): void => {
+    for (const n of ns) {
+      if (
+        isArgumentElement(n) ||
+        isNumberElement(n) ||
+        isDateElement(n) ||
+        isTimeElement(n)
+      ) {
+        out.add(n.value)
+      } else if (isPluralElement(n) || isSelectElement(n)) {
+        out.add(n.value)
+        for (const o of Object.values(n.options)) visit(o.value)
+      } else if (isTagElement(n)) {
+        visit(n.children)
+      }
+    }
+  }
+  visit(nodes)
+  return out
 }
 
 /** Bare `<tag>` names, in order, with opens and closes distinguished. */
@@ -419,6 +454,9 @@ function tagsBalanced(s: string): boolean {
   }
   return stack.length === 0
 }
+
+/** Plural categories whose wording commonly omits the number entirely. */
+const IDIOMATIC_WITHOUT_NUMBER = new Set(["one", "zero", "=0", "=1"])
 
 const setsEqual = (a: Set<string>, b: Set<string>) =>
   a.size === b.size && [...a].every((x) => b.has(x))
@@ -475,7 +513,39 @@ export function verifyJson(
           "json-placeholder",
           `${k}: en={${sorted(a.names)}} tr={${sorted(b.names)}}`
         )
-      else
+      else {
+        // `other` is mandatory in ICU and is the catch-all every unmatched
+        // count falls back to, so a name missing from it is unambiguously
+        // lost. A name missing from one of the language-specific branches is
+        // not: Czech `few {roky}` for "2 years" is a defect, but `one {rok}`
+        // for "a year" is idiomatic, so that is a warning for a human.
+        for (const [arg, enBranches] of a.branchNames) {
+          const trBranches = b.branchNames.get(arg)
+          if (!trBranches) continue
+          const enOther = enBranches.get("other")
+          const trOther = trBranches.get("other")
+          if (!enOther || !trOther) continue
+          const lost = [...enOther].filter((n) => !trOther.has(n))
+          if (lost.length)
+            add(
+              "json-plural-placeholder",
+              `${k}: {${arg}} "other" branch drops ${lost.map((n) => `{${n}}`).join(", ")}`
+            )
+          for (const [branchName, names] of trBranches) {
+            if (branchName === "other") continue
+            const missing = [...enOther].filter((n) => !names.has(n))
+            if (!missing.length) continue
+            add(
+              "json-plural-branch",
+              `${k}: {${arg}} "${branchName}" branch omits ${missing.map((n) => `{${n}}`).join(", ")}`,
+              // "a year" and "no years" read naturally without the numeral, so
+              // those two are a human's call. Any other category -- few, many,
+              // two, an =N selector, a select case -- wants its number.
+              IDIOMATIC_WITHOUT_NUMBER.has(branchName) ? "warn" : "error"
+            )
+          }
+        }
+
         for (const [name, count] of a.flatCounts) {
           // A name a plural branch uses repeats once per CLDR category, which
           // is language-specific; only flat occurrences are comparable.
@@ -487,6 +557,7 @@ export function verifyJson(
               `${k}: {${name}} appears ${count}x in en, ${got}x in tr`
             )
         }
+      }
 
       const enTags = new Set(bareTags(enStr).map((t) => t.name))
       const trTags = new Set(bareTags(trStr).map((t) => t.name))

@@ -75,6 +75,33 @@ test("a repeat inside a plural branch is not counted", () => {
   expect(checks(en, cs)).toEqual([])
 })
 
+test("a placeholder dropped from the other branch fails", () => {
+  // `other` is mandatory and is the catch-all, so losing a name there is
+  // unambiguous.
+  const tr = "{years, plural, one {{count} rok} few {{count} roky} other {let}}"
+  expect(checks(EN_UPTIME, tr)).toEqual(["json-plural-placeholder"])
+})
+
+test("a placeholder dropped from a counted branch fails", () => {
+  // The defect a set comparison alone cannot see: {count} survives in two
+  // branches, so the name set still matches, but Czech 2-4 years loses its
+  // number.
+  const tr = "{years, plural, one {{count} rok} few {roky} other {{count} let}}"
+  expect(checks(EN_UPTIME, tr)).toEqual(["json-plural-branch"])
+  expect(
+    verifyJson(json(EN_UPTIME), json(tr), "f.json").map((f) => f.severity)
+  ).toEqual(["error"])
+})
+
+test("one and zero may omit the number, as a warning", () => {
+  // "a year" and "no years" read naturally without the numeral.
+  const tr = "{years, plural, one {rok} few {{count} roky} other {{count} let}}"
+  const f = verifyJson(json(EN_UPTIME), json(tr), "f.json")
+  expect(f.map((x) => `${x.severity}:${x.check}`)).toEqual([
+    "warn:json-plural-branch",
+  ])
+})
+
 test("malformed plural syntax fails", () => {
   expect(
     checks(EN_UPTIME, "{years, plural, one {{count} rok} other {")
