@@ -23,7 +23,7 @@ import {
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolCard from "../_components/ToolCard"
-import ToolLinkRows from "../_components/ToolLinkRows"
+import { ToolLinkSections } from "../_components/ToolLinkRows"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -109,21 +109,16 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
             ))}
           </div>
         )}
-        <div className="flex flex-col gap-2 empty:hidden [&>div]:bg-background">
-          <ToolLinkRows
-            locale={locale}
-            tool={tool}
-            detailHref={`/developers/tools/${toolKey}/`}
-            shown={Infinity}
-            labels={{
-              repository: t("page-developers-tools-modal-repository"),
-              repositories: t("page-developers-tools-modal-repositories"),
-              package: t("page-developers-tools-modal-package"),
-              packages: t("page-developers-tools-modal-packages"),
-              more: (count) => t("page-developers-tools-modal-more", { count }),
-            }}
-          />
-        </div>
+        <ToolLinkSections
+          locale={locale}
+          tool={tool}
+          labels={{
+            repository: t("page-developers-tools-modal-repository"),
+            repositories: t("page-developers-tools-modal-repositories"),
+            package: t("page-developers-tools-modal-package"),
+            packages: t("page-developers-tools-modal-packages"),
+          }}
+        />
       </CatalogItemLayout>
     </>
   )
