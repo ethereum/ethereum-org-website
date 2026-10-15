@@ -235,7 +235,7 @@ Fournissez des informations sur la connexion actuelle. Dans JSX, `{<expression>}
       {connection.status === 'connected' && (
 ```
 
-La syntaxe `{<condition> && <valeur>}` signifie « si la condition est `true`, évaluer à la valeur ; si elle ne l'est pas, évaluer à `false` ».
+La syntaxe `{<condition> && <value>}` signifie « si la condition est `true`, évaluer à la valeur ; si elle ne l'est pas, évaluer à `false` ».
 
 C'est la manière standard de placer des instructions if à l'intérieur de JSX.
 
@@ -300,7 +300,7 @@ Les boutons de connecteur.
       )}
 ```
 
-Fournissez des informations supplémentaires. La syntaxe d'expression `<variable>?.<champ>` indique à JavaScript que si la variable est définie, il faut évaluer ce champ. Si la variable n'est pas définie, alors cette expression est évaluée à `undefined`.
+Fournissez des informations supplémentaires. La syntaxe d'expression `<variable>?.<field>` indique à JavaScript que si la variable est définie, il faut évaluer ce champ. Si la variable n'est pas définie, alors cette expression est évaluée à `undefined`.
 
 L'expression `error.message`, lorsqu'il n'y a pas d'erreur, lèverait une exception. L'utilisation de `error?.message` nous permet d'éviter ce problème.
 

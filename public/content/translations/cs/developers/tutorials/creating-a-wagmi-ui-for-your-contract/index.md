@@ -229,13 +229,13 @@ JSX komponenty React _musí_ vracet jedinou HTML komponentu. Když máme více k
 </div>
 ```
 
-Poskytněte informace o aktuálním připojení. V rámci JSX znamená `{<výraz>}`, že se výraz vyhodnotí jako JavaScript.
+Poskytněte informace o aktuálním připojení. V rámci JSX znamená `{<expression>}`, že se výraz vyhodnotí jako JavaScript.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-Syntaxe `{<podmínka> && <hodnota>}` znamená „pokud je podmínka `true`, vyhodnoť na hodnotu; pokud není, vyhodnoť na `false`“.
+Syntaxe `{<condition> && <value>}` znamená „pokud je podmínka `true`, vyhodnoť na hodnotu; pokud není, vyhodnoť na `false`“.
 
 Toto je standardní způsob, jak vkládat podmínky if do JSX.
 
@@ -300,7 +300,7 @@ Tlačítka konektorů.
       )}
 ```
 
-Poskytněte další informace. Syntaxe výrazu `<proměnná>?.<pole>` říká JavaScriptu, že pokud je proměnná definována, má se vyhodnotit na toto pole. Pokud proměnná definována není, pak se tento výraz vyhodnotí jako `undefined`.
+Poskytněte další informace. Syntaxe výrazu `<variable>?.<field>` říká JavaScriptu, že pokud je proměnná definována, má se vyhodnotit na toto pole. Pokud proměnná definována není, pak se tento výraz vyhodnotí jako `undefined`.
 
 Výraz `error.message` by v případě, že nedošlo k žádné chybě, vyvolal výjimku. Použití `error?.message` nám umožňuje tomuto problému předejít.
 

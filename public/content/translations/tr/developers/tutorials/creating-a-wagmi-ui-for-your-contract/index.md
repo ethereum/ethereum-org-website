@@ -229,13 +229,13 @@ Bir React bileşeninin JSX'i _mutlaka_ tek bir HTML bileşeni döndürmelidir. B
 </div>
 ```
 
-Mevcut bağlantı hakkında bilgi sağlayın. JSX içinde `{<ifade>}`, ifadenin JavaScript olarak değerlendirileceği anlamına gelir.
+Mevcut bağlantı hakkında bilgi sağlayın. JSX içinde `{<expression>}`, ifadenin JavaScript olarak değerlendirileceği anlamına gelir.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-`{<koşul> && <değer>}` sözdizimi, "koşul `true` ise değere göre değerlendir; değilse `false` olarak değerlendir" anlamına gelir.
+`{<condition> && <value>}` sözdizimi, "koşul `true` ise değere göre değerlendir; değilse `false` olarak değerlendir" anlamına gelir.
 
 Bu, JSX içine if ifadeleri koymanın standart yoludur.
 
@@ -300,7 +300,7 @@ Bağlayıcı düğmeleri.
       )}
 ```
 
-Ek bilgi sağlayın. `<değişken>?.<alan>` ifade sözdizimi, JavaScript'e değişken tanımlanmışsa o alana göre değerlendirmesini söyler. Değişken tanımlanmamışsa, bu ifade `undefined` olarak değerlendirilir.
+Ek bilgi sağlayın. `<variable>?.<field>` ifade sözdizimi, JavaScript'e değişken tanımlanmışsa o alana göre değerlendirmesini söyler. Değişken tanımlanmamışsa, bu ifade `undefined` olarak değerlendirilir.
 
 Hata olmadığında `error.message` ifadesi bir istisna (exception) oluşturur. `error?.message` kullanmak bu sorunu önlememizi sağlar.
 

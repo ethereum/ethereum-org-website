@@ -229,13 +229,13 @@ Kod JSX komponentu React _musi_ zwracać pojedynczy komponent HTML. Kiedy mamy w
 </div>
 ```
 
-Podaj informacje o bieżącym połączeniu. W JSX `{<wyrażenie>}` oznacza obliczenie wyrażenia jako JavaScript.
+Podaj informacje o bieżącym połączeniu. W JSX `{<expression>}` oznacza obliczenie wyrażenia jako JavaScript.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-Składnia `{<warunek> && <wartość>}` oznacza „jeśli warunek jest prawdziwy (`true`), oblicz wartość; jeśli nie jest, oblicz jako fałsz (`false`)”.
+Składnia `{<condition> && <value>}` oznacza „jeśli warunek jest prawdziwy (`true`), oblicz wartość; jeśli nie jest, oblicz jako fałsz (`false`)”.
 
 Jest to standardowy sposób umieszczania instrukcji warunkowych if wewnątrz JSX.
 
@@ -300,7 +300,7 @@ Przyciski konektorów.
       )}
 ```
 
-Podaj dodatkowe informacje. Składnia wyrażenia `<zmienna>?.<pole>` mówi językowi JavaScript, że jeśli zmienna jest zdefiniowana, należy obliczyć to pole. Jeśli zmienna nie jest zdefiniowana, to wyrażenie to jest obliczane jako `undefined`.
+Podaj dodatkowe informacje. Składnia wyrażenia `<variable>?.<field>` mówi językowi JavaScript, że jeśli zmienna jest zdefiniowana, należy obliczyć to pole. Jeśli zmienna nie jest zdefiniowana, to wyrażenie to jest obliczane jako `undefined`.
 
 Wyrażenie `error.message`, gdy nie ma błędu, zgłosiłoby wyjątek. Użycie `error?.message` pozwala nam uniknąć tego problemu.
 
