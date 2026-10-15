@@ -62,6 +62,9 @@ function trimResourceForFrontend(
     return {
       href: repoEntry.href,
       stargazers: repoEntry.stargazers,
+      ...(repoEntry.lastUpdated ? { lastUpdated: repoEntry.lastUpdated } : {}),
+      ...(repoEntry.license ? { license: repoEntry.license } : {}),
+      ...(repoEntry.isArchived ? { isArchived: true } : {}),
     }
   })
 

@@ -1505,6 +1505,7 @@ export type DeveloperToolsRepoLink = {
   finalScore?: number
   scoreSource?: "official-weight" | "github-inferred" | "unscored"
   lastUpdated?: string | null
+  license?: string | null
 }
 
 export type DeveloperToolsPackageLink = {
