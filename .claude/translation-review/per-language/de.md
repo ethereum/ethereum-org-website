@@ -109,3 +109,20 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - hegota `Fork-Wahl` vs tree `Fork-Choice` (83:1).
 - privacy-online `No-Logs-Anspruch` (entitlement) should be `-Versprechen`; `Suchanfragen` for DNS lookups; `Weitere Wissenswerte` grammar.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `tokenization` `assets-treasuries-title` `Schatzkammern` -> `Staatsanleihen` (glossary `treasury` entry is the DAO sense; here it means government bonds).
+
+**Open (warnings):**
+
+- `Ethereum für Unternehmen` used for both enterprise and small-business pages; `Privatkredite` for private credit; Onchain capitalization; Kontrahenten-/Gegenparteirisiko split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.4/10
+
+- Fixed: security line 292 unbalanced backtick around withdraw() (regression; same class as the English backtick fix fe75a81caa).
+- Warning: wagmi line 299 dropped subject `sie` (ungrammatical).

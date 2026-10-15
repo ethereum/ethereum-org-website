@@ -381,22 +381,6 @@ export type CostLeaderboardData = Pick<
 
 // GitHub contributors
 
-export type Commit = {
-  commit: {
-    author: {
-      name: string
-      email: string
-      date: string
-    }
-    message: string
-  }
-  author: {
-    avatar_url: string
-    login: string
-    html_url: string
-  }
-}
-
 export type Author = {
   name: string
   email: string
@@ -547,11 +531,6 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =
@@ -633,18 +612,14 @@ export type GrowThePieMasterData = {
   launchDates: Record<string, string>
 }
 
-export type GithubRepoData = {
-  starCount: number
-  languages: string[]
-}
-
 export type L2beatData = {
   projects: Record<
     string,
     {
       stage: string
+      type?: "layer2" | "layer3"
       tvl: { total: number }
-      tvs: { breakdown: { total: number } }
+      tvs: { breakdown: { total: number; stablecoin?: number } }
       risks: Array<{ name: string; sentiment: string }>
     }
   >
@@ -1241,16 +1216,6 @@ export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
 
-type NestedDivs = {
-  div: NestedDivs[]
-}
-
-export type HTMLResult = {
-  html: {
-    body: Record<string, NestedDivs>[]
-  }
-}
-
 export type EventCardProps = {
   title: string
   href: string
@@ -1435,10 +1400,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null

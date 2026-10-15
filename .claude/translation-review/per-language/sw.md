@@ -117,3 +117,16 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - stealth-addr swapped all 21 `kitendaji` for `fomula` -- revert recommended (tree 164:47).
 - Bare `mteja` for software client recurs in new sentences; glamsterdam:20 `Blobs` kept Latin in quoted track name.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `Anwani za siri` -> `Anwani fiche`; smart account `Akaunti mahiri` -> `Akaunti janja`; `enterprise-l2s` `kificho` -> `kriptografia`.
+
+**Open (warnings):**
+
+- client rendered as customer (`Wateja`, `Mteja`) recurs; needs glossary ruling (execution client = kiteja, consensus client = mteja conflict).
+- enterprise and business pathway titles collide (`Ethereum kwa biashara`).

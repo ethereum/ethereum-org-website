@@ -237,3 +237,18 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 - `zk-rollups:69` `<span dir="ltr">18 days</span>` untranslated.
 - learn-quizzes `سحب` for "drawn at random" collides with glossary withdrawal; `أقل اختبارًا في المعارك` calques battle-tested.
 - F-Droid `البرامج المجانية` (gratis, #83); cookie banner `شعار` (logo) should be `شريط`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `page-organizations-enterprise-l2s` `deployment-arbitrum-description` half-Latin `أربيتروم One` -> `⁦Arbitrum One⁩` (#44 recurrence).
+- `small-business` `compare-privacy` stealth address `العناوين المخفية` -> `العناوين المتخفية`.
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: discarded by the placeholder-count gate bug (#85).
+- `treasuries` read as vaults (`الخزانات`); `cold storage` `التخزين البارد` collides with staking term; إيثيريوم gender masculine in public-sector vs feminine elsewhere.
+- `security/index.md` full retranslation repaired rotated anchors (legit 126-line deletion); `3-of-5` left untranslated.

@@ -230,5 +230,5 @@ Objekt `Function` nebo `Modifier` má:
 - `entry_point (Node)`: Vstupní bod CFG
 - `variables_read (list(Variable))`: Seznam čtených proměnných
 - `variables_written (list(Variable))`: Seznam zapisovaných proměnných
-- `state_variables_read (list(StateVariable))`: Seznam čtených stavových proměnných (podmnožina variables`read)
-- `state_variables_written (list(StateVariable))`: Seznam zapisovaných stavových proměnných (podmnožina variables`written)
+- `state_variables_read (list(StateVariable))`: Seznam čtených stavových proměnných (podmnožina `variables_read`)
+- `state_variables_written (list(StateVariable))`: Seznam zapisovaných stavových proměnných (podmnožina `variables_written`)

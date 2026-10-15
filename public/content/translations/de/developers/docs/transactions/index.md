@@ -178,7 +178,7 @@ Jegliches Gas, das in einer Transaktion nicht verbraucht wird, wird dem Benutzer
 
 Gas ist für jede Transaktion erforderlich, die einen Smart Contract involviert.
 
-Smart Contracts können auch Funktionen enthalten, die als [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions)- oder [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)-Funktionen bekannt sind und den Zustand des Vertrags nicht verändern. Daher erfordert der Aufruf dieser Funktionen von einem EOA kein Gas. Der zugrunde liegende RPC-Aufruf für dieses Szenario ist [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Smart Contracts können auch Funktionen enthalten, die als [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions)- oder [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)-Funktionen bekannt sind und den Zustand des Vertrags nicht verändern. Daher erfordert der Aufruf dieser Funktionen von einem EOA kein Gas. Der zugrunde liegende RPC-Aufruf für dieses Szenario ist [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Im Gegensatz zum Zugriff über `eth_call` werden diese `view`- oder `pure`-Funktionen auch häufig intern aufgerufen (d. h. vom Vertrag selbst oder von einem anderen Vertrag), was Gas kostet.
 

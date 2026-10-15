@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-privacy-online.json",
-  "generatedAt": "2026-09-30T18:14:39.035Z",
-  "rootHash": "0b31e72d2135",
+  "generatedAt": "2026-10-14T17:43:25.221Z",
+  "rootHash": "dc3997694dd3",
   "tree": {
-    "contentHash": "cfc163f82a66",
+    "contentHash": "3e52b54974d1",
     "anchorHash": "6653af5699ed",
     "children": {
       "page-privacy-online-meta-description": {
@@ -904,11 +904,11 @@
         }
       },
       "page-privacy-online-pathway-1-title": {
-        "contentHash": "d075380f5776",
+        "contentHash": "cc549a8c5e6b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-privacy-online-pathway-1-description": {
-        "contentHash": "493c9aeb55ac",
+        "contentHash": "04123370d29c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-privacy-online-pathway-2-title": {
@@ -1106,5 +1106,5 @@
       "page-privacy-online-pathway-2-description"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

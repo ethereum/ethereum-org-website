@@ -168,7 +168,7 @@ Esta es la forma estándar de crear un componente de React: definir una función
 
 Usa [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) para obtener información relacionada con la conexión actual, como la dirección y el `chainId`.
 
-Por convención, en React las funciones llamadas `use...` son [hooks](https://www.w3schools.com/react/react_hooks.asp). Estas funciones no solo devuelven datos al componente; también aseguran que se vuelva a renderizar (la función del componente se ejecuta de nuevo, y su salida reemplaza a la anterior en el HTML) cuando esos datos cambian.
+Por convención, en React las funciones llamadas `use...` son [hooks](https://www.w3schools.com/react/react_hooks.asp). Estas funciones no solo devuelven datos al componente; también aseguran que se vuelva a renderizar (la función del componente se ejecuta de nuevo y su salida reemplaza a la anterior en el HTML) cuando esos datos cambian.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -192,7 +192,7 @@ Usa [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) para obtener inf
   useEffect(() => {
 ```
 
-El hook de React [`useEffect`](https://react.dev/reference/react/useEffect) te permite ejecutar una función cada vez que el valor de una variable cambia para sincronizar un sistema externo.
+El hook de React [`useEffect`](https://react.dev/reference/react/useEffect) te permite ejecutar una función cada vez que cambia el valor de una variable para sincronizar un sistema externo.
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -215,7 +215,7 @@ Vuelve a ejecutar la función cada vez que cambie el estado de la conexión o el
     <>
 ```
 
-El JSX de un componente de React _debe_ devolver un solo componente HTML. Cuando tenemos varios componentes y no necesitamos un contenedor para envolverlos a todos, usamos un componente vacío (`<> ... </>`) para combinarlos en un solo componente.
+El JSX de un componente de React _debe_ devolver un solo componente HTML. Cuando tenemos varios componentes y no necesitamos un contenedor para envolverlos todos, usamos un componente vacío (`<> ... </>`) para combinarlos en un solo componente.
 
 ```tsx
       <h2>Connection</h2>
@@ -235,7 +235,7 @@ Proporciona información sobre la conexión actual. Dentro de JSX, `{<expression
       {connection.status === 'connected' && (
 ```
 
-La sintaxis `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+La sintaxis `{<condition> && <value>}` significa "si la condición es `true`, evalúa al valor; si no lo es, evalúa a `false`".
 
 Esta es la forma estándar de poner declaraciones if dentro de JSX.
 
@@ -300,9 +300,9 @@ Los botones del conector.
       )}
 ```
 
-Proporciona información adicional. La sintaxis de la expresión `<variable>?.<field>` le dice a JavaScript que si la variable está definida, evalúe ese campo. Si la variable no está definida, entonces esta expresión se evalúa como `undefined`.
+Proporciona información adicional. La sintaxis de expresión `<variable>?.<field>` le dice a JavaScript que si la variable está definida, evalúe a ese campo. Si la variable no está definida, entonces esta expresión se evalúa como `undefined`.
 
-La expresión `error.message`, cuando no hay error, generaría una excepción. El uso de `error?.message` nos permite evitar este problema.
+La expresión `error.message`, cuando no hay error, generaría una excepción. Usar `error?.message` nos permite evitar este problema.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 
