@@ -127,3 +127,7 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Three L2 forms; `उद्योग` (industry) for enterprise; परिसंस्था/इकोसिस्टम split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.6/10
+
+- Warning: retranslation regressed neighbors -- `संकेतांनुसार` for "by convention" (L171), हूक/हुक split, L303 evaluate-to drift.

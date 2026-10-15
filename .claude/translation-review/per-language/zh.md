@@ -136,3 +136,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - 你/您 split across /organizations files; `透明的实用定价` mistranslates utility pricing.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.2/10
+
+- Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
+- Warning: Hook/钩子 drift; 求值 -> 计算 drift.
