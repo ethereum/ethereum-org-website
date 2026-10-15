@@ -11,6 +11,7 @@ export const BREADCRUMB_HUBS = [
   "/developers/",
   "/guides/",
   "/learn/",
+  "/organizations/",
   "/roadmap/",
   "/staking/",
   "/start/",
@@ -96,7 +97,8 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 /** `common` translation key where it differs from the final URL segment */
 export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
   "/developers/": "breadcrumb-builders",
-  "/layer-2/learn/": "breadcrumb-overview",
+  "/eips/": "breadcrumb-eip",
+  "/layer-2/learn/": "breadcrumb-what-is-layer-2",
   "/reports/trillion-dollar-security/":
     "breadcrumb-security-challenges-overview",
   "/real-world-assets/": "breadcrumb-rwa",

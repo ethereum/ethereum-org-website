@@ -54,19 +54,19 @@ const appPaths = () => {
 }
 
 test.describe("getBreadcrumbTrail", () => {
-  test("drops the root crumb below a hub", () => {
+  test("drops the root crumb on and below a hub", () => {
+    expect(getBreadcrumbTrail("staking")[0].href).toBe("/staking/")
     expect(getBreadcrumbTrail("/defi/")).toEqual([
       { href: "/use-cases/", labelKey: "use-cases" },
       { href: "/defi/", labelKey: "defi" },
     ])
   })
 
-  test("keeps the root crumb outside hubs, including on a hub itself", () => {
-    expect(getBreadcrumbTrail("staking")[0]).toEqual({
+  test("keeps the root crumb outside hubs", () => {
+    expect(getBreadcrumbTrail("/bug-bounty/")[0]).toEqual({
       href: "/",
       labelKey: null,
     })
-    expect(getBreadcrumbTrail("/bug-bounty/")[0].href).toBe("/")
   })
 
   test("skips URL segments that have no page", () => {

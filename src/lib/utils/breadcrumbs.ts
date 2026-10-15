@@ -32,8 +32,8 @@ export const getBreadcrumbLabelKey = (path: string) =>
   BREADCRUMB_LABEL_KEYS[path] ?? path.split("/").filter(Boolean).pop()!
 
 /**
- * Ancestors-first trail for a page. The root crumb is omitted when the page
- * sits anywhere below a hub, since the hub already anchors the trail.
+ * Ancestors-first trail for a page. The root crumb is omitted on a hub or
+ * anywhere below one, since the hub already anchors the trail.
  */
 export const getBreadcrumbTrail = (slug: string): BreadcrumbTrailItem[] => {
   const path = toBreadcrumbPath(slug)
@@ -51,8 +51,7 @@ export const getBreadcrumbTrail = (slug: string): BreadcrumbTrailItem[] => {
     paths.unshift(current)
   }
 
-  const ancestors = paths.slice(0, -1)
-  const insideHub = ancestors.some((p) =>
+  const insideHub = paths.some((p) =>
     (BREADCRUMB_HUBS as readonly string[]).includes(p)
   )
 
