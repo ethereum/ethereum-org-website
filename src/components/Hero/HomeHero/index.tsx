@@ -1,12 +1,14 @@
-import { Suspense } from "react"
+import { Fragment, Suspense } from "react"
 import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
+import { ABTest } from "@/components/AB"
 import { ChevronNext } from "@/components/Chevron"
 import HomeSearchCTA from "@/components/Homepage/HomeSearchCTA"
+import HomeSearchInput from "@/components/Homepage/HomeSearchInput"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -27,6 +29,8 @@ type HomeHeroProps = ClassNameProp & {
   image2xl?: StaticImageData
   alt?: string
   eventCategory?: string
+  /** Set only on the A/B-coded homepage; absent, the button renders as before. */
+  searchCtaVariant?: number
 }
 
 const HomeHero = async ({
@@ -35,6 +39,7 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
   eventCategory = "Homepage",
+  searchCtaVariant,
 }: HomeHeroProps) => {
   const t = await getTranslations("page-index")
   const tCommon = await getTranslations("common")
@@ -66,6 +71,39 @@ const HomeHero = async ({
   // (Next.js getImageProps includes them but they're not valid HTML attributes)
   delete (rest as Record<string, unknown>).blurWidth
   delete (rest as Record<string, unknown>).blurHeight
+
+  const searchLabel = canAsk ? tCommon("docsearch-ask-ai") : tCommon("search")
+
+  const startHere = (className?: string) => (
+    <Suspense
+      fallback={
+        <Button
+          variant="solid"
+          size="lg"
+          className={cn("gap-2 pe-6!", className)}
+        >
+          {t("page-index-hero-cta")}
+          <ChevronNext className="size-5" />
+        </Button>
+      }
+    >
+      <PersonaModalCTA eventCategory={eventCategory} className={className} />
+    </Suspense>
+  )
+
+  const buttonCta = (
+    <div className="flex flex-col items-center gap-4 max-sm:w-full sm:flex-row">
+      {startHere()}
+      <HomeSearchCTA ask={canAsk} label={searchLabel} />
+    </div>
+  )
+
+  const inputCta = (
+    <div className="flex w-full flex-col gap-4 sm:max-w-xs">
+      {startHere("w-full")}
+      <HomeSearchInput ask={canAsk} label={searchLabel} />
+    </div>
+  )
 
   return (
     <section className={cn("w-full", className)}>
@@ -106,23 +144,18 @@ const HomeHero = async ({
               {t("page-index-hero-subtitle")}
             </p>
 
-            <div className="flex flex-col items-center gap-4 max-sm:w-full sm:flex-row">
-              <Suspense
-                fallback={
-                  <Button variant="solid" size="lg" className="gap-2 pe-6!">
-                    {t("page-index-hero-cta")}
-                    <ChevronNext className="size-5" />
-                  </Button>
-                }
-              >
-                <PersonaModalCTA eventCategory={eventCategory} />
-              </Suspense>
-
-              <HomeSearchCTA
-                ask={canAsk}
-                label={canAsk ? tCommon("docsearch-ask-ai") : tCommon("search")}
+            {searchCtaVariant === undefined ? (
+              buttonCta
+            ) : (
+              <ABTest
+                testKey="HomeSearchCTA"
+                variantIndex={searchCtaVariant}
+                variants={[
+                  <Fragment key="original">{buttonCta}</Fragment>,
+                  <Fragment key="ask-input">{inputCta}</Fragment>,
+                ]}
               />
-            </div>
+            )}
           </div>
         </div>
       </div>

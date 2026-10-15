@@ -192,6 +192,7 @@ interface SearchModalProps {
 interface SearchModalProps {
   onClose: () => void
   className?: string
+  getInitialQuery?: () => string
 }
 
 /**
@@ -201,7 +202,11 @@ interface SearchModalProps {
  * featured networks. None of that belongs in a bundle a reader pays for before they have
  * opened search.
  */
-const SearchModal = ({ onClose, className }: SearchModalProps) => {
+const SearchModal = ({
+  onClose,
+  className,
+  getInitialQuery,
+}: SearchModalProps) => {
   const locale = useLocale()
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
@@ -465,6 +470,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     typesenseServerConfig,
     typesenseSearchParameters,
     onClose,
+    initialQuery: getInitialQuery?.(),
     // Nothing is highlighted until the reader arrows into the list, which leaves Enter
     // free to ask. Where there is no Ask, the library's own default stands and Enter
     // opens the first result as it always has.

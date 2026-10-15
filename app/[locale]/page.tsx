@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import {
@@ -39,7 +40,10 @@ import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
 
-const Page = async (props: { params: Promise<PageParams> }) => {
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchCtaVariant?: number
+}) => {
   const params = await props.params
   const { locale } = params
 
@@ -147,7 +151,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </LinkBox>
 
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero eventCategory={eventCategory} />
+          <HomeHero
+            eventCategory={eventCategory}
+            searchCtaVariant={props.searchCtaVariant}
+          />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <KPISection
@@ -206,7 +213,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
-}) {
+}): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
 

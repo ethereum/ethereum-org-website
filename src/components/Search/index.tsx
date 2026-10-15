@@ -16,6 +16,7 @@ import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
+import { useOnHash } from "@/hooks/useOnHash"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
@@ -23,7 +24,10 @@ const noop = () => {}
 
 interface SearchProps {
   asChild?: boolean
-  children?: React.ReactElement<unknown>
+  /** An element to open the modal on click (with `asChild`), or a render function handed the opener. */
+  children?:
+    | React.ReactElement<unknown>
+    | ((open: () => void) => React.ReactNode)
   /**
    * Whether this instance answers the global open shortcut. Exactly one mounted instance
    * may: the hook binds at the document, so a second would open a second modal on the
@@ -31,12 +35,18 @@ interface SearchProps {
    * and opens on click alone. Escape still closes whichever one is open.
    */
   ownsShortcut?: boolean
+  /** Read when the modal mounts, not when it is asked to open, so keystrokes typed while it loads are kept. */
+  getInitialQuery?: () => string
+  /** Opens the modal when the page loads with, or navigates to, this URL fragment. */
+  openOnHash?: string
 }
 
 const Search = ({
   asChild = false,
   children,
   ownsShortcut = true,
+  getInitialQuery,
+  openOnHash,
 }: SearchProps) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
@@ -52,6 +62,15 @@ const Search = ({
       eventName: "search open",
     })
   }
+
+  useOnHash(openOnHash, () => {
+    onOpen()
+    trackCustomEvent({
+      eventCategory: "nav bar",
+      eventAction: "link",
+      eventName: "search open",
+    })
+  })
 
   useDocSearchKeyboardEvents({
     isOpen,
@@ -69,7 +88,9 @@ const Search = ({
 
   return (
     <>
-      {asChild ? (
+      {typeof children === "function" ? (
+        children(handleOpen)
+      ) : asChild ? (
         <Slot
           ref={searchButtonRef}
           onClick={handleOpen}
@@ -114,7 +135,7 @@ const Search = ({
               </div>
             )}
           >
-            <SearchModal onClose={onClose} />
+            <SearchModal onClose={onClose} getInitialQuery={getInitialQuery} />
           </ErrorBoundary>
         )}
       </Portal.Root>

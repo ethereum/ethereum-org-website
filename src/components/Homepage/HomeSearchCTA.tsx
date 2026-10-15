@@ -5,6 +5,8 @@ import { Search as SearchIcon, Sparkles } from "lucide-react"
 import Search from "@/components/Search"
 import { Button } from "@/components/ui/buttons/Button"
 
+import { HOME_SEARCH_HASH } from "@/lib/constants"
+
 type HomeSearchCTAProps = {
   label: string
   /** Asking is English-only, so elsewhere this is the search box it has always been. */
@@ -24,7 +26,7 @@ const HomeSearchCTA = ({ label, ask }: HomeSearchCTAProps) => {
   const Icon = ask ? Sparkles : SearchIcon
 
   return (
-    <Search asChild ownsShortcut={false}>
+    <Search asChild ownsShortcut={false} openOnHash={HOME_SEARCH_HASH}>
       <Button
         variant="outline"
         isSecondary
