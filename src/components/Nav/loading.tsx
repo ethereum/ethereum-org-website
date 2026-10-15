@@ -1,9 +1,11 @@
 import { Skeleton } from "@/components/ui/skeleton"
 
+import { SECTION_LABELS } from "@/lib/constants"
+
 export const DesktopNavLoading = () => {
   return (
     <div className="me-8 flex w-full items-center gap-10 px-6 max-md:hidden">
-      {Array.from({ length: 5 }).map((_, i) => (
+      {Array.from({ length: SECTION_LABELS.length }).map((_, i) => (
         <Skeleton key={i} className="h-6 w-12 py-2" />
       ))}
     </div>

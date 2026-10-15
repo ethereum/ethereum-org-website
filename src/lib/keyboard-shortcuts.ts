@@ -77,6 +77,13 @@ export const KEYBOARD_SHORTCUTS = {
     // Escape that closes the modal). Search registers this entry anyway, with
     // no handler, so the keypress still lands in the shortcut count.
   },
+  // Inside the modal only, where DocSearch's own `/` binding does not run: it opens
+  // search when the modal is closed, so the key is free once it is open.
+  searchFocusInput: {
+    combos: [["/"]],
+    labelKey: "shortcut-search-focus-input",
+    group: "search",
+  },
   searchNavigate: {
     combos: [["ArrowUp"], ["ArrowDown"]],
     labelKey: "shortcut-search-navigate",
