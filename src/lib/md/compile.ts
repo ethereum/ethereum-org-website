@@ -54,6 +54,7 @@ export const compile = async ({
     components,
     options: {
       parseFrontmatter: true,
+      blockJS: false,
       mdxOptions,
     },
   })
