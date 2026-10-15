@@ -29,6 +29,8 @@ import {
   FENCED_BLOCK_RE,
   fenceLanguage,
   PROSE_FENCE_TAGS,
+  proseLineMask,
+  replaceOutsideInlineCode,
 } from "./shared-patterns"
 
 /**
@@ -58,15 +60,10 @@ function headings(src: string) {
     text: string
     anchor: string | null
   }[] = []
-  let fence: string | null = null
-  src.split("\n").forEach((line, i) => {
-    const f = line.match(/^\s*(`{3,}|~{3,})/)
-    if (f) {
-      if (!fence) fence = f[1][0]
-      else if (line.trim().startsWith(fence)) fence = null
-      return
-    }
-    if (fence) return
+  const lines = src.split("\n")
+  const prose = proseLineMask(lines)
+  lines.forEach((line, i) => {
+    if (!prose[i]) return
     const h = line.match(/^(#{1,6})\s+(.*)$/)
     if (!h) return
     const anchor = h[2].match(/\{#[^}]*\}/)
@@ -137,6 +134,21 @@ const hrefs = (src: string) => all(src, /(?:\]\(|href=")(\/[^)"\s]*)/g)
 const altText = (src: string) => all(src, /!\[([^\]]*)\]/g)
 const attrValues = (src: string, attr: string) =>
   all(src, new RegExp(`<[A-Z][A-Za-z0-9]*[^>]*?\\s${attr}="([^"]*)"`, "g"))
+
+/** `{#}` in prose -- outside fenced code and outside inline code spans. */
+function hasEmptyAnchor(src: string): boolean {
+  const lines = src.split("\n")
+  const prose = proseLineMask(lines)
+  return lines.some((line, i) => {
+    if (!prose[i] || !line.includes("{#}")) return false
+    let found = false
+    replaceOutsideInlineCode(line, (run) => {
+      if (run.includes("{#}")) found = true
+      return run
+    })
+    return found
+  })
+}
 
 // --- markdown checks -------------------------------------------------------
 
@@ -326,8 +338,11 @@ export function verifyMarkdown(
   const residue = trSrc.match(/HTML-PLACEHOLDER-[A-Z]+-[0-9a-f]+/g)
   if (residue) add("placeholder-residue", [...new Set(residue)].join(", "))
 
-  // Empty {#} anchors break the MDX parser (KB pattern 23).
-  if (/\{#\}/.test(trSrc)) add("empty-anchor", "found `{#}`")
+  // Empty {#} anchors break the MDX parser (KB pattern 23). Scoped to prose:
+  // inside a fence or a code span the braces are literal text and parse fine,
+  // and the sanitizer deliberately will not edit either -- a finding there
+  // would be one nothing can repair.
+  if (hasEmptyAnchor(trSrc)) add("empty-anchor", "found `{#}`")
 
   // A tag with attributes nested inside a JSX attribute value breaks parsing.
   const nested = trSrc.match(

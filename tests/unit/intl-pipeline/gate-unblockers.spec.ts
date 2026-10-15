@@ -77,8 +77,30 @@ test("{#} inside a fenced block is left alone", () => {
   expect(stripAnchors(s).content).toBe(s)
 })
 
-test("{#} in body text is left alone", () => {
-  const s = "Dies ist {#} kein Heading."
+test("{#} in body text is stripped too", () => {
+  // Not a heading, but still a JS expression acorn rejects -- and still an
+  // `empty-anchor` finding. Leaving it was a gate failure nothing could repair.
+  expect(stripAnchors("Dies ist {#} kein Heading.").content).toBe(
+    "Dies ist kein Heading."
+  )
+})
+
+test("{#} inside an inline code span is left alone", () => {
+  const s = "Ein leerer Anker `{#}` bricht den Build."
+  expect(stripAnchors(s).content).toBe(s)
+  expect(stripAnchors(s).fixCount).toBe(0)
+})
+
+test("an indented heading is reached", () => {
+  // verify-structure only calls a line a heading at column 0, but
+  // `empty-anchor` scans the whole document, so this has to be repairable.
+  expect(stripAnchors("  ### Ressourcen {#}").content).toBe("  ### Ressourcen")
+})
+
+test("a ``` line does not close a ~~~ block", () => {
+  // Fence state follows the fence character; a toggle would treat the ```
+  // line as a close and start editing fenced content.
+  const s = ["~~~text", "```", "##### Ressourcen {#}", "~~~"].join("\n")
   expect(stripAnchors(s).content).toBe(s)
 })
 
