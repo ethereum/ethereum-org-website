@@ -1,23 +1,12 @@
-import {
-  type ComponentType,
-  Fragment,
-  type ReactNode,
-  type SVGProps,
-} from "react"
-import { AppWindowMac, Code } from "lucide-react"
+import { Fragment, type ReactNode } from "react"
+import { AppWindowMac } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CatalogItem, CatalogItemLinkKind } from "@/lib/types"
+import type { CatalogItem } from "@/lib/types"
 
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import ContentFeedback from "@/components/ContentFeedback"
-import Discord from "@/components/icons/discord.svg"
-import Farcaster from "@/components/icons/farcaster.svg"
-import GitHub from "@/components/icons/github.svg"
-import Reddit from "@/components/icons/reddit.svg"
-import Telegram from "@/components/icons/telegram.svg"
-import X from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
@@ -29,7 +18,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
@@ -40,69 +28,21 @@ import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 import CatalogItemDescription from "./Description"
 import ExpandableDescription from "./ExpandableDescription"
 import CatalogItemGallery from "./Gallery"
+import CatalogItemLinkButtons, { detailEvent } from "./Links"
 
 const COLLAPSE_AFTER_CHARS = 600
 const MAX_CHAINS = 8
 
-const LINKS: Record<
-  CatalogItemLinkKind,
-  { Icon: ComponentType<SVGProps<SVGSVGElement>>; platform?: string }
-> = {
-  x: { Icon: X, platform: "X" },
-  discord: { Icon: Discord, platform: "Discord" },
-  telegram: { Icon: Telegram, platform: "Telegram" },
-  reddit: { Icon: Reddit, platform: "Reddit" },
-  farcaster: { Icon: Farcaster, platform: "Farcaster" },
-  github: { Icon: GitHub, platform: "GitHub" },
-  code: { Icon: Code },
-}
-const LINK_ORDER = Object.keys(LINKS) as CatalogItemLinkKind[]
-
-const detailEvent = (item: CatalogItem, eventName: string) => ({
-  eventCategory: "detail",
-  eventAction: `${item.kind} name ${item.name}`,
-  eventName,
-})
-
 export const CatalogItemLinks = async ({ item }: { item: CatalogItem }) => {
   const t = await getTranslations("component-catalog-item")
-  const links = [...item.socialLinks].sort(
-    (a, b) => LINK_ORDER.indexOf(a.kind) - LINK_ORDER.indexOf(b.kind)
-  )
-  if (!item.primaryLink && links.length === 0) return null
-
   return (
-    <div className="flex flex-wrap gap-4">
-      {item.primaryLink && (
-        <ButtonLink
-          href={item.primaryLink.href}
-          hideArrow
-          className="w-full sm:w-fit"
-          customEventOptions={detailEvent(item, "visit")}
-        >
-          {item.primaryLink.label}
-        </ButtonLink>
-      )}
-      {links.map(({ kind, href }) => {
-        const { Icon, platform = t("catalog-item-source-code") } = LINKS[kind]
-        return (
-          <ButtonLink
-            key={href}
-            href={href}
-            variant="outline"
-            isSecondary
-            hideArrow
-            aria-label={t("catalog-item-link-label", {
-              name: item.name,
-              platform,
-            })}
-            customEventOptions={detailEvent(item, kind)}
-          >
-            <Icon />
-          </ButtonLink>
-        )
-      })}
-    </div>
+    <CatalogItemLinkButtons
+      item={item}
+      sourceCodeLabel={t("catalog-item-source-code")}
+      linkLabel={(platform) =>
+        t("catalog-item-link-label", { name: item.name, platform })
+      }
+    />
   )
 }
 

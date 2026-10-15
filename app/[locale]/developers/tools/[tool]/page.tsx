@@ -13,6 +13,7 @@ import {
   buildToolLabels,
   findToolBySlug,
   getToolKey,
+  getToolLinkEntries,
   getToolNeighbours,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
@@ -23,7 +24,6 @@ import {
 import { getMetadata } from "@/lib/utils/metadata"
 
 import ToolCard from "../_components/ToolCard"
-import ToolDetailHardNav from "../_components/ToolDetailHardNav"
 import { ToolLinkSections } from "../_components/ToolLinkRows"
 
 import PageJsonLD from "./page-jsonld"
@@ -84,52 +84,47 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
         }
         contributors={contributors}
       />
-      <ToolDetailHardNav>
-        <CatalogItemLayout
-          item={item}
-          related={
-            related.length > 0 && (
-              <RelatedCatalogItems
-                title={t("page-developers-tools-related-title")}
-              >
-                {related.map((relatedTool) => (
-                  <ToolCard
-                    key={getToolKey(relatedTool)}
-                    tool={toToolCard(relatedTool)}
-                  />
-                ))}
-              </RelatedCatalogItems>
-            )
-          }
-        >
-          {tool.tags.length > 0 && (
-            <section className="flex max-w-3xl flex-col gap-3">
-              <h3 className="text-md">
-                {t("page-developers-tools-modal-tags")}
-              </h3>
-              <ul className="m-0 flex list-none flex-wrap gap-2">
-                {tool.tags.map((tag) => (
-                  <li key={tag} className="m-0">
-                    <Tag size="small" variant="outline" status="normal">
-                      {labels.tagLabels[tag] || tag}
-                    </Tag>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-          <ToolLinkSections
-            locale={locale}
-            tool={tool}
-            labels={{
-              repository: t("page-developers-tools-modal-repository"),
-              repositories: t("page-developers-tools-modal-repositories"),
-              package: t("page-developers-tools-modal-package"),
-              packages: t("page-developers-tools-modal-packages"),
-            }}
-          />
-        </CatalogItemLayout>
-      </ToolDetailHardNav>
+      <CatalogItemLayout
+        item={item}
+        related={
+          related.length > 0 && (
+            <RelatedCatalogItems
+              title={t("page-developers-tools-related-title")}
+            >
+              {related.map((relatedTool) => (
+                <ToolCard
+                  key={getToolKey(relatedTool)}
+                  tool={toToolCard(relatedTool)}
+                />
+              ))}
+            </RelatedCatalogItems>
+          )
+        }
+      >
+        {tool.tags.length > 0 && (
+          <section className="flex max-w-3xl flex-col gap-3">
+            <h3 className="text-md">{t("page-developers-tools-modal-tags")}</h3>
+            <ul className="m-0 flex list-none flex-wrap gap-2">
+              {tool.tags.map((tag) => (
+                <li key={tag} className="m-0">
+                  <Tag size="small" variant="outline" status="normal">
+                    {labels.tagLabels[tag] || tag}
+                  </Tag>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        <ToolLinkSections
+          entries={getToolLinkEntries(tool, locale)}
+          labels={{
+            repository: t("page-developers-tools-modal-repository"),
+            repositories: t("page-developers-tools-modal-repositories"),
+            package: t("page-developers-tools-modal-package"),
+            packages: t("page-developers-tools-modal-packages"),
+          }}
+        />
+      </CatalogItemLayout>
     </>
   )
 }

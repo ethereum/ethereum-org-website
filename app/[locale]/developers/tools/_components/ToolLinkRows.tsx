@@ -1,57 +1,27 @@
-import { ArrowRight, Download, Star } from "lucide-react"
+import { Download, Star } from "lucide-react"
 
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
 import GitHub from "@/components/icons/github.svg"
 import NpmJs from "@/components/icons/npmjs.svg"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 
-import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
-import {
-  getPackageLabel,
-  getRankedPackages,
-  getRankedRepos,
-  getRepoLabel,
+import type {
+  ToolDetailData,
+  ToolLinkEntry,
+  ToolLinkKind,
 } from "@/lib/utils/developerToolsData"
-import { numberFormat } from "@/lib/utils/numbers"
-
-/**
- * A handful of tools list dozens of repos (Hats Protocol has 31), which would
- * stretch the modal past the rest of the catalog's rhythm. Show the top few by
- * stars/downloads and send the rest to the standalone page.
- */
-const SHOWN = 3
 
 export type ToolLinkRowsLabels = {
   repository: string
   repositories: string
   package: string
   packages: string
-  /** Already interpolated with the remaining count. */
-  more: (count: number) => string
 }
 
-type Kind = "github" | "npm"
-type Entry = { href: string; label: string; count: string | null }
+type Kind = ToolLinkKind
+type Entry = ToolLinkEntry
 
-const getEntries = (tool: DeveloperToolWithCategory, locale: string) => {
-  const compact = numberFormat(locale, { notation: "compact" })
-  const format = (n?: number) =>
-    typeof n === "number" ? compact.format(n) : null
-  return {
-    github: getRankedRepos(tool).map((repo) => ({
-      href: repo.href,
-      label: getRepoLabel(repo.href),
-      count: format(repo.stargazers),
-    })),
-    npm: getRankedPackages(tool).map((pkg) => ({
-      href: pkg.href,
-      label: getPackageLabel(pkg.href),
-      count: format(pkg.downloads),
-    })),
-  } satisfies Record<Kind, Entry[]>
-}
-
-const kindLabels = (labels: Omit<ToolLinkRowsLabels, "more">) => [
+const kindLabels = (labels: ToolLinkRowsLabels) => [
   {
     kind: "github" as const,
     one: labels.repository,
@@ -76,16 +46,14 @@ const CountIcon = ({ kind }: { kind: Kind }) =>
 
 const LinkList = ({
   entries,
-  hidden,
   kind,
   detailHref,
-  moreLabel,
+  more,
 }: {
   entries: Entry[]
-  hidden: number
   kind: Kind
   detailHref: string
-  moreLabel: string
+  more?: string
 }) => (
   <div className="flex flex-col items-end gap-1">
     {entries.map(({ href, label, count }) => (
@@ -113,64 +81,54 @@ const LinkList = ({
         )}
       </InlineLink>
     ))}
-    {hidden > 0 && (
-      // Raw anchor for the same reason as FullDetailsLink: the modal already
-      // sits on this URL, so only a document navigation escapes the interception.
-      <a href={detailHref} className="group text-body-medium no-underline">
-        <span className="group-hover:underline">{moreLabel}</span>
-        <ArrowRight className="ms-1 mb-0.5 inline size-[1em] rtl:-scale-x-100" />
-      </a>
+    {more && (
+      <LinkWithArrow href={detailHref} className="text-body-medium">
+        {more}
+      </LinkWithArrow>
     )}
   </div>
 )
 
 /** Compact spec rows for the modal: the top few, then a link to the page. */
 const ToolLinkRows = ({
-  locale,
-  tool,
+  links,
   detailHref,
   labels,
 }: {
-  locale: string
-  tool: DeveloperToolWithCategory
+  links: ToolDetailData["links"]
   detailHref: string
   labels: ToolLinkRowsLabels
-}) => {
-  const entries = getEntries(tool, locale)
-  return kindLabels(labels).map(({ kind, one, many }) => {
-    const list = entries[kind]
-    if (list.length === 0) return null
+}) =>
+  kindLabels(labels).map(({ kind, one, many }) => {
+    const { top, more } = links[kind]
+    if (top.length === 0) return null
+    const multiple = top.length > 1 || !!more
     return (
       <DetailRow
         key={kind}
-        label={list.length === 1 ? one : many}
+        label={multiple ? many : one}
         roomyLabel
-        alignTop={list.length > 1}
+        alignTop={multiple}
       >
         <LinkList
           kind={kind}
           detailHref={detailHref}
-          moreLabel={labels.more(list.length - SHOWN)}
-          hidden={list.length - SHOWN}
-          entries={list.slice(0, SHOWN)}
+          more={more}
+          entries={top}
         />
       </DetailRow>
     )
   })
-}
 
 /** Every repo and package for the detail page's About panel, as an open list. */
 export const ToolLinkSections = ({
-  locale,
-  tool,
+  entries,
   labels,
 }: {
-  locale: string
-  tool: DeveloperToolWithCategory
-  labels: Omit<ToolLinkRowsLabels, "more">
-}) => {
-  const entries = getEntries(tool, locale)
-  return kindLabels(labels).map(({ kind, one, many }) => {
+  entries: Record<Kind, Entry[]>
+  labels: ToolLinkRowsLabels
+}) =>
+  kindLabels(labels).map(({ kind, one, many }) => {
     const list = entries[kind]
     if (list.length === 0) return null
     // GitHub owners are case-insensitive, and the catalog spells some both ways.
@@ -228,6 +186,5 @@ export const ToolLinkSections = ({
       </section>
     )
   })
-}
 
 export default ToolLinkRows
