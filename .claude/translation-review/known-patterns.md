@@ -1120,3 +1120,15 @@ PR #19474: the new /organizations pages render short stat-tile captions (`-stat-
 ### 87. Semantic traps recurring in the /organizations content (PATTERN -- semantic)
 
 PR #19474: "database corruption" -> moral corruption/bribery (bn `দুর্নীতি`, te `అవినీతి`, hi `भ्रष्टाचार`); "tokenized treasuries" (government bills) -> treasury department/vault (de `Schatzkammern` fixed; es/pt-br/fr/id/vi/tr/ar/ur/te left as warnings); relational "settle against liquidity" -> "in opposition to" (te, hi -- known trap); "scalable" -> "measurable" (mr `मोजण्यायोग्य`); refund agency inverted (ta: staff *receive* refunds); "reused address" -> "used once" (te); "for 120 days after a sale" -> "after 120 days" (hi). "Ethereum for enterprises" and "Ethereum for business" collapse to one title in tr, sw, de -- two pathway cards with identical headings.
+
+### 88. Metavariable placeholders translated inside inline code (CRITICAL -- code)
+
+PR #19480: the wagmi tutorial's pseudo-syntax spans `{<expression>}`, `{<condition> && <value>}` and `<variable>?.<field>` were translated in cs, pl, tr and fr (`{<výraz>}`, `<zmienna>?.<pole>`, `<değişken>?.<alan>`, `<valeur>`), though dev had them in English and the other 20 locales kept them. A retranslation pass of a line can reach code spans that earlier runs left alone. Restore English; the surrounding prose explains the placeholders.
+
+### 89. Underscore emphasis between CJK characters renders literally (WARNING -- rendering)
+
+PR #19480: zh retranslation turned `它**必须**在` / `我们**未**连接` into `它_必须_在` / `我们_未_连接`. remark-gfm with no CJK plugin cannot open `_` emphasis flanked by CJK characters, so readers see the underscores. `**` works in that position; `<em>` always works. Revert to the dev form when the run regressed it; pre-existing cases in ja/zh-tw are warnings.
+
+### 90. Gate quarantines that never clear (INFORMATIONAL -- pipeline)
+
+PR #19480 `.manifests/quarantine.json`: (a) `developers/docs/networks/index.md` gated in all 24 locales because English h5 headings (`##### Resources`, `##### Faucets`) carry no ID and the model emits an empty `{#}` -- it will re-quarantine every run until English h5s get IDs or the sanitizer strips empty `{#}`. (b) ar `page-organizations-enterprise.json` gated by `json-plural-branch` because the Arabic `two` (dual) branch omits `{count}` -- idiomatic Arabic, gate false positive (follow-up to #85).

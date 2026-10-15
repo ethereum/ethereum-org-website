@@ -121,3 +121,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Ethereum für Unternehmen` used for both enterprise and small-business pages; `Privatkredite` for private credit; Onchain capitalization; Kontrahenten-/Gegenparteirisiko split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.4/10
+
+- Fixed: security line 292 unbalanced backtick around withdraw() (regression; same class as the English backtick fix fe75a81caa).
+- Warning: wagmi line 299 dropped subject `sie` (ungrammatical).

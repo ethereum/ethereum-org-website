@@ -144,3 +144,7 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Security file retranslation itself was legit (dev copy had 6 missing anchors + stray fence).
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.0/10
+
+- Warning (pre-existing, unfixed): wagmi uses `कॉन्ट्रैक्ट` 22x vs glossary `अनुबंध`; "evaluate to" rendered as "evaluate X" (L238, L303).
