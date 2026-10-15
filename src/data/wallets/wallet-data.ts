@@ -56,6 +56,8 @@ import ZerionImage from "@/public/images/wallets/zerion.png"
  * the optional `supported_chains` array.
  */
 
+// Each wallet also needs `wallet-{slug}-description` in src/intl/en/page-wallet-descriptions.json,
+// copied from the "Wallet description" field of its listing issue.
 export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",

@@ -1,7 +1,6 @@
 import type { PartialDate } from "@/data/upgrades/types"
 
 import { DEFAULT_LOCALE } from "../constants"
-import type { Lang } from "../types"
 
 import { normalizeIntlSpaces } from "./intl"
 
@@ -147,11 +146,6 @@ export const getLocaleYear = (
   dateTimeFormat(locale, { year: "numeric" }).format(
     date ? new Date(date) : new Date()
   )
-
-export const getLocaleFormattedDate = (locale: Lang, date: string) => {
-  const walletLastUpdatedDate = new Date(date)
-  return dateTimeFormat(locale).format(walletLastUpdatedDate)
-}
 
 /** "today", "yesterday", "445 days ago"; undefined for an unparseable date. */
 export const formatDaysAgo = (
