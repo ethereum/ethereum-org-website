@@ -2,6 +2,7 @@
 
 import { memo, useMemo } from "react"
 
+import { useCatalogModal } from "@/components/CatalogDetailModal"
 import FilterableCatalog from "@/components/FilterableCatalog"
 import CatalogNavGroup from "@/components/FilterableCatalog/CatalogNavGroup"
 import type {
@@ -11,6 +12,7 @@ import type {
 import { BaseLink } from "@/components/ui/Link"
 
 import type {
+  CatalogToolCard,
   DeveloperToolsCategory,
   ToolCardData,
 } from "@/lib/utils/developerToolsData"
@@ -18,6 +20,7 @@ import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
+import ToolDetailModal, { type ToolModalLabels } from "./ToolDetailModal"
 
 const SUGGEST_RESOURCE_ISSUE_URL =
   "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
@@ -28,7 +31,7 @@ const SUBCATEGORY_FILTER_KEY = "sub"
 type ToolsCatalogProps = {
   locale: string
   /** Slim projection: only what this island reads crosses to the client. */
-  tools: ToolCardData[]
+  tools: CatalogToolCard[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -44,6 +47,7 @@ type ToolsCatalogProps = {
     applyLabel: string
     closeLabel: string
     suggestButton: string
+    modal: ToolModalLabels
   }
   currentCategoryId?: string
 }
@@ -83,6 +87,7 @@ type ToolsResultsProps = {
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
+  onOpen: (key: string) => void
 }
 
 const ToolsResults = memo(function ToolsResults({
@@ -91,6 +96,7 @@ const ToolsResults = memo(function ToolsResults({
   categories,
   categoryLabels,
   subcategoryLabels,
+  onOpen,
 }: ToolsResultsProps) {
   const nf = numberFormat(locale)
 
@@ -174,7 +180,11 @@ const ToolsResults = memo(function ToolsResults({
                   </div>
                   <div className="grid grid-cols-auto-3 gap-x-8">
                     {subcategoryTools.map((tool) => (
-                      <ToolCard key={getToolKey(tool)} tool={tool} />
+                      <ToolCard
+                        key={getToolKey(tool)}
+                        tool={tool}
+                        onOpen={onOpen}
+                      />
                     ))}
                   </div>
                 </div>
@@ -199,6 +209,11 @@ export default function ToolsCatalog({
   labels,
   currentCategoryId,
 }: ToolsCatalogProps) {
+  const { openId, open, close } = useCatalogModal()
+  const openTool = openId
+    ? tools.find((tool) => getToolKey(tool) === openId)
+    : undefined
+
   // A `?sub=` that matches no tool on this page (stale link, other category) is ignored.
   const pageSubcategoryIds = useMemo(
     () => new Set(tools.map((tool) => tool.subcategory_id)),
@@ -263,48 +278,58 @@ export default function ToolsCatalog({
   }
 
   return (
-    <FilterableCatalog
-      locale={locale}
-      items={tools}
-      filterFn={filterTool}
-      labels={{
-        searchPlaceholder: labels.searchPlaceholder,
-        resultsLabel: labels.resultsLabel,
-        noResults: labels.noResults,
-        filtersToggle: labels.filtersToggle,
-        applyLabel: labels.applyLabel,
-        closeLabel: labels.closeLabel,
-      }}
-      mobileVariant="sheet"
-      urlParamKey={SUBCATEGORY_FILTER_KEY}
-      closeMobileOnSelect
-      renderSidebar={({ state, setFilter }) => (
-        <CatalogNavGroup
-          locale={locale}
-          config={navConfig}
-          selectedChildId={getSubcategoryFilter(state)}
-          onSelectChild={(childId) =>
-            setFilter(SUBCATEGORY_FILTER_KEY, childId)
-          }
+    <>
+      <FilterableCatalog
+        locale={locale}
+        items={tools}
+        filterFn={filterTool}
+        labels={{
+          searchPlaceholder: labels.searchPlaceholder,
+          resultsLabel: labels.resultsLabel,
+          noResults: labels.noResults,
+          filtersToggle: labels.filtersToggle,
+          applyLabel: labels.applyLabel,
+          closeLabel: labels.closeLabel,
+        }}
+        mobileVariant="sheet"
+        urlParamKey={SUBCATEGORY_FILTER_KEY}
+        closeMobileOnSelect
+        renderSidebar={({ state, setFilter }) => (
+          <CatalogNavGroup
+            locale={locale}
+            config={navConfig}
+            selectedChildId={getSubcategoryFilter(state)}
+            onSelectChild={(childId) =>
+              setFilter(SUBCATEGORY_FILTER_KEY, childId)
+            }
+          />
+        )}
+        sidebarFooter={
+          <BaseLink
+            href={SUGGEST_RESOURCE_ISSUE_URL}
+            className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
+          >
+            {labels.suggestButton}
+          </BaseLink>
+        }
+        renderResults={(filteredTools) => (
+          <ToolsResults
+            locale={locale}
+            tools={filteredTools}
+            categories={categories}
+            categoryLabels={categoryLabels}
+            subcategoryLabels={subcategoryLabels}
+            onOpen={open}
+          />
+        )}
+      />
+      {openTool && (
+        <ToolDetailModal
+          tool={openTool}
+          labels={labels.modal}
+          onClose={close}
         />
       )}
-      sidebarFooter={
-        <BaseLink
-          href={SUGGEST_RESOURCE_ISSUE_URL}
-          className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
-        >
-          {labels.suggestButton}
-        </BaseLink>
-      }
-      renderResults={(filteredTools) => (
-        <ToolsResults
-          locale={locale}
-          tools={filteredTools}
-          categories={categories}
-          categoryLabels={categoryLabels}
-          subcategoryLabels={subcategoryLabels}
-        />
-      )}
-    />
+    </>
   )
 }

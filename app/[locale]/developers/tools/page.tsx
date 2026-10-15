@@ -49,7 +49,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   )
   const countByCategory = countTools(allTools, "categoryId")
   const countBySubcategory = countTools(allTools, "subcategory_id")
-  const { categoryLabels, subcategoryLabels } = buildToolLabels(
+  const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(
     t,
     normalized.taxonomy
   )
@@ -74,6 +74,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         categories={categories}
         categoryLabels={categoryLabels}
         subcategoryLabels={subcategoryLabels}
+        tagLabels={tagLabels}
         countByCategory={countByCategory}
         countBySubcategory={countBySubcategory}
         totalCount={allTools.length}

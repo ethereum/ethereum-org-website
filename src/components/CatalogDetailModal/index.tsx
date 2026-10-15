@@ -1,9 +1,15 @@
 "use client"
 
+import {
+  type ComponentProps,
+  type ReactNode,
+  startTransition,
+  useCallback,
+  useEffect,
+  useState,
+} from "react"
 import { X } from "lucide-react"
 import type { StaticImageData } from "next/image"
-import { useRouter } from "next/navigation"
-import type { ComponentProps, ReactNode } from "react"
 
 import { Image } from "@/components/Image"
 import {
@@ -36,21 +42,16 @@ const CatalogDetailModal = ({
   /** When absent, Radix's describedby warning is opted out. */
   description?: string
   closeLabel: string
-  /** Defaults to popping an intercepted detail route off history. */
-  onClose?: () => void
+  onClose: () => void
   onCloseAutoFocus?: ComponentProps<typeof DialogContent>["onCloseAutoFocus"]
   children: ReactNode
 }) => {
-  const router = useRouter()
-
   return (
     <Dialog
       open
       size="lg"
       onOpenChange={(open) => {
-        if (open) return
-        if (onClose) onClose()
-        else router.back()
+        if (!open) onClose()
       }}
     >
       <DialogContent
@@ -91,6 +92,45 @@ const CatalogDetailModal = ({
       </DialogContent>
     </Dialog>
   )
+}
+
+/** Which catalog item's modal is open, with a history entry so Back closes it. */
+export const useCatalogModal = () => {
+  const [openId, setOpenId] = useState<string | null>(null)
+
+  // The click paints immediately; the Dialog mounts in a transition.
+  const open = useCallback(
+    (id: string) => startTransition(() => setOpenId(id)),
+    []
+  )
+
+  const close = useCallback(() => {
+    setOpenId(null)
+    // Drop the entry we pushed, or Back would have to be pressed twice.
+    if (window.history.state?.catalogModal) window.history.back()
+  }, [])
+
+  // Pushed a frame late (pushState inside the click costs +500ms INP) via the
+  // native method (Next patches the other).
+  useEffect(() => {
+    if (!openId) return
+    const frame = requestAnimationFrame(() => {
+      History.prototype.pushState.call(
+        window.history,
+        { ...window.history.state, catalogModal: openId },
+        "",
+        window.location.href
+      )
+    })
+    const onPopState = () => setOpenId(null)
+    window.addEventListener("popstate", onPopState)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener("popstate", onPopState)
+    }
+  }, [openId])
+
+  return { openId, open, close }
 }
 
 export default CatalogDetailModal

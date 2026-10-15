@@ -118,8 +118,8 @@ export type ToolCardData = Pick<
 
 /**
  * Project a tool down to `ToolCardData`. Everything dropped here — `banner_url`,
- * `twitter`, `website`, `packages`, the raw ranking fields — is read only by
- * server components, so it never needs to cross into the client payload.
+ * `twitter`, `website`, `packages`, the raw ranking fields — reaches the client
+ * only as the pre-formatted `toToolDetail` the catalog modal reads.
  */
 export const toToolCard = (tool: DeveloperToolWithCategory): ToolCardData => {
   const stargazers = getToolStars(tool)
@@ -138,6 +138,35 @@ export const toToolCard = (tool: DeveloperToolWithCategory): ToolCardData => {
       resource_score: tool.resource_score,
     }),
     ...(stargazers > 0 && { stargazers }),
+  }
+}
+
+export type ToolLinkKind = "github" | "npm"
+export type ToolLinkEntry = {
+  href: string
+  label: string
+  count: string | null
+}
+
+/** Ranked repos and packages as display rows, counts compact-formatted. */
+export function getToolLinkEntries(
+  tool: DeveloperTool,
+  locale: string
+): Record<ToolLinkKind, ToolLinkEntry[]> {
+  const compact = numberFormat(locale, { notation: "compact" })
+  const format = (n?: number) =>
+    typeof n === "number" ? compact.format(n) : null
+  return {
+    github: getRankedRepos(tool).map((repo) => ({
+      href: repo.href,
+      label: getRepoLabel(repo.href),
+      count: format(repo.stargazers),
+    })),
+    npm: getRankedPackages(tool).map((pkg) => ({
+      href: pkg.href,
+      label: getPackageLabel(pkg.href),
+      count: format(pkg.downloads),
+    })),
   }
 }
 
@@ -350,6 +379,58 @@ export function toolToCatalogItem(
 }
 
 type Translator = Awaited<ReturnType<typeof getTranslations>>
+
+/**
+ * A few tools list dozens of repos (Hats Protocol has 31); the modal shows the
+ * top few by stars/downloads and sends the rest to the standalone page.
+ */
+const MODAL_LINKS_SHOWN = 3
+
+/** What the client-side catalog modal renders, with every label pre-formatted. */
+export type ToolDetailData = Pick<
+  CatalogItem,
+  "primaryLink" | "socialLinks"
+> & {
+  category: string
+  archived?: string
+  infoRows: { label: string; value: string }[]
+  tags: string[]
+  links: Record<ToolLinkKind, { top: ToolLinkEntry[]; more?: string }>
+}
+
+export type CatalogToolCard = ToolCardData & { detail: ToolDetailData }
+
+export function toToolDetail(
+  tool: DeveloperToolWithCategory,
+  context: Omit<Parameters<typeof toolToCatalogItem>[1], "next">
+): ToolDetailData {
+  const { t, labels } = context
+  const item = toolToCatalogItem(tool, context)
+  const [category, archived] = item.tags
+  const lastUpdated = t("page-developers-tools-info-last-updated")
+  const entries = getToolLinkEntries(tool, context.locale)
+  const links = (kind: ToolLinkKind) => {
+    const hidden = entries[kind].length - MODAL_LINKS_SHOWN
+    return {
+      top: entries[kind].slice(0, MODAL_LINKS_SHOWN),
+      ...(hidden > 0 && {
+        more: t("page-developers-tools-modal-more", { count: hidden }),
+      }),
+    }
+  }
+
+  return {
+    category: category.label,
+    ...(archived && { archived: archived.label }),
+    infoRows: item.infoRows
+      .filter(({ label }) => label !== lastUpdated)
+      .map(({ label, value }) => ({ label, value: String(value) })),
+    tags: tool.tags.map((tag) => labels.tagLabels[tag] || tag),
+    ...(item.primaryLink && { primaryLink: item.primaryLink }),
+    socialLinks: item.socialLinks,
+    links: { github: links("github"), npm: links("npm") },
+  }
+}
 
 /**
  * Swap each tool's English description for its localized one from the
