@@ -6,6 +6,7 @@ import type { Lang } from "@/lib/types"
 import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import EthGlyphOutline from "../icons/eth-glyph-outline.svg"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -31,9 +32,31 @@ const Breadcrumbs = ({ slug, label, ...props }: BreadcrumbsProps) => {
   const trail = getBreadcrumbTrail(slug)
   if (!trail.length) return null
 
+  // Below a hub the text root crumb is dropped; a glyph stands in for it
+  const showGlyph = trail[0].href !== "/"
+
   return (
     <Breadcrumb {...props} dir={dir}>
       <BreadcrumbList>
+        {showGlyph && (
+          <>
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                href="/"
+                aria-label="ethereum.org"
+                className="relative inline-block h-lh w-6"
+              >
+                <EthGlyphOutline
+                  aria-hidden="true"
+                  className="absolute top-1/2 left-0 size-6 -translate-y-1/2"
+                />
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-2.5 me-2.5 text-gray-400">
+              /
+            </BreadcrumbSeparator>
+          </>
+        )}
         {trail.map(({ href, labelKey }, idx) => {
           const isCurrentPage = idx === trail.length - 1
           const text =
