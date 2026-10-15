@@ -115,3 +115,19 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `server-components` `वेब3` (always_latin Web3), `डेंकुन` x10 vs `डेन्कन्`.
 - useroperation `वापरकर्ता ऑपरेशन्स` vs `वापरकर्ता कार्य`; DAS half-translated; mainnet `मुख्यनेट`/`मेननेट` split.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `चार्जॅक` -> `चार्जबॅक` x4; scalable rendered measurable `मोजण्यायोग्य` x3 -> `स्केलेबल`/`स्केल`; high-volume rendered high-noise `उच्च-आवाजाचे` -> `उच्च-प्रमाणातील`; deployment `उपयोजन` -> glossary `प्रस्थापना` x3.
+
+**Open (warnings):**
+
+- Three L2 forms; `उद्योग` (industry) for enterprise; परिसंस्था/इकोसिस्टम split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.6/10
+
+- Warning: retranslation regressed neighbors -- `संकेतांनुसार` for "by convention" (L171), हूक/हुक split, L303 evaluate-to drift.

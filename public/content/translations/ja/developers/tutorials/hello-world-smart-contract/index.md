@@ -49,7 +49,7 @@ Sepoliaが表示されない場合は、メニューから「Advanced」に進�
 
 ## ステップ5: 残高を確認する {#step-5}
 
-残高があることを再確認するために、[Alchemyのコンポーザーツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されるはずです。
+残高があることを再確認するために、[Alchemyのコンポーザーツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されるはずです。
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

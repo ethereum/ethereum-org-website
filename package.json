@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.29.1",
+  "version": "11.31.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -124,6 +124,7 @@
   "devDependencies": {
     "@chromatic-com/playwright": "^0.13.1",
     "@chromatic-com/storybook": "5.1.1",
+    "@formatjs/icu-messageformat-parser": "3.5.7",
     "@google/genai": "^1.46.0",
     "@netlify/plugin-nextjs": "^5.15.9",
     "@playwright/test": "^1.52.0",

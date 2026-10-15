@@ -55,6 +55,11 @@
     "score": 6000
   },
   {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 5750
+  },
+  {
     "username": "atoulme",
     "name": "Antoine Toulme",
     "score": 5000
@@ -75,11 +80,6 @@
     "score": 5000
   },
   {
-    "username": "therealgregoai",
-    "name": "Grego AI",
-    "score": 4750
-  },
-  {
     "username": "hyunmini",
     "name": "secuholic",
     "score": 4500
@@ -93,7 +93,12 @@
     "username": "ustas-eth",
     "name": "ustas",
     "score": 3500
-  }, 
+  },
+  {
+    "username": "quasar",
+    "name": "Evgeny Legerov",
+    "score": 3250
+  },
   {
     "username": "karalabe",
     "name": "Peter Szilagyi",
@@ -123,16 +128,26 @@
     "username": "sonny2k",
     "name": "Thanh Luu (sonny2k)",
     "score": 2500
-  },  
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 2500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
+    "score": 2000
+  },
+  {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2500
+  },
   {
     "username": "",
     "name": "Akincibor",
     "score": 1750
-  },
-  {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 1500
   },
   {
     "username": "eclipse07077",
@@ -143,11 +158,6 @@
     "username": "nerolation",
     "name": "Toni Wahrstätter",
     "score": 1000
-  },
-  {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 2000
   },
   {
     "username": "DragonDev1906",
@@ -200,6 +210,11 @@
     "score": 1000
   },
   {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1000
+  }, 
+  {
     "username": "sko94",
     "name": "XDZIBECX",
     "score": 500
@@ -232,6 +247,11 @@
   {
     "username": "arronxd",
     "name": "Arron5",
+    "score": 250
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
     "score": 250
   },
   {

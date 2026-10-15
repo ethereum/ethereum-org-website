@@ -1108,3 +1108,27 @@ PR #19357 `app-f-droid-description`: F-Droid's "free software" became the price 
 ### 84. Pre-pass glossary matching is dominated by unchanged lines (INFORMATIONAL -- review method)
 
 A naive "English has term X, locale lacks form Y" scan over PR files produced ~3.7k candidate rows for PR #19357; well over 80% sat on lines the PR never touched (the ~70 `videos/*` files only gained a `topic:` tag and an EOF newline). Real pre-existing deviations surfaced this way (ru `Бинанс Академи`, uk `Майкрософт Сек'юріті`, mr `वेब3`, te `లిడో`, mr `डेंकुन`, ur `ڈینکون`) are out of scope for the PR but worth a cleanup pass. Restrict candidate rows to added lines before handing them to review agents.
+
+### 85. Placeholder-count gate discards valid ICU plurals (CRITICAL -- pipeline bug)
+
+PR #19474: `verify-structure.ts` `icu()` compares sorted placeholder *occurrence* lists, not the set of names. English `{years, plural, one {{count} year} other {{count} years}}` has `{count}` twice; a correct cs (one/few/other), pl/ru/uk (one/few/many/other) or ar (six forms) plural repeats it 3-6 times and fails `json-placeholder`. `page-organizations-enterprise.json` was translated, then discarded and quarantined for ar/cs/pl/ru/uk (expires 2026-10-28), so those locales fall back to English. Committed files with the same shape (`page-developers-tools-modal-more`, `page-find-wallet-meta-description-fallback`) only passed because they predate the gate. Reviewer rule: a locale missing a namespace that every other locale has is almost always this gate -- check `.manifests/quarantine.json` before calling it a translation gap. Fix: compare unique names (and balanced tags), then release the quarantine entries and re-dispatch.
+
+### 86. Acronym expansion in stat captions and column headers (PATTERN -- #80 in a new slot)
+
+PR #19474: the new /organizations pages render short stat-tile captions (`-stat-*`) and comparison-table headers (`-compare-col-*`, `-approach-col-*`). MT expanded every bare acronym there: en `DeFi TVL` -> it `Valore totale bloccato (TVL) della finanza decentralizzata (DeFi)`; en `L1 alternatives` -> es `Alternativas de capa 1 (l1)`. 184 strings across 23 locales (de clean); also an added `(l2)` in `l2s-meta-title` where English has no acronym. ETHGlossary `ui` context could only collapse ~54 (TVL/DeFi); for L1/L2 and some DEX the `ui` form is itself the expanded lowercase phrase (es `Capa 2 (l2)`, pl `Warstwa 2`), so a glossary-driven patch is insufficient (normalization queue 13). Fixed by per-language agents: bare uppercase acronym mirroring English, locale case endings (tr `L1'deki`, te `L2లపై`, bn `L2-গুলো`), ar/ur bidi isolates, gender agreement in Romance/Slavic. Prose expansion left as warning.
+
+### 87. Semantic traps recurring in the /organizations content (PATTERN -- semantic)
+
+PR #19474: "database corruption" -> moral corruption/bribery (bn `দুর্নীতি`, te `అవినీతి`, hi `भ्रष्टाचार`); "tokenized treasuries" (government bills) -> treasury department/vault (de `Schatzkammern` fixed; es/pt-br/fr/id/vi/tr/ar/ur/te left as warnings); relational "settle against liquidity" -> "in opposition to" (te, hi -- known trap); "scalable" -> "measurable" (mr `मोजण्यायोग्य`); refund agency inverted (ta: staff *receive* refunds); "reused address" -> "used once" (te); "for 120 days after a sale" -> "after 120 days" (hi). "Ethereum for enterprises" and "Ethereum for business" collapse to one title in tr, sw, de -- two pathway cards with identical headings.
+
+### 88. Metavariable placeholders translated inside inline code (CRITICAL -- code)
+
+PR #19480: the wagmi tutorial's pseudo-syntax spans `{<expression>}`, `{<condition> && <value>}` and `<variable>?.<field>` were translated in cs, pl, tr and fr (`{<výraz>}`, `<zmienna>?.<pole>`, `<değişken>?.<alan>`, `<valeur>`), though dev had them in English and the other 20 locales kept them. A retranslation pass of a line can reach code spans that earlier runs left alone. Restore English; the surrounding prose explains the placeholders.
+
+### 89. Underscore emphasis between CJK characters renders literally (WARNING -- rendering)
+
+PR #19480: zh retranslation turned `它**必须**在` / `我们**未**连接` into `它_必须_在` / `我们_未_连接`. remark-gfm with no CJK plugin cannot open `_` emphasis flanked by CJK characters, so readers see the underscores. `**` works in that position; `<em>` always works. Revert to the dev form when the run regressed it; pre-existing cases in ja/zh-tw are warnings.
+
+### 90. Gate quarantines that never clear (INFORMATIONAL -- pipeline)
+
+PR #19480 `.manifests/quarantine.json`: (a) `developers/docs/networks/index.md` gated in all 24 locales because English h5 headings (`##### Resources`, `##### Faucets`) carry no ID and the model emits an empty `{#}` -- it will re-quarantine every run until English h5s get IDs or the sanitizer strips empty `{#}`. (b) ar `page-organizations-enterprise.json` gated by `json-plural-branch` because the Arabic `two` (dual) branch omits `{count}` -- idiomatic Arabic, gate false positive (follow-up to #85).

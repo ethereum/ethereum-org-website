@@ -173,3 +173,16 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
 - zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- Transliterated loanwords -> glossary native forms: wallet `வாலெட்` -> `பணப்பை` x4, smart contract -> `திறன் ஒப்பந்தம்` x3, cryptography -> `குறியாக்கவியல்` x2, node -> `கணு`, smart account -> `திறன் கணக்கு`, token -> `வில்லை` x2, devnet -> `மேம்பாட்டாளர் வலையமைப்பு`.
+- `small-business` refund agency inverted x2 (`திரும்பப் பெற` receive -> `திருப்பி அளிக்க` issue).
+
+**Open (warnings):**
+
+- glamsterdam parallelization regressed to `இணைப்படுத்தல்`; `பயன்பாட்டு வழக்குகள்` reads as lawsuits; privacy pools `குளங்கள்`.

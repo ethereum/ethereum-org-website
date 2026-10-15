@@ -145,3 +145,16 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `ڈینکون` x7 vs glossary `ڈینکن`.
 - zk-rollups `آپٹیمسٹک` vs `آپٹمسٹک` drift; `18 days` untranslated; `انخلا` for bank withdrawals.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `Arbitrum One` hybrid -> isolated Latin; wallet `بٹوے`/`والٹس` -> `والیٹس` x4; address `ایڈریسز` -> `پتے`; onchain transaction `لین دین` -> `ٹرانزیکشنز` x4; garbled `(l2)s`.
+- English left in isolates: `October 2025` -> `اکتوبر 2025`, `$187 billion` -> `$187 ارب` x2, `24h`/`12-month` in DEX stat label.
+
+**Open (warnings):**
+
+- Three L2 forms; Robinhood/Morpho script drift.

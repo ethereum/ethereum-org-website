@@ -49,7 +49,7 @@ Per distribuire il nostro smart contract sulla rete di test, avremo bisogno di a
 
 ## Passaggio 5: Controllare il tuo saldo {#step-5}
 
-Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) utilizzando lo [strumento composer di Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Questo restituirà la quantità di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account MetaMask e cliccato su "Send Request" (Invia richiesta), dovresti vedere una risposta come questa:
+Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) utilizzando lo [strumento composer di Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Questo restituirà la quantità di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account MetaMask e cliccato su "Send Request" (Invia richiesta), dovresti vedere una risposta come questa:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

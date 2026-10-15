@@ -32,9 +32,11 @@ Transakcja ramowa przenosi to sprawdzenie do samego konta. Konto uruchamia włas
 
 Ponieważ konto wybiera własne zasady, może również wybrać schemat podpisu, którego komputer kwantowy nie byłby w stanie złamać. Czyni to z tego krok w stronę [odporności kwantowej](/roadmap/security/#quantum-resistance), a także lepszych portfeli.
 
-## Co jeszcze znajduje się w Hegotá {#scope}
+## Co jeszcze zawiera Hegotá {#scope}
 
-Jeszcze nie zdecydowano. FOCIL i transakcje ramowe to dwie zmiany zaplanowane do tej pory; zaproponowano dziesiątki innych, ale żadna z nich nie została jeszcze ostatecznie zatwierdzona. Ta strona pozostanie krótka, dopóki zakres nie zostanie ustalony — aby poznać obecny stan dyskusji, zapoznaj się z poniższymi zasobami.
+Jeszcze nie zdecydowano. FOCIL i transakcje ramowe to dwie zmiany zaplanowane do tej pory; zaproponowano dziesiątki innych, ale żadna z nich nie została jeszcze ostatecznie zatwierdzona. Ta strona pozostanie krótka, dopóki zakres nie zostanie ostatecznie ustalony — aktualny stan dyskusji można znaleźć w poniższych zasobach.
+
+Propozycje obecnie rozważane do włączenia to m.in. EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 oraz EIP-8365. Fakt, że są one rozważane, oznacza, że zespoły klientów oceniają propozycję, a nie, że na pewno zostanie ona wprowadzona w Hegotá.
 
 ## Dalsza lektura {#further-reading}
 
