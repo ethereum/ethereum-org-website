@@ -51,10 +51,10 @@ lang: ur
 ##### فوسٹس
 
 - [<span dir="ltr">Alchemy Sepolia</span> فوسٹ](https://www.alchemy.com/faucets/ethereum-sepolia)
-- [چین پلیٹ فارم <span dir="ltr">Sepolia</span> فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [<span dir="ltr">Chain Platform Sepolia</span> فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [<span dir="ltr">Chainstack Sepolia</span> فوسٹ](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [<span dir="ltr">ethfaucet.com Sepolia</span> فوسٹ](https://ethfaucet.com/networks/ethereum)
-- [گوگل کلاؤڈ <span dir="ltr">Web3 Sepolia</span> فوسٹ](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- [<span dir="ltr">Google Cloud Web3 Sepolia</span> فوسٹ](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [<span dir="ltr">Grabteeth</span>](https://grabteeth.xyz/)
 - [<span dir="ltr">Infura Sepolia</span> فوسٹ](https://www.infura.io/faucet)
 - [<span dir="ltr">OpenFaucet.org Sepolia</span> فوسٹ](https://openfaucet.org/ethereum-sepolia)
@@ -80,7 +80,7 @@ lang: ur
 
 ##### فوسٹس
 
-- [چین پلیٹ فارم <span dir="ltr">Hoodi</span> فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [<span dir="ltr">Chain Platform Hoodi</span> فوسٹ](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [<span dir="ltr">Hoodi</span> فوسٹ](https://hoodi.ethpandaops.io/)
 - [<span dir="ltr">OpenFaucet.org Hoodi</span> فوسٹ](https://openfaucet.org/ethereum-hoodi)
 - [<span dir="ltr">PoW</span> فوسٹ](https://hoodi-faucet.pk910.de/)
@@ -114,8 +114,8 @@ lang: ur
 
 ہولسکی آزمائشی نیٹ ورک ستمبر <span dir="ltr">2025</span> سے متروک ہو چکا ہے۔ اسٹیکنگ آپریٹرز اور انفراسٹرکچر فراہم کنندگان کو اس کے بجائے توثیق کار کی جانچ کے لیے <span dir="ltr">Hoodi</span> کا استعمال کرنا چاہیے۔
 
-- [ہولسکی آزمائشی نیٹ ورک کی بندش کا اعلان](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _<span dir="ltr">EF Blog, 1-September-2025</span>_
-- [ہولسکی اور <span dir="ltr">Hoodi</span> آزمائشی نیٹ ورک کی اپ ڈیٹس](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _<span dir="ltr">EF Blog, 18-March-2025</span>_
+- [ہولسکی آزمائشی نیٹ ورک کی بندش کا اعلان](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF بلاگ، <span dir="ltr">1-September-2025</span>_
+- [ہولسکی اور <span dir="ltr">Hoodi</span> آزمائشی نیٹ ورک کی اپ ڈیٹس](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF بلاگ، <span dir="ltr">18-March-2025</span>_
 
 ### لیئر ۲ (l2) آزمائشی نیٹ ورکس {#layer-2-testnets}
 

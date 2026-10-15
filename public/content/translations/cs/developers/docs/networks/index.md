@@ -211,7 +211,7 @@ Používání názvů stanic metra pomáhá vývojářům rychle identifikovat a
 ## Související nástroje {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _seznam EVM sítí pro připojení peněženek a poskytovatelů ke správnému ID řetězce (Chain ID) a ID sítě (Network ID)_
-- [EVM-based Chains](https://github.com/ethereum-lists/chains) _repozitář na GitHubu s metadaty řetězců, který pohání Chainlist_
+- [Řetězce založené na EVM](https://github.com/ethereum-lists/chains) _repozitář na GitHubu s metadaty řetězců, který pohání Chainlist_
 
 ## Další čtení {#further-reading}
 

@@ -117,9 +117,9 @@ Das Holesky-Testnetz ist ab September 2025 veraltet. Staking-Betreiber und Infra
 - [Ankündigung der Abschaltung des Holesky-Testnetzes](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1. September 2025_
 - [Updates zu den Holesky- und Hoodi-Testnetzen](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF Blog, 18. März 2025_
 
-### Layer 2-Testnetze {#layer-2-testnets}
+### Layer-2-Testnetze {#layer-2-testnets}
 
-[Layer 2 (L2)](/layer-2/) ist ein Sammelbegriff zur Beschreibung einer bestimmten Gruppe von Ethereum-Skalierungslösungen. Ein Layer 2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer 2-Testnetze sind in der Regel eng mit öffentlichen Ethereum-Testnetzen gekoppelt.
+[Layer 2 (L2)](/layer-2/) ist ein Sammelbegriff zur Beschreibung einer bestimmten Gruppe von Ethereum-Skalierungslösungen. Ein Layer 2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnetze sind in der Regel eng mit öffentlichen Ethereum-Testnetzen gekoppelt.
 
 #### Arbitrum Sepolia {#arbitrum-sepolia}
 

@@ -138,7 +138,7 @@ Ephemeryは、毎月完全にリセットされるユニークな種類のテス
 - [OpenFaucet.org アービトラム Sepoliaフォーセット](https://openfaucet.org/arbitrum-sepolia)
 - [QuickNode アービトラム Sepoliaフォーセット](https://faucet.quicknode.com/arbitrum/sepolia)
 
-#### Optimistic Sepolia {#optimistic-sepolia}
+#### オプティミスティック Sepolia {#optimistic-sepolia}
 
 [オプティミズム](https://www.optimism.io/)のテストネットです。
 
@@ -211,7 +211,7 @@ Ephemeryは、毎月完全にリセットされるユニークな種類のテス
 ## 関連ツール {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _ウォレットやプロバイダーを適切なチェーンIDおよびネットワークIDに接続するためのEVMネットワークのリスト_
-- [EVM-based Chains](https://github.com/ethereum-lists/chains) _Chainlistを機能させるチェーンのメタデータのGitHubリポジトリ_
+- [EVMベースのチェーン](https://github.com/ethereum-lists/chains) _Chainlistを機能させるチェーンのメタデータのGitHubリポジトリ_
 
 ## 参考文献 {#further-reading}
 

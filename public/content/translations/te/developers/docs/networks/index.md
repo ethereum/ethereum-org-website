@@ -1,6 +1,6 @@
 ---
 title: "నెట్‌వర్క్‌లు"
-description: "ఎథీరియం నెట్‌వర్క్‌ల యొక్క అవలోకనం మరియు మీ అప్లికేషన్‌ను పరీక్షించడానికి టెస్ట్‌నెట్ ఈథర్ (⁨ETH⁩) ఎక్కడ పొందాలి."
+description: "ఎథీరియం నెట్‌వర్క్‌ల యొక్క అవలోకనం మరియు మీ అప్లికేషన్‌ను పరీక్షించడానికి టెస్ట్‌నెట్ ఈథర్ (ETH) ఎక్కడ పొందాలి."
 lang: te
 ---
 
@@ -51,7 +51,7 @@ lang: te
 ##### ఫాసెట్‌లు
 
 - [Alchemy Sepolia ఫాసెట్](https://www.alchemy.com/faucets/ethereum-sepolia)
-- [చైన్ ప్లాట్‌ఫారమ్ Sepolia ఫాసెట్](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Chain Platform Sepolia ఫాసెట్](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia ఫాసెట్](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [ethfaucet.com Sepolia ఫాసెట్](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia ఫాసెట్](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
@@ -80,7 +80,7 @@ Hoodi అనేది ధృవీకరించడం మరియు స్�
 
 ##### ఫాసెట్‌లు
 
-- [చైన్ ప్లాట్‌ఫారమ్ Hoodi ఫాసెట్](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [Chain Platform Hoodi ఫాసెట్](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi ఫాసెట్](https://hoodi.ethpandaops.io/)
 - [OpenFaucet.org Hoodi ఫాసెట్](https://openfaucet.org/ethereum-hoodi)
 - [PoW ఫాసెట్](https://hoodi-faucet.pk910.de/)

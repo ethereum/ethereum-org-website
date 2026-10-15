@@ -51,7 +51,7 @@ Mitandao miwili ya majaribio ya umma ambayo wasanidi wa wateja wanaitunza kwa sa
 ##### Mabomba
 
 - [Bomba la Sepolia la Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
-- [Bomba la Sepolia la Jukwaa la Chain](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
+- [Bomba la Sepolia la Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Bomba la Sepolia la Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Bomba la Sepolia la ethfaucet.com](https://ethfaucet.com/networks/ethereum)
 - [Bomba la Sepolia la Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
@@ -80,7 +80,7 @@ Hoodi ni mtandao wa majaribio kwa ajili ya kujaribu uthibitishaji na uwekaji dha
 
 ##### Mabomba
 
-- [Bomba la Hoodi la Jukwaa la Chain](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
+- [Bomba la Hoodi la Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Bomba la Hoodi](https://hoodi.ethpandaops.io/)
 - [Bomba la Hoodi la OpenFaucet.org](https://openfaucet.org/ethereum-hoodi)
 - [Bomba la PoW](https://hoodi-faucet.pk910.de/)
