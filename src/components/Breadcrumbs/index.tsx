@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { Home } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
@@ -6,7 +7,6 @@ import type { Lang } from "@/lib/types"
 import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import EthGlyphOutline from "../icons/eth-glyph-outline.svg"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -32,7 +32,7 @@ const Breadcrumbs = ({ slug, label, ...props }: BreadcrumbsProps) => {
   const trail = getBreadcrumbTrail(slug)
   if (!trail.length) return null
 
-  // Below a hub the text root crumb is dropped; a glyph stands in for it
+  // Below a hub the text root crumb is dropped; an icon stands in for it
   const showGlyph = trail[0].href !== "/"
 
   return (
@@ -44,11 +44,11 @@ const Breadcrumbs = ({ slug, label, ...props }: BreadcrumbsProps) => {
               <BreadcrumbLink
                 href="/"
                 aria-label="ethereum.org"
-                className="relative inline-block h-lh w-6"
+                className="relative inline-block h-lh w-4"
               >
-                <EthGlyphOutline
+                <Home
                   aria-hidden="true"
-                  className="absolute top-1/2 left-0 size-6 -translate-y-1/2"
+                  className="absolute top-1/2 left-0 size-4 -translate-y-1/2"
                 />
               </BreadcrumbLink>
             </BreadcrumbItem>
