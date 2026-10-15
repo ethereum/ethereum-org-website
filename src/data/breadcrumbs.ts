@@ -47,6 +47,7 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/resources/": "/learn/",
   "/run-a-node/": "/learn/",
   "/smart-contracts/": "/learn/",
+  "/stories/": "/learn/",
   "/web3/": "/learn/",
   "/what-are-apps/": "/learn/",
   "/what-is-ether/": "/learn/",
@@ -65,6 +66,17 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/ethereum-forks/": "/roadmap/",
   "/governance/": "/roadmap/",
   "/eips/": "/governance/",
+  "/roadmap/danksharding/": "/roadmap/scaling/",
+  "/roadmap/zkevm/": "/roadmap/scaling/",
+  "/roadmap/pbs/": "/roadmap/security/",
+  "/roadmap/secret-leader-election/": "/roadmap/security/",
+  "/roadmap/single-slot-finality/": "/roadmap/security/",
+  "/roadmap/statelessness/": "/roadmap/security/",
+  "/roadmap/verkle-trees/": "/roadmap/security/",
+  "/roadmap/account-abstraction/": "/roadmap/user-experience/",
+
+  // Staking
+  "/staking/deposit-contract/": "/staking/solo/",
 
   // Use cases
   "/ai-agents/": "/use-cases/",
@@ -96,6 +108,8 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 
 /** `common` translation key where it differs from the final URL segment */
 export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
+  "/contributing/content-resources/": "breadcrumb-adding-content-resources",
+  "/contributing/quizzes/": "breadcrumb-adding-quizzes",
   "/developers/": "breadcrumb-builders",
   "/eips/": "breadcrumb-eip",
   "/layer-2/learn/": "breadcrumb-what-is-layer-2",
@@ -103,6 +117,8 @@ export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
     "breadcrumb-security-challenges-overview",
   "/real-world-assets/": "breadcrumb-rwa",
   "/resources/": "breadcrumb-resources",
+  "/staking/saas/": "breadcrumb-delegated-staking",
+  "/staking/solo/": "breadcrumb-home-staking",
   "/what-is-ether/": "breadcrumb-what-is-ether",
 }
 
