@@ -156,3 +156,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - onchain finance rendered 3 ways; 機関/機関投資家; `アービトラム One` hybrid; glamsterdam `devnets` -> `開発ネット` regressed from #19357's `デブネット`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.0/10
+
+- Fixed: `[EVM-based Chains]` -> `[EVMベースのチェーン]`; `Optimistic Sepolia` heading -> `オプティミスティック Sepolia` (dev form).
+- Open: L124 `Arbitrum Sepolia` heading Latin while body uses `アービトラム` (Latin is a glossary alias, not a deviation).

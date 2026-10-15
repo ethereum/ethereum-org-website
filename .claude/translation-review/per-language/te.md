@@ -144,3 +144,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `ఉత్పత్తి` for production recurs; rollup `రోలప్`/`రోల్అప్` mirrors glossary inconsistency; treasuries `ఖజానాలు`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.8/10
+
+- Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
+- Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.
