@@ -281,7 +281,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
 }
@@ -621,7 +621,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
   etherscan: {
