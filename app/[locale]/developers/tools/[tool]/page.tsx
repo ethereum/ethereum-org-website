@@ -101,13 +101,18 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
         }
       >
         {tool.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {tool.tags.map((tag) => (
-              <Tag key={tag} size="small" status="normal">
-                {labels.tagLabels[tag] || tag}
-              </Tag>
-            ))}
-          </div>
+          <section className="flex max-w-3xl flex-col gap-3">
+            <h3 className="text-md">{t("page-developers-tools-modal-tags")}</h3>
+            <ul className="m-0 flex list-none flex-wrap gap-2">
+              {tool.tags.map((tag) => (
+                <li key={tag} className="m-0">
+                  <Tag size="small" variant="outline" status="normal">
+                    {labels.tagLabels[tag] || tag}
+                  </Tag>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
         <ToolLinkSections
           locale={locale}
