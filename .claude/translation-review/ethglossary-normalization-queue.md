@@ -204,3 +204,13 @@ Five items, all found reviewing the same four source files across 24 locales.
 **d. hi `contract` / `smart contract` notes invite the deviation they should prevent.** The entries are `अनुबंध` and `स्मार्ट अनुबंध`, but both carry notes pointing at the other form: "'कॉन्ट्रैक्ट' is very frequently used in developer communities" and "स्मार्ट कॉन्ट्रैक्ट is widely accepted in conversational Hindi tech discussions". PR #19326 flipped `languages/index.md` wholesale to the note's form (25 sites) while its sibling `testing/index.md` kept the entry's form, splitting one page pair two ways. Either demote the note to an `accepted` alias or change the entry; as written it reads as permission.
 
 **e. fr `mainnet` vs `Ethereum Mainnet` is correct but trap-shaped.** `mainnet` -> `Réseau principal` (capitalized) and `Ethereum Mainnet` -> `réseau principal Ethereum` (lowercase). Both are right, and a reviewer who sweeps one form across a file will corrupt the other: `testing/index.md` holds four of the first and one of the second. Worth a cross-reference note on each entry rather than a data change.
+
+## 13. Gaps and conflicts surfaced by PR #19474
+
+**a. `layer 1 (l1)` / `layer 2 (l2)` `ui` context is the expanded lowercase phrase in ~20 locales** (es `Capa 2 (l2)`, vi `Lớp 2 (l2)`, ta `அடுக்கு 2 (l2)`, ur `لیئر ۲ (l2)`, uk `Мережі рівня 2`). The English note means lowercase *layer*, not the acronym. Every stat caption and table header in the /organizations pages had to be hand-trimmed to bare `L1`/`L2` (known-patterns #86). Set `ui`/`tag` to the bare uppercase acronym and uppercase the parenthetical in `prose`/`heading`.
+
+**b. `decentralized exchange (dex)` `ui` has no acronym** in es (`Exchange descentralizado`), ja (`分散型取引所`) and the #19326 set. Add bare `DEX`.
+
+**c. cs `gas limit` = `limit plynu` contradicts cs `gas` = `gas`** (loanword, community standard). The compound keeps reintroducing `plynu` (glamsterdam:42 fixed three times). Change to `limit gasu`.
+
+**d. sw client split:** `execution client` = `kiteja` but `consensus client` = `mteja` (customer). Bare "client" in comparison tables keeps landing on `mteja`/`wateja`. Needs one ruling.

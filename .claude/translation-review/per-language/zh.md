@@ -124,3 +124,20 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - 您/你 split: new page-privacy-online all 您, page-open-access all 你; glamsterdam:33 lone 您.
 - whitepaper:301 data chunks as `区块`; privacy-online `句柄`, `遭到破坏`, `暗黑模式`; Hegotá `赫戈塔` nav label vs Latin elsewhere.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `隐身地址` -> `隐形地址`.
+
+**Open (warnings):**
+
+- 你/您 split across /organizations files; `透明的实用定价` mistranslates utility pricing.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.2/10
+
+- Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
+- Warning: Hook/钩子 drift; 求值 -> 计算 drift.

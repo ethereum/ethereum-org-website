@@ -178,7 +178,7 @@ Bất kỳ lượng Gas nào không được sử dụng trong một giao dịch
 
 Gas là bắt buộc đối với bất kỳ giao dịch nào liên quan đến một hợp đồng thông minh.
 
-Các hợp đồng thông minh cũng có thể chứa các hàm được gọi là hàm [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) hoặc [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), vốn không làm thay đổi trạng thái của hợp đồng. Do đó, việc gọi các hàm này từ một EOA sẽ không yêu cầu bất kỳ lượng Gas nào. Lệnh gọi RPC cơ bản cho kịch bản này là [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Các hợp đồng thông minh cũng có thể chứa các hàm được gọi là hàm [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) hoặc [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), vốn không làm thay đổi trạng thái của hợp đồng. Do đó, việc gọi các hàm này từ một EOA sẽ không yêu cầu bất kỳ lượng Gas nào. Lệnh gọi RPC cơ bản cho kịch bản này là [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Không giống như khi được truy cập bằng `eth_call`, các hàm `view` hoặc `pure` này cũng thường được gọi nội bộ (tức là từ chính hợp đồng đó hoặc từ một hợp đồng khác) và điều này có tốn Gas.
 

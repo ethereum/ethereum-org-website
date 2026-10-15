@@ -215,7 +215,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Синтаксис для вызова функции в EVM из Web3 выглядит так: `<contract object>.functions.<function name>().call(<parameters>)`. Параметрами могут быть параметры функции EVM (если они есть; здесь их нет) или [именованные параметры](https://en.wikipedia.org/wiki/Named_parameter) для изменения поведения блокчейна. Здесь мы используем один из них, `block_identifier`, чтобы указать [номер блока](/developers/docs/apis/json-rpc/#default-block), в котором мы хотим выполнить функцию.
+Синтаксис для вызова функции в EVM из Web3 выглядит так: `<contract object>.functions.<function name>().call(<parameters>)`. Параметрами могут быть параметры функции EVM (если они есть; здесь их нет) или [именованные параметры](https://en.wikipedia.org/wiki/Named_parameter) для изменения поведения блокчейна. Здесь мы используем один из них, `block_identifier`, чтобы указать [номер блока](/developers/docs/apis/json-rpc/#block-parameter), в котором мы хотим выполнить функцию.
 
 Результатом является [эта структура в виде массива](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Первое значение — это функция обменного курса между двумя токенами.
 

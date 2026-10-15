@@ -47,6 +47,42 @@ export const getL2beatData = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getL2beatActivityData = createCachedGetter(
+  dataLayer.getL2beatActivityData,
+  ["l2beat-activity-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getDefiTvlShareData = createCachedGetter(
+  dataLayer.getDefiTvlShareData,
+  ["defi-tvl-share-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getDexVolumeData = createCachedGetter(
+  dataLayer.getDexVolumeData,
+  ["dex-volume-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getEthereumStablecoinsMcapData = createCachedGetter(
+  dataLayer.getEthereumStablecoinsMcapData,
+  ["ethereum-stablecoins-mcap-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getTotalValueLockedData = createCachedGetter(
+  dataLayer.getTotalValueLockedData,
+  ["total-value-locked-data"],
+  CACHE_REVALIDATE_DAY
+)
+
+export const getTotalValueSecuredData = createCachedGetter(
+  dataLayer.getTotalValueSecuredData,
+  ["total-value-secured-data"],
+  CACHE_REVALIDATE_DAY
+)
+
 export const getAppsData = createCachedGetter(
   dataLayer.getAppsData,
   ["apps-data"],
@@ -120,6 +156,12 @@ export const getStaticGFIs = createCachedGetter(
   dataLayer.getGFIs,
   ["gfis-static"],
   false
+)
+
+export const getCollectiblesData = createCachedGetter(
+  dataLayer.getCollectiblesData,
+  ["collectibles-data"],
+  CACHE_REVALIDATE_DAY
 )
 
 export const getQuizStats = createCachedGetter(

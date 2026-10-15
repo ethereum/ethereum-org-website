@@ -219,7 +219,7 @@ Pythonలో ఫంక్షన్‌ను నిర్వచించే వ�
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3 నుండి EVMలో ఫంక్షన్‌ను కాల్ చేయడానికి సింటాక్స్ ఇది: `<contract object>.functions.<function name>().call(<parameters>)`. పారామితులు EVM ఫంక్షన్ యొక్క పారామితులు (ఏవైనా ఉంటే; ఇక్కడ లేవు) లేదా బ్లాక్‌చైన్ ప్రవర్తనను సవరించడానికి [పేరున్న పారామితులు](https://en.wikipedia.org/wiki/Named_parameter) కావచ్చు. ఇక్కడ మనం రన్ చేయాలనుకుంటున్న [బ్లాక్ సంఖ్యను](/developers/docs/apis/json-rpc/#default-block) పేర్కొనడానికి `block_identifier` అనే ఒకదాన్ని ఉపయోగిస్తాము.
+Web3 నుండి EVMలో ఫంక్షన్‌ను కాల్ చేయడానికి సింటాక్స్ ఇది: `<contract object>.functions.<function name>().call(<parameters>)`. పారామితులు EVM ఫంక్షన్ యొక్క పారామితులు (ఏవైనా ఉంటే; ఇక్కడ లేవు) లేదా బ్లాక్‌చైన్ ప్రవర్తనను సవరించడానికి [పేరున్న పారామితులు](https://en.wikipedia.org/wiki/Named_parameter) కావచ్చు. ఇక్కడ మనం రన్ చేయాలనుకుంటున్న [బ్లాక్ సంఖ్యను](/developers/docs/apis/json-rpc/#block-parameter) పేర్కొనడానికి `block_identifier` అనే ఒకదాన్ని ఉపయోగిస్తాము.
 
 ఫలితం [ఈ స్ట్రక్ట్, అర్రే రూపంలో](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72) ఉంటుంది. మొదటి విలువ రెండు టోకెన్‌ల మధ్య మార్పిడి రేటు యొక్క ఫంక్షన్.
 
