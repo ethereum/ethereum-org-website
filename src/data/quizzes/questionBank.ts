@@ -161,6 +161,11 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 3 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 2 },
   ],
   "smart-contracts": [
     { totalAnswers: 4, correctAnswer: 3 },
