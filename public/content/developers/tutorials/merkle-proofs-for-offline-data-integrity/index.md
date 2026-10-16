@@ -145,32 +145,32 @@ A Merkle proof is the values to hash together with the value being proved to get
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
-    var result = [], currentLayer = [...inputArray], currentN = n
+    var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
-    while (currentLayer.length > 1) {
-        // No odd length layers
-        if (currentLayer.length % 2)
-            currentLayer.push(empty)
+    // Until we reach the top
+    while (currentLayer.length > 1) {
+        // No odd length layers
+        if (currentLayer.length % 2)
+            currentLayer.push(empty)
 
-        result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
-            ? currentLayer[currentN-1]
-               // If it is even, add the value after it
-            : currentLayer[currentN+1])
+        result.push(currentN % 2
+               // If currentN is odd, add with the value before it to the proof
+            ? currentLayer[currentN-1]
+               // If it is even, add the value after it
+            : currentLayer[currentN+1])
 
 ```
 
 We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next one, for odd values the previous one.
 
 ```javascript
-        // Move to the next layer up
-        currentN = Math.floor(currentN/2)
-        currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+        // Move to the next layer up
+        currentN = Math.floor(currentN/2)
+        currentLayer = oneLevelUp(currentLayer)
+    }   // while currentLayer.length > 1
 
-    return result
-}   // getMerkleProof
+    return result
+}   // getMerkleProof
 ```
 
 ### Onchain code {#onchain-code}
@@ -189,30 +189,30 @@ I wrote this using the [Hardhat development environment](https://hardhat.org/), 
 ```solidity
 
 contract MerkleProof {
-    uint merkleRoot;
+    uint merkleRoot;
 
-    function getRoot() public view returns (uint) {
-      return merkleRoot;
-    }
+    function getRoot() public view returns (uint) {
+      return merkleRoot;
+    }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
-    function setRoot(uint _merkleRoot) external {
-      merkleRoot = _merkleRoot;
-    }   // setRoot
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
+    function setRoot(uint _merkleRoot) external {
+      merkleRoot = _merkleRoot;
+    }   // setRoot
 ```
 
 Set and get functions for the Merkle root. Letting everybody update the Merkle root is an _extremely bad idea_ in a production system. I do it here for the sake of simplicity for sample code. **Don't do it on a system where data integrity actually matters**.
 
 ```solidity
-    function hash(uint _a) internal pure returns(uint) {
-      return uint(keccak256(abi.encode(_a)));
-    }
+    function hash(uint _a) internal pure returns(uint) {
+      return uint(keccak256(abi.encode(_a)));
+    }
 
-    function pairHash(uint _a, uint _b) internal pure returns(uint) {
-      return hash(hash(_a) ^ hash(_b));
-    }
+    function pairHash(uint _a, uint _b) internal pure returns(uint) {
+      return hash(hash(_a) ^ hash(_b));
+    }
 ```
 
 This function generates a pair hash. It is just the Solidity translation of the JavaScript code for `hash` and `pairHash`.
@@ -220,20 +220,20 @@ This function generates a pair hash. It is just the Solidity translation of the 
 **Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
 ```solidity
-    // Verify a Merkle proof
-    function verifyProof(uint _value, uint[] calldata _proof)
-        public view returns (bool) {
-      uint temp = _value;
-      uint i;
+    // Verify a Merkle proof
+    function verifyProof(uint _value, uint[] calldata _proof)
+        public view returns (bool) {
+      uint temp = _value;
+      uint i;
 
-      for(i=0; i<_proof.length; i++) {
-        temp = pairHash(temp, _proof[i]);
-      }
+      for(i=0; i<_proof.length; i++) {
+        temp = pairHash(temp, _proof[i]);
+      }
 
-      return temp == merkleRoot;
-    }
+      return temp == merkleRoot;
+    }
 
-}  // MarkleProof
+}  // MarkleProof
 ```
 
 In mathematical notation Merkle proof verification looks like this: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. This code implements it.
