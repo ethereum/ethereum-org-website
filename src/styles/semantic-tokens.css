@@ -64,6 +64,11 @@
     --warning-dark: var(--yellow-900);
     --warning-border: var(--yellow-700);
 
+    /* Leak: what others can see about you (privacy lessons) */
+    --leak: var(--orange-600);
+    --leak-high-contrast: var(--orange-800);
+    --leak-low-contrast: var(--orange-100);
+
     /* Staking */
     --staking-gold: 43, 84%, 40%;
     --staking-gold-fill: 40, 88%, 97%;
@@ -135,6 +140,11 @@
     --warning-light: var(--yellow-100);
     --warning-dark: var(--yellow-900);
     --warning-border: var(--yellow-200);
+
+    /* Leak: what others can see about you (privacy lessons) */
+    --leak: var(--orange-400);
+    --leak-high-contrast: var(--orange-300);
+    --leak-low-contrast: var(--orange-900);
 
     /* Staking */
     --staking-gold: 43, 86%, 57%;

@@ -42,6 +42,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/privacy/": "page-privacy",
   "/privacy/ethereum/": "page-privacy-ethereum",
   "/privacy/online/": "page-privacy-online",
+  "/privacy/public-by-default/": "page-privacy-public-by-default",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
@@ -92,6 +93,15 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/organizations/enterprise/tokenization/": ["page-stablecoins"],
   "/community/": ["component-story-card"],
   "/developers/": ["component-swiper"],
+  "/privacy/public-by-default/": [
+    // The dossier reuses the fingerprint widget's device keys
+    "component-privacy-fingerprint",
+    "component-sandwich-attack",
+    "component-address-poisoning",
+    "component-wallet-clustering",
+    "component-anonymity-crowd",
+    "glossary-tooltip",
+  ],
   "/roadmap/": ["component-swiper"],
   "/start/": ["component-swiper"],
   "/wallets/": ["component-wallet-simulator"],

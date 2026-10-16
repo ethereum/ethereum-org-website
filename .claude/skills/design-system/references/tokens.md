@@ -32,7 +32,7 @@ Raw color values. HSL triplets stored as CSS custom properties:
 
 These are *foundational* -- they don't change with light/dark mode. Reach for them only when a semantic token doesn't exist (rare, and a last resort).
 
-Available palettes: gray (50-950), purple (50-900), blue, pink, teal, yellow, red, green, orange (100/800/900 only), amber-500, cyan-500.
+Available palettes: gray (50-950), purple (50-900), blue, pink, teal, yellow, red, green, orange (100/300/400/600/800/900), amber-500, cyan-500.
 
 ### Layer 2: Semantic Abstraction (`semantic-tokens.css`)
 
@@ -91,6 +91,15 @@ This is where you get colors for Claude-driven work. Light mode in `:root`, dark
 - `--success` / `--success-light` / `--success-dark` / `--success-border`
 - `--error` / `--error-light` / `--error-dark` / `--error-border`
 - `--warning` / `--warning-light` / `--warning-dark` / `--warning-border`
+
+**Leak** (privacy content: what other people can see about the reader):
+- `--leak` (light `orange-600` #C2410C / dark `orange-400` #FF7A3D)
+- `--leak-high-contrast` (light `orange-800` / dark `orange-300`) -- text on page backgrounds, labels
+- `--leak-low-contrast` (light `orange-100` / dark `orange-900`) -- soft fills behind leak content
+
+Registered as `--color-leak*`, so every color utility works (`text-leak`, `bg-leak`, `border-leak`, `bg-leak-low-contrast`, `fill-leak`, `/opacity` modifiers) plus `bg-tint-leak`, `bg-fade-leak` and `gradient-ring-leak`.
+
+Leak vs status colors: use **leak** for *exposure* in privacy content (data someone can see, the "visible to others" meter, a route stop that sees you) and pair it with **primary** for the hidden/protected state. Use **warning** for cautions the reader should act on (risky settings, not-advice notes) and **error** for failures and wrong answers. Don't use leak as a generic orange accent outside privacy content, and don't use warning/error to mean "visible" -- a leak isn't an error state.
 
 **Domain-specific:**
 - `--staking-gold` / `--staking-green` / `--staking-blue` / `--staking-red` (with `-fill` variants)
