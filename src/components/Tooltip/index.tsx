@@ -24,6 +24,8 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   asChild?: boolean
   /** Base `bg-background` instead of `bg-background-highlight`, for when nested in an already-highlighted container. */
   nested?: boolean
+  /** Render `children` without the tooltip before hydration instead of nothing. Use when the trigger is content that must be in the server HTML. */
+  renderChildrenOnServer?: boolean
   customMatomoEvent?: {
     eventCategory: string
     eventAction: string
@@ -38,6 +40,7 @@ const Tooltip = ({
   container,
   asChild,
   nested,
+  renderChildrenOnServer,
   customMatomoEvent,
   ...props
 }: TooltipProps) => {
@@ -90,7 +93,7 @@ const Tooltip = ({
   // Avoid rendering on the server since the user can't interact with it and we
   // need to use different components depending on the device
   if (!isClient) {
-    return null
+    return renderChildrenOnServer ? <>{children}</> : null
   }
 
   // Use Popover on mobile devices since the user can't hover
