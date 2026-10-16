@@ -4,8 +4,9 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 import { Grid } from "@/components/ui/grid"
 
 const meta = {
-  title: "UI / Primitives / Grid",
+  title: "UI / Layout / Grid",
   component: Grid,
+  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
     // Variant-axis reference stories; opt out of Chromatic by default.
@@ -75,7 +76,7 @@ const SizeRange = ({
   </div>
 )
 
-// The three `size` presets, each across the column range it can express at
+// The `size` presets, each across the column range it can express at
 // full width (a larger min item width caps the usable count). Larger sizes wrap
 // sooner; fewer columns hold their layout longer.
 
@@ -91,6 +92,12 @@ export const Narrow: Story = {
   render: () => (
     <SizeRange size="narrow" counts={[2, 3, 4, 5, 6, 7, 8, 9, 10]} />
   ),
+}
+
+// slim (15rem min): content cards that should fold to one column on phones
+// rather than leaving an orphan in a two-column row.
+export const Slim: Story = {
+  render: () => <SizeRange size="slim" counts={[2, 3, 4, 5, 6, 7]} />,
 }
 
 // base (18rem min, default): standard content cards.

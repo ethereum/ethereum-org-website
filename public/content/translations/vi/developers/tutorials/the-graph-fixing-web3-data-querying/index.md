@@ -15,7 +15,7 @@ Lần này chúng ta sẽ xem xét kỹ hơn về The Graph, thứ về cơ bả
 
 ## Nếu không có The Graph... {#without-the-graph}
 
-Vì vậy, hãy đi vào một ví dụ đơn giản để minh họa. Tất cả chúng ta đều thích trò chơi, vì vậy hãy tưởng tượng một trò chơi đơn giản với người dùng đặt cược:
+Vì vậy, hãy xem xét một ví dụ đơn giản để minh họa. Tất cả chúng ta đều thích các trò chơi, vì vậy hãy tưởng tượng một trò chơi đơn giản với những người dùng đặt cược:
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-Bây giờ giả sử trong dapp của chúng ta, chúng ta muốn hiển thị tổng số tiền cược, tổng số trò chơi thua/thắng và cũng cập nhật nó bất cứ khi nào có người chơi lại. Cách tiếp cận sẽ là:
+Bây giờ giả sử trong ứng dụng phi tập trung (dapp) của chúng ta, chúng ta muốn hiển thị tổng số cược, tổng số trò chơi thua/thắng và cũng cập nhật nó bất cứ khi nào có người chơi lại. Cách tiếp cận sẽ là:
 
 1. Tìm nạp `totalGamesPlayerWon`.
 2. Tìm nạp `totalGamesPlayerLost`.
 3. Đăng ký nhận các sự kiện `BetPlaced`.
 
-Chúng ta có thể lắng nghe [sự kiện trong Web3](https://docs.web3js.org/api/web3/class/Contract#events) như được hiển thị ở bên phải, nhưng nó đòi hỏi phải xử lý khá nhiều trường hợp.
+Chúng ta có thể lắng nghe [sự kiện trong Web3](https://docs.web3js.org/api/web3/class/Contract#events) như được hiển thị ở bên phải, nhưng nó yêu cầu xử lý khá nhiều trường hợp.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -57,26 +57,26 @@ GameContract.events.BetPlaced({
     // sự kiện được kích hoạt
 })
 .on('changed', function(event) {
-    // sự kiện đã bị xóa một lần nữa
+    // sự kiện đã bị xóa lần nữa
 })
 .on('error', function(error, receipt) {
     // giao dịch bị từ chối
 });
 ```
 
-Bây giờ điều này vẫn phần nào ổn đối với ví dụ đơn giản của chúng ta. Nhưng giả sử bây giờ chúng ta muốn hiển thị số tiền cược thua/thắng chỉ cho người chơi hiện tại. Chà, chúng ta không may rồi, tốt hơn là bạn nên triển khai một hợp đồng mới lưu trữ các giá trị đó và tìm nạp chúng. Và bây giờ hãy tưởng tượng một hợp đồng thông minh và dapp phức tạp hơn nhiều, mọi thứ có thể trở nên lộn xộn một cách nhanh chóng.
+Bây giờ điều này vẫn có phần ổn đối với ví dụ đơn giản của chúng ta. Nhưng giả sử bây giờ chúng ta muốn hiển thị số tiền cược thua/thắng chỉ cho người chơi hiện tại. Chà, chúng ta không may mắn rồi, tốt hơn là bạn nên triển khai một hợp đồng mới lưu trữ các giá trị đó và tìm nạp chúng. Và bây giờ hãy tưởng tượng một hợp đồng thông minh và dapp phức tạp hơn nhiều, mọi thứ có thể trở nên lộn xộn một cách nhanh chóng.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![Người ta không chỉ đơn giản là truy vấn](./one-does-not-simply-query.jpg)
 
 Bạn có thể thấy điều này không tối ưu như thế nào:
 
 - Không hoạt động đối với các hợp đồng đã được triển khai.
-- Tốn thêm chi phí Gas để lưu trữ các giá trị đó.
+- Chi phí Gas bổ sung để lưu trữ các giá trị đó.
 - Yêu cầu một lệnh gọi khác để tìm nạp dữ liệu cho một nút Ethereum.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Như vậy là chưa đủ tốt](./not-good-enough.jpg)
 
-Bây giờ hãy xem xét một giải pháp tốt hơn.
+Bây giờ chúng ta hãy xem xét một giải pháp tốt hơn.
 
 ## Hãy để tôi giới thiệu với bạn về GraphQL {#let-me-introduce-to-you-graphql}
 

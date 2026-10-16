@@ -5,7 +5,7 @@ description: Tìm hiểu thêm về 7702 trong bản phát hành Pectra
 lang: vi
 ---
 
-## Tóm tắt
+## Tóm tắt {#abstract}
 EIP-7702 định nghĩa một cơ chế để thêm mã vào một EOA. Đề xuất này cho phép các EOA, các tài khoản Ethereum kế thừa, nhận được các cải tiến chức năng ngắn hạn, làm tăng khả năng sử dụng của các ứng dụng. Điều này được thực hiện bằng cách thiết lập một con trỏ đến mã đã được triển khai bằng cách sử dụng một loại giao dịch mới: 4.
 
 Loại giao dịch mới này giới thiệu một danh sách ủy quyền. Mỗi bộ (tuple) ủy quyền trong danh sách được định nghĩa là
@@ -22,7 +22,7 @@ Loại giao dịch mới này giới thiệu một danh sách ủy quyền. Mỗ
 Một sự ủy quyền có thể được đặt lại bằng cách ủy quyền cho địa chỉ null.
 
 Khóa riêng tư của EOA vẫn giữ toàn quyền kiểm soát tài khoản sau sự ủy quyền. Ví dụ: việc ủy quyền cho một Safe không làm cho tài khoản trở thành đa chữ ký vì vẫn có một khóa duy nhất có thể bỏ qua bất kỳ chính sách ký nào. Trong tương lai, các nhà phát triển nên thiết kế với giả định rằng bất kỳ người tham gia nào trong hệ thống đều có thể là một hợp đồng thông minh. Đối với các nhà phát triển hợp đồng thông minh, không còn an toàn khi giả định rằng `tx.origin` đề cập đến một EOA.
-## Các phương pháp hay nhất
+## Các phương pháp hay nhất {#best-practices}
 **Trừu tượng hóa tài khoản**: Một hợp đồng ủy quyền nên phù hợp với các tiêu chuẩn trừu tượng hóa tài khoản (AA) rộng hơn của Ethereum để tối đa hóa khả năng tương thích. Cụ thể, lý tưởng nhất là nó nên tuân thủ hoặc tương thích với ERC-4337.
 
 **Thiết kế không cần cấp phép và chống kiểm duyệt**: Ethereum coi trọng sự tham gia không cần cấp phép. Một hợp đồng ủy quyền KHÔNG ĐƯỢC mã hóa cứng (hard-code) hoặc dựa vào bất kỳ một relayer (người chuyển tiếp) hoặc dịch vụ "đáng tin cậy" duy nhất nào. Điều này sẽ làm hỏng tài khoản nếu relayer ngoại tuyến. Các tính năng như gom lô (ví dụ: approve+transferFrom) có thể được chính EOA sử dụng mà không cần relayer. Đối với các nhà phát triển ứng dụng muốn sử dụng các tính năng nâng cao được kích hoạt bởi EIP-7702 (Trừu tượng hóa Gas, Rút tiền bảo vệ quyền riêng tư), bạn sẽ cần một relayer. Mặc dù có các kiến trúc relayer khác nhau, khuyến nghị của chúng tôi là sử dụng [các trình đóng gói ERC-4337](https://www.erc4337.io/bundlers) trỏ đến ít nhất [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) vì:
@@ -102,7 +102,7 @@ Khi người dùng thực hiện các chữ ký được ủy quyền, hợp đ�
 
 **Bề mặt tin cậy tối thiểu & Bảo mật**: Mặc dù mang lại sự linh hoạt, một hợp đồng ủy quyền nên giữ cho logic cốt lõi của nó ở mức tối thiểu và có thể kiểm toán được. Hợp đồng thực chất là một phần mở rộng của EOA của người dùng, vì vậy bất kỳ lỗ hổng nào cũng có thể gây ra hậu quả thảm khốc. Các triển khai nên tuân theo các phương pháp hay nhất từ cộng đồng bảo mật hợp đồng thông minh. Ví dụ: các hàm khởi tạo (constructor hoặc initializer) phải được bảo mật cẩn thận – như Alchemy đã nhấn mạnh, nếu sử dụng mẫu proxy theo 7702, một initializer không được bảo vệ có thể cho phép kẻ tấn công chiếm đoạt tài khoản. Các nhóm nên hướng tới việc giữ cho mã trên chuỗi đơn giản: hợp đồng 7702 của Ambire chỉ có khoảng 200 dòng mã Solidity, cố tình giảm thiểu độ phức tạp để giảm thiểu lỗi. Cần phải đạt được sự cân bằng giữa logic giàu tính năng và sự đơn giản giúp dễ dàng kiểm toán.
 
-### Các triển khai đã biết
+### Các triển khai đã biết {#known-implementations}
 Do bản chất của EIP-7702, các ví được khuyến nghị nên thận trọng khi giúp người dùng ủy quyền cho một hợp đồng của bên thứ 3. Dưới đây là danh sách các triển khai đã biết đã được kiểm toán:
 
 | Địa chỉ hợp đồng                           | Nguồn                                                                                                                                      | Kiểm toán                                                                                                                                                     |
@@ -129,11 +129,11 @@ Lưu ý: một số tài sản có thể tự động bị từ chối bởi mã
 
 Thông báo cho người dùng rằng một sự ủy quyền đang được áp dụng cho EOA bằng cách kiểm tra mã của nó và tùy chọn đề nghị xóa sự ủy quyền.
 
-#### Sự ủy quyền phổ biến
+#### Sự ủy quyền phổ biến {#common-delegation}
 Nhà cung cấp phần cứng đưa vào danh sách trắng các hợp đồng ủy quyền đã biết và triển khai hỗ trợ cho chúng trong phần mềm đồng hành. Khuyến nghị nên chọn một hợp đồng có hỗ trợ đầy đủ ERC-4337.
 
 Các EOA được ủy quyền cho một hợp đồng khác sẽ được xử lý như các EOA tiêu chuẩn.
-#### Sự ủy quyền tùy chỉnh
+#### Sự ủy quyền tùy chỉnh {#custom-delegation}
 Nhà cung cấp phần cứng triển khai hợp đồng ủy quyền của riêng mình và thêm nó vào danh sách, đồng thời triển khai hỗ trợ cho nó trong phần mềm đồng hành. Khuyến nghị nên xây dựng một hợp đồng có hỗ trợ đầy đủ ERC-4337.
 
 Các EOA được ủy quyền cho một hợp đồng khác sẽ được xử lý như các EOA tiêu chuẩn.

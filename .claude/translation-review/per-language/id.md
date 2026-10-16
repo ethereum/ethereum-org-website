@@ -32,3 +32,88 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `bertujuan`-style tense-neutrality (#33) did not recur: `sebelum kontrak ada` and `belum diterapkan` both carry their temporal force.
 - The adjectival/nominal zero-knowledge split (`bukti tanpa pengetahuan` nominal, `zero-knowledge` as modifier) is coherent and matches 6 pre-existing uses in the same file.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.7/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- No per-locale fixes needed beyond the fleet-wide items. Open: `common.json` `zero-knowledge-proofs` uses the hybrid `Bukti zero-knowledge` where the glossary compound is `Bukti tanpa pengetahuan`, which `learn-quizzes.json` already uses 8+ times.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.7/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-row-label` -> `Apa yang Anda bayar` leans to "what you pay"; `Untuk apa Anda membayar` is unambiguous.
+- `fee-qualifier-of-rewards` -> `hadiah` (gift/prize); staking rewards is `imbalan` (#56).
+- `hardware-hero-description` -> `luring` for offline is KBBI-sanctioned but rare in tech copy.
+
+**Notes:**
+
+- Cleanest of its bloc. The only locale in the whole fleet that kept `shield/unshield` as a term of art rather than calquing it -- the model for the #57 glossary request.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.8/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+dvt used `staking gabungan` (the pooled-staking form) for the pool entity at 9 sites. `hadiah` (gift) for reward -- recurrence of #19076. `simbol saham` (stock ticker) for crypto ticker. `obligasi` (debt security) for bond. Glossary-hygiene leakage recurrence (#18925): capitalized `Likuiditas`, lowercase `(lst)`/`(l2)`.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.4/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `Rekt News` -> `Berita Rekt`. The pre-PR line was correct; regression.
+
+**Open (native call needed):**
+
+- Three-way `open source` split: `common.json` breadcrumb and the new page title use `open source`, but the new `page-values` CTA uses `sumber terbuka`. The CTA and the page it links to disagree. Tree favours `sumber terbuka` ~20:1 -- needs one locale-level decision.
+- `soundness` -> `keandalan` (reliability) at 3 sites; no established id form exists.
+- `telah tidak disadari` is ungrammatical (perfective + negation).
+- `salah satu` narrows a universal to an existential in `copyleft-description-3`.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/id/page-apps.json`. 2 critical, 14 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: id not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (id-specific):**
+
+- `-defi-description` lost a coordinate verb because the glossary maps both *lending* and *borrowing* to `peminjaman` -> all four verbs restored
+
+**Notes:**
+
+- The `akun milik eksternal (EOA)` / `disebarkan` glossary migration and the cross-contract and testnet corrections are real upstream fixes.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-fixes video L42 `melakukan Log` (glossary casing leaked into a verb) -> `mencatat`.
+- zk-rollups:43 `diwajibkan` over-applied for "required"; API/ENS over-expansion.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing split; `Perbendaharaan` for treasuries; Auditabilitas/Kemampuan audit split.

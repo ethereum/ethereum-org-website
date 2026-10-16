@@ -22,7 +22,30 @@ import {
   walk,
 } from "intl-content-tree"
 
+import {
+  applyFrontmatterChange,
+  FRONTMATTER_PREFIX,
+  frontmatterFieldText,
+  frontmatterKey,
+  isWholeField,
+  parseFrontmatterDoc,
+  serializeFrontmatter,
+  setFrontmatterFieldText,
+} from "./lib/llm/frontmatter"
 import { TRANSLATABLE_ATTRIBUTES } from "./lib/shared-patterns"
+
+/** Pseudo-section id for prose between the frontmatter and the first heading */
+export const PREAMBLE_ID = "_preamble"
+
+const TRANSLATABLE_KEYS = new Set<string>(TRANSLATABLE_ATTRIBUTES)
+
+/** `frontmatter:<key>` (or a path under it) whose key the LLM translates */
+function isTranslatableFrontmatter(id: string): boolean {
+  return (
+    id.startsWith(FRONTMATTER_PREFIX) &&
+    TRANSLATABLE_KEYS.has(frontmatterKey(id))
+  )
+}
 
 // ---------------------------------------------------------------------------
 // Config
@@ -414,19 +437,30 @@ export function findStructuralRegressions(
   return out
 }
 
-function parseFrontmatter(
-  text: string
-): { yaml: string; body: string; start: number; end: number } | null {
-  if (!text.startsWith("---")) return null
-  const endIdx = text.indexOf("\n---", 3)
-  if (endIdx === -1) return null
-  const yamlEnd = endIdx + 4
-  return {
-    yaml: text.slice(4, endIdx),
-    body: text.slice(yamlEnd),
-    start: 0,
-    end: yamlEnd,
+/**
+ * Character range of the preamble: prose after the frontmatter (or file start)
+ * and before the first heading. `end` equals `start` when there is none.
+ */
+function preambleRange(text: string): { start: number; end: number } {
+  const lines = text.split("\n")
+  let startLine = 0
+  if (lines[0]?.trim() === "---") {
+    const close = lines.findIndex((l, i) => i > 0 && l.trim() === "---")
+    startLine = close === -1 ? 0 : close + 1
   }
+  const firstHeading = scanHeadings(text).find((h) => h.lineIdx >= startLine)
+  const endLine = firstHeading ? firstHeading.lineIdx : lines.length
+  const offset = (line: number) =>
+    lines.slice(0, line).reduce((n, l) => n + l.length + 1, 0)
+  return { start: offset(startLine), end: offset(endLine) }
+}
+
+/** Replace (or insert) the preamble, keeping one blank line on each side. */
+function replacePreamble(text: string, body: string): string {
+  const { start, end } = preambleRange(text)
+  const trimmed = body.trim()
+  const replacement = trimmed ? `\n${trimmed}\n\n` : "\n"
+  return text.slice(0, start) + replacement + text.slice(end)
 }
 
 // ---------------------------------------------------------------------------
@@ -587,15 +621,23 @@ function route(
   const leafTdPaths = tdPaths.filter(
     (p) => !tdPaths.some((o) => o !== p && o.startsWith(p + "/"))
   )
+  // Root-level elements (paths without a "/") are the preamble's prose; they
+  // have no heading of their own, so they translate as one pseudo-section.
+  const toSectionId = (e: { id: string; path: string }) =>
+    !e.path.includes("/") &&
+    e.id.includes(":") &&
+    !e.id.startsWith(FRONTMATTER_PREFIX)
+      ? PREAMBLE_ID
+      : e.id
   const leafTdIds = dr.translatableDrift
     .filter((e) => leafTdPaths.includes(e.path))
-    .map((e) => e.id)
+    .map(toSectionId)
 
   const renamedOldIds = new Set(cs.sectionRenames.map((r) => r.oldId))
   const renamedNewIds = new Set(cs.sectionRenames.map((r) => r.newId))
 
   const addedIds = new Set(
-    dr.added.filter((e) => !renamedNewIds.has(e.id)).map((e) => e.id)
+    dr.added.filter((e) => !renamedNewIds.has(e.id)).map(toSectionId)
   )
 
   // A renamed section whose translatable content also changed has to be
@@ -614,11 +656,20 @@ function route(
     }
   }
 
-  const llmSectionIds = new Set(
-    [...leafTdIds, ...addedIds, ...renamedRetranslateIds].filter(
-      (id) => !id.startsWith("frontmatter:")
-    )
-  )
+  // A translatable frontmatter field is rewritten whole by the LLM whatever
+  // kind of drift it shows: an item reorder or removal arrives as inert or
+  // structural drift, and applying those edits by hand would put English item
+  // text into a translated list.
+  const translatableFmIds = [...dr.inertDrift, ...dr.structuralDrift]
+    .map((e) => e.id)
+    .filter((id) => isTranslatableFrontmatter(id))
+
+  const llmSectionIds = new Set([
+    ...leafTdIds,
+    ...addedIds,
+    ...renamedRetranslateIds,
+    ...translatableFmIds,
+  ])
 
   return { leafTdPaths, addedIds, renamedOldIds, llmSectionIds }
 }
@@ -665,6 +716,12 @@ function pipelineMarkdown(
 
   let result = localeA
 
+  // Frontmatter edits go through the YAML document, never the text. If the
+  // locale block does not parse, frontmatter is left exactly as it was.
+  const localeFm = parseFrontmatterDoc(localeA)
+  const englishFm = parseFrontmatterDoc(englishB)
+  let fmDirty = false
+
   // --- Phase 3: Deterministic Propagation ---
 
   // 3a. Heading ID renames
@@ -684,9 +741,24 @@ function pipelineMarkdown(
   const enBAnchors = anchorSet(englishB)
   const componentPaths = new Set<string>()
 
+  const removedFmFields = new Set<string>()
   for (const removed of dr.removed) {
     if (renamedOldIds.has(removed.id)) continue
     const node = getNodeByPath(treeA, removed.path)
+    if (node?.elementType === "frontmatter-field") {
+      // A field English dropped entirely; its items are not removed one by one
+      removedFmFields.add(removed.id)
+      if (
+        localeFm &&
+        applyFrontmatterChange(localeFm.doc, {
+          action: "remove",
+          path: removed.id,
+        })
+      ) {
+        fmDirty = true
+      }
+      continue
+    }
     if (node?.elementType === "component") {
       componentPaths.add(removed.path)
       continue
@@ -729,10 +801,39 @@ function pipelineMarkdown(
     }
   }
 
+  // 3c-fm. Frontmatter: inert edits, item additions and removals are applied
+  // to the YAML document in place. Translatable fields the LLM will rewrite
+  // (Phase 5) are skipped here; without an LLM, English stands in for them the
+  // same way it does for body sections.
+  if (localeFm) {
+    for (const change of cs.changes) {
+      if (change.elementType !== "frontmatter-field") continue
+      if (!change.path.startsWith(FRONTMATTER_PREFIX)) continue
+      const fieldId = `${FRONTMATTER_PREFIX}${frontmatterKey(change.path)}`
+      if (removedFmFields.has(fieldId)) continue
+      if (llm && isTranslatableFrontmatter(fieldId)) continue
+      if (
+        applyFrontmatterChange(
+          localeFm.doc,
+          {
+            action: change.action,
+            path: change.path,
+            oldValue: change.oldValue,
+            newValue: change.newValue,
+          },
+          englishFm?.doc
+        )
+      ) {
+        fmDirty = true
+      }
+    }
+  }
+
   // 3c. Apply inert value updates from extractChanges
   for (const change of cs.changes) {
     if (change.action !== "update") continue
     if (change.oldValue === undefined || change.newValue === undefined) continue
+    if (change.elementType === "frontmatter-field") continue
 
     // Check if this change is inside an LLM section
     let belongsToLlmSection = false
@@ -757,20 +858,6 @@ function pipelineMarkdown(
 
     // Skip translatable changes without LLM
     if (change.contentType === "translatable") continue
-
-    // Inert/mixed changes: apply to locale text
-    if (change.elementType === "frontmatter-field" && change.key) {
-      const fm = parseFrontmatter(result)
-      if (fm) {
-        const keyPattern = new RegExp(
-          `^(${escapeRegex(change.key)}:\\s*).*$`,
-          "m"
-        )
-        const newYaml = fm.yaml.replace(keyPattern, `$1${change.newValue}`)
-        result = `---\n${newYaml}\n---${fm.body}`
-      }
-      continue
-    }
 
     // Value substitutions are scoped to the section the change belongs to: the
     // same URL, path or code span routinely appears in several sections, and a
@@ -983,6 +1070,32 @@ function pipelineMarkdown(
   // --- Phase 4 & 5: LLM Translation + Assembly ---
 
   for (const sectionId of llmSectionIds) {
+    if (sectionId.startsWith(FRONTMATTER_PREFIX)) {
+      if (!localeFm || !englishFm || !isWholeField(sectionId)) continue
+      const key = frontmatterKey(sectionId)
+      const englishText = frontmatterFieldText(englishFm.doc, key)
+      if (!englishText) continue
+      const translated = llm ? llm(sectionId, englishText) : englishText
+      if (!translated.trim()) continue
+      // A list that came back with a different item count is applied from
+      // English instead: the shape must match English, the words can catch up.
+      const applied =
+        setFrontmatterFieldText(localeFm.doc, key, translated, englishFm.doc) ||
+        setFrontmatterFieldText(localeFm.doc, key, englishText, englishFm.doc)
+      if (applied) fmDirty = true
+      continue
+    }
+
+    if (sectionId === PREAMBLE_ID) {
+      const { start, end } = preambleRange(englishB)
+      const englishContent = englishB.slice(start, end).trim()
+      if (!englishContent) continue
+      const translated = llm ? llm(sectionId, englishContent) : englishContent
+      if (!translated.trim()) continue
+      result = replacePreamble(result, translated)
+      continue
+    }
+
     const enBSec = findSection(englishB, sectionId)
     if (!enBSec) continue
     const englishContent = englishB.slice(enBSec.start, enBSec.end).trimEnd()
@@ -1072,6 +1185,14 @@ function pipelineMarkdown(
       reordered.push(content)
     }
     result = beforeFirstH2 + reordered.join("")
+  }
+
+  if (localeFm && fmDirty) {
+    const bodyStart = result.indexOf("\n---", 3) + 4
+    result = serializeFrontmatter({
+      doc: localeFm.doc,
+      body: result.slice(bodyStart),
+    })
   }
 
   return result.trimEnd() + "\n"

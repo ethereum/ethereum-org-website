@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/beacon-chain/index.md",
   "generatedAt": "2026-06-18T00:43:52.853Z",
-  "rootHash": "5cd5f3656522",
+  "rootHash": "4075b63360e4",
   "tree": {
-    "contentHash": "429647c55f5d",
-    "anchorHash": "35a4e3ab051e",
+    "contentHash": "7d39e11ac551",
+    "anchorHash": "a1e86e2b9a6d",
     "children": {
       "frontmatter:title": {
         "contentHash": "b752f00630a5",
@@ -32,8 +32,27 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "9c968a05ee43",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "ddcccda34e58",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "8cdd6cd6e1f0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e75a40bb07d6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "component:7": {
         "contentHash": "01179dc09614",

@@ -56,7 +56,6 @@ _ملاحظة: تأكد من تحديد **<span dir="ltr">Sepolia</span>**، و�
 لنشر عقدك الذكي على شبكة الاختبار، ستحتاج إلى بعض <span dir="ltr">ETH</span> الوهمي. للحصول على <span dir="ltr">ETH</span> على شبكة <span dir="ltr">Sepolia</span>، انتقل إلى صنبور <span dir="ltr">Sepolia</span> وأدخل عنوان حساب <span dir="ltr">Sepolia</span> الخاص بك. راجع [صفحة شبكات الاختبار](/developers/docs/networks/#sepolia) للحصول على قائمة بالخيارات التي يمكنك تجربتها:
 
 _ملاحظة: بسبب ازدحام الشبكة، قد يستغرق هذا بعض الوقت._
-``
 ### الخطوة 5: التحقق من رصيدك {#step-5-check-your-balance}
 
 للتحقق مرة أخرى من وجود <span dir="ltr">ETH</span> في محفظتك، دعنا نُجري طلب [<span dir="ltr">eth_getBalance</span>](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) باستخدام [أداة وضع الحماية (sandbox) الخاصة بـ <span dir="ltr">Alchemy</span>](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيؤدي هذا إلى إرجاع مقدار <span dir="ltr">ETH</span> الموجود في محفظتنا. لمعرفة المزيد، تحقق من [البرنامج التعليمي القصير لـ <span dir="ltr">Alchemy</span> حول كيفية استخدام أداة الإنشاء (composer)](https://youtu.be/r6sjRxBZJuU).
@@ -282,7 +281,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
 }
@@ -622,7 +621,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: API_URL,
-      accounts: [`<span dir="ltr">0x</span>${PRIVATE_KEY}`],
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
   etherscan: {

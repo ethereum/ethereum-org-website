@@ -27,4 +27,13 @@ export const adapters: Record<string, LlmAdapter> = {
     coAuthor: "Gemini <gemini@google.com>",
     isAvailable: () => Boolean(process.env.GEMINI_API_KEY),
   },
+  // Same models at list price, but the key carries a server-side credit limit
+  // the pipeline cannot exceed. Model ids are namespaced by provider, so this
+  // is also the seam for moving off Google without touching the pipeline.
+  openrouter: {
+    name: "Gemini via OpenRouter",
+    models: ["google/gemini-3.1-pro-preview", "google/gemini-3.1-pro"],
+    coAuthor: "Gemini <gemini@google.com>",
+    isAvailable: () => Boolean(process.env.OPENROUTER_API_KEY),
+  },
 }

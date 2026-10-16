@@ -50,3 +50,114 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `ciphernodes` -> `サイファーノード` is permitted by the CJK-phonetic group rule.
 - Minor interpunct variance in non-glossary compounds (`ステルス・アドレス` vs `メッセージングアプリ`) is normal Japanese, not an error.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- No fixes applied. Open and well-evidenced: ETHGlossary-covered brands left in Latin in `learn-quizzes.json`/`page-what-is-ethereum.json` (Optimism, Arbitrum, Facebook, Twitter, Aave, MakerDAO, Geth) while the SAME files transliterate フェイスブック/ツイッター/ユニスワップ correctly elsewhere -- mechanical, but wants a native pass.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `see-all-wallets` is byte-identical to the pre-existing `-table-title` (EN distinguishes "See all wallets" from "Browse all wallets"); ko/zh/zh-tw all distinguish them.
+- `nfts-hero-description` -> `NFTの表示、収集、管理を行います。` is an impersonal declarative; the sibling `finance-hero-description` correctly uses `活用しましょう`.
+- `persona-legend` -> `探す` is "search for", not browse, and blurs against `search-wallets` (`検索`). The *filter* sense is correctly gone.
+
+**Notes:**
+
+- All 13 matched glossary terms exact. `シールド/アンシールド` is the katakana term of art -- correct, not the 保護 trap.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.7/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+ALL 14 section headings left in English in staking/pools AND staking/saas -- saas was a regression (dev had them in Japanese), pools was already broken on dev. Only locale with this defect. Interpunct drops on glossary compounds (スマートコントラクト, シードフレーズ, ステーキングプール). Polite register uniform across all 6 files.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.0/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+
+**Open (native call needed):**
+
+- `Electronic Frontier Foundation` left Latin against 5 prior `電子フロンティア財団` uses in the ja tree.
+- `学習` for "study" reads as "train" in an AI-model context.
+- `ケースバイケース、ツールバイツールで` -- `ツールバイツール` is not Japanese.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ja/page-apps.json`, `roadmap/pectra/index.md`. 2 critical, 13 warnings. Brand 8/10 | Technical 9/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ja not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: already repaired by this PR.
+- Bare-acronym over-expansion in `page-apps.json`: not affected, zero keys expanded; de and ja were the only two clean locales.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ja-specific):**
+
+- `キーペア` -> glossary `鍵ペア`, 3 sites; the same file already used `鍵ペア` at 3 others and so does the page quiz string
+- `Remix統合開発環境 (IDE)` -> `Remix IDE`; the same sentence already said "Remix IDE"
+- testing:245 mismatched paren widths: the outer full-width open was closed by an ASCII `)`
+
+**Notes:**
+
+- Anchor sets, heading counts, code fences, link targets, JSX tags and JSON keys/ICU placeholders all byte-identical to English across 5 files; the Vyper 0.4 `@deploy`, Moccasin and Pectra content updates propagated correctly.
+
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 8.4/10 (pre-fix)
+
+Scope: `developers/docs/accounts/index.md`, `consensus-mechanisms/pos/rewards-and-penalties/index.md`, `tutorials/send-token-ethersjs/index.md`. 1 regression fix, 2 warnings. Brand 9/10 | Technical 9/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10.
+
+**Fixed in this branch:**
+
+- `キーペア` -> `鍵ペア`, 4 sites (description, heading, clef sentence, Austin video line). Regression: #19326 fixed this one day earlier and the full retranslation reintroduced it. `key pair` is not an ETHGlossary entry (only `key` -> `鍵`), so the pipeline has no signal to hold it; worth adding upstream.
+- Trailing newline stripped at EOF on `accounts` and `send-token-ethersjs`; restored.
+
+**Open (native call needed):**
+
+- `accounts:79` `[Geth]` -> `[ゴー・イーサリアム（ゲス）]` is ETHGlossary-compliant (`Go Ethereum (Geth)`), but line 94 of the same file keeps `Gethのドキュメント`.
+- `accounts` bullet lists switched from です/ます to plain/noun-ending forms while prose stays polite; acceptable list style, but a register shift from the pre-PR text.
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/glamsterdam:20` `Blob` -> `ブロブ`; `:31` `devnet` -> `デブネット`.
+
+**Open (warnings):**
+
+- open-access bank `アカウント` -> `口座`; hybrid `ユニスワップLabs`; `ノーログの証明` overstates claim.
+- `鍵ペア` held -- no `キーペア` regression.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `スマートコントラクト` -> `スマート・コントラクト` x3 (glossary middle dot; tree 1741 vs 149).
+
+**Open (warnings):**
+
+- onchain finance rendered 3 ways; 機関/機関投資家; `アービトラム One` hybrid; glamsterdam `devnets` -> `開発ネット` regressed from #19357's `デブネット`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.0/10
+
+- Fixed: `[EVM-based Chains]` -> `[EVMベースのチェーン]`; `Optimistic Sepolia` heading -> `オプティミスティック Sepolia` (dev form).
+- Open: L124 `Arbitrum Sepolia` heading Latin while body uses `アービトラム` (Latin is a glossary alias, not a deviation).

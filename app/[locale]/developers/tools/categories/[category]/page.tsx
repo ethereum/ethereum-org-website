@@ -16,7 +16,7 @@ import {
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import {
   buildToolLabels,
-  countToolsByCategory,
+  countTools,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
   withCategories,
@@ -63,7 +63,8 @@ const Page = async (props: {
     withCategories(normalized),
     toolDescriptions
   )
-  const countByCategory = countToolsByCategory(allTools)
+  const countByCategory = countTools(allTools, "categoryId")
+  const countBySubcategory = countTools(allTools, "subcategory_id")
   const { categoryLabels, subcategoryLabels } = buildToolLabels(
     t,
     normalized.taxonomy
@@ -132,6 +133,7 @@ const Page = async (props: {
         categoryLabels={categoryLabels}
         subcategoryLabels={subcategoryLabels}
         countByCategory={countByCategory}
+        countBySubcategory={countBySubcategory}
         totalCount={allTools.length}
         currentCategoryId={category}
       />

@@ -206,3 +206,7 @@ Dal facilitare rapidi soccorsi in caso di calamità al dare potere ai lavoratori
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

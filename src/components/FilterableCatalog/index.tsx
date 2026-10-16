@@ -1,17 +1,26 @@
 "use client"
 
 import {
+  type Dispatch,
   type ReactNode,
+  type SetStateAction,
+  startTransition,
+  useCallback,
   useDeferredValue,
+  useEffect,
   useMemo,
   useRef,
   useState,
 } from "react"
+import { RotateCcw, X } from "lucide-react"
 
+import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
+import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import type {
@@ -20,15 +29,30 @@ import type {
   CatalogSetFilter,
 } from "./types"
 
+// Fires once the query settles, so one event per search rather than per keystroke.
+const SEARCH_TRACKING_DEBOUNCE_MS = 1200
+
 export type FilterableCatalogLabels = {
   searchPlaceholder: string
   resultsLabel: string
   noResults: string
+  /** Second line of the empty state. */
+  noResultsDesc?: string
+  /** Empty-state reset button; the button renders only when this is provided. */
+  resetLabel?: string
+  /** Collapsed mobile filter-bar label (required when `mobileVariant="sheet"`). */
+  filtersToggle?: string
+  /** Mobile "apply" button label, shown as `{applyLabel} ({count})`. */
+  applyLabel?: string
+  /** Accessible label for the mobile close button. */
+  closeLabel?: string
 }
 
 export type CatalogSidebarHelpers = {
   state: CatalogFilterState
   setFilter: CatalogSetFilter
+  /** Which breakpoint's copy of the filter UI is rendering; both are mounted */
+  variant: "desktop" | "mobile"
 }
 
 export type FilterableCatalogProps<TItem> = {
@@ -48,9 +72,43 @@ export type FilterableCatalogProps<TItem> = {
    * `state` and a `setFilter` writer keyed however the consumer likes.
    */
   renderSidebar: (helpers: CatalogSidebarHelpers) => ReactNode
+  /** Optional row above the search input, outside the bordered sidebar box. */
+  renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
+  /** Optional row pinned to the bottom of the bordered sidebar box. */
+  sidebarFooter?: ReactNode
   renderResults: (items: TItem[]) => ReactNode
-  /** Optional line rendered above the results count (e.g. an active-path breadcrumb) */
-  renderResultsHeader?: (state: CatalogFilterState) => ReactNode
+  /**
+   * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
+   * into the page flow; `"sheet"` collapses it behind a "Filters" bar and needs
+   * `labels.filtersToggle` / `labels.applyLabel`.
+   */
+  mobileVariant?: "inline" | "sheet"
+  /**
+   * Lift the filter state out of the shell (e.g. to drive controls rendered
+   * outside it, or to sync it to the URL). Pass both, or neither.
+   */
+  selection?: CatalogFilterState
+  onSelectionChange?: Dispatch<SetStateAction<CatalogFilterState>>
+  /** Fires whenever the deferred filtered list changes; pass a stable function. */
+  onFilteredChange?: (items: TItem[]) => void
+  /**
+   * Called after the empty-state reset has cleared the search. Uncontrolled,
+   * the shell also clears its filters; controlled, the consumer clears its own.
+   */
+  onReset?: () => void
+  /**
+   * Mirrors one single-select filter key in the URL query string under the same
+   * name, so a selection is shareable, survives a refresh, and undoes with the
+   * back button. Read on mount rather than during render: the prerendered HTML
+   * knows no query string, so seeding state from it would mismatch hydration.
+   */
+  urlParamKey?: string
+  /**
+   * Single-select catalogs: picking a filter or following a link closes the
+   * mobile panel, since the choice is already final. Leave off for multi-select
+   * filters, where the panel has to survive several ticks.
+   */
+  closeMobileOnSelect?: boolean
   className?: string
 }
 
@@ -69,29 +127,89 @@ export default function FilterableCatalog<TItem>({
   filterFn,
   labels,
   renderSidebar,
+  renderSidebarHeader,
+  sidebarFooter,
   renderResults,
-  renderResultsHeader,
+  mobileVariant = "inline",
+  selection: controlledSelection,
+  onSelectionChange,
+  onFilteredChange,
+  onReset,
+  urlParamKey,
+  closeMobileOnSelect,
   className,
 }: FilterableCatalogProps<TItem>) {
   const nf = numberFormat(locale)
   const [search, setSearch] = useState("")
-  const [selection, setSelection] = useState<CatalogFilterState>({})
+  const [internalSelection, setInternalSelection] =
+    useState<CatalogFilterState>({})
+  const isControlled = controlledSelection !== undefined
+  const selection = isControlled ? controlledSelection : internalSelection
+  const setSelection = isControlled
+    ? (onSelectionChange as Dispatch<SetStateAction<CatalogFilterState>>)
+    : setInternalSelection
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const resultsTopRef = useRef<HTMLDivElement | null>(null)
+  const mobileTriggerRef = useRef<HTMLButtonElement | null>(null)
 
   // Defer the heavy filter + grid render so typing and filtering stay responsive
   const deferredSearch = useDeferredValue(search)
   const deferredSelection = useDeferredValue(selection)
   const isStale = search !== deferredSearch || selection !== deferredSelection
 
-  const setFilter: CatalogSetFilter = (key, value, options) => {
-    setSelection((prev) => ({ ...prev, [key]: value }))
-    if (options?.scroll ?? true) {
-      resultsTopRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
+  // Stable identity so memoized filter controls don't re-render every keystroke
+  const setFilter: CatalogSetFilter = useCallback(
+    (key, value, options) => {
+      setSelection((prev) => ({ ...prev, [key]: value }))
+      if (key === urlParamKey) {
+        const url = new URL(window.location.href)
+        if (typeof value === "string") {
+          url.searchParams.set(key, value)
+        } else {
+          url.searchParams.delete(key)
+        }
+        // Native history, not the router: this is the same page with a
+        // different filter, so there is nothing to re-fetch or re-render.
+        // Guarded: clearing an absent param would stack dead history entries.
+        if (url.href !== window.location.href) {
+          window.history.pushState(null, "", url)
+        }
+      }
+      // Untracked, unlike openMobileFilters: this is a consequence of the pick,
+      // not a tap on the toggle.
+      if (closeMobileOnSelect) setMobileFiltersOpen(false)
+      if (options?.scroll ?? true) {
+        resultsTopRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        })
+      }
+    },
+    [setSelection, urlParamKey, closeMobileOnSelect]
+  )
+
+  useEffect(() => {
+    if (!urlParamKey) return
+    let isInitial = true
+    const syncFromUrl = () => {
+      const value =
+        new URLSearchParams(window.location.search).get(urlParamKey) ??
+        undefined
+      setSelection((prev) =>
+        prev[urlParamKey] === value ? prev : { ...prev, [urlParamKey]: value }
+      )
+      // Arriving with a filter already applied lands on the results, the same
+      // as picking one in-page does. Not on popstate: the back button restores
+      // a position of its own.
+      if (isInitial && value) {
+        resultsTopRef.current?.scrollIntoView({ block: "start" })
+      }
+      isInitial = false
     }
-  }
+    syncFromUrl()
+    window.addEventListener("popstate", syncFromUrl)
+    return () => window.removeEventListener("popstate", syncFromUrl)
+  }, [setSelection, urlParamKey])
 
   const filteredItems = useMemo(
     () =>
@@ -99,41 +217,165 @@ export default function FilterableCatalog<TItem>({
     [items, filterFn, deferredSelection, deferredSearch]
   )
 
+  // Whatever the consumer derives from this (counts, summaries) is a third
+  // render pass; keep it off the critical path of the filter interaction.
+  useEffect(() => {
+    if (!onFilteredChange) return
+    startTransition(() => onFilteredChange(filteredItems))
+  }, [filteredItems, onFilteredChange])
+
+  useEffect(() => {
+    const query = search.trim()
+    if (!query) return
+    const timeout = setTimeout(
+      () =>
+        trackCustomEvent({
+          eventCategory: "CatalogSearch",
+          eventAction: "search",
+          eventName: query,
+        }),
+      SEARCH_TRACKING_DEBOUNCE_MS
+    )
+    return () => clearTimeout(timeout)
+  }, [search])
+
+  // Clears search too, unlike the sidebar reset — an empty query is often what
+  // emptied the results.
+  const resetAll = useCallback(() => {
+    setSearch("")
+    if (!isControlled) setInternalSelection({})
+    if (urlParamKey) {
+      const url = new URL(window.location.href)
+      url.searchParams.delete(urlParamKey)
+      if (url.href !== window.location.href) {
+        window.history.pushState(null, "", url)
+      }
+    }
+    onReset?.()
+  }, [isControlled, onReset, urlParamKey])
+
+  // Event triple kept from the old shared ProductTable sheet for trend comparability.
+  const openMobileFilters = useCallback((open: boolean) => {
+    setMobileFiltersOpen(open)
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle",
+      eventName: `show mobile filters ${open}`,
+    })
+  }, [])
+
   // Filter UI reads live selection (not deferred) so controls reflect input
   // immediately; only the results below deferred-render.
-  const sidebar = renderSidebar({ state: selection, setFilter })
+  const renderFilters = (variant: CatalogSidebarHelpers["variant"]) =>
+    renderSidebar({ state: selection, setFilter, variant })
+  const renderHeader = (variant: CatalogSidebarHelpers["variant"]) =>
+    renderSidebarHeader?.({ state: selection, setFilter, variant })
+  const filterBox = (
+    variant: CatalogSidebarHelpers["variant"],
+    className?: string
+  ) => (
+    <div className={cn("flex flex-col rounded-xl border", className)}>
+      <div className="min-h-0 overflow-y-auto p-2">
+        {renderFilters(variant)}
+      </div>
+      {sidebarFooter && <div className="border-t p-2">{sidebarFooter}</div>}
+    </div>
+  )
+
+  const searchInput = (
+    <Input
+      value={search}
+      onChange={(event) => setSearch(event.target.value)}
+      placeholder={labels.searchPlaceholder}
+      aria-label={labels.searchPlaceholder}
+      className="w-full"
+    />
+  )
 
   return (
     <Section id="catalog" className={cn("space-y-5", className)}>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[280px_1fr]">
         <aside className="hidden lg:block">
-          <div className="sticky top-24 space-y-4">
-            <Input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder={labels.searchPlaceholder}
-              className="w-full"
-            />
-            <div className="max-h-[calc(100vh-11rem)] space-y-4 overflow-y-auto rounded-xl border p-2">
-              {sidebar}
-            </div>
+          <div className="sticky top-24 space-y-3">
+            {renderHeader("desktop")}
+            {searchInput}
+            {filterBox("desktop", "max-h-[calc(100vh-11rem)]")}
           </div>
         </aside>
 
         <div className="space-y-4 lg:-mt-5">
-          <div className="space-y-3 lg:hidden">
-            <Input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder={labels.searchPlaceholder}
-              className="w-full"
-            />
-            <div className="space-y-4 rounded-xl border p-2">{sidebar}</div>
-          </div>
-          <div ref={resultsTopRef} className="scroll-mt-24" />
-          {renderResultsHeader?.(selection)}
+          {mobileVariant === "sheet" ? (
+            <div className="lg:hidden">
+              {/* Not SheetTrigger: Radix would stamp an aria-controls pointing
+                  at SheetContent, which this variant never renders. */}
+              <button
+                ref={mobileTriggerRef}
+                type="button"
+                onClick={() => openMobileFilters(true)}
+                aria-haspopup="dialog"
+                aria-expanded={mobileFiltersOpen}
+                className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-start transition-colors hover:bg-background-highlight"
+              >
+                <span className="text-sm font-bold text-primary">
+                  {labels.filtersToggle}
+                </span>
+                <span className="text-sm text-body-medium">
+                  {nf.format(filteredItems.length)}
+                </span>
+              </button>
 
-          <p className="text-sm text-body-medium">
+              <PersistentPanel
+                open={mobileFiltersOpen}
+                side="left"
+                onOpenChange={openMobileFilters}
+                triggerRef={mobileTriggerRef}
+                aria-label={labels.filtersToggle}
+                className="gap-3 p-4"
+              >
+                <div className="flex items-center justify-end">
+                  <button
+                    type="button"
+                    onClick={() => openMobileFilters(false)}
+                    aria-label={labels.closeLabel}
+                    className="grid size-8 place-items-center rounded-full transition-colors hover:bg-background-highlight"
+                  >
+                    <X className="size-5" />
+                  </button>
+                </div>
+                <div
+                  className="flex-1 space-y-3 overflow-y-auto"
+                  // Links navigate past the panel, so they close it like a
+                  // filter pick does. `setFilter` can't see them.
+                  onClick={(event) => {
+                    if (
+                      closeMobileOnSelect &&
+                      (event.target as HTMLElement).closest("a")
+                    ) {
+                      setMobileFiltersOpen(false)
+                    }
+                  }}
+                >
+                  {renderHeader("mobile")}
+                  {searchInput}
+                  {filterBox("mobile")}
+                </div>
+                <Button
+                  className="w-full"
+                  onClick={() => openMobileFilters(false)}
+                >
+                  {labels.applyLabel} ({nf.format(filteredItems.length)})
+                </Button>
+              </PersistentPanel>
+            </div>
+          ) : (
+            <div className="space-y-3 lg:hidden">
+              {renderHeader("mobile")}
+              {searchInput}
+              {filterBox("mobile")}
+            </div>
+          )}
+          <div ref={resultsTopRef} className="scroll-mt-24" />
+          <p className="text-sm text-body-medium" aria-live="polite">
             {labels.resultsLabel}:{" "}
             <strong>{nf.format(filteredItems.length)}</strong> /{" "}
             {nf.format(items.length)}
@@ -148,8 +390,17 @@ export default function FilterableCatalog<TItem>({
             {renderResults(filteredItems)}
           </div>
           {filteredItems.length === 0 && (
-            <div className="rounded-xl border p-8 text-center text-body-medium">
-              {labels.noResults}
+            <div className="flex flex-col items-center gap-3 rounded-xl border p-8 text-center text-body-medium">
+              <p className="m-0 font-bold text-body">{labels.noResults}</p>
+              {labels.noResultsDesc && (
+                <p className="m-0 max-w-prose">{labels.noResultsDesc}</p>
+              )}
+              {labels.resetLabel && (
+                <Button variant="outline" onClick={resetAll} className="mt-1">
+                  <RotateCcw className="size-4" />
+                  {labels.resetLabel}
+                </Button>
+              )}
             </div>
           )}
         </div>

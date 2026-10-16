@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Các hàm tiện ích của Web3js](https://docs.web3js.org/api/web3-utils)
 - [Các hàm tiện ích của Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Các thư viện có sẵn
+## Các thư viện có sẵn {#available-libraries}
 
 **Web3.js -** **_API JavaScript của Ethereum._**
 

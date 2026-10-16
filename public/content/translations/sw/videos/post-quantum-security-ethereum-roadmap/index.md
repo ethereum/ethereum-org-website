@@ -17,7 +17,7 @@ Wasilisho la kina la **Tomasz Stańczak** katika ETHBoulder linaloangazia maende
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=RBQwELDHXWk) iliyochapishwa na ETHBoulder. Imehaririwa kidogo ili isomeke vizuri.*
 
-#### Maendeleo ya EF na mabadiliko ya kitamaduni (0:12) {#ef-progress-and-the-cultural-shift-012}
+### Maendeleo ya EF na mabadiliko ya kitamaduni (0:12) {#ef-progress-and-the-cultural-shift-012}
 
 Baadhi yenu huenda mlikuja hapa mkiwa na wazo kwamba mtasikia kuhusu maono na mwelekeo wa Taasisi ya Ethereum. Niliambiwa hapo awali kwamba ningezungumza kuhusu pesa za baada ya kwanta, kwa hivyo ndivyo nilivyojiandaa, lakini niliandaa slaidi haraka kwa ajili ya mada nyingine pia. Kwa hivyo labda tutapitia zote mbili haraka — nadhani nina dakika 20 hadi 25.
 
@@ -29,7 +29,7 @@ Jambo moja kubwa na muhimu sana lilikuwa kurekebisha kundi la itifaki katika Taa
 
 Mpango wa Usalama wa Dola Trilioni ulikuwa juhudi kubwa — kukagua mfumo wa ikolojia kwa changamoto kubwa zaidi kwenye vipengele vya usalama. Kisha tulikuwa na michepuo miwili iliyosambazwa. Maoni makubwa kutoka kwa mfumo wa ikolojia yalikuwa kwamba hatukusambaza kwa wakati, kwamba wakati mwingine tulichukua mwaka mmoja na nusu kutoa mchepuo. Kwa hivyo tulionyesha kwamba tunaweza kutoa michepuo miwili kwa mwaka, na labda mwaka huu tutarudia — labda itakuwa kama kila baada ya miezi tisa, lakini inaenda katika mwelekeo mzuri. Mabadiliko ya kundi la faragha bado yanaundwa. Tulizungumza kuhusu miaka 10 ya Ethereum iliyosherehekewa duniani kote. Timu ya AI iliyogatuliwa ilianzishwa. Tulianzisha vituo vya kimwili na timu za nje — katika hali nyingi hazifadhiliwi kabisa au zinafadhiliwa kidogo na Taasisi ya Ethereum. Tunasukuma sana timu za ndani kuweza kujitegemea na wafadhili wa ndani, kwa kawaida VCs au jamii zenye uchangamfu. Na zkVMs zilikuwa mada kubwa kweli.
 
-#### Mkakati na vipaumbele vya 2026 (4:30) {#2026-strategy-and-priorities-430}
+### Mkakati na vipaumbele vya 2026 (4:30) {#2026-strategy-and-priorities-430}
 
 Tulitangaza mabadiliko ya itifaki mwezi Juni. Mwezi Mei tulitangaza mpango wa Usalama wa Dola Trilioni. Hili ni dashibodi ambalo limezinduliwa hivi karibuni — zaidi kama matokeo ya kazi hiyo kwa 2026. Sera ya hazina ilitangazwa mwezi Juni. Nadhani tutaona matokeo zaidi ya hili katika wiki moja au mbili — tutakuwa tukitangaza timu ya uratibu wa fedha zilizogatuliwa (DeFi). Hatimaye tulifanya baadhi ya ajira muhimu kwa timu hiyo. Nina furaha sana kuhusu watu watakaokuwa wakisaidia DeFi katika taasisi. Pia nimejifunza hivi punde kwamba tuko kwenye foleni ya wathibitishaji kuwasukuma kwenye Mtandao Mkuu, kwa hivyo Taasisi ya Ethereum itadumisha baadhi ya wathibitishaji kuweka dhamana ya ETH yake yenyewe. Hizi ni sehemu mbili za sera ya hazina. Timu ya AI hivi karibuni ilitangaza ERC-8004 iliyofika kwa wakati muafaka kwenye Mtandao Mkuu ili kusaidia AI ya kiwakala.
 
@@ -39,7 +39,7 @@ Vyeti na vitambulisho kwa ajili ya Ethereum ya makampuni — tunataka taasisi zi
 
 ETHBoulder, ETHDenver — ni sehemu ya juhudi zetu kuwa hapa, kutuma watu wengi zaidi kutoka EF kuja na kuwasilisha na kujadili na kila mtu. Jiji la New York linaikaribisha Ethereum kwa upande wa kitaasisi — kwa kujitegemea kutoka kwa taasisi, EVE Global inaendesha mkutano mkuu huko New York, ikipanga kama watu 6,000 hadi 8,000. Timu ya usaidizi wa sera ya kimataifa ilizinduliwa mwaka jana ili tuweze kusaidia watunga sera na wadhibiti duniani kote. Timu ya uratibu wa DeFi inazinduliwa wiki ijayo. Timu ya jukwaa inahusu kuzungumzia Ethereum kama jukwaa bora kwa L2s kujenga juu yake — wiki mbili zilizopita ilikuwa zaidi ya watu 70, zaidi ya L2s 20 wakikutana pamoja kujadili mkakati, ramani ya njia, na teknolojia. Majadiliano ya meza ya duara ya utoaji katika EFCC yanakuja, na tunatumai tutazungumza mengi kuhusu utamaduni na sanaa kwenye Ethereum kupitia DevCon Mumbai pia.
 
-#### Kwa nini baada ya kwanta ni muhimu sasa (8:30) {#why-post-quantum-matters-now-830}
+### Kwa nini baada ya kwanta ni muhimu sasa (8:30) {#why-post-quantum-matters-now-830}
 
 Hii ndiyo mada ambayo timu yangu iliniambia ninapaswa kuzungumzia, jambo ambalo ni la kuchekesha kidogo kwa sababu sijisikii kuwa na nguvu zaidi kwenye hili — ninaelewa wazo, ninaelewa kwa nini ni muhimu sana kwetu, na ninajaribu kueleza kwa nini. Lakini kiufundi nilihisi kama, sijui hasa tunachofanya kwenye viwango vya EIP au jinsi timu ilivyowasilisha. Haimaanishi sijajiandaa — nilitumia saa nane leo kuandaa hili kwa ajili yenu na kusoma nyenzo zote ambazo timu ilinitumia. Lakini inabidi mnisamehe ikiwa kuna baadhi ya maelezo ya kiufundi ambayo siyaelezi vizuri zaidi, au ikiwa ninashiriki habari ambazo zinaweza kuwa za miezi michache iliyopita.
 
@@ -47,7 +47,7 @@ Kwa hivyo kwa nini baada ya kwanta ni muhimu sana sasa? Labda si kwa sababu rati
 
 Sehemu kubwa ya juhudi zetu sasa ni kuonyesha ni kiasi gani cha kazi tumeweka katika kupanga, kutafiti, kuratibu, na kujenga ramani za njia kwa ajili ya usalama wa baada ya kwanta. Bitcoin hasa ina wasiwasi sana kuhusu vitisho vya baada ya kwanta. Wasiwasi mkubwa ni kwamba kuna karibu BTC milioni 6 zilizo hatarini kwa jumla — baadhi kutoka kwa akaunti za Taproot, karibu BTC milioni 1.9 kutoka kwa akaunti za Satoshi na akaunti nyingine za zamani. Kisha una akaunti zinazotumika ambazo zinaweza kunaswa unapokuwa ukisaini miamala, lakini hilo ni tishio dogo kwa sababu itabidi uwe na kompyuta za kwanta zenye uwezo wa kuvunja kriptografia haraka sana. Anwani hizo nyingi ziko hatarini katika Bitcoin hata kwa kompyuta za kwanta zinazochukua wiki kuvunja anwani hizo. Hili linajenga kutokuwa na uhakika mwingi miongoni mwa watu wanaofikiri — vipi ikiwa itakuja mapema, hasa kwa kasi ya AI sasa? Matangazo mengi mapya kuhusu kwanta yanakuja haraka sana, na pia kuna kutokuwa na uhakika kuhusu kiasi gani tunajua kuhusu kompyuta za kwanta, kwani teknolojia hiyo nyingi inaweza kuwa inatengenezwa na serikali kwa siri.
 
-#### Wasiwasi wa soko na mwitikio wa kitaasisi (12:00) {#market-anxiety-and-institutional-response-1200}
+### Wasiwasi wa soko na mwitikio wa kitaasisi (12:00) {#market-anxiety-and-institutional-response-1200}
 
 Kutokuwa na uhakika mkubwa. Baadhi ya watu wanadai kwamba wawekezaji hawauzi BTC kwa sababu ya kompyuta za kwanta, lakini tunaona matangazo kutoka kwa benki kubwa na fedha za uwekezaji ambayo yanasema ndiyo maana hasa wateja wao wanasema "uza BTC" — au Ethereum. Baadhi ya matatizo ni "vuna sasa, simbuwa baadaye" — wazo kwamba kwa kompyuta za kwanta utaweza kuangalia trafiki iliyopo yenye usimbaji fiche, kuihifadhi kwa ajili ya siku zijazo, na kisha kuisimbuwa. Unapofikiria kuhusu vitisho kwa mnyororo wa vitalu — ikiwa unautumia kwa faragha, kwa usimbaji fiche, na unatumai utakuwa na usalama wa mbele — hili ni tatizo. Hasa kwa minyororo inayotegemea faragha kama Monero, kivitendo katika siku zijazo utaweza kusimbuwa wakati wote uliopita wa mnyororo, hali zote na mabadiliko.
 
@@ -59,13 +59,13 @@ Nick Carter anataja kwamba kuna tofauti kati ya jinsi wasanidi wanavyofikiria ku
 
 Hili hapa ni tangazo kutoka kwa Jeff — mgao wa 10% wa BTC umeondolewa kwenye jalada la Asia, wakitaja kwanta kama tishio la kuwepo. Mfano wa kwanza mkuu wa jalada la kitaasisi, makala ya Bloomberg. Citibank ilitangaza tishio la kwanta na mbio za usalama za dola trilioni — si tu mnyororo wa vitalu, walikuwa wakizungumzia kriptografia inayotumika katika benki na taasisi za fedha, lakini pia walitaja hatari zinazohusiana na Bitcoin. 25% ya bitcoins zinaweza kuwa wazi kwa kwanta, na uwezekano mkubwa kwamba mambo yataharibika ifikapo 2034.
 
-#### Viwango vya NIST na jaribio la kuondoka la Vitalik (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
+### Viwango vya NIST na jaribio la kuondoka la Vitalik (16:00) {#nist-standards-and-vitaliks-walkaway-test-1600}
 
 Hapa kuna NIST ikitangaza viwango vya kriptografia salama ya baada ya kwanta — sahihi zinazopaswa kutumika. Wanasema ifikapo 2030, watu wanapaswa kuwa tayari. Mifumo inapaswa kuacha kutumia algoriti za sahihi za zamani, na ifikapo 2035 hizo zinapaswa kupigwa marufuku kabisa. Haimaanishi kwamba kufikia wakati huo kwa hakika tutakuwa na kompyuta za baada ya kwanta ambazo ni vitisho, lakini matarajio ni kwamba kila mtu yuko tayari kufikia wakati huo — taasisi, mashirika ya serikali, waendeshaji wenye leseni nchini Marekani.
 
 Vitalik anataja usalama wa baada ya kwanta kama hitaji muhimu sana kwa jaribio la kuondoka kwa Ethereum — kwamba hatuwezi kuifanya Ethereum kuwa thabiti isipokuwa iwe salama kwa kwanta, kwa sababu kwa kweli kila kitu kingeharibika. Katika miaka michache ijayo, seti muhimu sana ya uwasilishaji ni kuifanya rundo zima la Ethereum kuwa salama kwa kwanta — vipengele vyote: sahihi, upatikanaji wa data, sahihi kwenye tabaka la utekelezaji, na sahihi kwenye tabaka la mwafaka.
 
-#### Mipango ya sahihi ya baada ya kwanta (17:30) {#post-quantum-signature-schemes-1730}
+### Mipango ya sahihi ya baada ya kwanta (17:30) {#post-quantum-signature-schemes-1730}
 
 Kuna mfululizo wa machapisho ya blogu kwenye jukwaa la utafiti la Taasisi ya Ethereum ambayo yanazungumzia mipango iliyopendekezwa ya sahihi ya muamala na jinsi ya kukaribia usalama wa baada ya kwanta kutoka upande wa udhanifu wa akaunti kwenye Ethereum. Kwanza, Falcon ni mpango wa sahihi unaotegemea latisi — mojawapo ya mipango iliyopendekezwa na NIST kama kiwango. Jambo zuri ni kwamba ina muda wa utekelezaji wa hali mbaya zaidi uliofafanuliwa vizuri sana, ambao ni muhimu katika muktadha wa EVM ambapo hutaki kukokotoa gharama za gesi kulingana na hali mbaya kabisa. Katika Ethereum, unapofikiria kuhusu kuongeza ukubwa, huwa tunaangalia hali mbaya zaidi, si wastani. Ingekuwa vizuri kufikiria kuhusu utendaji wa wastani, lakini haijalishi kwa sababu mara tu unapofanya hivyo, mshambuliaji atafurika mtandao na miamala iliyoundwa mahususi kusababisha hali mbaya zaidi. Kwa hivyo ni muhimu kujua hali hiyo mbaya zaidi ni nini.
 
@@ -73,19 +73,19 @@ Jambo baya ni kwamba sahihi za Falcon na sahihi nyingi za baada ya kwanta zinach
 
 Pia kuna matatizo na ujumuishaji — kuna suluhu za ujumuishaji kwa sahihi zinazotegemea Falcon, lakini zinapunguza ufanisi hata zaidi. Kile kinachopendekezwa hasa ni suluhu za saini-nyingi zinazotegemea heshi. Ethereum kwenye tabaka la mwafaka inachagua XMSS. Utafiti wa Ethereum sasa unapendekeza suluhu kuhusu XMSS — ndicho kilichofanyiwa kazi zaidi kwa ramani ya njia ya Lean Ethereum. Tunaunganisha Lean Ethereum katika pendekezo la ramani ya njia ya itifaki kuu ya maendeleo, ambayo inamaanisha tutakuwa tukipendekeza ramani ya njia ya usalama wa baada ya kwanta kwa Wasanidi Wote Wakuu (All Core Devs) kwa ukaguzi. Tuna utekelezaji na tumekuwa tukifuatilia malengo na vipimo kwenye kasi ya utekelezaji.
 
-#### Changamoto ya uhamiaji (20:30) {#the-migration-challenge-2030}
+### Changamoto ya uhamiaji (20:30) {#the-migration-challenge-2030}
 
 Tukirudi kwenye mahitaji ya kazi ya baada ya kwanta katika Ethereum — kujua hasa vitisho ni nini, ni aina gani za mashambulizi zinaweza kutekelezwa, na kuwa na njia za uhamiaji zinazotabirika sana kwa akaunti. Hili ni mojawapo ya matatizo makubwa na usalama wa baada ya kwanta. Inabidi uchukue akaunti zote zilizopo kwenye mnyororo wa vitalu na kuhakikisha kwamba kwa namna fulani watumiaji wanatekeleza kitendo cha kusasisha hadi kwenye mipango ya sahihi ya baada ya kwanta. Ikiwa hawatachukua hatua yoyote, akaunti ziko hatarini. Hata kama akaunti hizo zimekufa — hakuna anayeshikilia funguo kwa sababu zilipotea — bado ni tatizo kwa sababu mashambulizi ya kwanta yanaweza kurejesha funguo hizo. Hilo linaweza kujenga hisia ya jumla ya kutokuwa na uhakika na hatari ya ziada kuhusu teknolojia.
 
 Kuna baadhi ya suluhu kwenye Ethereum — mbinu ya dharura. Unachukulia kwamba ikiwa mtu anashikilia funguo, kuna uwezekano mkubwa pia anashikilia taswira ya awali — kirai cha mbegu. Kwa hivyo unaweza kufanya mbinu ya dharura ambapo watu wanathibitisha kwa ZK (sifuri-maarifa) kwamba wanashikilia kirai cha mbegu kilichozalisha ufunguo wa umma. Kisha unaweza kufunga akaunti hizo hadi mtu atume uthibitisho. Lakini bado unahatarisha kwamba wale waliozalisha funguo moja kwa moja bila kirai cha mbegu wanaweza wasiweze kamwe kurejesha fedha zao.
 
-#### Utendaji, uthibitishaji rasmi, na maendeleo ya utekelezaji (23:00) {#performance-formal-verification-and-implementation-progress-2300}
+### Utendaji, uthibitishaji rasmi, na maendeleo ya utekelezaji (23:00) {#performance-formal-verification-and-implementation-progress-2300}
 
 Tunataka kuwa na kundi la utekelezaji lenye uthibitishaji rasmi, ambalo linaongeza kasi sana sasa. Tumekuwa na mifano ya uthibitishaji rasmi uliofanywa haraka sana kutokana na AI. Tunataka kuchambua mabadiliko ya utendaji — uchumi wa mabadiliko ya nafasi ya kitalu. Jinsi sahihi zinavyoweza kuthibitishwa haraka, na ni nini gharama ya maunzi kutekeleza. Jambo zuri ni kwamba kwa kuongeza ukubwa wa tabaka la 1 (l1), tunatengeneza nafasi zaidi kwa aina mpya ya sahihi. Miamala ya msingi inaweza kuwa ghali mara 10 hadi 20 zaidi ya leo kwa sababu ya sahihi kubwa zaidi katika mipango ya baada ya kwanta. Kwa ujumla tunatarajia mfumo mzima wa ikolojia kuwa tayari — pochi, wathibitishaji, waendeshaji — kila mtu anabadilika na yuko tayari kusasisha pamoja. Jambo moja ni kufanya utafiti na utekelezaji; lingine ni mpito mzima wa uhamiaji. Ikiwa sehemu ya kwanza inaweza kuwa miaka miwili hadi mitatu, basi ujumuishaji utachukua miaka mingine miwili hadi mitatu isipokuwa watu wahisi kweli kuna dharura.
 
 Ni dhana gani potofu kuhusu kazi hii? Ya kwanza ninayopenda sana kuionyesha — kwa sababu tu hatua inaweza kuwa na kikomo wakati fulani, haimaanishi kwamba hakujawa na kazi nyingi tayari iliyofanywa. Watafiti wanaweza kuamua kwenda na mabadiliko rahisi na maboresho ya taratibu, lakini haya ni matokeo ya miaka mitatu au minne ya ukaguzi wa maelezo yote na uelewa mzuri sana wa uwezekano wote na mashambulizi. Kutoelewana ni kwamba tungefanya hili kwa mabadiliko moja — kuna uwezekano mkubwa itakuwa mfululizo wa mabadiliko na moduli nyingi kubadilishwa kwa muda.
 
-#### Ramani kamili ya njia na maendeleo ya mtandao wa wasanidi (25:29) {#the-full-roadmap-and-devnet-progress-2529}
+### Ramani kamili ya njia na maendeleo ya mtandao wa wasanidi (25:29) {#the-full-roadmap-and-devnet-progress-2529}
 
 Huu ni ukaguzi wa haraka wa mambo tunayofanya — tabaka la mwafaka, Lean EVM, Lean Spec. Mambo matatu tunayofanyia kazi. Pia kuna mikusanyiko ya awali (precompiles) kwa ajili ya sahihi mpya. Hii hapa ni ramani ya njia — ilipowasilishwa Bangkok, watu walisema Ethereum ni polepole na inafikiria polepole sana kuhusu ramani za njia. Lakini sasa inaonyesha tayari tuna miaka miwili katika maandalizi mengi ya baada ya kwanta, na inaanza kuwatuliza watu kwa sababu wanasema, "oh, tayari tuko katikati na tunajenga suluhu." Kwa hivyo ramani hiyo ya njia haikuwa mbaya sana mwishowe — Ethereum inaonyesha inafuatwa.
 

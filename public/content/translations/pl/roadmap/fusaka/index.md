@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Dowiedz się więcej o aktualizacji protokołu Fusaka
+description: "Dowiedz się więcej o aktualizacji protokołu Fusaka"
 lang: pl
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ Aktualizacja Fusaka to tylko jeden krok w długoterminowych celach rozwojowych E
 
 To _główna atrakcja_ rozwidlenia Fusaka, najważniejsza funkcja dodana w tej aktualizacji. Sieci warstwy 2 (L2) obecnie publikują swoje dane w Ethereum w postaci blobów, efemerycznego typu danych stworzonego specjalnie dla warstwy 2. Przed Fusaka każdy pełny węzeł musiał przechowywać każdy blob, aby upewnić się, że dane istnieją. W miarę wzrostu przepustowości blobów konieczność pobierania wszystkich tych danych staje się nieznośnie zasobochłonna.
 
-Dzięki [próbkowaniu dostępności danych (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), zamiast przechowywać wszystkie dane blobów, każdy węzeł będzie odpowiedzialny za ich podzbiór. Bloby są równomiernie i losowo rozdzielane między węzły w sieci, a każdy pełny węzeł przechowuje tylko 1/8 danych, co umożliwia teoretyczne skalowanie do 8 razy. Aby zapewnić dostępność danych, dowolną ich część można zrekonstruować z dowolnych istniejących 50% całości za pomocą metod, które obniżają prawdopodobieństwo błędnych lub brakujących danych do kryptograficznie pomijalnego poziomu (~od jednego na 10<sup>20</sup> do jednego na 10<sup>24</sup>).
+Dzięki [próbkowaniu dostępności danych (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), zamiast przechowywać wszystkie dane blobów, każdy węzeł będzie odpowiedzialny za ich podzbiór. Bloby są równomiernie i losowo rozdzielane między węzły w sieci, a każdy pełny węzeł przechowuje tylko 1/8 danych, co umożliwia teoretyczne skalowanie do 8 razy. Aby zapewnić dostępność danych, dowolną ich część można zrekonstruować z dowolnych istniejących 50% całości za pomocą metod, które obniżają prawdopodobieństwo błędnych lub brakujących danych do kryptograficznie pomijalnego poziomu (\~od jednego na 10<sup>20</sup> do jednego na 10<sup>24</sup>).
 
 Utrzymuje to wymagania sprzętowe i przepustowości dla węzłów na akceptowalnym poziomie, jednocześnie umożliwiając skalowanie blobów, co skutkuje większą skalą i mniejszymi opłatami dla warstwy 2.
 
@@ -135,11 +135,11 @@ Celem jest ograniczenie czasu propagacji/walidacji w najgorszym przypadku i dost
 
 #### Ustawienie domyślnego limitu gazu na 60 milionów {#set-default-gas-limit-to-60-million}
 
-Przed podniesieniem limitu gazu z 30M do 36M w lutym 2025 r. (a następnie do 45M), wartość ta nie uległa zmianie od czasu The Merge (wrzesień 2022 r.). Ten EIP ma na celu uczynienie spójnego skalowania priorytetem.
+Przed podniesieniem limitu gazu z 30 mln do 36 mln w lutym 2025 r. (a następnie do 45 mln), wartość ta nie uległa zmianie od czasu The Merge (wrzesień 2022 r.). Ten EIP ma na celu uczynienie spójnego skalowania priorytetem.
 
-EIP-7935 koordynuje zespoły klientów warstwy wykonawczej (EL) w celu podniesienia domyślnego limitu gazu powyżej dzisiejszych 45M dla Fusaka. Jest to informacyjny EIP, ale wyraźnie prosi klientów o przetestowanie wyższych limitów w sieciach deweloperskich, ustalenie bezpiecznej wartości i dostarczenie tej liczby w ich wydaniach Fusaka.
+EIP-7935 skoordynował zespoły klientów warstwy wykonawczej (EL), aby podnieść domyślny limit gazu powyżej 45 mln, który poprzedzał Fusaka. Jest to informacyjny EIP, ale wyraźnie poproszono w nim klientów o przetestowanie wyższych limitów w sieciach deweloperskich, ustalenie bezpiecznej wartości i wdrożenie tej liczby w ich wydaniach Fusaka.
 
-Planowanie w sieciach deweloperskich zakłada testy obciążeniowe na poziomie ~60M (pełne bloki z syntetycznym obciążeniem) i iteracyjne podwyżki; badania wskazują, że patologie rozmiaru bloku w najgorszym przypadku nie powinny stanowić ograniczenia poniżej ~150M. Wdrożenie powinno być połączone z górnym limitem gazu dla transakcji (EIP-7825), aby żadna pojedyncza transakcja nie mogła dominować w miarę wzrostu limitów.
+Testy w sieciach deweloperskich celowały w ~60 mln pod obciążeniem (pełne bloki z syntetycznym obciążeniem) z iteracyjnymi wzrostami; badania wskazują, że patologie rozmiaru bloku w najgorszym przypadku nie powinny stanowić ograniczenia poniżej ~150 mln. Wdrożenie to zostało połączone z górnym limitem gazu dla transakcji (EIP-7825), aby żadna pojedyncza transakcja nie mogła zdominować bloku w miarę wzrostu limitów. Klienci wdrożyli 60 mln jako wartość domyślną dla Fusaka.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ Wymagania węzłów nadal mieszczą się w [zalecanych marginesach](https://eips
 
 Zwykłe węzły bez żadnych walidatorów będą subskrybować tylko 4 podsieci, zapewniając przechowywanie 1/8 oryginalnych danych. Oznacza to, że przy tej samej ilości danych blobów przepustowość węzła potrzebna do ich pobrania byłaby mniejsza ośmiokrotnie (8). Zużycie dysku i przepustowość pobierania blobów dla normalnego pełnego węzła może spaść o około 80%, do zaledwie kilku Mb.
 
-#### Samodzielni stakujący (Solo stakers) {#solo-stakers}
+#### Stakerzy solo {#solo-stakers}
 
-Jeśli węzeł jest używany dla klienta walidatora, musi przechowywać więcej kolumn, a tym samym przetwarzać więcej danych. Po dodaniu walidatora węzeł subskrybuje co najmniej 8 podsieci kolumn, a tym samym przetwarza dwa razy więcej danych niż zwykły węzeł, ale wciąż mniej niż przed Fusaka. Jeśli saldo walidatora przekracza 287 ETH, subskrybowanych będzie coraz więcej podsieci.
+Jeśli węzeł jest używany przez klienta walidatora, musi przechowywać więcej kolumn, a tym samym przetwarzać więcej danych. Po dodaniu walidatora węzeł subskrybuje co najmniej 8 podsieci kolumn, a zatem przetwarza dwa razy więcej danych niż zwykły węzeł, ale wciąż mniej niż przed Fusaka. Jeśli saldo walidatora przekracza 287 ETH, subskrybowanych będzie coraz więcej podsieci.
 
-Dla samodzielnego stakującego oznacza to, że zużycie dysku i przepustowość pobierania spadną o około 50%. Jednak do lokalnego budowania bloków i przesyłania wszystkich blobów do sieci potrzebna jest większa przepustowość wysyłania. Lokalni budowniczowie będą potrzebować 2-3 razy wyższej przepustowości wysyłania niż wcześniej w momencie Fusaka, a przy celu BPO2 wynoszącym 15/21 blobów, ostateczna niezbędna przepustowość wysyłania będzie musiała być około 5 razy wyższa, na poziomie 100 Mbps.
+Dla stakera solo oznacza to, że zużycie dysku i przepustowość pobierania spadną o około 50%. Jednak do lokalnego budowania bloków i wysyłania wszystkich blobów do sieci potrzebna jest większa przepustowość wysyłania. Lokalni budowniczowie będą potrzebować 2-3 razy większej przepustowości wysyłania niż wcześniej w momencie aktywacji Fusaka, a przy celu BPO2 wynoszącym 15/21 blobów, ostateczna niezbędna przepustowość wysyłania będzie musiała być około 5 razy wyższa, na poziomie 100 Mbps.
 
 #### Duzi walidatorzy {#large-validators}
 

@@ -4,31 +4,31 @@ description: "Muhtasari na ulinganisho wa lugha mbili kuu za mikataba mahiri –
 lang: sw
 ---
 
-Jambo zuri kuhusu [Ethereum](/) ni kwamba mikataba mahiri inaweza kupangwa kwa kutumia lugha ambazo ni rafiki kwa wasanidi programu. Ikiwa una uzoefu na Python au [lugha yoyote ya mabano yaliyopinda](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), unaweza kupata lugha yenye sintaksia unayoifahamu.
+Jambo zuri kuhusu [Ethereum](/) ni kwamba mikataba mahiri inaweza kupangwa kwa kutumia lugha ambazo ni rafiki kwa wasanidi. Ikiwa una uzoefu na Python au [lugha yoyote ya mabano yaliyopinda](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), unaweza kupata lugha yenye sintaksia unayoifahamu.
 
-Lugha mbili zinazotumika sana na kudumishwa ni:
+Lugha mbili zinazotumika na kudumishwa zaidi ni:
 
 - Solidity
 - Vyper
 
-Remix IDE hutoa mazingira kamili ya usanidi kwa ajili ya kuunda na kujaribu mikataba katika Solidity na Vyper. [Jaribu Remix IDE iliyo kwenye kivinjari](https://remix.ethereum.org) ili kuanza kuandika msimbo.
+Remix IDE hutoa mazingira jumuishi ya uendelezaji (IDE) ya kina kwa ajili ya kuunda na kujaribu mikataba katika Solidity na Vyper. [Jaribu Remix IDE iliyo kwenye kivinjari](https://remix.ethereum.org) ili kuanza kuandika msimbo.
 
-Wasanidi programu wenye uzoefu zaidi wanaweza pia kutaka kutumia Yul, lugha ya kati kwa ajili ya [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/), au Yul+, kiendelezi cha Yul.
+Wasanidi wenye uzoefu zaidi wanaweza pia kutaka kutumia Yul, lugha ya kati kwa ajili ya [Mashine Pepe ya Ethereum (EVM)](/developers/docs/evm/), au Yul+, kiendelezi cha Yul.
 
-Ikiwa una hamu na ungependa kusaidia kujaribu lugha mpya ambazo bado zinatengenezwa kwa kiasi kikubwa unaweza kufanya majaribio na Fe, lugha inayoibuka ya mikataba mahiri ambayo kwa sasa bado iko katika hatua zake za awali.
+Ikiwa una hamu na ungependa kusaidia kujaribu lugha mpya ambazo bado zinaendelezwa sana unaweza kufanya majaribio na Fe, lugha inayoibuka ya mikataba mahiri ambayo kwa sasa bado iko katika hatua zake za awali.
 
-## Mahitaji ya awali {#prerequisites}
+## Mahitaji ya Awali {#prerequisites}
 
-Ujuzi wa awali wa lugha za programu, hasa JavaScript au Python, unaweza kukusaidia kuelewa tofauti katika lugha za mikataba mahiri. Tunapendekeza pia uelewe mikataba mahiri kama dhana kabla ya kuchimba kwa kina katika ulinganisho wa lugha. [Utangulizi wa mikataba mahiri](/developers/docs/smart-contracts/).
+Ujuzi wa awali wa lugha za upangaji, hasa JavaScript au Python, unaweza kukusaidia kuelewa tofauti katika lugha za mikataba mahiri. Tunapendekeza pia uelewe mikataba mahiri kama dhana kabla ya kuchimba sana katika ulinganisho wa lugha. [Utangulizi wa mikataba mahiri](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
 - Lugha ya kiwango cha juu, inayolenga vitu (object-oriented) kwa ajili ya kutekeleza mikataba mahiri.
 - Lugha ya mabano yaliyopinda ambayo imeathiriwa sana na C++.
-- Ina aina tuli (statically typed) (aina ya kigezo inajulikana wakati wa kukusanya msimbo).
+- Ina aina tuli (statically typed) (aina ya kigezo inajulikana wakati wa kukusanya).
 - Inasaidia:
   - Urithi (unaweza kupanua mikataba mingine).
-  - Maktaba (unaweza kuunda msimbo unaoweza kutumika tena ambao unaweza kuuita kutoka kwa mikataba tofauti – kama vile vitendaji tuli katika darasa tuli katika lugha zingine za programu zinazolenga vitu).
+  - Maktaba (unaweza kuunda msimbo unaoweza kutumika tena ambao unaweza kuuita kutoka kwa mikataba tofauti – kama vile vitendaji tuli katika darasa tuli katika lugha zingine za upangaji zinazolenga vitu).
   - Aina changamano zilizofafanuliwa na mtumiaji.
 
 ### Viungo muhimu {#important-links}
@@ -37,7 +37,7 @@ Ujuzi wa awali wa lugha za programu, hasa JavaScript au Python, unaweza kukusaid
 - [Tovuti ya Lugha ya Solidity](https://soliditylang.org/)
 - [Solidity kwa Mfano](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Chumba cha Maongezi cha Solidity Gitter](https://gitter.im/ethereum/solidity) kilichounganishwa na [Chumba cha Maongezi cha Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Chumba cha Mazungumzo cha Gitter cha Solidity](https://gitter.im/ethereum/solidity) kilichounganishwa na [Chumba cha Mazungumzo cha Matrix cha Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Karatasi ya Kudanganya (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
 - [Blogu ya Solidity](https://blog.soliditylang.org/)
 - [Twitter ya Solidity](https://twitter.com/solidity_lang)
@@ -49,16 +49,16 @@ Ujuzi wa awali wa lugha za programu, hasa JavaScript au Python, unaweza kukusaid
 pragma solidity >= 0.7.0;
 
 contract Coin {
-    // Neno kuu "public" hufanya vigezo
+    // Neno msingi "public" hufanya vigezo
     // vifikike kutoka kwenye mikataba mingine
     address public minter;
     mapping (address => uint) public balances;
 
     // Matukio huruhusu wateja kuitikia
-    // mabadiliko maalum ya mkataba unayotangaza
+    // mabadiliko mahususi ya mkataba unayotangaza
     event Sent(address from, address to, uint amount);
 
-    // Msimbo wa kiunda huendeshwa tu wakati mkataba
+    // Msimbo wa kiunda (constructor) huendeshwa tu wakati mkataba
     // unapoundwa
     constructor() {
         minter = msg.sender;
@@ -73,7 +73,7 @@ contract Coin {
     }
 
     // Hutuma kiasi cha sarafu zilizopo
-    // kutoka kwa mpigaji yeyote kwenda kwenye anwani
+    // kutoka kwa anayeita yeyote kwenda kwenye anwani
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -87,19 +87,21 @@ Mfano huu unapaswa kukupa wazo la jinsi sintaksia ya mkataba wa Solidity ilivyo.
 
 ## Vyper {#vyper}
 
-- Lugha ya programu inayofanana na Python
+- Lugha ya upangaji inayofanana na Python
 - Uwekaji aina thabiti (Strong typing)
-- Msimbo mdogo na unaoeleweka wa kikusanyaji (compiler)
+- Msimbo mdogo na unaoeleweka wa kikusanyaji
 - Uzalishaji mzuri wa msimbo wa baiti
-- Kwa makusudi ina vipengele vichache kuliko Solidity kwa lengo la kufanya mikataba kuwa salama zaidi na rahisi kukagua. Vyper haisaidii:
+- Kwa makusudi ina vipengele vichache kuliko Solidity kwa lengo la kufanya mikataba iwe salama zaidi na rahisi kukagua. Vyper haisaidii:
   - Virekebishaji (Modifiers)
-  - Urithi (Inheritance)
-  - Mkusanyiko wa ndani (Inline assembly)
+  - Urithi
+  - Assembly ya ndani (Inline assembly)
   - Upakiaji kupita kiasi wa vitendaji (Function overloading)
   - Upakiaji kupita kiasi wa waendeshaji (Operator overloading)
   - Wito wa kujirudia (Recursive calling)
-  - Vitanzi vya urefu usio na kikomo (Infinite-length loops)
+  - Vitanzi vya urefu usio na kikomo
   - Nambari zisizobadilika za mfumo wa jozi (Binary fixed points)
+
+Tangu toleo la v0.4.0, Vyper inasaidia [mfumo wa moduli](https://docs.vyperlang.org/en/stable/using-modules.html). Utumiaji tena wa msimbo unafikiwa kupitia utungaji, badala ya urithi wa darasa.
 
 Kwa maelezo zaidi, [soma mantiki ya Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
@@ -107,15 +109,15 @@ Kwa maelezo zaidi, [soma mantiki ya Vyper](https://vyper.readthedocs.io/en/lates
 
 - [Nyaraka](https://vyper.readthedocs.io)
 - [Vyper kwa Mfano](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
-- [Mifano Zaidi ya Vyper](https://vyper-by-example.org/)
+- [Vyper Zaidi kwa Mfano](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [Soga ya Discord ya jamii ya Vyper](https://discord.gg/SdvKC79cJk)
 - [Karatasi ya Kudanganya (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
-- [Mifumo na zana za usanidi wa mikataba mahiri kwa ajili ya Vyper](/developers/docs/programming-languages/python/)
+- [Mifumo na zana za uendelezaji wa mikataba mahiri kwa ajili ya Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - jifunze kulinda na kudukua mikataba mahiri ya Vyper](https://github.com/SupremacyTeam/VyperPunk)
-- [Kitovu cha Vyper kwa ajili ya usanidi](https://github.com/zcor/vyper-dev)
+- [Kitovu cha Vyper kwa ajili ya uendelezaji](https://github.com/zcor/vyper-dev)
 - [Mifano bora zaidi ya mikataba mahiri ya Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Rasilimali zilizoratibiwa za Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Rasilimali nzuri zilizoratibiwa za Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Mfano {#example}
 
@@ -132,41 +134,41 @@ auctionEnd: public(uint256)
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Imewekwa kuwa kweli mwishoni, hairuhusu mabadiliko yoyote
+# Imewekwa kuwa kweli (true) mwishoni, hairuhusu mabadiliko yoyote
 ended: public(bool)
 
 # Fuatilia zabuni zilizorejeshwa ili tuweze kufuata muundo wa kutoa
 pendingReturns: public(HashMap[address, uint256])
 
-# Unda mnada rahisi na `_bidding_time`
-# sekunde za muda wa zabuni kwa niaba ya
+# Unda mnada rahisi wenye `_bidding_time`
+# kama sekunde za muda wa zabuni kwa niaba ya
 # anwani ya mnufaika `_beneficiary`.
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Weka zabuni kwenye mnada na thamani iliyotumwa
+# Weka zabuni kwenye mnada kwa thamani iliyotumwa
 # pamoja na muamala huu.
 # Thamani itarejeshwa tu ikiwa
 # mnada haujashindwa.
 @external
 @payable
 def bid():
-    # Angalia ikiwa kipindi cha zabuni kimeisha.
+    # Angalia kama muda wa zabuni umeisha.
     assert block.timestamp < self.auctionEnd
-    # Angalia ikiwa zabuni iko juu vya kutosha
+    # Angalia kama zabuni iko juu vya kutosha
     assert msg.value > self.highestBid
-    # Fuatilia urejeshaji kwa mzabuni wa juu wa awali
+    # Fuatilia urejeshaji wa pesa kwa mzabuni wa juu wa awali
     self.pendingReturns[self.highestBidder] += self.highestBid
     # Fuatilia zabuni mpya ya juu
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Toa zabuni iliyorejeshwa hapo awali. Muundo wa kutoa
-# unatumika hapa kuepuka suala la usalama. Ikiwa marejesho yangekuwa moja kwa moja
-# yametumwa kama sehemu ya bid(), mkataba mbaya wa zabuni ungeweza kuzuia
+# Toa zabuni iliyorejeshwa hapo awali. Muundo wa kutoa unatumika
+# hapa ili kuepuka suala la usalama. Ikiwa marejesho yangetumwa moja kwa moja
+# kama sehemu ya bid(), mkataba mbaya wa zabuni ungeweza kuzuia
 # marejesho hayo na hivyo kuzuia zabuni mpya za juu kuingia.
 @external
 def withdraw():
@@ -178,23 +180,23 @@ def withdraw():
 # kwa mnufaika.
 @external
 def endAuction():
-    # Ni mwongozo mzuri kupanga kazi zinazoingiliana
-    # na mikataba mingine (yaani, zinaita kazi au kutuma ether)
+    # Ni mwongozo mzuri kuunda utendakazi (functions) zinazoingiliana
+    # na mikataba mingine (yaani, zinaita utendakazi au kutuma ether)
     # katika awamu tatu:
     # 1. kuangalia masharti
-    # 2. kufanya vitendo (kunaweza kubadilisha masharti)
+    # 2. kutekeleza vitendo (kunaweza kubadilisha masharti)
     # 3. kuingiliana na mikataba mingine
     # Ikiwa awamu hizi zitachanganywa, mkataba mwingine unaweza kuita
-    # kurudi kwenye mkataba wa sasa na kurekebisha hali au kusababisha
+    # tena kwenye mkataba wa sasa na kurekebisha hali au kusababisha
     # athari (malipo ya ether) kufanywa mara nyingi.
-    # Ikiwa kazi zinazoitwa kwa ndani zinajumuisha mwingiliano na
-    # mikataba ya nje, lazima pia zizingatiwe kama mwingiliano na
+    # Ikiwa utendakazi unaoitwa kwa ndani unajumuisha mwingiliano na
+    # mikataba ya nje, inabidi pia izingatiwe kama mwingiliano na
     # mikataba ya nje.
 
     # 1. Masharti
-    # Angalia ikiwa muda wa mwisho wa mnada umefika
+    # Angalia kama muda wa mwisho wa mnada umefika
     assert block.timestamp >= self.auctionEnd
-    # Angalia ikiwa kazi hii tayari imeitwa
+    # Angalia kama utendakazi huu tayari umeitwa
     assert not self.ended
 
     # 2. Athari
@@ -208,19 +210,19 @@ Mfano huu unapaswa kukupa wazo la jinsi sintaksia ya mkataba wa Vyper ilivyo. Kw
 
 ## Yul na Yul+ {#yul}
 
-Ikiwa wewe ni mgeni kwenye Ethereum na bado hujaandika msimbo wowote kwa kutumia lugha za mikataba mahiri, tunapendekeza uanze na Solidity au Vyper. Angalia tu Yul au Yul+ mara tu unapofahamu mbinu bora za usalama wa mikataba mahiri na maelezo mahususi ya kufanya kazi na EVM.
+Ikiwa wewe ni mgeni kwenye Ethereum na bado hujafanya uandishi wowote wa msimbo kwa kutumia lugha za mikataba mahiri, tunapendekeza uanze na Solidity au Vyper. Angalia tu Yul au Yul+ mara tu unapofahamu mbinu bora za usalama wa mikataba mahiri na maelezo mahususi ya kufanya kazi na EVM.
 
 **Yul**
 
 - Lugha ya kati kwa ajili ya Ethereum.
-- Inasaidia [EVM](/developers/docs/evm) na [Ewasm](https://github.com/ewasm), WebAssembly yenye ladha ya Ethereum, na imeundwa kuwa kigawanyo cha kawaida kinachoweza kutumika kwa majukwaa yote mawili.
+- Inasaidia [EVM](/developers/docs/evm) na [Ewasm](https://github.com/ewasm), WebAssembly yenye ladha ya Ethereum, na imeundwa kuwa kigawanyo cha kawaida kinachoweza kutumika cha majukwaa yote mawili.
 - Lengo zuri kwa hatua za uboreshaji wa kiwango cha juu ambazo zinaweza kunufaisha majukwaa ya EVM na Ewasm kwa usawa.
 
 **Yul+**
 
 - Kiendelezi cha kiwango cha chini, chenye ufanisi mkubwa kwa Yul.
 - Hapo awali kiliundwa kwa ajili ya mkataba wa [rollup ya optimistic](/developers/docs/scaling/optimistic-rollups/).
-- Yul+ inaweza kutazamwa kama pendekezo la uboreshaji wa majaribio kwa Yul, na kuongeza vipengele vipya kwake.
+- Yul+ inaweza kutazamwa kama pendekezo la majaribio la kuboresha Yul, na kuongeza vipengele vipya kwake.
 
 ### Viungo muhimu {#important-links-2}
 
@@ -230,7 +232,7 @@ Ikiwa wewe ni mgeni kwenye Ethereum na bado hujaandika msimbo wowote kwa kutumia
 
 ### Mfano wa mkataba {#example-contract-2}
 
-Mfano rahisi ufuatao unatekeleza kitendaji cha nguvu (power function). Inaweza kukusanywa kwa kutumia `solc --strict-assembly --bin input.yul`. Mfano unapaswa
+Mfano ufuatao rahisi unatekeleza kitendaji cha nguvu (power function). Inaweza kukusanywa kwa kutumia `solc --strict-assembly --bin input.yul`. Mfano unapaswa
 kuhifadhiwa katika faili la input.yul.
 
 ```
@@ -258,8 +260,8 @@ Ikiwa tayari una uzoefu mzuri na mikataba mahiri, utekelezaji kamili wa ERC-20 k
 
 - Lugha yenye aina tuli (statically typed) kwa ajili ya Mashine Pepe ya Ethereum (EVM).
 - Imehamasishwa na Python na Rust.
-- Inalenga kuwa rahisi kujifunza -- hata kwa wasanidi programu ambao ni wageni kwenye mfumo wa ikolojia wa Ethereum.
-- Usanidi wa Fe bado uko katika hatua zake za awali, lugha ilikuwa na toleo lake la alpha mnamo Januari 2021.
+- Inalenga kuwa rahisi kujifunza -- hata kwa wasanidi ambao ni wageni kwenye mfumo wa ikolojia wa Ethereum.
+- Uendelezaji wa Fe bado uko katika hatua zake za awali, lugha ilikuwa na toleo lake la alpha mnamo Januari 2021.
 
 ### Viungo muhimu {#important-links-3}
 
@@ -293,19 +295,19 @@ contract GuestBook:
 
 ## Jinsi ya kuchagua {#how-to-choose}
 
-Kama ilivyo kwa lugha nyingine yoyote ya programu, mara nyingi inahusu kuchagua zana sahihi kwa kazi sahihi pamoja na mapendeleo ya kibinafsi.
+Kama ilivyo kwa lugha nyingine yoyote ya upangaji, mara nyingi inahusu kuchagua zana sahihi kwa kazi sahihi pamoja na mapendeleo ya kibinafsi.
 
 Hapa kuna mambo machache ya kuzingatia ikiwa bado hujajaribu lugha yoyote:
 
 ### Nini kizuri kuhusu Solidity? {#solidity-advantages}
 
 - Ikiwa wewe ni mwanzilishi, kuna mafunzo na zana nyingi za kujifunzia huko nje. Tazama zaidi kuhusu hilo katika sehemu ya [Jifunze kwa Kuandika Msimbo](/developers/learning-tools/).
-- Zana nzuri za wasanidi programu zinapatikana.
-- Solidity ina jamii kubwa ya wasanidi programu, ambayo inamaanisha kuna uwezekano mkubwa wa kupata majibu ya maswali yako haraka sana.
+- Zana nzuri za wasanidi zinapatikana.
+- Solidity ina jamii kubwa ya wasanidi, ambayo inamaanisha kuna uwezekano mkubwa utapata majibu ya maswali yako haraka sana.
 
 ### Nini kizuri kuhusu Vyper? {#vyper-advatages}
 
-- Njia nzuri ya kuanza kwa wasanidi programu wa Python wanaotaka kuandika mikataba mahiri.
+- Njia nzuri ya kuanza kwa wasanidi wa Python wanaotaka kuandika mikataba mahiri.
 - Vyper ina idadi ndogo ya vipengele ambayo inafanya iwe nzuri kwa uundaji wa haraka wa mifano ya mawazo.
 - Vyper inalenga kuwa rahisi kukagua na kusomeka kwa urahisi na binadamu.
 
@@ -316,7 +318,7 @@ Hapa kuna mambo machache ya kuzingatia ikiwa bado hujajaribu lugha yoyote:
 
 ## Ulinganisho wa lugha {#language-comparisons}
 
-Kwa ulinganisho wa sintaksia ya msingi, mzunguko wa maisha wa mkataba, miingiliano, waendeshaji, miundo ya data, vitendaji, mtiririko wa udhibiti, na zaidi angalia [karatasi hii ya kudanganya (cheatsheet) na Auditless](https://reference.auditless.com/cheatsheet/)
+Kwa ulinganisho wa sintaksia ya msingi, mzunguko wa maisha wa mkataba, violesura, waendeshaji, miundo ya data, vitendaji, mtiririko wa udhibiti, na zaidi angalia [karatasi hii ya kudanganya (cheatsheet) na Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## Usomaji zaidi {#further-reading}
 

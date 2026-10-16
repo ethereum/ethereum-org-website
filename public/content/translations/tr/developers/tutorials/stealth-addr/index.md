@@ -130,7 +130,7 @@ Kullanabileceğimiz [bir TypeScript gizli adres kütüphanesi](https://github.co
 
 #### WASM bileşeni {#wasm}
 
-WASM'a derlenen kaynak kodu [Rust](https://rust-lang.org/) ile yazılmıştır. Bunu [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) içinde görebilirsiniz. Bu kod, öncelikle JavaScript kodu ile [`eth-stealth-addresses` kütüphanesi](https://github.com/kassandraoftroy/eth-stealth-addresses) arasında bir arayüzdür.
+WASM'a derlenen kaynak kodu [Rust](https://rust-lang.org/) dilinde yazılmıştır. Bunu [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) dosyasında görebilirsiniz. Bu kod, temel olarak JavaScript kodu ile [`eth-stealth-addresses` kütüphanesi](https://github.com/kassandraoftroy/eth-stealth-addresses) arasında bir arayüzdür.
 
 **`Cargo.toml`**
 
@@ -149,7 +149,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) paketinin rastgele değerler üretmesi gerekir. Bu, tamamen algoritmik yollarla yapılamaz; bir entropi kaynağı olarak fiziksel bir sürece erişim gerektirir. Bu tanım, bu entropiyi içinde çalıştığımız tarayıcıya sorarak alacağımızı belirtir.
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) paketinin rastgele değerler üretmesi gerekir. Bu, tamamen algoritmik yollarla yapılamaz; entropi kaynağı olarak fiziksel bir sürece erişim gerektirir. Bu tanım, bu entropiyi içinde çalıştığımız tarayıcıdan isteyerek elde edeceğimizi belirtir.
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -172,9 +172,9 @@ Bu, asıl Rust kodudur.
 use wasm_bindgen::prelude::*;
 ```
 
-Rust'tan bir WASM paketi oluşturmak için tanımlar. Bunlar [burada](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) belgelenmiştir.
+Rust'tan bir WASM paketi oluşturmak için gereken tanımlar. Bunlar [burada](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) belgelenmiştir.
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -182,25 +182,25 @@ use eth_stealth_addresses::{
 };
 ```
 
-[`eth-stealth-addresses` kütüphanesinden](https://github.com/kassandraoftroy/eth-stealth-addresses) ihtiyaç duyduğumuz işlevler.
+[`eth-stealth-addresses` kütüphanesinden](https://github.com/kassandraoftroy/eth-stealth-addresses) ihtiyaç duyduğumuz fonksiyonlar.
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust, değerler için tipik olarak bayt [dizileri (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) kullanır. Ancak JavaScript'te tipik olarak onaltılık (hexadecimal) dizeler kullanırız. [`hex` kütüphanesi](https://docs.rs/hex/latest/hex/) bizim için bir gösterimden diğerine çeviri yapar.
+Rust, değerler için genellikle bayt [dizileri](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) kullanır. Ancak JavaScript'te genellikle onaltılık (hexadecimal) dizeler kullanırız. [`hex` kütüphanesi](https://docs.rs/hex/latest/hex/), bizim için bir gösterimden diğerine çeviri yapar.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-Bu işlevi JavaScript'ten çağırabilmek için WASM bağlamaları (bindings) oluşturun.
+Bu fonksiyonu JavaScript'ten çağırabilmek için WASM bağlamaları (bindings) oluşturun.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-Birden fazla alana sahip bir nesneyi döndürmenin en kolay yolu bir JSON dizesi döndürmektir. 
+Birden fazla alana sahip bir nesne döndürmenin en kolay yolu bir JSON dizesi döndürmektir. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -213,7 +213,7 @@ Birden fazla alana sahip bir nesneyi döndürmenin en kolay yolu bir JSON dizesi
 - Görüntüleme özel anahtarı (*V<sub>priv</sub>*)
 - Harcama özel anahtarı (*K<sub>priv</sub>*)
 
-[Demet (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) sözdizimi bu değerleri tekrar ayırmamızı sağlar.
+[Demet (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) sözdizimi, bu değerleri tekrar ayırmamızı sağlar.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -230,24 +230,24 @@ JSON kodlu dizeyi oluşturmak için [`format!`](https://doc.rust-lang.org/std/fm
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-Bu işlev, (JavaScript tarafından sağlanan) onaltılık bir dizeyi bir bayt dizisine dönüştürür. JavaScript kodu tarafından sağlanan değerleri ayrıştırmak için kullanırız. Bu işlev, Rust'ın dizileri ve vektörleri nasıl işlediğinden dolayı karmaşıktır.
+Bu fonksiyon, (JavaScript tarafından sağlanan) onaltılık bir dizeyi bayt dizisine dönüştürür. Bunu, JavaScript kodu tarafından sağlanan değerleri ayrıştırmak için kullanırız. Bu fonksiyon, Rust'ın dizileri ve vektörleri işleme biçimi nedeniyle karmaşıktır.
 
-`<const N: usize>` ifadesine [jenerik (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) denir. `N`, döndürülen dizinin uzunluğunu kontrol eden bir parametredir. İşlev aslında `str_to_array::<n>` olarak adlandırılır, burada `n` dizi uzunluğudur.
+`<const N: usize>` ifadesine [jenerik (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) denir. `N`, döndürülen dizinin uzunluğunu kontrol eden bir parametredir. Fonksiyon aslında `str_to_array::<n>` olarak adlandırılır, burada `n` dizi uzunluğudur.
 
-Dönüş değeri `Option<[u8; N]>` şeklindedir, bu da döndürülen dizinin [isteğe bağlı (optional)](https://doc.rust-lang.org/std/option/) olduğu anlamına gelir. Bu, başarısız olabilecek işlevler için Rust'ta tipik bir modeldir.
+Dönüş değeri `Option<[u8; N]>` şeklindedir, bu da döndürülen dizinin [isteğe bağlı (optional)](https://doc.rust-lang.org/std/option/) olduğu anlamına gelir. Bu, Rust'ta başarısız olabilecek fonksiyonlar için tipik bir kalıptır.
 
-Örneğin, `str_to_array::10("bad060a7")` çağırırsak, işlevin on değerlik bir dizi döndürmesi gerekir, ancak girdi yalnızca dört bayttır. İşlevin başarısız olması gerekir ve bunu `None` döndürerek yapar. `str_to_array::4("bad060a7")` için dönüş değeri `Some<[0xba, 0xd0, 0x60, 0xa7]>` olacaktır.
+Örneğin, `str_to_array::10("bad060a7")` çağrısı yaparsak, fonksiyonun on değerlik bir dizi döndürmesi beklenir, ancak girdi yalnızca dört bayttır. Fonksiyonun başarısız olması gerekir ve bunu `None` döndürerek yapar. `str_to_array::4("bad060a7")` için dönüş değeri `Some<[0xba, 0xd0, 0x60, 0xa7]>` olacaktır.
 
 ```rust
     // decode, Result<Vec<u8>, _> döndürür
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) işlevi bir `Result<Vec<u8>, FromHexError>` döndürür. [`Result`](https://doc.rust-lang.org/std/result/) türü, başarılı bir sonuç (`Ok(value)`) veya bir hata (`Err(error)`) içerebilir.
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) fonksiyonu bir `Result<Vec<u8>, FromHexError>` döndürür. [`Result`](https://doc.rust-lang.org/std/result/) türü, başarılı bir sonuç (`Ok(value)`) veya bir hata (`Err(error)`) içerebilir.
 
-`.ok()` yöntemi, `Result` değerini bir `Option` değerine dönüştürür; bunun değeri başarılıysa `Ok()` değeri, değilse `None` olur. Son olarak, [soru işareti operatörü](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) mevcut işlevleri iptal eder ve `Option` boşsa bir `None` döndürür. Aksi takdirde, değeri açar (unwrap) ve onu döndürür (bu durumda, `vec` değişkenine bir değer atamak için).
+`.ok()` metodu, `Result` değerini bir `Option` değerine dönüştürür; bunun değeri başarılıysa `Ok()` değeri, değilse `None` olur. Son olarak, [soru işareti operatörü](https://doc.rust-lang.org/std/option/#the-question-mark-operator-), mevcut fonksiyonu iptal eder ve `Option` boşsa `None` döndürür. Aksi takdirde, değeri açar (unwrap) ve onu döndürür (bu durumda, `vec` değişkenine bir değer atamak için).
 
-Bu, hataları ele almak için garip bir şekilde karmaşık bir yöntem gibi görünüyor, ancak `Result` ve `Option` tüm hataların öyle ya da böyle ele alınmasını sağlar.
+Bu, hataları ele almak için garip bir şekilde karmaşık bir yöntem gibi görünebilir, ancak `Result` ve `Option`, tüm hataların öyle ya da böyle ele alınmasını sağlar.
 
 ```rust
     if vec.len() != N { return None; }
@@ -260,21 +260,21 @@ Bayt sayısı yanlışsa, bu bir başarısızlıktır ve `None` döndürürüz.
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust'ın iki dizi türü vardır. [Diziler (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) sabit bir boyuta sahiptir. [Vektörler (Vectors)](https://doc.rust-lang.org/std/vec/index.html) büyüyebilir ve küçülebilir. `hex::decode` bir vektör döndürür, ancak `eth_stealth_addresses` kütüphanesi diziler almak ister. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) bir değeri başka bir türe dönüştürür, örneğin bir vektörü bir diziye.
+Rust'ın iki dizi türü vardır. [Diziler (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) sabit bir boyuta sahiptir. [Vektörler (Vectors)](https://doc.rust-lang.org/std/vec/index.html) büyüyebilir ve küçülebilir. `hex::decode` bir vektör döndürür, ancak `eth_stealth_addresses` kütüphanesi diziler almak ister. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods), bir değeri başka bir türe dönüştürür, örneğin bir vektörü bir diziye.
 
 ```rust
     Some(array)
 }
 ```
 
-Rust, bir işlevin sonunda bir değer döndürürken [`return`](https://doc.rust-lang.org/std/keyword.return.html) anahtar kelimesini kullanmanızı gerektirmez.
+Rust, bir fonksiyonun sonunda bir değer döndürürken [`return`](https://doc.rust-lang.org/std/keyword.return.html) anahtar kelimesini kullanmanızı gerektirmez.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-Bu işlev, hem *V<sub>pub</sub>* hem de *K<sub>pub</sub>* içeren bir açık meta-adres alır. Gizli adresi, yayınlanacak açık anahtarı (*R<sub>pub</sub>*) ve yayınlanan adreslerden hangilerinin Alice'e ait olabileceğinin belirlenmesini hızlandıran bir baytlık bir tarama değeri döndürür.
+Bu fonksiyon, hem *V<sub>pub</sub>* hem de *K<sub>pub</sub>* içeren bir açık meta-adres alır. Gizli adresi, yayınlanacak açık anahtarı (*R<sub>pub</sub>*) ve yayınlanan adreslerden hangilerinin Alice'e ait olabileceğini belirlemeyi hızlandıran bir baytlık bir tarama değeri döndürür.
 
 Tarama değeri, paylaşılan sırrın (*S = GR<sub>priv</sub>V<sub>priv</sub>*) bir parçasıdır. Bu değer Alice tarafından kullanılabilir ve bunu kontrol etmek, *f(K<sub>pub</sub>+G\*hash(S))* değerinin yayınlanan adrese eşit olup olmadığını kontrol etmekten çok daha hızlıdır.
 
@@ -283,7 +283,7 @@ Tarama değeri, paylaşılan sırrın (*S = GR<sub>priv</sub>V<sub>priv</sub>*) 
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-Kütüphanenin [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) işlevini kullanıyoruz.
+Kütüphanenin [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) fonksiyonunu kullanıyoruz.
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -310,7 +310,7 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Bu işlev, adresten para çekmek için özel anahtarı (*R<sub>priv</sub>*) hesaplamak üzere kütüphanenin [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) işlevini kullanır. Bu hesaplama şu değerleri gerektirir:
+Bu fonksiyon, adresten para çekmek için gereken özel anahtarı (*R<sub>priv</sub>*) hesaplamak üzere kütüphanenin [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) fonksiyonunu kullanır. Bu hesaplama şu değerleri gerektirir:
 
 - Adres (*Adres=f(P<sub>pub</sub>)*)
 - Bill tarafından oluşturulan açık anahtar (*R<sub>pub</sub>*)
@@ -321,7 +321,7 @@ Bu işlev, adresten para çekmek için özel anahtarı (*R<sub>priv</sub>*) hesa
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html), işlevin WASM kodu başlatıldığında yürütüleceğini belirtir.
+[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html), fonksiyonun WASM kodu başlatıldığında çalıştırılacağını belirtir.
 
 ```rust
 pub fn main() {
@@ -338,7 +338,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-Ardından bir yığın izlemesi (stack trace) gelir. Sonra Bill'e geçerli meta-adresi verin ve Alice'e geçersiz bir adres veya geçersiz bir açık anahtar verin. Şu hatayı göreceksiniz:
+Ardından bir yığın izlemesi (stack trace) gelir. Daha sonra Bill'e geçerli meta-adresi verin ve Alice'e geçersiz bir adres veya geçersiz bir açık anahtar verin. Şu hatayı göreceksiniz:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -349,7 +349,7 @@ Yine, ardından bir yığın izlemesi gelir.
 
 #### Kullanıcı arayüzü {#ui}
 
-Kullanıcı arayüzü [React](https://react.dev/) kullanılarak yazılmıştır ve [Vite](https://vite.dev/) tarafından sunulmaktadır. [Bu öğreticiyi](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kullanarak onlar hakkında bilgi edinebilirsiniz. Burada [Wagmi](https://wagmi.sh/)'ye gerek yoktur çünkü doğrudan bir blokzincir veya cüzdan ile etkileşime girmiyoruz.
+Kullanıcı arayüzü [React](https://react.dev/) kullanılarak yazılmış ve [Vite](https://vite.dev/) tarafından sunulmuştur. Bunlar hakkında [bu öğreticiyi](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kullanarak bilgi edinebilirsiniz. Burada [Wagmi](https://wagmi.sh/)'ye gerek yoktur çünkü doğrudan bir blokzincir veya cüzdan ile etkileşime girmiyoruz.
 
 Kullanıcı arayüzünün tek belirgin olmayan kısmı WASM bağlantısıdır. İşte nasıl çalıştığı.
 
@@ -372,13 +372,13 @@ export default defineConfig({
 
 **`App.jsx`**
 
-Bu dosya uygulamanın ana bileşenidir. İki bileşeni içeren bir kapsayıcıdır: `Alice` ve `Bill`, bu kullanıcılar için kullanıcı arayüzleri. WASM için ilgili kısım başlatma kodudur.
+Bu dosya uygulamanın ana bileşenidir. Bu kullanıcıların kullanıcı arayüzleri olan `Alice` ve `Bill` olmak üzere iki bileşeni içeren bir kapsayıcıdır. WASM için ilgili kısım başlatma kodudur.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) kullandığımızda, burada kullandığımız iki dosya oluşturur: asıl kodu içeren bir wasm dosyası (burada, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) ve onu kullanmak için tanımları içeren bir JavaScript dosyası (burada, `src/rust_wasm/pkg/rust_wasm.js`). Bu JavaScript dosyasının varsayılan dışa aktarımı (default export), WASM'ı başlatmak için çalışması gereken koddur.
+[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) kullandığımızda, burada kullandığımız iki dosya oluşturur: asıl kodu içeren bir wasm dosyası (burada, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) ve onu kullanmak için tanımları içeren bir JavaScript dosyası (burada, `src/rust-wasm/pkg/rust_wasm.js`). Bu JavaScript dosyasının varsayılan dışa aktarımı (default export), WASM'ı başlatmak için çalışması gereken koddur.
 
 ```jsx
 function App() {
@@ -401,9 +401,9 @@ function App() {
   )
 ```
 
-[`useEffect` kancası (hook)](https://react.dev/reference/react/useEffect), durum değişkenleri değiştiğinde yürütülen bir işlev belirlemenizi sağlar. Burada, durum değişkenleri listesi boştur (`[]`), bu nedenle bu işlev sayfa yüklendiğinde yalnızca bir kez yürütülür.
+[`useEffect` kancası (hook)](https://react.dev/reference/react/useEffect), durum (state) değişkenleri değiştiğinde çalıştırılacak bir fonksiyon belirlemenizi sağlar. Burada, durum değişkenleri listesi boştur (`[]`), bu nedenle bu fonksiyon sayfa yüklendiğinde yalnızca bir kez çalıştırılır.
 
-Etki (effect) işlevinin hemen dönmesi gerekir. WASM `init` gibi asenkron kodları kullanmak için (`.wasm` dosyasını yüklemesi gerektiğinden zaman alır), dahili bir [`async`](https://en.wikipedia.org/wiki/Async/await) işlevi tanımlarız ve onu bir `await` olmadan çalıştırırız.
+Etki (effect) fonksiyonunun hemen dönmesi gerekir. WASM `init` gibi asenkron kodları kullanmak için (`.wasm` dosyasını yüklemesi gerektiğinden zaman alır), dahili bir [`async`](https://en.wikipedia.org/wiki/Async/await) fonksiyon tanımlarız ve bunu bir `await` olmadan çalıştırırız.
 
 **`Bill.jsx`**
 
@@ -413,7 +413,7 @@ Bu, Bill için kullanıcı arayüzüdür. Alice tarafından sağlanan gizli meta
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Varsayılan dışa aktarıma ek olarak, `wasm-pack` tarafından oluşturulan JavaScript kodu, WASM kodundaki her işlev için bir işlev dışa aktarır.
+Varsayılan dışa aktarıma ek olarak, `wasm-pack` tarafından oluşturulan JavaScript kodu, WASM kodundaki her fonksiyon için bir fonksiyon dışa aktarır.
 
 ```jsx
             <button onClick={() => {
@@ -421,7 +421,7 @@ Varsayılan dışa aktarıma ek olarak, `wasm-pack` tarafından oluşturulan Jav
             }}>
 ```
 
-WASM işlevlerini çağırmak için, sadece `wasm-pack` tarafından oluşturulan JavaScript dosyasının dışa aktardığı işlevi çağırırız.
+WASM fonksiyonlarını çağırmak için, sadece `wasm-pack` tarafından oluşturulan JavaScript dosyasının dışa aktardığı fonksiyonu çağırırız.
 
 **`Alice.jsx`**
 

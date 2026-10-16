@@ -206,3 +206,7 @@ Desde facilitar la ayuda rápida en casos de desastre hasta empoderar a los trab
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

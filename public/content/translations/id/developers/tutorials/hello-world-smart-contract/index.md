@@ -49,7 +49,7 @@ Untuk menyebarkan kontrak pintar kita ke jaringan pengujian, kita akan membutuhk
 
 ## Langkah 5: Periksa Saldo Anda {#step-5}
 
-Untuk memastikan kembali saldo kita ada di sana, mari buat permintaan [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) menggunakan [alat komposer Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengeklik "Send Request", Anda akan melihat respons seperti ini:
+Untuk memastikan kembali saldo kita ada di sana, mari buat permintaan [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) menggunakan [alat komposer Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengeklik "Send Request", Anda akan melihat respons seperti ini:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

@@ -38,3 +38,114 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - `లేయర్ 2 (l2)` with lowercase l2 is a pre-existing locale-wide pattern (94 occurrences), also in bn/ta/mr — not a new defect.
 - Every flagged polysemy trap ("mint", "mixing", "state", "key", "compliance", "governance") resolved to the rendering te already uses elsewhere in the locale.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `Geth` -> `గెత్` in `transactions` (the only Latin instance in the whole te tree). `common.json` zero-knowledge-proofs `రుజువులు` -> `నిరూపణలు`, matching the glossary, the page title and the zkp quiz keys. **Its worst historical failure mode -- reported-speech negation flipping via `-మని` -- did NOT recur** despite targeted stress-testing.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.4/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `new-to-crypto-hero-description` -> `ఎథీరియంకు కొత్తా?` is a bare colloquial predicate with no honorific while the rest of the string continues in formal మీరు/-ండి.
+- `meta-description-fallback` places the dative suffix OUTSIDE the plural block, so the singular branch composes to `నెట్‌వర్క్కు`, missing the ZWNJ the locale uses everywhere else (`నెట్‌వర్క్‌కు`). Plural branch is correct.
+- `crops-secure` -> `సురక్షితమైనది` (sg `-ది`) beside `crops-private` = `ప్రైవేట్` (bare) and `advanced` = `అధునాతనమైనవి` (pl `-వి`): three shapes for one label class.
+- `fee-qualifier-of-rewards` -> `రివార్డ్` vs the tree-dominant `ప్రతిఫలాలు` (#56).
+
+**Notes:**
+
+- te's documented `-మని` reported-speech negation flip does not appear anywhere in this file.
+- The `ఫీజు`/`రుసుము` fee-word split predates this PR.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.1/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Signature `-మని` reported-directive inversion did NOT recur across ~25 negation-bearing sentences -- a real improvement. But saas propagated a `స్టాకింగ్` ("stacking") misspelling out of a faulty ETHGlossary row into its page title AND the site nav label; solo used `వ్యాలిడేటర్` 63x where 5 sibling pages use glossary `ధృవీకర్త`; and the glossary's verbal-noun `signing` form was pasted into 14 attributive slots needing a relative participle.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `వ్యతిరేకంగా` (opposing) for "designing against standards" -- inverted the Design/UX guidance -> `ఆధారంగా`.
+- Agency inversion in `movement-description`: the organizations became the protected object instead of the defenders.
+- Dropped counterfactual "would otherwise" in `movement-wider-description`, listing paywalled research as free knowledge.
+
+**Open (native call needed):**
+
+- Three more non-inverting `against` sites from the same root cause.
+- `పంపిణీ`/`రవాణా` (freight) for "ship/ships".
+- `ఉత్పత్తి` (manufacturing) for "production infrastructure".
+- `ఆదిమాలు` for "primitives" against 6 prior `ప్రిమిటివ్‌ల*` uses.
+- `చెల్లించని వ్యక్తులచే` flips agency: "people who do not pay" for "unpaid people".
+- No ETHGlossary deviations at all, and the `స్టాకింగ్` glossary-data defect from #19115 did not recur.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `డెవ్కాన్` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), applying 6.1's te rule for consonant-final loanwords: standard written transliteration with the halant, not a colloquial vowel-appended form. `logo-alt` stays Latin.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/te/page-apps.json`. 7 critical, 6 warnings. Brand 10/10 | Technical 7/10 | Semantic 9/10 | Consistency 8/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: te affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (te-specific):**
+
+- `యానిట్` -> `యూనిట్`; the only occurrence in the te tree against 35 correct ones in the same file
+- `డాప్‌లను` -> `dappలను` per the glossary Latin form; the same file already used `dapp` four lines earlier. ZWNJ dropped to match the tree-dominant form
+
+**Notes:**
+
+- The `testing` page title now correctly matches its site-nav label, fixing the PR #19115 nav/title mismatch class here rather than repeating it.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `policies-services` Consumer Reports stat: `సున్నా మరియు 59 శాతం మధ్య నిర్వహించబడ్డాయి` -> `సున్నా నుండి 59 శాతం మాత్రమే తొలగించగలిగాయి`; `70 శాతాన్ని కోల్పోయారు` -> `70 శాతం తొలగించబడ్డాయి` (native check welcome).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `లిడో` (glossary Lido), `డెన్‌కున్` (glossary Dencun).
+- "both" dropped (#82); `ఒక పార్టీ` political sense again (hegota:21).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` database corruption `అవినీతి` -> `పాడైపోవడం`; relational against `వ్యతిరేకంగా` -> `ఉపయోగించి`.
+- `small-business` `compare-privacy` reused address inverted to used-once -> `పదే పదే ఉపయోగించే`.
+
+**Open (warnings):**
+
+- `ఉత్పత్తి` for production recurs; rollup `రోలప్`/`రోల్అప్` mirrors glossary inconsistency; treasuries `ఖజానాలు`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.8/10
+
+- Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
+- Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.

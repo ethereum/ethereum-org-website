@@ -4,7 +4,7 @@ description: "Uma visão geral e comparação das duas principais linguagens de 
 lang: pt-br
 ---
 
-Um ótimo aspecto sobre o [Ethereum](/) é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para desenvolvedores. Se você tem experiência com Python ou qualquer [linguagem com chaves](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), poderá encontrar uma linguagem com sintaxe familiar.
+Um ótimo aspecto sobre o [Ethereum](/) é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para desenvolvedores. Se você tem experiência com Python ou qualquer [linguagem com chaves](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), você pode encontrar uma linguagem com sintaxe familiar.
 
 As duas linguagens mais ativas e mantidas são:
 
@@ -15,11 +15,11 @@ O Remix IDE fornece um ambiente de desenvolvimento abrangente para criar e testa
 
 Desenvolvedores mais experientes também podem querer usar Yul, uma linguagem intermediária para a [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/), ou Yul+, uma extensão para Yul.
 
-Se você é curioso e gosta de ajudar a testar novas linguagens que ainda estão em forte desenvolvimento, pode experimentar a Fe, uma linguagem emergente de contratos inteligentes que ainda está em sua infância.
+Se você é curioso e gosta de ajudar a testar novas linguagens que ainda estão em intenso desenvolvimento, você pode experimentar a Fe, uma linguagem emergente de contratos inteligentes que ainda está em sua infância.
 
 ## Pré-requisitos {#prerequisites}
 
-O conhecimento prévio de linguagens de programação, especialmente JavaScript ou Python, pode ajudá-lo a entender as diferenças nas linguagens de contratos inteligentes. Também recomendamos que você entenda os contratos inteligentes como um conceito antes de se aprofundar muito nas comparações de linguagens. [Introdução aos contratos inteligentes](/developers/docs/smart-contracts/).
+O conhecimento prévio de linguagens de programação, especialmente de JavaScript ou Python, pode ajudá-lo a entender as diferenças nas linguagens de contratos inteligentes. Também recomendamos que você entenda os contratos inteligentes como um conceito antes de se aprofundar muito nas comparações de linguagens. [Introdução aos contratos inteligentes](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -37,8 +37,8 @@ O conhecimento prévio de linguagens de programação, especialmente JavaScript 
 - [Portal da linguagem Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Sala de bate-papo do Solidity no Gitter](https://gitter.im/ethereum/solidity) conectada à [sala de bate-papo do Solidity no Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
-- [Folha de dicas](https://reference.auditless.com/cheatsheet)
+- [Sala de bate-papo do Solidity no Gitter](https://gitter.im/ethereum/solidity) conectada à [Sala de bate-papo do Solidity no Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Folha de dicas (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
 - [Blog do Solidity](https://blog.soliditylang.org/)
 - [Twitter do Solidity](https://twitter.com/solidity_lang)
 
@@ -55,7 +55,7 @@ contract Coin {
     mapping (address => uint) public balances;
 
     // Eventos permitem que os clientes reajam a alterações
-    // específicas do contrato que você declarar
+    // específicas de contrato que você declara
     event Sent(address from, address to, uint amount);
 
     // O código do construtor é executado apenas quando o contrato
@@ -65,7 +65,7 @@ contract Coin {
     }
 
     // Envia uma quantidade de moedas recém-criadas para um endereço
-    // Só pode ser chamado pelo criador do contrato
+    // Pode ser chamado apenas pelo criador do contrato
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
@@ -91,17 +91,19 @@ Este exemplo deve lhe dar uma ideia de como é a sintaxe de um contrato em Solid
 - Tipagem forte
 - Código de compilador pequeno e compreensível
 - Geração eficiente de bytecode
-- Deliberadamente tem menos recursos que o Solidity com o objetivo de tornar os contratos mais seguros e fáceis de auditar. Vyper não suporta:
+- Deliberadamente tem menos recursos que a Solidity com o objetivo de tornar os contratos mais seguros e fáceis de auditar. A Vyper não suporta:
   - Modificadores
   - Herança
-  - Assembly embutido (inline)
+  - Assembly inline
   - Sobrecarga de função
   - Sobrecarga de operador
   - Chamada recursiva
   - Loops de comprimento infinito
   - Pontos fixos binários
 
-Para mais informações, [leia a fundamentação do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Desde a v0.4.0, a Vyper suporta um [sistema de módulos](https://docs.vyperlang.org/en/stable/using-modules.html). A reutilização de código é alcançada por meio de composição, em vez de herança de classe.
+
+Para mais informações, [leia a fundamentação da Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Links importantes {#important-links-1}
 
@@ -110,12 +112,12 @@ Para mais informações, [leia a fundamentação do Vyper](https://vyper.readthe
 - [Mais Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [Bate-papo da comunidade Vyper no Discord](https://discord.gg/SdvKC79cJk)
-- [Folha de dicas](https://reference.auditless.com/cheatsheet)
+- [Folha de dicas (Cheat Sheet)](https://reference.auditless.com/cheatsheet)
 - [Frameworks e ferramentas de desenvolvimento de contratos inteligentes para Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - aprenda a proteger e hackear contratos inteligentes em Vyper](https://github.com/SupremacyTeam/VyperPunk)
 - [Vyper Hub para desenvolvimento](https://github.com/zcor/vyper-dev)
-- [Exemplos dos melhores contratos inteligentes em Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Recursos selecionados do Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
+- [Exemplos de contratos inteligentes de maiores sucessos em Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Recursos selecionados Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Exemplo {#example}
 
@@ -135,26 +137,26 @@ highestBid: public(uint256)
 # Definido como true no final, não permite nenhuma alteração
 ended: public(bool)
 
-# Acompanha os lances reembolsados para que possamos seguir o padrão de retirada
+# Acompanha os lances reembolsados para que possamos seguir o padrão de saque
 pendingReturns: public(HashMap[address, uint256])
 
 # Cria um leilão simples com `_bidding_time`
 # segundos de tempo de lance em nome do
-# endereço do beneficiário `_beneficiary`.
-@external
+# endereço beneficiário `_beneficiary`.
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 
-# Faça um lance no leilão com o valor enviado
+# Faz um lance no leilão com o valor enviado
 # junto com esta transação.
 # O valor só será reembolsado se o
 # leilão não for ganho.
 @external
 @payable
 def bid():
-    # Verifica se o período de lances acabou.
+    # Verifica se o período de lances terminou.
     assert block.timestamp < self.auctionEnd
     # Verifica se o lance é alto o suficiente
     assert msg.value > self.highestBid
@@ -164,7 +166,7 @@ def bid():
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Retira um lance reembolsado anteriormente. O padrão de retirada é
+# Saca um lance reembolsado anteriormente. O padrão de saque é
 # usado aqui para evitar um problema de segurança. Se os reembolsos fossem diretamente
 # enviados como parte de bid(), um contrato de lance malicioso poderia bloquear
 # esses reembolsos e, assim, bloquear a entrada de novos lances mais altos.
@@ -179,16 +181,16 @@ def withdraw():
 @external
 def endAuction():
     # É uma boa diretriz estruturar funções que interagem
-    # com outros contratos (ou seja, chamam funções ou enviam ether)
+    # com outros contratos (ou seja, elas chamam funções ou enviam ether)
     # em três fases:
     # 1. verificação de condições
-    # 2. execução de ações (potencialmente alterando condições)
+    # 2. execução de ações (potencialmente mudando as condições)
     # 3. interação com outros contratos
-    # Se essas fases forem misturadas, o outro contrato pode chamar
+    # Se essas fases forem misturadas, o outro contrato poderia chamar
     # de volta o contrato atual e modificar o estado ou fazer com que
     # efeitos (pagamento de ether) sejam executados várias vezes.
-    # Se as funções chamadas internamente incluírem interação com
-    # contratos externos, elas também devem ser consideradas interação com
+    # Se as funções chamadas internamente incluírem interação com contratos
+    # externos, elas também devem ser consideradas interação com
     # contratos externos.
 
     # 1. Condições
@@ -212,8 +214,8 @@ Se você é novo no Ethereum e ainda não programou com linguagens de contratos 
 
 **Yul**
 
-- Linguagem intermediária para Ethereum.
-- Suporta a [EVM](/developers/docs/evm) e [Ewasm](https://github.com/ewasm), um WebAssembly adaptado para o Ethereum, e foi projetada para ser um denominador comum utilizável de ambas as plataformas.
+- Linguagem intermediária para o Ethereum.
+- Suporta a [EVM](/developers/docs/evm) e o [Ewasm](https://github.com/ewasm), um WebAssembly com sabor de Ethereum, e foi projetada para ser um denominador comum utilizável de ambas as plataformas.
 - Bom alvo para estágios de otimização de alto nível que podem beneficiar igualmente as plataformas EVM e Ewasm.
 
 **Yul+**
@@ -224,9 +226,9 @@ Se você é novo no Ethereum e ainda não programou com linguagens de contratos 
 
 ### Links importantes {#important-links-2}
 
-- [Documentação do Yul](https://docs.soliditylang.org/en/latest/yul.html)
-- [Documentação do Yul+](https://github.com/fuellabs/yulp)
-- [Postagem de introdução ao Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+- [Documentação da Yul](https://docs.soliditylang.org/en/latest/yul.html)
+- [Documentação da Yul+](https://github.com/fuellabs/yulp)
+- [Postagem de introdução à Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
 ### Exemplo de contrato {#example-contract-2}
 
@@ -297,28 +299,28 @@ Como em qualquer outra linguagem de programação, trata-se principalmente de es
 
 Aqui estão algumas coisas a considerar se você ainda não experimentou nenhuma das linguagens:
 
-### O que há de bom no Solidity? {#solidity-advantages}
+### O que há de ótimo na Solidity? {#solidity-advantages}
 
-- Se você é iniciante, existem muitos tutoriais e ferramentas de aprendizado disponíveis. Veja mais sobre isso na seção [Aprenda programando](/developers/learning-tools/).
+- Se você é um iniciante, existem muitos tutoriais e ferramentas de aprendizado por aí. Veja mais sobre isso na seção [Aprenda programando](/developers/learning-tools/).
 - Boas ferramentas de desenvolvedor disponíveis.
-- O Solidity tem uma grande comunidade de desenvolvedores, o que significa que você provavelmente encontrará respostas para suas perguntas rapidamente.
+- A Solidity tem uma grande comunidade de desenvolvedores, o que significa que você provavelmente encontrará respostas para suas perguntas bem rapidamente.
 
-### O que há de bom no Vyper? {#vyper-advatages}
+### O que há de ótimo na Vyper? {#vyper-advatages}
 
 - Ótima maneira de começar para desenvolvedores Python que desejam escrever contratos inteligentes.
-- O Vyper tem um número menor de recursos, o que o torna ótimo para a prototipagem rápida de ideias.
-- O Vyper tem como objetivo ser fácil de auditar e o mais legível possível para humanos.
+- A Vyper tem um número menor de recursos, o que a torna ótima para a prototipagem rápida de ideias.
+- A Vyper tem como objetivo ser fácil de auditar e o mais legível possível para humanos.
 
-### O que há de bom no Yul e Yul+? {#yul-advantages}
+### O que há de ótimo em Yul e Yul+? {#yul-advantages}
 
 - Linguagem de baixo nível simplista e funcional.
 - Permite chegar muito mais perto da EVM bruta, o que pode ajudar a otimizar o uso de gás dos seus contratos.
 
 ## Comparações de linguagens {#language-comparisons}
 
-Para comparações de sintaxe básica, ciclo de vida do contrato, interfaces, operadores, estruturas de dados, funções, fluxo de controle e muito mais, confira esta [folha de dicas da Auditless](https://reference.auditless.com/cheatsheet/)
+Para comparações de sintaxe básica, o ciclo de vida do contrato, interfaces, operadores, estruturas de dados, funções, fluxo de controle e muito mais, confira esta [folha de dicas da Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## Leitura adicional {#further-reading}
 
-- [Biblioteca de contratos Solidity da OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
+- [Biblioteca de contratos em Solidity da OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity by Example](https://solidity-by-example.org)

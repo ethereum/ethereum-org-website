@@ -35,6 +35,7 @@ Việc đăng ký một địa chỉ duy nhất làm `Owner` trong một hợp �
 Trong kiểm soát truy cập dựa trên vai trò, quyền truy cập vào các hàm nhạy cảm được phân phối giữa một nhóm những người tham gia đáng tin cậy. Ví dụ: một tài khoản có thể chịu trách nhiệm đúc token, trong khi một tài khoản khác thực hiện nâng cấp hoặc tạm dừng hợp đồng. Việc phi tập trung hóa kiểm soát truy cập theo cách này giúp loại bỏ các điểm lỗi duy nhất và giảm bớt các giả định tin cậy cho người dùng.
 
 ##### Sử dụng ví đa chữ ký
+
 Một cách tiếp cận khác để triển khai kiểm soát truy cập an toàn là sử dụng [tài khoản đa chữ ký](/developers/docs/smart-contracts/#multisig) để quản lý hợp đồng. Không giống như EOA thông thường, tài khoản đa chữ ký thuộc sở hữu của nhiều thực thể và yêu cầu chữ ký từ một số lượng tài khoản tối thiểu—ví dụ: 3 trên 5—để thực thi các giao dịch.
 
 Việc sử dụng đa chữ ký để kiểm soát truy cập mang lại một lớp bảo mật bổ sung vì các hành động trên hợp đồng mục tiêu yêu cầu sự đồng thuận từ nhiều bên. Điều này đặc biệt hữu ích nếu việc sử dụng mô hình Ownable là cần thiết, vì nó khiến kẻ tấn công hoặc người trong cuộc có ý đồ xấu khó thao túng các hàm hợp đồng nhạy cảm cho các mục đích độc hại hơn.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 Tính bất biến của mã chạy trong [Máy ảo Ethereum](/developers/docs/evm/) có nghĩa là các hợp đồng thông minh đòi hỏi mức độ đánh giá chất lượng cao hơn trong giai đoạn phát triển. Việc kiểm tra hợp đồng của bạn một cách toàn diện và quan sát nó để tìm bất kỳ kết quả không mong muốn nào sẽ cải thiện đáng kể tính bảo mật và bảo vệ người dùng của bạn về lâu dài.
 
-Phương pháp thông thường là viết các bài kiểm thử đơn vị nhỏ bằng cách sử dụng dữ liệu giả mà hợp đồng dự kiến sẽ nhận được từ người dùng. [Kiểm thử đơn vị](/developers/docs/smart-contracts/testing/#unit-testing) rất tốt để kiểm tra chức năng của một số hàm nhất định và đảm bảo hợp đồng thông minh hoạt động như mong đợi.
+Phương pháp thông thường là viết các bài kiểm thử đơn vị nhỏ bằng cách sử dụng dữ liệu giả mà hợp đồng dự kiến sẽ nhận được từ người dùng. [Kiểm thử đơn vị](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) rất tốt để kiểm tra chức năng của một số hàm nhất định và đảm bảo hợp đồng thông minh hoạt động như mong đợi.
 
 Thật không may, kiểm thử đơn vị có hiệu quả tối thiểu trong việc cải thiện bảo mật hợp đồng thông minh khi được sử dụng một cách cô lập. Một bài kiểm thử đơn vị có thể chứng minh một hàm thực thi đúng cách đối với dữ liệu giả, nhưng các bài kiểm thử đơn vị chỉ hiệu quả bằng chính các bài kiểm thử được viết ra. Điều này gây khó khăn cho việc phát hiện các trường hợp ngoại lệ bị bỏ sót và các lỗ hổng có thể phá vỡ sự an toàn của hợp đồng thông minh của bạn.
 
@@ -306,6 +307,7 @@ Không có gì sai ở đây, ngoại trừ việc `Attacker` có một hàm kh�
 Tóm lại là vì số dư của người gọi không được đặt thành 0 cho đến khi quá trình thực thi hàm hoàn tất, các lệnh gọi tiếp theo sẽ thành công và cho phép người gọi rút số dư của họ nhiều lần. Loại tấn công này có thể được sử dụng để rút cạn tiền của một hợp đồng thông minh, giống như những gì đã xảy ra trong [vụ hack DAO năm 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Các cuộc tấn công tái xâm nhập vẫn là một vấn đề quan trọng đối với các hợp đồng thông minh ngày nay như [danh sách công khai các vụ khai thác tái xâm nhập](https://github.com/pcaversaccio/reentrancy-attacks) cho thấy.
 
 ##### Cách ngăn chặn các cuộc tấn công tái xâm nhập
+
 Một cách tiếp cận để đối phó với tái xâm nhập là tuân theo [mô hình kiểm tra-hiệu ứng-tương tác](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Mô hình này sắp xếp việc thực thi các hàm theo cách mà mã thực hiện các kiểm tra cần thiết trước khi tiến hành thực thi sẽ xuất hiện đầu tiên, tiếp theo là mã thao tác trạng thái hợp đồng, với mã tương tác với các hợp đồng khác hoặc EOA xuất hiện cuối cùng.
 
 Mô hình kiểm tra-hiệu ứng-tương tác được sử dụng trong phiên bản sửa đổi của hợp đồng `Victim` được hiển thị bên dưới:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Cách ngăn chặn tràn số dưới và tràn số trên của số nguyên
+
 Kể từ phiên bản 0.8.0, trình biên dịch Solidity từ chối mã dẫn đến tràn số dưới và tràn số trên của số nguyên. Tuy nhiên, các hợp đồng được biên dịch với phiên bản trình biên dịch thấp hơn nên thực hiện kiểm tra trên các hàm liên quan đến các phép toán số học hoặc sử dụng một thư viện (ví dụ: [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) để kiểm tra tràn số dưới/tràn số trên.
 
 #### Thao túng nguồn cấp dữ liệu (oracle) {#oracle-manipulation}
@@ -447,6 +450,7 @@ Giá DEX thường chính xác, phần lớn là do các nhà kinh doanh chênh 
 Ví dụ: kẻ tấn công có thể bơm giá giao ngay của một tài sản một cách giả tạo bằng cách thực hiện một khoản vay chớp nhoáng ngay trước khi tương tác với hợp đồng cho vay của bạn. Việc truy vấn DEX để lấy giá của tài sản sẽ trả về một giá trị cao hơn bình thường (do "lệnh mua" lớn của kẻ tấn công làm sai lệch nhu cầu đối với tài sản), cho phép chúng vay nhiều hơn mức chúng nên vay. Các "cuộc tấn công khoản vay chớp nhoáng" như vậy đã được sử dụng để khai thác sự phụ thuộc vào các nguồn cấp dữ liệu giá giữa các ứng dụng DeFi, khiến các giao thức thiệt hại hàng triệu đô la tiền bị mất.
 
 ##### Cách ngăn chặn thao túng nguồn cấp dữ liệu
+
 Yêu cầu tối thiểu để [tránh thao túng nguồn cấp dữ liệu](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) là sử dụng một mạng lưới nguồn cấp dữ liệu phi tập trung truy vấn thông tin từ nhiều nguồn để tránh các điểm lỗi duy nhất. Trong hầu hết các trường hợp, các nguồn cấp dữ liệu phi tập trung có các ưu đãi kinh tế tiền mã hóa được tích hợp sẵn để khuyến khích các nút nguồn cấp dữ liệu báo cáo thông tin chính xác, khiến chúng an toàn hơn các nguồn cấp dữ liệu tập trung.
 
 Nếu bạn dự định truy vấn một nguồn cấp dữ liệu trên chuỗi để lấy giá tài sản, hãy cân nhắc sử dụng một nguồn cấp dữ liệu triển khai cơ chế giá trung bình theo thời gian (TWAP). Một [nguồn cấp dữ liệu TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) truy vấn giá của một tài sản tại hai thời điểm khác nhau (mà bạn có thể sửa đổi) và tính toán giá giao ngay dựa trên mức trung bình thu được. Việc chọn khoảng thời gian dài hơn sẽ bảo vệ giao thức của bạn khỏi sự thao túng giá vì các lệnh lớn được thực hiện gần đây không thể tác động đến giá tài sản.

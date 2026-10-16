@@ -39,7 +39,7 @@ _వారి డ్యాష్‌బోర్డ్‌ను చూపిం�
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. కమాండ్ లైన్ నుండి అభ్యర్థన చేయండి
+## 3. కమాండ్ లైన్ నుండి అభ్యర్థన చేయండి {#make-a-request-from-the-command-line}
 
 జేసన్-ఆర్‌పీసీ మరియు curl ఉపయోగించి Alchemy ద్వారా ఎథీరియం బ్లాక్‌చైన్‌తో ఇంటరాక్ట్ అవ్వండి.
 
@@ -66,7 +66,7 @@ _**గమనిక:** `https://eth-mainnet.alchemyapi.io/v2/demo`ని మీ �
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. మీ Web3 క్లయింట్‌ను సెటప్ చేయండి
+## 4. మీ Web3 క్లయింట్‌ను సెటప్ చేయండి {#set-up-your-web3-client}
 
 **మీకు ఇప్పటికే క్లయింట్ ఉంటే,** మీ ప్రస్తుత నోడ్ ప్రొవైడర్ URLని మీ API కీతో Alchemy URLకి మార్చండి: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -96,7 +96,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. మీ మొదటి Web3 స్క్రిప్ట్‌ను రాయండి!
+## 5. మీ మొదటి Web3 స్క్రిప్ట్‌ను రాయండి! {#write-your-first-web3-script}
 
 ఇప్పుడు కొంచెం Web3 ప్రోగ్రామింగ్‌తో ప్రాక్టికల్ అనుభవం పొందడానికి, ఎథీరియం మెయిన్‌నెట్ నుండి తాజా బ్లాక్ నంబర్‌ను ప్రింట్ చేసే ఒక సాధారణ స్క్రిప్ట్‌ను రాద్దాం.
 

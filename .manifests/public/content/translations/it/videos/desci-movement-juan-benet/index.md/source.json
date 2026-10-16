@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/desci-movement-juan-benet/index.md",
-  "generatedAt": "2026-04-28T23:14:01.196Z",
-  "rootHash": "a1cd3f31d952",
+  "generatedAt": "2026-09-30T18:36:40.813Z",
+  "rootHash": "cbbd8c76fe1d",
   "tree": {
-    "contentHash": "0fa39d502b17",
-    "anchorHash": "5afed16ab921",
+    "contentHash": "dcc15291d2f1",
+    "anchorHash": "1b3bbdf79c52",
     "children": {
       "frontmatter:title": {
-        "contentHash": "e4b219b6a214",
+        "contentHash": "2198f7930723",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ef800d07ab27",
+        "contentHash": "bdbbd7541159",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ebac60a4c1b7"
+        "anchorHash": "485f7bb7e803"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0c251bf3fe78"
+        "anchorHash": "d2e5095da361"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "44d59744abee"
+        "anchorHash": "7e0cbbd71a43"
       },
       "prose:1": {
         "contentHash": "4a4408d27048",
@@ -181,5 +187,5 @@
       "open-access-reproducible-science-and-call-to-action-2040"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

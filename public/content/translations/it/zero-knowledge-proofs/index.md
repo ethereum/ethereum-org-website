@@ -239,3 +239,7 @@ ZK-STARK è considerato immune alla minaccia dell'informatica quantistica, poich
 - [Perché le prove a conoscenza zero (ZKP) sono una svolta per l'identità auto-sovrana](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [Spiegazione dell'EIP-7503: abilitare i trasferimenti privati su Ethereum con le prove ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Gioco di carte ZK: gioco per imparare i fondamenti ZK e i casi d'uso nella vita reale](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

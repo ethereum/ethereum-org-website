@@ -57,3 +57,105 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 
 - The new `důkazech s nulovou znalostí` is the **glossary-correct** form. Three pre-existing out-of-scope strings in the same file still use `s nulovým vědomím` for the proof sense — the old ones are the drift. Do not "fix" the new string.
 - `smlouva` in `app-zkpdf-description` is correct (legal paper document per the glossary note), not a `kontrakt` deviation. `razíte` for game-mint matches 5 existing uses.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 7.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- **`gas` rendered as the literal `plyn` in 42 sites across 5 files**, while cs `common.json` had `gas` right -- ETHGlossary's own cs note mandates the loanword. All fixed; unrelated Czech words (`plynulejší`, `plynout`) and the literal natural-gas flaring line in energy-consumption correctly untouched. Dropped `[aktualizace London](/ethereum-forks/#london)` restored; `cílovové` typo fixed.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.7/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-value-variable` -> `proměnlivé` (neuter) composes as `Poplatek za swap: proměnlivé`; `text: "variable"` only ever attaches to masculine `Poplatek` types in `wallet-data.ts`, so `proměnlivý`. Siblings `nezveřejněno`/`stanoveno poskytovatelem` are fine (impersonal neuter participles are idiomatic).
+- `crops-*` adjectives are neuter/plural (`Odolné`/`Soukromé`/`Bezpečné`) but render as row labels for feminine `peněženka`; feminine or noun forms would read better.
+- `new-to-crypto-hero-description` -> `udržují věci jednoduché` is a word-for-word "keep things simple".
+
+**Notes:**
+
+- Plural branches verified correct in wording and case: `Podporuje` + one `1 síť` / few `2 sítě` / other `5 sítí`, and `1 jazyk` / `2 jazyky` / `5 jazyků`.
+- `L2` (vs the file's older `Vrstva 2`) matches the English source's own abbreviation, 31 sites in `src/intl/cs`. Not a defect.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`gas`->`plyn` did NOT recur (all 12 sites use the loanword). Main issue: dvt conflated `staking pool` with `pooled staking` as `skupiny pro společný staking` at 10 sites, colliding with `skupina` used for actual groups in the same file. Compounding rendered 4 ways across the set.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `page-open-source-comparison-source-available-examples` shipped as verbatim untranslated English -- swept all 24, cs was the only locale affected.
+
+**Open (native call needed):**
+
+- `konsenzu`/`konsensus` stem mix introduced by this PR, incl. a direct hit on the `consensus layer => vrstva konsensu` glossary compound.
+- Validator animacy flipped to inanimate in human-operator contexts.
+- `Robust Incentives Group` translated against 7 English occurrences elsewhere in the cs tree.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/cs/page-apps.json`. 2 critical, 9 warnings. Brand 10/10 | Technical 7/10 | Semantic 7/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: cs affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (cs-specific):**
+
+- `-defi-description`: `obchodovat` needs `s`+instrumental and cannot share the accusative object, and `úročit svá krypto aktiva` inverted the interest agent -> restored the glossary-aligned verbal-noun phrasing
+
+**Notes:**
+
+- Acronym over-expansion pushed `page-apps-meta-description` from 145 to 257 chars while leaving `DeFi`/`DAO` bare elsewhere in the same file.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- `roadmap/privacy:120` `nulovým vědomím` -> `nulovou znalostí` (regression of the #18925 fix).
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (gas = gas standing rule).
+
+**Open (warnings):**
+
+- `plyn` persists on unchanged lines (fusaka 140/142, page-roadmap 104, zk-rollups 183) -- whole-file cleanup owed.
+- shielded pool split `stíněné`/`chráněný fond`; `updatu` vs `upgrade`; `Odsloužená doba` prison-sense calque.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (third recurrence; glossary compound `gas limit` = `limit plynu` contradicts `gas` = `gas`, normalization queue 13).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- `přístup s řízeným přístupem` (permissioned glossary phrase bolted onto access); `zajištěná` read as collateralized; `reklamace` for card disputes.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: `[EVM-based Chains]` -> `[Řetězce založené na EVM]` (regression to English).
+- Open: `[Testnet Faucet]` label English (glossary `testnetový faucet`).

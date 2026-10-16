@@ -3,7 +3,7 @@ import { AppWindowMac } from "lucide-react"
 
 import AppCard from "@/components/AppCard"
 
-import type { DeveloperToolWithCategory } from "@/lib/utils/developerToolsData"
+import type { ToolCardData } from "@/lib/utils/developerToolsData"
 import { getToolKey } from "@/lib/utils/getToolKey"
 
 /**
@@ -11,11 +11,7 @@ import { getToolKey } from "@/lib/utils/getToolKey"
  * standalone page's related-tools grid so the card styling lives in one place.
  * Memoized so a filter/search re-render only re-renders cards whose tool changed.
  */
-const ToolCard = memo(function ToolCard({
-  tool,
-}: {
-  tool: DeveloperToolWithCategory
-}) {
+const ToolCard = memo(function ToolCard({ tool }: { tool: ToolCardData }) {
   return (
     // content-visibility lets the browser skip layout/paint of off-screen
     // cards while keeping them in the server HTML for crawlers
@@ -32,7 +28,6 @@ const ToolCard = memo(function ToolCard({
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />
         }
         href={`/developers/tools/${getToolKey(tool)}/`}
-        layout="horizontal"
         imageSize="thumbnail"
         className="h-fit p-4"
       />

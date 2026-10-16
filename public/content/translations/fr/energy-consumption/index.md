@@ -1,11 +1,11 @@
 ---
-title: Dépense énergétique d'Ethereum
-metaTitle: Consommation énergétique d'Ethereum
-description: Les informations de base dont vous avez besoin pour comprendre la consommation énergétique d'Ethereum.
+title: "Dépense énergétique d'Ethereum"
+metaTitle: "Consommation énergétique d'Ethereum"
+description: "Les informations de base dont vous avez besoin pour comprendre la consommation énergétique d'Ethereum."
 lang: fr
 ---
 
-[Ethereum](/) est une chaîne de blocs écologique. Le mécanisme de consensus à [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos) d'Ethereum utilise de l'ETH au lieu de [l'énergie pour sécuriser le réseau](/developers/docs/consensus-mechanisms/pow). La consommation énergétique d'Ethereum est d'environ [~0,0026 TWh/an](https://carbon-ratings.com/eth-report-2022) sur l'ensemble du réseau mondial.
+[Ethereum](/) est une chaîne de blocs écologique. Le mécanisme de consensus à [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos) d'Ethereum utilise de l'ETH au lieu de [l'énergie pour sécuriser le réseau](/developers/docs/consensus-mechanisms/pow). La consommation énergétique d'Ethereum est d'environ [\~0,0026 TWh/an](https://carbon-ratings.com/eth-report-2022) sur l'ensemble du réseau mondial.
 
 L'estimation de la consommation énergétique d'Ethereum provient d'une étude du [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Ils ont généré des estimations ascendantes de la consommation d'électricité et de l'empreinte carbone du réseau Ethereum ([voir le rapport](https://carbon-ratings.com/eth-report-2022)). Ils ont mesuré la consommation d'électricité de différents nœuds avec diverses configurations matérielles et de logiciels clients. L'estimation de **2 601 MWh** (0,0026 TWh) pour la consommation annuelle d'électricité du réseau correspond à des émissions annuelles de carbone de **870 tonnes d'éq. CO2** en appliquant des facteurs d'intensité carbone spécifiques aux régions. Cette valeur change à mesure que des nœuds entrent et sortent du réseau - vous pouvez suivre cela en utilisant une estimation moyenne mobile sur 7 jours par l'[indice de durabilité du réseau de la chaîne de blocs de Cambridge (Cambridge Blockchain Network Sustainability Index)](https://ccaf.io/cbnsi/ethereum) (notez qu'ils utilisent une méthode légèrement différente pour leurs estimations - détails disponibles sur leur site).
 
@@ -83,3 +83,5 @@ Les plateformes de financement de biens publics natives du Web3 telles que [Gitc
 
 - [La chaîne balise](/roadmap/beacon-chain)
 - [La Fusion](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

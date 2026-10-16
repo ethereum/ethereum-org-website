@@ -5,6 +5,7 @@ import type { Lang, ToCItem } from "@/lib/types"
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -369,6 +370,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <LinkWithArrow href="/roadmap/">
             {t("page-ethereum-vs-bitcoin-future-outlook-4")}
           </LinkWithArrow>
+        </Section>
+
+        <Section id="quiz-section">
+          <StandaloneQuizWidget quizKey="ethereum-vs-bitcoin" />
         </Section>
       </ContentLayout>
     </>

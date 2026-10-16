@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/storage/index.md",
   "generatedAt": "2026-06-19T19:30:11.798Z",
-  "rootHash": "bc6bfeeff724",
+  "rootHash": "cbcfe34b35f4",
   "tree": {
-    "contentHash": "95febb16b589",
-    "anchorHash": "50f7ec3fc4f2",
+    "contentHash": "b3396bbf1525",
+    "anchorHash": "272d2e61e960",
     "children": {
       "frontmatter:title": {
         "contentHash": "1cf2a51b857a",
@@ -20,8 +20,14 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:authors": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d79ec386b8c3"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "c05510693868",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7e5b5a1a6b80"
+          }
+        }
       },
       "prose:2": {
         "contentHash": "79d8bffde442",

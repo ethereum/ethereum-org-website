@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/surveillance-silence-reclaiming-privacy/index.md",
-  "generatedAt": "2026-04-29T06:24:51.915Z",
-  "rootHash": "848e11a3cc53",
+  "generatedAt": "2026-09-30T19:18:04.297Z",
+  "rootHash": "8bf8e1b679bd",
   "tree": {
-    "contentHash": "6295f05f9c19",
-    "anchorHash": "0ce79bfccaad",
+    "contentHash": "49abef1f5171",
+    "anchorHash": "af1b7188f79c",
     "children": {
       "frontmatter:title": {
-        "contentHash": "3550cca9aba0",
+        "contentHash": "7ac7f94c08cf",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ea8144b7d6a1",
+        "contentHash": "d308243504a1",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2afb77915764"
+        "anchorHash": "f26a170f667f"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0237e0b03399"
+        "anchorHash": "7ef73fffb356"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "41c2b0c0b231"
+        "anchorHash": "30e19540f0ca"
       },
       "prose:1": {
         "contentHash": "da94b9182473",
@@ -321,5 +327,5 @@
       "the-choices-we-have-to-make-about-the-future-we-want-to-see-4656"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

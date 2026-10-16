@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-07-28T21:56:28.289Z",
-  "rootHash": "7dd84a54ecd1",
+  "generatedAt": "2026-10-14T17:26:16.874Z",
+  "rootHash": "5bc19d67c9ee",
   "tree": {
-    "contentHash": "221d9c05dfe4",
-    "anchorHash": "f5888b41b282",
+    "contentHash": "0d5544f134d2",
+    "anchorHash": "31268ce34114",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -109,10 +109,6 @@
       },
       "build-menu": {
         "contentHash": "67bae0edaaa5",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "business": {
-        "contentHash": "76f68a75f01e",
         "anchorHash": "e3b0c44298fc"
       },
       "clear": {
@@ -302,12 +298,185 @@
         "contentHash": "7af023c43013",
         "anchorHash": "e3b0c44298fc"
       },
+      "docsearch-ask-ai": {
+        "contentHash": "ea9e45ac7083",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-answer": {
+        "contentHash": "174e1137f550",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-beta": {
+        "contentHash": "703390318bd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-dismiss": {
+        "contentHash": "48845bff334a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-busy": {
+        "contentHash": "50a3bf959d51",
+        "anchorHash": "36ac9a17923c",
+        "children": {
+          "prose:1": {
+            "contentHash": "c6d5879fffe5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9d4a43b9a2da"
+          },
+          "prose:2": {
+            "contentHash": "5d992667f707",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "docsearch-ask-disclaimer": {
+        "contentHash": "a6efd545c6bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-error": {
+        "contentHash": "920ceb6e63f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-error-address": {
+        "contentHash": "bfa895ca1c48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-error-empty": {
+        "contentHash": "28ef9afe12c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-error-truncated": {
+        "contentHash": "7df645eee9f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-english-only": {
+        "contentHash": "e97905b9f3d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-explorer": {
+        "contentHash": "529e4563cca1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-feedback-no": {
+        "contentHash": "3c4ebf31165b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-feedback-prompt": {
+        "contentHash": "20e8125f609f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-feedback-thanks": {
+        "contentHash": "d7ba98aba443",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-feedback-yes": {
+        "contentHash": "63c432db3ebb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-followup-get-eth": {
+        "contentHash": "2a9cb134ca76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-followup-layer-2": {
+        "contentHash": "1c4b91a5419c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-followup-staking": {
+        "contentHash": "7c1fe3ce5921",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-followup-wallets": {
+        "contentHash": "01ca5edeaa2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-placeholder": {
+        "contentHash": "74bf5749860b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-sources": {
+        "contentHash": "caf85b0888d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-ask-thinking": {
+        "contentHash": "11810d7baccb",
+        "anchorHash": "e3b0c44298fc"
+      },
       "docsearch-error-help": {
         "contentHash": "a90ebaa3e738",
         "anchorHash": "e3b0c44298fc"
       },
       "docsearch-error-title": {
         "contentHash": "d8819ac88d31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-explorer-address": {
+        "contentHash": "b1c70851e9c3",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "e0d529a45371",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-contract": {
+        "contentHash": "ee01624ca56e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-explorer-hash": {
+        "contentHash": "0eb9a9ca9548",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "ed29327c2b4c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-name": {
+        "contentHash": "2ff6f02d2b7d",
+        "anchorHash": "2db31dd0b2a3",
+        "children": {
+          "prose:1": {
+            "contentHash": "3464b32db149",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6d7774f100a1"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "docsearch-explorer-transaction": {
+        "contentHash": "eec26ddd9a40",
         "anchorHash": "e3b0c44298fc"
       },
       "docsearch-no-results-missing": {
@@ -398,12 +567,80 @@
         "contentHash": "3fbe5ed156f1",
         "anchorHash": "e3b0c44298fc"
       },
-      "use-cases": {
-        "contentHash": "ff27a991e855",
+      "enterprise-l2s": {
+        "contentHash": "130c6c57714e",
         "anchorHash": "e3b0c44298fc"
       },
-      "enterprise-mainnet": {
-        "contentHash": "a594331c65a1",
+      "nav-organizations-enterprise-description": {
+        "contentHash": "246ae1e5b165",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-enterprise-home-description": {
+        "contentHash": "d365ab3933ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-enterprise-home-label": {
+        "contentHash": "8bd337bb70ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-enterprise-l2s-description": {
+        "contentHash": "0f0d84caa80c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-onchain-finance-description": {
+        "contentHash": "60b38743b242",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-overview-description": {
+        "contentHash": "05aab33818c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-privacy-description": {
+        "contentHash": "c528d8fb61b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-privacy-label": {
+        "contentHash": "fb70a35100dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-public-sector-description": {
+        "contentHash": "ee9331186509",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-small-business-description": {
+        "contentHash": "90a9d08b6d6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-tokenization-description": {
+        "contentHash": "cc40e7fe088a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "onchain-finance": {
+        "contentHash": "b08b732c9464",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "organizations": {
+        "contentHash": "2730183d6b77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "organizations-menu": {
+        "contentHash": "46c765b52d7f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "public-sector": {
+        "contentHash": "0a599fcd9f24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "small-business": {
+        "contentHash": "6d912447f7e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tokenization": {
+        "contentHash": "efa97c915ed6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "use-cases": {
+        "contentHash": "ff27a991e855",
         "anchorHash": "e3b0c44298fc"
       },
       "error-page-title": {
@@ -517,6 +754,28 @@
         "contentHash": "8d14f6e72de8",
         "anchorHash": "e3b0c44298fc"
       },
+      "evm": {
+        "contentHash": "6676f17ddccb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "expand-group": {
+        "contentHash": "a239bf45ed60",
+        "anchorHash": "4aaadcb3ab77",
+        "children": {
+          "prose:1": {
+            "contentHash": "07548c2c6511",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "1f0b60b0b03a"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
       "feedback-card-prompt-article": {
         "contentHash": "1faa5076774f",
         "anchorHash": "e3b0c44298fc"
@@ -547,7 +806,7 @@
       },
       "feedback-widget-thank-you-subtitle-ext": {
         "contentHash": "4916546f2dde",
-        "anchorHash": "499de7b4e55f",
+        "anchorHash": "b11049d4502f",
         "children": {
           "prose:1": {
             "contentHash": "96f25d0af4e8",
@@ -555,7 +814,7 @@
           },
           "html-tag:0": {
             "contentHash": "053bc65874ad",
-            "anchorHash": "36f38461c003"
+            "anchorHash": "a2e696488cae"
           },
           "prose:2": {
             "contentHash": "cdb4ee2aea69",
@@ -662,6 +921,10 @@
       },
       "jobs": {
         "contentHash": "2f17a0f8d518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "keyboard-shortcuts": {
+        "contentHash": "e9bef0b0f3c2",
         "anchorHash": "e3b0c44298fc"
       },
       "language-am": {
@@ -1056,10 +1319,6 @@
         "contentHash": "c41281b4f0d0",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-business-description": {
-        "contentHash": "c73e5ed60878",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-code-of-conduct": {
         "contentHash": "04b9f0eb98cc",
         "anchorHash": "e3b0c44298fc"
@@ -1302,22 +1561,6 @@
       },
       "nav-how-ethereum-works-label": {
         "contentHash": "060d957bd9bc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-institution-enterprise-description": {
-        "contentHash": "d9b55ed8a085",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-institution-enterprise-label": {
-        "contentHash": "6af0ecdff330",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-iptf-description": {
-        "contentHash": "1769c92fe619",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "nav-iptf-label": {
-        "contentHash": "ea0c7dd5b0a9",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-join-ethereum-org-description": {
@@ -1669,7 +1912,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-values-label": {
-        "contentHash": "b3bb96be5919",
+        "contentHash": "1d90adac25c9",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-videos-description": {
@@ -1740,6 +1983,18 @@
         "contentHash": "ed077f3d8125",
         "anchorHash": "e3b0c44298fc"
       },
+      "open-access": {
+        "contentHash": "4099a2c228b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "open-source": {
+        "contentHash": "67a0d2e0dab4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "online": {
+        "contentHash": "0d21bd52022c",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-actions": {
         "contentHash": "adc00f399f4e",
         "anchorHash": "e3b0c44298fc"
@@ -1806,6 +2061,10 @@
         "contentHash": "3b50eae8b6b6",
         "anchorHash": "e3b0c44298fc"
       },
+      "privacy": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "privacy-policy": {
         "contentHash": "ba445cff3898",
         "anchorHash": "e3b0c44298fc"
@@ -1830,6 +2089,10 @@
       },
       "quizzes-title": {
         "contentHash": "ddd82e1196de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "references": {
+        "contentHash": "69824d3b0e70",
         "anchorHash": "e3b0c44298fc"
       },
       "refresh": {
@@ -1908,6 +2171,62 @@
         "contentHash": "c5d0453e23e4",
         "anchorHash": "e3b0c44298fc"
       },
+      "shortcut-close-dialog": {
+        "contentHash": "b956204c048c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-display": {
+        "contentHash": "34e108c0896d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-general": {
+        "contentHash": "c910d474dcd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-navigation": {
+        "contentHash": "3db65f8c2a7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-search": {
+        "contentHash": "49c266baaaa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-nav-sections": {
+        "contentHash": "5c116068720d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-open-language-picker": {
+        "contentHash": "e9e5157f06f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-open-search": {
+        "contentHash": "50ce48b9c623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-or": {
+        "contentHash": "7175517a370b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-search-focus-input": {
+        "contentHash": "819e30300dcc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-search-navigate": {
+        "contentHash": "3dc301a4fb9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-search-select": {
+        "contentHash": "7e4bc474a333",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-show-shortcuts": {
+        "contentHash": "3d0ced5dc621",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-toggle-theme": {
+        "contentHash": "b16821e584a1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "show-all": {
         "contentHash": "2150d8df37e4",
         "anchorHash": "e3b0c44298fc"
@@ -1980,6 +2299,10 @@
         "contentHash": "ea93d6a262ec",
         "anchorHash": "e3b0c44298fc"
       },
+      "transactions": {
+        "contentHash": "3e5136fd4b11",
+        "anchorHash": "e3b0c44298fc"
+      },
       "translation-banner-no-bugs-content": {
         "contentHash": "bf9e66642ca6",
         "anchorHash": "e3b0c44298fc"
@@ -2034,6 +2357,10 @@
       },
       "user-experience": {
         "contentHash": "c1729f0791a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "values": {
+        "contentHash": "53b09e104f60",
         "anchorHash": "e3b0c44298fc"
       },
       "verkle-trees": {
@@ -2144,7 +2471,6 @@
       "bug-bounty",
       "build",
       "build-menu",
-      "business",
       "clear",
       "close",
       "community",
@@ -2187,8 +2513,36 @@
       "devcon",
       "developers",
       "docs",
+      "docsearch-ask-ai",
+      "docsearch-ask-answer",
+      "docsearch-ask-beta",
+      "docsearch-ask-dismiss",
+      "docsearch-ask-busy",
+      "docsearch-ask-disclaimer",
+      "docsearch-ask-error",
+      "docsearch-ask-error-address",
+      "docsearch-ask-error-empty",
+      "docsearch-ask-error-truncated",
+      "docsearch-ask-english-only",
+      "docsearch-ask-explorer",
+      "docsearch-ask-feedback-no",
+      "docsearch-ask-feedback-prompt",
+      "docsearch-ask-feedback-thanks",
+      "docsearch-ask-feedback-yes",
+      "docsearch-ask-followup-get-eth",
+      "docsearch-ask-followup-layer-2",
+      "docsearch-ask-followup-staking",
+      "docsearch-ask-followup-wallets",
+      "docsearch-ask-placeholder",
+      "docsearch-ask-sources",
+      "docsearch-ask-thinking",
       "docsearch-error-help",
       "docsearch-error-title",
+      "docsearch-explorer-address",
+      "docsearch-explorer-contract",
+      "docsearch-explorer-hash",
+      "docsearch-explorer-name",
+      "docsearch-explorer-transaction",
       "docsearch-no-results-missing",
       "docsearch-no-results-missing-link",
       "docsearch-no-results-suggested-query",
@@ -2211,8 +2565,25 @@
       "eips",
       "energy-consumption",
       "enterprise",
+      "enterprise-l2s",
+      "nav-organizations-enterprise-description",
+      "nav-organizations-enterprise-home-description",
+      "nav-organizations-enterprise-home-label",
+      "nav-organizations-enterprise-l2s-description",
+      "nav-organizations-onchain-finance-description",
+      "nav-organizations-overview-description",
+      "nav-organizations-privacy-description",
+      "nav-organizations-privacy-label",
+      "nav-organizations-public-sector-description",
+      "nav-organizations-small-business-description",
+      "nav-organizations-tokenization-description",
+      "onchain-finance",
+      "organizations",
+      "organizations-menu",
+      "public-sector",
+      "small-business",
+      "tokenization",
       "use-cases",
-      "enterprise-mainnet",
       "error-page-title",
       "error-page-description",
       "error-page-home-link",
@@ -2236,6 +2607,8 @@
       "ethereum-wallets",
       "ethereum-whitepaper",
       "events",
+      "evm",
+      "expand-group",
       "feedback-card-prompt-article",
       "feedback-card-prompt-page",
       "feedback-card-prompt-tutorial",
@@ -2268,6 +2641,7 @@
       "how-to-use-a-wallet",
       "image",
       "jobs",
+      "keyboard-shortcuts",
       "language-am",
       "language-be",
       "language-ar",
@@ -2366,7 +2740,6 @@
       "nav-builder-tools-label",
       "nav-builders-home-description",
       "nav-builders-home-label",
-      "nav-business-description",
       "nav-code-of-conduct",
       "nav-collectibles-description",
       "nav-collectibles-label",
@@ -2428,10 +2801,6 @@
       "nav-history-label",
       "nav-how-ethereum-works-description",
       "nav-how-ethereum-works-label",
-      "nav-institution-enterprise-description",
-      "nav-institution-enterprise-label",
-      "nav-iptf-description",
-      "nav-iptf-label",
       "nav-join-ethereum-org-description",
       "nav-join-ethereum-org-label",
       "nav-l2-networks-description",
@@ -2537,6 +2906,9 @@
       "on-this-page",
       "onchain-gaming",
       "open",
+      "open-access",
+      "open-source",
+      "online",
       "page-actions",
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
@@ -2552,11 +2924,13 @@
       "pbs",
       "pools",
       "prediction-markets",
+      "privacy",
       "privacy-policy",
       "product-disclaimer",
       "quantum-resistance",
       "quizzes",
       "quizzes-title",
+      "references",
       "refresh",
       "regenerative-finance",
       "research",
@@ -2576,6 +2950,20 @@
       "security-testing",
       "see-contributors",
       "start-building",
+      "shortcut-close-dialog",
+      "shortcut-group-display",
+      "shortcut-group-general",
+      "shortcut-group-navigation",
+      "shortcut-group-search",
+      "shortcut-nav-sections",
+      "shortcut-open-language-picker",
+      "shortcut-open-search",
+      "shortcut-or",
+      "shortcut-search-focus-input",
+      "shortcut-search-navigate",
+      "shortcut-search-select",
+      "shortcut-show-shortcuts",
+      "shortcut-toggle-theme",
       "show-all",
       "show-more",
       "show-less",
@@ -2594,6 +2982,7 @@
       "terms-and-conditions",
       "terms-of-use",
       "tools",
+      "transactions",
       "translation-banner-no-bugs-content",
       "translation-banner-no-bugs-dont-show-again",
       "translation-banner-no-bugs-title",
@@ -2608,6 +2997,7 @@
       "use",
       "use-menu",
       "user-experience",
+      "values",
       "verkle-trees",
       "videos",
       "wallets",
@@ -2630,5 +3020,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

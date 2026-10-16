@@ -5,7 +5,7 @@ description: Pelajari lebih lanjut tentang 7702 dalam rilis Pectra
 lang: id
 ---
 
-## Abstrak
+## Abstrak {#abstract}
 EIP-7702 mendefinisikan mekanisme untuk menambahkan kode ke EOA. Proposal ini memungkinkan EOA, akun Ethereum lama, untuk menerima peningkatan fungsionalitas jangka pendek, sehingga meningkatkan kegunaan aplikasi. Hal ini dilakukan dengan menetapkan penunjuk ke kode yang sudah disebarkan menggunakan jenis transaksi baru: 4.
 
 Jenis transaksi baru ini memperkenalkan daftar otorisasi. Setiap tupel otorisasi dalam daftar didefinisikan sebagai
@@ -22,7 +22,7 @@ Jenis transaksi baru ini memperkenalkan daftar otorisasi. Setiap tupel otorisasi
 Pendelegasian dapat diatur ulang dengan mendelegasikan ke alamat nol (null address).
 
 Kunci privat EOA memegang kendali penuh atas akun setelah pendelegasian. Misalnya, mendelegasikan ke Safe tidak membuat akun tersebut menjadi multisig karena masih ada satu kunci yang dapat melewati kebijakan penandatanganan apa pun. Ke depannya, pengembang harus merancang dengan asumsi bahwa setiap peserta dalam sistem bisa jadi merupakan kontrak pintar. Bagi pengembang kontrak pintar, tidak lagi aman untuk berasumsi bahwa `tx.origin` merujuk pada EOA.
-## Praktik terbaik
+## Praktik terbaik {#best-practices}
 **Abstraksi Akun**: Kontrak pendelegasian harus selaras dengan standar abstraksi akun (AA) Ethereum yang lebih luas untuk memaksimalkan kompatibilitas. Secara khusus, idealnya harus mematuhi atau kompatibel dengan ERC-4337.
 
 **Desain Tanpa Izin dan Tahan Sensor**: Ethereum menghargai partisipasi tanpa izin. Kontrak pendelegasian TIDAK BOLEH melakukan hard-code atau bergantung pada satu relayer atau layanan "tepercaya" mana pun. Hal ini akan merusak akun jika relayer tersebut offline. Fitur seperti pemrosesan batch (misalnya, menyetujui+transferFrom) dapat digunakan oleh EOA itu sendiri tanpa relayer. Bagi pengembang aplikasi yang ingin menggunakan fitur lanjutan yang diaktifkan oleh EIP-7702 (Abstraksi Gas, Penarikan yang Menjaga Privasi), Anda akan memerlukan relayer. Meskipun ada berbagai arsitektur relayer, rekomendasi kami adalah menggunakan [pemaket ERC-4337](https://www.erc4337.io/bundlers) yang menunjuk setidaknya ke [entry point 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0) karena:
@@ -102,7 +102,7 @@ Saat pengguna melakukan tanda tangan yang didelegasikan, kontrak target yang men
 
 **Permukaan Tepercaya Minimal & Keamanan**: Meskipun menawarkan fleksibilitas, kontrak pendelegasian harus menjaga logika intinya tetap minimal dan dapat diaudit. Kontrak tersebut secara efektif merupakan perpanjangan dari EOA pengguna, sehingga kelemahan apa pun dapat berakibat fatal. Implementasi harus mengikuti praktik terbaik dari komunitas keamanan kontrak pintar. Misalnya, fungsi konstruktor atau inisialisasi harus diamankan dengan hati-hati – seperti yang disoroti oleh Alchemy, jika menggunakan pola proksi di bawah 7702, inisialisasi yang tidak terlindungi dapat membiarkan penyerang mengambil alih akun. Tim harus bertujuan untuk menjaga kode onchain tetap sederhana: Kontrak 7702 Ambire hanya sekitar 200 baris Solidity, dengan sengaja meminimalkan kompleksitas untuk mengurangi bug. Keseimbangan harus dicapai antara logika yang kaya fitur dan kesederhanaan yang memudahkan audit.
 
-### Implementasi yang diketahui
+### Implementasi yang diketahui {#known-implementations}
 Karena sifat EIP-7702, disarankan agar dompet berhati-hati saat membantu pengguna mendelegasikan ke kontrak pihak ketiga. Tercantum di bawah ini adalah kumpulan implementasi yang diketahui yang telah diaudit:
 
 | Alamat kontrak                             | Sumber                                                                                                                                     | Audit                                                                                                                                                         |
@@ -129,11 +129,11 @@ Catatan: beberapa aset dapat ditolak secara otomatis oleh kode pendelegasian, se
 
 Beri tahu pengguna bahwa pendelegasian sedang berlangsung untuk EOA dengan memeriksa kodenya, dan secara opsional tawarkan untuk menghapus pendelegasian tersebut.
 
-#### Pendelegasian umum
+#### Pendelegasian umum {#common-delegation}
 Penyedia perangkat keras memasukkan kontrak pendelegasian yang diketahui ke daftar putih (whitelist) dan mengimplementasikan dukungannya di aplikasi pendamping perangkat lunak. Disarankan untuk memilih kontrak dengan dukungan ERC-4337 penuh.
 
 EOA yang didelegasikan ke kontrak yang berbeda akan ditangani sebagai EOA standar.
-#### Pendelegasian kustom
+#### Pendelegasian kustom {#custom-delegation}
 Penyedia perangkat keras mengimplementasikan kontrak pendelegasiannya sendiri dan menambahkannya ke daftar serta mengimplementasikan dukungannya di aplikasi pendamping perangkat lunak. Disarankan untuk membangun kontrak dengan dukungan ERC-4337 penuh.
 
 EOA yang didelegasikan ke kontrak yang berbeda akan ditangani sebagai EOA standar.

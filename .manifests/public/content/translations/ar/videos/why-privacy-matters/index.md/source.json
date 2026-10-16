@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/why-privacy-matters/index.md",
   "generatedAt": "2026-07-23T00:31:30.157Z",
-  "rootHash": "8d64f4150288",
+  "rootHash": "e4bda4e67e7f",
   "tree": {
-    "contentHash": "b8213a95f73a",
-    "anchorHash": "80493f92b5a4",
+    "contentHash": "2310bbf759bf",
+    "anchorHash": "4529f6d26605",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a3a209728948",
+        "contentHash": "49909f69c8ef",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "f8903e07cb66",
+        "contentHash": "5f8eec864957",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "fe51b6c21de5"
+        "anchorHash": "985a50942742"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "0da9bee574aa"
+        "anchorHash": "46161b9bc1a1"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d4e11841abf2"
+        "anchorHash": "54a57c3147c4"
       },
       "prose:1": {
         "contentHash": "b268c3fb3357",

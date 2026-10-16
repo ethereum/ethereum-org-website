@@ -20,15 +20,28 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
     "page-contributing-translation-program-acknowledgements",
   "/contributing/translation-program/contributors/":
     "page-contributing-translation-program-contributors",
-  "/enterprise/": "page-enterprise",
   "/ethereum-history-founder-and-ownership/":
     "page-ethereum-history-founder-and-ownership",
   "/ethereum-vs-bitcoin/": "page-ethereum-vs-bitcoin",
-  "/founders/": "page-founders",
   "/get-eth/": "page-get-eth",
   "/bug-bounty/": "page-bug-bounty",
+  "/open-access/": "page-open-access",
+  "/open-source/": "page-open-source",
+  "/organizations/": "page-organizations",
+  "/organizations/enterprise/": "page-organizations-enterprise",
+  "/organizations/enterprise/enterprise-l2s/":
+    "page-organizations-enterprise-l2s",
+  "/organizations/enterprise/onchain-finance/":
+    "page-organizations-enterprise-onchain-finance",
+  "/organizations/enterprise/privacy/": "page-organizations-enterprise-privacy",
+  "/organizations/enterprise/tokenization/":
+    "page-organizations-enterprise-tokenization",
+  "/organizations/founders/": "page-founders",
+  "/organizations/public-sector/": "page-organizations-public-sector",
+  "/organizations/small-business/": "page-organizations-small-business",
   "/privacy/": "page-privacy",
   "/privacy/ethereum/": "page-privacy-ethereum",
+  "/privacy/online/": "page-privacy-online",
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
@@ -50,6 +63,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
+  ["/wallets/find-wallet/", "page-wallets-find-wallet"],
   ["/community/events/", "page-community-events"],
   ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
@@ -74,6 +88,8 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  // Client-side StablecoinsTable from /stablecoins/
+  "/organizations/enterprise/tokenization/": ["page-stablecoins"],
   "/community/": ["component-story-card"],
   "/developers/": ["component-swiper"],
   "/roadmap/": ["component-swiper"],
@@ -88,7 +104,6 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
-  ["/glossary/", ["glossary"]],
   [
     "/10years/",
     ["page-10-year-anniversary", "component-swiper", "component-story-card"],

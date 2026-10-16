@@ -79,3 +79,7 @@ Quando le app sono tutte costruite su Ethereum, sono tutte compatibili. Un token
 <ExpandableCard title="Qual è il miglior portafoglio cripto?" visible>
   <p>Un portafoglio cripto ti permette di conservare i tuoi token e gestire il tuo account Ethereum. Ci sono molti ottimi portafogli, ognuno con uno scopo diverso. Per scoprire quale portafoglio è il migliore per te, visita il nostro [elenco di portafogli](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

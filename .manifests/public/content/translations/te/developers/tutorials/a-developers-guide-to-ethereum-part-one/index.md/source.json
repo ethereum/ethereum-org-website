@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md",
   "generatedAt": "2026-06-16T23:47:12.433Z",
-  "rootHash": "27fbb3a85c64",
+  "rootHash": "ec722d1e3535",
   "tree": {
-    "contentHash": "05b284ba4438",
-    "anchorHash": "6f3f7c3abd9a",
+    "contentHash": "a1beca1ee820",
+    "anchorHash": "36c36b121ff0",
     "children": {
       "frontmatter:title": {
         "contentHash": "e88d238bd61e",
@@ -24,8 +24,22 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "87c1e4ec2b97"
+        "contentHash": "56602fd55333",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "11a4a60b518b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "fa44072767c5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

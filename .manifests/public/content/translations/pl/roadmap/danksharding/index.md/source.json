@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/danksharding/index.md",
   "generatedAt": "2026-07-23T00:16:17.984Z",
-  "rootHash": "37d24aa12202",
+  "rootHash": "e163a5ffd5f1",
   "tree": {
-    "contentHash": "4a4d76fd6890",
-    "anchorHash": "ccb416f5507c",
+    "contentHash": "1db5325eafea",
+    "anchorHash": "aaa4ed3be4c8",
     "children": {
       "frontmatter:title": {
         "contentHash": "d5c7c6294c3d",
@@ -24,8 +24,32 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "7a729b4d9169",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "e95d94690a4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "56983244173f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "2ac991ef1dcd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "3b87bcae36e2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "prose:1": {
         "contentHash": "462a5225342b",
