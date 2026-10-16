@@ -76,6 +76,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="casper-ffg" />
 
+<GlossaryDefinition term="cfi" />
+
 <GlossaryDefinition term="checkpoint" />
 
 <GlossaryDefinition term="compiling" />
@@ -272,6 +274,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="light-client" />
 
+<GlossaryDefinition term="liquid-staking-tokens" />
+
 <GlossaryDefinition term="liquidity" />
 
 <GlossaryDefinition term="liquidity-tokens" />
@@ -359,6 +363,12 @@ authors: ["Andreas Antonopoulos"]
 <GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
+
+<Divider />
+
+## Q {#section-q}
+
+<GlossaryDefinition term="quadratic-voting" />
 
 <Divider />
 
@@ -473,6 +483,8 @@ authors: ["Andreas Antonopoulos"]
 ## W {#section-w}
 
 <GlossaryDefinition term="wallet" />
+
+<GlossaryDefinition term="web2" />
 
 <GlossaryDefinition term="web3" />
 
