@@ -74,11 +74,9 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
     const dataResponse = await fetchRetry(dataUrl)
 
     if (!dataResponse.ok) {
-      console.warn(
-        `Failed to fetch from sheet ${sheetName}: ${dataResponse.status} ${dataResponse.statusText}`
+      throw new Error(
+        `Failed to fetch app category ${sheetName}: ${dataResponse.status} ${dataResponse.statusText}`
       )
-      result[sheetName] = []
-      continue
     }
 
     const data = await dataResponse.json()
