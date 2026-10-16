@@ -196,6 +196,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Automated updates
     - Technical support
 
+- [**HostDeFi**](https://hostdefi.com/)
+  - [Docs](https://hostdefi.com/)
+  - Features
+    - Free public JSON-RPC endpoints for 80+ chains
+    - Multi-chain relay: Ethereum, Solana, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche and more
+    - Upstream pooling and failover across providers
+    - HTTPS endpoints, no signup required for public use
+    - Paid keys with higher rate limits
+
 - [**InfStones**](https://infstones.com/)
   - Features
     - Free tier option
