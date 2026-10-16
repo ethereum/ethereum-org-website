@@ -56,7 +56,6 @@ MetaMask si můžete zdarma stáhnout a vytvořit si účet [zde](https://metama
 Abyste mohli nasadit svůj chytrý kontrakt na testnet, budete potřebovat nějaké falešné ETH. Chcete-li získat ETH v síti Sepolia, přejděte na faucet sítě Sepolia a zadejte adresu svého účtu Sepolia. Podívejte se na [stránku o testnetech](/developers/docs/networks/#sepolia), kde najdete seznam možností k vyzkoušení:
 
 _Poznámka: Kvůli přetížení sítě to může chvíli trvat._
-``
 ### Krok 5: Zkontrolujte svůj zůstatek {#step-5-check-your-balance}
 
 Abychom si ověřili, že je ETH ve vaší peněžence, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [sandboxového nástroje Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Tím se vrátí množství ETH v naší peněžence. Chcete-li se dozvědět více, podívejte se na [krátký tutoriál Alchemy o tom, jak používat nástroj composer](https://youtu.be/r6sjRxBZJuU).

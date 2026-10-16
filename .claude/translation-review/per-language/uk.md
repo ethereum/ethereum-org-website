@@ -125,3 +125,26 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `Майкрософт Сек'юріті`, `крипто-твіттері`.
 - contributing:92 `злито з` (drained from) regression; open-access `призупинити дію користувача`; `будівник` vs `будівельник`; Hegotá Cyrillic `Гегота` outlier.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `смартконтракт` -> `смарт-контракт` x2 (glossary).
+- English thousands separators read as decimals: `$5,600` -> `$5 600`, `208,000` -> `208 000`.
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- Етеріум undeclined x4 in small-business; settle -> `остаточну фіксацію` misapplied; Prividium misspelled.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.8/10
+
+- Warning: enterprise JSON "production" as manufacturing (`у виробництві`, `виробничого рівня`); `Фінальність остаточної фіксації` tautology; з'єднання/підключення drift in wagmi.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: typo `публіча` -> `публічна` (L200).
+- Open: `[Етеріум](/)-мережі` awkward link compound (dev `Мережі [Етеріуму](/)`).

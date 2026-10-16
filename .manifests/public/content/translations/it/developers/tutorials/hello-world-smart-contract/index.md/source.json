@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract/index.md",
-  "generatedAt": "2026-06-30T00:38:14.485Z",
-  "rootHash": "0b515620cb6b",
+  "generatedAt": "2026-10-14T17:49:07.399Z",
+  "rootHash": "218274bc45d1",
   "tree": {
     "contentHash": "275a42b4a775",
-    "anchorHash": "dfd144274b2e",
+    "anchorHash": "7ccb4097eb4b",
     "children": {
       "frontmatter:title": {
         "contentHash": "1c6c5c2b5d0c",
@@ -281,7 +281,7 @@
       },
       "step-5": {
         "contentHash": "83f9cf213a05",
-        "anchorHash": "6ed8d6c76a3d",
+        "anchorHash": "7166b9ea1ebe",
         "labelHash": "e41f67969740",
         "children": {
           "_label": {
@@ -294,7 +294,7 @@
           },
           "link:0": {
             "contentHash": "633f5d8e09c6",
-            "anchorHash": "991f3d8fc813"
+            "anchorHash": "eefb964b86e4"
           },
           "prose:3": {
             "contentHash": "5ed0a3f4758f",
@@ -1290,5 +1290,5 @@
       "step-16-deploy-our-contract"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

@@ -55,6 +55,11 @@
     "score": 6000
   },
   {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 5750
+  },
+  {
     "username": "atoulme",
     "name": "Antoine Toulme",
     "score": 5000
@@ -73,7 +78,12 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },  
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 4500
+  },
   {
     "username": "asanso",
     "name": "Antonio Sanso",
@@ -83,7 +93,12 @@
     "username": "ustas-eth",
     "name": "ustas",
     "score": 3500
-  }, 
+  },
+  {
+    "username": "quasar",
+    "name": "Evgeny Legerov",
+    "score": 3250
+  },
   {
     "username": "karalabe",
     "name": "Peter Szilagyi",
@@ -113,11 +128,21 @@
     "username": "sonny2k",
     "name": "Thanh Luu (sonny2k)",
     "score": 2500
-  },  
+  },
   {
-    "username": "hyunmini",
-    "name": "secuholic",
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 2500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
     "score": 2000
+  },
+  {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2500
   },
   {
     "username": "",
@@ -125,19 +150,14 @@
     "score": 1750
   },
   {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
+    "username": "eclipse07077",
+    "name": "eclipse07077",
     "score": 1500
   },
   {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
     "score": 1000
-  },
-  {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 2000
   },
   {
     "username": "DragonDev1906",
@@ -157,11 +177,6 @@
   {
     "username": "0xfadam",
     "name": "fadam",
-    "score": 1000
-  },
-  {
-    "username": "therealgregoai",
-    "name": "Grego AI",
     "score": 1000
   },
   {
@@ -190,6 +205,16 @@
     "score": 1000
   },
   {
+    "username": "uShure",
+    "name": "moguchever",
+    "score": 1000
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1000
+  }, 
+  {
     "username": "sko94",
     "name": "XDZIBECX",
     "score": 500
@@ -197,11 +222,6 @@
   {
     "username": "cyberthirst",
     "name": "cyberthirst",
-    "score": 500
-  },
-  {
-    "username": "eclipse07077",
-    "name": "eclipse07077",
     "score": 500
   },
   {
@@ -227,6 +247,11 @@
   {
     "username": "arronxd",
     "name": "Arron5",
+    "score": 250
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
     "score": 250
   },
   {

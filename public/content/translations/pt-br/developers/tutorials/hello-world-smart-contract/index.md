@@ -49,7 +49,7 @@ Para implantar nosso contrato inteligente na rede de teste, precisaremos de um p
 
 ## Passo 5: Verifique seu saldo {#step-5}
 
-Para verificar se o nosso saldo está lá, vamos fazer uma solicitação [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) usando a [ferramenta composer da Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Isso retornará a quantidade de ETH em nossa carteira. Depois de inserir o endereço da sua conta MetaMask e clicar em "Send Request" (Enviar solicitação), você deverá ver uma resposta como esta:
+Para verificar se o nosso saldo está lá, vamos fazer uma solicitação [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) usando a [ferramenta composer da Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Isso retornará a quantidade de ETH em nossa carteira. Depois de inserir o endereço da sua conta MetaMask e clicar em "Send Request" (Enviar solicitação), você deverá ver uma resposta como esta:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

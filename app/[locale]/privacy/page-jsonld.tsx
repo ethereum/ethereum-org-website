@@ -19,6 +19,7 @@ export default async function PrivacyPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-privacy")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/privacy/`)
 
@@ -57,6 +58,12 @@ export default async function PrivacyPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
+              name: tCommon("values"),
+              item: normalizeUrlForJsonLd(locale, "/values/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
               name: t("page-privacy-title"),
               item: url,
             },

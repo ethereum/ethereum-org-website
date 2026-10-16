@@ -74,7 +74,7 @@ contract VendingMachine {
 
 The immutability of code running in the [Ethereum Virtual Machine](/developers/docs/evm/) means smart contracts demand a higher level of quality assessment during the development phase. Testing your contract extensively and observing it for any unexpected results will improve security a great deal and protect your users in the long run.
 
-The usual method is to write small unit tests using mock data that the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing) is good for testing the functionality of certain functions and ensuring a smart contract works as expected.
+The usual method is to write small unit tests using mock data that the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) is good for testing the functionality of certain functions and ensuring a smart contract works as expected.
 
 Unfortunately, unit testing is minimally effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for mock data, but unit tests are only as effective as the tests that are written. This makes it difficult to detect missed edge cases and vulnerabilities that could break the safety of your smart contract.
 

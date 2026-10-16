@@ -49,7 +49,7 @@ published: 2021-03-31
 
 ## पायरी 5: तुमची शिल्लक तपासा {#step-5}
 
-आमची शिल्लक तिथे आहे हे पुन्हा तपासण्यासाठी, [Alchemy चे कंपोझर टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) वापरून [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) विनंती करूया. हे आमच्या वॉलेटमधील ETH ची रक्कम परत करेल. तुम्ही तुमचा मेटामास्क खाते पत्ता टाकल्यानंतर आणि “Send Request” वर क्लिक केल्यानंतर, तुम्हाला असा प्रतिसाद दिसेल:
+आमची शिल्लक तिथे आहे हे पुन्हा तपासण्यासाठी, [Alchemy चे कंपोझर टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) वापरून [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) विनंती करूया. हे आमच्या वॉलेटमधील ETH ची रक्कम परत करेल. तुम्ही तुमचा मेटामास्क खाते पत्ता टाकल्यानंतर आणि “Send Request” वर क्लिक केल्यानंतर, तुम्हाला असा प्रतिसाद दिसेल:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

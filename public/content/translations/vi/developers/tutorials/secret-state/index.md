@@ -710,8 +710,7 @@ Nhìn chung, khi quá trình xử lý có thể được thực hiện bằng Ty
 
 Tuy nhiên, chúng ta vẫn [làm phẳng bản đồ trong Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), trong khi chúng ta có thể đã làm điều đó trong TypeScript. Lý do là theo ý kiến của tôi, các lựa chọn khác còn tệ hơn.
 
-- Cung cấp một mảng boolean một chiều cho mã Zokrates và sử dụng một biểu thức như `x*(height+2)
-+y` để lấy bản đồ hai chiều. Điều này sẽ làm cho [mã](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) phức tạp hơn một chút, vì vậy tôi quyết định rằng mức tăng hiệu suất không đáng giá đối với một bài hướng dẫn.
+- Cung cấp một mảng boolean một chiều cho mã Zokrates và sử dụng một biểu thức như `x*(height+2)+y` để lấy bản đồ hai chiều. Điều này sẽ làm cho [mã](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) phức tạp hơn một chút, vì vậy tôi quyết định rằng mức tăng hiệu suất không đáng giá đối với một bài hướng dẫn.
 
 - Gửi cho Zokrates cả mảng một chiều và mảng hai chiều. Tuy nhiên, giải pháp này không mang lại cho chúng ta bất cứ điều gì. Mã Zokrates sẽ phải xác minh rằng mảng một chiều mà nó được cung cấp thực sự là biểu diễn chính xác của mảng hai chiều. Vì vậy, sẽ không có bất kỳ sự gia tăng hiệu suất nào.
 

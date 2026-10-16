@@ -710,8 +710,7 @@ In generale, quando l'elaborazione può essere eseguita in TypeScript o Zokrates
 
 Tuttavia, continuiamo ad [appiattire la mappa in Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), mentre avremmo potuto farlo in TypeScript. Il motivo è che le altre opzioni sono, a mio parere, peggiori.
 
-- Fornire un array unidimensionale di booleani al codice Zokrates e usare un'espressione come `x*(height+2)
-+y` per ottenere la mappa bidimensionale. Questo renderebbe [il codice](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) un po' più complicato, quindi ho deciso che il guadagno in termini di prestazioni non ne vale la pena per un tutorial.
+- Fornire un array unidimensionale di booleani al codice Zokrates e usare un'espressione come `x*(height+2)+y` per ottenere la mappa bidimensionale. Questo renderebbe [il codice](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) un po' più complicato, quindi ho deciso che il guadagno in termini di prestazioni non ne vale la pena per un tutorial.
 
 - Inviare a Zokrates sia l'array unidimensionale che l'array bidimensionale. Tuttavia, questa soluzione non ci fa guadagnare nulla. Il codice Zokrates dovrebbe verificare che l'array unidimensionale fornito sia davvero la rappresentazione corretta dell'array bidimensionale. Quindi non ci sarebbe alcun guadagno in termini di prestazioni.
 
