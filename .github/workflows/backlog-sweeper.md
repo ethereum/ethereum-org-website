@@ -78,7 +78,9 @@ The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists t
 
 ## For each selected PR
 
-Produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch` — use them in place of the paths named in Step 1.
+Produce a first-pass review comment following the core instructions below (lane classification, review-guide format, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch` — use them in place of the paths named in Step 1.
+
+The checkout is `dev`, not the PR: use it for repo guidance and existing code, but read a changed file's new version from the diff or with `get_file_contents` at the PR's head ref.
 
 ## Termination
 

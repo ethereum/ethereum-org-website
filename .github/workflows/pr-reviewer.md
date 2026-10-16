@@ -1,6 +1,6 @@
 ---
 name: PR Reviewer (team)
-description: Lane-aware, verdict-first first-pass review of same-repo pull requests
+description: Lane-aware first-pass review guide for same-repo pull requests
 on:
   pull_request:
     types: [opened, ready_for_review]
@@ -86,4 +86,4 @@ imports:
   - shared/pr-review-core.md
 ---
 
-Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below.
+Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below. The checkout is the PR merged into its base, so changed files on disk show the PR's version.
