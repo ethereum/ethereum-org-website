@@ -252,3 +252,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 - `page-organizations-enterprise.json` missing: discarded by the placeholder-count gate bug (#85).
 - `treasuries` read as vaults (`الخزانات`); `cold storage` `التخزين البارد` collides with staking term; إيثيريوم gender masculine in public-sector vs feminine elsewhere.
 - `security/index.md` full retranslation repaired rotated anchors (legit 126-line deletion); `3-of-5` left untranslated.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed (JSON, #86): `stat-defi-tvl` -> `⁦DeFi TVL⁩`, `compare-col-private-dlt` -> `⁦DLT⁩ الخاصة`, `meta-description` DLT expansion removed (170 -> 152 chars).
+- Open: CTA/title `(⁦DeFi⁩)`/`(⁦L2s⁩)` appended where English has none; `proprietary` -> `الاحتكارية` (monopolistic), `المملوكة` closer; md L31 definiteness (`المصرح بها`, `المفتوحة`), L21 garbled `سلسلة كتل إنتاج`; faucet labels Latin vs transliterated headings split.

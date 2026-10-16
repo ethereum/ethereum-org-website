@@ -186,3 +186,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - glamsterdam parallelization regressed to `இணைப்படுத்தல்`; `பயன்பாட்டு வழக்குகள்` reads as lawsuits; privacy pools `குளங்கள்`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: "exchanges" `பரிமாற்றங்களும்` (acts of exchange) -> dev `பரிமாற்றகங்களும்`.
+- Open: glossary `testnet faucet` (`சோதனைவலை குழாய்`) vs `faucet` (`பாசெட்`) conflict, upstream.

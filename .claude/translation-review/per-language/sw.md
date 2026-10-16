@@ -130,3 +130,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - client rendered as customer (`Wateja`, `Mteja`) recurs; needs glossary ruling (execution client = kiteja, consensus client = mteja conflict).
 - enterprise and business pathway titles collide (`Ethereum kwa biashara`).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.0/10
+
+- Fixed: brand `Chain Platform` translated as `Jukwaa la Chain` (L54, L83).
+- Open: "development" `maendeleo` -> `usanidi` (reads as configure/setup), needs native check; "scaling" `kuongeza ukubwa` weaker than dev `kuongeza uwezo`.
