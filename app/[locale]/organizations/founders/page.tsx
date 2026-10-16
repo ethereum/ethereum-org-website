@@ -211,6 +211,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           }),
         },
         {
+          name: "Arbitrum Open House",
+          Logo: Arbitrum,
+          tags: ["open", "accelerator", "grants", "mentorship"],
+          subtitle: t(
+            "page-founders-accelerators-arbitrum-open-house-subtitle"
+          ),
+          description: t(
+            "page-founders-accelerators-arbitrum-open-house-description"
+          ),
+          highlights: [
+            t("page-founders-accelerators-arbitrum-open-house-highlight-1"),
+            t("page-founders-accelerators-arbitrum-open-house-highlight-2"),
+          ],
+          href: "https://openhouse.arbitrum.io/",
+          ctaLabel: t.rich("page-founders-cta-explore-name", {
+            name: "Open House",
+          }),
+        },
+        {
           name: "Base Batches",
           Logo: Base,
           tags: ["cohortClosed", "accelerator", "investment"],
