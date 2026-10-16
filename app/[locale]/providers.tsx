@@ -18,7 +18,7 @@ export default function Providers({
   messages: AbstractIntlMessages
 }) {
   return (
-    <I18nProvider locale={locale} messages={messages}>
+    <I18nProvider inherit={false} locale={locale} messages={messages}>
       <ThemeProvider>
         <FeedbackWidgetProvider>
           <TooltipProvider>{children}</TooltipProvider>

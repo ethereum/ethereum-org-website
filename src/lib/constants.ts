@@ -226,3 +226,6 @@ export const LINE_CLAMP_CLASS_MAPPING = {
 
 export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
 export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))
+
+/** `/#ask` sends a reader straight to the homepage hero's search. */
+export const HOME_SEARCH_HASH = "ask"
