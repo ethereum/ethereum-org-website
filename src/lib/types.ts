@@ -17,6 +17,7 @@ import type {
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { TagProps } from "@/components/ui/tag"
 
 import chains from "@/data/chains"
 import { Rollup, Rollups } from "@/data/networks/networks"
@@ -1566,4 +1567,40 @@ export interface BuilderResourcesTaxonomy {
     definitions: BuilderResourcesTaxonomyCategory[]
   }
   tags: string[]
+}
+
+export type CatalogItemKind = "app" | "tool" | "wallet"
+
+export type CatalogItemLinkKind =
+  | "x"
+  | "discord"
+  | "telegram"
+  | "reddit"
+  | "farcaster"
+  | "github"
+  | "code"
+
+export interface CatalogItemLink {
+  kind: CatalogItemLinkKind
+  href: string
+}
+
+export interface CatalogItem {
+  kind: CatalogItemKind
+  slug: string
+  name: string
+  logo?: string | StaticImageData
+  banner?: string | StaticImageData
+  screenshots: (string | StaticImageData)[]
+  tags: { label: string; status?: TagProps["status"] }[]
+  subtitle?: string
+  chains: ChainName[]
+  /** Localized; rendered as markdown. */
+  description?: string
+  primaryLink?: { href: string; label: string }
+  socialLinks: CatalogItemLink[]
+  infoRows: { label: string; value: ReactNode }[]
+  /** Ancestors only; the item's own name closes the trail. */
+  breadcrumbs: { label: string; href: string }[]
+  next?: { name: string; href: string }
 }
