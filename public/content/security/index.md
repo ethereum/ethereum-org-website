@@ -299,5 +299,6 @@ Browser extensions, like Chrome extensions or Add-ons for Firefox, can improve b
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Twitter thread on common crypto phishing emails and messages](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Case studies: how specific crypto scams actually work](https://cryptostrapon.com/scams) - _CryptoStrapon_
 
 <QuizWidget quizKey="security" />
