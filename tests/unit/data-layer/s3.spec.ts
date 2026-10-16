@@ -54,3 +54,66 @@ test("returns the S3 url without downloading an image the bucket holds", async (
     await new Promise<void>((resolve) => server.close(() => resolve()))
   }
 })
+
+test.describe("objects already on our S3 host", () => {
+  const ENDPOINT = "https://s3.example.test"
+  const existing = `${ENDPOINT}/${BUCKET}/apps/screenshots/existing.png`
+
+  const withHead = async (
+    head: () => Promise<Response>,
+    run: (heads: string[]) => Promise<void>
+  ) => {
+    const originalEnv = S3_ENV_KEYS.map((k) => [k, process.env[k]] as const)
+    const originalFetch = globalThis.fetch
+    const heads: string[] = []
+    process.env.S3_ENDPOINT = ENDPOINT
+    process.env.S3_IMAGE_BUCKET = BUCKET
+    globalThis.fetch = (async (input: string | URL | Request, init) => {
+      heads.push(`${init?.method ?? "GET"} ${String(input)}`)
+      return head()
+    }) as typeof fetch
+    try {
+      await run(heads)
+    } finally {
+      globalThis.fetch = originalFetch
+      for (const [k, v] of originalEnv) {
+        if (v === undefined) delete process.env[k]
+        else process.env[k] = v
+      }
+    }
+  }
+
+  test("passes an existing image through after a HEAD", async () => {
+    await withHead(
+      async () =>
+        new Response(null, { headers: { "content-type": "image/png" } }),
+      async (heads) => {
+        expect(await uploadToS3(existing, "apps/screenshots")).toBe(existing)
+        expect(heads).toEqual([`HEAD ${existing}`])
+      }
+    )
+  })
+
+  test("drops a missing object the bucket serves as an HTML page", async () => {
+    await withHead(
+      async () =>
+        new Response("<html></html>", {
+          headers: { "content-type": "text/html" },
+        }),
+      async () => {
+        expect(await uploadToS3(existing, "apps/screenshots")).toBeNull()
+      }
+    )
+  })
+
+  test("keeps the url when the HEAD itself fails", async () => {
+    await withHead(
+      async () => {
+        throw new Error("network down")
+      },
+      async () => {
+        expect(await uploadToS3(existing, "apps/screenshots")).toBe(existing)
+      }
+    )
+  })
+})
