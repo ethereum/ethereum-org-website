@@ -66,7 +66,10 @@ export default async function ConferencesJsonLD({
     url: contributor.html_url,
   }))
 
-  const datedConferences = conferences.filter((c) => c.startTime)
+  // Same rule as meetups: a dated event with a location Google can name.
+  const datedConferences = conferences.filter(
+    (c) => c.startTime && (c.isOnline || c.location)
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
