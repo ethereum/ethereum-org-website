@@ -1,6 +1,6 @@
 ---
 title: Dapp Development Frameworks
-description: Explore the advantages of frameworks and compare available options.
+description: "Compare Ethereum development frameworks like Foundry and Hardhat. Learn what a framework gives you for compiling, testing and deploying smart contracts."
 lang: en
 ---
 

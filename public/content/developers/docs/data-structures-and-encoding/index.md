@@ -1,6 +1,6 @@
 ---
 title: Data structures and encoding
-description: An overview of the fundamental Ethereum data structures.
+description: "An overview of Ethereum's core data structures and encodings, including Patricia Merkle tries, RLP and SSZ, and how they store and verify state."
 lang: en
 sidebarDepth: 2
 ---
