@@ -27,6 +27,7 @@
   "page-resources-gas-ethgastracker-description": "Monitor gas prices across Ethereum and L2s.",
   "page-resources-gas-blocknative-description": "Web3's most accurate gas fee prediction.",
   "page-resources-gas-l2fees-description": "Compare current transaction costs across Ethereum and major L2s.",
+  "page-resources-gas-l2gastracker-description": "Real-time Base and Arbitrum gas fee tracker with USD cost estimates and cross-chain comparison.",
   "page-resources-defi-title": "DeFi",
   "page-resources-defi-defillama-description": "DefiLlama is the largest TVL aggregator for DeFi (Decentralized Finance).",
   "page-resources-defi-eigenphi-description": "Wanna understand DeFi transactions and trading strategies?",
