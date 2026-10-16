@@ -8,7 +8,6 @@ duration: "0:31:05"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "ethereum"
 format: presentation
 author: "எத்தீரியம் ஃபவுண்டேஷன்"
 breadcrumb: "30 நிமிடங்களில் எத்திரியம்"

@@ -157,3 +157,37 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `page-apps.json` turned the `DAO` category chip from 3 into 44 characters, where it renders as a breadcrumb, hero title and card title beside one-word siblings.
 - "framework" and "compiler" were each retranslated in opposite directions across two files in this one PR: needs a locale-wide sweep, not point edits.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-tor-description-2` trade-offs `பரிமாற்றங்களுடன்` -> `சமரசங்களுடன்` (4th recurrence).
+- `zk-rollups:17` deploy `பயன்படுத்தப்பட்ட` -> `நிலைநிறுத்தப்பட்ட`.
+
+**Open (warnings):**
+
+- glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
+- zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- Transliterated loanwords -> glossary native forms: wallet `வாலெட்` -> `பணப்பை` x4, smart contract -> `திறன் ஒப்பந்தம்` x3, cryptography -> `குறியாக்கவியல்` x2, node -> `கணு`, smart account -> `திறன் கணக்கு`, token -> `வில்லை` x2, devnet -> `மேம்பாட்டாளர் வலையமைப்பு`.
+- `small-business` refund agency inverted x2 (`திரும்பப் பெற` receive -> `திருப்பி அளிக்க` issue).
+
+**Open (warnings):**
+
+- glamsterdam parallelization regressed to `இணைப்படுத்தல்`; `பயன்பாட்டு வழக்குகள்` reads as lawsuits; privacy pools `குளங்கள்`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: "exchanges" `பரிமாற்றங்களும்` (acts of exchange) -> dev `பரிமாற்றகங்களும்`.
+- Open: glossary `testnet faucet` (`சோதனைவலை குழாய்`) vs `faucet` (`பாசெட்`) conflict, upstream.

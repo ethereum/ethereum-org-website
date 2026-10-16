@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/learn-quizzes.json",
-  "generatedAt": "2026-08-07T06:10:52.387Z",
-  "rootHash": "5554f701e177",
+  "generatedAt": "2026-09-30T18:04:56.385Z",
+  "rootHash": "1002430679c2",
   "tree": {
-    "contentHash": "2309c6969af1",
-    "anchorHash": "6de6192205f1",
+    "contentHash": "d5780789b99e",
+    "anchorHash": "1dcd1f31bc9c",
     "children": {
       "add-quiz": {
         "contentHash": "acb537ff65b3",
@@ -128,14 +128,6 @@
       },
       "try-again": {
         "contentHash": "d8b8392e2c54",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "using-ethereum": {
-        "contentHash": "44d27526e8ce",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "using-ethereum-description": {
-        "contentHash": "23ac2df3fa68",
         "anchorHash": "e3b0c44298fc"
       },
       "want-more-quizzes": {
@@ -4953,6 +4945,402 @@
       "transactions-7-d-explanation": {
         "contentHash": "9443a04a392d",
         "anchorHash": "e3b0c44298fc"
+      },
+      "security-and-privacy": {
+        "contentHash": "1418baab9c29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "security-and-privacy-description": {
+        "contentHash": "91a6cdfc120b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "apps-and-money": {
+        "contentHash": "efcbaf5ae55c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "apps-and-money-description": {
+        "contentHash": "d07816b4267d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "scaling-staking-nodes": {
+        "contentHash": "ad4847fc65f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "scaling-staking-nodes-description": {
+        "contentHash": "7e82b6be2e8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-energy-consumption": {
+        "contentHash": "e9771722d6e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-prompt": {
+        "contentHash": "1aae56ace2f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-a-label": {
+        "contentHash": "4ea3421f2de3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-a-explanation": {
+        "contentHash": "f0119278e3d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-b-label": {
+        "contentHash": "6fd486423fee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-b-explanation": {
+        "contentHash": "53d9a561d2b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-c-label": {
+        "contentHash": "d32481b674c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-c-explanation": {
+        "contentHash": "f63c99b2c128",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-d-label": {
+        "contentHash": "d32a6ae9fa7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-1-d-explanation": {
+        "contentHash": "7eca7cd58344",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-prompt": {
+        "contentHash": "70edbaebf3b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-a-label": {
+        "contentHash": "9dadd0983cc8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-a-explanation": {
+        "contentHash": "fd901ab1089e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-b-label": {
+        "contentHash": "436d98932d9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-b-explanation": {
+        "contentHash": "b38968eeb9fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-c-label": {
+        "contentHash": "6fa5e5e306b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-c-explanation": {
+        "contentHash": "9b5fa946a10f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-d-label": {
+        "contentHash": "9f87540bf120",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-2-d-explanation": {
+        "contentHash": "ba45f76fd69e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-prompt": {
+        "contentHash": "78aec2d06145",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-a-label": {
+        "contentHash": "27b71d5c8d0a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-a-explanation": {
+        "contentHash": "e2a00cd7062f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-b-label": {
+        "contentHash": "445cedbc8d9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-b-explanation": {
+        "contentHash": "10a22a08b21e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-c-label": {
+        "contentHash": "16d06f91ea7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-c-explanation": {
+        "contentHash": "63d4da7bc92b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-d-label": {
+        "contentHash": "7c590074de7f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-3-d-explanation": {
+        "contentHash": "c72a5768a07f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-prompt": {
+        "contentHash": "fabfc6a4c6e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-a-label": {
+        "contentHash": "073659c9212e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-a-explanation": {
+        "contentHash": "f67f45616bf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-b-label": {
+        "contentHash": "9205f0b10f21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-b-explanation": {
+        "contentHash": "c22384fad167",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-c-label": {
+        "contentHash": "fc86c9a017d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-c-explanation": {
+        "contentHash": "f6f166ec0e73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-d-label": {
+        "contentHash": "63d0b352b012",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-4-d-explanation": {
+        "contentHash": "0cb048872b0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-5-prompt": {
+        "contentHash": "0b1aba29d92c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-5-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-5-a-explanation": {
+        "contentHash": "ffb619893042",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-5-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin-5-b-explanation": {
+        "contentHash": "ffb619893042",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-proof-of-stake": {
+        "contentHash": "c7a6db281618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-prompt": {
+        "contentHash": "ace0a8b35b91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-a-label": {
+        "contentHash": "5b0e09b575eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-a-explanation": {
+        "contentHash": "4bcf6f216075",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-b-label": {
+        "contentHash": "671d1cced957",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-b-explanation": {
+        "contentHash": "33912436a8ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-c-label": {
+        "contentHash": "3d8dfab449ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-c-explanation": {
+        "contentHash": "156ec3ab1587",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-d-label": {
+        "contentHash": "2090956af2ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-1-d-explanation": {
+        "contentHash": "b110690bbd68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-2-prompt": {
+        "contentHash": "a4496762582e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-2-a-label": {
+        "contentHash": "3cbc87c7681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-2-a-explanation": {
+        "contentHash": "368950d706d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-2-b-label": {
+        "contentHash": "60a33e6cf515",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-2-b-explanation": {
+        "contentHash": "368950d706d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-prompt": {
+        "contentHash": "6db898383b5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-a-label": {
+        "contentHash": "85d980a42124",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-a-explanation": {
+        "contentHash": "f5f4ac338b66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-b-label": {
+        "contentHash": "90666c390166",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-b-explanation": {
+        "contentHash": "17e285a9a45f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-c-label": {
+        "contentHash": "be4454b4c6c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-c-explanation": {
+        "contentHash": "8e38d74b5b47",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-d-label": {
+        "contentHash": "5c3606bf6411",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-3-d-explanation": {
+        "contentHash": "0a850dd87f3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-prompt": {
+        "contentHash": "24da310fc41c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-a-label": {
+        "contentHash": "414821084b38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-a-explanation": {
+        "contentHash": "0278036b9119",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-b-label": {
+        "contentHash": "84e9acaa6614",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-b-explanation": {
+        "contentHash": "de6f8e28315d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-c-label": {
+        "contentHash": "65151777aa59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-c-explanation": {
+        "contentHash": "9976a5fa171d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-d-label": {
+        "contentHash": "298530363648",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-4-d-explanation": {
+        "contentHash": "539707a986eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-prompt": {
+        "contentHash": "f2458cfc4728",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-a-label": {
+        "contentHash": "33307994e44a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-a-explanation": {
+        "contentHash": "1e32a219500a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-b-label": {
+        "contentHash": "71c4c94681b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-b-explanation": {
+        "contentHash": "daaf314f4900",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-c-label": {
+        "contentHash": "78d3dd2ed0d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-c-explanation": {
+        "contentHash": "8684d3f3fa4e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-d-label": {
+        "contentHash": "af2f14ad25dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-5-d-explanation": {
+        "contentHash": "dc6d54feacaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-prompt": {
+        "contentHash": "4fab2a7c12c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-a-label": {
+        "contentHash": "7c16e8321bd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-a-explanation": {
+        "contentHash": "9ed7b2e7b966",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-b-label": {
+        "contentHash": "74244129ce9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-b-explanation": {
+        "contentHash": "071ed70f81b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-c-label": {
+        "contentHash": "1e42445383ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-c-explanation": {
+        "contentHash": "f682a8e6fe90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-d-label": {
+        "contentHash": "df1e7ec2cf84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "proof-of-stake-6-d-explanation": {
+        "contentHash": "890150056fa3",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -4982,8 +5370,6 @@
       "submit-answer",
       "test-your-knowledge",
       "try-again",
-      "using-ethereum",
-      "using-ethereum-description",
       "want-more-quizzes",
       "your-results",
       "your-total",
@@ -6187,8 +6573,107 @@
       "transactions-7-c-label",
       "transactions-7-c-explanation",
       "transactions-7-d-label",
-      "transactions-7-d-explanation"
+      "transactions-7-d-explanation",
+      "security-and-privacy",
+      "security-and-privacy-description",
+      "apps-and-money",
+      "apps-and-money-description",
+      "scaling-staking-nodes",
+      "scaling-staking-nodes-description",
+      "page-energy-consumption",
+      "ethereum-vs-bitcoin-1-prompt",
+      "ethereum-vs-bitcoin-1-a-label",
+      "ethereum-vs-bitcoin-1-a-explanation",
+      "ethereum-vs-bitcoin-1-b-label",
+      "ethereum-vs-bitcoin-1-b-explanation",
+      "ethereum-vs-bitcoin-1-c-label",
+      "ethereum-vs-bitcoin-1-c-explanation",
+      "ethereum-vs-bitcoin-1-d-label",
+      "ethereum-vs-bitcoin-1-d-explanation",
+      "ethereum-vs-bitcoin-2-prompt",
+      "ethereum-vs-bitcoin-2-a-label",
+      "ethereum-vs-bitcoin-2-a-explanation",
+      "ethereum-vs-bitcoin-2-b-label",
+      "ethereum-vs-bitcoin-2-b-explanation",
+      "ethereum-vs-bitcoin-2-c-label",
+      "ethereum-vs-bitcoin-2-c-explanation",
+      "ethereum-vs-bitcoin-2-d-label",
+      "ethereum-vs-bitcoin-2-d-explanation",
+      "ethereum-vs-bitcoin-3-prompt",
+      "ethereum-vs-bitcoin-3-a-label",
+      "ethereum-vs-bitcoin-3-a-explanation",
+      "ethereum-vs-bitcoin-3-b-label",
+      "ethereum-vs-bitcoin-3-b-explanation",
+      "ethereum-vs-bitcoin-3-c-label",
+      "ethereum-vs-bitcoin-3-c-explanation",
+      "ethereum-vs-bitcoin-3-d-label",
+      "ethereum-vs-bitcoin-3-d-explanation",
+      "ethereum-vs-bitcoin-4-prompt",
+      "ethereum-vs-bitcoin-4-a-label",
+      "ethereum-vs-bitcoin-4-a-explanation",
+      "ethereum-vs-bitcoin-4-b-label",
+      "ethereum-vs-bitcoin-4-b-explanation",
+      "ethereum-vs-bitcoin-4-c-label",
+      "ethereum-vs-bitcoin-4-c-explanation",
+      "ethereum-vs-bitcoin-4-d-label",
+      "ethereum-vs-bitcoin-4-d-explanation",
+      "ethereum-vs-bitcoin-5-prompt",
+      "ethereum-vs-bitcoin-5-a-label",
+      "ethereum-vs-bitcoin-5-a-explanation",
+      "ethereum-vs-bitcoin-5-b-label",
+      "ethereum-vs-bitcoin-5-b-explanation",
+      "page-proof-of-stake",
+      "proof-of-stake-1-prompt",
+      "proof-of-stake-1-a-label",
+      "proof-of-stake-1-a-explanation",
+      "proof-of-stake-1-b-label",
+      "proof-of-stake-1-b-explanation",
+      "proof-of-stake-1-c-label",
+      "proof-of-stake-1-c-explanation",
+      "proof-of-stake-1-d-label",
+      "proof-of-stake-1-d-explanation",
+      "proof-of-stake-2-prompt",
+      "proof-of-stake-2-a-label",
+      "proof-of-stake-2-a-explanation",
+      "proof-of-stake-2-b-label",
+      "proof-of-stake-2-b-explanation",
+      "proof-of-stake-3-prompt",
+      "proof-of-stake-3-a-label",
+      "proof-of-stake-3-a-explanation",
+      "proof-of-stake-3-b-label",
+      "proof-of-stake-3-b-explanation",
+      "proof-of-stake-3-c-label",
+      "proof-of-stake-3-c-explanation",
+      "proof-of-stake-3-d-label",
+      "proof-of-stake-3-d-explanation",
+      "proof-of-stake-4-prompt",
+      "proof-of-stake-4-a-label",
+      "proof-of-stake-4-a-explanation",
+      "proof-of-stake-4-b-label",
+      "proof-of-stake-4-b-explanation",
+      "proof-of-stake-4-c-label",
+      "proof-of-stake-4-c-explanation",
+      "proof-of-stake-4-d-label",
+      "proof-of-stake-4-d-explanation",
+      "proof-of-stake-5-prompt",
+      "proof-of-stake-5-a-label",
+      "proof-of-stake-5-a-explanation",
+      "proof-of-stake-5-b-label",
+      "proof-of-stake-5-b-explanation",
+      "proof-of-stake-5-c-label",
+      "proof-of-stake-5-c-explanation",
+      "proof-of-stake-5-d-label",
+      "proof-of-stake-5-d-explanation",
+      "proof-of-stake-6-prompt",
+      "proof-of-stake-6-a-label",
+      "proof-of-stake-6-a-explanation",
+      "proof-of-stake-6-b-label",
+      "proof-of-stake-6-b-explanation",
+      "proof-of-stake-6-c-label",
+      "proof-of-stake-6-c-explanation",
+      "proof-of-stake-6-d-label",
+      "proof-of-stake-6-d-explanation"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

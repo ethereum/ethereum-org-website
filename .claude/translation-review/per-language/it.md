@@ -82,3 +82,30 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Acronym expansion accounted for 9 of 10 criticals; es, fr and pt-br did the same thing on the same keys while de did not, confirming it as pipeline-level rather than locale-level.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- learn-quizzes `fornitura` for coin supply (6 keys) -> `offerta`.
+- open-access bank `account` should be `conto`; `non devono` modality shift (must not vs need not).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `security/index.md` dropped closing backtick on `withdraw()`.
+- `page-wallets-subtitle` `chain` -> `catene`; `enterprise-privacy` `scambi` -> `swap`; `enterprise-l2s` `bridge` -> `ponte` (glossary).
+
+**Open (warnings):**
+
+- Reviewer flagged lowercase-l1/l2 glossary deviations: NOT applied (upstream glossary casing bug, #53).

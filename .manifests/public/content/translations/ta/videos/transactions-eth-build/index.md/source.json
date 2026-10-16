@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/transactions-eth-build/index.md",
-  "generatedAt": "2026-04-29T06:20:36.906Z",
-  "rootHash": "63ec5da6efa1",
+  "generatedAt": "2026-09-30T19:18:06.148Z",
+  "rootHash": "50635f55ba3a",
   "tree": {
     "contentHash": "28b859a22101",
-    "anchorHash": "ef0f5e2e413d",
+    "anchorHash": "7ad31d7b64f0",
     "children": {
       "frontmatter:title": {
         "contentHash": "904970c81a57",
@@ -37,11 +37,11 @@
       },
       "frontmatter:topic": {
         "contentHash": "4b9f7d802648",
-        "anchorHash": "a927eec62f04",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "81dc075c3d55"
+            "anchorHash": "3ddeb596fa81"
           }
         }
       },
@@ -287,5 +287,5 @@
       "summary-1452"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -281,16 +281,25 @@ export default async function Page(props: { params: Promise<Params> }) {
             })}
           </p>
           <p>{t("glamsterdam-scope")}</p>
-          {/* Boxed rather than a plain paragraph: clients are not in scope for
-              Glamsterdam yet, only specifications, so a reporter who skims past this
-              wastes their time and ours on an ineligible client report. */}
+          {/* Boxed rather than a plain paragraph: only clients with a published
+              Glamsterdam release are in scope, alongside the specifications, so a
+              reporter who skims past this wastes their time and ours on an
+              ineligible client report. */}
           {/* max-w-3xl by hand: MainArticle constrains the text column with
               `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
               runs the full page width and reads as a different section rather than an
               aside to the paragraph above it. */}
           <Alert variant="warning" className="max-w-3xl">
             <AlertContent>
-              <p>{t("glamsterdam-specs")}</p>
+              <p>
+                {t.rich("glamsterdam-specs", {
+                  a: (chunks) => (
+                    <InlineLink href="https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement#client-releases">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
             </AlertContent>
           </Alert>
           <h3>{t("glamsterdam-rewards-title")}</h3>
@@ -665,8 +674,20 @@ export default async function Page(props: { params: Promise<Params> }) {
             <h2 className="max-w-[100ch]">
               {t("page-upgrades-bug-bounty-severity-qualifications-title")}
             </h2>
-            <p className="mb-8 max-w-[100ch] text-body-medium">
+            <p className="mb-0 max-w-[100ch] text-body-medium">
               {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
+            </p>
+            <p className="mt-1 mb-8 max-w-[100ch] text-body-medium italic">
+              {t.rich(
+                "page-upgrades-bug-bounty-severity-qualifications-hardware",
+                {
+                  a: (chunks) => (
+                    <InlineLink href="https://eips.ethereum.org/EIPS/eip-7870">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                }
+              )}
             </p>
             <Grid balanced={4}>
               {/* Low */}

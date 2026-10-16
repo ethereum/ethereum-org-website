@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/how-to-be-cypherpunk-juan-benet/index.md",
-  "generatedAt": "2026-04-28T23:42:43.431Z",
-  "rootHash": "f1531f9a08a8",
+  "generatedAt": "2026-09-30T18:41:07.271Z",
+  "rootHash": "16358de9d8c1",
   "tree": {
     "contentHash": "e26eca8c2025",
-    "anchorHash": "2339ee07bf3b",
+    "anchorHash": "fba49d504a0d",
     "children": {
       "frontmatter:title": {
         "contentHash": "712e0dadbe47",
@@ -37,7 +37,7 @@
       },
       "frontmatter:topic": {
         "contentHash": "f5818652a990",
-        "anchorHash": "d0ca918e24fd",
+        "anchorHash": "565fd1d4db4d",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
@@ -45,7 +45,7 @@
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "f354ee99e2bc"
+            "anchorHash": "a4cc6bc01a92"
           }
         },
         "childrenOrder": [
@@ -195,5 +195,5 @@
       "three-open-problems-1527"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -7,9 +7,7 @@ uploadDate: 2024-02-05
 duration: "0:22:47"
 educationLevel: advanced
 topic:
-  - "roadmap"
-  - "pbs"
-  - "mev"
+  - "roadmap-and-priorities"
 format: presentation
 author: "CBER 论坛"
 breadcrumb: "PBS 详解"

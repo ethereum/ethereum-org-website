@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "accounts"
-  - "cryptography"
+  - "how-ethereum-works"
 format: tutorial
 author: "ऑस्टिन ग्रिफिथ"
 breadcrumb: "की जोड्या (ETH.BUILD)"

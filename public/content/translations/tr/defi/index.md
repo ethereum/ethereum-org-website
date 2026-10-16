@@ -102,9 +102,9 @@ Bir Blokzincir olarak Ethereum, işlemleri güvenli ve küresel bir şekilde gö
 
 #### Dünyanın dört bir yanına para akışı sağlayın... {#stream-money}
 
-Ethereum üzerinden para akışı da sağlayabilirsiniz. Bu, birine maaşını saniye saniye ödemenizi sağlayarak, ihtiyaç duydukları her an paralarına erişmelerini sağlar. Veya bir emanet dolabı veya elektrikli scooter gibi bir şeyi saniyelik olarak kiralayabilirsiniz.
+Ethereum üzerinden para akışı da sağlayabilirsiniz. Tek bir büyük ödeme göndermek yerine, akış ödemeleri zaman içinde sürekli olarak küçük miktarlar transfer eder. Bu, birine maaşını saniye saniye ödemenizi sağlayarak, paralarına ihtiyaç duydukları her an erişmelerine olanak tanır. Ayrıca, bir depolama dolabı veya elektrikli scooter kiralamak gibi sürekli olarak faturalandırılan hizmetlerin ödemesini yapmak için de kullanılabilir.
 
-Ve değerinin ne kadar değişebileceği nedeniyle [ETH](/glossary/#ether) göndermek veya akışını sağlamak istemiyorsanız, Ethereum'da alternatif para birimleri vardır: [sabitcoin'ler](/glossary/#stablecoin).
+Değerinin çok fazla değişebilmesi nedeniyle [ETH](/glossary/#ether) göndermek veya akışını sağlamak istemiyorsanız, Ethereum'da alternatif para birimleri vardır: [sabitcoin'ler](/glossary/#stablecoin).
 
 <Divider />
 

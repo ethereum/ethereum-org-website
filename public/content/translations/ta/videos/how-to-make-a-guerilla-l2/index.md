@@ -7,10 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "privacy-and-security"
-  - "scaling-and-layer-2"
   - "privacy"
-  - "layer-2"
+  - "scaling-and-layer-2"
 format: interview
 author: "வெப்3பிரைவசி நவ்"
 breadcrumb: "கொரில்லா அடுக்கு 2 (l2)"

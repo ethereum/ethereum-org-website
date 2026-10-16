@@ -7,9 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "privacy-and-security"
   - "privacy"
-  - "authentication"
+  - "security"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "మైక్రోడాట్ భద్రత"

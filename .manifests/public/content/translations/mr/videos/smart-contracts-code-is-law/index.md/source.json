@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/smart-contracts-code-is-law/index.md",
-  "generatedAt": "2026-04-29T00:12:25.404Z",
-  "rootHash": "5fedf170430a",
+  "generatedAt": "2026-09-30T19:16:59.876Z",
+  "rootHash": "890fb7b22c50",
   "tree": {
     "contentHash": "aee762f4f07b",
-    "anchorHash": "1cd53f8885e3",
+    "anchorHash": "d956e2829cd5",
     "children": {
       "frontmatter:title": {
         "contentHash": "21b041364f67",
@@ -37,11 +37,11 @@
       },
       "frontmatter:topic": {
         "contentHash": "4b9f7d802648",
-        "anchorHash": "381673fabf0b",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "2658a7ac4df4"
+            "anchorHash": "3ddeb596fa81"
           }
         }
       },
@@ -367,5 +367,5 @@
       "summary-1453"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -83,3 +83,29 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Every acronym critical in `page-apps.json` was a glossary expansion substituted for an acronym English leaves bare: 7 keys, worst `category-dao-meta-title` at 29 -> 81 chars.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Same acronym over-expansion regressions as es (#80); `rollups de l2` / `servidor do Discord` lowercased.
+- open-access pronoun agreement `Elas forneceram` / `Eles não decidem`; `agência financeira` calque.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `swaps` -> `trocas` (glossary, same as #19076).
+
+**Open (warnings):**
+
+- `Desenvolvido por` for Powered by; `Tesourarias`; `Valor garantido/assegurado` split.

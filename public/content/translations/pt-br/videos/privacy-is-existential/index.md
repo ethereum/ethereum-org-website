@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privacidade"
@@ -80,11 +79,11 @@ O valor extraível do minerador (MEV) é uma realidade repugnante do Ethereum. E
 
 ### Deveres legalmente exigíveis dos validadores (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-A maior aposta do DOJ no caso Pereira Bueno é que os validadores têm deveres legalmente exigíveis uns com os outros devido à natureza pública das transações que eles validam. E se esses deveres forem violados, os validadores, eu acho que eles pensam, deveriam processar uns aos outros. E se não o fizerem, o estado, o Distrito Sul de Nova York, deveria processar validadores desonestos por crimes. E isso não para apenas na fraude eletrônica. Se você pode ver uma transação de lavagem de dinheiro ou poderia tê-la visto usando análise de blockchain, então como você não é cúmplice dessa lavagem de dinheiro?
+A maior aposta do DOJ no caso Pereira Bueno é que os validadores têm deveres legalmente exigíveis uns com os outros devido à natureza pública das transações que validam. E se esses deveres forem violados, os validadores, eu acho que eles pensam, deveriam processar uns aos outros. E se não o fizerem, o estado, o Distrito Sul de Nova York, deveria processar criminalmente os validadores desonestos. E isso não para apenas na fraude eletrônica. Se você pode ver uma transação de lavagem de dinheiro ou poderia tê-la visto usando análise de blockchain, então como você não é cúmplice dessa lavagem de dinheiro?
 
-Se você constrói em uma versão da cadeia que tem transações sancionadas nela, você não é cúmplice na evasão de sanções? Se você colocar transações fraudulentas multibilionárias no livro-razão, talvez você devesse ser forçado a revertê-las. E a cegueira intencional não é uma defesa. Você não pode simplesmente dizer que decidiu não usar uma ferramenta amplamente disponível como a análise de cadeia. Ignorar intencionalmente todo o conhecimento inerente à blockchain pública ainda pode levar a possíveis acusações criminais e sempre será processado como tal.
+Se você constrói sobre uma versão da cadeia que contém transações sancionadas, você não é cúmplice de evasão de sanções? Se você colocar transações fraudulentas multibilionárias no livro-razão, talvez você devesse ser forçado a revertê-las. E a cegueira deliberada não é uma defesa. Você não pode simplesmente dizer que decidiu não usar uma ferramenta amplamente disponível como a análise de cadeia. Ignorar deliberadamente todo o conhecimento inerente à blockchain pública ainda pode levar a possíveis acusações criminais e sempre será processado como tal.
 
-A cegueira intencional não é uma defesa, mas a cegueira real é. Então, se você realmente quer ausência de confiança (trustlessness), se você verdadeiramente quer uma infraestrutura neutra, se você quer tubos burros (dumb pipes), então os tubos precisam ser realmente cegos para o que flui através deles.
+A cegueira deliberada não é uma defesa, mas a cegueira real é. Então, se você realmente quer a desnecessidade de confiança, se você verdadeiramente quer uma infraestrutura neutra, se você quer tubos burros, então os tubos precisam ser realmente cegos ao que flui por eles.
 
 ### Tubulações financeiras tradicionais e SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Acho que isso também ressoa com os profissionais de segurança nacional. Você 
 **Peter Van Valkenburgh:** Fico feliz que as pessoas conheçam nossa missão — defender a liberdade de inovar usando tecnologias de blockchain abertas e a capacidade das pessoas de usarem essas tecnologias de forma privada. Se essa é uma missão com a qual você se importa, por favor, visite coincenter.org. Obrigado por me dar a chance de fazer propaganda. Somos uma organização sem fins lucrativos financiada por doadores e dependemos da boa vontade de pessoas como você, que acreditam em nossa missão, para continuar fazendo o trabalho que estamos fazendo. Obrigado por esta oportunidade e obrigado por ouvirem minha palestra sobre neutralidade.
 
 **Apresentador:** Muito obrigado, Peter. Adorei a camiseta.
+

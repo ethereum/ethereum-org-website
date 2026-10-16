@@ -8,7 +8,6 @@ duration: "0:16:30"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "எனக்குப் பிடித்த விஷயங்கள்"

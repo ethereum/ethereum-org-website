@@ -111,3 +111,45 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Acronym expansion hit 18 `page-apps` keys including short category-chip `-name` labels, where the Indic UI-tag rule mandates Latin. `DAO` and `DEX` have no hi short form so 6 keys stay expanded.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-criteria-lead` `बहुत कम लोग` -> `बहुत कम VPN`.
+- privacy-online `vpn-table-2-does` -> `साइटें आपका स्थान पता न लगा सकें`.
+- `social-networks:72` `लेनदेन` -> `लेन-देन`; page-learn `रिवॉर्ड कमाएं` -> `पुरस्कार कमाएं`.
+
+**Open (warnings):**
+
+- EIP/API/DeFi/NFT over-expansion (#80), incl. duplicated `(EIP) (EIP-8081)` in hegota:42.
+- `खाता` oblique-case errors in open-access (4 keys); Geth back to Latin in bug-bounty.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `smart-contracts/security/index.md` full MT retranslation regressed 143 `कॉन्ट्रैक्ट` + 11 `ओरेकल` -> restored `अनुबंध`/`अनुबंधों` and `ऑरेकल` (anchors/fences/links verified unchanged).
+- `small-business` `compare-description` 120-day dispute window inverted (after -> for 120 days).
+- `enterprise-privacy` database corruption `भ्रष्टाचार` -> `दूषित होने`; relational against `के खिलाफ` -> `के साथ`.
+- `enterprise-l2s` `deployment-cta` left as English `Go` -> `जाएं`.
+- `लेनदेन` -> `लेन-देन` (x7), smart contract glossary fixes in org JSON.
+
+**Open (warnings):**
+
+- Security file retranslation itself was legit (dev copy had 6 missing anchors + stray fence).
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.0/10
+
+- Warning (pre-existing, unfixed): wagmi uses `कॉन्ट्रैक्ट` 22x vs glossary `अनुबंध`; "evaluate to" rendered as "evaluate X" (L238, L303).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
+- Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.

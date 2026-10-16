@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/stani-kulechov-building-aave/index.md",
-  "generatedAt": "2026-04-29T00:13:17.106Z",
-  "rootHash": "0ce4ad10bdc1",
+  "generatedAt": "2026-09-30T19:18:01.367Z",
+  "rootHash": "3a8877feb23b",
   "tree": {
     "contentHash": "230726c50d50",
-    "anchorHash": "283c4bfdf231",
+    "anchorHash": "d4db5db37ba9",
     "children": {
       "frontmatter:title": {
         "contentHash": "efbd290e1362",
@@ -37,7 +37,7 @@
       },
       "frontmatter:topic": {
         "contentHash": "f5818652a990",
-        "anchorHash": "d0ca918e24fd",
+        "anchorHash": "4718be144903",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
@@ -45,7 +45,7 @@
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "f354ee99e2bc"
+            "anchorHash": "2290d7d70dea"
           }
         },
         "childrenOrder": [
@@ -415,5 +415,5 @@
       "closing-3600"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

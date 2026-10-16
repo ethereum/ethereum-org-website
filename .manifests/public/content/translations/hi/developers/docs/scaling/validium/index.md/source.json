@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/scaling/validium/index.md",
-  "generatedAt": "2026-06-17T22:49:06.568Z",
-  "rootHash": "5262df1ee632",
+  "generatedAt": "2026-09-30T18:23:53.474Z",
+  "rootHash": "1e150b1f57a6",
   "tree": {
-    "contentHash": "2fa9a1bfdd48",
+    "contentHash": "bfa5af8c3b81",
     "anchorHash": "dd498e3d95e4",
     "children": {
       "frontmatter:title": {
@@ -421,7 +421,7 @@
         ]
       },
       "volitions-and-validium": {
-        "contentHash": "f3efced513d3",
+        "contentHash": "179cd75ff1a2",
         "anchorHash": "4b9f7d802648",
         "labelHash": "83d28792db9a",
         "children": {
@@ -430,7 +430,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "95a859fd5fce",
+            "contentHash": "9c033118e2ac",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -563,7 +563,7 @@
         ]
       },
       "pros-and-cons-of-validium": {
-        "contentHash": "413c5ab0117b",
+        "contentHash": "1f5d804b7570",
         "anchorHash": "3135547619a6",
         "labelHash": "7db823ea0705",
         "children": {
@@ -572,7 +572,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "0805e172caf0",
+            "contentHash": "bc93712e285c",
             "anchorHash": "e3b0c44298fc"
           },
           "use-validium-and-volitions": {
@@ -726,5 +726,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

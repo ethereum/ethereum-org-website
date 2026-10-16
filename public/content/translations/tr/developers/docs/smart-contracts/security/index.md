@@ -35,6 +35,7 @@ Bir akıllı sözleşmede tek bir adresi `Owner` olarak kaydetmek, merkezileşme
 Role dayalı erişim kontrolünde, hassas fonksiyonlara erişim bir dizi güvenilir katılımcı arasında dağıtılır. Örneğin, bir hesap token basımından sorumlu olabilirken, başka bir hesap yükseltmeleri gerçekleştirir veya sözleşmeyi duraklatır. Erişim kontrolünü bu şekilde merkeziyetsizleştirmek, tek hata noktalarını ortadan kaldırır ve kullanıcılar için güven varsayımlarını azaltır.
 
 ##### Çoklu imza cüzdanlarını kullanma
+
 Güvenli erişim kontrolü uygulamak için başka bir yaklaşım, bir sözleşmeyi yönetmek için [çoklu imza hesabı](/developers/docs/smart-contracts/#multisig) kullanmaktır. Normal bir EOA'nın aksine, çoklu imza hesapları birden fazla varlığa aittir ve işlemleri yürütmek için minimum sayıda hesaptan (örneğin 5'in 3'ü) imza gerektirir.
 
 Erişim kontrolü için çoklu imza kullanmak, hedef sözleşmedeki eylemler birden fazla tarafın onayını gerektirdiğinden ekstra bir güvenlik katmanı sunar. Bu, özellikle Sahiplik (Ownable) modelini kullanmak gerekliyse yararlıdır, çünkü bir saldırganın veya kötü niyetli bir içeriden kişinin hassas sözleşme fonksiyonlarını kötü amaçlarla manipüle etmesini zorlaştırır.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 [Ethereum Sanal Makinesi](/developers/docs/evm/) içinde çalışan kodun değişmezliği, akıllı sözleşmelerin geliştirme aşamasında daha yüksek düzeyde bir kalite değerlendirmesi gerektirdiği anlamına gelir. Sözleşmenizi kapsamlı bir şekilde test etmek ve beklenmedik sonuçlar için gözlemlemek, güvenliği büyük ölçüde artıracak ve uzun vadede kullanıcılarınızı koruyacaktır.
 
-Olağan yöntem, sözleşmenin kullanıcılardan alması beklenen sahte (mock) verileri kullanarak küçük birim testleri yazmaktır. [Birim testi](/developers/docs/smart-contracts/testing/#unit-testing), belirli fonksiyonların işlevselliğini test etmek ve bir akıllı sözleşmenin beklendiği gibi çalıştığından emin olmak için iyidir.
+Olağan yöntem, sözleşmenin kullanıcılardan alması beklenen sahte (mock) verileri kullanarak küçük birim testleri yazmaktır. [Birim testi](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts), belirli fonksiyonların işlevselliğini test etmek ve bir akıllı sözleşmenin beklendiği gibi çalıştığından emin olmak için iyidir.
 
 Ne yazık ki, birim testi tek başına kullanıldığında akıllı sözleşme güvenliğini artırmada asgari düzeyde etkilidir. Bir birim testi, bir fonksiyonun sahte veriler için düzgün bir şekilde yürütüldüğünü kanıtlayabilir, ancak birim testleri yalnızca yazılan testler kadar etkilidir. Bu, akıllı sözleşmenizin güvenliğini bozabilecek gözden kaçan uç durumları ve güvenlik açıklarını tespit etmeyi zorlaştırır.
 
@@ -306,6 +307,7 @@ Gelen `msg.sender.call.value` işleminden kalan gaz 40.000'den fazlaysa, `Attack
 Özetle, çağıranın bakiyesi fonksiyon yürütmesi tamamlanana kadar 0'a ayarlanmadığından, sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden çok kez çekmesine izin verecektir. Bu tür bir saldırı, [2016 DAO hack'inde](https://www.coindesk.com/learn/understanding-the-dao-attack) olduğu gibi bir akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. [Yeniden giriş istismarlarının halka açık listelerinin](https://github.com/pcaversaccio/reentrancy-attacks) gösterdiği gibi, yeniden giriş saldırıları bugün akıllı sözleşmeler için hala kritik bir sorundur.
 
 ##### Yeniden giriş saldırıları nasıl önlenir
+
 Yeniden girişle başa çıkmak için bir yaklaşım, [kontroller-etkiler-etkileşimler (checks-effects-interactions) modelini](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) izlemektir. Bu model, fonksiyonların yürütülmesini, yürütmeye devam etmeden önce gerekli kontrolleri gerçekleştiren kodun ilk sırada, ardından sözleşme durumunu manipüle eden kodun ve diğer sözleşmelerle veya EOA'larla etkileşime giren kodun en son geleceği şekilde sıralar.
 
 Kontroller-etkiler-etkileşimler modeli, aşağıda gösterilen `Victim` sözleşmesinin revize edilmiş bir versiyonunda kullanılmaktadır:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Tamsayı taşmaları nasıl önlenir
+
 0.8.0 sürümünden itibaren Solidity derleyicisi, tamsayı alt taşmaları ve taşmalarıyla sonuçlanan kodu reddeder. Ancak, daha düşük bir derleyici sürümüyle derlenen sözleşmeler, aritmetik işlemleri içeren fonksiyonlarda kontroller gerçekleştirmeli veya alt taşma/taşma kontrolü yapan bir kütüphane (örneğin, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) kullanmalıdır.
 
 #### Kâhin (Oracle) manipülasyonu {#oracle-manipulation}
@@ -447,6 +450,7 @@ DEX fiyatları, büyük ölçüde arbitrajcıların piyasalardaki pariteyi geri 
 Örneğin, bir saldırgan borç verme sözleşmenizle etkileşime girmeden hemen önce bir Flaş kredi alarak bir varlığın spot fiyatını yapay olarak şişirebilir. Varlığın fiyatı için DEX'i sorgulamak, (saldırganın varlığa olan talebi saptıran büyük "satın alma emri" nedeniyle) normalden daha yüksek bir değer döndürerek, almaları gerekenden daha fazla borç almalarına olanak tanır. Bu tür "Flaş kredi saldırıları", DeFi uygulamaları arasında fiyat kâhinlerine olan güveni istismar etmek için kullanılmış ve protokollere milyonlarca kayıp fona mal olmuştur.
 
 ##### Kâhin manipülasyonu nasıl önlenir
+
 [Kâhin manipülasyonundan kaçınmak](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) için minimum gereksinim, tek hata noktalarından kaçınmak amacıyla birden fazla kaynaktan bilgi sorgulayan merkeziyetsiz bir kâhin ağı kullanmaktır. Çoğu durumda, merkeziyetsiz kâhinler, kâhin düğümlerini doğru bilgileri bildirmeye teşvik etmek için yerleşik kriptoekonomik teşviklere sahiptir ve bu da onları merkezi kâhinlerden daha güvenli hale getirir.
 
 Varlık fiyatları için zincir içi bir kâhini sorgulamayı planlıyorsanız, zaman ağırlıklı ortalama fiyat (TWAP) mekanizması uygulayan bir kâhin kullanmayı düşünün. Bir [TWAP kâhini](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), bir varlığın fiyatını iki farklı zaman noktasında (değiştirebileceğiniz) sorgular ve elde edilen ortalamaya göre spot fiyatı hesaplar. Daha uzun zaman dilimleri seçmek, yakın zamanda yürütülen büyük emirler varlık fiyatlarını etkileyemeyeceğinden protokolünüzü fiyat manipülasyonuna karşı korur.

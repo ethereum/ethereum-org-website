@@ -123,3 +123,36 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 - `testing/index.md` flipped `使用者` -> `用戶` at all 14 sites. `用戶` is the zh-cn form; corpus-wide zh-tw runs 1723:162 for `使用者` and the three sibling files in this PR kept it. Left as a warning since "user" is not an ETHGlossary term, but it is a deterministic fix if the locale wants it.
 - Best glossary compliance in this locale's recorded series: `智能合約` x107 with zero `智慧合約`. The regression from #18344/#18772/#19115 finally did not fire.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` -> `打包器`.
+- builder `區塊構建者` -> `區塊建構者` (hegota x2, page-open-access, page-roadmap).
+
+**Open (warnings):**
+
+- Mainland vocabulary: `用戶` (validium), `數據` (the-graph), `檔案` for archival (zk-rollups).
+- 您/你 split across the new privacy pages; `樂觀匯總` vs `樂觀 Rollup`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- protocol `協議` -> `協定` x3; swap `交換` -> `兌換` (glossary).
+
+**Open (warnings):**
+
+- Mainland vocabulary leaks (`用戶`, `數據`); truncated `了解更多關於 X` CTAs; `智慧帳戶` outlier; enterprise-privacy on 你.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.6/10
+
+- Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
+- Open: "much faster" lost `得多` (L178).

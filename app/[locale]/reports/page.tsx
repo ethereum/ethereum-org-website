@@ -59,7 +59,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        breadcrumbs={{ slug: "research/reports", startDepth: 1 }}
+        breadcrumbs={{ slug: "reports" }}
         heroImg={heroImg}
         title={t("page-reports-title")}
         description={t("page-reports-description")}

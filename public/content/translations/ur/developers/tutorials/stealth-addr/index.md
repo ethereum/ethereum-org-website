@@ -135,11 +135,11 @@ sidebarDepth: 3
 
 #### <span dir="ltr">WASM</span> جزو {#wasm}
 
-وہ سورس کوڈ جو <span dir="ltr">WASM</span> میں مرتب ہوتا ہے [Rust](https://rust-lang.org/) میں لکھا گیا ہے۔ آپ اسے [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) میں دیکھ سکتے ہیں۔ یہ کوڈ بنیادی طور پر JavaScript کوڈ اور [`eth-stealth-addresses` لائبریری](https://github.com/kassandraoftroy/eth-stealth-addresses) کے درمیان ایک انٹرفیس ہے۔
+وہ سورس کوڈ جو <span dir="ltr">WASM</span> میں مرتب ہوتا ہے، [Rust](https://rust-lang.org/) میں لکھا گیا ہے۔ آپ اسے [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) میں دیکھ سکتے ہیں۔ یہ کوڈ بنیادی طور پر JavaScript کوڈ اور [`eth-stealth-addresses` لائبریری](https://github.com/kassandraoftroy/eth-stealth-addresses) کے درمیان ایک انٹرفیس ہے۔
 
 **`Cargo.toml`**
 
-Rust میں [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) JavaScript میں [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) کے مترادف ہے۔ اس میں پیکیج کی معلومات، انحصاری کے اعلانات وغیرہ شامل ہیں۔
+Rust میں [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) بالکل JavaScript میں [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) کے مترادف ہے۔ اس میں پیکیج کی معلومات، انحصار (dependency) کے اعلانات وغیرہ شامل ہوتے ہیں۔
 
 ```toml
 [package]
@@ -154,13 +154,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) پیکیج کو بے ترتیب اقدار پیدا کرنے کی ضرورت ہوتی ہے۔ یہ خالصتاً الگورتھمک ذرائع سے نہیں کیا جا سکتا؛ اس کے لیے اینٹروپی کے ذریعہ کے طور پر کسی طبعی عمل تک رسائی درکار ہوتی ہے۔ یہ تعریف واضح کرتی ہے کہ ہم جس براؤزر میں چل رہے ہیں اس سے پوچھ کر وہ اینٹروپی حاصل کریں گے۔
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) پیکیج کو بے ترتیب (random) اقدار بنانے کی ضرورت ہوتی ہے۔ یہ خالصتاً الگورتھمک ذرائع سے نہیں کیا جا سکتا؛ اس کے لیے اینٹروپی کے ماخذ کے طور پر کسی طبعی عمل تک رسائی درکار ہوتی ہے۔ یہ تعریف واضح کرتی ہے کہ ہم یہ اینٹروپی اس براؤزر سے طلب کر کے حاصل کریں گے جس میں ہم چل رہے ہیں۔
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[یہ لائبریری](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) ہمیں زیادہ بامعنی ایرر پیغامات دیتی ہے جب <span dir="ltr">WASM</span> کوڈ گھبراہٹ (panic) کا شکار ہوتا ہے اور جاری نہیں رہ سکتا۔
+[یہ لائبریری](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) ہمیں اس وقت زیادہ بامعنی خرابی کے پیغامات دیتی ہے جب <span dir="ltr">WASM</span> کوڈ پینک (panic) ہو جاتا ہے اور جاری نہیں رہ سکتا۔
 
 ```toml
 [lib]
@@ -179,7 +179,7 @@ use wasm_bindgen::prelude::*;
 
 Rust سے <span dir="ltr">WASM</span> پیکیج بنانے کی تعریفیں۔ ان کی دستاویزات [یہاں](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) موجود ہیں۔
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -193,7 +193,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust عام طور پر اقدار کے لیے بائٹ [ایریز (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) استعمال کرتا ہے۔ لیکن JavaScript میں، ہم عام طور پر ہیکساڈیسیمل سٹرنگز استعمال کرتے ہیں۔ [`hex` لائبریری](https://docs.rs/hex/latest/hex/) ہمارے لیے ایک نمائندگی سے دوسری میں ترجمہ کرتی ہے۔
+Rust عام طور پر اقدار کے لیے بائٹ [ایریز (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) استعمال کرتا ہے۔ لیکن JavaScript میں، ہم عام طور پر ہیکسا ڈیسیمل سٹرنگز استعمال کرتے ہیں۔ [`hex` لائبریری](https://docs.rs/hex/latest/hex/) ہمارے لیے ایک نمائندگی سے دوسری میں ترجمہ کرتی ہے۔
 
 ```rust
 #[wasm_bindgen]
@@ -218,7 +218,7 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 - دیکھنے کی نجی کلید (*<span dir="ltr">V<sub>priv</sub></span>*)
 - خرچ کرنے کی نجی کلید (*<span dir="ltr">K<sub>priv</sub></span>*)
 
-[ٹیوپل (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) سنٹیکس ہمیں ان اقدار کو دوبارہ الگ کرنے دیتا ہے۔
+[ٹیوپل (tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) سنٹیکس ہمیں ان اقدار کو دوبارہ الگ کرنے کی اجازت دیتا ہے۔
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -235,24 +235,24 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-یہ فنکشن ایک ہیکس سٹرنگ (جو JavaScript کی طرف سے فراہم کی گئی ہے) کو بائٹ ایرے میں تبدیل کرتا ہے۔ ہم اسے JavaScript کوڈ کی طرف سے فراہم کردہ اقدار کو پارس کرنے کے لیے استعمال کرتے ہیں۔ یہ فنکشن اس وجہ سے پیچیدہ ہے کہ Rust ایریز اور ویکٹرز کو کیسے ہینڈل کرتا ہے۔
+یہ فنکشن (JavaScript کی طرف سے فراہم کردہ) ہیکس سٹرنگ کو بائٹ ایریے میں تبدیل کرتا ہے۔ ہم اسے JavaScript کوڈ کی طرف سے فراہم کردہ اقدار کو پارس کرنے کے لیے استعمال کرتے ہیں۔ یہ فنکشن اس وجہ سے پیچیدہ ہے کہ Rust ایریز اور ویکٹرز کو کس طرح ہینڈل کرتا ہے۔
 
-`<const N: usize>` ایکسپریشن کو [جینرک (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) کہا جاتا ہے۔ `N` ایک پیرامیٹر ہے جو واپس کی گئی ایرے کی لمبائی کو کنٹرول کرتا ہے۔ فنکشن کو دراصل `str_to_array::<n>` کہا جاتا ہے، جہاں `n` ایرے کی لمبائی ہے۔
+`<const N: usize>` ایکسپریشن کو [جینرک (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) کہا جاتا ہے۔ `N` ایک پیرامیٹر ہے جو واپس کی گئی ایریے کی لمبائی کو کنٹرول کرتا ہے۔ فنکشن کو دراصل `str_to_array::<n>` کہا جاتا ہے، جہاں `n` ایریے کی لمبائی ہے۔
 
-واپسی کی قدر `Option<[u8; N]>` ہے، جس کا مطلب ہے کہ واپس کی گئی ایرے [اختیاری (optional)](https://doc.rust-lang.org/std/option/) ہے۔ یہ Rust میں ان فنکشنز کے لیے ایک عام پیٹرن ہے جو ناکام ہو سکتے ہیں۔
+واپسی کی قدر `Option<[u8; N]>` ہے، جس کا مطلب ہے کہ واپس کی گئی ایریے [اختیاری (optional)](https://doc.rust-lang.org/std/option/) ہے۔ یہ Rust میں ان فنکشنز کے لیے ایک عام پیٹرن ہے جو ناکام ہو سکتے ہیں۔
 
-مثال کے طور پر، اگر ہم `str_to_array::10("bad060a7")` کو کال کرتے ہیں، تو فنکشن کو دس اقدار پر مشتمل ایرے واپس کرنی چاہیے، لیکن ان پٹ صرف چار بائٹس کا ہے۔ فنکشن کو ناکام ہونے کی ضرورت ہے، اور یہ `None` واپس کر کے ایسا کرتا ہے۔ `str_to_array::4("bad060a7")` کے لیے واپسی کی قدر `Some<[0xba, 0xd0, 0x60, 0xa7]>` ہوگی۔
+مثال کے طور پر، اگر ہم `str_to_array::10("bad060a7")` کو کال کرتے ہیں، تو فنکشن کو دس اقدار پر مشتمل ایریے واپس کرنی چاہیے، لیکن ان پٹ صرف چار بائٹس کا ہے۔ فنکشن کو ناکام ہونے کی ضرورت ہے، اور یہ `None` واپس کر کے ایسا کرتا ہے۔ `str_to_array::4("bad060a7")` کے لیے واپسی کی قدر `Some<[0xba, 0xd0, 0x60, 0xa7]>` ہوگی۔
 
 ```rust
     // decode Result<Vec<u8>, _> واپس کرتا ہے
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) فنکشن ایک `Result<Vec<u8>, FromHexError>` واپس کرتا ہے۔ [`Result`](https://doc.rust-lang.org/std/result/) قسم میں یا تو ایک کامیاب نتیجہ (`Ok(value)`) یا ایک ایرر (`Err(error)`) شامل ہو سکتا ہے۔
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) فنکشن ایک `Result<Vec<u8>, FromHexError>` واپس کرتا ہے۔ [`Result`](https://doc.rust-lang.org/std/result/) قسم میں یا تو ایک کامیاب نتیجہ (`Ok(value)`) یا ایک خرابی (`Err(error)`) شامل ہو سکتی ہے۔
 
-`.ok()` طریقہ `Result` کو ایک `Option` میں بدل دیتا ہے، جس کی قدر یا تو کامیاب ہونے پر `Ok()` قدر ہوتی ہے یا بصورت دیگر `None` ہوتی ہے۔ آخر میں، [سوالیہ نشان آپریٹر](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) موجودہ فنکشنز کو منسوخ کر دیتا ہے اور اگر `Option` خالی ہو تو `None` واپس کرتا ہے۔ بصورت دیگر، یہ قدر کو ان ریپ (unwrap) کرتا ہے اور اسے واپس کرتا ہے (اس صورت میں، `vec` کو ایک قدر تفویض کرنے کے لیے)۔
+`.ok()` طریقہ کار `Result` کو ایک `Option` میں تبدیل کر دیتا ہے، جس کی قدر کامیاب ہونے کی صورت میں `Ok()` کی قدر ہوتی ہے یا بصورت دیگر `None` ہوتی ہے۔ آخر میں، [سوالیہ نشان کا آپریٹر](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) موجودہ فنکشنز کو منسوخ کر دیتا ہے اور اگر `Option` خالی ہو تو `None` واپس کرتا ہے۔ بصورت دیگر، یہ قدر کو ان ریپ (unwrap) کرتا ہے اور اسے واپس کرتا ہے (اس صورت میں، `vec` کو ایک قدر تفویض کرنے کے لیے)۔
 
-یہ ایررز کو ہینڈل کرنے کا ایک عجیب و غریب پیچیدہ طریقہ لگتا ہے، لیکن `Result` اور `Option` اس بات کو یقینی بناتے ہیں کہ تمام ایررز کو کسی نہ کسی طرح ہینڈل کیا جائے۔
+یہ خرابیوں کو ہینڈل کرنے کا ایک عجیب و غریب پیچیدہ طریقہ معلوم ہوتا ہے، لیکن `Result` اور `Option` اس بات کو یقینی بناتے ہیں کہ تمام خرابیوں کو کسی نہ کسی طرح ہینڈل کیا جائے۔
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,14 +265,14 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust میں ایریز کی دو اقسام ہیں۔ [ایریز](https://doc.rust-lang.org/std/primitive.array.html) کا سائز مقرر ہوتا ہے۔ [ویکٹرز](https://doc.rust-lang.org/std/vec/index.html) بڑھ اور سکڑ سکتے ہیں۔ `hex::decode` ایک ویکٹر واپس کرتا ہے، لیکن `eth_stealth_addresses` لائبریری ایریز وصول کرنا چاہتی ہے۔ [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ایک قدر کو دوسری قسم میں تبدیل کرتا ہے، مثال کے طور پر، ایک ویکٹر کو ایرے میں۔
+Rust میں ایریے کی دو اقسام ہیں۔ [ایریز](https://doc.rust-lang.org/std/primitive.array.html) کا سائز مقرر ہوتا ہے۔ [ویکٹرز](https://doc.rust-lang.org/std/vec/index.html) بڑھ اور سکڑ سکتے ہیں۔ `hex::decode` ایک ویکٹر واپس کرتا ہے، لیکن `eth_stealth_addresses` لائبریری ایریز وصول کرنا چاہتی ہے۔ [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ایک قدر کو دوسری قسم میں تبدیل کرتا ہے، مثال کے طور پر، ایک ویکٹر کو ایریے میں۔
 
 ```rust
     Some(array)
 }
 ```
 
-Rust میں آپ کو کسی فنکشن کے آخر میں قدر واپس کرتے وقت [`return`](https://doc.rust-lang.org/std/keyword.return.html) کلیدی لفظ استعمال کرنے کی ضرورت نہیں ہوتی۔
+Rust میں کسی فنکشن کے آخر میں کوئی قدر واپس کرتے وقت آپ کو [`return`](https://doc.rust-lang.org/std/keyword.return.html) کلیدی لفظ استعمال کرنے کی ضرورت نہیں ہوتی۔
 
 ```rust
 #[wasm_bindgen]
@@ -281,7 +281,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 
 یہ فنکشن ایک عوامی میٹا-پتہ وصول کرتا ہے، جس میں *<span dir="ltr">V<sub>pub</sub></span>* اور *<span dir="ltr">K<sub>pub</sub></span>* دونوں شامل ہوتے ہیں۔ یہ خفیہ پتہ، شائع کرنے کے لیے عوامی کلید (*<span dir="ltr">R<sub>pub</sub></span>*)، اور ایک بائٹ کی اسکین قدر واپس کرتا ہے جو اس بات کی شناخت کو تیز کرتی ہے کہ کون سے شائع شدہ پتے ایلس کے ہو سکتے ہیں۔
 
-اسکین قدر مشترکہ راز (*<span dir="ltr">S = GR<sub>priv</sub>V<sub>priv</sub></span>*) کا حصہ ہے۔ یہ قدر ایلس کو دستیاب ہے، اور اسے چیک کرنا اس بات کو چیک کرنے سے کہیں زیادہ تیز ہے کہ آیا *<span dir="ltr">f(K<sub>pub</sub>+G\*hash(S))</span>* شائع شدہ پتے کے برابر ہے یا نہیں۔
+اسکین کی قدر مشترکہ راز (*<span dir="ltr">S = GR<sub>priv</sub>V<sub>priv</sub></span>*) کا حصہ ہے۔ یہ قدر ایلس کو دستیاب ہوتی ہے، اور اسے چیک کرنا اس بات کو چیک کرنے سے کہیں زیادہ تیز ہے کہ آیا *<span dir="ltr">f(K<sub>pub</sub>+G\*hash(S))</span>* شائع شدہ پتے کے برابر ہے یا نہیں۔
 
 ```rust
     let (address, r_pub, scan) = 
@@ -315,10 +315,10 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-یہ فنکشن پتے سے رقم نکالنے کے لیے نجی کلید (*<span dir="ltr">R<sub>priv</sub></span>*) کا حساب لگانے کے لیے لائبریری کا [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) استعمال کرتا ہے۔ اس حساب کے لیے ان اقدار کی ضرورت ہوتی ہے:
+یہ فنکشن پتے سے رقم نکالنے کے لیے نجی کلید (*<span dir="ltr">R<sub>priv</sub></span>*) کا حساب لگانے کے لیے لائبریری کا [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) استعمال کرتا ہے۔ اس حساب کتاب کے لیے ان اقدار کی ضرورت ہوتی ہے:
 
 - پتہ (*<span dir="ltr">Address=f(P<sub>pub</sub>)</span>*)
-- بِل کی طرف سے تیار کردہ عوامی کلید (*<span dir="ltr">R<sub>pub</sub></span>*)
+- بِل کی طرف سے بنائی گئی عوامی کلید (*<span dir="ltr">R<sub>pub</sub></span>*)
 - دیکھنے کی نجی کلید (*<span dir="ltr">V<sub>priv</sub></span>*)
 - خرچ کرنے کی نجی کلید (*<span dir="ltr">K<sub>priv</sub></span>*)
 
@@ -326,7 +326,7 @@ pub fn wasm_compute_stealth_key(
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) یہ بتاتا ہے کہ جب <span dir="ltr">WASM</span> کوڈ شروع کیا جاتا ہے تو فنکشن کو عمل میں لایا جاتا ہے۔
+[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) یہ واضح کرتا ہے کہ جب <span dir="ltr">WASM</span> کوڈ کو شروع (initialize) کیا جاتا ہے تو یہ فنکشن عمل میں لایا جاتا ہے۔
 
 ```rust
 pub fn main() {
@@ -334,7 +334,7 @@ pub fn main() {
 }
 ```
 
-یہ کوڈ بتاتا ہے کہ گھبراہٹ (panic) کا آؤٹ پٹ JavaScript کنسول کو بھیجا جائے۔ اسے عملی شکل میں دیکھنے کے لیے، ایپلیکیشن استعمال کریں اور بِل کو ایک غلط میٹا-پتہ دیں (صرف ایک ہیکساڈیسیمل ہندسہ تبدیل کریں)۔ آپ کو JavaScript کنسول میں یہ ایرر نظر آئے گا:
+یہ کوڈ واضح کرتا ہے کہ پینک (panic) آؤٹ پٹ کو JavaScript کنسول میں بھیجا جائے۔ اسے عملی شکل میں دیکھنے کے لیے، ایپلیکیشن استعمال کریں اور بِل کو ایک غلط میٹا-پتہ دیں (صرف ایک ہیکسا ڈیسیمل ہندسہ تبدیل کریں)۔ آپ کو JavaScript کنسول میں یہ خرابی نظر آئے گی:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -343,7 +343,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-اس کے بعد ایک اسٹیک ٹریس (stack trace) ہوگا۔ پھر بِل کو درست میٹا-پتہ دیں، اور ایلس کو یا تو ایک غلط پتہ یا ایک غلط عوامی کلید دیں۔ آپ کو یہ ایرر نظر آئے گا:
+اس کے بعد ایک اسٹیک ٹریس (stack trace) ہوگا۔ پھر بِل کو درست میٹا-پتہ دیں، اور ایلس کو یا تو ایک غلط پتہ یا ایک غلط عوامی کلید دیں۔ آپ کو یہ خرابی نظر آئے گی:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -354,13 +354,13 @@ keys do not generate stealth address
 
 #### یوزر انٹرفیس {#ui}
 
-یوزر انٹرفیس [React](https://react.dev/) کا استعمال کرتے ہوئے لکھا گیا ہے اور [Vite](https://vite.dev/) کے ذریعے پیش کیا گیا ہے۔ آپ [اس ٹیوٹوریل](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) کا استعمال کرتے ہوئے ان کے بارے میں جان سکتے ہیں۔ یہاں [Wagmi](https://wagmi.sh/) کی کوئی ضرورت نہیں ہے کیونکہ ہم براہ راست کسی بلاک چین یا والیٹ کے ساتھ تعامل نہیں کرتے ہیں۔
+یوزر انٹرفیس [React](https://react.dev/) کا استعمال کرتے ہوئے لکھا گیا ہے اور اسے [Vite](https://vite.dev/) کے ذریعے پیش کیا گیا ہے۔ آپ [اس ٹیوٹوریل](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) کا استعمال کرتے ہوئے ان کے بارے میں جان سکتے ہیں۔ یہاں [Wagmi](https://wagmi.sh/) کی کوئی ضرورت نہیں ہے کیونکہ ہم براہ راست کسی بلاک چین یا والیٹ کے ساتھ تعامل نہیں کرتے ہیں۔
 
 یوزر انٹرفیس کا واحد غیر واضح حصہ <span dir="ltr">WASM</span> کنیکٹیویٹی ہے۔ یہ اس طرح کام کرتا ہے۔
 
 **`vite.config.js`**
 
-اس فائل میں [Vite کنفیگریشن](https://vite.dev/config/) شامل ہے۔
+اس فائل میں [Vite کی کنفیگریشن](https://vite.dev/config/) شامل ہے۔
 
 ```js
 import { defineConfig } from 'vite'
@@ -377,13 +377,13 @@ export default defineConfig({
 
 **`App.jsx`**
 
-یہ فائل ایپلیکیشن کا مرکزی جزو ہے۔ یہ ایک کنٹینر ہے جس میں دو اجزاء شامل ہیں: `Alice` اور `Bill`، جو ان صارفین کے لیے یوزر انٹرفیس ہیں۔ <span dir="ltr">WASM</span> کے لیے متعلقہ حصہ ابتدائیہ (initialization) کوڈ ہے۔
+یہ فائل ایپلیکیشن کا مرکزی جزو ہے۔ یہ ایک کنٹینر ہے جس میں دو اجزاء شامل ہیں: `Alice` اور `Bill`، جو ان صارفین کے لیے یوزر انٹرفیس ہیں۔ <span dir="ltr">WASM</span> کے لیے متعلقہ حصہ ابتدائی (initialization) کوڈ ہے۔
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-جب ہم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) استعمال کرتے ہیں، تو یہ دو فائلیں بناتا ہے جو ہم یہاں استعمال کرتے ہیں: ایک wasm فائل جس میں اصل کوڈ ہوتا ہے (یہاں، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) اور ایک JavaScript فائل جس میں اسے استعمال کرنے کی تعریفیں ہوتی ہیں (یہاں، `src/rust_wasm/pkg/rust_wasm.js`)۔ اس JavaScript فائل کا ڈیفالٹ ایکسپورٹ وہ کوڈ ہے جسے <span dir="ltr">WASM</span> شروع کرنے کے لیے چلانے کی ضرورت ہوتی ہے۔
+جب ہم [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) استعمال کرتے ہیں، تو یہ دو فائلیں بناتا ہے جنہیں ہم یہاں استعمال کرتے ہیں: ایک wasm فائل جس میں اصل کوڈ ہوتا ہے (یہاں، `src/rust-wasm/pkg/rust_wasm_bg.wasm`) اور ایک JavaScript فائل جس میں اسے استعمال کرنے کی تعریفیں ہوتی ہیں (یہاں، `src/rust-wasm/pkg/rust_wasm.js`)۔ اس JavaScript فائل کا ڈیفالٹ ایکسپورٹ وہ کوڈ ہے جسے <span dir="ltr">WASM</span> شروع کرنے کے لیے چلانے کی ضرورت ہوتی ہے۔
 
 ```jsx
 function App() {
@@ -406,13 +406,13 @@ function App() {
   )
 ```
 
-[`useEffect` ہک](https://react.dev/reference/react/useEffect) آپ کو ایک ایسا فنکشن بتانے دیتا ہے جو حالت (state) کے متغیرات تبدیل ہونے پر عمل میں لایا جاتا ہے۔ یہاں، حالت کے متغیرات کی فہرست خالی ہے (`[]`)، اس لیے یہ فنکشن صفحہ لوڈ ہونے پر صرف ایک بار عمل میں لایا جاتا ہے۔
+[`useEffect` ہک (hook)](https://react.dev/reference/react/useEffect) آپ کو ایک ایسا فنکشن متعین کرنے کی اجازت دیتا ہے جو حالت (state) کے متغیرات (variables) تبدیل ہونے پر عمل میں لایا جاتا ہے۔ یہاں، حالت کے متغیرات کی فہرست خالی (`[]`) ہے، لہذا یہ فنکشن صفحہ لوڈ ہونے پر صرف ایک بار عمل میں لایا جاتا ہے۔
 
-ایفیکٹ فنکشن کو فوری طور پر واپس آنا ہوتا ہے۔ غیر ہم وقتی (asynchronous) کوڈ استعمال کرنے کے لیے، جیسے کہ <span dir="ltr">WASM</span> کا `init` (جسے `.wasm` فائل لوڈ کرنی ہوتی ہے اور اس لیے وقت لگتا ہے) ہم ایک اندرونی [`async`](https://en.wikipedia.org/wiki/Async/await) فنکشن کی تعریف کرتے ہیں اور اسے `await` کے بغیر چلاتے ہیں۔
+ایفیکٹ (effect) فنکشن کو فوری طور پر واپس آنا ہوتا ہے۔ غیر ہم وقتی (asynchronous) کوڈ استعمال کرنے کے لیے، جیسے کہ <span dir="ltr">WASM</span> کا `init` (جسے `.wasm` فائل لوڈ کرنی ہوتی ہے اور اس لیے وقت لگتا ہے) ہم ایک اندرونی [`async`](https://en.wikipedia.org/wiki/Async/await) فنکشن کی تعریف کرتے ہیں اور اسے `await` کے بغیر چلاتے ہیں۔
 
 **`Bill.jsx`**
 
-یہ بِل کے لیے یوزر انٹرفیس ہے۔ اس میں ایک ہی عمل ہے، ایلس کی طرف سے فراہم کردہ خفیہ میٹا-پتے کی بنیاد پر ایک پتہ بنانا۔
+یہ بِل کے لیے یوزر انٹرفیس ہے۔ اس میں ایک ہی عمل ہے، جو ایلس کی طرف سے فراہم کردہ خفیہ میٹا-پتے کی بنیاد پر ایک پتہ بنانا ہے۔
 
 ```jsx
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
@@ -430,10 +430,10 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 
 **`Alice.jsx`**
 
-`Alice.jsx` میں موجود کوڈ اسی طرح کا ہے، سوائے اس کے کہ ایلس کے دو اعمال ہیں:
+`Alice.jsx` میں موجود کوڈ بھی اسی طرح کا ہے، سوائے اس کے کہ ایلس کے دو اعمال ہیں:
 
 - ایک میٹا-پتہ بنانا
-- بِل کے شائع کردہ پتے کے لیے نجی کلید حاصل کرنا
+- بِل کی طرف سے شائع کردہ پتے کے لیے نجی کلید حاصل کرنا
 
 ## نتیجہ {#conclusion}
 

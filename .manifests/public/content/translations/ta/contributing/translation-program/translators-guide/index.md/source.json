@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/translation-program/translators-guide/index.md",
-  "generatedAt": "2026-07-29T05:31:42.513Z",
-  "rootHash": "6b5e64ff603b",
+  "generatedAt": "2026-09-30T18:19:31.154Z",
+  "rootHash": "2e0b45785635",
   "tree": {
     "contentHash": "e506e2fab39d",
-    "anchorHash": "292b0560bbc0",
+    "anchorHash": "a7307eb0ffb8",
     "children": {
       "frontmatter:title": {
         "contentHash": "8fdf18774d20",
@@ -29,7 +29,7 @@
       },
       "link:0": {
         "contentHash": "7d08f5eb8cf9",
-        "anchorHash": "d06d348772a4"
+        "anchorHash": "416d56f793cb"
       },
       "prose:2": {
         "contentHash": "7902550cb3a7",
@@ -616,5 +616,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "c7a64f38c3cf12cb0e445666299a4f4df18fa3b4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

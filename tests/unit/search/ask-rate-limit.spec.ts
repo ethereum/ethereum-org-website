@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test"
 
-import { takeAskAllowance } from "@/lib/utils/askRateLimit"
+import { takeAskAllowance } from "@/lib/utils/ask"
 
 // No `localStorage` in the unit environment, so every run exercises the in-memory
 // fallback -- which is the path a reader with storage blocked takes.

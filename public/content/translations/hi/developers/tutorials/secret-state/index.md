@@ -710,8 +710,7 @@ proof.proof = {
 
 हालाँकि, हम अभी भी [Zokrates में मैप को समतल करते हैं](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), जबकि हम इसे TypeScript में कर सकते थे। इसका कारण यह है कि अन्य विकल्प, मेरी राय में, बदतर हैं।
 
-- Zokrates कोड को बूलियन का एक आयामी (one dimensional) ऐरे प्रदान करें, और दो आयामी (two dimensional) मैप प्राप्त करने के लिए `x*(height+2)
-+y` जैसे व्यंजक (expression) का उपयोग करें। यह [कोड](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) को कुछ अधिक जटिल बना देगा, इसलिए मैंने तय किया कि ट्यूटोरियल के लिए प्रदर्शन लाभ इसके लायक नहीं है।
+- Zokrates कोड को बूलियन का एक आयामी (one dimensional) ऐरे प्रदान करें, और दो आयामी (two dimensional) मैप प्राप्त करने के लिए `x*(height+2)+y` जैसे व्यंजक (expression) का उपयोग करें। यह [कोड](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) को कुछ अधिक जटिल बना देगा, इसलिए मैंने तय किया कि ट्यूटोरियल के लिए प्रदर्शन लाभ इसके लायक नहीं है।
 
 - Zokrates को एक आयामी ऐरे और दो आयामी ऐरे दोनों भेजें। हालाँकि, इस समाधान से हमें कुछ हासिल नहीं होता है। Zokrates कोड को यह सत्यापित करना होगा कि उसे प्रदान किया गया एक आयामी ऐरे वास्तव में दो आयामी ऐरे का सही प्रतिनिधित्व है। इसलिए कोई प्रदर्शन लाभ नहीं होगा।
 

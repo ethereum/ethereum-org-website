@@ -29,8 +29,10 @@ export const SITE_URL =
 
 export const IS_PRODUCTION_DEPLOY =
   process.env.NEXT_PUBLIC_CONTEXT === "production"
-export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
-export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
+// Internal path; redirects.config.js holds the one canonical invite URL.
+export const DISCORD_PATH = "/discord/"
+/** Absolute form of DISCORD_PATH, for link hrefs and JSON-LD. */
+export const DISCORD_URL = new URL(DISCORD_PATH, SITE_URL).href
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -129,6 +131,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "build",
   "participate",
   "research",
+  "organizations",
 ]
 
 // Glossary Definition Component

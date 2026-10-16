@@ -28,7 +28,8 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 5. **The sanitizer runs post-translation, not pre.** Its job is to fix Gemini-introduced artifacts (BiDi mistakes, code-fence drift, brand-name mistranslations). It receives translation outputs, never English source.
 6. **Don't add transliteration data here.** All term/brand/person transliteration policy lives in ETHGlossary's `docs/translation-policy.md` and per-language entries. The intl-pipeline consumes; it does not author.
 7. **Sanitizer fixes must split on code blocks first.** Every text transformation in `intl-sanitizer.ts` MUST start with the code-block split pattern. Modifying code-fence contents breaks Solidity / Python / TypeScript examples in tutorials.
-8. **Pipeline failures are not always pipeline bugs.** A "translation looks wrong" report may be: bad Gemini output (file upstream), missing ETHGlossary term (add there), correct per language-group policy (read translation-policy.md), or an actual pipeline bug. Triage before patching.
+8. **An untagged code fence is code.** Fence bodies never reach the model; only a prose-tagged fence (```` ```text ````, `txt`, `md`, `markdown`, `mdx` -- `PROSE_FENCE_TAGS` in `lib/shared-patterns.ts`) is translatable. To make a fence's prose translatable, tag it ```` ```text ```` in the English source. `code-fence-content` fails any other fence whose body drifts from English, comments excepted.
+9. **Pipeline failures are not always pipeline bugs.** A "translation looks wrong" report may be: bad Gemini output (file upstream), missing ETHGlossary term (add there), correct per language-group policy (read translation-policy.md), or an actual pipeline bug. Triage before patching.
 
 ## Highest-Value Gotchas
 

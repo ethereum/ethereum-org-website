@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/proof-of-work-explained/index.md",
-  "generatedAt": "2026-04-29T06:05:50.711Z",
-  "rootHash": "a7324076de83",
+  "generatedAt": "2026-09-30T19:15:46.095Z",
+  "rootHash": "f6386a89234d",
   "tree": {
-    "contentHash": "9ad4ec4dcc74",
-    "anchorHash": "8e3a434fc171",
+    "contentHash": "9b71e6fd2377",
+    "anchorHash": "c1751fffc349",
     "children": {
       "frontmatter:title": {
         "contentHash": "9df0ea3e65c3",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "3ffc8ceb4149",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "c983c585ac3c"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "a6b829b01daf"
+            "anchorHash": "3ddeb596fa81"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -235,5 +227,5 @@
       "looking-ahead-225"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

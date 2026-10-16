@@ -8,7 +8,6 @@ duration: "0:31:05"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "ethereum"
 format: presentation
 author: "以太坊基金会"
 breadcrumb: "30 分钟以太坊"

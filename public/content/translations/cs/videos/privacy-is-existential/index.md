@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Soukromí"
@@ -80,11 +79,11 @@ Maximální vytěžitelná hodnota (MEV) je nechutnou realitou Etherea. I ona m�
 
 ### Právně vymahatelné povinnosti validátorů (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Větším tahem ministerstva spravedlnosti (DOJ) v případu Pereira Bueno je to, že validátoři mají vůči sobě navzájem právně vymahatelné povinnosti kvůli veřejné povaze transakcí, které validují. A pokud jsou tyto povinnosti porušeny, validátoři by se, myslím, že si to myslí, měli navzájem žalovat. A pokud tak neučiní, stát, Jižní obvod New Yorku, by měl stíhat nepoctivé validátory za zločiny. A to nekončí jen u elektronického podvodu. Pokud vidíte transakci praní špinavých peněz nebo jste ji mohli vidět pomocí analýzy blockchainu, jak to, že nejste spolupachateli tohoto praní špinavých peněz?
+Širším záměrem ministerstva spravedlnosti (DOJ) v případu Pereira Bueno je to, že validátoři mají vůči sobě navzájem právně vymahatelné povinnosti kvůli veřejné povaze transakcí, které validují. A pokud jsou tyto povinnosti porušeny, validátoři by se, jak si podle mě myslí, měli navzájem žalovat. A pokud tak neučiní, stát, Jižní obvod New Yorku, by měl stíhat nepoctivé validátory za trestné činy. A to nekončí jen u elektronického podvodu. Pokud vidíte transakci spojenou s praním špinavých peněz nebo jste ji mohli vidět pomocí analýzy blockchainu, jak to, že nejste spolupachateli tohoto praní špinavých peněz?
 
-Pokud stavíte na verzi řetězce, která obsahuje sankcionované transakce, nejste spolupachateli obcházení sankcí? Pokud do účetní knihy vložíte podvodné transakce v hodnotě miliard dolarů, možná byste měli být donuceni je vrátit zpět. A úmyslná slepota není obhajobou. Nemůžete jednoduše říct, že jste se rozhodli nepoužít široce dostupný nástroj, jako je analýza řetězce. Úmyslné ignorování všech znalostí obsažených ve veřejném blockchainu může stále vést k potenciálním trestním obviněním a vždy bude jako takové stíháno.
+Pokud stavíte na verzi řetězce, která obsahuje sankcionované transakce, nejste spolupachateli obcházení sankcí? Pokud do účetní knihy vložíte podvodné transakce v hodnotě miliard dolarů, možná byste měli být donuceni je zvrátit. A úmyslná slepota není obhajobou. Nemůžete jednoduše říct, že jste se rozhodli nepoužít široce dostupný nástroj, jako je analýza řetězce. Úmyslné ignorování všech znalostí, které jsou vlastní veřejnému blockchainu, může stále vést k potenciálním trestním obviněním a bude vždy jako takové stíháno.
 
-Úmyslná slepota není obhajobou, ale skutečná slepota ano. Takže pokud opravdu chcete bezdůvěrnost, pokud skutečně chcete neutrální infrastrukturu, pokud chcete „hloupé trubky“ (dumb pipes), pak tyto trubky musí být skutečně slepé k tomu, co jimi protéká.
+Úmyslná slepota není obhajobou, ale skutečná slepota ano. Takže pokud opravdu chcete bezdůvěrnost, pokud skutečně chcete neutrální infrastrukturu, pokud chcete „hloupé trubky“, pak tyto trubky musí být skutečně slepé k tomu, co jimi protéká.
 
 ### Tradiční finanční kanály a SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Myslím, že to rezonuje i u profesionálů v oblasti národní bezpečnosti. Kd
 **Peter Van Valkenburgh:** Jsem prostě rád, když se lidé dozvědí o naší misi — bránit svobodu inovovat pomocí otevřených blockchainových technologií a možnost lidí používat tyto technologie soukromě. Pokud je to mise, na které vám záleží, navštivte prosím coincenter.org. Děkuji, že jste mi dali šanci si udělat reklamu. Jsme nezisková organizace financovaná dárci a spoléháme na dobrou vůli lidí, jako jste vy, kteří věří v naši misi, abychom mohli pokračovat v práci, kterou děláme. Děkuji za tuto příležitost a děkuji, že jste si poslechli mou přednášku o neutralitě.
 
 **Moderátor:** Moc vám děkuji, Petere. Líbí se mi to tričko.
+

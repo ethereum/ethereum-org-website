@@ -3,15 +3,15 @@
 import { useCallback, useMemo } from "react"
 import { RotateCcw } from "lucide-react"
 
+import CatalogCheckboxGroup from "@/components/FilterableCatalog/CatalogCheckboxGroup"
 import type {
   CatalogFilterState,
+  CatalogSelectOption,
   CatalogSetFilter,
 } from "@/components/FilterableCatalog/types"
 import { asArray, toggleId } from "@/components/FilterableCatalog/utils"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import WalletFilterGroup, { type WalletFilterOption } from "./WalletFilterGroup"
 
 // Also read by WalletsCatalog's filterFn.
 export const DEVICES_KEY = "devices"
@@ -48,11 +48,11 @@ type WalletFiltersProps = {
   locale: string
   state: CatalogFilterState
   setFilter: CatalogSetFilter
-  deviceOptions: WalletFilterOption[]
-  purchaseOptions: WalletFilterOption[]
-  networkOptions: WalletFilterOption[]
-  languageOptions: WalletFilterOption[]
-  advancedOptions: WalletFilterOption[]
+  deviceOptions: CatalogSelectOption[]
+  purchaseOptions: CatalogSelectOption[]
+  networkOptions: CatalogSelectOption[]
+  languageOptions: CatalogSelectOption[]
+  advancedOptions: CatalogSelectOption[]
   labels: WalletFiltersLabels
 }
 
@@ -159,7 +159,7 @@ export default function WalletFilters({
 
   return (
     <div>
-      <WalletFilterGroup
+      <CatalogCheckboxGroup
         locale={locale}
         label={labels.device}
         defaultOpen
@@ -168,7 +168,7 @@ export default function WalletFilters({
         onToggle={onToggleDevice}
       />
 
-      <WalletFilterGroup
+      <CatalogCheckboxGroup
         locale={locale}
         label={labels.buySell}
         defaultOpen
@@ -177,7 +177,7 @@ export default function WalletFilters({
         onToggle={onTogglePurchase}
       />
 
-      <WalletFilterGroup
+      <CatalogCheckboxGroup
         locale={locale}
         label={labels.network}
         defaultOpen
@@ -187,7 +187,7 @@ export default function WalletFilters({
         onToggle={onToggleNetwork}
       />
 
-      <WalletFilterGroup
+      <CatalogCheckboxGroup
         locale={locale}
         label={labels.language}
         scrollable
@@ -196,7 +196,7 @@ export default function WalletFilters({
         onToggle={onToggleLanguage}
       />
 
-      <WalletFilterGroup
+      <CatalogCheckboxGroup
         locale={locale}
         label={labels.advanced}
         scrollable

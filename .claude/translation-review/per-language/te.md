@@ -116,3 +116,36 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - The `testing` page title now correctly matches its site-nav label, fixing the PR #19115 nav/title mismatch class here rather than repeating it.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `policies-services` Consumer Reports stat: `సున్నా మరియు 59 శాతం మధ్య నిర్వహించబడ్డాయి` -> `సున్నా నుండి 59 శాతం మాత్రమే తొలగించగలిగాయి`; `70 శాతాన్ని కోల్పోయారు` -> `70 శాతం తొలగించబడ్డాయి` (native check welcome).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `లిడో` (glossary Lido), `డెన్‌కున్` (glossary Dencun).
+- "both" dropped (#82); `ఒక పార్టీ` political sense again (hegota:21).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` database corruption `అవినీతి` -> `పాడైపోవడం`; relational against `వ్యతిరేకంగా` -> `ఉపయోగించి`.
+- `small-business` `compare-privacy` reused address inverted to used-once -> `పదే పదే ఉపయోగించే`.
+
+**Open (warnings):**
+
+- `ఉత్పత్తి` for production recurs; rollup `రోలప్`/`రోల్అప్` mirrors glossary inconsistency; treasuries `ఖజానాలు`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.8/10
+
+- Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
+- Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.

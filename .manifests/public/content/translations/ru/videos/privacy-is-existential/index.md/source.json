@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/privacy-is-existential/index.md",
-  "generatedAt": "2026-04-29T06:03:52.658Z",
-  "rootHash": "b3f67107f926",
+  "generatedAt": "2026-09-30T19:15:50.720Z",
+  "rootHash": "df79f6332b50",
   "tree": {
-    "contentHash": "fd3fd67ff913",
-    "anchorHash": "d3976ccce74f",
+    "contentHash": "37d2af414f40",
+    "anchorHash": "2c00cb45e519",
     "children": {
       "frontmatter:title": {
         "contentHash": "4b5e7d6d8baa",
@@ -36,22 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "2ef0cd08df59",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "a4cc6bc01a92"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "5d2d3ceb7abe"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -192,7 +184,7 @@
         ]
       },
       "legally-enforceable-duties-of-validators-1523": {
-        "contentHash": "8827311c38d9",
+        "contentHash": "4e3e34e106f0",
         "anchorHash": "4b9f7d802648",
         "labelHash": "aa8f9bb05b91",
         "children": {
@@ -201,7 +193,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "66ec9cfabf31",
+            "contentHash": "27391d332bb3",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -295,5 +287,5 @@
       "qa-session-2421"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

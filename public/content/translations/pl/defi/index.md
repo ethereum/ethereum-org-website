@@ -102,9 +102,9 @@ Jako blockchain, Ethereum jest zaprojektowane do wysyłania transakcji w bezpiec
 
 #### Przesyłaj strumieniowo pieniądze na cały świat... {#stream-money}
 
-Możesz również przesyłać strumieniowo pieniądze przez Ethereum. Pozwala to na wypłacanie komuś wynagrodzenia co do sekundy, dając mu dostęp do pieniędzy, kiedy tylko ich potrzebuje. Albo wynajmować coś na sekundy, np. szafkę do przechowywania lub hulajnogę elektryczną.
+Możesz również przesyłać strumieniowo pieniądze przez Ethereum. Zamiast wysyłać jedną dużą płatność, płatności strumieniowe przesyłają małe kwoty w sposób ciągły w czasie. Pozwala to na wypłacanie komuś wynagrodzenia co do sekundy, dając mu dostęp do pieniędzy zawsze, gdy ich potrzebuje. Może to być również wykorzystane do płacenia za usługi, które są rozliczane w sposób ciągły, takie jak wynajem szafki magazynowej lub hulajnogi elektrycznej.
 
-A jeśli nie chcesz wysyłać lub przesyłać strumieniowo [ETH](/glossary/#ether) ze względu na to, jak bardzo jego wartość może się zmieniać, na Ethereum istnieją alternatywne waluty: [stablecoiny](/glossary/#stablecoin).
+A jeśli nie chcesz wysyłać ani przesyłać strumieniowo [ETH](/glossary/#ether) ze względu na to, jak bardzo jego wartość może się zmieniać, na Ethereum istnieją alternatywne waluty: [stablecoiny](/glossary/#stablecoin).
 
 <Divider />
 

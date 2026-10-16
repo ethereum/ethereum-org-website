@@ -122,3 +122,29 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Bare-acronym over-expansion hit 18 `page-apps` keys. The `DeFi` ones stay expanded: ko is the only locale whose `ui` context for that term is itself the full phrase.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.9/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-online L162 "outside wealthy countries" rendered as outskirts; L57 `강력 옵션` missing adnominal.
+- Brand script mixed within privacy-online (`크롬`/`페이스북` Hangul, Google/Safari/Brave Latin) -- native convention call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` truncated `프라이빗 체에서` -> `프라이빗 체인에서`.
+
+**Open (warnings):**
+
+- `보장` (guarantee) for promise blurs the page's promise-vs-guarantee contrast; Visa/Revolut script split; 그랜트/보조금.

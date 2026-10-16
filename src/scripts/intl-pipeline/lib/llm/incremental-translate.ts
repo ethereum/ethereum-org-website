@@ -127,6 +127,7 @@ RULES:
 - Never translate the English word "or" when it appears as a substring inside a larger word, a URL, a domain, or an identifier (for example inside "tutorial", "uniform", "information", or the ".org" in "ethers.org"). Only translate "or" when it stands alone as a separate English word.
 
 PLACEHOLDER RULES:
+HTML comment placeholders like \`<!-- CODE_BLOCK_0 -->\` are code block stand-ins managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same line. Do NOT remove, translate, modify, or replace them with code. They will be restored automatically after translation.
 Self-closing placeholders (preserve exactly): <HTML-PLACEHOLDER-CODEBLOCK-****** />, <HTML-PLACEHOLDER-CODE-****** />, <HTML-PLACEHOLDER-IMAGE-****** />
 Wrapper placeholders (translate text between tags): <HTML-PLACEHOLDER-LINK-******>text</...>, <HTML-PLACEHOLDER-HTMLTAG-******>text</...>, <HTML-PLACEHOLDER-COMPONENT-******>text</...>
 You MAY reorder wrapper placeholders to match natural ${targetLanguage} word order.

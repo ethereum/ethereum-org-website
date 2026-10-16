@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/pow-vs-pos/index.md",
-  "generatedAt": "2026-04-28T23:59:21.952Z",
-  "rootHash": "a3666f04325a",
+  "generatedAt": "2026-09-30T19:13:21.152Z",
+  "rootHash": "9abb5b9d1431",
   "tree": {
-    "contentHash": "886842fdf5c8",
-    "anchorHash": "0f09c87f7aef",
+    "contentHash": "86d75a8bce0f",
+    "anchorHash": "195d3e1afffd",
     "children": {
       "frontmatter:title": {
         "contentHash": "1cb67b51059e",
@@ -36,26 +36,21 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "db09542a1030",
+        "contentHash": "f5818652a990",
+        "anchorHash": "97a433a3f3b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "b0400ee6f47d"
+            "anchorHash": "3ddeb596fa81"
           },
           "1": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "5d2d3ceb7abe"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "c983c585ac3c"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -380,5 +375,5 @@
       "wrap-up-14014"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

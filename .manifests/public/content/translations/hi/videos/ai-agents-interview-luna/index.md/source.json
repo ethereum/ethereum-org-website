@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/ai-agents-interview-luna/index.md",
-  "generatedAt": "2026-04-28T22:43:10.219Z",
-  "rootHash": "ae7096412e2b",
+  "generatedAt": "2026-09-30T18:34:10.444Z",
+  "rootHash": "0a75fd1e057d",
   "tree": {
-    "contentHash": "af44aadb792c",
-    "anchorHash": "a35c5fa3468e",
+    "contentHash": "cc7463f40de8",
+    "anchorHash": "d22f70a18fc4",
     "children": {
       "frontmatter:title": {
         "contentHash": "7d9a05c3d60c",
@@ -36,32 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "72550c4fc2af",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "2290d7d70dea"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "32e83e92d45d"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "8c70b25cbbbe"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "c40cc25b38bd"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2",
-          "3"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -425,5 +407,5 @@
       "closing-thoughts-10753"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

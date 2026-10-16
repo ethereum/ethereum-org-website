@@ -1,15 +1,19 @@
 import { expect, test } from "@playwright/test"
 
 import {
-  Citations,
-  citedSources,
   collapseRepeatedCitations,
-  groupExcerpts,
   isAllowedAnswerLink,
-  matchReferral,
   scrubQuery,
   withCitationLinks,
 } from "@/lib/utils/ask"
+
+import {
+  Citations,
+  citedSources,
+  groupExcerpts,
+  matchReferral,
+  withLeads,
+} from "../../../app/api/ask/grounding"
 
 const record = (url: string, content: string) => ({
   url,
@@ -57,6 +61,26 @@ test.describe("groupExcerpts", () => {
       record(`https://ethereum.org/videos/${slug}/#x`, slug)
     )
     expect(groupExcerpts(videos, { maxVideoPages: 2 })).toHaveLength(2)
+  })
+})
+
+test.describe("withLeads", () => {
+  const excerpt = {
+    url: "/dao/#launch",
+    headings: ["DAO"],
+    text: "Launch a DAO",
+  }
+
+  test("puts the page's opening paragraph first", () => {
+    const leads = new Map([["/dao/", "A DAO is..."]])
+    expect(withLeads([excerpt], leads)[0].text).toBe(
+      "A DAO is...\n\nLaunch a DAO"
+    )
+  })
+
+  test("does not repeat a lead the excerpt already holds", () => {
+    const leads = new Map([["/dao/", "Launch a DAO"]])
+    expect(withLeads([excerpt], leads)[0].text).toBe("Launch a DAO")
   })
 })
 

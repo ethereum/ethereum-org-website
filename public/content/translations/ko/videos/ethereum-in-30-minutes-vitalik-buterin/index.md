@@ -8,7 +8,6 @@ duration: "0:31:05"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "ethereum"
 format: presentation
 author: "이더리움 재단"
 breadcrumb: "30분 만에 알아보는 이더리움"

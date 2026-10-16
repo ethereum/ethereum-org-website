@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privasi"
@@ -78,13 +77,13 @@ Ketika istilah validasi jujur dan validator jujur muncul dalam instruksi juri da
 
 Nilai yang dapat diekstraksi penambang (MEV) adalah realitas yang menjijikkan dari Ethereum. Ini juga berawal dari kurangnya privasi. Sifat publik dari transaksi DEX-lah yang memungkinkannya dengan mudah terkena serangan sandwich oleh validator. Jauh lebih sulit, mungkin bukan tidak mungkin, tetapi jauh lebih sulit untuk melakukan serangan sandwich pada transaksi jika Anda tidak dapat melihat fundamental ekonominya. Namun saya tidak hanya menginginkan privasi lapisan dasar sebagai cara untuk mencegah MEV. Saya menginginkannya sebagai cara untuk membela validator.
 
-### Tugas validator yang dapat ditegakkan secara hukum (15:23) {#legally-enforceable-duties-of-validators-1523}
+### Kewajiban validator yang dapat ditegakkan secara hukum (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-Taktik DOJ yang lebih besar dalam kasus Pereira Bueno adalah bahwa validator memiliki tugas yang dapat ditegakkan secara hukum satu sama lain karena sifat publik dari transaksi yang mereka validasi. Dan jika tugas tersebut dilanggar, validator, saya pikir mereka berpikir, harus saling menggugat. Dan jika tidak, negara, Distrik Selatan New York, harus menuntut validator yang tidak jujur atas kejahatan. Dan ini tidak hanya berhenti pada penipuan kawat. Jika Anda dapat melihat transaksi pencucian uang atau bisa saja melihatnya menggunakan analisis rantai blok, lalu bagaimana Anda tidak terlibat dalam pencucian uang tersebut?
+Taktik DOJ yang lebih besar dalam kasus Pereira Bueno adalah bahwa validator memiliki kewajiban yang dapat ditegakkan secara hukum satu sama lain karena sifat publik dari transaksi yang mereka validasi. Dan jika kewajiban tersebut dilanggar, validator, saya rasa mereka pikir, harus saling menuntut. Dan jika tidak, negara, Distrik Selatan New York, harus menuntut validator yang tidak jujur atas kejahatan. Dan ini tidak hanya berhenti pada penipuan kawat. Jika Anda dapat melihat transaksi pencucian uang atau bisa saja melihatnya menggunakan analisis rantai blok, lalu bagaimana mungkin Anda tidak terlibat dalam pencucian uang tersebut?
 
-Jika Anda membangun di atas versi rantai yang memiliki transaksi yang disanksi di dalamnya, apakah Anda tidak terlibat dalam penghindaran sanksi? Jika Anda memasukkan transaksi penipuan bernilai miliaran dolar ke dalam buku besar, mungkin Anda harus dipaksa untuk membatalkannya. Dan kebutaan yang disengaja bukanlah pembelaan. Anda tidak bisa begitu saja mengatakan bahwa Anda memutuskan untuk tidak menggunakan alat yang tersedia secara luas seperti analisis rantai. Secara sengaja mengabaikan semua pengetahuan yang melekat dalam rantai blok publik mungkin masih mengarah pada potensi tuntutan pidana dan akan selalu dituntut seperti itu.
+Jika Anda membangun di atas versi rantai yang memiliki transaksi yang terkena sanksi di dalamnya, bukankah Anda terlibat dalam penghindaran sanksi? Jika Anda memasukkan transaksi penipuan bernilai miliaran dolar ke dalam buku besar, mungkin Anda harus dipaksa untuk memutarnya kembali. Dan kebutaan yang disengaja bukanlah sebuah pembelaan. Anda tidak bisa begitu saja mengatakan bahwa Anda memutuskan untuk tidak menggunakan alat yang tersedia secara luas seperti analisis rantai. Secara sengaja mengabaikan semua pengetahuan yang melekat pada rantai blok publik masih dapat mengarah pada potensi tuntutan pidana dan akan selalu dituntut seperti itu.
 
-Kebutaan yang disengaja bukanlah pembelaan, tetapi kebutaan yang sebenarnya adalah pembelaan. Jadi jika Anda benar-benar menginginkan ketiadaan kebutuhan akan kepercayaan (trustlessness), jika Anda benar-benar menginginkan infrastruktur yang netral, jika Anda menginginkan pipa bodoh (dumb pipes), maka pipa tersebut harus benar-benar buta terhadap apa yang mengalir melaluinya.
+Kebutaan yang disengaja bukanlah sebuah pembelaan, tetapi kebutaan yang sebenarnya adalah pembelaan. Jadi, jika Anda benar-benar menginginkan sifat tanpa kepercayaan, jika Anda benar-benar menginginkan infrastruktur yang netral, jika Anda menginginkan pipa bodoh, maka pipa tersebut harus benar-benar buta terhadap apa yang mengalir di dalamnya.
 
 ### Saluran keuangan tradisional dan SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Saya pikir ini juga beresonansi dengan para profesional keamanan nasional. Anda 
 **Peter Van Valkenburgh:** Saya hanya senang orang-orang belajar tentang misi kami — untuk membela kebebasan berinovasi menggunakan teknologi rantai blok terbuka dan kemampuan orang-orang untuk menggunakan teknologi ini secara privat. Jika itu adalah misi yang Anda pedulikan, silakan kunjungi coincenter.org. Terima kasih telah memberi saya kesempatan untuk mempromosikannya. Kami adalah lembaga nirlaba yang didanai oleh donatur dan kami mengandalkan niat baik orang-orang seperti Anda yang percaya pada misi kami untuk terus melakukan pekerjaan yang kami lakukan. Terima kasih atas kesempatan ini dan terima kasih telah mendengarkan pembicaraan saya tentang netralitas.
 
 **Pembawa Acara:** Terima kasih banyak, Peter. Saya suka kausnya.
+

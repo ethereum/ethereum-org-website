@@ -130,7 +130,7 @@ We are going to use [Vite](https://vite.dev/) and [React](https://react.dev/). T
 
 #### The WASM component {#wasm}
 
-The source code that compiles into WASM is written in [Rust](https://rust-lang.org/). You can see it in [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). This code is primarily an interface between the JavaScript code and [the `eth-stealth-addresses` library](https://github.com/kassandraoftroy/eth-stealth-addresses).
+The source code that compiles into WASM is written in [Rust](https://rust-lang.org/). You can see it in [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). This code is primarily an interface between the JavaScript code and [the `eth-stealth-addresses` library](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -378,7 +378,7 @@ This file is the main component of the application. It is a container that inclu
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-When we use [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), it creaates two files we use here: a wasm file with the actual code (here, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) and a JavaScript file with the definitions to use it (here, `src/rust_wasm/pkg/rust_wasm.js`). The default export of that JavaScript file is code that needs to run to initiate WASM.
+When we use [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), it creates two files we use here: a wasm file with the actual code (here, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) and a JavaScript file with the definitions to use it (here, `src/rust-wasm/pkg/rust_wasm.js`). The default export of that JavaScript file is code that needs to run to initiate WASM.
 
 ```jsx
 function App() {

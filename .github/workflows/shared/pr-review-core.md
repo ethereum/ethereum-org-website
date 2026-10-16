@@ -11,6 +11,8 @@ Start from these files (do NOT re-fetch the diff; it is already capped):
 - `/tmp/gh-aw/agent/pr-meta.json` — PR metadata (title, body, author, files, base/head)
 - `/tmp/gh-aw/agent/pr-diff.patch` — the diff, capped at 3000 lines
 
+If the diff contains a line starting with `TRUNCATED:`, you have not seen the whole change. Say so in the verdict summary (e.g. "reviewed the first 3000 lines only"). Fetch other changed files only when one is directly needed to confirm a blocking finding — do not try to read the whole PR.
+
 ## Step 2 — classify the lane
 
 Pick exactly one lane from the changed file paths (labels are a hint, paths are the truth):
@@ -62,9 +64,7 @@ Format (keep the visible part under ~250 words; put detail in a `<details>` bloc
 </details>
 ```
 
-<!-- Coupling: .github/scripts/intake-evidence.sh parses this rendered header — it matches the full "First-pass review — <emoji> <wording>" line, emoji included, to build `aiReview.verdict` for the intake digest. Change the header format, an emoji, or any verdict wording and that script must be updated too, or the detection silently becomes always-false. -->
-
-`<VERDICT>` is exactly one of:
+`<VERDICT>` is exactly one of the following, with nothing appended to the header line (put qualifiers in the summary paragraph):
 - `✅ Looks mergeable` — scope is sound, conventions pass, no failing checks (CI may still be running)
 - `🔧 Needs work` — actionable blocking items exist; list them
 - `🗑️ Likely close` — spam, duplicate of a merged change, or contradicts documented policy; say why in one sentence, politely

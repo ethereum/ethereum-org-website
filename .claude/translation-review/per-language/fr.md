@@ -85,3 +85,30 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - Structurally spotless: anchors, fences, backticks, guillemets, JSON parity and tu/vous all exact, and the run lands the long-outstanding EOA custody fix.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- open-access `pièces stables (stablecoins)` -> `stablecoins` (glossary term).
+
+**Open (warnings):**
+
+- Frame transactions split `Transactions Frame` (hegota) vs `Transactions de trame` (privacy) -- needs a native pick, no glossary entry.
+- `Navigateur Mullvad` should stay `Mullvad Browser`; `Institut Ludlow` vs `Ludlow Institute`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing mix; `Trésoreries` for treasuries; credentials `identifiants` vs `attestations`; `DLT privé` gender.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).

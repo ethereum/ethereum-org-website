@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/design-principles/index.md",
-  "generatedAt": "2026-06-08T08:17:03.359Z",
-  "rootHash": "cabe908bdb9b",
+  "generatedAt": "2026-09-30T18:18:00.081Z",
+  "rootHash": "9641ce07e79c",
   "tree": {
     "contentHash": "7815cbce54a2",
-    "anchorHash": "ce2563a9a642",
+    "anchorHash": "0e035bc11e1f",
     "children": {
       "frontmatter:title": {
         "contentHash": "864029c21baa",
@@ -203,7 +203,7 @@
       },
       "give-feedback": {
         "contentHash": "8b8dd5980f2d",
-        "anchorHash": "c253fe215386",
+        "anchorHash": "fc4d23b3c905",
         "labelHash": "9fe6a46e0ba3",
         "children": {
           "_label": {
@@ -216,7 +216,7 @@
           },
           "link:0": {
             "contentHash": "3a9884e3ad9a",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "prose:3": {
             "contentHash": "d082c73ca298",
@@ -256,5 +256,5 @@
       "give-feedback"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-collectibles.json",
-  "generatedAt": "2026-07-28T21:56:44.173Z",
-  "rootHash": "46b9b0c3a6ed",
+  "generatedAt": "2026-09-30T18:08:27.950Z",
+  "rootHash": "4e6f812ec36d",
   "tree": {
     "contentHash": "add9f33cf991",
-    "anchorHash": "56eceb103593",
+    "anchorHash": "f9d75714a6c6",
     "children": {
       "page-collectibles-already-desc": {
         "contentHash": "14ad5df25dd5",
@@ -239,7 +239,7 @@
       },
       "page-collectibles-social-instructions-1": {
         "contentHash": "a375472438b3",
-        "anchorHash": "436ac9568cee",
+        "anchorHash": "d6076105569d",
         "children": {
           "prose:1": {
             "contentHash": "9328da69749e",
@@ -247,7 +247,7 @@
           },
           "html-tag:0": {
             "contentHash": "3a9884e3ad9a",
-            "anchorHash": "f002990b159f"
+            "anchorHash": "e68448a3b22f"
           }
         },
         "childrenOrder": [
@@ -373,5 +373,5 @@
       "page-collectibles-translations-title"
     ]
   },
-  "sourceCommitSha": "f99d74bf2ad4ecaa64f42bc984735fecc8fe83af"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

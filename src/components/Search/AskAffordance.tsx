@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useEffect, useEffectEvent, useRef, useState } from "react"
 import { Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { createPortal } from "react-dom"
@@ -10,16 +10,8 @@ import { cn } from "@/lib/utils/cn"
 import AskPanel, { type AskTarget } from "./AskPanel"
 
 /**
- * The Ask button and the answer panel, mounted into markup the search library owns.
- *
- * Neither the form nor the results area takes a prop for this, so both are reached by
- * portal once the modal has rendered. A third vendor patch was the alternative; this keeps
- * the change on our side.
- *
- * Self-contained on purpose. The library rebuilds its autocomplete -- and with it the
- * input's contents -- whenever a prop it memoizes on changes identity, so holding this
- * state in `SearchModal` cleared the input on the first keystroke. Nothing here re-renders
- * the component that owns the modal.
+ * The Ask button and answer panel, portalled into markup the search library owns. State
+ * lives here, not in `SearchModal`: re-rendering the modal's owner clears the input.
  */
 const AskAffordance = () => {
   const t = useTranslations("common")
@@ -29,22 +21,14 @@ const AskAffordance = () => {
   const [asked, setAsked] = useState("")
   /** Bumped per ask, so the same question can be asked again after a throttle. */
   const [attempt, setAttempt] = useState(0)
-  /**
-   * A throttled ask never reached the model, so the question is still unanswered and the
-   * button has to come back -- being the same text as last time is not a reason to stay
-   * disabled when last time did not happen.
-   */
+  /** A throttled ask never reached the model, so the same text may be asked again. */
   const [retryable, setRetryable] = useState(false)
   const [targets, setTargets] = useState<AskTarget[]>([])
   /** Index into `targets` while the highlight is in the answer, else null. */
   const [activeSource, setActiveSource] = useState<number | null>(null)
-  /**
-   * Whether the library is holding a highlighted row. Watched rather than read on
-   * keypress because the button's ring depends on it -- and a mouse hover sets it too,
-   * which is right: if hovering a result arms Enter for that result, the button is no
-   * longer what Enter does.
-   */
+  /** Whether the library holds a highlighted row; if so, Enter is the library's. */
   const [resultHighlighted, setResultHighlighted] = useState(false)
+  const throttleTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   useEffect(() => {
     // The modal renders in the same commit, so one frame is enough to find it.
@@ -52,21 +36,16 @@ const AskAffordance = () => {
       const form = document.querySelector<HTMLElement>(".DocSearch-Form")
       const list = document.querySelector<HTMLElement>(".DocSearch-Dropdown")
       if (list) {
-        // Prepended, not portalled straight into the dropdown: a portal appends, and Tab
-        // follows the DOM rather than the visual order, so Dismiss sat after every
-        // result. Being first in the DOM also retires the CSS ordering this needed.
+        // Prepended so DOM, tab and visual order agree.
         const panelSlot = document.createElement("div")
         panelSlot.className = "DocSearch-Ask-panel-slot"
         list.prepend(panelSlot)
         setDropdown(panelSlot)
       }
       if (!form) return
-      // Last in the form, after the clear button. Ahead of it reads better and tabs
-      // better, but the clear button only appears once there is something to clear, and
-      // anything before it jumps sideways when it does. Cmd/Ctrl+Enter is the way in
-      // that does not depend on reaching the button.
+      // Last in the form, so the clear button appearing never shifts it.
       const slot = document.createElement("span")
-      slot.className = "DocSearch-Ask-slot"
+      slot.className = "flex shrink-0 items-center"
       form.append(slot)
       setHost(slot)
     })
@@ -77,37 +56,41 @@ const AskAffordance = () => {
 
   useEffect(() => () => host?.remove(), [host])
 
-  // The library owns the input and exposes neither its value nor a change event.
-  const ask = useCallback((value: string) => {
+  useEffect(() => () => clearTimeout(throttleTimer.current), [])
+
+  const ask = (value: string) => {
+    clearTimeout(throttleTimer.current)
     setTargets([])
     setActiveSource(null)
     setRetryable(false)
     setAttempt((count) => count + 1)
     setAsked(value)
-  }, [])
+  }
 
-  const handleThrottled = useCallback((retryAfter: number) => {
-    const timer = setTimeout(() => setRetryable(true), retryAfter * 1000)
-    throttleTimer.current = timer
-  }, [])
+  const handleThrottled = (retryAfter: number) => {
+    clearTimeout(throttleTimer.current)
+    throttleTimer.current = setTimeout(
+      () => setRetryable(true),
+      retryAfter * 1000
+    )
+  }
 
-  const handleTargets = useCallback((next: AskTarget[]) => {
+  const handleTargets = (next: AskTarget[]) => {
     setTargets(next)
     setActiveSource(null)
-  }, [])
+  }
 
-  const disabled = !query || query === asked
+  const clear = () => {
+    clearTimeout(throttleTimer.current)
+    setRetryable(false)
+    setQuery("")
+    setTargets([])
+    setActiveSource(null)
+    setAsked("")
+  }
+
+  const disabled = !query || (query === asked && !retryable)
   const armed = !disabled && activeSource === null && !resultHighlighted
-
-  const throttleTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
-  const askedRef = useRef("")
-  const sourcesRef = useRef<AskTarget[]>([])
-  const activeSourceRef = useRef<number | null>(null)
-  askedRef.current = asked
-  sourcesRef.current = targets
-  activeSourceRef.current = activeSource
-  const retryableRef = useRef(false)
-  retryableRef.current = retryable
 
   useEffect(() => {
     const input =
@@ -121,122 +104,99 @@ const AskAffordance = () => {
     return () => observer.disconnect()
   }, [host])
 
-  useEffect(() => {
-    const input =
-      host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
-    if (!input) return
-    // The answer stays put while the query changes: the results underneath it keep
-    // updating on every keystroke, which is the point of showing both, and the panel
-    // names the question it answered so the pair cannot be misread.
-    const read = () => {
+  // The library exposes neither the input's value nor a change event.
+  const onInput = useEffectEvent((input: HTMLInputElement) => {
+    const value = input.value.trim()
+    // Emptying the box starts over; editing keeps the answer while results update.
+    if (!value) return clear()
+    setQuery(value)
+    setActiveSource(null)
+  })
+
+  /**
+   * Enter asks and the arrows walk the answer's targets before the results. Captured so
+   * it runs before the library; any key not claimed falls through to it.
+   */
+  const onKeyDown = useEffectEvent(
+    (input: HTMLInputElement, keyEvent: KeyboardEvent) => {
       const value = input.value.trim()
-      // Emptying the box is starting over, the same as pressing clear. Editing is not:
-      // the answer stays while the reader refines what they typed.
-      if (!value) return clear()
-      setQuery(value)
-      // Typing drops the highlight, as it does for the library's own rows -- otherwise
-      // Enter follows a source chosen for the previous query.
-      setActiveSource(null)
-    }
-    /**
-     * Enter asks, and the arrow keys walk the answer's sources before reaching the
-     * results. Captured on the input so it runs before the library's own handler, and
-     * everything we do not claim falls through to it untouched.
-     *
-     * No result is highlighted to begin with -- `defaultActiveItemId` is null on this
-     * locale -- so Enter is free until the reader arrows into the list, and the library
-     * takes it back the moment they do. Stepping past the last source simply stops
-     * claiming the key: the library's own index is still null, so its next ArrowDown
-     * lands on the first result with nothing double-advancing.
-     */
-    const scrollToAnswer = () =>
-      input
-        .closest(".DocSearch-Modal")
-        ?.querySelector(".DocSearch-Dropdown")
-        ?.scrollTo({ top: 0 })
+      const activeItem = input.getAttribute("aria-activedescendant")?.trim()
+      const scrollToAnswer = () =>
+        input
+          .closest(".DocSearch-Modal")
+          ?.querySelector(".DocSearch-Dropdown")
+          ?.scrollTo({ top: 0 })
+      const claim = () => {
+        keyEvent.preventDefault()
+        keyEvent.stopPropagation()
+      }
 
-    const activeItem = () =>
-      input.getAttribute("aria-activedescendant")?.trim() || ""
-
-    const intercept = (thisEvent: KeyboardEvent) => {
-      const value = input.value.trim()
-
-      if (thisEvent.key === "Enter") {
-        const source = activeSourceRef.current
-        if (source !== null) {
-          const target = sourcesRef.current[source]
+      if (keyEvent.key === "Enter") {
+        if (activeSource !== null) {
+          const target = targets[activeSource]
           if (!target) return
-          thisEvent.preventDefault()
-          thisEvent.stopPropagation()
+          claim()
           window.location.assign(target.url)
           return
         }
-        // A highlighted result belongs to the library.
-        const repeat = value === askedRef.current && !retryableRef.current
-        if (activeItem() || !value || repeat) return
-        thisEvent.preventDefault()
-        thisEvent.stopPropagation()
+        const repeat = value === asked && !retryable
+        if (activeItem || !value || repeat) return
+        claim()
         ask(value)
         return
       }
 
-      if (thisEvent.key !== "ArrowDown" && thisEvent.key !== "ArrowUp") return
-      const count = sourcesRef.current.length
+      if (keyEvent.key !== "ArrowDown" && keyEvent.key !== "ArrowUp") return
+      const count = targets.length
       if (!count) return
-      const current = activeSourceRef.current
-      const claim = (next: number | null) => {
-        thisEvent.preventDefault()
-        thisEvent.stopPropagation()
-        setActiveSource(next)
-      }
 
-      if (thisEvent.key === "ArrowDown") {
-        if (current === null && !activeItem()) {
+      if (keyEvent.key === "ArrowDown") {
+        if (activeSource === null && !activeItem) {
+          claim()
           scrollToAnswer()
-          return claim(0)
+          return setActiveSource(0)
         }
-        if (current !== null && current < count - 1) return claim(current + 1)
-        if (current !== null) setActiveSource(null)
+        if (activeSource !== null && activeSource < count - 1) {
+          claim()
+          return setActiveSource(activeSource + 1)
+        }
+        // Past the last target: unclaimed, so the library moves to its first row.
+        if (activeSource !== null) setActiveSource(null)
         return
       }
 
-      if (current !== null) {
-        // Back at the top of the answer, so put the answer itself back in view: the
-        // reader may have scrolled past it on the way down.
-        if (current === 0) scrollToAnswer()
-        return claim(current > 0 ? current - 1 : null)
+      if (activeSource !== null) {
+        claim()
+        if (activeSource === 0) scrollToAnswer()
+        return setActiveSource(activeSource > 0 ? activeSource - 1 : null)
       }
-      // Coming up out of the library's first row. Deliberately not claimed: the library
-      // has to see this key to step off that row, and preventing it left the row active
-      // forever, so every later ArrowUp re-entered the answer and the results became
-      // unreachable. It moves to no row at all -- nothing is highlighted by default --
-      // and we take the highlight at the same moment.
-      if (activeItem().endsWith("-item-0")) setActiveSource(count - 1)
+      // Up off the library's first row: left unclaimed so the library releases the row.
+      if (activeItem?.endsWith("-item-0")) setActiveSource(count - 1)
     }
+  )
 
-    // The clear button is a form reset, which changes the value without dispatching
-    // `input` -- so without this the query went stale and the answer outlived the box
-    // that produced it. Clearing the query clears the answer: nothing on screen would
-    // say what it answered.
-    const clear = () => {
-      clearTimeout(throttleTimer.current)
-      setRetryable(false)
-      setQuery("")
-      setTargets([])
-      setActiveSource(null)
-      setAsked("")
-    }
+  // The clear button is a form reset, which dispatches no `input` event.
+  const onReset = useEffectEvent(() => clear())
 
-    read()
-    input.form?.addEventListener("reset", clear)
-    input.addEventListener("input", read)
-    input.addEventListener("keydown", intercept, true)
+  useEffect(() => {
+    const input =
+      host?.parentElement?.querySelector<HTMLInputElement>(".DocSearch-Input")
+    if (!input) return
+    const handleInput = () => onInput(input)
+    const handleKeyDown = (keyEvent: KeyboardEvent) =>
+      onKeyDown(input, keyEvent)
+    const handleReset = () => onReset()
+    handleInput()
+    input.form?.addEventListener("reset", handleReset)
+    input.addEventListener("input", handleInput)
+    input.addEventListener("keydown", handleKeyDown, true)
     return () => {
-      input.form?.removeEventListener("reset", clear)
-      input.removeEventListener("input", read)
-      input.removeEventListener("keydown", intercept, true)
+      input.form?.removeEventListener("reset", handleReset)
+      input.removeEventListener("input", handleInput)
+      input.removeEventListener("keydown", handleKeyDown, true)
     }
-  }, [host, ask])
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Effect Events are not deps; this plugin predates them
+  }, [host])
 
   return (
     <>
@@ -245,15 +205,16 @@ const AskAffordance = () => {
           <button
             type="button"
             className={cn(
-              "DocSearch-Ask-trigger",
+              "ms-2 flex shrink-0 items-center gap-1 rounded-full border border-solid border-primary px-2 py-1 text-xs text-primary enabled:hover:bg-primary-low-contrast disabled:border-disabled disabled:text-disabled",
               // Enter reaches the button only while nothing else holds the highlight.
-              armed && "DocSearch-Ask-trigger--armed"
+              armed &&
+                "outline outline-2 outline-offset-2 outline-primary-hover"
             )}
             title={t("docsearch-ask-ai")}
             onClick={() => ask(query)}
             disabled={disabled}
           >
-            <Sparkles />
+            <Sparkles className="size-3.5" />
             <span>{t("docsearch-ask-ai")}</span>
           </button>,
           host
@@ -262,9 +223,9 @@ const AskAffordance = () => {
         dropdown &&
         createPortal(
           <AskPanel
+            key={`${attempt}:${asked}`}
             query={asked}
             onDismiss={() => setAsked("")}
-            attempt={attempt}
             onThrottled={handleThrottled}
             onTargets={handleTargets}
             activeTarget={activeSource}

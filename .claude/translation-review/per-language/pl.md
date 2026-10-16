@@ -120,3 +120,36 @@ Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`
 
 - The run corrects more ETHGlossary deviations than it introduces: `Maszyna Wirtualna Ethereum (EVM)`, capitalized `Sieć główna`, six acronym expansions.
 
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-online `vpn-table-3-not` `już nie` negation shift; "among the weakest" -> "the weakest"; F-Droid `darmowego` (#83).
+- hegota:21 committee referent (each member proposes).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `swapy` -> `wymiany` (glossary).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- audited -> `zbadanych`; policy -> `polityczną`; twoj/Twoj capitalization mixed.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: enterprise JSON compare-row-auditability `Publiczne i weryfikowalne` should agree with feminine row label (`Publiczna i weryfikowalna`).

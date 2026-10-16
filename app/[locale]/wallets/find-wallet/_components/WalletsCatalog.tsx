@@ -11,7 +11,10 @@ import {
 } from "react"
 
 import FilterableCatalog from "@/components/FilterableCatalog"
-import type { CatalogFilterState } from "@/components/FilterableCatalog/types"
+import type {
+  CatalogFilterState,
+  CatalogSelectOption,
+} from "@/components/FilterableCatalog/types"
 import { asArray } from "@/components/FilterableCatalog/utils"
 import { Section } from "@/components/ui/section"
 
@@ -24,7 +27,6 @@ import { WALLET_PERSONAS, type WalletPersonaId } from "@/data/wallets/personas"
 
 import WalletCard from "./WalletCard"
 import WalletDetailModal, { type WalletModalLabels } from "./WalletDetailModal"
-import type { WalletFilterOption } from "./WalletFilterGroup"
 import WalletFilters, {
   ADVANCED_KEY,
   ALL_FILTER_KEYS,
@@ -76,7 +78,7 @@ export type WalletCatalogLabels = {
 /** Built on the server: stable references keep the memoized filter groups quiet. */
 export type WalletFilterOptions = Record<
   (typeof ALL_FILTER_KEYS)[number],
-  WalletFilterOption[]
+  CatalogSelectOption[]
 >
 
 type WalletsCatalogProps = {

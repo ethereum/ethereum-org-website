@@ -21,6 +21,22 @@ type RetryByStatus = NonNullable<
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms))
 
+/** Run `fn` over `items` in chunks of `batchSize`, pausing `delayMs` between chunks; results keep input order. */
+export async function parallelBatch<T, R>(
+  items: T[],
+  fn: (item: T) => Promise<R>,
+  batchSize: number,
+  delayMs = 0
+): Promise<R[]> {
+  const results: R[] = []
+  for (let i = 0; i < items.length; i += batchSize) {
+    const batch = items.slice(i, i + batchSize)
+    results.push(...(await Promise.all(batch.map((item) => fn(item)))))
+    if (delayMs && i + batchSize < items.length) await sleep(delayMs)
+  }
+  return results
+}
+
 const RETRY_STRATEGY = { strategy: "backoff" as const, maxAttempts: 3 }
 
 const RETRY_BY_STATUS: RetryByStatus = {

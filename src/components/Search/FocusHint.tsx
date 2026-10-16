@@ -22,7 +22,8 @@ const FocusHint = () => {
       const form = document.querySelector<HTMLElement>(".DocSearch-Form")
       if (!form) return
       const host = document.createElement("span")
-      host.className = "DocSearch-Focus-hint"
+      // Desktop only: there is no `/` key to press on touch.
+      host.className = "mx-2 hidden shrink-0 items-center md:flex"
       // Ahead of the clear button, so appearing and disappearing never shifts it or the
       // Ask button beyond it. The clear button is always in the DOM -- the library only
       // hides it while the query is empty -- so this lands in the same place either way.
@@ -51,7 +52,7 @@ const FocusHint = () => {
   }, [slot])
 
   if (!slot || !away) return null
-  return createPortal(<KBD className="min-w-0">/</KBD>, slot)
+  return createPortal(<KBD className="min-w-0 text-sm">/</KBD>, slot)
 }
 
 export default FocusHint

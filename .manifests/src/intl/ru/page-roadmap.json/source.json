@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-07-27T19:27:27.940Z",
-  "rootHash": "7294b02f1cef",
+  "generatedAt": "2026-09-30T18:16:38.595Z",
+  "rootHash": "4982ae2e333f",
   "tree": {
-    "contentHash": "27fee54537ea",
-    "anchorHash": "8f795bcdda29",
+    "contentHash": "981a8f268b7b",
+    "anchorHash": "62c27c78de6d",
     "children": {
       "page-roadmap-title": {
         "contentHash": "be50ffa0fc02",
@@ -482,7 +482,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-pectra-balance-item-1": {
-        "contentHash": "125e94daec32",
+        "contentHash": "000f198719d8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-pectra-blob-title": {
@@ -490,7 +490,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-pectra-blob-item-1": {
-        "contentHash": "1b3b82608d82",
+        "contentHash": "f693422673fd",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-fusaka-peerdas-title": {
@@ -526,23 +526,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-fusaka-gas-item-2": {
-        "contentHash": "548d68f3b6a8",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-roadmap-fusaka-additional-title": {
-        "contentHash": "68841a81a73d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-roadmap-fusaka-additional-item-1": {
-        "contentHash": "de1e4d8a716d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-roadmap-fusaka-additional-item-2": {
-        "contentHash": "d0bab67dbdb1",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-roadmap-fusaka-additional-item-3": {
-        "contentHash": "0dde1b75afc5",
+        "contentHash": "edecca6217d9",
         "anchorHash": "e3b0c44298fc"
       },
       "page-roadmap-glamsterdam-epbs-title": {
@@ -573,12 +557,147 @@
         "contentHash": "491593e13b5c",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-hegota-discussed-title": {
-        "contentHash": "020ebc6d0ddd",
+      "page-roadmap-hegota-focil-title": {
+        "contentHash": "5edc5ce4c04c",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-roadmap-hegota-discussed-item-1": {
-        "contentHash": "41f1d86ec498",
+      "page-roadmap-hegota-focil-item-1": {
+        "contentHash": "e61abd879424",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-focil-item-2": {
+        "contentHash": "1b7aa96108ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-focil-item-3": {
+        "contentHash": "dfea44731eb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-frame-title": {
+        "contentHash": "a877c2d3d314",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-frame-item-1": {
+        "contentHash": "94152c0efc68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-frame-item-2": {
+        "contentHash": "5dba36ba3e82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-frame-item-3": {
+        "contentHash": "c2db5b237824",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-hegota-scope-note": {
+        "contentHash": "d0698e683cc6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-heading": {
+        "contentHash": "f8b5b18e8593",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-phase-devnet": {
+        "contentHash": "80ab63823af0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-target": {
+        "contentHash": "b3f2d38039bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-activated": {
+        "contentHash": "027a5f5711dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-not-confirmed": {
+        "contentHash": "0dabb4d53711",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-next": {
+        "contentHash": "4fc498f7c3ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-track": {
+        "contentHash": "fdf181f82d1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-phase-planning": {
+        "contentHash": "c29f7bd0323c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-quarter": {
+        "contentHash": "674d8568b191",
+        "anchorHash": "eb699e1fed22",
+        "children": {
+          "prose:2": {
+            "contentHash": "4ae81572f06e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4da887ab204b"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "918a999d102e"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "icu:1"
+        ]
+      },
+      "page-roadmap-upgrade-milestone-devnet": {
+        "contentHash": "35b7d606f2e0",
+        "anchorHash": "69a27c6c8104",
+        "children": {
+          "prose:1": {
+            "contentHash": "2f88d824f58a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "afccb3e68f5c"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-roadmap-upgrade-milestone-testnet": {
+        "contentHash": "ea3e1dfea060",
+        "anchorHash": "b186776e3894",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20d60a940d71"
+          },
+          "prose:1": {
+            "contentHash": "8d0c7ac992af",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-roadmap-upgrade-milestone-mainnet": {
+        "contentHash": "9f83de80ca34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-eip-status-scheduled": {
+        "contentHash": "33972bd8c3d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-eip-status-included": {
+        "contentHash": "ba829a98b799",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-eip-status-considered": {
+        "contentHash": "a38ded2a8654",
         "anchorHash": "e3b0c44298fc"
       }
     },
@@ -686,10 +805,6 @@
       "page-roadmap-fusaka-gas-title",
       "page-roadmap-fusaka-gas-item-1",
       "page-roadmap-fusaka-gas-item-2",
-      "page-roadmap-fusaka-additional-title",
-      "page-roadmap-fusaka-additional-item-1",
-      "page-roadmap-fusaka-additional-item-2",
-      "page-roadmap-fusaka-additional-item-3",
       "page-roadmap-glamsterdam-epbs-title",
       "page-roadmap-glamsterdam-epbs-item-1",
       "page-roadmap-glamsterdam-epbs-item-2",
@@ -697,9 +812,31 @@
       "page-roadmap-glamsterdam-bal-item-1",
       "page-roadmap-glamsterdam-bal-item-2",
       "page-roadmap-glamsterdam-bal-item-3",
-      "page-roadmap-hegota-discussed-title",
-      "page-roadmap-hegota-discussed-item-1"
+      "page-roadmap-hegota-focil-title",
+      "page-roadmap-hegota-focil-item-1",
+      "page-roadmap-hegota-focil-item-2",
+      "page-roadmap-hegota-focil-item-3",
+      "page-roadmap-hegota-frame-title",
+      "page-roadmap-hegota-frame-item-1",
+      "page-roadmap-hegota-frame-item-2",
+      "page-roadmap-hegota-frame-item-3",
+      "page-roadmap-hegota-scope-note",
+      "page-roadmap-upgrade-status-heading",
+      "page-roadmap-upgrade-status-phase-devnet",
+      "page-roadmap-upgrade-status-target",
+      "page-roadmap-upgrade-status-activated",
+      "page-roadmap-upgrade-status-not-confirmed",
+      "page-roadmap-upgrade-status-next",
+      "page-roadmap-upgrade-status-track",
+      "page-roadmap-upgrade-status-phase-planning",
+      "page-roadmap-upgrade-quarter",
+      "page-roadmap-upgrade-milestone-devnet",
+      "page-roadmap-upgrade-milestone-testnet",
+      "page-roadmap-upgrade-milestone-mainnet",
+      "page-roadmap-eip-status-scheduled",
+      "page-roadmap-eip-status-included",
+      "page-roadmap-eip-status-considered"
     ]
   },
-  "sourceCommitSha": "4a7c0fa2a3ee82737bedc324112b0f3d16f22030"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

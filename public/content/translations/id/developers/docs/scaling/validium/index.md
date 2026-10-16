@@ -101,11 +101,11 @@ Dalam skema ketersediaan data berobligasi, siapa pun dapat ditugaskan untuk meny
 
 ## Volition dan validium {#volitions-and-validium}
 
-Validium menawarkan banyak manfaat tetapi datang dengan kompromi (terutama, ketersediaan data). Namun, seperti banyak solusi penskalaan lainnya, validium cocok untuk kasus penggunaan tertentu—itulah sebabnya volition diciptakan.
+Validium menawarkan banyak manfaat tetapi memiliki kompromi (yang paling menonjol, ketersediaan data). Namun, seperti halnya banyak solusi penskalaan, validium cocok untuk kasus penggunaan tertentu—itulah sebabnya volition diciptakan.
 
-Volition menggabungkan ZK-rollup dan rantai validium serta memungkinkan pengguna untuk beralih di antara kedua solusi penskalaan tersebut. Dengan volition, pengguna dapat memanfaatkan ketersediaan data offchain validium untuk transaksi tertentu, sambil mempertahankan kebebasan untuk beralih ke solusi ketersediaan data onchain (ZK-rollup) jika diperlukan. Ini pada dasarnya memberi pengguna kebebasan untuk memilih kompromi seperti yang didiktekan oleh keadaan unik mereka.
+Volition menggabungkan ZK-rollup dan rantai validium serta memungkinkan pengguna untuk beralih di antara kedua solusi penskalaan tersebut. Dengan volition, pengguna dapat memanfaatkan ketersediaan data offchain validium untuk transaksi tertentu, sambil mempertahankan kebebasan untuk beralih ke solusi ketersediaan data onchain (ZK-rollup) jika diperlukan. Hal ini pada dasarnya memberi pengguna kebebasan untuk memilih kompromi yang ditentukan oleh keadaan unik mereka.
 
-Bursa terdesentralisasi (DEX) mungkin lebih suka menggunakan infrastruktur validium yang dapat diskalakan dan privat untuk perdagangan bernilai tinggi. Bursa tersebut juga dapat menggunakan ZK-rollup untuk pengguna yang menginginkan jaminan keamanan yang lebih tinggi dan sifat tanpa kepercayaan dari ZK-rollup.
+Sebuah bursa terdesentralisasi (DEX) mungkin lebih menyukai skalabilitas validium, dan kemampuannya untuk membatasi akses publik ke data transaksi, untuk perdagangan bernilai tinggi. Menyimpan data secara offchain membatasi siapa yang dapat melihatnya, tetapi hal itu dengan sendirinya tidak membuat transaksi menjadi privat secara kriptografi: kerahasiaan bergantung pada kontrol akses dan mekanisme privasi penyebaran, dan data tetap dapat dilihat oleh operator dan siapa pun yang menyimpannya. DEX juga dapat menggunakan ZK-rollup untuk pengguna yang menginginkan jaminan keamanan yang lebih tinggi dan sifat tanpa kepercayaan dari ZK-rollup.
 
 ## Validium dan kompatibilitas EVM {#validiums-and-evm-compatibility}
 
