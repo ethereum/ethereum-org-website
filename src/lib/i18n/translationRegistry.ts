@@ -98,16 +98,6 @@ type PageWithTranslations = {
   lastModified?: string
 }
 
-const getAppPageContributorKey = (slug: string): string => {
-  const normalized = normalizeContentSlug(slug)
-  if (normalized.startsWith("apps/categories/")) {
-    return "apps/categories/[catetgoryName]"
-  }
-  if (normalized.startsWith("apps/")) return "apps/[application]"
-  if (normalized.startsWith("developers/tools/")) return "developers/tools"
-  return normalized
-}
-
 async function getDynamicIntlPagePaths(): Promise<string[]> {
   // Imports are deferred so test environments that don't transform SVG /
   // Next.js-only modules can still load this file to test getTranslatedLocales.
@@ -197,16 +187,18 @@ export async function getAllPagesWithTranslations(): Promise<
   for (const slug of [...mdSlugs, ...videoSlugs]) {
     const translatedLocales = await getTranslatedLocales(slug)
     const lastModified =
-      getAppPageLastCommitDate(contributorsData?.content[slug] ?? []) ||
-      undefined
+      getAppPageLastCommitDate(
+        contributorsData?.content[normalizeContentSlug(slug)] ?? []
+      ) || undefined
     pages.push({ slug, translatedLocales, lastModified })
   }
 
   for (const path of uniqueIntlPaths) {
     const translatedLocales = await getTranslatedLocales(path)
-    const contributorKey = getAppPageContributorKey(path)
+    // Only use history for the page itself. Dynamic route templates do not
+    // track changes to each app, category, or tool's content.
     const lastModified = getAppPageLastCommitDate(
-      contributorsData?.appPages[contributorKey] ?? []
+      contributorsData?.appPages[normalizeContentSlug(path)] ?? []
     )
     pages.push({
       slug: path,
