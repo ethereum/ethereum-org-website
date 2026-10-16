@@ -34,7 +34,10 @@ const HomeSearchInput = ({ label, ask }: HomeSearchInputProps) => {
 
   // Script focus can't raise the iOS keyboard; on touch this only places the caret.
   useOnHash(HOME_SEARCH_HASH, () => {
-    inputRef.current?.focus({ preventScroll: true })
+    const input = inputRef.current
+    if (!input) return
+    input.scrollIntoView({ block: "center" })
+    input.focus({ preventScroll: true })
   })
 
   return (
