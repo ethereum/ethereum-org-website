@@ -1,6 +1,8 @@
+import { useState } from "react"
 import { Check, Copy } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
+import { Button } from "@/components/ui/buttons/Button"
 import { VStack } from "@/components/ui/flex"
 
 import CopyToClipboard, { CopyButton } from "."
@@ -75,4 +77,32 @@ export const CopyButtonVariant = {
       <CopyButton message="0x742d35Cc6634C0532925a3b844Bc9e7595f7E0d8" />
     </VStack>
   ),
+}
+
+// Copy controls must not trigger the surrounding form's submit action.
+const FormContextExample = () => {
+  const [submissions, setSubmissions] = useState(0)
+
+  return (
+    <form
+      onSubmit={(event) => {
+        event.preventDefault()
+        setSubmissions((count) => count + 1)
+      }}
+    >
+      <VStack className="items-start gap-3">
+        <CopyToClipboard text="ethereum.org">
+          {(isCopied) => (isCopied ? "Copied" : "Copy link")}
+        </CopyToClipboard>
+        <CopyButton message="ethereum.org" aria-label="Copy link icon" />
+        <Button type="submit">Submit form</Button>
+        <output aria-live="polite">Form submissions: {submissions}</output>
+      </VStack>
+    </form>
+  )
+}
+
+export const InsideForm: Story = {
+  args: TextLabel.args,
+  render: () => <FormContextExample />,
 }
