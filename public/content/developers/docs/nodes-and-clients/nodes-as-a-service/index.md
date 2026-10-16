@@ -147,6 +147,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay in crypto
     - Direct support & Technical support
 
+- [**BoltRPC**](https://boltrpc.io/)
+  - [Docs](https://boltrpc.io/docs)
+  - Features
+    - 20+ chains including Ethereum, Solana, Arbitrum, Base, Polygon, Optimism, and more
+    - HTTPS and WebSocket RPC endpoints on every plan
+    - Single API key across all supported chains with multi-region failover
+    - Transparent request-unit (RU) pricing with published per-method weights
+    - 14-day free trial (no credit card required); plans from $49/mo
+
 - [**Chainbase**](https://www.chainbase.com/)
   - [Docs](https://docs.chainbase.com)
   - Features
