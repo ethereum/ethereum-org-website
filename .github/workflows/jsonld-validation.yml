@@ -31,7 +31,6 @@ jobs:
   preview:
     name: JSON-LD preview scan (informational)
     needs: unit
-    continue-on-error: true
     runs-on: ubuntu-latest
     env:
       DEPLOY_PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ethereumorg.netlify.app
@@ -47,16 +46,31 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_number: ${{ github.event.pull_request.number }}
           check_name: netlify/ethereumorg/deploy-preview
+      # Informational: findings are reported as warnings + job summary, but
+      # never turn the PR check red. (Job-level continue-on-error still shows
+      # a failed check on the PR, so it is applied at step level instead.)
       - name: Scan representative pages
+        id: scan
         if: steps.netlify_wait.outputs.outcome == 'success'
+        continue-on-error: true
         run: pnpm exec playwright test --project=e2e tests/e2e/jsonld-invariants.spec.ts
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ env.DEPLOY_PREVIEW_URL }}
+      - name: Report scan findings
+        if: steps.scan.outcome == 'failure'
+        run: |
+          echo "::warning::JSON-LD invariants failed on the deploy preview (informational). See the scan step log and the jsonld-playwright-results artifact."
+          {
+            echo "### JSON-LD preview scan (informational)"
+            echo ""
+            echo "Some JSON-LD invariants failed on ${DEPLOY_PREVIEW_URL}."
+            echo "This check does not block merging; see the \"Scan representative pages\" step log for details."
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Report missing preview
         if: steps.netlify_wait.outputs.outcome != 'success'
         run: |
           echo "::warning::Netlify preview was not ready: ${{ steps.netlify_wait.outputs.outcome }}"
-          exit 1
+          echo "JSON-LD preview scan skipped: Netlify preview was not ready (${{ steps.netlify_wait.outputs.outcome }})." >> "$GITHUB_STEP_SUMMARY"
       - name: Upload scan results
         if: always()
         uses: actions/upload-artifact@v4
