@@ -13,6 +13,7 @@ This command NEVER approves or requests changes on the PR. By default it only pr
 ## Arguments
 
 `$ARGUMENTS` may contain:
+
 - A PR number to review. If omitted, auto-detect the latest deploy PR:
   ```bash
   gh pr list -B master -H staging -s open -S "Deploy" --json number -q ".[0].number" -L 1
@@ -28,6 +29,7 @@ If `$ARGUMENTS` is empty or blank, auto-detect the PR number using the command a
 ### Step 2: Identify Key Changes
 
 From the PR description, identify the most impactful changes to verify. Prioritize:
+
 - New or redesigned pages
 - SEO/structured data changes
 - UI/layout updates
@@ -45,7 +47,7 @@ gh pr view <PR_NUMBER> --repo ethereum/ethereum-org-website --json statusCheckRo
   -q '[.statusCheckRollup[] | select(.context=="netlify/ethereumorg/deploy-preview") | .targetUrl] | first'
 ```
 
-The preview is built from the PR's head commit and is guaranteed current. `staging.ethereum.org` is a separate Netlify branch deploy that finishes ~20–35 minutes **after** the PR is created, so right after CI goes green it usually still serves the *previous* release.
+The preview is built from the PR's head commit and is guaranteed current. `staging.ethereum.org` is a separate Netlify branch deploy that finishes ~20–35 minutes **after** the PR is created, so right after CI goes green it usually still serves the _previous_ release.
 
 Because of that lag, **never conclude that "the staging deploy is stale"** — that has produced repeated false alarms. If content is missing on staging but present on the deploy preview, the branch deploy simply hasn't finished; at most add an informational note ("staging branch deploy still building — expected lag"). Only fall back to `staging.ethereum.org` as the check target if no deploy preview exists.
 
@@ -54,6 +56,21 @@ Because of that lag, **never conclude that "the staging deploy is stale"** — t
 Use `playwright-cli` (the `@playwright/cli` terminal client) via Bash to check each key page on the base URL from Step 3.
 
 Workflow: `playwright-cli open` → `playwright-cli goto <url>` → `playwright-cli snapshot` (returns element refs like `e15`) → `playwright-cli click e15` / `playwright-cli fill e22 "text"`. Fall back to the `/agent-browser` skill only if `playwright-cli` is unavailable in the environment.
+
+#### Context budget {#context-budget}
+
+The CI review has a hard dollar ceiling. A review that verifies the release and
+then exhausts its budget still produces no usable conclusion, so spend context
+deliberately:
+
+- Never read a full snapshot. `playwright-cli snapshot` writes a
+  `.playwright-cli/page-*.yml` file; search that file for only the headings,
+  buttons, or accessible labels under test.
+- Prefer `curl` plus targeted searches for text, JSON-LD, status codes, and
+  redirects. Use the browser only for real DOM state or interaction.
+- Screenshot only new or redesigned pages.
+- Budget roughly 40-60 tool calls. If that cannot cover the whole release,
+  verify the highest-risk surfaces and list everything else as not verified.
 
 #### URL and fetch conventions
 
@@ -68,6 +85,7 @@ Workflow: `playwright-cli open` → `playwright-cli goto <url>` → `playwright-
 5. **Check homepage** — always do a quick sanity check that the homepage loads
 
 For each page, note:
+
 - Whether it loads successfully
 - Any visual issues or broken elements
 - Whether the specific change from the PR is confirmed
@@ -76,11 +94,15 @@ For each page, note:
 
 Present a summary table with:
 
-| Page | Status | Notes |
-|------|--------|-------|
+| Page      | Status    | Notes                          |
+| --------- | --------- | ------------------------------ |
 | Page name | Pass/Fail | What was checked and confirmed |
 
 Flag any issues found. If everything looks good, note that the deploy looks ready to ship.
+
+If the available budget did not cover every change found in Step 2, add a
+**Not verified** list naming those changes. An unstated omission must never read
+as a passing check.
 
 ### Step 6: Optionally Post as PR Comment
 
