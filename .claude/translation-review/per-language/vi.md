@@ -37,3 +37,87 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Dropped `[bản nâng cấp London]` and `[bản nâng cấp Pectra]` links restored. **Its historical untranslated-chunk failure mode was absent** (zero English prose found). Open: `exposure` -> `tiếp xúc` (physical contact) in 2 quiz keys where the article itself correctly uses `tiếp cận`; `client` rendered 3 ways across files.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `get-wallet` `Tải {wallet}` -> `Nhận {wallet}` (critical: `Tải` = *download*. The CTA is unconditional in the wallet modal and links to `wallet.url`, and the page lists 7 hardware wallets carrying `device` fees -- Ledger, Trezor, Keystone, GridPlus Lattice1, Cypherock X1, Burner, imKey Pro -- so it read "Download Ledger Nano X" for a physical device you buy. vi's own corpus already had the right verb: `page-start.json` renders "Get wallet" as `Nhận ví`).
+
+**Open (native call needed):**
+
+- `fee-row-label` -> `Những gì bạn phải trả` = "what you must pay" (the amount); prefer `Bạn trả cho những gì`.
+- `fee-label-shield-unshield` -> `che giấu` is *conceal/cover up*, used for concealing wrongdoing. The privacy sense survives but the valence is wrong (#57).
+- `fee-qualifier-stablecoins-lower-l2` -> bare lowercase `các l2` vs the file's `Lớp 2` (#53).
+
+**Notes:**
+
+- Diacritics complete and correct throughout; vi's historical untranslated-chunk failure mode is absent.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Signature untranslated-English-chunk failure is ABSENT -- verified paragraph-by-paragraph across all 6 files and 279 JSON keys. No duplication from the two pipeline passes. Remaining: `số dư hiệu quả` vs glossary `hiệu dụng`, Staking Launchpad translated in 3 of 14 places, and an ETHGlossary casing leak confined to one file (15 mid-sentence capitals from entries that ship capitalized).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `oracle` kept Latin and newly capitalized at 2 changed lines, against the glossary (`nguồn cấp dữ liệu`) and 255 tree occurrences.
+
+**Open (native call needed):**
+
+- Two pre-existing lines in the same section carry the same wrong form (L436 heading, L440 link) -- out of scope here.
+- `tính hợp lệ` (validity) for "soundness" -- a distinct proof-system property.
+- `Mã nguồn mở dễ dãi` injects a mildly pejorative "lax" valence into the neutral "permissive" license label.
+- `Kiểm tra AlternativeTo` ("inspect/test") for the "Check out" button.
+- `Giao thức`/`giao thức` split 10:9 within one file (the locale-wide glossary casing leak).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/vi/page-apps.json`. 16 critical, 14 warnings. Brand 9/10 | Technical 6/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: vi affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- Zero ETHGlossary deviations across all 4 files and no untranslated English chunks; vi's historical failure mode was absent. Both critical classes were the fleet-wide mechanical patterns.
+- `testing/index.md:154` **adds** a `)` that the English source is itself missing. The paren bug is upstream in `public/content/developers/docs/smart-contracts/testing/index.md:154`.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.9/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- learn-quizzes:1315 misattached "largest"; open-access `giao tiếp linh hoạt` for resilient.
+- Mid-sentence capitalized glossary terms still leak (known, glossary/prompt-level).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `tokenization` `node` -> `nút` (glossary).
+
+**Open (warnings):**
+
+- client `client`/`máy khách` split; rollup `bản cuộn`/`Rollup` mix; glossary mid-sentence capitals leak.

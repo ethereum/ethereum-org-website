@@ -23,7 +23,7 @@ Aşağıda ethereum.org çevirmenleri için bazı faydalı rehberler ve araçlar
 
 ## Topluluklar {#communities}
 
-- [Dile özgü Discord çeviri grupları](https://discord.gg/ethereum-org)
+- [Dile özgü Discord çeviri grupları](/discord/)
   _– ethereum.org çevirmenlerini Çeviri Gruplarına bağlamaya yönelik bir girişim_
 - [Çince çevirmenler grubu](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Çince çevirmenler arasında daha kolay koordinasyon sağlamak için Notion sayfası_
@@ -39,7 +39,7 @@ Aşağıda ethereum.org çevirmenleri için bazı faydalı rehberler ve araçlar
 
 ## Çevirmenler için ofis saatleri {#office-hours}
 
-Her ayın ikinci çarşamba günü çevirmenler için ofis saatlerimiz vardır. Bunlar, kesin saatleri ve ek ayrıntıları da bulabileceğiniz [ethereum.org Discord](https://discord.gg/ethereum-org) sunucusundaki #office-hours ses kanalında gerçekleştirilir.
+Her ayın ikinci çarşamba günü çevirmenler için ofis saatlerimiz vardır. Bunlar, kesin saatleri ve ek ayrıntıları da bulabileceğiniz [ethereum.org Discord](/discord/) sunucusundaki #office-hours ses kanalında gerçekleştirilir.
 
 Ofis saatleri, çevirmenlerimizin çeviri süreci hakkında sorular sormasına, program hakkında geri bildirimde bulunmasına, fikirlerini paylaşmasına veya sadece çekirdek ethereum.org ekibiyle sohbet etmesine olanak tanır.
 Son olarak, bu görüşmeleri Çeviri Programı ile ilgili son gelişmeleri iletmek ve katkıda bulunanlarımızla önemli ipuçlarını ve talimatları paylaşmak için kullanmak istiyoruz.

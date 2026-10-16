@@ -23,3 +23,91 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Untranslated English `banks` -> `bancos`, and `Merge` -> `Fusión` (ETHGlossary: The Merge => La Fusión) in `common.json`. `gatekeeper` -> `guardián`, un-collapsing it from `intermediario` (middleman) per #47. Open: tú/usted split across the file set; decimal period-vs-comma mixing on the same statistic in 3 files.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-row-label` `Por qué pagas` -> `Por lo que pagas` (critical-adjacent: `por qué` is the interrogative "why", so the fee header read "Why do you pay"). All four sibling Romance locales produced the "for what" form.
+
+**Open (native call needed):**
+
+- `nfts-hero-description` -> `Ve, colecciona y gestiona` -- `Ve` is ambiguous between *ver* and the imperative of *ir*; prefer `Visualiza`.
+- `hardware-hero-description` -> `¿Mantienes a largo plazo?` is object-less *mantener*.
+- `monedas estables` vs the site-dominant `stablecoins` (144 vs 51 in `page-stablecoins.json`); not a glossary term, both permissible.
+
+**Notes:**
+
+- Full glossary compliance on all load-bearing terms; `blindaje/desblindaje` is the correct privacy-pool reading of shield/unshield and the model the pt-br fix was based on.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.3/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Negation inversion at dvt:84 (postverbal `ningún` without preverbal `no` reversed a fault-tolerance claim). dvt conflated staking pool/pooled staking. Register REGRESSED: this run flipped pools and solo from usted to tú while siblings stayed usted, so the section now switches register between linked pages.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.9/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Plus the locale-only extra file in this PR. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+- `rollup`/`dapp` plurals restored at 9 sites (tree favours `rollups` 243:36, `dapps` 29:9).
+
+- `shipped`/`Shipping` -> `envío` (shipment) at 4 sites -> `implementó`/`Lanzamiento`.
+- `cadena principal` -> `Red principal` for Mainnet in `testing/index.md` L207 (same file uses the correct form 4x).
+
+**Open (native call needed):**
+
+- `arnés de prueba` for "test harness" (horse-harness sense).
+- `lean` -> `ligero` collides with es's established term for a *light* client.
+- `page-open-source.json` is usted throughout while the `page-values` card that links to it is tú.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/es/page-apps.json`. 2 critical, 8 warnings. Brand 10/10 | Technical 8/10 | Semantic 9/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: es affected on the `<path>`/`<password>` placeholders only; restored. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (es-specific):**
+
+- `<path>` / `<password>` shell placeholders restored inside the clef transcript
+
+**Notes:**
+
+- The `cadena principal` vs `Red principal` collision reverted, because English line 207 literally says "the main Ethereum chain" while the rest of the file says "Mainnet". The durable fix is on the English source, not the translation.
+- Full tu -> usted harmonization of `accounts/index.md`, reversing the PR #19115 register regression.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Acronym over-expansion (#80) regressed correct pre-PR text: API, DAO, DeSci, ENS, L2 `(l2)`, dapp, L1 across open-access, privacy, contributing, zk-rollups, glamsterdam, quantum-resistance.
+- "both" dropped (#82); `reclamo` for no-logs claim; `en absoluto` misuse; tú/ustedes mix in privacy-fixes video L24/26.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` `compare-privacy` `direcciones ocultas` -> `direcciones sigilosas` (glossary).
+
+**Open (warnings):**
+
+- `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.

@@ -32,7 +32,7 @@ Se hai domande in qualsiasi momento, non esitare a contattarci nel [Discord di A
 
 Ci sono molti modi per fare richieste alla catena di Ethereum. Per semplicità, useremo un account gratuito su Alchemy, una piattaforma per sviluppatori blockchain e un'API che ci consente di comunicare con la catena di Ethereum senza eseguire noi stessi un nodo. Alchemy dispone anche di strumenti per sviluppatori per il monitoraggio e l'analisi; ne trarremo vantaggio in questo tutorial per capire cosa succede a livello tecnico nella distribuzione del nostro smart contract.
 
-### Crea la tua app e la chiave API
+### Crea la tua app e la chiave API {#create-your-app-and-api-key}
 Una volta creato un account Alchemy, puoi generare una chiave API creando un'app. Questo ti consentirà di effettuare richieste alla testnet Sepolia. Se non hai familiarità con le testnet, puoi [leggere la guida di Alchemy su come scegliere una rete](https://www.alchemy.com/docs/choosing-a-web3-network).
 
 Nella dashboard di Alchemy, trova il menu a discesa **Apps** nella barra di navigazione e fai clic su **Create App**.
@@ -46,12 +46,12 @@ Dai alla tua app il nome '_Hello World_' e scrivi una breve descrizione. Selezio
 _Nota: assicurati di selezionare **Sepolia**, altrimenti questo tutorial non funzionerà._
 
 Fai clic su **Create app**. La tua app apparirà nella tabella sottostante.
-### Creare un account Ethereum
+### Creare un account Ethereum {#create-an-ethereum-account}
 
 Hai bisogno di un account Ethereum per inviare e ricevere transazioni. Useremo MetaMask, un portafoglio virtuale nel browser che consente agli utenti di gestire l'indirizzo del proprio account Ethereum.
 
 Puoi scaricare e creare un account MetaMask gratuitamente [qui](https://metamask.io/download). Quando crei un account, o se ne hai già uno, assicurati di passare alla "Sepolia Test Network" in alto a destra (in modo da non avere a che fare con denaro reale).
-### Passaggio 4: Aggiungere ether da un faucet
+### Passaggio 4: Aggiungere ether da un faucet {#step-4-add-ether-from-a-faucet}
 Per distribuire il tuo smart contract sulla rete di test, avrai bisogno di alcuni ETH finti. Per ottenere ETH sulla rete Sepolia, vai a un faucet di Sepolia e inserisci l'indirizzo del tuo account Sepolia. Consulta la [pagina delle reti di test](/developers/docs/networks/#sepolia) per un elenco di opzioni da provare:
 
 _Nota: a causa della congestione della rete, questa operazione potrebbe richiedere un po' di tempo._
@@ -335,7 +335,7 @@ const hello_world = await HelloWorld.deploy()
 
 Chiamare `deploy()` su un `ContractFactory` avvierà la distribuzione e restituirà una `Promise` che si risolve in un oggetto `Contract`. Questo è l'oggetto che ha un metodo per ciascuna delle funzioni del nostro smart contract.
 
-### Passaggio 16: Distribuire il nostro contratto
+### Passaggio 16: Distribuire il nostro contratto {#step-16-deploy-our-contract}
 Siamo finalmente pronti per distribuire il nostro smart contract! Vai alla riga di comando ed esegui:
 
 ```bash
@@ -505,7 +505,7 @@ main()
 
 Nota che alla riga 11, facciamo una chiamata a `.wait()` sull'oggetto transazione restituito. Questo assicura che il nostro script attenda che la transazione venga minata sulla blockchain prima di uscire dalla funzione. Se la chiamata `.wait()` non è inclusa, lo script potrebbe non vedere il valore `message` aggiornato nel contratto.
 
-### Leggi il nuovo messaggio
+### Leggi il nuovo messaggio {#read-the-new-message}
 
 Dovresti essere in grado di ripetere il [passaggio precedente](#read-the-init-message) per leggere il valore `message` aggiornato. Prenditi un momento e vedi se riesci ad apportare le modifiche necessarie per stampare quel nuovo valore!
 
@@ -631,7 +631,7 @@ module.exports = {
 }
 ```
 
-#### Verifica il tuo smart contract su Etherscan
+#### Verifica il tuo smart contract su Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Assicurati che tutti i file siano salvati e che tutte le variabili `.env` siano configurate correttamente.
 
@@ -934,7 +934,7 @@ Con questo endpoint pronto, è il momento di caricare il nostro smart contract!
 
 Per caricare il tuo smart contract Hello World, avrai bisogno del suo indirizzo del contratto e dell'ABI, entrambi reperibili su Etherscan se hai completato la [Parte 3 di questo tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Come ottenere l'ABI del tuo contratto da Etherscan
+#### Come ottenere l'ABI del tuo contratto da Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 Se hai saltato la Parte 3 di questo tutorial, distribuisci e verifica prima il tuo contratto HelloWorld. Quindi apri la pagina del tuo contratto su [Sepolia Etherscan](https://sepolia.etherscan.io) per copiare la sua ABI.
 
@@ -1108,10 +1108,10 @@ Per scrivere qualsiasi cosa sulla catena di Ethereum, gli utenti devono firmare 
 
 Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/) della Ethereum Foundation.
 
-#### Scaricare MetaMask
+#### Scaricare MetaMask {#download-metamask}
 
 Puoi scaricare e creare un account MetaMask gratuitamente [qui](https://metamask.io/download). Quando crei un account, o se ne hai già uno, assicurati di passare alla "rete di test Sepolia" in alto a destra \(in modo da non avere a che fare con denaro reale\).
-#### Aggiungere ether da un faucet
+#### Aggiungere ether da un faucet {#add-ether-from-a-faucet}
 Per firmare una transazione sulla blockchain di Ethereum, avremo bisogno di alcuni ETH finti. Per ottenere ETH puoi andare su un faucet Sepolia elencato nella [pagina delle reti di test](/developers/docs/networks/#sepolia) e inserire l'indirizzo del tuo account Sepolia. Dovresti vedere gli ETH nel tuo account MetaMask subito dopo!
 #### Controlla il tuo saldo {#check-your-balance}
 

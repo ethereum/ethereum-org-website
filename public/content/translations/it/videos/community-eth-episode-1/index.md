@@ -17,7 +17,7 @@ Il primo episodio della serie *Community.eth* di **Optimist**. Per celebrare il 
 
 *Questa trascrizione è una copia accessibile del [video originale](https://www.youtube.com/watch?v=onCwaj1FM-4) pubblicato da Optimist. È stata leggermente modificata per facilitarne la lettura. Gli oratori sono membri della community di Ethereum e non tutti sono stati identificati individualmente nel video.*
 
-#### Cos'è Ethereum? (0:00) {#what-is-ethereum-000}
+### Cos'è Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Persona 1:** Cos'è Ethereum?
 
@@ -29,7 +29,7 @@ Il primo episodio della serie *Community.eth* di **Optimist**. Per celebrare il 
 
 **Persona 4:** Ethereum è molte cose per molte persone.
 
-#### Cosa lo rende potente (0:40) {#what-makes-it-powerful-040}
+### Cosa lo rende potente (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Il potenziale che ha Ethereum è enorme perché non riusciamo nemmeno a definirlo. E penso che questo sia molto potente.
 
@@ -43,7 +43,7 @@ Il primo episodio della serie *Community.eth* di **Optimist**. Per celebrare il 
 
 **Simona Pop:** Ethereum, per me, è la fase successiva nell'evoluzione di Internet.
 
-#### Perché costruiamo (2:00) {#why-we-build-200}
+### Perché costruiamo (2:00) {#why-we-build-200}
 
 **Simona Pop:** Sì, certo c'è fermento quando il prezzo sale, ma le persone e i veri credenti ci sono quando scende, quando sale: non ha molta importanza. Lo facciamo perché crediamo sinceramente in ciò che stiamo costruendo.
 
@@ -51,7 +51,7 @@ Il primo episodio della serie *Community.eth* di **Optimist**. Per celebrare il 
 
 **Alexis Ohanian:** Abbiamo la possibilità di reimmaginare così tante istituzioni della società con una vera proprietà, con la reale capacità di accumulare valore per il resto della vita, per generazioni: per l'infinito, in pratica. Voglio davvero disperatamente vedere tutto questo sbloccato.
 
-#### La community (3:00) {#the-community-300}
+### La community (3:00) {#the-community-300}
 
 **Amber Baldet:** Una cosa che distingue davvero la community di Ethereum è stata, fin dall'inizio, il fatto di non aver paura di essere un po' buffi. Lo si vede negli unicorni, nei buffi colori dell'arcobaleno, nei balli e nelle canzoni, e quella giocosità è ciò che conferisce all'intero ecosistema un senso di speranza. E una cosa di cui le persone hanno davvero bisogno di questi tempi è la speranza.
 

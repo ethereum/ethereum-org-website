@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/blockchain-101-visual-demo/index.md",
-  "generatedAt": "2026-04-28T22:47:14.056Z",
-  "rootHash": "f6f672c04594",
+  "generatedAt": "2026-09-30T18:34:20.164Z",
+  "rootHash": "fec888a5a312",
   "tree": {
-    "contentHash": "b36595b105cf",
-    "anchorHash": "daf98ed19600",
+    "contentHash": "cedaeb5eff79",
+    "anchorHash": "bb802256d1ba",
     "children": {
       "frontmatter:title": {
-        "contentHash": "23a26b8af983",
+        "contentHash": "6ae830d6910a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ba54093deecd",
+        "contentHash": "d00643e1d5a2",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8aff7d63ece6"
+        "anchorHash": "7358b6be6b77"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e6b0d1e05bfc"
+        "anchorHash": "7b3df0ab4c2b"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "16413c6ab9f4"
+        "anchorHash": "edada54b3e48"
       },
       "prose:1": {
         "contentHash": "46535b263c0b",
@@ -311,5 +317,5 @@
       "closing-1630"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -17,7 +17,7 @@ Wawancara dengan **Justin Drake**, peneliti Yayasan Ethereum, membahas peta jala
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=wURmzLKhJco) yang diterbitkan oleh Bankless. Transkrip ini telah disunting sedikit agar lebih mudah dibaca.*
 
-#### Pengantar dan ancaman kuantum (0:00) {#introduction-and-the-quantum-threat-000}
+### Pengantar dan ancaman kuantum (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Salah satu perubahan pola pikir yang menarik bagi saya dalam beberapa bulan terakhir adalah saya berhenti menganggap pascakuantum sebagai rintangan yang harus kita atasi dan saya lebih menganggapnya sebagai sebuah peluang. Ini adalah peluang bagi Ethereum untuk menonjol sebagai sistem keuangan global pertama yang aman dari pascakuantum, tidak hanya dibandingkan dengan pesaingnya seperti Bitcoin dan semacamnya, tetapi juga dibandingkan dengan fiat dan TradFi. Dan saya pikir ini akan mengirimkan pesan yang sangat kuat dan semacam menjadi nilai jual keamanan yang sangat alami bagi dunia untuk bermigrasi ke Ethereum.
 
@@ -33,7 +33,7 @@ Jadi tiang gawangnya semakin dekat, dan Anda memiliki eksponensial ganda ini dal
 
 Sekarang memproyeksikan ke masa depan, Q-Day pribadi saya adalah pada tahun 2032. Ini adalah pandangan yang sedikit optimis dalam arti bahwa ada kemungkinan mereka akan tiba sedikit lebih lambat, tetapi kita perlu bersiap untuk skenario terburuk. Jadi saya akan mengatakan setidaknya ada peluang 1% bahwa Q-Day terjadi pada tahun 2032, kemungkinan besar persentase dua digit. Berbagai pakar akan memberi tahu Anda di suatu waktu antara tahun 2031 dan 2038. Salah satu teman saya di industri ini, Steve Bryley, pendiri dan CEO dari salah satu perusahaan koreksi kesalahan kuantum terbesar di dunia, yang kebetulan berbasis di Cambridge tempat saya berada — Q-Day pribadinya adalah tahun 2032, tetapi dia telah memiliki tanggal ini selama 15 tahun
 
-#### Kapan Q-Day terjadi dan bagaimana kita bersiap? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Kapan Q-Day terjadi dan bagaimana kita bersiap? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 dan itu selalu tetap sama.
 
@@ -49,7 +49,7 @@ dan itu selalu tetap sama.
 
 **Justin Drake:** Saya tidak bisa berbicara mewakilinya, tetapi satu hal yang harus kita perhatikan adalah bahwa Scott pada dasarnya adalah seorang ahli teori. Untuk waktu yang sangat lama dia mengerjakan teorinya, tidak terlalu banyak pada operasional sehari-hari komputer kuantum, dan saya pikir itu sebagian alasan mengapa dia sangat ragu-ragu. Apa yang semakin sering terjadi adalah ada perusahaan nyata, pengusaha nyata yang membangun hal-hal ini dan dia memiliki pandangan orang dalam. Dia pada dasarnya menyerap semua informasi ini. Salah satu hal yang dia katakan baru-baru ini adalah bahwa pemerintah AS mulai campur tangan dengan publikasi ide-ide. Jadi kita memiliki perusahaan dan akademisi yang mungkin menemukan peningkatan pada algoritma Shor, dan hal-hal tersebut tidak sepenuhnya diungkapkan, berpotensi karena alasan keamanan nasional.
 
-#### Qubit fisik, qubit logis, dan membobol ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Qubit fisik, qubit logis, dan membobol ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Wow. Oke. Jadi sepertinya pemerintah mulai terlibat dalam hal ini. Kita sebenarnya tidak yakin dengan semua pekerjaan yang terjadi di balik layar — kita hanya menyadari pekerjaan yang layak secara komersial pada saat ini. Mengenai bagian qubit logis, Anda mengatakan kita memiliki satu qubit logis saat ini. Ada qubit fisik dan qubit logis, dan hal yang perlu diskalakan adalah qubit logis. Untuk membobol ECDSA, berapa banyak qubit logis yang sebenarnya kita butuhkan? Itu adalah metrik yang sedang saya perhatikan, tetapi apakah itu angka yang tepat? Saya pernah mendengar orang berbicara tentang perlunya seribu, atau mungkin 1.500. Apakah ini angka yang harus kita perhatikan?
 
@@ -67,7 +67,7 @@ Sekarang mengenai waktu jalannya, ini agak menarik karena ada dua jenis komputer
 
 **Justin Drake:** Ya. Dan jika memang negara bangsa yang akan memiliki akses ke komputer kuantum ini terlebih dahulu, kecuali kripto memainkan peran sistemik utama di dunia, kemungkinan besar mereka akan menggunakan kekuatan mereka untuk menyerang berbagai hal dengan cara yang sembunyi-sembunyi — misalnya, memata-matai musuh mereka. Jadi itu menguntungkan kita. Tetapi jika Anda berhadapan dengan entitas yang murni rasional yang dimotivasi oleh dolar, mereka mungkin memang akan mengincar Bitcoin atau Ethereum.
 
-#### Pusat data kuantum dan skenario serangan Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Pusat data kuantum dan skenario serangan Q-Day (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Pertanyaan terakhir tentang qubit. Apakah pusat data komputasi kuantum sedang dibangun saat ini? Kita melihat pembangunan pusat data besar-besaran untuk AI. Apakah hal serupa mulai terjadi pada komputer kuantum?
 
@@ -91,7 +91,7 @@ Sekarang mengenai waktu jalannya, ini agak menarik karena ada dua jenis komputer
 
 **Justin Drake:** Tepat sekali. Ya. Dan kemudian Anda mungkin akan pergi dan menyerang ikan terbesar, yang mungkin merupakan bursa yang belum memasang infrastruktur yang tepat untuk melindungi diri mereka sendiri. Ternyata ada mitigasi yang sangat mudah terhadap komputer kuantum, setidaknya untuk yang paling awal — jangan gunakan kembali alamat Anda. Saat Anda menggunakan kembali alamat Anda, Anda menggunakan kembali kunci publik, dan itu berarti penyerang punya waktu untuk meretas kunci privat yang sesuai dan kemudian mencuri dana Anda saat kedua kalinya Anda menggunakan alamat tersebut. Jadi praktik terbaiknya adalah jika Anda menyimpan dana apa pun dalam penyimpanan dingin (cold storage) jangka panjang, itu harus berupa alamat bersih yang kunci publiknya belum pernah diungkapkan. Sekadar memperjelas hal ini: apa yang memungkinkan Anda lakukan dengan komputer kuantum
 
-#### Alamat Bitcoin yang rentan dan koin Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Alamat Bitcoin yang rentan dan koin Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 yang dilakukan adalah beralih dari kunci publik kembali ke kunci privat. Jadi ini benar-benar membahayakan fondasi properti.
 
@@ -117,7 +117,7 @@ Ini akan menjadi proses yang diperpanjang seiring waktu. Dan satu konsekuensi me
 
 **Justin Drake:** Ya, jadi angka kasar yang saya pikirkan sejalan dengan itu. Sekitar 2 juta Bitcoin, katakanlah 10%. Kita memiliki 1 juta dari Satoshi dan kemudian sekitar satu juta lagi yang belum bergerak untuk waktu yang sangat lama. Kita perlu mengurangi sebagian dari itu karena beberapa alamat zombi adalah sah dan akan hidup kembali, tetapi kita juga harus meningkatkannya karena mungkin ada beberapa alamat yang baru saja dihabiskan yang akan hilang. Jadi 5 hingga 15% adalah kisaran yang tepat. Saya akan bertaruh sekitar 10–12%, yang mana sangat besar — pastinya bernilai ratusan miliar dolar.
 
-#### Perdebatan bakar vs. selamatkan untuk Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### Perdebatan bakar vs. selamatkan untuk Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Seseorang bisa memikirkan teori permainannya di sini. Opsi A adalah mencoba dan membakar koin-koin tersebut. Keuntungannya adalah Anda tidak memiliki tekanan jual bernilai ratusan miliar dolar. Jika Anda menganalisis ini dengan kacamata jangka pendek, itu adalah langkah yang rasional. Namun, keseluruhan cerita Bitcoin adalah hak milik yang kuat, jadi jika Anda memiliki kacamata jangka panjang, Anda seharusnya tidak ingin membakar koin-koin tersebut. Sangat sulit untuk mengetahui arah mana yang akan diambil oleh komunitas. Mungkin saja pada akhirnya keputusan akan dibuat oleh pemegang besar — misalnya, Michael Saylor dan MicroStrategy. Karena para pemegang besar ini akan menerima salinan dari kedua versi Bitcoin — yang dibakar dan yang tidak — dan mereka dapat memilih untuk membuang versi yang tidak mereka sukai. Dan kita tahu bahwa Saylor mendukung pembakaran, sehingga ia berpotensi memanipulasi pasar seorang diri dan mendapatkan hasil yang ia inginkan.
 
@@ -129,7 +129,7 @@ Opsi lainnya adalah mereka membiarkan 10% tersebut kepada siapa pun yang dapat m
 
 **Justin Drake:** Ya, itu dikatakan dengan sangat baik. Namun satu koreksi kecil: ini tidak harus terjadi pada Q-Day atau setelah Q-Day. Ini bisa terjadi sebelumnya. Kapan saja, komunitas Bitcoin atau sebagian darinya dapat mengusulkan untuk membuat percabangan. Pada nomor blok percabangan akan ada dua versi aset Bitcoin — sama seperti percabangan Bitcoin Cash. Dan pada akhirnya ini diputuskan oleh pasar. Bursa akan menyiapkan dua versi aset tersebut dan pasar memutuskan mana yang merupakan Bitcoin sejati. Dan mungkin saja hanya karena dinamika likuiditas jangka pendek, versi yang membakar koin, yang berpotensi mendahului Q-Day, akan menjadi versi yang menang.
 
-#### Skenario Michael Saylor dan titik Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### Skenario Michael Saylor dan titik Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Benar. Jadi saya adalah Michael Saylor, saya memiliki 2–3% dari pasokan Bitcoin, terutama pasokan likuid. Saya mendapatkan kedua salinannya. Kita melakukan percabangan pada rantai blok Bitcoin sama seperti perang percabangan Bitcoin tahun 2017. Saya ingin mempertahankan nilai saya, jadi saya menjual semua bitcoin yang rentan terhadap kuantum dan menyimpan semua bitcoin pada versi yang membakar koin-koin yang rentan terhadap kuantum tersebut. Harga rantai blok yang tidak tersentuh akan turun. Harga versi yang dibakar tetap tinggi karena tidak ada yang menjualnya — Saylor tidak menjual, BlackRock tidak menjual. Jadi Anda mengatakan harga Bitcoin yang telah memecahkan masalah kuantum akan lebih tinggi dan oleh kekuatan pasar menjadi Bitcoin kanonikal.
 
@@ -153,7 +153,7 @@ Opsi lainnya adalah mereka membiarkan 10% tersebut kepada siapa pun yang dapat m
 
 Sungguh luar biasa bahwa ini akan terjadi pada jaringan bernilai multi-triliun dolar dengan hadiah sebesar itu. Ini belum pernah terjadi sebelumnya. Tetapi itu juga bisa terjadi, dan mungkin itu adalah hasil yang lebih baik untuk Bitcoin.
 
-#### Bukti frasa benih dan masalah ukuran tanda tangan pasca-kuantum (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Bukti frasa benih dan masalah ukuran tanda tangan pasca-kuantum (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Ya. Jadi saya punya beberapa pemikiran. Yang pertama adalah ada cara yang cukup canggih untuk membuktikan kepemilikan Bitcoin tanpa melalui kunci privat. Ini dikenal sebagai bukti frasa benih. Cara Anda menurunkan alamat Bitcoin terdiri dari tiga langkah: langkah pertama, Anda menghasilkan frasa benih Anda; langkah kedua, Anda melakukan beberapa manipulasi pada frasa benih termasuk proses hash untuk menurunkan kunci privat Anda; kemudian dari kunci privat Anda menurunkan kunci publik, yang merupakan alamat yang masuk onchain. Sayangnya, kunci privat kini bukan lagi sesuatu yang dapat membuktikan kepemilikan. Namun karena langkah proses hash, jika Anda mengetahui frasa benih Anda, itu masih merupakan bukti kepemilikan. Jadi satu hal yang bisa terjadi — dan secara teknis merupakan jalan ke depan yang paling masuk akal — adalah membekukan Bitcoin tersebut tetapi mengizinkan siapa pun untuk memulihkan Bitcoin mereka dengan bukti frasa benih.
 
@@ -175,7 +175,7 @@ Apa yang sedang kami bangun untuk Ethereum adalah teknologi agregasi tanda tanga
 
 Namun sebenarnya ada cara untuk melindungi nilai harga Bitcoin, yang sangat mudah — Anda cukup melakukan *short* BTC. Katakanlah Anda tahu pasti bahwa Anda telah meretas kunci privat dari sebuah dompet yang menyimpan 100.000 BTC. Anda melakukan *short* 100.000 BTC. Itu mengunci keuntungan Anda. Dan kemudian tidak peduli apa yang terjadi pada harga Bitcoin, Anda telah mengunci keuntungan Anda, yang bisa mencapai puluhan miliar dolar.
 
-#### Tantangan lapisan sosial Bitcoin dan keunggulan Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### Tantangan lapisan sosial Bitcoin dan keunggulan Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Sekarang, saya ingin menandai bahwa Justin, Anda berpikir dengan cara tertentu, dan cara Anda berpikir adalah alasan mengapa Anda berada di Ethereum. Jika Anda seorang Bitcoiner, Anda akan berpikir dengan cara yang berbeda. Cara berpikir Bitcoiner sangat unik, sangat berbeda — semacam maksimalis hak milik. Saya pikir apa yang akan dilakukan Justin jika dia bertanggung jawab atas Bitcoin sangat berbeda dari apa yang akan dilakukan oleh agregat umum Bitcoiner. Saya tidak memiliki pertanyaan yang dapat ditindaklanjuti di sini, tetapi saya hanya ingin menyoroti hal itu.
 
@@ -203,7 +203,7 @@ Ketika saya berada di proyek Ultrasound, salah satu hal yang kami coba lakukan a
 
 **Justin Drake:** Tepat sekali. Ya. Jika saya harus membuat prediksi konkret, saya akan mengatakan sekitar 2%, yang kira-kira satu orde besaran lebih kecil daripada Bitcoin. Dan perbedaan kuantitatif ini memiliki konsekuensi kualitatif: dalam kasus Ethereum, saya akan sangat menganjurkan untuk tidak melakukan apa pun dan benar-benar menghormati hak milik, karena pada akhirnya, 2% bukanlah masalah besar. Dalam kasus Bitcoin, 15% adalah masalah yang sangat besar.
 
-#### Peningkatan pasca-kuantum tiga lapisan Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### Peningkatan pasca-kuantum tiga lapisan Ethereum (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Jadi Ethereum harus membuat pilihan yang sama. Katakanlah 3% — apakah akan melakukan pembekuan dan bakar atau membiarkannya menjadi perburuan harta karun. Harapan Anda adalah kita memilih opsi perburuan harta karun, yang berarti beberapa penyerang kuantum akan meraup 1–3% Ether tersebut. Dan jika Anda melihat gambaran besarnya, kita pada dasarnya bergerak menuju Ether yang menjadi uang yang jauh lebih baik daripada BTC. Ini akan menjadi non-intervensionis, menghormati hak milik, aman dari kuantum, dan tidak akan memiliki masalah anggaran keamanan yang akan mengganggu Bitcoin dalam beberapa halving ke depan. Jadi saya pikir ini adalah peluang besar untuk aset tersebut.
 
@@ -223,7 +223,7 @@ Namun jika Anda melihat gambaran besarnya, saya berpendapat bahwa masalah yang l
 
 *(50:00)*
 
-#### Meningkatkan lapisan eksekusi: agregasi tanda tangan (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Meningkatkan lapisan eksekusi: agregasi tanda tangan (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 benar-benar merinci beberapa pencapaian utama untuk melakukan peningkatan ini.
 
@@ -241,7 +241,7 @@ Yayasan Ethereum telah berupaya keras untuk memulai dengan tanda tangan berbasis
 
 Dan salah satu hal yang ironis tentang pendekatan ini adalah bahwa ini sebenarnya merupakan peningkatan skalabilitas dibandingkan dengan apa yang kita miliki saat ini. Alasannya adalah Anda tidak memiliki biaya tetap sebesar 64 bita per transaksi. Transaksi memiliki nol bita data tanda tangan, dan kemudian Anda memiliki satu tanda tangan utama ini yang diamortisasi di seluruh transaksi dalam blok.
 
-#### Menetapkan standar industri dengan kolaborasi Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Menetapkan standar industri dengan kolaborasi Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Oke. Jadi ini adalah peningkatan untuk banyak rantai blok kontrak pintar lainnya yang berada di hilir Ethereum, terutama yang mengoptimalkan kecepatan—
 
@@ -261,7 +261,7 @@ Kembali ke hal lain yang saya katakan — ini hanya bergantung pada fungsi hash.
 
 Sekarang ada dua peringatan yang ingin saya soroti. Peringatan nomor satu adalah bahwa kita berurusan dengan objek yang lebih kompleks, dan solusi yang kita miliki di sini adalah apa yang kita sebut verifikasi formal ujung-ke-ujung yang mendalam.
 
-#### Verifikasi formal, Poseidon, dan lapisan konsensus (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Verifikasi formal, Poseidon, dan lapisan konsensus (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Kita memiliki objek kriptografi kita dan kita ingin membuktikan secara matematis bahwa itu kuat — bahwa tidak mungkin untuk memalsukan tanda tangan. Dan kita tidak hanya ingin melakukan ini untuk matematikanya, tetapi juga untuk kodenya. Jika Anda bertanya kepada saya 2–3 tahun yang lalu apakah ini bisa dilakukan, saya akan menjawab ya, tetapi itu sangat melelahkan dan mahal. Apa yang kita lihat dengan munculnya AI adalah bahwa pekerjaan yang melelahkan dan mahal ini dapat dilakukan 100 kali lebih cepat dan 100 kali lebih murah.
 
@@ -277,7 +277,7 @@ Sayangnya, cara Anda merancang fungsi hash adalah Anda tidak dapat membuktikan b
 
 Untuk membuka pengoptimalan kinerja tertentu yang hanya tersedia di lapisan konsensus, kita memiliki gagasan tentang tanda tangan stateful — pesan yang Anda tandatangani memiliki penghitung yang meningkat setiap saat. Tidakkah itu mengingatkan Anda pada sesuatu? Nomor slot. Di Ethereum pada lapisan konsensus, Anda hanya akan menandatangani satu pesan per slot. Jika Anda menandatangani dua, Anda akan dipotong. Kita menggunakan batasan ini untuk memiliki tanda tangan yang 10 kali lebih efisien untuk diagregasi.
 
-#### Lean VM, peta jalan Lean Consensus, dan linimasa 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, peta jalan Lean Consensus, dan linimasa 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 Inilah perbedaan utamanya — fungsi hash tanpa state di lapisan eksekusi versus tanda tangan dengan state di lapisan konsensus di mana nomor slot bertambah. Teknologi agregasi ini memiliki nama: Lean VM, sebuah zkVM minimal untuk kriptografi berbasis hash. Pada dasarnya, Lean VM akan membuktikan bahwa ini adalah akar Merkle yang benar. Hal utama yang belum sepenuhnya kami yakini adalah apakah pendekatan ini dapat membuka apa yang saya sebut "batas tera gas" — 1 gigagas per detik di lapisan 1 (l1), 10.000 TPS, tetapi yang lebih ambisius lagi, 1 teragas, 10 juta transaksi per detik di lapisan 2 (l2) menggunakan ketersediaan data.
 
@@ -295,7 +295,7 @@ Saat ini kami memiliki devnet untuk Lean Consensus. Dan spesifikasinya sangat mu
 
 Saya pikir ini akan memiliki konsekuensi yang menarik bagi keberlanjutan serta tata kelola. Mengenai tata kelola, cara kita melakukannya saat ini secara kasar adalah
 
-#### Tata kelola Ethereum dan tanggal penyelesaian 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Tata kelola Ethereum dan tanggal penyelesaian 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 bahwa kita memiliki lima klien lapisan konsensus dan semuanya perlu mengimplementasikan peningkatan tersebut agar dapat terus maju. Di masa depan, ketika kita memiliki 10 atau 15 klien, kita bisa saja mewajibkan 80% teratas atau 80% tercepat agar dapat terus maju. Itu lebih seperti kompetisi Darwinian yang memungkinkan kita bergerak jauh lebih cepat tanpa harus menunggu klien yang paling lambat.
 
@@ -323,7 +323,7 @@ Kabar baik lainnya adalah kita tidak punya pilihan. Kita harus mengubah kriptogr
 
 Hal itu membuat koordinasi dan pencapaian konsensus menjadi jauh lebih sederhana.
 
-#### Kuantum bukan sekadar masalah kripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### Kuantum bukan sekadar masalah kripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Saya rasa kita harus menekankan bahwa bukan hanya Ethereum yang tidak punya pilihan — tidak ada seorang pun di dunia kripto yang memiliki alternatif untuk ini. Semua orang di dunia kripto harus melakukan penulisan ulang. Untuk Bitcoin, ini hanya ECDSA, tetapi itu saja sudah cukup.
 
@@ -339,7 +339,7 @@ Di mana saya setuju dengan Anda adalah bahwa harus ada perubahan yang sangat bes
 
 **Justin Drake:** Saya tidak setuju. Anda bisa melihat analisis historis — kerang laut digantikan oleh garam, lalu perak, lalu emas, dan sekarang berpotensi Bitcoin menggantikan emas. Hanya karena emas gagal bukan berarti hal berikutnya juga harus gagal. Saya akan mengatakan Ethereum adalah penerus alami Bitcoin sebagai uang internet. Dan hanya karena Bitcoin gagal bukan berarti Ethereum harus gagal. Saya setuju mungkin akan ada penderitaan jangka pendek, tetapi kita juga berbicara tentang keuntungan jangka panjang.
 
-#### Peluang pasca-kuantum dan perhitungan anggaran keamanan (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### Peluang pasca-kuantum dan perhitungan anggaran keamanan (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Jadi apa yang kita dapatkan pada akhirnya? Tahun 2030, Ethereum aman dari pasca-kuantum karena Justin telah berjanji. Akan menjadi apa Ethereum nantinya? Apakah ia akan menjadi satu-satunya di kelasnya, atau apakah Anda berharap rantai blok lain akan mengikuti dan juga mencapai keamanan pasca-kuantum? Bisakah Anda menggambarkan sistem yang kita miliki pada tahun 2030 jika semua ini terwujud?
 
@@ -355,7 +355,7 @@ Satu titik data yang menarik: Rantai suar OG diluncurkan pada tahun 2020, dan de
 
 Kita sudah mulai melihat — baru kemarin, Dario Amodei, salah satu perintis (OG) AI, mulai membuat AI secara rekursif meningkatkan dirinya sendiri secara otonom, yang mana ini sangat menakutkan. Pada dasarnya, inilah yang seharusnya memulai pertumbuhan eksponensial menuju kecerdasan super.
 
-#### Krisis anggaran keamanan Bitcoin dan perhitungan tahun 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### Krisis anggaran keamanan Bitcoin dan perhitungan tahun 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Kita memiliki tahun 2032 yang berpotensi menjadi Q-Day, dan kita juga memiliki tahun 2032 di mana Bitcoin akan mengalami apa yang saya yakini sebagai halving terakhirnya. Anda bisa menyebutnya B-Day — hari Bitcoin di mana akan ada semacam perhitungan, karena penerbitan akan menjadi terlalu rendah untuk mengamankannya.
 
@@ -377,7 +377,7 @@ Ada kemungkinan bahwa aset BTC dapat terpisah dari rantai Bitcoin dan hidup di r
 
 **Justin Drake:** Dan jika saya mengucapkan kata-kata yang berbeda seperti, "Kita akan menghapus batas 21 juta karena anggaran keamanannya tidak cukup" — para pendukung Bitcoin juga tidak berpikir seperti itu. Mereka melaju sangat cepat menuju jalan buntu, dan 2032 adalah hari perhitungannya.
 
-#### Panen sekarang, dekripsi nanti — risiko kuantum di luar kripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Panen sekarang, dekripsi nanti — risiko kuantum di luar kripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** Bagaimana dengan kuantum dalam kaitannya dengan masyarakat luas? Ini bukan sekadar masalah kripto. Rantai blok sangat rentan, tetapi komponen masyarakat lainnya juga rentan. Sejauh mana Ethereum pascakuantum mewakili alat bagi masyarakat untuk memecahkan dan mencegah berbagai hal di dunia pascakuantum dan pasca-AI?
 
@@ -385,7 +385,7 @@ Ada kemungkinan bahwa aset BTC dapat terpisah dari rantai Bitcoin dan hidup di r
 
 Lalu ada masalah lain dengan enkripsi: jika materi telah dienkripsi hari ini dan Anda tidak menggunakan enkripsi aman pascakuantum, data tersebut dapat didekripsi di masa depan. Ada seluruh kelas serangan yang disebut "panen sekarang, dekripsi nanti." Saya pikir cukup realistis bahwa kita akan mengalami dekripsi massal di masyarakat — banyak pesan Signal, pesan Telegram, atau tumpukan pesan Gmail yang semuanya didekripsi secara bersamaan. Hal itu dapat berdampak sangat signifikan pada masyarakat.
 
-#### Ethereum sebagai akselerasionisme defensif dan risiko eksistensial AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Ethereum sebagai akselerasionisme defensif dan risiko eksistensial AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, saat kita berbicara tentang ketiga teknologi komputasi ini, rasanya yang paling menonjol adalah AI. Anda berbicara tentang tahun 2032 sebagai semacam momen tipe AGI. Satu pertanyaan umum: sebagai seorang ahli kriptografi yang sangat berbakat, Anda bukanlah sebuah AGI. Kekhawatirannya adalah saat kita memasuki singularitas komputasi, semua prediksi bisa saja meleset. Semua rencana matang yang kita buat pada tahun 2026 agar rantai blok kita tahan kuantum — bagaimana jika AGI menemukan cara untuk membobol kriptografi tahan kuantum kita dengan cara lain? Sebagai seorang ahli kriptografi, apakah Anda khawatir tentang hal-hal yang tidak diketahui dari kecerdasan buatan umum (AGI) dan hal-hal yang dapat dibobolnya? Bagaimana jika kita siap untuk dunia pasca-kuantum tetapi tidak siap untuk dunia pasca-AGI?
 
@@ -399,7 +399,7 @@ Saya pikir sangat masuk akal bahwa jika umat manusia bertahan, Ethereum memainka
 
 Bekerja di Ethereum telah memberikan makna yang sama sekali baru bagi saya dalam beberapa bulan terakhir. Saya sebagian besar mengabaikan AI, sebagian karena saya terobsesi dengan hal-hal terkait rantai blok, tetapi juga karena itu hanyalah mainan belum lama ini. Namun melalui pekerjaan saya, terutama dengan verifikasi formal dan pengembangan
 
-#### Makna bekerja di Ethereum di era AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### Makna bekerja di Ethereum di era AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 dan pengodean, saya melihat betapa kuatnya hal ini. Dalam beberapa minggu dan bulan terakhir, saya terobsesi dengan AI, belajar sebanyak yang saya bisa. Saya sama sekali bukan ahli, dan mungkin ini hanya fase yang dilalui orang-orang ketika mereka membuka kotak Pandora. Namun bagi saya, bekerja di Ethereum sekarang sepenuhnya tentang akselerasionisme defensif.
 
@@ -415,7 +415,7 @@ Saya pikir ada kemungkinan bahwa dalam beberapa bulan dan tahun mendatang kita a
 
 **Justin Drake:** Saya relatif tenang menghadapinya. Saya telah mencapai titik di mana saya rela untuk mati. Saya telah menjalani kehidupan yang sangat bahagia.
 
-#### Pemikiran penutup tentang probabilitas kehancuran (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Pemikiran penutup tentang probabilitas kehancuran (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** Apa?
 

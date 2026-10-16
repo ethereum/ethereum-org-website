@@ -137,9 +137,9 @@ The goal is to bound worst-case propagation/validation time and align with conse
 
 Prior to raising the gas limit from 30M to 36M in February 2025 (and subsequently to 45M), this value hadn’t changed since the Merge (September 2022). This EIP aims to make consistent scaling a priority.
 
-EIP-7935 coordinates EL client teams to raise the default gas-limit above today’s 45M for Fusaka. It’s an Informational EIP, but it explicitly asks clients to test higher limits on devnets, converge on a safe value, and ship that number in their Fusaka releases.
+EIP-7935 coordinated EL client teams to raise the default gas-limit above the 45M that preceded Fusaka. It’s an Informational EIP, but it explicitly asked clients to test higher limits on devnets, converge on a safe value, and ship that number in their Fusaka releases.
 
-Devnet planning targets ~60M stress (full blocks with synthetic load) and iterative bumps; research says worst-case block-size pathologies shouldn’t bind below ~150M. Rollout should be paired with the transaction gas-limit cap (EIP-7825) so no single transaction can dominate as limits rise.
+Devnet testing targeted ~60M under stress (full blocks with synthetic load) with iterative bumps; research says worst-case block-size pathologies shouldn’t bind below ~150M. The rollout was paired with the transaction gas-limit cap (EIP-7825) so no single transaction can dominate as limits rise. Clients shipped 60M as the Fusaka default.
 
 **Resources**: [EIP-7935 technical specification](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -253,7 +253,7 @@ Regular nodes without any validators will subscribe to only 4 subnets, providing
 
 If the node is used for a validator client, it has to custody more columns and therefore process more data. With a validator added, the node subscribes to at least 8 column subnets and therefore processes twice as much data as regular node but still less than before Fusaka. If the validator balance is above 287 ETH, more and more subnets will be subscribed to.
 
-For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwith will have to be around 5 times higher, at 100Mpbs.
+For a solo staker, this means their disk usage and download bandwidth will decrease around 50%. However to build blocks locally and upload all blobs to the network, the more upload bandwidth is needed. Local builders will need 2-3 times higher upload bandwidth than before at the time of Fusaka and with the BPO2 target of 15/21 blobs, the final necessary upload bandwidth will have to be around 5 times higher, at 100Mpbs.
 
 #### Large validators {#large-validators}
 

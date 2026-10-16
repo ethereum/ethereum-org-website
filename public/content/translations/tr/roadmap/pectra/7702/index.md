@@ -5,7 +5,7 @@ description: Pectra sürümündeki 7702 hakkında daha fazla bilgi edinin
 lang: tr
 ---
 
-## Özet
+## Özet {#abstract}
 
 EIP-7702, bir EOA'ya (Harici Sahipli Hesap) kod eklemek için bir mekanizma tanımlar. Bu teklif, eski Ethereum hesapları olan EOA'ların kısa vadeli işlevsellik iyileştirmeleri almasına olanak tanıyarak uygulamaların kullanılabilirliğini artırır. Bu, yeni bir işlem türü olan 4 kullanılarak halihazırda dağıtılmış koda bir işaretçi (pointer) ayarlanarak yapılır.
 
@@ -23,7 +23,7 @@ Bu yeni işlem türü bir yetkilendirme listesi sunar. Listedeki her bir yetkile
 Bir yetki devri, boş (null) adrese yetki devredilerek sıfırlanabilir.
 
 EOA'nın özel anahtarı, yetki devrinden sonra hesap üzerinde tam kontrolü elinde tutar. Örneğin, bir Safe'e yetki devretmek hesabı bir çoklu imza (multisig) yapmaz çünkü herhangi bir imzalama politikasını atlayabilecek tek bir anahtar hala mevcuttur. İleriye dönük olarak geliştiriciler, sistemdeki herhangi bir katılımcının bir akıllı sözleşme olabileceği varsayımıyla tasarım yapmalıdır. Akıllı sözleşme geliştiricileri için, `tx.origin` öğesinin bir EOA'yı ifade ettiğini varsaymak artık güvenli değildir.
-## En iyi uygulamalar
+## En iyi uygulamalar {#best-practices}
 
 **Hesap Soyutlama**: Bir yetki devri sözleşmesi, uyumluluğu en üst düzeye çıkarmak için Ethereum'un daha geniş hesap soyutlama (AA) standartlarıyla uyumlu olmalıdır. Özellikle, ideal olarak ERC-4337 ile uyumlu veya bağdaşır olmalıdır.
 
@@ -104,7 +104,7 @@ Kullanıcılar yetki devredilmiş imzalar gerçekleştirdiğinde, kimlik avı ri
 
 **Minimum Güvenilir Yüzey ve Güvenlik**: Bir yetki devri sözleşmesi esneklik sunarken, temel mantığını minimum düzeyde ve denetlenebilir tutmalıdır. Sözleşme fiilen kullanıcının EOA'sının bir uzantısıdır, bu nedenle herhangi bir kusur felaket olabilir. Uygulamalar, akıllı sözleşme güvenlik topluluğunun en iyi uygulamalarını izlemelidir. Örneğin, kurucu (constructor) veya başlatıcı (initializer) işlevleri dikkatlice güvence altına alınmalıdır; Alchemy tarafından vurgulandığı gibi, 7702 altında bir vekil modeli kullanılıyorsa, korumasız bir başlatıcı bir saldırganın hesabı ele geçirmesine izin verebilir. Ekipler zincir içi kodu basit tutmayı hedeflemelidir: Ambire'nin 7702 sözleşmesi yalnızca ~200 satır Solidity'dir ve hataları azaltmak için karmaşıklığı kasıtlı olarak en aza indirir. Özellik açısından zengin mantık ile denetimi kolaylaştıran basitlik arasında bir denge kurulmalıdır.
 
-### Bilinen uygulamalar
+### Bilinen uygulamalar {#known-implementations}
 
 EIP-7702'nin doğası gereği, cüzdanların kullanıcıların 3. taraf bir sözleşmeye yetki devretmesine yardımcı olurken dikkatli olmaları önerilir. Aşağıda, denetlenmiş bilinen uygulamaların bir koleksiyonu listelenmiştir:
 
@@ -132,12 +132,12 @@ Not: ERC-1155 NFT'leri gibi bazı varlıklar yetki devri kodu tarafından otomat
 
 Kodunu kontrol ederek EOA için bir yetki devrinin yürürlükte olduğunu kullanıcıya bildirin ve isteğe bağlı olarak yetki devrini kaldırmayı teklif edin.
 
-#### Yaygın yetki devri
+#### Yaygın yetki devri {#common-delegation}
 
 Donanım sağlayıcısı, bilinen yetki devri sözleşmelerini beyaz listeye alır ve eşlik eden yazılımda bunların desteğini uygular. Tam ERC-4337 desteğine sahip bir sözleşme seçilmesi önerilir.
 
 Farklı bir sözleşmeye yetki devreden EOA'lar, standart EOA'lar olarak ele alınacaktır.
-#### Özel yetki devri
+#### Özel yetki devri {#custom-delegation}
 
 Donanım sağlayıcısı kendi yetki devri sözleşmesini uygular ve bunu listelere ekleyerek eşlik eden yazılımda desteğini uygular. Tam ERC-4337 desteğine sahip bir sözleşme oluşturulması önerilir.
 

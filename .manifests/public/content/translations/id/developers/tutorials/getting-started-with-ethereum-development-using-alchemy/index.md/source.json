@@ -1,27 +1,56 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md",
   "generatedAt": "2026-07-22T23:43:22.009Z",
-  "rootHash": "4be620c9e83d",
+  "rootHash": "bb9350e5bef8",
   "tree": {
-    "contentHash": "6a2fff7a6151",
-    "anchorHash": "99ca21711d3d",
+    "contentHash": "9dfcfcfeb756",
+    "anchorHash": "46732958f879",
     "children": {
       "frontmatter:title": {
         "contentHash": "7ee01cb337b8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "aed0506df0b0",
+        "contentHash": "0a46a8f48cc8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b941c9c8232d"
+        "anchorHash": "e4878d4c759a"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "4ae17445e43a"
+        "contentHash": "c10378da44ab",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "eda71746c01c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "cc90ce1732a6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "45978ecb2996",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "bf12a6d9cf9f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "924b68a85ca1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

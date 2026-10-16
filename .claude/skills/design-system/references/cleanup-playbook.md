@@ -63,7 +63,7 @@ className="border-primary/10"
 
 ## Stale shadcn token names -> project semantic tokens
 
-These appear in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx`, `ui/tabs.tsx` and DON'T resolve in this project's tokens.
+These linger in `ui/select.tsx`, `ui/dialog.tsx`, `ui/dropdown-menu.tsx` (and `ring-offset-background` in `ui/tabs.tsx`) and DON'T resolve in this project's tokens.
 
 | Stale | Replace with |
 |---|---|
@@ -92,33 +92,20 @@ return <div className="bg-background" />  // Token swaps automatically
 return <div className="bg-white dark:bg-gray-900" />
 ```
 
-## `<div className="text-5xl font-bold">` -> semantic heading
+## Hand-rolled heading sizing -> semantic tag / `text-h*`
 
 ```tsx
 // Before:
 <div className="text-5xl font-bold">Page Title</div>
-
-// After:
-<h1>Page Title</h1>  // base.css already styles this
-```
-
-If you need a heading at a different level's size, reuse the matching `text-h*` utility on the element:
-
-```tsx
-<h2 className="text-h1">Custom-sized Heading</h2>  // h2 semantics, h1 size
-```
-
-## `text-3xl lg:text-4xl` (to match a heading size) -> `text-h*`
-
-```tsx
-// Before -- hand-reconstructs h2 sizing; drifts when the scale changes:
 <p className="text-3xl lg:text-4xl">Looks like an h2</p>
 
-// After -- one token, tracks base.css (size + line-height only, no weight):
-<p className="text-h2">Looks like an h2</p>
+// After:
+<h1>Page Title</h1>                          // base.css already styles this
+<h2 className="text-h1">Custom-sized h2</h2>  // real heading at another level's size
+<p className="text-h2">Looks like an h2</p>   // non-heading matching a heading size
 ```
 
-The `text-h1`-`text-h6` utilities (`src/styles/utilities.css`) are the single source of truth for heading sizing. Anytime the intent is "match heading level N's size," use `text-hN` rather than the raw responsive size classes.
+The `text-h1`-`text-h6` utilities are the single source of truth for heading sizing (see `spacing-typography.md`) -- never the raw responsive pair.
 
 ## `<p className="text-Xxl font-bold">number</p>` -> `BigNumber`
 
@@ -156,7 +143,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 // After:
 import { Card, CardContent, CardTitle, CardParagraph } from "@/components/ui/card"
-<Card decoration="purple-gradient">  {/* once the variant is added */}
+<Card className="bg-background bg-tint-primary">  {/* wash via the bg-tint-* family */}
   <CardContent>
     <CardTitle>Title</CardTitle>
     <CardParagraph>Description</CardParagraph>
@@ -164,7 +151,7 @@ import { Card, CardContent, CardTitle, CardParagraph } from "@/components/ui/car
 </Card>
 ```
 
-If the matching variant doesn't exist yet, add it to `Card` before this cleanup.
+Pick the closest `Card` variant (`base`/`nested`/`ghost`/`header-bar`); if the look recurs and no variant fits, add one to `card.tsx` before this cleanup (see `card-walkthrough.md`).
 
 ## `value.toLocaleString()` -> `numberFormat()`
 
@@ -281,9 +268,7 @@ import { Alert } from "@/components/ui/alert"
 )}
 ```
 
-`BannerNotification` was deleted in May 2026; if you find the import in stale code, this is the replacement. The `shouldShow` prop has no equivalent on `Alert` -- gate at the JSX level (`{condition && <Alert>...</Alert>}`).
-
-`BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- inline `<Alert variant="banner">` at the call site.
+The `shouldShow` prop has no equivalent on `Alert` -- gate at the JSX level (`{condition && <Alert>...</Alert>}`). `BugBountyBanner` (a thin wrapper around `BannerNotification`) is gone too -- inline `<Alert variant="banner">` at the call site.
 
 ## Inline `<strong>` lead-in inside `Alert` -> `AlertTitle` + `AlertDescription`
 
@@ -340,7 +325,7 @@ className="bg-linear-primary"
 // If no existing gradient matches: add a new @utility to utilities.css, then use it.
 ```
 
-### Re-spelled token recipe -> named utility / Card variant
+### Re-spelled token recipe -> named utility / component variant
 
 ```tsx
 // Before (this exact recipe is hand-copied dozens of times):
@@ -349,8 +334,8 @@ className="bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 d
 // After (closed-set named utility):
 className="bg-tint-accent-a"
 
-// After (when it's a card): use the Card variant, which applies the utility internally:
-<Card decoration="accent-a">...</Card>
+// After (when a component variant already applies it internally):
+<CardBanner background="accent-a">...</CardBanner>
 ```
 
 ### Our-brand hex -> semantic token
@@ -359,19 +344,11 @@ className="bg-tint-accent-a"
 // Before (our-brand purples typed as hex):
 className="bg-linear-to-b from-[#5c1eb4] to-[#7b3fd8]"
 
-// After (semantic tokens; or the named utility once it exists):
+// After:
 className="bg-linear-to-b from-primary to-primary-hover"
 ```
 
-Hex is permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). For those, don't re-spell the class per entry - pass the hue to a single locked utility:
-
-```tsx
-// Before (per-entity, repeated 50+ times in data):
-twGradiantBrandColor: "from-[#0052FF]"   // applied with bg-linear-to-b at the call site
-
-// After: only the hue varies; direction/opacity/dark fixed by the utility
-<div className="bg-brand-tint" style={{ "--brand-color": brandHex } as CSSProperties} />
-```
+Hex is permitted **only** to match an exact *external* brand color -- and then via the `bg-brand-tint` custom-property pattern, not a per-entry class. Rules and the pattern: `tokens.md` ("Gradient backgrounds").
 
 ### Deprecated v3 gradient syntax -> v4
 
@@ -425,45 +402,15 @@ import { Stack } from "@/components/ui/flex"
 ## Per-section `src/layouts/md/<Section>Layout` -> `TopicLayout` config
 
 ```tsx
-// Before -- a section gets its own layout file that duplicates 90% of every other section's layout:
-// src/layouts/md/Staking.tsx
-export const StakingLayout = ({ children, frontmatter, slug, ... }) => {
-  const { t } = useTranslation("page-staking")
-  const dropdownLinks = { text: t("..."), items: [ /* ... */ ] }
-  const heroProps = { ...frontmatter, breadcrumbs: { slug, startDepth: 1 }, heroImg: { ... } }
-  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<PageHero {...heroProps} />}>{children}</ContentLayout>
-}
+// Before -- a per-section layout file duplicating 90% of every other section's layout:
+export const StakingLayout = ({ children, frontmatter, slug, ... }) => { /* dropdown + hero + ContentLayout */ }
 
 // After -- the data lives in a config file, no layout component needed:
-// src/data/topics/staking.ts
-import type { TopicConfig } from "."
-export const staking: TopicConfig = {
-  translationNs: "page-staking",
-  dropdown: {
-    textKey: "page-staking-dropdown-staking-options",
-    ariaLabelKey: "page-staking-dropdown-staking-options-alt",
-    matomoCategory: "Staking dropdown",
-    items: [
-      { textKey: "page-staking-dropdown-home", href: "/staking/", matomoEvent: "clicked staking home" },
-      // ...
-    ],
-  },
-  heroImage: { width: 800, height: 605 },
-}
-
-// src/layouts/index.ts
-export const layoutMapping = {
-  // ...
-  staking: TopicLayout,  // was: StakingLayout
-}
+// src/data/topics/staking.ts exports a TopicConfig (translationNs, dropdown, heroImage)
+// src/layouts/index.ts: layoutMapping.staking = TopicLayout  // was: StakingLayout
 ```
 
-After the move:
-- Keep the section's MDX component bundle (`stakingComponents`) in `src/layouts/md/<key>.tsx`; only the layout export goes away.
-- Delete any per-section heading overrides (`Heading1`/`Heading2`/etc. with extra className). The defaults in `MdComponents` are the baseline.
-- If the section needs a swap-in component (HubHero on a specific slug, content after the markdown), use `config.hubHero` or the `afterContent` prop -- don't fork a new layout.
-
-See `references/layouts.md` for the full inventory and `docs/topic-layout-refactor.md` for the worked migration.
+After the move: keep the section's MDX component bundle in `src/layouts/md/<key>.tsx` (only the layout export goes away); delete per-section heading overrides (the `MdComponents` defaults are the baseline); use `config.hubHero` / `afterContent` for swap-ins rather than forking a layout. Worked config example and slot inventory: `references/layouts.md`.
 
 ## One-off styled layout/heading wrappers -> semantic tags + `.flow` + `Section`
 
@@ -513,7 +460,7 @@ className="p-hero lg:px-hero-1.5x lg:py-hero-2x"
 
 ## `Page` / `ContentContainer` (MdComponents) -> `<main>` + `<MainArticle className="flow">`
 
-Both were removed (June 2026) -- they were thin wrappers around `Flex`/`MainArticle`.
+Both were removed -- they were thin wrappers around `Flex`/`MainArticle`.
 
 ```tsx
 // Before (import now broken):

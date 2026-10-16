@@ -13,7 +13,7 @@ lang: mr
 
 Finematics ने स्मार्ट कॉन्ट्रॅक्ट्स कसे स्पष्ट केले आहे ते पहा:
 
-<HTML-PLACEHOLDER-COMPONENT-000000 />
+<VideoWatch slug="smart-contracts-code-is-law" />
 
 ## पारंपारिक कॉन्ट्रॅक्ट्समधील विश्वास {#trust-and-contracts}
 
@@ -83,6 +83,6 @@ Finematics ने स्मार्ट कॉन्ट्रॅक्ट्स 
 - [स्मार्ट कॉन्ट्रॅक्ट्स लिहायला शिका](/developers/learning-tools/)
 - [मास्टरिंग इथेरियम - स्मार्ट कॉन्ट्रॅक्ट म्हणजे काय?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
 
-<HTML-PLACEHOLDER-COMPONENT-000001 />
+<Divider />
 
-<HTML-PLACEHOLDER-COMPONENT-000002 />
+<QuizWidget quizKey="smart-contracts" />

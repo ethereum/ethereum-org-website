@@ -1,397 +1,479 @@
 ---
-title: イーサリアム研究の活発な分野
-description: オープンな研究のさまざまな分野を探索し、参加する方法を学びましょう。
+title: "イーサリアム研究の活発な分野"
+description: "オープンな研究のさまざまな分野を探索し、参加する方法を学びましょう。"
 lang: ja
 ---
 
-One of the primary strengths of Ethereum is that an active research and engineering community is constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
+イーサリアムの主な強みの1つは、活発な研究およびエンジニアリングコミュニティが常にそれを改善していることです。世界中の多くの熱心で熟練した人々がイーサリアムの未解決の問題に取り組みたいと考えていますが、それらの問題が何であるかを見つけるのは必ずしも容易ではありません。このページでは、イーサリアムの最先端への大まかなガイドとして、主要な活発な研究分野の概要を説明します。
 
-## How Ethereum research works {#how-ethereum-research-works}
+## イーサリアムの研究はどのように行われるか {#how-ethereum-research-works}
 
-Ethereum research is open and transparent, embodying principles of [Decentralized Science (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science). The culture is to make research tools and outputs as open and interactive as possible, for example, through executable notebooks. Ethereum research moves quickly, with new findings posted and discussed in the open on forums such as [ethresear.ch](https://ethresear.ch/) rather than reaching the community through traditional publications after rounds of peer review.
+イーサリアムの研究はオープンで透明性があります。その文化は、例えば実行可能なノートブックなどを通じて、研究ツールや成果物を可能な限りオープンでインタラクティブなものにすることです。イーサリアムの研究は急速に進んでおり、新しい発見は、査読を重ねた後に伝統的な出版物を通じてコミュニティに届くのではなく、[ethresear.ch](https://ethresear.ch/)のようなフォーラムで公開され、議論されます。イーサリアム財団はまた、何を優先しているか、そしてその理由を公開しているため、現在どの問題が緊急であると考えられているかを誰でも確認できます。
 
-## General research resources {#general-research-resources}
+## 一般的な研究リソース {#general-research-resources}
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/qGpsxSA). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+特定のトピックに関係なく、イーサリアムの研究に関する豊富な情報は、[ethresear.ch](https://ethresear.ch)および[Eth R&Dディスコード・チャンネル](https://discord.gg/qGpsxSA)で見つけることができます。これらは、イーサリアムの研究者が最新のアイデアや開発の機会について議論する主要な場所です。
 
-This report published in May 2022 by [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) provides a good overview of the Ethereum roadmap.
+プロトコルがどこに向かっているかの概要については、まず[イーサリアムのロードマップ](/roadmap/)から始め、次にイーサリアム財団の[2026年に向けたプロトコルの優先事項の更新](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)と、それに対する進捗を報告する[プロトコル・クラスターの更新](https://blog.ethereum.org/2026/05/11/protocol-update-may-26)を読んでください。[Ethereum Protocol Studies](https://blog.ethereum.org/2026/02/17/ethereum-protocol-studies-26)は、プロトコル自体に取り組みたい人向けの構造化されたエントリーポイントです。
 
-## Sources of Funding {#sources-of-funding}
+## 資金源 {#sources-of-funding}
 
-You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](https://esp.ethereum.foundation/academic-grants). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
+イーサリアムの研究に参加し、その対価を得ることができます。[イーサリアム財団](/foundation/)は、[エコシステム・サポート・プログラム](https://esp.ethereum.foundation/applicants)を通じて研究や公共財に資金を提供しており、解決してほしい問題を説明するウィッシュリストの項目や提案の募集を掲載しています。現在および今後の資金提供の機会に関する情報は、[イーサリアムの助成金ページ](/community/grants/)で見つけることができます。
 
-## Protocol research {#protocol-research}
+## プロトコル研究 {#protocol-research}
 
-Protocol research is concerned with Ethereum's base layer - the set of rules defining how nodes connect, communicate, exchange and store Ethereum data and come to consensus about the state of the blockchain. Protocol research gets divided into two top-level categories: consensus and execution.
+プロトコル研究は、イーサリアムのベースレイヤーに関係しています。これは、ノードがどのように接続し、通信し、イーサリアムのデータを交換および保存し、ブロックチェーンの状態についてコンセンサスに達するかを定義する一連のルールです。その長年にわたる2つのカテゴリーはコンセンサスと実行であり、現在ではいくつかの研究トピックが両方にまたがっています。
 
-### Consensus {#consensus}
+### コンセンサス {#consensus}
 
-Consensus research is concerned with [Ethereum's proof-of-stake mechanism](/developers/docs/consensus-mechanisms/pos/). Some example consensus research topics are:
+コンセンサス研究は、[イーサリアムのプルーフ・オブ・ステーク (PoS) メカニズム](/developers/docs/consensus-mechanisms/pos/)に関係しています。フォーク選択ルールとファイナリティ・ガジェットのセキュリティ、ステーキングのクリプトエコノミクス、ブロック、アテステーション、ブロブ・データを運ぶピア・ツー・ピア・ネットワーク、そしてバリデータが署名する暗号技術などです。コンセンサス研究のトピックの例は以下の通りです。
 
-- identifying and patching vulnerabilities;
-- quantifying cryptoeconomic security;
-- increasing the security or performance of client implementations;
-- and developing light clients.
+- 脆弱性の特定とパッチ適用
+- クリプトエコノミクスのセキュリティの定量化
+- ブロックがファイナリティに達するまでの時間の短縮
+- コンセンサス・クライアント間のピア・ツー・ピア・ネットワーキングの効率、安全性、監視の改善
 
-As well as forward-looking research, some fundamental redesigns of the protocol, such as single slot finality, are being researched to allow for significant improvements to Ethereum. Furthermore, the efficiency, safety, and monitoring of peer-to-peer networking between consensus clients are also important research topics.
+この作業の多くは、論文から仕様へと移行しています。データ可用性サンプリングは[フサカ](/roadmap/fusaka/)アップグレードで導入され、ブロックの構築方法やトランザクションの包含が保証される方法の変更は今後のアップグレードのために仕様化されており、リーン・コンセンサスとして知られる長期的な再設計では、ポスト量子署名とともに、より高速なファイナリティが探求されています。
 
-#### Background reading {#background-reading}
+#### 背景知識のリーディング {#background-reading}
 
-- [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG explainer](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
-- [Gasper paper](https://arxiv.org/abs/2003.03052)
+- [プルーフ・オブ・ステークの紹介](/developers/docs/consensus-mechanisms/pos/)
+- [シングル・スロット・ファイナリティ](/roadmap/single-slot-finality/)
+- [キャスパー・FFGの論文](https://arxiv.org/abs/1710.09437)
+- [Gasperの論文](https://arxiv.org/abs/2003.03052)
+- [リーン・イーサリアム](https://blog.ethereum.org/2025/07/31/lean-ethereum)
 
-#### Recent research {#recent-research}
+#### 最近の研究 {#recent-research}
 
-- [Ethresear.ch Consensus](https://ethresear.ch/c/consensus/29)
-- [Availability/Finality dilemma](https://arxiv.org/abs/2009.04987)
-- [Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Proposer-builder separation](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [Ethresear.ch コンセンサス](https://ethresear.ch/c/consensus/29)
+- [可用性/ファイナリティのジレンマ](https://arxiv.org/abs/2009.04987)
+- [3スロット・ファイナリティ: SSFは「シングル」スロットに関するものではない](https://ethresear.ch/t/3-slot-finality-ssf-is-not-about-single-slot/20927)
 
-### Execution {#execution}
+### 実行 {#execution}
 
-The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, including:
+実行レイヤーは、トランザクションの実行、[イーサリアム仮想マシン (EVM)](/developers/docs/evm/)の実行、およびコンセンサス・レイヤーに渡す実行ペイロードの生成に関係しています。ここでの研究は2つの流れに分かれています。状態の保持と証明を安価にすること、そしてノードを実行する人々により多くのコストを押し付けることなくスループットを向上させることです。以下を含む多くの活発な研究分野があります。
 
-- building out light client support;
-- researching gas limits;
-- and incorporating new data structures (e.g., Verkle Tries).
+- 状態を作成する操作のガス・コストの再価格設定
+- ノードが提供する必要がなくなった履歴の失効
+- トランザクションを並行して検証できるようにするブロックレベルのアクセスリスト
+- 状態、データ、計算を個別に価格設定する多次元手数料市場
+- zkEVMを使用したL1ブロックの実行の証明
 
-#### Background reading {#background-reading-1}
+#### 背景知識のリーディング {#background-reading-1}
 
-- [Introduction to the EVM](/developers/docs/evm)
-- [Ethresear.ch execution layer](https://ethresear.ch/c/execution-layer-research/37)
+- [EVMの紹介](/developers/docs/evm/)
+- [Ethresear.ch 実行レイヤー](https://ethresear.ch/c/execution-layer-research/37)
+- [イーサリアム実行レイヤー仕様](https://github.com/ethereum/execution-specs)
+- [データベースの最適化](https://github.com/erigontech/erigon/blob/main/docs/programmers_guide/db_faq.md)
 
-#### Recent research {#recent-research-1}
+#### 最近の研究 {#recent-research-1}
 
-- [Database optimizations](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
-- [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Verkle and state expiry proposal](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [History management](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [EIP-7928: ブロックレベルのアクセスリスト](https://eips.ethereum.org/EIPS/eip-7928)
+- [EIP-8037: 状態作成のガス・コスト増加](https://eips.ethereum.org/EIPS/eip-8037)
+- [EIP-7999: 統合された多次元手数料市場](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7642: eth/69、履歴の失効、およびよりシンプルなレシート](https://eips.ethereum.org/EIPS/eip-7642)
+- [L1 zkEVMの出荷: リアルタイム証明](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
-## Client Development {#client-development}
+### 検閲耐性とブロック構築 {#censorship-resistance-and-block-building}
 
-Ethereum clients are implementations of the Ethereum protocol. Client development makes the outcomes from protocol research into reality by building them into these clients. Client development includes updating the client specifications as well as building specific implementations.
+現在、ほとんどのイーサリアムのブロックは少数の専門的なビルダーによって組み立てられており、どのトランザクションを含めるかを決定する権限が集中しています。この分野の研究は、ビルダー市場をプロトコル自体に組み込むことをカバーしています。これにより、ブロックを提案する役割と構築する役割が、プロトコル外のソフトウェアではなくコンセンサス・ルールによって分離され、ビルダーが除外したトランザクションの包含をバリデータが強制する方法を提供します。
 
-An Ethereum node is required to run two pieces of software:
+#### 背景知識のリーディング {#background-reading-21}
 
-1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
-2. an execution client to support the Ethereum Virtual Machine and execute transactions and smart contracts
+- [プロポーザー・ビルダー分離 (PBS)](/roadmap/pbs/)
+- [単一の秘密リーダー選出 (SSLE)](/roadmap/secret-leader-election/)
 
-See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more details on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/ethereum-forks/).
+#### 最近の研究 {#recent-research-21}
 
-### Execution Clients {#execution-clients}
+- [EIP-7732: プロトコルに組み込まれたプロポーザー・ビルダー分離](https://eips.ethereum.org/EIPS/eip-7732)
+- [EIP-7805: フォーク選択によって強制されるインクルージョン・リスト](https://eips.ethereum.org/EIPS/eip-7805)
+- [プロポーザー・ビルダー分離下でのトランザクションの検閲耐性の向上](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
-- [Execution client specification](https://github.com/ethereum/execution-specs)
-- [Execution API spec](https://github.com/ethereum/execution-apis)
+### 状態の増大とステートレス性 {#state-growth-and-statelessness}
 
-### Consensus Clients {#consensus-clients}
+すべてのフル・ノードはイーサリアムの状態を保存するため、その状態が増大する速度が、ノードを実行するコストの下限を設定します。短期的には、研究は状態を作成する操作の再価格設定と、ノードが保持する必要がなくなった履歴の失効に焦点を当てています。長期的には、イーサリアムの16進マークル・パトリシア・トライを、はるかに小さな証明を生成するバイナリ・ツリーに置き換え、ステートレス性に向けて移行する計画です。これにより、ノードは状態全体を保持することなくブロックを検証できるようになります。この分野の初期の作業ではヴァークル・ツリーが想定されていましたが、現在の提案は統合されたバイナリ・ツリーであり、初期の作業で指定されたウィットネスのガス・スケジュールを引き継いでいます。
 
-- [Consensus client specification](https://github.com/ethereum/consensus-specs)
-- [Beacon API specification](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+#### 背景知識のリーディング {#background-reading-22}
 
-## Scaling and performance {#scaling-and-performance}
+- [ステートレス性とステート失効](/roadmap/statelessness/)
+- [イーサリアム・ステートレス・ブック](https://stateless.fyi/)
 
-Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and making them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+#### 最近の研究 {#recent-research-22}
 
-### Layer 2 {#layer-2}
+- [EIP-7864: 統合されたバイナリ・ツリーを使用したイーサリアムの状態](https://eips.ethereum.org/EIPS/eip-7864)
+- [EIP-4762: ステートレス性のガス・コスト変更](https://eips.ethereum.org/EIPS/eip-4762)
+- [分散型の状態がイーサリアムにとって重要である理由](https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622)
 
-There are now several Layer 2 protocols that scale Ethereum using different techniques for batching transactions and securing them on Ethereum layer 1. This is a very rapidly growing topic with a lot of research and development potential.
+### ポスト量子暗号 {#post-quantum-cryptography}
 
-#### Background reading {#background-reading-2}
+イーサリアムのバリデータの署名とアプリケーション・レイヤーの多くは楕円曲線暗号に依存しており、十分な能力を持つ量子コンピュータであればこれを破ることができます。イーサリアムを量子耐性にするということは、それらの署名をハッシュベースまたは格子ベースの代替手段に置き換え、大規模なバリデータ・セットに対して署名集約を十分に効率的に保ち、既存のアカウントに移行パスを提供することを意味します。イーサリアム財団は専用のポスト量子チームを運営しており、これはロードマップ上で最も長期的なプログラムの1つです。
 
-- [Introduction to layer 2](/layer-2/)
-- [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+#### 背景知識のリーディング {#background-reading-23}
 
-#### Recent research {#recent-research-2}
+- [量子耐性](/roadmap/security/quantum-resistance/)
+- [ポスト量子イーサリアム](https://pq.ethereum.org/)
 
-- [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2021/1465)
-- [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
-- [Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [L2Beat](https://l2beat.com/)
+#### 最近の研究 {#recent-research-23}
 
-### Bridges {#bridges}
+- [リーン・イーサリアム](https://blog.ethereum.org/2025/07/31/lean-ethereum)
+- [Ethresear.ch 暗号技術](https://ethresear.ch/c/cryptography/28)
+- [リーン・イーサリアムの実装](https://github.com/leanEthereum)
 
-One particular area of layer 2 that requires more research and development is safe and performant bridges. This includes bridges between various Layer 2s and bridges between Layer 1 and Layer 2. This is a particularly important area of research because bridges are commonly targeted by hackers.
+## クライアント開発 {#client-development}
 
-#### Background reading {#background-reading-3}
+イーサリアム・クライアントは、イーサリアム・プロトコルの実装です。クライアント開発は、プロトコル研究の成果をこれらのクライアントに組み込むことで現実のものにします。クライアント開発には、クライアント仕様の更新と特定の実装の構築が含まれます。
 
-- [Introduction to blockchain bridges](/bridges/)
-- [Vitalik on bridges](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
-- [Blockchain bridges article](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Value locked in bridges](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+イーサリアム・ノードは、2つのソフトウェアを実行する必要があります。
 
-#### Recent research {#recent-research-3}
+1. ブロックチェーンの先頭を追跡し、ブロックをゴシップし、コンセンサス・ロジックを処理するコンセンサス・クライアント
+2. イーサリアム仮想マシンをサポートし、トランザクションとスマート・コントラクトを実行する実行クライアント
 
-- [Validating bridges](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+これら2つに加えて、L1ブロックの実行を証明するクライアントや、ポスト量子署名を中心に構築されたリーン・コンセンサス・クライアントなど、新しいクラスのクライアントのプロトタイプが作成されています。
 
-### Sharding {#sharding}
+ノードとクライアントの詳細、および現在のすべてのクライアント実装のリストについては、[ノードとクライアントのページ](/developers/docs/nodes-and-clients/)を参照してください。また、[歴史のページ](/ethereum-forks/)でイーサリアムのすべてのアップグレードの歴史を見つけることもできます。
 
-Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
+### 実行クライアント {#execution-clients}
 
-The precursor to full Danksharding known as Proto-Danksharding went live with the Cancun-Deneb ("Dencun") network upgrade.
+- [実行クライアント仕様](https://github.com/ethereum/execution-specs)
+- [実行API仕様](https://github.com/ethereum/execution-apis)
 
-[More about the Dencun upgrade](/roadmap/dencun/)
+### コンセンサス・クライアント {#consensus-clients}
 
-#### Background reading {#background-reading-4}
+- [コンセンサス・クライアント仕様](https://github.com/ethereum/consensus-specs)
+- [ビーコンAPI仕様](https://ethereum.github.io/beacon-APIs/)
 
-- [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
-- [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-- [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
+### zkEVMクライアント {#zkevm-clients}
 
-#### Recent research {#recent-research-4}
+- [zkEVM](/roadmap/zkevm/)
+- [Ethproofs](https://ethproofs.org/)
+- [L1 zkEVMの出荷: セキュリティの基盤](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
-- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
-- [Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
+## スケーリングとパフォーマンス {#scaling-and-performance}
 
-### Hardware {#hardware}
+イーサリアムのスケーリングは、イーサリアムの研究者にとって大きな焦点となる分野であり、レイヤー1自体のスループットを向上させることと、データをイーサリアムに投稿するロールアップに実行を移行することの2つの軌道で同時に進行しています。現在の作業には、ブロックのガス・リミットの引き上げ、状態の増大の再価格設定、ロールアップ・データのためのブロブ容量の拡大、およびノードが保存および検証しなければならないものの削減が含まれます。イーサリアムのスケーリングに関する入門情報は、[スケーリングのページ](/developers/docs/scaling/)および[スケーリングのロードマップ](/roadmap/scaling/)で入手できます。
 
-[Running nodes](/developers/docs/nodes-and-clients/run-a-node/) on modest hardware is fundamental to keeping Ethereum decentralized. Therefore, active research into minimizing the hardware requirements to run nodes is an important area of research.
+### レイヤー2 (L2) {#layer-2}
 
-#### Background reading {#background-reading-5}
+現在、トランザクションをバッチ処理し、イーサリアムのレイヤー1でそれらを保護するためのさまざまな技術を使用してイーサリアムをスケーリングする、いくつかのレイヤー2 (L2) プロトコルがあります。オープンな研究には、証明のレイテンシとコストの削減、トランザクションがトラストレスなファイナリティに達するまでの時間の短縮、および多くのロールアップにわたってユーザーに単一の一貫した体験を提供することが含まれます。
 
-- [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+#### 背景知識のリーディング {#background-reading-2}
 
-#### Recent research {#recent-research-5}
+- [レイヤー2 (L2) の紹介](/layer-2/)
+- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
+- [ロールアップ中心のイーサリアム・ロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
-- [ecdsa on FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+#### 最近の研究 {#recent-research-2}
 
-## Security {#security}
+- [Ethresear.ch レイヤー2 (L2)](https://ethresear.ch/c/layer-2/32)
+- [L2BEAT: オンチェーン・コスト](https://l2beat.com/scaling/costs)
+- [2026年のイーサリアムでの構築: 何が変わったか](/latest/building-on-ethereum-in-2026/)
 
-Security is a broad topic that might include spam/scam prevention, wallet security, hardware security, crypto-economic security, bug hunting and testing of applications and client software and key-management. Contributing to knowledge in these areas will help stimulate mainstream adoption.
+### インターオペラビリティ {#interoperability}
 
-### Cryptography & ZKP {#cryptography--zkp}
+ユーザーと資産はイーサリアムのレイヤー1と多くのレイヤー2 (L2) に分散しており、研究の課題は、仲介者を信頼することなく、それらのチェーン間で移動および行動できるようにすることです。ここでの作業は、インテントベースの送金、標準化されたクロスチェーンのアドレス指定とネーミング、一般的なメッセージ・パッシング、およびウォレット・レベルでのチェーン抽象化をカバーしています。これは、カストディアル・ブリッジが資産を保持していたモデルに代わるものであり、ブリッジは歴史的にエコシステムにおける最大の損失源の1つであったため、クロスチェーン・メカニズムのセキュリティは依然として中心的な懸念事項です。
 
-Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy and security into Ethereum and its applications. Zero-knowledge is a relatively young but fast-moving space with many open research and development opportunities. Some possibilities include developing more efficient implementations of the [Keccak hashing algorithm](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview), finding better polynomial commitments than currently exist or reducing the cost of ecdsa public key generation and signature verification circuits.
+#### 背景知識のリーディング {#background-reading-3}
 
-#### Background reading {#background-reading-6}
+- [ブロックチェーン・ブリッジの紹介](/bridges/)
+- [イーサリアムを再び1つのチェーンのように感じさせる](https://blog.ethereum.org/2025/11/18/eil)
+- [オープン・インテント・フレームワーク](https://openintents.xyz/)
+- [ブリッジの検証](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
-- [0xparc blog](https://0xparc.org/blog)
-- [zkp.science](https://zkp.science/)
-- [Zero Knowledge podcast](https://zeroknowledge.fm/)
+#### 最近の研究 {#recent-research-3}
 
-#### Recent research {#recent-research-6}
+- [ERC-7683: クロスチェーン・インテント](https://eips.ethereum.org/EIPS/eip-7683)
+- [ERC-7930: 相互運用可能なアドレス](https://eips.ethereum.org/EIPS/eip-7930)
+- [ERC-7828: 相互運用可能な名前](https://eips.ethereum.org/EIPS/eip-7828)
 
-- [Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
+### データ可用性とブロブのスケーリング {#data-availability-and-blob-scaling}
+
+ロールアップはデータをブロブとしてイーサリアムに投稿し、そのデータ・レイヤーのスケーリングは、実行のスケーリングとは別の、それ自体が研究課題です。イーサリアムは現在、データ可用性サンプリングを使用しているため、バリデータはブロブ・データをすべてダウンロードするのではなく、その一部をサンプリングすることで公開されたことを検証でき、ブロブ容量は専用のブロブ・パラメータのみのフォークを通じて段階的に引き上げられます。未解決の疑問には、サンプリングをどこまで推し進めることができるか、自宅でステーキングしている人々のために帯域幅の要件をどのように管理可能な状態に保つか、そしてブロブの価格設定が需要にどのように対応すべきかなどが含まれます。
+
+#### 背景知識のリーディング {#background-reading-4}
+
+- [PeerDAS](/roadmap/fusaka/peerdas/)
+- [フサカ・アップグレード](/roadmap/fusaka/)
+- [ダンクシャーディング](/roadmap/danksharding/)
+- [データ可用性](/developers/docs/data-availability/)
+- [EIP-4844: シャード・ブロブ・トランザクション](https://eips.ethereum.org/EIPS/eip-4844)
+- [プロト・ダンクシャーディングのノート](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+
+#### 最近の研究 {#recent-research-4}
+
+- [EIP-7594: PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)
+- [EIP-7892: ブロブ・パラメータのみのハードフォーク](https://eips.ethereum.org/EIPS/eip-7892)
+- [Ethresear.ch シャーディング](https://ethresear.ch/c/sharding/6)
+
+### ハードウェア {#hardware}
+
+適度なハードウェアで[ノードを実行する](/developers/docs/nodes-and-clients/run-a-node/)ことは、イーサリアムを分散型に保つための基本であるため、スループットの向上はすべて、ノード・オペレーターにかかるコストと比較検討する必要があります。ブロックのガス・リミットが上昇し、さらなる増加が計画されている中、活発な研究は、状態の増大とその価格設定方法、より大きな状態での同期とデータベースのパフォーマンス、履歴の失効から得られるディスクの節約、そして最終的にはステートレス性をカバーしています。
+
+#### 背景知識のリーディング {#background-reading-5}
+
+- [独自のイーサリアム・ノードを立ち上げる](/developers/docs/nodes-and-clients/run-a-node/)
+- [ステートレス性とステート失効](/roadmap/statelessness/)
+- [ARM上のイーサリアム](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+
+#### 最近の研究 {#recent-research-5}
+
+- [イーサリアムのスケーリング: より高いガス・リミットとその先への道](https://ethpandaops.io/posts/gaslimit-scaling/)
+- [EIP-8261: ガス・リミットのスケジュール](https://eips.ethereum.org/EIPS/eip-8261)
+- [EIP-8037: 状態作成のガス・コスト増加](https://eips.ethereum.org/EIPS/eip-8037)
+
+## セキュリティ {#security}
+
+セキュリティは幅広いトピックであり、スパムや詐欺の防止、ウォレットのセキュリティ、ハードウェアのセキュリティ、クリプトエコノミクスのセキュリティ、検閲耐性、ポスト量子への準備、バグ・ハンティング、アプリケーションやクライアント・ソフトウェアのテストと検証などが含まれる場合があります。イーサリアムの[セキュリティ・ロードマップ](/roadmap/security/)は、プロトコル・レベルの作業をカバーしています。
+
+### 暗号技術とZKP {#cryptography--zkp}
+
+ゼロ知識証明 (ZKP) と暗号技術は、イーサリアムとそのアプリケーションにプライバシーとセキュリティを組み込むために不可欠です。ゼロ知識証明は研究から本番インフラへと移行しました。実際のイーサリアムのブロックを証明するプルーバーは、現在、レイテンシ、コスト、健全性について公開でベンチマークされています。未解決の問題もそれに応じて変化しており、L1ブロックをリアルタイムで実行できるほど高速に証明すること、使用中の証明システムのセキュリティを厳密に説明すること、そしてポスト量子暗号に備えることへと向かっています。
+
+#### 背景知識のリーディング {#background-reading-6}
+
+- [zkEVM](/roadmap/zkevm/)
+- [プライバシー](/roadmap/privacy/)
+- [Zero Knowledge ポッドキャスト](https://zeroknowledge.fm/)
+
+#### 最近の研究 {#recent-research-6}
+
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
+- [Ethresear.ch 暗号技術](https://ethresear.ch/c/cryptography/28)
+- [ハッシュベースのzkEVM証明システムのための健全性計算機](https://github.com/ethereum/soundcalc)
+- [L1 zkEVMの出荷: セキュリティの基盤](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
-### Wallets {#wallets}
+### ウォレット {#wallets}
 
-Ethereum wallets can be browser extensions, desktop and mobile apps or smart contracts on Ethereum. There is active research into social recovery wallets that reduce some of the risk associated with individual-user key management. Associated with development of wallets is research into alternative forms of account abstraction, which is an important area of nascent research.
+イーサリアムのウォレットは、ブラウザ拡張機能、デスクトップおよびモバイル・アプリ、またはイーサリアム上のスマート・コントラクトにすることができます。アカウント抽象化はもはや実験的なものではありません。ERC-4337はプロトコルの変更なしにスマート・アカウントを提供し、EIP-7702は通常のアカウントにコードを設定できるようにすることで、トランザクションのバッチ処理、ガスのスポンサーシップ、ソーシャル・リカバリーが、ユーザーがすでに持っているアドレスで機能するようにします。現在のオープンな研究は、プロトコル自体におけるネイティブなアカウント抽象化、モジュール式で監査可能なアカウント・アーキテクチャ、そして一般の人々が安全に操作できる鍵管理とリカバリーに集中しています。
 
-#### Background reading {#background-reading-7}
+#### 背景知識のリーディング {#background-reading-7}
 
-- [Introduction to wallets](/wallets/)
-- [Introduction to wallet security](/security/)
-- [Ethresear.ch Security](https://ethresear.ch/tag/security)
-- [EIP-2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
-- [EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
+- [ウォレットの紹介](/wallets/)
+- [ウォレット・セキュリティの紹介](/security/)
+- [アカウント抽象化](/roadmap/account-abstraction/)
+- [EIP-7702](/roadmap/pectra/7702/)
+- [Ethresear.ch セキュリティ](https://ethresear.ch/c/security/25)
 
-#### Recent research {#recent-research-7}
+#### 最近の研究 {#recent-research-7}
 
-- [Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
-- [Publishing code at an EOA address](https://eips.ethereum.org/EIPS/eip-5003)
+- [EIP-8141: フレーム・トランザクション](https://eips.ethereum.org/EIPS/eip-8141)
+- [ERC-5792: ウォレット呼び出しAPI](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-6963: 複数のインジェクトされたプロバイダーのディスカバリー](https://eips.ethereum.org/EIPS/eip-6963)
+- [検証に焦点を当てたスマート・コントラクト・ウォレット](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 
-## Community, education and outreach {#community-education-and-outreach}
+## コミュニティ、教育、アウトリーチ {#community-education-and-outreach}
 
-Onboarding new users onto Ethereum requires new educational resources and approaches to outreach. This might include blog posts and articles, books, podcasts, memes, teaching resources, events and anything else that builds communities, welcomes new starters and educates people about Ethereum.
+新しいユーザーをイーサリアムにオンボーディングするには、新しい教育リソースとアウトリーチへのアプローチが必要です。これには、ブログ記事や記事、書籍、ポッドキャスト、ミーム、教育リソース、イベントなど、コミュニティを構築し、初心者を歓迎し、イーサリアムについて人々を教育するあらゆるものが含まれる可能性があります。
 
-### UX/UI {#uxui}
+### デザインとUX {#design-and-ux}
 
-To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This will require designers and product experts to re-examine the design of wallets and apps.
+より多くの人々をイーサリアムにオンボーディングするために、エコシステムはそのデザインとユーザー・エクスペリエンスを改善しなければなりません。これには、デザイナーや製品の専門家がウォレットやアプリの仕組みを再検討する必要があり、バッチ化されたウォレット呼び出し、ガスのスポンサーシップ、リカバリー可能なアカウント、属するチェーンを伝える人間が読めるアドレスなど、すでに存在する標準に対してデザインすることを意味することが増えています。Web3のUX研究のための標準的な場所は比較的少ないため、公開された研究やデザインのガイダンスは散在する傾向があります。
 
-#### Background reading {#background-reading-8}
+#### 背景知識のリーディング {#background-reading-8}
+
+- [Web3におけるデザインとUX](/developers/docs/design-and-ux/)
+- [イーサリアムのユーザー・エクスペリエンス・ロードマップ](/roadmap/user-experience/)
+- [Web3デザイン・プレイブック](https://learnweb3.design/)
+- [Web3 UXデザイン・ハンドブック](https://web3ux.design/)
+
+#### 最近の研究 {#recent-research-8}
 
 - [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [ERC-5792: ウォレット呼び出しAPI](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-7828: 相互運用可能な名前](https://eips.ethereum.org/EIPS/eip-7828)
 
-#### Recent research {#recent-research-8}
+### 経済学 {#economics}
 
-- [Web3 Design Discord](https://discord.gg/FsCFPMTSm9)
-- [Web3 Design Principles](https://www.web3designprinciples.com/)
-- [Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+イーサリアムにおける経済学の研究は、大きく2つのアプローチに従います。経済的インセンティブに依存するメカニズムのセキュリティを検証すること（「ミクロ経済学」）と、プロトコル、アプリケーション、ユーザー間の価値の流れを分析すること（「マクロ経済学」）です。イーサリアムのネイティブ資産（イーサ）と、その上に構築されたトークン（例えばNFTやERC-20トークン）に関連する複雑なクリプトエコノミクスの要因があります。
 
-### Economics {#economics}
+#### 背景知識のリーディング {#background-reading-9}
 
-Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyze the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+- [ロバスト・インセンティブ・グループ](https://rig.ethereum.org/)
+- [イーサリアム経済学マスタークラスと経済モデル](https://github.com/CADLabs/ethereum-economic-model)
 
-#### Background reading {#background-reading-9}
+#### 最近の研究 {#recent-research-9}
 
-- [Robust Incentives Group](https://rig.ethereum.org/)
-- [ETHconomics workshop at Devconnect](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
+- [Ethresear.ch 経済学](https://ethresear.ch/c/economics/16)
+- [循環供給の均衡](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
+- [MEVの定量化: 森はどれほど暗いのか？](https://arxiv.org/abs/2101.05511)
 
-#### Recent research {#recent-research-9}
+### ブロックスペースと手数料市場 {#blockspace-fee-markets}
 
-- [Empirical analysis of EIP1559](https://arxiv.org/abs/2201.05574)
-- [Circulating supply equilibrium](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
-- [Quantifying MEV: How dark is the forest?](https://arxiv.org/abs/2101.05511)
+ブロックスペース市場は、イーサリアム（レイヤー1）上で直接、またはロールアップ（レイヤー2 (L2)）などのブリッジされたネットワーク上で、エンドユーザーのトランザクションの包含を管理します。イーサリアムでは、トランザクションはEIP-1559としてプロトコル内にデプロイされた手数料市場に送信され、チェーンをスパムから保護し、混雑を価格設定します。両方のレイヤーで、トランザクションは最大抽出可能価値 (MEV) として知られる外部性を生み出す可能性があり、これがこれらの外部性を捕捉または管理するための新しい市場構造を誘発します。現在の作業は、状態、データ、計算が独立して混雑するため、複数のリソースを一度に価格設定すること、そして誰がどのような条件でブロックを組み立てるかを変更することにまで及んでいます。
 
-### Blockspace and fee markets {#blockspace-fee-markets}
+#### 背景知識のリーディング {#background-reading-10}
 
-Blockspace markets govern the inclusion of end-user transactions, either directly on Ethereum (Layer 1) or on bridged networks, e.g., rollups (Layer 2). On Ethereum, transactions are submitted to the fee market deployed in-protocol as EIP-1559, protecting the chain from spam and pricing congestion. On both layers, transactions may produce externalities, known as Maximal Extractable Value (MEV), which induce new market structures to capture or manage these externalities.
+- [イーサリアム・ブロックチェーンのトランザクション手数料メカニズムの設計: EIP-1559の経済分析 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [EIP-1559のシミュレーション (ロバスト・インセンティブ・グループ)](https://ethereum.github.io/abm1559)
+- [第一原理からのロールアップ経済学](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Flash Boys 2.0: 分散型取引所におけるフロントランニング、トランザクションの並べ替え、およびコンセンサスの不安定性](https://arxiv.org/abs/1904.05234)
 
-#### Background reading {#background-reading-10}
+#### 最近の研究 {#recent-research-10}
 
-- [Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559 (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
-- [Simulations of EIP-1559 (Robust Incentives Group)](https://ethereum.github.io/abm1559)
-- [Rollup economics from first principles](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/abs/1904.05234)
+- [EIP-7999: 統合された多次元手数料市場](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7928: ブロックレベルのアクセスリスト](https://eips.ethereum.org/EIPS/eip-7928)
+- [クロスドメインMEV](https://arxiv.org/abs/2112.01472)
 
-#### Recent research {#recent-research-10}
+### プルーフ・オブ・ステークのインセンティブ {#proof-of-stake-incentives}
 
-- [Multidimensional EIP-1559 video presentation](https://youtu.be/QbR4MTgnCko)
-- [Cross domain MEV](https://arxiv.org/abs/2112.01472)
-- [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+バリデータは、不正行為に対する担保としてイーサリアムのネイティブ資産（イーサ）を使用します。このクリプトエコノミクスがネットワークのセキュリティを決定します。洗練されたバリデータは、インセンティブ・レイヤーのニュアンスを悪用して明示的な攻撃を仕掛けることができるかもしれません。ペクトラ・アップグレード以降、バリデータははるかに大きなエフェクティブ・バランスを保持して収益を得ることができ、複数のバリデータを1つに統合することもできるため、バリデータを実行する経済性が変化します。
 
-### Proof-of-stake incentives {#proof-of-stake-incentives}
+#### 背景知識のリーディング {#background-reading-11}
 
-Validators use Ethereum's native asset (ether) as collateral against dishonest behavior. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+- [最大エフェクティブ・バランス](/roadmap/pectra/maxeb/)
+- [イーサリアム経済学マスタークラスと経済モデル](https://github.com/CADLabs/ethereum-economic-model)
+- [PoSインセンティブのシミュレーション (ロバスト・インセンティブ・グループ)](https://ethereum.github.io/beaconrunner/)
 
-#### Background reading {#background-reading-11}
+#### 最近の研究 {#recent-research-11}
 
-- [Ethereum economics masterclass and economic model](https://github.com/CADLabs/ethereum-economic-model)
-- [Simulations of PoS incentives (Robust Incentives Group)](https://ethereum.github.io/beaconrunner/)
+- [ロバスト・インセンティブ・グループ](https://rig.ethereum.org/)
+- [PoSイーサリアムに対する3つの攻撃](https://arxiv.org/abs/2110.10086)
 
-#### Recent research {#recent-research-11}
+### リキッド・ステーキングとデリバティブ {#liquid-staking-and-derivatives}
 
-- [Increasing censorship resistance of transactions under proposer/builder separation (PBS)](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- [Three Attacks on PoS Ethereum](https://arxiv.org/abs/2110.10086)
+リキッド・ステーキングにより、32 ETH未満のユーザーは、イーサをDeFiで使用できるステークされたイーサを表すトークンと交換することで、ステーキング利回りを受け取ることができます。しかし、リキッド・ステーキングに関連するインセンティブと市場のダイナミクス、およびイーサリアムのセキュリティへの影響（例えば、中央集権化のリスク）は、まだ解明されつつある段階です。
 
-### Liquid staking and derivatives {#liquid-staking-and-derivatives}
+#### 背景知識のリーディング {#background-reading-12}
 
-Liquid staking allows users with less than 32 ETH to receive staking yields by swapping ether for a token representing staked ether that can be used in DeFi. However, the incentives and market dynamics associated with liquid staking are still being discovered, as well as its effect on Ethereum's security (e.g., centralization risks).
+- [Ethresear.ch リキッド・ステーキング](https://ethresear.ch/search?q=liquid%20staking)
+- [リド: トラストレスなイーサリアム・ステーキングへの道](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
 
-#### Background reading {#background-reading-12}
+#### 最近の研究 {#recent-research-12}
 
-- [Ethresear.ch liquid staking](https://ethresear.ch/search?q=liquid%20staking)
-- [Lido: The road to trustless Ethereum staking](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
-- [Rocket Pool: Staking protocol introduction](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
+- [リキッド・ステーキング・デリバティブのリスク](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [リドからの引き出しの処理](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 
-#### Recent research {#recent-research-12}
+## テスト {#testing}
 
-- [Handling withdrawals from Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Withdrawal credentials](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
-- [The risks of Liquid Staking Derivatives](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+### クライアントとネットワークのテスト {#client-and-network-testing}
 
-## Testing {#testing}
+イーサリアムの仕様は実行可能であり、そこから生成されたテスト・フィクスチャは、クライアント・チームが実装をチェックするためのものです。これらと並行して、共有テスト・ハーネスはクライアント同士を対抗させたり、意図的に敵対的なネットワーク条件に対して実行したりし、パブリック・テストネットはメインネットに到達する前にアップグレードをテストします。このインフラストラクチャを改善することは、バグがユーザーに届く前に発見される方法であるため、利用可能な最もレバレッジの高い作業の1つです。
 
-### Formal verification {#formal-verification}
+#### 背景知識のリーディング {#background-reading-24}
 
-Formal verification is writing code to verify that Ethereum's consensus specifications are correct and bug-free. There is an executable version of the specification written in Python that requires maintenance and development. Further research can help to improve the Python implementation of the specification and add tools that can more robustly verify correctness and identify issues.
+- [イーサリアム実行レイヤー仕様](https://github.com/ethereum/execution-specs)
+- [コンセンサス・クライアント仕様](https://github.com/ethereum/consensus-specs)
 
-#### Background reading {#background-reading-13}
+#### 最近の研究 {#recent-research-24}
 
-- [Introduction to formal verification](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
-- [Formal Verification (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
+- [hive、エンドツーエンドのクライアント・テスト・ハーネス](https://github.com/ethereum/hive)
+- [Assertoor、テストネット・テスト・ツール](https://github.com/ethpandaops/assertoor)
 
-#### Recent research {#recent-research-13}
+### 形式的検証 {#formal-verification}
 
-- [Formal verification of the deposit contract](https://github.com/runtimeverification/deposit-contract-verification)
-- [Formal verification of the Beacon Chain specification](https://github.com/runtimeverification/deposit-contract-verification)
+形式的検証は、機械でチェックされた数学的証明を使用して、仕様または実装が意図したとおりに動作することを確立します。イーサリアムでは、これはEVMの実装が形式的意味論と一致することの証明、ゼロ知識プルーバーが依存する回路と証明システムの健全性の証明、およびそれらの下にある暗号プリミティブの検証をカバーしています。さらなる研究により、これらの証明を強化し、スタックのより多くの部分に拡張することができます。
 
-## Data science and analytics {#data-science-and-analytics}
+#### 背景知識のリーディング {#background-reading-13}
 
-There is a need for more data analysis tools and dashboards that give detailed information about activity on Ethereum and the health of the network.
+- [検証済みのzkEVM](https://verified-zkevm.org/)
+- [形式的検証 (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
-### Background reading {#background-reading-14}
+#### 最近の研究 {#recent-research-13}
+
+- [検証済みzkEVMプロジェクトの概要](https://github.com/Verified-zkEVM/Overview)
+- [KEVM: KにおけるEVMの意味論](https://github.com/runtimeverification/evm-semantics)
+- [デポジット・コントラクトの形式的検証](https://github.com/runtimeverification/deposit-contract-verification)
+
+## データサイエンスと分析 {#data-science-and-analytics}
+
+イーサリアム上のアクティビティやネットワークの健全性に関する詳細な情報を提供する、より多くのデータ分析ツールやダッシュボードが必要です。基礎となるデータの多くは公開されておりクエリ可能であるため、ギャップは通常、アクセスではなく分析とプレゼンテーションにあります。
+
+### 背景知識のリーディング {#background-reading-14}
 
 - [Dune Analytics](https://dune.com/browse/dashboards)
-- [Client diversity dashboard](https://clientdiversity.org/)
+- [クライアント・ダイバーシティ・ダッシュボード](https://clientdiversity.org/)
+- [イーサリアムJSON-RPC実行API仕様](https://ethereum.github.io/execution-apis/)
 
-#### Recent research {#recent-research-14}
+#### 最近の研究 {#recent-research-14}
 
-- [Robust Incentives Group Data Analysis](https://rig.ethereum.org/)
+- [ロバスト・インセンティブ・グループのデータ分析](https://rig.ethereum.org/)
+- [ethPandaOpsのオープンデータ](https://ethpandaops.io/data/)
+- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
 
-## Apps and tooling {#apps-and-tooling}
+## アプリとツール {#apps-and-tooling}
 
-The application layer supports a diverse ecosystem of programs that settle transactions on Ethereum's base layer. Development teams are constantly finding new ways to leverage Ethereum to create composable, permissionless and censorship-resistant versions of important Web2 apps or create completely new Web3-native concepts. At the same time, new tooling is being developed that makes building dapps on Ethereum less complex.
+アプリケーション・レイヤーは、イーサリアムのベースレイヤーでトランザクションを決済するプログラムの多様なエコシステムをサポートしています。開発チームは、イーサリアムを活用して、重要なWeb2アプリのコンポーザブルでパーミッションレス、かつ検閲耐性のあるバージョンを作成したり、完全に新しいWeb3ネイティブの概念を作成したりする新しい方法を常に見つけています。同時に、イーサリアム上でのdappの構築をより複雑でなくする新しいツールが開発されています。
 
 ### DeFi {#defi}
 
-Decentralized finance (DeFi) is one of the primary classes of application built on top of Ethereum. DeFi aims to create composable "money legos" that allow users to store, transfer, lend, borrow and invest crypto-assets using smart contracts. DeFi is a fast-moving space that is constantly updating. Research into secure, efficient and accessible protocols is continuously needed.
+分散型金融 (DeFi) は、イーサリアムの上に構築されたアプリケーションの主要なクラスの1つです。DeFiは、ユーザーがスマート・コントラクトを使用して暗号資産を保存、送金、貸出、借入、投資できるようにする、コンポーザブルな「マネー・レゴ」を作成することを目指しています。DeFiは動きが速く、常に更新されている分野です。安全で効率的、かつアクセス可能なプロトコルに関する研究が継続的に必要とされています。
 
-#### Background reading {#background-reading-15}
+#### 背景知識のリーディング {#background-reading-15}
 
 - [DeFi](/defi/)
-- [Coinbase: What is DeFi?](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
+- [コインベース: DeFiとは何か？](https://www.coinbase.com/learn/crypto-basics/what-is-defi)
 
-#### Recent research {#recent-research-15}
+#### 最近の研究 {#recent-research-15}
 
-- [Decentralized finance, centralized ownership?](https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: The road to sub-dollar transactions](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [分散型金融、中央集権的な所有権？](https://arxiv.org/pdf/2012.09306.pdf)
+- [Ethresear.ch アプリケーション](https://ethresear.ch/c/applications/18)
 
-### DAOs {#daos}
+### DAO {#daos}
 
-An impactful use case for Ethereum is the ability to organize in a decentralized manner through the use of DAOs. There is a lot of active research into how DAOs on Ethereum can be developed and utilized to execute improved forms of governance, as a trust-minimized coordination tool, greatly expanding peoples options beyond traditional corporations and organizations.
+イーサリアムのインパクトのあるユースケースは、DAOを使用して分散型の方法で組織化できることです。イーサリアム上のDAOをどのように開発し、トラスト最小化された調整ツールとして改善された形態のガバナンスを実行するために活用できるかについて、多くの活発な研究が行われており、人々の選択肢を従来の企業や組織を超えて大きく広げています。
 
-#### Background reading {#background-reading-16}
+#### 背景知識のリーディング {#background-reading-16}
 
-- [Introduction to DAOs](/dao/)
-- [Dao Collective](https://daocollective.xyz/)
+- [DAOの紹介](/dao/)
 
-#### Recent research {#recent-research-16}
+#### 最近の研究 {#recent-research-16}
 
-- [Mapping the DAO ecosystem](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [DAOエコシステムのマッピング](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
-### Developer tools {#developer-tools}
+### 開発者ツール {#developer-tools}
 
-Tools for Ethereum developers are rapidly improving. There is lots of active research and development to do in this general area.
+イーサリアム開発者向けのツールは急速に改善されています。この一般的な分野では、行うべき活発な研究開発がたくさんあります。
 
-#### Background reading {#background-reading-17}
+#### 背景知識のリーディング {#background-reading-17}
 
-- [Tooling by programming language](/developers/docs/programming-languages/)
-- [Developer Frameworks](/developers/docs/frameworks/)
-- [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
-- [Token standards](/developers/docs/standards/tokens/)
-- [CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
+- [プログラミング言語別のツール](/developers/docs/programming-languages/)
+- [開発者フレームワーク](/developers/docs/frameworks/)
+- [dappの紹介](/developers/docs/dapps/)
+- [トークン標準](/developers/docs/standards/tokens/)
 
-#### Recent research {#recent-research-17}
+#### 最近の研究 {#recent-research-17}
 
-- [Eth R&D Discord Consensus Tooling channel](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Eth R&D ディスコード](https://discord.gg/qGpsxSA)
+- [イーサリアム実行API仕様](https://github.com/ethereum/execution-apis)
 
-### Oracles {#oracles}
+### オラクル {#oracles}
 
-Oracles import offchain data onto the blockchain in a permissionless and decentralized way. Getting this data onchain enables dapps to be reactive to real-world phenomena such as price fluctuations in real-world assets, events in offchain apps, or even changes in the weather.
+オラクルは、パーミッションレスで分散型の方法でオフチェーンのデータをブロックチェーンにインポートします。このデータをオンチェーンに取得することで、dappは現実世界の資産の価格変動、オフチェーン・アプリでのイベント、さらには天候の変化など、現実世界の現象に反応できるようになります。
 
-#### Background reading {#background-reading-18}
+#### 背景知識のリーディング {#background-reading-18}
 
-- [Introduction to Oracles](/developers/docs/oracles/)
+- [オラクルの紹介](/developers/docs/oracles/)
 
-#### Recent research {#recent-research-18}
+#### 最近の研究 {#recent-research-18}
 
-- [Survey of blockchain oracles](https://arxiv.org/pdf/2004.07140.pdf)
-- [Chainlink white paper](https://chain.link/whitepaper)
+- [ブロックチェーン・オラクルの調査](https://arxiv.org/pdf/2004.07140.pdf)
 
-### App security {#app-security}
+### アプリのセキュリティ {#app-security}
 
-Hacks on Ethereum generally exploit vulnerabilities in individual applications rather than in the protocol itself. Hackers and app developers are locked in an arms race to develop new attacks and defenses. This means there is always important research and development required to keep apps safe from hacks.
+イーサリアムでのハッキングは、一般的にプロトコル自体ではなく、個々のアプリケーションの脆弱性を悪用します。ハッカーとアプリ開発者は、新しい攻撃と防御を開発するための軍拡競争に陥っています。これは、アプリをハッキングから安全に保つために、常に重要な研究開発が必要であることを意味します。
 
-#### Background reading {#background-reading-19}
+#### 背景知識のリーディング {#background-reading-19}
 
-- [Wormhole exploit report](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
-- [List of Ethereum contract hack post-mortems](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [スマート・コントラクトのセキュリティ](/developers/docs/smart-contracts/security/)
+- [Wormholeエクスプロイト・レポート](https://www.chainalysis.com/blog/wormhole-hack-february-2022/)
+- [イーサリアム・コントラクトのハッキングの事後分析リスト](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
+- [Rekt News](https://rekt.news/)
 
-#### Recent research {#recent-research-19}
+#### 最近の研究 {#recent-research-19}
 
-- [Ethresear.ch Applications](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch アプリケーション](https://ethresear.ch/c/applications/18)
 
-### Technology stack {#technology-stack}
+### テクノロジー・スタック {#technology-stack}
 
-Decentralizing the entire Ethereum tech stack is an important research area. Currently, dapps on Ethereum commonly have some points of centralization because they rely on centralized tooling or infrastructure.
+イーサリアムのテクノロジー・スタック全体を分散化することは、重要な研究分野です。現在、イーサリアム上のdappは、中央集権的なツールやインフラストラクチャに依存しているため、一般的にいくつかの中央集権化のポイントを持っています。その依存を減らすということは、単一のプロバイダーを信頼することなくアプリケーションがイーサリアムを読み取ることを実用的にすることを意味し、そこでライト・クライアントとノード・データへのトラストレスなアクセスが登場します。
 
-#### Background reading {#background-reading-20}
+#### 背景知識のリーディング {#background-reading-20}
 
-- [Ethereum stack](/developers/docs/ethereum-stack/)
-- [Coinbase: Intro to Web3 Stack](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
-- [Introduction to smart contracts](/developers/docs/smart-contracts/)
-- [Introduction to decentralized storage](/developers/docs/storage/)
+- [イーサリアム・スタック](/developers/docs/ethereum-stack/)
+- [ライト・クライアント](/developers/docs/nodes-and-clients/light-clients/)
+- [スマート・コントラクトの紹介](/developers/docs/smart-contracts/)
+- [分散型ストレージの紹介](/developers/docs/storage/)
 
-#### Recent research {#recent-research-20}
+#### 最近の研究 {#recent-research-20}
 
-- [Smart contract composability](/developers/docs/smart-contracts/composability/)
+- [スマート・コントラクトのコンポーザビリティ](/developers/docs/smart-contracts/composability/)
+- [コインベース: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

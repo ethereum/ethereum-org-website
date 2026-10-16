@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl"
 
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
-import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -46,11 +45,15 @@ const WithdrawalsTabComparison = () => {
       >
         <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
         <UnorderedList>
+          <ListItem>{t("comp-withdrawal-comparison-current-li-1")} </ListItem>
           <ListItem>
-            <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
-          </ListItem>
-          <ListItem>
-            <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
+            {t.rich("comp-withdrawal-comparison-current-li-2", {
+              a: (chunks) => (
+                <InlineLink href="https://launchpad.ethereum.org/withdrawals">
+                  {chunks}
+                </InlineLink>
+              ),
+            })}
           </ListItem>
         </UnorderedList>
         <p>

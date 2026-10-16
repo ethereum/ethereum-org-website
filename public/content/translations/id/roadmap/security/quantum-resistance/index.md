@@ -78,13 +78,13 @@ Kedua pendekatan ini masih diteliti untuk efisiensi dan kepraktisannya pada skal
 
 Ini adalah pendekatan yang pragmatis. Pengguna dan dompet yang menginginkan perlindungan pasca-kuantum lebih awal dapat mengadopsinya secara sukarela, sementara migrasi yang lebih luas terjadi seiring berjalannya waktu.
 
-### 4. Bukti tanpa pengetahuan (ZK-proof) lapisan aplikasi {#zk-proofs}
+### 4. Bukti tanpa pengetahuan (ZKP) lapisan aplikasi {#zk-proofs}
 
-**Fungsinya**: Sistem bukti tanpa pengetahuan (ZK-proof) digunakan oleh rollup lapisan 2 (L2) dan aplikasi lain untuk memverifikasi komputasi tanpa mengungkapkan data yang mendasarinya.
+**Fungsinya**: Sistem bukti digunakan oleh rollup lapisan 2 (l2) untuk memverifikasi komputasi tanpa mengeksekusinya kembali, dan, di mana sebuah aplikasi mengimplementasikan properti zero-knowledge, untuk membuktikan pernyataan tanpa mengungkapkan input privat di baliknya.
 
-**Mengapa ini rentan**: Banyak sistem ZK-proof populer (SNARK yang menggunakan pemasangan kurva eliptik) bergantung pada asumsi yang rentan terhadap kuantum.
+**Mengapa ini rentan**: Banyak sistem ZKP populer (SNARK yang menggunakan pemasangan kurva eliptik) bergantung pada asumsi yang rentan terhadap kuantum.
 
-**Pendekatannya**: STARK, yang bergantung pada fungsi hash alih-alih kurva eliptik, sudah tahan terhadap kuantum dan digunakan oleh beberapa rollup. Adopsi ekosistem alami dari sistem berbasis STARK telah memberikan keamanan pasca-kuantum di lapisan aplikasi.
+**Pendekatannya**: STARK, yang bergantung pada fungsi hash alih-alih kurva eliptik, sudah tahan terhadap kuantum dan digunakan oleh beberapa rollup. Adopsi ekosistem alami dari sistem berbasis STARK telah memberikan keamanan pasca-kuantum pada lapisan aplikasi.
 
 ## Standar NIST {#nist-standards}
 

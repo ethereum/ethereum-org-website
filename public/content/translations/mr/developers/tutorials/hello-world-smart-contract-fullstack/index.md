@@ -55,7 +55,6 @@ _टीप: **Sepolia** निवडण्याची खात्री कर
 तुमचे स्मार्ट कॉन्ट्रॅक्ट टेस्ट नेटवर्कवर प्रस्थापित करण्यासाठी, तुम्हाला काही बनावट ETH ची आवश्यकता असेल. Sepolia नेटवर्कवर ETH मिळवण्यासाठी, Sepolia फॉसेटवर जा आणि तुमचा Sepolia खाते पत्ता प्रविष्ट करा. वापरून पाहण्यासाठी पर्यायांच्या सूचीसाठी [टेस्ट नेटवर्क्स पृष्ठ](/developers/docs/networks/#sepolia) पहा:
 
 _टीप: नेटवर्कच्या गर्दीमुळे, यास थोडा वेळ लागू शकतो._
-``
 ### पायरी 5: तुमची शिल्लक तपासा {#step-5-check-your-balance}
 
 तुमच्या वॉलेटमध्ये ETH असल्याची खात्री करण्यासाठी, चला [Alchemy चे सँडबॉक्स टूल](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) वापरून [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) विनंती करूया. हे आपल्या वॉलेटमधील ETH ची रक्कम परत करेल. अधिक जाणून घेण्यासाठी [कंपोझर टूल कसे वापरावे यावरील Alchemy चे छोटे ट्युटोरिअल](https://youtu.be/r6sjRxBZJuU) पहा.

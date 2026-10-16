@@ -141,3 +141,11 @@ export const normalizeUrlForJsonLd = (
   const url = new URL(path, SITE_URL)
   return url.toString()
 }
+
+/**
+ * devcon.org publishes its ticket page in English, Hindi, and Marathi only, so
+ * every other locale falls back to `en`. The mtm_* params attribute the
+ * referral on Devcon analytics. Removable once the Devcon banners come down.
+ */
+export const getDevconTicketLink = (locale: string) =>
+  `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/?mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral`

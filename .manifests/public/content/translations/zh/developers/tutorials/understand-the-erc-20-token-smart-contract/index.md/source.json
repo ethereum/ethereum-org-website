@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md",
   "generatedAt": "2026-06-18T00:34:04.593Z",
-  "rootHash": "4990aebfedd7",
+  "rootHash": "3fb822406be6",
   "tree": {
-    "contentHash": "469c13083a18",
-    "anchorHash": "b0526a494550",
+    "contentHash": "61c416a7dea4",
+    "anchorHash": "c942d30a735c",
     "children": {
       "frontmatter:title": {
         "contentHash": "1f8344701fad",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "15f36bb8e03d"
+        "contentHash": "3ef9f84e5ba2",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "c51e455b41df",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "845516ec99f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:3": {
         "contentHash": "f57d42601ba4",

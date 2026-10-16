@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Tìm hiểu về bản nâng cấp giao thức Fusaka
+description: "Tìm hiểu về bản nâng cấp giao thức Fusaka"
 lang: vi
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ Bản nâng cấp Fusaka chỉ là một bước tiến duy nhất trong các m�
 
 Đây là _điểm nhấn chính_ của Phân nhánh Fusaka, tính năng chính được thêm vào trong bản nâng cấp này. Các lớp 2 (l2) hiện tại đăng dữ liệu của chúng lên Ethereum dưới dạng các khối dữ liệu, loại dữ liệu tạm thời được tạo riêng cho các lớp 2 (l2). Trước Fusaka, mọi nút đầy đủ phải lưu trữ mọi khối dữ liệu để đảm bảo rằng dữ liệu đó tồn tại. Khi thông lượng khối dữ liệu tăng lên, việc phải tải xuống tất cả dữ liệu này trở nên tiêu tốn tài nguyên một cách không thể duy trì được.
 
-Với [việc lấy mẫu tính khả dụng của dữ liệu](https://notes.ethereum.org/@fradamt/das-fork-choice), thay vì phải lưu trữ toàn bộ dữ liệu của khối dữ liệu, mỗi nút sẽ chịu trách nhiệm cho một tập hợp con của dữ liệu khối dữ liệu. Các khối dữ liệu được phân phối ngẫu nhiên đồng đều trên các nút trong mạng lưới với mỗi nút đầy đủ chỉ giữ 1/8 dữ liệu, do đó cho phép mở rộng quy mô theo lý thuyết lên đến 8 lần. Để đảm bảo tính khả dụng của dữ liệu, bất kỳ phần dữ liệu nào cũng có thể được tái tạo lại từ bất kỳ 50% dữ liệu hiện có nào của toàn bộ dữ liệu bằng các phương pháp giúp giảm xác suất dữ liệu sai hoặc bị thiếu xuống mức không đáng kể về mặt mật mã học (~một phần 10<sup>20</sup> đến một phần 10<sup>24</sup>).
+Với [việc lấy mẫu tính khả dụng của dữ liệu](https://notes.ethereum.org/@fradamt/das-fork-choice), thay vì phải lưu trữ toàn bộ dữ liệu của khối dữ liệu, mỗi nút sẽ chịu trách nhiệm cho một tập hợp con của dữ liệu khối dữ liệu. Các khối dữ liệu được phân phối ngẫu nhiên đồng đều trên các nút trong mạng lưới với mỗi nút đầy đủ chỉ giữ 1/8 dữ liệu, do đó cho phép mở rộng quy mô theo lý thuyết lên đến 8 lần. Để đảm bảo tính khả dụng của dữ liệu, bất kỳ phần dữ liệu nào cũng có thể được tái tạo lại từ bất kỳ 50% dữ liệu hiện có nào của toàn bộ dữ liệu bằng các phương pháp giúp giảm xác suất dữ liệu sai hoặc bị thiếu xuống mức không đáng kể về mặt mật mã học (\~một phần 10<sup>20</sup> đến một phần 10<sup>24</sup>).
 
 Điều này giữ cho các yêu cầu về phần cứng và băng thông đối với các nút ở mức có thể duy trì được trong khi cho phép mở rộng khối dữ liệu, dẫn đến quy mô lớn hơn với mức phí nhỏ hơn cho các lớp 2 (l2).
 
@@ -135,11 +135,11 @@ Mục tiêu là giới hạn thời gian truyền bá/xác minh trong trường 
 
 #### Đặt giới hạn gas mặc định thành 60 triệu {#set-default-gas-limit-to-60-million}
 
-Trước khi tăng giới hạn gas từ 30 triệu lên 36 triệu vào tháng 2 năm 2025 (và sau đó lên 45 triệu), giá trị này đã không thay đổi kể từ The Merge (tháng 9 năm 2022). EIP này nhằm mục đích ưu tiên việc mở rộng quy mô nhất quán.
+Trước khi tăng giới hạn gas từ 30 triệu lên 36 triệu vào tháng 2 năm 2025 (và sau đó là 45 triệu), giá trị này đã không thay đổi kể từ The Merge (tháng 9 năm 2022). EIP này nhằm mục đích ưu tiên việc mở rộng quy mô nhất quán.
 
-EIP-7935 điều phối các nhóm máy khách lớp thực thi (EL) để tăng giới hạn gas mặc định lên trên mức 45 triệu hiện nay cho Fusaka. Đây là một EIP Thông tin, nhưng nó yêu cầu rõ ràng các máy khách thử nghiệm các giới hạn cao hơn trên các mạng phát triển, hội tụ về một giá trị an toàn và đưa con số đó vào các bản phát hành Fusaka của họ.
+EIP-7935 đã điều phối các nhóm máy khách lớp thực thi (EL) để tăng giới hạn gas mặc định lên trên mức 45 triệu trước Fusaka. Đây là một EIP Thông tin, nhưng nó yêu cầu rõ ràng các máy khách phải kiểm tra các giới hạn cao hơn trên các mạng phát triển, hội tụ về một giá trị an toàn và phát hành con số đó trong các bản phát hành Fusaka của họ.
 
-Kế hoạch trên mạng phát triển nhắm mục tiêu thử nghiệm sức chịu đựng ở mức ~60 triệu (các khối đầy đủ với tải tổng hợp) và các đợt tăng lặp đi lặp lại; nghiên cứu cho thấy các bệnh lý về kích thước khối trong trường hợp xấu nhất không nên bị ràng buộc dưới mức ~150 triệu. Việc triển khai nên được kết hợp với mức trần giới hạn gas của giao dịch (EIP-7825) để không có giao dịch đơn lẻ nào có thể chiếm ưu thế khi các giới hạn tăng lên.
+Việc thử nghiệm trên mạng phát triển nhắm mục tiêu ~60 triệu dưới áp lực (các khối đầy đủ với tải tổng hợp) với các lần tăng lặp đi lặp lại; nghiên cứu cho thấy các bệnh lý về kích thước khối trong trường hợp xấu nhất sẽ không bị ràng buộc dưới ~150 triệu. Việc triển khai được kết hợp với mức trần giới hạn gas của giao dịch (EIP-7825) để không có giao dịch đơn lẻ nào có thể chiếm ưu thế khi các giới hạn tăng lên. Các máy khách đã phát hành 60 triệu làm mặc định cho Fusaka.
 
 **Tài nguyên**: [Đặc tả kỹ thuật EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -253,7 +253,7 @@ Các nút thông thường không có bất kỳ trình xác thực nào sẽ ch
 
 Nếu nút được sử dụng cho một máy khách trình xác thực, nó phải lưu giữ nhiều cột hơn và do đó xử lý nhiều dữ liệu hơn. Khi một trình xác thực được thêm vào, nút sẽ đăng ký ít nhất 8 mạng con cột và do đó xử lý lượng dữ liệu gấp đôi so với nút thông thường nhưng vẫn ít hơn so với trước Fusaka. Nếu số dư của trình xác thực trên 287 ETH, ngày càng nhiều mạng con sẽ được đăng ký.
 
-Đối với một người đặt cọc độc lập, điều này có nghĩa là việc sử dụng ổ đĩa và băng thông tải xuống của họ sẽ giảm khoảng 50%. Tuy nhiên, để xây dựng các khối cục bộ và tải tất cả các khối dữ liệu lên mạng lưới, cần nhiều băng thông tải lên hơn. Các nhà xây dựng cục bộ sẽ cần băng thông tải lên cao hơn 2-3 lần so với trước đây tại thời điểm Fusaka và với mục tiêu BPO2 là 15/21 khối dữ liệu, băng thông tải lên cần thiết cuối cùng sẽ phải cao hơn khoảng 5 lần, ở mức 100Mbps.
+Đối với một người đặt cọc độc lập, điều này có nghĩa là việc sử dụng ổ đĩa và băng thông tải xuống của họ sẽ giảm khoảng 50%. Tuy nhiên, để xây dựng các khối cục bộ và tải tất cả các khối dữ liệu lên mạng lưới, cần nhiều băng thông tải lên hơn. Các nhà xây dựng cục bộ sẽ cần băng thông tải lên cao gấp 2-3 lần so với trước đây tại thời điểm Fusaka và với mục tiêu BPO2 là 15/21 khối dữ liệu, băng thông tải lên cần thiết cuối cùng sẽ phải cao hơn khoảng 5 lần, ở mức 100Mbps.
 
 #### Trình xác thực lớn {#large-validators}
 

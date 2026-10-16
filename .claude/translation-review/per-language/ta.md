@@ -71,3 +71,123 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Cross-script contamination fixed: a Bengali word `বিপুল` inside Tamil prose in `zero-knowledge-proofs` -> `பெரும்`. Open: `shared key` -> `விசை` where the glossary bare entry is `திறவுகோல்` (3 sites); `trade-offs` -> the swap sense `பரிமாற்றம்` (2 sites); `Twitter` left Latin against the glossary; `exposure` flattened to "obtain".
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 8.1/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-qualifier-stablecoins` -> `ஸ்டேபிள்காயின்களுக்கு` and `-stablecoins-lower-l2` -> `ஸ்டேபிள்காயின்கள்` (critical: ETHGlossary ta is `ஸ்டேபிள்காயின்`, and the ta tree carries 155 occurrences of it vs 7 of the descriptive `நிலையான நாணய-` form used here, with no gloss).
+
+**Open (native call needed):**
+
+- `fee-label-shield-unshield` -> `பாதுகாக்கும்/பாதுகாப்பை நீக்கும் கட்டணம்` collides with this page's own `security` = `பாதுகாப்பு` and `crops-secure` = `பாதுகாப்பானவை`, so the row reads "protection fee / protection-removal fee". **Deliberately NOT fixed** -- see notes.
+- Three imperative registers across sibling controls: `காட்டு` (bare familiar), `காண்க`/`உலாவுக` (literary), `தேடுங்கள்`/`பெறுங்கள்` (polite). The file's pre-existing buttons use bare stems.
+- `fee-free-tier-plans` -> `இலவச அடுக்கு` for "free tier" collides with glossary-mandated `அடுக்கு 2` for layer 2. Change the tier word, never the layer one.
+- `fee-qualifier-lower-with-premium` leaves Latin `Premium` -- the only Latin word in its bloc's new keys; house policy says transliterate, but no glossary entry exists.
+
+**Notes:**
+
+- **The shield/unshield finding was downgraded from critical to warning on evidence (#55).** The ta tree renders "shielded" as `பாதுகாக்கப்பட்ட` in 29 places -- including its own translation of `next-great-wallet-private/index.md`, the Railgun privacy article -- and `ஷீல்ட்` has ZERO precedent. Coining a transliteration against 29 established occurrences would be an unfounded fix. The real fix is a glossary entry (#57).
+- Glossary-mandated native forms are all honored and must NOT be "fixed": wallet = பணப்பை, token = வில்லை, node = கணு, network = பிணையம், staking = பங்குவைத்தல்.
+- `node` split: the new key uses glossary `கணு`; pre-existing `rpc-importing-desc` uses `முனை`. The drift is on the OLD line.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Custody inversion cluster in page-staking-cex-*: "custodial"/"has custody of" collapsed into `பாதுகாப்பு` (safekeeping), turning the exchange RISK column into a safety claim. Garbled brand `மெகாகூல்பூல்` for megapool. `குளம்` (water pond) for staking pool. JWT auth token given the crypto-token glossary word `வில்லை`. trade-offs handled correctly, but the INVERSE error appeared: `சமரசம்` used for security "compromised".
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 7.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+- `Robust Incentives Group` restored to English at 5 sites -- the name had been semantically translated with no English retained, making the EF team unsearchable.
+
+- `சேணம்` (**saddle**) for "test harness" at 2 sites -> `கட்டமைப்பு` (2 prior tree uses).
+- `லட்டு` (the **laddu sweet**) for "lattice-based" -> `லேட்டிஸ்` (2 prior uses in post-quantum files).
+- `அந்நியச் செலாவணி` (**foreign exchange**) for "highest-leverage".
+- `பழமையான` (**ancient**) for "cryptographic primitives".
+- `காப்பகப் பாலங்கள்` (**archive** bridges) for "custodial bridges" -- turned a custody risk into an archive claim.
+- `பரிமாற்றங்கள்` (transfers) for "tradeoffs" -> `சமரசங்கள்` (3rd recurrence for ta; tree 118 occurrences).
+
+**Open (native call needed):**
+
+- `வெளிப்புறங்கள்` (exteriors) for economic "externalities".
+- `தணிக்கை` carries both "censorship" and "audit" in one file.
+- Lowest score in the fleet (7.6) -- but every critical had a tree-backed correct form available, so all six were mechanically fixable.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.6/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `டெவ்கான்` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), consistent with 6.1's rule that ta transliterates brands and proper nouns while calquing concepts. `logo-alt` stays Latin.
+
+**Open (native call needed):**
+
+- Register splits inside one 6-key file: `headline` and `subtitle` use the bare imperative `உரிமைக்கோர்`, while `title` (`ஒன்றுகூடுங்கள்`) and `cta-get-tickets` (`பெறுங்கள்`) use the polite `-ungal` form. Tamil UI convention is polite throughout; `உரிமைக்கோருங்கள்` aligns it. Left for native review -- auto-fix cannot reliably pick a register.
+
+**Notes:**
+
+- `உரிமைக்கோர்` is the correct stem of the ETHGlossary `claim` term (`உரிமைக்கோரல்`) -- the finding is register, not terminology.
+
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ta/page-apps.json`. 10 critical, 20 warnings. Brand 9/10 | Technical 7/10 | Semantic 7/10 | Consistency 6/10 | Tone 7/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ta affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ta-specific):**
+
+- "clients" rendered `வாடிக்கையாளர்கள்` (= *customers*) -> `கிளையன்ட்கள்`
+- `deploy` -> glossary `நிலைநிறுத்து`, 6 sites. One is line 23, outside the PR diff, taken deliberately so the file ships one convention (open since PR #18942). The 6 remaining `பயன்படுத்த*` sites were each checked against English and are genuine "use"; note L98 shares the exact surface form with the L110 deploy site
+
+**Notes:**
+
+- `page-apps.json` turned the `DAO` category chip from 3 into 44 characters, where it renders as a breadcrumb, hero title and card title beside one-word siblings.
+- "framework" and "compiler" were each retranslated in opposite directions across two files in this one PR: needs a locale-wide sweep, not point edits.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-tor-description-2` trade-offs `பரிமாற்றங்களுடன்` -> `சமரசங்களுடன்` (4th recurrence).
+- `zk-rollups:17` deploy `பயன்படுத்தப்பட்ட` -> `நிலைநிறுத்தப்பட்ட`.
+
+**Open (warnings):**
+
+- glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
+- zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- Transliterated loanwords -> glossary native forms: wallet `வாலெட்` -> `பணப்பை` x4, smart contract -> `திறன் ஒப்பந்தம்` x3, cryptography -> `குறியாக்கவியல்` x2, node -> `கணு`, smart account -> `திறன் கணக்கு`, token -> `வில்லை` x2, devnet -> `மேம்பாட்டாளர் வலையமைப்பு`.
+- `small-business` refund agency inverted x2 (`திரும்பப் பெற` receive -> `திருப்பி அளிக்க` issue).
+
+**Open (warnings):**
+
+- glamsterdam parallelization regressed to `இணைப்படுத்தல்`; `பயன்பாட்டு வழக்குகள்` reads as lawsuits; privacy pools `குளங்கள்`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: "exchanges" `பரிமாற்றங்களும்` (acts of exchange) -> dev `பரிமாற்றகங்களும்`.
+- Open: glossary `testnet faucet` (`சோதனைவலை குழாய்`) vs `faucet` (`பாசெட்`) conflict, upstream.

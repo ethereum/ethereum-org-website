@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/real-world-assets/index.md",
   "generatedAt": "2026-06-30T00:51:27.013Z",
-  "rootHash": "83ea52032427",
+  "rootHash": "63a8cc9cf957",
   "tree": {
-    "contentHash": "96d9ff7995d9",
-    "anchorHash": "9e680d6eb0d2",
+    "contentHash": "825f4f2cb5fb",
+    "anchorHash": "50d9a269008e",
     "children": {
       "frontmatter:title": {
         "contentHash": "5951c737e488",
@@ -40,8 +40,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "bc6a91886618",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "07e2f39cb5e6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "956e48a1254e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "ae4d17b297c4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:0": {
         "contentHash": "7f42d76a94e7",

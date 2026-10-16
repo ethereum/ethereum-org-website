@@ -17,7 +17,7 @@ Přednáška TED od **Glenna Greenwalda**, jednoho z prvních novinářů, kteř
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=pcSlowAhvUk) zveřejněného organizací TED. Byl lehce upraven pro lepší čitelnost.*
 
-#### Zážitek, který má za sebou každý (0:12) {#an-experience-everyone-has-had-012}
+### Zážitek, který má za sebou každý (0:12) {#an-experience-everyone-has-had-012}
 
 Na YouTube existuje celý žánr videí věnovaný zážitku, který, jak jsem si jistý, má za sebou každý v této místnosti. Zahrnuje jednotlivce, který si myslí, že je sám, a oddává se nějakému expresivnímu chování – divokému zpěvu, krouživému tanci, nějaké mírné sexuální aktivitě – jen aby zjistil, že ve skutečnosti sám není, že ho někdo sleduje a číhá na něj, a toto zjištění způsobí, že s hrůzou okamžitě přestane dělat to, co dělal. 
 
@@ -25,7 +25,7 @@ Pocit studu a ponížení v jejich tváři je hmatatelný. Je to pocit: „Tohle
 
 To je jádro práce, na kterou jsem se posledních 16 měsíců výhradně soustředil: otázka, proč záleží na soukromí. Otázka, která vyvstala v kontextu globální debaty, kterou umožnila odhalení Edwarda Snowdena o tom, že Spojené státy a jejich partneři bez vědomí celého světa přeměnili internet, kdysi oslavovaný jako bezprecedentní nástroj osvobození a demokratizace, v bezprecedentní zónu masového a plošného sledování.
 
-#### Argument „nemám co skrývat“ (1:29) {#the-nothing-to-hide-argument-129}
+### Argument „nemám co skrývat“ (1:29) {#the-nothing-to-hide-argument-129}
 
 V této debatě se velmi často objevuje názor, a to i mezi lidmi, kterým je masové sledování nepříjemné, že z tohoto rozsáhlého narušování neplyne žádná skutečná škoda, protože jen lidé, kteří se dopouštějí špatných skutků, mají důvod chtít se skrývat a starat se o své soukromí.
 
@@ -37,7 +37,7 @@ Naproti tomu dobří lidé jsou ti, kteří chodí do práce, vracejí se domů,
 
 Lidé, kteří to skutečně říkají, se dopouštějí velmi extrémního aktu sebeponižování. Ve skutečnosti tím říkají: „Souhlasil jsem s tím, že ze sebe udělám tak neškodného, neohrožujícího a nezajímavého člověka, že se vlastně nebojím toho, že vláda bude vědět, co dělám.“
 
-#### Ani kritici soukromí nevěří tomu, co říkají (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Ani kritici soukromí nevěří tomu, co říkají (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Tento způsob uvažování našel podle mě své nejčistší vyjádření v rozhovoru z roku 2009 s dlouholetým generálním ředitelem společnosti Google Ericem Schmidtem. Když byl dotázán na všechny ty různé způsoby, kterými jeho společnost narušuje soukromí stovek milionů lidí po celém světě, řekl toto: „Pokud děláte něco, o čem nechcete, aby ostatní věděli, možná byste to v první řadě vůbec neměli dělat.“
 
@@ -49,7 +49,7 @@ Ten samý Eric Schmidt, generální ředitel Googlu, nařídil svým zaměstnanc
 
 Stejný rozpor můžeme vidět u generálního ředitele Facebooku Marka Zuckerberga, který v nechvalně známém rozhovoru v roce 2010 prohlásil, že soukromí už není „společenskou normou“. Minulý rok si Mark Zuckerberg a jeho nová manželka koupili nejen svůj vlastní dům, ale i všechny čtyři sousední domy v Palo Altu za celkem 30 milionů dolarů, aby si zajistili zónu soukromí, která zabrání ostatním lidem sledovat, co dělají ve svém osobním životě.
 
-#### Výzva s heslem k e-mailu (4:51) {#the-email-password-challenge-451}
+### Výzva s heslem k e-mailu (4:51) {#the-email-password-challenge-451}
 
 Za posledních 16 měsíců, co o tomto problému diskutuji po celém světě, pokaždé, když mi někdo řekne: „Narušování soukromí mě vlastně netrápí, protože nemám co skrývat,“ odpovím mu vždy to samé. 
 
@@ -65,7 +65,7 @@ Existuje důvod, proč to vyhledáváme, a tím důvodem je, že my všichni, ne
 
 Každý den se rozhodujeme o tom, jaké věci, které říkáme, myslíme si a děláme, jsme ochotni sdílet s ostatními, a o jakých věcech naopak nechceme, aby se kdokoliv jiný dozvěděl. Lidé mohou velmi snadno slovy tvrdit, že si svého soukromí neváží, ale jejich činy popírají autentičnost tohoto přesvědčení.
 
-#### Být sledován mění naše chování (7:02) {#being-watched-changes-our-behavior-702}
+### Být sledován mění naše chování (7:02) {#being-watched-changes-our-behavior-702}
 
 Existuje důvod, proč po soukromí tak univerzálně a instinktivně toužíme. Není to jen reflexivní pohyb jako dýchání vzduchu nebo pití vody. Důvodem je, že když jsme ve stavu, kdy můžeme být monitorováni, kdy můžeme být sledováni, naše chování se dramaticky mění. 
 
@@ -73,7 +73,7 @@ Existuje důvod, proč po soukromí tak univerzálně a instinktivně toužíme.
 
 Lidský stud je velmi silný motivátor, stejně jako touha se mu vyhnout. A to je důvod, proč lidé, když jsou ve stavu, kdy jsou sledováni, dělají rozhodnutí, která nejsou vedlejším produktem jejich vlastní vůle, ale týkají se očekávání, která od nich mají ostatní, nebo příkazů společenské ortodoxie.
 
-#### Benthamovo panoptikum (8:09) {#benthams-panopticon-809}
+### Benthamovo panoptikum (8:09) {#benthams-panopticon-809}
 
 Toto zjištění nejvýrazněji využil k pragmatickým účelům filozof 18. století Jeremy Bentham. Rozhodl se vyřešit důležitý problém, který přinesl průmyslový věk, kdy se instituce poprvé staly tak velkými a centralizovanými, že už nebyly schopny sledovat, a tedy ani kontrolovat každého ze svých jednotlivých členů. 
 
@@ -81,7 +81,7 @@ Toto zjištění nejvýrazněji využil k pragmatickým účelům filozof 18. st
 
 Francouzský filozof 20. století Michel Foucault si uvědomil, že tento model lze použít nejen pro věznice, ale pro každou instituci, která se snaží kontrolovat lidské chování: školy, nemocnice, továrny, pracoviště. A řekl, že tento způsob uvažování, tento rámec objevený Benthamem, je klíčovým prostředkem společenské kontroly pro moderní západní společnosti. Ty už nepotřebují zjevné zbraně tyranie – trestání, věznění nebo zabíjení disidentů, či zákonné vynucování loajality k určité straně – protože masové sledování vytváří vězení v mysli, které je mnohem nenápadnějším, ačkoliv mnohem efektivnějším prostředkem k podpoře dodržování společenských norem nebo společenské ortodoxie. Mnohem efektivnějším, než by kdy mohla být hrubá síla.
 
-#### Orwell, náboženství a vězení v mysli (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, náboženství a vězení v mysli (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Nejikoničtějším literárním dílem o sledování a soukromí je román George Orwella *1984*, o kterém se všichni učíme ve škole, a proto se z něj stalo téměř klišé. Ve skutečnosti, kdykoliv ho zmíníte v debatě o sledování, lidé ho okamžitě odmítnou jako neaplikovatelný a řeknou: „No jo, ale v *1984* měli lidé doma monitory, byli sledováni v každém okamžiku, a to nemá nic společného se státem plným sledování, kterému čelíme my.“ 
 
@@ -93,7 +93,7 @@ To, co všechna tato zdánlivě nesourodá díla uznávají, závěr, ke kterém
 
 Naopak, a to je ještě důležitější, je to právě sféra soukromí, schopnost jít někam, kde můžeme přemýšlet, uvažovat, komunikovat a mluvit, aniž by na nás spočívaly odsuzující pohledy ostatních, ve které výhradně sídlí kreativita, objevování a disent. A to je důvod, proč, když dovolíme existenci společnosti, ve které jsme vystaveni neustálému sledování, dovolíme, aby byla podstata lidské svobody vážně ochromena.
 
-#### Dvě destruktivní lekce (12:30) {#two-destructive-lessons-1230}
+### Dvě destruktivní lekce (12:30) {#two-destructive-lessons-1230}
 
 Poslední bod, který chci k tomuto způsobu uvažování poznamenat – k myšlence, že jen lidé, kteří dělají něco špatného, mají co skrývat, a proto mají důvod starat se o soukromí – je, že zakořeňuje dvě velmi destruktivní zprávy, dvě destruktivní lekce. Tou první je, že jediní lidé, kteří se starají o soukromí, jediní lidé, kteří budou soukromí vyhledávat, jsou z definice špatní lidé. 
 
@@ -111,7 +111,7 @@ Uznávaná socialistická aktivistka Rosa Luxemburgová kdysi řekla: „Kdo se 
 
 Děkuji vám mnohokrát. (Potlesk)
 
-#### Otázky a odpovědi s Brunem Giussanim (15:25) {#qa-with-bruno-giussani-1525}
+### Otázky a odpovědi s Brunem Giussanim (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenne, děkuji. Vaše argumenty jsou docela přesvědčivé, musím říct, ale rád bych vás vrátil k posledním 16 měsícům a k Edwardu Snowdenovi s několika otázkami, pokud vám to nevadí. Ta první je pro vás osobní. Všichni jsme četli o zatčení vašeho partnera Davida Mirandy v Londýně a o dalších potížích, ale předpokládám, že z hlediska osobního nasazení a rizika není ten tlak na vás zrovna snadný, když se postavíte největším suverénním organizacím na světě. Řekněte nám o tom něco víc.
 

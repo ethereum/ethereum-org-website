@@ -39,7 +39,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.mp4#600x340)
 
-## 3. Сделайте запрос из командной строки
+## 3. Сделайте запрос из командной строки {#make-a-request-from-the-command-line}
 Взаимодействуйте с блокчейном Эфириума через Alchemy, используя JSON-RPC и curl.
 
 Для ручных запросов мы рекомендуем взаимодействовать с `JSON-RPC` через `POST`-запросы. Просто передайте заголовок `Content-Type: application/json` и ваш запрос в теле `POST` со следующими полями:
@@ -65,7 +65,7 @@ _**ПРИМЕЧАНИЕ:** Замените `https://eth-mainnet.alchemyapi.io/v
 ```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
-## 4. Настройте ваш клиент Web3
+## 4. Настройте ваш клиент Web3 {#set-up-your-web3-client}
 **Если у вас уже есть клиент,** измените текущий URL-адрес провайдера узла на URL-адрес Alchemy с вашим ключом API: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
 **_ПРИМЕЧАНИЕ:_** Приведенные ниже скрипты должны выполняться в **среде Node.js** или быть **сохранены в файле**, а не запускаться из командной строки. Если у вас еще не установлены Node или npm, следуйте [инструкциям по установке Node.js](https://nodejs.org/en/download/).
@@ -94,7 +94,7 @@ const web3 = createAlchemyWeb3(
   "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
-## 5. Напишите ваш первый скрипт Web3!
+## 5. Напишите ваш первый скрипт Web3! {#write-your-first-web3-script}
 Теперь, чтобы перейти к практике программирования Web3, мы напишем простой скрипт, который выводит номер последнего блока из основной сети Ethereum.
 
 **1. Если вы еще этого не сделали, в вашем терминале создайте новый каталог проекта и перейдите в него:**

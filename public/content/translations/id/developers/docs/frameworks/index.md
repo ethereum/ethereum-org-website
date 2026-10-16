@@ -27,7 +27,7 @@ seperti:
 
 Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapp](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
 
-## Kerangka kerja yang tersedia
+## Kerangka kerja yang tersedia {#available-frameworks}
 
 **Foundry** - **_Foundry adalah perangkat yang sangat cepat, portabel, dan modular untuk pengembangan aplikasi Ethereum_**
 

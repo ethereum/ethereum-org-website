@@ -34,3 +34,112 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Two corrupted words that destroyed a negation, both fixed: `প্রয়োজন হবে ঘন` -> `হবে না` (transactions -- view/pure calls need NO gas) and `থাকেবিধা নেই` -> `থাকে না` (payments). `actor` -> `পক্ষ` (was অভিনেতা, film performer). Dropped `<strong>` around DeFi restored.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-row-label` uses bare English `পে` in a table header; prefer `আপনি কিসের জন্য অর্থ প্রদান করছেন`.
+- `hardware-hero-description` drops the "while you hold" clause.
+- `fee-value-set-by-provider` uses `প্রোভাইডার` where pre-existing `methodology-verification` says `প্রদানকারী`.
+- `fee-qualifier-of-rewards` -> `রিওয়ার্ড` vs the tree-dominant `পুরস্কার` (see #56).
+
+**Notes:**
+
+- `fee-qualifier-stablecoins-lower-l2` uses Western `লেয়ার 2` -- follows house numeral policy and CONTRADICTS ETHGlossary's `লেয়ার ২`. mr resolved the same conflict the opposite way. See #53; do not hand-fix either side until the glossary is normalized.
+- Devanagari-range hits in this file are the shared danda U+0964 -- the known false positive.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 7.8/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Meaning inversion at withdrawals:209 (`যতক্ষণ না` = until, English says as-long-as); `অভিনেতা` (film actor) for "actors" -- recurrence of #19015; `রিওয়ার্ড`->`পুরস্কার` in pools only; `লেনদেন`->`ট্রানজ্যাকশন` regression in run-a-node; `চুক্তি` (legal doc) for contract in 2 JSON keys. No untranslated prose, no cross-script contamination.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `হয়বিধা নেই` junk-syllable corruption destroying the negation in `page-open-source-local-ai-description-2` (3rd recurrence of this bn artifact family).
+- `চুক্তি` -> `কন্ট্রাক্ট` for smart contracts, against the glossary note that reserves `চুক্তি` for legal documents.
+
+**Open (native call needed):**
+
+- `কমিউনিটি` -> `সম্প্রদায়` regression at 4 sites (tree is 208:14 for `কমিউনিটি`).
+- bn files use precomposed U+09DF (NFC-excluded) -- pre-existing tree-wide, not a PR defect.
+
+## PR #19142 (intl/pending-devcon-banner) -- 2026-08-21 -- Score 9.9/10
+Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
+
+**Fixed in this branch:**
+
+- `Devcon` -> `ডেভকন` in `title` and `subtitle`. `logo-alt` stays Latin.
+
+Form is **derived, not established**: Gemini 3.1 Pro asserted "Established. Tech media uses ডেভকন" at confidence High, and a search turned up no Bengali crypto-press usage to support that. The form itself is sound against the 6.1 bn rule (correct vowel modifier for the English "a", no a-to-o calque), so it shipped -- but log it as derived, pending native review.
+
+**Notes:**
+
+- Western numerals are correct here: 6.1 explicitly carves out UI elements from the native-Bengali-numerals-in-prose rule, and 7.5 says default conservative when the surface is ambiguous. The tree agrees (`src/intl/bn` is 4654 Western vs 225 native).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/bn/page-apps.json`. 8 critical, 15 warnings. Brand 9/10 | Technical 8/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: bn affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (bn-specific):**
+
+- `dapp` / `dApp` -> Latin per ETHGlossary, 3 sites including one link text
+
+**Deliberately not fixed:**
+
+- `কেক্যাক-২৫৬` / `লেয়ার ২` numeral conflict (issue #53), unresolved between the bn entry and the cross-cutting rule
+
+**Notes:**
+
+- A single-file `গুলো` -> `গুলি` dialect flip and an English `-s` plural on `অ্যাপ` in `page-apps.json` point the same direction as the acronym expansion; worth watching next run.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-relay-description` "hundreds of millions" -> `কয়েকশো মিলিয়ন` (was `কয়েক মিলিয়ন`).
+- learn-quizzes `proof-of-stake-3-d-explanation` broken negation `পারে কক্ষনো না` -> `পারে না` (same family as `থাকেবিধা নেই`).
+
+**Open (warnings):**
+
+- `roadmap/privacy:120` `জিরো-নলেজ প্রুফগুলো` (alias) replaced compound `শূন্য-জ্ঞান প্রমাণ`.
+- "both" dropped in Tor/Relay keys (#82); "time served" `পরিবেশন করা সময়`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `problems-fragility-description` database corruption rendered as bribery `দুর্নীতি` -> `নষ্ট হয়ে যাওয়া`.
+
+**Open (warnings):**
+
+- Visa/J.P. Morgan script switches between files; `আরবিট্রাম One` hybrid; `অনুমান` for speculation; `-গুলি`/`-গুলো` split across files.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
+- Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).

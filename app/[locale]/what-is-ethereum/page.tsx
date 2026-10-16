@@ -38,8 +38,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getIdFromHash } from "@/lib/utils/url"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
@@ -55,6 +53,9 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-what-is-ethereum")
 
   const { contributors, lastEditLocaleTimestamp } =
@@ -700,7 +701,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </CardParagraph>
             </CardContent>
             <CardFooter>
-              <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
+              <ButtonLink href="/organizations/">
                 {t("page-what-is-ethereum-start-business-cta")}
               </ButtonLink>
             </CardFooter>

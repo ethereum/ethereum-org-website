@@ -67,3 +67,92 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - **Zero `智慧合約` regressions** -- the error that recurred in PRs #18344 and #18772 did not recur; keep checking it every import regardless. Fixed: `fee_recipient` described as the payer instead of the recipient in 2 table rows (`支付` -> `接收`), contradicted by its own `learn-quizzes.json`. Open: `free` rendered as 免費 (zero-cost) in `what-are-apps` frontmatter where the page itself later says ETH is required -- the liberty sense was meant.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.6/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `fee-label-shield-unshield` -> `屏蔽` reads as physical/EM shielding in Taiwan (`屏蔽線`); Taiwan uses `封鎖` for content-blocking, as this very file does in `crops-censorship-resistant-desc`. The privacy-pool sense does not come through (#57).
+- `fee-qualifier-per-card` -> `{value}/張卡`; `{value}/張` or `每張卡 {value}` reads better.
+
+**Notes:**
+
+- Best of its bloc. Glossary-exact including `網路` (zero `網絡`), `去中心化應用程式 (dapp)` per the Taiwan note, `橋接` for the verb, and uppercase `(L2)`.
+- The recurring `智慧合約` regression (PRs #18344, #18772) did NOT recur -- zero occurrences.
+- Only locale in the fleet that preserves the EN Security/Secure split (`安全性` / `安全`).
+- Taiwan vocabulary correct throughout: 取得/匯入/自訂/裝置/金鑰/儲存/介面/檢視/存取/浮動/方案/新增, zero `添加`, zero `您`.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`智慧合約` DID recur -- one site, run-a-node:406, now the third recurrence after #18344 and #18772. More serious: `去中心化礦池` described Rocket Pool as a MINING pool, a PoW/PoS inversion. `掃描` (scan) for the withdrawal sweep, contradicting withdrawals' own `清掃`. Zero Simplified-character leakage (verified against the repo's own zh/zh-tw corpora).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.2/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:** none needed -- zero criticals.
+
+
+**Open (native call needed):**
+
+- `十六進制` (mainland form) for hexary -- the only occurrence in the zh-tw corpus vs 64x `十六進位`.
+- Register flipped 你 -> 您 at 3 new sites in the md; the JSON and `page-values` use 你 exclusively.
+- `測試設備` (equipment) for "test fixtures"; these are JSON test vectors.
+- `適度的硬體` parses as "an appropriate amount of hardware" rather than "low-end hardware".
+- Zero Simplified leakage; neither `智慧合約` nor the #19115 `礦池` PoW/PoS inversion recurred.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh-tw/page-apps.json`. 8 critical, 10 warnings. Brand 9/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh-tw affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DEX** left expanded, zh-tw has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `testing/index.md` flipped `使用者` -> `用戶` at all 14 sites. `用戶` is the zh-cn form; corpus-wide zh-tw runs 1723:162 for `使用者` and the three sibling files in this PR kept it. Left as a warning since "user" is not an ETHGlossary term, but it is a deterministic fix if the locale wants it.
+- Best glossary compliance in this locale's recorded series: `智能合約` x107 with zero `智慧合約`. The regression from #18344/#18772/#19115 finally did not fire.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` -> `打包器`.
+- builder `區塊構建者` -> `區塊建構者` (hegota x2, page-open-access, page-roadmap).
+
+**Open (warnings):**
+
+- Mainland vocabulary: `用戶` (validium), `數據` (the-graph), `檔案` for archival (zk-rollups).
+- 您/你 split across the new privacy pages; `樂觀匯總` vs `樂觀 Rollup`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- protocol `協議` -> `協定` x3; swap `交換` -> `兌換` (glossary).
+
+**Open (warnings):**
+
+- Mainland vocabulary leaks (`用戶`, `數據`); truncated `了解更多關於 X` CTAs; `智慧帳戶` outlier; enterprise-privacy on 你.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.6/10
+
+- Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
+- Open: "much faster" lost `得多` (L178).

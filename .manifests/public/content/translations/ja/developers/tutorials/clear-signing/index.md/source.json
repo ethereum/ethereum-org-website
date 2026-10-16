@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/clear-signing/index.md",
   "generatedAt": "2026-05-13T15:32:30.906Z",
-  "rootHash": "a7a4bfce5eb4",
+  "rootHash": "ba176fc7517e",
   "tree": {
-    "contentHash": "b7675f01ffb9",
-    "anchorHash": "b0bf36b30bc0",
+    "contentHash": "d20a6918df75",
+    "anchorHash": "e4b5ff0c9c77",
     "children": {
       "frontmatter:title": {
         "contentHash": "938863aeb4e2",
@@ -24,8 +24,37 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "a7168a350c1a"
+        "contentHash": "93ec7881a545",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "36e8574ff15e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "bdefc259426b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "4085118690b6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -55,7 +55,6 @@ Bạn có thể tải xuống và tạo tài khoản MetaMask miễn phí [tại
 Để triển khai hợp đồng thông minh của bạn lên mạng thử nghiệm, bạn sẽ cần một ít ETH giả. Để nhận ETH trên mạng lưới Sepolia, hãy truy cập một vòi Sepolia và nhập địa chỉ tài khoản Sepolia của bạn. Xem [trang mạng thử nghiệm](/developers/docs/networks/#sepolia) để biết danh sách các tùy chọn có thể thử:
 
 _Lưu ý: do tắc nghẽn mạng lưới, quá trình này có thể mất một lúc._
-``
 ### Bước 5: Kiểm tra số dư của bạn {#step-5-check-your-balance}
 
 Để kiểm tra lại xem ETH đã có trong ví của bạn chưa, hãy tạo một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ sandbox của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Yêu cầu này sẽ trả về số lượng ETH trong ví của chúng ta. Để tìm hiểu thêm, hãy xem [hướng dẫn ngắn của Alchemy về cách sử dụng công cụ composer](https://youtu.be/r6sjRxBZJuU).

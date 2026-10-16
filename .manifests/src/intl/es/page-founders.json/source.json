@@ -1,10 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "src/intl/en/page-founders.json",
-  "generatedAt": "2026-07-22T22:38:45.005Z",
-  "rootHash": "56ecdb704281",
+  "generatedAt": "2026-10-14T17:26:26.797Z",
+  "rootHash": "f972a1e74204",
   "tree": {
-    "contentHash": "d740529ac9a0",
+    "contentHash": "d4d0df632d8b",
     "anchorHash": "0e86922e73d2",
     "children": {
       "page-founders-accelerators-alliance-description": {
@@ -144,11 +144,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-metadata-description": {
-        "contentHash": "e1bdcb41d703",
+        "contentHash": "30f1d356f1b1",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-metadata-title": {
-        "contentHash": "d2b11268deff",
+        "contentHash": "1c841b44954a",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-partnerships-devconnect-description": {
@@ -299,5 +299,5 @@
       "page-founders-title"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

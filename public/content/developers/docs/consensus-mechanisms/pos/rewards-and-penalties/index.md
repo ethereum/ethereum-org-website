@@ -30,7 +30,7 @@ This means the base reward is proportional to the validator's effective balance 
 
 The total reward is then calculated as the sum of five components that each have a weighting that determines how much each component adds to the total reward. The components are:
 
-```
+```text
 1. source vote: the validator has made a timely vote for the correct source checkpoint
 2. target vote: the validator has made a timely vote for the correct target checkpoint
 3. head vote: the validator has made a timely vote for the correct head block

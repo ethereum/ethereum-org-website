@@ -9,7 +9,7 @@ description: "إرشادات ونصائح لمترجمي ⁦ethereum.org⁩"
 
 تُعد هذه الوثيقة دليلاً عامًا وليست مخصصة لأي لغة بعينها.
 
-إذا كانت لديك أي أسئلة أو اقتراحات أو ملاحظات، فلا تتردد في التواصل معنا على <span dir="ltr">translations@ethereum.org</span>، أو إرسال رسالة إلى <span dir="ltr">@ethdotorg</span> على Crowdin، أو [الانضمام إلى ديسكورد الخاص بنا](https://discord.gg/ethereum-org)، حيث يمكنك مراسلتنا في قناة <span dir="ltr">#translations</span> أو التواصل مع أي من أعضاء الفريق.
+إذا كانت لديك أي أسئلة أو اقتراحات أو ملاحظات، فلا تتردد في التواصل معنا على <span dir="ltr">translations@ethereum.org</span>، أو إرسال رسالة إلى <span dir="ltr">@ethdotorg</span> على Crowdin، أو [الانضمام إلى ديسكورد الخاص بنا](/discord/)، حيث يمكنك مراسلتنا في قناة <span dir="ltr">#translations</span> أو التواصل مع أي من أعضاء الفريق.
 
 ## استخدام Crowdin {#using-crowdin}
 

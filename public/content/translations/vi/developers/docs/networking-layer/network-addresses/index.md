@@ -21,7 +21,7 @@ Cần có một số hiểu biết về [lớp mạng lưới](/developers/docs/
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode
+## Enode {#enode}
 
 Enode là một cách để nhận dạng một nút Ethereum bằng cách sử dụng định dạng địa chỉ URL. ID nút hệ thập lục phân được mã hóa trong phần tên người dùng của URL, phân tách với máy chủ bằng dấu @. Đặc tả chỉ định nghĩa tên máy chủ là một địa chỉ IP; tuy nhiên, hầu hết các máy khách (chẳng hạn như Geth và Besu) cũng chấp nhận tên DNS ở đây và phân giải nó thành địa chỉ IP khi khởi động. Đây là hành vi cụ thể của máy khách chứ không phải là một phần của tiêu chuẩn. Cổng trong phần tên máy chủ là cổng lắng nghe TCP. Nếu các cổng TCP và UDP (khám phá) khác nhau, cổng UDP được chỉ định dưới dạng tham số truy vấn "discport".
 

@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/transactions/index.md",
-  "generatedAt": "2026-08-07T06:11:11.797Z",
-  "rootHash": "c200724b5602",
+  "generatedAt": "2026-10-14T17:48:10.473Z",
+  "rootHash": "620f04fbf107",
   "tree": {
     "contentHash": "4034bca0e661",
-    "anchorHash": "1f8bc8867788",
+    "anchorHash": "24e98415f2f6",
     "children": {
       "frontmatter:title": {
         "contentHash": "3e5136fd4b11",
@@ -499,7 +499,7 @@
       },
       "types-of-transactions": {
         "contentHash": "b7c4a548dbe1",
-        "anchorHash": "4f1371b10bae",
+        "anchorHash": "045fc29c949b",
         "labelHash": "c2c56520f2cc",
         "children": {
           "_label": {
@@ -583,7 +583,7 @@
           },
           "smart-contract-interactions": {
             "contentHash": "1e5006f4074c",
-            "anchorHash": "6391a4283541",
+            "anchorHash": "747270e453cd",
             "labelHash": "559206fbbaab",
             "children": {
               "_label": {
@@ -612,7 +612,7 @@
               },
               "link:2": {
                 "contentHash": "d0b42d232762",
-                "anchorHash": "62e74be2d328"
+                "anchorHash": "26dc2112dc5b"
               },
               "prose:9": {
                 "contentHash": "b0c9abedb336",
@@ -1223,5 +1223,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

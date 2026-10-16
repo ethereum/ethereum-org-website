@@ -112,6 +112,28 @@ export default async function StakingPageJsonLD({
           },
           {
             "@type": "Question",
+            name: t("page-staking-faq-6-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-staking-faq-6-answer-p1")} ${t("page-staking-faq-6-answer-p2")}`.replace(
+                /<[^>]*>/g,
+                ""
+              ),
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-staking-faq-7-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-staking-faq-7-answer-p1")} ${t("page-staking-faq-7-answer-p2")}`.replace(
+                /<[^>]*>/g,
+                ""
+              ),
+            },
+          },
+          {
+            "@type": "Question",
             name: t("page-staking-faq-1-question"),
             acceptedAnswer: {
               "@type": "Answer",
@@ -135,6 +157,14 @@ export default async function StakingPageJsonLD({
                 /<[^>]*>/g,
                 ""
               ),
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-staking-faq-8-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: t("page-staking-faq-8-answer-p1").replace(/<[^>]*>/g, ""),
             },
           },
         ],

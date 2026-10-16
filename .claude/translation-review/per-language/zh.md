@@ -54,3 +54,90 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
 - Second-highest of the fleet. Zero `智慧合约` regressions; `智能合约` correct throughout. No per-locale fixes needed beyond the fleet-wide items.
 - Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.3/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:** none -- no critical issues.
+
+**Open (native call needed):**
+
+- `nfts-hero-description` -> `数字藏品` is the ONLY occurrence of that term in `src/intl/zh/`; the repo uses `数字收藏品` in 5 other files. Worse, `数字藏品` is the term mainland platforms adopted for regulated, non-transferable domestic NFT substitutes, deliberately distanced from crypto NFTs -- a poor fit for an Ethereum NFT wallet page. Suggest `数字收藏品`. zh-tw correctly used the repo term.
+- `fee-label-shield-unshield` -> `屏蔽` is the established Zcash-Chinese rendering, but in mainland usage it overwhelmingly reads "block/mute/censor", and this same file uses `阻止` for "block your access". Flagging the ambiguity, not calling it wrong.
+- `fee-qualifier-per-card` -> `{value}/张卡` stacks the measure word oddly; `{value}/张` or `每张卡 {value}`.
+- `crops-secure` -> `安全` is byte-identical to `page-find-wallet-security`, losing the EN Security/Secure split; zh-tw distinguishes them.
+
+**Notes:**
+
+- All 13 glossary terms exact including the noun/verb bridge split (`跨链费` per the verb form, not the noun `跨链桥`). `你` consistent 21x with zero `您` leakage.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.0/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+`智慧合约` did NOT recur (all 23 sites correct); state is `状态`, zero `国家`; client is `客户端`. Remaining: `妥协` (concession) for security compromise, `验证者指数` (numerical index) for validator index -- a regression, dev had `索引`; JWT token as `代币`; and `slot` collapsed into `时段` (the epoch word) because zh has no slot entry. dvt flipped register 你->您 against its own prior state and 5 siblings.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 9.3/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- Dropped character garbling a clause: `这里的研分为两条主线` -> `这里的研究分为两条主线` (`研` alone is not a word).
+
+**Open (native call needed):**
+
+- `Open Source AI Definition` is the only untranslated article title in the file, while the sibling key renders "The Open Source Definition" as `开源定义`.
+- `Gas 上限计划` casing vs glossary `gas 上限`.
+- ASCII/full-width comma mixing inside single strings.
+- Zero Traditional-character leakage; the prior `slot`->`时段` collapse did not recur.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh/page-apps.json`. 6 critical, 11 warnings. Brand 9/10 | Technical 6/10 | Semantic 9/10 | Consistency 9/10 | Tone 6/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `accounts/index.md` flipped wholesale from 你 (21 on dev) to 您 (24) while the two sibling files changed in the same PR kept 你; the zh dev-docs corpus runs 840:69 for 你. Third recorded instance, so it wants a pipeline pin rather than per-run repair.
+- Zero ETHGlossary deviations across ~60 applicable terms, no Traditional leakage, and the run repaired three pre-existing errors: `原生 EVM` -> `原始 EVM`, the inverted Vyper "less features" clause, and an MMORPG/RPG over-expansion.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` (builder alias) -> `打包器`.
+
+**Open (warnings):**
+
+- 您/你 split: new page-privacy-online all 您, page-open-access all 你; glamsterdam:33 lone 您.
+- whitepaper:301 data chunks as `区块`; privacy-online `句柄`, `遭到破坏`, `暗黑模式`; Hegotá `赫戈塔` nav label vs Latin elsewhere.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `隐身地址` -> `隐形地址`.
+
+**Open (warnings):**
+
+- 你/您 split across /organizations files; `透明的实用定价` mistranslates utility pricing.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.2/10
+
+- Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
+- Warning: Hook/钩子 drift; 求值 -> 计算 drift.
