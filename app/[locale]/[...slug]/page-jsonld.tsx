@@ -19,7 +19,8 @@ export default async function SlugJsonLD({
   frontmatter: Frontmatter
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/${slug}`)
+  // Trailing slash matches the canonical URL (next.config trailingSlash: true)
+  const url = normalizeUrlForJsonLd(locale, `/${slug}/`)
 
   // Generate breadcrumb items for the slug path
   const breadcrumbItems = [
@@ -41,7 +42,7 @@ export default async function SlugJsonLD({
       "@type": "ListItem",
       position: index + 2,
       name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
-      item: normalizeUrlForJsonLd(locale, currentPath),
+      item: normalizeUrlForJsonLd(locale, `${currentPath}/`),
     })
   })
 
