@@ -105,6 +105,7 @@ export type ToolCardData = Pick<
   | "categoryId"
   | "subcategory_id"
   | "resource_score"
+  | "crops_native"
 > & {
   /**
    * Best star count across the tool's repos, precomputed here so the client
@@ -134,6 +135,7 @@ export const toToolCard = (tool: DeveloperToolWithCategory): ToolCardData => {
     ...(typeof tool.resource_score === "number" && {
       resource_score: tool.resource_score,
     }),
+    ...(tool.crops_native && { crops_native: true }),
     ...(stargazers > 0 && { stargazers }),
   }
 }

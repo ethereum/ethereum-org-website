@@ -29,6 +29,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
 import ToolDescription from "../_components/ToolDescription"
 import ToolLinks from "../_components/ToolLinks"
@@ -142,8 +143,19 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
             )}
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
-                <div>
+                <div className="flex flex-wrap gap-2">
                   <Tag status="tag">{categoryLabel}</Tag>
+                  {tool.crops_native && (
+                    <CropsNativeTag
+                      label={t("page-developers-tools-crops-native")}
+                      description={t(
+                        "page-developers-tools-crops-native-description"
+                      )}
+                      infoLabel={t(
+                        "page-developers-tools-crops-native-info-label"
+                      )}
+                    />
+                  )}
                 </div>
                 <h1 className="mt-0">{tool.name}</h1>
                 <p className="text-sm text-body-medium">
@@ -186,6 +198,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                     // Cards only read the slim projection; the detail itself
                     // still renders from the full record above.
                     tool={toToolCard(related)}
+                    cropsNativeLabel={t("page-developers-tools-crops-native")}
                   />
                 ))}
               </div>
