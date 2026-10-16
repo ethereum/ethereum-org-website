@@ -9,6 +9,7 @@ import {
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
@@ -19,14 +20,6 @@ import { LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
@@ -157,25 +150,7 @@ const Page = async (props: {
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex flex-col gap-10 py-10">
           <div className="flex flex-col gap-10 px-4 md:px-10">
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  <BreadcrumbPage>{app.name}</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
+            <Breadcrumbs slug={`/apps/${application}`} label={app.name} />
             <div className="flex flex-col items-start justify-between sm:flex-row lg:items-center">
               <div className="flex w-full flex-col gap-6 lg:flex-row lg:gap-10">
                 <div>

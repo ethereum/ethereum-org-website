@@ -9,6 +9,7 @@ module.exports = [
   ["/ethereum.html", "/what-is-ethereum/"],
   ["/ether", "/what-is-ether/"],
   ["/eth", "/what-is-ether/"],
+  ["/eth/supply", "/what-is-ether/supply/"],
   ["/token", "/developers/"],
   ["/crowdsale", "/developers/"],
   ["/cli", "/developers/"],

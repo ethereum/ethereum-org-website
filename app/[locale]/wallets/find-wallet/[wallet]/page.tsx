@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import ContentFeedback from "@/components/ContentFeedback"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -32,7 +33,6 @@ import {
 } from "@/data/wallets/features"
 import { buildPersonaLabels } from "@/data/wallets/personas"
 
-import FindWalletBreadcrumbs from "../_components/FindWalletBreadcrumbs"
 import WalletCard from "../_components/WalletCard"
 import WalletPersonaTags from "../_components/WalletPersonaTags"
 
@@ -100,7 +100,10 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
       <WalletDetailPageJsonLD locale={locale} wallet={wallet} />
       {/* Outside <main>, matching the catalog page inset. */}
       <div className="px-page py-hero lg:py-hero-2x">
-        <FindWalletBreadcrumbs locale={locale} leaf={wallet.name} />
+        <Breadcrumbs
+          slug={`/wallets/find-wallet/${walletSlug}`}
+          label={wallet.name}
+        />
       </div>
 
       <main className="px-page pb-page">

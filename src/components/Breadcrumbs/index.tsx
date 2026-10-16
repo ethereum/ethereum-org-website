@@ -1,10 +1,11 @@
 import { Fragment } from "react"
+import { Home } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
+import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import { normalizeSlug } from "@/lib/utils/url"
 
 import {
   Breadcrumb,
@@ -17,84 +18,60 @@ import {
 } from "../ui/breadcrumb"
 
 export type BreadcrumbsProps = BreadcrumbProps & {
+  /** Page path; the trail comes from the IA map in `@/data/breadcrumbs` */
   slug: string
-  startDepth?: number
-  /** Logical parent route not present in the URL, e.g. "values" for /privacy */
-  parentSlug?: string
+  /** Current-page text for pages whose label is not a `common` key */
+  label?: string
 }
 
-type Crumb = {
-  fullPath: string
-  text: string
-}
-
-// TODO: update docs after removing pathname and slug logic
-
-// Generate crumbs from slug
-// e.g., "/eth2/proof-of-stake/" will generate:
-// [
-//   { fullPath: "/", text: "HOME" },
-//   { fullPath: "/eth2/", text: "ETH2" },
-//   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
-// ]
-// `startDepth` will trim breadcrumbs
-// e.g., startDepth=1 will generate:
-// [
-//   { fullPath: "/eth2/", text: "ETH2" },
-//   { fullPath: "/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
-// ]
-const Breadcrumbs = ({
-  slug,
-  startDepth = 0,
-  parentSlug,
-  ...props
-}: BreadcrumbsProps) => {
+const Breadcrumbs = ({ slug, label, ...props }: BreadcrumbsProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
-  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
-  const normalizedSlug = normalizeSlug(slug)
+  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
-  const hasHome = normalizedSlug !== ""
-  const slugChunk = normalizedSlug.split("/")
-  const sliced = slugChunk.filter((item) => !!item)
-  const parentSliced = parentSlug
-    ? normalizeSlug(parentSlug).split("/").filter(Boolean)
-    : []
+  const trail = getBreadcrumbTrail(slug)
+  if (!trail.length) return null
 
-  const crumbs = [
-    // If homepage (e.g., "en"), set text to "home" translation
-    ...(hasHome
-      ? [
-          {
-            fullPath: "/",
-            text: "ethereum.org",
-          },
-        ]
-      : []),
-    ...parentSliced.map((path, idx) => ({
-      fullPath: "/" + parentSliced.slice(0, idx + 1).join("/"),
-      text: t(path),
-    })),
-    ...sliced.map((path, idx) => ({
-      fullPath: "/" + sliced.slice(0, idx + 1).join("/"),
-      text: t(path),
-    })),
-  ]
-    .filter((item): item is Crumb => !!item)
-    .slice(startDepth)
+  // Below a hub the text root crumb is dropped; an icon stands in for it
+  const showGlyph = trail[0].href !== "/"
 
   return (
     <Breadcrumb {...props} dir={dir}>
       <BreadcrumbList>
-        {crumbs.map(({ fullPath, text }) => {
-          const isCurrentPage = normalizedSlug === fullPath
+        {showGlyph && (
+          <>
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                href="/"
+                aria-label="ethereum.org"
+                className="relative inline-block h-lh w-4"
+              >
+                <Home
+                  aria-hidden="true"
+                  className="absolute top-1/2 left-0 size-4 -translate-y-1/2"
+                />
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="ms-2.5 me-2.5 text-gray-400">
+              /
+            </BreadcrumbSeparator>
+          </>
+        )}
+        {trail.map(({ href, labelKey }, idx) => {
+          const isCurrentPage = idx === trail.length - 1
+          const text =
+            isCurrentPage && label
+              ? label
+              : labelKey
+                ? t(labelKey)
+                : "ethereum.org"
           return (
-            <Fragment key={fullPath}>
+            <Fragment key={href}>
               <BreadcrumbItem>
                 {isCurrentPage ? (
                   <BreadcrumbPage>{text}</BreadcrumbPage>
                 ) : (
-                  <BreadcrumbLink href={fullPath}>{text}</BreadcrumbLink>
+                  <BreadcrumbLink href={href}>{text}</BreadcrumbLink>
                 )}
               </BreadcrumbItem>
               {!isCurrentPage && (

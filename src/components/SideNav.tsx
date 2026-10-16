@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
@@ -134,6 +134,20 @@ const NavLink = ({ item, path }: NavLinkProps) => {
   )
 }
 
+export const BackToDevelopersLink = () => {
+  const tCommon = useTranslations("common")
+  return (
+    <BaseLink
+      href="/developers/"
+      isPartiallyActive={false}
+      className="flex items-center gap-1 py-2 ps-7 pe-4 text-sm font-normal text-body-medium no-underline hover:text-primary"
+    >
+      <ChevronLeft className="size-4 rtl:rotate-180" />
+      {tCommon("back-to-builders")}
+    </BaseLink>
+  )
+}
+
 export interface SideNavProps {
   path: string
 }
@@ -146,6 +160,7 @@ const SideNav = ({ path }: SideNavProps) => {
       className="sticky top-19 h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-64 overflow-y-auto border-e-2 bg-background pt-8 pb-16 transition-transform duration-200 max-lg:hidden"
       aria-label={tCommon("nav-developers-docs")}
     >
+      <BackToDevelopersLink />
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />
       ))}
