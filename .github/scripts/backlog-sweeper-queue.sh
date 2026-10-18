@@ -2,8 +2,8 @@
 # Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their diffs.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
-# branch of this repo, and either never reviewed or with a new commit or author comment
-# since the latest "First-pass review" comment. Oldest first, at most $LIMIT.
+# branch of this repo, and never reviewed (no "First-pass review" comment). Oldest first,
+# at most $LIMIT.
 #
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
@@ -36,13 +36,8 @@ query($owner: String!, $name: String!, $endCursor: String) {
     select((.isDraft | not)
       and .author.__typename != "Bot"
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
-    | .author.login as $author
-    | ([.comments.nodes[]
-        | select(.author.__typename == "Bot" and (.body | contains("First-pass review — ")))
-        | .createdAt] | max) as $reviewed
-    | select($reviewed == null
-        or (.commits.nodes[0].commit.committedDate > $reviewed)
-        or ([.comments.nodes[] | select(.author.login == $author and .createdAt > $reviewed)] | length > 0))
+    | select([.comments.nodes[]
+        | select(.author.__typename == "Bot" and (.body | contains("First-pass review — ")))] | length == 0)
   )
   | sort_by(.createdAt) | .[:$limit] | map(.number)' > "$OUT_DIR/candidates.json"
 

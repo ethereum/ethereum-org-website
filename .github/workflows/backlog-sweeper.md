@@ -1,6 +1,6 @@
 ---
 name: PR Backlog Sweeper
-description: Daily sweep of the open PR backlog — first-pass reviews for unreviewed and updated PRs
+description: Daily sweep of the open PR backlog — first-pass reviews for PRs never reviewed
 on:
   schedule: daily around 06:00 on weekdays
   workflow_dispatch:
