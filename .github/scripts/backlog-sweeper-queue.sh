@@ -51,7 +51,7 @@ for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   { gh pr diff "$n" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > "$OUT_DIR/pr-$n/pr-diff.patch"
   [ -s "$OUT_DIR/pr-$n/pr-diff.patch" ] || echo "TRUNCATED: diff unavailable (too large for the API)" > "$OUT_DIR/pr-$n/pr-diff.patch"
   gh pr view "$n" --repo "$REPO" \
-    --json number,title,body,author,isDraft,baseRefName,headRefName,additions,deletions,changedFiles,files,labels \
+    --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
 done
 

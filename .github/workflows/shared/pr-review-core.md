@@ -71,6 +71,28 @@ Format (keep the visible part under ~250 words; put detail in a `<details>` bloc
 
 Be brief, concrete, and welcoming — many authors are first-time contributors. Never demand changes you cannot name precisely.
 
+End the comment with one hidden line recording the PR's type and risk (never mention type or risk in the visible text):
+
+```
+<!-- ethorg-review: {"type":"<type>","risk":"<R0-R3>","reason":"<one line>","sha":"<head sha from pr-meta.json>"} -->
+```
+
+| `type` | Typical risk |
+|---|---|
+| `typo` | R0 |
+| `content-update` | R0–R1 |
+| `translation` | R1 |
+| `data-update` (existing entries) | R1 |
+| `bug-fix` | R1–R2 |
+| `dependencies` | R2 |
+| `tooling` (`.github`, config, scripts) | R2–R3 |
+| `feature-ui` | R2–R3 |
+| `new-listing` (wallet, exchange, L2, dapp) | R3 |
+| `new-page` (or navigation) | R3 |
+| `spam` | R0 |
+
+Risk is the impact if the change is wrong: R0 = no behavior change, obvious from the diff · R1 = small, contained, easy to revert · R2 = can break pages or the build · R3 = product, policy or security impact. Judge from the diff, never from what the PR text claims about itself.
+
 ## Step 5 — apply labels
 
 Apply the missing type label for the lane (`content 🖋️`, `translation 🌍`, `documentation 📖`, `dependencies 📦`, `tooling 🔧`) and one routing label when the verdict is needs-work or the PR needs a human decision:

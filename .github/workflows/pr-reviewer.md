@@ -1,28 +1,61 @@
 ---
 name: PR Reviewer (team)
-description: Lane-aware, verdict-first first-pass review of same-repo pull requests
+description: Lane-aware, verdict-first first-pass review of pull requests, including forks
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, ready_for_review]
-    draft: false
+  roles: all
+  needs: [tier]
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
-  github.event.pull_request.head.repo.full_name == github.repository &&
-  github.event.pull_request.head.ref != 'staging' &&
-  github.event.pull_request.head.ref != 'dev' &&
-  !startsWith(github.event.pull_request.head.ref, 'intl/') &&
-  !startsWith(github.event.pull_request.head.ref, 'automated')
+  !github.event.pull_request.draft &&
+  (github.event.pull_request.head.repo.full_name != github.repository || (
+    github.event.pull_request.head.ref != 'staging' &&
+    github.event.pull_request.head.ref != 'dev' &&
+    !startsWith(github.event.pull_request.head.ref, 'intl/') &&
+    !startsWith(github.event.pull_request.head.ref, 'automated')))
 permissions:
   contents: read
   issues: read
   pull-requests: read
   actions: read
+# PR code is never checked out; the diff is read through the API.
+checkout:
+  repository: ${{ github.repository }}
+  ref: ${{ github.event.pull_request.base.sha }}
 engine:
   id: claude
-  model: claude-opus-5-5
+  model: ${{ needs.tier.outputs.model }}
+sandbox:
+  agent:
+    token-steering: false
+jobs:
+  tier:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      model: ${{ steps.tier.outputs.model }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          sparse-checkout: .github/trust.yml
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - id: tier
+        env:
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          if grep -qixF -- "  - $AUTHOR" .github/trust.yml; then m=claude-opus-5-5; else m=claude-sonnet-5-5; fi
+          echo "model=$m" >> "$GITHUB_OUTPUT"
+  agent:
+    needs: [tier]
+  conclusion:
+    needs: [tier]
 max-ai-credits: 300
 network: defaults
 strict: true
@@ -38,6 +71,12 @@ safe-outputs:
     max: 1
     hide-older-comments:
       match: [backlog-sweeper]
+  create-pull-request-review-comment:
+    max: 10
+  submit-pull-request-review:
+    max: 1
+    allowed-events: [COMMENT]
+    footer: none
   add-labels:
     max: 3
     allowed:
@@ -80,10 +119,12 @@ pre-agent-steps:
       { gh pr diff "$PR_NUMBER" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > /tmp/gh-aw/agent/pr-diff.patch
       [ -s /tmp/gh-aw/agent/pr-diff.patch ] || echo "TRUNCATED: diff unavailable (too large for the API)" > /tmp/gh-aw/agent/pr-diff.patch
       gh pr view "$PR_NUMBER" --repo "$REPO" \
-        --json number,title,body,author,isDraft,baseRefName,headRefName,additions,deletions,changedFiles,files,labels \
+        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
         > /tmp/gh-aw/agent/pr-meta.json
 imports:
   - shared/pr-review-core.md
 ---
 
 Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below.
+
+For small, exact fixes (a typo, a broken link, a missing heading anchor), also leave an inline review comment on the line with a ```` ```suggestion ```` block so the author can apply it in one click, then submit the review as a `COMMENT` with a one-line body. Skip the review entirely when there is nothing to suggest.
