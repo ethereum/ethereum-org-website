@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
+import { addSlashes } from "@/lib/utils/url"
 
 import { BaseLink, type LinkProps } from "./Link"
 
@@ -66,7 +67,8 @@ const BreadcrumbLink = React.forwardRef<
       customEventOptions={{
         eventCategory: "breadcrumbs",
         eventAction: "click",
-        eventName: props.href ?? "",
+        // Canonical trailing-slash form, so one target is one event name
+        eventName: addSlashes(props.href ?? "/"),
       }}
       {...props}
     />
