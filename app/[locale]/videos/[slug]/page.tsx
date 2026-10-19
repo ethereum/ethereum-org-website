@@ -81,15 +81,14 @@ const VideoLandingPage = async (props: {
           {transcriptMdx && (
             <Accordion type="single" collapsible>
               <AccordionItem value="transcript">
-                <AccordionTrigger className="py-4">
-                  <h2
-                    id={slugify(t("page-videos-view-transcript"), {
-                      unicode: true,
-                    })}
-                    className="text-h5"
-                  >
-                    {t("page-videos-view-transcript")}
-                  </h2>
+                <AccordionTrigger
+                  className="py-4 text-h5 font-black"
+                  headingLevel="h2"
+                  headingId={slugify(t("page-videos-view-transcript"), {
+                    unicode: true,
+                  })}
+                >
+                  {t("page-videos-view-transcript")}
                 </AccordionTrigger>
                 <AccordionContent className="flow text-base in-data-[state=closed]:invisible in-data-[state=closed]:h-0">
                   {await renderSimpleMarkdown(transcriptMdx, {

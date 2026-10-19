@@ -22,6 +22,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { slugify } from "@/lib/utils/url"
 
 import OrganizationPathways from "../_components/organization-pathways"
 
@@ -379,7 +380,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         className="row-span-3 grid grid-rows-subgrid gap-0"
                       >
                         <CardHeader className="my-auto">
-                          <h3 className="sr-only">{name}</h3>
+                          <h3
+                            id={slugify(name, { unicode: true })}
+                            className="sr-only"
+                          >
+                            {name}
+                          </h3>
                           <Logo className="max-h-9 max-w-full **:fill-body!" />
                         </CardHeader>
                         <CardContent spacing="md">
