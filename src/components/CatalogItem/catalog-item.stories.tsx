@@ -37,7 +37,12 @@ const appLike: CatalogItem = {
     { label: "Founded", value: "2021" },
     { label: "Creator", value: "Risk Labs" },
     { label: "Languages", value: "English" },
-    { label: "Last updated", value: "12 days ago" },
+    {
+      label: "Last updated",
+      value: "12 days ago",
+      tooltip:
+        "When the information about this app on ethereum.org was last updated.",
+    },
   ],
   breadcrumbs: [
     { label: "ethereum.org", href: "/" },

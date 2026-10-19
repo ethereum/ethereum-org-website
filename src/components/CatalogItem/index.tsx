@@ -4,7 +4,7 @@ import {
   type ReactNode,
   type SVGProps,
 } from "react"
-import { AppWindowMac, Code } from "lucide-react"
+import { AppWindowMac, Code, Info } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
 import type { CatalogItem, CatalogItemLinkKind } from "@/lib/types"
@@ -21,6 +21,7 @@ import X from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
+import Tooltip from "@/components/Tooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -118,9 +119,19 @@ export const CatalogItemInfo = async ({
     <div className="flex h-fit w-full flex-col gap-4 rounded-base border bg-background p-8 md:w-56">
       <h3 className="text-lg">{t("catalog-item-info-title")}</h3>
       <dl className="flex flex-col gap-4">
-        {rows.map(({ label, value }) => (
+        {rows.map(({ label, value, tooltip }) => (
           <div key={label}>
-            <dt className="text-sm text-body-medium">{label}</dt>
+            <dt className="text-sm text-body-medium">
+              {label}
+              {tooltip && (
+                <Tooltip content={<p className="text-body">{tooltip}</p>}>
+                  <Info
+                    className="ms-1 inline size-[0.875em] translate-y-0.5"
+                    aria-label={tooltip}
+                  />
+                </Tooltip>
+              )}
+            </dt>
             <dd className="text-sm">{value}</dd>
           </div>
         ))}
