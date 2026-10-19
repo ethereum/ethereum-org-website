@@ -23,7 +23,7 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDaysAgo, getLocaleYear, isValidDate } from "@/lib/utils/date"
+import { formatTimeAgo, getLocaleYear, isValidDate } from "@/lib/utils/date"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -96,7 +96,7 @@ const Page = async (props: {
   const languages = formatLanguageNames(app.languages).sort(
     (a, b) => Number(b === viewerLanguage) - Number(a === viewerLanguage)
   )
-  const lastUpdated = formatDaysAgo(locale, app.lastUpdated)
+  const lastUpdated = formatTimeAgo(locale, app.lastUpdated)
 
   const item: CatalogItem = {
     kind: "app",
