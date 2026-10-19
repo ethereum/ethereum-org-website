@@ -23,7 +23,7 @@ export function seededRandom(seed: number) {
  * Same seed always produces the same order.
  */
 export function seededShuffle<T>(array: T[], seed: number): T[] {
-  const shuffled = [...array]
+  const shuffled = array
   const random = seededRandom(seed)
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1))
