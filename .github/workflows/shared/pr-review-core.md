@@ -11,7 +11,7 @@ Start from these files (do NOT re-fetch the diff; it is already capped):
 - `/tmp/gh-aw/agent/pr-meta.json` — PR metadata (title, body, author, files, base/head)
 - `/tmp/gh-aw/agent/pr-diff.patch` — the diff, capped at 3000 lines
 
-If the diff contains a line starting with `TRUNCATED:`, you have not seen the whole change. Say so in the verdict summary (e.g. "reviewed the first 3000 lines only"). Fetch other changed files only when one is directly needed to confirm a blocking finding — do not try to read the whole PR.
+If the diff contains a line starting with `TRUNCATED:`, you have not seen the whole change. Say so in the verdict summary (e.g. "reviewed the first 3000 lines only"). Fetch other changed files only when one is directly needed to confirm a blocking finding — do not try to read the whole PR. Fetch them with the GitHub tools at the PR's head SHA (`headRefOid` in `pr-meta.json`, from the head repository); the local checkout is the base branch and shows the files as they were before the PR.
 
 ## Step 2 — classify the lane
 

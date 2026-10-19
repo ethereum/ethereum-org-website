@@ -50,11 +50,14 @@ jobs:
         env:
           AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
-          if grep -qixF -- "  - $AUTHOR" .github/trust.yml; then m=claude-opus-5-5; else m=claude-sonnet-5-5; fi
+          logins=$(yq '(.maintainers // []) + (.trusted // []) | .[]' .github/trust.yml)
+          if grep -qixF -- "$AUTHOR" <<<"$logins"; then m=claude-opus-5-5; else m=claude-sonnet-5-5; fi
           echo "model=$m" >> "$GITHUB_OUTPUT"
   agent:
     needs: [tier]
   conclusion:
+    needs: [tier]
+  safe_outputs:
     needs: [tier]
 max-ai-credits: 300
 network: defaults

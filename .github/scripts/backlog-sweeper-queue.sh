@@ -25,8 +25,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
       nodes {
         number createdAt isDraft headRefName isCrossRepository
         author { login __typename }
-        commits(last: 1) { nodes { commit { committedDate } } }
-        comments(last: 50) { nodes { createdAt body author { login __typename } } }
+        comments(first: 100) { nodes { createdAt body author { login __typename } } }
       }
     }
   }
