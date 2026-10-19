@@ -8,7 +8,6 @@
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
-#   pr-<n>/lanes.json      review lanes and risk floor (pr-lanes.sh)
 # Also fetches each PR's head as the local branch pr-<n>-head (never checked out).
 set -euo pipefail
 
@@ -46,8 +45,6 @@ for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   gh pr view "$n" --repo "$REPO" \
     --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
-  gh api --paginate "repos/$REPO/pulls/$n/files?per_page=100" --jq '.[].filename' \
-    | bash "$(dirname "$0")/pr-lanes.sh" > "$OUT_DIR/pr-$n/lanes.json"
   git fetch -q --no-tags origin "pull/$n/head:pr-$n-head"
 done
 

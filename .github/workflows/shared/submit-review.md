@@ -18,6 +18,10 @@ safe-outputs:
           description: "Reviewed head commit: headRefOid from pr-meta.json"
           required: true
           type: string
+        lanes:
+          description: "Comma-separated lanes the PR touches, from: code, tooling, data, content, translation, deps, docs"
+          required: true
+          type: string
         risk:
           description: "Highest impact if anything in the PR is wrong: R0 no behavior or meaning change, R1 small contained user-visible change, R2 changes what users see or do or can break the build, R3 product, policy or security decision"
           required: true
@@ -43,7 +47,7 @@ safe-outputs:
         - uses: actions/checkout@v6
           with:
             ref: ${{ github.event.pull_request.base.sha || github.sha }}
-            sparse-checkout: .github/scripts/pr-lanes.sh
+            sparse-checkout: .github/scripts/pr-risk-floor.sh
             sparse-checkout-cone-mode: false
             persist-credentials: false
         - name: Mint app token
@@ -76,7 +80,7 @@ safe-outputs:
                 echo "::error::PR #$pr was not selected for this run"; failed=1; continue
               fi
 
-              paths=$(gh api --paginate "repos/$REPO/pulls/$pr/files?per_page=100" --jq '.[].filename' | bash .github/scripts/pr-lanes.sh)
+              paths=$(gh api --paginate "repos/$REPO/pulls/$pr/files?per_page=100" --jq '.[].filename' | bash .github/scripts/pr-risk-floor.sh)
 
               # Untrusted strings: cap length and defuse HTML comments so nothing can fake the data line.
               review=$(jq -c --arg sha "${EVENT_SHA:-}" --arg run "$RUN_URL" --argjson paths "$paths" '
@@ -90,7 +94,8 @@ safe-outputs:
                   ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity]) | .[0:25]) as $findings
                 | {v: 1, pr: (.pr | tonumber),
                    sha: (if $sha != "" then $sha else (.sha | if test("^[0-9a-f]{40}$") then . else error("bad sha") end) end),
-                   lanes: $paths.lanes,
+                   lanes: (.lanes | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != "")) | unique
+                     | if length == 0 or any(IN("code", "tooling", "data", "content", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
                    risk: ([.risk, $paths.floor] | max),
                    reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
                    summary: (.summary | clean),

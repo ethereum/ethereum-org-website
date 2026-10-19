@@ -72,7 +72,7 @@ safe-outputs:
       id: claude
       model: claude-sonnet-5-5
 pre-agent-steps:
-  - name: Fetch PR head, metadata and lanes
+  - name: Fetch PR head and metadata
     env:
       GH_TOKEN: ${{ github.token }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -83,8 +83,6 @@ pre-agent-steps:
       gh pr view "$PR_NUMBER" --repo "$REPO" \
         --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
-      gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files?per_page=100" --jq '.[].filename' \
-        | bash .github/scripts/pr-lanes.sh > /tmp/gh-aw/agent/lanes.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:
   - shared/pr-review-core.md
