@@ -62,6 +62,7 @@
   "page-apps-info-creator": "Creator",
   "page-apps-info-languages": "Languages",
   "page-apps-info-last-updated": "Last updated",
+  "page-apps-info-last-updated-tooltip": "When the details about this app on ethereum.org were last updated.",
   "page-apps-more-apps-like-this": "More apps like this",
   "page-apps-detail-meta-title": "Ethereum Apps - {name}"
 }

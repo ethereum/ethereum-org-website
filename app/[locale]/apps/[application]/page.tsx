@@ -130,6 +130,7 @@ const Page = async (props: {
       lastUpdated && {
         label: t("page-apps-info-last-updated"),
         value: lastUpdated,
+        tooltip: t("page-apps-info-last-updated-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [
