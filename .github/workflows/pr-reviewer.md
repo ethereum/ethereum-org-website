@@ -30,13 +30,14 @@ engine:
   id: claude
   model: claude-opus-5-5
 max-ai-credits: 300
+max-daily-ai-credits: 3000
 network: defaults
 strict: true
 timeout-minutes: 20
 tools:
   github:
     toolsets: [default, actions]
-  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git grep:*", "ls", "cat", "grep", "head", "wc"]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}

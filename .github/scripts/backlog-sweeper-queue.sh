@@ -2,7 +2,7 @@
 # Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their metadata and heads.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
-# branch of this repo, and never reviewed (no "First-pass review" comment). Oldest first,
+# branch of this repo, and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
 # at most $LIMIT.
 #
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
@@ -25,7 +25,8 @@ query($owner: String!, $name: String!, $endCursor: String) {
       nodes {
         number createdAt isDraft headRefName isCrossRepository
         author { login __typename }
-        comments(first: 100) { nodes { createdAt body author { login __typename } } }
+        early: comments(first: 100) { nodes { body author { login } } }
+        late: comments(last: 100) { nodes { body author { login } } }
       }
     }
   }
@@ -35,8 +36,8 @@ query($owner: String!, $name: String!, $endCursor: String) {
     select((.isDraft | not)
       and .author.__typename != "Bot"
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
-    | select([.comments.nodes[]
-        | select(.author.__typename == "Bot" and (.body | contains("First-pass review")))] | length == 0)
+    | select([.early.nodes[], .late.nodes[]
+        | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review")))] | length == 0)
   )
   | sort_by(.createdAt) | .[:$limit] | map(.number)' > "$OUT_DIR/candidates.json"
 

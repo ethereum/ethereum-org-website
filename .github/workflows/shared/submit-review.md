@@ -7,8 +7,6 @@ safe-outputs:
       if: needs.detection.result == 'success'
       permissions:
         contents: read
-      artifacts:
-        - /tmp/gh-aw/agent/candidates.json
       inputs:
         pr:
           description: "Pull request number"
@@ -23,7 +21,7 @@ safe-outputs:
           required: true
           type: string
         risk:
-          description: "Highest impact if anything in the PR is wrong: R0 no behavior or meaning change, R1 small contained user-visible change, R2 changes what users see or do or can break the build, R3 product, policy or security decision"
+          description: "Risk level from the review instructions' risk table"
           required: true
           type: choice
           options: ["R0", "R1", "R2", "R3"]
@@ -68,66 +66,83 @@ safe-outputs:
             RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           run: |
             set -euo pipefail
-            candidates=$(find "$(dirname "$GH_AW_AGENT_OUTPUT")" -name candidates.json -print -quit || true)
             jq -c '.items[] | select(.type == "submit_review")' "$GH_AW_AGENT_OUTPUT" > items.jsonl
             [ -s items.jsonl ] || { echo "No submit_review calls"; exit 1; }
+
+            # One process per review, so `set -e` holds inside it and one bad item can't stop the rest.
+            cat > review-one.sh <<'SCRIPT'
+            set -euo pipefail
+            item=$1
+            pr=$(jq -r '.pr | tostring | gsub("[^0-9]"; "")' <<<"$item")
+            [ -n "$pr" ] || { echo "::error::Item without a PR number"; exit 1; }
+
+            if [ -n "$EVENT_PR" ]; then
+              [ "$pr" = "$EVENT_PR" ] || { echo "::error::PR #$pr is not the triggering PR"; exit 1; }
+            else
+              # The agent can write files, so sweeper scope is re-checked here rather than trusted from its workspace.
+              gh api "repos/$REPO/pulls/$pr" --jq '.state == "open" and (.draft | not) and .user.type != "Bot"' | grep -qx true \
+                || { echo "::error::PR #$pr is not an open, non-draft, human-authored PR"; exit 1; }
+            fi
+
+            paths=$(gh api --paginate "repos/$REPO/pulls/$pr/files?per_page=100" --jq '.[].filename' | bash .github/scripts/pr-risk-floor.sh)
+            commits=$(gh api --paginate "repos/$REPO/pulls/$pr/commits?per_page=100" --jq '.[].sha' | jq -R . | jq -s .)
+
+            # Untrusted strings: cap length and defuse HTML comments so nothing can fake the data line.
+            review=$(jq -c --arg evsha "${EVENT_SHA:-}" --arg run "$RUN_URL" --argjson paths "$paths" --argjson commits "$commits" '
+              def clean: tostring | .[0:500] | gsub("<!--"; "&lt;!--") | gsub("-->"; "--&gt;");
+              (.findings // "" | if . == "" then "[]" else . end | fromjson) as $f
+              | if ($f | type) != "array" then error("findings is not an array") else . end
+              | ($f | map(
+                  if (.severity | IN("blocking", "should fix", "nit")) | not then error("bad severity: \(.severity)") else . end
+                  | {severity, file: (.file // "" | clean),
+                     line: ((.line | tostring | match("[0-9]+").string | tonumber)? // null),
+                     title: (.title // "" | clean), detail: (.detail // "" | clean), fix: (.fix // "" | clean)}
+                ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity])) as $all
+              | {v: 1, pr: (.pr | tostring | gsub("[^0-9]"; "") | tonumber),
+                 sha: (.sha as $s | if ($s | type) == "string" and ($commits | index($s)) != null then $s
+                       elif $evsha != "" then $evsha else $commits[-1] end),
+                 lanes: (.lanes | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != "")) | unique
+                   | if length == 0 or any(IN("code", "tooling", "data", "content", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
+                 risk: ([.risk, $paths.floor] | max),
+                 reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
+                 summary: (.summary | clean),
+                 findings: $all[0:25],
+                 counts: {blocking: ($all | map(select(.severity == "blocking")) | length),
+                          should_fix: ($all | map(select(.severity == "should fix")) | length),
+                          nit: ($all | map(select(.severity == "nit")) | length)},
+                 unreviewed: ((.unreviewed // "") | clean | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != ""))),
+                 run: $run}
+            ' <<<"$item") || { echo "::error::PR #$pr: invalid review payload"; exit 1; }
+
+            # Visible text also gets @-mentions defused so injected text can't ping people or teams.
+            body=$(jq -r '
+              def say: gsub("@"; "@​");
+              (.counts.blocking + .counts.should_fix + .counts.nit) as $n
+              | "## 🔎 First-pass review — " + (if $n == 0 then "no findings" elif $n == 1 then "1 finding" else "\($n) findings" end)
+              + "\n\n" + (.summary | say)
+              + (if (.findings | length) > 0 then "\n\n" + ([.findings | to_entries[] | .value as $x
+                  | "\(.key + 1). **\($x.severity)** `\($x.file)\(if $x.line then ":\($x.line)" else "" end)` — \($x.title | say)"
+                    + (if $x.detail != "" then ". \($x.detail | say)" else "" end)
+                    + (if $x.fix != "" then " **Fix:** \($x.fix | say)" else "" end)] | join("\n")) else "" end)
+              + (if $n > (.findings | length) then "\n\n_\($n - (.findings | length)) more findings not shown._" else "" end)
+              + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
+              + "\n\n<!-- ethorg-review: " + tojson + " -->"
+            ' <<<"$review")
+
+            existing=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
+              --jq '.[] | select(.user.login == "ethorg-agent[bot]" and (.body | contains("First-pass review"))) | .id' | tail -n 1)
+            if [ -n "$existing" ]; then
+              gh api -X PATCH "repos/$REPO/issues/comments/$existing" -f body="$body" > /dev/null
+              echo "Updated review comment on #$pr"
+            else
+              gh api -X POST "repos/$REPO/issues/$pr/comments" -f body="$body" > /dev/null
+              echo "Posted review comment on #$pr"
+            fi
+            SCRIPT
+
             failed=0
             while IFS= read -r item; do
-              pr=$(jq -r '.pr | tonumber' <<<"$item")
-              if [ -n "$EVENT_PR" ]; then
-                [ "$pr" = "$EVENT_PR" ] || { echo "::error::PR #$pr is not the triggering PR"; failed=1; continue; }
-              elif [ -z "$candidates" ] || ! jq -e --argjson n "$pr" 'index($n)' "$candidates" >/dev/null; then
-                echo "::error::PR #$pr was not selected for this run"; failed=1; continue
-              fi
-
-              paths=$(gh api --paginate "repos/$REPO/pulls/$pr/files?per_page=100" --jq '.[].filename' | bash .github/scripts/pr-risk-floor.sh)
-
-              # Untrusted strings: cap length and defuse HTML comments so nothing can fake the data line.
-              review=$(jq -c --arg sha "${EVENT_SHA:-}" --arg run "$RUN_URL" --argjson paths "$paths" '
-                def clean: tostring | .[0:500] | gsub("<!--"; "&lt;!--") | gsub("-->"; "--&gt;");
-                (.findings | fromjson) as $f
-                | if ($f | type) != "array" then error("findings is not an array") else . end
-                | ($f | map(
-                    if (.severity | IN("blocking", "should fix", "nit")) | not then error("bad severity: \(.severity)") else . end
-                    | {severity, file: (.file | clean), line: (if .line == null then null else (.line | tonumber | floor) end),
-                       title: (.title | clean), detail: (.detail // "" | clean), fix: (.fix // "" | clean)}
-                  ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity]) | .[0:25]) as $findings
-                | {v: 1, pr: (.pr | tonumber),
-                   sha: (if $sha != "" then $sha else (.sha | if test("^[0-9a-f]{40}$") then . else error("bad sha") end) end),
-                   lanes: (.lanes | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != "")) | unique
-                     | if length == 0 or any(IN("code", "tooling", "data", "content", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
-                   risk: ([.risk, $paths.floor] | max),
-                   reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
-                   summary: (.summary | clean),
-                   findings: $findings,
-                   counts: {blocking: ($findings | map(select(.severity == "blocking")) | length),
-                            should_fix: ($findings | map(select(.severity == "should fix")) | length),
-                            nit: ($findings | map(select(.severity == "nit")) | length)},
-                   unreviewed: ((.unreviewed // "") | clean | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != ""))),
-                   run: $run}
-              ' <<<"$item") || { echo "::error::PR #$pr: invalid review payload"; failed=1; continue; }
-
-              body=$(jq -r '
-                (.findings | length) as $n
-                | "## 🔎 First-pass review — " + (if $n == 0 then "no findings" elif $n == 1 then "1 finding" else "\($n) findings" end)
-                + "\n\n" + .summary
-                + (if $n > 0 then "\n\n" + ([.findings | to_entries[] | .value as $x
-                    | "\(.key + 1). **\($x.severity)** `\($x.file)\(if $x.line then ":\($x.line)" else "" end)` — \($x.title)"
-                      + (if $x.detail != "" then ". \($x.detail)" else "" end)
-                      + (if $x.fix != "" then " **Fix:** \($x.fix)" else "" end)] | join("\n")) else "" end)
-                + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
-                + "\n\n<!-- ethorg-review: " + tojson + " -->"
-              ' <<<"$review")
-
-              existing=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
-                --jq '.[] | select(.user.login == "ethorg-agent[bot]" and (.body | contains("First-pass review"))) | .id' | tail -n 1)
-              if [ -n "$existing" ]; then
-                gh api -X PATCH "repos/$REPO/issues/comments/$existing" -f body="$body" > /dev/null
-                echo "Updated review comment on #$pr"
-              else
-                gh api -X POST "repos/$REPO/issues/$pr/comments" -f body="$body" > /dev/null
-                echo "Posted review comment on #$pr"
-              fi
+              bash review-one.sh "$item" || failed=1
             done < items.jsonl
             exit "$failed"
 ---
