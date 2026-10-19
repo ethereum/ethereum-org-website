@@ -95,6 +95,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
       lastUpdated && {
         label: t("page-find-wallet-info-last-updated"),
         value: lastUpdated,
+        tooltip: t("page-find-wallet-info-last-updated-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [

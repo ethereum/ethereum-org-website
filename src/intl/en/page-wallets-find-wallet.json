@@ -49,6 +49,7 @@
   "page-find-wallet-advanced": "Advanced",
   "page-find-wallet-advanced-filters": "Advanced filters",
   "page-find-wallet-info-last-updated": "Last updated",
+  "page-find-wallet-info-last-updated-tooltip": "When the details about this wallet on ethereum.org, like its features, fees or supported networks, were last updated.",
   "page-find-wallet-info-languages": "Languages",
   "page-find-wallet-info-fees": "Fees",
   "page-find-wallet-iOS": "iOS",
