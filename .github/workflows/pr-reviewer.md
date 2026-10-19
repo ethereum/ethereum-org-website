@@ -1,6 +1,6 @@
 ---
 name: PR Reviewer (team)
-description: Lane-aware, verdict-first first-pass review of pull requests, including forks
+description: Lane-aware, findings-only first-pass review of pull requests, including forks
 on:
   pull_request_target:
     types: [opened, ready_for_review]
@@ -22,7 +22,7 @@ permissions:
   issues: read
   pull-requests: read
   actions: read
-# PR code is never checked out; the diff is read through the API.
+# PR code is only fetched as the `pr-head` ref, never checked out or run.
 checkout:
   repository: ${{ github.repository }}
   ref: ${{ github.event.pull_request.base.sha }}
@@ -62,10 +62,11 @@ jobs:
 max-ai-credits: 300
 network: defaults
 strict: true
-timeout-minutes: 10
+timeout-minutes: 20
 tools:
   github:
     toolsets: [default, actions]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git grep:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
@@ -74,12 +75,6 @@ safe-outputs:
     max: 1
     hide-older-comments:
       match: [backlog-sweeper]
-  create-pull-request-review-comment:
-    max: 10
-  submit-pull-request-review:
-    max: 1
-    allowed-events: [COMMENT]
-    footer: none
   add-labels:
     max: 3
     allowed:
@@ -124,10 +119,9 @@ pre-agent-steps:
       gh pr view "$PR_NUMBER" --repo "$REPO" \
         --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
         > /tmp/gh-aw/agent/pr-meta.json
+      git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:
   - shared/pr-review-core.md
 ---
 
 Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below.
-
-For small, exact fixes (a typo, a broken link, a missing heading anchor), also leave an inline review comment on the line with a ```` ```suggestion ```` block so the author can apply it in one click, then submit the review as a `COMMENT` with a one-line body. Skip the review entirely when there is nothing to suggest.

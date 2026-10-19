@@ -9,6 +9,7 @@
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
 #   pr-<n>/pr-diff.patch   diff, capped at 3000 lines with a TRUNCATED marker line
+# Also fetches each PR's head as the local branch pr-<n>-head (never checked out).
 set -euo pipefail
 
 OUT_DIR="${OUT_DIR:-/tmp/gh-aw/agent}"
@@ -36,7 +37,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
       and .author.__typename != "Bot"
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
     | select([.comments.nodes[]
-        | select(.author.__typename == "Bot" and (.body | contains("First-pass review — ")))] | length == 0)
+        | select(.author.__typename == "Bot" and (.body | contains("First-pass review")))] | length == 0)
   )
   | sort_by(.createdAt) | .[:$limit] | map(.number)' > "$OUT_DIR/candidates.json"
 
@@ -47,6 +48,7 @@ for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   gh pr view "$n" --repo "$REPO" \
     --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
+  git fetch -q --no-tags origin "pull/$n/head:pr-$n-head"
 done
 
 echo "Candidates: $(cat "$OUT_DIR/candidates.json")"

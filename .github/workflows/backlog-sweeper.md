@@ -15,10 +15,11 @@ engine:
 max-ai-credits: 800
 network: defaults
 strict: true
-timeout-minutes: 20
+timeout-minutes: 45
 tools:
   github:
     toolsets: [default, actions]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git grep:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
@@ -78,7 +79,7 @@ The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists t
 
 ## For each selected PR
 
-Produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch` — use them in place of the paths named in Step 1.
+Produce a first-pass review comment following the core instructions below (lane, findings, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
 
 ## Termination
 
