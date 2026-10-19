@@ -17,7 +17,7 @@ export default async function BlogPageJsonLD({
   blogPosts: BlogPost[]
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, "/latest")
+  const url = normalizeUrlForJsonLd(locale, "/latest/")
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",

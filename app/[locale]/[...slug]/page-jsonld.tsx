@@ -28,7 +28,7 @@ const getUrlBreadcrumbItems = (locale: string, slug: string) => {
         "@type": "ListItem",
         position: index + 2,
         name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
-        item: normalizeUrlForJsonLd(locale, currentPath),
+        item: normalizeUrlForJsonLd(locale, `${currentPath}/`),
       })
     })
   return items
@@ -47,7 +47,7 @@ export default async function SlugJsonLD({
   frontmatter: Frontmatter
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/${slug}`)
+  const url = normalizeUrlForJsonLd(locale, `/${slug}/`)
 
   // Docs pages render a sidebar instead of breadcrumbs, so their trail
   // follows the URL

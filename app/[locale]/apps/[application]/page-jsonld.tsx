@@ -30,7 +30,7 @@ export default async function AppsAppJsonLD({
   app: AppData
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}`)
+  const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}/`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",

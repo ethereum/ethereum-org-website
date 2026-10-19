@@ -37,7 +37,7 @@ export default async function DevelopersToolsCategoryJsonLD({
 
   const url = normalizeUrlForJsonLd(
     locale,
-    `/developers/tools/categories/${category}`
+    `/developers/tools/categories/${category}/`
   )
 
   const contributorList = contributors.map((contributor) => ({

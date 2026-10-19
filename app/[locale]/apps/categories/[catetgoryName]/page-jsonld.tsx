@@ -25,7 +25,7 @@ export default async function AppsCategoryJsonLD({
 }) {
   const t = await getTranslations("page-apps")
 
-  const url = normalizeUrlForJsonLd(locale, `/apps/categories/${categoryName}`)
+  const url = normalizeUrlForJsonLd(locale, `/apps/categories/${categoryName}/`)
   // Get apps for this category
   const categoryApps = appsData[categoryName] || []
 
