@@ -35,7 +35,7 @@ Blockchain-based prediction markets add a few things that traditional betting si
   <Card title="Market driven odds" emoji="🤝" description="Prices are set by traders buying and selling outcome shares, rather than preset by a centralized bookmaker." />
 </Grid>
 
-Open data matters in practice. Researchers were able to [study every trade on Polymarket](https://cepr.org/publications/dp21615), covering over 2.4 million users from November 2022 to March 2026, because its trades settle on a public blockchain. The same kind of independent check isn't possible on platforms that keep their trading records private.
+Open data matters in practice. Researchers were able to [study every trade on Polymarket](https://cepr.org/publications/dp21615), covering over 2.4 million users from November 2022 to March 2026, because its trades settle on a public blockchain. That kind of independent check isn't possible on centralized platforms like Kalshi, where trading and payouts happen on the company's own systems. There is no public record to audit, and no smart contract guaranteeing that winning positions get paid.
 
 Here's how a market runs from start to finish:
 
@@ -47,7 +47,7 @@ Here's how a market runs from start to finish:
 
 ## Find a prediction market {#find-a-prediction-market}
 
-These are some well-known prediction markets. They use blockchains in different ways, from settling every trade onchain to only accepting stablecoin deposits:
+These prediction markets settle trades onchain, so anyone can check prices and trade history:
 
 <PredictionMarketLists />
 

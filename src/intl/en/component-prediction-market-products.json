@@ -1,10 +1,7 @@
 {
-  "augur-cta": "Dive into Augur",
-  "augur-description": "One of the first decentralized prediction market protocols, launched on Ethereum in 2018. Activity has been limited since 2021, and a reboot is underway. You'll need some technical expertise to use it.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Try Kalshi",
-  "kalshi-description": "A U.S. exchange regulated by the CFTC. You can deposit USDC from Ethereum or Base, but trading and settlement happen on Kalshi's own systems, not onchain.",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Explore Limitless",
+  "limitless-description": "A prediction market built on Base, an Ethereum layer 2. Trades settle onchain in USDC, and most price markets resolve automatically through onchain price feeds. Not available in every country.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Explore Polymarket",
   "polymarket-description": "One of the largest prediction markets. Trades settle on Polygon, and results are decided through the UMA oracle. Not available in every country.",
   "polymarket-title": "Polymarket"
