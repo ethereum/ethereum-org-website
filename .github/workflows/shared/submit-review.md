@@ -5,6 +5,7 @@ safe-outputs:
       description: "Submit the first-pass review of one pull request. Call exactly once per reviewed PR; the comment is rendered and posted from these fields."
       runs-on: ubuntu-latest
       if: needs.detection.result == 'success'
+      max: 5
       permissions:
         contents: read
       inputs:
