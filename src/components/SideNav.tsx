@@ -143,7 +143,7 @@ export const BackToDevelopersLink = () => {
       className="flex items-center gap-1 py-2 ps-7 pe-4 text-sm font-normal text-body-medium no-underline hover:text-primary"
     >
       <ChevronLeft className="size-4 rtl:rotate-180" />
-      {tCommon("back-to-builders")}
+      {tCommon("back-to-developers")}
     </BaseLink>
   )
 }
