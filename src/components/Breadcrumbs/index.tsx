@@ -43,13 +43,13 @@ const Breadcrumbs = ({ slug, label, ...props }: BreadcrumbsProps) => {
             <BreadcrumbItem>
               <BreadcrumbLink
                 href="/"
-                aria-label="ethereum.org"
                 className="relative inline-block h-lh w-4"
               >
                 <Home
                   aria-hidden="true"
                   className="absolute top-1/2 left-0 size-4 -translate-y-1/2"
                 />
+                <span className="sr-only">ethereum.org</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className="ms-2.5 me-2.5 text-gray-400">
