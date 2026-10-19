@@ -28,31 +28,24 @@ Lane files live in `.github/workflows/shared/review/` in the working tree. When 
 
 Read the PR's check results with the GitHub actions tools. If a check has failed, add a finding saying what to fix; never comment on pending checks.
 
-## Step 3 — post one comment
+## Step 3 — submit the review
 
-```
-## 🔎 First-pass review — <n> findings
+Call `submit_review` exactly once per reviewed PR. Do not write the comment yourself: it is rendered from these fields and posted for you.
 
-<one sentence: what this PR does>
+- `pr`, `sha`: the PR number and `headRefOid` from `pr-meta.json`.
+- `lane`: the lane from Step 2. `kind` (the change type), `risk`, `reason`: from the table below.
+- `summary`: one sentence on what the PR does.
+- `findings`: a JSON array (`[]` when there are none) of `{"severity": "blocking" | "should fix" | "nit", "file": "path", "line": 123, "title": "short problem", "detail": "the input or state that triggers it, and its effect", "fix": "the fix, or empty"}`.
+- `unreviewed`: if the diff was truncated, the files you did not review, comma-separated.
 
-1. **<blocking|should fix|nit>** `path/to/file.ts:123` — <the problem, the input or state that triggers it, and its effect>. <the fix, if obvious>
-...
-```
-
-With no findings the header is `## 🔎 First-pass review — no findings` and the comment is just the header and the one sentence. If the diff was truncated, say which files you did not review.
+Rules for findings:
 
 - Only report what you can point to in the code, with a concrete failure. Drop anything you could not confirm.
 - `blocking` = merging as-is breaks a feature for some users, loses data, disables a check, corrupts analytics or ships broken content. `should fix` = a real defect with limited impact. `nit` = optional, no behavior change.
-- `path:line` is the line in the file at `pr-head`, not the position in the patch. Order by severity.
+- `line` is the line in the file at `pr-head`, not the position in the patch; use `null` when a finding has no single line.
 - Be concrete and welcoming — many authors are first-time contributors.
 
-End the comment with one hidden line recording the PR's type and risk (never mention type or risk in the visible text):
-
-```
-<!-- ethorg-review: {"type":"<type>","risk":"<R0-R3>","reason":"<one line>","sha":"<headRefOid from pr-meta.json>"} -->
-```
-
-| `type` | Typical risk |
+| `kind` | Typical risk |
 |---|---|
 | `typo` | R0 |
 | `content-update` | R0–R1 |

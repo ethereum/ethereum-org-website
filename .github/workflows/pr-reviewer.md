@@ -5,7 +5,6 @@ on:
   pull_request_target:
     types: [opened, ready_for_review]
   roles: all
-  needs: [tier]
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
@@ -28,37 +27,7 @@ checkout:
   ref: ${{ github.event.pull_request.base.sha }}
 engine:
   id: claude
-  model: ${{ needs.tier.outputs.model }}
-sandbox:
-  agent:
-    token-steering: false
-jobs:
-  tier:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    outputs:
-      model: ${{ steps.tier.outputs.model }}
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.base.sha }}
-          sparse-checkout: .github/trust.yml
-          sparse-checkout-cone-mode: false
-          persist-credentials: false
-      - id: tier
-        env:
-          AUTHOR: ${{ github.event.pull_request.user.login }}
-        run: |
-          logins=$(yq '(.maintainers // []) + (.trusted // []) | .[]' .github/trust.yml)
-          if grep -qixF -- "$AUTHOR" <<<"$logins"; then m=claude-opus-5-5; else m=claude-sonnet-5-5; fi
-          echo "model=$m" >> "$GITHUB_OUTPUT"
-  agent:
-    needs: [tier]
-  conclusion:
-    needs: [tier]
-  safe_outputs:
-    needs: [tier]
+  model: claude-opus-5-5
 max-ai-credits: 300
 network: defaults
 strict: true
@@ -71,10 +40,6 @@ safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
     private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
-  add-comment:
-    max: 1
-    hide-older-comments:
-      match: [backlog-sweeper]
   add-labels:
     max: 3
     allowed:
@@ -122,6 +87,7 @@ pre-agent-steps:
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:
   - shared/pr-review-core.md
+  - shared/submit-review.md
 ---
 
 Review pull request #${{ github.event.pull_request.number }} in ${{ github.repository }} following the core instructions below.

@@ -1,5 +1,5 @@
-# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"8ec3ec15f8ae1199784e5f3b462816bac194731a0a61f83113642985091c5075","body_hash":"2cbc1ff93f982218309f11c9a4202618419dc748aa78da4f07ff96f161b13460","compiler_version":"v0.91.4","strict":true,"agent_id":"claude","agent_model":"claude-opus-5-5","detection_agent_id":"claude","detection_agent_model":"claude-sonnet-5-5","engine_versions":{"claude":"2.1.288"}}
-# gh-aw-manifest: {"version":1,"secrets":["ANTHROPIC_API_KEY","COPILOT_GITHUB_TOKEN","ETHORG_AGENT_PRIVATE_KEY","GH_AW_DEFAULT_OTLP_ENDPOINT","GH_AW_DEFAULT_OTLP_HEADERS","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"3d3c42e5aac5ba805825da76410c181273ba90b1","version":"v7.0.1"},{"repo":"actions/create-github-app-token","sha":"bcd2ba49218906704ab6c1aa796996da409d3eb1","version":"v3.2.0"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9"},{"repo":"actions/setup-node","sha":"820762786026740c76f36085b0efc47a31fe5020","version":"v7"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"a63fe074b43ff5f66bcf1af0dc77f7bfc85b9d93","version":"v0.91.4"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.28.31","digest":"sha256:c4ab1d48d533cc7daaa5f2e1193d1a644888242fb8813d49c6de46d129224b76","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.28.31@sha256:c4ab1d48d533cc7daaa5f2e1193d1a644888242fb8813d49c6de46d129224b76"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.28.31","digest":"sha256:a5a37489635109334a5e2b5cb2eaba32e8c8f1a89d8dea6009baa962a8904c4a","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.28.31@sha256:a5a37489635109334a5e2b5cb2eaba32e8c8f1a89d8dea6009baa962a8904c4a"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.28.31","digest":"sha256:90a46d2e6e910ace2c09c2dcf6b56dc374ed513d9da642a4e9fcfcd6e9248a9d","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.28.31@sha256:90a46d2e6e910ace2c09c2dcf6b56dc374ed513d9da642a4e9fcfcd6e9248a9d"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.4.29","digest":"sha256:ec08867ac8a4823e01efb2de2ba85a313199bb7ae666ef70ae58effc162a9bf3","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.4.29@sha256:ec08867ac8a4823e01efb2de2ba85a313199bb7ae666ef70ae58effc162a9bf3"},{"image":"ghcr.io/github/gh-aw-node","digest":"sha256:11c2c544876cdbaffefe0f7f1283b74838c209654b4934a78e23ed11f750490f","pinned_image":"ghcr.io/github/gh-aw-node@sha256:11c2c544876cdbaffefe0f7f1283b74838c209654b4934a78e23ed11f750490f"},{"image":"ghcr.io/github/github-mcp-server:v1.12.2","digest":"sha256:508a0857ec762b1ab1cece29193345b501fab1dd9d1228a7b617062954cecac6","pinned_image":"ghcr.io/github/github-mcp-server:v1.12.2@sha256:508a0857ec762b1ab1cece29193345b501fab1dd9d1228a7b617062954cecac6"}],"mcp_servers":[{"name":"github","tools":["actions_get","actions_list","get_commit","get_file_contents","get_job_logs","get_latest_release","get_me","get_pull_request","get_pull_request_comments","get_pull_request_diff","get_pull_request_files","get_pull_request_review_comments","get_pull_request_reviews","get_pull_request_status","get_release_by_tag","get_tag","issue_read","list_branches","list_commits","list_issue_types","list_issues","list_pull_requests","list_releases","list_starred_repositories","list_tags","pull_request_read","search_code","search_issues","search_pull_requests","search_repositories"]},{"name":"safeoutputs","tools":["add_comment","add_labels","missing_data","missing_tool","noop","remove_labels","report_incomplete"]}],"threat_detection":{"mode":"enabled"}}
+# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"767ab0c79658f96a4de3a7b87d39fa92b15dc9436e065421aa3338162cd6eac4","body_hash":"999bbc3f702a9e38b26b8800d78fd3db0b963513e04ab760e1ba8c422204f72d","compiler_version":"v0.91.4","strict":true,"agent_id":"claude","agent_model":"claude-opus-5-5","detection_agent_id":"claude","detection_agent_model":"claude-sonnet-5-5","engine_versions":{"claude":"2.1.288"}}
+# gh-aw-manifest: {"version":1,"secrets":["ANTHROPIC_API_KEY","COPILOT_GITHUB_TOKEN","ETHORG_AGENT_PRIVATE_KEY","GH_AW_DEFAULT_OTLP_ENDPOINT","GH_AW_DEFAULT_OTLP_HEADERS","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"3d3c42e5aac5ba805825da76410c181273ba90b1","version":"v7.0.1"},{"repo":"actions/create-github-app-token","sha":"bcd2ba49218906704ab6c1aa796996da409d3eb1","version":"v3.2.0"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9"},{"repo":"actions/setup-node","sha":"820762786026740c76f36085b0efc47a31fe5020","version":"v7"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"a63fe074b43ff5f66bcf1af0dc77f7bfc85b9d93","version":"v0.91.4"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.28.31","digest":"sha256:c4ab1d48d533cc7daaa5f2e1193d1a644888242fb8813d49c6de46d129224b76","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.28.31@sha256:c4ab1d48d533cc7daaa5f2e1193d1a644888242fb8813d49c6de46d129224b76"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.28.31","digest":"sha256:a5a37489635109334a5e2b5cb2eaba32e8c8f1a89d8dea6009baa962a8904c4a","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.28.31@sha256:a5a37489635109334a5e2b5cb2eaba32e8c8f1a89d8dea6009baa962a8904c4a"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.28.31","digest":"sha256:90a46d2e6e910ace2c09c2dcf6b56dc374ed513d9da642a4e9fcfcd6e9248a9d","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.28.31@sha256:90a46d2e6e910ace2c09c2dcf6b56dc374ed513d9da642a4e9fcfcd6e9248a9d"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.4.29","digest":"sha256:ec08867ac8a4823e01efb2de2ba85a313199bb7ae666ef70ae58effc162a9bf3","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.4.29@sha256:ec08867ac8a4823e01efb2de2ba85a313199bb7ae666ef70ae58effc162a9bf3"},{"image":"ghcr.io/github/gh-aw-node","digest":"sha256:11c2c544876cdbaffefe0f7f1283b74838c209654b4934a78e23ed11f750490f","pinned_image":"ghcr.io/github/gh-aw-node@sha256:11c2c544876cdbaffefe0f7f1283b74838c209654b4934a78e23ed11f750490f"},{"image":"ghcr.io/github/github-mcp-server:v1.12.2","digest":"sha256:508a0857ec762b1ab1cece29193345b501fab1dd9d1228a7b617062954cecac6","pinned_image":"ghcr.io/github/github-mcp-server:v1.12.2@sha256:508a0857ec762b1ab1cece29193345b501fab1dd9d1228a7b617062954cecac6"}],"mcp_servers":[{"name":"github","tools":["actions_get","actions_list","get_commit","get_file_contents","get_job_logs","get_latest_release","get_me","get_pull_request","get_pull_request_comments","get_pull_request_diff","get_pull_request_files","get_pull_request_review_comments","get_pull_request_reviews","get_pull_request_status","get_release_by_tag","get_tag","issue_read","list_branches","list_commits","list_issue_types","list_issues","list_pull_requests","list_releases","list_starred_repositories","list_tags","pull_request_read","search_code","search_issues","search_pull_requests","search_repositories"]},{"name":"safeoutputs","tools":["add_labels","missing_data","missing_tool","noop","remove_labels","report_incomplete","submit_review"]}],"threat_detection":{"mode":"enabled"}}
 # This file was automatically generated by gh-aw (v0.91.4). DO NOT EDIT. To debug this workflow, load the skill at https://github.com/github/gh-aw/blob/main/debug.md
 #
 #    ___                   _   _
@@ -28,6 +28,7 @@
 # Resolved workflow manifest:
 #   Imports:
 #     - shared/pr-review-core.md
+#     - shared/submit-review.md
 #
 # Secrets used:
 #   - ANTHROPIC_API_KEY
@@ -42,6 +43,7 @@
 # Custom actions used:
 #   - actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 #   - actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+#   - actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0 (source v3)
 #   - actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
 #   - actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
 #   - actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
@@ -278,7 +280,7 @@ jobs:
           GH_AW_ACTIONS_DIR: ${{ runner.temp }}/gh-aw/actions
           GH_AW_PROMPT: ${{ runner.temp }}/gh-aw/aw-prompts/prompt.txt
           GH_AW_SAFE_OUTPUTS: ${{ runner.temp }}/gh-aw/safeoutputs/outputs.jsonl
-          GH_AW_PROMPT_CONFIG: "{\"items\":[{\"content_env\":\"GH_AW_PROMPT_CONTENT_0000\"},{\"file\":\"xpia.md\"},{\"file\":\"temp_folder_prompt.md\"},{\"file\":\"markdown.md\"},{\"file\":\"safe_outputs_mcp_transport_prompt.md\"},{\"file\":\"safe_outputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0001\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0002\"},{\"file\":\"mcp_cli_tools_with_safeoutputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0003\"},{\"file\":\"github_mcp_tools_with_safeoutputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0004\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0005\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0006\"}],\"system_item_count\":12}"
+          GH_AW_PROMPT_CONFIG: "{\"items\":[{\"content_env\":\"GH_AW_PROMPT_CONTENT_0000\"},{\"file\":\"xpia.md\"},{\"file\":\"temp_folder_prompt.md\"},{\"file\":\"markdown.md\"},{\"file\":\"safe_outputs_mcp_transport_prompt.md\"},{\"file\":\"safe_outputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0001\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0002\"},{\"file\":\"mcp_cli_tools_with_safeoutputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0003\"},{\"file\":\"github_mcp_tools_with_safeoutputs_prompt.md\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0004\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0005\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0006\"},{\"content_env\":\"GH_AW_PROMPT_CONTENT_0007\"}],\"system_item_count\":12}"
           GH_AW_EXPR_76DF9333: ${{ github.event.pull_request.number || (fromJSON(steps.generate_aw_info.outputs.aw_context || '{}').item_type == 'pull_request' && fromJSON(steps.generate_aw_info.outputs.aw_context || '{}').item_number) }}
           GH_AW_EXPR_77C1A4D2: ${{ github.event.comment.id || fromJSON(steps.generate_aw_info.outputs.aw_context || '{}').comment_id }}
           GH_AW_EXPR_7C248226: ${{ github.event.issue.number || (fromJSON(steps.generate_aw_info.outputs.aw_context || '{}').item_type == 'issue' && fromJSON(steps.generate_aw_info.outputs.aw_context || '{}').item_number) }}
@@ -288,12 +290,13 @@ jobs:
           GH_AW_GITHUB_RUN_ID: ${{ github.run_id }}
           GH_AW_GITHUB_WORKSPACE: ${{ github.workspace }}
           GH_AW_PROMPT_CONTENT_0000: "<system>\n"
-          GH_AW_PROMPT_CONTENT_0001: "<safe-output-tools>\nTools: add_comment(max:5), add_labels(max:15), remove_labels(max:5), missing_tool, missing_data, noop(max:2)\n"
+          GH_AW_PROMPT_CONTENT_0001: "<safe-output-tools>\nTools: add_labels(max:15), remove_labels(max:5), missing_tool, missing_data, noop(max:2), submit_review\n"
           GH_AW_PROMPT_CONTENT_0002: "</safe-output-tools>\n"
           GH_AW_PROMPT_CONTENT_0003: "<github-context>\nThe following GitHub context information is available for this workflow:\n{{#if github.actor}}\n- **actor**: __GH_AW_GITHUB_ACTOR__\n{{/if}}\n{{#if github.repository}}\n- **repository**: __GH_AW_GITHUB_REPOSITORY__\n{{/if}}\n{{#if github.workspace}}\n- **workspace**: __GH_AW_GITHUB_WORKSPACE__\n{{/if}}\n{{#if github.event.issue.number || (github.aw.context.item_type == 'issue' && github.aw.context.item_number)}}\n- **issue-number**: #__GH_AW_EXPR_7C248226__\n{{/if}}\n{{#if github.event.discussion.number || (github.aw.context.item_type == 'discussion' && github.aw.context.item_number)}}\n- **discussion-number**: #__GH_AW_EXPR_C19C384F__\n{{/if}}\n{{#if github.event.pull_request.number || (github.aw.context.item_type == 'pull_request' && github.aw.context.item_number)}}\n- **pull-request-number**: #__GH_AW_EXPR_76DF9333__\n{{/if}}\n{{#if github.event.comment.id || github.aw.context.comment_id}}\n- **comment-id**: __GH_AW_EXPR_77C1A4D2__\n{{/if}}\n{{#if github.run_id}}\n- **workflow-run-id**: __GH_AW_GITHUB_RUN_ID__\n{{/if}}\n</github-context>\n\n"
           GH_AW_PROMPT_CONTENT_0004: "</system>\n"
           GH_AW_PROMPT_CONTENT_0005: "{{#runtime-import .github/workflows/shared/pr-review-core.md}}\n"
-          GH_AW_PROMPT_CONTENT_0006: "{{#runtime-import .github/workflows/backlog-sweeper.md}}\n"
+          GH_AW_PROMPT_CONTENT_0006: "{{#runtime-import .github/workflows/shared/submit-review.md}}\n"
+          GH_AW_PROMPT_CONTENT_0007: "{{#runtime-import .github/workflows/backlog-sweeper.md}}\n"
         with:
           script: |
             const { setupGlobals } = require(process.env.GH_AW_ACTIONS_DIR + '/setup_globals.cjs');
@@ -576,7 +579,7 @@ jobs:
         env:
           GH_AW_FILE_ROOT: "${{ runner.temp }}/gh-aw"
           GH_AW_FILE_CONFIG: "{\"files\":[{\"path\":\"safeoutputs/config.json\",\"content_env\":\"GH_AW_SAFE_OUTPUTS_CONFIG\"}]}"
-          GH_AW_SAFE_OUTPUTS_CONFIG: "{\"add_comment\":{\"hide_older_comments\":true,\"hide_older_comments_match\":[\"pr-reviewer\"],\"max\":5,\"target\":\"*\"},\"add_labels\":{\"allowed\":[\"needs review 👀\",\"needs dev approval 🧑\u200d💻\",\"needs design approval 🧑\u200d🎨\",\"needs product review 🕵️\",\"needs technical content review 🧑\u200d🏫\",\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":15,\"target\":\"*\"},\"create_report_incomplete_issue\":{},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":2,\"report-as-issue\":\"false\"},\"remove_labels\":{\"allowed\":[\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":5,\"target\":\"*\"},\"report_incomplete\":{}}"
+          GH_AW_SAFE_OUTPUTS_CONFIG: "{\"add_labels\":{\"allowed\":[\"needs review 👀\",\"needs dev approval 🧑\u200d💻\",\"needs design approval 🧑\u200d🎨\",\"needs product review 🕵️\",\"needs technical content review 🧑\u200d🏫\",\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":15,\"target\":\"*\"},\"create_report_incomplete_issue\":{},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":2,\"report-as-issue\":\"false\"},\"remove_labels\":{\"allowed\":[\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":5,\"target\":\"*\"},\"report_incomplete\":{},\"submit-review\":{\"description\":\"Submit the first-pass review of one pull request. Call exactly once per reviewed PR; the comment is rendered and posted from these fields.\",\"inputs\":{\"findings\":{\"default\":null,\"description\":\"JSON array, possibly empty, of {\\\"severity\\\": \\\"blocking\\\"|\\\"should fix\\\"|\\\"nit\\\", \\\"file\\\": \\\"path\\\", \\\"line\\\": 123, \\\"title\\\": \\\"short problem\\\", \\\"detail\\\": \\\"trigger and effect\\\", \\\"fix\\\": \\\"the fix, or empty\\\"}\",\"required\":true,\"type\":\"string\"},\"lane\":{\"default\":null,\"description\":\"Lane picked from the changed paths\",\"options\":[\"code\",\"tooling\",\"data\",\"content\",\"translation\",\"deps-docs\"],\"required\":true,\"type\":\"choice\"},\"pr\":{\"default\":null,\"description\":\"Pull request number\",\"required\":true,\"type\":\"string\"},\"reason\":{\"default\":null,\"description\":\"One line: why this risk\",\"required\":true,\"type\":\"string\"},\"risk\":{\"default\":null,\"description\":\"Impact if the change is wrong: R0 none, R1 contained, R2 can break pages or the build, R3 product, policy or security\",\"options\":[\"R0\",\"R1\",\"R2\",\"R3\"],\"required\":true,\"type\":\"choice\"},\"sha\":{\"default\":null,\"description\":\"Reviewed head commit: headRefOid from pr-meta.json\",\"required\":true,\"type\":\"string\"},\"summary\":{\"default\":null,\"description\":\"One sentence: what the PR does\",\"required\":true,\"type\":\"string\"},\"type\":{\"default\":null,\"description\":\"What kind of change this is\",\"options\":[\"typo\",\"content-update\",\"translation\",\"data-update\",\"bug-fix\",\"dependencies\",\"tooling\",\"feature-ui\",\"new-listing\",\"new-page\",\"spam\"],\"required\":true,\"type\":\"choice\"},\"unreviewed\":{\"default\":null,\"description\":\"Files not reviewed because the diff was truncated, comma-separated, or empty\",\"required\":false,\"type\":\"string\"}}}}"
         with:
           script: |
             const path = require('path');
@@ -590,56 +593,98 @@ jobs:
           GH_AW_TOOLS_META_JSON: |
             {
               "description_suffixes": {
-                "add_comment": " CONSTRAINTS: Maximum 5 comment(s) can be added. Target: *. Supports reply_to_id for discussion threading.",
                 "add_labels": " CONSTRAINTS: Maximum 15 add_labels call(s) allowed. Maximum 10 label(s) per call. Only these labels are allowed: [\"needs review 👀\" \"needs dev approval 🧑\\u200d💻\" \"needs design approval 🧑\\u200d🎨\" \"needs product review 🕵️\" \"needs technical content review 🧑\\u200d🏫\" \"content 🖋️\" \"translation 🌍\" \"documentation 📖\" \"dependencies 📦\" \"tooling 🔧\" \"config ⚙️\"]. Target: *.",
                 "remove_labels": " CONSTRAINTS: Maximum 5 label(s) can be removed. Only these labels can be removed: [content 🖋️ translation 🌍 documentation 📖 dependencies 📦 tooling 🔧 config ⚙️]. Target: *."
               },
               "repo_params": {},
-              "dynamic_tools": []
+              "dynamic_tools": [
+                {
+                  "description": "Submit the first-pass review of one pull request. Call exactly once per reviewed PR; the comment is rendered and posted from these fields.",
+                  "inputSchema": {
+                    "additionalProperties": false,
+                    "properties": {
+                      "findings": {
+                        "description": "JSON array, possibly empty, of {\"severity\": \"blocking\"|\"should fix\"|\"nit\", \"file\": \"path\", \"line\": 123, \"title\": \"short problem\", \"detail\": \"trigger and effect\", \"fix\": \"the fix, or empty\"}",
+                        "type": "string"
+                      },
+                      "lane": {
+                        "description": "Lane picked from the changed paths",
+                        "enum": [
+                          "code",
+                          "tooling",
+                          "data",
+                          "content",
+                          "translation",
+                          "deps-docs"
+                        ],
+                        "type": "string"
+                      },
+                      "pr": {
+                        "description": "Pull request number",
+                        "type": "string"
+                      },
+                      "reason": {
+                        "description": "One line: why this risk",
+                        "type": "string"
+                      },
+                      "risk": {
+                        "description": "Impact if the change is wrong: R0 none, R1 contained, R2 can break pages or the build, R3 product, policy or security",
+                        "enum": [
+                          "R0",
+                          "R1",
+                          "R2",
+                          "R3"
+                        ],
+                        "type": "string"
+                      },
+                      "sha": {
+                        "description": "Reviewed head commit: headRefOid from pr-meta.json",
+                        "type": "string"
+                      },
+                      "summary": {
+                        "description": "One sentence: what the PR does",
+                        "type": "string"
+                      },
+                      "type": {
+                        "description": "What kind of change this is",
+                        "enum": [
+                          "typo",
+                          "content-update",
+                          "translation",
+                          "data-update",
+                          "bug-fix",
+                          "dependencies",
+                          "tooling",
+                          "feature-ui",
+                          "new-listing",
+                          "new-page",
+                          "spam"
+                        ],
+                        "type": "string"
+                      },
+                      "unreviewed": {
+                        "description": "Files not reviewed because the diff was truncated, comma-separated, or empty",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "findings",
+                      "lane",
+                      "pr",
+                      "reason",
+                      "risk",
+                      "sha",
+                      "summary",
+                      "type"
+                    ],
+                    "type": "object"
+                  },
+                  "name": "submit_review"
+                }
+              ]
             }
           GH_AW_VALIDATION_JSON: |
             {
-              "add_comment": {
-                "defaultMax": 1,
-                "fields": {
-                  "body": {
-                    "required": true,
-                    "type": "string",
-                    "sanitize": true,
-                    "maxLength": 65000
-                  },
-                  "comment_id": {
-                    "optionalPositiveInteger": true
-                  },
-                  "item_number": {
-                    "issueOrPRNumber": true
-                  },
-                  "pr": {
-                    "issueOrPRNumber": true
-                  },
-                  "pr_number": {
-                    "issueOrPRNumber": true
-                  },
-                  "reply_to_id": {
-                    "type": "string",
-                    "maxLength": 256
-                  },
-                  "repo": {
-                    "type": "string",
-                    "maxLength": 256
-                  },
-                  "target": {
-                    "type": "string",
-                    "enum": [
-                      "status"
-                    ]
-                  },
-                  "temporary_id": {
-                    "type": "string",
-                    "pattern": "^#?aw_[A-Za-z0-9_]{3,12}$"
-                  }
-                }
-              },
               "add_labels": {
                 "defaultMax": 5,
                 "fields": {
@@ -1088,6 +1133,7 @@ jobs:
         run: |
           bash "${RUNNER_TEMP}/gh-aw/actions/stop_mcp_gateway.sh" "$GATEWAY_PID"
       - name: Redact secrets in logs
+        id: redact_secrets
         if: always()
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
@@ -1226,7 +1272,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: ${{ vars.GH_AW_DEFAULT_ARTIFACT_RETENTION_DAYS || '0' }}
       - name: Upload agent artifacts
-        if: always()
+        if: always() && steps.redact_secrets.outcome == 'success'
         continue-on-error: true
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -1250,6 +1296,7 @@ jobs:
             /tmp/gh-aw/otlp-export-errors.jsonl
             /tmp/gh-aw/safeoutputs.jsonl
             /tmp/gh-aw/agent_output.json
+            /tmp/gh-aw/agent/candidates.json
             /tmp/gh-aw/aw-*.patch
             /tmp/gh-aw/aw-*.bundle
             /tmp/gh-aw/awf-config.json
@@ -1266,6 +1313,7 @@ jobs:
       - agent
       - detection
       - safe_outputs
+      - submit_review
     if: >
       always() && (needs.agent.result != 'skipped' || needs.activation.outputs.lockdown_check_failed == 'true' ||
       needs.activation.outputs.oauth_token_check_failed == 'true' || needs.activation.outputs.stale_lock_file_failed == 'true' ||
@@ -1897,8 +1945,6 @@ jobs:
       app_token_minting_failed: ${{ steps.safe-outputs-app-token.outcome == 'failure' }}
       code_push_failure_count: ${{ steps.process_safe_outputs.outputs.code_push_failure_count }}
       code_push_failure_errors: ${{ steps.process_safe_outputs.outputs.code_push_failure_errors }}
-      comment_id: ${{ steps.process_safe_outputs.outputs.comment_id }}
-      comment_url: ${{ steps.process_safe_outputs.outputs.comment_url }}
       create_discussion_error_count: ${{ steps.process_safe_outputs.outputs.create_discussion_error_count }}
       create_discussion_errors: ${{ steps.process_safe_outputs.outputs.create_discussion_errors }}
       process_safe_outputs_items_applied: ${{ steps.process_safe_outputs.outputs.items_applied }}
@@ -1974,7 +2020,8 @@ jobs:
           GH_AW_ALLOWED_DOMAINS: "api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,ppa.launchpad.net,s.symcb.com,s.symcd.com,security.ubuntu.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com"
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_API_URL: ${{ github.api_url }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"hide_older_comments\":true,\"hide_older_comments_match\":[\"pr-reviewer\"],\"max\":5,\"target\":\"*\"},\"add_labels\":{\"allowed\":[\"needs review 👀\",\"needs dev approval 🧑\u200d💻\",\"needs design approval 🧑\u200d🎨\",\"needs product review 🕵️\",\"needs technical content review 🧑\u200d🏫\",\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":15,\"target\":\"*\"},\"create_report_incomplete_issue\":{},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":2,\"report-as-issue\":\"false\"},\"remove_labels\":{\"allowed\":[\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":5,\"target\":\"*\"},\"report_incomplete\":{}}"
+          GH_AW_SAFE_OUTPUT_JOBS: "{\"submit_review\":\"\"}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_labels\":{\"allowed\":[\"needs review 👀\",\"needs dev approval 🧑\u200d💻\",\"needs design approval 🧑\u200d🎨\",\"needs product review 🕵️\",\"needs technical content review 🧑\u200d🏫\",\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":15,\"target\":\"*\"},\"create_report_incomplete_issue\":{},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":2,\"report-as-issue\":\"false\"},\"remove_labels\":{\"allowed\":[\"content 🖋️\",\"translation 🌍\",\"documentation 📖\",\"dependencies 📦\",\"tooling 🔧\",\"config ⚙️\"],\"max\":5,\"target\":\"*\"},\"report_incomplete\":{}}"
           GH_AW_GITHUB_TOKEN_SOURCE: "app"
         with:
           github-token: ${{ steps.safe-outputs-app-token.outputs.token }}
@@ -1996,3 +2043,113 @@ jobs:
             /tmp/gh-aw/safe-output-errors.json
           if-no-files-found: ignore
           retention-days: ${{ vars.GH_AW_DEFAULT_ARTIFACT_RETENTION_DAYS || '0' }}
+
+  submit_review:
+    needs:
+      - agent
+      - detection
+    if: >
+      (!cancelled()) && needs.agent.result != 'skipped' && contains(needs.agent.outputs.output_types, 'submit_review') &&
+      (needs.detection.result == 'success')
+    runs-on: ubuntu-latest
+    # Permissions for the submit_review job (workflow permissions default to none).
+    permissions:
+      contents: read
+    env:
+      GH_AW_AGENT_AIC: ${{ needs.agent.outputs.aic }}
+      GH_AW_AIC: ${{ needs.agent.outputs.aic }}
+      GH_AW_AMBIENT_CONTEXT: ${{ needs.agent.outputs.ambient_context }}
+      GH_AW_CALLER_WORKFLOW_ID: "${{ github.repository }}/backlog-sweeper"
+      GH_AW_DETECTION_CONCLUSION: ${{ needs.detection.outputs.detection_conclusion }}
+      GH_AW_DETECTION_REASON: ${{ needs.detection.outputs.detection_reason }}
+      GH_AW_ENGINE_ID: "claude"
+      GH_AW_ENGINE_MODEL: "claude-opus-5-5"
+      GH_AW_THREAT_DETECTION_AIC: ${{ needs.detection.outputs.aic }}
+      GH_AW_WORKFLOW_ID: "backlog-sweeper"
+      GH_AW_WORKFLOW_NAME: "PR Backlog Sweeper"
+      GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/backlog-sweeper.md"
+    steps:
+      - name: Download agent output artifact
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: "{agent,agent-output-fallback}"
+          merge-multiple: true
+          path: ${{ runner.temp }}/gh-aw/safe-jobs/
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0 (source v3)
+        env:
+          GH_AW_AGENT_OUTPUT: ${{ runner.temp }}/gh-aw/safe-jobs/agent_output.json
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+          permission-issues: write
+          permission-pull-requests: write
+          private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+      - name: Validate, render and post
+        run: |
+          set -euo pipefail
+          candidates=$(find "$(dirname "$GH_AW_AGENT_OUTPUT")" -name candidates.json -print -quit || true)
+          jq -c '.items[] | select(.type == "submit_review")' "$GH_AW_AGENT_OUTPUT" > items.jsonl
+          [ -s items.jsonl ] || { echo "No submit_review calls"; exit 1; }
+          failed=0
+          while IFS= read -r item; do
+            pr=$(jq -r '.pr | tonumber' <<<"$item")
+            if [ -n "$EVENT_PR" ]; then
+              [ "$pr" = "$EVENT_PR" ] || { echo "::error::PR #$pr is not the triggering PR"; failed=1; continue; }
+            elif [ -z "$candidates" ] || ! jq -e --argjson n "$pr" 'index($n)' "$candidates" >/dev/null; then
+              echo "::error::PR #$pr was not selected for this run"; failed=1; continue
+            fi
+
+            # Untrusted strings: cap length and defuse HTML comments so nothing can fake the data line.
+            review=$(jq -c --arg sha "${EVENT_SHA:-}" --arg run "$RUN_URL" '
+              def clean: tostring | .[0:500] | gsub("<!--"; "&lt;!--") | gsub("-->"; "--&gt;");
+              (.findings | fromjson) as $f
+              | if ($f | type) != "array" then error("findings is not an array") else . end
+              | ($f | map(
+                  if (.severity | IN("blocking", "should fix", "nit")) | not then error("bad severity: \(.severity)") else . end
+                  | {severity, file: (.file | clean), line: (if .line == null then null else (.line | tonumber | floor) end),
+                     title: (.title | clean), detail: (.detail // "" | clean), fix: (.fix // "" | clean)}
+                ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity]) | .[0:25]) as $findings
+              | {v: 1, pr: (.pr | tonumber),
+                 sha: (if $sha != "" then $sha else (.sha | if test("^[0-9a-f]{40}$") then . else error("bad sha") end) end),
+                 lane, type, risk, reason: (.reason | clean), summary: (.summary | clean),
+                 findings: $findings,
+                 counts: {blocking: ($findings | map(select(.severity == "blocking")) | length),
+                          should_fix: ($findings | map(select(.severity == "should fix")) | length),
+                          nit: ($findings | map(select(.severity == "nit")) | length)},
+                 unreviewed: ((.unreviewed // "") | clean | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != ""))),
+                 run: $run}
+            ' <<<"$item") || { echo "::error::PR #$pr: invalid review payload"; failed=1; continue; }
+
+            body=$(jq -r '
+              (.findings | length) as $n
+              | "## 🔎 First-pass review — " + (if $n == 0 then "no findings" elif $n == 1 then "1 finding" else "\($n) findings" end)
+              + "\n\n" + .summary
+              + (if $n > 0 then "\n\n" + ([.findings | to_entries[] | .value as $x
+                  | "\(.key + 1). **\($x.severity)** `\($x.file)\(if $x.line then ":\($x.line)" else "" end)` — \($x.title)"
+                    + (if $x.detail != "" then ". \($x.detail)" else "" end)
+                    + (if $x.fix != "" then " **Fix:** \($x.fix)" else "" end)] | join("\n")) else "" end)
+              + (if (.unreviewed | length) > 0 then "\n\n_Diff truncated; not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
+              + "\n\n<!-- ethorg-review: " + tojson + " -->"
+            ' <<<"$review")
+
+            existing=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
+              --jq '.[] | select(.user.login == "ethorg-agent[bot]" and (.body | contains("First-pass review"))) | .id' | tail -n 1)
+            if [ -n "$existing" ]; then
+              gh api -X PATCH "repos/$REPO/issues/comments/$existing" -f body="$body" > /dev/null
+              echo "Updated review comment on #$pr"
+            else
+              gh api -X POST "repos/$REPO/issues/$pr/comments" -f body="$body" > /dev/null
+              echo "Posted review comment on #$pr"
+            fi
+          done < items.jsonl
+          exit "$failed"
+        env:
+          EVENT_PR: ${{ github.event.pull_request.number }}
+          EVENT_SHA: ${{ github.event.pull_request.head.sha }}
+          GH_AW_AGENT_OUTPUT: ${{ runner.temp }}/gh-aw/safe-jobs/agent_output.json
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
