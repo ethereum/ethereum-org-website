@@ -12,7 +12,7 @@ permissions:
 engine:
   id: claude
   model: claude-opus-5-5
-max-ai-credits: 800
+max-ai-credits: 1000
 network: defaults
 strict: true
 timeout-minutes: 45
