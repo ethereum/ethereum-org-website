@@ -6,7 +6,7 @@ import type {
   CatalogItem,
 } from "@/lib/types"
 
-import { formatDaysAgo } from "@/lib/utils/date"
+import { formatTimeAgo } from "@/lib/utils/date"
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
@@ -280,7 +280,7 @@ export function toolToCatalogItem(
     0
   )
   const compact = numberFormat(locale, { notation: "compact" })
-  const lastUpdated = formatDaysAgo(locale, topRepo?.lastUpdated)
+  const lastUpdated = formatTimeAgo(locale, topRepo?.lastUpdated)
   const subcategory =
     labels.subcategoryLabels[tool.subcategory_id] || tool.subcategory_id
 

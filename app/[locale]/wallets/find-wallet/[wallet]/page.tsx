@@ -12,7 +12,7 @@ import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
 import Tooltip from "@/components/Tooltip"
 
-import { formatDaysAgo } from "@/lib/utils/date"
+import { formatTimeAgo } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
@@ -64,7 +64,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const relatedWallets = getRelatedWallets(wallet, locale, walletDescriptions, {
     exclude: getWalletSlug(nextWallet),
   })
-  const lastUpdated = formatDaysAgo(locale, wallet.last_updated)
+  const lastUpdated = formatTimeAgo(locale, wallet.last_updated)
 
   const item: CatalogItem = {
     kind: "wallet",
