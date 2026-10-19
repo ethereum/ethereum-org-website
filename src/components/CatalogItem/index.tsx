@@ -59,14 +59,11 @@ export const CatalogItemInfo = async ({
       <dl className="flex flex-col gap-4">
         {rows.map(({ label, value, tooltip }) => (
           <div key={label}>
-            <dt className="text-sm text-body-medium">
+            <dt className="flex items-center gap-1 text-sm text-body-medium">
               {label}
               {tooltip && (
                 <Tooltip content={<p className="text-body">{tooltip}</p>}>
-                  <Info
-                    className="ms-1 inline size-[0.875em] translate-y-0.5"
-                    aria-label={tooltip}
-                  />
+                  <Info className="size-3.5 shrink-0" aria-label={tooltip} />
                 </Tooltip>
               )}
             </dt>
