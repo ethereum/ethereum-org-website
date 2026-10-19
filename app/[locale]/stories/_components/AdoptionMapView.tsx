@@ -152,6 +152,7 @@ const AdoptionMapView = ({
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
+  const [failed, setFailed] = useState(false)
   const [view, setView] = useState<View>([0, 0, width, height])
   const pointer = useRef<Point>(undefined)
   const tooltip = useRef<HTMLDivElement>(null)
@@ -166,9 +167,12 @@ const AdoptionMapView = ({
 
   useEffect(() => {
     fetch("/world-map.json")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error(res.statusText)
+        return res.json()
+      })
       .then((map: { shapes: WorldMapShape[] }) => setShapes(map.shapes))
-      .catch(() => {})
+      .catch(() => setFailed(true))
   }, [])
 
   const percent = useMemo(() => {
@@ -313,7 +317,7 @@ const AdoptionMapView = ({
   const trackPointer = (e: PointerEvent<SVGSVGElement>) => {
     if (e.pointerType !== "mouse") return
     pointer.current = relative({ x: e.clientX, y: e.clientY })
-    if (tooltip.current)
+    if (tooltip.current && codeOf(e.target))
       Object.assign(tooltip.current.style, tooltipPosition(pointer.current))
   }
 
@@ -384,6 +388,13 @@ const AdoptionMapView = ({
         ? pinned
         : undefined
 
+  if (failed)
+    return (
+      <p className="text-center text-body-medium">
+        {t("page-stories-map-error")}
+      </p>
+    )
+
   return (
     <div className="mx-auto max-w-screen-lg space-y-8">
       <div className="relative">
@@ -443,15 +454,21 @@ const AdoptionMapView = ({
                 vectorEffect="non-scaling-stroke"
                 className={activeBucket?.fill ?? NO_DATA_FILL}
               />
-              {activeShape.small && (
-                <circle
-                  cx={activeShape.x * width}
-                  cy={activeShape.y * height}
-                  r={8 / scale}
-                  vectorEffect="non-scaling-stroke"
-                  className="fill-none"
-                />
-              )}
+              {activeShape.small &&
+                Math.max(
+                  activeShape.bbox[2] - activeShape.bbox[0],
+                  activeShape.bbox[3] - activeShape.bbox[1]
+                ) *
+                  scale <
+                  16 && (
+                  <circle
+                    cx={activeShape.x * width}
+                    cy={activeShape.y * height}
+                    r={8 / scale}
+                    vectorEffect="non-scaling-stroke"
+                    className="fill-none"
+                  />
+                )}
             </g>
           )}
         </svg>
