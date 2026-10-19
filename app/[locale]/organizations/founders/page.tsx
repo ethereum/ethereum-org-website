@@ -7,15 +7,15 @@ import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
-import EthGlyph from "@/components/icons/eth-glyph.svg"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
+  CardParagraph,
+  CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
@@ -32,6 +32,7 @@ import Alliance from "./logos/alliance.svg"
 import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
 import EcosystemSupport from "./logos/ecosystem-support-program.svg"
+import EthereumOrg from "./logos/ethereum-org.svg"
 import EthGlobal from "./logos/ethglobal.svg"
 import Kernel from "./logos/kernel.svg"
 import Unichain from "./logos/unichain.svg"
@@ -297,10 +298,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         },
         {
           name: "Ethereum events",
-          // Glyph defaults to 1em; match the wordmark logos' height
-          Logo: (props) => (
-            <EthGlyph {...props} height="2.25rem" width="auto" />
-          ),
+          Logo: EthereumOrg,
           tags: ["events"],
           description: t("page-founders-community-events-description"),
           highlights: [],
@@ -374,7 +372,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       >
                         <CardHeader className="my-auto">
                           <h3 className="sr-only">{name}</h3>
-                          <Logo className="max-h-9 max-w-full **:fill-body!" />
+                          {/* Auto size keeps the logo start-aligned (no letterbox from width attr); [fill] spares stroke-only paths */}
+                          <Logo className="h-auto max-h-9 w-auto max-w-full **:[[fill]]:fill-body!" />
                         </CardHeader>
                         <CardContent spacing="md">
                           {!!tags.length && (
@@ -415,26 +414,33 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             ))}
           </Tabs>
 
-          <p className="mt-10 text-sm text-body-medium">
+          <p className="text-sm text-body-medium">
             {t("page-founders-last-checked")}
           </p>
         </Section>
 
-        <Section
-          id="more-funding"
-          className="flex flex-col items-start gap-4 rounded-2xl border p-8 md:flex-row md:items-center md:justify-between"
-        >
-          <div className="space-y-2">
-            <h3 className="text-xl">{t("page-founders-rfpsearch-h3")}</h3>
-            <p className="text-body-medium">{t("page-founders-rfpsearch-p")}</p>
-          </div>
-          <ButtonLink
+        <Section id="more-funding">
+          <Card
             href="https://rfpsear.ch/"
-            variant="outline"
-            className="shrink-0"
+            variant="nested"
+            size="lg"
+            border
+            className="md:flex-row md:items-center"
           >
-            {t("page-founders-rfpsearch-cta")}
-          </ButtonLink>
+            <CardContent>
+              <CardTitle asChild>
+                <h2>{t("page-founders-rfpsearch-h3")}</h2>
+              </CardTitle>
+              <CardParagraph>{t("page-founders-rfpsearch-p")}</CardParagraph>
+            </CardContent>
+            {/* compact: the default responsive footer is a zero-width @container in a row.
+                md:pb-0 matches the zeroed top pad so the button centers */}
+            <CardFooter buttons="compact" className="shrink-0 md:pb-0">
+              <CardButtonFake variant="outline">
+                {t("page-founders-rfpsearch-cta")}
+              </CardButtonFake>
+            </CardFooter>
+          </Card>
         </Section>
 
         <OrganizationPathways pathways={["small-business", "enterprise"]} />
