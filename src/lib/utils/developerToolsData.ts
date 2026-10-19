@@ -280,7 +280,7 @@ export function toolToCatalogItem(
     0
   )
   const compact = numberFormat(locale, { notation: "compact" })
-  const lastUpdated = formatTimeAgo(locale, topRepo?.lastUpdated)
+  const lastUpdated = formatTimeAgo(locale, tool.updated_at)
   const subcategory =
     labels.subcategoryLabels[tool.subcategory_id] || tool.subcategory_id
 

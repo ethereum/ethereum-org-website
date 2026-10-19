@@ -272,49 +272,41 @@
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-upgrades",
           "stargazers": 652,
-          "lastUpdated": "2026-07-24T18:14:07Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-subgraphs",
           "stargazers": 146,
-          "lastUpdated": "2025-02-25T15:09:17Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-foundry-upgrades",
           "stargazers": 248,
-          "lastUpdated": "2026-08-05T15:34:09Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/merkle-tree",
           "stargazers": 525,
-          "lastUpdated": "2025-02-25T02:12:49Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/openzeppelin/openzeppelin-community-contracts",
           "stargazers": 85,
-          "lastUpdated": "2026-09-30T12:08:17Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-contracts",
           "stargazers": 27038,
-          "lastUpdated": "2026-10-13T17:14:41Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
           "stargazers": 1161,
-          "lastUpdated": "2026-10-13T17:15:24Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/OpenZeppelin/contracts-wizard",
           "stargazers": 295,
-          "lastUpdated": "2026-09-14T14:43:19Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -329,7 +321,8 @@
       ],
       "website": "https://www.openzeppelin.com/",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 39.51834416844255
+      "resource_score": 39.51834416844255,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "IPFS",
@@ -340,51 +333,42 @@
       "repos": [
         {
           "href": "https://github.com/ipfs/service-worker-gateway",
-          "stargazers": 95,
-          "lastUpdated": "2026-10-06T10:39:21Z"
+          "stargazers": 95
         },
         {
           "href": "https://github.com/ipfs/helia",
           "stargazers": 1297,
-          "lastUpdated": "2026-09-29T14:45:46Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ipfs/kubo",
-          "stargazers": 16974,
-          "lastUpdated": "2026-09-27T18:55:16Z"
+          "stargazers": 16974
         },
         {
           "href": "https://github.com/ipfs/boxo",
-          "stargazers": 291,
-          "lastUpdated": "2026-09-21T17:54:56Z"
+          "stargazers": 291
         },
         {
           "href": "https://github.com/ipfs/js-kubo-rpc-client",
           "stargazers": 50,
-          "lastUpdated": "2026-06-09T08:13:45Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ipfs/protons",
-          "stargazers": 37,
-          "lastUpdated": "2026-09-18T11:57:38Z"
+          "stargazers": 37
         },
         {
           "href": "https://github.com/ipfs/js-ipns",
           "stargazers": 89,
-          "lastUpdated": "2026-07-31T11:04:18Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ipfs/helia-delegated-routing-v1-http-api",
-          "stargazers": 4,
-          "lastUpdated": "2026-08-16T08:44:48Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/ipfs/js-stores",
-          "stargazers": 38,
-          "lastUpdated": "2026-05-11T16:07:42Z"
+          "stargazers": 38
         }
       ],
       "tags": [
@@ -393,7 +377,8 @@
         "cli"
       ],
       "subcategory_id": "storage-ipfs",
-      "resource_score": 38.021400146268434
+      "resource_score": 38.021400146268434,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Web3j",
@@ -404,41 +389,34 @@
       "repos": [
         {
           "href": "https://github.com/hyperledger-web3j/web3j",
-          "stargazers": 5386,
-          "lastUpdated": "2026-10-13T14:04:25Z"
+          "stargazers": 5386
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-maven-plugin",
           "stargazers": 128,
-          "lastUpdated": "2026-09-01T11:55:14Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-unit",
           "stargazers": 27,
-          "lastUpdated": "2026-06-27T15:06:50Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-openapi-gradle-plugin",
-          "stargazers": 4,
-          "lastUpdated": "2026-08-18T13:45:25Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-openapi",
-          "stargazers": 37,
-          "lastUpdated": "2026-08-04T14:56:11Z"
+          "stargazers": 37
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-solidity-gradle-plugin",
           "stargazers": 23,
-          "lastUpdated": "2026-10-05T16:03:47Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-docs",
-          "stargazers": 35,
-          "lastUpdated": "2026-08-25T14:10:26Z"
+          "stargazers": 35
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-installer",
@@ -446,18 +424,15 @@
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-cli",
-          "stargazers": 69,
-          "lastUpdated": "2026-02-06T19:38:47Z"
+          "stargazers": 69
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-gradle-plugin",
-          "stargazers": 41,
-          "lastUpdated": "2026-08-18T13:44:58Z"
+          "stargazers": 41
         },
         {
           "href": "https://github.com/hyperledger-web3j/web3j-sokt",
-          "stargazers": 16,
-          "lastUpdated": "2026-10-05T15:45:39Z"
+          "stargazers": 16
         }
       ],
       "tags": [
@@ -468,7 +443,8 @@
         "cli"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 29.739235326860825
+      "resource_score": 29.739235326860825,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "web3.py",
@@ -480,32 +456,27 @@
         {
           "href": "https://github.com/ethereum/web3.py",
           "stargazers": 5500,
-          "lastUpdated": "2026-09-29T16:23:04Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethereum/py-evm",
           "stargazers": 2361,
-          "lastUpdated": "2025-09-08T15:31:46Z",
           "license": "MIT",
           "isArchived": true
         },
         {
           "href": "https://github.com/ethereum/eth-utils",
           "stargazers": 336,
-          "lastUpdated": "2026-03-25T17:11:27Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethereum/eth-abi",
           "stargazers": 256,
-          "lastUpdated": "2026-08-22T22:32:47Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethereum/eth-account",
           "stargazers": 311,
-          "lastUpdated": "2026-08-23T01:33:36Z",
           "license": "MIT"
         }
       ],
@@ -514,7 +485,8 @@
         "community-driven"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 26.489951414551793
+      "resource_score": 26.489951414551793,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Passport XYZ | Gitcoin Passport",
@@ -525,40 +497,33 @@
       "repos": [
         {
           "href": "https://github.com/gitcoinco/passport",
-          "stargazers": 1213,
-          "lastUpdated": "2026-09-27T13:09:42Z"
+          "stargazers": 1213
         },
         {
           "href": "https://github.com/gitcoinco/eas-proxy",
           "stargazers": 22,
-          "lastUpdated": "2025-09-02T16:06:03Z",
           "license": "AGPL-3.0"
         },
         {
           "href": "https://github.com/passportxyz/passport-scorer",
-          "stargazers": 179,
-          "lastUpdated": "2026-10-06T14:49:39Z"
+          "stargazers": 179
         },
         {
           "href": "https://github.com/passportxyz/passport",
-          "stargazers": 1213,
-          "lastUpdated": "2026-09-27T13:09:42Z"
+          "stargazers": 1213
         },
         {
           "href": "https://github.com/gitcoinco/id-staking-v2",
-          "stargazers": 4,
-          "lastUpdated": "2024-10-04T17:47:35Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/gitcoinco/id-staking-v2-app",
           "stargazers": 3,
-          "lastUpdated": "2026-09-14T19:53:54Z",
           "license": "AGPL-3.0"
         },
         {
           "href": "https://github.com/gitcoinco/passport-scorer",
-          "stargazers": 179,
-          "lastUpdated": "2026-10-06T14:49:39Z"
+          "stargazers": 179
         }
       ],
       "tags": [
@@ -579,43 +544,36 @@
         {
           "href": "https://github.com/open-rpc/server-js",
           "stargazers": 52,
-          "lastUpdated": "2026-02-27T21:24:25Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/tools",
           "stargazers": 7,
-          "lastUpdated": "2026-02-27T03:17:55Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/generator",
           "stargazers": 95,
-          "lastUpdated": "2025-10-22T05:54:12Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/client-js",
           "stargazers": 137,
-          "lastUpdated": "2026-08-14T21:52:52Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/schema-utils-js",
           "stargazers": 27,
-          "lastUpdated": "2026-02-25T22:24:54Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/spec",
           "stargazers": 203,
-          "lastUpdated": "2026-09-05T04:20:24Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/open-rpc/meta-schema",
           "stargazers": 34,
-          "lastUpdated": "2026-09-21T20:51:16Z",
           "license": "Apache-2.0"
         }
       ],
@@ -626,7 +584,8 @@
       ],
       "website": "https://open-rpc.org",
       "subcategory_id": "standards-specifications",
-      "resource_score": 19.234100107279723
+      "resource_score": 19.234100107279723,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Scaffold-ETH 2",
@@ -638,36 +597,30 @@
         {
           "href": "https://github.com/scaffold-eth/create-eth-extensions",
           "stargazers": 49,
-          "lastUpdated": "2025-07-17T15:25:10Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/scaffold-eth/burner-connector",
           "stargazers": 7,
-          "lastUpdated": "2026-10-12T14:59:49Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/scaffold-eth/se-2-docs",
-          "stargazers": 21,
-          "lastUpdated": "2026-08-13T08:44:51Z"
+          "stargazers": 21
         },
         {
           "href": "https://github.com/scaffold-eth/create-eth",
           "stargazers": 23,
-          "lastUpdated": "2026-10-13T14:26:08Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/scaffold-eth/scaffoldeth.io",
           "stargazers": 8,
-          "lastUpdated": "2026-02-19T10:15:12Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/scaffold-eth/scaffold-eth-2",
           "stargazers": 2000,
-          "lastUpdated": "2026-10-13T16:31:56Z",
           "license": "MIT"
         }
       ],
@@ -679,7 +632,8 @@
         "cli"
       ],
       "subcategory_id": "contract-frameworks",
-      "resource_score": 17.593408186799707
+      "resource_score": 17.593408186799707,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Splits",
@@ -691,61 +645,51 @@
         {
           "href": "https://github.com/0xSplits/splits-contracts-monorepo",
           "stargazers": 27,
-          "lastUpdated": "2026-10-02T18:18:00Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-liquid",
           "stargazers": 11,
-          "lastUpdated": "2024-05-29T21:10:35Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-waterfall",
           "stargazers": 31,
-          "lastUpdated": "2026-07-17T22:34:26Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-vesting",
           "stargazers": 11,
-          "lastUpdated": "2026-07-17T22:31:59Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-utils",
           "stargazers": 4,
-          "lastUpdated": "2024-05-29T21:09:10Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-oracle",
           "stargazers": 9,
-          "lastUpdated": "2026-07-17T22:46:43Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-diversifier",
           "stargazers": 11,
-          "lastUpdated": "2026-07-17T22:42:29Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-contracts",
           "stargazers": 165,
-          "lastUpdated": "2026-07-17T22:27:44Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-swapper",
           "stargazers": 14,
-          "lastUpdated": "2026-07-17T22:52:45Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/0xSplits/splits-sdk",
           "stargazers": 40,
-          "lastUpdated": "2026-10-13T16:57:13Z",
           "license": "MIT"
         }
       ],
@@ -782,13 +726,11 @@
         {
           "href": "https://github.com/ethereum/solidity",
           "stargazers": 25589,
-          "lastUpdated": "2026-10-14T11:54:10Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/ethereum/solc-js",
           "stargazers": 1508,
-          "lastUpdated": "2026-10-07T12:05:33Z",
           "license": "MIT"
         }
       ],
@@ -800,7 +742,8 @@
       ],
       "website": "https://soliditylang.org/",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 16.284286607034556
+      "resource_score": 16.284286607034556,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "noble cryptography",
@@ -810,19 +753,16 @@
         {
           "href": "https://github.com/paulmillr/noble-curves",
           "stargazers": 889,
-          "lastUpdated": "2026-09-08T12:06:00Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/paulmillr/noble-hashes",
           "stargazers": 837,
-          "lastUpdated": "2026-09-08T10:19:19Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/paulmillr/noble-ciphers",
           "stargazers": 375,
-          "lastUpdated": "2026-08-30T16:45:49Z",
           "license": "MIT"
         }
       ],
@@ -833,7 +773,8 @@
       ],
       "website": "https://paulmillr.com/noble/",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 15.780485649238395
+      "resource_score": 15.780485649238395,
+      "updated_at": "2026-09-11T20:06:45Z"
     },
     {
       "name": "Velodrome Finance",
@@ -844,51 +785,42 @@
       "repos": [
         {
           "href": "https://github.com/velodrome-finance/relay",
-          "stargazers": 6,
-          "lastUpdated": "2025-12-18T15:28:56Z"
+          "stargazers": 6
         },
         {
           "href": "https://github.com/velodrome-finance/universal-router",
           "stargazers": 7,
-          "lastUpdated": "2026-04-10T07:43:00Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/velodrome-finance/sugar-sdk",
           "stargazers": 15,
-          "lastUpdated": "2026-05-28T12:19:02Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/velodrome-finance/sugar",
-          "stargazers": 85,
-          "lastUpdated": "2026-05-21T03:37:38Z"
+          "stargazers": 85
         },
         {
           "href": "https://github.com/velodrome-finance/slipstream",
-          "stargazers": 43,
-          "lastUpdated": "2026-05-01T04:25:01Z"
+          "stargazers": 43
         },
         {
           "href": "https://github.com/velodrome-finance/oracle",
           "stargazers": 5,
-          "lastUpdated": "2024-06-05T20:09:23Z",
           "isArchived": true
         },
         {
           "href": "https://github.com/velodrome-finance/contracts",
-          "stargazers": 65,
-          "lastUpdated": "2025-12-18T15:29:13Z"
+          "stargazers": 65
         },
         {
           "href": "https://github.com/velodrome-finance/superchain-contracts",
-          "stargazers": 9,
-          "lastUpdated": "2025-12-18T15:27:19Z"
+          "stargazers": 9
         },
         {
           "href": "https://github.com/velodrome-finance/superchain-slipstream",
-          "stargazers": 3,
-          "lastUpdated": "2026-05-01T04:40:06Z"
+          "stargazers": 3
         }
       ],
       "tags": [
@@ -911,20 +843,17 @@
         {
           "href": "https://github.com/thirdweb-dev/insight",
           "stargazers": 70,
-          "lastUpdated": "2026-05-19T05:38:22Z",
           "license": "Apache-2.0",
           "isArchived": true
         },
         {
           "href": "https://github.com/thirdweb-dev/js",
           "stargazers": 637,
-          "lastUpdated": "2026-10-13T10:36:09Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/thirdweb-dev/contracts",
           "stargazers": 1081,
-          "lastUpdated": "2025-08-08T08:21:00Z",
           "license": "Apache-2.0",
           "isArchived": true
         }
@@ -938,7 +867,8 @@
       ],
       "website": "https://www.linkedin.com/company/third-web/",
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 14.38569295381288
+      "resource_score": 14.38569295381288,
+      "updated_at": "2026-07-14T21:29:20Z"
     },
     {
       "name": "Snapshot",
@@ -950,19 +880,16 @@
         {
           "href": "https://github.com/snapshot-labs/snapshot",
           "stargazers": 9152,
-          "lastUpdated": "2026-09-07T18:48:09Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/snapshot-labs/sx-monorepo",
           "stargazers": 50,
-          "lastUpdated": "2026-10-13T15:26:03Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/snapshot-labs/sx-evm",
           "stargazers": 29,
-          "lastUpdated": "2026-08-14T16:25:12Z",
           "isArchived": true
         }
       ],
@@ -971,7 +898,8 @@
         "cross-chain"
       ],
       "subcategory_id": "governance-dao-tooling",
-      "resource_score": 13.03211601697681
+      "resource_score": 13.03211601697681,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "DefiLlama",
@@ -986,13 +914,11 @@
         },
         {
           "href": "https://github.com/0xngmi/llamazip",
-          "stargazers": 20,
-          "lastUpdated": "2024-06-05T03:14:38Z"
+          "stargazers": 20
         },
         {
           "href": "https://github.com/DefiLlama/DefiLlama-Adapters",
-          "stargazers": 1145,
-          "lastUpdated": "2026-10-14T18:51:32Z"
+          "stargazers": 1145
         }
       ],
       "tags": [
@@ -1004,7 +930,8 @@
       ],
       "website": "https://defillama.com/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 13.00862310491351
+      "resource_score": 13.00862310491351,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Hats Protocol",
@@ -1016,152 +943,126 @@
         {
           "href": "https://github.com/Hats-Protocol/hats-account",
           "stargazers": 10,
-          "lastUpdated": "2024-06-20T21:46:07Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/subgraph",
-          "stargazers": 4,
-          "lastUpdated": "2025-03-29T13:47:39Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/Hats-Protocol/hat-wearing-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-05-29T16:35:25Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/farcaster-delegator",
           "stargazers": 18,
-          "lastUpdated": "2024-05-29T16:10:52Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-account-sdk",
           "stargazers": 1,
-          "lastUpdated": "2024-06-20T22:00:40Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-auth",
           "stargazers": 1,
-          "lastUpdated": "2024-05-29T16:16:26Z",
           "license": "CC0-1.0"
         },
         {
           "href": "https://github.com/Hats-Protocol/create-hats-app",
           "stargazers": 5,
-          "lastUpdated": "2025-11-25T14:47:41Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/hsg-sdk",
-          "stargazers": 1,
-          "lastUpdated": "2024-07-15T20:34:51Z"
+          "stargazers": 1
         },
         {
           "href": "https://github.com/Hats-Protocol/colinks-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-06-20T21:43:18Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/chain-modules",
           "stargazers": 1,
-          "lastUpdated": "2024-06-20T22:00:29Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/allowlist-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-09-11T01:10:32Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/agreement-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-10-14T01:14:11Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-elections-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-05-29T16:12:39Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/season-toggle",
           "stargazers": 0,
-          "lastUpdated": "2024-05-29T16:35:41Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/staking-eligibility",
           "stargazers": 2,
-          "lastUpdated": "2024-05-29T16:35:59Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/hats-protocol/hats-module",
           "stargazers": 4,
-          "lastUpdated": "2025-03-15T20:33:53Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/hats-protocol/hats-protocol",
           "stargazers": 98,
-          "lastUpdated": "2024-05-29T15:50:14Z",
           "license": "AGPL-3.0"
         },
         {
           "href": "https://github.com/Hats-Protocol/subgraph-ancillary",
-          "stargazers": 0,
-          "lastUpdated": "2025-03-29T14:01:57Z"
+          "stargazers": 0
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-governor-votes",
-          "stargazers": 0,
-          "lastUpdated": "2025-02-09T18:06:36Z"
+          "stargazers": 0
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-module-template",
           "stargazers": 2,
-          "lastUpdated": "2024-06-20T21:47:18Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/modules-sdk",
-          "stargazers": 3,
-          "lastUpdated": "2025-12-01T23:35:58Z"
+          "stargazers": 3
         },
         {
           "href": "https://github.com/Hats-Protocol/hats-zodiac",
           "stargazers": 23,
-          "lastUpdated": "2024-12-19T02:24:56Z",
           "license": "LGPL-3.0"
         },
         {
           "href": "https://github.com/Hats-Protocol/jokerace-eligibility",
           "stargazers": 0,
-          "lastUpdated": "2024-08-27T19:15:52Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/multi-claims-hatter",
           "stargazers": 0,
-          "lastUpdated": "2024-05-29T16:36:17Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/passthrough-modules",
           "stargazers": 1,
-          "lastUpdated": "2024-09-14T15:21:25Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Hats-Protocol/sdk-v1-core",
-          "stargazers": 3,
-          "lastUpdated": "2025-04-01T19:37:40Z"
+          "stargazers": 3
         }
       ],
       "packages": [
@@ -1206,19 +1107,16 @@
         {
           "href": "https://github.com/lifinance/widget",
           "stargazers": 192,
-          "lastUpdated": "2026-10-13T14:42:49Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/lifinance/contracts",
           "stargazers": 198,
-          "lastUpdated": "2026-10-14T11:52:53Z",
           "license": "LGPL-3.0"
         },
         {
           "href": "https://github.com/lifinance/sdk",
           "stargazers": 251,
-          "lastUpdated": "2026-10-13T14:02:26Z",
           "license": "Apache-2.0"
         }
       ],
@@ -1240,7 +1138,8 @@
         "performance-optimization"
       ],
       "subcategory_id": "cross-chain-infrastructure",
-      "resource_score": 12.029721662336716
+      "resource_score": 12.029721662336716,
+      "updated_at": "2026-02-20T21:41:10Z"
     },
     {
       "name": "Hardhat",
@@ -1251,13 +1150,11 @@
       "repos": [
         {
           "href": "https://github.com/NomicFoundation/edr",
-          "stargazers": 97,
-          "lastUpdated": "2026-10-14T16:58:46Z"
+          "stargazers": 97
         },
         {
           "href": "https://github.com/nomicfoundation/hardhat",
-          "stargazers": 8452,
-          "lastUpdated": "2026-10-14T19:15:45Z"
+          "stargazers": 8452
         }
       ],
       "tags": [
@@ -1270,7 +1167,8 @@
       ],
       "website": "https://hardhat.org/",
       "subcategory_id": "deployment-devops",
-      "resource_score": 11.992783483620887
+      "resource_score": 11.992783483620887,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Ape Framework",
@@ -1282,25 +1180,21 @@
         {
           "href": "https://github.com/ApeWorX/silverback",
           "stargazers": 127,
-          "lastUpdated": "2026-09-25T02:14:54Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ApeWorX/ape",
           "stargazers": 1031,
-          "lastUpdated": "2026-10-13T19:35:17Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ApeWorX/ape-optimism",
           "stargazers": 13,
-          "lastUpdated": "2026-10-13T22:15:02Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ApeWorX/ape-base",
           "stargazers": 2,
-          "lastUpdated": "2026-10-13T22:13:13Z",
           "license": "Apache-2.0"
         }
       ],
@@ -1308,7 +1202,8 @@
         "cli"
       ],
       "subcategory_id": "contract-frameworks",
-      "resource_score": 11.797576481456106
+      "resource_score": 11.797576481456106,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "ZK Email",
@@ -1320,23 +1215,19 @@
         {
           "href": "https://github.com/zkemail/zk-email-verify",
           "stargazers": 421,
-          "lastUpdated": "2026-09-09T21:28:25Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/zkemail/zk-email-sdk-js",
-          "stargazers": 5,
-          "lastUpdated": "2025-12-29T14:41:54Z"
+          "stargazers": 5
         },
         {
           "href": "https://github.com/zkemail/email-recovery",
-          "stargazers": 59,
-          "lastUpdated": "2025-06-25T16:40:55Z"
+          "stargazers": 59
         },
         {
           "href": "https://github.com/zkemail/zkemail.nr",
           "stargazers": 85,
-          "lastUpdated": "2026-03-03T17:06:51Z",
           "license": "MIT"
         }
       ],
@@ -1354,7 +1245,8 @@
       ],
       "website": "https://zk.email",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 11.033209770303326
+      "resource_score": 11.033209770303326,
+      "updated_at": "2026-07-14T21:29:20Z"
     },
     {
       "name": "alloy",
@@ -1365,13 +1257,11 @@
         {
           "href": "https://github.com/alloy-rs/op-alloy",
           "stargazers": 87,
-          "lastUpdated": "2026-10-12T09:51:45Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/alloy-rs/alloy",
           "stargazers": 1260,
-          "lastUpdated": "2026-10-14T07:13:21Z",
           "license": "Apache-2.0"
         }
       ],
@@ -1380,7 +1270,8 @@
       ],
       "website": "https://alloy.rs/",
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 10.776444344409267
+      "resource_score": 10.776444344409267,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Chimera",
@@ -1391,28 +1282,23 @@
       "repos": [
         {
           "href": "https://github.com/Recon-Fuzz/setup-helpers",
-          "stargazers": 4,
-          "lastUpdated": "2026-04-01T18:05:33Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/Recon-Fuzz/log-parser",
-          "stargazers": 4,
-          "lastUpdated": "2026-04-17T13:29:58Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/Recon-Fuzz/create-chimera-app",
-          "stargazers": 48,
-          "lastUpdated": "2026-04-01T18:05:56Z"
+          "stargazers": 48
         },
         {
           "href": "https://github.com/Recon-Fuzz/chimera",
-          "stargazers": 147,
-          "lastUpdated": "2026-04-01T18:05:01Z"
+          "stargazers": 147
         },
         {
           "href": "https://github.com/Recon-Fuzz/recon-extension",
           "stargazers": 34,
-          "lastUpdated": "2026-06-16T06:57:38Z",
           "license": "MIT"
         }
       ],
@@ -1424,7 +1310,8 @@
         "vscode-extension"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 10.373662933870374
+      "resource_score": 10.373662933870374,
+      "updated_at": "2026-02-20T21:41:10Z"
     },
     {
       "name": "Etherspot",
@@ -1436,19 +1323,16 @@
         {
           "href": "https://github.com/etherspot/etherspot-prime-contracts",
           "stargazers": 55,
-          "lastUpdated": "2025-02-20T21:15:37Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/etherspot/etherspot-modular-sdk",
           "stargazers": 22,
-          "lastUpdated": "2026-06-25T12:15:36Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/etherspot/skandha",
           "stargazers": 611,
-          "lastUpdated": "2026-01-20T12:53:03Z",
           "license": "MIT"
         }
       ],
@@ -1483,7 +1367,6 @@
         {
           "href": "https://github.com/ethers-io/ethers.js",
           "stargazers": 8653,
-          "lastUpdated": "2026-06-18T03:56:18Z",
           "license": "MIT"
         }
       ],
@@ -1494,7 +1377,8 @@
       ],
       "website": "https://ethers.org",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 8.947699495518803
+      "resource_score": 8.947699495518803,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Chainlink",
@@ -1502,8 +1386,7 @@
       "repos": [
         {
           "href": "https://github.com/smartcontractkit/chainlink",
-          "stargazers": 8176,
-          "lastUpdated": "2026-10-14T15:16:20Z"
+          "stargazers": 8176
         }
       ],
       "tags": [
@@ -1513,7 +1396,8 @@
       ],
       "website": "https://chain.link/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 8.532661542347341
+      "resource_score": 8.532661542347341,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "miniapp starters",
@@ -1525,25 +1409,21 @@
         {
           "href": "https://github.com/builders-garden/base-minikit-starter",
           "stargazers": 41,
-          "lastUpdated": "2025-05-25T15:44:54Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/builders-garden/farcaster-miniapp-starter",
           "stargazers": 48,
-          "lastUpdated": "2025-12-06T15:23:06Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/builders-garden/frames-v2-starter",
           "stargazers": 29,
-          "lastUpdated": "2025-04-22T13:15:16Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/builders-garden/miniapp-next-template",
-          "stargazers": 28,
-          "lastUpdated": "2025-12-16T15:04:19Z"
+          "stargazers": 28
         }
       ],
       "tags": [
@@ -1571,7 +1451,6 @@
         {
           "href": "https://github.com/pcaversaccio/createx",
           "stargazers": 547,
-          "lastUpdated": "2026-10-06T12:20:21Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -1581,7 +1460,8 @@
         "solidity"
       ],
       "subcategory_id": "deployment-devops",
-      "resource_score": 7.994415243679252
+      "resource_score": 7.994415243679252,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Blobscan",
@@ -1593,19 +1473,16 @@
         {
           "href": "https://github.com/Blobscan/blobscan-helm-charts",
           "stargazers": 0,
-          "lastUpdated": "2026-09-08T10:33:08Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Blobscan/blobscan-indexer.rs",
           "stargazers": 44,
-          "lastUpdated": "2026-09-23T18:42:47Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Blobscan/blobscan",
           "stargazers": 100,
-          "lastUpdated": "2026-07-16T17:12:14Z",
           "license": "AGPL-3.0"
         },
         {
@@ -1621,7 +1498,8 @@
       ],
       "website": "https://blobscan.com/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 7.891483225649733
+      "resource_score": 7.891483225649733,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Ethernal",
@@ -1633,19 +1511,16 @@
         {
           "href": "https://github.com/tryethernal/ethernal",
           "stargazers": 262,
-          "lastUpdated": "2026-10-13T20:01:38Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/tryethernal/hardhat-ethernal",
           "stargazers": 105,
-          "lastUpdated": "2025-02-22T09:44:00Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/tryethernal/ethernal-cli",
           "stargazers": 16,
-          "lastUpdated": "2025-02-22T09:45:29Z",
           "license": "MIT"
         }
       ],
@@ -1657,7 +1532,8 @@
         "cli"
       ],
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 7.812991494507445
+      "resource_score": 7.812991494507445,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Modular Account",
@@ -1669,19 +1545,16 @@
         {
           "href": "https://github.com/alchemyplatform/modular-account",
           "stargazers": 139,
-          "lastUpdated": "2025-12-19T00:50:46Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/alchemyplatform/multisig-plugin",
           "stargazers": 9,
-          "lastUpdated": "2025-03-31T16:31:21Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/alchemyplatform/aa-benchmarks",
           "stargazers": 36,
-          "lastUpdated": "2025-04-30T22:40:07Z",
           "license": "MIT"
         }
       ],
@@ -1695,7 +1568,8 @@
         "developer-experience"
       ],
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 7.805456633559151
+      "resource_score": 7.805456633559151,
+      "updated_at": "2026-02-20T21:41:10Z"
     },
     {
       "name": "Foundry",
@@ -1706,7 +1580,6 @@
         {
           "href": "https://github.com/foundry-rs/foundry",
           "stargazers": 10240,
-          "lastUpdated": "2026-10-14T18:07:48Z",
           "license": "Apache-2.0"
         }
       ],
@@ -1721,7 +1594,8 @@
       ],
       "website": "https://getfoundry.sh",
       "subcategory_id": "deployment-devops",
-      "resource_score": 7.773226453330804
+      "resource_score": 7.773226453330804,
+      "updated_at": "2026-10-09T23:54:49Z"
     },
     {
       "name": "Viem: TypeScript Interface for Ethereum",
@@ -1732,8 +1606,7 @@
       "repos": [
         {
           "href": "https://github.com/wevm/viem",
-          "stargazers": 3425,
-          "lastUpdated": "2026-10-14T16:41:44Z"
+          "stargazers": 3425
         }
       ],
       "tags": [
@@ -1744,7 +1617,8 @@
       ],
       "website": "https://viem.sh",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 7.735617603989011
+      "resource_score": 7.735617603989011,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Curvegrid MultiBaas",
@@ -1756,31 +1630,26 @@
         {
           "href": "https://github.com/curvegrid/multibaas-sdk-go",
           "stargazers": 3,
-          "lastUpdated": "2026-05-20T08:08:55Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/curvegrid/multibaas-sdk-typescript",
           "stargazers": 5,
-          "lastUpdated": "2026-03-09T01:45:27Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/curvegrid/multibaas-for-google-sheets",
           "stargazers": 15,
-          "lastUpdated": "2025-05-09T03:14:38Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/curvegrid/multibaas-sample-app",
           "stargazers": 19,
-          "lastUpdated": "2025-09-24T11:47:38Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/curvegrid/hardhat-multibaas-plugin",
           "stargazers": 11,
-          "lastUpdated": "2026-03-09T01:49:47Z",
           "license": "MIT"
         },
         {
@@ -1791,7 +1660,8 @@
         "defi"
       ],
       "subcategory_id": "frontend-integration-tooling",
-      "resource_score": 7.670469521672941
+      "resource_score": 7.670469521672941,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Railgun",
@@ -1800,19 +1670,16 @@
         {
           "href": "https://github.com/Railgun-Community/engine",
           "stargazers": 18,
-          "lastUpdated": "2026-06-19T00:58:41Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Railgun-Community/cookbook",
           "stargazers": 33,
-          "lastUpdated": "2026-06-19T18:52:56Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Railgun-Community/wallet",
           "stargazers": 94,
-          "lastUpdated": "2026-06-19T17:05:54Z",
           "license": "MIT"
         }
       ],
@@ -1834,8 +1701,7 @@
       "repos": [
         {
           "href": "https://github.com/vyperlang/vyper",
-          "stargazers": 5171,
-          "lastUpdated": "2026-10-13T19:36:20Z"
+          "stargazers": 5171
         }
       ],
       "tags": [
@@ -1843,7 +1709,8 @@
         "devops"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 7.555526050280511
+      "resource_score": 7.555526050280511,
+      "updated_at": "2026-07-10T16:02:38Z"
     },
     {
       "name": "Solarity",
@@ -1854,13 +1721,11 @@
         {
           "href": "https://github.com/dl-solarity/hardhat-zkit",
           "stargazers": 97,
-          "lastUpdated": "2026-05-18T12:34:30Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/dl-solarity/solidity-lib",
           "stargazers": 391,
-          "lastUpdated": "2026-05-18T12:59:49Z",
           "license": "MIT"
         }
       ],
@@ -1871,7 +1736,8 @@
       ],
       "website": "https://solarity.dev/",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 7.505440623347118
+      "resource_score": 7.505440623347118,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Blockscout open-source block explorer",
@@ -1882,8 +1748,7 @@
       "repos": [
         {
           "href": "https://github.com/blockscout/blockscout",
-          "stargazers": 4464,
-          "lastUpdated": "2026-10-14T13:31:01Z"
+          "stargazers": 4464
         }
       ],
       "tags": [
@@ -1892,7 +1757,8 @@
       ],
       "website": "http://www.blockscout.com",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 7.369054670808742
+      "resource_score": 7.369054670808742,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "Slither",
@@ -1904,7 +1770,6 @@
         {
           "href": "https://github.com/crytic/slither",
           "stargazers": 6175,
-          "lastUpdated": "2026-08-06T12:20:32Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -1916,7 +1781,8 @@
         "continuous-integration"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 7.344086987023667
+      "resource_score": 7.344086987023667,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "deBridge",
@@ -1928,13 +1794,11 @@
         {
           "href": "https://github.com/debridge-finance/hardhat-debridge",
           "stargazers": 23,
-          "lastUpdated": "2024-06-04T10:44:19Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/debridge-finance/dln-taker",
           "stargazers": 20,
-          "lastUpdated": "2024-08-30T09:10:01Z",
           "license": "GPL-3.0",
           "isArchived": true
         },
@@ -1944,13 +1808,11 @@
         },
         {
           "href": "https://github.com/debridge-finance/dln-contracts",
-          "stargazers": 2,
-          "lastUpdated": "2024-06-04T11:18:02Z"
+          "stargazers": 2
         },
         {
           "href": "https://github.com/debridge-finance/debridge-contracts-v1",
-          "stargazers": 57,
-          "lastUpdated": "2024-10-23T15:11:09Z"
+          "stargazers": 57
         }
       ],
       "packages": [
@@ -1991,7 +1853,6 @@
         {
           "href": "https://github.com/orbitdb/orbitdb",
           "stargazers": 8757,
-          "lastUpdated": "2026-05-14T14:53:34Z",
           "license": "MIT"
         }
       ],
@@ -2000,7 +1861,8 @@
         "censorship-resistant"
       ],
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 6.963147743589937
+      "resource_score": 6.963147743589937,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "go-libp2p",
@@ -2012,7 +1874,6 @@
         {
           "href": "https://github.com/libp2p/go-libp2p",
           "stargazers": 6761,
-          "lastUpdated": "2026-09-21T14:17:10Z",
           "license": "MIT"
         }
       ],
@@ -2026,7 +1887,8 @@
         "community-driven"
       ],
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 6.957732523754299
+      "resource_score": 6.957732523754299,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "SpeedrunEthereum",
@@ -2036,13 +1898,11 @@
         {
           "href": "https://github.com/BuidlGuidl/SpeedRunEthereum-v2",
           "stargazers": 26,
-          "lastUpdated": "2026-09-11T10:25:33Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/scaffold-eth/se-2-challenges",
           "stargazers": 205,
-          "lastUpdated": "2026-01-07T15:43:49Z",
           "license": "MIT"
         }
       ],
@@ -2054,7 +1914,8 @@
       ],
       "website": "https://speedrunethereum.com/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 6.8429513071213
+      "resource_score": 6.8429513071213,
+      "updated_at": "2026-10-09T23:16:49Z"
     },
     {
       "name": "Ethereum Attestation Service (EAS)",
@@ -2066,13 +1927,11 @@
         {
           "href": "https://github.com/ethereum-attestation-service/eas-contracts",
           "stargazers": 308,
-          "lastUpdated": "2026-07-16T23:36:12Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethereum-attestation-service/eas-sdk",
           "stargazers": 136,
-          "lastUpdated": "2026-08-27T18:28:05Z",
           "license": "MIT"
         }
       ],
@@ -2088,7 +1947,8 @@
         "sdk"
       ],
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 6.751085916074075
+      "resource_score": 6.751085916074075,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Brownie",
@@ -2097,7 +1957,6 @@
         {
           "href": "https://github.com/eth-brownie/brownie",
           "stargazers": 2726,
-          "lastUpdated": "2026-06-21T22:03:07Z",
           "license": "MIT"
         }
       ],
@@ -2106,7 +1965,8 @@
         "debugging-tools"
       ],
       "subcategory_id": "contract-frameworks",
-      "resource_score": 6.74128353668263
+      "resource_score": 6.74128353668263,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Nethereum",
@@ -2115,7 +1975,6 @@
         {
           "href": "https://github.com/Nethereum/Nethereum",
           "stargazers": 2241,
-          "lastUpdated": "2026-10-05T08:56:06Z",
           "license": "MIT"
         }
       ],
@@ -2127,7 +1986,8 @@
         "abi-encoding"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 6.72387307132477
+      "resource_score": 6.72387307132477,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Trail of Bits Skills Marketplace",
@@ -2136,7 +1996,6 @@
         {
           "href": "https://github.com/trailofbits/skills",
           "stargazers": 3902,
-          "lastUpdated": "2026-10-14T19:22:35Z",
           "license": "CC-BY-SA-4.0"
         }
       ],
@@ -2146,7 +2005,8 @@
         "agent-skills"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 6.5515109986125015
+      "resource_score": 6.5515109986125015,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "The Ethernaut",
@@ -2158,7 +2018,6 @@
         {
           "href": "https://github.com/OpenZeppelin/ethernaut",
           "stargazers": 2303,
-          "lastUpdated": "2025-11-19T16:57:18Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -2171,7 +2030,8 @@
       ],
       "website": "https://ethernaut.openzeppelin.com/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 6.498841989021372
+      "resource_score": 6.498841989021372,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Solmate",
@@ -2179,8 +2039,7 @@
       "repos": [
         {
           "href": "https://github.com/transmissions11/solmate",
-          "stargazers": 4274,
-          "lastUpdated": "2025-07-21T22:24:38Z"
+          "stargazers": 4274
         }
       ],
       "tags": [
@@ -2202,7 +2061,6 @@
         {
           "href": "https://github.com/Vectorized/solady",
           "stargazers": 3286,
-          "lastUpdated": "2026-09-02T10:46:48Z",
           "license": "MIT"
         }
       ],
@@ -2215,7 +2073,8 @@
       ],
       "website": "https://solady.org",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 6.448579589055543
+      "resource_score": 6.448579589055543,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Rust Libp2p",
@@ -2227,7 +2086,6 @@
         {
           "href": "https://github.com/libp2p/rust-libp2p",
           "stargazers": 5465,
-          "lastUpdated": "2026-10-13T14:10:59Z",
           "license": "MIT"
         }
       ],
@@ -2237,7 +2095,8 @@
       ],
       "website": "https://sigmaprime.io",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 6.364808072569678
+      "resource_score": 6.364808072569678,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Revm",
@@ -2249,7 +2108,6 @@
         {
           "href": "https://github.com/bluealloy/revm",
           "stargazers": 2165,
-          "lastUpdated": "2026-10-07T16:01:37Z",
           "license": "MIT"
         }
       ],
@@ -2257,7 +2115,8 @@
         "community-driven"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 6.324578497175481
+      "resource_score": 6.324578497175481,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Noir",
@@ -2266,7 +2125,6 @@
         {
           "href": "https://github.com/noir-lang/noir",
           "stargazers": 1324,
-          "lastUpdated": "2026-10-14T18:21:25Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2288,7 +2146,6 @@
         {
           "href": "https://github.com/ethereum/sourcify",
           "stargazers": 915,
-          "lastUpdated": "2026-10-13T13:07:22Z",
           "license": "MIT"
         }
       ],
@@ -2301,7 +2158,8 @@
       ],
       "website": "https://sourcify.dev",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 6.225295902013331
+      "resource_score": 6.225295902013331,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Fe Language",
@@ -2312,7 +2170,6 @@
         {
           "href": "https://github.com/ethereum/fe",
           "stargazers": 1720,
-          "lastUpdated": "2026-10-07T14:32:52Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2325,7 +2182,8 @@
       ],
       "website": "fe-lang.org",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 6.199436077442786
+      "resource_score": 6.199436077442786,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Wagmi: Reactive primitives for Ethereum apps ",
@@ -2337,7 +2195,6 @@
         {
           "href": "https://github.com/wevm/wagmi",
           "stargazers": 6681,
-          "lastUpdated": "2026-09-29T16:05:40Z",
           "license": "MIT"
         }
       ],
@@ -2358,7 +2215,6 @@
         {
           "href": "https://github.com/iden3/circom",
           "stargazers": 1640,
-          "lastUpdated": "2026-03-16T11:29:06Z",
           "license": "GPL-3.0"
         }
       ],
@@ -2369,7 +2225,8 @@
       ],
       "website": "https://docs.circom.io/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 6.162362289249861
+      "resource_score": 6.162362289249861,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "snarkjs",
@@ -2378,7 +2235,6 @@
         {
           "href": "https://github.com/iden3/snarkjs",
           "stargazers": 2013,
-          "lastUpdated": "2026-10-01T19:42:24Z",
           "license": "GPL-3.0"
         }
       ],
@@ -2388,7 +2244,8 @@
         "privacy-focused"
       ],
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 6.155858472082623
+      "resource_score": 6.155858472082623,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Remix Project",
@@ -2400,25 +2257,21 @@
         {
           "href": "https://github.com/remix-project-org/remix-reward",
           "stargazers": 1,
-          "lastUpdated": "2025-02-19T13:53:14Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/ethereum/remix-project",
           "stargazers": 2916,
-          "lastUpdated": "2026-10-13T15:59:20Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/remix-project-org/remix-challenges",
           "stargazers": 0,
-          "lastUpdated": "2025-02-19T13:53:51Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/remix-project-org/remix-rewards-ui",
           "stargazers": 1,
-          "lastUpdated": "2025-02-19T13:54:26Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2429,7 +2282,8 @@
         "solidity"
       ],
       "subcategory_id": "courses-tutorials",
-      "resource_score": 6.10762655037096
+      "resource_score": 6.10762655037096,
+      "updated_at": "2026-09-13T15:42:54Z"
     },
     {
       "name": "Aztec",
@@ -2438,7 +2292,6 @@
         {
           "href": "https://github.com/AztecProtocol/aztec-packages",
           "stargazers": 435,
-          "lastUpdated": "2026-10-14T19:06:58Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2461,7 +2314,6 @@
         {
           "href": "https://github.com/growthepie/gtp-frontend",
           "stargazers": 12,
-          "lastUpdated": "2026-10-14T06:08:31Z",
           "license": "MIT"
         },
         {
@@ -2471,7 +2323,6 @@
         {
           "href": "https://github.com/growthepie/gtp",
           "stargazers": 28,
-          "lastUpdated": "2026-10-14T06:40:37Z",
           "license": "MIT"
         }
       ],
@@ -2496,13 +2347,11 @@
         {
           "href": "https://github.com/impersonator-eth/impersonator",
           "stargazers": 321,
-          "lastUpdated": "2026-10-04T15:26:20Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/impersonator-eth/impersonator-extension",
           "stargazers": 63,
-          "lastUpdated": "2025-02-26T21:39:17Z",
           "license": "MIT"
         }
       ],
@@ -2513,7 +2362,8 @@
       ],
       "website": "https://impersonator.xyz/",
       "subcategory_id": "frontend-integration-tooling",
-      "resource_score": 5.887332119303883
+      "resource_score": 5.887332119303883,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Self Protocol",
@@ -2521,8 +2371,7 @@
       "repos": [
         {
           "href": "https://github.com/selfxyz/self",
-          "stargazers": 1237,
-          "lastUpdated": "2026-09-06T21:12:15Z"
+          "stargazers": 1237
         }
       ],
       "tags": [
@@ -2533,7 +2382,8 @@
       ],
       "website": "https://self.xyz/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 5.874870494880599
+      "resource_score": 5.874870494880599,
+      "updated_at": "2026-10-09T23:11:34Z"
     },
     {
       "name": "Ponder",
@@ -2545,7 +2395,6 @@
         {
           "href": "https://github.com/ponder-sh/ponder",
           "stargazers": 1057,
-          "lastUpdated": "2026-10-08T20:59:40Z",
           "license": "MIT"
         }
       ],
@@ -2560,7 +2409,8 @@
       ],
       "website": "https://ponder.sh",
       "subcategory_id": "indexing-data-apis",
-      "resource_score": 5.840818381987283
+      "resource_score": 5.840818381987283,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Solhint",
@@ -2572,7 +2422,6 @@
         {
           "href": "https://github.com/protofire/solhint",
           "stargazers": 1118,
-          "lastUpdated": "2026-10-08T14:03:38Z",
           "license": "MIT"
         }
       ],
@@ -2584,7 +2433,8 @@
         "cli"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.8335871526624885
+      "resource_score": 5.8335871526624885,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "js-libp2p",
@@ -2596,7 +2446,6 @@
         {
           "href": "https://github.com/libp2p/js-libp2p",
           "stargazers": 2539,
-          "lastUpdated": "2026-10-11T23:58:49Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2606,7 +2455,8 @@
         "gossipsub"
       ],
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 5.751195945058858
+      "resource_score": 5.751195945058858,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Semaphore",
@@ -2617,7 +2467,6 @@
         {
           "href": "https://github.com/semaphore-protocol/semaphore",
           "stargazers": 1051,
-          "lastUpdated": "2026-09-18T10:02:15Z",
           "license": "MIT"
         }
       ],
@@ -2629,7 +2478,8 @@
       ],
       "website": "https://semaphore.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 5.732103511534846
+      "resource_score": 5.732103511534846,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "K Semantics of the Ethereum Virtual Machine (EVM)",
@@ -2641,7 +2491,6 @@
         {
           "href": "https://github.com/runtimeverification/evm-semantics",
           "stargazers": 579,
-          "lastUpdated": "2026-10-05T06:25:16Z",
           "license": "BSD-3-Clause"
         }
       ],
@@ -2656,7 +2505,8 @@
         "vyper"
       ],
       "subcategory_id": "formal-verification",
-      "resource_score": 5.697462104613508
+      "resource_score": 5.697462104613508,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Vscode Solidity Extension",
@@ -2666,7 +2516,6 @@
         {
           "href": "https://github.com/juanfranblanco/vscode-solidity",
           "stargazers": 955,
-          "lastUpdated": "2026-05-28T05:22:32Z",
           "license": "MIT"
         }
       ],
@@ -2675,7 +2524,8 @@
         "solidity"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.697227721363973
+      "resource_score": 5.697227721363973,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Otterscan",
@@ -2687,7 +2537,6 @@
         {
           "href": "https://github.com/otterscan/otterscan",
           "stargazers": 1407,
-          "lastUpdated": "2025-11-05T05:21:21Z",
           "license": "MIT"
         }
       ],
@@ -2702,7 +2551,8 @@
       ],
       "website": "https://otterscan.io/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 5.694843215369946
+      "resource_score": 5.694843215369946,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "MACI",
@@ -2714,7 +2564,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/maci",
           "stargazers": 589,
-          "lastUpdated": "2026-07-23T20:32:42Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -2726,7 +2575,8 @@
       ],
       "website": "https://maci.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 5.658064428999513
+      "resource_score": 5.658064428999513,
+      "updated_at": "2026-10-09T23:11:34Z"
     },
     {
       "name": "ZoKrates",
@@ -2735,7 +2585,6 @@
         {
           "href": "https://github.com/Zokrates/ZoKrates",
           "stargazers": 1883,
-          "lastUpdated": "2024-04-15T13:29:15Z",
           "license": "LGPL-3.0"
         }
       ],
@@ -2757,13 +2606,11 @@
       "repos": [
         {
           "href": "https://github.com/synpress-io/docs",
-          "stargazers": 0,
-          "lastUpdated": "2025-05-06T19:41:49Z"
+          "stargazers": 0
         },
         {
           "href": "https://github.com/Synthetixio/synpress",
           "stargazers": 879,
-          "lastUpdated": "2026-10-06T22:24:00Z",
           "license": "MIT"
         }
       ],
@@ -2775,7 +2622,8 @@
       ],
       "website": "https://synpress.io/",
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 5.590856089555942
+      "resource_score": 5.590856089555942,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "PRBMath",
@@ -2787,7 +2635,6 @@
         {
           "href": "https://github.com/PaulRBerg/prb-math",
           "stargazers": 997,
-          "lastUpdated": "2026-10-12T09:59:33Z",
           "license": "MIT"
         }
       ],
@@ -2798,7 +2645,8 @@
         "foundry"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.5018749318348155
+      "resource_score": 5.5018749318348155,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "WhatsABI",
@@ -2810,7 +2658,6 @@
         {
           "href": "https://github.com/shazow/whatsabi",
           "stargazers": 1145,
-          "lastUpdated": "2026-09-27T19:44:39Z",
           "license": "MIT"
         }
       ],
@@ -2818,7 +2665,8 @@
         "abi-encoding"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.494427817493671
+      "resource_score": 5.494427817493671,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "IntelliJ Solidity",
@@ -2827,7 +2675,6 @@
         {
           "href": "https://github.com/intellij-solidity/intellij-solidity",
           "stargazers": 1100,
-          "lastUpdated": "2026-10-03T09:07:38Z",
           "license": "MIT"
         }
       ],
@@ -2838,7 +2685,8 @@
       ],
       "website": "https://intellij-solidity.dev/",
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.462315892545859
+      "resource_score": 5.462315892545859,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Aderyn",
@@ -2850,7 +2698,6 @@
         {
           "href": "https://github.com/Cyfrin/aderyn",
           "stargazers": 747,
-          "lastUpdated": "2026-05-03T16:43:40Z",
           "license": "GPL-3.0"
         }
       ],
@@ -2864,7 +2711,8 @@
         "community-driven"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 5.379051042894894
+      "resource_score": 5.379051042894894,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Kurtosis",
@@ -2876,7 +2724,6 @@
         {
           "href": "https://github.com/kurtosis-tech/kurtosis",
           "stargazers": 527,
-          "lastUpdated": "2026-10-14T19:00:30Z",
           "license": "Apache-2.0"
         }
       ],
@@ -2887,7 +2734,8 @@
       ],
       "website": "https://www.kurtosis.com",
       "subcategory_id": "deployment-devops",
-      "resource_score": 5.321054098139928
+      "resource_score": 5.321054098139928,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Solc-select",
@@ -2898,7 +2746,6 @@
         {
           "href": "https://github.com/crytic/solc-select",
           "stargazers": 811,
-          "lastUpdated": "2026-03-30T12:21:05Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -2907,7 +2754,8 @@
         "solidity"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 5.277390142336588
+      "resource_score": 5.277390142336588,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "UMA Oracle",
@@ -2916,7 +2764,6 @@
         {
           "href": "https://github.com/UMAprotocol/protocol",
           "stargazers": 459,
-          "lastUpdated": "2026-10-11T12:15:52Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -2927,7 +2774,8 @@
       ],
       "website": "https://uma.xyz",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 5.275820429512994
+      "resource_score": 5.275820429512994,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "rindexer",
@@ -2937,7 +2785,6 @@
         {
           "href": "https://github.com/joshstevens19/rindexer",
           "stargazers": 669,
-          "lastUpdated": "2026-10-05T13:47:34Z",
           "license": "MIT"
         }
       ],
@@ -2947,7 +2794,8 @@
       ],
       "website": "https://rindexer.xyz/",
       "subcategory_id": "indexing-data-apis",
-      "resource_score": 5.241931092543038
+      "resource_score": 5.241931092543038,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Pyth Network",
@@ -2955,8 +2803,7 @@
       "repos": [
         {
           "href": "https://github.com/pyth-network/pyth-crosschain",
-          "stargazers": 234,
-          "lastUpdated": "2026-10-13T13:05:39Z"
+          "stargazers": 234
         }
       ],
       "tags": [
@@ -2966,7 +2813,8 @@
       ],
       "website": "https://pyth.network/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 5.222730922218027
+      "resource_score": 5.222730922218027,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Crawling the Ethereum P2P network with Nebula",
@@ -2978,14 +2826,12 @@
         {
           "href": "https://github.com/probe-lab/website",
           "stargazers": 2,
-          "lastUpdated": "2025-12-03T12:31:48Z",
           "license": "Apache-2.0",
           "isArchived": true
         },
         {
           "href": "https://github.com/dennis-tra/nebula",
           "stargazers": 374,
-          "lastUpdated": "2026-10-06T19:49:11Z",
           "license": "Apache-2.0"
         }
       ],
@@ -3005,19 +2851,16 @@
         {
           "href": "https://github.com/openfort-xyz/openfort-contracts",
           "stargazers": 34,
-          "lastUpdated": "2025-12-04T17:37:28Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/openfort-xyz/openfort-chain-abstraction",
           "stargazers": 11,
-          "lastUpdated": "2025-03-11T09:03:23Z",
           "isArchived": true
         },
         {
           "href": "https://github.com/openfort-xyz/openfort-js",
           "stargazers": 13,
-          "lastUpdated": "2026-10-13T10:59:01Z",
           "license": "Apache-2.0"
         }
       ],
@@ -3045,7 +2888,6 @@
         {
           "href": "https://github.com/OpenZeppelin/damn-vulnerable-defi",
           "stargazers": 746,
-          "lastUpdated": "2021-02-26T19:19:43Z",
           "license": "MIT"
         }
       ],
@@ -3056,7 +2898,8 @@
       ],
       "website": "https://www.damnvulnerabledefi.xyz/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 5.045098988049951
+      "resource_score": 5.045098988049951,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "CodeTracer",
@@ -3067,7 +2910,6 @@
         {
           "href": "https://github.com/metacraft-labs/codetracer",
           "stargazers": 1281,
-          "lastUpdated": "2026-10-02T04:45:06Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3079,7 +2921,8 @@
       ],
       "website": "https://www.codetracer.com",
       "subcategory_id": "debugging-inspection",
-      "resource_score": 5.0426595723123855
+      "resource_score": 5.0426595723123855,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Aragon OSx",
@@ -3090,13 +2933,11 @@
       "repos": [
         {
           "href": "https://github.com/aragon/app",
-          "stargazers": 4,
-          "lastUpdated": "2026-10-14T15:04:26Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/aragon/osx",
           "stargazers": 98,
-          "lastUpdated": "2026-09-04T10:34:52Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3113,7 +2954,8 @@
       ],
       "website": "https://aragon.org/",
       "subcategory_id": "governance-dao-tooling",
-      "resource_score": 5.040995794415949
+      "resource_score": 5.040995794415949,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "eRPC",
@@ -3125,7 +2967,6 @@
         {
           "href": "https://github.com/erpc/erpc",
           "stargazers": 683,
-          "lastUpdated": "2026-10-14T18:20:45Z",
           "license": "Apache-2.0"
         }
       ],
@@ -3134,7 +2975,8 @@
         "indexing"
       ],
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 5.00113051918476
+      "resource_score": 5.00113051918476,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Medusa",
@@ -3145,7 +2987,6 @@
         {
           "href": "https://github.com/crytic/medusa",
           "stargazers": 462,
-          "lastUpdated": "2026-09-09T16:41:12Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3156,7 +2997,8 @@
         "fuzz-testing"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 4.965839753873723
+      "resource_score": 4.965839753873723,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "zkTLS/ TLSNotary",
@@ -3166,8 +3008,7 @@
       "repos": [
         {
           "href": "https://github.com/tlsnotary/tlsn",
-          "stargazers": 407,
-          "lastUpdated": "2026-10-05T18:01:36Z"
+          "stargazers": 407
         }
       ],
       "tags": [
@@ -3176,7 +3017,8 @@
       ],
       "website": "https://tlsnotary.org/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 4.963576970940363
+      "resource_score": 4.963576970940363,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "Titanoboa",
@@ -3186,8 +3028,7 @@
       "repos": [
         {
           "href": "https://github.com/vyperlang/titanoboa",
-          "stargazers": 305,
-          "lastUpdated": "2026-10-02T15:13:16Z"
+          "stargazers": 305
         }
       ],
       "tags": [
@@ -3196,7 +3037,8 @@
       ],
       "website": "https://titanoboa.readthedocs.io/en/latest/",
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 4.9605339997152225
+      "resource_score": 4.9605339997152225,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "ENS",
@@ -3205,7 +3047,6 @@
         {
           "href": "https://github.com/ensdomains/docs",
           "stargazers": 210,
-          "lastUpdated": "2026-10-14T15:40:20Z",
           "license": "CC0-1.0"
         }
       ],
@@ -3235,7 +3076,6 @@
         {
           "href": "https://github.com/swiss-knife-xyz/swiss-knife",
           "stargazers": 230,
-          "lastUpdated": "2026-10-04T15:26:11Z",
           "license": "MIT"
         }
       ],
@@ -3249,7 +3089,8 @@
       ],
       "website": "https://swiss-knife.xyz/",
       "subcategory_id": "frontend-integration-tooling",
-      "resource_score": 4.896679949220209
+      "resource_score": 4.896679949220209,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Juicebox",
@@ -3257,13 +3098,11 @@
       "repos": [
         {
           "href": "https://github.com/jbx-protocol/juice-contracts-v3",
-          "stargazers": 16,
-          "lastUpdated": "2024-02-19T09:59:04Z"
+          "stargazers": 16
         },
         {
           "href": "https://github.com/jbx-protocol/juice-interface",
           "stargazers": 199,
-          "lastUpdated": "2026-02-11T20:53:38Z",
           "license": "MIT"
         }
       ],
@@ -3285,34 +3124,28 @@
         {
           "href": "https://github.com/runtimeverification/_audits_lidofinance_dual-governance_fork",
           "stargazers": 1,
-          "lastUpdated": "2025-02-18T20:57:22Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/runtimeverification/yearn-v3-term-vault",
-          "stargazers": 0,
-          "lastUpdated": "2025-02-19T16:34:35Z"
+          "stargazers": 0
         },
         {
           "href": "https://github.com/runtimeverification/kontrol",
           "stargazers": 109,
-          "lastUpdated": "2026-10-05T14:15:01Z",
           "license": "BSD-3-Clause"
         },
         {
           "href": "https://github.com/runtimeverification/Depeg-swap",
-          "stargazers": 0,
-          "lastUpdated": "2025-02-19T16:33:07Z"
+          "stargazers": 0
         },
         {
           "href": "https://github.com/runtimeverification/optimism-ci",
-          "stargazers": 4,
-          "lastUpdated": "2025-02-18T20:03:05Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/runtimeverification/_audits_Ethereum-optimism_pausability",
           "stargazers": 0,
-          "lastUpdated": "2025-06-06T08:42:21Z",
           "license": "MIT"
         }
       ],
@@ -3327,7 +3160,8 @@
         "static-analysis"
       ],
       "subcategory_id": "formal-verification",
-      "resource_score": 4.859869225336716
+      "resource_score": 4.859869225336716,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Mint Club",
@@ -3338,13 +3172,11 @@
       "repos": [
         {
           "href": "https://github.com/Steemhunt/mint.club-v2-contract",
-          "stargazers": 63,
-          "lastUpdated": "2026-09-06T04:12:34Z"
+          "stargazers": 63
         },
         {
           "href": "https://github.com/Steemhunt/mint.club-v2-sdk",
-          "stargazers": 34,
-          "lastUpdated": "2026-10-04T09:32:26Z"
+          "stargazers": 34
         }
       ],
       "packages": [
@@ -3370,7 +3202,6 @@
         {
           "href": "https://github.com/evmts/tevm-monorepo",
           "stargazers": 440,
-          "lastUpdated": "2026-09-05T17:21:28Z",
           "license": "MIT"
         }
       ],
@@ -3380,7 +3211,8 @@
       ],
       "website": "https://node.tevm.sh",
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 4.771337739480554
+      "resource_score": 4.771337739480554,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Skandha ERC-4337 Bundler",
@@ -3392,7 +3224,6 @@
         {
           "href": "https://github.com/etherspot/skandha",
           "stargazers": 611,
-          "lastUpdated": "2026-01-20T12:53:03Z",
           "license": "MIT"
         }
       ],
@@ -3404,7 +3235,8 @@
       ],
       "website": "https://etherspot.io/skandha/",
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 4.701406055749696
+      "resource_score": 4.701406055749696,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "solidity-coverage",
@@ -3415,7 +3247,6 @@
         {
           "href": "https://github.com/sc-forks/solidity-coverage",
           "stargazers": 1005,
-          "lastUpdated": "2025-12-11T04:00:44Z",
           "license": "MIT"
         }
       ],
@@ -3427,7 +3258,8 @@
         "test-automation"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 4.6738654496105445
+      "resource_score": 4.6738654496105445,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "MerkleTreeJS",
@@ -3438,7 +3270,6 @@
         {
           "href": "https://github.com/merkletreejs/merkletreejs",
           "stargazers": 1234,
-          "lastUpdated": "2025-09-15T07:14:10Z",
           "license": "MIT"
         }
       ],
@@ -3446,7 +3277,8 @@
         "merkle-trees"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 4.626607312356578
+      "resource_score": 4.626607312356578,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "EDB: The Ethereum Project Debugger",
@@ -3455,7 +3287,6 @@
         {
           "href": "https://github.com/edb-rs/edb",
           "stargazers": 358,
-          "lastUpdated": "2026-05-10T18:07:22Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3466,7 +3297,8 @@
         "testing"
       ],
       "subcategory_id": "debugging-inspection",
-      "resource_score": 4.602619616170546
+      "resource_score": 4.602619616170546,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Rundler",
@@ -3478,7 +3310,6 @@
         {
           "href": "https://github.com/alchemyplatform/rundler",
           "stargazers": 377,
-          "lastUpdated": "2026-10-13T20:00:58Z",
           "license": "LGPL-3.0"
         }
       ],
@@ -3490,7 +3321,8 @@
       ],
       "website": "www.alchemy.com",
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 4.566000080811408
+      "resource_score": 4.566000080811408,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "DexKit",
@@ -3502,13 +3334,11 @@
         {
           "href": "https://github.com/DexKit/open-nft-marketplace",
           "stargazers": 94,
-          "lastUpdated": "2025-02-24T02:49:26Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/DexKit/dexkit-monorepo",
           "stargazers": 8,
-          "lastUpdated": "2026-10-02T15:55:28Z",
           "license": "MIT"
         }
       ],
@@ -3530,13 +3360,11 @@
       "repos": [
         {
           "href": "https://github.com/web3privacy/explorer-app",
-          "stargazers": 2,
-          "lastUpdated": "2025-06-27T15:33:39Z"
+          "stargazers": 2
         },
         {
           "href": "https://github.com/web3privacy/explorer-data",
-          "stargazers": 32,
-          "lastUpdated": "2026-10-13T17:20:03Z"
+          "stargazers": 32
         }
       ],
       "tags": [
@@ -3555,7 +3383,6 @@
         {
           "href": "https://github.com/alchemyplatform/alchemy-sdk-js",
           "stargazers": 457,
-          "lastUpdated": "2025-09-29T22:33:33Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -3568,7 +3395,8 @@
       ],
       "website": "https://www.alchemy.com/",
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 4.386392013797794
+      "resource_score": 4.386392013797794,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Prettier Solidity",
@@ -3579,7 +3407,6 @@
         {
           "href": "https://github.com/prettier-solidity/prettier-plugin-solidity",
           "stargazers": 748,
-          "lastUpdated": "2026-10-13T13:02:54Z",
           "license": "MIT"
         }
       ],
@@ -3588,7 +3415,8 @@
         "code-quality"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 4.351994914295484
+      "resource_score": 4.351994914295484,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": " snekmate",
@@ -3599,7 +3427,6 @@
         {
           "href": "https://github.com/pcaversaccio/snekmate",
           "stargazers": 587,
-          "lastUpdated": "2026-10-13T12:46:20Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3625,7 +3452,6 @@
         {
           "href": "https://github.com/cryspen/hax",
           "stargazers": 391,
-          "lastUpdated": "2026-10-14T10:30:05Z",
           "license": "Apache-2.0"
         }
       ],
@@ -3634,7 +3460,8 @@
       ],
       "website": "https://hax.cryspen.com/",
       "subcategory_id": "formal-verification",
-      "resource_score": 4.256257110814622
+      "resource_score": 4.256257110814622,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "hevm",
@@ -3645,7 +3472,6 @@
         {
           "href": "https://github.com/ethereum/hevm",
           "stargazers": 332,
-          "lastUpdated": "2026-10-14T10:17:29Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3656,7 +3482,8 @@
         "symbolic-execution"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 4.1257642739349745
+      "resource_score": 4.1257642739349745,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Bloctopus",
@@ -3668,31 +3495,26 @@
         {
           "href": "https://github.com/0xBloctopus/lzero-reth",
           "stargazers": 3,
-          "lastUpdated": "2026-01-27T20:55:41Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/0xBloctopus/ethereum-package",
           "stargazers": 8,
-          "lastUpdated": "2025-09-26T17:25:09Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/0xBloctopus/blockscout-package",
           "stargazers": 5,
-          "lastUpdated": "2025-09-11T15:19:00Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/0xBloctopus/chainlink-node-package",
           "stargazers": 4,
-          "lastUpdated": "2025-09-11T15:15:39Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/0xBloctopus/layerzero-package",
           "stargazers": 7,
-          "lastUpdated": "2025-09-11T15:17:36Z",
           "license": "MIT"
         }
       ],
@@ -3714,7 +3536,6 @@
         {
           "href": "https://github.com/zkmopro/mopro",
           "stargazers": 224,
-          "lastUpdated": "2026-09-05T02:21:19Z",
           "license": "Apache-2.0"
         }
       ],
@@ -3724,7 +3545,8 @@
       ],
       "website": "https://zkmopro.org/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 4.098952339916683
+      "resource_score": 4.098952339916683,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "Pashov Audit Group Skills",
@@ -3733,7 +3555,6 @@
         {
           "href": "https://github.com/pashov/skills",
           "stargazers": 485,
-          "lastUpdated": "2026-10-05T12:25:49Z",
           "license": "MIT"
         }
       ],
@@ -3743,7 +3564,8 @@
         "static-analysis"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 4.058531517949174
+      "resource_score": 4.058531517949174,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "EvmTools",
@@ -3753,13 +3575,11 @@
       "repos": [
         {
           "href": "https://github.com/Elefria-Labs/zk-block",
-          "stargazers": 71,
-          "lastUpdated": "2025-02-07T03:07:51Z"
+          "stargazers": 71
         },
         {
           "href": "https://github.com/Elefria-Labs/evm-tools",
           "stargazers": 14,
-          "lastUpdated": "2025-10-21T09:26:42Z",
           "license": "GPL-3.0"
         }
       ],
@@ -3782,7 +3602,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/zk-kit",
           "stargazers": 367,
-          "lastUpdated": "2026-07-21T21:28:37Z",
           "license": "MIT"
         }
       ],
@@ -3794,7 +3613,8 @@
       ],
       "website": "https://zkkit.org/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 4.018312073130497
+      "resource_score": 4.018312073130497,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "Simbolik - Solidity Debugger",
@@ -3806,13 +3626,11 @@
         {
           "href": "https://github.com/runtimeverification/simbolik-examples",
           "stargazers": 5,
-          "lastUpdated": "2026-01-14T20:21:15Z",
           "license": "BSD-3-Clause"
         },
         {
           "href": "https://github.com/runtimeverification/simbolik-vscode",
           "stargazers": 48,
-          "lastUpdated": "2026-10-13T16:23:11Z",
           "license": "BSD-3-Clause"
         }
       ],
@@ -3826,7 +3644,8 @@
       ],
       "website": "simbolik.runtimeverification.com",
       "subcategory_id": "debugging-inspection",
-      "resource_score": 3.997311250111995
+      "resource_score": 3.997311250111995,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "ethdebug",
@@ -3837,8 +3656,7 @@
       "repos": [
         {
           "href": "https://github.com/ethdebug/format",
-          "stargazers": 77,
-          "lastUpdated": "2026-10-09T07:30:23Z"
+          "stargazers": 77
         }
       ],
       "tags": [
@@ -3857,7 +3675,6 @@
         {
           "href": "https://github.com/joshstevens19/ethereum-multicall",
           "stargazers": 383,
-          "lastUpdated": "2025-12-23T11:07:33Z",
           "license": "MIT"
         }
       ],
@@ -3865,7 +3682,8 @@
         "multicall"
       ],
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 3.959439905100407
+      "resource_score": 3.959439905100407,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Crytic-Properties",
@@ -3876,7 +3694,6 @@
         {
           "href": "https://github.com/crytic/properties",
           "stargazers": 365,
-          "lastUpdated": "2025-11-29T16:59:34Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3887,7 +3704,8 @@
         "solidity"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 3.931129254417987
+      "resource_score": 3.931129254417987,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "go-ethereum-hdwallet",
@@ -3898,7 +3716,6 @@
         {
           "href": "https://github.com/miguelmota/go-ethereum-hdwallet",
           "stargazers": 550,
-          "lastUpdated": "2025-04-27T19:43:22Z",
           "license": "MIT"
         }
       ],
@@ -3919,7 +3736,6 @@
         {
           "href": "https://github.com/ethereum/act",
           "stargazers": 268,
-          "lastUpdated": "2026-10-06T07:13:08Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -3930,7 +3746,8 @@
         "symbolic-execution"
       ],
       "subcategory_id": "formal-verification",
-      "resource_score": 3.917891373878388
+      "resource_score": 3.917891373878388,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Solidity Bytes Arrays Utils Library",
@@ -3942,7 +3759,6 @@
         {
           "href": "https://github.com/GNSPS/solidity-bytes-utils",
           "stargazers": 567,
-          "lastUpdated": "2025-05-22T18:04:26Z",
           "license": "Unlicense"
         }
       ],
@@ -3951,7 +3767,8 @@
         "truffle"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
-      "resource_score": 3.895011316028907
+      "resource_score": 3.895011316028907,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Sonobe",
@@ -3962,7 +3779,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/sonobe",
           "stargazers": 265,
-          "lastUpdated": "2026-07-26T08:23:16Z",
           "license": "MIT"
         }
       ],
@@ -3973,7 +3789,8 @@
       ],
       "website": "https://sonobe.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 3.8947811097597627
+      "resource_score": 3.8947811097597627,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "mpz",
@@ -3983,8 +3800,7 @@
       "repos": [
         {
           "href": "https://github.com/privacy-scaling-explorations/mpz",
-          "stargazers": 287,
-          "lastUpdated": "2026-10-13T17:20:50Z"
+          "stargazers": 287
         }
       ],
       "tags": [
@@ -4003,7 +3819,6 @@
         {
           "href": "https://github.com/Cyfrin/foundry-devops",
           "stargazers": 638,
-          "lastUpdated": "2025-06-13T19:13:29Z",
           "license": "MIT"
         }
       ],
@@ -4027,25 +3842,21 @@
         {
           "href": "https://github.com/Pfed-prog/NextJsExplorer",
           "stargazers": 25,
-          "lastUpdated": "2026-02-16T13:10:37Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Pfed-prog/EVMExplorer-Blockscout",
           "stargazers": 2,
-          "lastUpdated": "2025-12-24T22:07:19Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Pfed-prog/EVMExplorer-Uniswap",
           "stargazers": 1,
-          "lastUpdated": "2025-10-07T11:46:23Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Pfed-prog/EVMExplorer-Utility",
           "stargazers": 1,
-          "lastUpdated": "2025-10-07T10:46:13Z",
           "license": "MIT"
         }
       ],
@@ -4068,13 +3879,11 @@
         {
           "href": "https://github.com/Ratimon/redprint-forge",
           "stargazers": 51,
-          "lastUpdated": "2025-02-15T09:07:50Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Ratimon/redprint-wizard",
           "stargazers": 55,
-          "lastUpdated": "2025-04-21T02:52:44Z",
           "license": "MIT"
         }
       ],
@@ -4097,7 +3906,6 @@
         {
           "href": "https://github.com/framesjs/frames.js",
           "stargazers": 383,
-          "lastUpdated": "2025-03-27T17:07:46Z",
           "license": "MIT"
         }
       ],
@@ -4120,7 +3928,6 @@
         {
           "href": "https://github.com/cgewecke/hardhat-gas-reporter",
           "stargazers": 432,
-          "lastUpdated": "2025-06-01T00:24:43Z",
           "license": "MIT"
         }
       ],
@@ -4136,7 +3943,8 @@
         "test-automation"
       ],
       "subcategory_id": "deployment-devops",
-      "resource_score": 3.770476800763717
+      "resource_score": 3.770476800763717,
+      "updated_at": "2026-10-10T15:45:22Z"
     },
     {
       "name": "xdeployer",
@@ -4147,7 +3955,6 @@
         {
           "href": "https://github.com/pcaversaccio/xdeployer",
           "stargazers": 445,
-          "lastUpdated": "2026-10-14T10:59:35Z",
           "license": "MIT"
         }
       ],
@@ -4159,7 +3966,8 @@
         "cli"
       ],
       "subcategory_id": "deployment-devops",
-      "resource_score": 3.756833926827537
+      "resource_score": 3.756833926827537,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "API3 DAO",
@@ -4168,7 +3976,6 @@
         {
           "href": "https://github.com/api3dao/airnode",
           "stargazers": 170,
-          "lastUpdated": "2026-01-08T09:08:01Z",
           "license": "MIT"
         }
       ],
@@ -4189,7 +3996,6 @@
         {
           "href": "https://github.com/witnet/witnet-rust",
           "stargazers": 188,
-          "lastUpdated": "2026-05-15T22:16:21Z",
           "license": "GPL-3.0"
         }
       ],
@@ -4200,7 +4006,8 @@
       ],
       "website": "https://witnet.io/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 3.6962439507004694
+      "resource_score": 3.6962439507004694,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Band Protocol",
@@ -4209,7 +4016,6 @@
         {
           "href": "https://github.com/bandprotocol/chain",
           "stargazers": 163,
-          "lastUpdated": "2026-10-06T12:07:47Z",
           "license": "GPL-3.0"
         }
       ],
@@ -4221,7 +4027,8 @@
       ],
       "website": "https://bandprotocol.com/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 3.6891891187940007
+      "resource_score": 3.6891891187940007,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "ethereum.rb",
@@ -4230,7 +4037,6 @@
         {
           "href": "https://github.com/EthWorks/ethereum.rb",
           "stargazers": 732,
-          "lastUpdated": "2022-05-11T14:28:01Z",
           "license": "MIT"
         }
       ],
@@ -4249,7 +4055,6 @@
         {
           "href": "https://github.com/alexfertel/bulloak",
           "stargazers": 347,
-          "lastUpdated": "2026-03-14T15:40:12Z",
           "license": "Apache-2.0"
         }
       ],
@@ -4264,7 +4069,8 @@
       ],
       "website": "https://www.bulloak.dev/",
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 3.6500850311586945
+      "resource_score": 3.6500850311586945,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Abi Ninja",
@@ -4275,7 +4081,6 @@
         {
           "href": "https://github.com/BuidlGuidl/abi.ninja",
           "stargazers": 226,
-          "lastUpdated": "2026-08-11T13:14:15Z",
           "license": "MIT"
         }
       ],
@@ -4286,7 +4091,8 @@
       ],
       "website": "https://abi.ninja/",
       "subcategory_id": "debugging-inspection",
-      "resource_score": 3.6495314181719007
+      "resource_score": 3.6495314181719007,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "evm-mcp-server by mcpdotdirect",
@@ -4297,7 +4103,6 @@
         {
           "href": "https://github.com/mcpdotdirect/evm-mcp-server",
           "stargazers": 371,
-          "lastUpdated": "2026-06-04T22:17:38Z",
           "license": "MIT"
         }
       ],
@@ -4316,8 +4121,7 @@
       "repos": [
         {
           "href": "https://github.com/RareSkills/Solidity-Exercises",
-          "stargazers": 334,
-          "lastUpdated": "2026-04-22T11:25:31Z"
+          "stargazers": 334
         }
       ],
       "tags": [
@@ -4327,7 +4131,8 @@
       ],
       "website": "https://rareskills.io/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 3.601851052694403
+      "resource_score": 3.601851052694403,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Titan Layer",
@@ -4338,8 +4143,7 @@
       "repos": [
         {
           "href": "https://github.com/TitanLayer/contracts",
-          "stargazers": 0,
-          "lastUpdated": "2025-02-21T21:33:35Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -4359,8 +4163,7 @@
       "repos": [
         {
           "href": "https://github.com/sifaw23/distributler",
-          "stargazers": 0,
-          "lastUpdated": "2025-02-05T18:11:43Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -4381,8 +4184,7 @@
       "repos": [
         {
           "href": "https://github.com/Nodeguardians/optimism",
-          "stargazers": 0,
-          "lastUpdated": "2024-09-03T14:22:05Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -4403,20 +4205,17 @@
         {
           "href": "https://github.com/decentxyz/launch-nfts",
           "stargazers": 1,
-          "lastUpdated": "2024-06-06T16:40:50Z",
           "license": "GPL-3.0",
           "isArchived": true
         },
         {
           "href": "https://github.com/decentxyz/decentV2-contracts",
           "stargazers": 2,
-          "lastUpdated": "2024-06-06T15:26:43Z",
           "isArchived": true
         },
         {
           "href": "https://github.com/decentxyz/decent-contracts-v3",
           "stargazers": 1,
-          "lastUpdated": "2025-03-28T20:43:18Z",
           "isArchived": true
         }
       ],
@@ -4458,7 +4257,6 @@
         {
           "href": "https://github.com/L2PASS/contracts",
           "stargazers": 0,
-          "lastUpdated": "2024-05-30T20:04:34Z",
           "license": "MIT"
         }
       ],
@@ -4497,8 +4295,7 @@
       "repos": [
         {
           "href": "https://github.com/meliopolis/governance-paymaster",
-          "stargazers": 0,
-          "lastUpdated": "2024-04-24T20:45:19Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -4515,8 +4312,7 @@
       "repos": [
         {
           "href": "https://github.com/saifalkatout/FeAlloc",
-          "stargazers": 0,
-          "lastUpdated": "2024-02-29T18:38:55Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -4573,7 +4369,8 @@
       ],
       "website": "https://herd.eco/explorer",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 3.591371212424062
+      "resource_score": 3.591371212424062,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Etherscan",
@@ -4586,7 +4383,8 @@
       ],
       "website": "https://etherscan.io/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 3.591371212424062
+      "resource_score": 3.591371212424062,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Cookbook AI",
@@ -4611,7 +4409,8 @@
       ],
       "website": "https://www.alchemy.com/university",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 3.591371212424062
+      "resource_score": 3.591371212424062,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "ZKP2P",
@@ -4640,24 +4439,20 @@
         {
           "href": "https://github.com/ethpm/ethpm-cli",
           "stargazers": 40,
-          "lastUpdated": "2020-10-29T20:31:08Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethpm/ethpm-spec",
-          "stargazers": 166,
-          "lastUpdated": "2022-02-10T22:25:59Z"
+          "stargazers": 166
         },
         {
           "href": "https://github.com/ethpm/ethpm.js",
           "stargazers": 13,
-          "lastUpdated": "2020-12-15T12:00:28Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/ethpm/py-ethpm",
           "stargazers": 24,
-          "lastUpdated": "2019-12-10T16:25:17Z",
           "license": "MIT"
         }
       ],
@@ -4680,25 +4475,21 @@
         {
           "href": "https://github.com/EnsoBuild/Uniswap-migrator",
           "stargazers": 0,
-          "lastUpdated": "2025-10-20T13:19:17Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/EnsoBuild/shortcuts-client-contracts",
           "stargazers": 1,
-          "lastUpdated": "2026-10-01T17:43:59Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/EnsoBuild/sdk-ts",
           "stargazers": 2,
-          "lastUpdated": "2026-09-25T08:56:50Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/EnsoBuild/shortcuts-widget",
           "stargazers": 6,
-          "lastUpdated": "2026-09-16T14:11:57Z",
           "license": "GPL-3.0"
         }
       ],
@@ -4720,7 +4511,6 @@
         {
           "href": "https://github.com/stereum-dev/ethereum-node",
           "stargazers": 154,
-          "lastUpdated": "2026-10-14T12:16:15Z",
           "license": "MIT"
         }
       ],
@@ -4732,7 +4522,8 @@
       ],
       "website": "https://stereum.com",
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 3.53085377902548
+      "resource_score": 3.53085377902548,
+      "updated_at": "2026-09-11T20:06:45Z"
     },
     {
       "name": "Create2Deployer",
@@ -4743,7 +4534,6 @@
         {
           "href": "https://github.com/pcaversaccio/create2deployer",
           "stargazers": 307,
-          "lastUpdated": "2026-10-14T10:52:31Z",
           "license": "MIT"
         }
       ],
@@ -4752,7 +4542,8 @@
         "contract-deployment"
       ],
       "subcategory_id": "deployment-devops",
-      "resource_score": 3.516230890823582
+      "resource_score": 3.516230890823582,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Updraft",
@@ -4764,7 +4555,6 @@
         {
           "href": "https://github.com/Cyfrin/Updraft",
           "stargazers": 114,
-          "lastUpdated": "2026-05-14T14:22:18Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -4776,7 +4566,8 @@
       ],
       "website": "https://www.cyfrin.io/updraft",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 3.5105515072253306
+      "resource_score": 3.5105515072253306,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "txtx",
@@ -4787,7 +4578,6 @@
         {
           "href": "https://github.com/txtx/txtx",
           "stargazers": 147,
-          "lastUpdated": "2026-07-13T18:22:03Z",
           "license": "Apache-2.0"
         }
       ],
@@ -4799,7 +4589,8 @@
       ],
       "website": "https://www.txtx.sh/",
       "subcategory_id": "deployment-devops",
-      "resource_score": 3.506192976781467
+      "resource_score": 3.506192976781467,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "p0tion",
@@ -4810,7 +4601,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/p0tion",
           "stargazers": 105,
-          "lastUpdated": "2026-03-29T06:15:21Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -4822,7 +4612,8 @@
       ],
       "website": "https://ceremony.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 3.491309768596026
+      "resource_score": 3.491309768596026,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "Halo2",
@@ -4831,7 +4622,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/halo2",
           "stargazers": 244,
-          "lastUpdated": "2025-07-07T11:29:21Z",
           "isArchived": true
         }
       ],
@@ -4842,7 +4632,8 @@
         "verification"
       ],
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 3.47765358750756
+      "resource_score": 3.47765358750756,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Solidity Testing Handbook",
@@ -4851,7 +4642,6 @@
         {
           "href": "https://github.com/trailofbits/testing-handbook",
           "stargazers": 100,
-          "lastUpdated": "2026-07-28T12:49:43Z",
           "license": "CC-BY-4.0"
         }
       ],
@@ -4861,7 +4651,8 @@
       ],
       "website": "https://solidity-testing-handbook.vercel.app/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 3.462725456325544
+      "resource_score": 3.462725456325544,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Moccasin",
@@ -4872,7 +4663,6 @@
         {
           "href": "https://github.com/Cyfrin/moccasin",
           "stargazers": 178,
-          "lastUpdated": "2026-06-22T20:50:08Z",
           "license": "Apache-2.0"
         }
       ],
@@ -4884,7 +4674,8 @@
         "encryption"
       ],
       "subcategory_id": "contract-frameworks",
-      "resource_score": 3.413423194383081
+      "resource_score": 3.413423194383081,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Stargate Finance",
@@ -4895,8 +4686,7 @@
       "repos": [
         {
           "href": "https://github.com/stargate-protocol/stargate",
-          "stargazers": 320,
-          "lastUpdated": "2024-06-06T00:19:00Z"
+          "stargazers": 320
         }
       ],
       "tags": [
@@ -4917,7 +4707,6 @@
         {
           "href": "https://github.com/usecannon/cannon",
           "stargazers": 123,
-          "lastUpdated": "2026-06-14T07:37:03Z",
           "license": "GPL-3.0"
         }
       ],
@@ -4927,7 +4716,8 @@
       ],
       "website": "https://usecannon.com",
       "subcategory_id": "deployment-devops",
-      "resource_score": 3.3590560506202287
+      "resource_score": 3.3590560506202287,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Coordinape",
@@ -4936,7 +4726,6 @@
         {
           "href": "https://github.com/coordinape/coordinape",
           "stargazers": 87,
-          "lastUpdated": "2026-01-09T16:50:35Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -4957,13 +4746,11 @@
       "repos": [
         {
           "href": "https://github.com/unruggable-labs/unruggable-gateways-examples",
-          "stargazers": 5,
-          "lastUpdated": "2025-10-13T15:50:04Z"
+          "stargazers": 5
         },
         {
           "href": "https://github.com/unruggable-labs/unruggable-gateways",
           "stargazers": 90,
-          "lastUpdated": "2026-01-27T12:33:28Z",
           "license": "MIT"
         }
       ],
@@ -4989,7 +4776,6 @@
         {
           "href": "https://github.com/PartyDAO/party-protocol",
           "stargazers": 184,
-          "lastUpdated": "2024-12-21T01:46:28Z",
           "license": "GPL-3.0"
         }
       ],
@@ -5007,7 +4793,6 @@
         {
           "href": "https://github.com/uniswap/uniswap-ai",
           "stargazers": 185,
-          "lastUpdated": "2026-09-29T16:16:23Z",
           "license": "MIT"
         }
       ],
@@ -5016,7 +4801,8 @@
       ],
       "website": "https://developers.uniswap.org/",
       "subcategory_id": "agent-skills",
-      "resource_score": 3.325692729634849
+      "resource_score": 3.325692729634849,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "simple-uniswap-sdk",
@@ -5025,7 +4811,6 @@
         {
           "href": "https://github.com/joshstevens19/simple-uniswap-sdk",
           "stargazers": 191,
-          "lastUpdated": "2025-05-02T07:31:13Z",
           "license": "MIT"
         }
       ],
@@ -5045,8 +4830,7 @@
       "repos": [
         {
           "href": "https://github.com/austintgriffith/ethskills",
-          "stargazers": 160,
-          "lastUpdated": "2026-08-20T04:00:23Z"
+          "stargazers": 160
         }
       ],
       "tags": [
@@ -5055,7 +4839,8 @@
       ],
       "website": "https://ethskills.com/",
       "subcategory_id": "agent-skills",
-      "resource_score": 3.246121786882097
+      "resource_score": 3.246121786882097,
+      "updated_at": "2026-03-06T19:46:33Z"
     },
     {
       "name": "Blockhead",
@@ -5067,7 +4852,6 @@
         {
           "href": "https://github.com/darrylyeo/blockhead",
           "stargazers": 133,
-          "lastUpdated": "2026-03-19T04:32:25Z",
           "isArchived": true
         }
       ],
@@ -5086,7 +4870,6 @@
         {
           "href": "https://github.com/PraneshASP/foundry-mcp-server",
           "stargazers": 242,
-          "lastUpdated": "2026-01-17T15:25:55Z",
           "license": "MIT"
         }
       ],
@@ -5097,7 +4880,8 @@
         "solidity-development"
       ],
       "subcategory_id": "mcp-servers",
-      "resource_score": 3.2446595093390718
+      "resource_score": 3.2446595093390718,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Zink Language",
@@ -5109,7 +4893,6 @@
         {
           "href": "https://github.com/zink-lang/zink",
           "stargazers": 174,
-          "lastUpdated": "2025-04-22T15:32:48Z",
           "license": "GPL-3.0",
           "isArchived": true
         }
@@ -5130,7 +4913,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/anon-aadhaar",
           "stargazers": 244,
-          "lastUpdated": "2025-04-19T17:59:25Z",
           "license": "MIT"
         }
       ],
@@ -5142,7 +4924,8 @@
       ],
       "website": "https://anon-aadhaar.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 3.241887308940407
+      "resource_score": 3.241887308940407,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "OpenZeppelin Skills",
@@ -5151,7 +4934,6 @@
         {
           "href": "https://github.com/OpenZeppelin/openzeppelin-skills",
           "stargazers": 158,
-          "lastUpdated": "2026-07-15T13:00:58Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -5162,7 +4944,8 @@
         "upgradeable-contracts"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 3.205604683724238
+      "resource_score": 3.205604683724238,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Solodit",
@@ -5172,8 +4955,7 @@
       "repos": [
         {
           "href": "https://github.com/solodit/solodit_content",
-          "stargazers": 125,
-          "lastUpdated": "2026-09-23T16:21:10Z"
+          "stargazers": 125
         }
       ],
       "tags": [
@@ -5195,13 +4977,11 @@
       "repos": [
         {
           "href": "https://github.com/llamasubs/contracts",
-          "stargazers": 4,
-          "lastUpdated": "2024-07-21T13:42:50Z"
+          "stargazers": 4
         },
         {
           "href": "https://github.com/LlamaPay/llamapay",
-          "stargazers": 188,
-          "lastUpdated": "2022-06-21T08:10:50Z"
+          "stargazers": 188
         }
       ],
       "tags": [
@@ -5219,7 +4999,6 @@
         {
           "href": "https://github.com/peterferguson/react-native-passkeys",
           "stargazers": 138,
-          "lastUpdated": "2026-08-05T10:47:57Z",
           "license": "MIT"
         }
       ],
@@ -5227,7 +5006,8 @@
         "authentication"
       ],
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 3.1161491490369393
+      "resource_score": 3.1161491490369393,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Light Account",
@@ -5238,7 +5018,6 @@
         {
           "href": "https://github.com/alchemyplatform/light-account",
           "stargazers": 114,
-          "lastUpdated": "2026-01-07T16:13:59Z",
           "license": "GPL-3.0"
         }
       ],
@@ -5249,7 +5028,8 @@
       ],
       "website": "https://www.alchemy.com/",
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 3.1130859888042814
+      "resource_score": 3.1130859888042814,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Web3GPT",
@@ -5261,7 +5041,6 @@
         {
           "href": "https://github.com/markeljan/web3gpt",
           "stargazers": 114,
-          "lastUpdated": "2026-10-14T17:19:41Z",
           "license": "MIT"
         }
       ],
@@ -5283,7 +5062,6 @@
         {
           "href": "https://github.com/memester-xyz/surl",
           "stargazers": 332,
-          "lastUpdated": "2025-04-05T17:06:36Z",
           "license": "MIT"
         }
       ],
@@ -5303,7 +5081,6 @@
         {
           "href": "https://github.com/Vectorized/multicaller",
           "stargazers": 290,
-          "lastUpdated": "2025-01-31T03:52:41Z",
           "license": "MIT"
         }
       ],
@@ -5323,7 +5100,8 @@
         "truffle"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 3.0019067944293107
+      "resource_score": 3.0019067944293107,
+      "updated_at": "2026-10-09T23:11:34Z"
     },
     {
       "name": "zkID",
@@ -5334,7 +5112,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/zkID",
           "stargazers": 66,
-          "lastUpdated": "2026-08-11T13:16:05Z",
           "license": "MIT"
         }
       ],
@@ -5353,7 +5130,6 @@
         {
           "href": "https://github.com/Cyfrin/solskill",
           "stargazers": 132,
-          "lastUpdated": "2026-06-18T23:35:57Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -5364,7 +5140,8 @@
         "testing"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 2.876287490517136
+      "resource_score": 2.876287490517136,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Zabi",
@@ -5376,7 +5153,6 @@
         {
           "href": "https://github.com/Raiden1411/zabi",
           "stargazers": 115,
-          "lastUpdated": "2026-05-26T21:32:02Z",
           "license": "MIT"
         }
       ],
@@ -5389,7 +5165,8 @@
       ],
       "website": "zabi.sh",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 2.8722077820714693
+      "resource_score": 2.8722077820714693,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "SolidityGuard",
@@ -5398,7 +5175,6 @@
         {
           "href": "https://github.com/alt-research/SolidityGuard",
           "stargazers": 81,
-          "lastUpdated": "2026-06-04T04:12:02Z",
           "isArchived": true
         }
       ],
@@ -5418,7 +5194,6 @@
         {
           "href": "https://github.com/mhw0/libethc",
           "stargazers": 71,
-          "lastUpdated": "2026-02-18T04:05:42Z",
           "license": "MIT"
         }
       ],
@@ -5428,7 +5203,8 @@
       ],
       "website": "https://mhw0.github.io/libethc/",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 2.766367016485046
+      "resource_score": 2.766367016485046,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Voltaire | Account Abstraction Bundler",
@@ -5440,7 +5216,6 @@
         {
           "href": "https://github.com/candidelabs/voltaire",
           "stargazers": 56,
-          "lastUpdated": "2026-10-13T20:23:50Z",
           "license": "LGPL-3.0"
         }
       ],
@@ -5452,7 +5227,8 @@
       ],
       "website": "https://www.candide.dev/bundler",
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 2.7334380992606175
+      "resource_score": 2.7334380992606175,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "foundry-gas-diff",
@@ -5461,7 +5237,6 @@
         {
           "href": "https://github.com/Rubilmax/foundry-gas-diff",
           "stargazers": 208,
-          "lastUpdated": "2025-04-04T08:54:57Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -5484,8 +5259,7 @@
       "repos": [
         {
           "href": "https://github.com/Archethect/sc-auditor",
-          "stargazers": 100,
-          "lastUpdated": "2026-03-13T17:00:18Z"
+          "stargazers": 100
         }
       ],
       "tags": [
@@ -5495,7 +5269,8 @@
         "static-analysis"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 2.673132485008148
+      "resource_score": 2.673132485008148,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "Slither MCP Server",
@@ -5504,7 +5279,6 @@
         {
           "href": "https://github.com/trailofbits/slither-mcp",
           "stargazers": 81,
-          "lastUpdated": "2026-02-13T02:55:11Z",
           "license": "AGPL-3.0"
         }
       ],
@@ -5515,7 +5289,8 @@
         "static-analysis"
       ],
       "subcategory_id": "mcp-servers",
-      "resource_score": 2.6619220968464203
+      "resource_score": 2.6619220968464203,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Walnut",
@@ -5523,8 +5298,7 @@
       "repos": [
         {
           "href": "https://github.com/walnuthq/walnut",
-          "stargazers": 58,
-          "lastUpdated": "2026-05-12T09:43:31Z"
+          "stargazers": 58
         }
       ],
       "tags": [
@@ -5535,7 +5309,8 @@
       ],
       "website": "https://walnut.dev/",
       "subcategory_id": "debugging-inspection",
-      "resource_score": 2.650066235352091
+      "resource_score": 2.650066235352091,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "POD2",
@@ -5546,7 +5321,6 @@
         {
           "href": "https://github.com/0xPARC/pod2",
           "stargazers": 23,
-          "lastUpdated": "2026-10-06T14:42:13Z",
           "license": "MIT"
         }
       ],
@@ -5566,8 +5340,7 @@
       "repos": [
         {
           "href": "https://github.com/zkpassport/zkpassport-packages",
-          "stargazers": 31,
-          "lastUpdated": "2026-10-14T15:34:01Z"
+          "stargazers": 31
         }
       ],
       "packages": [
@@ -5584,7 +5357,8 @@
       ],
       "website": "https://zkpassport.id/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 2.631379337830367
+      "resource_score": 2.631379337830367,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Chronicle",
@@ -5592,8 +5366,7 @@
       "repos": [
         {
           "href": "https://github.com/chronicleprotocol/scribe",
-          "stargazers": 58,
-          "lastUpdated": "2026-05-07T11:03:08Z"
+          "stargazers": 58
         }
       ],
       "tags": [
@@ -5603,7 +5376,8 @@
       ],
       "website": "https://chroniclelabs.org/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 2.5985535861337636
+      "resource_score": 2.5985535861337636,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Voltaire",
@@ -5613,7 +5387,6 @@
         {
           "href": "https://github.com/evmts/voltaire",
           "stargazers": 64,
-          "lastUpdated": "2026-09-05T18:44:43Z",
           "license": "MIT"
         }
       ],
@@ -5625,7 +5398,8 @@
       ],
       "website": "https://voltaire.tevm.sh/",
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 2.594318195438531
+      "resource_score": 2.594318195438531,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Verifereum",
@@ -5637,7 +5411,6 @@
         {
           "href": "https://github.com/verifereum/verifereum",
           "stargazers": 36,
-          "lastUpdated": "2026-10-01T09:44:12Z",
           "license": "GPL-3.0"
         }
       ],
@@ -5648,7 +5421,8 @@
       ],
       "website": "https://www.verifereum.org/",
       "subcategory_id": "formal-verification",
-      "resource_score": 2.5908207257004054
+      "resource_score": 2.5908207257004054,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Ackee",
@@ -5660,7 +5434,6 @@
         {
           "href": "https://github.com/Ackee-Blockchain/solidity-for-vscode",
           "stargazers": 55,
-          "lastUpdated": "2026-04-13T16:59:38Z",
           "license": "MIT"
         }
       ],
@@ -5682,7 +5455,6 @@
         {
           "href": "https://github.com/quillai-network/qs_skills",
           "stargazers": 87,
-          "lastUpdated": "2026-03-30T10:10:00Z",
           "license": "MIT"
         }
       ],
@@ -5692,7 +5464,8 @@
         "static-analysis"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 2.577832323500136
+      "resource_score": 2.577832323500136,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Loop Decoder",
@@ -5704,7 +5477,6 @@
         {
           "href": "https://github.com/3loop/loop-decoder",
           "stargazers": 97,
-          "lastUpdated": "2026-08-31T18:03:11Z",
           "license": "GPL-3.0"
         }
       ],
@@ -5714,7 +5486,8 @@
       ],
       "website": "https://loop-decoder-web.vercel.app/",
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 2.5423586626602708
+      "resource_score": 2.5423586626602708,
+      "updated_at": "2026-10-10T15:45:22Z"
     },
     {
       "name": "SCV Scan",
@@ -5722,8 +5495,7 @@
       "repos": [
         {
           "href": "https://github.com/kadenzipfel/scv-scan",
-          "stargazers": 93,
-          "lastUpdated": "2026-03-11T22:36:48Z"
+          "stargazers": 93
         }
       ],
       "tags": [
@@ -5732,7 +5504,8 @@
         "static-analysis"
       ],
       "subcategory_id": "agent-skills",
-      "resource_score": 2.5377398891002545
+      "resource_score": 2.5377398891002545,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "VSCode Solidity Inspector ",
@@ -5742,7 +5515,6 @@
         {
           "href": "https://github.com/PraneshASP/vscode-solidity-inspector",
           "stargazers": 134,
-          "lastUpdated": "2025-07-28T19:58:19Z",
           "license": "MIT"
         }
       ],
@@ -5763,7 +5535,6 @@
         {
           "href": "https://github.com/buidlguidl/ctf.buidlguidl.com",
           "stargazers": 32,
-          "lastUpdated": "2025-12-26T16:48:20Z",
           "license": "MIT"
         }
       ],
@@ -5774,7 +5545,8 @@
       ],
       "website": "https://ctf.buidlguidl.com/",
       "subcategory_id": "courses-tutorials",
-      "resource_score": 2.5166228944486257
+      "resource_score": 2.5166228944486257,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Candide's Smart Account Contracts",
@@ -5786,7 +5558,6 @@
         {
           "href": "https://github.com/candidelabs/candide-contracts",
           "stargazers": 77,
-          "lastUpdated": "2026-09-28T10:33:13Z",
           "license": "GPL-3.0"
         }
       ],
@@ -5807,8 +5578,7 @@
       "repos": [
         {
           "href": "https://github.com/blockscout/mcp-server",
-          "stargazers": 34,
-          "lastUpdated": "2026-09-08T03:17:33Z"
+          "stargazers": 34
         }
       ],
       "tags": [
@@ -5818,7 +5588,8 @@
       ],
       "website": "https://www.blockscout.com",
       "subcategory_id": "mcp-servers",
-      "resource_score": 2.462510492558213
+      "resource_score": 2.462510492558213,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "executooor",
@@ -5827,7 +5598,6 @@
         {
           "href": "https://github.com/Rubilmax/executooor",
           "stargazers": 99,
-          "lastUpdated": "2026-06-26T08:56:02Z",
           "license": "MIT"
         }
       ],
@@ -5837,7 +5607,8 @@
         "transaction-optimization"
       ],
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 2.4281448667903507
+      "resource_score": 2.4281448667903507,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "AbstractionKit | Account Abstraction Library",
@@ -5849,7 +5620,6 @@
         {
           "href": "https://github.com/candidelabs/abstractionkit",
           "stargazers": 32,
-          "lastUpdated": "2026-10-06T13:54:51Z",
           "license": "MIT"
         }
       ],
@@ -5859,7 +5629,8 @@
         "account-abstraction"
       ],
       "subcategory_id": "aa-tx-orchestration",
-      "resource_score": 2.426698707477605
+      "resource_score": 2.426698707477605,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "evmc",
@@ -5868,7 +5639,6 @@
         {
           "href": "https://github.com/joshstevens19/evmc",
           "stargazers": 134,
-          "lastUpdated": "2025-04-05T14:41:12Z",
           "license": "MIT"
         }
       ],
@@ -5908,7 +5678,6 @@
         {
           "href": "https://github.com/jiffy-labs/jiffyscan-frontend",
           "stargazers": 23,
-          "lastUpdated": "2025-11-27T15:49:08Z",
           "license": "MIT"
         }
       ],
@@ -5919,7 +5688,8 @@
       ],
       "website": "https://www.jiffyscan.xyz/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 2.4095901766206382
+      "resource_score": 2.4095901766206382,
+      "updated_at": "2026-03-04T20:24:06Z"
     },
     {
       "name": "DAOhaus",
@@ -5928,7 +5698,6 @@
         {
           "href": "https://github.com/HausDAO/monorepo",
           "stargazers": 24,
-          "lastUpdated": "2026-04-30T15:51:27Z",
           "license": "MIT"
         }
       ],
@@ -5938,7 +5707,8 @@
       ],
       "website": "https://daohaus.club/",
       "subcategory_id": "governance-dao-tooling",
-      "resource_score": 2.3627046893652226
+      "resource_score": 2.3627046893652226,
+      "updated_at": "2026-10-09T23:11:34Z"
     },
     {
       "name": "Infura",
@@ -5946,8 +5716,7 @@
       "repos": [
         {
           "href": "https://github.com/INFURA/infura",
-          "stargazers": 391,
-          "lastUpdated": "2018-12-21T17:21:10Z"
+          "stargazers": 391
         }
       ],
       "tags": [
@@ -5958,7 +5727,8 @@
       ],
       "website": "https://www.infura.io/",
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 2.3453373045656365
+      "resource_score": 2.3453373045656365,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Callthis",
@@ -5968,7 +5738,6 @@
         {
           "href": "https://github.com/shazow/callthis",
           "stargazers": 49,
-          "lastUpdated": "2025-12-05T15:58:59Z",
           "license": "MIT"
         }
       ],
@@ -5988,8 +5757,7 @@
       "repos": [
         {
           "href": "https://github.com/prototypo/ethereum-eips-ontology",
-          "stargazers": 45,
-          "lastUpdated": "2025-06-23T06:48:49Z"
+          "stargazers": 45
         }
       ],
       "tags": [
@@ -6009,7 +5777,6 @@
         {
           "href": "https://github.com/Ratimon/solid-grinder",
           "stargazers": 100,
-          "lastUpdated": "2025-02-08T07:16:37Z",
           "license": "MIT"
         }
       ],
@@ -6031,7 +5798,6 @@
         {
           "href": "https://github.com/joshstevens19/ethereum-bloom-filters",
           "stargazers": 93,
-          "lastUpdated": "2025-05-02T07:29:04Z",
           "license": "MIT"
         }
       ],
@@ -6040,7 +5806,8 @@
         "event-logging"
       ],
       "subcategory_id": "core-sdks-libraries",
-      "resource_score": 2.2795262587603524
+      "resource_score": 2.2795262587603524,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "ERC-4337 Documentation",
@@ -6049,7 +5816,6 @@
         {
           "href": "https://github.com/eth-infinitism/aa-mkdocs",
           "stargazers": 23,
-          "lastUpdated": "2026-02-10T19:15:11Z",
           "license": "MIT"
         }
       ],
@@ -6069,7 +5835,6 @@
         {
           "href": "https://github.com/Rubilmax/foundry-storage-check",
           "stargazers": 101,
-          "lastUpdated": "2025-04-04T08:49:44Z",
           "isArchived": true
         }
       ],
@@ -6096,7 +5861,6 @@
         {
           "href": "https://github.com/collinsadi/diamonds",
           "stargazers": 37,
-          "lastUpdated": "2026-03-25T13:26:08Z",
           "license": "MIT"
         }
       ],
@@ -6118,7 +5882,6 @@
         {
           "href": "https://github.com/builders-garden/siwa",
           "stargazers": 38,
-          "lastUpdated": "2026-04-29T09:33:26Z",
           "license": "MIT"
         }
       ],
@@ -6134,7 +5897,8 @@
       ],
       "website": "https://siwa.id/",
       "subcategory_id": "agent-skills",
-      "resource_score": 2.254170803763863
+      "resource_score": 2.254170803763863,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Clear Wallet",
@@ -6146,7 +5910,6 @@
         {
           "href": "https://github.com/andrei0x309/clear-wallet",
           "stargazers": 32,
-          "lastUpdated": "2026-09-26T18:18:35Z",
           "license": "MIT"
         }
       ],
@@ -6168,8 +5931,7 @@
       "repos": [
         {
           "href": "https://github.com/probe-lab/hermes",
-          "stargazers": 43,
-          "lastUpdated": "2025-12-04T10:35:24Z"
+          "stargazers": 43
         }
       ],
       "tags": [
@@ -6191,13 +5953,11 @@
         {
           "href": "https://github.com/Ratimon/superfuse-wizard",
           "stargazers": 20,
-          "lastUpdated": "2025-04-12T12:17:32Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Ratimon/superfuse-forge",
           "stargazers": 19,
-          "lastUpdated": "2025-02-15T09:02:50Z",
           "license": "MIT"
         }
       ],
@@ -6222,7 +5982,6 @@
         {
           "href": "https://github.com/EIPTools/eip-tools",
           "stargazers": 22,
-          "lastUpdated": "2026-10-14T16:06:18Z",
           "license": "MIT"
         }
       ],
@@ -6234,7 +5993,8 @@
       ],
       "website": "https://eip.tools/",
       "subcategory_id": "standards-specifications",
-      "resource_score": 2.1977106213079063
+      "resource_score": 2.1977106213079063,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Upnode Deploy",
@@ -6246,49 +6006,41 @@
         {
           "href": "https://github.com/upnodedev/opstack-cli",
           "stargazers": 5,
-          "lastUpdated": "2025-05-13T14:31:21Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/upnodedev/opstack-bridge-ui-v2",
           "stargazers": 0,
-          "lastUpdated": "2024-12-03T09:11:37Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/upnodedev/evm-faucet",
           "stargazers": 0,
-          "lastUpdated": "2024-09-03T18:43:46Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/upnodedev/upnode-deploy-ui",
           "stargazers": 0,
-          "lastUpdated": "2024-10-31T10:15:16Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/upnodedev/opstack-compose",
           "stargazers": 12,
-          "lastUpdated": "2024-10-11T16:20:03Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/upnodedev/opstack-bridge-ui",
           "stargazers": 0,
-          "lastUpdated": "2024-09-03T18:46:42Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/upnodedev/opstack-bridge-indexer",
           "stargazers": 1,
-          "lastUpdated": "2024-09-03T18:49:14Z",
           "license": "Apache-2.0"
         },
         {
           "href": "https://github.com/upnodedev/opstack-bridge-indexer-v2",
           "stargazers": 0,
-          "lastUpdated": "2024-10-29T12:59:44Z",
           "license": "Apache-2.0"
         }
       ],
@@ -6310,7 +6062,6 @@
         {
           "href": "https://github.com/runtimeverification/ercx-tests",
           "stargazers": 36,
-          "lastUpdated": "2025-07-04T12:23:27Z",
           "license": "BSD-3-Clause"
         }
       ],
@@ -6331,8 +6082,7 @@
       "repos": [
         {
           "href": "https://github.com/austintgriffith/ethereum-wingman",
-          "stargazers": 39,
-          "lastUpdated": "2026-02-04T19:08:20Z"
+          "stargazers": 39
         }
       ],
       "tags": [
@@ -6354,7 +6104,6 @@
         {
           "href": "https://github.com/zsystm/solizard",
           "stargazers": 66,
-          "lastUpdated": "2025-05-08T16:22:42Z",
           "license": "MIT"
         }
       ],
@@ -6373,8 +6122,7 @@
       "repos": [
         {
           "href": "https://github.com/ethernautdao/ethernaut-cli",
-          "stargazers": 38,
-          "lastUpdated": "2025-05-26T16:51:40Z"
+          "stargazers": 38
         }
       ],
       "tags": [
@@ -6397,7 +6145,6 @@
         {
           "href": "https://github.com/derivexyz/cockpit",
           "stargazers": 18,
-          "lastUpdated": "2026-10-05T20:18:45Z",
           "license": "MIT"
         }
       ],
@@ -6420,7 +6167,6 @@
         {
           "href": "https://github.com/Brahma-fi/console-kit",
           "stargazers": 28,
-          "lastUpdated": "2025-07-22T11:08:29Z",
           "license": "MIT"
         }
       ],
@@ -6440,7 +6186,6 @@
         {
           "href": "https://github.com/namnc/circom-2-arithc",
           "stargazers": 58,
-          "lastUpdated": "2024-09-11T09:01:08Z",
           "license": "MIT"
         }
       ],
@@ -6457,8 +6202,7 @@
       "repos": [
         {
           "href": "https://github.com/redstone-finance/redstone-oracles-monorepo",
-          "stargazers": 18,
-          "lastUpdated": "2026-10-14T17:43:02Z"
+          "stargazers": 18
         }
       ],
       "tags": [
@@ -6469,7 +6213,8 @@
       ],
       "website": "https://redstone.finance/",
       "subcategory_id": "oracles-external-data",
-      "resource_score": 1.9362614664306237
+      "resource_score": 1.9362614664306237,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "SuperUI",
@@ -6480,7 +6225,6 @@
         {
           "href": "https://github.com/Nerd3Lab/superUI",
           "stargazers": 32,
-          "lastUpdated": "2025-04-08T12:39:30Z",
           "license": "MIT"
         }
       ],
@@ -6500,7 +6244,6 @@
         {
           "href": "https://github.com/polareth/evmstate",
           "stargazers": 29,
-          "lastUpdated": "2025-07-24T21:40:21Z",
           "license": "MIT"
         }
       ],
@@ -6518,7 +6261,6 @@
         {
           "href": "https://github.com/wallet-test-framework/framework",
           "stargazers": 27,
-          "lastUpdated": "2025-01-13T15:01:29Z",
           "license": "MIT"
         }
       ],
@@ -6542,7 +6284,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/perpetualpowersoftau",
           "stargazers": 30,
-          "lastUpdated": "2024-12-04T23:24:25Z",
           "license": "GPL-3.0",
           "isArchived": true
         }
@@ -6554,7 +6295,8 @@
       ],
       "website": "https://perpetualpowersoftau.com/",
       "subcategory_id": "zk-circuits-privacy",
-      "resource_score": 1.83114715697064
+      "resource_score": 1.83114715697064,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "MCP Etherscan Server",
@@ -6563,7 +6305,6 @@
         {
           "href": "https://github.com/crazyrabbitLTC/mcp-etherscan-server",
           "stargazers": 29,
-          "lastUpdated": "2024-12-31T17:32:56Z",
           "license": "MIT"
         }
       ],
@@ -6583,8 +6324,7 @@
       "repos": [
         {
           "href": "https://github.com/gelatodigital/automate-sdk",
-          "stargazers": 20,
-          "lastUpdated": "2025-04-02T13:02:53Z"
+          "stargazers": 20
         }
       ],
       "tags": [
@@ -6605,7 +6345,6 @@
         {
           "href": "https://github.com/vaariance/variance-dart",
           "stargazers": 16,
-          "lastUpdated": "2025-11-05T16:41:21Z",
           "license": "BSD-3-Clause"
         }
       ],
@@ -6617,7 +6356,8 @@
         "transaction-signing"
       ],
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 1.7501932643208378
+      "resource_score": 1.7501932643208378,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "Tally",
@@ -6625,13 +6365,11 @@
       "repos": [
         {
           "href": "https://github.com/withtally/tally-api-quickstart",
-          "stargazers": 13,
-          "lastUpdated": "2023-02-23T17:19:47Z"
+          "stargazers": 13
         },
         {
           "href": "https://github.com/withtally/Tutorial-Deploy-Governance",
-          "stargazers": 47,
-          "lastUpdated": "2023-08-25T18:01:08Z"
+          "stargazers": 47
         }
       ],
       "tags": [
@@ -6649,7 +6387,6 @@
         {
           "href": "https://github.com/slice-so/erc8128",
           "stargazers": 22,
-          "lastUpdated": "2026-03-18T14:59:14Z",
           "license": "MIT"
         }
       ],
@@ -6666,7 +6403,8 @@
       ],
       "website": "https://erc8128.org",
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 1.7128194860578523
+      "resource_score": 1.7128194860578523,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "GDWeb3",
@@ -6676,7 +6414,6 @@
         {
           "href": "https://github.com/qingfengzxr/gdscript-web3",
           "stargazers": 29,
-          "lastUpdated": "2025-03-11T12:04:27Z",
           "license": "MIT"
         }
       ],
@@ -6695,7 +6432,6 @@
         {
           "href": "https://github.com/gelatodigital/relay-sdk",
           "stargazers": 37,
-          "lastUpdated": "2026-02-13T14:47:10Z",
           "isArchived": true
         }
       ],
@@ -6717,8 +6453,7 @@
       "repos": [
         {
           "href": "https://github.com/nftscan-official/nftscan-api-js-sdk",
-          "stargazers": 18,
-          "lastUpdated": "2026-07-01T10:30:15Z"
+          "stargazers": 18
         }
       ],
       "tags": [
@@ -6726,7 +6461,8 @@
       ],
       "website": "https://www.nftscan.com/",
       "subcategory_id": "analytics-monitoring",
-      "resource_score": 1.6586515205579326
+      "resource_score": 1.6586515205579326,
+      "updated_at": "2026-07-15T02:38:04Z"
     },
     {
       "name": "viem-tracer",
@@ -6735,7 +6471,6 @@
         {
           "href": "https://github.com/Rubilmax/viem-tracer",
           "stargazers": 25,
-          "lastUpdated": "2025-11-13T13:14:02Z",
           "license": "MIT"
         }
       ],
@@ -6744,7 +6479,8 @@
         "debugging-tools"
       ],
       "subcategory_id": "debugging-inspection",
-      "resource_score": 1.6359561978773665
+      "resource_score": 1.6359561978773665,
+      "updated_at": "2026-06-05T21:32:01Z"
     },
     {
       "name": "eth-protocol-expert",
@@ -6752,8 +6488,7 @@
       "repos": [
         {
           "href": "https://github.com/raulk/eth-protocol-expert",
-          "stargazers": 22,
-          "lastUpdated": "2026-02-16T01:03:12Z"
+          "stargazers": 22
         }
       ],
       "tags": [
@@ -6770,7 +6505,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/excubiae",
           "stargazers": 10,
-          "lastUpdated": "2026-03-03T22:26:57Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -6790,7 +6524,6 @@
         {
           "href": "https://github.com/privacy-scaling-explorations/vOPRF-ID",
           "stargazers": 22,
-          "lastUpdated": "2025-04-13T10:34:16Z",
           "license": "MIT",
           "isArchived": true
         }
@@ -6810,7 +6543,6 @@
         {
           "href": "https://github.com/justaname-id/ens-mcp-server",
           "stargazers": 9,
-          "lastUpdated": "2026-01-13T09:21:58Z",
           "license": "MIT"
         }
       ],
@@ -6837,8 +6569,7 @@
       "repos": [
         {
           "href": "https://github.com/web3privacy/privacy-builder-pack",
-          "stargazers": 7,
-          "lastUpdated": "2026-05-28T21:14:27Z"
+          "stargazers": 7
         }
       ],
       "tags": [
@@ -6858,7 +6589,6 @@
         {
           "href": "https://github.com/apoorvlathey/evm-rpcs-list",
           "stargazers": 17,
-          "lastUpdated": "2026-04-23T17:56:10Z",
           "license": "MIT"
         }
       ],
@@ -6872,7 +6602,8 @@
         "chains"
       ],
       "subcategory_id": "rpc-node-infrastructure",
-      "resource_score": 1.4824300076388464
+      "resource_score": 1.4824300076388464,
+      "updated_at": "2026-09-16T22:10:24Z"
     },
     {
       "name": "Seamless Protocol",
@@ -6884,7 +6615,6 @@
         {
           "href": "https://github.com/seamless-protocol/governance",
           "stargazers": 9,
-          "lastUpdated": "2025-06-18T17:27:33Z",
           "license": "MIT"
         }
       ],
@@ -6924,7 +6654,6 @@
         {
           "href": "https://github.com/ETHCF/ethereum-mcp",
           "stargazers": 16,
-          "lastUpdated": "2026-01-28T16:26:32Z",
           "license": "MIT"
         }
       ],
@@ -6945,7 +6674,6 @@
         {
           "href": "https://github.com/0xKoda/eth-mcp",
           "stargazers": 11,
-          "lastUpdated": "2025-04-01T03:34:38Z",
           "license": "MIT"
         }
       ],
@@ -6966,7 +6694,6 @@
         {
           "href": "https://github.com/adraffy/blocksmith.js",
           "stargazers": 10,
-          "lastUpdated": "2025-12-08T22:29:40Z",
           "license": "MIT"
         }
       ],
@@ -6977,7 +6704,8 @@
         "contract-deployment"
       ],
       "subcategory_id": "fuzz-property-testing",
-      "resource_score": 1.3611904098441163
+      "resource_score": 1.3611904098441163,
+      "updated_at": "2026-10-10T17:21:57Z"
     },
     {
       "name": "etherml",
@@ -6988,7 +6716,6 @@
         {
           "href": "https://github.com/ngmisl/etherml",
           "stargazers": 6,
-          "lastUpdated": "2025-09-08T19:15:27Z",
           "license": "MIT"
         }
       ],
@@ -7010,7 +6737,6 @@
         {
           "href": "https://github.com/Aymen-Tirchi/op-stack-deployer",
           "stargazers": 19,
-          "lastUpdated": "2025-02-10T08:35:38Z",
           "license": "MIT"
         }
       ],
@@ -7030,7 +6756,6 @@
         {
           "href": "https://github.com/upnodedev/signer-proxy",
           "stargazers": 14,
-          "lastUpdated": "2025-05-02T11:55:02Z",
           "license": "MIT"
         }
       ],
@@ -7048,8 +6773,7 @@
       "repos": [
         {
           "href": "https://github.com/hackenproof-public/skills",
-          "stargazers": 15,
-          "lastUpdated": "2026-09-07T16:08:39Z"
+          "stargazers": 15
         }
       ],
       "tags": [
@@ -7068,8 +6792,7 @@
       "repos": [
         {
           "href": "https://github.com/web3privacy/cypherpunkacademy",
-          "stargazers": 8,
-          "lastUpdated": "2025-02-07T18:51:24Z"
+          "stargazers": 8
         }
       ],
       "tags": [
@@ -7086,7 +6809,6 @@
         {
           "href": "https://github.com/blocknative/gas-agent",
           "stargazers": 4,
-          "lastUpdated": "2025-11-03T21:44:16Z",
           "license": "MIT"
         }
       ],
@@ -7108,7 +6830,6 @@
         {
           "href": "https://github.com/quiknode-labs/qn-mcp",
           "stargazers": 4,
-          "lastUpdated": "2026-02-25T16:44:59Z",
           "license": "MIT"
         }
       ],
@@ -7125,7 +6846,8 @@
       ],
       "website": "https://quicknode.com/",
       "subcategory_id": "mcp-servers",
-      "resource_score": 1.0186282674505078
+      "resource_score": 1.0186282674505078,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Opstack Kit",
@@ -7137,7 +6859,6 @@
         {
           "href": "https://github.com/opstack-kit/opstack-kit",
           "stargazers": 16,
-          "lastUpdated": "2025-02-23T16:58:53Z",
           "license": "Apache-2.0"
         }
       ],
@@ -7157,8 +6878,7 @@
       "repos": [
         {
           "href": "https://github.com/wakeuplabs-io/op-ruaas",
-          "stargazers": 6,
-          "lastUpdated": "2025-05-20T14:59:52Z"
+          "stargazers": 6
         }
       ],
       "tags": [
@@ -7176,7 +6896,6 @@
         {
           "href": "https://github.com/w3hc/w3pk",
           "stargazers": 3,
-          "lastUpdated": "2026-10-13T13:15:34Z",
           "license": "GPL-3.0"
         }
       ],
@@ -7187,7 +6906,8 @@
       ],
       "website": "https://w3pk.w3hc.org/",
       "subcategory_id": "wallet-integration-auth",
-      "resource_score": 0.9042375204603205
+      "resource_score": 0.9042375204603205,
+      "updated_at": "2026-07-15T01:23:44Z"
     },
     {
       "name": "Tachyon",
@@ -7199,13 +6919,11 @@
         {
           "href": "https://github.com/RathFinance/tachyon-account",
           "stargazers": 1,
-          "lastUpdated": "2026-09-25T06:29:59Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/RathFinance/tachyon-forwarder",
           "stargazers": 2,
-          "lastUpdated": "2025-08-04T14:55:11Z",
           "license": "MIT"
         }
       ],
@@ -7225,8 +6943,7 @@
       "repos": [
         {
           "href": "https://github.com/blockflowlabs/cli-examples",
-          "stargazers": 5,
-          "lastUpdated": "2024-11-21T20:06:43Z"
+          "stargazers": 5
         }
       ],
       "packages": [
@@ -7251,7 +6968,6 @@
         {
           "href": "https://github.com/swiss-knife-xyz/forge-stack-tracer",
           "stargazers": 10,
-          "lastUpdated": "2025-02-26T22:00:35Z",
           "license": "MIT"
         }
       ],
@@ -7278,8 +6994,7 @@
       "repos": [
         {
           "href": "https://github.com/openocean-finance/OpenOceanExchangeV2",
-          "stargazers": 2,
-          "lastUpdated": "2025-11-24T02:45:16Z"
+          "stargazers": 2
         }
       ],
       "packages": [
@@ -7312,7 +7027,6 @@
         {
           "href": "https://github.com/derivexyz/op-geth",
           "stargazers": 6,
-          "lastUpdated": "2025-06-26T19:33:46Z",
           "license": "LGPL-3.0"
         }
       ],
@@ -7333,7 +7047,6 @@
         {
           "href": "https://github.com/zwergdev/rainbowkit-theme-generator",
           "stargazers": 5,
-          "lastUpdated": "2025-02-19T22:36:03Z",
           "license": "MIT"
         }
       ],
@@ -7350,8 +7063,7 @@
       "repos": [
         {
           "href": "https://github.com/tellor-io/UsingTellorLayer",
-          "stargazers": 2,
-          "lastUpdated": "2025-10-23T16:44:01Z"
+          "stargazers": 2
         }
       ],
       "tags": [
@@ -7368,8 +7080,7 @@
       "repos": [
         {
           "href": "https://github.com/b17z/ethereum-mcp",
-          "stargazers": 1,
-          "lastUpdated": "2026-03-23T19:35:42Z"
+          "stargazers": 1
         }
       ],
       "tags": [
@@ -7388,7 +7099,6 @@
         {
           "href": "https://github.com/CollinsMunene/abiexplorer",
           "stargazers": 3,
-          "lastUpdated": "2025-05-12T06:35:18Z",
           "license": "Apache-2.0"
         }
       ],
@@ -7406,8 +7116,7 @@
       "repos": [
         {
           "href": "https://github.com/solide-project/solide",
-          "stargazers": 4,
-          "lastUpdated": "2025-04-12T07:52:29Z"
+          "stargazers": 4
         }
       ],
       "tags": [
@@ -7424,8 +7133,7 @@
       "repos": [
         {
           "href": "https://github.com/austintgriffith/eth-mcp",
-          "stargazers": 2,
-          "lastUpdated": "2026-01-12T20:58:52Z"
+          "stargazers": 2
         }
       ],
       "tags": [
@@ -7447,8 +7155,7 @@
       "repos": [
         {
           "href": "https://github.com/Diffuse-fi/datafeed-cli",
-          "stargazers": 1,
-          "lastUpdated": "2025-04-30T13:22:20Z"
+          "stargazers": 1
         }
       ],
       "tags": [
@@ -7471,31 +7178,26 @@
         {
           "href": "https://github.com/bonadocs/protocol-registry",
           "stargazers": 0,
-          "lastUpdated": "2025-04-29T13:04:56Z",
           "license": "AGPL-3.0"
         },
         {
           "href": "https://github.com/bonadocs/docgen",
           "stargazers": 0,
-          "lastUpdated": "2025-04-03T17:49:44Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/bonadocs/docs",
           "stargazers": 0,
-          "lastUpdated": "2025-08-19T22:05:46Z",
           "license": "GPL-3.0"
         },
         {
           "href": "https://github.com/bonadocs/cli",
           "stargazers": 0,
-          "lastUpdated": "2025-04-03T17:53:33Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/bonadocs/protocol-registry-web",
-          "stargazers": 0,
-          "lastUpdated": "2025-04-03T17:55:20Z"
+          "stargazers": 0
         }
       ],
       "packages": [
@@ -7538,8 +7240,7 @@
       "repos": [
         {
           "href": "https://github.com/zhiqiangxu/opup",
-          "stargazers": 0,
-          "lastUpdated": "2025-11-13T10:10:55Z"
+          "stargazers": 0
         }
       ],
       "tags": [
@@ -7558,8 +7259,7 @@
       "repos": [
         {
           "href": "https://github.com/openfort-xyz/mobile-wallet-protocol-unity-client",
-          "stargazers": 1,
-          "lastUpdated": "2025-03-25T13:01:38Z"
+          "stargazers": 1
         }
       ],
       "tags": [
@@ -7596,7 +7296,6 @@
         {
           "href": "https://github.com/meldsun0/utp",
           "stargazers": 0,
-          "lastUpdated": "2025-06-14T16:08:17Z",
           "license": "Apache-2.0"
         }
       ],
@@ -7617,8 +7316,7 @@
       "repos": [
         {
           "href": "https://github.com/router-protocol/router-contracts",
-          "stargazers": 0,
-          "lastUpdated": "2024-10-17T04:25:33Z"
+          "stargazers": 0
         }
       ],
       "packages": [
@@ -7651,7 +7349,6 @@
         {
           "href": "https://github.com/KENILSHAHH/superSDK",
           "stargazers": 0,
-          "lastUpdated": "2025-07-10T10:31:15Z",
           "license": "MIT"
         }
       ],
@@ -7673,31 +7370,26 @@
         {
           "href": "https://github.com/Opti-domains/evmgateway",
           "stargazers": 0,
-          "lastUpdated": "2025-01-07T16:14:06Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Opti-domains/ens-diamond-resolver-v1",
           "stargazers": 0,
-          "lastUpdated": "2024-05-28T02:46:59Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Opti-domains/dispute-game-lookup",
           "stargazers": 0,
-          "lastUpdated": "2025-02-16T18:57:17Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Opti-domains/optidomains-ens-contracts",
           "stargazers": 0,
-          "lastUpdated": "2024-05-28T02:37:33Z",
           "license": "MIT"
         },
         {
           "href": "https://github.com/Opti-domains/modular-ens-contracts",
           "stargazers": 2,
-          "lastUpdated": "2024-05-28T04:03:40Z",
           "license": "MIT"
         }
       ],
