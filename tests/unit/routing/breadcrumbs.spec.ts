@@ -3,7 +3,7 @@ import path from "path"
 
 import { expect, test } from "@playwright/test"
 
-import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
+import { getBreadcrumbTrail, toBreadcrumbPath } from "@/lib/utils/breadcrumbs"
 
 import { BREADCRUMB_HUBS, BREADCRUMB_PARENTS } from "@/data/breadcrumbs"
 
@@ -116,5 +116,41 @@ test.describe("getBreadcrumbTrail", () => {
       })
     }
     expect([...missing].sort()).toEqual([])
+  })
+
+  test("JSON-LD trails use the visible crumb slug", () => {
+    const root = path.join(process.cwd(), "app/[locale]")
+    // Static prefix of a string or template literal, up to the first `${`
+    const prefix = (literal: string) =>
+      toBreadcrumbPath(literal.slice(1, -1).split("${")[0])
+    const mismatched: string[] = []
+    for (const page of appPaths()) {
+      const jsonLdFile = path.join(root, page, "page-jsonld.tsx")
+      if (!fs.existsSync(jsonLdFile)) continue
+      const jsonLd = fs.readFileSync(jsonLdFile, "utf8")
+      expect(jsonLd, page).not.toContain('"@type": "BreadcrumbList"')
+      const called = jsonLd.match(
+        /getBreadcrumbListJsonLd\(\s*locale,\s*("[^"]*"|`[^`]*`)/
+      )?.[1]
+      if (!called) continue
+
+      const source = fs.readFileSync(path.join(root, page, "page.tsx"), "utf8")
+      const constants = Object.fromEntries(
+        [...source.matchAll(/const (\w+) = ("[^"]*")/g)].map((m) => [
+          m[1],
+          m[2],
+        ])
+      )
+      const visible = [
+        ...source.matchAll(/slug(?:=\{?|: )("[^"]*"|`[^`]*`|[A-Z_]+)/g),
+      ]
+        .map((m) => constants[m[1]] ?? m[1])
+        .filter((literal) => /^["`]/.test(literal))
+        .map(prefix)
+      // Hub pages render no crumbs of their own
+      if (visible.length && !visible.includes(prefix(called)))
+        mismatched.push(`${page}: ${prefix(called)} vs ${visible.join(", ")}`)
+    }
+    expect(mismatched).toEqual([])
   })
 })
