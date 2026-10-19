@@ -1601,7 +1601,7 @@ export interface CatalogItem {
   description?: string
   primaryLink?: { href: string; label: string }
   socialLinks: CatalogItemLink[]
-  infoRows: { label: string; value: ReactNode }[]
+  infoRows: { label: string; value: ReactNode; tooltip?: string }[]
   /** Ancestors only; the item's own name closes the trail. */
   breadcrumbs: { label: string; href: string }[]
   next?: { name: string; href: string }

@@ -335,6 +335,7 @@ export function toolToCatalogItem(
       lastUpdated && {
         label: t("page-developers-tools-info-last-updated"),
         value: lastUpdated,
+        tooltip: t("page-developers-tools-info-last-updated-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [
