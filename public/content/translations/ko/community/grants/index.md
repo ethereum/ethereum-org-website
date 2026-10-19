@@ -10,7 +10,7 @@ lang: ko
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원(Founders Support)으로 이동하세요](/founders/)</div>
+<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원(Founders Support)으로 이동하세요](/organizations/founders/)</div>
 </Alert>
 
 ## 광범위한 이더리움 생태계 {#broad-ethereum-ecosystem}

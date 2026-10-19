@@ -49,7 +49,7 @@ published: 2021-03-31
 
 ## படி 5: உங்கள் இருப்பைச் சரிபார்க்கவும் {#step-5}
 
-நமது இருப்பு உள்ளதா என்பதை மீண்டும் சரிபார்க்க, [Alchemy-இன் கம்போஸர் கருவியைப்](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) பயன்படுத்தி ஒரு [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) கோரிக்கையை அனுப்புவோம். இது நமது பணப்பையில் உள்ள ETH அளவை வழங்கும். உங்கள் மெட்டாமேஸ்க் கணக்கு முகவரியை உள்ளிட்டு “Send Request” என்பதைக் கிளிக் செய்த பிறகு, இது போன்ற ஒரு பதிலைக் காண வேண்டும்:
+நமது இருப்பு உள்ளதா என்பதை மீண்டும் சரிபார்க்க, [Alchemy-இன் கம்போஸர் கருவியைப்](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) பயன்படுத்தி ஒரு [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) கோரிக்கையை அனுப்புவோம். இது நமது பணப்பையில் உள்ள ETH அளவை வழங்கும். உங்கள் மெட்டாமேஸ்க் கணக்கு முகவரியை உள்ளிட்டு “Send Request” என்பதைக் கிளிக் செய்த பிறகு, இது போன்ற ஒரு பதிலைக் காண வேண்டும்:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

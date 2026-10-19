@@ -710,8 +710,7 @@ Kwa ujumla, wakati uchakataji unaweza kufanywa ama katika TypeScript au Zokrates
 
 Hata hivyo, bado [tunalainisha ramani katika Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), ambapo tungeweza kuifanya katika TypeScript. Sababu ni kwamba chaguzi nyingine ni, kwa maoni yangu, mbaya zaidi.
 
-- Kutoa safu ya mwelekeo mmoja ya boolean kwa msimbo wa Zokrates, na kutumia usemi kama vile `x*(height+2)
-+y` kupata ramani ya mwelekeo mbili. Hii ingefanya [msimbo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) kuwa mgumu zaidi kiasi, kwa hivyo niliamua faida ya utendaji haifai kwa mafunzo.
+- Kutoa safu ya mwelekeo mmoja ya boolean kwa msimbo wa Zokrates, na kutumia usemi kama vile `x*(height+2)+y` kupata ramani ya mwelekeo mbili. Hii ingefanya [msimbo](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) kuwa mgumu zaidi kiasi, kwa hivyo niliamua faida ya utendaji haifai kwa mafunzo.
 
 - Kutuma Zokrates safu ya mwelekeo mmoja na safu ya mwelekeo mbili. Hata hivyo, suluhisho hili halitupi faida yoyote. Msimbo wa Zokrates ungelazimika kuthibitisha kwamba safu ya mwelekeo mmoja inayotolewa kweli ni uwakilishi sahihi wa safu ya mwelekeo mbili. Kwa hivyo hakungekuwa na faida yoyote ya utendaji.
 
