@@ -9,7 +9,6 @@ export const BREADCRUMB_HUBS = [
   "/community/",
   "/contributing/",
   "/developers/",
-  "/guides/",
   "/learn/",
   "/organizations/",
   "/roadmap/",
@@ -26,6 +25,9 @@ export const BREADCRUMB_HUBS = [
 export const BREADCRUMB_PARENTS: Record<string, string> = {
   // About
   "/assets/": "/about/",
+  "/cookie-policy/": "/about/",
+  "/privacy-policy/": "/about/",
+  "/terms-of-use/": "/about/",
   "/foundation/": "/about/",
   "/bug-bounty/": "/foundation/",
 
@@ -53,13 +55,14 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   "/what-is-ether/": "/learn/",
   "/what-is-ethereum/": "/learn/",
   "/what-is-the-ethereum-network/": "/learn/",
-  "/whitepaper/": "/learn/",
   "/zero-knowledge-proofs/": "/learn/",
+  "/whitepaper/": "/ethereum-history-founder-and-ownership/",
   "/wrapped-eth/": "/what-is-ether/",
 
   // Start
   "/apps/": "/start/",
   "/get-eth/": "/start/",
+  "/guides/": "/start/",
   "/wallets/": "/start/",
 
   // Roadmap
@@ -110,8 +113,8 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
   "/contributing/content-resources/": "breadcrumb-adding-content-resources",
   "/contributing/quizzes/": "breadcrumb-adding-quizzes",
-  "/developers/": "breadcrumb-builders",
   "/eips/": "breadcrumb-eip",
+  "/ethereum-history-founder-and-ownership/": "breadcrumb-history",
   "/layer-2/learn/": "breadcrumb-what-is-layer-2",
   "/reports/trillion-dollar-security/":
     "breadcrumb-security-challenges-overview",
