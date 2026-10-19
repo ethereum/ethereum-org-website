@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their diffs.
+# Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their metadata and heads.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
 # branch of this repo, and never reviewed (no "First-pass review" comment). Oldest first,
@@ -8,7 +8,7 @@
 # Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
-#   pr-<n>/pr-diff.patch   diff, capped at 3000 lines with a TRUNCATED marker line
+#   pr-<n>/lanes.json      review lanes and risk floor (pr-lanes.sh)
 # Also fetches each PR's head as the local branch pr-<n>-head (never checked out).
 set -euo pipefail
 
@@ -43,11 +43,11 @@ query($owner: String!, $name: String!, $endCursor: String) {
 
 for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   mkdir -p "$OUT_DIR/pr-$n"
-  { gh pr diff "$n" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > "$OUT_DIR/pr-$n/pr-diff.patch"
-  [ -s "$OUT_DIR/pr-$n/pr-diff.patch" ] || echo "TRUNCATED: diff unavailable (too large for the API)" > "$OUT_DIR/pr-$n/pr-diff.patch"
   gh pr view "$n" --repo "$REPO" \
-    --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
+    --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
+  gh api --paginate "repos/$REPO/pulls/$n/files?per_page=100" --jq '.[].filename' \
+    | bash "$(dirname "$0")/pr-lanes.sh" > "$OUT_DIR/pr-$n/lanes.json"
   git fetch -q --no-tags origin "pull/$n/head:pr-$n-head"
 done
 

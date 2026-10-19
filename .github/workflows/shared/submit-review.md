@@ -18,18 +18,8 @@ safe-outputs:
           description: "Reviewed head commit: headRefOid from pr-meta.json"
           required: true
           type: string
-        lane:
-          description: "Lane picked from the changed paths"
-          required: true
-          type: choice
-          options: ["code", "tooling", "data", "content", "translation", "deps-docs"]
-        kind:
-          description: "What kind of change this is"
-          required: true
-          type: choice
-          options: ["typo", "content-update", "translation", "data-update", "bug-fix", "dependencies", "tooling", "feature-ui", "new-listing", "new-page", "spam"]
         risk:
-          description: "Impact if the change is wrong: R0 none, R1 contained, R2 can break pages or the build, R3 product, policy or security"
+          description: "Highest impact if anything in the PR is wrong: R0 no behavior or meaning change, R1 small contained user-visible change, R2 changes what users see or do or can break the build, R3 product, policy or security decision"
           required: true
           type: choice
           options: ["R0", "R1", "R2", "R3"]
@@ -46,10 +36,16 @@ safe-outputs:
           required: true
           type: string
         unreviewed:
-          description: "Files not reviewed because the diff was truncated, comma-separated, or empty"
+          description: "Files not reviewed, comma-separated, or empty"
           required: false
           type: string
       steps:
+        - uses: actions/checkout@v6
+          with:
+            ref: ${{ github.event.pull_request.base.sha || github.sha }}
+            sparse-checkout: .github/scripts/pr-lanes.sh
+            sparse-checkout-cone-mode: false
+            persist-credentials: false
         - name: Mint app token
           id: app-token
           uses: actions/create-github-app-token@v3
@@ -80,8 +76,10 @@ safe-outputs:
                 echo "::error::PR #$pr was not selected for this run"; failed=1; continue
               fi
 
+              paths=$(gh api --paginate "repos/$REPO/pulls/$pr/files?per_page=100" --jq '.[].filename' | bash .github/scripts/pr-lanes.sh)
+
               # Untrusted strings: cap length and defuse HTML comments so nothing can fake the data line.
-              review=$(jq -c --arg sha "${EVENT_SHA:-}" --arg run "$RUN_URL" '
+              review=$(jq -c --arg sha "${EVENT_SHA:-}" --arg run "$RUN_URL" --argjson paths "$paths" '
                 def clean: tostring | .[0:500] | gsub("<!--"; "&lt;!--") | gsub("-->"; "--&gt;");
                 (.findings | fromjson) as $f
                 | if ($f | type) != "array" then error("findings is not an array") else . end
@@ -92,7 +90,10 @@ safe-outputs:
                   ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity]) | .[0:25]) as $findings
                 | {v: 1, pr: (.pr | tonumber),
                    sha: (if $sha != "" then $sha else (.sha | if test("^[0-9a-f]{40}$") then . else error("bad sha") end) end),
-                   lane, type: .kind, risk, reason: (.reason | clean), summary: (.summary | clean),
+                   lanes: $paths.lanes,
+                   risk: ([.risk, $paths.floor] | max),
+                   reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
+                   summary: (.summary | clean),
                    findings: $findings,
                    counts: {blocking: ($findings | map(select(.severity == "blocking")) | length),
                             should_fix: ($findings | map(select(.severity == "should fix")) | length),
@@ -109,7 +110,7 @@ safe-outputs:
                     | "\(.key + 1). **\($x.severity)** `\($x.file)\(if $x.line then ":\($x.line)" else "" end)` — \($x.title)"
                       + (if $x.detail != "" then ". \($x.detail)" else "" end)
                       + (if $x.fix != "" then " **Fix:** \($x.fix)" else "" end)] | join("\n")) else "" end)
-                + (if (.unreviewed | length) > 0 then "\n\n_Diff truncated; not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
+                + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
                 + "\n\n<!-- ethorg-review: " + tojson + " -->"
               ' <<<"$review")
 

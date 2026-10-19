@@ -25,6 +25,7 @@ permissions:
 checkout:
   repository: ${{ github.repository }}
   ref: ${{ github.event.pull_request.base.sha }}
+  fetch-depth: 0
 engine:
   id: claude
   model: claude-opus-5-5
@@ -71,7 +72,7 @@ safe-outputs:
       id: claude
       model: claude-sonnet-5-5
 pre-agent-steps:
-  - name: Pre-fetch PR diff and metadata
+  - name: Fetch PR head, metadata and lanes
     env:
       GH_TOKEN: ${{ github.token }}
       PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -79,11 +80,11 @@ pre-agent-steps:
     run: |
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
-      { gh pr diff "$PR_NUMBER" --repo "$REPO" || true; } | awk 'NR <= 3000; END { if (NR > 3000) print "TRUNCATED: showing 3000 of " NR " lines" }' > /tmp/gh-aw/agent/pr-diff.patch
-      [ -s /tmp/gh-aw/agent/pr-diff.patch ] || echo "TRUNCATED: diff unavailable (too large for the API)" > /tmp/gh-aw/agent/pr-diff.patch
       gh pr view "$PR_NUMBER" --repo "$REPO" \
-        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,files,labels \
+        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
+      gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files?per_page=100" --jq '.[].filename' \
+        | bash .github/scripts/pr-lanes.sh > /tmp/gh-aw/agent/lanes.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:
   - shared/pr-review-core.md
