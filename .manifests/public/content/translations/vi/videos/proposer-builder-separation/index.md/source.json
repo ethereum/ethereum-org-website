@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/proposer-builder-separation/index.md",
-  "generatedAt": "2026-04-29T06:08:42.292Z",
-  "rootHash": "0569c8d8725a",
+  "generatedAt": "2026-09-30T19:15:50.175Z",
+  "rootHash": "25d7c8eb8120",
   "tree": {
-    "contentHash": "0aac7f016f65",
-    "anchorHash": "0db998f5b000",
+    "contentHash": "0613b2fc4c05",
+    "anchorHash": "1196b53f774a",
     "children": {
       "frontmatter:title": {
         "contentHash": "925d65ec7e47",
@@ -36,27 +36,14 @@
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "ee97082f7f21",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "df571735a772",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "3de1580490d2"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "2b9bbcb8686a"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "ec8eb7a9ebcc"
+            "anchorHash": "6a4444a31955"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1",
-          "2"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -300,5 +287,5 @@
       "questions-and-closing-2703"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

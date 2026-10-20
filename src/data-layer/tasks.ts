@@ -13,65 +13,39 @@ import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
-import { fetchCalendarEvents } from "./fetchers/fetchCalendarEvents"
+import { fetchCollectibles } from "./fetchers/fetchCollectibles"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
+import { fetchDefiTvlShare } from "./fetchers/fetchDefiTvlShare"
+import { fetchDexVolume } from "./fetchers/fetchDexVolume"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
 import { fetchGasPrice } from "./fetchers/fetchGasPrice"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
-import { fetchGitHistory } from "./fetchers/fetchGitHistory"
 import { fetchGitHubContributors } from "./fetchers/fetchGitHubContributors"
-import { fetchGithubRepoData } from "./fetchers/fetchGithubRepoData"
 import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
-import { fetchAttestantPosts } from "./fetchers/fetchPosts"
+import { fetchL2beatActivity } from "./fetchers/fetchL2beatActivity"
+import { fetchMeetupImages } from "./fetchers/fetchMeetupImages"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
-import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
-import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
+import { fetchTotalValueSecured } from "./fetchers/fetchTotalValueSecured"
 import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
-import { set } from "./storage"
+import { KEYS, set } from "./storage"
 
-export const KEYS = {
-  APPS: "fetch-apps",
-  CALENDAR_EVENTS: "fetch-calendar-events",
-  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
-  COMMUNITY_PICKS: "fetch-community-picks",
-  DEVELOPER_TOOLS: "fetch-developer-tools",
-  GFIS: "fetch-gfis",
-  GIT_HISTORY: "fetch-git-history",
-  GROW_THE_PIE: "fetch-grow-the-pie",
-  GROW_THE_PIE_BLOCKSPACE: "fetch-grow-the-pie-blockspace",
-  GROW_THE_PIE_MASTER: "fetch-grow-the-pie-master",
-  L2BEAT: "fetch-l2beat",
-  POSTS: "fetch-posts",
-  RSS: "fetch-rss",
-  GITHUB_REPO_DATA: "fetch-github-repo-data",
-  EVENTS: "fetch-events",
-  BLOB_STATS: "fetch-blob-stats",
-  ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
-  ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
-  ETH_PRICE: "fetch-eth-price",
-  GAS_PRICE: "fetch-gas-price",
-  STAKED_PERCENTAGE: "fetch-staked-percentage",
-  TOTAL_ETH_STAKED: "fetch-total-eth-staked",
-  TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
-  STABLECOINS_DATA: "fetch-stablecoins-data",
-  ACCOUNT_HOLDERS: "fetch-account-holders",
-  TRANSLATION_GLOSSARY: "fetch-translation-glossary",
-  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
-  QUIZ_STATS: "fetch-quiz-stats",
-} as const
+// Per-task overrides for the config-wide defaults in trigger.config.ts
+interface TaskOverrides {
+  maxDuration?: number
+}
 
-// Task definition: storage key + fetch function
-type TaskDef = [string, () => Promise<unknown>]
+// Task definition: storage key + fetch function + optional runtime overrides
+type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
@@ -79,20 +53,23 @@ const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.BLOB_STATS, fetchBlobStats],
-  [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
+  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
-  [KEYS.GIT_HISTORY, fetchGitHistory],
   [KEYS.GROW_THE_PIE, fetchGrowThePie],
   [KEYS.GROW_THE_PIE_BLOCKSPACE, fetchGrowThePieBlockspace],
   [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
   [KEYS.L2BEAT, fetchL2beat],
-  [KEYS.POSTS, fetchAttestantPosts],
+  [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
+  [KEYS.DEFI_TVL_SHARE, fetchDefiTvlShare],
+  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
+  [KEYS.DEX_VOLUME, fetchDexVolume],
+  [KEYS.TOTAL_VALUE_SECURED, fetchTotalValueSecured],
+  [KEYS.MEETUP_IMAGES, fetchMeetupImages],
   [KEYS.RSS, fetchRSS],
-  [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
-  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
-  [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
+  // Enrichment is paced by third-party rate limits: needs wall clock, not a bigger machine
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools, { maxDuration: 900 }],
   [KEYS.STAKED_PERCENTAGE, fetchStakedPercentage],
   [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
   [KEYS.QUIZ_STATS, fetchQuizStats],
@@ -100,21 +77,20 @@ const DAILY: TaskDef[] = [
 
 const HOURLY: TaskDef[] = [
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
-  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
   [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
-  [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
 ]
 
 // ─── Dynamic task creation ───
-function createDataTask([key, fetchFn]: TaskDef) {
+function createDataTask([key, fetchFn, overrides]: TaskDef) {
   return task({
     id: key,
     retry: {
       maxAttempts: 2,
     },
+    ...overrides,
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })
     },

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/how-to-make-a-guerilla-l2/index.md",
-  "generatedAt": "2026-04-29T05:46:44.207Z",
-  "rootHash": "cbfcfbed222d",
+  "generatedAt": "2026-09-30T18:41:08.713Z",
+  "rootHash": "c5ee4ebbb64c",
   "tree": {
-    "contentHash": "15a283f6ea8f",
-    "anchorHash": "cf3313693cde",
+    "contentHash": "a05de62fde4f",
+    "anchorHash": "774a0e81ac65",
     "children": {
       "frontmatter:title": {
         "contentHash": "8e5a72c13dce",
@@ -36,31 +36,21 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "c9ebde75175e",
+        "contentHash": "f5818652a990",
+        "anchorHash": "7bf3bcb23d65",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "38344bba4684"
+            "anchorHash": "a4cc6bc01a92"
           },
           "1": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "3b3e1a7dae17"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "a4cc6bc01a92"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "6bdb18f83935"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2",
-          "3"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -205,5 +195,5 @@
       "anarchy-freedom-and-building-tooling-953"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

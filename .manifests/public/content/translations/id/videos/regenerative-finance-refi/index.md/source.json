@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/regenerative-finance-refi/index.md",
-  "generatedAt": "2026-04-29T00:07:13.926Z",
-  "rootHash": "d98e0eab787b",
+  "generatedAt": "2026-09-30T19:15:53.477Z",
+  "rootHash": "7dfba045d342",
   "tree": {
-    "contentHash": "ff7b42f3a98c",
-    "anchorHash": "cc20a9b078df",
+    "contentHash": "ecc6fde690ce",
+    "anchorHash": "3152fac57639",
     "children": {
       "frontmatter:title": {
         "contentHash": "4095a6872334",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "79ce6bfdfe97",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "c192a6bdc603"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "43029a964b51"
+            "anchorHash": "2290d7d70dea"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -215,5 +207,5 @@
       "the-outlook-for-refi-515"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

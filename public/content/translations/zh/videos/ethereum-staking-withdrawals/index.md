@@ -8,8 +8,6 @@ duration: "0:11:39"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "staking"
-  - "withdrawals"
 format: explainer
 author: "芬尼马蒂克斯"
 breadcrumb: "质押提款"

@@ -55,7 +55,7 @@ incomplete: true
 
 ## Python প্রজেক্ট এবং টুল {#python-projects-and-tools}
 
-### অ্যাক্টিভ:
+### অ্যাক্টিভ: {#active}
 - [Web3.py](https://github.com/ethereum/web3.py) - _ইথেরিয়ামের সাথে ইন্টারঅ্যাক্ট করার জন্য Python লাইব্রেরি_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVM-এর জন্য পাইথনিক (Pythonic) স্মার্ট কন্ট্রাক্ট ল্যাঙ্গুয়েজ_
 - [Titanoboa](https://github.com/vyperlang/titanoboa/) - _Vyper-এর নিজস্ব টেস্টিং টুল; মেইননেট ফোর্কিং, ডিবাগিং এবং সুন্দর ট্রেসব্যাকসহ একটি ইন্টারপ্রেটার_

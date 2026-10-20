@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/blockchain-eth-build/index.md",
-  "generatedAt": "2026-04-29T04:48:08.055Z",
-  "rootHash": "4bd0d0d3f9e7",
+  "generatedAt": "2026-09-30T18:34:22.957Z",
+  "rootHash": "6a36b67f28ec",
   "tree": {
-    "contentHash": "c0ce56f46b9e",
-    "anchorHash": "7f4894054484",
+    "contentHash": "0f83544904b7",
+    "anchorHash": "33e8e67810a2",
     "children": {
       "frontmatter:title": {
         "contentHash": "df8223903c0d",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "cd99249b16eb",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "2a6d20857db7"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "ef7797e13d3a"
+            "anchorHash": "3ddeb596fa81"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -355,5 +347,5 @@
       "summary-2200"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

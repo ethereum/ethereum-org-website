@@ -8,9 +8,6 @@ duration: "0:50:15"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "dao"
-  - "decentralization"
-  - "social"
 format: interview
 author: "எத்போல்டர்"
 breadcrumb: "எத்திரியம் உள்ளூர்வாதம்"

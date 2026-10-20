@@ -184,16 +184,31 @@ module.exports = (phase) => {
       ]
     },
     async redirects() {
-      // Build a strict locale matcher from configured locales
-      const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
+      // Build a strict locale matcher from configured locales, minus the
+      // default locale, which is served unprefixed
+      const DEFAULT_LOCALE = "en"
+      const LOCALE_ALTS = i18nConfigJson
+        .map(({ code }) => code)
+        .filter((code) => code !== DEFAULT_LOCALE)
+        .join("|") // e.g. "es|fr|..."
 
-      // Helper function to generate both English (no prefix) and locale-prefixed redirects
+      // Helper function to generate English (no prefix) and locale-prefixed redirects
       const createRedirect = (source, destination, permanent = true) => {
         // For external URLs, don't modify the destination
         const isExternal = destination.startsWith("http")
 
         // English / default-locale: no prefix in source or destination
         const defaultRedirect = { source, destination, permanent }
+
+        // On Netlify the i18n proxy runs first and rewrites `/eth/` to
+        // `/en/eth/` before these rules are matched. Send the prefixed form
+        // straight to the unprefixed destination; mapping it to
+        // `/en/<destination>` adds a hop for the proxy to strip `/en/` again.
+        const defaultLocaleRedirect = {
+          source: `/${DEFAULT_LOCALE}${source}`,
+          destination,
+          permanent,
+        }
 
         // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
         const localeRedirect = {
@@ -202,7 +217,7 @@ module.exports = (phase) => {
           permanent,
         }
 
-        return [defaultRedirect, localeRedirect]
+        return [defaultRedirect, defaultLocaleRedirect, localeRedirect]
       }
 
       return [
@@ -278,8 +293,9 @@ module.exports = (phase) => {
           // Dev-only files that get traced from the package root but are never
           // read by the SSR handler at runtime. Keep dir excludes anchored with
           // "/**" -- Turbopack matches these globs as substrings during trace
-          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
-          // and drops it, 502ing ISR pages that use search.
+          // pruning, so a bare "docs" also matches the search modal's SSR chunk
+          // (the package name contains "docsearch") and drops it, 502ing ISR
+          // pages that use search.
           "tests/**",
           "docs/**",
           "README.md",

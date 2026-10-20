@@ -101,11 +101,11 @@ En un esquema de disponibilidad de datos con garantía, a cualquier persona se l
 
 ## Volitions y Validium {#volitions-and-validium}
 
-Los Validium ofrecen muchos beneficios, pero conllevan concesiones (principalmente, la disponibilidad de datos). Pero, como ocurre con muchas soluciones de escalabilidad, los Validium son adecuados para casos de uso específicos, razón por la cual se crearon los volitions.
+Los Validium ofrecen muchos beneficios, pero conllevan concesiones (la más notable, la disponibilidad de datos). Pero, como ocurre con muchas soluciones de escalabilidad, los Validium se adaptan a casos de uso específicos, razón por la cual se crearon los Volitions.
 
-Los volitions combinan un ZK-rollup y una cadena Validium, y permiten a los usuarios cambiar entre las dos soluciones de escalabilidad. Con los volitions, los usuarios pueden aprovechar la disponibilidad de datos fuera de la cadena de Validium para ciertas transacciones, al tiempo que conservan la libertad de cambiar a una solución de disponibilidad de datos en cadena (ZK-rollup) si es necesario. Básicamente, esto brinda a los usuarios la libertad de elegir las concesiones según lo dicten sus circunstancias particulares.
+Los Volitions combinan un ZK-rollup y una cadena Validium, y permiten a los usuarios cambiar entre las dos soluciones de escalabilidad. Con los Volitions, los usuarios pueden aprovechar la disponibilidad de datos fuera de la cadena de Validium para ciertas transacciones, al tiempo que conservan la libertad de cambiar a una solución de disponibilidad de datos en cadena (ZK-rollup) si es necesario. Básicamente, esto brinda a los usuarios la libertad de elegir las concesiones según lo dicten sus circunstancias únicas.
 
-Un intercambio descentralizado (DEX) puede preferir utilizar la infraestructura escalable y privada de un Validium para operaciones de alto valor. También puede utilizar un ZK-rollup para los usuarios que deseen las mayores garantías de seguridad y la ausencia de necesidad de confianza de un ZK-rollup.
+Un exchange descentralizado (DEX) puede preferir la escalabilidad de un Validium y su capacidad para restringir el acceso público a los datos de las transacciones para operaciones de alto valor. Mantener los datos fuera de la cadena limita quién puede verlos, pero por sí solo no hace que las transacciones sean criptográficamente privadas: la confidencialidad depende de los controles de acceso y los mecanismos de privacidad del despliegue, y los datos permanecen visibles para el operador y para quien los posea. Un DEX también puede usar un ZK-rollup para los usuarios que desean las mayores garantías de seguridad y la ausencia de necesidad de confianza de un ZK-rollup.
 
 ## Los Validium y la compatibilidad con la EVM {#validiums-and-evm-compatibility}
 

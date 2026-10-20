@@ -1,12 +1,98 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-bug-bounty.json",
-  "generatedAt": "2026-07-22T22:34:28.588Z",
-  "rootHash": "700e8f79366c",
+  "generatedAt": "2026-09-30T18:07:49.069Z",
+  "rootHash": "5868fd53479c",
   "tree": {
-    "contentHash": "0e74b35650ae",
-    "anchorHash": "8180f30e072a",
+    "contentHash": "17d760889267",
+    "anchorHash": "721e24bc6176",
     "children": {
+      "fcr-scope": {
+        "contentHash": "a0146c54c371",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7ec4071bfb9a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "glamsterdam-banner": {
+        "contentHash": "15ec6a255904",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "3e53f1fd6780",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "glamsterdam-title": {
+        "contentHash": "d63c5a8da2dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-opening": {
+        "contentHash": "fa51a5d560f1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "96309491c701",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "glamsterdam-scope": {
+        "contentHash": "da7ee3742957",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-specs": {
+        "contentHash": "3627e2bdcf82",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "77ac11696070",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "glamsterdam-rewards-title": {
+        "contentHash": "0a65f18b2ce9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rewards-initial": {
+        "contentHash": "fbabbb5f72a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rewards-sepolia": {
+        "contentHash": "b1c6cd43daae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rewards-hoodi": {
+        "contentHash": "656520015157",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rewards-submission": {
+        "contentHash": "0e21765638dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rewards-low": {
+        "contentHash": "5650bf768afb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-timing": {
+        "contentHash": "4e4fc70c6f13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam-rules": {
+        "contentHash": "28243f9e472f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f11a8de7ab8c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
       "page-upgrades-bug-bounty-annotated-specs": {
         "contentHash": "6f7bffb82029",
         "anchorHash": "e3b0c44298fc"
@@ -24,7 +110,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-client-bugs-desc-2": {
-        "contentHash": "d5567597f375",
+        "contentHash": "d724b87aaa86",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-clients": {
@@ -52,7 +138,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-misc-bugs-desc-2": {
-        "contentHash": "a6ebdb6ec1ea",
+        "contentHash": "dabd089152a5",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-deposit-bugs": {
@@ -76,7 +162,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-dependency-bugs-desc": {
-        "contentHash": "ca579192a91d",
+        "contentHash": "8c4d287da2dd",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-docking": {
@@ -510,7 +596,7 @@
         }
       },
       "bug-bounty-faq-q2-title": {
-        "contentHash": "681cc48c4dd7",
+        "contentHash": "c84c7195cd9f",
         "anchorHash": "e3b0c44298fc"
       },
       "bug-bounty-faq-q2-contentPreview": {
@@ -624,7 +710,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-severity-qualifications-desc": {
-        "contentHash": "b24667f03cc7",
+        "contentHash": "44eb5559f4e0",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-severity-low-title": {
@@ -788,7 +874,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-not-included-li-1": {
-        "contentHash": "54904a73a84e",
+        "contentHash": "093d9318a6f8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-not-included-li-2": {
@@ -829,6 +915,20 @@
       }
     },
     "childrenOrder": [
+      "fcr-scope",
+      "glamsterdam-banner",
+      "glamsterdam-title",
+      "glamsterdam-opening",
+      "glamsterdam-scope",
+      "glamsterdam-specs",
+      "glamsterdam-rewards-title",
+      "glamsterdam-rewards-initial",
+      "glamsterdam-rewards-sepolia",
+      "glamsterdam-rewards-hoodi",
+      "glamsterdam-rewards-submission",
+      "glamsterdam-rewards-low",
+      "glamsterdam-timing",
+      "glamsterdam-rules",
       "page-upgrades-bug-bounty-annotated-specs",
       "page-upgrades-bug-bounty-annotations",
       "page-upgrades-bug-bounty-client-bugs",
@@ -991,5 +1091,5 @@
       "page-upgrades-bug-bounty-not-included-li-10"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

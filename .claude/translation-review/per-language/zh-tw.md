@@ -106,3 +106,53 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `測試設備` (equipment) for "test fixtures"; these are JSON test vectors.
 - `適度的硬體` parses as "an appropriate amount of hardware" rather than "low-end hardware".
 - Zero Simplified leakage; neither `智慧合約` nor the #19115 `礦池` PoW/PoS inversion recurred.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh-tw/page-apps.json`. 8 critical, 10 warnings. Brand 9/10 | Technical 7/10 | Semantic 8/10 | Consistency 7/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh-tw affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form; **DEX** left expanded, zh-tw has no bare short form in the `ui`/`tag` context.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `testing/index.md` flipped `使用者` -> `用戶` at all 14 sites. `用戶` is the zh-cn form; corpus-wide zh-tw runs 1723:162 for `使用者` and the three sibling files in this PR kept it. Left as a warning since "user" is not an ETHGlossary term, but it is a deterministic fix if the locale wants it.
+- Best glossary compliance in this locale's recorded series: `智能合約` x107 with zero `智慧合約`. The regression from #18344/#18772/#19115 finally did not fire.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` -> `打包器`.
+- builder `區塊構建者` -> `區塊建構者` (hegota x2, page-open-access, page-roadmap).
+
+**Open (warnings):**
+
+- Mainland vocabulary: `用戶` (validium), `數據` (the-graph), `檔案` for archival (zk-rollups).
+- 您/你 split across the new privacy pages; `樂觀匯總` vs `樂觀 Rollup`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- protocol `協議` -> `協定` x3; swap `交換` -> `兌換` (glossary).
+
+**Open (warnings):**
+
+- Mainland vocabulary leaks (`用戶`, `數據`); truncated `了解更多關於 X` CTAs; `智慧帳戶` outlier; enterprise-privacy on 你.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.6/10
+
+- Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
+- Open: "much faster" lost `得多` (L178).

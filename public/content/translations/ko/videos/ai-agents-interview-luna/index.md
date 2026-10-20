@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "웬 시프트 해픈스"
 breadcrumb: "AI 에이전트: 루나"

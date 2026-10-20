@@ -48,7 +48,7 @@ lang: ko
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobal에서 운영하는 디스코드 채팅: 전 세계 이더리움 해커를 위한 온라인 커뮤니티</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 이더리움 개발 중심의 디스코드 커뮤니티</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker 디스코드</Link> - 기존 및 잠재적 스테이커를 위한 커뮤니티 주도의 안내, 교육, 지원 및 리소스</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org 웹사이트 팀</Link> - 들러서 팀 및 커뮤니티 사람들과 ethereum.org 웹 개발 및 디자인에 대해 이야기해 보세요</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org 웹사이트 팀</Link> - 들러서 팀 및 커뮤니티 사람들과 ethereum.org 웹 개발 및 디자인에 대해 이야기해 보세요</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos 디스코드</Link> - 빌더, 업계 주요 인사, 이더리움 열성 팬들이 모이는 Web3 크리에이터 커뮤니티입니다. 우리는 Web3 개발, 디자인, 문화에 열정을 가지고 있습니다. 함께 만들어가요.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 개발을 위한 채팅 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 질의응답 포럼</i></SocialListItem>

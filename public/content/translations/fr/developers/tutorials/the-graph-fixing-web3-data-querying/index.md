@@ -15,7 +15,7 @@ Cette fois, nous allons examiner de plus près The Graph, qui est essentiellemen
 
 ## Sans The Graph... {#without-the-graph}
 
-Prenons donc un exemple simple à des fins d'illustration. Nous aimons tous les jeux, alors imaginez un jeu simple avec des utilisateurs qui placent des paris :
+Prenons donc un exemple simple pour illustrer. Nous aimons tous les jeux, alors imaginez un jeu simple où les utilisateurs placent des paris :
 
 ```solidity
 pragma solidity 0.7.1;
@@ -41,13 +41,13 @@ contract Game {
 }
 ```
 
-Maintenant, disons que dans notre dapp, nous voulons afficher le total des paris, le total des parties perdues/gagnées et également le mettre à jour chaque fois que quelqu'un joue à nouveau. L'approche serait la suivante :
+Supposons maintenant que dans notre application décentralisée (dapp), nous voulions afficher le total des paris, le total des parties perdues/gagnées et également les mettre à jour chaque fois que quelqu'un rejoue. L'approche serait la suivante :
 
 1. Récupérer `totalGamesPlayerWon`.
 2. Récupérer `totalGamesPlayerLost`.
 3. S'abonner aux événements `BetPlaced`.
 
-Nous pouvons écouter l'[événement dans Web3](https://docs.web3js.org/api/web3/class/Contract#events) comme indiqué à droite, mais cela nécessite de gérer pas mal de cas.
+Nous pouvons écouter l'[événement dans Web3](https://docs.web3js.org/api/web3/class/Contract#events) comme indiqué à droite, mais cela nécessite de gérer un certain nombre de cas.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -57,24 +57,24 @@ GameContract.events.BetPlaced({
     // événement déclenché
 })
 .on('changed', function(event) {
-    // événement supprimé à nouveau
+    // événement de nouveau supprimé
 })
 .on('error', function(error, receipt) {
-    // tx rejetée
+    // transaction rejetée
 });
 ```
 
-Maintenant, cela reste à peu près correct pour notre exemple simple. Mais disons que nous voulons maintenant afficher les montants des paris perdus/gagnés uniquement pour le joueur actuel. Eh bien, nous n'avons pas de chance, vous feriez mieux de déployer un nouveau contrat intelligent qui stocke ces valeurs et de les récupérer. Et maintenant, imaginez un contrat intelligent et une dapp beaucoup plus compliqués, les choses peuvent vite devenir chaotiques.
+Cela reste encore à peu près gérable pour notre exemple simple. Mais disons que nous voulons maintenant afficher les montants des paris perdus/gagnés uniquement pour le joueur actuel. Eh bien, pas de chance, vous feriez mieux de déployer un nouveau contrat qui stocke ces valeurs et de les récupérer. Et maintenant, imaginez un contrat intelligent et une dapp beaucoup plus complexes, les choses peuvent vite devenir chaotiques.
 
-![One Does Not Simply Query](./one-does-not-simply-query.jpg)
+![On ne peut pas simplement interroger](./one-does-not-simply-query.jpg)
 
-Vous pouvez voir en quoi ce n'est pas optimal :
+Vous pouvez voir que ce n'est pas optimal :
 
 - Ne fonctionne pas pour les contrats déjà déployés.
 - Coûts de gaz supplémentaires pour stocker ces valeurs.
-- Nécessite un autre appel pour récupérer les données d'un nœud Ethereum.
+- Nécessite un autre appel à un nœud Ethereum pour récupérer les données.
 
-![Thats not good enough](./not-good-enough.jpg)
+![Ce n'est pas suffisant](./not-good-enough.jpg)
 
 Examinons maintenant une meilleure solution.
 

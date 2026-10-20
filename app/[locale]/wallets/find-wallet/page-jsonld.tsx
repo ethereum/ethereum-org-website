@@ -85,6 +85,8 @@ export default async function FindWalletPageJsonLD({
         name: t("page-find-wallet-title"),
         description: t("page-find-wallet-meta-description"),
         numberOfItems: wallets.length,
+        // Wallets are shuffled within locale groups, so positions are not a ranking.
+        itemListOrder: "https://schema.org/ItemListUnordered",
         itemListElement: wallets.map((wallet, index) => {
           const os = getWalletPlatforms(wallet)
           const detailUrl = normalizeUrlForJsonLd(

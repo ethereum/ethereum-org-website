@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/ethereum-evolution-glamsterdam/index.md",
-  "generatedAt": "2026-04-28T23:22:40.000Z",
-  "rootHash": "05433ae94a79",
+  "generatedAt": "2026-09-30T18:38:52.529Z",
+  "rootHash": "83863034da81",
   "tree": {
-    "contentHash": "57bd7ba3626e",
-    "anchorHash": "2a29edef703e",
+    "contentHash": "f704211cbd68",
+    "anchorHash": "c9269db84107",
     "children": {
       "frontmatter:title": {
         "contentHash": "1355bcae6a01",
@@ -36,8 +36,8 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "918e1f78a588",
-        "anchorHash": "72f759f48034",
+        "contentHash": "f5818652a990",
+        "anchorHash": "5e36ae445013",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
@@ -45,17 +45,12 @@
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "3de1580490d2"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "dc2963d21f5f"
+            "anchorHash": "dd2026a793e9"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -300,5 +295,5 @@
       "closing-1202"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

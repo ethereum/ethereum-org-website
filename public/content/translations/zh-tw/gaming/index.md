@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## 以太坊上的遊戲
+## 以太坊上的遊戲 {#gaming-on-ethereum}
 
 以太坊上的遊戲有多種形式，從使用區塊鏈特定功能的遊戲，到整個遊戲世界都存在於鏈上的遊戲。以太坊區塊鏈可以在各種層面上應用於遊戲中。遊戲可以將其貨幣儲存為可轉讓的代幣，或將其他遊戲內資產（角色、裝備、寵物等）以[非同質化代幣 (NFT)](/nft/) 的形式儲存。遊戲也可以利用智能合約將其邏輯、規則和狀態託管在鏈上。這類遊戲通常被稱為「全鏈上遊戲」。
 
@@ -32,7 +32,7 @@ buttons:
 
 以太坊區塊鏈實現了規則無法被任意更改、狀態無法被刪除的世界，而且任何人都可以建置只要網路存在就能一直存在的擴充功能。這是以太坊原生提供的功能。
 
-## 以太坊遊戲生態系統概覽
+## 以太坊遊戲生態系統概覽 {#ethereums-gaming-ecosystem-overview}
 - **第二層 (L2)：** 憑藉較便宜的費用和較短的交易時間，以太坊 L2 成為遊戲推出的常見場所。L2 領域持續發展，領先的 Web3 遊戲生態系統如 Ronin（最初是 Axie Infinity 的側鏈）最近過渡到以太坊第二層架構，繼承了以太坊的安全保證，同時保留了其針對遊戲最佳化的基礎設施。目前領先的遊戲 L2 包括：[Ronin](https://www.roninchain.com/)、[Starknet](https://www.starknet.io/)、[Abstract](https://abs.xyz/) 和 [Base](https://www.base.org/)。
 - **基礎設施：** 為了讓開發鏈上遊戲變得更容易，存在許多工具堆疊；[Cartridge](https://cartridge.gg/)（提供工作階段金鑰、透過代付合約進行免燃料交易，以及透過 Cartridge Controller 進行基於 WebAuthn 的身分驗證）、[Dojo](https://dojoengine.org/)（具有原生帳戶抽象化支援的可證明遊戲框架）、[MUD](https://mud.dev/)（基於 EVM 的鏈上遊戲引擎）。其他如 [Proof of Play](https://proofofplay.com/) 和 [Thirdweb](https://thirdweb.com/)，則允許開發人員建置具有類似 Web2 使用者體驗的遊戲。
 - **遊戲社群：** 以太坊的遊戲生態系統由遊戲公會提供支援，包括用於玩家協作的（[YGG](https://x.com/YieldGuild)、[MANA Gaming](https://x.com/ManaGamingBR)、[WASD](https://x.com/WASD_0x)、[LegacyGG](https://x.com/Lgc_GG)、[Gaming Grid](https://x.com/GamingGridx) 和 [OLAGG](https://x.com/OLAGuildGames)），如 [GAM3S.GG](https://games.gg/) 等探索平台，以及如 [Gaming Daily](https://x.com/GamingDailyx) 等用於遊戲分析和生態系統報導的媒體。有些則涵蓋了所有這些領域，例如 [FOCGERS](https://x.com/FOCGERS)。

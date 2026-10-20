@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/translation-program/resources/index.md",
-  "generatedAt": "2026-07-29T05:20:31.754Z",
-  "rootHash": "329255b3e778",
+  "generatedAt": "2026-09-30T18:19:27.342Z",
+  "rootHash": "12837094a880",
   "tree": {
     "contentHash": "49ff4774fc05",
-    "anchorHash": "89fd401d5b03",
+    "anchorHash": "bacbecb318fe",
     "children": {
       "frontmatter:title": {
         "contentHash": "e89b30aa1dc3",
@@ -117,7 +117,7 @@
       },
       "communities": {
         "contentHash": "008f047e7a94",
-        "anchorHash": "a31691f98ba4",
+        "anchorHash": "91c7f9ec46f4",
         "labelHash": "c864f329f5dd",
         "children": {
           "_label": {
@@ -130,7 +130,7 @@
           },
           "link:0": {
             "contentHash": "90c9af5a315b",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "prose:3": {
             "contentHash": "d5cb6fbca5f4",
@@ -220,7 +220,7 @@
       },
       "office-hours": {
         "contentHash": "8be7710b2d9f",
-        "anchorHash": "da9eaa1bb6fa",
+        "anchorHash": "f2de262a9efc",
         "labelHash": "2baf227a012d",
         "children": {
           "_label": {
@@ -233,7 +233,7 @@
           },
           "link:0": {
             "contentHash": "c8fa1aa8342c",
-            "anchorHash": "d06d348772a4"
+            "anchorHash": "416d56f793cb"
           },
           "prose:2": {
             "contentHash": "5644f290b41b",
@@ -261,5 +261,5 @@
       "office-hours"
     ]
   },
-  "sourceCommitSha": "c7a64f38c3cf12cb0e445666299a4f4df18fa3b4"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

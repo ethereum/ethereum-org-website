@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Keyboard key. Renders a real `<kbd>` with a primary outline, and is wired as the `kbd` MDX element so markdown docs get it for free. `align-middle` keeps it on the baseline when it sits inside a sentence.",
+          "Keyboard key. Renders a real `<kbd>` styled as a neutral keycap, and is wired as the `kbd` MDX element so markdown docs get it for free. `align-middle` keeps it on the baseline when it sits inside a sentence, and `min-w-6` stops single characters from collapsing to a sliver next to wider caps like `Shift`.",
       },
     },
   },

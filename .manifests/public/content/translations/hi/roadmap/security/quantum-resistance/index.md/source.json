@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/security/quantum-resistance/index.md",
-  "generatedAt": "2026-07-15T17:40:41.862Z",
-  "rootHash": "d02a26d04065",
+  "generatedAt": "2026-09-30T18:33:33.981Z",
+  "rootHash": "5f35c6a419c6",
   "tree": {
-    "contentHash": "0cee3d9f618b",
+    "contentHash": "282925e2cf76",
     "anchorHash": "531103cbf9a5",
     "children": {
       "frontmatter:title": {
@@ -148,7 +148,7 @@
         ]
       },
       "four-vulnerable-areas": {
-        "contentHash": "97094c139366",
+        "contentHash": "a0abc7153f5a",
         "anchorHash": "4040761e1164",
         "labelHash": "8c33c8dd9068",
         "children": {
@@ -295,7 +295,7 @@
             ]
           },
           "zk-proofs": {
-            "contentHash": "2ff4ee78e58d",
+            "contentHash": "cbd694c7d999",
             "anchorHash": "4b9f7d802648",
             "labelHash": "6f10781b3508",
             "children": {
@@ -304,7 +304,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "881fa3129922",
+                "contentHash": "9aea971b2e9a",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -818,5 +818,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "7f636101bf3432875bd28b380f802813a5de986c"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

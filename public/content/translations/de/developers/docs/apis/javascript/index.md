@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3.js-Hilfsfunktionen](https://docs.web3js.org/api/web3-utils)
 - [Ethers-Hilfsfunktionen](https://docs.ethers.org/v6/api/utils/)
 
-## Verfügbare Bibliotheken
+## Verfügbare Bibliotheken {#available-libraries}
 
 **Web3.js -** **_Ethereum-JavaScript-API._**
 

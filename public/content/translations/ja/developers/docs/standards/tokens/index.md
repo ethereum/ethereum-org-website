@@ -29,7 +29,7 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc)提案の完全なリスト。
 
-## 参考文献
+## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースをご存知ですか？このページを編集して追加してください！_
 

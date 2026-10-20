@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/blobspace-101-dencun/index.md",
-  "generatedAt": "2026-04-28T22:45:18.987Z",
-  "rootHash": "327783468c2d",
+  "generatedAt": "2026-09-30T18:34:17.446Z",
+  "rootHash": "244a96d557dd",
   "tree": {
-    "contentHash": "a349f6ba7bf0",
-    "anchorHash": "ad477784e3c9",
+    "contentHash": "324bb020de62",
+    "anchorHash": "876e5bcddee1",
     "children": {
       "frontmatter:title": {
         "contentHash": "fa9c2e67dc75",
@@ -36,31 +36,21 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "01e58d9bfef2",
-        "anchorHash": "8321046d29ef",
+        "contentHash": "f5818652a990",
+        "anchorHash": "bec3d3234cd4",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "567cf013bf70"
+            "anchorHash": "6a4444a31955"
           },
           "1": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "3aa3a994ea2f"
-          },
-          "2": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "400986f48a80"
-          },
-          "3": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "dc2963d21f5f"
+            "anchorHash": "3b3e1a7dae17"
           }
         },
         "childrenOrder": [
           "0",
-          "1",
-          "2",
-          "3"
+          "1"
         ]
       },
       "frontmatter:format": {
@@ -215,5 +205,5 @@
       "the-future-of-ethereum-scalability-7500"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

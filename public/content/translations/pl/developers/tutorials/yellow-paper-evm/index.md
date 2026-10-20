@@ -19,7 +19,7 @@ Jak prawie wszystko w Ethereum, żółta księga ewoluuje w czasie. Aby móc odn
 
 Oryginalna żółta księga została napisana na samym początku rozwoju Ethereum. Opisuje ona oryginalny mechanizm konsensusu oparty na dowodzie pracy (PoW), który był pierwotnie używany do zabezpieczania sieci. Jednakże we wrześniu 2022 roku Ethereum wyłączyło dowód pracy i zaczęło używać konsensusu opartego na dowodzie stawki (PoS). Ten samouczek skupi się na częściach żółtej księgi definiujących maszynę wirtualną Ethereum (EVM). EVM pozostała niezmieniona po przejściu na dowód stawki (z wyjątkiem wartości zwracanej przez kod operacji DIFFICULTY).
 
-## 9 Model wykonawczy
+## 9 Model wykonawczy {#9-execution-model}
 
 Ta sekcja (str. 14-16) zawiera większość definicji EVM.
 
@@ -59,7 +59,7 @@ Termin wyjątkowe wykonanie (exceptional execution) oznacza wyjątek, który pow
 
 Ta sekcja wyjaśnia, jak obliczane są opłaty za gaz. Istnieją trzy koszty:
 
-### Koszt kodu operacji
+### Koszt kodu operacji {#opcode-cost}
 
 Nieodłączny koszt konkretnego kodu operacji. Aby uzyskać tę wartość, znajdź grupę kosztów kodu operacji w Dodatku H (str. 29, pod równaniem (329)) i znajdź grupę kosztów w równaniu (326). Daje to funkcję kosztu, która w większości przypadków używa parametrów z Dodatku G (str. 28).
 
@@ -73,7 +73,7 @@ Koszt uruchomienia kodu, który wywołujemy.
 - W przypadku [`CREATE`](https://www.evm.codes/#f0) i [`CREATE2`](https://www.evm.codes/#f5), konstruktor dla nowego kontraktu.
 - W przypadku [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa) lub [`DELEGATECALL`](https://www.evm.codes/#f4), kontrakt, który wywołujemy.
 
-### Koszt rozszerzenia pamięci
+### Koszt rozszerzenia pamięci {#expanding-memory-cost}
 
 Koszt rozszerzenia pamięci (jeśli jest to konieczne).
 
@@ -84,7 +84,7 @@ Funkcja _C<sub>mem</sub>_ jest zdefiniowana w równaniu 328: _C<sub>mem</sub>(a)
 **Uwaga**, że te czynniki wpływają tylko na _nieodłączny_ koszt gazu - nie biorą pod uwagę rynku opłat ani napiwków dla walidatorów, które określają, ile użytkownik końcowy musi zapłacić - jest to tylko surowy koszt uruchomienia konkretnej operacji w EVM.
 
 [Dowiedz się więcej o gazie](/developers/docs/gas/).
-## 9.3 Środowisko wykonawcze
+## 9.3 Środowisko wykonawcze {#93-execution-env}
 
 Środowisko wykonawcze to krotka (tuple), _I_, która zawiera informacje niebędące częścią stanu blockchaina ani EVM.
 
@@ -109,7 +109,7 @@ Kilka innych parametrów jest niezbędnych do zrozumienia reszty sekcji 9:
 | _g_       | 9.3 (str. 14)         | Pozostały gaz                                                                                                                                                                                                                     |
 | _A_       | 6.1 (str. 9)          | Narosły podstan (zmiany zaplanowane na moment zakończenia transakcji)                                                                                                                                                             |
 | _o_       | 9.3 (str. 14)         | Wyjście - zwrócony wynik w przypadku transakcji wewnętrznej (gdy jeden kontrakt wywołuje inny) i wywołań funkcji widoku (gdy po prostu prosisz o informacje, więc nie ma potrzeby czekać na transakcję)                           |
-## 9.4 Przegląd wykonania
+## 9.4 Przegląd wykonania {#94-execution-overview}
 
 Teraz, gdy mamy już wszystkie wstępne informacje, możemy wreszcie zacząć pracę nad tym, jak działa EVM.
 
@@ -136,7 +136,7 @@ Ta sekcja wyjaśnia stan maszyny bardziej szczegółowo. Określa, że _w_ to bi
 
 Ponieważ jest to [maszyna stosowa](https://en.wikipedia.org/wiki/Stack_machine), musimy śledzić liczbę elementów zdjętych (_δ_) i odłożonych (_α_) przez każdy kod operacji.
 
-## 9.4.2 Wyjątkowe zatrzymanie
+## 9.4.2 Wyjątkowe zatrzymanie {#942-exceptional-halt}
 
 Ta sekcja definiuje funkcję _Z_, która określa, kiedy mamy do czynienia z nieprawidłowym zakończeniem. Jest to funkcja [logiczna (Boolean)](https://en.wikipedia.org/wiki/Boolean_data_type), więc używa [_∨_ dla logicznego lub](https://en.wikipedia.org/wiki/Logical_disjunction) oraz [_∧_ dla logicznego i](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Mamy wyjątkowe zatrzymanie, jeśli którykolwiek z tych warunków jest prawdziw
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Nie możesz uruchomić [`SSTORE`](https://www.evm.codes/#55), chyba że masz więcej niż G<sub>callstipend</sub> (zdefiniowane jako 2300 w Dodatku G) gazu.
-## 9.4.3 Ważność miejsca docelowego skoku
+## 9.4.3 Ważność miejsca docelowego skoku {#943-jump-dest-valid}
 
 Tutaj formalnie definiujemy, czym są kody operacji [`JUMPDEST`](https://www.evm.codes/#5b). Nie możemy po prostu szukać wartości bajtu 0x5B, ponieważ może on znajdować się wewnątrz PUSH (i w związku z tym być danymi, a nie kodem operacji).
 
@@ -198,7 +198,7 @@ Funkcja zatrzymania _H_ może zwracać trzy typy wartości.
 - Jeśli mamy kod operacji zatrzymania, który nie generuje wyjścia (albo [`STOP`](https://www.evm.codes/#00), albo [`SELFDESTRUCT`](https://www.evm.codes/#ff)), zwróć sekwencję o rozmiarze zero bajtów jako wartość zwracaną. Zauważ, że bardzo różni się to od zbioru pustego. Ta wartość oznacza, że EVM naprawdę się zatrzymała, po prostu nie ma żadnych zwracanych danych do odczytania.
 - Jeśli mamy kod operacji zatrzymania, który generuje wyjście (albo [`RETURN`](https://www.evm.codes/#f3), albo [`REVERT`](https://www.evm.codes/#fd)), zwróć sekwencję bajtów określoną przez ten kod operacji. Ta sekwencja jest pobierana z pamięci, wartość na szczycie stosu (_μ<sub>s</sub>[0]_) to pierwszy bajt, a wartość po niej (_μ<sub>s</sub>[1]_) to długość.
 
-## H.2 Zestaw instrukcji
+## H.2 Zestaw instrukcji {#h2-instruction-set}
 
 Zanim przejdziemy do ostatniej podsekcji EVM, 9.5, przyjrzyjmy się samym instrukcjom. Są one zdefiniowane w Dodatku H.2, który zaczyna się na str. 30. Oczekuje się, że wszystko, co nie zostało określone jako zmieniające się wraz z tym konkretnym kodem operacji, pozostanie takie samo. Zmienne, które ulegają zmianie, są określone jako \<coś\>′.
 
@@ -242,7 +242,7 @@ Drugie równanie, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 
 |         |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Zauważ, że aby użyć dowolnego elementu stosu, musimy go zdjąć, co oznacza, że musimy również zdjąć wszystkie elementy stosu znajdujące się nad nim. W przypadku [`DUP<n>`](https://www.evm.codes/#8f) i [`SWAP<n>`](https://www.evm.codes/#9f) oznacza to konieczność zdjęcia, a następnie odłożenia do szesnastu wartości.
-## 9.5 Cykl wykonania
+## 9.5 Cykl wykonania {#95-exec-cycle}
 
 Teraz, gdy mamy już wszystkie części, możemy wreszcie zrozumieć, jak udokumentowany jest cykl wykonania EVM.
 

@@ -175,7 +175,7 @@ ERC-20 மூலம் இந்தச் சிக்கலை முழும�
 - [ஓப்பன்செப்பெலின் - ERC-20 செயலாக்கம்](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 வில்லைகளுக்கான வழிகாட்டி](https://www.alchemy.com/overviews/erc20-solidity)
 
-## பிற பரிமாற்றத்தக்க வில்லை தரநிலைகள்
+## பிற பரிமாற்றத்தக்க வில்லை தரநிலைகள் {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

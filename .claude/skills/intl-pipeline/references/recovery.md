@@ -4,18 +4,52 @@ Load this when "the pipeline did something wrong" — bad translation in product
 
 ## Triage matrix
 
-| Symptom | First check | Likely fix |
-|---|---|---|
-| Run reported "success" but content looks incomplete | Read the PR body's "N task(s) failed" block + grep the log | "Success" ships partial failures; see "Diagnosing a completed run" below |
-| Lots of content changed but few/no manifests in the PR diff | Content and manifests desynced (manifest drift) | See "Manifest drift after a run" below |
-| Translation looks wrong, not yet merged | Is it a glossary deviation? | Re-run pipeline targeting that file+locale; auto-fix should correct |
-| Translation already merged to `dev`, looks wrong | Is the English version up to date? | Re-run with `mode: full` for that file |
-| Manifest file is invalid / missing | One of the two manifests gone? | Delete both manifests for that file+locale; pipeline auto-runs full mode |
-| Build fails on a locale (MDX compile error) | Is it the sanitizer's fault or content? | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file |
-| `intl/pending-{base}` PR has merge conflicts on base side | Was base force-pushed/rebased? | Don't rebase pending; merge base→pending again, or close pending and start fresh |
-| LLM returned garbage / refused | Check `finishReason` in logs | See "LLM returned garbage / refused" below |
-| English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping | Re-run `mode: full` for that file; pipeline regenerates from scratch |
-| Hand-edit slipped through review | Was it pre- or post-English-change? | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict |
+| Symptom                                                                       | First check                                                                                                             | Likely fix                                                                                                        |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Run reported "success" but content looks incomplete                           | Read the PR body's "N task(s) failed" and "skipped -- quarantined" blocks; the run log ends with a PASS/SKIP/FAIL table | "Success" ships partial failures; see "Diagnosing a completed run" and "Quarantined pairs" below                  |
+| A pair is skipped every run                                                   | `.manifests/quarantine.json` holds it                                                                                   | Fix the cause (or the English), or rerun the pair with `mode: full`; see "Quarantined pairs"                      |
+| Task fails with `[gate] ...`                                                  | The output would have shipped a structural or MDX regression                                                            | Read the listed checks; the file is retried next run and quarantined on the second strike; see "Pre-commit gates" |
+| Lots of content changed but few/no manifests in the PR diff                   | Content and manifests desynced (manifest drift)                                                                         | See "Manifest drift after a run" below                                                                            |
+| Translation looks wrong, not yet merged                                       | Is it a glossary deviation?                                                                                             | Re-run pipeline targeting that file+locale; auto-fix should correct                                               |
+| Translation already merged to `dev`, looks wrong                              | Is the English version up to date?                                                                                      | Re-run with `mode: full` for that file                                                                            |
+| Manifest file is invalid / missing                                            | One of the two manifests gone?                                                                                          | Delete both manifests for that file+locale; pipeline auto-runs full mode                                          |
+| Build fails on a locale (MDX compile error)                                   | Is it the sanitizer's fault or content?                                                                                 | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file                                      |
+| `intl/pending-{base}` PR has merge conflicts on base side                     | Was base force-pushed/rebased?                                                                                          | Don't rebase pending; merge base→pending again, or close pending and start fresh                                  |
+| LLM returned garbage / refused                                                | Check `finishReason` in logs                                                                                            | See "LLM returned garbage / refused" below                                                                        |
+| English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping                                                                                  | Re-run `mode: full` for that file; pipeline regenerates from scratch                                              |
+| Heading anchors missing or wrong across many locales                          | `pnpm exec tsx src/scripts/intl-pipeline/verify-structure.ts --changed` reports `heading-anchor`                        | One-off `repair-anchors.ts`; see "One-off repair scripts"                                                         |
+| Hand-edit slipped through review                                              | Was it pre- or post-English-change?                                                                                     | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict                    |
+
+## Quarantined pairs
+
+A file+locale that fails **deterministically** -- a provider refusal (`finishReason=RECITATION` / `PROHIBITED_CONTENT`), an output-validation floor it legitimately sits under, a plan the per-file budget refuses, or a pre-commit gate it fails twice -- is written to `.manifests/quarantine.json` (`lib/quarantine.ts`) and **skipped on later runs** instead of retried byte-identically every morning. The entry is pinned to the English `rootHash` it failed against, so any English edit releases it; it also expires (14 days, doubling per repeat, capped at 90) so nothing is forgotten. A run whose only failures are quarantined exits green: it recorded them, and retrying the same input would fail the same way. Transient errors (timeouts, 5xx, rate limits, GitHub API hiccups, the run fuse) are never quarantined.
+
+The PR body lists skipped pairs with class, reason and expiry. To force a pair now: rerun it with `mode: full` (bypasses the list), or delete its entry from `.manifests/quarantine.json`. The list travels through `intl/pending-{base}` with the manifests.
+
+## Pre-commit gates
+
+Every task's output passes through `lib/gates.ts` after the sanitizer and before anything is recorded: `verify-structure` checks (heading anchors, tag parity, hrefs, fence count/language/body, frontmatter shape), an MDX compile with the site's parser setup (`src/lib/md/compile.ts`: heading-id escape, gfm, heading-id, slug; the ToC/JSX/image passes run after parsing and cannot change validity), and for JSON a nested key-path parity check. Incremental output is held to **no new structural errors relative to the locale it replaces** -- about a fifth of the corpus carries pre-existing errors, and an absolute bar would freeze those files -- while full translations must be clean. A gate failure fails the task (`[gate] ...`), nothing is stamped, the pair retries next run and quarantines on the second strike. The sanitizer runs inside the task on the task's own output, so the gates judge exactly what ships. Output is also given the same file ending as its English source (`matchTrailingNewline`): the full path emits what the model returned and a model drops the trailing newline often, while incremental keeps it only because it splices into the existing file. Mirroring English rather than imposing a house rule leaves the six English files that end without a newline alone -- and note 5,640 of 8,182 translated markdown files currently end without one, so each will gain it the next time it is retranslated.
+
+Two model artifacts are repaired deterministically rather than failed. An invented empty `{#}` anchor -- English requires one on h1-h4 only, so an h5 legitimately has none and the prompt still tells the model to preserve anchors -- is stripped by `fixEmptyHeadingAnchors`, which scans lines with a fence counter. **Never reintroduce a code-block split there**: the previous version split on a regex whose inline-code alternative matches across newlines, so one stray backtick swallowed every heading up to the next one, and PR #19474 stripped 9 of 11 anchors and failed the gate on the rest in all 24 locales. And a `frontmatter:<key>` value returned with its YAML key attached (`title: "..."`) has that exact prefix stripped by `stripEmittedKeyPrefix` before it is applied.
+
+JSON placeholder checks compare the ICU **AST**, not raw occurrences. A plural carries one branch per CLDR category, so Czech (one/few/other) repeats `{count}` three times where English (one/other) repeats it twice and both are correct -- counting occurrences quarantined five locales of `page-organizations-enterprise.json` in PR #19474. It was rejecting 65 strings across 37 files in the committed corpus, of which only 4 were plural counts -- 61 were the tag half of the same multiset, a single `<strong>` pair in English legitimately becoming two in Hindi, Japanese or German word order -- and exactly one is a real defect. Placeholder **names** are compared as a set; occurrences are counted only for names no plural or select branch uses, so a dropped repeat in flat prose still fails. Branches are then checked individually, because a name surviving in one branch keeps the set equal while another branch silently loses it: missing from `other` is an error, missing from `one`/`zero`/`=0`/`=1` is a warning (idiomatic -- "a year", "no years"), missing from any other category is an error. Parsing uses `ignoreTag: true` because our strings carry HTML with attributes (`<a href="...">`), which ICU tag syntax rejects -- 200 English strings fail to parse without it -- and bare `<tag>` names are checked separately for set equality and balance. A translation that fails to parse while English parses is `json-icu-parse`.
+
+`code-fence-content` is the backstop for fence protection: it compares every non-prose fence body against English with comments and trailing whitespace ignored. Comments are exempt because a translated code comment is wanted, not a defect -- 8,431 corpus fences carry one. The corpus baseline is ~1,575 `code-fence-content` and ~101 `code-fence-lang` findings, a mix of translated ASCII diagrams from the untagged-fence bug and translations that predate an English code edit; incremental output is judged against that baseline, so they do not block.
+
+## One-off repair scripts
+
+Two scripts under `src/scripts/intl-pipeline/` repair the corpus. **Neither is part of a pipeline run, and that is deliberate**: both rewrite committed content or manifests outside the manifest model, so they belong in a reviewable PR of their own where a human reads the diff. Wiring either into `main.ts` would let it paper over exactly the regressions the gates exist to surface. Both are idempotent and both take `--dry-run`.
+
+| Script                 | Run it when                                                   | What it does                                                                                 |
+| ---------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `migrate-manifests.ts` | `intl-content-tree` bumps `MANIFEST_VERSION`                  | Re-derives every `source.json` from its own recorded English. See `references/manifests.md`. |
+| `repair-anchors.ts`    | `verify-structure` reports `heading-anchor` across many files | Copies each translated heading's `{#id}` from its English counterpart, positionally.         |
+
+`repair-anchors.ts` only touches a file whose heading count **and** level sequence match English exactly -- that match is what makes "the Nth heading" a safe identity -- and discards any repair that would raise the file's error count. Files whose outline genuinely diverged are reported and left for retranslation; they need `mode: full`, not a mechanical fix. Heading IDs are the same ASCII slugs in every locale, so copying from English is restoration, not invention.
+
+It exists because run 29962972384 (2026-07-22) returned headings without their `{#id}` and Phase 5 took the model's heading line, dropping 815 anchors across 322 files. The propagation bug was fixed in `6126795b7e` a week later, but nothing repaired the corpus, and since `findStructuralRegressions` scores a run against the locale it starts from, the loss became the baseline every later run preserved (PR #19325 cleared it: 935 `heading-anchor` errors down to 15).
+
+The gates added in #19316 are what stop this recurring -- a run that drops an anchor now fails its task instead of stamping. If `repair-anchors.ts` ever finds a large batch again, treat that as a gate escape and investigate the run, rather than repairing and moving on.
 
 ## Diagnosing a completed run
 
@@ -47,13 +81,13 @@ Healthy run: every translated content file has a matching `.manifests/<destPath>
 
 Error-string -> source map (where to look when a signature appears):
 
-| Log signature | Source |
-|---|---|
-| `Failed to update ref` / squash errors | `lib/github/commits.ts` (`SharedCommitter`) |
-| `Key set mismatch` / `Suspiciously short` / refusal | `lib/llm/output-validation.ts` |
-| `FINISH_REASON` / `RECITATION` | `lib/llm/gemini.ts` |
-| PR body assembly / length | `lib/workflows/pr-creation.ts` |
-| rate-limit backoff (403/429) | `lib/utils/fetch.ts` |
+| Log signature                                       | Source                                      |
+| --------------------------------------------------- | ------------------------------------------- |
+| `Failed to update ref` / squash errors              | `lib/github/commits.ts` (`SharedCommitter`) |
+| `Key set mismatch` / `Suspiciously short` / refusal | `lib/llm/output-validation.ts`              |
+| `FINISH_REASON` / `RECITATION`                      | `lib/llm/gemini.ts`                         |
+| PR body assembly / length                           | `lib/workflows/pr-creation.ts`              |
+| rate-limit backoff (403/429)                        | `lib/utils/fetch.ts`                        |
 
 ## Manifest drift after a run
 

@@ -8,7 +8,7 @@ duration: "0:36:34"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "use-cases"
 format: interview
 author: "以太坊基金会"
 breadcrumb: "构建 Aave"

@@ -15,6 +15,11 @@
     "score": 35000
   },
   {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 33000
+  },
+  {
     "username": "",
     "name": "nrv (@nervoir)",
     "score": 31000
@@ -28,11 +33,6 @@
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
-  },
-  {
-    "username": "cyberthirst",
-    "name": "cyberthirst",
-    "score": 21000
   },
   {
     "username": "junorouse",
@@ -50,14 +50,14 @@
     "score": 20000
   },
   {
+    "username": "iam-ned",
+    "name": "David Matosse",
+    "score": 17250
+  },
+  {
     "username": "peckshield",
     "name": "PeckShield",
     "score": 17000
-  },
-  {
-    "username": "iam-ned",
-    "name": "David Matosse",
-    "score": 16250
   },
   {
     "username": "itsunixiknowthis",
@@ -92,7 +92,7 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 11250
+    "score": 12250
   },
   {
     "username": "lukaszmatczak",
@@ -102,7 +102,7 @@
   {
     "username": "eclipse07077",
     "name": "eclipse07077",
-    "score": 10500
+    "score": 11000
   },
   {
     "username": "",
@@ -250,6 +250,11 @@
     "score": 2000
   },
   {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2000
+  },
+  {
     "username": "hwanjo",
     "name": "Hwanjo Heo",
     "score": 1500
@@ -362,7 +367,7 @@
   {
     "username": "lgandx",
     "name": "Laurent Gaffie",
-        "score": 1000
+    "score": 1000
   },
   {
     "username": "aydarkhusaenov",
@@ -372,6 +377,31 @@
   {
     "username": "phx-Alleysira",
     "name": "phx & Alleysira (UTUX Labs)",
+    "score": 1000
+  },
+  {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 1000
+  },
+  {
+    "username": "DanielBoye",
+    "name": "DanielBoye",
+    "score": 1000
+  },
+  {
+    "username": "0xSHKWON",
+    "name": "0xSHKWON",
+    "score": 1000
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 1000
+  },
+  {
+    "username": "L-KH",
+    "name": "lahcen-kh",
     "score": 1000
   },
   {

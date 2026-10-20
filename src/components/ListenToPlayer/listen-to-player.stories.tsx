@@ -8,7 +8,7 @@ const meta = {
   component: Component,
   tags: ["autodocs"],
   args: {
-    slug: "/eth/",
+    slug: "/what-is-ether/",
   },
 } satisfies Meta<typeof Component>
 

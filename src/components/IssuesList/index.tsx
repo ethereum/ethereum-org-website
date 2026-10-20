@@ -4,13 +4,13 @@ import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
-import { getGFIs } from "@/data-layer"
-
 import { Avatar } from "../ui/avatar"
 import { Flex, HStack, Stack } from "../ui/flex"
 import { Grid } from "../ui/grid"
 import InlineLink from "../ui/Link"
 import { Tag } from "../ui/tag"
+
+import { getStaticGFIs } from "@/lib/data"
 
 type IssuesListProps = {
   className?: string
@@ -19,7 +19,7 @@ type IssuesListProps = {
 const IssuesList = async ({ className }: IssuesListProps) => {
   let issues: GHIssue[] = []
   try {
-    issues = (await getGFIs()) ?? []
+    issues = (await getStaticGFIs()) ?? []
   } catch (error) {
     console.warn("Failed to fetch GFIs for IssuesList:", error)
   }

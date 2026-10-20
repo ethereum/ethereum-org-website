@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/devconnect-buenos-aires-promo/index.md",
-  "generatedAt": "2026-04-28T23:15:56.520Z",
-  "rootHash": "e4363dfdbaf1",
+  "generatedAt": "2026-09-30T18:37:45.203Z",
+  "rootHash": "e868cd5ecbe0",
   "tree": {
-    "contentHash": "1943ee9ac7e6",
-    "anchorHash": "b24dd3f8e7a5",
+    "contentHash": "bdda2437a0ed",
+    "anchorHash": "950aa0da8366",
     "children": {
       "frontmatter:title": {
         "contentHash": "087241b2175f",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "d0ca918e24fd",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "98d185e29ad2",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "9af2994fe66a"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "f354ee99e2bc"
+            "anchorHash": "862417b9e7c3"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -95,5 +87,5 @@
       "prose:2"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

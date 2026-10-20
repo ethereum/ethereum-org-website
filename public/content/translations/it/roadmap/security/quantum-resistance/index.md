@@ -78,11 +78,11 @@ Entrambi gli approcci sono ancora in fase di ricerca per quanto riguarda l'effic
 
 Questo è un approccio pragmatico. Gli utenti e i portafogli che desiderano una protezione post-quantistica in anticipo possono adottarla volontariamente, mentre la migrazione più ampia avviene nel tempo.
 
-### 4. Prove a conoscenza zero (ZK) a livello di applicazione {#zk-proofs}
+### 4. Prove a conoscenza zero a livello di applicazione {#zk-proofs}
 
-**Cosa fa**: I sistemi di prove a conoscenza zero sono utilizzati dai rollup layer 2 (L2) e da altre applicazioni per verificare i calcoli senza rivelare i dati sottostanti.
+**Cosa fa**: I sistemi di prova sono utilizzati dai rollup di layer 2 (L2) per verificare i calcoli senza rieseguirli e, laddove un'applicazione implementa la proprietà a conoscenza zero, per dimostrare affermazioni senza rivelare gli input privati sottostanti.
 
-**Perché è vulnerabile**: Molti popolari sistemi di prove ZK (SNARK che utilizzano accoppiamenti di curve ellittiche) si basano su presupposti vulnerabili ai quanti.
+**Perché è vulnerabile**: Molti popolari sistemi di prova a conoscenza zero (SNARK che utilizzano accoppiamenti di curve ellittiche) si basano su presupposti vulnerabili ai quanti.
 
 **L'approccio**: Gli STARK, che si basano su funzioni di hash piuttosto che su curve ellittiche, sono già resistenti ai quanti e sono utilizzati da diversi rollup. La naturale adozione da parte dell'ecosistema di sistemi basati su STARK sta già fornendo sicurezza post-quantistica a livello di applicazione.
 

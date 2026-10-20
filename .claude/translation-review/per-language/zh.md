@@ -92,3 +92,52 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `Gas 上限计划` casing vs glossary `gas 上限`.
 - ASCII/full-width comma mixing inside single strings.
 - Zero Traditional-character leakage; the prior `slot`->`时段` collapse did not recur.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh/page-apps.json`. 6 critical, 11 warnings. Brand 9/10 | Technical 6/10 | Semantic 9/10 | Consistency 9/10 | Tone 6/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `accounts/index.md` flipped wholesale from 你 (21 on dev) to 您 (24) while the two sibling files changed in the same PR kept 你; the zh dev-docs corpus runs 840:69 for 你. Third recorded instance, so it wants a pipeline pin rather than per-run repair.
+- Zero ETHGlossary deviations across ~60 applicable terms, no Traditional leakage, and the run repaired three pre-existing errors: `原生 EVM` -> `原始 EVM`, the inverted Vyper "less features" clause, and an MMORPG/RPG over-expansion.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` (builder alias) -> `打包器`.
+
+**Open (warnings):**
+
+- 您/你 split: new page-privacy-online all 您, page-open-access all 你; glamsterdam:33 lone 您.
+- whitepaper:301 data chunks as `区块`; privacy-online `句柄`, `遭到破坏`, `暗黑模式`; Hegotá `赫戈塔` nav label vs Latin elsewhere.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `隐身地址` -> `隐形地址`.
+
+**Open (warnings):**
+
+- 你/您 split across /organizations files; `透明的实用定价` mistranslates utility pricing.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.2/10
+
+- Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
+- Warning: Hook/钩子 drift; 求值 -> 计算 drift.

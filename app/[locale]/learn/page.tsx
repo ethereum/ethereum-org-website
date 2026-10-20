@@ -37,8 +37,11 @@ import financeTransparent from "@/public/images/finance_transparent.png"
 import futureTransparent from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
+import storiesHero from "@/public/images/heroes/stories-hero.png"
 import impact from "@/public/images/impact_transparent.png"
+import networkColumn from "@/public/images/network-column-rooftop-piping-construction.png"
 import merge from "@/public/images/upgrades/merge.png"
+import upgradeRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEth from "@/public/images/what-is-ethereum.png"
 
@@ -304,6 +307,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <AdditionalDocReading
             heading={t("additional-reading-more-on-ethereum-basics")}
             docLinks={[
+              { href: "/values/", children: t("values-hub-desc") },
               { href: "/guides/", children: t("guides-hub-desc") },
               { href: "/quizzes/", children: t("quiz-hub-desc") },
               {
@@ -348,6 +352,31 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             />
           </Grid>
 
+          <h3>{t("keep-learning-title")}</h3>
+          <Grid>
+            <LearnCard
+              href="/staking/"
+              image={upgradeRhino}
+              title={t("staking-card-title")}
+              description={t("staking-card-description")}
+              ctaLabel={t("staking-cta")}
+            />
+            <LearnCard
+              href="/layer-2/learn/"
+              image={networkColumn}
+              title={t("layer-2-learn-card-title")}
+              description={t("layer-2-learn-card-description")}
+              ctaLabel={t("layer-2-learn-cta")}
+            />
+            <LearnCard
+              href="/stories/"
+              image={storiesHero}
+              title={t("stories-card-title")}
+              description={t("stories-card-description")}
+              ctaLabel={t("stories-cta")}
+            />
+          </Grid>
+
           <AdditionalDocReading
             heading={t("additional-reading-more-on-using-ethereum")}
             docLinks={[
@@ -360,6 +389,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               {
                 href: "/guides/how-to-use-a-wallet/",
                 children: t("additional-reading-how-to-use-a-wallet"),
+              },
+              {
+                href: "/security/",
+                children: t("additional-reading-security"),
+              },
+              { href: "/gas/", children: t("additional-reading-gas") },
+              {
+                href: "/community/support/",
+                children: t("additional-reading-support"),
               },
             ]}
           />
@@ -405,7 +443,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("ethereum-whitepaper-card-button")}
             />
             <LearnCard
-              href="/privacy/"
+              href="/privacy/ethereum/"
               image={hackathon}
               title={t("privacy-card-title")}
               description={t("privacy-card-description")}

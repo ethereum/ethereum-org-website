@@ -9,7 +9,7 @@ Przewodnik po stylu tłumaczeń ethereum.org zawiera jedne z najważniejszych wy
 
 Ten dokument służy jako ogólny przewodnik i nie jest specyficzny dla żadnego konkretnego języka.
 
-Jeśli masz jakiekolwiek pytania, sugestie lub opinie, skontaktuj się z nami pod adresem translations@ethereum.org, wyślij wiadomość do @ethdotorg na platformie Crowdin lub [dołącz do naszego serwera Discord](https://discord.gg/ethereum-org), gdzie możesz napisać do nas na kanale #translations lub skontaktować się z dowolnym członkiem zespołu.
+Jeśli masz jakiekolwiek pytania, sugestie lub opinie, skontaktuj się z nami pod adresem translations@ethereum.org, wyślij wiadomość do @ethdotorg na platformie Crowdin lub [dołącz do naszego serwera Discord](/discord/), gdzie możesz napisać do nas na kanale #translations lub skontaktować się z dowolnym członkiem zespołu.
 
 ## Korzystanie z platformy Crowdin {#using-crowdin}
 

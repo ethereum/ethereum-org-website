@@ -2,7 +2,7 @@ import type { FileContributor, GitHubContributorsData } from "@/lib/types"
 
 import { CONTENT_DIR, OLD_CONTENT_DIR } from "@/lib/constants"
 
-import { fetchRetry } from "./fetchRetry"
+import { fetchRetry, parallelBatch } from "./fetchRetry"
 
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
@@ -231,31 +231,6 @@ function getAllHistoricalPaths(pagePath: string): string[] {
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 /**
- * Process items in parallel batches.
- * Executes `fn` for each item, with at most `batchSize` concurrent operations.
- */
-async function parallelBatch<T, R>(
-  items: T[],
-  fn: (item: T) => Promise<R>,
-  batchSize: number = BATCH_SIZE
-): Promise<R[]> {
-  const results: R[] = []
-
-  for (let i = 0; i < items.length; i += batchSize) {
-    const batch = items.slice(i, i + batchSize)
-    const batchResults = await Promise.all(batch.map(fn))
-    results.push(...batchResults)
-
-    // Small delay between batches to avoid rate limiting
-    if (i + batchSize < items.length) {
-      await delay(BATCH_DELAY_MS)
-    }
-  }
-
-  return results
-}
-
-/**
  * Parse a Retry-After header value (either delta-seconds or HTTP-date)
  * into a millisecond delay, capped to MAX_RATE_LIMIT_WAIT_MS.
  */
@@ -429,8 +404,11 @@ async function fetchContributorsForPaths(
   token: string,
   nameLookup: NameLookup
 ): Promise<FileContributor[]> {
-  const results = await parallelBatch(paths, (path) =>
-    fetchCommitsForPath(path, token, nameLookup)
+  const results = await parallelBatch(
+    paths,
+    (path) => fetchCommitsForPath(path, token, nameLookup),
+    BATCH_SIZE,
+    BATCH_DELAY_MS
   )
 
   const allContributors = results.flat()
@@ -577,7 +555,9 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
         nameLookup
       )
       return { slug, contributors }
-    }
+    },
+    BATCH_SIZE,
+    BATCH_DELAY_MS
   )
 
   // Populate result
@@ -613,7 +593,9 @@ export async function fetchGitHubContributors(): Promise<GitHubContributorsData>
         nameLookup
       )
       return { pagePath, contributors }
-    }
+    },
+    BATCH_SIZE,
+    BATCH_DELAY_MS
   )
 
   // Populate result

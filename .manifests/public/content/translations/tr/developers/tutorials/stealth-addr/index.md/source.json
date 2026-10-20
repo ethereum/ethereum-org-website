@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/stealth-addr/index.md",
-  "generatedAt": "2026-06-18T00:27:58.577Z",
-  "rootHash": "05d0d826feff",
+  "generatedAt": "2026-09-30T18:28:26.017Z",
+  "rootHash": "b762f07d00fa",
   "tree": {
-    "contentHash": "84a03c1ae164",
-    "anchorHash": "721994adad68",
+    "contentHash": "4ed390574401",
+    "anchorHash": "4d277bc0b744",
     "children": {
       "frontmatter:title": {
         "contentHash": "b107179d24eb",
@@ -229,8 +229,8 @@
         ]
       },
       "write-app": {
-        "contentHash": "8778df6fac96",
-        "anchorHash": "c98785c45459",
+        "contentHash": "7cff2d1fdf13",
+        "anchorHash": "4e9a7bfc0074",
         "labelHash": "36de9c6ce2ed",
         "children": {
           "_label": {
@@ -394,8 +394,8 @@
             ]
           },
           "how-the-program-works": {
-            "contentHash": "344269b89d84",
-            "anchorHash": "e540b358e2ea",
+            "contentHash": "31bc7bc470e4",
+            "anchorHash": "93a6c7ed147f",
             "labelHash": "ba79ca19a35f",
             "children": {
               "_label": {
@@ -403,7 +403,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "wasm": {
-                "contentHash": "2b990d7a838c",
+                "contentHash": "2414b53d3a19",
                 "anchorHash": "ba80087bea46",
                 "labelHash": "c26a61372052",
                 "children": {
@@ -919,8 +919,8 @@
                 ]
               },
               "ui": {
-                "contentHash": "425eee24d1fb",
-                "anchorHash": "ad9fe99479c9",
+                "contentHash": "d6396136d306",
+                "anchorHash": "5c5ceb5cc05e",
                 "labelHash": "e8b54c409814",
                 "children": {
                   "_label": {
@@ -1207,5 +1207,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

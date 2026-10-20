@@ -45,7 +45,7 @@ Nhưng lợi ích của một hệ thống phần thưởng tốt hơn cho các 
 
 Các khối dữ liệu cung cấp [tính khả dụng của dữ liệu](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) cho các L2. Chúng đã được giới thiệu trong [bản nâng cấp mạng lưới trước đó](/roadmap/dencun/). 
 
-Hiện tại, mạng lưới nhắm mục tiêu trung bình 3 khối dữ liệu mỗi khối với tối đa 6 khối dữ liệu. Với [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), số lượng khối dữ liệu trung bình sẽ được tăng lên 6, với tối đa 9 khối dữ liệu mỗi khối, dẫn đến việc tăng dung lượng cho các bản cuộn Ethereum. EIP này giúp thu hẹp khoảng cách cho đến khi [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) cho phép số lượng khối dữ liệu thậm chí còn cao hơn.
+Trước Pectra, mạng lưới nhắm mục tiêu trung bình 3 khối dữ liệu mỗi khối với tối đa là 6. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) đã nâng mục tiêu lên 6 và tối đa lên 9 cho mỗi khối, làm tăng dung lượng cho các bản cuộn Ethereum. Nó đã lấp đầy khoảng trống cho đến khi có [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), tính năng được phát hành trong [Fusaka](/roadmap/fusaka/) và cho phép số lượng khối dữ liệu thậm chí còn cao hơn.
 
 ### Tăng chi phí dữ liệu lệnh gọi {#7623}
 

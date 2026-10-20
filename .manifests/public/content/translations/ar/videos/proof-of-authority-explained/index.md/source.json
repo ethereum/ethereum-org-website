@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/proof-of-authority-explained/index.md",
-  "generatedAt": "2026-04-29T00:00:07.353Z",
-  "rootHash": "af0ef97b7042",
+  "generatedAt": "2026-09-30T19:15:34.405Z",
+  "rootHash": "a212c5e68d46",
   "tree": {
-    "contentHash": "61850487b214",
-    "anchorHash": "f718265614d4",
+    "contentHash": "cdfac4ffa5db",
+    "anchorHash": "28301c2170a4",
     "children": {
       "frontmatter:title": {
         "contentHash": "f19abfcb4c61",
@@ -36,22 +36,14 @@
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "c848bb26e88c",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "c983c585ac3c"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "694d85cd3c7a"
+            "anchorHash": "3ddeb596fa81"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -215,5 +207,5 @@
       "what-comes-next-519"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

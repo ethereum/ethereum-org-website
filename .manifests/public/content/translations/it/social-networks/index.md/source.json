@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/social-networks/index.md",
-  "generatedAt": "2026-06-17T01:13:53.191Z",
-  "rootHash": "910f9afc26e6",
+  "generatedAt": "2026-09-30T18:34:05.005Z",
+  "rootHash": "ffaae271d9fb",
   "tree": {
-    "contentHash": "d56894243fa3",
+    "contentHash": "9f4c0651581c",
     "anchorHash": "473580fbc673",
     "children": {
       "frontmatter:title": {
@@ -226,7 +226,7 @@
         ]
       },
       "ethereum-social-networks": {
-        "contentHash": "1501c6dce18c",
+        "contentHash": "b8a2210d062c",
         "anchorHash": "ee2477d7b04d",
         "labelHash": "51f8f6ca8f22",
         "children": {
@@ -327,7 +327,7 @@
             ]
           },
           "farcaster": {
-            "contentHash": "f19a2ecca743",
+            "contentHash": "dfe580e74ed1",
             "anchorHash": "ff5280f58626",
             "labelHash": "03cd6d0ad1aa",
             "children": {
@@ -340,7 +340,7 @@
                 "anchorHash": "1b0bb6f317ff"
               },
               "prose:1": {
-                "contentHash": "b17d8255d254",
+                "contentHash": "8e112d5b6dc5",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -862,5 +862,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

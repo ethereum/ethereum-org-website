@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/accounts/index.md",
-  "generatedAt": "2026-08-07T06:09:49.484Z",
+  "generatedAt": "2026-09-25T23:23:17.587Z",
   "rootHash": "91539c921316",
   "tree": {
     "contentHash": "864810c9518f",
@@ -569,5 +569,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "027a25f99fe67512f2702ac590d965956a33f462"
 }

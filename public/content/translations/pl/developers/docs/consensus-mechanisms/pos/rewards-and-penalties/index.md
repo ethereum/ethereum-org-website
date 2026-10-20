@@ -18,7 +18,7 @@ Czytaj dalej, aby poznać więcej szczegółów...
 
 ### Nagrody {#rewards-2}
 
-Walidatorzy otrzymują nagrody, gdy oddają głosy zgodne z większością innych walidatorów, gdy proponują bloki i gdy uczestniczą w komitetach synchronizacyjnych. Wartość nagród w każdej epoce jest obliczana na podstawie `base_reward`. Jest to jednostka bazowa, od której obliczane są inne nagrody. `base_reward` reprezentuje średnią nagrodę otrzymywaną przez walidatora w optymalnych warunkach na epokę. Oblicza się to na podstawie salda efektywnego walidatora i całkowitej liczby aktywnych walidatorów w następujący sposób:
+Walidatorzy otrzymują nagrody, gdy oddają głosy zgodne z większością innych walidatorów, gdy proponują bloki i gdy uczestniczą w komitetach synchronizacyjnych. Wartość nagród w każdej epoce jest obliczana na podstawie `base_reward`. Jest to jednostka bazowa, na podstawie której obliczane są inne nagrody. `base_reward` reprezentuje średnią nagrodę otrzymywaną przez walidatora w optymalnych warunkach na epokę. Jest ona obliczana na podstawie salda efektywnego walidatora i całkowitej liczby aktywnych walidatorów w następujący sposób:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 gdzie `base_reward_factor` wynosi 64, `base_rewards_per_epoch` wynosi 4, a `sum(active balance)` to całkowity stakowany ether wszystkich aktywnych walidatorów.
 
-Oznacza to, że nagroda bazowa jest proporcjonalna do salda efektywnego walidatora i odwrotnie proporcjonalna do liczby walidatorów w sieci. Im więcej walidatorów, tym większa ogólna emisja (ponieważ `sqrt(N)`), ale mniejsza `base_reward` na walidatora (ponieważ `1/sqrt(N)`). Czynniki te wpływają na APR dla węzła stakującego. Przeczytaj uzasadnienie tego w [notatkach Vitalika](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Oznacza to, że nagroda bazowa jest proporcjonalna do salda efektywnego walidatora i odwrotnie proporcjonalna do liczby walidatorów w sieci. Im więcej walidatorów, tym większa całkowita emisja (jako `sqrt(N)`), ale mniejsza `base_reward` na walidatora (jako `1/sqrt(N)`). Czynniki te wpływają na APR dla węzła stakującego. Przeczytaj uzasadnienie tego w [notatkach Vitalika](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 Całkowita nagroda jest następnie obliczana jako suma pięciu składników, z których każdy ma wagę określającą, ile dany składnik dodaje do całkowitej nagrody. Składniki te to:
 
-```
-1. source vote: walidator oddał w terminie głos na prawidłowy punkt kontrolny źródła
-2. target vote: walidator oddał w terminie głos na prawidłowy punkt kontrolny celu
-3. head vote: walidator oddał w terminie głos na prawidłowy blok czołowy
-4. sync committee reward: walidator uczestniczył w komitecie synchronizacyjnym
-5. proposer reward: walidator zaproponował blok w prawidłowym slocie
+```text
+1. głos na źródło: walidator oddał w terminie głos na prawidłowy punkt kontrolny źródła
+2. głos na cel: walidator oddał w terminie głos na prawidłowy punkt kontrolny celu
+3. głos na czoło: walidator oddał w terminie głos na prawidłowy blok czołowy
+4. nagroda komitetu synchronizacyjnego: walidator uczestniczył w komitecie synchronizacyjnym
+5. nagroda proponującego: walidator zaproponował blok w prawidłowym slocie
 ```
 
 Wagi dla każdego składnika są następujące:
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Suma tych wag wynosi 64. Nagroda jest obliczana jako suma odpowiednich wag podzielona przez 64. Walidator, który oddał w terminie głosy na źródło, cel i czoło, zaproponował blok i uczestniczył w komitecie synchronizacyjnym, mógłby otrzymać `64/64 * base_reward == base_reward`. Jednak walidator zazwyczaj nie jest proponującym blok, więc jego maksymalna nagroda wynosi `64-8 /64 * base_reward == 7/8 * base_reward`. Walidatorzy, którzy nie są ani proponującymi blok, ani nie należą do komitetu synchronizacyjnego, mogą otrzymać `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Suma tych wag wynosi 64. Nagroda jest obliczana jako suma odpowiednich wag podzielona przez 64. Walidator, który oddał w terminie głosy na źródło, cel i czoło, zaproponował blok i uczestniczył w komitecie synchronizacyjnym, mógłby otrzymać `64/64 * base_reward == base_reward`. Jednakże walidator zazwyczaj nie jest proponującym blok, więc jego maksymalna nagroda wynosi `64-8 /64 * base_reward == 7/8 * base_reward`. Walidatorzy, którzy nie są ani proponującymi blok, ani nie należą do komitetu synchronizacyjnego, mogą otrzymać `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Dodatkowa nagroda jest dodawana w celu zachęcenia do szybkich poświadczeń. Jest to `inclusion_delay_reward`. Ma ona wartość równą `base_reward` pomnożonej przez `1/delay`, gdzie `delay` to liczba slotów oddzielających propozycję bloku od poświadczenia. Na przykład, jeśli poświadczenie zostanie przesłane w ciągu jednego slotu od propozycji bloku, poświadczający otrzymuje `base_reward * 1/1 == base_reward`. Jeśli poświadczenie dotrze w następnym slocie, poświadczający otrzymuje `base_reward * 1/2` i tak dalej.
+Dodatkowa nagroda jest dodawana, aby zachęcić do szybkich poświadczeń. Jest to `inclusion_delay_reward`. Ma ona wartość równą `base_reward` pomnożonej przez `1/delay`, gdzie `delay` to liczba slotów oddzielających propozycję bloku od poświadczenia. Na przykład, jeśli poświadczenie zostanie przesłane w ciągu jednego slotu od propozycji bloku, poświadczający otrzymuje `base_reward * 1/1 == base_reward`. Jeśli poświadczenie dotrze w następnym slocie, poświadczający otrzymuje `base_reward * 1/2` i tak dalej.
 
-Proponujący blok otrzymują `8 / 64 * base_reward` za **każde ważne poświadczenie** zawarte w bloku, więc rzeczywista wartość nagrody skaluje się wraz z liczbą poświadczających walidatorów. Proponujący blok mogą również zwiększyć swoją nagrodę, dołączając do proponowanego bloku dowody niewłaściwego zachowania innych walidatorów. Te nagrody to „marchewki”, które zachęcają walidatorów do uczciwości. Proponujący blok, który uwzględni cięcie, zostanie nagrodzony `slashed_validators_effective_balance / 512`.
+Proponujący blok otrzymują `8 / 64 * base_reward` za **każde ważne poświadczenie** zawarte w bloku, więc rzeczywista wartość nagrody skaluje się z liczbą poświadczających walidatorów. Proponujący blok mogą również zwiększyć swoją nagrodę, dołączając do proponowanego bloku dowody niewłaściwego zachowania innych walidatorów. Te nagrody to „marchewki”, które zachęcają walidatorów do uczciwości. Proponujący blok, który uwzględni cięcie, zostanie nagrodzony wartością `slashed_validators_effective_balance / 512`.
 
 ### Kary {#penalties}
 

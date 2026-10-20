@@ -142,7 +142,7 @@ Proof-of-stake based:
 **Arweave - _Arweave is a dStorage platform for storing data._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Documentation](https://docs.arweave.org/info/)
+- [Documentation](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs is a proof-of-stake dStorage platform with sharding and blobbers._**

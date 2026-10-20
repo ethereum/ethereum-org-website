@@ -7,8 +7,7 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "blockchain"
-  - "cryptography"
+  - "how-ethereum-works"
 format: presentation
 author: "ஆண்டர்ஸ் பிரவுன்வொர்த்"
 breadcrumb: "தொகுதிச்சங்கிலி 101"

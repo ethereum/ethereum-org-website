@@ -2,7 +2,6 @@ import { ReactNode } from "react"
 import type { Metadata } from "next"
 import * as Sentry from "@sentry/nextjs"
 
-import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 type Props = {

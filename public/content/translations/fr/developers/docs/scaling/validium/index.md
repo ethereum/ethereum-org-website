@@ -101,11 +101,11 @@ Dans un système de disponibilité des données avec mise, n'importe qui peut ê
 
 ## Volitions et validium {#volitions-and-validium}
 
-Les validiums offrent de nombreux avantages mais s'accompagnent de compromis (notamment la disponibilité des données). Mais, comme pour de nombreuses solutions de mise à l'échelle, les validiums sont adaptés à des cas d'utilisation spécifiques, c'est pourquoi les volitions ont été créées.
+Les validiums offrent de nombreux avantages mais s'accompagnent de compromis (notamment en matière de disponibilité des données). Cependant, comme pour de nombreuses solutions de mise à l'échelle, les validiums sont adaptés à des cas d'utilisation spécifiques, c'est pourquoi les volitions ont été créées.
 
-Les volitions combinent un ZK-rollup et une chaîne validium et permettent aux utilisateurs de basculer entre les deux solutions de mise à l'échelle. Avec les volitions, les utilisateurs peuvent tirer parti de la disponibilité des données hors chaîne du validium pour certaines transactions, tout en conservant la liberté de passer à une solution de disponibilité des données onchain (ZK-rollup) si nécessaire. Cela donne essentiellement aux utilisateurs la liberté de choisir les compromis dictés par leur situation unique.
+Les volitions combinent un ZK-rollup et une chaîne validium et permettent aux utilisateurs de basculer entre les deux solutions de mise à l'échelle. Avec les volitions, les utilisateurs peuvent tirer parti de la disponibilité des données hors chaîne du validium pour certaines transactions, tout en conservant la liberté de passer à une solution de disponibilité des données onchain (ZK-rollup) si nécessaire. Cela donne essentiellement aux utilisateurs la liberté de choisir les compromis dictés par leur situation particulière.
 
-Un échange décentralisé (DEX) peut préférer utiliser l'infrastructure évolutive et privée d'un validium pour les transactions de grande valeur. Il peut également utiliser un ZK-rollup pour les utilisateurs qui souhaitent les garanties de sécurité plus élevées et l'absence de confiance requise d'un ZK-rollup.
+Un échange décentralisé (DEX) peut préférer la capacité de mise à l'échelle d'un validium, ainsi que sa capacité à restreindre l'accès public aux données de transaction, pour les transactions de grande valeur. Conserver les données hors chaîne limite le nombre de personnes pouvant les voir, mais cela ne rend pas en soi les transactions cryptographiquement privées : la confidentialité dépend des contrôles d'accès et des mécanismes de confidentialité du déploiement, et les données restent visibles pour l'opérateur et pour quiconque les détient. Un DEX peut également utiliser un ZK-rollup pour les utilisateurs qui souhaitent bénéficier des garanties de sécurité plus élevées et de l'absence de confiance requise d'un ZK-rollup.
 
 ## Validiums et compatibilité EVM {#validiums-and-evm-compatibility}
 

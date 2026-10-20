@@ -7,7 +7,7 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "identity"
+  - "use-cases"
 format: explainer
 author: "마이크로소프트 시큐리티"
 breadcrumb: "탈중앙화 신원증명"

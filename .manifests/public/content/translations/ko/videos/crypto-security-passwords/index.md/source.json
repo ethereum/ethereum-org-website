@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/crypto-security-passwords/index.md",
-  "generatedAt": "2026-04-28T23:11:38.258Z",
-  "rootHash": "f9c965d49851",
+  "generatedAt": "2026-09-30T18:35:26.149Z",
+  "rootHash": "7f0598bbc937",
   "tree": {
-    "contentHash": "e8c6f7ee72ea",
-    "anchorHash": "e18752e9889e",
+    "contentHash": "9bcf2ade3e42",
+    "anchorHash": "712949860616",
     "children": {
       "frontmatter:title": {
         "contentHash": "c43b2270b153",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "db9cb6637e51",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "b68fe80e108a",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "5d2d3ceb7abe"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "b9d906284539"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -555,5 +547,5 @@
       "closing-15725"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "locale": "ur",
+  "translatedAt": "2026-10-14T17:34:39.325Z",
+  "englishManifestHash": "6e3feb7405dd",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tvl}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-10-14T17:34:39.325Z",
+      "status": "success"
+    }
+  }
+}

@@ -8653,7 +8653,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/89507661?v=4",
       "profile": "https://github.com/pankajjagtapp",
       "contributions": [
-        "doc"
+        "doc",
+        "tool"
       ]
     },
     {
@@ -14520,6 +14521,69 @@
       "name": "PepCoiro",
       "avatar_url": "https://avatars.githubusercontent.com/u/313789529?v=4",
       "profile": "https://github.com/pepcoiro",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Web3Dave",
+      "name": "David",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33478820?v=4",
+      "profile": "https://pingify.io",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "toyeshhm",
+      "name": "Toyeshh Medikonda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184831353?v=4",
+      "profile": "http://toyeshh.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "arunimshukla",
+      "name": "Arunim Shukla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54760103?v=4",
+      "profile": "https://discord.com/invite/JTkeNXX",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "DamianFigiel",
+      "name": "Damian Figiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68967763?v=4",
+      "profile": "https://github.com/DamianFigiel",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "koko1123",
+      "name": "Amlandeep Bhadra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7771746?v=4",
+      "profile": "https://www.linkedin.com/in/amlandeep-bhadra-52678964",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "supertj",
+      "name": "Super Lede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20788648?v=4",
+      "profile": "https://backupdrill.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "mikeua",
+      "name": "mikeua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2239742?v=4",
+      "profile": "https://github.com/mikeua",
       "contributions": [
         "bug"
       ]

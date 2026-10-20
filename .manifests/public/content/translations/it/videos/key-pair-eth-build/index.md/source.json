@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/key-pair-eth-build/index.md",
-  "generatedAt": "2026-04-28T23:45:35.424Z",
-  "rootHash": "314d65b7584b",
+  "generatedAt": "2026-09-30T18:41:10.073Z",
+  "rootHash": "cfa5e5928fb3",
   "tree": {
-    "contentHash": "08bf036ee2f1",
-    "anchorHash": "592cf45b5c0a",
+    "contentHash": "d878c378e4ff",
+    "anchorHash": "cbb394eb376e",
     "children": {
       "frontmatter:title": {
         "contentHash": "ce8d1345ea33",
@@ -36,22 +36,14 @@
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "f5818652a990",
-        "anchorHash": "cce7599c526a",
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
         "children": {
           "0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "bc62a3c14fec"
-          },
-          "1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "e06554818e90"
+            "anchorHash": "3ddeb596fa81"
           }
-        },
-        "childrenOrder": [
-          "0",
-          "1"
-        ]
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -175,5 +167,5 @@
       "the-key-property-of-a-key-pair-458"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

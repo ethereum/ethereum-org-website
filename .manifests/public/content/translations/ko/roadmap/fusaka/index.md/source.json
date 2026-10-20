@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/fusaka/index.md",
-  "generatedAt": "2026-07-23T00:16:34.181Z",
-  "rootHash": "9f8dc8c11bba",
+  "generatedAt": "2026-09-30T18:29:46.763Z",
+  "rootHash": "07b668ab22d4",
   "tree": {
-    "contentHash": "9d9ca9be3adc",
+    "contentHash": "8886bd13fece",
     "anchorHash": "2fe8b8927415",
     "children": {
       "frontmatter:title": {
@@ -129,7 +129,7 @@
         }
       },
       "improvements-in-fusaka": {
-        "contentHash": "866200856e8c",
+        "contentHash": "1c3b4ce62571",
         "anchorHash": "4d46d59adc96",
         "labelHash": "fe24a5ee3275",
         "children": {
@@ -317,7 +317,7 @@
             ]
           },
           "scale-l1": {
-            "contentHash": "79e7febfe676",
+            "contentHash": "41e424a663a6",
             "anchorHash": "4caecd1e334f",
             "labelHash": "595782b5e8d2",
             "children": {
@@ -516,7 +516,7 @@
                 ]
               },
               "set-default-gas-limit-to-60-million": {
-                "contentHash": "aabf10d0a572",
+                "contentHash": "4c4c957d94ac",
                 "anchorHash": "29d7a8cc169e",
                 "labelHash": "bdf597a6d433",
                 "children": {
@@ -525,7 +525,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:1": {
-                    "contentHash": "854808654767",
+                    "contentHash": "126ced1f3e98",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:0": {
@@ -773,7 +773,7 @@
         ]
       },
       "faq": {
-        "contentHash": "747d577d40da",
+        "contentHash": "59e3336ee754",
         "anchorHash": "2984f36f83af",
         "labelHash": "dbc468a14b60",
         "children": {
@@ -1043,7 +1043,7 @@
             ]
           },
           "how-does-fusaka-affect-bandwidth-requirements-for-nodes-and-validators": {
-            "contentHash": "e8303925275c",
+            "contentHash": "3dd2c7a0475e",
             "anchorHash": "26c3d92d88b6",
             "labelHash": "1e62415449dc",
             "children": {
@@ -1083,7 +1083,7 @@
                 ]
               },
               "solo-stakers": {
-                "contentHash": "e7ad40734df5",
+                "contentHash": "d8479042567f",
                 "anchorHash": "4b9f7d802648",
                 "labelHash": "99b82be383a1",
                 "children": {
@@ -1092,7 +1092,7 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:0": {
-                    "contentHash": "7ba790e58a94",
+                    "contentHash": "7695f662f004",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
@@ -1415,5 +1415,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

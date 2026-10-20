@@ -4,7 +4,7 @@ description: "Список усіх доступних опкодів для в�
 lang: uk
 ---
 
-## Огляд
+## Огляд {#overview}
 
 Це оновлена версія довідкової сторінки EVM на [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Також використано матеріали з [Жовтої книги](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/) та реалізації [Geth](https://github.com/ethereum/go-ethereum).

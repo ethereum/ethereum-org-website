@@ -7,9 +7,7 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "roadmap"
-  - "pectra"
-  - "staking"
+  - "network-upgrades"
 format: explainer
 author: "பிளாக்டீமன்"
 breadcrumb: "பங்குவைப்பவர்களுக்கான பெக்ட்ரா"

@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js యుటిలిటీ ఫంక్షన్‌లు](https://docs.web3js.org/api/web3-utils)
 - [Ethers యుటిలిటీ ఫంక్షన్‌లు](https://docs.ethers.org/v6/api/utils/)
 
-## అందుబాటులో ఉన్న లైబ్రరీలు
+## అందుబాటులో ఉన్న లైబ్రరీలు {#available-libraries}
 
 **Web3.js -** **_ఎథీరియం JavaScript API._**
 
