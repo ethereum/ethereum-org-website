@@ -94,7 +94,7 @@ test.describe("objects already on our S3 host", () => {
     )
   })
 
-  test("drops a missing object the bucket serves as an HTML page", async () => {
+  test("drops a non-image object stored under an image key", async () => {
     await withHead(
       async () =>
         new Response("<html></html>", {
@@ -105,6 +105,34 @@ test.describe("objects already on our S3 host", () => {
       }
     )
   })
+
+  test("drops an object the bucket reports missing", async () => {
+    await withHead(
+      async () =>
+        new Response(null, {
+          status: 404,
+          headers: { "content-type": "application/xml" },
+        }),
+      async () => {
+        expect(await uploadToS3(existing, "apps/screenshots")).toBeNull()
+      }
+    )
+  })
+
+  for (const status of [403, 503]) {
+    test(`keeps the url on a ${status} HEAD`, async () => {
+      await withHead(
+        async () =>
+          new Response(null, {
+            status,
+            headers: { "content-type": "application/xml" },
+          }),
+        async () => {
+          expect(await uploadToS3(existing, "apps/screenshots")).toBe(existing)
+        }
+      )
+    })
+  }
 
   test("keeps the url when the HEAD itself fails", async () => {
     await withHead(
