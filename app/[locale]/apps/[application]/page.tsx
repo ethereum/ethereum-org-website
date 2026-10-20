@@ -97,6 +97,7 @@ const Page = async (props: {
     (a, b) => Number(b === viewerLanguage) - Number(a === viewerLanguage)
   )
   const lastUpdated = formatTimeAgo(locale, app.lastUpdated)
+  const description = describe(app)
 
   const item: CatalogItem = {
     kind: "app",
@@ -107,7 +108,7 @@ const Page = async (props: {
     screenshots: app.screenshots,
     tags: [{ label: app.category, status: APP_TAG_VARIANTS[app.category] }],
     chains: app.networks as ChainName[],
-    description: describe(app),
+    description,
     primaryLink: { href: app.url, label: tItem("catalog-item-visit-website") },
     socialLinks: [
       toCatalogItemLink("x", app.twitter),
@@ -154,7 +155,9 @@ const Page = async (props: {
         locale={locale}
         app={app}
         contributors={contributors}
-        description={describe(app)}
+        name={t("page-apps-detail-meta-title", { name: app.name })}
+        description={description}
+        sameAs={item.socialLinks.map(({ href }) => href)}
       />
       <I18nProvider locale={locale} messages={messages}>
         <CatalogItemLayout
