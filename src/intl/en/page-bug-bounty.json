@@ -144,6 +144,7 @@
   "bug-bounty-faq-q8-PGP-key": "PGP Key",
   "page-upgrades-bug-bounty-severity-qualifications-title": "Vulnerability severity qualifications",
   "page-upgrades-bug-bounty-severity-qualifications-desc": "Severity is assessed based on each discovered vulnerability's unique ability to do the following:",
+  "page-upgrades-bug-bounty-severity-qualifications-hardware": "Resource-exhaustion impact assumes Ethereum's recommended node hardware (<a>EIP-7870</a>).",
   "page-upgrades-bug-bounty-severity-low-title": "Low severity",
   "page-upgrades-bug-bounty-severity-low-li-1": "Slash <strong>0.01%</strong> of validators",
   "page-upgrades-bug-bounty-severity-low-li-2": "Trivially cause network splits affecting <strong>0.01%</strong> of the network",

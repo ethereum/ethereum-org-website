@@ -21,7 +21,7 @@ If you're looking for the Ethereum blockchain itself, there is no single repo. I
 ## Table of contents
 
 - [How to contribute](#how-to-contribute)
-- [Translation Program](docs/translation-program.md)
+- [Translation Program](https://ethereum.org/contributing/translation-program/)
 - [The ethereum.org website stack](docs/stack.md)
 - [Website conventions / best practices](docs/best-practices.md)
 
@@ -141,7 +141,7 @@ pnpm dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language, e.g., in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
+  - Get **faster** production builds by building only one language, e.g., in your `.env.local` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
   - To build the site in other selected languages too, you need to set them in `NEXT_PUBLIC_BUILD_LOCALES`, eg: `NEXT_PUBLIC_BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
   - To build all languages, simply comment this line out with a hash mark, eg: `# NEXT_PUBLIC_BUILD_LOCALES=`
 
@@ -150,13 +150,17 @@ By default the script will build all the languages (complete list in `i18n.confi
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
 ```sh
+git add path/to/changed-file
+```
+
+```sh
 git commit -m "brief description of changes [Fixes #1234]"
 ```
 
 4. Push to your GitHub account
 
 ```sh
-git push
+git push -u origin HEAD
 ```
 
 ### 5. Submit your PR
@@ -221,7 +225,7 @@ If you haven't contributed yet and would like to earn a POAP/OATs to show your l
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -1422,7 +1426,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ivpavici"><img src="https://avatars.githubusercontent.com/u/2848732?v=4?s=100" width="100px;" alt="Ivan Pavičić"/><br /><sub><b>Ivan Pavičić</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ivpavici" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aivpavici" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Batxent"><img src="https://avatars.githubusercontent.com/u/7824431?v=4?s=100" width="100px;" alt="tommy"/><br /><sub><b>tommy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Batxent" title="Documentation">📖</a> <a href="#translation-Batxent" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@martinyce"><img src="https://avatars.githubusercontent.com/u/8136256?v=4?s=100" width="100px;" alt="Martin Yung"/><br /><sub><b>Martin Yung</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=martinyung" title="Code">💻</a> <a href="#translation-martinyung" title="Translation">🌍</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pankajjagtapp"><img src="https://avatars.githubusercontent.com/u/89507661?v=4?s=100" width="100px;" alt="Pankaj Jagtap"/><br /><sub><b>Pankaj Jagtap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pankajjagtapp" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pankajjagtapp"><img src="https://avatars.githubusercontent.com/u/89507661?v=4?s=100" width="100px;" alt="Pankaj Jagtap"/><br /><sub><b>Pankaj Jagtap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pankajjagtapp" title="Documentation">📖</a> <a href="#tool-pankajjagtapp" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hannsu"><img src="https://avatars.githubusercontent.com/u/20453231?v=4?s=100" width="100px;" alt="nulun"/><br /><sub><b>nulun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hannsu" title="Code">💻</a></td>
     </tr>
     <tr>
@@ -2257,6 +2261,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://pingify.io"><img src="https://avatars.githubusercontent.com/u/33478820?v=4?s=100" width="100px;" alt="David"/><br /><sub><b>David</b></sub></a><br /><a href="#tool-Web3Dave" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://toyeshh.com"><img src="https://avatars.githubusercontent.com/u/184831353?v=4?s=100" width="100px;" alt="Toyeshh Medikonda"/><br /><sub><b>Toyeshh Medikonda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atoyeshhm" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://discord.com/invite/JTkeNXX"><img src="https://avatars.githubusercontent.com/u/54760103?v=4?s=100" width="100px;" alt="Arunim Shukla"/><br /><sub><b>Arunim Shukla</b></sub></a><br /><a href="#maintenance-arunimshukla" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DamianFigiel"><img src="https://avatars.githubusercontent.com/u/68967763?v=4?s=100" width="100px;" alt="Damian Figiel"/><br /><sub><b>Damian Figiel</b></sub></a><br /><a href="#tool-DamianFigiel" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/amlandeep-bhadra-52678964"><img src="https://avatars.githubusercontent.com/u/7771746?v=4?s=100" width="100px;" alt="Amlandeep Bhadra"/><br /><sub><b>Amlandeep Bhadra</b></sub></a><br /><a href="#tool-koko1123" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://backupdrill.com"><img src="https://avatars.githubusercontent.com/u/20788648?v=4?s=100" width="100px;" alt="Super Lede"/><br /><sub><b>Super Lede</b></sub></a><br /><a href="#maintenance-supertj" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

@@ -39,7 +39,7 @@ We are going to compare this token to legitimate ERC-20 tokens. If you are not f
 
 Contracts sometimes need privileged addresses. Contracts that are designed for long term use allow some privileged address to change those addresses, for example to enable the use of a new multisig contract. There are several ways to do this.
 
-The [`HOP` token contract](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) uses the [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable) pattern. The privileged address is kept in storage, in a field called `_owner` (see the third file, `Ownable.sol`).
+The [`HOP` token contract](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) uses the [`Ownable`](https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable) pattern. The privileged address is kept in storage, in a field called `_owner` (see the third file, `Ownable.sol`).
 
 ```solidity
 abstract contract Ownable is Context {

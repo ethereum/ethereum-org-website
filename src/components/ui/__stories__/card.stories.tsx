@@ -21,7 +21,10 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tag } from "@/components/ui/tag"
 
+import uniLogo from "@/public/images/dapps/uni.png"
+import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins.png"
 import heroLandscape from "@/public/images/heroes/guides-hub-hero.jpg"
+import mainnet from "@/public/images/mainnet.png"
 
 const meta = {
   title: "UI / Data Display / Card",
@@ -359,7 +362,7 @@ export const BannerPlacement: Story = {
         <Card>
           <CardHeader>
             <CardBanner fit="contain" background="accent-a">
-              <Image src="/images/mainnet.png" alt="" width={368} height={92} />
+              <Image src={mainnet} alt="" width={368} height={92} />
             </CardBanner>
           </CardHeader>
           <CardContent>
@@ -415,12 +418,7 @@ export const BannerSizes: Story = {
             {size === "base" ? " [default]" : ""}
           </Label>
           <CardBanner size={size} background="accent-a">
-            <Image
-              src="/images/dapps/uni.png"
-              alt=""
-              width={400}
-              height={200}
-            />
+            <Image src={uniLogo} alt="" width={400} height={200} />
           </CardBanner>
         </div>
       ))}
@@ -840,7 +838,7 @@ export const Composites: Story = {
             <CardHeader>
               <CardBanner fit="contain" background="none">
                 <Image
-                  src="/images/developers/speedrun-stablecoins.png"
+                  src={speedrunStablecoins}
                   alt=""
                   width={400}
                   height={200}

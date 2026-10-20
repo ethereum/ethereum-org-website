@@ -1,0 +1,496 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations.json",
+  "generatedAt": "2026-10-14T17:43:16.478Z",
+  "rootHash": "58fbb3c48571",
+  "tree": {
+    "contentHash": "c4fd2b333a10",
+    "anchorHash": "11d3352d0a90",
+    "children": {
+      "page-organizations-adoption-addresses-label": {
+        "contentHash": "cb357833ee86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-adoption-owners-label": {
+        "contentHash": "fc57127e4741",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-adoption-users-label": {
+        "contentHash": "0f29d6a6fa91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-description": {
+        "contentHash": "a22bfbd04702",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-eea-description": {
+        "contentHash": "363557062737",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-eea-name": {
+        "contentHash": "af88017eabe2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-etherealize-description": {
+        "contentHash": "301824b6f74c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-etherealize-name": {
+        "contentHash": "1ca54ea09dc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-ethereum-institutional-description": {
+        "contentHash": "e793357e66c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-ethereum-institutional-name": {
+        "contentHash": "aec243cd2a61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-ethsystems-description": {
+        "contentHash": "0b8c88ba4d83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-ethsystems-name": {
+        "contentHash": "8a56b6ccea92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-experts-title": {
+        "contentHash": "a5ca4c21d4f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-adoption-description": {
+        "contentHash": "eed51b5da638",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-adoption-title": {
+        "contentHash": "5038e0ea3320",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-description": {
+        "contentHash": "db01d140edf7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-cta": {
+        "contentHash": "a67e688a8a4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-description": {
+        "contentHash": "e739a28930b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-item-1": {
+        "contentHash": "77e5519bdc95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-item-2": {
+        "contentHash": "55e3ac605241",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-item-3": {
+        "contentHash": "fb70a35100dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-enterprise-title": {
+        "contentHash": "3fbe5ed156f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-cta": {
+        "contentHash": "73bcd2eec277",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-description": {
+        "contentHash": "05f775def98e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-item-1": {
+        "contentHash": "364a10d400ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-item-2": {
+        "contentHash": "9e3bd365a57a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-item-3": {
+        "contentHash": "34397af14419",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-founders-title": {
+        "contentHash": "75f977702daa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-cta": {
+        "contentHash": "71401d43e15f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-description": {
+        "contentHash": "c51cc874292a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-item-1": {
+        "contentHash": "b6152c4204b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-item-2": {
+        "contentHash": "afe7a08f5e44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-item-3": {
+        "contentHash": "7c56e0fc6775",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-public-sector-title": {
+        "contentHash": "0a599fcd9f24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-cta": {
+        "contentHash": "11d4286cdbf4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-description": {
+        "contentHash": "67e96cb21e60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-item-1": {
+        "contentHash": "5ea2f708a0ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-item-2": {
+        "contentHash": "ec9b9d0bdc93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-item-3": {
+        "contentHash": "4814f48b5fa4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-small-business-title": {
+        "contentHash": "be99e23c9304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-audiences-title": {
+        "contentHash": "dab40cb06e74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-1-answer": {
+        "contentHash": "7ac7c930185c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-1-question": {
+        "contentHash": "27c1c29bbebd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-2-answer": {
+        "contentHash": "d6950a67ba6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-2-question": {
+        "contentHash": "86147a5e22e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-3-answer": {
+        "contentHash": "a8502dce51c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-3-question": {
+        "contentHash": "3e961eaf1428",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-4-answer": {
+        "contentHash": "f0a3478914ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-4-question": {
+        "contentHash": "4505cf3d8cd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-faq-title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-hero-description": {
+        "contentHash": "6e47b27e969f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-hero-title": {
+        "contentHash": "dc3921d866d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-meta-description": {
+        "contentHash": "0baeef698e36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-meta-title": {
+        "contentHash": "c22615f77fa4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-reference-a16z": {
+        "contentHash": "ca04fbeaa5b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ff86fed53881",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-hub-what-custom-description": {
+        "contentHash": "212d8848b8a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-custom-title": {
+        "contentHash": "1266ef3f5b79",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-description": {
+        "contentHash": "d64f02c8df9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-identity-description": {
+        "contentHash": "8a61d2019834",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-identity-title": {
+        "contentHash": "8ff1c71622fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-payments-description": {
+        "contentHash": "c7738f0c6388",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-payments-title": {
+        "contentHash": "06f12e4a5136",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-title": {
+        "contentHash": "578d144bc300",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-tokenized-description": {
+        "contentHash": "2313b52ffca8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-what-tokenized-title": {
+        "contentHash": "c17cf8aec270",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-description": {
+        "contentHash": "c1adc87befc7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-interoperable-description": {
+        "contentHash": "4aac09ba1aa9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-interoperable-title": {
+        "contentHash": "1a9a1d2b55f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-neutral-description": {
+        "contentHash": "65467929d1d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-neutral-title": {
+        "contentHash": "6d1392f174b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-programmable-description": {
+        "contentHash": "b12bfe5e8ff2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-programmable-title": {
+        "contentHash": "f40fc39e66cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-resilient-description": {
+        "contentHash": "44e9b24715c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-resilient-title": {
+        "contentHash": "94ae5f047156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-hub-why-title": {
+        "contentHash": "6f1f10e94619",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-description": {
+        "contentHash": "fe2990111fc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-description": {
+        "contentHash": "e739a28930b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-hub-description": {
+        "contentHash": "a7caaaa93c5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-hub-title": {
+        "contentHash": "8bd337bb70ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-l2s-description": {
+        "contentHash": "e811e8b21726",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-l2s-title": {
+        "contentHash": "55e3ac605241",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-enterprise-title": {
+        "contentHash": "8bd337bb70ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-founders-description": {
+        "contentHash": "476b21c94cf9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-founders-title": {
+        "contentHash": "ca2176d110c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-onchain-finance-description": {
+        "contentHash": "3932f5aa0ddb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-onchain-finance-title": {
+        "contentHash": "b08b732c9464",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-privacy-description": {
+        "contentHash": "b5154cf43710",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-privacy-title": {
+        "contentHash": "85e8ede3e064",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-recommended": {
+        "contentHash": "d70604e84304",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-small-business-description": {
+        "contentHash": "67e96cb21e60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-small-business-title": {
+        "contentHash": "44178baf81be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-subpages-description": {
+        "contentHash": "aba6e0d05896",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-title": {
+        "contentHash": "5dac0b47f552",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-tokenization-description": {
+        "contentHash": "9d97ffc073d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-pathways-tokenization-title": {
+        "contentHash": "efa97c915ed6",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-adoption-addresses-label",
+      "page-organizations-adoption-owners-label",
+      "page-organizations-adoption-users-label",
+      "page-organizations-experts-description",
+      "page-organizations-experts-eea-description",
+      "page-organizations-experts-eea-name",
+      "page-organizations-experts-etherealize-description",
+      "page-organizations-experts-etherealize-name",
+      "page-organizations-experts-ethereum-institutional-description",
+      "page-organizations-experts-ethereum-institutional-name",
+      "page-organizations-experts-ethsystems-description",
+      "page-organizations-experts-ethsystems-name",
+      "page-organizations-experts-title",
+      "page-organizations-hub-adoption-description",
+      "page-organizations-hub-adoption-title",
+      "page-organizations-hub-audiences-description",
+      "page-organizations-hub-audiences-enterprise-cta",
+      "page-organizations-hub-audiences-enterprise-description",
+      "page-organizations-hub-audiences-enterprise-item-1",
+      "page-organizations-hub-audiences-enterprise-item-2",
+      "page-organizations-hub-audiences-enterprise-item-3",
+      "page-organizations-hub-audiences-enterprise-title",
+      "page-organizations-hub-audiences-founders-cta",
+      "page-organizations-hub-audiences-founders-description",
+      "page-organizations-hub-audiences-founders-item-1",
+      "page-organizations-hub-audiences-founders-item-2",
+      "page-organizations-hub-audiences-founders-item-3",
+      "page-organizations-hub-audiences-founders-title",
+      "page-organizations-hub-audiences-public-sector-cta",
+      "page-organizations-hub-audiences-public-sector-description",
+      "page-organizations-hub-audiences-public-sector-item-1",
+      "page-organizations-hub-audiences-public-sector-item-2",
+      "page-organizations-hub-audiences-public-sector-item-3",
+      "page-organizations-hub-audiences-public-sector-title",
+      "page-organizations-hub-audiences-small-business-cta",
+      "page-organizations-hub-audiences-small-business-description",
+      "page-organizations-hub-audiences-small-business-item-1",
+      "page-organizations-hub-audiences-small-business-item-2",
+      "page-organizations-hub-audiences-small-business-item-3",
+      "page-organizations-hub-audiences-small-business-title",
+      "page-organizations-hub-audiences-title",
+      "page-organizations-hub-faq-1-answer",
+      "page-organizations-hub-faq-1-question",
+      "page-organizations-hub-faq-2-answer",
+      "page-organizations-hub-faq-2-question",
+      "page-organizations-hub-faq-3-answer",
+      "page-organizations-hub-faq-3-question",
+      "page-organizations-hub-faq-4-answer",
+      "page-organizations-hub-faq-4-question",
+      "page-organizations-hub-faq-title",
+      "page-organizations-hub-hero-description",
+      "page-organizations-hub-hero-title",
+      "page-organizations-hub-meta-description",
+      "page-organizations-hub-meta-title",
+      "page-organizations-hub-reference-a16z",
+      "page-organizations-hub-what-custom-description",
+      "page-organizations-hub-what-custom-title",
+      "page-organizations-hub-what-description",
+      "page-organizations-hub-what-identity-description",
+      "page-organizations-hub-what-identity-title",
+      "page-organizations-hub-what-payments-description",
+      "page-organizations-hub-what-payments-title",
+      "page-organizations-hub-what-title",
+      "page-organizations-hub-what-tokenized-description",
+      "page-organizations-hub-what-tokenized-title",
+      "page-organizations-hub-why-description",
+      "page-organizations-hub-why-interoperable-description",
+      "page-organizations-hub-why-interoperable-title",
+      "page-organizations-hub-why-neutral-description",
+      "page-organizations-hub-why-neutral-title",
+      "page-organizations-hub-why-programmable-description",
+      "page-organizations-hub-why-programmable-title",
+      "page-organizations-hub-why-resilient-description",
+      "page-organizations-hub-why-resilient-title",
+      "page-organizations-hub-why-title",
+      "page-organizations-pathways-description",
+      "page-organizations-pathways-enterprise-description",
+      "page-organizations-pathways-enterprise-hub-description",
+      "page-organizations-pathways-enterprise-hub-title",
+      "page-organizations-pathways-enterprise-l2s-description",
+      "page-organizations-pathways-enterprise-l2s-title",
+      "page-organizations-pathways-enterprise-title",
+      "page-organizations-pathways-founders-description",
+      "page-organizations-pathways-founders-title",
+      "page-organizations-pathways-onchain-finance-description",
+      "page-organizations-pathways-onchain-finance-title",
+      "page-organizations-pathways-privacy-description",
+      "page-organizations-pathways-privacy-title",
+      "page-organizations-pathways-recommended",
+      "page-organizations-pathways-small-business-description",
+      "page-organizations-pathways-small-business-title",
+      "page-organizations-pathways-subpages-description",
+      "page-organizations-pathways-title",
+      "page-organizations-pathways-tokenization-description",
+      "page-organizations-pathways-tokenization-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

@@ -8653,7 +8653,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/89507661?v=4",
       "profile": "https://github.com/pankajjagtapp",
       "contributions": [
-        "doc"
+        "doc",
+        "tool"
       ]
     },
     {
@@ -14547,6 +14548,33 @@
       "name": "Arunim Shukla",
       "avatar_url": "https://avatars.githubusercontent.com/u/54760103?v=4",
       "profile": "https://discord.com/invite/JTkeNXX",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "DamianFigiel",
+      "name": "Damian Figiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68967763?v=4",
+      "profile": "https://github.com/DamianFigiel",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "koko1123",
+      "name": "Amlandeep Bhadra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7771746?v=4",
+      "profile": "https://www.linkedin.com/in/amlandeep-bhadra-52678964",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "supertj",
+      "name": "Super Lede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20788648?v=4",
+      "profile": "https://backupdrill.com",
       "contributions": [
         "maintenance"
       ]

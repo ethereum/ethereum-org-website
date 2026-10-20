@@ -102,12 +102,7 @@ export default async function VideoPageJsonLD({
         isAccessibleForFree: true,
         isFamilyFriendly: true,
         // Add transcript as plain text if available
-        transcript: transcript
-          ? stripMarkdown(transcript, true)
-              // Escape < and / to prevent script injection (XSS protection)
-              .replace(/</g, "\\u003c")
-              .replace(/\//g, "\\u002f")
-          : undefined,
+        transcript: transcript ? stripMarkdown(transcript, true) : undefined,
       },
     ],
   }

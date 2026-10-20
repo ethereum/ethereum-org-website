@@ -19,6 +19,7 @@ export default async function OpenSourcePageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-open-source")
+  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/open-source/`)
 
@@ -57,6 +58,12 @@ export default async function OpenSourcePageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
+              name: tCommon("values"),
+              item: normalizeUrlForJsonLd(locale, "/values/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
               name: t("page-open-source-title"),
               item: url,
             },

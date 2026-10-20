@@ -56,7 +56,6 @@ Você pode baixar e criar uma conta MetaMask gratuitamente [aqui](https://metama
 Para implantar seu contrato inteligente na rede de teste, você precisará de um pouco de ETH falso. Para obter ETH na rede Sepolia, acesse um faucet da Sepolia e insira o endereço da sua conta Sepolia. Consulte a [página de redes de teste](/developers/docs/networks/#sepolia) para ver uma lista de opções para experimentar:
 
 _Nota: devido ao congestionamento da rede, isso pode demorar um pouco._
-``
 ### Passo 5: Verificar seu saldo {#step-5-check-your-balance}
 
 Para verificar novamente se o ETH está na sua carteira, vamos fazer uma solicitação [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) usando a [ferramenta sandbox do Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Isso retornará a quantidade de ETH em nossa carteira. Para saber mais, confira o [breve tutorial do Alchemy sobre como usar a ferramenta composer](https://youtu.be/r6sjRxBZJuU).

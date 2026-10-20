@@ -62,6 +62,8 @@ function trimResourceForFrontend(
     return {
       href: repoEntry.href,
       stargazers: repoEntry.stargazers,
+      ...(repoEntry.license ? { license: repoEntry.license } : {}),
+      ...(repoEntry.isArchived ? { isArchived: true } : {}),
     }
   })
 
@@ -89,6 +91,7 @@ function trimResourceForFrontend(
     ...(resource.website ? { website: resource.website } : {}),
     subcategory_id: resource.subcategory_id,
     ...(resource.crops_native === true ? { crops_native: true } : {}),
+    ...(resource.updated_at ? { updated_at: resource.updated_at } : {}),
     ...(typeof resource.resource_score === "number"
       ? { resource_score: resource.resource_score }
       : {}),
