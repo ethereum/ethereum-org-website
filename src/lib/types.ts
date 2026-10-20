@@ -822,9 +822,9 @@ export type WalletData = {
   name: string
   /** Set only to keep a URL stable across a rename; defaults to slugified name. */
   slug?: string
-  /** Optional forever — cards and search degrade gracefully without it. */
-  description?: string
   image: StaticImageData
+  banner?: StaticImageData
+  screenshots?: StaticImageData[]
   twBackgroundColor: string
   twGradiantBrandColor: string
   url: string
