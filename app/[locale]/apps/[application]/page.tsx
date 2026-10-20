@@ -23,7 +23,7 @@ import I18nProvider from "@/components/I18nProvider"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatTimeAgo, getLocaleYear, isValidDate } from "@/lib/utils/date"
+import { formatDate, getLocaleYear, isValidDate } from "@/lib/utils/date"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -96,7 +96,7 @@ const Page = async (props: {
   const languages = formatLanguageNames(app.languages).sort(
     (a, b) => Number(b === viewerLanguage) - Number(a === viewerLanguage)
   )
-  const lastUpdated = formatTimeAgo(locale, app.lastUpdated)
+  const reviewed = formatDate(app.lastUpdated, locale, { day: undefined })
   const description = describe(app)
 
   const item: CatalogItem = {
@@ -128,10 +128,10 @@ const Page = async (props: {
         label: t("page-apps-info-languages"),
         value: <CatalogItemLanguages names={languages} />,
       },
-      lastUpdated && {
-        label: t("page-apps-info-last-updated"),
-        value: lastUpdated,
-        tooltip: t("page-apps-info-last-updated-tooltip"),
+      reviewed && {
+        label: t("page-apps-info-listing-reviewed"),
+        value: reviewed,
+        tooltip: t("page-apps-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [
