@@ -2,7 +2,7 @@
   "wallet-keystone-description": "Keystone is an open-source hardware wallet. It pairs with software wallets such as MetaMask and Rabby to sign transactions offline.",
   "wallet-railway-wallet-description": "Railway Wallet is a privacy-focused wallet that integrates the Railgun protocol on Ethereum and other EVM chains, for private transfers and private access to DeFi.",
   "wallet-ready-wallet-description": "Ready, formerly Argent, is a self-custodial smart account wallet for Starknet, available on mobile and in the browser. The mobile app uses guardians for account recovery instead of a seed phrase.",
-  "wallet-coinbase-wallet-description": "Coinbase Wallet is a self-custodial wallet for EVM networks and layer 2 networks, with NFT support, available as a browser extension and as iOS and Android apps.",
+  "wallet-coinbase-wallet-description": "Coinbase Wallet is a self-custodial wallet for EVM networks, including layer 2 networks, with NFT support, available as a browser extension and as iOS and Android apps.",
   "wallet-frame-description": "Frame is a privacy-focused Ethereum wallet that runs natively on macOS, Windows and Linux.",
   "wallet-metamask-description": "MetaMask is a self-custodial wallet available as a browser extension and mobile app, used to hold assets and connect to Ethereum applications.",
   "wallet-safe-description": "Safe is an open-source smart account wallet that requires a set number of signers to approve a transaction before it runs. Individuals, teams and DAOs use it to secure assets on Ethereum and other EVM networks.",
