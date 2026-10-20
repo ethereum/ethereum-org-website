@@ -10,7 +10,7 @@ lang: zh-tw
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>創辦人們，需要協助加速您的業務嗎？[前往創辦人支援](/founders/)</div>
+<div>創辦人們，需要協助加速您的業務嗎？[前往創辦人支援](/organizations/founders/)</div>
 </Alert>
 
 ## 廣泛的以太坊生態系 {#broad-ethereum-ecosystem}

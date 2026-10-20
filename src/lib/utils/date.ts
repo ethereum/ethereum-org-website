@@ -68,6 +68,7 @@ export const formatDate = (
   }
   return normalizeIntlSpaces(
     dateTimeFormat(locale, {
+      timeZone: "UTC",
       month: "long",
       day: "numeric",
       year: "numeric",
@@ -114,6 +115,7 @@ export const formatDateRange = (
 ) =>
   normalizeIntlSpaces(
     dateTimeFormat(locale, {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       ...options,
@@ -132,6 +134,7 @@ export const formatDateRangeToParts = (
   options?: Intl.DateTimeFormatOptions
 ) =>
   dateTimeFormat(locale, {
+    timeZone: "UTC",
     month: "short",
     day: "numeric",
     ...options,

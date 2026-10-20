@@ -215,7 +215,7 @@ Geleceği okuyabilseydik, alım satım için yapay zekaya ihtiyacımız olmazdı
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3'ten EVM üzerinde bir işlev çağırmanın sözdizimi şudur: `<contract object>.functions.<function name>().call(<parameters>)`. Parametreler, EVM işlevinin parametreleri (varsa; burada yok) veya Blokzincir davranışını değiştirmek için [adlandırılmış parametreler](https://en.wikipedia.org/wiki/Named_parameter) olabilir. Burada, çalışmak istediğimiz [Blok numarasını](/developers/docs/apis/json-rpc/#default-block) belirtmek için `block_identifier` kullanıyoruz.
+Web3'ten EVM üzerinde bir işlev çağırmanın sözdizimi şudur: `<contract object>.functions.<function name>().call(<parameters>)`. Parametreler, EVM işlevinin parametreleri (varsa; burada yok) veya Blokzincir davranışını değiştirmek için [adlandırılmış parametreler](https://en.wikipedia.org/wiki/Named_parameter) olabilir. Burada, çalışmak istediğimiz [Blok numarasını](/developers/docs/apis/json-rpc/#block-parameter) belirtmek için `block_identifier` kullanıyoruz.
 
 Sonuç, [dizi formundaki bu yapıdır (struct)](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). İlk değer, iki Token arasındaki döviz kurunun bir işlevidir.
 
