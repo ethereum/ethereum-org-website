@@ -278,6 +278,10 @@ Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/READM
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
 
+### Runtime constraints
+
+- **`public/content` is not in the Netlify server function** (CDN-only). A page that reads it at render time must stay static (`revalidate: false` getters like `getStaticAppsData`) or have an `outputFileTracingIncludes` entry in `next.config.js`. A finite-`revalidate` getter (e.g. `getEventsData`, 24h) turns the whole route into ISR. Details: `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`.
+
 ## Internal Infrastructure
 
 The following external-looking services are managed by the ethereum.org team:
