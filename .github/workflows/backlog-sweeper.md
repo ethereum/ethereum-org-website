@@ -7,6 +7,10 @@ on:
   slash_command:
     name: review
     events: [pull_request_comment]
+if: github.event.action != 'edited'
+concurrency:
+  group: "gh-aw-${{ github.workflow }}"
+  queue: max
 permissions:
   contents: read
   issues: read
@@ -68,6 +72,16 @@ pre-agent-steps:
       REPO: ${{ github.repository }}
       PR_NUMBER: ${{ github.event.issue.number }}
     run: bash .github/scripts/backlog-sweeper-queue.sh
+  # gh-aw checks out the PR head on comment events; the review diffs from the base branch.
+  - name: Return to the base branch on /review runs
+    if: github.event_name == 'issue_comment'
+    env:
+      PR_NUMBER: ${{ github.event.issue.number }}
+    run: |
+      meta=/tmp/gh-aw/agent/pr-$PR_NUMBER/pr-meta.json
+      [ -f "$meta" ] || exit 0
+      git fetch -q --no-tags origin "$(jq -r .baseRefName "$meta")"
+      git checkout -q -f --detach FETCH_HEAD
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md
@@ -77,7 +91,7 @@ You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
+The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. A run started by a `/review` comment lists only that PR; review it in full even if it was reviewed before. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
 
 ## For each selected PR
 
