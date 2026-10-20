@@ -35,6 +35,7 @@ import BugBountyJsonLD from "./page-jsonld"
 
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
+import ethrex from "@/public/images/upgrades/ethrex.png"
 import geth from "@/public/images/upgrades/geth.png"
 import grandine from "@/public/images/upgrades/grandine.png"
 import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
@@ -125,6 +126,11 @@ export default async function Page(props: { params: Promise<Params> }) {
       title: "Erigon",
       link: "https://github.com/erigontech/erigon",
       image: erigon,
+    },
+    {
+      title: "ethrex",
+      link: "https://docs.ethrex.xyz/",
+      image: ethrex,
     },
     {
       title: "Geth",
@@ -334,6 +340,13 @@ export default async function Page(props: { params: Promise<Params> }) {
               <Image
                 src={erigon}
                 alt={tCommon("item-logo", { item: "Erigon" })}
+                {...iconImageProps()}
+              />
+            </div>
+            <div>
+              <Image
+                src={ethrex}
+                alt={tCommon("item-logo", { item: "ethrex" })}
                 {...iconImageProps()}
               />
             </div>
