@@ -150,7 +150,7 @@
   "page-developers-tools-archived": "Archived",
   "page-developers-tools-info-stars": "GitHub stars",
   "page-developers-tools-info-downloads": "Weekly downloads",
-  "page-developers-tools-info-last-updated": "Last updated",
-  "page-developers-tools-info-last-updated-tooltip": "When this tool’s listing in the developer tools catalog was last updated. It doesn’t show when the tool itself last changed.",
+  "page-developers-tools-info-listing-reviewed": "Listing reviewed",
+  "page-developers-tools-info-listing-reviewed-tooltip": "When this tool’s listing in the developer tools catalog was last reviewed. It doesn’t show when the tool itself last changed.",
   "page-developers-tools-info-license": "License"
 }
