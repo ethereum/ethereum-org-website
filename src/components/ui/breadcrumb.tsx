@@ -4,8 +4,9 @@ import { getTranslations } from "next-intl/server"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
+import { addSlashes } from "@/lib/utils/url"
 
-import { Link } from "@/i18n/navigation"
+import { BaseLink, type LinkProps } from "./Link"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -47,20 +48,28 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<"a"> &
-    React.ComponentPropsWithoutRef<typeof Link> & {
-      asChild?: boolean
-    }
+  LinkProps & {
+    asChild?: boolean
+  }
 >(({ asChild, className, ...props }, ref) => {
-  const Comp = asChild ? Slot : Link
+  const classes = cn(
+    "!text-body-medium uppercase no-underline transition-colors hover:!text-primary",
+    className
+  )
+
+  if (asChild) return <Slot ref={ref} className={classes} {...props} />
 
   return (
-    <Comp
+    <BaseLink
       ref={ref}
-      className={cn(
-        "!text-body-medium uppercase no-underline transition-colors hover:!text-primary",
-        className
-      )}
+      className={classes}
+      isPartiallyActive={false}
+      customEventOptions={{
+        eventCategory: "breadcrumbs",
+        eventAction: "click",
+        // Canonical trailing-slash form, so one target is one event name
+        eventName: addSlashes(props.href ?? "/"),
+      }}
       {...props}
     />
   )
