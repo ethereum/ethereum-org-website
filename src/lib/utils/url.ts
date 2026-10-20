@@ -151,6 +151,7 @@ export const getDevconTicketLink = (locale: string) =>
   `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/?mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral`
 
 const X_HANDLE = /^@?([A-Za-z0-9_]{1,15})$/
+const PLACEHOLDER = /^(none|null|na|tbd)$/i
 
 /** http(s) URLs, or bare domains read as https; anything else is undefined. */
 const toWebUrl = (href: string | null | undefined): URL | undefined => {
@@ -177,6 +178,7 @@ export const toCatalogItemLink = (
   kind: CatalogItemLinkKind,
   href: string | null | undefined
 ): CatalogItemLink | undefined => {
+  if (PLACEHOLDER.test(href?.trim() ?? "")) return undefined
   const handle = kind === "x" ? href?.trim().match(X_HANDLE)?.[1] : undefined
   const url = toWebUrl(handle ? `https://x.com/${handle}` : href)
   if (!url) return undefined

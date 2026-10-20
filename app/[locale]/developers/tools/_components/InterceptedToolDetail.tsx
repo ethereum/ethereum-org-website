@@ -15,6 +15,7 @@ import {
   buildToolLabels,
   findToolBySlug,
   getToolKey,
+  isToolArchived,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
   toolToCatalogItem,
@@ -59,8 +60,14 @@ const InterceptedToolDetail = async ({
   if (!tool) notFound()
 
   const labels = buildToolLabels(t, normalized.taxonomy)
-  const item = toolToCatalogItem(tool, { locale, t, tCommon, tItem, labels })
-  const [category, archived] = item.tags
+  const item = toolToCatalogItem(tool, {
+    locale,
+    t,
+    tCommon,
+    tItem,
+    labels,
+    showLastUpdated: false,
+  })
 
   const detailHref = getPathname({
     href: `/developers/tools/${getToolKey(tool)}/`,
@@ -78,9 +85,9 @@ const InterceptedToolDetail = async ({
       closeLabel={tCommon("close")}
     >
       <div className="flex flex-col gap-6">
-        {archived && (
+        {isToolArchived(tool) && (
           <Tag status="warning" className="w-fit">
-            {archived.label}
+            {t("page-developers-tools-archived")}
           </Tag>
         )}
         <CatalogItemDescription description={tool.description} />
@@ -88,20 +95,15 @@ const InterceptedToolDetail = async ({
         <div className="flex flex-col gap-2">
           <DetailRow label={t("page-developers-tools-modal-category")}>
             <Tag size="small" status="tag">
-              {category.label}
+              {labels.categoryLabels[tool.categoryId] || tool.categoryId}
             </Tag>
           </DetailRow>
 
-          {item.infoRows
-            .filter(
-              ({ label }) =>
-                label !== t("page-developers-tools-info-last-updated")
-            )
-            .map(({ label, value }) => (
-              <DetailRow key={label} label={label} roomyLabel>
-                <span className="font-bold text-body">{value}</span>
-              </DetailRow>
-            ))}
+          {item.infoRows.map(({ label, value }) => (
+            <DetailRow key={label} label={label} roomyLabel>
+              <span className="font-bold text-body">{value}</span>
+            </DetailRow>
+          ))}
 
           {tool.tags.length > 0 && (
             <DetailRow label={t("page-developers-tools-modal-tags")} roomyLabel>

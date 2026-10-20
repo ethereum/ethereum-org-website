@@ -72,6 +72,12 @@ export function getRankedRepos(tool: DeveloperTool) {
     .sort((a, b) => (b.stargazers ?? -1) - (a.stargazers ?? -1))
 }
 
+/** Archived only when every external repo is, so one retired repo doesn't flag a live tool. */
+export const isToolArchived = (tool: DeveloperTool) => {
+  const repos = getRankedRepos(tool)
+  return repos.length > 0 && repos.every((repo) => repo.isArchived)
+}
+
 /** External packages, most-downloaded first. */
 export function getRankedPackages(tool: DeveloperTool) {
   return (tool.packages ?? [])
@@ -232,7 +238,7 @@ export function findToolBySlug(
 }
 
 /**
- * The tool's subcategory in catalog order (score, then stars, then name): the
+ * The tool's subcategory in catalog order (score or else stars, then name): the
  * next tool follows it and the related ones are the top of the rest.
  */
 export function getToolNeighbours(
@@ -263,6 +269,7 @@ export function toolToCatalogItem(
     tItem,
     labels,
     next,
+    showLastUpdated = true,
   }: {
     locale: string
     t: Translator
@@ -270,6 +277,7 @@ export function toolToCatalogItem(
     tItem: Translator
     labels: ReturnType<typeof buildToolLabels>
     next?: DeveloperToolWithCategory
+    showLastUpdated?: boolean
   }
 ): CatalogItem {
   const [topRepo] = getRankedRepos(tool)
@@ -280,7 +288,9 @@ export function toolToCatalogItem(
     0
   )
   const compact = numberFormat(locale, { notation: "compact" })
-  const lastUpdated = formatTimeAgo(locale, tool.updated_at)
+  const lastUpdated = showLastUpdated
+    ? formatTimeAgo(locale, tool.updated_at)
+    : undefined
   const subcategory =
     labels.subcategoryLabels[tool.subcategory_id] || tool.subcategory_id
 
@@ -293,7 +303,7 @@ export function toolToCatalogItem(
     screenshots: [],
     tags: [
       { label: labels.categoryLabels[tool.categoryId] || tool.categoryId },
-      ...(topRepo?.isArchived
+      ...(isToolArchived(tool)
         ? [
             {
               label: t("page-developers-tools-archived"),
