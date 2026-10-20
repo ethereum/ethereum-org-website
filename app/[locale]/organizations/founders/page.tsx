@@ -372,8 +372,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       >
                         <CardHeader className="my-auto">
                           <h3 className="sr-only">{name}</h3>
-                          {/* Auto size keeps the logo start-aligned (no letterbox from width attr); [fill] spares stroke-only paths */}
-                          <Logo className="h-auto max-h-9 w-auto max-w-full **:[[fill]]:fill-body!" />
+                          <Logo className="max-h-9 max-w-full" />
                         </CardHeader>
                         <CardContent spacing="md">
                           {!!tags.length && (
