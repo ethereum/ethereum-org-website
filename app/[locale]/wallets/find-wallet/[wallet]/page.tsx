@@ -12,7 +12,7 @@ import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
 import Tooltip from "@/components/Tooltip"
 
-import { formatTimeAgo } from "@/lib/utils/date"
+import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
@@ -64,7 +64,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const relatedWallets = getRelatedWallets(wallet, locale, walletDescriptions, {
     exclude: getWalletSlug(nextWallet),
   })
-  const lastUpdated = formatTimeAgo(locale, wallet.last_updated)
+  const reviewed = formatDate(wallet.last_updated, locale, { day: undefined })
 
   const item: CatalogItem = {
     kind: "wallet",
@@ -93,10 +93,10 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
         value: formatWalletFees(wallet.fees, locale, t),
         tooltip: t("page-find-wallet-fee-row-tooltip"),
       },
-      lastUpdated && {
-        label: t("page-find-wallet-info-last-updated"),
-        value: lastUpdated,
-        tooltip: t("page-find-wallet-info-last-updated-tooltip"),
+      reviewed && {
+        label: t("page-find-wallet-info-listing-reviewed"),
+        value: reviewed,
+        tooltip: t("page-find-wallet-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [

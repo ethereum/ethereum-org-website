@@ -61,8 +61,8 @@
   "page-apps-info-founded": "Founded",
   "page-apps-info-creator": "Creator",
   "page-apps-info-languages": "Languages",
-  "page-apps-info-last-updated": "Last updated",
-  "page-apps-info-last-updated-tooltip": "When the details about this app on ethereum.org were last updated.",
+  "page-apps-info-listing-reviewed": "Listing reviewed",
+  "page-apps-info-listing-reviewed-tooltip": "When the details about this app on ethereum.org were last reviewed. It doesn’t show when the app itself last changed.",
   "page-apps-more-apps-like-this": "More apps like this",
   "page-apps-detail-meta-title": "Ethereum Apps - {name}"
 }

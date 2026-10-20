@@ -151,31 +151,6 @@ export const getLocaleYear = (
   )
 
 /**
- * Elapsed time in the largest whole unit: "today", "5 days ago", "last month",
- * "3 years ago". Undefined for an unparseable date.
- */
-export const formatTimeAgo = (
-  locale: string,
-  date: string | null | undefined,
-  now: Date = new Date()
-): string | undefined => {
-  if (!isValidDate(date)) return undefined
-  const days = Math.max(
-    0,
-    Math.floor(
-      (now.getTime() - new Date(date!).getTime()) / (1000 * 60 * 60 * 24)
-    )
-  )
-  const rtf = new Intl.RelativeTimeFormat(locale, {
-    numeric: "auto",
-    numberingSystem: locale === "ur" ? "arabext" : "latn",
-  } as Intl.RelativeTimeFormatOptions)
-  if (days < 30) return rtf.format(-days, "day")
-  if (days < 365) return rtf.format(-Math.floor(days / 30.44), "month")
-  return rtf.format(-Math.floor(days / 365.25), "year")
-}
-
-/**
  * Get ISO week number for a given date
  * Used as seed for deterministic weekly rotation
  *

@@ -66,7 +66,7 @@ const InterceptedToolDetail = async ({
     tCommon,
     tItem,
     labels,
-    showLastUpdated: false,
+    showReviewed: false,
   })
 
   const detailHref = getPathname({

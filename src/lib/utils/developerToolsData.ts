@@ -6,7 +6,7 @@ import type {
   CatalogItem,
 } from "@/lib/types"
 
-import { formatTimeAgo } from "@/lib/utils/date"
+import { formatDate } from "@/lib/utils/date"
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
@@ -269,7 +269,7 @@ export function toolToCatalogItem(
     tItem,
     labels,
     next,
-    showLastUpdated = true,
+    showReviewed = true,
   }: {
     locale: string
     t: Translator
@@ -277,7 +277,7 @@ export function toolToCatalogItem(
     tItem: Translator
     labels: ReturnType<typeof buildToolLabels>
     next?: DeveloperToolWithCategory
-    showLastUpdated?: boolean
+    showReviewed?: boolean
   }
 ): CatalogItem {
   const [topRepo] = getRankedRepos(tool)
@@ -288,9 +288,10 @@ export function toolToCatalogItem(
     0
   )
   const compact = numberFormat(locale, { notation: "compact" })
-  const lastUpdated = showLastUpdated
-    ? formatTimeAgo(locale, tool.updated_at)
-    : undefined
+  const reviewed =
+    showReviewed && tool.updated_at
+      ? formatDate(tool.updated_at, locale, { day: undefined })
+      : undefined
   const subcategory =
     labels.subcategoryLabels[tool.subcategory_id] || tool.subcategory_id
 
@@ -342,10 +343,10 @@ export function toolToCatalogItem(
         label: t("page-developers-tools-info-license"),
         value: topRepo.license,
       },
-      lastUpdated && {
-        label: t("page-developers-tools-info-last-updated"),
-        value: lastUpdated,
-        tooltip: t("page-developers-tools-info-last-updated-tooltip"),
+      reviewed && {
+        label: t("page-developers-tools-info-listing-reviewed"),
+        value: reviewed,
+        tooltip: t("page-developers-tools-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
     breadcrumbs: [
