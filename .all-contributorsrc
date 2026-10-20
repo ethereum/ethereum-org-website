@@ -14550,6 +14550,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "DamianFigiel",
+      "name": "Damian Figiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68967763?v=4",
+      "profile": "https://github.com/DamianFigiel",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
