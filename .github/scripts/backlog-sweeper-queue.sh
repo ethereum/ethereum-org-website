@@ -3,7 +3,7 @@
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
 # branch of this repo, and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
-# at most $LIMIT. With PR_NUMBER set (a `/review` comment), only that PR if it is open and not a
+# at most $LIMIT. With PR_NUMBER set (a `/review` comment or `pr` dispatch input), only that PR if it is open and not a
 # release/intl/automated branch of this repo; drafts, bot PRs and reviewed PRs are allowed.
 #
 # Env: REPO (owner/name), GH_TOKEN, PR_NUMBER (optional). Writes to $OUT_DIR (default /tmp/gh-aw/agent):

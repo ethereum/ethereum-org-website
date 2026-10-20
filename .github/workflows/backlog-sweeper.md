@@ -4,6 +4,11 @@ description: Daily sweep of the open PR backlog — first-pass reviews for PRs n
 on:
   schedule: daily around 06:00 on weekdays
   workflow_dispatch:
+    inputs:
+      pr:
+        description: "Review only this PR number, like a /review comment (empty = normal backlog sweep)"
+        required: false
+        type: string
   slash_command:
     name: review
     events: [pull_request_comment]
@@ -70,13 +75,13 @@ pre-agent-steps:
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
-      PR_NUMBER: ${{ github.event.issue.number }}
+      PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
     run: bash .github/scripts/backlog-sweeper-queue.sh
   # gh-aw checks out the PR head on comment events; the review diffs from the base branch.
-  - name: Return to the base branch on /review runs
-    if: github.event_name == 'issue_comment'
+  - name: Return to the base branch on single-PR runs
+    if: github.event_name == 'issue_comment' || inputs.pr != ''
     env:
-      PR_NUMBER: ${{ github.event.issue.number }}
+      PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
     run: |
       meta=/tmp/gh-aw/agent/pr-$PR_NUMBER/pr-meta.json
       [ -f "$meta" ] || exit 0
@@ -91,7 +96,7 @@ You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. A run started by a `/review` comment lists only that PR; review it in full even if it was reviewed before. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
+The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. A run started by a `/review` comment, or dispatched with a `pr` input, lists only that PR; review it in full even if it was reviewed before. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
 
 ## For each selected PR
 
