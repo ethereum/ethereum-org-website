@@ -14578,6 +14578,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mikeua",
+      "name": "mikeua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2239742?v=4",
+      "profile": "https://github.com/mikeua",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
