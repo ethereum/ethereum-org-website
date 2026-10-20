@@ -230,5 +230,5 @@ Một đối tượng `Function` hoặc `Modifier` có:
 - `entry_point (Node)`: Điểm vào của CFG
 - `variables_read (list(Variable))`: Danh sách các biến được đọc
 - `variables_written (list(Variable))`: Danh sách các biến được ghi
-- `state_variables_read (list(StateVariable))`: Danh sách các biến trạng thái được đọc (tập con của variables`read)
-- `state_variables_written (list(StateVariable))`: Danh sách các biến trạng thái được ghi (tập con của variables`written)
+- `state_variables_read (list(StateVariable))`: Danh sách các biến trạng thái được đọc (tập con của `variables_read`)
+- `state_variables_written (list(StateVariable))`: Danh sách các biến trạng thái được ghi (tập con của `variables_written`)

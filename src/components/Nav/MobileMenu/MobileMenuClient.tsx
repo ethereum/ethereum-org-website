@@ -11,7 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { SITE_TITLE } from "@/lib/constants"
+import { SECTION_LABELS, SITE_TITLE } from "@/lib/constants"
 
 import HamburgerButton from "./HamburgerButton"
 
@@ -31,9 +31,9 @@ function MobileMenuContentSkeleton() {
         <Skeleton className="h-5 w-12" />
       </div>
 
-      {/* Nav sections (5 collapsible rows) */}
+      {/* Nav sections (one collapsible row per section) */}
       <div className="flex-1">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: SECTION_LABELS.length }).map((_, i) => (
           <div
             key={i}
             className="flex items-center gap-2 border-b border-body-light px-4 py-4 first:border-t"

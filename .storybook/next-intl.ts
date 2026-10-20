@@ -24,6 +24,7 @@ export const ns = [
   "page-learn",
   "page-upgrades",
   "page-developers-index",
+  "page-stablecoins",
   "page-staking",
   "page-what-is-ethereum",
   "page-upgrades-index",
