@@ -1506,6 +1506,7 @@ export type DeveloperToolsRepoLink = {
   finalScore?: number
   scoreSource?: "official-weight" | "github-inferred" | "unscored"
   lastUpdated?: string | null
+  license?: string | null
 }
 
 export type DeveloperToolsPackageLink = {
@@ -1529,6 +1530,8 @@ export type BuilderResourcesCatalogResource = {
   resource_score?: number
   resource_rank?: number
   resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+  /** Last edit of this entry in the upstream catalog (ISO date). */
+  updated_at?: string
 }
 
 export type DeveloperToolsRankingCoverage = {

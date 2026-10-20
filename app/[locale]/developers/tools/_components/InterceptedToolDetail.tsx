@@ -7,18 +7,18 @@ import type { Lang } from "@/lib/types"
 import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
 import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
+import { CatalogItemLinks } from "@/components/CatalogItem"
 import CatalogItemDescription from "@/components/CatalogItem/Description"
-import Twitter from "@/components/icons/twitter.svg"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink from "@/components/ui/Link"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import {
   buildToolLabels,
   findToolBySlug,
   getToolKey,
+  isToolArchived,
   localizeToolDescriptions,
   normalizeDeveloperToolsData,
+  toolToCatalogItem,
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
@@ -39,10 +39,11 @@ const InterceptedToolDetail = async ({
   locale: string
   toolKey: string
 }) => {
-  const [data, t, tCommon, toolDescriptions] = await Promise.all([
+  const [data, t, tCommon, tItem, toolDescriptions] = await Promise.all([
     getDeveloperToolsData(),
     getTranslations({ locale, namespace: "page-developers-tools" }),
     getTranslations({ locale, namespace: "common" }),
+    getTranslations({ locale, namespace: "component-catalog-item" }),
     getTranslations({
       locale,
       namespace: "page-developers-tools-descriptions",
@@ -58,10 +59,15 @@ const InterceptedToolDetail = async ({
   )
   if (!tool) notFound()
 
-  const { categoryLabels, subcategoryLabels, tagLabels } = buildToolLabels(
+  const labels = buildToolLabels(t, normalized.taxonomy)
+  const item = toolToCatalogItem(tool, {
+    locale,
     t,
-    normalized.taxonomy
-  )
+    tCommon,
+    tItem,
+    labels,
+    showReviewed: false,
+  })
 
   const detailHref = getPathname({
     href: `/developers/tools/${getToolKey(tool)}/`,
@@ -79,25 +85,30 @@ const InterceptedToolDetail = async ({
       closeLabel={tCommon("close")}
     >
       <div className="flex flex-col gap-6">
+        {isToolArchived(tool) && (
+          <Tag status="warning" className="w-fit">
+            {t("page-developers-tools-archived")}
+          </Tag>
+        )}
         <CatalogItemDescription description={tool.description} />
 
         <div className="flex flex-col gap-2">
           <DetailRow label={t("page-developers-tools-modal-category")}>
             <Tag size="small" status="tag">
-              {categoryLabels[tool.categoryId] || tool.categoryId}
+              {labels.categoryLabels[tool.categoryId] || tool.categoryId}
             </Tag>
           </DetailRow>
 
-          <DetailRow label={t("page-developers-tools-modal-type")} roomyLabel>
-            <span className="font-bold text-body">
-              {subcategoryLabels[tool.subcategory_id] || tool.subcategory_id}
-            </span>
-          </DetailRow>
+          {item.infoRows.map(({ label, value }) => (
+            <DetailRow key={label} label={label} roomyLabel>
+              <span className="font-bold text-body">{value}</span>
+            </DetailRow>
+          ))}
 
           {tool.tags.length > 0 && (
             <DetailRow label={t("page-developers-tools-modal-tags")} roomyLabel>
               <TagsInlineText
-                list={tool.tags.map((tag) => tagLabels[tag] || tag)}
+                list={tool.tags.map((tag) => labels.tagLabels[tag] || tag)}
                 variant="light"
                 className="font-bold text-body lowercase"
               />
@@ -123,34 +134,7 @@ const InterceptedToolDetail = async ({
           />
         </div>
 
-        {(tool.website || tool.twitter) && (
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            {tool.website && (
-              <ButtonLink href={tool.website} variant="solid" className="w-fit">
-                {t("page-developers-tools-modal-website")}
-              </ButtonLink>
-            )}
-            {tool.twitter &&
-              (tool.website ? (
-                <InlineLink
-                  href={tool.twitter}
-                  hideArrow
-                  aria-label={t("page-developers-tools-modal-social")}
-                  className="ms-auto flex size-10 items-center justify-center rounded-lg border transition-colors hover:bg-background-highlight"
-                >
-                  <Twitter className="size-5 text-body" />
-                </InlineLink>
-              ) : (
-                <ButtonLink
-                  href={tool.twitter}
-                  variant="solid"
-                  className="w-fit"
-                >
-                  {t("page-developers-tools-modal-social")}
-                </ButtonLink>
-              ))}
-          </div>
-        )}
+        <CatalogItemLinks item={item} />
       </div>
     </CatalogDetailModal>
   )
