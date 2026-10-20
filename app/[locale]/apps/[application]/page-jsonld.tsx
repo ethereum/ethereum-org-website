@@ -24,12 +24,16 @@ export default async function AppsAppJsonLD({
   locale,
   app,
   contributors,
+  name,
   description,
+  sameAs,
 }: {
   locale: string
   app: AppData
   contributors: FileContributor[]
+  name: string
   description: string
+  sameAs: string[]
 }) {
   const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}`)
 
@@ -46,7 +50,7 @@ export default async function AppsAppJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: `Ethereum Apps - ${app.name}`,
+        name,
         description,
         url,
         inLanguage: locale,
@@ -107,7 +111,7 @@ export default async function AppsAppJsonLD({
         dateModified: app.lastUpdated,
         inLanguage: app.languages,
         screenshot: app.screenshots.slice(0, 5),
-        sameAs: [app.twitter, app.github, app.discord].filter(Boolean),
+        sameAs,
       },
     ],
   }
