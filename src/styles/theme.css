@@ -201,6 +201,11 @@
   --color-warning-dark: hsla(var(--warning-dark));
   --color-warning-border: hsla(var(--warning-border));
 
+  /* Colors: leak */
+  --color-leak: hsla(var(--leak));
+  --color-leak-high-contrast: hsla(var(--leak-high-contrast));
+  --color-leak-low-contrast: hsla(var(--leak-low-contrast));
+
   /* Colors: staking */
   --color-staking-gold: hsla(var(--staking-gold));
   --color-staking-gold-fill: hsla(var(--staking-gold-fill));

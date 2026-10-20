@@ -1567,3 +1567,103 @@ export interface BuilderResourcesTaxonomy {
   }
   tags: string[]
 }
+
+// Privacy lesson: Public by Default (/privacy/public-by-default/)
+
+export type PrivacyLessonChapterId =
+  | "send"
+  | "wallet"
+  | "rpc"
+  | "network"
+  | "chain"
+  | "analysts"
+  | "world"
+  | "fixes"
+  | "today"
+  | "default"
+
+/** `start` is chapter 0; Part I shows the leaks, Part II the fixes. */
+export type PrivacyLessonPart = "start" | "part-1" | "part-2"
+
+export interface PrivacyLessonChapter {
+  id: PrivacyLessonChapterId
+  /** Display number, 0-9; formatted with numberFormat at render */
+  number: number
+  part: PrivacyLessonPart
+}
+
+/** Who learns a dossier entry. Groups the dossier and drives the route map. */
+export type PrivacyLessonWitness =
+  | "you"
+  | "wallet"
+  | "rpc"
+  | "network"
+  | "chain"
+  | "analysts"
+  | "world"
+
+export type PrivacyLessonFixId =
+  | "wallet"
+  | "privtx"
+  | "browser"
+  | "ens"
+  | "tor"
+  | "separate"
+  | "timing"
+  | "stealth"
+  | "cex"
+  | "pool"
+  | "node"
+
+export type PrivacyLessonDossierId =
+  | "tz"
+  | "langs"
+  | "device"
+  | "gpu"
+  | "fp"
+  | "wallets"
+  | "ip"
+  | "holdings"
+  | "pixel"
+  | "linked"
+  | "rpclog"
+  | "origin"
+  | "mev"
+  | "networth"
+  | "salary"
+  | "rent"
+  | "schedule"
+  | "friend"
+  | "cluster"
+  | "label"
+  | "kyc"
+  | "ens"
+  | "poap"
+  | "home"
+
+export interface PrivacyLessonDossierEntry {
+  id: PrivacyLessonDossierId
+  /** The chapter that first adds this entry to the dossier */
+  chapter: PrivacyLessonChapterId
+  witness: PrivacyLessonWitness
+  /** Share of the "visible to others" meter */
+  weight: number
+  /** `live` values are read from the visitor's browser; `example` values are persona data */
+  source: "live" | "example"
+  /** Fixes that hide this entry when on */
+  fixes: PrivacyLessonFixId[]
+  /** Keys in the page-privacy-public-by-default namespace, without the namespace prefix */
+  labelKey: string
+  seenByKey: string
+  /** Absent when the value is shown as read (e.g. the time zone name) */
+  valueKey?: string
+}
+
+export interface PrivacyLessonFix {
+  id: PrivacyLessonFixId
+  /** Keys in the page-privacy-public-by-default namespace, without the namespace prefix */
+  nameKey: string
+  shortKey: string
+  /** Dossier entries this fix hides, derived from the catalogue */
+  hides: PrivacyLessonDossierId[]
+}

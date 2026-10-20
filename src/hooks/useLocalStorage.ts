@@ -54,15 +54,16 @@ export function useLocalStorage<T>(
       )
     }
 
-    try {
-      // Allow value to be a function so we have the same API as useState
-      const newValue = value instanceof Function ? value(storedValue) : value
+    // Allow value to be a function so we have the same API as useState
+    const newValue = value instanceof Function ? value(storedValue) : value
 
+    // Save state first, so the value still works in memory when storage is
+    // denied (e.g. browser privacy settings)
+    setStoredValue(newValue)
+
+    try {
       // Save to local storage
       window.localStorage.setItem(key, JSON.stringify(newValue))
-
-      // Save state
-      setStoredValue(newValue)
 
       // We dispatch a custom event so every useLocalStorage hook are notified
       window.dispatchEvent(new Event("local-storage"))
