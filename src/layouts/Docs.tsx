@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { MDXRemoteProps } from "next-mdx-remote"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -27,6 +28,12 @@ import YouTube from "@/components/YouTube"
 import { getEditPath } from "@/lib/utils/editPath"
 import { addSlashes } from "@/lib/utils/url"
 
+// Interactive diagrams: each loads its client code only on pages that use it.
+const EvmZonesDiagram = dynamic(() => import("@/components/Diagrams/EvmZones"))
+const GasEvmDiagram = dynamic(() => import("@/components/Diagrams/GasEvm"))
+const GasTxDiagram = dynamic(() => import("@/components/Diagrams/GasTx"))
+const TxApplyDiagram = dynamic(() => import("@/components/Diagrams/TxApply"))
+
 export const docsComponents = {
   ...mdxTableComponents,
   ButtonLink,
@@ -35,8 +42,12 @@ export const docsComponents = {
   DeveloperDocsLinks,
   Divider,
   Emoji,
+  EvmZonesDiagram,
+  GasEvmDiagram,
+  GasTxDiagram,
   GlossaryTooltip,
   PieChart,
+  TxApplyDiagram,
   YouTube,
 } as MDXRemoteProps["components"]
 
