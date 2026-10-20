@@ -22,7 +22,6 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
 import ToolDetailHardNav from "../_components/ToolDetailHardNav"
 import { ToolLinkSections } from "../_components/ToolLinkRows"
@@ -74,19 +73,6 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
     labels,
     next,
   })
-  if (tool.crops_native) {
-    const label = t("page-developers-tools-crops-native")
-    item.tags.push({
-      label,
-      node: (
-        <CropsNativeTag
-          label={label}
-          description={t("page-developers-tools-crops-native-description")}
-          infoLabel={t("page-developers-tools-crops-native-info-label")}
-        />
-      ),
-    })
-  }
 
   return (
     <>

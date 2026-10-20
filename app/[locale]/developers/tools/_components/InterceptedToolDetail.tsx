@@ -22,7 +22,6 @@ import {
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
-import CropsNativeTag from "./CropsNativeTag"
 import ToolLinkRows from "./ToolLinkRows"
 
 import { getPathname } from "@/i18n/navigation"
@@ -95,25 +94,13 @@ const InterceptedToolDetail = async ({
 
         <div className="flex flex-col gap-2">
           <DetailRow label={t("page-developers-tools-modal-category")}>
-            <div className="flex flex-wrap gap-2">
-              <Tag size="small" status="tag">
-                {labels.categoryLabels[tool.categoryId] || tool.categoryId}
-              </Tag>
-              {tool.crops_native && (
-                <CropsNativeTag
-                  size="small"
-                  label={t("page-developers-tools-crops-native")}
-                  description={t(
-                    "page-developers-tools-crops-native-description"
-                  )}
-                  infoLabel={t("page-developers-tools-crops-native-info-label")}
-                />
-              )}
-            </div>
+            <Tag size="small" status="tag">
+              {labels.categoryLabels[tool.categoryId] || tool.categoryId}
+            </Tag>
           </DetailRow>
 
-          {item.infoRows.map(({ label, value }) => (
-            <DetailRow key={label} label={label} roomyLabel>
+          {item.infoRows.map(({ label, value, tooltip }) => (
+            <DetailRow key={label} label={label} tooltip={tooltip} roomyLabel>
               <span className="font-bold text-body">{value}</span>
             </DetailRow>
           ))}
