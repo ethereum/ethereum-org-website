@@ -118,7 +118,7 @@ For the first stage, we'll sign a transaction in the browser and then manually p
 
 To see it in action:
 
-1. Make sure you have [Node](https://nodejs.org/en/download) and [Noir](https://noir-lang.org/install) installed. Preferably, install them on a UNIX system such macOS, Linux, or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Make sure you have [Node](https://nodejs.org/en/download) and [Noir](https://noir-lang.org/docs/installation) installed. Preferably, install them on a UNIX system such macOS, Linux, or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. Download the stage 1 code and start the web server to serve the client code.
 
@@ -469,7 +469,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-The [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+The [`assert`](https://noir-lang.org/docs/language/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
