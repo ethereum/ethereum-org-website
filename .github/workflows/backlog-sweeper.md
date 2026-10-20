@@ -1,6 +1,6 @@
 ---
 name: PR Backlog Sweeper
-description: Daily sweep of the open PR backlog — first-pass reviews for unreviewed and updated PRs
+description: Daily sweep of the open PR backlog — first-pass reviews for PRs never reviewed
 on:
   schedule: daily around 06:00 on weekdays
   workflow_dispatch:
@@ -9,25 +9,23 @@ permissions:
   issues: read
   pull-requests: read
   actions: read
+checkout:
+  fetch-depth: 0
 engine:
   id: claude
   model: claude-opus-5-5
-max-ai-credits: 800
+max-ai-credits: 1000
 network: defaults
 strict: true
-timeout-minutes: 20
+timeout-minutes: 45
 tools:
   github:
     toolsets: [default, actions]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
     private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
-  add-comment:
-    target: "*"
-    max: 5
-    hide-older-comments:
-      match: [pr-reviewer]
   add-labels:
     target: "*"
     max: 15
@@ -68,17 +66,18 @@ pre-agent-steps:
     run: bash .github/scripts/backlog-sweeper-queue.sh
 imports:
   - shared/pr-review-core.md
+  - shared/submit-review.md
 ---
 
 You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. Otherwise every listed PR gets a review comment — never `noop` a listed PR, or it is re-selected on every run.
+The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
 
 ## For each selected PR
 
-Produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels). For PR `<n>`, the pre-fetched files are `/tmp/gh-aw/agent/pr-<n>/pr-meta.json` and `/tmp/gh-aw/agent/pr-<n>/pr-diff.patch` — use them in place of the paths named in Step 1.
+Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
 
 ## Termination
 
