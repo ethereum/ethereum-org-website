@@ -65,8 +65,8 @@ const LanguagePicker = ({
 
     trackCustomEvent({
       eventCategory: `Language picker`,
-      eventAction: "Translation program link (no results)",
-      eventName: "/contributing/translation-program",
+      eventAction: "ETHGlossary link (no results)",
+      eventName: "glossary.ethereum.org",
     })
   }
 

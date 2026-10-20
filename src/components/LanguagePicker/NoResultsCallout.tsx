@@ -14,7 +14,7 @@ const NoResultsCallout = ({ onClose }: NoResultsCalloutProps) => {
           a: (chunks) => (
             <BaseLink
               key="item-no-results"
-              href="/contributing/translation-program/"
+              href="https://glossary.ethereum.org/?utm_source=ethereum.org&utm_medium=language-picker"
               onClick={onClose}
             >
               {chunks}

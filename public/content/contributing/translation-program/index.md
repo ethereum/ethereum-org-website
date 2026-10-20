@@ -1,16 +1,32 @@
 ---
 title: Translation Program
 lang: en
-description: Information about the ethereum.org Translation Program
+description: Help translate Ethereum by reviewing terms in your language on ETHGlossary. The terms you approve are the ones ethereum.org uses.
 ---
 
-The Translation Program was a collaborative effort to translate ethereum.org into different languages, making the website more accessible to billions of non-English speakers around the world.
+Ethereum should read naturally in every language. The best way to help right now is [ETHGlossary](https://glossary.ethereum.org/?utm_source=ethereum.org&utm_medium=translation-program), a shared, community-reviewed glossary of Ethereum terms in 24 languages.
+
+**The terms you approve are the terms ethereum.org uses in your language.** Wallets, apps and documentation teams can use them too, through the glossary's open API.
+
+<ButtonLink href="https://glossary.ethereum.org/translations?utm_source=ethereum.org&utm_medium=translation-program">
+  Review terms in your language
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## How it works {#how-it-works}
+
+1. **Pick your language.** Every language has the same set of Ethereum terms, each with a draft translation.
+2. **Review a term.** Approve it, propose a better alternative, or add context on how it is used in your community.
+3. **It ships.** Reviewed terms guide ethereum.org's translations and are published through the ETHGlossary API.
+
+There is no commitment. Reviewing a single term takes a couple of minutes.
+
+**Languages:** Arabic, Bengali, Chinese (Simplified and Traditional), Czech, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Marathi, Polish, Portuguese (Brazil), Russian, Spanish, Swahili, Tamil, Telugu, Turkish, Ukrainian, Urdu and Vietnamese.
+
 ## Program status {#program-status}
 
-The ethereum.org Translation Program is winding down and is no longer onboarding new translators. The Crowdin project is being closed, and we are not accepting new translation submissions through it.
+Full-page translation through Crowdin is paused, and we are not accepting new translation submissions there. Reviewing terms on [ETHGlossary](https://glossary.ethereum.org/?utm_source=ethereum.org&utm_medium=translation-program) is how to contribute in the meantime.
 
 We are deeply grateful to the thousands of community translators who made ethereum.org available in dozens of languages over the years—their work remains live on the site, and their recognition on the [acknowledgements](/contributing/translation-program/acknowledgements/) and [contributors](/contributing/translation-program/contributors/) pages stays in place.
 
