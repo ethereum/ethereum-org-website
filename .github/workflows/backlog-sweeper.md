@@ -1,9 +1,12 @@
 ---
 name: PR Backlog Sweeper
-description: Daily sweep of the open PR backlog — first-pass reviews for PRs never reviewed
+description: Daily sweep of the open PR backlog — first-pass reviews for PRs never reviewed, or one PR on a `/review` comment
 on:
   schedule: daily around 06:00 on weekdays
   workflow_dispatch:
+  slash_command:
+    name: review
+    events: [pull_request_comment]
 permissions:
   contents: read
   issues: read
@@ -63,6 +66,7 @@ pre-agent-steps:
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
+      PR_NUMBER: ${{ github.event.issue.number }}
     run: bash .github/scripts/backlog-sweeper-queue.sh
 imports:
   - shared/pr-review-core.md

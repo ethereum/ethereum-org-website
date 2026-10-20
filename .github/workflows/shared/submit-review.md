@@ -62,7 +62,7 @@ safe-outputs:
           env:
             GH_TOKEN: ${{ steps.app-token.outputs.token }}
             REPO: ${{ github.repository }}
-            EVENT_PR: ${{ github.event.pull_request.number }}
+            EVENT_PR: ${{ github.event.pull_request.number || github.event.issue.number }}
             EVENT_SHA: ${{ github.event.pull_request.head.sha }}
             RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           run: |
