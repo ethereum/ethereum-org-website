@@ -182,7 +182,7 @@ const CatalogItemHero = ({ item }: { item: CatalogItem }) => (
               ))}
             </div>
           )}
-          <h1 className="mt-0 line-clamp-2">{item.name}</h1>
+          <h1 className="mt-0 break-words">{item.name}</h1>
           {item.subtitle && (
             <p className="text-sm text-body-medium">{item.subtitle}</p>
           )}
@@ -204,7 +204,7 @@ export const RelatedCatalogItems = ({
   title: string
   children: ReactNode
 }) => (
-  <section className="flex flex-col items-center gap-8 rounded-base bg-tint-accent-a px-4 py-12 md:px-8">
+  <section className="flex flex-col items-center gap-8 rounded-base bg-background bg-tint-accent-a px-4 py-12 md:px-8">
     <h2>{title}</h2>
     <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
       {children}
