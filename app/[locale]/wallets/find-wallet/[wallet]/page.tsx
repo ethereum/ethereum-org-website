@@ -91,6 +91,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
       wallet.fees?.length && {
         label: t("page-find-wallet-info-fees"),
         value: formatWalletFees(wallet.fees, locale, t),
+        tooltip: t("page-find-wallet-fee-row-tooltip"),
       },
       lastUpdated && {
         label: t("page-find-wallet-info-last-updated"),

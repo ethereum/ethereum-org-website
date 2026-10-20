@@ -60,7 +60,6 @@ const WalletDetailModal = ({
     <CatalogDetailModal
       title={wallet.name}
       image={wallet.image}
-      description={description}
       closeLabel={labels.close}
       onClose={onClose}
       // Radix aims focus at whatever was focused when the dialog mounted,
