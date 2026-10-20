@@ -105,19 +105,6 @@ _ٹریڈرز_ پول میں ایک قسم کا ٹوکن بھیجتے ہیں ا�
 5. سیالیت کے ٹوکنز کو جلائیں
 6. ریزرو رقوم کو اپ ڈیٹ کرنے کے لیے `_update` کو کال کریں
 
-```yaml
-title: یونی سویپ V2 کے بنیادی کنٹریکٹس
-description: یونی سویپ V2 کے اسمارٹ کنٹریکٹس کی گہرائی سے وضاحت
-breadcrumb: یونی سویپ V2 کے بنیادی کنٹریکٹس
-lang: ur
-tags:
-  - اسمارٹ کنٹریکٹس
-  - یونی سویپ
-  - Solidity
-author: اوری پومیرانٹز
-sidebar: true
-```
-
 ## بنیادی کنٹریکٹس {#core-contracts}
 
 یہ وہ محفوظ کنٹریکٹس ہیں جو سیالیت کو برقرار رکھتے ہیں۔
@@ -912,7 +899,6 @@ contract UniswapV2Factory is IUniswapV2Factory {
 ```
 
 اگر سب کچھ ٹھیک ہے، تو اسے [ایک <span dir="ltr">ERC-20</span> منظور کرنا](https://eips.ethereum.org/EIPS/eip-20#approve) سمجھیں۔
-```
 
 ## پیریفیری کنٹریکٹس {#periphery-contracts}
 
@@ -1245,7 +1231,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountA, uint amountB) {
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1261,7 +1247,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountETHMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountToken, uint amountETH) {
         address pair = UniswapV2Library.pairFor(factory, token, WETH);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1311,7 +1297,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountETHMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountETH) {
         address pair = UniswapV2Library.pairFor(factory, token, WETH);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1764,7 +1750,7 @@ library UQ112x112 {
 
 ```solidity
     // UQ112x112 کو uint112 سے تقسیم کریں، جو UQ112x112 واپس کرتا ہے
-    function uqdiv(uint<span dir="ltr">224 x</span>, uint112 y) internal pure returns (uint224 z) {
+    function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
 }
@@ -1903,7 +1889,7 @@ Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، �
 
 pragma solidity >=0.6.0;
 
-// <span dir="ltr">ERC-20</span> ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false واپس نہیں کرتے ہیں
+// ERC-20 ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false واپس نہیں کرتے ہیں
 library TransferHelper {
     function safeApprove(
         address token,

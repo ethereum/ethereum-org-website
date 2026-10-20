@@ -137,3 +137,25 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - `plyn` persists on unchanged lines (fusaka 140/142, page-roadmap 104, zk-rollups 183) -- whole-file cleanup owed.
 - shielded pool split `stíněné`/`chráněný fond`; `updatu` vs `upgrade`; `Odsloužená doba` prison-sense calque.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (third recurrence; glossary compound `gas limit` = `limit plynu` contradicts `gas` = `gas`, normalization queue 13).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- `přístup s řízeným přístupem` (permissioned glossary phrase bolted onto access); `zajištěná` read as collateralized; `reklamace` for card disputes.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: `[EVM-based Chains]` -> `[Řetězce založené na EVM]` (regression to English).
+- Open: `[Testnet Faucet]` label English (glossary `testnetový faucet`).

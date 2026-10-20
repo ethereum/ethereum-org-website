@@ -100,3 +100,15 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Frame transactions split `Transactions Frame` (hegota) vs `Transactions de trame` (privacy) -- needs a native pick, no glossary entry.
 - `Navigateur Mullvad` should stay `Mullvad Browser`; `Institut Ludlow` vs `Ludlow Institute`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing mix; `Trésoreries` for treasuries; credentials `identifiants` vs `attestations`; `DLT privé` gender.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).

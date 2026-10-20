@@ -28,7 +28,7 @@ Những cải tiến này đảm bảo Ethereum vẫn nhanh chóng, giá cả ph
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Lưu ý: Bài viết này nêu bật một số Đề xuất Cải tiến Ethereum (EIP) được lên lịch đưa vào Glamsterdam. Các đề xuất bổ sung đã được lên lịch đang được thử nghiệm trên các mạng phát triển (devnet) bao gồm EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 và EIP-8282. Phạm vi đã được chốt nhưng vẫn có thể thay đổi trước khi lên Mạng chính, vì meta EIP vẫn đang ở dạng bản nháp. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Lưu ý: Bài viết này nêu bật một số Đề xuất Cải tiến Ethereum (EIP) được lên kế hoạch đưa vào Glamsterdam. Các đề xuất bổ sung đã được lên lịch đang được thử nghiệm trên các mạng thử nghiệm dành cho nhà phát triển (devnet) bao gồm EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 và EIP-8282. Phạm vi đã được chốt nhưng vẫn có thể thay đổi trước khi lên Mạng chính, vì meta EIP vẫn đang ở dạng bản nháp. Để biết các cập nhật trạng thái mới nhất, hãy xem [bản nâng cấp Glamsterdam trên Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưng chưa được thêm vào trang này, [hãy tìm hiểu cách đóng góp cho ethereum.org tại đây](/contributing/).
 </AlertDescription>
@@ -37,11 +37,11 @@ Nếu bạn muốn thêm một EIP đang được xem xét cho Glamsterdam nhưn
 
 Bản nâng cấp Glamsterdam tập trung vào ba mục tiêu chính:
 
-- Tăng tốc độ xử lý (xử lý song song): Tổ chức lại cách mạng lưới ghi lại các phụ thuộc dữ liệu, để nó có thể xử lý an toàn nhiều giao dịch cùng một lúc thay vì theo một trình tự chậm chạp, từng cái một.
-- Mở rộng dung lượng: Chia nhỏ công việc nặng nhọc là tạo và xác thực các khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
-- Ngăn chặn phình to cơ sở dữ liệu (tính bền vững): Điều chỉnh phí mạng lưới để phản ánh chính xác chi phí phần cứng dài hạn của việc lưu trữ dữ liệu mới, gỡ bỏ rào cản cho việc tăng giới hạn gas trong tương lai đồng thời ngăn chặn sự suy giảm hiệu suất phần cứng.
+- Tăng tốc độ xử lý (song song hóa): Tổ chức lại cách mạng lưới ghi lại các phụ thuộc dữ liệu, để nó có thể xử lý an toàn nhiều giao dịch cùng một lúc thay vì theo một trình tự chậm chạp, từng cái một.
+- Mở rộng công suất: Chia nhỏ các tác vụ nặng trong việc tạo và xác minh các khối, giúp mạng lưới có thêm thời gian để truyền tải lượng dữ liệu lớn hơn mà không bị chậm lại.
+- Ngăn chặn phình to cơ sở dữ liệu (tính bền vững): Điều chỉnh phí mạng lưới để phản ánh chính xác chi phí phần cứng dài hạn của việc lưu trữ dữ liệu mới, tạo điều kiện cho việc tăng giới hạn gas trong tương lai đồng thời ngăn chặn sự suy giảm hiệu suất phần cứng.
 
-Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi cấu trúc để đảm bảo rằng khi mạng lưới tăng dung lượng, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
+Tóm lại, Glamsterdam sẽ giới thiệu các thay đổi về cấu trúc để đảm bảo rằng khi mạng lưới tăng công suất, nó vẫn bền vững và hiệu suất vẫn ở mức cao.
 
 ## Mở rộng quy mô lớp 1 (l1) & xử lý song song {#scale-l1}
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-developers-tools.json",
-  "generatedAt": "2026-09-30T18:08:54.974Z",
-  "rootHash": "e51d4d480ca2",
+  "generatedAt": "2026-10-14T17:26:21.334Z",
+  "rootHash": "6085aec2e63d",
   "tree": {
-    "contentHash": "3691a5fe8b74",
-    "anchorHash": "52cca1e99b0e",
+    "contentHash": "1e52b3c00dbb",
+    "anchorHash": "8890eab57c0d",
     "children": {
       "page-developers-tools-search-placeholder": {
         "contentHash": "dd886aee85fb",
@@ -79,6 +79,10 @@
         "contentHash": "01f28ebb9d92",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-developers-tools-subcategory-cryptography-key-management-title": {
+        "contentHash": "6a089f81fdcc",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-developers-tools-subcategory-aa-tx-orchestration-title": {
         "contentHash": "a15e6dd2e31a",
         "anchorHash": "e3b0c44298fc"
@@ -93,6 +97,14 @@
       },
       "page-developers-tools-subcategory-rpc-node-infrastructure-title": {
         "contentHash": "48c052f861e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-subcategory-execution-consensus-clients-title": {
+        "contentHash": "a8d00eed93aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-subcategory-mev-block-building-title": {
+        "contentHash": "f680a52faaa8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-developers-tools-subcategory-indexing-data-apis-title": {
@@ -205,15 +217,11 @@
         "contentHash": "26859a15502d",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-developers-tools-show-results": {
+        "contentHash": "5b5b4ed0ec05",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-developers-tools-suggest-resource-button": {
-        "contentHash": "0aa03459a85c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-developers-tools-suggest-resource-description": {
-        "contentHash": "b27d37ac4f1f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-developers-tools-suggest-resource-title": {
         "contentHash": "0aa03459a85c",
         "anchorHash": "e3b0c44298fc"
       },
@@ -625,10 +633,13 @@
       "page-developers-tools-subcategory-core-sdks-libraries-title",
       "page-developers-tools-subcategory-frontend-integration-tooling-title",
       "page-developers-tools-subcategory-wallet-integration-auth-title",
+      "page-developers-tools-subcategory-cryptography-key-management-title",
       "page-developers-tools-subcategory-aa-tx-orchestration-title",
       "page-developers-tools-subcategory-payments-defi-integration-title",
       "page-developers-tools-subcategory-governance-dao-tooling-title",
       "page-developers-tools-subcategory-rpc-node-infrastructure-title",
+      "page-developers-tools-subcategory-execution-consensus-clients-title",
+      "page-developers-tools-subcategory-mev-block-building-title",
       "page-developers-tools-subcategory-indexing-data-apis-title",
       "page-developers-tools-subcategory-analytics-monitoring-title",
       "page-developers-tools-subcategory-oracles-external-data-title",
@@ -655,9 +666,8 @@
       "page-developers-tools-no-results",
       "page-developers-tools-related-title",
       "page-developers-tools-results-label",
+      "page-developers-tools-show-results",
       "page-developers-tools-suggest-resource-button",
-      "page-developers-tools-suggest-resource-description",
-      "page-developers-tools-suggest-resource-title",
       "page-developers-tools-stats-downloads",
       "page-developers-tools-subtitle",
       "page-developers-tools-tag-abi-encoding",
@@ -757,5 +767,5 @@
       "page-developers-tools-title"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

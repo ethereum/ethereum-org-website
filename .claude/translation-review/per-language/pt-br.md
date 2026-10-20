@@ -97,3 +97,15 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Same acronym over-expansion regressions as es (#80); `rollups de l2` / `servidor do Discord` lowercased.
 - open-access pronoun agreement `Elas forneceram` / `Eles não decidem`; `agência financeira` calque.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `swaps` -> `trocas` (glossary, same as #19076).
+
+**Open (warnings):**
+
+- `Desenvolvido por` for Powered by; `Tesourarias`; `Valor garantido/assegurado` split.
