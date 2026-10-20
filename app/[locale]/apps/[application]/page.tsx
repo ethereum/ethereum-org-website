@@ -9,6 +9,7 @@ import {
 import type { ChainName, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
+import CatalogItemGallery from "@/components/CatalogItem/Gallery"
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
@@ -45,7 +46,6 @@ import { formatStringList } from "@/lib/utils/wallets"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
 import { getAppsData } from "@/lib/data"
@@ -379,7 +379,11 @@ const Page = async (props: {
             {allImages.length > 0 && (
               <div className="flex flex-col gap-4">
                 <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
-                <ScreenshotSwiper screenshots={allImages} appName={app.name} />
+                <CatalogItemGallery
+                  screenshots={allImages}
+                  name={app.name}
+                  kind="app"
+                />
               </div>
             )}
           </div>

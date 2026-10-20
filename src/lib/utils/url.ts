@@ -1,6 +1,6 @@
 import { extname, join } from "path"
 
-import { Lang } from "@/lib/types"
+import type { CatalogItemLink, CatalogItemLinkKind, Lang } from "@/lib/types"
 
 import {
   DEFAULT_LOCALE,
@@ -149,3 +149,23 @@ export const normalizeUrlForJsonLd = (
  */
 export const getDevconTicketLink = (locale: string) =>
   `https://devcon.org/${["hi", "mr"].includes(locale) ? locale : "en"}/tickets/?mtm_campaign=ethorg10&mtm_source=ethereum.org&mtm_medium=referral`
+
+/** Drops empty and non-https URLs; a repo off github.com gets the generic code icon. */
+export const toCatalogItemLink = (
+  kind: CatalogItemLinkKind,
+  href: string | null | undefined
+): CatalogItemLink | undefined => {
+  if (!href) return undefined
+  let url: URL
+  try {
+    url = new URL(href.trim())
+  } catch {
+    return undefined
+  }
+  if (url.protocol !== "https:") return undefined
+  const isGitHub = url.hostname.replace(/^www\./, "") === "github.com"
+  return {
+    kind: kind === "github" && !isGitHub ? "code" : kind,
+    href: url.href,
+  }
+}

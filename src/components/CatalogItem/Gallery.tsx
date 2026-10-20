@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
+import type { StaticImageData } from "next/image"
 import { useTranslations } from "next-intl"
+
+import type { CatalogItemKind } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import Modal from "@/components/ui/dialog-modal"
@@ -16,13 +19,18 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
-interface ScreenshotSwiperProps {
-  screenshots: string[]
-  appName: string
+interface CatalogItemGalleryProps {
+  screenshots: (string | StaticImageData)[]
+  name: string
+  kind: CatalogItemKind
 }
 
-const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
-  const t = useTranslations("page-apps")
+const CatalogItemGallery = ({
+  screenshots,
+  name,
+  kind,
+}: CatalogItemGalleryProps) => {
+  const t = useTranslations("component-catalog-item")
   const lazyPreloadPrevNext = useBreakpointValue({ base: 1, sm: 2, md: 4 })
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
@@ -60,7 +68,7 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
                 trackCustomEvent({
                   eventCategory: "detail",
                   eventAction: "gallery_open",
-                  eventName: `app name ${appName}`,
+                  eventName: `${kind} name ${name}`,
                 })
               }}
             >
@@ -77,9 +85,9 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
               />
               <Image
                 src={screenshot}
-                alt={t("page-apps-gallery-screenshot-alt", {
+                alt={t("catalog-item-gallery-screenshot-alt", {
                   index: index + 1,
-                  appName,
+                  name,
                 })}
                 // 16:9 so the loading box matches the tile it resolves into.
                 width={640}
@@ -102,7 +110,7 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
           }
         }}
         size="xl"
-        title={t("page-apps-gallery-modal-title", { appName })}
+        title={t("catalog-item-gallery-modal-title", { name })}
         contentProps={{
           className: "max-w-[95vw] max-h-[95vh] p-2 md:p-8",
         }}
@@ -119,9 +127,9 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
                   <div className="flex items-center justify-center">
                     <Image
                       src={screenshot}
-                      alt={t("page-apps-gallery-screenshot-alt", {
+                      alt={t("catalog-item-gallery-screenshot-alt", {
                         index: index + 1,
-                        appName,
+                        name,
                       })}
                       width={800}
                       height={1200}
@@ -140,4 +148,4 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
   )
 }
 
-export default ScreenshotSwiper
+export default CatalogItemGallery
