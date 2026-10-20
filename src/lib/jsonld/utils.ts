@@ -95,7 +95,21 @@ export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
   authorGraphNodes: KnownEntity[]
   authorReferences: AuthorReference[]
 } {
-  const values = !authors ? [] : Array.isArray(authors) ? authors : [authors]
+  const inputValues = !authors
+    ? []
+    : Array.isArray(authors)
+      ? authors
+      : [authors]
+  const seen = new Set<string>()
+  const values = inputValues
+    .map((value) => value.trim())
+    .filter((value) => {
+      const key = value.toLowerCase()
+      if (!key || seen.has(key)) return false
+
+      seen.add(key)
+      return true
+    })
   const resolvedAuthors = values.map((name) => ({
     name,
     entity: resolveKnownEntities(name)[0],
