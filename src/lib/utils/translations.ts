@@ -132,7 +132,7 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
 ]
 
 const LAYOUT_NAMESPACES: Record<string, string[]> = {
-  docs: ["page-developers-docs"],
+  docs: ["page-developers-docs", "component-diagrams"],
   "use-cases": ["template-usecase"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
