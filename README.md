@@ -2262,6 +2262,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/e
       <td align="center" valign="top" width="14.28%"><a href="http://toyeshh.com"><img src="https://avatars.githubusercontent.com/u/184831353?v=4?s=100" width="100px;" alt="Toyeshh Medikonda"/><br /><sub><b>Toyeshh Medikonda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atoyeshhm" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://discord.com/invite/JTkeNXX"><img src="https://avatars.githubusercontent.com/u/54760103?v=4?s=100" width="100px;" alt="Arunim Shukla"/><br /><sub><b>Arunim Shukla</b></sub></a><br /><a href="#maintenance-arunimshukla" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DamianFigiel"><img src="https://avatars.githubusercontent.com/u/68967763?v=4?s=100" width="100px;" alt="Damian Figiel"/><br /><sub><b>Damian Figiel</b></sub></a><br /><a href="#tool-DamianFigiel" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/amlandeep-bhadra-52678964"><img src="https://avatars.githubusercontent.com/u/7771746?v=4?s=100" width="100px;" alt="Amlandeep Bhadra"/><br /><sub><b>Amlandeep Bhadra</b></sub></a><br /><a href="#tool-koko1123" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
