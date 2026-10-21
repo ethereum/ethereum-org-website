@@ -4,6 +4,9 @@ import { useRef } from "react"
 import { Search as SearchIcon, Sparkles } from "lucide-react"
 
 import Search from "@/components/Search"
+import Input from "@/components/ui/input"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { HOME_SEARCH_HASH } from "@/lib/constants"
 
@@ -11,6 +14,7 @@ import { useOnHash } from "@/hooks/useOnHash"
 
 type HomeSearchInputProps = {
   label: string
+  eventCategory: string
   /** Asking is English-only, so elsewhere this is a search box. */
   ask: boolean
 }
@@ -26,10 +30,16 @@ const preloadModal = () => import("@/components/Search/SearchModal")
  * keep that window short. The field empties once focus moves into the modal, so it is
  * blank again on close.
  */
-const HomeSearchInput = ({ label, ask }: HomeSearchInputProps) => {
+const HomeSearchInput = ({
+  label,
+  ask,
+  eventCategory,
+}: HomeSearchInputProps) => {
   const inputRef = useRef<HTMLInputElement>(null)
   // Keystrokes keep landing here until the modal takes focus; open (and count) once.
   const openedRef = useRef(false)
+  // The `#ask` focus is the page's doing, not the reader's; leave it uncounted.
+  const scriptFocusRef = useRef(false)
   const Icon = ask ? Sparkles : SearchIcon
 
   // Script focus can't raise the iOS keyboard; on touch this only places the caret.
@@ -37,6 +47,7 @@ const HomeSearchInput = ({ label, ask }: HomeSearchInputProps) => {
     const input = inputRef.current
     if (!input) return
     input.scrollIntoView({ block: "center" })
+    scriptFocusRef.current = true
     input.focus({ preventScroll: true })
   })
 
@@ -53,20 +64,31 @@ const HomeSearchInput = ({ label, ask }: HomeSearchInputProps) => {
         }
 
         return (
-          <label className="relative flex w-full items-center">
+          <label className="relative flex items-center max-sm:w-full">
             <Icon
               aria-hidden
-              className="pointer-events-none absolute start-4 size-5 text-body-medium"
+              className="pointer-events-none absolute start-6 size-6 text-body"
             />
-            <input
+            <Input
               ref={inputRef}
               type="search"
               enterKeyHint="search"
               autoComplete="off"
               aria-label={label}
               placeholder={label}
-              className="w-full rounded-lg border border-body-light bg-background px-12 py-3 text-lg placeholder:text-center placeholder:text-body-medium hover:border-primary-hover focus-visible:outline-[3px] focus-visible:-outline-offset-2 focus-visible:outline-primary-hover"
-              onFocus={preloadModal}
+              className="field-sizing-content rounded-lg py-3 ps-14 pe-8 text-lg max-sm:w-full max-sm:pe-14 max-sm:placeholder:text-center"
+              onFocus={() => {
+                preloadModal()
+                if (scriptFocusRef.current) {
+                  scriptFocusRef.current = false
+                  return
+                }
+                trackCustomEvent({
+                  eventCategory,
+                  eventAction: "cta_click",
+                  eventName: "search_input",
+                })
+              }}
               onChange={(e) => {
                 // An IME is still composing; open once the character is committed.
                 if ((e.nativeEvent as InputEvent).isComposing) return

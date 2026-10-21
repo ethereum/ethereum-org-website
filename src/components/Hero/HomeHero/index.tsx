@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from "react"
+import { Fragment, type ReactNode, Suspense } from "react"
 import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
@@ -74,35 +74,40 @@ const HomeHero = async ({
 
   const searchLabel = canAsk ? tCommon("docsearch-ask-ai") : tCommon("search")
 
-  const startHere = (className?: string) => (
+  const startHere = (
     <Suspense
       fallback={
-        <Button
-          variant="solid"
-          size="lg"
-          className={cn("gap-2 pe-6!", className)}
-        >
+        <Button variant="solid" size="lg" className="gap-2 pe-6!">
           {t("page-index-hero-cta")}
           <ChevronNext className="size-5" />
         </Button>
       }
     >
-      <PersonaModalCTA eventCategory={eventCategory} className={className} />
+      <PersonaModalCTA eventCategory={eventCategory} />
     </Suspense>
   )
 
-  const buttonCta = (
+  // Both arms share the layout: side by side, stacked full width below `sm`.
+  const ctaRow = (searchCta: ReactNode) => (
     <div className="flex flex-col items-center gap-4 max-sm:w-full sm:flex-row">
-      {startHere()}
-      <HomeSearchCTA ask={canAsk} label={searchLabel} />
+      {startHere}
+      {searchCta}
     </div>
   )
 
-  const inputCta = (
-    <div className="flex w-full flex-col gap-4 sm:max-w-xs">
-      {startHere("w-full")}
-      <HomeSearchInput ask={canAsk} label={searchLabel} />
-    </div>
+  const buttonCta = ctaRow(
+    <HomeSearchCTA
+      ask={canAsk}
+      label={searchLabel}
+      eventCategory={eventCategory}
+    />
+  )
+  const inputCta = ctaRow(
+    <HomeSearchInput
+      ask={canAsk}
+      label={searchLabel}
+      eventCategory={eventCategory}
+    />
   )
 
   return (
@@ -152,7 +157,7 @@ const HomeHero = async ({
                 variantIndex={searchCtaVariant}
                 variants={[
                   <Fragment key="original">{buttonCta}</Fragment>,
-                  <Fragment key="ask-input">{inputCta}</Fragment>,
+                  <Fragment key="AskInput">{inputCta}</Fragment>,
                 ]}
               />
             )}

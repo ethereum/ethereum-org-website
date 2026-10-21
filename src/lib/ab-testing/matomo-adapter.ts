@@ -26,7 +26,7 @@ const MOCK_EXPERIMENTS: Record<string, ABTestConfig> = {
     enabled: true,
     variants: [
       { name: "Original", weight: 50 },
-      { name: "Ask Input", weight: 50 },
+      { name: "AskInput", weight: 50 },
     ],
   },
 }

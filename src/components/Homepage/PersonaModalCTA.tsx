@@ -149,13 +149,9 @@ const CategoryCard = ({
 
 type PersonaModalCTAProps = {
   eventCategory: string
-  className?: string
 }
 
-const PersonaModalCTA = ({
-  eventCategory,
-  className,
-}: PersonaModalCTAProps) => {
+const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
   const { categories, t } = useCategories()
   const [isOpen, setIsOpen] = useState(false)
   // Track if modal was closed via link click (not ESC/outside click/X button)
@@ -211,7 +207,7 @@ const PersonaModalCTA = ({
           <Button
             variant="solid"
             size="lg"
-            className={cn("gap-2 pe-6 max-sm:w-full", className)}
+            className="gap-2 pe-6 max-sm:w-full"
           >
             {t("page-index-hero-cta")}
             <ChevronNext className="size-5" />
