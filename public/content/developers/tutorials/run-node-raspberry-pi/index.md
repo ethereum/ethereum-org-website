@@ -1,6 +1,6 @@
 ---
-title: Run an Ethereum node on Raspeberry Pi 4
-description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node + validator
+title: Run an Ethereum node on a Raspberry Pi 5
+description: Flash your Raspberry Pi 5, plug in an ethernet cable, connect the NVMe disk and power up the device to turn the Raspberry Pi 5 into a full Ethereum node + validator
 author: "EthereumOnArm"
 tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: en
@@ -15,14 +15,17 @@ sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 
 To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the following hardware is recommended:
 
-- Raspberry 4 (model B 8GB), Odroid M1 or Rock 5B (8GB/16GB RAM) board
+- Raspberry Pi 5 with 16 GB of RAM
+- An NVMe HAT for the Raspberry Pi 5, to connect an NVMe disk
+- NVMe SSD (M.2 2280), 2 TB minimum, 4 TB recommended. Avoid disks with a Phison controller, which have known compatibility issues.
 - MicroSD Card (16 GB Class 10 minimum)
-- 2 TB SSD minimum USB 3.0 disk or an SSD with a USB to SATA case.
 - Power supply
 - Ethernet cable
 - Port forwarding (see clients for further info)
-- A case with heatsink and fan
+- A case with heatsink
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (Optional)
+
+Ethereum on Arm also supports other ARM boards, such as the NanoPC T6, Rock 5B, and Orange Pi 5 Plus. These boards have native NVMe support, so the Ethereum on Arm team recommends them over the Raspberry Pi 5 if you are buying new hardware. See the [recommended hardware list](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/overview/supported-hardware.html) for details. The rest of this tutorial is the same for all supported boards, except for the image file you download.
 
 ## Why run Ethereum on ARM? {#why-run-ethereum-on-arm}
 
@@ -32,40 +35,27 @@ ARM boards are very affordable, flexible, small computers. They are good choices
 
 The Raspberry Pi's memory card is flashed with a prebuilt image. This image contains everything needed to run an Ethereum node. With a flashed card, all the user needs to do is power-on the Raspberry Pi. All the processes required to run the node are automatically started. This works because the memory card contains a Linux-based operating system (OS) on top of which system-level processes are automatically run that turn the unit into an Ethereum node.
 
-Ethereum cannot be run using the popular Raspberry Pi Linux OS "Raspbian" because Raspbian still uses a 32-bit architecture which leads Ethereum users to run into memory issues and consensus clients do not support 32-bit binaries. To overcome this, the Ethereum on Arm team migrated to a native 64-bit OS called "Armbian".
+Ethereum on Arm images are based on a 64-bit Linux distribution that is optimized for running an Ethereum node, and they include prebuilt Ethereum clients.
 
-**Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
+**Images take care of all the necessary steps**, from setting up the environment and formatting the NVMe disk to installing the Ethereum software.
 
 ## Note on execution and consensus clients {#note-on-execution-and-consensus-clients}
 
-The Ethereum on Arm image includes prebuilt execution and consensus clients as services. An Ethereum node requires both clients to be synced and running. You are only required to download and flash the image and then start the services. The image is preloaded with the following execution clients:
+The Ethereum on Arm image includes prebuilt execution and consensus clients as services. An Ethereum node requires both clients to be synced and running. You are only required to download and flash the image and then start the services. The image is preloaded with several execution clients (such as Geth, Nethermind, Besu, Erigon, and Reth) and consensus clients (such as Lighthouse, Prysm, Teku, Nimbus, and Lodestar). See the [Ethereum on Arm documentation](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/running-a-node/managing-clients.html) for the current list.
 
-- Geth
-- Nethermind
-- Besu
-
-and the following consensus clients:
-
-- Lighthouse
-- Nimbus
-- Prysm
-- Teku
-
-You should choose one of each to run - all execution clients are compatible with all consensus clients. If you do not explicitly select a client, the node will fall back to its defaults - Geth and Lighthouse - and run them automatically when the board is powered up. You must open port 30303 on your router so Geth can find and connect to peers.
+You should choose one of each to run - all execution clients are compatible with all consensus clients. This tutorial uses Geth and Lighthouse.
 
 ## Downloading the Image {#downloading-the-image}
 
-The Raspberry Pi 4 Ethereum image is a "plug and play" image that automatically installs and sets up both the execution and consensus clients, configuring them to talk to each other and connect to the Ethereum network. All the user needs to do is start their processes using a simple command.
+The Ethereum on Arm image is a "plug and play" image that automatically installs and sets up both the execution and consensus clients, configuring them to talk to each other and connect to the Ethereum network. All the user needs to do is start their processes using a simple command.
 
-Download the Raspberry Pi image from [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1) and verify the SHA256 hash:
+Download the latest image for your board from the [Ethereum on Arm download page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/getting-started/installation.html#image-downloads). The download page also lists the SHA256 checksum of each image. Verify the downloaded file against it:
 
 ```sh
 # From directory containing the downloaded image
-shasum -a 256 ethonarm_22.04.00.img.zip
-# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
+sha256sum ethonarm_rpi5_<version>.img.zip
+# Compare the output with the checksum on the download page
 ```
-
-Note that images for Rock 5B and Odroid M1 boards are available at the Ethereum-on-Arm [downloads page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Flashing the MicroSD {#flashing-the-microsd}
 
@@ -82,15 +72,15 @@ It is really important to get the name correct because the next command includes
 
 ```shell
 # unzip and flash image
-unzip ethonarm_22.04.00.img.zip
-sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
+unzip ethonarm_rpi5_<version>.img.zip
+sudo dd bs=1M if=ethonarm_rpi5_<version>.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
 The card is now flashed, so it can be inserted into the Raspberry Pi.
 
 ## Start the node {#start-the-node}
 
-With the SD card inserted into the Raspberry Pi, connect the ethernet cable and SSD then switch the power on. The OS will boot up and automatically start performing the preconfigured tasks that turn the Raspberry Pi into an Ethereum node, including installing and building the client software. This will probably take 10-15 minutes.
+With the SD card inserted into the Raspberry Pi, connect the ethernet cable and the NVMe disk then switch the power on. The OS will boot up and automatically start performing the preconfigured tasks that turn the Raspberry Pi into an Ethereum node, including formatting the NVMe disk and installing the client software. This will probably take 10-15 minutes, and the board reboots automatically when it is finished. Do not interrupt the power supply during this time.
 
 Once everything is installed and configured, log in to the device via an ssh connection or using the terminal directly if a monitor and keyboard is attached to the board. Use the `ethereum` account to log in, as this has permissions required to start the node.
 
@@ -99,57 +89,62 @@ User: ethereum
 Password: ethereum
 ```
 
-The default execution client, Geth, will start automatically. You can confirm this by checking the logs using the following terminal command:
+You will be asked to change the default password on your first login. Do it, because anybody who can reach your node could otherwise log in with the default password. The system firewall is disabled by default, so if your node has a public IP address, see the [Ethereum on Arm security guide](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/system/security.html) to enable it.
+
+Start the consensus client first. Open port 9000 (TCP and UDP) on your router so that Lighthouse can find and connect to peers. Then start the lighthouse service:
 
 ```sh
-sudo journalctl -u geth -f
-```
-
-The consensus client does need to be started explicitly. To do this, first open port 9000 on your router so that Lighthouse can find and connect to peers. Then enable and start the lighthouse service:
-
-```sh
-sudo systemctl enable lighthouse-beacon
 sudo systemctl start lighthouse-beacon
 ```
 
 Check the client using the logs:
 
 ```sh
-sudo journalctl -u lighthouse-beacon
+sudo journalctl -u lighthouse-beacon -f
 ```
 
-Note that the consensus client will sync in a few minutes because it uses checkpoint sync. The execution client will take longer - potentially several hours, and it will not start until the consensus client is already finished syncing (this is because the execution client needs a target to sync to, which the synced consensus client provides).
+Next, start the execution client. Open port 30303 (TCP and UDP) on your router so Geth can find and connect to peers. Then start the geth service:
+
+```sh
+sudo systemctl start geth
+```
+
+You can confirm it is running by checking the logs:
+
+```sh
+sudo journalctl -u geth -f
+```
+
+Note that the consensus client will sync in a few minutes because it uses checkpoint sync. The execution client will take longer - potentially several hours. Both clients run at the same time: the consensus client tells the execution client which block is the head of the chain, and the execution client downloads and verifies the blocks up to it.
 
 With the Geth and Lighthouse services running and synced, your Raspberry Pi is now an Ethereum node! It is most common to interact with the Ethereum network using Geth's Javascript console, which can be attached to the Geth client on port 8545. It is also possible to submit commands formatted as JSON objects using a request tool such as Curl. See more in the [Geth documentation](https://geth.ethereum.org/).
 
-Geth is preconfigured to report metrics to a Grafana dashboard which can be viewed in the browser. More advanced users might wish to use this feature to monitor the health of their node by navigating to `ipaddress:3000`, passing `user: admin` and `passwd: ethereum`.
+The image also includes a Grafana dashboard that more advanced users can use to monitor the health of their node, by navigating to `ipaddress:3000` in a browser.
 
 ## Validators {#validators}
 
 A validator can also be optionally added to the consensus client. The validator software allows your node to participate actively in consensus and provides the network with cryptoeconomic security. You get rewarded for this work in ETH. To run a validator, you must first have 32 ETH, which must be deposited into the deposit contract. The deposit can be made by following the step-by-step guide on the [Launchpad](https://launchpad.ethereum.org/). Do this on a desktop/laptop, but do not generate keys — this can be done directly on the Raspberry Pi.
 
-Open a terminal on the Raspberry Pi and run the following command to generate the deposit keys:
+The image includes the [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli) tool for generating validator keys. Open a terminal on the Raspberry Pi and run the following command to generate the deposit keys, replacing `<YOUR_ETH_ADDRESS>` with the address that should receive your withdrawals:
 
-```
-sudo apt-get update
-sudo apt-get install staking-deposit-cli
-cd && deposit new-mnemonic --num_validators 1
+```sh
+cd && deposit new-mnemonic --num_validators 1 --execution_address <YOUR_ETH_ADDRESS> --chain mainnet
 ```
 
-(Or download the [staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli) to run on an airgapped machine, and run the `deposit new-mnemnonic` command)
+(Or download the [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli) to run on an airgapped machine, and run the `deposit new-mnemonic` command there)
 
-Keep the mnemonic phrase safe! The command above generated two files in the node's keystore: the validator keys and a deposit data file. The deposit data needs to be uploaded into the launchpad, so it must be copied from the Raspberry Pi to the desktop/laptop. This can be done using an ssh connection or any other copy/paste method.
+Keep the mnemonic phrase safe! The command above generated two files in the `validator_keys` directory: the validator keys and a deposit data file. The deposit data needs to be uploaded into the launchpad, so it must be copied from the Raspberry Pi to the desktop/laptop. This can be done using an ssh connection or any other copy/paste method.
 
 Once the deposit data file is available on the computer running the launchpad, it can be dragged and dropped onto the `+` on the launchpad screen. Follow the instructions on the screen to send a transaction to the deposit contract.
 
-Back on the Raspberry Pi, a validator can be started. This requires importing the validator keys, setting the address to collect rewards, and then starting the preconfigured validator process. The example below is for Lighthouse—instructions for other consensus clients are available on the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/):
+Back on the Raspberry Pi, a validator can be started. This requires importing the validator keys, setting the address to collect rewards, and then starting the preconfigured validator process. The example below is for Lighthouse—instructions for other consensus clients are available on the [Ethereum on Arm docs](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/staking/solo-staking.html):
 
 ```shell
 # import the validator keys
 lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# set the reward address
-sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
+# set the reward address (replace <YOUR_ETH_ADDRESS> with your address)
+sudo sed -i 's/changeme/<YOUR_ETH_ADDRESS>/' /etc/ethereum/lighthouse-validator.conf
 
 # start the validator
 sudo systemctl start lighthouse-validator
@@ -164,22 +159,14 @@ This page gave an overview of how to set up a Geth-Lighthouse node and validator
 ## Feedback appreciated {#feedback-appreciated}
 
 We know the Raspberry Pi has a massive user base that could have a very positive impact on the health of the Ethereum network.
-Please dig into the details in this tutorial, try running on testnets, check out the Ethereum on Arm GitHub, give feedback, raise issues and pull requests and help advance the technology and documentation!
+Please dig into the details in this tutorial, try running on testnets, check out the [Ethereum on Arm GitHub](https://github.com/EOA-Blockchain-Labs/ethereumonarm), give feedback, raise issues and pull requests and help advance the technology and documentation!
 
 ## References {#references}
 
-1. https://ubuntu.com/download/raspberry-pi
+1. https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 2. https://wikipedia.org/wiki/Port_forwarding
 3. https://prometheus.io
 4. https://grafana.com
-5. https://forum.armbian.com/topic/5565-zram-vs-swap/
-6. https://geth.ethereum.org
-7. https://nethermind.io
-8. https://www.hyperledger.org/projects/besu
-9. https://github.com/prysmaticlabs/prysm
-10. https://lighthouse.sigmaprime.io
-11. https://docs.ethswarm.org/
-12. https://raiden.network
-13. https://ipfs.io
-14. https://status.im
-15. https://vipnode.org
+5. https://geth.ethereum.org
+6. https://lighthouse.sigmaprime.io
+7. https://github.com/ethstaker/ethstaker-deposit-cli

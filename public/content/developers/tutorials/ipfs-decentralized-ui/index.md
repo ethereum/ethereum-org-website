@@ -11,7 +11,7 @@ published: 2024-06-29
 
 You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://docs.ipfs.tech/)** so anybody interested will be able to pin it on a server for future access.
 
-You could use a third-party service such as [Fleek](https://resources.fleek.xyz/docs/) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
+You could use a third-party hosting service to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
 
 ## Getting started locally {#getting-started-locally}
 
@@ -19,17 +19,19 @@ There are multiple [third-party IPFS providers](https://docs.ipfs.tech/how-to/wo
 
 1. Install the [IPFS user interface](https://docs.ipfs.tech/install/ipfs-desktop/#install-instructions).
 
-2. Create a directory with your web site. If you are using [Vite](https://vite.dev/), use this command:
+2. Create a directory with your web site. If you are using [Vite](https://vite.dev/), build the site with relative asset paths. Gateways serve your site under `/ipfs/<CID>/`, so the default absolute paths (`/assets/...`) would not load. Run this command in your Vite project:
 
    ```sh
-   pnpm vite build
+   pnpm vite build --base=./
    ```
+
+   The output is in the `dist` directory. Alternatively, set `base: './'` in `vite.config.ts`.
 
 3. In IPFS Desktop, click **Import > Folder** and select the directory you created in the previous step.
 
 4. Select the folder you just uploaded and click **Rename**. Give it a more meaningful name.
 
-5. Select it again and click **Share link**. Copy the URL to the clipboard. The link would be similar to `https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`.
+5. Select it again and click **Share link**. Copy the URL to the clipboard. The link would be similar to `https://ipfs.io/ipfs/QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`. Public gateways such as `ipfs.io` are rate limited and may block some content, so use your local gateway for testing.
 
 6. Click **Status**. Expand the **Advanced** tab to see the gateway address. For example, on my system the address is `http://127.0.0.1:8080`.
 
@@ -47,29 +49,29 @@ Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/gui
 
 2. In the left sidebar click **Storage > 4EVER Pin**.
 
-3. Click **Upload > Selected CID**. Give your content a name and provide the CID from IPFS desktop. At present a CID is a string that starts with `Qm` followed by 44 letters and digits that represent a [base-58 encoded](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524) hash, such as `QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`, but [that is likely to change](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1).
+3. Click **Upload > Selected CID**. Give your content a name and provide the CID from IPFS desktop. A CID is either a version 0 CID, which starts with `Qm` (for example, `QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`), or a [version 1 CID](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1), which usually starts with `bafy` (for example, `bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im`).
 
 4. The initial status is **Queued**. Reload until it changes to **Pinned**.
 
 5. Click your CID to get the link. You can see my application [here](https://bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im.ipfs.dweb.link/).
 
-6. You might need to activate your account to have it pinned for more than a month. Account activation costs about $1. If you closed it, log out and log back in to be asked to activate again.
+6. Free accounts have limited storage and pinning duration. Check the [4EVERLAND pricing](https://docs.4everland.org/get-started/billing-and-pricing) for the current terms.
 
 ## Using from IPFS {#using-from-ipfs}
 
 At this point you have a link to a centralized gateway that serves your IPFS content. In short, your user interface may be a bit safer but it's still not censorship resistant. For real censorship resistance, users need to use IPFS [directly from a browser](https://docs.ipfs.tech/install/ipfs-companion/#prerequisites).
 
-Once you have that installed (and the desktop IPFS working), you can go to [/ipfs/`<CID>`](https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im) on any site and you'll get that content, served in a decentralized manner.
+Once you have that installed (and the desktop IPFS working), you can go to `/ipfs/<CID>` on any gateway (for example, `http://127.0.0.1:8080/ipfs/<CID>`) and you'll get that content, served in a decentralized manner.
 
 ## Drawbacks {#drawbacks}
 
-You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to either leave it centralized, or use [interplanetary name system (IPNS)](https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs), a system that provides mutability on top of IPFS. Of course, anything that is mutable can be censored, in the case of IPNS by pressuing the person with the private key to which it corresponds.
+You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to either leave it centralized, or use [interplanetary name system (IPNS)](https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs), a system that provides mutability on top of IPFS. Of course, anything that is mutable can be censored, in the case of IPNS by pressuring the person with the private key to which it corresponds.
 
 Additionally, some packages have a problem with IPFS, so if your web site is very complicated that may not be a good solution. And of course, anything that relies on server integration cannot be decentralized just by having the client side on IPFS.
 
 ## Discoverability via ENS {#discoverability}
 
-If you point an ENS name (like vitalik.eth) to your website, it will be considered a fully decentralized webpage and will be automatically pinned by the [dweb3.wtf](https://dweb3.wtf) service, as well as made searchable through the [web3compass.net](https://web3compass.net) search engine, much like DuckDuckGo, Brave Search or Google does for the traditional web.
+You can set the [content hash](https://docs.ens.domains/ensip/7) of an ENS name (like vitalik.eth) to your IPFS CID. Users can then reach your site through an ENS-aware gateway such as [eth.limo](https://eth.limo/) (for example, `https://vitalik.eth.limo`), or directly in browsers that resolve ENS names. Remember that updating the content hash is an onchain transaction, so every new version of your user interface needs one.
 
 ## Conclusion {#conclusion}
 

@@ -7,13 +7,11 @@ skill: beginner
 breadcrumb: Ethereum with SQL
 lang: en
 published: 2021-05-11
-source: paulapivat.com
-sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
 Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see onchain data without running a client or node.
 
-This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.com/).
+This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune](https://dune.com/). The queries use [DuneSQL](https://docs.dune.com/query-engine/overview), Dune's SQL dialect.
 
 Onchain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
@@ -21,15 +19,15 @@ Onchain data can help us understand Ethereum, the network, and as an economy for
 
 A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
-Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/) or [Blockscout](https://eth.blockscout.com/). Block explorers are a portal to Ethereum's data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
+Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/) or [Blockscout](https://eth.blockscout.com/). Block explorers are a portal to Ethereum's data. They display, in real-time, data on blocks, transactions, validators, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
-However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://dune.com/) provides this capability to anyone with some knowledge of SQL.
+However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune](https://dune.com/) provides this capability to anyone with some knowledge of SQL.
 
 For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
 One thing to note is that all accounts, including the EF’s, have a public address that can be used to send and receive transactions.
 
-The account balance on Etherscan comprises regular transactions and internal transactions. Internal transactions, despite the name, are not _actual_ transactions that change the state of the chain. They are value transfers initiated by executing a contract ([source](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Since internal transactions have no signature, they are **not** included on the blockchain and cannot be queried with Dune Analytics.
+The account balance on Etherscan comprises regular transactions and internal transactions. Internal transactions, despite the name, are not _actual_ transactions that change the state of the chain. They are value transfers initiated by executing a contract ([source](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Since internal transactions have no signature, they are **not** included on the blockchain as transactions. Dune records them separately, in the `ethereum.traces` table.
 
 Therefore, this tutorial will focus on regular transactions. This can be queried as such:
 
@@ -44,8 +42,8 @@ SELECT
     value / 1e18 AS ether,
     gas_used,
     gas_price / 1e9 AS gas_price_gwei
-FROM ethereum."transactions"
-WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+FROM ethereum.transactions
+WHERE "to" = 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe
 ORDER BY block_time DESC
 )
 SELECT
@@ -59,6 +57,8 @@ SELECT
 FROM temp_table
 ```
 
+Note that addresses are written as `0x...` literals without quotes. In DuneSQL, addresses and hashes are binary values, not strings.
+
 This will yield the same information as provided on Etherscan's transaction page. For comparison, here are the two sources:
 
 #### Etherscan {#etherscan}
@@ -67,9 +67,9 @@ This will yield the same information as provided on Etherscan's transaction page
 
 [EF's contract page on Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics {#dune-analytics}
+#### Dune {#dune-analytics}
 
-![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
+![Screenshot of a Dune query dashboard](./dune_view.png)
 
 You can find dashboard [here](https://dune.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
@@ -82,7 +82,7 @@ A submitted transaction includes several pieces of information including ([sourc
 - **Value**: This is the amount of ETH transferred (see `ether` column).
 - **Data**: This is arbitrary data that's been hashed (see `data` column)
 - **gasLimit** – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
-- **maxPriorityFeePerGas** - the maximum amount of gas to be included as a tip to the miner
+- **maxPriorityFeePerGas** - the maximum amount of gas to be included as a tip to the validator
 - **maxFeePerGas** - the maximum amount of gas willing to be paid for the transaction (inclusive of baseFeePerGas and maxPriorityFeePerGas)
 
 We can query these specific pieces of information for transactions to the Ethereum Foundation public address:
@@ -96,15 +96,17 @@ SELECT
     gas_limit,
     gas_price / 1e9 AS gas_price_gwei,
     gas_used,
-    ROUND(((gas_used / gas_limit) * 100),2) AS gas_used_pct
-FROM ethereum."transactions"
-WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+    ROUND(CAST(gas_used AS DOUBLE) / gas_limit * 100, 2) AS gas_used_pct
+FROM ethereum.transactions
+WHERE "to" = 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe
 ORDER BY block_time DESC
 ```
 
+The `CAST` is necessary because dividing one integer by another in DuneSQL gives an integer result, which would round almost every percentage down to zero.
+
 ### Blocks {#blocks}
 
-Each transaction will change the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)) ([source](/developers/docs/transactions/)). Transactions are broadcasted to the network to be verified and included in a block. Each transaction is associated with a block number. To see the data, we could query a specific block number: 12396854 (the most recent block among Ethereum Foundation transactions as of this writing, 11/5/21).
+Each transaction will change the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)) ([source](/developers/docs/transactions/)). Transactions are broadcasted to the network to be verified and included in a block. Each transaction is associated with a block number. To see the data, we could query a specific block number: 12396854 (the most recent block among Ethereum Foundation transactions at the time of writing, in May 2021).
 
 Moreover, when we query the next two blocks, we can see that each block contains the hash of the previous block (i.e., parent hash), illustrating how the blockchain is formed.
 
@@ -112,7 +114,7 @@ Each block contains a reference to it parent block. This is shown below between 
 
 ![parent_hash](./parent_hash.png)
 
-Here is the [query](https://dune.com/queries/44856/88292) on Dune Analytics:
+Here is the query:
 
 ```sql
 SELECT
@@ -121,12 +123,11 @@ SELECT
    hash,
    parent_hash,
    nonce
-FROM ethereum."blocks"
-WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
-LIMIT 10
+FROM ethereum.blocks
+WHERE number IN (12396854, 12396855, 12396856)
 ```
 
-We can examine a block by querying time, block number, difficulty, hash, parent hash, and nonce.
+We can examine a block by querying time, block number, hash, parent hash, and nonce. Block 12396854 was produced before [the Merge](/roadmap/merge/), when blocks were mined with proof-of-work and the nonce was meaningful. In proof-of-stake blocks the nonce is always zero.
 
 The only thing this query does not cover is _list of transaction_ which requires a separate query below and _state root_. A full or archival node will store all transactions and state transitions, allowing for clients to query the state of the chain at any time. Because this requires large storage space, we can separate chain data from state data:
 
@@ -135,14 +136,13 @@ The only thing this query does not cover is _list of transaction_ which requires
 
 State root falls in the latter and is _implicit_ data (not stored onchain), while chain data is explicit and stored on the chain itself ([source](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-For this tutorial, we'll be focusing on onchain data that _can_ be queried with SQL via Dune Analytics.
+For this tutorial, we'll be focusing on onchain data that _can_ be queried with SQL via Dune.
 
-As stated above, each block contains a list of transactions, we can query this by filtering for a specific block. We'll try the most recent block, 12396854:
+As stated above, each block contains a list of transactions, we can query this by filtering for a specific block. We'll try block 12396854:
 
 ```sql
-SELECT * FROM ethereum."transactions"
+SELECT * FROM ethereum.transactions
 WHERE block_number = 12396854
-ORDER BY block_time DESC`
 ```
 
 Here's the SQL output on Dune:
@@ -154,25 +154,21 @@ This single block being added to the chain changes the state of the Ethereum vir
 To see how many were actually successful, we would add another filter to count successful transactions:
 
 ```sql
-WITH temp_table AS (
-    SELECT * FROM ethereum."transactions"
-    WHERE block_number = 12396854 AND success = true
-    ORDER BY block_time DESC
-)
 SELECT
-    COUNT(success) AS num_successful_txn
-FROM temp_table
+    COUNT(*) AS num_successful_txn
+FROM ethereum.transactions
+WHERE block_number = 12396854 AND success = true
 ```
 
 For block 12396854, out of 222 total transactions, 204 were successfully verified:
 
 ![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
-Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](/developers/docs/blocks/)).
+Transaction requests occur dozens of times per second, but blocks are only added periodically ([source](/developers/docs/blocks/)). Under proof-of-work, a block was mined on average every 13 to 15 seconds, with a lot of variation. Since [the Merge](/roadmap/merge/) in September 2022, proof-of-stake divides time into 12 second slots, and each slot can have at most one block.
 
-To see that there is one block produced approximately every 15 seconds, we could take the number of seconds in a day (86400) divided by 15 to get an estimated average number of blocks per day (~ 5760).
+So today there can be at most 86400 / 12 = 7200 blocks per day. In practice there are slightly fewer, because a validator occasionally misses its slot.
 
-The chart for Ethereum blocks produced per day (2016 - present) is:
+The chart for Ethereum blocks produced per day (2016 - 2021) is:
 
 ![Chart showing daily Ethereum block production](./daily_blocks.png)
 
@@ -182,36 +178,43 @@ The average number of blocks produced daily over this time period is ~5,874:
 
 The queries are:
 
+Here is the query to visualize the number of blocks produced daily. The `WHERE` clause excludes the current day, which is not finished yet.
+
 ```sql
-# query to visualize number of blocks produced daily since 2016
-
 SELECT
     DATE_TRUNC('day', time) AS dt,
     COUNT(*) AS block_count
-FROM ethereum."blocks"
-GROUP BY dt
-OFFSET 1
-
-# average number of blocks produced per day
-
-WITH temp_table AS (
-SELECT
-    DATE_TRUNC('day', time) AS dt,
-    COUNT(*) AS block_count
-FROM ethereum."blocks"
-GROUP BY dt
-OFFSET 1
-)
-SELECT
-    AVG(block_count) AS avg_block_count
-FROM temp_table
+FROM ethereum.blocks
+WHERE time < DATE_TRUNC('day', NOW())
+GROUP BY 1
+ORDER BY 1
 ```
 
-The average number of blocks produced per day since 2016 is slightly above that number at 5,874. Alternatively, dividing 86400 seconds by 5874 average blocks comes out to 14.7 seconds or approximately one block every 15 seconds.
+And this query calculates the average number of blocks produced per day, before and after the Merge. Block 15537394 is the first proof-of-stake block.
+
+```sql
+WITH daily AS (
+    SELECT
+        DATE_TRUNC('day', time) AS dt,
+        MIN(number) >= 15537394 AS after_merge,
+        COUNT(*) AS block_count
+    FROM ethereum.blocks
+    WHERE time < DATE_TRUNC('day', NOW())
+    GROUP BY 1
+)
+SELECT
+    after_merge,
+    AVG(block_count) AS avg_block_count,
+    86400 / AVG(block_count) AS avg_seconds_per_block
+FROM daily
+GROUP BY 1
+```
+
+When this tutorial was first written in May 2021, the average was 5,874 blocks per day, or one block every 14.7 seconds. After the Merge, the average is just under the 7200 maximum, about one block every 12 seconds.
 
 ### Gas {#gas}
 
-Blocks are bounded in size. The maximum block size is dynamic and varies according to network demand between 12,500,000 and 25,000,000 units. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
+Blocks are bounded in size. Each block has a gas limit, and since [EIP-1559](/developers/docs/gas/#eip-1559) each block also has a gas target, which is half of the limit. When blocks use more gas than the target, the base fee goes up, and when they use less, it goes down. The gas limit itself is adjusted by validators, and it has been raised several times over the years. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 
@@ -221,9 +224,10 @@ One way to conceptualize block gas limit is to think of it as the **supply** of 
 SELECT
     DATE_TRUNC('day', time) AS dt,
     AVG(gas_limit) AS avg_block_gas_limit
-FROM ethereum."blocks"
-GROUP BY dt
-OFFSET 1
+FROM ethereum.blocks
+WHERE time < DATE_TRUNC('day', NOW())
+GROUP BY 1
+ORDER BY 1
 ```
 
 Then there is the actual gas used daily to pay for computing done on the Ethereum chain (i.e., sending transaction, calling a smart contract, minting an NFT). This is the **demand** for available Ethereum block space:
@@ -234,9 +238,10 @@ Then there is the actual gas used daily to pay for computing done on the Ethereu
 SELECT
     DATE_TRUNC('day', time) AS dt,
     AVG(gas_used) AS avg_block_gas_used
-FROM ethereum."blocks"
-GROUP BY dt
-OFFSET 1
+FROM ethereum.blocks
+WHERE time < DATE_TRUNC('day', NOW())
+GROUP BY 1
+ORDER BY 1
 ```
 
 We can also juxtapose these two charts together to see how **demand and supply** line up:
@@ -256,8 +261,8 @@ SELECT
     block_time,
     gas_price / 1e9 AS gas_price_gwei,
     value / 1e18 AS eth_sent
-FROM ethereum."transactions"
-WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+FROM ethereum.transactions
+WHERE "to" = 0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe
 ORDER BY block_time DESC
 ```
 
