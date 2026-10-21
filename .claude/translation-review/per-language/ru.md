@@ -114,3 +114,12 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `Бинанс Академи` (glossary Binance, Latin).
 - `Хром` left undeclined (4 keys); F-Droid `бесплатного` (#83); `Предложение по улучшению Ethereum (EIP)-7805` expansion; Hegotá Cyrillic `Хегота` in page-upgrades-index only.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- Prividium transliterated `привидиум`; `производственного уровня` for production-grade; glamsterdam `devnets` regressed to English.

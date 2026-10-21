@@ -178,7 +178,7 @@ Veškerý gas, který nebyl v transakci využit, se vrací na uživatelský úč
 
 Gas je vyžadován pro jakoukoli transakci, která zahrnuje chytrý kontrakt.
 
-Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z EOA proto nebude vyžadovat žádný gas. Základním voláním RPC pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z EOA proto nebude vyžadovat žádný gas. Základním voláním RPC pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Na rozdíl od přístupu pomocí `eth_call` jsou tyto funkce `view` nebo `pure` také běžně volány interně (tj. ze samotného kontraktu nebo z jiného kontraktu), což už gas stojí.
 

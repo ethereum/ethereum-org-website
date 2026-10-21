@@ -126,3 +126,20 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - `roadmap/privacy:120` `জিরো-নলেজ প্রুফগুলো` (alias) replaced compound `শূন্য-জ্ঞান প্রমাণ`.
 - "both" dropped in Tor/Relay keys (#82); "time served" `পরিবেশন করা সময়`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `problems-fragility-description` database corruption rendered as bribery `দুর্নীতি` -> `নষ্ট হয়ে যাওয়া`.
+
+**Open (warnings):**
+
+- Visa/J.P. Morgan script switches between files; `আরবিট্রাম One` hybrid; `অনুমান` for speculation; `-গুলি`/`-গুলো` split across files.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
+- Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).

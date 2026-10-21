@@ -58,7 +58,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 
 ## Adding a wallet {#adding-a-wallet}
 
-If you want to add a wallet to ethereum.org, create an issue on GitHub.
+If you want to add a wallet to ethereum.org, create an issue on GitHub. The wallet description you give in the issue is shown on the wallet's page, so keep it to one or two factual sentences.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Create an issue

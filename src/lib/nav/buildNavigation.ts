@@ -92,9 +92,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/stablecoins/",
             },
             {
-              label: t("prediction-markets"),
-              description: t("nav-prediction-markets-description"),
-              href: "/prediction-markets/",
+              label: t("nav-nft-label"),
+              description: t("nav-nft-description"),
+              href: "/nft/",
             },
             {
               label: t("nav-see-all-use-cases-label"),
