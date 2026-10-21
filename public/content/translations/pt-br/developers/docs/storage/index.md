@@ -142,7 +142,7 @@ Baseado em Prova de Participação (PoS):
 **Arweave - _A Arweave é uma plataforma dStorage para armazenar dados._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Documentação](https://docs.arweave.org/info/)
+- [Documentação](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _A Züs é uma plataforma dStorage de Prova de Participação (PoS) com fragmentação (sharding) e blobbers._**
