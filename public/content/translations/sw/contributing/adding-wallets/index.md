@@ -58,7 +58,7 @@ Mikoba inabadilika kwa kasi katika Ethereum. Tumejaribu kuunda mfumo wa haki wa 
 
 ## Kuongeza mkoba {#adding-a-wallet}
 
-Ikiwa unataka kuongeza mkoba kwenye ethereum.org, fungua suala kwenye GitHub.
+Ikiwa unataka kuongeza mkoba kwenye ethereum.org, fungua suala kwenye GitHub. Maelezo ya mkoba unayotoa kwenye suala hilo yanaonyeshwa kwenye ukurasa wa mkoba, kwa hivyo yaweke katika sentensi moja au mbili za kweli.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Fungua suala
