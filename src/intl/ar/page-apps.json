@@ -58,18 +58,11 @@
   "page-apps-filter-by": "تصفية حسب",
   "page-apps-filter-all": "الكل",
   "page-apps-showing": "عرض",
-  "page-apps-visit-app": "زيارة {appName}",
-  "page-apps-see-next": "رؤية التالي",
-  "page-apps-info-title": "معلومات",
   "page-apps-info-founded": "تاريخ التأسيس",
   "page-apps-info-creator": "المنشئ",
-  "page-apps-info-last-updated": "آخر تحديث",
-  "page-apps-gallery-title": "المعرض",
-  "page-apps-gallery-screenshot-alt": "لقطة شاشة {index} من {appName} توضح واجهة التطبيق",
-  "page-apps-gallery-modal-title": "لقطات شاشة {appName}",
+  "page-apps-info-languages": "اللغات",
+  "page-apps-info-listing-reviewed": "تمت مراجعة الإدراج",
+  "page-apps-info-listing-reviewed-tooltip": "تاريخ آخر مراجعة لتفاصيل هذا التطبيق على ⁦ethereum.org⁩. لا يوضح هذا متى تم تغيير التطبيق نفسه لآخر مرة.",
   "page-apps-more-apps-like-this": "المزيد من التطبيقات المشابهة",
-  "page-apps-by-company": "بواسطة {company}",
-  "page-apps-today": "اليوم",
-  "page-apps-one-day-ago": "منذ يوم واحد",
-  "page-apps-days-ago": "منذ {days} أيام"
+  "page-apps-detail-meta-title": "تطبيقات إيثيريوم - {name}"
 }
