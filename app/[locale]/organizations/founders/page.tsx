@@ -1,5 +1,5 @@
 import React from "react"
-import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
+import { Banknote, ChartNoAxesCombined, UsersRound, Wrench } from "lucide-react"
 import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
@@ -14,6 +14,8 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
+  CardParagraph,
+  CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
@@ -26,17 +28,14 @@ import { slugify } from "@/lib/utils/url"
 
 import OrganizationPathways from "../_components/organization-pathways"
 
+import Alchemy from "./logos/alchemy.svg"
 import Alliance from "./logos/alliance.svg"
 import Arbitrum from "./logos/arbitrum.svg"
 import Base from "./logos/base.svg"
-import Devconnect from "./logos/devconnect.svg"
 import EcosystemSupport from "./logos/ecosystem-support-program.svg"
-import EnsBuilderGrants from "./logos/ens-builder-grants.svg"
+import EthereumOrg from "./logos/ethereum-org.svg"
 import EthGlobal from "./logos/ethglobal.svg"
 import Kernel from "./logos/kernel.svg"
-import Optimism from "./logos/optimism.svg"
-import Polygon from "./logos/polygon.svg"
-import ProtocolGuild from "./logos/protocol-guild.svg"
 import Unichain from "./logos/unichain.svg"
 import PageJsonLD from "./page-jsonld"
 
@@ -50,62 +49,67 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-founders")
 
+  // Status tags come first on each card and answer "can I apply right now?"
   const supportTags = {
-    active: {
-      label: t("page-founders-support-tag-active"),
+    open: {
+      label: t("page-founders-tag-open"),
       // TODO: extract color variants to ui/tag component
       className:
         "bg-green-100 dark:bg-green-700/50 text-green-700 dark:text-green-100",
     },
-    grantProgram: {
-      label: t("page-founders-support-tag-grant-program"),
+    ongoing: {
+      label: t("page-founders-tag-ongoing"),
+      className:
+        "bg-green-100 dark:bg-green-700/50 text-green-700 dark:text-green-100",
+    },
+    cohortClosed: {
+      label: t("page-founders-tag-cohort-closed"),
+      className: "bg-background-highlight text-body-medium",
+    },
+    grants: {
+      label: t("page-founders-tag-grants"),
       className:
         "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
     },
-    auditGrants: {
-      label: t("page-founders-support-tag-audit-grants"),
+    investment: {
+      label: t("page-founders-tag-investment"),
       className:
-        "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
+        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
     },
     publicGoods: {
-      label: t("page-founders-support-tag-public-goods"),
+      label: t("page-founders-tag-public-goods"),
       className:
         "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
-    toolingInfra: {
-      label: t("page-founders-support-tag-tooling-infra"),
-      className:
-        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
-    },
-    events: {
-      label: t("page-founders-support-tag-events"),
-      className:
-        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
-    },
-    fundraising: {
-      label: t("page-founders-support-tag-fundraising"),
-      className:
-        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
-    },
-    ecosystemEvents: {
-      label: t("page-founders-support-tag-ecosystem-events"),
-      className:
-        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
-    },
     accelerator: {
-      label: t("page-founders-support-tag-accelerator"),
+      label: t("page-founders-tag-accelerator"),
       className:
         "bg-orange-100 dark:bg-orange-700/50 text-orange-700 dark:text-orange-100",
     },
     mentorship: {
-      label: t("page-founders-support-tag-mentorship"),
+      label: t("page-founders-tag-mentorship"),
       className:
         "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
     },
-    networking: {
-      label: t("page-founders-support-tag-networking"),
+    auditSubsidies: {
+      label: t("page-founders-tag-audit-subsidies"),
       className:
-        "bg-blue-100 dark:bg-blue-600/50 text-blue-600 dark:text-blue-100",
+        "bg-purple-100 dark:bg-purple-600/50 text-purple-600 dark:text-purple-100",
+    },
+    credits: {
+      label: t("page-founders-tag-credits"),
+      className:
+        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
+    },
+    gas: {
+      label: t("page-founders-tag-gas"),
+      className:
+        "bg-pink-100 dark:bg-pink-800/50 text-pink-800 dark:text-pink-100",
+    },
+    events: {
+      label: t("page-founders-tag-events"),
+      className:
+        "bg-yellow-100 dark:bg-yellow-700/50 text-yellow-700 dark:text-yellow-100",
     },
   } as const satisfies Record<string, { label: string; className: string }>
 
@@ -130,89 +134,74 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const supportTabs: SupportSection[] = [
     {
       key: "funding",
-      label: t("page-founders-funding-label"),
+      label: t("page-founders-funding-investment-label"),
       icon: <Banknote />,
       entities: [
         {
-          name: "Optimism Atlas",
-          Logo: Optimism,
-          tags: ["active", "grantProgram", "auditGrants", "publicGoods"],
-          description: t("page-founders-funding-optimism-description"),
+          name: "Ecosystem Support Program",
+          Logo: EcosystemSupport,
+          tags: ["ongoing", "grants", "publicGoods"],
+          description: t("page-founders-funding-esp-applicants-description"),
           highlights: [
-            t("page-founders-funding-optimism-highlight-1"),
-            t("page-founders-funding-optimism-highlight-2"),
+            t("page-founders-funding-esp-applicants-highlight-1"),
+            t("page-founders-funding-esp-applicants-highlight-2"),
           ],
-          href: "https://atlas.optimism.io/",
-          ctaLabel: t.rich("page-founders-cta-visit-name", {
-            name: "Optimism",
-          }),
+          href: "https://esp.ethereum.foundation/applicants",
+          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "ESP" }),
         },
         {
           name: "Base",
           Logo: Base,
-          tags: ["active", "grantProgram", "toolingInfra"],
-          description: t("page-founders-funding-base-description"),
-          highlights: [t("page-founders-funding-base-highlight-1")],
-          href: "https://paragraph.com/@grants.base.eth/calling-based-builders",
+          tags: ["ongoing", "grants", "investment"],
+          description: t("page-founders-funding-base-builders-description"),
+          highlights: [
+            t("page-founders-funding-base-builders-highlight-1"),
+            t("page-founders-funding-base-builders-highlight-2"),
+          ],
+          href: "https://docs.base.org/get-started/builders",
           ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Base" }),
         },
         {
-          name: "Ecosystem Support Program",
-          Logo: EcosystemSupport,
-          tags: [
-            "active",
-            "grantProgram",
-            "publicGoods",
-            "toolingInfra",
-            "events",
-          ],
-          description: t("page-founders-funding-esp-description"),
-          highlights: [t("page-founders-funding-esp-highlight-1")],
-          href: "https://esp.ethereum.foundation/",
-          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "ESP" }),
-        },
-        {
-          name: "Arbitrum",
-          Logo: Arbitrum,
-          tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
-          description: t("page-founders-funding-arbitrum-description"),
-          highlights: [t("page-founders-funding-arbitrum-highlight-1")],
-          href: "https://arbitrum.foundation/grants",
-          ctaLabel: t.rich("page-founders-cta-visit-name", {
-            name: "Arbitrum",
-          }),
-        },
-        {
-          name: "Unichain",
+          name: "Uniswap Foundation and Unichain",
           Logo: Unichain,
-          tags: ["active", "grantProgram", "auditGrants", "toolingInfra"],
-          description: t("page-founders-funding-unichain-description"),
-          highlights: [t("page-founders-funding-unichain-highlight-1")],
+          tags: ["ongoing", "grants", "auditSubsidies"],
+          description: t("page-founders-funding-uniswap-description"),
+          highlights: [
+            t("page-founders-funding-uniswap-highlight-1"),
+            t("page-founders-funding-uniswap-highlight-2"),
+          ],
           href: "https://www.uniswapfoundation.org/build",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
-            name: "Unichain",
+            name: "Uniswap Foundation",
           }),
-        },
-        {
-          name: "Polygon",
-          Logo: Polygon,
-          tags: ["active", "grantProgram", "toolingInfra"],
-          description: t("page-founders-funding-polygon-description"),
-          highlights: [t("page-founders-funding-polygon-highlight-1")],
-          href: "https://polygon.technology/grants",
-          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "Polygon" }),
         },
       ],
     },
     {
-      key: "accelerators-growth",
-      label: t("page-founders-accelerators-growth-label"),
+      key: "accelerators-mentorship",
+      label: t("page-founders-accelerators-mentorship-label"),
       icon: <ChartNoAxesCombined />,
       entities: [
         {
+          name: "Alliance",
+          Logo: Alliance,
+          tags: ["open", "accelerator", "investment", "mentorship"],
+          description: t(
+            "page-founders-accelerators-alliance-terms-description"
+          ),
+          highlights: [
+            t("page-founders-accelerators-alliance-terms-highlight-1"),
+            t("page-founders-accelerators-alliance-terms-highlight-2"),
+          ],
+          href: "https://alliance.xyz/",
+          ctaLabel: t.rich("page-founders-cta-explore-name", {
+            name: "Alliance",
+          }),
+        },
+        {
           name: "Kernel",
           Logo: Kernel,
-          tags: ["active", "mentorship", "networking"],
+          tags: ["open", "mentorship"],
           description: t("page-founders-accelerators-kernel-description"),
           highlights: [
             t("page-founders-accelerators-kernel-highlight-1"),
@@ -224,95 +213,98 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           }),
         },
         {
-          name: "Alliance",
-          Logo: Alliance,
-          tags: [
-            "active",
-            "accelerator",
-            "networking",
-            "mentorship",
-            "fundraising",
+          name: "Arbitrum Open House",
+          Logo: Arbitrum,
+          tags: ["open", "accelerator", "grants", "mentorship"],
+          subtitle: t(
+            "page-founders-accelerators-arbitrum-open-house-subtitle"
+          ),
+          description: t(
+            "page-founders-accelerators-arbitrum-open-house-description"
+          ),
+          highlights: [
+            t("page-founders-accelerators-arbitrum-open-house-highlight-1"),
+            t("page-founders-accelerators-arbitrum-open-house-highlight-2"),
           ],
-          description: t("page-founders-accelerators-alliance-description"),
-          highlights: [t("page-founders-accelerators-alliance-highlight-1")],
-          href: "https://alliance.xyz/",
+          href: "https://openhouse.arbitrum.io/",
           ctaLabel: t.rich("page-founders-cta-explore-name", {
-            name: "Alliance",
+            name: "Open House",
           }),
         },
         {
-          name: "Base",
+          name: "Base Batches",
           Logo: Base,
-          tags: ["accelerator", "mentorship", "networking"],
-          description: t("page-founders-accelerators-base-description"),
-          highlights: [t("page-founders-accelerators-base-highlight-1")],
-          href: "https://www.basebatches.xyz/",
-          ctaLabel: t.rich("page-founders-cta-explore-name", { name: "Base" }),
+          tags: ["cohortClosed", "accelerator", "investment"],
+          description: t("page-founders-accelerators-base-batches-description"),
+          highlights: [
+            t("page-founders-accelerators-base-batches-highlight-1"),
+          ],
+          href: "https://www.base.org/batches",
+          ctaLabel: t.rich("page-founders-cta-explore-name", {
+            name: "Base Batches",
+          }),
         },
       ],
     },
     {
-      key: "partnerships-integrations",
-      label: t("page-founders-partnerships-label"),
-      icon: <Handshake />,
+      key: "technical-support",
+      label: t("page-founders-technical-label"),
+      icon: <Wrench />,
       entities: [
         {
-          name: "Unichain",
-          Logo: Unichain,
-          tags: ["active", "auditGrants"],
-          description: t("page-founders-partnerships-unichain-description"),
-          highlights: [t("page-founders-partnerships-unichain-highlight-1")],
-          href: "https://www.uniswapfoundation.org/build",
+          name: "Arbitrum",
+          Logo: Arbitrum,
+          tags: ["ongoing", "auditSubsidies", "gas"],
+          description: t("page-founders-technical-arbitrum-description"),
+          highlights: [
+            t("page-founders-technical-arbitrum-highlight-1"),
+            t("page-founders-technical-arbitrum-highlight-2"),
+          ],
+          href: "https://arbitrum.foundation/grants",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
-            name: "Unichain",
+            name: "Arbitrum",
           }),
         },
         {
-          name: "ENS Builder Grants",
-          Logo: EnsBuilderGrants,
-          tags: ["active", "publicGoods", "fundraising"],
-          description: t("page-founders-partnerships-ens-description"),
+          name: "Alchemy Startup Program",
+          Logo: Alchemy,
+          tags: ["ongoing", "credits"],
+          description: t("page-founders-technical-alchemy-description"),
           highlights: [
-            t("page-founders-partnerships-ens-highlight-1"),
-            t("page-founders-partnerships-ens-highlight-2"),
+            t("page-founders-technical-alchemy-highlight-1"),
+            t("page-founders-technical-alchemy-highlight-2"),
           ],
-          href: "https://builder.ensgrants.xyz/",
-          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "ENS" }),
-        },
-        {
-          name: "Protocol Guild",
-          Logo: ProtocolGuild,
-          tags: ["active", "fundraising"],
-          description: t(
-            "page-founders-partnerships-protocol-guild-description"
-          ),
-          highlights: [
-            t("page-founders-partnerships-protocol-guild-highlight-1"),
-          ],
-          href: "https://www.protocolguild.org/",
-          ctaLabel: t.rich("page-founders-cta-visit-name", { name: "PG" }),
-        },
-        {
-          name: "Devconnect",
-          Logo: Devconnect,
-          tags: ["ecosystemEvents"],
-          description: t("page-founders-partnerships-devconnect-description"),
-          highlights: [],
-          href: "https://devconnect.org/",
+          href: "https://www.alchemy.com/startup-program",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
-            name: "Devconnect",
+            name: "Alchemy",
           }),
         },
+      ],
+    },
+    {
+      key: "meet-builders",
+      label: t("page-founders-community-label"),
+      icon: <UsersRound />,
+      entities: [
         {
           name: "ETHGlobal",
           Logo: EthGlobal,
-          tags: ["ecosystemEvents"],
-          description: t("page-founders-partnerships-ethglobal-description"),
+          tags: ["events"],
+          description: t("page-founders-community-ethglobal-description"),
           highlights: [],
-          href: "https://ethglobal.com/",
+          href: "https://ethglobal.com/events",
           ctaLabel: t.rich("page-founders-cta-visit-name", {
             name: "ETHGlobal",
           }),
+        },
+        {
+          name: "Ethereum events",
+          Logo: EthereumOrg,
+          tags: ["events"],
+          description: t("page-founders-community-events-description"),
+          highlights: [],
+          href: "/community/events/",
+          ctaLabel: t("page-founders-cta-browse-events"),
         },
       ],
     },
@@ -386,7 +378,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                           >
                             {name}
                           </h3>
-                          <Logo className="max-h-9 max-w-full **:fill-body!" />
+                          <Logo className="max-h-9 max-w-full" />
                         </CardHeader>
                         <CardContent spacing="md">
                           {!!tags.length && (
@@ -426,6 +418,34 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </TabsContent>
             ))}
           </Tabs>
+
+          <p className="text-sm text-body-medium">
+            {t("page-founders-last-checked")}
+          </p>
+        </Section>
+
+        <Section id="more-funding">
+          <Card
+            href="https://rfpsear.ch/"
+            variant="nested"
+            size="lg"
+            border
+            className="md:flex-row md:items-center"
+          >
+            <CardContent>
+              <CardTitle asChild>
+                <h2>{t("page-founders-rfpsearch-h3")}</h2>
+              </CardTitle>
+              <CardParagraph>{t("page-founders-rfpsearch-p")}</CardParagraph>
+            </CardContent>
+            {/* compact: the default responsive footer is a zero-width @container in a row.
+                md:pb-0 matches the zeroed top pad so the button centers */}
+            <CardFooter buttons="compact" className="shrink-0 md:pb-0">
+              <CardButtonFake variant="outline">
+                {t("page-founders-rfpsearch-cta")}
+              </CardButtonFake>
+            </CardFooter>
+          </Card>
         </Section>
 
         <OrganizationPathways pathways={["small-business", "enterprise"]} />

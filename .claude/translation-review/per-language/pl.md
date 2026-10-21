@@ -147,3 +147,9 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
 - audited -> `zbadanych`; policy -> `polityczną`; twoj/Twoj capitalization mixed.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: enterprise JSON compare-row-auditability `Publiczne i weryfikowalne` should agree with feminine row label (`Publiczna i weryfikowalna`).

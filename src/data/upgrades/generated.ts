@@ -464,7 +464,7 @@ export const generated = {
           month: 10,
           day: 6,
         },
-        status: "confirmed",
+        status: "complete",
       },
       {
         kind: "testnet",
@@ -723,12 +723,39 @@ export const generated = {
         },
       },
       {
+        id: 4758,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 5920,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
         id: 7668,
         status: "considered",
         networking: false,
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
+        },
+      },
+      {
+        id: 7709,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
         },
       },
       {
@@ -768,6 +795,24 @@ export const generated = {
         },
       },
       {
+        id: 8077,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 8116,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
         id: 8131,
         status: "considered",
         networking: false,
@@ -783,6 +828,15 @@ export const generated = {
         decidedAt: {
           call: "acde/244",
           date: "2026-08-27",
+        },
+      },
+      {
+        id: 8151,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
         },
       },
       {
@@ -837,6 +891,24 @@ export const generated = {
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
+        },
+      },
+      {
+        id: 8298,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 8360,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
         },
       },
       {

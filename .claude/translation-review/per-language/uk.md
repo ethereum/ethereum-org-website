@@ -139,3 +139,12 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
 - Етеріум undeclined x4 in small-business; settle -> `остаточну фіксацію` misapplied; Prividium misspelled.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.8/10
+
+- Warning: enterprise JSON "production" as manufacturing (`у виробництві`, `виробничого рівня`); `Фінальність остаточної фіксації` tautology; з'єднання/підключення drift in wagmi.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: typo `публіча` -> `публічна` (L200).
+- Open: `[Етеріум](/)-мережі` awkward link compound (dev `Мережі [Етеріуму](/)`).

@@ -158,3 +158,9 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `İşletmeler için Ethereum` used for both enterprise and business pathways; `tekil` for single recurs; PostgreSQL sidecars translated literally.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".

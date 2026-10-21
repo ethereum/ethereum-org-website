@@ -151,3 +151,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Mainland vocabulary leaks (`用戶`, `數據`); truncated `了解更多關於 X` CTAs; `智慧帳戶` outlier; enterprise-privacy on 你.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.6/10
+
+- Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
+- Open: "much faster" lost `得多` (L178).

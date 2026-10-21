@@ -121,3 +121,13 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Ethereum für Unternehmen` used for both enterprise and small-business pages; `Privatkredite` for private credit; Onchain capitalization; Kontrahenten-/Gegenparteirisiko split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.4/10
+
+- Fixed: security line 292 unbalanced backtick around withdraw() (regression; same class as the English backtick fix fe75a81caa).
+- Warning: wagmi line 299 dropped subject `sie` (ungrammatical).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: `Layer 2-Testnetze` -> `Layer-2-Testnetze` (2x, compound hyphenation).
+- Open: colloquial `herumspielen` replaced `ausprobieren`; L174 `anstatt geschützt oder sicher` awkward.

@@ -4,7 +4,7 @@ description: "Přehled sítí Etherea a kde získat testnetový ether (ETH) pro 
 lang: cs
 ---
 
-Sítě [Etherea](/) jsou skupiny propojených počítačů, které komunikují pomocí protokolu Ethereum. Existuje pouze jeden Ethereum Mainnet, ale pro účely testování a vývoje lze vytvořit nezávislé sítě, které dodržují stejná pravidla protokolu. Existuje mnoho nezávislých „sítí“, které dodržují protokol, aniž by spolu vzájemně interagovaly. Můžete si dokonce jednu spustit lokálně na svém vlastním počítači pro testování vašich chytrých kontraktů a Web3 aplikací.
+[Sítě Etherea](/) jsou skupiny propojených počítačů, které komunikují pomocí protokolu Etherea. Existuje pouze jeden Ethereum Mainnet, ale pro účely testování a vývoje lze vytvořit nezávislé sítě, které dodržují stejná pravidla protokolu. Existuje mnoho nezávislých „sítí“, které dodržují protokol, aniž by spolu vzájemně interagovaly. Můžete dokonce spustit jednu lokálně na svém vlastním počítači pro testování vašich chytrých kontraktů a Web3 aplikací.
 
 Váš účet na Ethereu bude fungovat napříč různými sítěmi, ale zůstatek na účtu a historie transakcí se z hlavní sítě Etherea nepřevedou. Pro účely testování je užitečné vědět, které sítě jsou k dispozici a jak získat testnetové ETH na hraní. Obecně se z bezpečnostních důvodů nedoporučuje znovu používat účty z Mainnetu na testnetech nebo naopak.
 
@@ -14,7 +14,7 @@ Než si přečtete o různých sítích, měli byste porozumět [základům Ethe
 
 ## Veřejné sítě {#public-networks}
 
-Veřejné sítě jsou přístupné komukoli na světě s připojením k internetu. Kdokoli může číst nebo vytvářet transakce na veřejném blockchainu a validovat prováděné transakce. Konsensus mezi uzly rozhoduje o zahrnutí transakcí a stavu sítě.
+Veřejné sítě jsou přístupné komukoli na světě s připojením k internetu. Kdokoli může číst nebo vytvářet transakce na veřejném blockchainu a validovat prováděné transakce. Konsensus mezi účastníky sítě rozhoduje o zahrnutí transakcí a stavu sítě.
 
 ### Ethereum Mainnet {#ethereum-mainnet}
 
@@ -24,11 +24,11 @@ Když lidé a burzy diskutují o cenách ETH, mluví o ETH na Mainnetu.
 
 ### Testnety Etherea {#ethereum-testnets}
 
-Kromě Mainnetu existují i veřejné testnety. Jedná se o sítě, které používají vývojáři protokolu nebo vývojáři chytrých kontraktů k testování jak aktualizací protokolu, tak potenciálních chytrých kontraktů v prostředí podobném produkčnímu před nasazením na Mainnet. Představte si to jako analogii k produkčním a testovacím (staging) serverům.
+Kromě Mainnetu existují veřejné testnety. Jedná se o sítě používané vývojáři protokolu nebo vývojáři chytrých kontraktů k testování jak aktualizací protokolu, tak potenciálních chytrých kontraktů v prostředí podobném produkčnímu před nasazením na Mainnet. Představte si to jako obdobu produkčních a testovacích (staging) serverů.
 
 Jakýkoli kód kontraktu, který napíšete, byste měli před nasazením na Mainnet otestovat na testnetu. Mezi decentralizovanými aplikacemi (dapp), které se integrují s existujícími chytrými kontrakty, má většina projektů kopie nasazené na testnetech.
 
-Většina testnetů začala používat mechanismus konsensu důkaz autority (PoA) s řízeným přístupem. To znamená, že je vybrán malý počet uzlů k validaci transakcí a vytváření nových bloků – přičemž v tomto procesu dávají v sázku svou identitu. Alternativně některé testnety disponují otevřeným mechanismem konsensu důkaz podílem (PoS), kde si každý může vyzkoušet provozování validátoru, stejně jako na Ethereum Mainnetu.
+Většina testnetů začínala s využitím mechanismu konsensu důkaz autority s řízeným přístupem. To znamená, že k validaci transakcí a vytváření nových bloků je vybrán malý počet uzlů – přičemž v tomto procesu dávají v sázku svou identitu. Alternativně některé testnety disponují otevřeným mechanismem konsensu důkaz podílem (PoS), kde si každý může vyzkoušet provozování validátoru, stejně jako na Ethereum Mainnetu.
 
 ETH na testnetech by nemělo mít žádnou skutečnou hodnotu; nicméně vznikly trhy pro určité typy testnetového ETH, které se stalo vzácným nebo obtížně dostupným. Vzhledem k tomu, že k interakci s Ethereem (i na testnetech) potřebujete ETH, většina lidí získává testnetové ETH zdarma z faucetů. Většina faucetů jsou webové aplikace, do kterých můžete zadat adresu, na kterou požadujete zaslání ETH.
 
@@ -41,6 +41,7 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 **Sepolia je doporučený výchozí testnet pro vývoj aplikací**. Síť Sepolia používá sadu validátorů s řízeným přístupem, kterou kontrolují klientské a testovací týmy.
 
 ##### Zdroje
+
 - [Webové stránky](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -48,20 +49,21 @@ Dva veřejné testnety, které vývojáři klientů v současné době udržují
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucety
+
 - [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Faucet](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ecosystem Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com Sepolia Faucet](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [OpenFaucet.org Sepolia Faucet](https://openfaucet.org/ethereum-sepolia)
 - [PoW Faucet](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
-Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená pro uživatele, kteří chtějí provozovat testnetový validátor. Stakeři, kteří chtějí otestovat aktualizace protokolu před jejich nasazením na Mainnet, by proto měli používat Hoodi.
+Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená pro uživatele, kteří chtějí provozovat testnetový validátor. Stakeři, kteří chtějí otestovat aktualizace protokolu před jejich nasazením na Mainnet, by proto měli použít Hoodi.
 
 - Otevřená sada validátorů, stakeři mohou testovat aktualizace sítě
 - Velký stav, užitečný pro testování složitých interakcí chytrých kontraktů
@@ -72,7 +74,7 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 - [Webové stránky](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
 - [Průzkumník](https://explorer.hoodi.ethpandaops.io/)
-- [Synchronizace přes kontrolní bod](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Synchronizace kontrolních bodů (Checkpoint Sync)](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
@@ -80,6 +82,7 @@ Hoodi je testnet pro testování validace a stakingu. Síť Hoodi je otevřená 
 
 - [Chain Platform Hoodi Faucet](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+- [OpenFaucet.org Hoodi Faucet](https://openfaucet.org/ethereum-hoodi)
 - [PoW Faucet](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
@@ -99,7 +102,7 @@ Ephemery je unikátní druh testnetu, který se každý měsíc plně resetuje. 
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)
 - [Průzkumník Beacon chainu](https://beaconlight.ephemery.dev/)
-- [Synchronizace přes kontrolní bod](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Synchronizace kontrolních bodů (Checkpoint Sync)](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
 #### Faucety {#faucets}
@@ -130,8 +133,9 @@ Testnet pro [Arbitrum](https://arbitrum.io/).
 ##### Faucety
 
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
-- [Chainlink Arbitrum Sepolia Faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Faucet](https://ethfaucet.com/networks/arbitrum)
+- [OpenFaucet.org Arbitrum Sepolia Faucet](https://openfaucet.org/arbitrum-sepolia)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -148,7 +152,8 @@ Testnet pro [Optimism](https://www.optimism.io/).
 - [Alchemy Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Faucet](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Faucet](https://ethfaucet.com/networks/optimism)
-- [Testnet Faucet](https://docs.optimism.io/builders/tools/build/faucets)
+- [OpenFaucet.org Optimism Sepolia Faucet](https://openfaucet.org/optimism-sepolia)
+- [Testnet Faucet](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -170,13 +175,13 @@ Síť Etherea je soukromá síť, pokud její uzly nejsou připojeny k veřejné
 
 ### Vývojové sítě {#development-networks}
 
-Při vývoji aplikace pro Ethereum ji budete chtít spustit na soukromé síti, abyste před jejím nasazením viděli, jak funguje. Podobně jako si při vývoji webu vytváříte lokální server na svém počítači, můžete si vytvořit lokální instanci blockchainu pro testování vaší decentralizované aplikace (dapp). To umožňuje mnohem rychlejší iteraci než na veřejném testnetu.
+Při vývoji aplikace pro Ethereum ji budete chtít spustit na soukromé síti, abyste před jejím nasazením viděli, jak funguje. Podobně jako si pro vývoj webu vytváříte lokální server na svém počítači, můžete si vytvořit lokální instanci blockchainu pro testování vaší decentralizované aplikace (dapp). To umožňuje mnohem rychlejší iteraci než veřejný testnet.
 
-Existují projekty a nástroje, které s tím pomáhají. Přečtěte si více o [vývojových sítích](/developers/docs/development-networks/).
+Existují projekty a nástroje, které s tím pomáhají. Zjistěte více o [vývojových sítích](/developers/docs/development-networks/).
 
 ### Sítě konsorcia {#consortium-networks}
 
-Proces konsensu je řízen předem definovanou sadou důvěryhodných uzlů. Například soukromá síť známých akademických institucí, z nichž každá spravuje jeden uzel, a bloky jsou validovány prahovým počtem signatářů v rámci sítě.
+Proces konsensu je řízen předem definovanou sadou uzlů, které jsou důvěryhodné. Například soukromá síť známých akademických institucí, z nichž každá spravuje jeden uzel, a bloky jsou validovány prahovým počtem signatářů v rámci sítě.
 
 Pokud je veřejná síť Etherea jako veřejný internet, síť konsorcia je jako soukromý intranet.
 
@@ -186,26 +191,26 @@ Mnoho testnetů Etherea je pojmenováno po skutečných stanicích metra nebo vl
 
 ### <Emoji text="🚧" /> Běžně používané a starší testnety {#common-and-legacy-testnets}
 
-- **Sepolia** - Čtvrť s napojením na metro v řeckých Aténách. V současné době se používá pro testování chytrých kontraktů a dApp.
+- **Sepolia** - Čtvrť s napojením na metro v řeckých Aténách. V současnosti se používá pro testování chytrých kontraktů a dApp.
 - **Hoodi** - Pojmenováno po stanici metra Hoodi v indickém Bengalúru. Používá se pro testování validátorů a aktualizací protokolu.
 - **Goerli** _(zastaralé)_ - Pojmenováno po Görlitzer Bahnhof v německém Berlíně.
 - **Rinkeby** _(zastaralé)_ - Pojmenováno po předměstí Stockholmu se stanicí metra.
 - **Ropsten** _(zastaralé)_ - Odkazuje na oblast a bývalý terminál trajektů/metra ve Stockholmu.
-- **Kovan** _(zastaralé)_ - Pojmenováno po stanici singapurského metra MRT.
+- **Kovan** _(zastaralé)_ - Pojmenováno po stanici singapurského metra (MRT).
 - **Morden** _(zastaralé)_ - Pojmenováno po stanici londýnského metra. První veřejný testnet Etherea.
 
 ### <Emoji text="🧪" /> Další specializované testnety {#other-testnets}
 
-Některé testnety byly vytvořeny pro krátkodobé testování nebo testování specifické pro aktualizace a nemusí mít nutně tématiku metra:
+Některé testnety byly vytvořeny pro krátkodobé testování nebo testování specifických aktualizací a nemusí mít nutně tématiku metra:
 
-- **Holesky** _(zastaralé)_ - Pojmenováno po nádraží Holešovice v Praze. Používáno pro testování validátorů; zastaralé v roce 2025.
-- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(všechny zastaralé)_ a **Ephemery** - Účelově vytvořené pro simulace aktualizací, jako je Merge, Šanghaj, nebo experimenty s validátory. Některé názvy jsou spíše regionální nebo tematické než založené na metru.
+- **Holesky** _(zastaralé)_ - Pojmenováno po nádraží Holešovice v Praze. Používalo se pro testování validátorů; zastaralé v roce 2025.
+- **Kiln**, **Zhejiang**, **Shandong**, **Prater**, **Pyrmont**, **Olympic** _(všechny zastaralé)_ a **Ephemery** - Účelově vytvořené pro simulace aktualizací jako Merge, Šanghaj nebo experimenty s validátory. Některé názvy jsou spíše regionální nebo tematické než založené na metru.
 
-Používání názvů stanic metra pomáhá vývojářům rychle identifikovat a zapamatovat si testnety, aniž by se museli spoléhat na číselná ID řetězců. Odráží to také kulturu Etherea: praktickou, globální a zaměřenou na lidi.
+Používání názvů stanic metra pomáhá vývojářům rychle identifikovat a zapamatovat si testnety, aniž by se museli spoléhat na číselná ID řetězců (chain ID). Odráží to také kulturu Etherea: praktickou, globální a zaměřenou na lidi.
 
 ## Související nástroje {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _seznam EVM sítí pro připojení peněženek a poskytovatelů ke správnému ID řetězce a ID sítě_
+- [Chainlist](https://chainlist.org/) _seznam EVM sítí pro připojení peněženek a poskytovatelů ke správnému ID řetězce (Chain ID) a ID sítě (Network ID)_
 - [Řetězce založené na EVM](https://github.com/ethereum-lists/chains) _repozitář na GitHubu s metadaty řetězců, který pohání Chainlist_
 
 ## Další čtení {#further-reading}

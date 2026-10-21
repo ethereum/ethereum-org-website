@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
+> Last updated: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
+> Previous: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
 > Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
 > Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
 > Previous: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
@@ -1120,3 +1121,19 @@ PR #19474: the new /organizations pages render short stat-tile captions (`-stat-
 ### 87. Semantic traps recurring in the /organizations content (PATTERN -- semantic)
 
 PR #19474: "database corruption" -> moral corruption/bribery (bn `দুর্নীতি`, te `అవినీతి`, hi `भ्रष्टाचार`); "tokenized treasuries" (government bills) -> treasury department/vault (de `Schatzkammern` fixed; es/pt-br/fr/id/vi/tr/ar/ur/te left as warnings); relational "settle against liquidity" -> "in opposition to" (te, hi -- known trap); "scalable" -> "measurable" (mr `मोजण्यायोग्य`); refund agency inverted (ta: staff *receive* refunds); "reused address" -> "used once" (te); "for 120 days after a sale" -> "after 120 days" (hi). "Ethereum for enterprises" and "Ethereum for business" collapse to one title in tr, sw, de -- two pathway cards with identical headings.
+
+### 88. Metavariable placeholders translated inside inline code (CRITICAL -- code)
+
+PR #19480: the wagmi tutorial's pseudo-syntax spans `{<expression>}`, `{<condition> && <value>}` and `<variable>?.<field>` were translated in cs, pl, tr and fr (`{<výraz>}`, `<zmienna>?.<pole>`, `<değişken>?.<alan>`, `<valeur>`), though dev had them in English and the other 20 locales kept them. A retranslation pass of a line can reach code spans that earlier runs left alone. Restore English; the surrounding prose explains the placeholders.
+
+### 89. Underscore emphasis between CJK characters renders literally (WARNING -- rendering)
+
+PR #19480: zh retranslation turned `它**必须**在` / `我们**未**连接` into `它_必须_在` / `我们_未_连接`. remark-gfm with no CJK plugin cannot open `_` emphasis flanked by CJK characters, so readers see the underscores. `**` works in that position; `<em>` always works. Revert to the dev form when the run regressed it; pre-existing cases in ja/zh-tw are warnings.
+
+### 90. Gate quarantines that never clear (INFORMATIONAL -- pipeline)
+
+PR #19480 `.manifests/quarantine.json`: (a) `developers/docs/networks/index.md` gated in all 24 locales because English h5 headings (`##### Resources`, `##### Faucets`) carry no ID and the model emits an empty `{#}` -- it will re-quarantine every run until English h5s get IDs or the sanitizer strips empty `{#}`. (b) ar `page-organizations-enterprise.json` gated by `json-plural-branch` because the Arabic `two` (dual) branch omits `{count}` -- idiomatic Arabic, gate false positive (follow-up to #85).
+
+### 91. Quarantine release = full re-translation that regresses dev-correct text (PATTERN -- review scope)
+
+PR #19486: the #90 networks quarantine cleared, so all 24 locales re-translated `developers/docs/networks/index.md` even though English only gained 4 links. Most findings were regressions of wording that was already right on dev: sw translated the brand `Chain Platform` (`Jukwaa la Chain`), te/ur transliterated it and ur did the same to `Google Cloud`; hi/mr swapped glossary `staker`/`peer` for descriptive phrases (mr `सहकाऱ्यांमधील` = "among coworkers"); mr "deprecated" -> `नाकारलेले` ("rejected", 8x); cs/ja `EVM-based Chains` label and ja `Optimistic Sepolia` heading reverted to English; ta "exchanges" -> `பரிமாற்றங்களும்` (acts of exchange); de `Layer 2-Testnetze` lost compound hyphenation; ur `EF بلاگ` -> `EF Blog`; bn/te gained RTL isolates (U+2066/2068/2069) around `ETH` on an LTR page. ar `page-organizations-enterprise.json` (released from the same quarantine) re-expanded `DeFi TVL`/`Private DLT` exactly as #86. **Reviewer rule:** for a quarantine-release file, diff every `+` line against `origin/dev` and treat "dev was right, run changed it" as the default suspicion; brand names absent from ETHGlossary (Chain Platform) have no guard and drift per locale.

@@ -91,6 +91,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_EVM JSON-RPC infrastructure with full, archive, and keyless public access._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Documentation](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Speed-oriented Ethereum nodes as JSON-RPC/WebSockets API._**
 
 - [zmok.io](https://zmok.io/)
@@ -99,6 +105,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
 ### Development tools {#development-tools}
+
+**eth.zig -** **_A Zig library for Ethereum, with compile-time ABI encoding and contract bindings._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Documentation](https://ethzig.org)
+- [Examples](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
 
 **ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
 

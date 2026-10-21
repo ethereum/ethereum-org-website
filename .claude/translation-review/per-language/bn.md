@@ -138,3 +138,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Visa/J.P. Morgan script switches between files; `আরবিট্রাম One` hybrid; `অনুমান` for speculation; `-গুলি`/`-গুলো` split across files.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
+- Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).

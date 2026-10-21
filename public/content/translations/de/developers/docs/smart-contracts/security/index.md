@@ -35,6 +35,7 @@ Die Registrierung einer einzelnen Adresse als `Owner` in einem Smart Contract bi
 Bei der rollenbasierten Zugriffskontrolle wird der Zugriff auf sensible Funktionen auf eine Gruppe vertrauenswürdiger Teilnehmer verteilt. Beispielsweise kann ein Konto für das Prägen von Token verantwortlich sein, während ein anderes Konto Upgrades durchführt oder den Vertrag pausiert. Die dezentrale Zugriffskontrolle auf diese Weise eliminiert Single Points of Failure und reduziert die Vertrauensannahmen für Benutzer.
 
 ##### Verwendung von Multi-Signature-Wallets
+
 Ein weiterer Ansatz zur Implementierung einer sicheren Zugriffskontrolle ist die Verwendung eines [Mehrfachsignatur-Kontos](/developers/docs/smart-contracts/#multisig) zur Verwaltung eines Vertrags. Im Gegensatz zu einem regulären EOA gehören Mehrfachsignatur-Konten mehreren Entitäten und erfordern Signaturen von einer Mindestanzahl von Konten – sagen wir 3 von 5 –, um Transaktionen auszuführen.
 
 Die Verwendung einer Multisig für die Zugriffskontrolle führt eine zusätzliche Sicherheitsebene ein, da Aktionen auf dem Zielvertrag die Zustimmung mehrerer Parteien erfordern. Dies ist besonders nützlich, wenn die Verwendung des Ownable-Musters erforderlich ist, da es für einen Angreifer oder böswilligen Insider schwieriger wird, sensible Vertragsfunktionen für böswillige Zwecke zu manipulieren.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 Die Unveränderlichkeit von Code, der in der [Ethereum Virtual Machine](/developers/docs/evm/) ausgeführt wird, bedeutet, dass Smart Contracts während der Entwicklungsphase ein höheres Maß an Qualitätsbewertung erfordern. Das ausführliche Testen Ihres Vertrags und die Beobachtung auf unerwartete Ergebnisse wird die Sicherheit erheblich verbessern und Ihre Benutzer langfristig schützen.
 
-Die übliche Methode besteht darin, kleine Unit-Tests mit Mock-Daten zu schreiben, die der Vertrag voraussichtlich von Benutzern erhalten wird. [Unit-Testing](/developers/docs/smart-contracts/testing/#unit-testing) eignet sich gut, um die Funktionalität bestimmter Funktionen zu testen und sicherzustellen, dass ein Smart Contract wie erwartet funktioniert.
+Die übliche Methode besteht darin, kleine Unit-Tests mit Mock-Daten zu schreiben, die der Vertrag voraussichtlich von Benutzern erhalten wird. [Unit-Testing](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) eignet sich gut, um die Funktionalität bestimmter Funktionen zu testen und sicherzustellen, dass ein Smart Contract wie erwartet funktioniert.
 
 Leider ist Unit-Testing isoliert betrachtet nur minimal effektiv zur Verbesserung der Smart-Contract-Sicherheit. Ein Unit-Test könnte beweisen, dass eine Funktion für Mock-Daten ordnungsgemäß ausgeführt wird, aber Unit-Tests sind nur so effektiv wie die geschriebenen Tests. Dies macht es schwierig, übersehene Randfälle und Schwachstellen zu erkennen, die die Sicherheit Ihres Smart Contracts gefährden könnten.
 
@@ -306,6 +307,7 @@ Daran ist nichts falsch, außer dass `Attacker` eine weitere Funktion hat, die `
 Zusammenfassend lässt sich sagen, dass, da das Guthaben des Aufrufers erst auf 0 gesetzt wird, wenn die Funktionsausführung abgeschlossen ist, nachfolgende Aufrufe erfolgreich sein werden und es dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann verwendet werden, um einen Smart Contract von seinen Geldern zu leeren, wie es beim [DAO-Hack 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) geschah. Wiedereintritts-Angriffe sind auch heute noch ein kritisches Problem für Smart Contracts, wie [öffentliche Auflistungen von Wiedereintritts-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
 
 ##### Wie man Wiedereintritts-Angriffe verhindert
+
 Ein Ansatz zum Umgang mit Wiedereintritt ist die Befolgung des [Checks-Effects-Interactions-Musters](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Dieses Muster ordnet die Ausführung von Funktionen so an, dass Code, der notwendige Überprüfungen durchführt, bevor er mit der Ausführung fortfährt, an erster Stelle steht, gefolgt von Code, der den Vertragszustand manipuliert, und Code, der mit anderen Verträgen oder EOAs interagiert, an letzter Stelle steht.
 
 Das Checks-Effects-Interactions-Muster wird in einer überarbeiteten Version des unten gezeigten `Victim`-Vertrags verwendet:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Wie man Integer-Unterläufe und -Überläufe verhindert
+
 Ab Version 0.8.0 lehnt der Solidity-Compiler Code ab, der zu Integer-Unterläufen und -Überläufen führt. Verträge, die mit einer niedrigeren Compiler-Version kompiliert wurden, sollten jedoch entweder Überprüfungen bei Funktionen durchführen, die arithmetische Operationen beinhalten, oder eine Bibliothek (z. B. [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) verwenden, die auf Unterlauf/Überlauf prüft.
 
 #### Orakel-Manipulation {#oracle-manipulation}
@@ -447,6 +450,7 @@ DEX-Preise sind oft genau, was größtenteils Arbitrageuren zu verdanken ist, di
 Beispielsweise könnte ein Angreifer den Spotpreis eines Vermögenswerts künstlich in die Höhe treiben, indem er einen Blitzkredit aufnimmt, kurz bevor er mit Ihrem Kreditvertrag interagiert. Die Abfrage des Vermögenspreises bei der DEX würde einen überdurchschnittlich hohen Wert zurückgeben (da die große „Kauforder“ des Angreifers die Nachfrage nach dem Vermögenswert verzerrt), was es ihm ermöglicht, mehr zu leihen, als er sollte. Solche „Blitzkredit-Angriffe“ wurden genutzt, um die Abhängigkeit von Preis-Orakeln bei DeFi-Anwendungen auszunutzen, was Protokolle Millionen an verlorenen Geldern kostete.
 
 ##### Wie man Orakel-Manipulation verhindert
+
 Die Mindestanforderung zur [Vermeidung von Orakel-Manipulation](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) ist die Verwendung eines dezentralen Orakel-Netzwerks, das Informationen aus mehreren Quellen abfragt, um Single Points of Failure zu vermeiden. In den meisten Fällen verfügen dezentrale Orakel über integrierte kryptoökonomische Anreize, um Orakel-Knoten zu ermutigen, korrekte Informationen zu melden, was sie sicherer macht als zentralisierte Orakel.
 
 Wenn Sie planen, ein Onchain-Orakel für Vermögenspreise abzufragen, sollten Sie eines in Betracht ziehen, das einen zeitgewichteten Durchschnittspreis-Mechanismus (TWAP) implementiert. Ein [TWAP-Orakel](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) fragt den Preis eines Vermögenswerts zu zwei verschiedenen Zeitpunkten ab (die Sie ändern können) und berechnet den Spotpreis basierend auf dem ermittelten Durchschnitt. Die Wahl längerer Zeiträume schützt Ihr Protokoll vor Preismanipulationen, da kürzlich ausgeführte große Aufträge die Vermögenspreise nicht beeinflussen können.

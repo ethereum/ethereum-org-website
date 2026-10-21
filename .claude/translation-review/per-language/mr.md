@@ -127,3 +127,12 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Three L2 forms; `उद्योग` (industry) for enterprise; परिसंस्था/इकोसिस्टम split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.6/10
+
+- Warning: retranslation regressed neighbors -- `संकेतांनुसार` for "by convention" (L171), हूक/हुक split, L303 evaluate-to drift.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed: glossary `staker` -> `स्टेकर्स` (3x), `peer` -> `पीअर्स` (`सहकाऱ्यांमधील` = among coworkers); "deprecated" `नाकारलेले` (rejected) -> dev `कालबाह्य` (10 sites).
+- Open: glossary `Ethereum Mainnet` uses `इथरियम` vs `Ethereum` entry `इथेरियम` (upstream).

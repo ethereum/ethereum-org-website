@@ -158,3 +158,8 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Three L2 forms; Robinhood/Morpho script drift.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.4/10
+
+- Fixed: `EF Blog` -> `EF بلاگ` (2x, regression); `Chain Platform`/`Google Cloud` restored to Latin inside `dir="ltr"` spans.
+- Open: `ہم مرتبہ افراد` adds "persons" to peers; "you write" dropped L29; `آپٹیمسٹک` spelling split.

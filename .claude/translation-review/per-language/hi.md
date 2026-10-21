@@ -144,3 +144,12 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Security file retranslation itself was legit (dev copy had 6 missing anchors + stray fence).
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.0/10
+
+- Warning (pre-existing, unfixed): wagmi uses `कॉन्ट्रैक्ट` 22x vs glossary `अनुबंध`; "evaluate to" rendered as "evaluate X" (L238, L303).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
+- Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.

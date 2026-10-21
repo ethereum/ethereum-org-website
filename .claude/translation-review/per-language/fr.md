@@ -108,3 +108,7 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - l2/L2 casing mix; `Trésoreries` for treasuries; credentials `identifiants` vs `attestations`; `DLT privé` gender.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
