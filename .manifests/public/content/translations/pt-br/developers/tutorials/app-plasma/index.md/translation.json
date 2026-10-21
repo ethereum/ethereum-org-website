@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "pt-br",
-  "translatedAt": "2026-06-17T23:24:54.784Z",
-  "englishManifestHash": "d2b6a5d7ac4c",
+  "translatedAt": "2026-10-21T22:09:59.257Z",
+  "englishManifestHash": "52b486a8d9a4",
   "placeholderOrder": [
     "LINK-21b137",
     "LINK-9ad53a",
@@ -25,7 +25,7 @@
     "CODE-9a7c46",
     "LINK-0ace3b",
     "LINK-b668e5",
-    "LINK-327769",
+    "LINK-ff53a1",
     "LINK-f32b65",
     "CODEBLOCK-66edb3",
     "CODE-f79cd6",
@@ -131,7 +131,7 @@
     "CODE-935f68",
     "CODE-935f68",
     "CODEBLOCK-79ee66",
-    "LINK-c19928",
+    "LINK-42b1ed",
     "CODE-254506",
     "LINK-065833",
     "CODEBLOCK-7c3ff4",
@@ -1113,10 +1113,10 @@
         "url": "https://nodejs.org/en/download"
       }
     },
-    "LINK-327769": {
+    "LINK-ff53a1": {
       "type": "link",
       "values": {
-        "url": "https://noir-lang.org/install"
+        "url": "https://noir-lang.org/docs/installation"
       }
     },
     "LINK-f32b65": {
@@ -1251,10 +1251,10 @@
         "url": "https://rareskills.io/post/arithmetic-circuit"
       }
     },
-    "LINK-c19928": {
+    "LINK-42b1ed": {
       "type": "link",
       "values": {
-        "url": "https://noir-lang.org/docs/dev/noir/concepts/assert"
+        "url": "https://noir-lang.org/docs/language/assert"
       }
     },
     "LINK-065833": {
@@ -1380,7 +1380,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T23:24:54.784Z",
+      "translatedAt": "2026-10-21T22:09:59.257Z",
       "status": "success"
     }
   }

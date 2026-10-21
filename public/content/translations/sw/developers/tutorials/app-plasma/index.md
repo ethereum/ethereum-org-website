@@ -1,109 +1,106 @@
 ---
 title: Andika Plasma mahususi kwa programu inayohifadhi faragha
-description: Katika mafunzo haya, tunaunda benki ya siri kiasi kwa ajili ya amana. Benki ni kijenzi kilichowekwa kati; inajua salio la kila mtumiaji. Hata hivyo, taarifa hii haihifadhiwi mnyororoni. Badala yake, benki huchapisha heshi ya hali. Kila wakati muamala unapotokea, benki huchapisha heshi mpya, pamoja na uthibitisho wa maarifa-sifuri kwamba ina muamala uliosainiwa unaobadilisha hali ya heshi kuwa mpya. Baada ya kusoma mafunzo haya, utaelewa si tu jinsi ya kutumia uthibitisho wa maarifa-sifuri, bali pia kwa nini unazitumia na jinsi ya kufanya hivyo kwa usalama.
+description: Katika somo hili, tunaunda benki ya siri nusu kwa ajili ya amana. Benki ni kijenzi kilichowekwa kati; inajua salio la kila mtumiaji. Hata hivyo, taarifa hii haihifadhiwi mnyororoni. Badala yake, benki huchapisha heshi ya hali. Kila wakati muamala unapotokea, benki huchapisha heshi mpya, pamoja na uthibitisho wa maarifa-sifuri kwamba ina muamala uliosainiwa ambao unabadilisha hali ya heshi kuwa mpya. Baada ya kusoma somo hili, utaelewa sio tu jinsi ya kutumia uthibitisho wa maarifa-sifuri, bali pia kwa nini unaitumia na jinsi ya kufanya hivyo kwa usalama.
 author: Ori Pomerantz
-tags:
-  - sifuri-maarifa
-  - seva
-  - nje ya mnyororo
-  - faragha
+tags: ["sifuri-maarifa", "seva", "nje ya mnyororo", "faragha"]
 skill: advanced
 breadcrumb: Plasma mahususi kwa Programu
 lang: sw
 published: 2025-10-15
 ---
+
 ## Utangulizi {#introduction}
 
-Tofauti na [mikusanyiko](/developers/docs/scaling/zk-rollups/), [Plasma](/developers/docs/scaling/plasma) hutumia Mtandao Mkuu wa Ethereum kwa uadilifu, lakini si kwa upatikanaji. Katika makala haya, tunaandika programu inayofanya kazi kama Plasma, huku Ethereum ikihakikisha uadilifu (hakuna mabadiliko yasiyoidhinishwa) lakini si upatikanaji (kijenzi kilichowekwa kati kinaweza kushindwa kufanya kazi na kulemaza mfumo mzima).
+Tofauti na [mikusanyiko](/developers/docs/scaling/zk-rollups/), [Plasma](/developers/docs/scaling/plasma) hutumia Mtandao Mkuu wa Ethereum kwa uadilifu, lakini si kwa upatikanaji. Katika makala haya, tunaandika programu inayofanya kazi kama Plasma, huku Ethereum ikihakikisha uadilifu (hakuna mabadiliko yasiyoidhinishwa) lakini si upatikanaji (kijenzi kilichowekwa kati kinaweza kuharibika na kulemaza mfumo mzima).
 
-Programu tunayoandika hapa ni benki inayohifadhi faragha. Anwani tofauti zina akaunti zenye masalio, na zinaweza kutuma pesa (ETH) kwenye akaunti nyingine. Benki huchapisha heshi za hali (akaunti na masalio yake) na miamala, lakini huweka masalio halisi nje ya mnyororo ambapo yanaweza kubaki ya faragha.
+Programu tunayoiandika hapa ni benki inayohifadhi faragha. Anwani tofauti zina akaunti zilizo na salio, na zinaweza kutuma pesa (ETH) kwa akaunti zingine. Benki huchapisha heshi za hali (akaunti na salio zake) na miamala, lakini huweka salio halisi nje ya mnyororo ambapo zinaweza kubaki faragha.
 
 ## Muundo {#design}
 
-Huu sio mfumo ulio tayari kwa uzalishaji, bali ni zana ya kufundishia. Kwa hivyo, umeandikwa kwa mawazo kadhaa ya kurahisisha.
+Huu si mfumo ulio tayari kwa uzalishaji, bali ni zana ya kufundishia. Kwa hivyo, umeandikwa kwa dhana kadhaa zinazorahisisha.
 
-- Kundi la akaunti lisilobadilika. Kuna idadi maalum ya akaunti, na kila akaunti ni ya anwani iliyoamuliwa mapema. Hii inafanya mfumo kuwa rahisi zaidi kwa sababu ni vigumu kushughulikia miundo ya data yenye ukubwa unaobadilika katika uthibitisho wa maarifa-sifuri. Kwa mfumo ulio tayari kwa uzalishaji, tunaweza kutumia [mzizi wa Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) kama heshi ya hali na kutoa uthibitisho wa Merkle kwa salio linalohitajika.
+- Kundi la akaunti zisizobadilika. Kuna idadi maalum ya akaunti, na kila akaunti ni ya anwani iliyoamuliwa mapema. Hii hufanya mfumo kuwa rahisi zaidi kwa sababu ni vigumu kushughulikia miundo ya data yenye ukubwa unaobadilika katika uthibitisho wa maarifa-sifuri. Kwa mfumo ulio tayari kwa uzalishaji, tunaweza kutumia [mzizi wa Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) kama heshi ya hali na kutoa uthibitisho wa Merkle kwa salio zinazohitajika.
 
-- Hifadhi ya kumbukumbu. Kwenye mfumo wa uzalishaji, tunahitaji kuandika salio zote za akaunti kwenye diski ili kuzihifadhi endapo mfumo utawashwa upya. Hapa, ni sawa ikiwa taarifa itapotea tu.
+- Uhifadhi wa kumbukumbu. Kwenye mfumo wa uzalishaji, tunahitaji kuandika salio zote za akaunti kwenye diski ili kuzihifadhi endapo utawashwa upya. Hapa, ni sawa ikiwa taarifa itapotea tu.
 
-- Uhamisho pekee. Mfumo wa uzalishaji ungehitaji njia ya kuweka rasilimali kwenye benki na kuzitoa. Lakini dhumuni hapa ni kuelezea tu dhana, kwa hivyo benki hii ina kikomo cha uhamisho pekee.
+- Uhamisho pekee. Mfumo wa uzalishaji ungehitaji njia ya kuweka rasilimali kwenye benki na kuzitoa. Lakini lengo hapa ni kuelezea tu dhana, kwa hivyo benki hii inakomea kwenye uhamisho pekee.
 
 ### Uthibitisho wa maarifa-sifuri {#zero-knowledge-proofs}
 
-Katika kiwango cha msingi, uthibitisho wa maarifa-sifuri unaonyesha kuwa mthibitishaji anajua baadhi ya data, _Data<sub>private</sub>_ kiasi kwamba kuna uhusiano _Relationship_ kati ya baadhi ya data za umma, _Data<sub>public</sub>_, na _Data<sub>private</sub>_. Mhakiki anajua _Relationship_ na _Data<sub>public</sub>_.
+Katika kiwango cha msingi, uthibitisho wa maarifa-sifuri unaonyesha kwamba mthibitishaji anajua baadhi ya data, _Data<sub>private</sub>_ kiasi kwamba kuna uhusiano _Relationship_ kati ya baadhi ya data za umma, _Data<sub>public</sub>_, na _Data<sub>private</sub>_. Mhakiki anajua _Relationship_ na _Data<sub>public</sub>_.
 
-Ili kuhifadhi faragha, tunahitaji hali na miamala kuwa ya siri. Lakini ili kuhakikisha uadilifu, tunahitaji [heshi ya kificho](https://en.wikipedia.org/wiki/Cryptographic_hash_function) ya hali kuwa ya umma. Ili kuthibitisha kwa watu wanaowasilisha miamala kwamba miamala hiyo ilifanyika kweli, tunahitaji pia kuchapisha heshi za muamala.
+Ili kuhifadhi faragha, tunahitaji hali na miamala iwe ya faragha. Lakini ili kuhakikisha uadilifu, tunahitaji [heshi ya kriptografia](https://en.wikipedia.org/wiki/Cryptographic_hash_function) ya hali iwe ya umma. Ili kuwathibitishia watu wanaowasilisha miamala kwamba miamala hiyo ilifanyika kweli, tunahitaji pia kuchapisha heshi za muamala.
 
-Katika hali nyingi, _Data<sub>private</sub>_ ni ingizo kwenye programu ya uthibitisho wa maarifa-sifuri, na _Data<sub>public</sub>_ ni zao.
+Katika hali nyingi, _Data<sub>private</sub>_ ndiyo ingizo kwa programu ya uthibitisho wa maarifa-sifuri, na _Data<sub>public</sub>_ ndiyo towe.
 
 Sehemu hizi katika _Data<sub>private</sub>_:
 
 - _State<sub>n</sub>_, hali ya zamani
 - _State<sub>n+1</sub>_, hali mpya
-- _Transaction_, muamala unaobadilika kutoka hali ya zamani kwenda mpya. Muamala huu unahitaji kujumuisha sehemu hizi:
-  - _Destination address_ (Anwani lengwa) inayopokea uhamisho
-  - _Amount_ (Kiasi) kinachohamishwa
-  - _Nonce_ (Nonsi) ili kuhakikisha kila muamala unaweza kuchakatwa mara moja tu.
-    Anwani ya chanzo haihitaji kuwa kwenye muamala, kwa sababu inaweza kurejeshwa kutoka kwenye sahihi.
+- _Transaction_, muamala unaobadilika kutoka hali ya zamani hadi mpya. Muamala huu unahitaji kujumuisha sehemu hizi:
+  - _Anwani ya mwisho_ inayopokea hamisho
+  - _Kiasi_ kinachohamishwa
+  - _Nonsi_ ili kuhakikisha kila muamala unaweza kuchakatwa mara moja tu.
+    Anwani ya chanzo haihitaji kuwa kwenye muamala, kwa sababu inaweza kupatikana kutoka kwenye sahihi.
 - _Signature_, sahihi iliyoidhinishwa kufanya muamala. Kwa upande wetu, anwani pekee iliyoidhinishwa kufanya muamala ni anwani ya chanzo. Kwa sababu mfumo wetu wa sifuri-maarifa unafanya kazi jinsi unavyofanya, tunahitaji pia ufunguo wa umma wa akaunti, pamoja na sahihi ya Ethereum.
 
 Hizi ni sehemu katika _Data<sub>public</sub>_:
 
 - _Hash(State<sub>n</sub>)_ heshi ya hali ya zamani
 - _Hash(State<sub>n+1</sub>)_ heshi ya hali mpya
-- _Hash(Transaction)_ heshi ya muamala unaobadilisha hali kutoka _State<sub>n</sub>_ kwenda _State<sub>n+1</sub>_.
+- _Hash(Transaction)_ heshi ya muamala unaobadilisha hali kutoka _State<sub>n</sub>_ hadi _State<sub>n+1</sub>_.
 
-Uhusiano unakagua masharti kadhaa:
+Uhusiano huangalia masharti kadhaa:
 
-- Heshi za umma kwa kweli ni heshi sahihi kwa sehemu za siri.
-- Muamala, unapotumika kwenye hali ya zamani, husababisha hali mpya.
+- Heshi za umma kwa kweli ni heshi sahihi kwa sehemu za faragha.
+- Muamala, unapotumika kwa hali ya zamani, husababisha hali mpya.
 - Sahihi inatoka kwenye anwani ya chanzo cha muamala.
 
-Kwa sababu ya sifa za kazi za heshi za kificho, kuthibitisha masharti haya kunatosha kuhakikisha uadilifu.
+Kwa sababu ya sifa za kazi za heshi za kriptografia, kuthibitisha masharti haya kunatosha kuhakikisha uadilifu.
 
 ### Miundo ya data {#data-structures}
 
-Muundo mkuu wa data ni hali inayoshikiliwa na seva. Kwa kila akaunti, seva hufuatilia salio la akaunti na [nonsi](https://en.wikipedia.org/wiki/Cryptographic_nonce), inayotumika kuzuia [mashambulizi ya kurudia](https://en.wikipedia.org/wiki/Replay_attack).
+Muundo mkuu wa data ni hali inayoshikiliwa na seva. Kwa kila akaunti, seva hufuatilia salio la akaunti na [nonsi](https://en.wikipedia.org/wiki/Cryptographic_nonce), inayotumika kuzuia [mashambulizi ya kurudiwa](https://en.wikipedia.org/wiki/Replay_attack).
 
-### Vipengele {#components}
+### Vijenzi {#components}
 
-Mfumo huu unahitaji vipengele viwili:
+Mfumo huu unahitaji vijenzi viwili:
 
 - _Seva_ inayopokea miamala, kuichakata, na kuchapisha heshi kwenye mnyororo pamoja na uthibitisho wa maarifa-sifuri.
 - _Mkataba mahiri_ unaohifadhi heshi na kuhakiki uthibitisho wa maarifa-sifuri ili kuhakikisha mabadiliko ya hali ni halali.
 
 ### Mtiririko wa data na udhibiti {#flows}
 
-Hizi ni njia ambazo vipengele mbalimbali huwasiliana ili kuhamisha kutoka akaunti moja kwenda nyingine.
+Hizi ni njia ambazo vijenzi mbalimbali huwasiliana ili kufanya hamisho kutoka akaunti moja hadi nyingine.
 
-1. Kivinjari cha wavuti kinawasilisha muamala uliosainiwa ukiomba uhamisho kutoka kwenye akaunti ya msaini kwenda kwenye akaunti tofauti.
+1. Kivinjari cha wavuti huwasilisha muamala uliosainiwa ukiomba hamisho kutoka kwa akaunti ya mtia saini kwenda kwa akaunti tofauti.
 
-2. Seva inahakiki kuwa muamala ni halali:
+2. Seva inahakiki kwamba muamala ni halali:
 
-   - Msaini ana akaunti katika benki yenye salio la kutosha.
+   - Mtia saini ana akaunti katika benki yenye salio la kutosha.
    - Mpokeaji ana akaunti katika benki.
 
-3. Seva inakokotoa hali mpya kwa kutoa kiasi kilichohamishwa kutoka kwenye salio la msaini na kukiongeza kwenye salio la mpokeaji.
+3. Seva inakokotoa hali mpya kwa kutoa kiasi kilichohamishwa kutoka kwenye salio la mtia saini na kukiongeza kwenye salio la mpokeaji.
 
 4. Seva inakokotoa uthibitisho wa maarifa-sifuri kwamba mabadiliko ya hali ni halali.
 
-5. Seva inawasilisha kwenye Ethereum muamala unaojumuisha:
+5. Seva inawasilisha kwa Ethereum muamala unaojumuisha:
 
    - Heshi ya hali mpya
-   - Heshi ya muamala (ili mtumaji wa muamala aweze kujua kuwa umechakatwa)
-   - Uthibitisho wa maarifa-sifuri unaothibitisha mabadiliko kwenda kwenye hali mpya ni halali
+   - Heshi ya muamala (ili mtumaji wa muamala aweze kujua imechakatwa)
+   - Uthibitisho wa maarifa-sifuri unaothibitisha mabadiliko ya hali mpya ni halali
 
 6. Mkataba mahiri unahakiki uthibitisho wa maarifa-sifuri.
 
-7. Ikiwa uthibitisho wa maarifa-sifuri utathibitishwa, mkataba mahiri unafanya vitendo hivi:
-   - Kusasisha heshi ya hali ya sasa kwenda kwenye heshi ya hali mpya
+7. Ikiwa uthibitisho wa maarifa-sifuri ni sahihi, mkataba mahiri hufanya vitendo hivi:
+   - Kusasisha heshi ya hali ya sasa kuwa heshi ya hali mpya
    - Kutoa ingizo la logi lenye heshi ya hali mpya na heshi ya muamala
 
 ### Zana {#tools}
 
-Kwa msimbo wa upande wa mteja, tutatumia [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), na [Wagmi](https://wagmi.sh/). Hizi ni zana za kiwango cha tasnia; ikiwa hauzifahamu, unaweza kutumia [mafunzo haya](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Kwa msimbo wa upande wa mteja, tutatumia [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/), na [Wagmi](https://wagmi.sh/). Hizi ni zana za kiwango cha tasnia; ikiwa huzifahamu, unaweza kutumia [somo hili](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Sehemu kubwa ya seva imeandikwa kwa JavaScript kwa kutumia [Node](https://nodejs.org/en). Sehemu ya sifuri-maarifa imeandikwa kwa [Noir](https://noir-lang.org/). Tunahitaji toleo la `1.0.0-beta.10`, kwa hivyo baada ya [kusakinisha Noir kama ilivyoelekezwa](https://noir-lang.org/docs/getting_started/quick_start), endesha:
+Sehemu kubwa ya seva imeandikwa kwa JavaScript kwa kutumia [Node](https://nodejs.org/en). Sehemu ya sifuri-maarifa imeandikwa kwa [Noir](https://noir-lang.org/). Tunahitaji toleo `1.0.0-beta.10`, kwa hivyo baada ya [kusakinisha Noir kama ilivyoelekezwa](https://noir-lang.org/docs/getting_started/quick_start), endesha:
 
 ```
 noirup -v 1.0.0-beta.10
@@ -113,17 +110,17 @@ Mnyororo wa vitalu tunaotumia ni `anvil`, mnyororo wa vitalu wa majaribio wa nda
 
 ## Utekelezaji {#implementation}
 
-Kwa sababu huu ni mfumo tata, tutautekeleza kwa hatua.
+Kwa sababu huu ni mfumo changamano, tutautekeleza kwa hatua.
 
-### Hatua ya 1 - Sifuri-maarifa ya mwongozo {#stage-1}
+### Hatua ya 1 - Sifuri maarifa ya mikono {#stage-1}
 
-Kwa hatua ya kwanza, tutasaini muamala kwenye kivinjari na kisha kutoa taarifa kwa uthibitisho wa maarifa-sifuri kwa njia ya mwongozo. Msimbo wa sifuri-maarifa unatarajia kupata taarifa hiyo katika `server/noir/Prover.toml` (imeandikwa [hapa](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
+Kwa hatua ya kwanza, tutasaini muamala kwenye kivinjari na kisha kutoa taarifa hiyo kwa uthibitisho wa maarifa-sifuri kwa mikono. Msimbo wa sifuri-maarifa unatarajia kupata taarifa hiyo katika `server/noir/Prover.toml` (imeandikwa [hapa](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
 Ili kuiona ikifanya kazi:
 
-1. Hakikisha umesakinisha [Node](https://nodejs.org/en/download) na [Noir](https://noir-lang.org/install). Ikiwezekana, isakinishe kwenye mfumo wa UNIX kama vile macOS, Linux, au [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Hakikisha umesakinisha [Node](https://nodejs.org/en/download) na [Noir](https://noir-lang.org/docs/installation). Ikiwezekana, isakinishe kwenye mfumo wa UNIX kama vile macOS, Linux, au [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-2. Pakua msimbo wa hatua ya 1 na uanzishe seva ya wavuti ili kuhudumia msimbo wa mteja.
+2. Pakua msimbo wa hatua ya 1 na uwashe seva ya wavuti ili kuhudumia msimbo wa mteja.
 
    ```sh
    git clone https://github.com/qbzzt/250911-zk-bank.git -b 01-manual-zk
@@ -133,13 +130,13 @@ Ili kuiona ikifanya kazi:
    npm run dev
    ```
 
-   Sababu ya kuhitaji seva ya wavuti hapa ni kwamba, ili kuzuia aina fulani za ulaghai, mikoba mingi (kama vile MetaMask) haikubali faili zinazohudumiwa moja kwa moja kutoka kwenye diski
+   Sababu inayofanya uhitaji seva ya wavuti hapa ni kwamba, ili kuzuia aina fulani za udanganyifu, mikoba mingi (kama vile MetaMask) haikubali faili zinazohudumiwa moja kwa moja kutoka kwenye diski
 
-3. Fungua kivinjari chenye mkoba.
+3. Fungua kivinjari kilicho na mkoba.
 
 4. Kwenye mkoba, weka nenosiri jipya. Kumbuka kwamba hii itafuta nenosiri lako lililopo, kwa hivyo _hakikisha una nakala rudufu_.
 
-   Nenosiri ni `test test test test test test test test test test test junk`, nenosiri la msingi la majaribio la anvil.
+   Nenosiri ni `test test test test test test test test test test test junk`, nenosiri chaguomsingi la majaribio la anvil.
 
 5. Vinjari hadi kwenye [msimbo wa upande wa mteja](http://localhost:5173/).
 
@@ -156,17 +153,17 @@ Ili kuiona ikifanya kazi:
    nargo execute
    ```
 
-   Toleo linapaswa kufanana na
+   Towe linapaswa kufanana na
 
-      ```
-ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   ```
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-      ```
+   ```
 
-10. Linganisha thamani mbili za mwisho na heshi unayoiona kwenye kivinjari cha wavuti ili kuona kama ujumbe umeheshishwa kwa usahihi.
+10. Linganisha thamani mbili za mwisho na heshi unayoiona kwenye kivinjari cha wavuti ili kuona ikiwa ujumbe umeheshishwa kwa usahihi.
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
@@ -176,9 +173,9 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
 ```
 
-Ujumbe upo katika muundo wa maandishi, jambo ambalo hurahisisha mtumiaji kuelewa (ambayo ni muhimu wakati wa kusaini) na kwa msimbo wa Noir kuchanganua. Kiasi kimetajwa katika finney ili kuwezesha uhamisho wa sehemu kwa upande mmoja, na kusomeka kwa urahisi kwa upande mwingine. Nambari ya mwisho ni [nonsi](https://en.wikipedia.org/wiki/Cryptographic_nonce).
+Ujumbe uko katika muundo wa maandishi, jambo ambalo hufanya iwe rahisi kwa mtumiaji kuelewa (ambayo ni muhimu wakati wa kusaini) na kwa msimbo wa Noir kuchanganua. Kiasi kimenukuliwa katika finney ili kuwezesha uhamisho wa sehemu kwa upande mmoja, na kusomeka kwa urahisi kwa upande mwingine. Nambari ya mwisho ni [nonsi](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-Tungo ina urefu wa herufi 100. Uthibitisho wa maarifa-sifuri haushughulikii vizuri data yenye ukubwa unaobadilika, kwa hivyo mara nyingi ni muhimu kujaza data.
+Mfuatano una urefu wa herufi 100. Uthibitisho wa maarifa-sifuri haushughulikii data zenye ukubwa unaobadilika vizuri, kwa hivyo mara nyingi ni muhimu kujaza data.
 
 ```toml
 pubKeyX=["0x83",...,"0x75"]
@@ -186,7 +183,7 @@ pubKeyY=["0x35",...,"0xa5"]
 signature=["0xb1",...,"0x0d"]
 ```
 
-Vigezo hivi vitatu ni safu za baiti zenye ukubwa uliowekwa.
+Vigezo hivi vitatu ni safu za baiti zenye ukubwa usiobadilika.
 
 ```toml
 [[accounts]]
@@ -200,19 +197,19 @@ balance=100_000
 nonce=0
 ```
 
-Hii ndiyo njia ya kubainisha safu ya miundo. Kwa kila ingizo, tunabainisha anwani, salio (katika milliETH a.k.a. [finney](https://cryptovalleyjournal.com/glossary/finney/)), na thamani inayofuata ya nonsi.
+Hii ndiyo njia ya kubainisha safu ya miundo. Kwa kila ingizo, tunabainisha anwani, salio (kwa milliETH a.k.a. [finney](https://cryptovalleyjournal.com/glossary/finney/)), na thamani ya nonsi inayofuata.
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
-[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) linatekeleza uchakataji wa upande wa mteja na kuzalisha faili la `server/noir/Prover.toml` (lile linalojumuisha vigezo vya sifuri-maarifa).
+[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) hutekeleza uchakataji wa upande wa mteja na kuzalisha faili la `server/noir/Prover.toml` (lile linalojumuisha vigezo vya sifuri-maarifa).
 
-Hapa kuna maelezo ya sehemu zinazovutia zaidi.
+Hapa kuna maelezo ya sehemu za kuvutia zaidi.
 
 ```tsx
 export default attrs =>  {
 ```
 
-Kazi hii inaunda kipengele cha React cha `Transfer`, ambacho faili zingine zinaweza kuingiza.
+Kazi hii inaunda kijenzi cha React cha `Transfer`, ambacho faili zingine zinaweza kuleta.
 
 ```tsx
   const accounts = [
@@ -224,7 +221,7 @@ Kazi hii inaunda kipengele cha React cha `Transfer`, ambacho faili zingine zinaw
   ]
 ```
 
-Hizi ni anwani za akaunti, anwani zilizoundwa na nenosiri la `test ... test junk`. Ikiwa unataka kutumia anwani zako mwenyewe, badilisha tu ufafanuzi huu.
+Hizi ni anwani za akaunti, anwani zilizoundwa na nenosiri la `test ... test junk`. Ikiwa unataka kutumia anwani zako mwenyewe, rekebisha tu ufafanuzi huu.
 
 ```tsx
   const account = useAccount()
@@ -233,19 +230,19 @@ Hizi ni anwani za akaunti, anwani zilizoundwa na nenosiri la `test ... test junk
   })
 ```
 
-[Ndoano hizi za Wagmi](https://wagmi.sh/react/api/hooks) zinaturuhusu kufikia maktaba ya [Viem](https://viem.sh/) na mkoba.
+Hizi [kulabu za Wagmi](https://wagmi.sh/react/api/hooks) huturuhusu kufikia maktaba ya [Viem](https://viem.sh/) na mkoba.
 
 ```tsx
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
 ```
 
-Huu ni ujumbe, uliojazwa na nafasi. Kila wakati mojawapo ya vigezo vya [`useState`](https://react.dev/reference/react/useState) inapobadilika, kipengele huchorwa upya na `message` inasasishwa.
+Huu ni ujumbe, uliojazwa na nafasi. Kila wakati mojawapo ya vigeu vya [`useState`](https://react.dev/reference/react/useState) inapobadilika, kijenzi huchorwa upya na `message` husasishwa.
 
 ```tsx
   const sign = async () => {
 ```
 
-Kazi hii inaitwa wakati mtumiaji anapobofya kitufe cha **Saini**. Ujumbe unasasishwa kiotomatiki, lakini sahihi inahitaji idhini ya mtumiaji kwenye mkoba, na hatutaki kuiomba isipokuwa inahitajika.
+Kazi hii inaitwa wakati mtumiaji anabofya kitufe cha **Saini**. Ujumbe husasishwa kiotomatiki, lakini sahihi inahitaji idhini ya mtumiaji kwenye mkoba, na hatutaki kuiomba isipokuwa inahitajika.
 
 ```tsx
     const signature = await wallet.signMessage({
@@ -254,13 +251,13 @@ Kazi hii inaitwa wakati mtumiaji anapobofya kitufe cha **Saini**. Ujumbe unasasi
     })
 ```
 
-Uliza mkoba [kusaini ujumbe](https://viem.sh/docs/accounts/local/signMessage). 
+Omba mkoba [usaini ujumbe](https://viem.sh/docs/accounts/local/signMessage). 
 
 ```tsx
     const hash = hashMessage(message)
 ```
 
-Pata heshi ya ujumbe. Inasaidia kumpa mtumiaji kwa ajili ya utatuzi (wa msimbo wa Noir). 
+Pata heshi ya ujumbe. Inasaidia kuipatia mtumiaji kwa ajili ya utatuzi (wa msimbo wa Noir). 
 
 ```tsx
     const pubKey = await recoverPublicKey({
@@ -277,13 +274,13 @@ Pata heshi ya ujumbe. Inasaidia kumpa mtumiaji kwa ajili ya utatuzi (wa msimbo w
     setPubKey(pubKey)
 ```
 
-Weka vigezo vya hali. Kufanya hivi huchora upya kipengele (baada ya kazi ya `sign` kutoka) na kumwonyesha mtumiaji thamani zilizosasishwa.
+Weka vigeu vya hali. Kufanya hivi huchora upya kijenzi (baada ya kazi ya `sign` kutoka) na kumuonyesha mtumiaji thamani zilizosasishwa.
 
 ```tsx
     let proverToml = `
 ```
 
-Maandishi ya `Prover.toml`.
+Maandishi kwa ajili ya `Prover.toml`.
 
 ```tsx
 message="${message}"
@@ -292,17 +289,17 @@ pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
 pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 ```
 
-Viem inatupa ufunguo wa umma kama tungo ya heksadesimali ya baiti 65. Baiti ya kwanza ni `0x04`, alama ya toleo. Hii inafuatiwa na baiti 32 kwa ajili ya `x` ya ufunguo wa umma na kisha baiti 32 kwa ajili ya `y` ya ufunguo wa umma.
+Viem inatupatia ufunguo wa umma kama mfuatano wa heksadesimali wa baiti 65. Baiti ya kwanza ni `0x04`, alama ya toleo. Hii inafuatiwa na baiti 32 kwa ajili ya `x` ya ufunguo wa umma na kisha baiti 32 kwa ajili ya `y` ya ufunguo wa umma.
 
-Hata hivyo, Noir inatarajia kupata taarifa hii kama safu mbili za baiti, moja kwa ajili ya `x` na moja kwa ajili ya `y`. Ni rahisi kuichanganua hapa kwa mteja badala ya kama sehemu ya uthibitisho wa maarifa-sifuri.
+Hata hivyo, Noir inatarajia kupata taarifa hii kama safu mbili za baiti, moja kwa ajili ya `x` na moja kwa ajili ya `y`. Ni rahisi kuichanganua hapa kwa mteja badala ya kuwa sehemu ya uthibitisho wa maarifa-sifuri.
 
-Kumbuka kwamba huu ni utaratibu mzuri katika sifuri-maarifa kwa ujumla. Msimbo ndani ya uthibitisho wa maarifa-sifuri ni ghali, kwa hivyo uchakataji wowote unaoweza kufanywa nje ya uthibitisho wa maarifa-sifuri _unapaswa_ kufanywa nje ya uthibitisho wa maarifa-sifuri.
+Kumbuka kwamba hii ni mazoezi mazuri katika sifuri-maarifa kwa ujumla. Msimbo ndani ya uthibitisho wa maarifa-sifuri ni ghali, kwa hivyo uchakataji wowote unaoweza kufanywa nje ya uthibitisho wa maarifa-sifuri _unapaswa_ kufanywa nje ya uthibitisho wa maarifa-sifuri.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
 ```
 
-Sahihi pia inatolewa kama tungo ya heksadesimali ya baiti 65. Hata hivyo, baiti ya mwisho inahitajika tu kurejesha ufunguo wa umma. Kwa kuwa ufunguo wa umma utakuwa tayari umetolewa kwa msimbo wa Noir, hatuuhitaji ili kuhakiki sahihi, na msimbo wa Noir hauuhitaji.
+Sahihi pia inatolewa kama mfuatano wa heksadesimali wa baiti 65. Hata hivyo, baiti ya mwisho inahitajika tu ili kurejesha ufunguo wa umma. Kwa kuwa ufunguo wa umma utakuwa tayari umetolewa kwa msimbo wa Noir, hatuuhitaji ili kuhakiki sahihi, na msimbo wa Noir hauuhitaji.
 
 ```tsx
 ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
@@ -320,44 +317,44 @@ Toa akaunti.
         <h2>Transfer</h2>
 ```
 
-Huu ni muundo wa HTML (kwa usahihi zaidi, [JSX](https://react.dev/learn/writing-markup-with-jsx)) wa kipengele.
+Huu ni muundo wa HTML (kwa usahihi zaidi, [JSX](https://react.dev/learn/writing-markup-with-jsx)) wa kijenzi.
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
-[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) ni msimbo halisi wa sifuri-maarifa.
+[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/src/main.nr) ndio msimbo halisi wa sifuri-maarifa.
 
 ```
 use std::hash::pedersen_hash;
 ```
 
-[Heshi ya Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) inatolewa na [maktaba ya kawaida ya Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Uthibitisho wa maarifa-sifuri kwa kawaida hutumia kazi hii ya heshi. Ni rahisi sana kukokotoa ndani ya [saketi za kihesabu](https://rareskills.io/post/arithmetic-circuit) ikilinganishwa na kazi za kawaida za heshi.
+[Heshi ya Pedersen](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) inatolewa pamoja na [maktaba ya kawaida ya Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Uthibitisho wa maarifa-sifuri kwa kawaida hutumia kazi hii ya heshi. Ni rahisi sana kukokotoa ndani ya [saketi za hesabu](https://rareskills.io/post/arithmetic-circuit) ikilinganishwa na kazi za kawaida za heshi.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Kazi hizi mbili ni maktaba za nje, zilizofafanuliwa katika [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Ni hasa kile zilichopewa jina, kazi inayokokotoa [heshi ya keccak256](https://emn178.github.io/online-tools/keccak_256.html) na kazi inayohakiki sahihi za Ethereum na kurejesha anwani ya Ethereum ya msaini.
+Kazi hizi mbili ni maktaba za nje, zilizofafanuliwa katika [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Ni kwa usahihi kile zilichopewa jina, kazi inayokokotoa [heshi ya keccak256](https://emn178.github.io/online-tools/keccak_256.html) na kazi inayohakiki sahihi za Ethereum na kurejesha anwani ya mtia saini wa Ethereum.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
 ```
 
-Noir imehamasishwa na [Rust](https://www.rust-lang.org/). Vigezo, kwa chaguo-msingi, ni vya kudumu. Hivi ndivyo tunavyofafanua vigezo vya kudumu vya usanidi wa kimataifa. Hasa, `ACCOUNT_NUMBER` ni idadi ya akaunti tunazohifadhi.
+Noir imetiwa hamasa na [Rust](https://www.rust-lang.org/). Vigeu, kwa chaguo-msingi, ni thabiti. Hivi ndivyo tunavyofafanua thabiti za usanidi wa kimataifa. Hasa, `ACCOUNT_NUMBER` ni idadi ya akaunti tunazohifadhi.
 
-Aina za data zilizopewa jina la `u<number>` ni idadi hiyo ya biti, zisizo na saini. Aina pekee zinazotumika ni `u8`, `u16`, `u32`, `u64`, na `u128`.
+Aina za data zilizoitwa `u<number>` ni idadi hiyo ya biti, ambazo hazijasainiwa. Aina pekee zinazotumika ni `u8`, `u16`, `u32`, `u64`, na `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
 ```
 
-Kigezo hiki kinatumika kwa heshi ya Pedersen ya akaunti, kama ilivyoelezwa hapa chini.
+Kigeu hiki kinatumika kwa heshi ya Pedersen ya akaunti, kama ilivyoelezwa hapa chini.
 
 ```
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Kama ilivyoelezwa hapo juu, urefu wa ujumbe umewekwa. Umebainishwa hapa.
+Kama ilivyoelezwa hapo juu, urefu wa ujumbe haubadiliki. Umebainishwa hapa.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
@@ -374,7 +371,7 @@ struct Account {
 }
 ```
 
-Taarifa tunayohifadhi kuhusu akaunti. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) ni nambari, kwa kawaida hadi biti 253, inayoweza kutumika moja kwa moja katika [saketi ya kihesabu](https://rareskills.io/post/arithmetic-circuit) inayotekeleza uthibitisho wa maarifa-sifuri. Hapa tunatumia `Field` kuhifadhi anwani ya Ethereum ya biti 160.
+Taarifa tunayohifadhi kuhusu akaunti. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) ni nambari, kwa kawaida hadi biti 253, inayoweza kutumika moja kwa moja katika [saketi ya hesabu](https://rareskills.io/post/arithmetic-circuit) inayotekeleza uthibitisho wa maarifa-sifuri. Hapa tunatumia `Field` kuhifadhi anwani ya Ethereum ya biti 160.
 
 ```
 struct TransferTxn {
@@ -391,44 +388,44 @@ Taarifa tunayohifadhi kwa ajili ya muamala wa hamisho.
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Ufafanuzi wa kazi. Kigezo ni taarifa ya `Account`. Matokeo ni safu ya vigezo vya `Field`, ambavyo urefu wake ni `FLAT_ACCOUNT_FIELDS`
+Ufafanuzi wa kazi. Kigezo ni taarifa ya `Account`. Matokeo ni safu ya vigeu vya `Field`, ambavyo urefu wake ni `FLAT_ACCOUNT_FIELDS`
 
 ```
-let flat = [
+    let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
 ```
 
-Thamani ya kwanza katika safu ni anwani ya akaunti. Ya pili inajumuisha salio na nonsi. Miito ya `.into()` inabadilisha nambari kuwa aina ya data inayohitajika kuwa. `account.nonce` ni thamani ya `u32`, lakini ili kuiongeza kwenye `account.balance << 32`, thamani ya `u128`, inahitaji kuwa `u128`. Hiyo ndiyo `.into()` ya kwanza. Ya pili inabadilisha matokeo ya `u128` kuwa `Field` ili iingie kwenye safu.
+Thamani ya kwanza katika safu ni anwani ya akaunti. Ya pili inajumuisha salio na nonsi. Wito wa `.into()` hubadilisha nambari kuwa aina ya data inavyohitaji kuwa. `account.nonce` ni thamani ya `u32`, lakini ili kuiongeza kwenye `account.balance << 32`, thamani ya `u128`, inahitaji kuwa `u128`. Hiyo ndiyo `.into()` ya kwanza. Ya pili inabadilisha matokeo ya `u128` kuwa `Field` ili iingie kwenye safu.
 
 ```
-flat
+    flat
 }
 ```
 
-Katika Noir, kazi zinaweza tu kurejesha thamani mwishoni (hakuna urejeshaji wa mapema). Ili kubainisha thamani ya kurejesha, unaitathmini kabla tu ya mabano ya kufunga ya kazi.
+Katika Noir, kazi zinaweza kurejesha thamani mwishoni pekee (hakuna urejeshaji wa mapema). Ili kubainisha thamani inayorejeshwa, unaitathmini kabla tu ya mabano ya kufunga ya kazi.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Kazi hii inabadilisha safu ya akaunti kuwa safu ya `Field`, ambayo inaweza kutumika kama ingizo kwa Heshi ya Petersen.
+Kazi hii hubadilisha safu ya akaunti kuwa safu ya `Field`, ambayo inaweza kutumika kama ingizo kwa Heshi ya Petersen.
 
 ```
-let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Hivi ndivyo unavyobainisha kigezo kinachoweza kubadilika, yaani, _sio_ cha kudumu. Vigezo katika Noir lazima kila wakati viwe na thamani, kwa hivyo tunaanzisha kigezo hiki kwa sifuri zote.
+Hivi ndivyo unavyobainisha kigeu kinachoweza kubadilika, yaani, _sio_ thabiti. Vigeu katika Noir lazima viwe na thamani kila wakati, kwa hivyo tunaanzisha kigeu hiki kwa sifuri zote.
 
 ```
-for i in 0..ACCOUNT_NUMBER {
+    for i in 0..ACCOUNT_NUMBER {
 ```
 
-Hili ni kitanzi cha `for`. Kumbuka kwamba mipaka ni ya kudumu. Vitanzi vya Noir lazima viwe na mipaka yake inayojulikana wakati wa kukusanya. Sababu ni kwamba saketi za kihesabu hazitumii udhibiti wa mtiririko. Wakati wa kuchakata kitanzi cha `for`, kikusanyaji huweka tu msimbo ndani yake mara nyingi, moja kwa kila mzunguko.
+Hii ni kitanzi cha `for`. Kumbuka kwamba mipaka ni thabiti. Vitanzi vya Noir lazima viwe na mipaka inayojulikana wakati wa kukusanya. Sababu ni kwamba saketi za hesabu hazitumii udhibiti wa mtiririko. Wakati wa kuchakata kitanzi cha `for`, kikusanyaji huweka tu msimbo ndani yake mara nyingi, moja kwa kila mzunguko.
 
 ```
-let fields = flatten_account(accounts[i]);
+        let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
         }
@@ -455,11 +452,11 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Kazi hii inatafuta akaunti yenye anwani maalum. Kazi hii ingekuwa isiyofaa sana katika msimbo wa kawaida kwa sababu inarudia akaunti zote, hata baada ya kupata anwani.
+Kazi hii inatafuta akaunti yenye anwani maalum. Kazi hii ingekuwa isiyofaa sana katika msimbo wa kawaida kwa sababu inazunguka akaunti zote, hata baada ya kupata anwani.
 
 Hata hivyo, katika uthibitisho wa maarifa-sifuri, hakuna udhibiti wa mtiririko. Ikiwa tutawahi kuhitaji kuangalia sharti, lazima tuliangalie kila wakati.
 
-Jambo kama hilo hufanyika kwa kauli za `if`. Kauli ya `if` katika kitanzi hapo juu inatafsiriwa kuwa kauli hizi za kihesabu.
+Jambo kama hilo hutokea kwa kauli za `if`. Kauli ya `if` katika kitanzi hapo juu inatafsiriwa katika kauli hizi za hisabati.
 
 _condition<sub>result</sub> = accounts[i].address == address_ // moja ikiwa zinalingana, sifuri vinginevyo
 
@@ -472,7 +469,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Kazi ya [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) inasababisha uthibitisho wa maarifa-sifuri kuacha kufanya kazi ikiwa dai ni la uongo. Katika kesi hii, ikiwa hatuwezi kupata akaunti yenye anwani husika. Ili kuripoti anwani, tunatumia [tungo ya muundo](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Kazi ya [`assert`](https://noir-lang.org/docs/language/assert) husababisha uthibitisho wa maarifa-sifuri kuacha kufanya kazi ikiwa dai ni la uongo. Katika kesi hii, ikiwa hatuwezi kupata akaunti yenye anwani husika. Ili kuripoti anwani, tunatumia [mfuatano wa muundo](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -488,7 +485,7 @@ Kazi hii inatumia muamala wa hamisho na kurejesha safu mpya ya akaunti.
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-Hatuwezi kufikia vipengele vya muundo ndani ya tungo ya muundo katika Noir, kwa hivyo tunaunda nakala inayoweza kutumika.
+Hatuwezi kufikia vipengele vya muundo ndani ya mfuatano wa muundo katika Noir, kwa hivyo tunaunda nakala inayoweza kutumika.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -498,7 +495,7 @@ Hatuwezi kufikia vipengele vya muundo ndani ya tungo ya muundo katika Noir, kwa 
         f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
-Haya ni masharti mawili yanayoweza kufanya muamala kuwa batili.
+Haya ni masharti mawili yanayoweza kufanya muamala uwe batili.
 
 ```rust
     let mut newAccounts = accounts;
@@ -511,7 +508,7 @@ Haya ni masharti mawili yanayoweza kufanya muamala kuwa batili.
 }
 ```
 
-Unda safu mpya ya akaunti na kisha uirejeshe.
+Unda safu mpya ya akaunti kisha uirejeshe.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
@@ -526,7 +523,7 @@ Kazi hii inasoma anwani kutoka kwenye ujumbe.
     for i in 7..47 {
 ```
 
-Anwani daima ina urefu wa baiti 20 (a.k.a. tarakimu 40 za heksadesimali), na inaanza kwenye herufi #7.
+Anwani daima ina urefu wa baiti 20 (a.k.a. tarakimu 40 za heksadesimali), na huanza kwenye herufi #7.
 
 ```rust
         result *= 0x10;
@@ -558,7 +555,7 @@ Soma kiasi na nonsi kutoka kwenye ujumbe.
     let mut stillReadingNonce: bool = false;
 ```
 
-Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (a.k.a. elfu moja ya ETH) cha kuhamisha. Nambari ya pili ni nonsi. Maandishi yoyote kati yao yanapuuzwa.
+Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (a.k.a. elfu moja ya ETH) cha kuhamisha. Nambari ya pili ni nonsi. Maandishi yoyote kati yao hupuuzwa.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -592,7 +589,7 @@ Katika ujumbe, nambari ya kwanza baada ya anwani ni kiasi cha finney (a.k.a. elf
 }
 ```
 
-Kurejesha [tupo](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ni njia ya Noir ya kurejesha thamani nyingi kutoka kwenye kazi.
+Kurejesha [tapo](https://noir-lang.org/docs/noir/concepts/data_types/tuples) ni njia ya Noir kurejesha thamani nyingi kutoka kwenye kazi.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -617,7 +614,7 @@ Kazi hii inabadilisha ujumbe kuwa baiti, kisha inabadilisha kiasi kuwa `Transfer
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinaheshishwa tu ndani ya uthibitisho wa maarifa-sifuri. Hata hivyo, katika msimbo huu tunahitaji kuangalia sahihi ya ujumbe, ambayo inazalishwa na kivinjari. Kwa hilo, tunahitaji kufuata muundo wa kusaini wa Ethereum katika [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Hii inamaanisha tunahitaji kuunda bafa iliyounganishwa yenye kiambishi awali cha kawaida, urefu wa ujumbe katika ASCII, na ujumbe wenyewe, na kutumia keccak256 ya kawaida ya Ethereum kuiheshisha.
+Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinaheshishwa tu ndani ya uthibitisho wa maarifa-sifuri. Hata hivyo, katika msimbo huu tunahitaji kuangalia sahihi ya ujumbe, ambayo inazalishwa na kivinjari. Kwa hilo, tunahitaji kufuata muundo wa kusaini wa Ethereum katika [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Hii ina maana tunahitaji kuunda bafa iliyounganishwa na kiambishi awali cha kawaida, urefu wa ujumbe katika ASCII, na ujumbe wenyewe, na kutumia kiwango cha Ethereum cha keccak256 kukiheshisha.
 
 ```rust
     // Kiambishi awali cha ASCII
@@ -651,7 +648,7 @@ Tuliweza kutumia Heshi ya Pedersen kwa akaunti kwa sababu zinaheshishwa tu ndani
     ];
 ```
 
-Ili kuepuka matukio ambapo programu inamwomba mtumiaji kusaini ujumbe unaoweza kutumika kama muamala au kwa madhumuni mengine, EIP-191 inabainisha kwamba jumbe zote zilizosainiwa zinaanza na herufi 0x19 (sio herufi halali ya ASCII) ikifuatiwa na `Ethereum Signed Message:` na mstari mpya.
+Ili kuepuka matukio ambapo programu inamuomba mtumiaji kusaini ujumbe unaoweza kutumika kama muamala au kwa madhumuni mengine, EIP-191 inabainisha kwamba jumbe zote zilizosainiwa huanza na herufi 0x19 (sio herufi halali ya ASCII) ikifuatiwa na `Ethereum Signed Message:` na mstari mpya.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -694,7 +691,7 @@ Ili kuepuka matukio ambapo programu inamwomba mtumiaji kusaini ujumbe unaoweza k
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Shughulikia urefu wa ujumbe hadi 999 na ushindwe ikiwa ni mkubwa zaidi. Niliongeza msimbo huu, ingawa urefu wa ujumbe ni wa kudumu, kwa sababu inafanya iwe rahisi kuubadilisha. Kwenye mfumo wa uzalishaji, labda ungechukulia tu kwamba `MESSAGE_LENGTH` haibadiliki kwa ajili ya utendaji bora.
+Shughulikia urefu wa ujumbe hadi 999 na ushindwe ikiwa ni mkubwa zaidi. Niliongeza msimbo huu, ingawa urefu wa ujumbe ni thabiti, kwa sababu inafanya iwe rahisi kuubadilisha. Kwenye mfumo wa uzalishaji, labda ungedhani tu `MESSAGE_LENGTH` haibadiliki kwa ajili ya utendaji bora.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -713,9 +710,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Kazi hii inahakiki sahihi, ambayo inahitaji heshi ya ujumbe. Kisha inatupa anwani iliyoisaini na heshi ya ujumbe. Heshi ya ujumbe inatolewa katika thamani mbili za `Field` kwa sababu hizo ni rahisi kutumia katika sehemu iliyosalia ya programu kuliko safu ya baiti.
+Kazi hii inahakiki sahihi, ambayo inahitaji heshi ya ujumbe. Kisha inatupatia anwani iliyoisaini na heshi ya ujumbe. Heshi ya ujumbe hutolewa katika thamani mbili za `Field` kwa sababu hizo ni rahisi kutumia katika sehemu iliyosalia ya programu kuliko safu ya baiti.
 
-Tunahitaji kutumia thamani mbili za `Field` kwa sababu hesabu za uga zinafanywa [modulo](https://en.wikipedia.org/wiki/Modulo) nambari kubwa, lakini nambari hiyo kwa kawaida ni chini ya biti 256 (vinginevyo ingekuwa vigumu kufanya hesabu hizo katika EVM).
+Tunahitaji kutumia thamani mbili za `Field` kwa sababu hesabu za uga hufanywa [modulo](https://en.wikipedia.org/wiki/Modulo) idadi kubwa, lakini nambari hiyo kwa kawaida ni chini ya biti 256 (vinginevyo ingekuwa vigumu kufanya hesabu hizo katika EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -728,16 +725,16 @@ Tunahitaji kutumia thamani mbili za `Field` kwa sababu hesabu za uga zinafanywa 
     }
 ```
 
-Bainisha `hash1` na `hash2` kama vigezo vinavyoweza kubadilika, na uandike heshi ndani yake baiti kwa baiti.
+Bainisha `hash1` na `hash2` kama vigeu vinavyoweza kubadilika, na uandike heshi ndani yake baiti kwa baiti.
 
 ```rust
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-Hii inafanana na [`ecrecover` ya Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), na tofauti mbili muhimu:
+Hii inafanana na [`ecrecover` ya Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), kukiwa na tofauti mbili muhimu:
 
-- Ikiwa sahihi si halali, mwito unashindwa `assert` na programu inasitishwa.
+- Ikiwa sahihi sio halali, wito unashindwa `assert` na programu inakatishwa.
 - Ingawa ufunguo wa umma unaweza kurejeshwa kutoka kwenye sahihi na heshi, huu ni uchakataji unaoweza kufanywa nje na, kwa hivyo, haufai kufanywa ndani ya uthibitisho wa maarifa-sifuri. Ikiwa mtu atajaribu kutudanganya hapa, uhakiki wa sahihi utashindwa.
 
 ```rust
@@ -760,7 +757,7 @@ fn main(
     )
 ```
 
-Hatimaye, tunafika kwenye kazi ya `main`. Tunahitaji kuthibitisha kwamba tuna muamala unaobadilisha kihalali heshi ya akaunti kutoka thamani ya zamani hadi mpya. Pia tunahitaji kuthibitisha kwamba ina heshi hii maalum ya muamala ili mtu aliyeituma ajue muamala wake umechakatwa.
+Hatimaye, tunafika kwenye kazi ya `main`. Tunahitaji kuthibitisha kwamba tuna muamala unaobadilisha heshi ya akaunti kwa uhalali kutoka thamani ya zamani hadi mpya. Tunahitaji pia kuthibitisha kwamba ina heshi hii maalum ya muamala ili mtu aliyeituma ajue muamala wake umechakatwa.
 
 ```rust
 {
@@ -826,16 +823,16 @@ Ili kuiona ikifanya kazi:
 
 6. Kabla ya kutoa muamala, unahitaji kujua nonsi, pamoja na kiasi unachoweza kutuma. Ili kupata taarifa hii, bofya **Sasisha data ya akaunti** na usaini ujumbe.
 
-   Tuna mtanziko hapa. Kwa upande mmoja, hatutaki kusaini ujumbe unaoweza kutumika tena ([shambulio la kurudia](https://en.wikipedia.org/wiki/Replay_attack)), ndiyo maana tunataka nonsi hapo kwanza. Hata hivyo, bado hatuna nonsi. Suluhisho ni kuchagua nonsi inayoweza kutumika mara moja tu na ambayo tayari tunayo pande zote mbili, kama vile wakati wa sasa.
+   Tuna utata hapa. Kwa upande mmoja, hatutaki kusaini ujumbe unaoweza kutumika tena ([shambulio la kurudiwa](https://en.wikipedia.org/wiki/Replay_attack)), ndiyo maana tunataka nonsi hapo awali. Hata hivyo, hatuna nonsi bado. Suluhisho ni kuchagua nonsi inayoweza kutumika mara moja tu na ambayo tayari tunayo pande zote mbili, kama vile wakati wa sasa.
 
-   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe umesawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii inamaanisha kwamba dirisha letu la uwezekano wa kushambuliwa kwa kurudia ni dakika moja zaidi. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---tayari inaweza kufichua salio na nonsi (lazima izijue ili kufanya kazi), hii ni hatari inayokubalika.
+   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe uliosawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii ina maana kwamba dirisha letu la kuathiriwa na mashambulizi ya kurudiwa ni angalau dakika moja. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---inaweza tayari kufichua salio na nonsi (inabidi izijue ili kufanya kazi), hii ni hatari inayokubalika.
 
-7. Mara tu kivinjari kinapopata salio na nonsi, kinaonyesha fomu ya hamisho. Chagua anwani ya mwisho na kiasi na ubofye **Hamisha**. Saini ombi hili.
+7. Pindi kivinjari kinaporejesha salio na nonsi, kinaonyesha fomu ya hamisho. Chagua anwani ya mwisho na kiasi kisha ubofye **Hamisha**. Saini ombi hili.
 
-8. Ili kuona hamisho, ama **Sasisha data ya akaunti** au angalia kwenye dirisha ambapo unaendesha seva. Seva huweka logi ya hali kila wakati inapobadilika.
+8. Ili kuona hamisho, ama **Sasisha data ya akaunti** au angalia kwenye dirisha ambapo unaendesha seva. Seva inarekodi hali kila wakati inapobadilika.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -862,24 +859,24 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
-[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) lina mchakato wa seva, na linaingiliana na msimbo wa Noir kwenye [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Hapa kuna maelezo ya sehemu zinazovutia.
+[Faili hili](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) lina mchakato wa seva, na huingiliana na msimbo wa Noir katika [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Hapa kuna maelezo ya sehemu za kuvutia.
 
 ```js
 import { Noir } from '@noir-lang/noir_js'
 ```
 
-Maktaba ya [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) inaunganisha kati ya msimbo wa JavaScript na msimbo wa Noir.
+Maktaba ya [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) huunganisha kati ya msimbo wa JavaScript na msimbo wa Noir.
 
 ```js
 const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-Pakia saketi ya kihesabu---programu ya Noir iliyokusanywa tuliyounda katika hatua iliyopita---na uwe tayari kuitekeleza.
+Pakia saketi ya hesabu---programu iliyokusanywa ya Noir tuliyounda katika hatua iliyopita---na uwe tayari kuitekeleza.
 
 ```js
 // Tunatoa tu taarifa za akaunti kama majibu kwa ombi lililotiwa sahihi
@@ -890,7 +887,7 @@ const accountInformation = async signature => {
     })
 ```
 
-Ili kutoa taarifa ya akaunti, tunahitaji tu sahihi. Sababu ni kwamba tayari tunajua ujumbe utakuwa nini, na kwa hivyo heshi ya ujumbe.
+Ili kutoa taarifa za akaunti, tunahitaji tu sahihi. Sababu ni kwamba tayari tunajua ujumbe utakuwa nini, na kwa hivyo heshi ya ujumbe.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -906,7 +903,7 @@ Chakata ujumbe na utekeleze muamala unaousimba.
     })
 ```
 
-Sasa kwa kuwa tunaendesha JavaScript kwenye seva, tunaweza kurejesha ufunguo wa umma huko badala ya kwa mteja.
+Kwa kuwa sasa tunaendesha JavaScript kwenye seva, tunaweza kupata ufunguo wa umma hapo badala ya kwa mteja.
 
 ```js
     let noirResult
@@ -920,7 +917,7 @@ Sasa kwa kuwa tunaendesha JavaScript kwenye seva, tunaweza kurejesha ufunguo wa 
         })
 ```
 
-`noir.execute` inaendesha programu ya Noir. Vigezo ni sawa na vile vilivyotolewa katika [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Kumbuka kwamba thamani ndefu zinatolewa kama safu ya tungo za heksadesimali (`["0x60", "0xA7"]`), sio kama thamani moja ya heksadesimali (`0x60A7`), jinsi Viem inavyofanya.
+`noir.execute` inaendesha programu ya Noir. Vigezo ni sawa na vile vilivyotolewa katika [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Kumbuka kwamba thamani ndefu hutolewa kama safu ya mifuatano ya heksadesimali (`["0x60", "0xA7"]`), sio kama thamani moja ya heksadesimali (`0x60A7`), jinsi Viem inavyofanya.
 
 ```js
     } catch (err) {
@@ -929,7 +926,7 @@ Sasa kwa kuwa tunaendesha JavaScript kwenye seva, tunaweza kurejesha ufunguo wa 
     }
 ```
 
-Ikiwa kuna hitilafu, idake na kisha upeleke toleo lililorahisishwa kwa mteja.
+Ikiwa kuna kosa, likamate kisha upitishe toleo lililorahisishwa kwa mteja.
 
 ```js
     Accounts[fromAccountNumber].nonce++
@@ -937,7 +934,7 @@ Ikiwa kuna hitilafu, idake na kisha upeleke toleo lililorahisishwa kwa mteja.
     Accounts[toAccountNumber].balance += amount
 ```
 
-Tumia muamala. Tayari tulifanya hivyo katika msimbo wa Noir, lakini ni rahisi kufanya tena hapa badala ya kutoa matokeo kutoka huko.
+Tumia muamala. Tayari tulifanya hivyo katika msimbo wa Noir, lakini ni rahisi kuifanya tena hapa badala ya kutoa matokeo kutoka hapo.
 
 ```js
 let Accounts = [
@@ -966,7 +963,7 @@ Muundo wa awali wa `Accounts`.
 
 3. Endesha `anvil` katika dirisha tofauti la mstari wa amri.
 
-4. Zalisha ufunguo wa uhakiki na mhakiki wa Solidity, kisha nakili msimbo wa mhakiki kwenye mradi wa Solidity.
+4. Zalisha ufunguo wa uhakiki na mhakiki wa Solidity, kisha unakili msimbo wa mhakiki kwenye mradi wa Solidity.
 
    ```sh
    cd noir
@@ -975,7 +972,7 @@ Muundo wa awali wa `Accounts`.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Nenda kwenye mikataba mahiri na uweke vigezo vya mazingira ili kutumia mnyororo wa vitalu wa `anvil`.
+5. Nenda kwenye mikataba mahiri na uweke vigeu vya mazingira ili kutumia mnyororo wa vitalu wa `anvil`.
 
    ```sh
    cd ../../smart-contracts
@@ -983,7 +980,7 @@ Muundo wa awali wa `Accounts`.
    ETH_PRIVATE_KEY=ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
    ```
 
-6. Sambaza `Verifier.sol` na uhifadhi anwani katika kigezo cha mazingira.
+6. Sambaza `Verifier.sol` na uhifadhi anwani kwenye kigeu cha mazingira.
 
    ```sh
    VERIFIER_ADDRESS=`forge create src/Verifier.sol:HonkVerifier --private-key $ETH_PRIVATE_KEY --optimize --broadcast | awk '/Deployed to:/ {print $3}'`
@@ -997,7 +994,7 @@ Muundo wa awali wa `Accounts`.
    echo $ZKBANK_ADDRESS
    ```
 
-   Thamani ya `0x199..67b` ni heshi ya Pederson ya hali ya awali ya `Accounts`. Ikiwa utabadilisha hali hii ya awali katika `server/index.mjs`, unaweza kuendesha muamala ili kuona heshi ya awali iliyoripotiwa na uthibitisho wa maarifa-sifuri.
+   Thamani ya `0x199..67b` ni heshi ya Pedersen ya hali ya awali ya `Accounts`. Ikiwa utarekebisha hali hii ya awali katika `server/index.mjs`, unaweza kuendesha muamala ili kuona heshi ya awali iliyoripotiwa na uthibitisho wa maarifa-sifuri.
 
 8. Endesha seva.
 
@@ -1015,12 +1012,12 @@ Muundo wa awali wa `Accounts`.
 
 10. Endesha baadhi ya miamala.
 
-11. Ili kuhakiki kwamba hali imebadilika mnyororoni, anzisha upya mchakato wa seva. Angalia kwamba `ZkBank` haikubali tena miamala, kwa sababu thamani ya asili ya heshi katika miamala inatofautiana na thamani ya heshi iliyohifadhiwa mnyororoni.
+11. Ili kuhakiki kwamba hali imebadilika mnyororoni, washa upya mchakato wa seva. Angalia kwamba `ZkBank` haikubali tena miamala, kwa sababu thamani ya asili ya heshi katika miamala inatofautiana na thamani ya heshi iliyohifadhiwa mnyororoni.
 
-    Hii ndiyo aina ya hitilafu inayotarajiwa.
+    Hili ndilo aina ya kosa linalotarajiwa.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -1033,7 +1030,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
@@ -1064,13 +1061,13 @@ const walletClient = createWalletClient({
 })
 ```
 
-Ufunguo huu wa siri ni mojawapo ya akaunti za msingi zilizofadhiliwa mapema katika `anvil`. 
+Ufunguo huu wa siri ni mojawapo ya akaunti chaguomsingi zilizofadhiliwa mapema katika `anvil`. 
 
 ```js
 const generateProof = async (witness, fileID) => {
 ```
 
-Zalisha uthibitisho ukitumia faili tekelezi la `bb`.
+Zalisha uthibitisho ukitumia faili inayoweza kutekelezwa ya `bb`.
 
 ```js 
     const fname = `witness-${fileID}.gz`    
@@ -1083,13 +1080,13 @@ Andika Shahidi kwenye faili.
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Unda uthibitisho halisi. Hatua hii pia inaunda faili lenye vigezo vya umma, lakini hatuhitaji hilo. Tayari tulipata vigezo hivyo kutoka kwa `noir.execute`.
+Unda uthibitisho halisi. Hatua hii pia inaunda faili lenye vigeu vya umma, lakini hatuhitaji hilo. Tayari tulipata vigeu hivyo kutoka kwenye `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Uthibitisho ni safu ya JSON ya thamani za `Field`, kila moja ikiwakilishwa kama thamani ya heksadesimali. Hata hivyo, tunahitaji kuituma katika muamala kama thamani moja ya `bytes`, ambayo Viem inaiwakilisha kwa tungo kubwa ya heksadesimali. Hapa tunabadilisha muundo kwa kuunganisha thamani zote, kuondoa `0x` zote, na kisha kuongeza moja mwishoni.
+Uthibitisho ni safu ya JSON ya thamani za `Field`, kila moja ikiwakilishwa kama thamani ya heksadesimali. Hata hivyo, tunahitaji kuituma katika muamala kama thamani moja ya `bytes`, ambayo Viem inaiwakilisha kwa mfuatano mkubwa wa heksadesimali. Hapa tunabadilisha muundo kwa kuunganisha thamani zote, kuondoa `0x` zote, na kisha kuongeza moja mwishoni.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1109,13 +1106,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Nyanja za umma zinahitaji kuwa safu ya thamani za baiti 32. Hata hivyo, kwa kuwa tulihitaji kugawanya heshi ya muamala kati ya thamani mbili za `Field`, inaonekana kama thamani ya baiti 16. Hapa tunaongeza sifuri ili Viem ielewe kuwa ni baiti 32 haswa.
+Nyanja za umma zinahitaji kuwa safu ya thamani za baiti 32. Hata hivyo, kwa kuwa tulihitaji kugawanya heshi ya muamala kati ya thamani mbili za `Field`, inaonekana kama thamani ya baiti 16. Hapa tunaongeza sifuri ili Viem ielewe kuwa ni baiti 32.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Kila anwani inatumia kila nonsi mara moja tu ili tuweze kutumia mchanganyiko wa `fromAddress` na `nonce` kama kitambulisho cha kipekee kwa faili la Shahidi na saraka ya toleo.
+Kila anwani hutumia kila nonsi mara moja tu ili tuweze kutumia mchanganyiko wa `fromAddress` na `nonce` kama kitambulisho cha kipekee kwa faili la Shahidi na saraka ya towe.
 
 ```js
     try {
@@ -1154,7 +1151,7 @@ contract ZkBank {
     }
 ```
 
-Msimbo wa mnyororoni unahitaji kufuatilia vigezo viwili: mhakiki (mkataba tofauti unaoundwa na `nargo`) na heshi ya hali ya sasa.
+Msimbo wa mnyororoni unahitaji kufuatilia vigeu viwili: mhakiki (mkataba tofauti unaoundwa na `nargo`) na heshi ya hali ya sasa.
 
 ```solidity
     event TransactionProcessed(
@@ -1173,20 +1170,20 @@ Kila wakati hali inapobadilika, tunatoa tukio la `TransactionProcessed`.
     ) public {
 ```
 
-Kazi hii inachakata miamala. Inapata uthibitisho (kama `bytes`) na ingizo la umma (kama safu ya `bytes32`), katika muundo ambao mhakiki anahitaji (ili kupunguza uchakataji wa mnyororoni na kwa hivyo gharama za gesi).
+Kazi hii inachakata miamala. Inapata uthibitisho (kama `bytes`) na maingizo ya umma (kama safu ya `bytes32`), katika muundo ambao mhakiki anahitaji (ili kupunguza uchakataji wa mnyororoni na kwa hivyo gharama za gesi).
 
 ```solidity
         require(_publicInputs[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Uthibitisho wa maarifa-sifuri unahitaji kuwa kwamba muamala unabadilika kutoka kwenye heshi yetu ya sasa hadi mpya.
+Uthibitisho wa maarifa-sifuri unahitaji kuwa kwamba muamala unabadilika kutoka heshi yetu ya sasa hadi mpya.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii inarejesha nyuma muamala ikiwa uthibitisho wa maarifa-sifuri si sahihi.
+Piga simu kwa mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii hurejesha muamala ikiwa uthibitisho wa maarifa-sifuri ni mbaya.
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1200,55 +1197,55 @@ Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii ina
 }
 ```
 
-Ikiwa kila kitu kiko sawa, sasisha heshi ya hali kuwa thamani mpya na utoe tukio la `TransactionProcessed`.
+Ikiwa kila kitu ni sawa, sasisha heshi ya hali kuwa thamani mpya na utoe tukio la `TransactionProcessed`.
 
-## Matumizi mabaya na sehemu iliyowekwa kati {#abuses}
+## Unyanyasaji na kijenzi kilichowekwa kati {#abuses}
 
-Usalama wa taarifa unajumuisha sifa tatu:
+Usalama wa taarifa una sifa tatu:
 
 - _Usiri_, watumiaji hawawezi kusoma taarifa ambazo hawajaidhinishwa kuzisoma.
 - _Uadilifu_, taarifa haziwezi kubadilishwa isipokuwa na watumiaji walioidhinishwa kwa njia iliyoidhinishwa.
 - _Upatikanaji_, watumiaji walioidhinishwa wanaweza kutumia mfumo.
 
-Kwenye mfumo huu, uadilifu hutolewa kupitia uthibitisho wa maarifa-sifuri. Upatikanaji ni mgumu zaidi kuhakikisha, na usiri hauwezekani, kwa sababu benki inapaswa kujua salio la kila akaunti na miamala yote. Hakuna njia ya kuzuia chombo kilicho na taarifa kushiriki taarifa hizo.
+Kwenye mfumo huu, uadilifu hutolewa kupitia uthibitisho wa maarifa-sifuri. Upatikanaji ni mgumu sana kuhakikisha, na usiri hauwezekani, kwa sababu benki inabidi ijue salio la kila akaunti na miamala yote. Hakuna njia ya kuzuia taasisi iliyo na taarifa kushiriki taarifa hiyo.
 
-Inaweza kuwezekana kuunda benki yenye usiri wa kweli kwa kutumia [anwani za siri](https://vitalik.eth.limo/general/2023/01/20/stealth.html), lakini hilo liko nje ya upeo wa makala haya.
+Inaweza kuwezekana kuunda benki ya siri kweli kwa kutumia [anwani za siri](https://vitalik.eth.limo/general/2023/01/20/stealth.html), lakini hilo liko nje ya upeo wa makala haya.
 
 ### Taarifa za uongo {#false-info}
 
-Njia moja ambayo seva inaweza kukiuka uadilifu ni kutoa taarifa za uongo wakati [data inapoombwa](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
+Njia moja ambayo seva inaweza kukiuka uadilifu ni kutoa taarifa za uongo wakati [data inaombwa](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-Ili kutatua hili, tunaweza kuandika programu ya pili ya Noir inayopokea akaunti kama ingizo la siri na anwani ambayo taarifa zake zinaombwa kama ingizo la umma. Toleo ni salio na nonsi ya anwani hiyo, na heshi ya akaunti hizo.
+Ili kutatua hili, tunaweza kuandika programu ya pili ya Noir inayopokea akaunti kama ingizo la faragha na anwani ambayo taarifa yake inaombwa kama ingizo la umma. Towe ni salio na nonsi ya anwani hiyo, na heshi ya akaunti.
 
-Bila shaka, uthibitisho huu hauwezi kuhakikiwa mnyororoni, kwa sababu hatutaki kuchapisha nonsi na masalio mnyororoni. Hata hivyo, inaweza kuhakikiwa na msimbo wa mteja unaoendeshwa kwenye kivinjari.
+Bila shaka, uthibitisho huu hauwezi kuhakikiwa mnyororoni, kwa sababu hatutaki kuchapisha nonsi na salio mnyororoni. Hata hivyo, inaweza kuhakikiwa na msimbo wa mteja unaoendeshwa kwenye kivinjari.
 
-### Miamala ya lazima {#forced-txns}
+### Miamala ya kulazimishwa {#forced-txns}
 
-Utaratibu wa kawaida wa kuhakikisha upatikanaji na kuzuia udhibiti kwenye L2 ni [miamala ya lazima](https://docs.optimism.io/stack/transactions/forced-transaction). Lakini miamala ya lazima haiendani na uthibitisho wa maarifa-sifuri. Seva ndicho chombo pekee kinachoweza kuhakiki miamala.
+Utaratibu wa kawaida wa kuhakikisha upatikanaji na kuzuia udhibiti kwenye L2 ni [miamala ya kulazimishwa](https://docs.optimism.io/stack/transactions/forced-transaction). Lakini miamala ya kulazimishwa haiendani na uthibitisho wa maarifa-sifuri. Seva ndiyo taasisi pekee inayoweza kuhakiki miamala.
 
-Tunaweza kurekebisha `smart-contracts/src/ZkBank.sol` ili kukubali miamala ya lazima na kuzuia seva kubadilisha hali hadi itakapochakatwa. Hata hivyo, hii inatuweka wazi kwa shambulio rahisi la kunyimwa huduma (denial-of-service). Vipi ikiwa muamala wa lazima ni batili na hivyo hauwezekani kuchakatwa?
+Tunaweza kurekebisha `smart-contracts/src/ZkBank.sol` ili kukubali miamala ya kulazimishwa na kuzuia seva kubadilisha hali hadi ichakatwe. Hata hivyo, hili linatufungua kwa shambulio rahisi la kunyimwa huduma. Je, ikiwa muamala wa kulazimishwa ni batili na kwa hivyo hauwezekani kuchakatwa?
 
-Suluhisho ni kuwa na uthibitisho wa maarifa-sifuri kwamba muamala wa lazima ni batili. Hii inapa seva chaguzi tatu:
+Suluhisho ni kuwa na uthibitisho wa maarifa-sifuri kwamba muamala wa kulazimishwa ni batili. Hii inaipa seva chaguzi tatu:
 
-- Kuchakata muamala wa lazima, kutoa uthibitisho wa maarifa-sifuri kwamba umechakatwa na heshi mpya ya hali.
-- Kukataa muamala wa lazima, na kutoa uthibitisho wa maarifa-sifuri kwa mkataba kwamba muamala ni batili (anwani isiyojulikana, nonsi mbaya, au salio lisilotosha).
-- Kupuuza muamala wa lazima. Hakuna njia ya kulazimisha seva kuchakata muamala kikweli, lakini inamaanisha mfumo mzima haupatikani.
+- Kuchakata muamala wa kulazimishwa, kutoa uthibitisho wa maarifa-sifuri kwamba umechakatwa na heshi ya hali mpya.
+- Kukataa muamala wa kulazimishwa, na kutoa uthibitisho wa maarifa-sifuri kwa mkataba kwamba muamala ni batili (anwani isiyojulikana, nonsi mbaya, au salio lisilotosha).
+- Kupuuza muamala wa kulazimishwa. Hakuna njia ya kulazimisha seva kuchakata muamala, lakini inamaanisha mfumo mzima haupatikani.
 
 #### Dhamana za upatikanaji {#avail-bonds}
 
-Katika utekelezaji wa maisha halisi, labda kungekuwa na aina fulani ya nia ya faida ya kuweka seva ikiendelea kufanya kazi. Tunaweza kuimarisha kichocheo hiki kwa kuifanya seva iweke dhamana ya upatikanaji ambayo mtu yeyote anaweza kuiteketeza ikiwa muamala wa lazima hautachakatwa ndani ya kipindi fulani.
+Katika utekelezaji wa maisha halisi, labda kungekuwa na aina fulani ya nia ya faida kwa kuweka seva inafanya kazi. Tunaweza kuimarisha kichocheo hiki kwa kuwa na seva kuweka dhamana ya upatikanaji ambayo mtu yeyote anaweza kuiteketeza ikiwa muamala wa kulazimishwa hautachakatwa ndani ya kipindi fulani.
 
 ### Msimbo mbaya wa Noir {#bad-noir-code}
 
-Kawaida, ili kuwafanya watu waamini mkataba mahiri tunapakia msimbo wa chanzo kwenye [kichunguzi cha bloku](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Hata hivyo, katika kesi ya uthibitisho wa maarifa-sifuri, hiyo haitoshi.
+Kwa kawaida, ili kuwafanya watu waamini mkataba mahiri tunapakia msimbo wa chanzo kwenye [kichunguzi cha bloku](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Hata hivyo, katika kesi ya uthibitisho wa maarifa-sifuri, hiyo haitoshi.
 
-`Verifier.sol` ina ufunguo wa uhakiki, ambao ni kazi ya programu ya Noir. Hata hivyo, ufunguo huo hautuambii programu ya Noir ilikuwa nini. Ili kuwa na suluhisho linaloaminika kikweli, unahitaji kupakia programu ya Noir (na toleo lililoiunda). Vinginevyo, uthibitisho wa maarifa-sifuri unaweza kuonyesha programu tofauti, yenye mlango wa nyuma (back door).
+`Verifier.sol` ina ufunguo wa uhakiki, ambao ni kazi ya programu ya Noir. Hata hivyo, ufunguo huo hautuambii programu ya Noir ilikuwa nini. Ili kuwa na suluhisho linaloaminika, unahitaji kupakia programu ya Noir (na toleo lililoiunda). Vinginevyo, uthibitisho wa maarifa-sifuri unaweza kuonyesha programu tofauti, yenye mlango wa nyuma.
 
-Hadi vichunguzi vya bloku vitakapoanza kuturuhusu kupakia na kuhakiki programu za Noir, unapaswa kufanya hivyo mwenyewe (ikiwezekana kwenye [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Kisha watumiaji wenye uzoefu wataweza kupakua msimbo wa chanzo, kuukusanya wenyewe, kuunda `Verifier.sol`, na kuhakiki kwamba unafanana kabisa na ule ulio mnyororoni.
+Hadi vichunguzi vya bloku vianze kuturuhusu kupakia na kuhakiki programu za Noir, unapaswa kufanya hivyo mwenyewe (ikiwezekana kwa [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Kisha watumiaji mahiri wataweza kupakua msimbo wa chanzo, kuukusanya wenyewe, kuunda `Verifier.sol`, na kuhakiki kwamba inafanana na ile iliyo mnyororoni.
 
 ## Hitimisho {#conclusion}
 
-Programu za aina ya Plasma zinahitaji kijenzi kilichowekwa kati kama hifadhi ya taarifa. Hili linafungua uwezekano wa udhaifu lakini, kwa upande mwingine, linaturuhusu kuhifadhi faragha kwa njia ambazo hazipatikani kwenye mnyororo wa vitalu wenyewe. Kwa kutumia uthibitisho wa maarifa-sifuri tunaweza kuhakikisha uadilifu na ikiwezekana kuifanya iwe na faida kiuchumi kwa yeyote anayeendesha kijenzi kilichowekwa kati kudumisha upatikanaji.
+Programu za aina ya Plasma zinahitaji kijenzi kilichowekwa kati kama hifadhi ya taarifa. Hili hufungua uwezekano wa udhaifu lakini, kwa malipo, huturuhusu kuhifadhi faragha kwa njia ambazo hazipatikani kwenye mnyororo wa vitalu wenyewe. Kwa uthibitisho wa maarifa-sifuri tunaweza kuhakikisha uadilifu na ikiwezekana kuifanya iwe na faida kiuchumi kwa yeyote anayeendesha kijenzi kilichowekwa kati kudumisha upatikanaji.
 
 [Tazama hapa kwa kazi zangu zaidi](https://cryptodocguy.pro/).
 

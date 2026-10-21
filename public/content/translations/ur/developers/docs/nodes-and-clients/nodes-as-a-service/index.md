@@ -209,7 +209,7 @@ sidebarDepth: 2
     - <span dir="ltr">50+</span> بلاک چین نوڈز تک رسائی
 
 - [**Infura**](https://infura.io/)
-  - [دستاویزات](https://infura.io/docs)
+  - [دستاویزات](https://docs.infura.io/)
   - خصوصیات
     - مفت درجے کا اختیار
     - ضرورت کے مطابق اسکیل کریں

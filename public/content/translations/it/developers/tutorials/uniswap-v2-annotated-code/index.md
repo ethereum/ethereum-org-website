@@ -135,7 +135,7 @@ Questo contratto eredita da `UniswapV2ERC20`, che fornisce le funzioni ERC-20 pe
     using SafeMath  for uint;
 ```
 
-La [libreria SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) è usata per evitare overflow e underflow. Questo è importante perché altrimenti potremmo ritrovarci in una situazione in cui un valore dovrebbe essere `-1`, ma è invece `2^256-1`.
+La [libreria SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) è usata per evitare overflow e underflow. Questo è importante perché altrimenti potremmo ritrovarci in una situazione in cui un valore dovrebbe essere `-1`, ma è invece `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1673,7 +1673,7 @@ Questo contratto è stato utilizzato per migrare gli scambi dalla vecchia v1 all
 
 ## Le librerie {#libraries}
 
-La [libreria SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) è ben documentata, quindi non c'è bisogno di documentarla qui.
+La [libreria SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) è ben documentata, quindi non c'è bisogno di documentarla qui.
 
 ### Math {#math}
 

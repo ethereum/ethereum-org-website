@@ -142,7 +142,7 @@ KYC کے بغیر لامركزی ٹولز:
 **Arweave - _Arweave ڈیٹا کو اسٹور کرنے کے لیے ایک <span dir="ltr">dStorage</span> پلیٹ فارم ہے۔_**
 
 - [Arweave.org](https://www.arweave.org/)
-- [دستاویزات](https://docs.arweave.org/info/)
+- [دستاویزات](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs شارڈنگ اور بلابرز کے ساتھ ایک حصہ داری کا ثبوت <span dir="ltr">dStorage</span> پلیٹ فارم ہے۔_**

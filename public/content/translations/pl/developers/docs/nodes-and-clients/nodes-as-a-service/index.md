@@ -209,7 +209,7 @@ Oto lista niektórych z najpopularniejszych dostawców węzłów Ethereum. Śmia
     - Dostęp do ponad 50 węzłów blockchain
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentacja](https://infura.io/docs)
+  - [Dokumentacja](https://docs.infura.io/)
   - Funkcje
     - Opcja darmowego planu
     - Skalowanie w miarę potrzeb

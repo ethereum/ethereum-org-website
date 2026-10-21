@@ -142,7 +142,7 @@ Berbasis Bukti Kepemilikan:
 **Arweave - _Arweave adalah platform dStorage untuk menyimpan data._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentasi](https://docs.arweave.org/info/)
+- [Dokumentasi](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs adalah platform dStorage Bukti Kepemilikan dengan sharding dan blobber._**

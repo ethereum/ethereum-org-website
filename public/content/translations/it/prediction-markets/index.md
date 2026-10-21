@@ -5,9 +5,9 @@ template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoints:
-  - "Ricevi incentivi finanziari per generare previsioni accurate"
-  - "Previsioni di alta qualità su eventi futuri"
-buttons: 
+  - "Fai trading sull'esito di eventi futuri"
+  - "I prezzi fungono da stima pubblica e in tempo reale della probabilità che qualcosa accada"
+buttons:
   - content: Scopri di più
     toId: how-prediction-markets-work
   - content: Esplora le app
@@ -15,39 +15,39 @@ buttons:
     isSecondary: false
 ---
 
-I mercati predittivi utilizzano la saggezza della folla e gli incentivi finanziari per prevedere gli eventi. Offrono dati diversificati e di alta qualità e hanno guadagnato popolarità durante le elezioni statunitensi del 2024.
+I mercati predittivi consentono alle persone di acquistare e vendere quote sull'esito di eventi futuri. Il prezzo di una quota indica quanto il mercato nel suo complesso ritenga probabile tale esito. Hanno attirato molta attenzione durante le elezioni statunitensi del 2024.
 
 ## Come funzionano i mercati predittivi {#how-prediction-markets-work}
 
-A differenza dei metodi di previsione tradizionali che si basano su opinioni di esperti, campioni di sondaggi limitati o dati storici, i mercati predittivi sfruttano **incentivi finanziari in tempo reale** e la **saggezza della folla** per generare informazioni relative a un evento particolare: elezioni, prezzi delle cripto, risultati sportivi, qualsiasi cosa. 
+Ogni mercato pone una domanda con una risposta chiara, come "Pioverà a Lisbona domani?". Una quota **Sì** paga 1 $ se la risposta si rivela affermativa e nulla in caso contrario. Una quota **No** funziona al contrario.
 
-Ciò consente a chiunque di segnalare il proprio supporto per un risultato specifico con un commitment finanziario.
- 
-Consentendo di scommettere su eventi del mondo reale e adeguando i prezzi man mano che emergono nuove informazioni, le opinioni informate vengono valutate di più e l'accuratezza può essere ricompensata. 
+Se le quote Sì vengono scambiate a 67 centesimi, il mercato sta dicendo che c'è circa il 67% di probabilità di pioggia. Chiunque pensi che la probabilità reale sia diversa può comprare o vendere, e questo sposta il prezzo. Poiché le persone che hanno maggiori informazioni hanno un motivo per fare trading, le nuove informazioni tendono a riflettersi rapidamente nel prezzo. Ecco perché i mercati predittivi possono essere previsioni utili. Non sono perfette.
 
-In teoria, poiché gli scommettitori traggono profitto dall'avere ragione, i mercati predittivi possono prevedere i risultati con grande precisione. I mercati predittivi basati su blockchain sono ancora più entusiasmanti, poiché praticamente chiunque può prendere parte alle previsioni e guadagnare ricompense in stablecoin o criptovaluta.
+Ogni quota vincente viene pagata da qualcuno che deteneva la parte perdente. I mercati predittivi sono a **somma zero**: a parte le commissioni, ciò che i vincitori guadagnano, i perdenti lo perdono.
 
 ## Perché è importante? {#why-does-this-matter}
 
-A differenza delle previsioni tradizionali, i mercati predittivi basati su blockchain sono:
+I mercati predittivi basati su blockchain aggiungono alcune cose che i siti di scommesse e gli exchange tradizionali non offrono:
 
 <Grid>
-  <Card title="Incentivato" emoji=":money_with_wings:" description="I partecipanti vincolano fondi reali, il che implica previsioni di alta qualità."/>
-  <Card title="Decentralizzazione" emoji="🌎" description="L'utilizzo della blockchain e degli smart contract garantisce pagamenti trasparenti e automatizzati." />
-  <Card title="Quote determinate dal mercato" emoji="🤝" description="I prezzi sono stabiliti dai trader che acquistano e vendono quote sui risultati, anziché essere prefissati da un bookmaker centralizzato." />
+  <Card title="Dati aperti" emoji="🔍" description="Ogni operazione è registrata onchain, quindi chiunque può controllare prezzi, volumi e chi ha vinto o perso."/>
+  <Card title="Regolamento onchain" emoji="🌎" description="Le posizioni sono token nel tuo portafoglio e gli smart contract pagano le quote vincenti una volta riportato il risultato." />
+  <Card title="Quote guidate dal mercato" emoji="🤝" description="I prezzi sono stabiliti dai trader che comprano e vendono quote di esito, piuttosto che preimpostati da un allibratore centralizzato." />
 </Grid>
 
-Anche come osservatore del mercato, puoi valutare dati preziosi che altrimenti non sarebbero disponibili. Pensala in questo modo:
+I dati aperti sono importanti nella pratica. I ricercatori sono stati in grado di [studiare ogni operazione su Polymarket](https://cepr.org/publications/dp21615), coprendo oltre 2,4 milioni di utenti da novembre 2022 a marzo 2026, perché le sue operazioni vengono regolate su una blockchain pubblica. Questo tipo di controllo indipendente non è possibile su piattaforme centralizzate come Kalshi, dove il trading e i pagamenti avvengono sui sistemi dell'azienda stessa. Non esiste alcun registro pubblico da verificare e nessuno smart contract che garantisca il pagamento delle posizioni vincenti.
 
-1. Le previsioni sono legate a un evento specifico (es. Beam Chain verrà distribuita entro il 2030?).
-2. I partecipanti al mercato comprano e vendono quote in base alla loro fiducia in un qualsiasi risultato.
-3. I prezzi si adeguano man mano che più partecipanti mettono in staking le proprie convinzioni, riflettendo informazioni in tempo reale.
-4. Chiunque scommetta correttamente guadagna in proporzione all'importo messo in staking. 
-5. Gli osservatori del mercato possono sfruttare i dati aperti per informare la ricerca o la discussione.
+Ecco come si svolge un mercato dall'inizio alla fine:
+
+1. Viene creato un mercato attorno a una domanda con regole chiare su come verrà decisa.
+2. I trader comprano e vendono quote Sì e No, e il prezzo si muove di conseguenza.
+3. Una volta che l'evento si verifica, un [oracolo](/developers/docs/oracles/) riporta il risultato onchain. Su Polymarket, chiunque può proporre il risultato versando un deposito e chiunque altro può contestarlo. Se una controversia non viene risolta, i detentori del token UMA votano sull'esito.
+4. Ogni quota vincente può essere riscattata per 1 $. Le quote perdenti non valgono nulla.
+5. Chiunque può utilizzare la cronologia dei prezzi e i dati di trading per ricerche o discussioni.
 
 ## Trova un mercato predittivo {#find-a-prediction-market}
 
-Sono disponibili diversi mercati predittivi basati su Ethereum. Questi sono alcuni dei mercati predittivi più noti oggi:
+Questi mercati predittivi regolano le operazioni onchain, in modo che chiunque possa controllare i prezzi e la cronologia di trading:
 
 <PredictionMarketLists />
 
@@ -55,32 +55,36 @@ Sono disponibili diversi mercati predittivi basati su Ethereum. Questi sono alcu
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Tieni a mente i rischi</strong></p>
-  <p className="mt-2">Scommetti solo ciò che puoi permetterti e fai attenzione ai potenziali comportamenti di dipendenza.</p>
+  <p className="mt-0"><strong>Tieni a mente i rischi</strong></p>
+  <p className="mt-2">La maggior parte delle persone che fa trading sui mercati predittivi perde denaro. Fai trading solo con ciò che puoi permetterti di perdere e fai attenzione a potenziali comportamenti di dipendenza.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Sfide e rischi {#challenges-and-risks}
 
-I mercati predittivi sulla blockchain affrontano alcune sfide che possono influire su equità, legalità e accuratezza.
+I mercati predittivi affrontano sfide reali che influiscono su equità, legalità e accuratezza.
 
-⚠️ **Manipolazione del mercato** – I giocatori facoltosi possono distorcere i risultati attraverso il wash trading.  
-💧 **Problemi di liquidità** – Una bassa partecipazione ([scarsa liquidità](https://www.investopedia.com/terms/t/thinmarket.asp)) può ridurre l'affidabilità del mercato.  
-🏛 **Incertezza normativa** – I governi hanno imposto restrizioni su alcune piattaforme.
+📉 **La maggior parte dei trader perde** – Uno [studio di ogni operazione su Polymarket](https://cepr.org/publications/dp21615) da novembre 2022 a marzo 2026 ha rilevato che circa il 69% degli utenti ha chiuso in perdita. Tra gli utenti che hanno guadagnato, l'1% superiore ha ottenuto il 76,5% dei profitti. I maggiori vincitori sono stati per lo più trader che forniscono liquidità con ordini limite, spesso a livello professionale e con volumi elevati.
 
-Per mitigare questi problemi, gli sviluppatori di Ethereum stanno sperimentando soluzioni come la futarchia (governance tramite mercati predittivi) e la verifica dell'identità decentralizzata.
+🕵️ **Insider trading** – Le persone che conoscono l'esito in anticipo possono trarre profitto a spese degli altri trader. [I ricercatori della Columbia Law School e dell'Università di Haifa](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6426778) hanno stimato che i sospetti trader informati abbiano guadagnato circa 143 milioni di dollari su Polymarket tra febbraio 2024 e febbraio 2026.
+
+⚖️ **Risultati contestati** – Gli smart contract possono pagare automaticamente, ma qualcuno deve comunque riportare l'accaduto. Quando una domanda è formulata in modo approssimativo o i fatti non sono chiari, il risultato riportato può essere contestato.
+
+⚠️ **Manipolazione del mercato** – I trader con molto denaro possono spostare i prezzi, specialmente nei mercati piccoli. Il wash trading (fare trading con se stessi) può far sembrare un mercato più attivo di quanto non sia.
+
+💧 **Problemi di liquidità** – Una bassa partecipazione ([scarsa liquidità](https://www.investopedia.com/terms/t/thinmarket.asp)) può rendere i prezzi meno affidabili.
+
+🏛 **Incertezza normativa** – Le regole differiscono da paese a paese e cambiano rapidamente. Negli Stati Uniti, le autorità di regolamentazione e i tribunali stanno ancora decidendo se alcuni contratti su eventi, specialmente sportivi, contino come prodotti finanziari o gioco d'azzardo. Molte piattaforme bloccano gli utenti in determinati paesi.
 
 ## Sperimentare con i mercati predittivi {#experimenting-with-prediction-markets}
 
-I mercati predittivi stanno rimodellando il processo decisionale nell'era digitale. Sfruttando Ethereum, offrono **modi equi, aperti e gratificanti per prevedere il futuro.**
+I mercati predittivi possono essere utili oltre al trading a scopo di lucro. Un'idea, chiamata futarchia, si spinge oltre e utilizza i mercati per aiutare a prendere decisioni, non solo per fare previsioni.
 
-Ci sono molti modi per utilizzare gli strumenti di previsione al di fuori del guadagno finanziario. Ad esempio, in una [Proposta di Miglioramento della DevCon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) è stato suggerito che gli organizzatori della DevCon utilizzino i mercati predittivi per anticipare la partecipazione agli eventi futuri. 
+Ad esempio, una [Proposta di Miglioramento di Devcon](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) ha suggerito che gli organizzatori di Devcon utilizzino i mercati predittivi per prevedere l'affluenza in possibili sedi future. Questo potrebbe aiutarli a soppesare quale città attirerebbe l'evento più grande rispetto a quale sarebbe la più accessibile a livello internazionale. Potrebbe anche far risparmiare tempo speso a confrontare le politiche sui visti, l'accesso agli aeroporti e il costo della vita, mostrando al contempo dove i potenziali partecipanti sarebbero entusiasti di andare.
 
-Questo aiuterebbe gli organizzatori a determinare quale luogo porterebbe all'evento più grande, rispetto a quale luogo risulterebbe più accessibile a livello internazionale. I vantaggi di ciò significano che gli organizzatori della DevCon possono accelerare i tempi necessari per esaminare le molteplici politiche sui visti, l'accesso agli aeroporti e il costo della vita nell'area, raccogliendo al contempo dati su dove i potenziali partecipanti sarebbero entusiasti di andare.
-
-## Letture di approfondimento {#further-reading}
+## Letture consigliate {#further-reading}
 
 [Dai mercati predittivi all'info-finanza](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
-[Sviluppo di un mercato predittivo decentralizzato su Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
+[Chi vince e chi perde nei mercati predittivi? Evidenze da Polymarket](https://cepr.org/publications/dp21615) - Akey, Grégoire, Harvie e Martineau  
 [Il whitepaper del progetto Augur](https://github.com/AugurProject/whitepaper)

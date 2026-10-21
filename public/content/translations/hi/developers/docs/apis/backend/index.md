@@ -29,13 +29,13 @@ lang: hi
 - [GitHub](https://github.com/alchemyplatform)
 - [डिस्कॉर्ड](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_नोड-एज़-ए-सर्विस (Node-as-a-Service)।_**
+**All That Node -** **_एक सेवा के रूप में नोड (Node-as-a-Service)।_**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [दस्तावेज़ीकरण](https://docs.allthatnode.com)
 - [डिस्कॉर्ड](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs द्वारा Blast -** **_इथेरियम मेननेट और टेस्टनेट के लिए विकेंद्रीकृत API।_**
+**Bware Labs द्वारा Blast -** **_इथेरियम मेननेट और टेस्टनेट के लिए विकेंद्रीकृत एप्लिकेशन प्रोग्रामिंग इंटरफ़ेस (API)।_**
 
 - [blastapi.io](https://blastapi.io/)
 - [दस्तावेज़ीकरण](https://docs.blastapi.io)
@@ -48,7 +48,7 @@ lang: hi
 - [GitHub](https://github.com/BlockPILabs)
 - [डिस्कॉर्ड](https://discord.com/invite/xTvGVrGVZv)
 
-**Cloudflare Ethereum Gateway.**
+**Cloudflare इथेरियम गेटवे।**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
@@ -58,7 +58,7 @@ lang: hi
 **Blockscout - ओपन सोर्स ब्लॉक एक्सप्लोरर**
 - [दस्तावेज़ीकरण](https://docs.blockscout.com/)
 
-**GetBlock-** **_Web3 विकास के लिए ब्लॉकचेन-एज़-ए-सर्विस (Blockchain-as-a-service)_**
+**GetBlock-** **_Web3 डेवलपमेंट के लिए एक सेवा के रूप में ब्लॉकचेन (Blockchain-as-a-service)_**
 
 - [GetBlock.io](https://getblock.io/)
 - [दस्तावेज़ीकरण](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _किफायती EVM जेसन-आरपीसी प्रदाता_**
+**Node RPC - _किफ़ायती इथेरियम वर्चुअल मशीन (EVM) जेसन-आरपीसी प्रदाता_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [दस्तावेज़ीकरण](https://docs.noderpc.xyz/node-rpc)
@@ -79,7 +79,7 @@ lang: hi
 - [NOWNodes.io](https://nownodes.io/)
 - [दस्तावेज़ीकरण](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर-एज़-ए-सर्विस (Blockchain Infrastructure as a Service)।_**
+**QuickNode -** **_एक सेवा के रूप में ब्लॉकचेन इन्फ्रास्ट्रक्चर।_**
 
 - [quicknode.com](https://quicknode.com)
 - [दस्तावेज़ीकरण](https://www.quicknode.com/docs/welcome)
@@ -91,6 +91,12 @@ lang: hi
 - [दस्तावेज़ीकरण](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_फुल, आर्काइव और कीलेस (keyless) सार्वजनिक पहुंच के साथ EVM जेसन-आरपीसी इन्फ्रास्ट्रक्चर।_**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [दस्तावेज़ीकरण](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_जेसन-आरपीसी/WebSockets API के रूप में गति-उन्मुख इथेरियम नोड।_**
 
 - [zmok.io](https://zmok.io/)
@@ -98,9 +104,15 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.zmok.io/)
 - [डिस्कॉर्ड](https://discord.gg/fAHeh3ka6s)
 
-### विकास उपकरण {#development-tools}
+### डेवलपमेंट टूल {#development-tools}
 
-**ethers-kt -** **_EVM-आधारित ब्लॉकचेन के लिए एसिंक (Async), उच्च-प्रदर्शन वाली Kotlin/Java/Android लाइब्रेरी।_**
+**eth.zig -** **_इथेरियम के लिए एक Zig लाइब्रेरी, जिसमें कंपाइल-टाइम एप्लिकेशन बाइनरी इंटरफ़ेस (ABI) एन्कोडिंग और अनुबंध बाइंडिंग शामिल हैं।_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [दस्तावेज़ीकरण](https://ethzig.org)
+- [उदाहरण](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_इथेरियम वर्चुअल मशीन (EVM)-आधारित ब्लॉकचेन के लिए एसिंक (Async), उच्च-प्रदर्शन वाली Kotlin/Java/Android लाइब्रेरी।_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [उदाहरण](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,7 +124,7 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [डिस्कॉर्ड](https://discord.com/invite/jQPrR58FxX)
 
-**Python Tooling -** **_Python के माध्यम से इथेरियम इंटरैक्शन के लिए विभिन्न प्रकार की लाइब्रेरी।_**
+**Python टूलिंग -** **_Python के माध्यम से इथेरियम इंटरैक्शन के लिए विभिन्न प्रकार की लाइब्रेरी।_**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [Web3.py GitHub](https://github.com/ethereum/web3.py)

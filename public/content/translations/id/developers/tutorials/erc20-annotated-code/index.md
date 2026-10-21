@@ -17,7 +17,7 @@ Salah satu penggunaan paling umum untuk Ethereum adalah bagi sebuah kelompok unt
 [definisi antarmuka](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Ini adalah kode sumber yang dianotasi. Jika Anda ingin mengimplementasikan ERC-20,
-[baca tutorial ini](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[baca tutorial ini](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Antarmuka {#the-interface}
 
