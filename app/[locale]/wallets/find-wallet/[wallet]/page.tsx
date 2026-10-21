@@ -48,9 +48,8 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
   setRequestLocale(locale)
 
-  const [t, tCommon, tItem, walletDescriptions] = await Promise.all([
+  const [t, tItem, walletDescriptions] = await Promise.all([
     getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
-    getTranslations({ locale, namespace: "common" }),
     getTranslations({ locale, namespace: "component-catalog-item" }),
     getTranslations({ locale, namespace: "page-wallet-descriptions" }),
   ])
@@ -99,11 +98,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
         tooltip: t("page-find-wallet-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
-    breadcrumbs: [
-      { label: "ethereum.org", href: "/" },
-      { label: tCommon("wallets"), href: "/wallets/" },
-      { label: tCommon("find-wallet"), href: "/wallets/find-wallet/" },
-    ],
+    breadcrumbSlug: `/wallets/find-wallet/${walletSlug}`,
     next: {
       name: nextWallet.name,
       href: `/wallets/find-wallet/${getWalletSlug(nextWallet)}/`,

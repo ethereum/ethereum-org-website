@@ -41,12 +41,11 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon, tItem, toolDescriptions] =
+  const [data, { contributors }, t, tItem, toolDescriptions] =
     await Promise.all([
       getDeveloperToolsData(),
       getAppPageContributorInfo("developers/tools", locale as Lang),
       getTranslations({ locale, namespace: "page-developers-tools" }),
-      getTranslations({ locale, namespace: "common" }),
       getTranslations({ locale, namespace: "component-catalog-item" }),
       getTranslations({
         locale,
@@ -69,7 +68,6 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const item = toolToCatalogItem(tool, {
     locale,
     t,
-    tCommon,
     tItem,
     labels,
     next,

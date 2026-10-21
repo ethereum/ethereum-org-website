@@ -44,9 +44,6 @@ const VideoLandingPage = async (props: {
   const { frontmatter } = data
   const transcriptMdx = data.content.trim() || null
 
-  const breadcrumbSlug =
-    "/videos/" + (frontmatter.breadcrumb || slug.replaceAll("-", " "))
-
   return (
     <>
       <VideoPageJsonLD
@@ -58,7 +55,10 @@ const VideoLandingPage = async (props: {
 
       <main className="max-w-4xl p-page pt-hero lg:pt-hero-2x">
         <MainArticle className="flow">
-          <Breadcrumbs slug={breadcrumbSlug} startDepth={1} />
+          <Breadcrumbs
+            slug={`/videos/${slug}`}
+            label={frontmatter.breadcrumb || slug.replaceAll("-", " ")}
+          />
 
           <div className="sticky top-24 z-10 md:static">
             <YouTube
