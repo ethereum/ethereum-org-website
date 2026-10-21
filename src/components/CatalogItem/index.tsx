@@ -1,4 +1,4 @@
-import { type ReactNode } from "react"
+import { Fragment, type ReactNode } from "react"
 import { AppWindowMac, Info } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
