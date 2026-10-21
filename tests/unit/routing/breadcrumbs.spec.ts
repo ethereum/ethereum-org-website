@@ -153,4 +153,19 @@ test.describe("getBreadcrumbTrail", () => {
     }
     expect(mismatched).toEqual([])
   })
+
+  test("every ancestor crumb is a real page", () => {
+    const pages = [...contentPaths(), ...appPaths()]
+    const real = new Set(["/", ...pages.map(toBreadcrumbPath)])
+    const missing = new Set<string>()
+    for (const page of pages.filter(
+      (p) => !NO_CRUMBS.some((prefix) => p.startsWith(prefix))
+    ))
+      getBreadcrumbTrail(page)
+        .slice(0, -1)
+        .forEach(({ href }) => {
+          if (!real.has(href)) missing.add(`${href} (from /${page}/)`)
+        })
+    expect([...missing].sort()).toEqual([])
+  })
 })
