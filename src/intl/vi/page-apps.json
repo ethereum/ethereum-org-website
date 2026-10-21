@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Lọc theo",
   "page-apps-filter-all": "Tất cả",
   "page-apps-showing": "Đang hiển thị",
-  "page-apps-visit-app": "Truy cập {appName}",
-  "page-apps-see-next": "Xem tiếp",
-  "page-apps-info-title": "Thông tin",
   "page-apps-info-founded": "Được thành lập",
   "page-apps-info-creator": "Người tạo",
-  "page-apps-info-last-updated": "Cập nhật lần cuối",
-  "page-apps-gallery-title": "Thư viện",
-  "page-apps-gallery-screenshot-alt": "Ảnh chụp màn hình {index} của {appName} hiển thị giao diện ứng dụng",
-  "page-apps-gallery-modal-title": "Ảnh chụp màn hình {appName}",
+  "page-apps-info-languages": "Ngôn ngữ",
+  "page-apps-info-listing-reviewed": "Đã xem xét thông tin",
+  "page-apps-info-listing-reviewed-tooltip": "Thời điểm thông tin chi tiết về ứng dụng này trên ethereum.org được xem xét lần cuối. Điều này không cho biết thời điểm bản thân ứng dụng thay đổi lần cuối.",
   "page-apps-more-apps-like-this": "Thêm các ứng dụng tương tự",
-  "page-apps-by-company": "bởi {company}",
-  "page-apps-today": "Hôm nay",
-  "page-apps-one-day-ago": "1 ngày trước",
-  "page-apps-days-ago": "{days} ngày trước"
+  "page-apps-detail-meta-title": "Các ứng dụng Ethereum - {name}"
 }
