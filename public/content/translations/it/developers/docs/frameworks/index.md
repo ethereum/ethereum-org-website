@@ -45,7 +45,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 - [Documentazione](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate su EVM._**
+**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate sulla Macchina Virtuale di Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Esempi](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -56,12 +56,12 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelli](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem e RainbowKit con la tua scelta tra Hardhat o Foundry: ricaricamento a caldo dei contratti, hook React personalizzati, un portafoglio usa e getta e un faucet locale, oltre a moduli di estensione per lo sviluppo di applicazioni decentralizzate (dapp) full-stack._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem e RainbowKit con la possibilità di scegliere tra Hardhat o Foundry: ricaricamento a caldo dei contratti, hook React personalizzati, un portafoglio usa e getta e un faucet locale, oltre a moduli di estensione per lo sviluppo full-stack di applicazioni decentralizzate (dapp)._**
 
 - [Sito web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Piattaforma di sviluppo Web3 che consente agli sviluppatori blockchain di creare, testare, eseguire il debug, monitorare e gestire smart contract e migliorare l'esperienza utente (UX) delle dapp._**
+**Tenderly -** **_Piattaforma di sviluppo Web3 che consente agli sviluppatori blockchain di creare, testare, eseguire il debug, monitorare e gestire gli smart contract e migliorare l'esperienza utente (UX) delle dapp._**
 
 - [Sito web](https://tenderly.co/)
 - [Documentazione](https://docs.tenderly.co/)
@@ -94,7 +94,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Piattaforma di sviluppo Web3 di livello aziendale, che ti consente di creare applicazioni NFT su tutte le principali catene EVM (e altre)._**
+**Crossmint -** **_Piattaforma di sviluppo Web3 di livello aziendale, che ti consente di creare applicazioni di token non fungibili (NFT) su tutte le principali catene EVM (e altre)._**
 
 - [Sito web](https://www.crossmint.com)
 - [Documentazione](https://docs.crossmint.com)
@@ -108,30 +108,29 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 
 **OpenZeppelin SDK -** **_Il toolkit definitivo per gli smart contract: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con gli smart contract._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 - **Lo sviluppo di OpenZeppelin SDK è terminato**
 
-**Catapulta -** **_Strumento di distribuzione di smart contract multi-catena, automatizza le verifiche negli esploratori di blocchi, tiene traccia degli smart contract distribuiti e condivide i report di distribuzione, plug-and-play per progetti Foundry e Hardhat._**
+**Catapulta -** **_Strumento di distribuzione di smart contract multi-catena, automatizza le verifiche negli esploratori di blocchi, tiene traccia degli smart contract distribuiti e condivide i report di distribuzione, plug-and-play per i progetti Foundry e Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (basato su Covalent) -** **_GoldRush offre la suite di API di dati blockchain più completa per sviluppatori, analisti e aziende. Che tu stia creando una dashboard DeFi, un portafoglio, un bot di trading, un agente IA o una piattaforma di conformità, le API di dati forniscono un accesso rapido, accurato e intuitivo per gli sviluppatori ai dati onchain essenziali di cui hai bisogno_**
+**GoldRush (basato su Covalent) -** **_GoldRush offre la suite di interfacce di programmazione delle applicazioni (API) per i dati della blockchain più completa per sviluppatori, analisti e aziende. Che tu stia creando una dashboard DeFi, un portafoglio, un bot di trading, un agente IA o una piattaforma di conformità, le API per i dati forniscono un accesso rapido, accurato e intuitivo per gli sviluppatori ai dati onchain essenziali di cui hai bisogno_**
 
 - [Sito web](https://goldrush.dev/)
 - [Documentazione](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Framework Python all-in-one per test, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice dei contratti._**
+**Wake -** **_Framework Python all-in-one per il test dei contratti, il fuzzing, la distribuzione, la scansione delle vulnerabilità e la navigazione del codice._**
 
 - [Homepage](https://getwake.io/)
 - [Documentazione](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Estensione per VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Framework open source, modulare e agnostico che semplifica agli sviluppatori di applicazioni decentralizzate l'integrazione di identità decentralizzate e credenziali verificabili nelle loro applicazioni._**
+**Veramo -** **_Framework open source, modulare e agnostico che semplifica agli sviluppatori di applicazioni decentralizzate la creazione di identità decentralizzate e credenziali verificabili nelle loro applicazioni._**
 
 - [Homepage](https://veramo.io/)
 - [Documentazione](https://veramo.io/docs/basics/introduction)
@@ -143,6 +142,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 
 - [Documentazione](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
