@@ -1525,6 +1525,7 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number
@@ -1595,7 +1596,8 @@ export interface CatalogItem {
   logo?: string | StaticImageData
   banner?: string | StaticImageData
   screenshots: (string | StaticImageData)[]
-  tags: { label: string; status?: TagProps["status"] }[]
+  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
+  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
   subtitle?: string
   chains: ChainName[]
   /** Localized; rendered as markdown. */
