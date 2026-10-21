@@ -184,6 +184,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - [Pricing calculator](https://drpc.org/pricing#calculator)
   - NodeCore: open-source stack for organizations wanting full control
 
+- [**Dwellir**](https://www.dwellir.com/)
+  - [Docs](https://www.dwellir.com/docs/ethereum)
+  - Features
+    - Ethereum mainnet and Sepolia, plus 150+ other networks
+    - HTTPS and WebSocket endpoints
+    - Archive data, trace and debug APIs
+    - 1 RPC response = 1 API credit on every method, including trace and debug (no compute units)
+    - Free tier with 20 requests per second and 100,000 responses per day
+    - Paid plans up to 5,000 requests per second, flat-rate unlimited nodes, and dedicated nodes
+    - Pay by card or crypto
+
 - [**GetBlock**](https://getblock.io/)
   - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Features
