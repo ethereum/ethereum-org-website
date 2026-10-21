@@ -2268,6 +2268,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/e
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ohilhwan"><img src="https://avatars.githubusercontent.com/u/18180404?v=4?s=100" width="100px;" alt="ohilhwan"/><br /><sub><b>ohilhwan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ohilhwan" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://nonceworks.com"><img src="https://avatars.githubusercontent.com/u/86435089?v=4?s=100" width="100px;" alt="Zachary Alexander"/><br /><sub><b>Zachary Alexander</b></sub></a><br /><a href="#content-zachsplat" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
