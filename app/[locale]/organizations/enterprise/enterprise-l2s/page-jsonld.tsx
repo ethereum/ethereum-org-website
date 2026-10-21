@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -17,7 +18,6 @@ export default async function EnterpriseL2sPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-organizations-enterprise-l2s")
-  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(
     locale,
@@ -44,36 +44,10 @@ export default async function EnterpriseL2sPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: tCommon("home"),
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: tCommon("organizations"),
-              item: normalizeUrlForJsonLd(locale, "/organizations/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: tCommon("enterprise"),
-              item: normalizeUrlForJsonLd(locale, "/organizations/enterprise/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              // matches the visible breadcrumb, which renders the common.json label
-              name: tCommon("enterprise-l2s"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          "organizations/enterprise/enterprise-l2s"
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },
