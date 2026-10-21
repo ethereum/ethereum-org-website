@@ -321,6 +321,7 @@
       ],
       "website": "https://www.openzeppelin.com/",
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 39.51834416844255,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -443,6 +444,7 @@
         "cli"
       ],
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 29.739235326860825,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -485,6 +487,7 @@
         "community-driven"
       ],
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 26.489951414551793,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -584,6 +587,7 @@
       ],
       "website": "https://open-rpc.org",
       "subcategory_id": "standards-specifications",
+      "crops_native": true,
       "resource_score": 19.234100107279723,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -632,6 +636,7 @@
         "cli"
       ],
       "subcategory_id": "contract-frameworks",
+      "crops_native": true,
       "resource_score": 17.593408186799707,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1167,6 +1172,7 @@
       ],
       "website": "https://hardhat.org/",
       "subcategory_id": "deployment-devops",
+      "crops_native": true,
       "resource_score": 11.992783483620887,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1202,6 +1208,7 @@
         "cli"
       ],
       "subcategory_id": "contract-frameworks",
+      "crops_native": true,
       "resource_score": 11.797576481456106,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1270,6 +1277,7 @@
       ],
       "website": "https://alloy.rs/",
       "subcategory_id": "rpc-node-infrastructure",
+      "crops_native": true,
       "resource_score": 10.776444344409267,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1377,6 +1385,7 @@
       ],
       "website": "https://ethers.org",
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 8.947699495518803,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1594,6 +1603,7 @@
       ],
       "website": "https://getfoundry.sh",
       "subcategory_id": "deployment-devops",
+      "crops_native": true,
       "resource_score": 7.773226453330804,
       "updated_at": "2026-10-09T23:54:49Z"
     },
@@ -1617,6 +1627,7 @@
       ],
       "website": "https://viem.sh",
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 7.735617603989011,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1781,6 +1792,7 @@
         "continuous-integration"
       ],
       "subcategory_id": "fuzz-property-testing",
+      "crops_native": true,
       "resource_score": 7.344086987023667,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -1887,6 +1899,7 @@
         "community-driven"
       ],
       "subcategory_id": "rpc-node-infrastructure",
+      "crops_native": true,
       "resource_score": 6.957732523754299,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2005,6 +2018,7 @@
         "agent-skills"
       ],
       "subcategory_id": "agent-skills",
+      "crops_native": true,
       "resource_score": 6.5515109986125015,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2095,6 +2109,7 @@
       ],
       "website": "https://sigmaprime.io",
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 6.364808072569678,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2409,6 +2424,7 @@
       ],
       "website": "https://ponder.sh",
       "subcategory_id": "indexing-data-apis",
+      "crops_native": true,
       "resource_score": 5.840818381987283,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2433,6 +2449,7 @@
         "cli"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 5.8335871526624885,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2455,6 +2472,7 @@
         "gossipsub"
       ],
       "subcategory_id": "rpc-node-infrastructure",
+      "crops_native": true,
       "resource_score": 5.751195945058858,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2551,6 +2569,7 @@
       ],
       "website": "https://otterscan.io/",
       "subcategory_id": "analytics-monitoring",
+      "crops_native": true,
       "resource_score": 5.694843215369946,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2575,6 +2594,7 @@
       ],
       "website": "https://maci.pse.dev/",
       "subcategory_id": "zk-circuits-privacy",
+      "crops_native": true,
       "resource_score": 5.658064428999513,
       "updated_at": "2026-10-09T23:11:34Z"
     },
@@ -2665,6 +2685,7 @@
         "abi-encoding"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 5.494427817493671,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2685,6 +2706,7 @@
       ],
       "website": "https://intellij-solidity.dev/",
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 5.462315892545859,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -2754,6 +2776,7 @@
         "solidity"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 5.277390142336588,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3211,6 +3234,7 @@
       ],
       "website": "https://node.tevm.sh",
       "subcategory_id": "rpc-node-infrastructure",
+      "crops_native": true,
       "resource_score": 4.771337739480554,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3258,6 +3282,7 @@
         "test-automation"
       ],
       "subcategory_id": "fuzz-property-testing",
+      "crops_native": true,
       "resource_score": 4.6738654496105445,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3277,6 +3302,7 @@
         "merkle-trees"
       ],
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 4.626607312356578,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3321,6 +3347,7 @@
       ],
       "website": "www.alchemy.com",
       "subcategory_id": "aa-tx-orchestration",
+      "crops_native": true,
       "resource_score": 4.566000080811408,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3415,6 +3442,7 @@
         "code-quality"
       ],
       "subcategory_id": "smart-contract-libraries-utilities",
+      "crops_native": true,
       "resource_score": 4.351994914295484,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -3966,6 +3994,7 @@
         "cli"
       ],
       "subcategory_id": "deployment-devops",
+      "crops_native": true,
       "resource_score": 3.756833926827537,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -4069,6 +4098,7 @@
       ],
       "website": "https://www.bulloak.dev/",
       "subcategory_id": "fuzz-property-testing",
+      "crops_native": true,
       "resource_score": 3.6500850311586945,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -5227,6 +5257,7 @@
       ],
       "website": "https://www.candide.dev/bundler",
       "subcategory_id": "aa-tx-orchestration",
+      "crops_native": true,
       "resource_score": 2.7334380992606175,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -5806,6 +5837,7 @@
         "event-logging"
       ],
       "subcategory_id": "core-sdks-libraries",
+      "crops_native": true,
       "resource_score": 2.2795262587603524,
       "updated_at": "2026-09-16T22:10:24Z"
     },
@@ -6602,6 +6634,7 @@
         "chains"
       ],
       "subcategory_id": "rpc-node-infrastructure",
+      "crops_native": true,
       "resource_score": 1.4824300076388464,
       "updated_at": "2026-09-16T22:10:24Z"
     },

@@ -1,4 +1,4 @@
-import { type ReactNode } from "react"
+import { Fragment, type ReactNode } from "react"
 import { AppWindowMac, Info } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
@@ -119,10 +119,10 @@ const CatalogItemHero = ({ item }: { item: CatalogItem }) => (
         <div className="flex flex-col gap-2">
           {item.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {item.tags.map(({ label, status }) => (
-                <Tag key={label} status={status ?? "tag"}>
-                  {label}
-                </Tag>
+              {item.tags.map(({ label, status, node }) => (
+                <Fragment key={label}>
+                  {node ?? <Tag status={status ?? "tag"}>{label}</Tag>}
+                </Fragment>
               ))}
             </div>
           )}
