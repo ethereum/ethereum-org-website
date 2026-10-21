@@ -63,7 +63,8 @@ const HomeHero = async ({
 
   return (
     <section className={cn("w-full", className)}>
-      <div className="h-[clamp(200px,calc(100svh_-_560px_-_var(--home-banner-h,0px)),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_540px_-_var(--home-banner-h,0px)),380px)] lg:h-[clamp(350px,calc(100svh_-_536px_-_var(--home-banner-h,0px)),480px)]">
+      {/* 25.75rem = nav + top padding + morpher + two h1 lines + 6rem for a temporary banner */}
+      <div className="h-[clamp(200px,calc(100svh_-_25.75rem),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_25.75rem),380px)] lg:h-[clamp(350px,calc(100svh_-_25.75rem),480px)]">
         <picture>
           <source
             media={`(min-width: ${breakpointAsNumber["2xl"]}px)`}
@@ -87,7 +88,7 @@ const HomeHero = async ({
         </picture>
       </div>
 
-      <div className="flex flex-col items-center px-4 py-12 text-center lg:py-16 md:[@media(max-height:760px)]:pt-8">
+      <div className="flex flex-col items-center px-4 py-12 text-center lg:py-16">
         <div className="flex w-full flex-col items-center gap-4">
           <LanguageMorpher />
 

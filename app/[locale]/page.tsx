@@ -24,7 +24,6 @@ import { LinkWithArrow } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getDevconTicketLink } from "@/lib/utils/url"
@@ -92,9 +91,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const eventCategory = `Homepage - ${locale}`
 
-  // Top promo banner is the exception, not the default: the hero is sized for
-  // a banner-less page and only gets a --home-banner-h allowance while this is
-  // on. Auto-expires after Devcon's last day (re-evaluated on build/ISR).
+  // Auto-expires after Devcon's last day (re-evaluated on build/ISR)
   const devconEndOfDay = new Date(DEVCON_INDIA_END_DATE)
   devconEndOfDay.setUTCHours(23, 59, 59, 999)
   const showHomeBanner = new Date() <= devconEndOfDay
@@ -160,15 +157,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </LinkBox>
         )}
 
-        <MainArticle
-          className={cn(
-            "flex w-full flex-col items-center",
-            // Measured banner heights (rounded up), consumed by HomeHero
-            showHomeBanner &&
-              "[--home-banner-h:101px] md:[--home-banner-h:76px] lg:[--home-banner-h:69px]"
-          )}
-          dir={dir}
-        >
+        <MainArticle className="flex w-full flex-col items-center" dir={dir}>
           <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
