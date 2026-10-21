@@ -49,7 +49,7 @@ published: 2021-03-31
 
 ## الخطوة 5: التحقق من رصيدك {#step-5}
 
-للتحقق مرة أخرى من وجود رصيدنا، دعنا نجري طلب [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) باستخدام [أداة الملحن الخاصة بـ Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيعيد هذا مقدار ETH في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request" (إرسال طلب)، يجب أن ترى استجابة مثل هذه:
+للتحقق مرة أخرى من وجود رصيدنا، دعنا نجري طلب [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) باستخدام [أداة الملحن الخاصة بـ Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). سيعيد هذا مقدار ETH في محفظتنا. بعد إدخال عنوان حساب ميتاماسك الخاص بك والنقر على "Send Request" (إرسال طلب)، يجب أن ترى استجابة مثل هذه:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

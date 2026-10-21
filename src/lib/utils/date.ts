@@ -1,7 +1,6 @@
 import type { PartialDate } from "@/data/upgrades/types"
 
 import { DEFAULT_LOCALE } from "../constants"
-import type { Lang } from "../types"
 
 import { normalizeIntlSpaces } from "./intl"
 
@@ -69,6 +68,7 @@ export const formatDate = (
   }
   return normalizeIntlSpaces(
     dateTimeFormat(locale, {
+      timeZone: "UTC",
       month: "long",
       day: "numeric",
       year: "numeric",
@@ -115,6 +115,7 @@ export const formatDateRange = (
 ) =>
   normalizeIntlSpaces(
     dateTimeFormat(locale, {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       ...options,
@@ -133,6 +134,7 @@ export const formatDateRangeToParts = (
   options?: Intl.DateTimeFormatOptions
 ) =>
   dateTimeFormat(locale, {
+    timeZone: "UTC",
     month: "short",
     day: "numeric",
     ...options,
@@ -147,11 +149,6 @@ export const getLocaleYear = (
   dateTimeFormat(locale, { year: "numeric" }).format(
     date ? new Date(date) : new Date()
   )
-
-export const getLocaleFormattedDate = (locale: Lang, date: string) => {
-  const walletLastUpdatedDate = new Date(date)
-  return dateTimeFormat(locale).format(walletLastUpdatedDate)
-}
 
 /**
  * Get ISO week number for a given date

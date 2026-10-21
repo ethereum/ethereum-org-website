@@ -701,7 +701,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </CardParagraph>
             </CardContent>
             <CardFooter>
-              <ButtonLink href="/organizations/enterprise/">
+              <ButtonLink href="/organizations/">
                 {t("page-what-is-ethereum-start-business-cta")}
               </ButtonLink>
             </CardFooter>

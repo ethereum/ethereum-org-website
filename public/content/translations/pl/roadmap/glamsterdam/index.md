@@ -28,9 +28,9 @@ Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Uwaga: Ten artykuł wyróżnia wybrane Propozycje Ulepszenia Ethereum (EIP) zaplanowane do włączenia w aktualizacji Glamsterdam. Dodatkowe zaplanowane propozycje testowane w sieciach deweloperskich (devnets) obejmują EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 i EIP-8282. Zakres jest zamrożony, ale nadal może ulec zmianie przed wdrożeniem w Sieci głównej, ponieważ meta EIP pozostaje w fazie roboczej (draft). Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Uwaga: Ten artykuł wyróżnia wybrane Propozycje Ulepszeń Ethereum (EIP) zaplanowane do włączenia w aktualizacji Glamsterdam. Dodatkowe zaplanowane propozycje testowane w sieciach deweloperskich (devnets) obejmują EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 oraz EIP-8282. Zakres jest zamrożony, ale nadal może ulec zmianie przed wdrożeniem w sieci głównej, ponieważ meta EIP pozostaje w fazie roboczej. Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jeśli chcesz dodać EIP, które jest rozważane dla Glamsterdam, ale nie zostało jeszcze dodane do tej strony, [dowiedz się, jak wnieść wkład w ethereum.org tutaj](/contributing/).
+Jeśli chcesz dodać EIP, które jest rozważane dla aktualizacji Glamsterdam, ale nie zostało jeszcze dodane do tej strony, [dowiedz się, jak wnieść wkład w ethereum.org tutaj](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -39,7 +39,7 @@ Aktualizacja Glamsterdam koncentruje się na trzech głównych celach:
 
 - Przyspieszenie przetwarzania (zrównoleglenie): Reorganizacja sposobu, w jaki sieć rejestruje zależności danych, aby mogła bezpiecznie przetwarzać wiele transakcji w tym samym czasie, zamiast w powolnej sekwencji jedna po drugiej.
 - Zwiększenie pojemności: Podział ciężkiej pracy związanej z tworzeniem i weryfikacją bloków, dając sieci więcej czasu na propagację większych ilości danych bez spowalniania.
-- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowy koszt sprzętowy przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu przy jednoczesnym zapobieganiu spadkowi wydajności sprzętu.
+- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowy koszt sprzętowy przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu, jednocześnie zapobiegając spadkowi wydajności sprzętu.
 
 Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania pojemności sieci, pozostanie ona zrównoważona, a wydajność utrzyma się na wysokim poziomie.
 

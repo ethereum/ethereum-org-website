@@ -9,6 +9,7 @@ import { getStore } from "@netlify/blobs"
 
 export const KEYS = {
   APPS: "fetch-apps",
+  COLLECTIBLES: "fetch-collectibles",
   GITHUB_CONTRIBUTORS: "fetch-github-contributors",
   COMMUNITY_PICKS: "fetch-community-picks",
   DEVELOPER_TOOLS: "fetch-developer-tools",

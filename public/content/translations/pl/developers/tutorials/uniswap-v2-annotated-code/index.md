@@ -103,21 +103,6 @@ Jest to najczęstszy przepływ, używany przez traderów:
 5. Spalenie tokenów płynności
 6. Wywołanie `_update` w celu aktualizacji kwot rezerw
 
-```yaml
-title: "Inteligentne kontrakty Uniswap v2"
-description: "Szczegółowe omówienie inteligentnych kontraktów Uniswap v2"
-author: "Ori Pomerantz"
-tags:
-  - "inteligentne kontrakty"
-  - "DeFi"
-  - "Solidity"
-skill: advanced
-lang: pl
-published: 2022-08-16
-source: Uniswap v2
-sourceUrl: https://github.com/Uniswap/v2-core/tree/master/contracts
----
-
 ## Główne kontrakty {#core-contracts}
 
 Są to bezpieczne kontrakty, które przechowują płynność.
@@ -913,7 +898,6 @@ Ze skrótu (digest) i podpisu możemy uzyskać adres, który go podpisał, używ
 ```
 
 Jeśli wszystko jest w porządku, potraktuj to jako [zatwierdzenie (approve) ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
-```
 
 ## Kontrakty peryferyjne {#periphery-contracts}
 

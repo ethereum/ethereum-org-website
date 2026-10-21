@@ -13,6 +13,7 @@ import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
+import { fetchCollectibles } from "./fetchers/fetchCollectibles"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
 import { fetchDefiTvlShare } from "./fetchers/fetchDefiTvlShare"
 import { fetchDexVolume } from "./fetchers/fetchDexVolume"
@@ -52,6 +53,7 @@ const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.BLOB_STATS, fetchBlobStats],
+  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
   [KEYS.GROW_THE_PIE, fetchGrowThePie],

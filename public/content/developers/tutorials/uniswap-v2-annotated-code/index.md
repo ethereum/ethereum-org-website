@@ -136,7 +136,7 @@ This contract inherits from `UniswapV2ERC20`, which provides the ERC-20 function
     using SafeMath  for uint;
 ```
 
-The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is used to avoid overflows and underflows. This is important because otherwise we might end up with a situation where a value should be `-1`, but is instead `2^256-1`.
+The [SafeMath library](https://docs.openzeppelin.com/contracts/3.x/api/math) is used to avoid overflows and underflows. This is important because otherwise we might end up with a situation where a value should be `-1`, but is instead `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1674,7 +1674,7 @@ This contract was used to migrate exchanges from the old v1 to v2. Now that they
 
 ## The Libraries {#libraries}
 
-The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is well documented, so there's no need to document it here.
+The [SafeMath library](https://docs.openzeppelin.com/contracts/3.x/api/math) is well documented, so there's no need to document it here.
 
 ### Math {#math}
 

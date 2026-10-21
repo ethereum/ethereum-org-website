@@ -172,6 +172,14 @@ test.describe("Data-Layer Getters", () => {
         }
       }
     })
+
+    test("getCollectiblesData returns badges and stats or null", async () => {
+      const result = await dataLayer.getCollectiblesData()
+      if (result !== null) {
+        expect(Array.isArray(result.badges)).toBe(true)
+        expect(typeof result.stats.collectiblesCount).toBe("number")
+      }
+    })
   })
 
   test.describe("Content & RSS", () => {

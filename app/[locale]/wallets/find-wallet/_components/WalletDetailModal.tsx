@@ -4,13 +4,13 @@ import type { ChainName } from "@/lib/types"
 
 import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
+import CatalogItemLinkButtons, {
+  type CatalogItemLinkLabels,
+} from "@/components/CatalogItem/LinkButtons"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { CheckCircle } from "@/components/icons/CheckCircle"
-import Discord from "@/components/icons/discord.svg"
-import Twitter from "@/components/icons/twitter.svg"
 import { XCircle } from "@/components/icons/XCircle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
 
@@ -31,8 +31,8 @@ export type WalletModalLabels = {
   fees: string
   feesTooltip: string
   fullDetails: string
-  /** Raw message with a `{wallet}` placeholder. */
-  getWallet: string
+  visitWebsite: string
+  links: CatalogItemLinkLabels
   /** CROPS rows, in display order; `key` is matched against `advancedFlags`. */
   crops: { key: string; label: string; tooltip: string }[]
 }
@@ -60,7 +60,6 @@ const WalletDetailModal = ({
     <CatalogDetailModal
       title={wallet.name}
       image={wallet.image}
-      description={description}
       closeLabel={labels.close}
       onClose={onClose}
       // Radix aims focus at whatever was focused when the dialog mounted,
@@ -149,51 +148,15 @@ const WalletDetailModal = ({
           </LinkWithArrow>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <ButtonLink
-            href={wallet.url}
-            variant="solid"
-            className="w-fit"
-            customEventOptions={{
-              eventCategory: "WalletExternalLinkList",
-              eventAction: "Tap main button",
-              eventName: wallet.name,
-            }}
-          >
-            {labels.getWallet.replace("{wallet}", wallet.name)}
-          </ButtonLink>
-
-          <div className="flex flex-row items-center gap-2">
-            {wallet.discord && (
-              <InlineLink
-                href={wallet.discord}
-                hideArrow
-                className="flex size-10 items-center justify-center rounded-lg border transition-colors hover:bg-background-highlight"
-                customEventOptions={{
-                  eventCategory: "WalletExternalLinkList",
-                  eventAction: "Go to wallet",
-                  eventName: `Discord: ${wallet.name}`,
-                }}
-              >
-                <Discord className="size-5 text-[#5865F2]" />
-              </InlineLink>
-            )}
-            {wallet.twitter && (
-              <InlineLink
-                href={wallet.twitter}
-                hideArrow
-                className="flex size-10 items-center justify-center rounded-lg border transition-colors hover:bg-background-highlight"
-                customEventOptions={{
-                  eventCategory: "WalletExternalLinkList",
-                  eventAction: "Go to wallet",
-                  eventName: `Twitter: ${wallet.name}`,
-                }}
-              >
-                <Twitter className="size-5 text-body" />
-              </InlineLink>
-            )}
-          </div>
-        </div>
+        <CatalogItemLinkButtons
+          item={{
+            kind: "wallet",
+            name: wallet.name,
+            primaryLink: { href: wallet.url, label: labels.visitWebsite },
+            socialLinks: wallet.socialLinks,
+          }}
+          labels={labels.links}
+        />
       </div>
     </CatalogDetailModal>
   )

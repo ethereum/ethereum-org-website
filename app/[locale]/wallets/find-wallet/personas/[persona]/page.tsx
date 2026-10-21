@@ -44,7 +44,11 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
 
   // The catalog gets every wallet with this persona pre-selected, so a second
   // persona can be added client-side; only the structured data stays subset-only.
-  const wallets = getCatalogWallets(locale)
+  const walletDescriptions = await getTranslations({
+    locale,
+    namespace: "page-wallet-descriptions",
+  })
+  const wallets = getCatalogWallets(locale, walletDescriptions)
   const personaWallets = getWalletsByPersona(wallets, personaId)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)

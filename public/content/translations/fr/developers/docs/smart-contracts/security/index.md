@@ -35,6 +35,7 @@ L'enregistrement d'une seule adresse en tant que `Owner` dans un contrat intelli
 Dans le contrôle d'accès basé sur les rôles, l'accès aux fonctions sensibles est réparti entre un ensemble de participants de confiance. Par exemple, un compte peut être responsable de la frappe de jetons, tandis qu'un autre compte effectue des mises à niveau ou met le contrat en pause. Décentraliser le contrôle d'accès de cette manière élimine les points de défaillance uniques et réduit les hypothèses de confiance pour les utilisateurs.
 
 ##### Utilisation de portefeuilles multi-signatures
+
 Une autre approche pour mettre en œuvre un contrôle d'accès sécurisé consiste à utiliser un [compte multi-signature](/developers/docs/smart-contracts/#multisig) pour gérer un contrat. Contrairement à un EOA classique, les comptes multi-signatures sont détenus par plusieurs entités et nécessitent les signatures d'un nombre minimum de comptes — disons 3 sur 5 — pour exécuter des transactions.
 
 L'utilisation d'un multisig pour le contrôle d'accès introduit une couche de sécurité supplémentaire puisque les actions sur le contrat cible nécessitent le consentement de plusieurs parties. Ceci est particulièrement utile si l'utilisation du modèle Ownable est nécessaire, car cela rend plus difficile pour un attaquant ou un initié malveillant de manipuler les fonctions sensibles du contrat à des fins malveillantes.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 L'immuabilité du code s'exécutant dans la [Machine Virtuelle Ethereum](/developers/docs/evm/) signifie que les contrats intelligents exigent un niveau plus élevé d'évaluation de la qualité pendant la phase de développement. Tester votre contrat de manière approfondie et l'observer pour détecter tout résultat inattendu améliorera considérablement la sécurité et protégera vos utilisateurs à long terme.
 
-La méthode habituelle consiste à écrire de petits tests unitaires en utilisant des données fictives que le contrat est censé recevoir des utilisateurs. Les [tests unitaires](/developers/docs/smart-contracts/testing/#unit-testing) sont utiles pour tester la fonctionnalité de certaines fonctions et s'assurer qu'un contrat intelligent fonctionne comme prévu.
+La méthode habituelle consiste à écrire de petits tests unitaires en utilisant des données fictives que le contrat est censé recevoir des utilisateurs. Les [tests unitaires](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) sont utiles pour tester la fonctionnalité de certaines fonctions et s'assurer qu'un contrat intelligent fonctionne comme prévu.
 
 Malheureusement, les tests unitaires sont peu efficaces pour améliorer la sécurité des contrats intelligents lorsqu'ils sont utilisés de manière isolée. Un test unitaire peut prouver qu'une fonction s'exécute correctement pour des données fictives, mais les tests unitaires ne sont aussi efficaces que les tests qui sont écrits. Cela rend difficile la détection des cas limites manqués et des vulnérabilités qui pourraient compromettre la sécurité de votre contrat intelligent.
 
@@ -306,6 +307,7 @@ Il n'y a rien de mal ici, sauf que `Attacker` a une autre fonction qui appelle �
 En résumé, comme le solde de l'appelant n'est pas mis à 0 tant que l'exécution de la fonction n'est pas terminée, les invocations ultérieures réussiront et permettront à l'appelant de retirer son solde plusieurs fois. Ce type d'attaque peut être utilisé pour vider un contrat intelligent de ses fonds, comme ce qui s'est passé lors du [piratage de la DAO en 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Les attaques de réentrance sont encore aujourd'hui un problème critique pour les contrats intelligents, comme le montrent les [listes publiques d'exploits de réentrance](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Comment prévenir les attaques de réentrance
+
 Une approche pour faire face à la réentrance consiste à suivre le [modèle vérifications-effets-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Ce modèle ordonne l'exécution des fonctions de manière à ce que le code qui effectue les vérifications nécessaires avant de poursuivre l'exécution vienne en premier, suivi du code qui manipule l'état du contrat, le code qui interagit avec d'autres contrats ou EOA arrivant en dernier.
 
 Le modèle vérifications-effets-interactions est utilisé dans une version révisée du contrat `Victim` illustrée ci-dessous :
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Comment prévenir les dépassements de capacité inférieurs et supérieurs d'entiers
+
 À partir de la version 0.8.0, le compilateur Solidity rejette le code qui entraîne des dépassements de capacité inférieurs et supérieurs d'entiers. Cependant, les contrats compilés avec une version de compilateur inférieure doivent soit effectuer des vérifications sur les fonctions impliquant des opérations arithmétiques, soit utiliser une bibliothèque (par exemple, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) qui vérifie les dépassements de capacité inférieurs/supérieurs.
 
 #### Manipulation d'oracle {#oracle-manipulation}
@@ -447,6 +450,7 @@ Les prix des DEX sont souvent précis, en grande partie grâce aux arbitragistes
 Par exemple, un attaquant pourrait gonfler artificiellement le prix au comptant d'un actif en contractant un prêt éclair juste avant d'interagir avec votre contrat de prêt. Interroger le DEX pour le prix de l'actif renverrait une valeur plus élevée que la normale (en raison de l'important « ordre d'achat » de l'attaquant faussant la demande pour l'actif), lui permettant d'emprunter plus qu'il ne le devrait. De telles « attaques par prêt éclair » ont été utilisées pour exploiter la dépendance aux oracles de prix parmi les applications DeFi, coûtant aux protocoles des millions en fonds perdus.
 
 ##### Comment prévenir la manipulation d'oracle
+
 L'exigence minimale pour [éviter la manipulation d'oracle](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) est d'utiliser un réseau d'oracles décentralisé qui interroge des informations provenant de sources multiples pour éviter les points de défaillance uniques. Dans la plupart des cas, les oracles décentralisés ont des incitations cryptoéconomiques intégrées pour encourager les nœuds d'oracle à rapporter des informations correctes, ce qui les rend plus sécurisés que les oracles centralisés.
 
 Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envisagez d'en utiliser un qui met en œuvre un mécanisme de prix moyen pondéré dans le temps (TWAP). Un [oracle TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroge le prix d'un actif à deux moments différents (que vous pouvez modifier) et calcule le prix au comptant en fonction de la moyenne obtenue. Le choix de périodes plus longues protège votre protocole contre la manipulation des prix, car les ordres importants exécutés récemment ne peuvent pas avoir d'impact sur les prix des actifs.
