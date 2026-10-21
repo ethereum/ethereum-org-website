@@ -333,11 +333,6 @@ export function toolToCatalogItem(
     ].filter((link) => link !== undefined),
     infoRows: [
       { label: t("page-developers-tools-modal-type"), value: subcategory },
-      tool.crops_native && {
-        label: t("page-developers-tools-crops-native"),
-        value: tCommon("yes"),
-        tooltip: t("page-developers-tools-crops-native-description"),
-      },
       typeof topRepo?.stargazers === "number" && {
         label: t("page-developers-tools-info-stars"),
         value: compact.format(topRepo.stargazers),

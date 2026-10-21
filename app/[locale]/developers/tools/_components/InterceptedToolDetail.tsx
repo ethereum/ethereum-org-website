@@ -5,7 +5,9 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import CatalogDetailModal from "@/components/CatalogDetailModal"
-import DetailRow from "@/components/CatalogDetailModal/DetailRow"
+import DetailRow, {
+  SupportedValue,
+} from "@/components/CatalogDetailModal/DetailRow"
 import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
 import { CatalogItemLinks } from "@/components/CatalogItem"
 import CatalogItemDescription from "@/components/CatalogItem/Description"
@@ -99,11 +101,20 @@ const InterceptedToolDetail = async ({
             </Tag>
           </DetailRow>
 
-          {item.infoRows.map(({ label, value, tooltip }) => (
-            <DetailRow key={label} label={label} tooltip={tooltip} roomyLabel>
+          {item.infoRows.map(({ label, value }) => (
+            <DetailRow key={label} label={label} roomyLabel>
               <span className="font-bold text-body">{value}</span>
             </DetailRow>
           ))}
+
+          {tool.crops_native && (
+            <DetailRow
+              label={t("page-developers-tools-crops-native")}
+              tooltip={t("page-developers-tools-crops-native-description")}
+            >
+              <SupportedValue supported label={tCommon("yes")} />
+            </DetailRow>
+          )}
 
           {tool.tags.length > 0 && (
             <DetailRow label={t("page-developers-tools-modal-tags")} roomyLabel>

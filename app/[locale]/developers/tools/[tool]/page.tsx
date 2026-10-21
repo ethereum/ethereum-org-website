@@ -73,6 +73,13 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
     labels,
     next,
   })
+  if (tool.crops_native) {
+    item.infoRows.splice(1, 0, {
+      label: t("page-developers-tools-crops-native"),
+      value: tCommon("yes"),
+      tooltip: t("page-developers-tools-crops-native-description"),
+    })
+  }
 
   return (
     <>
