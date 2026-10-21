@@ -3,7 +3,7 @@ import path from "path"
 
 import { expect, test } from "@playwright/test"
 
-import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
+import { getBreadcrumbTrail, toBreadcrumbPath } from "@/lib/utils/breadcrumbs"
 
 import { BREADCRUMB_HUBS, BREADCRUMB_PARENTS } from "@/data/breadcrumbs"
 
@@ -115,6 +115,21 @@ test.describe("getBreadcrumbTrail", () => {
         if (!(labelKey in messages)) missing.add(`${href} -> ${labelKey}`)
       })
     }
+    expect([...missing].sort()).toEqual([])
+  })
+
+  test("every ancestor crumb is a real page", () => {
+    const pages = [...contentPaths(), ...appPaths()]
+    const real = new Set(["/", ...pages.map(toBreadcrumbPath)])
+    const missing = new Set<string>()
+    for (const page of pages.filter(
+      (p) => !NO_CRUMBS.some((prefix) => p.startsWith(prefix))
+    ))
+      getBreadcrumbTrail(page)
+        .slice(0, -1)
+        .forEach(({ href }) => {
+          if (!real.has(href)) missing.add(`${href} (from /${page}/)`)
+        })
     expect([...missing].sort()).toEqual([])
   })
 })

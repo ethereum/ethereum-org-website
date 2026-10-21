@@ -98,7 +98,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
         tooltip: t("page-find-wallet-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
-    breadcrumbSlug: `/wallets/find-wallet/${wallet.slug}`,
+    breadcrumbSlug: `/wallets/find-wallet/${walletSlug}`,
     next: {
       name: nextWallet.name,
       href: `/wallets/find-wallet/${getWalletSlug(nextWallet)}/`,

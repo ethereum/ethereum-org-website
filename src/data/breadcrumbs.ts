@@ -1,10 +1,9 @@
 /**
- * Breadcrumb information architecture. Trails follow the URL by default; these
- * tables only record where the logical structure differs from the URL path.
- * Paths are normalized: leading and trailing slash, no locale.
+ * Breadcrumb IA. Trails follow the URL; these tables record only where they
+ * differ. Paths have leading and trailing slashes and no locale.
  */
 
-/** Sections whose descendants drop the leading "ethereum.org" root crumb */
+/** On and below a hub, a glyph replaces the "ethereum.org" root crumb */
 export const BREADCRUMB_HUBS = [
   "/community/",
   "/contributing/",
@@ -36,6 +35,8 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 
   // Contributing
   "/collectibles/": "/contributing/",
+  "/contributing/translation-program/translatathon/leaderboard/":
+    "/contributing/translation-program/",
 
   // Learn
   "/bridges/": "/learn/",

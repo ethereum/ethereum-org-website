@@ -1,3 +1,5 @@
+import { addSlashes, normalizeSlug } from "@/lib/utils/url"
+
 import {
   BREADCRUMB_ANCESTOR_LABEL_KEYS,
   BREADCRUMB_HUBS,
@@ -14,10 +16,8 @@ export type BreadcrumbTrailItem = {
 
 const ROOT = "/"
 
-export const toBreadcrumbPath = (slug: string) => {
-  const segments = slug.split("/").filter(Boolean)
-  return segments.length ? `/${segments.join("/")}/` : ROOT
-}
+export const toBreadcrumbPath = (slug: string) =>
+  addSlashes(normalizeSlug(slug))
 
 export const getBreadcrumbParent = (path: string): string | null => {
   if (path === ROOT) return null
@@ -31,10 +31,7 @@ export const getBreadcrumbParent = (path: string): string | null => {
 export const getBreadcrumbLabelKey = (path: string) =>
   BREADCRUMB_LABEL_KEYS[path] ?? path.split("/").filter(Boolean).pop()!
 
-/**
- * Ancestors-first trail for a page. The root crumb is omitted on a hub or
- * anywhere below one, since the hub already anchors the trail.
- */
+/** Ancestors-first trail; the root crumb is omitted on and below a hub */
 export const getBreadcrumbTrail = (slug: string): BreadcrumbTrailItem[] => {
   const path = toBreadcrumbPath(slug)
   if (path === ROOT) return []
