@@ -2266,6 +2266,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/e
       <td align="center" valign="top" width="14.28%"><a href="https://backupdrill.com"><img src="https://avatars.githubusercontent.com/u/20788648?v=4?s=100" width="100px;" alt="Super Lede"/><br /><sub><b>Super Lede</b></sub></a><br /><a href="#maintenance-supertj" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikeua"><img src="https://avatars.githubusercontent.com/u/2239742?v=4?s=100" width="100px;" alt="mikeua"/><br /><sub><b>mikeua</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amikeua" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ohilhwan"><img src="https://avatars.githubusercontent.com/u/18180404?v=4?s=100" width="100px;" alt="ohilhwan"/><br /><sub><b>ohilhwan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ohilhwan" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
