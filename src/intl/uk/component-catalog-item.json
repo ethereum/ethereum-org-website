@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "Про {name}",
+  "catalog-item-gallery-modal-title": "Скриншоти {name}",
+  "catalog-item-gallery-screenshot-alt": "Скриншот {index} з {name}",
+  "catalog-item-gallery-title": "Галерея",
+  "catalog-item-info-title": "Інформація",
+  "catalog-item-link-label": "{name} на {platform}",
+  "catalog-item-see-next": "Дивитися далі",
+  "catalog-item-source-code": "Вихідний код",
+  "catalog-item-view-on-github": "Переглянути на GitHub",
+  "catalog-item-visit-website": "Відвідати вебсайт"
+}
