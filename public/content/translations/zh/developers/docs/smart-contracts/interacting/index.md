@@ -1,6 +1,6 @@
 ---
-title: 与智能合约交互
-description: 了解如何读取和写入已部署在以太坊上的智能合约。
+title: "与智能合约交互"
+description: "了解如何读取和写入已部署在以太坊上的智能合约。"
 lang: zh
 ---
 
@@ -82,7 +82,7 @@ ABI 是一个 JSON 文档，描述了：
 
 - **[Ethers.js](https://docs.ethers.org/)** - 也可在 Node.js 中用于服务器端脚本和机器人
 - **[Web3.py](https://web3py.readthedocs.io/)** - 用于以太坊交互的 Python 库
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Geth 团队提供的官方 Go 库
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Geth 团队提供的官方 Go 库
 
 ### 示例：使用 Viem 读取代币余额 {#example-viem}
 

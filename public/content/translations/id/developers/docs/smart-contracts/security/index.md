@@ -35,6 +35,7 @@ Mendaftarkan satu alamat sebagai `Owner` dalam kontrak pintar menimbulkan risiko
 Dalam kontrol akses berbasis peran, akses ke fungsi sensitif didistribusikan di antara sekumpulan peserta tepercaya. Misalnya, satu akun mungkin bertanggung jawab untuk pencetakan token, sementara akun lain melakukan peningkatan atau menjeda kontrak. Mendestralisasikan kontrol akses dengan cara ini menghilangkan titik kegagalan tunggal dan mengurangi asumsi kepercayaan bagi pengguna.
 
 ##### Menggunakan dompet tanda tangan ganda
+
 Pendekatan lain untuk menerapkan kontrol akses yang aman adalah menggunakan [akun tanda tangan ganda](/developers/docs/smart-contracts/#multisig) untuk mengelola kontrak. Tidak seperti EOA biasa, akun tanda tangan ganda dimiliki oleh beberapa entitas dan memerlukan tanda tangan dari jumlah minimum akun—katakanlah 3-dari-5—untuk mengeksekusi transaksi.
 
 Menggunakan multisig untuk kontrol akses memperkenalkan lapisan keamanan ekstra karena tindakan pada kontrak target memerlukan persetujuan dari beberapa pihak. Hal ini sangat berguna jika penggunaan pola Ownable diperlukan, karena membuatnya lebih sulit bagi penyerang atau orang dalam yang jahat untuk memanipulasi fungsi kontrak sensitif untuk tujuan jahat.
@@ -73,7 +74,7 @@ contract VendingMachine {
 
 Ketidakberubahan kode yang berjalan di [Mesin Virtual Ethereum](/developers/docs/evm/) berarti kontrak pintar menuntut tingkat penilaian kualitas yang lebih tinggi selama fase pengembangan. Menguji kontrak Anda secara ekstensif dan mengamatinya untuk hasil yang tidak terduga akan sangat meningkatkan keamanan dan melindungi pengguna Anda dalam jangka panjang.
 
-Metode yang biasa dilakukan adalah menulis pengujian unit kecil menggunakan data tiruan yang diharapkan diterima kontrak dari pengguna. [Pengujian unit](/developers/docs/smart-contracts/testing/#unit-testing) baik untuk menguji fungsionalitas fungsi tertentu dan memastikan kontrak pintar berfungsi seperti yang diharapkan.
+Metode yang biasa dilakukan adalah menulis pengujian unit kecil menggunakan data tiruan yang diharapkan diterima kontrak dari pengguna. [Pengujian unit](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) baik untuk menguji fungsionalitas fungsi tertentu dan memastikan kontrak pintar berfungsi seperti yang diharapkan.
 
 Sayangnya, pengujian unit kurang efektif untuk meningkatkan keamanan kontrak pintar jika digunakan secara terpisah. Pengujian unit mungkin membuktikan suatu fungsi dieksekusi dengan benar untuk data tiruan, tetapi pengujian unit hanya seefektif pengujian yang ditulis. Hal ini membuatnya sulit untuk mendeteksi kasus ekstrem (edge cases) yang terlewat dan kerentanan yang dapat merusak keamanan kontrak pintar Anda.
 
@@ -306,6 +307,7 @@ Tidak ada yang salah di sini, kecuali bahwa `Attacker` memiliki fungsi lain yang
 Ringkasannya adalah karena saldo pemanggil tidak diatur ke 0 hingga eksekusi fungsi selesai, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil untuk menarik saldo mereka beberapa kali. Jenis serangan ini dapat digunakan untuk menguras dana kontrak pintar, seperti yang terjadi pada [peretasan DAO tahun 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Serangan reentransi masih menjadi masalah kritis untuk kontrak pintar saat ini seperti yang ditunjukkan oleh [daftar publik eksploitasi reentransi](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cara mencegah serangan reentransi
+
 Pendekatan untuk menangani reentransi adalah mengikuti [pola pemeriksaan-efek-interaksi](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Pola ini mengurutkan eksekusi fungsi sedemikian rupa sehingga kode yang melakukan pemeriksaan yang diperlukan sebelum melanjutkan eksekusi didahulukan, diikuti oleh kode yang memanipulasi state kontrak, dengan kode yang berinteraksi dengan kontrak lain atau EOA berada di urutan terakhir.
 
 Pola pemeriksaan-efek-interaksi digunakan dalam versi revisi dari kontrak `Victim` yang ditunjukkan di bawah ini:
@@ -432,6 +434,7 @@ contract Attack {
 ```
 
 ##### Cara mencegah limpahan bawah dan limpahan bilangan bulat
+
 Mulai versi 0.8.0, kompiler Solidity menolak kode yang menghasilkan limpahan bawah dan limpahan bilangan bulat. Namun, kontrak yang dikompilasi dengan versi kompiler yang lebih rendah harus melakukan pemeriksaan pada fungsi yang melibatkan operasi aritmatika atau menggunakan pustaka (misalnya, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) yang memeriksa limpahan bawah/limpahan.
 
 #### Manipulasi orakel {#oracle-manipulation}
@@ -447,6 +450,7 @@ Harga DEX sering kali akurat, sebagian besar karena pelaku arbitrase memulihkan 
 Misalnya, penyerang dapat secara artifisial memompa harga spot suatu aset dengan mengambil pinjaman kilat tepat sebelum berinteraksi dengan kontrak peminjaman Anda. Meminta harga aset ke DEX akan mengembalikan nilai yang lebih tinggi dari biasanya (karena "pesanan beli" penyerang yang besar memiringkan permintaan aset), memungkinkan mereka untuk meminjam lebih dari yang seharusnya. "Serangan pinjaman kilat" semacam itu telah digunakan untuk mengeksploitasi ketergantungan pada orakel harga di antara aplikasi DeFi, yang merugikan protokol hingga jutaan dana yang hilang.
 
 ##### Cara mencegah manipulasi orakel
+
 Persyaratan minimum untuk [menghindari manipulasi orakel](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) adalah menggunakan jaringan orakel terdesentralisasi yang meminta informasi dari berbagai sumber untuk menghindari titik kegagalan tunggal. Dalam kebanyakan kasus, orakel terdesentralisasi memiliki insentif kriptoekonomi bawaan untuk mendorong node orakel melaporkan informasi yang benar, menjadikannya lebih aman daripada orakel terpusat.
 
 Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan untuk menggunakan orakel yang menerapkan mekanisme harga rata-rata tertimbang waktu (TWAP). [Orakel TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) meminta harga aset pada dua titik waktu yang berbeda (yang dapat Anda modifikasi) dan menghitung harga spot berdasarkan rata-rata yang diperoleh. Memilih periode waktu yang lebih lama melindungi protokol Anda dari manipulasi harga karena pesanan besar yang dieksekusi baru-baru ini tidak dapat memengaruhi harga aset.

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/scaling/zk-rollups/index.md",
-  "generatedAt": "2026-09-30T18:25:35.111Z",
-  "rootHash": "10b3bf7683c6",
+  "generatedAt": "2026-10-14T17:47:19.956Z",
+  "rootHash": "c4690f83039b",
   "tree": {
     "contentHash": "4d4502bfd38b",
-    "anchorHash": "d5d22a1e7b8f",
+    "anchorHash": "8edd18f75aac",
     "children": {
       "frontmatter:title": {
         "contentHash": "f72c38cd19cf",
@@ -795,7 +795,7 @@
       },
       "scaling-ethereum-with-zk-rollups": {
         "contentHash": "bb810697f569",
-        "anchorHash": "f9dcdddda616",
+        "anchorHash": "01b64329a79a",
         "labelHash": "5038573b8dc5",
         "children": {
           "_label": {
@@ -852,7 +852,7 @@
           },
           "zk-rollups-pros-and-cons": {
             "contentHash": "4a20ceda854a",
-            "anchorHash": "2be8d97dc5df",
+            "anchorHash": "5b8bd285986b",
             "labelHash": "adce56dd5d90",
             "children": {
               "_label": {
@@ -865,7 +865,7 @@
               },
               "link:0": {
                 "contentHash": "a3ed0d3cc039",
-                "anchorHash": "353f95697e39"
+                "anchorHash": "8f682bfc3663"
               },
               "prose:3": {
                 "contentHash": "026cac62afc8",
@@ -1303,5 +1303,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

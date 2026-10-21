@@ -49,7 +49,7 @@ published: 2021-03-31
 
 ## దశ 5: మీ బ్యాలెన్స్‌ని తనిఖీ చేయండి {#step-5}
 
-మన బ్యాలెన్స్ ఉందో లేదో ఒకసారి తనిఖీ చేయడానికి, [Alchemy యొక్క కంపోజర్ టూల్](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ఉపయోగించి [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) అభ్యర్థన చేద్దాం. ఇది మన వాలెట్‌లోని ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మీరు మీ MetaMask ఖాతా చిరునామాను ఇన్‌పుట్ చేసి, “Send Request” క్లిక్ చేసిన తర్వాత, మీరు ఇలాంటి ప్రతిస్పందనను చూడాలి:
+మన బ్యాలెన్స్ ఉందో లేదో ఒకసారి తనిఖీ చేయడానికి, [Alchemy యొక్క కంపోజర్ టూల్](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ఉపయోగించి [eth_getBalance](/developers/docs/apis/json-rpc/#eth-getbalance) అభ్యర్థన చేద్దాం. ఇది మన వాలెట్‌లోని ETH మొత్తాన్ని తిరిగి ఇస్తుంది. మీరు మీ MetaMask ఖాతా చిరునామాను ఇన్‌పుట్ చేసి, “Send Request” క్లిక్ చేసిన తర్వాత, మీరు ఇలాంటి ప్రతిస్పందనను చూడాలి:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }

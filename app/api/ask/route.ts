@@ -205,11 +205,15 @@ export async function POST(request: Request) {
         temperature: 0.2,
         max_tokens: MAX_TOKENS,
         stream: true,
-        // Qwen3 otherwise spends `max_tokens` reasoning and returns an empty answer.
-        chat_template_kwargs: { enable_thinking: false },
+        // DeepSeek-V4.1-Flash thinks by default at effort 50, which spends `max_tokens`
+        // reasoning and returns an empty answer. "none" is the only off value it takes.
+        reasoning_effort: "none",
       }),
     }
-  ).catch(() => null)
+  ).catch((error) => {
+    console.error("[ask] inference request failed:", error)
+    return null
+  })
 
   // Passed through so the client can say how long to wait.
   if (upstream?.status === 429) {
@@ -220,6 +224,13 @@ export async function POST(request: Request) {
     )
   }
   if (!upstream?.ok || !upstream.body) {
+    // The client only ever sees a generic 502, which makes a rejected parameter and a
+    // wrong model name indistinguishable. The body says which.
+    console.error(
+      "[ask] upstream %s %s",
+      upstream?.status ?? "(no response)",
+      upstream ? (await upstream.text().catch(() => "")).slice(0, 500) : ""
+    )
     return Response.json({ error: "Upstream unavailable" }, { status: 502 })
   }
 

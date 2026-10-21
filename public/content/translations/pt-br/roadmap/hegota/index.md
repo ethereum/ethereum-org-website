@@ -34,7 +34,9 @@ Como a conta escolhe suas próprias regras, ela também pode escolher um esquema
 
 ## O que mais há na Hegotá {#scope}
 
-Ainda não foi decidido. A FOCIL e as transações de quadro são as duas mudanças programadas até agora; dezenas de outras foram propostas e nenhuma delas está definida. Esta página permanecerá curta até que o escopo se consolide — para o estado atual da discussão, consulte os recursos abaixo.
+Ainda não decidido. FOCIL e transações de quadro são as duas mudanças programadas até agora; dezenas de outras foram propostas e nenhuma delas está definida. Esta página permanecerá curta até que o escopo se consolide — para o estado atual da discussão, consulte os recursos abaixo.
+
+As propostas atualmente consideradas para inclusão incluem EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 e EIP-8365. Ser considerada significa que as equipes de clientes estão avaliando uma proposta, não que ela será lançada na Hegotá.
 
 ## Leitura adicional {#further-reading}
 
