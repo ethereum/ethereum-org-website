@@ -7,14 +7,12 @@ skill: beginner
 breadcrumb: Deploy first contract
 lang: en
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 I guess you are as excited as us to [deploy](/developers/docs/smart-contracts/deploying/) and interact with your first [smart contract](/developers/docs/smart-contracts/) on the Ethereum blockchain.
 
-Don’t worry, as it’s our first smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
+Don’t worry, as it’s our first smart contract, we’ll deploy it on a simulated blockchain that runs inside your browser, so it does not cost anything for you to deploy and play as much as you’d like with it. It isn’t a real [network](/developers/docs/networks/): nothing you do there is shared with anyone else.
 
 ## Writing our contract {#writing-our-contract}
 
@@ -26,7 +24,7 @@ In the new file, we’ll paste the following code.
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.5.17;
+pragma solidity ^0.8.24;
 
 contract Counter {
 
@@ -75,13 +73,13 @@ Then navigate to the "deploy and run transactions" screen:
 
 ![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-Once you are on the "deploy and run transactions" screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “JavaScript VM” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
+Once you are on the "deploy and run transactions" screen, double check that your contract name appears and click on Deploy. As you can see at the top of the panel, the current environment is “Remix VM” (followed by the name of a network upgrade, for example “Remix VM (Fusaka)”). That means we’ll deploy and interact with our smart contract on a blockchain simulated in your browser, to be able to test faster and without any fees. To deploy to a real network, such as a testnet, you would pick a different environment, for example a browser wallet.
 
 ![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
-Once you've clicked the “Deploy” button, you’ll see your contract appear on the bottom. Click the arrow on the left to expand it so we’ll see the content of our contract. This is our variable `counter`, our `increment()` function and the getter `getCounter()`.
+Once you've clicked the “Deploy” button, you’ll see your contract appear on the bottom. Click the arrow on the left to expand it so we’ll see the content of our contract. This is our variable `count`, our `increment()` function and the getter `getCount()`.
 
-If you click on the `count` or `getCount` button, it will actually retrieve the content of the contract’s `count` variable and display it. As we did not called the `increment` function yet, it should display 0.
+If you click on the `count` or `getCount` button, it will actually retrieve the content of the contract’s `count` variable and display it. As we did not call the `increment` function yet, it should display 0.
 
 ![The function button in the Remix solidity compiler](./remix-function-button.png)
 

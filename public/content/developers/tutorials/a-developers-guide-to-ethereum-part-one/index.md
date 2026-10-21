@@ -21,7 +21,7 @@ Assumptions:
 
 - You can get around in a terminal,
 - You've written a few lines of Python code,
-- Python version 3.6 or greater is installed on your machine (use of a [virtual environment](https://realpython.com/effective-python-environment/#virtual-environments) is strongly encouraged), and
+- Python version 3.10 or greater is installed on your machine (use of a [virtual environment](https://realpython.com/effective-python-environment/#virtual-environments) is strongly encouraged), and
 - you’ve used `pip`, Python’s package installer.
   Again, if any of these are untrue, or you don’t plan to reproduce the code in this article, you can likely still follow along just fine.
 
@@ -101,8 +101,6 @@ pip install 'web3[tester]'
 
 You’re all set up to go!
 
-Note: The `web3[tester]` package works up to Python 3.10.xx
-
 ## Spin up a sandbox {#spin-up-a-sandbox}
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
@@ -150,7 +148,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Other utility methods on the Web3 module include data format converters (e.g., [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), address helpers (e.g., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), and hash functions (e.g., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Many of these will be covered later in the series. To view all the available methods and properties, utilize IPython’s auto-complete by typing `Web3`. and hitting the tab key twice after the period.
+Other utility methods on the Web3 module include data format converters (e.g., [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), address helpers (e.g., [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), and hash functions (e.g., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Many of these will be covered later in the series. To view all the available methods and properties, utilize IPython’s auto-complete by typing `Web3`. and hitting the tab key twice after the period.
 
 ## Talk to the chain {#talk-to-the-chain}
 
@@ -170,7 +168,7 @@ While this is one “real” way to do it, the syncing process takes hours and i
 
 _The EthereumTesterProvider connects to a simulated node and is handy for quick development environments._
 
-That simulated node is called [eth-tester](https://github.com/ethereum/eth-tester) and we installed it as part of the `pip install web3[tester]` command. Configuring Web3.py to use this tester provider is as simple as:
+That simulated node is called [eth-tester](https://github.com/ApeWorX/eth-tester) and we installed it as part of the `pip install web3[tester]` command. Configuring Web3.py to use this tester provider is as simple as:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -298,4 +296,4 @@ More on [gas](/developers/docs/gas/#post-london)
 
 ## And breathe {#and-breathe}
 
-We’ve been at this for a while, so this seems as good a place as any to take a break. The rabbit hole continues on, and we’ll continue exploring in part two of this series. Some concepts to come: connecting to a real node, smart contracts, and tokens. Have follow-up questions? Let me know! Your feedback will influence where we go from here. Requests welcome via [Twitter](https://twitter.com/wolovim).
+We’ve been at this for a while, so this seems as good a place as any to take a break. The rabbit hole continues on, and we’ll continue exploring in part two of this series. Some concepts to come: connecting to a real node, smart contracts, and tokens. Have follow-up questions? Let me know! Your feedback will influence where we go from here. Requests welcome via [X](https://x.com/wolovim).
