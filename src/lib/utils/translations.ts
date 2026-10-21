@@ -15,6 +15,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/": "page-index",
   "/10years/": "page-10-year-anniversary",
   "/assets/": "page-assets",
+  "/begin/": "page-begin",
   "/collectibles/": "page-collectibles",
   "/contributing/translation-program/acknowledgements/":
     "page-contributing-translation-program-acknowledgements",
