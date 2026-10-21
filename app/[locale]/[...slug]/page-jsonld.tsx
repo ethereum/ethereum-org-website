@@ -14,7 +14,7 @@ const getUrlBreadcrumbItems = (locale: string, slug: string) => {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Home",
+      name: "ethereum.org",
       item: normalizeUrlForJsonLd(locale, "/"),
     },
   ]
