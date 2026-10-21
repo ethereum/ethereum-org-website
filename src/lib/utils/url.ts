@@ -134,11 +134,12 @@ export const normalizeUrlForJsonLd = (
   locale: string | Lang | undefined,
   pathWithoutLocale: string
 ): string => {
-  if (!locale) {
-    return new URL(pathWithoutLocale, SITE_URL).toString()
-  }
-  const path = join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
+  const path = locale
+    ? join(locale === DEFAULT_LOCALE ? "" : locale, pathWithoutLocale)
+    : pathWithoutLocale
   const url = new URL(path, SITE_URL)
+  // Match the canonical URL (trailingSlash: true); files keep their extension
+  if (!url.pathname.endsWith("/") && !isFile(url.pathname)) url.pathname += "/"
   return url.toString()
 }
 
