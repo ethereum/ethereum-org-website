@@ -88,8 +88,8 @@ export function resolveKnownEntities(
  * names are preserved as inline Person nodes. Handles both the `authors`
  * array and legacy singular `author` string.
  *
- * Falls back to the community organization reference when no author is
- * supplied.
+ * The community organization reference is always appended as a baseline
+ * author.
  */
 export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
   authorGraphNodes: KnownEntity[]
@@ -123,9 +123,6 @@ export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
 
   return {
     authorGraphNodes,
-    authorReferences:
-      authorReferences.length > 0
-        ? authorReferences
-        : [REFERENCE.ETHEREUM_COMMUNITY],
+    authorReferences: [...authorReferences, REFERENCE.ETHEREUM_COMMUNITY],
   }
 }

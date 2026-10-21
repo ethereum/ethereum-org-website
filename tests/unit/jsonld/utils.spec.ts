@@ -24,7 +24,10 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
           name,
         }),
       ])
-      expect(result.authorReferences).toEqual([{ "@id": organizationId }])
+      expect(result.authorReferences).toEqual([
+        { "@id": organizationId },
+        REFERENCE.ETHEREUM_COMMUNITY,
+      ])
     })
   }
 
@@ -45,6 +48,7 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
       authorReferences: [
         { "@id": knownPerson["@id"] },
         { "@type": "Person", name: "jdourlens" },
+        REFERENCE.ETHEREUM_COMMUNITY,
       ],
     })
   })
@@ -69,6 +73,7 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
       authorReferences: [
         { "@type": "Person", name: "jdourlens" },
         { "@type": "Person", name: "another" },
+        REFERENCE.ETHEREUM_COMMUNITY,
       ],
     })
   })
@@ -76,7 +81,10 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
   test("preserves an unresolved author as an inline Person", () => {
     expect(resolveAuthorsFromFrontmatter("jdourlens")).toEqual({
       authorGraphNodes: [],
-      authorReferences: [{ "@type": "Person", name: "jdourlens" }],
+      authorReferences: [
+        { "@type": "Person", name: "jdourlens" },
+        REFERENCE.ETHEREUM_COMMUNITY,
+      ],
     })
   })
 
@@ -90,6 +98,7 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
       authorReferences: [
         { "@id": knownPerson["@id"] },
         { "@type": "Person", name: "jdourlens" },
+        REFERENCE.ETHEREUM_COMMUNITY,
       ],
     })
   })
@@ -99,7 +108,10 @@ test.describe("resolveAuthorsFromFrontmatter", () => {
 
     expect(resolveAuthorsFromFrontmatter("PatrickAlphaC")).toEqual({
       authorGraphNodes: [knownPerson],
-      authorReferences: [{ "@id": knownPerson["@id"] }],
+      authorReferences: [
+        { "@id": knownPerson["@id"] },
+        REFERENCE.ETHEREUM_COMMUNITY,
+      ],
     })
   })
 })
