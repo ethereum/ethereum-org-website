@@ -116,6 +116,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        listenSlug="what-is-ether"
         variant="narrow"
       >
         <Section id={getIdFromHash(tocItems[0].url)}>

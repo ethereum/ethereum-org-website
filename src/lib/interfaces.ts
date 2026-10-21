@@ -113,28 +113,6 @@ export interface MdPageContent {
 }
 
 /**
- * Community events
- */
-
-export interface CommunityEventsReturnType {
-  pastEventData: CommunityEvent[]
-  upcomingEventData: CommunityEvent[]
-}
-
-export interface CommunityEvent {
-  date: string
-  title: string
-  calendarLink: string
-}
-
-export interface ReqCommunityEvent {
-  start: { dateTime: string }
-  summary: string
-  htmlLink: string
-  location: string
-}
-
-/**
  * Codeblock
  */
 

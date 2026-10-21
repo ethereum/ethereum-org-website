@@ -209,7 +209,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Access to 50+ blockchain nodes
 
 - [**Infura**](https://infura.io/)
-  - [Docs](https://infura.io/docs)
+  - [Docs](https://docs.infura.io/)
   - Features
     - Free tier option
     - Scale as you go

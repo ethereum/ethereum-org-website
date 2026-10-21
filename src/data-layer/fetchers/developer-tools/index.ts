@@ -27,10 +27,14 @@ async function uploadToolImages(
         ? await uploadToS3(resource.banner_url, "tools/banners")
         : undefined
 
+      // Drop images that failed to upload rather than falling back to the
+      // source URL: its host is usually not in next.config images.remotePatterns,
+      // so /_next/image answers 400 and the page ships a broken image (e.g.
+      // .ico favicons). Cards render their fallback icon instead.
       return {
         ...resource,
-        thumbnail_url: uploadedThumbnail ?? resource.thumbnail_url,
-        banner_url: uploadedBanner ?? resource.banner_url,
+        thumbnail_url: uploadedThumbnail ?? undefined,
+        banner_url: uploadedBanner ?? undefined,
       }
     },
     IMAGE_UPLOAD_CONCURRENCY
@@ -58,6 +62,8 @@ function trimResourceForFrontend(
     return {
       href: repoEntry.href,
       stargazers: repoEntry.stargazers,
+      ...(repoEntry.license ? { license: repoEntry.license } : {}),
+      ...(repoEntry.isArchived ? { isArchived: true } : {}),
     }
   })
 
@@ -84,6 +90,7 @@ function trimResourceForFrontend(
     tags: resource.tags,
     ...(resource.website ? { website: resource.website } : {}),
     subcategory_id: resource.subcategory_id,
+    ...(resource.updated_at ? { updated_at: resource.updated_at } : {}),
     ...(typeof resource.resource_score === "number"
       ? { resource_score: resource.resource_score }
       : {}),

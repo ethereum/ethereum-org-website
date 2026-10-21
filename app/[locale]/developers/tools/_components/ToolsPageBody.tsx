@@ -2,21 +2,19 @@ import { getTranslations } from "next-intl/server"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
-import type {
-  DeveloperToolsCategory,
-  DeveloperToolWithCategory,
+import {
+  type DeveloperToolsCategory,
+  type DeveloperToolWithCategory,
+  toToolCard,
 } from "@/lib/utils/developerToolsData"
 
 import ToolsCatalog from "./ToolsCatalog"
 
-const SUGGEST_RESOURCE_ISSUE_URL =
-  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
-
 type ToolsPageBodyProps = {
   locale: string
+  /** Full records; projected to `ToolCardData` here, before the client boundary. */
   tools: DeveloperToolWithCategory[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
@@ -52,12 +50,13 @@ const ToolsPageBody = async ({
 
   return (
     <main className="pb-page">
-      <MainArticle className="space-y-20 px-page pt-4">
+      <MainArticle className="px-page pt-4">
         <ToolsCatalog
           // Reset client filter/search state when navigating between categories
           key={currentCategoryId ?? "all"}
           locale={locale}
-          tools={tools}
+          // Slim projection: only what the island reads crosses to the client.
+          tools={tools.map(toToolCard)}
           categories={categories}
           currentCategoryId={currentCategoryId}
           countByCategory={countByCategory}
@@ -73,20 +72,9 @@ const ToolsPageBody = async ({
             filtersToggle: tTable("table-filters"),
             applyLabel: t("page-developers-tools-show-results"),
             closeLabel: tCommon("close"),
+            suggestButton: t("page-developers-tools-suggest-resource-button"),
           }}
         />
-        <div className="bg-radial-a flex flex-col items-center gap-4 rounded-base p-12">
-          <h2>{t("page-developers-tools-suggest-resource-title")}</h2>
-          <p>{t("page-developers-tools-suggest-resource-description")}</p>
-          <ButtonLink
-            href={SUGGEST_RESOURCE_ISSUE_URL}
-            variant="outline"
-            className="w-fit"
-            hideArrow
-          >
-            {t("page-developers-tools-suggest-resource-button")}
-          </ButtonLink>
-        </div>
       </MainArticle>
 
       <Section className="px-page">

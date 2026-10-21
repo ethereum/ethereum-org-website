@@ -9,7 +9,7 @@ lang: en
 published: 2024-06-29
 ---
 
-You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** so anybody interested will be able to pin it on a server for future access.
+You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://docs.ipfs.tech/)** so anybody interested will be able to pin it on a server for future access.
 
 You could use a third-party service such as [Fleek](https://resources.fleek.xyz/docs/) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
 

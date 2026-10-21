@@ -1,16 +1,16 @@
 ---
 title: "Ağlar"
-description: "Ethereum ağlarına genel bir bakış ve uygulamanızı test etmek için test ağı ether'ini (ETH) nereden alabileceğiniz."
+description: "Ethereum ağlarına genel bir bakış ve uygulamanızı test etmek için test ağı ether'ini (ETH) nereden alabileceğiniz hakkında bilgi."
 lang: tr
 ---
 
 [Ethereum](/) ağları, Ethereum protokolünü kullanarak iletişim kuran birbirine bağlı bilgisayar gruplarıdır. Sadece bir tane Ethereum Ana Ağı vardır, ancak test ve geliştirme amaçları için aynı protokol kurallarına uyan bağımsız ağlar oluşturulabilir. Birbirleriyle etkileşime girmeden protokole uyan birçok bağımsız "ağ" vardır. Akıllı sözleşmelerinizi ve Web3 uygulamalarınızı test etmek için kendi bilgisayarınızda yerel olarak bile bir tane başlatabilirsiniz.
 
-Ethereum hesabınız farklı ağlarda çalışacaktır, ancak hesap bakiyeniz ve işlem geçmişiniz ana Ethereum ağından aktarılmayacaktır. Test amaçları için, hangi ağların mevcut olduğunu ve denemeler yapmak için test ağı ETH'sini nasıl alacağınızı bilmek faydalıdır. Genel olarak, güvenlik hususları nedeniyle, ana ağ hesaplarını test ağlarında veya tam tersi şekilde yeniden kullanmak önerilmez.
+Ethereum hesabınız farklı ağlarda çalışacaktır, ancak hesap bakiyeniz ve işlem geçmişiniz ana Ethereum ağından aktarılmayacaktır. Test amaçları için, hangi ağların mevcut olduğunu ve denemeler yapmak için test ağı ETH'sini nasıl alacağınızı bilmek faydalıdır. Genel olarak, güvenlik hususları nedeniyle, Ana Ağ hesaplarını test ağlarında veya tam tersi şekilde yeniden kullanmak önerilmez.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Test ağları size denemeler yapmanız için Ethereum'un ucuz ve güvenli bir sürümünü sunacağından, farklı ağlar hakkında okumadan önce [Ethereum'un temellerini](/developers/docs/intro-to-ethereum/) anlamalısınız.
+Farklı ağlar hakkında okumadan önce [Ethereum'un temellerini](/developers/docs/intro-to-ethereum/) anlamalısınız, çünkü test ağları size denemeler yapmanız için Ethereum'un ucuz ve güvenli bir sürümünü sunacaktır.
 
 ## Herkese açık ağlar {#public-networks}
 
@@ -18,7 +18,7 @@ Herkese açık ağlara, internet bağlantısı olan dünyadaki herkes erişebili
 
 ### Ethereum Ana Ağı {#ethereum-mainnet}
 
-Ana Ağ, dağıtık defterde gerçek değerli işlemlerin gerçekleştiği birincil herkese açık Ethereum üretim blokzinciridir.
+Ana Ağ, dağıtık defter üzerinde gerçek değerli işlemlerin gerçekleştiği birincil herkese açık Ethereum üretim blokzinciridir.
 
 İnsanlar ve borsalar ETH fiyatlarını tartıştıklarında, Ana Ağ ETH'sinden bahsederler.
 
@@ -41,6 +41,7 @@ Test ağlarındaki ETH'nin gerçek bir değeri olmaması gerekir; ancak, kıtla�
 **Sepolia, uygulama geliştirme için önerilen varsayılan test ağıdır**. Sepolia ağı, istemci ve test ekipleri tarafından kontrol edilen izinli bir doğrulayıcı seti kullanır.
 
 ##### Kaynaklar
+
 - [Web sitesi](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -48,14 +49,15 @@ Test ağlarındaki ETH'nin gerçek bir değeri olmaması gerekir; ancak, kıtla�
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Musluklar
+
 - [Alchemy Sepolia Musluğu](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia Musluğu](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Ethereum Ekosistemi Musluğu](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com Sepolia Musluğu](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia Musluğu](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Infura Sepolia Musluğu](https://www.infura.io/faucet)
+- [OpenFaucet.org Sepolia Musluğu](https://openfaucet.org/ethereum-sepolia)
 - [PoW Musluğu](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia Musluğu](https://faucet.quicknode.com/ethereum/sepolia)
 
@@ -80,6 +82,7 @@ Hoodi, doğrulama ve staking'i test etmek için bir test ağıdır. Hoodi ağı,
 
 - [Chain Platform Hoodi Musluğu](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi Musluğu](https://hoodi.ethpandaops.io/)
+- [OpenFaucet.org Hoodi Musluğu](https://openfaucet.org/ethereum-hoodi)
 - [PoW Musluğu](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
@@ -116,7 +119,7 @@ Holesky test ağı Eylül 2025 itibarıyla kullanımdan kaldırılmıştır. Sta
 
 ### Katman 2 test ağları {#layer-2-testnets}
 
-[Katman 2 (l2)](/layer-2/), belirli bir Ethereum ölçeklendirme çözümleri setini tanımlamak için kullanılan ortak bir terimdir. Bir katman 2, Ethereum'u genişleten ve Ethereum'un güvenlik garantilerini devralan ayrı bir blokzincirdir. Katman 2 test ağları genellikle herkese açık Ethereum test ağlarına sıkı sıkıya bağlıdır.
+[Katman 2 (L2)](/layer-2/), belirli bir Ethereum ölçeklendirme çözümleri kümesini tanımlamak için kullanılan ortak bir terimdir. Bir katman 2, Ethereum'u genişleten ve Ethereum'un güvenlik garantilerini devralan ayrı bir blokzincirdir. Katman 2 test ağları genellikle herkese açık Ethereum test ağlarına sıkı sıkıya bağlıdır.
 
 #### Arbitrum Sepolia {#arbitrum-sepolia}
 
@@ -132,6 +135,7 @@ Holesky test ağı Eylül 2025 itibarıyla kullanımdan kaldırılmıştır. Sta
 - [Alchemy Arbitrum Sepolia Musluğu](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia Musluğu](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia Musluğu](https://ethfaucet.com/networks/arbitrum)
+- [OpenFaucet.org Arbitrum Sepolia Musluğu](https://openfaucet.org/arbitrum-sepolia)
 - [QuickNode Arbitrum Sepolia Musluğu](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -148,7 +152,8 @@ Holesky test ağı Eylül 2025 itibarıyla kullanımdan kaldırılmıştır. Sta
 - [Alchemy Musluğu](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Chainlink Musluğu](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia Musluğu](https://ethfaucet.com/networks/optimism)
-- [Test Ağı Musluğu](https://docs.optimism.io/builders/tools/build/faucets)
+- [OpenFaucet.org Optimism Sepolia Musluğu](https://openfaucet.org/optimism-sepolia)
+- [Test Ağı Musluğu](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -176,17 +181,17 @@ Buna yardımcı olmaya adanmış projeler ve araçlar vardır. [Geliştirme ağl
 
 ### Konsorsiyum ağları {#consortium-networks}
 
-Mutabakat süreci, güvenilen önceden tanımlanmış bir düğüm seti tarafından kontrol edilir. Örneğin, her birinin tek bir düğümü yönettiği bilinen akademik kurumlardan oluşan özel bir ağ ve bloklar ağ içindeki bir imza sahibi eşiği tarafından doğrulanır.
+Mutabakat süreci, güvenilen önceden tanımlanmış bir düğüm seti tarafından kontrol edilir. Örneğin, her birinin tek bir düğümü yönettiği bilinen akademik kurumlardan oluşan özel bir ağ ve bloklar ağ içindeki bir imza eşiği tarafından doğrulanır.
 
 Herkese açık bir Ethereum ağı herkese açık internet gibiyse, bir konsorsiyum ağı özel bir intranet gibidir.
 
 ## <Emoji text="🚉" /> Ethereum test ağlarına neden metro istasyonlarının isimleri veriliyor? {#why-naming}
 
-Birçok Ethereum test ağı, adını gerçek dünyadaki metro veya tren istasyonlarından alır. Bu isimlendirme geleneği erken başladı ve katkıda bulunanların yaşadığı veya çalıştığı küresel şehirleri yansıtıyor. Sembolik, akılda kalıcı ve pratiktir. Tıpkı test ağlarının Ethereum ana ağından izole olması gibi, metro hatları da yüzey trafiğinden ayrı çalışır.
+Birçok Ethereum test ağı, gerçek dünyadaki metro veya tren istasyonlarının adını almıştır. Bu isimlendirme geleneği erken dönemde başlamıştır ve katkıda bulunanların yaşadığı veya çalıştığı küresel şehirleri yansıtır. Sembolik, akılda kalıcı ve pratiktir. Tıpkı test ağlarının Ethereum Ana Ağı'ndan izole olması gibi, metro hatları da yüzey trafiğinden ayrı çalışır.
 
 ### <Emoji text="🚧" /> Yaygın olarak kullanılan ve eski test ağları {#common-and-legacy-testnets}
 
-- **Sepolia** - Yunanistan'ın Atina kentinde metro bağlantılı bir mahalle. Şu anda akıllı sözleşme ve dApp testi için kullanılıyor.
+- **Sepolia** - Yunanistan'ın Atina kentinde metro bağlantılı bir mahalle. Şu anda akıllı sözleşme ve dApp testi için kullanılmaktadır.
 - **Hoodi** - Adını Hindistan'ın Bengaluru kentindeki Hoodi metro istasyonundan almıştır. Doğrulayıcı ve protokol yükseltme testi için kullanılır.
 - **Goerli** _(kullanımdan kaldırıldı)_ - Adını Almanya'nın Berlin kentindeki Görlitzer Bahnhof'tan almıştır.
 - **Rinkeby** _(kullanımdan kaldırıldı)_ - Adını metro istasyonu olan bir Stockholm banliyösünden almıştır.

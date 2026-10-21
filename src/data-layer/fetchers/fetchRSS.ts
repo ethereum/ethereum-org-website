@@ -31,9 +31,8 @@ async function toHostedImage(remoteUrl: string): Promise<string> {
 /**
  * Fetches XML data from the specified URL.
  * Parses XML to JSON with parseString (xml2js package)
- * Exported for use by other data-layer modules (e.g., fetchPosts)
  */
-export async function fetchXml(url: string): Promise<Record<string, unknown>> {
+async function fetchXml(url: string): Promise<Record<string, unknown>> {
   const response = await fetchRetry(url, {
     headers: { Cookie: "", DNT: "1" }, // Empty cookie header and do-not-track
     credentials: "omit", // Don't send or receive cookies

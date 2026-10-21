@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md",
-  "generatedAt": "2026-07-22T23:53:07.664Z",
-  "rootHash": "219eeb7ce51c",
+  "generatedAt": "2026-10-14T21:26:38.114Z",
+  "rootHash": "b6b8233dcf73",
   "tree": {
-    "contentHash": "f2c5d1c202be",
+    "contentHash": "105ac42ccf89",
     "anchorHash": "9feac6ce3bed",
     "children": {
       "frontmatter:title": {
@@ -141,7 +141,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "part-1": {
-        "contentHash": "bd256b0f4b22",
+        "contentHash": "03ef16e455f3",
         "anchorHash": "b161e942c25e",
         "labelHash": "4f287dceaf96",
         "children": {
@@ -247,7 +247,7 @@
             ]
           },
           "step-4-add-ether-from-a-faucet": {
-            "contentHash": "ebdca546a575",
+            "contentHash": "c6adac8b0c9f",
             "anchorHash": "48f716fdb53e",
             "labelHash": "cd07e5ace247",
             "children": {
@@ -264,7 +264,7 @@
                 "anchorHash": "fe4feafa952c"
               },
               "prose:2": {
-                "contentHash": "e07aeed83141",
+                "contentHash": "4f07dc2be287",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -4717,5 +4717,5 @@
       "part-4-integrating-your-smart-contract-with-the-frontend"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "3a4f9534cdcda772448aa3a8191e1bf0ee618d8e"
 }

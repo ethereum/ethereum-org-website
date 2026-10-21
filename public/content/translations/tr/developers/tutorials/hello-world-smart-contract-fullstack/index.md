@@ -54,7 +54,6 @@ _Not: **Sepolia**'yı seçtiğinizden emin olun, aksi takdirde bu eğitim çalı
 Akıllı sözleşmenizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacınız olacak. Sepolia ağında ETH almak için bir Sepolia musluğuna gidin ve Sepolia hesap adresinizi girin. Deneyebileceğiniz seçeneklerin bir listesi için [test ağları sayfasına](/developers/docs/networks/#sepolia) göz atın:
 
 _Not: Ağ yoğunluğu nedeniyle bu biraz zaman alabilir._
-``
 ### Adım 5: Bakiyenizi Kontrol Edin {#step-5-check-your-balance}
 
 ETH'nin cüzdanınızda olduğundan emin olmak için, [Alchemy'nin sandbox aracını](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) kullanarak bir [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) isteği yapalım. Bu, cüzdanımızdaki ETH miktarını döndürecektir. Daha fazla bilgi edinmek için [Alchemy'nin composer aracının nasıl kullanılacağına dair kısa eğitimine](https://youtu.be/r6sjRxBZJuU) göz atın.

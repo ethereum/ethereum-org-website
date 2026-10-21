@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils/cn"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { usePathname } from "@/i18n/navigation"
-import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/constants"
+import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/do-not-translate-paths"
 
 const TranslationBanner = () => {
   const locale = useLocale()

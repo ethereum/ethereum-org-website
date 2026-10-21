@@ -74,6 +74,8 @@ export type FilterableCatalogProps<TItem> = {
   renderSidebar: (helpers: CatalogSidebarHelpers) => ReactNode
   /** Optional row above the search input, outside the bordered sidebar box. */
   renderSidebarHeader?: (helpers: CatalogSidebarHelpers) => ReactNode
+  /** Optional row pinned to the bottom of the bordered sidebar box. */
+  sidebarFooter?: ReactNode
   renderResults: (items: TItem[]) => ReactNode
   /**
    * How filters are presented below `lg`. `"inline"` (default) drops the sidebar
@@ -126,6 +128,7 @@ export default function FilterableCatalog<TItem>({
   labels,
   renderSidebar,
   renderSidebarHeader,
+  sidebarFooter,
   renderResults,
   mobileVariant = "inline",
   selection: controlledSelection,
@@ -267,6 +270,17 @@ export default function FilterableCatalog<TItem>({
     renderSidebar({ state: selection, setFilter, variant })
   const renderHeader = (variant: CatalogSidebarHelpers["variant"]) =>
     renderSidebarHeader?.({ state: selection, setFilter, variant })
+  const filterBox = (
+    variant: CatalogSidebarHelpers["variant"],
+    className?: string
+  ) => (
+    <div className={cn("flex flex-col rounded-xl border", className)}>
+      <div className="min-h-0 overflow-y-auto p-2">
+        {renderFilters(variant)}
+      </div>
+      {sidebarFooter && <div className="border-t p-2">{sidebarFooter}</div>}
+    </div>
+  )
 
   const searchInput = (
     <Input
@@ -285,9 +299,7 @@ export default function FilterableCatalog<TItem>({
           <div className="sticky top-24 space-y-3">
             {renderHeader("desktop")}
             {searchInput}
-            <div className="max-h-[calc(100vh-11rem)] overflow-y-auto rounded-xl border p-2">
-              {renderFilters("desktop")}
-            </div>
+            {filterBox("desktop", "max-h-[calc(100vh-11rem)]")}
           </div>
         </aside>
 
@@ -345,9 +357,7 @@ export default function FilterableCatalog<TItem>({
                 >
                   {renderHeader("mobile")}
                   {searchInput}
-                  <div className="rounded-xl border p-2">
-                    {renderFilters("mobile")}
-                  </div>
+                  {filterBox("mobile")}
                 </div>
                 <Button
                   className="w-full"
@@ -361,9 +371,7 @@ export default function FilterableCatalog<TItem>({
             <div className="space-y-3 lg:hidden">
               {renderHeader("mobile")}
               {searchInput}
-              <div className="rounded-xl border p-2">
-                {renderFilters("mobile")}
-              </div>
+              {filterBox("mobile")}
             </div>
           )}
           <div ref={resultsTopRef} className="scroll-mt-24" />

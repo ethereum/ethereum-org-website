@@ -8,22 +8,27 @@ import type {
   CatalogFilterState,
   CatalogNavGroupConfig,
 } from "@/components/FilterableCatalog/types"
+import { BaseLink } from "@/components/ui/Link"
 
 import type {
   DeveloperToolsCategory,
-  DeveloperToolWithCategory,
+  ToolCardData,
 } from "@/lib/utils/developerToolsData"
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
 
+const SUGGEST_RESOURCE_ISSUE_URL =
+  "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
+
 /** Doubles as the URL query param, so a subcategory is linkable: `?sub=<id>` */
 const SUBCATEGORY_FILTER_KEY = "sub"
 
 type ToolsCatalogProps = {
   locale: string
-  tools: DeveloperToolWithCategory[]
+  /** Slim projection: only what this island reads crosses to the client. */
+  tools: ToolCardData[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -38,6 +43,7 @@ type ToolsCatalogProps = {
     filtersToggle: string
     applyLabel: string
     closeLabel: string
+    suggestButton: string
   }
   currentCategoryId?: string
 }
@@ -60,27 +66,20 @@ function getSubcategoryLabel(
   return subcategoryLabels[subcategoryId] || subcategoryId
 }
 
-function getToolStars(tool: DeveloperToolWithCategory): number {
-  let maxStars = 0
-  for (const repo of tool.repos) {
-    if (typeof repo === "string") continue
-    if (typeof repo.stargazers === "number" && repo.stargazers > maxStars) {
-      maxStars = repo.stargazers
-    }
-  }
-  return maxStars
-}
-
-function getToolSortScore(tool: DeveloperToolWithCategory): number {
+/**
+ * Ranking score, falling back to the star count `toToolCard` already reduced
+ * from the repo list — the client never sees the repos themselves.
+ */
+function getToolSortScore(tool: ToolCardData): number {
   if (typeof tool.resource_score === "number") {
     return tool.resource_score
   }
-  return getToolStars(tool)
+  return tool.stargazers ?? 0
 }
 
 type ToolsResultsProps = {
   locale: string
-  tools: DeveloperToolWithCategory[]
+  tools: ToolCardData[]
   categories: DeveloperToolsCategory[]
   categoryLabels: Record<string, string>
   subcategoryLabels: Record<string, string>
@@ -96,7 +95,7 @@ const ToolsResults = memo(function ToolsResults({
   const nf = numberFormat(locale)
 
   const groupedTools = useMemo(() => {
-    const toolsByCategory = new Map<string, DeveloperToolWithCategory[]>()
+    const toolsByCategory = new Map<string, ToolCardData[]>()
     for (const tool of tools) {
       const existing = toolsByCategory.get(tool.categoryId)
       if (existing) {
@@ -109,10 +108,7 @@ const ToolsResults = memo(function ToolsResults({
     return categories
       .map((category) => {
         const categoryTools = toolsByCategory.get(category.id) || []
-        const toolsBySubcategory = new Map<
-          string,
-          DeveloperToolWithCategory[]
-        >()
+        const toolsBySubcategory = new Map<string, ToolCardData[]>()
 
         for (const tool of categoryTools) {
           const existing = toolsBySubcategory.get(tool.subcategory_id)
@@ -244,7 +240,7 @@ export default function ToolsCatalog({
   }
 
   const filterTool = (
-    tool: DeveloperToolWithCategory,
+    tool: ToolCardData,
     state: CatalogFilterState,
     query: string
   ) => {
@@ -292,6 +288,14 @@ export default function ToolsCatalog({
           }
         />
       )}
+      sidebarFooter={
+        <BaseLink
+          href={SUGGEST_RESOURCE_ISSUE_URL}
+          className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
+        >
+          {labels.suggestButton}
+        </BaseLink>
+      }
       renderResults={(filteredTools) => (
         <ToolsResults
           locale={locale}
