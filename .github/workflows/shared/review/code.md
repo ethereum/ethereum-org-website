@@ -2,15 +2,13 @@
 
 Run `/code-review` at **medium** effort.
 
-If the PR fixes a bug, confirm the bug still exists on the base branch: grep config (`next.config.js`), shared getters (`src/lib/data/`) and `docs/solutions/` (which can be stale). If the base already fixes it, report that as blocking, with the commit that fixed it.
+If the PR fixes a bug, check whether the bug still exists on the base branch: grep config (`next.config.js`), shared getters (`src/lib/data/`) and `docs/solutions/` (which can be stale).
 
-Then check these repo rules on the changed lines:
+- Base fully fixes it: `blocking`, naming the commit that fixed it.
+- Base fixes part of it: say what is already fixed, what the PR still adds, and whether the description is now stale.
 
-- Chain names match a `name` in `src/data/chains.ts` exactly ("OP Mainnet", not "Optimism").
-- No unused variables or params; a bare `_` is the only allowed unused arg. The build fails on them.
-- `numberFormat()` / `dateTimeFormat()` from `src/lib/utils` instead of raw `Intl.*` or `.toLocale*String()`.
-- New component variants use `tailwind-variants` (`tv`).
-- User-facing strings are translatable, not hard-coded English.
-- RTL: logical classes (`text-start`, `ms-*`), not `text-left`, `ml-*`.
+For a bug fix, list every code path that produces the symptom, not only the one the PR names. A path the fix misses is `should fix`.
+
+Then check the changed lines against the conventions in `AGENTS.md` (loaded as your project instructions). Comment bloat (multi-line explanations, design history) is a `nit`.
 
 Do not report what lint, type-check or Prettier already catch.

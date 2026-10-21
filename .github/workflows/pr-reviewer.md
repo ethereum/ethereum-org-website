@@ -82,7 +82,7 @@ pre-agent-steps:
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
       gh pr view "$PR_NUMBER" --repo "$REPO" \
-        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
+        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:

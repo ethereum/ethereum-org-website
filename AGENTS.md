@@ -73,6 +73,12 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - Use generic constraints for reusable components
 - Export types from dedicated files in `@/lib/types`
 
+### Comments, Shared Code and Bug Fixes
+
+- **Comments**: default to none. Add one only for a non-obvious "why" or a hidden constraint, in one or two lines. No multi-line explanations, design history, or restating what the code does.
+- **Shared code** goes in an existing related module (`src/lib/constants.ts`, an existing file in `src/lib/utils/`). Don't create a file for a single function or constant.
+- **Bug fixes** cover every code path that produces the symptom, not only the one in the report. Fix it once in the shared function rather than in each caller.
+
 ### Styling Conventions
 
 - **Primary approach**: Tailwind CSS utility classes
@@ -80,6 +86,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Dynamic classes**: Use `cn()` utility (clsx + tailwind-merge)
 - **Custom properties**: CSS variables in `src/styles/` for theme values
 - **Responsive design**: Mobile-first approach
+- **RTL**: logical classes (`text-start`, `ms-*`, `ps-*`), never `text-left`, `ml-*`, `pl-*`
 
 For UI work, see the **`design-system` skill** at `.claude/skills/design-system/`. It's the canonical knowledge base for component choices, design tokens, RTL/i18n, server/client boundaries, and the "use a variant, not a new component" pattern.
 
@@ -118,7 +125,7 @@ pnpm lint:md:fix           # Auto-fix header IDs and duplicates
 
 ### Testing Strategy
 
-- **Unit Testing**: Playwright `unit` project (`pnpm test:unit`) — heaviest coverage is the intl-pipeline sanitizer
+- **Unit Testing**: Playwright `unit` project (`pnpm test:unit`) — heaviest coverage is the intl-pipeline sanitizer. Unit tests can only import plain modules (`src/lib/**`, data files): components fail to load under the runner (`next-intl` can't resolve `next/navigation`), and `@/` doesn't cover `app/`. Move logic a test needs into `src/lib/` and import it from there in both places.
 - **E2E Testing**: Playwright (`pnpm test:e2e`), see `docs/e2e-testing.md`
 - **Visual Testing**: Storybook + Chromatic for component regression; Playwright + Chromatic for full pages (see the `page-visual-tests` skill)
 - **Type Safety**: TypeScript strict mode enabled
