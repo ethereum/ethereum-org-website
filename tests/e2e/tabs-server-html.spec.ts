@@ -9,11 +9,11 @@ import { expect, request, test } from "@playwright/test"
 // naive search would find the text there and pass even when the bug is present.
 
 const TAB_PAGES = [
-  "/en/10years",
-  "/en/stablecoins",
-  "/en/founders",
-  "/en/restaking",
-  "/en/staking/withdrawals",
+  "/10years/",
+  "/stablecoins/",
+  "/organizations/founders/",
+  "/restaking/",
+  "/staking/withdrawals/",
 ]
 
 const stripScripts = (html: string) =>
