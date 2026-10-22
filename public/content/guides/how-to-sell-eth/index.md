@@ -25,10 +25,21 @@ Ethereum itself has no "withdraw to bank" button. Your [wallet](/glossary/#walle
 
 Most money lost while cashing out is lost through one of these four mistakes. Check them first.
 
-1. **Which token do you hold?** ETH, WETH, USDC and other [tokens](/glossary/#token) are different assets. An exchange may accept one and not another. Your wallet lists each token separately.
-2. **Which network is it on?** The same token can exist on Ethereum and on many [layer 2](/glossary/#layer-2) networks, such as Arbitrum, Base or Optimism. Your wallet shows which network you are using.
-3. **Does the place you are sending to support that token _on that network_?** If you send tokens on a network the receiver does not support, they may be lost for good. Exchanges list the networks they accept on their deposit screen.
-4. **Do you have a little ETH for fees?** Every transfer costs a small [gas fee](/glossary/#gas), paid in ETH on Ethereum and on most layer 2s. Even sending USDC needs some ETH on the same network.
+1. **Which token do you hold?**
+
+   ETH, WETH, USDC and other [tokens](/glossary/#token) are different assets. An exchange may accept one and not another. Your wallet lists each token separately.
+
+2. **Which network is it on?**
+
+   The same token can exist on Ethereum and on many [layer 2](/glossary/#layer-2) networks, such as Arbitrum, Base or Optimism. Your wallet shows which network you are using.
+
+3. **Does the place you are sending to support that token _on that network_?**
+
+   If you send tokens on a network the receiver does not support, they may be lost for good. Exchanges list the networks they accept on their deposit screen.
+
+4. **Do you have a little ETH for fees?**
+
+   Every transfer costs a small [gas fee](/glossary/#gas), paid in ETH on Ethereum and on most layer 2s. Even sending USDC needs some ETH on the same network.
 
 ## Option 1: Sell directly in your wallet {#sell-in-your-wallet}
 
@@ -42,7 +53,9 @@ Some wallets let you sell crypto for cash without leaving the app. This is usual
 
 Selling inside a wallet is usually handled by a third-party payment provider, and it is not available in every country. Fees can be higher than on an exchange, so compare before you sell larger amounts.
 
-[Find wallets that let you sell for cash](/wallets/find-wallet/?purchases=withdraw_crypto)
+<ButtonLink href="/wallets/find-wallet/?purchases=withdraw_crypto">
+  See wallets that sell for cash
+</ButtonLink>
 
 ## Option 2: Sell on an exchange and withdraw to your bank {#sell-on-an-exchange}
 
@@ -66,7 +79,11 @@ Always copy and paste addresses, never type them by hand, and check the first an
 
 ## Option 3: Spend crypto with a card {#spend-with-a-card}
 
-If you want to spend your crypto rather than move it to a bank, some crypto debit cards convert it to your currency when you pay. [Learn about crypto payments and cards](/payments/)
+If you want to spend your crypto rather than move it to a bank, some crypto debit cards convert it to your currency when you pay.
+
+<ButtonLink href="/payments/">
+  Explore crypto cards
+</ButtonLink>
 
 ## Frequently asked questions {#frequently-asked-questions}
 
