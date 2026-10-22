@@ -83,7 +83,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 Создайте новую директорию проекта из командной строки (терминала для Mac) и перейдите в нее:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -103,8 +103,8 @@ npm install viem
 
 Мы будем использовать файл `.env` для безопасного хранения нашего ключа API и приватного ключа.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Создайте файл `.env` {#create-the-dotenv-file}
@@ -217,7 +217,7 @@ main()
 
 Вернитесь в свой терминал или командную строку и выполните:
 
-```
+```sh
 node sendTx.js
 ```
 

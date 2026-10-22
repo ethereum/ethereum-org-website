@@ -139,7 +139,7 @@ Hapa ndipo tutakapobainisha mipangilio yote ya mradi wetu (kwenye hatua ya 13). 
 
 Ili kuweka mradi wetu ukiwa umepangiliwa tutaunda folda mbili mpya. Nenda kwenye saraka kuu ya mradi wako katika mstari wako wa amri na uandike:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

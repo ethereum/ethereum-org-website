@@ -55,15 +55,14 @@ published: 2021-04-22
 
 為了再次確認我們的餘額是否已入帳，讓我們使用 [Alchemy 的沙盒工具](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)發出 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 請求。這將回傳我們錢包中的 ETH 數量。在您輸入您的梅塔馬斯克帳戶地址並點擊「Send Request」後，您應該會看到類似以下的響應：
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **注意** 此結果的單位是 Wei，而不是 ETH。Wei 被用作以太幣的最小面額。從 Wei 到 ETH 的轉換為 1 ETH = 10<sup>18</sup> Wei。因此，如果我們將 0xde0b6b3a7640000 轉換為十進位，我們會得到 1\*10<sup>18</sup> Wei，這等於 1 ETH。
 
 呼！我們的假錢都在那裡了。
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## 第 6 步：初始化我們的專案 {#initialize-project}
 
 首先，我們需要為我們的專案建立一個資料夾。導覽至您的命令列並輸入：
@@ -195,7 +194,7 @@ mkdir scripts
 
 3. 因為我們繼承了歐本齊柏林合約函式庫中的類別，請在命令列中執行 `npm install @openzeppelin/contracts` 將該函式庫安裝到我們的資料夾中。本教學使用歐本齊柏林合約 5.x，這需要 Solidity 0.8.24 或更高版本。
 
-那麼，這段程式碼到底_做_了什麼？讓我們逐行分解。
+那麼，這段程式碼到底<em>做</em>了什麼？讓我們逐行分解。
 
 在我們的智能合約頂部，我們匯入了三個 [歐本齊柏林](https://openzeppelin.com/) 智能合約類別：
 

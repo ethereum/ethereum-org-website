@@ -157,7 +157,7 @@ Parametri
 
 1. Un oggetto con i seguenti campi:
    - `address` (opzionale): una stringa che rappresenta un indirizzo o un array di tali stringhe.
-     - Verranno emessi solo i log creatati da uno di questi indirizzi.
+     - Verranno emessi solo i log creati da uno di questi indirizzi.
    - `topics`: un array di specificatori di topic.
      - Ogni specificatore di topic è `null`, una stringa che rappresenta un topic o un array di stringhe.
      - Ogni posizione nell'array che non è `null` limita i log emessi solo a quelli che hanno uno dei topic dati in quella posizione.

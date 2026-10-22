@@ -80,7 +80,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 أنشئ دليل مشروع جديد من سطر الأوامر (الطرفية لأجهزة Mac) وانتقل إليه:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 سنستخدم ملف `.env` لتخزين مفتاح <span dir="ltr">API</span> والمفتاح الخاص بنا بأمان.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### <span dir="ltr">6\.</span> إنشاء ملف `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ main()
 
 ارجع إلى الطرفية أو سطر الأوامر وقم بتشغيل:
 
-```
+```sh
 node sendTx.js
 ```
 

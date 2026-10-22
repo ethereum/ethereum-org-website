@@ -139,7 +139,7 @@ async function mintNFT(tokenURI) {
 
 Kwa sababu mtandao umesanidiwa na ufunguo wetu wa faragha, ethers inatia saini muamala nao kiotomatiki kabla ya kuutuma.
 
-Kuita `mintNFT` kunarejesha mara tu muamala unapokuwa umetumwa, na inatupa heshi ya muamala, ambayo tunaweza kuitumia kuhakikisha muamala wetu ulichimbwa na haukudondoshwa na mtandao. `tx.wait()` kisha inasubiri hadi muamala ujumuishwe kwenye kizuizi. Tumeongeza pia ukaguzi wa makosa ili tujue ikiwa muamala wetu ulifanikiwa kupita.
+Kuita `mintNFT` kunarejesha mara tu muamala unapokuwa umetumwa, na inatupa heshi ya muamala, ambayo tunaweza kuitumia kuhakikisha muamala wetu ulichimbwa na haukudondoshwa na mtandao. `tx.wait()` kisha inasubiri hadi muamala ujumuishwe kwenye kitalu. Tumeongeza pia ukaguzi wa makosa ili tujue ikiwa muamala wetu ulifanikiwa kupita.
 
 ```js
 import { network } from "hardhat"

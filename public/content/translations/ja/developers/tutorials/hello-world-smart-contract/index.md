@@ -139,7 +139,7 @@ export default defineConfig({
 
 プロジェクトを整理するために、2つの新しいフォルダを作成します。コマンドラインでプロジェクトのルートディレクトリに移動し、次のように入力します。
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

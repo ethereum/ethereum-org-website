@@ -80,7 +80,7 @@ Postępuj zgodnie z instrukcjami na [kraniku Alchemy Sepolia](https://www.alchem
 
 Utwórz nowy katalog projektu z wiersza poleceń (terminal na Macach) i przejdź do niego:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Użyjemy pliku `.env`, aby bezpiecznie przechowywać nasz klucz API i klucz prywatny.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Utwórz plik `.env` {#create-the-dotenv-file}
@@ -199,7 +199,7 @@ Zanim przejdziemy do uruchomienia tego kodu, pomówmy o niektórych jego element
   - `nonce`: Zobacz definicję nonce powyżej. Nonce zaczyna liczyć od zera.
   - [OPCJONALNIE] data: Używane do wysyłania dodatkowych informacji wraz z transferem lub wywoływania inteligentnego kontraktu, niewymagane w przypadku transferów salda, sprawdź uwagę poniżej.
 - `signedTx`: Do podpisania naszego obiektu transakcji użyjemy metody `signTransaction`, która podpisuje go lokalnie za pomocą konta utworzonego z naszego `PRIVATE_KEY`.
-- `sendRawTransaction`: Gdy mamy już podpisananą transakcję, możemy ją wysłać, aby została uwzględniona w kolejnym bloku, używając `sendRawTransaction`, co wywołuje `eth_sendRawTransaction`.
+- `sendRawTransaction`: Gdy mamy już podpisaną transakcję, możemy ją wysłać, aby została uwzględniona w kolejnym bloku, używając `sendRawTransaction`, co wywołuje `eth_sendRawTransaction`.
 - `waitForTransactionReceipt`: Czeka, aż transakcja zostanie uwzględniona w bloku i zwraca jej pokwitowanie.
 
 **Uwaga dotycząca danych (data)**
@@ -214,7 +214,7 @@ Istnieją dwa główne typy transakcji, które można wysłać w Ethereum.
 
 Wróć do swojego terminala lub wiersza poleceń i uruchom:
 
-```
+```sh
 node sendTx.js
 ```
 

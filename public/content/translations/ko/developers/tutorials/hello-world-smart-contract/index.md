@@ -144,7 +144,7 @@ export default defineConfig({
 
 프로젝트를 체계적으로 관리하기 위해 두 개의 새 폴더를 만들겠습니다. 명령줄에서 프로젝트의 루트 디렉터리로 이동하여 다음을 입력하세요.
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

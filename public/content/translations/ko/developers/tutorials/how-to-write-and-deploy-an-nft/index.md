@@ -55,15 +55,14 @@ Alchemy 계정을 생성했다면, 앱을 생성하여 API 키를 생성할 수 
 
 잔액이 제대로 들어왔는지 다시 확인하기 위해, [Alchemy의 샌드박스 도구](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)를 사용하여 [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) 요청을 보내보겠습니다. 이 요청은 지갑에 있는 ETH의 양을 반환합니다. 메타마스크 계정 주소를 입력하고 "Send Request"를 클릭하면 다음과 같은 응답을 볼 수 있습니다.
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **참고** 이 결과는 ETH가 아니라 Wei 단위입니다. Wei는 이더의 가장 작은 단위로 사용됩니다. Wei에서 ETH로의 변환 비율은 1 ETH = 10<sup>18</sup> Wei입니다. 따라서 0xde0b6b3a7640000을 십진수로 변환하면 1\*10<sup>18</sup> Wei가 되며, 이는 1 ETH와 같습니다.
 
 휴! 가짜 돈이 모두 잘 들어왔네요.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## 6단계: 프로젝트 초기화하기 {#initialize-project}
 
 먼저 프로젝트를 위한 폴더를 생성해야 합니다. 명령줄로 이동하여 다음을 입력하세요.

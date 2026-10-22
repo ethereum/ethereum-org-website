@@ -51,15 +51,14 @@ Bạn có thể tải xuống và tạo một Tài khoản MetaMask miễn phí 
 
 Để kiểm tra lại xem số dư của chúng ta đã có ở đó chưa, hãy thực hiện một yêu cầu [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) bằng cách sử dụng [công cụ hộp cát của Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Điều này sẽ trả về số lượng ETH trong Ví của chúng ta. Sau khi bạn nhập địa chỉ Tài khoản MetaMask của mình và nhấp vào “Send Request”, bạn sẽ thấy một phản hồi như thế này:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Lưu ý** Kết quả này tính bằng Wei, không phải ETH. Wei được sử dụng làm mệnh giá nhỏ nhất của ether. Việc chuyển đổi từ Wei sang ETH là 1 eth = 10<sup>18</sup> Wei. Vì vậy, nếu chúng ta chuyển đổi 0xde0b6b3a7640000 sang số thập phân, chúng ta sẽ nhận được 1\*10<sup>18</sup> Wei, tương đương với 1 ETH.
 
 Phù! Tiền giả của chúng ta đều ở đó.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## Bước 6: Khởi tạo dự án của chúng ta {#initialize-project}
 
 Đầu tiên, chúng ta sẽ cần tạo một thư mục cho dự án của mình. Điều hướng đến dòng lệnh của bạn và nhập:

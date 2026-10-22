@@ -37,6 +37,6 @@ published: 2021-04-22
 2. 选择 Sepolia 作为网络，并将你的 NFT 智能合约地址粘贴到“Address”（地址）框中。
 3. 将你的代币 ID 输入“Token ID”（代币 ID）框，然后选择“Import”（导入）。
 
-你可能需要刷新几次才能查看到你的 NFT——但它一定会在那里 <Emoji text="😄" size={1} />！如果梅塔马斯克提示你不是该 NFT 的所有者，请检查你是否选择了铸造该 NFT 时使用的账户。如需更多帮助，请参阅[梅塔马斯的 NFT 指南](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/)。
+你可能需要刷新几次才能查看到你的 NFT——但它一定会在那里 <Emoji text="😄" size={1} />！如果梅塔马斯克提示你不是该 NFT 的所有者，请检查你是否选择了铸造该 NFT 时使用的账户。如需更多帮助，请参阅[梅塔马斯克的 NFT 指南](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/)。
 
 恭喜！你已成功铸造了一个 NFT，现在你可以查看它了！我们迫不及待地想看到你将如何在 NFT 世界中大展身手！

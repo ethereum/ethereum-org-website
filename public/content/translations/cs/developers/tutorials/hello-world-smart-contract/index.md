@@ -139,7 +139,7 @@ Zde specifikujeme veškeré nastavení pro náš projekt (v kroku 13). Prozatím
 
 Abychom udrželi náš projekt organizovaný, vytvoříme dvě nové složky. Přejděte do kořenového adresáře vašeho projektu v příkazovém řádku a zadejte:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

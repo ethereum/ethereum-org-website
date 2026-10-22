@@ -176,7 +176,7 @@ Pinata에 업로드한 `nft-metadata.json`을 기억하시나요? Pinata에서 �
 
 > 새 창에서 `https://gateway.pinata.cloud/ipfs/<metadata-CID>`를 로드하여 복사한 CID가 <strong>nft-metadata.json</strong>에 연결되는지 다시 확인하세요. 페이지는 아래 스크린샷과 유사해야 합니다:
 
-![Your page should display the json metadata](./metadataJSON.png)_Your page should display the json metadata_
+![Your page should display the json metadata](./metadataJSON.png)_페이지에 json 메타데이터가 표시되어야 합니다_
 
 전체적으로 코드는 다음과 같아야 합니다:
 
@@ -222,7 +222,7 @@ Your NFT was minted in block <block number>
 
 트랜잭션의 세부 정보를 보려면 [Etherscan](https://sepolia.etherscan.io/)이나 [Blockscout](https://eth-sepolia.blockscout.com/)에서 해당 해시를 검색하세요.
 
-![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_View your NFT transaction hash on Etherscan_
+![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan에서 NFT 트랜잭션 해시 보기_
 
 이것으로 끝입니다! 이제 이더리움 블록체인에 NFT를 배포하고 발행했습니다 <Emoji text=":money_mouth_face:" size={1} />
 

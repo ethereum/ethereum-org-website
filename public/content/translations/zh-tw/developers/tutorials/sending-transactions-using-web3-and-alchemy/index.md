@@ -13,7 +13,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 這是一篇適合初學者的指南，介紹如何使用 [viem](https://viem.sh/) 函式庫發送以太坊交易。要將交易發送到以太坊區塊鏈，主要有三個步驟：建立、簽署和廣播。我們將逐一介紹這三個步驟，希望能解答您的任何疑問！在本教學中，我們將使用 [Alchemy](https://www.alchemy.com/) 將我們的交易發送到以太坊鏈。您可以[在此建立免費的 Alchemy 帳戶](https://auth.alchemy.com/signup)。
 
-**注意：** 本指南適用於在應用程式的_後端_簽署交易。如果您想在前端整合交易簽署，請查看 [梅塔馬斯克提供者 API (MetaMask provider API)](https://docs.metamask.io/wallet/reference/provider-api/)。
+**注意：** 本指南適用於在應用程式的<em>後端</em>簽署交易。如果您想在前端整合交易簽署，請查看 [梅塔馬斯克提供者 API (MetaMask provider API)](https://docs.metamask.io/wallet/reference/provider-api/)。
 
 ## 基礎知識 {#the-basics}
 
@@ -42,7 +42,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 `eth_sendTransaction` 和 `eth_sendRawTransaction` 都是以太坊 API 函式，用於將交易廣播到以太坊網路，以便將其新增到未來的區塊中。它們的區別在於處理交易簽署的方式。
 
-- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) 用於發送_未簽署_的交易，這意味著您發送到的節點必須管理您的私鑰，以便在將交易廣播到鏈上之前對其進行簽署。由於 Alchemy 不會持有使用者的私鑰，因此他們不支援此方法。
+- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) 用於發送<em>未簽署</em>的交易，這意味著您發送到的節點必須管理您的私鑰，以便在將交易廣播到鏈上之前對其進行簽署。由於 Alchemy 不會持有使用者的私鑰，因此他們不支援此方法。
 - [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) 用於廣播已經簽署的交易。這意味著您必須先使用您的私鑰簽署交易（在 viem 中，使用 [`signTransaction`](https://viem.sh/docs/actions/wallet/signTransaction) 和[本機帳戶](https://viem.sh/docs/accounts/local/privateKeyToAccount)），然後將結果傳遞給 `eth_sendRawTransaction`。
 
 使用 viem 時，可以透過呼叫 [`sendRawTransaction`](https://viem.sh/docs/actions/wallet/sendRawTransaction) 函式來存取 `eth_sendRawTransaction`。
@@ -80,7 +80,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 從命令列（Mac 的終端機）建立一個新的專案目錄並導覽進入：
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 我們將使用 `.env` 檔案來安全地儲存我們的 API 金鑰和私鑰。
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. 建立 `.env` 檔案 {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ main()
 
 導覽回您的終端機或命令列並執行：
 
-```
+```sh
 node sendTx.js
 ```
 

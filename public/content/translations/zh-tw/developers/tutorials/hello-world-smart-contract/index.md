@@ -144,7 +144,7 @@ export default defineConfig({
 
 為了保持專案井然有序，我們將建立兩個新資料夾。在命令列中導覽至專案的根目錄並輸入：
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

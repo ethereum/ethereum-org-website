@@ -139,7 +139,7 @@ export default defineConfig({
 
 为了保持项目井然有序，我们将创建两个新文件夹。在命令行中导航到项目的根目录并输入：
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

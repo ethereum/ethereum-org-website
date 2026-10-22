@@ -80,7 +80,7 @@ ETH almak için [Alchemy Sepolia musluğundaki](https://www.alchemy.com/faucets/
 
 Komut satırından (Mac'ler için terminal) yeni bir proje dizini oluşturun ve içine gidin:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 API anahtarımızı ve özel anahtarımızı güvenli bir şekilde saklamak için bir `.env` dosyası kullanacağız.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. `.env` dosyasını oluşturun {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Ethereum'da gönderilebilecek iki ana işlem türü vardır.
 
 Terminalinize veya komut satırınıza geri dönün ve şunu çalıştırın:
 
-```
+```sh
 node sendTx.js
 ```
 

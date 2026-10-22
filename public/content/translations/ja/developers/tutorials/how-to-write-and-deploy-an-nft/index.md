@@ -51,15 +51,14 @@ Alchemyアカウントを作成したら、アプリを作成してアプリケ�
 
 残高があることを再確認するために、[Alchemyのサンドボックスツール](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest)を使用して[eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance)リクエストを送信してみましょう。これにより、ウォレット内のETHの量が返されます。メタマスクのアカウントのアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されるはずです。
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **注** この結果はETHではなくWeiで表示されています。Weiはイーサの最小単位として使用されます。WeiからETHへの変換は、1 eth = 10<sup>18</sup> Weiです。したがって、0xde0b6b3a7640000を10進数に変換すると、1\*10<sup>18</sup> Weiとなり、1 ETHに等しくなります。
 
 ふう！テスト用の資金がちゃんと入っていますね。
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## ステップ6：プロジェクトを初期化する {#initialize-project}
 
 まず、プロジェクト用のフォルダを作成する必要があります。コマンドラインに移動して、次のように入力します。
@@ -191,7 +190,7 @@ mkdir scripts
 
 3. オープンツェッペリンのコントラクトライブラリからクラスを継承しているため、コマンドラインで`npm install @openzeppelin/contracts`を実行して、ライブラリをフォルダにインストールします。このチュートリアルではOpenZeppelin Contracts 5.xを使用しており、これにはSolidity 0.8.24以降が必要です。
 
-では、このコードは正確に_何をする_のでしょうか？1行ずつ分解してみましょう。
+では、このコードは正確に<em>何をする</em>のでしょうか？1行ずつ分解してみましょう。
 
 スマート・コントラクトの先頭で、3つの[オープンツェッペリン](https://openzeppelin.com/)のスマート・コントラクトクラスをインポートします。
 

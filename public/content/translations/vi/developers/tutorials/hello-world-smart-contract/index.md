@@ -139,7 +139,7 @@ export default defineConfig({
 
 Để giữ cho dự án của chúng ta được tổ chức tốt, chúng ta sẽ tạo hai thư mục mới. Điều hướng đến thư mục gốc của dự án trong dòng lệnh của bạn và nhập:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

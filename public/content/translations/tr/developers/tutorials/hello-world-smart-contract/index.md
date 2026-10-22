@@ -144,7 +144,7 @@ Burası, projemiz için tüm kurulumu belirteceğimiz yerdir (13. adımda). Şim
 
 Projemizi düzenli tutmak için iki yeni klasör oluşturacağız. Komut satırınızda projenizin kök dizinine gidin ve şunu yazın:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

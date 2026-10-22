@@ -51,15 +51,14 @@ Ili kusambaza mkataba mahiri wetu kwenye mtandao wa majaribio, tutahitaji ETH ba
 
 Ili kuhakikisha salio letu lipo, hebu tufanye ombi la [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) kwa kutumia [zana ya sandbox ya Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Hii itarudisha kiasi cha ETH kwenye mkoba wetu. Baada ya kuweka anwani ya akaunti yako ya MetaMask na kubofya “Tuma Ombi” (“Send Request”), unapaswa kuona jibu kama hili:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Kumbuka** Matokeo haya yapo katika Wei, si ETH. Wei inatumika kama kiasi kidogo zaidi cha Etha. Ubadilishaji kutoka Wei hadi ETH ni 1 eth = 10<sup>18</sup> Wei. Kwa hivyo tukibadilisha 0xde0b6b3a7640000 kuwa desimali tunapata 1\*10<sup>18</sup> Wei, ambayo ni sawa na 1 ETH.
 
 Phew! Pesa zetu za majaribio zote zipo.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## Hatua ya 6: Anzisha mradi wetu {#initialize-project}
 
 Kwanza, tutahitaji kuunda folda kwa ajili ya mradi wetu. Nenda kwenye mstari wako wa amri na uandike:

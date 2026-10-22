@@ -13,7 +13,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 これは、[Viem](https://viem.sh/)ライブラリを使用してイーサリアムのトランザクションを送信するための初心者向けガイドです。イーサリアムのブロックチェーンにトランザクションを送信するには、作成、署名、ブロードキャストの3つの主要なステップがあります。これら3つすべてについて説明し、皆さんの疑問にお答えします！このチュートリアルでは、[Alchemy](https://www.alchemy.com/)を使用してイーサリアムのチェーンにトランザクションを送信します。[こちらから無料のAlchemyアカウントを作成](https://auth.alchemy.com/signup)できます。
 
-**注:** このガイドは、アプリの_バックエンド_でトランザクションに署名するためのものです。フロントエンドでトランザクションの署名を統合したい場合は、[メタマスクのプロバイダーAPI](https://docs.metamask.io/wallet/reference/provider-api/)を確認してください。
+**注:** このガイドは、アプリの<em>バックエンド</em>でトランザクションに署名するためのものです。フロントエンドでトランザクションの署名を統合したい場合は、[メタマスクのプロバイダーAPI](https://docs.metamask.io/wallet/reference/provider-api/)を確認してください。
 
 ## 基本事項 {#the-basics}
 
@@ -42,7 +42,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 `eth_sendTransaction`と`eth_sendRawTransaction`はどちらも、将来のブロックに追加されるようにイーサリアムのネットワークにトランザクションをブロードキャストするイーサリアムのAPI関数です。これらは、トランザクションの署名の処理方法が異なります。
 
-- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction)は_未署名_のトランザクションを送信するために使用されます。つまり、送信先のノードが秘密鍵を管理し、チェーンにブロードキャストする前にトランザクションに署名できる必要があります。Alchemyはユーザーの秘密鍵を保持しないため、このメソッドをサポートしていません。
+- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction)は<em>未署名</em>のトランザクションを送信するために使用されます。つまり、送信先のノードが秘密鍵を管理し、チェーンにブロードキャストする前にトランザクションに署名できる必要があります。Alchemyはユーザーの秘密鍵を保持しないため、このメソッドをサポートしていません。
 - [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)は、すでに署名されているトランザクションをブロードキャストするために使用されます。つまり、最初に秘密鍵を使用してトランザクションに署名し（Viemでは、[ローカルアカウント](https://viem.sh/docs/accounts/local/privateKeyToAccount)で[`signTransaction`](https://viem.sh/docs/actions/wallet/signTransaction)を使用します）、その結果を`eth_sendRawTransaction`に渡す必要があります。
 
 Viemを使用する場合、`eth_sendRawTransaction`には[`sendRawTransaction`](https://viem.sh/docs/actions/wallet/sendRawTransaction)関数を呼び出すことでアクセスします。
@@ -80,7 +80,7 @@ Viemを使用する場合、`eth_sendRawTransaction`には[`sendRawTransaction`]
 
 コマンドライン（Macの場合はターミナル）から新しいプロジェクトディレクトリを作成し、そこに移動します。
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 APIキーと秘密鍵を安全に保存するために、`.env`ファイルを使用します。
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. `.env`ファイルを作成する {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ main()
 
 ターミナルまたはコマンドラインに戻り、次を実行します。
 
-```
+```sh
 node sendTx.js
 ```
 

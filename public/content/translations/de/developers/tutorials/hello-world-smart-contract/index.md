@@ -139,7 +139,7 @@ Hier werden wir die gesamte Einrichtung für unser Projekt festlegen (in Schritt
 
 Um unser Projekt übersichtlich zu halten, erstellen wir zwei neue Ordner. Navigieren Sie in Ihrer Befehlszeile zum Stammverzeichnis Ihres Projekts und tippen Sie:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

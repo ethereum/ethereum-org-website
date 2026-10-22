@@ -139,7 +139,7 @@ Qui è dove specificheremo tutta la configurazione per il nostro progetto (nel p
 
 Per mantenere organizzato il nostro progetto creeremo due nuove cartelle. Vai alla directory principale del tuo progetto nella riga di comando e digita:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

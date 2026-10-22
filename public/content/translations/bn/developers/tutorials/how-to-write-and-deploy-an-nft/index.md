@@ -55,15 +55,14 @@ published: 2021-04-22
 
 আমাদের ব্যালেন্স সেখানে আছে কিনা তা নিশ্চিত করতে, চলুন [Alchemy-এর স্যান্ডবক্স টুল](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) ব্যবহার করে একটি [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) রিকোয়েস্ট করি। এটি আমাদের ওয়ালেট-এ থাকা ETH-এর পরিমাণ রিটার্ন করবে। আপনার মেটামাস্ক অ্যাকাউন্ট ঠিকানা ইনপুট করার পর এবং “Send Request”-এ ক্লিক করার পর, আপনি এরকম একটি রেসপন্স দেখতে পাবেন:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **নোট** এই ফলাফলটি Wei-তে, ETH-এ নয়। Wei-কে ইথার-এর সবচেয়ে ছোট একক হিসেবে ব্যবহার করা হয়। Wei থেকে ETH-এ রূপান্তর হলো 1 eth = 10<sup>18</sup> Wei। তাই যদি আমরা 0xde0b6b3a7640000-কে ডেসিমালে রূপান্তর করি তবে আমরা 1\*10<sup>18</sup> Wei পাই, যা 1 ETH-এর সমান।
 
 যাক! আমাদের সব নকল টাকা সেখানেই আছে।
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## ধাপ 6: আমাদের প্রজেক্ট ইনিশিয়ালাইজ করুন {#initialize-project}
 
 প্রথমে, আমাদের প্রজেক্টের জন্য একটি ফোল্ডার তৈরি করতে হবে। আপনার কমান্ড লাইনে যান এবং টাইপ করুন:

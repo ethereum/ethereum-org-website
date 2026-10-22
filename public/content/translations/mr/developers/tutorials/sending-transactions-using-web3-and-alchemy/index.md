@@ -80,7 +80,7 @@ ETH प्राप्त करण्यासाठी [Alchemy Sepolia फॉ
 
 कमांड लाईनवरून (मॅकसाठी टर्मिनल) नवीन प्रोजेक्ट डिरेक्टरी तयार करा आणि त्यात जा:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 आपली API की आणि खाजगी की सुरक्षितपणे साठवण्यासाठी आपण `.env` फाईल वापरू.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. `.env` फाईल तयार करा {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ main()
 
 तुमच्या टर्मिनल किंवा कमांड लाईनवर परत जा आणि चालवा:
 
-```
+```sh
 node sendTx.js
 ```
 

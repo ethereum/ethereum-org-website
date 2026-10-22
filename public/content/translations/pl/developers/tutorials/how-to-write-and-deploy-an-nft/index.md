@@ -51,15 +51,14 @@ Aby wdrożyć nasz inteligentny kontrakt w sieci testowej, będziemy potrzebowa�
 
 Aby upewnić się, że nasze saldo tam jest, wyślijmy żądanie [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) za pomocą [narzędzia sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Zwróci to ilość ETH w naszym portfelu. Po wprowadzeniu adresu konta MetaMask i kliknięciu „Send Request”, powinieneś zobaczyć odpowiedź podobną do tej:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Uwaga** Ten wynik jest w wei, a nie w ETH. Wei jest używane jako najmniejszy nominał etheru. Przelicznik z wei na ETH to 1 eth = 10<sup>18</sup> wei. Więc jeśli zamienimy 0xde0b6b3a7640000 na system dziesiętny, otrzymamy 1\*10<sup>18</sup> wei, co równa się 1 ETH.
 
 Uff! Nasze fałszywe pieniądze są na miejscu.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## Krok 6: Zainicjuj nasz projekt {#initialize-project}
 
 Najpierw będziemy musieli utworzyć folder dla naszego projektu. Przejdź do wiersza poleceń i wpisz:

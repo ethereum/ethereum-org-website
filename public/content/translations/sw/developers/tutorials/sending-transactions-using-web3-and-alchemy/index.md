@@ -80,7 +80,7 @@ Fuata maagizo kwenye [bomba la Sepolia la Alchemy](https://www.alchemy.com/fauce
 
 Unda saraka mpya ya mradi kutoka kwenye mstari wa amri (terminal kwa macs) na uende ndani yake:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Tutatumia faili la `.env` kuhifadhi kwa usalama ufunguo wetu wa API na ufunguo wa siri.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Unda faili la `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Kuna aina mbili kuu za miamala inayoweza kutumwa katika Ethereum.
 
 Nenda nyuma kwenye terminal yako au mstari wa amri na uendeshe:
 
-```
+```sh
 node sendTx.js
 ```
 

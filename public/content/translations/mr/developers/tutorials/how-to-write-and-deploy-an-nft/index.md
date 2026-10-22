@@ -55,15 +55,14 @@ NFT मुळे ब्लॉकचेन लोकांच्या नजर�
 
 आमची शिल्लक तिथे आहे याची खात्री करण्यासाठी, [Alchemy च्या सँडबॉक्स टूलचा](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest) वापर करून [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) विनंती करूया. हे आमच्या वॉलेटमधील ETH ची रक्कम परत करेल. तुम्ही तुमचा मेटामास्क खाते पत्ता प्रविष्ट केल्यानंतर आणि “Send Request” वर क्लिक केल्यानंतर, तुम्हाला असा प्रतिसाद दिसेल:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **टीप** हा निकाल Wei मध्ये आहे, ETH मध्ये नाही. Wei हे इथरचे सर्वात लहान मूल्य म्हणून वापरले जाते. Wei मधून ETH मध्ये रूपांतरण 1 eth = 10<sup>18</sup> Wei असे आहे. त्यामुळे जर आपण 0xde0b6b3a7640000 चे दशांश मध्ये रूपांतर केले तर आपल्याला 1\*10<sup>18</sup> Wei मिळतात, जे 1 ETH च्या बरोबरीचे आहे.
 
 हुश्श! आमचे सर्व बनावट पैसे तिथे आहेत.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## पायरी 6: आमचा प्रोजेक्ट इनिशियलाइज करा {#initialize-project}
 
 प्रथम, आम्हाला आमच्या प्रोजेक्टसाठी एक फोल्डर तयार करावे लागेल. तुमच्या कमांड लाईनवर जा आणि टाइप करा:

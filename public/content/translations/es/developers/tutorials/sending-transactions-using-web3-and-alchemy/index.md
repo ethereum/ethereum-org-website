@@ -80,7 +80,7 @@ Sigue las instrucciones en el [faucet de Sepolia de Alchemy](https://www.alchemy
 
 Crea un nuevo directorio de proyecto desde la línea de comandos (terminal para Mac) y navega hacia él:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Usaremos un archivo `.env` para almacenar de forma segura nuestra clave API y clave privada.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Crea el archivo `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Hay dos tipos principales de transacciones que se pueden enviar en Ethereum.
 
 Navega de vuelta a tu terminal o línea de comandos y ejecuta:
 
-```
+```sh
 node sendTx.js
 ```
 

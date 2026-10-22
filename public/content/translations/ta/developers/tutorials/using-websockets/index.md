@@ -241,4 +241,4 @@ WebSocket மூலம் இணைக்கப்படும் போது, 
 
 ---
 
-இலசவமாக [Alchemy-இல் பதிவு செய்யுங்கள்](https://auth.alchemy.com), [Alchemy-இன் ஆவணங்களைச்](https://www.alchemy.com/docs/) சரிபார்க்கவும், மேலும் சமீபத்திய செய்திகளுக்கு, [ட்விட்டரில்](https://x.com/Alchemy) Alchemy-ஐப் பின்தொடரவும்.
+இலவசமாக [Alchemy-இல் பதிவு செய்யுங்கள்](https://auth.alchemy.com), [Alchemy-இன் ஆவணங்களைச்](https://www.alchemy.com/docs/) சரிபார்க்கவும், மேலும் சமீபத்திய செய்திகளுக்கு, [ட்விட்டரில்](https://x.com/Alchemy) Alchemy-ஐப் பின்தொடரவும்.

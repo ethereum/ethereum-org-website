@@ -15,7 +15,7 @@ Lassen Sie uns anfangen!
 
 ## Schritt 1: Überprüfen Sie Ihr Setup {#install-web3}
 
-Wenn Sie dem ersten Tutorial zur Erstellung Ihres NFT-Smart-Contracts gefolgt sind, haben Sie bereits alles, was Sie brauchen: ein Hardhat-3-Projekt mit dem [Ethers-Plugin](https://hardhat.org/docs/plugins/hardhat-ethers) und [ethers.js](https://docs.ethers.org/v6/), einer Bibliothek, die verwendet wird, um das Erstellen von Anfragen an die [Ethereum](/) -Blockchain zu erleichtern. Wir werden unseren Code für das Prägen als Hardhat-Skript schreiben, sodass er die Sepolia-Netzwerkeinstellungen und die Werte `API_URL` und `PRIVATE_KEY` aus Teil 1 wiederverwendet – es gibt nichts Neues zu installieren.
+Wenn Sie dem ersten Tutorial zur Erstellung Ihres NFT-Smart-Contracts gefolgt sind, haben Sie bereits alles, was Sie brauchen: ein Hardhat-3-Projekt mit dem [Ethers-Plugin](https://hardhat.org/docs/plugins/hardhat-ethers) und [ethers.js](https://docs.ethers.org/v6/), einer Bibliothek, die verwendet wird, um das Erstellen von Anfragen an die [Ethereum](/)-Blockchain zu erleichtern. Wir werden unseren Code für das Prägen als Hardhat-Skript schreiben, sodass er die Sepolia-Netzwerkeinstellungen und die Werte `API_URL` und `PRIVATE_KEY` aus Teil 1 wiederverwendet – es gibt nichts Neues zu installieren.
 
 ## Schritt 2: Erstellen Sie eine Datei `mint-nft.js` {#create-mintnftjs}
 

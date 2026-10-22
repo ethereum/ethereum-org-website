@@ -215,7 +215,7 @@ const unwatch = client.watchBlocks({
 < {"jsonrpc":"2.0","method":"eth_subscription","params":{"result":"0x4a62d0ad7c8868fbbfa10604e68638e637c6fc6f64fd1fb4ca042dcd0158c992","subscription":"0x1c2365b029179adf1e84b9e327315249"}}
 ```
 
-一些提供者也提供他們自己的訂閱類型。例如，Alchemy 的 [`alchemy_pendingTransactions`](https://www.alchemy.com/docs/reference/alchemy-pendingtransactions) 發出_完整的交易物件_而不僅僅是雜湊，並接受選擇性的 `fromAddress`、`toAddress` 和 `hashesOnly` 過濾器。這些不是標準 JSON-RPC 應用程式介面 (API) 的一部分，因此它們僅適用於該提供者。
+一些提供者也提供他們自己的訂閱類型。例如，Alchemy 的 [`alchemy_pendingTransactions`](https://www.alchemy.com/docs/reference/alchemy-pendingtransactions) 發出<em>完整的交易物件</em>而不僅僅是雜湊，並接受選擇性的 `fromAddress`、`toAddress` 和 `hashesOnly` 過濾器。這些不是標準 JSON-RPC 應用程式介面 (API) 的一部分，因此它們僅適用於該提供者。
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 

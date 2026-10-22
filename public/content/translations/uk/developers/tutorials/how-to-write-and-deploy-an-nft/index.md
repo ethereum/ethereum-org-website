@@ -55,15 +55,14 @@ published: 2021-04-22
 
 Щоб переконатися, що наш баланс на місці, давайте зробимо запит [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) за допомогою [інструмента пісочниці Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Це поверне кількість ETH у нашому гаманці. Після того, як ви введете адресу свого акаунта МетаМаск і натиснете «Send Request», ви побачите таку відповідь:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Примітка** Цей результат у Wei, а не в ETH. Wei використовується як найменший номінал етеру. Перетворення з Wei в ETH: 1 ETH = 10<sup>18</sup> Wei. Отже, якщо ми переведемо 0xde0b6b3a7640000 у десяткову систему, ми отримаємо 1\*10<sup>18</sup> Wei, що дорівнює 1 ETH.
 
 Хух! Наші несправжні гроші на місці.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## Крок 6: Ініціалізація нашого проєкту {#initialize-project}
 
 Спочатку нам потрібно створити папку для нашого проєкту. Перейдіть до командного рядка та введіть:

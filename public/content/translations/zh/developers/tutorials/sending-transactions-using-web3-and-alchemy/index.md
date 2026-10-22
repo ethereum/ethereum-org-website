@@ -16,7 +16,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 这是一份对初学者友好的指南，介绍如何使用 [viem](https://viem.sh/) 库发送以太坊交易。向以太坊区块链发送交易主要有三个步骤：创建、签名和广播。我们将逐一介绍这三个步骤，希望能解答你可能遇到的任何问题！在本教程中，我们将使用 [Alchemy](https://www.alchemy.com/) 将我们的交易发送到以太坊链。你可以[在此处创建一个免费的 Alchemy 账户](https://auth.alchemy.com/signup)。
 
-**注意：** 本指南适用于在应用程序的_后端_对交易进行签名。如果你想在前端集成交易签名，请查看[梅塔马斯克提供程序 API](https://docs.metamask.io/wallet/reference/provider-api/)。
+**注意：** 本指南适用于在应用程序的<em>后端</em>对交易进行签名。如果你想在前端集成交易签名，请查看[梅塔马斯克提供程序 API](https://docs.metamask.io/wallet/reference/provider-api/)。
 
 ## 基础知识 {#the-basics}
 
@@ -45,7 +45,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 `eth_sendTransaction` 和 `eth_sendRawTransaction` 都是以太坊 API 函数，它们将交易广播到以太坊网络，以便将其添加到未来的区块中。它们在处理交易签名的方式上有所不同。
 
-- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) 用于发送_未签名_的交易，这意味着你发送到的节点必须管理你的私钥，以便它可以在将交易广播到链上之前对其进行签名。由于 Alchemy 不持有用户的私钥，因此他们不支持此方法。
+- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) 用于发送<em>未签名</em>的交易，这意味着你发送到的节点必须管理你的私钥，以便它可以在将交易广播到链上之前对其进行签名。由于 Alchemy 不持有用户的私钥，因此他们不支持此方法。
 - [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) 用于广播已经签名的交易。这意味着你首先必须使用你的私钥对交易进行签名（在 viem 中，使用带有[本地账户](https://viem.sh/docs/accounts/local/privateKeyToAccount)的 [`signTransaction`](https://viem.sh/docs/actions/wallet/signTransaction)），然后将结果传递给 `eth_sendRawTransaction`。
 
 使用 viem 时，可以通过调用函数 [`sendRawTransaction`](https://viem.sh/docs/actions/wallet/sendRawTransaction) 来访问 `eth_sendRawTransaction`。
@@ -83,7 +83,7 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 从命令行（Mac 的终端）创建一个新的项目目录并导航进入该目录：
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -103,8 +103,8 @@ npm install viem
 
 我们将使用一个 `.env` 文件来安全地存储我们的 API 密钥和私钥。
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. 创建 `.env` 文件 {#create-the-dotenv-file}
@@ -217,7 +217,7 @@ main()
 
 导航回你的终端或命令行并运行：
 
-```
+```sh
 node sendTx.js
 ```
 

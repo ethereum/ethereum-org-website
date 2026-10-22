@@ -172,7 +172,7 @@ WebSocket द्वारे कनेक्ट केलेले असता�
 
 उदाहरण:
 
-हे उदाहरण इथरियम मेननेटवरील [रॅप्ड इथर (weth) कॉन्ट्रॅक्ट](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) मधून `Deposit` घटना ऐकते:
+हे उदाहरण इथरियम मेननेटवरील [रॅप्ड इथर (WETH) कॉन्ट्रॅक्ट](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) मधून `Deposit` घटना ऐकते:
 
 ```json
 > {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "topics": ["0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"]}]}

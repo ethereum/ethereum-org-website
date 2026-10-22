@@ -80,7 +80,7 @@ Làm theo các hướng dẫn trên [vòi Sepolia của Alchemy](https://www.alc
 
 Tạo một thư mục dự án mới từ dòng lệnh (terminal đối với máy Mac) và điều hướng vào đó:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Chúng ta sẽ sử dụng một tệp `.env` để lưu trữ an toàn khóa API và khóa riêng tư của mình.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Tạo tệp `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Có hai loại giao dịch chính có thể được gửi trong Ethereum.
 
 Điều hướng trở lại terminal hoặc dòng lệnh của bạn và chạy:
 
-```
+```sh
 node sendTx.js
 ```
 

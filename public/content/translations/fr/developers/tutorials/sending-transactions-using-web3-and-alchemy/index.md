@@ -80,7 +80,7 @@ Suivez les instructions sur le [faucet Sepolia d'Alchemy](https://www.alchemy.co
 
 Créez un nouveau répertoire de projet depuis la ligne de commande (terminal pour Mac) et accédez-y :
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Nous utiliserons un fichier `.env` pour stocker en toute sécurité notre clé d'API et notre clé privée.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Créer le fichier `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Il existe deux principaux types de transactions qui peuvent être envoyées sur 
 
 Revenez à votre terminal ou ligne de commande et exécutez :
 
-```
+```sh
 node sendTx.js
 ```
 

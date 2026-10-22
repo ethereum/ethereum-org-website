@@ -80,7 +80,7 @@ Postupujte podle pokynů na [faucetu Alchemy Sepolia](https://www.alchemy.com/fa
 
 Vytvořte nový adresář projektu z příkazového řádku (terminálu na Macu) a přejděte do něj:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 K bezpečnému uložení našeho klíče API a soukromého klíče použijeme soubor `.env`.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Vytvořte soubor `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ V Ethereu lze odeslat dva hlavní typy transakcí.
 
 Přejděte zpět do terminálu nebo příkazového řádku a spusťte:
 
-```
+```sh
 node sendTx.js
 ```
 

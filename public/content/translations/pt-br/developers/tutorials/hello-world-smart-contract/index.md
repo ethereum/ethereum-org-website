@@ -139,7 +139,7 @@ export default defineConfig({
 
 Para manter nosso projeto organizado, criaremos duas novas pastas. Navegue até o diretório raiz do seu projeto na sua linha de comando e digite:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

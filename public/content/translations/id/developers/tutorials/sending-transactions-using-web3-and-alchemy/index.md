@@ -80,7 +80,7 @@ Ikuti instruksi di [faucet Sepolia Alchemy](https://www.alchemy.com/faucets/ethe
 
 Buat direktori proyek baru dari baris perintah (terminal untuk Mac) dan navigasikan ke dalamnya:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -100,8 +100,8 @@ npm install viem
 
 Kita akan menggunakan file `.env` untuk menyimpan kunci API dan kunci privat kita dengan aman.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. Buat file `.env` {#create-the-dotenv-file}
@@ -214,7 +214,7 @@ Ada dua jenis utama transaksi yang dapat dikirim di Ethereum.
 
 Navigasikan kembali ke terminal atau baris perintah Anda dan jalankan:
 
-```
+```sh
 node sendTx.js
 ```
 

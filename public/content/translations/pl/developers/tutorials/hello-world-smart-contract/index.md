@@ -139,7 +139,7 @@ To tutaj określimy całą konfigurację naszego projektu (w kroku 13). Na razie
 
 Aby utrzymać porządek w naszym projekcie, utworzymy dwa nowe foldery. Przejdź do katalogu głównego swojego projektu w wierszu poleceń i wpisz:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

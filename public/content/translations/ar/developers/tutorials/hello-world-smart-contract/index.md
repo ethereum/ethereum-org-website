@@ -139,7 +139,7 @@ export default defineConfig({
 
 للحفاظ على تنظيم مشروعنا، سنقوم بإنشاء مجلدين جديدين. انتقل إلى الدليل الجذر لمشروعك في سطر الأوامر واكتب:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

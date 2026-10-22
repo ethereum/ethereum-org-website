@@ -139,7 +139,7 @@ Di sinilah kita akan menentukan semua penyiapan untuk proyek kita (pada langkah 
 
 Untuk menjaga proyek kita tetap teratur, kita akan membuat dua folder baru. Arahkan ke direktori akar proyek Anda di baris perintah Anda dan ketik:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```

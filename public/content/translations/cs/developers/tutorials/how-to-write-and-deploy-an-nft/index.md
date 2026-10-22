@@ -51,15 +51,14 @@ Abychom mohli nasadit náš chytrý kontrakt na testnet, budeme potřebovat něj
 
 Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) pomocí [nástroje sandbox od Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). To nám vrátí množství ETH v naší peněžence. Po zadání adresy vašeho účtu v MetaMasku a kliknutí na „Send Request“ byste měli vidět podobnou odpověď:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Poznámka** Tento výsledek je ve Wei, nikoli v ETH. Wei se používá jako nejmenší nominální hodnota etheru. Převod z Wei na ETH je 1 eth = 10<sup>18</sup> Wei. Pokud tedy převedeme 0xde0b6b3a7640000 do desítkové soustavy, dostaneme 1\*10<sup>18</sup> Wei, což se rovná 1 ETH.
 
 Uf! Naše falešné peníze tam všechny jsou.
 
-```json
-{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
-```
 ## Krok 6: Inicializace našeho projektu {#initialize-project}
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte:

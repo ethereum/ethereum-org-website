@@ -4,8 +4,8 @@ description: "Viem 라이브러리를 사용하여 이더리움 트랜잭션을 
 author: "엘란 할펀"
 tags:
   - 트랜잭션
-  - 비엠
-  - 알케미
+  - viem
+  - alchemy
 skill: beginner
 breadcrumb: "트랜잭션 전송하기"
 lang: ko
@@ -83,7 +83,7 @@ Viem을 사용할 때 `eth_sendRawTransaction`은 [`sendRawTransaction`](https:/
 
 명령줄(Mac의 경우 터미널)에서 새 프로젝트 디렉터리를 생성하고 해당 디렉터리로 이동합니다.
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
@@ -103,8 +103,8 @@ npm install viem
 
 API 키와 개인 키를 안전하게 저장하기 위해 `.env` 파일을 사용할 것입니다.
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. `.env` 파일 생성하기 {#create-the-dotenv-file}
@@ -217,7 +217,7 @@ main()
 
 터미널이나 명령줄로 돌아가서 다음을 실행합니다.
 
-```
+```sh
 node sendTx.js
 ```
 

@@ -115,7 +115,7 @@ Nejprve definujme funkci s názvem `mintNFT(tokenURI)` a vytvořme naši transak
 
 1. Zavolejte funkci `mintNFT` na instanci našeho kontraktu s naší vlastní adresou jako příjemcem a URI metadat. Toto je výpočet, který chceme v této transakci provést — což je v tomto případě ražení nezaměnitelného tokenu (NFT).
 
-Nemusíte sami zjišťovat nonce (počet transakcí odeslaných z vaší adresy, což zabraňuje útokům typu replay), limit plynu ani poplatky: ethers je před odesláním transakce načte nebo odhadne.
+Nemusíte sami zjišťovat nonce (počet transakcí odeslaných z vaší adresy, což zabraňuje útokům typu replay), limit gasu ani poplatky: ethers je před odesláním transakce načte nebo odhadne.
 
 Váš soubor `mint-nft.js` by nyní měl vypadat takto:
 
@@ -130,7 +130,7 @@ const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 async function mintNFT(tokenURI) {
   const [signer] = await ethers.getSigners()
 
-  // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+  // Odeslat transakci. ethers za nás vyplní nonce, limit gasu a poplatky.
   const tx = await nftContract.mintNFT(signer.address, tokenURI)
 }
 ```
@@ -153,7 +153,7 @@ async function mintNFT(tokenURI) {
   const [signer] = await ethers.getSigners()
 
   try {
-    // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+    // Odeslat transakci. ethers za nás vyplní nonce, limit gasu a poplatky.
     const tx = await nftContract.mintNFT(signer.address, tokenURI)
     console.log("The hash of your transaction is:", tx.hash)
 
@@ -188,7 +188,7 @@ async function mintNFT(tokenURI) {
   const [signer] = await ethers.getSigners()
 
   try {
-    // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+    // Odeslat transakci. ethers za nás vyplní nonce, limit gasu a poplatky.
     const tx = await nftContract.mintNFT(signer.address, tokenURI)
     console.log("The hash of your transaction is:", tx.hash)
 
