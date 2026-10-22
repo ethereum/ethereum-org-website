@@ -14,9 +14,9 @@ lang: tr
 published: 2021-03-31
 ---
 
-Blokzincir geliştirmeye yeniyseniz ve nereden başlayacağınızı bilmiyorsanız veya sadece akıllı sözleşmeleri nasıl dağıtacağınızı ve onlarla nasıl etkileşime gireceğinizi anlamak istiyorsanız, bu rehber tam size göre. Sanal bir cüzdan olan [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) ve [Alchemy](https://www.alchemy.com/eth) kullanarak Sepolia test ağında basit bir akıllı sözleşme oluşturma ve dağıtma adımlarını inceleyeceğiz (bunların ne anlama geldiğini henüz anlamıyorsanız endişelenmeyin, açıklayacağız).
+Blokzincir geliştirmeye yeniyseniz ve nereden başlayacağınızı bilmiyorsanız veya sadece akıllı sözleşmeleri nasıl dağıtacağınızı ve onlarla nasıl etkileşime gireceğinizi anlamak istiyorsanız, bu rehber tam size göre. Sanal bir cüzdan olan [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/), [Hardhat](https://hardhat.org/) ve [Alchemy](https://www.alchemy.com/eth) kullanarak Sepolia test ağında basit bir akıllı sözleşme oluşturma ve dağıtma adımlarını inceleyeceğiz (bunların ne anlama geldiğini henüz anlamadıysanız endişelenmeyin, açıklayacağız).
 
-Bu eğitimin [2. bölümünde](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), akıllı sözleşmemiz burada dağıtıldıktan sonra onunla nasıl etkileşime girebileceğimizi inceleyeceğiz ve [3. bölümünde](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) onu Etherscan'de nasıl yayınlayacağımızı ele alacağız.
+Sözleşmeniz dağıtıldıktan sonra, [onun için bir kullanıcı arayüzü oluşturabilirsiniz](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 Herhangi bir noktada sorularınız olursa [Alchemy Discord](https://discord.gg/gWuC7zB) kanalından ulaşmaktan çekinmeyin!
 
@@ -38,19 +38,19 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 3. İlerlemek için "Next" (İleri) düğmesine, ardından "Create app" (Uygulama oluştur) düğmesine tıklayın ve işte bu kadar! Uygulamanız, kopyalanmaya hazır bir API Anahtarı ile birlikte gezinme çubuğu açılır menüsünde görünmelidir.
 
-## Adım 3: Bir Ethereum hesabı (adresi) oluşturun {#step-3}
+## Adım 3: Bir Ethereum hesabı (adres) oluşturun {#step-3}
 
-İşlemleri göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcıdaki sanal bir cüzdan olan MetaMask'ı kullanacağız. [İşlemler](/developers/docs/transactions/) hakkında daha fazla bilgi.
+İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcıdaki sanal bir cüzdan olan MetaMask'ı kullanacağız. [İşlemler](/developers/docs/transactions/) hakkında daha fazla bilgi edinin.
 
 MetaMask'ı indirebilir ve [buradan](https://metamask.io/download) ücretsiz olarak bir Ethereum hesabı oluşturabilirsiniz. Bir hesap oluştururken veya zaten bir hesabınız varsa, ağ açılır menüsünü kullanarak "Sepolia" test ağına geçtiğinizden emin olun (böylece gerçek parayla uğraşmamış oluruz).
 
-Sepolia'nın listelendiğini görmüyorsanız, menüye, ardından Gelişmiş'e (Advanced) gidin ve "Test ağlarını göster" (Show test networks) seçeneğini açmak için aşağı kaydırın. Ağ seçim menüsünde, test ağlarının bir listesini bulmak için "Özel" (Custom) sekmesini seçin ve "Sepolia"yı seçin.
+Sepolia'nın listelendiğini görmüyorsanız, sağ üst köşedeki menüyü açın, "Networks" (Ağlar) seçeneğini belirleyin ve ağ listesinin altındaki "Show test networks" (Test ağlarını göster) seçeneğini açın ([MetaMask'ın test ağlarını görüntüleme rehberine](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/) bakın). Ardından ağ seçim menüsünden "Sepolia"yı seçin.
 
 ![metamask sepolia example](./metamask-sepolia-example.png)
 
 ## Adım 4: Bir musluktan ether ekleyin {#step-4}
 
-Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. Sepolia ETH almak için çeşitli muslukların bir listesini görüntülemek üzere [Sepolia ağ ayrıntılarına](/developers/docs/networks/#sepolia) gidebilirsiniz. Biri çalışmazsa, bazen kuruyabildikleri için diğerini deneyin. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
+Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. Sepolia ETH almak için çeşitli muslukların bir listesini görüntülemek üzere [Sepolia ağ detaylarına](/developers/docs/networks/#sepolia) gidebilirsiniz. Biri çalışmazsa, bazen kuruyabilecekleri için diğerini deneyin. Bazı muslukların uygunluk kuralları vardır; örneğin, Alchemy'nin Sepolia musluğu, alıcı adresin Ethereum Ana Ağında en az 0.001 ETH tutmasını gerektirir. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra MetaMask hesabınızda ETH görmelisiniz!
 
 ## Adım 5: Bakiyenizi Kontrol Edin {#step-5}
 
@@ -68,20 +68,20 @@ Bakiyemizin orada olduğunu iki kez kontrol etmek için, [Alchemy'nin composer a
 
 İlk olarak, projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
 
-```
+```sh
 mkdir hello-world
 cd hello-world
 ```
 
-Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` komutunu kullanacağız. Eğer npm henüz kurulu değilse, [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin (bu eğitim için Node.js ve npm'e ihtiyacımız olacak).
+Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak için `npm init` kullanacağız. Eğer npm henüz yüklü değilse, [Node.js kurulum talimatlarını](https://nodejs.org/en/download/) izleyin (bu eğitim için Node.js ve npm'e ihtiyacımız olacak).
 
-```
+```sh
 npm init
 ```
 
 Kurulum sorularını nasıl yanıtladığınız pek önemli değil, referans olması için biz şu şekilde yaptık:
 
-```
+```text
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
@@ -99,55 +99,46 @@ About to write to /Users/.../.../.../hello-world/package.json:
   "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Error: no test specified\\" && exit 1"
+     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
 }
 ```
 
-package.json dosyasını onaylayın ve artık hazırız!
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i İndirin {#step-7}
+package.json dosyasını onaylayın. Bir sonraki adımda kuracağımız Hardhat 3, yalnızca ES modülü projelerini destekler, bu nedenle projeyi şu şekilde işaretleyin:
 
-Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Geliştiricilere, canlı zincire dağıtmadan önce akıllı sözleşmeler ve merkeziyetsiz uygulamalar (dapp'ler) oluştururken yerel olarak yardımcı olur.
-
-`hello-world` projemizin içinde şunu çalıştırın:
-
+```sh
+npm pkg set type=module
 ```
+
+Ve artık hazırız!
+
+## Adım 7: [Hardhat](https://hardhat.org/docs/getting-started)'i indirin {#step-7}
+
+Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Geliştiricilere, canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve merkeziyetsiz uygulamalar (dapp'ler) oluştururken yardımcı olur.
+
+Hardhat 3, Node.js v22.13.0 veya daha yeni bir sürümünü gerektirir. `hello-world` projemizin içinde şunu çalıştırın:
+
+```sh
 npm install --save-dev hardhat
 ```
 
-[Kurulum talimatları](https://hardhat.org/getting-started/#overview) hakkında daha fazla ayrıntı için bu sayfaya göz atın.
+[Kurulum talimatları](https://hardhat.org/docs/getting-started) hakkında daha fazla detay için bu sayfaya göz atın.
 
 ## Adım 8: Hardhat projesi oluşturun {#step-8}
 
-Proje klasörümüzün içinde şunu çalıştırın:
+`npx hardhat --init` komutunu çalıştırmak eksiksiz bir örnek proje oluşturur, ancak bu eğitimde her parçayı görebilmeniz için her şeyi elle ayarlayacağız. Proje klasörünüzün kök dizininde, aşağıdaki içeriğe sahip `hardhat.config.js` adında bir dosya oluşturun:
 
-```
-npx hardhat
-```
+```js
+import { defineConfig } from "hardhat/config"
 
-Ardından bir karşılama mesajı ve ne yapmak istediğinizi seçme seçeneği görmelisiniz. "create an empty hardhat.config.js" seçeneğini belirleyin:
-
-```
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-
-👷 Welcome to Hardhat v2.0.11 👷‍?
-
-What do you want to do? …
-Create a sample project
-❯ Create an empty hardhat.config.js
-Quit
+export default defineConfig({
+  solidity: "0.8.34",
+})
 ```
 
-Bu, bizim için projemizin tüm kurulumunu belirteceğimiz (13. adımda) bir `hardhat.config.js` dosyası oluşturacaktır.
+Burası, projemiz için tüm kurulumu belirteceğimiz yerdir (13. adımda). Şimdilik, sadece Hardhat'e Solidity derleyicisinin hangi sürümünü kullanacağını söyler.
 
 ## Adım 9: Proje klasörlerini ekleyin {#step-9}
 
@@ -168,91 +159,86 @@ Kendi kendinize, ne zaman kod yazacağız diye soruyor olabilirsiniz?? İşte bu
 hello-world projesini favori düzenleyicinizde açın (biz [VSCode](https://code.visualstudio.com/)'u seviyoruz). Akıllı sözleşmeler, HelloWorld.sol akıllı sözleşmemizi yazmak için kullanacağımız Solidity adlı bir dilde yazılır.‌
 
 1.  "contracts" klasörüne gidin ve HelloWorld.sol adında yeni bir dosya oluşturun
-2.  Aşağıda, bu eğitim için kullanacağımız Ethereum Vakfı'ndan örnek bir Merhaba Dünya akıllı sözleşmesi bulunmaktadır. Aşağıdaki içerikleri kopyalayıp HelloWorld.sol dosyanıza yapıştırın ve bu sözleşmenin ne yaptığını anlamak için yorumları okuduğunuzdan emin olun:
+2.  Aşağıda, bu eğitim için kullanacağımız Ethereum Vakfı'ndan örnek bir Hello World akıllı sözleşmesi bulunmaktadır. Aşağıdaki içeriği kopyalayıp HelloWorld.sol dosyanıza yapıştırın ve bu sözleşmenin ne yaptığını anlamak için yorumları okuduğunuzdan emin olun:
 
 ```solidity
+// SPDX-License-Identifier: MIT
 // Anlamsal sürümleme kullanarak Solidity sürümünü belirtir.
-// Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.0;
+// Daha fazla bilgi edinin: https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragma
+pragma solidity ^0.8.24;
 
 // `HelloWorld` adında bir sözleşme tanımlar.
-// Bir sözleşme, işlevlerin ve verilerin (durumunun) bir koleksiyonudur. Dağıtıldıktan sonra, bir sözleşme Ethereum Blokzinciri üzerinde belirli bir adreste bulunur. Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Bir sözleşme, işlevlerin ve verilerin (durumunun) bir koleksiyonudur. Dağıtıldıktan sonra, bir sözleşme Ethereum Blokzincir üzerinde belirli bir adreste bulunur. Daha fazla bilgi edinin: https://docs.soliditylang.org/en/latest/structure-of-a-contract.html
 contract HelloWorld {
 
    // `string` türünde bir `message` durum değişkeni bildirir.
-   // Durum değişkenleri, değerleri sözleşme depolamasında kalıcı olarak saklanan değişkenlerdir. `public` anahtar kelimesi, değişkenleri bir sözleşme dışından erişilebilir hale getirir ve diğer sözleşmelerin veya istemcilerin değere erişmek için çağırabileceği bir işlev oluşturur.
+   // Durum değişkenleri, değerleri sözleşme deposunda kalıcı olarak saklanan değişkenlerdir. `public` anahtar kelimesi, değişkenleri bir sözleşme dışından erişilebilir hale getirir ve diğer sözleşmelerin veya istemcilerin değere erişmek için çağırabileceği bir işlev oluşturur.
    string public message;
 
    // Sınıf tabanlı nesne yönelimli birçok dile benzer şekilde, kurucu (constructor), yalnızca sözleşme oluşturulduğunda yürütülen özel bir işlevdir.
-   // Kurucular, sözleşmenin verilerini başlatmak için kullanılır. Daha fazla bilgi edinin:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Kurucular, sözleşmenin verilerini başlatmak için kullanılır. Daha fazla bilgi edinin: https://docs.soliditylang.org/en/latest/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Bir dize argümanı olan `initMessage` değerini kabul eder ve bu değeri sözleşmenin `message` depolama değişkenine atar).
+      // Bir dize argümanı olan `initMessage` değerini kabul eder ve değeri sözleşmenin `message` depolama değişkenine ayarlar).
       message = initMessage;
    }
 
-   // Bir dize argümanı kabul eden ve `message` depolama değişkenini güncelleyen public bir işlev.
+   // Bir dize argümanı kabul eden ve `message` depolama değişkenini güncelleyen genel (public) bir işlev.
    function update(string memory newMessage) public {
       message = newMessage;
    }
 }
 ```
 
-Bu, oluşturulduğunda bir mesajı depolayan ve `update` işlevi çağrılarak güncellenebilen süper basit bir akıllı sözleşmedir.
+Bu, oluşturulduğunda bir mesaj depolayan ve `update` işlevi çağrılarak güncellenebilen süper basit bir akıllı sözleşmedir.
 
 ## Adım 11: MetaMask ve Alchemy'yi projenize bağlayın {#step-11}
 
-Bir MetaMask cüzdanı, Alchemy hesabı oluşturduk ve akıllı sözleşmemizi yazdık, şimdi bu üçünü birbirine bağlama zamanı.
+Bir MetaMask cüzdanı, Alchemy hesabı oluşturduk ve akıllı sözleşmemizi yazdık, şimdi bu üçünü bağlama zamanı.
 
 Sanal cüzdanınızdan gönderilen her işlem, benzersiz özel anahtarınızı kullanarak bir imza gerektirir. Programımıza bu izni sağlamak için özel anahtarımızı (ve Alchemy API anahtarını) bir ortam dosyasında güvenle saklayabiliriz.
 
-> İşlem gönderme hakkında daha fazla bilgi edinmek için, Web3 kullanarak işlem gönderme hakkındaki [bu eğitime](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
+> İşlem gönderme hakkında daha fazla bilgi edinmek için [işlemler belgelerine](/developers/docs/transactions/) göz atın.
 
-İlk olarak, proje dizininize dotenv paketini kurun:
-
-```
-npm install dotenv --save
-```
-
-Ardından, projemizin kök dizininde bir `.env` dosyası oluşturun ve MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi buna ekleyin.
+Projemizin kök dizininde bir `.env` dosyası oluşturun ve MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi buna ekleyin.
 
 - Özel anahtarınızı dışa aktarmak için [bu talimatları](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) izleyin
 - HTTP Alchemy API URL'sini almak için aşağıya bakın
 
 ![get alchemy api key](./get-alchemy-api-key.png)
 
-Alchemy API URL'sini Kopyalayın
+Alchemy API URL'sini kopyalayın
 
 `.env` dosyanız şu şekilde görünmelidir:
 
-```
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
 
-Bunları kodumuza fiilen bağlamak için, 13. adımda `hardhat.config.js` dosyamızda bu değişkenlere referans vereceğiz.
+Bunları kodumuza gerçekten bağlamak için, 13. adımda `hardhat.config.js` dosyamızda bu değişkenlere referans vereceğiz. Node.js `.env` dosyalarını kendi başına okuyabilir, bu nedenle yüklenecek fazladan bir paket yoktur.
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-<code>.env</code> dosyasını işlemeyin (commit etmeyin)! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparak sırlarınızı tehlikeye atmış olursunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
+<code>.env</code> dosyasını işlemeyin (commit)! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparak sırlarınızı tehlikeye atarsınız. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Adım 12: Ethers.js'i Kurun {#step-12-install-ethersjs}
+## Adım 12: Ethers.js'i yükleyin {#step-12-install-ethersjs}
 
 Ethers.js, [standart JSON-RPC yöntemlerini](/developers/docs/apis/json-rpc/) daha kullanıcı dostu yöntemlerle sararak Ethereum ile etkileşime girmeyi ve istekte bulunmayı kolaylaştıran bir kütüphanedir.
 
-Hardhat, ek araçlar ve genişletilmiş işlevsellik için [Eklentileri](https://hardhat.org/plugins/) entegre etmeyi son derece kolaylaştırır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) yararlanacağız ([Ethers.js](https://github.com/ethers-io/ethers.js/) bazı süper temiz sözleşme dağıtım yöntemlerine sahiptir).
+Hardhat, ek araçlar ve genişletilmiş işlevsellik için [Eklentileri](https://hardhat.org/docs/plugins/official-plugins) entegre etmeyi çok kolaylaştırır. Sözleşme dağıtımı için [Ethers eklentisinden](https://hardhat.org/docs/plugins/hardhat-ethers) yararlanacağız ([Ethers.js](https://docs.ethers.org/v6/) bazı süper temiz sözleşme dağıtım yöntemlerine sahiptir).
 
 Proje dizininizde şunu yazın:
 
-```
-npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```sh
+npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 ```
 
-Bir sonraki adımda `hardhat.config.js` dosyamızda ethers'ı da gerektireceğiz.
+Ayrıca bir sonraki adımda eklentiyi `hardhat.config.js` dosyamıza ekleyeceğiz.
 
 ## Adım 13: hardhat.config.js dosyasını güncelleyin {#step-13-update-hardhatconfigjs}
 
@@ -260,27 +246,28 @@ Bir sonraki adımda `hardhat.config.js` dosyamızda ethers'ı da gerektireceğiz
 
 `hardhat.config.js` dosyanızı şu şekilde görünecek biçimde güncelleyin:
 
-```
-require('dotenv').config();
+```js
+import { existsSync } from "node:fs"
+import hardhatEthers from "@nomicfoundation/hardhat-ethers"
+import { configVariable, defineConfig } from "hardhat/config"
 
-require("@nomiclabs/hardhat-ethers");
-const { API_URL, PRIVATE_KEY } = process.env;
+// Eğer varsa, .env dosyasından API_URL ve PRIVATE_KEY değerlerini process.env içine yükle
+if (existsSync(".env")) process.loadEnvFile()
 
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-module.exports = {
-   solidity: "0.7.3",
-   defaultNetwork: "sepolia",
-   networks: {
-      hardhat: {},
-      sepolia: {
-         url: API_URL,
-         accounts: [`0x${PRIVATE_KEY}`]
-      }
-   },
-}
+export default defineConfig({
+  plugins: [hardhatEthers],
+  solidity: "0.8.34",
+  networks: {
+    sepolia: {
+      type: "http",
+      url: configVariable("API_URL"),
+      accounts: [configVariable("PRIVATE_KEY")],
+    },
+  },
+})
 ```
+
+`configVariable`, Hardhat'e her bir değeri yalnızca ihtiyaç duyulduğunda bir ortam değişkeninden okumasını söyler, böylece `compile` gibi komutlar değerler ayarlanmadan önce bile çalışır. Özel anahtarınızı düz metin dosyasında tutmamayı tercih ederseniz, Hardhat [şifrelenmiş bir anahtar deposundan yapılandırma değişkenlerini](https://hardhat.org/docs/guides/configuration-variables) de okuyabilir.
 
 ## Adım 14: Sözleşmemizi derleyin {#step-14-compile-our-contracts}
 
@@ -288,77 +275,79 @@ module.exports = {
 
 Komut satırından şunu çalıştırın:
 
-```
+```sh
 npx hardhat compile
 ```
 
-`SPDX license identifier not provided in source file` hakkında bir uyarı alabilirsiniz, ancak bunun için endişelenmenize gerek yok — umarım diğer her şey iyi görünüyordur! Değilse, her zaman [Alchemy Discord](https://discord.gg/u72VCg3) kanalından mesaj atabilirsiniz.
+İlk derlediğinizde, Hardhat Solidity derleyicisini indirir. Ardından `Compiled 1 Solidity file with solc 0.8.34` gibi bir şey görmelisiniz. Görmezseniz, her zaman [Alchemy Discord](https://discord.gg/gWuC7zB) kanalından mesaj atabilirsiniz.
 
-## Adım 15: Dağıtım komut dosyamızı yazın {#step-15-write-our-deploy-scripts}
+## Adım 15: Dağıtım betiğimizi yazın {#step-15-write-our-deploy-scripts}
 
-Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız hazır olduğuna göre, sözleşme dağıtım komut dosyamızı yazma zamanı geldi.
+Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız hazır olduğuna göre, sözleşme dağıtım betiğimizi yazma zamanı geldi.
 
-`scripts/` klasörüne gidin ve `deploy.js` adında yeni bir dosya oluşturarak içine aşağıdaki içerikleri ekleyin:
+`scripts/` klasörüne gidin ve `deploy.js` adında yeni bir dosya oluşturarak içine aşağıdaki içeriği ekleyin:
 
-```
-async function main() {
-   const HelloWorld = await ethers.getContractFactory("HelloWorld");
+```js
+import { network } from "hardhat"
 
-   // Dağıtımı başlatır, bir sözleşme nesnesine çözümlenen bir promise döndürür
-   const hello_world = await HelloWorld.deploy("Hello World!");
-   console.log("Contract deployed to address:", hello_world.address);}
+const { ethers } = await network.create()
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+
+// Bir sözleşme nesnesine çözümlenen bir söz (promise) döndürerek dağıtımı başlat
+const hello_world = await HelloWorld.deploy("Hello World!")
+await hello_world.waitForDeployment()
+console.log("Contract deployed to address:", await hello_world.getAddress())
 ```
 
-Hardhat, [Sözleşmeler eğitiminde](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) bu kod satırlarının her birinin ne yaptığını açıklamakta harika bir iş çıkarıyor, biz de onların açıklamalarını burada benimsedik.
+Bu kod satırlarının her birinin ne yaptığına bir göz atalım.
 
-```
-const HelloWorld = await ethers.getContractFactory("HelloWorld");
-```
-
-Ethers.js'deki bir `ContractFactory`, yeni akıllı sözleşmeleri dağıtmak için kullanılan bir soyutlamadır, bu nedenle buradaki `HelloWorld`, merhaba dünya sözleşmemizin örnekleri için bir fabrikadır. `hardhat-ethers` eklentisini kullanırken `ContractFactory` ve `Contract` örnekleri varsayılan olarak ilk imzalayana bağlanır.
-
-```
-const hello_world = await HelloWorld.deploy();
+```js
+const { ethers } = await network.create()
 ```
 
-Bir `ContractFactory` üzerinde `deploy()` çağırmak dağıtımı başlatacak ve bir `Contract` nesnesine çözümlenen bir `Promise` döndürecektir. Bu, akıllı sözleşme işlevlerimizin her biri için bir yöntemi olan nesnedir.
+Hardhat 3'te, bir betik bir ağa açıkça bir bağlantı açar. `network.create()`, betiği çalıştırdığınızda `--network` seçeneğiyle seçtiğiniz ağa bağlanır ve `hardhat-ethers` eklentisi bu bağlantıya bir `ethers` nesnesi ekler.
+
+```js
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+```
+
+ethers.js'deki bir `ContractFactory`, yeni akıllı sözleşmeleri dağıtmak için kullanılan bir soyutlamadır, bu nedenle buradaki `HelloWorld`, hello world sözleşmemizin örnekleri için bir fabrikadır. `hardhat-ethers` eklentisini kullanırken `ContractFactory` ve `Contract` örnekleri varsayılan olarak ilk imzalayana bağlanır.
+
+```js
+const hello_world = await HelloWorld.deploy("Hello World!")
+```
+
+Bir `ContractFactory` üzerinde `deploy()` çağırmak dağıtımı başlatacak ve bir `Contract`'a çözümlenen bir `Promise` döndürecektir. Bu, akıllı sözleşme işlevlerimizin her biri için bir yöntemi olan nesnedir. `deploy()`'a ilettiğiniz argümanlar sözleşmenin kurucusuna gider, burada başlangıç mesajıdır.
+
+`waitForDeployment()`, dağıtım işlemi bir bloğa dahil edilene kadar bekler ve `getAddress()` yeni sözleşmenin adresini döndürür. Daha fazla detay için [ethers.js sözleşme belgelerine](https://docs.ethers.org/v6/api/contract/) bakın.
 
 ## Adım 16: Sözleşmemizi dağıtın {#step-16-deploy-our-contract}
 
 Sonunda akıllı sözleşmemizi dağıtmaya hazırız! Komut satırına gidin ve şunu çalıştırın:
 
-```
+```sh
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 Ardından şuna benzer bir şey görmelisiniz:
 
-```
+```text
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-[Sepolia Etherscan](https://sepolia.etherscan.io/)'e gidip sözleşme adresimizi aratırsak, başarıyla dağıtıldığını görebilmeliyiz. İşlem şuna benzer görünecektir:
+[Sepolia etherscan](https://sepolia.etherscan.io/)'e gidip sözleşme adresimizi aratırsak, başarıyla dağıtıldığını görebilmeliyiz. İşlem şuna benzer görünecektir:
 
 ![etherscan contract](./etherscan-contract.png)
 
-`From` adresi MetaMask hesap adresinizle eşleşmelidir ve Alıcı (To) adresi "Contract Creation" (Sözleşme Oluşturma) diyecektir, ancak işleme tıklarsak sözleşme adresimizi `To` alanında göreceğiz:
+`From` adresi MetaMask hesap adresinizle eşleşmelidir ve To adresi "Contract Creation" (Sözleşme Oluşturma) diyecektir, ancak işleme tıklarsak `To` alanında sözleşme adresimizi göreceğiz:
 
 ![etherscan transaction](./etherscan-transaction.png)
 
-Tebrikler! Ethereum zincirine az önce bir akıllı sözleşme dağıttınız 🎉
+Tebrikler! Ethereum zincirine bir akıllı sözleşme dağıttınız 🎉
 
-Arka planda neler olup bittiğini anlamak için [Alchemy kontrol panelimizdeki](https://dashboard.alchemy.com/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtrelediğinizden ve "Hello World"ü seçtiğinizden emin olun.
-![hello world explorer](./hello-world-explorer.png)
+Arka planda neler olup bittiğini anlamak için, [Alchemy kontrol panelinizde](https://dashboard.alchemy.com/) "Hello World" uygulamanızın aldığı isteklere bakabilirsiniz.
 
-Burada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın arka planda bizim için yaptığı bir avuç JSON-RPC çağrısını göreceksiniz. Burada belirtilmesi gereken iki önemli çağrı, sözleşmemizi fiilen Sepolia zincirine yazma isteği olan [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) ve hash verildiğinde işlemimiz hakkındaki bilgileri okuma isteği olan [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash)'dir (işlemlerde tipik bir modeldir). İşlem gönderme hakkında daha fazla bilgi edinmek için, [Web3 kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) hakkındaki bu eğitime göz atın.
+Orada, `.deploy()` işlevini çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC çağrısını göreceksiniz. Burada dikkat edilmesi gereken iki önemli çağrı, sözleşmemizi gerçekten Sepolia zincirine yazma isteği olan [`eth_sendRawTransaction`](/developers/docs/apis/json-rpc/#eth-sendrawtransaction) ve hash verildiğinde işlemimiz hakkında bilgi okuma isteği olan [`eth_getTransactionByHash`](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash)'tir (işlem gönderirken tipik bir model). İşlem gönderme hakkında daha fazla bilgi edinmek için [işlemler belgelerine](/developers/docs/transactions/) göz atın.
 
-Bu eğitimin 1. bölümü için bu kadar, 2. bölümde başlangıç mesajımızı güncelleyerek [akıllı sözleşmemizle fiilen etkileşime gireceğiz](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) ve 3. bölümde herkesin onunla nasıl etkileşime gireceğini bilmesi için [akıllı sözleşmemizi Etherscan'de yayınlayacağız](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan).
-
-**Alchemy hakkında daha fazla bilgi edinmek ister misiniz? [Web sitemize](https://www.alchemy.com/eth) göz atın. Hiçbir güncellemeyi kaçırmak istemiyor musunuz? [Buradan](https://www.alchemy.com/newsletter) bültenimize abone olun! Ayrıca [Discord](https://discord.gg/u72VCg3) kanalımıza da katıldığınızdan emin olun.**
+Bu eğitim için hepsi bu kadar. Ardından, [sözleşmeniz için bir kullanıcı arayüzü oluşturabilirsiniz](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
