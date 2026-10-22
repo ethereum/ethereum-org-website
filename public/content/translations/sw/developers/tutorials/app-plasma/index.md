@@ -112,7 +112,7 @@ Mnyororo wa vitalu tunaotumia ni `anvil`, mnyororo wa vitalu wa majaribio wa nda
 
 Kwa sababu huu ni mfumo changamano, tutautekeleza kwa hatua.
 
-### Hatua ya 1 - Sifuri maarifa ya mikono {#stage-1}
+### Hatua ya 1 - Sifuri-maarifa ya mikono {#stage-1}
 
 Kwa hatua ya kwanza, tutasaini muamala kwenye kivinjari na kisha kutoa taarifa hiyo kwa uthibitisho wa maarifa-sifuri kwa mikono. Msimbo wa sifuri-maarifa unatarajia kupata taarifa hiyo katika `server/noir/Prover.toml` (imeandikwa [hapa](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
@@ -825,7 +825,7 @@ Ili kuiona ikifanya kazi:
 
    Tuna utata hapa. Kwa upande mmoja, hatutaki kusaini ujumbe unaoweza kutumika tena ([shambulio la kurudiwa](https://en.wikipedia.org/wiki/Replay_attack)), ndiyo maana tunataka nonsi hapo awali. Hata hivyo, hatuna nonsi bado. Suluhisho ni kuchagua nonsi inayoweza kutumika mara moja tu na ambayo tayari tunayo pande zote mbili, kama vile wakati wa sasa.
 
-   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe uliosawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii ina maana kwamba dirisha letu la kuathiriwa na mashambulizi ya kurudiwa ni angalau dakika moja. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---inaweza tayari kufichua salio na nonsi (inabidi izijue ili kufanya kazi), hii ni hatari inayokubalika.
+   Tatizo la suluhisho hili ni kwamba wakati unaweza usiwe uliosawazishwa kikamilifu. Kwa hivyo badala yake, tunasaini thamani inayobadilika kila dakika. Hii ina maana kwamba dirisha letu la kuathiriwa na mashambulizi ya kurudiwa si zaidi ya dakika moja. Kwa kuzingatia kwamba katika uzalishaji ombi lililosainiwa litalindwa na TLS, na kwamba upande mwingine wa handaki---seva---inaweza tayari kufichua salio na nonsi (inabidi izijue ili kufanya kazi), hii ni hatari inayokubalika.
 
 7. Pindi kivinjari kinaporejesha salio na nonsi, kinaonyesha fomu ya hamisho. Chagua anwani ya mwisho na kiasi kisha ubofye **Hamisha**. Saini ombi hili.
 
@@ -1183,7 +1183,7 @@ Uthibitisho wa maarifa-sifuri unahitaji kuwa kwamba muamala unabadilika kutoka h
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Piga simu kwa mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii hurejesha muamala ikiwa uthibitisho wa maarifa-sifuri ni mbaya.
+Ita mkataba wa mhakiki ili kuhakiki uthibitisho wa maarifa-sifuri. Hatua hii hurejesha muamala ikiwa uthibitisho wa maarifa-sifuri ni mbaya.
 
 ```solidity
         currentStateHash = _publicFields[1];

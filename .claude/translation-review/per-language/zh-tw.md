@@ -156,3 +156,23 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
 - Open: "much faster" lost `得多` (L178).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:482 OpenZeppelin transliterate (`[OpenZeppelin Contracts]` -> `[歐本齊柏林合約]`)
+- security:496 OpenZeppelin transliterate (`[OpenZeppelin]` -> `[歐本齊柏林]`)
+- security:502 Nethermind transliterate (`[Nethermind]` -> `[奈瑟邁]`)
+- security:566 Slither transliterate (`如何使用 Slither 尋找` -> `如何使用斯立瑟尋找`)
+- security:568 Manticore transliterate (`如何使用 Manticore 尋找` -> `如何使用曼蒂科爾尋找`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and structurally clean. The main problem is that the retranslated security page reverted five transliterated brand names to Latin, which are auto-fixable. The rest is terminology drift and mainland vocabulary in the new prediction-markets copy.

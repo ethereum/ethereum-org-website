@@ -118,7 +118,7 @@ Für die erste Stufe werden wir eine Transaktion im Browser signieren und die In
 
 Um dies in Aktion zu sehen:
 
-1. Stellen Sie sicher, dass Sie [Node](https://nodejs.org/en/download) und [Noir](https://noir-lang.org/docs/installation) installiert haben. Installieren Sie diese vorzugsweise auf einem UNIX-System wie [macOS](https://learn.microsoft.com/en-us/windows/wsl/install), [Linux](https://learn.microsoft.com/en-us/windows/wsl/install) oder [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Stellen Sie sicher, dass Sie [Node](https://nodejs.org/en/download) und [Noir](https://noir-lang.org/docs/installation) installiert haben. Installieren Sie diese vorzugsweise auf einem UNIX-System wie macOS, Linux oder [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. Laden Sie den Code der Stufe 1 herunter und starten Sie den Webserver, um den Client-Code bereitzustellen.
 

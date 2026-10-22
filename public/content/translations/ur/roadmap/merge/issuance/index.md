@@ -84,7 +84,7 @@ title="ETH کے اجراء کا خلاصہ">
 
 ### دی مرج کے بعد افراط زر کی تفصیل {#post-merge-inflation-breakdown}
 
-- [کل <span dir="ltr">ETH</span> سپلائی](/what-is-ether/supply/): **<span dir="ltr">\~120,520,000 ETH</span>** (<span dir="ltr">September 2022</span> میں دی مرج کے وقت)
+- [کل <span dir="ltr">ETH</span> سپلائی](/what-is-ether/supply/): **<span dir="ltr">\~120,520,000 ETH</span>** (ستمبر <span dir="ltr">2022</span> میں دی مرج کے وقت)
 - عمل درآمد کی تہہ کا اجراء: **<span dir="ltr">0</span>**
 - اتفاق رائے کی تہہ کا اجراء: اوپر کی طرح، **<span dir="ltr">\~0.52%</span>** سالانہ اجراء کی شرح (کل <span dir="ltr">14 million ETH</span> اسٹیک ہونے کے ساتھ)
 

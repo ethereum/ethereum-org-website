@@ -567,7 +567,7 @@ contract Attack {
 
 - [Як використовувати Слізер для пошуку помилок у смарт-контрактах](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Як використовувати Мантікора для пошуку помилок у смарт-контрактах](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [Як використовувати Мантікору для пошуку помилок у смарт-контрактах](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Рекомендації з безпеки смарт-контрактів](/developers/tutorials/smart-contract-security-guidelines/)
 

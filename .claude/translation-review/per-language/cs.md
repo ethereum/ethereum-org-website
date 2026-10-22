@@ -159,3 +159,20 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `[EVM-based Chains]` -> `[Řetězce založené na EVM]` (regression to English).
 - Open: `[Testnet Faucet]` label English (glossary `testnetový faucet`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- scam-token-tricks:441 typo (`není podezřelná` -> `není podezřelá`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:4,5,7,9,10,12,13,14,17,18,26,27,32,34,35: Differs from ETHGlossary `self-custody` = `vlastní správa` (a translate term, high confidence). The phrase appears 18 times, only in this new file. Elsewhere cs uses `s vlastní správou` 14 times (`s vlastním držením` -> `s vlastní správou`)
+- developers/tutorials/app-plasma/index.md:970: Differs from ETHGlossary `verifier` = `ověřovatel` (translate term). The same file uses `ověřovatel` at lines 1158, 1177 and 1190
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Czech prose is fluent and structurally clean, with no build- or navigation-breaking defects. The main fixes are the self-custody term deviation in the new wallet-descriptions file, three English founders tags, and one misspelled word.

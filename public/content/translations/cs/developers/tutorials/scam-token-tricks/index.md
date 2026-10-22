@@ -438,7 +438,7 @@ Podobně, pokud adresa `to` transakce, tedy první volaný kontrakt, není vyše
 }
 ```
 
-Pokud není splněna ani jedna z podmínek, pak událost `Approval` není podezřelná.
+Pokud není splněna ani jedna z podmínek, pak událost `Approval` není podezřelá.
 
 ```typescript
 const testPromises = approvalEvents.map((ev) => suspiciousApprovalEvent(ev))

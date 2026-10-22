@@ -479,7 +479,7 @@ contract Attack {
 
 - **[Safe](https://safe.global/)** - _運行在以太坊上的智能合約錢包，要求在交易發生前必須有最低人數的授權 (M-of-N)。_
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _用於實作管理功能的合約函式庫，包含合約所有權、升級、存取控制、治理、暫停功能等。_
+- **[歐本齊柏林合約](https://docs.openzeppelin.com/contracts/5.x/)** - _用於實作管理功能的合約函式庫，包含合約所有權、升級、存取控制、治理、暫停功能等。_
 
 ### 智能合約稽核服務 {#smart-contract-auditing-services}
 
@@ -493,13 +493,13 @@ contract Attack {
 
 - **[QuantStamp](https://quantstamp.com/)** - _透過安全與風險評估服務促進區塊鏈技術主流採用的稽核服務。_
 
-- **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _為分散式系統提供安全稽核的智能合約安全公司。_
+- **[歐本齊柏林](https://www.openzeppelin.com/security-audits)** - _為分散式系統提供安全稽核的智能合約安全公司。_
 
 - **[Runtime Verification](https://runtimeverification.com/)** - _專門從事智能合約形式化建模與驗證的安全公司。_
 
 - **[Hacken](https://hacken.io)** - _Web3 網路安全稽核機構，為區塊鏈安全帶來 360 度全方位的解決方案。_
 
-- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 與 Cairo 稽核服務，確保以太坊與 Starknet 上智能合約的完整性及使用者安全。_
+- **[奈瑟邁](https://www.nethermind.io/smart-contract-audits)** - _Solidity 與 Cairo 稽核服務，確保以太坊與 Starknet 上智能合約的完整性及使用者安全。_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 專注於區塊鏈與智能合約稽核以確保加密貨幣的安全，提供智能合約開發、滲透測試、區塊鏈諮詢等服務。_
 
@@ -563,9 +563,9 @@ contract Attack {
 
 - [如何撰寫安全的智能合約](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用 Slither 尋找智能合約漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用斯立瑟尋找智能合約漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [如何使用 Manticore 尋找智能合約漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [如何使用曼蒂科爾尋找智能合約漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [智能合約安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

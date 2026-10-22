@@ -437,23 +437,23 @@ contract Attack {
 
 Mulai versi 0.8.0, kompiler Solidity menolak kode yang menghasilkan limpahan bawah dan limpahan bilangan bulat. Namun, kontrak yang dikompilasi dengan versi kompiler yang lebih rendah harus melakukan pemeriksaan pada fungsi yang melibatkan operasi aritmatika atau menggunakan Pustaka (misalnya, [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) yang memeriksa limpahan bawah/limpahan.
 
-#### Manipulasi oracle {#oracle-manipulation}
+#### Manipulasi orakel {#oracle-manipulation}
 
-[Oracle](/developers/docs/oracles/) mengambil informasi offchain dan mengirimkannya secara onchain untuk digunakan oleh kontrak pintar. Dengan oracle, Anda dapat merancang kontrak pintar yang beroperasi dengan sistem offchain, seperti pasar modal, yang sangat memperluas aplikasinya.
+[Orakel](/developers/docs/oracles/) mengambil informasi offchain dan mengirimkannya secara onchain untuk digunakan oleh kontrak pintar. Dengan orakel, Anda dapat merancang kontrak pintar yang beroperasi dengan sistem offchain, seperti pasar modal, yang sangat memperluas aplikasinya.
 
-Tetapi jika oracle rusak dan mengirimkan informasi yang salah secara onchain, kontrak pintar akan dieksekusi berdasarkan input yang salah, yang dapat menyebabkan masalah. Ini adalah dasar dari "masalah oracle", yang berkaitan dengan tugas memastikan informasi dari oracle blockchain akurat, mutakhir, dan tepat waktu.
+Tetapi jika orakel rusak dan mengirimkan informasi yang salah secara onchain, kontrak pintar akan dieksekusi berdasarkan input yang salah, yang dapat menyebabkan masalah. Ini adalah dasar dari "masalah oracle", yang berkaitan dengan tugas memastikan informasi dari oracle blockchain akurat, mutakhir, dan tepat waktu.
 
-Masalah keamanan terkait adalah menggunakan oracle onchain, seperti bursa terdesentralisasi (DEX), untuk mendapatkan harga spot suatu aset. Platform peminjaman di industri [keuangan terdesentralisasi (DeFi)](/defi/) sering melakukan ini untuk menentukan nilai kolateral pengguna guna menentukan berapa banyak yang dapat mereka pinjam.
+Masalah keamanan terkait adalah menggunakan orakel onchain, seperti bursa terdesentralisasi (DEX), untuk mendapatkan harga spot suatu aset. Platform peminjaman di industri [keuangan terdesentralisasi (DeFi)](/defi/) sering melakukan ini untuk menentukan nilai kolateral pengguna guna menentukan berapa banyak yang dapat mereka pinjam.
 
-Harga DEX sering kali akurat, sebagian besar karena arbitrase yang memulihkan paritas di pasar. Namun, harga tersebut terbuka terhadap manipulasi, terutama jika oracle onchain menghitung harga aset berdasarkan pola perdagangan historis (seperti yang biasanya terjadi).
+Harga DEX sering kali akurat, sebagian besar karena arbitrase yang memulihkan paritas di pasar. Namun, harga tersebut terbuka terhadap manipulasi, terutama jika orakel onchain menghitung harga aset berdasarkan pola perdagangan historis (seperti yang biasanya terjadi).
 
-Misalnya, penyerang dapat memompa harga spot suatu aset secara artifisial dengan mengambil pinjaman kilat tepat sebelum berinteraksi dengan kontrak peminjaman Anda. Meminta harga aset ke DEX akan mengembalikan nilai yang lebih tinggi dari biasanya (karena "pesanan beli" penyerang yang besar membelokkan permintaan aset), memungkinkan mereka untuk meminjam lebih dari yang seharusnya. "Serangan pinjaman kilat" semacam itu telah digunakan untuk mengeksploitasi ketergantungan pada oracle harga di antara aplikasi DeFi, yang merugikan protokol jutaan dana yang hilang.
+Misalnya, penyerang dapat memompa harga spot suatu aset secara artifisial dengan mengambil pinjaman kilat tepat sebelum berinteraksi dengan kontrak peminjaman Anda. Meminta harga aset ke DEX akan mengembalikan nilai yang lebih tinggi dari biasanya (karena "pesanan beli" penyerang yang besar membelokkan permintaan aset), memungkinkan mereka untuk meminjam lebih dari yang seharusnya. "Serangan pinjaman kilat" semacam itu telah digunakan untuk mengeksploitasi ketergantungan pada orakel harga di antara aplikasi DeFi, yang merugikan protokol jutaan dana yang hilang.
 
-##### Cara mencegah manipulasi oracle
+##### Cara mencegah manipulasi orakel
 
-Persyaratan minimum untuk [menghindari manipulasi oracle](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) adalah menggunakan jaringan oracle terdesentralisasi yang meminta informasi dari berbagai sumber untuk menghindari titik kegagalan tunggal. Dalam kebanyakan kasus, oracle terdesentralisasi memiliki insentif kriptoekonomi bawaan untuk mendorong node oracle melaporkan informasi yang benar, menjadikannya lebih aman daripada oracle terpusat.
+Persyaratan minimum untuk [menghindari manipulasi orakel](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) adalah menggunakan jaringan orakel terdesentralisasi yang meminta informasi dari berbagai sumber untuk menghindari titik kegagalan tunggal. Dalam kebanyakan kasus, orakel terdesentralisasi memiliki insentif kriptoekonomi bawaan untuk mendorong node orakel melaporkan informasi yang benar, menjadikannya lebih aman daripada orakel terpusat.
 
-Jika Anda berencana untuk meminta harga aset ke oracle onchain, pertimbangkan untuk menggunakan oracle yang menerapkan mekanisme harga rata-rata tertimbang waktu (TWAP). [Oracle TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) meminta harga aset pada dua titik waktu yang berbeda (yang dapat Anda modifikasi) dan menghitung harga spot berdasarkan rata-rata yang diperoleh. Memilih periode waktu yang lebih lama melindungi protokol Anda dari manipulasi harga karena pesanan besar yang dieksekusi baru-baru ini tidak dapat memengaruhi harga aset.
+Jika Anda berencana untuk meminta harga aset ke orakel onchain, pertimbangkan untuk menggunakan orakel yang menerapkan mekanisme harga rata-rata tertimbang waktu (TWAP). [Orakel TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) meminta harga aset pada dua titik waktu yang berbeda (yang dapat Anda modifikasi) dan menghitung harga spot berdasarkan rata-rata yang diperoleh. Memilih periode waktu yang lebih lama melindungi protokol Anda dari manipulasi harga karena pesanan besar yang dieksekusi baru-baru ini tidak dapat memengaruhi harga aset.
 
 ## Sumber daya keamanan kontrak pintar untuk pengembang {#smart-contract-security-resources-for-developers}
 

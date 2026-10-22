@@ -79,7 +79,7 @@ contract WrappedArbitrum is Context, IERC20 {
 
 [مالك العقد هذا](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) ليس عقدًا يمكن التحكم فيه بواسطة حسابات مختلفة في أوقات مختلفة، بل هو [حساب مملوك خارجيًا](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs). هذا يعني أنه ربما تم تصميمه للاستخدام قصير الأمد من قبل فرد، بدلاً من كونه حلاً طويل الأمد للتحكم في رمز <span dir="ltr">ERC-20</span> سيظل ذا قيمة.
 
-وبالفعل، إذا نظرنا في Etherscan نرى أن المحتال استخدم هذا العقد لمدة <span dir="ltr">12</span> ساعة فقط ([المعاملة الأولى](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) إلى [المعاملة الأخيرة](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) خلال <span dir="ltr">May 19th, 2023</span>.
+وبالفعل، إذا نظرنا في Etherscan نرى أن المحتال استخدم هذا العقد لمدة <span dir="ltr">12</span> ساعة فقط ([المعاملة الأولى](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) إلى [المعاملة الأخيرة](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) خلال <span dir="ltr">19</span> مايو <span dir="ltr">2023</span>.
 
 ### الدالة `_transfer` المزيفة {#the-fake-transfer-function}
 

@@ -445,7 +445,7 @@ Mais si l'oracle est corrompu et envoie des informations incorrectes onchain, le
 
 Une préoccupation de sécurité connexe est l'utilisation d'un oracle onchain, tel qu'un échange décentralisé (DEX), pour obtenir le prix au comptant d'un actif. Les plateformes de prêt dans l'industrie de la [finance décentralisée (DeFi)](/defi/) le font souvent pour déterminer la valeur du collatéral d'un utilisateur afin de déterminer combien il peut emprunter.
 
-Les prix des DEX sont souvent précis, en grande partie grâce aux arbitreurs qui rétablissent la parité sur les marchés. Cependant, ils sont ouverts à la manipulation, en particulier si l'oracle onchain calcule les prix des actifs en fonction des modèles de négociation historiques (comme c'est généralement le cas).
+Les prix des DEX sont souvent précis, en grande partie grâce aux arbitragistes qui rétablissent la parité sur les marchés. Cependant, ils sont ouverts à la manipulation, en particulier si l'oracle onchain calcule les prix des actifs en fonction des modèles de négociation historiques (comme c'est généralement le cas).
 
 Par exemple, un attaquant pourrait gonfler artificiellement le prix au comptant d'un actif en contractant un prêt éclair juste avant d'interagir avec votre contrat de prêt. Interroger le DEX pour le prix de l'actif renverrait une valeur plus élevée que la normale (en raison de l'important « ordre d'achat » de l'attaquant faussant la demande pour l'actif), lui permettant d'emprunter plus qu'il ne le devrait. De telles « attaques par prêt éclair » ont été utilisées pour exploiter la dépendance aux oracles de prix parmi les applications DeFi, coûtant aux protocoles des millions en fonds perdus.
 

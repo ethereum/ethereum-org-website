@@ -16,7 +16,7 @@ lang: ja
 
 セキュリティに取り組む前に、[スマート・コントラクト開発の基礎](/developers/docs/smart-contracts/)を理解しておいてください。
 
-## Guidelines for building secure Ethereum smart contracts {#smart-contract-security-guidelines}
+## 安全なイーサリアムのスマート・コントラクトを構築するためのガイドライン {#smart-contract-security-guidelines}
 
 ### 1. Design proper access controls {#design-proper-access-controls}
 

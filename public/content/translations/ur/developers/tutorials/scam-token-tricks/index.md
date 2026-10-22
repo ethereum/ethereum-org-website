@@ -79,7 +79,7 @@ contract WrappedArbitrum is Context, IERC20 {
 
 [یہ کنٹریکٹ کا مالک](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) کوئی ایسا کنٹریکٹ نہیں ہے جسے مختلف اوقات میں مختلف اکاؤنٹس کے ذریعے کنٹرول کیا جا سکے، بلکہ یہ ایک [بیرونی ملکیت والا اکاؤنٹ](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) ہے۔ اس کا مطلب یہ ہے کہ اسے ممکنہ طور پر کسی فرد کے قلیل مدتی استعمال کے لیے ڈیزائن کیا گیا ہے، نہ کہ ایک <span dir="ltr">ERC-20</span> کو کنٹرول کرنے کے طویل مدتی حل کے طور پر جو قیمتی رہے گا۔
 
-اور واقعی، اگر ہم Etherscan میں دیکھیں تو ہمیں معلوم ہوتا ہے کہ دھوکہ باز نے اس کنٹریکٹ کو <span dir="ltr">May 19th, 2023</span> کے دوران صرف <span dir="ltr">12</span> گھنٹے ([پہلی ٹرانزیکشن](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) سے [آخری ٹرانزیکشن](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b) تک) استعمال کیا۔
+اور واقعی، اگر ہم Etherscan میں دیکھیں تو ہمیں معلوم ہوتا ہے کہ دھوکہ باز نے اس کنٹریکٹ کو 19 مئی 2023 کے دوران صرف <span dir="ltr">12</span> گھنٹے ([پہلی ٹرانزیکشن](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) سے [آخری ٹرانزیکشن](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b) تک) استعمال کیا۔
 
 ### جعلی `_transfer` فنکشن {#the-fake-transfer-function}
 

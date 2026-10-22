@@ -893,7 +893,7 @@ Hesap bilgisini sağlamak için yalnızca imzaya ihtiyacımız var. Nedeni, mesa
 const processMessage = async (message, signature) => {
 ```
 
-Bir mesajı işleyin ve şifrelediği işlemi yürütün.
+Bir mesajı işleyin ve kodladığı işlemi yürütün.
 
 ```js
     // Açık anahtarı al

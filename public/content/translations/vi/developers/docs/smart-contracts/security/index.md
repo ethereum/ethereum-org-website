@@ -205,7 +205,7 @@ Việc sử dụng chức năng dừng khẩn cấp cung cấp một biện phá
 
 [Các sự kiện](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) cho phép bạn theo dõi các lệnh gọi đến các hàm của hợp đồng thông minh và giám sát các thay đổi đối với các biến trạng thái. Lý tưởng nhất là lập trình hợp đồng thông minh của bạn để phát ra một sự kiện bất cứ khi nào một bên nào đó thực hiện một hành động quan trọng về an toàn (ví dụ: rút tiền).
 
-Việc ghi nhật ký các sự kiện và giám sát them ngoài chuỗi cung cấp thông tin chi tiết về các hoạt động của hợp đồng và hỗ trợ khám phá nhanh hơn các hành động độc hại. Điều này có nghĩa là nhóm của bạn có thể phản ứng nhanh hơn với các vụ hack và thực hiện hành động để giảm thiểu tác động đến người dùng, chẳng hạn như tạm dừng các hàm hoặc thực hiện nâng cấp.
+Việc ghi nhật ký các sự kiện và giám sát chúng ngoài chuỗi cung cấp thông tin chi tiết về các hoạt động của hợp đồng và hỗ trợ khám phá nhanh hơn các hành động độc hại. Điều này có nghĩa là nhóm của bạn có thể phản ứng nhanh hơn với các vụ hack và thực hiện hành động để giảm thiểu tác động đến người dùng, chẳng hạn như tạm dừng các hàm hoặc thực hiện nâng cấp.
 
 Bạn cũng có thể chọn một công cụ giám sát có sẵn tự động chuyển tiếp các cảnh báo bất cứ khi nào ai đó tương tác với các hợp đồng của bạn. Các công cụ này sẽ cho phép bạn tạo các cảnh báo tùy chỉnh dựa trên các trình kích hoạt khác nhau, chẳng hạn như khối lượng giao dịch, tần suất của các lệnh gọi hàm hoặc các hàm cụ thể liên quan. Ví dụ: bạn có thể lập trình một cảnh báo xuất hiện khi số tiền được rút trong một giao dịch duy nhất vượt qua một ngưỡng cụ thể.
 
