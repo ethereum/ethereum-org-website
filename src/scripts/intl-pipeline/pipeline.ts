@@ -343,7 +343,7 @@ function spliceSection(
 // ---------------------------------------------------------------------------
 
 export interface StructuralRegression {
-  kind: "anchor" | "heading-count" | "href"
+  kind: "anchor" | "heading-count" | "href" | "component"
   detail: string
 }
 
@@ -357,6 +357,260 @@ function hrefList(text: string): string[] {
     ...[...body.matchAll(/\]\(([^)\s]+)\)/g)].map((m) => m[1]),
     ...[...body.matchAll(/href="([^"]+)"/g)].map((m) => m[1]),
   ]
+}
+
+interface StandaloneComponent {
+  tag: string
+  identity: string
+  source: string
+  start: number
+  end: number
+}
+
+/** Standalone self-closing MDX components, excluding examples in code fences. */
+function standaloneComponents(text: string): StandaloneComponent[] {
+  const components: StandaloneComponent[] = []
+  const lines = text.split("\n")
+  const starts: number[] = []
+  let offset = 0
+  for (const line of lines) {
+    starts.push(offset)
+    offset += line.length + 1
+  }
+  let inFence = false
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    if (line.trimStart().startsWith("```")) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+
+    const tag = line.match(/^\s*<([A-Z][\w.]*)\b/)?.[1]
+    if (!tag) continue
+
+    let last = i
+    while (!/\/\s*>\s*$/.test(lines[last])) {
+      // An ordinary opening tag is not a self-closing component. Never scan
+      // through its translated body looking for a later `/>`.
+      if (lines[last].includes(">") || last + 1 >= lines.length) break
+      const next = lines[last + 1]
+      if (/^\s*(?:#{1,6}\s|```|<)/.test(next)) break
+      last++
+    }
+    if (!/\/\s*>\s*$/.test(lines[last])) continue
+
+    const source = lines
+      .slice(i, last + 1)
+      .join("\n")
+      .trim()
+    const attrs: string[] = []
+    const attrPattern = /([\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|\{([^}]*)\})/g
+    let attr: RegExpExecArray | null
+    while ((attr = attrPattern.exec(source)) !== null) {
+      if (TRANSLATABLE_KEYS.has(attr[1])) continue
+      attrs.push(`${attr[1]}=${attr[2] ?? attr[3] ?? attr[4]}`)
+    }
+    components.push({
+      tag,
+      identity: `${tag}|${attrs.sort().join(",")}`,
+      source,
+      start: starts[i] + line.search(/\S/),
+      end: starts[last] + lines[last].length,
+    })
+    i = last
+  }
+  return components
+}
+
+function componentCounts(
+  components: StandaloneComponent[],
+  key: (component: StandaloneComponent) => string
+): Map<string, number> {
+  const counts = new Map<string, number>()
+  for (const component of components) {
+    const id = key(component)
+    counts.set(id, (counts.get(id) ?? 0) + 1)
+  }
+  return counts
+}
+
+interface SectionBlock {
+  start: number
+  text: string
+}
+
+/** Blank-line blocks let an inert insertion follow translated prose by ordinal. */
+function sectionBlocks(text: string): SectionBlock[] {
+  const blocks: SectionBlock[] = []
+  const separator = /\n[ \t]*\n+/g
+  let start = 0
+  let match: RegExpExecArray | null
+  while ((match = separator.exec(text)) !== null) {
+    if (text.slice(start, match.index).trim()) {
+      blocks.push({ start, text: text.slice(start, match.index) })
+    }
+    start = separator.lastIndex
+  }
+  if (text.slice(start).trim()) blocks.push({ start, text: text.slice(start) })
+  return blocks
+}
+
+function proseBlocks(text: string): SectionBlock[] {
+  return sectionBlocks(text).filter((block) => {
+    const components = standaloneComponents(block.text)
+    return components.length !== 1 || components[0].source !== block.text.trim()
+  })
+}
+
+/** Tag and non-translatable attributes identify a component across locales. */
+function componentStructureIdentity(node: TreeNode): string {
+  const attrs = node.children
+    .filter(
+      (child) =>
+        child.elementType === "component-attribute" &&
+        child.contentType !== "translatable" &&
+        child.value !== undefined
+    )
+    .map((child) => `${child.meta?.name ?? ""}=${child.value}`)
+    .sort()
+  return `${node.meta?.tagName ?? ""}|${attrs.join(",")}`
+}
+
+function componentStructureList(text: string): string[] {
+  return [...walk(parseMarkdown(text, PIPELINE_CONFIG))]
+    .filter((node) => node.elementType === "component")
+    .map(componentStructureIdentity)
+}
+
+/** Copy newly added inert JSX from English into an existing translated section. */
+function propagateAddedComponents(
+  englishA: string,
+  englishB: string,
+  locale: string,
+  sectionId: string
+): string {
+  const oldSection = findSection(englishA, sectionId)
+  const newSection = findSection(englishB, sectionId)
+  if (!oldSection || !newSection || !findSection(locale, sectionId)) {
+    return locale
+  }
+
+  const oldComponents = standaloneComponents(
+    englishA.slice(oldSection.start, oldSection.end)
+  )
+  const oldContent = englishA.slice(oldSection.start, oldSection.end)
+  const newContent = englishB.slice(newSection.start, newSection.end)
+  const newComponents = standaloneComponents(newContent)
+  const oldIdentities = componentCounts(oldComponents, (c) => c.identity)
+  const oldTags = componentCounts(oldComponents, (c) => c.tag)
+  const newTags = componentCounts(newComponents, (c) => c.tag)
+  const additionsByTag = new Map<string, number>()
+  for (const [tag, count] of newTags) {
+    additionsByTag.set(tag, Math.max(0, count - (oldTags.get(tag) ?? 0)))
+  }
+
+  let result = locale
+  for (const [index, component] of newComponents.entries()) {
+    const oldCount = oldIdentities.get(component.identity) ?? 0
+    if (oldCount > 0) {
+      oldIdentities.set(component.identity, oldCount - 1)
+      continue
+    }
+    const tagBudget = additionsByTag.get(component.tag) ?? 0
+    if (tagBudget === 0) continue
+
+    const localeSection = findSection(result, sectionId)
+    if (!localeSection) break
+    const localeContent = result.slice(localeSection.start, localeSection.end)
+    const localeComponents = standaloneComponents(localeContent)
+    const localeCounts = componentCounts(localeComponents, (c) => c.identity)
+    const desiredCount = newComponents.filter(
+      (c) => c.identity === component.identity
+    ).length
+    if ((localeCounts.get(component.identity) ?? 0) >= desiredCount) continue
+    additionsByTag.set(component.tag, tagBudget - 1)
+
+    const oldProse = proseBlocks(oldContent)
+    const newProse = proseBlocks(newContent)
+    const localeProse = proseBlocks(localeContent)
+    const alignedProse =
+      oldProse.length === newProse.length &&
+      oldProse.length === localeProse.length
+    // A merged or split translated paragraph has no safe positional mapping.
+    // Leave the component missing so the structural guard triggers full fallback.
+    if (
+      !alignedProse &&
+      newProse.some((block) => block.start > component.start)
+    ) {
+      continue
+    }
+
+    const next = newComponents
+      .slice(index + 1)
+      .map((c, offset) => {
+        const ordinal = newComponents
+          .slice(0, index + offset + 2)
+          .filter((candidate) => candidate.identity === c.identity).length
+        const match = localeComponents.filter(
+          (loc) => loc.identity === c.identity
+        )[ordinal - 1]
+        return match ? { english: c, locale: match } : undefined
+      })
+      .find((c) => c !== undefined)
+    if (
+      next &&
+      !newProse.some(
+        (block) =>
+          block.start > component.start && block.start < next.english.start
+      )
+    ) {
+      const at = localeSection.start + next.locale.start
+      result =
+        result.slice(0, at) + component.source + "\n\n" + result.slice(at)
+      continue
+    }
+
+    if (alignedProse) {
+      const proseBefore = newProse.filter(
+        (block) => block.start < component.start
+      ).length
+      const following = localeProse[proseBefore]
+      if (following) {
+        const at = localeSection.start + following.start
+        result =
+          result.slice(0, at) + component.source + "\n\n" + result.slice(at)
+        continue
+      }
+    }
+
+    const previous = newComponents
+      .slice(0, index)
+      .reverse()
+      .map((c, offset) => {
+        const originalIndex = index - offset - 1
+        const ordinal = newComponents
+          .slice(0, originalIndex + 1)
+          .filter((candidate) => candidate.identity === c.identity).length
+        return localeComponents.filter((loc) => loc.identity === c.identity)[
+          ordinal - 1
+        ]
+      })
+      .find((c) => c !== undefined)
+    if (previous) {
+      const at = localeSection.start + previous.end
+      result =
+        result.slice(0, at) + "\n\n" + component.source + result.slice(at)
+      continue
+    }
+
+    const before = result.slice(0, localeSection.end).trimEnd()
+    const after = result.slice(localeSection.end)
+    result =
+      before + "\n\n" + component.source + (after ? "\n\n" : "\n") + after
+  }
+  return result
 }
 
 /** Multiset difference: items in `actual` that `expected` does not account for. */
@@ -378,6 +632,8 @@ interface StructuralDelta {
   headingDelta: number
   missingHrefs: string[]
   extraHrefs: string[]
+  missingComponents: string[]
+  extraComponents: string[]
 }
 
 function structuralDelta(english: string, locale: string): StructuralDelta {
@@ -385,12 +641,16 @@ function structuralDelta(english: string, locale: string): StructuralDelta {
   const locAnchors = [...anchorSet(locale)]
   const enHrefs = hrefList(english)
   const locHrefs = hrefList(locale)
+  const enComponents = componentStructureList(english)
+  const locComponents = componentStructureList(locale)
   return {
     missingAnchors: surplus(locAnchors, enAnchors),
     extraAnchors: surplus(enAnchors, locAnchors),
     headingDelta: scanHeadings(english).length - scanHeadings(locale).length,
     missingHrefs: surplus(locHrefs, enHrefs),
     extraHrefs: surplus(enHrefs, locHrefs),
+    missingComponents: surplus(locComponents, enComponents),
+    extraComponents: surplus(enComponents, locComponents),
   }
 }
 
@@ -433,6 +693,18 @@ export function findStructuralRegressions(
   }
   for (const href of surplus(before.extraHrefs, after.extraHrefs)) {
     out.push({ kind: "href", detail: `stale ${href} left in locale` })
+  }
+  for (const identity of surplus(
+    before.missingComponents,
+    after.missingComponents
+  )) {
+    out.push({ kind: "component", detail: `${identity} missing from locale` })
+  }
+  for (const identity of surplus(
+    before.extraComponents,
+    after.extraComponents
+  )) {
+    out.push({ kind: "component", detail: `stale ${identity} left in locale` })
   }
   return out
 }
@@ -608,16 +880,70 @@ interface Routing {
   addedIds: Set<string>
   renamedOldIds: Set<string>
   llmSectionIds: Set<string>
+  componentOnlyIds: Set<string>
 }
 
 function route(
   treeA: TreeNode,
   treeB: TreeNode,
   dr: DiffResult,
-  cs: ChangeSet
+  cs: ChangeSet,
+  englishA: string,
+  englishB: string
 ): Routing {
   // Leaf translatableDrift sections only -- parents would duplicate their children
-  const tdPaths = dr.translatableDrift.map((e) => e.path)
+  const componentOnlyIds = new Set<string>()
+  const tdPaths = dr.translatableDrift
+    .filter((entry) => {
+      const oldNode = getNodeByPath(treeA, entry.path)
+      const newNode = getNodeByPath(treeB, entry.path)
+      if (!oldNode || !newNode || oldNode.nodeType !== "section") return true
+      const oldSection = findSection(englishA, entry.id)
+      const newSection = findSection(englishB, entry.id)
+      if (!oldSection || !newSection) return true
+      const oldText = englishA.slice(oldSection.start, oldSection.end)
+      const newText = englishB.slice(newSection.start, newSection.end)
+      const oldProse = proseBlocks(oldText).map((block) => block.text.trim())
+      const newProse = proseBlocks(newText).map((block) => block.text.trim())
+      if (oldProse.join("\n\n") !== newProse.join("\n\n")) return true
+      const oldStandalone = standaloneComponents(oldText)
+      const newStandalone = standaloneComponents(newText)
+      const unmatched = new Map<string, StandaloneComponent[]>()
+      for (const component of oldStandalone) {
+        const candidates = unmatched.get(component.identity) ?? []
+        candidates.push(component)
+        unmatched.set(component.identity, candidates)
+      }
+      const translatedAttrs = (source: string) =>
+        [
+          ...source.matchAll(
+            /([\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|\{([^}]*)\})/g
+          ),
+        ]
+          .filter((match) => TRANSLATABLE_KEYS.has(match[1]))
+          .map((match) => `${match[1]}=${match[2] ?? match[3] ?? match[4]}`)
+          .sort()
+          .join("|")
+      for (const component of newStandalone) {
+        const oldComponent = unmatched.get(component.identity)?.shift()
+        if (
+          translatedAttrs(component.source) !==
+          translatedAttrs(oldComponent?.source ?? "")
+        ) {
+          return true
+        }
+      }
+      const oldComponents = [...walk(oldNode)]
+        .filter((node) => node.elementType === "component")
+        .map(componentStructureIdentity)
+      const newComponents = [...walk(newNode)]
+        .filter((node) => node.elementType === "component")
+        .map(componentStructureIdentity)
+      if (surplus(oldComponents, newComponents).length === 0) return true
+      componentOnlyIds.add(entry.id)
+      return false
+    })
+    .map((entry) => entry.path)
   const leafTdPaths = tdPaths.filter(
     (p) => !tdPaths.some((o) => o !== p && o.startsWith(p + "/"))
   )
@@ -671,7 +997,13 @@ function route(
     ...translatableFmIds,
   ])
 
-  return { leafTdPaths, addedIds, renamedOldIds, llmSectionIds }
+  return {
+    leafTdPaths,
+    addedIds,
+    renamedOldIds,
+    llmSectionIds,
+    componentOnlyIds,
+  }
 }
 
 /** Section IDs the LLM must translate for this English diff. */
@@ -685,8 +1017,14 @@ export function getLlmSectionIds(
   const treeA = parse(englishA, config)
   const treeB = parse(englishB, config)
   return [
-    ...route(treeA, treeB, diff(treeA, treeB), extractChanges(treeA, treeB))
-      .llmSectionIds,
+    ...route(
+      treeA,
+      treeB,
+      diff(treeA, treeB),
+      extractChanges(treeA, treeB),
+      englishA,
+      englishB
+    ).llmSectionIds,
   ]
 }
 
@@ -707,12 +1045,13 @@ function pipelineMarkdown(
   const cs = extractChanges(treeA, treeB)
 
   const renames = cs.sectionRenames
-  const { leafTdPaths, addedIds, renamedOldIds, llmSectionIds } = route(
-    treeA,
-    treeB,
-    dr,
-    cs
-  )
+  const {
+    leafTdPaths,
+    addedIds,
+    renamedOldIds,
+    llmSectionIds,
+    componentOnlyIds,
+  } = route(treeA, treeB, dr, cs, englishA, englishB)
 
   let result = localeA
 
@@ -993,6 +1332,7 @@ function pipelineMarkdown(
   const inertOrStructIds = new Set([
     ...dr.inertDrift.map((e) => e.id),
     ...dr.structuralDrift.map((e) => e.id),
+    ...componentOnlyIds,
   ])
   for (const sectionId of inertOrStructIds) {
     if (sectionId.startsWith("frontmatter:") || sectionId.includes(":"))
@@ -1065,6 +1405,14 @@ function pipelineMarkdown(
         }
       }
     }
+  }
+
+  // extractChanges reports a newly added component's attributes (or nothing
+  // for an empty component), but not the component itself. Compare the actual
+  // standalone JSX in each structurally changed section instead.
+  for (const sectionId of inertOrStructIds) {
+    if (sectionId.includes(":") || llmSectionIds.has(sectionId)) continue
+    result = propagateAddedComponents(englishA, englishB, result, sectionId)
   }
 
   // --- Phase 4 & 5: LLM Translation + Assembly ---
