@@ -1,6 +1,5 @@
 "use client"
 
-import { merge } from "lodash"
 import {
   type AbstractIntlMessages,
   NextIntlClientProvider,
@@ -11,23 +10,14 @@ type I18nProviderProps = {
   children: React.ReactNode
   locale: string
   messages: AbstractIntlMessages
-  /**
-   * Whether to keep the messages an enclosing provider already supplied. A page scopes
-   * its provider to the namespaces it renders, which silently removed everything else
-   * from its subtree -- a shared component mounted inside it (search, the feedback
-   * widget) lost `common` and rendered its keys. Inheriting costs no payload: those
-   * messages are already on the client for the chrome around the page.
-   *
-   * The root provider has nothing to inherit from, so it passes `false`.
-   */
-  inherit?: boolean
 }
 
-const Provider = ({
+/** The app-level provider. `useMessages()` throws without a parent, so the root can't inherit. */
+export const RootI18nProvider = ({
   children,
   locale,
   messages,
-}: Omit<I18nProviderProps, "inherit">) => (
+}: I18nProviderProps) => (
   <NextIntlClientProvider
     locale={locale}
     messages={messages}
@@ -44,16 +34,16 @@ const Provider = ({
   </NextIntlClientProvider>
 )
 
-const InheritingProvider = ({
+/**
+ * A page-scoped provider. Keeps the enclosing provider's namespaces so shared components
+ * inside the page (search, the feedback widget) still find `common`. Messages are keyed by
+ * namespace, so a shallow spread is enough.
+ */
+export default function I18nProvider({
   messages,
   ...props
-}: Omit<I18nProviderProps, "inherit">) => (
-  <Provider {...props} messages={merge({}, useMessages(), messages)} />
-)
-
-export default function I18nProvider({
-  inherit = true,
-  ...props
 }: I18nProviderProps) {
-  return inherit ? <InheritingProvider {...props} /> : <Provider {...props} />
+  return (
+    <RootI18nProvider {...props} messages={{ ...useMessages(), ...messages }} />
+  )
 }

@@ -84,7 +84,7 @@ const Search = ({
   // DocSearch already opens on these chords, so there is nothing to do here.
   // The registration exists only so the hook counts a keyboard-opened search
   // separately from the button, which share the event above.
-  useKeyboardShortcut("search", () => {})
+  useKeyboardShortcut("search", () => {}, { enabled: ownsShortcut })
 
   return (
     <>
