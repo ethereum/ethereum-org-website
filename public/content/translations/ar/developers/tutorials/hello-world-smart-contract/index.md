@@ -9,9 +9,9 @@ lang: ar
 published: 2021-03-31
 ---
 
-إذا كنت جديدًا في مجال تطوير سلسلة الكتل ولا تعرف من أين تبدأ، أو إذا كنت ترغب فقط في فهم كيفية نشر العقود الذكية والتفاعل معها، فهذا الدليل مناسب لك. سنستعرض خطوات إنشاء ونشر عقد ذكي بسيط على شبكة اختبار Sepolia باستخدام محفظة افتراضية [ميتاماسك](https://metamask.io/)، و[Solidity](https://docs.soliditylang.org/en/v0.8.0/)، و[Hardhat](https://hardhat.org/)، و[Alchemy](https://www.alchemy.com/eth) (لا تقلق إذا كنت لا تفهم معنى أي من هذا بعد، فسنقوم بشرحه).
+إذا كنت جديدًا في تطوير سلسلة الكتل ولا تعرف من أين تبدأ، أو إذا كنت ترغب فقط في فهم كيفية نشر العقود الذكية والتفاعل معها، فهذا الدليل مناسب لك. سنستعرض كيفية إنشاء ونشر عقد ذكي بسيط على شبكة اختبار Sepolia باستخدام محفظة افتراضية [ميتاماسك](https://metamask.io/)، و[Solidity](https://docs.soliditylang.org/)، و[Hardhat](https://hardhat.org/)، و[Alchemy](https://www.alchemy.com/eth) (لا تقلق إذا كنت لا تفهم معنى أي من هذا بعد، فسنشرحه).
 
-في [الجزء الثاني](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) من هذا البرنامج التعليمي، سنستعرض كيفية التفاعل مع عقدنا الذكي بمجرد نشره هنا، وفي [الجزء الثالث](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) سنغطي كيفية نشره على Etherscan.
+بمجرد نشر عقدك، يمكنك [بناء واجهة مستخدم له](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 إذا كانت لديك أسئلة في أي وقت، فلا تتردد في التواصل معنا في [ديسكورد Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -37,15 +37,15 @@ published: 2021-03-31
 
 نحتاج إلى حساب إيثيريوم لإرسال واستقبال المعاملات. في هذا البرنامج التعليمي، سنستخدم ميتاماسك، وهي محفظة افتراضية في المتصفح تُستخدم لإدارة عنوان حساب إيثيريوم الخاص بك. المزيد حول [المعاملات](/developers/docs/transactions/).
 
-يمكنك تنزيل ميتاماسك وإنشاء حساب إيثيريوم مجانًا [هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى شبكة اختبار "Sepolia" باستخدام القائمة المنسدلة للشبكة (حتى لا نتعامل بأموال حقيقية).
+يمكنك تنزيل ميتاماسك وإنشاء حساب إيثيريوم مجانًا [من هنا](https://metamask.io/download). عند إنشاء حساب، أو إذا كان لديك حساب بالفعل، تأكد من التبديل إلى شبكة اختبار "Sepolia" باستخدام القائمة المنسدلة للشبكة (حتى لا نتعامل بأموال حقيقية).
 
-إذا لم ترَ Sepolia مدرجة، فانتقل إلى القائمة، ثم Advanced (متقدم) وقم بالتمرير لأسفل لتبديل "Show test networks" (إظهار شبكات الاختبار) إلى وضع التشغيل. في قائمة تحديد الشبكة، اختر علامة التبويب "Custom" (مخصص) للعثور على قائمة بشبكات الاختبار وحدد "Sepolia".
+إذا لم ترَ Sepolia مدرجة، فافتح القائمة في الزاوية العلوية اليمنى، وحدد "Networks" (الشبكات)، وقم بتشغيل "Show test networks" (إظهار شبكات الاختبار) في أسفل قائمة الشبكات (راجع [دليل ميتاماسك لعرض شبكات الاختبار](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)). ثم حدد "Sepolia" في قائمة اختيار الشبكة.
 
-![metamask sepolia example](./metamask-sepolia-example.png)
+![مثال على ميتاماسك Sepolia](./metamask-sepolia-example.png)
 
 ## الخطوة 4: إضافة إيثر من صنبور {#step-4}
 
-من أجل نشر عقدنا الذكي على شبكة الاختبار، سنحتاج إلى بعض الـ ETH الوهمي. للحصول على <span dir="ltr">Sepolia ETH</span> يمكنك الذهاب إلى [تفاصيل شبكة Sepolia](/developers/docs/networks/#sepolia) لعرض قائمة بالصنابير المختلفة. إذا لم يعمل أحدها، جرب آخر لأنها قد تنفد أحيانًا. قد يستغرق الأمر بعض الوقت لتلقي الـ ETH الوهمي الخاص بك بسبب حركة مرور الشبكة. يجب أن ترى ETH في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
+من أجل نشر عقدنا الذكي على شبكة الاختبار، سنحتاج إلى بعض الإيثر الوهمي. للحصول على ETH على Sepolia، يمكنك الانتقال إلى [تفاصيل شبكة Sepolia](/developers/docs/networks/#sepolia) لعرض قائمة بالصنابير المختلفة. إذا لم يعمل أحدها، فجرب آخر لأنها قد تنفد أحيانًا. تحتوي بعض الصنابير على قواعد أهلية؛ على سبيل المثال، يتطلب صنبور Sepolia الخاص بـ Alchemy أن يحتفظ العنوان المستلم بما لا يقل عن <span dir="ltr">0.001 ETH</span> على شبكة إيثيريوم الرئيسية. قد يستغرق الأمر بعض الوقت لتلقي ETH الوهمي الخاص بك بسبب حركة مرور الشبكة. يجب أن ترى ETH في حساب ميتاماسك الخاص بك بعد فترة وجيزة!
 
 ## الخطوة 5: التحقق من رصيدك {#step-5}
 
@@ -63,20 +63,20 @@ published: 2021-03-31
 
 أولاً، سنحتاج إلى إنشاء مجلد لمشروعنا. انتقل إلى سطر الأوامر واكتب:
 
-```
+```sh
 mkdir hello-world
 cd hello-world
 ```
 
-الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [تعليمات تثبيت Node.js](https://nodejs.org/en/download/) (سنحتاج إلى Node.js وnpm في هذا البرنامج التعليمي).
+الآن بعد أن أصبحنا داخل مجلد مشروعنا، سنستخدم `npm init` لتهيئة المشروع. إذا لم يكن لديك npm مثبتًا بالفعل، فاتبع [إرشادات تثبيت Node.js](https://nodejs.org/en/download/) (سنحتاج إلى Node.js وnpm لهذا البرنامج التعليمي).
 
-```
+```sh
 npm init
 ```
 
-لا يهم حقًا كيف تجيب على أسئلة التثبيت، إليك كيف قمنا بذلك كمرجع:
+لا يهم حقًا كيف تجيب على أسئلة التثبيت، إليك كيف فعلنا ذلك كمرجع:
 
-```
+```text
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
@@ -101,48 +101,39 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-وافق على package.json ونحن جاهزون للبدء!
-## الخطوة 7: تنزيل [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
+وافق على package.json. يدعم Hardhat 3، الذي سنقوم بتثبيته بعد ذلك، مشاريع وحدات ES فقط، لذا حدد المشروع كواحد منها:
 
-Hardhat هي بيئة تطوير لتجميع برمجيات إيثيريوم الخاصة بك ونشرها واختبارها وتصحيح أخطائها. إنها تساعد المطورين عند بناء العقود الذكية والتطبيقات اللامركزية (dapps) محليًا قبل النشر على السلسلة الحية.
-
-داخل مشروع `hello-world` الخاص بنا، قم بتشغيل:
-
+```sh
+npm pkg set type=module
 ```
+
+ونحن جاهزون للبدء!
+
+## الخطوة 7: تنزيل [Hardhat](https://hardhat.org/docs/getting-started) {#step-7}
+
+Hardhat هي بيئة تطوير لتجميع برامج إيثيريوم الخاصة بك ونشرها واختبارها وتصحيح أخطائها. إنها تساعد المطورين عند بناء العقود الذكية والتطبيقات اللامركزية (dapps) محليًا قبل النشر على السلسلة المباشرة.
+
+يتطلب Hardhat 3 إصدار <span dir="ltr">Node.js v22.13.0</span> أو أحدث. داخل مشروع `hello-world` الخاص بنا، قم بتشغيل:
+
+```sh
 npm install --save-dev hardhat
 ```
 
-راجع هذه الصفحة لمزيد من التفاصيل حول [تعليمات التثبيت](https://hardhat.org/getting-started/#overview).
+تحقق من هذه الصفحة لمزيد من التفاصيل حول [إرشادات التثبيت](https://hardhat.org/docs/getting-started).
 
 ## الخطوة 8: إنشاء مشروع Hardhat {#step-8}
 
-داخل مجلد مشروعنا، قم بتشغيل:
+سيؤدي تشغيل `npx hardhat --init` إلى إنشاء مشروع نموذج كامل، ولكن في هذا البرنامج التعليمي سنقوم بإعداد الأشياء يدويًا حتى تتمكن من رؤية كل جزء. في الدليل الجذر لمجلد مشروعك، قم بإنشاء ملف يسمى `hardhat.config.js` بالمحتويات التالية:
 
-```
-npx hardhat
-```
+```js
+import { defineConfig } from "hardhat/config"
 
-يجب أن ترى بعد ذلك رسالة ترحيب وخيارًا لتحديد ما تريد القيام به. حدد "create an empty hardhat.config.js":
-
-```
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-
-👷 Welcome to Hardhat v2.0.11 👷‍?
-
-What do you want to do? …
-Create a sample project
-❯ Create an empty hardhat.config.js
-Quit
+export default defineConfig({
+  solidity: "0.8.34",
+})
 ```
 
-سيؤدي هذا إلى إنشاء ملف `hardhat.config.js` لنا حيث سنحدد جميع إعدادات مشروعنا (في الخطوة 13).
+هذا هو المكان الذي سنحدد فيه كل الإعدادات لمشروعنا (في الخطوة 13). في الوقت الحالي، يخبر Hardhat فقط بإصدار مترجم Solidity الذي يجب استخدامه.
 
 ## الخطوة 9: إضافة مجلدات المشروع {#step-9}
 
@@ -158,79 +149,74 @@ mkdir scripts
 
 ## الخطوة 10: كتابة عقدنا {#step-10}
 
-قد تسأل نفسك، متى بالضبط سنكتب الكود؟؟ حسنًا، ها نحن ذا، في الخطوة 10.
+قد تسأل نفسك، متى بحق الجحيم سنكتب الكود؟؟ حسنًا، ها نحن ذا، في الخطوة 10.
 
 افتح مشروع hello-world في محرر النصوص المفضل لديك (نحن نفضل [VSCode](https://code.visualstudio.com/)). تُكتب العقود الذكية بلغة تسمى Solidity وهي ما سنستخدمه لكتابة العقد الذكي HelloWorld.sol الخاص بنا.‌
 
-1.  انتقل إلى مجلد "contracts" وأنشئ ملفًا جديدًا يسمى HelloWorld.sol
+1.  انتقل إلى مجلد "contracts" وقم بإنشاء ملف جديد يسمى HelloWorld.sol
 2.  يوجد أدناه نموذج لعقد ذكي Hello World من مؤسسة إيثيريوم سنستخدمه في هذا البرنامج التعليمي. انسخ والصق المحتويات أدناه في ملف HelloWorld.sol الخاص بك، وتأكد من قراءة التعليقات لفهم ما يفعله هذا العقد:
 
 ```solidity
-// يحدد إصدار Solidity، باستخدام الإصدار الدلالي.
-// لمعرفة المزيد: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.0;
+// SPDX-License-Identifier: MIT
+// يحدد إصدار Solidity، باستخدام تحديد الإصدار الدلالي.
+// لمعرفة المزيد: https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragma
+pragma solidity ^0.8.24;
 
-// يُعرّف عقداً باسم `HelloWorld`.
-// العقد هو مجموعة من الدوال والبيانات (حالته). بمجرد نشره، يتواجد العقد في عنوان محدد على سلسلة الكتل إيثيريوم. لمعرفة المزيد: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// يحدد عقداً باسم `HelloWorld`.
+// العقد هو مجموعة من الدوال والبيانات (حالته). بمجرد نشره، يتواجد العقد في عنوان محدد على سلسلة الكتل لإيثيريوم. لمعرفة المزيد: https://docs.soliditylang.org/en/latest/structure-of-a-contract.html
 contract HelloWorld {
 
-   // يُصرّح عن متغير حالة `message` من النوع `string`.
-   // متغيرات الحالة هي متغيرات تُخزن قيمها بشكل دائم في مساحة تخزين العقد. الكلمة المفتاحية `public` تجعل المتغيرات قابلة للوصول من خارج العقد وتُنشئ دالة يمكن للعقود أو العملاء الآخرين استدعاؤها للوصول إلى القيمة.
+   // يعلن عن متغير حالة `message` من النوع `string`.
+   // متغيرات الحالة هي متغيرات يتم تخزين قيمها بشكل دائم في مساحة تخزين العقد. الكلمة المفتاحية `public` تجعل المتغيرات قابلة للوصول من خارج العقد وتنشئ دالة يمكن للعقود أو العملاء الآخرين استدعاؤها للوصول إلى القيمة.
    string public message;
 
-   // على غرار العديد من اللغات كائنية التوجه المعتمدة على الفئات، يُعد المُنشئ دالة خاصة تُنفذ فقط عند إنشاء العقد.
-   // تُستخدم المُنشئات لتهيئة بيانات العقد. لمعرفة المزيد:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // على غرار العديد من اللغات كائنية التوجه القائمة على الفئات، فإن المُنشئ هو دالة خاصة يتم تنفيذها فقط عند إنشاء العقد.
+   // تُستخدم المُنشئات لتهيئة بيانات العقد. لمعرفة المزيد: https://docs.soliditylang.org/en/latest/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // يقبل وسيطة نصية `initMessage` ويُعين القيمة في متغير التخزين `message` الخاص بالعقد).
+      // يقبل وسيطة نصية `initMessage` ويعين القيمة في متغير التخزين `message` الخاص بالعقد).
       message = initMessage;
    }
 
-   // دالة عامة تقبل وسيطة نصية وتُحدث متغير التخزين `message`.
+   // دالة عامة تقبل وسيطة نصية وتحدث متغير التخزين `message`.
    function update(string memory newMessage) public {
       message = newMessage;
    }
 }
 ```
 
-هذا عقد ذكي بسيط للغاية يخزن رسالة عند إنشائه ويمكن تحديثه عن طريق استدعاء دالة `update`.
+هذا عقد ذكي بسيط للغاية يخزن رسالة عند الإنشاء ويمكن تحديثه عن طريق استدعاء دالة `update`.
 
 ## الخطوة 11: ربط ميتاماسك وAlchemy بمشروعك {#step-11}
 
 لقد أنشأنا محفظة ميتاماسك، وحساب Alchemy، وكتبنا عقدنا الذكي، والآن حان الوقت لربط الثلاثة.
 
-تتطلب كل معاملة يتم إرسالها من محفظتك الافتراضية توقيعًا باستخدام مفتاحك الخاص الفريد. لتزويد برنامجنا بهذا الإذن، يمكننا تخزين مفتاحنا الخاص (ومفتاح API الخاص بـ Alchemy) بأمان في ملف بيئة.
+تتطلب كل معاملة يتم إرسالها من محفظتك الافتراضية توقيعًا باستخدام مفتاحك الخاص الفريد. لتزويد برنامجنا بهذا الإذن، يمكننا تخزين مفتاحنا الخاص (ومفتاح واجهة برمجة التطبيقات (API) الخاص بـ Alchemy) بأمان في ملف بيئة.
 
-> لمعرفة المزيد حول إرسال المعاملات، راجع [هذا البرنامج التعليمي](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) حول إرسال المعاملات باستخدام Web3.
+> لمعرفة المزيد حول إرسال المعاملات، تحقق من [وثائق المعاملات](/developers/docs/transactions/).
 
-أولاً، قم بتثبيت حزمة dotenv في دليل مشروعك:
+قم بإنشاء ملف `.env` في الدليل الجذر لمشروعنا، وأضف إليه مفتاحك الخاص في ميتاماسك وعنوان URL الخاص بـ HTTP Alchemy API.
 
-```
-npm install dotenv --save
-```
-
-ثم، أنشئ ملف `.env` في الدليل الجذر لمشروعنا، وأضف مفتاح ميتاماسك الخاص بك وعنوان URL الخاص بـ HTTP Alchemy API إليه.
-
-- اتبع [هذه التعليمات](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) لتصدير مفتاحك الخاص
+- اتبع [هذه الإرشادات](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) لتصدير مفتاحك الخاص
 - انظر أدناه للحصول على عنوان URL الخاص بـ HTTP Alchemy API
 
-![get alchemy api key](./get-alchemy-api-key.png)
+![الحصول على مفتاح Alchemy API](./get-alchemy-api-key.png)
 
-نسخ عنوان URL الخاص بـ Alchemy API
+انسخ عنوان URL الخاص بـ Alchemy API
 
 يجب أن يبدو ملف `.env` الخاص بك هكذا:
 
-```
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
 
-لربط هذه المتغيرات فعليًا بالكود الخاص بنا، سنشير إليها في ملف `hardhat.config.js` الخاص بنا في الخطوة 13.
+لربط هذه المتغيرات فعليًا بالكود الخاص بنا، سنشير إليها في ملف `hardhat.config.js` الخاص بنا في الخطوة 13. يمكن لـ Node.js قراءة ملفات `.env` بمفرده، لذلك لا توجد حزمة إضافية لتثبيتها.
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-لا تقم بإيداع (commit) ملف <code>.env</code>! يرجى التأكد من عدم مشاركة أو كشف ملف <code>.env</code> الخاص بك لأي شخص، لأنك بذلك تعرض أسرارك للخطر. إذا كنت تستخدم نظام التحكم في الإصدارات، فأضف ملف <code>.env</code> الخاص بك إلى ملف <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+لا تقم بإيداع (commit) ملف <code>.env</code>! يرجى التأكد من عدم مشاركة أو كشف ملف <code>.env</code> الخاص بك لأي شخص، لأنك بذلك تعرض أسرارك للخطر. إذا كنت تستخدم نظام التحكم في الإصدار، فأضف ملف <code>.env</code> الخاص بك إلى ملف <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -239,43 +225,44 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Ethers.js هي مكتبة تسهل التفاعل وتقديم الطلبات إلى إيثيريوم عن طريق تغليف [طرق JSON-RPC القياسية](/developers/docs/apis/json-rpc/) بطرق أكثر سهولة في الاستخدام.
 
-يجعل Hardhat من السهل جدًا دمج [الإضافات (Plugins)](https://hardhat.org/plugins/) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [إضافة Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) لنشر العقد (تحتوي [Ethers.js](https://github.com/ethers-io/ethers.js/) على بعض طرق نشر العقود الواضحة والممتازة).
+يجعل Hardhat من السهل جدًا دمج [المكونات الإضافية (Plugins)](https://hardhat.org/docs/plugins/official-plugins) للحصول على أدوات إضافية ووظائف موسعة. سنستفيد من [المكون الإضافي Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) لنشر العقد (يحتوي [Ethers.js](https://docs.ethers.org/v6/) على بعض طرق نشر العقود النظيفة للغاية).
 
 في دليل مشروعك اكتب:
 
-```
-npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```sh
+npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 ```
 
-سنحتاج أيضًا إلى ethers في ملف `hardhat.config.js` الخاص بنا في الخطوة التالية.
+سنضيف أيضًا المكون الإضافي إلى `hardhat.config.js` الخاص بنا في الخطوة التالية.
 
 ## الخطوة 13: تحديث hardhat.config.js {#step-13-update-hardhatconfigjs}
 
-لقد أضفنا العديد من التبعيات والإضافات حتى الآن، والآن نحتاج إلى تحديث `hardhat.config.js` حتى يتعرف مشروعنا عليها جميعًا.
+لقد أضفنا العديد من التبعيات والمكونات الإضافية حتى الآن، والآن نحتاج إلى تحديث `hardhat.config.js` حتى يعرف مشروعنا عنها جميعًا.
 
 قم بتحديث `hardhat.config.js` الخاص بك ليبدو هكذا:
 
-```
-require('dotenv').config();
+```js
+import { existsSync } from "node:fs"
+import hardhatEthers from "@nomicfoundation/hardhat-ethers"
+import { configVariable, defineConfig } from "hardhat/config"
 
-require("@nomiclabs/hardhat-ethers");
-const { API_URL, PRIVATE_KEY } = process.env;
+// تحميل API_URL و PRIVATE_KEY من ملف .env إلى process.env، إذا كان موجوداً
+if (existsSync(".env")) process.loadEnvFile()
 
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-module.exports = {
-   solidity: "0.7.3",
-   defaultNetwork: "sepolia",
-   networks: {
-      hardhat: {},
-      sepolia: {
-         url: API_URL,
-         accounts: [`0x${PRIVATE_KEY}`]
-      }
-   },
-}
+export default defineConfig({
+  plugins: [hardhatEthers],
+  solidity: "0.8.34",
+  networks: {
+    sepolia: {
+      type: "http",
+      url: configVariable("API_URL"),
+      accounts: [configVariable("PRIVATE_KEY")],
+    },
+  },
+})
 ```
+
+يخبر `configVariable` Hardhat بقراءة كل قيمة من متغير بيئة فقط عند الحاجة إليها، لذلك تعمل الأوامر مثل `compile` حتى قبل تعيين القيم. إذا كنت تفضل عدم الاحتفاظ بمفتاحك الخاص في ملف نصي عادي، فيمكن لـ Hardhat أيضًا قراءة [متغيرات التكوين من مخزن المفاتيح المشفر](https://hardhat.org/docs/guides/configuration-variables).
 
 ## الخطوة 14: تجميع عقدنا {#step-14-compile-our-contracts}
 
@@ -283,77 +270,79 @@ module.exports = {
 
 من سطر الأوامر قم بتشغيل:
 
-```
+```sh
 npx hardhat compile
 ```
 
-قد تتلقى تحذيرًا بشأن `SPDX license identifier not provided in source file` ، ولكن لا داعي للقلق حيال ذلك — نأمل أن يبدو كل شيء آخر جيدًا! إذا لم يكن الأمر كذلك، يمكنك دائمًا إرسال رسالة في [ديسكورد Alchemy](https://discord.gg/u72VCg3).
+في المرة الأولى التي تقوم فيها بالتجميع، يقوم Hardhat بتنزيل مترجم Solidity. يجب أن ترى بعد ذلك شيئًا مثل `Compiled 1 Solidity file with solc 0.8.34`. إذا لم يكن الأمر كذلك، يمكنك دائمًا إرسال رسالة في [ديسكورد Alchemy](https://discord.gg/gWuC7zB).
 
 ## الخطوة 15: كتابة برنامج النشر النصي الخاص بنا {#step-15-write-our-deploy-scripts}
 
-الآن بعد أن تمت كتابة عقدنا وملف التكوين الخاص بنا جاهز للعمل، حان الوقت لكتابة البرنامج النصي لنشر العقد.
+الآن بعد أن تمت كتابة عقدنا وأصبح ملف التكوين الخاص بنا جاهزًا، حان الوقت لكتابة البرنامج النصي لنشر العقد.
 
-انتقل إلى مجلد `scripts/` وأنشئ ملفًا جديدًا يسمى `deploy.js` ، مع إضافة المحتويات التالية إليه:
+انتقل إلى مجلد `scripts/` وقم بإنشاء ملف جديد يسمى `deploy.js`، مع إضافة المحتويات التالية إليه:
 
-```
-async function main() {
-   const HelloWorld = await ethers.getContractFactory("HelloWorld");
+```js
+import { network } from "hardhat"
 
-   // بدء النشر، وإرجاع وعد (promise) يحل إلى كائن عقد
-   const hello_world = await HelloWorld.deploy("Hello World!");
-   console.log("Contract deployed to address:", hello_world.address);}
+const { ethers } = await network.create()
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+
+// بدء النشر، وإرجاع وعد يحل إلى كائن عقد
+const hello_world = await HelloWorld.deploy("Hello World!")
+await hello_world.waitForDeployment()
+console.log("Contract deployed to address:", await hello_world.getAddress())
 ```
 
-يقوم Hardhat بعمل رائع في شرح ما يفعله كل سطر من أسطر الكود هذه في [البرنامج التعليمي للعقود](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) الخاص بهم، وقد اعتمدنا تفسيراتهم هنا.
+دعنا نستعرض ما يفعله كل سطر من أسطر الكود هذه.
 
-```
-const HelloWorld = await ethers.getContractFactory("HelloWorld");
-```
-
-إن `ContractFactory` في Ethers.js هو تجريد يُستخدم لنشر عقود ذكية جديدة، لذا فإن `HelloWorld` هنا هو مصنع لمثيلات عقد hello world الخاص بنا. عند استخدام إضافة `hardhat-ethers`، يتم توصيل مثيلات `ContractFactory` و`Contract` بالموقّع الأول افتراضيًا.
-
-```
-const hello_world = await HelloWorld.deploy();
+```js
+const { ethers } = await network.create()
 ```
 
-سيؤدي استدعاء `deploy()` على `ContractFactory` إلى بدء النشر، وإرجاع `Promise` يحل إلى `Contract`. هذا هو الكائن الذي يحتوي على طريقة (method) لكل دالة من دوال العقد الذكي الخاص بنا.
+في Hardhat 3، يفتح البرنامج النصي اتصالاً بشبكة بشكل صريح. يتصل `network.create()` بالشبكة التي تختارها باستخدام خيار `--network` عند تشغيل البرنامج النصي، ويضيف المكون الإضافي `hardhat-ethers` كائن `ethers` إلى هذا الاتصال.
+
+```js
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+```
+
+`ContractFactory` في ethers.js هو تجريد يُستخدم لنشر عقود ذكية جديدة، لذا فإن `HelloWorld` هنا هو مصنع لمثيلات عقد hello world الخاص بنا. عند استخدام المكون الإضافي `hardhat-ethers`، يتم توصيل مثيلات `ContractFactory` و`Contract` بالموقّع الأول افتراضيًا.
+
+```js
+const hello_world = await HelloWorld.deploy("Hello World!")
+```
+
+سيؤدي استدعاء `deploy()` على `ContractFactory` إلى بدء النشر، وإرجاع `Promise` الذي يتم حله إلى `Contract`. هذا هو الكائن الذي يحتوي على طريقة لكل دالة من دوال العقد الذكي الخاص بنا. تذهب الوسائط التي تمررها إلى `deploy()` إلى مُنشئ العقد، وهنا الرسالة الأولية.
+
+ينتظر `waitForDeployment()` حتى يتم تضمين معاملة النشر في كتلة، ويعيد `getAddress()` عنوان العقد الجديد. راجع [وثائق عقد ethers.js](https://docs.ethers.org/v6/api/contract/) لمزيد من التفاصيل.
 
 ## الخطوة 16: نشر عقدنا {#step-16-deploy-our-contract}
 
 نحن مستعدون أخيرًا لنشر عقدنا الذكي! انتقل إلى سطر الأوامر وقم بتشغيل:
 
-```
+```sh
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 يجب أن ترى بعد ذلك شيئًا مثل:
 
-```
+```text
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
 إذا ذهبنا إلى [Etherscan الخاص بـ Sepolia](https://sepolia.etherscan.io/) وبحثنا عن عنوان عقدنا، فيجب أن نتمكن من رؤية أنه قد تم نشره بنجاح. ستبدو المعاملة كالتالي:
 
-![etherscan contract](./etherscan-contract.png)
+![عقد etherscan](./etherscan-contract.png)
 
-يجب أن يتطابق عنوان `From` مع عنوان حساب ميتاماسك الخاص بك وسيشير عنوان "To" (إلى) إلى "Contract Creation" (إنشاء عقد) ولكن إذا نقرنا على المعاملة فسنرى عنوان عقدنا في حقل `To`:
+يجب أن يتطابق عنوان `From` (من) مع عنوان حساب ميتاماسك الخاص بك وسيشير عنوان `To` (إلى) إلى "Contract Creation" (إنشاء عقد) ولكن إذا نقرنا على المعاملة فسنرى عنوان عقدنا في حقل `To`:
 
-![etherscan transaction](./etherscan-transaction.png)
+![معاملة etherscan](./etherscan-transaction.png)
 
 تهانينا! لقد قمت للتو بنشر عقد ذكي على سلسلة إيثيريوم 🎉
 
-لفهم ما يحدث داخليًا، دعنا ننتقل إلى علامة التبويب Explorer (المستكشف) في [لوحة تحكم Alchemy](https://dashboard.alchemy.com/explorer) الخاصة بنا. إذا كان لديك تطبيقات Alchemy متعددة، فتأكد من التصفية حسب التطبيق وحدد "Hello World".
-![hello world explorer](./hello-world-explorer.png)
+لفهم ما يحدث داخليًا، يمكنك إلقاء نظرة على الطلبات التي تلقاها تطبيق "Hello World" الخاص بك في [لوحة تحكم Alchemy](https://dashboard.alchemy.com/).
 
-هنا سترى مجموعة من استدعاءات JSON-RPC التي أجراها Hardhat/Ethers داخليًا نيابة عنا عندما استدعينا دالة `.deploy()`. هناك استدعاءان مهمان يجب الإشارة إليهما هنا وهما [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction)، وهو طلب كتابة عقدنا فعليًا على سلسلة Sepolia، و[`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash) وهو طلب لقراءة معلومات حول معاملتنا بناءً على التجزئة (نمط نموذجي عند إجراء المعاملات). لمعرفة المزيد حول إرسال المعاملات، راجع هذا البرنامج التعليمي حول [إرسال المعاملات باستخدام Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+هناك سترى مجموعة من استدعاءات JSON-RPC التي أجراها Hardhat/Ethers داخليًا نيابة عنا عندما استدعينا دالة `.deploy()`. هناك استدعاءان مهمان يجب الإشارة إليهما هنا وهما [`eth_sendRawTransaction`](/developers/docs/apis/json-rpc/#eth-sendrawtransaction)، وهو طلب كتابة عقدنا فعليًا على سلسلة Sepolia، و[`eth_getTransactionByHash`](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash) وهو طلب لقراءة معلومات حول معاملتنا بناءً على التجزئة (نمط نموذجي عند إرسال المعاملات). لمعرفة المزيد حول إرسال المعاملات، تحقق من [وثائق المعاملات](/developers/docs/transactions/).
 
-هذا كل شيء بالنسبة للجزء الأول من هذا البرنامج التعليمي، في الجزء الثاني سنقوم فعليًا بـ [التفاعل مع عقدنا الذكي](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) عن طريق تحديث رسالتنا الأولية، وفي الجزء الثالث سنقوم بـ [نشر عقدنا الذكي على Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) حتى يعرف الجميع كيفية التفاعل معه.
-
-**هل تريد معرفة المزيد عن Alchemy؟ راجع [موقعنا الإلكتروني](https://www.alchemy.com/eth). ألا تريد أن تفوتك أي تحديثات؟ اشترك في نشرتنا الإخبارية [هنا](https://www.alchemy.com/newsletter)! تأكد أيضًا من الانضمام إلى [ديسكورد](https://discord.gg/u72VCg3) الخاص بنا.**.
+هذا كل شيء في هذا البرنامج التعليمي. بعد ذلك، يمكنك [بناء واجهة مستخدم لعقدك](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
