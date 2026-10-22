@@ -323,4 +323,4 @@ More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice
 
 ## Related tutorials {#related-tutorials}
 
-- [Turn your Raspberry Pi 4 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._
+- [Turn your Raspberry Pi 5 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 5, plug in an ethernet cable, connect the NVMe disk and power up the device to turn the Raspberry Pi 5 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._

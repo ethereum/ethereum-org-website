@@ -13,11 +13,13 @@ published: 2022-05-15
 
 ## Which Yellow Paper? {#which-yellow-paper}
 
-Like almost everything else in Ethereum, the Yellow Paper evolves over time. To be able to refer to a specific version, I uploaded [the current version at writing](https://ethereum.github.io/yellowpaper/paper.pdf). The section, page, and equation numbers I use will refer to that version. It is a good idea to have it open in a different window while reading this document.
+Like almost everything else in Ethereum, the Yellow Paper evolves over time. The section, page, and equation numbers in this tutorial refer to the version that was current when it was written (the Berlin version, 2022). [The latest version](https://ethereum.github.io/yellowpaper/paper.pdf) has been updated since then, so some numbers may be slightly different. It is a good idea to have it open in a different window while reading this document.
 
 ### Why the EVM? {#why-the-evm}
 
-The original yellow paper was written right at the start of Ethereum's development. It describes the original proof-of-work based consensus mechanism that was originally used to secure the network. However, Ethereum switched off proof-of-work and started using proof-of-stake based consensus in September 2022. This tutorial will focus on the parts of the yellow paper defining the Ethereum Virtual Machine. The EVM was unchanged by the transition to proof-of-stake (except for the return value of the DIFFICULTY opcode).
+The original yellow paper was written right at the start of Ethereum's development. It describes the original proof-of-work based consensus mechanism that was originally used to secure the network. However, Ethereum switched off proof-of-work and started using proof-of-stake based consensus in September 2022. This tutorial will focus on the parts of the yellow paper defining the Ethereum Virtual Machine. The transition to proof-of-stake barely changed the EVM: the `DIFFICULTY` opcode (0x44) was renamed [`PREVRANDAO`](https://eips.ethereum.org/EIPS/eip-4399) and now returns a random value from the beacon chain.
+
+Later network upgrades did change the EVM. They added opcodes such as [`PUSH0`](https://eips.ethereum.org/EIPS/eip-3855), [`TLOAD` and `TSTORE`](https://eips.ethereum.org/EIPS/eip-1153) (transient storage), [`MCOPY`](https://eips.ethereum.org/EIPS/eip-5656), [`BLOBHASH`](https://eips.ethereum.org/EIPS/eip-4844), and [`BLOBBASEFEE`](https://eips.ethereum.org/EIPS/eip-7516), and changed the behavior of [`SELFDESTRUCT`](https://eips.ethereum.org/EIPS/eip-6780). The Yellow Paper does not cover all of these changes. The most up to date specification is the [Python execution layer specification](https://github.com/ethereum/execution-specs).
 
 ## 9 Execution model {#9-execution-model}
 
@@ -43,11 +45,13 @@ mstore(0, 0x60A7)
 
 `mstore` is one of three opcodes the EVM provides for interacting with memory - it loads a word into memory. The other two are `mstore8` which loads a single byte into memory, and `mload` which moves a word from memory to stack.
 
-The EVM also has a separate non-volatile **storage** model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). This storage is where contracts keep persistent data - a contract can only interact with its own storage. Storage is organized in key-value mappings.
+The EVM also has a separate non-volatile **storage** model that is maintained as part of the system state - this memory maps 256-bit keys to 256-bit values (as opposed to memory, which is a byte-addressable array). This storage is where contracts keep persistent data - a contract can only interact with its own storage. Storage is organized in key-value mappings.
 
-Although it is not mentioned in this section of the Yellow Paper, it is also useful to know there is a fourth type of memory. **Calldata** is byte-addressable read-only memory used to store the value passed with the `data` parameter of a transaction. The EVM has specific opcodes for managing `calldata`. `calldatasize` returns the size of the data. `calldataload` loads the data into the stack. `calldatacopy` copies the data into memory.
+Since the Cancun upgrade, there is also **transient storage** ([EIP-1153](https://eips.ethereum.org/EIPS/eip-1153)). It is accessed like storage, using the `TLOAD` and `TSTORE` opcodes, but it is cleared at the end of every transaction.
 
-The standard [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) stores code and data in the same memory. The EVM does not follow this standard for security reasons - sharing volatile memory makes it possible to change program code. Instead, code is saved to storage.
+Although it is not mentioned in this section of the Yellow Paper, it is also useful to know there is one more type of memory. **Calldata** is byte-addressable read-only memory used to store the value passed with the `data` parameter of a transaction. The EVM has specific opcodes for managing `calldata`. `calldatasize` returns the size of the data. `calldataload` loads the data into the stack. `calldatacopy` copies the data into memory.
+
+The standard [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) stores code and data in the same memory. The EVM does not follow this standard for security reasons - sharing volatile memory makes it possible to change program code. Instead, code is stored immutably as part of the contract's account in the world state, separate from both memory and the contract's storage.
 
 There are only two cases in which code is executed from memory:
 
@@ -100,7 +104,7 @@ The execution environment is a tuple, _I_, that includes information that isn't 
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                                            | `msg.sender`                             |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                                         | `msg.value`                              |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                                          | `address(this).code`                     |
-| _I<sub>H</sub>_ | Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`DIFFICULTY`](https://www.evm.codes/#44) | `block.number`, `block.difficulty`, etc. |
+| _I<sub>H</sub>_ | Block header fields, such as [`NUMBER`](https://www.evm.codes/#43) and [`PREVRANDAO`](https://www.evm.codes/#44) | `block.number`, `block.prevrandao`, etc. |
 | _I<sub>e</sub>_ | Depth of the call stack for calls between contracts (including contract creation)                                |
 | _I<sub>w</sub>_ | Is the EVM allowed to change state, or is it running statically                                                  |
 
@@ -175,7 +179,7 @@ We have an exceptional halt if any of these conditions is true:
   The function _W(w,μ)_ is defined later in equation 159. _W(w,μ)_ is true if one of these conditions is true:
 
   - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
-    These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
+    These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract. `TSTORE`, which was added after this version of the Yellow Paper, is also forbidden in a static context.
 
   - **_LOG0≤w ∧ w≤LOG4_**
     If we are called statically we cannot emit log entries.
@@ -202,7 +206,7 @@ In all other cases we look at the rest of the code by going to the next opcode a
 The halting function _H_, can return three types of values.
 
 - If we aren't in a halt opcode, return _∅_, the empty set. By convention, this value is interpreted as Boolean false.
-- If we have a halt opcode that doesn't produce output (either [`STOP`](https://www.evm.codes/#00) or [`SELFDESTRUCT`](https://www.evm.codes/#ff)), return a sequence of size zero bytes as the return value. Note that this is very different from the empty set. This value means that the EVM really did halt, just there's no return data to read.
+- If we have a halt opcode that doesn't produce output (either [`STOP`](https://www.evm.codes/#00) or [`SELFDESTRUCT`](https://www.evm.codes/#ff)), return a sequence of size zero bytes as the return value. Note that this is very different from the empty set. This value means that the EVM really did halt, just there's no return data to read. (Also note that since [EIP-6780](https://eips.ethereum.org/EIPS/eip-6780), `SELFDESTRUCT` only deletes the contract if it is called in the same transaction that created the contract. Otherwise, it just transfers the contract's ETH.)
 - If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)), return the sequence of bytes specified by that opcode. This sequence is taken from memory, the value at the top of the stack (_μ<sub>s</sub>[0]_) is the first byte, and the value after it (_μ<sub>s</sub>[1]_) is the length.
 
 ## H.2 Instruction set {#h2-instruction-set}
@@ -275,4 +279,4 @@ Mathematical notation is precise and has allowed the Yellow Paper to specify eve
 - Programmers understand computer code.
   They may or may not understand mathematical notation.
 
-Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) are written in Python. There are [execution layer specs in Python](https://ethereum.github.io/execution-specs), but they are not complete. Until and unless the entire Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.
+For these reasons, the [consensus layer specs](https://github.com/ethereum/consensus-specs) are written in Python, and so are the [execution layer specs](https://github.com/ethereum/execution-specs). The Python execution layer specification is now the maintained reference for how the EVM works, and it includes the changes from upgrades the Yellow Paper does not cover. The Yellow Paper is still a useful formal description, and being able to read it helps you read other related mathematical papers.

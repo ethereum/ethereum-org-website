@@ -44,6 +44,8 @@ There are [many distributed exchanges (DEX)](/apps/categories/defi/) that let yo
 
 For a large language model, I chose to get started with [OpenAI](https://openai.com/). To run the application in this tutorial you'll need to pay for API access. The minimum payment of $5 is more than sufficient.
 
+The OpenAI Python library can also talk to any other OpenAI-compatible endpoint, including a model you run on your own computer. See [Interfacing with an LLM](#interface-llm) for how to point it elsewhere.
+
 ## Development, step by step {#step-by-step}
 
 To simplify development, we proceed in stages. Each step is a branch in GitHub.
@@ -524,12 +526,29 @@ Next, we prompt an actual LLM and receive an expected future value. I wrote this
    export OPENAI_API_KEY=sk-<the rest of the key goes here>
    ```
 
-5. Checkout and run the agent
+5. Checkout the agent
 
    ```sh
    git checkout 04-interface-llm
+   ```
+
+6. The code in the repository uses the `gpt-4-turbo` model, which [OpenAI shuts down on October 23, 2026](https://developers.openai.com/api/docs/deprecations). Switch it to `gpt-6-luna`, a current low-cost model. Because `gpt-6-luna` is a reasoning model, the command also turns reasoning off (`reasoning_effort="none"`, which keeps `temperature` usable) and replaces the deprecated `max_tokens` parameter with `max_completion_tokens`.
+
+   ```sh
+   sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
+   ```
+
+7. Run the agent
+
+   ```sh
    uv run agent.py
    ```
+
+If you'd rather use a different OpenAI-compatible endpoint, such as a model you host locally, the OpenAI library reads the endpoint from the `OPENAI_BASE_URL` environment variable. Set it, put any non-empty value in `OPENAI_API_KEY` if the server doesn't check keys, and change `gpt-6-luna` in `agent.py` and `test-predictor.py` to the name of a model that server provides. If the server rejects `reasoning_effort`, remove that parameter.
+
+```sh
+export OPENAI_BASE_URL=http://localhost:<port>/v1
+```
 
 Here is the new code.
 
@@ -539,20 +558,20 @@ from openai import OpenAI
 open_ai = OpenAI()  # The client reads the OPENAI_API_KEY environment variable
 ```
 
-Import and instantiate the OpenAI API.
+Import and instantiate the OpenAI API. The client also reads `OPENAI_BASE_URL` if it is set, so the same code works with other OpenAI-compatible endpoints.
 
 ```python
 response = open_ai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-6-luna", reasoning_effort="none",
     messages=[
         {"role": "user", "content": prompt}
     ],
     temperature=0.0,
-    max_tokens=16,
+    max_completion_tokens=16,
 )
 ```
 
-Call the OpenAI API (`open_ai.chat.completions.create`) to create the response.
+Call the OpenAI API (`open_ai.chat.completions.create`) to create the response. A `temperature` of zero asks for the most predictable answer, and `max_completion_tokens` limits the length of the answer, which only needs to hold a number. With a reasoning model, `max_completion_tokens` also counts the tokens the model uses to think, which is another reason to set `reasoning_effort` to `none`.
 
 ```python
 expected_price = Decimal(response.choices[0].message.content.strip())
@@ -754,9 +773,12 @@ Here are the steps to create a local fork and enable trading.
 Now that we have WETH and USDC, we can actually run the agent.
 
 ```sh
-git checkout 05-trade
+git checkout -f 05-trade
+sed -i.bak -e 's/"gpt-4-turbo"/"gpt-6-luna", reasoning_effort="none"/' -e 's/max_tokens=/max_completion_tokens=/' agent.py test-predictor.py
 uv run agent.py
 ```
+
+The `-f` discards the model change you made on the previous branch, so the `sed` command applies it again to the new version of `agent.py`.
 
 The output will look similar to:
 
@@ -941,7 +963,7 @@ print("Account balances after trade:")
 balances()
 ```
 
-This agent currently only works once. However, you can change it to work continuously either by running it from [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) or by wrapping lines 368-400 in a loop and using [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) to wait until it is time for the next cycle.
+This agent currently only works once. However, you can change it to work continuously either by running it from [`crontab`](https://man7.org/linux/man-pages/man1/crontab.1.html) or by wrapping lines 368-397 in a loop and using [`time.sleep`](https://docs.python.org/3/library/time.html#time.sleep) to wait until it is time for the next cycle.
 
 ## Possible improvements {#improvements}
 
@@ -959,7 +981,7 @@ There are two important facts the agent ignores when deciding what to do.
 
 AI vendors can see the queries you send to their LLMs, which could expose the genius trading system you developed with your agent. A trading system that too many people use is worthless because too many people try to buy when you want to buy (and the price goes up) and try to sell when you want to sell (and the price goes down).
 
-You can run an LLM locally, for example, using [LM-Studio](https://lmstudio.ai/), to avoid this problem.
+You can run an LLM locally, for example, using [llama.cpp](https://github.com/ggml-org/llama.cpp)'s `llama-server`, to avoid this problem. It provides an OpenAI-compatible endpoint, so you only need to set `OPENAI_BASE_URL` and the model name as explained in [Interfacing with an LLM](#interface-llm).
 
 ### From AI bot to AI agent {#bot-to-agent}
 
