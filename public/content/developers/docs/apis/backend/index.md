@@ -210,7 +210,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.covalenthq.com/docs/api/)
+- [Documentation](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
