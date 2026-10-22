@@ -13,7 +13,7 @@ published: 2022-05-15
 
 ## Which Yellow Paper? {#which-yellow-paper}
 
-Like almost everything else in Ethereum, the Yellow Paper evolves over time. The section, page, and equation numbers in this tutorial refer to the version that was current when it was written (the Berlin version, 2022). [The latest version](https://ethereum.github.io/yellowpaper/paper.pdf) has been updated since then, so some numbers may be slightly different. It is a good idea to have it open in a different window while reading this document.
+Like almost everything else in Ethereum, the Yellow Paper evolves over time. To be able to refer to a specific version, I uploaded [the version that was current at writing](yellow-paper-berlin.pdf) (the Berlin version, 2022). The section, page, and equation numbers in this tutorial refer to that version. [The latest version](https://ethereum.github.io/yellowpaper/paper.pdf) has been updated since then, so its numbers may differ. It is a good idea to have it open in a different window while reading this document.
 
 ### Why the EVM? {#why-the-evm}
 
