@@ -363,6 +363,8 @@ interface StandaloneComponent {
   tag: string
   identity: string
   source: string
+  lineStart: number
+  indent: string
   start: number
   end: number
 }
@@ -416,12 +418,30 @@ function standaloneComponents(text: string): StandaloneComponent[] {
       tag,
       identity: `${tag}|${attrs.sort().join(",")}`,
       source,
+      lineStart: starts[i],
+      indent: line.slice(0, line.search(/\S/)),
       start: starts[i] + line.search(/\S/),
       end: starts[last] + lines[last].length,
     })
     i = last
   }
   return components
+}
+
+function reindentComponent(
+  component: StandaloneComponent,
+  indent: string
+): string {
+  return component.source
+    .split("\n")
+    .map(
+      (line, index) =>
+        indent +
+        (index > 0 && line.startsWith(component.indent)
+          ? line.slice(component.indent.length)
+          : line)
+    )
+    .join("\n")
 }
 
 function componentCounts(
@@ -566,9 +586,12 @@ function propagateAddedComponents(
           block.start > component.start && block.start < next.english.start
       )
     ) {
-      const at = localeSection.start + next.locale.start
+      const at = localeSection.start + next.locale.lineStart
       result =
-        result.slice(0, at) + component.source + "\n\n" + result.slice(at)
+        result.slice(0, at) +
+        reindentComponent(component, next.locale.indent) +
+        "\n\n" +
+        result.slice(at)
       continue
     }
 
@@ -593,15 +616,25 @@ function propagateAddedComponents(
         const ordinal = newComponents
           .slice(0, originalIndex + 1)
           .filter((candidate) => candidate.identity === c.identity).length
-        return localeComponents.filter((loc) => loc.identity === c.identity)[
-          ordinal - 1
-        ]
+        const match = localeComponents.filter(
+          (loc) => loc.identity === c.identity
+        )[ordinal - 1]
+        return match ? { english: c, locale: match } : undefined
       })
       .find((c) => c !== undefined)
-    if (previous) {
-      const at = localeSection.start + previous.end
+    if (
+      previous &&
+      !newProse.some(
+        (block) =>
+          block.start > previous.english.end && block.start < component.start
+      )
+    ) {
+      const at = localeSection.start + previous.locale.end
       result =
-        result.slice(0, at) + "\n\n" + component.source + result.slice(at)
+        result.slice(0, at) +
+        "\n\n" +
+        reindentComponent(component, previous.locale.indent) +
+        result.slice(at)
       continue
     }
 

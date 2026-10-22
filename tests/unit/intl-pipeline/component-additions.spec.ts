@@ -318,3 +318,45 @@ test("leaves uncertain paragraph placement for the structural fallback", () => {
     expect.arrayContaining([expect.objectContaining({ kind: "component" })])
   )
 })
+
+test("appends after the last paragraph when an earlier component exists", () => {
+  const oldEnglish = `## A {#a}\n\nAlpha.\n\n<Divider />\n\nBeta.\n`
+  const newEnglish = `${oldEnglish.trimEnd()}\n\n<QuizWidget quizKey="x" />\n`
+  const oldLocale = `## Ein {#a}\n\nAlpha-DE.\n\n<Divider />\n\nBeta-DE.\n`
+
+  const result = pipeline(oldEnglish, newEnglish, oldLocale, "markdown")
+
+  expect(result).toContain('Beta-DE.\n\n<QuizWidget quizKey="x" />')
+  expect(result.indexOf("<Divider />")).toBeLessThan(result.indexOf("Beta-DE."))
+  expect(
+    findStructuralRegressions(oldEnglish, oldLocale, newEnglish, result)
+  ).toEqual([])
+})
+
+test("keeps an existing component indented when inserting before it", () => {
+  const oldEnglish = `## A {#a}\n\nAlpha.\n\n  <Divider />\n`
+  const newEnglish = oldEnglish.replace(
+    "  <Divider />",
+    '  <QuizWidget quizKey="x" />\n\n  <Divider />'
+  )
+  const oldLocale = `## Ein {#a}\n\nAlpha-DE.\n\n  <Divider />\n`
+
+  const result = pipeline(oldEnglish, newEnglish, oldLocale, "markdown")
+
+  expect(result).toContain('  <QuizWidget quizKey="x" />\n\n  <Divider />')
+  expect(result).toContain("Alpha-DE.")
+  expect(
+    findStructuralRegressions(oldEnglish, oldLocale, newEnglish, result)
+  ).toEqual([])
+})
+
+test("matches indentation when inserting after an indented component", () => {
+  const oldEnglish = `## A {#a}\n\nAlpha.\n\n  <Divider />\n`
+  const newEnglish = `${oldEnglish.trimEnd()}\n\n  <QuizWidget quizKey="x" />\n`
+  const oldLocale = `## Ein {#a}\n\nAlpha-DE.\n\n  <Divider />\n`
+
+  const result = pipeline(oldEnglish, newEnglish, oldLocale, "markdown")
+
+  expect(result).toContain('  <Divider />\n\n  <QuizWidget quizKey="x" />')
+  expect(result).toContain("Alpha-DE.")
+})
