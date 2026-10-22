@@ -88,7 +88,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       : growThePieData.txCostsMedianUsd.value
 
   const heroContent: HubHeroProps = {
-    title: t("page-layer-2-hero-title"),
+    breadcrumbs: { slug: "layer-2" },
     header: t("page-layer-2-hero-header"),
     description: t("page-layer-2-hero-description"),
     heroImg: heroImg,

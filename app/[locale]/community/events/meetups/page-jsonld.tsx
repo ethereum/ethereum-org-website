@@ -7,6 +7,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { getLocaleYear } from "@/lib/utils/date"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -47,7 +48,6 @@ export default async function MeetupsJsonLD({
   meetups: EventItem[]
 }) {
   const t = await getTranslations("page-community-events")
-  const common = await getTranslations("common")
 
   const year = getLocaleYear(locale)
   const url = normalizeUrlForJsonLd(locale, `/community/events/meetups/`)
@@ -76,35 +76,10 @@ export default async function MeetupsJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Community",
-              item: normalizeUrlForJsonLd(locale, "/community/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: common("events"),
-              item: normalizeUrlForJsonLd(locale, "/community/events/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: t("page-events-section-local-meetups"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          "community/events/meetups"
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#meetups` },

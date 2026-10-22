@@ -1,7 +1,7 @@
 ---
-title: Zabalený ether (WETH)
-metaTitle: Co je zabalený ether (WETH)
-description: Úvod do zabaleného etheru (WETH) – wrapperu pro ether (ETH) kompatibilního s ERC-20.
+title: "Zabalený ether (WETH)"
+metaTitle: "Co je zabalený ether (WETH)"
+description: "Úvod do zabaleného etheru (WETH) – wrapperu pro ether (ETH) kompatibilního s ERC-20."
 lang: cs
 ---
 
@@ -31,7 +31,7 @@ WETH můžete rozbalit na ETH pomocí chytrého kontraktu WETH. Pomocí chytréh
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Zabalený ether (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nabídka     | [Nabídka ETH](/eth/supply/) je spravována protokolem [Ethereum](/). [Emise](/roadmap/merge/issuance) ETH je zajišťována validátory Etherea při zpracování transakcí a vytváření bloků.                           | WETH je token ERC-20, jehož nabídka je spravována chytrým kontraktem. Nové jednotky WETH jsou kontraktem emitovány poté, co obdrží vklady ETH od uživatelů, nebo jsou jednotky WETH spáleny, když si uživatel přeje vyplatit WETH za ETH.                                                                                                                                        |
+| Nabídka     | [Nabídka ETH](/what-is-ether/supply/) je spravována protokolem [Ethereum](/). [Emise](/roadmap/merge/issuance) ETH je zajišťována validátory Etherea při zpracování transakcí a vytváření bloků.                           | WETH je token ERC-20, jehož nabídka je spravována chytrým kontraktem. Nové jednotky WETH jsou kontraktem emitovány poté, co obdrží vklady ETH od uživatelů, nebo jsou jednotky WETH spáleny, když si uživatel přeje vyplatit WETH za ETH.                                                                                                                                        |
 | Vlastnictví  | Vlastnictví je spravováno protokolem Ethereum prostřednictvím zůstatku na vašem účtu.  | Vlastnictví WETH je spravováno chytrým kontraktem tokenu WETH, který je zabezpečen protokolem Ethereum.                                                                                                                                         |
 | Gas        | Ether (ETH) je přijímanou jednotkou platby za výpočty v síti Ethereum. Poplatky za gas jsou denominovány v Gwei (jednotka etheru).                                                                                    | Placení za gas pomocí tokenů WETH není nativně podporováno.                                                                                                                                                                                              |
 

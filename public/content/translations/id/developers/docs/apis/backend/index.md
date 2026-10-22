@@ -29,13 +29,13 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi secara lan
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Node-as-a-Service._**
+**All That Node -** **_Node sebagai Layanan._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Dokumentasi](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast oleh Bware Labs -** **_API Terdesentralisasi untuk Mainnet dan Testnet Ethereum._**
+**Blast oleh Bware Labs -** **_Antarmuka Pemrograman Aplikasi (API) Terdesentralisasi untuk Mainnet Ethereum dan Testnet._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Dokumentasi](https://docs.blastapi.io)
@@ -69,7 +69,7 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi secara lan
 - [Dokumentasi](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Penyedia JSON-RPC EVM yang hemat biaya_**
+**Node RPC - _Penyedia JSON-RPC Mesin Virtual Ethereum (EVM) yang hemat biaya_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Dokumentasi](https://docs.noderpc.xyz/node-rpc)
@@ -91,7 +91,13 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi secara lan
 - [Dokumentasi](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_Node Ethereum yang berorientasi pada kecepatan sebagai API JSON-RPC/WebSockets._**
+**SolidRPC -** **_Infrastruktur JSON-RPC EVM dengan akses publik penuh, arsip, dan tanpa kunci._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentasi](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_Node Ethereum berorientasi kecepatan sebagai API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,7 +106,13 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi secara lan
 
 ### Alat pengembangan {#development-tools}
 
-**ethers-kt -** **_Pustaka Kotlin/Java/Android asinkron dan berkinerja tinggi untuk rantai blok berbasis EVM._**
+**eth.zig -** **_Pustaka Zig untuk Ethereum, dengan pengodean Antarmuka Biner Aplikasi (ABI) waktu kompilasi dan pengikatan kontrak._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentasi](https://ethzig.org)
+- [Contoh](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Pustaka Kotlin/Java/Android asinkron dan berkinerja tinggi untuk rantai blok berbasis Mesin Virtual Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,7 +124,7 @@ Pustaka-pustaka ini mengabstraksi banyak kerumitan dalam berinteraksi secara lan
 - [Dokumentasi](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Peralatan Python -** **_Berbagai pustaka untuk interaksi Ethereum melalui Python._**
+**Perkakas Python -** **_Berbagai pustaka untuk interaksi Ethereum melalui Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [GitHub Web3.py](https://github.com/ethereum/web3.py)

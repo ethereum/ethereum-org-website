@@ -17,6 +17,7 @@ import type {
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { TagProps } from "@/components/ui/tag"
 
 import chains from "@/data/chains"
 import { Rollup, Rollups } from "@/data/networks/networks"
@@ -821,9 +822,9 @@ export type WalletData = {
   name: string
   /** Set only to keep a URL stable across a rename; defaults to slugified name. */
   slug?: string
-  /** Optional forever — cards and search degrade gracefully without it. */
-  description?: string
   image: StaticImageData
+  banner?: StaticImageData
+  screenshots?: StaticImageData[]
   twBackgroundColor: string
   twGradiantBrandColor: string
   url: string
@@ -1505,6 +1506,7 @@ export type DeveloperToolsRepoLink = {
   finalScore?: number
   scoreSource?: "official-weight" | "github-inferred" | "unscored"
   lastUpdated?: string | null
+  license?: string | null
 }
 
 export type DeveloperToolsPackageLink = {
@@ -1523,11 +1525,14 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number
   resource_rank?: number
   resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+  /** Last edit of this entry in the upstream catalog (ISO date). */
+  updated_at?: string
 }
 
 export type DeveloperToolsRankingCoverage = {
@@ -1566,4 +1571,41 @@ export interface BuilderResourcesTaxonomy {
     definitions: BuilderResourcesTaxonomyCategory[]
   }
   tags: string[]
+}
+
+export type CatalogItemKind = "app" | "tool" | "wallet"
+
+export type CatalogItemLinkKind =
+  | "x"
+  | "discord"
+  | "telegram"
+  | "reddit"
+  | "farcaster"
+  | "github"
+  | "code"
+
+export interface CatalogItemLink {
+  kind: CatalogItemLinkKind
+  href: string
+}
+
+export interface CatalogItem {
+  kind: CatalogItemKind
+  slug: string
+  name: string
+  logo?: string | StaticImageData
+  banner?: string | StaticImageData
+  screenshots: (string | StaticImageData)[]
+  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
+  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
+  subtitle?: string
+  chains: ChainName[]
+  /** Localized; rendered as markdown. */
+  description?: string
+  primaryLink?: { href: string; label: string }
+  socialLinks: CatalogItemLink[]
+  infoRows: { label: string; value: ReactNode; tooltip?: string }[]
+  /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
+  breadcrumbSlug: string
+  next?: { name: string; href: string }
 }

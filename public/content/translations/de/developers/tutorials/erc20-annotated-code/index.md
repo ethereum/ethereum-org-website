@@ -17,7 +17,7 @@ Eine der häufigsten Anwendungen für Ethereum ist, dass eine Gruppe einen hande
 [Schnittstellendefinition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) analysieren.
 
 Dies ist kommentierter Quellcode. Wenn Sie ERC-20 implementieren möchten,
-[lesen Sie dieses Tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[lesen Sie dieses Tutorial](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Die Schnittstelle {#the-interface}
 

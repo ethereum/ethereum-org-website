@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-developers-tools.json",
-  "generatedAt": "2026-10-14T17:26:13.895Z",
-  "rootHash": "6085aec2e63d",
+  "generatedAt": "2026-10-21T21:36:16.394Z",
+  "rootHash": "b2e6b97a54df",
   "tree": {
-    "contentHash": "1e52b3c00dbb",
-    "anchorHash": "8890eab57c0d",
+    "contentHash": "1fc9874dd9b2",
+    "anchorHash": "4b4880caccdf",
     "children": {
       "page-developers-tools-search-placeholder": {
         "contentHash": "dd886aee85fb",
@@ -155,6 +155,18 @@
         "contentHash": "adb911e968db",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-developers-tools-crops-native": {
+        "contentHash": "6902b7fd7d2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-crops-native-description": {
+        "contentHash": "2a78f2ae38f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-crops-native-info-label": {
+        "contentHash": "256d5d86ab22",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-developers-tools-modal-category": {
         "contentHash": "292c06f0045a",
         "anchorHash": "e3b0c44298fc"
@@ -197,20 +209,12 @@
         "contentHash": "13d6ff07b8a5",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-developers-tools-modal-social": {
-        "contentHash": "f1b7505afa5c",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-developers-tools-modal-website": {
-        "contentHash": "b5a229ac8bec",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-developers-tools-no-results": {
         "contentHash": "a0fa49601b92",
         "anchorHash": "e3b0c44298fc"
       },
       "page-developers-tools-related-title": {
-        "contentHash": "bf1158c509ea",
+        "contentHash": "11e2fa3f5778",
         "anchorHash": "e3b0c44298fc"
       },
       "page-developers-tools-results-label": {
@@ -612,6 +616,30 @@
       "page-developers-tools-title": {
         "contentHash": "7797024d23af",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-archived": {
+        "contentHash": "bdb86505f806",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-info-stars": {
+        "contentHash": "b1b7186aa0f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-info-downloads": {
+        "contentHash": "a1fb88f4a435",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-info-listing-reviewed": {
+        "contentHash": "06aae7025f56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-info-listing-reviewed-tooltip": {
+        "contentHash": "c37c9354a6c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tools-info-license": {
+        "contentHash": "c011d6097bfb",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -652,6 +680,9 @@
       "page-developers-tools-subcategory-standards-specifications-title",
       "page-developers-tools-meta-description",
       "page-developers-tools-meta-title",
+      "page-developers-tools-crops-native",
+      "page-developers-tools-crops-native-description",
+      "page-developers-tools-crops-native-info-label",
       "page-developers-tools-modal-category",
       "page-developers-tools-modal-full-details",
       "page-developers-tools-modal-tags",
@@ -661,8 +692,6 @@
       "page-developers-tools-modal-packages",
       "page-developers-tools-modal-repositories",
       "page-developers-tools-modal-repository",
-      "page-developers-tools-modal-social",
-      "page-developers-tools-modal-website",
       "page-developers-tools-no-results",
       "page-developers-tools-related-title",
       "page-developers-tools-results-label",
@@ -764,8 +793,14 @@
       "page-developers-tools-tag-vscode-extension",
       "page-developers-tools-tag-vyper",
       "page-developers-tools-tag-wallet",
-      "page-developers-tools-title"
+      "page-developers-tools-title",
+      "page-developers-tools-archived",
+      "page-developers-tools-info-stars",
+      "page-developers-tools-info-downloads",
+      "page-developers-tools-info-listing-reviewed",
+      "page-developers-tools-info-listing-reviewed-tooltip",
+      "page-developers-tools-info-license"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

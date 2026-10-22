@@ -1,7 +1,7 @@
 ---
-title: Sarılmış ether (WETH)
-metaTitle: Sarılmış Ether (WETH) Nedir?
-description: Sarılmış ether'e (WETH) giriş—ether (ETH) için ERC-20 uyumlu bir sarmalayıcı. 
+title: "Sarılmış ether (WETH)"
+metaTitle: "Sarılmış Ether (WETH) Nedir?"
+description: "Sarılmış ether'e (WETH) giriş—ether (ETH) için ERC-20 uyumlu bir sarmalayıcı."
 lang: tr
 ---
 
@@ -31,7 +31,7 @@ WETH akıllı sözleşmesini kullanarak WETH'nin sarmasını açıp ETH'ye dön�
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Sarılmış Ether (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Arz     | [ETH arzı](/eth/supply/), [Ethereum](/) protokolü tarafından yönetilir. ETH'nin [ihracı](/roadmap/merge/issuance), işlemleri işlerken ve bloklar oluştururken Ethereum doğrulayıcıları tarafından gerçekleştirilir.                           | WETH, arzı bir akıllı sözleşme tarafından yönetilen bir ERC-20 Token'ıdır. Sözleşme kullanıcılardan ETH mevduatı aldıktan sonra yeni WETH birimleri ihraç edilir veya bir kullanıcı WETH'yi ETH için bozdurmak istediğinde WETH birimleri yakılır.                                                                                                                                        |
+| Arz     | [ETH arzı](/what-is-ether/supply/), [Ethereum](/) protokolü tarafından yönetilir. ETH'nin [ihracı](/roadmap/merge/issuance), işlemleri işlerken ve bloklar oluştururken Ethereum doğrulayıcıları tarafından gerçekleştirilir.                           | WETH, arzı bir akıllı sözleşme tarafından yönetilen bir ERC-20 Token'ıdır. Sözleşme kullanıcılardan ETH mevduatı aldıktan sonra yeni WETH birimleri ihraç edilir veya bir kullanıcı WETH'yi ETH için bozdurmak istediğinde WETH birimleri yakılır.                                                                                                                                        |
 | Sahiplik  | Sahiplik, hesap bakiyeniz aracılığıyla Ethereum protokolü tarafından yönetilir.  | WETH sahipliği, Ethereum protokolü tarafından güvence altına alınan WETH Token akıllı sözleşmesi tarafından yönetilir.                                                                                                                                         |
 | Gaz        | Ether (ETH), Ethereum ağındaki hesaplamalar için kabul edilen ödeme birimidir. Gaz ücretleri Gwei (bir Ether birimi) cinsinden ifade edilir.                                                                                    | WETH Token'ları ile gaz ödemesi yerel olarak desteklenmez.                                                                                                                                                                                              |
 

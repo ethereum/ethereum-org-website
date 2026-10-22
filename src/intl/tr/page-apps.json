@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Şuna göre filtrele",
   "page-apps-filter-all": "Tümü",
   "page-apps-showing": "Gösteriliyor",
-  "page-apps-visit-app": "{appName} uygulamasını ziyaret et",
-  "page-apps-see-next": "Sonrakini gör",
-  "page-apps-info-title": "Bilgi",
   "page-apps-info-founded": "Kuruluş",
   "page-apps-info-creator": "Oluşturan",
-  "page-apps-info-last-updated": "Son güncelleme",
-  "page-apps-gallery-title": "Galeri",
-  "page-apps-gallery-screenshot-alt": "Uygulama arayüzünü gösteren {appName} uygulamasının {index}. ekran görüntüsü",
-  "page-apps-gallery-modal-title": "{appName} Ekran Görüntüleri",
+  "page-apps-info-languages": "Diller",
+  "page-apps-info-listing-reviewed": "Listeleme incelendi",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org'daki bu uygulama hakkındaki ayrıntıların en son ne zaman incelendiğini gösterir. Uygulamanın kendisinin en son ne zaman değiştiğini göstermez.",
   "page-apps-more-apps-like-this": "Buna benzer daha fazla uygulama",
-  "page-apps-by-company": "{company} tarafından",
-  "page-apps-today": "Bugün",
-  "page-apps-one-day-ago": "1 gün önce",
-  "page-apps-days-ago": "{days} gün önce"
+  "page-apps-detail-meta-title": "Ethereum Uygulamaları - {name}"
 }

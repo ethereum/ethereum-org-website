@@ -1,11 +1,8 @@
 {
-  "augur-cta": "Ponořte se do Auguru",
-  "augur-description": "Plně decentralizovaný protokol predikčního trhu používaný k předpovídání cenových trendů. Upozornění: k používání Auguru budete potřebovat určité technické znalosti.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Vyzkoušet Kalshi",
-  "kalshi-description": "Platforma v souladu s CFTC využívající Ethereum pro vklady v USDC. (Pouze pro USA)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Prozkoumat Limitless",
+  "limitless-description": "Predikční trh postavený na Base, vrstvě 2 Etherea. Obchody se vypořádávají onchain v USDC a většina cenových trhů se vyhodnocuje automaticky prostřednictvím onchain cenových zdrojů. Není k dispozici ve všech zemích.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Prozkoumat Polymarket",
-  "polymarket-description": "Populární trh pro předpovědi s obchodováním v reálném čase.",
+  "polymarket-description": "Jeden z největších predikčních trhů. Obchody se vypořádávají na Polygonu a o výsledcích se rozhoduje prostřednictvím orákula UMA. Není k dispozici ve všech zemích.",
   "polymarket-title": "Polymarket"
 }

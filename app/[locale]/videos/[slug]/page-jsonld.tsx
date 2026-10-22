@@ -1,13 +1,11 @@
-import { getTranslations } from "next-intl/server"
-
 import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
@@ -16,12 +14,10 @@ export default async function VideoPageJsonLD({
   locale,
   slug,
   frontmatter,
-  transcript,
 }: {
   locale: string
   slug: string
   frontmatter: VideoFrontmatter
-  transcript: string | null
 }) {
   const url = normalizeUrlForJsonLd(locale, `/videos/${slug}/`)
   const videoGalleryUrl = normalizeUrlForJsonLd(locale, "/videos/")
@@ -34,8 +30,6 @@ export default async function VideoPageJsonLD({
     authorGraphNodes.length > 0
       ? { "@id": authorGraphNodes[0]["@id"] }
       : { "@type": "Person" as const, name: frontmatter.author }
-
-  const t = await getTranslations("page-videos")
 
   const videoObjectId = { "@id": `${url}#video` }
 
@@ -55,29 +49,11 @@ export default async function VideoPageJsonLD({
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("page-videos-hero-title"),
-              item: videoGalleryUrl,
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: frontmatter.breadcrumb || frontmatter.title,
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/videos/${slug}`,
+          frontmatter.breadcrumb || slug.replaceAll("-", " ")
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: videoObjectId,
@@ -101,8 +77,6 @@ export default async function VideoPageJsonLD({
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         isAccessibleForFree: true,
         isFamilyFriendly: true,
-        // Add transcript as plain text if available
-        transcript: transcript ? stripMarkdown(transcript, true) : undefined,
       },
     ],
   }

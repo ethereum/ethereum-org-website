@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/prediction-markets/index.md",
-  "generatedAt": "2026-06-18T00:38:50.946Z",
-  "rootHash": "c80066cca4cb",
+  "generatedAt": "2026-10-21T22:19:02.171Z",
+  "rootHash": "ee3864d09cf4",
   "tree": {
-    "contentHash": "94fabb9db049",
-    "anchorHash": "7b3d084b5447",
+    "contentHash": "98d3ef3c2af9",
+    "anchorHash": "7a9503e17384",
     "children": {
       "frontmatter:title": {
         "contentHash": "3b50eae8b6b6",
@@ -28,15 +28,15 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "a677fb53b0c2",
+        "contentHash": "2dea4a05bdce",
         "anchorHash": "f5818652a990",
         "children": {
           "0": {
-            "contentHash": "3c4c13a605e3",
+            "contentHash": "cfa8d23aabd7",
             "anchorHash": "e3b0c44298fc"
           },
           "1": {
-            "contentHash": "3277c541b3dd",
+            "contentHash": "941751207f5d",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -97,11 +97,11 @@
         ]
       },
       "prose:0": {
-        "contentHash": "4f3786817362",
+        "contentHash": "1a51f6293449",
         "anchorHash": "e3b0c44298fc"
       },
       "how-prediction-markets-work": {
-        "contentHash": "6579f3f339da",
+        "contentHash": "5e98fd5b96f9",
         "anchorHash": "4b9f7d802648",
         "labelHash": "e42f39f8bfa9",
         "children": {
@@ -110,7 +110,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "5c9b8891fbfe",
+            "contentHash": "e2100d623ab0",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -120,8 +120,8 @@
         ]
       },
       "why-does-this-matter": {
-        "contentHash": "58807a87d48b",
-        "anchorHash": "2fe87b9c0214",
+        "contentHash": "94ad3ceefb01",
+        "anchorHash": "89905164477a",
         "labelHash": "896b3fc7f7d4",
         "children": {
           "_label": {
@@ -129,28 +129,28 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "25fbabe88f0a",
+            "contentHash": "e5a840f38668",
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
-            "contentHash": "4fbade50b14c",
-            "anchorHash": "a9dfcbc39da0",
+            "contentHash": "5de7ee2645f9",
+            "anchorHash": "c7e2a402ee17",
             "children": {
               "component:0": {
-                "contentHash": "4345d29ce4e4",
-                "anchorHash": "da2aee119d18",
+                "contentHash": "0bc261f6f547",
+                "anchorHash": "61101dfe5392",
                 "children": {
                   "attr:title": {
-                    "contentHash": "eac2a6b097ff",
+                    "contentHash": "b12598978cf8",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "attr:description": {
-                    "contentHash": "1d511ca8fc4a",
+                    "contentHash": "af71fa3fc1ed",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "attr:emoji": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "e64b0c60e49f"
+                    "anchorHash": "8abc19d71e24"
                   }
                 },
                 "childrenOrder": [
@@ -160,15 +160,15 @@
                 ]
               },
               "component:1": {
-                "contentHash": "2406b8f3ef0e",
+                "contentHash": "ee1a544d3b13",
                 "anchorHash": "611101bcdfd9",
                 "children": {
                   "attr:title": {
-                    "contentHash": "e8492d3e2f90",
+                    "contentHash": "650d7b564b55",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "attr:description": {
-                    "contentHash": "c5713442b877",
+                    "contentHash": "951c74b8a485",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "attr:emoji": {
@@ -211,17 +211,41 @@
               "component:1",
               "component:2"
             ]
+          },
+          "prose:2": {
+            "contentHash": "504b789cdcf5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3baf8b6e3325",
+            "anchorHash": "f9eb86c87274"
+          },
+          "prose:3": {
+            "contentHash": "774e4444ddb9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "9202af6ce925",
+            "anchorHash": "8c881c9c51dc"
+          },
+          "prose:4": {
+            "contentHash": "7dbc0bc68558",
+            "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
           "prose:0",
           "component:2",
-          "prose:0"
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
         ]
       },
       "find-a-prediction-market": {
-        "contentHash": "6b1e2af91f00",
+        "contentHash": "871b6137131c",
         "anchorHash": "2e2d0fcfb790",
         "labelHash": "6933cffd11dc",
         "children": {
@@ -230,7 +254,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "2984f0ecdd95",
+            "contentHash": "81fd422cc716",
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
@@ -238,7 +262,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:3": {
-            "contentHash": "e1f6ca6c723a",
+            "contentHash": "a6918901e13e",
             "anchorHash": "60cacf696d4f",
             "children": {
               "attr:variant": {
@@ -256,11 +280,11 @@
                 }
               },
               "component:1": {
-                "contentHash": "a56b3a40b3bb",
+                "contentHash": "4ee84978ac85",
                 "anchorHash": "a23d45cd8f6d",
                 "children": {
                   "component:0": {
-                    "contentHash": "de0190827370",
+                    "contentHash": "fa76b932385b",
                     "anchorHash": "ab686fbd763c",
                     "children": {
                       "html-tag:0": {
@@ -272,7 +296,7 @@
                         "anchorHash": "e3b0c44298fc"
                       },
                       "html-tag:1": {
-                        "contentHash": "cffc4abce16a",
+                        "contentHash": "f734b016ff2b",
                         "anchorHash": "af2846cf76a6"
                       }
                     },
@@ -300,36 +324,56 @@
         ]
       },
       "challenges-and-risks": {
-        "contentHash": "53d50a5b4e08",
-        "anchorHash": "c13ced7a2d21",
+        "contentHash": "4515ac42edca",
+        "anchorHash": "9ac5787d6826",
         "labelHash": "ba4c44473c27",
         "children": {
           "_label": {
             "contentHash": "ba4c44473c27",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
-            "contentHash": "7ac042322f83",
+          "prose:3": {
+            "contentHash": "fb4c43634004",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
+            "contentHash": "4d263982720f",
+            "anchorHash": "f9eb86c87274"
+          },
+          "prose:4": {
+            "contentHash": "845f7b828eb2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "7036e30bded3",
+            "anchorHash": "2ce6fcffe899"
+          },
+          "prose:5": {
+            "contentHash": "8f2fcd279039",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
             "contentHash": "cc3416055121",
             "anchorHash": "a9405d77ee04"
           },
-          "prose:2": {
-            "contentHash": "274c6f313e97",
+          "prose:6": {
+            "contentHash": "1b8d7b8078db",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
+          "prose:3",
           "link:0",
-          "prose:2"
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "link:2",
+          "prose:6"
         ]
       },
       "experimenting-with-prediction-markets": {
-        "contentHash": "db5f512a6980",
+        "contentHash": "2090820a1bbd",
         "anchorHash": "c191c53f1203",
         "labelHash": "5eb424be9691",
         "children": {
@@ -338,15 +382,15 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:1": {
-            "contentHash": "db4ec6e07aef",
+            "contentHash": "72ab748acf4a",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "cce9ee9fb004",
+            "contentHash": "d22afee7d2ac",
             "anchorHash": "fa35efcadb12"
           },
           "prose:2": {
-            "contentHash": "8fb40efd956d",
+            "contentHash": "050507165d1f",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -358,8 +402,8 @@
         ]
       },
       "further-reading": {
-        "contentHash": "0bae52a9db6b",
-        "anchorHash": "30480f21e3e4",
+        "contentHash": "0d301985ab6b",
+        "anchorHash": "308b06c36cf3",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -375,8 +419,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "54155627e316",
-            "anchorHash": "5062605d7c0d"
+            "contentHash": "dc8be7d46963",
+            "anchorHash": "f9eb86c87274"
+          },
+          "prose:4": {
+            "contentHash": "fd9646a23cb7",
+            "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
             "contentHash": "a9735edabf86",
@@ -388,6 +436,7 @@
           "link:0",
           "prose:3",
           "link:1",
+          "prose:4",
           "link:2"
         ]
       }
@@ -409,5 +458,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

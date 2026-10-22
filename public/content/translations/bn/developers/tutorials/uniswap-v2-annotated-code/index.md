@@ -137,7 +137,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-ওভারফ্লো এবং আন্ডারফ্লো এড়াতে [SafeMath লাইব্রেরি](https://docs.openzeppelin.com/contracts/2.x/api/math) ব্যবহার করা হয়। এটি গুরুত্বপূর্ণ কারণ অন্যথায় আমরা এমন একটি পরিস্থিতির সম্মুখীন হতে পারি যেখানে একটি মান `-1` হওয়া উচিত, কিন্তু তার পরিবর্তে `2^256-1` হয়ে যায়।
+ওভারফ্লো এবং আন্ডারফ্লো এড়াতে [SafeMath লাইব্রেরি](https://docs.openzeppelin.com/contracts/3.x/api/math) ব্যবহার করা হয়। এটি গুরুত্বপূর্ণ কারণ অন্যথায় আমরা এমন একটি পরিস্থিতির সম্মুখীন হতে পারি যেখানে একটি মান `-1` হওয়া উচিত, কিন্তু তার পরিবর্তে `2^256-1` হয়ে যায়।
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1674,7 +1674,7 @@ Solidity-তে একটি ফাংশন প্যারামিটার `
 
 ## লাইব্রেরি {#libraries}
 
-[SafeMath লাইব্রেরি](https://docs.openzeppelin.com/contracts/2.x/api/math) ভালোভাবে ডকুমেন্টেড, তাই এখানে এটি ডকুমেন্ট করার কোনো প্রয়োজন নেই।
+[SafeMath লাইব্রেরি](https://docs.openzeppelin.com/contracts/3.x/api/math) ভালোভাবে ডকুমেন্টেড, তাই এখানে এটি ডকুমেন্ট করার কোনো প্রয়োজন নেই।
 
 ### Math {#math}
 

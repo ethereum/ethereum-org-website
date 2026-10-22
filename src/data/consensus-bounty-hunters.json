@@ -1,13 +1,13 @@
 [
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 48000
+  },
+  {
     "username": "protolambda",
     "name": "protolambda",
     "score": 42400
-  },
-  {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 46250
   },
   {
     "username": "cryptosubtlety",
@@ -33,6 +33,11 @@
     "username": "grandinetech",
     "name": "Grandine team",
     "score": 9000
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 6250
   },
   {
     "username": "gzeoneth",
@@ -78,11 +83,6 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },
-  {
-    "username": "hyunmini",
-    "name": "secuholic",
-    "score": 4500
   },
   {
     "username": "asanso",

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-10-14T17:44:11.351Z",
-  "rootHash": "ef9d91527ebf",
+  "generatedAt": "2026-10-21T21:41:05.202Z",
+  "rootHash": "01c3d1a8f04e",
   "tree": {
-    "contentHash": "8af57b5a6ea5",
-    "anchorHash": "1087fd24b283",
+    "contentHash": "537c5c2b9212",
+    "anchorHash": "47e907a44a47",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
@@ -247,8 +247,20 @@
         "contentHash": "db332598745d",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-find-wallet-info-updated-on": {
-        "contentHash": "5d2e0d798d4b",
+      "page-find-wallet-info-listing-reviewed": {
+        "contentHash": "06aae7025f56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-info-listing-reviewed-tooltip": {
+        "contentHash": "22618ef78714",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-info-languages": {
+        "contentHash": "318655cea4bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-info-fees": {
+        "contentHash": "6d80486cc33a",
         "anchorHash": "e3b0c44298fc"
       },
       "page-find-wallet-iOS": {
@@ -456,28 +468,6 @@
       "page-find-wallet-reset-filters": {
         "contentHash": "daee7606b339",
         "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-visit-website": {
-        "contentHash": "15bf74726c6b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-find-wallet-get-wallet": {
-        "contentHash": "3ab3cba875a4",
-        "anchorHash": "e2fff598e2f7",
-        "children": {
-          "prose:1": {
-            "contentHash": "5fb9c3aba7ad",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "a6db36a31d63"
-          }
-        },
-        "childrenOrder": [
-          "prose:1",
-          "icu:0"
-        ]
       },
       "page-find-wallet-full-details": {
         "contentHash": "723fcb8e8d6c",
@@ -914,7 +904,10 @@
       "page-find-wallet-smart-contract",
       "page-find-wallet-advanced",
       "page-find-wallet-advanced-filters",
-      "page-find-wallet-info-updated-on",
+      "page-find-wallet-info-listing-reviewed",
+      "page-find-wallet-info-listing-reviewed-tooltip",
+      "page-find-wallet-info-languages",
+      "page-find-wallet-info-fees",
       "page-find-wallet-iOS",
       "page-find-wallet-android",
       "page-find-wallet-linux",
@@ -963,8 +956,6 @@
       "page-find-wallet-device",
       "page-find-wallet-filters",
       "page-find-wallet-reset-filters",
-      "page-find-wallet-visit-website",
-      "page-find-wallet-get-wallet",
       "page-find-wallet-full-details",
       "page-find-wallet-related-title",
       "page-find-wallet-show-results",
@@ -1018,5 +1009,5 @@
       "page-find-wallet-fee-value-variable"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

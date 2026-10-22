@@ -69,7 +69,6 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/community/", "page-community"],
   ["/apps/", "page-apps"],
   ["/energy-consumption/", "page-energy-consumption"],
-  ["/eth/", "page-eth"],
   ["/ethereum-forks/", "page-history"],
   ["/resources/", "page-resources"],
   ["/stablecoins/", "page-stablecoins"],
@@ -109,7 +108,10 @@ const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
     ["page-10-year-anniversary", "component-swiper", "component-story-card"],
   ],
   ["/stories/", ["component-story-card"]],
-  ["/apps/", ["page-app-descriptions", "component-swiper"]],
+  [
+    "/apps/",
+    ["page-app-descriptions", "component-swiper", "component-catalog-item"],
+  ],
 ]
 
 const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -125,7 +127,6 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
   "/staking/",
   "/run-a-node/",
   "/what-is-ethereum/",
-  "/eth/",
   "/wallets/",
   "/gas/",
   "/roadmap/",

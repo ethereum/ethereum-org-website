@@ -62,7 +62,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         <MainArticle className="space-y-12 pb-24 md:space-y-20">
           <HubHero
             heroImg={communityHeroImg}
-            title={t("page-collectibles-hero-title")}
+            breadcrumbs={{ slug: "collectibles" }}
             header={t("page-collectibles-hero-header")}
             description={t("page-collectibles-hero-description")}
           />
