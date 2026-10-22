@@ -1,6 +1,6 @@
 ---
 title: Deploying your first smart contract
-description: An introduction to deploying your first smart contract on an Ethereum test network
+description: An introduction to deploying your first smart contract on a simulated Ethereum blockchain in Remix
 author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "deploying"]
 skill: beginner

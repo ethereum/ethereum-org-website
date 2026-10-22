@@ -262,11 +262,12 @@ We’ve added several dependencies and plugins so far, now we need to update har
 Update your hardhat.config.js to look like this:
 
 ```js
+import { existsSync } from "node:fs"
 import hardhatEthers from "@nomicfoundation/hardhat-ethers"
 import { configVariable, defineConfig } from "hardhat/config"
 
-// Load API_URL and PRIVATE_KEY from the .env file into process.env
-process.loadEnvFile()
+// Load API_URL and PRIVATE_KEY from the .env file into process.env, if it exists
+if (existsSync(".env")) process.loadEnvFile()
 
 export default defineConfig({
   plugins: [hardhatEthers],
