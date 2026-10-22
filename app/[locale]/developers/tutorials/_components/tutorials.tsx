@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react"
 import {
-  Archive,
+  ArchiveX,
   Code,
   ExternalLink,
   GraduationCap,
@@ -227,9 +227,9 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
     <>
       {showRemovedNotice && (
         <div className="px-page pt-page">
-          <Alert variant="update" role="status">
+          <Alert variant="warning" role="status">
             <AlertIcon>
-              <Archive />
+              <ArchiveX />
             </AlertIcon>
             <AlertContent>
               <AlertDescription>
