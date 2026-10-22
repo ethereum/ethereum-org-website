@@ -1,8 +1,8 @@
 ---
-title: "Gửi giao dịch bằng Web3"
-description: "Đây là hướng dẫn thân thiện với người mới bắt đầu về cách gửi giao dịch Ethereum bằng Web3. Có ba bước chính để gửi một giao dịch lên chuỗi khối Ethereum: tạo, ký và phát sóng. Chúng ta sẽ đi qua cả ba bước này."
+title: "Gửi giao dịch bằng viem"
+description: "Đây là hướng dẫn thân thiện với người mới bắt đầu về cách gửi các giao dịch Ethereum bằng thư viện viem. Có ba bước chính để gửi một giao dịch lên Chuỗi khối Ethereum: tạo, ký và phát sóng. Chúng ta sẽ đi qua cả ba bước này."
 author: "Elan Halpern"
-tags: ["giao dịch", "web3.js", "Alchemy"]
+tags: ["giao dịch", "viem", "Alchemy"]
 skill: beginner
 breadcrumb: "Gửi giao dịch"
 lang: vi
@@ -11,9 +11,9 @@ source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-Đây là hướng dẫn thân thiện với người mới bắt đầu về cách gửi giao dịch Ethereum bằng Web3. Có ba bước chính để gửi một giao dịch lên chuỗi khối Ethereum: tạo, ký và phát sóng. Chúng ta sẽ đi qua cả ba bước này, hy vọng sẽ giải đáp được mọi thắc mắc của bạn! Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy](https://www.alchemy.com/) để gửi các giao dịch của mình lên chuỗi Ethereum. Bạn có thể [tạo một tài khoản Alchemy miễn phí tại đây](https://auth.alchemy.com/signup).
+Đây là hướng dẫn thân thiện với người mới bắt đầu về cách gửi các giao dịch Ethereum bằng thư viện [viem](https://viem.sh/). Có ba bước chính để gửi một giao dịch lên Chuỗi khối Ethereum: tạo, ký và phát sóng. Chúng ta sẽ đi qua cả ba bước này, hy vọng sẽ giải đáp được mọi thắc mắc của bạn! Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy](https://www.alchemy.com/) để gửi các giao dịch của mình lên Chuỗi Ethereum. Bạn có thể [tạo một tài khoản Alchemy miễn phí tại đây](https://auth.alchemy.com/signup).
 
-**LƯU Ý:** Hướng dẫn này dành cho việc ký các giao dịch của bạn ở _backend_ cho ứng dụng của bạn. Nếu bạn muốn tích hợp việc ký các giao dịch của mình ở frontend, hãy xem cách tích hợp [Web3 với một nhà cung cấp trình duyệt](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
+**LƯU Ý:** Hướng dẫn này dành cho việc ký các giao dịch của bạn trên _backend_ cho ứng dụng của bạn. Nếu bạn muốn tích hợp việc ký các giao dịch của mình trên frontend, hãy xem [API nhà cung cấp MetaMask](https://docs.metamask.io/wallet/reference/provider-api/).
 
 ## Những điều cơ bản {#the-basics}
 
@@ -24,10 +24,11 @@ Giống như hầu hết các nhà phát triển chuỗi khối khi mới bắt 
 - Điều này có nghĩa là Alchemy không thể thay mặt bạn ký và gửi các giao dịch. Lý do cho việc này là vì mục đích bảo mật. Alchemy sẽ không bao giờ yêu cầu bạn chia sẻ khóa riêng tư của mình và bạn cũng không bao giờ nên chia sẻ khóa riêng tư của mình với một nút được lưu trữ (hoặc với bất kỳ ai khác).
 - Bạn có thể đọc từ chuỗi khối bằng cách sử dụng API cốt lõi của Alchemy, nhưng để ghi vào đó, bạn sẽ cần sử dụng một công cụ khác để ký các giao dịch của mình trước khi gửi chúng qua Alchemy (điều này cũng tương tự đối với bất kỳ [dịch vụ nút](/developers/docs/nodes-and-clients/nodes-as-a-service/) nào khác).
 
-### 2\. "Trình ký" (signer) là gì? {#what-is-a-signer}
+### 2\. "Người ký" (signer) là gì? {#what-is-a-signer}
 
-- Các trình ký sẽ ký các giao dịch thay cho bạn bằng cách sử dụng khóa riêng tư của bạn. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) để ký giao dịch của mình, nhưng bạn cũng có thể sử dụng bất kỳ thư viện Web3 nào khác.
-- Ở frontend, một ví dụ điển hình về trình ký là [MetaMask](https://metamask.io/), nó sẽ ký và gửi các giao dịch thay mặt bạn.
+- Người ký sẽ ký các giao dịch cho bạn bằng khóa riêng tư của bạn. Trong hướng dẫn này, chúng ta sẽ sử dụng [viem](https://viem.sh/) để ký giao dịch của mình, nhưng bạn cũng có thể sử dụng bất kỳ thư viện Web3 nào khác.
+- Trên frontend, một ví dụ điển hình về người ký sẽ là [MetaMask](https://metamask.io/), nó sẽ thay mặt bạn ký và gửi các giao dịch.
+
 ### 3\. Tại sao tôi cần phải ký các giao dịch của mình? {#why-do-i-need-to-sign-my-transactions}
 
 - Mọi người dùng muốn gửi một giao dịch trên mạng lưới Ethereum đều phải ký giao dịch đó (bằng khóa riêng tư của họ), nhằm xác thực rằng nguồn gốc của giao dịch đúng là từ người mà nó tuyên bố.
@@ -41,17 +42,17 @@ Giống như hầu hết các nhà phát triển chuỗi khối khi mới bắt 
 
 `eth_sendTransaction` và `eth_sendRawTransaction` đều là các hàm API của Ethereum dùng để phát sóng một giao dịch lên mạng lưới Ethereum để nó được thêm vào một khối trong tương lai. Chúng khác nhau ở cách xử lý việc ký các giao dịch.
 
-- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) được sử dụng để gửi các giao dịch _chưa được ký_, điều này có nghĩa là nút mà bạn đang gửi tới phải quản lý khóa riêng tư của bạn để nó có thể ký giao dịch trước khi phát sóng lên chuỗi. Vì Alchemy không giữ các khóa riêng tư của người dùng, họ không hỗ trợ phương thức này.
-- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) được sử dụng để phát sóng các giao dịch đã được ký. Điều này có nghĩa là trước tiên bạn phải sử dụng [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction), sau đó truyền kết quả vào `eth_sendRawTransaction`.
+- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) được sử dụng để gửi các giao dịch _chưa được ký_, điều này có nghĩa là nút mà bạn đang gửi tới phải quản lý khóa riêng tư của bạn để nó có thể ký giao dịch trước khi phát sóng lên Chuỗi. Vì Alchemy không giữ các khóa riêng tư của người dùng, họ không hỗ trợ phương thức này.
+- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) được sử dụng để phát sóng các giao dịch đã được ký. Điều này có nghĩa là trước tiên bạn phải ký giao dịch bằng khóa riêng tư của mình (trong viem, sử dụng [`signTransaction`](https://viem.sh/docs/actions/wallet/signTransaction) với một [tài khoản cục bộ](https://viem.sh/docs/accounts/local/privateKeyToAccount)), sau đó truyền kết quả vào `eth_sendRawTransaction`.
 
-Khi sử dụng Web3, `eth_sendRawTransaction` được truy cập bằng cách gọi hàm [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction).
+Khi sử dụng viem, `eth_sendRawTransaction` được truy cập bằng cách gọi hàm [`sendRawTransaction`](https://viem.sh/docs/actions/wallet/sendRawTransaction).
 
 Đây là những gì chúng ta sẽ sử dụng trong hướng dẫn này.
 
 ### 6\. Thư viện Web3 là gì? {#what-is-the-web3-library}
 
-- Web3.js là một thư viện bao bọc xung quanh các lệnh gọi JSON-RPC tiêu chuẩn, khá phổ biến để sử dụng trong phát triển Ethereum.
-- Có nhiều thư viện Web3 cho các ngôn ngữ khác nhau. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) được viết bằng JavaScript. Bạn có thể xem các tùy chọn khác [tại đây](/developers/docs/apis/javascript/) như [ethers.js](https://docs.ethers.org/v5/).
+- Thư viện Web3 là một trình bao bọc xung quanh các [lệnh gọi JSON-RPC](/developers/docs/apis/json-rpc/) tiêu chuẩn khá phổ biến để sử dụng trong phát triển Ethereum.
+- Có nhiều thư viện Web3 cho các ngôn ngữ khác nhau. Trong hướng dẫn này, chúng ta sẽ sử dụng [viem](https://viem.sh/), được viết bằng TypeScript và hoạt động trong bất kỳ dự án JavaScript nào. Bạn có thể xem các tùy chọn khác [tại đây](/developers/docs/apis/javascript/) như [Ethers.js](https://docs.ethers.org/v6/).
 
 Được rồi, bây giờ chúng ta đã giải quyết xong một vài câu hỏi này, hãy chuyển sang phần hướng dẫn. Đừng ngần ngại đặt câu hỏi bất cứ lúc nào trong [Discord](https://discord.gg/gWuC7zB) của Alchemy!
 
@@ -73,7 +74,7 @@ Khi sử dụng Web3, `eth_sendRawTransaction` được truy cập bằng cách 
 
 ### 2\. Yêu cầu ETH từ vòi Sepolia {#request-eth-from-sepolia-faucet}
 
-Làm theo các hướng dẫn trên [vòi Sepolia của Alchemy](https://www.sepoliafaucet.com/) để nhận ETH. Đảm bảo bao gồm địa chỉ Ethereum **Sepolia** của bạn (từ MetaMask) chứ không phải một mạng lưới khác. Sau khi làm theo các hướng dẫn, hãy kiểm tra lại xem bạn đã nhận được ETH trong ví của mình chưa.
+Làm theo các hướng dẫn trên [vòi Sepolia của Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) để nhận ETH, hoặc sử dụng một trong các [vòi Sepolia](/developers/docs/networks/#sepolia) khác. Các vòi cung cấp một lượng nhỏ (vòi Alchemy cung cấp 0,1 ETH mỗi ngày), như vậy là quá đủ cho hướng dẫn này. Đảm bảo bao gồm Địa chỉ Ethereum **Sepolia** của bạn (từ MetaMask) chứ không phải mạng lưới khác. Sau khi làm theo các hướng dẫn, hãy kiểm tra lại xem bạn đã nhận được ETH trong Ví của mình chưa.
 
 ### 3\. Tạo một thư mục dự án mới và `cd` vào đó {#create-a-new-project-direction}
 
@@ -84,14 +85,15 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Cài đặt Alchemy Web3 (hoặc bất kỳ thư viện Web3 nào) {#install-alchemy-web3}
+### 4\. Cài đặt viem (hoặc bất kỳ thư viện Web3 nào) {#install-alchemy-web3}
 
-Chạy lệnh sau trong thư mục dự án của bạn để cài đặt [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3):
+Chạy lệnh sau trong thư mục dự án của bạn để cài đặt [viem](https://viem.sh/):
 
-Lưu ý, nếu bạn muốn sử dụng thư viện ethers.js, [hãy làm theo các hướng dẫn tại đây](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum).
+Lưu ý, nếu bạn muốn sử dụng thư viện Ethers.js, hãy [làm theo các hướng dẫn tại đây](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum).
 
-```
-npm install @alch/alchemy-web3
+```sh
+npm init -y
+npm install viem
 ```
 
 ### 5\. Cài đặt dotenv {#install-dotenv}
@@ -106,12 +108,12 @@ npm install dotenv --save
 
 Tạo một tệp `.env` trong thư mục dự án của bạn và thêm nội dung sau (thay thế "`your-api-url`" và "`your-private-key`")
 
-- Để tìm URL API Alchemy của bạn, hãy điều hướng đến trang chi tiết ứng dụng của ứng dụng bạn vừa tạo trên bảng điều khiển, nhấp vào "View Key" ở góc trên cùng bên phải và lấy URL HTTP.
-- Để tìm khóa riêng tư của bạn bằng MetaMask, hãy xem [hướng dẫn](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) này.
+- Để tìm URL API Alchemy của bạn, hãy điều hướng đến trang chi tiết ứng dụng của ứng dụng bạn vừa tạo trên bảng điều khiển của mình, nhấp vào "View Key" ở góc trên cùng bên phải và lấy URL HTTP.
+- Để tìm khóa riêng tư của bạn bằng MetaMask, hãy xem [hướng dẫn](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) này. Sử dụng một Tài khoản chỉ chứa ETH mạng thử nghiệm.
 
-```
-API_URL = "your-api-url"
-PRIVATE_KEY = "your-private-key"
+```sh
+API_URL="your-api-url"
+PRIVATE_KEY="your-private-key"
 ```
 
 <Alert variant="warning">
@@ -124,63 +126,90 @@ PRIVATE_KEY = "your-private-key"
 
 ### 7\. Tạo tệp `sendTx.js` {#create-sendtx-js}
 
-Tuyệt vời, bây giờ chúng ta đã bảo vệ dữ liệu nhạy cảm của mình trong tệp `.env`, hãy bắt đầu viết mã. Đối với ví dụ gửi giao dịch của chúng ta, chúng ta sẽ chuyển ETH trở lại vòi Sepolia.
+Tuyệt vời, bây giờ chúng ta đã bảo vệ dữ liệu nhạy cảm của mình trong tệp `.env`, hãy bắt đầu viết mã. Đối với ví dụ gửi giao dịch của chúng ta, chúng ta sẽ gửi 0,001 ETH đến một Địa chỉ khác mà bạn kiểm soát, chẳng hạn như Tài khoản thứ hai trong MetaMask.
 
 Tạo một tệp `sendTx.js`, đây là nơi chúng ta sẽ cấu hình và gửi giao dịch ví dụ của mình, và thêm các dòng mã sau vào đó:
 
-```
+```js
+require("dotenv").config({ quiet: true })
+const { createPublicClient, createWalletClient, http, parseEther } = require("viem")
+const { privateKeyToAccount } = require("viem/accounts")
+const { sepolia } = require("viem/chains")
+
 async function main() {
-    require('dotenv').config();
-    const { API_URL, PRIVATE_KEY } = process.env;
-    const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-    const web3 = createAlchemyWeb3(API_URL);
-    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: thay thế Địa chỉ này bằng Địa chỉ công khai của riêng bạn
+  const { API_URL, PRIVATE_KEY } = process.env
+  const account = privateKeyToAccount(
+    PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`
+  )
+  const publicClient = createPublicClient({
+    chain: sepolia,
+    transport: http(API_URL),
+  })
+  const walletClient = createWalletClient({
+    account,
+    chain: sepolia,
+    transport: http(API_URL),
+  })
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce bắt đầu đếm từ 0
+  const nonce = await publicClient.getTransactionCount({
+    address: account.address,
+    blockTag: "pending",
+  }) // nonce bắt đầu đếm từ 0
 
-    const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // Địa chỉ vòi để trả lại eth
-     'value': 1000000000000000000, // 1 ETH
-     'gas': 30000,
-     'nonce': nonce,
-     // trường dữ liệu tùy chọn để gửi thông điệp hoặc thực thi hợp đồng thông minh
-    };
+  const transaction = await walletClient.prepareTransactionRequest({
+    to: "0xYourSecondAddress", // TODO: thay thế bằng Địa chỉ mà bạn muốn gửi ETH đến
+    value: parseEther("0.001"), // 0.001 ETH
+    gas: 21000n,
+    nonce,
+    // trường dữ liệu tùy chọn để gửi tin nhắn hoặc thực thi hợp đồng thông minh
+  })
 
-    const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
+  const signedTx = await walletClient.signTransaction(transaction)
 
-    web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
-    if (!error) {
-      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
-    } else {
-      console.log("❗Something went wrong while submitting your transaction:", error)
-    }
-   });
+  try {
+    const hash = await walletClient.sendRawTransaction({
+      serializedTransaction: signedTx,
+    })
+    console.log("🎉 The hash of your transaction is:", hash)
+
+    const receipt = await publicClient.waitForTransactionReceipt({ hash })
+    console.log(`Transaction ${receipt.status} in block ${receipt.blockNumber}`)
+  } catch (error) {
+    console.log(
+      "❗Something went wrong while submitting your transaction:",
+      error.details ?? error.message
+    )
+  }
 }
 
-main();
+main()
 ```
 
-Đảm bảo thay thế Địa chỉ ở **dòng 6** bằng Địa chỉ công khai của riêng bạn.
+Đảm bảo thay thế `0xYourSecondAddress` bằng Địa chỉ bạn muốn gửi ETH đến. Tập lệnh lấy Địa chỉ (gửi) của riêng bạn từ `PRIVATE_KEY`, vì vậy bạn không cần phải nhập nó.
 
-Bây giờ, trước khi chúng ta bắt đầu chạy đoạn mã này, hãy nói về một số thành phần ở đây.
+Bây giờ, trước khi chúng ta bắt đầu chạy mã này, hãy nói về một số thành phần ở đây.
 
-- `nonce` : Đặc tả nonce được sử dụng để theo dõi số lượng giao dịch được gửi từ Địa chỉ của bạn. Chúng ta cần điều này cho mục đích bảo mật và để ngăn chặn các cuộc tấn công phát lại (replay attack). Để lấy số lượng giao dịch được gửi từ Địa chỉ của bạn, chúng ta sử dụng [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
-- `transaction`: Đối tượng giao dịch có một vài khía cạnh mà chúng ta cần chỉ định
-  - `to`: Đây là Địa chỉ mà chúng ta muốn gửi ETH đến. Trong trường hợp này, chúng ta đang gửi ETH trở lại [vòi Sepolia](https://sepoliafaucet.com/) mà chúng ta đã yêu cầu ban đầu.
-  - `value`: Đây là số lượng chúng ta muốn gửi, được chỉ định bằng Wei trong đó 10^18 Wei = 1 ETH
-  - `gas`: Có nhiều cách để xác định lượng Gas phù hợp để đưa vào giao dịch của bạn. Alchemy hỗ trợ các [webhook](https://www.alchemy.com/docs/reference/webhooks-overview) có thể thông báo cho bạn về hoạt động trên chuỗi. Đối với các giao dịch trên Mạng chính, một thực hành tốt là kiểm tra các điều kiện Gas hiện tại để xác định lượng Gas phù hợp cần đưa vào. 21000 là lượng Gas tối thiểu mà một thao tác trên Ethereum sẽ sử dụng, vì vậy để đảm bảo giao dịch của chúng ta sẽ được thực thi, chúng ta đặt 30000 ở đây.
-  - `nonce`: xem định nghĩa nonce ở trên. Nonce bắt đầu đếm từ 0.
-  - [TÙY CHỌN] data: Được sử dụng để gửi thông tin bổ sung cùng với việc chuyển của bạn, hoặc gọi một hợp đồng thông minh, không bắt buộc đối với việc chuyển số dư, hãy xem lưu ý bên dưới.
-- `signedTx`: Để ký đối tượng giao dịch của chúng ta, chúng ta sẽ sử dụng phương thức `signTransaction` với `PRIVATE_KEY` của mình
-- `sendSignedTransaction`: Khi chúng ta đã có một giao dịch được ký, chúng ta có thể gửi nó đi để được đưa vào một khối tiếp theo bằng cách sử dụng `sendSignedTransaction`
+- `account`: Một Tài khoản cục bộ được tạo từ khóa riêng tư của bạn bằng [`privateKeyToAccount`](https://viem.sh/docs/accounts/local/privateKeyToAccount). Việc ký diễn ra trên máy của bạn và khóa riêng tư không bao giờ được gửi đến Alchemy.
+- `publicClient` và `walletClient`: các máy khách viem gửi các yêu cầu JSON-RPC đến URL Alchemy của bạn. Máy khách công khai đọc từ Chuỗi và máy khách ví chuẩn bị và ký các giao dịch cho Tài khoản của bạn.
+- `nonce` : Đặc tả nonce được sử dụng để theo dõi số lượng giao dịch được gửi từ Địa chỉ của bạn. Chúng ta cần điều này cho mục đích bảo mật và để ngăn chặn các cuộc tấn công phát lại. Để lấy số lượng giao dịch được gửi từ Địa chỉ của bạn, chúng ta sử dụng [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count). viem cũng sẽ điền thông tin này cho bạn, nhưng chúng ta tìm nạp nó một cách rõ ràng ở đây để cho thấy nó đến từ đâu.
+- `transaction`: Đối tượng giao dịch có một vài khía cạnh mà chúng ta cần chỉ định. [`prepareTransactionRequest`](https://viem.sh/docs/actions/wallet/prepareTransactionRequest) điền phần còn lại cho chúng ta, bao gồm `chainId` và các trường phí [EIP-1559](/developers/docs/gas/) `maxFeePerGas` và `maxPriorityFeePerGas`, dựa trên các điều kiện mạng lưới hiện tại
+  - `to`: Đây là Địa chỉ chúng ta muốn gửi ETH đến.
+  - `value`: Đây là số tiền chúng ta muốn gửi, được chỉ định bằng Wei trong đó 10^18 Wei = 1 ETH. [`parseEther`](https://viem.sh/docs/utilities/parseEther) chuyển đổi số lượng ETH thành Wei cho chúng ta. Tài khoản của bạn cần nhiều hơn một chút so với mức này, vì nó cũng phải trả phí Gas
+  - `gas`: Có nhiều cách để xác định lượng Gas phù hợp để đưa vào giao dịch của bạn. Alchemy hỗ trợ [webhook](https://www.alchemy.com/docs/reference/webhooks-overview) có thể thông báo cho bạn về hoạt động trên chuỗi. Đối với các giao dịch trên Mạng chính, một thực tiễn tốt là kiểm tra các điều kiện Gas hiện tại để xác định lượng Gas phù hợp cần đưa vào. Một giao dịch chuyển ETH thông thường đến một Địa chỉ thông thường luôn sử dụng chính xác 21000 Gas, đây là mức tối thiểu cho bất kỳ giao dịch nào, vì vậy chúng ta đặt 21000 ở đây. Nếu bạn bỏ qua `gas`, viem sẽ ước tính nó cho bạn.
+  - `nonce`: xem định nghĩa nonce ở trên. Nonce bắt đầu đếm từ số không.
+  - [TÙY CHỌN] data: Được sử dụng để gửi thông tin bổ sung cùng với giao dịch chuyển của bạn, hoặc gọi một hợp đồng thông minh, không bắt buộc đối với các giao dịch chuyển số dư, hãy xem lưu ý bên dưới.
+- `signedTx`: Để ký đối tượng giao dịch của chúng ta, chúng ta sẽ sử dụng phương thức `signTransaction`, phương thức này ký nó cục bộ bằng Tài khoản được tạo từ `PRIVATE_KEY` của chúng ta
+- `sendRawTransaction`: Khi chúng ta có một giao dịch đã được ký, chúng ta có thể gửi nó đi để được đưa vào một khối tiếp theo bằng cách sử dụng `sendRawTransaction`, phương thức này gọi `eth_sendRawTransaction`
+- `waitForTransactionReceipt`: Đợi cho đến khi giao dịch được đưa vào một khối và trả về biên lai của nó
 
-**Lưu ý về data (dữ liệu)**
-Có hai loại giao dịch chính có thể được gửi trên Ethereum.
+**Lưu ý về data**
+Có hai loại giao dịch chính có thể được gửi trong Ethereum.
 
-- Chuyển số dư: Chuyển ETH từ một Địa chỉ này sang một Địa chỉ khác. Không yêu cầu trường dữ liệu, tuy nhiên, nếu bạn muốn gửi thông tin bổ sung cùng với giao dịch của mình, bạn có thể đưa thông tin đó ở định dạng HEX vào trường này.
-  - Ví dụ, giả sử chúng ta muốn ghi Mã băm của một tài liệu IPFS lên Chuỗi Ethereum để cung cấp cho nó một dấu thời gian bất biến. Trường dữ liệu của chúng ta sau đó sẽ trông giống như data: `web3.utils.toHex(‘IPFS hash‘)`. Và bây giờ bất kỳ ai cũng có thể truy vấn Chuỗi và xem tài liệu đó được thêm vào khi nào.
-- Giao dịch hợp đồng thông minh: Thực thi một số mã hợp đồng thông minh trên Chuỗi. Trong trường hợp này, trường dữ liệu phải chứa hàm thông minh mà bạn muốn thực thi, cùng với bất kỳ tham số nào.
+- Chuyển số dư: Gửi ETH từ Địa chỉ này sang Địa chỉ khác. Không yêu cầu trường data, tuy nhiên, nếu bạn muốn gửi thông tin bổ sung cùng với giao dịch của mình, bạn có thể đưa thông tin đó ở định dạng HEX vào trường này.
+  - Ví dụ: giả sử chúng ta muốn ghi Mã băm của một tài liệu IPFS lên Chuỗi Ethereum để cung cấp cho nó một dấu thời gian bất biến. Trường data của chúng ta sau đó sẽ trông giống như `data: toHex("IPFS hash")`, sử dụng [`toHex`](https://viem.sh/docs/utilities/toHex) của viem. Và bây giờ bất kỳ ai cũng có thể truy vấn Chuỗi và xem khi nào tài liệu đó được thêm vào.
+- Giao dịch hợp đồng thông minh: Thực thi một số mã hợp đồng thông minh trên Chuỗi. Trong trường hợp này, trường data phải chứa hàm thông minh mà bạn muốn thực thi, cùng với bất kỳ tham số nào.
   - Để có một ví dụ thực tế, hãy xem [hướng dẫn Hợp đồng thông minh Hello World](/developers/tutorials/hello-world-smart-contract/).
+
 ### 8\. Chạy mã bằng cách sử dụng `node sendTx.js` {#run-the-code-using-node-sendtx-js}
 
 Điều hướng trở lại terminal hoặc dòng lệnh của bạn và chạy:
@@ -189,18 +218,14 @@ Có hai loại giao dịch chính có thể được gửi trên Ethereum.
 node sendTx.js
 ```
 
-### 9\. Xem giao dịch của bạn trong mempool {#see-your-transaction-in-the-mempool}
+### 9\. Xem giao dịch của bạn trên trình khám phá khối {#see-your-transaction-in-the-mempool}
 
-Mở [trang Mempool](https://dashboard.alchemy.com/mempool) trong bảng điều khiển Alchemy của bạn và lọc theo ứng dụng bạn đã tạo để tìm giao dịch của mình. Đây là nơi chúng ta có thể theo dõi giao dịch của mình chuyển từ trạng thái chờ xử lý (pending) sang trạng thái đã được khai thác (mined) (nếu thành công) hoặc trạng thái bị loại bỏ (dropped) nếu không thành công. Đảm bảo giữ nó ở mức “All” (Tất cả) để bạn nắm bắt được các giao dịch “mined”, “pending” và “dropped”. Bạn cũng có thể tìm kiếm giao dịch của mình bằng cách tìm các giao dịch được gửi đến Địa chỉ `0x31b98d14007bdee637298086988a0bbd31184523` .
+Tập lệnh in mã băm giao dịch ngay khi nút chấp nhận giao dịch, sau đó đợi cho đến khi nó được đưa vào một khối (thường trong vòng vài giây) và in kết quả. Để xem chi tiết, hãy dán Mã băm vào một trình khám phá khối Sepolia chẳng hạn như [Sepolia Etherscan](https://sepolia.etherscan.io/) hoặc [Blockscout](https://eth-sepolia.blockscout.com/). Ở đó, bạn có thể theo dõi giao dịch đi từ trạng thái chờ xử lý đến khi được đưa vào, và xem số tiền, phí và khối mà nó đã hạ cánh.
 
-Để xem chi tiết giao dịch của bạn sau khi bạn đã tìm thấy nó, hãy chọn Mã băm giao dịch (tx hash), thao tác này sẽ đưa bạn đến một chế độ xem trông giống như thế này:
-
-![Ảnh chụp màn hình trình theo dõi mempool](./mempool.png)
-
-Từ đó, bạn có thể xem giao dịch của mình trên Etherscan bằng cách nhấp vào biểu tượng được khoanh tròn màu đỏ!
+Nếu bạn thấy lỗi `insufficient funds` thay vào đó, Tài khoản của bạn không có đủ ETH Sepolia để trang trải giá trị cộng với Gas. Quay lại bước 2 và yêu cầu thêm từ một vòi.
 
 **Tuyệt vời! Bạn vừa gửi giao dịch Ethereum đầu tiên của mình bằng Alchemy 🎉**
 
-_Để có phản hồi và đề xuất về hướng dẫn này, vui lòng nhắn tin cho Elan trên [Discord](https://discord.gg/A39JVCM) của Alchemy!_
+_Để phản hồi và đóng góp ý kiến về hướng dẫn này, vui lòng nhắn tin cho Elan trên [Discord](https://discord.gg/gWuC7zB) của Alchemy!_
 
-_Được xuất bản ban đầu bởi Alchemy._
+_Được xuất bản lần đầu bởi Alchemy._
