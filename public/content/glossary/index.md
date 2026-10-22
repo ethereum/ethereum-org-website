@@ -44,6 +44,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="block" />
 
+<GlossaryDefinition term="block-builder" />
+
 <GlossaryDefinition term="block-explorer" />
 
 <GlossaryDefinition term="block-header" />
@@ -286,6 +288,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="max-fee-per-gas" />
 
+<GlossaryDefinition term="mempool" />
+
 <GlossaryDefinition term="merkle-patricia-tree" />
 
 <GlossaryDefinition term="merkle-root" />
@@ -390,6 +394,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="shard" />
 
+<GlossaryDefinition term="shielded-pool" />
+
 <GlossaryDefinition term="sidechain" />
 
 <GlossaryDefinition term="signing" />
@@ -397,6 +403,8 @@ authors: ["Andreas Antonopoulos"]
 <GlossaryDefinition term="singleton" />
 
 <GlossaryDefinition term="slasher" />
+
+<GlossaryDefinition term="slippage" />
 
 <GlossaryDefinition term="slot" />
 
@@ -421,6 +429,8 @@ authors: ["Andreas Antonopoulos"]
 <GlossaryDefinition term="state" />
 
 <GlossaryDefinition term="state-channels" />
+
+<GlossaryDefinition term="stealth-address" />
 
 <GlossaryDefinition term="supermajority" />
 

@@ -58,18 +58,11 @@
   "page-apps-filter-by": "絞り込み",
   "page-apps-filter-all": "すべて",
   "page-apps-showing": "表示中",
-  "page-apps-visit-app": "{appName} にアクセス",
-  "page-apps-see-next": "次を見る",
-  "page-apps-info-title": "情報",
   "page-apps-info-founded": "設立",
   "page-apps-info-creator": "クリエイター",
-  "page-apps-info-last-updated": "最終更新",
-  "page-apps-gallery-title": "ギャラリー",
-  "page-apps-gallery-screenshot-alt": "アプリケーションのインターフェースを示す {appName} のスクリーンショット {index}",
-  "page-apps-gallery-modal-title": "{appName} のスクリーンショット",
+  "page-apps-info-languages": "言語",
+  "page-apps-info-listing-reviewed": "掲載情報の確認",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org上のこのアプリに関する詳細情報が最後に確認された日時です。アプリ自体が最後に変更された日時を示すものではありません。",
   "page-apps-more-apps-like-this": "類似のアプリ",
-  "page-apps-by-company": "提供: {company}",
-  "page-apps-today": "今日",
-  "page-apps-one-day-ago": "1日前",
-  "page-apps-days-ago": "{days}日前"
+  "page-apps-detail-meta-title": "イーサリアムアプリ - {name}"
 }

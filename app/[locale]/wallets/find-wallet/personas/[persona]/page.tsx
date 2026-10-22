@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
@@ -18,7 +19,6 @@ import {
   WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
-import FindWalletBreadcrumbs from "../../_components/FindWalletBreadcrumbs"
 import WalletsPageBody from "../../_components/WalletsPageBody"
 
 import PersonaPageJsonLD from "./page-jsonld"
@@ -65,7 +65,10 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={
-            <FindWalletBreadcrumbs locale={locale} leaf={t(persona.titleKey)} />
+            <Breadcrumbs
+              slug={`/wallets/find-wallet/personas/${personaId}`}
+              label={t(persona.titleKey)}
+            />
           }
           title={t(persona.heroTitleKey)}
           description={t(persona.heroDescKey)}

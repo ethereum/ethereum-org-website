@@ -33,7 +33,6 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
       <PageHero
         breadcrumbs={{
           slug: "/contributing/translation-program/translatathon/leaderboard",
-          startDepth: 1,
         }}
         heroImg={heroImg}
         title="2025 Ethereum.org Translatathon"

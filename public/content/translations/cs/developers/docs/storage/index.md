@@ -142,7 +142,7 @@ Založené na důkazu podílem (PoS):
 **Arweave – _Arweave je platforma dStorage pro ukládání dat._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentace](https://docs.arweave.org/info/)
+- [Dokumentace](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs – _Züs je platforma dStorage založená na důkazu podílem (PoS) se shardingem a blobbery._**

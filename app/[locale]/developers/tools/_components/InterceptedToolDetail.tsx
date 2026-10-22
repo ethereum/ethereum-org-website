@@ -64,7 +64,6 @@ const InterceptedToolDetail = async ({
   const item = toolToCatalogItem(tool, {
     locale,
     t,
-    tCommon,
     tItem,
     labels,
     showReviewed: false,

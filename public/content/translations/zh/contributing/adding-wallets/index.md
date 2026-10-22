@@ -1,6 +1,6 @@
 ---
-title: 添加钱包
-description: 我们在向 ethereum.org 添加钱包时使用的政策
+title: "添加钱包"
+description: "我们在向 ethereum.org 添加钱包时使用的政策"
 lang: zh
 ---
 
@@ -58,7 +58,7 @@ lang: zh
 
 ## 添加钱包 {#adding-a-wallet}
 
-如果你想在 ethereum.org 上添加钱包，请在 GitHub 上创建一个议题 (issue)。
+如果你想在 ethereum.org 上添加钱包，请在 GitHub 上创建一个议题。你在议题中提供的钱包描述将显示在钱包页面上，因此请将其控制在一两句客观事实的描述。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   创建议题

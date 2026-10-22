@@ -63,10 +63,6 @@ Building bespoke governance systems for a [DAO](/dao/) can be expensive and time
 
 Instead of building a custom authentication system or relying on centralized providers, you can integrate decentralized identity (DID) tools to manage authentication for users. An example is [SpruceID](https://www.spruceid.com/), an open-source toolkit which offers a "Sign in with Ethereum" functionality that lets users authenticate identities with an Ethereum wallet.
 
-## Related tutorials {#related-tutorials}
-
-- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– An overview of how to use create-eth-app to create apps with popular smart contracts out the box._
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

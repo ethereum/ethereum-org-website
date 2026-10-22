@@ -153,3 +153,18 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
 
 - Warning: enterprise JSON compare-row-auditability `Publiczne i weryfikowalne` should agree with feminine row label (`Publiczna i weryfikowalna`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.2/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 10 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Polish output is accurate, idiomatic and consistent with the glossary. The only critical items are three founders tag labels the pipeline left in English across all locales. The rest are word-choice warnings, mainly the false friend `legalny` in scam-token-tricks.

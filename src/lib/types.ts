@@ -1605,7 +1605,7 @@ export interface CatalogItem {
   primaryLink?: { href: string; label: string }
   socialLinks: CatalogItemLink[]
   infoRows: { label: string; value: ReactNode; tooltip?: string }[]
-  /** Ancestors only; the item's own name closes the trail. */
-  breadcrumbs: { label: string; href: string }[]
+  /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
+  breadcrumbSlug: string
   next?: { name: string; href: string }
 }

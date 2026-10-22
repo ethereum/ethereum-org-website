@@ -123,3 +123,18 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
 - Prividium transliterated `привидиум`; `производственного уровня` for production-grade; glamsterdam `devnets` regressed to English.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter outputs are saved in `/tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ru/`.

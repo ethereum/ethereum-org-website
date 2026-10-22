@@ -84,7 +84,7 @@ Kadiri wathibitishaji wengi wanavyojitoa, idadi ya juu zaidi ya wathibitishaji w
 
 ### Mchanganuo wa mfumuko wa bei baada ya unganisho {#post-merge-inflation-breakdown}
 
-- [Jumla ya usambazaji wa ETH](/eth/supply/): **\~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
+- [Jumla ya usambazaji wa ETH](/what-is-ether/supply/): **\~ETH 120,520,000** (wakati wa Unganisho mnamo Septemba 2022)
 - Utoaji wa tabaka la utekelezaji: **0**
 - Utoaji wa tabaka la mwafaka: Sawa na hapo juu, **\~0.52%** kiwango cha utoaji kwa mwaka (kukiwa na jumla ya ETH milioni 14 zilizowekwa dhamana)
 

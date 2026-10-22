@@ -161,3 +161,19 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `[EVM-based Chains]` -> `[EVMベースのチェーン]`; `Optimistic Sepolia` heading -> `オプティミスティック Sepolia` (dev form).
 - Open: L124 `Arbitrum Sepolia` heading Latin while body uses `アービトラム` (Latin is a glossary alias, not a deviation).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:19 heading reverted to English (`## Guidelines for building secure Ethereum smart c` -> `## 安全なイーサリアムのスマート・コントラクトを構築するためのガイドライン`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:1190: ETHGlossary `revert` (scriptRule `translate`) is リバート. Dev had リバート. Flag for human. (`このステップはトランザクションを元に戻します` -> `このステップはトランザクションをリバートします`)
+- 9 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The ja translation is fluent and faithful, and the new prediction-markets, founders and wallet-description content reads well. The main defect is that the security-page retranslation reverted all 24 guideline headings to English (the same failure as #19115). That fix and the three founders tag labels are deterministic.
