@@ -8,6 +8,9 @@
  * bodies raw, fences and all.
  */
 
+import fs from "fs"
+import path from "path"
+
 import { expect, test } from "@playwright/test"
 
 import {
@@ -20,6 +23,7 @@ import {
 import { normalizeContent } from "../../../src/scripts/intl-pipeline/lib/llm/content-normalizer"
 import { planIncrementalBatches } from "../../../src/scripts/intl-pipeline/lib/llm/plan"
 import { classifyFailure } from "../../../src/scripts/intl-pipeline/lib/quarantine"
+import { PROSE_FENCE_TAGS } from "../../../src/scripts/intl-pipeline/lib/shared-patterns"
 import { verifyMarkdown } from "../../../src/scripts/intl-pipeline/lib/verify-structure"
 
 /** The real shape of the defect: an untagged `clef` console transcript. */
@@ -322,4 +326,41 @@ test("gate flags a translated language tag", () => {
 
 test("gate passes an untouched translation", () => {
   expect(fenceFindings(EN, EN.replace("Prose before.", "Vorher."))).toEqual([])
+})
+
+/**
+ * A prose-tagged fence is sent to the model inside a JSON string value, so a
+ * `\"` in one is both a translation bug and an escaping hazard: the model has
+ * to re-emit it as `\\\"` and a slip kills the whole file+locale task. Two
+ * reproduced `npm init` transcripts sat in ```text fences and did exactly that
+ * to mr and ur in run 39855262412. A lone `\` is not the signal -- escaped
+ * markdown punctuation is legitimate prose.
+ */
+test("no English prose fence carries an escaped quote", () => {
+  const root = path.join(process.cwd(), "public/content")
+  const offenders: string[] = []
+
+  const walk = (dir: string) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === "translations") continue
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        walk(full)
+        continue
+      }
+      if (!entry.name.endsWith(".md")) continue
+      const src = fs.readFileSync(full, "utf-8")
+      for (const m of src.matchAll(
+        /^[ \t]*```([a-zA-Z]*)[ \t]*\n([\s\S]*?)^[ \t]*```/gm
+      )) {
+        if (!PROSE_FENCE_TAGS.has(m[1].toLowerCase())) continue
+        if (m[2].includes('\\"')) {
+          offenders.push(path.relative(root, full))
+        }
+      }
+    }
+  }
+  walk(root)
+
+  expect(offenders).toEqual([])
 })
