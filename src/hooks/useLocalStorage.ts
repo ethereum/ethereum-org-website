@@ -3,6 +3,7 @@ import {
   SetStateAction,
   useCallback,
   useEffect,
+  useRef,
   useState,
 } from "react"
 
@@ -13,7 +14,7 @@ import { useEventListener } from "./useEventListener"
 
 declare global {
   interface WindowEventMap {
-    "local-storage": CustomEvent
+    "local-storage": CustomEvent<{ key: string; value: unknown }>
   }
 }
 
@@ -43,6 +44,12 @@ export function useLocalStorage<T>(
   // State to store our value
   // Pass initial value to support hydration server-client
   const [storedValue, setStoredValue] = useState<T>(initialValue)
+  const valueRef = useRef(initialValue)
+
+  const updateStoredValue = useCallback((value: T) => {
+    valueRef.current = value
+    setStoredValue(value)
+  }, [])
 
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
@@ -52,38 +59,45 @@ export function useLocalStorage<T>(
       console.warn(
         `Tried setting localStorage key “${key}” even though environment is not a client`
       )
+      return
     }
 
+    // Keep functional updates current even before React renders the next state.
+    const newValue = value instanceof Function ? value(valueRef.current) : value
+    updateStoredValue(newValue)
+
     try {
-      // Allow value to be a function so we have the same API as useState
-      const newValue = value instanceof Function ? value(storedValue) : value
-
-      // Save to local storage
       window.localStorage.setItem(key, JSON.stringify(newValue))
-
-      // Save state
-      setStoredValue(newValue)
-
-      // We dispatch a custom event so every useLocalStorage hook are notified
-      window.dispatchEvent(new Event("local-storage"))
     } catch (error) {
       console.warn(`Error setting localStorage key “${key}”:`, error)
     }
+
+    // Share the in-memory value even when persistence failed. Reading storage
+    // here would replace it with stale data in every mounted consumer.
+    window.dispatchEvent(
+      new CustomEvent("local-storage", { detail: { key, value: newValue } })
+    )
   })
 
   useEffect(() => {
-    setStoredValue(readValue())
+    updateStoredValue(readValue())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleStorageChange = useCallback(
-    (event: StorageEvent | CustomEvent) => {
-      if ((event as StorageEvent)?.key && (event as StorageEvent).key !== key) {
+    (event: StorageEvent | WindowEventMap["local-storage"]) => {
+      if ("detail" in event) {
+        if (event.detail.key === key) {
+          updateStoredValue(event.detail.value as T)
+        }
         return
       }
-      setStoredValue(readValue())
+      if (event.key && event.key !== key) {
+        return
+      }
+      updateStoredValue(readValue())
     },
-    [key, readValue]
+    [key, readValue, updateStoredValue]
   )
 
   // this only works for other documents, not the current one
