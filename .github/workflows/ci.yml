@@ -10,6 +10,9 @@ concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 env:
   # Shared base URL for the production server we boot for e2e + lighthouse.
   LOCAL_BASE_URL: http://localhost:3000
@@ -18,9 +21,11 @@ env:
 # master, staging, or test/** branches. Jobs downstream of `build` inherit
 # gating automatically via `needs:` (skipped jobs propagate).
 #
-# Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR.
-# TurboSnap (`onlyChanged`) keeps snapshot usage low: a PR with no affected
-# stories is bypassed and billed nothing, and no build is published for it.
+# Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR
+# whose head branch belongs to this repository. Forks and Dependabot cannot read
+# the project secret and are intentionally excluded. TurboSnap (`onlyChanged`)
+# keeps snapshot usage low: a PR with no affected stories is bypassed and billed
+# nothing, and no build is published for it.
 # The merge gate for visual changes is Chromatic's own "UI Tests" check (posted
 # by the Chromatic GitHub App), which updates live as a maintainer
 # accepts/rejects -- so this job itself always exits 0.
@@ -75,11 +80,18 @@ jobs:
 
   visual-tests:
     name: Visual regression (Chromatic)
-    # Runs on every non-draft PR. TurboSnap (`onlyChanged`) means PRs with no
-    # affected stories are bypassed: nothing is snapshotted, billed, or
-    # published. The required merge gate is the Chromatic App's "UI Tests"
-    # check, so the job itself always exits 0.
-    if: github.event.pull_request.draft == false
+    # Only trusted branches in this repository may read the project token and
+    # publish snapshots. TurboSnap bypasses trusted PRs with no affected stories.
+    # Fork changes that need visual review must be moved to an internal branch by
+    # a maintainer; never synthesize a passing UI Tests status for an untested
+    # fork commit.
+    if: >-
+      github.event_name == 'pull_request'
+      && github.repository == 'ethereum/ethereum-org-website'
+      && github.actor != 'dependabot[bot]'
+      && github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == github.repository
+      && github.event.pull_request.head.repo.id == github.repository_id
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -91,7 +103,7 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@v18.5.0
         with:
-          projectToken: fee8e66c9916
+          projectToken: ${{ secrets.CHROMATIC_STORYBOOK_TOKEN }}
           # Not named chromatic.config.json: that filename is auto-loaded by
           # both projects, and untraced without onlyChanged fails the pages job.
           configFile: chromatic.storybook.json
@@ -146,6 +158,10 @@ jobs:
       || github.base_ref == 'staging'
       || startsWith(github.base_ref, 'test/')
     runs-on: ubuntu-latest
+    permissions:
+      checks: read
+      contents: read
+      pull-requests: read
     env:
       DEPLOY_PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ethereumorg.netlify.app
     steps:
@@ -195,6 +211,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: write
     steps:
       - uses: actions/checkout@v6
@@ -289,6 +306,15 @@ jobs:
 
   page-visual-tests:
     name: Page visual snapshots (Playwright + Chromatic)
+    # This job also publishes with a project token, so it must follow the same
+    # trusted-source boundary as Storybook visual regression.
+    if: >-
+      github.event_name == 'pull_request'
+      && github.repository == 'ethereum/ethereum-org-website'
+      && github.actor != 'dependabot[bot]'
+      && github.event.pull_request.draft == false
+      && github.event.pull_request.head.repo.full_name == github.repository
+      && github.event.pull_request.head.repo.id == github.repository_id
     needs: build
     runs-on: ubuntu-latest
     container:
