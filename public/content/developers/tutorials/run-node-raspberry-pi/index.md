@@ -125,9 +125,11 @@ The image also includes a Grafana dashboard that more advanced users can use to 
 
 A validator can also be optionally added to the consensus client. The validator software allows your node to participate actively in consensus and provides the network with cryptoeconomic security. You get rewarded for this work in ETH. To run a validator, you must first have 32 ETH, which must be deposited into the deposit contract. The deposit can be made by following the step-by-step guide on the [Launchpad](https://launchpad.ethereum.org/). Do this on a desktop/laptop, but do not generate keys — this can be done directly on the Raspberry Pi.
 
-The image includes the [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli) tool for generating validator keys. Open a terminal on the Raspberry Pi and run the following command to generate the deposit keys, replacing `<YOUR_ETH_ADDRESS>` with the address that should receive your withdrawals:
+The [ethstaker-deposit-cli](https://github.com/ethstaker/ethstaker-deposit-cli) tool generates validator keys. Current images include it; if you are running an older image, install it first. Then generate the deposit keys, replacing `<YOUR_ETH_ADDRESS>` with the address that should receive your withdrawals:
 
 ```sh
+sudo apt-get update
+sudo apt-get install ethstaker-deposit-cli
 cd && deposit new-mnemonic --num_validators 1 --execution_address <YOUR_ETH_ADDRESS> --chain mainnet
 ```
 

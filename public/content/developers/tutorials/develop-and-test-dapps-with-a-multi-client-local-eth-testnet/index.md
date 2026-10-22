@@ -87,8 +87,10 @@ To set up your dApp development environment, clone the repository that contains 
 ```sh
 git clone https://github.com/kurtosis-tech/awesome-kurtosis.git
 cd awesome-kurtosis/smart-contract-example
-npm install
+npm install --legacy-peer-deps
 ```
+
+The `--legacy-peer-deps` flag is needed because some of the sample project's Hardhat plugins declare conflicting peer dependency versions.
 
 The [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) folder used here contains the typical setup for a dApp developer using the [Hardhat](https://hardhat.org/) framework:
 
@@ -158,7 +160,13 @@ The output should look something like:
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Now try running the `ChipToken.js` test against your local dApp to confirm each player in our Blackjack dApp has 1000 minted for them:
+Now try running the `ChipToken.js` test against your local dApp to confirm each player in our Blackjack dApp has 1000 minted for them. The sample test still uses the ethers v5 `deployed()` function, which ethers v6 replaced with `waitForDeployment()`, so update it first:
+
+```sh
+sed -i.bak 's/\.deployed()/.waitForDeployment()/' test/ChipToken.js
+```
+
+Then run the test:
 
 ```sh
 npx hardhat test --network localnet
