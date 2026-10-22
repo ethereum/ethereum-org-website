@@ -91,10 +91,10 @@ Password: ethereum
 
 You will be asked to change the default password on your first login. Do it, because anybody who can reach your node could otherwise log in with the default password. The system firewall is disabled by default, so if your node has a public IP address, see the [Ethereum on Arm security guide](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/system/security.html) to enable it.
 
-Start the consensus client first. Open port 9000 (TCP and UDP) on your router so that Lighthouse can find and connect to peers. Then start the lighthouse service:
+Start the consensus client first. Open port 9000 (TCP and UDP) on your router so that Lighthouse can find and connect to peers. Then enable and start the lighthouse service, so it also restarts after a reboot:
 
 ```sh
-sudo systemctl start lighthouse-beacon
+sudo systemctl enable --now lighthouse-beacon
 ```
 
 Check the client using the logs:
@@ -103,10 +103,10 @@ Check the client using the logs:
 sudo journalctl -u lighthouse-beacon -f
 ```
 
-Next, start the execution client. Open port 30303 (TCP and UDP) on your router so Geth can find and connect to peers. Then start the geth service:
+Next, start the execution client. Open port 30303 (TCP and UDP) on your router so Geth can find and connect to peers. Then enable and start the geth service:
 
 ```sh
-sudo systemctl start geth
+sudo systemctl enable --now geth
 ```
 
 You can confirm it is running by checking the logs:
@@ -149,7 +149,7 @@ lighthouse account validator import --directory=/home/ethereum/validator_keys
 sudo sed -i 's/changeme/<YOUR_ETH_ADDRESS>/' /etc/ethereum/lighthouse-validator.conf
 
 # start the validator
-sudo systemctl start lighthouse-validator
+sudo systemctl enable --now lighthouse-validator
 ```
 
 Congratulations, you now have a full Ethereum node and validator running on a Raspberry Pi!

@@ -7,6 +7,8 @@ skill: beginner
 breadcrumb: Ethereum with SQL
 lang: en
 published: 2021-05-11
+source: paulapivat.com
+sourceUrl: https://web.archive.org/web/20260516182620/https://paulapivat.com/post/query_ethereum/
 ---
 
 Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see onchain data without running a client or node.
