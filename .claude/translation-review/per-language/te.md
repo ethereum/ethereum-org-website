@@ -149,3 +149,20 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
 - Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 27 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:966 Solidity always_latin (`సోలిడిటీ ధృవీకర్తను` -> `Solidity ధృవీకర్తను`)
+- security/index.md:18-27 fabricated second frontmatter block deleted
+
+**Open (native call needed):**
+
+- None at critical level.
+- 17 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and mostly faithful. te's known reported-speech negation error (the `-మని` suffix flipping meaning) did not recur. The two te-specific must-fixes are the made-up frontmatter block in the security page and the transliterated Solidity; the founders tag regression affects other locales too.

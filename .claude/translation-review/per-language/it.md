@@ -109,3 +109,18 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - Reviewer flagged lowercase-l1/l2 glossary deviations: NOT applied (upstream glossary casing bug, #53).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 9 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Glossary filter outputs are saved in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-it/

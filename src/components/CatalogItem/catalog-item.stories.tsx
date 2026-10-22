@@ -44,10 +44,7 @@ const appLike: CatalogItem = {
         "When the information about this app on ethereum.org was last updated.",
     },
   ],
-  breadcrumbs: [
-    { label: "ethereum.org", href: "/" },
-    { label: "Apps", href: "/apps/" },
-  ],
+  breadcrumbSlug: "/apps/across",
   next: { name: "Meson", href: "/apps/meson/" },
 }
 
@@ -77,11 +74,7 @@ const longTool: CatalogItem = {
     { label: "GitHub stars", value: "1.2K" },
     { label: "License", value: "MIT" },
   ],
-  breadcrumbs: [
-    { label: "ethereum.org", href: "/" },
-    { label: "Developers", href: "/developers/" },
-    { label: "Tools", href: "/developers/tools/" },
-  ],
+  breadcrumbSlug: "/developers/tools/diamondscaffold",
 }
 
 const manyChainWallet: CatalogItem = {
@@ -106,11 +99,7 @@ const manyChainWallet: CatalogItem = {
     { label: "Languages", value: "English, Russian, Chinese + 9" },
     { label: "Fees", value: "Swap fee: variable" },
   ],
-  breadcrumbs: [
-    { label: "ethereum.org", href: "/" },
-    { label: "Wallets", href: "/wallets/" },
-    { label: "Find wallet", href: "/wallets/find-wallet/" },
-  ],
+  breadcrumbSlug: "/wallets/find-wallet/1inch-wallet",
   next: { name: "Zerion Wallet", href: "/wallets/find-wallet/zerion-wallet/" },
 }
 

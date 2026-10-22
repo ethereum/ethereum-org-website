@@ -153,3 +153,21 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
 - Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security: `कॉन्ट्रैक्ट` -> `अनुबंध` restored (141 sites; `ओपनजेपेलिन कॉन्ट्रैक्ट्स` kept)
+- app-plasma: `लेनदेन` -> `लेन-देन` restored (56 sites; `लेनदेन हैश` kept)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:442: `oracle` is spelled two ways in one paragraph. The glossary form is `ऑरेकल` (16 other sites use it). (`"ओरेकल समस्या"` -> `"ऑरेकल समस्या"`)
+- developers/docs/smart-contracts/security/index.md:442: Second instance of the same oracle spelling (`ब्लॉकचेन ओरेकल` -> `ब्लॉकचेन ऑरेकल`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and structurally clean, and the new prediction-markets and wallet copy is accurate. The score is pulled down by two retranslations that went back to non-glossary forms: the security page's contract term (the third time this has happened) and app-plasma's transaction term.

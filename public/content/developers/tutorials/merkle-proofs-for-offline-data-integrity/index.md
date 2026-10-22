@@ -13,19 +13,18 @@ published: 2021-12-30
 
 Ideally we'd like to store everything in Ethereum storage, which is stored across thousands of computers and has
 extremely high availability (the data cannot be censored) and integrity (the data cannot be modified in an
-unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. As I'm writing this, that cost is
-equivalent to $6.60. At 21 cents per byte this is too expensive for many uses.
+unauthorized manner), but storing a 32-byte word typically costs 20,000 gas. At over 600 gas per byte this is too expensive for many uses.
 
 To solve this problem the Ethereum ecosystem developed [many alternative ways to store data in a decentralized
 fashion](/developers/docs/storage/). Usually they involve a tradeoff between availability
 and price. However, integrity is usually assured.
 
 In this article you learn **how** to ensure data integrity without storing the data on the blockchain, using
-[Merkle proofs](https://computersciencewiki.org/index.php/Merkle_proof).
+[Merkle proofs](https://en.wikipedia.org/wiki/Merkle_tree).
 
 ## How does it work? {#how-does-it-work}
 
-In theory we could just store the hash of the data onchain, and send all the data in transactions that require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
+In theory we could just store the hash of the data onchain, and send all the data in transactions that require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, or about 16,000 gas per kilobyte. At about 16 million gas per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
 
 The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to send you can just send a hash. You do this using a Merkle tree, a tree data structure where each node is a hash of the nodes below it:
 
@@ -37,7 +36,7 @@ The root hash is the only part that needs to be stored onchain. To prove a certa
 
 ## Implementation {#implementation}
 
-[The sample code is provided here](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+[The sample code is provided here](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity). Note that the sample repository uses an older toolchain (Hardhat 2, Waffle and ethers v5). The code in this article has been updated for [ethers v6](https://docs.ethers.org/v6/getting-started/), which is what `npm install ethers` installs today.
 
 ### Offchain code {#offchain-code}
 
@@ -51,7 +50,7 @@ First we need to provide the Merkle root to the chain.
 const ethers = require("ethers")
 ```
 
-[We use the hash function from the ethers package](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+[We use the hash function from the ethers package](https://docs.ethers.org/v6/api/crypto/#keccak256).
 
 ```javascript
 // The raw data whose integrity we have to verify. The first two bytes a
@@ -76,7 +75,7 @@ In this case our data is 256-bit values to begin with, so no processing is neede
 // Convert between the string the hash function expects and the
 // BigInt we use everywhere else.
 const hash = (x) =>
-  BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
+  BigInt(ethers.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
 The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
@@ -109,7 +108,10 @@ When the number of values is not an integer power of two we need to handle empty
 // each pair in sequence
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
+  var inp = [...inputArray] // To avoid over writing the input
+
+  // Add an empty value if necessary (we need all the leaves to be
+  // paired)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -120,13 +122,21 @@ const oneLevelUp = (inputArray) => {
 } // oneLevelUp
 ```
 
-This function "climbs" one level in the Merkle tree by hashing the pairs of values at the current layer. Note that this is not the most efficient implementation, we could have avoided copying the input and just added `hashEmpty` when appropriate in the loop, but this code is optimized for readability.
+This function "climbs" one level in the Merkle tree by hashing the pairs of values at the current layer. Note that this is not the most efficient implementation, we could have avoided copying the input and just added `empty` when appropriate in the loop, but this code is optimized for readability.
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
+  result = [...inputArray]
+
+  // Climb up the tree until there is only one value, that is the
+  // root.
+  //
+  // If a layer has an odd number of entries the
+  // code in oneLevelUp adds an empty value, so if we have, for example,
+  // 10 leaves we'll have 5 branches in the second layer, 3
+  // branches in the third, 2 in the fourth and the root is the fifth
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -175,19 +185,16 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
 
 ### Onchain code {#onchain-code}
 
-Finally we have the code that checks the proof. The onchain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
+Finally we have the code that checks the proof. The onchain code is written in [Solidity](https://docs.soliditylang.org/en/latest/). Optimization is a lot more important here because gas is relatively expensive.
 
 ```solidity
 //SPDX-License-Identifier: Public Domain
 pragma solidity ^0.8.0;
-
-import "hardhat/console.sol";
 ```
 
-I wrote this using the [Hardhat development environment](https://hardhat.org/), which allows us to have [console output from Solidity](https://hardhat.org/docs/cookbook/debug-logs) while developing.
+I wrote this using the [Hardhat development environment](https://hardhat.org/), which allows us to have [console output from Solidity](https://hardhat.org/docs/cookbook/debug-logs) while developing. The contract itself doesn't depend on Hardhat, so you can compile it with any Solidity toolchain.
 
 ```solidity
-
 contract MerkleProof {
     uint merkleRoot;
 
@@ -217,7 +224,7 @@ Set and get functions for the Merkle root. Letting everybody update the Merkle r
 
 This function generates a pair hash. It is just the Solidity translation of the JavaScript code for `hash` and `pairHash`.
 
-**Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
+**Note:** This is another case of optimization for readability. Based on [the function definition](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#mathematical-and-cryptographic-functions), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/latest/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
 ```solidity
     // Verify a Merkle proof
@@ -240,13 +247,13 @@ In mathematical notation Merkle proof verification looks like this: `H(proof_n, 
 
 ## Merkle proofs and rollups don't mix {#merkle-proofs-and-rollups}
 
-Merkle proofs don't work well with [rollups](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
+Merkle proofs don't work well with [rollups](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. Every layer of a Merkle proof adds a 32-byte hash to the transaction data. If we have 1024 words of data, a Merkle proof requires ten layers, or 320 bytes. Hashes look random, so rollup compression barely shrinks them.
 
-Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated onchain to begin with, rather than provided in a transaction) and still have most of the gas left over.
+Since [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ([proto-danksharding](/roadmap/danksharding/)) went live in March 2024, rollups post their transaction data to L1 in blobs, which have their own fee market and are much cheaper than call data. Even so, posting data to L1 is usually the main part of the cost of a rollup transaction, while L2 processing and storage are cheap. This means that on a rollup it is often cheaper to just write the data to L2 storage (assuming it can be calculated onchain to begin with, rather than provided in a transaction) than to send a Merkle proof with every transaction that uses it. The exact tradeoff depends on the current price of blob space and of L2 gas, which you can compare on sites such as [L2BEAT](https://l2beat.com/scaling/costs).
 
 ## Conclusion {#conclusion}
 
-In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
+In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use, such as OpenZeppelin's [`MerkleProof`](https://docs.openzeppelin.com/contracts/5.x/api/utils/cryptography#MerkleProof) contract and its companion JavaScript library [`@openzeppelin/merkle-tree`](https://github.com/OpenZeppelin/merkle-tree), and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
 
 Note that while Merkle proofs preserve _integrity_, they do not preserve _availability_. Knowing that nobody else can take your assets is small consolation if the data storage decides to disallow access and you can't construct a Merkle tree to access them either. So Merkle trees are best used with some kind of decentralized storage, such as IPFS.
 

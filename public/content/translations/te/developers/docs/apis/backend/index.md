@@ -20,7 +20,7 @@ lang: te
 
 ## అందుబాటులో ఉన్న లైబ్రరీలు {#available-libraries}
 
-### మౌలిక సదుపాయాలు మరియు నోడ్ సేవలు {#infrastructure-and-node-services}
+### ఇన్‌ఫ్రాస్ట్రక్చర్ మరియు నోడ్ సేవలు {#infrastructure-and-node-services}
 
 **Alchemy -** **_ఎథీరియం డెవలప్‌మెంట్ ప్లాట్‌ఫారమ్._**
 
@@ -35,7 +35,7 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.allthatnode.com)
 - [డిస్కార్డ్](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs ద్వారా Blast -** **_ఎథీరియం మెయిన్‌నెట్ మరియు టెస్ట్‌నెట్‌ల కోసం వికేంద్రీకృత APIలు._**
+**Bware Labs ద్వారా Blast -** **_ఎథీరియం మెయిన్‌నెట్ మరియు టెస్ట్‌నెట్‌ల కోసం వికేంద్రీకృత అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)లు._**
 
 - [blastapi.io](https://blastapi.io/)
 - [డాక్యుమెంటేషన్](https://docs.blastapi.io)
@@ -69,7 +69,7 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _ఖర్చు-తక్కువ EVM జేసన్-ఆర్‌పీసీ ప్రొవైడర్_**
+**Node RPC - _ఖర్చు-సమర్థవంతమైన ఈథీరియం వర్చువల్ మెషీన్ (EVM) జేసన్-ఆర్‌పీసీ ప్రొవైడర్_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [డాక్యుమెంటేషన్](https://docs.noderpc.xyz/node-rpc)
@@ -91,7 +91,13 @@ lang: te
 - [డాక్యుమెంటేషన్](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_జేసన్-ఆర్‌పీసీ/WebSockets APIగా వేగ-ఆధారిత ఎథీరియం నోడ్‌లు._**
+**SolidRPC -** **_ఫుల్, ఆర్కైవ్ మరియు కీ-లెస్ పబ్లిక్ యాక్సెస్‌తో EVM జేసన్-ఆర్‌పీసీ ఇన్‌ఫ్రాస్ట్రక్చర్._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [డాక్యుమెంటేషన్](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_జేసన్-ఆర్‌పీసీ/WebSockets APIగా వేగం-ఆధారిత ఎథీరియం నోడ్‌లు._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,13 +106,19 @@ lang: te
 
 ### డెవలప్‌మెంట్ టూల్స్ {#development-tools}
 
-**ethers-kt -** **_EVM-ఆధారిత బ్లాక్‌చైన్‌ల కోసం అసమాన, అధిక-పనితీరు గల Kotlin/Java/Android లైబ్రరీ._**
+**eth.zig -** **_కంపైల్-టైమ్ అప్లికేషన్ బైనరీ ఇంటర్‌ఫేస్ (ABI) ఎన్‌కోడింగ్ మరియు కాంట్రాక్ట్ బైండింగ్‌లతో ఎథీరియం కోసం ఒక Zig లైబ్రరీ._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [డాక్యుమెంటేషన్](https://ethzig.org)
+- [ఉదాహరణలు](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_ఈథీరియం వర్చువల్ మెషీన్ (EVM)-ఆధారిత బ్లాక్‌చైన్‌ల కోసం అసమకాలిక, అధిక-పనితీరు గల Kotlin/Java/Android లైబ్రరీ._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [ఉదాహరణలు](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [డిస్కార్డ్](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_బ్లాక్‌చైన్ కోసం ఓపెన్ సోర్స్ .NET ఇంటిగ్రేషన్ లైబ్రరీ._**
+**Nethereum -** **_బ్లాక్‌చైన్ కోసం ఒక ఓపెన్ సోర్స్ .NET ఇంటిగ్రేషన్ లైబ్రరీ._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [డాక్యుమెంటేషన్](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -125,7 +137,7 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.tatum.io/)
 - [డిస్కార్డ్](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_ఎథీరియం కోసం Java/Android/Kotlin/Scala ఇంటిగ్రేషన్ లైబ్రరీ._**
+**Web3j -** **_ఎథీరియం కోసం ఒక Java/Android/Kotlin/Scala ఇంటిగ్రేషన్ లైబ్రరీ._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [డాక్స్](https://docs.web3j.io/)

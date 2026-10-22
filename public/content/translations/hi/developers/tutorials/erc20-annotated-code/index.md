@@ -18,7 +18,7 @@ published: 2021-03-09
 [इंटरफ़ेस परिभाषा](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) का विश्लेषण करेंगे।
 
 यह एनोटेट किया गया स्रोत कोड है। यदि आप ERC-20 को लागू करना चाहते हैं, तो
-[यह ट्यूटोरियल पढ़ें](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)।
+[यह ट्यूटोरियल पढ़ें](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)।
 
 ## इंटरफ़ेस {#the-interface}
 

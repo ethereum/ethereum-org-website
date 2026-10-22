@@ -567,8 +567,6 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [How to safely integrate your token contract with arbitrary tokens](/developers/tutorials/token-integration-checklist/)

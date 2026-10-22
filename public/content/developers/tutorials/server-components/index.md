@@ -30,7 +30,9 @@ There are several possible tasks for such a server could fulfill.
 
 ## Sample program {#sample-program}
 
-You can see a sample server [on github](https://github.com/qbzzt/20240715-server-component). This server listens to events coming from [this contract](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=contract_code), a modified version of Hardhat's Greeter. When the greeting is changed, it changes it back.
+You can see a sample server [on github](https://github.com/qbzzt/20240715-server-component). This server listens to events coming from [this contract](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code) on the Sepolia testnet, a modified version of Hardhat's Greeter. When the greeting is changed, it changes it back.
+
+This contract is shared with other tutorials, so other people (and their servers) may change the greeting while yours is running. Stop your server when you are done to avoid spending your test ETH.
 
 To run it:
 
@@ -41,25 +43,31 @@ To run it:
    cd 20240715-server-component
    ```
 
-2. Install the necessary packages. If you don't have it already, [install Node first](https://nodejs.org/en/download/package-manager).
+2. The sample repository was written for the Holesky testnet, which has since been shut down. Update it to use Sepolia and the Sepolia contract address.
+
+   ```sh copy
+   sed -i.bak -e 's/holesky/sepolia/g' -e 's/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA/' src/app.ts
+   ```
+
+3. Install the necessary packages. If you don't have it already, [install Node first](https://nodejs.org/en/download/package-manager).
 
    ```sh copy
    npm install
    ```
 
-3. Edit `.env` to specify the private key of an account that has ETH on the Holesky testnet. If you do not have ETH on Holesky, you can [use this faucet](https://holesky-faucet.pk910.de/).
+4. Edit `.env` to specify the private key of an account that has ETH on the Sepolia testnet. If you do not have ETH on Sepolia, you can [use this faucet](https://sepolia-faucet.pk910.de/). Use a new account that you only use for testing, never one that holds real assets.
 
    ```sh filename=".env" copy
-   PRIVATE_KEY=0x <private key goes here>
+   PRIVATE_KEY=0x<private key goes here>
    ```
 
-4. Start the server.
+5. Start the server.
 
    ```sh copy
    npm start
    ```
 
-5. Go to [a block explorer](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), and using a different address than the one that has the private key modify the greeting. See that the greeting is automatically modified back.
+6. Go to [a block explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract), and using a different address than the one that has the private key modify the greeting. See that the greeting is automatically modified back.
 
 ### How does it work? {#how-it-works}
 
@@ -90,10 +98,10 @@ import { privateKeyToAccount } from "viem/accounts"
 [This function](https://viem.sh/docs/accounts/privateKey) lets us generate the wallet information, including address, corresponding to a private key.
 
 ```typescript
-import { holesky } from "viem/chains"
+import { sepolia } from "viem/chains"
 ```
 
-To use a blockchain in Viem you need to import its definition. In this case, we want to connect to the [Holesky](https://github.com/eth-clients/holesky) test blockchain.
+To use a blockchain in Viem you need to import its definition. In this case, we want to connect to the [Sepolia](/developers/docs/networks/#sepolia) test blockchain.
 
 ```typescript
 // This is how we add the definitions in .env to process.env.
@@ -104,7 +112,7 @@ dotenv.config()
 This is how we read `.env` into the environment. We need it for the private key (see later).
 
 ```typescript
-const greeterAddress : Address = "0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6"
+const greeterAddress : Address = "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA"
 const greeterABI = [
     {
         "inputs": [
@@ -142,12 +150,12 @@ In JavaScript (and therefore TypeScript) you can't assign a new value to a const
 
 ```typescript
 const publicClient = createPublicClient({
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
 
-Create a Viem [public client](https://viem.sh/docs/clients/public.html). Public clients do not have an attached private key, and therefore cannot send transactions. They can call [`view` functions](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), read account balances, etc.
+Create a Viem [public client](https://viem.sh/docs/clients/public). Public clients do not have an attached private key, and therefore cannot send transactions. They can call [`view` functions](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm), read account balances, etc.
 
 ```typescript
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
@@ -160,7 +168,7 @@ The [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) function t
 ```typescript
 const walletClient = createWalletClient({
   account,
-  chain: holesky,
+  chain: sepolia,
   transport: http(),
 })
 ```
@@ -183,7 +191,7 @@ Now that we have all the prerequisites, we can finally create a [contract instan
 console.log(`Current greeting:`, await greeter.read.greet())
 ```
 
-The contract functions that are read only ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) and [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) are available under `read`. In this case, we use it to access the [`greet`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=read_contract#cfae3217) function, which returns the greeting.
+The contract functions that are read only ([`view`](https://www.tutorialspoint.com/solidity/solidity_view_functions.htm) and [`pure`](https://www.tutorialspoint.com/solidity/solidity_pure_functions.htm)) are available under `read`. In this case, we use it to access the [`greet`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=read_contract) function, which returns the greeting.
 
 JavaScript is single-threaded, so when we fire off a long running process we need to [specify we do it asynchronously](https://eloquentjavascript.net/11_async.html#h-XvLsfAhtsE). Calling the blockchain, even for a read only operation, requires a round-trip between the computer and a blockchain node. That is the reason we specify here the code needs to `await` for the result.
 
@@ -201,10 +209,10 @@ This is the function you call to issue a transaction that changes the greeting. 
 const txHash = await greeter.write.setGreeting([greeting])
 ```
 
-The `write` field of the contract instance has all the functions that write to the blockchain state (those that require sending a transaction), such as [`setGreeting`](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract#a4136862). The parameters, if any, are provided as a list, and the function returns the hash of the transaction.
+The `write` field of the contract instance has all the functions that write to the blockchain state (those that require sending a transaction), such as [`setGreeting`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=write_contract). The parameters, if any, are provided as a list, and the function returns the hash of the transaction.
 
 ```typescript
-    console.log(`Working on a fix, see https://eth-holesky.blockscout.com/tx/${txHash}`)
+    console.log(`Working on a fix, see https://eth-sepolia.blockscout.com/tx/${txHash}`)
 
     return txHash
 }
@@ -232,7 +240,7 @@ console.log(
 )
 ```
 
-There could be multiple events, but foir simplicity we only care about the first one. `logs[0].args` are the arguments of the event, in this case `sender` and `greeting`.
+There could be multiple events, but for simplicity we only care about the first one. `logs[0].args` are the arguments of the event, in this case `sender` and `greeting`.
 
 ```typescript
         if (logs[0].args.sender != account.address)
@@ -249,12 +257,6 @@ If the sender is _not_ this server, use `setGreeting` to change the greeting.
 
 ```json
 {
-  "main": "dist/index.js",
-```
-
-This definition specifies which JavaScript file to run.
-
-```json
   "scripts": {
     "start": "tsc && node dist/app.js",
   },

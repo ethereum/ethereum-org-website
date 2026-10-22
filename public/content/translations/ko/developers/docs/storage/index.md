@@ -142,7 +142,7 @@ KYC가 없는 탈중앙화 도구:
 **Arweave - _Arweave는 데이터를 저장하기 위한 탈중앙화 스토리지(dStorage) 플랫폼입니다._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [문서](https://docs.arweave.org/info/)
+- [문서](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs는 샤딩과 블로버(blobber)를 갖춘 지분 증명(PoS) 탈중앙화 스토리지(dStorage) 플랫폼입니다._**

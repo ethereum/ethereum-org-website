@@ -1,34 +1,22 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/component-prediction-market-products.json",
-  "generatedAt": "2026-07-22T22:31:43.146Z",
-  "rootHash": "b7af9487d900",
+  "generatedAt": "2026-10-21T21:34:43.668Z",
+  "rootHash": "16f5031f472e",
   "tree": {
-    "contentHash": "0145cc8535e7",
-    "anchorHash": "b49985368529",
+    "contentHash": "82176648aa80",
+    "anchorHash": "fadbe909da84",
     "children": {
-      "augur-cta": {
-        "contentHash": "d726af61186f",
+      "limitless-cta": {
+        "contentHash": "3e87ddd8ed77",
         "anchorHash": "e3b0c44298fc"
       },
-      "augur-description": {
-        "contentHash": "206cde5c5169",
+      "limitless-description": {
+        "contentHash": "8c61df07c142",
         "anchorHash": "e3b0c44298fc"
       },
-      "augur-title": {
-        "contentHash": "731cf1a8f620",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "kalshi-cta": {
-        "contentHash": "66124cd53c80",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "kalshi-description": {
-        "contentHash": "4511db3ed43d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "kalshi-title": {
-        "contentHash": "0d894d2263ff",
+      "limitless-title": {
+        "contentHash": "e030be5ec4cf",
         "anchorHash": "e3b0c44298fc"
       },
       "polymarket-cta": {
@@ -36,7 +24,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "polymarket-description": {
-        "contentHash": "3573e14d3f12",
+        "contentHash": "91ea50576039",
         "anchorHash": "e3b0c44298fc"
       },
       "polymarket-title": {
@@ -45,16 +33,13 @@
       }
     },
     "childrenOrder": [
-      "augur-cta",
-      "augur-description",
-      "augur-title",
-      "kalshi-cta",
-      "kalshi-description",
-      "kalshi-title",
+      "limitless-cta",
+      "limitless-description",
+      "limitless-title",
       "polymarket-cta",
       "polymarket-description",
       "polymarket-title"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

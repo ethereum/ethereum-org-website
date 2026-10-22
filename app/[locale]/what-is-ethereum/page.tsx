@@ -90,7 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
+            breadcrumbs={{ slug: "what-is-ethereum" }}
             heroImg={heroImg}
             title={tocItems[0].title}
             description={

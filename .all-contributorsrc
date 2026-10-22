@@ -14605,6 +14605,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "patrick-star-10",
+      "name": "patrick-star-10",
+      "avatar_url": "https://avatars.githubusercontent.com/u/204532789?v=4",
+      "profile": "https://github.com/patrick-star-10",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "SayedZahur786",
+      "name": "Mohd Jahur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177766328?v=4",
+      "profile": "https://github.com/SayedZahur786",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

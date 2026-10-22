@@ -267,7 +267,6 @@ export function toolToCatalogItem(
   {
     locale,
     t,
-    tCommon,
     tItem,
     labels,
     next,
@@ -275,7 +274,6 @@ export function toolToCatalogItem(
   }: {
     locale: string
     t: Translator
-    tCommon: Translator
     tItem: Translator
     labels: ReturnType<typeof buildToolLabels>
     next?: DeveloperToolWithCategory
@@ -351,11 +349,7 @@ export function toolToCatalogItem(
         tooltip: t("page-developers-tools-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
-    breadcrumbs: [
-      { label: "ethereum.org", href: "/" },
-      { label: tCommon("developers"), href: "/developers/" },
-      { label: tCommon("tools"), href: "/developers/tools/" },
-    ],
+    breadcrumbSlug: `/developers/tools/${getToolKey(tool)}`,
     next: next && {
       name: next.name,
       href: `/developers/tools/${getToolKey(next)}/`,

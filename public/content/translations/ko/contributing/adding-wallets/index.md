@@ -1,6 +1,6 @@
 ---
-title: 지갑 추가하기
-description: ethereum.org에 지갑을 추가할 때 사용하는 정책
+title: "지갑 추가하기"
+description: "ethereum.org에 지갑을 추가할 때 사용하는 정책"
 lang: ko
 ---
 
@@ -58,7 +58,7 @@ lang: ko
 
 ## 지갑 추가하기 {#adding-a-wallet}
 
-ethereum.org에 지갑을 추가하려면 GitHub에 이슈를 생성하세요.
+ethereum.org에 지갑을 추가하려면 GitHub에서 이슈를 생성하세요. 이슈에 작성한 지갑 설명은 지갑 페이지에 표시되므로, 한두 문장의 사실 기반 내용으로 간결하게 작성해 주세요.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   이슈 생성하기

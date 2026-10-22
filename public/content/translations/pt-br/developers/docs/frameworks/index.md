@@ -32,10 +32,10 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 
 - [Instalar o Foundry](https://book.getfoundry.sh/)
 - [Livro do Foundry](https://book.getfoundry.sh/)
-- [Chat da comunidade do Foundry no Telegram](https://t.me/foundry_support)
+- [Bate-papo da comunidade do Foundry no Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat -** **_Ambiente de desenvolvimento no Ethereum para profissionais._**
+**Hardhat -** **_Ambiente de desenvolvimento Ethereum para profissionais._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -45,7 +45,7 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Documentação](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Uma plataforma para o desenvolvimento de aplicativos em blockchain na JVM._**
+**Web3j -** **_Uma plataforma para o desenvolvimento de aplicativos blockchain na JVM._**
 
 - [Página inicial](https://www.web3labs.com/web3j-sdk)
 - [Documentação](https://docs.web3j.io)
@@ -57,7 +57,7 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Exemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Crie aplicativos baseados no Ethereum com um único comando. Vem com uma ampla oferta de frameworks de interface de usuário e modelos de finanças descentralizadas (DeFi) para escolher._**
+**Create Eth App -** **_Crie aplicativos baseados no Ethereum com um único comando. Vem com uma ampla oferta de frameworks de interface de usuário (UI) e modelos de finanças descentralizadas (DeFi) para você escolher._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelos](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -67,7 +67,7 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Site](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Plataforma de desenvolvimento Web3 que permite aos desenvolvedores de blockchain construir, testar, depurar, monitorar e operar contratos inteligentes e melhorar a experiência do usuário (UX) de dapps._**
+**Tenderly -** **_Plataforma de desenvolvimento Web3 que permite aos desenvolvedores de blockchain construir, testar, depurar, monitorar e operar contratos inteligentes, além de melhorar a experiência do usuário (UX) de dapps._**
 
 - [Site](https://tenderly.co/)
 - [Documentação](https://docs.tenderly.co/)
@@ -77,13 +77,13 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Site](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy -** **_Plataforma de desenvolvimento no Ethereum._**
+**Alchemy -** **_Plataforma de desenvolvimento Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_Plataforma de desenvolvimento no Ethereum._**
+**NodeReal -** **_Plataforma de desenvolvimento Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
@@ -100,30 +100,29 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Plataforma de desenvolvimento Web3 de nível empresarial, que permite construir aplicativos de NFT em todas as principais cadeias EVM (e outras)._**
+**Crossmint -** **_Plataforma de desenvolvimento Web3 de nível corporativo, que permite construir aplicativos de tokens não fungíveis (NFTs) em todas as principais cadeias EVM (e outras)._**
 
 - [Site](https://www.crossmint.com)
 - [Documentação](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Ambiente de desenvolvimento e framework de testes baseados em Python._**
+**Brownie -** **_Ambiente de desenvolvimento e framework de testes baseado em Python._**
 
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **O Brownie não é mantido atualmente**
+- **O Brownie não é mais mantido atualmente**
 
 **OpenZeppelin SDK -** **_O kit de ferramentas definitivo para contratos inteligentes: um conjunto de ferramentas para ajudar você a desenvolver, compilar, atualizar, implantar e interagir com contratos inteligentes._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Fórum da comunidade](https://forum.openzeppelin.com/c/support/17)
 - **O desenvolvimento do OpenZeppelin SDK foi encerrado**
 
-**Catapulta -** **_Ferramenta de implantação de contratos inteligentes em várias cadeias, automatiza verificações em exploradores de blocos, rastreia contratos inteligentes implantados e compartilha relatórios de implantação, plug-and-play para projetos Foundry e Hardhat._**
+**Catapulta -** **_Ferramenta de implantação de contratos inteligentes multicadeia, automatiza verificações em exploradores de blocos, rastreia contratos inteligentes implantados e compartilha relatórios de implantação, plug-and-play para projetos Foundry e Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (desenvolvido pela Covalent) -** **_O GoldRush oferece o conjunto de API de dados de blockchain mais abrangente para desenvolvedores, analistas e empresas. Esteja você construindo um painel de finanças descentralizadas (DeFi), uma carteira, um bot de negociação, um agente de IA ou uma plataforma de conformidade, as APIs de dados fornecem acesso rápido, preciso e amigável ao desenvolvedor aos dados onchain essenciais de que você precisa_**
+**GoldRush (desenvolvido pela Covalent) -** **_O GoldRush oferece o conjunto mais abrangente de Interfaces de Programação de Aplicações (APIs) de dados de blockchain para desenvolvedores, analistas e empresas. Esteja você construindo um painel de finanças descentralizadas (DeFi), uma carteira, um bot de negociação, um agente de IA ou uma plataforma de conformidade, as APIs de dados fornecem acesso rápido, preciso e amigável ao desenvolvedor aos dados onchain essenciais de que você precisa_**
 
 - [Site](https://goldrush.dev/)
 - [Documentação](https://goldrush.dev/docs/chains/ethereum)
@@ -145,10 +144,11 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [Pacote NPM](https://www.npmjs.com/package/@veramo/core)
 
-**Moccasin -** **_Um framework de desenvolvimento e teste de contratos inteligentes rápido e pythônico para Vyper, construído no Titanoboa._**
+**Moccasin -** **_Um framework rápido e pythônico de desenvolvimento e teste de contratos inteligentes para Vyper, construído no Titanoboa._**
 
 - [Documentação](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Leitura adicional {#further-reading}
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_

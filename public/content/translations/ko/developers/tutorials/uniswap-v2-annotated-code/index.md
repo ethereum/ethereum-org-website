@@ -135,7 +135,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/2.x/api/math)는 오버플로우와 언더플로우를 방지하는 데 사용됩니다. 그렇지 않으면 값이 `-1`이어야 하는데 대신 `2^256-1`이 되는 상황이 발생할 수 있으므로 이는 중요합니다.
+[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/3.x/api/math)는 오버플로우와 언더플로우를 방지하는 데 사용됩니다. 그렇지 않으면 값이 `-1`이어야 하는데 대신 `2^256-1`이 되는 상황이 발생할 수 있으므로 이는 중요합니다.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1672,7 +1672,7 @@ Solidity에서 함수 매개변수는 `memory` 또는 `calldata`에 저장될 �
 
 ## 라이브러리 {#libraries}
 
-[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/2.x/api/math)는 문서화가 잘 되어 있으므로, 여기서 따로 설명할 필요는 없습니다.
+[SafeMath 라이브러리](https://docs.openzeppelin.com/contracts/3.x/api/math)는 문서화가 잘 되어 있으므로, 여기서 따로 설명할 필요는 없습니다.
 
 ### Math {#math}
 

@@ -142,7 +142,7 @@ KYC లేని వికేంద్రీకృత సాధనాలు:
 **Arweave - _Arweave అనేది డేటాను నిల్వ చేయడానికి ఒక dStorage ప్లాట్‌ఫారమ్._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [డాక్యుమెంటేషన్](https://docs.arweave.org/info/)
+- [డాక్యుమెంటేషన్](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs అనేది షార్డింగ్ మరియు బ్లాబర్‌లతో కూడిన ప్రూఫ్-ఆఫ్-స్టేక్ dStorage ప్లాట్‌ఫారమ్._**

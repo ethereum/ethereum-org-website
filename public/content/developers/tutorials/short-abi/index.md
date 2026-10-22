@@ -27,8 +27,9 @@ The term 'layer 2' (L2) is used for the rollup or any other system that relies o
 ## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction so that anybody will be able to go through them and verify that the current state is correct.
-The cheapest way to get data into the Ethereum Mainnet is to write it as calldata.
+When this article was written, the cheapest way to get data into the Ethereum Mainnet was to write it as calldata.
 This solution was chosen by both [Optimism](https://docs.optimism.io/op-stack/protocol/overview) and [Arbitrum](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction).
+Since the Dencun upgrade (March 2024), rollups can post this data in [blobs](/roadmap/danksharding/) instead, which are a lot cheaper.
 
 ### Cost of L2 transactions {#cost-of-l2-transactions}
 
@@ -37,21 +38,49 @@ The cost of L2 transactions is composed of two components:
 1. L2 processing, which is usually extremely cheap
 2. L1 storage, which is tied to Mainnet gas costs
 
-As I'm writing this, on Optimism the cost of L2 gas is 0.001 [Gwei](/developers/docs/gas/#pre-london).
-The cost of L1 gas, on the other hand, is approximately 40 gwei.
-[You can see the current prices here](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+When I wrote this article in 2022, on Optimism the cost of L2 gas was 0.001 [Gwei](/developers/docs/gas/#pre-london).
+The cost of L1 gas, on the other hand, was approximately 40 gwei.
 
 A byte of calldata costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
 One of the most expensive operations on the EVM is writing to storage.
-The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas. Currently, this is 22.1 gwei.
-So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
+The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas. At the time, this was 22.1 gwei.
+So if we could save a single zero byte of calldata, we'd be able to write about 200 bytes to storage and still come out ahead.
+
+#### How L2 costs changed in 2024 {#how-l2-costs-changed-in-2024}
+
+The OP Stack [L1 data fee](https://docs.optimism.io/op-stack/transactions/fees#l1-data-fee) formula has changed twice since this article was written:
+
+- With the [Ecotone upgrade](https://docs.optimism.io/op-stack/transactions/fees#ecotone) (March 2024), OP Stack chains started posting transaction data to blobs, which are priced by a separate (and usually much lower) blob base fee.
+- With the [Fjord upgrade](https://docs.optimism.io/op-stack/transactions/fees#fjord) (July 2024), the L1 data fee is based on an estimate of the size of the transaction after [FastLZ](https://github.com/ariya/FastLZ) compression, with a minimum of 100 bytes per transaction ([see the specification](https://specs.optimism.io/protocol/fjord/exec-engine.html)).
+
+This changes the analysis in the rest of this article in three ways:
+
+1. Zero bytes compress well, so they are nearly free.
+   The 4 and 16 gas per byte figures below are the cost of L1 calldata, not what you pay for transaction data on an OP Stack chain today.
+2. Below the 100-byte minimum, shorter calldata does not save anything.
+   For example, in October 2026 on OP Mainnet a standard ERC-20 `transfer` (68 bytes of calldata) and the 23-byte short version in this article would have paid exactly the same L1 data fee, the minimum, about 1 gwei (10<sup>-9</sup> ETH).
+3. Because blob space is cheap, the L2 execution fee is now often larger than the L1 data fee.
+   At an L2 gas price of 0.001 gwei, 1000 gas cost 1 gwei, the same as that entire L1 data fee, so the extra execution gas of going through a proxy contract can cost more than the bytes it saves.
+
+The principle still holds: fewer compressed bytes mean a lower L1 data fee.
+Short ABIs make the most sense for transactions with a lot of data that does not compress well, and on chains or at times when L1 data is expensive.
+To see what a specific transaction would pay, call `getL1Fee` on the [`GasPriceOracle` predeploy](https://specs.optimism.io/protocol/predeploys.html#gaspriceoracle) with the unsigned transaction.
+For example, using [Foundry](https://getfoundry.sh/introduction/installation/)'s `cast`:
+
+```sh
+TX=$(cast mktx --raw-unsigned --from <your address> --chain 10 --nonce 0 --gas-limit 100000 \
+  --priority-gas-price 1000000 --gas-price 1000000 <destination address> <calldata>)
+cast call 0x420000000000000000000000000000000000000F "getL1Fee(bytes)(uint256)" $TX --rpc-url https://mainnet.optimism.io
+```
+
+The result is in wei.
 
 ### The ABI {#the-abi}
 
 The vast majority of transactions access a contract from an externally-owned account.
 Most contracts are written in Solidity and interpret their data field per [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-However, the ABI was designed for L1, where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
+However, the ABI was designed for L1, where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where (at 2022 prices) a byte of calldata costs more than a thousand arithmetic operations.
 The calldata is divided like this:
 
 | Section             | Length | Bytes | Wasted bytes | Wasted gas | Necessary bytes | Necessary gas |
@@ -59,8 +88,8 @@ The calldata is divided like this:
 | Function selector   |      4 |   0-3 |            3 |         48 |               1 |            16 |
 | Zeroes              |     12 |  4-15 |           12 |         48 |               0 |             0 |
 | Destination address |     20 | 16-35 |            0 |          0 |              20 |           320 |
-| Amount              |     32 | 36-67 |           17 |         64 |              15 |           240 |
-| Total               |     68 |       |              |        160 |                 |           576 |
+| Amount              |     32 | 36-67 |           17 |         68 |              15 |           240 |
+| Total               |     68 |       |              |        164 |                 |           576 |
 
 Explanation:
 
@@ -72,14 +101,27 @@ Explanation:
 - **Amount**: If we assume that in this contract `decimals` is eighteen (the normal value) and the maximum amount of tokens we transfer will be 10<sup>18</sup>, we get a maximum amount of 10<sup>36</sup>.
   256<sup>15</sup> &gt; 10<sup>36</sup>, so fifteen bytes are enough.
 
-A waste of 160 gas on L1 is normally negligible. A transaction costs at least [21,000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), so an extra 0.8% doesn't matter.
-However, on L2, things are different. Almost the entire cost of the transaction is writing it to L1.
+A waste of 164 gas on L1 is normally negligible. A transaction costs at least [21,000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), so an extra 0.8% doesn't matter.
+However, on L2 in 2022, things were different. Almost the entire cost of the transaction was writing it to L1.
 In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
-The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
+The total cost is therefore `109*16+576+164=2484`, and we are wasting about 6.6% of that.
 
 ## Reducing costs when you don't control the destination {#reducing-costs-when-you-dont-control-the-destination}
 
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
+
+To run it, you need [Node.js](https://nodejs.org/) and git:
+
+```sh
+git clone https://github.com/qbzzt/ethereum.org-20220330-shortABI.git
+cd ethereum.org-20220330-shortABI
+npm install
+npx hardhat test
+```
+
+The test deploys the contracts to Hardhat's built-in local network, so you don't need any ETH.
+The repository uses Hardhat 2.9, so on current versions of Node.js it warns that your Node.js version is not supported, but the test still passes.
+
 Let's go over the relevant files.
 
 ### Token.sol {#token-sol}
@@ -202,8 +244,8 @@ There are two reasons why a function would not be available here:
 2. Functions that rely on [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties).
    The value of `msg.sender` is going to be `CalldataInterpreter`'s address, not the caller.
 
-Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one function, `transfer`.
-This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whoever called us).
+Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one standard function, `transfer` (because we can call `transferFrom`).
+Our test token also has `faucet`, which we can support because we can transfer the tokens back to whoever called us.
 
 ```solidity
 
@@ -259,13 +301,13 @@ For this particular contract we assume that the maximum number of tokens anybody
         }
 ```
 
-Overall, a transfer takes 35 bytes of calldata:
+Overall, a transfer takes 23 bytes of calldata:
 
 | Section             | Length | Bytes |
 | ------------------- | -----: | ----: |
 | Function selector   |      1 |     0 |
-| Destination address |     32 |  1-32 |
-| Amount              |      2 | 33-34 |
+| Destination address |     20 |  1-20 |
+| Amount              |      2 | 21-22 |
 
 ```solidity
     }   // fallback
@@ -276,7 +318,7 @@ Overall, a transfer takes 35 bytes of calldata:
 ### test.js {#test-js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly).
-I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
+I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.org/v5/) and only explain the parts that specifically apply to the contract.
 
 ```js
 const { expect } = require("chai");
@@ -324,7 +366,7 @@ There are two parameters we need to provide for the transaction:
     await (await signer.sendTransaction(faucetTx)).wait()
 ```
 
-We call [the signer's `sendTransaction` method](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) because we already specified the destination (`faucetTx.to`) and we need the transaction to be signed.
+We call [the signer's `sendTransaction` method](https://docs.ethers.org/v5/api/signer/#Signer-sendTransaction) because we already specified the destination (`faucetTx.to`) and we need the transaction to be signed.
 
 ```javascript
 // Check the faucet provides the tokens correctly
@@ -370,6 +412,12 @@ Create a transfer transaction. The first byte is "0x02", followed by the destina
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
 [You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
+To run it, switch to that branch in the repository you cloned earlier and run the test again:
+
+```sh
+git checkout control-contract
+npx hardhat test
+```
 
 If the contract were responding only to external transactions, we could get by with having just one contract.
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
@@ -577,7 +625,7 @@ Note that `transferFromTx` requires two address parameters: the giver of the all
 
 ## Conclusion {#conclusion}
 
-Both [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) and [Arbitrum](https://developer.offchainlabs.com/docs/special_features) are looking for ways to reduce the size of the calldata written to L1 and therefore the cost of transactions.
+Both [Optimism](https://docs.optimism.io/op-stack/transactions/fees#fjord) and [Arbitrum](https://docs.arbitrum.io/how-arbitrum-works/deep-dives/gas-and-fees) now compress the data they write to L1, and charge each transaction based on its compressed size, to reduce the cost of transactions.
 However, as infrastructure providers looking for generic solutions, our abilities are limited.
 As the dapp developer, you have application-specific knowledge, which lets you optimize your calldata much better than we could in a generic solution.
 Hopefully, this article helps you find the ideal solution for your needs.
