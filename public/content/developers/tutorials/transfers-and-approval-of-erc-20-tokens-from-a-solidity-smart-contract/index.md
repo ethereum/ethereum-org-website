@@ -12,7 +12,7 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In the previous tutorial we studied [the anatomy of an ERC-20 token in Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
+In the previous tutorial we studied [the anatomy of an ERC-20 token in Solidity](/developers/tutorials/erc20-annotated-code/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
 
 For this smart contract, we’ll create a real dummy decentralized exchange where a user can trade ether for our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
 

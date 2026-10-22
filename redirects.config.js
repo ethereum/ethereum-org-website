@@ -245,6 +245,52 @@ module.exports = [
   ],
   ["/developers/docs/privacy-enhancements", "/privacy/ethereum/"],
   ["/developers/docs/wallets", "/wallets/"],
+  // Retired tutorials: ?removed shows a notice on the tutorials page
+  [
+    "/developers/tutorials/calling-a-smart-contract-from-javascript",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/hello-world-smart-contract-fullstack",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/how-to-use-tellor-as-your-oracle",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app",
+    "/developers/tutorials/?removed",
+  ],
+  ["/developers/tutorials/nft-minter", "/developers/tutorials/?removed"],
+  [
+    "/developers/tutorials/optimism-std-bridge-annotated-code",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/send-token-ethersjs",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/the-graph-fixing-web3-data-querying",
+    "/developers/tutorials/?removed",
+  ],
+  [
+    "/developers/tutorials/understand-the-erc-20-token-smart-contract",
+    "/developers/tutorials/?removed",
+  ],
   ["/blog", "https://blog.ethereum.org"],
   ["/latest/feed.xml", "/latest/feed/"],
   // Storybook (Chromatic) convenience redirects

@@ -15,7 +15,7 @@ We are going to use three distinctive testing and program analysis techniques:
 
 - **Static analysis with [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** All the paths of the program are approximated and analyzed at the same time, through different program presentations (e.g., control-flow-graph)
 - **Fuzzing with [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** The code is executed with a pseudo-random generation of transactions. The fuzzer will try to find a sequence of transactions to violate a given property.
-- **Symbolic execution with [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** A formal verification technique, which translates each execution path to a mathematical formula, on which on top constraints can be checked.
+- **Symbolic execution with [Manticore](https://github.com/trailofbits/manticore).** A formal verification technique, which translates each execution path to a mathematical formula, on which on top constraints can be checked.
 
 Each technique has advantages and pitfalls, and will be useful in [specific cases](#determining-security-properties):
 
