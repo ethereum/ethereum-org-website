@@ -96,7 +96,7 @@
   "mainnet-term": "Mainnet",
   "mainnet-definition": "Short for \"main network,\" this is the main public Ethereum <a href=\"/glossary/#blockchain\">blockchain</a>.",
   "mempool-term": "Mempool",
-  "mempool-definition": "The waiting area where transactions sit after being sent, before a block builder includes them in a block. Most nodes share their mempool contents with their peers, so pending transactions are publicly visible.",
+  "mempool-definition": "The list of pending transactions that each node keeps locally until they are included in a block. Nodes share these with their peers, so most pending transactions are publicly visible before they are confirmed.",
   "mev-term": "MEV",
   "mev-definition": "A mechanism prioritizing certain actions on a blockchain for a fee, influencing outcomes and the order of transactions.",
   "multisig-term": "Multisig",

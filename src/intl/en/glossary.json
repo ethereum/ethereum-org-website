@@ -236,7 +236,7 @@
   "max-fee-per-gas-term": "Max Fee Per Gas",
   "max-fee-per-gas-definition": "The Max Fee is the absolute maximum amount a user is willing to pay per unit of gas (<a href=\"/glossary/#gwei\">gwei</a>) to get a transaction included in a block.",
   "mempool-term": "Mempool",
-  "mempool-definition": "The waiting area where transactions sit after being sent, before a block builder includes them in a block. Most nodes share their mempool contents with their peers, so pending transactions are publicly visible.",
+  "mempool-definition": "Short for \"memory pool\", the list of pending transactions that each node keeps locally until they are included in a block. There is no single shared mempool. Nodes pass pending transactions to their peers, so each node's copy is similar but not identical, and most pending transactions are publicly visible before a block builder picks them up.",
   "merkle-patricia-tree-term": "Merkle Patricia Tree (MPT)",
   "merkle-patricia-tree-definition": "A data structure used in Ethereum to efficiently store key-value pairs.",
   "merkle-root-term": "Merkle Root",
