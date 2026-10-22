@@ -90,7 +90,27 @@ We are going to use [Vite](https://vite.dev/) and [React](https://react.dev/). T
 
 ### See stealth addresses in action {#in-action}
 
-1. Install the necessary tools: [Rust](https://rust-lang.org/tools/install/) and [Node](https://nodejs.org/en/download).
+1. Install the necessary tools: [Rust](https://rust-lang.org/tools/install/), [Node](https://nodejs.org/en/download) (version 20.19 or 22.12 or later), and a [Clang](https://clang.llvm.org/) C compiler that can target WebAssembly. The Rust library we use depends on [`secp256k1-sys`](https://crates.io/crates/secp256k1-sys), which compiles C code, so `wasm-pack build` fails with `failed to find tool "clang"` if Clang is missing. GCC cannot compile to WebAssembly.
+
+   - On Debian or Ubuntu:
+
+     ```sh
+     sudo apt install clang
+     ```
+
+   - On Fedora:
+
+     ```sh
+     sudo dnf install clang
+     ```
+
+   - On macOS, the Clang that comes with Xcode cannot compile to WebAssembly. Install LLVM from [Homebrew](https://brew.sh/) and tell the Rust build to use it for the WebAssembly target. Run the `export` commands in the same terminal you use for step 3.
+
+     ```sh
+     brew install llvm
+     export CC_wasm32_unknown_unknown="$(brew --prefix llvm)/bin/clang"
+     export AR_wasm32_unknown_unknown="$(brew --prefix llvm)/bin/llvm-ar"
+     ```
 
 2. Clone the GitHub repository.
 
@@ -210,8 +230,8 @@ The easiest way to return an object with multiple fields is to return a JSON str
 The [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) returns three fields:
 
 - The meta-address (*K<sub>pub</sub>* and *V<sub>pub</sub>*)
-- The viewing private key (*V<sub>priv</sub>*)
 - The spending private key (*K<sub>priv</sub>*)
+- The viewing private key (*V<sub>priv</sub>*)
 
 The [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) syntax lets us separate those values again.
 
@@ -236,16 +256,16 @@ The `<const N: usize>` expression is called a [generic](https://doc.rust-lang.or
 
 The return value is `Option<[u8; N]>`, which means the returned array is [optional](https://doc.rust-lang.org/std/option/). This is a typical pattern in Rust for functions that may fail.
 
-For example, if we call `str_to_array::10("bad060a7")`, the function is supposed to return a ten-value array, but the input is only four bytes. The function needs to fail, and it does so by returning `None`. The return value for `str_to_array::4("bad060a7")` would be `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+For example, if we call `str_to_array::<10>("bad060a7")`, the function is supposed to return a ten-value array, but the input is only four bytes. The function needs to fail, and it does so by returning `None`. The return value for `str_to_array::<4>("bad060a7")` would be `Some([0xba, 0xd0, 0x60, 0xa7])`.
 
 ```rust
     // decode returns Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-The [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) function return a `Result<Vec<u8>, FromHexError>`. The [`Result`](https://doc.rust-lang.org/std/result/) type can contain either a successfult result (`Ok(value)`) or an error (`Err(error)`).
+The [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) function returns a `Result<Vec<u8>, FromHexError>`. The [`Result`](https://doc.rust-lang.org/std/result/) type can contain either a successful result (`Ok(value)`) or an error (`Err(error)`).
 
-The `.ok()` method turns the `Result` into an `Option`, whose value is either the `Ok()` value if successful or `None` if not. Finally, the [question mark operator](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) aborts the current functions and returns a `None` if the `Option` is empty. Otherwise, it unwraps the value and returns that (in this case, to assign a value to `vec`).
+The `.ok()` method turns the `Result` into an `Option`, whose value is either the `Ok()` value if successful or `None` if not. Finally, the [question mark operator](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) aborts the current function and returns a `None` if the `Option` is empty. Otherwise, it unwraps the value and returns that (in this case, to assign a value to `vec`).
 
 This looks like a strangely convoluted method to handle errors, but `Result` and `Option` ensure that all errors are handled, one way or another.
 
@@ -310,7 +330,7 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-This function uses the library's [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) to calculate the private key to withdraw from the address (*R<sub>priv</sub>*). This calculation requires these values:
+This function uses the library's [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) to calculate the private key to withdraw from the address (*P<sub>priv</sub>*). This calculation requires these values:
 
 - The address (*Address=f(P<sub>pub</sub>)*)
 - The public key generated by Bill (*R<sub>pub</sub>*)
@@ -355,7 +375,7 @@ The only non-obvious part of the user interface is WASM connectivity. Here is ho
 
 **`vite.config.js`**
 
-This fine contains [the Vite configuration](https://vite.dev/config/).
+This file contains [the Vite configuration](https://vite.dev/config/).
 
 ```js
 import { defineConfig } from 'vite'
@@ -378,7 +398,7 @@ This file is the main component of the application. It is a container that inclu
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-When we use [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), it creates two files we use here: a wasm file with the actual code (here, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) and a JavaScript file with the definitions to use it (here, `src/rust-wasm/pkg/rust_wasm.js`). The default export of that JavaScript file is code that needs to run to initiate WASM.
+When we use [`wasm-pack`](https://wasm-bindgen.github.io/wasm-pack/book/), it creates two files we use here: a wasm file with the actual code (here, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) and a JavaScript file with the definitions to use it (here, `src/rust-wasm/pkg/rust_wasm.js`). The default export of that JavaScript file is code that needs to run to initiate WASM.
 
 ```jsx
 function App() {
@@ -432,6 +452,6 @@ The code in `Alice.jsx` is analogous, except that Alice has two actions:
 
 ## Conclusion {#conclusion}
 
-Stealth addresses are not panacea; they have to be [used correctly](#go-wrong). But when used correctly, they can enable privacy on a public blockchain.
+Stealth addresses are not a panacea; they have to be [used correctly](#go-wrong). But when used correctly, they can enable privacy on a public blockchain.
 
 [See here for more of my work](https://cryptodocguy.pro/).
