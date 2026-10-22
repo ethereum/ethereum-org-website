@@ -293,8 +293,15 @@ body:
   - type: input
     id: wallet_eip_1559_support
     attributes:
-      label: Does the wallet support EIP-1559 (type 2) transactions?
-      description: Does your wallet support EIP-1559 (type 2) transactions for Ethereum Mainnet. Please provide information on the type of transactions this wallet supports. If this is not applicable, please explain.
+      label: Does the wallet support Ethereum's current fee market?
+      description: Fees must track the current base fee on Ethereum Mainnet rather than a fixed legacy `gasPrice`. This may be through EIP-1559 (type 2) transactions, EIP-7702, or ERC-4337. Please describe which transaction or account mechanisms your wallet uses.
+    validations:
+      required: true
+  - type: input
+    id: wallet_erc_5792_support
+    attributes:
+      label: Does the wallet support atomic batch calls (ERC-5792)?
+      description: Does your wallet support `wallet_sendCalls` with the `atomic` capability, so a batch of calls either all succeed or all fail? Please provide documentation, or the `wallet_getCapabilities` response for Mainnet.
     validations:
       required: true
   - type: textarea
