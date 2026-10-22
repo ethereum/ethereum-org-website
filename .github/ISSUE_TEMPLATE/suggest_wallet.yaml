@@ -291,7 +291,7 @@ body:
     validations:
       required: true
   - type: input
-    id: wallet_eip_1559_support
+    id: wallet_fee_market_support
     attributes:
       label: Does the wallet support Ethereum's current fee market?
       description: Fees must track the current base fee on Ethereum Mainnet rather than a fixed legacy `gasPrice`. This may be through EIP-1559 (type 2) transactions, EIP-7702, or ERC-4337. Please describe which transaction or account mechanisms your wallet uses.
