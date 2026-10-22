@@ -417,11 +417,11 @@
     "publishDate": "05/24/2021"
   },
   {
-    "url": "https://v2.hardhat.org/tutorial",
-    "title": "Hardhat's tutorial for beginners",
-    "description": "Hardhat's beginners guide to Ethereum contracts and dapp development",
+    "url": "https://hardhat.org/docs/tutorial",
+    "title": "Hardhat 3 tutorial",
+    "description": "Hardhat's beginner guide to writing, testing and deploying smart contracts with Hardhat 3",
     "author": "Hardhat",
-    "authorGithub": "https://https://hardhat.org/",
+    "authorGithub": "https://github.com/NomicFoundation",
     "tags": ["hardhat", "solidity", "testing", "smart contracts"],
     "skillLevel": "beginner",
     "lang": "en",
@@ -500,6 +500,27 @@
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "10",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/crowdfunding",
+    "title": "Crowdfunding App",
+    "description": "Build, test, and deploy a crowdfunding app that releases funds only if a goal is met before the deadline. A Speedrun Ethereum challenge.",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "nextjs",
+      "wagmi",
+      "javascript",
+      "typescript",
+      "frontend"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "30",
+    "lang": "en",
     "publishDate": "04/24/2024"
   },
   {
