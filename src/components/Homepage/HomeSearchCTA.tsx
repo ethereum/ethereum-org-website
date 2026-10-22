@@ -35,6 +35,7 @@ const HomeSearchCTA = ({ label, ask, eventCategory }: HomeSearchCTAProps) => {
         isSecondary
         size="lg"
         className="gap-2 ps-6 max-sm:w-full"
+        data-testid="home-search-cta"
         onClick={() =>
           trackCustomEvent({
             eventCategory,

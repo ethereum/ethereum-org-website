@@ -91,11 +91,8 @@ const Search = ({
       {typeof children === "function" ? (
         children(handleOpen)
       ) : asChild ? (
-        <Slot
-          ref={searchButtonRef}
-          onClick={handleOpen}
-          data-testid="search-button"
-        >
+        // No test id here: `search-button` belongs to the nav, and e2e expects one per page.
+        <Slot ref={searchButtonRef} onClick={handleOpen}>
           {children}
         </Slot>
       ) : (
