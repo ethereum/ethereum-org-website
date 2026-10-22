@@ -241,4 +241,4 @@ Example:
 
 ---
 
-[Sign up with Alchemy](https://auth.alchemy.com) for free, check out [Alchemy's documentation](https://www.alchemy.com/docs/), and for the latest news, follow Alchemy on [X](https://x.com/Alchemy).
+[Sign up with Alchemy](https://auth.alchemy.com) for free, check out [Alchemy's documentation](https://www.alchemy.com/docs/), and for the latest news, follow Alchemy on [Twitter](https://x.com/Alchemy).
