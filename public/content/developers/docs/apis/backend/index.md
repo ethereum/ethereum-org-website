@@ -66,7 +66,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
-- [Documentation](https://docs.infura.io/api)
+- [Documentation](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Cost-effective EVM JSON-RPC provider_**
