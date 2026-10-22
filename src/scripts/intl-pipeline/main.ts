@@ -38,7 +38,10 @@ import {
   translateFenceComments,
   translateFile,
 } from "./lib/llm/gemini"
-import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
+import {
+  PARSE_ATTEMPTS,
+  translateBatchWithParseRetry,
+} from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
   translateJsxAttributes,
@@ -435,23 +438,34 @@ async function buildGeminiTranslator(
       `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
     )
 
-    const result = await callGeminiRaw(batch.prompt, {
-      filePath,
-      targetLanguage: locale,
-      label: "incremental",
-      irreducible: batch.irreducible,
-    })
-
     // A batch that cannot be parsed must fail the task. Continuing would leave
     // its sections untranslated, fall them back to English in assembly, commit
     // that, and stamp the manifest -- after which no drift is detected and the
     // English text is permanent in the locale file. Failing here costs this
     // file+locale's calls; every other locale's completed work is already
     // committed to the temp branch and still merges.
-    const translations = parseIncrementalResponse(result.text)
+    //
+    // So the batch is re-sent first: the failures are mis-escaped characters,
+    // which a fresh sample clears. The file budget is not charged for the
+    // re-sends (see createFileBudget) -- the run fuse still meters them.
+    const { translations, tokens } = await translateBatchWithParseRetry(
+      batch.prompt,
+      (prompt) =>
+        callGeminiRaw(prompt, {
+          filePath,
+          targetLanguage: locale,
+          label: "incremental",
+          irreducible: batch.irreducible,
+        }),
+      (attempt, error) =>
+        log(
+          `  batch ${index + 1}/${plan.length} did not parse (attempt ${attempt}/${PARSE_ATTEMPTS}), re-sending: ${error.message.split("\n")[0]}`,
+          "warn"
+        )
+    )
     Object.assign(allTranslations, translations)
-    totalInput += result.tokensUsed.input
-    totalOutput += result.tokensUsed.output
+    totalInput += tokens.input
+    totalOutput += tokens.output
   }
 
   // Fence bodies never went to the model, so their comments are translated

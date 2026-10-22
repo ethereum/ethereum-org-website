@@ -11,11 +11,14 @@ import {
   buildSectionList,
   extractJsonSections,
   extractSections,
+  PARSE_ATTEMPTS,
   parseIncrementalResponse,
   removeMarkdownSection,
   replaceJsonValues,
   replaceSections,
+  translateBatchWithParseRetry,
 } from "@/scripts/intl-pipeline/lib/llm/incremental-translate"
+import { classifyFailure } from "@/scripts/intl-pipeline/lib/quarantine"
 
 test.describe("parseIncrementalResponse", () => {
   test("parses valid JSON response", () => {
@@ -546,5 +549,101 @@ test.describe("replaceJsonValues", () => {
     const json = JSON.stringify({ title: "Hello" }, null, 2)
     const result = replaceJsonValues(json, { title: "Hola" })
     expect(result.endsWith("\n")).toBe(true)
+  })
+})
+
+test.describe("translateBatchWithParseRetry", () => {
+  const ok = JSON.stringify({ "a-section": "Contenido traducido." })
+  const tokens = { input: 10, output: 20 }
+  const reply = (text: string) => Promise.resolve({ text, tokensUsed: tokens })
+
+  // The ur shape: a `"` from an attribute the locale file already carries
+  // closes the string early.
+  const unescapedQuote =
+    '{"a-section": "Un <span dir="ltr">NFT</span> acuñado."}'
+  // The mr shape: a bare `\` from reproduced program output.
+  const badEscape = '{"a-section": "echo \\"Error\\" && exit 1"}'.replace(
+    '\\"Error\\"',
+    "\\xError\\x"
+  )
+
+  test("returns the first parsable response without re-sending", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry("PROMPT", () => {
+      calls++
+      return reply(ok)
+    })
+    expect(calls).toBe(1)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+    expect(r.tokens).toEqual(tokens)
+  })
+
+  test("re-sends an unescaped quote and keeps the retry's result", async () => {
+    const seen: string[] = []
+    let calls = 0
+    const r = await translateBatchWithParseRetry("PROMPT", (prompt) => {
+      seen.push(prompt)
+      return reply(++calls === 1 ? unescapedQuote : ok)
+    })
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+    expect(seen[0]).toBe("PROMPT")
+    expect(seen[1]).toContain("NOT VALID JSON")
+  })
+
+  test("re-sends a bad escape sequence", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry("PROMPT", () =>
+      reply(++calls === 1 ? badEscape : ok)
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+  })
+
+  test("bills every attempt, not just the one that parsed", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry("PROMPT", () =>
+      reply(++calls === 1 ? unescapedQuote : ok)
+    )
+    expect(r.tokens).toEqual({ input: 20, output: 40 })
+  })
+
+  test("gives up after PARSE_ATTEMPTS and throws the parse error", async () => {
+    let calls = 0
+    await expect(
+      translateBatchWithParseRetry("PROMPT", () => {
+        calls++
+        return reply(unescapedQuote)
+      })
+    ).rejects.toThrow(/Failed to parse incremental translation response/)
+    expect(calls).toBe(PARSE_ATTEMPTS)
+  })
+
+  test("the quarantine still classifies the exhausted failure as parse", async () => {
+    const err = await translateBatchWithParseRetry("PROMPT", () =>
+      reply(unescapedQuote)
+    ).catch((e: Error) => e)
+    expect(classifyFailure((err as Error).message)).toBe("parse")
+  })
+
+  test("reports each re-send once, never the final failure", async () => {
+    const attempts: number[] = []
+    await translateBatchWithParseRetry(
+      "PROMPT",
+      () => reply(unescapedQuote),
+      (attempt) => attempts.push(attempt)
+    ).catch(() => {})
+    expect(attempts).toEqual([1, 2])
+  })
+
+  test("the retry note names both escaping rules", async () => {
+    let sent = ""
+    await translateBatchWithParseRetry("PROMPT", (prompt) => {
+      sent = prompt
+      return reply(unescapedQuote)
+    }).catch(() => {})
+    expect(sent).toContain('dir=\\"ltr\\"')
+    expect(sent).toContain("Escape every backslash")
+    expect(sent).toContain("PROMPT")
   })
 })

@@ -186,6 +186,80 @@ export function parseIncrementalResponse(
 }
 
 // ---------------------------------------------------------------------------
+// Batch call with parse retry
+// ---------------------------------------------------------------------------
+
+/** Attempts allowed for one batch whose response will not parse. */
+export const PARSE_ATTEMPTS = 3
+
+/**
+ * Sent back with the prompt after a response fails to parse.
+ *
+ * Both observed failure shapes are escaping, not translation: a bare `"` from
+ * an attribute the locale file already carries (RTL files reach ~100
+ * `<span dir="ltr">` wrappers, each one a chance to slip), and a bare `\` from
+ * source text that contains one. The model is told which it produced, since
+ * the parser's message carries the offset.
+ */
+function reparseInstruction(error: Error): string {
+  return [
+    "",
+    "YOUR PREVIOUS RESPONSE WAS NOT VALID JSON and could not be used.",
+    `The parser reported: ${error.message.split("\n")[0]}`,
+    "Send the same translations again as ONE valid JSON object:",
+    '- Escape every double quote inside a value as \\" -- attribute syntax',
+    '  like <span dir="ltr"> must be written <span dir=\\"ltr\\">.',
+    "- Escape every backslash as \\\\ and every newline as \\n.",
+    "- Output the JSON object only: no markdown fences, no commentary.",
+  ].join("\n")
+}
+
+type BatchCaller = (prompt: string) => Promise<{
+  text: string
+  tokensUsed: { input: number; output: number }
+}>
+
+/**
+ * Send one batch, re-sending it when the response will not parse.
+ *
+ * A malformed response is a sampling artifact, not a property of the pair --
+ * the model mis-escapes one character in a multi-KB JSON body and the whole
+ * file+locale task dies. Re-sending with the parser's complaint attached
+ * clears it; the prompt differs each time, so a temperature-0 model does not
+ * simply reproduce the same bad output.
+ *
+ * Tokens from failed attempts are returned too. They were billed.
+ */
+export async function translateBatchWithParseRetry(
+  prompt: string,
+  call: BatchCaller,
+  onRetry?: (attempt: number, error: Error) => void
+): Promise<{
+  translations: Record<string, string>
+  tokens: { input: number; output: number }
+}> {
+  const tokens = { input: 0, output: 0 }
+  let lastError: Error | undefined
+
+  for (let attempt = 1; attempt <= PARSE_ATTEMPTS; attempt++) {
+    const result = await call(
+      lastError ? prompt + "\n" + reparseInstruction(lastError) : prompt
+    )
+    tokens.input += result.tokensUsed.input
+    tokens.output += result.tokensUsed.output
+
+    try {
+      return { translations: parseIncrementalResponse(result.text), tokens }
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error))
+      if (attempt < PARSE_ATTEMPTS) onRetry?.(attempt, lastError)
+    }
+  }
+
+  throw lastError
+}
+
+// ---------------------------------------------------------------------------
 // Section replacement
 // ---------------------------------------------------------------------------
 
