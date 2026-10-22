@@ -14,9 +14,9 @@ lang: uk
 published: 2021-03-31
 ---
 
-Якщо ви новачок у розробці на блокчейні й не знаєте, з чого почати, або якщо ви просто хочете зрозуміти, як розгортати смарт-контракти та взаємодіяти з ними, цей посібник для вас. Ми розглянемо створення та розгортання простого смарт-контракту в тестовій мережі Sepolia за допомогою віртуального гаманця [МетаМаск](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) та [Alchemy](https://www.alchemy.com/eth) (не хвилюйтеся, якщо ви ще не розумієте, що все це означає, ми все пояснимо).
+Якщо ви новачок у розробці на блокчейні й не знаєте, з чого почати, або якщо ви просто хочете зрозуміти, як розгортати смарт-контракти та взаємодіяти з ними, цей посібник для вас. Ми пройдемо через створення та розгортання простого смарт-контракту в тестовій мережі Sepolia за допомогою віртуального гаманця [МетаМаск](https://metamask.io/), [Solidity](https://docs.soliditylang.org/), [Hardhat](https://hardhat.org/) та [Alchemy](https://www.alchemy.com/eth) (не хвилюйтеся, якщо ви ще не розумієте, що все це означає, ми все пояснимо).
 
-У [частині 2](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) цього посібника ми розглянемо, як можна взаємодіяти з нашим смарт-контрактом після його розгортання, а в [частині 3](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) ми розповімо, як опублікувати його на Etherscan.
+Після розгортання вашого контракту ви можете [створити для нього інтерфейс користувача](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
 Якщо у вас виникнуть запитання на будь-якому етапі, не соромтеся звертатися до [Discord Alchemy](https://discord.gg/gWuC7zB)!
 
@@ -44,13 +44,13 @@ published: 2021-03-31
 
 Ви можете завантажити МетаМаск і безкоштовно створити акаунт Етеріум [тут](https://metamask.io/download). Під час створення акаунта, або якщо він у вас уже є, обов'язково перейдіть до тестової мережі «Sepolia» за допомогою спадного меню мереж (щоб ми не мали справи з реальними грошима).
 
-Якщо ви не бачите Sepolia у списку, перейдіть у меню, потім у розділ «Advanced» (Додатково) і прокрутіть униз, щоб увімкнути «Show test networks» (Показувати тестові мережі). У меню вибору мережі перейдіть на вкладку «Custom» (Користувацькі), щоб знайти список тестових мереж, і виберіть «Sepolia».
+Якщо ви не бачите Sepolia у списку, відкрийте меню у верхньому правому куті, виберіть «Networks» (Мережі) та увімкніть «Show test networks» (Показувати тестові мережі) внизу списку мереж (див. [посібник МетаМаск із перегляду тестових мереж](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)). Потім виберіть «Sepolia» в меню вибору мережі.
 
 ![metamask sepolia example](./metamask-sepolia-example.png)
 
-## Крок 4: Отримання етеру з крана {#step-4}
+## Крок 4: Додавання етеру з крана {#step-4}
 
-Щоб розгорнути наш смарт-контракт у тестовій мережі, нам знадобиться трохи тестового ETH. Щоб отримати Sepolia ETH, ви можете перейти до [деталей мережі Sepolia](/developers/docs/networks/#sepolia), щоб переглянути список різних кранів. Якщо один не працює, спробуйте інший, оскільки іноді вони можуть вичерпуватися. Отримання тестового ETH може зайняти деякий час через завантаженість мережі. Незабаром після цього ви побачите ETH у своєму акаунті МетаМаск!
+Щоб розгорнути наш смарт-контракт у тестовій мережі, нам знадобиться трохи тестового ETH. Щоб отримати Sepolia ETH, ви можете перейти до [деталей мережі Sepolia](/developers/docs/networks/#sepolia), щоб переглянути список різних кранів. Якщо один не працює, спробуйте інший, оскільки іноді вони можуть вичерпуватися. Деякі крани мають правила щодо відповідності вимогам; наприклад, кран Sepolia від Alchemy вимагає, щоб на адресі отримувача було щонайменше 0.001 ETH у головній мережі Ethereum. Отримання тестового ETH може зайняти деякий час через завантаженість мережі. Незабаром ви побачите ETH у своєму акаунті МетаМаск!
 
 ## Крок 5: Перевірка балансу {#step-5}
 
@@ -68,20 +68,20 @@ published: 2021-03-31
 
 Спочатку нам потрібно створити папку для нашого проєкту. Перейдіть до командного рядка та введіть:
 
-```
+```sh
 mkdir hello-world
 cd hello-world
 ```
 
-Тепер, коли ми знаходимося в папці нашого проєкту, ми використаємо `npm init` для ініціалізації проєкту. Якщо у вас ще не встановлено npm, дотримуйтесь [інструкцій зі встановлення Node.js](https://nodejs.org/en/download/) (нам знадобляться Node.js та npm для цього посібника).
+Тепер, коли ми знаходимося в папці нашого проєкту, ми використаємо `npm init` для ініціалізації проєкту. Якщо у вас ще не встановлено npm, дотримуйтесь [інструкцій зі встановлення Node.js](https://nodejs.org/en/download/) (для цього посібника нам знадобляться Node.js та npm).
 
-```
+```sh
 npm init
 ```
 
-Не має великого значення, як ви відповісте на запитання під час встановлення, ось як ми це зробили для прикладу:
+Не має великого значення, як ви відповісте на запитання під час встановлення, ось як ми це зробили для довідки:
 
-```
+```text
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
@@ -106,48 +106,39 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Схваліть package.json, і ми готові до роботи!
-## Крок 7: Завантаження [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
+Схваліть package.json. Hardhat 3, який ми встановимо далі, підтримує лише проєкти з модулями ES, тому позначте проєкт як такий:
 
-Hardhat — це середовище розробки для компіляції, розгортання, тестування та налагодження вашого програмного забезпечення для Етеріум. Воно допомагає розробникам створювати смарт-контракти та децентралізовані застосунки (dapps) локально перед розгортанням у робочому ланцюзі.
-
-У нашому проєкті `hello-world` виконайте:
-
+```sh
+npm pkg set type=module
 ```
+
+І ми готові до роботи!
+
+## Крок 7: Завантаження [Hardhat](https://hardhat.org/docs/getting-started) {#step-7}
+
+Hardhat — це середовище розробки для компіляції, розгортання, тестування та налагодження вашого програмного забезпечення для Етеріум. Воно допомагає розробникам створювати смарт-контракти та децентралізовані застосунки (dapp) локально перед розгортанням у робочому ланцюзі.
+
+Hardhat 3 вимагає Node.js версії 22.13.0 або новішої. У нашому проєкті `hello-world` виконайте:
+
+```sh
 npm install --save-dev hardhat
 ```
 
-Перегляньте цю сторінку для отримання додаткової інформації щодо [інструкцій зі встановлення](https://hardhat.org/getting-started/#overview).
+Перегляньте цю сторінку для отримання додаткової інформації щодо [інструкцій зі встановлення](https://hardhat.org/docs/getting-started).
 
 ## Крок 8: Створення проєкту Hardhat {#step-8}
 
-У папці нашого проєкту виконайте:
+Виконання `npx hardhat --init` згенерувало б повний зразок проєкту, але для цього посібника ми налаштуємо все вручну, щоб ви могли побачити кожну деталь. У кореневому каталозі вашої папки проєкту створіть файл із назвою `hardhat.config.js` із таким вмістом:
 
-```
-npx hardhat
-```
+```js
+import { defineConfig } from "hardhat/config"
 
-Після цього ви побачите вітальне повідомлення та можливість вибрати, що ви хочете зробити. Виберіть «create an empty hardhat.config.js»:
-
-```
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-
-👷 Welcome to Hardhat v2.0.11 👷‍?
-
-What do you want to do? …
-Create a sample project
-❯ Create an empty hardhat.config.js
-Quit
+export default defineConfig({
+  solidity: "0.8.34",
+})
 ```
 
-Це згенерує для нас файл `hardhat.config.js`, у якому ми вкажемо всі налаштування для нашого проєкту (на кроці 13).
+Тут ми вкажемо всі налаштування для нашого проєкту (на кроці 13). Поки що він просто вказує Hardhat, яку версію компілятора Solidity використовувати.
 
 ## Крок 9: Додавання папок проєкту {#step-9}
 
@@ -163,28 +154,29 @@ mkdir scripts
 
 ## Крок 10: Написання нашого контракту {#step-10}
 
-Ви можете запитати себе: коли ж ми нарешті будемо писати код?? Що ж, ось ми і дійшли до цього на кроці 10.
+Ви можете запитати себе, коли ж ми нарешті будемо писати код?? Що ж, ось ми й тут, на кроці 10.
 
-Відкрийте проєкт hello-world у вашому улюбленому редакторі (нам подобається [VSCode](https://code.visualstudio.com/)). Смарт-контракти пишуться мовою Solidity, яку ми й використаємо для написання нашого смарт-контракту HelloWorld.sol.‌
+Відкрийте проєкт hello-world у вашому улюбленому редакторі (нам подобається [VSCode](https://code.visualstudio.com/)). Смарт-контракти пишуться мовою під назвою Solidity, яку ми й використаємо для написання нашого смарт-контракту HelloWorld.sol.‌
 
-1.  Перейдіть до папки «contracts» і створіть новий файл під назвою HelloWorld.sol
-2.  Нижче наведено приклад смарт-контракту Hello World від Фундації Ethereum, який ми будемо використовувати для цього посібника. Скопіюйте та вставте наведений нижче вміст у свій файл HelloWorld.sol і обов'язково прочитайте коментарі, щоб зрозуміти, що робить цей контракт:
+1.  Перейдіть до папки «contracts» і створіть новий файл із назвою HelloWorld.sol
+2.  Нижче наведено зразок смарт-контракту Hello World від Фундації Ethereum, який ми будемо використовувати для цього посібника. Скопіюйте та вставте наведений нижче вміст у ваш файл HelloWorld.sol і обов'язково прочитайте коментарі, щоб зрозуміти, що робить цей контракт:
 
 ```solidity
+// SPDX-License-Identifier: MIT
 // Вказує версію Solidity, використовуючи семантичне версіонування.
-// Дізнатися більше: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.0;
+// Дізнатися більше: https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragma
+pragma solidity ^0.8.24;
 
-// Визначає контракт з іменем `HelloWorld`.
-// Контракт — це набір функцій та даних (його стан). Після розгортання контракт знаходиться за певною адресою в блокчейні Етеріум. Дізнатися більше: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Визначає контракт з назвою `HelloWorld`.
+// Контракт — це набір функцій та даних (його стан). Після розгортання контракт знаходиться за певною адресою в блокчейні Етеріум. Дізнатися більше: https://docs.soliditylang.org/en/latest/structure-of-a-contract.html
 contract HelloWorld {
 
    // Оголошує змінну стану `message` типу `string`.
-   // Змінні стану — це змінні, значення яких постійно зберігаються у сховищі контракту. Ключове слово `public` робить змінні доступними ззовні контракту та створює функцію, яку інші контракти або клієнти можуть викликати для отримання доступу до значення.
+   // Змінні стану — це змінні, значення яких постійно зберігаються у сховищі контракту. Ключове слово `public` робить змінні доступними з-поза меж контракту та створює функцію, яку інші контракти або клієнти можуть викликати для доступу до значення.
    string public message;
 
    // Подібно до багатьох об'єктно-орієнтованих мов на основі класів, конструктор — це спеціальна функція, яка виконується лише під час створення контракту.
-   // Конструктори використовуються для ініціалізації даних контракту. Дізнатися більше:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Конструктори використовуються для ініціалізації даних контракту. Дізнатися більше: https://docs.soliditylang.org/en/latest/contracts.html#constructors
    constructor(string memory initMessage) {
 
       // Приймає рядковий аргумент `initMessage` та встановлює значення у змінну сховища контракту `message`).
@@ -202,19 +194,13 @@ contract HelloWorld {
 
 ## Крок 11: Підключення МетаМаск та Alchemy до вашого проєкту {#step-11}
 
-Ми створили гаманець МетаМаск, акаунт Alchemy та написали наш смарт-контракт, тепер настав час об'єднати їх.
+Ми створили гаманець МетаМаск, акаунт Alchemy та написали наш смарт-контракт, тепер настав час з'єднати їх.
 
 Кожна транзакція, надіслана з вашого віртуального гаманця, потребує підпису за допомогою вашого унікального приватного ключа. Щоб надати нашій програмі цей дозвіл, ми можемо безпечно зберігати наш приватний ключ (і ключ API Alchemy) у файлі середовища.
 
-> Щоб дізнатися більше про надсилання транзакцій, перегляньте [цей посібник](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) з надсилання транзакцій за допомогою Web3.
+> Щоб дізнатися більше про надсилання транзакцій, перегляньте [документацію про транзакції](/developers/docs/transactions/).
 
-Спочатку встановіть пакет dotenv у каталозі вашого проєкту:
-
-```
-npm install dotenv --save
-```
-
-Потім створіть файл `.env` у кореневому каталозі нашого проєкту та додайте до нього свій приватний ключ МетаМаск і URL-адресу HTTP API Alchemy.
+Створіть файл `.env` у кореневому каталозі нашого проєкту та додайте до нього свій приватний ключ МетаМаск і URL-адресу HTTP API Alchemy.
 
 - Дотримуйтесь [цих інструкцій](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/), щоб експортувати свій приватний ключ
 - Дивіться нижче, щоб отримати URL-адресу HTTP API Alchemy
@@ -225,17 +211,17 @@ npm install dotenv --save
 
 Ваш `.env` має виглядати так:
 
-```
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
 
-Щоб фактично підключити їх до нашого коду, ми пошлемося на ці змінні в нашому файлі `hardhat.config.js` на кроці 13.
+Щоб фактично підключити їх до нашого коду, ми пошлемося на ці змінні в нашому файлі `hardhat.config.js` на кроці 13. Node.js може самостійно читати файли `.env`, тому не потрібно встановлювати додаткові пакети.
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-Не робіть коміт файлу <code>.env</code>! Будь ласка, ніколи нікому не передавайте та не розкривайте свій файл <code>.env</code>, оскільки цим ви ставите під загрозу свої секретні дані. Якщо ви використовуєте систему контролю версій, додайте свій <code>.env</code> до файлу <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Не робіть коміт файлу <code>.env</code>! Будь ласка, ніколи не діліться та не розкривайте свій файл <code>.env</code> нікому, оскільки цим ви ставите під загрозу свої секрети. Якщо ви використовуєте контроль версій, додайте свій <code>.env</code> до файлу <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -244,15 +230,15 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Ethers.js — це бібліотека, яка полегшує взаємодію та виконання запитів до Етеріум, обгортаючи [стандартні методи JSON-RPC](/developers/docs/apis/json-rpc/) більш зручними для користувача методами.
 
-Hardhat дозволяє дуже легко інтегрувати [плагіни](https://hardhat.org/plugins/) для додаткових інструментів і розширеної функціональності. Ми скористаємося [плагіном Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) для розгортання контракту ([Ethers.js](https://github.com/ethers-io/ethers.js/) має дуже зручні методи розгортання контрактів).
+Hardhat робить надзвичайно простим інтеграцію [плагінів](https://hardhat.org/docs/plugins/official-plugins) для додаткових інструментів і розширеної функціональності. Ми скористаємося [плагіном Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) для розгортання контракту ([Ethers.js](https://docs.ethers.org/v6/) має дуже зручні методи розгортання контрактів).
 
 У каталозі вашого проєкту введіть:
 
-```
-npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```sh
+npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 ```
 
-Нам також знадобиться ethers у нашому `hardhat.config.js` на наступному кроці.
+Ми також додамо плагін до нашого `hardhat.config.js` на наступному кроці.
 
 ## Крок 13: Оновлення hardhat.config.js {#step-13-update-hardhatconfigjs}
 
@@ -260,105 +246,108 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 Оновіть свій `hardhat.config.js`, щоб він виглядав так:
 
-```
-require('dotenv').config();
+```js
+import { existsSync } from "node:fs"
+import hardhatEthers from "@nomicfoundation/hardhat-ethers"
+import { configVariable, defineConfig } from "hardhat/config"
 
-require("@nomiclabs/hardhat-ethers");
-const { API_URL, PRIVATE_KEY } = process.env;
+// Завантажує API_URL та PRIVATE_KEY з файлу .env у process.env, якщо він існує
+if (existsSync(".env")) process.loadEnvFile()
 
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-module.exports = {
-   solidity: "0.7.3",
-   defaultNetwork: "sepolia",
-   networks: {
-      hardhat: {},
-      sepolia: {
-         url: API_URL,
-         accounts: [`0x${PRIVATE_KEY}`]
-      }
-   },
-}
+export default defineConfig({
+  plugins: [hardhatEthers],
+  solidity: "0.8.34",
+  networks: {
+    sepolia: {
+      type: "http",
+      url: configVariable("API_URL"),
+      accounts: [configVariable("PRIVATE_KEY")],
+    },
+  },
+})
 ```
+
+`configVariable` вказує Hardhat читати кожне значення зі змінної середовища лише тоді, коли це потрібно, тому такі команди, як `compile`, працюють навіть до того, як значення будуть встановлені. Якщо ви не хочете зберігати свій приватний ключ у звичайному текстовому файлі, Hardhat також може читати [змінні конфігурації із зашифрованого сховища ключів](https://hardhat.org/docs/guides/configuration-variables).
 
 ## Крок 14: Компіляція нашого контракту {#step-14-compile-our-contracts}
 
-Щоб переконатися, що все працює належним чином, давайте скомпілюємо наш контракт. Завдання `compile` є одним із вбудованих завдань Hardhat.
+Щоб переконатися, що все працює, давайте скомпілюємо наш контракт. Завдання `compile` є одним із вбудованих завдань Hardhat.
 
 З командного рядка виконайте:
 
-```
+```sh
 npx hardhat compile
 ```
 
-Ви можете отримати попередження про `SPDX license identifier not provided in source file`, але не варто про це турбуватися — сподіваємося, все інше виглядає добре! Якщо ні, ви завжди можете написати в [Discord Alchemy](https://discord.gg/u72VCg3).
+Під час першої компіляції Hardhat завантажує компілятор Solidity. Після цього ви маєте побачити щось на кшталт `Compiled 1 Solidity file with solc 0.8.34`. Якщо ні, ви завжди можете написати в [Discord Alchemy](https://discord.gg/gWuC7zB).
 
 ## Крок 15: Написання нашого скрипта розгортання {#step-15-write-our-deploy-scripts}
 
 Тепер, коли наш контракт написано, а файл конфігурації готовий до роботи, настав час написати скрипт розгортання нашого контракту.
 
-Перейдіть до папки `scripts/` і створіть новий файл під назвою `deploy.js`, додавши до нього такий вміст:
+Перейдіть до папки `scripts/` і створіть новий файл із назвою `deploy.js`, додавши до нього такий вміст:
 
-```
-async function main() {
-   const HelloWorld = await ethers.getContractFactory("HelloWorld");
+```js
+import { network } from "hardhat"
 
-   // Початок розгортання, повертає проміс, який вирішується в об'єкт контракту
-   const hello_world = await HelloWorld.deploy("Hello World!");
-   console.log("Contract deployed to address:", hello_world.address);}
+const { ethers } = await network.create()
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+
+// Починає розгортання, повертаючи проміс, який вирішується в об'єкт контракту
+const hello_world = await HelloWorld.deploy("Hello World!")
+await hello_world.waitForDeployment()
+console.log("Contract deployed to address:", await hello_world.getAddress())
 ```
 
-Hardhat чудово пояснює, що робить кожен із цих рядків коду, у своєму [посібнику з контрактів](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), ми запозичили їхні пояснення тут.
+Давайте розберемо, що робить кожен із цих рядків коду.
 
-```
-const HelloWorld = await ethers.getContractFactory("HelloWorld");
-```
-
-`ContractFactory` в Ethers.js — це абстракція, яка використовується для розгортання нових смарт-контрактів, тому `HelloWorld` тут є фабрикою для екземплярів нашого контракту hello world. Під час використання плагіна `hardhat-ethers` екземпляри `ContractFactory` та `Contract` за замовчуванням підключаються до першого підписанта.
-
-```
-const hello_world = await HelloWorld.deploy();
+```js
+const { ethers } = await network.create()
 ```
 
-Виклик `deploy()` для `ContractFactory` розпочне розгортання та поверне `Promise`, який вирішується в `Contract`. Це об'єкт, який має метод для кожної з функцій нашого смарт-контракту.
+У Hardhat 3 скрипт відкриває з'єднання з мережею явно. `network.create()` підключається до мережі, яку ви вибираєте за допомогою параметра `--network` під час запуску скрипта, а плагін `hardhat-ethers` додає об'єкт `ethers` до цього з'єднання.
+
+```js
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+```
+
+`ContractFactory` в ethers.js — це абстракція, яка використовується для розгортання нових смарт-контрактів, тому `HelloWorld` тут є фабрикою для екземплярів нашого контракту hello world. Під час використання плагіна `hardhat-ethers` екземпляри `ContractFactory` та `Contract` за замовчуванням підключаються до першого підписанта.
+
+```js
+const hello_world = await HelloWorld.deploy("Hello World!")
+```
+
+Виклик `deploy()` на `ContractFactory` розпочне розгортання та поверне `Promise`, який вирішується в `Contract`. Це об'єкт, який має метод для кожної з функцій нашого смарт-контракту. Аргументи, які ви передаєте в `deploy()` надходять до конструктора контракту, тут це початкове повідомлення.
+
+`waitForDeployment()` чекає, поки транзакція розгортання буде включена в блок, а `getAddress()` повертає адресу нового контракту. Перегляньте [документацію контрактів ethers.js](https://docs.ethers.org/v6/api/contract/) для отримання додаткової інформації.
 
 ## Крок 16: Розгортання нашого контракту {#step-16-deploy-our-contract}
 
 Ми нарешті готові розгорнути наш смарт-контракт! Перейдіть до командного рядка та виконайте:
 
-```
+```sh
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-Після цього ви побачите щось на зразок:
+Після цього ви маєте побачити щось на кшталт:
 
-```
+```text
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-Якщо ми перейдемо до [Etherscan мережі Sepolia](https://sepolia.etherscan.io/) і знайдемо адресу нашого контракту, ми зможемо побачити, що його було успішно розгорнуто. Транзакція виглядатиме приблизно так:
+Якщо ми перейдемо до [Etherscan Sepolia](https://sepolia.etherscan.io/) і знайдемо адресу нашого контракту, ми зможемо побачити, що його було успішно розгорнуто. Транзакція виглядатиме приблизно так:
 
 ![etherscan contract](./etherscan-contract.png)
 
-Адреса `From` має збігатися з адресою вашого акаунта МетаМаск, а в адресі «To» (Кому) буде вказано «Contract Creation» (Створення контракту), але якщо ми натиснемо на транзакцію, ми побачимо адресу нашого контракту в полі `To`:
+Адреса `From` (Від) має збігатися з адресою вашого акаунта МетаМаск, а в адресі `To` (Кому) буде вказано «Contract Creation» (Створення контракту), але якщо ми натиснемо на транзакцію, ми побачимо адресу нашого контракту в полі `To`:
 
 ![etherscan transaction](./etherscan-transaction.png)
 
 Вітаємо! Ви щойно розгорнули смарт-контракт у ланцюзі Етеріум 🎉
 
-Щоб зрозуміти, як це працює технічно, давайте перейдемо на вкладку «Explorer» (Провідник) на нашій [панелі керування Alchemy](https://dashboard.alchemy.com/explorer). Якщо у вас є кілька застосунків Alchemy, обов'язково відфільтруйте за застосунком і виберіть «Hello World».
-![hello world explorer](./hello-world-explorer.png)
+Щоб зрозуміти, як це працює технічно, ви можете поглянути на запити, які отримав ваш застосунок «Hello World» на вашій [панелі керування Alchemy](https://dashboard.alchemy.com/).
 
-Тут ви побачите кілька викликів JSON-RPC, які Hardhat/Ethers зробили для нас внутрішньо, коли ми викликали функцію `.deploy()`. Два важливих виклики, на які варто звернути увагу, — це [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), який є запитом на фактичний запис нашого контракту в ланцюг Sepolia, і [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), який є запитом на читання інформації про нашу транзакцію за заданим хешем (типовий патерн під час транзакцій). Щоб дізнатися більше про надсилання транзакцій, перегляньте цей посібник із [надсилання транзакцій за допомогою Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Там ви побачите кілька викликів JSON-RPC, які Hardhat/Ethers зробили для нас внутрішньо, коли ми викликали функцію `.deploy()`. Два важливі виклики, на які варто звернути увагу, — це [`eth_sendRawTransaction`](/developers/docs/apis/json-rpc/#eth-sendrawtransaction), який є запитом на фактичний запис нашого контракту в ланцюг Sepolia, і [`eth_getTransactionByHash`](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash), який є запитом на читання інформації про нашу транзакцію за заданим хешем (типовий патерн під час надсилання транзакцій). Щоб дізнатися більше про надсилання транзакцій, перегляньте [документацію про транзакції](/developers/docs/transactions/).
 
-Це все для частини 1 цього посібника, у частині 2 ми фактично [взаємодіятимемо з нашим смарт-контрактом](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract), оновивши наше початкове повідомлення, а в частині 3 ми [опублікуємо наш смарт-контракт на Etherscan](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan), щоб усі знали, як із ним взаємодіяти.
-
-**Хочете дізнатися більше про Alchemy? Відвідайте наш [вебсайт](https://www.alchemy.com/eth). Не хочете пропускати оновлення? Підпишіться на нашу розсилку [тут](https://www.alchemy.com/newsletter)! Також обов'язково приєднуйтесь до нашого [Discord](https://discord.gg/u72VCg3).**.
+На цьому цей посібник завершено. Далі ви можете [створити інтерфейс користувача для вашого контракту](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).

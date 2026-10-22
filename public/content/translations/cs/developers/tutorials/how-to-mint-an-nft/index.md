@@ -1,6 +1,6 @@
 ---
 title: "Jak razit NFT (Část 2/3 ze série tutoriálů o NFT)"
-description: "Tento tutoriál popisuje, jak razit NFT na blockchainu Etherea pomocí našeho chytrého kontraktu a Web3."
+description: "Tento tutoriál popisuje, jak razit nezaměnitelný token (NFT) na blockchainu Etherea pomocí našeho chytrého kontraktu, nástroje Hardhat a knihovny ethers.js."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "chytré kontrakty"]
 skill: beginner
@@ -9,79 +9,55 @@ lang: cs
 published: 2021-04-22
 ---
 
-[Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 milionů dolarů
-[3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milionů dolarů
-[Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milionů dolarů
+„Ražení nezaměnitelného tokenu (NFT)“ je akt publikování jedinečné instance vašeho tokenu ERC-721 na blockchainu. Pomocí našeho chytrého kontraktu z [1. části této série tutoriálů o NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/) procvičíme naše dovednosti v oblasti Web3 a vyrazíme NFT. Na konci tohoto tutoriálu budete schopni razit tolik NFT, kolik si jen vaše srdce (a peněženka) bude přát!
 
-Všichni z nich razili svá NFT pomocí výkonného API od Alchemy. V tomto tutoriálu vás naučíme, jak udělat to samé za méně než 10 minut.
-
-„Ražení NFT“ je proces publikování unikátní instance vašeho tokenu ERC-721 na blockchainu. Pomocí našeho chytrého kontraktu z [1. části této série tutoriálů o NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/) si procvičíme naše dovednosti s Web3 a vyrazíme NFT. Na konci tohoto tutoriálu budete schopni razit tolik NFT, kolik si jen vaše srdce (a peněženka) bude přát!
-
-Pojďme na to!
+Začněme!
 
 ## Krok 1: Instalace Web3 {#install-web3}
 
-Pokud jste postupovali podle prvního tutoriálu o vytváření chytrého kontraktu pro NFT, už máte zkušenosti s používáním Ethers.js. Web3 je podobné jako Ethers, protože jde o knihovnu, která usnadňuje vytváření požadavků na blockchain [Etherea](/). V tomto tutoriálu budeme používat [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), což je vylepšená knihovna Web3, která nabízí automatické opakování a robustní podporu WebSocketů.
-
-V domovském adresáři vašeho projektu spusťte:
-
-```
-npm install @alch/alchemy-web3
-```
+Pokud jste postupovali podle prvního tutoriálu o vytváření vašeho chytrého kontraktu pro nezaměnitelný token (NFT), už máte vše, co potřebujete: projekt Hardhat 3 s [pluginem Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) a [ethers.js](https://docs.ethers.org/v6/), což je knihovna, která usnadňuje vytváření požadavků na blockchain [Etherea](/). Náš kód pro ražení napíšeme jako skript pro Hardhat, takže znovu použije nastavení sítě Sepolia a hodnoty `API_URL` a `PRIVATE_KEY` z 1. části — není třeba instalovat nic nového.
 
 ## Krok 2: Vytvoření souboru `mint-nft.js` {#create-mintnftjs}
 
-Ve vašem adresáři scripts vytvořte soubor `mint-nft.js` a přidejte následující řádky kódu:
+Ve svém adresáři scripts vytvořte soubor `mint-nft.js` a přidejte následující řádky kódu:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+import { network } from "hardhat"
+
+const { ethers } = await network.create()
 ```
+
+Stejně jako v našem skriptu pro nasazení se `network.create()` připojí k síti, kterou zvolíte pomocí `--network` při spuštění skriptu, a poskytne nám pro ni objekt `ethers`.
 
 ## Krok 3: Získání ABI vašeho kontraktu {#contract-abi}
 
-ABI (Application Binary Interface) našeho kontraktu je rozhraní pro interakci s naším chytrým kontraktem. Více se o [ABI kontraktů](/glossary/#abi) můžete dozvědět v glosáři. Hardhat pro nás automaticky generuje ABI a ukládá jej do souboru `MyNFT.json`. Abychom jej mohli použít, budeme muset načíst jeho obsah přidáním následujících řádků kódu do našeho souboru `mint-nft.js`:
+Naše aplikační binární rozhraní (ABI) kontraktu je rozhraní pro interakci s naším chytrým kontraktem. Více se o [ABI kontraktů](/glossary/#abi) můžete dozvědět v glosáři. Hardhat pro nás automaticky vygeneruje ABI při kompilaci kontraktu a uloží jej do souboru `artifacts/contracts/MyNFT.sol/MyNFT.json`. Plugin Hardhat Ethers jej odtud pro nás přečte, když v kroku 5 vytvoříme instanci našeho kontraktu, takže jej nemusíme načítat sami.
 
-```js
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
+Pokud chcete ABI vidět, můžete si jej vypsat do konzole. Z kořenového adresáře vašeho projektu spusťte:
+
+```sh
+node -p "JSON.stringify(require('./artifacts/contracts/MyNFT.sol/MyNFT.json').abi)"
 ```
 
-Pokud chcete vidět ABI, můžete si ho vypsat do konzole:
-
-```js
-console.log(JSON.stringify(contract.abi))
-```
-
-Chcete-li spustit `mint-nft.js` a vidět své ABI vypsané v konzoli, přejděte do terminálu a spusťte:
-
-```js
-node scripts/mint-nft.js
-```
 ## Krok 4: Konfigurace metadat pro vaše NFT pomocí IPFS {#config-meta}
 
-Pokud si pamatujete z našeho tutoriálu v 1. části, funkce našeho chytrého kontraktu `mintNFT` přijímá parametr tokenURI, který by měl odkazovat na JSON dokument popisující metadata NFT – což je to, co NFT skutečně oživuje a umožňuje mu mít konfigurovatelné vlastnosti, jako je název, popis, obrázek a další atributy.
+Pokud si pamatujete z našeho tutoriálu v 1. části, funkce našeho chytrého kontraktu `mintNFT` přijímá parametr tokenURI, který by měl odkazovat na dokument JSON popisující metadata nezaměnitelného tokenu (NFT) — což je to, co NFT skutečně oživuje a umožňuje mu mít konfigurovatelné vlastnosti, jako je název, popis, obrázek a další atributy.
 
 > _Interplanetary File System (IPFS) je decentralizovaný protokol a peer-to-peer síť pro ukládání a sdílení dat v distribuovaném souborovém systému._
 
-K uložení našeho NFT aktiva a metadat použijeme Pinata, pohodlné IPFS API a sadu nástrojů, abychom zajistili, že naše NFT bude skutečně decentralizované. Pokud nemáte účet na Pinata, zaregistrujte si bezplatný účet [zde](https://app.pinata.cloud) a dokončete kroky k ověření vašeho e-mailu.
+K uložení našeho aktiva NFT a metadat použijeme Pinata, pohodlné rozhraní pro programování aplikací (API) a sadu nástrojů pro IPFS, abychom zajistili, že naše NFT bude skutečně decentralizované. Pokud nemáte účet na Pinata, zaregistrujte si bezplatný účet [zde](https://app.pinata.cloud) a dokončete kroky k ověření vašeho e-mailu.
 
 Jakmile si vytvoříte účet:
 
-- Přejděte na stránku „Files“ a klikněte na modré tlačítko „Upload“ v levém horním rohu stránky.
+- Přejděte na [stránku Files](https://app.pinata.cloud/ipfs/files) a klikněte na tlačítko „Add“ v pravém horním rohu stránky.
 
-- Nahrajte obrázek na Pinata – to bude obrazové aktivum pro vaše NFT. Aktivum si můžete pojmenovat, jak chcete.
+- Nahrajte obrázek na Pinata — to bude obrazové aktivum pro vaše NFT. Aktivum si můžete pojmenovat, jak chcete. Ujistěte se, že jej nahráváte na veřejné IPFS: soubory na [Private IPFS](https://docs.pinata.cloud/files/private-ipfs) nemohou být načteny peněženkami a tržišti, která vaše NFT zobrazují.
 
-- Po nahrání uvidíte informace o souboru v tabulce na stránce „Files“. Uvidíte také sloupec CID. CID můžete zkopírovat kliknutím na tlačítko kopírování vedle něj. Své nahrané soubory si můžete prohlédnout na adrese: `https://gateway.pinata.cloud/ipfs/<CID>`. Obrázek, který jsme použili na IPFS, najdete například [zde](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5).
-
-Pro ty, kteří se učí spíše vizuálně, jsou výše uvedené kroky shrnuty zde:
-
-![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
+- Po nahrání uvidíte soubor v seznamu na stránce Files spolu s jeho CID (identifikátor obsahu). Zkopírujte si CID. Své nahrané soubory si můžete prohlédnout na adrese: `https://gateway.pinata.cloud/ipfs/<CID>`, nebo prostřednictvím vyhrazené brány uvedené v postranním panelu Pinata pod „Gateways“. Obrázek, který jsme použili na IPFS, najdete například [zde](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5).
 
 Nyní budeme chtít na Pinata nahrát ještě jeden dokument. Ale než to uděláme, musíme ho vytvořit!
 
-V kořenovém adresáři vytvořte nový soubor s názvem `nft-metadata.json` a přidejte následující kód ve formátu JSON:
+Ve svém kořenovém adresáři vytvořte nový soubor s názvem `nft-metadata.json` a přidejte následující kód ve formátu JSON:
 
 ```json
 {
@@ -101,226 +77,151 @@ V kořenovém adresáři vytvořte nový soubor s názvem `nft-metadata.json` a 
 }
 ```
 
-Data v JSON souboru můžete libovolně měnit. Můžete odebírat nebo přidávat položky do sekce atributů. Nejdůležitější je ujistit se, že pole image ukazuje na umístění vašeho obrázku na IPFS – jinak bude vaše NFT obsahovat fotku (velmi roztomilého!) psa.
+Data v JSON můžete libovolně měnit. Můžete odebírat nebo přidávat položky do sekce atributů. Nejdůležitější je ujistit se, že pole image ukazuje na umístění vašeho obrázku na IPFS ve formátu `ipfs://<image-CID>` — jinak bude vaše NFT obsahovat fotku (velmi roztomilého!) psa.
 
-Jakmile dokončíte úpravy JSON souboru, uložte jej a nahrajte na Pinata podle stejných kroků, které jsme provedli při nahrávání obrázku.
-
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
+Jakmile dokončíte úpravy souboru JSON, uložte jej a nahrajte na Pinata podle stejných kroků, jaké jsme udělali při nahrávání obrázku. Zkopírujte si také CID souboru `nft-metadata.json`; budeme ho potřebovat v kroku 9.
 
 ## Krok 5: Vytvoření instance vašeho kontraktu {#instance-contract}
 
-Nyní, abychom mohli interagovat s naším kontraktem, musíme v našem kódu vytvořit jeho instanci. K tomu budeme potřebovat adresu našeho kontraktu, kterou můžeme získat z nasazení nebo z [Blockscout](https://eth-sepolia.blockscout.com/) vyhledáním adresy, kterou jste použili k nasazení kontraktu.
+Nyní, abychom mohli s naším kontraktem interagovat, musíme v našem kódu vytvořit jeho instanci. K tomu budeme potřebovat adresu našeho kontraktu, kterou náš skript pro nasazení vypsal v 1. části. Můžete ji také najít na [Etherscan](https://sepolia.etherscan.io/) nebo [Blockscout](https://eth-sepolia.blockscout.com/) vyhledáním adresy, kterou jste použili k nasazení kontraktu.
 
-![View your contract address on Etherscan](./view-contract-etherscan.png)
+![Zobrazení adresy vašeho kontraktu na Etherscan](./view-contract-etherscan.png)
 
 Ve výše uvedeném příkladu je adresa našeho kontraktu 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Dále použijeme [metodu contract](https://docs.web3js.org/api/web3-eth-contract/class/Contract) z Web3 k vytvoření našeho kontraktu pomocí ABI a adresy. Do souboru `mint-nft.js` přidejte následující:
+Dále použijeme metodu `getContractAt` z pluginu Hardhat Ethers k vytvoření našeho kontraktu pomocí jeho názvu (což mu řekne, které aplikační binární rozhraní (ABI) má použít) a jeho adresy. Do souboru `mint-nft.js` přidejte následující kód a nahraďte adresu svou vlastní:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 ```
 
 ## Krok 6: Aktualizace souboru `.env` {#update-env}
 
-Nyní, abychom mohli vytvářet a odesílat transakce do řetězce Etherea, použijeme adresu vašeho veřejného účtu na Ethereu k získání nonce účtu (vysvětlíme níže).
+Každá transakce, kterou odešleme, musí být podepsána soukromým klíčem vašeho účtu. Pokud jste dokončili 1. část tutoriálu, náš soubor `.env` by už měl vypadat takto:
 
-Přidejte svůj veřejný klíč do souboru `.env` – pokud jste dokončili 1. část tutoriálu, náš soubor `.env` by měl nyní vypadat takto:
-
-```js
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-private-account-address"
-PUBLIC_KEY = "your-public-account-address"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
+
+Není třeba přidávat vaši veřejnou adresu: ethers ji zjistí ze soukromého klíče.
 
 ## Krok 7: Vytvoření vaší transakce {#create-txn}
 
-Nejprve si definujme funkci s názvem `mintNFT(tokenData)` a vytvořme naši transakci následujícím způsobem:
+Nejprve definujme funkci s názvem `mintNFT(tokenURI)` a vytvořme naši transakci provedením následujícího:
 
-1. Získejte své _PRIVATE_KEY_ a _PUBLIC_KEY_ ze souboru `.env`.
+1. Získejte účet, ze kterého transakci odesíláme. `ethers.getSigners()` vrací účty nakonfigurované pro síť, což je na síti Sepolia účet, jehož soukromý klíč je v `.env`. Vzhledem k tomu, že `mintNFT` je `onlyOwner`, musí to být stejný účet, který kontrakt nasadil.
 
-1. Dále budeme muset zjistit nonce účtu. Specifikace nonce se používá ke sledování počtu transakcí odeslaných z vaší adresy — což potřebujeme z bezpečnostních důvodů a pro prevenci replay útoků. K získání počtu transakcí odeslaných z vaší adresy použijeme [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
+1. Zavolejte funkci `mintNFT` na instanci našeho kontraktu s naší vlastní adresou jako příjemcem a URI metadat. Toto je výpočet, který chceme v této transakci provést — což je v tomto případě ražení nezaměnitelného tokenu (NFT).
 
-1. Nakonec nastavíme naši transakci s následujícími informacemi:
-
-- `'from': PUBLIC_KEY` — Původcem naší transakce je naše veřejná adresa
-
-- `'to': contractAddress` — Kontrakt, se kterým chceme interagovat a odeslat mu transakci
-
-- `'nonce': nonce` — Nonce účtu s počtem transakcí odeslaných z naší adresy
-
-- `'gas': estimatedGas` — Odhadovaný gas potřebný k dokončení transakce
-
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Výpočet, který chceme v této transakci provést — což je v tomto případě ražení NFT
+Nemusíte sami zjišťovat nonce (počet transakcí odeslaných z vaší adresy, což zabraňuje útokům typu replay), limit plynu ani poplatky: ethers je před odesláním transakce načte nebo odhadne.
 
 Váš soubor `mint-nft.js` by nyní měl vypadat takto:
 
 ```js
-   require('dotenv').config();
-   const API_URL = process.env.API_URL;
-   const PUBLIC_KEY = process.env.PUBLIC_KEY;
-   const PRIVATE_KEY = process.env.PRIVATE_KEY;
+import { network } from "hardhat"
 
-   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-   const web3 = createAlchemyWeb3(API_URL);
+const { ethers } = await network.create()
 
-   const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
-   const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
-
-   async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //získat nejnovější nonce
-
-   //transakce
-     const tx = {
-       'from': PUBLIC_KEY,
-       'to': contractAddress,
-       'nonce': nonce,
-       'gas': 500000,
-       'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
-     };
-   }​
-```
-## Krok 8: Podepsání transakce {#sign-txn}
-
-Nyní, když jsme vytvořili naši transakci, musíme ji podepsat, abychom ji mohli odeslat. Zde použijeme náš soukromý klíč.
-
-`web3.eth.sendSignedTransaction` nám poskytne hash transakce, který můžeme použít k ověření, že naše transakce byla vytěžena a nebyla sítí zahozena. Všimnete si, že v sekci podepisování transakce jsme přidali kontrolu chyb, abychom věděli, zda naše transakce úspěšně prošla.
-
-```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
-
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
-
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //získat nejnovější nonce
+  const [signer] = await ethers.getSigners()
 
-  //transakce
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+  const tx = await nftContract.mintNFT(signer.address, tokenURI)
+}
+```
+
+## Krok 8: Podepsání transakce {#sign-txn}
+
+Protože je síť nakonfigurována s naším soukromým klíčem, ethers jím transakci před odesláním automaticky podepíše.
+
+Volání `mintNFT` se vrátí, jakmile je transakce odeslána, a poskytne nám hash transakce, který můžeme použít k ověření, že naše transakce byla vytěžena a nebyla sítí zahozena. `tx.wait()` pak čeká, dokud není transakce zahrnuta do bloku. Přidali jsme také určitou kontrolu chyb, abychom věděli, zda naše transakce úspěšně prošla.
+
+```js
+import { network } from "hardhat"
+
+const { ethers } = await network.create()
+
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
+
+async function mintNFT(tokenURI) {
+  const [signer] = await ethers.getSigners()
+
+  try {
+    // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // Počkat, až bude transakce zahrnuta do bloku
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log(" Promise failed:", err)
-    })
 }
 ```
 
 ## Krok 9: Zavolání `mintNFT` a spuštění node `mint-nft.js` {#call-mintnft-fn}
 
-Pamatujete si na `metadata.json`, který jste nahráli na Pinata? Získejte jeho hash kód z Pinata a předejte následující jako parametr funkci `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+Pamatujete si na soubor `nft-metadata.json`, který jste nahráli na Pinata? Získejte jeho CID z Pinata a předejte `ipfs://<metadata-CID>` jako parametr funkci `mintNFT`. Peněženky a tržiště překládají URI `ipfs://` prostřednictvím brány IPFS podle vlastního výběru, takže váš nezaměnitelný token (NFT) nezávisí na žádné jediné bráně.
 
-Zde je návod, jak získat hash kód:
+> Dvakrát zkontrolujte, že zkopírované CID odkazuje na váš **nft-metadata.json**, načtením `https://gateway.pinata.cloud/ipfs/<metadata-CID>` do samostatného okna. Stránka by měla vypadat podobně jako na snímku obrazovky níže:
 
-![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_Jak získat hash kód metadat vašeho NFT na Pinata_
-
-> Dvakrát zkontrolujte, že zkopírovaný hash kód odkazuje na váš **metadata.json** načtením `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` do samostatného okna. Stránka by měla vypadat podobně jako na snímku obrazovky níže:
-
-![Your page should display the json metadata](./metadataJSON.png)_Vaše stránka by měla zobrazovat metadata ve formátu JSON_
+![Vaše stránka by měla zobrazovat metadata ve formátu json](./metadataJSON.png)_Vaše stránka by měla zobrazovat metadata ve formátu json_
 
 Celkově by váš kód měl vypadat nějak takto:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+import { network } from "hardhat"
 
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+const { ethers } = await network.create()
 
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //získat nejnovější nonce
+  const [signer] = await ethers.getSigners()
 
-  //transakce
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  try {
+    // Odeslat transakci. ethers za nás vyplní nonce, limit plynu a poplatky.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // Počkat, až bude transakce zahrnuta do bloku
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log("Promise failed:", err)
-    })
 }
 
-mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
+await mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
-Nyní spusťte `node scripts/mint-nft.js` pro nasazení vašeho NFT. Po několika sekundách byste měli ve svém terminálu vidět podobnou odpověď:
+Nyní spusťte skript proti síti Sepolia, abyste vyrazili své NFT:
 
-    The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+```sh
+npx hardhat run scripts/mint-nft.js --network sepolia
+```
 
-    Check Alchemy's Mempool to view the status of your transaction!
+Po několika sekundách byste měli ve svém terminálu vidět odpověď podobnou této:
 
-Dále navštivte svůj [mempool na Alchemy](https://dashboard.alchemy.com/mempool), abyste viděli stav vaší transakce (zda čeká na vyřízení, byla vytěžena, nebo byla sítí zahozena). Pokud byla vaše transakce zahozena, je také užitečné zkontrolovat [Blockscout](https://eth-sepolia.blockscout.com/) a vyhledat hash vaší transakce.
+```text
+The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+Your NFT was minted in block <block number>
+```
 
-![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Zobrazení hashe vaší transakce NFT na Etherscan_
+Chcete-li zobrazit podrobnosti o vaší transakci, vyhledejte její hash na [Etherscan](https://sepolia.etherscan.io/) nebo [Blockscout](https://eth-sepolia.blockscout.com/).
+
+![Zobrazení hashe vaší transakce NFT na Etherscan](./view-nft-etherscan.png)_Zobrazení hashe vaší transakce NFT na Etherscan_
 
 A to je vše! Nyní jste nasadili A vyrazili NFT na blockchainu Etherea <Emoji text=":money_mouth_face:" size={1} />
 
-Pomocí `mint-nft.js` můžete razit tolik NFT, kolik si jen vaše srdce (a peněženka) bude přát! Jen se ujistěte, že předáváte nové tokenURI popisující metadata NFT (jinak prostě vytvoříte spoustu identických s různými ID).
+Pomocí `mint-nft.js` můžete razit tolik NFT, kolik si jen vaše srdce (a peněženka) bude přát! Jen se ujistěte, že předáváte nové tokenURI popisující metadata NFT (jinak nakonec vytvoříte spoustu identických s různými ID).
 
-Pravděpodobně byste se chtěli svým NFT pochlubit ve své peněžence – takže se určitě podívejte na [Část 3: Jak si zobrazit NFT ve vaší peněžence](/developers/tutorials/how-to-view-nft-in-metamask/)!
+Pravděpodobně byste se chtěli svým NFT pochlubit ve své peněžence — takže se určitě podívejte na [3. část: Jak zobrazit své NFT ve vaší peněžence](/developers/tutorials/how-to-view-nft-in-metamask/)!
