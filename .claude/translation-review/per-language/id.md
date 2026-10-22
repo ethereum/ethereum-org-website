@@ -117,3 +117,22 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - l2/L2 casing split; `Perbendaharaan` for treasuries; Auditabilitas/Kemampuan audit split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:440-456 `oracle` -> `orakel` restored (16 sites; `masalah oracle`/`oracle blockchain` kept)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` (translate, high) is `rantai blok` (`dari banyak blockchain di` -> `dari banyak rantai blok di`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (`untuk banyak blockchain,` -> `untuk banyak rantai blok,`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (`di seluruh blockchain` -> `di seluruh rantai blok`)
+- common.json:149: ETHGlossary `fork` (translate, high) is `percabangan`. English: "History of forks". (`"Riwayat fork"` -> `"Riwayat percabangan"`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Fluent, structurally clean Indonesian. The main problem is that the security page went back from `orakel` to `oracle`, against the high-confidence glossary entry, plus a few meaning shifts in the new founders and prediction-markets copy.

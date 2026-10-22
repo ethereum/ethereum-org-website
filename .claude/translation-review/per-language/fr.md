@@ -112,3 +112,23 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 ## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
 
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:448 non-word (`grâce aux arbitreurs qui` -> `grâce aux arbitragistes qui`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation (EOA, high confidence): `compte détenu en externe`. The dev version was compliant at 4 sites and this run regressed it. The script_rule is not set, so this goes to a human. (`mais un [compte externe]` -> `mais un [compte détenu en externe]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA glossary deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA glossary deviation. (`qu'aux comptes externes.` -> `qu'aux comptes détenus en externe.`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA glossary deviation. (`provient d'un compte externe,` -> `provient d'un compte détenu en externe,`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA glossary deviation. The English here is "that owner is externally owned". (`ce propriétaire est un compte externe` -> `ce propriétaire est un compte détenu en externe`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The French text reads fluently and is structurally clean. Most problems come from a full retranslation that undid correct dev wording (the EOA glossary form, `arbitragistes`, `d'entiers`) and from bare acronyms expanded into the glossary's long form. The only items that can be fixed automatically are the three English tag values in `page-founders.json` and the `arbitreurs` restore.

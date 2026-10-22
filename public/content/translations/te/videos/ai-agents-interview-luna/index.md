@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "వెన్ షిఫ్ట్ హ్యాపెన్స్"
 breadcrumb: "కృత్రిమ మేధ ఏజెంట్లు: లూనా"

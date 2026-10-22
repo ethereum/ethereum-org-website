@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "fr",
-  "translatedAt": "2026-06-19T19:19:46.209Z",
-  "englishManifestHash": "28d8e4a08705",
+  "translatedAt": "2026-10-21T21:52:16.712Z",
+  "englishManifestHash": "26d9305a621c",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-db1122",
@@ -29,7 +29,7 @@
     "CODE-bcc52f",
     "CODEBLOCK-78f58a",
     "LINK-149ae7",
-    "LINK-8865f7",
+    "LINK-82570c",
     "LINK-531f38",
     "LINK-851715",
     "LINK-36965a",
@@ -114,7 +114,7 @@
     "CODE-86768c",
     "CODE-9556b8",
     "CODEBLOCK-5ac2af",
-    "LINK-a9b643",
+    "LINK-a34ce9",
     "LINK-431b7a",
     "LINK-2e633d",
     "LINK-2f501c",
@@ -432,10 +432,10 @@
         "url": "/developers/docs/evm/"
       }
     },
-    "LINK-8865f7": {
+    "LINK-82570c": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/smart-contracts/testing/#unit-testing"
+        "url": "/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts"
       }
     },
     "LINK-531f38": {
@@ -624,10 +624,10 @@
         "url": "https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment"
       }
     },
-    "LINK-a9b643": {
+    "LINK-a34ce9": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/2.x/api/math"
+        "url": "https://docs.openzeppelin.com/contracts/3.x/api/math"
       }
     },
     "LINK-431b7a": {
@@ -957,7 +957,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T19:19:46.209Z",
+      "translatedAt": "2026-10-21T21:52:16.712Z",
       "status": "success"
     }
   }

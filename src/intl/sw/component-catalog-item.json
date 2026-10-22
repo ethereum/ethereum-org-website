@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "Kuhusu {name}",
+  "catalog-item-gallery-modal-title": "Picha za Skrini za {name}",
+  "catalog-item-gallery-screenshot-alt": "Picha ya skrini {index} ya {name}",
+  "catalog-item-gallery-title": "Matunzio",
+  "catalog-item-info-title": "Maelezo",
+  "catalog-item-link-label": "{name} kwenye {platform}",
+  "catalog-item-see-next": "Tazama inayofuata",
+  "catalog-item-source-code": "Msimbo wa chanzo",
+  "catalog-item-view-on-github": "Tazama kwenye GitHub",
+  "catalog-item-visit-website": "Tembelea tovuti"
+}

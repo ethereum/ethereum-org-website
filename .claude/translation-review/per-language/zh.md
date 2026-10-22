@@ -141,3 +141,26 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
 - Warning: Hook/钩子 drift; 求值 -> 计算 drift.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- common.json:15 (l2) added (#86) (`"添加二层网络 (l2)"` -> `"添加二层网络"`)
+- common.json:43 (l2) added (#86) (`"什么是二层网络 (l2)？"` -> `"什么是二层网络？"`)
+- common.json:36 acronym expanded (#80) (`"以太坊改进提案 (EIP)"` -> `"EIP"`)
+- common.json:76 acronym expanded (#80) (`"去中心化自治组织 (DAO)"` -> `"DAO"`)
+- common.json:85 acronym expanded (#80) (`"去中心化金融 (DeFi)"` -> `"DeFi"`)
+- common.json:165 acronym expanded (#80) (`"非同质化代币 (NFT)"` -> `"NFT"`)
+- app-plasma:45 CJK underscore emphasis (#89) (`接收转账的_目标地址_` -> `接收转账的*目标地址*`)
+- app-plasma:46 CJK underscore emphasis (#89) (`转账_金额_` -> `转账*金额*`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 12 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is high quality and matches the glossary. Every critical comes from the pipeline: renamed keys that shipped in English, acronym expansion in breadcrumb slots, and CJK underscore emphasis. All of them can be fixed by restoring the dev or ETHGlossary ui-context forms.

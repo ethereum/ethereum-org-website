@@ -121,3 +121,33 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - client `client`/`máy khách` split; rollup `bản cuộn`/`Rollup` mix; glossary mid-sentence capitals leak.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:208 English pronoun leaked (`giám sát them ngoài chuỗi` -> `giám sát chúng ngoài chuỗi`)
+- common.json:10 acronym expanded in breadcrumb (#80) (`"Thêm dự án khoa học phi tập trung (DeSci)"` -> `"Thêm dự án DeSci"`)
+- common.json:76 acronym expanded in breadcrumb (#80) (`"Tổ chức tự trị phi tập trung (DAO)"` -> `"DAO"`)
+- common.json:85 acronym expanded in breadcrumb (#80) (`"Tài chính phi tập trung (DeFi)"` -> `"DeFi"`)
+- common.json:89 acronym expanded in breadcrumb (#80) (`"Khoa học phi tập trung (DeSci)"` -> `"DeSci"`)
+- common.json:142 acronym expanded in breadcrumb (#80) (`"Công nghệ trình xác thực phân tán (DVT)"` -> `"DVT"`)
+- common.json:171 acronym expanded in breadcrumb (#80) (`"Tài chính tái tạo (ReFi)"` -> `"ReFi"`)
+- common.json:40 acronym expanded in breadcrumb (#80) (`"Tài sản thế giới thực (RWA)"` -> `"RWA"`)
+
+**Open (native call needed):**
+
+- common.json:151: ETHGlossary deviation. `ethereum-foundation` is scriptRule `translate` and the vi form is `Tổ chức Ethereum`. The vi corpus uses that form 35 times and this new key uses Latin. Flag for human review (`"Ethereum Foundation"` -> `"Tổ chức Ethereum"`)
+- developers/docs/smart-contracts/security/index.md:440: ETHGlossary deviation. `oracle` is scriptRule `translate` → `nguồn cấp dữ liệu`. This is a regression: the pre-PR heading matched the glossary. Flag for human review (`#### Thao túng oracle {#oracle-manipulation}` -> `#### Thao túng nguồn cấp dữ liệu {#oracle-manipulation}`)
+- developers/docs/smart-contracts/security/index.md:452: Same `oracle` deviation, also a regression. Flag for human review (`##### Cách ngăn chặn thao túng oracle` -> `##### Cách ngăn chặn thao túng nguồn cấp dữ liệu`)
+- developers/docs/smart-contracts/security/index.md:454: Same `oracle` deviation, also a regression. Flag for human review (`[tránh thao túng oracle]` -> `[tránh thao túng nguồn cấp dữ liệu]`)
+- page-wallet-descriptions.json:33: ETHGlossary deviation. `blockchain` is scriptRule `translate` → `chuỗi khối`. Flag for human review (`từ nhiều blockchain` -> `từ nhiều chuỗi khối`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation. Flag for human review (`dành cho nhiều blockchain` -> `dành cho nhiều chuỗi khối`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation. Flag for human review (`trên các blockchain` -> `trên các chuỗi khối`)
+- common.json:149: ETHGlossary deviation. `fork` is scriptRule `translate` → `phân nhánh`, and vi prose elsewhere already uses `các đợt phân nhánh`. Flag for human review (`"Lịch sử các đợt fork"` -> `"Lịch sử các đợt phân nhánh"`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The new prose (prediction markets, wallet descriptions, founders, SolidRPC/eth.zig entries) is fluent and accurate. The retranslation pass undid several glossary-correct forms (oracle, the availability-bond wording) and spread the known mid-sentence capitalization leak. The criticals are concentrated in common.json breadcrumb acronym expansion and three untranslated founders tags.

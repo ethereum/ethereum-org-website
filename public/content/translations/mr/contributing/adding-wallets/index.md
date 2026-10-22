@@ -1,6 +1,6 @@
 ---
-title: वॉलेट्स जोडणे
-description: ethereum.org वर वॉलेट जोडताना आम्ही वापरत असलेले धोरण
+title: "वॉलेट्स जोडणे"
+description: "ethereum.org वर वॉलेट जोडताना आम्ही वापरत असलेले धोरण"
 lang: mr
 ---
 
@@ -58,7 +58,7 @@ ethereum.org वर वॉलेट जोडण्यासाठी कोण�
 
 ## वॉलेट जोडणे {#adding-a-wallet}
 
-जर तुम्हाला ethereum.org वर वॉलेट जोडायचे असेल, तर GitHub वर एक इश्यू तयार करा.
+जर तुम्हाला ethereum.org वर वॉलेट जोडायचे असेल, तर GitHub वर एक इश्यू तयार करा. तुम्ही इश्यूमध्ये दिलेले वॉलेटचे वर्णन वॉलेटच्या पृष्ठावर दाखवले जाते, त्यामुळे ते एक किंवा दोन तथ्यात्मक वाक्यांपुरते मर्यादित ठेवा.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   इश्यू तयार करा

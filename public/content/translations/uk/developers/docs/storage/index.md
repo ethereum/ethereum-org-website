@@ -142,7 +142,7 @@ IPFS — це розподілена система для зберігання 
 **Arweave — _Arweave — це платформа децентралізованого сховища (dStorage) для зберігання даних._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Документація](https://docs.arweave.org/info/)
+- [Документація](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs — _Züs — це платформа децентралізованого сховища (dStorage) на базі доказу частки (PoS) із шардингом та блоберами._**

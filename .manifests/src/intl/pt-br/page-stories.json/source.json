@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-stories.json",
-  "generatedAt": "2026-06-29T23:51:35.008Z",
-  "rootHash": "68bd4522245d",
+  "generatedAt": "2026-10-21T21:37:54.420Z",
+  "rootHash": "85477f6c9d27",
   "tree": {
-    "contentHash": "77a2b7b0e9e5",
-    "anchorHash": "915d33659015",
+    "contentHash": "ed84b6212e4e",
+    "anchorHash": "1c7e9d88f8ea",
     "children": {
       "page-stories-meta-title": {
         "contentHash": "e2718f208216",
@@ -39,6 +39,62 @@
         "contentHash": "91d51d050eff",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-stories-map-title": {
+        "contentHash": "5bf8f5d44530",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-subtitle": {
+        "contentHash": "f61b70279aa9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-aria-label": {
+        "contentHash": "6356f69e2ef5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-select-placeholder": {
+        "contentHash": "19323e2d92e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-no-results": {
+        "contentHash": "c3a30e827730",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-prompt": {
+        "contentHash": "d28a4091dffd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-no-data": {
+        "contentHash": "3b41ba9c7cb8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-legend": {
+        "contentHash": "766eaae2e7d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-less": {
+        "contentHash": "ae5239ec63f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-more": {
+        "contentHash": "d47d7cb0e4f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-zoom-in": {
+        "contentHash": "0e47f09a748f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-zoom-out": {
+        "contentHash": "bc7b631a689b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-show-world": {
+        "contentHash": "958ffb0dd7d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-error": {
+        "contentHash": "8542afc27726",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-stories-more-title": {
         "contentHash": "30546a5e0580",
         "anchorHash": "e3b0c44298fc"
@@ -66,6 +122,57 @@
       "page-stories-banner-cta": {
         "contentHash": "cfacf759b75e",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-stories-map-ownership": {
+        "contentHash": "0c5144efc197",
+        "anchorHash": "152f80ef0583",
+        "children": {
+          "prose:1": {
+            "contentHash": "a90204ddb3c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "db9a5a9b5a4c"
+          },
+          "prose:2": {
+            "contentHash": "789fb8298438",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-stories-map-source": {
+        "contentHash": "0b477a8f2dec",
+        "anchorHash": "7da00a4dda5b",
+        "children": {
+          "prose:2": {
+            "contentHash": "5f8bdda108ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          },
+          "prose:3": {
+            "contentHash": "835678ed779c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "918a999d102e"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1"
+        ]
       }
     },
     "childrenOrder": [
@@ -77,14 +184,30 @@
       "page-stories-discover-title",
       "page-stories-discover-subtitle",
       "page-stories-discover-read-full-story",
+      "page-stories-map-title",
+      "page-stories-map-subtitle",
+      "page-stories-map-aria-label",
+      "page-stories-map-select-placeholder",
+      "page-stories-map-no-results",
+      "page-stories-map-prompt",
+      "page-stories-map-no-data",
+      "page-stories-map-legend",
+      "page-stories-map-less",
+      "page-stories-map-more",
+      "page-stories-map-zoom-in",
+      "page-stories-map-zoom-out",
+      "page-stories-map-show-world",
+      "page-stories-map-error",
       "page-stories-more-title",
       "page-stories-more-subtitle",
       "page-stories-community-title",
       "page-stories-community-subtitle",
       "page-stories-banner-title",
       "page-stories-banner-description",
-      "page-stories-banner-cta"
+      "page-stories-banner-cta",
+      "page-stories-map-ownership",
+      "page-stories-map-source"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

@@ -137,7 +137,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[Библиотека SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) используется для предотвращения переполнения и потери значимости. Это важно, так как в противном случае мы можем столкнуться с ситуацией, когда значение должно быть `-1`, но вместо этого равно `2^256-1`.
+[Библиотека SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) используется для предотвращения переполнения и потери значимости. Это важно, так как в противном случае мы можем столкнуться с ситуацией, когда значение должно быть `-1`, но вместо этого равно `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1675,7 +1675,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 ## Библиотеки {#libraries}
 
-[Библиотека SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) хорошо задокументирована, поэтому нет необходимости описывать ее здесь.
+[Библиотека SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) хорошо задокументирована, поэтому нет необходимости описывать ее здесь.
 
 ### Math {#math}
 

@@ -1,6 +1,6 @@
 ---
 title: Dodawanie portfeli
-description: Zasady, którymi kierujemy się przy dodawaniu portfela do ethereum.org
+description: "Zasady, którymi kierujemy się przy dodawaniu portfela do ethereum.org"
 lang: pl
 ---
 
@@ -58,7 +58,7 @@ Portfele w Ethereum szybko się zmieniają. Staraliśmy się stworzyć uczciwe r
 
 ## Dodawanie portfela {#adding-a-wallet}
 
-Jeśli chcesz dodać portfel do ethereum.org, utwórz zgłoszenie (issue) na GitHub.
+Jeśli chcesz dodać portfel do ethereum.org, utwórz zgłoszenie na GitHubie. Opis portfela podany w zgłoszeniu zostanie wyświetlony na stronie portfela, dlatego ogranicz go do jednego lub dwóch rzeczowych zdań.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Utwórz zgłoszenie

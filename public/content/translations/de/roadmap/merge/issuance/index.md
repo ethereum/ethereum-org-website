@@ -84,7 +84,7 @@ Wenn mehr Validatoren abheben, wird die maximale Anzahl der austretenden Validat
 
 ### Aufschlüsselung der Inflation nach dem Merge {#post-merge-inflation-breakdown}
 
-- [Gesamtes ETH-Angebot](/eth/supply/): **\~120.520.000 ETH** (zum Zeitpunkt des Merges im September 2022)
+- [Gesamtes ETH-Angebot](/what-is-ether/supply/): **\~120.520.000 ETH** (zum Zeitpunkt des Merges im September 2022)
 - Emission der Ausführungsschicht: **0**
 - Emission der Konsensschicht: Wie oben, **\~0,52 %** annualisierte Emissionsrate (bei insgesamt 14 Millionen gestakten ETH)
 

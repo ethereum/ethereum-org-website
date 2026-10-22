@@ -84,7 +84,7 @@ Daha fazla doğrulayıcı para çektikçe, stake edilen büyük miktarlardaki ET
 
 ### Birleşme sonrası enflasyon dökümü {#post-merge-inflation-breakdown}
 
-- [Toplam ETH arzı](/eth/supply/): **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
+- [Toplam ETH arzı](/what-is-ether/supply/): **\~120.520.000 ETH** (Eylül 2022'deki Birleşme sırasında)
 - Yürütme katmanı ihracı: **0**
 - Mutabakat katmanı ihracı: Yukarıdakiyle aynı, **\~%0,52** yıllık ihraç oranı (toplam 14 milyon ETH stake edilmiş halde)
 
