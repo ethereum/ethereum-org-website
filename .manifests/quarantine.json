@@ -79,6 +79,61 @@
       "expiresAt": "2026-11-04T21:58:56.766Z"
     },
     {
+      "file": "public/content/developers/tutorials/hello-world-smart-contract/index.md",
+      "locale": "mr",
+      "englishHash": "c60922f1520f",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Bad escaped character in JSON at position 10590 (line 13 column 703)\nRaw response (first 500 chars): ```json\n{\n  \"_preamble\": \"जर तुम्ही ब्लॉकचेन डेव्हलपमेंटमध्ये नवीन असाल आणि कुठून सुरुवात करावी हे तुम्हाला माहीत नसेल, किंवा तुम्हाला फक्त स्मार्ट क",
+      "attempts": 1,
+      "firstSeen": "2026-10-22T21:15:07.756Z",
+      "lastSeen": "2026-10-22T21:15:07.756Z",
+      "expiresAt": "2026-11-05T21:15:07.756Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/how-to-mint-an-nft/index.md",
+      "locale": "ur",
+      "englishHash": "568b240d1510",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 2475 (line 6 column 501)\nRaw response (first 500 chars): {\n  \"frontmatter:description\": \"یہ ٹیوٹوریل بیان کرتا ہے کہ ہمارے سمارٹ کنٹریکٹ، ⁦Hardhat⁩ اور ⁦ethers.js⁩ کا استعمال کرتے ہوئے ایتھ",
+      "attempts": 1,
+      "firstSeen": "2026-10-22T21:22:11.540Z",
+      "lastSeen": "2026-10-22T21:22:11.540Z",
+      "expiresAt": "2026-11-05T21:22:11.540Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md",
+      "locale": "ur",
+      "englishHash": "9cbc748cd4a0",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 9647 (line 10 column 1743)\nRaw response (first 500 chars): ```json\n{\n  \"_preamble\": \"چونکہ <span dir=\\\"ltr\\\">NFTs</span> بلاک چین کو عوام کی نظروں میں لا رہے ہیں، اس لیے اب آپ کے لیے ایتھیر",
+      "attempts": 1,
+      "firstSeen": "2026-10-22T21:26:07.712Z",
+      "lastSeen": "2026-10-22T21:26:07.712Z",
+      "expiresAt": "2026-11-05T21:26:07.712Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md",
+      "locale": "ur",
+      "englishHash": "6de23ab5b542",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 5127 (line 9 column 785)\nRaw response (first 500 chars): {\n  \"frontmatter:title\": \"⁦viem⁩ کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا\",\n  \"frontmatter:description\": \"یہ ⁦viem⁩ لائبریری کا استعما",
+      "attempts": 1,
+      "firstSeen": "2026-10-22T21:30:16.900Z",
+      "lastSeen": "2026-10-22T21:30:16.900Z",
+      "expiresAt": "2026-11-05T21:30:16.900Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/using-websockets/index.md",
+      "locale": "ur",
+      "englishHash": "f5b14801f6d1",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 4467 (line 7 column 169)\nRaw response (first 500 chars): {\n  \"frontmatter:description\": \"کسی بھی ایتھیریم نوڈ پرووائیڈر کے ساتھ جے سن آر پی سی درخواستیں کرنے اور ایونٹس کو سبسکرائب کرنے کے ",
+      "attempts": 1,
+      "firstSeen": "2026-10-22T21:31:16.722Z",
+      "lastSeen": "2026-10-22T21:31:16.722Z",
+      "expiresAt": "2026-11-05T21:31:16.722Z"
+    },
+    {
       "file": "src/intl/en/page-developers-tools-descriptions.json",
       "locale": "ar",
       "englishHash": "be5bf65b8dc0",

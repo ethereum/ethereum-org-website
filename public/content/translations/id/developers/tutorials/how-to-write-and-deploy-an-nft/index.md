@@ -9,11 +9,9 @@ lang: id
 published: 2021-04-22
 ---
 
-Dengan NFT yang membawa rantai blok ke mata publik, sekarang adalah kesempatan yang sangat baik untuk memahami tren ini sendiri dengan menerbitkan kontrak NFT (Token ERC-721) Anda sendiri di rantai blok Ethereum!
+Dengan token yang tidak dapat dipertukarkan (NFT) yang membawa rantai blok ke mata publik, sekarang adalah kesempatan yang sangat baik untuk memahami sensasi tersebut sendiri dengan menerbitkan kontrak NFT Anda sendiri (Token ERC-721) di rantai blok Ethereum!
 
-Alchemy sangat bangga dapat mendukung nama-nama terbesar di ruang NFT, termasuk Makersplace (baru-baru ini mencetak rekor penjualan karya seni digital di Christie's seharga $69 Juta), Dapper Labs (pembuat NBA Top Shot & Crypto Kitties), OpenSea (pasar NFT terbesar di dunia), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, dan banyak lagi.
-
-Dalam tutorial ini, kita akan memandu pembuatan dan penyebaran kontrak pintar ERC-721 di jaringan testnet Sepolia menggunakan [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/), dan [Alchemy](https://alchemy.com/signup/eth) (jangan khawatir jika Anda belum memahami apa arti semua ini — kami akan menjelaskannya!).
+Dalam tutorial ini, kita akan memandu pembuatan dan penyebaran kontrak pintar ERC-721 di jaringan pengujian (testnet) Sepolia menggunakan [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/), dan [Alchemy](https://alchemy.com/signup/eth) (jangan khawatir jika Anda belum memahami apa arti dari semua ini — kami akan menjelaskannya!).
 
 Di Bagian 2 dari tutorial ini, kita akan membahas bagaimana kita dapat menggunakan kontrak pintar kita untuk mencetak NFT, dan di Bagian 3 kita akan menjelaskan cara melihat NFT Anda di MetaMask.
 
@@ -27,118 +25,124 @@ Dalam tutorial ini, kita juga akan memanfaatkan alat pengembang Alchemy untuk pe
 
 ## Langkah 2: Buat aplikasi Anda (dan kunci API) {#make-api-key}
 
-Setelah Anda membuat akun Alchemy, Anda dapat menghasilkan kunci API dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke testnet Sepolia. Lihat [panduan ini](https://www.alchemy.com/docs/choosing-a-web3-network) jika Anda ingin mempelajari lebih lanjut tentang testnet.
+Setelah Anda membuat akun Alchemy, Anda dapat menghasilkan kunci Antarmuka Pemrograman Aplikasi (API) dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke testnet Sepolia. Lihat [panduan ini](https://www.alchemy.com/docs/choosing-a-web3-network) jika Anda ingin mempelajari lebih lanjut tentang testnet.
 
-1. Arahkan ke halaman "Create App" di Dasbor Alchemy Anda dengan mengarahkan kursor ke "Apps" di bilah navigasi dan mengklik "Create App"
+1. Navigasikan ke halaman "Create new app" di Dasbor Alchemy Anda dengan memilih "Select an app" di bilah navigasi dan mengklik "Create new app"
 
-![Create your app](./create-your-app.png)
+![Buat aplikasi Anda](./alchemy-create-new-app.png)
 
-2. Beri nama aplikasi Anda (kami memilih "My First NFT!"), berikan deskripsi singkat, pilih "Ethereum" untuk Chain, dan pilih "Sepolia" untuk jaringan Anda. Sejak The Merge, testnet lainnya telah dihentikan.
+2. Beri nama aplikasi Anda (kami memilih "My First NFT!"), berikan deskripsi singkat, dan pilih kasus penggunaan. Selanjutnya, cari "Ethereum" dan pilih jaringan. Kita akan menggunakan Sepolia, testnet yang direkomendasikan untuk pengembangan aplikasi (lihat [jaringan Ethereum](/developers/docs/networks/#ethereum-testnets)).
 
-![Configure and publish your app](./alchemy-explorer-sepolia.png)
+3. Klik "Next" untuk melanjutkan, lalu "Create app" dan selesai! Aplikasi Anda akan muncul di menu tarik-turun bilah navigasi, dengan Kunci API yang tersedia untuk disalin.
 
-3. Klik "Create app" dan selesai! Aplikasi Anda akan muncul di tabel di bawah ini.
+## Langkah 3: Buat akun Ethereum (alamat) {#create-eth-address}
 
-## Langkah 3: Buat akun (alamat) Ethereum {#create-eth-address}
+Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual di peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Jika Anda ingin memahami lebih lanjut tentang cara kerja transaksi di Ethereum, lihat [halaman ini](/developers/docs/transactions/) dari Yayasan Ethereum.
 
-Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual di peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Jika Anda ingin lebih memahami cara kerja transaksi di Ethereum, lihat [halaman ini](/developers/docs/transactions/) dari Yayasan Ethereum.
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke testnet "Sepolia" menggunakan menu pemilihan jaringan (sehingga kita tidak berurusan dengan uang sungguhan). Jika Anda tidak melihat Sepolia terdaftar, buka menu di sudut kanan atas, pilih "Networks", dan aktifkan "Show test networks" (lihat [panduan MetaMask untuk melihat testnet](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)).
 
-Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Sepolia Test Network" di kanan atas (sehingga kita tidak berurusan dengan uang sungguhan).
-
-![Set Sepolia as your network](./metamask-goerli.png)
+![Tetapkan Sepolia sebagai jaringan Anda](./metamask-sepolia.png)
 
 ## Langkah 4: Tambahkan Ether dari Faucet {#step-4-add-ether-from-a-faucet}
 
-Untuk menyebarkan kontrak pintar kita ke testnet, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat pergi ke [Sepolia Faucet](https://sepoliafaucet.com/) yang di-host oleh Alchemy, masuk dan masukkan alamat akun Anda, klik "Send Me ETH". Anda akan segera melihat ETH di akun MetaMask Anda!
+Untuk menyebarkan kontrak pintar kita ke testnet, kita akan membutuhkan beberapa ETH palsu. Untuk mendapatkan ETH Sepolia, pilih salah satu faucet yang terdaftar di [detail jaringan Sepolia](/developers/docs/networks/#sepolia) dan masukkan alamat akun Anda. Jika salah satu tidak berfungsi, coba yang lain karena terkadang bisa kehabisan, dan beberapa memiliki aturan kelayakan: misalnya, [faucet Sepolia Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia) mengharuskan alamat penerima untuk memiliki setidaknya 0,001 ETH di Mainnet Ethereum. Anda akan melihat ETH di akun MetaMask Anda segera setelahnya!
 
 ## Langkah 5: Periksa Saldo Anda {#check-balance}
 
 Untuk memastikan saldo kita ada di sana, mari buat permintaan [eth_getBalance](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance) menggunakan [alat sandbox Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Ini akan mengembalikan jumlah ETH di dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan mengklik "Send Request", Anda akan melihat respons seperti ini:
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
+```json
+{ "jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000" }
+```
 
 > **Catatan** Hasil ini dalam Wei, bukan ETH. Wei digunakan sebagai denominasi terkecil dari Ether. Konversi dari Wei ke ETH adalah 1 eth = 10<sup>18</sup> Wei. Jadi jika kita mengonversi 0xde0b6b3a7640000 ke desimal, kita mendapatkan 1\*10<sup>18</sup> Wei, yang sama dengan 1 ETH.
 
 Fiuh! Uang palsu kita semuanya ada di sana.
+
 ## Langkah 6: Inisialisasi proyek kita {#initialize-project}
 
-Pertama, kita perlu membuat folder untuk proyek kita. Arahkan ke baris perintah Anda dan ketik:
+Pertama, kita perlu membuat folder untuk proyek kita. Navigasikan ke baris perintah Anda dan ketik:
 
-    mkdir my-nft
-    cd my-nft
-
-Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan npm init untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [instruksi instalasi Node.js](https://nodejs.org/en/download/) (kita akan membutuhkan Node.js dan npm untuk tutorial ini).
-
-    npm init
-
-Tidak terlalu penting bagaimana Anda menjawab pertanyaan instalasi; berikut adalah cara kami melakukannya sebagai referensi:
-
-```json
-    package name: (my-nft)
-    version: (1.0.0)
-    description: My first NFT!
-    entry point: (index.js)
-    test command:
-    git repository:
-    keywords:
-    author:
-    license: (ISC)
-    About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
-    {
-      "name": "my-nft",
-      "version": "1.0.0",
-      "description": "My first NFT!",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
+```sh
+mkdir my-nft
+cd my-nft
 ```
 
-Setujui package.json, dan kita siap untuk melanjutkan!
-## Langkah 7: Instal [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+Sekarang setelah kita berada di dalam folder proyek kita, kita akan menggunakan npm init untuk menginisialisasi proyek. Jika Anda belum menginstal npm, ikuti [petunjuk penginstalan Node.js](https://nodejs.org/en/download/) (kita akan membutuhkan Node.js dan npm untuk tutorial ini).
+
+```sh
+npm init
+```
+
+Tidak terlalu penting bagaimana Anda menjawab pertanyaan penginstalan; berikut adalah cara kami melakukannya sebagai referensi:
+
+```text
+package name: (my-nft)
+version: (1.0.0)
+description: My first NFT!
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
+
+{
+  "name": "my-nft",
+  "version": "1.0.0",
+  "description": "My first NFT!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+Setujui package.json. Hardhat 3, yang akan kita instal selanjutnya, hanya mendukung proyek modul ES, jadi tandai proyek sebagai salah satunya:
+
+```sh
+npm pkg set type=module
+```
+
+Dan kita siap untuk melanjutkan!
+
+## Langkah 7: Instal [Hardhat](https://hardhat.org/docs/getting-started) {#install-hardhat}
 
 Hardhat adalah lingkungan pengembangan untuk mengompilasi, menyebarkan, menguji, dan men-debug perangkat lunak Ethereum Anda. Ini membantu pengembang saat membangun kontrak pintar dan aplikasi terdesentralisasi (dapp) secara lokal sebelum menyebarkannya ke rantai langsung.
 
-Di dalam proyek my-nft kita, jalankan:
+Hardhat 3 membutuhkan Node.js v22.13.0 atau yang lebih baru. Di dalam proyek my-nft kita, jalankan:
 
-    npm install --save-dev hardhat
+```sh
+npm install --save-dev hardhat
+```
 
-Lihat halaman ini untuk detail lebih lanjut tentang [instruksi instalasi](https://hardhat.org/getting-started/#overview).
+Lihat halaman ini untuk detail lebih lanjut tentang [petunjuk penginstalan](https://hardhat.org/docs/getting-started).
 
 ## Langkah 8: Buat proyek Hardhat {#create-hardhat-project}
 
-Di dalam folder proyek kita, jalankan:
+Menjalankan `npx hardhat --init` akan menghasilkan proyek sampel yang lengkap, tetapi untuk tutorial ini kita akan mengatur semuanya secara manual sehingga Anda dapat melihat setiap bagiannya. Di akar folder proyek Anda, buat file bernama `hardhat.config.js` dengan konten berikut:
 
-    npx hardhat
+```js
+import { defineConfig } from "hardhat/config"
 
-Anda kemudian akan melihat pesan selamat datang dan opsi untuk memilih apa yang ingin Anda lakukan. Pilih "create an empty hardhat.config.js":
+export default defineConfig({
+  solidity: "0.8.34",
+})
+```
 
-    888    888                      888 888               888
-    888    888                      888 888               888
-    888    888                      888 888               888
-    8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-    888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-    888    888 .d888888 888    888  888 888  888 .d888888 888
-    888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-    888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Welcome to Hardhat v2.0.11 👷‍
-    ? What do you want to do? …
-    Create a sample project
-    ❯ Create an empty hardhat.config.js
-    Quit
-
-Ini akan menghasilkan file hardhat.config.js untuk kita yang merupakan tempat kita akan menentukan semua pengaturan untuk proyek kita (pada langkah 13).
+Di sinilah kita akan menentukan semua pengaturan untuk proyek kita (pada langkah 13). Untuk saat ini, ini hanya memberi tahu Hardhat versi kompiler Solidity mana yang akan digunakan.
 
 ## Langkah 9: Tambahkan folder proyek {#add-project-folders}
 
-Agar proyek kita tetap teratur, kita akan membuat dua folder baru. Arahkan ke direktori root proyek Anda di baris perintah Anda dan ketik:
+Untuk menjaga proyek kita tetap teratur, kita akan membuat dua folder baru. Navigasikan ke direktori akar proyek Anda di baris perintah Anda dan ketik:
 
-    mkdir contracts
-    mkdir scripts
+```sh
+mkdir contracts
+mkdir scripts
+```
 
 - contracts/ adalah tempat kita akan menyimpan kode kontrak pintar NFT kita
 
@@ -150,33 +154,32 @@ Sekarang setelah lingkungan kita disiapkan, mari beralih ke hal yang lebih menar
 
 Buka proyek my-nft di editor favorit Anda (kami menyukai [VSCode](https://code.visualstudio.com/)). Kontrak pintar ditulis dalam bahasa yang disebut Solidity yang akan kita gunakan untuk menulis kontrak pintar MyNFT.sol kita.‌
 
-1. Arahkan ke folder `contracts` dan buat file baru bernama MyNFT.sol
+1. Navigasikan ke folder `contracts` dan buat file baru bernama MyNFT.sol
 
-2. Di bawah ini adalah kode kontrak pintar NFT kita, yang kita dasarkan pada implementasi ERC-721 dari Pustaka [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Salin dan tempel konten di bawah ini ke dalam file MyNFT.sol Anda.
+2. Di bawah ini adalah kode kontrak pintar NFT kita, yang kita dasarkan pada implementasi ERC-721 dari Pustaka [OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/erc721). Salin dan tempel konten di bawah ini ke dalam file MyNFT.sol Anda.
 
    ```solidity
-   //Kontrak berdasarkan [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   // Kontrak berdasarkan https://docs.openzeppelin.com/contracts/5.x/erc721
    // SPDX-License-Identifier: MIT
-   pragma solidity ^0.8.0;
+   pragma solidity ^0.8.24;
 
    import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-   import "@openzeppelin/contracts/utils/Counters.sol";
    import "@openzeppelin/contracts/access/Ownable.sol";
    import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
    contract MyNFT is ERC721URIStorage, Ownable {
-       using Counters for Counters.Counter;
-       Counters.Counter private _tokenIds;
+       uint256 private _nextTokenId;
 
-       constructor() ERC721("MyNFT", "NFT") {}
+       constructor(address initialOwner)
+           ERC721("MyNFT", "NFT")
+           Ownable(initialOwner)
+       {}
 
        function mintNFT(address recipient, string memory tokenURI)
            public onlyOwner
            returns (uint256)
        {
-           _tokenIds.increment();
-
-           uint256 newItemId = _tokenIds.current();
+           uint256 newItemId = ++_nextTokenId;
            _mint(recipient, newItemId);
            _setTokenURI(newItemId, tokenURI);
 
@@ -185,7 +188,7 @@ Buka proyek my-nft di editor favorit Anda (kami menyukai [VSCode](https://code.v
    }
    ```
 
-3. Karena kita mewarisi kelas dari Pustaka kontrak OpenZeppelin, di baris perintah Anda jalankan `npm install @openzeppelin/contracts^4.0.0` untuk menginstal Pustaka ke dalam folder kita.
+3. Karena kita mewarisi kelas dari Pustaka kontrak OpenZeppelin, di baris perintah Anda jalankan `npm install @openzeppelin/contracts` untuk menginstal Pustaka ke dalam folder kita. Tutorial ini menggunakan OpenZeppelin Contracts 5.x, yang membutuhkan Solidity 0.8.24 atau yang lebih baru.
 
 Jadi, apa yang _dilakukan_ kode ini sebenarnya? Mari kita uraikan, baris demi baris.
 
@@ -193,11 +196,13 @@ Di bagian atas kontrak pintar kita, kita mengimpor tiga kelas kontrak pintar [Op
 
 - @openzeppelin/contracts/token/ERC721/ERC721.sol berisi implementasi standar ERC-721, yang akan diwarisi oleh kontrak pintar NFT kita. (Untuk menjadi NFT yang valid, kontrak pintar Anda harus mengimplementasikan semua metode standar ERC-721.) Untuk mempelajari lebih lanjut tentang fungsi ERC-721 yang diwariskan, lihat definisi antarmuka [di sini](https://eips.ethereum.org/EIPS/eip-721).
 
-- @openzeppelin/contracts/utils/Counters.sol menyediakan penghitung yang hanya dapat ditambah atau dikurangi satu. Kontrak pintar kita menggunakan penghitung untuk melacak jumlah total NFT yang dicetak dan menetapkan ID unik pada NFT baru kita. (Setiap NFT yang dicetak menggunakan kontrak pintar harus diberi ID unik—di sini ID unik kita hanya ditentukan oleh jumlah total NFT yang ada. Misalnya, NFT pertama yang kita cetak dengan kontrak pintar kita memiliki ID "1," NFT kedua kita memiliki ID "2," dll.)
+- @openzeppelin/contracts/access/Ownable.sol mengatur [kontrol akses](https://docs.openzeppelin.com/contracts/5.x/access-control) pada kontrak pintar kita, sehingga hanya pemilik kontrak pintar (Anda) yang dapat mencetak NFT. Pemiliknya adalah alamat `initialOwner` yang diteruskan ke konstruktor. (Catatan, menyertakan kontrol akses sepenuhnya merupakan preferensi. Jika Anda ingin siapa pun dapat mencetak NFT menggunakan kontrak pintar Anda, hapus `Ownable` dan `Ownable(initialOwner)` dari definisi kontrak dan konstruktor, dan `onlyOwner` dari fungsi `mintNFT`.)
 
-- @openzeppelin/contracts/access/Ownable.sol mengatur [kontrol akses](https://docs.openzeppelin.com/contracts/3.x/access-control) pada kontrak pintar kita, sehingga hanya pemilik kontrak pintar (Anda) yang dapat mencetak NFT. (Catatan, menyertakan kontrol akses sepenuhnya merupakan preferensi. Jika Anda ingin siapa pun dapat mencetak NFT menggunakan kontrak pintar Anda, hapus kata Ownable pada baris 10 dan onlyOwner pada baris 17.)
+- @openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol memperluas ERC-721 sehingga setiap token dapat menyimpan URI metadata-nya sendiri, yang kita tetapkan saat pencetakan.
 
-Setelah pernyataan impor kita, kita memiliki kontrak pintar NFT kustom kita, yang secara mengejutkan sangat singkat — ini hanya berisi penghitung, konstruktor, dan satu fungsi! Ini berkat kontrak OpenZeppelin yang kita warisi, yang mengimplementasikan sebagian besar metode yang kita butuhkan untuk membuat NFT, seperti `ownerOf` yang mengembalikan pemilik NFT, dan `transferFrom`, yang mentransfer kepemilikan NFT dari satu akun ke akun lainnya.
+Setelah pernyataan impor kita, kita memiliki kontrak pintar NFT kustom kita, yang secara mengejutkan pendek — ini hanya berisi penghitung, konstruktor, dan fungsi tunggal! Ini berkat kontrak OpenZeppelin yang kita warisi, yang mengimplementasikan sebagian besar metode yang kita butuhkan untuk membuat NFT, seperti `ownerOf` yang mengembalikan pemilik NFT, dan `transferFrom`, yang mentransfer kepemilikan NFT dari satu akun ke akun lainnya.
+
+Penghitung, `_nextTokenId`, melacak jumlah total NFT yang dicetak dan menetapkan ID unik pada NFT baru kita. (Setiap NFT yang dicetak menggunakan kontrak pintar harus diberi ID unik—di sini ID unik kita hanya ditentukan oleh jumlah total NFT yang ada. `++_nextTokenId` meningkatkan penghitung sebelum digunakan, sehingga NFT pertama yang kita cetak dengan kontrak pintar kita memiliki ID "1," NFT kedua kita memiliki ID "2," dll.)
 
 Dalam konstruktor ERC-721 kita, Anda akan melihat kita meneruskan 2 string, "MyNFT" dan "NFT." Variabel pertama adalah nama kontrak pintar, dan yang kedua adalah simbolnya. Anda dapat menamai masing-masing variabel ini sesuka Anda!
 
@@ -213,28 +218,26 @@ Terakhir, kita memiliki fungsi `mintNFT(address recipient, string memory tokenUR
 
 Sekarang setelah kita membuat dompet MetaMask, akun Alchemy, dan menulis kontrak pintar kita, saatnya untuk menghubungkan ketiganya.
 
-Setiap transaksi yang dikirim dari dompet virtual Anda memerlukan tanda tangan menggunakan kunci privat unik Anda. Untuk memberikan izin ini kepada program kita, kita dapat dengan aman menyimpan kunci privat kita (dan kunci API Alchemy) dalam file lingkungan.
+Setiap transaksi yang dikirim dari dompet virtual Anda memerlukan tanda tangan menggunakan kunci privat unik Anda. Untuk memberikan izin ini kepada program kita, kita dapat menyimpan kunci privat kita (dan kunci API Alchemy) dengan aman di file lingkungan.
 
-Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [tutorial ini](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) tentang mengirim transaksi menggunakan Web3.
+Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [dokumentasi transaksi](/developers/docs/transactions/).
 
-Pertama, instal paket dotenv di direktori proyek Anda:
+Buat file `.env` di direktori akar proyek kita, dan tambahkan kunci privat MetaMask dan URL API Alchemy HTTP Anda ke dalamnya.
 
-    npm install dotenv --save
-
-Kemudian, buat file `.env` di direktori root proyek kita, dan tambahkan kunci privat MetaMask Anda dan URL API Alchemy HTTP ke dalamnya.
-
-- Ikuti [instruksi ini](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) untuk mengekspor kunci privat Anda dari MetaMask
+- Ikuti [petunjuk ini](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) untuk mengekspor kunci privat Anda dari MetaMask
 
 - Lihat di bawah ini untuk mendapatkan URL API Alchemy HTTP dan salin ke papan klip Anda
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.mp4#842x480)
+![Salin URL API Alchemy Anda](./copy-alchemy-api-url.mp4#842x480)
 
-`.env` Anda sekarang akan terlihat seperti ini:
+File `.env` Anda sekarang akan terlihat seperti ini:
 
-    API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-    PRIVATE_KEY="your-metamask-private-key"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
+```
 
-Untuk benar-benar menghubungkan ini ke kode kita, kita akan merujuk variabel-variabel ini di file hardhat.config.js kita pada langkah 13.
+Untuk benar-benar menghubungkan ini ke kode kita, kita akan merujuk variabel-variabel ini di file hardhat.config.js kita pada langkah 13. Node.js dapat membaca file `.env` dengan sendirinya, jadi tidak ada paket tambahan yang perlu diinstal.
 
 <EnvWarningBanner />
 
@@ -242,13 +245,15 @@ Untuk benar-benar menghubungkan ini ke kode kita, kita akan merujuk variabel-var
 
 Ethers.js adalah Pustaka yang memudahkan untuk berinteraksi dan membuat permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](/developers/docs/apis/json-rpc/) dengan metode yang lebih ramah pengguna.
 
-Hardhat membuatnya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/plugins/) untuk perkakas tambahan dan fungsionalitas yang diperluas. Kita akan memanfaatkan [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) untuk penyebaran kontrak ([Ethers.js](https://github.com/ethers-io/ethers.js/) memiliki beberapa metode penyebaran kontrak yang sangat rapi).
+Hardhat membuatnya sangat mudah untuk mengintegrasikan [Plugin](https://hardhat.org/docs/plugins/official-plugins) untuk perkakas tambahan dan fungsionalitas yang diperluas. Kita akan memanfaatkan [plugin Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) untuk penyebaran kontrak ([Ethers.js](https://docs.ethers.org/v6/) memiliki beberapa metode penyebaran kontrak yang sangat rapi).
 
 Di direktori proyek Anda ketik:
 
-    npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
+```sh
+npm install --save-dev @nomicfoundation/hardhat-ethers ethers
+```
 
-Kita juga akan mewajibkan ethers di hardhat.config.js kita pada langkah berikutnya.
+Kita juga akan menambahkan plugin ke hardhat.config.js kita pada langkah berikutnya.
 
 ## Langkah 13: Perbarui hardhat.config.js {#update-hardhat-config}
 
@@ -257,93 +262,114 @@ Kita telah menambahkan beberapa dependensi dan plugin sejauh ini, sekarang kita 
 Perbarui hardhat.config.js Anda agar terlihat seperti ini:
 
 ```js
-    /**
-    * @type import('hardhat/config').HardhatUserConfig
-    */
-    require('dotenv').config();
-    require("@nomiclabs/hardhat-ethers");
-    const { API_URL, PRIVATE_KEY } = process.env;
-    module.exports = {
-       solidity: "0.8.1",
-       defaultNetwork: "sepolia",
-       networks: {
-          hardhat: {},
-          sepolia: {
-             url: API_URL,
-             accounts: [`0x${PRIVATE_KEY}`]
-          }
-       },
-    }
+import { existsSync } from "node:fs"
+import hardhatEthers from "@nomicfoundation/hardhat-ethers"
+import { configVariable, defineConfig } from "hardhat/config"
+
+// Muat API_URL dan PRIVATE_KEY dari file .env ke dalam process.env, jika ada
+if (existsSync(".env")) process.loadEnvFile()
+
+export default defineConfig({
+  plugins: [hardhatEthers],
+  solidity: "0.8.34",
+  networks: {
+    sepolia: {
+      type: "http",
+      url: configVariable("API_URL"),
+      accounts: [configVariable("PRIVATE_KEY")],
+    },
+  },
+})
 ```
+
+`configVariable` memberi tahu Hardhat untuk membaca setiap nilai dari variabel lingkungan hanya saat dibutuhkan, sehingga perintah seperti `compile` berfungsi bahkan sebelum nilainya ditetapkan. Jika Anda lebih suka tidak menyimpan kunci privat Anda dalam file teks biasa, Hardhat juga dapat membaca [variabel konfigurasi dari penyimpanan kunci terenkripsi](https://hardhat.org/docs/guides/configuration-variables).
 
 ## Langkah 14: Kompilasi kontrak kita {#compile-contract}
 
-Untuk memastikan semuanya berfungsi sejauh ini, mari kompilasi kontrak kita. Tugas kompilasi adalah salah satu tugas bawaan hardhat.
+Untuk memastikan semuanya berfungsi sejauh ini, mari kita kompilasi kontrak kita. Tugas kompilasi adalah salah satu tugas bawaan Hardhat.
 
 Dari baris perintah jalankan:
 
-    npx hardhat compile
+```sh
+npx hardhat compile
+```
 
-Anda mungkin mendapatkan peringatan tentang pengidentifikasi lisensi SPDX yang tidak disediakan dalam file sumber, tetapi tidak perlu khawatir tentang itu — semoga semuanya terlihat baik! Jika tidak, Anda selalu dapat mengirim pesan di [Discord Alchemy](https://discord.gg/u72VCg3).
+Pertama kali Anda mengompilasi, Hardhat mengunduh kompiler Solidity. Anda kemudian akan melihat sesuatu seperti `Compiled 1 Solidity file with solc 0.8.34`. Jika tidak, Anda selalu dapat mengirim pesan di [Discord Alchemy](https://discord.gg/gWuC7zB).
 
 ## Langkah 15: Tulis skrip penyebaran kita {#write-deploy}
 
 Sekarang setelah kontrak kita ditulis dan file konfigurasi kita siap digunakan, saatnya untuk menulis skrip penyebaran kontrak kita.
 
-Arahkan ke folder `scripts/` dan buat file baru bernama `deploy.js`, tambahkan konten berikut ke dalamnya:
+Navigasikan ke folder `scripts/` dan buat file baru bernama `deploy.js`, tambahkan konten berikut ke dalamnya:
 
 ```js
-async function main() {
-  const MyNFT = await ethers.getContractFactory("MyNFT")
+import { network } from "hardhat"
 
-  // Mulai penyebaran, mengembalikan promise yang menghasilkan objek kontrak
-  const myNFT = await MyNFT.deploy()
-  await myNFT.deployed()
-  console.log("Contract deployed to address:", myNFT.address)
-}
+const { ethers } = await network.create()
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error)
-    process.exit(1)
-  })
+const [deployer] = await ethers.getSigners()
+const MyNFT = await ethers.getContractFactory("MyNFT")
+
+// Mulai penyebaran, mengembalikan promise yang diselesaikan menjadi objek kontrak
+const myNFT = await MyNFT.deploy(deployer.address)
+await myNFT.waitForDeployment()
+console.log("Contract deployed to address:", await myNFT.getAddress())
 ```
 
-Hardhat melakukan pekerjaan yang luar biasa dalam menjelaskan apa yang dilakukan masing-masing baris kode ini dalam [tutorial Kontrak](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) mereka, kami telah mengadopsi penjelasan mereka di sini.
+Mari kita bahas apa yang dilakukan oleh masing-masing baris kode ini.
 
-    const MyNFT = await ethers.getContractFactory("MyNFT");
+```js
+const { ethers } = await network.create()
+```
+
+Di Hardhat 3, sebuah skrip membuka koneksi ke jaringan secara eksplisit. `network.create()` terhubung ke jaringan yang Anda pilih dengan opsi `--network` saat Anda menjalankan skrip, dan plugin `hardhat-ethers` menambahkan objek `ethers` ke koneksi tersebut.
+
+```js
+const [deployer] = await ethers.getSigners()
+```
+
+`getSigners()` mengembalikan akun yang dikonfigurasi untuk jaringan. Di Sepolia, itu adalah akun yang kunci privatnya Anda masukkan ke dalam `.env`. Kita meneruskan alamatnya ke konstruktor sehingga Anda menjadi pemilik kontrak.
+
+```js
+const MyNFT = await ethers.getContractFactory("MyNFT")
+```
 
 ContractFactory di ethers.js adalah abstraksi yang digunakan untuk menyebarkan kontrak pintar baru, jadi MyNFT di sini adalah pabrik untuk instans kontrak NFT kita. Saat menggunakan plugin hardhat-ethers, instans ContractFactory dan Contract terhubung ke penandatangan pertama secara default.
 
-    const myNFT = await MyNFT.deploy();
+```js
+const myNFT = await MyNFT.deploy(deployer.address)
+```
 
-Memanggil deploy() pada ContractFactory akan memulai penyebaran, dan mengembalikan Promise yang diselesaikan ke Contract. Ini adalah objek yang memiliki metode untuk setiap fungsi kontrak pintar kita.
+Memanggil deploy() pada ContractFactory akan memulai penyebaran, dan mengembalikan Promise yang diselesaikan ke Contract. Ini adalah objek yang memiliki metode untuk setiap fungsi kontrak pintar kita. Argumen yang Anda teruskan ke deploy() masuk ke konstruktor kontrak, di sini alamat `initialOwner`.
+
+`waitForDeployment()` menunggu hingga transaksi penyebaran disertakan dalam sebuah blok, dan `getAddress()` mengembalikan alamat kontrak baru. Lihat [dokumentasi kontrak ethers.js](https://docs.ethers.org/v6/api/contract/) untuk detail lebih lanjut.
 
 ## Langkah 16: Sebarkan kontrak kita {#deploy-contract}
 
-Kita akhirnya siap untuk menyebarkan kontrak pintar kita! Arahkan kembali ke root direktori proyek Anda, dan di baris perintah jalankan:
+Kita akhirnya siap untuk menyebarkan kontrak pintar kita! Navigasikan kembali ke akar direktori proyek Anda, dan di baris perintah jalankan:
 
-    npx hardhat --network sepolia run scripts/deploy.js
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
 Anda kemudian akan melihat sesuatu seperti:
 
-    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
+```text
+Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
+```
 
-Jika kita pergi ke [Etherscan Sepolia](https://sepolia.etherscan.io/) dan mencari alamat kontrak kita, kita seharusnya dapat melihat bahwa itu telah berhasil disebarkan. Jika Anda tidak dapat melihatnya segera, harap tunggu sebentar karena ini bisa memakan waktu. Transaksi akan terlihat seperti ini:
+Jika kita pergi ke [Etherscan Sepolia](https://sepolia.etherscan.io/) dan mencari alamat kontrak kita, kita seharusnya dapat melihat bahwa itu telah berhasil disebarkan. Jika Anda tidak dapat melihatnya segera, harap tunggu sebentar karena ini bisa memakan waktu. Transaksinya akan terlihat seperti ini:
 
-![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
+![Lihat alamat transaksi Anda di Etherscan](./etherscan-sepoila-contract-creation.png)
 
-Alamat From harus cocok dengan alamat akun MetaMask Anda dan alamat To akan bertuliskan "Contract Creation". Jika kita mengklik transaksi, kita akan melihat alamat kontrak kita di bidang To:
+Alamat From harus cocok dengan alamat akun MetaMask Anda dan alamat To akan bertuliskan "Contract Creation". Jika kita mengklik transaksi tersebut, kita akan melihat alamat kontrak kita di bidang To:
 
-![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
+![Lihat alamat kontrak Anda di Etherscan](./etherscan-sepolia-tx-details.png)
 
 Yasssss! Anda baru saja menyebarkan kontrak pintar NFT Anda ke rantai (testnet) Ethereum!
 
-Untuk memahami apa yang terjadi secara teknis, mari arahkan ke tab Explorer di [dasbor Alchemy](https://dashboard.alchemy.com/explorer) kita. Jika Anda memiliki beberapa aplikasi Alchemy, pastikan untuk memfilter berdasarkan aplikasi dan pilih "MyNFT".
+Untuk memahami apa yang terjadi secara internal, Anda dapat melihat permintaan yang diterima aplikasi Anda di [dasbor Alchemy](https://dashboard.alchemy.com/) Anda.
 
-![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
+Di sana Anda akan melihat beberapa panggilan JSON-RPC yang dilakukan Hardhat/Ethers secara internal untuk kita saat kita memanggil fungsi .deploy(). Dua hal penting yang perlu diperhatikan di sini adalah [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth-sendrawtransaction), yang merupakan permintaan untuk benar-benar menulis kontrak pintar kita ke rantai Sepolia, dan [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash) yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash (pola umum saat mengirim transaksi). Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat [dokumentasi transaksi](/developers/docs/transactions/).
 
-Di sini Anda akan melihat beberapa panggilan JSON-RPC yang dibuat oleh Hardhat/Ethers secara teknis untuk kita saat kita memanggil fungsi .deploy(). Dua hal penting yang perlu diperhatikan di sini adalah [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth-sendrawtransaction), yang merupakan permintaan untuk benar-benar menulis kontrak pintar kita ke rantai Sepolia, dan [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash) yang merupakan permintaan untuk membaca informasi tentang transaksi kita berdasarkan hash (pola umum saat mengirim transaksi). Untuk mempelajari lebih lanjut tentang mengirim transaksi, lihat tutorial ini tentang [mengirim transaksi menggunakan Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
-
-Sekian untuk Bagian 1 dari tutorial ini. Di [Bagian 2, kita akan benar-benar berinteraksi dengan kontrak pintar kita dengan mencetak NFT](/developers/tutorials/how-to-mint-an-nft/), dan di [Bagian 3 kita akan menunjukkan kepada Anda cara melihat NFT Anda di dompet Ethereum Anda](/developers/tutorials/how-to-view-nft-in-metamask/)!
+Itu saja untuk Bagian 1 dari tutorial ini. Di [Bagian 2, kita akan benar-benar berinteraksi dengan kontrak pintar kita dengan mencetak NFT](/developers/tutorials/how-to-mint-an-nft/), dan di [Bagian 3 kita akan menunjukkan kepada Anda cara melihat NFT Anda di dompet Ethereum Anda](/developers/tutorials/how-to-view-nft-in-metamask/)!

@@ -9,11 +9,11 @@ lang: cs
 published: 2021-03-31
 ---
 
-Pokud jste ve vývoji na blockchainu nováčkem a nevíte, kde začít, nebo pokud jen chcete pochopit, jak nasadit a interagovat s chytrými kontrakty, tento průvodce je pro vás. Projdeme si vytvoření a nasazení jednoduchého chytrého kontraktu v testovací síti Sepolia pomocí virtuální peněženky [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) a [Alchemy](https://www.alchemy.com/eth) (nebojte se, pokud zatím nerozumíte, co to všechno znamená, vysvětlíme si to).
+Pokud jste ve vývoji na blockchainu nováčkem a nevíte, kde začít, nebo pokud jen chcete pochopit, jak nasadit chytré kontrakty a jak s nimi interagovat, je tento průvodce určen právě vám. Projdeme si vytvoření a nasazení jednoduchého chytrého kontraktu v testovací síti Sepolia pomocí virtuální peněženky [MetaMask](https://metamask.io/), jazyka [Solidity](https://docs.soliditylang.org/), nástroje [Hardhat](https://hardhat.org/) a platformy [Alchemy](https://www.alchemy.com/eth) (nebojte se, pokud zatím nerozumíte tomu, co to všechno znamená, vysvětlíme si to).
 
-Ve [2. části](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) tohoto tutoriálu si projdeme, jak můžeme s naším chytrým kontraktem interagovat, jakmile je zde nasazen, a ve [3. části](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan) se podíváme na to, jak jej publikovat na Etherscanu.
+Jakmile bude váš kontrakt nasazen, můžete pro něj [vytvořit uživatelské rozhraní](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Pokud budete mít kdykoli nějaké dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB)!
+Pokud budete mít v jakémkoli okamžiku dotazy, neváhejte se ozvat na [Discordu Alchemy](https://discord.gg/gWuC7zB)!
 
 ## Krok 1: Připojení k síti Ethereum {#step-1}
 
@@ -33,19 +33,19 @@ Jakmile si vytvoříte účet na Alchemy, můžete si vygenerovat API klíč vyt
 
 3. Pokračujte kliknutím na „Next“ (Další), poté na „Create app“ (Vytvořit aplikaci) a to je vše! Vaše aplikace by se měla objevit v rozbalovací nabídce navigačního panelu s API klíčem, který si můžete zkopírovat.
 
-## Krok 3: Vytvoření účtu Ethereum (adresy) {#step-3}
+## Krok 3: Vytvoření účtu (adresy) na Ethereu {#step-3}
 
-K odesílání a přijímání transakcí potřebujeme účet Ethereum. Pro tento tutoriál použijeme MetaMask, virtuální peněženku v prohlížeči, která se používá ke správě adresy vašeho účtu Ethereum. Více o [transakcích](/developers/docs/transactions/).
+K odesílání a přijímání transakcí potřebujeme účet na Ethereu. Pro tento tutoriál použijeme MetaMask, virtuální peněženku v prohlížeči, která se používá ke správě adresy vašeho účtu na Ethereu. Více o [transakcích](/developers/docs/transactions/).
 
-MetaMask si můžete stáhnout a účet Ethereum si zdarma vytvořit [zde](https://metamask.io/download). Při vytváření účtu, nebo pokud již účet máte, se ujistěte, že jste pomocí rozbalovací nabídky sítí přepnuli na testovací síť „Sepolia“ (abychom nepracovali se skutečnými penězi).
+MetaMask si můžete stáhnout a účet na Ethereu si zdarma vytvořit [zde](https://metamask.io/download). Když si vytváříte účet, nebo pokud už účet máte, nezapomeňte přepnout na testovací síť „Sepolia“ pomocí rozbalovací nabídky sítí (abychom nepracovali se skutečnými penězi).
 
-Pokud v seznamu nevidíte síť Sepolia, přejděte do nabídky, poté do Advanced (Pokročilé) a přejděte dolů, abyste zapnuli možnost „Show test networks“ (Zobrazit testovací sítě). V nabídce výběru sítě zvolte kartu „Custom“ (Vlastní), kde najdete seznam testovacích sítí, a vyberte „Sepolia“.
+Pokud v seznamu nevidíte síť Sepolia, otevřete nabídku v pravém horním rohu, vyberte „Networks“ (Sítě) a ve spodní části seznamu sítí zapněte možnost „Show test networks“ (Zobrazit testovací sítě) (viz [průvodce MetaMasku pro zobrazení testovacích sítí](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)). Poté v nabídce výběru sítě vyberte „Sepolia“.
 
 ![metamask sepolia example](./metamask-sepolia-example.png)
 
 ## Krok 4: Přidání etheru z faucetu {#step-4}
 
-Abychom mohli nasadit náš chytrý kontrakt do testovací sítě, budeme potřebovat nějaké falešné ETH. Chcete-li získat Sepolia ETH, můžete přejít na [podrobnosti o síti Sepolia](/developers/docs/networks/#sepolia), kde najdete seznam různých faucetů. Pokud jeden nefunguje, zkuste jiný, protože někdy mohou vyschnout. Přijetí falešného ETH může kvůli provozu v síti nějakou dobu trvat. Brzy poté byste měli vidět ETH na svém účtu MetaMask!
+Abychom mohli nasadit náš chytrý kontrakt do testovací sítě, budeme potřebovat nějaké falešné ETH. Chcete-li získat Sepolia ETH, můžete přejít na [podrobnosti o síti Sepolia](/developers/docs/networks/#sepolia), kde najdete seznam různých faucetů. Pokud jeden nefunguje, zkuste jiný, protože někdy mohou vyschnout. Některé faucety mají pravidla způsobilosti; například faucet Sepolia od Alchemy vyžaduje, aby přijímající adresa držela alespoň 0,001 ETH na síti Ethereum Mainnet. Přijetí falešných ETH může nějakou dobu trvat kvůli provozu v síti. Brzy poté byste měli vidět ETH na svém účtu MetaMask!
 
 ## Krok 5: Kontrola zůstatku {#step-5}
 
@@ -63,20 +63,20 @@ Abychom si ověřili, že tam náš zůstatek je, vytvořme požadavek [eth_getB
 
 Nejprve budeme muset vytvořit složku pro náš projekt. Přejděte do příkazového řádku a zadejte:
 
-```
+```sh
 mkdir hello-world
 cd hello-world
 ```
 
-Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu. Pokud ještě nemáte nainstalované npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) (pro tento tutoriál budeme potřebovat Node.js a npm).
+Nyní, když jsme ve složce našeho projektu, použijeme `npm init` k inicializaci projektu. Pokud ještě nemáte nainstalovaný npm, postupujte podle [pokynů k instalaci Node.js](https://nodejs.org/en/download/) (pro tento tutoriál budeme potřebovat Node.js a npm).
 
-```
+```sh
 npm init
 ```
 
 Nezáleží na tom, jak odpovíte na instalační otázky, zde je pro referenci ukázka, jak jsme to udělali my:
 
-```
+```text
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
@@ -101,54 +101,45 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Schvalte soubor package.json a můžeme začít!
-## Krok 7: Stažení [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
+Schvalte soubor package.json. Hardhat 3, který nainstalujeme vzápětí, podporuje pouze projekty s ES moduly, takže projekt jako takový označte:
+
+```sh
+npm pkg set type=module
+```
+
+A můžeme začít!
+
+## Krok 7: Stažení nástroje [Hardhat](https://hardhat.org/docs/getting-started) {#step-7}
 
 Hardhat je vývojové prostředí pro kompilaci, nasazení, testování a ladění vašeho softwaru pro Ethereum. Pomáhá vývojářům při lokálním vytváření chytrých kontraktů a decentralizovaných aplikací (dapp) před jejich nasazením do živého řetězce.
 
-Uvnitř našeho projektu `hello-world` spusťte:
+Hardhat 3 vyžaduje Node.js v22.13.0 nebo novější. Uvnitř našeho projektu `hello-world` spusťte:
 
-```
+```sh
 npm install --save-dev hardhat
 ```
 
-Další podrobnosti o [pokynech k instalaci](https://hardhat.org/getting-started/#overview) najdete na této stránce.
+Další podrobnosti o [pokynech k instalaci](https://hardhat.org/docs/getting-started) najdete na této stránce.
 
 ## Krok 8: Vytvoření projektu Hardhat {#step-8}
 
-Uvnitř složky našeho projektu spusťte:
+Spuštění `npx hardhat --init` by vygenerovalo kompletní ukázkový projekt, ale pro tento tutoriál vše nastavíme ručně, abyste viděli každou část. V kořenovém adresáři složky vašeho projektu vytvořte soubor s názvem `hardhat.config.js` s následujícím obsahem:
 
-```
-npx hardhat
-```
+```js
+import { defineConfig } from "hardhat/config"
 
-Poté byste měli vidět uvítací zprávu a možnost vybrat si, co chcete udělat. Vyberte „create an empty hardhat.config.js“:
-
-```
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-
-👷 Welcome to Hardhat v2.0.11 👷‍?
-
-What do you want to do? …
-Create a sample project
-❯ Create an empty hardhat.config.js
-Quit
+export default defineConfig({
+  solidity: "0.8.34",
+})
 ```
 
-Tím se nám vygeneruje soubor `hardhat.config.js`, ve kterém specifikujeme veškeré nastavení pro náš projekt (v kroku 13).
+Zde specifikujeme veškeré nastavení pro náš projekt (v kroku 13). Prozatím to jen říká nástroji Hardhat, kterou verzi kompilátoru Solidity má použít.
 
 ## Krok 9: Přidání složek projektu {#step-9}
 
 Abychom udrželi náš projekt organizovaný, vytvoříme dvě nové složky. Přejděte do kořenového adresáře vašeho projektu v příkazovém řádku a zadejte:
 
-```
+```sh
 mkdir contracts
 mkdir scripts
 ```
@@ -158,31 +149,32 @@ mkdir scripts
 
 ## Krok 10: Napsání našeho kontraktu {#step-10}
 
-Možná se ptáte, kdy už sakra budeme psát kód?? No, jsme tady, u kroku 10.
+Možná se ptáte sami sebe, kdy už sakra budeme psát kód?? No, jsme tady, u kroku 10.
 
 Otevřete projekt hello-world ve svém oblíbeném editoru (my máme rádi [VSCode](https://code.visualstudio.com/)). Chytré kontrakty se píší v jazyce zvaném Solidity, který použijeme k napsání našeho chytrého kontraktu HelloWorld.sol.‌
 
 1.  Přejděte do složky „contracts“ a vytvořte nový soubor s názvem HelloWorld.sol
-2.  Níže je ukázkový chytrý kontrakt Hello World od Nadace Ethereum, který budeme pro tento tutoriál používat. Zkopírujte a vložte níže uvedený obsah do souboru HelloWorld.sol a nezapomeňte si přečíst komentáře, abyste pochopili, co tento kontrakt dělá:
+2.  Níže je ukázkový chytrý kontrakt Hello World od Nadace Ethereum, který budeme používat pro tento tutoriál. Zkopírujte a vložte níže uvedený obsah do souboru HelloWorld.sol a nezapomeňte si přečíst komentáře, abyste pochopili, co tento kontrakt dělá:
 
 ```solidity
+// SPDX-License-Identifier: MIT
 // Určuje verzi Solidity pomocí sémantického verzování.
-// Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
-pragma solidity ^0.7.0;
+// Více informací: https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragma
+pragma solidity ^0.8.24;
 
 // Definuje kontrakt s názvem `HelloWorld`.
-// Kontrakt je sbírka funkcí a dat (jeho stavu). Po nasazení se kontrakt nachází na konkrétní adrese na blockchainu Etherea. Zjistěte více: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Kontrakt je soubor funkcí a dat (jeho stavu). Po nasazení se kontrakt nachází na konkrétní adrese na blockchainu Etherea. Více informací: https://docs.soliditylang.org/en/latest/structure-of-a-contract.html
 contract HelloWorld {
 
    // Deklaruje stavovou proměnnou `message` typu `string`.
    // Stavové proměnné jsou proměnné, jejichž hodnoty jsou trvale uloženy v úložišti kontraktu. Klíčové slovo `public` zpřístupňuje proměnné zvenčí kontraktu a vytváří funkci, kterou mohou volat jiné kontrakty nebo klienti pro přístup k hodnotě.
    string public message;
 
-   // Podobně jako v mnoha třídně orientovaných objektových jazycích je konstruktor speciální funkce, která se spustí pouze při vytvoření kontraktu.
-   // Konstruktory se používají k inicializaci dat kontraktu. Zjistěte více:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Podobně jako v mnoha třídně orientovaných objektových jazycích je konstruktor speciální funkce, která se provede pouze při vytvoření kontraktu.
+   // Konstruktory se používají k inicializaci dat kontraktu. Více informací: https://docs.soliditylang.org/en/latest/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Přijímá řetězcový argument `initMessage` a nastaví hodnotu do úložné proměnné kontraktu `message`).
+      // Přijímá řetězcový argument `initMessage` a nastavuje hodnotu do úložné proměnné kontraktu `message`).
       message = initMessage;
    }
 
@@ -197,97 +189,92 @@ Jedná se o super jednoduchý chytrý kontrakt, který při vytvoření uloží 
 
 ## Krok 11: Připojení MetaMask a Alchemy k vašemu projektu {#step-11}
 
-Vytvořili jsme peněženku MetaMask, účet Alchemy a napsali náš chytrý kontrakt, nyní je čas tyto tři věci propojit.
+Vytvořili jsme peněženku MetaMask, účet na Alchemy a napsali náš chytrý kontrakt, nyní je čas tyto tři věci propojit.
 
-Každá transakce odeslaná z vaší virtuální peněženky vyžaduje podpis pomocí vašeho jedinečného soukromého klíče. Abychom našemu programu toto oprávnění poskytli, můžeme náš soukromý klíč (a API klíč Alchemy) bezpečně uložit do souboru prostředí.
+Každá transakce odeslaná z vaší virtuální peněženky vyžaduje podpis pomocí vašeho jedinečného soukromého klíče. Abychom našemu programu poskytli toto oprávnění, můžeme bezpečně uložit náš soukromý klíč (a API klíč Alchemy) do souboru prostředí.
 
-> Chcete-li se dozvědět více o odesílání transakcí, podívejte se na [tento tutoriál](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) o odesílání transakcí pomocí Web3.
+> Chcete-li se dozvědět více o odesílání transakcí, podívejte se do [dokumentace k transakcím](/developers/docs/transactions/).
 
-Nejprve nainstalujte balíček dotenv v adresáři vašeho projektu:
-
-```
-npm install dotenv --save
-```
-
-Poté vytvořte soubor `.env` v kořenovém adresáři našeho projektu a přidejte do něj svůj soukromý klíč MetaMask a HTTP URL API Alchemy.
+Vytvořte soubor `.env` v kořenovém adresáři našeho projektu a přidejte do něj svůj soukromý klíč MetaMask a HTTP Alchemy API URL.
 
 - Postupujte podle [těchto pokynů](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) pro export vašeho soukromého klíče
-- Níže se podívejte, jak získat HTTP URL API Alchemy
+- Níže se podívejte, jak získat HTTP Alchemy API URL
 
 ![get alchemy api key](./get-alchemy-api-key.png)
 
-Zkopírujte URL API Alchemy
+Zkopírujte Alchemy API URL
 
 Váš soubor `.env` by měl vypadat takto:
 
-```
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
 
-Abychom je skutečně propojili s naším kódem, odkážeme na tyto proměnné v našem souboru `hardhat.config.js` v kroku 13.
+Abychom je skutečně propojili s naším kódem, budeme na tyto proměnné odkazovat v našem souboru `hardhat.config.js` v kroku 13. Node.js umí číst soubory `.env` sám o sobě, takže není nutné instalovat žádný další balíček.
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-Necommitujte <code>.env</code>! Ujistěte se, že svůj soubor <code>.env</code> nikdy s nikým nesdílíte ani ho nevystavujete, protože tím ohrožujete svá tajemství. Pokud používáte správu verzí, přidejte svůj <code>.env</code> do souboru <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Nepřidávejte <code>.env</code> do gitu (commit)! Ujistěte se, že svůj soubor <code>.env</code> nikdy s nikým nesdílíte ani ho nevystavujete, protože byste tím ohrozili svá tajemství. Pokud používáte správu verzí, přidejte svůj <code>.env</code> do souboru <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Krok 12: Instalace Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků do Etherea tím, že obaluje [standardní metody JSON-RPC](/developers/docs/apis/json-rpc/) uživatelsky přívětivějšími metodami.
+Ethers.js je knihovna, která usnadňuje interakci a zadávání požadavků na Ethereum tím, že obaluje [standardní metody JSON-RPC](/developers/docs/apis/json-rpc/) uživatelsky přívětivějšími metodami.
 
-Hardhat velmi usnadňuje integraci [pluginů](https://hardhat.org/plugins/) pro další nástroje a rozšířenou funkcionalitu. Pro nasazení kontraktu využijeme [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) ([Ethers.js](https://github.com/ethers-io/ethers.js/) má několik super čistých metod pro nasazení kontraktu).
+Hardhat velmi usnadňuje integraci [pluginů](https://hardhat.org/docs/plugins/official-plugins) pro další nástroje a rozšířenou funkcionalitu. Využijeme [plugin Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) pro nasazení kontraktu ([Ethers.js](https://docs.ethers.org/v6/) má několik super čistých metod pro nasazení kontraktu).
 
 V adresáři vašeho projektu zadejte:
 
-```
-npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
+```sh
+npm install --save-dev @nomicfoundation/hardhat-ethers ethers
 ```
 
-V dalším kroku budeme také vyžadovat ethers v našem `hardhat.config.js`.
+Plugin také přidáme do našeho `hardhat.config.js` v dalším kroku.
 
 ## Krok 13: Aktualizace hardhat.config.js {#step-13-update-hardhatconfigjs}
 
-Dosud jsme přidali několik závislostí a pluginů, nyní musíme aktualizovat `hardhat.config.js`, aby o nich náš projekt věděl.
+Zatím jsme přidali několik závislostí a pluginů, nyní musíme aktualizovat `hardhat.config.js`, aby o nich náš projekt věděl.
 
 Aktualizujte svůj `hardhat.config.js` tak, aby vypadal takto:
 
-```
-require('dotenv').config();
+```js
+import { existsSync } from "node:fs"
+import hardhatEthers from "@nomicfoundation/hardhat-ethers"
+import { configVariable, defineConfig } from "hardhat/config"
 
-require("@nomiclabs/hardhat-ethers");
-const { API_URL, PRIVATE_KEY } = process.env;
+// Načte API_URL a PRIVATE_KEY ze souboru .env do process.env, pokud existuje
+if (existsSync(".env")) process.loadEnvFile()
 
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-module.exports = {
-   solidity: "0.7.3",
-   defaultNetwork: "sepolia",
-   networks: {
-      hardhat: {},
-      sepolia: {
-         url: API_URL,
-         accounts: [`0x${PRIVATE_KEY}`]
-      }
-   },
-}
+export default defineConfig({
+  plugins: [hardhatEthers],
+  solidity: "0.8.34",
+  networks: {
+    sepolia: {
+      type: "http",
+      url: configVariable("API_URL"),
+      accounts: [configVariable("PRIVATE_KEY")],
+    },
+  },
+})
 ```
+
+`configVariable` říká nástroji Hardhat, aby četl každou hodnotu z proměnné prostředí pouze tehdy, když je to potřeba, takže příkazy jako `compile` fungují ještě před nastavením hodnot. Pokud byste raději neuchovávali svůj soukromý klíč v prostém textovém souboru, Hardhat může také číst [konfigurační proměnné ze zašifrovaného úložiště klíčů](https://hardhat.org/docs/guides/configuration-variables).
 
 ## Krok 14: Kompilace našeho kontraktu {#step-14-compile-our-contracts}
 
-Abychom se ujistili, že zatím vše funguje, zkompilujme náš kontrakt. Úloha `compile` je jednou z vestavěných úloh Hardhat.
+Abychom se ujistili, že zatím vše funguje, zkompilujme náš kontrakt. Úloha `compile` je jednou z vestavěných úloh nástroje Hardhat.
 
 Z příkazového řádku spusťte:
 
-```
+```sh
 npx hardhat compile
 ```
 
-Možná dostanete varování ohledně `SPDX license identifier not provided in source file`, ale s tím si nemusíte dělat starosti — doufejme, že vše ostatní vypadá dobře! Pokud ne, vždy můžete napsat na [Discord Alchemy](https://discord.gg/u72VCg3).
+Při první kompilaci si Hardhat stáhne kompilátor Solidity. Poté byste měli vidět něco jako `Compiled 1 Solidity file with solc 0.8.34`. Pokud ne, můžete vždy napsat na [Discord Alchemy](https://discord.gg/gWuC7zB).
 
 ## Krok 15: Napsání našeho skriptu pro nasazení {#step-15-write-our-deploy-scripts}
 
@@ -295,47 +282,52 @@ Nyní, když je náš kontrakt napsán a náš konfigurační soubor je připrav
 
 Přejděte do složky `scripts/` a vytvořte nový soubor s názvem `deploy.js`, do kterého přidejte následující obsah:
 
-```
-async function main() {
-   const HelloWorld = await ethers.getContractFactory("HelloWorld");
+```js
+import { network } from "hardhat"
 
-   // Zahájení nasazení, vrací promise, který se vyhodnotí jako objekt kontraktu
-   const hello_world = await HelloWorld.deploy("Hello World!");
-   console.log("Contract deployed to address:", hello_world.address);}
+const { ethers } = await network.create()
 
-main()
-  .then(() => process.exit(0))
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+
+// Spustí nasazení a vrátí promise, který se vyhodnotí jako objekt kontraktu
+const hello_world = await HelloWorld.deploy("Hello World!")
+await hello_world.waitForDeployment()
+console.log("Contract deployed to address:", await hello_world.getAddress())
 ```
 
-Hardhat odvádí úžasnou práci při vysvětlování toho, co každý z těchto řádků kódu dělá, ve svém [tutoriálu o kontraktech](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), jejich vysvětlení jsme převzali zde.
+Pojďme si projít, co dělá každý z těchto řádků kódu.
 
-```
-const HelloWorld = await ethers.getContractFactory("HelloWorld");
-```
-
-`ContractFactory` v Ethers.js je abstrakce používaná k nasazení nových chytrých kontraktů, takže `HelloWorld` je zde továrna pro instance našeho kontraktu hello world. Při použití pluginu `hardhat-ethers` jsou instance `ContractFactory` a `Contract` ve výchozím nastavení připojeny k prvnímu podepisujícímu (signer).
-
-```
-const hello_world = await HelloWorld.deploy();
+```js
+const { ethers } = await network.create()
 ```
 
-Zavoláním `deploy()` na `ContractFactory` se zahájí nasazení a vrátí se `Promise`, který se vyhodnotí jako `Contract`. Toto je objekt, který má metodu pro každou z funkcí našeho chytrého kontraktu.
+V Hardhat 3 skript otevírá připojení k síti explicitně. `network.create()` se připojí k síti, kterou vyberete pomocí volby `--network` při spuštění skriptu, a plugin `hardhat-ethers` přidá k tomuto připojení objekt `ethers`.
+
+```js
+const HelloWorld = await ethers.getContractFactory("HelloWorld")
+```
+
+`ContractFactory` v ethers.js je abstrakce používaná k nasazení nových chytrých kontraktů, takže `HelloWorld` je zde továrna pro instance našeho kontraktu hello world. Při použití pluginu `hardhat-ethers` jsou instance `ContractFactory` a `Contract` ve výchozím nastavení připojeny k prvnímu podepisujícímu (signer).
+
+```js
+const hello_world = await HelloWorld.deploy("Hello World!")
+```
+
+Zavoláním `deploy()` na `ContractFactory` se zahájí nasazení a vrátí se `Promise`, který se vyřeší na `Contract`. Toto je objekt, který má metodu pro každou z funkcí našeho chytrého kontraktu. Argumenty, které předáte do `deploy()`, jdou do konstruktoru kontraktu, zde je to počáteční zpráva.
+
+`waitForDeployment()` čeká, dokud není transakce nasazení zahrnuta do bloku, a `getAddress()` vrací adresu nového kontraktu. Další podrobnosti najdete v [dokumentaci ke kontraktům ethers.js](https://docs.ethers.org/v6/api/contract/).
 
 ## Krok 16: Nasazení našeho kontraktu {#step-16-deploy-our-contract}
 
 Konečně jsme připraveni nasadit náš chytrý kontrakt! Přejděte do příkazového řádku a spusťte:
 
-```
+```sh
 npx hardhat run scripts/deploy.js --network sepolia
 ```
 
 Poté byste měli vidět něco jako:
 
-```
+```text
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
@@ -343,17 +335,14 @@ Pokud přejdeme na [Etherscan sítě Sepolia](https://sepolia.etherscan.io/) a v
 
 ![etherscan contract](./etherscan-contract.png)
 
-Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a adresa To (Komu) bude uvádět „Contract Creation“ (Vytvoření kontraktu), ale pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli `To`:
+Adresa `From` by se měla shodovat s adresou vašeho účtu MetaMask a adresa `To` bude říkat „Contract Creation“, ale pokud klikneme na transakci, uvidíme adresu našeho kontraktu v poli `To`:
 
 ![etherscan transaction](./etherscan-transaction.png)
 
 Gratulujeme! Právě jste nasadili chytrý kontrakt do řetězce Ethereum 🎉
 
-Abychom pochopili, co se děje pod pokličkou, přejděme na kartu Explorer (Průzkumník) na našem [panelu Alchemy](https://dashboard.alchemy.com/explorer). Pokud máte více aplikací Alchemy, nezapomeňte filtrovat podle aplikace a vybrat „Hello World“.
-![hello world explorer](./hello-world-explorer.png)
+Abyste pochopili, co se děje pod pokličkou, můžete se podívat na požadavky, které vaše aplikace „Hello World“ obdržela na vašem [panelu Alchemy](https://dashboard.alchemy.com/).
 
-Zde uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers pod pokličkou provedly, když jsme zavolali funkci `.deploy()`. Dvě důležitá volání, která zde stojí za zmínku, jsou [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction), což je požadavek na skutečné zapsání našeho kontraktu do řetězce Sepolia, a [`eth_getTransactionByHash`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-by-hash), což je požadavek na přečtení informací o naší transakci na základě hashe (typický vzor při transakcích). Chcete-li se dozvědět více o odesílání transakcí, podívejte se na tento tutoriál o [odesílání transakcí pomocí Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Tam uvidíte hrstku volání JSON-RPC, která pro nás Hardhat/Ethers pod pokličkou provedly, když jsme zavolali funkci `.deploy()`. Dvě důležitá volání, která zde stojí za zmínku, jsou [`eth_sendRawTransaction`](/developers/docs/apis/json-rpc/#eth-sendrawtransaction), což je požadavek na skutečný zápis našeho kontraktu do řetězce Sepolia, a [`eth_getTransactionByHash`](/developers/docs/apis/json-rpc/#eth-gettransactionbyhash), což je požadavek na přečtení informací o naší transakci na základě hashe (typický vzor při odesílání transakcí). Chcete-li se dozvědět více o odesílání transakcí, podívejte se do [dokumentace k transakcím](/developers/docs/transactions/).
 
-To je pro 1. část tohoto tutoriálu vše, ve 2. části budeme s naším chytrým kontraktem skutečně [interagovat](/developers/tutorials/hello-world-smart-contract-fullstack/#part-2-interact-with-your-smart-contract) tím, že aktualizujeme naši počáteční zprávu, a ve 3. části [publikujeme náš chytrý kontrakt na Etherscanu](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan), aby všichni věděli, jak s ním interagovat.
-
-**Chcete se o Alchemy dozvědět více? Podívejte se na náš [web](https://www.alchemy.com/eth). Nechcete zmeškat žádnou novinku? Přihlaste se k odběru našeho newsletteru [zde](https://www.alchemy.com/newsletter)! Nezapomeňte se také připojit k našemu [Discordu](https://discord.gg/u72VCg3).**.
+To je pro tento tutoriál vše. Dále můžete [vytvořit uživatelské rozhraní pro váš kontrakt](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
