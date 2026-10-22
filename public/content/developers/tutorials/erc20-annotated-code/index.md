@@ -18,7 +18,7 @@ tokens. In this article we will analyze the
 [interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 This is annotated source code. If you want to implement ERC-20,
-[read this tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[read this tutorial](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## The Interface {#the-interface}
 

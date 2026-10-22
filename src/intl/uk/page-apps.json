@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Фільтрувати за",
   "page-apps-filter-all": "Усі",
   "page-apps-showing": "Показано",
-  "page-apps-visit-app": "Відвідати {appName}",
-  "page-apps-see-next": "Дивитися далі",
-  "page-apps-info-title": "Інформація",
   "page-apps-info-founded": "Засновано",
   "page-apps-info-creator": "Творець",
-  "page-apps-info-last-updated": "Останнє оновлення",
-  "page-apps-gallery-title": "Галерея",
-  "page-apps-gallery-screenshot-alt": "Скриншот {index} {appName}, що показує інтерфейс застосунку",
-  "page-apps-gallery-modal-title": "Скриншоти {appName}",
+  "page-apps-info-languages": "Мови",
+  "page-apps-info-listing-reviewed": "Інформацію перевірено",
+  "page-apps-info-listing-reviewed-tooltip": "Коли востаннє перевірялася інформація про цей застосунок на ethereum.org. Це не вказує на те, коли востаннє змінювався сам застосунок.",
   "page-apps-more-apps-like-this": "Більше схожих застосунків",
-  "page-apps-by-company": "від {company}",
-  "page-apps-today": "Сьогодні",
-  "page-apps-one-day-ago": "1 день тому",
-  "page-apps-days-ago": "{days} дн. тому"
+  "page-apps-detail-meta-title": "Застосунки Етеріуму - {name}"
 }

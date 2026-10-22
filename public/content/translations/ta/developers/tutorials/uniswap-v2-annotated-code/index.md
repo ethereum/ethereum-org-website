@@ -135,7 +135,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-வழிதல் (overflows) மற்றும் குறைதல் (underflows) ஆகியவற்றைத் தவிர்க்க [SafeMath நிரலகம்](https://docs.openzeppelin.com/contracts/2.x/api/math) பயன்படுத்தப்படுகிறது. இது முக்கியமானது, இல்லையெனில் ஒரு மதிப்பு `-1` ஆக இருக்க வேண்டிய இடத்தில், அதற்குப் பதிலாக `2^256-1` ஆக இருக்கும் சூழ்நிலை ஏற்படலாம்.
+வழிதல் (overflows) மற்றும் குறைதல் (underflows) ஆகியவற்றைத் தவிர்க்க [SafeMath நிரலகம்](https://docs.openzeppelin.com/contracts/3.x/api/math) பயன்படுத்தப்படுகிறது. இது முக்கியமானது, இல்லையெனில் ஒரு மதிப்பு `-1` ஆக இருக்க வேண்டிய இடத்தில், அதற்குப் பதிலாக `2^256-1` ஆக இருக்கும் சூழ்நிலை ஏற்படலாம்.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1672,7 +1672,7 @@ Solidity-இல் ஒரு செயற்கூறு அளவுருவ�
 
 ## நிரலகங்கள் {#libraries}
 
-[SafeMath நிரலகம்](https://docs.openzeppelin.com/contracts/2.x/api/math) நன்கு ஆவணப்படுத்தப்பட்டுள்ளது, எனவே அதை இங்கே ஆவணப்படுத்த வேண்டிய அவசியமில்லை.
+[SafeMath நிரலகம்](https://docs.openzeppelin.com/contracts/3.x/api/math) நன்கு ஆவணப்படுத்தப்பட்டுள்ளது, எனவே அதை இங்கே ஆவணப்படுத்த வேண்டிய அவசியமில்லை.
 
 ### Math {#math}
 

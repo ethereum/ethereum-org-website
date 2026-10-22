@@ -101,7 +101,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "learn/ethereum-vs-bitcoin", startDepth: 1 }}
+            breadcrumbs={{ slug: "ethereum-vs-bitcoin" }}
             heroImg={heroImg}
             title={t("page-ethereum-vs-bitcoin-title")}
             description={t("page-ethereum-vs-bitcoin-description-1")}

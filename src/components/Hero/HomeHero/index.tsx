@@ -1,11 +1,14 @@
-import { Suspense } from "react"
+import { Fragment, type ReactNode, Suspense } from "react"
 import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
+import { ABTest } from "@/components/AB"
 import { ChevronNext } from "@/components/Chevron"
+import HomeSearchCTA from "@/components/Homepage/HomeSearchCTA"
+import HomeSearchInput from "@/components/Homepage/HomeSearchInput"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -16,6 +19,8 @@ const PersonaModalCTA = dynamic(
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import heroBase from "@/public/images/home/hero.png"
 import hero2xl from "@/public/images/home/hero-2xl.png"
 
@@ -24,6 +29,8 @@ type HomeHeroProps = ClassNameProp & {
   image2xl?: StaticImageData
   alt?: string
   eventCategory?: string
+  /** Set only on the A/B-coded homepage; absent, the button renders as before. */
+  searchCtaVariant?: number
 }
 
 const HomeHero = async ({
@@ -32,8 +39,12 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
   eventCategory = "Homepage",
+  searchCtaVariant,
 }: HomeHeroProps) => {
   const t = await getTranslations("page-index")
+  const tCommon = await getTranslations("common")
+  // Asking is offered on the default locale only; elsewhere the button searches.
+  const canAsk = (await getLocale()) === DEFAULT_LOCALE
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
   const alt = altProp ?? t("page-index-hero-image-alt")
@@ -61,9 +72,48 @@ const HomeHero = async ({
   delete (rest as Record<string, unknown>).blurWidth
   delete (rest as Record<string, unknown>).blurHeight
 
+  const searchLabel = canAsk ? tCommon("docsearch-ask-ai") : tCommon("search")
+
+  const startHere = (
+    <Suspense
+      fallback={
+        <Button variant="solid" size="lg" className="gap-2 pe-6!">
+          {t("page-index-hero-cta")}
+          <ChevronNext className="size-5" />
+        </Button>
+      }
+    >
+      <PersonaModalCTA eventCategory={eventCategory} />
+    </Suspense>
+  )
+
+  // Both arms share the layout: side by side, stacked full width below `sm`.
+  const ctaRow = (searchCta: ReactNode) => (
+    <div className="flex flex-col items-center gap-4 max-sm:w-full sm:flex-row">
+      {startHere}
+      {searchCta}
+    </div>
+  )
+
+  const buttonCta = ctaRow(
+    <HomeSearchCTA
+      ask={canAsk}
+      label={searchLabel}
+      eventCategory={eventCategory}
+    />
+  )
+  const inputCta = ctaRow(
+    <HomeSearchInput
+      ask={canAsk}
+      label={searchLabel}
+      eventCategory={eventCategory}
+    />
+  )
+
   return (
     <section className={cn("w-full", className)}>
-      <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
+      {/* 25.75rem = nav + top padding + morpher + two h1 lines + 6rem for a temporary banner */}
+      <div className="h-[clamp(200px,calc(100svh_-_25.75rem),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_25.75rem),380px)] lg:h-[clamp(350px,calc(100svh_-_25.75rem),480px)]">
         <picture>
           <source
             media={`(min-width: ${breakpointAsNumber["2xl"]}px)`}
@@ -100,16 +150,18 @@ const HomeHero = async ({
               {t("page-index-hero-subtitle")}
             </p>
 
-            <Suspense
-              fallback={
-                <Button variant="solid" size="lg" className="gap-2">
-                  {t("page-index-hero-cta")}
-                  <ChevronNext className="size-5" />
-                </Button>
-              }
-            >
-              <PersonaModalCTA eventCategory={eventCategory} />
-            </Suspense>
+            {searchCtaVariant === undefined ? (
+              buttonCta
+            ) : (
+              <ABTest
+                testKey="HomeSearchCTA"
+                variantIndex={searchCtaVariant}
+                variants={[
+                  <Fragment key="original">{buttonCta}</Fragment>,
+                  <Fragment key="AskInput">{inputCta}</Fragment>,
+                ]}
+              />
+            )}
           </div>
         </div>
       </div>

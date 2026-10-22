@@ -133,26 +133,25 @@ export const hourlyTask = schedules.task({
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
 })
 
-// ─── Global failure handler → Sentry + Discord ───
+// ─── Global failure handler → Sentry + Mattermost ───
 tasks.onFailure(async ({ ctx, error }) => {
   Sentry.captureException(error, {
     tags: { module: "data-layer" },
     extra: { taskId: ctx.task.id },
   })
 
-  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  const webhookUrl = process.env.MATTERMOST_ALERTS_WEBHOOK_URL
   if (!webhookUrl) return
 
   await fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      embeds: [
+      attachments: [
         {
           title: `Data Fetch Failed: ${ctx.task.id}`,
-          color: 0xff0000,
-          description: String(error).slice(0, 2000),
-          timestamp: new Date().toISOString(),
+          color: "#ff0000",
+          text: String(error).slice(0, 2000),
         },
       ],
     }),

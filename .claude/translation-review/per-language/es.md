@@ -111,3 +111,18 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:102: ETHGlossary deviation. The `layer-2-l2` entry (high confidence, no script_rule) is `capa 2 (l2)`, with a note to keep it lowercase in body text. This PR changed the old `(l2)` to `(L2)`. The rule is " (`[capa 2 (L2)](/layer-2/)` -> `[capa 2 (l2)](/layer-2/)`)
+- 8 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is accurate and complies with the glossary across a large rewrite of prediction-markets and the plasma tutorial. The fixes needed are three English tag labels in founders and one L2 casing deviation. The rest are tú/usted and terminology consistency issues for a native reviewer.

@@ -62,7 +62,7 @@ safe-outputs:
           env:
             GH_TOKEN: ${{ steps.app-token.outputs.token }}
             REPO: ${{ github.repository }}
-            EVENT_PR: ${{ github.event.pull_request.number }}
+            EVENT_PR: ${{ github.event.pull_request.number || github.event.issue.number || inputs.pr }}
             EVENT_SHA: ${{ github.event.pull_request.head.sha }}
             RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           run: |
@@ -79,6 +79,7 @@ safe-outputs:
 
             if [ -n "$EVENT_PR" ]; then
               [ "$pr" = "$EVENT_PR" ] || { echo "::error::PR #$pr is not the triggering PR"; exit 1; }
+              gh api "repos/$REPO/pulls/$pr" --jq '.state' | grep -qx open || { echo "PR #$pr closed before the review finished"; exit 0; }
             else
               # The agent can write files, so sweeper scope is re-checked here rather than trusted from its workspace.
               gh api "repos/$REPO/pulls/$pr" --jq '.state == "open" and (.draft | not) and .user.type != "Bot"' | grep -qx true \

@@ -73,10 +73,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "ethereum-history-founder-and-ownership",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "ethereum-history-founder-and-ownership" }}
             heroImg={heroImg}
             title={t("page-ethereum-history-founder-and-ownership-title")}
             description={t(

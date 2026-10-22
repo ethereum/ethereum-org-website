@@ -125,6 +125,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               "page-contributing-translation-program-acknowledgements-translation-leaderboard-1"
             )}
           </p>
+          <p>
+            {t.rich(
+              "page-contributing-translation-program-acknowledgements-translatathon-leaderboard",
+              {
+                a: (chunks) => (
+                  <InlineLink href="/contributing/translation-program/translatathon/leaderboard/">
+                    {chunks}
+                  </InlineLink>
+                ),
+              }
+            )}
+          </p>
         </Section>
 
         <Section className="space-y-8">

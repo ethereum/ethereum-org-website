@@ -12,7 +12,7 @@ lang: vi
 published: 2024-06-29
 ---
 
-Bạn đã viết một ứng dụng phi tập trung (dapp) mới tuyệt vời. Bạn thậm chí đã viết một [giao diện người dùng](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) cho nó. Nhưng bây giờ bạn sợ rằng ai đó sẽ cố gắng kiểm duyệt nó bằng cách đánh sập giao diện người dùng của bạn, vốn chỉ là một máy chủ trên đám mây. Trong hướng dẫn này, bạn sẽ học cách tránh bị kiểm duyệt bằng cách đưa giao diện người dùng của mình lên **[hệ thống tệp liên hành tinh (IPFS)](https://ipfs.tech/developers/)** để bất kỳ ai quan tâm đều có thể ghim nó trên một máy chủ để truy cập trong tương lai.
+Bạn đã viết một ứng dụng phi tập trung (dapp) mới tuyệt vời. Bạn thậm chí đã viết một [giao diện người dùng](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) cho nó. Nhưng bây giờ bạn sợ rằng ai đó sẽ cố gắng kiểm duyệt nó bằng cách đánh sập giao diện người dùng của bạn, vốn chỉ là một máy chủ trên đám mây. Trong hướng dẫn này, bạn sẽ học cách tránh bị kiểm duyệt bằng cách đưa giao diện người dùng của mình lên **[hệ thống tệp liên hành tinh (IPFS)](https://docs.ipfs.tech/)** để bất kỳ ai quan tâm đều có thể ghim nó trên một máy chủ để truy cập trong tương lai.
 
 Bạn có thể sử dụng một dịch vụ của bên thứ ba như [Fleek](https://resources.fleek.xyz/docs/) để thực hiện toàn bộ công việc. Hướng dẫn này dành cho những người muốn tự làm đủ nhiều để hiểu những gì họ đang làm ngay cả khi việc đó tốn nhiều công sức hơn.
 

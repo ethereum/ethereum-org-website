@@ -3,9 +3,10 @@
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
 # branch of this repo, and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
-# at most $LIMIT.
+# at most $LIMIT. With PR_NUMBER set (a `/review` comment or `pr` dispatch input), only that PR if it is open and not a
+# release/intl/automated branch of this repo; drafts, bot PRs and reviewed PRs are allowed.
 #
-# Env: REPO (owner/name), GH_TOKEN. Writes to $OUT_DIR (default /tmp/gh-aw/agent):
+# Env: REPO (owner/name), GH_TOKEN, PR_NUMBER (optional). Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
 # Also fetches each PR's head as the local branch pr-<n>-head (never checked out).
@@ -15,7 +16,14 @@ OUT_DIR="${OUT_DIR:-/tmp/gh-aw/agent}"
 LIMIT="${LIMIT:-5}"
 mkdir -p "$OUT_DIR"
 
-gh api graphql --paginate \
+if [ -n "${PR_NUMBER:-}" ]; then
+  gh api "repos/$REPO/pulls/$PR_NUMBER" --jq '
+    if .state == "open" and (.head.repo.full_name != .base.repo.full_name
+      or (.head.ref | test("^(staging|dev)$|^intl/|^automated") | not))
+    then [.number] else [] end' > "$OUT_DIR/candidates.json"
+fi
+
+[ -n "${PR_NUMBER:-}" ] || gh api graphql --paginate \
   -F owner="${REPO%%/*}" -F name="${REPO##*/}" \
   -f query='
 query($owner: String!, $name: String!, $endCursor: String) {

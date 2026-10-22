@@ -84,7 +84,7 @@ W miarę jak coraz więcej walidatorów będzie się wycofywać, maksymalna licz
 
 ### Zestawienie inflacji po The Merge {#post-merge-inflation-breakdown}
 
-- [Całkowita podaż ETH](/eth/supply/): **\~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
+- [Całkowita podaż ETH](/what-is-ether/supply/): **\~120 520 000 ETH** (w momencie The Merge we wrześniu 2022 r.)
 - Emisja w warstwie wykonawczej: **0**
 - Emisja w warstwie konsensusu: Tak samo jak powyżej, **\~0,52%** rocznej stopy emisji (przy 14 milionach całkowitego stakowanego ETH)
 

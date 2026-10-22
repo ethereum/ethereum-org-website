@@ -164,3 +164,23 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
 
 - Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:896 encodes = encrypts (`şifrelediği işlemi` -> `kodladığı işlemi`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation on a `translate` term: `eoa` → `harici sahipli hesap`. The PR moved this away from the glossary (it was `harici olarak sahip olunan`). Flag for human. (`[dışarıdan sahipli bir hesaptır]` -> `[harici sahipli bir hesaptır]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA deviation. (`dışarıdan sahipli hesaplar` -> `harici sahipli hesaplar`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA deviation. (`dışarıdan sahipli bir hesaptan` -> `harici sahipli bir hesaptan`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA deviation. (`dışarıdan sahipli bir hesapsa` -> `harici sahipli bir hesapsa`)
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.

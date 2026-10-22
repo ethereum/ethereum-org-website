@@ -58,18 +58,11 @@
   "page-apps-filter-by": "इसके द्वारा फ़िल्टर करें",
   "page-apps-filter-all": "सभी",
   "page-apps-showing": "दिखा रहे हैं",
-  "page-apps-visit-app": "{appName} पर जाएं",
-  "page-apps-see-next": "अगला देखें",
-  "page-apps-info-title": "जानकारी",
   "page-apps-info-founded": "स्थापित",
   "page-apps-info-creator": "निर्माता",
-  "page-apps-info-last-updated": "अंतिम बार अपडेट किया गया",
-  "page-apps-gallery-title": "गैलरी",
-  "page-apps-gallery-screenshot-alt": "{appName} का स्क्रीनशॉट {index} जो एप्लिकेशन इंटरफ़ेस दिखा रहा है",
-  "page-apps-gallery-modal-title": "{appName} स्क्रीनशॉट",
+  "page-apps-info-languages": "भाषाएँ",
+  "page-apps-info-listing-reviewed": "लिस्टिंग की समीक्षा की गई",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org पर इस ऐप के विवरण की पिछली बार समीक्षा कब की गई थी। यह नहीं दिखाता है कि ऐप में पिछली बार कब बदलाव हुआ था।",
   "page-apps-more-apps-like-this": "इस तरह के और ऐप्स",
-  "page-apps-by-company": "{company} द्वारा",
-  "page-apps-today": "आज",
-  "page-apps-one-day-ago": "1 दिन पहले",
-  "page-apps-days-ago": "{days} दिन पहले"
+  "page-apps-detail-meta-title": "इथेरियम ऐप्स - {name}"
 }

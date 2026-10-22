@@ -20,7 +20,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 
 ## Verfügbare Bibliotheken {#available-libraries}
 
-### Infrastruktur- und Knotendienste {#infrastructure-and-node-services}
+### Infrastruktur- und Knoten-Dienste {#infrastructure-and-node-services}
 
 **Alchemy -** **_Ethereum-Entwicklungsplattform._**
 
@@ -29,19 +29,19 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Node-as-a-Service._**
+**All That Node -** **_Knoten-as-a-Service._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Dokumentation](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast von Bware Labs -** **_Dezentrale APIs für das Ethereum Mainnet und Testnetze._**
+**Blast von Bware Labs -** **_Dezentrale Programmierschnittstellen (APIs) für das Ethereum Mainnet und Testnetze._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Dokumentation](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Bietet effizientere und schnellere RPC-Dienste_**
+**BlockPi -** **_Bietet effizientere und schnellere RPC-Dienste._**
 
 - [blockpi.io](https://blockpi.io/)
 - [Dokumentation](https://docs.blockpi.io/)
@@ -69,12 +69,12 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 - [Dokumentation](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Kostengünstiger EVM-JSON-RPC-Anbieter_**
+**Node RPC - _Kostengünstiger JSON-RPC-Anbieter für die Virtuelle Ethereum-Maschine (EVM)_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Dokumentation](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes - _Full Nodes und Block-Explorer._**
+**NOWNodes - _Vollständige Knoten und Block-Explorer._**
 
 - [NOWNodes.io](https://nownodes.io/)
 - [Dokumentation](https://nownodes.gitbook.io/documentation)
@@ -85,11 +85,17 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 - [Dokumentation](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_Ethereum- und Ethereum Classic-APIs als Service, betrieben durch Open-Source-Software._**
+**Rivet -** **_Ethereum- und Ethereum Classic-APIs als Service, basierend auf Open-Source-Software._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Dokumentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**SolidRPC -** **_EVM-JSON-RPC-Infrastruktur mit vollständigem, Archiv- und schlüssellosem öffentlichem Zugang._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentation](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_Geschwindigkeitsorientierte Ethereum-Knoten als JSON-RPC/WebSockets-API._**
 
@@ -100,7 +106,13 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 
 ### Entwicklungstools {#development-tools}
 
-**ethers-kt -** **_Asynchrone, hochleistungsfähige Kotlin/Java/Android-Bibliothek für EVM-basierte Blockchains._**
+**eth.zig -** **_Eine Zig-Bibliothek für Ethereum mit Application Binary Interface (ABI)-Codierung zur Kompilierzeit und Vertragsbindungen._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentation](https://ethzig.org)
+- [Beispiele](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Asynchrone, hochleistungsfähige Kotlin/Java/Android-Bibliothek für Blockchains, die auf der Virtuellen Ethereum-Maschine (EVM) basieren._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Beispiele](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,7 +124,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 - [Dokumentation](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Python-Tooling -** **_Vielzahl von Bibliotheken für die Ethereum-Interaktion über Python._**
+**Python-Tools -** **_Vielzahl von Bibliotheken für die Interaktion mit Ethereum über Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [Web3.py GitHub](https://github.com/ethereum/web3.py)

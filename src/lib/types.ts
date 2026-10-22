@@ -1525,6 +1525,7 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number
@@ -1595,7 +1596,8 @@ export interface CatalogItem {
   logo?: string | StaticImageData
   banner?: string | StaticImageData
   screenshots: (string | StaticImageData)[]
-  tags: { label: string; status?: TagProps["status"] }[]
+  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
+  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
   subtitle?: string
   chains: ChainName[]
   /** Localized; rendered as markdown. */
@@ -1603,7 +1605,7 @@ export interface CatalogItem {
   primaryLink?: { href: string; label: string }
   socialLinks: CatalogItemLink[]
   infoRows: { label: string; value: ReactNode; tooltip?: string }[]
-  /** Ancestors only; the item's own name closes the trail. */
-  breadcrumbs: { label: string; href: string }[]
+  /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
+  breadcrumbSlug: string
   next?: { name: string; href: string }
 }

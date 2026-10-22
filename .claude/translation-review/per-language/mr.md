@@ -136,3 +136,19 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: glossary `staker` -> `स्टेकर्स` (3x), `peer` -> `पीअर्स` (`सहकाऱ्यांमधील` = among coworkers); "deprecated" `नाकारलेले` (rejected) -> dev `कालबाह्य` (10 sites).
 - Open: glossary `Ethereum Mainnet` uses `इथरियम` vs `Ethereum` entry `इथेरियम` (upstream).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/apis/backend/index.md:38: The glossary term "decentralized" (scriptRule: translate) was changed from the glossary form to a transliteration. This is a regression: dev had विकेंद्रित. (`डिसेंट्रलाइज्ड APIs` -> `विकेंद्रित APIs`)
+- wrapped-eth/index.md:34: The glossary term "validator" (scriptRule: translate, confidence high) is `प्रमाणक`. The locale uses that form 1774 times and `व्हॅलिडेटर` 79 times. This wording was already there before the PR, which (`इथेरियम व्हॅलिडेटर्सद्वारे` -> `इथेरियम प्रमाणकांद्वारे`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Marathi is fluent and closely follows the glossary, including the large new JSON sets (founders, wallet descriptions, stories map). There are no build- or navigation-breaking defects. The two criticals are glossary "translate" deviations that need a person to fix. The rest are small regressions from the retranslation and inconsistencies between files.

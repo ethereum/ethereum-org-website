@@ -135,7 +135,7 @@ Mkataba huu unarithi kutoka kwa `UniswapV2ERC20`, ambayo hutoa kazi za ERC-20 kw
     using SafeMath  for uint;
 ```
 
-[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) inatumika kuepuka kufurika na kupungua. Hili ni muhimu kwa sababu vinginevyo tunaweza kuishia na hali ambapo thamani inapaswa kuwa `-1`, lakini badala yake inakuwa `2^256-1`.
+[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) inatumika kuepuka kufurika na kupungua. Hili ni muhimu kwa sababu vinginevyo tunaweza kuishia na hali ambapo thamani inapaswa kuwa `-1`, lakini badala yake inakuwa `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1672,7 +1672,7 @@ Mkataba huu ulitumika kuhamisha mabadilishano kutoka v1 ya zamani hadi v2. Kwa k
 
 ## Maktaba {#libraries}
 
-[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) imeandikwa vizuri, kwa hivyo hakuna haja ya kuiandika hapa.
+[Maktaba ya SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) imeandikwa vizuri, kwa hivyo hakuna haja ya kuiandika hapa.
 
 ### Hisabati {#math}
 

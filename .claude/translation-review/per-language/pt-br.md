@@ -109,3 +109,25 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desenvolvido por` for Powered by; `Tesourarias`; `Valor garantido/assegurado` split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- page-founders.json:18 Ethereum gender (`meetups locais da Ethereum` -> `meetups locais do Ethereum`)
+- page-founders.json:27 Ethereum gender (`que beneficiam a Ethereum` -> `que beneficiam o Ethereum`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:29: ETHGlossary `swap` gives pt-br `troca`. The loanword was already corrected to `trocas` in PRs #19076 and #19474 (`com swaps, staking` -> `com trocas, staking`)
+- page-wallet-descriptions.json:35: ETHGlossary `swap` = `troca`; the adjective must change to feminine agreement (`com swaps integrados` -> `com trocas integradas`)
+- page-wallet-descriptions.json:37: ETHGlossary `swap` = `troca` (`swaps entre criptomoedas` -> `trocas entre criptomoedas`)
+- page-wallet-descriptions.json:39: ETHGlossary `swap` = `troca`; the article and adjective must change to feminine (`um swap de tokens integrado` -> `uma troca de tokens integrada`)
+- page-wallet-descriptions.json:47: ETHGlossary `swap` = `troca` (`que combina swaps,` -> `que combina trocas,`)
+- page-founders.json:46: ETHGlossary bare `gas` = `gás` (only the compound `gas fee` gives `taxa de gas`) (`"Patrocínio de gas"` -> `"Patrocínio de gás"`)
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and has fewer anglicisms than before (security and app-plasma read well), but the new JSON content regressed on glossary use (`swaps`, `gas`, Ethereum's gender) and has three untranslated founders tags.

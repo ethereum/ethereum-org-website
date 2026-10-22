@@ -47,6 +47,8 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
+// Looser than GitHub's signup rule: legacy handles like `p-` end in a hyphen
+export const GITHUB_USERNAME_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,38}$/
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing
@@ -226,3 +228,6 @@ export const LINE_CLAMP_CLASS_MAPPING = {
 
 export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
 export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))
+
+/** `/#ask` sends a reader straight to the homepage hero's search. */
+export const HOME_SEARCH_HASH = "ask"

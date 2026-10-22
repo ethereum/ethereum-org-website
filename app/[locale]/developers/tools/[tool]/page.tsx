@@ -22,6 +22,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
 import ToolDetailHardNav from "../_components/ToolDetailHardNav"
 import { ToolLinkSections } from "../_components/ToolLinkRows"
@@ -40,12 +41,11 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
   setRequestLocale(locale)
 
-  const [data, { contributors }, t, tCommon, tItem, toolDescriptions] =
+  const [data, { contributors }, t, tItem, toolDescriptions] =
     await Promise.all([
       getDeveloperToolsData(),
       getAppPageContributorInfo("developers/tools", locale as Lang),
       getTranslations({ locale, namespace: "page-developers-tools" }),
-      getTranslations({ locale, namespace: "common" }),
       getTranslations({ locale, namespace: "component-catalog-item" }),
       getTranslations({
         locale,
@@ -68,11 +68,23 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const item = toolToCatalogItem(tool, {
     locale,
     t,
-    tCommon,
     tItem,
     labels,
     next,
   })
+  if (tool.crops_native) {
+    const label = t("page-developers-tools-crops-native")
+    item.tags.push({
+      label,
+      node: (
+        <CropsNativeTag
+          label={label}
+          description={t("page-developers-tools-crops-native-description")}
+          infoLabel={t("page-developers-tools-crops-native-info-label")}
+        />
+      ),
+    })
+  }
 
   return (
     <>
@@ -96,6 +108,7 @@ const Page = async (props: { params: Promise<ToolPageParams> }) => {
                   <ToolCard
                     key={getToolKey(relatedTool)}
                     tool={toToolCard(relatedTool)}
+                    cropsNativeLabel={t("page-developers-tools-crops-native")}
                   />
                 ))}
               </RelatedCatalogItems>

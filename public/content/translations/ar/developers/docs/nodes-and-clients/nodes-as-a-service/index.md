@@ -209,7 +209,7 @@ sidebarDepth: 2
     - الوصول إلى أكثر من 50 عقدة سلسلة كتل
 
 - [**Infura**](https://infura.io/)
-  - [المستندات](https://infura.io/docs)
+  - [المستندات](https://docs.infura.io/)
   - الميزات
     - خيار المستوى المجاني
     - التوسع حسب الحاجة

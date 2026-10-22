@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Filtrer par",
   "page-apps-filter-all": "Tout",
   "page-apps-showing": "Affichage de",
-  "page-apps-visit-app": "Visiter {appName}",
-  "page-apps-see-next": "Voir le suivant",
-  "page-apps-info-title": "Infos",
   "page-apps-info-founded": "Fondé",
   "page-apps-info-creator": "Créateur",
-  "page-apps-info-last-updated": "Dernière mise à jour",
-  "page-apps-gallery-title": "Galerie",
-  "page-apps-gallery-screenshot-alt": "Capture d'écran {index} de {appName} montrant l'interface de l'application",
-  "page-apps-gallery-modal-title": "Captures d'écran de {appName}",
+  "page-apps-info-languages": "Langues",
+  "page-apps-info-listing-reviewed": "Fiche révisée",
+  "page-apps-info-listing-reviewed-tooltip": "Date à laquelle les détails de cette application sur ethereum.org ont été révisés pour la dernière fois. Cela n'indique pas la date de la dernière modification de l'application elle-même.",
   "page-apps-more-apps-like-this": "Plus d'applications de ce type",
-  "page-apps-by-company": "par {company}",
-  "page-apps-today": "Aujourd'hui",
-  "page-apps-one-day-ago": "Il y a 1 jour",
-  "page-apps-days-ago": "Il y a {days} jours"
+  "page-apps-detail-meta-title": "Applications Ethereum - {name}"
 }

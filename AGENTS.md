@@ -152,7 +152,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 
 ## SEO & Meta
 
-- Sitemap generation in `app/sitemap.ts`
+- Sitemap generation in `app/sitemaps/sitemap.ts` (one sitemap per locale, indexed by `app/sitemap.xml/route.ts`)
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
@@ -277,6 +277,10 @@ Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/READM
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+### Runtime constraints
+
+- **`public/content` is not in the Netlify server function** (CDN-only). A page that reads it at render time must stay static (`revalidate: false` getters like `getStaticAppsData`) or have an `outputFileTracingIncludes` entry in `next.config.js`. A finite-`revalidate` getter (e.g. `getEventsData`, 24h) turns the whole route into ISR. Details: `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`.
 
 ## Internal Infrastructure
 
