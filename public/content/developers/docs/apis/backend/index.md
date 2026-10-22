@@ -77,7 +77,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **NOWNodes - _Full Nodes and Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://nownodes.gitbook.io/documentation)
+- [Documentation](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
