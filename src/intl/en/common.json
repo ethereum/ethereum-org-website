@@ -468,6 +468,8 @@
   "page-languages-filter-label": "Filter list",
   "page-languages-filter-placeholder": "Type to filter",
   "page-languages-learn-more": "Learn more about our Translation Program",
+  "page-languages-no-results-header": "Can't find your language",
+  "page-languages-no-results-description": "ethereum.org isn't available in this language.",
   "page-last-updated": "Page last updated",
   "page-not-found": "Page not found",
   "page-not-found-description": "The requested page could not be found.",

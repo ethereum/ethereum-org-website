@@ -4,6 +4,7 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 
 import {
   Command,
+  CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandList,
@@ -60,6 +61,14 @@ const LanguagePickerMenu = ({
       />
 
       <CommandList className="max-h-full">
+        <CommandEmpty className="py-0 text-left text-base">
+          <p className="mb-2 font-bold">
+            {t("page-languages-no-results-header")}
+          </p>
+          <p className="text-body-medium">
+            {t("page-languages-no-results-description")}
+          </p>
+        </CommandEmpty>
         <CommandGroup className="p-0">
           {languages.map((displayInfo) => (
             <MenuItem
