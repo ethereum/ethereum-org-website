@@ -98,10 +98,7 @@ const UpgradeCountdown = () => {
           scalingUpgradeCountdown
         ) : (
           <div className="rounded-full bg-success px-2 py-1 text-xs font-normal text-success-light uppercase">
-            Live Since{" "}
-            {formatDateTime(locale, new Date(upgradeDate), {
-              timeZone: "UTC",
-            })}
+            Live Since {formatDateTime(locale, new Date(upgradeDate))}
           </div>
         )}
       </div>

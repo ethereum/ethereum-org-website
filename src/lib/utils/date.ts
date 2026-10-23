@@ -34,12 +34,15 @@ export function dateTimeFormat(
   return new Intl.DateTimeFormat(locale, finalOptions)
 }
 
-// Use instead of `dateTimeFormat(...).format()` for rendered output; see `normalizeIntlSpaces`.
+// Use for rendered output: UTC + normalized spaces make SSR and client agree.
 export const formatDateTime = (
   locale: string,
   date: Date | number,
   options?: Intl.DateTimeFormatOptions
-): string => normalizeIntlSpaces(dateTimeFormat(locale, options).format(date))
+): string =>
+  normalizeIntlSpaces(
+    dateTimeFormat(locale, { timeZone: "UTC", ...options }).format(date)
+  )
 
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
@@ -74,7 +77,6 @@ export const formatDate = (
     return ""
   }
   return formatDateTime(locale, new Date(date), {
-    timeZone: "UTC",
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -105,7 +107,6 @@ export const formatPartialDate = (
 
   const date = new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1))
   return formatDateTime(locale, date, {
-    timeZone: "UTC",
     year: "numeric",
     ...(month && { month: "long" }),
     ...(day && { day: "numeric" }),

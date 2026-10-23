@@ -61,3 +61,15 @@ for (const [name, produce] of formatters) {
     expect(out).toBe(normalizeIntlSpaces(out))
   })
 }
+
+test("date formatters default to UTC", () => {
+  expect(getLocaleTimestamp("en" as Lang, "2026-09-02")).toBe(
+    "September 2, 2026"
+  )
+  expect(
+    formatDateTime("en-US", new Date("2026-09-02T23:30:00Z"), {
+      hour: "numeric",
+      minute: "2-digit",
+    })
+  ).toBe("11:30 PM")
+})
