@@ -41,7 +41,10 @@ export const formatDateTime = (
   options?: Intl.DateTimeFormatOptions
 ): string =>
   normalizeIntlSpaces(
-    dateTimeFormat(locale, { timeZone: "UTC", ...options }).format(date)
+    dateTimeFormat(locale, {
+      ...options,
+      timeZone: options?.timeZone ?? "UTC",
+    }).format(date)
   )
 
 export const dateToString = (published: Date | string) =>

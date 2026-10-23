@@ -237,6 +237,7 @@ export const formatTorchDate = (timestamp: number): string => {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
+    timeZoneName: "short",
   })
 
   return `${month} ${day}, ${time}`

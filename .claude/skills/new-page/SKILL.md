@@ -80,7 +80,7 @@ Build the `tocItems` array by hand and wrap each prose section in `<Section id>`
 
 ## Step 4 — Scaffold
 
-Build from the Step 2 component map. Reuse-first throughout — no raw `<a>`/`<button>`, no hex colors, logical CSS props (`ms-`/`me-`/…), locale-aware `numberFormat()`/`dateTimeFormat()`. Icons: **lucide in `.tsx`, emoji in markdown** (markdown can't pass the `icon` ReactNode prop).
+Build from the Step 2 component map. Reuse-first throughout — no raw `<a>`/`<button>`, no hex colors, logical CSS props (`ms-`/`me-`/…), locale-aware `numberFormat()`/`formatDateTime()`. Icons: **lucide in `.tsx`, emoji in markdown** (markdown can't pass the `icon` ReactNode prop).
 
 **Markdown page:**
 - Create `public/content/<route>/index.md` with frontmatter (`title`, `description`, `lang: en`, plus `template:` unless static). English only — never hand-write translated copies; the intl-pipeline propagates them.
