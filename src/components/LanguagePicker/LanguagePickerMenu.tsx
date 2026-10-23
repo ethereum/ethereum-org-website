@@ -4,26 +4,22 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 
 import {
   Command,
-  CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandList,
 } from "../ui/command"
 
 import MenuItem from "./MenuItem"
-import NoResultsCallout from "./NoResultsCallout"
 
 type LanguagePickerMenuProps = {
   className?: string
   languages: LocaleDisplayInfo[]
-  onClose: () => void
   onSelect: (value: string) => void
 }
 
 const LanguagePickerMenu = ({
   className,
   languages,
-  onClose,
   onSelect,
 }: LanguagePickerMenuProps) => {
   const t = useTranslations("common")
@@ -64,9 +60,6 @@ const LanguagePickerMenu = ({
       />
 
       <CommandList className="max-h-full">
-        <CommandEmpty className="py-0 text-left text-base">
-          <NoResultsCallout onClose={onClose} />
-        </CommandEmpty>
         <CommandGroup className="p-0">
           {languages.map((displayInfo) => (
             <MenuItem

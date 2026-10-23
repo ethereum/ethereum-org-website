@@ -16,14 +16,12 @@ type LanguagePickerProps = {
   className?: string
   languages: LocaleDisplayInfo[]
   onSelect?: (value: string) => void
-  onNoResultsClose?: () => void
 }
 
 const LanguagePicker = ({
   languages,
   className,
   onSelect,
-  onNoResultsClose,
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { languages: sortedLanguages } = useLanguagePicker(languages)
@@ -60,23 +58,12 @@ const LanguagePicker = ({
     window.location.href = `${href}${window.location.search}${window.location.hash}`
   }
 
-  const handleNoResultsClose = () => {
-    onNoResultsClose?.()
-
-    trackCustomEvent({
-      eventCategory: `Language picker`,
-      eventAction: "ETHGlossary link (no results)",
-      eventName: "glossary.ethereum.org",
-    })
-  }
-
   return (
     <div className={cn("flex flex-col", className)}>
       <LanguagePickerMenu
         className="min-h-0 flex-1 gap-2 overflow-y-auto p-4"
         languages={sortedLanguages}
         onSelect={handleMenuItemSelect}
-        onClose={handleNoResultsClose}
       />
     </div>
   )
