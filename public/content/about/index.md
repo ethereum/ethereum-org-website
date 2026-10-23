@@ -111,6 +111,8 @@ We built and released a [design system](https://www.figma.com/file/NrNxGjBL0Yl1P
 
 Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) and join the conversation in our [#design Discord channel](/discord/).
 
+Looking for logos, illustrations or other brand files? Download them from our [assets page](/assets/).
+
 ## Style guide {#style-guide}
 
 We have a [style guide](/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
@@ -122,6 +124,10 @@ We welcome feedback on our design principles, design system and the style guide.
 ## License {#license}
 
 The ethereum.org website is open source and built under an [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) unless otherwise specified. More on [terms of use](/terms-of-use/) of ethereum.org.
+
+## Your privacy {#your-privacy}
+
+ethereum.org uses Matomo for privacy-preserving analytics, and you can opt out at any time. Read our [cookie policy](/cookie-policy/) and [privacy policy](/privacy-policy/) for details.
 
 ## Open jobs {#open-jobs}
 

@@ -104,7 +104,7 @@ If you run multiple validators, you can consolidate them into a single compoundi
 
 ## Get started on the Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the staking deposit contract. A checklist is provided to make sure you've covered everything to get your validator set up safely.
+The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the [staking deposit contract](/staking/deposit-contract/). A checklist is provided to make sure you've covered everything to get your validator set up safely.
 
 <StakingLaunchpadWidget />
 
