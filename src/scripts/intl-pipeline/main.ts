@@ -446,8 +446,8 @@ async function buildGeminiTranslator(
     // file+locale's calls; every other locale's completed work is already
     // committed to the temp branch and still merges.
     //
-    // So the batch is re-sent first: the failures are mis-escaped characters,
-    // which a fresh sample clears. The file budget is not charged for the
+    // So the batch is re-sent first: a malformed envelope is a sampling slip
+    // that a fresh sample clears. The file budget is not charged for the
     // re-sends (see createFileBudget) -- the run fuse still meters them.
     const { translations, tokens } = await translateBatchWithParseRetry(
       batch,

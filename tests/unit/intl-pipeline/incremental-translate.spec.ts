@@ -25,56 +25,103 @@ import {
 import { classifyFailure } from "@/scripts/intl-pipeline/lib/quarantine"
 
 test.describe("parseIncrementalResponse", () => {
-  test("parses valid JSON response", () => {
-    const response = JSON.stringify({
-      "my-section": "Translated content here.",
-      "other-section": "More translated content.",
-    })
-    const result = parseIncrementalResponse(response)
+  const block = (id: string, body: string) =>
+    `<SECTION id="${id}">\n${body}\n</SECTION>`
+
+  test("parses one section per envelope", () => {
+    const result = parseIncrementalResponse(
+      [
+        block("my-section", "Translated content here."),
+        block("other-section", "More translated content."),
+      ].join("\n\n")
+    )
     expect(result["my-section"]).toBe("Translated content here.")
     expect(result["other-section"]).toBe("More translated content.")
   })
 
-  test("strips markdown json code block wrapping", () => {
-    const response = '```json\n{"my-section": "Translated."}\n```'
-    const result = parseIncrementalResponse(response)
+  test("a quote needs no escaping -- the format this replaced", () => {
+    // The ur shape: every <span dir="ltr"> used to be a \" the model had to
+    // get right inside a JSON string. Here it is just a quote.
+    const body = 'ایک <span dir="ltr">NFT</span> بنایا گیا۔'
+    const result = parseIncrementalResponse(block("a-section", body))
+    expect(result["a-section"]).toBe(body)
+  })
+
+  test("a backslash needs no escaping either", () => {
+    const body = 'echo "Error: no test specified" && exit 1 \\ done'
+    const result = parseIncrementalResponse(block("a-section", body))
+    expect(result["a-section"]).toBe(body)
+  })
+
+  test("keeps multi-line bodies and their blank lines", () => {
+    const body = "First paragraph.\n\nSecond paragraph.\n\n- item\n- item"
+    const result = parseIncrementalResponse(block("multi", body))
+    expect(result["multi"]).toBe(body)
+  })
+
+  test("tolerates extra attributes on the tag", () => {
+    const result = parseIncrementalResponse(
+      '<SECTION action="TRANSLATE" id="x" heading="## Title">\nBody.\n</SECTION>'
+    )
+    expect(result["x"]).toBe("Body.")
+  })
+
+  test("strips markdown code block wrapping", () => {
+    const result = parseIncrementalResponse(
+      "```\n" + block("my-section", "Translated.") + "\n```"
+    )
     expect(result["my-section"]).toBe("Translated.")
   })
 
-  test("strips plain code block wrapping", () => {
-    const response = '```\n{"my-section": "Translated."}\n```'
-    const result = parseIncrementalResponse(response)
-    expect(result["my-section"]).toBe("Translated.")
-  })
-
-  test("throws on non-object response", () => {
-    expect(() => parseIncrementalResponse('"just a string"')).toThrow(
-      "Expected a JSON object"
+  test("handles leading and trailing whitespace", () => {
+    const result = parseIncrementalResponse(
+      "  \n" + block("my-section", "Content.") + "\n  "
     )
-  })
-
-  test("throws on array response", () => {
-    expect(() => parseIncrementalResponse("[]")).toThrow(
-      "Expected a JSON object"
-    )
-  })
-
-  test("throws on non-string values", () => {
-    expect(() => parseIncrementalResponse('{"section": 42}')).toThrow(
-      'Section "section" value is not a string'
-    )
-  })
-
-  test("throws on invalid JSON", () => {
-    expect(() => parseIncrementalResponse("not json at all")).toThrow(
-      "Failed to parse"
-    )
-  })
-
-  test("handles response with whitespace", () => {
-    const response = '  \n{"my-section": "Content."}\n  '
-    const result = parseIncrementalResponse(response)
     expect(result["my-section"]).toBe("Content.")
+  })
+
+  test("throws when the response carries no envelope", () => {
+    expect(() =>
+      parseIncrementalResponse("Here are your translations!")
+    ).toThrow(/Failed to parse incremental translation response/)
+  })
+
+  test("throws on the old JSON shape rather than accepting it", () => {
+    // Hard cutover: a JSON body is a failed response, not a second format.
+    expect(() =>
+      parseIncrementalResponse('{"my-section": "Translated."}')
+    ).toThrow(/no <SECTION/)
+  })
+
+  test("a dropped closing tag fails instead of merging two sections", () => {
+    const response = [
+      '<SECTION id="first">',
+      "First body.",
+      '<SECTION id="second">',
+      "Second body.",
+      "</SECTION>",
+    ].join("\n")
+    expect(() => parseIncrementalResponse(response)).toThrow(
+      /section "first" is missing its closing tag/
+    )
+  })
+
+  test("an empty id is refused", () => {
+    expect(() =>
+      parseIncrementalResponse('<SECTION id="">\nBody.\n</SECTION>')
+    ).toThrow(/carries no id/)
+  })
+
+  test("the quarantine classifies every parse failure the same way", () => {
+    const err = (() => {
+      try {
+        parseIncrementalResponse("not an envelope")
+      } catch (e) {
+        return e as Error
+      }
+      throw new Error("expected a throw")
+    })()
+    expect(classifyFailure(err.message)).toBe("parse")
   })
 })
 
@@ -557,17 +604,16 @@ test.describe("replaceJsonValues", () => {
 })
 
 test.describe("translateBatchWithParseRetry", () => {
-  const ok = JSON.stringify({ "a-section": "Contenido traducido." })
+  const ok = '<SECTION id="a-section">\nContenido traducido.\n</SECTION>'
   const batch = { prompt: "PROMPT", irreducible: false }
   const tokens = { input: 10, output: 20 }
   const reply = (text: string) => Promise.resolve({ text, tokensUsed: tokens })
 
-  // The ur shape: a `"` from an attribute the locale file already carries
-  // closes the string early.
-  const unescapedQuote =
-    '{"a-section": "Un <span dir="ltr">NFT</span> acuñado."}'
-  // The mr shape: a bare `\` from reproduced program output.
-  const badEscape = '{"a-section": "echo \\xError\\x && exit 1"}'
+  // No envelope at all -- the model answered in prose.
+  const noEnvelope = "Sure! Here are the translated sections."
+  // A dropped closing tag, which would silently merge two sections.
+  const droppedTag =
+    '<SECTION id="a-section">\nUno.\n<SECTION id="b-section">\nDos.\n</SECTION>'
 
   test("returns the first parsable response without re-sending", async () => {
     let calls = 0
@@ -580,23 +626,23 @@ test.describe("translateBatchWithParseRetry", () => {
     expect(r.tokens).toEqual(tokens)
   })
 
-  test("re-sends an unescaped quote and keeps the retry's result", async () => {
+  test("re-sends a response with no envelope and keeps the retry's result", async () => {
     const seen: string[] = []
     let calls = 0
     const r = await translateBatchWithParseRetry(batch, (prompt) => {
       seen.push(prompt)
-      return reply(++calls === 1 ? unescapedQuote : ok)
+      return reply(++calls === 1 ? noEnvelope : ok)
     })
     expect(calls).toBe(2)
     expect(r.translations["a-section"]).toBe("Contenido traducido.")
     expect(seen[0]).toBe("PROMPT")
-    expect(seen[1]).toContain("NOT VALID JSON")
+    expect(seen[1]).toContain("COULD NOT BE READ")
   })
 
-  test("re-sends a bad escape sequence", async () => {
+  test("re-sends a response whose closing tag was dropped", async () => {
     let calls = 0
     const r = await translateBatchWithParseRetry(batch, () =>
-      reply(++calls === 1 ? badEscape : ok)
+      reply(++calls === 1 ? droppedTag : ok)
     )
     expect(calls).toBe(2)
     expect(r.translations["a-section"]).toBe("Contenido traducido.")
@@ -605,7 +651,7 @@ test.describe("translateBatchWithParseRetry", () => {
   test("bills every attempt, not just the one that parsed", async () => {
     let calls = 0
     const r = await translateBatchWithParseRetry(batch, () =>
-      reply(++calls === 1 ? unescapedQuote : ok)
+      reply(++calls === 1 ? noEnvelope : ok)
     )
     expect(r.tokens).toEqual({ input: 20, output: 40 })
   })
@@ -615,7 +661,7 @@ test.describe("translateBatchWithParseRetry", () => {
     await expect(
       translateBatchWithParseRetry(batch, () => {
         calls++
-        return reply(unescapedQuote)
+        return reply(noEnvelope)
       })
     ).rejects.toThrow(/Failed to parse incremental translation response/)
     expect(calls).toBe(PARSE_ATTEMPTS)
@@ -623,7 +669,7 @@ test.describe("translateBatchWithParseRetry", () => {
 
   test("the quarantine still classifies the exhausted failure as parse", async () => {
     const err = await translateBatchWithParseRetry(batch, () =>
-      reply(unescapedQuote)
+      reply(noEnvelope)
     ).catch((e: Error) => e)
     expect(classifyFailure((err as Error).message)).toBe("parse")
   })
@@ -632,7 +678,7 @@ test.describe("translateBatchWithParseRetry", () => {
     const attempts: number[] = []
     await translateBatchWithParseRetry(
       batch,
-      () => reply(unescapedQuote),
+      () => reply(noEnvelope),
       (attempt) => attempts.push(attempt)
     ).catch(() => {})
     expect(attempts).toEqual([1, 2])
@@ -650,7 +696,7 @@ test.describe("translateBatchWithParseRetry", () => {
     await expect(
       translateBatchWithParseRetry(flushToCeiling, () => {
         calls++
-        return reply(unescapedQuote)
+        return reply(noEnvelope)
       })
     ).rejects.toThrow(/Failed to parse incremental translation response/)
     // Sending it would have earned a cost-guard refusal instead, which
@@ -660,7 +706,7 @@ test.describe("translateBatchWithParseRetry", () => {
 
   test("the refused re-send still quarantines as parse", async () => {
     const err = await translateBatchWithParseRetry(flushToCeiling, () =>
-      reply(unescapedQuote)
+      reply(noEnvelope)
     ).catch((e: Error) => e)
     expect(classifyFailure((err as Error).message)).toBe("parse")
   })
@@ -669,7 +715,7 @@ test.describe("translateBatchWithParseRetry", () => {
     let calls = 0
     const r = await translateBatchWithParseRetry(
       { ...flushToCeiling, irreducible: true },
-      () => reply(++calls === 1 ? unescapedQuote : ok)
+      () => reply(++calls === 1 ? noEnvelope : ok)
     )
     expect(calls).toBe(2)
     expect(r.translations["a-section"]).toBe("Contenido traducido.")
@@ -691,14 +737,14 @@ test.describe("translateBatchWithParseRetry", () => {
     ).toBeLessThanOrEqual(RETRY_NOTE_RESERVE_BYTES)
   })
 
-  test("the retry note names both escaping rules", async () => {
+  test("the retry note restates the envelope", async () => {
     let sent = ""
     await translateBatchWithParseRetry(batch, (prompt) => {
       sent = prompt
-      return reply(unescapedQuote)
+      return reply(noEnvelope)
     }).catch(() => {})
-    expect(sent).toContain('dir=\\"ltr\\"')
-    expect(sent).toContain("Escape every backslash")
+    expect(sent).toContain('<SECTION id="the-section-id">')
+    expect(sent).toContain("do not escape quotes or backslashes")
     expect(sent).toContain("PROMPT")
   })
 })

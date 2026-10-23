@@ -5,8 +5,8 @@
  * this module sends ONE batched Gemini call per file with all changed
  * sections marked for translation and unchanged sections as context.
  *
- * Gemini returns translated sections as JSON keyed by section ID,
- * which are surgically placed back into the locale file.
+ * Gemini returns each translated section in the same <SECTION> envelope it
+ * arrived in, which are surgically placed back into the locale file.
  */
 
 import { MAX_PROMPT_BYTES } from "../../constants"
@@ -84,8 +84,8 @@ export function renderSectionBlock(s: {
  * tagged TRANSLATE; unchanged sections are tagged CONTEXT (existing
  * locale translation for voice/tone consistency).
  *
- * Gemini returns only the TRANSLATE sections as a JSON object
- * keyed by section ID.
+ * Gemini returns only the TRANSLATE sections, each in its own <SECTION>
+ * envelope.
  */
 export function buildIncrementalPrompt(
   options: IncrementalTranslateOptions
@@ -134,13 +134,17 @@ Wrapper placeholders (translate text between tags): <HTML-PLACEHOLDER-LINK-*****
 You MAY reorder wrapper placeholders to match natural ${targetLanguage} word order.
 
 OUTPUT FORMAT:
-Return a JSON object where each key is a section ID from the TRANSLATE list, and the value is the translated content for that section. Example:
-{
-  "section-id-1": "translated content...",
-  "section-id-2": "translated content..."
-}
+Return each translated section in the same envelope it arrived in, one block per section ID in the TRANSLATE list, with the opening and closing tags each on their own line. Example:
 
-Output ONLY the JSON object. No markdown wrapping, no explanations, no XML tags.
+<SECTION id="section-id-1">
+translated content...
+</SECTION>
+
+<SECTION id="section-id-2">
+translated content...
+</SECTION>
+
+Write the translation exactly as it should appear in the file: quotes, backslashes and newlines are literal and MUST NOT be escaped. Return nothing for CONTEXT sections. No JSON, no markdown wrapping, no explanations.
 
 === SECTIONS ===
 ${sectionBlocks}
@@ -151,8 +155,18 @@ ${sectionBlocks}
 // Response parser
 // ---------------------------------------------------------------------------
 
+/** One returned section: the id, then the body up to a closing tag. */
+const RESPONSE_SECTION_RE =
+  /<SECTION\b[^>]*\bid="([^"]*)"[^>]*>([\s\S]*?)<\/SECTION\s*>/g
+
 /**
- * Parse Gemini's JSON response into a section ID -> translation map.
+ * Parse Gemini's response into a section ID -> translation map.
+ *
+ * The response repeats the <SECTION> envelope the prompt sent, so a quote or
+ * a backslash in the translation is just that character. The format used to
+ * be JSON, which made every `"` in an attribute (RTL files carry ~100
+ * `<span dir="ltr">` wrappers) a `\"` the model had to get right; it did not,
+ * and five tasks a run died on it.
  */
 export function parseIncrementalResponse(
   responseText: string
@@ -160,30 +174,40 @@ export function parseIncrementalResponse(
   // Strip markdown code block wrapping if present
   let cleaned = responseText.trim()
   if (cleaned.startsWith("```")) {
-    cleaned = cleaned.replace(/^```(?:json)?\s*\n/, "").replace(/\n```\s*$/, "")
+    cleaned = cleaned.replace(/^```[a-zA-Z]*\s*\n/, "").replace(/\n```\s*$/, "")
   }
 
-  try {
-    const parsed = JSON.parse(cleaned)
-    if (
-      typeof parsed !== "object" ||
-      parsed === null ||
-      Array.isArray(parsed)
-    ) {
-      throw new Error("Expected a JSON object with section IDs as keys")
+  const translations: Record<string, string> = {}
+  for (const m of cleaned.matchAll(RESPONSE_SECTION_RE)) {
+    const id = m[1]
+    if (!id) {
+      throw fail("a <SECTION> block carries no id", responseText)
     }
-    // Validate all values are strings
-    for (const [key, value] of Object.entries(parsed)) {
-      if (typeof value !== "string") {
-        throw new Error(`Section "${key}" value is not a string`)
-      }
+    // A body that swallowed the next opening tag means a closing tag was
+    // dropped. The lazy match would merge two sections into one and lose the
+    // second silently, so fail and let the retry re-send instead.
+    if (m[2].includes("<SECTION")) {
+      throw fail(`section "${id}" is missing its closing tag`, responseText)
     }
-    return parsed as Record<string, string>
-  } catch (error) {
-    throw new Error(
-      `Failed to parse incremental translation response: ${error instanceof Error ? error.message : String(error)}\nRaw response (first 500 chars): ${responseText.slice(0, 500)}`
+    // The envelope puts the body on its own lines; those two newlines are
+    // the envelope's, not the content's.
+    translations[id] = m[2].replace(/^\n/, "").replace(/\n$/, "")
+  }
+
+  if (Object.keys(translations).length === 0) {
+    throw fail(
+      'no <SECTION id="...">...</SECTION> block found in the response',
+      responseText
     )
   }
+
+  return translations
+}
+
+function fail(reason: string, responseText: string): Error {
+  return new Error(
+    `Failed to parse incremental translation response: ${reason}\nRaw response (first 500 chars): ${responseText.slice(0, 500)}`
+  )
 }
 
 // ---------------------------------------------------------------------------
@@ -201,24 +225,22 @@ function parserComplaint(error: Error): string {
 }
 
 /**
- * Sent back with the prompt after a response fails to parse.
+ * Sent back with the prompt after a response cannot be read.
  *
- * Both observed failure shapes are escaping, not translation: a bare `"` from
- * an attribute the locale file already carries (RTL files reach ~100
- * `<span dir="ltr">` wrappers, each one a chance to slip), and a bare `\` from
- * source text that contains one. The model is told which it produced, since
- * the parser's message carries the offset.
+ * With the envelope format the remaining failure is structural -- a dropped
+ * or malformed tag -- so the note restates the envelope rather than escaping
+ * rules. The model is told what the reader saw.
  */
 function reparseInstruction(error: Error): string {
   return [
     "",
-    "YOUR PREVIOUS RESPONSE WAS NOT VALID JSON and could not be used.",
-    `The parser reported: ${parserComplaint(error)}`,
-    "Send the translations as ONE valid JSON object:",
-    '- Escape every double quote inside a value as \\" -- attribute syntax',
-    '  like <span dir="ltr"> must be written <span dir=\\"ltr\\">.',
-    "- Escape every backslash as \\\\ and every newline as \\n.",
-    "- Output the JSON object only: no markdown fences, no commentary.",
+    "YOUR PREVIOUS RESPONSE COULD NOT BE READ and was discarded.",
+    `The reader reported: ${parserComplaint(error)}`,
+    "Send every translated section again, each in its own envelope:",
+    '- Open with <SECTION id="the-section-id"> on its own line.',
+    "- Close with </SECTION> on its own line.",
+    "- Write the translation literally -- do not escape quotes or backslashes.",
+    "- Output the blocks only: no JSON, no markdown fences, no commentary.",
   ].join("\n")
 }
 
