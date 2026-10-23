@@ -91,7 +91,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/cleanup-playbook.md`** -- refactoring existing anti-patterns; the "old pattern -> new pattern" map.
 - **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys, `setRequestLocale`.
 - **`references/server-vs-client.md`** -- `"use client"` decisions and SSR-boundary structure.
-- **`references/a11y.md`** -- interactive elements, forms, images, heading hierarchy.
+- **`references/a11y.md`** -- interactive elements, forms, images, heading hierarchy, accordion headings.
 - **`references/card-walkthrough.md`** -- any card-shaped UI work.
 - **`references/callout-walkthrough.md`** -- adding or modifying an in-content `Callout`.
 - **`references/page-hero-walkthrough.md`** -- a new page that needs a hero.

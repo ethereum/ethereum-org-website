@@ -23,6 +23,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
 
@@ -153,7 +154,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl text-body-medium">
+                            <h3
+                              id={slugify(`${key}-${country}`, {
+                                unicode: true,
+                              })}
+                              className="mb-2 flex items-center gap-2 text-2xl text-body-medium"
+                            >
                               <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
