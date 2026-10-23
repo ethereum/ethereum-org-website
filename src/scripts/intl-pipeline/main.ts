@@ -428,7 +428,9 @@ async function buildGeminiTranslator(
     `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
   )
 
-  const allTranslations: Record<string, string> = {}
+  // Null prototype -- see parseIncrementalResponse; a section id of
+  // "constructor" must not resolve to Object through the chain.
+  const allTranslations: Record<string, string> = Object.create(null)
   let totalInput = 0
   let totalOutput = 0
 
@@ -490,14 +492,16 @@ async function buildGeminiTranslator(
   )
 
   for (const id of sectionIds) {
-    if (!allTranslations[id]) {
+    if (!Object.hasOwn(allTranslations, id)) {
       console.warn(`  Section "${id}" not returned by LLM`)
     }
   }
 
   return {
     translator: (sectionId: string, englishFallback: string) => {
-      const translated = allTranslations[sectionId]
+      const translated = Object.hasOwn(allTranslations, sectionId)
+        ? allTranslations[sectionId]
+        : undefined
       if (!translated) return englishFallback
       const blocks = codeBlocks.get(sectionId)
       if (!blocks || blocks.length === 0) return translated

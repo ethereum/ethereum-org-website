@@ -185,11 +185,17 @@ export function parseIncrementalResponse(
     cleaned = cleaned.replace(/^```[a-zA-Z]*\s*\n/, "").replace(/\n```\s*$/, "")
   }
 
-  const translations: Record<string, string> = {}
+  // Null prototype: a section id like "constructor" (erc-721-vyper-annotated-code
+  // has one) would otherwise report present on a plain object and read back as
+  // Object itself, defeating both the check below and the English fallback.
+  const translations: Record<string, string> = Object.create(null)
   for (const m of cleaned.matchAll(RESPONSE_SECTION_RE)) {
     const id = ID_ATTR_RE.exec(m[1])?.[1]
     if (!id) {
       throw fail("a <SECTION> block carries no id", responseText)
+    }
+    if (Object.hasOwn(translations, id)) {
+      throw fail(`section "${id}" was returned more than once`, responseText)
     }
     // A body that swallowed the next opening tag means a closing tag was
     // dropped. The lazy match would merge two sections into one and lose the
@@ -216,7 +222,7 @@ export function parseIncrementalResponse(
   // to English, commit that, and stamp the manifest, after which no drift is
   // ever detected again. Demanding every requested id makes that a parse
   // failure the retry can clear.
-  const missing = expectedIds.filter((id) => !(id in translations))
+  const missing = expectedIds.filter((id) => !Object.hasOwn(translations, id))
   if (missing.length > 0) {
     const shown = missing.slice(0, 5).join(", ")
     throw fail(

@@ -179,6 +179,37 @@ test.describe("parseIncrementalResponse", () => {
     expect(result["x"]).toBe("Line one.\r\nLine two.")
   })
 
+  test("a section id named constructor is not reported present", () => {
+    // erc-721-vyper-annotated-code has "#### Constructor {#constructor}" in
+    // English and 21 translations. On a plain object "constructor" in {} is
+    // true, so the missing-id check would wave a dropped section through and
+    // the lookup downstream would return Object itself instead of falling
+    // back to English.
+    expect(() =>
+      parseIncrementalResponse(block("intro", "Hecho."), [
+        "intro",
+        "constructor",
+      ])
+    ).toThrow(/missing 1 of 2 requested section\(s\): constructor/)
+  })
+
+  test("a section id named constructor round-trips when it is returned", () => {
+    const result = parseIncrementalResponse(block("constructor", "Cuerpo."), [
+      "constructor",
+    ])
+    expect(result["constructor"]).toBe("Cuerpo.")
+  })
+
+  test("the same id twice is refused rather than last-one-wins", () => {
+    const response = [
+      block("a-section", "Primero."),
+      block("a-section", "Segundo."),
+    ].join("\n\n")
+    expect(() => parseIncrementalResponse(response, ["a-section"])).toThrow(
+      /section "a-section" was returned more than once/
+    )
+  })
+
   test("the quarantine classifies every parse failure the same way", () => {
     const err = (() => {
       try {
