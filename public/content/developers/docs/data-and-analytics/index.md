@@ -1,6 +1,6 @@
 ---
 title: Data and analytics
-description: How to get onchain analytics and data for use in your dapps
+description: "How to get onchain data for your dapp: indexers, subgraphs, block explorers, SQL analytics platforms and APIs for querying and analyzing Ethereum data."
 lang: en
 ---
 

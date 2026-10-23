@@ -1,6 +1,6 @@
 ---
 title: Home stake your ETH
-description: An overview of how to get started home staking your ETH
+description: "How to home stake your ETH: run your own Ethereum validator with 32 ETH, earn rewards directly from the protocol and help secure the network."
 lang: en
 template: staking
 image: /images/staking/leslie-solo.png

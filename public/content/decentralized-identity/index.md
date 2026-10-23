@@ -1,6 +1,6 @@
 ---
 title: Decentralized identity
-description: What is decentralized identity, and why does it matter?
+description: "What is decentralized identity? Learn how Ethereum lets you own and control your identity, credentials and data without relying on a central provider."
 lang: en
 template: use-cases
 sidebarDepth: 2
