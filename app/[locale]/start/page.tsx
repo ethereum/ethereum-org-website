@@ -192,7 +192,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ]
 
   const rowListClassName =
-    "m-0 list-none divide-y overflow-hidden rounded-base border"
+    "ms-0 list-none divide-y overflow-hidden rounded-base border"
 
   const steps = [
     {
@@ -265,11 +265,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           })
         : t("page-start-steps-apps-cta"),
       footer: (
-        <div className="mt-6 flex flex-col gap-3 border-t pt-8">
+        <section className="border-t pt-space-2x">
           <h3 className="text-xl">{t("page-start-steps-connect-title")}</h3>
           <p>{t("page-start-connect-wallet-description")}</p>
-          <ConnectWallet />
-        </div>
+          <div data-flow="cta">
+            <ConnectWallet />
+          </div>
+        </section>
       ),
     },
     {
@@ -277,9 +279,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       href: "/guides/",
       description: t("page-start-steps-guides-description"),
       action: (
-        <ul className="m-0 flex list-none flex-col gap-2">
+        <ul className="ms-0 list-none">
           {guides.map((guide) => (
-            <li key={guide.id} className="m-0">
+            <li key={guide.id}>
               <InlineLink href={guide.href}>
                 {t(`page-start-steps-guides-${guide.id}`)}
               </InlineLink>
@@ -329,37 +331,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </span>
                     <span className="my-2 w-px flex-1 bg-body-light group-last/step:hidden" />
                   </div>
-                  <div className="flex flex-col gap-4 pt-1.5 pb-14 group-last/step:pb-0">
+                  <div className="flow pt-1.5 pb-space-3x group-last/step:pb-0">
                     <h2 className="text-2xl">
                       <span className="sr-only">{step.number}. </span>
                       {step.title}
                     </h2>
                     <p>{step.description}</p>
                     {step.action}
-                    {step.ctaAsLink ? (
-                      <LinkWithArrow
-                        href={step.href}
-                        customEventOptions={{
-                          eventCategory: "start page",
-                          eventAction: "first steps",
-                          eventName: step.id,
-                        }}
-                      >
-                        {step.cta}
-                      </LinkWithArrow>
-                    ) : (
-                      <ButtonLink
-                        href={step.href}
-                        className="w-fit"
-                        customEventOptions={{
-                          eventCategory: "start page",
-                          eventAction: "first steps",
-                          eventName: step.id,
-                        }}
-                      >
-                        {step.cta}
-                      </ButtonLink>
-                    )}
+                    <div data-flow="cta">
+                      {step.ctaAsLink ? (
+                        <LinkWithArrow
+                          href={step.href}
+                          customEventOptions={{
+                            eventCategory: "start page",
+                            eventAction: "first steps",
+                            eventName: step.id,
+                          }}
+                        >
+                          {step.cta}
+                        </LinkWithArrow>
+                      ) : (
+                        <ButtonLink
+                          href={step.href}
+                          customEventOptions={{
+                            eventCategory: "start page",
+                            eventAction: "first steps",
+                            eventName: step.id,
+                          }}
+                        >
+                          {step.cta}
+                        </ButtonLink>
+                      )}
+                    </div>
                     {step.footer}
                   </div>
                 </li>
