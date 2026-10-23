@@ -9,7 +9,7 @@
   "page-start-steps-wallet-cta": "Choose from {count, plural, one {{countFormatted} wallet} other {{countFormatted} wallets}}",
   "page-start-steps-wallet-languages": "Available in {count, plural, one {{countFormatted} language} other {{countFormatted} languages}}",
   "page-start-steps-get-eth-title": "Get some ETH",
-  "page-start-steps-get-eth-description": "{count, plural, one {The wallet above lets} other {All {countFormatted} wallets above let}} you buy ETH with a card inside the app, so this can happen without leaving your wallet. You can also buy on an exchange and send it to your own address, or use one of the other routes below.",
+  "page-start-steps-get-eth-description": "{count, plural, one {The wallet above lets} other {All {countFormatted} wallets above let}} you buy ETH with a card inside the app, so this can happen without leaving your wallet. You can also buy on an exchange and send it to your own address, or see other ways to get ETH.",
   "page-start-steps-get-eth-cta": "Get ETH",
   "page-start-steps-apps-title": "Try an app",
   "page-start-steps-apps-description": "Use your wallet to send money, swap tokens, play games and more.",
