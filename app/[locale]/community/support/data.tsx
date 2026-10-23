@@ -110,6 +110,11 @@ export const sections: {
           eventName: "How to swap tokens",
         },
         {
+          labelKey: "page-community-support-sell-eth",
+          href: "/guides/how-to-sell-eth/",
+          eventName: "How to sell ETH and cash out",
+        },
+        {
           labelKey: "page-community-support-bridge-tokens",
           href: "/guides/how-to-use-a-bridge/",
           eventName: "How to bridge tokens to layer 2",

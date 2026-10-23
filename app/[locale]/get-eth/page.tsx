@@ -258,6 +258,12 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 <p className="max-w-2xl text-center text-lg text-body-medium">
                   {t("page-get-eth-find-exchange-desc")}
                 </p>
+                <p className="max-w-2xl text-center text-body-medium">
+                  {t("page-get-eth-sell-instead")}{" "}
+                  <InlineLink href="/guides/how-to-sell-eth/">
+                    {t("page-get-eth-sell-instead-link")}
+                  </InlineLink>
+                </p>
               </div>
 
               {/* CLIENT SIDE */}

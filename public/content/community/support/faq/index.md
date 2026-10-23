@@ -59,6 +59,15 @@ Transactions on Ethereum can get stuck when the gas fee you set was lower than w
 - [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [How to cancel pending Ethereum transactions](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
+## How do I withdraw my crypto? {#how-to-withdraw}
+
+"Withdraw" can mean different things:
+
+- **To get money into your bank account**, you first need to sell your crypto, in your wallet or on an exchange. See [how to sell ETH and cash out](/guides/how-to-sell-eth/).
+- **To send crypto to another wallet**, see [how to use a wallet](/guides/how-to-use-a-wallet/#send-cryptocurrency).
+- **To move funds from a layer 2 back to Ethereum**, see [how to use a bridge](/guides/how-to-use-a-bridge/).
+- **To unstake ETH**, see [staking withdrawals](/staking/withdrawals/), or check with your staking provider.
+
 ## How can I claim my Ethereum giveaway? {#giveaway-scam}
 
 Ethereum giveaways are scams designed to steal your ETH. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
