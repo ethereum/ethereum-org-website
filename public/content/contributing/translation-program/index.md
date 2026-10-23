@@ -4,11 +4,11 @@ lang: en
 description: Help translate Ethereum by reviewing terms in your language on ETHGlossary. The terms you approve are the ones ethereum.org uses.
 ---
 
-Ethereum should read naturally in every language. The best way to help right now is [ETHGlossary](https://glossary.ethereum.org/?utm_source=ethereum.org&utm_medium=translation-program), a shared, community-reviewed glossary of Ethereum terms in 24 languages.
+Ethereum should read naturally in every language. The best way to help right now is [ETHGlossary](https://glossary.ethereum.org/), a shared, community-reviewed glossary of Ethereum terms in 24 languages.
 
 **The terms you approve are the terms ethereum.org uses in your language.** Wallets, apps and documentation teams can use them too, through the glossary's open API.
 
-<ButtonLink href="https://glossary.ethereum.org/translations?utm_source=ethereum.org&utm_medium=translation-program">
+<ButtonLink href="https://glossary.ethereum.org/translations">
   Review terms in your language
 </ButtonLink>
 
@@ -26,7 +26,7 @@ There is no commitment. Reviewing a single term takes a couple of minutes.
 
 ## Program status {#program-status}
 
-Full-page translation through Crowdin is paused, and we are not accepting new translation submissions there. Reviewing terms on [ETHGlossary](https://glossary.ethereum.org/?utm_source=ethereum.org&utm_medium=translation-program) is how to contribute in the meantime.
+Full-page translation through Crowdin is paused, and we are not accepting new translation submissions there. Reviewing terms on [ETHGlossary](https://glossary.ethereum.org/) is how to contribute in the meantime.
 
 We are deeply grateful to the thousands of community translators who made ethereum.org available in dozens of languages over the years—their work remains live on the site, and their recognition on the [acknowledgements](/contributing/translation-program/acknowledgements/) and [contributors](/contributing/translation-program/contributors/) pages stays in place.
 
