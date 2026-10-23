@@ -171,3 +171,15 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 13 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The prose is fluent and structurally clean, and the new prediction-markets and wallet copy is accurate. The score is pulled down by two retranslations that went back to non-glossary forms: the security page's contract term (the third time this has happened) and app-plasma's transaction term.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Glossary itself splits एथेरियम (Foundation) and इथेरियम.

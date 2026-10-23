@@ -177,3 +177,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 9 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The ja translation is fluent and faithful, and the new prediction-markets, founders and wallet-description content reads well. The main defect is that the security-page retranslation reverted all 24 guideline headings to English (the same failure as #19115). That fix and the three founders tag labels are deterministic.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites; known-patterns #89)
+
+**Notes:**
+
+- Warnings: double を at write-deploy:12; ナンス/ノンス and ガス・リミット/ガスリミット differ between prose and code comments.
