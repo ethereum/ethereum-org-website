@@ -82,6 +82,7 @@ import {
   LLM_PROVIDER,
   MANIFESTS_DIR,
   MAX_BATCHES_PER_FILE,
+  MAX_PLANNED_PROMPT_BYTES,
   MAX_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
@@ -413,7 +414,7 @@ async function buildGeminiTranslator(
   if (oversized.length > 0) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
-        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `${MAX_PLANNED_PROMPT_BYTES}-byte planning ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
         `despite being splittable. Refusing to send.`
     )
   }
@@ -449,7 +450,7 @@ async function buildGeminiTranslator(
     // which a fresh sample clears. The file budget is not charged for the
     // re-sends (see createFileBudget) -- the run fuse still meters them.
     const { translations, tokens } = await translateBatchWithParseRetry(
-      batch.prompt,
+      batch,
       (prompt) =>
         callGeminiRaw(prompt, {
           filePath,

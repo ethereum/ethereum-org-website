@@ -7,6 +7,10 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  MAX_PROMPT_BYTES,
+  RETRY_NOTE_RESERVE_BYTES,
+} from "@/scripts/intl-pipeline/constants"
+import {
   buildIncrementalPrompt,
   buildSectionList,
   extractJsonSections,
@@ -554,6 +558,7 @@ test.describe("replaceJsonValues", () => {
 
 test.describe("translateBatchWithParseRetry", () => {
   const ok = JSON.stringify({ "a-section": "Contenido traducido." })
+  const batch = { prompt: "PROMPT", irreducible: false }
   const tokens = { input: 10, output: 20 }
   const reply = (text: string) => Promise.resolve({ text, tokensUsed: tokens })
 
@@ -569,7 +574,7 @@ test.describe("translateBatchWithParseRetry", () => {
 
   test("returns the first parsable response without re-sending", async () => {
     let calls = 0
-    const r = await translateBatchWithParseRetry("PROMPT", () => {
+    const r = await translateBatchWithParseRetry(batch, () => {
       calls++
       return reply(ok)
     })
@@ -581,7 +586,7 @@ test.describe("translateBatchWithParseRetry", () => {
   test("re-sends an unescaped quote and keeps the retry's result", async () => {
     const seen: string[] = []
     let calls = 0
-    const r = await translateBatchWithParseRetry("PROMPT", (prompt) => {
+    const r = await translateBatchWithParseRetry(batch, (prompt) => {
       seen.push(prompt)
       return reply(++calls === 1 ? unescapedQuote : ok)
     })
@@ -593,7 +598,7 @@ test.describe("translateBatchWithParseRetry", () => {
 
   test("re-sends a bad escape sequence", async () => {
     let calls = 0
-    const r = await translateBatchWithParseRetry("PROMPT", () =>
+    const r = await translateBatchWithParseRetry(batch, () =>
       reply(++calls === 1 ? badEscape : ok)
     )
     expect(calls).toBe(2)
@@ -602,7 +607,7 @@ test.describe("translateBatchWithParseRetry", () => {
 
   test("bills every attempt, not just the one that parsed", async () => {
     let calls = 0
-    const r = await translateBatchWithParseRetry("PROMPT", () =>
+    const r = await translateBatchWithParseRetry(batch, () =>
       reply(++calls === 1 ? unescapedQuote : ok)
     )
     expect(r.tokens).toEqual({ input: 20, output: 40 })
@@ -611,7 +616,7 @@ test.describe("translateBatchWithParseRetry", () => {
   test("gives up after PARSE_ATTEMPTS and throws the parse error", async () => {
     let calls = 0
     await expect(
-      translateBatchWithParseRetry("PROMPT", () => {
+      translateBatchWithParseRetry(batch, () => {
         calls++
         return reply(unescapedQuote)
       })
@@ -620,7 +625,7 @@ test.describe("translateBatchWithParseRetry", () => {
   })
 
   test("the quarantine still classifies the exhausted failure as parse", async () => {
-    const err = await translateBatchWithParseRetry("PROMPT", () =>
+    const err = await translateBatchWithParseRetry(batch, () =>
       reply(unescapedQuote)
     ).catch((e: Error) => e)
     expect(classifyFailure((err as Error).message)).toBe("parse")
@@ -629,16 +634,69 @@ test.describe("translateBatchWithParseRetry", () => {
   test("reports each re-send once, never the final failure", async () => {
     const attempts: number[] = []
     await translateBatchWithParseRetry(
-      "PROMPT",
+      batch,
       () => reply(unescapedQuote),
       (attempt) => attempts.push(attempt)
     ).catch(() => {})
     expect(attempts).toEqual([1, 2])
   })
 
+  // A prompt the planner would never emit, since it reserves
+  // RETRY_NOTE_RESERVE_BYTES; built here to prove the guard behind that reserve.
+  const flushToCeiling = {
+    prompt: "x".repeat(MAX_PROMPT_BYTES),
+    irreducible: false,
+  }
+
+  test("does not re-send when the note would cross the per-call ceiling", async () => {
+    let calls = 0
+    await expect(
+      translateBatchWithParseRetry(flushToCeiling, () => {
+        calls++
+        return reply(unescapedQuote)
+      })
+    ).rejects.toThrow(/Failed to parse incremental translation response/)
+    // Sending it would have earned a cost-guard refusal instead, which
+    // classifies as nothing at all.
+    expect(calls).toBe(1)
+  })
+
+  test("the refused re-send still quarantines as parse", async () => {
+    const err = await translateBatchWithParseRetry(flushToCeiling, () =>
+      reply(unescapedQuote)
+    ).catch((e: Error) => e)
+    expect(classifyFailure((err as Error).message)).toBe("parse")
+  })
+
+  test("an irreducible batch is re-sent even past the ceiling", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      { ...flushToCeiling, irreducible: true },
+      () => reply(++calls === 1 ? unescapedQuote : ok)
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+  })
+
+  test("the note stays within the reserved headroom", async () => {
+    // A parser complaint long enough to blow the reserve if echoed whole: the
+    // offending key is quoted back in the message.
+    const longKey = JSON.stringify({ ["k".repeat(3000)]: 42 })
+    const small = { prompt: "P", irreducible: false }
+    let sent = ""
+    await translateBatchWithParseRetry(small, (prompt) => {
+      sent = prompt
+      return reply(longKey)
+    }).catch(() => {})
+    expect(
+      Buffer.byteLength(sent, "utf-8") -
+        Buffer.byteLength(small.prompt, "utf-8")
+    ).toBeLessThanOrEqual(RETRY_NOTE_RESERVE_BYTES)
+  })
+
   test("the retry note names both escaping rules", async () => {
     let sent = ""
-    await translateBatchWithParseRetry("PROMPT", (prompt) => {
+    await translateBatchWithParseRetry(batch, (prompt) => {
       sent = prompt
       return reply(unescapedQuote)
     }).catch(() => {})
