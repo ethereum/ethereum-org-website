@@ -92,7 +92,6 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/community/": ["component-story-card"],
   "/developers/": ["component-swiper"],
   "/roadmap/": ["component-swiper"],
-  "/start/": ["component-swiper"],
   "/wallets/": ["component-wallet-simulator"],
   "/what-are-apps/": ["component-story-card"],
 }
