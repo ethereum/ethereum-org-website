@@ -200,3 +200,34 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 15 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** Most files are clean and follow the glossary. The score is pulled down by security/index.md, which was translated again in full because of two English link changes and undid dozens of correct dev forms. Restoring that file from dev and re-applying the two links fixes most of the critical list.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score n/a (2 files)
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None
+
+**Notes:**
+
+- 4 tasks quarantined (unescaped `dir="ltr"`; #94). Warning: `ٹیسٹ نیٹ` vs glossary `آزمائشی نیٹ ورک`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.4/10
+Scope: how-to-write-and-deploy-an-nft (released from quarantine and fully reworked) and hello-world (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- how-to-write-and-deploy-an-nft:58-67: the `json` response block was duplicated and placed after the next paragraph, and the old indented line was left in (known-patterns #93)
+
+**Notes:**
+
+- The testnet drift from #19568 is fixed (`آزمائشی نیٹ ورک`). The `console` fence is correct. Code matches English byte for byte, and all 124 `dir="ltr"` spans are balanced.
+- 3 tasks were still quarantined after the second attempt (#94).
+
+**Open (warnings):**
+
+- nft:274 comment translates `PRIVATE_KEY` as `نجی کلید` while keeping `API_URL` in Latin
+- nft:348 `دلائل` (arguments in the debate sense) is used for function arguments; prefer `آرگیومنٹس`/`پیرامیٹرز`
+- nft:342 `مثالیں` (examples) is used for object instances; prefer `انسٹینسز`
+- nft:226, 290 `ماحولیاتی` (ecological) is used for env file/variable; prefer `انوائرنمنٹ`
+- The step-6 heading and the word for installation differ between hello-world and the NFT tutorial

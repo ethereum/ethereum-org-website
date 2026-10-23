@@ -131,3 +131,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 11 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The prose is fluent and has fewer anglicisms than before (security and app-plasma read well), but the new JSON content regressed on glossary use (`swaps`, `gas`, Ethereum's gender) and has three untranslated founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `(weth)` changed to `(WETH)` (websockets:175)
+
+**Notes:**
+
+- Warnings: a/o Viem gender differs between files; `assinar`/`assinatura` used for "subscribe" (pre-existing). Note: `Rede Principal` (for Ethereum Mainnet) and `Mainnet` are both glossary forms, depending on context.
