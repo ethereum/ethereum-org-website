@@ -19,7 +19,12 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import TutorialSubmitModal from "./_components/modal"
-import TutorialsList from "./_components/TutorialsLazy"
+// Imported directly, not via next/dynamic: this list is the page's entire
+// content and its internal links drive crawl discovery of the individual
+// tutorials. dynamic() wraps the component in Suspense, which makes the server
+// stream a skeleton inline and the real list into a <div hidden> that only a
+// script swaps in -- invisible to crawlers that don't execute JS. See #18977.
+import TutorialsList from "./_components/tutorials"
 import TutorialsPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/doge-computer.png"
