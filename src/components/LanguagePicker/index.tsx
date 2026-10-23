@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
@@ -16,17 +16,16 @@ type LanguagePickerProps = {
   className?: string
   languages: LocaleDisplayInfo[]
   onSelect?: (value: string) => void
-  onNoResultsClose?: () => void
 }
 
 const LanguagePicker = ({
   languages,
   className,
   onSelect,
-  onNoResultsClose,
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { languages: sortedLanguages } = useLanguagePicker(languages)
+  const noResultsQuery = useRef("")
 
   useEffect(() => {
     trackCustomEvent({
@@ -41,6 +40,16 @@ const LanguagePicker = ({
         eventAction: "Open or close language picker",
         eventName: "Closed",
       })
+
+      // One event per session: the last filter query that matched nothing
+      const query = noResultsQuery.current.trim().toLowerCase().slice(0, 32)
+      if (query) {
+        trackCustomEvent({
+          eventCategory: `Language picker`,
+          eventAction: "No results query",
+          eventName: query,
+        })
+      }
     }
   }, [])
 
@@ -60,23 +69,15 @@ const LanguagePicker = ({
     window.location.href = `${href}${window.location.search}${window.location.hash}`
   }
 
-  const handleNoResultsClose = () => {
-    onNoResultsClose?.()
-
-    trackCustomEvent({
-      eventCategory: `Language picker`,
-      eventAction: "Translation program link (no results)",
-      eventName: "/contributing/translation-program",
-    })
-  }
-
   return (
     <div className={cn("flex flex-col", className)}>
       <LanguagePickerMenu
         className="min-h-0 flex-1 gap-2 overflow-y-auto p-4"
         languages={sortedLanguages}
         onSelect={handleMenuItemSelect}
-        onClose={handleNoResultsClose}
+        onNoResults={(query) => {
+          noResultsQuery.current = query
+        }}
       />
     </div>
   )
