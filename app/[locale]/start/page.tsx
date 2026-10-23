@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import { BookOpen, Coins, LayoutGrid, Wallet } from "lucide-react"
 import {
   getMessages,
   getTranslations,
@@ -11,30 +10,36 @@ import type { Lang, PageParams } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
-import {
-  Card,
-  CardButtonFake,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardIconContainer,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
-import { Grid } from "@/components/ui/grid"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
+import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { getWalletPersonaIds } from "@/lib/utils/walletData"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
-import StartWithEthereumFlow from "./_components/StartWithEthereumFlow"
-import ShareModal from "./_components/StartWithEthereumFlow/ShareModal"
+import {
+  PERSONA_STYLES,
+  PERSONA_TITLE_KEYS,
+  type PersonaTagStatus,
+} from "@/data/wallets/personas"
+import walletsData from "@/data/wallets/wallet-data"
+
+import ConnectWallet from "./_components/ConnectWallet"
+import ShareModal from "./_components/ShareModal"
 import PageJsonLD from "./page-jsonld"
 
+import { getStaticAppsData } from "@/lib/data"
+import AaveImage from "@/public/images/dapps/aave.png"
+import FarcasterImage from "@/public/images/dapps/farcaster.png"
+import OpenSeaImage from "@/public/images/dapps/opensea.png"
+import UniswapImage from "@/public/images/dapps/uni.png"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
@@ -45,6 +50,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-start")
+  const tFindWallet = await getTranslations("page-wallets-find-wallet")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -54,26 +60,227 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const newToCryptoWallets = getNewToCryptoWallets()
   const wallets = newToCryptoWallets.map((wallet) => ({
     ...wallet,
-    supportedLanguages: [],
+    // Every wallet here is a beginner pick, so that tag would repeat on each row
+    personas: getWalletPersonaIds(wallet).filter(
+      (persona) => persona !== "new-to-crypto"
+    ),
   }))
+
+  // Static getter keeps /start/ out of ISR; the count refreshes on deploy
+  const appsData = await getStaticAppsData()
+  const appCount = appsData
+    ? new Set(
+        Object.values(appsData)
+          .flat()
+          .map((app) => app.name)
+      ).size
+    : 0
 
   const { contributors } = await getAppPageContributorInfo(
     "start",
     locale as Lang
   )
 
+  const appTags: Record<string, { label: string; status: PersonaTagStatus }> = {
+    socials: { label: t("page-start-apps-socials-tag"), status: "primary" },
+    finance: { label: t("page-start-apps-finance-tag"), status: "accent-c" },
+    collectibles: {
+      label: t("page-start-apps-collectibles-tag"),
+      status: "tag-yellow",
+    },
+  }
+
+  const apps = [
+    {
+      name: "Farcaster",
+      tag: appTags.socials,
+      description: t("page-start-apps-farcaster-description"),
+      url: "https://www.farcaster.xyz/",
+      image: FarcasterImage,
+    },
+    {
+      name: "Aave",
+      tag: appTags.finance,
+      description: t("page-start-apps-aave-description"),
+      url: "https://aave.com/",
+      image: AaveImage,
+    },
+    {
+      name: "Uniswap",
+      tag: appTags.finance,
+      description: t("page-start-apps-uniswap-description"),
+      url: "https://app.uniswap.org/",
+      image: UniswapImage,
+    },
+    {
+      name: "OpenSea",
+      tag: appTags.collectibles,
+      description: t("page-start-apps-opensea-description"),
+      url: "https://opensea.io/",
+      image: OpenSeaImage,
+    },
+  ]
+
+  const guides = [
+    { id: "use-a-wallet", href: "/guides/how-to-use-a-wallet/" },
+    { id: "swap-tokens", href: "/guides/how-to-swap-tokens/" },
+    { id: "id-scam-tokens", href: "/guides/how-to-id-scam-tokens/" },
+  ]
+
+  const stepActions: Record<string, React.ReactNode> = {
+    wallet: (
+      <ul className="m-0 list-none divide-y overflow-hidden rounded-base border">
+        {wallets.map((wallet) => (
+          <LinkBox
+            asChild
+            key={wallet.name}
+            className="m-0 flex items-center gap-4 px-4 py-3 hover:bg-background-highlight"
+          >
+            <li>
+              <Image src={wallet.image} alt="" width={28} height={28} />
+              <div>
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                  <LinkOverlay asChild>
+                    <InlineLink
+                      href={wallet.url}
+                      className="font-bold text-body no-underline hover:text-body"
+                      customEventOptions={{
+                        eventCategory: "start page",
+                        eventAction: "get wallet",
+                        eventName: wallet.name,
+                      }}
+                    >
+                      {wallet.name}
+                    </InlineLink>
+                  </LinkOverlay>
+                  <div className="flex flex-wrap gap-1">
+                    {wallet.personas.map((persona) => (
+                      <Tag
+                        key={persona}
+                        variant="subtle"
+                        status={PERSONA_STYLES[persona].tag}
+                        size="small"
+                      >
+                        {tFindWallet(PERSONA_TITLE_KEYS[persona])}
+                      </Tag>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-sm text-body-medium">
+                  {t("page-start-steps-wallet-languages", {
+                    count: wallet.languages_supported.length,
+                    countFormatted: numberFormat(locale).format(
+                      wallet.languages_supported.length
+                    ),
+                  })}
+                </p>
+              </div>
+            </li>
+          </LinkBox>
+        ))}
+      </ul>
+    ),
+    apps: (
+      <ul className="m-0 list-none divide-y overflow-hidden rounded-base border">
+        {apps.map((app) => (
+          <LinkBox
+            asChild
+            key={app.name}
+            className="m-0 flex items-center gap-4 px-4 py-3 hover:bg-background-highlight"
+          >
+            <li>
+              <Image
+                src={app.image}
+                alt=""
+                width={36}
+                height={36}
+                className="rounded-base"
+              />
+              <div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <LinkOverlay asChild>
+                    <InlineLink
+                      href={app.url}
+                      className="font-bold text-body no-underline hover:text-body"
+                      customEventOptions={{
+                        eventCategory: "start page",
+                        eventAction: "dapps",
+                        eventName: app.name,
+                      }}
+                    >
+                      {app.name}
+                    </InlineLink>
+                  </LinkOverlay>
+                  <Tag variant="subtle" status={app.tag.status} size="small">
+                    {app.tag.label}
+                  </Tag>
+                </div>
+                <p className="text-sm text-body-medium">{app.description}</p>
+              </div>
+            </li>
+          </LinkBox>
+        ))}
+      </ul>
+    ),
+    guides: (
+      <ul className="m-0 flex list-none flex-col gap-2">
+        {guides.map((guide) => (
+          <li key={guide.id} className="m-0">
+            <InlineLink href={guide.href}>
+              {t(`page-start-steps-guides-${guide.id}`)}
+            </InlineLink>
+          </li>
+        ))}
+      </ul>
+    ),
+  }
+
+  const stepFooters: Record<string, React.ReactNode> = {
+    apps: (
+      <div className="mt-6 flex flex-col gap-3 border-t pt-8">
+        <h3 className="text-xl">{t("page-start-steps-connect-title")}</h3>
+        <p>{t("page-start-connect-wallet-description")}</p>
+        <ConnectWallet />
+      </div>
+    ),
+  }
+
+  const formatCount = (count: number) => numberFormat(locale).format(count)
+
   const steps = [
-    { id: "wallet", href: "/wallets/", icon: <Wallet /> },
-    { id: "get-eth", href: "/get-eth/", icon: <Coins /> },
-    { id: "apps", href: "/apps/", icon: <LayoutGrid /> },
-    { id: "guides", href: "/guides/", icon: <BookOpen /> },
+    {
+      id: "wallet",
+      href: "/wallets/find-wallet/",
+      // The five picks above are the main action; the full list is secondary
+      ctaAsLink: true,
+      cta: t("page-start-steps-wallet-cta", {
+        count: walletsData.length,
+        countFormatted: formatCount(walletsData.length),
+      }),
+    },
+    {
+      id: "get-eth",
+      href: "/get-eth/",
+      cta: t("page-start-steps-get-eth-cta"),
+    },
+    {
+      id: "apps",
+      href: "/apps/",
+      cta: appCount
+        ? t("page-start-steps-apps-cta-count", {
+            count: appCount,
+            countFormatted: formatCount(appCount),
+          })
+        : t("page-start-steps-apps-cta"),
+    },
+    { id: "guides", href: "/guides/", cta: t("page-start-steps-guides-cta") },
   ].map((step, idx) => ({
     ...step,
-    title: t(`page-start-steps-${step.id}-title`, {
-      number: numberFormat(locale).format(idx + 1),
-    }),
+    number: numberFormat(locale).format(idx + 1),
+    title: t(`page-start-steps-${step.id}-title`),
     description: t(`page-start-steps-${step.id}-description`),
-    cta: t(`page-start-steps-${step.id}-cta`),
+    action: stepActions[step.id],
+    footer: stepFooters[step.id],
   }))
 
   return (
@@ -94,31 +301,58 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="space-y-space-2x overflow-x-hidden px-page py-page-2x">
-          <Section id="first-steps" className="flow">
-            <h2>{t("page-start-steps-title")}</h2>
-            <p>{t("page-start-steps-description")}</p>
-            <Grid balanced={4}>
+          <Section id="first-steps" className="mx-auto max-w-3xl">
+            <ol>
               {steps.map((step) => (
-                <Card href={step.href} hoverLift key={step.id}>
-                  <CardHeader className="flex items-center justify-between gap-4">
-                    <CardTitle>{step.title}</CardTitle>
-                    <CardIconContainer>{step.icon}</CardIconContainer>
-                  </CardHeader>
-                  <CardContent>
-                    <CardParagraph>{step.description}</CardParagraph>
-                  </CardContent>
-                  <CardFooter buttons="full">
-                    <CardButtonFake variant="outline">
-                      {step.cta}
-                    </CardButtonFake>
-                  </CardFooter>
-                </Card>
+                <li
+                  key={step.id}
+                  className="group/step grid grid-cols-[2.5rem_1fr] gap-x-4 sm:gap-x-6"
+                >
+                  <div className="flex flex-col items-center">
+                    <span
+                      aria-hidden
+                      className="grid size-10 shrink-0 place-items-center rounded-full border-2 border-primary text-lg font-bold text-primary"
+                    >
+                      {step.number}
+                    </span>
+                    <span className="my-2 w-px flex-1 bg-body-light group-last/step:hidden" />
+                  </div>
+                  <div className="flex flex-col gap-4 pt-1.5 pb-14 group-last/step:pb-0">
+                    <h2 className="text-2xl">
+                      <span className="sr-only">{step.number}. </span>
+                      {step.title}
+                    </h2>
+                    <p>{step.description}</p>
+                    {step.action}
+                    {step.ctaAsLink ? (
+                      <LinkWithArrow
+                        href={step.href}
+                        customEventOptions={{
+                          eventCategory: "start page",
+                          eventAction: "first steps",
+                          eventName: step.id,
+                        }}
+                      >
+                        {step.cta}
+                      </LinkWithArrow>
+                    ) : (
+                      <ButtonLink
+                        href={step.href}
+                        className="w-fit"
+                        customEventOptions={{
+                          eventCategory: "start page",
+                          eventAction: "first steps",
+                          eventName: step.id,
+                        }}
+                      >
+                        {step.cta}
+                      </ButtonLink>
+                    )}
+                    {step.footer}
+                  </div>
+                </li>
               ))}
-            </Grid>
-          </Section>
-
-          <Section id="start-with-ethereum-flow">
-            <StartWithEthereumFlow newToCryptoWallets={wallets} />
+            </ol>
           </Section>
 
           <Callout
