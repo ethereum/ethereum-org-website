@@ -76,7 +76,7 @@ npm init
 
 Nie ma większego znaczenia, jak odpowiesz na pytania instalacyjne, oto jak my to zrobiliśmy w celach informacyjnych:
 
-```text
+```console
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
