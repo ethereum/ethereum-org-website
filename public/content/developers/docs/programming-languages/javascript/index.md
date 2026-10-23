@@ -52,10 +52,10 @@ If you prefer to read code, this JavaScript could be a great alternative to read
 
 ### Nodes and clients {#nodes-and-clients}
 
-An Ethereumjs client is in active development that lets you dig into how Ethereum clients work in a language you understand; JavaScript!
+The EthereumJS client is deprecated and archived. Its source code remains available to explore how an Ethereum client works in JavaScript.
 
 **Check out the client**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Other projects {#other-projects}
 
