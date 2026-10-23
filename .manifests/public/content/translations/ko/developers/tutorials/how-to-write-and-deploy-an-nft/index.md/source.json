@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-write-and-deploy-an-nft/index.md",
-  "generatedAt": "2026-10-22T21:23:09.122Z",
-  "rootHash": "9cbc748cd4a0",
+  "generatedAt": "2026-10-23T20:57:27.348Z",
+  "rootHash": "ff5662b3a618",
   "tree": {
-    "contentHash": "b39efcb89183",
-    "anchorHash": "f9ab626f5b0a",
+    "contentHash": "b6d2ab4ba4c6",
+    "anchorHash": "00f8e06f802b",
     "children": {
       "frontmatter:title": {
         "contentHash": "c1c31fe6c863",
@@ -354,8 +354,8 @@
         ]
       },
       "initialize-project": {
-        "contentHash": "9d9e09c40f1c",
-        "anchorHash": "0914bf4ada99",
+        "contentHash": "ffcb37f664f4",
+        "anchorHash": "bcbfdc2ac566",
         "labelHash": "b1c3d2d5796c",
         "children": {
           "_label": {
@@ -387,8 +387,8 @@
             "anchorHash": "5eb4eec77ac6"
           },
           "code-fence:8": {
-            "contentHash": "b2aec6f25214",
-            "anchorHash": "e3b0c44298fc"
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b2aec6f25214"
           },
           "code-fence:10": {
             "contentHash": "e3b0c44298fc",
@@ -1322,5 +1322,5 @@
       "deploy-contract"
     ]
   },
-  "sourceCommitSha": "df6cb30a45dc8c96fe4e1ad22e3378ab8abce813"
+  "sourceCommitSha": "5a8108be6191e19fd4685f420735a56cbfa89990"
 }
