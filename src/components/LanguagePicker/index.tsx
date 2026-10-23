@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
@@ -25,6 +25,7 @@ const LanguagePicker = ({
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { languages: sortedLanguages } = useLanguagePicker(languages)
+  const noResultsQuery = useRef("")
 
   useEffect(() => {
     trackCustomEvent({
@@ -39,6 +40,16 @@ const LanguagePicker = ({
         eventAction: "Open or close language picker",
         eventName: "Closed",
       })
+
+      // One event per session: the last filter query that matched nothing
+      const query = noResultsQuery.current.trim().toLowerCase().slice(0, 32)
+      if (query) {
+        trackCustomEvent({
+          eventCategory: `Language picker`,
+          eventAction: "No results query",
+          eventName: query,
+        })
+      }
     }
   }, [])
 
@@ -64,6 +75,9 @@ const LanguagePicker = ({
         className="min-h-0 flex-1 gap-2 overflow-y-auto p-4"
         languages={sortedLanguages}
         onSelect={handleMenuItemSelect}
+        onNoResults={(query) => {
+          noResultsQuery.current = query
+        }}
       />
     </div>
   )
