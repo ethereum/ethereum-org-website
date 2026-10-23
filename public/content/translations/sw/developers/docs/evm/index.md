@@ -66,7 +66,7 @@ Utekelezaji wote wa EVM lazima ufuate vipimo vilivyoelezwa katika Waraka wa Manj
 
 Katika historia ya miaka kumi ya Ethereum, EVM imepitia marekebisho kadhaa, na kuna utekelezaji kadhaa wa EVM katika lugha mbalimbali za programu.
 
-[Wateja wa utekelezaji wa Ethereum](/developers/docs/nodes-and-clients/#execution-clients) wanajumuisha utekelezaji wa EVM. Zaidi ya hayo, kuna utekelezaji mwingi wa kujitegemea, ikiwa ni pamoja na:
+[Viteja vya utekelezaji wa Ethereum](/developers/docs/nodes-and-clients/#execution-clients) vinajumuisha utekelezaji wa EVM. Zaidi ya hayo, kuna utekelezaji mwingi wa kujitegemea, ikiwa ni pamoja na:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -91,3 +91,5 @@ Katika historia ya miaka kumi ya Ethereum, EVM imepitia marekebisho kadhaa, na k
 
 - [Kuelewa Vipimo vya EVM vya Waraka wa Manjano](/developers/tutorials/yellow-paper-evm/) _– Mwongozo wa hatua kwa hatua wa vipimo rasmi vya EVM kutoka kwenye Waraka wa Manjano wa Ethereum._
 - [Uhandisi wa Kinyume wa Mkataba](/developers/tutorials/reverse-engineering-a-contract/) _– Jinsi ya kufanya uhandisi wa kinyume wa mkataba mahiri uliokusanywa kwa kutumia misimbo ya operesheni ya EVM._
+
+<QuizWidget quizKey="evm" />

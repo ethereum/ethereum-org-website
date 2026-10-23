@@ -4,7 +4,7 @@ import type { StoryData } from "@/lib/types"
 // (namespace "community-stories") so it can be translated like any other UI
 // string. `storyOriginal` preserves the story verbatim as submitted; stories
 // submitted in English carry the English text here.
-const tenYearStories: StoryData[] = [
+export const newStories: StoryData[] = [
   // ─────────────────────────────────────────────────────────────────
   // New community stories for /stories/ page
   //   - Use full ISO dates, e.g. "2026-06-10"
@@ -45,11 +45,11 @@ const tenYearStories: StoryData[] = [
     twitter: "https://x.com/EFDevcon/status/2030613582124397001?s=20",
     region: "",
   },
+]
 
-  // ─────────────────────────────────────────────────────────────────
-  // Stories below: 10-year anniversary submissions (2025)
-  //   - Dates use "DD.M." shorthand, parsed as 2025 by getCommunityStories
-  // ─────────────────────────────────────────────────────────────────
+// 10-year anniversary submissions (2025; "DD.M." shorthand dates). Campaign-
+// specific, so /community "Ethereum voices" shuffles them for variety.
+export const anniversaryStories: StoryData[] = [
   {
     storyKey: "story-inhwan",
     originalLocale: "ko",
@@ -365,5 +365,7 @@ const tenYearStories: StoryData[] = [
     region: "",
   },
 ]
+
+const tenYearStories: StoryData[] = [...newStories, ...anniversaryStories]
 
 export default tenYearStories

@@ -2,6 +2,7 @@
 title: Bầu chọn người dẫn đầu bí mật
 description: Giải thích về cách bầu chọn người dẫn đầu bí mật có thể giúp bảo vệ các trình xác thực khỏi các cuộc tấn công
 lang: vi
+template: roadmap
 summaryPoints:
   - Địa chỉ IP của những người đề xuất khối có thể bị biết trước, khiến họ dễ bị tấn công
   - Bầu chọn người dẫn đầu bí mật che giấu danh tính của các trình xác thực để không ai có thể biết trước

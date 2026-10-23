@@ -6,8 +6,11 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { isExternal, normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { DISCORD_URL } from "@/lib/constants"
+
 import { sections } from "./data"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -40,7 +43,7 @@ export default async function SupportJsonLD({
     // Not part of the sections data struct, so appended manually.
     {
       labelKey: "page-community-support-discord",
-      href: "https://discord.gg/ethereum-org",
+      href: DISCORD_URL,
     },
   ]
 
@@ -65,29 +68,7 @@ export default async function SupportJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Community",
-              item: normalizeUrlForJsonLd(locale, "/community/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-community-support-hero-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "community/support"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#support-links` },

@@ -2,6 +2,7 @@
 title: Gizli lider seçimi
 description: Gizli lider seçiminin doğrulayıcıları saldırılardan korumaya nasıl yardımcı olabileceğinin açıklaması
 lang: tr
+template: roadmap
 summaryPoints:
   - Blok teklifçilerinin IP adresleri önceden bilinebilir, bu da onları saldırılara karşı savunmasız hale getirir
   - Gizli lider seçimi, doğrulayıcıların kimliğini gizleyerek önceden bilinmelerini engeller

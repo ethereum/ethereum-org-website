@@ -2,6 +2,7 @@
 title: 丹克分片
 description: 了解 Proto-Danksharding 和丹克分片（Danksharding）——这两个用于扩展以太坊的连续升级。
 lang: zh
+template: roadmap
 summaryPoints:
   - 丹克分片（Danksharding）是一个多阶段升级，旨在提高以太坊的可扩展性和容量。
   - 第一阶段 Proto-Danksharding 向区块添加数据斑点。

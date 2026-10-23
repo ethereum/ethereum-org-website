@@ -2,6 +2,7 @@
 title: "Absence d'état, expiration d'état et expiration de l'historique"
 description: "Explication de l'expiration de l'historique et de l'absence d'état sur Ethereum"
 lang: fr
+template: roadmap
 ---
 
 La capacité d'exécuter des nœuds [Ethereum](/) sur du matériel modeste est essentielle pour une véritable décentralisation. En effet, l'exécution d'un nœud donne aux utilisateurs la capacité de vérifier les informations en effectuant des vérifications cryptographiques de manière indépendante plutôt que de faire confiance à un tiers pour leur fournir des données. L'exécution d'un nœud permet aux utilisateurs de soumettre des transactions directement au réseau pair à pair Ethereum plutôt que de devoir faire confiance à un intermédiaire. La décentralisation n'est pas possible si ces avantages ne sont accessibles qu'aux utilisateurs disposant de matériel coûteux. Au lieu de cela, les nœuds devraient pouvoir fonctionner avec des exigences de traitement et de mémoire extrêmement modestes afin de pouvoir s'exécuter sur des téléphones mobiles, des micro-ordinateurs ou de manière imperceptible sur un ordinateur personnel.

@@ -1,6 +1,6 @@
 ---
 title: Maximal extractable value (MEV)
-description: An introduction to maximal extractable value (MEV)
+description: "What is maximal extractable value (MEV)? Learn how searchers, builders and validators extract value by ordering transactions, and how MEV affects users."
 lang: en
 ---
 

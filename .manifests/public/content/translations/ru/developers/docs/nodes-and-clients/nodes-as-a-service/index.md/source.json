@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md",
-  "generatedAt": "2026-07-22T23:16:26.958Z",
-  "rootHash": "f79ebb11149e",
+  "generatedAt": "2026-10-21T21:44:54.579Z",
+  "rootHash": "ca1ac2470e7d",
   "tree": {
-    "contentHash": "ca5f903ccc5f",
-    "anchorHash": "78687f6e9537",
+    "contentHash": "8ccdc33627fe",
+    "anchorHash": "1d681c3f8e9f",
     "children": {
       "frontmatter:title": {
         "contentHash": "9ce1b5bd629a",
@@ -228,8 +228,8 @@
         ]
       },
       "popular-node-services": {
-        "contentHash": "e5a50971904f",
-        "anchorHash": "9a251b6c7abc",
+        "contentHash": "600959e21339",
+        "anchorHash": "74d210a3c27c",
         "labelHash": "6460fdda49a3",
         "children": {
           "_label": {
@@ -482,7 +482,7 @@
           },
           "link:30": {
             "contentHash": "7af023c43013",
-            "anchorHash": "777567d19cf9"
+            "anchorHash": "989bffbf7743"
           },
           "prose:95": {
             "contentHash": "d41480a8f96b",
@@ -565,7 +565,7 @@
             "anchorHash": "fcab79e000ba"
           },
           "prose:105": {
-            "contentHash": "80d2d336fe76",
+            "contentHash": "6865e2d49906",
             "anchorHash": "e3b0c44298fc"
           },
           "link:41": {
@@ -986,5 +986,5 @@
       "related-tutorials"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

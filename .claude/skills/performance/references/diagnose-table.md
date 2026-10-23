@@ -1,18 +1,18 @@
 # Diagnose: symptom → bucket
 
-Pick the matching row. Load the named reference file. Always also load `anti-patterns.md`.
+Pick the matching row. Load the named reference file. Check the anti-patterns table in `SKILL.md` on every pass.
 
-**For LCP, the bucket is layered.** Work `images.md` → `bundle.md` → `rsc.md` in that order — load all three when LCP is the metric, since hero preload, JS budget, and HTML/RSC weight all contribute.
+**For LCP, the bucket is layered.** Work `images.md` → `bundle.md` in that order — load both when LCP is the metric, since hero preload, JS budget, and HTML/RSC weight all contribute.
 
 **For TTFB:** this is almost certainly a CF-caching / devops issue, not an app-side fix. Surface that up front before proposing Netlify header changes — see `edge-caching.md`.
 
 | Symptom                                         | Bucket                          | Reference file        |
 |-------------------------------------------------|---------------------------------|-----------------------|
 | P75 TTFB > 800ms in field data                  | Edge caching / routing          | `edge-caching.md`     |
-| LCP > 2.5s                                      | Images → bundle → RSC (in order)| `images.md`, `bundle.md`, `rsc.md` |
+| LCP > 2.5s                                      | Images → bundle/RSC (in order)  | `images.md`, `bundle.md` |
 | INP > 200ms on interaction                      | Main-thread / analytics / lists | `inp.md`              |
 | CLS > 0.1                                       | Image dimensions / late mounts  | `images.md`           |
-| Large HTML payload (>500KB)                     | RSC / translations              | `rsc.md`              |
+| Large HTML payload (>500KB)                     | RSC / translations              | `bundle.md`           |
 | Large JS bundle on first load                   | Code splitting / lazy           | `bundle.md`           |
 | Netlify build OOM or ENOSPC                     | Build-time / webpack tracing    | `build.md`            |
 | Slow page but fast TTFB and small bundle        | Data fetching / cache misses    | _see `data-layer` skill_ |

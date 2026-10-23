@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -45,29 +46,7 @@ export default async function WhatIsEthereumPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Learn",
-              item: normalizeUrlForJsonLd(locale, "/learn/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-what-is-ethereum-meta-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "what-is-ethereum"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -89,55 +68,6 @@ export default async function WhatIsEthereumPageJsonLD({
             "Comprehensive guide to Ethereum, its network, capabilities, and how it works",
         },
         dateModified: lastEditLocaleTimestamp,
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${url}#what-is-ethereum-faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What is Ethereum?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: t("page-what-is-ethereum-hero-description-1").replace(
-                /<[^>]*>/g,
-                ""
-              ),
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How does the Ethereum network work?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Ethereum is a decentralized network of computers that work together to run applications and store data without a central authority.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What is Ether (ETH)?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Ether is the native cryptocurrency of the Ethereum network, used to pay for transactions and computational services.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What can you do with Ethereum?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Ethereum enables decentralized applications, smart contracts, financial services, gaming, collectibles, and much more.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How is Ethereum different from Bitcoin?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "While Bitcoin is primarily digital money, Ethereum is a programmable blockchain that can run applications and smart contracts.",
-            },
-          },
-        ],
       },
     ],
   }

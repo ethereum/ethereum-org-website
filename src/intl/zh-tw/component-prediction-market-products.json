@@ -1,11 +1,8 @@
 {
-  "augur-cta": "深入了解 Augur",
-  "augur-description": "一個完全去中心化的預測市場協定，用於預測價格趨勢。免責聲明：您需要具備一些技術專業知識才能開始使用 Augur。",
-  "augur-title": "Augur",
-  "kalshi-cta": "試用 Kalshi",
-  "kalshi-description": "一個符合 CFTC 規範的平台，使用以太坊進行 USDC 存款。（僅限美國）",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "探索 Limitless",
+  "limitless-description": "建立在以太坊第二層 (L2) Base 上的預測市場。交易以 USDC 在鏈上結算，且大多數價格市場透過鏈上價格饋源自動判定結果。並非在所有國家/地區皆可使用。",
+  "limitless-title": "Limitless",
   "polymarket-cta": "探索 Polymarket",
-  "polymarket-description": "一個受歡迎的預測市場，提供即時交易。",
+  "polymarket-description": "最大的預測市場之一。交易在 Polygon 上結算，且結果透過 UMA 預言機決定。並非在所有國家/地區皆可使用。",
   "polymarket-title": "Polymarket"
 }

@@ -106,11 +106,11 @@ Kadi hizi huunganishwa moja kwa moja na mikoba isiyo ya udhamini au akaunti za m
 
 ### Jinsi kiwango cha malipo cha x402 kinavyofanya kazi {#x402-how}
 
-Mteja anapoomba rasilimali, seva hutuma msimbo wa hitilafu wa `402 Payment Required` pamoja na maagizo ya malipo (bei, akaunti, na ni tokeni na minyororo gani inatumika).
+Kiteja kinapoomba rasilimali, seva hutuma msimbo wa hitilafu wa `402 Payment Required` pamoja na maagizo ya malipo (bei, akaunti, na ni tokeni na minyororo gani inatumika).
 
 - [Mkoba](/wallets/) wako unatambua ombi na kushughulikia malipo (mara nyingi kwa kubofya mara moja ili kuidhinisha, au kiotomatiki kwa kutumia kibali kilichoidhinishwa mapema)
 - [Mawakala wa AI](/ai-agents/) walio na ufikiaji wa salio la mkoba lililoidhinishwa mapema wanaweza kutambua bei kiotomatiki na kulipa papo hapo ili kufikia data au huduma
-- Mteja anahitaji kuwa na mojawapo ya sarafu dhabiti zinazotumika kwenye mkoba wake, lakini hahitaji kuwa na ETH yoyote kwa ajili ya [gharama za gesi](/gas/)
+- Kiteja kinahitaji kuwa na mojawapo ya sarafu dhabiti zinazotumika kwenye mkoba wake, lakini hakihitaji kuwa na ETH yoyote kwa ajili ya [gharama za gesi](/gas/)
 
 Hii inafungua uchumi mpya wa "mashine kwa mashine" ambapo mawakala wa AI wanaweza kununua rasilimali peke yao, na ambapo huduma za API zinaweza kufikiwa kwa ufanisi zaidi.
 
@@ -206,3 +206,7 @@ Kuanzia kuwezesha misaada ya haraka ya majanga hadi kuwawezesha wafanyakazi wa k
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

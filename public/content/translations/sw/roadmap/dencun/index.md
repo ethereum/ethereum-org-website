@@ -3,6 +3,7 @@ title: Cancun-Deneb (Dencun)
 metaTitle: Maswali Yanayoulizwa Mara kwa Mara kuhusu Cancun-Deneb (Dencun)
 description: Maswali yanayoulizwa mara kwa mara kuhusu sasisho la mtandao la Cancun-Deneb (Dencun)
 lang: sw
+template: upgrade
 ---
 
 Cancun-Deneb (Dencun) ni sasisho la mtandao wa Ethereum, ambalo huwezesha **Proto-Danksharding (EIP-4844)**, na kuanzisha **mablobu** ya data ya muda kwa ajili ya hifadhi ya bei nafuu ya rollup ya [tabaka la 2 (l2)](/glossary/#layer-2).

@@ -29,7 +29,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
     size="sm"
   >
     <CardHeader>
-      <CardBanner size="sm">
+      <CardBanner size="sm" zoom>
         <Image
           src={course.imgSrc}
           alt={course.imgAlt}

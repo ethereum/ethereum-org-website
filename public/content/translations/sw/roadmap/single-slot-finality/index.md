@@ -2,6 +2,7 @@
 title: Uthibitisho wa mwisho wa sloti moja
 description: Maelezo ya uthibitisho wa mwisho wa sloti moja
 lang: sw
+template: roadmap
 ---
 
 Inachukua takriban dakika 15 kwa kitalu cha [Ethereum](/) kukamilishwa. Hata hivyo, tunaweza kufanya utaratibu wa makubaliano wa Ethereum kuthibitisha vitalu kwa ufanisi zaidi na kupunguza muda wa ukamilifu kwa kiasi kikubwa. Badala ya kusubiri kwa dakika kumi na tano, vitalu vinaweza kupendekezwa na kukamilishwa katika sloti hiyo hiyo. Dhana hii inajulikana kama **uthibitisho wa mwisho wa sloti moja (SSF)**.

@@ -2,6 +2,7 @@
 title: zkEVM cho việc xác thực khối L1
 description: Tìm hiểu cách bằng chứng không kiến thức có thể xác minh việc thực thi khối Ethereum, cho phép thông lượng cao hơn và yêu cầu đối với trình xác thực thấp hơn.
 lang: vi
+template: roadmap
 ---
 
 zkEVM là một công nghệ sử dụng [bằng chứng không kiến thức](/zero-knowledge-proofs/) để xác minh việc thực thi khối Ethereum. Thay vì yêu cầu mọi [trình xác thực](/glossary/#validator) phải thực thi lại tất cả các giao dịch trong một khối, một tác nhân chuyên biệt duy nhất (gọi là "trình chứng minh") sẽ thực thi khối và tạo ra một bằng chứng mật mã học rằng việc thực thi là chính xác. Bất kỳ nút nào sau đó cũng có thể xác minh bằng chứng này—một quá trình rẻ hơn nhiều lần so với việc thực thi lại tất cả các giao dịch.

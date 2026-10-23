@@ -20,14 +20,14 @@ lang: bn
 
 ফ্রেমওয়ার্ক নিয়ে বিস্তারিত জানার আগে, আমরা আপনাকে প্রথমে [dapp](/developers/docs/dapps/) এবং [ইথেরিয়াম স্ট্যাক](/developers/docs/ethereum-stack/)-এর পরিচিতি পড়ার পরামর্শ দিচ্ছি।
 
-## উপলব্ধ ফ্রেমওয়ার্কগুলো
+## উপলব্ধ ফ্রেমওয়ার্কগুলো {#available-frameworks}
 
 **Foundry** - **_Foundry হলো ইথেরিয়াম অ্যাপ্লিকেশন ডেভেলপমেন্টের জন্য একটি অত্যন্ত দ্রুত, পোর্টেবল এবং মডুলার টুলকিট_**
 
 - [Foundry ইনস্টল করুন](https://book.getfoundry.sh/)
 - [Foundry বই](https://book.getfoundry.sh/)
-- [টেলিগ্রামে Foundry কমিউনিটি চ্যাট](https://t.me/foundry_support)
-- [অসাধারণ Foundry](https://github.com/crisgarner/awesome-foundry)
+- [টেলিগ্রাম-এ Foundry কমিউনিটি চ্যাট](https://t.me/foundry_support)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_পেশাদারদের জন্য ইথেরিয়াম ডেভেলপমেন্ট এনভায়রনমেন্ট।_**
 
@@ -45,16 +45,16 @@ lang: bn
 - [ডকুমেন্টেশন](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVM-ভিত্তিক ব্লকচেইনগুলোর জন্য অ্যাসিঙ্ক, হাই-পারফরম্যান্স Kotlin/Java/Android লাইব্রেরি।_**
+**ethers-kt -** **_ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)-ভিত্তিক ব্লকচেইনগুলোর জন্য অ্যাসিঙ্ক, হাই-পারফরম্যান্স Kotlin/Java/Android লাইব্রেরি।_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [উদাহরণ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ডিসকর্ড](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_একটি কমান্ডের মাধ্যমে ইথেরিয়াম-চালিত অ্যাপ তৈরি করুন। এটি বেছে নেওয়ার জন্য বিভিন্ন UI ফ্রেমওয়ার্ক এবং বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) টেমপ্লেট নিয়ে আসে।_**
+**Create Eth App -** **_একটি কমান্ডের মাধ্যমে ইথেরিয়াম-চালিত অ্যাপ তৈরি করুন। এটি বেছে নেওয়ার জন্য বিভিন্ন UI ফ্রেমওয়ার্ক এবং বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) টেমপ্লেট অফার করে।_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
-- [টেমপ্লেটগুলো](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [টেমপ্লেট](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-ETH 2 -** **_আপনার পছন্দের Hardhat বা Foundry-এর সাথে Next.js, Wagmi, Viem এবং RainbowKit: কন্ট্রাক্ট হট রিলোড, কাস্টম React হুক, একটি বার্নার ওয়ালেট এবং লোকাল ফসেট, এবং ফুল-স্ট্যাক বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) ডেভেলপমেন্টের জন্য এক্সটেনশন মডিউল।_**
 
@@ -83,7 +83,7 @@ lang: bn
 - [GitHub](https://github.com/node-real)
 - [ডিসকর্ড](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_আমাদের শক্তিশালী SDK এবং CLI ব্যবহার করে এমন Web3 অ্যাপ্লিকেশন তৈরি করুন যা আপনার স্মার্ট কন্ট্রাক্টগুলোর সাথে ইন্টারঅ্যাক্ট করতে পারে।_**
+**thirdweb SDK -** **_আমাদের শক্তিশালী SDK এবং CLI ব্যবহার করে Web3 অ্যাপ্লিকেশন তৈরি করুন যা আপনার স্মার্ট কন্ট্রাক্টগুলোর সাথে ইন্টারঅ্যাক্ট করতে পারে।_**
 
 - [ডকুমেন্টেশন](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -94,7 +94,7 @@ lang: bn
 - [GitHub](https://github.com/chainstack)
 - [ডিসকর্ড](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_এন্টারপ্রাইজ-গ্রেড Web3 ডেভেলপমেন্ট প্ল্যাটফর্ম, যা আপনাকে সমস্ত প্রধান চেইন EVM চেইন (এবং অন্যান্য)-এ NFT অ্যাপ্লিকেশন তৈরি করতে দেয়।_**
+**Crossmint -** **_এন্টারপ্রাইজ-গ্রেড Web3 ডেভেলপমেন্ট প্ল্যাটফর্ম, যা আপনাকে সমস্ত প্রধান চেইন, EVM চেইন (এবং অন্যান্য)-এ নন-ফাঞ্জিবল টোকেন (NFT) অ্যাপ্লিকেশন তৈরি করতে দেয়।_**
 
 - [ওয়েবসাইট](https://www.crossmint.com)
 - [ডকুমেন্টেশন](https://docs.crossmint.com)
@@ -106,9 +106,8 @@ lang: bn
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie বর্তমানে রক্ষণাবেক্ষণ করা হচ্ছে না**
 
-**ওপেনজেপেলিন SDK -** **_চূড়ান্ত স্মার্ট কন্ট্রাক্ট টুলকিট: স্মার্ট কন্ট্রাক্টগুলো ডেভেলপ, কম্পাইল, আপগ্রেড, ডিপ্লয় করা এবং সেগুলোর সাথে ইন্টারঅ্যাক্ট করতে সাহায্য করার জন্য টুলের একটি স্যুট।_**
+**ওপেনজেপেলিন SDK -** **_আল্টিমেট স্মার্ট কন্ট্রাক্ট টুলকিট: স্মার্ট কন্ট্রাক্ট ডেভেলপ, কম্পাইল, আপগ্রেড, ডিপ্লয় করা এবং ইন্টারঅ্যাক্ট করতে সাহায্য করার জন্য টুলের একটি স্যুট।_**
 
-- [ওপেনজেপেলিন Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [কমিউনিটি ফোরাম](https://forum.openzeppelin.com/c/support/17)
 - **ওপেনজেপেলিন SDK ডেভেলপমেন্ট শেষ হয়েছে**
@@ -117,7 +116,7 @@ lang: bn
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent দ্বারা চালিত) -** **_GoldRush ডেভেলপার, বিশ্লেষক এবং এন্টারপ্রাইজগুলোর জন্য সবচেয়ে ব্যাপক ব্লকচেইন ডেটা API স্যুট অফার করে। আপনি একটি DeFi ড্যাশবোর্ড, একটি ওয়ালেট, একটি ট্রেডিং বট, একটি এআই এজেন্ট বা একটি কমপ্লায়েন্স প্ল্যাটফর্ম তৈরি করুন না কেন, ডেটা API-গুলো আপনার প্রয়োজনীয় অপরিহার্য অনচেইন ডেটাতে দ্রুত, নির্ভুল এবং ডেভেলপার-বান্ধব অ্যাক্সেস প্রদান করে_**
+**GoldRush (Covalent দ্বারা চালিত) -** **_GoldRush ডেভেলপার, বিশ্লেষক এবং এন্টারপ্রাইজগুলোর জন্য সবচেয়ে ব্যাপক ব্লকচেইন ডেটা অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস (এপিআই) স্যুট অফার করে। আপনি একটি বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) ড্যাশবোর্ড, একটি ওয়ালেট, একটি ট্রেডিং বট, একটি এআই এজেন্ট বা একটি কমপ্লায়েন্স প্ল্যাটফর্ম তৈরি করুন না কেন, ডেটা API-গুলো আপনার প্রয়োজনীয় অপরিহার্য অনচেইন ডেটাতে দ্রুত, নির্ভুল এবং ডেভেলপার-বান্ধব অ্যাক্সেস প্রদান করে_**
 
 - [ওয়েবসাইট](https://goldrush.dev/)
 - [ডকুমেন্টেশন](https://goldrush.dev/docs/chains/ethereum)
@@ -131,7 +130,7 @@ lang: bn
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code এক্সটেনশন](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_ওপেন সোর্স, মডুলার এবং অ্যাগনস্টিক ফ্রেমওয়ার্ক যা dapp ডেভেলপারদের জন্য তাদের অ্যাপ্লিকেশনগুলোতে বিকেন্দ্রীকৃত পরিচয় এবং যাচাইযোগ্য শংসাপত্র তৈরি করা সহজ করে তোলে।_**
+**Veramo -** **_ওপেন সোর্স, মডুলার এবং অ্যাগনোস্টিক ফ্রেমওয়ার্ক যা বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) ডেভেলপারদের জন্য তাদের অ্যাপ্লিকেশনগুলোতে বিকেন্দ্রীকৃত পরিচয় এবং যাচাইযোগ্য শংসাপত্র তৈরি করা সহজ করে তোলে।_**
 
 - [হোমপেজ](https://veramo.io/)
 - [ডকুমেন্টেশন](https://veramo.io/docs/basics/introduction)
@@ -143,6 +142,7 @@ lang: bn
 
 - [ডকুমেন্টেশন](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## আরও পড়ুন {#further-reading}
 
 _আপনাকে সাহায্য করেছে এমন কোনো কমিউনিটি রিসোর্স সম্পর্কে জানেন? এই পৃষ্ঠাটি সম্পাদনা করুন এবং এটি যোগ করুন!_

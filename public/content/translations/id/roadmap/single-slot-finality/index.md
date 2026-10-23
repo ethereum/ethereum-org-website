@@ -2,6 +2,7 @@
 title: Finalitas slot tunggal
 description: Penjelasan tentang finalitas slot tunggal
 lang: id
+template: roadmap
 ---
 
 Dibutuhkan sekitar 15 menit agar sebuah blok [Ethereum](/) difinalisasi. Namun, kita dapat membuat mekanisme konsensus Ethereum memvalidasi blok dengan lebih efisien dan mengurangi waktu menuju finalitas secara drastis. Alih-alih menunggu selama lima belas menit, blok dapat diusulkan dan difinalisasi dalam slot yang sama. Konsep ini dikenal sebagai **finalitas slot tunggal (SSF)**.

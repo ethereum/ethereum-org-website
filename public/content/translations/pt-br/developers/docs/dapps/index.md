@@ -47,7 +47,7 @@ Um contrato inteligente é um código que vive na blockchain do Ethereum e é ex
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Ferramentas para criar dapps
+## Ferramentas para criar dapps {#dapp-tools}
 
 **Scaffold-ETH 2 _- Experimente rapidamente com Solidity usando um frontend que se adapta ao seu contrato inteligente._**
 

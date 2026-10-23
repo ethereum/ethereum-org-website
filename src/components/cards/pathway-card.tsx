@@ -5,6 +5,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardLinkFake,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -23,6 +24,8 @@ export type PathwayCardProps = {
    * renders text-only.
    */
   banner?: ReactNode
+  /** Non-interactive text CTA; the card itself is the link */
+  ctaLabel?: ReactNode
   className?: string
 }
 
@@ -43,6 +46,7 @@ const PathwayCard = ({
   description,
   badge,
   banner,
+  ctaLabel,
   className,
 }: PathwayCardProps) => (
   <div className="@container/pathway">
@@ -51,14 +55,12 @@ const PathwayCard = ({
       variant="nested"
       className={cn("@lg/pathway:flex-row", className)}
       border
-      hoverLift
     >
       {banner && (
         <CardBanner
           background="none"
           fit="contain"
           size="full"
-          zoom={false}
           className="flex h-32 w-full shrink-0 items-center justify-center p-2 pt-4 @lg/pathway:h-36 @lg/pathway:w-40 @lg/pathway:self-center @lg/pathway:p-2"
         >
           {banner}
@@ -75,6 +77,7 @@ const PathwayCard = ({
             )}
           </div>
           <CardParagraph>{description}</CardParagraph>
+          {ctaLabel && <CardLinkFake className="mt-2">{ctaLabel}</CardLinkFake>}
         </div>
         <ChevronNext
           className={cn(

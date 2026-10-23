@@ -2,6 +2,7 @@
 title: Cây Verkle
 description: Mô tả tổng quan về cây Verkle và cách chúng sẽ được sử dụng để nâng cấp Ethereum
 lang: vi
+template: roadmap
 summaryPoints:
   - Khám phá cây Verkle là gì
   - Tìm hiểu lý do tại sao cây Verkle là một bản nâng cấp hữu ích cho Ethereum

@@ -35,6 +35,7 @@ import { getVideos } from "@/lib/utils/videos"
 
 import { getVideosByCategory } from "../videos/utils"
 
+import AdoptionMap from "./_components/AdoptionMap"
 import CommunityStories from "./_components/CommunityStories"
 
 import { routing } from "@/i18n/routing"
@@ -93,7 +94,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                     className="border"
                   >
                     <CardHeader>
-                      <CardBanner className="h-40">
+                      <CardBanner className="h-40" zoom>
                         <Image
                           src={story.image}
                           alt=""
@@ -121,6 +122,16 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
           </Section>
         )}
 
+        <Section id="adoption-map" className="space-y-8 px-4 md:px-8">
+          <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
+            <h2>{t("page-stories-map-title")}</h2>
+            <p className="text-lg text-body-medium">
+              {t("page-stories-map-subtitle")}
+            </p>
+          </div>
+          <AdoptionMap locale={locale} />
+        </Section>
+
         <Section id="more-stories" className="space-y-8 px-4 md:px-8">
           <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
             <h2>{t("page-stories-more-title")}</h2>
@@ -139,7 +150,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
                   size="sm"
                 >
                   <CardHeader>
-                    <CardBanner className="aspect-video h-auto">
+                    <CardBanner className="aspect-video h-auto" zoom>
                       {video.thumbnailUrl ? (
                         <Image
                           src={video.thumbnailUrl}

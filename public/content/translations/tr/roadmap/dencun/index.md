@@ -3,6 +3,7 @@ title: Kankun-Deneb (Dencun)
 metaTitle: Kankun-Deneb (Dencun) SSS
 description: Kankun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular
 lang: tr
+template: upgrade
 ---
 
 Kankun-Deneb (Dencun), daha ucuz [katman 2 (l2)](/glossary/#layer-2) Rollup depolaması için geçici veri **blob**'ları sunan **Proto-Danksharding (EIP-4844)**'i etkinleştiren bir Ethereum ağ güncellemesidir.

@@ -3,9 +3,15 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardBanner, CardContent, CardHeader } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardButtonFake,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -17,9 +23,9 @@ import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
 import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
-  <Card size="lg">
+  <Card href="/reports/trillion-dollar-security.pdf" size="lg">
     <CardHeader>
-      <CardBanner fit="contain" size="full">
+      <CardBanner fit="contain" size="full" zoom>
         <Image
           src={TdsReport}
           alt={altText}
@@ -27,15 +33,9 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
         />
       </CardBanner>
     </CardHeader>
-    <CardContent>
-      <ButtonLink
-        size="lg"
-        href="/reports/trillion-dollar-security.pdf"
-        className="block text-center"
-      >
-        {cta}
-      </ButtonLink>
-    </CardContent>
+    <CardFooter className="mt-(--card-pad)">
+      <CardButtonFake size="lg">{cta}</CardButtonFake>
+    </CardFooter>
   </Card>
 )
 
@@ -69,6 +69,10 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
             className="max-h-[480px] w-full object-cover"
           />
           <div className="px-6 md:px-8">
+            <Breadcrumbs
+              slug="reports/trillion-dollar-security"
+              className="mt-6 [&_ol]:justify-center"
+            />
             <p className="mt-6 mb-2 text-center text-body-medium">
               {t("page-trillion-dollar-security-subtitle")}
             </p>

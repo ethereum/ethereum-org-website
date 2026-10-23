@@ -178,7 +178,7 @@ Bir işlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
 
 Bir akıllı sözleşmeyi içeren herhangi bir işlem için gaz gereklidir.
 
-Akıllı sözleşmeler ayrıca sözleşmenin durumunu değiştirmeyen [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) veya [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) işlevleri olarak bilinen işlevler de içerebilir. Bu nedenle, bu işlevleri bir EOA'dan çağırmak herhangi bir gaz gerektirmeyecektir. Bu senaryo için temel RPC çağrısı [`eth_call`](/developers/docs/apis/json-rpc#eth_call)'dir.
+Akıllı sözleşmeler ayrıca sözleşmenin durumunu değiştirmeyen [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) veya [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) işlevleri olarak bilinen işlevler de içerebilir. Bu nedenle, bu işlevleri bir EOA'dan çağırmak herhangi bir gaz gerektirmeyecektir. Bu senaryo için temel RPC çağrısı [`eth_call`](/developers/docs/apis/json-rpc/#eth-call)'dir.
 
 `eth_call` kullanılarak erişildiğinde olduğunun aksine, bu `view` veya `pure` işlevleri genellikle dahili olarak da çağrılır (yani, sözleşmenin kendisinden veya başka bir sözleşmeden) ve bu da gaz maliyetine neden olur.
 
@@ -238,3 +238,7 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [Hesaplar](/developers/docs/accounts/)
 - [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

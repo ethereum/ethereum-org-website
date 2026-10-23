@@ -59,10 +59,10 @@ lang: hi
 
 - कई ओपन-सोर्स सामुदायिक कॉल्स होती हैं, और नोट्स लेने वालों का होना एक बड़ी मदद है। यदि आप रुचि रखते हैं, तो [Ethereum Cat Herders डिस्कॉर्ड](https://discord.com/invite/Nz6rtfJ8Cu) से जुड़ें, और अपना परिचय दें!
 
-### इथेरियम सामग्री का अपनी मूल भाषा में अनुवाद करें {#translate-ethereum}
+### अनुवादित इथेरियम सामग्री को बेहतर बनाने में मदद करें {#translate-ethereum}
 
-- ethereum.org एक अनुवाद कार्यक्रम (Translation Program) चलाता है जो वेबसाइट और अन्य संसाधनों का कई अलग-अलग भाषाओं में अनुवाद करता है
-- [यहाँ](/contributing/translation-program) जानें कि कैसे शामिल हों
+- ethereum.org अनुवाद कार्यक्रम समाप्त हो रहा है और अब नए अनुवादकों की ऑनबोर्डिंग नहीं कर रहा है—इसकी स्थिति और इतिहास के लिए [कार्यक्रम पृष्ठ](/contributing/translation-program/) देखें
+- आप अभी भी [मौजूदा अनुवादों में त्रुटियों की रिपोर्ट करके](https://github.com/ethereum/ethereum-org-website/issues/new/choose) मदद कर सकते हैं
 
 ### एक नोड चलाएं {#run-a-node}
 

@@ -3,6 +3,7 @@ title: Cancun-Deneb (Dencun)
 metaTitle: Câu hỏi thường gặp về Cancun-Deneb (Dencun)
 description: Các câu hỏi thường gặp về bản nâng cấp mạng lưới Cancun-Deneb (Dencun)
 lang: vi
+template: upgrade
 ---
 
 Cancun-Deneb (Dencun) là một bản nâng cấp cho mạng lưới Ethereum, kích hoạt **Proto-Danksharding (EIP-4844)**, giới thiệu các **khối dữ liệu** (blob) tạm thời để lưu trữ bản cuộn [lớp 2 (l2)](/glossary/#layer-2) với chi phí rẻ hơn.

@@ -2,6 +2,7 @@
 title: Finalité à slot unique
 description: Explication de la finalité à slot unique
 lang: fr
+template: roadmap
 ---
 
 Il faut environ 15 minutes pour qu'un bloc [Ethereum](/) soit finalisé. Cependant, nous pouvons rendre le mécanisme de consensus d'Ethereum plus efficace pour valider les blocs et réduire considérablement le temps de finalité. Au lieu d'attendre quinze minutes, les blocs pourraient être proposés et finalisés dans le même créneau. Ce concept est connu sous le nom de **finalité à slot unique (SSF)**.

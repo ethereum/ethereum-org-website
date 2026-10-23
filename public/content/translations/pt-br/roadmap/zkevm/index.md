@@ -2,6 +2,7 @@
 title: zkEVM para verificação de bloco da l1
 description: Aprenda como as provas de conhecimento zero podem verificar a execução de blocos do Ethereum, permitindo maior vazão e menores requisitos para validadores.
 lang: pt-br
+template: roadmap
 ---
 
 A zkEVM é uma tecnologia que usa [provas de conhecimento zero](/zero-knowledge-proofs/) para verificar a execução de blocos do Ethereum. Em vez de exigir que cada [validador](/glossary/#validator) reexecute todas as transações em um bloco, um único ator especializado (chamado de "provador") executa o bloco e gera uma prova criptográfica de que a execução foi correta. Qualquer nó pode então verificar essa prova — um processo que é ordens de magnitude mais barato do que reexecutar todas as transações.

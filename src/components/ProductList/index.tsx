@@ -76,7 +76,6 @@ const ProductList = ({
                 key={id || idx}
                 variant="ghost"
                 href={href}
-                hoverLift
                 className={cn("@container/card flex-row", className)}
               >
                 {image && (
@@ -85,7 +84,6 @@ const ProductList = ({
                       background="none"
                       fit="contain"
                       size="thumbnail"
-                      zoom={false}
                     >
                       <Image src={image} alt={alt} width={128} height={128} />
                     </CardBanner>

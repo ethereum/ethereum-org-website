@@ -1,10 +1,11 @@
+import { shuffle } from "lodash"
 import { getTranslations } from "next-intl/server"
 
-import type { Story } from "@/lib/types"
+import type { Story, StoryData } from "@/lib/types"
 
 import { formatDate, isValidDate } from "@/lib/utils/date"
 
-import tenYearStories from "@/data/tenYearStories"
+import tenYearStories, { newStories } from "@/data/tenYearStories"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -28,11 +29,12 @@ const parseDate = (date: string, locale = DEFAULT_LOCALE): string => {
 }
 
 /**
- * Community stories resolved for rendering: story copy localized via the
- * "community-stories" namespace (English fallback) and dates formatted for
- * the locale. Junk spreadsheet fields (region) are dropped here.
+ * Resolve raw story data for rendering: story copy localized via the
+ * "community-stories" namespace (English fallback), dates formatted for the
+ * locale, and junk spreadsheet fields (region) dropped.
  */
-export const getCommunityStories = async (
+const resolveStories = async (
+  stories: StoryData[],
   locale = DEFAULT_LOCALE
 ): Promise<Story[]> => {
   const t = await getTranslations({ locale, namespace: "community-stories" })
@@ -43,7 +45,7 @@ export const getCommunityStories = async (
   const hasTranslation = (key: string) =>
     locale !== DEFAULT_LOCALE && key in translated
 
-  return tenYearStories.map(
+  return stories.map(
     ({
       storyKey,
       storyOriginal,
@@ -73,4 +75,23 @@ export const getCommunityStories = async (
       }
     }
   )
+}
+
+/** All community stories in file order (used by /stories). */
+export const getCommunityStories = async (
+  locale = DEFAULT_LOCALE
+): Promise<Story[]> => resolveStories(tenYearStories, locale)
+
+/**
+ * Stories for the /community "Ethereum voices" section: the newer stories
+ * first, then the 10-year-anniversary campaign stories shuffled for variety.
+ * The shuffle runs server-side (build time) before the client StoryCard grid
+ * receives the ordered array as props, so there is no hydration mismatch.
+ */
+export const getVoicesStories = async (
+  locale = DEFAULT_LOCALE
+): Promise<Story[]> => {
+  const all = await resolveStories(tenYearStories, locale)
+  const newCount = newStories.length
+  return [...all.slice(0, newCount), ...shuffle(all.slice(newCount))]
 }

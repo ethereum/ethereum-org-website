@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/proposer-builder-separation/index.md",
-  "generatedAt": "2026-04-29T00:04:01.120Z",
-  "rootHash": "ef778a5bb029",
+  "generatedAt": "2026-09-30T19:15:48.541Z",
+  "rootHash": "25d7c8eb8120",
   "tree": {
-    "contentHash": "12233f781edb",
-    "anchorHash": "dcfc2a6f0918",
+    "contentHash": "0613b2fc4c05",
+    "anchorHash": "1196b53f774a",
     "children": {
       "frontmatter:title": {
-        "contentHash": "14fdcad9dc2d",
+        "contentHash": "925d65ec7e47",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "614694bd8365",
+        "contentHash": "18cfcea1bf71",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e33f0402b076"
+        "anchorHash": "4529147ed952"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "506c97f5eec6"
+        "anchorHash": "6069b992e97b"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "df571735a772",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7c37d35dbe8b"
+        "anchorHash": "d269e351779f"
       },
       "prose:1": {
         "contentHash": "80d3ee1242d2",
@@ -281,5 +287,5 @@
       "questions-and-closing-2703"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

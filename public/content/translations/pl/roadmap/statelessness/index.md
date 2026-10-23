@@ -2,6 +2,7 @@
 title: "Bezstanowość, wygasanie stanu i wygasanie historii"
 description: "Wyjaśnienie wygasania historii i bezstanowego Ethereum"
 lang: pl
+template: roadmap
 ---
 
 Możliwość uruchamiania węzłów [Ethereum](/) na skromnym sprzęcie ma kluczowe znaczenie dla prawdziwej decentralizacji. Dzieje się tak, ponieważ uruchomienie węzła daje użytkownikom możliwość weryfikacji informacji poprzez niezależne przeprowadzanie kontroli kryptograficznych, zamiast ufać stronie trzeciej, że dostarczy im dane. Uruchomienie węzła pozwala użytkownikom na przesyłanie transakcji bezpośrednio do sieci peer-to-peer Ethereum, zamiast konieczności ufania pośrednikowi. Decentralizacja nie jest możliwa, jeśli te korzyści są dostępne tylko dla użytkowników posiadających drogi sprzęt. Zamiast tego węzły powinny być w stanie działać przy niezwykle skromnych wymaganiach dotyczących przetwarzania i pamięci, tak aby mogły działać na telefonach komórkowych, mikrokomputerach lub niezauważalnie na komputerze domowym.

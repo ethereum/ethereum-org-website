@@ -240,8 +240,6 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
               </div>
             </div>
           </CardContent>
-          {/* </Card>
-      <Card variant="nested" size="md"> */}
           <CardFooter>
             <ButtonLink
               href={network.bridgeLink}

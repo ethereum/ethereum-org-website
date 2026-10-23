@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Pomocné funkce Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Pomocné funkce Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Dostupné knihovny
+## Dostupné knihovny {#available-libraries}
 
 **Web3.js -** **_JavaScriptové API pro Ethereum._**
 

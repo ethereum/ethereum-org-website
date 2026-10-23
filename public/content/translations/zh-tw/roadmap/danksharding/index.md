@@ -2,6 +2,7 @@
 title: 丹克分片
 description: 了解原始 Danksharding 與丹克分片：這兩個用於擴展以太坊的連續升級。
 lang: zh-tw
+template: roadmap
 summaryPoints:
   - 丹克分片是一個多階段升級，旨在改善以太坊的擴展性與容量。
   - 第一階段為原始 Danksharding，將資料塊新增至區塊中。

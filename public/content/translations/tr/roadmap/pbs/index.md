@@ -2,6 +2,7 @@
 title: Teklifçi-oluşturucu ayrımı
 description: Ethereum doğrulayıcılarının blok oluşturma ve blok yayınlama sorumluluklarını nasıl ve neden ayıracaklarını öğrenin.
 lang: tr
+template: roadmap
 ---
 
 Günümüz [Ethereum](/) doğrulayıcıları blokları oluşturur _ve_ yayınlar. Dedikodu ağı (gossip network) aracılığıyla duydukları işlemleri bir araya getirir ve Ethereum ağındaki eşlere gönderilen bir blok halinde paketlerler. **Teklifçi-oluşturucu ayrımı (PBS)**, bu görevleri birden fazla doğrulayıcı arasında böler. Blok oluşturucular, blokları oluşturmaktan ve her bir slotta bunları blok teklifçisine sunmaktan sorumlu hale gelir. Blok teklifçisi bloğun içeriğini göremez, sadece en kârlı olanı seçer ve bloğu eşlerine göndermeden önce blok oluşturucudan bir ücret alır (veya oluşturucu teklifçiye bir teklif öder).

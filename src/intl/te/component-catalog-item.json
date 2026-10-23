@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} గురించి",
+  "catalog-item-gallery-modal-title": "{name} స్క్రీన్‌షాట్‌లు",
+  "catalog-item-gallery-screenshot-alt": "{name} యొక్క స్క్రీన్‌షాట్ {index}",
+  "catalog-item-gallery-title": "గ్యాలరీ",
+  "catalog-item-info-title": "సమాచారం",
+  "catalog-item-link-label": "{platform} లో {name}",
+  "catalog-item-see-next": "తర్వాతది చూడండి",
+  "catalog-item-source-code": "సోర్స్ కోడ్",
+  "catalog-item-view-on-github": "GitHub లో చూడండి",
+  "catalog-item-visit-website": "వెబ్‌సైట్‌ను సందర్శించండి"
+}

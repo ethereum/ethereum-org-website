@@ -1,6 +1,6 @@
 import { AppCategoryEnum, AppData } from "@/lib/types"
 
-import { uploadToS3 } from "@/data-layer/s3"
+import { uploadManyToS3, uploadToS3 } from "@/data-layer/s3"
 
 import { fetchRetry } from "./fetchRetry"
 
@@ -152,14 +152,22 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
 async function uploadAppImages(apps: AppData[]): Promise<AppData[]> {
   return Promise.all(
     apps.map(async (app) => {
+      // Collapse to "" rather than passing the source value through: the sheet
+      // API is cast to AppData unchecked, so a missing image arrives as null
+      // despite the declared `string`.
       const image = app.image
         ? ((await uploadToS3(app.image, "apps/logos")) ?? "")
-        : app.image
+        : ""
       const bannerImage = app.bannerImage
         ? ((await uploadToS3(app.bannerImage, "apps/banners")) ?? "")
-        : app.bannerImage
+        : ""
+      // Drop failed uploads: an external URL would 400 in next/image, since only
+      // the S3 host is in remotePatterns.
+      const screenshots = (
+        await uploadManyToS3(app.screenshots, "apps/screenshots")
+      ).filter((url): url is string => Boolean(url))
 
-      return { ...app, image, bannerImage }
+      return { ...app, image, bannerImage, screenshots }
     })
   )
 }

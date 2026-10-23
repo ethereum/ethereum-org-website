@@ -79,3 +79,7 @@ Uygulamaların tümü Ethereum üzerinde inşa edildiğinde, hepsi birbiriyle uy
 <ExpandableCard title="En iyi kripto cüzdanı hangisidir?" visible>
   <p>Kripto cüzdanı, token'larınızı tutmanızı ve Ethereum hesabınızı yönetmenizi sağlar. Her biri farklı bir amaca hizmet eden birçok harika cüzdan vardır. Sizin için en iyi cüzdanın hangisi olduğunu öğrenmek için [cüzdan listemizi](/wallets/find-wallet) ziyaret edin.</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

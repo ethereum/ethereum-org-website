@@ -2,6 +2,7 @@
 title: Tính chung cuộc trong một slot
 description: Giải thích về tính chung cuộc trong một slot
 lang: vi
+template: roadmap
 ---
 
 Mất khoảng 15 phút để một khối [Ethereum](/) đạt tính chung cuộc. Tuy nhiên, chúng ta có thể làm cho cơ chế đồng thuận của Ethereum xác thực các khối hiệu quả hơn và giảm đáng kể thời gian đạt tính chung cuộc. Thay vì chờ đợi mười lăm phút, các khối có thể được đề xuất và đã chung cuộc trong cùng một khe. Khái niệm này được gọi là **tính chung cuộc trong một slot (SSF)**.

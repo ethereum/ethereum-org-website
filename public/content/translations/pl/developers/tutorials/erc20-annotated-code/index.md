@@ -13,7 +13,7 @@ published: 2021-03-09
 
 Jednym z najczęstszych zastosowań Ethereum jest tworzenie przez grupę zbywalnego tokena, w pewnym sensie własnej waluty. Tokeny te zazwyczaj są zgodne ze standardem [ERC-20](/developers/docs/standards/tokens/erc-20/). Standard ten umożliwia pisanie narzędzi, takich jak pule płynności i portfele, które współpracują ze wszystkimi tokenami ERC-20. W tym artykule przeanalizujemy [implementację ERC20 w Solidity od OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), a także [definicję interfejsu](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-To jest opatrzony komentarzami kod źródłowy. Jeśli chcesz zaimplementować ERC-20, [przeczytaj ten samouczek](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+To jest opatrzony komentarzami kod źródłowy. Jeśli chcesz zaimplementować ERC-20, [przeczytaj ten samouczek](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Interfejs {#the-interface}
 

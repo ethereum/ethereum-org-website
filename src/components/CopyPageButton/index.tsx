@@ -10,6 +10,7 @@ import {
   Loader2,
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
+import * as Sentry from "@sentry/nextjs"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -132,7 +133,9 @@ const CopyPageButton = ({
       const text = await res.text()
       await onCopy(text)
     } catch (error) {
+      // Silent failure for the user: the button just resets, so report it
       console.error("Failed to copy page markdown:", error)
+      Sentry.captureException(error, { extra: { mdPath } })
     } finally {
       clearTimeout(showLoadingTimer)
       if (loadingShownAt !== null) {

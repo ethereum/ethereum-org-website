@@ -17,7 +17,7 @@ Ein kurzes animiertes Erklärvideo von **Amnesty International** darüber, warum
 
 *Dieses Transkript ist eine barrierefreie Kopie des [originalen Video-Transkripts](https://www.youtube.com/watch?v=5GTD14irFvQ), das von Amnesty International veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet und mit Sprecher-Labels versehen.*
 
-#### „Du hast doch nichts zu verbergen, oder?“ (0:00) {#youve-got-nothing-to-hide-right-000}
+### „Du hast doch nichts zu verbergen, oder?“ (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agent:** Dir ist digitale Sicherheit egal, oder?
 
@@ -79,7 +79,7 @@ Ein kurzes animiertes Erklärvideo von **Amnesty International** darüber, warum
 
 **Bürger:** Doch.
 
-#### Das Recht auf Privatsphäre (1:30) {#the-right-to-privacy-130}
+### Das Recht auf Privatsphäre (1:30) {#the-right-to-privacy-130}
 
 **Bürger:** Und mein Land besteht aus Menschen. Menschen mit dem Recht auf ihre eigene Privatsphäre. Wenn Regierungen wahllos all deine Daten sammeln wollen – E-Mails, Telefonate, Webcam-Bilder und Internetsuchen – dann ist das nicht in Ordnung.
 

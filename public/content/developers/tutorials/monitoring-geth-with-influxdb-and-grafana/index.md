@@ -23,54 +23,57 @@ An Ethereum client collects lots of data which can be read in the form of a chro
 
 - [Prometheus](https://prometheus.io/) (pull model)
 - [InfluxDB](https://www.influxdata.com/get-influxdb/) (push model)
-- [Telegraf](https://www.influxdata.com/get-influxdb/)
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)
 - [Grafana](https://www.grafana.com/)
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-There's also [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), an option preconfigured with InfluxDB and Grafana.
+If you prefer Prometheus, Geth can also expose its metrics in Prometheus format. Start Geth with `--metrics --metrics.addr 127.0.0.1` and point Prometheus at `http://127.0.0.1:6060/debug/metrics/prometheus`.
 
 In this tutorial, we'll set up your Geth client to push data to InfluxDB to create a database and Grafana to create a graph visualisation of the data. Doing it manually will help you understand the process better, alter it, and deploy in different environments.
 
 ## Setting up InfluxDB {#setting-up-influxdb}
 
-First, let's download and install InfluxDB. Various download options can be found at [Influxdata release page](https://portal.influxdata.com/downloads/). Pick the one that suits your environment.
-You can also install it from a [repository](https://repos.influxdata.com/). For example in Debian based distribution:
+First, let's download and install InfluxDB. This tutorial uses InfluxDB 1.x (OSS), which Geth supports with the `--metrics.influxdb` flags below. Newer InfluxDB versions use a different setup with organizations, buckets and tokens instead of databases and users. Geth supports InfluxDB 2.x with the `--metrics.influxdbv2` flags, but the setup steps in this tutorial only apply to 1.x.
 
-```
-curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
-source /etc/lsb-release
-echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+Follow the [InfluxDB 1.x installation instructions](https://docs.influxdata.com/influxdb/v1/introduction/install/) for your environment. For example, on Debian or Ubuntu you can install it from the InfluxData repository. Check the installation instructions for the current signing key fingerprint before trusting the key:
+
+```sh
+curl --silent --location -O https://repos.influxdata.com/influxdata-archive.key
+sudo mkdir -p /etc/apt/keyrings
+gpg --dearmor < influxdata-archive.key | sudo tee /etc/apt/keyrings/influxdata-archive.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/influxdata-archive.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
 sudo apt update
 sudo apt install influxdb -y
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
-sudo apt install influxdb-client
 ```
+
+The `influxdb` package includes the `influx` command line client.
 
 After successfully installing InfluxDB, make sure it's running on background. By default, it is reachable at `localhost:8086`.
 Before using `influx` client, you have to create new user with admin privileges. This user will serve for high level management, creating databases and users.
 
-```
+```sh
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-Now you can use influx client to enter [InfluxDB shell](https://docs.influxdata.com/influxdb/v1.8/tools/shell/) with this user.
+Now you can use influx client to enter [InfluxDB shell](https://docs.influxdata.com/influxdb/v1/tools/shell/) with this user.
 
-```
+```sh
 influx -username 'username' -password 'password'
 ```
 
 Directly communicating with InfluxDB in its shell, you can create database and user for geth metrics.
 
-```
+```sql
 create database geth
-create user geth with password choosepassword
+create user geth with password '<geth-password>'
 ```
 
 Verify created entries with:
 
-```
+```sql
 show databases
 show users
 ```
@@ -88,27 +91,28 @@ InfluxDB is running and configured to store metrics from Geth.
 After setting up database, we need to enable metrics collection in Geth. Pay attention to `METRICS AND STATS OPTIONS` in `geth --help`. Multiple options can be found there, in this case we want Geth to push data into InfluxDB.
 Basic setup specifies endpoint where InfluxDB is reachable and authentication for the database.
 
-```
-geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:8086" --metrics.influxdb.username "geth" --metrics.influxdb.password "chosenpassword"
+```sh
+geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://127.0.0.1:8086" --metrics.influxdb.database "geth" --metrics.influxdb.username "geth" --metrics.influxdb.password "<geth-password>"
 ```
 
-This flags can be appended to a command starting the client or saved to the configuration file.
+Use the same password you set when you created the `geth` user. These flags can be appended to a command starting the client or saved to the configuration file.
 
 You can verify that Geth is successfully pushing data, for instance by listing metrics in database. In InfluxDB shell:
 
-```
+```sql
 use geth
 show measurements
 ```
 
 ## Setting up Grafana {#setting-up-grafana}
 
-Next step is installing Grafana which will interpret data graphically. Follow installation process for your environment in Grafana documentation. Make sure to install OSS version if you don't want otherwise.
-Example installation steps for Debian distributions using repository:
+Next step is installing Grafana which will interpret data graphically. Follow the [installation process for your environment](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) in the Grafana documentation. Make sure to install the OSS version unless you need something else.
+Example installation steps for Debian or Ubuntu using the Grafana repository:
 
-```
-curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```sh
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 sudo apt update
 sudo apt install grafana
 sudo systemctl enable grafana-server
@@ -120,7 +124,7 @@ Use your preferred browser to access this path, then login with the default cred
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 1)](./grafana1.png)
 
-You will be redirected to the Grafana home page. First, set up your source data. Click on the configuration icon in the left bar and select "Data sources".
+You will be redirected to the Grafana home page. First, set up your source data. Open the menu and select **Connections > Data sources**. The screenshots in this tutorial are from an older version of Grafana, so your screens may look a little different.
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 2)](./grafana2.png)
 
@@ -140,7 +144,7 @@ If everything is complete and InfluxDB is reachable, click on "Save and test" an
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 6)](./grafana6.png)
 
-Grafana is now set up to read data from InfluxDB. Now you need to create a dashboard which will interpret and display it. Dashboards properties are encoded in JSON files which can be created by anybody and easily imported. On the left bar, click on "Create and Import".
+Grafana is now set up to read data from InfluxDB. Now you need to create a dashboard which will interpret and display it. Dashboards properties are encoded in JSON files which can be created by anybody and easily imported. Open the menu and select **Dashboards**, then click **New > Import**.
 
 ![Grafana dashboard screenshot for Geth monitoring (panel 7)](./grafana7.png)
 

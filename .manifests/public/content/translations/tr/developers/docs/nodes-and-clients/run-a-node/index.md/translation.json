@@ -1,8 +1,8 @@
 {
   "version": 1,
   "locale": "tr",
-  "translatedAt": "2026-06-19T18:45:25.174Z",
-  "englishManifestHash": "ac8855706fb3",
+  "translatedAt": "2026-08-19T20:21:30.576Z",
+  "englishManifestHash": "ceb90d224542",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-21141b",
@@ -22,6 +22,8 @@
     "LINK-ddb5bc",
     "LINK-f3fb1b",
     "LINK-e6c123",
+    "LINK-d37702",
+    "LINK-b95c67",
     "LINK-c7d41f",
     "LINK-1ce178",
     "LINK-25474f",
@@ -104,7 +106,7 @@
     "LINK-55cf57",
     "CODEBLOCK-fb725b",
     "CODEBLOCK-62a3dc",
-    "LINK-a06274",
+    "LINK-a0b578",
     "LINK-2d5d7a",
     "LINK-1788fd",
     "LINK-22d436",
@@ -143,7 +145,7 @@
     "LINK-955eaa",
     "LINK-a092ca",
     "LINK-274142",
-    "LINK-0b8633",
+    "LINK-41fab4",
     "LINK-e9f25c",
     "LINK-c23291",
     "LINK-5ce839",
@@ -434,6 +436,18 @@
         "url": "https://wikipedia.org/wiki/Data_cap"
       }
     },
+    "LINK-d37702": {
+      "type": "link",
+      "values": {
+        "url": "https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038"
+      }
+    },
+    "LINK-b95c67": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7870"
+      }
+    },
     "LINK-c7d41f": {
       "type": "link",
       "values": {
@@ -716,10 +730,10 @@
         "url": "https://prysm.offchainlabs.com/docs/install-prysm/install-with-script/"
       }
     },
-    "LINK-a06274": {
+    "LINK-a0b578": {
       "type": "link",
       "values": {
-        "url": "https://eth2docs.vercel.app/"
+        "url": "https://ethereum.github.io/beacon-APIs"
       }
     },
     "LINK-2d5d7a": {
@@ -896,10 +910,10 @@
         "url": "https://github.com/remyroy/ethstaker#guides"
       }
     },
-    "LINK-0b8633": {
+    "LINK-41fab4": {
       "type": "link",
       "values": {
-        "url": "https://aws-samples.github.io/aws-blockchain-node-runners/docs/Blueprints/Ethereum"
+        "url": "https://aws-samples.github.io/aws-blockchain-node-runners/docs/blueprints/ethereum"
       }
     },
     "LINK-e9f25c": {
@@ -947,7 +961,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T18:45:25.174Z",
+      "translatedAt": "2026-08-19T20:21:30.576Z",
       "status": "success"
     }
   }

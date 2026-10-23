@@ -59,10 +59,10 @@ lang: ar
 
 - هناك العديد من مكالمات المجتمع مفتوحة المصدر، ووجود مدوني ملاحظات يعد مساعدة كبيرة. إذا كنت مهتمًا، انضم إلى [ديسكورد Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)، وقدم نفسك!
 
-### ترجم محتوى إيثيريوم إلى لغتك الأم {#translate-ethereum}
+### المساعدة في تحسين محتوى إيثيريوم المترجم {#translate-ethereum}
 
-- يدير موقع <span dir="ltr">ethereum.org</span> برنامج ترجمة يقوم بترجمة الموقع الإلكتروني، والموارد الأخرى، إلى العديد من اللغات المختلفة
-- اكتشف كيفية المشاركة [هنا](/contributing/translation-program)
+- برنامج ترجمة <span dir="ltr">ethereum.org</span> في مراحله النهائية ولم يعد يستقبل مترجمين جددًا — راجع [صفحة البرنامج](/contributing/translation-program/) لمعرفة حالته وتاريخه
+- لا يزال بإمكانك المساعدة من خلال [الإبلاغ عن الأخطاء في الترجمات الحالية](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 ### تشغيل عقدة {#run-a-node}
 

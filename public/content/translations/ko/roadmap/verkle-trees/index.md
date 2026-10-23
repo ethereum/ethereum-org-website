@@ -2,6 +2,7 @@
 title: 버클 트리
 description: 버클 트리에 대한 개요와 이더리움 업그레이드에 어떻게 사용되는지에 대한 설명
 lang: ko
+template: roadmap
 summaryPoints:
   - 버클 트리가 무엇인지 알아보기
   - 버클 트리가 이더리움에 유용한 업그레이드인 이유 알아보기

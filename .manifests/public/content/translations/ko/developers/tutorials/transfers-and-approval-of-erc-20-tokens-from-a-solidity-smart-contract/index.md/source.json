@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md",
   "generatedAt": "2026-06-19T23:22:32.297Z",
-  "rootHash": "ce07b1c71686",
+  "rootHash": "83e6cd6bf6d1",
   "tree": {
-    "contentHash": "8197fffa418d",
-    "anchorHash": "a5d753ec0758",
+    "contentHash": "bd3e65c7e0b2",
+    "anchorHash": "b87517e21f5b",
     "children": {
       "frontmatter:title": {
         "contentHash": "a5afd7d95e57",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "15f36bb8e03d"
+        "contentHash": "3ef9f84e5ba2",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "c51e455b41df",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "845516ec99f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:2": {
         "contentHash": "98544d0803f8",

@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -40,9 +40,9 @@ const BuildYourOwnAIAgent = async () => {
   return (
     <div className="flex flex-col gap-8 *:flex-1 md:flex-row">
       {cards.map((card) => (
-        <Card key={card.href}>
+        <Card key={card.href} href={card.href}>
           <CardHeader>
-            <CardBanner size="thumbnail-lg" background="none">
+            <CardBanner size="thumbnail-lg" background="none" zoom>
               <Image src={card.image} alt="" sizes="128px" />
             </CardBanner>
           </CardHeader>
@@ -52,9 +52,7 @@ const BuildYourOwnAIAgent = async () => {
             <CardParagraph>{card.description}</CardParagraph>
           </CardContent>
           <CardFooter buttons="compact">
-            <ButtonLink href={card.href} variant="outline">
-              {card.ctaLabel}
-            </ButtonLink>
+            <CardButtonFake variant="outline">{card.ctaLabel}</CardButtonFake>
           </CardFooter>
         </Card>
       ))}

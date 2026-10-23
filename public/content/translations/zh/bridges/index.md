@@ -1,7 +1,7 @@
 ---
-title: 区块链跨链桥
-metaTitle: 区块链跨链桥简介
-description: 跨链桥允许用户在不同的区块链之间转移资金
+title: "区块链跨链桥"
+metaTitle: "区块链跨链桥简介"
+description: "跨链桥允许用户在不同的区块链之间转移资金"
 lang: zh
 ---
 
@@ -135,8 +135,11 @@ _Web3 已经发展成为一个由一层网络 (l1) 区块链和二层网络 (l2)
 <Divider />
 
 ## 延伸阅读 {#further-reading}
+
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
 - [L2Bridge 风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
 - [“为什么未来将是多链的，但不会是跨链的。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
 - [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
 - [Rollup 互操作性解决方案的现状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

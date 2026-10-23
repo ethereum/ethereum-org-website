@@ -2,6 +2,7 @@
 title: Miti ya Verkle
 description: Maelezo ya kiwango cha juu ya miti ya Verkle na jinsi itakavyotumika kuboresha Ethereum
 lang: sw
+template: roadmap
 summaryPoints:
   - Gundua miti ya Verkle ni nini
   - Soma kwa nini Miti ya Verkle ni uboreshaji muhimu kwa Ethereum

@@ -47,7 +47,7 @@ sidebarDepth: 2
 
 [자체 노드 실행의 이점](/developers/docs/nodes-and-clients/#benefits-to-you)에 대해 자세히 알아보세요.
 
-## 인기 있는 노드 서비스
+## 인기 있는 노드 서비스 {#popular-node-services}
 
 다음은 가장 인기 있는 이더리움 노드 제공업체 목록입니다. 누락된 업체가 있다면 자유롭게 추가해 주세요! 각 노드 서비스는 무료 또는 유료 등급 외에도 다양한 이점과 기능을 제공하므로, 결정하기 전에 어떤 서비스가 여러분의 요구에 가장 적합한지 조사해야 합니다.
 
@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 50개 이상의 블록체인 노드에 대한 접근
 
 - [**Infura**](https://infura.io/)
-  - [문서](https://infura.io/docs)
+  - [문서](https://docs.infura.io/)
   - 기능
     - 무료 등급 옵션
     - 사용량에 따른 확장

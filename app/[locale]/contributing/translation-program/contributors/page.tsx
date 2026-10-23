@@ -70,11 +70,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               )}
             </p>
             <p>
-              {tCommon("page-languages-interested")}{" "}
               <InlineLink href="/contributing/translation-program/">
                 {tCommon("page-languages-learn-more")}
               </InlineLink>
-              .
             </p>
           </>
         }
@@ -98,11 +96,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </List>
 
         <p>
-          {tCommon("page-languages-interested")}{" "}
           <InlineLink href="/contributing/translation-program/">
             {tCommon("page-languages-learn-more")}
           </InlineLink>
-          .
         </p>
 
         <ContentFeedback />

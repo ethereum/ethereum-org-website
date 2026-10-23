@@ -298,7 +298,6 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - [An overview and comparison of different testing products](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

@@ -1,0 +1,76 @@
+{
+  "version": 2,
+  "sourceFile": "public/content/videos/quarkid-south-america-ssi/index.md",
+  "generatedAt": "2026-07-29T05:54:16.480Z",
+  "rootHash": "8a3a1c5af538",
+  "tree": {
+    "contentHash": "90a8835807f2",
+    "anchorHash": "6c4f28a35cb4",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9bede19b77d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "adb09832b88c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "3ece7d4b7501"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "74b8aa608d10"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a89df9d14fdb"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "c46640ff525e"
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb"
+    ]
+  },
+  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+}

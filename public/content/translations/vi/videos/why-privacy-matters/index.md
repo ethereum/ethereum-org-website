@@ -17,7 +17,7 @@ Một bài nói chuyện trên TED của **Glenn Greenwald**, một trong nhữn
 
 *Bản ghi lời thoại này là một bản sao dễ tiếp cận của [bản ghi lời thoại video gốc](https://www.youtube.com/watch?v=pcSlowAhvUk) do TED xuất bản. Nó đã được chỉnh sửa đôi chút để dễ đọc hơn.*
 
-#### Một trải nghiệm mà ai cũng từng trải qua (0:12) {#an-experience-everyone-has-had-012}
+### Một trải nghiệm mà ai cũng từng trải qua (0:12) {#an-experience-everyone-has-had-012}
 
 Có cả một thể loại video trên YouTube dành riêng cho một trải nghiệm mà tôi chắc chắn rằng mọi người trong căn phòng này đều đã từng trải qua. Nó liên quan đến một cá nhân, khi nghĩ rằng mình đang ở một mình, đã tham gia vào một số hành vi biểu cảm—hát hò cuồng nhiệt, nhảy múa quay cuồng, một số hoạt động tình dục nhẹ nhàng—chỉ để khám phá ra rằng, trên thực tế, họ không ở một mình, rằng có một người đang theo dõi và rình rập, sự khám phá này khiến họ ngay lập tức dừng lại những gì họ đang làm trong sự kinh hoàng. 
 
@@ -25,7 +25,7 @@ Cảm giác xấu hổ và bẽ mặt trên khuôn mặt họ là rất rõ ràn
 
 Đây là mấu chốt của công việc mà tôi đã đặc biệt tập trung trong 16 tháng qua: câu hỏi tại sao quyền riêng tư lại quan trọng, một câu hỏi nảy sinh trong bối cảnh của một cuộc tranh luận toàn cầu, được châm ngòi bởi những tiết lộ của Edward Snowden rằng Hoa Kỳ và các đối tác của họ, mà cả thế giới không hề hay biết, đã biến Internet, từng được ca ngợi là một công cụ giải phóng và dân chủ hóa chưa từng có, thành một khu vực giám sát hàng loạt, bừa bãi chưa từng có.
 
-#### Lập luận "không có gì để che giấu" (1:29) {#the-nothing-to-hide-argument-129}
+### Lập luận "không có gì để che giấu" (1:29) {#the-nothing-to-hide-argument-129}
 
 Có một quan điểm rất phổ biến nảy sinh trong cuộc tranh luận này, ngay cả ở những người cảm thấy không thoải mái với việc giám sát hàng loạt, cho rằng không có tác hại thực sự nào đến từ sự xâm phạm quy mô lớn này bởi vì chỉ những người tham gia vào các hành vi xấu mới có lý do để muốn che giấu và quan tâm đến quyền riêng tư của họ.
 
@@ -37,7 +37,7 @@ Nhưng ngược lại, người tốt là những người đi làm, về nhà, 
 
 Những người thực sự nói điều đó đang tham gia vào một hành động tự hạ thấp bản thân rất cực đoan. Những gì họ thực sự đang nói là, "Tôi đã đồng ý biến mình thành một người vô hại, không đe dọa và không thú vị đến mức tôi thực sự không sợ việc chính phủ biết tôi đang làm gì."
 
-#### Ngay cả những người chỉ trích quyền riêng tư cũng không tin những gì họ nói (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Ngay cả những người chỉ trích quyền riêng tư cũng không tin những gì họ nói (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 Tư duy này đã tìm thấy điều mà tôi nghĩ là biểu hiện thuần túy nhất của nó trong một cuộc phỏng vấn năm 2009 với vị CEO lâu năm của Google, Eric Schmidt, người mà khi được hỏi về tất cả những cách khác nhau mà công ty của ông đang gây ra sự xâm phạm quyền riêng tư đối với hàng trăm triệu người trên khắp thế giới, đã nói thế này: "Nếu bạn đang làm điều gì đó mà bạn không muốn người khác biết, có lẽ ngay từ đầu bạn không nên làm điều đó."
 
@@ -49,7 +49,7 @@ Chính Eric Schmidt, CEO của Google, đã ra lệnh cho nhân viên của mìn
 
 Sự mâu thuẫn tương tự có thể được nhìn thấy ở CEO của Facebook, Mark Zuckerberg, người trong một cuộc phỏng vấn khét tiếng vào năm 2010 đã tuyên bố rằng quyền riêng tư không còn là một "chuẩn mực xã hội". Năm ngoái, Mark Zuckerberg và người vợ mới của mình đã mua không chỉ ngôi nhà của riêng họ mà còn cả bốn ngôi nhà liền kề ở Palo Alto với tổng trị giá 30 triệu đô la để đảm bảo rằng họ được tận hưởng một khu vực quyền riêng tư ngăn cản người khác theo dõi những gì họ làm trong cuộc sống cá nhân.
 
-#### Thử thách mật khẩu email (4:51) {#the-email-password-challenge-451}
+### Thử thách mật khẩu email (4:51) {#the-email-password-challenge-451}
 
 Trong 16 tháng qua, khi tôi tranh luận về vấn đề này trên khắp thế giới, mỗi khi có ai đó nói với tôi, "Tôi không thực sự lo lắng về việc xâm phạm quyền riêng tư vì tôi không có gì để che giấu," tôi luôn nói với họ cùng một điều. 
 
@@ -65,7 +65,7 @@ Có một lý do tại sao chúng ta tìm kiếm điều đó, và lý do của 
 
 Chúng ta đưa ra những đánh giá mỗi ngày về những điều chúng ta nói, nghĩ và làm mà chúng ta sẵn sàng để người khác biết, và những điều chúng ta nói, nghĩ và làm mà chúng ta không muốn bất kỳ ai khác biết. Mọi người có thể rất dễ dàng dùng lời nói để khẳng định rằng họ không coi trọng quyền riêng tư của mình, nhưng hành động của họ lại phủ nhận tính xác thực của niềm tin đó.
 
-#### Bị theo dõi làm thay đổi hành vi của chúng ta (7:02) {#being-watched-changes-our-behavior-702}
+### Bị theo dõi làm thay đổi hành vi của chúng ta (7:02) {#being-watched-changes-our-behavior-702}
 
 Bây giờ, có một lý do tại sao quyền riêng tư lại được khao khát một cách phổ biến và theo bản năng như vậy. Nó không chỉ là một phản xạ như hít thở không khí hay uống nước. Lý do là khi chúng ta ở trong một trạng thái mà chúng ta có thể bị giám sát, nơi chúng ta có thể bị theo dõi, hành vi của chúng ta thay đổi đáng kể. 
 
@@ -73,7 +73,7 @@ Phạm vi các lựa chọn hành vi mà chúng ta cân nhắc khi chúng ta ngh
 
 Sự xấu hổ của con người là một động lực rất mạnh mẽ, cũng như mong muốn tránh né nó, và đó là lý do tại sao mọi người, khi họ ở trong trạng thái bị theo dõi, đưa ra những quyết định không phải là sản phẩm phụ từ ý chí tự do của chính họ mà là về những kỳ vọng mà người khác dành cho họ hoặc những mệnh lệnh của các chuẩn mực xã hội.
 
-#### Nhà tù Panopticon của Bentham (8:09) {#benthams-panopticon-809}
+### Nhà tù Panopticon của Bentham (8:09) {#benthams-panopticon-809}
 
 Nhận thức này đã được khai thác một cách mạnh mẽ nhất cho các mục đích thực dụng bởi triết gia thế kỷ 18 Jeremy Bentham, người đã bắt tay vào giải quyết một vấn đề quan trọng do thời đại công nghiệp mở ra, nơi mà lần đầu tiên, các thể chế đã trở nên quá lớn và tập trung đến mức họ không còn khả năng giám sát và do đó kiểm soát từng thành viên cá nhân của mình. 
 
@@ -81,7 +81,7 @@ Và giải pháp mà ông nghĩ ra là một thiết kế kiến trúc ban đầ
 
 Triết gia người Pháp thế kỷ 20 Michel Foucault nhận ra rằng mô hình đó có thể được sử dụng không chỉ cho các nhà tù mà cho mọi thể chế tìm cách kiểm soát hành vi con người: trường học, bệnh viện, nhà máy, nơi làm việc. Và những gì ông nói là tư duy này, khuôn khổ này do Bentham khám phá ra, là phương tiện kiểm soát xã hội chính đối với các xã hội phương Tây hiện đại, vốn không còn cần đến những vũ khí công khai của sự chuyên chế—trừng phạt, bỏ tù hoặc giết hại những người bất đồng chính kiến, hoặc ép buộc lòng trung thành với một đảng phái cụ thể về mặt pháp lý—bởi vì sự giám sát hàng loạt tạo ra một nhà tù trong tâm trí, một phương tiện tinh vi hơn nhiều nhưng lại hiệu quả hơn nhiều trong việc thúc đẩy sự tuân thủ các chuẩn mực xã hội hoặc các giáo điều xã hội, hiệu quả hơn nhiều so với bạo lực thô bạo.
 
-#### Orwell, tôn giáo và nhà tù trong tâm trí (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, tôn giáo và nhà tù trong tâm trí (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 Tác phẩm văn học mang tính biểu tượng nhất về giám sát và quyền riêng tư là cuốn tiểu thuyết *1984* của George Orwell, mà tất cả chúng ta đều học ở trường, và do đó nó gần như trở thành một sự sáo rỗng. Trên thực tế, bất cứ khi nào bạn đưa nó ra trong một cuộc tranh luận về giám sát, mọi người ngay lập tức bác bỏ nó vì cho rằng không thể áp dụng được, và những gì họ nói là, "Ồ, trong *1984*, có những màn hình trong nhà của mọi người, họ bị theo dõi vào mọi thời điểm, và điều đó không liên quan gì đến trạng thái giám sát mà chúng ta phải đối mặt." 
 
@@ -93,7 +93,7 @@ Những gì tất cả các tác phẩm dường như khác biệt này nhận r
 
 Ngược lại, thậm chí còn quan trọng hơn, đó là một vương quốc của quyền riêng tư, khả năng đi đến một nơi nào đó mà chúng ta có thể suy nghĩ, lập luận, tương tác và nói chuyện mà không bị những ánh mắt phán xét của người khác đổ dồn vào chúng ta, nơi mà sự sáng tạo, sự khám phá và sự bất đồng chính kiến độc quyền cư ngụ, và đó là lý do tại sao, khi chúng ta cho phép một xã hội tồn tại mà trong đó chúng ta phải chịu sự giám sát liên tục, chúng ta đang cho phép bản chất của tự do con người bị tê liệt nghiêm trọng.
 
-#### Hai bài học mang tính hủy diệt (12:30) {#two-destructive-lessons-1230}
+### Hai bài học mang tính hủy diệt (12:30) {#two-destructive-lessons-1230}
 
 Điểm cuối cùng tôi muốn quan sát về tư duy này, ý tưởng cho rằng chỉ những người đang làm điều gì đó sai trái mới có những điều cần che giấu và do đó có lý do để quan tâm đến quyền riêng tư, là nó củng cố hai thông điệp rất mang tính hủy diệt, hai bài học mang tính hủy diệt. Điều đầu tiên là những người duy nhất quan tâm đến quyền riêng tư, những người duy nhất sẽ tìm kiếm quyền riêng tư, theo định nghĩa, là những người xấu. 
 
@@ -111,7 +111,7 @@ Nhà hoạt động xã hội chủ nghĩa nổi tiếng Rosa Luxemburg từng n
 
 Cảm ơn các bạn rất nhiều. (Tiếng vỗ tay)
 
-#### Hỏi đáp với Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Hỏi đáp với Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, cảm ơn anh. Tôi phải nói rằng lập luận này khá thuyết phục, nhưng tôi muốn đưa anh trở lại 16 tháng qua và với Edward Snowden cho một vài câu hỏi, nếu anh không phiền. Câu hỏi đầu tiên là về cá nhân anh. Tất cả chúng ta đều đã đọc về việc bắt giữ người bạn đời của anh, David Miranda, ở London, và những khó khăn khác, nhưng tôi cho rằng về mặt cam kết cá nhân và rủi ro, áp lực đối với anh không hề dễ dàng khi đối đầu với các tổ chức có chủ quyền lớn nhất thế giới. Hãy kể cho chúng tôi nghe một chút về điều đó.
 

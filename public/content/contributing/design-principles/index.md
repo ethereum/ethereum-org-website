@@ -89,4 +89,4 @@ You can see our design principles in action [across our site](/).
 
 While these principles are focused on the ethereum.org website, we hope that many of them are representative of the values of the Ethereum ecosystem overall. Maybe you even want to incorporate some of them into your own project!
 
-Let us know your thoughts on [Discord server](https://discord.gg/ethereum-org) or by [creating an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Let us know your thoughts on [Discord server](/discord/) or by [creating an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

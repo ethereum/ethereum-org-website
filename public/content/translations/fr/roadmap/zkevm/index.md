@@ -2,6 +2,7 @@
 title: zkEVM pour la vérification de bloc de la couche 1 (l1)
 description: Découvrez comment les preuves à divulgation nulle de connaissance peuvent vérifier l'exécution des blocs Ethereum, permettant un débit plus élevé et des exigences moindres pour les validateurs.
 lang: fr
+template: roadmap
 ---
 
 Le zkEVM est une technologie qui utilise des [preuves à divulgation nulle de connaissance](/zero-knowledge-proofs/) pour vérifier l'exécution des blocs Ethereum. Au lieu d'exiger que chaque [validateur](/glossary/#validator) réexécute toutes les transactions d'un bloc, un seul acteur spécialisé (appelé « prouveur ») exécute le bloc et génère une preuve cryptographique que l'exécution était correcte. N'importe quel nœud peut ensuite vérifier cette preuve, un processus qui est infiniment moins coûteux que de réexécuter toutes les transactions.

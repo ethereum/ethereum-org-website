@@ -10,6 +10,10 @@ declare const Netlify: {
   }
 }
 
+// If the function itself errors at the platform level, skip it and continue
+// to origin rather than failing the user request
+export const config = { onError: "bypass" }
+
 const trackRequest = async (
   request: Request,
   response: Response,
@@ -51,10 +55,17 @@ export default async function handler(
   request: Request,
   context: NetlifyEdgeContext
 ) {
+  const env = Netlify.env.toObject()
+
+  // Kill switch: tracking must be explicitly enabled per deploy context
+  if (env.MATOMO_AI_TRACKER_ENABLED !== "true") {
+    return context.next()
+  }
+
   let config: MatomoConfig | null = null
 
   try {
-    config = getConfig(Netlify.env.toObject())
+    config = getConfig(env)
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err)
 
@@ -84,14 +95,19 @@ export default async function handler(
       error: message,
     })
 
-    const fallback = new Response("Bad Gateway", {
-      status: 502,
-    })
-
     const durationMs = Date.now() - start
 
-    context.waitUntil(trackRequest(request, fallback, durationMs, config))
+    // Record the failure for the report's 5xx column, then rethrow so
+    // onError: "bypass" serves origin instead of a hand-rolled error page
+    context.waitUntil(
+      trackRequest(
+        request,
+        new Response(null, { status: 502 }),
+        durationMs,
+        config
+      )
+    )
 
-    return fallback
+    throw err
   }
 }

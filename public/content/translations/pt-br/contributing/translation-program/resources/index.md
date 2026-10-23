@@ -2,7 +2,7 @@
 title: Recursos
 metaTitle: Recursos para tradutores
 lang: pt-br
-description: Recursos úteis para os tradutores do ethereum.org
+description: "Recursos úteis para os tradutores do ethereum.org"
 ---
 
 Você pode encontrar alguns guias e ferramentas úteis para os tradutores do ethereum.org, bem como comunidades de tradução e atualizações abaixo.
@@ -10,7 +10,6 @@ Você pode encontrar alguns guias e ferramentas úteis para os tradutores do eth
 ## Guias {#guides}
 
 - [Guia de estilo de tradução](/contributing/translation-program/translators-guide/) _– instruções e dicas para os tradutores do ethereum.org_
-- [Perguntas frequentes sobre tradução](/contributing/translation-program/faq/) _– perguntas e respostas frequentes sobre o Programa de Tradução do ethereum.org_
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _– um guia detalhado sobre como usar o editor online do Crowdin e alguns dos recursos avançados do Crowdin_
 
 ## Ferramentas {#tools}
@@ -24,8 +23,8 @@ Você pode encontrar alguns guias e ferramentas úteis para os tradutores do eth
 
 ## Comunidades {#communities}
 
-- [Grupos de tradução específicos por idioma no Discord](https://discord.gg/ethereum-org)
-  _– uma iniciativa para conectar os tradutores do ethereum.org a Grupos de Tradução_
+- [Grupos de tradução específicos por idioma no Discord](/discord/)
+  _– uma iniciativa para conectar os tradutores do ethereum.org aos Grupos de Tradução_
 - [Grupo de tradutores de chinês](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– página do Notion para facilitar a coordenação entre os tradutores de chinês_
 
@@ -40,7 +39,7 @@ Para se manter atualizado com o progresso mais recente do Programa de Tradução
 
 ## Horário de atendimento para tradutores {#office-hours}
 
-Temos horários de atendimento para tradutores na segunda quarta-feira de cada mês. Eles são realizados no canal de voz #office-hours no [Discord do ethereum.org](https://discord.gg/ethereum-org), onde você também pode encontrar os horários exatos e detalhes adicionais.
+Temos horários de atendimento para tradutores na segunda quarta-feira de cada mês. Eles são realizados no canal de voz #office-hours no [Discord do ethereum.org](/discord/), onde você também pode encontrar os horários exatos e detalhes adicionais.
 
 Os horários de atendimento permitem que nossos tradutores façam perguntas sobre o processo de tradução, forneçam feedback sobre o programa, compartilhem suas ideias ou apenas conversem com a equipe principal do ethereum.org.
 Por fim, queremos usar essas chamadas para comunicar desenvolvimentos recentes do Programa de Tradução e compartilhar dicas e instruções importantes com nossos colaboradores.

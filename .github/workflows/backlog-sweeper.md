@@ -1,30 +1,47 @@
 ---
 name: PR Backlog Sweeper
-description: Daily sweep of the open PR backlog — first-pass reviews for unreviewed PRs and evidence-based close recommendations
+description: Daily sweep of the open PR backlog — first-pass reviews for PRs never reviewed, or one PR on a `/review` comment
 on:
   schedule: daily around 06:00 on weekdays
   workflow_dispatch:
+    inputs:
+      pr:
+        description: "Review only this PR number, like a /review comment (empty = normal backlog sweep)"
+        required: false
+        type: string
+  slash_command:
+    name: review
+    events: [pull_request_comment]
+if: github.event.action != 'edited'
+concurrency:
+  group: "gh-aw-${{ github.workflow }}"
+  queue: max
 permissions:
   contents: read
   issues: read
   pull-requests: read
   actions: read
+checkout:
+  fetch-depth: 0
 engine:
   id: claude
+  model: claude-opus-5-5
+max-ai-credits: 1000
 network: defaults
 strict: true
-timeout-minutes: 15
+timeout-minutes: 45
 tools:
   github:
     toolsets: [default, actions]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
-  add-comment:
-    max: 5
+  github-app:
+    client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+    private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
   add-labels:
+    target: "*"
     max: 15
     allowed:
-      - "recommend close"
-      - "Status: Stale"
       - "needs review 👀"
       - "needs dev approval 🧑‍💻"
       - "needs design approval 🧑‍🎨"
@@ -37,6 +54,7 @@ safe-outputs:
       - "tooling 🔧"
       - "config ⚙️"
   remove-labels:
+    target: "*"
     max: 5
     allowed:
       - "content 🖋️"
@@ -48,40 +66,42 @@ safe-outputs:
   noop:
     report-as-issue: false
   report-failure-as-issue: false
+  threat-detection:
+    engine:
+      id: claude
+      model: claude-sonnet-5-5
 pre-agent-steps:
-  - name: Pre-fetch open PR queue
+  - name: Select PRs and pre-fetch their diffs
     env:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
+      PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
+    run: bash .github/scripts/backlog-sweeper-queue.sh
+  # gh-aw checks out the PR head on comment events; the review diffs from the base branch.
+  - name: Return to the base branch on single-PR runs
+    if: github.event_name == 'issue_comment' || inputs.pr != ''
+    env:
+      PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
     run: |
-      set -euo pipefail
-      mkdir -p /tmp/gh-aw/agent
-      gh pr list --repo "$REPO" --state open \
-        --json number,title,createdAt,updatedAt,isDraft,labels,author,reviewDecision,headRefName \
-        --limit 200 > /tmp/gh-aw/agent/open-prs.json
+      meta=/tmp/gh-aw/agent/pr-$PR_NUMBER/pr-meta.json
+      [ -f "$meta" ] || exit 0
+      git fetch -q --no-tags origin "$(jq -r .baseRefName "$meta")"
+      git checkout -q -f --detach FETCH_HEAD
 imports:
   - shared/pr-review-core.md
+  - shared/submit-review.md
 ---
 
 You are sweeping the open pull request backlog of ${{ github.repository }}.
 
 ## Selection
 
-Read `/tmp/gh-aw/agent/open-prs.json`. Skip drafts and PRs authored by bots. From the rest, take the **5 oldest by createdAt** that do not already carry a comment from this workflow or the PR Reviewer workflows (check each candidate's comments for the marker `First-pass review`; skip PRs that already have one unless they were updated after it was posted). Also skip any PR where a maintainer (MEMBER/COLLABORATOR/OWNER) commented within the last 14 days — a human sweep is already in progress there, and a bot follow-up on its heels reads as nagging.
+The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists their numbers. Review exactly those and no others. If the list is empty, call `noop` with "no eligible PRs" and stop. A run started by a `/review` comment, or dispatched with a `pr` input, lists only that PR; review it in full even if it was reviewed before. Otherwise every listed PR gets a review — never `noop` a listed PR, or it is re-selected on every run.
 
 ## For each selected PR
 
-1. Fetch its diff and metadata via the GitHub tools, then produce a first-pass review comment following the core instructions below (lane classification, verdict-first format, labels).
-2. Additionally evaluate staleness. Check exemptions FIRST — if the PR has any of the labels `pinned 📌`, `Status: Blocked 🛑`, `awaiting changes`, or `awaiting PR`, do not evaluate it for closing at all. Otherwise apply these categories in order and stop at the first match:
-   - **Superseded**: at least one of the same files was meaningfully changed on the base branch by a merged PR after this PR was created, covering the same fix. → apply `recommend close`
-   - **Author unresponsive**: changes were formally requested or blocking feedback given ≥30 days ago with no commit or reply from the author since. → apply `recommend close`
-   - **Obsolete**: the files it touches were deleted or fundamentally rewritten on the base branch. → apply `recommend close`
-   - **Spam or empty**: no meaningful change, promotional content, or generated noise. → apply `recommend close`
-   - Otherwise: if it is >30 days old with no activity in 30 days, apply `Status: Stale`; if it simply lacks review, apply the appropriate routing label.
+Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
 
-   Team-authored PRs (author association MEMBER/COLLABORATOR/OWNER) may only receive `recommend close` when they are drafts; for non-draft team PRs, warn via the review comment instead.
-3. When you apply `recommend close`, the comment MUST state the category and the concrete evidence (e.g. "superseded by #1234, merged 2026-05-02, same file `src/data/wallets/wallet-data.ts`"). A human makes the final call from the digest — you never close anything.
+## Termination
 
-## Budget and termination
-
-Do not exceed 5 reviewed PRs per run. Every run MUST end with at least one safe-output call; if the backlog is empty or fully covered, call `noop` with a one-line reason.
+Every run MUST end with at least one safe-output call.

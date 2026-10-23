@@ -2,6 +2,7 @@
 title: Danksharding
 description: Tìm hiểu về Proto-Danksharding và Danksharding - hai bản nâng cấp tuần tự để mở rộng quy mô Ethereum.
 lang: vi
+template: roadmap
 summaryPoints:
   - Danksharding là một bản nâng cấp gồm nhiều giai đoạn để cải thiện khả năng mở rộng và dung lượng của Ethereum.
   - Giai đoạn đầu tiên, Proto-Danksharding, thêm các khối dữ liệu vào các khối

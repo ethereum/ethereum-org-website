@@ -1,0 +1,99 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title="Overview" />
+
+# ethereum.org in Storybook
+
+This Storybook mirrors the repository. The top-level section a component
+appears under is derived from where its file lives -- not from a judgment call
+about how "big" or "reusable" it is.
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Section</th>
+      <th align="left">Lives in</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      ["Design System", "src/styles/"],
+      ["UI", "src/components/ui/"],
+      ["Components", "src/components/ (everything else)"],
+      ["Layouts", "src/layouts/"],
+      ["Pages", "app/[locale]/**/_components/"],
+    ].map(([section, path]) => (
+      <tr key={section}>
+        <td align="left">
+          <strong>{section}</strong>
+        </td>
+        <td align="left">
+          <code>{path}</code>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+So a title tells you two things at once: what the thing is, and where to open
+it. `UI / Forms / Field` is `src/components/ui/field.tsx`.
+`Components / Heroes / PageHero` is `src/components/Hero/PageHero/`.
+
+## Reading the sections
+
+**Design System** is the foundation layer -- color, gradients, shadows, and
+typography. These document CSS rather than components: the typography entries
+render bare elements and utility classes so you can see what `base.css` gives
+you before any component is involved.
+
+**UI** is the primitive library: buttons, inputs, overlays, layout helpers.
+Everything here is generic and content-free. If you are building a page, this
+is your parts bin, and it is where you should look before writing anything new
+-- most "new component" needs are a variant of something already here.
+
+**Components** is the shared layer above the primitives: cards, heroes, site
+chrome, content rendering, data visualization, and the larger features (Quiz,
+Simulator, wallet finder). These know something about ethereum.org.
+
+**Layouts** are the page skeletons that markdown content is poured into.
+**Pages** holds components colocated with a single route, which exist for one
+page and are not meant to be reused.
+
+## How titles are structured
+
+`Section / Group / Name`. The group is a light functional bucket -- Actions,
+Forms, Overlays, Cards, Heroes, and so on -- and it exists purely so the
+sidebar is browsable.
+
+Not everything has a group. Where a component has no natural bucket, its title
+is just `Section / Name` (`Components / Morpher`, `UI / Alert`). That is
+deliberate: inventing a category for a single component is how the previous
+six competing schemes accumulated. A flat entry is honest about there being no
+category.
+
+A unit test enforces the section prefix, that every story is explicitly
+titled, and that no two files share a title -- Storybook silently folds
+duplicate titles into one sidebar entry, so nothing else would catch it.
+See `tests/unit/storybook/story-titles.spec.ts`.
+
+## Things worth knowing
+
+**A story here means the component is available.** Anything on the way out is
+deliberately absent, because a rendered example reads as an endorsement no
+matter what the caption says -- `Swiper` and `HR`'s `narrow` variant are both
+in the codebase and both intentionally unshown. So the absence of a component
+is information: check the `design-system` skill before assuming something is
+missing by oversight.
+
+The exception is a component whose future is undecided rather than settled.
+`UI / Carousel` is here with a blurb saying it isn't for new work and pointing
+at `EdgeScrollContainer` instead.
+
+**Not everything renders a snapshot.** Every `UI /` story sets
+`chromatic: { disableSnapshot: true }`; layouts snapshot across locale and
+viewport modes. So a green Chromatic run is not evidence that a `UI /` story
+renders -- only that nothing it snapshots changed.
+
+**Locale and theme are toolbar controls.** Both light/dark and the locale
+(including RTL via Arabic) switch from the toolbar, and are worth exercising on
+anything with text or directional layout.

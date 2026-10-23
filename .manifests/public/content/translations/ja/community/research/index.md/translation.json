@@ -1,145 +1,181 @@
 {
   "version": 1,
   "locale": "ja",
-  "translatedAt": "2026-06-08T07:27:17.185Z",
-  "englishManifestHash": "6666f2240666",
+  "translatedAt": "2026-08-20T22:10:01.231Z",
+  "englishManifestHash": "848cab3b5e24",
   "placeholderOrder": [
-    "LINK-90d32a",
     "LINK-ab8d00",
     "LINK-7a2194",
     "LINK-b6781d",
-    "LINK-956d2a",
-    "LINK-152fbd",
-    "LINK-00ea6d",
+    "LINK-f9bbaf",
+    "LINK-3c2a0f",
+    "LINK-198bba",
+    "LINK-2ed22a",
+    "LINK-9ad829",
+    "LINK-72247f",
     "LINK-43b140",
     "LINK-6eddec",
+    "LINK-f22107",
     "LINK-7fdc51",
+    "LINK-ca78b1",
     "LINK-c0e929",
-    "LINK-9c7335",
     "LINK-e728ad",
+    "LINK-bae095",
     "LINK-19c3da",
     "LINK-aaeea1",
-    "LINK-00698c",
-    "LINK-be2c79",
+    "LINK-f01a67",
     "LINK-6358d8",
-    "LINK-c2083a",
+    "LINK-65a83d",
     "LINK-72963e",
-    "LINK-8acefa",
-    "LINK-14a15f",
-    "LINK-2fa7b6",
-    "LINK-cd8635",
-    "LINK-784cd6",
-    "LINK-95c4b4",
-    "LINK-8ce3a3",
+    "LINK-a7afbe",
+    "LINK-7fbee9",
+    "LINK-cc6af7",
+    "LINK-c588af",
+    "LINK-0b0ec6",
+    "LINK-f141c4",
+    "LINK-c83a52",
+    "LINK-be31f6",
+    "LINK-7bd425",
+    "LINK-faac80",
+    "LINK-cab7a8",
+    "LINK-04b1d5",
+    "LINK-9b79c6",
+    "LINK-ce2f25",
+    "LINK-4ae822",
+    "LINK-e481fe",
+    "LINK-13b926",
+    "LINK-623912",
+    "LINK-82486a",
+    "LINK-bae095",
+    "LINK-bcd14d",
+    "LINK-4d9786",
     "LINK-dbd4b8",
     "LINK-9fdecf",
     "LINK-0ff5ba",
     "LINK-4649ba",
     "LINK-9bcd81",
-    "LINK-3aaf19",
-    "LINK-75af7f",
+    "LINK-39b0b2",
+    "LINK-089313",
+    "LINK-222069",
+    "LINK-1e81de",
+    "LINK-279662",
+    "LINK-041874",
     "LINK-013ee9",
-    "LINK-2918d3",
-    "LINK-70c7b7",
+    "LINK-9e6343",
+    "LINK-abb7a9",
     "LINK-267a48",
-    "LINK-f2cf0e",
-    "LINK-f8ed57",
+    "LINK-46acbd",
+    "LINK-79e323",
     "LINK-c663bb",
-    "LINK-99f643",
-    "LINK-c48246",
-    "LINK-0703f2",
+    "LINK-d48650",
+    "LINK-ff71e9",
     "LINK-5ca636",
-    "LINK-8ae67e",
+    "LINK-6b4e63",
+    "LINK-1b7e44",
+    "LINK-93ed04",
+    "LINK-231e42",
+    "LINK-3a8042",
+    "LINK-6aface",
+    "LINK-d0d588",
+    "LINK-52b2b2",
     "LINK-aada00",
-    "LINK-8c5c8d",
-    "LINK-7d71ce",
-    "LINK-919329",
-    "LINK-2b0de0",
-    "LINK-3d6cc8",
+    "LINK-ef8630",
+    "LINK-92396f",
+    "LINK-eea289",
     "LINK-5743ce",
+    "LINK-2add6f",
+    "LINK-9b79c6",
     "LINK-319c95",
-    "LINK-6e2f56",
-    "LINK-1113da",
-    "LINK-cc3692",
-    "LINK-52b327",
+    "LINK-568912",
+    "LINK-a07723",
+    "LINK-c588af",
+    "LINK-4c71a9",
+    "LINK-089313",
+    "LINK-af99c1",
     "LINK-293cac",
-    "LINK-16d0f8",
     "LINK-de586e",
+    "LINK-bcd14d",
+    "LINK-cbe738",
+    "LINK-1e81de",
     "LINK-502312",
     "LINK-778c42",
-    "LINK-6bd270",
-    "LINK-3caa6a",
-    "LINK-121004",
+    "LINK-ca9e0e",
+    "LINK-e39f5c",
+    "LINK-599528",
+    "LINK-c83b48",
+    "LINK-461c63",
+    "LINK-648637",
     "LINK-cf703e",
-    "LINK-90ada0",
-    "LINK-600533",
-    "LINK-af5821",
+    "LINK-6a6c14",
+    "LINK-4f38f2",
+    "LINK-ec2130",
+    "LINK-f16951",
     "LINK-f0b4fe",
-    "LINK-4575bd",
-    "LINK-82d749",
-    "LINK-2c6473",
+    "LINK-461c63",
+    "LINK-93ed04",
     "LINK-fe2077",
-    "LINK-a48456",
-    "LINK-6f4388",
+    "LINK-70b369",
+    "LINK-7969c7",
     "LINK-ed4f5e",
     "LINK-fd4a0d",
     "LINK-e22540",
     "LINK-20a6ac",
     "LINK-9f820b",
     "LINK-9ae470",
-    "LINK-c77055",
+    "LINK-0b0ec6",
+    "LINK-cc6af7",
     "LINK-e1d2e9",
-    "LINK-2cace9",
+    "LINK-1a0176",
     "LINK-70b369",
     "LINK-9e285e",
-    "LINK-5f57b7",
+    "LINK-fe2077",
     "LINK-63ef24",
     "LINK-b0f2b2",
     "LINK-493035",
-    "LINK-6979e6",
-    "LINK-04f843",
-    "LINK-d5ddef",
     "LINK-618479",
-    "LINK-022c80",
+    "LINK-04f843",
+    "LINK-a7afbe",
+    "LINK-9bcd81",
+    "LINK-0ba28c",
+    "LINK-2171ef",
+    "LINK-83d339",
     "LINK-7ca44b",
+    "LINK-90d327",
+    "LINK-8d7215",
     "LINK-8751bd",
-    "LINK-307226",
     "LINK-023c65",
     "LINK-12bb09",
+    "LINK-73b99b",
     "LINK-6f4b3f",
+    "LINK-7241cf",
+    "LINK-9e6343",
     "LINK-68d78e",
     "LINK-b78a8b",
     "LINK-b42ce6",
-    "LINK-0faf8c",
+    "LINK-555ae3",
     "LINK-3adcf7",
-    "LINK-9d78fa",
     "LINK-15ca72",
     "LINK-32402e",
     "LINK-b8dcd2",
-    "LINK-d14dd9",
+    "LINK-49f756",
     "LINK-5717a5",
-    "LINK-02c803",
-    "LINK-71edb0",
+    "LINK-33b3ef",
+    "LINK-f4bc73",
     "LINK-4b7f54",
     "LINK-4c306c",
-    "LINK-0373fb",
-    "LINK-3e0f91",
+    "LINK-80b554",
+    "LINK-5671fd",
     "LINK-52df50",
-    "LINK-eabaf4",
+    "LINK-e136d3",
     "LINK-555ae3",
     "LINK-8fc374",
-    "LINK-3629fa",
+    "LINK-6572c6",
     "LINK-74e70b",
     "LINK-beed1e",
-    "LINK-ac4e82"
+    "LINK-ac4e82",
+    "LINK-09ba60"
   ],
   "placeholderMap": {
-    "LINK-90d32a": {
-      "type": "link",
-      "values": {
-        "url": "https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science"
-      }
-    },
     "LINK-ab8d00": {
       "type": "link",
       "values": {
@@ -158,22 +194,40 @@
         "url": "https://discord.gg/qGpsxSA"
       }
     },
-    "LINK-956d2a": {
+    "LINK-f9bbaf": {
       "type": "link",
       "values": {
-        "url": "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum"
+        "url": "/roadmap/"
       }
     },
-    "LINK-152fbd": {
+    "LINK-3c2a0f": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026"
+      }
+    },
+    "LINK-198bba": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/05/11/protocol-update-may-26"
+      }
+    },
+    "LINK-2ed22a": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2026/02/17/ethereum-protocol-studies-26"
+      }
+    },
+    "LINK-9ad829": {
       "type": "link",
       "values": {
         "url": "/foundation/"
       }
     },
-    "LINK-00ea6d": {
+    "LINK-72247f": {
       "type": "link",
       "values": {
-        "url": "https://esp.ethereum.foundation/academic-grants"
+        "url": "https://esp.ethereum.foundation/applicants"
       }
     },
     "LINK-43b140": {
@@ -188,10 +242,22 @@
         "url": "/developers/docs/consensus-mechanisms/pos/"
       }
     },
+    "LINK-f22107": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
     "LINK-7fdc51": {
       "type": "link",
       "values": {
         "url": "/developers/docs/consensus-mechanisms/pos/"
+      }
+    },
+    "LINK-ca78b1": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/single-slot-finality/"
       }
     },
     "LINK-c0e929": {
@@ -200,16 +266,16 @@
         "url": "https://arxiv.org/abs/1710.09437"
       }
     },
-    "LINK-9c7335": {
-      "type": "link",
-      "values": {
-        "url": "https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d"
-      }
-    },
     "LINK-e728ad": {
       "type": "link",
       "values": {
         "url": "https://arxiv.org/abs/2003.03052"
+      }
+    },
+    "LINK-bae095": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/07/31/lean-ethereum"
       }
     },
     "LINK-19c3da": {
@@ -224,16 +290,10 @@
         "url": "https://arxiv.org/abs/2009.04987"
       }
     },
-    "LINK-00698c": {
+    "LINK-f01a67": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259"
-      }
-    },
-    "LINK-be2c79": {
-      "type": "link",
-      "values": {
-        "url": "https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance"
+        "url": "https://ethresear.ch/t/3-slot-finality-ssf-is-not-about-single-slot/20927"
       }
     },
     "LINK-6358d8": {
@@ -242,10 +302,10 @@
         "url": "/developers/docs/evm/"
       }
     },
-    "LINK-c2083a": {
+    "LINK-65a83d": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/evm"
+        "url": "/developers/docs/evm/"
       }
     },
     "LINK-72963e": {
@@ -254,46 +314,130 @@
         "url": "https://ethresear.ch/c/execution-layer-research/37"
       }
     },
-    "LINK-8acefa": {
+    "LINK-a7afbe": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md"
+        "url": "https://github.com/ethereum/execution-specs"
       }
     },
-    "LINK-14a15f": {
+    "LINK-7fbee9": {
       "type": "link",
       "values": {
-        "url": "https://notes.ethereum.org/@vbuterin/state_expiry_eip"
+        "url": "https://github.com/erigontech/erigon/blob/main/docs/programmers_guide/db_faq.md"
       }
     },
-    "LINK-2fa7b6": {
+    "LINK-cc6af7": {
       "type": "link",
       "values": {
-        "url": "https://hackmd.io/@vbuterin/state_expiry_paths"
+        "url": "https://eips.ethereum.org/EIPS/eip-7928"
       }
     },
-    "LINK-cd8635": {
+    "LINK-c588af": {
       "type": "link",
       "values": {
-        "url": "https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal"
+        "url": "https://eips.ethereum.org/EIPS/eip-8037"
       }
     },
-    "LINK-784cd6": {
+    "LINK-0b0ec6": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-4444"
+        "url": "https://eips.ethereum.org/EIPS/eip-7999"
       }
     },
-    "LINK-95c4b4": {
+    "LINK-f141c4": {
       "type": "link",
       "values": {
-        "url": "https://vitalik.eth.limo/general/2021/06/18/verkle.html"
+        "url": "https://eips.ethereum.org/EIPS/eip-7642"
       }
     },
-    "LINK-8ce3a3": {
+    "LINK-c83a52": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding"
+        "url": "https://blog.ethereum.org/2025/07/10/realtime-proving"
+      }
+    },
+    "LINK-be31f6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs/"
+      }
+    },
+    "LINK-7bd425": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/secret-leader-election/"
+      }
+    },
+    "LINK-faac80": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7732"
+      }
+    },
+    "LINK-cab7a8": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7805"
+      }
+    },
+    "LINK-04b1d5": {
+      "type": "link",
+      "values": {
+        "url": "https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance"
+      }
+    },
+    "LINK-9b79c6": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/"
+      }
+    },
+    "LINK-ce2f25": {
+      "type": "link",
+      "values": {
+        "url": "https://stateless.fyi/"
+      }
+    },
+    "LINK-4ae822": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7864"
+      }
+    },
+    "LINK-e481fe": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4762"
+      }
+    },
+    "LINK-13b926": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622"
+      }
+    },
+    "LINK-623912": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/security/quantum-resistance/"
+      }
+    },
+    "LINK-82486a": {
+      "type": "link",
+      "values": {
+        "url": "https://pq.ethereum.org/"
+      }
+    },
+    "LINK-bcd14d": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/c/cryptography/28"
+      }
+    },
+    "LINK-4d9786": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/leanEthereum"
       }
     },
     "LINK-dbd4b8": {
@@ -326,16 +470,40 @@
         "url": "https://github.com/ethereum/consensus-specs"
       }
     },
-    "LINK-3aaf19": {
+    "LINK-39b0b2": {
       "type": "link",
       "values": {
-        "url": "https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot"
+        "url": "https://ethereum.github.io/beacon-APIs/"
       }
     },
-    "LINK-75af7f": {
+    "LINK-089313": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/scaling"
+        "url": "/roadmap/zkevm/"
+      }
+    },
+    "LINK-222069": {
+      "type": "link",
+      "values": {
+        "url": "https://ethproofs.org/"
+      }
+    },
+    "LINK-1e81de": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/12/18/zkevm-security-foundations"
+      }
+    },
+    "LINK-279662": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/"
+      }
+    },
+    "LINK-041874": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/scaling/"
       }
     },
     "LINK-013ee9": {
@@ -344,16 +512,16 @@
         "url": "/layer-2/"
       }
     },
-    "LINK-2918d3": {
+    "LINK-9e6343": {
       "type": "link",
       "values": {
-        "url": "https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d"
+        "url": "https://l2beat.com/scaling/summary"
       }
     },
-    "LINK-70c7b7": {
+    "LINK-abb7a9": {
       "type": "link",
       "values": {
-        "url": "https://eprint.iacr.org/2021/1465"
+        "url": "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"
       }
     },
     "LINK-267a48": {
@@ -362,16 +530,16 @@
         "url": "https://ethresear.ch/c/layer-2/32"
       }
     },
-    "LINK-f2cf0e": {
+    "LINK-46acbd": {
       "type": "link",
       "values": {
-        "url": "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698"
+        "url": "https://l2beat.com/scaling/costs"
       }
     },
-    "LINK-f8ed57": {
+    "LINK-79e323": {
       "type": "link",
       "values": {
-        "url": "https://l2beat.com/"
+        "url": "/latest/building-on-ethereum-in-2026/"
       }
     },
     "LINK-c663bb": {
@@ -380,22 +548,16 @@
         "url": "/bridges/"
       }
     },
-    "LINK-99f643": {
+    "LINK-d48650": {
       "type": "link",
       "values": {
-        "url": "https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/"
+        "url": "https://blog.ethereum.org/2025/11/18/eil"
       }
     },
-    "LINK-c48246": {
+    "LINK-ff71e9": {
       "type": "link",
       "values": {
-        "url": "https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8"
-      }
-    },
-    "LINK-0703f2": {
-      "type": "link",
-      "values": {
-        "url": "<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum"
+        "url": "https://openintents.xyz/"
       }
     },
     "LINK-5ca636": {
@@ -404,10 +566,52 @@
         "url": "https://stonecoldpat.github.io/images/validatingbridges.pdf"
       }
     },
-    "LINK-8ae67e": {
+    "LINK-6b4e63": {
       "type": "link",
       "values": {
-        "url": "/roadmap/dencun/"
+        "url": "https://eips.ethereum.org/EIPS/eip-7683"
+      }
+    },
+    "LINK-1b7e44": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7930"
+      }
+    },
+    "LINK-93ed04": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7828"
+      }
+    },
+    "LINK-231e42": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/peerdas/"
+      }
+    },
+    "LINK-3a8042": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/fusaka/"
+      }
+    },
+    "LINK-6aface": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/danksharding/"
+      }
+    },
+    "LINK-d0d588": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/data-availability/"
+      }
+    },
+    "LINK-52b2b2": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4844"
       }
     },
     "LINK-aada00": {
@@ -416,37 +620,31 @@
         "url": "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq"
       }
     },
-    "LINK-8c5c8d": {
+    "LINK-ef8630": {
       "type": "link",
       "values": {
-        "url": "https://www.youtube.com/watch?v=N5p0TB77flM"
+        "url": "https://eips.ethereum.org/EIPS/eip-7594"
       }
     },
-    "LINK-7d71ce": {
+    "LINK-92396f": {
       "type": "link",
       "values": {
-        "url": "https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view"
+        "url": "https://eips.ethereum.org/EIPS/eip-7892"
       }
     },
-    "LINK-919329": {
+    "LINK-eea289": {
       "type": "link",
       "values": {
-        "url": "https://polynya.medium.com/danksharding-36dc0c8067fe"
-      }
-    },
-    "LINK-2b0de0": {
-      "type": "link",
-      "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-4844"
-      }
-    },
-    "LINK-3d6cc8": {
-      "type": "link",
-      "values": {
-        "url": "https://hackmd.io/@vbuterin/sharding_proposal"
+        "url": "https://ethresear.ch/c/sharding/6"
       }
     },
     "LINK-5743ce": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
+      }
+    },
+    "LINK-2add6f": {
       "type": "link",
       "values": {
         "url": "/developers/docs/nodes-and-clients/run-a-node/"
@@ -458,28 +656,28 @@
         "url": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/"
       }
     },
-    "LINK-6e2f56": {
+    "LINK-568912": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738"
+        "url": "https://ethpandaops.io/posts/gaslimit-scaling/"
       }
     },
-    "LINK-1113da": {
+    "LINK-a07723": {
       "type": "link",
       "values": {
-        "url": "https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview"
+        "url": "https://eips.ethereum.org/EIPS/eip-8261"
       }
     },
-    "LINK-cc3692": {
+    "LINK-4c71a9": {
       "type": "link",
       "values": {
-        "url": "https://0xparc.org/blog"
+        "url": "/roadmap/security/"
       }
     },
-    "LINK-52b327": {
+    "LINK-af99c1": {
       "type": "link",
       "values": {
-        "url": "https://zkp.science/"
+        "url": "/roadmap/privacy/"
       }
     },
     "LINK-293cac": {
@@ -488,16 +686,16 @@
         "url": "https://zeroknowledge.fm/"
       }
     },
-    "LINK-16d0f8": {
-      "type": "link",
-      "values": {
-        "url": "https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346"
-      }
-    },
     "LINK-de586e": {
       "type": "link",
       "values": {
         "url": "https://ethresear.ch/c/zk-s-nt-arks/13"
+      }
+    },
+    "LINK-cbe738": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/soundcalc"
       }
     },
     "LINK-502312": {
@@ -512,22 +710,40 @@
         "url": "/security/"
       }
     },
-    "LINK-6bd270": {
+    "LINK-ca9e0e": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/tag/security"
+        "url": "/roadmap/account-abstraction/"
       }
     },
-    "LINK-3caa6a": {
+    "LINK-e39f5c": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-2938"
+        "url": "/roadmap/pectra/7702/"
       }
     },
-    "LINK-121004": {
+    "LINK-599528": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+        "url": "https://ethresear.ch/c/security/25"
+      }
+    },
+    "LINK-c83b48": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-8141"
+      }
+    },
+    "LINK-461c63": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-5792"
+      }
+    },
+    "LINK-648637": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-6963"
       }
     },
     "LINK-cf703e": {
@@ -536,22 +752,28 @@
         "url": "https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603"
       }
     },
-    "LINK-90ada0": {
+    "LINK-6a6c14": {
       "type": "link",
       "values": {
-        "url": "https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603"
+        "url": "/developers/docs/design-and-ux/"
       }
     },
-    "LINK-600533": {
+    "LINK-4f38f2": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-3074"
+        "url": "/roadmap/user-experience/"
       }
     },
-    "LINK-af5821": {
+    "LINK-ec2130": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-5003"
+        "url": "https://learnweb3.design/"
+      }
+    },
+    "LINK-f16951": {
+      "type": "link",
+      "values": {
+        "url": "https://web3ux.design/"
       }
     },
     "LINK-f0b4fe": {
@@ -560,40 +782,22 @@
         "url": "https://ethresear.ch/c/ui-ux/24"
       }
     },
-    "LINK-4575bd": {
-      "type": "link",
-      "values": {
-        "url": "https://discord.gg/FsCFPMTSm9"
-      }
-    },
-    "LINK-82d749": {
-      "type": "link",
-      "values": {
-        "url": "https://www.web3designprinciples.com/"
-      }
-    },
-    "LINK-2c6473": {
-      "type": "link",
-      "values": {
-        "url": "https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3"
-      }
-    },
     "LINK-fe2077": {
       "type": "link",
       "values": {
         "url": "https://rig.ethereum.org/"
       }
     },
-    "LINK-a48456": {
+    "LINK-70b369": {
       "type": "link",
       "values": {
-        "url": "https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm"
+        "url": "https://github.com/CADLabs/ethereum-economic-model"
       }
     },
-    "LINK-6f4388": {
+    "LINK-7969c7": {
       "type": "link",
       "values": {
-        "url": "https://arxiv.org/abs/2201.05574"
+        "url": "https://ethresear.ch/c/economics/16"
       }
     },
     "LINK-ed4f5e": {
@@ -632,40 +836,22 @@
         "url": "https://arxiv.org/abs/1904.05234"
       }
     },
-    "LINK-c77055": {
-      "type": "link",
-      "values": {
-        "url": "https://youtu.be/QbR4MTgnCko"
-      }
-    },
     "LINK-e1d2e9": {
       "type": "link",
       "values": {
         "url": "https://arxiv.org/abs/2112.01472"
       }
     },
-    "LINK-2cace9": {
+    "LINK-1a0176": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788"
-      }
-    },
-    "LINK-70b369": {
-      "type": "link",
-      "values": {
-        "url": "https://github.com/CADLabs/ethereum-economic-model"
+        "url": "/roadmap/pectra/maxeb/"
       }
     },
     "LINK-9e285e": {
       "type": "link",
       "values": {
         "url": "https://ethereum.github.io/beaconrunner/"
-      }
-    },
-    "LINK-5f57b7": {
-      "type": "link",
-      "values": {
-        "url": "https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ"
       }
     },
     "LINK-63ef24": {
@@ -686,10 +872,10 @@
         "url": "https://blog.lido.fi/the-road-to-trustless-ethereum-staking/"
       }
     },
-    "LINK-6979e6": {
+    "LINK-618479": {
       "type": "link",
       "values": {
-        "url": "https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd"
+        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
       }
     },
     "LINK-04f843": {
@@ -698,22 +884,22 @@
         "url": "https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873"
       }
     },
-    "LINK-d5ddef": {
+    "LINK-0ba28c": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722"
+        "url": "https://github.com/ethereum/hive"
       }
     },
-    "LINK-618479": {
+    "LINK-2171ef": {
       "type": "link",
       "values": {
-        "url": "https://notes.ethereum.org/@djrtwo/risks-of-lsd"
+        "url": "https://github.com/ethpandaops/assertoor"
       }
     },
-    "LINK-022c80": {
+    "LINK-83d339": {
       "type": "link",
       "values": {
-        "url": "https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html"
+        "url": "https://verified-zkevm.org/"
       }
     },
     "LINK-7ca44b": {
@@ -722,13 +908,19 @@
         "url": "https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf"
       }
     },
-    "LINK-8751bd": {
+    "LINK-90d327": {
       "type": "link",
       "values": {
-        "url": "https://github.com/runtimeverification/deposit-contract-verification"
+        "url": "https://github.com/Verified-zkEVM/Overview"
       }
     },
-    "LINK-307226": {
+    "LINK-8d7215": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/runtimeverification/evm-semantics"
+      }
+    },
+    "LINK-8751bd": {
       "type": "link",
       "values": {
         "url": "https://github.com/runtimeverification/deposit-contract-verification"
@@ -746,10 +938,22 @@
         "url": "https://clientdiversity.org/"
       }
     },
+    "LINK-73b99b": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/execution-apis/"
+      }
+    },
     "LINK-6f4b3f": {
       "type": "link",
       "values": {
         "url": "https://rig.ethereum.org/"
+      }
+    },
+    "LINK-7241cf": {
+      "type": "link",
+      "values": {
+        "url": "https://ethpandaops.io/data/"
       }
     },
     "LINK-68d78e": {
@@ -770,22 +974,16 @@
         "url": "https://arxiv.org/pdf/2012.09306.pdf"
       }
     },
-    "LINK-0faf8c": {
+    "LINK-555ae3": {
       "type": "link",
       "values": {
-        "url": "https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92"
+        "url": "https://ethresear.ch/c/applications/18"
       }
     },
     "LINK-3adcf7": {
       "type": "link",
       "values": {
         "url": "/dao/"
-      }
-    },
-    "LINK-9d78fa": {
-      "type": "link",
-      "values": {
-        "url": "https://daocollective.xyz/"
       }
     },
     "LINK-15ca72": {
@@ -806,10 +1004,10 @@
         "url": "/developers/docs/frameworks/"
       }
     },
-    "LINK-d14dd9": {
+    "LINK-49f756": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ConsenSys/ethereum-developer-tools-list"
+        "url": "/developers/docs/dapps/"
       }
     },
     "LINK-5717a5": {
@@ -818,16 +1016,16 @@
         "url": "/developers/docs/standards/tokens/"
       }
     },
-    "LINK-02c803": {
+    "LINK-33b3ef": {
       "type": "link",
       "values": {
-        "url": "https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools"
+        "url": "https://discord.gg/qGpsxSA"
       }
     },
-    "LINK-71edb0": {
+    "LINK-f4bc73": {
       "type": "link",
       "values": {
-        "url": "https://discordapp.com/channels/595666850260713488/746343380900118528"
+        "url": "https://github.com/ethereum/execution-apis"
       }
     },
     "LINK-4b7f54": {
@@ -842,16 +1040,16 @@
         "url": "https://arxiv.org/pdf/2004.07140.pdf"
       }
     },
-    "LINK-0373fb": {
+    "LINK-80b554": {
       "type": "link",
       "values": {
-        "url": "https://chain.link/whitepaper"
+        "url": "/developers/docs/smart-contracts/security/"
       }
     },
-    "LINK-3e0f91": {
+    "LINK-5671fd": {
       "type": "link",
       "values": {
-        "url": "https://blog.chainalysis.com/reports/wormhole-hack-february-2022/"
+        "url": "https://www.chainalysis.com/blog/wormhole-hack-february-2022/"
       }
     },
     "LINK-52df50": {
@@ -860,16 +1058,10 @@
         "url": "https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191"
       }
     },
-    "LINK-eabaf4": {
+    "LINK-e136d3": {
       "type": "link",
       "values": {
-        "url": "https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg"
-      }
-    },
-    "LINK-555ae3": {
-      "type": "link",
-      "values": {
-        "url": "https://ethresear.ch/c/applications/18"
+        "url": "https://rekt.news/"
       }
     },
     "LINK-8fc374": {
@@ -878,10 +1070,10 @@
         "url": "/developers/docs/ethereum-stack/"
       }
     },
-    "LINK-3629fa": {
+    "LINK-6572c6": {
       "type": "link",
       "values": {
-        "url": "https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0"
+        "url": "/developers/docs/nodes-and-clients/light-clients/"
       }
     },
     "LINK-74e70b": {
@@ -901,11 +1093,17 @@
       "values": {
         "url": "/developers/docs/smart-contracts/composability/"
       }
+    },
+    "LINK-09ba60": {
+      "type": "link",
+      "values": {
+        "url": "https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack"
+      }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-08T07:27:17.185Z",
+      "translatedAt": "2026-08-20T22:10:01.231Z",
       "status": "success"
     }
   }

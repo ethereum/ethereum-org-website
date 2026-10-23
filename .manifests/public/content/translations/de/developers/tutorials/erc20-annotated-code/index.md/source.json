@@ -1,14 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/erc20-annotated-code/index.md",
-  "generatedAt": "2026-06-30T00:04:39.846Z",
-  "rootHash": "35310007102e",
+  "generatedAt": "2026-10-21T22:08:26.433Z",
+  "rootHash": "141ed4b863e9",
   "tree": {
-    "contentHash": "df2858ac0c61",
-    "anchorHash": "2885e5eb476e",
+    "contentHash": "95847de76576",
+    "anchorHash": "39b53ced64e4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0b4aaa89a1fe",
+        "contentHash": "47731cce3ab8",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
@@ -24,8 +24,22 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "ad5b67eae683"
+        "contentHash": "2d822bbbeb62",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "845516ec99f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -41,7 +55,7 @@
       },
       "introduction": {
         "contentHash": "130dfa967ea7",
-        "anchorHash": "20500e8e95bb",
+        "anchorHash": "a1f82e604ee6",
         "labelHash": "b605350bc002",
         "children": {
           "_label": {
@@ -78,7 +92,7 @@
           },
           "link:3": {
             "contentHash": "95427ab9d360",
-            "anchorHash": "5e9ba2728a35"
+            "anchorHash": "69e00e03453e"
           },
           "prose:8": {
             "contentHash": "cdb4ee2aea69",
@@ -1757,5 +1771,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

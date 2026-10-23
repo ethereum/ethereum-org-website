@@ -1,7 +1,7 @@
 ---
 title: Blockchain bridges
 metaTitle: Introduction to blockchain bridges
-description: Bridges allow users to move their funds across different blockchains
+description: "What is a blockchain bridge? Learn how bridges move tokens between Ethereum, layer 2s and other chains, the types of bridges, and the risks to consider."
 lang: en
 ---
 
@@ -140,4 +140,6 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 - ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
 - [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />
 

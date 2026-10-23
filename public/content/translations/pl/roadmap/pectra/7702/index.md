@@ -5,7 +5,7 @@ description: Dowiedz się więcej o 7702 w aktualizacji Pectra
 lang: pl
 ---
 
-## Streszczenie
+## Streszczenie {#abstract}
 EIP-7702 definiuje mechanizm dodawania kodu do EOA (zewnętrznie posiadanego konta). Ta propozycja pozwala EOA, starszym kontom Ethereum, na otrzymywanie krótkoterminowych ulepszeń funkcjonalności, zwiększając użyteczność aplikacji. Odbywa się to poprzez ustawienie wskaźnika do już wdrożonego kodu przy użyciu nowego typu transakcji: 4.
 
 Ten nowy typ transakcji wprowadza listę autoryzacji. Każda krotka autoryzacji na liście jest zdefiniowana jako
@@ -22,7 +22,7 @@ Ten nowy typ transakcji wprowadza listę autoryzacji. Każda krotka autoryzacji 
 Delegowanie można zresetować, delegując na adres zerowy (null address).
 
 Klucz prywatny EOA zachowuje pełną kontrolę nad kontem po delegowaniu. Na przykład delegowanie do Safe nie sprawia, że konto staje się multisigiem, ponieważ nadal istnieje pojedynczy klucz, który może ominąć dowolną politykę podpisywania. W przyszłości programiści powinni projektować z założeniem, że każdy uczestnik systemu może być inteligentnym kontraktem. Dla programistów inteligentnych kontraktów nie jest już bezpieczne zakładanie, że `tx.origin` odnosi się do EOA.
-## Najlepsze praktyki
+## Najlepsze praktyki {#best-practices}
 **Abstrakcja konta**: Kontrakt delegowania powinien być zgodny z szerszymi standardami abstrakcji konta (AA) Ethereum, aby zmaksymalizować kompatybilność. W szczególności powinien być idealnie zgodny lub kompatybilny z ERC-4337.
 
 **Projekt niewymagający pozwoleń i odporny na cenzurę**: Ethereum ceni uczestnictwo niewymagające pozwoleń. Kontrakt delegowania NIE MOŻE na stałe kodować ani polegać na żadnym pojedynczym „zaufanym” przekaźniku (relayer) lub usłudze. Spowodowałoby to zablokowanie konta, jeśli przekaźnik przeszedłby w tryb offline. Funkcje takie jak wsadowanie (np. approve+transferFrom) mogą być używane przez samo EOA bez przekaźnika. Dla programistów aplikacji, którzy chcą korzystać z zaawansowanych funkcji umożliwianych przez EIP-7702 (abstrakcja gazu, wypłaty chroniące prywatność), potrzebny będzie przekaźnik. Chociaż istnieją różne architektury przekaźników, naszą rekomendacją jest użycie [bundlerów ERC-4337](https://www.erc4337.io/bundlers) wskazujących co najmniej [punkt wejścia (entry point) 0.8](https://github.com/eth-infinitism/account-abstraction/releases/tag/v0.8.0), ponieważ:
@@ -102,7 +102,7 @@ Gdy użytkownicy wykonują delegowane podpisy, docelowy kontrakt otrzymujący de
 
 **Minimalna zaufana powierzchnia i bezpieczeństwo**: Oferując elastyczność, kontrakt delegowania powinien utrzymywać swoją podstawową logikę na minimalnym poziomie i umożliwiać jej audyt. Kontrakt jest w rzeczywistości rozszerzeniem EOA użytkownika, więc każda wada może być katastrofalna. Implementacje powinny postępować zgodnie z najlepszymi praktykami społeczności zajmującej się bezpieczeństwem inteligentnych kontraktów. Na przykład funkcje konstruktora lub inicjatora muszą być starannie zabezpieczone – jak podkreśla Alchemy, w przypadku korzystania ze wzorca proxy w ramach 7702, niezabezpieczony inicjator mógłby pozwolić atakującemu na przejęcie konta. Zespoły powinny dążyć do zachowania prostoty kodu onchain: kontrakt 7702 od Ambire ma tylko ~200 linii w Solidity, celowo minimalizując złożoność w celu zmniejszenia liczby błędów. Należy znaleźć równowagę między bogatą w funkcje logiką a prostotą, która ułatwia audyt.
 
-### Znane implementacje
+### Znane implementacje {#known-implementations}
 Ze względu na naturę EIP-7702, zaleca się, aby portfele zachowały ostrożność podczas pomagania użytkownikom w delegowaniu do kontraktu strony trzeciej. Poniżej znajduje się zbiór znanych implementacji, które zostały poddane audytowi:
 
 | Adres kontraktu                            | Źródło                                                                                                                                     | Audyty                                                                                                                                                        |
@@ -129,11 +129,11 @@ Uwaga: niektóre aktywa mogą zostać automatycznie odrzucone przez kod delegowa
 
 Powiadom użytkownika, że dla EOA istnieje delegowanie, sprawdzając jego kod, i opcjonalnie zaoferuj usunięcie delegowania.
 
-#### Powszechne delegowanie
+#### Powszechne delegowanie {#common-delegation}
 Dostawca sprzętu umieszcza na białej liście znane kontrakty delegowania i implementuje ich obsługę w oprogramowaniu towarzyszącym. Zaleca się wybór kontraktu z pełną obsługą ERC-4337.
 
 Konta EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.
-#### Niestandardowe delegowanie
+#### Niestandardowe delegowanie {#custom-delegation}
 Dostawca sprzętu implementuje własny kontrakt delegowania i dodaje go do list oraz implementuje jego obsługę w oprogramowaniu towarzyszącym. Zaleca się zbudowanie kontraktu z pełną obsługą ERC-4337.
 
 Konta EOA delegowane do innego kontraktu będą traktowane jako standardowe EOA.

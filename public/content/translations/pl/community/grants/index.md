@@ -4,15 +4,13 @@ description: "Lista programów grantowych w całym ekosystemie Ethereum."
 lang: pl
 ---
 
-# Granty Ethereum {#ethereum-grants}
-
 Wymienione poniżej programy oferują różnorodne granty finansowe dla projektów działających na rzecz sukcesu i rozwoju ekosystemu [Ethereum](/). Potraktuj to jako przewodnik, który pomoże Ci znaleźć i ubiegać się o fundusze, aby Twój kolejny projekt Ethereum odniósł sukces.
 
 Ta lista jest tworzona przez naszą społeczność. Jeśli czegoś brakuje lub jest niepoprawne, edytuj tę stronę!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Założyciele, potrzebujecie pomocy w przyspieszeniu rozwoju Waszej firmy? [Odwiedźcie Founders Support](/founders/)</div>
+<div>Założyciele, potrzebujecie pomocy w przyspieszeniu rozwoju Waszej firmy? [Odwiedźcie Founders Support](/organizations/founders/)</div>
 </Alert>
 
 ## Szeroki ekosystem Ethereum {#broad-ethereum-ecosystem}

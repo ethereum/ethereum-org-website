@@ -2,6 +2,7 @@
 title: Ostateczność w pojedynczym slocie
 description: Wyjaśnienie ostateczności w pojedynczym slocie
 lang: pl
+template: roadmap
 ---
 
 Sfinalizowanie bloku [Ethereum](/) zajmuje około 15 minut. Możemy jednak sprawić, by mechanizm konsensusu Ethereum weryfikował bloki wydajniej i drastycznie skrócić czas do ostateczności. Zamiast czekać piętnaście minut, bloki mogłyby być proponowane i finalizowane w tym samym slocie. Koncepcja ta jest znana jako **ostateczność w pojedynczym slocie (SSF)**.

@@ -16,6 +16,7 @@ import {
 } from "./helpers"
 
 const env = {
+  MATOMO_AI_TRACKER_ENABLED: "true",
   MATOMO_URL: "https://analytics.example.com",
   MATOMO_SITE_ID: "7",
   USER_AGENT_ALLOWLIST_REGEX: ".*",
@@ -84,7 +85,7 @@ test.describe("Edge function handler", () => {
     )
   })
 
-  test("returns fallback when origin fails but still tracks", async () => {
+  test("rethrows when origin fails (platform bypass) but still tracks", async () => {
     setNetlifyEnv(env)
     fetchStub = stubGlobalFetch(() =>
       Promise.resolve(new Response(null, { status: 204 }))
@@ -93,17 +94,19 @@ test.describe("Edge function handler", () => {
       Promise.reject(new Error("boom"))
     )
 
-    const response = await handler(
-      new Request("https://example.com/path", {
-        headers: { "user-agent": "AgentX" },
-      }),
-      context
-    )
+    await expect(
+      handler(
+        new Request("https://example.com/path", {
+          headers: { "user-agent": "AgentX" },
+        }),
+        context
+      )
+    ).rejects.toThrow("boom")
 
-    expect(response.status).toBe(502)
     expect(tracked).toHaveLength(1)
     await tracked[0]
     expect(fetchStub.calls).toHaveLength(1)
+    expect(String(fetchStub.calls[0][0])).toContain("http_status=502")
     expect(consoleSpies.calls.error).toContainEqual([
       "Origin request failed",
       { error: "boom" },
@@ -155,8 +158,36 @@ test.describe("Edge function handler", () => {
     ])
   })
 
+  for (const disabledEnv of [
+    { ...env, MATOMO_AI_TRACKER_ENABLED: undefined },
+    { ...env, MATOMO_AI_TRACKER_ENABLED: "false" },
+  ]) {
+    test(`passes through silently when kill switch is ${disabledEnv.MATOMO_AI_TRACKER_ENABLED ?? "unset"}`, async () => {
+      setNetlifyEnv(disabledEnv)
+      fetchStub = stubGlobalFetch(() =>
+        Promise.resolve(new Response(null, { status: 204 }))
+      )
+      const { context, tracked } = createContext(() =>
+        Promise.resolve(new Response("origin", { status: 200 }))
+      )
+
+      const response = await handler(
+        new Request("https://example.com/path", {
+          headers: { "user-agent": "AgentX" },
+        }),
+        context
+      )
+
+      expect(response.status).toBe(200)
+      expect(tracked).toHaveLength(0)
+      expect(fetchStub.calls).toHaveLength(0)
+      expect(consoleSpies.calls.error).toHaveLength(0)
+      expect(consoleSpies.calls.warn).toHaveLength(0)
+    })
+  }
+
   test("returns origin response when config is invalid and skips tracking", async () => {
-    setNetlifyEnv({ MATOMO_SITE_ID: "7" })
+    setNetlifyEnv({ MATOMO_AI_TRACKER_ENABLED: "true", MATOMO_SITE_ID: "7" })
     fetchStub = stubGlobalFetch(() =>
       Promise.resolve(new Response(null, { status: 204 }))
     )
@@ -174,7 +205,9 @@ test.describe("Edge function handler", () => {
     expect(fetchStub.calls).toHaveLength(0)
     expect(consoleSpies.calls.error).toContainEqual([
       "Configuration error",
-      { error: "MATOMO_URL is required" },
+      {
+        error: "MATOMO_URL is required (MATOMO_URL or NEXT_PUBLIC_MATOMO_URL)",
+      },
     ])
   })
 })

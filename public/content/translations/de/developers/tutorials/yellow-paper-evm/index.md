@@ -19,7 +19,7 @@ Wie fast alles andere bei Ethereum entwickelt sich auch das Yellow Paper im Lauf
 
 Das ursprüngliche Yellow Paper wurde direkt zu Beginn der Entwicklung von Ethereum geschrieben. Es beschreibt den ursprünglichen auf Proof-of-Work (PoW) basierenden Konsensmechanismus, der ursprünglich zur Sicherung des Netzwerks verwendet wurde. Ethereum hat jedoch Proof-of-Work abgeschaltet und im September 2022 begonnen, einen auf Proof-of-Stake (PoS) basierenden Konsens zu verwenden. Dieses Tutorial konzentriert sich auf die Teile des Yellow Papers, die die Ethereum Virtual Machine definieren. Die EVM blieb durch den Übergang zu Proof-of-Stake unverändert (mit Ausnahme des Rückgabewerts des Opcodes DIFFICULTY).
 
-## 9 Ausführungsmodell
+## 9 Ausführungsmodell {#9-execution-model}
 
 Dieser Abschnitt (S. 14-16) enthält den Großteil der Definition der EVM.
 
@@ -59,7 +59,7 @@ Der Begriff der außergewöhnlichen Ausführung (exceptional execution) bezeichn
 
 Dieser Abschnitt erklärt, wie die Gasgebühren berechnet werden. Es gibt drei Kostenarten:
 
-### Opcode-Kosten
+### Opcode-Kosten {#opcode-cost}
 
 Die inhärenten Kosten des spezifischen Opcodes. Um diesen Wert zu erhalten, suchen Sie die Kostengruppe des Opcodes in Anhang H (S. 29, unter Gleichung (329)) und finden Sie die Kostengruppe in Gleichung (326). Dies liefert Ihnen eine Kostenfunktion, die in den meisten Fällen Parameter aus Anhang G (S. 28) verwendet.
 
@@ -73,7 +73,7 @@ Die Kosten für die Ausführung des Codes, den wir aufrufen.
 - Im Falle von [`CREATE`](https://www.evm.codes/#f0) und [`CREATE2`](https://www.evm.codes/#f5) der Konstruktor für den neuen Vertrag.
 - Im Falle von [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa) oder [`DELEGATECALL`](https://www.evm.codes/#f4) der Vertrag, den wir aufrufen.
 
-### Kosten für die Speichererweiterung
+### Kosten für die Speichererweiterung {#expanding-memory-cost}
 
 Die Kosten für die Erweiterung des Memory-Speichers (falls erforderlich).
 
@@ -84,7 +84,7 @@ Die Funktion _C<sub>mem</sub>_ ist in Gleichung 328 definiert: _C<sub>mem</sub>(
 **Hinweis**, dass diese Faktoren nur die _inhärenten_ Gas-Kosten beeinflussen – sie berücksichtigen nicht den Gebührenmarkt oder Trinkgelder für Validatoren, die bestimmen, wie viel ein Endbenutzer zahlen muss – dies sind nur die reinen Kosten für die Ausführung einer bestimmten Operation auf der EVM.
 
 [Lesen Sie mehr über Gas](/developers/docs/gas/).
-## 9.3 Ausführungsumgebung
+## 9.3 Ausführungsumgebung {#93-execution-env}
 
 Die Ausführungsumgebung ist ein Tupel, _I_, das Informationen enthält, die nicht Teil des Blockchain-Zustands oder der EVM sind.
 
@@ -109,7 +109,7 @@ Ein paar weitere Parameter sind notwendig, um den Rest von Abschnitt 9 zu verste
 | _g_       | 9.3 (S. 14)            | Verbleibendes Gas                                                                                                                                                                                                                                                |
 | _A_       | 6.1 (S. 9)             | Aufgelaufener Teilzustand (Änderungen, die für das Ende der Transaktion geplant sind)                                                                                                                                                                            |
 | _o_       | 9.3 (S. 14)            | Ausgabe – das zurückgegebene Ergebnis im Falle einer internen Transaktion (wenn ein Vertrag einen anderen aufruft) und bei Aufrufen von View-Funktionen (wenn Sie nur nach Informationen fragen, sodass Sie nicht auf eine Transaktion warten müssen) |
-## 9.4 Ausführungsübersicht
+## 9.4 Ausführungsübersicht {#94-execution-overview}
 
 Nachdem wir nun alle Vorbereitungen getroffen haben, können wir uns endlich damit befassen, wie die EVM funktioniert.
 
@@ -136,7 +136,7 @@ Dieser Abschnitt erklärt den Maschinenzustand genauer. Er legt fest, dass _w_ d
 
 Da es sich um eine [Kellermaschine](https://en.wikipedia.org/wiki/Stack_machine) handelt, müssen wir die Anzahl der Elemente im Auge behalten, die von jedem Opcode entnommen (_δ_) und hinzugefügt (_α_) werden.
 
-## 9.4.2 Außergewöhnliches Anhalten (Exceptional Halting)
+## 9.4.2 Außergewöhnliches Anhalten (Exceptional Halting) {#942-exceptional-halt}
 
 Dieser Abschnitt definiert die Funktion _Z_, die angibt, wann ein abnormaler Abbruch vorliegt. Dies ist eine [Boolesche](https://en.wikipedia.org/wiki/Boolean_data_type) Funktion, daher verwendet sie [_∨_ für ein logisches Oder](https://en.wikipedia.org/wiki/Logical_disjunction) und [_∧_ für ein logisches Und](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Wir haben ein außergewöhnliches Anhalten, wenn eine dieser Bedingungen wahr is
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Sie können [`SSTORE`](https://www.evm.codes/#55) nicht ausführen, es sei denn, Sie haben mehr als G<sub>callstipend</sub> (in Anhang G als 2300 definiert) Gas.
-## 9.4.3 Gültigkeit des Sprungziels (Jump Destination Validity)
+## 9.4.3 Gültigkeit des Sprungziels (Jump Destination Validity) {#943-jump-dest-valid}
 
 Hier definieren wir formal, was die [`JUMPDEST`](https://www.evm.codes/#5b)-Opcodes sind. Wir können nicht einfach nach dem Bytewert 0x5B suchen, da er sich innerhalb eines PUSH befinden könnte (und somit Daten und kein Opcode wäre).
 
@@ -198,7 +198,7 @@ Die Haltefunktion _H_ kann drei Arten von Werten zurückgeben.
 - Wenn wir einen Halte-Opcode haben, der keine Ausgabe erzeugt (entweder [`STOP`](https://www.evm.codes/#00) oder [`SELFDESTRUCT`](https://www.evm.codes/#ff)), wird eine Sequenz von null Bytes als Rückgabewert zurückgegeben. Beachten Sie, dass sich dies stark von der leeren Menge unterscheidet. Dieser Wert bedeutet, dass die EVM wirklich angehalten hat, es gibt nur keine Rückgabedaten zum Lesen.
 - Wenn wir einen Halte-Opcode haben, der eine Ausgabe erzeugt (entweder [`RETURN`](https://www.evm.codes/#f3) oder [`REVERT`](https://www.evm.codes/#fd)), wird die durch diesen Opcode angegebene Bytesequenz zurückgegeben. Diese Sequenz wird aus dem Memory-Speicher entnommen, der Wert oben auf dem Stack (_μ<sub>s</sub>[0]_) ist das erste Byte, und der Wert danach (_μ<sub>s</sub>[1]_) ist die Länge.
 
-## H.2 Befehlssatz (Instruction set)
+## H.2 Befehlssatz (Instruction set) {#h2-instruction-set}
 
 Bevor wir zum letzten Unterabschnitt der EVM, 9.5, übergehen, schauen wir uns die Anweisungen selbst an. Sie sind in Anhang H.2 definiert, der auf S. 30 beginnt. Alles, was nicht als sich mit diesem spezifischen Opcode ändernd angegeben ist, bleibt voraussichtlich gleich. Variablen, die sich ändern, werden mit einem \<etwas\>′ angegeben.
 
@@ -242,7 +242,7 @@ Die zweite Gleichung, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] 
 |       |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Beachten Sie, dass wir jedes Stack-Element, das wir verwenden möchten, entnehmen (pop) müssen, was bedeutet, dass wir auch alle darüber liegenden Stack-Elemente entnehmen müssen. Im Falle von [`DUP<n>`](https://www.evm.codes/#8f) und [`SWAP<n>`](https://www.evm.codes/#9f) bedeutet dies, dass bis zu sechzehn Werte entnommen und dann wieder zurückgelegt (push) werden müssen.
-## 9.5 Der Ausführungszyklus
+## 9.5 Der Ausführungszyklus {#95-exec-cycle}
 
 Nachdem wir nun alle Teile haben, können wir endlich verstehen, wie der Ausführungszyklus der EVM dokumentiert ist.
 

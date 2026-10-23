@@ -99,7 +99,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       </Alert>
 
       <HubHero
-        title={t("page-resources-hero-title")}
+        breadcrumbs={{ slug: "resources" }}
         header={t("page-resources-hero-header")}
         description={t("page-resources-hero-description")}
         heroImg={heroImg}

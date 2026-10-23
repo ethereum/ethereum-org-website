@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} 소개",
+  "catalog-item-gallery-modal-title": "{name} 스크린샷",
+  "catalog-item-gallery-screenshot-alt": "{name}의 스크린샷 {index}",
+  "catalog-item-gallery-title": "갤러리",
+  "catalog-item-info-title": "정보",
+  "catalog-item-link-label": "{platform}의 {name}",
+  "catalog-item-see-next": "다음 보기",
+  "catalog-item-source-code": "소스 코드",
+  "catalog-item-view-on-github": "GitHub에서 보기",
+  "catalog-item-visit-website": "웹사이트 방문"
+}

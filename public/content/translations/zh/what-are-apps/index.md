@@ -79,3 +79,7 @@ summary: "以太坊上的应用是免费且全球化的，它们使用公共区�
 <ExpandableCard title="哪个是最好的加密货币钱包？" visible>
   <p>加密货币钱包让你能够持有代币并管理你的以太坊账户。有很多很棒的钱包，每个都有不同的用途。要找出最适合你的钱包，请访问我们的[钱包列表](/wallets/find-wallet)。</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

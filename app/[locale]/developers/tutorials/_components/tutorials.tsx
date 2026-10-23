@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from "react"
 import {
+  ArchiveX,
   Code,
   ExternalLink,
   GraduationCap,
@@ -18,6 +19,13 @@ import Emoji from "@/components/Emoji"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
+import {
+  Alert,
+  AlertCloseButton,
+  AlertContent,
+  AlertDescription,
+  AlertIcon,
+} from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import Input from "@/components/ui/input"
@@ -61,6 +69,7 @@ type TutorialsListProps = {
 
 const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   const t = useTranslations("page-developers-tutorials")
+  const tCommon = useTranslations("common")
   const locale = useLocale()
   const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
   const filteredTutorialsByLang = useMemo(
@@ -123,6 +132,18 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   const [selectedTags, setSelectedTags] = useState<Array<string>>([])
   const [selectedSkill, setSelectedSkill] = useState<string>("all")
   const [searchQuery, setSearchQuery] = useState("")
+  const [showRemovedNotice, setShowRemovedNotice] = useState(false)
+
+  // Retired tutorials redirect here with ?removed (redirects.config.js). Read
+  // window.location, not useSearchParams, to keep the page static; then drop
+  // the param so a refresh or shared link doesn't repeat the notice.
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (!url.searchParams.has("removed")) return
+    setShowRemovedNotice(true)
+    url.searchParams.delete("removed")
+    window.history.replaceState(window.history.state, "", url)
+  }, [])
 
   // Combined filtering: skill + tags + search
   useEffect(() => {
@@ -204,6 +225,25 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
 
   return (
     <>
+      {showRemovedNotice && (
+        <div className="px-page pt-page">
+          <Alert variant="warning" role="status">
+            <AlertIcon>
+              <ArchiveX />
+            </AlertIcon>
+            <AlertContent>
+              <AlertDescription>
+                {t("page-tutorial-removed-notice")}
+              </AlertDescription>
+            </AlertContent>
+            <AlertCloseButton
+              aria-label={tCommon("close")}
+              onClick={() => setShowRemovedNotice(false)}
+            />
+          </Alert>
+        </div>
+      )}
+
       {/* Skill level TabNav + Search */}
       <div className="flex gap-6 px-page pt-page max-lg:flex-col md:max-lg:w-fit lg:items-center">
         <TabNav

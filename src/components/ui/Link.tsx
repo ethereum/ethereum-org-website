@@ -1,7 +1,7 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ArrowRight, ExternalLink, Mail } from "lucide-react"
+import { ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { useTranslations } from "next-intl"
 
@@ -12,7 +12,9 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
-import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+import { DISCORD_URL } from "@/lib/constants"
+
+import { ArrowNext } from "./arrow"
 
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
@@ -32,6 +34,8 @@ type BaseProps = {
   isPartiallyActive?: boolean
   activeClassName?: string
   customEventOptions?: MatomoEventOptions
+  /** Opt out of `noreferrer` on external links so the destination gets attribution */
+  sendReferrer?: boolean
 }
 
 export type LinkProps = BaseProps &
@@ -59,6 +63,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    sendReferrer,
     onClick,
     ...props
   }: LinkProps,
@@ -89,7 +94,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isDiscordInvite) {
-    href = new URL(DISCORD_PATH, SITE_URL).href
+    href = DISCORD_URL
   }
 
   const commonProps = {
@@ -118,7 +123,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener noreferrer"
+        rel={sendReferrer ? "noopener" : "noopener noreferrer"}
         {...rest}
         onClick={createClickHandler("Clicked on external link")}
         className={cn("relative", className)}
@@ -198,7 +203,7 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
     >
       <span className="group-hover:underline">{children}</span>
       &nbsp;
-      <ArrowRight className="mb-1 inline size-[1em] rtl:-scale-x-100" />
+      <ArrowNext className="mb-1 inline size-[1em]" />
     </BaseLink>
   )
 )

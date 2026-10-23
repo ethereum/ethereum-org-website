@@ -21,6 +21,8 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3"
 
+import { parallelBatch } from "./fetchers/fetchRetry"
+
 // Lazy init S3 client
 let s3Client: S3Client | null = null
 
@@ -41,6 +43,8 @@ function getS3Client(): S3Client {
       endpoint,
       credentials: { accessKeyId, secretAccessKey },
       forcePathStyle: true, // Required for S3-compatible services
+      // No socket timeout by default; a stalled endpoint would hang the task
+      requestHandler: { connectionTimeout: 5_000, socketTimeout: 20_000 },
     })
   }
   return s3Client
@@ -127,6 +131,58 @@ function buildS3Url(bucket: string, key: string): string {
 }
 
 /**
+ * True when the URL already points at our own S3 host. Sources are often
+ * hand-uploaded to the bucket and pasted back into a sheet, so re-uploading
+ * would re-key the object under a content hash and orphan the original.
+ */
+function isAlreadyOnS3(url: string): boolean {
+  const endpoint = process.env.S3_ENDPOINT
+  if (!endpoint) return false
+  try {
+    return new URL(url).hostname === new URL(endpoint).hostname
+  } catch {
+    return false
+  }
+}
+
+/**
+ * Learn an image's served type without downloading it. Plenty of hosts answer
+ * HEAD badly or not at all, so any failure here just falls through to the GET.
+ */
+async function headContentType(sourceUrl: string): Promise<string | null> {
+  try {
+    const response = await fetch(sourceUrl, {
+      method: "HEAD",
+      signal: AbortSignal.timeout(5_000),
+      headers: { "User-Agent": "ethereum.org-image-sync/1.0" },
+    })
+    return response.ok ? response.headers.get("content-type") : null
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Why an object on our own host is unusable, or null to keep it. Only a 404 or
+ * a non-image type counts; 403, 5xx and network errors are not proof it's bad.
+ */
+async function checkExistingObject(url: string): Promise<string | null> {
+  try {
+    const response = await fetch(url, {
+      method: "HEAD",
+      signal: AbortSignal.timeout(5_000),
+      headers: { "User-Agent": "ethereum.org-image-sync/1.0" },
+    })
+    if (response.status === 404) return "404"
+    if (!response.ok) return null
+    const type = response.headers.get("content-type")
+    return type && !type.startsWith("image/") ? type : null
+  } catch {
+    return null
+  }
+}
+
+/**
  * Upload an image from an external URL to S3.
  *
  * @param sourceUrl - The external image URL to fetch and upload
@@ -145,8 +201,67 @@ export async function uploadToS3(
     return null
   }
 
+  // Already hosted by us: pass through untouched, unless the object is missing
+  // (404) or isn't an image (e.g. an HTML page uploaded under a .png key).
+  // Any other failure keeps the URL (fail open).
+  if (isAlreadyOnS3(sourceUrl)) {
+    const problem = await checkExistingObject(sourceUrl)
+    if (problem) {
+      console.warn(`[S3] Dropping existing object (${problem}): ${sourceUrl}`)
+      return null
+    }
+    return sourceUrl
+  }
+
   const bucket = getBucket()
   const s3 = getS3Client()
+
+  // Almost every source URL carries a usable extension, so the key can be
+  // derived and checked before paying for the download. A miss falls through to
+  // the fetch path, which re-checks against the Content-Type-derived key.
+  const urlExt = getExtensionFromUrl(sourceUrl)
+  const precheckKey = customFilename
+    ? `${prefix}/${customFilename}`
+    : urlExt
+      ? generateKey(prefix, sourceUrl, urlExt)
+      : null
+
+  // Keys already known to be absent, so no path below probes one twice
+  const probed = new Set<string>()
+
+  if (precheckKey) {
+    probed.add(precheckKey)
+    try {
+      await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: precheckKey }))
+      return buildS3Url(bucket, precheckKey)
+    } catch {
+      // Not in the bucket yet; fall through and upload it.
+    }
+  }
+
+  // The pre-check key is only a guess from the URL extension, and hosts often
+  // serve something else -- `github.com/<org>.png` returns whatever format the
+  // org uploaded. A HEAD settles the real key for one round trip instead of a
+  // full download. Skipped for customFilename, whose key ignores the extension.
+  if (!customFilename) {
+    const servedType = await headContentType(sourceUrl)
+    const servedExt = servedType
+      ? getExtensionFromContentType(servedType)
+      : null
+    const servedKey = servedExt
+      ? generateKey(prefix, sourceUrl, servedExt)
+      : null
+
+    if (servedKey && !probed.has(servedKey)) {
+      probed.add(servedKey)
+      try {
+        await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: servedKey }))
+        return buildS3Url(bucket, servedKey)
+      } catch {
+        // Still absent; the GET below uploads it.
+      }
+    }
+  }
 
   // Fetch the image first to get accurate Content-Type
   try {
@@ -197,12 +312,14 @@ export async function uploadToS3(
       ? `${prefix}/${customFilename}`
       : generateKey(prefix, sourceUrl, ext)
 
-    // Check if already exists in S3
-    try {
-      await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }))
-      return buildS3Url(bucket, key)
-    } catch {
-      // Object doesn't exist, continue to upload
+    // Check if already exists in S3 (skipped when a pre-check used this key)
+    if (!probed.has(key)) {
+      try {
+        await s3.send(new HeadObjectCommand({ Bucket: bucket, Key: key }))
+        return buildS3Url(bucket, key)
+      } catch {
+        // Object doesn't exist, continue to upload
+      }
     }
 
     const buffer = Buffer.from(await response.arrayBuffer())
@@ -235,15 +352,16 @@ export async function uploadToS3(
 }
 
 /**
- * Batch upload multiple images in parallel.
+ * Batch upload multiple images with bounded concurrency.
  *
  * @param urls - Array of external image URLs
  * @param prefix - S3 key prefix
- * @returns Array of S3 URLs (null for failed uploads)
+ * @returns Array of S3 URLs (null for failed uploads), in input order
  */
 export async function uploadManyToS3(
   urls: string[],
-  prefix: string
+  prefix: string,
+  concurrency = 5
 ): Promise<(string | null)[]> {
-  return Promise.all(urls.map((url) => uploadToS3(url, prefix)))
+  return parallelBatch(urls, (url) => uploadToS3(url, prefix), concurrency)
 }

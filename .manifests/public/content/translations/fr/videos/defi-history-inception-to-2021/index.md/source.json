@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/defi-history-inception-to-2021/index.md",
-  "generatedAt": "2026-04-28T23:12:32.143Z",
-  "rootHash": "52ed5773f298",
+  "generatedAt": "2026-09-30T18:36:38.969Z",
+  "rootHash": "c5d3339ec2a1",
   "tree": {
-    "contentHash": "69fdeeead7b3",
-    "anchorHash": "494719525e13",
+    "contentHash": "e18864719f56",
+    "anchorHash": "a31f1aa2592e",
     "children": {
       "frontmatter:title": {
-        "contentHash": "5bd8adf28a71",
+        "contentHash": "b77029ee0134",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "98a835125d03",
+        "contentHash": "e6d55978865e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2d6305e6acf9"
+        "anchorHash": "7dcb2d8c0c03"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "79ee1f8d5830"
+        "anchorHash": "af9f37e48947"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "715c0e5502b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "2290d7d70dea"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "89d3048a1459"
+        "anchorHash": "21915b9129ef"
       },
       "prose:1": {
         "contentHash": "82a7a9bb6daa",
@@ -321,5 +327,5 @@
       "looking-ahead-to-2021-and-beyond-1656"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

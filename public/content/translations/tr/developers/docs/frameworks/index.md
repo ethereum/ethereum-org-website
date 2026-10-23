@@ -20,11 +20,11 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 
 Çerçevelere dalmadan önce, [dapp'lere](/developers/docs/dapps/) ve [Ethereum yığınına](/developers/docs/ethereum-stack/) giriş yazılarımızı okumanızı öneririz.
 
-## Mevcut çerçeveler
+## Mevcut çerçeveler {#available-frameworks}
 
 **Foundry** - **_Foundry, Ethereum uygulama geliştirmesi için son derece hızlı, taşınabilir ve modüler bir araç takımıdır_**
 
-- [Foundry'yi yükleyin](https://book.getfoundry.sh/)
+- [Foundry'yi Yükleyin](https://book.getfoundry.sh/)
 - [Foundry kitabı](https://book.getfoundry.sh/)
 - [Telegram'da Foundry topluluk sohbeti](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
@@ -39,13 +39,13 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 - [Belgeler](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_JVM üzerinde blokzincir uygulamaları geliştirmek için bir platform._**
+**Web3j -** **_JVM üzerinde Blokzincir uygulamaları geliştirmek için bir platform._**
 
-- [Ana sayfa](https://www.web3labs.com/web3j-sdk)
+- [Ana Sayfa](https://www.web3labs.com/web3j-sdk)
 - [Belgeler](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_EVM tabanlı blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+**ethers-kt -** **_EVM tabanlı Blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -56,19 +56,19 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Şablonlar](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Hardhat veya Foundry seçenekleriyle Next.js, Wagmi, Viem ve RainbowKit: sözleşme anında yeniden yükleme, özel React kancaları, tek kullanımlık bir cüzdan ve yerel musluk ile tam yığın merkeziyetsiz uygulama (dapp) geliştirmesi için uzantı modülleri._**
+**Scaffold-ETH 2 -** **_Hardhat veya Foundry seçenekleriyle Next.js, Wagmi, Viem ve RainbowKit: sözleşme anında yeniden yükleme, özel React kancaları, kullan-at cüzdan ve yerel musluk ve tam yığın merkeziyetsiz uygulama (dapp) geliştirmesi için uzantı modülleri._**
 
-- [Web sitesi](https://scaffoldeth.io/)
+- [Web Sitesi](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Blokzincir geliştiricilerinin akıllı sözleşmeler oluşturmasına, test etmesine, hata ayıklamasına, izlemesine ve çalıştırmasına ve dapp kullanıcı deneyimini iyileştirmesine olanak tanıyan Web3 geliştirme platformu._**
 
-- [Web sitesi](https://tenderly.co/)
+- [Web Sitesi](https://tenderly.co/)
 - [Belgeler](https://docs.tenderly.co/)
 
 **The Graph -** **_Blokzincir verilerini verimli bir şekilde sorgulamak için The Graph._**
 
-- [Web sitesi](https://thegraph.com/)
+- [Web Sitesi](https://thegraph.com/)
 - [Eğitim](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Geliştirme Platformu._**
@@ -94,9 +94,9 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Tüm büyük zincirlerde, EVM Zincirlerinde (ve diğerlerinde) NFT uygulamaları oluşturmanıza olanak tanıyan kurumsal düzeyde Web3 geliştirme platformu._**
+**Crossmint -** **_Tüm büyük zincirlerde, EVM Zincirlerinde (ve diğerlerinde) değiştirilemez token (NFT) uygulamaları oluşturmanıza olanak tanıyan kurumsal düzeyde Web3 geliştirme platformu._**
 
-- [Web sitesi](https://www.crossmint.com)
+- [Web Sitesi](https://www.crossmint.com)
 - [Belgeler](https://docs.crossmint.com)
 - [Discord](https://discord.com/invite/crossmint)
 
@@ -108,7 +108,6 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 
 **OpenZeppelin SDK -** **_Nihai Akıllı Sözleşme Araç Takımı: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime girmenize yardımcı olacak bir araç paketi._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Topluluk Forumu](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK geliştirmesi sona erdi**
@@ -117,23 +116,23 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent tarafından desteklenmektedir) -** **_GoldRush, geliştiriciler, analistler ve işletmeler için en kapsamlı blokzincir veri API paketini sunar. İster bir DeFi panosu, ister bir cüzdan, bir ticaret botu, bir yapay zeka ajanı veya bir uyumluluk platformu oluşturuyor olun, veri API'leri ihtiyacınız olan temel zincir içi verilere hızlı, doğru ve geliştirici dostu erişim sağlar_**
+**GoldRush (Covalent tarafından desteklenmektedir) -** **_GoldRush, geliştiriciler, analistler ve işletmeler için en kapsamlı Blokzincir veri uygulama programlama arayüzü (API) paketini sunar. İster bir merkeziyetsiz finans (DeFi) panosu, ister bir cüzdan, bir ticaret botu, bir yapay zeka ajanı veya bir uyumluluk platformu oluşturuyor olun, veri API'leri ihtiyacınız olan temel zincir içi verilere hızlı, doğru ve geliştirici dostu erişim sağlar_**
 
-- [Web sitesi](https://goldrush.dev/)
+- [Web Sitesi](https://goldrush.dev/)
 - [Belgeler](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Sözleşme testi, bulanıklaştırma (fuzzing), dağıtım, güvenlik açığı taraması ve kod gezinmesi için hepsi bir arada Python çerçevesi._**
+**Wake -** **_Sözleşme testi, bulanıklaştırma (fuzzing), dağıtım, güvenlik açığı taraması ve kodda gezinme için hepsi bir arada Python çerçevesi._**
 
-- [Ana sayfa](https://getwake.io/)
+- [Ana Sayfa](https://getwake.io/)
 - [Belgeler](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Merkeziyetsiz uygulama geliştiricilerinin uygulamalarına merkeziyetsiz kimlikler ve doğrulanabilir kimlik bilgileri oluşturmasını kolaylaştıran açık kaynaklı, modüler ve agnostik çerçeve._**
+**Veramo -** **_Merkeziyetsiz uygulama (dapp) geliştiricilerinin uygulamalarına merkeziyetsiz kimlikler ve doğrulanabilir kimlik bilgileri oluşturmasını kolaylaştıran açık kaynaklı, modüler ve agnostik çerçeve._**
 
-- [Ana sayfa](https://veramo.io/)
+- [Ana Sayfa](https://veramo.io/)
 - [Belgeler](https://veramo.io/docs/basics/introduction)
 - [GitHub](https://github.com/uport-project/veramo)
 - [Discord](https://discord.com/invite/FRRBdjemHV)
@@ -143,6 +142,7 @@ Tam teşekküllü bir merkeziyetsiz uygulama (dapp) oluşturmak, farklı teknolo
 
 - [Belgeler](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_

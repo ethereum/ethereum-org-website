@@ -13,6 +13,11 @@ const pages: Array<{ name: string; path: string }> = [
   { name: "History", path: "/history/" },
   { name: "Get ETH", path: "/get-eth/" },
   { name: "Find Wallet", path: "/wallets/find-wallet/" },
+  {
+    name: "Find Wallet - Persona",
+    path: "/wallets/find-wallet/personas/nfts/",
+  },
+  { name: "Find Wallet - Detail", path: "/wallets/find-wallet/metamask/" },
   { name: "Developer Tools", path: "/developers/tools/" },
   {
     name: "Developer Tools - Category",
@@ -30,6 +35,10 @@ const pages: Array<{ name: string; path: string }> = [
   { name: "Roadmap - Security", path: "/roadmap/security/" }, // md/RoadmapLayout
   { name: "Roadmap - Merge", path: "/roadmap/merge/" }, // md/UpgradeLayout
   { name: "DeFi", path: "/defi/" }, // md/UseCasesLayout
+
+  // These two cover every shared organizations component
+  { name: "Organizations", path: "/organizations/" },
+  { name: "Organizations - Enterprise", path: "/organizations/enterprise/" },
 ]
 
 test.describe("Page Visual Tests", () => {

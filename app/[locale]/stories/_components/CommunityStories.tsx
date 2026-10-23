@@ -111,6 +111,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
                 Math.min(n + STORIES_SHOWN, filteredStories.length)
               )
             }
+            className="max-sm:w-full"
             variant="outline"
             customEventOptions={{
               eventAction: "click",

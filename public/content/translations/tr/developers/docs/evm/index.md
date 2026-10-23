@@ -91,3 +91,5 @@ Ethereum'un on yıllık tarihi boyunca EVM çeşitli revizyonlardan geçmiştir 
 
 - [Sarı Bülten'in EVM Spesifikasyonlarını Anlamak](/developers/tutorials/yellow-paper-evm/) _– Ethereum Sarı Bülteni'ndeki resmi EVM spesifikasyonunun rehberli bir incelemesi._
 - [Bir Sözleşmeye Tersine Mühendislik Uygulamak](/developers/tutorials/reverse-engineering-a-contract/) _– EVM işlem kodlarını kullanarak derlenmiş bir akıllı sözleşmeye nasıl tersine mühendislik yapılacağı._
+
+<QuizWidget quizKey="evm" />

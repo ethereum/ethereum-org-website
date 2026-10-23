@@ -128,9 +128,9 @@ La barriera tecnica all'ingresso per l'utilizzo del Web3 è attualmente troppo a
 
 ### Formazione {#education}
 
-Il Web3 introduce nuovi paradigmi che richiedono l'apprendimento di modelli mentali diversi rispetto a quelli utilizzati nel Web 2.0. Una simile spinta educativa si è verificata quando il Web 1.0 stava guadagnando popolarità alla fine degli anni '90; i sostenitori del world wide web hanno utilizzato una serie di tecniche educative per istruire il pubblico, da semplici metafore (l'autostrada dell'informazione, i browser, navigare sul web) alle [trasmissioni televisive](https://www.youtube.com/watch?v=SzQLI7BxfYI). Il Web3 non è difficile, ma è diverso. Le iniziative educative che informano gli utenti del Web2 di questi paradigmi del Web3 sono vitali per il suo successo.
+Il Web3 introduce nuovi paradigmi che richiedono l'apprendimento di modelli mentali diversi da quelli utilizzati nel Web 2.0. Una simile campagna di formazione ha avuto luogo quando il Web 1.0 stava guadagnando popolarità alla fine degli anni '90; i sostenitori del world wide web hanno utilizzato una serie di tecniche educative per istruire il pubblico, da semplici metafore (l'autostrada dell'informazione, i browser, navigare sul web) alle [trasmissioni televisive](https://www.youtube.com/watch?v=SzQLI7BxfYI). Il Web3 non è difficile, ma è diverso. Le iniziative di formazione per informare gli utenti del Web2 su questi paradigmi del Web3 sono vitali per il suo successo.
 
-Ethereum.org contribuisce alla formazione sul Web3 attraverso il nostro [Programma di Traduzione](/contributing/translation-program/), con l'obiettivo di tradurre importanti contenuti di Ethereum nel maggior numero possibile di lingue.
+Ethereum.org ha contribuito alla formazione sul Web3 attraverso il suo [Programma di Traduzione](/contributing/translation-program/), che ha reso disponibili importanti contenuti su Ethereum in dozzine di lingue.
 
 ### Infrastruttura centralizzata {#centralized-infrastructure}
 

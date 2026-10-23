@@ -62,6 +62,7 @@
   "page-privacy-default-description-1": "事情不必如此。我們有可能建立<strong>預設保護隱私</strong>的系統，其設計讓人們不必隨時隨地建立、監控和保護自己的隱私。這種技術就像一個避難所：無需許可，且每個人都能觸及。",
   "page-privacy-default-description-2": "<strong>這正是以太坊存在的部分原因。</strong>需要澄清的是，這是一項艱鉅且尚未完成的工作。以太坊在設計上是一個公開透明的帳本，這本身就是一個隱私挑戰；為了解決這個問題，以太坊積極的隱私路線圖正將網路過渡到預設保護隱私的架構。如今，以太坊是零知識證明等先進隱私保護技術的發源地，這些技術讓您能在不洩露底層資料的情況下證明某件事是真實的。",
   "page-privacy-default-description-3": "<strong>一個不同的未來是可能的</strong>，在那個未來，隱私是內建的，保護隱私不再需要費力抗爭。",
+  "page-privacy-default-cta": "探索隱私路線圖",
   "page-privacy-getting-started-title": "開始使用",
   "page-privacy-getting-started-description-1": "開始在線上保護您的隱私非常簡單。您可以透過將日常應用程式切換為保護隱私的替代方案，來確保個人資料的安全。",
   "page-privacy-getting-started-description-2": "以太坊驅動了眾多工具，讓您能安全地驗證數位身分、進行不記名投票、機密地協調等。",

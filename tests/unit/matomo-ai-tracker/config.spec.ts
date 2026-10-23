@@ -23,10 +23,10 @@ test.describe("getConfig", () => {
       /(?:ChatGPT-User|MistralAI-User|Gemini-Deep-Research|Claude-User|Perplexity-User|Google-NotebookLM)/i
     )
     expect(config.urlExcludeRegex).toEqual(
-      /^[^?]+\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm|txt)(?:\?|$)/i
+      /^[^?]+\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm)(?:\?|$)/i
     )
     expect(config.documentRegex).toEqual(
-      /^[^?]+\.(?:pdf|docx?|xlsx?|pptx?|csv|json|txt|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\?|$)/i
+      /^[^?]+\.(?:pdf|docx?|xlsx?|pptx?|csv|json|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\?|$)/i
     )
   })
 
@@ -81,6 +81,25 @@ test.describe("getConfig", () => {
     expect(() => getConfig({ ...baseEnv, HTTP_METHOD_ALLOWLIST: "," })).toThrow(
       /HTTP_METHOD_ALLOWLIST must include at least one method/
     )
+  })
+
+  test("falls back to NEXT_PUBLIC_* vars when unprefixed are absent", () => {
+    const config = getConfig({
+      NEXT_PUBLIC_MATOMO_URL: "https://public.example.com",
+      NEXT_PUBLIC_MATOMO_SITE_ID: "5",
+    })
+    expect(config.matomoUrl).toBe("https://public.example.com")
+    expect(config.matomoSiteId).toBe(5)
+  })
+
+  test("unprefixed vars override NEXT_PUBLIC_* vars", () => {
+    const config = getConfig({
+      ...baseEnv,
+      NEXT_PUBLIC_MATOMO_URL: "https://public.example.com",
+      NEXT_PUBLIC_MATOMO_SITE_ID: "5",
+    })
+    expect(config.matomoUrl).toBe(baseEnv.MATOMO_URL)
+    expect(config.matomoSiteId).toBe(42)
   })
 
   test("throws when MATOMO_URL is missing", () => {

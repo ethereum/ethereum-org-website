@@ -1,7 +1,7 @@
 ---
-title: イーサリアムのエネルギー消費量
-metaTitle: イーサリアムのエネルギー消費量
-description: イーサリアムのエネルギー消費量を理解するために必要な基本情報。
+title: "イーサリアムのエネルギー消費量"
+metaTitle: "イーサリアムのエネルギー消費量"
+description: "イーサリアムのエネルギー消費量を理解するために必要な基本情報。"
 lang: ja
 ---
 
@@ -83,3 +83,5 @@ CCRIは、マージによってイーサリアムの年換算電力消費量が*
 
 - [ビーコン・チェーン](/roadmap/beacon-chain)
 - [マージ](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

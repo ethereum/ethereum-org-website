@@ -2,6 +2,7 @@
 title: Tách biệt người đề xuất và người xây dựng
 description: Tìm hiểu cách thức và lý do tại sao các trình xác thực Ethereum sẽ chia tách trách nhiệm tạo khối và phát sóng khối của họ.
 lang: vi
+template: roadmap
 ---
 
 Các trình xác thực [Ethereum](/) hiện nay tạo _và_ phát sóng các khối. Họ gom các giao dịch mà họ đã nhận được thông qua mạng lưới gossip và đóng gói chúng thành một khối được gửi đến các node ngang hàng trên mạng lưới Ethereum. **Tách biệt người đề xuất và người xây dựng (PBS)** chia các nhiệm vụ này cho nhiều trình xác thực. Các trình tạo block chịu trách nhiệm tạo các khối và cung cấp chúng cho người đề xuất khối trong mỗi khe. Người đề xuất khối không thể nhìn thấy nội dung của khối, họ chỉ đơn giản là chọn khối có lợi nhuận cao nhất, nhận một khoản phí từ trình tạo block (hoặc trình xây dựng trả một khoản giá thầu cho người đề xuất) trước khi gửi khối đến các node ngang hàng của mình.

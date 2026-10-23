@@ -12,6 +12,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { getIdFromHash } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -61,11 +62,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const getId = (input: string) => {
-    const parts = input.split("#")
-    return parts.length > 1 ? parts[1] : ""
-  }
-
   return (
     <>
       <PageJsonLD
@@ -77,10 +73,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "ethereum-history-founder-and-ownership",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "ethereum-history-founder-and-ownership" }}
             heroImg={heroImg}
             title={t("page-ethereum-history-founder-and-ownership-title")}
             description={t(
@@ -93,7 +86,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         variant="narrow"
       >
-        <Section id={getId(tocItems[0].url)}>
+        <Section id={getIdFromHash(tocItems[0].url)}>
           <p>
             {t.rich(
               "page-ethereum-history-founder-and-ownership-who-founded-ethereum-description-1",
@@ -104,7 +97,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section id={getId(tocItems[1].url)}>
+        <Section id={getIdFromHash(tocItems[1].url)}>
           <h2>{tocItems[1].title}</h2>
           <p>
             {t.rich(
@@ -241,14 +234,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
-        <Section aria-labelledby={getId(tocItems[2].url)}>
+        <Section aria-labelledby={getIdFromHash(tocItems[2].url)}>
           <Image
             src={EthereumOrgLogo}
             alt=""
             sizes="128px"
             className="mx-auto max-w-32"
           />
-          <h2 id={getId(tocItems[2].url)}>{tocItems[2].title}</h2>
+          <h2 id={getIdFromHash(tocItems[2].url)}>{tocItems[2].title}</h2>
           <p>
             {t(
               "page-ethereum-history-founder-and-ownership-when-did-ethereum-launch-description-1"
@@ -349,7 +342,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </Section>
 
-        <Section id={getId(tocItems[3].url)}>
+        <Section id={getIdFromHash(tocItems[3].url)}>
           <h2>{tocItems[3].title}</h2>
           <p>
             {t.rich(
@@ -488,7 +481,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           />
         </Section>
 
-        <Section id={getId(tocItems[4].url)}>
+        <Section id={getIdFromHash(tocItems[4].url)}>
           <h2>{tocItems[4].title}</h2>
           <p>
             {t.rich(

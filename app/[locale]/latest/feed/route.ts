@@ -1,8 +1,11 @@
 import type { NextRequest } from "next/server"
 import { getTranslations } from "next-intl/server"
 
+import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getFullUrl } from "@/lib/utils/url"
+
+import { SITE_URL } from "@/lib/constants"
 
 export const dynamic = "force-static"
 
@@ -16,6 +19,27 @@ const XML_ESCAPE: Record<string, string> = {
 
 const escapeXml = (value: string): string =>
   value.replace(/[&<>"']/g, (c) => XML_ESCAPE[c])
+
+const IMAGE_MIME_TYPES: Record<string, string> = {
+  ".avif": "image/avif",
+  ".gif": "image/gif",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+  ".webp": "image/webp",
+}
+
+const getImageUrl = (path: string): string => new URL(path, SITE_URL).href
+
+// Undefined for unrecognized extensions: `medium="image"` already conveys the
+// class, and a guessed MIME type is worse than an absent one.
+const getImageMimeType = (path: string): string | undefined => {
+  const pathname = new URL(path, SITE_URL).pathname.toLowerCase()
+  const extension = pathname.match(/\.[^.]+$/)?.[0] ?? ""
+
+  return IMAGE_MIME_TYPES[extension]
+}
 
 export async function GET(
   _: NextRequest,
@@ -45,6 +69,11 @@ export async function GET(
       const categories = (post.tags ?? [])
         .map((tag) => `<category>${escapeXml(tag)}</category>`)
         .join("")
+      const imageSrc = post.image ?? getBlogFallbackHero(post.href).src
+      const imageUrl = getImageUrl(imageSrc)
+      const imageType = getImageMimeType(imageSrc)
+      const imageTypeAttr = imageType ? ` type="${imageType}"` : ""
+
       return [
         "<item>",
         `<title>${escapeXml(post.title)}</title>`,
@@ -54,6 +83,8 @@ export async function GET(
         creator,
         `<pubDate>${pubDate}</pubDate>`,
         categories,
+        `<media:content url="${escapeXml(imageUrl)}" medium="image"${imageTypeAttr} />`,
+        `<media:thumbnail url="${escapeXml(imageUrl)}" />`,
         "</item>",
       ].join("")
     })
@@ -62,7 +93,7 @@ export async function GET(
   const lastBuildDate = new Date().toUTCString()
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">',
     "<channel>",
     `<title>${escapeXml(channelTitle)}</title>`,
     `<link>${channelLink}</link>`,

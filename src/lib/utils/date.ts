@@ -1,5 +1,8 @@
+import type { PartialDate } from "@/data/upgrades/types"
+
 import { DEFAULT_LOCALE } from "../constants"
-import type { Lang } from "../types"
+
+import { normalizeIntlSpaces } from "./intl"
 
 /**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
@@ -31,19 +34,12 @@ export function dateTimeFormat(
   return new Intl.DateTimeFormat(locale, finalOptions)
 }
 
-const normalizeDateTimeWhitespace = (value: string): string =>
-  value.replace(/\s+/g, " ")
-
-/**
- * Format a date with deterministic whitespace across server and browser ICU
- * implementations, preventing byte-level React hydration mismatches.
- */
+// Use instead of `dateTimeFormat(...).format()` for rendered output; see `normalizeIntlSpaces`.
 export const formatDateTime = (
   locale: string,
   date: Date | number,
   options?: Intl.DateTimeFormatOptions
-): string =>
-  normalizeDateTimeWhitespace(dateTimeFormat(locale, options).format(date))
+): string => normalizeIntlSpaces(dateTimeFormat(locale, options).format(date))
 
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
@@ -78,6 +74,7 @@ export const formatDate = (
     return ""
   }
   return formatDateTime(locale, new Date(date), {
+    timeZone: "UTC",
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -85,10 +82,34 @@ export const formatDate = (
   })
 }
 
-export const isDateReached = (date: string) => {
-  const today = new Date()
-  const threshold = new Date(date)
-  return threshold >= today
+/**
+ * Format a {@link PartialDate} at whatever precision it carries: a year, a
+ * quarter, a month and year, or a full date. Used by the upgrade data layer,
+ * where a date is only ever as precise as its source.
+ *
+ * Built through `dateTimeFormat` so Arabic and Urdu get the right numbering
+ * system, and pinned to UTC so a `{ year, month, day }` never renders as the
+ * previous day for viewers behind UTC.
+ *
+ * Quarters can't go through `Intl` — there is no quarter skeleton, and "Q4
+ * 2026" is written very differently across locales — so the caller passes a
+ * `formatQuarter` that renders a translated pattern. It is required rather than
+ * optional so a quarter date can never silently degrade to just its year.
+ */
+export const formatPartialDate = (
+  { year, quarter, month, day }: PartialDate,
+  locale: string = DEFAULT_LOCALE,
+  formatQuarter: (quarter: number, year: number) => string
+) => {
+  if (quarter) return formatQuarter(quarter, year)
+
+  const date = new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1))
+  return formatDateTime(locale, date, {
+    timeZone: "UTC",
+    year: "numeric",
+    ...(month && { month: "long" }),
+    ...(day && { day: "numeric" }),
+  })
 }
 
 export const formatDateRange = (
@@ -97,13 +118,34 @@ export const formatDateRange = (
   locale: string = DEFAULT_LOCALE,
   options?: Intl.DateTimeFormatOptions
 ) =>
-  normalizeDateTimeWhitespace(
+  normalizeIntlSpaces(
     dateTimeFormat(locale, {
+      timeZone: "UTC",
       month: "short",
       day: "numeric",
       ...options,
     }).formatRange(new Date(start), new Date(end || start))
   )
+
+/**
+ * Date range split into parts so callers can style them individually (e.g. a
+ * lighter year), instead of hand-assembling the string -- which would hard-code
+ * English part order. Whitespace is normalized as in `formatDateRange`.
+ */
+export const formatDateRangeToParts = (
+  start: Date | string,
+  end: Date | string,
+  locale: string = DEFAULT_LOCALE,
+  options?: Intl.DateTimeFormatOptions
+) =>
+  dateTimeFormat(locale, {
+    timeZone: "UTC",
+    month: "short",
+    day: "numeric",
+    ...options,
+  })
+    .formatRangeToParts(new Date(start), new Date(end))
+    .map(({ type, value }) => ({ type, value: normalizeIntlSpaces(value) }))
 
 export const getLocaleYear = (
   locale: string = "en-US",
@@ -112,11 +154,6 @@ export const getLocaleYear = (
   formatDateTime(locale, date ? new Date(date) : new Date(), {
     year: "numeric",
   })
-
-export const getLocaleFormattedDate = (locale: Lang, date: string) => {
-  const walletLastUpdatedDate = new Date(date)
-  return formatDateTime(locale, walletLastUpdatedDate)
-}
 
 /**
  * Get ISO week number for a given date
@@ -143,7 +180,10 @@ export const getWeekNumber = (date: Date): number => {
  * @returns Day of year (1-365 or 1-366 for leap years)
  */
 export const getDayOfYear = (date: Date): number => {
-  const start = new Date(date.getFullYear(), 0, 0)
-  const diff = date.getTime() - start.getTime()
-  return Math.floor(diff / 86400000)
+  // Differences are taken in UTC so a DST shift between January and `date`
+  // cannot move the result to the neighbouring day, the same way
+  // getWeekNumber normalizes.
+  const start = Date.UTC(date.getFullYear(), 0, 0)
+  const current = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+  return Math.round((current - start) / 86400000)
 }

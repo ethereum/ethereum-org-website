@@ -69,7 +69,7 @@ Użytkownicy używają natywnego tokena [ERC-20](/glossary/#erc-20) platformy, $
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) to „wystarczająco zdecentralizowana” sieć społecznościowa podobna do X i Reddit, która pozwala użytkownikom udostępniać i odkrywać „casty”. Jest zbudowana na sieci warstwy 2 (L2) Optimism, aby utrzymać stosunkowo niskie koszty transakcji.
+[Farcaster](https://farcaster.xyz/) to „wystarczająco zdecentralizowana” sieć społecznościowa podobna do X i Reddita, która pozwala użytkownikom udostępniać i odkrywać „casty”. Została zbudowana na sieci L2 Optimism, aby transakcje były stosunkowo tanie.
 
 ## Korzystaj ze zdecentralizowanych sieci społecznościowych {#use-decentralized-social-networks}
 

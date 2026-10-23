@@ -19,7 +19,7 @@ import { PASSING_QUIZ_SCORE } from "@/lib/constants"
 
 import { getNextQuiz } from "../utils"
 
-import { QuizWidgetProps } from "."
+import type { QuizWidgetProps } from "./QuizWidgetClient"
 
 export type AnswerStatus = "correct" | "incorrect" | null
 

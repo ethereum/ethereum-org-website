@@ -2,6 +2,7 @@
 title: Zustandslosigkeit, Zustandsablauf und Historienverfall
 description: "Erklärung von Historienverfall und zustandslosem Ethereum"
 lang: de
+template: roadmap
 ---
 
 Die Fähigkeit, [Ethereum](/)-Knoten auf bescheidener Hardware auszuführen, ist entscheidend für echte Dezentralisierung. Das liegt daran, dass der Betrieb eines Knotens den Benutzern die Möglichkeit gibt, Informationen durch unabhängige kryptographische Prüfungen zu verifizieren, anstatt darauf zu vertrauen, dass eine dritte Partei ihnen Daten liefert. Der Betrieb eines Knotens ermöglicht es Benutzern, Transaktionen direkt an das Peer-to-Peer-Netzwerk von Ethereum zu senden, anstatt einem Vermittler vertrauen zu müssen. Dezentralisierung ist nicht möglich, wenn diese Vorteile nur Benutzern mit teurer Hardware zur Verfügung stehen. Stattdessen sollten Knoten mit extrem geringen Anforderungen an Rechenleistung und Speicher laufen können, sodass sie auf Mobiltelefonen, Mikrocomputern oder unbemerkt auf einem Heimcomputer ausgeführt werden können.

@@ -2,6 +2,7 @@
 title: Assenza di stato, scadenza dello stato e scadenza della cronologia
 description: Spiegazione della scadenza della cronologia e dell'Ethereum senza stato
 lang: it
+template: roadmap
 ---
 
 La capacità di eseguire nodi di [Ethereum](/) su hardware modesto è fondamentale per una vera decentralizzazione. Questo perché l'esecuzione di un nodo offre agli utenti la capacità di verificare le informazioni eseguendo controlli crittografici in modo indipendente, piuttosto che fidarsi di una terza parte che fornisca loro i dati. L'esecuzione di un nodo consente agli utenti di inviare transazioni direttamente alla rete peer-to-peer di Ethereum, piuttosto che doversi fidare di un intermediario. La decentralizzazione non è possibile se questi vantaggi sono disponibili solo per gli utenti con hardware costoso. Invece, i nodi dovrebbero poter essere eseguiti con requisiti di elaborazione e memoria estremamente modesti, in modo da poter funzionare su telefoni cellulari, microcomputer o in modo impercettibile su un computer di casa.

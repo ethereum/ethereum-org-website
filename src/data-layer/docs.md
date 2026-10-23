@@ -9,8 +9,8 @@ src/data-layer/
 ├── fetchers/         # Fetch functions (one per data source)
 ├── mocks/            # Mock JSON files for local development
 ├── index.ts          # Public API - typed getter functions
-├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
-├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
+├── tasks.ts          # Trigger.dev scheduled tasks
+├── storage.ts        # KEYS constant + get/set (Netlify Blobs or mock files)
 └── s3.ts             # S3 image upload utility for external images
 
 src/lib/data/
@@ -36,7 +36,7 @@ All transformations belong in the fetcher (`/fetchers`).
 
 ### 2. KEYS is the single source of truth
 
-All storage keys are defined in `KEYS` in `tasks.ts`. The getter in `index.ts` and the task tuple in `DAILY`/`HOURLY` must use the same key.
+All storage keys are defined in `KEYS` in `storage.ts`. The getter in `index.ts` and the task tuple in `DAILY`/`HOURLY` must use the same key.
 
 ### 3. Use `@/lib/data` for caching
 
@@ -59,7 +59,7 @@ Fetchers run on Trigger.dev — a separate runtime from the Next.js app — and 
 
 1. **Create fetcher** in `src/data-layer/fetchers/fetchNewData.ts`
 2. **Add type** to `src/lib/types.ts` (if needed)
-3. **Add key** to `KEYS` in `tasks.ts`
+3. **Add key** to `KEYS` in `storage.ts`
 4. **Add task tuple** to `DAILY` or `HOURLY` in `tasks.ts`
 5. **Add getter** in `src/data-layer/index.ts`
 6. **Add mock file** at `src/data-layer/mocks/{key}.json` for local development

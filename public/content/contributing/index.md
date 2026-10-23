@@ -12,7 +12,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 ## Ways to contribute {#ways-to-contribute}
 
 **Translations**
-- [Join the translation program](/contributing/translation-program/) – Help us bring ethereum.org to new languages
+- [Report a translation error](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – The [Translation Program](/contributing/translation-program/) is winding down and no longer onboarding new translators
 
 **Development**
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) – Work we've identified that needs doing
@@ -43,7 +43,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
 - [Add a resource](/contributing/adding-resources/) – Add a useful resource to any relevant page
 
-Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
+Any questions? 🤔 Join our [Discord server](/discord/)
 
 ## Good first tasks to start contributing {#good-first-tasks-to-start-contributing}
 
@@ -55,14 +55,14 @@ These are few current tasks that you could help us solve and take responsibility
 
 ## How to work on ethereum.org {#how-to-update-content}
 
-If you wish to contribute in the [Translation Program](/contributing/translation-program/), we ask you to create an account on [Crowdin](https://crowdin.com/project/ethereum-org). For everything else – adding or editing content or visuals to the website, fixing bugs, working on open tasks – you will need a [GitHub](https://github.com/) account.
+For contributing (adding or editing content or visuals to the website, fixing bugs, working on open tasks) you will need a [GitHub](https://github.com/) account.
 
 All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaging on our [Discord server](https://discord.gg/ethereum-org)
+- Messaging on our [Discord server](/discord/)
 
 Before contributing, make sure you're familiar with:
 
@@ -77,7 +77,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord server](https://discord.gg/ethereum-org)
+- [Discord server](/discord/)
 
 ### A note on plagiarism {#plagiarism}
 
@@ -94,7 +94,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 [More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### How to claim {#how-to-claim}
-1. Join our [Discord server](https://discord.gg/ethereum-org).
+1. Join our [Discord server](/discord/).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
 4. Claim your OAT!

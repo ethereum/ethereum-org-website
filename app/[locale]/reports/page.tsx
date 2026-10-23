@@ -59,7 +59,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        breadcrumbs={{ slug: "research/reports", startDepth: 1 }}
+        breadcrumbs={{ slug: "reports" }}
         heroImg={heroImg}
         title={t("page-reports-title")}
         description={t("page-reports-description")}
@@ -87,6 +87,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardBanner
                       size="full"
                       fit="contain"
+                      zoom
                       className="aspect-[1/calc(sqrt(2))]" // Force A0 paper ratio
                     >
                       <Image

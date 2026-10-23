@@ -209,7 +209,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Access to 50+ blockchain nodes
 
 - [**Infura**](https://infura.io/)
-  - [Docs](https://infura.io/docs)
+  - [Docs](https://docs.infura.io/)
   - Features
     - Free tier option
     - Scale as you go
@@ -276,7 +276,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - 23 EVM chains including Ethereum, Base, Arbitrum One & Nova, Optimism, Linea, and Unichain
     - 5 regions (Europe, UK, Asia, US-East, US-West) with automatic failover to nearest healthy node
-    - Free public endpoint (no API key) + free plan with 3M compute units/month
+    - Free public endpoint (no API key) + free plan with 2M compute units/month
     - Compute Unit billing — pay only for what you use, heavier calls cost more
     - No throttling on paid plans
 
@@ -422,5 +422,4 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 ## Related tutorials {#related-tutorials}
 
-- [Getting started with Ethereum development using Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

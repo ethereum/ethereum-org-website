@@ -2,6 +2,7 @@
 title: Trừu tượng hóa tài khoản
 description: Tổng quan về các kế hoạch của Ethereum nhằm làm cho tài khoản người dùng trở nên đơn giản và an toàn hơn
 lang: vi
+template: roadmap
 summaryPoints:
   - Trừu tượng hóa tài khoản giúp việc xây dựng các ví hợp đồng thông minh trở nên dễ dàng hơn nhiều
   - Các ví hợp đồng thông minh giúp việc quản lý quyền truy cập vào các tài khoản Ethereum trở nên dễ dàng hơn nhiều

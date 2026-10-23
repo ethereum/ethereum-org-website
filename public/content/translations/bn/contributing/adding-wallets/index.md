@@ -1,6 +1,6 @@
 ---
-title: ওয়ালেট যোগ করা
-description: ethereum.org-এ কোনো ওয়ালেট যোগ করার সময় আমরা যে নীতি ব্যবহার করি
+title: "ওয়ালেট যোগ করা"
+description: "ethereum.org-এ কোনো ওয়ালেট যোগ করার সময় আমরা যে নীতি ব্যবহার করি"
 lang: bn
 ---
 
@@ -58,7 +58,7 @@ lang: bn
 
 ## একটি ওয়ালেট যোগ করা {#adding-a-wallet}
 
-আপনি যদি ethereum.org-এ একটি ওয়ালেট যোগ করতে চান, তবে GitHub-এ একটি ইস্যু তৈরি করুন।
+আপনি যদি ethereum.org-এ একটি ওয়ালেট যোগ করতে চান, তাহলে GitHub-এ একটি ইস্যু তৈরি করুন। ইস্যুতে আপনি ওয়ালেটের যে বিবরণ দেবেন তা ওয়ালেটের পৃষ্ঠায় দেখানো হবে, তাই এটিকে এক বা দুটি তথ্যভিত্তিক বাক্যের মধ্যে সীমাবদ্ধ রাখুন।
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   একটি ইস্যু তৈরি করুন

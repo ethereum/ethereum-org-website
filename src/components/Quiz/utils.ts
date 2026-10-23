@@ -1,21 +1,9 @@
-import type {
-  CompletedQuizzes,
-  QuizShareStats,
-  QuizzesSection,
-} from "@/lib/types"
+import type { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
-import { numberFormat } from "@/lib/utils/numbers"
+import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
-import allQuizzesData, {
-  ethereumBasicsQuizzes,
-  usingEthereumQuizzes,
-} from "@/data/quizzes"
-
-import {
-  TOTAL_QUIZ_AVERAGE_SCORE,
-  TOTAL_QUIZ_QUESTIONS_ANSWERED,
-  TOTAL_QUIZ_RETRY_RATE,
-} from "@/lib/constants"
+import allQuizzesData, { allQuizzesInOrder } from "@/data/quizzes"
+import type { QuizStatsData } from "@/data-layer/fetchers/fetchQuizStats"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -30,8 +18,7 @@ export const getNumberOfCompletedQuizzes = (quizzes: CompletedQuizzes) =>
     .filter((v) => v).length
 
 export const getNextQuiz = (currentQuiz?: string) => {
-  const allQuizzes = [...ethereumBasicsQuizzes, ...usingEthereumQuizzes]
-  const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
+  const nextQuiz = allQuizzesInOrder.find((quiz) => quiz.id === currentQuiz)
 
   return nextQuiz ? nextQuiz.next : undefined
 }
@@ -53,45 +40,32 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
   )
 }
 
+// These are averages over large samples; more precision than this is noise.
+const PERCENT_OPTIONS: Intl.NumberFormatOptions = { maximumFractionDigits: 1 }
+
+// Values arrive as 0-100, not 0-1.
+const asPercent = (value: number, locale: string) =>
+  numberToPercent(value / 100, locale, PERCENT_OPTIONS)
+
 const mean = (values: number[]) =>
   values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
 
-export const getFormattedStats = (locale: string, valueSet: number[]) => {
-  // Initialize number and percent formatters
-  const numberFormatter = numberFormat(locale, {
-    style: "decimal",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
+export const getFormattedUserAverageScore = (
+  locale: string,
+  valueSet: number[]
+) => asPercent(mean(valueSet), locale)
 
-  const percentFormatter = numberFormat(locale, {
-    style: "percent",
-    minimumSignificantDigits: 1,
-    maximumSignificantDigits: 3,
-  })
-
-  const computedAverage = valueSet.length > 0 ? mean(valueSet) : 0
-
-  // Convert collective stats to fraction for percentage format
-  const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100
-  const normalizedCollectiveRetryRate = TOTAL_QUIZ_RETRY_RATE / 100
-
-  return {
-    formattedUserAverageScore: percentFormatter.format(computedAverage / 100), // Normalize user average
-    formattedCollectiveQuestionsAnswered: numberFormatter.format(
-      TOTAL_QUIZ_QUESTIONS_ANSWERED
-    ),
-    formattedCollectiveAverageScore: percentFormatter.format(
-      normalizedCollectiveAverageScore
-    ),
-    formattedCollectiveRetryRate: percentFormatter.format(
-      normalizedCollectiveRetryRate
-    ),
-  }
-}
-
-export const addNextQuiz = (quizzes: QuizzesSection[]) =>
-  quizzes.map((quiz, idx) => ({
-    ...quiz,
-    next: quizzes[idx + 1]?.id,
-  }))
+/** Label/value rows for the community stats panel, in display order. */
+export const getCommunityStatRows = (
+  locale: string,
+  { averageScore, questionsAnswered, retryRate }: QuizStatsData
+) => [
+  { labelId: "average-score", value: asPercent(averageScore, locale) },
+  {
+    labelId: "questions-answered",
+    // Exact, since these come from a daily Matomo fetch: rounding made the old
+    // hard-coded figures read as invented.
+    value: numberFormat(locale, { style: "decimal" }).format(questionsAnswered),
+  },
+  { labelId: "retry", value: asPercent(retryRate, locale) },
+]

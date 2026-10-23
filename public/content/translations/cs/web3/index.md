@@ -128,9 +128,9 @@ Technická bariéra vstupu pro používání Web3 je v současné době příli�
 
 ### Vzdělávání {#education}
 
-Web3 představuje nová paradigmata, která vyžadují osvojení si jiných mentálních modelů, než jaké se používají ve Web 2.0. Podobná vzdělávací kampaň proběhla, když Web 1.0 získával na popularitě na konci 90. let; zastánci World Wide Webu používali řadu vzdělávacích technik ke vzdělávání veřejnosti, od jednoduchých metafor (informační dálnice, prohlížeče, surfování po webu) až po [televizní vysílání](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 není těžký, ale je jiný. Vzdělávací iniciativy informující uživatele Web2 o těchto paradigmatech Web3 jsou pro jeho úspěch zásadní.
+Web3 přináší nová paradigmata, která vyžadují osvojení si jiných mentálních modelů než těch, které se používají ve Web 2.0. Podobná vzdělávací kampaň proběhla, když koncem 90. let získával na popularitě Web 1.0; zastánci World Wide Webu využívali k edukaci veřejnosti řadu vzdělávacích technik, od jednoduchých metafor (informační dálnice, prohlížeče, surfování po webu) až po [televizní vysílání](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 není složitý, ale je jiný. Vzdělávací iniciativy, které informují uživatele Web2 o těchto paradigmatech Web3, jsou pro jeho úspěch naprosto zásadní.
 
-Ethereum.org přispívá ke vzdělávání o Web3 prostřednictvím našeho [překladatelského programu](/contributing/translation-program/), jehož cílem je přeložit důležitý obsah o Ethereu do co nejvíce jazyků.
+Ethereum.org přispělo ke vzdělávání o Web3 prostřednictvím svého [překladatelského programu](/contributing/translation-program/), díky kterému je důležitý obsah o Ethereu dostupný v desítkách jazyků.
 
 ### Centralizovaná infrastruktura {#centralized-infrastructure}
 
