@@ -209,7 +209,7 @@ Ecco un elenco di alcuni dei fornitori di nodi Ethereum più popolari, sentiti l
     - Accesso a oltre 50 nodi blockchain
 
 - [**Infura**](https://infura.io/)
-  - [Documentazione](https://infura.io/docs)
+  - [Documentazione](https://docs.infura.io/)
   - Funzionalità
     - Opzione di livello gratuito
     - Scala in base alle tue esigenze

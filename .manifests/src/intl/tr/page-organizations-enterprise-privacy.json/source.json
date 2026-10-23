@@ -1,0 +1,458 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-enterprise-privacy.json",
+  "generatedAt": "2026-10-14T17:34:35.800Z",
+  "rootHash": "6e3feb7405dd",
+  "tree": {
+    "contentHash": "26269baa3f1d",
+    "anchorHash": "d9bae2eb7630",
+    "children": {
+      "page-organizations-enterprise-privacy-compare-col-cryptographic": {
+        "contentHash": "41eb99bcad46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-col-trust": {
+        "contentHash": "49e506092618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-description": {
+        "contentHash": "c5bb5dd32805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-icon-positive": {
+        "contentHash": "cf727514a68a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-icon-warning": {
+        "contentHash": "8a21249d29d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-guarantee": {
+        "contentHash": "c0787c14a0c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-guarantee-cryptographic": {
+        "contentHash": "1dfc3a414088",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-guarantee-trust": {
+        "contentHash": "c7c6a83fbea8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-incentives": {
+        "contentHash": "51485fc586ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-incentives-cryptographic": {
+        "contentHash": "ff3401c22f30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-incentives-trust": {
+        "contentHash": "898d9d290cc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-mechanism": {
+        "contentHash": "3489a4c81c34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-mechanism-cryptographic": {
+        "contentHash": "fddd44872bfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-mechanism-trust": {
+        "contentHash": "10e23ac28bf3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-regulatory": {
+        "contentHash": "485478a87a95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-regulatory-cryptographic": {
+        "contentHash": "65ff64cfce4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-regulatory-trust": {
+        "contentHash": "4300185a0358",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-vendor": {
+        "contentHash": "3bf7af4024aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-vendor-cryptographic": {
+        "contentHash": "9b3bc99ae05d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-row-vendor-trust": {
+        "contentHash": "39a44ca09b41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compare-title": {
+        "contentHash": "6d6026503785",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-composable-description": {
+        "contentHash": "41ab96a3b417",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-composable-title": {
+        "contentHash": "d0a6d0d110e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-credentials-description": {
+        "contentHash": "b670d36fb4cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-credentials-title": {
+        "contentHash": "1dcbfabda4b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-description": {
+        "contentHash": "916eee3d8ada",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-selective-disclosure-description": {
+        "contentHash": "f7d1ad475e78",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-selective-disclosure-title": {
+        "contentHash": "fa3631e6b978",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-compliance-title": {
+        "contentHash": "83368a3d1ed5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-experts-cta": {
+        "contentHash": "115e410f01dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-experts-description": {
+        "contentHash": "b74ffa51ad58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-experts-ethsystems-description": {
+        "contentHash": "0b8c88ba4d83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-experts-title": {
+        "contentHash": "a5ca4c21d4f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-hero-description-1": {
+        "contentHash": "0c305b8e3bd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-hero-description-2": {
+        "contentHash": "daee58926e4e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-hero-title": {
+        "contentHash": "3d911311ed83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-meta-description": {
+        "contentHash": "6fdcb8d84f4c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-meta-title": {
+        "contentHash": "3f4e3be11412",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-abstractions-description": {
+        "contentHash": "42b8ea498a31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-abstractions-title": {
+        "contentHash": "949073ec744f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-auditability-description": {
+        "contentHash": "c50864193c8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-auditability-title": {
+        "contentHash": "f0cd69f60714",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-description": {
+        "contentHash": "b28ace70c1e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-fragility-description": {
+        "contentHash": "eda3a6c8ce94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-fragility-title": {
+        "contentHash": "b6cd329322a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-instability-description": {
+        "contentHash": "0888eb793882",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-instability-title": {
+        "contentHash": "c7c9a5ae9fab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-interoperability-description": {
+        "contentHash": "7fbae3ec5aac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-interoperability-title": {
+        "contentHash": "be190799e51f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-offchain-description": {
+        "contentHash": "33bc459c9357",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-offchain-title": {
+        "contentHash": "a46eedff8fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-talent-description": {
+        "contentHash": "c3f454226cf4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-talent-title": {
+        "contentHash": "821d22869c28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-title": {
+        "contentHash": "6c7b84e2ac03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-vendor-description": {
+        "contentHash": "dfc09a9d57bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-problems-vendor-title": {
+        "contentHash": "b27b234fa114",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-description": {
+        "contentHash": "c182c4614786",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-examples-label": {
+        "contentHash": "e68ee04dff59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-pools-description": {
+        "contentHash": "99d2f7a38fbf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-pools-title": {
+        "contentHash": "c3ffadb1f1ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-prividium-description": {
+        "contentHash": "77c65ec4e532",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-prividium-title": {
+        "contentHash": "3c7c256f1cc8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-programmable-description": {
+        "contentHash": "89fc3d7188ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-programmable-title": {
+        "contentHash": "2f4e44a2c9a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-shielded-description": {
+        "contentHash": "5e0346a29c97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-shielded-title": {
+        "contentHash": "7b8b95d977fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-solutions-title": {
+        "contentHash": "e1efd7b8495d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-stat-plus": {
+        "contentHash": "d863150c0f18",
+        "anchorHash": "7d651101a50c",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9307b2fa1323"
+          },
+          "prose:1": {
+            "contentHash": "a318c24216de",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-organizations-enterprise-privacy-stat-teams": {
+        "contentHash": "4d3549cdfd20",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-stat-value-secured": {
+        "contentHash": "2ec852d76670",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-stat-years": {
+        "contentHash": "d85a2551f9ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-censorship-description": {
+        "contentHash": "fa1e745b5202",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-censorship-title": {
+        "contentHash": "cae4d9818fc9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-counterparty-description": {
+        "contentHash": "88977ce265a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-counterparty-title": {
+        "contentHash": "1a7a4d65b6f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-description": {
+        "contentHash": "9072926c3fa1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-interoperability-description": {
+        "contentHash": "b3c6aab62d73",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-interoperability-description-tvl": {
+        "contentHash": "1f8f18951597",
+        "anchorHash": "03f71d123f19",
+        "children": {
+          "prose:1": {
+            "contentHash": "dda8ed2e8e60",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "52fa4a020256"
+          },
+          "prose:2": {
+            "contentHash": "cd0f467f5364",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-organizations-enterprise-privacy-why-interoperability-title": {
+        "contentHash": "07d034e7c48f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-resilience-description": {
+        "contentHash": "9559b15b4365",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-resilience-title": {
+        "contentHash": "32059a878895",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-privacy-why-title": {
+        "contentHash": "0a48ed990c57",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-enterprise-privacy-compare-col-cryptographic",
+      "page-organizations-enterprise-privacy-compare-col-trust",
+      "page-organizations-enterprise-privacy-compare-description",
+      "page-organizations-enterprise-privacy-compare-icon-positive",
+      "page-organizations-enterprise-privacy-compare-icon-warning",
+      "page-organizations-enterprise-privacy-compare-row-guarantee",
+      "page-organizations-enterprise-privacy-compare-row-guarantee-cryptographic",
+      "page-organizations-enterprise-privacy-compare-row-guarantee-trust",
+      "page-organizations-enterprise-privacy-compare-row-incentives",
+      "page-organizations-enterprise-privacy-compare-row-incentives-cryptographic",
+      "page-organizations-enterprise-privacy-compare-row-incentives-trust",
+      "page-organizations-enterprise-privacy-compare-row-mechanism",
+      "page-organizations-enterprise-privacy-compare-row-mechanism-cryptographic",
+      "page-organizations-enterprise-privacy-compare-row-mechanism-trust",
+      "page-organizations-enterprise-privacy-compare-row-regulatory",
+      "page-organizations-enterprise-privacy-compare-row-regulatory-cryptographic",
+      "page-organizations-enterprise-privacy-compare-row-regulatory-trust",
+      "page-organizations-enterprise-privacy-compare-row-vendor",
+      "page-organizations-enterprise-privacy-compare-row-vendor-cryptographic",
+      "page-organizations-enterprise-privacy-compare-row-vendor-trust",
+      "page-organizations-enterprise-privacy-compare-title",
+      "page-organizations-enterprise-privacy-compliance-composable-description",
+      "page-organizations-enterprise-privacy-compliance-composable-title",
+      "page-organizations-enterprise-privacy-compliance-credentials-description",
+      "page-organizations-enterprise-privacy-compliance-credentials-title",
+      "page-organizations-enterprise-privacy-compliance-description",
+      "page-organizations-enterprise-privacy-compliance-selective-disclosure-description",
+      "page-organizations-enterprise-privacy-compliance-selective-disclosure-title",
+      "page-organizations-enterprise-privacy-compliance-title",
+      "page-organizations-enterprise-privacy-experts-cta",
+      "page-organizations-enterprise-privacy-experts-description",
+      "page-organizations-enterprise-privacy-experts-ethsystems-description",
+      "page-organizations-enterprise-privacy-experts-title",
+      "page-organizations-enterprise-privacy-hero-description-1",
+      "page-organizations-enterprise-privacy-hero-description-2",
+      "page-organizations-enterprise-privacy-hero-title",
+      "page-organizations-enterprise-privacy-meta-description",
+      "page-organizations-enterprise-privacy-meta-title",
+      "page-organizations-enterprise-privacy-problems-abstractions-description",
+      "page-organizations-enterprise-privacy-problems-abstractions-title",
+      "page-organizations-enterprise-privacy-problems-auditability-description",
+      "page-organizations-enterprise-privacy-problems-auditability-title",
+      "page-organizations-enterprise-privacy-problems-description",
+      "page-organizations-enterprise-privacy-problems-fragility-description",
+      "page-organizations-enterprise-privacy-problems-fragility-title",
+      "page-organizations-enterprise-privacy-problems-instability-description",
+      "page-organizations-enterprise-privacy-problems-instability-title",
+      "page-organizations-enterprise-privacy-problems-interoperability-description",
+      "page-organizations-enterprise-privacy-problems-interoperability-title",
+      "page-organizations-enterprise-privacy-problems-offchain-description",
+      "page-organizations-enterprise-privacy-problems-offchain-title",
+      "page-organizations-enterprise-privacy-problems-talent-description",
+      "page-organizations-enterprise-privacy-problems-talent-title",
+      "page-organizations-enterprise-privacy-problems-title",
+      "page-organizations-enterprise-privacy-problems-vendor-description",
+      "page-organizations-enterprise-privacy-problems-vendor-title",
+      "page-organizations-enterprise-privacy-solutions-description",
+      "page-organizations-enterprise-privacy-solutions-examples-label",
+      "page-organizations-enterprise-privacy-solutions-pools-description",
+      "page-organizations-enterprise-privacy-solutions-pools-title",
+      "page-organizations-enterprise-privacy-solutions-prividium-description",
+      "page-organizations-enterprise-privacy-solutions-prividium-title",
+      "page-organizations-enterprise-privacy-solutions-programmable-description",
+      "page-organizations-enterprise-privacy-solutions-programmable-title",
+      "page-organizations-enterprise-privacy-solutions-shielded-description",
+      "page-organizations-enterprise-privacy-solutions-shielded-title",
+      "page-organizations-enterprise-privacy-solutions-title",
+      "page-organizations-enterprise-privacy-stat-plus",
+      "page-organizations-enterprise-privacy-stat-teams",
+      "page-organizations-enterprise-privacy-stat-value-secured",
+      "page-organizations-enterprise-privacy-stat-years",
+      "page-organizations-enterprise-privacy-why-censorship-description",
+      "page-organizations-enterprise-privacy-why-censorship-title",
+      "page-organizations-enterprise-privacy-why-counterparty-description",
+      "page-organizations-enterprise-privacy-why-counterparty-title",
+      "page-organizations-enterprise-privacy-why-description",
+      "page-organizations-enterprise-privacy-why-interoperability-description",
+      "page-organizations-enterprise-privacy-why-interoperability-description-tvl",
+      "page-organizations-enterprise-privacy-why-interoperability-title",
+      "page-organizations-enterprise-privacy-why-resilience-description",
+      "page-organizations-enterprise-privacy-why-resilience-title",
+      "page-organizations-enterprise-privacy-why-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

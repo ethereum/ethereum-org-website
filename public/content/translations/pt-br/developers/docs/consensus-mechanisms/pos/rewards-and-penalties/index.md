@@ -18,7 +18,7 @@ Continue lendo para mais detalhes...
 
 ### Recompensas {#rewards-2}
 
-Os validadores recebem recompensas quando fazem votos que são consistentes com a maioria dos outros validadores, quando propõem blocos e quando participam de comitês de sincronização. O valor das recompensas em cada época é calculado a partir de uma `base_reward`. Esta é a unidade base a partir da qual outras recompensas são calculadas. A `base_reward` representa a recompensa média recebida por um validador em condições ideais por época. Isso é calculado a partir do saldo efetivo do validador e do número total de validadores ativos da seguinte forma:
+Os validadores recebem recompensas quando fazem votos que são consistentes com a maioria dos outros validadores, quando propõem blocos e quando participam de comitês de sincronização. O valor das recompensas em cada época é calculado a partir de uma `base_reward`. Esta é a unidade base a partir da qual outras recompensas são calculadas. A `base_reward` representa a recompensa média recebida por um validador sob condições ideais por época. Isso é calculado a partir do saldo efetivo do validador e do número total de validadores ativos da seguinte forma:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -30,7 +30,7 @@ Isso significa que a recompensa base é proporcional ao saldo efetivo do validad
 
 A recompensa total é então calculada como a soma de cinco componentes que têm, cada um, um peso que determina o quanto cada componente adiciona à recompensa total. Os componentes são:
 
-```
+```text
 1. voto de origem: o validador fez um voto oportuno para o ponto de verificação de origem correto
 2. voto de destino: o validador fez um voto oportuno para o ponto de verificação de destino correto
 3. voto de topo: o validador fez um voto oportuno para o bloco de topo correto
@@ -50,9 +50,9 @@ PROPOSER_WEIGHT	uint64(8)
 
 Esses pesos somam 64. A recompensa é calculada como a soma dos pesos aplicáveis dividida por 64. Um validador que fez votos oportunos de origem, destino e topo, propôs um bloco e participou de um comitê de sincronização poderia receber `64/64 * base_reward == base_reward`. No entanto, um validador geralmente não é um propositor de bloco, então sua recompensa máxima é `64-8 /64 * base_reward == 7/8 * base_reward`. Validadores que não são propositores de bloco nem estão em um comitê de sincronização podem receber `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Uma recompensa adicional é adicionada para incentivar atestações rápidas. Esta é a `inclusion_delay_reward`. Isso tem um valor igual à `base_reward` multiplicada por `1/delay` onde `delay` é o número de slots que separam a proposta de bloco e a atestação. Por exemplo, se a atestação for enviada dentro de um slot da proposta de bloco, o atestador recebe `base_reward * 1/1 == base_reward`. Se a atestação chegar no próximo slot, o atestador recebe `base_reward * 1/2` e assim por diante.
+Uma recompensa adicional é adicionada para incentivar atestações rápidas. Esta é a `inclusion_delay_reward`. Ela tem um valor igual à `base_reward` multiplicada por `1/delay`, onde `delay` é o número de slots que separam a proposta de bloco e a atestação. Por exemplo, se a atestação for enviada dentro de um slot da proposta de bloco, o atestador recebe `base_reward * 1/1 == base_reward`. Se a atestação chegar no próximo slot, o atestador recebe `base_reward * 1/2` e assim por diante.
 
-Os propositores de bloco recebem `8 / 64 * base_reward` para **cada atestação válida** incluída no bloco, de modo que o valor real da recompensa aumenta com o número de validadores atestadores. Os propositores de bloco também podem aumentar sua recompensa incluindo evidências de mau comportamento de outros validadores em seu bloco proposto. Essas recompensas são as "cenouras" que incentivam a honestidade do validador. Um propositor de bloco que inclui uma penalização será recompensado com a `slashed_validators_effective_balance / 512`.
+Os propositores de bloco recebem `8 / 64 * base_reward` para **cada atestação válida** incluída no bloco, de modo que o valor real da recompensa aumenta com o número de validadores atestadores. Os propositores de bloco também podem aumentar sua recompensa incluindo evidências de mau comportamento de outros validadores em seu bloco proposto. Essas recompensas são os incentivos que encorajam a honestidade do validador. Um propositor de bloco que inclui uma penalização será recompensado com o `slashed_validators_effective_balance / 512`.
 
 ### Penalizações {#penalties}
 

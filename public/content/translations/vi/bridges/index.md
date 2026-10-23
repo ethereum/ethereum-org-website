@@ -1,7 +1,7 @@
 ---
-title: Cầu nối chuỗi khối
-metaTitle: Giới thiệu về cầu nối chuỗi khối
-description: Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau
+title: "Cầu nối chuỗi khối"
+metaTitle: "Giới thiệu về cầu nối chuỗi khối"
+description: "Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau"
 lang: vi
 ---
 
@@ -135,8 +135,11 @@ Cầu nối rất quan trọng đối với việc tiếp nhận người dùng 
 <Divider />
 
 ## Đọc thêm {#further-reading}
+
 - [EIP-5164: Thực thi chuỗi chéo](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 tháng 6, 2022 - Brendan Asselstine_
 - [Khung rủi ro L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 tháng 7, 2022 - Bartek Kiepuszewski_
 - ["Tại sao tương lai sẽ là đa chuỗi, nhưng sẽ không phải là chuỗi chéo."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 tháng 1, 2022 - Vitalik Buterin_
 - [Khai thác bảo mật chia sẻ cho khả năng tương tác chuỗi chéo an toàn: Các ủy ban trạng thái Lagrange và hơn thế nữa](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 tháng 6, 2024 - Emmanuel Awosika_
 - [Trạng thái của các giải pháp khả năng tương tác Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 tháng 6, 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

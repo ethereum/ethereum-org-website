@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: "pnpm"
 
       - name: Install dependencies
@@ -43,7 +43,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_BLOBS_TOKEN: ${{ secrets.NETLIFY_BLOBS_TOKEN }}
-        run: npx tsx src/scripts/syncExternalDescriptions.ts
+        run: pnpm exec tsx src/scripts/syncExternalDescriptions.ts
 
       - name: Check for changes
         id: diff

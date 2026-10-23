@@ -43,8 +43,8 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocksImg from "@/public/images/developers-eth-blocks.png"
+import privacyOnlineHeroImg from "@/public/images/privacy-curtains-woman-cat-computer.png"
 import heroImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
-import walletHeroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
@@ -166,7 +166,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -315,7 +315,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -350,7 +350,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             })}
           </p>
           <Alert variant="update">
-            <AlertIcon className="[&>svg]:size-12">
+            <AlertIcon size="xl">
               <Handshake />
             </AlertIcon>
             <AlertContent>
@@ -432,11 +432,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-privacy-getting-started-description-1")}</p>
           <p>{t("page-privacy-getting-started-description-2")}</p>
           <PathwayCard
-            href="/apps/categories/privacy/"
+            href="/privacy/online/"
             title={t("page-privacy-pathway-1-title")}
             description={t("page-privacy-pathway-1-description")}
             badge={{ label: t("page-privacy-pathway-1-badge") }}
-            banner={<Image src={walletHeroImg} alt="" sizes="160px" />}
+            banner={<Image src={privacyOnlineHeroImg} alt="" sizes="160px" />}
           />
           <PathwayCard
             href="/privacy/ethereum/"

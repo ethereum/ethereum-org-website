@@ -45,7 +45,7 @@ Lies [hier](/roadmap/pectra/maxeb/) eine detaillierte Analyse zu MaxEB
 
 Blobs bieten [Datenverfügbarkeit](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) für L2s. Sie wurden im [vorherigen Netzwerk-Upgrade](/roadmap/dencun/) eingeführt. 
 
-Derzeit zielt das Netzwerk auf durchschnittlich 3 Blobs pro Block mit einem Maximum von 6 Blobs ab. Mit [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) wird die durchschnittliche Blob-Anzahl auf 6 erhöht, mit einem Maximum von 9 pro Block, was zu einer erhöhten Kapazität für Ethereum-Rollups führt. Dieses EIP hilft, die Lücke zu überbrücken, bis [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) noch höhere Blob-Anzahlen ermöglicht.
+Vor Pectra strebte das Netzwerk durchschnittlich 3 Blobs pro Block bei einem Maximum von 6 an. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) erhöhte das Ziel auf 6 und das Maximum auf 9 pro Block, was die Kapazität für Ethereum-Rollups erhöht. Dies diente als Überbrückung bis zu [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), das mit [Fusaka](/roadmap/fusaka/) eingeführt wurde und noch höhere Blob-Anzahlen ermöglicht.
 
 ### Erhöhung der Kosten für Aufrufdaten {#7623}
 

@@ -16,7 +16,7 @@ description: "Інформація про програму перекладу et
 
 Якщо ви помітили помилку в наявному перекладі, будь ласка, [відкрийте issue на GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Приєднуйтесь до [Discord ethereum.org](https://discord.gg/ethereum-org), щоб поставити запитання або поділитися відгуком._
+_Приєднуйтесь до [Discord ethereum.org](/discord/), щоб поставити запитання або поділитися відгуком._
 
 ## Про програму перекладу {#about-us}
 
@@ -63,7 +63,7 @@ Ethereum.org переклали тисячі учасників спільнот
 
 ## Зв'яжіться з нами {#get-in-touch}
 
-Маєте запитання? Або хочете співпрацювати з нашою командою та іншими перекладачами? Будь ласка, напишіть у канал #translations на нашому [сервері Discord ethereum.org](https://discord.gg/ethereum-org)
+Маєте запитання? Або хочете співпрацювати з нашою командою та іншими перекладачами? Будь ласка, напишіть у канал #translations на нашому [сервері Discord ethereum.org](/discord/)
 
 Ви також можете зв'язатися з нами за адресою translations@ethereum.org
 

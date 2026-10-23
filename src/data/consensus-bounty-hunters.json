@@ -1,13 +1,13 @@
 [
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 48000
+  },
+  {
     "username": "protolambda",
     "name": "protolambda",
     "score": 42400
-  },
-  {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 46250
   },
   {
     "username": "cryptosubtlety",
@@ -35,6 +35,16 @@
     "score": 9000
   },
   {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 8000
+  },
+  {
+    "username": "gzeoneth",
+    "name": "gzeon",
+    "score": 8000
+  },
+  {
     "username": "alexfilippov314",
     "name": "alexfilippov314",
     "score": 6000
@@ -48,6 +58,11 @@
     "username": "link-infsec",
     "name": "InfiniteSec",
     "score": 6000
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 5750
   },
   {
     "username": "atoulme",
@@ -68,11 +83,21 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },  
+  },
   {
     "username": "asanso",
     "name": "Antonio Sanso",
     "score": 4000
+  },
+  {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 3500
+  },
+  {
+    "username": "quasar",
+    "name": "Evgeny Legerov",
+    "score": 3250
   },
   {
     "username": "karalabe",
@@ -103,21 +128,36 @@
     "username": "sonny2k",
     "name": "Thanh Luu (sonny2k)",
     "score": 2500
-  },  
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 2500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
+    "score": 2000
+  },
+  {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2500
+  },
   {
     "username": "",
     "name": "Akincibor",
     "score": 1750
   },
   {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
+    "score": 1500
+  },
+  {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
     "score": 1000
-  },
-  {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 2000
   },
   {
     "username": "DragonDev1906",
@@ -135,22 +175,12 @@
     "score": 1000
   },
   {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 1000
-  },
-  {
     "username": "0xfadam",
     "name": "fadam",
     "score": 1000
   },
   {
-    "username": "therealgregoai",
-    "name": "Grego AI",
-    "score": 1000
-  },
-  {
-    "username": "Jeongmin Choi",
+    "username": "",
     "name": "Jeongmin Choi",
     "score": 1000
   },
@@ -160,6 +190,36 @@
     "score": 1000
   },
   {
+    "username": "aydarkhusaenov",
+    "name": "Legat",
+    "score": 1000
+  },
+  {
+    "username": "lgandx",
+    "name": "LAURENT GAFFIE",
+    "score": 1000
+  },
+  {
+    "username": "HackWidMaddy",
+    "name": "Madhav Shah",
+    "score": 1000
+  },
+  {
+    "username": "uShure",
+    "name": "moguchever",
+    "score": 1000
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1000
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
+    "score": 1000
+  }, 
+  {
     "username": "sko94",
     "name": "XDZIBECX",
     "score": 500
@@ -168,6 +228,36 @@
     "username": "cyberthirst",
     "name": "cyberthirst",
     "score": 500
+  },
+  {
+    "username": "trailofbits",
+    "name": "Trail of Bits",
+    "score": 500
+  },
+  {
+    "username": "Stassi99",
+    "name": "Sta",
+    "score": 500
+  }, 
+  {
+    "username": "sujithsomraaj",
+    "name": "sujith",
+    "score": 500
+  },  
+  {
+    "username": "0xSorryNotSorry",
+    "name": "sorryNotsorry",
+    "score": 375
+  },
+  {
+    "username": "arronxd",
+    "name": "Arron5",
+    "score": 250
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 250
   },
   {
     "username": "mcdee",

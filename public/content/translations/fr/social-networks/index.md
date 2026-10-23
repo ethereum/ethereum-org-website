@@ -69,7 +69,7 @@ Les utilisateurs utilisent le jeton [ERC-20](/glossary/#erc-20) natif de la plat
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) est un réseau social « suffisamment décentralisé » similaire à X et Reddit qui permet aux utilisateurs de partager et de découvrir des « casts ». Il est construit sur le réseau L2 Optimism pour maintenir des transactions relativement peu coûteuses.
+[Farcaster](https://farcaster.xyz/) est un réseau social « suffisamment décentralisé » similaire à X et Reddit qui permet aux utilisateurs de partager et de découvrir des « casts ». Il est construit sur le réseau l2 Optimism pour que les transactions restent relativement peu coûteuses.
 
 ## Utiliser les réseaux sociaux décentralisés {#use-decentralized-social-networks}
 

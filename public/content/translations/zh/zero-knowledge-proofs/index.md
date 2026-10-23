@@ -239,3 +239,7 @@ ZK-STARK 被认为不受量子计算威胁的影响，因为它仅依赖抗碰�
 - [为什么零知识证明 (ZKP) 是自我主权身份的游戏规则改变者](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 解释：使用零知识证明在以太坊上实现私密转账](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK 纸牌游戏：学习零知识基础知识和现实生活用例的游戏](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

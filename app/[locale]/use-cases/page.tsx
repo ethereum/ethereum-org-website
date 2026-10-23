@@ -81,6 +81,9 @@ const UseCaseCard = ({
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-use-cases")
 
   const { contributors, lastEditLocaleTimestamp } =
@@ -98,7 +101,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   }))
 
   const heroContent: HubHeroProps = {
-    title: t("hero-title"),
+    breadcrumbs: { slug: "use-cases" },
     header: t("hero-header"),
     description: t("hero-description"),
     heroImg: heroImage,
@@ -181,7 +184,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("prediction-markets-cta")}
             />
             <UseCaseCard
-              href="https://institutions.ethereum.org/"
+              href="/organizations/enterprise/"
               image={restaking}
               title={t("institutions-title")}
               description={t("institutions-description")}

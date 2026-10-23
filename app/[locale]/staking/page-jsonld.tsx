@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -45,23 +46,7 @@ export default async function StakingPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("page-staking-meta-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "staking"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -112,6 +97,28 @@ export default async function StakingPageJsonLD({
           },
           {
             "@type": "Question",
+            name: t("page-staking-faq-6-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-staking-faq-6-answer-p1")} ${t("page-staking-faq-6-answer-p2")}`.replace(
+                /<[^>]*>/g,
+                ""
+              ),
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-staking-faq-7-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `${t("page-staking-faq-7-answer-p1")} ${t("page-staking-faq-7-answer-p2")}`.replace(
+                /<[^>]*>/g,
+                ""
+              ),
+            },
+          },
+          {
+            "@type": "Question",
             name: t("page-staking-faq-1-question"),
             acceptedAnswer: {
               "@type": "Answer",
@@ -135,6 +142,14 @@ export default async function StakingPageJsonLD({
                 /<[^>]*>/g,
                 ""
               ),
+            },
+          },
+          {
+            "@type": "Question",
+            name: t("page-staking-faq-8-question"),
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: t("page-staking-faq-8-answer-p1").replace(/<[^>]*>/g, ""),
             },
           },
         ],

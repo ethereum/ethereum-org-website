@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "src/intl/en/page-contributing-translation-program-acknowledgements.json",
-  "generatedAt": "2026-06-16T15:26:50.669Z",
-  "rootHash": "6b3fa4979a73",
+  "generatedAt": "2026-10-21T21:35:48.063Z",
+  "rootHash": "9f5b74bebc61",
   "tree": {
-    "contentHash": "a5c4f313f3e8",
-    "anchorHash": "7bcbbe86fc73",
+    "contentHash": "b271d2fb9f8f",
+    "anchorHash": "6f55114fd2ad",
     "children": {
       "page-contributing-translation-program-acknowledgements-acknowledgement-page-title": {
         "contentHash": "c0b11dec333d",
@@ -90,6 +90,16 @@
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-1": {
         "contentHash": "8c85bcdc66a1",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-contributing-translation-program-acknowledgements-translatathon-leaderboard": {
+        "contentHash": "d50dfa19c115",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4de49a5058c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view": {
         "contentHash": "4ba97be0a542",
@@ -190,6 +200,7 @@
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-title",
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-cta",
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-1",
+      "page-contributing-translation-program-acknowledgements-translatathon-leaderboard",
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view",
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view",
       "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view",
@@ -211,5 +222,5 @@
       "page-contributing-translation-program-acknowledgements-4"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

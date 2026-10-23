@@ -28,7 +28,7 @@ jako například:
 
 Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst náš úvod do [dapp](/developers/docs/dapps/) a [technologického zásobníku Etherea](/developers/docs/ethereum-stack/).
 
-## Dostupné frameworky
+## Dostupné frameworky {#available-frameworks}
 
 **Foundry** - **_Foundry je bleskově rychlá, přenositelná a modulární sada nástrojů pro vývoj aplikací na Ethereu._**
 
@@ -102,7 +102,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet NFT aplikace na všech hlavních řetězcích kompatibilních s EVM (a dalších)._**
+**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet aplikace pro nezaměnitelné tokeny (NFT) na všech hlavních řetězcích, EVM řetězcích (a dalších)._**
 
 - [Webová stránka](https://www.crossmint.com)
 - [Dokumentace](https://docs.crossmint.com)
@@ -116,7 +116,6 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 **OpenZeppelin SDK -** **_Ultimátní sada nástrojů pro chytré kontrakty: Sada nástrojů, která vám pomůže vyvíjet, kompilovat, aktualizovat, nasazovat a komunikovat s chytrými kontrakty._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Komunitní fórum](https://forum.openzeppelin.com/c/support/17)
 - **Vývoj OpenZeppelin SDK byl ukončen**
@@ -125,14 +124,14 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu API pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte DeFi dashboard, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
+**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu rozhraní pro programování aplikací (API) pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte DeFi dashboard, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
 
 - [Webová stránka](https://goldrush.dev/)
 - [Dokumentace](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_All-in-one framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
+**Wake -** **_Komplexní framework v Pythonu pro testování kontraktů, fuzzing, nasazení, skenování zranitelností a navigaci v kódu._**
 
 - [Domovská stránka](https://getwake.io/)
 - [Dokumentace](https://ackeeblockchain.com/wake/docs/latest/)
@@ -151,6 +150,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 - [Dokumentace](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Další čtení {#further-reading}
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

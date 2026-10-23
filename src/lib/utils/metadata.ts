@@ -10,6 +10,7 @@ import {
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
+import { categoryForSlug, pageRankForSlug } from "./searchRanking"
 import { getFullUrl, toLanguageTag } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -63,7 +64,7 @@ export const getMetadata = async ({
   translatedLocales?: string[]
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
-  const t = await getTranslations("common")
+  const t = await getTranslations({ locale, namespace: "common" })
 
   const description = descriptionProp || t("site-description")
 
@@ -146,6 +147,11 @@ export const getMetadata = async ({
     },
     other: {
       "docsearch:description": description,
+      // The self-hosted scraper does not read `<html lang>`; the filter the app
+      // sends (`language:=<locale>`) is only populated from this tag.
+      "docsearch:language": locale,
+      "docsearch:pagerank": pageRankForSlug(slug),
+      "docsearch:category": categoryForSlug(slug),
     },
   }
 

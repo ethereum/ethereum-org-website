@@ -17,23 +17,23 @@ Materiał od **Nym** z udziałem głównej badaczki Nym, Claudii Diaz, zgłębia
 
 *Poniższa transkrypcja jest przystępną kopią [oryginalnej transkrypcji wideo](https://www.youtube.com/watch?v=QBX5AK3DXqw) opublikowanej przez Nym. Została ona poddana lekkiej redakcji w celu poprawy czytelności.*
 
-#### Wprowadzenie (0:04) {#intro-004}
+### Wprowadzenie (0:04) {#intro-004}
 
 Czym są metadane komunikacyjne? Odnoszą się one do wszystkiego, co dotyczy komunikacji, a nie jest samą treścią tego, co faktycznie zostało powiedziane. Obejmuje to na przykład źródło komunikacji, miejsce docelowe, czas wysłania informacji, ilość wysłanych informacji oraz wszelkie wykrywalne wzorce, w tym czas i rozmiar wymienianych pakietów.
 
-#### Metadane komunikacyjne (0:27) {#communications-metadata-027}
+### Metadane komunikacyjne (0:27) {#communications-metadata-027}
 
 Metadane komunikacyjne są domyślnie ujawniane we wszystkich protokołach internetowych: TCP/IP, HTTP, UDP, FTP. Nawet bezpieczne protokoły, takie jak TLS czy bezpieczny DNS, które chronią treść za pomocą szyfrowania typu end-to-end, nadal pokazują metadane komunikacyjne: źródło, miejsce docelowe, czas, długość i tak dalej.
 
 Więc te informacje są ujawniane, ale komu? Kto może je zdobyć?
 
-#### Kto ma dostęp do metadanych (1:10) {#who-gets-access-to-metadata-110}
+### Kto ma dostęp do metadanych (1:10) {#who-gets-access-to-metadata-110}
 
 Istnieje wiele podmiotów będących pośrednikami w komunikacji internetowej, które mają dostęp do tych metadanych komunikacyjnych. Obejmuje to dużych graczy w infrastrukturze internetowej, takich jak dostawcy usług internetowych, punkty wymiany ruchu, systemy autonomiczne, routery BGP i ogólnie uczestnicy szkieletu internetu; mogą oni uzyskać dostęp do ogromnej ilości metadanych komunikacyjnych. 
 
 Ale nawet mniejsi gracze, tacy jak ktokolwiek, kto zarządza routerem Wi-Fi lub siecią lokalną, albo ktoś, kto jest w stanie podsłuchiwać lokalnie, również uzyskują dostęp do metadanych komunikacyjnych. I oczywiście wiadomo, że przeciwnicy na poziomie państwowym, tacy jak NSA, gromadzą metadane na dużą skalę i analizują je w celu pozyskania wszelkiego rodzaju danych wywiadowczych.
 
-#### Dlaczego metadane są ważne (2:00) {#why-is-metadata-important-200}
+### Dlaczego metadane są ważne (2:00) {#why-is-metadata-important-200}
 
 Istnieje więcej powodów, dla których metadane są bardzo interesującym rodzajem danych do gromadzenia i wykorzystywania. Są one czytelne dla maszyn, ponieważ mówią językiem komputerów; to w zasadzie język, dzięki któremu komputery mogą w odpowiedni sposób kierować komunikację ze źródła do miejsca docelowego. Są więc czytelne dla maszyn, a to oznacza, że maszyny mogą je bardzo łatwo zrozumieć na dużą skalę, w przeciwieństwie do naturalnego języka ludzkiego, który jest znacznie trudniejszy do zinterpretowania, ponieważ ludzie mogą używać słów w określony sposób lub mają one niuanse, co znacznie utrudnia interpretację. Z kolei metadane są naprawdę proste.
 
@@ -51,7 +51,7 @@ Analiza ruchu metadanych może być nawet wykorzystana do odzyskania zaszyfrowan
 
 Istnieje jednak wiele sytuacji, w których analiza ruchu metadanych komunikacyjnych może działać jako kanał boczny, który ujawnia tę zaszyfrowaną treść.
 
-#### Inwigilacja metadanych (5:15) {#metadata-surveillance-515}
+### Inwigilacja metadanych (5:15) {#metadata-surveillance-515}
 
 Jednym z przykładów jest przeglądanie strony internetowej za pomocą protokołu HTTPS. W zasadzie, ponieważ komunikacja z tą stroną jest zaszyfrowana, ktoś, kto obserwuje Twoją komunikację, nie może stwierdzić, do jakiej konkretnej podstrony w witrynie uzyskujesz dostęp. Na przykład, jeśli wchodzisz na WebMD, aby sprawdzić choroby, obserwator lub podsłuchujący będzie w stanie zobaczyć: „Okej, sprawdzasz informacje medyczne na WebMD”, ale nie będzie w stanie powiedzieć, jakiej konkretnie choroby szukasz.
 
@@ -61,7 +61,7 @@ Robiąc to, można zbudować odcisk palca każdej z tych stron, tak że gdy cel 
 
 To oczywiście niepokojące. Mimo że możemy mieć szyfrowanie typu end-to-end, jesteśmy bardzo daleko od zakończenia prac w zakresie ochrony prywatności naszej komunikacji.
 
-#### Lista życzeń dla prywatnej komunikacji (6:40) {#a-wish-list-for-private-communications-640}
+### Lista życzeń dla prywatnej komunikacji (6:40) {#a-wish-list-for-private-communications-640}
 
 Więc gdybyśmy chcieli stworzyć listę życzeń tego, co oferowałaby idealnie bezpieczna sieć komunikacyjna, jakich właściwości byśmy oczekiwali? 
 

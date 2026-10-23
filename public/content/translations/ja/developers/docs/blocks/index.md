@@ -151,3 +151,5 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 - [トランザクション](/developers/docs/transactions/)
 - [ガス](/developers/docs/gas/)
 - [プルーフ・オブ・ステーク (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

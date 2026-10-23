@@ -178,7 +178,7 @@ _图表改编自[以太坊 EVM 图解](https://takenobu-hs.github.io/downloads/e
 
 任何涉及智能合约的交易都需要 Gas。
 
-智能合约还可以包含被称为 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函数，这些函数不会改变合约的状态。因此，从外部拥有账户 (EOA) 调用这些函数不需要任何 Gas。此场景的底层 RPC 调用是 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
+智能合约还可以包含被称为 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函数，这些函数不会改变合约的状态。因此，从外部拥有账户 (EOA) 调用这些函数不需要任何 Gas。此场景的底层 RPC 调用是 [`eth_call`](/developers/docs/apis/json-rpc/#eth-call)。
 
 与使用 `eth_call` 访问时不同，这些 `view` 或 `pure` 函数通常也会在内部被调用（即从合约本身或从另一个合约调用），这确实会消耗 Gas。
 
@@ -238,3 +238,7 @@ _知道对您有帮助的社区资源吗？编辑本页面并添加它！_
 - [账户](/developers/docs/accounts/)
 - [以太坊虚拟机 (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

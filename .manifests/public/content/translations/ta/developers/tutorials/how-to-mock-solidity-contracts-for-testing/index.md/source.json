@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md",
   "generatedAt": "2026-06-18T00:01:55.037Z",
-  "rootHash": "68b2eed9a86d",
+  "rootHash": "ab26e37cfec7",
   "tree": {
-    "contentHash": "0a2999769811",
-    "anchorHash": "e6e3d4086947",
+    "contentHash": "4eaf14002117",
+    "anchorHash": "940221e08058",
     "children": {
       "frontmatter:title": {
         "contentHash": "d7347c7196b2",
@@ -24,8 +24,32 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "392524de3664"
+        "contentHash": "5745b766a6ca",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "cf80cd8aed48",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "293ec56f2762",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "pt-br",
-  "translatedAt": "2026-06-18T20:37:42.749Z",
-  "englishManifestHash": "f1c07ae5055b",
+  "translatedAt": "2026-09-23T21:39:50.802Z",
+  "englishManifestHash": "91539c921316",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-cd977e",
@@ -25,6 +25,9 @@
     "CODEBLOCK-2fe4d8",
     "LINK-67e167",
     "CODE-c85d05",
+    "CODE-fde9c5",
+    "LINK-eca43a",
+    "CODE-1ebaba",
     "LINK-9d4843",
     "LINK-65df1e",
     "LINK-efc0b7",
@@ -89,6 +92,18 @@
         "content": "0x06012c8cf97bead5deae237070f9587f8e7a266d"
       }
     },
+    "CODE-fde9c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "CREATE"
+      }
+    },
+    "CODE-1ebaba": {
+      "type": "inline-code",
+      "values": {
+        "content": "CREATE2"
+      }
+    },
     "IMAGE-ddf631": {
       "type": "image",
       "values": {
@@ -149,6 +164,12 @@
         "url": "https://geth.ethereum.org/docs"
       }
     },
+    "LINK-eca43a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1014"
+      }
+    },
     "LINK-9d4843": {
       "type": "link",
       "values": {
@@ -176,7 +197,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T20:37:42.749Z",
+      "translatedAt": "2026-09-23T21:39:50.802Z",
       "status": "success"
     }
   }

@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "Giới thiệu về {name}",
+  "catalog-item-gallery-modal-title": "Ảnh chụp màn hình {name}",
+  "catalog-item-gallery-screenshot-alt": "Ảnh chụp màn hình {index} của {name}",
+  "catalog-item-gallery-title": "Thư viện ảnh",
+  "catalog-item-info-title": "Thông tin",
+  "catalog-item-link-label": "{name} trên {platform}",
+  "catalog-item-see-next": "Xem tiếp",
+  "catalog-item-source-code": "Mã nguồn",
+  "catalog-item-view-on-github": "Xem trên GitHub",
+  "catalog-item-visit-website": "Truy cập trang web"
+}

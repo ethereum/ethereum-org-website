@@ -17,7 +17,7 @@ Um curto vídeo explicativo animado da **Anistia Internacional** sobre por que a
 
 *Esta transcrição é uma cópia acessível da [transcrição original do vídeo](https://www.youtube.com/watch?v=5GTD14irFvQ) publicada pela Anistia Internacional. Ela foi levemente editada para facilitar a leitura, e rótulos de quem está falando foram adicionados.*
 
-#### "Você não tem nada a esconder, certo?" (0:00) {#youve-got-nothing-to-hide-right-000}
+### "Você não tem nada a esconder, certo?" (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agente:** Você não se importa com segurança digital, não é?
 
@@ -79,7 +79,7 @@ Um curto vídeo explicativo animado da **Anistia Internacional** sobre por que a
 
 **Cidadão:** Eu apoio.
 
-#### O direito à privacidade (1:30) {#the-right-to-privacy-130}
+### O direito à privacidade (1:30) {#the-right-to-privacy-130}
 
 **Cidadão:** E meu país é feito de pessoas. Pessoas com direito à sua própria privacidade. Se os governos querem coletar indiscriminadamente todos os seus dados — e-mails, ligações telefônicas, imagens de webcam e pesquisas na internet — isso não está certo.
 

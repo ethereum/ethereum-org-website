@@ -152,7 +152,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 
 ## SEO & Meta
 
-- Sitemap generation in `app/sitemap.ts`
+- Sitemap generation in `app/sitemaps/sitemap.ts` (one sitemap per locale, indexed by `app/sitemap.xml/route.ts`)
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
@@ -177,9 +177,33 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
    - Use `src/components/ui` for shadcn components or pure UI components
 2. Add TypeScript types and proper props interface
 3. Accept `ref` as a regular prop when needed (React 19); `forwardRef` only survives in legacy components
-4. Add Storybook story in same directory
+4. Add a Storybook story (see below)
 5. Export from appropriate index file
 6. Update documentation if adding new patterns
+
+### Storybook stories
+
+**Location**: `__stories__/` for flat directories (`ui/`, `styles/`), co-located for foldered components. Story globs are recursive, so nesting works. **Filenames are kebab-case** (`app-card.stories.tsx`) even inside a PascalCase component directory -- enforced by the test below.
+
+**Title**: `Section / Group / Name`. The section is derived from the file path -- not a judgment call:
+
+| Path                                  | Section         |
+| ------------------------------------- | --------------- |
+| `src/styles/**`                       | `Design System` |
+| `src/components/ui/**`                | `UI`            |
+| `src/components/**` (everything else) | `Components`    |
+| `src/layouts/**`                      | `Layouts`       |
+| `app/**`                              | `Pages`         |
+
+Use a second-level group only when an established one fits (Actions, Forms, Layout, Navigation, Overlays, Data Display, Cards, Heroes, Site Chrome, Content, Data Viz, Features). **Don't invent a group for a single component** -- a flat `Components / Morpher` is correct and preferred. `tests/unit/storybook/story-titles.spec.ts` enforces the section prefix, explicit titles, and title uniqueness (Storybook silently merges duplicate titles into one sidebar entry).
+
+**Don't add a story for a deprecated component or variant.** A rendered example reads as an endorsement whatever the caption says, so the showcase should only contain things that are available to use -- note the deprecation in prose instead (see `HR`). A component whose future is merely undecided can keep its story with a status blurb (see `Carousel`).
+
+Add `tags: ["autodocs"]`. Write the `parameters.docs.description.component` blurb for someone deciding whether to use the thing -- constraints and gotchas, not a restatement of the props table.
+
+**A green build does not mean a story renders.** `pnpm build-storybook` compiles stories without executing them, and every `UI /` story sets `chromatic: { disableSnapshot: true }`, so neither CI signal catches a story that throws. Open new stories in `pnpm storybook` before pushing.
+
+Async server components render via a `next-intl/server` shim (`.storybook/next-intl-server.tsx`). Components calling `usePathname` need `parameters.nextjs.navigation.pathname`. New i18n namespaces must be added to the `ns` array in `.storybook/next-intl.ts`, or strings render as raw key tails.
 
 ### Content Updates
 
@@ -240,11 +264,23 @@ Key gotcha: **variants are matched by array index, not names** — the `variants
 
 Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
 
+## Site Search
+
+Search runs on a self-hosted Typesense instance, one collection per locale, crawled by DocSearch from production ethereum.org. Publishing is gated: a crawl goes to a staging collection and the live alias only moves if the new index passes size, field and relevance checks.
+
+Two things bite most often. **Ranking hints reach the index as `docsearch:*` meta tags** from `src/lib/utils/metadata.ts`, so a ranking change does nothing until the site is deployed and re-crawled. And **the networks offered as block explorer results come from `src/data/networks/networks.ts`** -- the same list `/layer-2/networks` renders -- so adding an L2 there is the only edit needed.
+
+Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/README.md`. Code: `src/components/Search/`, `src/scripts/typesense/`, `typesense/`.
+
 ## Deployment
 
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+### Runtime constraints
+
+- **`public/content` is not in the Netlify server function** (CDN-only). A page that reads it at render time must stay static (`revalidate: false` getters like `getStaticAppsData`) or have an `outputFileTracingIncludes` entry in `next.config.js`. A finite-`revalidate` getter (e.g. `getEventsData`, 24h) turns the whole route into ISR. Details: `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`.
 
 ## Internal Infrastructure
 

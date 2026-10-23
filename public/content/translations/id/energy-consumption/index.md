@@ -24,8 +24,8 @@ Grafik di atas menampilkan perkiraan konsumsi energi dalam TWh/tahun untuk Ether
 | PoW Ethereum        |                 21                  |           8.100x           |                                                                    [sumber](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google              |                 19                  |           7.300x           |                                           [sumber](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix             |                0,457                |            176x            | [sumber](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal              |                0,26                 |            100x            |                                 [sumber](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1)>).pdf>)                                  |
-| AirBnB              |                0,02                 |             8x             |                              [sumber](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final)>).pdf>)                              |
+| PayPal              |                0,26                 |            100x            |                                 [sumber](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB              |                0,02                 |             8x             |                              [sumber](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS Ethereum**    |             **0,0026**              |           **1x**           |                                                               [sumber](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Termasuk perangkat pengguna akhir seperti PC, laptop, dan konsol gim.
@@ -83,3 +83,5 @@ Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co)
 
 - [Rantai suar](/roadmap/beacon-chain)
 - [The Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

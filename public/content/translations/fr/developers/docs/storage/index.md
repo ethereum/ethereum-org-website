@@ -142,7 +142,7 @@ Basé sur la preuve d'enjeu :
 **Arweave - _Arweave est une plateforme dStorage pour le stockage de données._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Documentation](https://docs.arweave.org/info/)
+- [Documentation](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs est une plateforme dStorage à preuve d'enjeu (PoS) avec des fragments (sharding) et des blobbers._**

@@ -91,3 +91,5 @@ _Діаграми адаптовано з [Ethereum EVM illustrated](https://tak
 
 - [Розуміння специфікацій EVM у Жовтій книзі](/developers/tutorials/yellow-paper-evm/) _— Покроковий розбір формальної специфікації EVM із Жовтої книги Етеріуму._
 - [Зворотна розробка контракту](/developers/tutorials/reverse-engineering-a-contract/) _— Як здійснити зворотну розробку скомпільованого смарт-контракту за допомогою опкодів EVM._
+
+<QuizWidget quizKey="evm" />

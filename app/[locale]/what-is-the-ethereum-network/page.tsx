@@ -29,6 +29,8 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-what-is-the-ethereum-network")
 
   const { contributors, lastEditLocaleTimestamp } =
@@ -71,10 +73,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "learn/what-is-the-ethereum-network",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-the-ethereum-network" }}
             heroImg={heroImg}
             title={t("page-what-is-ethereum-network-title")}
             description={

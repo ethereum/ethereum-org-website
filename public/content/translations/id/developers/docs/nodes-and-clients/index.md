@@ -158,7 +158,7 @@ Hyperledger Besu adalah klien Ethereum tingkat perusahaan untuk jaringan publik 
 Erigon, sebelumnya dikenal sebagai Turbo-Geth, dimulai sebagai percabangan dari Go Ethereum yang berorientasi pada kecepatan dan efisiensi ruang disk. Erigon adalah implementasi Ethereum yang sepenuhnya diarsiteki ulang, saat ini ditulis dalam Go tetapi dengan implementasi dalam bahasa lain yang sedang dikembangkan. Tujuan Erigon adalah untuk menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih dioptimalkan. Ini dapat melakukan sinkronisasi node arsip penuh menggunakan sekitar 2TB ruang disk, dalam waktu kurang dari 3 hari.
 
 
-### ethrex
+### ethrex {#ethrex}
 
 ethrex adalah klien eksekusi Ethereum yang minimalis dan modular, ditulis dalam Rust dan dikembangkan oleh LambdaClass. Ini dibangun dengan mempertimbangkan pembuktian zero-knowledge, dan basis kode yang sama dapat berjalan baik sebagai klien eksekusi lapisan 1 (l1) maupun sebagai ZK-Rollup multi-pembukti (lapisan 2 (l2)). Ini memiliki lisensi ganda di bawah lisensi Apache 2.0 dan MIT.
 

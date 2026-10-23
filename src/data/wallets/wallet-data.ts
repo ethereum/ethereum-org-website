@@ -6,7 +6,6 @@ import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
-import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import BurnerImage from "@/public/images/wallets/burner.png"
@@ -30,7 +29,6 @@ import InfinexImage from "@/public/images/wallets/infinexwallet.png"
 import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
-import LoopringImage from "@/public/images/wallets/loopring.png"
 import MetaMaskImage from "@/public/images/wallets/metamask.png"
 import MewImage from "@/public/images/wallets/mew.png"
 import NuFiImage from "@/public/images/wallets/nufi.png"
@@ -56,10 +54,13 @@ import ZerionImage from "@/public/images/wallets/zerion.png"
  * the optional `supported_chains` array.
  */
 
+// Each wallet also needs `wallet-{slug}-description` in src/intl/en/page-wallet-descriptions.json,
+// copied from the "Wallet description" field of its listing issue.
 export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
     name: "Keystone",
+    fees: [{ type: "device", usd: 149 }],
     image: KeystoneImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -106,56 +107,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-30",
-    name: "Loopring wallet",
-    image: LoopringImage,
-    twBackgroundColor: "bg-[#446EFF]",
-    twGradiantBrandColor: "from-[#446EFF]",
-    url: "https://wallet.loopring.io/",
-    active_development_team: true,
-    languages_supported: ["en", "zh", "tr", "pt", "fr", "es"],
-    twitter: "https://x.com/loopringorg",
-    discord: "http://discord.gg/KkYccYp",
-    reddit: "",
-    telegram: "",
-    ios: true,
-    android: true,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: false,
-    hardware: false,
-    open_source: false,
-    repo_url: "",
-    non_custodial: true,
-    security_audit: [
-      "https://github.com/solidified-platform/audits/blob/master/Audit%20Report%20-%20Loopring%20Hebao%20Wallet%20%5B21.05.2020%5D.pdf",
-      "https://github.com/Loopring/protocols/blob/master/packages/hebao_v1/audit_report_solidified_response.md",
-      "https://github.com/Loopring/protocols/tree/release_loopring_3.6.3/packages/loopring_v3/security_audit",
-    ],
-    scam_protection: true,
-    hardware_support: false,
-    rpc_importing: false,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: true,
-    multisig: false,
-    social_recovery: true,
-    onboard_documentation: "https://docs-wallet.loopring.io/",
-    documentation: "",
-    supported_chains: ["Ethereum Mainnet"],
-  },
-  {
     last_updated: "2025-10-01",
     name: "Railway Wallet",
+    fees: [{ type: "shield-unshield", percent: 0.25 }],
     image: RailwayImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -200,8 +154,9 @@ export const walletsData: WalletData[] = [
     privacy: true,
   },
   {
-    last_updated: "2025-07-15",
+    last_updated: "2025-09-29",
     name: "Ready Wallet",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -247,8 +202,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Starknet"],
   },
   {
-    last_updated: "2022-11-15",
+    last_updated: "2024-02-23",
     name: "Coinbase Wallet",
+    fees: [{ type: "swap", percent: 1 }],
     image: CoinbaseImage,
     twBackgroundColor: "bg-[#0052FF]",
     twGradiantBrandColor: "from-[#0052FF]",
@@ -359,8 +315,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-03-17",
+    last_updated: "2026-05-05",
     name: "MetaMask",
+    fees: [
+      { type: "swap-bridge", percent: 0.875 },
+      { type: "buy-sell", percent: 1 },
+    ],
     image: MetaMaskImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -460,8 +420,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-11-06",
+    last_updated: "2024-11-21",
     name: "Safe",
+    fees: [
+      { type: "swap", percent: [0.05, 0.7] },
+      { type: "staking", percent: 20, qualifier: "of-rewards" },
+    ],
     image: SafeImage,
     twBackgroundColor: "bg-[#12ff80]",
     twGradiantBrandColor: "from-[#12ff80]",
@@ -518,6 +482,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-01-31",
     name: "Coin Wallet",
+    fees: [{ type: "swap", percent: 0 }],
     image: CoinWalletImage,
     twBackgroundColor: "bg-[#68c481]",
     twGradiantBrandColor: "from-[#68c481]",
@@ -596,8 +561,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-12-04",
+    last_updated: "2025-12-05",
     name: "Ambire",
+    fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: AmbireImage,
     twBackgroundColor: "bg-[#aa6aff]",
     twGradiantBrandColor: "from-[#aa6aff]",
@@ -651,8 +617,16 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-08-31",
+    last_updated: "2024-09-04",
     name: "imToken",
+    fees: [
+      {
+        type: "swap",
+        percent: 0.3,
+        qualifier: "stablecoins-lower-l2",
+        qualifierPercent: 0.04,
+      },
+    ],
     image: imTokenImage,
     twBackgroundColor: "bg-[#007fff]",
     twGradiantBrandColor: "from-[#007FFF]",
@@ -717,8 +691,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-12-04",
+    last_updated: "2025-12-04",
     name: "io.finnet MPC wallet for Business",
+    fees: [{ type: "free-tier-plans", usd: 399.99 }],
     image: IoFinnetImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#FFFFFF]",
@@ -765,8 +740,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
-    last_updated: "2024-08-30",
+    last_updated: "2025-12-04",
     name: "1inch Wallet",
+    fees: [{ type: "swap", text: "variable" }],
     image: OneInchWalletImage,
     twBackgroundColor: "bg-[#2F8AF5]",
     twGradiantBrandColor: "from-[#2F8AF5]",
@@ -832,8 +808,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2026-02-25",
     name: "FoxWallet",
+    fees: [{ type: "swap", percent: 0 }],
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -898,8 +875,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-01-12",
+    last_updated: "2026-01-13",
     name: "PillarX",
+    fees: [{ type: "swap", percent: 1 }],
     image: PillarXImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -951,8 +929,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-03-19",
+    last_updated: "2025-03-27",
     name: "MEW wallet",
+    fees: [{ type: "swap", text: "variable" }],
     image: MewImage,
     twBackgroundColor: "bg-[#05C0A5]",
     twGradiantBrandColor: "from-[#05C0A5]",
@@ -1002,8 +981,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-01-25",
+    last_updated: "2025-10-17",
     name: "Unstoppable wallet",
+    fees: [{ type: "swap", percent: 0 }],
     image: UnstoppableWalletImage,
     twBackgroundColor: "bg-[#ffbe43]",
     twGradiantBrandColor: "from-[#ffbe43]",
@@ -1050,6 +1030,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-24",
     name: "AlphaWallet",
+    fees: [{ type: "swap", percent: 0 }],
     image: AlphaWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1093,8 +1074,12 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-07-24",
+    last_updated: "2024-08-27",
     name: "Bridge wallet",
+    fees: [
+      { type: "swap", percent: 0.5 },
+      { type: "buy-sell", percent: [0.6, 3.8] },
+    ],
     image: BridgeWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1144,8 +1129,11 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-11-06",
+    last_updated: "2026-07-13",
     name: "TokenPocket",
+    fees: [
+      { type: "swap", text: "undisclosed", qualifier: "tpt-holder-discounts" },
+    ],
     image: TokenPocketImage,
     twBackgroundColor: "bg-[#2980fe]",
     twGradiantBrandColor: "from-[#2980fe]",
@@ -1222,8 +1210,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-30",
+    last_updated: "2023-09-21",
     name: "Rainbow",
+    fees: [{ type: "swap", percent: 0.85 }],
     image: RainbowImage,
     twBackgroundColor: "bg-[#001A4D]",
     twGradiantBrandColor: "from-[#001A4D]",
@@ -1291,6 +1280,10 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2026-06-16",
     name: "Trezor",
+    fees: [
+      { type: "device", usd: [59, 129] },
+      { type: "swap", text: "variable" },
+    ],
     image: TrezorImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1359,8 +1352,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-23",
+    last_updated: "2024-11-21",
     name: "Ledger",
+    fees: [
+      { type: "device", usd: [79, 399] },
+      { type: "swap", text: "variable" },
+    ],
     image: LedgerImage,
     twBackgroundColor: "bg-[#fb5e01]",
     twGradiantBrandColor: "from-[#fb5e01]",
@@ -1421,8 +1418,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-08-19",
+    last_updated: "2025-09-08",
     name: "Exodus",
+    fees: [{ type: "swap", percent: 0.5, from: true }],
     image: ExodusImage,
     twBackgroundColor: "bg-[#1F2033]",
     twGradiantBrandColor: "from-[#1F2033]",
@@ -1477,8 +1475,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-07-24",
+    last_updated: "2024-07-25",
     name: "Rabby Wallet",
+    fees: [{ type: "swap", percent: 0.25 }],
     image: RabbyWalletImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#FFFFFF]",
@@ -1536,8 +1535,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-09-26",
+    last_updated: "2024-10-20",
     name: "Zerion Wallet",
+    fees: [
+      { type: "swap-bridge", percent: 0.67, qualifier: "lower-with-premium" },
+      { type: "buy", text: "set-by-provider" },
+    ],
     image: ZerionImage,
     twBackgroundColor: "bg-[#3232DC]",
     twGradiantBrandColor: "from-[#3232DC]",
@@ -1608,8 +1611,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-09-26",
+    last_updated: "2024-11-21",
     name: "Enkrypt",
+    fees: [{ type: "swap", text: "variable" }],
     image: EnkryptImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1660,8 +1664,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-10-31",
+    last_updated: "2022-11-01",
     name: "GridPlus Lattice1",
+    fees: [{ type: "device", usd: 397 }],
     image: GridPlusImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1705,8 +1710,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
-    last_updated: "2024-11-20",
+    last_updated: "2024-11-21",
     name: "Bitget wallet",
+    fees: [{ type: "swap", text: "variable" }],
     image: BitgetImage,
     twBackgroundColor: "bg-[#00F0FF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -1774,64 +1780,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-31",
-    name: "BlockWallet",
-    image: BlockWalletImage,
-    twBackgroundColor: "bg-[#52C200]",
-    twGradiantBrandColor: "from-[#08090A]",
-    url: "https://blockwallet.io",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://x.com/GetBlockWallet",
-    discord: "https://discord.gg/blockwallet",
-    reddit: "",
-    telegram: "https://t.me/blockwallet",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: true,
-    chromium: true,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/block-wallet/extension",
-    non_custodial: true,
-    security_audit: [
-      "https://github.com/block-wallet/block-wallet/blob/a0a2396f0f0a3c17629e87c7fether-0eb539dacb3f/audits/%5BKALOS%5D%20BlockWallet%20Audit%20Report%20v1.1.pdf",
-      "https://github.com/block-wallet/block-wallet/blob/main/audits/Least%20Authority%201.pdf",
-      "https://github.com/block-wallet/block-wallet/blob/main/audits/BLW-01-report.v3.pdf",
-      "https://blockwallet.io/security-audits.html",
-    ],
-    scam_protection: true,
-    hardware_support: true,
-    rpc_importing: true,
-    nft_support: false,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    multichain: true,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: false,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation: "https://blockwallet.io/docs",
-    documentation: "https://github.com/block-wallet/extension",
-    supported_chains: [
-      "Ethereum Mainnet",
-      "Arbitrum One",
-      "OP Mainnet",
-      "Scroll",
-      "zkSync Mainnet",
-    ],
-  },
-  {
     last_updated: "2024-10-30",
     name: "OneKey",
+    fees: [{ type: "swap-bridge", percent: 0.85 }],
     image: OneKeyImage,
     twBackgroundColor: "bg-[#00B812]",
     twGradiantBrandColor: "from-[#00B812]",
@@ -1902,8 +1853,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2023-04-21",
+    last_updated: "2024-04-18",
     name: "Taho",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: TahoImage,
     twBackgroundColor: "bg-[#FDAE49]",
     twGradiantBrandColor: "from-[#FDAE49]",
@@ -1952,8 +1904,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2024-12-11",
     name: "Phantom",
+    fees: [{ type: "swap", percent: 0.85 }],
     image: PhantomImage,
     twBackgroundColor: "bg-[#AB9FF2]",
     twGradiantBrandColor: "from-[#AB9FF2]",
@@ -2024,8 +1977,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
-    last_updated: "2023-11-02",
+    last_updated: "2026-08-07",
     name: "Trust Wallet",
+    fees: [{ type: "buy", text: "set-by-provider" }],
     image: TrustWalletImage,
     twBackgroundColor: "bg-[#0500FF]",
     twGradiantBrandColor: "from-[#0500FF]",
@@ -2098,8 +2052,16 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-10-20",
+    last_updated: "2026-06-16",
     name: "ShapeShift",
+    fees: [
+      {
+        type: "swap-bridge",
+        percent: 0.5,
+        qualifier: "free-under-fox-discounts",
+        qualifierUsd: 1000,
+      },
+    ],
     image: ShapeShiftImage,
     twBackgroundColor: "bg-[#386FF9]",
     twGradiantBrandColor: "from-[#386FF9]",
@@ -2162,8 +2124,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2026-07-08",
+    last_updated: "2026-08-07",
     name: "Gem Wallet",
+    fees: [
+      { type: "swap", percent: 0 },
+      { type: "buy", text: "set-by-provider" },
+    ],
     image: GemWalletImage,
     twBackgroundColor: "bg-[#2D5BE6]",
     twGradiantBrandColor: "from-[#2D5BE6]",
@@ -2250,8 +2216,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-08-24",
+    last_updated: "2024-11-21",
     name: "Cypherock X1",
+    fees: [{ type: "device", usd: [99, 179] }],
     image: CypherockX1Image,
     twBackgroundColor: "bg-[#e9b873]",
     twGradiantBrandColor: "from-[#e9b873]",
@@ -2297,6 +2264,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-05-16",
     name: "Cake Wallet",
+    fees: [{ type: "swap", text: "variable" }],
     image: CakeWalletImage,
     twBackgroundColor: "bg-[#61C5FF]",
     twGradiantBrandColor: "from-[#61C5FF]",
@@ -2364,7 +2332,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-31",
+    last_updated: "2025-05-16",
     name: "Clear Wallet",
     image: ClearWallet,
     twBackgroundColor: "bg-[#0500FF]",
@@ -2411,6 +2379,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2024-12-26",
     name: "Braavos",
+    fees: [{ type: "swap", percent: 0 }],
     image: BraavosImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -2455,8 +2424,16 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Starknet"],
   },
   {
-    last_updated: "2024-11-03",
+    last_updated: "2026-05-05",
     name: "Coin98 Super Wallet",
+    fees: [
+      {
+        type: "swap",
+        percent: 0.5,
+        qualifier: "stablecoins",
+        qualifierPercent: 0.1,
+      },
+    ],
     image: Coin98Image,
     twBackgroundColor: "bg-[#F0C43F]",
     twGradiantBrandColor: "from-[#F0C43F]",
@@ -2522,8 +2499,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-05-19",
+    last_updated: "2026-07-13",
     name: "Burner",
+    fees: [
+      { type: "device", usd: 19, qualifier: "per-card" },
+      { type: "swap", text: "undisclosed" },
+    ],
     image: BurnerImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
@@ -2568,8 +2549,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
-    last_updated: "2025-09-09",
+    last_updated: "2025-09-13",
     name: "Edge Wallet",
+    fees: [{ type: "swap", percent: [0.5, 2] }],
     image: EdgeImage,
     twBackgroundColor: "bg-[#1a1a1a]",
     twGradiantBrandColor: "from-[#1a1a1a]",
@@ -2619,8 +2601,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-02-05",
+    last_updated: "2025-09-14",
     name: "NuFi",
+    fees: [{ type: "swap", percent: 0.75 }],
     image: NuFiImage,
     twBackgroundColor: "bg-[#bae440]",
     twGradiantBrandColor: "from-[#bae440]",
@@ -2671,8 +2654,9 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-09-24",
+    last_updated: "2025-09-27",
     name: "Clave",
+    fees: [{ type: "swap", percent: 0.5 }],
     image: ClaveWallet,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
@@ -2715,8 +2699,9 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Arbitrum One", "Base"],
   },
   {
-    last_updated: "2025-02-12",
+    last_updated: "2025-12-02",
     name: "Uniswap Wallet",
+    fees: [{ type: "swap", percent: 0 }],
     image: UniswapWalletImage,
     twBackgroundColor: "bg-[#EF03AC]",
     twGradiantBrandColor: "from-[#EF03AC]",
@@ -2778,8 +2763,12 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-12-17",
+    last_updated: "2026-05-05",
     name: "imKey Pro Hardware Wallet",
+    fees: [
+      { type: "device", usd: 110 },
+      { type: "swap", percent: 0 },
+    ],
     image: imKeyImage,
     twBackgroundColor: "bg-[#2A3535]",
     twGradiantBrandColor: "from-[#2A3535]",
@@ -2843,8 +2832,9 @@ export const walletsData: WalletData[] = [
   },
   {
     // https://github.com/ethereum/ethereum-org-website/issues/17586
-    last_updated: "2026-02-17",
+    last_updated: "2026-02-23",
     name: "Infinex Wallet & Crypto Superapp",
+    fees: [{ type: "swap-bridge", percent: [0.03, 0.3] }],
     image: InfinexImage,
     twBackgroundColor: "bg-[#FE6F39]",
     twGradiantBrandColor: "from-[#FE6F39]",

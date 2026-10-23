@@ -1,6 +1,6 @@
 ---
 title: Design and UX in web3
-description: Introduction to UX design and research in web3 space and Ethereum
+description: "An introduction to design and UX in web3: research, patterns and resources to help you build Ethereum apps that are easy, safe and clear to use."
 lang: en
 ---
 

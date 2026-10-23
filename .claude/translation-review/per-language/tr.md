@@ -43,3 +43,144 @@
 **Fixed (critical):** `Blok önericilerinin` -> `Blok teklifçilerinin` (`roadmap/privacy` L58, compound entry `block proposer = blok teklifçisi`). The embedded video transcript uses `teklif edici`/`teklifçi` throughout, making `önerici` the outlier.
 
 **Not fixed (warning):** `private` rendered `gizli` in the roadmap page but `özel` in the video embedded on that same page; PIR expanded two different ways. Visible side by side, worth a follow-up decision.
+
+## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
+Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
+
+**Fixed in this branch:**
+
+- #42 `{#contract-accounts}` heading restored from the pre-PR blob
+- #43 blank line before `{#validators-keys}` restored
+
+**Open (native call needed):**
+
+- `private` -> `özel` in the two new messaging strings vs `gizli` in 9 sibling `private*` strings in the same file — recurrence of the split logged for tr in PR #18925. `özel` also collides with `özel anahtar` (private key).
+- #46 `şifreleme düğümleri`.
+- `` `CREATE` işlemi `` collides with `işlem` = transaction 20 words earlier in the same sentence; the tr docs corpus uses `işlem kodu` for opcode (6x).
+- `autobattler` half-translated as `otomatik savaşçı` (the unit, not the genre) while `roguelike` stays English; the tr corpus keeps genre names English.
+
+**Notes:**
+
+- **The `kontrat` vs `sözleşme` mix is glossary-prescribed, not a defect.** ETHGlossary has both `contract account => kontrat hesabı` (compound) and `contract => Sözleşme` (bare), so the restored heading `Kontrat hesapları` alongside body `Sözleşme adresi` is correct. Do not auto-normalize — see #30 for the inverse failure.
+- `hash'inden` matches the corpus apostrophe convention (80x `hash'i`). The `page-values` rewrites are genuine improvements, including separating inspect=`incelemek` from audit=`denetlemek`.
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.6/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- `stablecoin` had three competing forms in one PR; `common.json`'s spaced `Sabit coin'ler` -> fused `Sabitcoin'ler` (locale convention, ~130 occurrences elsewhere). Open: the stale form `sabit para` still in 6 sites of `payments/index.md`. **None of the historical tr failure modes recurred** -- no katillik, MeFi, Markette, Müşteriler, no PoS/PoW inversion.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.3/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `fee-qualifier-stablecoins` and `-stablecoins-lower-l2`: spaced `sabit coin'ler` -> `sabitcoin'ler` (critical: **third recurrence** of this exact form after PR #18772 and PR #19015. Corpus 162 fused vs 9 spaced; `page-stablecoins.json` uses `Sabitcoinler` throughout; `sabitcoin'ler` is attested 12x. ETHGlossary has no tr stablecoin entry, so locale convention governs).
+
+**Open (native call needed):**
+
+- `fee-value-from` -> `{value}'den başlayan` glues a FIXED vowel-harmony suffix to a runtime placeholder. Newly introduced -- the only `{placeholder}'suffix` in all of `src/intl/tr`. The one live value (%0,5) actually needs `-ten`; other values would need `-dan`. Suffix-free fix: `{value} ve üzeri`. See #54.
+- `fee-free-tier-plans` -> `{value}/ay'dan` puts a TDK-reserved apostrophe on a native common noun; `aydan` is correct.
+- `crops-censorship-resistant-desc` -> `tekil` is the grammatical "singular"; should be `tek bir sağlayıcı`.
+- `nfts-hero-description` -> `koleksiyonlarınızı` ("collections") narrows "collectibles".
+- `fee-label-buy` (`Satın alma ücreti`) vs `-buy-sell` (`Alım/satım ücreti`) use two words for "buy" in adjacent labels in the same row.
+
+**Notes:**
+
+- None of the historical tr failure modes recurred: no `katılık`/`MeFi` brand mistranslation, no ETH/BLS transposition, no `Müşteri`/`Markette`, no cross-script contamination.
+- `katman 2'lerde` spells L2 out rather than using the acronym -- legitimate, and the only locale to sidestep the #53 casing artifact entirely.
+- Collapsing the ICU plural to one/other with identical text is correct for Turkish.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.6/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+NONE of the historic tr failure modes recurred: client is `istemci` throughout (zero müşteri misuse), mainnet is `Ana Ağ`, no katillik/MeFi brand corruption, no EHT/BSL transposition, no PoS/PoW inversion, state is `durum`. Remaining: `uzlaşma` for security compromise, `kurtarma kuyruğu` (rescue queue) for redemption queue -- which collides with `kurtarma ifadesi` = seed phrase.
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.6/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+
+- `test donanımı` = test **hardware** for "test harness" at 2 sites (150+ tree uses of `donanım` = hardware).
+- `ücretsiz kişi` ("free-of-charge people") for "unpaid people" -- the exact free-as-in-price/freedom confusion this page warns about.
+- `Amazon Şefi` (Amazon's **chef**) for "Amazon Chief".
+
+**Open (native call needed):**
+
+- Full-file retranslation re-termed two settled locale words: `Kâhinler` -> `Oracle'lar` (the link target page is still titled `Kâhinler` in tr), and `borç ver/al` -> `ödünç ver/al`.
+- `gizlilik` used for both "secrecy" (negative) and "privacy" (positive) on the same page.
+- None of tr's historical brand failure modes recurred -- no `katillik`, no `MeFi`, no `Müşteri`-for-client.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/tr/page-apps.json`. 2 critical, 11 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: tr not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (tr-specific):**
+
+- "Linting" rendered `Hata ayıklama` (= *debugging*) in a sentence about static analysis -> `[Linting]`. The 3 genuine debugging uses in the same file were left
+- "arbitrary properties" rendered `isteğe bağlı` (= *optional*) -> `keyfi özellikleri`
+
+**Notes:**
+
+- Zero cross-script contamination; the tr Devanagari-leak pattern did not recur.
+- `bulanıklaştırma (fuzzing)` and `ticaret` verified as established tr corpus conventions, not drift. `` `CREATE` işlemi `` is faithful since English says "operation", not "opcode": closes a prior KB open item.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online L162 `araştır` (imperative) -> `araştırır`.
+- open-access `sabit coin` -> `sabitcoin` (4th recurrence after #18772/#19015/#19076).
+
+**Open (warnings):**
+
+- F-Droid `ücretsiz` (#83); `düşük engelli` (low-disabled); proposer `teklifçi` vs glossary `teklif edici` needs one locale call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `İşletmeler için Ethereum` used for both enterprise and business pathways; `tekil` for single recurs; PostgreSQL sidecars translated literally.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:896 encodes = encrypts (`şifrelediği işlemi` -> `kodladığı işlemi`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation on a `translate` term: `eoa` → `harici sahipli hesap`. The PR moved this away from the glossary (it was `harici olarak sahip olunan`). Flag for human. (`[dışarıdan sahipli bir hesaptır]` -> `[harici sahipli bir hesaptır]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA deviation. (`dışarıdan sahipli hesaplar` -> `harici sahipli hesaplar`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA deviation. (`dışarıdan sahipli bir hesaptan` -> `harici sahipli bir hesaptan`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA deviation. (`dışarıdan sahipli bir hesapsa` -> `harici sahipli bir hesapsa`)
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.

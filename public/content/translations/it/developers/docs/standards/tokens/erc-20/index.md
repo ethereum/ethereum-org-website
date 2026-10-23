@@ -175,7 +175,7 @@ Da questo problema sono nati alcuni standard alternativi come l'[ERC-223](/devel
 - [OpenZeppelin - Implementazione ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guida ai token ERC-20 in Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## Altri standard dei token fungibili
+## Altri standard dei token fungibili {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

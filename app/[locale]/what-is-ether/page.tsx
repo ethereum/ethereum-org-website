@@ -11,6 +11,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -103,10 +104,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "what-is-ether",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-ether" }}
             heroImg={heroImg}
             title={t("page-what-is-ether-title")}
             description={t("page-what-is-ether-hero-description-1")}
@@ -115,6 +113,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        listenSlug="what-is-ether"
         variant="narrow"
       >
         <Section id={getIdFromHash(tocItems[0].url)}>
@@ -619,6 +618,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>
+
+        <StandaloneQuizWidget quizKey="what-is-ether" />
       </ContentLayout>
     </>
   )

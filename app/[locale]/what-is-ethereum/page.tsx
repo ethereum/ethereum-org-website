@@ -19,6 +19,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -37,8 +38,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getIdFromHash } from "@/lib/utils/url"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
@@ -54,6 +53,9 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
+
+  setRequestLocale(locale)
+
   const t = await getTranslations("page-what-is-ethereum")
 
   const { contributors, lastEditLocaleTimestamp } =
@@ -88,7 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
+            breadcrumbs={{ slug: "what-is-ethereum" }}
             heroImg={heroImg}
             title={tocItems[0].title}
             description={
@@ -699,7 +701,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </CardParagraph>
             </CardContent>
             <CardFooter>
-              <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
+              <ButtonLink href="/organizations/">
                 {t("page-what-is-ethereum-start-business-cta")}
               </ButtonLink>
             </CardFooter>
@@ -906,6 +908,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </ListItem>
           </UnorderedList>
         </Section>
+
+        <StandaloneQuizWidget quizKey="what-is-ethereum" />
       </ContentLayout>
     </>
   )

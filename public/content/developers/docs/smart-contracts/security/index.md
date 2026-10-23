@@ -74,7 +74,7 @@ contract VendingMachine {
 
 The immutability of code running in the [Ethereum Virtual Machine](/developers/docs/evm/) means smart contracts demand a higher level of quality assessment during the development phase. Testing your contract extensively and observing it for any unexpected results will improve security a great deal and protect your users in the long run.
 
-The usual method is to write small unit tests using mock data that the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing) is good for testing the functionality of certain functions and ensuring a smart contract works as expected.
+The usual method is to write small unit tests using mock data that the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) is good for testing the functionality of certain functions and ensuring a smart contract works as expected.
 
 Unfortunately, unit testing is minimally effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for mock data, but unit tests are only as effective as the tests that are written. This makes it difficult to detect missed edge cases and vulnerabilities that could break the safety of your smart contract.
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### How to prevent integer underflows and overflows
 
-As of version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) that checks for underflow/overflow.
+As of version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) that checks for underflow/overflow.
 
 #### Oracle manipulation {#oracle-manipulation}
 
@@ -566,8 +566,6 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
 

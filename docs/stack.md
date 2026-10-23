@@ -12,7 +12,7 @@
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [shadcn/ui](https://ui.shadcn.com/) - Component library built on Radix UI and Tailwind CSS
 - [Radix UI](https://www.radix-ui.com/) - Accessible component primitives
-- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./site-search.md).
+- [Typesense](https://typesense.org/) - Self-hosted site search, one index per locale. [Learn more on how we implement site search](./site-search.md).
   - Primary implementation: `/src/components/Search/index.tsx`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking

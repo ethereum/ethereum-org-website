@@ -19,8 +19,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
 
-import StakingCommunityCallout from "../staking/_components/StakingCommunityCallout"
-
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping, TopicLayout } from "@/layouts"
@@ -72,11 +70,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   if (topicConfig) {
-    const afterContent =
-      layout === "staking" ? (
-        <StakingCommunityCallout className="my-16" />
-      ) : undefined
-
     return (
       <>
         <SlugJsonLD
@@ -84,6 +77,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
           slug={slug}
           frontmatter={frontmatter}
           contributors={contributors}
+          layout={layout}
         />
         <I18nProvider locale={locale} messages={messages}>
           <TopicLayout
@@ -96,7 +90,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
             config={topicConfig}
           >
             {content}
-            {afterContent}
           </TopicLayout>
         </I18nProvider>
       </>
@@ -112,6 +105,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
         slug={slug}
         frontmatter={frontmatter}
         contributors={contributors}
+        layout={layout}
       />
       <I18nProvider locale={locale} messages={messages}>
         <Layout

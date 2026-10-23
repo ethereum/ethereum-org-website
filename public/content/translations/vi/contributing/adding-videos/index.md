@@ -4,9 +4,7 @@ description: "Chính sách thêm video vào ethereum.org"
 lang: vi
 ---
 
-# Thêm video {#adding-videos}
-
-Thư viện [video của ethereum.org](/videos/) giới thiệu các video về Ethereum và hệ sinh thái Ethereum từ những nhà sáng tạo trong cộng đồng và các nguồn đáng tin cậy. Bất kỳ ai cũng có thể đề xuất thêm video.
+[Thư viện video của ethereum.org](/videos/) giới thiệu các video về Ethereum và hệ sinh thái Ethereum từ những nhà sáng tạo trong cộng đồng và các nguồn đáng tin cậy. Bất kỳ ai cũng có thể đề xuất thêm video.
 
 ## Chính sách niêm yết {#listing-policy}
 
@@ -14,27 +12,25 @@ Ethereum.org là một tài nguyên giáo dục trung lập. Thư viện video �
 
 - **Giáo dục** người dùng về công nghệ, hệ sinh thái và cộng đồng Ethereum
 - **Đảm bảo tính chính xác** trong nội dung kỹ thuật
-- **Duy trì sự phù hợp** với cộng đồng Ethereum
+- **Duy trì sự liên quan** đến cộng đồng Ethereum
 
 Trang web không niêm yết các video chủ yếu quảng bá cho một sản phẩm, token hoặc dịch vụ thương mại cụ thể.
 
-
 ## Tiêu chí đưa vào {#criteria-for-inclusion}
 
-### Yêu cầu bắt buộc {#must-haves}
+### Bắt buộc phải có {#must-haves}
 
-- **Tập trung vào Ethereum** – Video phải chủ yếu nói về Ethereum, công nghệ, hệ sinh thái hoặc cộng đồng của nó. Các video về chủ đề chuỗi khối (blockchain) nói chung chỉ được chấp nhận nếu chúng hỗ trợ đáng kể hoặc liên quan đến một trang giáo dục trên trang web, hoặc có nhắc đến Ethereum.
+- **Tập trung vào Ethereum** – Video phải chủ yếu nói về Ethereum, công nghệ, hệ sinh thái hoặc cộng đồng của nó. Các video về chủ đề chuỗi khối nói chung chỉ được chấp nhận nếu chúng hỗ trợ đáng kể hoặc liên quan đến một trang giáo dục trên trang web, hoặc có nhắc đến Ethereum.
 - **Giá trị giáo dục** – Video nên dạy cho người xem điều gì đó về Ethereum, hoặc tôn vinh cộng đồng Ethereum toàn cầu. Nội dung quảng cáo hoặc tiếp thị sẽ không được chấp nhận.
-- **Thông tin chính xác** – Nội dung kỹ thuật phải chính xác về mặt thực tế và được cập nhật. Các video lỗi thời về các tính năng đã bị loại bỏ có thể bị xóa.
-- **Chất lượng sản xuất** – Video nên có chất lượng âm thanh và hình ảnh rõ ràng ở mức hợp lý.
+- **Thông tin chính xác** – Nội dung kỹ thuật phải chính xác về mặt thực tế và được cập nhật. Các video lỗi thời về các tính năng đã bị loại bỏ có thể bị gỡ xuống.
+- **Chất lượng sản xuất** – Video phải có chất lượng âm thanh và hình ảnh tương đối rõ nét.
 - **Công khai** – Video phải được lưu trữ trên một tài nguyên mở hoặc nền tảng dễ tiếp cận như YouTube, và có thể truy cập miễn phí mà không yêu cầu trả phí (paywall) hoặc đăng ký.
 
-### Điểm cộng {#nice-to-haves}
+### Khuyến khích có {#nice-to-haves}
 
-- **Có bản chép lời (transcript)** – Video có bản chép lời giúp cải thiện khả năng tiếp cận và SEO. Nếu bạn không có, đội ngũ ethereum.org có thể hỗ trợ tạo một bản.
+- **Có bản chép lời (transcript)** – Video có bản chép lời sẽ cải thiện khả năng tiếp cận và SEO. Nếu bạn không có, đội ngũ ethereum.org có thể hỗ trợ tạo một bản.
 - **Từ nguồn đáng tin cậy** – Nội dung từ các nhà giáo dục, nhà nghiên cứu và các nguồn đã được khẳng định uy tín sẽ được ưu tiên.
-- **Có giá trị lâu dài** – Nội dung duy trì được sự phù hợp theo thời gian (evergreen) được ưu tiên hơn so với tài liệu có tính thời điểm.
-
+- **Có giá trị lâu dài (evergreen)** – Nội dung duy trì được sự liên quan theo thời gian được ưu tiên hơn so với tài liệu có tính thời sự ngắn hạn.
 
 ## Cách thêm video {#how-to-add-a-video}
 
@@ -48,7 +44,7 @@ Nếu bạn muốn đề xuất một video nhưng không muốn tự tạo tệ
 
 ### Lựa chọn 2: Mở một pull request {#open-a-pull-request}
 
-Nếu bạn muốn tự mình thêm video, hãy làm theo các bước sau:
+Nếu bạn muốn tự thêm video, hãy làm theo các bước sau:
 
 #### Bước 1: Tạo tệp video {#step-1}
 
@@ -86,13 +82,13 @@ author: Channel Name
 | Trường | Bắt buộc | Mô tả |
 |---|---|---|
 | `title` | Có | Tiêu đề video |
-| `description` | Có | Tóm tắt 1–3 câu |
+| `description` | Có | Tóm tắt từ 1–3 câu |
 | `lang` | Có | Hiện tại luôn là `en` |
 | `youtubeId` | Có | ID video YouTube (từ URL sau `v=`) |
 | `uploadDate` | Có | Ngày tải lên ban đầu theo định dạng `YYYY-MM-DD` |
 | `duration` | Có | Độ dài video dưới dạng `H:MM:SS` hoặc `M:SS` |
 | `educationLevel` | Có | `beginner`, `intermediate`, hoặc `advanced` |
-| `topic` | Có | Mảng các thẻ chủ đề (topic tags) để lọc thư viện |
+| `topic` | Có | Mảng các thẻ chủ đề để lọc trong thư viện |
 | `format` | Có | `explainer`, `presentation`, `interview`, `tutorial`, hoặc `panel` |
 | `author` | Có | Tên người sáng tạo hoặc kênh |
 | `breadcrumb` | Không | Nhãn ngắn tùy chỉnh cho điều hướng breadcrumb |
@@ -121,12 +117,33 @@ Thêm văn bản chép lời...
 
 Sử dụng các tiêu đề `###` kèm theo dấu thời gian để đánh dấu các phần chính. Điều này giúp bản chép lời dễ đọc lướt hơn và cải thiện SEO.
 
-Nếu bạn không có bản chép lời, bạn có thể để trống phần thân (body) và đội ngũ sẽ tạo một bản.
+Nếu bạn không có bản chép lời, bạn có thể để trống phần thân và đội ngũ sẽ tạo một bản.
+
+#### Bước 4: Chọn thẻ chủ đề {#step-4}
+
+Chọn các thẻ chủ đề từ danh sách bên dưới. Mỗi thẻ ánh xạ trực tiếp đến một danh mục bộ lọc trong thư viện video — hãy sử dụng tên thẻ chính xác như được hiển thị.
+
+Một video có thể có nhiều thẻ để xuất hiện trong nhiều bộ lọc của thư viện:
+
+| Thẻ | Bộ lọc thư viện |
+|---|---|
+| `how-ethereum-works` | Cách Ethereum hoạt động |
+| `network-upgrades` | Nâng cấp mạng lưới |
+| `roadmap-and-priorities` | Lộ trình & ưu tiên |
+| `scaling-and-layer-2` | Mở rộng quy mô & lớp 2 (l2) |
+| `use-cases` | Các trường hợp sử dụng |
+| `privacy` | Quyền riêng tư |
+| `security` | Bảo mật |
+| `community-stories` | Câu chuyện cộng đồng |
+| `events` | Sự kiện |
+
+Mỗi video nên có ít nhất một thẻ từ danh sách này. Các video không có thẻ được công nhận sẽ chỉ xuất hiện trong chế độ xem "Tất cả" và kết quả tìm kiếm.
+
+Thẻ `community-stories` cũng làm cho video xuất hiện trên [trang Câu chuyện](/stories/).
 
 #### Bước 5: Gửi PR của bạn {#step-5}
 
 Mở một pull request với các thay đổi của bạn vào nhánh `dev`. Đội ngũ sẽ xem xét nội dung bạn gửi và cung cấp phản hồi.
-
 
 ## Bảo trì {#maintenance}
 
@@ -134,11 +151,10 @@ Các video được niêm yết sẽ được xem xét định kỳ để đảm
 
 - Vẫn đáp ứng các tiêu chí niêm yết
 - Chứa thông tin chính xác, cập nhật
-- Có các liên kết lưu trữ/YouTube vẫn hoạt động
+- Có các liên kết lưu trữ/YouTube hoạt động bình thường
 
 Nếu bạn nhận thấy sự cố với một video được niêm yết, hãy [tạo một issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) hoặc gửi email đến [website@ethereum.org](mailto:website@ethereum.org).
 
-
 ## Điều khoản sử dụng {#terms-of-use}
 
-Vui lòng tham khảo [điều khoản sử dụng](/terms-of-use/) của ethereum.org. Thông tin trên ethereum.org được cung cấp chỉ nhằm mục đích thông tin chung.
+Vui lòng tham khảo [điều khoản sử dụng](/terms-of-use/) của ethereum.org. Thông tin trên ethereum.org được cung cấp hoàn toàn cho mục đích thông tin chung.

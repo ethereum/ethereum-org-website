@@ -20,9 +20,9 @@ lang: zh-tw
 
 在深入了解框架之前，我們建議您先閱讀我們對[去中心化應用程式 (dapp)](/developers/docs/dapps/)和[以太坊堆疊](/developers/docs/ethereum-stack/)的簡介。
 
-## 可用的框架
+## 可用的框架 {#available-frameworks}
 
-**Foundry** - **_Foundry 是一個極速、可攜式且模組化的以太坊應用程式開發工具包_**
+**Foundry** - **_Foundry 是一個極快、可攜式且模組化的以太坊應用程式開發工具包_**
 
 - [安裝 Foundry](https://book.getfoundry.sh/)
 - [Foundry 手冊](https://book.getfoundry.sh/)
@@ -45,13 +45,13 @@ lang: zh-tw
 - [文件](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_適用於基於 EVM 區塊鏈的非同步、高效能 Kotlin/Java/Android 函式庫。_**
+**ethers-kt -** **_適用於基於以太坊虛擬機 (EVM) 區塊鏈的非同步、高效能 Kotlin/Java/Android 函式庫。_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [範例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_只需一個指令即可建立由以太坊驅動的應用程式。提供多種 UI 框架和去中心化金融 (DeFi) 範本可供選擇。_**
+**Create Eth App -** **_只需一個指令即可建立由以太坊驅動的應用程式。提供多種使用者介面 (UI) 框架和去中心化金融 (DeFi) 範本可供選擇。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [範本](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -61,7 +61,7 @@ lang: zh-tw
 - [網站](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 開發平台，讓區塊鏈開發者能夠建置、測試、除錯、監控和操作智能合約，並改善 dapp 的使用者體驗。_**
+**Tenderly -** **_Web3 開發平台，讓區塊鏈開發者能夠建置、測試、除錯、監控和操作智能合約，並改善去中心化應用程式 (dapp) 的使用者體驗 (UX)。_**
 
 - [網站](https://tenderly.co/)
 - [文件](https://docs.tenderly.co/)
@@ -83,7 +83,7 @@ lang: zh-tw
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_使用我們強大的 SDK 和 CLI 建置可與您的智能合約互動的 Web3 應用程式。_**
+**thirdweb SDK -** **_使用我們強大的軟體開發套件 (SDK) 和命令列介面 (CLI)，建置可與您的智能合約互動的 Web3 應用程式。_**
 
 - [文件](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -94,7 +94,7 @@ lang: zh-tw
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_企業級 Web3 開發平台，讓您能在所有主要鏈、EVM 鏈（及其他鏈）上建置 NFT 應用程式。_**
+**Crossmint -** **_企業級 Web3 開發平台，讓您能在所有主要鏈、以太坊虛擬機 (EVM) 鏈（及其他鏈）上建置非同質化代幣 (NFT) 應用程式。_**
 
 - [網站](https://www.crossmint.com)
 - [文件](https://docs.crossmint.com)
@@ -108,16 +108,15 @@ lang: zh-tw
 
 **歐本齊柏林 SDK -** **_終極智能合約工具包：一套協助您開發、編譯、升級、部署及與智能合約互動的工具。_**
 
-- [歐本齊柏林 Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [社群論壇](https://forum.openzeppelin.com/c/support/17)
 - **歐本齊柏林 SDK 開發已結束**
 
-**Catapulta -** **_多鏈智能合約部署工具，可在區塊鏈瀏覽器中自動驗證、追蹤已部署的智能合約並分享部署報告，為 Foundry 和 Hardhat 專案提供隨插即用的支援。_**
+**Catapulta -** **_多鏈智能合約部署工具，可自動在區塊鏈瀏覽器中進行驗證、追蹤已部署的智能合約並分享部署報告，支援 Foundry 和 Hardhat 專案隨插即用。_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush（由 Covalent 提供技術支援）-** **_GoldRush 為開發者、分析師和企業提供最全面的區塊鏈資料 API 套件。無論您是要建置 DeFi 儀表板、錢包、交易機器人、AI 代理還是合規平台，這些資料 API 都能提供快速、準確且對開發者友善的存取方式，讓您取得所需的關鍵鏈上資料_**
+**GoldRush（由 Covalent 提供技術支援）-** **_GoldRush 為開發者、分析師和企業提供最全面的區塊鏈資料應用程式介面 (API) 套件。無論您是要建置去中心化金融 (DeFi) 儀表板、錢包、交易機器人、AI 代理還是合規平台，這些資料 API 都能提供快速、準確且對開發者友善的存取方式，讓您取得所需的關鍵鏈上資料_**
 
 - [網站](https://goldrush.dev/)
 - [文件](https://goldrush.dev/docs/chains/ethereum)
@@ -131,7 +130,7 @@ lang: zh-tw
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 擴充功能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_開源、模組化且與平台無關的框架，讓去中心化應用程式 (dapp) 開發者能輕鬆地將去中心化身分和可驗證憑證建置到他們的應用程式中。_**
+**Veramo -** **_開源、模組化且與平台無關的框架，讓去中心化應用程式 (dapp) 開發者能輕鬆將去中心化身分和可驗證憑證建置到他們的應用程式中。_**
 
 - [首頁](https://veramo.io/)
 - [文件](https://veramo.io/docs/basics/introduction)
@@ -139,10 +138,11 @@ lang: zh-tw
 - [Discord](https://discord.com/invite/FRRBdjemHV)
 - [NPM 套件](https://www.npmjs.com/package/@veramo/core)
 
-**Moccasin -** **_基於 Titanoboa 建置，專為 Vyper 打造的快速、具 Python 風格的智能合約開發與測試框架。_**
+**Moccasin -** **_一個基於 Titanoboa 建置，專為 Vyper 打造的快速、具 Python 風格的智能合約開發與測試框架。_**
 
 - [文件](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## 延伸閱讀 {#further-reading}
 
 _知道有什麼社群資源對您有幫助嗎？編輯此頁面並加入它！_

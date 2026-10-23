@@ -86,7 +86,7 @@ Suchen Sie nach zukünftigen Protokoll-Upgrades? [Erfahren Sie mehr über ansteh
 
 [Mehr zu Fusaka](/roadmap/fusaka/)
 
-### Prague-Electra („Pectra“)
+### Prague-Electra („Pectra“) {#pectra}
 <NetworkUpgradeSummary name="pectra" />
 
 Das Prague-Electra-Upgrade („Pectra“) umfasste mehrere Verbesserungen am Ethereum-Protokoll, die darauf abzielten, die Erfahrung für alle Nutzer, Layer-2-Netzwerke, Staker und Knotenbetreiber zu verbessern.

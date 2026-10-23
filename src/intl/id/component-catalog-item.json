@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "Tentang {name}",
+  "catalog-item-gallery-modal-title": "Tangkapan Layar {name}",
+  "catalog-item-gallery-screenshot-alt": "Tangkapan Layar {index} dari {name}",
+  "catalog-item-gallery-title": "Galeri",
+  "catalog-item-info-title": "Info",
+  "catalog-item-link-label": "{name} di {platform}",
+  "catalog-item-see-next": "Lihat selanjutnya",
+  "catalog-item-source-code": "Kode sumber",
+  "catalog-item-view-on-github": "Lihat di GitHub",
+  "catalog-item-visit-website": "Kunjungi situs web"
+}

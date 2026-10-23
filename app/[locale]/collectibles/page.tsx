@@ -19,39 +19,26 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
-import { COLLECTIBLES_BASE_URL } from "./constants"
 import CollectiblesJsonLD from "./page-jsonld"
-import type { Badge, Stats } from "./types"
 
+import { getCollectiblesData } from "@/lib/data"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 
-// API endpoints
-const BADGES_API = `${COLLECTIBLES_BASE_URL}/api/badges`
-const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
-
-// Data fetching
-async function fetchBadges() {
-  const res = await fetch(BADGES_API, { cache: "force-cache" })
-  if (!res.ok) throw new Error("Failed to fetch badges")
-  return res.json()
-}
-async function fetchStats() {
-  const res = await fetch(STATS_API, { cache: "force-cache" })
-  if (!res.ok) throw new Error("Failed to fetch stats")
-  return res.json()
+const EMPTY_COLLECTIBLES = {
+  badges: [],
+  stats: { collectorsCount: 0, uniqueAddressesCount: 0, collectiblesCount: 0 },
 }
 
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations("page-collectibles")
+
   setRequestLocale(locale)
 
+  const t = await getTranslations("page-collectibles")
+
   // Fetch data
-  const [badges, stats]: [Badge[], Stats] = await Promise.all([
-    fetchBadges(),
-    fetchStats(),
-  ])
+  const { badges, stats } = (await getCollectiblesData()) ?? EMPTY_COLLECTIBLES
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -75,7 +62,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         <MainArticle className="space-y-12 pb-24 md:space-y-20">
           <HubHero
             heroImg={communityHeroImg}
-            title={t("page-collectibles-hero-title")}
+            breadcrumbs={{ slug: "collectibles" }}
             header={t("page-collectibles-hero-header")}
             description={t("page-collectibles-hero-description")}
           />

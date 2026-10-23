@@ -1,6 +1,6 @@
 ---
 title: Dapp Development Frameworks
-description: Explore the advantages of frameworks and compare available options.
+description: "Compare Ethereum development frameworks like Foundry and Hardhat. Learn what a framework gives you for compiling, testing and deploying smart contracts."
 lang: en
 ---
 
@@ -77,7 +77,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)
-- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Documentation](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_Ethereum Development Platform._**
 
@@ -116,7 +116,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
@@ -162,4 +161,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Tutorials: Development frameworks on Ethereum {#tutorials}
 
-- [Hello World Smart Contract for Beginners – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Build and deploy a hello world smart contract using Hardhat, then connect it to a frontend._
+- [Hello World Smart Contract for Beginners](/developers/tutorials/hello-world-smart-contract/) _– Build and deploy a hello world smart contract using Hardhat._

@@ -91,3 +91,5 @@ EVMのすべての実装は、イーサリアムのイエロー・ペーパー�
 
 - [イエロー・ペーパーのEVM仕様を理解する](/developers/tutorials/yellow-paper-evm/) _– イーサリアムのイエロー・ペーパーに記載されている正式なEVM仕様のガイド付きウォークスルー。_
 - [コントラクトのリバースエンジニアリング](/developers/tutorials/reverse-engineering-a-contract/) _– EVMオペコードを使用してコンパイルされたスマート・コントラクトをリバースエンジニアリングする方法。_
+
+<QuizWidget quizKey="evm" />

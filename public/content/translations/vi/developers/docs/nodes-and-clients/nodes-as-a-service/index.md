@@ -209,7 +209,7 @@ Dưới đây là danh sách một số nhà cung cấp nút Ethereum phổ bi�
     - Quyền truy cập vào hơn 50 nút Chuỗi khối
 
 - [**Infura**](https://infura.io/)
-  - [Tài liệu](https://infura.io/docs)
+  - [Tài liệu](https://docs.infura.io/)
   - Tính năng
     - Tùy chọn gói miễn phí
     - Mở rộng quy mô theo nhu cầu

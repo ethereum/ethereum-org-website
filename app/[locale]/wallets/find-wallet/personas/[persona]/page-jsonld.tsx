@@ -1,0 +1,108 @@
+import { getTranslations } from "next-intl/server"
+
+import PageJsonLD from "@/components/PageJsonLD"
+
+import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import type { CatalogWallet } from "@/lib/utils/walletData"
+
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
+import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
+
+type Persona = {
+  id: string
+  titleKey: string
+  descKey: string
+  metaTitleKey: string
+  metaDescKey: string
+}
+
+export default async function PersonaPageJsonLD({
+  locale,
+  persona,
+  wallets,
+}: {
+  locale: string
+  persona: Persona
+  wallets: CatalogWallet[]
+}) {
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
+
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/wallets/find-wallet/personas/${persona.id}/`
+  )
+  // Matches the page <title>; short titleKey stays the crumb leaf.
+  const name = t(persona.metaTitleKey)
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ...BASE_GRAPH_NODES,
+      {
+        "@type": "CollectionPage",
+        "@id": url,
+        name,
+        description: t(persona.metaDescKey),
+        image: normalizeUrlForJsonLd(
+          undefined,
+          "/images/wallets/wallet-hero.png"
+        ),
+        url,
+        inLanguage: locale,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/wallets/find-wallet/personas/${persona.id}`,
+          t(persona.titleKey)
+        ),
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: { "@id": `${url}#wallet-list` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#wallet-list`,
+        name,
+        description: t(persona.descKey),
+        numberOfItems: wallets.length,
+        // Wallets are shuffled within locale groups, so positions are not a ranking.
+        itemListOrder: "https://schema.org/ItemListUnordered",
+        itemListElement: wallets.map((wallet, index) => {
+          const detailUrl = normalizeUrlForJsonLd(
+            locale,
+            `/wallets/find-wallet/${wallet.slug}/`
+          )
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "SoftwareApplication",
+              // Same node as the detail page's, so a wallet is one entity
+              // across the index, its persona pages, and its own page.
+              "@id": `${detailUrl}#wallet`,
+              name: wallet.name,
+              ...(wallet.descriptionStripped && {
+                description: wallet.descriptionStripped,
+              }),
+              url: wallet.url,
+              ...WALLET_APPLICATION_CATEGORY,
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+            },
+          }
+        }),
+      },
+    ],
+  }
+
+  return <PageJsonLD structuredData={jsonLd} />
+}

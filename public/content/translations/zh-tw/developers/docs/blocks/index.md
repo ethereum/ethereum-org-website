@@ -88,7 +88,7 @@ _圖表改編自[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/e
 | 欄位               | 描述                                                         |
 | :------------------ | :------------------------------------------------------------------ |
 | `parent_hash`       | 父區塊的雜湊                                            |
-| `fee_recipient`     | 支付交易費用的帳戶地址                      |
+| `fee_recipient`     | 接收交易費用的帳戶地址                      |
 | `state_root`        | 套用此區塊變更後的全域狀態根雜湊 |
 | `receipts_root`     | 交易收據 Trie 的雜湊                               |
 | `logs_bloom`        | 包含事件日誌的資料結構                                |
@@ -108,7 +108,7 @@ _圖表改編自[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/e
 | 欄位              | 描述                                                         |
 | :----------------- | :------------------------------------------------------------------ |
 | `parent_hash`      | 父區塊的雜湊                                            |
-| `fee_recipient`    | 支付交易費用的帳戶地址                      |
+| `fee_recipient`    | 接收交易費用的帳戶地址                      |
 | `state_root`       | 套用此區塊變更後的全域狀態根雜湊 |
 | `receipts_root`    | 交易收據 Trie 的雜湊                               |
 | `logs_bloom`       | 包含事件日誌的資料結構                                |
@@ -151,3 +151,5 @@ _知道有什麼社群資源對你有幫助嗎？編輯此頁面並加入它！_
 - [交易](/developers/docs/transactions/)
 - [燃料](/developers/docs/gas/)
 - [權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

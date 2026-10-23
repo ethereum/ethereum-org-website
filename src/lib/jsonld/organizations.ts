@@ -157,6 +157,33 @@ export const KNOWN_ORGANIZATIONS = {
     ],
   },
 
+  "trail-of-bits": {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#trail-of-bits",
+    name: "Trail of Bits",
+    url: "https://www.trailofbits.com/",
+    sameAs: ["https://github.com/trailofbits"],
+  },
+
+  tellor: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#tellor",
+    name: "Tellor",
+    url: "https://tellor.io/",
+    sameAs: ["https://github.com/tellor-io"],
+  },
+
+  "ethereum-on-arm": {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#ethereum-on-arm",
+    name: "Ethereum on ARM",
+    url: "https://ethereum-on-arm-documentation.readthedocs.io/",
+    sameAs: [
+      "https://github.com/EthereumOnArm",
+      "https://github.com/EOA-Blockchain-Labs/ethereumonarm",
+    ],
+  },
+
   /**
    * Publishers of externally-hosted reports surfaced on /reports
    */

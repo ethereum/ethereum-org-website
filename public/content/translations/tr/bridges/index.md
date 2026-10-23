@@ -1,7 +1,7 @@
 ---
-title: Blokzincir köprüleri
-metaTitle: Blokzincir köprülerine giriş
-description: Köprüler, kullanıcıların fonlarını farklı blokzincirler arasında taşımasına olanak tanır
+title: "Blokzincir köprüleri"
+metaTitle: "Blokzincir köprülerine giriş"
+description: "Köprüler, kullanıcıların fonlarını farklı blokzincirler arasında taşımasına olanak tanır"
 lang: tr
 ---
 
@@ -135,8 +135,11 @@ Köprüler, kullanıcıların Ethereum L2'lerine sisteme katılımı ve hatta fa
 <Divider />
 
 ## İleri okuma {#further-reading}
+
 - [EIP-5164: Zincirler Arası Yürütme](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 Haziran 2022 - Brendan Asselstine_
 - [L2Bridge Risk Çerçevesi](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 Temmuz 2022 - Bartek Kiepuszewski_
 - ["Gelecek neden çok zincirli olacak, ancak zincirler arası olmayacak."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 Ocak 2022 - Vitalik Buterin_
 - [Güvenli Zincirler Arası Birlikte Çalışabilirlik İçin Paylaşılan Güvenlikten Yararlanma: Lagrange Durum Komiteleri ve Ötesi](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Haziran 2024 - Emmanuel Awosika_
 - [Rollup Birlikte Çalışabilirlik Çözümlerinin Durumu](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Haziran 2024 - Alex Hook_
+
+<QuizWidget quizKey="bridges" />

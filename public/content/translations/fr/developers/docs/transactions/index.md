@@ -178,7 +178,7 @@ Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'uti
 
 Du gaz est requis pour toute transaction impliquant un contrat intelligent.
 
-Les contrats intelligents peuvent également contenir des fonctions appelées fonctions [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), qui ne modifient pas l'état du contrat. En tant que tel, l'appel de ces fonctions depuis un compte détenu par un tiers (EOA) ne nécessitera aucun gaz. L'appel RPC sous-jacent pour ce scénario est [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Les contrats intelligents peuvent également contenir des fonctions appelées fonctions [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), qui ne modifient pas l'état du contrat. En tant que tel, l'appel de ces fonctions depuis un compte détenu par un tiers (EOA) ne nécessitera aucun gaz. L'appel RPC sous-jacent pour ce scénario est [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Contrairement à un accès via `eth_call`, ces fonctions `view` ou `pure` sont aussi couramment appelées en interne (c'est-à-dire depuis le contrat lui-même ou depuis un autre contrat), ce qui coûte du gaz.
 
@@ -240,3 +240,7 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 - [Comptes](/developers/docs/accounts/)
 - [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

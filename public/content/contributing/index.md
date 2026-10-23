@@ -43,7 +43,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
 - [Add a resource](/contributing/adding-resources/) – Add a useful resource to any relevant page
 
-Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
+Any questions? 🤔 Join our [Discord server](/discord/)
 
 ## Good first tasks to start contributing {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +62,7 @@ All updates are made via the GitHub PR process. This means you create a local co
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaging on our [Discord server](https://discord.gg/ethereum-org)
+- Messaging on our [Discord server](/discord/)
 
 Before contributing, make sure you're familiar with:
 
@@ -77,7 +77,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord server](https://discord.gg/ethereum-org)
+- [Discord server](/discord/)
 
 ### A note on plagiarism {#plagiarism}
 
@@ -94,7 +94,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 [More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### How to claim {#how-to-claim}
-1. Join our [Discord server](https://discord.gg/ethereum-org).
+1. Join our [Discord server](/discord/).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
 4. Claim your OAT!

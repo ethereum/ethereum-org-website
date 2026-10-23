@@ -33,7 +33,6 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
       <PageHero
         breadcrumbs={{
           slug: "/contributing/translation-program/translatathon/leaderboard",
-          startDepth: 1,
         }}
         heroImg={heroImg}
         title="2025 Ethereum.org Translatathon"
@@ -64,7 +63,12 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["translatathon"],
+    slug: [
+      "contributing",
+      "translation-program",
+      "translatathon",
+      "leaderboard",
+    ],
     title: "2025 Ethereum.org Translatathon",
     description: "2025 Ethereum.org Translatathon",
   })

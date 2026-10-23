@@ -19,7 +19,7 @@ Epizoda 141 pořadu **PEEPanEIP** od Ethereum Cat Herders. K moderátorce Pooje 
 
 *Tento přepis je přístupnou kopií [původního přepisu videa](https://www.youtube.com/watch?v=cUGyLx-mf6I) zveřejněného skupinou Ethereum Cat Herders. Pro lepší čitelnost byl lehce upraven.*
 
-#### Úvod (0:35) {#introduction-035}
+### Úvod (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Dobrý den a vítejte u PEEPanEIP, jedinečného pořadu, kde se podrobně věnujeme návrhům na vylepšení Etherea (Ethereum Improvement Proposals) a zkoumáme jejich dopad na ekosystém. Toto je 141. epizoda, kterou vám přináší Ethereum Cat Herders. Jsem vaše moderátorka Pooja Ranjan a dnes se budeme bavit o EIP-7805, seznamech pro zahrnutí vynucených volbou forku (Fork-choice enforced Inclusion Lists).
 
@@ -33,7 +33,7 @@ V této epizodě prozkoumáme podrobnosti EIP-7805, jeho důsledky a potenciáln
 
 **Pooja Ranjan:** Těšíme se, až se dozvíme přehled o tomto návrhu, v jaké fázi se dnes nachází a jak brzy ho můžeme vidět na Ethereum Mainnetu. Než ale začneme, naše komunita ráda poznává výzkumníky a vývojáře, kteří za touto prací stojí. Mohli byste se s námi podělit o něco málo o sobě, o projektu, do kterého jste momentálně zapojeni, a o vaší cestě ekosystémem Etherea?
 
-#### Představení hostů (2:14) {#guest-introductions-214}
+### Představení hostů (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Jasně, můžu začít. Jsem Julian, výzkumník ve skupině Robust Incentives Group, stejně jako Thomas, v Nadaci Ethereum. Skupina Robust Incentives Group se velmi široce zabývá ekonomií protokolu. Někteří z nás se zabývali mechanismy transakčních poplatků, jako je EIP-1559, a další se zaměřili na útoky na vrstvu konsensu, většinou ty motivované ekonomickými pobídkami.
 
@@ -45,7 +45,7 @@ Pracoval jsem na podobných tématech. Když jsem nastoupil, MEV bylo docela vel
 
 **Pooja Ranjan:** Děkuji za sdílení. Je vždy inspirativní dozvědět se něco o minulosti vývojářů. Je zajímavé vidět, že pocházejí z různých oborů a nakonec přispívají do ekosystému Etherea. Chápu, že tu dnes máme prezentaci. Takže bez dalších okolků, pojďme se na ni podívat.
 
-#### Prezentace: cíle FOCIL (5:16) {#presentation-goals-of-focil-516}
+### Prezentace: cíle FOCIL (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Skvělé, moc vám děkuji. Rád bych začal krátkou prezentací o tom, jak EIP-7805, neboli FOCIL, funguje a proč přesně to chceme udělat. Má to sloužit k zahájení konverzace, takže to nebude příliš do hloubky, abychom nechali prostor pro následnou diskuzi.
 
@@ -53,7 +53,7 @@ Hlavním cílem FOCIL je zvýšit důvěryhodnou neutralitu Etherea. FOCIL toho 
 
 Cílem na vyšší úrovni je usilovat o vlastnost, kterou nazýváme neutralita řetězce. To znamená, že jakákoli čekající transakce platící poplatek by měla být zahrnuta, pokud je k dispozici a pokud je onchain místo pro její zahrnutí. Věříme, že pokud je tato vlastnost dostatečně splněna, zvýšíme tím důvěryhodnou neutralitu Etherea.
 
-#### Proč potřebujeme FOCIL a proč právě teď? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Proč potřebujeme FOCIL a proč právě teď? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Proč něco takového potřebujeme? V současnosti téměř všichni validátoři outsourcují tvorbu bloků do MEV-Boost, což je trh mimo protokol, kde tvůrci přihazují na práva k tvorbě bloků. Na tomto trhu skutečně dominují pouze dva subjekty, což znamená, že 90 % bloků tvoří pouze tyto dva subjekty.
 
@@ -65,7 +65,7 @@ Dále se v dnešní době stávají stále populárnějšími tzv. based rollupy
 
 A potenciálně by FOCIL mohl pomoci se škálováním, záleží na tom, koho se zeptáte. Dnes Ethereum stále čerpá svou odolnost vůči cenzuře z lokální tvorby bloků. Pokud by Ethereum mohlo čerpat odolnost vůči cenzuře odjinud, například prostřednictvím FOCIL, pak bychom možná mohli zvýšit očekávání, která máme od tvůrců bloků, a povolit například více blobů. Ale potenciálně by to šlo udělat i bez FOCIL. Proto bylo navrženo implementovat FOCIL ve Fusaka.
 
-#### Jak funguje FOCIL (8:10) {#how-focil-works-810}
+### Jak funguje FOCIL (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Nyní vás provedu tím, jak FOCIL funguje. Začneme od základů a půjdeme krok za krokem, dokud nebudeme mít celý mechanismus, a pak prozkoumáme, jak tento kompletní mechanismus splňuje vlastnosti, které požadujeme.
 
@@ -79,7 +79,7 @@ Pak přejdeme k poslednímu kroku, kterým je vynucování. Jak jsem řekl, vynu
 
 Abychom si shrnuli celý mechanismus: v každém slotu je vybráno 16 členů výboru jako členů výboru pro seznamy pro zahrnutí. Ti sledují mempool a vytvářejí objekty seznamů pro zahrnutí, které distribuují přes globální téma před uplynutím lhůty, v tomto případě do 9. sekundy. Tvůrce tyto seznamy pro zahrnutí sleduje a zahrne všechny transakce, které viděl, do svého bloku. Atestátoři pak zkontrolují, zda jsou všechny transakce, které viděli před 9. sekundou v seznamech pro zahrnutí, skutečně v bloku. Pokud tato kontrola projde, dají bloku hlas a přesuneme se k dalšímu slotu, kde se celé toto nastavení opakuje.
 
-#### IL Boost a uncrowdability (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost a uncrowdability (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Jednou z velkých obav ohledně seznamů zahrnutí (inclusion lists), kterou vyjádřil Mike u předchozího EIP a která zaznívala i během následného vývoje, je „IL Boost“, neboli uncrowdability. Odkazuje to na skutečnost, že navrhovatelé seznamu zahrnutí by mohli chtít prodat svá práva na jeho vytvoření. Je to velmi logická obava, protože to samé vidíme u tvorby bloků: prodej tohoto práva vede k centralizovanému trhu sofistikovaných tvůrců.
 
@@ -93,7 +93,7 @@ A konečně, tyto seznamy zahrnutí se vytvářejí 3 sekundy předtím, než je
 
 Z těchto důvodů se domníváme, že žádný jednotlivý navrhovatel seznamu zahrnutí nemá pravomoc zahrnovat, řadit nebo vylučovat, což je základní definice MEV. Proto by seznamy zahrnutí neměly podléhat MEV.
 
-#### Shrnutí prezentace (13:09) {#summary-of-the-presentation-1309}
+### Shrnutí prezentace (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Abych shrnul tuto rychlou prezentaci: FOCIL umožňuje více validátorům přispívat k tvorbě bloku, čímž zabraňuje monopolu na zahrnutí transakcí ze strany jediného navrhovatele a posiluje důvěryhodnou neutralitu Etherea. Věříme, že je nutné implementovat FOCIL nyní, protože v současnosti existují pouze dva dominantní tvůrci, kteří by mohli kdykoli začít cenzurovat, a to z ekonomických důvodů, ze kterých by mohli těžit. Tvorba bloků by mohla nést větší zátěž, protože based rollupy budou chtít využívat sekvenovací vlastnosti Etherea. Spuštění FOCIL proběhne mnohem hladčeji, když je málo cenzurujících stran: zaprvé proto, že to znamená, že pro validátory je výchozím stavem vytvářet seznamy pro zahrnutí, a zadruhé proto, že to znamená menší nestabilitu trhu mezi tvůrci, kteří cenzurují, a tvůrci, kteří necenzurují. A konečně, FOCIL by mohl potenciálně pomoci se škálováním, což je možná téma, do kterého se můžeme ponořit hlouběji.
 
@@ -101,7 +101,7 @@ Děkuji za čas na tuto krátkou prezentaci. Chtěl jsem jen ukázat QR kód, kt
 
 **Pooja Ranjan:** Moc děkuji za tuto rychlou prezentaci a přehled návrhu.
 
-#### Q&A: Jak se EIP-7805 liší od EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Q&A: Jak se EIP-7805 liší od EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Ráda bych začala sekci Q&A úplně první otázkou ohledně dřívějšího návrhu, který byl také zmíněn ve vaší prezentaci: návrh 7547, seznamy pro zahrnutí (inclusion lists), od Mika Neudera. Chci pochopit základní rozdíl mezi tímto návrhem a FOCIL, který máme u 7805. Ve své prezentaci jste se částečně dotkli IL Boost a nepřeplnitelnosti (uncrowdability). Chtěli byste to možná trochu více vysvětlit?
 
@@ -115,7 +115,7 @@ A pak ještě několik techničtějších detailů: existovaly určité nekompat
 
 **Pooja Ranjan:** Moc vám děkuji. Pro lidi, kteří by se chtěli dozvědět více o návrhu 7547, máme nahranou epizodu s Mikem Neuderem, epizodu 130 PEEPanEIP, která poskytuje přehled na vysoké úrovni. Vždy ráda vidím konkurenční návrhy, protože vím, že je to pro zlepšení ekosystému a řetězce. Vidím, že v chatu je několik otázek. Možná bych ráda pozvala Katayu, aby se podělila o svou otázku.
 
-#### Musí navrhovatel zahrnout všech 16 seznamů? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Musí navrhovatel zahrnout všech 16 seznamů? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Dobrý den, děkuji. Moje otázka zněla: dostane navrhovatel bloku 16 seznamů k zahrnutí, každý od jednoho člena výboru, a musí zahrnout všechny transakce z těchto seznamů?
 
@@ -123,7 +123,7 @@ A pak ještě několik techničtějších detailů: existovaly určité nekompat
 
 **Pooja Ranjan:** Další otázka v chatu je od Justina. Justine, chtěl byste hostům přečíst svou otázku?
 
-#### Transakce ze soukromého mempoolu v seznamech zahrnutí (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Transakce ze soukromého mempoolu v seznamech zahrnutí (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Kladl jsem už tolik otázek. Chtěl jsem se zeptat, co brání vložení transakce ze soukromého mempoolu do seznamu zahrnutí, a myslím, že to bylo docela dobře zodpovězeno. Zní to, že je to naprosto v pořádku, vzhledem k tomu, že tvůrce je v podstatě stejně seřadí, jak uzná za vhodné, a vaše transakce se stane veřejnou, jakmile se dostane na IL. Takže myslím, že to dává smysl. Děkuji.
 
@@ -133,7 +133,7 @@ Takže buď máte veřejnou transakci a můžete ji prostě odeslat do veřejné
 
 **Pooja Ranjan:** Děkuji za sdílení. Vidím, že další otázku má Ladislaus.
 
-#### FOCIL a škálování (21:41) {#focil-and-scaling-2141}
+### FOCIL a škálování (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Ahoj lidi. Tohle se týká bodu, který jste zmínili ohledně FOCIL a škálování. V poslední době jsem, stejně jako my všichni, zaznamenal nějaké diskuze o škálování Etherea, a jak jste správně zmínili, je tu úzké hrdlo v podobě několika málo tvůrců. Osobně rád vnímám FOCIL jako znovuposílení lokální tvorby bloků a vidím to jako nutnost, která by měla být zakotvena v protokolu předtím, než zvýšíme požadavky na šířku pásma nebo požadavky na uzly obecně. Možná byste mohli přiblížit, jak o tom přemýšlíte, a také další potenciální způsoby škálování, možná i bez FOCIL, jak jste zmínili.
 
@@ -151,7 +151,7 @@ Takže si opravdu chceme udržet domácí stakery a lokální tvůrce bloků, pr
 
 **Pooja Ranjan:** Moc vám děkuji. Myslím, že další otázku má Luis.
 
-#### Kritéria pro výběr transakcí (26:46) {#criteria-for-selecting-transactions-2646}
+### Kritéria pro výběr transakcí (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Připojil jsem se pár minut po začátku, ale připadá mi, že to decentralizuje výběr transakcí v síti jako celku. To je podle mého názoru velmi dobré; bojuje to proti MEV a cenzuře. A rozhodně se mi líbí ta část, že tuto práci dělají atestátoři, protože v budoucnu budou mít nižší hardwarové požadavky než tvůrci, a to tím spíše s bezstavovostí a bezstavovými klienty. Jelikož to budete moci provozovat na velmi slabém hardwaru, dělá to věci velmi decentralizovanými. Hádám, že hlavní výzvou zde je definovat kritéria pro výběr transakcí do těchto seznamů pro zahrnutí (inclusion lists), ať už se rozhodnete pro prioritní poplatky nebo počet blobů; je tu tolik proměnných. Shodli jste se už na nějakém souboru kritérií, která plánujete vynucovat?
 
@@ -165,7 +165,7 @@ Co se týče pravidla pro zahrnutí, to je velmi dobrá otázka. Docela dost jsm
 
 **Luis Pinto:** Dobře, děkuji.
 
-#### Kompatibilita s EIP-7702, ePBS a PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### Kompatibilita s EIP-7702, ePBS a PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Moc vám děkuji. Pokud tomu dobře rozumím, tento návrh je již navržen pro upgrade po Pectra, Fusaka. A vzhledem k tomu, že Fusaka může, ale nemusí zahrnovat některé další EIP, na kterých se pracuje, zajímalo by mě, jaký je stav kompatibility FOCIL s ohledem na návrhy, jako je 7702, což je pro abstrakci účtu, ePBS a PeerDAS.
 
@@ -175,7 +175,7 @@ Jsme si velmi jistí, protože jsme také mluvili s týmy pro abstrakci účtu a
 
 **Pooja Ranjan:** To je dobré vědět. Všimla jsem si, že Jihoon také sdílel HackMD, který přidáme do zdrojů pro lidi, kteří by se chtěli dozvědět více o kompatibilitě konkrétně s ePBS. A ano, pamatuji si z posledního rozhovoru s Mikem, že návrh nebyl zahrnut kvůli nekompatibilitě s abstrakcí účtu. Takže je dobré vědět, že to už bylo vyřešeno.
 
-#### FOCIL a multi-slot MEV (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL a multi-slot MEV (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** Procházela jsem dokumenty a podrobnosti přidané na web FOCIL, meetfocil.eth.limo, a narazila jsem na termín zvaný multi-slot MEV. Julian také zmínil, že MEV-Boost je obecně ziskový, navzdory přání a úsilí vývojářů udržet ho v rovnováze. Zajímalo by mě, jak tomu FOCIL zabrání.
 
@@ -191,7 +191,7 @@ FOCIL tedy řeší ty části multi-slot MEV, kde transakce netrpí nepřízniv�
 
 **Pooja Ranjan:** Velmi dobře, moc děkuji za sdílení. Chápu, že probíhá spousta výzkumů, které se zabývají problematikou MEV, takže je dobré vědět, že alespoň v principu to pomůže více než současný scénář.
 
-#### Kompromisy a výzvy (36:44) {#trade-offs-and-challenges-3644}
+### Kompromisy a výzvy (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Mám jednu otázku týkající se toho, co Thomas zmínil dříve o IL ekvivokaci. Všimla jsem si, že v části návrhu věnované bezpečnostním úvahám je zmíněno poměrně dost bodů, jako je živost konsensu, IL ekvivokace a tvorba payloadu. Co byste považoval za největší kompromis nebo něco, co by mohlo vyžadovat další výzkum a mohlo by zabránit tomu, aby se tento návrh dostal do dalšího upgradu v současné podobě?
 
@@ -203,7 +203,7 @@ Možná jsem zaujatý, ale nevidím v tom žádné velké kompromisy. Myslím si
 
 **Pooja Ranjan:** To je dobré vědět. Ve většině návrhů zjišťujeme, že sekce bezpečnostních úvah neobsahuje buď žádné, nebo jen velmi málo informací, takže je dobré vědět, že v této oblasti proběhl výzkum a jsme si vědomi možných bezpečnostních úvah. Jsem ráda, že to není překážka nebo potenciální výzva pro budoucí implementaci a přijetí.
 
-#### Mechanismy transakčních poplatků pro seznamy zahrnutí (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Mechanismy transakčních poplatků pro seznamy zahrnutí (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Mám dotaz ohledně některých otevřených otázek, které jsem našla přímo na webu, ohledně mechanismu transakčních poplatků. Zajímalo by mě, jestli jsou nějaké novinky, nebo jestli byste se chtěli podělit o více informací o tom, jaký je nejlepší způsob účtování poplatků a jejich rozdělování za zahrnutí do seznamu zahrnutí.
 
@@ -219,7 +219,7 @@ K Luisově dřívější poznámce, motivace je do značné míry o tom, jak jso
 
 **Pooja Ranjan:** Oh, to je zajímavé. Takže bychom se měli těšit na nějaké doplňující návrhy v budoucnu, které vylepší současné funkce FOCIL.
 
-#### Velikost seznamu zahrnutí (44:16) {#inclusion-list-size-4416}
+### Velikost seznamu zahrnutí (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Mám další otázku. Nejsem si jistá, jestli by to mělo být součástí současného návrhu, ale zajímalo by mě, jestli je nějaká novinka ohledně velikosti IL. Seznamy zahrnutí (inclusion lists) musí mít pravděpodobně omezenou velikost, aby se zabránilo nadměrnému využití šířky pásma. Máme nějaký další výzkum nebo novinky o tom, jak lze určit optimální velikost seznamu zahrnutí?
 
@@ -229,7 +229,7 @@ Nevím, jestli je potřeba dělat příliš mnoho výzkumu ohledně přesné opt
 
 Do budoucna by se velikost IL mohla zvětšit, ale také by se dalo zvážit zvýšení počtu členů výboru IL. To vám dává ještě větší šanci získat jednoho poctivého člena výboru IL, pokud se většina sítě rozhodne začít cenzurovat. Takže to je také něco, co bychom mohli udělat. Prozatím se zdá, že 16 bude naprosto v pořádku a dostatečné, ale v budoucnu si s těmito parametry rozhodně můžete pohrát, pokud se cenzura vymkne kontrole, nebo pokud budeme muset podniknout další kroky.
 
-#### Metriky pro sledování adopce (46:39) {#metrics-to-track-adoption-4639}
+### Metriky pro sledování adopce (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Jen doplňující otázka: máte na mysli nějaké metriky, které můžeme sledovat, abychom porozuměli adopci nebo úspěchu tohoto návrhu?
 
@@ -241,7 +241,7 @@ Myslím, že je to tak důležitý bod, že je důležité implementovat FOCIL b
 
 **Pooja Ranjan:** Velmi zajímavé. Takže to je možná něco pro výzkumníky: možný seznam přání pro upgrady, že by vývojáři měli sdílet dashboardy a nástroje pro sledování metrik pro daný návrh, kdykoli je zahrnut do upgradu sítě.
 
-#### Stav implementace klientů (49:11) {#client-implementation-status-4911}
+### Stav implementace klientů (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Jak zmínil Julian, tento návrh možná bude nutné implementovat co nejdříve. Jsem zvědavá, jak jsme na tom s implementací klientů, protože si pamatuji, že na posledním hovoru o testnetech Paritosh zmiňoval přidání nějaké podpory s devnety. Takže jak na tom jsme?
 
@@ -253,7 +253,7 @@ Celkově máme připraveno a spuštěno stále více devnetů, lokálních devne
 
 **Pooja Ranjan:** Děkuji za sdílení. Těším se na sledování novinek ohledně devnetů. Nejsem si jistá, kolik iterací tohoto devnetu bude, ale jsem nadšená, že se to blíží. Vidím, že Justin tu má otázku. Justine, prosím, pokračuj.
 
-#### FOCIL ve Fusaka nebo Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL ve Fusaka nebo Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Dobrá, na tohle se připoutejte. Zmínil jsi velmi dobrý postřeh, že nejlepší čas řešit cenzuru je ještě předtím, než k ní dojde, že? Takže: FOCIL ve Fusaka, nebo to může počkat na Glamsterdam? A co bych měl jako vývojář prosazovat?
 
@@ -265,7 +265,7 @@ Další věc, kterou chci zmínit, protože si myslím, že je důležitá: poku
 
 **Pooja Ranjan:** Někdy je smutné vidět, když návrhy nejsou vybrány pro další nebo nejbližší upgrade, ale do jednoho upgradu lze zahrnout jen omezené množství návrhů. Opravdu si vážím veškeré tvrdé práce, která stojí za předložením návrhu, jeho připraveností i testováním, které s tím souvisí. Takže vám moc děkuji za veškerou práci, kterou děláte pro ekosystém Etherea.
 
-#### Bleskové otázky (55:18) {#rapid-fire-5518}
+### Bleskové otázky (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Než to uzavřeme, máme tu rychlé kolo bleskových otázek. Jedinou podmínkou je, že odpověď by měla být jedním slovem nebo jednou větou, a zkusíme to na čas, možná 30 sekund na každou. Pokud jste připraveni, pojďme na to a začneme s Julianem. Co je momentálně nejtěžším problémem ve výzkumu blockchainu?
 
@@ -317,7 +317,7 @@ Další věc, kterou chci zmínit, protože si myslím, že je důležitá: poku
 
 **Pooja Ranjan:** Velmi dobře, moc děkuji, Thomasi. Děkuji za zodpovězení všech těchto otázek. Když už to uzavíráme, ráda bych vám dala tuto příležitost: pokud máte nějaký vzkaz pro komunitu ohledně tohoto návrhu, nebo pro komunitu Etherea obecně.
 
-#### Vzkazy komunitě (58:08) {#messages-to-the-community-5808}
+### Vzkazy komunitě (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Vlastně je to velmi důležitý bod, protože neustále vedeme aktivní diskuse a vše je veřejné na Discordu. Na začátku byla snaha udělat to všechno veřejné a lidé to tak skutečně dělají, z čehož mám velkou radost. Diskuse a pokrok můžete sledovat na veřejném Discordu Eth R&D, v kanálu inclusion-list. Tam se teď v podstatě všechno odehrává. Dále se nám můžete ozvat na Twitteru, Telegramu, prostě kdekoli. Neváhejte.
 
@@ -325,6 +325,6 @@ Další věc, kterou chci zmínit, protože si myslím, že je důležitá: poku
 
 **Julian Ma:** Jen bych k tomu dodal, že doufám, že jsme pro FOCIL někoho nadchli. Pokud jste nadšení, dejte nám prosím vědět. A pokud máte ještě nějaké otázky, rádi vám je zodpovíme a doufáme, že vás přesvědčíme, že FOCIL je skutečně ta správná cesta. Moc vám děkuji. Bylo mi opravdu potěšením tu být a děkuji za uspořádání tohoto setkání. A samozřejmě děkuji také všem za účast.
 
-#### Závěrečná slova (59:52) {#closing-words-5952}
+### Závěrečná slova (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Děkuji. To je pro dnešek vše. Obrovské díky patří Thomasovi a Julianovi, že se k nám dnes připojili a podělili se o své poznatky o EIP-7805. Děkuji všem účastníkům; vaše dotazy jsou povzbuzující a poučné. Děkujeme za sledování. Pokud se vám tento rozhovor líbil, nezapomeňte dát like, odebírat a sdílet tuto epizodu s dalšími nadšenci do Etherea. V rámci PEEPanEIP vám přineseme další EIP a pokroky ve výzkumu. Do příště, nepřestávejte příst nad novými znalostmi a prozkoumávat Ethereum s Ethereum Cat Herders. Užijte si zbytek dne.

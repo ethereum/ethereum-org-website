@@ -15,6 +15,11 @@
     "score": 35000
   },
   {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 33000
+  },
+  {
     "username": "",
     "name": "nrv (@nervoir)",
     "score": 31000
@@ -28,11 +33,6 @@
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
-  },
-  {
-    "username": "cyberthirst",
-    "name": "cyberthirst",
-    "score": 21000
   },
   {
     "username": "junorouse",
@@ -50,14 +50,14 @@
     "score": 20000
   },
   {
+    "username": "iam-ned",
+    "name": "David Matosse",
+    "score": 17250
+  },
+  {
     "username": "peckshield",
     "name": "PeckShield",
     "score": 17000
-  },
-  {
-    "username": "iam-ned",
-    "name": "David Matosse",
-    "score": 16250
   },
   {
     "username": "itsunixiknowthis",
@@ -75,9 +75,9 @@
     "score": 15000
   },
   {
-    "username": "",
+    "username": "tristartom",
     "name": "Bob Conan",
-    "score": 14000
+    "score": 15000
   },
   {
     "username": "tintinweb",
@@ -92,13 +92,23 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 11250
+    "score": 12250
   },
   {
     "username": "lukaszmatczak",
     "name": "Łukasz Matczak",
     "score": 11000
   },
+  {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
+    "score": 11000
+  },
+  {
+    "username": "sxguan",
+    "name": "sxguan",
+    "score": 11000
+  },  
   {
     "username": "",
     "name": "Heilman/Marcus/Goldberg",
@@ -170,6 +180,16 @@
     "score": 5000
   },
   {
+    "username": "gzeoneth",
+    "name": "gzeon",
+    "score": 5000
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 3750
+  },
+  {
     "username": "axic",
     "name": "Alex Beregszaszi",
     "score": 3500
@@ -178,6 +198,11 @@
     "username": "grandchildrice",
     "name": "grandchildrice (Nyx Foundation)",
     "score": 3500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
+    "score": 3000
   },
   {
     "username": "SergioDemianLerner",
@@ -192,6 +217,11 @@
   {
     "username": "ethereum-optimism",
     "name": "OP Labs",
+    "score": 2500
+  },
+  {
+    "username": "shaheenfazim",
+    "name": "Shaheen Fazim",
     "score": 2500
   },
   {
@@ -225,6 +255,11 @@
     "score": 2000
   },
   {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2000
+  },
+  {
     "username": "hwanjo",
     "name": "Hwanjo Heo",
     "score": 1500
@@ -232,6 +267,11 @@
   {
     "username": "BlockTrident",
     "name": "BlockTrident",
+    "score": 1500
+  },
+  {
+    "username": "1033309821",
+    "name": "Fudong Wu",
     "score": 1500
   },
   {
@@ -290,11 +330,6 @@
     "score": 1000
   },
   {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 3000
-  },
-  {
     "username": "cybermong",
     "name": "Cybermong",
     "score": 1000
@@ -320,11 +355,6 @@
     "score": 1000
   },
   {
-    "username": "1033309821",
-    "name": "Fudong Wu",
-    "score": 1000
-  },
-  {
     "username": "BlockianComp",
     "name": "Blockian",
     "score": 1000
@@ -339,6 +369,51 @@
     "name": "sonny2k",
     "score": 1000
   },
+  {
+    "username": "lgandx",
+    "name": "Laurent Gaffie",
+    "score": 1000
+  },
+  {
+    "username": "aydarkhusaenov",
+    "name": "Legat",
+    "score": 1000
+  },
+  {
+    "username": "phx-Alleysira",
+    "name": "phx & Alleysira (UTUX Labs)",
+    "score": 1000
+  },
+  {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 1000
+  },
+  {
+    "username": "DanielBoye",
+    "name": "DanielBoye",
+    "score": 1000
+  },
+  {
+    "username": "0xSHKWON",
+    "name": "0xSHKWON",
+    "score": 1000
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 1000
+  },
+  {
+    "username": "L-KH",
+    "name": "lahcen-kh",
+    "score": 1000
+  },
+  {
+    "username": "Smacaud",
+    "name": "Smacaud",
+    "score": 1000
+  }, 
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
@@ -390,8 +465,8 @@
     "score": 500
   },
   {
-    "username": "1033309821",
-    "name": "Fudong Wu",
+    "username": "timmylegodt",
+    "name": "Timmy",
     "score": 500
   },
   {

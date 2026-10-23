@@ -79,3 +79,7 @@ Když jsou všechny aplikace postaveny na Ethereu, jsou navzájem kompatibilní.
 <ExpandableCard title="Jaká je nejlepší krypto peněženka?" visible>
   <p>Krypto peněženka vám umožňuje držet vaše tokeny a spravovat váš účet na Ethereu. Existuje mnoho skvělých peněženek, z nichž každá slouží k jinému účelu. Chcete-li zjistit, která peněženka je pro vás nejlepší, navštivte náš [seznam peněženek](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

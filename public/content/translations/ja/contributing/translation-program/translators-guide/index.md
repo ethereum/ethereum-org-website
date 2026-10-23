@@ -9,7 +9,7 @@ ethereum.orgの翻訳スタイルガイドには、ウェブサイトのロー�
 
 このドキュメントは一般的なガイドとして機能し、特定の言語に限定されるものではありません。
 
-質問、提案、フィードバックがある場合は、translations@ethereum.org までお気軽にお問い合わせいただくか、Crowdinで @ethdotorg にメッセージを送信するか、[ディスコードに参加](https://discord.gg/ethereum-org)して #translations チャンネルでメッセージを送信するか、チームメンバーのいずれかにご連絡ください。
+質問、提案、フィードバックがある場合は、translations@ethereum.org までお気軽にお問い合わせいただくか、Crowdinで @ethdotorg にメッセージを送信するか、[ディスコードに参加](/discord/)して #translations チャンネルでメッセージを送信するか、チームメンバーのいずれかにご連絡ください。
 
 ## Crowdinの使用 {#using-crowdin}
 

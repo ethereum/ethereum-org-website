@@ -48,7 +48,7 @@ lang: ja
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobalが運営するディスコードチャット：世界中のイーサリアムハッカーのためのオンラインコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に特化したディスコードコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker ディスコード</Link> - 既存および将来のステーカーに向けた、コミュニティ運営のガイダンス、教育、サポート、リソース</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - 立ち寄って、チームやコミュニティの人々とethereum.orgのウェブ開発やデザインについてチャットしましょう</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org website team</Link> - 立ち寄って、チームやコミュニティの人々とethereum.orgのウェブ開発やデザインについてチャットしましょう</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos ディスコード</Link> - ビルダー、業界のリーダー、イーサリアム愛好家が集まるWeb3クリエイターコミュニティ。私たちはWeb3の開発、デザイン、文化に情熱を注いでいます。一緒に構築しましょう。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity開発のためのチャット (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 質疑応答フォーラム</i></SocialListItem>
