@@ -4,6 +4,7 @@
     "public/content/**",
     "src/intl/**",
     "src/data/**",
-    ".storybook/*.mdx"
+    ".storybook/*.mdx",
+    ".storybook/next-intl.ts"
   ]
 }

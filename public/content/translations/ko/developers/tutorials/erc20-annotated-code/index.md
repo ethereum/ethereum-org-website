@@ -13,7 +13,7 @@ published: 2021-03-09
 
 이더리움의 가장 일반적인 용도 중 하나는 특정 그룹이 거래 가능한 토큰, 즉 일종의 자체 통화를 만드는 것입니다. 이러한 토큰은 일반적으로 [ERC-20](/developers/docs/standards/tokens/erc-20/)이라는 표준을 따릅니다. 이 표준 덕분에 유동성 풀 및 지갑과 같이 모든 ERC-20 토큰과 함께 작동하는 도구를 작성할 수 있습니다. 이 글에서는 [인터페이스 정의](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)뿐만 아니라 [오픈제플린 Solidity ERC20 구현](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)을 분석해 보겠습니다.
 
-이것은 주석이 달린 소스 코드입니다. ERC-20을 구현하려면 [이 튜토리얼을 읽어보세요](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+이것은 주석이 달린 소스 코드입니다. ERC-20을 구현하려면 [이 튜토리얼을 읽어보세요](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## 인터페이스 {#the-interface}
 

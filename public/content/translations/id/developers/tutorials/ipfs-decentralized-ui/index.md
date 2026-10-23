@@ -12,7 +12,7 @@ lang: id
 published: 2024-06-29
 ---
 
-Anda telah menulis aplikasi terdesentralisasi (dapp) baru yang luar biasa. Anda bahkan telah menulis [antarmuka pengguna](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) untuknya. Namun sekarang Anda khawatir seseorang akan mencoba menyensornya dengan mematikan antarmuka pengguna Anda, yang hanya berupa satu server di cloud. Dalam tutorial ini, Anda akan mempelajari cara menghindari penyensoran dengan menempatkan antarmuka pengguna Anda di **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** sehingga siapa pun yang tertarik akan dapat menyematkannya (pin) di server untuk akses di masa mendatang.
+Anda telah menulis aplikasi terdesentralisasi (dapp) baru yang luar biasa. Anda bahkan telah menulis [antarmuka pengguna](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) untuknya. Namun sekarang Anda khawatir seseorang akan mencoba menyensornya dengan mematikan antarmuka pengguna Anda, yang hanya berupa satu server di cloud. Dalam tutorial ini, Anda akan mempelajari cara menghindari penyensoran dengan menempatkan antarmuka pengguna Anda di **[interplanetary file system (IPFS)](https://docs.ipfs.tech/)** sehingga siapa pun yang tertarik akan dapat menyematkannya (pin) di server untuk akses di masa mendatang.
 
 Anda dapat menggunakan layanan pihak ketiga seperti [Fleek](https://resources.fleek.xyz/docs/) untuk melakukan semua pekerjaan tersebut. Tutorial ini ditujukan bagi orang-orang yang ingin melakukan cukup banyak hal untuk memahami apa yang mereka lakukan meskipun itu membutuhkan lebih banyak pekerjaan.
 

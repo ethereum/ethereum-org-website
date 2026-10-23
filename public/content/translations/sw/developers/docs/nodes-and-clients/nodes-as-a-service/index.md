@@ -209,7 +209,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
     - Ufikiaji wa nodi 50+ za mnyororo wa vitalu
 
 - [**Infura**](https://infura.io/)
-  - [Nyaraka](https://infura.io/docs)
+  - [Nyaraka](https://docs.infura.io/)
   - Vipengele
     - Chaguo la kiwango cha bure
     - Ongeza kadiri unavyoendelea

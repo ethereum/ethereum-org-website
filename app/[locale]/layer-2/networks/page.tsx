@@ -216,7 +216,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        breadcrumbs={{ slug: "/layer-2/networks", startDepth: 1 }}
+        breadcrumbs={{ slug: "/layer-2/networks" }}
         heroImg={heroImg}
         title={tCommon("nav-networks-explore-networks-label")}
         description={t("page-layer-2-networks-hero-description")}

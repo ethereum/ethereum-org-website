@@ -100,3 +100,47 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Frame transactions split `Transactions Frame` (hegota) vs `Transactions de trame` (privacy) -- needs a native pick, no glossary entry.
 - `Navigateur Mullvad` should stay `Mullvad Browser`; `Institut Ludlow` vs `Ludlow Institute`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing mix; `Trésoreries` for treasuries; credentials `identifiants` vs `attestations`; `DLT privé` gender.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:448 non-word (`grâce aux arbitreurs qui` -> `grâce aux arbitragistes qui`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation (EOA, high confidence): `compte détenu en externe`. The dev version was compliant at 4 sites and this run regressed it. The script_rule is not set, so this goes to a human. (`mais un [compte externe]` -> `mais un [compte détenu en externe]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA glossary deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA glossary deviation. (`qu'aux comptes externes.` -> `qu'aux comptes détenus en externe.`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA glossary deviation. (`provient d'un compte externe,` -> `provient d'un compte détenu en externe,`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA glossary deviation. The English here is "that owner is externally owned". (`ce propriétaire est un compte externe` -> `ce propriétaire est un compte détenu en externe`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The French text reads fluently and is structurally clean. Most problems come from a full retranslation that undid correct dev wording (the EOA glossary form, `arbitragistes`, `d'entiers`) and from bare acronyms expanded into the glossary's long form. The only items that can be fixed automatically are the three English tag values in `page-founders.json` and the `arbitreurs` restore.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Clean otherwise.

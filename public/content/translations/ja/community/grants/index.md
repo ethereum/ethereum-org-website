@@ -10,7 +10,7 @@ lang: ja
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>創業者の方で、ビジネスの加速に支援が必要ですか？[Founders Support（創業者サポート）へアクセスしてください](/founders/)</div>
+<div>創業者の方で、ビジネスの加速に支援が必要ですか？[Founders Support（創業者サポート）へアクセスしてください](/organizations/founders/)</div>
 </Alert>
 
 ## 幅広いイーサリアムエコシステム {#broad-ethereum-ecosystem}

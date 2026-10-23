@@ -1,8 +1,8 @@
 ---
 title: "Passo a passo do contrato Uniswap-v2"
-description: Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa forma?
+description: "Como funciona o contrato Uniswap-v2? Por que ele é escrito dessa forma?"
 author: Ori Pomerantz
-tags: ["solidity", "dapps"]
+tags: ["Solidity", "dapps"]
 skill: intermediate
 breadcrumb: Passo a passo do Uniswap v2
 published: 2021-05-01
@@ -135,7 +135,7 @@ Este contrato herda de `UniswapV2ERC20`, que fornece as funções ERC-20 para os
     using SafeMath  for uint;
 ```
 
-A [biblioteca SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) é usada para evitar overflows e underflows. Isso é importante porque, de outra forma, poderíamos acabar com uma situação em que um valor deveria ser `-1`, mas em vez disso é `2^256-1`.
+A [biblioteca SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) é usada para evitar overflows e underflows. Isso é importante porque, de outra forma, poderíamos acabar com uma situação em que um valor deveria ser `-1`, mas em vez disso é `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -336,7 +336,7 @@ Esta função permite que a fábrica (e apenas a fábrica) especifique os dois t
 
 #### Funções de atualização interna {#pair-update-internal}
 
-##### \_update {#pair-external}
+##### \_update
 
 ```solidity
     // atualiza as reservas e, na primeira chamada por bloco, os acumuladores de preço
@@ -391,7 +391,7 @@ Este cálculo de preço é a razão pela qual precisamos saber os tamanhos das r
 
 Finalmente, atualize as variáveis globais e emita um evento `Sync`.
 
-##### \_mintFee {#uniswapv2factory}
+##### \_mintFee
 
 ```solidity
     // se a taxa estiver ativada, cunha liquidez equivalente a 1/6 do crescimento em sqrt(k)
@@ -461,7 +461,7 @@ Este código obtém esse reembolso quando possível.
 
 Observe que, embora qualquer transação ou contrato _possa_ chamar essas funções, elas são projetadas para serem chamadas a partir do contrato de periferia. Se você chamá-las diretamente, não conseguirá enganar a troca de pares, mas poderá perder valor por um erro.
 
-##### mint {#periphery-contracts}
+##### mint
 
 ```solidity
     // esta função de baixo nível deve ser chamada por um contrato que realiza verificações de segurança importantes
@@ -547,7 +547,7 @@ Use a função `UniswapV2ERC20._mint` para realmente criar os tokens de liquidez
 
 Atualize as variáveis de estado (`reserve0`, `reserve1` e, se necessário, `kLast`) e emita o evento apropriado.
 
-##### burn {#uniswapv2router01}
+##### burn
 
 ```solidity
     // esta função de baixo nível deve ser chamada por um contrato que realiza verificações de segurança importantes
@@ -594,7 +594,7 @@ O provedor de liquidez recebe valor igual de ambos os tokens. Dessa forma, não 
 
 O restante da função `burn` é a imagem espelhada da função `mint` acima.
 
-##### swap {#uniswapv2router02}
+##### swap
 
 ```solidity
     // esta função de baixo nível deve ser chamada por um contrato que realiza verificações de segurança importantes
@@ -662,7 +662,7 @@ Esta é uma verificação de sanidade para garantir que não percamos com a troc
 
 Atualize `reserve0` e `reserve1` e, se necessário, os acumuladores de preço e o timestamp e emita um evento.
 
-##### Sync ou Skim {#add-liquidity}
+##### Sync ou Skim
 
 É possível que os saldos reais fiquem fora de sincronização com as reservas que a troca de pares acha que tem.
 Não há como sacar tokens sem o consentimento do contrato, mas os depósitos são uma questão diferente. Uma conta pode transferir tokens para a troca sem chamar `mint` ou `swap`.
@@ -1672,7 +1672,7 @@ Este contrato foi usado para migrar trocas da antiga v1 para a v2. Agora que ela
 
 ## As Bibliotecas {#libraries}
 
-A [biblioteca SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) está bem documentada, então não há necessidade de documentá-la aqui.
+A [biblioteca SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) está bem documentada, então não há necessidade de documentá-la aqui.
 
 ### Math {#math}
 

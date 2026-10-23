@@ -29,7 +29,7 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Nó como serviço (Node-as-a-Service)._**
+**All That Node -** **_Nó como serviço._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Documentação](https://docs.allthatnode.com)
@@ -69,7 +69,7 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 - [Documentação](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Provedor JSON-RPC EVM econômico_**
+**Node RPC - _Provedor JSON-RPC da EVM com bom custo-benefício_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentação](https://docs.noderpc.xyz/node-rpc)
@@ -85,11 +85,17 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 - [Documentação](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_APIs do Ethereum e Ethereum Classic como serviço alimentado por software de código aberto._**
+**Rivet -** **_APIs do Ethereum e Ethereum Classic como serviço, desenvolvidas com software de código aberto._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentação](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**SolidRPC -** **_Infraestrutura JSON-RPC da EVM com acesso público completo, de arquivo e sem chave._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Documentação](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_Nós do Ethereum orientados à velocidade como API JSON-RPC/WebSockets._**
 
@@ -100,7 +106,13 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 
 ### Ferramentas de desenvolvimento {#development-tools}
 
-**ethers-kt -** **_Biblioteca Kotlin/Java/Android assíncrona e de alto desempenho para blockchains baseadas em EVM._**
+**eth.zig -** **_Uma biblioteca Zig para Ethereum, com codificação de Interface Binária de Aplicação (ABI) em tempo de compilação e vinculações de contrato._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Documentação](https://ethzig.org)
+- [Exemplos](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Biblioteca Kotlin/Java/Android assíncrona e de alto desempenho para blockchains baseadas na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Exemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -115,8 +127,8 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 **Ferramentas Python -** **_Variedade de bibliotecas para interação com o Ethereum via Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_A plataforma definitiva de desenvolvimento de blockchain._**
 

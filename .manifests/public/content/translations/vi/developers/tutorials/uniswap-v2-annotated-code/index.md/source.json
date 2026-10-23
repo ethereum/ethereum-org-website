@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/uniswap-v2-annotated-code/index.md",
-  "generatedAt": "2026-06-17T01:13:54.881Z",
-  "rootHash": "673518e36b74",
+  "generatedAt": "2026-10-21T22:16:43.395Z",
+  "rootHash": "8bd0d5db19b7",
   "tree": {
     "contentHash": "a4832e0828a1",
-    "anchorHash": "7190e4dcc566",
+    "anchorHash": "c544f7765d90",
     "children": {
       "frontmatter:title": {
         "contentHash": "87713332e69a",
@@ -493,7 +493,7 @@
       },
       "core-contracts": {
         "contentHash": "aa862e8b931b",
-        "anchorHash": "e8184d09976e",
+        "anchorHash": "b26b55868ec1",
         "labelHash": "f5ff94b7df31",
         "children": {
           "_label": {
@@ -506,7 +506,7 @@
           },
           "uniswapv2pair": {
             "contentHash": "80bc64a0c5bb",
-            "anchorHash": "186a992f4432",
+            "anchorHash": "705c7fb44773",
             "labelHash": "7c804fe8ac0b",
             "children": {
               "_label": {
@@ -515,7 +515,7 @@
               },
               "link:0": {
                 "contentHash": "52405081f52a",
-                "anchorHash": "3f3baf8ecc7d"
+                "anchorHash": "e85d30fb7cfc"
               },
               "prose:1": {
                 "contentHash": "ce455571e8df",
@@ -2924,7 +2924,7 @@
       },
       "libraries": {
         "contentHash": "11c8f25fdae0",
-        "anchorHash": "a403af1bf7f7",
+        "anchorHash": "8e63810a38a8",
         "labelHash": "254216e4550d",
         "children": {
           "_label": {
@@ -2937,7 +2937,7 @@
           },
           "link:0": {
             "contentHash": "52405081f52a",
-            "anchorHash": "3f3baf8ecc7d"
+            "anchorHash": "e85d30fb7cfc"
           },
           "prose:2": {
             "contentHash": "6fcb28c7dc04",
@@ -3433,5 +3433,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

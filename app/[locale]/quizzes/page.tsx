@@ -75,7 +75,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <HubHero
         heroImg={heroImg}
-        title={tCommon("quizzes-title")}
+        breadcrumbs={{ slug: "quizzes" }}
         header={t("test-your-knowledge")}
         description={t("quizzes-subtitle")}
       />

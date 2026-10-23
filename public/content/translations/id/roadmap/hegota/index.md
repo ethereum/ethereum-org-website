@@ -34,7 +34,9 @@ Karena akun memilih aturannya sendiri, ia juga dapat memilih skema tanda tangan 
 
 ## Apa lagi yang ada di Hegotá {#scope}
 
-Belum diputuskan. FOCIL dan transaksi frame adalah dua perubahan yang dijadwalkan sejauh ini; puluhan proposal lainnya telah diajukan dan belum ada yang ditetapkan. Halaman ini akan tetap singkat sampai ruang lingkupnya pasti — untuk status diskusi saat ini, lihat sumber daya di bawah ini.
+Belum diputuskan. FOCIL dan transaksi frame adalah dua perubahan yang dijadwalkan sejauh ini; puluhan lainnya telah diusulkan dan belum ada yang ditetapkan. Halaman ini akan tetap singkat sampai ruang lingkupnya dipastikan — untuk status diskusi saat ini, lihat sumber daya di bawah ini.
+
+Proposal yang saat ini dipertimbangkan untuk disertakan meliputi EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279, dan EIP-8365. Dipertimbangkan berarti tim klien sedang mengevaluasi sebuah proposal, bukan berarti proposal tersebut akan dirilis di Hegotá.
 
 ## Bacaan lebih lanjut {#further-reading}
 

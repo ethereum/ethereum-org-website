@@ -1,6 +1,6 @@
 ---
 title: Bridges
-description: An overview of bridging for developers
+description: "A developer guide to bridges: how cross-chain messaging and token bridging work, bridge types and trust assumptions, and how to integrate them in dapps."
 lang: en
 ---
 

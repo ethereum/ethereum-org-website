@@ -125,3 +125,61 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `Майкрософт Сек'юріті`, `крипто-твіттері`.
 - contributing:92 `злито з` (drained from) regression; open-access `призупинити дію користувача`; `будівник` vs `будівельник`; Hegotá Cyrillic `Гегота` outlier.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `смартконтракт` -> `смарт-контракт` x2 (glossary).
+- English thousands separators read as decimals: `$5,600` -> `$5 600`, `208,000` -> `208 000`.
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- Етеріум undeclined x4 in small-business; settle -> `остаточну фіксацію` misapplied; Prividium misspelled.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.8/10
+
+- Warning: enterprise JSON "production" as manufacturing (`у виробництві`, `виробничого рівня`); `Фінальність остаточної фіксації` tautology; з'єднання/підключення drift in wagmi.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: typo `публіча` -> `публічна` (L200).
+- Open: `[Етеріум](/)-мережі` awkward link compound (dev `Мережі [Етеріуму](/)`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:45 Ethereum transliterate (`на додаток до підпису Ethereum.` -> `на додаток до підпису Етеріуму.`)
+- app-plasma:337 Ethereum transliterate (`перевіряє підписи Ethereum і відновлює адресу Ethe` -> `перевіряє підписи Етеріуму і відновлює адресу Етер`)
+- app-plasma:374 Ethereum transliterate (`160-бітної адреси Ethereum.` -> `160-бітної адреси Етеріуму.`)
+- app-plasma:617 Ethereum transliterate (`формату підписання Ethereum у` -> `формату підписання Етеріуму у`)
+- app-plasma:617 Ethereum transliterate (`стандартний для Ethereum keccak256` -> `стандартний для Етеріуму keccak256`)
+- app-plasma:701 Ethereum transliterate (`стандартну функцію Ethereum` -> `стандартну функцію Етеріуму`)
+- app-plasma:950 Ethereum transliterate (`Смарт-контракти Ethereum {#stage-3}` -> `Смарт-контракти Етеріуму {#stage-3}`)
+- security:570 Manticore accusative (`Як використовувати Мантікора для` -> `Як використовувати Мантікору для`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and accurate, especially in the rewritten prediction-markets page and the new wallet descriptions. The criticals are all cases where this run broke wording that was already right on dev: Latin `Ethereum` in app-plasma, the Manticore case ending, and the three English founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- No Russian contamination. Warnings: decimal separator; MetaMask UI labels given only in Ukrainian.

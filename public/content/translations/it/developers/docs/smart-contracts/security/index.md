@@ -8,9 +8,9 @@ Gli smart contract sono estremamente flessibili e in grado di controllare grandi
 
 Le blockchain pubbliche, come [Ethereum](/), complicano ulteriormente il problema della messa in sicurezza degli smart contract. Il codice del contratto distribuito _di solito_ non può essere modificato per correggere le falle di sicurezza, mentre gli asset rubati dagli smart contract sono estremamente difficili da rintracciare e per lo più irrecuperabili a causa dell'immutabilità.
 
-Sebbene le cifre varino, si stima che l'importo totale del valore rubato o perso a causa di difetti di sicurezza negli smart contract superi facilmente il miliardo di dollari. Questo include incidenti di alto profilo, come l'[attacco informatico alla DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore di oltre 1 miliardo di dollari ai prezzi odierni), l'[attacco informatico al portafoglio multifirma di Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 milioni di dollari persi a causa degli hacker) e il [problema del portafoglio congelato di Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (oltre 300 milioni di dollari in ETH bloccati per sempre).
+Sebbene le cifre varino, si stima che l'importo totale del valore rubato o perso a causa di difetti di sicurezza negli smart contract superi facilmente il miliardo di dollari. Questo include incidenti di alto profilo, come l'[hack della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore di oltre 1 miliardo di dollari ai prezzi odierni), l'[hack del portafoglio multifirma di Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 milioni di dollari persi a causa degli hacker) e il [problema del portafoglio congelato di Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (oltre 300 milioni di dollari in ETH bloccati per sempre).
 
-I problemi sopracitati rendono imperativo per gli sviluppatori investire sforzi nella creazione di smart contract sicuri, robusti e resilienti. La sicurezza degli smart contract è una questione seria, e ogni sviluppatore farà bene a impararla. Questa guida tratterà le considerazioni sulla sicurezza per gli sviluppatori di Ethereum ed esplorerà le risorse per migliorare la sicurezza degli smart contract.
+I problemi sopracitati rendono imperativo per gli sviluppatori investire sforzi nella creazione di smart contract sicuri, robusti e resilienti. La sicurezza degli smart contract è una cosa seria, e ogni sviluppatore farà bene a impararla. Questa guida tratterà le considerazioni sulla sicurezza per gli sviluppatori di Ethereum ed esplorerà le risorse per migliorare la sicurezza degli smart contract.
 
 ## Prerequisiti {#prerequisites}
 
@@ -20,22 +20,23 @@ Assicurati di avere familiarità con i [fondamenti dello sviluppo di smart contr
 
 ### 1. Progettare controlli di accesso adeguati {#design-proper-access-controls}
 
-Negli smart contract, le funzioni contrassegnate con `public` o `external` possono essere chiamate da qualsiasi account di proprietà esterna (EOA) o account di contratto. Specificare la visibilità pubblica per le funzioni è necessario se si desidera che altri interagiscano con il proprio contratto. Le funzioni contrassegnate con `private`, tuttavia, possono essere chiamate solo da funzioni all'interno dello smart contract e non da account esterni. Dare a ogni partecipante della rete l'accesso alle funzioni del contratto può causare problemi, specialmente se significa che chiunque può eseguire operazioni sensibili (ad es., il conio di nuovi token).
+Negli smart contract, le funzioni contrassegnate con `public` o `external` possono essere chiamate da qualsiasi account di proprietà esterna (EOA) o account di contratto. Specificare la visibilità pubblica per le funzioni è necessario se si desidera che altri interagiscano con il proprio contratto. Le funzioni contrassegnate con `private`, tuttavia, possono essere chiamate solo da funzioni all'interno dello smart contract e non da account esterni. Consentire a ogni partecipante della rete di accedere alle funzioni del contratto può causare problemi, specialmente se significa che chiunque può eseguire operazioni sensibili (ad es. il conio di nuovi token).
 
 Per prevenire l'uso non autorizzato delle funzioni dello smart contract, è necessario implementare controlli di accesso sicuri. I meccanismi di controllo degli accessi limitano la capacità di utilizzare determinate funzioni in uno smart contract a entità approvate, come gli account responsabili della gestione del contratto. Il **pattern Ownable** e il **controllo basato sui ruoli** sono due pattern utili per implementare il controllo degli accessi negli smart contract:
 
 #### Pattern Ownable {#ownable-pattern}
 
-Nel pattern Ownable, un indirizzo viene impostato come "proprietario" del contratto durante il processo di creazione del contratto. Alle funzioni protette viene assegnato un modificatore `OnlyOwner`, che assicura che il contratto autentichi l'identità dell'indirizzo chiamante prima di eseguire la funzione. Le chiamate alle funzioni protette da altri indirizzi oltre al proprietario del contratto vanno sempre in revert, impedendo accessi indesiderati.
+Nel pattern Ownable, un indirizzo viene impostato come "proprietario" (owner) del contratto durante il processo di creazione del contratto. Alle funzioni protette viene assegnato un modificatore `OnlyOwner`, che assicura che il contratto autentichi l'identità dell'indirizzo chiamante prima di eseguire la funzione. Le chiamate alle funzioni protette da altri indirizzi diversi dal proprietario del contratto vanno sempre in revert, impedendo accessi indesiderati.
 
 #### Controllo degli accessi basato sui ruoli {#role-based-access-control}
 
-Registrare un singolo indirizzo come `Owner` in uno smart contract introduce il rischio di centralizzazione e rappresenta un singolo punto di vulnerabilità. Se le chiavi dell'account del proprietario vengono compromesse, gli aggressori possono attaccare il contratto posseduto. Ecco perché utilizzare un pattern di controllo degli accessi basato sui ruoli con più account amministrativi potrebbe essere un'opzione migliore.
+La registrazione di un singolo indirizzo come `Owner` in uno smart contract introduce il rischio di centralizzazione e rappresenta un singolo punto di vulnerabilità (single point of failure). Se le chiavi dell'account del proprietario vengono compromesse, gli aggressori possono attaccare il contratto posseduto. Questo è il motivo per cui l'utilizzo di un pattern di controllo degli accessi basato sui ruoli con più account amministrativi potrebbe essere un'opzione migliore.
 
-Nel controllo degli accessi basato sui ruoli, l'accesso alle funzioni sensibili è distribuito tra un gruppo di partecipanti fidati. Ad esempio, un account potrebbe essere responsabile del conio di token, mentre un altro account esegue aggiornamenti o mette in pausa il contratto. Decentralizzare il controllo degli accessi in questo modo elimina i singoli punti di vulnerabilità e riduce le assunzioni di fiducia per gli utenti.
+Nel controllo degli accessi basato sui ruoli, l'accesso alle funzioni sensibili è distribuito tra un insieme di partecipanti fidati. Ad esempio, un account potrebbe essere responsabile per il conio di token, mentre un altro account esegue aggiornamenti o mette in pausa il contratto. Decentralizzare il controllo degli accessi in questo modo elimina i singoli punti di vulnerabilità e riduce le assunzioni di fiducia per gli utenti.
 
 ##### Utilizzo di portafogli multifirma
-Un altro approccio per implementare un controllo degli accessi sicuro è utilizzare un [account multifirma](/developers/docs/smart-contracts/#multisig) per gestire un contratto. A differenza di un normale EOA, gli account multifirma sono di proprietà di più entità e richiedono le firme di un numero minimo di account (ad esempio 3 su 5) per eseguire le transazioni.
+
+Un altro approccio per implementare un controllo degli accessi sicuro è l'utilizzo di un [account multifirma](/developers/docs/smart-contracts/#multisig) per gestire un contratto. A differenza di un normale EOA, gli account multifirma sono di proprietà di più entità e richiedono le firme di un numero minimo di account (ad esempio 3 su 5) per eseguire le transazioni.
 
 L'utilizzo di un multisig per il controllo degli accessi introduce un ulteriore livello di sicurezza, poiché le azioni sul contratto di destinazione richiedono il consenso di più parti. Ciò è particolarmente utile se è necessario utilizzare il pattern Ownable, in quanto rende più difficile per un aggressore o un insider malintenzionato manipolare le funzioni sensibili del contratto per scopi malevoli.
 
@@ -58,7 +59,7 @@ contract VendingMachine {
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
             revert("Not enough Ether provided.");
-        // Esegue l'acquisto.
+        // Esegui l'acquisto.
     }
     function withdraw() public {
         if (msg.sender != owner)
@@ -71,9 +72,9 @@ contract VendingMachine {
 
 ### 3. Testare gli smart contract e verificare la correttezza del codice {#test-smart-contracts-and-verify-code-correctness}
 
-L'immutabilità del codice in esecuzione nella [Ethereum Virtual Machine](/developers/docs/evm/) significa che gli smart contract richiedono un livello più elevato di valutazione della qualità durante la fase di sviluppo. Testare ampiamente il tuo contratto e osservarlo per eventuali risultati imprevisti migliorerà notevolmente la sicurezza e proteggerà i tuoi utenti a lungo termine.
+L'immutabilità del codice in esecuzione nella [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) significa che gli smart contract richiedono un livello più elevato di valutazione della qualità durante la fase di sviluppo. Testare ampiamente il tuo contratto e osservarlo per eventuali risultati imprevisti migliorerà notevolmente la sicurezza e proteggerà i tuoi utenti a lungo termine.
 
-Il metodo abituale consiste nello scrivere piccoli test unitari utilizzando dati fittizi (mock) che il contratto dovrebbe ricevere dagli utenti. Il [test unitario](/developers/docs/smart-contracts/testing/#unit-testing) è utile per testare la funzionalità di determinate funzioni e assicurarsi che uno smart contract funzioni come previsto.
+Il metodo abituale consiste nello scrivere piccoli test unitari utilizzando dati fittizi (mock) che il contratto dovrebbe ricevere dagli utenti. Il [test unitario](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) è utile per testare la funzionalità di determinate funzioni e assicurarsi che uno smart contract funzioni come previsto.
 
 Sfortunatamente, il test unitario è minimamente efficace per migliorare la sicurezza degli smart contract se utilizzato in isolamento. Un test unitario potrebbe dimostrare che una funzione viene eseguita correttamente per i dati fittizi, ma i test unitari sono efficaci solo quanto i test che vengono scritti. Ciò rende difficile rilevare casi limite trascurati e vulnerabilità che potrebbero compromettere la sicurezza del tuo smart contract.
 
@@ -110,7 +111,7 @@ L'esistenza di audit e bug bounty non ti esime dalla responsabilità di scrivere
 
 - Apporta tutte le modifiche al codice tramite pull request
 
-- Assicurati che le pull request abbiano almeno un revisore indipendente; se stai lavorando da solo a un progetto, considera di trovare altri sviluppatori e scambiare revisioni del codice
+- Assicurati che le pull request abbiano almeno un revisore indipendente; se lavori da solo a un progetto, considera di trovare altri sviluppatori e scambiare revisioni del codice
 
 - Utilizza un [ambiente di sviluppo](/developers/docs/frameworks/) per testare, compilare e distribuire gli smart contract
 
@@ -118,19 +119,19 @@ L'esistenza di audit e bug bounty non ti esime dalla responsabilità di scrivere
 
 - Assicurati che il tuo codice venga compilato senza errori e che il compilatore Solidity non emetta avvisi
 
-- Documenta correttamente il tuo codice (utilizzando [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) e descrivi i dettagli sull'architettura del contratto in un linguaggio di facile comprensione. Ciò renderà più facile per gli altri controllare e revisionare il tuo codice.
+- Documenta correttamente il tuo codice (utilizzando [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) e descrivi i dettagli sull'architettura del contratto in un linguaggio facile da comprendere. Ciò renderà più facile per gli altri controllare e revisionare il tuo codice.
 
-### 6. Implementare solidi piani di disaster recovery {#implement-disaster-recovery-plans}
+### 6. Implementare solidi piani di ripristino di emergenza {#implement-disaster-recovery-plans}
 
-Progettare controlli di accesso sicuri, implementare modificatori di funzione e altri suggerimenti possono migliorare la sicurezza degli smart contract, ma non possono escludere la possibilità di exploit malevoli. Costruire smart contract sicuri richiede di "prepararsi al fallimento" e di avere un piano di riserva per rispondere efficacemente agli attacchi. Un piano di disaster recovery adeguato incorporerà alcuni o tutti i seguenti componenti:
+Progettare controlli di accesso sicuri, implementare modificatori di funzione e altri suggerimenti possono migliorare la sicurezza degli smart contract, ma non possono escludere la possibilità di exploit malevoli. Costruire smart contract sicuri richiede di "prepararsi al fallimento" e di avere un piano di riserva per rispondere efficacemente agli attacchi. Un adeguato piano di ripristino di emergenza (disaster recovery) incorporerà alcuni o tutti i seguenti componenti:
 
 #### Aggiornamenti del contratto {#contract-upgrades}
 
 Sebbene gli smart contract di Ethereum siano immutabili per impostazione predefinita, è possibile ottenere un certo grado di mutabilità utilizzando pattern di aggiornamento. L'aggiornamento dei contratti è necessario nei casi in cui un difetto critico renda inutilizzabile il vecchio contratto e la distribuzione di una nuova logica sia l'opzione più fattibile.
 
-I meccanismi di aggiornamento del contratto funzionano in modo diverso, ma il "pattern proxy" è uno degli approcci più popolari per l'aggiornamento degli smart contract. I [pattern proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividono lo stato e la logica di un'applicazione tra _due_ contratti. Il primo contratto (chiamato 'contratto proxy') memorizza le variabili di stato (ad es., i saldi degli utenti), mentre il secondo contratto (chiamato 'contratto logico') contiene il codice per l'esecuzione delle funzioni del contratto.
+I meccanismi di aggiornamento dei contratti funzionano in modo diverso, ma il "pattern proxy" è uno degli approcci più popolari per l'aggiornamento degli smart contract. I [pattern proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividono lo stato e la logica di un'applicazione tra _due_ contratti. Il primo contratto (chiamato 'contratto proxy') memorizza le variabili di stato (ad es. i saldi degli utenti), mentre il secondo contratto (chiamato 'contratto logico') contiene il codice per l'esecuzione delle funzioni del contratto.
 
-Gli account interagiscono con il contratto proxy, che invia tutte le chiamate di funzione al contratto logico utilizzando la chiamata di basso livello [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). A differenza di una normale chiamata di messaggio, `delegatecall()` assicura che il codice in esecuzione all'indirizzo del contratto logico venga eseguito nel contesto del contratto chiamante. Ciò significa che il contratto logico scriverà sempre nello storage del proxy (invece che nel proprio storage) e i valori originali di `msg.sender` e `msg.value` vengono preservati.
+Gli account interagiscono con il contratto proxy, che invia tutte le chiamate di funzione al contratto logico utilizzando la chiamata di basso livello [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). A differenza di una normale chiamata di messaggio, `delegatecall()` assicura che il codice in esecuzione all'indirizzo del contratto logico venga eseguito nel contesto del contratto chiamante. Ciò significa che il contratto logico scriverà sempre nello storage del proxy (invece che nel proprio storage) e i valori originali di `msg.sender` e `msg.value` verranno preservati.
 
 Delegare le chiamate al contratto logico richiede la memorizzazione del suo indirizzo nello storage del contratto proxy. Pertanto, l'aggiornamento della logica del contratto è solo questione di distribuire un altro contratto logico e memorizzare il nuovo indirizzo nel contratto proxy. Poiché le chiamate successive al contratto proxy vengono instradate automaticamente al nuovo contratto logico, avrai "aggiornato" il contratto senza modificarne effettivamente il codice.
 
@@ -138,20 +139,20 @@ Delegare le chiamate al contratto logico richiede la memorizzazione del suo indi
 
 #### Arresti di emergenza {#emergency-stops}
 
-Come accennato, audit e test approfonditi non possono scoprire tutti i bug in uno smart contract. Se una vulnerabilità appare nel tuo codice dopo la distribuzione, correggerla è impossibile poiché non puoi modificare il codice in esecuzione all'indirizzo del contratto. Inoltre, i meccanismi di aggiornamento (ad es., i pattern proxy) potrebbero richiedere tempo per essere implementati (spesso richiedono l'approvazione di diverse parti), il che dà solo agli aggressori più tempo per causare ulteriori danni.
+Come accennato, audit e test approfonditi non possono scoprire tutti i bug in uno smart contract. Se una vulnerabilità appare nel tuo codice dopo la distribuzione, correggerla è impossibile poiché non puoi modificare il codice in esecuzione all'indirizzo del contratto. Inoltre, i meccanismi di aggiornamento (ad es. i pattern proxy) potrebbero richiedere tempo per essere implementati (spesso richiedono l'approvazione di diverse parti), il che dà solo agli aggressori più tempo per causare ulteriori danni.
 
-L'opzione nucleare è implementare una funzione di "arresto di emergenza" che blocca le chiamate alle funzioni vulnerabili in un contratto. Gli arresti di emergenza comprendono in genere i seguenti componenti:
+L'opzione estrema è implementare una funzione di "arresto di emergenza" che blocca le chiamate alle funzioni vulnerabili in un contratto. Gli arresti di emergenza comprendono in genere i seguenti componenti:
 
 1. Una variabile booleana globale che indica se lo smart contract è in uno stato di arresto o meno. Questa variabile è impostata su `false` durante la configurazione del contratto, ma passerà a `true` una volta che il contratto viene arrestato.
 
 2. Funzioni che fanno riferimento alla variabile booleana nella loro esecuzione. Tali funzioni sono accessibili quando lo smart contract non è arrestato e diventano inaccessibili quando viene attivata la funzione di arresto di emergenza.
 
-3. Un'entità che ha accesso alla funzione di arresto di emergenza, che imposta la variabile booleana su `true`. Per prevenire azioni malevole, le chiamate a questa funzione possono essere limitate a un indirizzo fidato (ad es., il proprietario del contratto).
+3. Un'entità che ha accesso alla funzione di arresto di emergenza, che imposta la variabile booleana su `true`. Per prevenire azioni malevole, le chiamate a questa funzione possono essere limitate a un indirizzo fidato (ad es. il proprietario del contratto).
 
 Una volta che il contratto attiva l'arresto di emergenza, alcune funzioni non saranno chiamabili. Ciò si ottiene racchiudendo funzioni selezionate in un modificatore che fa riferimento alla variabile globale. Di seguito è riportato [un esempio](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) che descrive un'implementazione di questo pattern nei contratti:
 
 ```solidity
-// Questo codice non è stato sottoposto ad audit professionale e non fa alcuna promessa sulla sicurezza o correttezza. Usare a proprio rischio.
+// Questo codice non è stato sottoposto a un audit professionale e non fa promesse sulla sicurezza o correttezza. Usalo a tuo rischio e pericolo.
 
 contract EmergencyStop {
 
@@ -168,7 +169,7 @@ contract EmergencyStop {
     }
 
     modifier onlyAuthorized {
-        // Verifica l'autorizzazione di msg.sender qui
+        // Controlla l'autorizzazione di msg.sender qui
         _;
     }
 
@@ -192,17 +193,17 @@ contract EmergencyStop {
 
 Questo esempio mostra le caratteristiche di base degli arresti di emergenza:
 
-- `isStopped` è un booleano che restituisce `false` all'inizio e `true` quando il contratto entra in modalità di emergenza.
+- `isStopped` è un booleano che valuta `false` all'inizio e `true` quando il contratto entra in modalità di emergenza.
 
-- I modificatori di funzione `onlyWhenStopped` e `stoppedInEmergency` controllano la variabile `isStopped`. `stoppedInEmergency` viene utilizzato per controllare le funzioni che dovrebbero essere inaccessibili quando il contratto è vulnerabile (ad es., `deposit()`). Le chiamate a queste funzioni andranno semplicemente in revert.
+- I modificatori di funzione `onlyWhenStopped` e `stoppedInEmergency` controllano la variabile `isStopped`. `stoppedInEmergency` viene utilizzato per controllare le funzioni che dovrebbero essere inaccessibili quando il contratto è vulnerabile (ad es. `deposit()`). Le chiamate a queste funzioni andranno semplicemente in revert.
 
-`onlyWhenStopped` viene utilizzato per le funzioni che dovrebbero essere chiamabili durante un'emergenza (ad es., `emergencyWithdraw()`). Tali funzioni possono aiutare a risolvere la situazione, da qui la loro esclusione dall'elenco delle "funzioni limitate".
+`onlyWhenStopped` viene utilizzato per le funzioni che dovrebbero essere chiamabili durante un'emergenza (ad es. `emergencyWithdraw()`). Tali funzioni possono aiutare a risolvere la situazione, da qui la loro esclusione dall'elenco delle "funzioni limitate".
 
-L'utilizzo di una funzionalità di arresto di emergenza fornisce un efficace espediente temporaneo per affrontare gravi vulnerabilità nel tuo smart contract. Tuttavia, aumenta la necessità per gli utenti di fidarsi degli sviluppatori affinché non la attivino per scopi egoistici. A tal fine, decentralizzare il controllo dell'arresto di emergenza sottoponendolo a un meccanismo di voto onchain, a un timelock o all'approvazione da un portafoglio multisig sono possibili soluzioni.
+L'utilizzo di una funzionalità di arresto di emergenza fornisce un efficace espediente temporaneo per affrontare gravi vulnerabilità nel tuo smart contract. Tuttavia, aumenta la necessità per gli utenti di fidarsi degli sviluppatori affinché non la attivino per scopi egoistici. A tal fine, decentralizzare il controllo dell'arresto di emergenza sottoponendolo a un meccanismo di voto onchain, a un timelock o all'approvazione da parte di un portafoglio multisig sono possibili soluzioni.
 
 #### Monitoraggio degli eventi {#event-monitoring}
 
-Gli [eventi](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) ti consentono di tracciare le chiamate alle funzioni dello smart contract e monitorare le modifiche alle variabili di stato. È ideale programmare il tuo smart contract per emettere un evento ogni volta che una parte intraprende un'azione critica per la sicurezza (ad es., il prelievo di fondi).
+Gli [eventi](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) ti consentono di tracciare le chiamate alle funzioni dello smart contract e monitorare le modifiche alle variabili di stato. È ideale programmare il tuo smart contract per emettere un evento ogni volta che una parte intraprende un'azione critica per la sicurezza (ad es. il prelievo di fondi).
 
 La registrazione degli eventi e il loro monitoraggio offchain forniscono informazioni sulle operazioni del contratto e aiutano a una scoperta più rapida di azioni malevole. Ciò significa che il tuo team può rispondere più rapidamente agli hack e intraprendere azioni per mitigare l'impatto sugli utenti, come mettere in pausa le funzioni o eseguire un aggiornamento.
 
@@ -210,31 +211,31 @@ Puoi anche optare per uno strumento di monitoraggio pronto all'uso che inoltra a
 
 ### 7. Progettare sistemi di governance sicuri {#design-secure-governance-systems}
 
-Potresti voler decentralizzare la tua applicazione cedendo il controllo degli smart contract principali ai membri della comunità. In questo caso, il sistema di smart contract includerà un modulo di governance: un meccanismo che consente ai membri della comunità di approvare azioni amministrative tramite un sistema di governance onchain. Ad esempio, una proposta per aggiornare un contratto proxy a una nuova implementazione può essere votata dai possessori di token.
+Potresti voler decentralizzare la tua applicazione cedendo il controllo degli smart contract principali ai membri della comunità. In questo caso, il sistema di smart contract includerà un modulo di governance: un meccanismo che consente ai membri della comunità di approvare azioni amministrative tramite un sistema di governance onchain. Ad esempio, una proposta per aggiornare un contratto proxy a una nuova implementazione potrebbe essere votata dai detentori di token.
 
-La governance decentralizzata può essere vantaggiosa, soprattutto perché allinea gli interessi degli sviluppatori e degli utenti finali. Tuttavia, i meccanismi di governance degli smart contract possono introdurre nuovi rischi se implementati in modo errato. Uno scenario plausibile è se un aggressore acquisisce un enorme potere di voto (misurato in numero di token posseduti) stipulando un [prestito lampo](/defi/#flash-loans) e fa approvare una proposta malevola.
+La governance decentralizzata può essere vantaggiosa, soprattutto perché allinea gli interessi degli sviluppatori e degli utenti finali. Tuttavia, i meccanismi di governance degli smart contract possono introdurre nuovi rischi se implementati in modo errato. Uno scenario plausibile è se un aggressore acquisisce un enorme potere di voto (misurato in numero di token detenuti) stipulando un [prestito lampo](/defi/#flash-loans) e fa approvare una proposta malevola.
 
-Un modo per prevenire i problemi relativi alla governance onchain è [utilizzare un timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un timelock impedisce a uno smart contract di eseguire determinate azioni fino a quando non trascorre un periodo di tempo specifico. Altre strategie includono l'assegnazione di un "peso di voto" a ciascun token in base a quanto tempo è stato bloccato, o la misurazione del potere di voto di un indirizzo in un periodo storico (ad esempio, 2-3 blocchi nel passato) invece del blocco corrente. Entrambi i metodi riducono la possibilità di accumulare rapidamente potere di voto per influenzare i voti onchain.
+Un modo per prevenire problemi relativi alla governance onchain è [utilizzare un timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un timelock impedisce a uno smart contract di eseguire determinate azioni fino a quando non trascorre un periodo di tempo specifico. Altre strategie includono l'assegnazione di un "peso di voto" a ciascun token in base a quanto tempo è stato bloccato, o la misurazione del potere di voto di un indirizzo in un periodo storico (ad esempio, 2-3 blocchi nel passato) invece del blocco corrente. Entrambi i metodi riducono la possibilità di accumulare rapidamente potere di voto per influenzare i voti onchain.
 
-Maggiori informazioni sulla [progettazione di sistemi di governance sicuri](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), sui [diversi meccanismi di voto nelle DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) e sui [comuni vettori di attacco alle DAO che sfruttano la DeFi](https://dacian.me/dao-governance-defi-attacks) nei link condivisi.
+Maggiori informazioni sulla [progettazione di sistemi di governance sicuri](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), sui [diversi meccanismi di voto nelle organizzazioni autonome decentralizzate (DAO)](https://hackernoon.com/governance-is-the-holy-grail-for-daos) e sui [comuni vettori di attacco alle DAO che sfruttano la DeFi](https://dacian.me/dao-governance-defi-attacks) nei link condivisi.
 
-### 8. Ridurre al minimo la complessità nel codice {#reduce-code-complexity}
+### 8. Ridurre al minimo la complessità del codice {#reduce-code-complexity}
 
 Gli sviluppatori di software tradizionali hanno familiarità con il principio KISS ("keep it simple, stupid"), che sconsiglia di introdurre complessità non necessarie nella progettazione del software. Questo segue il pensiero di lunga data secondo cui "i sistemi complessi falliscono in modi complessi" e sono più suscettibili a errori costosi.
 
 Mantenere le cose semplici è di particolare importanza quando si scrivono smart contract, dato che gli smart contract controllano potenzialmente grandi quantità di valore. Un suggerimento per ottenere semplicità quando si scrivono smart contract è riutilizzare librerie esistenti, come [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), ove possibile. Poiché queste librerie sono state ampiamente controllate e testate dagli sviluppatori, il loro utilizzo riduce le possibilità di introdurre bug scrivendo nuove funzionalità da zero.
 
-Un altro consiglio comune è scrivere piccole funzioni e mantenere i contratti modulari suddividendo la logica di business su più contratti. Scrivere codice più semplice non solo riduce la superficie di attacco in uno smart contract, ma rende anche più facile ragionare sulla correttezza del sistema complessivo e rilevare tempestivamente possibili errori di progettazione.
+Un altro consiglio comune è scrivere piccole funzioni e mantenere i contratti modulari dividendo la logica di business su più contratti. Non solo scrivere codice più semplice riduce la superficie di attacco in uno smart contract, ma rende anche più facile ragionare sulla correttezza del sistema complessivo e rilevare tempestivamente possibili errori di progettazione.
 
 ### 9. Difendersi dalle comuni vulnerabilità degli smart contract {#mitigate-common-smart-contract-vulnerabilities}
 
 #### Rientranza {#reentrancy}
 
-L'EVM non consente la concorrenza, il che significa che due contratti coinvolti in una chiamata di messaggio non possono essere eseguiti contemporaneamente. Una chiamata esterna mette in pausa l'esecuzione e la memoria del contratto chiamante fino al ritorno della chiamata, a quel punto l'esecuzione procede normalmente. Questo processo può essere formalmente descritto come il trasferimento del [flusso di controllo](https://www.computerhope.com/jargon/c/contflow.htm) a un altro contratto.
+La EVM non consente la concorrenza, il che significa che due contratti coinvolti in una chiamata di messaggio non possono essere eseguiti contemporaneamente. Una chiamata esterna mette in pausa l'esecuzione e la memoria del contratto chiamante fino al ritorno della chiamata, a quel punto l'esecuzione procede normalmente. Questo processo può essere formalmente descritto come il trasferimento del [flusso di controllo](https://www.computerhope.com/jargon/c/contflow.htm) a un altro contratto.
 
-Sebbene per lo più innocuo, il trasferimento del flusso di controllo a contratti non attendibili può causare problemi, come la rientranza. Un attacco di rientranza si verifica quando un contratto malevolo richiama un contratto vulnerabile prima che l'invocazione della funzione originale sia completata. Questo tipo di attacco è spiegato meglio con un esempio.
+Sebbene per lo più innocuo, il trasferimento del flusso di controllo a contratti non fidati può causare problemi, come la rientranza. Un attacco di rientranza si verifica quando un contratto malevolo richiama un contratto vulnerabile prima che l'invocazione della funzione originale sia completata. Questo tipo di attacco è spiegato meglio con un esempio.
 
-Considera un semplice smart contract ('Vittima') che consente a chiunque di depositare e prelevare ether:
+Considera un semplice smart contract ('Victim') che consente a chiunque di depositare e prelevare ether:
 
 ```solidity
 // Questo contratto è vulnerabile. Non usare in produzione
@@ -259,9 +260,9 @@ Questo contratto espone una funzione `withdraw()` per consentire agli utenti di 
 
 1. Controlla il saldo in ETH dell'utente
 2. Invia i fondi all'indirizzo chiamante
-3. Azzera il suo saldo, impedendo ulteriori prelievi da parte dell'utente
+3. Azzera il loro saldo, impedendo ulteriori prelievi da parte dell'utente
 
-La funzione `withdraw()` nel contratto `Victim` segue un pattern "controlli-interazioni-effetti" (checks-interactions-effects). _Controlla_ se le condizioni necessarie per l'esecuzione sono soddisfatte (ovvero, l'utente ha un saldo in ETH positivo) ed esegue l'_interazione_ inviando ETH all'indirizzo del chiamante, prima di applicare gli _effetti_ della transazione (ovvero, riducendo il saldo dell'utente).
+La funzione `withdraw()` nel contratto `Victim` segue un pattern "checks-interactions-effects" (controlli-interazioni-effetti). _Controlla_ se le condizioni necessarie per l'esecuzione sono soddisfatte (ovvero, l'utente ha un saldo in ETH positivo) ed esegue l'_interazione_ inviando ETH all'indirizzo del chiamante, prima di applicare gli _effetti_ della transazione (ovvero, riducendo il saldo dell'utente).
 
 Se `withdraw()` viene chiamata da un account di proprietà esterna (EOA), la funzione viene eseguita come previsto: `msg.sender.call.value()` invia ETH al chiamante. Tuttavia, se `msg.sender` è un account di smart contract che chiama `withdraw()`, l'invio di fondi utilizzando `msg.sender.call.value()` innescherà anche l'esecuzione del codice memorizzato a quell'indirizzo.
 
@@ -285,15 +286,15 @@ Immagina che questo sia il codice distribuito all'indirizzo del contratto:
 Questo contratto è progettato per fare tre cose:
 
 1. Accettare un deposito da un altro account (probabilmente l'EOA dell'aggressore)
-2. Depositare 1 ETH nel contratto Vittima
+2. Depositare 1 ETH nel contratto Victim
 3. Prelevare l'1 ETH memorizzato nello smart contract
 
-Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che chiama nuovamente `withdraw()` in `Victim` se il gas rimanente dal `msg.sender.call.value` in entrata è superiore a 40.000. Ciò dà a `Attacker` la capacità di rientrare in `Victim` e prelevare più fondi _prima_ che la prima invocazione di `withdraw` sia completata. Il ciclo si presenta così:
+Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che chiama nuovamente `withdraw() in `Victim` se il gas rimanente dalla `msg.sender.call.value` in entrata è superiore a 40.000. Ciò dà a `Attacker` la capacità di rientrare in `Victim` e prelevare più fondi _prima_ che la prima invocazione di `withdraw` sia completata. Il ciclo si presenta così:
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
 - `Attacker.beginAttack()` deposits 1 ETH into `Victim`
-- `Attacker` calls `withdraw()` in `Victim`
+- `Attacker` calls `withdraw() in `Victim`
 - `Victim` checks `Attacker`’s balance (1 ETH)
 - `Victim` sends 1 ETH to `Attacker` (which triggers the default function)
 - `Attacker` calls `Victim.withdraw()` again (note that `Victim` hasn’t reduced `Attacker`’s balance from the first withdrawal)
@@ -303,12 +304,13 @@ Non c'è niente di sbagliato qui, tranne che `Attacker` ha un'altra funzione che
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-In sintesi, poiché il saldo del chiamante non viene impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo e consentiranno al chiamante di prelevare il proprio saldo più volte. Questo tipo di attacco può essere utilizzato per prosciugare i fondi di uno smart contract, come è successo nell'[hack della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per gli smart contract, come mostrano gli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
+Il riassunto è che, poiché il saldo del chiamante non viene impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo e consentiranno al chiamante di prelevare il proprio saldo più volte. Questo tipo di attacco può essere utilizzato per prosciugare i fondi di uno smart contract, come è successo nell'[hack della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per gli smart contract, come mostrano gli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Come prevenire gli attacchi di rientranza
-Un approccio per affrontare la rientranza è seguire il [pattern controlli-effetti-interazioni](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Questo pattern ordina l'esecuzione delle funzioni in modo tale che il codice che esegue i controlli necessari prima di procedere con l'esecuzione venga per primo, seguito dal codice che manipola lo stato del contratto, con il codice che interagisce con altri contratti o EOA che arriva per ultimo.
 
-Il pattern controlli-effetti-interazioni viene utilizzato in una versione rivista del contratto `Victim` mostrata di seguito:
+Un approccio per affrontare la rientranza è seguire il [pattern checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Questo pattern ordina l'esecuzione delle funzioni in modo tale che il codice che esegue i controlli necessari prima di procedere con l'esecuzione venga per primo, seguito dal codice che manipola lo stato del contratto, con il codice che interagisce con altri contratti o EOA che arriva per ultimo.
+
+Il pattern checks-effects-interactions viene utilizzato in una versione rivista del contratto `Victim` mostrata di seguito:
 
 ```solidity
 contract NoLongerAVictim {
@@ -323,7 +325,7 @@ contract NoLongerAVictim {
 
 Questo contratto esegue un _controllo_ sul saldo dell'utente, applica gli _effetti_ della funzione `withdraw()` (azzerando il saldo dell'utente) e procede a eseguire l'_interazione_ (inviando ETH all'indirizzo dell'utente). Ciò assicura che il contratto aggiorni il suo storage prima della chiamata esterna, eliminando la condizione di rientranza che ha consentito il primo attacco. Il contratto `Attacker` potrebbe ancora richiamare `NoLongerAVictim`, ma poiché `balances[msg.sender]` è stato impostato a 0, ulteriori prelievi genereranno un errore.
 
-Un'altra opzione è utilizzare un blocco di mutua esclusione (comunemente descritto come "mutex") che blocca una porzione dello stato di un contratto fino al completamento dell'invocazione di una funzione. Questo viene implementato utilizzando una variabile booleana che viene impostata su `true` prima dell'esecuzione della funzione e ritorna a `false` dopo che l'invocazione è terminata. Come si vede nell'esempio seguente, l'utilizzo di un mutex protegge una funzione dalle chiamate ricorsive mentre l'invocazione originale è ancora in elaborazione, fermando efficacemente la rientranza.
+Un'altra opzione è utilizzare un blocco di mutua esclusione (comunemente descritto come "mutex") che blocca una porzione dello stato di un contratto fino al completamento dell'invocazione di una funzione. Questo viene implementato utilizzando una variabile booleana che viene impostata su `true` prima dell'esecuzione della funzione e ritorna a `false` dopo che l'invocazione è terminata. Come si vede nell'esempio seguente, l'utilizzo di un mutex protegge una funzione dalle chiamate ricorsive mentre l'invocazione originale è ancora in elaborazione, fermando di fatto la rientranza.
 
 ```solidity
 pragma solidity ^0.7.0;
@@ -356,7 +358,7 @@ Puoi anche utilizzare un sistema di [pagamenti pull](https://docs.openzeppelin.c
 
 #### Underflow e overflow di interi {#integer-underflows-and-overflows}
 
-Un overflow di interi si verifica quando i risultati di un'operazione aritmetica non rientrano nell'intervallo di valori accettabile, facendolo "riavvolgere" al valore rappresentabile più basso. Ad esempio, un `uint8` può memorizzare solo valori fino a 2^8-1=255. Le operazioni aritmetiche che producono valori superiori a `255` andranno in overflow e ripristineranno `uint` a `0`, in modo simile a come il contachilometri di un'auto si azzera a 0 una volta raggiunto il chilometraggio massimo (999999).
+Un overflow di interi si verifica quando i risultati di un'operazione aritmetica non rientrano nell'intervallo di valori accettabile, facendolo "riavvolgere" al valore rappresentabile più basso. Ad esempio, un `uint8` può memorizzare solo valori fino a 2^8-1=255. Le operazioni aritmetiche che producono valori superiori a `255` andranno in overflow e ripristineranno `uint` a `0`, in modo simile a come il contachilometri di un'auto si azzera una volta raggiunto il chilometraggio massimo (999999).
 
 Gli underflow di interi si verificano per motivi simili: i risultati di un'operazione aritmetica scendono al di sotto dell'intervallo accettabile. Supponiamo che tu abbia provato a decrementare `0` in un `uint8`, il risultato si riavvolgerebbe semplicemente al valore massimo rappresentabile (`255`).
 
@@ -373,7 +375,7 @@ pragma solidity ^0.7.6;
 1. Distribuisci TimeLock
 2. Distribuisci Attack con l'indirizzo di TimeLock
 3. Chiama Attack.attack inviando 1 ether. Sarai immediatamente in grado di
-   prelevare il tuo ether.
+   prelevare i tuoi ether.
 
 Cosa è successo?
 Attack ha causato l'overflow di TimeLock.lockTime ed è stato in grado di prelevare
@@ -417,7 +419,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        se t = tempo di blocco attuale, allora dobbiamo trovare x tale che
+        se t = tempo di blocco attuale allora dobbiamo trovare x tale che
         x + t = 2**256 = 0
         quindi x = -t
         2**256 = type(uint).max + 1
@@ -432,24 +434,26 @@ contract Attack {
 ```
 
 ##### Come prevenire underflow e overflow di interi
-A partire dalla versione 0.8.0, il compilatore Solidity rifiuta il codice che produce underflow e overflow di interi. Tuttavia, i contratti compilati con una versione del compilatore inferiore dovrebbero eseguire controlli sulle funzioni che coinvolgono operazioni aritmetiche o utilizzare una libreria (ad es., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) che controlla la presenza di underflow/overflow.
+
+A partire dalla versione 0.8.0, il compilatore Solidity rifiuta il codice che produce underflow e overflow di interi. Tuttavia, i contratti compilati con una versione del compilatore inferiore dovrebbero eseguire controlli sulle funzioni che coinvolgono operazioni aritmetiche o utilizzare una libreria (ad es. [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) che controlla la presenza di underflow/overflow.
 
 #### Manipolazione dell'oracolo {#oracle-manipulation}
 
-Gli [oracoli](/developers/docs/oracles/) reperiscono informazioni offchain e le inviano onchain affinché gli smart contract le utilizzino. Con gli oracoli, puoi progettare smart contract che interagiscono con sistemi offchain, come i mercati dei capitali, espandendo notevolmente la loro applicazione.
+Gli [oracoli](/developers/docs/oracles/) reperiscono informazioni offchain e le inviano onchain affinché gli smart contract le utilizzino. Con gli oracoli, puoi progettare smart contract che interagiscono con sistemi offchain, come i mercati dei capitali, espandendone notevolmente l'applicazione.
 
 Ma se l'oracolo è corrotto e invia informazioni errate onchain, gli smart contract verranno eseguiti in base a input errati, il che può causare problemi. Questa è la base del "problema dell'oracolo", che riguarda il compito di assicurarsi che le informazioni provenienti da un oracolo blockchain siano accurate, aggiornate e tempestive.
 
-Un problema di sicurezza correlato è l'utilizzo di un oracolo onchain, come un exchange decentralizzato, per ottenere il prezzo spot di un asset. Le piattaforme di prestito nel settore della [finanza decentralizzata (DeFi)](/defi/) lo fanno spesso per determinare il valore del collaterale di un utente per stabilire quanto può prendere in prestito.
+Un problema di sicurezza correlato è l'utilizzo di un oracolo onchain, come un exchange decentralizzato (DEX), per ottenere il prezzo spot di un asset. Le piattaforme di prestito nel settore della [finanza decentralizzata (DeFi)](/defi/) lo fanno spesso per determinare il valore del collaterale di un utente per stabilire quanto può prendere in prestito.
 
 I prezzi dei DEX sono spesso accurati, in gran parte grazie agli arbitraggisti che ripristinano la parità nei mercati. Tuttavia, sono aperti alla manipolazione, in particolare se l'oracolo onchain calcola i prezzi degli asset in base a modelli di trading storici (come di solito accade).
 
-Ad esempio, un aggressore potrebbe pompare artificialmente il prezzo spot di un asset stipulando un prestito lampo subito prima di interagire con il tuo contratto di prestito. Interrogare il DEX per il prezzo dell'asset restituirebbe un valore più alto del normale (a causa del grande "ordine di acquisto" dell'aggressore che distorce la domanda per l'asset), consentendogli di prendere in prestito più di quanto dovrebbe. Tali "attacchi di prestito lampo" sono stati utilizzati per sfruttare la dipendenza dagli oracoli di prezzo tra le applicazioni DeFi, costando ai protocolli milioni in fondi persi.
+Ad esempio, un aggressore potrebbe pompare artificialmente il prezzo spot di un asset stipulando un prestito lampo subito prima di interagire con il tuo contratto di prestito. Interrogare il DEX per il prezzo dell'asset restituirebbe un valore superiore al normale (a causa del grande "ordine di acquisto" dell'aggressore che distorce la domanda per l'asset), consentendogli di prendere in prestito più di quanto dovrebbe. Tali "attacchi di prestito lampo" sono stati utilizzati per sfruttare la dipendenza dagli oracoli di prezzo tra le applicazioni DeFi, costando ai protocolli milioni in fondi persi.
 
 ##### Come prevenire la manipolazione dell'oracolo
+
 Il requisito minimo per [evitare la manipolazione dell'oracolo](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) è utilizzare una rete di oracoli decentralizzata che interroga le informazioni da più fonti per evitare singoli punti di vulnerabilità. Nella maggior parte dei casi, gli oracoli decentralizzati hanno incentivi criptoeconomici integrati per incoraggiare i nodi oracolo a riportare informazioni corrette, rendendoli più sicuri degli oracoli centralizzati.
 
-Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, considera di utilizzarne uno che implementa un meccanismo di prezzo medio ponderato nel tempo (TWAP). Un [oracolo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroga il prezzo di un asset in due diversi momenti nel tempo (che puoi modificare) e calcola il prezzo spot in base alla media ottenuta. La scelta di periodi di tempo più lunghi protegge il tuo protocollo dalla manipolazione dei prezzi poiché i grandi ordini eseguiti di recente non possono influire sui prezzi degli asset.
+Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, considera di utilizzarne uno che implementa un meccanismo di prezzo medio ponderato nel tempo (TWAP). Un [oracolo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroga il prezzo di un asset in due diversi momenti nel tempo (che puoi modificare) e calcola il prezzo spot in base alla media ottenuta. La scelta di periodi di tempo più lunghi protegge il tuo protocollo dalla manipolazione dei prezzi, poiché i grandi ordini eseguiti di recente non possono influire sui prezzi degli asset.
 
 ## Risorse sulla sicurezza degli smart contract per gli sviluppatori {#smart-contract-security-resources-for-developers}
 
@@ -463,7 +467,7 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - **[Piattaforme di bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Piattaforme per coordinare i bug bounty e ricompensare la divulgazione responsabile di vulnerabilità critiche negli smart contract._
 
-- **[Fork Checker](https://forkchecker.hashex.org/)** - _Uno strumento online gratuito per controllare tutte le informazioni disponibili riguardanti un contratto sottoposto a fork._
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _Uno strumento online gratuito per controllare tutte le informazioni disponibili riguardo a un contratto sottoposto a fork._
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _Un servizio online gratuito per codificare le funzioni del tuo contratto Solidity e gli argomenti del costruttore._
 
@@ -505,7 +509,7 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - **[CodeHawks](https://codehawks.com/)** - _Piattaforma di audit competitiva che ospita competizioni di auditing di smart contract per i ricercatori di sicurezza._
 
-- **[Cyfrin](https://cyfrin.io)** - _Potenza della sicurezza Web3, che incuba la sicurezza cripto attraverso prodotti e servizi di auditing degli smart contract._
+- **[Cyfrin](https://cyfrin.io)** - _Colosso della sicurezza Web3, che incuba la sicurezza cripto attraverso prodotti e servizi di auditing degli smart contract._
 
 - **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Azienda di sicurezza Web3 che offre audit di sicurezza per sistemi blockchain attraverso un team di revisori esperti e strumenti all'avanguardia._
 
@@ -529,15 +533,15 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - **[ConsenSys: Attacchi noti agli smart contract](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Spiegazione adatta ai principianti delle vulnerabilità più significative dei contratti, con codice di esempio per la maggior parte dei casi._
 
-- **[SWC Registry](https://swcregistry.io/)** - _Elenco curato di elementi Common Weakness Enumeration (CWE) che si applicano agli smart contract di Ethereum._
+- **[Registro SWC](https://swcregistry.io/)** - _Elenco curato di elementi Common Weakness Enumeration (CWE) che si applicano agli smart contract di Ethereum._
 
 - **[Rekt](https://rekt.news/)** - _Pubblicazione regolarmente aggiornata di hack ed exploit cripto di alto profilo, insieme a rapporti post-mortem dettagliati._
 
 ### Sfide per imparare la sicurezza degli smart contract {#challenges-for-learning-smart-contract-security}
 
-- **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Elenco curato di wargame sulla sicurezza della blockchain, sfide e competizioni [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) con le relative soluzioni scritte._
+- **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Elenco curato di wargame sulla sicurezza blockchain, sfide e competizioni [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) con le relative soluzioni._
 
-- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _Wargame per imparare la sicurezza offensiva degli smart contract DeFi e sviluppare competenze nella ricerca di bug e nell'auditing di sicurezza._
+- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _Wargame per imparare la sicurezza offensiva degli smart contract DeFi e sviluppare competenze nella caccia ai bug e nell'auditing di sicurezza._
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Wargame basato su Web3/Solidity in cui ogni livello è uno smart contract che deve essere "hackerato"._
 
@@ -555,7 +559,7 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Lista di controllo in quattordici parti creata per standardizzare la sicurezza degli smart contract per sviluppatori, architetti, revisori della sicurezza e fornitori._
 
-- **[Impara la sicurezza e l'auditing degli smart contract](https://updraft.cyfrin.io/courses/security)** - _Corso definitivo sulla sicurezza e l'auditing degli smart contract, creato per gli sviluppatori di smart contract che desiderano migliorare le proprie pratiche di sicurezza e diventare ricercatori di sicurezza._
+- **[Impara la sicurezza e l'auditing degli smart contract](https://updraft.cyfrin.io/courses/security)** - _Il corso definitivo sulla sicurezza e l'auditing degli smart contract, creato per gli sviluppatori di smart contract che desiderano migliorare le proprie pratiche di sicurezza e diventare ricercatori di sicurezza._
 
 ### Tutorial sulla sicurezza degli smart contract {#tutorials-on-smart-contract-security}
 

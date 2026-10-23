@@ -29,33 +29,33 @@ lang: ru
 - [GitHub](https://github.com/alchemyplatform)
 - [Дискорд](https://discord.com/invite/alchemyplatform)
   
-**All That Node —** **_Узел как услуга (Node-as-a-Service)._**
+**All That Node —** **_Узел как услуга._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Документация](https://docs.allthatnode.com)
 - [Дискорд](https://discord.gg/GmcdVEUbJM)
 
-**Blast от Bware Labs —** **_Децентрализованные API для основной сети Ethereum и тестовых сетей._**
+**Blast от Bware Labs —** **_Децентрализованные программные интерфейсы приложения (API) для основной сети Ethereum и тестовых сетей._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Документация](https://docs.blastapi.io)
 - [Дискорд](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi —** **_Предоставляет более эффективные и быстрые сервисы RPC_**
+**BlockPi —** **_Предоставляет более эффективные и быстрые сервисы RPC._**
 
 - [blockpi.io](https://blockpi.io/)
 - [Документация](https://docs.blockpi.io/)
 - [GitHub](https://github.com/BlockPILabs)
 - [Дискорд](https://discord.com/invite/xTvGVrGVZv)
 
-**Шлюз Эфириума Cloudflare.**
+**Cloudflare Ethereum Gateway.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan — Обозреватель блоков и API транзакций**
+**Etherscan — обозреватель блоков и API транзакций**
 - [Документация](https://docs.etherscan.io/)
 
-**Blockscout — Обозреватель блоков с открытым исходным кодом**
+**Blockscout — обозреватель блоков с открытым исходным кодом**
 - [Документация](https://docs.blockscout.com/)
 
 **GetBlock —** **_Блокчейн как услуга для разработки Web3_**
@@ -69,7 +69,7 @@ lang: ru
 - [Документация](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC — _Экономичный провайдер EVM JSON-RPC_**
+**Node RPC — _Экономичный провайдер JSON-RPC для виртуальной машины Ethereum (EVM)_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Документация](https://docs.noderpc.xyz/node-rpc)
@@ -91,6 +91,12 @@ lang: ru
 - [Документация](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC —** **_Инфраструктура JSON-RPC для EVM с полным, архивным и публичным доступом без ключей._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Документация](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok —** **_Ориентированные на скорость узлы Эфириума в виде API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,19 +106,25 @@ lang: ru
 
 ### Инструменты разработки {#development-tools}
 
-**ethers-kt —** **_Асинхронная высокопроизводительная библиотека Kotlin/Java/Android для блокчейнов на базе EVM._**
+**eth.zig —** **_Библиотека Zig для Эфириума с кодированием двоичного интерфейса приложения (ABI) во время компиляции и привязками контрактов._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Документация](https://ethzig.org)
+- [Примеры](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt —** **_Асинхронная высокопроизводительная библиотека Kotlin/Java/Android для блокчейнов на базе виртуальной машины Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Примеры](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Дискорд](https://discord.gg/rx35NzQGSb)
 
-**Nethereum —** **_Библиотека интеграции .NET с открытым исходным кодом для блокчейна._**
+**Nethereum —** **_Интеграционная библиотека .NET с открытым исходным кодом для блокчейна._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Документация](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Дискорд](https://discord.com/invite/jQPrR58FxX)
 
-**Инструменты Python —** **_Разнообразные библиотеки для взаимодействия с Эфириумом через Python._**
+**Инструменты Python —** **_Различные библиотеки для взаимодействия с Эфириумом через Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [GitHub Web3.py](https://github.com/ethereum/web3.py)
@@ -125,7 +137,7 @@ lang: ru
 - [Документация](https://docs.tatum.io/)
 - [Дискорд](https://discord.gg/EDmW3kjTC9)
 
-**Web3j —** **_Библиотека интеграции Java/Android/Kotlin/Scala для Эфириума._**
+**Web3j —** **_Интеграционная библиотека Java/Android/Kotlin/Scala для Эфириума._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Документация](https://docs.web3j.io/)

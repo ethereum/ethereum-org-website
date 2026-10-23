@@ -1,7 +1,7 @@
 ---
 title: Introduction to Ethereum Improvement Proposals (EIPs)
 metaTitle: Ethereum Improvement Proposals (EIPs)
-description: The basic information you need to understand EIPs
+description: "What are Ethereum Improvement Proposals (EIPs)? Learn how changes to Ethereum are proposed, discussed and adopted, and how you can take part."
 lang: en
 ---
 
@@ -15,7 +15,7 @@ Anyone within the Ethereum community has the ability to create an EIP. Guideline
 
 EIPs play a central role in how changes happen and are documented on Ethereum. They are the way for people to propose, debate, and adopt changes. There are [different types of EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), including core EIPs for low-level protocol changes that affect consensus and require a network upgrade like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), and ERCs for application standards like [EIP-20](https://eips.ethereum.org/EIPS/eip-20) and [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Every network upgrade consists of a set of EIPs that need to be implemented by each [Ethereum client](/learn/#clients-and-nodes) on the network. This means that to stay in consensus with other clients on the Ethereum Mainnet, client developers need to make sure they have all implemented the required EIPs.
+Every network upgrade consists of a set of EIPs that need to be implemented by each [Ethereum client](/developers/docs/nodes-and-clients/) on the network. This means that to stay in consensus with other clients on the Ethereum Mainnet, client developers need to make sure they have all implemented the required EIPs.
 
 Along with providing a technical specification for changes, EIPs are the unit around which governance happens in Ethereum: anyone is free to propose one, and then various stakeholders in the community will debate to determine if it should be adopted as a standard or included in a network upgrade. Because non-core EIPs don't have to be adopted by all applications (for example, it is possible to create a fungible token that doesn't implement EIP-20), but core EIPs must be widely adopted (because all nodes must upgrade to stay part of the same network), core EIPs require a broader consensus within the community than non-core EIPs.
 

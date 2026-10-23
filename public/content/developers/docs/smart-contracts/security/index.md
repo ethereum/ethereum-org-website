@@ -78,7 +78,7 @@ The usual method is to write small unit tests using mock data that the contract 
 
 Unfortunately, unit testing is minimally effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for mock data, but unit tests are only as effective as the tests that are written. This makes it difficult to detect missed edge cases and vulnerabilities that could break the safety of your smart contract.
 
-A better approach is to combine unit testing with property-based testing performed using [static and dynamic analysis](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Static analysis relies on low-level representations, such as [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph) and [abstract syntax trees](https://deepsource.io/glossary/ast/) to analyze reachable program states and execution paths. Meanwhile, dynamic analysis techniques, such as [smart contract fuzzing](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), execute contract code with random input values to detect operations that violate security properties.
+A better approach is to combine unit testing with property-based testing performed using [static and dynamic analysis](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Static analysis relies on low-level representations, such as [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph) and [abstract syntax trees](https://deepsource.io/glossary/ast/) to analyze reachable program states and execution paths. Meanwhile, dynamic analysis techniques, such as [smart contract fuzzing](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), execute contract code with random input values to detect operations that violate security properties.
 
 [Formal verification](/developers/docs/smart-contracts/formal-verification) is another technique for verifying security properties in smart contracts. Unlike regular testing, formal verification can conclusively prove the absence of errors in a smart contract. This is achieved by creating a formal specification that captures desired security properties and proving that a formal model of the contracts adheres to this specification.
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### How to prevent integer underflows and overflows
 
-As of version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) that checks for underflow/overflow.
+As of version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) that checks for underflow/overflow.
 
 #### Oracle manipulation {#oracle-manipulation}
 
@@ -463,9 +463,9 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Formal verification tools](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Tools for verifying functional correctness in smart contracts and checking invariants._
 
-- **[Smart contract auditing services](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Listing of organizations providing smart contract auditing services for Ethereum development projects._
+- **[Smart contract auditing services](#smart-contract-auditing-services)** - _Listing of organizations providing smart contract auditing services for Ethereum development projects._
 
-- **[Bug bounty platforms](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platforms for coordinating bug bounties and rewarding responsible disclosure of critical vulnerabilities in smart contracts._
+- **[Bug bounty platforms](#bug-bounty-platforms)** - _Platforms for coordinating bug bounties and rewarding responsible disclosure of critical vulnerabilities in smart contracts._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _A free online tool for checking all available information regarding a forked contract._
 
@@ -566,8 +566,6 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
 

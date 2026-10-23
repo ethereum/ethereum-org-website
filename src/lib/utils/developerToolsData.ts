@@ -3,12 +3,15 @@ import type { getTranslations } from "next-intl/server"
 import type {
   BuilderResourcesCatalogResource,
   BuilderResourcesTaxonomy,
+  CatalogItem,
 } from "@/lib/types"
 
+import { formatDate } from "@/lib/utils/date"
 import { getToolKey } from "@/lib/utils/getToolKey"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
-import { isExternal } from "@/lib/utils/url"
+import { numberFormat } from "@/lib/utils/numbers"
+import { isExternal, toCatalogItemLink, toWebHref } from "@/lib/utils/url"
 
 export { getToolKey }
 
@@ -62,11 +65,17 @@ export function normalizeDeveloperToolsData(
 const repoEntries = (tool: DeveloperTool) =>
   tool.repos.map((repo) => (typeof repo === "string" ? { href: repo } : repo))
 
-/** External repos, most-starred first. Shared by ToolLinks and the modal. */
+/** External repos, most-starred first. Shared by the page, the modal and the catalog item. */
 export function getRankedRepos(tool: DeveloperTool) {
   return repoEntries(tool)
     .filter((repo) => isExternal(repo.href))
     .sort((a, b) => (b.stargazers ?? -1) - (a.stargazers ?? -1))
+}
+
+/** Archived only when every external repo is, so one retired repo doesn't flag a live tool. */
+export const isToolArchived = (tool: DeveloperTool) => {
+  const repos = getRankedRepos(tool)
+  return repos.length > 0 && repos.every((repo) => repo.isArchived)
 }
 
 /** External packages, most-downloaded first. */
@@ -105,6 +114,7 @@ export type ToolCardData = Pick<
   | "categoryId"
   | "subcategory_id"
   | "resource_score"
+  | "crops_native"
 > & {
   /**
    * Best star count across the tool's repos, precomputed here so the client
@@ -134,6 +144,7 @@ export const toToolCard = (tool: DeveloperToolWithCategory): ToolCardData => {
     ...(typeof tool.resource_score === "number" && {
       resource_score: tool.resource_score,
     }),
+    ...(tool.crops_native && { crops_native: true }),
     ...(stargazers > 0 && { stargazers }),
   }
 }
@@ -146,7 +157,7 @@ export const getRepoLabel = (href: string) =>
 export const getPackageLabel = (href: string) =>
   href.replace(/^https:\/\/(www\.)?npmjs\.com\/package\//, "")
 
-/** Repo hrefs, most-starred first (matching the ordering shown in ToolLinks). */
+/** Repo hrefs, most-starred first. */
 export function getToolRepoHrefs(tool: DeveloperTool): string[] {
   return repoEntries(tool)
     .slice()
@@ -228,20 +239,122 @@ export function findToolBySlug(
   return tools.find((tool) => getToolKey(tool) === toolKey)
 }
 
-/** Other tools in the same subcategory, excluding the tool itself. */
-export function getRelatedTools(
+/**
+ * The tool's subcategory in catalog order (score or else stars, then name): the
+ * next tool follows it and the related ones are the top of the rest.
+ */
+export function getToolNeighbours(
   tools: DeveloperToolWithCategory[],
   tool: DeveloperToolWithCategory,
-  limit = 6
-): DeveloperToolWithCategory[] {
-  const toolKey = getToolKey(tool)
-  return tools
-    .filter(
-      (item) =>
-        item.subcategory_id === tool.subcategory_id &&
-        getToolKey(item) !== toolKey
-    )
+  limit = 3
+) {
+  const score = (item: DeveloperTool) =>
+    item.resource_score ?? getToolStars(item)
+  const siblings = tools
+    .filter((item) => item.subcategory_id === tool.subcategory_id)
+    .sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name))
+  const index = siblings.indexOf(tool)
+  const next =
+    siblings.length > 1 ? siblings[(index + 1) % siblings.length] : undefined
+  const related = siblings
+    .filter((item) => item !== tool && item !== next)
     .slice(0, limit)
+  return { next, related }
+}
+
+export function toolToCatalogItem(
+  tool: DeveloperToolWithCategory,
+  {
+    locale,
+    t,
+    tItem,
+    labels,
+    next,
+    showReviewed = true,
+  }: {
+    locale: string
+    t: Translator
+    tItem: Translator
+    labels: ReturnType<typeof buildToolLabels>
+    next?: DeveloperToolWithCategory
+    showReviewed?: boolean
+  }
+): CatalogItem {
+  const [topRepo] = getRankedRepos(tool)
+  const repoLink = toCatalogItemLink("github", topRepo?.href)
+  const website = toWebHref(tool.website)
+  const downloads = getRankedPackages(tool).reduce(
+    (sum, pkg) => sum + (pkg.downloads ?? 0),
+    0
+  )
+  const compact = numberFormat(locale, { notation: "compact" })
+  const reviewed =
+    showReviewed && tool.updated_at
+      ? formatDate(tool.updated_at, locale, { day: undefined })
+      : undefined
+  const subcategory =
+    labels.subcategoryLabels[tool.subcategory_id] || tool.subcategory_id
+
+  return {
+    kind: "tool",
+    slug: getToolKey(tool),
+    name: tool.name,
+    logo: tool.thumbnail_url || undefined,
+    banner: tool.banner_url || undefined,
+    screenshots: [],
+    tags: [
+      { label: labels.categoryLabels[tool.categoryId] || tool.categoryId },
+      ...(isToolArchived(tool)
+        ? [
+            {
+              label: t("page-developers-tools-archived"),
+              status: "warning" as const,
+            },
+          ]
+        : []),
+    ],
+    subtitle: subcategory,
+    chains: [],
+    description: tool.description || undefined,
+    primaryLink: website
+      ? { href: website, label: tItem("catalog-item-visit-website") }
+      : repoLink && {
+          href: repoLink.href,
+          label:
+            repoLink.kind === "github"
+              ? tItem("catalog-item-view-on-github")
+              : tItem("catalog-item-source-code"),
+        },
+    socialLinks: [
+      toCatalogItemLink("x", tool.twitter),
+      website ? repoLink : undefined,
+    ].filter((link) => link !== undefined),
+    infoRows: [
+      { label: t("page-developers-tools-modal-type"), value: subcategory },
+      typeof topRepo?.stargazers === "number" && {
+        label: t("page-developers-tools-info-stars"),
+        value: compact.format(topRepo.stargazers),
+      },
+      downloads > 0 && {
+        label: t("page-developers-tools-info-downloads"),
+        value: compact.format(downloads),
+      },
+      topRepo?.license && {
+        label: t("page-developers-tools-info-license"),
+        value: topRepo.license,
+      },
+      reviewed && {
+        label: t("page-developers-tools-info-listing-reviewed"),
+        value: reviewed,
+        tooltip: t("page-developers-tools-info-listing-reviewed-tooltip"),
+      },
+    ].filter((row) => !!row),
+    breadcrumbSlug: `/developers/tools/${getToolKey(tool)}`,
+    next: next && {
+      name: next.name,
+      href: `/developers/tools/${getToolKey(next)}/`,
+    },
+  }
 }
 
 type Translator = Awaited<ReturnType<typeof getTranslations>>

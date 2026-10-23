@@ -114,3 +114,39 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `Бинанс Академи` (glossary Binance, Latin).
 - `Хром` left undeclined (4 keys); F-Droid `бесплатного` (#83); `Предложение по улучшению Ethereum (EIP)-7805` expansion; Hegotá Cyrillic `Хегота` in page-upgrades-index only.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- Prividium transliterated `привидиум`; `производственного уровня` for production-grade; glamsterdam `devnets` regressed to English.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter outputs are saved in `/tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ru/`.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warning: period decimal separator.

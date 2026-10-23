@@ -997,7 +997,7 @@ const chains = [
   },
   {
     name: "Morph",
-    infoURL: "https://morphl2.io",
+    infoURL: "https://morph.network",
     chainId: 2818,
     nativeCurrency: {
       name: "Ether",
@@ -2591,6 +2591,18 @@ const chains = [
     },
     chain: "DBK Chain",
     shortName: "dbkchain",
+  },
+  {
+    name: "BB84",
+    infoURL: "https://bb84.com",
+    chainId: 42069000,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+    shortName: "bb84",
   },
   {
     name: "Aquachain",

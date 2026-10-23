@@ -1,6 +1,6 @@
 ---
-title: "Napište Plasmu specifickou pro aplikaci, která zachovává soukromí"
-description: "V tomto tutoriálu vytvoříme polotajnou banku pro vklady. Banka je centralizovaná komponenta; zná zůstatek každého uživatele. Tyto informace však nejsou uloženy onchain. Místo toho banka zveřejňuje hash stavu. Pokaždé, když dojde k transakci, banka zveřejní nový hash spolu s důkazem s nulovou znalostí, že má podepsanou transakci, která mění stav hashe na nový. Po přečtení tohoto tutoriálu pochopíte nejen to, jak používat důkazy s nulovou znalostí, ale také proč je používat a jak to dělat bezpečně."
+title: "Vytvoření Plasmy specifické pro aplikaci, která zachovává soukromí"
+description: "V tomto tutoriálu vytvoříme polotajnou banku pro vklady. Banka je centralizovaná komponenta; zná zůstatek každého uživatele. Tyto informace však nejsou uloženy onchain. Místo toho banka zveřejňuje hash stavu. Pokaždé, když dojde k transakci, banka zveřejní nový hash společně s důkazem s nulovou znalostí, že má podepsanou transakci, která mění stav hashe na nový. Po přečtení tohoto tutoriálu pochopíte nejen to, jak používat důkazy s nulovou znalostí, ale také proč se používají a jak to dělat bezpečně."
 author: Ori Pomerantz
 tags:
   - s nulovým vědomím
@@ -12,27 +12,28 @@ breadcrumb: "Plasma specifická pro aplikaci"
 lang: cs
 published: 2025-10-15
 ---
+
 ## Úvod {#introduction}
 
-Na rozdíl od [rollupů](/developers/docs/scaling/zk-rollups/) využívají [Plasmy](/developers/docs/scaling/plasma) Ethereum Mainnet pro integritu, ale ne pro dostupnost. V tomto článku napíšeme aplikaci, která se chová jako Plasma, přičemž Ethereum zaručuje integritu (žádné neoprávněné změny), ale ne dostupnost (centralizovaná komponenta může selhat a vyřadit z provozu celý systém).
+Na rozdíl od [rollupů](/developers/docs/scaling/zk-rollups/) používá [Plasma](/developers/docs/scaling/plasma) Ethereum Mainnet pro zajištění integrity, ale ne pro dostupnost. V tomto článku napíšeme aplikaci, která se chová jako Plasma, přičemž Ethereum zaručuje integritu (žádné neoprávněné změny), ale ne dostupnost (centralizovaná komponenta může selhat a vyřadit z provozu celý systém).
 
-Aplikace, kterou zde napíšeme, je banka zachovávající soukromí. Různé adresy mají účty se zůstatky a mohou posílat peníze (ETH) na jiné účty. Banka zveřejňuje hashe stavu (účtů a jejich zůstatků) a transakcí, ale skutečné zůstatky udržuje offchain, kde mohou zůstat v soukromí.
+Aplikace, kterou zde napíšeme, je banka zachovávající soukromí. Různé adresy mají účty se zůstatky a mohou posílat peníze (ETH) na jiné účty. Banka zveřejňuje hashe stavu (účtů a jejich zůstatků) a transakcí, ale skutečné zůstatky uchovává offchain, kde mohou zůstat v soukromí.
 
 ## Návrh {#design}
 
-Toto není systém připravený pro produkci, ale výukový nástroj. Jako takový je napsán s několika zjednodušujícími předpoklady.
+Nejedná se o systém připravený pro produkční nasazení, ale o výukový nástroj. Jako takový je napsán s několika zjednodušujícími předpoklady.
 
-- Pevná množina účtů. Existuje specifický počet účtů a každý účet patří k předem určené adrese. To vytváří mnohem jednodušší systém, protože v důkazech s nulovou znalostí je obtížné pracovat s datovými strukturami proměnné velikosti. Pro systém připravený na produkci můžeme použít [Merkleho kořen](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) jako hash stavu a poskytovat Merkleho důkazy pro požadované zůstatky.
+- Fixní množina účtů. Existuje určitý počet účtů a každý účet patří předem určené adrese. To dělá systém mnohem jednodušším, protože v důkazech s nulovou znalostí je obtížné pracovat s datovými strukturami proměnné velikosti. U produkčně připraveného systému můžeme jako hash stavu použít [Merkleho kořen](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) a poskytovat Merkleho důkazy pro požadované zůstatky.
 
-- Ukládání do paměti. V produkčním systému musíme zapisovat všechny zůstatky na účtech na disk, abychom je zachovali v případě restartu. Zde nevadí, pokud se informace jednoduše ztratí.
+- Ukládání v paměti. V produkčním systému bychom museli zapisovat všechny zůstatky účtů na disk, aby se zachovaly v případě restartu. Zde je v pořádku, když se informace jednoduše ztratí.
 
-- Pouze převody. Produkční systém by vyžadoval způsob, jak do banky vložit aktiva a jak je vybrat. Účelem zde je však pouze ilustrovat koncept, takže tato banka je omezena na převody.
+- Pouze převody. Produkční systém by vyžadoval způsob, jak vkládat aktiva do banky a jak je vybírat. Zde je však účelem pouze ilustrovat koncept, takže je tato banka omezena pouze na převody.
 
 ### Důkazy s nulovou znalostí {#zero-knowledge-proofs}
 
-Na základní úrovni důkaz s nulovou znalostí ukazuje, že dokazovatel zná nějaká data, _Data<sub>private</sub>_, taková, že existuje vztah _Relationship_ mezi nějakými veřejnými daty, _Data<sub>public</sub>_, a _Data<sub>private</sub>_. Ověřovatel zná _Relationship_ a _Data<sub>public</sub>_.
+Na základní úrovni důkaz s nulovou znalostí ukazuje, že dokazovatel zná nějaká data _Data<sub>private</sub>_ taková, že existuje vztah _Relationship_ mezi některými veřejnými daty _Data<sub>public</sub>_ a _Data<sub>private</sub>_. Ověřovatel zná _Relationship_ a _Data<sub>public</sub>_.
 
-Pro zachování soukromí potřebujeme, aby stavy a transakce byly soukromé. Ale pro zajištění integrity potřebujeme, aby [kryptografický hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) stavů byl veřejný. Abychom lidem, kteří odesílají transakce, dokázali, že se tyto transakce skutečně staly, musíme také zveřejňovat hashe transakcí.
+Abychom zachovali soukromí, potřebujeme, aby stavy a transakce byly soukromé. K zajištění integrity však potřebujeme, aby [kryptografický hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) stavů byl veřejný. Abychom lidem, kteří odesílají transakce, dokázali, že tyto transakce skutečně proběhly, musíme také zveřejňovat hashe transakcí.
 
 Ve většině případů jsou _Data<sub>private</sub>_ vstupem do programu pro důkaz s nulovou znalostí a _Data<sub>public</sub>_ jsou výstupem.
 
@@ -40,90 +41,90 @@ Tato pole v _Data<sub>private</sub>_:
 
 - _State<sub>n</sub>_, starý stav
 - _State<sub>n+1</sub>_, nový stav
-- _Transaction_, transakce, která mění starý stav na nový. Tato transakce musí obsahovat následující pole:
+- _Transaction_, transakce, která mění starý stav na nový. Tato transakce musí obsahovat tato pole:
   - _Cílová adresa_, která přijímá převod
   - _Částka_, která se převádí
-  - _Nonce_, aby se zajistilo, že každá transakce může být zpracována pouze jednou.
-    Zdrojová adresa nemusí být v transakci, protože ji lze obnovit z podpisu.
-- _Signature_, podpis, který je oprávněn provést transakci. V našem případě je jedinou adresou oprávněnou provést transakci zdrojová adresa. Protože náš systém s nulovým vědomím funguje tak, jak funguje, potřebujeme kromě podpisu Etherea také veřejný klíč účtu.
+  - _Nonce_ pro zajištění toho, že každou transakci lze zpracovat pouze jednou.
+    Zdrojová adresa v transakci být nemusí, protože ji lze obnovit z podpisu.
+- _Podpis_, podpis, který je oprávněn provést transakci. V našem případě je jedinou adresou oprávněnou provést transakci zdrojová adresa. Vzhledem k tomu, jak náš systém s nulovým vědomím funguje, budeme kromě podpisu Etherea potřebovat také veřejný klíč účtu.
 
-Toto jsou pole v _Data<sub>public</sub>_:
+Tato pole jsou v _Data<sub>public</sub>_:
 
-- _Hash(State<sub>n</sub>)_ hash starého stavu
-- _Hash(State<sub>n+1</sub>)_ hash nového stavu
-- _Hash(Transaction)_ hash transakce, která mění stav ze _State<sub>n</sub>_ na _State<sub>n+1</sub>_.
+- _Hash(State<sub>n</sub>)_, hash starého stavu
+- _Hash(State<sub>n+1</sub>)_, hash nového stavu
+- _Hash(Transaction)_, hash transakce, která mění stav z _State<sub>n</sub>_ na _State<sub>n+1</sub>_.
 
 Vztah kontroluje několik podmínek:
 
-- Veřejné hashe jsou skutečně správné hashe pro soukromá pole.
-- Transakce po aplikaci na starý stav vede k novému stavu.
+- Veřejné hashe jsou skutečně správnými hashi pro privátní pole.
+- Když se transakce aplikuje na starý stav, výsledkem je nový stav.
 - Podpis pochází ze zdrojové adresy transakce.
 
-Vzhledem k vlastnostem kryptografických hashovacích funkcí stačí prokázání těchto podmínek k zajištění integrity.
+Vzhledem k vlastnostem kryptografických hashovacích funkcí je prokázání těchto podmínek dostatečné k zajištění integrity.
 
 ### Datové struktury {#data-structures}
 
-Primární datovou strukturou je stav udržovaný serverem. Pro každý účet server sleduje zůstatek na účtu a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), které se používá k zabránění [útokům typu replay](https://en.wikipedia.org/wiki/Replay_attack).
+Primární datovou strukturou je stav udržovaný serverem. Pro každý účet server sleduje zůstatek účtu a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), což se používá k prevenci [replay útoků](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Komponenty {#components}
 
 Tento systém vyžaduje dvě komponenty:
 
-- _Server_, který přijímá transakce, zpracovává je a odesílá hashe do řetězce spolu s důkazy s nulovou znalostí.
-- _Chytrý kontrakt_, který ukládá hashe a ověřuje důkazy s nulovou znalostí, aby zajistil, že přechody stavů jsou legitimní.
+- _Server_, který přijímá transakce, zpracovává je a zveřejňuje hashe v řetězci společně s důkazy s nulovou znalostí.
+- _Chytrý kontrakt_, který ukládá hashe a ověřuje důkazy s nulovou znalostí, aby se ujistil, že přechody stavů jsou legitimní.
 
-### Tok dat a řízení {#flows}
+### Datový a řídicí tok {#flows}
 
-Toto jsou způsoby, jakými různé komponenty komunikují při převodu z jednoho účtu na druhý.
+Toto jsou způsoby, jak různé komponenty komunikují při převodu z jednoho účtu na druhý.
 
-1. Webový prohlížeč odešle podepsanou transakci s žádostí o převod z účtu podepisujícího na jiný účet.
+1. Webový prohlížeč odešle podepsanou transakci požadující převod z účtu podepisujícího na jiný účet.
 
-2. Server ověří, že je transakce platná:
+2. Server ověří, že transakce je platná:
 
    - Podepisující má v bance účet s dostatečným zůstatkem.
    - Příjemce má v bance účet.
 
-3. Server vypočítá nový stav odečtením převedené částky ze zůstatku podepisujícího a jejím přičtením k zůstatku příjemce.
+3. Server vypočítá nový stav odečtením převáděné částky ze zůstatku podepisujícího a jejím přičtením k zůstatku příjemce.
 
 4. Server vypočítá důkaz s nulovou znalostí, že změna stavu je platná.
 
-5. Server odešle do Etherea transakci, která obsahuje:
+5. Server odešle Ethereu transakci, která obsahuje:
 
-   - Hash nového stavu
+   - Nový hash stavu
    - Hash transakce (aby odesílatel transakce věděl, že byla zpracována)
-   - Důkaz s nulovou znalostí, který dokazuje, že přechod do nového stavu je platný
+   - Důkaz s nulovou znalostí, který prokazuje, že přechod na nový stav je platný
 
 6. Chytrý kontrakt ověří důkaz s nulovou znalostí.
 
 7. Pokud je důkaz s nulovou znalostí v pořádku, chytrý kontrakt provede tyto akce:
-   - Aktualizuje hash aktuálního stavu na hash nového stavu
-   - Vygeneruje log s hashem nového stavu a hashem transakce
+   - Aktualizuje hash současného stavu na nový hash stavu
+   - Vygeneruje log s novým hashem stavu a hashem transakce
 
 ### Nástroje {#tools}
 
-Pro kód na straně klienta použijeme [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) a [Wagmi](https://wagmi.sh/). Jedná se o standardní oborové nástroje; pokud s nimi nejste obeznámeni, můžete použít [tento tutoriál](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+Pro kód na straně klienta použijeme [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) a [Wagmi](https://wagmi.sh/). Jedná se o průmyslově standardní nástroje; pokud s nimi nejste obeznámeni, můžete použít [tento tutoriál](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Většina serveru je napsána v JavaScriptu pomocí [Node](https://nodejs.org/en). Část s nulovým vědomím je napsána v jazyce [Noir](https://noir-lang.org/). Potřebujeme verzi `1.0.0-beta.10`, takže poté, co [nainstalujete Noir podle pokynů](https://noir-lang.org/docs/getting_started/quick_start), spusťte:
+Většina serveru je napsána v JavaScriptu pomocí [Node](https://nodejs.org/en). Část s nulovým vědomím je napsána v jazyce [Noir](https://noir-lang.org/). Potřebujeme verzi `1.0.0-beta.10`, takže po [instalaci Noiru podle pokynů](https://noir-lang.org/docs/getting_started/quick_start) spusťte:
 
 ```
 noirup -v 1.0.0-beta.10
 ```
 
-Blockchain, který používáme, je `anvil`, lokální testovací blockchain, který je součástí [Foundry](https://getfoundry.sh/introduction/installation).
+Blockchain, který používáme, je `anvil`, což je lokální testovací blockchain, který je součástí [Foundry](https://getfoundry.sh/introduction/installation).
 
 ## Implementace {#implementation}
 
-Protože se jedná o složitý systém, budeme jej implementovat po fázích.
+Vzhledem k tomu, že jde o složitý systém, implementujeme ho ve fázích.
 
-### Fáze 1 - Manuální přístup s nulovým vědomím {#stage-1}
+### Fáze 1 - Manuální nulové vědomí {#stage-1}
 
-V první fázi podepíšeme transakci v prohlížeči a poté manuálně poskytneme informace pro důkaz s nulovou znalostí. Kód s nulovým vědomím očekává, že tyto informace získá v `server/noir/Prover.toml` (dokumentováno [zde](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
+V první fázi podepíšeme transakci v prohlížeči a následně ručně poskytneme informace důkazu s nulovou znalostí. Kód s nulovým vědomím očekává, že tyto informace získá v `server/noir/Prover.toml` (zdokumentováno [zde](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
-Chcete-li to vidět v akci:
+Pokud to chcete vidět v akci:
 
-1. Ujistěte se, že máte nainstalovaný [Node](https://nodejs.org/en/download) a [Noir](https://noir-lang.org/install). Nejlépe je nainstalujte na UNIXový systém, jako je macOS, Linux nebo [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Ujistěte se, že máte nainstalovaný [Node](https://nodejs.org/en/download) a [Noir](https://noir-lang.org/docs/installation). Nejlépe je nainstalujte na unixový systém, jako je macOS, Linux nebo [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-2. Stáhněte si kód pro fázi 1 a spusťte webový server, který bude obsluhovat klientský kód.
+2. Stáhněte si kód fáze 1 a spusťte webový server, abyste obsloužili klientský kód.
 
    ```sh
    git clone https://github.com/qbzzt/250911-zk-bank.git -b 01-manual-zk
@@ -133,19 +134,19 @@ Chcete-li to vidět v akci:
    npm run dev
    ```
 
-   Důvodem, proč zde potřebujete webový server, je to, že aby se zabránilo určitým typům podvodů, mnoho peněženek (jako je MetaMask) nepřijímá soubory obsluhované přímo z disku.
+   Důvodem, proč zde potřebujete webový server, je to, že k zabránění určitým typům podvodů mnoho peněženek (například MetaMask) nepřijímá soubory obsluhované přímo z disku.
 
 3. Otevřete prohlížeč s peněženkou.
 
-4. V peněžence zadejte novou přístupovou frázi. Upozorňujeme, že tímto smažete svou stávající přístupovou frázi, takže _se ujistěte, že máte zálohu_.
+4. V peněžence zadejte novou přístupovou frázi. Všimněte si, že to smaže vaši existující přístupovou frázi, takže se _ujistěte, že máte zálohu_.
 
-   Přístupová fráze je `test test test test test test test test test test test junk`, což je výchozí testovací přístupová fráze pro anvil.
+   Přístupová fráze je `test test test test test test test test test test test junk`, výchozí testovací přístupová fráze pro anvil.
 
 5. Přejděte na [kód na straně klienta](http://localhost:5173/).
 
-6. Připojte se k peněžence a vyberte cílový účet a částku.
+6. Připojte se k peněžence a vyberte svůj cílový účet a částku.
 
-7. Klikněte na **Sign** (Podepsat) a podepište transakci.
+7. Klikněte na **Sign** a podepište transakci.
 
 8. Pod nadpisem **Prover.toml** najdete text. Nahraďte `server/noir/Prover.toml` tímto textem.
 
@@ -156,29 +157,29 @@ Chcete-li to vidět v akci:
    nargo execute
    ```
 
-   Výstup by měl být podobný tomuto:
+   Výstup by měl být podobný tomuto
 
-      ```
-ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   ```
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-      ```
+   ```
 
-10. Porovnejte poslední dvě hodnoty s hashem, který vidíte ve webovém prohlížeči, abyste zjistili, zda je zpráva správně hashována.
+10. Porovnejte poslední dvě hodnoty s hashem, který vidíte ve webovém prohlížeči, abyste zjistili, zda je zpráva správně zahashována.
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
-[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) ukazuje formát informací, který Noir očekává.
+[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml) ukazuje formát informací, který očekává Noir.
 
 ```toml
 message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
 ```
 
-Zpráva je v textovém formátu, což uživateli usnadňuje její pochopení (což je při podepisování nezbytné) a kódu Noir její parsování. Částka je uvedena ve finney, aby na jedné straně umožnila zlomkové převody a na druhé straně byla snadno čitelná. Poslední číslo je [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
+Zpráva je v textovém formátu, což uživateli usnadňuje porozumění (což je při podepisování nezbytné) a usnadňuje parsování v kódu pro Noir. Částka je uváděna ve finney pro umožnění zlomkových převodů na jedné straně a snadnou čitelnost na straně druhé. Posledním číslem je [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-Řetězec je dlouhý 100 znaků. Důkazy s nulovou znalostí nezvládají dobře data s proměnnou velikostí, takže je často nutné data doplnit (tzv. padding).
+Řetězec je dlouhý 100 znaků. Důkazy s nulovou znalostí si s daty s proměnlivou velikostí moc dobře neporadí, takže je často nutné data doplnit (padding).
 
 ```toml
 pubKeyX=["0x83",...,"0x75"]
@@ -186,7 +187,7 @@ pubKeyY=["0x35",...,"0xa5"]
 signature=["0xb1",...,"0x0d"]
 ```
 
-Tyto tři parametry jsou pole bajtů s pevnou velikostí.
+Tyto tři parametry jsou bajtová pole fixní velikosti.
 
 ```toml
 [[accounts]]
@@ -200,11 +201,11 @@ balance=100_000
 nonce=0
 ```
 
-Toto je způsob, jak specifikovat pole struktur. Pro každý záznam specifikujeme adresu, zůstatek (v milliETH neboli [finney](https://cryptovalleyjournal.com/glossary/finney/)) a další hodnotu nonce.
+Toto je způsob, jak specifikovat pole struktur. Pro každou položku zadáme adresu, zůstatek (v milliETH neboli [finney](https://cryptovalleyjournal.com/glossary/finney/)) a hodnotu další nonce.
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
-[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) implementuje zpracování na straně klienta a generuje soubor `server/noir/Prover.toml` (ten, který obsahuje parametry pro důkaz s nulovým vědomím).
+[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/client/src/Transfer.tsx) implementuje zpracování na straně klienta a generuje soubor `server/noir/Prover.toml` (ten, který obsahuje parametry pro systém s nulovým vědomím).
 
 Zde je vysvětlení těch zajímavějších částí.
 
@@ -224,7 +225,7 @@ Tato funkce vytváří React komponentu `Transfer`, kterou mohou importovat dal�
   ]
 ```
 
-Toto jsou adresy účtů, adresy vytvořené přístupovou frází `test ... test junk`. Pokud chcete použít vlastní adresy, stačí tuto definici upravit.
+Toto jsou adresy účtů, adresy vytvořené přístupovou frází `test ... test junk`. Pokud chcete použít vlastní adresy, jednoduše upravte tuto definici.
 
 ```tsx
   const account = useAccount()
@@ -239,13 +240,13 @@ Tyto [Wagmi hooky](https://wagmi.sh/react/api/hooks) nám umožňují přístup 
   const message = `send ${toAccount} ${ethAmount*1000} finney (milliEth) ${nonce}`.padEnd(100, " ")
 ```
 
-Toto je zpráva doplněná mezerami. Pokaždé, když se změní jedna z proměnných [`useState`](https://react.dev/reference/react/useState), komponenta se překreslí a `message` se aktualizuje.
+Toto je zpráva, doplněná mezerami. Pokaždé, když se jedna z proměnných [`useState`](https://react.dev/reference/react/useState) změní, komponenta se překreslí a `message` se aktualizuje.
 
 ```tsx
   const sign = async () => {
 ```
 
-Tato funkce se volá, když uživatel klikne na tlačítko **Sign** (Podepsat). Zpráva se automaticky aktualizuje, ale podpis vyžaduje schválení uživatelem v peněžence a my o něj nechceme žádat, pokud to není nutné.
+Tato funkce se volá, když uživatel klikne na tlačítko **Sign**. Zpráva se automaticky aktualizuje, ale podpis vyžaduje schválení uživatele v peněžence a my ho nechceme vyžadovat, pokud to není nutné.
 
 ```tsx
     const signature = await wallet.signMessage({
@@ -260,7 +261,7 @@ Požádejte peněženku o [podepsání zprávy](https://viem.sh/docs/accounts/lo
     const hash = hashMessage(message)
 ```
 
-Získejte hash zprávy. Je užitečné jej poskytnout uživateli pro účely ladění (kódu Noir). 
+Získejte hash zprávy. Je užitečné ho uživateli poskytnout pro účely ladění (kódu v Noir). 
 
 ```tsx
     const pubKey = await recoverPublicKey({
@@ -269,7 +270,7 @@ Získejte hash zprávy. Je užitečné jej poskytnout uživateli pro účely lad
     })
 ```
 
-[Získejte veřejný klíč](https://viem.sh/docs/utilities/recoverPublicKey). Ten je vyžadován pro funkci [Noir `ecrecover`](https://github.com/colinnielsen/ecrecover-noir).
+[Získejte veřejný klíč](https://viem.sh/docs/utilities/recoverPublicKey). Ten je nezbytný pro funkci [Noir `ecrecover`](https://github.com/colinnielsen/ecrecover-noir).
 
 ```tsx
     setSignature(signature)
@@ -277,7 +278,7 @@ Získejte hash zprávy. Je užitečné jej poskytnout uživateli pro účely lad
     setPubKey(pubKey)
 ```
 
-Nastavte stavové proměnné. Tím se komponenta překreslí (po ukončení funkce `sign`) a uživateli se zobrazí aktualizované hodnoty.
+Nastavte stavové proměnné. Tím dojde k překreslení komponenty (poté, co funkce `sign` skončí) a ukáže uživateli aktualizované hodnoty.
 
 ```tsx
     let proverToml = `
@@ -292,17 +293,17 @@ pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
 pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 ```
 
-Viem nám poskytuje veřejný klíč jako 65bajtový hexadecimální řetězec. První bajt je `0x04`, což je značka verze. Následuje 32 bajtů pro `x` veřejného klíče a poté 32 bajtů pro `y` veřejného klíče.
+Viem nám poskytuje veřejný klíč jako 65bajtový hexadecimální řetězec. První bajt je `0x04`, což je značka verze. Následuje 32 bajtů pro souřadnici `x` veřejného klíče a pak 32 bajtů pro souřadnici `y` veřejného klíče.
 
-Noir však očekává, že tyto informace získá jako dvě pole bajtů, jedno pro `x` a jedno pro `y`. Je snazší to parsovat zde na klientovi než jako součást důkazu s nulovou znalostí.
+Noir však očekává tyto informace jako dvě pole bajtů, jedno pro `x` a druhé pro `y`. Je jednodušší provést parsování zde na klientovi, než jako součást důkazu s nulovou znalostí.
 
-Všimněte si, že toto je obecně dobrá praxe v oblasti důkazů s nulovým vědomím. Kód uvnitř důkazu s nulovou znalostí je drahý, takže jakékoli zpracování, které lze provést mimo důkaz s nulovou znalostí, _by mělo_ být provedeno mimo něj.
+Všimněte si, že v kontextu nulového vědomí jde obecně o osvědčený postup. Kód uvnitř důkazu s nulovou znalostí je drahý, takže jakékoliv zpracování, které lze provést mimo důkaz s nulovou znalostí, _by mělo_ být provedeno mimo tento důkaz.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
 ```
 
-Podpis je také poskytován jako 65bajtový hexadecimální řetězec. Poslední bajt je však nutný pouze k obnovení veřejného klíče. Vzhledem k tomu, že veřejný klíč již bude poskytnut kódu Noir, nepotřebujeme jej k ověření podpisu a kód Noir jej nevyžaduje.
+Podpis je také poskytován jako 65bajtový hexadecimální řetězec. Avšak poslední bajt je nutný pouze pro obnovení veřejného klíče. Vzhledem k tomu, že veřejný klíč již kódu v Noir bude poskytnut, nepotřebujeme jej k ověření podpisu a kód v Noir jej nevyžaduje.
 
 ```tsx
 ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
@@ -320,7 +321,7 @@ Poskytněte účty.
         <h2>Transfer</h2>
 ```
 
-Toto je HTML (přesněji [JSX](https://react.dev/learn/writing-markup-with-jsx)) formát komponenty.
+Toto je formát komponenty v HTML (přesněji v [JSX](https://react.dev/learn/writing-markup-with-jsx)).
 
 #### `server/noir/src/main.nr` {#server-noir-src-main-nr}
 
@@ -330,14 +331,14 @@ Toto je HTML (přesněji [JSX](https://react.dev/learn/writing-markup-with-jsx))
 use std::hash::pedersen_hash;
 ```
 
-[Pedersenův hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) je poskytován se [standardní knihovnou Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Důkazy s nulovou znalostí tuto hashovací funkci běžně používají. Je mnohem snazší ji vypočítat uvnitř [aritmetických obvodů](https://rareskills.io/post/arithmetic-circuit) ve srovnání se standardními hashovacími funkcemi.
+[Pedersen hash](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) se poskytuje se [standardní knihovnou Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Důkazy s nulovou znalostí tuto hashovací funkci běžně používají. Je mnohem snazší ji vypočítat uvnitř [aritmetických obvodů](https://rareskills.io/post/arithmetic-circuit) ve srovnání se standardními hashovacími funkcemi.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Tyto dvě funkce jsou externí knihovny definované v [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Dělají přesně to, jak se jmenují: funkce, která počítá [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html), a funkce, která ověřuje podpisy Etherea a obnovuje Ethereum adresu podepisujícího.
+Tyto dvě funkce jsou externí knihovny, definované v [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Dělají přesně to, podle čeho jsou pojmenovány – funkce, která počítá [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) a funkce, která ověřuje podpisy Etherea a obnovuje adresu podepisujícího.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -345,26 +346,26 @@ global ACCOUNT_NUMBER : u32 = 5;
 
 Noir je inspirován jazykem [Rust](https://www.rust-lang.org/). Proměnné jsou ve výchozím nastavení konstanty. Takto definujeme globální konfigurační konstanty. Konkrétně `ACCOUNT_NUMBER` je počet účtů, které ukládáme.
 
-Datové typy pojmenované `u<number>` představují daný počet bitů bez znaménka. Jediné podporované typy jsou `u8`, `u16`, `u32`, `u64` a `u128`.
+Datové typy pojmenované `u<number>` mají odpovídající počet bitů, a to bez znaménka. Jedinými podporovanými typy jsou `u8`, `u16`, `u32`, `u64` a `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
 ```
 
-Tato proměnná se používá pro Pedersenův hash účtů, jak je vysvětleno níže.
+Tato proměnná se používá pro Pedersen hash účtů, jak je vysvětleno níže.
 
 ```
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Jak bylo vysvětleno výše, délka zprávy je pevná. Je specifikována zde.
+Jak bylo vysvětleno výše, délka zprávy je fixní. Je specifikována zde.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
 global HASH_BUFFER_SIZE : u32 = 26+3+MESSAGE_LENGTH;
 ```
 
-[Podpisy EIP-191](https://eips.ethereum.org/EIPS/eip-191) vyžadují buffer s 26bajtovou předponou, následovanou délkou zprávy v ASCII a nakonec samotnou zprávou.
+[Podpisy typu EIP-191](https://eips.ethereum.org/EIPS/eip-191) vyžadují buffer s 26bajtovou předponou, po které následuje délka zprávy v ASCII, a nakonec samotná zpráva.
 
 ```
 struct Account {
@@ -374,7 +375,7 @@ struct Account {
 }
 ```
 
-Informace, které ukládáme o účtu. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) je číslo, obvykle až 253 bitů, které lze použít přímo v [aritmetickém obvodu](https://rareskills.io/post/arithmetic-circuit), který implementuje důkaz s nulovou znalostí. Zde používáme `Field` k uložení 160bitové adresy Etherea.
+Informace, které o účtu uchováváme. [`Field`](https://noir-lang.org/docs/noir/concepts/data_types/fields) je číslo, typicky až o 253 bitech, které lze použít přímo v [aritmetickém obvodu](https://rareskills.io/post/arithmetic-circuit), který implementuje důkaz s nulovou znalostí. Zde používáme `Field` k uložení 160bitové adresy Etherea.
 
 ```
 struct TransferTxn {
@@ -385,50 +386,50 @@ struct TransferTxn {
 }
 ```
 
-Informace, které ukládáme pro transakci převodu.
+Informace, které uchováváme pro transakci převodu.
 
 ```
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Definice funkce. Parametrem jsou informace o `Account`. Výsledkem je pole proměnných `Field`, jehož délka je `FLAT_ACCOUNT_FIELDS`
+Definice funkce. Parametrem je informace `Account`. Výsledkem je pole proměnných typu `Field`, jehož délka je `FLAT_ACCOUNT_FIELDS`
 
 ```
-let flat = [
+    let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
 ```
 
-První hodnota v poli je adresa účtu. Druhá zahrnuje jak zůstatek, tak nonce. Volání `.into()` mění číslo na datový typ, kterým potřebuje být. `account.nonce` je hodnota `u32`, ale aby ji bylo možné přidat k `account.balance << 32`, což je hodnota `u128`, musí to být `u128`. To je první `.into()`. Druhé převede výsledek `u128` na `Field`, aby se vešel do pole.
+První hodnotou v poli je adresa účtu. Druhá zahrnuje jak zůstatek, tak nonce. Volání `.into()` změní číslo na požadovaný datový typ. `account.nonce` je hodnota typu `u32`, ale aby bylo možné ji přidat k `account.balance << 32`, což je hodnota `u128`, musí se jednat o `u128`. To je to první `.into()`. To druhé převádí výsledek `u128` na `Field`, aby se vešel do pole.
 
 ```
-flat
+    flat
 }
 ```
 
-V Noir mohou funkce vracet hodnotu pouze na konci (neexistuje žádný předčasný návrat). Chcete-li specifikovat návratovou hodnotu, vyhodnotíte ji těsně před uzavírací závorkou funkce.
+V jazyce Noir mohou funkce vrátit hodnotu pouze na samém konci (neexistuje zde brzký návrat přes return). Chcete-li specifikovat návratovou hodnotu, vyhodnotíte ji těsně před uzavírací závorkou funkce.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-Tato funkce převede pole účtů na pole `Field`, které lze použít jako vstup pro Petersenův hash.
+Tato funkce převede pole účtů na pole `Field`, které pak může být použito jako vstup pro Pedersen hash.
 
 ```
-let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-Takto specifikujete měnitelnou (mutable) proměnnou, tedy _ne_ konstantu. Proměnné v Noir musí mít vždy hodnotu, takže tuto proměnnou inicializujeme samými nulami.
+Takto specifikujete mutovatelnou proměnnou, tedy _nikoliv_ konstantu. Proměnné v Noiru musí mít vždy hodnotu, takže tuto proměnnou inicializujeme samými nulami.
 
 ```
-for i in 0..ACCOUNT_NUMBER {
+    for i in 0..ACCOUNT_NUMBER {
 ```
 
-Toto je smyčka `for`. Všimněte si, že hranice jsou konstanty. Smyčky v Noir musí mít své hranice známé v době kompilace. Důvodem je, že aritmetické obvody nepodporují řízení toku. Při zpracování smyčky `for` kompilátor jednoduše vloží kód uvnitř ní vícekrát, jednou pro každou iteraci.
+Toto je smyčka typu `for`. Všimněte si, že hranice jsou konstanty. Smyčky v Noiru musí mít své hranice známé už v době překladu. Důvodem je to, že aritmetické obvody nepodporují řízení toku (flow control). Při zpracování smyčky `for` překladač jednoduše vloží kód uvnitř smyčky několikrát, pro každou iteraci jednou.
 
 ```
-let fields = flatten_account(accounts[i]);
+        let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
         }
@@ -455,13 +456,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
     }
 ```
 
-Tato funkce najde účet se specifickou adresou. Tato funkce by byla ve standardním kódu strašně neefektivní, protože iteruje přes všechny účty, a to i poté, co adresu najde.
+Tato funkce hledá účet s určitou adresou. Ve standardním kódu by byla taková funkce strašně neefektivní, protože prochází všechny účty i poté, co adresu už našla.
 
-V důkazech s nulovou znalostí však neexistuje žádné řízení toku. Pokud někdy potřebujeme zkontrolovat podmínku, musíme ji zkontrolovat pokaždé.
+Avšak v důkazech s nulovou znalostí žádné řízení toku neexistuje. Pokud někdy potřebujeme ověřit podmínku, musíme ji ověřit pokaždé.
 
-Podobná věc se děje s příkazy `if`. Příkaz `if` ve smyčce výše je přeložen do těchto matematických příkazů.
+Podobná věc se děje u příkazů `if`. Příkaz `if` ve smyčce výše se překládá do těchto matematických výroků.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // jedna, pokud jsou si rovny, jinak nula
+_condition<sub>result</sub> = accounts[i].address == address_ // jedna, pokud se rovnají, jinak nula
 
 _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
 
@@ -472,13 +473,13 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Funkce [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) způsobí pád důkazu s nulovou znalostí, pokud je tvrzení nepravdivé. V tomto případě, pokud nemůžeme najít účet s příslušnou adresou. K nahlášení adresy používáme [formátovací řetězec](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Funkce [`assert`](https://noir-lang.org/docs/language/assert) způsobí pád důkazu s nulovou znalostí, pokud je tvrzení nepravdivé. V tomto případě, pokud nemůžeme najít účet s příslušnou adresou. K ohlášení adresy používáme [formátovací řetězec](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
 ```
 
-Tato funkce aplikuje transakci převodu a vrací nové pole účtů.
+Tato funkce uplatní transakci převodu a vrátí nové pole účtů.
 
 ```rust
     let from = find_account(accounts, txn.from);
@@ -488,7 +489,7 @@ Tato funkce aplikuje transakci převodu a vrací nové pole účtů.
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-V Noir nemůžeme přistupovat k prvkům struktury uvnitř formátovacího řetězce, takže vytvoříme použitelnou kopii.
+V jazyce Noir nemáme přístup k prvkům struktury uvnitř formátovacího řetězce, proto si vytváříme použitelnou kopii.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -498,7 +499,7 @@ V Noir nemůžeme přistupovat k prvkům struktury uvnitř formátovacího řet�
         f"Transaction has nonce {txnNonce}, but the account is expected to use {accountNonce}");
 ```
 
-Toto jsou dvě podmínky, které by mohly učinit transakci neplatnou.
+Toto jsou dvě podmínky, které by mohly způsobit neplatnost transakce.
 
 ```rust
     let mut newAccounts = accounts;
@@ -511,13 +512,13 @@ Toto jsou dvě podmínky, které by mohly učinit transakci neplatnou.
 }
 ```
 
-Vytvořte nové pole účtů a poté jej vraťte.
+Vytvořte nové pole účtů a poté ho vraťte.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
 ```
 
-Tato funkce čte adresu ze zprávy. 
+Tato funkce přečte adresu ze zprávy. 
 
 ```rust
 {
@@ -526,7 +527,7 @@ Tato funkce čte adresu ze zprávy.
     for i in 7..47 {
 ```
 
-Adresa je vždy dlouhá 20 bajtů (neboli 40 hexadecimálních číslic) a začíná na znaku č. 7.
+Adresa je vždy dlouhá 20 bajtů (tedy 40 hexadecimálních číslic) a začíná na 7. znaku.
 
 ```rust
         result *= 0x10;
@@ -547,7 +548,7 @@ Adresa je vždy dlouhá 20 bajtů (neboli 40 hexadecimálních číslic) a zač�
 fn readAmountAndNonce(messageBytes: [u8; MESSAGE_LENGTH]) -> (u128, u32)
 ```
 
-Přečtěte částku a nonce ze zprávy. 
+Ze zprávy si přečtěte částku a nonce. 
 
 ```rust
 {
@@ -558,7 +559,7 @@ Přečtěte částku a nonce ze zprávy.
     let mut stillReadingNonce: bool = false;
 ```
 
-Ve zprávě je prvním číslem po adrese částka ve finney (neboli tisícinách ETH) k převodu. Druhým číslem je nonce. Jakýkoli text mezi nimi je ignorován.
+Ve zprávě je prvním číslem po adrese množství finney (neboli tisícin ETH) k převodu. Druhým číslem je nonce. Jakýkoliv text mezi nimi je ignorován.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -592,7 +593,7 @@ Ve zprávě je prvním číslem po adrese částka ve finney (neboli tisícinác
 }
 ```
 
-Vrácení [n-tice (tuple)](https://noir-lang.org/docs/noir/concepts/data_types/tuples) je způsob, jakým Noir vrací více hodnot z funkce.
+Návrat [n-tice](https://noir-lang.org/docs/noir/concepts/data_types/tuples) (tuple) je v Noiru způsobem, jak z funkce vrátit více hodnot.
 
 ```rust
 fn readTransferTxn(message: str<MESSAGE_LENGTH>) -> TransferTxn 
@@ -617,7 +618,7 @@ Tato funkce převede zprávu na bajty a poté převede částky na `TransferTxn`
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Pro účty jsme mohli použít Pedersenův hash, protože jsou hashovány pouze uvnitř důkazu s nulovou znalostí. V tomto kódu však potřebujeme zkontrolovat podpis zprávy, který je generován prohlížečem. K tomu musíme dodržet formát podepisování Etherea v [EIP-191](https://eips.ethereum.org/EIPS/eip-191). To znamená, že musíme vytvořit kombinovaný buffer se standardní předponou, délkou zprávy v ASCII a samotnou zprávou a k jeho hashování použít standardní Ethereum keccak256.
+Pro účty jsme mohli použít Pedersen hash, protože jsou hashovány pouze v rámci důkazu s nulovou znalostí. V tomto kódu však musíme zkontrolovat podpis zprávy, který je vygenerován prohlížečem. K tomu musíme postupovat podle formátu podepisování Etherea v [EIP-191](https://eips.ethereum.org/EIPS/eip-191). To znamená, že musíme vytvořit kombinovaný buffer se standardní předponou, délkou zprávy v ASCII a samotnou zprávou, a následně to vše zahashovat pomocí standardního Ethereum keccak256.
 
 ```rust
     // ASCII prefix
@@ -651,7 +652,7 @@ Pro účty jsme mohli použít Pedersenův hash, protože jsou hashovány pouze 
     ];
 ```
 
-Aby se předešlo případům, kdy aplikace požádá uživatele o podepsání zprávy, kterou lze použít jako transakci nebo k jinému účelu, EIP-191 specifikuje, že všechny podepsané zprávy začínají znakem 0x19 (což není platný znak ASCII), po kterém následuje `Ethereum Signed Message:` a nový řádek.
+Aby se zabránilo situacím, kdy aplikace požádá uživatele o podepsání zprávy, kterou lze použít jako transakci nebo pro nějaký jiný účel, EIP-191 specifikuje, že všechny podepsané zprávy začínají znakem 0x19 (není platným znakem v ASCII), po kterém následuje `Ethereum Signed Message:` a nový řádek.
 
 ```rust
     let mut buffer: [u8; HASH_BUFFER_SIZE] = [0u8; HASH_BUFFER_SIZE];
@@ -694,7 +695,7 @@ Aby se předešlo případům, kdy aplikace požádá uživatele o podepsání z
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Zpracujte délky zpráv až do 999 a selžete, pokud je větší. Tento kód jsem přidal, i když je délka zprávy konstanta, protože to usnadňuje její změnu. V produkčním systému byste pravděpodobně jen předpokládali, že se `MESSAGE_LENGTH` nemění, a to v zájmu lepšího výkonu.
+Zvládne zprávy s délkou až 999 a pokud je větší, selže. Tento kód jsem přidal i přesto, že je délka zprávy konstantní, protože to usnadňuje případnou změnu. V produkčním systému byste pravděpodobně pro vyšší výkon jednoduše předpokládali, že se `MESSAGE_LENGTH` nemění.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -713,9 +714,9 @@ fn signatureToAddressAndHash(
 {
 ```
 
-Tato funkce ověřuje podpis, což vyžaduje hash zprávy. Poté nám poskytne adresu, která jej podepsala, a hash zprávy. Hash zprávy je dodáván ve dvou hodnotách `Field`, protože ty se ve zbytku programu používají snáze než pole bajtů.
+Tato funkce ověřuje podpis, což vyžaduje hash zprávy. Následně nám poskytne adresu podepisujícího a hash zprávy. Hash zprávy je dodáván ve dvou hodnotách `Field`, protože se s nimi ve zbytku programu pracuje snadněji než s polem bajtů.
 
-Musíme použít dvě hodnoty `Field`, protože výpočty v poli se provádějí [modulo](https://en.wikipedia.org/wiki/Modulo) velké číslo, ale toto číslo je obvykle menší než 256 bitů (jinak by bylo obtížné tyto výpočty provádět v EVM).
+Musíme použít dvě hodnoty `Field`, protože výpočty nad tělesy (field calculations) se provádějí pomocí [modulo](https://en.wikipedia.org/wiki/Modulo) velkého čísla, ale toto číslo má obvykle méně než 256 bitů (jinak by bylo těžké tyto výpočty provádět v EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -728,17 +729,17 @@ Musíme použít dvě hodnoty `Field`, protože výpočty v poli se provádějí
     }
 ```
 
-Specifikujte `hash1` a `hash2` jako měnitelné proměnné a zapište do nich hash bajt po bajtu.
+Specifikujte `hash1` a `hash2` jako mutovatelné proměnné a zapište do nich hash bajt po bajtu.
 
 ```rust
     (
         ecrecover::ecrecover(pubKeyX, pubKeyY, signature, hash), 
 ```
     
-To je podobné jako [`ecrecover` v Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), se dvěma důležitými rozdíly:
+Je to podobné jako [`ecrecover` v Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), se dvěma důležitými rozdíly:
 
-- Pokud podpis není platný, volání selže na `assert` a program je přerušen.
-- Ačkoli lze veřejný klíč obnovit z podpisu a hashe, jedná se o zpracování, které lze provést externě, a proto se nevyplatí jej provádět uvnitř důkazu s nulovou znalostí. Pokud se nás zde někdo pokusí podvést, ověření podpisu selže.
+- Pokud podpis není platný, selže volání `assert` a program je přerušen.
+- Zatímco veřejný klíč lze z podpisu a hashe obnovit, jde o zpracování, které lze provést externě, a proto nestojí za to jej dělat uvnitř důkazu s nulovou znalostí. Pokud se nás tu někdo pokusí oklamat, ověření podpisu prostě selže.
 
 ```rust
         hash1,
@@ -760,14 +761,14 @@ fn main(
     )
 ```
 
-Konečně se dostáváme k funkci `main`. Musíme dokázat, že máme transakci, která platně mění hash účtů ze staré hodnoty na novou. Musíme také dokázat, že má tento specifický hash transakce, aby osoba, která ji odeslala, věděla, že její transakce byla zpracována.
+Nakonec se dostáváme k funkci `main`. Musíme prokázat, že máme transakci, která platně mění hash účtů ze staré hodnoty na novou. Musíme také prokázat, že má právě tento konkrétní hash transakce, aby osoba, která ji odeslala, věděla, že její transakce byla zpracována.
 
 ```rust
 {
     let mut txn = readTransferTxn(message);
 ```
 
-Potřebujeme, aby `txn` byla měnitelná, protože nečteme adresu odesílatele ze zprávy, ale z podpisu. 
+Musíme nastavit `txn` jako mutovatelnou proměnnou, protože odesílající adresu (from address) nečteme ze zprávy, nýbrž z podpisu. 
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -793,11 +794,11 @@ Potřebujeme, aby `txn` byla měnitelná, protože nečteme adresu odesílatele 
 
 Ve druhé fázi přidáme server, který přijímá a implementuje transakce převodu z prohlížeče.
 
-Chcete-li to vidět v akci:
+Pokud to chcete vidět v akci:
 
 1. Zastavte Vite, pokud běží.
 
-2. Stáhněte si větev, která obsahuje server, a ujistěte se, že máte všechny potřebné moduly.
+2. Stáhněte si větev (branch), která zahrnuje server, a ujistěte se, že máte všechny potřebné moduly.
 
    ```sh
    git checkout 02-add-server
@@ -807,7 +808,7 @@ Chcete-li to vidět v akci:
    npm install
    ```
 
-   Není třeba kompilovat kód Noir, je to stejný kód, jaký jste použili pro fázi 1.
+   Kód pro Noir není nutné kompilovat, je úplně stejný jako kód, který jste použili ve fázi 1.
 
 3. Spusťte server.
 
@@ -815,7 +816,7 @@ Chcete-li to vidět v akci:
    npm run start
    ```
 
-4. V samostatném okně příkazového řádku spusťte Vite, aby obsluhoval kód prohlížeče.
+4. V samostatném okně příkazového řádku spusťte Vite, které naservíruje kód pro prohlížeč.
 
    ```sh
    cd client
@@ -824,18 +825,18 @@ Chcete-li to vidět v akci:
 
 5. Přejděte na klientský kód na adrese [http://localhost:5173](http://localhost:5173)
 
-6. Než budete moci vydat transakci, musíte znát nonce a také částku, kterou můžete odeslat. Chcete-li tyto informace získat, klikněte na **Update account data** (Aktualizovat data účtu) a podepište zprávu.
+6. Před odesláním transakce musíte znát jak nonce, tak částku, kterou můžete odeslat. Tuto informaci získáte kliknutím na **Update account data** a podepsáním zprávy.
 
-   Zde máme dilema. Na jedné straně nechceme podepsat zprávu, kterou lze znovu použít ([replay útok](https://en.wikipedia.org/wiki/Replay_attack)), což je důvod, proč vůbec chceme nonce. Zatím však žádnou nonce nemáme. Řešením je zvolit nonce, kterou lze použít pouze jednou a kterou již máme na obou stranách, jako je například aktuální čas.
+   Tady máme dilema. Na jedné straně nechceme podepsat zprávu, která by mohla být znovu použita ([replay útok](https://en.wikipedia.org/wiki/Replay_attack)), a proto v první řadě chceme hodnotu nonce. Žádné nonce však zatím nemáme. Řešením je vybrat nonce, které lze použít pouze jednou a které už máme na obou stranách, jako je aktuální čas.
 
-   Problém s tímto řešením je, že čas nemusí být dokonale synchronizován. Místo toho tedy podepíšeme hodnotu, která se mění každou minutu. To znamená, že naše okno zranitelnosti vůči replay útokům je maximálně jedna minuta. Vzhledem k tomu, že v produkci bude podepsaný požadavek chráněn pomocí TLS a že druhá strana tunelu – server – již může odhalit zůstatek a nonce (musí je znát, aby fungoval), je to přijatelné riziko.
+   Problémem tohoto řešení je, že čas nemusí být dokonale synchronizován. Takže místo toho podepíšeme hodnotu, která se každou minutu mění. To znamená, že naše časové okno zranitelnosti vůči replay útokům je nanejvýš jedna minuta. Vezmeme-li v úvahu, že v produkčním prostředí bude podepsaný požadavek chráněn prostřednictvím TLS, a že druhá strana tunelu – server – už může odhalit zůstatek i nonce (musí je znát, aby mohla fungovat), jedná se o přijatelné riziko.
 
-7. Jakmile prohlížeč získá zpět zůstatek a nonce, zobrazí formulář pro převod. Vyberte cílovou adresu a částku a klikněte na **Transfer** (Převést). Podepište tento požadavek.
+7. Jakmile prohlížeč získá zpět zůstatek a nonce, zobrazí formulář pro převod. Vyberte cílovou adresu a částku a klikněte na **Transfer**. Podepište tento požadavek.
 
-8. Chcete-li vidět převod, buď klikněte na **Update account data** (Aktualizovat data účtu), nebo se podívejte do okna, kde běží server. Server loguje stav při každé jeho změně.
+8. Chcete-li převod vidět, buď klikněte na **Update account data**, nebo se podívejte do okna, kde běží server. Server zapíše do logu stav pokaždé, když dojde ke změně.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -862,24 +863,24 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
-[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) obsahuje proces serveru a interaguje s kódem Noir v [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Zde je vysvětlení zajímavých částí.
+[Tento soubor](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) obsahuje serverový proces a komunikuje s kódem pro Noir v [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Zde je vysvětlení zajímavých částí.
 
 ```js
 import { Noir } from '@noir-lang/noir_js'
 ```
 
-Knihovna [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) tvoří rozhraní mezi kódem JavaScript a kódem Noir.
+Knihovna [noir.js](https://www.npmjs.com/package/@noir-lang/noir_js) slouží jako rozhraní mezi kódem v JavaScriptu a v Noiru.
 
 ```js
 const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-Načtěte aritmetický obvod – zkompilovaný program Noir, který jsme vytvořili v předchozí fázi – a připravte se na jeho spuštění.
+Načtěte aritmetický obvod – zkompilovaný Noir program, který jsme vytvořili v předchozí fázi – a připravte jej ke spuštění.
 
 ```js
 // Informace o účtu poskytujeme pouze jako odpověď na podepsaný požadavek
@@ -890,13 +891,13 @@ const accountInformation = async signature => {
     })
 ```
 
-K poskytnutí informací o účtu potřebujeme pouze podpis. Důvodem je, že již víme, jaká zpráva bude, a tedy i hash zprávy.
+Abychom poskytli informace o účtu, potřebujeme pouze podpis. Důvodem je, že už víme, jaká zpráva bude, a známe tím pádem i hash zprávy.
 
 ```js
 const processMessage = async (message, signature) => {
 ```
 
-Zpracujte zprávu a proveďte transakci, kterou kóduje.
+Zpracujte zprávu a proveďte transakci, kterou zpráva kóduje.
 
 ```js
     // Získat veřejný klíč
@@ -906,7 +907,7 @@ Zpracujte zprávu a proveďte transakci, kterou kóduje.
     })
 ```
 
-Nyní, když spouštíme JavaScript na serveru, můžeme veřejný klíč získat tam, a ne na klientovi.
+Nyní, když spouštíme JavaScript na serveru, můžeme získat veřejný klíč tam, spíše než na klientovi.
 
 ```js
     let noirResult
@@ -920,7 +921,7 @@ Nyní, když spouštíme JavaScript na serveru, můžeme veřejný klíč získa
         })
 ```
 
-`noir.execute` spouští program Noir. Parametry jsou ekvivalentní těm, které jsou uvedeny v [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Všimněte si, že dlouhé hodnoty jsou poskytovány jako pole hexadecimálních řetězců (`["0x60", "0xA7"]`), nikoli jako jedna hexadecimální hodnota (`0x60A7`), jak to dělá Viem.
+`noir.execute` spustí Noir program. Parametry jsou ekvivalentní s těmi, které jsou uvedeny v [`Prover.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Prover.toml). Všimněte si, že dlouhé hodnoty jsou poskytovány jako pole hexadecimálních řetězců (`["0x60", "0xA7"]`), ne jako jedna hexadecimální hodnota (`0x60A7`), jak to dělá Viem.
 
 ```js
     } catch (err) {
@@ -937,7 +938,7 @@ Pokud dojde k chybě, zachyťte ji a poté předejte zjednodušenou verzi klient
     Accounts[toAccountNumber].balance += amount
 ```
 
-Aplikujte transakci. Už jsme to udělali v kódu Noir, ale je snazší to udělat znovu zde, než odtud extrahovat výsledek.
+Uplatněte transakci. V Noir kódu už jsme to sice udělali, ale je jednodušší to udělat znovu zde, než odtamtud extrahovat výsledek.
 
 ```js
 let Accounts = [
@@ -952,9 +953,9 @@ Počáteční struktura `Accounts`.
 
 ### Fáze 3 - Chytré kontrakty Etherea {#stage-3}
 
-1. Zastavte procesy serveru a klienta.
+1. Zastavte serverové a klientské procesy.
 
-2. Stáhněte si větev s chytrými kontrakty a ujistěte se, že máte všechny potřebné moduly.
+2. Stáhněte si větev (branch) s chytrými kontrakty a ujistěte se, že máte všechny potřebné moduly.
 
    ```sh
    git checkout 03-smart-contracts
@@ -964,9 +965,9 @@ Počáteční struktura `Accounts`.
    npm install
    ```
 
-3. Spusťte `anvil` v samostatném okně příkazového řádku.
+3. Spusťte `anvil` v samostatném okně příkazové řádky.
 
-4. Vygenerujte ověřovací klíč a ověřovatele v Solidity, poté zkopírujte kód ověřovatele do projektu Solidity.
+4. Vygenerujte ověřovací klíč a verifikátor v Solidity (Solidity verifier) a poté zkopírujte kód verifikátoru do projektu v Solidity.
 
    ```sh
    cd noir
@@ -975,7 +976,7 @@ Počáteční struktura `Accounts`.
    cp target/Verifier.sol ../../smart-contracts/src
    ```
 
-5. Přejděte do chytrých kontraktů a nastavte proměnné prostředí tak, aby používaly blockchain `anvil`.
+5. Přejděte do chytrých kontraktů a nastavte proměnné prostředí tak, aby se používal blockchain `anvil`.
 
    ```sh
    cd ../../smart-contracts
@@ -997,7 +998,7 @@ Počáteční struktura `Accounts`.
    echo $ZKBANK_ADDRESS
    ```
 
-   Hodnota `0x199..67b` je Pedersonův hash počátečního stavu `Accounts`. Pokud upravíte tento počáteční stav v `server/index.mjs`, můžete spustit transakci a zobrazit počáteční hash nahlášený důkazem s nulovou znalostí.
+   Hodnota `0x199..67b` je Pedersen hash počátečního stavu `Accounts`. Pokud tento počáteční stav upravíte v `server/index.mjs`, můžete spustit transakci, abyste viděli počáteční hash hlášený důkazem s nulovou znalostí.
 
 8. Spusťte server.
 
@@ -1013,14 +1014,14 @@ Počáteční struktura `Accounts`.
    npm run dev
    ```
 
-10. Spusťte několik transakcí.
+10. Proveďte nějaké transakce.
 
-11. Chcete-li ověřit, že se stav změnil onchain, restartujte proces serveru. Uvidíte, že `ZkBank` již nepřijímá transakce, protože původní hodnota hashe v transakcích se liší od hodnoty hashe uložené onchain.
+11. Chcete-li ověřit, že se stav změnil onchain, restartujte proces serveru. Zjistíte, že `ZkBank` již nepřijímá transakce, protože původní hodnota hashe v transakcích se liší od hodnoty hashe uložené onchain.
 
-    Toto je očekávaný typ chyby.
+    Tento typ chyby se očekává.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -1033,11 +1034,11 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
-Změny v tomto souboru se týkají především vytvoření samotného důkazu a jeho odeslání onchain.
+Změny v tomto souboru se týkají především vytváření samotného důkazu a jeho odeslání onchain.
 
 ```js
 import { exec } from 'child_process'
@@ -1046,15 +1047,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-K vytvoření samotného důkazu k odeslání onchain musíme použít [balíček Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg). Tento balíček můžeme použít buď spuštěním rozhraní příkazového řádku (`bb`), nebo pomocí [knihovny JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Knihovna JavaScript je mnohem pomalejší než nativní spouštění kódu, takže zde používáme [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) pro použití příkazového řádku.
+Musíme použít [balíček Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg), abychom vytvořili skutečný důkaz k odeslání onchain. Tento balíček můžeme použít buď spuštěním přes rozhraní příkazové řádky (`bb`), nebo pomocí [knihovny JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). JavaScriptová knihovna je mnohem pomalejší než nativní spouštění kódu, takže tady používáme [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) k použití příkazového řádku.
 
-Všimněte si, že pokud se rozhodnete použít `bb.js`, musíte použít verzi, která je kompatibilní s verzí Noir, kterou používáte. V době psaní tohoto článku používá aktuální verze Noir (1.0.0-beta.11) `bb.js` verze 0.87.
+Upozorňujeme, že pokud se rozhodnete použít `bb.js`, musíte použít verzi, která je kompatibilní s verzí Noiru, kterou používáte. V době psaní tohoto textu používá aktuální verze Noiru (1.0.0-beta.11) knihovnu `bb.js` verze 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-Zdejší adresa je ta, kterou získáte, když začnete s čistým `anvil` a budete postupovat podle výše uvedených pokynů.
+Adresa, která se zde nachází, je tou, kterou získáte, pokud začnete s čistým `anvil` a budete se řídit výše uvedenými pokyny.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1064,7 +1065,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-Tento soukromý klíč je jedním z výchozích předem financovaných účtů v `anvil`. 
+Tento soukromý klíč představuje jeden z výchozích předfinancovaných účtů v prostředí `anvil`. 
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1077,19 +1078,19 @@ Vygenerujte důkaz pomocí spustitelného souboru `bb`.
     await fs.writeFile(fname, witness)
 ```
 
-Zapište svědka do souboru.
+Zapište svědka (witness) do souboru.
 
 ```js
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Skutečně vytvořte důkaz. Tento krok také vytvoří soubor s veřejnými proměnnými, ale ten nepotřebujeme. Tyto proměnné jsme již získali z `noir.execute`.
+Vytvořte samotný důkaz. Tento krok rovněž vytvoří soubor s veřejnými proměnnými, ale to nepotřebujeme. Tyto proměnné už jsme získali z `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
 ```
 
-Důkaz je JSON pole hodnot `Field`, z nichž každá je reprezentována jako hexadecimální hodnota. Musíme jej však odeslat v transakci jako jedinou hodnotu `bytes`, kterou Viem reprezentuje velkým hexadecimálním řetězcem. Zde změníme formát zřetězením všech hodnot, odstraněním všech `0x` a následným přidáním jednoho na konec.
+Důkaz je pole v JSON obsahující hodnoty `Field`, přičemž každá je reprezentována jako hexadecimální hodnota. V transakci jej ovšem musíme odeslat jako jednu hodnotu `bytes`, kterou Viem reprezentuje velkým hexadecimálním řetězcem. Zde měníme formát tím, že všechny hodnoty zřetězíme, odstraníme všechny výskyty `0x` a nakonec jeden přidáme.
 
 ```js
     await execPromise(`rm -r ${fname} ${fileID}`)
@@ -1098,7 +1099,7 @@ Důkaz je JSON pole hodnot `Field`, z nichž každá je reprezentována jako hex
 }
 ```
 
-Proveďte úklid a vraťte důkaz.
+Vyčistěte a vraťte důkaz.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -1109,13 +1110,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Veřejná pole musí být pole 32bajtových hodnot. Vzhledem k tomu, že jsme však potřebovali rozdělit hash transakce mezi dvě hodnoty `Field`, jeví se jako 16bajtová hodnota. Zde přidáme nuly, aby Viem pochopil, že se ve skutečnosti jedná o 32 bajtů.
+Veřejná pole musí být polem 32bajtových hodnot. Avšak vzhledem k tomu, že jsme museli hash transakce rozdělit mezi dvě hodnoty `Field`, jeví se to jako 16bajtová hodnota. Tady přidáváme nuly, aby knihovna Viem pochopila, že jde ve skutečnosti o 32 bajtů.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Každá adresa používá každou nonce pouze jednou, takže můžeme použít kombinaci `fromAddress` a `nonce` jako jedinečný identifikátor pro soubor svědka a výstupní adresář.
+Každá adresa použije každou hodnotu nonce pouze jednou, takže pro soubor se svědkem (witness) a výstupní adresář můžeme použít kombinaci `fromAddress` a `nonce` jako unikátní identifikátor.
 
 ```js
     try {
@@ -1154,7 +1155,7 @@ contract ZkBank {
     }
 ```
 
-Onchain kód musí sledovat dvě proměnné: ověřovatele (samostatný kontrakt, který je vytvořen pomocí `nargo`) a hash aktuálního stavu.
+Onchain kód musí sledovat dvě proměnné: ověřovatele (verifier, samostatný kontrakt, který je vytvořen pomocí `nargo`) a současný hash stavu.
 
 ```solidity
     event TransactionProcessed(
@@ -1164,7 +1165,7 @@ Onchain kód musí sledovat dvě proměnné: ověřovatele (samostatný kontrakt
     );
 ```
 
-Pokaždé, když se stav změní, emitujeme událost `TransactionProcessed`.
+Pokaždé, když dojde ke změně stavu, vygenerujeme událost `TransactionProcessed`.
 
 ```solidity
     function processTransaction(
@@ -1173,20 +1174,20 @@ Pokaždé, když se stav změní, emitujeme událost `TransactionProcessed`.
     ) public {
 ```
 
-Tato funkce zpracovává transakce. Získá důkaz (jako `bytes`) a veřejné vstupy (jako pole `bytes32`) ve formátu, který ověřovatel vyžaduje (aby se minimalizovalo onchain zpracování a tím i náklady na gas).
+Tato funkce zpracovává transakce. Obdrží důkaz (jako `bytes`) a veřejné vstupy (jako pole `bytes32`) ve formátu, který vyžaduje ověřovatel (pro minimalizaci onchain zpracování a tím pádem poplatků za gas).
 
 ```solidity
         require(_publicInputs[0] == currentStateHash,
             "Wrong old state hash");
 ```
 
-Důkaz s nulovou znalostí musí spočívat v tom, že se transakce změní z našeho aktuálního hashe na nový.
+Důkaz s nulovou znalostí musí být o tom, že transakce provádí změnu našeho aktuálního hashe na nový.
 
 ```solidity
         myVerifier.verify(_proof, _publicFields);
 ```
 
-Zavolejte kontrakt ověřovatele k ověření důkazu s nulovou znalostí. Tento krok vrátí transakci zpět (revert), pokud je důkaz s nulovou znalostí chybný.
+Zavolejte ověřovatelský kontrakt k ověření důkazu s nulovou znalostí. V tomto kroku bude transakce zrušena (revertována), pokud je důkaz s nulovou znalostí nesprávný.
 
 ```solidity
         currentStateHash = _publicFields[1];
@@ -1200,60 +1201,60 @@ Zavolejte kontrakt ověřovatele k ověření důkazu s nulovou znalostí. Tento
 }
 ```
 
-Pokud je vše v pořádku, aktualizujte hash stavu na novou hodnotu a emitujte událost `TransactionProcessed`.
+Pokud je vše v pořádku, aktualizujte hash stavu na novou hodnotu a vygenerujte událost `TransactionProcessed`.
 
 ## Zneužití centralizovanou komponentou {#abuses}
 
-Informační bezpečnost se skládá ze tří atributů:
+Bezpečnost informací sestává ze tří atributů:
 
-- _Důvěrnost_, uživatelé nemohou číst informace, ke kterým nemají oprávnění.
-- _Integrita_, informace nemohou být změněny jinak než oprávněnými uživateli a schváleným způsobem.
-- _Dostupnost_, oprávnění uživatelé mohou systém používat.
+- _Důvěrnost (Confidentiality)_, uživatelé nemohou číst informace, ke kterým nemají oprávnění.
+- _Integrita (Integrity)_, informace nelze měnit s výjimkou autorizovaných uživatelů oprávněným způsobem.
+- _Dostupnost (Availability)_, oprávnění uživatelé mohou systém používat.
 
-V tomto systému je integrita zajištěna prostřednictvím důkazů s nulovou znalostí. Dostupnost je mnohem těžší zaručit a důvěrnost je nemožná, protože banka musí znát zůstatek každého účtu a všechny transakce. Neexistuje způsob, jak zabránit subjektu, který má informace, aby je sdílel.
+V tomto systému je integrita zajištěna prostřednictvím důkazů s nulovou znalostí. Dostupnost je mnohem obtížnější zaručit a důvěrnost je nemožná, protože banka musí znát zůstatek každého účtu i všechny transakce. Neexistuje žádný způsob, jak zabránit subjektu, který má informace, aby je nesdílel s ostatními.
 
-Možná by bylo možné vytvořit skutečně důvěrnou banku pomocí [skrytých adres](https://vitalik.eth.limo/general/2023/01/20/stealth.html), ale to je nad rámec tohoto článku.
+Možná by bylo možné vytvořit skutečně důvěrnou banku pomocí [skrytých adres (stealth addresses)](https://vitalik.eth.limo/general/2023/01/20/stealth.html), ale to přesahuje rámec tohoto článku.
 
-### Nepravdivé informace {#false-info}
+### Falešné informace {#false-info}
 
-Jedním ze způsobů, jak může server narušit integritu, je poskytnutí nepravdivých informací, když [jsou vyžádána data](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
+Jedním ze způsobů, jak může server porušit integritu, je poskytování falešných informací, když [jsou vyžadována data](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-Abychom to vyřešili, můžeme napsat druhý program v jazyce Noir, který přijme účty jako soukromý vstup a adresu, pro kterou jsou informace vyžádány, jako veřejný vstup. Výstupem je zůstatek a nonce dané adresy a hash účtů.
+Vyřešit to můžeme tak, že napíšeme druhý program v Noiru, který obdrží účty jako privátní vstup a adresu, pro niž jsou informace vyžadovány, jako veřejný vstup. Výstupem bude zůstatek a nonce příslušné adresy a k tomu hash účtů.
 
-Tento důkaz samozřejmě nelze ověřit onchain, protože nechceme zveřejňovat nonce a zůstatky onchain. Může jej však ověřit klientský kód běžící v prohlížeči.
+Tento důkaz samozřejmě nelze ověřovat onchain, jelikož hodnoty nonce a zůstatky na onchain síti zveřejňovat nechceme. Lze jej však ověřit klientským kódem spuštěným v prohlížeči.
 
-### Vynucené transakce {#forced-txns}
+### Nucené transakce {#forced-txns}
 
-Obvyklým mechanismem pro zajištění dostupnosti a prevenci cenzury na L2 jsou [vynucené transakce](https://docs.optimism.io/stack/transactions/forced-transaction). Vynucené transakce se však nedají kombinovat s důkazy s nulovou znalostí. Server je jediným subjektem, který může ověřovat transakce.
+Obvyklým mechanismem pro zajištění dostupnosti a prevenci cenzury na L2 jsou [nucené transakce (forced transactions)](https://docs.optimism.io/stack/transactions/forced-transaction). Nucené transakce ale nejdou kombinovat s důkazy s nulovou znalostí. Server je tak jediným subjektem, který dokáže ověřovat transakce.
 
-Můžeme upravit `smart-contracts/src/ZkBank.sol`, aby přijímal vynucené transakce a zabránil serveru ve změně stavu, dokud nebudou zpracovány. To nás však vystavuje jednoduchému útoku typu odepření služby (denial-of-service). Co když je vynucená transakce neplatná, a proto ji nelze zpracovat?
+Kód `smart-contracts/src/ZkBank.sol` můžeme upravit, aby přijímal nucené transakce a bránil serveru ve změně stavu, dokud nebudou tyto transakce zpracovány. Otevírá nám to však cestu k jednoduchému útoku denial-of-service (odmítnutí služby). Co když je nucená transakce neplatná, a proto ji nelze zpracovat?
 
-Řešením je mít důkaz s nulovou znalostí o tom, že vynucená transakce je neplatná. To dává serveru tři možnosti:
+Řešením je disponovat důkazem s nulovou znalostí o tom, že nucená transakce je neplatná. Tím server získá tři možnosti:
 
-- Zpracovat vynucenou transakci a poskytnout důkaz s nulovou znalostí o tom, že byla zpracována, a nový hash stavu.
-- Odmítnout vynucenou transakci a poskytnout kontraktu důkaz s nulovou znalostí o tom, že transakce je neplatná (neznámá adresa, špatná nonce nebo nedostatečný zůstatek).
-- Ignorovat vynucenou transakci. Neexistuje způsob, jak server donutit, aby transakci skutečně zpracoval, ale znamená to, že celý systém je nedostupný.
+- Zpracovat nucenou transakci a poskytnout důkaz s nulovou znalostí, že byla zpracována, spolu s novým hashem stavu.
+- Odmítnout nucenou transakci a poskytnout kontraktu důkaz s nulovou znalostí, že transakce je neplatná (neznámá adresa, špatná nonce nebo nedostatečný zůstatek).
+- Ignorovat nucenou transakci. Neexistuje žádný způsob, jak donutit server transakci reálně zpracovat, avšak znamená to, že celý systém je nedostupný.
 
-#### Kauce za dostupnost {#avail-bonds}
+#### Kauce na dostupnost {#avail-bonds}
 
-V reálné implementaci by pravděpodobně existoval nějaký ziskový motiv pro udržení serveru v chodu. Tuto motivaci můžeme posílit tím, že server složí kauci za dostupnost, kterou může kdokoli spálit, pokud vynucená transakce není zpracována v určité lhůtě.
+V reálné implementaci by pravděpodobně existoval jakýsi motiv k zisku za účelem udržet server v chodu. Tento motiv můžeme podpořit tím, že by server musel vložit kauci na dostupnost (availability bond), kterou může kdokoliv spálit, pokud nedojde do určité doby ke zpracování nucené transakce.
 
-### Špatný kód v jazyce Noir {#bad-noir-code}
+### Špatný kód v Noiru {#bad-noir-code}
 
-Normálně, abychom lidi přesvědčili k důvěře v chytrý kontrakt, nahrajeme zdrojový kód do [prohlížeče bloků](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). V případě důkazů s nulovou znalostí to však nestačí.
+Normálně za účelem toho, aby lidé chytrému kontraktu věřili, nahráváme zdrojový kód do [prohlížeče bloků](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Avšak v případě důkazů s nulovou znalostí to nestačí.
 
-`Verifier.sol` obsahuje ověřovací klíč, který je funkcí programu v jazyce Noir. Tento klíč nám však neříká, jaký program v jazyce Noir to byl. Abyste měli skutečně důvěryhodné řešení, musíte nahrát program v jazyce Noir (a verzi, která jej vytvořila). Jinak by důkazy s nulovou znalostí mohly odrážet jiný program, takový, který má zadní vrátka.
+Soubor `Verifier.sol` obsahuje ověřovací klíč, což je funkce Noir programu. Tento klíč nám však neříká, co tím Noir programem bylo. Abychom získali skutečně důvěryhodné řešení, musíte Noir program nahrát (spolu s verzí, která jej vytvořila). Jinak by důkazy s nulovou znalostí mohly odrážet odlišný program, takový, v němž se nachází zadní vrátka (backdoor).
 
-Dokud nám prohlížeče bloků nezačnou umožňovat nahrávat a ověřovat programy v jazyce Noir, měli byste to dělat sami (nejlépe na [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Pokročilí uživatelé si pak budou moci stáhnout zdrojový kód, sami jej zkompilovat, vytvořit `Verifier.sol` a ověřit, že je identický s tím onchain.
+Dokud prohlížeče bloků nezačnou umožňovat nahrávání a ověřování programů v Noiru, měli byste to udělat vy sami (nejlépe do [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Sofistikovaní uživatelé si pak budou moci stáhnout zdrojový kód, zkompilovat si ho, vytvořit `Verifier.sol` a ověřit, že je identický s tím, co je uloženo onchain.
 
 ## Závěr {#conclusion}
 
-Aplikace typu Plasma vyžadují centralizovanou komponentu jako úložiště informací. To otevírá potenciální zranitelnosti, ale na oplátku nám to umožňuje zachovat soukromí způsoby, které na samotném blockchainu nejsou dostupné. Pomocí důkazů s nulovou znalostí můžeme zajistit integritu a případně učinit ekonomicky výhodným pro toho, kdo provozuje centralizovanou komponentu, aby udržoval její dostupnost.
+Aplikace typu Plasma vyžadují jako úložiště informací centralizovanou komponentu. Otevírá to prostor pro potenciální zranitelnosti, ale na oplátku nám to umožňuje zachovat soukromí způsobem, který není k dispozici na samotném blockchainu. Pomocí důkazů s nulovou znalostí dokážeme zajistit integritu a případně z ekonomického hlediska zvýhodnit pro kohokoliv, kdo provozuje centralizovanou komponentu, udržování dostupnosti.
 
-[Zde najdete více z mé práce](https://cryptodocguy.pro/).
+[Více z mé práce najdete zde](https://cryptodocguy.pro/).
 
 ## Poděkování {#acknowledgements}
 
-- Josh Crites si přečetl koncept tohoto článku a pomohl mi se záludným problémem v Noir.
+- Josh Crites četl návrh tohoto článku a pomohl mi s velmi ošemetným problémem týkajícím se Noiru.
 
-Za veškeré zbývající chyby nesu odpovědnost já.
+Za veškeré zbývající chyby nesu plnou odpovědnost já.
