@@ -176,7 +176,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [moralis.io](https://moralis.io)
 - [Documentation](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
