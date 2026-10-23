@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import type { StaticImageData } from "next/image"
 import {
   getMessages,
   getTranslations,
@@ -15,7 +16,7 @@ import Callout from "@/components/ui/callout"
 import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
-import { Tag } from "@/components/ui/tag"
+import { Tag, type TagProps } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -24,11 +25,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getWalletPersonaIds } from "@/lib/utils/walletData"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
-import {
-  PERSONA_STYLES,
-  PERSONA_TITLE_KEYS,
-  type PersonaTagStatus,
-} from "@/data/wallets/personas"
+import { PERSONA_STYLES, PERSONA_TITLE_KEYS } from "@/data/wallets/personas"
 import walletsData from "@/data/wallets/wallet-data"
 
 import ConnectWallet from "./_components/ConnectWallet"
@@ -42,6 +39,71 @@ import OpenSeaImage from "@/public/images/dapps/opensea.png"
 import UniswapImage from "@/public/images/dapps/uni.png"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
+
+interface StepRowProps {
+  name: string
+  href: string
+  image: StaticImageData
+  imageClassName?: string
+  imageSize: number
+  tags: { label: string; status: TagProps["status"] }[]
+  detail: string
+  eventAction: string
+}
+
+const StepRow = ({
+  name,
+  href,
+  image,
+  imageClassName,
+  imageSize,
+  tags,
+  detail,
+  eventAction,
+}: StepRowProps) => (
+  <LinkBox
+    asChild
+    className="m-0 flex items-center gap-4 px-4 py-3 hover:bg-background-highlight"
+  >
+    <li>
+      <Image
+        src={image}
+        alt=""
+        width={imageSize}
+        height={imageSize}
+        className={imageClassName}
+      />
+      <div>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <LinkOverlay asChild>
+            <InlineLink
+              href={href}
+              className="font-bold text-body no-underline hover:text-body"
+              customEventOptions={{
+                eventCategory: "start page",
+                eventAction,
+                eventName: name,
+              }}
+            >
+              {name}
+            </InlineLink>
+          </LinkOverlay>
+          {tags.map((tag) => (
+            <Tag
+              key={tag.label}
+              variant="subtle"
+              status={tag.status}
+              size="small"
+            >
+              {tag.label}
+            </Tag>
+          ))}
+        </div>
+        <p className="text-sm text-body-medium">{detail}</p>
+      </div>
+    </li>
+  </LinkBox>
+)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -81,14 +143,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const appTags: Record<string, { label: string; status: PersonaTagStatus }> = {
+  const formatCount = (count: number) => numberFormat(locale).format(count)
+
+  const appTags = {
     socials: { label: t("page-start-apps-socials-tag"), status: "primary" },
     finance: { label: t("page-start-apps-finance-tag"), status: "accent-c" },
     collectibles: {
       label: t("page-start-apps-collectibles-tag"),
       status: "tag-yellow",
     },
-  }
+  } satisfies Record<string, StepRowProps["tags"][number]>
 
   const apps = [
     {
@@ -127,131 +191,37 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { id: "id-scam-tokens", href: "/guides/how-to-id-scam-tokens/" },
   ]
 
-  const stepActions: Record<string, React.ReactNode> = {
-    wallet: (
-      <ul className="m-0 list-none divide-y overflow-hidden rounded-base border">
-        {wallets.map((wallet) => (
-          <LinkBox
-            asChild
-            key={wallet.name}
-            className="m-0 flex items-center gap-4 px-4 py-3 hover:bg-background-highlight"
-          >
-            <li>
-              <Image src={wallet.image} alt="" width={28} height={28} />
-              <div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
-                  <LinkOverlay asChild>
-                    <InlineLink
-                      href={wallet.url}
-                      className="font-bold text-body no-underline hover:text-body"
-                      customEventOptions={{
-                        eventCategory: "start page",
-                        eventAction: "get wallet",
-                        eventName: wallet.name,
-                      }}
-                    >
-                      {wallet.name}
-                    </InlineLink>
-                  </LinkOverlay>
-                  <div className="flex flex-wrap gap-1">
-                    {wallet.personas.map((persona) => (
-                      <Tag
-                        key={persona}
-                        variant="subtle"
-                        status={PERSONA_STYLES[persona].tag}
-                        size="small"
-                      >
-                        {tFindWallet(PERSONA_TITLE_KEYS[persona])}
-                      </Tag>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm text-body-medium">
-                  {t("page-start-steps-wallet-languages", {
-                    count: wallet.languages_supported.length,
-                    countFormatted: numberFormat(locale).format(
-                      wallet.languages_supported.length
-                    ),
-                  })}
-                </p>
-              </div>
-            </li>
-          </LinkBox>
-        ))}
-      </ul>
-    ),
-    apps: (
-      <ul className="m-0 list-none divide-y overflow-hidden rounded-base border">
-        {apps.map((app) => (
-          <LinkBox
-            asChild
-            key={app.name}
-            className="m-0 flex items-center gap-4 px-4 py-3 hover:bg-background-highlight"
-          >
-            <li>
-              <Image
-                src={app.image}
-                alt=""
-                width={36}
-                height={36}
-                className="rounded-base"
-              />
-              <div>
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <LinkOverlay asChild>
-                    <InlineLink
-                      href={app.url}
-                      className="font-bold text-body no-underline hover:text-body"
-                      customEventOptions={{
-                        eventCategory: "start page",
-                        eventAction: "dapps",
-                        eventName: app.name,
-                      }}
-                    >
-                      {app.name}
-                    </InlineLink>
-                  </LinkOverlay>
-                  <Tag variant="subtle" status={app.tag.status} size="small">
-                    {app.tag.label}
-                  </Tag>
-                </div>
-                <p className="text-sm text-body-medium">{app.description}</p>
-              </div>
-            </li>
-          </LinkBox>
-        ))}
-      </ul>
-    ),
-    guides: (
-      <ul className="m-0 flex list-none flex-col gap-2">
-        {guides.map((guide) => (
-          <li key={guide.id} className="m-0">
-            <InlineLink href={guide.href}>
-              {t(`page-start-steps-guides-${guide.id}`)}
-            </InlineLink>
-          </li>
-        ))}
-      </ul>
-    ),
-  }
-
-  const stepFooters: Record<string, React.ReactNode> = {
-    apps: (
-      <div className="mt-6 flex flex-col gap-3 border-t pt-8">
-        <h3 className="text-xl">{t("page-start-steps-connect-title")}</h3>
-        <p>{t("page-start-connect-wallet-description")}</p>
-        <ConnectWallet />
-      </div>
-    ),
-  }
-
-  const formatCount = (count: number) => numberFormat(locale).format(count)
+  const rowListClassName =
+    "m-0 list-none divide-y overflow-hidden rounded-base border"
 
   const steps = [
     {
       id: "wallet",
       href: "/wallets/find-wallet/",
-      // The five picks above are the main action; the full list is secondary
+      description: t("page-start-steps-wallet-description"),
+      action: (
+        <ul className={rowListClassName}>
+          {wallets.map((wallet) => (
+            <StepRow
+              key={wallet.name}
+              name={wallet.name}
+              href={wallet.url}
+              image={wallet.image}
+              imageSize={28}
+              tags={wallet.personas.map((persona) => ({
+                label: tFindWallet(PERSONA_TITLE_KEYS[persona]),
+                status: PERSONA_STYLES[persona].tag,
+              }))}
+              detail={t("page-start-steps-wallet-languages", {
+                count: wallet.languages_supported.length,
+                countFormatted: formatCount(wallet.languages_supported.length),
+              })}
+              eventAction="get wallet"
+            />
+          ))}
+        </ul>
+      ),
+      // The picks above are the main action; the full list is secondary
       ctaAsLink: true,
       cta: t("page-start-steps-wallet-cta", {
         count: walletsData.length,
@@ -261,26 +231,68 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     {
       id: "get-eth",
       href: "/get-eth/",
+      description: t("page-start-steps-get-eth-description", {
+        count: wallets.length,
+        countFormatted: formatCount(wallets.length),
+      }),
       cta: t("page-start-steps-get-eth-cta"),
     },
     {
       id: "apps",
       href: "/apps/",
+      description: t("page-start-steps-apps-description"),
+      action: (
+        <ul className={rowListClassName}>
+          {apps.map((app) => (
+            <StepRow
+              key={app.name}
+              name={app.name}
+              href={app.url}
+              image={app.image}
+              imageSize={36}
+              imageClassName="rounded-base"
+              tags={[app.tag]}
+              detail={app.description}
+              eventAction="dapps"
+            />
+          ))}
+        </ul>
+      ),
       cta: appCount
         ? t("page-start-steps-apps-cta-count", {
             count: appCount,
             countFormatted: formatCount(appCount),
           })
         : t("page-start-steps-apps-cta"),
+      footer: (
+        <div className="mt-6 flex flex-col gap-3 border-t pt-8">
+          <h3 className="text-xl">{t("page-start-steps-connect-title")}</h3>
+          <p>{t("page-start-connect-wallet-description")}</p>
+          <ConnectWallet />
+        </div>
+      ),
     },
-    { id: "guides", href: "/guides/", cta: t("page-start-steps-guides-cta") },
+    {
+      id: "guides",
+      href: "/guides/",
+      description: t("page-start-steps-guides-description"),
+      action: (
+        <ul className="m-0 flex list-none flex-col gap-2">
+          {guides.map((guide) => (
+            <li key={guide.id} className="m-0">
+              <InlineLink href={guide.href}>
+                {t(`page-start-steps-guides-${guide.id}`)}
+              </InlineLink>
+            </li>
+          ))}
+        </ul>
+      ),
+      cta: t("page-start-steps-guides-cta"),
+    },
   ].map((step, idx) => ({
     ...step,
-    number: numberFormat(locale).format(idx + 1),
+    number: formatCount(idx + 1),
     title: t(`page-start-steps-${step.id}-title`),
-    description: t(`page-start-steps-${step.id}-description`),
-    action: stepActions[step.id],
-    footer: stepFooters[step.id],
   }))
 
   return (
@@ -302,11 +314,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="space-y-space-2x overflow-x-hidden px-page py-page-2x">
           <Section id="first-steps" className="mx-auto max-w-3xl">
-            <ol>
+            <ol className="m-0 list-none">
               {steps.map((step) => (
                 <li
                   key={step.id}
-                  className="group/step grid grid-cols-[2.5rem_1fr] gap-x-4 sm:gap-x-6"
+                  className="group/step m-0 grid grid-cols-[2.5rem_1fr] gap-x-4 sm:gap-x-6"
                 >
                   <div className="flex flex-col items-center">
                     <span
