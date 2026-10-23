@@ -46,6 +46,7 @@ const CopyToClipboard = ({
 
   return (
     <button
+      type="button"
       className={cn("cursor-pointer", inline ? "inline" : "block", className)}
       onClick={() => {
         onCopy(text)
@@ -64,7 +65,12 @@ type CopyButtonProps = ButtonProps & {
 export const CopyButton = ({ message, ...props }: CopyButtonProps) => {
   const { onCopy, hasCopied } = useClipboard({ timeout: 1500 })
   return (
-    <Button variant="ghost" onClick={() => onCopy(message)} {...props}>
+    <Button
+      type="button"
+      variant="ghost"
+      onClick={() => onCopy(message)}
+      {...props}
+    >
       <CopyIcon copied={hasCopied} />
     </Button>
   )
