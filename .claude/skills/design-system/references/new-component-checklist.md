@@ -140,7 +140,7 @@ See `references/server-vs-client.md` for boundary patterns.
 
 - All user-facing text comes from `t()` -- never hard-code English.
 - Number formatting via `numberFormat()` from `@/lib/utils/numbers`.
-- Date formatting via `dateTimeFormat()` from `@/lib/utils/date`.
+- Date formatting via `formatDateTime()` from `@/lib/utils/date`.
 - Spacing/positioning uses logical CSS (`start-`, `end-`, `ms-`, `me-`, `ps-`, `pe-`).
 - Directional icons use `useRtlFlip` (or the project's `ChevronNext` / `ChevronPrev`).
 
